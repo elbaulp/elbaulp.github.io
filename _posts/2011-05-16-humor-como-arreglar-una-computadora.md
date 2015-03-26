@@ -1,7 +1,7 @@
 ---
 id: 192
 title: '[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/humor-como-arreglar-una-computadora-windows-linux-o-mac-osx/
 permalink: /humor-como-arreglar-una-computadora/

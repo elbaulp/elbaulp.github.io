@@ -1,7 +1,7 @@
 ---
 id: 346
 title: Actualizar BIOS de ASUS desde Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/actualizar-bios-de-asus-desde-linux/
 permalink: /actualizar-bios-de-asus-desde-linux/

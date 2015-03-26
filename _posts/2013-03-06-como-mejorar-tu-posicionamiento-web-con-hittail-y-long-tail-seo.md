@@ -1,7 +1,7 @@
 ---
 id: 1425
 title: Cómo mejorar tu posicionamiento web con HitTail y Long Tail SEO
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1425
 permalink: /como-mejorar-tu-posicionamiento-web-con-hittail-y-long-tail-seo/

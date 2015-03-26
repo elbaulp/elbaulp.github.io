@@ -1,7 +1,7 @@
 ---
 id: 64
 title: Cómo empezar a programar
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/como-empezar-a-programar/
 permalink: /como-empezar-programar-how-start/

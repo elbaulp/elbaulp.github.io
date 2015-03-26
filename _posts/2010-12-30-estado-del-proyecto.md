@@ -1,7 +1,7 @@
 ---
 id: 75
 title: Estado del Proyecto
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/estado-del-proyecto/
 permalink: /estado-del-proyecto/

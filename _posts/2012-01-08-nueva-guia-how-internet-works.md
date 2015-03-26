@@ -1,7 +1,7 @@
 ---
 id: 327
 title: 'Nueva guía: How the internet works'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-how-the-internet-works/
 permalink: /nueva-guia-how-internet-works/

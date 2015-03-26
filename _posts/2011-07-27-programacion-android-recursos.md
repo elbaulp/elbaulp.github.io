@@ -1,7 +1,7 @@
 ---
 id: 241
 title: 'Programación Android: Recursos &#8211; Introducción'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-introduccion/
 permalink: /programacion-android-recursos/

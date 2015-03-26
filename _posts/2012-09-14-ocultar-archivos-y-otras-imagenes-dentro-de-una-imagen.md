@@ -1,7 +1,7 @@
 ---
 id: 939
 title: Ocultar archivos dentro de una imagen
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=939
 permalink: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
@@ -79,7 +79,7 @@ int revelar(unsigned char[],int, char[], int);
  * @file codificar.cpp
  * @brief Encargada de codificar y descodificar mensajes ocultos
  *  Created on: Mar 15, 2012
- *      @author: Alejandro Alcalde
+ *      @
  */
 #include "../include/codificar.h"
 #include &lt;fstream>

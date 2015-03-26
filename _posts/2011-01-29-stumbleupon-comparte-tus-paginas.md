@@ -1,7 +1,7 @@
 ---
 id: 118
 title: 'StumbleUpon &#8211; Comparte tus páginas favoritas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/stumbleupon-comparte-tus-paginas-favoritas/
 permalink: /stumbleupon-comparte-tus-paginas/

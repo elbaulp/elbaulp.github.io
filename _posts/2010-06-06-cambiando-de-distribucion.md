@@ -1,7 +1,7 @@
 ---
 id: 5
 title: Cambiando de distribución
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/cambiando-de-distribucion/
 permalink: /cambiando-de-distribucion/

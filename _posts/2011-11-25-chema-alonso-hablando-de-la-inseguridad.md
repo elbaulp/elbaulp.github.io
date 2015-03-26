@@ -1,7 +1,7 @@
 ---
 id: 297
 title: Chema Alonso hablando de la inseguridad de las vías telemáticas
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/chema-alonso-hablando-de-la-inseguridad-de-las-vias-telematicas/
 permalink: /chema-alonso-hablando-de-la-inseguridad/

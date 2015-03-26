@@ -1,7 +1,7 @@
 ---
 id: 54
 title: ¿Que son los archivos mkv?
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/que-son-los-archivos-mkv/
 permalink: /que-son-los-archivos-mkv-what-is-mkv/

@@ -1,7 +1,7 @@
 ---
 id: 184
 title: Botón +1 de google ya disponible en España
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/boton-1-de-google-ya-disponible-en-espana/
 permalink: /boton-1-de-google-ya-disponible-en/

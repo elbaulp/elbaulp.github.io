@@ -1,7 +1,7 @@
 ---
 id: 1899
 title: 'Introducción a Django &#8211; Instalación y primer proyecto'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1899
 permalink: /introduccion-django-instalacion-y-primer-proyecto/

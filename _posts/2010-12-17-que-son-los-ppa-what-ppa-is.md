@@ -1,7 +1,7 @@
 ---
 id: 61
 title: ¿Qué son los PPA?
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/que-son-los-ppa/
 permalink: /que-son-los-ppa-what-ppa-is/

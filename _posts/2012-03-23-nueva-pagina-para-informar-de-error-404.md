@@ -1,7 +1,7 @@
 ---
 id: 360
 title: Nueva página para informar de error 404 en el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-pagina-para-informar-de-error-404-en-el-blog/
 permalink: /nueva-pagina-para-informar-de-error-404/

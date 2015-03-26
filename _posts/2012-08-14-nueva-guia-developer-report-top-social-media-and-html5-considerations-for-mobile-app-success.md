@@ -1,7 +1,7 @@
 ---
 id: 876
 title: 'Nueva guía: Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=876
 permalink: /nueva-guia-developer-report-top-social-media-and-html5-considerations-for-mobile-app-success/

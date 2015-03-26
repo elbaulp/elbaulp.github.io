@@ -1,7 +1,7 @@
 ---
 id: 111
 title: 'Ifttt: Disparar tareas mediante eventos producidos en redes sociales'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ifttt-disparar-tareas-mediante-eventos-producidos-en-redes-sociales/
 permalink: /ifttt-disparar-tareas-mediante-eventos/

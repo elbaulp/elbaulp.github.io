@@ -1,7 +1,7 @@
 ---
 id: 2231
 title: Cómo crear un diálogo personalizado en las preferencias Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2231
 permalink: /como-crear-un-dialogo-personalizado-en-las-preferencias-android/

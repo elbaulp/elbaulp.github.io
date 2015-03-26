@@ -1,7 +1,7 @@
 ---
 id: 135
 title: Introducción a los Procesos
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-a-los-procesos/
 permalink: /introduccion-los-procesos/

@@ -1,7 +1,7 @@
 ---
 id: 93
 title: 'Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-para-juegos-leccion-4-programacion-orientada-a-eventos/
 permalink: /programacion-para-juegos-leccion-4/

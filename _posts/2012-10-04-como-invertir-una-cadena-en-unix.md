@@ -1,7 +1,7 @@
 ---
 id: 972
 title: Cómo invertir una cadena en Unix
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=972
 permalink: /como-invertir-una-cadena-en-unix/

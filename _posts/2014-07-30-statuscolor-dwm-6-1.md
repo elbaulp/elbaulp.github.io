@@ -1,7 +1,7 @@
 ---
 id: 2408
 title: Colorear la barra de estado con Simple StatusColor en DWM 6.1
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2408
 permalink: /statuscolor-dwm-6-1/

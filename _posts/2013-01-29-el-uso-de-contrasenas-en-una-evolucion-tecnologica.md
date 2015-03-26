@@ -1,7 +1,7 @@
 ---
 id: 1207
 title: El uso de contraseñas en una evolución tecnológica
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1207
 permalink: /el-uso-de-contrasenas-en-una-evolucion-tecnologica/

@@ -1,7 +1,7 @@
 ---
 id: 1807
 title: Sorteamos 10 matrículas gratuitas para cursos de desarrollo WordPress y cupones de descuento
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1807
 permalink: /sorteo-wordpress/

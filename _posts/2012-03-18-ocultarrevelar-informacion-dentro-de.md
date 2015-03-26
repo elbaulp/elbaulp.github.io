@@ -1,7 +1,7 @@
 ---
 id: 356
 title: Ocultar/Revelar información dentro de imágenes con C++
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ocultarrevelar-informacion-dentro-de-imagenes-con-c/
 permalink: /ocultarrevelar-informacion-dentro-de/

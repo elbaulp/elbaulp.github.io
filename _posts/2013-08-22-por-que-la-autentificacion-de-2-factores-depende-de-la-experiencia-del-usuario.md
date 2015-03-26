@@ -1,7 +1,7 @@
 ---
 id: 1856
 title: Por qué la autentificación de 2 factores depende de la experiencia del usuario
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1856
 permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/

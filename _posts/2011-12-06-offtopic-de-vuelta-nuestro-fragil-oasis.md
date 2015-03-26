@@ -1,7 +1,7 @@
 ---
 id: 309
 title: '[Offtopic]: De vuelta a nuestro frágil Oasis &#8211; Time-lapse de la Estación espacial'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/offtopic-de-vuelta-a-nuestro-fragil-oasis-time-lapse-de-la-estacion-espacial/
 permalink: /offtopic-de-vuelta-nuestro-fragil-oasis/

@@ -1,7 +1,7 @@
 ---
 id: 1041
 title: 'Logrando el anonimato con Tor (Parte 2) : Proxies y servidores de DNS'
-author: Luzcila
+
 layout: post
 guid: /?p=1041
 permalink: /logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/

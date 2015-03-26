@@ -1,7 +1,7 @@
 ---
 id: 272
 title: 'Programación Android: Recursos &#8211; Recursos y cambios de configuración'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-recursos-y-cambios-de-configuracion/
 permalink: /programacion-android-recursos-recursos/

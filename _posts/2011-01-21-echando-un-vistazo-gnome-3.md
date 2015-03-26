@@ -1,7 +1,7 @@
 ---
 id: 97
 title: Echando un vistazo a GNOME 3
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/echando-un-vistazo-a-gnome-3/
 permalink: /echando-un-vistazo-gnome-3/

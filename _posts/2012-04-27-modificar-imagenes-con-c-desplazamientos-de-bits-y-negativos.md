@@ -1,7 +1,7 @@
 ---
 id: 715
 title: Modificar imágenes con C++, desplazamientos de bits y negativos
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=715
 permalink: /modificar-imagenes-con-c-desplazamientos-de-bits-y-negativos/

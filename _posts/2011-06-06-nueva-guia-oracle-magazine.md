@@ -1,7 +1,7 @@
 ---
 id: 216
 title: 'Nueva guía: Oracle Magazine'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-oracle-magazine/
 permalink: /nueva-guia-oracle-magazine/

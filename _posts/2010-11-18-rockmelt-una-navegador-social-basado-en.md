@@ -1,7 +1,7 @@
 ---
 id: 30
 title: Rockmelt, una navegador social basado en Chromium
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/rockmelt-una-navegador-social-basado-en-chromium/
 permalink: /rockmelt-una-navegador-social-basado-en/

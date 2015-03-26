@@ -1,7 +1,7 @@
 ---
 id: 62
 title: Componentes del lenguaje SQL
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/componentes-del-lenguaje-sql/
 permalink: /componentes-del-lenguaje-sql-sql/

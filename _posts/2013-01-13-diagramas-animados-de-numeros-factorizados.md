@@ -1,7 +1,7 @@
 ---
 id: 1113
 title: Diagramas animados de números factorizados en HTML5
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1113
 permalink: /diagramas-animados-de-numeros-factorizados/

@@ -1,7 +1,7 @@
 ---
 id: 68
 title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-alter-table/
 permalink: /lenguaje-definicion-de-datos-ddl-alter/

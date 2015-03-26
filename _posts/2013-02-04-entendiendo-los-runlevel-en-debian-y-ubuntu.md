@@ -1,7 +1,7 @@
 ---
 id: 1311
 title: Entendiendo los runlevel en Debian
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1311
 permalink: /entendiendo-los-runlevel-en-debian-y-ubuntu/

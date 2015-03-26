@@ -1,7 +1,7 @@
 ---
 id: 47
 title: Probando RockMelt
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/probando-rockmelt/
 permalink: /probando-rockmelt/

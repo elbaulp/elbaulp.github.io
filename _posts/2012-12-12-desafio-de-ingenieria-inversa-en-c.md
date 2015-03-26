@@ -1,7 +1,7 @@
 ---
 id: 1046
 title: Desafío de ingeniería inversa en C
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1046
 permalink: /desafio-de-ingenieria-inversa-en-c/

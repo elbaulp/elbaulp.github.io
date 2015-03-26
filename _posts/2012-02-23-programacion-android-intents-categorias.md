@@ -1,7 +1,7 @@
 ---
 id: 344
 title: 'Programación Android: Intents &#8211; Categorías'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-intents-categorias/
 permalink: /programacion-android-intents-categorias/

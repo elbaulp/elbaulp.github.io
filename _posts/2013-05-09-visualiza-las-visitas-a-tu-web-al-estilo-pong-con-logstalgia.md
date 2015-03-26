@@ -1,7 +1,7 @@
 ---
 id: 1549
 title: Visualiza las visitas a tu web al estilo Pong con Logstalgia
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1549
 permalink: /visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/

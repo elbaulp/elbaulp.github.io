@@ -1,7 +1,7 @@
 ---
 id: 770
 title: El Top 7 de dilemas que enfrentan los desarrolladores de hoy
-author: Luzcila
+
 excerpt: |
   <strong>Plataformas, bases de datos, control de usuario - dilemas que atrapan al programador antes de la primera línea de código</strong>
   

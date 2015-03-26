@@ -1,7 +1,7 @@
 ---
 id: 260
 title: Prueba la aplicación FavSites en tu Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/prueba-la-aplicacion-favsites-en-tu-android/
 permalink: /prueba-la-aplicacion-favsites-en-tu/

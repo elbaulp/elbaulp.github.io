@@ -1,7 +1,7 @@
 ---
 id: 2041
 title: Cómo enviar los emails de /var/mail/root a una cuenta de correo
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2041
 permalink: /como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/

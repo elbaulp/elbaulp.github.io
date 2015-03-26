@@ -1,7 +1,7 @@
 ---
 id: 807
 title: Peter Norvig hablando sobre clases online
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=807
 permalink: /peter-norvig-hablando-sobre-clases-online/

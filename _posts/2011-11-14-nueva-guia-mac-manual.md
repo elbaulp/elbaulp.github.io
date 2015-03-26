@@ -1,7 +1,7 @@
 ---
 id: 279
 title: 'Nueva guía: The Mac Manual'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-mac-manual/
 permalink: /nueva-guia-mac-manual/

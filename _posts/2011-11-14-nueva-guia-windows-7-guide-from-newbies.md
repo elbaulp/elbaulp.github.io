@@ -1,7 +1,7 @@
 ---
 id: 280
 title: 'Nueva guía &#8211; The Windows 7 Guide: From Newbies to Pros'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-windows-7-guide-from-newbies-to-pros/
 permalink: /nueva-guia-windows-7-guide-from-newbies/

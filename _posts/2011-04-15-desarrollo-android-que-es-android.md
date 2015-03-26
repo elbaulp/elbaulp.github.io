@@ -1,7 +1,7 @@
 ---
 id: 172
 title: 'Desarrollo android &#8211; ¿Qué es Android? &#8211; Traducción de developer.android.com'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/desarrollo-android-que-es-android-traduccion-de-developer-android-com/
 permalink: /desarrollo-android-que-es-android/

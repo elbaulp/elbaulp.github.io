@@ -1,7 +1,7 @@
 ---
 id: 130
 title: Codificación
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/codificacion/
 permalink: /codificacion/

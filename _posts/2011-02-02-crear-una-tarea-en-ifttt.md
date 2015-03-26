@@ -1,7 +1,7 @@
 ---
 id: 125
 title: Crear una tarea en IFTTT
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/crear-una-tarea-en-ifttt/
 permalink: /crear-una-tarea-en-ifttt/

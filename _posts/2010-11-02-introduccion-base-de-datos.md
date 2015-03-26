@@ -1,7 +1,7 @@
 ---
 id: 22
 title: Introduccion a base de datos
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-a-base-de-datos/
 permalink: /introduccion-base-de-datos/

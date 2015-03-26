@@ -1,7 +1,7 @@
 ---
 id: 890
 title: SelfControl, aparta las distracciones de tu pc cuando estás trabajando
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=890
 permalink: /selfcontrol-aparta-las-distracciones-de-tu-pc-cuando-estas-trabajando/

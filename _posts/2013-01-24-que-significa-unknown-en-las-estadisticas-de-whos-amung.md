@@ -1,7 +1,7 @@
 ---
 id: 1192
 title: '¿Qué significa &#8216;Unknown&#8217; en las estadísticas de Whos amung?'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1192
 permalink: /que-significa-unknown-en-las-estadisticas-de-whos-amung/

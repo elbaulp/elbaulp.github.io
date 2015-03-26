@@ -1,7 +1,7 @@
 ---
 id: 2295
 title: Los orígenes de los símbolos tecnológicos más famosos y frecuentes
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2295
 permalink: /los-origenes-de-los-simbolos-tecnologicos-mas-famosos-y-frecuentes/

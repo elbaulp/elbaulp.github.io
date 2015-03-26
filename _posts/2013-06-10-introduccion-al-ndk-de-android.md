@@ -1,7 +1,7 @@
 ---
 id: 1542
 title: Introducción al NDK de Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1542
 permalink: /introduccion-al-ndk-de-android/

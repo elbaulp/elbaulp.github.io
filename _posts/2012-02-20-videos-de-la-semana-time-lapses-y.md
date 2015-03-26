@@ -1,7 +1,7 @@
 ---
 id: 342
 title: 'Vídeos de la semana &#8211; Time-Lapses y cortos de animación'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/videos-de-la-semana-time-lapses-y-cortos-de-animacion/
 permalink: /videos-de-la-semana-time-lapses-y/

@@ -1,7 +1,7 @@
 ---
 id: 72
 title: Lenguaje Manipulación de Datos (DML)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lenguaje-manipulacion-de-datos-dml/
 permalink: /lenguaje-manipulacion-de-datos-dml/

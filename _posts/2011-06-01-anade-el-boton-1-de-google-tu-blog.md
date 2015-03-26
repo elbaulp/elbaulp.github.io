@@ -1,7 +1,7 @@
 ---
 id: 209
 title: Añade el botón +1 de google a tu blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/anade-el-boton-1-de-google-a-tu-blog/
 permalink: /anade-el-boton-1-de-google-tu-blog/

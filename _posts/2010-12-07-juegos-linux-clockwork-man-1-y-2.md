@@ -1,7 +1,7 @@
 ---
 id: 56
 title: Juegos Linux, The Clockwork Man 1 y 2
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/juegos-linux-the-clockwork-man-1-y-2/
 permalink: /juegos-linux-clockwork-man-1-y-2/

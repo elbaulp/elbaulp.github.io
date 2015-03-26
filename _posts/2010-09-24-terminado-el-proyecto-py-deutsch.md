@@ -1,7 +1,7 @@
 ---
 id: 9
 title: Terminado el Proyecto py-Deutsch
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/terminado-el-proyecto-py-deutsch/
 permalink: /terminado-el-proyecto-py-deutsch/

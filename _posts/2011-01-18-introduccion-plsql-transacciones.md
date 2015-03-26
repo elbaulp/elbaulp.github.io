@@ -1,7 +1,7 @@
 ---
 id: 96
 title: 'Introducción a PL/SQL &#8211; Transacciones'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-a-plsql-transacciones/
 permalink: /introduccion-plsql-transacciones/

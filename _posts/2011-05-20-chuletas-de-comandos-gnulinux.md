@@ -1,7 +1,7 @@
 ---
 id: 197
 title: Chuletas de Comandos GNU/Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/chuletas-de-comandos-gnulinux/
 permalink: /chuletas-de-comandos-gnulinux/

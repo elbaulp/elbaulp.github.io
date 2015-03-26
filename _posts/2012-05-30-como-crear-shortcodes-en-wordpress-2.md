@@ -1,7 +1,7 @@
 ---
 id: 756
 title: 'Cómo crear  simples shortcodes en WordPress'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=756
 permalink: /como-crear-shortcodes-en-wordpress-2/

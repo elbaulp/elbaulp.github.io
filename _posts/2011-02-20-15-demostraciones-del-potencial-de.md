@@ -1,7 +1,7 @@
 ---
 id: 141
 title: 15 Demostraciones del potencial de HTML5
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/15-demostraciones-del-potencial-de-html5/
 permalink: /15-demostraciones-del-potencial-de/

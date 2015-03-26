@@ -1,7 +1,7 @@
 ---
 id: 94
 title: Programar o Pensar.
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programar-o-pensar/
 permalink: /programar-o-pensar/

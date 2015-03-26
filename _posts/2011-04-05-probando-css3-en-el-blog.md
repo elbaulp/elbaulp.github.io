@@ -1,7 +1,7 @@
 ---
 id: 162
 title: Probando CSS3 en el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/probando-css3-en-el-blog/
 permalink: /probando-css3-en-el-blog/

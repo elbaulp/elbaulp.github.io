@@ -1,7 +1,7 @@
 ---
 id: 1056
 title: Estructura y seguridad de los QR Codes
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1056
 permalink: /estructura-y-seguridad-de-los-qr-codes/

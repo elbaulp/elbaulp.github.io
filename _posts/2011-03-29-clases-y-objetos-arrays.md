@@ -1,7 +1,7 @@
 ---
 id: 158
 title: 'Clases y Objetos &#8211; Arrays'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-arrays/
 permalink: /clases-y-objetos-arrays/

@@ -1,7 +1,7 @@
 ---
 id: 89
 title: Firefox 4.0 beta 9 disponible
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/firefox-4-0-beta-9-disponible/
 permalink: /firefox-40-beta-9-disponible/

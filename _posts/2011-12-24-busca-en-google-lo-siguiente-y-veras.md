@@ -1,7 +1,7 @@
 ---
 id: 316
 title: Busca en google lo siguiente y verás que pasa
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/busca-en-google-lo-siguiente-y-veras-que-pasa/
 permalink: /busca-en-google-lo-siguiente-y-veras/

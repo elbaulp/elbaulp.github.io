@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Author Override"
-author: billy_rick
+
 modified:
 excerpt: "A post to test author overrides using a data file."
 tags: []
@@ -39,5 +39,5 @@ cornelius_fiddlebone:
 To assign Billy Rick as an author for our post. You'd add the following YAML front matter to a post:
 
 {% highlight yaml %}
-author: billy_rick
+
 {% endhighlight %}

@@ -1,7 +1,7 @@
 ---
 id: 1778
 title: 'Crear un módulo para python con la Python C API (II) &#8211; Primer ejemplo'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1778
 permalink: /crear-modulo-python-con-python-c-api-2/

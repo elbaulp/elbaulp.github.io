@@ -1,7 +1,7 @@
 ---
 id: 2376
 title: Pasar parámetros variables en C/C++
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2376
 permalink: /parametros-variables-en-cc/

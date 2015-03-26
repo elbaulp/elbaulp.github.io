@@ -1,7 +1,7 @@
 ---
 id: 36
 title: 'Bodhi: Ubuntu+Enlightenment, perfecto para minimalistas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/bodhi-ubuntuenlightenment-perfecto-para-minimalistas/
 permalink: /bodhi-ubuntuenlightenment-perfecto-para/

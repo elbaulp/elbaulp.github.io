@@ -1,7 +1,7 @@
 ---
 id: 124
 title: 2 invitaciones para IFTTT disponibles
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/2-invitaciones-para-ifttt-disponibles/
 permalink: /2-invitaciones-para-ifttt-disponibles/

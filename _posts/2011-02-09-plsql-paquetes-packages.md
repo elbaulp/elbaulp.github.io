@@ -1,7 +1,7 @@
 ---
 id: 133
 title: 'PL/SQL &#8211; Paquetes (Packages)'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-paquetes-packages/
 permalink: /plsql-paquetes-packages/

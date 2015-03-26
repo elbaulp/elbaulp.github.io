@@ -1,7 +1,7 @@
 ---
 id: 79
 title: 'Consulta de Datos &#8211; Cláusula WHERE'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-where/
 permalink: /consulta-de-datos-clausula-where/

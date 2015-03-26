@@ -1,7 +1,7 @@
 ---
 id: 206
 title: 'Nueva guía: The PHP Anthology: 101 Essential Tips, Tricks &#038; Hacks, 2nd Edition'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-php-anthology-101-essential-tips-tricks-hacks-2nd-edition/
 permalink: /nueva-guia-php-anthology-101-essential/

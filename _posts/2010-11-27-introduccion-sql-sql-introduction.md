@@ -1,7 +1,7 @@
 ---
 id: 48
 title: Introducción SQL
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-sql/
 permalink: /introduccion-sql-sql-introduction/

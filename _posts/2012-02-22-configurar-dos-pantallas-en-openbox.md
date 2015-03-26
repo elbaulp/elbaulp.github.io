@@ -1,7 +1,7 @@
 ---
 id: 343
 title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/configurar-dos-pantallas-en-openbox-bajo-cruchbang-y-wallpaper-aleatorio/
 permalink: /configurar-dos-pantallas-en-openbox/

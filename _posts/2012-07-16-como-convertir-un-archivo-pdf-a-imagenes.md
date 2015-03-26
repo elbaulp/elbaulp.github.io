@@ -1,7 +1,7 @@
 ---
 id: 835
 title: Cómo convertir un archivo pdf a imágenes
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=835
 permalink: /como-convertir-un-archivo-pdf-a-imagenes/

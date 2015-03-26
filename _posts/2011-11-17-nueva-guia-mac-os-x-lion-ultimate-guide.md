@@ -1,7 +1,7 @@
 ---
 id: 286
 title: 'Nueva guía: Mac OS X Lion: The Ultimate Guide'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-mac-os-x-lion-the-ultimate-guide/
 permalink: /nueva-guia-mac-os-x-lion-ultimate-guide/

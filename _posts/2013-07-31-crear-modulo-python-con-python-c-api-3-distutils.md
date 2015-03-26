@@ -1,7 +1,7 @@
 ---
 id: 1788
 title: 'Crear un módulo para python con la Python C API (III) &#8211; DistUtils'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1788
 permalink: /crear-modulo-python-con-python-c-api-3-distutils/

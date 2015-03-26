@@ -1,7 +1,7 @@
 ---
 id: 91
 title: 'Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-tablas-resumen-operadores-y-funciones-oracle/
 permalink: /consulta-de-datos-tablas-resumen/

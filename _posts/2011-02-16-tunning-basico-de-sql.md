@@ -1,7 +1,7 @@
 ---
 id: 139
 title: Tunning básico de SQL
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/tunning-basico-de-sql/
 permalink: /tunning-basico-de-sql/

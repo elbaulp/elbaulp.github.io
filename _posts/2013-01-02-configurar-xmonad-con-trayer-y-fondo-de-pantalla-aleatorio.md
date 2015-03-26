@@ -1,7 +1,7 @@
 ---
 id: 1071
 title: Configurar xmonad con trayer y fondo de pantalla aleatorio
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1071
 permalink: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/

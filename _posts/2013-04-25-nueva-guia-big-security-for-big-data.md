@@ -1,7 +1,7 @@
 ---
 id: 1534
 title: 'Nueva Guía: Big Security for Big Data'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1534
 permalink: /nueva-guia-big-security-for-big-data/

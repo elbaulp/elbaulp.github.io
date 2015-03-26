@@ -1,7 +1,7 @@
 ---
 id: 67
 title: 'Nuevo Proyecto: Aventura gráfica con SDL y C++'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nuevo-proyecto-aventura-grafica-con-sdl-y-c/
 permalink: /nuevo-proyecto-aventura-grafica-con-sdl/

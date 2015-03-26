@@ -1,7 +1,7 @@
 ---
 id: 230
 title: 'Fundamentos programación Android: Limpieza de Procesos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-programacion-android-limpieza-de-procesos/
 permalink: /fundamentos-programacion-android_18/

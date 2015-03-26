@@ -1,7 +1,7 @@
 ---
 id: 2421
 title: Eliminar recursos sin usar en Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2421
 permalink: /eliminar-recursos-sin-usar-en-android/

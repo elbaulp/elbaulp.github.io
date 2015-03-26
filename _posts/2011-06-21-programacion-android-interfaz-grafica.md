@@ -1,7 +1,7 @@
 ---
 id: 232
 title: 'Programación Android: Interfaz gráfica &#8211; Conceptos básicos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-conceptos-basicos/
 permalink: /programacion-android-interfaz-grafica/

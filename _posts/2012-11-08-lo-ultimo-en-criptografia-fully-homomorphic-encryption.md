@@ -1,7 +1,7 @@
 ---
 id: 1015
 title: 'Lo último en criptografía: Fully Homomorphic Encryption'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1015
 permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
@@ -69,7 +69,7 @@ Los sistemas homomórficos trabajan en estos retículos hiper-dimensionales aña
 Un sistema **Fully Homomorphic Encryption** (Cifrado totalmente homomórfico) no tiene esta limitación, por definición es posible realizar cualquier tipo de operación, por muy compleja que sea. Craig consiguió evitar que el ruido quedara fuera de control porque, tras realiazar un número determinado de operaciones, los datos se vuelven a cifrar (Sin descifrarlos previamente, es decir, el cifrado homomórfico realiza su propio cifrado) elimiando el ruido de modo que nunca sobrepase el sistema.  
 Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno **pequeño al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.
 
-Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema **homomórfico ** a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el **sistema totalmente homomórfico **tiene un tamaño de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.
+Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema **homomórfico ** a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el **sistema totalmente homomórfico **tiene un tama��o de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.
 
 En resumen, es una forma completamente distinta de cifrar y tratar datos para la cual los computadores estándares actuales de 64-bits de ancho de palabra no están capacitados.
 

@@ -1,7 +1,7 @@
 ---
 id: 349
 title: 'Google I/O 2011: Android Protips &#8211; Temas avanzados para desarrolladores expertos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/google-io-2011-android-protips-temas-avanzados-para-desarrolladores-expertos/
 permalink: /google-io-2011-android-protips-temas/

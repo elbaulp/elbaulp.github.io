@@ -1,7 +1,7 @@
 ---
 id: 310
 title: Nueva aplicación móvil para el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-aplicacion-movil-para-el-blog/
 permalink: /nueva-aplicacion-movil-para-el-blog/

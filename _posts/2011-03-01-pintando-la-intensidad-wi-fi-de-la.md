@@ -1,7 +1,7 @@
 ---
 id: 146
 title: Pintando la intensidad Wi-Fi de la Ciudad.
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/pintando-la-intensidad-wi-fi-de-la-ciudad/
 permalink: /pintando-la-intensidad-wi-fi-de-la/

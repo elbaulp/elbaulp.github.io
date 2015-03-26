@@ -1,7 +1,7 @@
 ---
 id: 121
 title: Tabla periódica de las APIs de google
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/tabla-periodica-de-las-apis-de-google/
 permalink: /tabla-periodica-de-las-apis-de-google/

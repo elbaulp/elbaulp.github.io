@@ -1,7 +1,7 @@
 ---
 id: 31
 title: 'SSD ioDrive Octal: 6,2 GBytes/s'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ssd-iodrive-octal-62-gbytess/
 permalink: /ssd-iodrive-octal-62-gbytess/

@@ -1,7 +1,7 @@
 ---
 id: 364
 title: La recursividad, explicada por Homer Simpson
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/la-recursividad-explicada-por-homer-simpson/
 permalink: /la-recursividad-explicada-por-homer/

@@ -1,7 +1,7 @@
 ---
 id: 88
 title: 'Programación para Juegos &#8211; Lección 3 &#8211; Librerías de SDL'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-para-juegos-leccion-3-librerias-de-sdl/
 permalink: /programacion-para-juegos-leccion-3/

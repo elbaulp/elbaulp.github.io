@@ -1,7 +1,7 @@
 ---
 id: 43
 title: Visible Tweets
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/visible-tweets/
 permalink: /visible-tweets/

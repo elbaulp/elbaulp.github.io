@@ -1,7 +1,7 @@
 ---
 id: 217
 title: Manuales de C++ en PDF. Clases y Objetos, Herencia y Operadores
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/manuales-de-c-en-pdf-clases-y-objetos-herencia-y-operadores/
 permalink: /manuales-de-c-en-pdf-clases-y-objetos/

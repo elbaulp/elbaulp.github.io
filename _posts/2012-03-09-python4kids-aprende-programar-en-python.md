@@ -1,7 +1,7 @@
 ---
 id: 352
 title: Python4Kids. Aprende a programar en python fácilmente
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/python4kids-aprende-a-programar-en-python-facilmente/
 permalink: /python4kids-aprende-programar-en-python/

@@ -1,7 +1,7 @@
 ---
 id: 314
 title: 20 ejemplos de iptables para SysAdmins novatos
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/20-ejemplos-de-iptables-para-sysadmins-novatos/
 permalink: /20-ejemplos-de-iptables-para-sysadmins/
@@ -259,7 +259,7 @@ En este ejemplo, eliminamos una ip y guardamos las reglas del firewall:
 service iptables save
 {% endhighlight %}
 
-Para todas las demás distros usamos:
+Para todas las dem��s distros usamos:
 
 {% highlight bash %}>iptables-save > /root/my.active.firewall.rules
 cat /root/my.active.firewall.rules

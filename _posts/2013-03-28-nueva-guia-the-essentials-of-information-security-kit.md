@@ -1,7 +1,7 @@
 ---
 id: 1496
 title: 'Nueva Guía: The Essentials of Information Security Kit'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1496
 permalink: /nueva-guia-the-essentials-of-information-security-kit/

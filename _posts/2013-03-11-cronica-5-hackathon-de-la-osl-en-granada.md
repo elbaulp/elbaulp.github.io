@@ -1,7 +1,7 @@
 ---
 id: 1466
 title: Crónica del 5° hackathon de la OSL en Granada
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1466
 permalink: /cronica-5-hackathon-de-la-osl-en-granada/

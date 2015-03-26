@@ -1,7 +1,7 @@
 ---
 id: 208
 title: 'Pequeño &#8220;Rediseño&#8221; en el blog'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/pequeno-rediseno-en-el-blog/
 permalink: /pequeno-redisenp-en-el-blog/

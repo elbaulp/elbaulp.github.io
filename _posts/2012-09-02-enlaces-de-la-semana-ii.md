@@ -1,7 +1,7 @@
 ---
 id: 935
 title: Enlaces de la semana ( II )
-author: Alejandro Alcalde
+
 excerpt: '<!--:es-->Recopilación semanal de enlaces sobre noticias de la tecnología, informática y software libre<!--:-->'
 layout: post
 guid: /?p=935

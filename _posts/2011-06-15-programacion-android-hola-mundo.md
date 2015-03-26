@@ -1,7 +1,7 @@
 ---
 id: 224
 title: 'Programación Android: Hola Mundo'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-hola-mundo/
 permalink: /programacion-android-hola-mundo/

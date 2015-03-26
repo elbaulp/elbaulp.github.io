@@ -1,7 +1,7 @@
 ---
 id: 71
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-sinonimos-y-pseudocolumnas/
 permalink: /lenguaje-definicion-de-datos-ddl_27/

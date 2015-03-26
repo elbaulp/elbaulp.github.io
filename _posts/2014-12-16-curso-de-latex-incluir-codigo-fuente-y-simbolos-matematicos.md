@@ -1,7 +1,7 @@
 ---
 id: 2513
 title: 'Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos'
-author: Marta Gómez
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2513
 permalink: /curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/

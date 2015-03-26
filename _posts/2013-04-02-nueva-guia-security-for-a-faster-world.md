@@ -1,7 +1,7 @@
 ---
 id: 1499
 title: 'Nueva Guía: Security for a Faster World'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1499
 permalink: /nueva-guia-security-for-a-faster-world/

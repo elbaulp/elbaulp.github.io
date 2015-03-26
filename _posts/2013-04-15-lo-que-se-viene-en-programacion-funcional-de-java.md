@@ -1,7 +1,7 @@
 ---
 id: 1507
 title: 'Lo que se viene en programación funcional de Java&#8230;'
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1507
 permalink: /lo-que-se-viene-en-programacion-funcional-de-java/

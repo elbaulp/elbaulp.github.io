@@ -1,7 +1,7 @@
 ---
 id: 266
 title: 'ImageSpaceMedia (ISM) &#8211; Gana dinero con las imágenes de tu web'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/imagespacemedia-ism-gana-dinero-con-las-imagenes-de-tu-web/
 permalink: /imagespacemedia-ism-gana-dinero-con-las/

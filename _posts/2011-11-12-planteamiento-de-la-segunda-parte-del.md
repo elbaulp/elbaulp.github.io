@@ -1,7 +1,7 @@
 ---
 id: 277
 title: Planteamiento de la segunda parte del curso de Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/planteamiento-de-la-segunda-parte-del-curso-de-android/
 permalink: /planteamiento-de-la-segunda-parte-del/

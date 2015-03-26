@@ -1,7 +1,7 @@
 ---
 id: 112
 title: Python para principiantes
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/python-para-principiantes/
 permalink: /python-para-principiantes/

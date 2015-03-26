@@ -1,7 +1,7 @@
 ---
 id: 318
 title: Cómo saber a qué partición pertenece un archivo en GNU/Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/como-saber-a-que-particion-pertenece-un-archivo-en-gnulinux/
 permalink: /como-saber-que-particion-pertenece-un/

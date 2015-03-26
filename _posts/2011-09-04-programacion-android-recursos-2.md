@@ -1,7 +1,7 @@
 ---
 id: 250
 title: 'Programación Android: Recursos compilados y no compilados'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-compilados-y-no-compilados/
 permalink: /programacion-android-recursos-2/

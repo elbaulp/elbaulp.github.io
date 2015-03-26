@@ -1,7 +1,7 @@
 ---
 id: 301
 title: Tipos de gobernadores en las CPUs
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/tipos-de-gobernadores-en-las-cpus/
 permalink: /tipos-de-gobernadores-en-las-cpus/

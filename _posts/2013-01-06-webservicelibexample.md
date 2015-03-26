@@ -1,7 +1,7 @@
 ---
 id: 1013
 title: 'Restlib &#8211; Librería para realizar peticiones a Web Services en Android'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1013
 permalink: /restlib-libreria-para-realizar-peticiones-a-web-services-en-android/

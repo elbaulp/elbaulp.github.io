@@ -1,7 +1,7 @@
 ---
 id: 302
 title: 'Guerra de navegadores [Humor]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/guerra-de-navegadores-humor/
 permalink: /guerra-de-navegadores-humor/

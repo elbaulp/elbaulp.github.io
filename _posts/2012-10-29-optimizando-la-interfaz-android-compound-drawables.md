@@ -1,7 +1,7 @@
 ---
 id: 1006
 title: 'Optimizando la interfaz Android &#8211; Compound Drawables'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1006
 permalink: /optimizando-la-interfaz-android-compound-drawables/

@@ -1,7 +1,7 @@
 ---
 id: 1728
 title: Qué es QUIC, el nuevo protocolo desarrollado por Google
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1728
 permalink: /que-es-quic-el-nuevo-protocolo-desarrollado-por-google/

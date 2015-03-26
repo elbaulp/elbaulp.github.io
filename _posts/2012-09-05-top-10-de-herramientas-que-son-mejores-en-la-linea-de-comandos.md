@@ -1,7 +1,7 @@
 ---
 id: 887
 title: 10 de las Mejores Herramientas en la Línea de Comandos
-author: Luzcila
+
 layout: post
 guid: /?p=887
 permalink: /top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/

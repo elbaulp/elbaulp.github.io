@@ -1,7 +1,7 @@
 ---
 id: 497
 title: C++ y Java
-author: Alejandro Alcalde
+
 layout: page
 guid: http://elbauldelprogramador.org/?page_id=497
 if_page_sidebar:

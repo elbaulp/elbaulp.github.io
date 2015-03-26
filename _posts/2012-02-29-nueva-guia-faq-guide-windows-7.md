@@ -1,7 +1,7 @@
 ---
 id: 348
 title: 'Nueva guía: FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-faq-guide-windows-7-migrations-are-the-time-to-lockdown-pcs/
 permalink: /nueva-guia-faq-guide-windows-7/

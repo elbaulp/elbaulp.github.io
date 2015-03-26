@@ -1,7 +1,7 @@
 ---
 id: 1051
 title: Optimizar sumas en paralelo
-author: Luzcila
+
 layout: post
 guid: /?p=1051
 permalink: /optimizar-sumas-en-paralelo/

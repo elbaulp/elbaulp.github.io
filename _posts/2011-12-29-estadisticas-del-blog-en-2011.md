@@ -1,7 +1,7 @@
 ---
 id: 319
 title: Estadísticas del blog en 2011
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/estadisticas-del-blog-en-2011/
 permalink: /estadisticas-del-blog-en-2011/

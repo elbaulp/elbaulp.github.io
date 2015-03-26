@@ -1,7 +1,7 @@
 ---
 id: 1157
 title: El modelo de seguridad de iOS (Charla del NESG en la UGR)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1157
 permalink: /el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/

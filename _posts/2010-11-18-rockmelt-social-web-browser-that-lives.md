@@ -1,7 +1,7 @@
 ---
 id: 29
 title: RockMelt, The social web browser that lives in the clouds
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/rockmelt-the-social-web-browser-that-lives-in-the-clouds/
 permalink: /rockmelt-social-web-browser-that-lives/

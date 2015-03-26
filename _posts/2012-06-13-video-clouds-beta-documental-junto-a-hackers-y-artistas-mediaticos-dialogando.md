@@ -1,7 +1,7 @@
 ---
 id: 785
 title: '[Vídeo] Clouds: beta. Documental junto a hackers y artistas mediaticos dialogando.'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=785
 permalink: /video-clouds-beta-documental-junto-a-hackers-y-artistas-mediaticos-dialogando/

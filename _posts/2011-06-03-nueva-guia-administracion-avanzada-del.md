@@ -1,7 +1,7 @@
 ---
 id: 215
 title: 'Nueva guía: Administración Avanzada del Sistema Operativo GNU/Linux (En Español)'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-administracion-avanzada-del-sistema-operativo-gnulinux-en-espanol/
 permalink: /nueva-guia-administracion-avanzada-del/

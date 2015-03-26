@@ -1,7 +1,7 @@
 ---
 id: 966
 title: Cómo iniciar debian desde un dispositivo USB
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=966
 permalink: /iniciar-debian-desde-usb/

@@ -1,7 +1,7 @@
 ---
 id: 2491
 title: 'Mini Curso de LaTeX &#8211; Introducción'
-author: Marta Gómez
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2491
 permalink: /mini-curso-de-latex-introduccion/

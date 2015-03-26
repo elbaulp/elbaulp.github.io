@@ -1,7 +1,7 @@
 ---
 id: 148
 title: 'Clases y Objetos &#8211; Control del acceso a los miembros de la clase'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-control-del-acceso-a-los-miembros-de-la-clase/
 permalink: /clases-y-objetos-control-del-acceso-los/

@@ -1,7 +1,7 @@
 ---
 id: 152
 title: Pray For Japan | Roguemos por Japón
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/pray-for-japan-roguemos-por-japon/
 permalink: /pray-for-japan-roguemos-por-japon/

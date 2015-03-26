@@ -1,7 +1,7 @@
 ---
 id: 78
 title: 'Consulta de Datos &#8211; Cláusula FROM'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-from/
 permalink: /consulta-de-datos-clausula-from/

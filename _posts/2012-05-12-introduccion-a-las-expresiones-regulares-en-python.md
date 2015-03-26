@@ -1,7 +1,7 @@
 ---
 id: 713
 title: Introducción a las expresiones regulares en python
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=713
 permalink: /introduccion-a-las-expresiones-regulares-en-python/

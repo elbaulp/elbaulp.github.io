@@ -1,7 +1,7 @@
 ---
 id: 77
 title: 'Consulta de Datos &#8211; Cláusula Select'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-select/
 permalink: /consulta-de-datos-clausula-select/

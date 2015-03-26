@@ -1,7 +1,7 @@
 ---
 id: 983
 title: '[HUMOR] Dos Vídeos muy geek para Programadores'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=983
 permalink: /humor-dos-videos-muy-geek-para-programadores/

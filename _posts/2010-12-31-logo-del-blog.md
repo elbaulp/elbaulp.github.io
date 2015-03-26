@@ -1,7 +1,7 @@
 ---
 id: 76
 title: Logo del blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/logo-del-blog/
 permalink: /logo-del-blog/

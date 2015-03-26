@@ -1,7 +1,7 @@
 ---
 id: 122
 title: Linea cronológica de distribuciones GNU/Linux 1992-2011
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/linea-cronologica-de-distribuciones-gnulinux-1992-2011/
 permalink: /linea-cronologica-de-distribuciones/

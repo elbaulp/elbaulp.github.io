@@ -1,7 +1,7 @@
 ---
 id: 129
 title: Reparto de las 9 invitaciones para Diaspora
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/reparto-de-las-9-invitaciones-para-diaspora/
 permalink: /reparto-de-las-9-invitaciones-para/

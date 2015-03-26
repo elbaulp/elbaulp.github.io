@@ -1,7 +1,7 @@
 ---
 id: 850
 title: Algoritmos de ordenación.
-author: Luzcila
+
 layout: post
 guid: /?p=850
 permalink: /algoritmos-de-ordenacion/

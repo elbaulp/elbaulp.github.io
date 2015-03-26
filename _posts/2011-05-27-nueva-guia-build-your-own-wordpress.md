@@ -1,7 +1,7 @@
 ---
 id: 202
 title: 'Nueva Guía: Build Your Own WordPress Site Guide'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-build-your-own-wordpress-site-guide/
 permalink: /nueva-guia-build-your-own-wordpress/

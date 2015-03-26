@@ -1,7 +1,7 @@
 ---
 id: 189
 title: 'Clases y Objetos &#8211; Pasar un objeto a una función'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-pasar-un-objeto-a-una-funcion/
 permalink: /clases-y-objetos-pasar-un-objeto-una/

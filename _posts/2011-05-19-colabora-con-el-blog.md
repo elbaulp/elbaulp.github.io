@@ -1,7 +1,7 @@
 ---
 id: 196
 title: Colabora con el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/colabora-con-el-blog/
 permalink: /colabora-con-el-blog/

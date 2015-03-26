@@ -1,7 +1,7 @@
 ---
 id: 1559
 title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1559
 permalink: /jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/

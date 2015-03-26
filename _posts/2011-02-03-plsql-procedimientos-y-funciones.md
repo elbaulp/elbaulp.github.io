@@ -1,7 +1,7 @@
 ---
 id: 126
 title: 'PL/SQL &#8211; Procedimientos y Funciones'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-procedimientos-y-funciones/
 permalink: /plsql-procedimientos-y-funciones/

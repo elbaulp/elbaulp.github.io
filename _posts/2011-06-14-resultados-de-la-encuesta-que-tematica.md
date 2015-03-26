@@ -1,7 +1,7 @@
 ---
 id: 223
 title: 'Resultados de la encuesta: &#8216;¿Qué temática quieres que se trate en el blog?&#8217;'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/resultados-de-la-encuesta-que-tematica-quieres-que-se-trate-en-el-blog/
 permalink: /resultados-de-la-encuesta-que-tematica/

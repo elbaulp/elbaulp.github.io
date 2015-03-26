@@ -1,7 +1,7 @@
 ---
 id: 220
 title: 'Nueva guía: WAN Optimization for Today and Tomorrow'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-wan-optimization-for-today-and-tomorrow/
 permalink: /wan-optimization-has-been-driven-by/

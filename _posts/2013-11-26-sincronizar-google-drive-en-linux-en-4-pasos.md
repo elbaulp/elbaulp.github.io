@@ -1,7 +1,7 @@
 ---
 id: 1941
 title: Sincronizar Google Drive en Linux en 4 pasos
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1941
 permalink: /sincronizar-google-drive-en-linux-en-4-pasos/

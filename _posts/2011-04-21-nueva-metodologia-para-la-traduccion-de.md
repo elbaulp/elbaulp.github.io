@@ -1,7 +1,7 @@
 ---
 id: 179
 title: Nueva metodología para la traducción de la Guía Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-metodologia-para-la-traduccion-de-la-guia-android/
 permalink: /nueva-metodologia-para-la-traduccion-de/

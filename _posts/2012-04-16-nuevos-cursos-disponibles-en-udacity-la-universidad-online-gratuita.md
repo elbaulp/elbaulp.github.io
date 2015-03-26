@@ -1,7 +1,7 @@
 ---
 id: 712
 title: Nuevos Cursos disponibles en Udacity, la universidad online gratuita
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=712
 permalink: /nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/

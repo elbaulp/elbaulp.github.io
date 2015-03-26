@@ -1,7 +1,7 @@
 ---
 id: 347
 title: 'Vídeos de la semana: Unos cuantos cortos y un time-lapse'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/videos-de-la-semana-unos-cuantos-cortos-y-un-time-lapse/
 permalink: /videos-de-la-semana-unos-cuantos-cortos/

@@ -1,7 +1,7 @@
 ---
 id: 361
 title: Enlaces de la semana ( I )
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/enlaces-de-la-semana-i/
 permalink: /enlaces-de-la-semana-i/

@@ -1,7 +1,7 @@
 ---
 id: 251
 title: 'Nuevo Proyecto Android: Fav Sites'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nuevo-proyecto-android-fav-sites/
 permalink: /estoy-trabajando-en-una-aplicacion/

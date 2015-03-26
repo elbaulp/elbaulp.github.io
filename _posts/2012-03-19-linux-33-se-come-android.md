@@ -1,7 +1,7 @@
 ---
 id: 357
 title: Linux 3.3 se come a Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/linux-3-3-se-come-a-android/
 permalink: /linux-33-se-come-android/

@@ -1,7 +1,7 @@
 ---
 id: 2275
 title: Cómo programar apps móviles para pymes sin salir de casa
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2275
 permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/

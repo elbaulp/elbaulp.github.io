@@ -1,7 +1,7 @@
 ---
 id: 350
 title: Mi experiencia en el 3º Hackathon de la Universidad de Granada
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/mi-experiencia-en-el-3o-hackathon-de-la-universidad-de-granada/
 permalink: /mi-experiencia-en-el-3-hackathon-de-la/

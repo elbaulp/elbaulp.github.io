@@ -1,7 +1,7 @@
 ---
 id: 115
 title: Récord overclock 3DMark Vantage
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/record-overclock-3dmark-vantage/
 permalink: /record-overclock-3dmark-vantage/

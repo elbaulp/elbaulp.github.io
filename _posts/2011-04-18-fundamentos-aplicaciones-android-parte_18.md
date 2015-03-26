@@ -1,7 +1,7 @@
 ---
 id: 175
 title: 'Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-aplicaciones-android-parte-ii-componentes/
 permalink: /fundamentos-aplicaciones-android-parte_18/

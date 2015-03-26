@@ -1,7 +1,7 @@
 ---
 id: 60
 title: El riesgo de las URLs cortas
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/el-riesgo-de-las-urls-cortas/
 permalink: /el-riesgo-de-las-urls-cortas-risk-of/

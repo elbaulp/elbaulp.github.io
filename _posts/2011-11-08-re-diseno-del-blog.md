@@ -1,7 +1,7 @@
 ---
 id: 271
 title: ¿Re-Diseño del blog?
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/re-diseno-del-blog/
 permalink: /re-diseno-del-blog/

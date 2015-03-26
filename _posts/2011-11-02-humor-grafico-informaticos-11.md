@@ -1,7 +1,7 @@
 ---
 id: 265
 title: 'Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211; 9GAG.COM Parte (I)'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/humor-grafico-informaticos-programadores-geek-9gag-com-parte-i/
 permalink: /humor-grafico-informaticos-11/

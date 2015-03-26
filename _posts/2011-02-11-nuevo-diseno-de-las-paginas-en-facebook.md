@@ -1,7 +1,7 @@
 ---
 id: 134
 title: Nuevo diseño de las páginas en Facebook
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nuevo-diseno-de-las-paginas-en-facebook/
 permalink: /nuevo-diseno-de-las-paginas-en-facebook/

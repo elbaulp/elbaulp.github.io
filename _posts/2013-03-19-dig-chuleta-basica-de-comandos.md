@@ -1,7 +1,7 @@
 ---
 id: 1479
 title: 'Dig &#8211; Chuleta básica de comandos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1479
 permalink: /dig-chuleta-basica-de-comandos/

@@ -1,7 +1,7 @@
 ---
 id: 166
 title: Activar el botón +1 de google
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/activar-el-boton-1-de-google/
 permalink: /activar-el-boton-1-de-google/

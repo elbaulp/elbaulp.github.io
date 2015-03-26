@@ -1,7 +1,7 @@
 ---
 id: 163
 title: Habilitadas las vistas dinámicas en el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/habilitadas-las-vistas-dinamicas-en-el-blog/
 permalink: /habilitadas-las-vistas-dinamicas-en-el/

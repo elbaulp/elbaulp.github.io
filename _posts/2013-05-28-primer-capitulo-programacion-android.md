@@ -1,7 +1,7 @@
 ---
 id: 278
 title: Disponible la primera parte del curso Android en PDF
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/disponible-la-primera-parte-del-curso-android-en-pdf/
 permalink: /disponible-la-primera-parte-del-curso/

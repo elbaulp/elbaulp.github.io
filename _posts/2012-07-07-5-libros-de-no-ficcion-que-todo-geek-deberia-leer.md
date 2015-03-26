@@ -1,7 +1,7 @@
 ---
 id: 790
 title: 14 Libros de No-Ficción que todo Geek debería leer
-author: Luzcila
+
 excerpt: |
   Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
   

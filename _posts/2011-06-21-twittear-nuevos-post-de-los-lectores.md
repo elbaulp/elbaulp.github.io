@@ -1,7 +1,7 @@
 ---
 id: 233
 title: Twittear nuevos post de los lectores a través de la cuenta de este blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/twittear-nuevos-post-de-los-lectores-a-traves-de-la-cuenta-de-este-blog/
 permalink: /twittear-nuevos-post-de-los-lectores/

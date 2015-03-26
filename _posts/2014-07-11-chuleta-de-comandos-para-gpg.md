@@ -1,7 +1,7 @@
 ---
 id: 2391
 title: Chuleta de comandos para GPG
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2391
 permalink: /chuleta-de-comandos-para-gpg/

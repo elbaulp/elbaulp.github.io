@@ -1,7 +1,7 @@
 ---
 id: 194
 title: 'Cómo conocer el software &#8220;no libre&#8221; instalado en nuestro equipo'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/como-conocer-el-software-no-libre-instalado-en-nuestro-equipo/
 permalink: /como-conocer-el-software-no-libre/

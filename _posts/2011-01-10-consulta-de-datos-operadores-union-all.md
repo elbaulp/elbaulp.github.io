@@ -1,7 +1,7 @@
 ---
 id: 85
 title: 'Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-operadores-union-all-intersect-minus/
 permalink: /consulta-de-datos-operadores-union-all/

@@ -1,7 +1,7 @@
 ---
 id: 2329
 title: 'Programación ABAP: Hola Mundo en Reports'
-author: Colaboraciones
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2329
 permalink: /programacion-abap-hola-mundo-en-reports/

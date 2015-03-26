@@ -1,7 +1,7 @@
 ---
 id: 1825
 title: Viñetas Geek de Domingo (IX)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1825
 permalink: /vinetas-geek-de-domingo-ix/

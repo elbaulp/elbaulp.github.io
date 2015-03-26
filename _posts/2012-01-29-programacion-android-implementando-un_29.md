@@ -1,7 +1,7 @@
 ---
 id: 334
 title: 'Programación Android: Implementando un Content Provider (Parte 4)'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-implementando-un-content-provider-parte-4/
 permalink: /programacion-android-implementando-un_29/

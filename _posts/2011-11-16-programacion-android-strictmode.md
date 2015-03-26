@@ -1,7 +1,7 @@
 ---
 id: 285
 title: 'Programación Android: StrictMode'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-strictmode/
 permalink: /programacion-android-strictmode/

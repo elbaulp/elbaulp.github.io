@@ -1,7 +1,7 @@
 ---
 id: 44
 title: 3 Juegos para Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/3-juegos-para-linux/
 permalink: /3-juegos-para-linux/

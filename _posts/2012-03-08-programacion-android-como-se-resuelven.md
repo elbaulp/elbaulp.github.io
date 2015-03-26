@@ -1,7 +1,7 @@
 ---
 id: 351
 title: 'Programación Android: Cómo se resuelven los Intents'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-como-se-resuelven-los-intents/
 permalink: /programacion-android-como-se-resuelven/

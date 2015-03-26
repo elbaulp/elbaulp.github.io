@@ -1,7 +1,7 @@
 ---
 id: 2020
 title: 'Tablet Vs e-Reader: ¿cuál ganará?'
-author: Colaboraciones
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2020
 permalink: /tablet-vs-e-reader-cual-ganara/

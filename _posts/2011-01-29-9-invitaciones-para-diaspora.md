@@ -1,7 +1,7 @@
 ---
 id: 116
 title: '9 Invitaciones para Diaspora* disponibles.'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/9-invitaciones-para-diaspora-disponibles/
 permalink: /9-invitaciones-para-diaspora/

@@ -1,7 +1,7 @@
 ---
 id: 872
 title: 'Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition&#8211;Free 57 Page Preview'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=872
 permalink: /nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/

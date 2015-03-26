@@ -1,7 +1,7 @@
 ---
 id: 2036
 title: Combatir los comentarios de spam en WordPress
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2036
 permalink: /combatir-los-comentarios-de-spam-en-wordpress/

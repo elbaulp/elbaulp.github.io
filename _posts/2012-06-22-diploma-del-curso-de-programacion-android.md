@@ -1,7 +1,7 @@
 ---
 id: 804
 title: Diploma del curso de programación Android
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=804
 permalink: /diploma-del-curso-de-programacion-android/

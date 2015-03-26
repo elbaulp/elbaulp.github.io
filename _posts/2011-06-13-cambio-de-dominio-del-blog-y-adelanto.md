@@ -1,7 +1,7 @@
 ---
 id: 222
 title: Cambio de domínio del blog y adelanto de nuevos cambios
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/cambio-de-dominio-del-blog-y-adelanto-de-nuevos-cambios/
 permalink: /cambio-de-dominio-del-blog-y-adelanto/

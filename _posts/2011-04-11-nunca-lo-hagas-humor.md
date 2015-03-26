@@ -1,7 +1,7 @@
 ---
 id: 168
 title: '¡Nunca lo hagas! [Humor]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nunca-lo-hagas-humor/
 permalink: /nunca-lo-hagas-humor/

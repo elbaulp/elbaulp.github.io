@@ -1,7 +1,7 @@
 ---
 id: 1955
 title: Resolver laberintos en C++
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1955
 permalink: /resolver-laberintos-en-c/

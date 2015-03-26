@@ -1,7 +1,7 @@
 ---
 id: 103
 title: 'PL/SQL &#8211; Declaración de variables'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-declaracion-de-variables/
 permalink: /plsql-declaracion-de-variables/

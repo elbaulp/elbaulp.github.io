@@ -1,7 +1,7 @@
 ---
 id: 1712
 title: Mostrar todos los post de una categoría en WordPress
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1712
 permalink: /mostrar-todos-los-post-de-una-categoria-wordpress/

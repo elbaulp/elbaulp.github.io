@@ -1,7 +1,7 @@
 ---
 id: 1540
 title: Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1540
 permalink: /como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/

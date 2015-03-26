@@ -1,7 +1,7 @@
 ---
 id: 341
 title: 'Programación Android: Intents &#8211; Conceptos básicos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-intents-conceptos-basicos/
 permalink: /programacion-android-intents-conceptos/

@@ -1,7 +1,7 @@
 ---
 id: 791
 title: '&#8220;A THIRSTY WORLD&#8221; (Un mundo sediento) Trailer. Documental de los creadores de HOME'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=791
 permalink: /a-thirsty-world-un-mundo-sediento-trailer-documental-de-los-creadores-de-home/

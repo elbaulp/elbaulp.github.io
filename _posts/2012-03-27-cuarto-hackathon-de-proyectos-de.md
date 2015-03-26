@@ -1,7 +1,7 @@
 ---
 id: 363
 title: Cuarto Hackathon de proyectos de software libre de la UGR
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/cuarto-hackathon-de-proyectos-de-software-libre-de-la-ugr/
 permalink: /cuarto-hackathon-de-proyectos-de/

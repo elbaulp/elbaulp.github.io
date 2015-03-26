@@ -1,7 +1,7 @@
 ---
 id: 339
 title: 'Nueva guía: Ubuntu: An Absolute Beginner’s Guide'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-ubuntu-an-absolute-beginners-guide/
 permalink: /nueva-guia-ubuntu-absolute-beginners/

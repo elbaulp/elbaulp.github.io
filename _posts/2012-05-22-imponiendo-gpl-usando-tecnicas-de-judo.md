@@ -1,7 +1,7 @@
 ---
 id: 737
 title: Imponiendo GPL usando técnicas de Judo
-author: Luzcila
+
 layout: post
 guid: /?p=737
 permalink: /imponiendo-gpl-usando-tecnicas-de-judo/

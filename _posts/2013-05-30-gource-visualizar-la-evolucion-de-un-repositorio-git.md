@@ -1,7 +1,7 @@
 ---
 id: 1580
 title: 'Gource: Visualizar la evolución de un repositorio Git'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1580
 permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/

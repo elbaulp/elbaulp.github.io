@@ -1,7 +1,7 @@
 ---
 id: 847
 title: Detectar archivos PNG con C++
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=847
 permalink: /detectar-archivos-png-con-c/
@@ -298,7 +298,7 @@ En lugar de usar la función *TipoImagen LeerTipoImagen(const char nombre[], int
  * @brief Fichero principal encargado de ocultar el mensaje
  *
  *  Created on: Aug 12, 2012
- *      @author: Alejandro Alcalde
+ *      @
  */
 #include "./imagenESP.h"
 

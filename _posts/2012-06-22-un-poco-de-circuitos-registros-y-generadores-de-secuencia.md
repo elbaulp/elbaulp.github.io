@@ -1,7 +1,7 @@
 ---
 id: 802
 title: Un poco de circuitos, regístros y generadores de secuencia
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=802
 permalink: /un-poco-de-circuitos-registros-y-generadores-de-secuencia/

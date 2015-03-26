@@ -1,7 +1,7 @@
 ---
 id: 55
 title: Recopilación de Información del Boicot a WikiLeaks
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/recopilacion-de-informacion-del-boicot-a-wikileaks/
 permalink: /informacion-del-boicot-wikileaks/

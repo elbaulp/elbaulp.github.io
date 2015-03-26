@@ -1,7 +1,7 @@
 ---
 id: 978
 title: Algoritmos de caminos cortos.
-author: Luzcila
+
 layout: post
 guid: /?p=978
 permalink: /algoritmos-de-caminos-cortos/

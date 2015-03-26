@@ -1,7 +1,7 @@
 ---
 id: 1019
 title: Logrando el anonimato con Tor (Parte 1)
-author: Luzcila
+
 layout: post
 guid: /?p=1019
 permalink: /logrando-el-anonimato-con-tor-parte-1/

@@ -1,7 +1,7 @@
 ---
 id: 2387
 title: Incluir imágenes en una entrada de WordPress usando PHP
-author: Colaboraciones
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2387
 permalink: /incluir-imagenes-en-una-entrada-de-wordpress-usando-php/

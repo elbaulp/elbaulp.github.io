@@ -1,7 +1,7 @@
 ---
 id: 731
 title: Se buscan traductores de Inglés-Español para colaborar en el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=731
 permalink: /se-buscan-traductores-de-ingles-espanol-para-colaborar-en-el-blog/

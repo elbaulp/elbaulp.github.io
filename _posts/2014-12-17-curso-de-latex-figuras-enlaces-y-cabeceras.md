@@ -1,7 +1,7 @@
 ---
 id: 2514
 title: 'Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras'
-author: Marta Gómez
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2514
 permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/

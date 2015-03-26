@@ -1,7 +1,7 @@
 ---
 id: 1295
 title: Suscríbete al feed RSS únicamente en las categorías que te interesen
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1295
 permalink: /suscritebe-al-feed-rss-unicamente-en-las-categorias-que-te-interesen/

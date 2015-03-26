@@ -1,7 +1,7 @@
 ---
 id: 259
 title: '[Offtopic] Impresionante puesta de sol en Islandia'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/offtopic-impresionante-puesta-de-sol-en-islandia/
 permalink: /offtopic-impresionante-puesta-de-sol-en/

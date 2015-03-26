@@ -1,7 +1,7 @@
 ---
 id: 151
 title: Resultados examen PL/SQL base de datos
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/resultados-examen-plsql-base-de-datos/
 permalink: /resultados-examen-plsql-base-de-datos/

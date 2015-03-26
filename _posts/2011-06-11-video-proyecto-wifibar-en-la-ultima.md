@@ -1,7 +1,7 @@
 ---
 id: 221
 title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/video-proyecto-wifibar-en-la-ultima-fase-de-desarrollo/
 permalink: /video-proyecto-wifibar-en-la-ultima/

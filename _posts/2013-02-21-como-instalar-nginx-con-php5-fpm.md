@@ -1,7 +1,7 @@
 ---
 id: 1309
 title: Cómo instalar y configurar Nginx con php5-fpm
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1309
 permalink: /como-instalar-nginx-con-php5-fpm/

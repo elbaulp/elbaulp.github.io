@@ -1,7 +1,7 @@
 ---
 id: 307
 title: 'Tech Comics: &#8220;Geek en el oculista&#8221; [HUMOR]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/tech-comics-geek-en-el-oculista-humor/
 permalink: /tech-comics-geek-en-el-oculista-humor/

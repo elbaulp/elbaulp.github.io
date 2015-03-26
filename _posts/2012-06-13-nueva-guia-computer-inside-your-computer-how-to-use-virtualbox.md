@@ -1,7 +1,7 @@
 ---
 id: 781
 title: 'Nueva Guía: Computer Inside Your Computer: How To Use VirtualBox'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=781
 permalink: /nueva-guia-computer-inside-your-computer-how-to-use-virtualbox/

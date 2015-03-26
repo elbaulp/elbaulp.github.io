@@ -1,7 +1,7 @@
 ---
 id: 2471
 title: 'Código Open Source: Para la gente, por la gente'
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2471
 permalink: /codigo-open-source-para-la-gente-por-la-gente/

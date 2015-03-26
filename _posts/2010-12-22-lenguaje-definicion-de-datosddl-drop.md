@@ -1,7 +1,7 @@
 ---
 id: 66
 title: 'Lenguaje Definición de Datos (DDL) &#8211; DROP'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-drop/
 permalink: /lenguaje-definicion-de-datosddl-drop/

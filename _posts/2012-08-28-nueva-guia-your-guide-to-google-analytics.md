@@ -1,7 +1,7 @@
 ---
 id: 924
 title: 'Nueva Guía: Your Guide to Google Analytics'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=924
 permalink: /nueva-guia-your-guide-to-google-analytics/

@@ -1,7 +1,7 @@
 ---
 id: 306
 title: 'Programación Android: Usando la cláusula Where'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-usando-la-clausula-where/
 permalink: /programacion-android-usando-la-clausula/

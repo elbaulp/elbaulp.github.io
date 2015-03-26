@@ -1,7 +1,7 @@
 ---
 id: 155
 title: Mejoras para el proyecto PyLabra
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/mejoras-para-el-proyecto-pylabra/
 permalink: /mejoras-para-el-proyecto-pylabra/

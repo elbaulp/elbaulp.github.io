@@ -1,7 +1,7 @@
 ---
 id: 688
 title: Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad
-author: Alejandro Alcalde
+
 excerpt: 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo de blogger a una en wordpress bajo un hosting propio así como la configuración necesaria para no perder a los  lectores habituales, los suscriptores al feed ni el posicionamiento en los buscadores. Por último se mencionarán algunos consejos de seguridad.'
 layout: post
 guid: /?p=688

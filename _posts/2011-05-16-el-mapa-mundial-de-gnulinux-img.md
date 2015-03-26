@@ -1,7 +1,7 @@
 ---
 id: 191
 title: 'El mapa mundial de GNU/Linux [IMG]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/el-mapa-mundial-de-gnulinux-img/
 permalink: /el-mapa-mundial-de-gnulinux-img/

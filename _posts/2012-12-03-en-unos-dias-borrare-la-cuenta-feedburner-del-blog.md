@@ -1,7 +1,7 @@
 ---
 id: 1035
 title: En unos días borraré la cuenta feedburner del blog
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1035
 permalink: /en-unos-dias-borrare-la-cuenta-feedburner-del-blog/

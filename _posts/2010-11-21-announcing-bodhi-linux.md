@@ -1,7 +1,7 @@
 ---
 id: 35
 title: Announcing Bodhi Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/announcing-bodhi-linux/
 permalink: /announcing-bodhi-linux/

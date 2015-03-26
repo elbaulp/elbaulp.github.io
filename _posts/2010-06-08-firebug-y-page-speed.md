@@ -1,7 +1,7 @@
 ---
 id: 6
 title: Firebug y page speed
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/firebug-y-page-speed/
 permalink: /firebug-y-page-speed/

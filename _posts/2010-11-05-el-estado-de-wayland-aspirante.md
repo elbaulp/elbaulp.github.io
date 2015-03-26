@@ -1,7 +1,7 @@
 ---
 id: 26
 title: El estado de Wayland, aspirante a reemplazar X.org
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/el-estado-de-wayland-aspirante-a-reemplazar-x-org/
 permalink: /el-estado-de-wayland-aspirante/

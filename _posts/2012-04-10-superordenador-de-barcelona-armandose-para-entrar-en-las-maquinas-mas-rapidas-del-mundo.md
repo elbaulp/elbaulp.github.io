@@ -1,7 +1,7 @@
 ---
 id: 707
 title: Superordenador de Barcelona ARMándose para entrar en las máquinas más rápidas del mundo
-author: Luzcila
+
 layout: post
 guid: /?p=707
 permalink: /superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/

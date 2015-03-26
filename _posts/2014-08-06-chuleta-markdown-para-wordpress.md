@@ -1,7 +1,7 @@
 ---
 id: 2416
 title: Chuleta de Markdown para wordpress
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2416
 permalink: /chuleta-markdown-para-wordpress/

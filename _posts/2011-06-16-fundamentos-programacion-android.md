@@ -1,7 +1,7 @@
 ---
 id: 225
 title: 'Fundamentos programación Android: Conceptos básicos y componentes'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-programacion-android-conceptos-basicos-y-componentes/
 permalink: /fundamentos-programacion-android/

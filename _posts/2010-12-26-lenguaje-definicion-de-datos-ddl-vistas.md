@@ -1,7 +1,7 @@
 ---
 id: 69
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-vistas/
 permalink: /lenguaje-definicion-de-datos-ddl-vistas/

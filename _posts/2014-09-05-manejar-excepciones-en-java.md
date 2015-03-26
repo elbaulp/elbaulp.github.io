@@ -1,7 +1,7 @@
 ---
 id: 2438
 title: Manejar excepciones en Java
-author: Colaboraciones
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2438
 permalink: /manejar-excepciones-en-java/

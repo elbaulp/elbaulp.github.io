@@ -1,7 +1,7 @@
 ---
 id: 15
 title: Copiar archivos recursivamente
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/copiar-archivos-recursivamente/
 permalink: /copiar-archivos-recursivamente/

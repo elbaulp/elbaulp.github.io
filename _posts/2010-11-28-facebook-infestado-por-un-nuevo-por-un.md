@@ -1,7 +1,7 @@
 ---
 id: 49
 title: Facebook infectado por un nuevo por un gusano
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/facebook-infectado-por-un-nuevo-por-un-gusano/
 permalink: /facebook-infestado-por-un-nuevo-por-un/

@@ -1,7 +1,7 @@
 ---
 id: 1400
 title: Cómo añadir contenido por defecto a los artículos en WordPress
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1400
 permalink: /como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/

@@ -1,7 +1,7 @@
 ---
 id: 187
 title: Android SDK Dev Guide en PDF
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/android-sdk-dev-guide-en-pdf/
 permalink: /android-sdk-dev-guide-en-pdf/

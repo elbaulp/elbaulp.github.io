@@ -1,7 +1,7 @@
 ---
 id: 108
 title: 'Pylabra &#8211; Aplicación para almacenar vocabulario'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/pylabra-aplicacion-para-almacenar-vocabulario/
 permalink: /pylabra-aplicacion-para-almacenar/

@@ -1,7 +1,7 @@
 ---
 id: 2403
 title: Instalar y configurar DWM, el gestor de ventanas más eficiente
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2403
 permalink: /instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/

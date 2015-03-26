@@ -1,7 +1,7 @@
 ---
 id: 74
 title: Repasando el Año.
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/repasando-el-ano/
 permalink: /repasando-el-ano/

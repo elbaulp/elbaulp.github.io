@@ -1,7 +1,7 @@
 ---
 id: 2047
 title: 'OpenGL &#8211; Prácticas Informática Gráfica: Modelos jerárquicos  &#8211; Un Robot'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2047
 permalink: /opengl-practicas-informatica-grafica-modelos-jerarquicos-un-robot/

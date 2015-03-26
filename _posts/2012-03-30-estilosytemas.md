@@ -1,7 +1,7 @@
 ---
 id: 240
 title: 'Programación Android: Interfaz gráfica &#8211; Estilos y Temas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-estilos-y-temas/
 permalink: /programacion-android-interfaz-grafica_18/

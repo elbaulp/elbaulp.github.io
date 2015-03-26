@@ -1,7 +1,7 @@
 ---
 id: 207
 title: 'Nueva guía: The JavaScript Anthology: 101 Essential Tips, Tricks &#038; Hacks'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-javascript-anthology-101-essential-tips-tricks-hacks/
 permalink: /nueva-guia-javascript-anthology-101/

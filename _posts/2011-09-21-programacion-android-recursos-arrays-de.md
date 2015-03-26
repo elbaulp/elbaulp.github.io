@@ -1,7 +1,7 @@
 ---
 id: 254
 title: 'Programación Android: Recursos &#8211; Arrays de strings'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-arrays-de-strings/
 permalink: /programacion-android-recursos-arrays-de/

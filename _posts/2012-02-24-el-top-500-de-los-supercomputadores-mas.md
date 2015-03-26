@@ -1,7 +1,7 @@
 ---
 id: 345
 title: El top 500 de los supercomputadores más potentes del mundo
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/el-top-500-de-los-supercomputadores-mas-potentes-del-mundo/
 permalink: /el-top-500-de-los-supercomputadores-mas/

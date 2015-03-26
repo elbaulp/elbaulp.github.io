@@ -1,7 +1,7 @@
 ---
 id: 1473
 title: Cómo instalar Bolt, un CMS rápido y sencillo
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1473
 permalink: /instalacion-y-configuracion-de-bolt-un-cms-rapido-y-sencillo/

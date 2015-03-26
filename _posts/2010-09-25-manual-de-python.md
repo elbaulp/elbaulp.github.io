@@ -1,7 +1,7 @@
 ---
 id: 10
 title: Manual de python
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/manual-de-python/
 permalink: /manual-de-python/

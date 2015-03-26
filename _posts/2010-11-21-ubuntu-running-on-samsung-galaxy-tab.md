@@ -1,7 +1,7 @@
 ---
 id: 37
 title: Ubuntu running on the Samsung Galaxy Tab
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ubuntu-running-on-the-samsung-galaxy-tab/
 permalink: /ubuntu-running-on-samsung-galaxy-tab/

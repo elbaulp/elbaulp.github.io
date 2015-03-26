@@ -1,7 +1,7 @@
 ---
 id: 186
 title: Humanstxt Creator. Somos personas, no máquinas
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/humanstxt-creator-somos-personas-no-maquinas/
 permalink: /humanstxt-creator-somos-personas-no/

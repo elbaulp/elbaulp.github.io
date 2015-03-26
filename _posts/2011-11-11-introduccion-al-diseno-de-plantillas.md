@@ -1,7 +1,7 @@
 ---
 id: 274
 title: Introducción al diseño de plantillas personalizadas para móviles en Blogger
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-al-diseno-de-plantillas-personalizadas-para-moviles-en-blogger/
 permalink: /introduccion-al-diseno-de-plantillas/

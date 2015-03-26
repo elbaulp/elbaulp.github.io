@@ -1,7 +1,7 @@
 ---
 id: 313
 title: 'Programación Android: Insertando registros'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-insertando-registros/
 permalink: /programacion-android-insertando/

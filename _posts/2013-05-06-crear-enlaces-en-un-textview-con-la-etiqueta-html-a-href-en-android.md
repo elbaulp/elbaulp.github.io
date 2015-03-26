@@ -1,7 +1,7 @@
 ---
 id: 1546
 title: 'Crear enlaces en un TextView con la etiqueta HTML &lt;a href en Android'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1546
 permalink: /crear-enlaces-en-un-textview-con-la-etiqueta-html-a-href-en-android/

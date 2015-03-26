@@ -1,7 +1,7 @@
 ---
 id: 95
 title: Introducción a PL/SQL
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-a-plsql/
 permalink: /introduccion-plsql/

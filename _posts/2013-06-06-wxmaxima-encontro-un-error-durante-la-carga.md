@@ -1,7 +1,7 @@
 ---
 id: 1619
 title: 'Cómo resolver el error &#8216;wxMaxima encontró un error durante la carga&#8217;'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1619
 permalink: /wxmaxima-encontro-un-error-durante-la-carga/

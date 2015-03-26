@@ -1,7 +1,7 @@
 ---
 id: 744
 title: Suplantación de identidad en Facebook
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=744
 permalink: /suplantacion-de-identidad-en-facebook/

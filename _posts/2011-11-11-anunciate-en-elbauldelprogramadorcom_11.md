@@ -1,7 +1,7 @@
 ---
 id: 275
 title: Anúnciate en elbauldelprogramador.org
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/anunciate-en-elbauldelprogramador-com/
 permalink: /anunciate-en-elbauldelprogramadorcom_11/

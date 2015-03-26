@@ -1,7 +1,7 @@
 ---
 id: 234
 title: 'Programación Android: Interfaz gráfica &#8211; Layouts'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-layouts/
 permalink: /programacion-android-interfaz-grafica_23/

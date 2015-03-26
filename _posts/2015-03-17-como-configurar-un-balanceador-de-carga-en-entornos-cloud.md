@@ -1,7 +1,7 @@
 ---
 id: 2561
 title: Cómo configurar un balanceador de carga en entornos cloud
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2561
 permalink: /como-configurar-un-balanceador-de-carga-en-entornos-cloud/

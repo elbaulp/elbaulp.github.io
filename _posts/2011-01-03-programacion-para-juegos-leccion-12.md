@@ -1,7 +1,7 @@
 ---
 id: 81
 title: 'Programación para Juegos &#8211; Lección 1.2 &#8211; Hello World'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-para-juegos-leccion-1-2-hello-world/
 permalink: /programacion-para-juegos-leccion-12/

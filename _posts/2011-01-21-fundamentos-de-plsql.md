@@ -1,7 +1,7 @@
 ---
 id: 98
 title: Fundamentos de PL/SQL
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-de-plsql/
 permalink: /fundamentos-de-plsql/

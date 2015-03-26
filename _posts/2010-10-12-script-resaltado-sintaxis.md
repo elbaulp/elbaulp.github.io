@@ -1,7 +1,7 @@
 ---
 id: 16
 title: Script resaltado sintaxis c++
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/script-resaltado-sintaxis-c/
 permalink: /script-resaltado-sintaxis/

@@ -1,7 +1,7 @@
 ---
 id: 2214
 title: 'Python C API &#8211; Cómo pasar un array de structs desde C a Python'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2214
 permalink: /python-c-api-como-pasar-un-array-de-structs-desde-c-python/

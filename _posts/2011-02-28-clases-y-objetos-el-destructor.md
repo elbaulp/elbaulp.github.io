@@ -1,7 +1,7 @@
 ---
 id: 145
 title: 'Clases y Objetos &#8211; El Destructor'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-el-destructor/
 permalink: /clases-y-objetos-el-destructor/

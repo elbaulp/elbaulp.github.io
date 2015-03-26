@@ -1,7 +1,7 @@
 ---
 id: 114
 title: Traducción del Artículo 3 (¿Qué es un Píxel?) disponible
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/traduccion-del-articulo-3-que-es-un-pixel-disponible/
 permalink: /traduccion-del-articulo-3-que-es-un/

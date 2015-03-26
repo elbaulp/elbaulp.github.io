@@ -1,7 +1,7 @@
 ---
 id: 243
 title: Planteamiento del Curso de Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/planteamiento-del-curso-de-android/
 permalink: /planteamiento-del-curso-de-android/

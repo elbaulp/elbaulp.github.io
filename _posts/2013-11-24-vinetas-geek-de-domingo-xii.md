@@ -1,7 +1,7 @@
 ---
 id: 1993
 title: Viñetas Geek de Domingo (XII)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1993
 permalink: /vinetas-geek-de-domingo-xii/

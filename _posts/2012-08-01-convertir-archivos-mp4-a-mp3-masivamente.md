@@ -1,7 +1,7 @@
 ---
 id: 867
 title: Convertir archivos mp4 a mp3 masívamente
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=867
 permalink: /convertir-archivos-mp4-a-mp3-masivamente/

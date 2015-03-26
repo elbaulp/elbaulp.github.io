@@ -1,7 +1,7 @@
 ---
 id: 11
 title: Enlightenment Foundation Libraries (EFL)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/enlightenment-foundation-libraries-efl/
 permalink: /enlightenment-foundation-libraries-efl/

@@ -1,7 +1,7 @@
 ---
 id: 1929
 title: SQRL y la idea de eliminar el uso de usuario y contraseña en internet
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1929
 permalink: /sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/

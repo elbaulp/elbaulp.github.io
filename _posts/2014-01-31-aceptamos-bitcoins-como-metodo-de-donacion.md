@@ -1,7 +1,7 @@
 ---
 id: 2244
 title: Aceptamos BitCoins como método de donación
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2244
 permalink: /aceptamos-bitcoins-como-metodo-de-donacion/

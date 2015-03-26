@@ -1,7 +1,7 @@
 ---
 id: 38
 title: Ubuntu funcionando en el Samsung Galaxy Tab
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ubuntu-funcionando-en-el-samsung-galaxy-tab/
 permalink: /ubuntu-funcionando-en-el-samsung-galaxy/

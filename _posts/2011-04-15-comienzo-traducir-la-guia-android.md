@@ -1,7 +1,7 @@
 ---
 id: 173
 title: Comienzo a traducir la guía android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/comienzo-a-traducir-la-guia-android/
 permalink: /comienzo-traducir-la-guia-android/

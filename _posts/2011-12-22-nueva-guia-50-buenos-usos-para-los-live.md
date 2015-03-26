@@ -1,7 +1,7 @@
 ---
 id: 312
 title: 'Nueva Guía: 50 buenos usos para los Live CDs'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-50-buenos-usos-para-los-live-cds/
 permalink: /nueva-guia-50-buenos-usos-para-los-live/

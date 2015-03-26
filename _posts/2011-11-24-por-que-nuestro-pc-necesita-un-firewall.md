@@ -1,7 +1,7 @@
 ---
 id: 296
 title: Por qué nuestro PC necesita un firewall activado
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/por-que-nuestro-pc-necesita-un-firewall-activado/
 permalink: /por-que-nuestro-pc-necesita-un-firewall/

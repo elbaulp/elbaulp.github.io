@@ -1,7 +1,7 @@
 ---
 id: 2478
 title: 'Fugas de memoria en Android: Handlers &#038; Clases Internas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2478
 permalink: /fugas-de-memoria-android-handlers-clases-internas/

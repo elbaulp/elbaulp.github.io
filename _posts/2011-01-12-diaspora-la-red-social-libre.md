@@ -1,7 +1,7 @@
 ---
 id: 87
 title: 'Diaspora*, La red social libre'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/diaspora-la-red-social-libre/
 permalink: /diaspora-la-red-social-libre/

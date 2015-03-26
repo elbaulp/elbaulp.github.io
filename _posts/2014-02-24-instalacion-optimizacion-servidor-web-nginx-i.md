@@ -1,7 +1,7 @@
 ---
 id: 2253
 title: Instalación y optimización de un servidor web con Nginx (I)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2253
 permalink: /instalacion-optimizacion-servidor-web-nginx-i/

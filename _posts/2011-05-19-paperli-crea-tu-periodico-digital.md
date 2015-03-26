@@ -1,7 +1,7 @@
 ---
 id: 195
 title: 'Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/paper-li-crea-tu-periodico-digital-automaticamente-con-lo-mas-relevante-de-twitter-y-facebook/
 permalink: /paperli-crea-tu-periodico-digital/

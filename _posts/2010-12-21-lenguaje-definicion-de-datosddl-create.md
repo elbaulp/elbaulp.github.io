@@ -1,7 +1,7 @@
 ---
 id: 65
 title: 'Lenguaje Definición de Datos(DDL) &#8211; CREATE'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datosddl-create/
 permalink: /lenguaje-definicion-de-datosddl-create/

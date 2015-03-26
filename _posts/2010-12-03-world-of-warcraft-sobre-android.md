@@ -1,7 +1,7 @@
 ---
 id: 52
 title: World of Warcraft sobre Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/world-of-warcraft-sobre-android/
 permalink: /world-of-warcraft-sobre-android/

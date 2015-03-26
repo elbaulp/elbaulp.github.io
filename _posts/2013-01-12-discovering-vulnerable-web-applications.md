@@ -1,7 +1,7 @@
 ---
 id: 1107
 title: 'Nueva guía: Discovering Vulnerable Web Applications'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1107
 permalink: /discovering-vulnerable-web-applications/

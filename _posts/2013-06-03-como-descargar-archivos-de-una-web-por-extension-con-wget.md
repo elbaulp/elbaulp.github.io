@@ -1,7 +1,7 @@
 ---
 id: 1545
 title: Cómo descargar archivos de una web por extensión con wget
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1545
 permalink: /como-descargar-archivos-de-una-web-por-extension-con-wget/

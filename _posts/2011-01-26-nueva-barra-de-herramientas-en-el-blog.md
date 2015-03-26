@@ -1,7 +1,7 @@
 ---
 id: 104
 title: Nueva barra de herramientas en el Blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-barra-de-herramientas-en-el-blog/
 permalink: /nueva-barra-de-herramientas-en-el-blog/

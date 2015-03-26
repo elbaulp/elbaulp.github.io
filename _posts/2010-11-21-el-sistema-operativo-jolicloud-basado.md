@@ -1,7 +1,7 @@
 ---
 id: 34
 title: JoliBook ya a la venta
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/jolibook-ya-a-la-venta/
 permalink: /el-sistema-operativo-jolicloud-basado/

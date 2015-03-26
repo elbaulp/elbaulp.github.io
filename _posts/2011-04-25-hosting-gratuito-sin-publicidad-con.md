@@ -1,7 +1,7 @@
 ---
 id: 181
 title: Hosting gratuito sin publicidad con 000webhost.com
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/hosting-gratuito-sin-publicidad-con-000webhost-com/
 permalink: /hosting-gratuito-sin-publicidad-con/

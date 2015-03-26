@@ -1,7 +1,7 @@
 ---
 id: 226
 title: 'Fundamentos programación Android: Intents y AndroidManifest'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-programacion-android-intents-y-androidmanifest/
 permalink: /fundamentos-programacion-android_16/

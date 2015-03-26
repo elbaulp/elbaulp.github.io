@@ -1,7 +1,7 @@
 ---
 id: 59
 title: 'Crear miniaturas de imágenes [Mejorado]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/crear-miniaturas-de-imagenes-mejorado/
 permalink: /crear-miniaturas-de-imagenes-mejorado/

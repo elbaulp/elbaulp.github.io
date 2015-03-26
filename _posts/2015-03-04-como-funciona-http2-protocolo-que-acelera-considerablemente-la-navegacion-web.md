@@ -1,7 +1,7 @@
 ---
 id: 2554
 title: Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación Web
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2554
 permalink: /como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/

@@ -1,7 +1,7 @@
 ---
 id: 509
 title: Sección de descargas
-author: Alejandro Alcalde
+
 layout: page
 guid: http://elbauldelprogramador.org/?page_id=509
 if_page_sidebar:

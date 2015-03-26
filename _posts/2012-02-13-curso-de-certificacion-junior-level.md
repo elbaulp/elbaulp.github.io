@@ -1,7 +1,7 @@
 ---
 id: 338
 title: Curso de certificación Junior Level Linux Professional
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/curso-de-certificacion-junior-level-linux-professional/
 permalink: /curso-de-certificacion-junior-level/

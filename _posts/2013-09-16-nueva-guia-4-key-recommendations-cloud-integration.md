@@ -1,7 +1,7 @@
 ---
 id: 1916
 title: 'Nueva guía: 4 Key Recommendations for Cloud Integration'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1916
 permalink: /nueva-guia-4-key-recommendations-cloud-integration/

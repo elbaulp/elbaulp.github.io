@@ -1,7 +1,7 @@
 ---
 id: 1583
 title: Resaltar sintaxis del código fuente en LaTeX con minted
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1583
 permalink: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/

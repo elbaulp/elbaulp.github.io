@@ -1,7 +1,7 @@
 ---
 id: 1576
 title: Cómo evitar que se aplique ingeniería inversa a un ejecutable
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1576
 permalink: /como-evitar-que-se-aplique-ingenieria-inversa-a-un-ejecutable/

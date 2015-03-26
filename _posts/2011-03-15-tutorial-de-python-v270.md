@@ -1,7 +1,7 @@
 ---
 id: 153
 title: Tutorial de Python v2.7.0
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/tutorial-de-python-v2-7-0/
 permalink: /tutorial-de-python-v270/

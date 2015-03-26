@@ -1,7 +1,7 @@
 ---
 id: 1119
 title: SO para auditorias
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/so-para-auditorias/
 permalink: /so-para-auditorias/

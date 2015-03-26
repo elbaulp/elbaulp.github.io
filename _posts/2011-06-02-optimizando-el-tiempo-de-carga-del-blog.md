@@ -1,7 +1,7 @@
 ---
 id: 212
 title: Optimizando el tiempo de carga del blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/optimizando-el-tiempo-de-carga-del-blog/
 permalink: /optimizando-el-tiempo-de-carga-del-blog/

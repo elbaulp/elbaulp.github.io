@@ -1,7 +1,7 @@
 ---
 id: 178
 title: Distribuciones Linux raras
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/distribuciones-linux-raras/
 permalink: /distribuciones-linux-raras/

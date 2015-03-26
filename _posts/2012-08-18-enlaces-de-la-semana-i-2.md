@@ -1,7 +1,7 @@
 ---
 id: 888
 title: Enlaces de la semana (I)
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=888
 permalink: /enlaces-de-la-semana-i-2/

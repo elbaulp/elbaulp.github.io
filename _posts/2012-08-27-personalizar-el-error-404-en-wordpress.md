@@ -1,7 +1,7 @@
 ---
 id: 896
 title: Personalizar el Error 404 en wordpress
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=896
 permalink: /personalizar-el-error-404-en-wordpress/

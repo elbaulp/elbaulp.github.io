@@ -1,7 +1,7 @@
 ---
 id: 23
 title: Bash syntax highlighted script
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/bash-syntax-highlighted-script/
 permalink: /bash-syntax-highlighted-script/

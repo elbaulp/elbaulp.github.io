@@ -1,7 +1,7 @@
 ---
 id: 2008
 title: Buscar archivos con locate mediante expresiones regulares
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2008
 permalink: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/

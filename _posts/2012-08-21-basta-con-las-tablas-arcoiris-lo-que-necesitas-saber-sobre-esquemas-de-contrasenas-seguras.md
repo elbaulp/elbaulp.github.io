@@ -1,7 +1,7 @@
 ---
 id: 870
 title: 'Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras'
-author: Luzcila
+
 layout: post
 guid: /?p=870
 permalink: /basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/

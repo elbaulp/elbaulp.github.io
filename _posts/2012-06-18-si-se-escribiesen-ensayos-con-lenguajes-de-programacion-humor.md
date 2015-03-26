@@ -1,7 +1,7 @@
 ---
 id: 793
 title: 'Si se escribiesen ensayos con lenguajes de programación [HUMOR]'
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=793
 permalink: /si-se-escribiesen-ensayos-con-lenguajes-de-programacion-humor/

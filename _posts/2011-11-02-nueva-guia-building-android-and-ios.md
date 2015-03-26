@@ -1,7 +1,7 @@
 ---
 id: 264
 title: 'Nueva guía: Building Android and iOS Apps with Dreamweaver CS5.5- Free Video Training Tutorial'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-building-android-and-ios-apps-with-dreamweaver-cs5-5-free-video-training-tutorial/
 permalink: /nueva-guia-building-android-and-ios/

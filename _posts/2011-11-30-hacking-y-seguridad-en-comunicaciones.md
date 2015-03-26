@@ -1,7 +1,7 @@
 ---
 id: 304
 title: Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/hacking-y-seguridad-en-comunicaciones-moviles-gsm-gprs-umts-lte/
 permalink: /hacking-y-seguridad-en-comunicaciones/

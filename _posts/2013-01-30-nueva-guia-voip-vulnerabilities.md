@@ -1,7 +1,7 @@
 ---
 id: 1206
 title: 'Nueva Guía: VoIP Vulnerabilities'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1206
 permalink: /nueva-guia-voip-vulnerabilities/

@@ -1,7 +1,7 @@
 ---
 id: 1037
 title: BotBrew basil, Compila, instala y ejecuta aplicaciones Linux en Android
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1037
 permalink: /botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/

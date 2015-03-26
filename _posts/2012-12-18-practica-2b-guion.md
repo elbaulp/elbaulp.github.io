@@ -1,7 +1,7 @@
 ---
 id: 1018
 title: Optimizando código y evaluando el rendimiento
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=1018
 permalink: /peso-hamming-y-optimizacion/

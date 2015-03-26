@@ -1,7 +1,7 @@
 ---
 id: 329
 title: Códigos secretos y ocultos para Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/codigos-secretos-y-ocultos-para-android/
 permalink: /codigos-secretos-y-ocultos-para-android/

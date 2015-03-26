@@ -1,7 +1,7 @@
 ---
 id: 110
 title: 'PL/SQL &#8211; Estructuras básicas de control'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-estructuras-basicas-de-control/
 permalink: /plsql-estructuras-basicas-de-control/

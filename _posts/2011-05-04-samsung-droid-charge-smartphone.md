@@ -1,7 +1,7 @@
 ---
 id: 188
 title: Samsung Droid Charge Smartphone
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/samsung-droid-charge-smartphone/
 permalink: /samsung-droid-charge-smartphone/

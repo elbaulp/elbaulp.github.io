@@ -1,7 +1,7 @@
 ---
 id: 138
 title: 'PL/SQL &#8211; Registros y Tablas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-registros-y-tablas/
 permalink: /plsql-registros-y-tablas/

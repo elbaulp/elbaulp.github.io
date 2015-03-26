@@ -1,7 +1,7 @@
 ---
 id: 170
 title: iPad 2 muestra contenido 3D sin necesidad de gafas ni hardware 3d
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ipad-2-muestra-contenido-3d-sin-necesidad-de-gafas-ni-hardware-3d/
 permalink: /ipad-2-muestra-contenido-3d-sin/

@@ -1,7 +1,7 @@
 ---
 id: 2449
 title: 'Cómo eliminar tu identidad online: Guía Fundamental para el Anonimato y Seguridad en Internet'
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2449
 permalink: /como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/

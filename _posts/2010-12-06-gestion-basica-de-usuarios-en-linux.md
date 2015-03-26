@@ -1,7 +1,7 @@
 ---
 id: 53
 title: Gestión básica de usuarios en linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/gestion-basica-de-usuarios-en-linux/
 permalink: /gestion-basica-de-usuarios-en-linux/

@@ -1,7 +1,7 @@
 ---
 id: 73
 title: Linus Torvalds deja Linux
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/linus-torvalds-deja-linux/
 permalink: /linus-torvalds-deja-linux/

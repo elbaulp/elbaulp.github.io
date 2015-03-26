@@ -1,7 +1,7 @@
 ---
 id: 199
 title: '[Vídeo tutoriales] Ataque Man in the middle'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/video-tutoriales-ataque-man-in-the-middle/
 permalink: /video-tutoriales-ataque-man-in-middle/

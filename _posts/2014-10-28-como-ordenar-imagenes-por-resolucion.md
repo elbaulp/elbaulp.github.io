@@ -1,7 +1,7 @@
 ---
 id: 2457
 title: Cómo ordenar imágenes por resolución
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2457
 permalink: /como-ordenar-imagenes-por-resolucion/

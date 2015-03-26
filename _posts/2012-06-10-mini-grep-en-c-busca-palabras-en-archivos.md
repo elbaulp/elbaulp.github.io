@@ -1,7 +1,7 @@
 ---
 id: 774
 title: Mini grep en C++, busca palabras en archivos
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=774
 permalink: /mini-grep-en-c-busca-palabras-en-archivos/

@@ -1,7 +1,7 @@
 ---
 id: 102
 title: 'Programación para Juegos &#8211; Lección 5 &#8211; Colores Clave'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-para-juegos-leccion-5-colores-clave/
 permalink: /programacion-para-juegos-leccion-5/

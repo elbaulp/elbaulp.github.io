@@ -1,7 +1,7 @@
 ---
 id: 2096
 title: 'Nueva guía: 6 Steps to Securing Your Domains'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2096
 permalink: /6-steps-to-securing-your-domains/

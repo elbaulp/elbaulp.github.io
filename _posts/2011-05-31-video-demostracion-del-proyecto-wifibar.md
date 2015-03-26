@@ -1,7 +1,7 @@
 ---
 id: 205
 title: '[Vídeo] Demostración del proyecto WifiBar funcionando'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/video-demostracion-del-proyecto-wifibar-funcionando/
 permalink: /video-demostracion-del-proyecto-wifibar/

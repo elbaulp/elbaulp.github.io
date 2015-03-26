@@ -1,7 +1,7 @@
 ---
 id: 82
 title: 'Consulta de Datos &#8211; Cláusula GROUP BY'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-group-by/
 permalink: /consulta-de-datos-clausula-group-by/

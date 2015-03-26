@@ -1,7 +1,7 @@
 ---
 id: 311
 title: 'Guía de Referencia de comandos Unix/Linux [IMG]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/guia-de-referencia-de-comandos-unixlinux-img/
 permalink: /guia-de-referencia-de-comandos/

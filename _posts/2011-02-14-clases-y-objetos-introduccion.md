@@ -1,7 +1,7 @@
 ---
 id: 136
 title: 'Clases y objetos &#8211; Introducción'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-introduccion/
 permalink: /clases-y-objetos-introduccion/

@@ -1,7 +1,7 @@
 ---
 id: 1597
 title: Google y su humor en la documentación de Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1597
 permalink: /google-y-su-humor-en-la-documentacion-de-android/

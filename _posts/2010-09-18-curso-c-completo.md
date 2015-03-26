@@ -1,7 +1,7 @@
 ---
 id: 8
 title: Curso c++ completo.
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/curso-c-completo/
 permalink: /curso-c-completo/

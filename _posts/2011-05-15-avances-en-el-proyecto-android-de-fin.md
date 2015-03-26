@@ -1,7 +1,7 @@
 ---
 id: 190
 title: 'Avances en el proyecto Android de fin de curso [WifiBar]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/avances-en-el-proyecto-android-de-fin-de-curso-wifibar/
 permalink: /avances-en-el-proyecto-android-de-fin/

@@ -1,7 +1,7 @@
 ---
 id: 2090
 title: Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2090
 permalink: /sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/

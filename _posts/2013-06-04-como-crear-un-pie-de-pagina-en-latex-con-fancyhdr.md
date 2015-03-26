@@ -1,7 +1,7 @@
 ---
 id: 1586
 title: Cómo crear un pie de página en LaTeX con fancyhdr
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1586
 permalink: /como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/

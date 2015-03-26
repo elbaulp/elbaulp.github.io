@@ -1,7 +1,7 @@
 ---
 id: 1854
 title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1854
 permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/

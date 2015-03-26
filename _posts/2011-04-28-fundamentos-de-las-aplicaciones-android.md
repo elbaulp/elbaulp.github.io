@@ -1,7 +1,7 @@
 ---
 id: 183
 title: 'Fundamentos de las aplicaciones Android &#8211; Traducción completa'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-de-las-aplicaciones-android-traduccion-completa/
 permalink: /fundamentos-de-las-aplicaciones-android/

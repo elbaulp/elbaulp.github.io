@@ -1,7 +1,7 @@
 ---
 id: 157
 title: GNOME 3 se lanzará el 4 de abril
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/gnome-3-se-lanzara-el-4-de-abril/
 permalink: /gnome-3-se-lanzara-el-4-de-abril/

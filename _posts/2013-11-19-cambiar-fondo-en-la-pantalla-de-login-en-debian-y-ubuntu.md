@@ -1,7 +1,7 @@
 ---
 id: 1947
 title: Cambiar fondo en la pantalla de login en Debian y Ubuntu
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1947
 permalink: /cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/

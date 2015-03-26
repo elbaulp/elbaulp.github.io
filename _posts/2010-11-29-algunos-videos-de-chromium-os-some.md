@@ -1,7 +1,7 @@
 ---
 id: 50
 title: Algunos vídeos de Chromium OS
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/algunos-videos-de-chromium-os/
 permalink: /algunos-videos-de-chromium-os-some/

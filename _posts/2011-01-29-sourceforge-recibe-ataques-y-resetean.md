@@ -1,7 +1,7 @@
 ---
 id: 117
 title: SourceForge recibe ataques y resetean las contraseñas de los usuarios
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/sourceforge-recibe-ataques-y-resetean-las-contrasenas-de-los-usuarios/
 permalink: /sourceforge-recibe-ataques-y-resetean/

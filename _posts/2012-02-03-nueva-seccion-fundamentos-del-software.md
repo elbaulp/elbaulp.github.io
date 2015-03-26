@@ -1,7 +1,7 @@
 ---
 id: 336
 title: 'Nueva sección &#8211; Fundamentos del Software'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-seccion-fundamentos-del-software/
 permalink: /nueva-seccion-fundamentos-del-software/

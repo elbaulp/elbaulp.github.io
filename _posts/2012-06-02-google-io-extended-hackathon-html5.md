@@ -1,7 +1,7 @@
 ---
 id: 772
 title: Google I/O Extended + Hackathon HTML5
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=772
 permalink: /google-io-extended-hackathon-html5/

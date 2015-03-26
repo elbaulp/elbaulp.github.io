@@ -1,7 +1,7 @@
 ---
 id: 253
 title: Mejoras en la aplicación Fav Sites
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/mejoras-en-la-aplicacion-fav-sites/
 permalink: /mejoras-en-la-aplicacion-fav-sites/

@@ -1,7 +1,7 @@
 ---
 id: 171
 title: 'Celebrando los 20 años de Linux [Video]'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/celebrando-los-20-anos-de-linux-video/
 permalink: /celebrando-los-20-anos-de-linux-video/

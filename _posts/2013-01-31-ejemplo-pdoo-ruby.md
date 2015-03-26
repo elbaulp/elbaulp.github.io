@@ -1,7 +1,7 @@
 ---
 id: 1194
 title: Introducción rápida a Ruby
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1194
 permalink: /introduccion-a-ruby/

@@ -1,7 +1,7 @@
 ---
 id: 284
 title: Cómo hacer que google deje de usar tu Wifi para obtener datos de geolocalización
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/como-hacer-que-google-deje-de-usar-tu-wifi-para-obtener-datos-de-geolocalizacion/
 permalink: /como-hacer-que-google-deje-de-usar-tu/

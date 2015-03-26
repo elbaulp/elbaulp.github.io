@@ -1,7 +1,7 @@
 ---
 id: 2540
 title: Cómo recuperar el IMEI en Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2540
 permalink: /como-recuperar-el-imei-en-android/

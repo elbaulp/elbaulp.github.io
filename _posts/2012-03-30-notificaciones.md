@@ -1,7 +1,7 @@
 ---
 id: 239
 title: 'Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-dialogos-y-notificaciones/
 permalink: /programacion-android-interfaz-grafica_11/

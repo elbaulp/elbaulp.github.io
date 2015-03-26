@@ -1,7 +1,7 @@
 ---
 id: 1578
 title: 'Logrando el anonimato con Tor (Parte 4) &#8211; Tor para relés'
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1578
 permalink: /logrando-el-anonimato-con-tor-parte-4/

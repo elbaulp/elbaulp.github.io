@@ -1,7 +1,7 @@
 ---
 id: 704
 title: Mostrar el número de seguidores en Twitter en WordPress
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=704
 permalink: /mostrar-el-numero-de-seguidores-en-twitter-en-wordpress/

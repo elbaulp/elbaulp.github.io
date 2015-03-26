@@ -1,7 +1,7 @@
 ---
 id: 161
 title: Generar código CSS 3 fácilmente
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/generar-codigo-css-3-facilmente/
 permalink: /generar-codigo-css-3-facilmente/

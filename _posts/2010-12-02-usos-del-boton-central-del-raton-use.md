@@ -1,7 +1,7 @@
 ---
 id: 51
 title: Usos del botón central del ratón
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/usos-del-boton-central-del-raton/
 permalink: /usos-del-boton-central-del-raton-use/

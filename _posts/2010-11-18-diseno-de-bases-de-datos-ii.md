@@ -1,7 +1,7 @@
 ---
 id: 28
 title: 'Diseño de Bases de Datos ( II ) &#8211; Restricciones'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/diseno-de-bases-de-datos-ii-restricciones/
 permalink: /diseno-de-bases-de-datos-ii/

@@ -1,7 +1,7 @@
 ---
 id: 2265
 title: ¿Por qué es Linux más rápido que Windows?
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2265
 permalink: /por-que-es-linux-mas-rapido-que-windows/

@@ -1,7 +1,7 @@
 ---
 id: 41
 title: Grub Customizer 2.0
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/grub-customizer-2-0/
 permalink: /grub-customizer-20/

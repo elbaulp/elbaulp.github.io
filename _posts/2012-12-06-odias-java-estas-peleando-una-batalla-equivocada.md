@@ -1,7 +1,7 @@
 ---
 id: 1026
 title: ¿Odias Java? Estás peleando una batalla equivocada
-author: Luzcila
+
 layout: post
 guid: /?p=1026
 permalink: /odias-java-estas-peleando-una-batalla-equivocada/

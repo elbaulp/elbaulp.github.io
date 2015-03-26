@@ -1,7 +1,7 @@
 ---
 id: 90
 title: Curso de Linux para torpes
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/curso-de-linux-para-torpes/
 permalink: /curso-de-linux-para-torpes/

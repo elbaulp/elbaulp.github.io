@@ -1,7 +1,7 @@
 ---
 id: 142
 title: 'Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/ejemplos-en-html5-almacenamiento-web-sql-y-websocket/
 permalink: /ejemplos-en-html5-almacenamiento-web/

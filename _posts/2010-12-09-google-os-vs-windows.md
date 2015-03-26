@@ -1,7 +1,7 @@
 ---
 id: 57
 title: Google Os Vs Windows
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/google-os-vs-windows/
 permalink: /google-os-vs-windows/

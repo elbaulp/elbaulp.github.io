@@ -1,7 +1,7 @@
 ---
 id: 1692
 title: Ejecutar un script al modificar un fichero con inotify
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1692
 permalink: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/

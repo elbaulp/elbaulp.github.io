@@ -1,7 +1,7 @@
 ---
 id: 176
 title: Licencia del contenido de la web developer.android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/licencia-del-contenido-de-la-web-developer-android/
 permalink: /licencia-del-contenido-de-la-web/

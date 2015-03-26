@@ -1,7 +1,7 @@
 ---
 id: 84
 title: 'Consulta de Datos &#8211; Cláusula HAVING y ORDER BY'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-having-y-order-by/
 permalink: /consulta-de-datos-clausula-having-y/

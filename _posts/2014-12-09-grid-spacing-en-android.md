@@ -1,7 +1,7 @@
 ---
 id: 2473
 title: Grid Spacing en Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2473
 permalink: /grid-spacing-en-android/

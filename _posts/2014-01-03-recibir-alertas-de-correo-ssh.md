@@ -1,7 +1,7 @@
 ---
 id: 2042
 title: 'Recibir alertas de correo al acceder al  sistema mediante SSH'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2042
 permalink: /recibir-alertas-de-correo-ssh/

@@ -1,7 +1,7 @@
 ---
 id: 295
 title: 'Programación Android: Arquitectura de los Proveedores de contenidos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-arquitectura-de-los-proveedores-de-contenidos/
 permalink: /programacion-android-arquitectura-de/

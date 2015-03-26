@@ -1,7 +1,7 @@
 ---
 id: 362
 title: Vídeos de la semana (VII)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/videos-de-la-semana-vii/
 permalink: /videos-de-la-semana-vii/

@@ -1,7 +1,7 @@
 ---
 id: 100
 title: 'La &#8220;evolución&#8221; de la información'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/la-evolucion-de-la-informacion/
 permalink: /la-evolucion-de-la-informacion/

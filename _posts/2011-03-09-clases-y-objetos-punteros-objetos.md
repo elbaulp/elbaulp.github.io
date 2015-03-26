@@ -1,7 +1,7 @@
 ---
 id: 150
 title: 'Clases y Objetos &#8211; Punteros a objetos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-punteros-a-objetos/
 permalink: /clases-y-objetos-punteros-objetos/

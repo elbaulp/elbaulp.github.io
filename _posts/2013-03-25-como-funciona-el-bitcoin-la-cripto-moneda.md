@@ -1,7 +1,7 @@
 ---
 id: 1489
 title: Cómo funciona el Bitcoin, la cripto-moneda
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1489
 permalink: /como-funciona-el-bitcoin-la-cripto-moneda/

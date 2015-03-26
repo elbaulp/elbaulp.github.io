@@ -1,7 +1,7 @@
 ---
 id: 320
 title: Los vídeos más interesantes de 2011
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/los-videos-mas-interesantes-de-2011/
 permalink: /los-videos-mas-interesantes-de-2011/

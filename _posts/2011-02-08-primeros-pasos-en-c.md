@@ -1,7 +1,7 @@
 ---
 id: 132
 title: Primeros pasos en C++
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/primeros-pasos-en-c/
 permalink: /primeros-pasos-en-c/

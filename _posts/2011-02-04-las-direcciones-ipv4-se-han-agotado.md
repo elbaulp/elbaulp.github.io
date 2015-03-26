@@ -1,7 +1,7 @@
 ---
 id: 128
 title: Las direcciones IPv4 se han agotado
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/las-direcciones-ipv4-se-han-agotado/
 permalink: /las-direcciones-ipv4-se-han-agotado/

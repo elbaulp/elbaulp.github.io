@@ -1,7 +1,7 @@
 ---
 id: 86
 title: 'Consulta de Datos &#8211; Subconsultas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/consulta-de-datos-subconsultas/
 permalink: /consulta-de-datos-subconsultas/

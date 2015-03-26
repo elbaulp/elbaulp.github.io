@@ -1,7 +1,7 @@
 ---
 id: 2233
 title: Cambiar el color del summary en una Preferencia Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2233
 permalink: /cambiar-el-color-del-summary-en-una-preferencia-android/

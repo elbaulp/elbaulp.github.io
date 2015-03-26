@@ -1,7 +1,7 @@
 ---
 id: 248
 title: Programando Videojuegos en Python
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programando-videojuegos-en-python/
 permalink: /programando-videojuegos-en-python/

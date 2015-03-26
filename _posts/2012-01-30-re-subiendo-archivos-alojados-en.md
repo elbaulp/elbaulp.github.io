@@ -1,7 +1,7 @@
 ---
 id: 335
 title: Re-Subiendo archivos alojados en megaupload
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/re-subiendo-archivos-alojados-en-megaupload/
 permalink: /re-subiendo-archivos-alojados-en/

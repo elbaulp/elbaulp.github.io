@@ -1,7 +1,7 @@
 ---
 id: 1398
 title: Cómo activar opciones de desarrollador en Android 4.2
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1398
 permalink: /activar-opciones-de-desarrollador-en-android-4-2/

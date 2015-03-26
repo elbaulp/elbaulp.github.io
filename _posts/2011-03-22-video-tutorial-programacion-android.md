@@ -1,7 +1,7 @@
 ---
 id: 156
 title: Vídeo tutorial programación Android
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/video-tutorial-programacion-android/
 permalink: /video-tutorial-programacion-android/

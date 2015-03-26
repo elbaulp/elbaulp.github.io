@@ -1,7 +1,7 @@
 ---
 id: 137
 title: 'PL/SQL &#8211; Disparadores o Triggers'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-disparadores-o-triggers/
 permalink: /plsql-disparadores-o-triggers/

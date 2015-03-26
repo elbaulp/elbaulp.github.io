@@ -1,7 +1,7 @@
 ---
 id: 1522
 title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1522
 permalink: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/

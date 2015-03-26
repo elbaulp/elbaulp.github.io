@@ -1,7 +1,7 @@
 ---
 id: 2361
 title: No dejes que los Astronautas de Arquitecturas te asusten
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2361
 permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/

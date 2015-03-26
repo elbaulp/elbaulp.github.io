@@ -1,7 +1,7 @@
 ---
 id: 249
 title: 'Nueva guía: Migrar un sitio web a Drupal'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-migrar-un-sitio-web-a-drupal/
 permalink: /nueva-guia-migrar-un-sitio-web-drupal/

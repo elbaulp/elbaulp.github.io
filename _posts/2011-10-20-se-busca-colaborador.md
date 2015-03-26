@@ -1,7 +1,7 @@
 ---
 id: 258
 title: Se busca colaborador
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/se-busca-colaborador/
 permalink: /se-busca-colaborador/

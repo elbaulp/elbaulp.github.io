@@ -1,7 +1,7 @@
 ---
 id: 305
 title: Lo más leido en ElbaulDelProgramador (Noviembre 2011)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/lo-mas-leido-en-elbauldelprogramador-noviembre-2011/
 permalink: /lo-mas-leido-en-elbauldelprogramador/

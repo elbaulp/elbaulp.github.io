@@ -1,7 +1,7 @@
 ---
 id: 107
 title: Microsoft .NET vs Java Trailer (Vídeo)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/microsoft-net-vs-java-trailer-video/
 permalink: /microsoft-net-vs-java-trailer/

@@ -1,7 +1,7 @@
 ---
 id: 101
 title: Bloques PL/SQL
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/bloques-plsql/
 permalink: /bloques-plsql/

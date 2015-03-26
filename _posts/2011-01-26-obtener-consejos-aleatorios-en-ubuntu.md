@@ -1,7 +1,7 @@
 ---
 id: 106
 title: Obtener consejos aleatorios en Ubuntu
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/obtener-consejos-aleatorios-en-ubuntu/
 permalink: /obtener-consejos-aleatorios-en-ubuntu/

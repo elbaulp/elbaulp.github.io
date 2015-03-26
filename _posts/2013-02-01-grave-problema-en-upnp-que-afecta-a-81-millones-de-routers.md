@@ -1,7 +1,7 @@
 ---
 id: 1289
 title: Grave vulnerabilidad en UPnP que afecta a 81 millones de routers
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1289
 permalink: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/

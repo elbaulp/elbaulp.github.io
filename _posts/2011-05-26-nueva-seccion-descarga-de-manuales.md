@@ -1,7 +1,7 @@
 ---
 id: 201
 title: 'Nueva sección: Descarga de Manuales gratuitos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nueva-seccion-descarga-de-manuales-gratuitos/
 permalink: /nueva-seccion-descarga-de-manuales/

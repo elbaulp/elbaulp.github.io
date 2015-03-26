@@ -1,7 +1,7 @@
 ---
 id: 2022
 title: Viñetas Geek de Domingo (XIII)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2022
 permalink: /vinetas-geek-de-domingo-xiii/

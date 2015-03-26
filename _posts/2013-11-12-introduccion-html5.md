@@ -1,7 +1,7 @@
 ---
 id: 1971
 title: Introducción a HTML5
-author: Colaboraciones
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1971
 permalink: /introduccion-html5/

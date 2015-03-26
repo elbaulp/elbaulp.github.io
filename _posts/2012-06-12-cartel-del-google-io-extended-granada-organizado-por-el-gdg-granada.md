@@ -1,7 +1,7 @@
 ---
 id: 779
 title: Cartel del Google I/O Extended Granada organizado por el GDG Granada
-author: Alejandro Alcalde
+
 layout: post
 guid: /?p=779
 permalink: /cartel-del-google-io-extended-granada-organizado-por-el-gdg-granada/

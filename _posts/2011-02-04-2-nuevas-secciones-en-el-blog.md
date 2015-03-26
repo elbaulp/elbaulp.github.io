@@ -1,7 +1,7 @@
 ---
 id: 127
 title: 2 nuevas secciones en el blog
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/2-nuevas-secciones-en-el-blog/
 permalink: /2-nuevas-secciones-en-el-blog/

@@ -1,7 +1,7 @@
 ---
 id: 2217
 title: Cómo resolver sistemas de ecuaciones lineales con dos incógnitas en Python
-author: Colaboraciones
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2217
 permalink: /como-resolver-sistemas-de-ecuaciones-lineales-con-dos-incognitas/

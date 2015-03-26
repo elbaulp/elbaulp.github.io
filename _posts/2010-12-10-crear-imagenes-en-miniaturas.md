@@ -1,7 +1,7 @@
 ---
 id: 58
 title: Crear miniaturas de imágenes
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/crear-miniaturas-de-imagenes/
 permalink: /crear-imagenes-en-miniaturas/

@@ -1,7 +1,7 @@
 ---
 id: 2432
 title: Pon a dieta a tus APKs
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=2432
 permalink: /pon-dieta-tus-apks/

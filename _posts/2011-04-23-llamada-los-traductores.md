@@ -1,7 +1,7 @@
 ---
 id: 180
 title: Llamada a los traductores
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/llamada-a-los-traductores/
 permalink: /llamada-los-traductores/

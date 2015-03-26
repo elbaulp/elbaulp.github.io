@@ -1,7 +1,7 @@
 ---
 id: 1491
 title: 'Git: Mini Tutorial y chuleta de comandos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1491
 permalink: /mini-tutorial-y-chuleta-de-comandos-git/

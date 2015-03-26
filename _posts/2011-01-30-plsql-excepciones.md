@@ -1,7 +1,7 @@
 ---
 id: 119
 title: 'PL/SQL &#8211; Excepciones'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-excepciones/
 permalink: /plsql-excepciones/

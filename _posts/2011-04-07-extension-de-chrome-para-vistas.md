@@ -1,7 +1,7 @@
 ---
 id: 165
 title: Extensión de chrome para Vistas Dinámicas
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/extension-de-chrome-para-vistas-dinamicas/
 permalink: /extension-de-chrome-para-vistas/

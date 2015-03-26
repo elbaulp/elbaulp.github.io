@@ -1,7 +1,7 @@
 ---
 id: 131
 title: Nuevo lector RSS para el panel de GNOME
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/nuevo-lector-rss-para-el-panel-de-gnome/
 permalink: /nuevo-lector-rss-para-el-panel-de-gnome/

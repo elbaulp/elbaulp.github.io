@@ -1,7 +1,7 @@
 ---
 id: 235
 title: 'Programación Android: Interfaz gráfica &#8211; Componentes gráficos y Eventos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-componentes-graficos-y-eventos/
 permalink: /programacion-android-interfaz-grafica_25/

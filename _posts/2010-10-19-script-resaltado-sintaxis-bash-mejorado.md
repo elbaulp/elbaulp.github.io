@@ -1,7 +1,7 @@
 ---
 id: 19
 title: Script resaltado sintaxis bash (Mejorado)
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/script-resaltado-sintaxis-bash-mejorado/
 permalink: /script-resaltado-sintaxis-bash-mejorado/

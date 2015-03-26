@@ -1,7 +1,7 @@
 ---
 id: 123
 title: 'PL/SQL &#8211; Cursores'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/plsql-cursores/
 permalink: /plsql-cursores/

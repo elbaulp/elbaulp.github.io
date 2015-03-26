@@ -1,7 +1,7 @@
 ---
 id: 203
 title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 3.0'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/pro-android-3-aprende-a-fondo-todo-lo-que-ofrece-el-sdk-android-3-0/
 permalink: /pro-android-3-aprende-fondo-todo-lo-que/

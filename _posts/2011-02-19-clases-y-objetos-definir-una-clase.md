@@ -1,7 +1,7 @@
 ---
 id: 140
 title: 'Clases y Objetos &#8211; Definir una Clase'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-definir-una-clase/
 permalink: /clases-y-objetos-definir-una-clase/

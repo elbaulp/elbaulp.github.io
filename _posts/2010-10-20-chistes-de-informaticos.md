@@ -1,7 +1,7 @@
 ---
 id: 20
 title: 'Chistes de informaticos &#8211; www.desmotivaciones.es'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/chistes-de-informaticos-www-desmotivaciones-es/
 permalink: /chistes-de-informaticos/

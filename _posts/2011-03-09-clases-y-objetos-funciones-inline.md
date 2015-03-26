@@ -1,7 +1,7 @@
 ---
 id: 149
 title: 'Clases y Objetos &#8211; Funciones inline'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/clases-y-objetos-funciones-inline/
 permalink: /clases-y-objetos-funciones-inline/

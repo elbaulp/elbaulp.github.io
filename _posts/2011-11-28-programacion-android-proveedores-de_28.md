@@ -1,7 +1,7 @@
 ---
 id: 300
 title: 'Programación Android: Proveedores de Contenidos &#8211; Leer datos mediante URIs'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-proveedores-de-contenidos-leer-datos-mediante-uris/
 permalink: /programacion-android-proveedores-de_28/

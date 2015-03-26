@@ -1,7 +1,7 @@
 ---
 id: 236
 title: 'Programación Android: Interfaz gráfica &#8211; Adapters I'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-adapters-i/
 permalink: /programacion-android-interfaz-grafica_28/

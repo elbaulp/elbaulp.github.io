@@ -1,7 +1,7 @@
 ---
 id: 1922
 title: Crear formularios en Django a partir de un Modelo con ModelForm
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1922
 permalink: /crear-formularios-en-django-partir-de-un-modelo-con-modelform/

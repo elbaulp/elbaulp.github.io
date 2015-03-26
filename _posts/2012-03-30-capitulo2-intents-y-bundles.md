@@ -1,7 +1,7 @@
 ---
 id: 231
 title: 'Programación Android: Trabajar con actividades y pasar parámetros entre ellas'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-trabajar-con-actividades-y-pasar-parametros-entre-ellas/
 permalink: /programacion-android-trabajar-con/

@@ -1,7 +1,7 @@
 ---
 id: 1437
 title: 5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos
-author: Luzcila
+
 layout: post
 guid: http://elbauldelprogramador.com/?p=1437
 permalink: /futuro-ides-de-escritorio/

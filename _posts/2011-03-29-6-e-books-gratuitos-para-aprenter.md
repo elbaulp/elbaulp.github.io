@@ -1,7 +1,7 @@
 ---
 id: 159
 title: 6 E-books gratuitos para aprenter a programar en Python
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/6-e-books-gratuitos-para-aprenter-a-programar-en-python/
 permalink: /6-e-books-gratuitos-para-aprenter/

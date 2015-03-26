@@ -1,7 +1,7 @@
 ---
 id: 147
 title: GNOME 3 no tendrá botones minimizar y maximizar
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/gnome-3-no-tendra-botones-minimizar-y-maximizar/
 permalink: /gnome-3-no-tendra-botones-minimizar-y/

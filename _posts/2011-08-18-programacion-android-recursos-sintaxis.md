@@ -1,7 +1,7 @@
 ---
 id: 247
 title: 'Programación Android: Recursos &#8211; Sintaxis de los Recursos'
-author: Alejandro Alcalde
+
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-sintaxis-de-los-recursos/
 permalink: /programacion-android-recursos-sintaxis/
