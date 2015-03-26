@@ -31,7 +31,7 @@ Una vez instalado, basta con ejecutar el programa y pasarle la ruta a la carpeta
 
 El resultado es algo como esto:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/05/gourceGit-1024x804.png" alt="gourceGit" width="770" height="604" class="aligncenter size-large wp-image-1581" />][3]{.thumbnail}
+[<img src="/images/2013/05/gourceGit-1024x804.png" alt="gourceGit" width="770" height="604" class="aligncenter size-large wp-image-1581" />][3]{.thumbnail}
 
 Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.
 
@@ -60,4 +60,4 @@ A continuación os dejo un vídeo de uno de mis repositorios:
 
  [1]: http://elbauldelprogramador.com/opensource/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
  [2]: http://elbauldelprogramador.com/articulos/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: http://elbauldelprogramador.com/content/uploads/2013/05/gourceGit.png
+ [3]: /images/2013/05/gourceGit.png

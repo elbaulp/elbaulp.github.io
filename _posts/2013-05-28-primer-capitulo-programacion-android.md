@@ -38,7 +38,7 @@ tags:
   - programacion en android
   - programar en android pdf
 ---
-<a href="http://lh6.googleusercontent.com/-BEVM46k50KQ/Tr5WHaJiGHI/AAAAAAAABjc/b_-CmRixBY4/s128/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
+<a href="http://lh6.googleusercontent.com/-BEVM46k50KQ/Tr5WHaJiGHI/AAAAAAAABjc/b_-CmRixBY4/s128/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
 
 Como vengo anunciando desde <a target="_blank" href="/2011/11/terminada-la-primera-parte-del-manual.html">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="/p/guia-de-desarrollo-android.html">curso</a> y voy a comenzar a escribir la <a target="_blank" href="/2011/11/planteamiento-de-la-segunda-parte-del.html">segunda parte</a>.
 

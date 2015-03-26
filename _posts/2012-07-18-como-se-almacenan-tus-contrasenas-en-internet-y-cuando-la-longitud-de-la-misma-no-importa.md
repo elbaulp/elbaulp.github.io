@@ -22,7 +22,7 @@ tags:
   - metodos de cifrado
   - seguridad
 ---
-[<img src="http://elbauldelprogramador.com/content/uploads/2012/07/original2.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-839" />][1]  
+[<img src="/images/2012/07/original2.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-839" />][1]  
 Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.
 
 Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.  
@@ -110,4 +110,4 @@ Fuente | <a href="http://lifehacker.com/5919918/how-your-passwords-are-stored-on
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/07/original2.jpg
+ [1]: /images/2012/07/original2.jpg

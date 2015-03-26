@@ -16,7 +16,7 @@ tags:
   - php-fpm
   - servidor web
 ---
-<img src="http://elbauldelprogramador.com/content/uploads/2013/02/nginx-logo.png" alt="instalar y configurar nginx" width="350" height="90" class="thumbnail alignleft size-full wp-image-1377" />  
+<img src="/images/2013/02/nginx-logo.png" alt="instalar y configurar nginx" width="350" height="90" class="thumbnail alignleft size-full wp-image-1377" />  
 Nginx (Pronunciado engine-x) es un <a href="http://elbauldelprogramador.com/search/?q=servidor" target="_blank">servidor</a> HTTP de alto rendimiento, gratuito, [software libre][1] y <a href="https://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso" target="_blank">proxy inverso</a>, así como un servidor proxy <a href="https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol" target="_blank">IMAP</a>/<a href="https://es.wikipedia.org/wiki/Post_Office_Protocol" target="_blank">POP3</a>. Desarrollado por Igor Sysoev. Acualmente el <a href="http://news.netcraft.com/archives/2012/01/03/january-2012-web-server-survey.html" target="_blank">12.18%</a> de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.
 
   
@@ -90,11 +90,11 @@ Ahora estamos en condiciones de ejecutar nginx:
 
 Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones **localhost**. Si todo ha ido bien deberíamos ver esta pantalla:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/02/instalar-nginx-en-debian-1024x818.png" alt="instalar nginx en debian" width="770" height="615" class="aligncenter size-large wp-image-1375" />][4]{.thumbnail}
+[<img src="/images/2013/02/instalar-nginx-en-debian-1024x818.png" alt="instalar nginx en debian" width="770" height="615" class="aligncenter size-large wp-image-1375" />][4]{.thumbnail}
 
 Usando firebug se puede comprobar que efectivamente se está corriendo un servidor nginx:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/02/instalar-nginx-en-debian2.png" alt="instalar nginx en debian2" width="641" height="150" class="aligncenter size-full wp-image-1376" />][5]{.thumbnail}
+[<img src="/images/2013/02/instalar-nginx-en-debian2.png" alt="instalar nginx en debian2" width="641" height="150" class="aligncenter size-full wp-image-1376" />][5]{.thumbnail}
 
 ### Modificando la configuración por defecto
 
@@ -291,6 +291,6 @@ Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutan
  [1]: http://elbauldelprogramador.com/category/opensource/
  [2]: /category/script/
  [3]: /so/entendiendo-los-runlevel-en-debian-y-ubuntu/
- [4]: http://elbauldelprogramador.com/content/uploads/2013/02/instalar-nginx-en-debian.png
- [5]: http://elbauldelprogramador.com/content/uploads/2013/02/instalar-nginx-en-debian2.png
+ [4]: /images/2013/02/instalar-nginx-en-debian.png
+ [5]: /images/2013/02/instalar-nginx-en-debian2.png
  [6]: http://elbauldelprogramador.com/seguridad/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"

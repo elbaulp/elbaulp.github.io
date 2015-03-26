@@ -17,7 +17,7 @@ tags:
   - paquetes
   - WiFi
 ---
-[<img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="http://elbauldelprogramador.com/content/uploads/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="207" height="259" />][1]
+[<img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/images/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="207" height="259" />][1]
 
 Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione.
 
@@ -37,4 +37,4 @@ En un futuro, se espera que el protocolo TCP codificado tenga una gran repercusi
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/10/Algebra-Packets-MIT1.jpg
+ [1]: /images/2012/10/Algebra-Packets-MIT1.jpg

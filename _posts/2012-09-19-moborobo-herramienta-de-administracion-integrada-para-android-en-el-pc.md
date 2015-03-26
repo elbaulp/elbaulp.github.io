@@ -13,7 +13,7 @@ tags:
   - moborobo
 ---
 <p dir="ltr">
-  <a href="http://elbauldelprogramador.com/content/uploads/2012/09/moborobo-feature-image-1204261.jpg"><img class="aligncenter size-full wp-image-955" title="moborobo-feature-image-120426" src="http://elbauldelprogramador.com/content/uploads/2012/09/moborobo-feature-image-1204261.jpg" alt="" width="600" height="300" /></a>
+  <a href="/images/2012/09/moborobo-feature-image-1204261.jpg"><img class="aligncenter size-full wp-image-955" title="moborobo-feature-image-120426" src="/images/2012/09/moborobo-feature-image-1204261.jpg" alt="" width="600" height="300" /></a>
 </p>
 
 <p dir="ltr">

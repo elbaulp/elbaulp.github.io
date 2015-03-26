@@ -31,7 +31,7 @@ tags:
   - curso android pdf
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+  <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 </div>
 
 Ya hemos visto como [plantear la base de datos][1] para un proveedor y cómo [implementar parte del proveedor de contenidos][2], en esta tercera parte vamos a implementar los métodos query, insert, update, delete y getType.

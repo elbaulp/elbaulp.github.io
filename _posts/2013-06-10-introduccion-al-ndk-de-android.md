@@ -114,7 +114,7 @@ El primer comando compila y genera el *.apk* y con el segundo lo instalamos en e
 
 Por último, la aplicación es tan simple como esto:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180" height="300" class="aligncenter size-medium wp-image-1657" />][2]{.thumbnail}
+[<img src="/images/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180" height="300" class="aligncenter size-medium wp-image-1657" />][2]{.thumbnail}
 
 Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con el NDK de android.
 
@@ -125,4 +125,4 @@ Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con
 
 
  [1]: /opensource/programacion-android-hola-mundo/
- [2]: http://elbauldelprogramador.com/content/uploads/2013/06/helloJni-NDK-de-android.png
+ [2]: /images/2013/06/helloJni-NDK-de-android.png

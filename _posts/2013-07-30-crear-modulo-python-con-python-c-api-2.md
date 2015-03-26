@@ -20,7 +20,7 @@ tags:
   * [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
   * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
-<img src="http://elbauldelprogramador.com/content/uploads/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" alt="Crear un módulo para python con la Python C API - Parte II" width="201" height="190" class="thumbnail alignleft size-full wp-image-1777" />  
+<img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" alt="Crear un módulo para python con la Python C API - Parte II" width="201" height="190" class="thumbnail alignleft size-full wp-image-1777" />  
 Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*.  
 El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:
 

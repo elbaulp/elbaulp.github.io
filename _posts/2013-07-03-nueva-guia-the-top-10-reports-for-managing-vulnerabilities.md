@@ -19,7 +19,7 @@ tags:
   - vulnerabilities
   - Vulnerabilities Security Management
 ---
-[<img class="alignleft size-full wp-image-1708" alt="The Top 10 Reports for Managing Vulnerabilities" src="http://elbauldelprogramador.com/content/uploads/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250" height="301" />][1]
+[<img class="alignleft size-full wp-image-1708" alt="The Top 10 Reports for Managing Vulnerabilities" src="/images/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250" height="301" />][1]
 
 This free guide covers the key aspects of the vulnerability management lifecycle and shows you what reports today&#8217;s best-in-class organizations are using to reduce risks on their network infrastructure.
 

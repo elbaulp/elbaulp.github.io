@@ -25,7 +25,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Hace unas semanas encargué este libro en Amazon, y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).
 

@@ -20,7 +20,7 @@ tags:
   - samsung galaxy scl gti9003
   - xda
 ---
-<img class="alignleft size-full wp-image-1038" title="linux-apps-on-android" src="http://elbauldelprogramador.com/content/uploads/2012/12/linux-apps-on-android1.jpg" alt="" width="373" height="294" />
+<img class="alignleft size-full wp-image-1038" title="linux-apps-on-android" src="/images/2012/12/linux-apps-on-android1.jpg" alt="" width="373" height="294" />
 
 Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.  
 Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo.
@@ -70,7 +70,7 @@ int main(){
 
 Ya solo queda compilarlo y ejecutarlo, dejo una captura de pantalla como prueba de que funciona:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2012/12/Screenshot_2012-12-04-17-14-141.png" alt="" title="Compilando código C/C++ en android" width="800" height="480" class="aligncenter size-full wp-image-1039" />
+<img src="/images/2012/12/Screenshot_2012-12-04-17-14-141.png" alt="" title="Compilando código C/C++ en android" width="800" height="480" class="aligncenter size-full wp-image-1039" />
 
 Y no solo eso, también podemos instalar python:
 
@@ -82,7 +82,7 @@ Hola Mundo desde Android!
 {% endhighlight %}
 
 De nuevo, com prueba, una captura de pantalla:  
-<img src="http://elbauldelprogramador.com/content/uploads/2012/12/Screenshot_2012-12-04-17-32-141.png" alt="" title="Ejecutando programas en python desde Android" width="800" height="480" class="aligncenter size-full wp-image-1040" />
+<img src="/images/2012/12/Screenshot_2012-12-04-17-32-141.png" alt="" title="Ejecutando programas en python desde Android" width="800" height="480" class="aligncenter size-full wp-image-1040" />
 
 A continuación un vídeo explicando el proceso de instalación de busybox sin permisos de root:
 

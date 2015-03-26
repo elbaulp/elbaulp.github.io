@@ -12,7 +12,7 @@ tags:
   - que es autentificación de 2 factores
   - usuarios autentificación de 2 factores
 ---
-<img src="http://elbauldelprogramador.com/content/uploads/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700" height="349" class="thumbnail aligncenter size-full wp-image-1863" />
+<img src="/images/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700" height="349" class="thumbnail aligncenter size-full wp-image-1863" />
 
 Ya vimos en hace algún tiempo [todos los lugares en los que deberías habilitar la autentificación de 2 factores][1]. Hoy, en este artículo original de Duo Security analizaremos los problemas que puede ocasionar esta tecnología en el usuario final.
 

@@ -125,7 +125,7 @@ public class EjemploLog4j2 {
 
 Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log coloreados, como se muestra en la imagen:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1" width="364" height="89" class="aligncenter size-full wp-image-2555" />
+<img src="/images/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1" width="364" height="89" class="aligncenter size-full wp-image-2555" />
 
 ## Establecer un nivel de log por defecto en toda la aplicación
 
@@ -186,7 +186,7 @@ public class EjemploLog4j2 {
 }
 {% endhighlight %}
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434" height="49" class="aligncenter size-full wp-image-2556" />
+<img src="/images/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434" height="49" class="aligncenter size-full wp-image-2556" />
 
 
 

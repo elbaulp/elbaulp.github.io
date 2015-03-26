@@ -12,7 +12,7 @@ tags:
   - instalar BitTorrent Sync
   - que es BitTorrent Sync
 ---
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/05/BiTTorrentSYnc-300x260.png" alt="BiTTorrentSYnc" width="300" height="260" class="alignleft size-medium wp-image-1553" />][1]
+[<img src="/images/2013/05/BiTTorrentSYnc-300x260.png" alt="BiTTorrentSYnc" width="300" height="260" class="alignleft size-medium wp-image-1553" />][1]
 
 Escuchando el programa de radio **[security now!][2]** he descubierto una herramienta increíble. Se trata de **BitTorrrent Sync** y permite tener archivos sincronizados en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube, como es el caso de dropbox por ejemplo. En este artículo voy a explicar cómo usarlo.
 
@@ -32,14 +32,14 @@ Está <a href="http://labs.bittorrent.com/experiments/sync/technology.html" targ
 
 Una vez descargado, ejecutamos el programa y saldrá una ventana como esta:
 
-<img class="thumbnail aligncenter size-full wp-image-1550" alt="BitTorrent Sync" src="http://elbauldelprogramador.com/content/uploads/2013/05/sync1.png" width="593" height="393" />
+<img class="thumbnail aligncenter size-full wp-image-1550" alt="BitTorrent Sync" src="/images/2013/05/sync1.png" width="593" height="393" />
 
 En Windows y mac, en linux hay que dirigirse a <a href="http://localhost:8888/gui" target="_blank">http://localhost:8888/gui</a>.
 
 El siguiente paso es elegir una carpeta que queramos sincronizar y *generar un secreto* para dicha carpeta. El secreto es aleatório y único, es la llave que conecta varios dispositivos a una red sincronizada.
 
 <div id="attachment_1551" style="width: 780px" class="wp-caption aligncenter">
-  <a class="thumbnail" href="http://elbauldelprogramador.com/content/uploads/2013/05/Crear-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1551" alt="Crear carpeta BitTorrent Sync" src="http://elbauldelprogramador.com/content/uploads/2013/05/Crear-carpeta-BitTorrent-Sync-1024x803.png" width="770" height="603" /></a>
+  <a class="thumbnail" href="/images/2013/05/Crear-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1551" alt="Crear carpeta BitTorrent Sync" src="/images/2013/05/Crear-carpeta-BitTorrent-Sync-1024x803.png" width="770" height="603" /></a>
   
   <p class="wp-caption-text">
     Crear carpeta BitTorrent Sync
@@ -49,7 +49,7 @@ El siguiente paso es elegir una carpeta que queramos sincronizar y *generar un s
 Hecho lo anterior, en el otro dispositivo, elegimos una carpeta en la que queramos almacenar los ficheros e introducimos el secreto en el paso anterior. En cuanto hagamos esto, automáticamente comenzará a sincronizar datos.
 
 <div id="attachment_1552" style="width: 780px" class="wp-caption aligncenter">
-  <a class="thumbnail" href="http://elbauldelprogramador.com/content/uploads/2013/05/Anadir-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1552" alt="Anadir carpeta BitTorrent Sync" src="http://elbauldelprogramador.com/content/uploads/2013/05/Anadir-carpeta-BitTorrent-Sync-1024x801.png" width="770" height="602" /></a>
+  <a class="thumbnail" href="/images/2013/05/Anadir-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1552" alt="Anadir carpeta BitTorrent Sync" src="/images/2013/05/Anadir-carpeta-BitTorrent-Sync-1024x801.png" width="770" height="602" /></a>
   
   <p class="wp-caption-text">
     Añadir carpeta BitTorrent Sync
@@ -72,6 +72,6 @@ Para terminar dejo el podcast del episodio de security now!
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2013/05/BiTTorrentSYnc.png
+ [1]: /images/2013/05/BiTTorrentSYnc.png
  [2]: /category/articulos/security-now-articulos/
  [3]: /articulos/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/

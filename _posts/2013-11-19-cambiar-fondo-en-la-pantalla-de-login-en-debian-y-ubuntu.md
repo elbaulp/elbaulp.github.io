@@ -13,7 +13,7 @@ tags:
   - cambiar fondo login ubuntu
   - lightdm
 ---
-<img src="http://elbauldelprogramador.com/content/uploads/2012/08/sh1.png" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="128" height="128" class="thumbnail alignleft size-full wp-image-868" />
+<img src="/images/2012/08/sh1.png" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="128" height="128" class="thumbnail alignleft size-full wp-image-868" />
 
 Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos.
 
@@ -79,7 +79,7 @@ La imagen se encuentra en `/usr/share/xfce4/backdrops/xubuntu-wallpaper.png` com
 {% highlight bash %}sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 {% endhighlight %}
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="3264" height="2448" class="aligncenter size-full wp-image-1982" />][2]{.thumbnail}
+[<img src="/images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="3264" height="2448" class="aligncenter size-full wp-image-1982" />][2]{.thumbnail}
 
 #### Referencias
 
@@ -89,4 +89,4 @@ La imagen se encuentra en `/usr/share/xfce4/backdrops/xubuntu-wallpaper.png` com
 
 
  [1]: http://elbauldelprogramador.com/seguridad/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
- [2]: http://elbauldelprogramador.com/content/uploads/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg
+ [2]: /images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg

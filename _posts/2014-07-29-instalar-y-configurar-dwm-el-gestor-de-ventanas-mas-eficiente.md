@@ -95,7 +95,7 @@ Recompilamos y listo.
 
 Un programa muy útil es dmenu, permite lanzar cualquier programa abriendo una ventanita en la que podemos escribir el nombre del programa a ejecutar:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/07/dmenu.png" alt="Dmenu" width="478" height="13" class="alignleft size-full wp-image-2405" />
+<img src="/images/2014/07/dmenu.png" alt="Dmenu" width="478" height="13" class="alignleft size-full wp-image-2405" />
 
 Para instalarlo:
 
@@ -140,7 +140,7 @@ Espero que esta pequeña introducción haya servido al lector. Desde que entré 
 
 Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explicaré cómo desarrollé la posibilidad de colorear la barra de estado (Ya está disponible [aquí][4]), ya que por defecto la versión 6.1 de DWM no lo permite.
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" width="1280" height="768" class="aligncenter size-full wp-image-2407" />][5]
+[<img src="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" width="1280" height="768" class="aligncenter size-full wp-image-2407" />][5]
 
 #### Referencias
 
@@ -152,4 +152,4 @@ Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explic
  [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: http://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
  [4]: http://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Colorear la barra de estado con Simple StatusColor en DWM 6.1"
- [5]: http://elbauldelprogramador.com/content/uploads/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
+ [5]: /images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png

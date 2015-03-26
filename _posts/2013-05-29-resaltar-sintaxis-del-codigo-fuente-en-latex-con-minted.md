@@ -58,7 +58,7 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
 {% endhighlight %}
 
 Este trozo de código dará como resultado lo siguiente:  
-<img src="http://elbauldelprogramador.com/content/uploads/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599" height="246" class="aligncenter size-full wp-image-1587" />
+<img src="/images/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599" height="246" class="aligncenter size-full wp-image-1587" />
 
 ### Insertar código desde un archivo de código fuente
 
@@ -136,7 +136,7 @@ Ejemplo de \textbackslash newmintedfile:
 linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.
 
 El resultado será:  
-<img src="http://elbauldelprogramador.com/content/uploads/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733" height="940" class="thumbnail aligncenter size-full wp-image-1588" />
+<img src="/images/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733" height="940" class="thumbnail aligncenter size-full wp-image-1588" />
 
 ### Creando un comando
 

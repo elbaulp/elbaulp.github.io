@@ -13,7 +13,7 @@ tags:
   - iniciar servicio linux
   - runlevel
 ---
-<img class="alignleft size-full wp-image-836" alt="sh" src="http://elbauldelprogramador.com/content/uploads/2012/07/sh1.png" width="128" height="128" />  
+<img class="alignleft size-full wp-image-836" alt="sh" src="/images/2012/07/sh1.png" width="128" height="128" />  
 Visto de forma simple, los runlevel  determinan qué programas se ejecutan al inicio del sistema.
 
 Existen 7 runlevel, numerados del 0 al 6 , aunque es posible crear más. Cada runlevel tiene los siguientes roles:

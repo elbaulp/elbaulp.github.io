@@ -139,7 +139,7 @@ Con estos 4 pasos hemos conseguido mantener sincronizado nuestro Google Drive en
 
 El resultado de estas modificaciones es el siguiente:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos-1024x575.png" alt="Sincronizar Google Drive en Linux en 4 pasos" width="770" height="432" class="aligncenter size-large wp-image-2013" />][6]{.thumbnail}
+[<img src="/images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos-1024x575.png" alt="Sincronizar Google Drive en Linux en 4 pasos" width="770" height="432" class="aligncenter size-large wp-image-2013" />][6]{.thumbnail}
 
 #### Referencias
 
@@ -153,4 +153,4 @@ El resultado de estas modificaciones es el siguiente:
  [3]: http://elbauldelprogramador.com/how-to/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
  [4]: http://elbauldelprogramador.com/script/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
  [5]: http://elbauldelprogramador.com/how-to/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
- [6]: http://elbauldelprogramador.com/content/uploads/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png
+ [6]: /images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png

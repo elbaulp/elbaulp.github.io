@@ -14,7 +14,7 @@ tags:
 ---
 <span class="highlight style-1">El siguiente artículo es una colaboración de <a href="http://dealgebra.blogspot.mx/" title="Visitar blog" target="_blank">Rogelio González</a>, al que agradezco su interés por colaborar en este blog.</span>
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1-300x200.jpg" alt="Cómo resolver sistemas de ecuaciones lineales con dos incógnitas1" width="300" height="200" class="alignleft size-medium wp-image-2224" />][1]  
+[<img src="/images/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1-300x200.jpg" alt="Cómo resolver sistemas de ecuaciones lineales con dos incógnitas1" width="300" height="200" class="alignleft size-medium wp-image-2224" />][1]  
 Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:
 
 <!--more-->
@@ -120,4 +120,4 @@ else :
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1.jpg
+ [1]: /images/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1.jpg

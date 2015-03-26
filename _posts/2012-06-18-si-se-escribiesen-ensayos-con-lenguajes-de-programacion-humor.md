@@ -17,10 +17,10 @@ tags:
   - ensayos
 format: image
 ---
-[<img src="http://elbauldelprogramador.com/content/uploads/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp" width="650" height="1673" class="aligncenter size-full wp-image-795" />][1]
+[<img src="/images/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp" width="650" height="1673" class="aligncenter size-full wp-image-795" />][1]
 
 > **<a href="http://www.genbetadev.com/lenguajes-y-plataformas/si-escribiesemos-ensayos-con-lenguajes-de-programacion" target="_blank">Fuente: GenbetaDev</a>**
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/06/AvpFizXCAAA3RXp1.jpg
+ [1]: /images/2012/06/AvpFizXCAAA3RXp1.jpg

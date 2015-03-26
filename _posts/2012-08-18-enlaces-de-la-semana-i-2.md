@@ -22,7 +22,7 @@ tags:
   - SQLite forense
 format: link
 ---
-[<img class="aligncenter size-medium wp-image-889" title="Chain Links" src="http://elbauldelprogramador.com/content/uploads/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300" height="225" />][1]
+[<img class="aligncenter size-medium wp-image-889" title="Chain Links" src="/images/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300" height="225" />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.
 
@@ -68,4 +68,4 @@ Para concluir un vídeo de vimeo que muestra una de los mejores espectáculos de
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/08/contruyendo-links-de-afiliados-fuertes1.jpg
+ [1]: /images/2012/08/contruyendo-links-de-afiliados-fuertes1.jpg

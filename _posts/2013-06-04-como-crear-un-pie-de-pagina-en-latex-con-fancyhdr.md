@@ -14,7 +14,7 @@ tags:
   - personalizar pie de página latex
   - pie de pagina latex
 ---
-<img src="http://elbauldelprogramador.com/content/uploads/2013/05/latex_logo.png" alt="latex_logo" width="300" height="114" class="thumbnail alignleft size-full wp-image-1594" />Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.  
+<img src="/images/2013/05/latex_logo.png" alt="latex_logo" width="300" height="114" class="thumbnail alignleft size-full wp-image-1594" />Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.  
   
 <!--more-->
 
@@ -72,7 +72,7 @@ Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambi
 {% endhighlight %}
 
 Produciendo el siguiente resultado:  
-<img src="http://elbauldelprogramador.com/content/uploads/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887" height="53" class="thumbnail aligncenter size-full wp-image-1595" />
+<img src="/images/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887" height="53" class="thumbnail aligncenter size-full wp-image-1595" />
 
 #### Referencias
 

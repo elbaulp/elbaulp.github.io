@@ -90,17 +90,17 @@ Visto cómo crear el balanceo de carga a mano, ahora pasemos a administrar y cre
 
 Para ello, en el panel de control hacemos click en *Red* » Balanceadores. Allí crearemos uno nuevo
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Balanceadoresdecarga1.png" alt="Balanceadoresdecarga1" width="815" height="531" class="aligncenter size-full wp-image-2562" />
+<img src="/images/2015/03/Balanceadoresdecarga1.png" alt="Balanceadoresdecarga1" width="815" height="531" class="aligncenter size-full wp-image-2562" />
 
 Donde se especifica el nombre, puertos y direcciones a usar.
 
 El siguiente paso es elegir el tipo de Control de estado a realizar, y el método de balanceo (Round robin o least connections)
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Balanceadoresdecarga2.png" alt="Balanceadoresdecarga2" width="812" height="532" class="aligncenter size-full wp-image-2563" />
+<img src="/images/2015/03/Balanceadoresdecarga2.png" alt="Balanceadoresdecarga2" width="812" height="532" class="aligncenter size-full wp-image-2563" />
 
 Por último, se especifica la aplicación que será balanceada entre todos los servidores virtuales disponibles.
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Balanceadoresdecarga3.png" alt="Balanceadoresdecarga3" width="815" height="529" class="aligncenter size-full wp-image-2564" />
+<img src="/images/2015/03/Balanceadoresdecarga3.png" alt="Balanceadoresdecarga3" width="815" height="529" class="aligncenter size-full wp-image-2564" />
 
 ## Ventajas y desventajas
 

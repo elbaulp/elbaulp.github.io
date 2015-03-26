@@ -22,19 +22,19 @@ En éste artículo vamos a ver cómo configurar un servidor cloud para ejecutar 
 
 En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817" height="448" class="aligncenter size-full wp-image-2526" />
+<img src="/images/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817" height="448" class="aligncenter size-full wp-image-2526" />
 
 ### Configurar la capacidad del servidor
 
 Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817" height="575" class="aligncenter size-full wp-image-2527" />
+<img src="/images/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817" height="575" class="aligncenter size-full wp-image-2527" />
 
 ### Establecer la contraseña de usuario
 
 Por último, solo resta proporcionar una contraseña al usuario **root**.
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815" height="581" class="aligncenter size-full wp-image-2528" />
+<img src="/images/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815" height="581" class="aligncenter size-full wp-image-2528" />
 
 ## Código del programa del lado servidor
 
@@ -323,11 +323,11 @@ Sin embargo, no funcionará, ya que el programa usa el puerto 8989, el cual no e
 
 O, desde Arsys, en políticas de firewall añadir lo siguiente:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/01/5.-Configuración-puerto.png" alt="5. Configuración puerto" width="343" height="45" class="aligncenter size-full wp-image-2530" />
+<img src="/images/2015/01/5.-Configuración-puerto.png" alt="5. Configuración puerto" width="343" height="45" class="aligncenter size-full wp-image-2530" />
 
 ## Captura de pantalla del juego en marcha
 
-<img src="http://elbauldelprogramador.com/content/uploads/2015/01/6.-Ejempli-programa.png" alt="6. Ejemplo programa" width="653" height="863" class="aligncenter size-full wp-image-2529" />
+<img src="/images/2015/01/6.-Ejempli-programa.png" alt="6. Ejemplo programa" width="653" height="863" class="aligncenter size-full wp-image-2529" />
 
 
 

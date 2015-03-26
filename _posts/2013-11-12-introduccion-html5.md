@@ -11,7 +11,7 @@ tags:
   - curso html5
   - etiquetas html5
 ---
-<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Introducción-a-HTML51.png" alt="Introducción a HTML5" width="512" height="512" class="thumbnail aligncenter size-full wp-image-1973" />  
+<img src="/images/2013/11/Introducción-a-HTML51.png" alt="Introducción a HTML5" width="512" height="512" class="thumbnail aligncenter size-full wp-image-1973" />  
 Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es <a href="http://www.rogamainformatica.es/" title="Roberto" target="_blank">Roberto</a>. Si ya sabes algo puedes echar un vistazo al artículo [Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket][1].
 
 ### Un poco de historia
@@ -45,7 +45,7 @@ Todo el que empieza en esto esta deseando ir al código escribir su primera pagi
 
 A esta estructura le podemos dar “vida” simplemente abriendo nuestro blog de notas, y pegándolo, dándole el nombre que deseemos y la extensión html. Después de eso si la abrimos con cualquier navegador podemos verla funcionando.
 
-<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Introducción-a-HTML5.png" alt="Introducción a HTML5" width="481" height="409" class="thumbnail aligncenter size-full wp-image-1972" />
+<img src="/images/2013/11/Introducción-a-HTML5.png" alt="Introducción a HTML5" width="481" height="409" class="thumbnail aligncenter size-full wp-image-1972" />
 
 Ahora os explicare qué es cada etiqueta, la primera: el **Doctipe**, ya la conocemos, seguidamente tenemos una etiqueta **<html>**; que cierra al final del documento **</html>** podemos intuir que hay que incluir dentro todo el contenido html y justamente es así como funciona debemos escribir dentro todo el contenido de nuestra página, la siguiente etiqueta es el **<head>** allí debemos incluir los enlaces a nuestras hojas de estilo, etiquetas de metadatos (mas adelante veremos que son y para que sirven), el titulo de la página, este se incluye dentro de las etiquetas **<title> </title>** y como vemos en la imagen superior lo que escribamos aquí va a aparecer en la pestaña de nuestra pagina; se debe cerrar con **</head>**; seguidamente nos encontramos con **<body>** aquí es donde escribiremos todo el cuerpo de nuestra web.
 

@@ -30,7 +30,7 @@ tags:
   - curso android pdf
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
+  <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
 </div>
 
 Android llama Proveedor de contenido a la abstracción de datos en Servícios. Digamos que un proveedor de contenido (CV a partir de ahora [de Content Provider]) es como un envoltorio para los datos. Una base de datos SQLite en un dispositivo Android es un ejemplo de fuente de datos (data source) que se encapsula en un CV.

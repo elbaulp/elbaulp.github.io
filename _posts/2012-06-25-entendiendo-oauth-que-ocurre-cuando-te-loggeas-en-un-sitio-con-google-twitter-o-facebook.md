@@ -26,7 +26,7 @@ Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacke
   
 **Cómo funciona OAuth**
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2012/06/medium1.jpg" alt="" title="medium" width="300" height="166" class="alignright size-full wp-image-809" />][1]  
+[<img src="/images/2012/06/medium1.jpg" alt="" title="medium" width="300" height="166" class="alignright size-full wp-image-809" />][1]  
 Digamos que quieres usar una aplicación como Tweetgif para postear divertidas imágenes GIF animadas en tu cuenta de Twitter. Para lograrlo, es necesario darle a Tweetgif acceso a tu cuenta de Twitter, para poder obtener tu info y postear tweets en tu nombre. En los viejos tiempos, tenías que darle a una aplicación como Tweetgif tu nombre de usuario y contraseña de Twitter, para que pueda loggearse y acceder a los servicios. No solo tenías que confiar que usen esas credenciales sabiamente, sino que también debías mantenerlas protegidas de los hackers &#8211; lo que era un verdadero gran salto de fe. Es como darle las llaves de tu casa a un extraño y confiar que no hará copias para todos sus amigos y luego robar todas tus cosas.
 
 OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:  
@@ -50,4 +50,4 @@ Fuente: <a href="http://lifehacker.com/5918086/understanding-oauth-what-happens-
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/06/medium1.jpg
+ [1]: /images/2012/06/medium1.jpg

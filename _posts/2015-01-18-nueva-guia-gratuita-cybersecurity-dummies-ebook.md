@@ -10,7 +10,7 @@ categories:
 tags:
   - Cybersecurity
 ---
-[<img src="http://elbauldelprogramador.com/content/uploads/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="591" height="914" class="alignleft size-full wp-image-2533" />][1]
+[<img src="/images/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="591" height="914" class="alignleft size-full wp-image-2533" />][1]
 
 APTs (Advanced Persistent Threats) have changed the world of enterprise security and how networks and organizations are attacked. These threats, and the cyber-criminals behind them, are experts at remaining hidden from traditional security while exhibiting an intelligence, resiliency, and patience that has never been seen before.
 

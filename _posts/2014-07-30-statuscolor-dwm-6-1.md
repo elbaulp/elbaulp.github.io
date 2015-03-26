@@ -60,7 +60,7 @@ Por defecto el parche tiene 7 colores, para indicar el color a usar se debe escr
 
 Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el color 3. He aquí un ejemplo de la mía:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" alt="simplestatuscolor in dwmstatus dwm6.1" width="702" height="13" class="aligncenter size-full wp-image-2410" />][2]
+[<img src="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" alt="simplestatuscolor in dwmstatus dwm6.1" width="702" height="13" class="aligncenter size-full wp-image-2410" />][2]
 
 ## Dentro del código
 
@@ -208,6 +208,6 @@ Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de 
 
 
  [1]: http://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM, el gestor de ventanas más eficiente"
- [2]: http://elbauldelprogramador.com/content/uploads/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
+ [2]: /images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
  [3]: http://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
  [4]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"

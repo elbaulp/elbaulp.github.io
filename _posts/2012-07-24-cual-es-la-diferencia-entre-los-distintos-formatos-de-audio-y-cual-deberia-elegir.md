@@ -57,7 +57,7 @@ Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="ht
 
 #### Formatos con pérdidas: MP3, AAC, OGG y más
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2012/07/original-11-300x195.jpg" alt="" title="original (1)" width="300" height="195" class="alignright size-medium wp-image-846" />][1]
+[<img src="/images/2012/07/original-11-300x195.jpg" alt="" title="original (1)" width="300" height="195" class="alignright size-medium wp-image-846" />][1]
 
 Para el día a día, es más probable que usemos formatos con pérdidas. Ahorran bastante más espacio, y si tienen una <a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">tasa de bits suficientemente alta (bitrate)</a>, será muy dificil de distinguir la calidad de la fuente original. A continuación se muestran los formatos que más se usan:
 
@@ -81,4 +81,4 @@ Imagen | <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" targ
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/07/original-11.jpg
+ [1]: /images/2012/07/original-11.jpg

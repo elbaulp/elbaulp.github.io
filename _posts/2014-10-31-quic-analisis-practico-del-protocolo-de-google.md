@@ -131,7 +131,7 @@ Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits u
   * El par 0xC0 no se usan actualmente, y deberían estar a 0.
 
 <div id="attachment_2465" style="width: 380px" class="wp-caption aligncenter">
-  <img src="http://elbauldelprogramador.com/content/uploads/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" alt="Análisis práctico del protocolo de Google QUIC - primerPaquete" width="370" height="118" class="size-full wp-image-2465" />
+  <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" alt="Análisis práctico del protocolo de Google QUIC - primerPaquete" width="370" height="118" class="size-full wp-image-2465" />
   
   <p class="wp-caption-text">
     ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
@@ -262,7 +262,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 La captura realizada fue la siguiente:
 
 <div id="attachment_2466" style="width: 1930px" class="wp-caption aligncenter">
-  <img src="http://elbauldelprogramador.com/content/uploads/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" alt="Análisis práctico del protocolo de Google QUIC - CapturaQUIC" width="1920" height="1080" class="size-full wp-image-2466" />
+  <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" alt="Análisis práctico del protocolo de Google QUIC - CapturaQUIC" width="1920" height="1080" class="size-full wp-image-2466" />
   
   <p class="wp-caption-text">
     Captura completa de la conexión
@@ -274,7 +274,7 @@ Se procederá a mostrar algunas capturas más detalladas de la cabecera únicame
 Como se mostró más arriba, la cabecera del primer paquete indica que el paquete contiene información que especificará la versión de QUIC a usar:
 
 <div id="attachment_2465" style="width: 380px" class="wp-caption aligncenter">
-  <img src="http://elbauldelprogramador.com/content/uploads/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" alt="Análisis práctico del protocolo de Google QUIC - primerPaquete" width="370" height="118" class="size-full wp-image-2465" />
+  <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" alt="Análisis práctico del protocolo de Google QUIC - primerPaquete" width="370" height="118" class="size-full wp-image-2465" />
   
   <p class="wp-caption-text">
     ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
@@ -284,7 +284,7 @@ Como se mostró más arriba, la cabecera del primer paquete indica que el paquet
 Dicha información se encuentra aquí:
 
 <div id="attachment_2467" style="width: 604px" class="wp-caption aligncenter">
-  <img src="http://elbauldelprogramador.com/content/uploads/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" alt="Análisis práctico del protocolo de Google QUIC - quicVersion" width="594" height="244" class="size-full wp-image-2467" />
+  <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" alt="Análisis práctico del protocolo de Google QUIC - quicVersion" width="594" height="244" class="size-full wp-image-2467" />
   
   <p class="wp-caption-text">
     Información sobre la versión a usar
@@ -294,7 +294,7 @@ Dicha información se encuentra aquí:
 También se puede apreciar en la captura el número de secuencia y el identificador de conexión. Si escogemos cualquier otro paquete que no sea el primero, se comprobará que el bit que especifica si existe la versión está desactivado:
 
 <div id="attachment_2468" style="width: 606px" class="wp-caption aligncenter">
-  <img src="http://elbauldelprogramador.com/content/uploads/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" alt="Análisis práctico del protocolo de Google QUIC - quicOtrosPaquetes" width="596" height="246" class="size-full wp-image-2468" />
+  <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" alt="Análisis práctico del protocolo de Google QUIC - quicOtrosPaquetes" width="596" height="246" class="size-full wp-image-2468" />
   
   <p class="wp-caption-text">
     Paquetes distintos al primero

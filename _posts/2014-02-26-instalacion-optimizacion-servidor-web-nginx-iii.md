@@ -234,7 +234,7 @@ Por último hay que añadir la configuración a nginx, dentro del bloque *server
 
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/02/pagespeed.png" alt="Configuración pagespeed nginx" width="255" height="135" class="aligncenter size-full wp-image-2268" />
+<img src="/images/2014/02/pagespeed.png" alt="Configuración pagespeed nginx" width="255" height="135" class="aligncenter size-full wp-image-2268" />
 
 Como vemos, la cabecera de pagespeed está presente, luego está habilitado.
 

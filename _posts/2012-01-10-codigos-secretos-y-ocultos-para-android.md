@@ -37,7 +37,7 @@ tags:
   - menu oculto tablet android
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+  <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 </div>
 
 Si te gusta jugar con tu <a href="http://elbauldelprogramador.com/curso-programacion-android/" title="Curso Android" target="_blank">Android</a>, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android.

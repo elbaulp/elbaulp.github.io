@@ -23,8 +23,8 @@ Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 </noscript>
 
   
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/06/LOGOS.png" alt="LOGOS" width="978" height="786" class="aligncenter size-full wp-image-1696" />][1]{.thumbnail}
+[<img src="/images/2013/06/LOGOS.png" alt="LOGOS" width="978" height="786" class="aligncenter size-full wp-image-1696" />][1]{.thumbnail}
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2013/06/LOGOS.png
+ [1]: /images/2013/06/LOGOS.png

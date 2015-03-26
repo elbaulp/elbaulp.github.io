@@ -209,7 +209,7 @@ Es necesario agregar la librería al proyecto, para ello, descárgala, crea una 
 
 La aplicación de ejemplo debe quedar así:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480" height="800" class="aligncenter size-full wp-image-1089" />][1]{.thumbnail}
+[<img src="/images/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480" height="800" class="aligncenter size-full wp-image-1089" />][1]{.thumbnail}
 
 Para finalizar, decir que la librería por ahora está muy limitada, pero es perfectamente funcional para realizar peticiones básicas. Intentaremos seguir desarrollandola cuando dispongamos de más tiempo.
 
@@ -224,4 +224,4 @@ Para finalizar, decir que la librería por ahora está muy limitada, pero es per
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2013/01/webservicelibexample2.png
+ [1]: /images/2013/01/webservicelibexample2.png

@@ -54,5 +54,5 @@ A continuación dejo un índice del esquema que voy a seguir en esta segunda par
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png
+ [1]: /images/2013/07/iconoAndroid.png
  [2]: /opensource/disponible-la-primera-parte-del-curso/

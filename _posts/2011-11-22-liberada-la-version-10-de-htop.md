@@ -31,7 +31,7 @@ tags:
   - htop
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
+  <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
 </div>
 
 Si monitorizáis el estado de vuestros sistemas con [Linux][1] probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.

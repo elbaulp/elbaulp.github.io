@@ -104,7 +104,7 @@ Ahora que tenemos el diseño listo, veremos cómo cambiarlo cuando ocurra cierta
 
 Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Preference`. Cuando se introduzca una contraseña inferior a 8 caracteres, se mostrará el mensaje como aparece en la imagen:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" alt="Cambiar el color del summary en una Preferencia Android" width="419" height="97" class="aligncenter size-full wp-image-2245" />
+<img src="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" alt="Cambiar el color del summary en una Preferencia Android" width="419" height="97" class="aligncenter size-full wp-image-2245" />
 
 
 

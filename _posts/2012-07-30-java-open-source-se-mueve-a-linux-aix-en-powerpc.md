@@ -17,7 +17,7 @@ tags:
   - Linux
   - PowerPC
 ---
-<img alt="" src="http://elbauldelprogramador.com/content/uploads/2012/07/Java.png" class="alignleft" width="256" height="256" />
+<img alt="" src="/images/2012/07/Java.png" class="alignleft" width="256" height="256" />
 
 ** La propuesta de *SAP-steered* aporta OpenJDK a nuevas plataformas**
 

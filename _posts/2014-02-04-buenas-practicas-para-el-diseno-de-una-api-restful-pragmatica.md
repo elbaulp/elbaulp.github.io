@@ -397,7 +397,7 @@ Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">Supp
     </p>
     
     <h4>
-      <a href="http://elbauldelprogramador.com/content/uploads/2014/01/201305-xml-vs-json-api.png"><img class="alignleft size-full wp-image-2241" alt="201305-xml-vs-json-api" src="http://elbauldelprogramador.com/content/uploads/2014/01/201305-xml-vs-json-api.png" width="817" height="237" /></a>
+      <a href="/images/2014/01/201305-xml-vs-json-api.png"><img class="alignleft size-full wp-image-2241" alt="201305-xml-vs-json-api" src="/images/2014/01/201305-xml-vs-json-api.png" width="817" height="237" /></a>
     </h4>
     
     <p>

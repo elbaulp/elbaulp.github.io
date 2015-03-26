@@ -20,7 +20,7 @@ Hace tiempo, cuando migramos de blogger a WordPress escribimos un [artículo][1]
 
 Es más sencillo descargar una copia de la base de datos para realizar las sustituciones necesarias, ya que podremos aplicar las expresiones regulares en cualquier editor de texto. Para ello, si usamos PhpMyadmin hay que entrar al panel de administración, seleccionar la base de datos a exportar, en este caso la de WordPress, pulsar el botón *Export* y dejar todo tal y como aparece en la siguiente imagen:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma.png" alt="Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma" width="1046" height="803" class="aligncenter size-full wp-image-2091" />
+<img src="/images/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma.png" alt="Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma" width="1046" height="803" class="aligncenter size-full wp-image-2091" />
 
 ### Generar la expresión regular necesaria
 
@@ -34,7 +34,7 @@ Ahora que tenemos la base de datos descargada, la descomprimimos y nos paramos a
 Lo que tienen las expresiones regulares es que cuando pasa un tiempo, y aunque la hayas creado tú, es probable que no tengas ni idea de por qué la hiciste y cómo se te ocurrió. Hace tiempo en la sección <a href="http://elbauldelprogramador.com/category/offtopic/vinetas-geek/" title="Sección Viñetas Geek" target="_blank">Viñetas Geek de Domingo</a> apareció una imagen que refleja esta sensación:
 
 <div id="attachment_2027" style="width: 339px" class="wp-caption aligncenter">
-  <img src="http://elbauldelprogramador.com/content/uploads/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" alt="Explicado simplemente - Expresiones regulares del día anterior" width="329" height="533" class="size-full wp-image-2027" />
+  <img src="/images/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" alt="Explicado simplemente - Expresiones regulares del día anterior" width="329" height="533" class="size-full wp-image-2027" />
   
   <p class="wp-caption-text">
     Expresiones regulares del día anterior
@@ -54,7 +54,7 @@ Así que pasemos a explicarla:
 
 Esto debería bastar, con cualquier editor, en este caso con Geany, podemos buscar y reemplazar las cadenas que coincidan con esta expresión:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png" alt="Expresiones regulares en Geany" width="586" height="256" class="aligncenter size-full wp-image-2092" />
+<img src="/images/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png" alt="Expresiones regulares en Geany" width="586" height="256" class="aligncenter size-full wp-image-2092" />
 
 Lo cual sustituirá la URL antigua por lo que coincidión en la expresión *((?:\w+-?)+)*, cuyo contenido se puede referenciar con \1, donde 1 es el número del grupo, si hubiera varios, se referenciarían con \1, \2 etc. Con esto, ya podemos dejar de usar el plugin.
 

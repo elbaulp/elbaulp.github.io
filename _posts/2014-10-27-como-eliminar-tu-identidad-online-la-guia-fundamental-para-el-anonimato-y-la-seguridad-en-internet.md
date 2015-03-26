@@ -19,7 +19,7 @@ tags:
 El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.
 
-[<img class="aligncenter size-full wp-image-2453" src="http://elbauldelprogramador.com/content/uploads/2014/10/draft.jpg" alt="draft" width="592" height="312" />][1]
+[<img class="aligncenter size-full wp-image-2453" src="/images/2014/10/draft.jpg" alt="draft" width="592" height="312" />][1]
 
 <!--more-->
 
@@ -177,7 +177,7 @@ Puedes:
 
 No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ubicación estén desactivadas. Por defecto, sé que el iTouch guarda tu ubicación GPS en cada foto que tomas. Si ésta aparece en algún momento en internet, ya se puede examinar en hexadecimal para determinar las coordenadas.
 
-[<img class="aligncenter size-full wp-image-2454" src="http://elbauldelprogramador.com/content/uploads/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" alt="remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654" width="381" height="515" />][4]
+[<img class="aligncenter size-full wp-image-2454" src="/images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" alt="remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654" width="381" height="515" />][4]
 
 El Explorador de Archivos de Windows (Windows File Explorer) además provee lectura de ubicación de GPS en su vista de propiedades
 
@@ -235,7 +235,7 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2014/10/draft.jpg
+ [1]: /images/2014/10/draft.jpg
  [2]: http://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
  [3]: http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
- [4]: http://elbauldelprogramador.com/content/uploads/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg
+ [4]: /images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg

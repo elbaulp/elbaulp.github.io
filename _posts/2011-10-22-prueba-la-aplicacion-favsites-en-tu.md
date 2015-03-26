@@ -20,7 +20,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Como sabéis hace algún tiempo terminé la aplicación [Favsites][1].
 

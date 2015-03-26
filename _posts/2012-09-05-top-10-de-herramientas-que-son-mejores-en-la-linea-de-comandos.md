@@ -16,7 +16,7 @@ tags:
   - herramientas
   - htop
 ---
-[<img class=" wp-image-938 alignleft" title="Top 10 de las Mejores Herramientas en la Línea de Comandos" src="http://elbauldelprogramador.com/content/uploads/2012/08/original1.jpg" alt="Comandos" width="328" height="184" />][1]
+[<img class=" wp-image-938 alignleft" title="Top 10 de las Mejores Herramientas en la Línea de Comandos" src="/images/2012/08/original1.jpg" alt="Comandos" width="328" height="184" />][1]
 
 Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).
 
@@ -111,4 +111,4 @@ Fuente | <a href="http://lifehacker.com/5935869/top-10-tools-that-are-better-in-
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/08/original1.jpg
+ [1]: /images/2012/08/original1.jpg

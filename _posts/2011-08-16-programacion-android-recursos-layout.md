@@ -21,7 +21,7 @@ tags:
   - curso android pdf
   - layout android
 ---
-<img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 En Android, cada pantalla de una aplicación habitualmente se carga desde un fichero XML que actua de recurso. Un recurso layout es un recurso clave que se usa en Android para componer la UI de nuestra aplicación. Vamos a considerar el segmenteo de código siguiente como ejemplo de una [actividad][1] en Android.
 

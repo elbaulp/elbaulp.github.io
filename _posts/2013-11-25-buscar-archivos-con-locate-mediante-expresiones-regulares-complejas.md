@@ -38,7 +38,7 @@ En `$i` está el nombre de la canción, `.*` permite que haya cero o más caract
 
 Siempre que necesito crear una expresión regular uso una herramienta llamada **regex tester** que permite visualizar qué cadenas de texto coincidirían con el patrón:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" alt="Buscar archivos con locate mediante expresiones regulares complejas" width="627" height="285" class="thumbnail aligncenter size-full wp-image-2011" />
+<img src="/images/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" alt="Buscar archivos con locate mediante expresiones regulares complejas" width="627" height="285" class="thumbnail aligncenter size-full wp-image-2011" />
 
 ### Script completo
 

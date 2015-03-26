@@ -119,7 +119,7 @@ Con esto hemos descargaro el script, lo hemos movido al directorio en el que ser
 
 Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección *localhost*, donde veremos lo siguiente:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/02/instalacionNginx.png" alt="Instalación y optimización de un servidor web con Nginx (I)" width="554" height="192" class="aligncenter size-full wp-image-2254" />
+<img src="/images/2014/02/instalacionNginx.png" alt="Instalación y optimización de un servidor web con Nginx (I)" width="554" height="192" class="aligncenter size-full wp-image-2254" />
 
 ### Configuración
 

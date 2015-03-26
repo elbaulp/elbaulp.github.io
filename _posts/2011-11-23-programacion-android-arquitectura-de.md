@@ -32,7 +32,7 @@ tags:
   - 'Programación Android: Arquitectura de los Proveedores de contenidos'
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
+  <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
 </div>
 
 Vamos a examinar algunos de los elementos que componen los proveedores de contenidos(CV) y cómo éstos se relacionan con otras abstracciones de acceso a datos.

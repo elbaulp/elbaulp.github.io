@@ -47,7 +47,7 @@ Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 Terminada, la aplicación de prueba debe quedar algo así:
 
 <p style="text-align: center;">
-  <a class="thumbnail" href="http://elbauldelprogramador.com/content/uploads/2012/09/principal1.png"><img class="aligncenter  wp-image-964" title="principal" src="http://elbauldelprogramador.com/content/uploads/2012/09/principal1.png" alt="adapter android" width="290" height="484" /></a>
+  <a class="thumbnail" href="/images/2012/09/principal1.png"><img class="aligncenter  wp-image-964" title="principal" src="/images/2012/09/principal1.png" alt="adapter android" width="290" height="484" /></a>
 </p>
 
 &nbsp;
@@ -103,7 +103,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
 
 Creando así el aspecto deseado para cada línea del ListView:
 
-[<img class="aligncenter size-full wp-image-965" title="customrow" src="http://elbauldelprogramador.com/content/uploads/2012/09/customrow1.png" alt="adapter android" width="307" height="50" />][5]{.thumbnail}
+[<img class="aligncenter size-full wp-image-965" title="customrow" src="/images/2012/09/customrow1.png" alt="adapter android" width="307" height="50" />][5]{.thumbnail}
 
 El primer paso es crear una clase que representará los datos a almacenar:
 
@@ -501,7 +501,7 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
  [2]: /programacion/programacion-android-interfaz-grafica-2/
  [3]: /curso-programacion-android/
  [4]: /programacion/programacion-android-recursos-layout/
- [5]: http://elbauldelprogramador.com/content/uploads/2012/09/customrow1.png
+ [5]: /images/2012/09/customrow1.png
  [6]: #estadoCheckBox
  [7]: #desplazarLista
  [8]: #SavedInstanceState

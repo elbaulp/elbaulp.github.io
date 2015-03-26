@@ -33,7 +33,7 @@ tags:
   - menu android
   - simple adapter android ejemplo
 ---
-<img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Un objeto Adaptador actúa como puente entre un AdapterView y los datos de una Vista (View). El adaptador permite el acceso a los elementos de datos, éste también es responsable de crear una vista para cada elemento en la colección de datos.
 

@@ -153,7 +153,7 @@ Android trata generalmente con Java, pero en ciertas ocasiones es necesario usar
 
 También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas `ic_arrow_expand` y `ic_arrow_collapse`:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png" alt="PON A DIETA A TUS APKS - Rotaciones de recursos" width="512" height="384" class="aligncenter size-full wp-image-2434" />
+<img src="/images/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png" alt="PON A DIETA A TUS APKS - Rotaciones de recursos" width="512" height="384" class="aligncenter size-full wp-image-2434" />
 
 Podemos deshacernos fácilmente de `ic_arrow_collapse` creando un `RotateDrawable` basándonos en `ic_arrow_expand`. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:
 
@@ -172,7 +172,7 @@ En ciertas ocasiones renderizar gráficos directamente desde código puede conll
 
 Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el **APK** resultante pesaba más de **1.5MB**. Tras investigar en `wearable-support.aar`, descubrió que se empaquetan dos animaciones *frame-by-frame* en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png" alt="Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support" width="1596" height="1236" class="aligncenter size-full wp-image-2435" />
+<img src="/images/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png" alt="Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support" width="1596" height="1236" class="aligncenter size-full wp-image-2435" />
 
 La animación para el “éxito” se construye con un `AnimationDrawable` definido en un XML:
 

@@ -14,7 +14,7 @@ categories:
 tags:
   - virtualbox
 ---
-[<img style="border:none;" width="500" height="608" class="aligncenter size-full wp-image-782" src="http://elbauldelprogramador.com/content/uploads/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />][1]
+[<img style="border:none;" width="500" height="608" class="aligncenter size-full wp-image-782" src="/images/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />][1]
 
 Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware.
 

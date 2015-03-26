@@ -144,7 +144,7 @@ En el método `onOptionsItemSelected` comprobamos qué elemento del [menú][3] s
 
 Aunque esta no es la mejor forma de hacerlo, para ilustrar la diferencia entre ambas preferencias se almacenarán como dos objetos distintos. `mDialogoNormal` se comportará como una preferencia por defecto, en este caso es un `EditTtextPreference`, `mDialogoPersonalizado`, como su nombre indica, será la preferencia sobre la cual implementaremos nosotros el diálogo. En esta actividad que extiende de `PreferenceActivity` inicializamos todos los objetos necesarios en el `onCreate`. El método que realmente nos interesa es `onPreferenceChange`, que será llamado cuando se detecte algún cambio en los datos de las preferencias. En este caso se pretende mostrar cómo implementar una preferencia para almacenar una contraseña. Cuando el usuario introduce en el diálogo su contraseña, ésta será cifrada en el método `cifrar` y será éste el valor almacenado en el archivo de preferencias. Con el diálogo normal, si el usuario vuelve a lanzar el diálogo con una contraseña ya almacenada verá esto:
 
-<img src="http://elbauldelprogramador.com/content/uploads/2014/01/CrearDialogoAndroid.png" alt="Crear DialogPreference personalizado Android" width="441" height="329" class="aligncenter size-full wp-image-2238" />
+<img src="/images/2014/01/CrearDialogoAndroid.png" alt="Crear DialogPreference personalizado Android" width="441" height="329" class="aligncenter size-full wp-image-2238" />
 
 Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de texto apareciera vacío, para ello crearemos nosotros mismos el diálogo extendiendo de `DialogPreference`.
 

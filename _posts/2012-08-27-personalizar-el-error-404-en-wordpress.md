@@ -15,7 +15,7 @@ tags:
   - error 404
   - personalizar 404 wordpress
 ---
-[<img src="http://elbauldelprogramador.com/content/uploads/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />][1]
+[<img src="/images/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />][1]
 
 El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.
 
@@ -236,4 +236,4 @@ if($query->have_posts()){
     <a href="http://codex.wordpress.org/Creating_an_Error_404_Page" target="_blank">Creating an Error 404 Page</a></p>
     
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/08/4041.jpg
+ [1]: /images/2012/08/4041.jpg

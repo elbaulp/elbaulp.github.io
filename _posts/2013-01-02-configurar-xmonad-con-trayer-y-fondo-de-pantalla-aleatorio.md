@@ -209,7 +209,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 Así luce mi escritorio con xmonad:
 
-[<img src="http://elbauldelprogramador.com/content/uploads/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png" alt="xmonad Desktop" width="770" height="307" class="aligncenter size-large wp-image-1072" />][2]{.thumbnail}
+[<img src="/images/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png" alt="xmonad Desktop" width="770" height="307" class="aligncenter size-large wp-image-1072" />][2]{.thumbnail}
 
 #### Referencias
 
@@ -218,4 +218,4 @@ Así luce mi escritorio con xmonad:
 
 
  [1]: /opensource/configurar-dos-pantallas-en-openbox/
- [2]: http://elbauldelprogramador.com/content/uploads/2013/01/Screenshot-from-2013-01-02-1852312.png
+ [2]: /images/2013/01/Screenshot-from-2013-01-02-1852312.png

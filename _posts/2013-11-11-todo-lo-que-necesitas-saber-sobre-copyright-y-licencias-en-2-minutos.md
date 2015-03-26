@@ -15,7 +15,7 @@ tags:
   - licencia MIT
   - licencias libres
 ---
-<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png" alt="Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos" width="672" height="656" class="thumbnail aligncenter size-full wp-image-1970" />
+<img src="/images/2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png" alt="Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos" width="672" height="656" class="thumbnail aligncenter size-full wp-image-1970" />
 
 A la hora de crear proyectos, suele ser una tarea difícil elegir bajo qué licencia liberar el código, al menos para mi. Con este artículo que traduzco de *<a title="Outercurve" href="http://www.outercurve.org" target="_blank">outercurve.org</a>* espero facilitar la tarea de selección de una licencia.
 

@@ -21,7 +21,7 @@ tags:
   - pdf to imagen
 format: aside
 ---
-[<img class="alignleft size-full wp-image-836" title="sh" src="http://elbauldelprogramador.com/content/uploads/2012/07/sh1.png" alt="" width="128" height="128" />][1]
+[<img class="alignleft size-full wp-image-836" title="sh" src="/images/2012/07/sh1.png" alt="" width="128" height="128" />][1]
 
 El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.
 
@@ -47,4 +47,4 @@ Vía | <a href="http://www.cyberciti.biz/faq/howto-convert-a-pdf-file-to-an-imag
 
 
 
- [1]: http://elbauldelprogramador.com/content/uploads/2012/07/sh1.png
+ [1]: /images/2012/07/sh1.png

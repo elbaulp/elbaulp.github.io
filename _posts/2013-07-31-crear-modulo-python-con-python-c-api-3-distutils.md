@@ -20,7 +20,7 @@ tags:
   * [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
   * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
-<img class="thumbnail alignleft size-full wp-image-1777" alt="Crear un módulo para python con la Python C API - DistUtils" src="http://elbauldelprogramador.com/content/uploads/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" width="201" height="190" />  
+<img class="thumbnail alignleft size-full wp-image-1777" alt="Crear un módulo para python con la Python C API - DistUtils" src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" width="201" height="190" />  
 Como dijimos en la entrada[ anterior][5], vamos a hablar de *DistUtils*, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API.
 
   
