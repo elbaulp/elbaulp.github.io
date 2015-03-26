@@ -20,3 +20,4 @@
 - [ ] Ping Google
 - [ ] Featured Images
 - [ ] Importar comentarios
+- [ ] Cambiar default-thumb.png

@@ -52,7 +52,7 @@ public class MiClase {
 Supongamos también el siguiente json, almacenado en un fichero `mijson.json`:
 
 {% highlight json %}{
-   "nombre":"Alicia", 
+   "nombre":"Alicia",
    "edad":13
 }
 {% endhighlight %}
@@ -67,7 +67,7 @@ Es necesario crear un `ObjectMapper`, y lo típico es hacerlo estático para re-
 Para des-serializar el `json` y crear el objeto en Java:
 
 {% highlight java %}MiClase objeto = JSON_MAPPER.readValue(new File("mijson.json", MiClase.class);
-// o 
+// o
 MiClase objeto = JSON_MAPPER.readValue(new URL("http://ruta/a/mijson.json", MiClase.class);
 {% endhighlight %}
 
@@ -95,7 +95,7 @@ Supongamos que nuestra api devuelve arrays de objetos, por ejemplo una lista de 
     private int DNI;
 
     public Persona() {}
-    
+
     public String getNombre() {
         return Nombre;
     }
@@ -129,7 +129,7 @@ Supongamos que nuestra api devuelve arrays de objetos, por ejemplo una lista de 
     private float valoracion;
 
     public Producto() {}
-    
+
     public String getNombre() {
         return Nombre;
     }
@@ -254,7 +254,7 @@ La librería *Jackson* de *fasterXML* ofrece muchísimas más cosas de las vista
 
 #### Referencias
 
-*Jackson databind* **|** <a href="https://github.com/FasterXML/jackson-databind/" target="_blank">github.com</a> 
+*Jackson databind* **|** <a href="https://github.com/FasterXML/jackson-databind/" target="_blank">github.com</a>
 
 
 
