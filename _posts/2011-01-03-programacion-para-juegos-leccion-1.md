@@ -37,7 +37,7 @@ Selecciona el SO que tengas:
 [<img style="display:inline; position:relative; top:-260px; left:500px;" src="http://lh6.ggpht.com/_IlK2pNFFgGM/TSHH2DeE3mI/AAAAAAAAAPs/KES8kBZgn9M/apple-logo.png" />][3]  
 Para los usuarios de GNU/Linux dejo el comando de instalación de las librerias:
 
-<pre>sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev</pre>
+{% highlight bash %}sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev{% endhighlight %}
 
 
 

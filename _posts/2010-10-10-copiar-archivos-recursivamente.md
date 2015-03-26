@@ -40,7 +40,7 @@ El unico requisito es que tengais instalado zenity (que casi siempre vien por de
 
 Aqui os dejo el codigo:
 
-<pre class="ejemplo"><span class="path">#!/bin/bash</span>
+{% highlight bash %}<span class="path">#!/bin/bash</span>
 <span class="bash">IFS</span>='
 '
 DIR=`zenity --file-selection --directory --title="Selecciona los archivos a copiar"`
@@ -76,7 +76,7 @@ DIR=`zenity --file-selection --directory --title="Selecciona los archivos a copi
     <span class="bash">esac</span>
 <span class="bash">IFS</span>=' '
 
-</pre>
+{% endhighlight %}
 
 Podéis hacer todas las preguntas que querais si no entendeis algo, y no repareis en criticarlo, si creeis que algo esta mal, o podria mejorarse.
 

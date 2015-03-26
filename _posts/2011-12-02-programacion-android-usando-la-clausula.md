@@ -48,25 +48,25 @@ Imaginemos que queremos recuperar un lugar (De la aplicación [FavSites][2]) cuy
   
 <!--more-->
 
-<pre lang="java">Activity activity;
+{% highlight java %}>Activity activity;
 //... Inicializamos la actividad...
 String siteUri = "content://com.elbauldelprogramador.provider.FavSites/sites/23";
 Cursor managedCursor = activity.managedQuery( siteUri,
                                 projection, //Columnas a devolver
                                 null,       //Cláusula WHERE
                                 null);      //Cláusula ORDER BY
-</pre>
+{% endhighlight %}
 
 En este ejemplo se ha dejado el argumento que hace referencia a la cláusula where a null ya que hemos especificado el ID del registro que queremos en la URI. En este caso el ID está embebido en la URI. Se usa la URI como vehículo para pasar la cláusula where. Esto se hace evidente cuando nos fijamos cómo se implementa el proveedor para los Sites de la aplicación, que corresponde al método query. A continuación un fragmento de código del método query:
 
-<pre lang="java">//Devuelve un id de sitio
+{% highlight java %}>//Devuelve un id de sitio
 //content://.../sites/23
 int siteId = uri.getPathSegments().get(1);
 
 queryBuilder.setTables(favSitesTableMetaData.TABLE_NAME);
 
 queryBuilder.appendWhere(favSitesTableMEtaData._ID + "=" + siteId);
-</pre>
+{% endhighlight %}
 
 Como vemos la id del sitio se extrae de la URI. La Uri se divide en segmentos (path) del a forma content://&#8230;/seg1/seg2/seg3, en nuestro ejemplo el primer segmento es el id 23.
 
@@ -78,18 +78,18 @@ Como vemos la id del sitio se extrae de la URI. La Uri se divide en segmentos (p
 
 Vamos a ver una vez más la estructura del método *managedQuery* de la clase Activity:
 
-<pre lang="java">public final Cursor managedQuery(Uri uri,
+{% highlight java %}>public final Cursor managedQuery(Uri uri,
    String[] projection,
    String selection,
    String[] selectionArgs,
    String sortOrder)
-</pre>
+{% endhighlight %}
 
 El parámetro *selection*, es el que actúa como cláusula Where (Representa un filtro en el que elegimos qué filas queremos que se nos devuelvan). Si en este argumento pasamos *null* se nos devolverán todas las filas para la URI dada. En este parámetro podemos incluir ?, que serán reemplazados por los valores del parámetro *selectionArgs* en el orden que vayan apareciendo.
 
 Los siguientes códigos que se muestran son equivalentes:
 
-<pre lang="java">//Método Uri
+{% highlight java %}>//Método Uri
 managedQuery("content://com.elbauldelprogramador.provider.FavSites/sites/23"
    ,null
    ,null
@@ -102,7 +102,7 @@ managedQuery("content://com.elbauldelprogramador.provider.FavSites/sites"
    ,"_ID=?"
    ,new String[] {23}
    ,null);
-</pre>
+{% endhighlight %}
 
 Te preguntarás qué método usar en según que situación. Por convención se suele usar el método mediate URI cuando sea posible aplicarlo, y el explícito en casos especiales (Como en el ejemplo de arriba.)
 

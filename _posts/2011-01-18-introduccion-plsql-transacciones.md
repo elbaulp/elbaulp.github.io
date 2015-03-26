@@ -30,28 +30,28 @@ tags:
 Oracle es un sistema de base de datos puramente transaccional, de tal forma, que la instrucción BEGIN TRANSACTION no existe.
 
 Una transacción es un conjunto de sentencias SQL que se ejecutan en una base de datos como una única operación, confirmándose o deshaciéndose todo el conjunto de sentencias SQL. La transacción puede quedar finalizada (con las sentencias apropiadas) o implícitamente (terminando la sesión).  
-  
+
 <!--more-->
 
-  
+
 Durante la transacción, todas las modificaciones que hagamos sobre base de datos, no son definitivas, más concretamente, se realizan sobre un tablespace especial que se denomina tablespace de ROLLBACK, o RBS (RollBack Segment). Este tablespace tiene reservado un espacio para cada sesión activa en el servidor, y es en ese espacio donde se almacenan todas las modificaciones de cada transacción. Una vez que la transacción se ha finalizado, las modificaciones temporales almacenadas en el RBS, se vuelcan al tablespace original, donde está almacenada nuestra tabla. Esto permite que ciertas modificaciones que se realizan en varias sentencias, se puedan validar todas a la vez, o rechazar todas a la vez.
 
 Dentro de una transacción se pueden crear los llamados “punto de control” mediante la sentencia:
 
-<pre lang="plsql">SAVEPOINT Nombre_punto_control;
-</pre>
+{% highlight sql %}>SAVEPOINT Nombre_punto_control;
+{% endhighlight %}
 
 Las sentencias de finalización de transacción son:
 
   * **COMMIT**: la transacción termina correctamente, se vuelcan los datos al tablespace original  
-    y se vacía el RBS. 
-  * **ROLLBACK**: se rechaza la transacción y el vacía el RBS. Cualquier cambio realizado desde que se inició la transacción se deshace, quedando la base de datos en el mismo estado que antes de iniciarse la transacción. 
+    y se vacía el RBS.
+  * **ROLLBACK**: se rechaza la transacción y el vacía el RBS. Cualquier cambio realizado desde que se inició la transacción se deshace, quedando la base de datos en el mismo estado que antes de iniciarse la transacción.
 
 A la hora de hacer un ROLLBACK o un COMMIT se podrá hacer hasta cierto punto con la sintaxis:
 
-<pre lang="plsql">COMMIT TO punto_control;
+{% highlight sql %}>COMMIT TO punto_control;
 ROLLBACK TO punto_control;
-</pre>
+{% endhighlight %}
 
 Cuando tenemos abierta una sesión (WorkSheet de Oracle por ejemplo), los cambios que realizamos no son visibles a otra sesión hasta que no hagamos un COMMIT. Este se puede realizar de forma manual, ejecutando el comando COMMIT; o bien, de forma automática, cuando cerramos la sesión.
 
@@ -62,7 +62,7 @@ el [trigger][1] están dentro del ámbito de la transacción, y son confirmadas 
 
 El siguiente ejemplo muestra una supuesta transacción bancaria:
 
-<pre lang="plsql">DECLARE
+{% highlight sql %}>DECLARE
   importe NUMBER;
   ctaOrigen VARCHAR2(23);
   ctaDestino VARCHAR2(23);
@@ -82,7 +82,7 @@ EXCEPTION
   ROLLBACK;
 END;
 
-</pre>
+{% endhighlight %}
 
 
 

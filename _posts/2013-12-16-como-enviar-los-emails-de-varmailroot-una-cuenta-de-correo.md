@@ -40,7 +40,7 @@ Es necesario que el sistema tenga instalado el programa **sendmail**.
 
 Normalmente, la configuración del reenvío de correo se realiza en el archivo **/etc/aliases**, un ejemplo del contenido de este archivo es:
 
-<pre lang="bash"># /etc/aliases
+{% highlight bash %}># /etc/aliases
 mailer-daemon: postmaster
 postmaster: root
 nobody: root
@@ -54,13 +54,13 @@ abuse: root
 noc: root
 security: root
 clamav: root
-</pre>
+{% endhighlight %}
 
 Como vemos, todo se redirecciona a la cuenta local del usuario *root*. Bastaría con redireccionar la cuenta *root* a una dirección de correo para obtener todos los mensajes del sistema en nuestra bandeja de entrada, y tener así nuestro servidor un poco más controlado. Para ello añadimos en el archivo anterior la siguiente línea:
 
-<pre lang="bash"># Redireccionar todo el correo de root a mi cuenta
+{% highlight bash %}># Redireccionar todo el correo de root a mi cuenta
 root: direccion@correo.com
-</pre>
+{% endhighlight %}
 
 Para aplicar los cambios hay que ejecutar el comando <span class="highlight style-2">newaliases</span>.
 

@@ -51,7 +51,7 @@ Además, introduciremos dos aspectos del lenguaje C++: los comentarios en una so
 Recordaremos que el lenguaje C++ mantiene los delimitadores de comentarios empleados en el lenguaje C, pero añade comentarios en una sola línea.  
 
 
-<pre><span class="comentario">//éste es un comentario de una sola línea</span></pre>
+{% highlight bash %}<span class="comentario">//éste es un comentario de una sola línea</span>{% endhighlight %}
 
 
 
@@ -65,17 +65,17 @@ En C++, los detalles de la entrada/salida estándar están en el archivo *IOSTRE
 
 **Salida**
 
-<pre>float f=3.24;
+{% highlight bash %}float f=3.24;
 cout &lt; &lt; “Numero real =”&lt;&lt;f&lt;&lt;’n’;
 printf (“Numero real %f=n”, f);
-</pre>
+{% endhighlight %}
 
 **Entrada**
 
-<pre>int i;
+{% highlight bash %}int i;
 cin&gt;&gt;i;
 scanf (“%d”, &#038;i);
-</pre>
+{% endhighlight %}
 
 * * *
 

@@ -22,9 +22,9 @@ tags:
 
 Para poder crear pies de página y cabeceras es necesario usar el paquete *fancyhdr*, y establecer el estilo de página a *fancy*:
 
-<pre lang="latex">\usepackage{fancyhdr}
+{% highlight latex %}>\usepackage{fancyhdr}
 \pagestyle{fancy}
-</pre>
+{% endhighlight %}
 
 Ahora nuestros documentos tendrán una línea arriba y abajo, en la cabecera y pie de página respectivamente.
 
@@ -44,32 +44,32 @@ Es necesario conocer el significado de las siguientes letras:
 
 Conocido el significado de las mismas, ahora es posible definir el estilo en el preámbulo:
 
-<pre lang="latex">\fancyhead[CO,CE]{---Draft---}
+{% highlight latex %}>\fancyhead[CO,CE]{---Draft---}
 \fancyfoot[C]{Confidential}
 \fancyfoot[RO, LE] {\thepage}
-</pre>
+{% endhighlight %}
 
 El grosor de las líneas decorativas puede cambiarse con:
 
-<pre lang="latex">\renewcommand{\headrulewidth}{0.4pt}
+{% highlight latex %}>\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
-</pre>
+{% endhighlight %}
 
 Como apunte personal, uso plantillas para distintos tipos de documentos, estas plantillas vienen con un fichero de estilo propio y para no modificar directamente el valor del pie de página podemos crear un comando que permita establecer el contenido del pie de página. Por ejemplo, en el fichero que define la estructura del documento creamos el comando:
 
-<pre lang="latex">\newcommand{\setFooterL}[1]{
+{% highlight latex %}>\newcommand{\setFooterL}[1]{
     \fancyfoot[L]{\small\textit{#1}}
 }
 \newcommand{\setFooterR}[1]{
     \fancyfoot[R]{\small\textit{#1}}
 }
-</pre>
+{% endhighlight %}
 
 Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambiar el texto del pie de página de la siguiente manera:
 
-<pre lang="latex">\setFooterL{\href{http://twitter.com/elbaulp}{Alejandro Alcalde}}
+{% highlight latex %}>\setFooterL{\href{http://twitter.com/elbaulp}{Alejandro Alcalde}}
 \setFooterR{\href{http://elbauldelprogramador.com}{elbauldelprogramador.com}}
-</pre>
+{% endhighlight %}
 
 Produciendo el siguiente resultado:  
 <img src="http://elbauldelprogramador.com/content/uploads/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887" height="53" class="thumbnail aligncenter size-full wp-image-1595" />

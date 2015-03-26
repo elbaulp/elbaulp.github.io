@@ -47,35 +47,35 @@ Abajo se muestra un ejemplo de cómo rellenar una fila con un ContentValues y pr
   
 <!--more-->
 
-<pre lang="java">ContentValues cv = new ContentValues();
+{% highlight java %}>ContentValues cv = new ContentValues();
 cv.put("NombreColumna1", "valor1");
 cv.put("NombreColumna2", "valor2");
 
 //Ahora el objeto cv está preparado para insertarse en la BD
-</pre>
+{% endhighlight %}
 
 Podemos obtener una referencia al ContentResolver mediante un método de la clase Activity:
 
-<pre lang="java">ContentResolver cr = miActivity.getContentResolver();
-</pre>
+{% highlight java %}>ContentResolver cr = miActivity.getContentResolver();
+{% endhighlight %}
 
 Todo lo que necesitamos en este punto es una URI para decirle al ContentResolver que inserte la fila. [En entradas anteriores][4] vimos que nuestra URI era:
 
-<pre lang="java">content://com.elbauldelprogramador.provider.FavSites/sites</pre>
+{% highlight java %}>content://com.elbauldelprogramador.provider.FavSites/sites{% endhighlight %}
 
 Con esta URI y nuestro ContentValues podemos ahora hacer una llamada para insertar nuestra fila:
 
-<pre lang="java">Uri uri = cr.insert(FavSitesProviderMetaData.CONTENT_URI, cv);
-</pre>
+{% highlight java %}>Uri uri = cr.insert(FavSitesProviderMetaData.CONTENT_URI, cv);
+{% endhighlight %}
 
 La línea anterior devuelve una uri apuntando al nuevo registro añadido, la URI devuelta se parecerá a esto:
 
-<pre lang="java">FavSitesProviderMetaData.CONTENT_URI/Nuevo_ID</pre>
+{% highlight java %}>FavSitesProviderMetaData.CONTENT_URI/Nuevo_ID{% endhighlight %}
 
 Con esta Uri, podemos por ejemplo mostrar en el log del sistema qué registro hemos añadido:
 
-<pre lang="java">Log.d("Nuevo registro añadido","Uri:" + insertedUri);
-</pre>
+{% highlight java %}>Log.d("Nuevo registro añadido","Uri:" + insertedUri);
+{% endhighlight %}
 
 ## Añadir archivos a un Content Provider
 
@@ -85,23 +85,23 @@ Cuando se inserta un registro en esta tabla, se devuelve la uri. Una vez guardam
 
 Para poder realizar estas operaciones necesitamos crear una columna adicional llamada _data, hacer una llamada al método *insert* para obtener una URI. EL siguiente código demuestra como se haría:
 
-<pre lang="java">ContentValues cv = new ContentValues();
+{% highlight java %}>ContentValues cv = new ContentValues();
 cv.put("NombreColumna1", "valor1");
 cv.put("NombreColumna2", "valor2");
 
 //Usamos el content resolver para insertar un registro
 ContentResolver cr = miActivity.getContentResolver();
 Uri nuevaUri = cr.insert(FavSitesProviderMetaData.CONTENT_URI, cv);
-</pre>
+{% endhighlight %}
 
 Una vez tenemos la uri del registro, pedimos a ContentResolver que obtenga una referencia al output stream del archivo:
 
-<pre lang="java">//Usamos el ContentResolver para obtener  el output stream directamente
+{% highlight java %}>//Usamos el ContentResolver para obtener  el output stream directamente
 //El content resolver oculta el acceso al campo _data donde se almacena realmente la referencia al archivo
 OutputStream outStream = miActivity.getContentResolver().openOutputStream(nuevaUri);
 algunArchivoDeImagen.compress(Bitmap.CompressFormat.JPEG, 50, outStream);
 outStream.close;
-</pre>
+{% endhighlight %}
 
 El código usa el flujo de salida para escribir.
 

@@ -28,7 +28,7 @@ En Android, cada pantalla de una aplicación habitualmente se carga desde un fic
   
 <!--more-->
 
-<pre lang="java">public class PrincipalActivity extends Activity {
+{% highlight java %}>public class PrincipalActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,11 +36,11 @@ En Android, cada pantalla de una aplicación habitualmente se carga desde un fic
         setContentView(R.layout.main);
     }
 }
-</pre>
+{% endhighlight %}
 
 La línea ***setContentView(R.layout.main);*** señala que hay una clase estática llamada *R.layout* y, que dentro de esa clase hay una constante entera llamada *main* que apunta a una vista definida por un fichero de recursos layout xML. El nombre del fichero XML es main.xml, el cual debe estar en el directorio *./res/layout*. El contenido de este fichero es el siguiente:
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -56,7 +56,7 @@ La línea ***setContentView(R.layout.main);*** señala que hay una clase estáti
         android:text="@string/hello"/>
     
 &lt;/linearlayout>
-</pre>
+{% endhighlight %}
 
 Vamos a ver la composición de este fichero, como elemento raiz tenemos un elemento llamado <linearlayout>, que contiene un *TextView* seguido de un *Button*. Un LinearLayout coloca a sus hijos uno detrás de otro vertical u horizontalmente.</linearlayout> 
 
@@ -64,26 +64,26 @@ Para cada pantalla que queramos hacer, necesitaremos ficheros layout distintos, 
 
 Por cada archivo de layout que tengamos en ./res/layout, se generará una entrada en R.java. Por ejemplo, si tenemos estos dos archivos, file1.xml y file2.xml, en R.java aparecerá:
 
-<pre lang="java">// ...
+{% highlight java %}>// ...
 public static final class layout {
    public static final int file1=0x7f030000;
    public static final int file2=0x7f030001;
 }
 // ..
-</pre>
+{% endhighlight %}
 
 Las vistas definidas en estos layout, como el TextView son accesibles mediante código java a través sus IDs de recursos generadas en R.java.
 
-<pre lang="java">TextView tv = (TextView) this.findViewById(R.id.text1);
+{% highlight java %}>TextView tv = (TextView) this.findViewById(R.id.text1);
 tv.setText("Texto para el TextView")
-</pre>
+{% endhighlight %}
 
 En este ejemplo, hemos localizado el TextView usando el método ***findViewById()*** de la clase Activity. La constante *R.id.text1* corresponde al ID definido para el TextView en el fichero XML, que creamos de la siguiente manera:
 
-<pre lang="xml">&lt;textview android:id="@+id/text1"
+{% highlight xml %}>&lt;textview android:id="@+id/text1"
 ....
 />
-</pre>
+{% endhighlight %}
 
 El valor del atributo id, indica que la constante llamada text1 será usada para identificar únicamente a esa vista. El signo + de ***+id/text1*** significa que el ID text1 será creado si no existe. En la siguiente entrada se tratará la sintaxis de los recursos.
 

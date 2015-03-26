@@ -61,19 +61,19 @@ El parámetro del kernel se puede cambiar de varias formas, tal y como mencionab
 
 Por ejemplo, para establecer el valor a 256 Mb escribiríamos al final de uno de estos archivos:
 
-<pre lang="bash">kernel.shmmax=268435456
-</pre>
+{% highlight bash %}>kernel.shmmax=268435456
+{% endhighlight %}
 
 Y luego cargamos el fichero para aplicar los cambios:
 
-<pre lang="bash">sysctl -p
-</pre>
+{% highlight bash %}>sysctl -p
+{% endhighlight %}
 
 Para comprobar que se actualizó el valor:
 
-<pre lang="bash">cat /proc/sys/kernel/shmmax
+{% highlight bash %}>cat /proc/sys/kernel/shmmax
 268435456
-</pre>
+{% endhighlight %}
 
 #### Referencias
 

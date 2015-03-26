@@ -22,18 +22,18 @@ Es bastante simple:
 
 Buscamos el archivo ***function.php*** de nuestro tema instalado y pegamos el siguiente código php.
 
-<pre lang="php" >&lt; ?php
+{% highlight php %} >&lt; ?php
 // Short code
 function Nombre_de_nuestro_shortcode( $atts, $content = null ) {
    return 'Código de nuestro shortcode';
 }
 add_shortcode('nombre_de_nuestro_shortcode', 'Nombre_de_nuestro_shortcode');
 ?>
-</pre>
+{% endhighlight %}
 
 A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:
 
-<pre>[nombre_de_nuestro_shortcode]</pre>
+{% highlight bash %}[nombre_de_nuestro_shortcode]{% endhighlight %}
 
 Así de sencillo es crear shortcodes en WordPress.
 

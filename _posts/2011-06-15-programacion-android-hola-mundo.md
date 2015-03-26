@@ -108,7 +108,7 @@ Ahora que hemos explicado la estructura de un proyecto Android, veamos el ejempl
 
 ## Profundizando en el &#8220;Hola Mundo&#8221;
 
-<pre lang="java">package app.tutorial.holaMundo;
+{% highlight java %}>package app.tutorial.holaMundo;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -121,7 +121,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
     }
 }
-</pre>
+{% endhighlight %}
 
 Al crear el proyecto dimos nombre a una Actividad (MainActivity), estas clases son las encargadas de mostrar las interfaz gráfica al usuario, deben extender de la clase ***Activity***.
 
@@ -131,7 +131,7 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
 
 ### Archivo ./res/layout/main.xml
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -142,22 +142,22 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
     android:text="@string/hello"
     />
 &lt;/linearlayout>
-</pre>
+{% endhighlight %}
 
 En este archivo se define una pantalla en la que los elementos se agruparán de forma lineal (LinearLayout) y con un componente de texto (TextView). Al componente de texto le fijamos el texto a mostrar con la referencia ***@string/hello*** (valor del item en ./res/values/strings.xml)
 
 ### Archivo ./res/values/strings.xml
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
     &lt;string name="hello">Hello World, MainActivity!&lt;/string>
     &lt;string name="app_name">Hola Mundo&lt;/string>
 &lt;/resources>
-</pre>
+{% endhighlight %}
 
 Para que la aplicación funcione es necesario crear el AndroidManifest:
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="app.tutorial.holaMundo"
       android:versionCode="1"
@@ -175,7 +175,7 @@ Para que la aplicación funcione es necesario crear el AndroidManifest:
 
     &lt;/application>
 &lt;/manifest>
-</pre>
+{% endhighlight %}
 
 En este archivo se definen el paquete por defecto, datos de versión, icono (mediante una referencia). El nombre de la aplicación (otra referencia al fichero strings.xml). Despues se define el comportamiento de la aplicación. Se añaden dos filtros para que la actividad que definimos anteriormente sea usada como principal (***android.intent.action.MAIN***) y para que sea incluida en el menú de aplicaciones (***android.intent.category.LAUNCHER***)
 

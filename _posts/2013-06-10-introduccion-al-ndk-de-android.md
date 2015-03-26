@@ -21,15 +21,15 @@ El NDK de Android es un conjunto de herramientas que permiten embeber código m�
 La Máquina Virtual de Android (VM) permite que el código de la aplicación (escrito en Java) llame a métodos implementados en código nativo a través de JNI. En una *nutshell*, lo cual quiere decir que:
 
   * El código fuente de la aplicación declarará uno o más métodos con la palabra reservada **native** para indicar que dicho método está implementado en código nativo. Ej:
-<pre lang="java">native byte[] loadFile(String filePath);
-</pre>
+{% highlight java %}>native byte[] loadFile(String filePath);
+{% endhighlight %}
 
   * Es necesario proporcionar una biblioteca compartida nativa que contenga la implentación de dichos métodos, que será empaquetada en el .apk de la aplicación. La biblioteca debe ser nombrada de acuerdo al estándar Unix *lib<nombre>.so*, y deberá contener un punto de entrada JNI estándar (veremos esto más adelante), por ejemplo: *libFileLoader.so*
   * La aplicación debe cargar explícitamente la biblioteca. Por ejemplo, para cargarla al iniciar la aplicación, simplemente añade la siguiente línea al código:
-<pre lang="java">static {
+{% highlight java %}>static {
     System.loadLibrary("FileLoader");
 }
-</pre>
+{% endhighlight %}
 
 No hay que scribir el prefijo “lib” ni el sufijo “.so”.</li> 
 
@@ -39,7 +39,7 @@ En el *ndk* existe un directorio que contiene varios ejemplos, importamos a ecli
 
 En el paquete *com.example.hellojni* sólo hay una clase llamada *HelloJni*, con el siguiente código:
 
-<pre lang="java">public class HelloJni extends Activity
+{% highlight java %}>public class HelloJni extends Activity
 {
     /** Called when the activity is first created. */
     @Override
@@ -60,7 +60,7 @@ En el paquete *com.example.hellojni* sólo hay una clase llamada *HelloJni*, con
         System.loadLibrary("hello-jni");
     }
 }
-</pre>
+{% endhighlight %}
 
 En el método *[onCreate()][1]* se crea un *TextView* que recogerá el texto a mostrar a través de la función nativa en C.
 
@@ -72,7 +72,7 @@ Por último, al final del código, como se comentó al principio del artículo s
 
 La implementación del método *stringFromJNI()* es la siguiente:
 
-<pre lang="c">#include &lt;string.h>
+{% highlight c %}>#include &lt;string.h>
 #include &lt;jni.h>
 
 /* This is a trivial JNI example where we use a native method
@@ -87,7 +87,7 @@ Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
 {
     return (*env)->NewStringUTF(env, "Hello from JNI !");
 }
-</pre>
+{% endhighlight %}
 
 Como se puede apreciar, es necesario llamar a la función con el nombre del paquete Java y la clase donde se encuentra la llamada a la función. Es decir, *Java\_com\_example\_hellojni\_HelloJni* corresponde con la ruta del proyecto *./src/com/example/hellojni/HelloJni*.
 
@@ -95,20 +95,20 @@ Como se puede apreciar, es necesario llamar a la función con el nombre del paqu
 
 Para compilar y ejecutar el programa, con el proyecto *Hello-Jni* de ejemplo importado en eclipse, nos situamos en el directorio del proyecto desde el terminal y ejecutamos el comando *ndk-build*:
 
-<pre lang="bash">$ ndk-build 
+{% highlight bash %}>$ ndk-build 
 Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
 Gdbsetup       : libs/armeabi/gdb.setup
 Compile thumb  : hello-jni &lt;= hello-jni.c
 SharedLibrary  : libhello-jni.so
 Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
-</pre>
+{% endhighlight %}
 
 Con esto hemos compilado el código nativo de la aplicación.  
 El siguiente paso es construir e instalar la aplicación como se hace normalmente en eclipse, o mediante línea de comandos:
 
-<pre lang="bash">$ ant debug
+{% highlight bash %}>$ ant debug
 $ adb install bin/HelloJni.apk
-</pre>
+{% endhighlight %}
 
 El primer comando compila y genera el *.apk* y con el segundo lo instalamos en el emulador o dispositivo móvil.
 

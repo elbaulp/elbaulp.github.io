@@ -25,25 +25,25 @@ En este artículo veremos un poco sobre el manejo de excepciones en java, esto e
 
 Cuando sabemos que un código podría lanzar un error, como por ejemplo una división entre cero, debemos encerrarla entre un bloque `try-catch`. Veamos un ejemplo:
 
-<pre lang="java">int a = 5 / 0;
-</pre>
+{% highlight java %}>int a = 5 / 0;
+{% endhighlight %}
 
 esta linea nos lanzaría la siguiente excepción: `Exception in thread "main" java.lang.ArithmeticException: / by zero`
 
 Si en cambio atrapamos esta excepción podremos controlarla:
 
-<pre lang="java">try{
+{% highlight java %}>try{
     int a = 5 / 0;
 }catch(ArithmeticException err){
     int a = 0;
 }
-</pre>
+{% endhighlight %}
 
 ### El Bloque Finally
 
 `Finally` se utiliza cuando el programador solicita ciertos recursos al sistema que se deben liberar, y se coloca después del último bloque `catch`. Veamos un ejemplo en el que intentamos leer un archivo:
 
-<pre lang="java">FileReader lector = null;
+{% highlight java %}>FileReader lector = null;
 try {
     lector = new FileReader("archivo.txt");
     int i=0;
@@ -58,7 +58,7 @@ try {
             lector.close();
     }
 }
-</pre>
+{% endhighlight %}
 
 el código contenido en `finally` se ejecutará tras terminar el bloque `try`, haya habido o no excepción, lo que permite liberar los recursos reservados para abrir el archivo. (Más sobre finally en la [documentación de Oracle][2])
 
@@ -66,20 +66,20 @@ el código contenido en `finally` se ejecutará tras terminar el bloque `try`, h
 
 Esta cláusula advierte de las excepciones que podría lanzar un método, van entre la declaración del método y su cuerpo (pueden ser varias), así:
 
-<pre lang="java">public static void metodo() throws ArithmeticException{
+{% highlight java %}>public static void metodo() throws ArithmeticException{
     try{
         int a = 5 / 0;
     }catch(ArithmeticException err){
         int a = 0;
     }
 }
-</pre>
+{% endhighlight %}
 
 ### La palabra clave throw
 
 `throw` nos permite lanzar una excepción propia, esto lo veremos en el siguiente ejemplo en el que aprovechamos para englobar todo lo visto aquí:
 
-<pre lang="java">public static void main(String[] args) {
+{% highlight java %}>public static void main(String[] args) {
     int a;
     try{
         a = dividir(5,0);
@@ -104,7 +104,7 @@ public static class MalNumeroADividir extends Exception {
    }
 }
 
-</pre>
+{% endhighlight %}
 
 Como vimos el manejo de las excepciones en java no es algo difícil de implementar.
 

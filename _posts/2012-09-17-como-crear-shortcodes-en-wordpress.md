@@ -27,11 +27,11 @@ Este archivo está en el directorio del tema. Actua como un plugin, y, si existe
 Abre el fichero con tu editor favorito y añade lo siguiente:  
 <!--more-->
 
-<pre lang="php">//[foo]
+{% highlight php %}>//[foo]
 function foo_demo( $atts ){
  return "Esto es una prueba.";
 }
-add_shortcode( 'foo', 'foo_demo' );</pre>
+add_shortcode( 'foo', 'foo_demo' );{% endhighlight %}
 
 Guarda el fichero y ciérralo.
 
@@ -39,7 +39,7 @@ Guarda el fichero y ciérralo.
 
 Edita o crea un artículo y añade el shortcode:
 
-<pre>[foo]</pre>
+{% highlight bash %}[foo]{% endhighlight %}
 
 Guárdalo y haz clic en publicar o vista previa.
 
@@ -47,12 +47,12 @@ Guárdalo y haz clic en publicar o vista previa.
 
 La API del shortcode facilita mucho la tarea para poder añadirle parámetros como estos:
 
-<pre>[music genero="rap" autor="Nach"]
-[music genero="Rock" autor="Linkin Park"]</pre>
+{% highlight bash %}[music genero="rap" autor="Nach"]
+[music genero="Rock" autor="Linkin Park"]{% endhighlight %}
 
 Añade lo siguiente a tu archivo&nbsp;**functions.php :&nbsp;**
 
-<pre lang="php">// shortcode [music]
+{% highlight php %}>// shortcode [music]
 function show_music( $atts ){
    $music_details="";
    // get attibutes and set defaults
@@ -90,7 +90,7 @@ function show_music( $atts ){
 //add our shortcode music
 add_shortcode('music', 'show_music');
 add_action( 'init', 'register_shortcodes');
-</pre>
+{% endhighlight %}
 
 Listo, ya puedes usar este shortcode.
 

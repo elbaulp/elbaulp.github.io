@@ -26,7 +26,7 @@ Para explicar cómo conseguir este comportamiento escribiremos una aplicación t
 
 El único propósito de esta [actividad][2] es abrir un menú que lanzará nuestras preferencias. Para simplificar el código se muestra sin las sentencias import y package:
 
-<pre lang="java">public class MainActivity extends Activity {
+{% highlight java %}>public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +54,13 @@ El único propósito de esta [actividad][2] es abrir un menú que lanzará nuest
         return true;
     }
 }
-</pre>
+{% endhighlight %}
 
 En el método `onOptionsItemSelected` comprobamos qué elemento del [menú][3] se pulsó y abrimos la correspondiente preferencia, mostraremos a continuación el código para dicha actividad.
 
 ### Crear una Actividad para las Preferencias
 
-<pre lang="java">public class MyPrefecenceActivity extends PreferenceActivity implements OnPreferenceChangeListener {
+{% highlight java %}>public class MyPrefecenceActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
     private Preference mDialogoNormal;
     private Preference mDialogoPersonalizado;
@@ -140,7 +140,7 @@ En el método `onOptionsItemSelected` comprobamos qué elemento del [menú][3] s
         return cifrada;
     }
 }
-</pre>
+{% endhighlight %}
 
 Aunque esta no es la mejor forma de hacerlo, para ilustrar la diferencia entre ambas preferencias se almacenarán como dos objetos distintos. `mDialogoNormal` se comportará como una preferencia por defecto, en este caso es un `EditTtextPreference`, `mDialogoPersonalizado`, como su nombre indica, será la preferencia sobre la cual implementaremos nosotros el diálogo. En esta actividad que extiende de `PreferenceActivity` inicializamos todos los objetos necesarios en el `onCreate`. El método que realmente nos interesa es `onPreferenceChange`, que será llamado cuando se detecte algún cambio en los datos de las preferencias. En este caso se pretende mostrar cómo implementar una preferencia para almacenar una contraseña. Cuando el usuario introduce en el diálogo su contraseña, ésta será cifrada en el método `cifrar` y será éste el valor almacenado en el archivo de preferencias. Con el diálogo normal, si el usuario vuelve a lanzar el diálogo con una contraseña ya almacenada verá esto:
 
@@ -148,7 +148,7 @@ Aunque esta no es la mejor forma de hacerlo, para ilustrar la diferencia entre a
 
 Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de texto apareciera vacío, para ello crearemos nosotros mismos el diálogo extendiendo de `DialogPreference`.
 
-<pre lang="java">public class MyDialogPreference extends DialogPreference {
+{% highlight java %}>public class MyDialogPreference extends DialogPreference {
 
     private EditText mEditTextPassword;
 
@@ -180,11 +180,11 @@ Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de t
         super.onBindDialogView(view);
     }
 }
-</pre>
+{% endhighlight %}
 
 En el constructor de esta clase es necesario establecer el layout que usará el diálogo, en este caso un simple `EditText`:
 
-<pre lang="xml"><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -202,13 +202,13 @@ En el constructor de esta clase es necesario establecer el layout que usará el 
         android:title="Dialogo Personalizado" />
 
 &lt;/LinearLayout>
-</pre>
+{% endhighlight %}
 
 El método `callChangeListener` llamará a `onPreferenceChange`, donde decidiremos qué hacer con el valor de la preferencia, si guardarlo o descartarlo.
 
 Con esto ya está todo listo, simplemente falta hacer referencia al diálogo que acabamos de crear en el archivo de preferencias de la siguiente forma:
 
-<pre lang="xml"><?xml version="1.0" encoding="UTF-8"?>
+{% highlight xml %}><?xml version="1.0" encoding="UTF-8"?>
 &lt;PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
     &lt;PreferenceCategory android:title="TituloCategoría" >
@@ -230,7 +230,7 @@ Con esto ya está todo listo, simplemente falta hacer referencia al diálogo que
     &lt;/PreferenceCategory>
 
 &lt;/PreferenceScreen>
-</pre>
+{% endhighlight %}
 
 Donde `com.example.dialogpreferenceexample.MyDialogPreference` es el nombre de la clase del diálogo personalizado.
 

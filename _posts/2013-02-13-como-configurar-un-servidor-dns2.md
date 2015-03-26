@@ -39,15 +39,15 @@ tags:
 
 Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo **named.conf.local**, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:
 
-<pre lang="bash">zone "elbauldelprogramador.com" {
+{% highlight bash %}>zone "elbauldelprogramador.com" {
         type master;
         allow-transfer {DNS_SECUNDARIO;};
         file "/etc/bind/pri.elbauldelprogramador.com";
-};</pre>
+};{% endhighlight %}
 
 El contenido de **/etc/bind/pri.elbauldelprogramador.com**:
 
-<pre lang="bash">$TTL        3600
+{% highlight bash %}>$TTL        3600
 @       IN      SOA     ks3277174.kimsufi.com. correo.electronico.com. (
                         2013011703       ; serial, todays date + todays serial #
                         7200              ; refresh, seconds
@@ -61,7 +61,7 @@ elbauldelprogramador.com. 3600      MX    10   mail.elbauldelprogramador.com.
 elbauldelprogramador.com. 3600      NS        ks3277174.kimsufi.com.
 elbauldelprogramador.com. 3600      NS        ns.kimsufi.com.
 mail 3600 A        5.39.89.44
-www 3600 A        5.39.89.44</pre>
+www 3600 A        5.39.89.44{% endhighlight %}
 
 **SOA** es el acrónimo para *“Start Authority”*. Si recuerdas la figura 1 del artículo anterior, recordarás que DNS es una base de datos distrubuida. Comenzando en los root servers, las peticiones se van desplazando hasta llegar a su destino, en este caso, hasta llegar al servidor DNS que estamos configurando. Por esa razón, en el fichero de zona es necesario indicar dónde comienza su autoridad(*authority*). Ésta autoridad comienza precisamente en el fichero de zona. Los servidores **TLD** (*Top Level Domain ó Dominios de primer nivel*) esperan del servidor DNS que realice su parte del trabajo.
 
@@ -115,14 +115,14 @@ Además de los registros *NS*, se definen los registros **MX**, que identifican 
 
 En el ejemplo existe un único registro **MX**, pero puede haber más. Por ejemplo:
 
-<pre lang="bash">MX 10 mail.elbauldelprogramador.com.
-MX 20 mail.otrodominio.com.</pre>
+{% highlight bash %}>MX 10 mail.elbauldelprogramador.com.
+MX 20 mail.otrodominio.com.{% endhighlight %}
 
 Si se envia un email al dominio, el servidor de correo que envía el email intenta conectarse a *mail.elbauldelprogramador.com* ya que tiene prioridad 10, si no puede establecer conexión, lo intentará con * mail.otrodominio.com*.
 
 El último tipo de registro que vamos a ver es el de tipo **CNAME** (*Canonical Name*). Se suele referir a ellos como registros alias del tipo **A**. Por ejemplo:
 
-<pre lang="bash">ftp        CNAME www</pre>
+{% highlight bash %}>ftp        CNAME www{% endhighlight %}
 
 significa que *ftp.elbauldelprogramador.com* es un alias de *www.elbauldelprogramador.com*. Es decir, *ftp.elbauldelprogramador.com* apunta al mismo servidor que *www.elbauldelprogramador.com*. Un registro **CNAME** debe apuntar a un registro de tipo **A** y solo de tipo **A**.
 

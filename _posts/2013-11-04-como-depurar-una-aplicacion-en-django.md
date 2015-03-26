@@ -26,7 +26,7 @@ Vamos a trabajar con la aplicación de ejemplo de la <a href="https://docs.djang
 
 El primer paso para depurar, es establecer un punto de ruptura en la línea deseada. En este caso lo estableceremos en la vista principal (IndexView), en el fichero *polls/views.py*. Es necesario importar el módulo **pdb**.
 
-<pre lang="python"># polls/views.py
+{% highlight python %}># polls/views.py
 # ...
 import pdb
 
@@ -44,11 +44,11 @@ class IndexView(generic.ListView):
                        ).order_by('-pub_date')[:5]
 
 # ...
-</pre>
+{% endhighlight %}
 
 Una vez establecido el punto de ruptura, lanzamos la aplicación con
 
-<pre lang="bash">$ python manage.py runserver
+{% highlight bash %}>$ python manage.py runserver
 Validating models...
 
 0 errors found
@@ -56,18 +56,18 @@ November 04, 2013 - 17:58:08
 Django version 1.5.2, using settings 'mysite.settings'
 Development server is running at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
-</pre>
+{% endhighlight %}
 
 Con la aplicación ejecutándose, nos dirigimos a <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>. Como hemos establecido el punto de ruptura en la vista pincipal (/), el depurador aparecerá en la terminal inmediatamente:
 
-<pre lang="bash">> ~/Desarrollo/python-env/djangoTutorialv1.5/polls/views.py(24)get_queryset()
+{% highlight bash %}>> ~/Desarrollo/python-env/djangoTutorialv1.5/polls/views.py(24)get_queryset()
 -> return Poll.objects.filter(
 (Pdb) 
-</pre>
+{% endhighlight %}
 
 A partir de aquí la depuración es muy parecida a **gdb**, lo primero que debe hacerse para familiarizarse con este entorno es leer la ayuda:
 
-<pre lang="bash">(Pdb) help
+{% highlight bash %}>(Pdb) help
 
 Documented commands (type help &lt;topic>):
 ========================================
@@ -85,13 +85,13 @@ exec  pdb
 Undocumented commands:
 ======================
 retval  rv
-</pre>
+{% endhighlight %}
 
 Por ejemplo, con * p <exp>* se imprimirá por pantalla el valor de la expresión:
 
-<pre lang="bash">p Poll.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
+{% highlight bash %}>p Poll.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
 [&lt;Poll: Titulo encuesta>]
-</pre>
+{% endhighlight %}
 
 Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
 

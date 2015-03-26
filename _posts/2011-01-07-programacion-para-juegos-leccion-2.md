@@ -29,52 +29,52 @@ Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda part
   
 <!--more-->
 
-<pre>//Cabeceras
+{% highlight bash %}//Cabeceras
 #include "SDL/SDL.h"
 #include &lt;string>
-</pre>
+{% endhighlight %}
 
 Estos son los archivos de cabecera para este programa.  
 Incluimos SDL.h porque obviamente necesitamos funciones de SDL.
 
-<pre>//Atributos de la pantalla
+{% highlight bash %}//Atributos de la pantalla
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 const int SCREEN_BPP = 32;
-</pre>
+{% endhighlight %}
 
 Aquí tenemos varios atributos de la pantalla.  
 Es fácil averiguar para que sirven estos atributos, SCREEN\_WIDTH para el ancho de la ventana, y SCREEN\_HEIGHT para el alto. SCREEN_BPP son los bits por píxel que tendrá la imagen. Las imágenes que usamos son todas de 32-bit.
 
-<pre>//Superficies que vamos a usar
+{% highlight bash %}//Superficies que vamos a usar
 SDL_Surface *message = NULL;
 SDL_Surface *background = NULL;
 SDL_Surface *screen = NULL;
-</pre>
+{% endhighlight %}
 
 Estas son las tres imágenes que vamos a usar. &#8220;background&#8221; obviamente es la imagen que se verá de fondo, &#8220;message&#8221; es la imagen que dice &#8220;Hello&#8221; y &#8220;screen&#8221; es la ventana contenedora de las imágenes.
 
-<pre>SDL_Surface *load_image( std::string filename ) 
+{% highlight bash %}SDL_Surface *load_image( std::string filename ) 
 {
     //Temporary storage for the image that's loaded
     SDL_Surface* loadedImage = NULL;
     
     //The optimized image that will be used
     SDL_Surface* optimizedImage = NULL;
-</pre>
+{% endhighlight %}
 
 Esta función es la encargada de cargar la imagen.  
 Lo que hace es cargar la imagen y devolver un puntero a la versión optimizada de la imagen cargada.  
 El argumento &#8220;filename&#8221; es la ruta de la imagen a cargar. &#8220;loadedImage&#8221; es la superfície que obtenemos cuando la imagen se carga. &#8220;optimizedImage&#8221; es la superfície que vamos a usar.
 
-<pre>//Cargamos la imagen
+{% highlight bash %}//Cargamos la imagen
     loadedImage = SDL_LoadBMP( filename.c_str() );
-</pre>
+{% endhighlight %}
 
 Lo primero es cargar la imagen usando SDL_LoadBMP().  
 Pero no se debe usar inmediatamente, ya que esta imagen es de 24-bit y &#8220;screen&#8221; es de 32-bit. No es recomendable fusionar imagenes con diferente formato porque SDL tendrá que cambiar el formato en el aire (Durante la ejecución del programa), ralentizándolo.
 
-<pre>//Si nada va mal cargando la imagen
+{% highlight bash %}//Si nada va mal cargando la imagen
     if( loadedImage != NULL )
     {
         //Create an optimized image
@@ -83,7 +83,7 @@ Pero no se debe usar inmediatamente, ya que esta imagen es de 24-bit y &#8220;sc
         //Free the old image
         SDL_FreeSurface( loadedImage );
     }
-</pre>
+{% endhighlight %}
 
 Lo siguiente es verificar que la imagen se ha cargado bien. Si ocurre algún error, loadedImage será NULL.
 
@@ -106,13 +106,13 @@ Por eso hay que llamar a SDL_FreeSurface().
 
 
 
-<pre>return optimizedImage;
+{% highlight bash %}return optimizedImage;
 }
-</pre>
+{% endhighlight %}
 
 A continuación, la nueva versión optimizada de la imagen se devuelve.
 
-<pre>void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination )
+{% highlight bash %}void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination )
 {
     //Make a temporary rectangle to hold the offsets
     SDL_Rect offset;
@@ -120,17 +120,17 @@ A continuación, la nueva versión optimizada de la imagen se devuelve.
     //Give the offsets to the rectangle
     offset.x = x;
     offset.y = y;
-</pre>
+{% endhighlight %}
 
 Aquí tenemos nuestra función para fusionar las imágenes.  
 Como argumentos tiene las coordenadas donde queremos fusionar la imagen y las dos imágenes.  
 Primero creamos un objeto de tipo SDL\_Rect. Hacemos esto porque SDL\_BlitSurface() solo acepta este tipo de dato.  
 SDL_Rect es un tipo de dato que representa un rectángulo. Tiene cuatro miembros representando los valores X e Y de un rectángulo (Ancho y alto).
 
-<pre>//Fusión de la imagen
+{% highlight bash %}//Fusión de la imagen
     SDL_BlitSurface( source, NULL, destination, &#038;offset );
 }
-</pre>
+{% endhighlight %}
 
 Con esto vamos a fusionar las imágenes.  
 El primer argumento es la imagen que estamos usando.  
@@ -138,9 +138,9 @@ No os preocupéis por el segundo argumento, por ahora vamos a fijarlo a NULL.
 El tercer argumento es la imagen que vamos a fusionar.  
 El cuarto argumento contiene la posición en la que se colocará la imagen una vez fusionada.
 
-<pre>int main( int argc, char* args[] )
+{% highlight bash %}int main( int argc, char* args[] )
 {
-</pre>
+{% endhighlight %}
 
 Empezamos con la función principal.  
 Cuando usamos SDL, siempre hay que usar la función main de esta manera:   
@@ -148,51 +148,51 @@ int main( int argc, char* args[] )
 o  
 int main( int argc, char** args ).
 
-<pre>//Inicializar todos los subsistemas
+{% highlight bash %}//Inicializar todos los subsistemas
     if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
     {
         return 1;    
     }
-</pre>
+{% endhighlight %}
 
 Usando SDL\_Init() iniciamos SDL. A SDL\_Init() le pasamos SDL\_INIT\_EVERYTHING, para que inicie cualquier subsistema de SDL. Los subsistemas SDL son cosas como video, audio, Temporizadores etc, que son componentes individuales usados para hacer juegos.  
 No vamos a usar todos subsistemas, pero no pasa nada si los inicializamos.
 
 Si SDL no puede inicializarse, devuelve -1, en ese caso controlamos el error devolviendo 1, terminando el programa.
 
-<pre>//Configuramos la pantalla
+{% highlight bash %}//Configuramos la pantalla
     screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
-</pre>
+{% endhighlight %}
 
 Creamos una ventana, lo que nos devuelve un puntero a la misma. Así podremos aplicar las imágenes a la ventana.
 
 Ya conocemos que son los tres primeros argumentos, el cuarto crea la ventana en memoria.
 
-<pre>//Si ocurre algún error
+{% highlight bash %}//Si ocurre algún error
     if( screen == NULL )
     {
         return 1;    
     }
-</pre>
+{% endhighlight %}
 
 Si hay algún error al crear la ventana, &#8220;screen&#8221; será igual a NULL.
 
-<pre>//Título de la ventana
+{% highlight bash %}//Título de la ventana
     SDL_WM_SetCaption( "Hello World", NULL );
-</pre>
+{% endhighlight %}
 
 Fijamos el título de la ventana a &#8220;Hello World&#8221;. El segundo argumento es para indicar la ruta del icono de la ventana.
 
-<pre>//Cargamos las imágenes
+{% highlight bash %}//Cargamos las imágenes
     message = load_image( "hello.bmp" );
     background = load_image( "background.bmp" );
-</pre>
+{% endhighlight %}
 
 Cargamos las imágenes usando la función que creamos anteriormente.
 
-<pre>//Aplicamos el fondo a la ventana
+{% highlight bash %}//Aplicamos el fondo a la ventana
     apply_surface( 0, 0, background, screen );
-</pre>
+{% endhighlight %}
 
 Aplicamos el fondo a la ventana con la función que hicimos. Antes de unir el fondo a la ventana, teníamos algo asi:
 
@@ -208,16 +208,16 @@ Pero al unirlas, tendremos algo así:
 
 Cuando las unimos, se copian los píxels de una imagen a otra. Por eso el la imagen que estamos usando de fondo aparece en la esquina superior izquierda, queremos que el fondo ocupe toda la ventana, pero, ¿significa eso que tendremos que cargar la imagen de fondo 3 veces mas?
 
-<pre>apply_surface( 320, 0, background, screen );
+{% highlight bash %}apply_surface( 320, 0, background, screen );
     apply_surface( 0, 240, background, screen );
     apply_surface( 320, 240, background, screen );
-</pre>
+{% endhighlight %}
 
 No, lo que hacemos es fusionar la &#8220;misma&#8221; imagen 3 veces mas.
 
-<pre>//Aplicando el mensaje a la ventana
+{% highlight bash %}//Aplicando el mensaje a la ventana
     apply_surface( 180, 140, message, screen );
-</pre>
+{% endhighlight %}
 
 Ahora vamos a aplicar la imagen mensaje a la ventana, en las coordenadas X=180 y Y=140
 
@@ -241,22 +241,22 @@ El origen de coordenadas (0,0) está en la esquina superior izquierda. Por eso h
 
 
 
-<pre>//Actualizando la pantalla
+{% highlight bash %}//Actualizando la pantalla
     if( SDL_Flip( screen ) == -1 )
     {
         return 1;    
     }
-</pre>
+{% endhighlight %}
 
 Como en la lección anterior, hay que actualizar la patalla para ver las imágenes. Si ocurre algún error devuelve -1, y nosotros devolvemos 1.
 
-<pre>//Esperamos 2 seg
+{% highlight bash %}//Esperamos 2 seg
     SDL_Delay( 2000 );
-</pre>
+{% endhighlight %}
 
 Llamamos a esta función para que la ventana se muestre durante 2 segundos en pantalla.
 
-<pre>//Liberamos las imágenes
+{% highlight bash %}//Liberamos las imágenes
     SDL_FreeSurface( message );
     SDL_FreeSurface( background );
     
@@ -266,7 +266,7 @@ Llamamos a esta función para que la ventana se muestre durante 2 segundos en pa
     //Return
     return 0;
 }
-</pre>
+{% endhighlight %}
 
 Ya que hemos terminado nuestro programa, usamos SDL_FreeSurface() para eliminar de memoria las variables que almacenaban las imágenes. Si no liberamos la memoria, estas variables se quedarán ocupando espacio.
 

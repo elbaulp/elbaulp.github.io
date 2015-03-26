@@ -23,7 +23,7 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
 
 ## Código Fuente
 
-<pre lang="c">/* Program: robotSkeleton.cpp (Chapter 10)
+{% highlight c %}>/* Program: robotSkeleton.cpp (Chapter 10)
  *
  * Draw a Hierarchical Robot using cylinders (quadrics).
  * Traverse tree to display. Cylinders are displayed filled.
@@ -600,7 +600,7 @@ int main(int argc, char **argv) {
   /* start event processing */
   glutMainLoop();
 }
-</pre>
+{% endhighlight %}
 
 <div class="sharedaddy">
   <div class="sd-content">

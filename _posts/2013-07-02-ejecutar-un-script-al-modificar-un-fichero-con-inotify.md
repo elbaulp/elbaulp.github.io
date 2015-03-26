@@ -19,12 +19,12 @@ tags:
 
 Antes de poder usar el script es necesario instalar *inotify-tools*
 
-<pre lang="bash"># aptitude install inotify-tools
-</pre>
+{% highlight bash %}># aptitude install inotify-tools
+{% endhighlight %}
 
 Hecho esto, ahora es posible ejecutar el script que he creado:
 
-<pre lang="bash">function help {
+{% highlight bash %}>function help {
    echo "$0 <directory> <file to watch> <script to execute>"
 }
 
@@ -39,7 +39,7 @@ while true; do
   change=${change#./ * }
   if [ "$change" = "$2" ]; then ./$3; fi
 done
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -47,7 +47,7 @@ done
 </p>
 
 
-<pre lang="bash">
+{% highlight bash %}>
 $ cat ejemplo 
 elbauldelprogramador.com
 $ cat script.sh 
@@ -60,7 +60,7 @@ Watches established.
 ./ CLOSE_WRITE,CLOSE ejemplo
 Setting up watches.
 Watches established.
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -68,7 +68,7 @@ Watches established.
 </p>
 
 
-<pre lang="bash">
+{% highlight bash %}>
 $ cat ejemplo
 elbauldelprogramador.com
 
@@ -77,7 +77,7 @@ elbauldelprogramador.com
 
 escribimos algo para modificar el fichero y guardamos
 Script ejecutado tras editar
-</pre>
+{% endhighlight %}
 
 
 <p>

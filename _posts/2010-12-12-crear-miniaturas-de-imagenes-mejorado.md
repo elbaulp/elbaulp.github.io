@@ -33,7 +33,7 @@ También dejo el link de pastebin: <http://pastebin.com/BhKYpYJf>
 
 
 
-<pre><span class="comentario">#!/bin/bash</span>
+{% highlight bash %}<span class="comentario">#!/bin/bash</span>
 
 <span class="bash">if</span> [ -e /usr/bin/convert ] ; <span class="bash">then</span> <span class="comentario">#Compruebo que el programa imagemagick esta insatado</span>
  <span class="bash">dir</span>=`zenity --file-selection --directory --title="Selecciona el directorio de las imágenes"`
@@ -77,7 +77,7 @@ También dejo el link de pastebin: <http://pastebin.com/BhKYpYJf>
  <span class="bash">echo</span> "Imagemagick no esta instalado, puede instalarlo haciendo 'sudo aptitude install imagemagick'"
 <span class="bash">fi</span>
 
-</pre>
+{% endhighlight %}
 
 <div class="sharedaddy">
   <div class="sd-content">

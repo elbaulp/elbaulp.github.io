@@ -27,37 +27,37 @@ Hoy voy a explicar cómo mostrar los seguidores de nuestra cuenta de Twitter en 
   
 <!--more-->
 
-<pre lang="php">$url = "http://twitter.com/users/show/elbaulp";
+{% highlight php %}>$url = "http://twitter.com/users/show/elbaulp";
 $response = file_get_contents ( $url );
 $t_profile = new SimpleXMLElement ( $response );
 $count = $t_profile->followers_count;
-echo $count;</pre>
+echo $count;{% endhighlight %}
 
 Listo, esto imprimirá el número de seguidores que tenemos en twitter.
 
 Este código no es mío, lo encontré navegando por internet, y le hice algunas modificaciones, concretamente creé una función que añadí al archivo `<strong>functions.php</strong>` del tema:
 
-<pre lang="php">function followers_count(){
+{% highlight php %}>function followers_count(){
   $url = "http://twitter.com/users/show/elbaulp";
   $response = file_get_contents ( $url );
   $t_profile = new SimpleXMLElement ( $response );
   $count = $t_profile->followers_count;
   return $count;
-}</pre>
+}{% endhighlight %}
 
 Y en el widget tengo lo siguiente:
 
-<pre lang="php" ><p class="twittercount">
+{% highlight php %} ><p class="twittercount">
   <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank">
      <img style="vertical-align:middle;padding-right:5px" src="twitter.png" alt="Twitter" /></a>
      <span>&lt; ?php echo followers_count();?></span> Followers
   
 </p>
-</pre>
+{% endhighlight %}
 
 Y el estilo es el siguiente:
 
-<pre lang="css" >.twittercount {
+{% highlight css %} >.twittercount {
   -moz-box-shadow: 8px 11px 11px #222;
   -webkit-box-shadow: 8px 11px 11px #222;
   box-shadow: 8px 11px 11px #222;
@@ -72,7 +72,7 @@ Y el estilo es el siguiente:
   margin: 5px;
   display: inline-block;
 }
-</pre>
+{% endhighlight %}
 
 <div style="text-align:center">
   <p class="twittercount">

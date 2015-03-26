@@ -31,10 +31,10 @@ tags:
 Una consulta agrupada se utiliza para considerar los registros cuyos ciertos campos tienen  
 el mismo valor, y procesarlos de la misma manera, para contarlos, sumarlos, hacer la media etc.
 
-<pre lang="sql">SELECT C_CLIENTE, SUM(IMPORTE)
+{% highlight sql %}>SELECT C_CLIENTE, SUM(IMPORTE)
 FROM FACTURA
 GROUP BY C_CLIENTE;
-</pre>
+{% endhighlight %}
 
   
 <!--more-->
@@ -65,8 +65,8 @@ Agrupa las filas seleccionadas por la cláusula WHERE por los campos que aparece
 cláusula GROUP BY. Estos grupos devuelven una única fila por grupo a la que se le pueden añadir  
 una serie de funciones estadísticas llamadas agregados. Su sintaxis es:
 
-<pre lang="sql">GROUP BY &lt;group_by_expression>
-</pre>
+{% highlight sql %}>GROUP BY &lt;group_by_expression>
+{% endhighlight %}
 
 donde <group\_by\_expression> es la columna o columnas por la cuales se desea agrupar. No se  
 puede utilizar un alias de dicha columna. Se puede agrupar mediante una expresión formada por  
@@ -75,19 +75,19 @@ también de aparecer tras la palabra SELECT (excepto casos especiales).
 Ejemplo de GROUP BY, se desea obtener el número de portes de cada camión, y si un  
 camión no ha tenido portes que dicho valor aparezca a nulo:
 
-<pre lang="sql">SELECT camion.cCmnMtr, camion.cCmnMrc, camion.cCmnMdl, COUNT(*)
+{% highlight sql %}>SELECT camion.cCmnMtr, camion.cCmnMrc, camion.cCmnMdl, COUNT(*)
 FROM camion, porte
 WHERE camion.cCmnMtr = porte.cCmnMtr
 GROUP BY camion.cCmnMtr, camion.cCmnMrc, camion.cCmnMdl;
-</pre>
+{% endhighlight %}
 
 Ejemplo donde agrupamos por una expresión carácter formada por tres columnas o campos:
 
-<pre lang="sql">SELECT camion.cCmnMtr +camion.cCmnMrc + camion.cCmnMdl, COUNT(*)
+{% highlight sql %}>SELECT camion.cCmnMtr +camion.cCmnMrc + camion.cCmnMdl, COUNT(*)
 FROM camion, porte
 WHERE camion.cCmnMtr = porte.cCmnMtr
 GROUP BY camion.cCmnMtr + camion.cCmnMrc + camion.cCmnMdl;
-</pre>
+{% endhighlight %}
 
 
 
@@ -97,9 +97,9 @@ Las funciones de agregado se usan dentro de una cláusula SELECT en grupos de re
 para devolver un único valor que se aplica a un grupo de registros. También se utilizan para  
 obtener resultados estadísticos sobre las columnas de una tabla o sobre la misma tabla; en este caso, la consulta devuelve un solo registro con los resultados.
 
-<pre lang="sql">Select Count(*) From LiFacturas;
+{% highlight sql %}>Select Count(*) From LiFacturas;
 Select Sum(Stock) From Articulos Where Familia = ‘CPU’;
-</pre>
+{% endhighlight %}
 
 Los más utilizados son:
 

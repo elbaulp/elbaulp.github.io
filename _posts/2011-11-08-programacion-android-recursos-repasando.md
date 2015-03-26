@@ -22,7 +22,7 @@ tags:
 ---
 En resumen, en el siguiente listado muestra la estructura global del directorio de recursos:
 
-<pre>/res/values/string.xml
+{% highlight bash %}/res/values/string.xml
                 /colors.xml
                 /dimens.xml
                 /attrs.xml
@@ -36,7 +36,7 @@ En resumen, en el siguiente listado muestra la estructura global del directorio 
      /raw/*.*
      /xml/*.xml
 /assets/*.*/*.*
-</pre>
+{% endhighlight %}
 
 <p class="alert">
   Debido a que no se encuentra bajo el directorio <i>/res</i>, solo el directorio<i> /assets</i> puede contener una lista arbitrária de directorios. Cualquier otro directorio solo puede contener ficheros en ese nivel, y no mas subdirectorios

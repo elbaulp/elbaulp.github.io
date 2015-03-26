@@ -49,7 +49,7 @@ Se dispone de distintos tipo de menús:
 
 Lo más simple y sencillo es definir los menús en XML, colocado en ./res/menu, para este ejemplo he definido el siguiente menu, que contiene dos elementos, un About y un Quit:
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -69,7 +69,7 @@ Lo más simple y sencillo es definir los menús en XML, colocado en ./res/menu, 
           android:icon="@drawable/quit"/>
 
 </menu>
-</pre>
+{% endhighlight %}
 
 Bien, voy a explicar un poco la estructura de este menú, Empezamos declarando el menú con la etiqueta ***  
 
@@ -83,17 +83,17 @@ Los atributos de cada elemento son su identificador, el icono a mostrar y el tí
 
 Para poder usar este menú, necesitamos inflarlo (Convertir el fichero XML en un objeto java), para hacer esto, hay que llamar a ***MenuInflater.inflate()***, el código siguiente infla el fichero xml anterior en el método callback ***onCreateOptionsMenu().***
 
-<pre lang="java">@Override
+{% highlight java %}>@Override
    public boolean onCreateOptionsMenu(Menu menu) {
        MenuInflater inflater = getMenuInflater();
        inflater.inflate(R.menu.ejemplo_menu, menu);
        return true;
    }
-</pre>
+{% endhighlight %}
 
 Ahora, tenemos que responder a las acciones del usuario cuando pulse algún elemento de nuestro menú, para ello vamos a sobreescribir el método ***onOptionsItemSelected()***
 
-<pre lang="java">@Override
+{% highlight java %}>@Override
    public boolean onOptionsItemSelected(MenuItem item) {
       switch (item.getItemId()) {
       case R.id.about:
@@ -112,24 +112,24 @@ Ahora, tenemos que responder a las acciones del usuario cuando pulse algún elem
          return super.onOptionsItemSelected(item);
       }
    }
-</pre>
+{% endhighlight %}
 
 ### Context Menu
 
 Los menús contextuales son similares a los menús mostrados al hacer click con el botón derecho de un ratón en un PC, para crearlos, debemos sobreescribir el método ***onCreateContextMenu()***, donde inflaremos el archivo xml.
 
-<pre lang="java">@Override
+{% highlight java %}>@Override
    public void onCreateContextMenu(ContextMenu menu, View v,
          ContextMenuInfo menuInfo) {
       super.onCreateContextMenu(menu, v, menuInfo);
       MenuInflater inflater = getMenuInflater();
       inflater.inflate(R.menu.ejemplo_menu, menu);
    }
-</pre>
+{% endhighlight %}
 
 Al igual que en los options menu, tenemos que responder a las acciones del usuario:
 
-<pre lang="java">@Override
+{% highlight java %}>@Override
    public boolean onContextItemSelected(MenuItem item) {
       switch (item.getItemId()) {
       case R.id.about:
@@ -148,13 +148,13 @@ Al igual que en los options menu, tenemos que responder a las acciones del usuar
          return super.onOptionsItemSelected(item);
       }
    }
-</pre>
+{% endhighlight %}
 
 Pero este menú contextual no se va a mostrar, ya que tenemos que asociarlo para que se lanze al realizar una pulsación prolongada sobre una view, en este caso un botón:
 
-<pre lang="java">final Button boton = (Button) findViewById(R.id.button1);
+{% highlight java %}>final Button boton = (Button) findViewById(R.id.button1);
 registerForContextMenu(boton);
-</pre>
+{% endhighlight %}
 
 Aquí dejo algunas capturas de pantalla de la aplicación:
 

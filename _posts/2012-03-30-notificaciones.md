@@ -53,8 +53,8 @@ Una notificación Toast es un mensaje que se muestra superpuesto en la pantalla.
 
 A lo largo de todas las [entradas sobre Android][1], se ha usado mucho este típo de notificaciones:
 
-<pre lang="java">Toast.makeText(context, text, duration).show();
-</pre>
+{% highlight java %}>Toast.makeText(context, text, duration).show();
+{% endhighlight %}
 
 Para pasar el contexto, tenemos varias posibilidades, ***NombreActividad.this***, o ***getApplicationContext().***
 
@@ -62,7 +62,7 @@ Para fijar la duración del mensaje, usamos una de las dos constantes predefinid
 
 En este caso, vamos a crear un layout personalizado para mostrar el Toast:
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/toastLayout"
   android:orientation="horizontal"
@@ -86,13 +86,13 @@ En este caso, vamos a crear un layout personalizado para mostrar el Toast:
     android:gravity="center_vertical|center_horizontal"/>
 
 &lt;/linearlayout>
-</pre>
+{% endhighlight %}
 
 Hay que asignar un id al LinearLayout, que usaremos posteriormente. También hemos creado un ImageView para mostrar un icono, y un TextView para mostrar el mensaje.
 
 El siguiente paso es inflar este layout desde el código:
 
-<pre lang="java">LayoutInflater inflater = getLayoutInflater();
+{% highlight java %}>LayoutInflater inflater = getLayoutInflater();
 View layout = inflater.inflate(
    R.layout.toast_layout
    ,(ViewGroup) findViewById(R.id.toastLayout));
@@ -102,7 +102,7 @@ toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 toast.setDuration(Toast.LENGTH_LONG);
 toast.setView(layout);
 toast.show();
-</pre>
+{% endhighlight %}
 
 Listo, al ejecutar la aplicación tendremos un Toast como este:
 
@@ -118,7 +118,7 @@ Este tipo de notificaciones muestran un icono en la barra de estado, cuando desp
 
 Los pasos necesarios para crear este tipo de notificaciones son, usar el gestor de notificaciones del sistema (NotificationManager) y posteriormente crear un objeto Notification en el que configuraremos nuestra notificación. Vamos a ver como hacerlo.
 
-<pre lang="java">NotificationManager mNotificationManager =
+{% highlight java %}>NotificationManager mNotificationManager =
     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 //Agregando el icono, texto y momento para lanzar la notificación
@@ -142,7 +142,7 @@ PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationInt
 notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 
 mNotificationManager.notify(HELLO_ID, notification);
-</pre>
+{% endhighlight %}
 
 El resultado es el siguiente:
 
@@ -173,7 +173,7 @@ La clase Activity implementa métodos para gestionar los dialogos, son:
 
 Vamos a ver un ejemplo de AlertDialog, que preguntará si queremos salir de la aplicación:
 
-<pre lang="java">AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+{% highlight java %}>AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
 dialog.setMessage("¿Salir?");
 dialog.setCancelable(false);
@@ -192,7 +192,7 @@ dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
    }
 });
 dialog.show();
-</pre>
+{% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="alertDialog Android" title="AlertDialog android" border="0" height="400" width="240" src="http://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png" /></a>
@@ -200,13 +200,13 @@ dialog.show();
 
 También vamos a ver un ProgressDialog, indefinido (Que nunca termina).
 
-<pre lang="java">ProgressDialog.show(
+{% highlight java %}>ProgressDialog.show(
              NotificacionesActivity.this
             ,"ProgressDialog"
             ,"Ejemplo diálogo de progreso"
             ,true
             ,true);
-</pre>
+{% endhighlight %}
 
 Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de &#8220;atrás&#8221; del terminal.
 

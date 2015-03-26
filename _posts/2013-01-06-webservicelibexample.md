@@ -29,26 +29,26 @@ Empezaré con **freegeoip**, al ser la más simple. El código para armar la pet
   
 <!--more-->
 
-<pre lang="java">RestRequest rq = new JSONRestRequest();
+{% highlight java %}>RestRequest rq = new JSONRestRequest();
 rq.setMethod(RestRequest.GET_METHOD);
 rq.setURL("http://freegeoip.net/json/");
 
 RestServiceTask task = new RestServiceTask(this, this, "Espere", "Obteniendo datos...");
 task.execute(rq);
-</pre>
+{% endhighlight %}
 
 `rq` es el objeto necesario para construir la petición, en este caso irá en JSON. Las siguientes instrucciones establecen el típo de método a usar y la url del WebService, respectivamente. **RestServiceTask** se encarga de crear un <a href="http://developer.android.com/reference/android/os/AsyncTask.html" target="_blank">AsyncTask</a> para realizar la petición fuera del hilo principal de la aplicación.
 
 En cada clase que se use la librería es necesario implementar la interfaz `AsyncTaskCompleteListener<RestResponse>`, Por ejemplo:
 
-<pre lang="java">public class MainActivity extends Activity implements AsyncTaskCompleteListener&lt;RestResponse>
-</pre>
+{% highlight java %}>public class MainActivity extends Activity implements AsyncTaskCompleteListener&lt;RestResponse>
+{% endhighlight %}
 
 Además, añadir el callback `onTaskComplete()`, que será llamado una vez obtengamos la respuesta del Web Service, la cabecera del método es la siguiente:
 
-<pre lang="java">@Override
+{% highlight java %}>@Override
     public void onTaskComplete(RestResponse result)
-</pre>
+{% endhighlight %}
 
 Para obtener la respuesta de la petición llamamos al método `getContent()` del objeto `result`, que devuelve un `HashMap<String, Object>` con los pares **clave/valor** correspondientes a la respuesta en JSON.
 
@@ -56,7 +56,7 @@ Cuando hay que proporcionar parámetros a la consulta, se debe crear un objeto H
 
 Así pues, para realizar la petición en este caso el código sería el siguiente:
 
-<pre lang="java">RestRequest apiWordpress = new JSONRestRequest();
+{% highlight java %}>RestRequest apiWordpress = new JSONRestRequest();
 apiWordpress.setMethod(RestRequest.GET_METHOD);
 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
                 
@@ -73,11 +73,11 @@ apiWordpress.setContent(args);
 
 RestServiceTask task2 = new RestServiceTask(this, this, "Espere", "Obteniendo datos...");
 task2.execute(apiWordpress);
-</pre>
+{% endhighlight %}
 
 A continuación escribo el código de la aplicación de ejemplo que he programado para Android, en las referencias habrá un enlace para descargar el proyecto.
 
-<pre lang="java">package com.elbauldelprogramador.webservicelibexample;
+{% highlight java %}>package com.elbauldelprogramador.webservicelibexample;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -203,7 +203,7 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener&
     }
 
 }
-</pre>
+{% endhighlight %}
 
 Es necesario agregar la librería al proyecto, para ello, descárgala, crea una carpeta en tu proyecto llamada **libs**. En eclipse; **clic derecho en dicha carpeta » import » File System**, selecciona la carpeta en la que se encuentra la librería y en la parte derecha selecciónala; pulsa finalizar. Luego, en las **propiedades del proyecto » Java Build Path » Libraries » Add JARs**. Ya está agregada al proyecto y lista para usar.
 

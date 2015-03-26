@@ -20,8 +20,8 @@ Nginx dispone de una página que muestra el estado del servidor, que mostrará i
 
 Es necesario compilar nginx con éste módulo. Para comprobar si está compilado debe aparecer `--with-http_stub_status_module` al ejecutar el comando
 
-<pre lang="bash">nginx -V
-</pre>
+{% highlight bash %}>nginx -V
+{% endhighlight %}
 
 De no tenerlo, hay que volver a [compilar nginx][1] con éste módulo activo. 
 
@@ -29,7 +29,7 @@ De no tenerlo, hay que volver a [compilar nginx][1] con éste módulo activo.
 
 Hay que editar el fichero *nginx.conf*, y añadir en el bloque ***server { /\*&#8230;\*/ }*** lo siguiente:
 
-<pre lang="bash">location /nginx_status {
+{% highlight bash %}>location /nginx_status {
         # Hablitar las estadísticas
         stub_status on;
         # No registrar en los logs los accesos a la página de estado
@@ -39,20 +39,20 @@ Hay que editar el fichero *nginx.conf*, y añadir en el bloque ***server { /\*&#
         # Denegar el acceso al resto del mundo #
         deny all;
    }
-</pre>
+{% endhighlight %}
 
 Tras esto, es necesario reiniciar nginx para que sea consciente de los cambios:
 
-<pre lang="bash">service nginx reload
-</pre>
+{% highlight bash %}>service nginx reload
+{% endhighlight %}
 
 Ahora al dirigirse a la dirección ***midominio.com/nginx_status*** veremos algo así:
 
-<pre lang="bash">Active connections: 291
+{% highlight bash %}>Active connections: 291
 server accepts handled requests
    16630948 16630948 31070465
 Reading: 6 Writing: 179 Waiting: 106
-</pre>
+{% endhighlight %}
 
   * *active connections* &#8212; Número de conexiones abieras.
   * *server accepts handled requests* &#8212; En el ejemplo, nginx ha aceptado 16630948 conexiones, procesado 16630948 de ellas (Ninguna fue cerrada) y ha procesado 31070465 (1.8 peticiones por conexión).

@@ -31,7 +31,7 @@ Tras haber hecho varias pruebas, una solución que parece ser correcta es la sig
 
 El script quedaría así:
 
-<pre lang="bash">#!/bin/bash
+{% highlight bash %}>#!/bin/bash
 # Google Drive Grive script that syncs your Google Drive folder on change
 # This functionality is currently missing in Grive and there are still no
 # official Google Drive app for Linux coming from Google.
@@ -63,7 +63,7 @@ do
         cd $GDRIVE_PATH &#038;&#038; $GRIVE_COMMAND_WITH_PATH
     fi
 done
-</pre>
+{% endhighlight %}
 
 Con esta pequeña modificación logramos que no haya varias instancias de *grive* en ejecución. Además podríamos dejar la entrada en cron, ya que de esta forma si cron está ejecutando *grive*, el script no lo hará, porque detecta que ya hay una instancia en ejecución. 
 
@@ -71,7 +71,7 @@ Con esta pequeña modificación logramos que no haya varias instancias de *grive
 
 Sería muy similar, salvo que no monitoriza el estado del directorio con inotify, de esta forma obtendremos los cambios remotos:
 
-<pre lang="bash">#!/bin/bash
+{% highlight bash %}>#!/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 TIMEOUT=60
@@ -87,12 +87,12 @@ then
 else
     cd "$HOME/Drive" &#038;&#038; grive | tee /tmp/GRIVE_LOG
 fi
-</pre>
+{% endhighlight %}
 
 Lo guardamos como *update-grive.sh*, le damos permisos de ejecución `chmod +x update-grive.sh` y lo añadimos a crontab:
 
-<pre lang="bash">*/10 * * * *  /home/hkr/bin/update-grive.sh
-</pre>
+{% highlight bash %}>*/10 * * * *  /home/hkr/bin/update-grive.sh
+{% endhighlight %}
 
 #### Referencias
 

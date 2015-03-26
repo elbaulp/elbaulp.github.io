@@ -61,7 +61,7 @@ Un cortometraje de Animación realizado integramente por los alumnos de PrimerFr
 
 #### Looking for a Purpose
 
-<pre>We are all different
+{% highlight bash %}We are all different
 But all the same
 We were all brought here for one reason
 And that is to create
@@ -83,7 +83,7 @@ Because tomorrow might be too late...
 The Perfect Time is Now
 Take the first step
 And you will see that life is beautiful.
-</pre>
+{% endhighlight %}
 
 
 

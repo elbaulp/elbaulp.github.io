@@ -25,10 +25,10 @@ Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un
 El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:
 
 <div style="width:70%">
-  <pre lang="python">
+  {% highlight python %}>
 >>> import ejemplo
 >>> ejemplo.saluda('Alejandro')
-</pre>
+{% endhighlight %}
 </div>
 
   
@@ -36,7 +36,7 @@ El módulo consistirá en una función llamada *saluda()* que recibirá una cade
 
 Empecemos mostrando el código e iremos explicándolo a lo largo del artículo:
 
-<pre lang="c">#include &lt;Python.h>
+{% highlight c %}>#include &lt;Python.h>
 
 static PyObject*
 ejemplo_saluda(PyObject *self, PyObject *args)
@@ -69,7 +69,7 @@ initejemplo(void)
     if (m == NULL)
         return;
 }
-</pre>
+{% endhighlight %}
 
 Empezaremos desglosando la función *ejemplo_saluda*, la cual será llamada al ejecutar la línea *ejemplo.saluda('Alejandro')* en Python.
 
@@ -92,12 +92,12 @@ Los principales valores que se pueden usar como plantilla son los siguientes (La
 
 Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo **|**, por ejemplo:
 
-<pre lang="c">PyArg_ParseTuple(args, "|s", &#038;nombre);
-</pre>
+{% highlight c %}>PyArg_ParseTuple(args, "|s", &#038;nombre);
+{% endhighlight %}
 
 Por último la función debe devolver un objeto Python, es este caso una cadena de texto, lo cual se consigue con la función *Py_BuildValue()*. También recibe como parámetro una plantilla de variables y las variables C a partir de las cuales se debe crear el objeto python. En nuestro ejemplo simplemente devolvemos una cadena de texto, pero podría devolverse cualquier objeto python. A continuación se muestra cómo se podrían crear una lista o un diccionario:
 
-<pre lang="c">Py_BuildValue("[s, i, i]", variableC_char, variableC_int, variableC_int2);
+{% highlight c %}>Py_BuildValue("[s, i, i]", variableC_char, variableC_int, variableC_int2);
 Py_BuildValue("{"
               "   s:i,"
               "   s:i"
@@ -105,18 +105,18 @@ Py_BuildValue("{"
               "Valor para primer s", variableC_int,
               "Valor para segundo s", variableC_int2
               );
-</pre>
+{% endhighlight %}
 
 ### Tabla de métodos del módulo
 
 ### Función de inicialización
 
-<pre lang="c">static 
+{% highlight c %}>static 
 PyMethodDef ejemplo_methods[] = {
     {"saluda", ejemplo_saluda, METH_VARARGS, "Documentación del módulo ejemplo"},
     {NULL, NULL, 0, NULL}, /* Sentinel */
 };
-</pre>
+{% endhighlight %}
 
 El *array* **ejemplo_methods[]** se llama la *Tabla de métodos del módulo* y guarda el nombre y la dirección del método que será llamado desde Python, en este caso **ejemplo_salud**. **METH_VARARGS** indica que el método acepta parámetros, los parámetros se parsean en forma de tuplas para poder obtener los parámetros mediante *PyArg_ParseTuple()*. La última entrada del array es la documentación del método para Python.
 
@@ -128,14 +128,14 @@ Cuando importamos el módulo por primera vez desde python, se llama al método *
 
 De momento vamos a compilar el módulo a mano, en la siguiente parte veremos cómo usar *DistUtils* para automatizar el proceso:
 
-<pre lang="bash">$ gcc ejemplo.c -o ejemplo.so -fPIC -shared -I/usr/include/python2.7
-</pre>
+{% highlight bash %}>$ gcc ejemplo.c -o ejemplo.so -fPIC -shared -I/usr/include/python2.7
+{% endhighlight %}
 
 Ahora es necesario mover el archivo **ejemplo.so** a */usr/lib/python2.7*.
 
 Hecho esto, a continuación se muestra un ejemplo de uso para el módulo:
 
-<pre lang="python">In [1]: import ejemplo
+{% highlight python %}>In [1]: import ejemplo
 
 In [2]: print ejemplo.saluda('Alejandro')
 Hola Alejandro desde la Python C API!
@@ -155,7 +155,7 @@ FUNCTIONS
         Documentación del módulo ejemplo
 
 (END)
-</pre>
+{% endhighlight %}
 
 Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el proceso de compilación.
 

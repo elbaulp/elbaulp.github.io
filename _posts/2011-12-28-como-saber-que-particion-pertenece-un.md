@@ -38,51 +38,51 @@ Para eso podemos usar el comando df, que informa del uso del espacio en disco de
   
 <!--more-->
 
-<pre lang="bash">df
+{% highlight bash %}>df
 df /ruta/a un/directorio
 df /ruta/a un/archivo
-</pre>
+{% endhighlight %}
 
 En el siguiente ejemplo se busca el nombre de la partición donde se encuentra el fichero llamado */home/hkr/Desktop/combinaciones.cpp*
 
-<pre lang="bash">df -T /home/hkr/Desktop/combinaciones.cpp
-</pre>
+{% highlight bash %}>df -T /home/hkr/Desktop/combinaciones.cpp
+{% endhighlight %}
 
 Que tiene como salida:
 
-<pre lang="bash">Filesystem    Type   1K-blocks      Used Available Use% Mounted on
+{% highlight bash %}>Filesystem    Type   1K-blocks      Used Available Use% Mounted on
 /dev/sda6     ext4   186362292 140452228  36443368  80% /home
-</pre>
+{% endhighlight %}
 
 Como vemos, el resultado es que el archivo *combinaciones.cpp* pertenece a la partición */dev/sda6*. Con el siguiente comando mostramos solo el nombre de la partición:
 
-<pre lang="bash">df /home/hkr/Desktop/combinaciones.cpp | awk '/^/dev/ {print $1}'
-</pre>
+{% highlight bash %}>df /home/hkr/Desktop/combinaciones.cpp | awk '/^/dev/ {print $1}'
+{% endhighlight %}
 
 O con este otro:
 
-<pre lang="bash">awk '/^/dev/ {print $1}' &lt;&lt;&lt;"$(df /home/hkr/Desktop/combinaciones.cpp)"
-</pre>
+{% highlight bash %}>awk '/^/dev/ {print $1}' &lt;&lt;&lt;"$(df /home/hkr/Desktop/combinaciones.cpp)"
+{% endhighlight %}
 
 La salida para los dos comandos anteriores es la misma:
 
-<pre lang="bash">/dev/sda6
-</pre>
+{% highlight bash %}>/dev/sda6
+{% endhighlight %}
 
 Es recomendable colocar la siguiente función bash en nuestro archivo *~/.bashrc*
 
-<pre lang="bash"># find partition name for a given filename
+{% highlight bash %}># find partition name for a given filename
 findpart() { 
    [ -e "$1" ] &#038;&#038; df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found"; 
 }
-</pre>
+{% endhighlight %}
 
 Ejemplos de uso:
 
-<pre lang="bash">findpart /foo/bar
+{% highlight bash %}>findpart /foo/bar
 findpart /etc
 findpart /home/vivek/test.txt
-</pre>
+{% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="68" width="400" src="http://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s400/Screenshot.png" /></a>

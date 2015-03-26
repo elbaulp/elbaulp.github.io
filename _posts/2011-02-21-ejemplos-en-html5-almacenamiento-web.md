@@ -29,14 +29,14 @@ Ayer os hablé de [15 webs][1] en las que se podia ver el potencial de HTML 5, y
 
 ## Alacenamiento Web
 
-<pre>// Usar localStorage Para almacenamiento permanente
+{% highlight bash %}// Usar localStorage Para almacenamiento permanente
 // Usar sessionStorage para almacenamiento por pestañas
 saveButton.addEventListener('click', function () {
   window.<b>localStorage</b>.<b>setItem</b>('value', area.value);
   window.<b>localStorage</b>.<b>setItem</b>('timestamp', (new Date()).getTime());
 }, false);
 textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
-</pre>
+{% endhighlight %}
 
 <p id="localstorage-message">
   Guardar un texto en el lado cliente.
@@ -56,11 +56,11 @@ textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
       Web SQL Database
     </h2>
     
-    <pre>var db = window.<b>openDatabase</b>("DBName", "1.0", "description", 5*1024*1024); //5MB
+    {% highlight bash %}var db = window.<b>openDatabase</b>("DBName", "1.0", "description", 5*1024*1024); //5MB
 db.<b>transaction</b>(function(tx) {
   tx.<b>executeSql</b>(<em>"SELECT * FROM test"</em>, [], successCallback, errorCallback);
 });
-</pre>
+{% endhighlight %}
     
     <div class="center" id="websqldb-example">
       <input type="text" id="todoitem" /><br /> <button onclick="webSqlSample.newRecord()">Nuevo elemento</button><br /> <button onclick="webSqlSample.createTable()">Crear tabla</button><br /> <button onclick="webSqlSample.dropTable()">Borrar tabla</button> </p> 
@@ -85,13 +85,13 @@ db.<b>transaction</b>(function(tx) {
         WebSocket
       </h2>
       
-      <pre>var socket = new <b>WebSocket</b>('ws://html5rocks.websocket.org/echo');
+      {% highlight bash %}var socket = new <b>WebSocket</b>('ws://html5rocks.websocket.org/echo');
 socket.<b>onopen</b> = function(event) {
   socket.<b>send</b>('Hello, WebSocket');
 };
 socket.<b>onmessage</b> = function(event) { alert(event.data); }
 socket.<b>onclose</b> = function(event) { alert('closed'); }
-</pre>
+{% endhighlight %}
       
       <p id="websockets-message">
         Comunicación Full-duplex, bi-direccional sobre la Web:<br /> Tanto el servidor como el cliente pueden enviar datos en cualquier momento, o incluso al mismo tiempo.<br /> Sólo se envian los datos en sí, sin la sobrecarga de cabeceras HTTP, lo que reduce<br /> el consumo de ancho de banda.

@@ -48,11 +48,11 @@ Ya se ha visto que existe una base de datos centralizada que asocia nombres de d
 
 Con objetivo de que los emails enviados desde el dominio que se está configurando no sean clasificados como spam, es necesario crear la zona inversa en el archivo **named.conf.local**:
 
-<pre lang="bash">zone "89.39.5.in-addr.arpa" {
+{% highlight bash %}>zone "89.39.5.in-addr.arpa" {
  type master;
     file "pri.89.39.5.in-addr.arpa";
 };
-</pre>
+{% endhighlight %}
 
 Los números son la dirección ip del servidor escritos en orden inverso. Es decir, la ip es **5.39.89.x**, así pues, la zona ha de llamarse *89.39.5.in-addr.arpa*. 
 
@@ -62,7 +62,7 @@ El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador
   
 <!--more-->
 
-<pre lang="bash">@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. (
+{% highlight bash %}>@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. (
                         2013021001       ; serial, todays date + todays serial #
                         7200              ; refresh, seconds
                         540              ; retry, seconds
@@ -71,18 +71,18 @@ El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador
 ;
   NS      ks3277174.kimsufi.com.
   NS      ns.kimsufi.com.
-</pre>
+{% endhighlight %}
 
 A continuación, es necesario añadir un registro del tipo **PTR**. Los registros **PTR** son punteros. Apuntan a un nombre de dominio. Quedaría así:
 
-<pre lang="bash">44   PTR elbauldelprogramador.com.
-</pre>
+{% highlight bash %}>44   PTR elbauldelprogramador.com.
+{% endhighlight %}
 
 El 44 es el último valor de la dirección IP del servidor.
 
 Eso es todo, en este punto usaremos el comando **dig** para comprobar la configuración.
 
-<pre lang="bash">$ dig elbauldelprogramador.com
+{% highlight bash %}>$ dig elbauldelprogramador.com
 
 ; &lt;&lt;>> DiG 9.8.4-P1 &lt;&lt;>> elbauldelprogramador.com
 ;; global options: +cmd
@@ -100,11 +100,11 @@ elbauldelprogramador.com. 532    IN  A   5.39.89.44
 ;; SERVER: 80.58.61.250#53(80.58.61.250)
 ;; WHEN: Mon Feb 11 21:09:28 2013
 ;; MSG SIZE  rcvd: 58
-</pre>
+{% endhighlight %}
 
 Así, estamos buscando la ip del dominio. Como se aprecia, devuelve el valor correcto en la sección **ANSWER SECTION**.
 
-<pre lang="bash">$ dig -x 5.39.89.44
+{% highlight bash %}>$ dig -x 5.39.89.44
 
 ; &lt;&lt;>> DiG 9.8.4-P1 &lt;&lt;>> -x 5.39.89.44
 ;; global options: +cmd
@@ -122,7 +122,7 @@ Así, estamos buscando la ip del dominio. Como se aprecia, devuelve el valor cor
 ;; SERVER: 80.58.61.250#53(80.58.61.250)
 ;; WHEN: Mon Feb 11 21:10:09 2013
 ;; MSG SIZE  rcvd: 76
-</pre>
+{% endhighlight %}
 
 Esta vez, se está realizando la petición inversa, preguntamos por el dominio.
 
@@ -130,23 +130,23 @@ Esta vez, se está realizando la petición inversa, preguntamos por el dominio.
 
 En caso de disponer de otro servidor DSN propio, para configurarlo de modo que haga las veces de servidor DNS secundario es necesario añadir otra zona al archivo **named.conf.local** en el servidor **secundario**
 
-<pre lang="bash">zone "DOMINIO" {
+{% highlight bash %}>zone "DOMINIO" {
      type slave;
      file "sec.DOMINIO.COM";
      masters { DIRECCION IP SERVIDOR PRIMARIO; };
 };
-</pre>
+{% endhighlight %}
 
 Esta vez, se declara la zona como **slave** o esclava y se especifica la dirección IP del servidor maestro. En el fichero indicado en **file** se almacenarán los datos de la zona esclava. Basta con reiniciar **named** y dicho fichero será creado al ponserse en contacto con el servidor primario y habiendo realizado una transferencia de zona.
 
 Por último, por razones de seguridad es recomendable agregar una línea adicional en archivo de zona del servidor **principal** que únicamente permita al servidor secundario realizar la transferencia de zona:
 
-<pre lang="bash">zone "elbauldelprogramador.com" {
+{% highlight bash %}>zone "elbauldelprogramador.com" {
         type master;
         allow-transfer {IP SERVIDOR DNS SECUNDARIO;};
         file "/etc/bind/pri.elbauldelprogramador.com";
 };
-</pre>
+{% endhighlight %}
 
 En mi caso, la ip corresponde al servidor DNS secundario que proporciona la compañia en la que tengo contratado el servidor.
 

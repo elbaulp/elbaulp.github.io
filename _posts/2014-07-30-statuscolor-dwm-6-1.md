@@ -22,27 +22,27 @@ Para aquel que quiera simplemente aplicar el parche y empezar a usarlo, debe lee
 
 El primer paso es situarnos en el directorio con el código de DWM y descargar el parche:
 
-<pre lang="bash">wget https://raw.githubusercontent.com/algui91/myDWM/master/patches/dwm-6.1-simplestatuscolor.diff
-</pre>
+{% highlight bash %}>wget https://raw.githubusercontent.com/algui91/myDWM/master/patches/dwm-6.1-simplestatuscolor.diff
+{% endhighlight %}
 
 Aplicamos el parche:
 
-<pre lang="bash">git apply dwm-6.1-simplestatuscolor.diff
-</pre>
+{% highlight bash %}>git apply dwm-6.1-simplestatuscolor.diff
+{% endhighlight %}
 
 Compilamos e instalamos:
 
-<pre lang="bash">$ sudo make clean install
-</pre>
+{% highlight bash %}>$ sudo make clean install
+{% endhighlight %}
 
 ### Crear una barra de estado con dwmstatus
 
 Éste parche solo funciona con la aplicación **dwmstatus**, para descargarlo e instalarlo basta con hacer:
 
-<pre lang="bash">$ git clone git://git.suckless.org/dwmstatus
+{% highlight bash %}>$ git clone git://git.suckless.org/dwmstatus
 $ sudo make clean install
 $ dwmstatus
-</pre>
+{% endhighlight %}
 
 Con esto tendremos **dwmstatus** ejecutándose y mostrando información.
 
@@ -50,13 +50,13 @@ Con esto tendremos **dwmstatus** ejecutándose y mostrando información.
 
 Para darle color, basta con modificar el código de **dwmstatus** e indicar qué colores usar. Por ejemplo, en el fichero `dwmstatus.c` la línea que formatea el estado es la siguiente:
 
-<pre lang="c">status = smprintf("L:%s A:%s U:%s %s", avgs, tmar, tmutc, tmbln);
-</pre>
+{% highlight c %}>status = smprintf("L:%s A:%s U:%s %s", avgs, tmar, tmutc, tmbln);
+{% endhighlight %}
 
 Por defecto el parche tiene 7 colores, para indicar el color a usar se debe escribir el caracter `\xCL` al final del texto a colorear, donde **CL** es un dígito del **01** al **07**. Por ejemplo, usando los tres primeros colores:
 
-<pre lang="c">status = smprintf("L:%s\x01 A:%s\x02 U:%s %s\x03", avgs, tmar, tmutc, tmbln);
-</pre>
+{% highlight c %}>status = smprintf("L:%s\x01 A:%s\x02 U:%s %s\x03", avgs, tmar, tmutc, tmbln);
+{% endhighlight %}
 
 Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el color 3. He aquí un ejemplo de la mía:
 
@@ -66,7 +66,7 @@ Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el colo
 
 Pasemos ahora a ver qué hace el código para ser capaz de colorear la barra de estado. Explicaremos paso a paso lo que hace cada trozo de código en cada fichero:
 
-<pre lang="c">/* ##### config.def.h ##### */
+{% highlight c %}>/* ##### config.def.h ##### */
  /* appearance */
 #define NUMCOLORS 7
 static const unsigned long colors[] = {
@@ -78,11 +78,11 @@ static const unsigned long colors[] = {
     0xFF6600,   // Warning \x06
     0xC63333,   // Caution \x07
 };
-</pre>
+{% endhighlight %}
 
 Aquí simplemente estamos definiendo el número de colores que usaremos y su valor (En Hexadecimal).
 
-<pre lang="c">/* ##### drw.c ##### */
+{% highlight c %}>/* ##### drw.c ##### */
 #define TEXTW(X)                (drw_font_getexts_width(drw->font, X, strlen(X)) + drw->font->h)
 // ......
 void
@@ -121,13 +121,13 @@ drw_colored_st(Drw *drw, int x, int y, unsigned int w, unsigned int h, char text
     tx += TEXTW(text[k]) - TEXTW("\x0");
   }
 }
-</pre>
+{% endhighlight %}
 
 `drw.c` es el encargado de dibujar los elementos en la pantalla. Aquí se introdujo un método similar a `drw_text`, que se encarga de dibujar el texto en la pantalla, pero con la posibilidad de colorear el texto además de dibujarlo. La macro `TEXTW(X)` devuelve el ancho que ocupa el texto `X` en píxeles con la fuente seleccionada.
 
 La clave para colorear está en el último for, encargado de recorrer la lista de colores pendientes de dibujar junto con el texto correspondiente. La función `XSetForeground` de `Xlib` especifica el color, mientras que `XmbDrawString` se encarga de posicionar el texto recibido en las coordenadas correctas.
 
-<pre lang="c">/* ##### dwm.c ##### */
+{% highlight c %}>/* ##### dwm.c ##### */
 void
 parsestatus(char *text, unsigned long *color_queue, char tokens[][256]) {
 
@@ -170,13 +170,13 @@ parsestatus(char *text, unsigned long *color_queue, char tokens[][256]) {
   text[strlen(cleanBuf)] = '\0';
   color_queue[i] = '\0';
 }
-</pre>
+{% endhighlight %}
 
 Este básicamente, es el método principal, se encarga de parsear el estado para extrar qué colores corresponden a qué parte del texto. Almacena los colores en un [array][3] para recordar en qué orden aplicarlos.
 
 Por último, solo queda usar los métodos creados, deben ir en el método `drawbar`, encargado de dibujar todo el recuadro que muestra información en DWM (etiquetas, ventana actual y barra de estado). Para ello se reemplaza el método `drw_text` por `drw_colored_st` cuando se vaya a pintar el estado. Habiéndolo parseado previamente. Ésta vez se muestra el [diff][4], para que sea visto con mayor claridad.
 
-<pre lang="diff">+void
+{% highlight diff %}>+void
  drawbar(Monitor *m) {
  	int x, xx, w;
  	unsigned int i, occ = 0, urg = 0;
@@ -196,7 +196,7 @@ Por último, solo queda usar los métodos creados, deben ir en el método `drawb
  	}
  	else
  		x = m->ww;
-</pre>
+{% endhighlight %}
 
 ## Referencias
 

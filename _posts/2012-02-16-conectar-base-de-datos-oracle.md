@@ -78,7 +78,7 @@ Hace bastante tiempo, publiqué una entrada sobre cómo [Conectar base de datos 
 > 
 > El esquema SCOTT viene con datos de prueba, cuando instalé mi base de datos oracle.
 
-<pre lang="java">package org.pkg.conn;
+{% highlight java %}>package org.pkg.conn;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -139,7 +139,7 @@ public class ConnOracle {
   }
   return regs;
  }
-}</pre>
+}{% endhighlight %}
 
 Tenéis el código disponible en [PasteBin][3] también.
 

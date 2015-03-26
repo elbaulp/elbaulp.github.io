@@ -23,7 +23,7 @@ El proyecto está disponible para descargar en <a href="https://github.com/algui
 
 Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad principal le añadiremos el siguiente código:
 
-<pre lang="java" >private static final String TAG = "SimpleServer";
+{% highlight java %} >private static final String TAG = "SimpleServer";
     private TextView mTextView;
     private Button mButton;
 
@@ -68,15 +68,15 @@ Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad princip
         System.loadLibrary("sServer");
     }
 }
-</pre>
+{% endhighlight %}
 
 Por ahora es bastante sencillo, tenemos un [*TextView* y un *Button*][4] en la interfaz. Con el primero mostraremos un log de los datos transferidos durante la sesión *telnet*, y con el botón conectaremos y desconectaremos la sesión. El método 
 
-<pre lang="java">startTelnetSession()</pre>
+{% highlight java %}>startTelnetSession(){% endhighlight %}
 
 es el que está implementado en C y por ello se declara como 
 
-<pre lang="java">public native String startTelnetSession();</pre>
+{% highlight java %}>public native String startTelnetSession();{% endhighlight %}
 
 en la *[Activity][5]*. 
 
@@ -84,7 +84,7 @@ El hecho de crear un *AsyncTask* impide que la interfaz gráfica se quede bloque
 
 Veamos ahora el código C, que implementa el servidor:
 
-<pre lang="c" >#include &lt;jni.h>
+{% highlight c %} >#include &lt;jni.h>
 
 #include &lt;android/log.h>
 
@@ -218,25 +218,25 @@ Java_com_elbauldelprogramador_simpleserver_MainActivity_startTelnetSession(
   char *bf = startServer();
   return (*env)->NewStringUTF(env, bf);
 }
-</pre>
+{% endhighlight %}
 
 Consta de 3 métodos, 
 
-<pre lang="c">jstring Java_com_elbauldelprogramador_simpleserver_MainActivity_startTelnetSession()</pre>
+{% highlight c %}>jstring Java_com_elbauldelprogramador_simpleserver_MainActivity_startTelnetSession(){% endhighlight %}
 
 que será llamado desde la activity principal y simplemente llama al método 
 
-<pre lang="c">char *startServer()</pre>
+{% highlight c %}>char *startServer(){% endhighlight %}
 
 que ejecuta el servidor esperando a que devuelva un log de los datos transmitidos durante la conexión. Una vez finalizada, el método *startTelnetSession* devuelve el log al código Java para mostrarlo en pantalla. Por último la función 
 
-<pre lang="c">void addToLog()</pre>
+{% highlight c %}>void addToLog(){% endhighlight %}
 
 es la encargada de realizar el registro de todos los mensajes enviados durante la sesión *telnet*.
 
 Ya está todo listo, falta crear el *Android.mk* como sigue:
 
-<pre lang="make">LOCAL_PATH := $(call my-dir)
+{% highlight make %}>LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
@@ -245,21 +245,21 @@ LOCAL_SRC_FILES := sServer.c
 LOCAL_LDLIBS := -llog
 
 include $(BUILD_SHARED_LIBRARY)
-</pre>
+{% endhighlight %}
 
 La línea 
 
-<pre lang="make">LOCAL_LDLIBS := -llog</pre>
+{% highlight make %}>LOCAL_LDLIBS := -llog{% endhighlight %}
 
 enlaza la librería que permite imprimir mensajes de log al logcat desde C/C++ usando las funciones 
 
-<pre lang="c">__android_log_print()
+{% highlight c %}>__android_log_print()
 __android_log_write()
-</pre>
+{% endhighlight %}
 
 La diferencia entre ellas está en que la primera permite que formateemos la cadena de texto de forma similar a la función *printf*. Estas funciones están declaradas en */CARPETA-NDK/platforms/android-14/arch-arm/usr/include/android/log.h*:
 
-<pre lang="c">/*
+{% highlight c %}>/*
  * Send a simple string to the log.
  */
 int __android_log_write(int prio, const char *tag, const char *text);
@@ -271,11 +271,11 @@ int __android_log_print(int prio, const char *tag,  const char *fmt, ...)
     __attribute__ ((format(printf, 3, 4)))
 #endif
     ;
-</pre>
+{% endhighlight %}
 
 La prioridad del log (Equivalente en java a Log.d, Log.e, Log.w etc) se establece mediante la siguiente enumeración:
 
-<pre lang="c">/*
+{% highlight c %}>/*
  * Android log priority values, in ascending priority order.
  */
 typedef enum android_LogPriority {
@@ -289,14 +289,14 @@ typedef enum android_LogPriority {
     ANDROID_LOG_FATAL,
     ANDROID_LOG_SILENT,     /* only for SetMinPriority(); must be last */
 } android_LogPriority;
-</pre>
+{% endhighlight %}
 
 ### Compilando la aplicación con ndk-build
 
 Nos situamos en el directorio del proyecto y ejecutamos:
 
-<pre lang="bash">ndk-build &#038;&#038; ant debug &#038;&#038; adb install -r bin/MainActivity-debug.apk
-</pre>
+{% highlight bash %}>ndk-build &#038;&#038; ant debug &#038;&#038; adb install -r bin/MainActivity-debug.apk
+{% endhighlight %}
 
 Si todo está bien, la aplicación deberá estar instalada en el dispositivo. 
 
@@ -304,41 +304,41 @@ Si todo está bien, la aplicación deberá estar instalada en el dispositivo.
 
 El comando para iniciar el depurador es 
 
-<pre lang="bash">ndk-gdb --start --verbose
-</pre>
+{% highlight bash %}>ndk-gdb --start --verbose
+{% endhighlight %}
 
 que automáticamente iniciará la aplicación en el dispositivo y nos mostrará el *prompt* de *gdb* en el pc. Llegados a este punto, debemos situar un *breakpoint* en el lugar deseado, por ejemplo en la función *addToLog*, en la línea 21. Establecemos el *breakpoint* y dejamos que la aplicación sigua ejecutándose:
 
-<pre lang="bash">(gdb) b 21
+{% highlight bash %}>(gdb) b 21
 Breakpoint 1 at 0x4f023160: file jni/sServer.c, line 21.
 (gdb) c
 Continuing
-</pre>
+{% endhighlight %}
 
 Pulsamos el botón *Conectar* en el móvil y abrimos un terminal para conectamos a nuestro dipositivo mediante telnet:
 
-<pre lang="bash">$ telnet 192.168.1.34 7890
+{% highlight bash %}>$ telnet 192.168.1.34 7890
 Trying 192.168.1.34...
 Connected to 192.168.1.34.
 Escape character is '^]'.
 Bienvenido!
-</pre>
+{% endhighlight %}
 
 Intentamos averiguar la dirección IP de algunas webs:
 
-<pre lang="bash">ip_de elbauldelprogramador.com
-</pre>
+{% highlight bash %}>ip_de elbauldelprogramador.com
+{% endhighlight %}
 
 Al pulsar enter, se detiene la ejecución del programa debido al *breakpoint* en la línea 21
 
-<pre lang="bash">Breakpoint 1, addToLog (log=0x54b38c1c "", new_entry=0x54b3881c "ip_de elbauldelprogramador.com\r\n") at jni/sServer.c:21
+{% highlight bash %}>Breakpoint 1, addToLog (log=0x54b38c1c "", new_entry=0x54b3881c "ip_de elbauldelprogramador.com\r\n") at jni/sServer.c:21
 21   addToLog(char log[], char *new_entry) {
 (gdb) 
-</pre>
+{% endhighlight %}
 
 GDB espera a que le demos instrucciones, examinamos el contenido de los parámetros de la función *addToLog*:
 
-<pre lang="bash">(gdb) x /s log
+{% highlight bash %}>(gdb) x /s log
 0x54b38c1c:     ""
 (gdb) x /s new_entry 
 0x54b3881c:  "ip_de elbauldelprogramador.com\r\n"
@@ -357,11 +357,11 @@ GDB espera a que le demos instrucciones, examinamos el contenido de los parámet
 2: x/s new_entry  0x54b3881c:   "ip_de elbauldelprogramador.com\r\n"
 1: x/s log  0x54b38c1c:   "ip_de elbauldelprogramador.com\r\n"
 (gdb)
-</pre>
+{% endhighlight %}
 
 Como vemos simplemente se ha copiado el comando ejecutado a un buffer que llevará el registro de datos transmitidos en la sesión *telnet*. Continuamos la ejecución del programa:
 
-<pre lang="bash">(gdb) c
+{% highlight bash %}>(gdb) c
 Continuing.
 
 Breakpoint 1, addToLog (log=0x54b38c1c "ip_de elbauldelprogramador.com\r\n", new_entry=0x54b38822 "elbauldelprogramador.com has address 5.39.89.44\n")
@@ -369,13 +369,13 @@ Breakpoint 1, addToLog (log=0x54b38c1c "ip_de elbauldelprogramador.com\r\n", new
 21 addToLog(char log[], char *new_entry) {
 2: x/s new_entry  0x54b38822:     "elbauldelprogramador.com has address 5.39.89.44\n"
 1: x/s log  0x54b38c1c:     "ip_de elbauldelprogramador.com\r\n"
-</pre>
+{% endhighlight %}
 
 y vuelve a saltar el *breakpoint*, esta vez con la respuesta del comando informándonos de cual es la dirección ip del dominio introducido. Al salir de la función, el buffer de log contendrá la cadena: *&#8220;ip_de elbauldelprogramador.com\r\nelbauldelprogramador.com has address 5.39.89.44\n&#8221;*
 
 Por último continuemos la ejecución y escribimos unos cuantos comandos más:
 
-<pre lang="bash">ip_de gooip_de google.com
+{% highlight bash %}>ip_de gooip_de google.com
 google.com has address 173.194.41.226
 ip_de elbauldelprogramador.org
 No se pudo resolver el nombre de dominio de elbauldelprogramador.org
@@ -383,14 +383,14 @@ google.com has address 173.194.41.226
 ip_de elbauldelprogramador.org
 No se pudo resolver el nombre de dominio de elbauldelprogramador.org
 adios
-</pre>
+{% endhighlight %}
 
 Con el comando adios terminamos la sesión, y el buffer ha registrado toda la comunicación y contiene:
 
-<pre lang="bash">(gdb) x /2s command_log
+{% highlight bash %}>(gdb) x /2s command_log
 0x54b38c1c:     "ip_de elbauldelprogramador.com\r\nelbauldelprogramador.com has address 5.39.89.44\nip_de google.com\r\ngoogle.com has address 173.194.41.226\nip_de elbauldelprogramador.org\r\nNo se pudo resolver el nombre de"...
 0x54b38ce4:    " dominio de elbauldelprogramador.org\nadios\r\n"
-</pre>
+{% endhighlight %}
 
 y se muestra en la pantalla del dispositivo:
 

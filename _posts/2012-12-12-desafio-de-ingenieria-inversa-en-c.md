@@ -18,8 +18,8 @@ tags:
 
 En la asignatura Estructura de Computadores de mi facultad, estamos haciendo una práctica que consiste en coger un ejecutable que haya compilado otro alumno, el cual pide una contraseña alfanumérica y otra numérica. Dicho ejecutable está compilado sin opción de depuración, es decir:
 
-<pre lang="bash">gcc -m32 -O&lt;n> Bomba.c -o bomba
-</pre>
+{% highlight bash %}>gcc -m32 -O&lt;n> Bomba.c -o bomba
+{% endhighlight %}
 
 Donde n es el nivel de optimización desado, en la práctica solo se permite hasta nivel 2. Como habŕas deducido del nombre del ejecutable, se trata de desactivar una bomba. Para lograr este objetivo, es necesario introducir correctamente ambas contraseñas y hacerlo en un periodo de tiempo limitado.
 

@@ -41,13 +41,13 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 La sintaxis básica es:
 
-<pre lang="sql">SELECT select_list
+{% highlight sql %}>SELECT select_list
 FROM table_source
 [WHERE search_condition]
 [GROUP BY group_by_expression]
 [HAVING search_condition]
 [ORDER BY order_expression [ASC | DESC] ]
-</pre>
+{% endhighlight %}
 
 Vamos a ir viendo las diferentes clausulas que componen la sentencia SELECT:
 
@@ -64,11 +64,11 @@ Vamos a ir viendo las diferentes clausulas que componen la sentencia SELECT:
 
 Especifica qué columnas o expresiones han de ser devueltas por la consulta. Su sintaxis es:
 
-<pre lang="sql">SELECT [ DISTINCT ] &lt;select_list>
+{% highlight sql %}>SELECT [ DISTINCT ] &lt;select_list>
 
 &lt;select_list> ::= [esquema.][table. | view. | alias. ] * | { column_name | expression }
 [ [AS] column_alias ]} [,...n]
-</pre>
+{% endhighlight %}
 
 donde sus argumentos son:
 
@@ -86,7 +86,7 @@ agregados o funciones estadísticas especiales y constantes.
 
 Dentro de esta lista se pueden mostrar los siguientes elementos:
 
-<pre lang="sql">table_name.* | view_name.* | table_alias.* | *</pre>
+{% highlight sql %}>table_name.* | view_name.* | table_alias.* | *{% endhighlight %}
 
 En los cuatro casos con el uso del asterisco * selecciona todas las columnas de una tabla,  
 vista o alias (renombrado).
@@ -97,7 +97,7 @@ Es el nombre de la columna que se devuelve. Para evitar o prevenir el problema q
 presenta cuando dos columnas de diferentes tablas o relaciones se llamen igual se puede utilizar el cualificado del nombre de la columna anteponiendo el nombre de la tabla con un punto. SQL  
 utiliza la notación:
 
-<pre lang="sql">nombre_Tabla.nombre_Atributo</pre>
+{% highlight sql %}>nombre_Tabla.nombre_Atributo{% endhighlight %}
 
 El uso de cualificados es obligatorio cuando en la <select_list> aparecen dos columnas con  
 el mismo nombre.
@@ -106,9 +106,9 @@ En Oracle no es posible mezclar en la <select_list> el * con columnas y/o expres
 Para realizar la operación anterior hay que cualificar el operador * con la tabla de la que se  
 extraerán todos sus campos.
 
-<pre lang="sql">SELECT *, Subtotal FROM FACTURAS, LINFACTURAS;          -- Error
+{% highlight sql %}>SELECT *, Subtotal FROM FACTURAS, LINFACTURAS;          -- Error
 SELECT FACTURAS.*, Subtotal FROM FACTURAS, LINFACTURAS; -- Correcto
-</pre>
+{% endhighlight %}
 
 
 
@@ -124,7 +124,7 @@ expresiones para asignarle un nombre que posteriormente pueda ser recuperado.
 
 Ejemplo:
 
-<pre lang="sql">SELECT Cantidad*Precio AS Subtotal FROM LinFacturas</pre>
+{% highlight sql %}>SELECT Cantidad*Precio AS Subtotal FROM LinFacturas{% endhighlight %}
 
 El renombrado de columnas y/o expresiones puede ser usado en la cláusula ORDER BY;  
 pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.

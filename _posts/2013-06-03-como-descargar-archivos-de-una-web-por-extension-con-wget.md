@@ -19,8 +19,8 @@ Seguramente alguna vez hayas encontrado alguna web con montones de ficheros que 
   
 <!--more-->
 
-<pre lang="bash">wget -r -A.tar.gz &lt;url>
-</pre>
+{% highlight bash %}>wget -r -A.tar.gz &lt;url>
+{% endhighlight %}
 
 Donde:
 

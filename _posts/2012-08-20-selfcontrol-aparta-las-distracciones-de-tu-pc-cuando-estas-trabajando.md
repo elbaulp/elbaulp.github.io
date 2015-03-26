@@ -36,12 +36,12 @@ Antes de instalarlo es necesario resolver las dependencias del paquete instaland
 
 &nbsp;
 
-<pre lang="bash">sudo aptitude install libgtk2-perl libyaml-perl</pre>
+{% highlight bash %}>sudo aptitude install libgtk2-perl libyaml-perl{% endhighlight %}
 
 Tras instalarlos, bajamos el e instalamos SelfControl:
 
-<pre lang="bash">wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
-sudo dpkg --install selfcontrol_0.9-1_all.deb</pre>
+{% highlight bash %}>wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
+sudo dpkg --install selfcontrol_0.9-1_all.deb{% endhighlight %}
 
 Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:  
   
@@ -56,7 +56,7 @@ Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos un
 
 &nbsp;
 
-<pre lang="bash">$ sudo iptables --list
+{% highlight bash %}>$ sudo iptables --list
 Chain INPUT (policy ACCEPT)
   target     prot opt source               destination         
 
@@ -64,13 +64,13 @@ Chain INPUT (policy ACCEPT)
   target     prot opt source               destination         
 
   Chain OUTPUT (policy ACCEPT)
-  target     prot opt source               destination</pre>
+  target     prot opt source               destination{% endhighlight %}
 
 Si no sale algo parecido quizá no tengas instalado iptables, aunque la mayoría de las distribuciones lo traen por defecto.
 
 Una vez que ejecutemos el programa aparecerá algo así:
 
-<pre lang="bash">$ sudo iptables --list
+{% highlight bash %}>$ sudo iptables --list
 Chain INPUT (policy ACCEPT)
   target     prot opt source               destination         
 
@@ -83,7 +83,7 @@ Chain INPUT (policy ACCEPT)
 
   Chain SelfControl (1 references)
   target     prot opt source               destination         
-  DROP       all  --  anywhere             www.example.com</pre>
+  DROP       all  --  anywhere             www.example.com{% endhighlight %}
 
 * * *
 

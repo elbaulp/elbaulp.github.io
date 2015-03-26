@@ -37,7 +37,7 @@ tags:
 
 Vamos a examinar algunos de los elementos que componen los proveedores de contenidos(CV) y cómo éstos se relacionan con otras abstracciones de acceso a datos.
 
-<pre class="brush: "></pre>
+{% highlight bash %}{% endhighlight %}
 
 En conujunto, los CV tienen un enfoque paralelo a las siguientes abstracciones:
 
@@ -53,31 +53,31 @@ Cada CV de un dispositivo se registra a sí mismo de manera similar a como lo ha
 
 El registro de la authority se hace en el [androidManifest][3]. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación [FavSItes][4]):
 
-<pre lang="xml">&lt;provider android:name=".SitesProvider"
+{% highlight xml %}>&lt;provider android:name=".SitesProvider"
    android:authorities="com.elbauldelprogramador.provider.FavSites" />
-</pre>
+{% endhighlight %}
 
 Un authoroty es como un nombre de dominio para ese CV. Con el authority anterior, las urls de nuestro proveedor comenzarán con ese prefijo:
 
-<pre>content://com.elbauldelprogramador.provider.FavSites</pre>
+{% highlight bash %}content://com.elbauldelprogramador.provider.FavSites{% endhighlight %}
 
 Como se ve, los CV, como los sitios web, tienen un nombre de dominio base que actúa como URL inicial.
 
 Los CV también proporcionan URLs del tipo REST para recuperar o manipular datos. Para el registro que acabamos de ver, el URI para identificar un directorio o una colección de datos en la base de datos de FavSites será:
 
-<pre>content://com.elbauldelprogramador.provider.FavSites/sites</pre>
+{% highlight bash %}content://com.elbauldelprogramador.provider.FavSites/sites{% endhighlight %}
 
 Y para identificar un dato específico:
 
-<pre>content://com.elbauldelprogramador.provider.FavSites/sites/#</pre>
+{% highlight bash %}content://com.elbauldelprogramador.provider.FavSites/sites/#{% endhighlight %}
 
 Donde # es el id del dato específico, en el caso de la mi aplicación, un lugar en el mapa. A continuación algunos ejemplos de URIs que se aceptan:
 
-<pre>content://media/internal/images
+{% highlight bash %}content://media/internal/images
 content://media/external/images
 content://contacts/people
 content://contacts/people/23
-</pre>
+{% endhighlight %}
 
 <p class="alert">
   Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.

@@ -50,13 +50,13 @@ El primero (<a href="http://nls.io/optimize-nginx-and-php-fpm-max_children/" tit
 
 Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7Bresto+Proc%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="RAM_{resto Proc}" title="RAM_{resto Proc}" class="latex" /> es la memoria usada por los otros procesos y <img src="//s0.wp.com/latex.php?latex=RAM_%7BmediaPHP%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="RAM_{mediaPHP}" title="RAM_{mediaPHP}" class="latex" /> es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
 
-<pre lang="bash">ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
-</pre>
+{% highlight bash %}>ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
+{% endhighlight %}
 
 Y la consumida por PHP:
 
-<pre lang="bash">ps -ylC php5-fpm --sort:rss  | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria consumida por PHP: "; printf "%dM\n", s/1024 }'
-</pre>
+{% highlight bash %}>ps -ylC php5-fpm --sort:rss  | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria consumida por PHP: "; printf "%dM\n", s/1024 }'
+{% endhighlight %}
 
 Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de *max_children*, *min\_spare\_servers* y *max\_spare\_servers* se suelen calcular evaluando el rendimiento y *start_servers*, suele ser:
 
@@ -88,23 +88,23 @@ FastCGI es un protocolo que hace de interfaz entre programas y servidores web. E
 
 Para aprovechar todos los núcleos de un procesador, nginx necesita ajustar el parámetro *worker_processes* acorde al número de procesadores. Para determinar el número de procesadores podemos ejecutar el siguiente comando:
 
-<pre lang="bash">cat /proc/cpuinfo| grep processor | wc -l
-</pre>
+{% highlight bash %}>cat /proc/cpuinfo| grep processor | wc -l
+{% endhighlight %}
 
 En la directiva *worker_connections* dentro del bloque *events* escribiremos un 1024. Con esto nginx tendrá un proceso por núcleo y cada proceso podrá procesar hasta 1024 conexiones.
 
 Estableceremos ahora los parámetros que permitirán cachear los resultados para servirlos más rápido al cliente, para ello haremos uso de las directivas *fastcgi_cache*. En el bloque *http* necesitaremos:
 
-<pre lang="bash">fastcgi_cache_path /var/cache/nginx levels=1:2 keys_zone=microcache:500m max_size=1000m inactive=60m;
+{% highlight bash %}>fastcgi_cache_path /var/cache/nginx levels=1:2 keys_zone=microcache:500m max_size=1000m inactive=60m;
 fastcgi_cache_key "$scheme$request_method$host$request_uri";
 fastcgi_cache_use_stale updating error timeout invalid_header http_500;
-</pre>
+{% endhighlight %}
 
 Lo cual establece el directorio donde se guardarán los objetos cacheados, los niveles de cache, un nombre y el espacio reservado (500Mb), así como un tope máximo (1Gb). La segunda directiva establece bajo qué nombre se almacenará la clave para la cache. Por último la tercera servirá contenido antiguo en la caché cuando haya errores en el servidor web, cuando se esté actualizando la caché, cuando haya errores del tipo 5xx o cuando la cabecera de la petición sea inválida.
 
 El siguiente paso es decidir qué objetos se almacenarán en caché y cuales no. Para ello, dentro de un bloque *server* escribiremos:
 
-<pre lang="bash">set $no_cache 0;
+{% highlight bash %}>set $no_cache 0;
     if ($request_method = POST) { set $no_cache 1; }
     if ($query_string != "") { set $no_cache 1; }
     location ~ \.php$ {
@@ -114,7 +114,7 @@ El siguiente paso es decidir qué objetos se almacenarán en caché y cuales no.
       fastcgi_cache microcache;
       fastcgi_cache_valid 60m;
     }
-</pre>
+{% endhighlight %}
 
 En esta porción de código hemos declarado una variable que determinará qué peticiones se cachean y cuales no. No cachearemos ninguna petición POST ni nada que tenga consultas en la URL (?arg&#8230;&arg1&#8230;). Con ayuda de esta variable podremos decidir en el bloque *location* si cacheamos la petición (directivas bypass y no_cache), aquí hacemos referencia al nombre que dimos anteriormente al espacio de caché y fijamos un periodo de validez.
 
@@ -128,35 +128,35 @@ Algunas de las características que ofrece son comprimir los archivos CSS y Java
 
 Antes de poder compilar, será necesario instalar algunas dependencias:
 
-<pre lang="bash">apt-get install build-essential zlib1g-dev libpcre3 libpcre3-dev
-</pre>
+{% highlight bash %}>apt-get install build-essential zlib1g-dev libpcre3 libpcre3-dev
+{% endhighlight %}
 
 Una vez hecho, estamos en condiciones para descargar y compilar:
 
-<pre lang="bash">cd ~
+{% highlight bash %}>cd ~
 wget https://github.com/pagespeed/ngx_pagespeed/archive/v1.7.30.1-beta.zip
 unzip v1.7.30.1-beta.zip # or unzip v1.7.30.1-beta
 cd ngx_pagespeed-1.7.30.1-beta/
 wget https://dl.google.com/dl/page-speed/psol/1.7.30.1.tar.gz
 tar -xzvf 1.7.30.1.tar.gz
-</pre>
+{% endhighlight %}
 
 Hecho esto, será necesario recompilar nginx con este módulo, como comentamos al inicio de esta guía, para ello simplemente ejecutamos:
 
-<pre lang="bash">nginx -V # Para ver con qué módulos está compilado el ejecutable actual
+{% highlight bash %}>nginx -V # Para ver con qué módulos está compilado el ejecutable actual
 configure arguments: --with-http_gzip_static_module --sbin-path=/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
 cd ~/nginx-1.4.4/ # compilaremos nginx con el nuevo módulo (--ad-module)
 ./configure --with-http_gzip_static_module --sbin-path=/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module --add-module=$HOME/ngx_pagespeed-1.7.30.1-beta
 make -j 4 # compilamos
 service nginx destroy # detenemos la instancia actual de nginx
 make install # instalamos la nueva versión con pagespeed
-</pre>
+{% endhighlight %}
 
 #### Configurando PageSpeed
 
 Solo resta configurar nginx para activar *pagespeed* con los filtros deseados. La documentación se puede encontrar en <a href="https://developers.google.com/speed/pagespeed/module/config_filters" title="Configuring PageSpeed Filters" target="_blank">Configuring PageSpeed Filters</a>. Por defecto los filtros habilitados son:
 
-<pre lang="bash">add_head
+{% highlight bash %}>add_head
 combine_css
 combine_javascript
 convert_meta_tags
@@ -170,11 +170,11 @@ rewrite_css
 rewrite_images
 rewrite_javascript
 rewrite_style_attributes_with_url
-</pre>
+{% endhighlight %}
 
 Veamos cómo habilitar pagespeed en nginx, para ello crearemos un fichero y un directorio en */usr/local/nginx/conf/global/pagespeed.conf* conteniendo:
 
-<pre lang="bash">pagespeed on;
+{% highlight bash %}>pagespeed on;
 
 # Needs to exist and be writable by nginx.
 pagespeed FileCachePath /var/ngx_pagespeed_cache;
@@ -223,14 +223,14 @@ pagespeed RewriteLevel CoreFilters;
 
 # Specifying the value for the PageSpeed header
 pagespeed XHeaderValue "Gracias a ngx_pagespeed";
-</pre>
+{% endhighlight %}
 
 Esto debería ser suficiente para la mayoría de webs, es posible habilitar más filtros usando la directiva *pagespeed EnableFilters*.
 
 Por último hay que añadir la configuración a nginx, dentro del bloque *server* que deseemos incluimos la línea *include global/pagespeed.conf;* y recargamos la configuración de nginx:
 
-<pre lang="bash">service nginx reload
-</pre>
+{% highlight bash %}>service nginx reload
+{% endhighlight %}
 
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
 
@@ -246,12 +246,12 @@ APC viene de Alternative PHP Cache y es un opcode libre y gratuito para PHP. Su 
 
 Para instalarlo basta con ejecutar:
 
-<pre lang="bash">apt-get install php-apc
-</pre>
+{% highlight bash %}>apt-get install php-apc
+{% endhighlight %}
 
 El archivo de configuración reside en */etc/php5/fpm/conf.d/apc.ini*, un ejemplo de configuración es el siguiente:
 
-<pre lang="bash">apc.enabled=1
+{% highlight bash %}>apc.enabled=1
 apc.shm_segments=1
 apc.shm_size=128M
 ;Relative to the number of cached files (you may need to watch your stats for a day or two to find out a good number)
@@ -303,7 +303,7 @@ apc.lazy_functions=0
 apc.localcache = "1"
 ;The size of the local process shadow-cache, should be set to a sufficiently large value, approximately half of apc.num_files_hint.
 apc.localcache.size = "384"
-</pre>
+{% endhighlight %}
 
 [APC][3] proporciona una mejora considerable en cuanto al rendimiento, ya que no es necesario volver a interpretar el código PHP cada vez que el servidor recibe una petición, el código quedará compilado en cache listo para ser servido. Uno de los parámetros más importantes es *apc.shm_size=*, el cual establece el tamaño reservado para la caché.
 
@@ -311,7 +311,7 @@ apc.localcache.size = "384"
 
 Algunos valores por defecto de la configuración de nginx no son adecuados en términos de seguridad, basándonos en las recomendaciones de <a href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html" title="Top 20 Nginx WebServer Best Security Practices" target="_blank">NIX Craft</a> podemos ajustar éstos parámetros según nuestras necesidades para obtener una mayor seguridad frente a ataques. Todos estos parámetros irán en el bloque *http* de nginx.
 
-<pre lang="bash">## Start: Size Limits &#038; Buffer Overflows ##
+{% highlight bash %}>## Start: Size Limits &#038; Buffer Overflows ##
       client_body_buffer_size  8K;
       client_header_buffer_size 1k;
       client_max_body_size 1m;
@@ -332,7 +332,7 @@ Algunos valores por defecto de la configuración de nginx no son adecuados en t�
     ### Control maximum number of simultaneous connections for one session i.e. ###
     ### restricts the amount of connections from a single ip address ###
       limit_conn addr 10;
-</pre>
+{% endhighlight %}
 
 Una breve explicación del propósito de cada directiva:
 

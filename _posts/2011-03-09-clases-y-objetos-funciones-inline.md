@@ -27,13 +27,13 @@ Podemos declarar y definir funciones dentro de la clase, para no tener que defin
 denomina inline.  
 <!--more-->
 
-<pre>class Punto.{
+{% highlight bash %}class Punto.{
   <span class="comentarios">//...</span>
 public:
   <span class="comentarios">//...</span>
   int gety () {return y;}
 };
-</pre>
+{% endhighlight %}
 
 
 

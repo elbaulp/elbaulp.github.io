@@ -29,10 +29,10 @@ Android permite elegir distintas configuraciones de layout basandose en el tipo 
   
 <!--more-->
 
-<pre>/res/layout/main_layout.xml
+{% highlight bash %}/res/layout/main_layout.xml
 /res/layout-port/main_layout.xml
 /res/layout-land/main_layout.xml
-</pre>
+{% endhighlight %}
 
 Aunque hay tres archivos layout separados, solo se generará un único ID para ellos en R.java. Este ID será de la forma ***R.layout.main_layout***
 
@@ -60,11 +60,11 @@ En la siguiente lista se muestran los clasificadores de configuración disponibl
 
 Con los clasificadores mostrados arriba, podemos crear directorios de recursos como los siguientes:
 
-<pre>/res/layout-mcc312-mnc222-en-rUs
+{% highlight bash %}/res/layout-mcc312-mnc222-en-rUs
 /res/layout-ldpi
 /res/layout-hdpi
 /res/layout-car
-</pre>
+{% endhighlight %}
 
 Para saber nuestra localización actual podemos ejecutar una aplicación que viene instalada en el emulador android. La encontramos en el menú de aplicaciones y se llama Custom Locale.
 
@@ -76,10 +76,10 @@ Dado un ID de recurso, Android usa un algoritmo para elegir el adecuado. Si dese
 
 La primera regla es que los clasificadores mostrados arriba están en orden de precedencia. Veamos un ejemplo de como funciona la precedencia:
 
-<pre>/res/layout/main_layout.xml
+{% highlight bash %}/res/layout/main_layout.xml
 /res/layout-port/main_layout.xml
 /res/layout-en/main_layout.xml
-</pre>
+{% endhighlight %}
 
 En este listado, el archivo *main_layout.xml* está disponible para dos variaciones posibles. Una variación para el idioma y otra para la orientación. Veamos que layout se selecciona si tenemos el dispositivo en vertical.
 
@@ -95,7 +95,7 @@ Ahora vamos a ver algunas reglas de precedencia con unos ejemplos de recursos st
 
 El siguiente código muestra las variaciones del directorio values:
 
-<pre lang="xml">// values/string.xml
+{% highlight xml %}>// values/string.xml
 &lt;resources xmlns="http://schemas.android.com/apk/res/android">
    &lt;string name="teststring_all">teststring in root&lt;/string>
    &lt;string name="t1_enport">t1 in root&lt;/string>
@@ -129,18 +129,18 @@ El siguiente código muestra las variaciones del directorio values:
  &lt;string name="teststring_all">test-en-port&lt;/string>
  &lt;string name="t1_1_en_port">t1_1_en_port&lt;/string>
 &lt;/resources>
-</pre>
+{% endhighlight %}
 
 El listado siguiente muestra el archivo R.java para estos recursos:
 
-<pre lang="java">public static final class string {
+{% highlight java %}>public static final class string {
         public static final int t1_1_en_port=0x7f070004;
         public static final int t1_enport=0x7f070003;
         public static final int t2=0x7f070005;
         public static final int testport_port=0x7f070006;
         public static final int teststring_all=0x7f070002;
     }
-</pre>
+{% endhighlight %}
 
 Como se aprecia, aunque hemos definido muchos strings, solo se han generado cinco IDs. A continuación se describe el comportamiento para cada string, que se ha probado con en_US y el modo portrait:
 

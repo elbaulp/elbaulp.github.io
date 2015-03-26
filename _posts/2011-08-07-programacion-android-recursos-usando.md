@@ -73,12 +73,12 @@ Si queremos, también podemos utilizar nuestros propios atributos.
 
 Primero lo definimos con un tag “attr”·dentro de ./res/values/attr.xml.
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
      &lt;attr name="cabecera" format="reference" />
 &lt;/resources>
 
-</pre>
+{% endhighlight %}
 
 Ahora ya podemos usar esa propiedad en nuestros estilos:
 
@@ -106,13 +106,13 @@ style=&#8221;?attr/cabecera&#8221; />
 
 **./res/values/style.xml**
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
 
 
 &lt;/resources>&lt;/p>
 
-</pre>
+{% endhighlight %}
 
 * * *
 

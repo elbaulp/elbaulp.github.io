@@ -93,11 +93,11 @@ Podemos extender la vida de la batería seleccionando estas opciones de la panta
 
 Nuestro radio Wifi/Wireless consume energía cuando recibe y envía data sobre la red y deberíamos apagarlo cuando no lo usamos. Esto podemos hacerlo si nuestra placa de red soporta el mecanismo de activado y desactivado del control de energía usando el comando &#8216;iwconfig&#8217; que podemos ejecutar en una consola de Ubuntu:
 
-<pre lang="bash">sudo iwconfig wlan0 txpower off </pre>
+{% highlight bash %}>sudo iwconfig wlan0 txpower off {% endhighlight %}
 
 Usamos el siguiente comando para encender nuestra Wifi/Wireless nuevamente:
 
-<pre lang="bash">sudo iwconfig wlan0 txpower on</pre>
+{% highlight bash %}>sudo iwconfig wlan0 txpower on{% endhighlight %}
 
 Nota: Reemplazar &#8216;wlan0&#8242; con el nombre de tu placa de red wireless que se muesta en &#8216;System&#8217; > &#8216;Administration&#8217; > &#8216;Network Tools&#8217; bajo la lista desplegable &#8216;Network Device&#8217;.
 
@@ -109,7 +109,7 @@ Nota: Reemplazar &#8216;wlan0&#8242; con el nombre de tu placa de red wireless q
 
 Linux provee un mecanismo de ajuste sencillo para ahorrar consumo de energía en nuestro procesador mediante la distribución de la carga de procesamiento entre los procesadores disponibles. Si tu laptop viene con multi-procesador, puedes tomar ventaja de la característica &#8216;balance de procesadores&#8217; de Linux para ahorrar consumo de energía, ejecutando este comando en una consola:
 
-<pre lang="bash">echo 1 &gt; /sys/devices/system/cpu/sched_mc_power_savings</pre>
+{% highlight bash %}>echo 1 &gt; /sys/devices/system/cpu/sched_mc_power_savings{% endhighlight %}
 
 **Discos y Sistema de archivos**
 
@@ -127,7 +127,7 @@ El Kernel de Linux 2.6.20 y superiores deberían proveer la opción &#8216;relat
 
 Debe ejecutarse el siguiente comando en la consola para activar la opción &#8216;relatime':
 
-<pre lang="bash">mount -o remount,relatime /</pre>
+{% highlight bash %}>mount -o remount,relatime /{% endhighlight %}
 
 &nbsp;
 
@@ -135,11 +135,11 @@ Debe ejecutarse el siguiente comando en la consola para activar la opción &#821
 
 Algunos fabricantes de discos rígidos implementan opciones de ahorro de energía en el hardware por lo tanto podemos reducir la energía que nuestro disco rígido consume. Podemos solo activar esta opción cuando vemos *AdvancedPM=yes* luego de ejecutar el siguiente comando en la consola:
 
-<pre lang="bash">hdparm -i /dev/sda</pre>
+{% highlight bash %}>hdparm -i /dev/sda{% endhighlight %}
 
 Este es un ejemplo de hdparm:
 
-<pre lang="bash">Model=FUJITSU, FwRev=000000A0, SerialNo=NS9BT742705B
+{% highlight bash %}>Model=FUJITSU, FwRev=000000A0, SerialNo=NS9BT742705B
 Config={ HardSect NotMFM HdSw&gt;15uSec Fixed DTR&gt;10Mbs }
 RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0
 BuffType=DualPortCache, BuffSize=8192kB, MaxMultSect=16, MultSect=16
@@ -149,14 +149,14 @@ PIO modes: pio0 pio1 pio2 pio3 pio4
 DMA modes: mdma0 mdma1 mdma2
 UDMA modes: udma0 udma1 udma2 udma3 udma4 *udma5
 <strong>AdvancedPM=yes</strong>: mode=0x80 (128) WriteCache=enabled
-Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7</pre>
+Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7{% endhighlight %}
 
-<pre lang="bash">* signifies the current active mode
-</pre>
+{% highlight bash %}>* signifies the current active mode
+{% endhighlight %}
 
 Podemos activar el modo de ahorro de energía usando el comando hdparm, por ejemplo:
 
-<pre lang="bash">hdparm -B 1 -S 12 /dev/sda</pre>
+{% highlight bash %}>hdparm -B 1 -S 12 /dev/sda{% endhighlight %}
 
 &nbsp;
 
@@ -164,7 +164,7 @@ Podemos activar el modo de ahorro de energía usando el comando hdparm, por ejem
 
 Podemos mejorar la vida de la batería activando el modo Laptop Linux para que Linux reduzca las operaciones de E/S cuando nuestra laptop está con poca energía. No todo el hardware viene con el modo laptop por lo tanto necesitamos checkear si nuestro hardware soporta este modo ejecutando el siguiente comando:
 
-<pre lang="bash">sudo gedit /proc/sys/vm/laptop_mode</pre>
+{% highlight bash %}>sudo gedit /proc/sys/vm/laptop_mode{% endhighlight %}
 
 Si encontramos que el valor en el archivo de texto laptop_mode es 0, significa que el modo está desactivado. Simplemente setea este a 5 con gedit y guarda el archivo para activar el modo laptop.
 
@@ -176,7 +176,7 @@ Intel introdujo PowerTOP, un software que analiza el consumo de energía del sof
 
 You can install PowerTop through the Ubuntu Software Centre and run it by typing the following command from your console.
 
-<pre lang="bash">sudo powertop</pre>
+{% highlight bash %}>sudo powertop{% endhighlight %}
 
 &#8220;Wakeups per second&#8221; es un buen indicador para nuestra eficiencia del consumo de energía de la laptop. Nuestra laptop ahorra la mayor cantidad de energía cuando &#8220;Wakeups per second&#8221; muestra un valor bajo. De acuerdo con Intel el número más bajo de wakeups en un entorno de Escritorio Gnome es 3 y deberíamos poder lograrlo ajustando la configuración del hardware o cerrando algunos softwares activos en el sistema.
 

@@ -40,17 +40,17 @@ Ya que las URIs definidas por un Proveedor de contenidos (CV) son únicas para e
 
 Consideremos estas tres URIs definidas en el SDK de Android:
 
-<pre>MediaStore.Images.Media.INTERNAL_CONTENT_URI
+{% highlight bash %}MediaStore.Images.Media.INTERNAL_CONTENT_URI
 MediaStore.Images.Media.EXTERNAL_CONTENT_URI
 Contacts.People.CONTENT_URI
-</pre>
+{% endhighlight %}
 
 Sus URIs equivalentes serán como las siguientes:
 
-<pre>content://media/internal/images
+{% highlight bash %}content://media/internal/images
 content://media/external/images
 content://contacts/people
-</pre>
+{% endhighlight %}
 
   
 <!--more-->
@@ -63,13 +63,13 @@ El proveedor *MediaStore* define dos URIs y *Contacts* uno. Si te das cuenta, la
 
 Dadas estas URIs, el código para recuperar una única fila del proveedor de contactos sería: 
 
-<pre lang="java">Uri uriBase = Contacts.People.CONTENT_URI;
+{% highlight java %}>Uri uriBase = Contacts.People.CONTENT_URI;
 Uri uriPersona = Uri.withAppendedPath(Contacts.People.CONTENT_URI, "21");
 
 //Consultamos el registro
 //managedQuery es un método de la clase Activity
 Cursor c = managedQuery(uriPersona, null, null, null);
-</pre>
+{% endhighlight %}
 
 En este ejemplo, cogemos la uri base *Contacts.People.CONTENT_URI*, le añadimos un id de contacto y llamamos al método *managedQuery*.
 
@@ -77,7 +77,7 @@ En el método managedQuery podemos especificar el orden de los resultados, las c
 
 Vamos a ver ahora como crear un cursor que devuelva una lista de columnas de la tabla People del proveedor contatcs.
 
-<pre lang="java">// Array que especifica la proyección (columnas a seleccionar)
+{% highlight java %}>// Array que especifica la proyección (columnas a seleccionar)
 String[] projection = new String[] {
    People._ID,
    People.NAME,
@@ -91,7 +91,7 @@ Cursor managedCursor = managedQuery(mContactsUri,
                                     projection, // Qué columnas devolverá
                                     null,       // Cláusula where
                                     Contacts.People.NAME + " ASC"); //Clausula order by
-</pre>
+{% endhighlight %}
 
 * * *
 

@@ -39,18 +39,18 @@ Como podemos comprobar con este ejemplo, el código queda mucho más límpio usa
 
 Sin estilos:
 
-<pre lang="xml">&lt;textview android:layout_width="fill_parent"
+{% highlight xml %}>&lt;textview android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#00FF00"
     android:typeface="monospace"
     android:text="@string/hello" />
-</pre>
+{% endhighlight %}
 
 Con estilos:
 
-<pre lang="xml">&lt;textview style="@style/CodeFont"
+{% highlight xml %}>&lt;textview style="@style/CodeFont"
     android:text="@string/hello" />
-</pre>
+{% endhighlight %}
 
 ### Definiendo estilos
 
@@ -63,7 +63,7 @@ Para cada estilo que queramos definir, hay que añadir un elemento ***
 
 </b></i> y un atributo ***name*** para ese estílo (es obligatorio), después, añadiremos un elemento ***<item></item>*** para cada propiedad del estilo, que debe tener obligatoriamente el atributo ***name*** que declara la propiedad del estilo y su valor. Los valores para ***<item></item>*** pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:
 
-<pre lang="xml"></pre>
+{% highlight xml %}>{% endhighlight %}
 
 En tiempo de compilación, los elementos se convierten en un recurso que podremos referenciar posteriormente mediante el atributo name del estilo, como vimos en el primer ejemplo (***@style/CodeFont***).
 
@@ -75,11 +75,11 @@ Como acabamos de ver, el atributo parent sirve para heredar propiedades de otros
 
 Del sistema:
 
-<pre lang="xml"></pre>
+{% highlight xml %}>{% endhighlight %}
 
 De nuestros propios estilos:
 
-<pre lang="xml"></pre>
+{% highlight xml %}>{% endhighlight %}
 
 En este caso, no usamos el atributo parent, ya que estamos usando un estilo propio, también se puede apreciar que podemos heredar cuantas veces queramos, como es el caso de (***CodeFont.Red.Big***)
 
@@ -94,14 +94,14 @@ Como vimos al principio, para aplicar un estilo a una View concreta usamos ***st
 
 Para aplicar un tema a una actividad o aplicación usaremos:
 
-<pre lang="xml">&lt;application android:theme="@style/CustomTheme">
-&lt;/application></pre>
+{% highlight xml %}>&lt;application android:theme="@style/CustomTheme">
+&lt;/application>{% endhighlight %}
 
 Para aplicarlos sobre actividades, usamos:
 
-<pre lang="xml">&lt;activity android:theme="@android:style/Theme.Dialog">
+{% highlight xml %}>&lt;activity android:theme="@android:style/Theme.Dialog">
 &lt;/activity>&lt;activity android:theme="@android:style/Theme.Translucent">
-&lt;/activity></pre>
+&lt;/activity>{% endhighlight %}
 
 En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente:
 

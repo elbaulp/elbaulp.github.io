@@ -37,7 +37,7 @@ argumentos.
 
 ### Paso por valor
 
-<pre lang="cpp">int funcion (int parm); // declaración
+{% highlight cpp %}>int funcion (int parm); // declaración
 funcion (arg);          // llamada
 inf funcion (int parm)  // definición
 {
@@ -45,7 +45,7 @@ inf funcion (int parm)  // definición
   //...
   parm=88;
 }
-</pre>
+{% endhighlight %}
 
 Así, cuando la variable arg se pasa por valor a una función, la función recibe una  
 copia de arg. Cualquier cambio en la copia parm dentro del cuerpo de la función no  
@@ -57,7 +57,7 @@ está fuera de ámbito y se libera la memoria que ocupaba. En este caso, se asig
 
 ### Paso por dirección
 
-<pre lang="cpp">int funcion(int* parml); // declaración
+{% highlight cpp %}>int funcion(int* parml); // declaración
 funcion (&#038;arg1);         // llamada
 int funcion (int * parm) // definición
 {
@@ -65,7 +65,7 @@ int funcion (int * parm) // definición
   //...
   *parm=88;
 }
-</pre>
+{% endhighlight %}
 
 Se pasa a la función no arg, sino &arg, la dirección de arg. La dirección de arg,  
 &arg, se pasa por valor, y la función recibe una copia de ésta en parm. La función  
@@ -92,14 +92,14 @@ referencias.
 ### Paso por referencia  
 
 
-<pre lang="cpp">int funcion (int&#038; parm);  // declaración
+{% highlight cpp %}>int funcion (int&#038; parm);  // declaración
 funcion (arg);            // llamada
 int funcion (int&#038; parm)   // definición
 {
   cout &lt; &lt; parm &lt;&lt; 'n';
   parm=88;
 }
-</pre>
+{% endhighlight %}
 
 asigna el valor 88 a parm, pero parm, es el alias de arg, por tanto, modificando parm se  
 modifica arg. Como podernos apreciar, el paso por referencia es semejante al paso por  

@@ -34,28 +34,28 @@ Como primer paso, vamos a descargar la aplicación SuperOneClick de esta [direcc
 
 1.- Tenemos que instalar mono, para ello añadimos el siguiente repositorio a nuestro source.list (En mi caso para Debien squeeze):
 
-<pre>deb http://backports.debian.org/debian-backports squeeze main</pre>
+{% highlight bash %}deb http://backports.debian.org/debian-backports squeeze main{% endhighlight %}
 
 Después actualizamos los repositorios e instalamos mono
 
-<pre>sudo aptitude update
+{% highlight bash %}sudo aptitude update
 sudo aptitude install mono-complete
-</pre>
+{% endhighlight %}
 
 Para conseguir que el ADB se ejecute, debemos instalar las siguientes librerías:
 
-<pre>sudo aptitude install lib32ncurses5 lib32stdc++
-</pre>
+{% highlight bash %}sudo aptitude install lib32ncurses5 lib32stdc++
+{% endhighlight %}
 
 Ahora damos permisos de ejecución a adblinux, que se encuentra en una carpeta llamada ADB de SuperOneClick
 
-<pre>chmod 755 adblinux
-</pre>
+{% highlight bash %}chmod 755 adblinux
+{% endhighlight %}
 
 Solo queda ejecutar SuperOneClick
 
-<pre>sudo mono SuperOneClick.exe
-</pre>
+{% highlight bash %}sudo mono SuperOneClick.exe
+{% endhighlight %}
 
 Este comando ejecutará la aplicación, que será como la de la imagen:
 

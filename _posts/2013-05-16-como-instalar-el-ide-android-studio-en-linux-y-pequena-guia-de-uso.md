@@ -26,18 +26,18 @@ Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos
 
 Introducimos en la terminal los siguientes comandos:
 
-<pre lang="bash">su -
+{% highlight bash %}>su -
 echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list
 echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
 apt-get update
 apt-get install oracle-java7-installer
-</pre>
+{% endhighlight %}
 
 Para configurar automáticamente la variables de entorno, instalamos el siguiente paquete:
 
-<pre lang="bash">sudo apt-get install oracle-java7-set-default
-</pre>
+{% highlight bash %}>sudo apt-get install oracle-java7-set-default
+{% endhighlight %}
 
 Con esto ya deberíamos tener listo el JDK, lanzamos Android Studio y veremos algo como esto:
 

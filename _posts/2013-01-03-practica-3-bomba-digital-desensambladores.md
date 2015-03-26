@@ -22,7 +22,7 @@ Como comenté, la practica consiste en averiguar dos contraseñas de un programa
 
 Todos los programas escritos por los alumnos estan basados en este:
 
-<pre lang="c">#include &lt;stdio.h>    // para printf()
+{% highlight c %}>#include &lt;stdio.h>    // para printf()
 #include &lt;stdlib.h>   // para exit()
 #include &lt;string.h> // para strncmp()/strlen()
 #include &lt;sys/time.h>   // para gettimeofday(), struct timeval
@@ -72,12 +72,12 @@ int main(){
 
  defused();
 }
-</pre>
+{% endhighlight %}
 
-  
+
 <!--more-->
 
-  
+
 Al cual se le aplican los métodos deseados por el alumno para cifrar la contraseña que elija.
 
 Conseguí descifrar 2 programas en total, aunque de unos de ellos solo la contraseña alfanumérica, luego veremos la razón. Empecemos con el primer programa:
@@ -88,7 +88,7 @@ Puedes descargar el programa desde <a href="https://dl.dropbox.com/u/54765219/Bo
 
 Lo primero que hay que hacer es un estudio del comportamiento del programa usando **gdb** y **objdump -d**. Tras ejecutar el programa paso a paso con gdb y predecir cuales son los puntos críticos creé un archivo de configuración para gdb que me ayudara a facilitar el depurado:
 
-<pre lang="bash">b main
+{% highlight bash %}>b main
 b *0x804a034
 b *0x8048706
 b *0x80486ec
@@ -104,7 +104,7 @@ display /s $eax
 display /w (char*)$eax
 display (char*)0x804a034
 display /wx 0x804a03
-</pre>
+{% endhighlight %}
 
 Mediante el proceso de depurado, me dí cuenta que las instrucciones clave eran las siguientes; para la contraseña alfanumérica:
 
@@ -112,19 +112,19 @@ La dirección `0x804a034` es un puntero a la cadena de texto &#8220;**aeiouuuu *
 
 En algún punto del programa, se deben comparar la contraseña elegida con la introducida por el usuario con `strncmp`, en dicho punto, la contraseña debe estar decodificada. A base de depurar se observa que ese proceso comienza aquí:
 
-<pre lang="asm">80486c9:  0f b6 05 34 a0 04 08    movzbl 0x804a034,%eax
+{% highlight asm %}>80486c9:  0f b6 05 34 a0 04 08    movzbl 0x804a034,%eax
 80486d0: 83 c0 01                add    $0x1,%eax
 80486d3:  a2 34 a0 04 08          mov    %al,0x804a034
-</pre>
+{% endhighlight %}
 
 Estas tres instrucciones extraen la primera letra de la contraseña; la **a**, le suman 1 y la vuelven a colocar en la cadena de texto, quedando &#8220;**beiouuuu **&#8220;.
 
 Luego en este fragmento:
 
-<pre lang="asm">80486d8:    0f b6 05 36 a0 04 08    movzbl 0x804a036,%eax
+{% highlight asm %}>80486d8:    0f b6 05 36 a0 04 08    movzbl 0x804a036,%eax
 80486df: 83 e8 02                sub    $0x2,%eax
 80486e2:  a2 36 a0 04 08          mov    %al,0x804a036
-</pre>
+{% endhighlight %}
 
 Se extrae la **i** y resta dos, quedando **g**, la tercera instrucción sustituye la **i** en la cadena, obteniendo como resultado &#8220;**begouuuu **&#8220;.
 
@@ -132,42 +132,42 @@ No se realizan más modificaciones a la contraseña almacenada en el programa. A
 
 La contraseña introducida por el usuario se encuentra en 0x28(%esp), el programa resta uno al segundo caracter de la contraseña introducida y lo sustituye:
 
-<pre lang="asm">80486e7:    0f b6 44 24 29          movzbl 0x29(%esp),%eax ; con 0x29(%esp) obtiene el segundo caracter
+{% highlight asm %}>80486e7:    0f b6 44 24 29          movzbl 0x29(%esp),%eax ; con 0x29(%esp) obtiene el segundo caracter
 80486ec:   83 e8 01                sub    $0x1,%eax
 80486ef:  88 44 24 29             mov    %al,0x29(%esp)
-</pre>
+{% endhighlight %}
 
 Luego, hace algo parecido con la cuarta letra de la contraseña introducida por el usuario:
 
-<pre lang="asm">80486f3:   0f b6 44 24 2b          movzbl 0x2b(%esp),%eax
+{% highlight asm %}>80486f3:   0f b6 44 24 2b          movzbl 0x2b(%esp),%eax
 80486f8:    83 c0 01                add    $0x1,%eax
 80486fb:  88 44 24 2b             mov    %al,0x2b(%esp)
-</pre>
+{% endhighlight %}
 
 La diferencia es que esta vez suma uno, en lugar de restar.
 
 Llegados al punto donde se llama a strncmp, vemos claramente en la pila qué parámetros se le están pasando:
 
-<pre lang="asm">2: x/32xw $esp
+{% highlight asm %}>2: x/32xw $esp
 0xffffd2f0:    0xffffd318  0x0804a034  0x0000000a  0xffffd3a4
 1: x/xw $eip  0x804871e &lt;strncmp>:  0xfffe01e8
-</pre>
+{% endhighlight %}
 
-<pre>(%esp)    [0xffffd318] -> puntero a la contraseña introducida por el usuario
+{% highlight bash %}(%esp)    [0xffffd318] -> puntero a la contraseña introducida por el usuario
    0x4(%esp) [0x0804a034] -> puntero a la contraseña del programa
    0x8(%esp) [0x0000000a] -> longitud que se quiere comparar (10).
-</pre>
+{% endhighlight %}
 
 Teniendo en cuenta las transformaciones hechas, la contraseña a introducir es **bfgnuuuu** . ya que &#8216;f&#8217;-1 = &#8216;e&#8217; y &#8216;n&#8217;+1=&#8217;o&#8217;, resultando **begouuuu**
 
 Una vez descubierta la contraseña alfanumérica, pasé a la numérica, que resultó ser bastante sencilla. Esta vez la clave de todo está en estas instrucciones:
 
-<pre lang="asm">804877a:  a1 40 a0 04 08          mov    0x804a040,%eax
+{% highlight asm %}>804877a:  a1 40 a0 04 08          mov    0x804a040,%eax
 804877f: 05 f4 01 00 00          add    $0x1f4,%eax
 8048784:    a3 40 a0 04 08          mov    %eax,0x804a040
 8048789: 8b 44 24 24             mov    0x24(%esp),%eax
 804878d:    05 c8 00 00 00          add    $0xc8,%eax
-</pre>
+{% endhighlight %}
 
 Se suma 500 (0x1f4) a la contraseña original, resultando 1500, y 200 (0xc8) a la contraseña que introduzca el usuario.  
 Haciendo la comparación de 1000+500 con PASSINTRODUCIDA+200, se deduce que la contraseña que se debe introducir es 1300.
@@ -178,7 +178,7 @@ Puedes descargar el programa desde <a href="https://dl.dropbox.com/u/54765219/Bo
 
 Como en la bomba anterior, despues de investigar un poco, creé un archivo de sesión para gdb con los puntos críticos:
 
-<pre lang="bash">b main
+{% highlight bash %}>b main
 b cambio
 b *0x804882a
 b begin
@@ -195,35 +195,35 @@ display /s $eax
 display /w (char*)$eax
 display (char*)0x804a034
 display /wx 0x804a034
-</pre>
+{% endhighlight %}
 
 Llegué a la siguiente conclusión:
 
 La contraseña codificada es **C4b3Z0n**, pero únicamente se comprueba la primera letra.  
 Si el usuario introduce como contraseña **C4b3Z0n**, la bomba explota, ya que en la función `cambio`, se comprueba que la primera letra de la contraseña no sea igual a **C**, de ser igual, se llama a la bomba:
 
-<pre lang="asm">movzbl (%eax),%eax
+{% highlight asm %}>movzbl (%eax),%eax
 cmp    $0x43,%al
 jne    80486a1 &lt;cambio+0x15>
 call   804860c &lt;boomb>
-</pre>
+{% endhighlight %}
 
 Llegados a este punto, si no ha explotado, se compara la primera letra con &#8216;Q&#8217;, si la primera letra de la contraseña introducida es **&#8216;Q&#8217;** también, se cambia por **&#8216;c&#8217;**.  
 Todo lo mencionado anteriormente se hace dentro de la función cambio.  
 En resumen, la función cambio comprueba que la primera letra no sea **&#8216;C&#8217;**, si no es **&#8216;C&#8217;**, compara con **&#8216;Q&#8217;**, de ser **&#8216;Q&#8217;**, la cambia por una **&#8216;c&#8217;**, dicha **&#8216;c&#8217;**, la cambiará la función `change` por una **&#8216;C&#8217;**, concretamente aquí:
 
-<pre lang="asm">80486be: 0f b6 00                movzbl (%eax),%eax          ; Extrae la primera letra
+{% highlight asm %}>80486be: 0f b6 00                movzbl (%eax),%eax          ; Extrae la primera letra
     80486c1: 3c 63                   cmp    $0x63,%al            ; La compara con 'C'
     80486c3:    75 06                   jne    80486cb &lt;change+0x13>; Si no son iguales sale de la funcion
     80486c5:    8b 45 08                mov    0x8(%ebp),%eax       ; si son iguales carga la contraseña entera en eax
     80486c8:    c6 00 43                movb   $0x43,(%eax)         ; y sustituye la primera letra por 'C'
-</pre>
+{% endhighlight %}
 
 Por tanto, la contraseña que el usuario debe introducir es **c4b3Z0n**, para que al realizar el cambio quede como C4b3Z0n. Si se introduce por contraseña **Q4b3Z0n**, se reemplaza por **c4b3Z0n** que es distinto de **C4b3Z0n**, detonando la bomba.
 
 En este ejecutable no conseguí descubrir la contraseña numérica por la siguiente razón, el código que realiza las operaciones es:
 
-<pre lang="asm">080486cd <code>:
+{% highlight asm %}>080486cd <code>:
  80486cd:   55                      push   %ebp
  80486ce:  89 e5                   mov    %esp,%ebp
  80486d0: 83 ec 18                sub    $0x18,%esp
@@ -276,8 +276,9 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
  8048769:    8b 45 08                mov    0x8(%ebp),%eax
  804876c:    c9                      leave  
  804876d:  c3                      ret  
-&lt;/pre>
-&lt;p>Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción &lt;code>div</code> a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.</p>
+{% endhighlight %}
+
+Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción &lt;code>div</code> a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.</p>
 
 
 <h4>
@@ -290,7 +291,7 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
 </p>
 
 
-<pre lang="c" >
+{% highlight c %} >
 /*
  ============================================================================
  Name        : Boom.c
@@ -398,7 +399,7 @@ int main(_, v) double *v; int _;{
 
   return 0;
 }
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -416,7 +417,7 @@ int main(_, v) double *v; int _;{
 </p>
 
 
-<pre lang="asm">
+{% highlight asm %}>
 08048870 &lt;decode>:
  8048870: 53                      push   %ebx
  8048871:  83 ec 18                sub    $0x18,%esp
@@ -432,9 +433,9 @@ int main(_, v) double *v; int _;{
  8048896: 75 f0                   jne    8048888 &lt;decode+0x18>
  8048898: 83 c4 18                add    $0x18,%esp
  804889b:    5b                      pop    %ebx
- 804889c:  c3                      ret    
+ 804889c:  c3                      ret
  804889d:  8d 76 00                lea    0x0(%esi),%esi
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -442,13 +443,13 @@ int main(_, v) double *v; int _;{
 </p>
 
 
-<pre lang="asm">
+{% highlight asm %}>
  8048888:  0f b6 4c 53 01          movzbl 0x1(%ebx,%edx,2),%ecx
  804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
  8048890: 83 c2 01                add    $0x1,%edx
  8048893: 83 fa 0a                cmp    $0xa,%edx
  8048896: 75 f0                   jne    8048888 &lt;decode+0x18>
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -461,9 +462,9 @@ int main(_, v) double *v; int _;{
 </p>
 
 
-<pre lang="asm">
+{% highlight asm %}>
 80486d5: 89 54 24 04             mov    %edx,0x4(%esp)
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -482,14 +483,14 @@ int main(_, v) double *v; int _;{
 </p>
 
 
-<pre lang="asm">
+{% highlight asm %}>
  80486b0:  0f be 08                movsbl (%eax),%ecx
  80486b3:   83 c0 01                add    $0x1,%eax
  80486b6: 31 ca                   xor    %ecx,%edx
  80486b8: 3d 90 89 04 08          cmp    $0x8048990,%eax
  80486bd:   75 f1                   jne    80486b0 &lt;main+0x160>
  80486bf:  81 c2 61 1e 00 00       add    $0x1e61,%edx
-</pre>
+{% endhighlight %}
 
 
 <p>
@@ -513,7 +514,7 @@ int main(_, v) double *v; int _;{
     		Download &ldquo;Práctica 3 - Bomba Digital - Desensambladores&rdquo;		<small> &ndash; Downloaded 498 times &ndash; 371 kB</small>
     	</a>
   </p>
-  
+
   <br />
   <em>Calculating modulo in assembly</em> <strong>|</strong> <a href="http://stackoverflow.com/questions/4361979/calculating-modulo-in-assembly" target="_blank">Visitar sitio</a><br />
   <em>Obfuscation</em> <strong>|</strong> <a href="http://www.brandonparker.net/code_obf.php" target="_blank">Visitar sitio</a>
@@ -535,35 +536,5 @@ int main(_, v) double *v; int _;{
     </ul>
   </div>
 </div>
-
-<span id="socialbottom" class="highlight style-2">
-
-<p>
-  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
-</p>
-
-<h6>
-  Únete a la comunidad
-</h6>
-
-<div class="iconsc hastip" title="2240 seguidores">
-  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
-</div>
-
-<div class="iconsc hastip" title="2452 fans">
-  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
-</div>
-
-<div class="iconsc hastip" title="0 +1s">
-  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Repositorios">
-  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Feed RSS">
-  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
-</div></span>
 
  [1]: /programacion/desafio-de-ingenieria-inversa-en-c/

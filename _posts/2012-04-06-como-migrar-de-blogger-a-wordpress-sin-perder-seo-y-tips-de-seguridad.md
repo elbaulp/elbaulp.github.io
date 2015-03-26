@@ -101,7 +101,7 @@ Una de las características de <a href="http://wordpress.org/extend/plugins/wp-s
 
 El robots.txt es algo a tener en cuenta y que debe colocarse en la raíz de la instalación de wordpress. El siguiente archivo es una combinación de los ejemplos que encontré en <a href="http://www.zonaw.com/robots-txt-optimizado-para-wordpress" target="_blank">zonaw</a> y <a href="http://ayudawordpress.com/robotstxt-perfecto-para-wordpress/" target="_blank">ayudawordpress</a>:
 
-<pre lang="bash"># Sitemap
+{% highlight bash %}># Sitemap
 
 Sitemap: http://tuweb.com/feed
 
@@ -189,13 +189,13 @@ Crawl-delay: 50
 User-agent: msnbot
 Crawl-delay: 30
 User-agent: Slurp
-Crawl-delay: 10</pre>
+Crawl-delay: 10{% endhighlight %}
 
 ### .htaccess
 
 Por último, el htaccess es algo importante también, os dejo un ejemplo de configuración, muchas de las reglas están generadas por plugins:
 
-<pre lang="bash">SetEnv PHP_VER 5_TEST
+{% highlight bash %}>SetEnv PHP_VER 5_TEST
 SetEnv REGISTER_GLOBALS 0
 
 #long permalinks
@@ -516,7 +516,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 
-# END WordPress</pre>
+# END WordPress{% endhighlight %}
 
 <div class="sharedaddy">
   <div class="sd-content">

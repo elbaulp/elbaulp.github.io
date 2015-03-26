@@ -20,7 +20,7 @@ Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asi
 
 Los ficheros que almacenan el laberinto tienen el siguiente formato:
 
-<pre lang="bash">7 7
+{% highlight bash %}>7 7
 ppppppp
 pellllp
 plplppp
@@ -28,7 +28,7 @@ plplllp
 plplppp
 pllllsp
 ppppppp
-</pre>
+{% endhighlight %}
 
 Donde:
 
@@ -42,7 +42,7 @@ Donde:
 
 Dado esto, es posible implementar un programa que lea el fichero, cree una matriz representando el laberinto e intente resolverlo. Esto se podría hacer con:
 
-<pre lang="cpp">#include &lt;iostream>
+{% highlight cpp %}>#include &lt;iostream>
 #include &lt;vector>
 
 #include "Laberinto.h"
@@ -60,13 +60,13 @@ int main()
     lab.printLabResuelto();
     return 0;
 }
-</pre>
+{% endhighlight %}
 
 ### Ejemplo de uso
 
 La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almacenando el tamaño que tiene y se construye un laberinto de dicho tamaño y cambiando la representación del laberinto, es decir `Laberinto lab('+',' ','#',FIL,COL);` crea un laberinto de tamaño *FILxCOL*, cuya representación será un *#* para el camino que conduce a la salida, </em>+</em> para las paredes y un espacio en blanco para las celdas libres. La siguiente línea imprime el laberinto sin resolver, quedando así:
 
-<pre lang="bash">./bin/laberinto &lt; labs/lab_peque.txt 
+{% highlight bash %}>./bin/laberinto &lt; labs/lab_peque.txt 
 +++++++
 +e    +
 + + +++
@@ -74,11 +74,11 @@ La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almac
 + + +++
 +    s+
 +++++++
-</pre>
+{% endhighlight %}
 
 Las dos siguientes líneas resuelven e imprimen el laberinto con el camino hacia la salida:
 
-<pre lang="cpp">LABERINTO RESUELTO: 
+{% highlight cpp %}>LABERINTO RESUELTO: 
 +++++++
 +e##  +
 + +#+++
@@ -86,22 +86,22 @@ Las dos siguientes líneas resuelven e imprimen el laberinto con el camino hacia
 + +#+++
 +  ##s+
 +++++++
-</pre>
+{% endhighlight %}
 
 En caso de que el laberinto no tenga solución se informa de ello:
 
-<pre lang="bash">./bin/laberinto &lt; labs/lab_sinsolucion.txt 
+{% highlight bash %}>./bin/laberinto &lt; labs/lab_sinsolucion.txt 
 +++++++
 +e  +s+
 +++++++
 El laberinto no tiene salida
-</pre>
+{% endhighlight %}
 
 ### Clase Laberinto
 
 La definición del Laberinto es la siguiente:
 
-<pre lang="cpp">#include &lt;vector>
+{% highlight cpp %}>#include &lt;vector>
 
 class Laberinto{
 
@@ -137,13 +137,13 @@ public:
     char getShapeL() const    { return (*this).shapeL; }
     char getShapeC() const    { return (*this).shapeC; }
 };
-</pre>
+{% endhighlight %}
 
 En `path` se almacena el camino recorrido hasta el momento. Internamente, se crea una matriz de igual tamaño que el laberinto, pero *booleana* que irá llevando la cuenta de los lugares por los que ha pasado.
 
 La implementación:
 
-<pre lang="cpp">#include &lt;iostream>
+{% highlight cpp %}>#include &lt;iostream>
 
 #include "Laberinto.h"
 
@@ -254,11 +254,11 @@ void Laberinto::addPathToLab(unsigned int i, unsigned int j){
            &#038;&#038; (*this).laberinto[i][j] != 'e' &#038;&#038; (*this).laberinto[i][j] != 's')
             (*this).laberinto[i][j] = getShapeC();
 }
-</pre>
+{% endhighlight %}
 
 ### Más ejemplos
 
-<pre lang="latex">./bin/laberinto &lt; labs/laberinto1.txt 
+{% highlight latex %}>./bin/laberinto &lt; labs/laberinto1.txt 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e  +     +       +               +     +               +             +   +   + +
 + +++ + +++ +++ +++ +++++++++++ +++ +++ + +++ +++++++++ + +++++ +++++ + + + + + +
@@ -369,7 +369,7 @@ LABERINTO RESUELTO:
 +   +###  +###  + +###  +#########      +###      +#####          +###+#########+#######+#####+####s+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-</pre>
+{% endhighlight %}
 
 #### Referencias
 

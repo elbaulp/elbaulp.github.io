@@ -51,17 +51,17 @@ Luego, por otro lado, tienes que asegurarte que **tu servidor web canaliza todas
 
 En Apache:
 
-<pre lang="bash">RewriteEngine On
+{% highlight bash %}>RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
-</pre>
+{% endhighlight %}
 
 En [nginx][10]:
 
-<pre lang="bash">location / {
+{% highlight bash %}>location / {
    try_files   $uri $uri/ /index.php;
 }
-</pre>
+{% endhighlight %}
 
 ¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de `AgendaPHPGuay` para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.
 

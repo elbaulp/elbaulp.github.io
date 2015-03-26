@@ -32,7 +32,7 @@ Un evento es simplemete algo que pasa. Como presionar una tecla, mover el ratón
   
 <!--more-->
 
-<pre>//The headers
+{% highlight bash %}//The headers
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include &lt;string>
@@ -45,17 +45,17 @@ const int SCREEN_BPP = 32;
 //The surfaces
 SDL_Surface *image = NULL;
 SDL_Surface *screen = NULL;
-</pre>
+{% endhighlight %}
 
 Arriba tenemos lo que hemos ido aprendiendo hasta ahora, las cabeceras, constantes e imágenes.
 
-<pre>//Variable de tipo evento, para posteriormente manejarlo.
+{% highlight bash %}//Variable de tipo evento, para posteriormente manejarlo.
 SDL_Event event;
-</pre>
+{% endhighlight %}
 
 Una estructura SDL_Event almacena los datos del evento para que lo manejemos.
 
-<pre>SDL_Surface *load_image( std::string filename ) 
+{% highlight bash %}SDL_Surface *load_image( std::string filename ) 
 {
     //The image that's loaded
     SDL_Surface* loadedImage = NULL;
@@ -92,11 +92,11 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination 
     //Blit the surface
     SDL_BlitSurface( source, NULL, destination, &#038;offset );
 }
-</pre>
+{% endhighlight %}
 
 Nuestras funciones para cargar y fusionar las imágenes, no ha cambiado nada con respecto al [tutorial 2][2].
 
-<pre>bool init()
+{% highlight bash %}bool init()
 {
     //Initialize all SDL subsystems
     if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
@@ -119,11 +119,11 @@ Nuestras funciones para cargar y fusionar las imágenes, no ha cambiado nada con
     //If everything initialized fine
     return true;
 }
-</pre>
+{% endhighlight %}
 
 La función de inicialización, que inicializa SDL, configura la ventana fijando un título para la misma y devuelve false si ocurre algún error.
 
-<pre>bool load_files()
+{% highlight bash %}bool load_files()
 {
     //Load the image
     image = load_image( "x.png" );
@@ -137,11 +137,11 @@ La función de inicialización, que inicializa SDL, configura la ventana fijando
     //If everything loaded fine
     return true;    
 }
-</pre>
+{% endhighlight %}
 
 Función para cargar la imagen. Devuelve false si ocurre algún error.
 
-<pre>void clean_up()
+{% highlight bash %}void clean_up()
 {
     //Free the image
     SDL_FreeSurface( image );
@@ -149,19 +149,19 @@ Función para cargar la imagen. Devuelve false si ocurre algún error.
     //Quit SDL
     SDL_Quit();    
 }
-</pre>
+{% endhighlight %}
 
 Función para borrar los datos de la memoria al terminar el programa.
 
-<pre>int main( int argc, char* args[] )
+{% highlight bash %}int main( int argc, char* args[] )
 {
     //Make sure the program waits for a quit
     bool quit = false;
-</pre>
+{% endhighlight %}
 
 Ésta es la función principal, donde creamos la variable que nos dirá cuando quiere el usuario cerrar la ventana. Al iniciar el programa, lógicamente la igualamos a false, ya que de lo contrario el programa finalizaría inmediatamente.
 
-<pre>//Initialize
+{% highlight bash %}//Initialize
     if( init() == false )
     {
         return 1;    
@@ -172,11 +172,11 @@ Función para borrar los datos de la memoria al terminar el programa.
     {
         return 1;    
     }
-</pre>
+{% endhighlight %}
 
 Llamamos a las funciones de inicialización y carga de imágenes que definimos anteriormente.
 
-<pre>//Apply the surface to the screen
+{% highlight bash %}//Apply the surface to the screen
     apply_surface( 0, 0, image, screen );
     
     //Update the screen
@@ -184,21 +184,21 @@ Llamamos a las funciones de inicialización y carga de imágenes que definimos a
     {
         return 1;    
     }
-</pre>
+{% endhighlight %}
 
 Con éste fragmento de código mostramos la imágen en pantalla.
 
-<pre>//While the user hasn't quit
+{% highlight bash %}//While the user hasn't quit
     while( quit == false )
     {
-</pre>
+{% endhighlight %}
 
 Comenzamos el bucle principal, el cual seguirá funcionando hasta que el usuario fije la variable <var>quit</var> a true.
 
-<pre>//While there's an event to handle
+{% highlight bash %}//While there's an event to handle
         while( SDL_PollEvent( &#038;event ) )
         {
-</pre>
+{% endhighlight %}
 
 En SDL cuando ocurre un evento, se coloca en la cola de eventos. Ésta cola de eventos contiene los datos de los eventos para cada evento que sucede.   
 Por ejemplo si fuera a presionar un botón del ratón, mover el cursor y a continuación, presionar una tecla del teclado, la cola de eventos se vería así:
@@ -215,7 +215,7 @@ Lo que <var>SDL_PollEvent()</var> hace es sacar un evento de la cola y guardar s
 
 Por lo tanto este código es recoger datos de los eventos **mientras** haya en la cola.
 
-<pre>//If the user has Xed out the window
+{% highlight bash %}//If the user has Xed out the window
             if( event.type == SDL_QUIT )
             {
                 //Quit the program
@@ -223,17 +223,17 @@ Por lo tanto este código es recoger datos de los eventos **mientras** haya en l
             }    
         }
     }
-</pre>
+{% endhighlight %}
 
 Cuando el usuario clica en la **X** de la ventana, el tipo de evento que se genera es SDL_QUIT. Pero al hacer esto no implica que el programa termine, todo lo que hace este evento es informarnos que el usuario quiere salir del programa.  
 Ahora que sabemos que el usuario quiere finalizar la ejecución del programa, asignamos el valor <var>true</var> a la variable <var>quit</var>, lo que romperá la ejecución del bucle <var>while</var> en el que nos encontramos.
 
-<pre>//Free the surface and quit SDL
+{% highlight bash %}//Free the surface and quit SDL
     clean_up();
         
     return 0;    
 }
-</pre>
+{% endhighlight %}
 
 Finalmente, llamamos a nuestra función clean_up() para que elimine las variables creadas por SDL.  
 Hay otras maneras de controlar eventos como SDL\_WaitEvent() y SDL\_PeepEvents(). Se puede encontrar más información sobre esto en la documentación de SDL.

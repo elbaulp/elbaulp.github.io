@@ -20,7 +20,7 @@ En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremo
 
 Editamos el archivo *functions.php* de nuestro tema y añadimos el siguiente código:
 
-<pre lang="php">function show_category_posts( $atts ){
+{% highlight php %}>function show_category_posts( $atts ){
         extract(shortcode_atts(array(
                 'cat'=> ''
         ), $atts));
@@ -46,7 +46,7 @@ Editamos el archivo *functions.php* de nuestro tema y añadimos el siguiente có
         return $content;
 }
 add_shortcode('mostrar_cat', 'show_category_posts');
-</pre>
+{% endhighlight %}
 
 ### Entendiendo el código
 
@@ -66,8 +66,8 @@ Para usar el shortcode debemos conocer el **id** de la categoría a mostrar, o r
 
 ### Ejemplo de uso
 
-<pre>&#91;mostrar_cat cat="1"]
-</pre>
+{% highlight bash %}&#91;mostrar_cat cat="1"]
+{% endhighlight %}
 
 #### Referencias
 

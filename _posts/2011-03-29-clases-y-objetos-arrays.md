@@ -34,7 +34,7 @@ array.
   
 <!--more-->
 
-<pre><span class="comentario">//se reserva espacio en memoria para un array de 3 elementos</span>
+{% highlight bash %}<span class="comentario">//se reserva espacio en memoria para un array de 3 elementos</span>
 int* ip=new int[3];
 <span class="comentario">//se inicializan los elementos del array</span>
 ip[0]=1;
@@ -43,17 +43,17 @@ ip[3]=3;
 <span class="comentario">//... se usa el array</span>
 <span class="comentario">//se libera la porción de memoria reservada</span>
 delete[] ip;
-</pre>
+{% endhighlight %}
 
 Lo mismo podremos hacer para un array de caracteres, que puede guardar hasta  
 un máximo de 20.  
 
 
-<pre>char* cp= new char[20];
+{% highlight bash %}char* cp= new char[20];
 strcpy(cp, “esto es una cadena”);
 <span class="comentario">//... se usa el array</span>
 delete[] cp;
-</pre>
+{% endhighlight %}
 
 
 
@@ -64,7 +64,7 @@ Luego inicializamos dichos objetos, llamando al constructor. Hacemos uso de los
 objetos, y por último, liberamos el espacio de memoria reservada.  
 
 
-<pre><span class="comentario">//reserva espacio para tres elementos</span>
+{% highlight bash %}<span class="comentario">//reserva espacio para tres elementos</span>
 <b>Punto* objs= new Punto[3];</b>
 <span class="comentario">//inicializa los elementos del array</span>
 objs[0]=Punto();
@@ -75,7 +75,7 @@ objs[1].mostrar();
 <span class="comentario">//destructor del array</span>
 delete[] objs;
 <span class="comentario">//llama tres veces al destructor</span>
-</pre>
+{% endhighlight %}
 
 
 
@@ -86,7 +86,7 @@ Punto. Luego asignamos las direcciones de los objetos creados a los elementos de
 array, hacernos uso de los punteros a objetos, y por último, liberamos el espacio de  
 memoria reservada, destruyendo cada elemento del array, y el array mismo.
 
-<pre><span class="comentario">//reserva espacio para tres elementos</span>
+{% highlight bash %}<span class="comentario">//reserva espacio para tres elementos</span>
 <b>Punto** pObjs=new Punto*[3];</b>
 <span class="comentario">//inicializa los elementos del array</span>
 pObjs[0l=new Punto(10, 20);
@@ -98,7 +98,7 @@ pObjs[2]=new Punto(‘@’, 60, 10);
 for (int i=0; i&lt;3; i++)
    delete pObjs[i];
 delete[] pObjs;
-</pre>
+{% endhighlight %}
 
 
 
@@ -111,17 +111,17 @@ las reglas de la aritmética de punteros, si se añade un entero i al nombre de 
 resultado es un puntero al elemento i del array: esto es, objs+i es equivalente a  
 &objs[i). Esta equivalencia la podemos expresar mediante la regla:
 
-<pre><i>*(objs+i) es equivalente a objs[i]</i></pre>
+{% highlight bash %}<i>*(objs+i) es equivalente a objs[i]</i>{% endhighlight %}
 
 Podemos usar los operadores unarios ++ y &#8212; para acceder a elementos  
 consecutivos del array objs del siguiente modo:  
 
 
-<pre><span class="comentario">//objs es objs[0]</span>
+{% highlight bash %}<span class="comentario">//objs es objs[0]</span>
 objs++;          <span class="comentario">//avanza a objs[1]</span>
 objs++;          <span class="comentario">//avanza a objs[2]</span>
 objs--;          <span class="comentario">//retrocede a objs[1]</span>
-</pre>
+{% endhighlight %}
 
 
 

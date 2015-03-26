@@ -36,16 +36,16 @@ En general, los índices se crean sobre todas las claves externas y sobre los cr
   
 <!--more-->
 
-<pre lang="sql">CREATE [unique] INDEX nombre_indice
+{% highlight sql %}>CREATE [unique] INDEX nombre_indice
 ON nombre_tabla (columnas [{asc | desc}] [,.....])
 [TABLESPACE Nombre_Tablespace]
-</pre>
+{% endhighlight %}
 
 Ejemplo:
 
-<pre lang="sql"><span class="comentario">-- Creacion de un índice en una columna simple para hacer las consultas más rápidas</span>
+{% highlight sql %}><span class="comentario">-- Creacion de un índice en una columna simple para hacer las consultas más rápidas</span>
 CREATE INDEX emp_hiredate_idx ON employees (hire_date);
-</pre>
+{% endhighlight %}
 
 
 
@@ -53,7 +53,7 @@ CREATE INDEX emp_hiredate_idx ON employees (hire_date);
 
 Cuando se borra una tabla, automáticamente se borran los índices asociados a ella. Los índices ocupan espacio dentro de la BD como si de una tabla se tratara y por esa razón se aconseja tener solo como índices aquellas columnas por las cuales se realizan consultas de forma periódica. Para borrar un índice se utiliza la orden:
 
-<pre lang="sql">drop index nombre_indice;</pre>
+{% highlight sql %}>drop index nombre_indice;{% endhighlight %}
 
 
 
@@ -61,13 +61,13 @@ Cuando se borra una tabla, automáticamente se borran los índices asociados a e
 
 Las secuencias se utilizan para generar números de forma automática, sin embargo, esto no garantiza la ausencia de ‘huecos’: si se solicitan números a una secuencia y no se utilizan, estos valores se pierdan. 
 
-<pre lang="sql">CREATE SEQUENCE Nombre_secuencia
+{% highlight sql %}>CREATE SEQUENCE Nombre_secuencia
 [INCREMENT BY entero]
 [START WITH entero]
 [{MAXVALUE entero | NOMAXVALUE}]
 [{MINVALUE entero | NOMINVALUE}]
 [{CYCLE | NOCYCLE}] [{ORDER | NOODER}] 
-</pre>
+{% endhighlight %}
 
 
 
@@ -78,7 +78,7 @@ Las secuencias se utilizan para generar números de forma automática, sin embar
 
 Ejemplo:
 
-<pre lang="sql">CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
+{% highlight sql %}>CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
 
 <span class="comentario">-- Para usar la secuencia, primero hay que inicializarla con nextval</span>
 
@@ -93,7 +93,7 @@ INSERT INTO employees VALUES
 <span class="comentario">--Consultamos la tabla de trabajadores para comprobar el valor actual de la secuencia.</span>
 
 SELECT employee_id, last_name FROM employees WHERE last_name = 'Valdivia';
-</pre>
+{% endhighlight %}
 
 
 

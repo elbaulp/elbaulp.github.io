@@ -26,8 +26,8 @@ Es más sencillo descargar una copia de la base de datos para realizar las susti
 
 Ahora que tenemos la base de datos descargada, la descomprimimos y nos paramos a pensar qué expresión regular nos hace falta. En este caso, buscamos reemplazar URLs del tipo ***dominio.com/2011/12/nombre-artículo*** por otras del tipo ***dominio.com/nombre-articulo***. Es necesario usar antes el plugin para redireccionar los artículos de blogger a WordPress para que se creen los enlaces del tipo *dominio.com/nombre-articulo*. Con esto en mente, construimos la siguiente expresión regular:
 
-<pre lang="bash">elbauldelprogramador\.com\/\d+\/\d+\/((?:\w+-?)+)\.html
-</pre>
+{% highlight bash %}>elbauldelprogramador\.com\/\d+\/\d+\/((?:\w+-?)+)\.html
+{% endhighlight %}
 
 #### Explicación de la expresión regular
 

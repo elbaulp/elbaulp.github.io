@@ -26,7 +26,7 @@ Veamos primero el .h:
   
 <!--more-->
 
-<pre lang="cpp" >/**
+{% highlight cpp %} >/**
   * @file imagenES.h
   * @brief Fichero cabecera para la E/S de imágenes
   *
@@ -131,11 +131,11 @@ bool EscribirImagenPGM (const char nombre[], const unsigned char datos[], int f,
 #endif
 
 /* Fin Fichero: imagenES.h */
-</pre>
+{% endhighlight %}
 
 Y el cpp:
 
-<pre lang="cpp" >/**
+{% highlight cpp %} >/**
   * @file imagenES.cpp
   * @brief Fichero con definiciones para la E/S de imágenes
   *
@@ -281,7 +281,7 @@ bool LeerImagenPNG (const char nombre[], int&#038; filas, int&#038; columnas){
 
 /* Fin Fichero: imagenES.cpp */
 
-</pre>
+{% endhighlight %}
 
 Podemos usar *TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas)*, ella se encargará de llamar a las demás en el orden adecuado. Expliquemos el flujo de ejecución tras llamarla:
 
@@ -293,7 +293,7 @@ Una vez detectada la imagen, se llama a **LeerCabecera (ifstream& f, int& filas,
 
 En lugar de usar la función *TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas)* se puede usar también *bool LeerImagenPNG (const char nombre[], int& filas, int& columnas* veamos un ejemplo completo:
 
-<pre lang="cpp" >/**
+{% highlight cpp %} >/**
  * @file main.cpp
  * @brief Fichero principal encargado de ocultar el mensaje
  *
@@ -324,11 +324,11 @@ int main(int argc, char *argv[]) {
     cout &lt;&lt; "Tipo imagen: " &lt;&lt; tipo &lt;&lt; endl;
     return 0;
 }
-</pre>
+{% endhighlight %}
 
 Cuya salida es:
 
-<pre lang="bash" >hkr-> ls
+{% highlight bash %} >hkr-> ls
 imagenESP.cpp  imagenESP.h  main  main.cpp  Makefile  s.png
 [~/Documents/Grado Ing.Informatica/MP/Practica 3/mp_grado/PNG]
 hkr-> g++ -Wall -I./ *.cpp -o main
@@ -339,7 +339,7 @@ Tipo imagen: 3
 Probando con LeerImagenPNG: INFO: La imagen tiene 1600 pixels de ancho y 1000 pixels de alto.
 Tipo imagen: 3
 
-</pre>
+{% endhighlight %}
 
 * * *Información PNG | 
 

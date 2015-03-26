@@ -25,11 +25,11 @@ categories:
   Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:
 </p>
 
-<pre>keywords=$keywords`<span class="bash">ls</span> '<em>Commands directory</em>'`</pre>
+{% highlight bash %}keywords=$keywords`<span class="bash">ls</span> '<em>Commands directory</em>'`{% endhighlight %}
 
 
 
-<pre class="ejemplo"><span class="path">#!/bin/bash</span>
+{% highlight bash %}<span class="path">#!/bin/bash</span>
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 <span class="bash">case</span> $? in
@@ -56,7 +56,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
-</pre></p> 
+{% endhighlight %}</p> 
 
 <div class="sharedaddy">
   <div class="sd-content">

@@ -27,7 +27,7 @@ He estado un tiempo intentando instalar unos script hechos en javascript, para r
 Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje.  
 <span class="fullpost"> <br /> Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.<br /> Aqui esta el codigo:</p> 
 
-<pre class="ejemplo"><span class="path">#!/bin/bash</span>
+{% highlight bash %}<span class="path">#!/bin/bash</span>
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 <span class="bash">case</span> $? <span class="bash">in</span>
@@ -50,7 +50,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
-</pre>
+{% endhighlight %}
 
 <p>
   <b>Voy a explicar un poco el código:</b><br /> La variable <em>keyWords</em> contiene las palabras claves de c++, menos &#8220;class&#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..
@@ -59,7 +59,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 <p>
   Las dos siguientes lineas 
   
-  <pre>sed "s/^#include..... y sed "s/^#define...</pre>
+  {% highlight bash %}sed "s/^#include..... y sed "s/^#define...{% endhighlight %}
   
   <p>
     buscan el patrón #define o #include, al principio de cada linea del texto, esto se indica con <em>^</em>, y lo reemplaza con su estilo correspondiente, para formatear el texto.<br /> Una vez entramos al for, se aplica básicamente el mismo procedimiento que para define e include, pero con cada palabra de la variable keyWords.

@@ -30,22 +30,22 @@ Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el direc
   
 <!--more-->
 
-<pre lang="xml">&lt;rootelem1>
+{% highlight xml %}>&lt;rootelem1>
    &lt;subelem1>
       Hello World from an xml sub element
    &lt;/subelem1>
 &lt;/rootelem1>
-</pre>
+{% endhighlight %}
 
 Como hace con cualquier otro fichero XML de recursos, el AAPT compila este fichero antes de colocarlo en el paquete de la aplicación. Ahora necesitamos usar una instancia de *XmlPullParser* para poder parsear el archivo. Para obtener la instancia de *XmlPullParser* usando el siguiente código desde cualquier contexto (incluyendo una activity):
 
-<pre lang="java">Resources res = activity.getResources();
+{% highlight java %}>Resources res = activity.getResources();
 XmlResourceParser xpp = res.getXml(R.xml.test);
-</pre>
+{% endhighlight %}
 
 El *XmlResourceParser* devuelto es una instancia de *XmlPullParser*, y también implementa java.util.AttributeSet. En el siguiente fragmento de código se muestra como leer el fichero:
 
-<pre lang="java">private String getEventsFromAnXMLFile(Context activity)
+{% highlight java %}>private String getEventsFromAnXMLFile(Context activity)
  throws XmlPullParserException, IOException
  {
     StringBuffer sb = new StringBuffer();
@@ -77,7 +77,7 @@ El *XmlResourceParser* devuelto es una instancia de *XmlPullParser*, y también 
      sb.append("n******End document");
      return sb.toString();
  }//eof-function
-</pre>
+{% endhighlight %}
 
 Lo que hacemos en el código de arriba es obtener el XmlPullParser, usarlo para navegar a través de los elementos del archivo y usar métodos adicionales de XmlPullParser para acceder a detalles de los elementos XML. Para ejecutar este código, se debe crear un archivo XML como el mostrado anteriormente y llamar al método *getEventsFromAnXMLFile* desde cualquier menú o botón. Devolverá un string, el cual se podrá usar para mostrarlo por el Log usando el método de debug Log.d
 

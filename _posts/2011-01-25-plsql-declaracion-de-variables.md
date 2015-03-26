@@ -27,7 +27,7 @@ tags:
 
 Las variables deben declararse dentro de la sección DECLARE y deben seguir la siguiente sintaxis:
 
-<pre lang="plsql">Nombre_variable [CONSTANT] TIPO [NOT NULL] [:= inicialización];</pre>
+{% highlight sql %}>Nombre_variable [CONSTANT] TIPO [NOT NULL] [:= inicialización];{% endhighlight %}
 
 Cualquier variable que se declare y no se inicialice tiene por defecto el valor NULL. Los tipos posibles son todos aquellos válidos para SQL añadiendo algunos propios de PL/SQL. Para más información sobre los tipos propios de PL/SQL consultar el PL/SQL User’s Guide and Referente. Podemos hacer que una variable nunca tome valores nulos utilizando la cláusula NOT NULL, en este caso, hay que inicializar la variable.  
   
@@ -38,16 +38,16 @@ La declaración de una constante es similar a la declaración de una variable, a
 
 Ejemplos:
 
-<pre lang="plsql">Interes NUMBER(5,3);
+{% highlight sql %}>Interes NUMBER(5,3);
 Descripcion VARCHAR2(50) := 'inicial';
 Fecha_max DATE;
 Contabilizado BOOLEAN := TRUE;
 PI CONSTANT REAL := 3.14159;
-</pre>
+{% endhighlight %}
 
 Otra forma de asignarle un valor a una variable es mediante la clausula INTO de la sentencia SELECT:
 
-<pre lang="plsql">SELECT COUNT(*) INTO xNumFac FROM FACTURAS;</pre>
+{% highlight sql %}>SELECT COUNT(*) INTO xNumFac FROM FACTURAS;{% endhighlight %}
 
 
 
@@ -57,12 +57,12 @@ Se puede declarar el tipo de una variable tomándolo de otro identificador, usan
 
 En la declaración: si tenemos una variable “ y ” por ejemplo, y está declarada de tipo char podemos declarar otra variable “j” de la siguiente forma:
 
-<pre lang="plsql">J y%type;</pre>
+{% highlight sql %}>J y%type;{% endhighlight %}
 
 Lo mismo ocurriría para declarar una estructura que ya esta declarada como por ejemplo una tabla que ya tenemos declarada:
 
-<pre lang="plsql">J employee%rowtype; <span class="comentario">--J tendría la misma estructura que la tabla employee.</span>
-</pre>
+{% highlight sql %}>J employee%rowtype; <span class="comentario">--J tendría la misma estructura que la tabla employee.</span>
+{% endhighlight %}
 
 En este caso para acceder a cada campo que tuviera el tabla employee mediante la variable J tendríamos que usar la estructura variable.nombre_campo.
 

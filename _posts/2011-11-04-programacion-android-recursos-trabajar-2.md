@@ -29,7 +29,7 @@ A diferencia de los archivos XML, colocados en ./res/xml, estos archivos no se c
   
 <!--more-->
 
-<pre lang="java">private String getStringFromRawFile(Context activity)
+{% highlight java %}>private String getStringFromRawFile(Context activity)
    throws IOException
    {
       Resources r = activity.getResources();
@@ -51,7 +51,7 @@ private String convertStreamToString(InputStream is)
       }
       return baos.toString();
    }
-</pre>
+{% endhighlight %}
 
 <p class="alert">
   Los nombres de ficheros con el mismo nombre base generan un error en el plugin ADT de eclipse.

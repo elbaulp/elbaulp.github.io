@@ -324,11 +324,11 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
         
         Otro ejemplo interesante es la expansión de la palabra clave **$Date$**. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:
         
-        <pre lang="ruby">#! /usr/bin/env ruby
+        {% highlight ruby %}>#! /usr/bin/env ruby
 data = STDIN.read
 last_date = `git log &#45;&#45;pretty=format:"%ad" &#45;1`
 puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
-</pre>
+{% endhighlight %}
         
         Puedes nombrar este script como **expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:  
         **git config filter.dater.smudge expand_date**  

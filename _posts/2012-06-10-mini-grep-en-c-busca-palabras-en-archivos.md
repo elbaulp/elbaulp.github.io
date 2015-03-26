@@ -21,26 +21,26 @@ tags:
 Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:  
 Para buscar una palabra:
 
-<pre lang="bash">grep palabra fichero1 &lt; [ficheros2...]></pre>
+{% highlight bash %}>grep palabra fichero1 &lt; [ficheros2...]>{% endhighlight %}
 
 Para buscar frases:
 
-<pre lang="bash">grep "palabra1 palabra2..." fichero1 &lt; [ficheros2...]></pre>
+{% highlight bash %}>grep "palabra1 palabra2..." fichero1 &lt; [ficheros2...]>{% endhighlight %}
 
 Un ejemplo de ejecución:
 
-<pre lang="bash">hkr-> ./grep cout max.php grep.cpp smtp.cpp 
+{% highlight bash %}>hkr-> ./grep cout max.php grep.cpp smtp.cpp 
 grep.cpp(22)     cout &lt; &lt; "Uso: grep &lt;palabra a buscar> &lt;firchero1 [&lt;ficheros...>]>" &lt; &lt; endl;
 grep.cpp(56)     cout &lt;&lt; nombre &lt;&lt; "(" &lt;&lt; nlinea &lt;&lt; ") t" &lt;&lt; remove_left_white_spaces(cadena) &lt;&lt; endl;
 smtp.cpp(56)     cout &lt;&lt; "socket createdn";
 smtp.cpp(75)    cout &lt;&lt; "Connectedn";
-</pre>
+{% endhighlight %}
 
 El programa nos indica el fichero en el que se encontró la palabra, el número de línea y la linea en sí.
 
 Código:
 
-<pre lang="cpp" >//============================================================================
+{% highlight cpp %} >//============================================================================
 // Name        : grep.cpp
 // Author      : Alex
 // Version     :
@@ -98,7 +98,7 @@ grep(const char* palabra, const char* nombre)
                cout &lt;&lt; nombre &lt;&lt; "(" &lt;&lt; nlinea &lt;&lt; ") t" &lt;&lt; remove_left_white_spaces(cadena) &lt;&lt; endl;
       }
    
-</pre>
+{% endhighlight %}
 
 </firchero1></fstream></string></iostream></firchero1>
 

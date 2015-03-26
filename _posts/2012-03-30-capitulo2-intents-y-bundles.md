@@ -45,7 +45,7 @@ Voy a explicar un poco por encima que hace cada fichero del proyecto:
 
 ### ./res/layout/main.xml
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" 
     android:layout_width="fill_parent"
@@ -67,13 +67,13 @@ Voy a explicar un poco por encima que hace cada fichero del proyecto:
     android:text="@string/cadena2" />
 &lt;/linearlayout>
 
-</pre>
+{% endhighlight %}
 
 En este layout principal vamos a añadir dos botones que nos servirán para lanzar las nuevas actividades que creemos después.
 
 ### ./res/layout/segunda_actividad.xml
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
  android:orientation="vertical" 
  android:layout_width="fill_parent"
@@ -96,13 +96,13 @@ En este layout principal vamos a añadir dos botones que nos servirán para lanz
   
 &lt;/linearlayout>
 
-</pre>
+{% endhighlight %}
 
 Este layout vamos a usarlo para mostrar los parámetros que pasemos de una actividad a otra
 
 ### ./src/mainActivity.java
 
-<pre lang="java">package com.elbauldelprogramador.actividades;
+{% highlight java %}>package com.elbauldelprogramador.actividades;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -172,7 +172,7 @@ public class mainActivity extends Activity {
    }
 }
 
-</pre>
+{% endhighlight %}
 
 En esta clase vamos a modificar el comportamiento de los botones, añadiendoles listeners para cuando el usuario haga click en ellos.
 
@@ -180,7 +180,7 @@ Por último, vamos a crear otras dos actividades, la primera (./src/activity1.ja
 
 ### ./src/activity1.java
 
-<pre lang="java">package com.elbauldelprogramador.actividades;
+{% highlight java %}>package com.elbauldelprogramador.actividades;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -216,11 +216,11 @@ public class Activity1 extends Activity {
 }
 
 
-</pre>
+{% endhighlight %}
 
 ### ./src/ParametrosActivity.java
 
-<pre lang="java">package com.elbauldelprogramador.actividades;
+{% highlight java %}>package com.elbauldelprogramador.actividades;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -268,7 +268,7 @@ public class ParametrosActivity extends Activity {
    }
 }
 
-</pre>
+{% endhighlight %}
 
 * * *
 

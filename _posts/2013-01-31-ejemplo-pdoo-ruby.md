@@ -21,7 +21,7 @@ La estructura del programa consta de tres clases, *Persona*, *Alumno* y *Asignat
   
 <!--more-->
 
-<pre lang="ruby">require 'date' #Para trabajar con fechas 
+{% highlight ruby %}>require 'date' #Para trabajar con fechas 
 require 'time'
 
 #Clase Persona
@@ -70,7 +70,7 @@ class Persona
 =end
   
 end
-</pre>
+{% endhighlight %}
 
 Comentemos brevemente la sintaxis:
 
@@ -86,7 +86,7 @@ Concretamente en esta clase se implementa la interfaz **Comparable**, usada para
 
 Echemos un vistazo a la clase Asignatura:
 
-<pre lang="ruby">class Asignatura
+{% highlight ruby %}>class Asignatura
   attr_accessor :codigo, :titulo, :creditosECTS
   
   def initialize(codigo, titulo, creditos)
@@ -101,13 +101,13 @@ Echemos un vistazo a la clase Asignatura:
   end
   
 end
-</pre>
+{% endhighlight %}
 
 En este caso hay poco que comentar, ya que es más sencilla que la anterior. Únicamente decir que se está redefiniendo el método `to_s`.
 
 Por último, veamos la clase Alumno, la cual hereda de Persona:
 
-<pre lang="ruby">require './Persona.rb'
+{% highlight ruby %}>require './Persona.rb'
 require './Asignatura'
 
 class Alumno &lt; Persona
@@ -178,18 +178,18 @@ class Alumno &lt; Persona
     asignaturas.clear
   end
 end
-</pre>
+{% endhighlight %}
 
 Varias cosas a comentar. Para indicar la herencia de una clase sobre otra, se usa el operador <, en este caso **Alumno** heredará de **Persona**.  
 Las variables estáticas se definen anteponiendo dos @@ al nombre de la variable. (`@@NUM_MAX_CRED = 60`).  
 `asignaturas` es un objeto HashMap sobre el que podemos iterar, un ejemplo es el método `getNumCreditos`:
 
-<pre lang="ruby">total = 0
+{% highlight ruby %}>total = 0
     asignaturas.each_pair do |k,v|
       total += asignaturas[k].creditosECTS
     end
 total
-</pre>
+{% endhighlight %}
 
 Este método itera sobre el HashMap sumando los créditos de las asignaturas. **k** corresponde a la clave del HashMap, y **v** al valor.  
 Cabe destacar la asuencia de la sentencia `return` en todos los métodos.
@@ -198,7 +198,7 @@ Por último, el manejo de excepciones. En esta clase, se lanzan varias. Por ejem
 
 Para probar el funcionamiento del programa, usaremos esta pieza de código:
 
-<pre lang="ruby">#!/usr/bin/env ruby
+{% highlight ruby %}>#!/usr/bin/env ruby
 
 require './Persona.rb'
 require './Alumno.rb'
@@ -259,22 +259,22 @@ if __FILE__ == $0
   puts alumno1.to_s
   
 end
-</pre>
+{% endhighlight %}
 
 En este fragmento de código se muestra un ejemplo del tratado de excepciones, en lugar del clásico `try{...}catch(){...}` en Ruby se usa la siguiente sintaxis:
 
-<pre lang="ruby">begin
+{% highlight ruby %}>begin
     alumno1.desmatricularAsignatura(1000)
   rescue Exception => e
     puts e.message
   end
-</pre>
+{% endhighlight %}
 
 Debido a la ausencia de tipos en Ruby, el lenguaje proporciona un mecanismo para comprobar si el objeto responde a un método concreto, es decir, si lo tiene implementado. Esto se logra con `nombreObjeto.respond_to?("NombreMétodo")`
 
 Vamos a ejecutar el programa:
 
-<pre lang="bash">hkr-> ruby Main.rb
+{% highlight bash %}>hkr-> ruby Main.rb
 Mostrando personas almacenadas en el sistema
 Persona [nombre=Alejandro Alcalde], fechaNacimiento=1991-02-10]
 Persona [nombre=Pepe], fechaNacimiento=1980-02-08]
@@ -291,7 +291,7 @@ ERROR: El alumno no esta matriculado en la asignatura 1000
 
 To string de Alumno, reutilizando el de persona
 Persona [nombre=Nombre del alum1], fechaNacimiento=1980-02-08]Esta estudiando Ing. Informatica, creditos 6
-</pre>
+{% endhighlight %}
 
 Como mencioné al principio, el código de ambos programas está disponible para descargar:
 

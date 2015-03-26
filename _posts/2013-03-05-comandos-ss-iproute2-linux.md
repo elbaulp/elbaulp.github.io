@@ -45,7 +45,7 @@ Aquí entra en acción el comando **ss**, sustituto de **netstat**. Este comando
 
 La función de **ss** es mostrar estadísticas de los sockets, mostrar información similar a netstat. Además, revela más información sobre TCP que otras herramientas. Las opciones más usadas son:
 
-<pre lang="bash">-n, --numeric
+{% highlight bash %}>-n, --numeric
               Do now try to resolve service names.
 
        -r, --resolve
@@ -77,7 +77,7 @@ La función de **ss** es mostrar estadísticas de los sockets, mostrar informaci
               lists obtaining summary from various sources. It is useful  when
               amount  of  sockets  is  so  huge  that parsing /proc/net/tcp is
               painful.
-</pre>
+{% endhighlight %}
 
 Para ver la lista completa de opciones escribe `ss --help`.
 
@@ -85,7 +85,7 @@ Algunos ejemplos prácticos:
 
 ### Mostrar todos los sockects a la escucha
 
-<pre lang="bash">$ ss -l
+{% highlight bash %}>$ ss -l
 State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port   
 LISTEN     0      128                                                           :::sunrpc                                                         :::*       
 LISTEN     0      128                                                            *:sunrpc                                                          *:*       
@@ -94,33 +94,33 @@ LISTEN     0      20                                                     127.0.0
 LISTEN     0      128                                                            *:17500                                                           *:*       
 LISTEN     0      128                                                            *:43076                                                           *:*       
 LISTEN     0      128                                                           :::50925                                                          :::*
-</pre>
+{% endhighlight %}
 
 Para entender el significado de las columnas, puedes dirigirte al artículo de [netstat][1].
 
 ### Mostrar conexiones ssh establecidas
 
-<pre lang="bash"># ss -o state stablished '( dport = :ssh or sport = :ssh)'
+{% highlight bash %}># ss -o state stablished '( dport = :ssh or sport = :ssh)'
 Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port   
 0      0                                                       192.168.1.36:60240                                                  207.97.227.239:ssh 
-</pre>
+{% endhighlight %}
 
 El parámetro **-o** permite establecer qué opciones mostrar, varios ejemplos son:
 
 ### Mostrar conexiones SMTP establecidas
 
-<pre lang="bash"># ss -o state established '( dport = :smtp or sport = :smtp )'
-</pre>
+{% highlight bash %}># ss -o state established '( dport = :smtp or sport = :smtp )'
+{% endhighlight %}
 
 ### Mostrar conexiones HTTP establecidas
 
-<pre lang="bash"># ss -o state established '( dport = :http or sport = :http )'
-</pre>
+{% highlight bash %}># ss -o state established '( dport = :http or sport = :http )'
+{% endhighlight %}
 
 En los casos anteriores se ha filtrado únicamente los paquetes TCP con estado *established*. Para mostrar otros estados puedes escribir:
 
-<pre lang="bash"># ss -4 state NOMBRE-DEL-FILTRO
-</pre>
+{% highlight bash %}># ss -4 state NOMBRE-DEL-FILTRO
+{% endhighlight %}
 
 Donde **-4** indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguientes valores:
 
@@ -143,17 +143,17 @@ Donde **-4** indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguie
 
 Por ejemplo:
 
-<pre lang="bash"># ss -4 state time-wait
-</pre>
+{% highlight bash %}># ss -4 state time-wait
+{% endhighlight %}
 
 ### Encontrar procesos locales conectados al servidor X (Servidor Gráfico)
 
-<pre lang="bash"># ss -x src /tmp/.X11-unix/*
-</pre>
+{% highlight bash %}># ss -x src /tmp/.X11-unix/*
+{% endhighlight %}
 
 ### Hacer coincidir direcciones remotas y puertos
 
-<pre lang="bash">ss dst ADDRESS_PATTERN
+{% highlight bash %}>ss dst ADDRESS_PATTERN
 
 ## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5## 
 ss dst 192.168.1.5
@@ -162,21 +162,21 @@ ss dst 192.168.1.5
 ss dst 192.168.1.5:http
 ss dst 192.168.1.5:smtp
 ss dst 192.168.1.5:443
-</pre>
+{% endhighlight %}
 
 Mostrar conexiones realizadas por una ip en el puerto http hacia nuestra máquina
 
-<pre lang="bash">ss dst 123.1.2.100:http
-</pre>
+{% highlight bash %}>ss dst 123.1.2.100:http
+{% endhighlight %}
 
 Es posible mostrar todas las conexiones realizadas por cualquier máquina, por el puerto http por ejemplo:
 
-<pre lang="bash"># ss dst *:http
-</pre>
+{% highlight bash %}># ss dst *:http
+{% endhighlight %}
 
 ### Hacer coincidir direcciones locales y puertos
 
-<pre lang="bash">ss src ADDRESS_PATTERN
+{% highlight bash %}>ss src ADDRESS_PATTERN
 ### Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###
 ## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##
 ss src 5.39.89.44
@@ -188,72 +188,72 @@ ss src 5.39.89.44:80
 ## smtp (25) port only ##
 ss src 5.39.89.44:smtp
 ss src 5.39.89.44:25
-</pre>
+{% endhighlight %}
 
 ### Mostrar el número y el tipo de conexiones activas
 
-<pre lang="bash">ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c 
-</pre>
+{% highlight bash %}>ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c 
+{% endhighlight %}
 
 ### Mostrar un resumen del estado de los sockets
 
-<pre lang="bash"># ss -s
-</pre>
+{% highlight bash %}># ss -s
+{% endhighlight %}
 
 ### Listar todos los puertos a la escucha junto con el PID del programa
 
-<pre lang="bash">ss -tlnp 
-</pre>
+{% highlight bash %}>ss -tlnp 
+{% endhighlight %}
 
 ### Configuración de la interfaz de red
 
 Antiguamente se usaba el comando ifconfig:
 
-<pre lang="bash"># ifconfig eth0 up
+{% highlight bash %}># ifconfig eth0 up
 # ifconfig eth0 192.168.1.1 netmask 255.255.255.0
-</pre>
+{% endhighlight %}
 
 En **iproute2** la configuración de interfaces de red se lleva a cabo con el subcomando **link**:
 
 ### Activar interfaz
 
-<pre lang="bash"># ip link set eth0 up
-</pre>
+{% highlight bash %}># ip link set eth0 up
+{% endhighlight %}
 
 Donde eth0 debe ser la interfaz de red a activar.
 
 ### Establecer dirección ip a la interfaz
 
-<pre lang="bash"># ip addr add 192.168.1.33/24 dev eth0
-</pre>
+{% highlight bash %}># ip addr add 192.168.1.33/24 dev eth0
+{% endhighlight %}
 
 Para comprobar la correcta configuración de la interfaz, muestra la información de dicha interfaz:
 
-<pre lang="bash"># ip addr ls
+{% highlight bash %}># ip addr ls
 # ip addr show
 # ip addr ls eth0
-</pre>
+{% endhighlight %}
 
 ### Enrutamiento
 
 La versión moderna del comando `route -n` o `netstat -r` es:
 
-<pre lang="bash"># ip ro
-</pre>
+{% highlight bash %}># ip ro
+{% endhighlight %}
 
 Para añádir o eliminar reglas de enrutamiento se usa `ip ro add|del destino via gateway`. Para añadir una nueva ruta a 10.0.0.0/16:
 
-<pre lang="bash"># ip ro add 10.0.0.0/16 via 192.168.0.1
+{% highlight bash %}># ip ro add 10.0.0.0/16 via 192.168.0.1
 # ip ro del 10.0.0.0/16 via 192.168.0.1
-</pre>
+{% endhighlight %}
 
 ### Encontrar la ruta hacia una dirección IP
 
 Para averiguar qué interfaz está usando tu pc, puedes usar el comando *ip route get IP*. Así:
 
-<pre lang="bash"># ip route get 5.39.89.44
+{% highlight bash %}># ip route get 5.39.89.44
 5.39.89.44 via 10.61.29.89 dev eth1  src 192.168.1.36 
-</pre>
+{% endhighlight %}
 
 está usando la interfaz eth1, gateway 10.61.29.89 y la interfaz tiene la ip privada 192.168.1.36
 

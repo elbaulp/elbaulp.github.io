@@ -40,16 +40,16 @@ En esta última parte de una serie de [4 artículos][1] en los que se ha ido exp
 
 Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3]
 
-<pre lang="xml">&lt;provider android:name=".SitesProvider"
+{% highlight xml %}>&lt;provider android:name=".SitesProvider"
    android:authorities="com.elbauldelprogramador.provider.FavSites" />
-</pre>
+{% endhighlight %}
 
   
 <!--more-->
 
 #### Añadir registros
 
-<pre lang="java">String tag = "Insertando registros...";
+{% highlight java %}>String tag = "Insertando registros...";
 ContentValues cv = new ContentValues();
 
 Log.d(tag,"Adding a site...");
@@ -69,24 +69,24 @@ Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 Log.d(tag,"site insert uri:" + uri);
 Uri insertedUri = cr.insert(uri, cv);
 Log.d(tag,"inserted uri:" + insertedUri);
-</pre>
+{% endhighlight %}
 
 #### Eliminar registros
 
-<pre lang="java">ContentResolver cr = getContentResolver();
+{% highlight java %}>ContentResolver cr = getContentResolver();
 Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 
 Log.d("Deleting site...","site delete uri:" + uri);
    cr.delete(uri, 
          "_ID=?", 
          new String[]{"5"});
-</pre>
+{% endhighlight %}
 
 #### Obtener el número de registros
 
 Para realizar esto, debemos crear un [cursor][4] y contar el número de registros de este:
 
-<pre lang="java">Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
+{% highlight java %}>Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 Cursor cur = managedQuery(uri,
                          null, // projection
                          null, // selection strings
@@ -94,13 +94,13 @@ Cursor cur = managedQuery(uri,
                          null);// sort order
 int numeroRegistros = cur.getCount();
 cur.close();
-</pre>
+{% endhighlight %}
 
 #### Mostrar la lista de sítios
 
 Muestra todo el contenido de la tabla sites de la base de datos.
 
-<pre lang="java">/**
+{% highlight java %}>/**
     * Función que imprime los resultados por el Log.
     */
    public void logOutput(Context context){
@@ -159,7 +159,7 @@ Muestra todo el contenido de la tabla sites de la base de datos.
       //cerrar el cursor
       c.close();
    }
-</pre>
+{% endhighlight %}
 
 Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los próximos artículos veremos en profundidad los intents.
 

@@ -21,13 +21,13 @@ Hace unas semanas hablé de [logstalgia][1], que visualiza las visitas a una web
   
 Para instalar el programa basta con ejecutar:
 
-<pre lang="bash"># aptitude install gource
-</pre>
+{% highlight bash %}># aptitude install gource
+{% endhighlight %}
 
 Una vez instalado, basta con ejecutar el programa y pasarle la ruta a la carpeta *.git* del repositorio que queramos visualizar:
 
-<pre lang="bash">gource /ruta/a/.git
-</pre>
+{% highlight bash %}>gource /ruta/a/.git
+{% endhighlight %}
 
 El resultado es algo como esto:
 
@@ -37,10 +37,10 @@ Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos
 
 Es posible grabar en vídeo la visualización de *gource* con el comando:
 
-<pre lang="bash">gource ruta/a/.git/  -1280x1024 --max-files 99999 --disable-progress --stop-at-end \
+{% highlight bash %}>gource ruta/a/.git/  -1280x1024 --max-files 99999 --disable-progress --stop-at-end \
        --user-scale 2 --highlight-all-users --output-ppm-stream - \
        | ffmpeg -y -b 3000K -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 gource.mp4
-</pre>
+{% endhighlight %}
 
 Donde:
 

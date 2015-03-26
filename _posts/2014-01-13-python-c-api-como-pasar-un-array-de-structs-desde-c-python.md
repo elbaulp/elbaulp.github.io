@@ -19,7 +19,7 @@ Hace algún tiempo estaba desarrollando un módulo para python, con el cual apre
 
 El struct a pasar puede ser cualquiera, pero en el ejemplo concreto era este:
 
-<pre lang="c">struct tcpstat
+{% highlight c %}>struct tcpstat
 {
     inet_prefix local;
     inet_prefix remote;
@@ -37,11 +37,11 @@ El struct a pasar puede ser cualquiera, pero en el ejemplo concreto era este:
     unsigned long long sk;
     int     rto, ato, qack, cwnd, ssthresh;
 };
-</pre>
+{% endhighlight %}
 
 La solución consiste en crear un objeto <a href="http://docs.python.org/3.2/c-api/list.html" title="C API doc" target="_blank">PyListObject</a> y un <a href="http://docs.python.org/3.2/c-api/structures.html#PyObject" target="_blank">PyObject</a>. Éste último lo usaremos como un diccionario y será donde iremos añadiendo los datos necesarios del struct. De esta forma estamos construyendo una lista cuyos elementos son diccionarios, algo así:
 
-<pre lang="python">[
+{% highlight python %}>[
    {'clave1': 'valor1',  # Diccionario 1, con dos elementos.
     'clave1_2': 'valor1_2'}, 
    {'clave2' : 'valor2'}, # Diccionario 2, con un elemento.
@@ -49,11 +49,11 @@ La solución consiste en crear un objeto <a href="http://docs.python.org/3.2/c-a
     #........ : .......,
     'claven' : 'valorn'}, # Diccionario 3, con N elementos.
 ]
-</pre>
+{% endhighlight %}
 
 El código es el siguiente:
 
-<pre lang="c">PyObject *dict = NULL;
+{% highlight c %}>PyObject *dict = NULL;
 PyListObject *list;
 
 list = (PyListObject *) Py_BuildValue("[]");
@@ -65,17 +65,17 @@ for (i; i &lt; stats_length; i++) {
 }
 
 return (PyObject *) list;
-</pre>
+{% endhighlight %}
 
 En el ejemplo sólo se está almacenando un campo del struct, para almacenar más, simplemente habría que modificar la línea por:
 
-<pre lang="c">dict = Py_BuildValue("{"
+{% highlight c %}>dict = Py_BuildValue("{"
                      "   s:i,"
                      "   s:i"
                      "}",
                         "Dir Local.", stats[i].lport,
                         "Dir Remota.", stats[i].rport);
-</pre>
+{% endhighlight %}
 
 Y continuar rellenando el diccionario según nuestras necesidades.
 

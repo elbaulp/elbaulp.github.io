@@ -41,20 +41,20 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
 
 La sentencia INSERT nos permite introducir nuevas filas en una tabla de la base de datos. Su sintaxis más simple es:
 
-<pre lang="sql">Insert into  tabla ([&lt;lista_campos>]) Values ([&lt;lista de valores>])</pre>
+{% highlight sql %}>Insert into  tabla ([&lt;lista_campos>]) Values ([&lt;lista de valores>]){% endhighlight %}
 
 donde tabla representa la tabla a la que queremos añadir el registro y los valores que siguen a la clausula VALUES son los valores que damos a los distintos campos del registro. Si no se especifica la lista de campos, la lista de valores debe seguir el orden de todos los campos de la tabla.
 
 La lista de campos a rellenar se indica si no queremos rellenar todos los campos. Los campos no rellenados explícitamente con la orden INSERT, se rellenan con su valor por defecto (DEFAULT) o bien con NULL si no se indicó valor alguno. 
 
-<pre lang="sql">Insert into tabla ([&lt;lista_campos>])
-Select .....</pre>
+{% highlight sql %}>Insert into tabla ([&lt;lista_campos>])
+Select .....{% endhighlight %}
 
 En esta segunda sintaxis se permite añadir registros a una tabla obteniéndolos mediante una consulta SELECT. Por supuesto el tipo de los campos y el orden de estos debe coincidir con los de la lista de campos o con los de la tabla destino si estos últimos no se indican.
 
 Ejemplo:
 
-<pre lang="sql">CREATE SEQUENCE SQ_NumFactura START WITH 1 INCREMENT BY 1;
+{% highlight sql %}>CREATE SEQUENCE SQ_NumFactura START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE MATRICULAS(
     nNumMatr  NUMBER(10) PRIMARY KEY,
@@ -73,7 +73,7 @@ SELECT SQ_NumFactura.NEXTVAL FROM DUAL;
 
 INSERT INTO MATRICULAS(nNumMatr,cCodAlu,cNomAlu) VALUES (SQ_NumFactura.NEXTVAL, '789','Cristina Barcelona');
 
-SELECT * FROM MATRICULAS;</pre>
+SELECT * FROM MATRICULAS;{% endhighlight %}
 
 
 
@@ -81,7 +81,7 @@ SELECT * FROM MATRICULAS;</pre>
 
 La sentencia DELETE nos permite borrar filas de una tabla de la base de datos. Su sintaxis más simple es:
 
-<pre lang="sql">Delete [from] tabla [Where &lt;condición>]</pre>
+{% highlight sql %}>Delete [from] tabla [Where &lt;condición>]{% endhighlight %}
 
 La sentencia DELETE es de tipo DML mientras que la sentencia TRUNCATE es de tipo DDL; la diferencia está en dos aspectos:
 
@@ -95,13 +95,13 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.
 
 La sentencia UPDATE nos permite modificar filas de una tabla de la base de datos. Su sintaxis más simple es:
 
-<pre lang="sql">Update tabla Set columna1= valor1 [, columna2= valor2, .....] [Where &lt;condición>]</pre>
+{% highlight sql %}>Update tabla Set columna1= valor1 [, columna2= valor2, .....] [Where &lt;condición>]{% endhighlight %}
 
 Se modifican las columnas indicadas en el apartado SET con los valores indicados. La cláusula WHERE permite especificar qué registros serán modificados.
 
 Su segundo tipo de sintaxis es:
 
-<pre lang="sql">Update tabla Set columna1= (Sentencia SELECT) [Where &lt;condición>]</pre>
+{% highlight sql %}>Update tabla Set columna1= (Sentencia SELECT) [Where &lt;condición>]{% endhighlight %}
 
 Este tipo de actualizaciones sólo son válidas si la Sentencia SELECT devuelve un único valor, que además debe de ser compatible con la columna que se actualiza.
 
@@ -109,14 +109,14 @@ Este tipo de actualizaciones sólo son válidas si la Sentencia SELECT devuelve 
 
 Este comando sirve para actualizar los valores de los registros de una tabla a partir de valores de registros de otra tabla o consulta. Permite pues combinar los datos de dos tablas a fin de actualizar la primera. Su sintaxis es: 
 
-<pre lang="sql">MERGE INTO tabla alias
+{% highlight sql %}>MERGE INTO tabla alias
 USING (instrucción SELECT) alias
 ON (condición de unión)
 WHEN MATCHED THEN
    UPDATE SET col1=valor1 [col2=valor2]
 WHEN NOT MATCHED THEN
    INSERT (listaDeColumnas)
-   VALUES (listaDeValores)</pre>
+   VALUES (listaDeValores){% endhighlight %}
 
 MERGE compara los registros de ambas tablas según la condición indicada en el apartado ON. Compara cada registro de la tabla con cada registro del SELECT. Los apartados de la sintaxis significan lo siguiente:
 
@@ -128,7 +128,7 @@ MERGE compara los registros de ambas tablas según la condición indicada en el 
 
 Supongamos que poseemos una tabla en la que queremos realizar una lista de localidades con su respectiva provincia. Las localidades están ya rellenadas, nos faltan las provincias. Resulta que tenemos otra tabla llamada clientes en la que tenemos datos de localidades y provincias, gracias a esta tabla podremos rellenar los datos que faltan en la otra. 
 
-<pre lang="sql">MERGE INTO localidades l
+{% highlight sql %}>MERGE INTO localidades l
 USING (SELECT * FROM clientes) c
 ON (l.localidad=clientes.localidad)
 WHEN MATCHED THEN
@@ -136,7 +136,7 @@ WHEN MATCHED THEN
 WHEN NOT MATCHED THEN
   INSERT (localidad, provincia)
   VALUES (c.localidad, c.provincia)
-</pre>
+{% endhighlight %}
 
 La situación se muestra en la ilustración siguiente:
 

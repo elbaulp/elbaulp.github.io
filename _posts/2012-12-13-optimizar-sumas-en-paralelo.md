@@ -82,7 +82,7 @@ tags:
 
 <!-more-->
 
-<pre lang="c">/*******************************************************************************
+{% highlight c %}>/*******************************************************************************
 * TEST DE SUMAS EN PARALELO
 *
 * Copyleft 2012 Victor Manuel Fernandez Castro - Todos los derechos revocados.
@@ -233,7 +233,7 @@ tStop = clock();
 printf("Algoritmo 3: %d ms.n", (int)((double)(tStop - tStart) / CLOCKS_PER_SEC * 1000));
 
 return 0;
-}</pre>
+}{% endhighlight %}
 
 <div class="sharedaddy">
   <div class="sd-content">

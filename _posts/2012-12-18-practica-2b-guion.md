@@ -27,7 +27,7 @@ Empecemos con *popCount*:
   
 <!--more-->
 
-<pre lang="c" >/*
+{% highlight c %} >/*
  ============================================================================
  Name        : Peso_popcount_C.c
  Author      : Alejandro Alcalde
@@ -235,13 +235,13 @@ int main() {
         crono(popcount7, "popcount7 (        SSSE4.2 64b    )");
         exit(0);
 }
-</pre>
+{% endhighlight %}
 
 En este caso se han escrito siete formas de hacer el cálculo del peso Hamming o popcount, con el objetivo de comprobar cual de ellas es más rápida haciendo cálculos. Concretamente, la función `popcount6()` solo es posible ejecutarla en procesadores que tengan la instrucción `popcnt` en su repertorio.
 
 Para evaluar correctamente qué función es más eficiente, procedemos a ejecutar el programa varias veces seguidas con watch, comando que ejecuta el programa que se le pasa como parámetro cada 0.1 segundos (-n .1):
 
-<pre lang="bash">$ watch -dc -n .1 ./popcount
+{% highlight bash %}>$ watch -dc -n .1 ./popcount
 
 resultado = 10485760    popcount1 (    en lenguaje C for  ):    59482 us
 resultado = 10485760    popcount2 (    en lenguaje C whi  ):    19456 us
@@ -250,7 +250,7 @@ resultado = 10485760    popcount4 (Sumando bytes completos):    10579 us
 resultado = 10485760    popcount5 (        SSSE3          ):      968 us
 resultado = 10485760    popcount6 (        SSSE4.2        ):     1046 us
 resultado = 10485760    popcount7 (        SSSE4.2 64b    ):      825 us
-</pre>
+{% endhighlight %}
 
 Como se aprecia, las versiones 5 y 7 parecen ser las más rápidas, y la primera notablemente más lenta. Veamos las razones de estas mejoras (Extraidas del guión de prática.)
 
@@ -266,7 +266,7 @@ Por último, las versiones **seis y siete** hacen uso de la instrucción `popcnt
 
 A fin de conseguir unos resultados estadísticamente aceptables, el programa se ejecuta 11 veces como se menciona arriba, para los tres niveles de optimización que ofrece el compilador. Las opciones usadas por gcc han sido las siguientes:
 
-<pre lang="bash">gcc -O&lt;n> -Wall -m32 -fno-omit-frame-pointer pesoHamming_C.c -o pesoHamming_C</pre>
+{% highlight bash %}>gcc -O&lt;n> -Wall -m32 -fno-omit-frame-pointer pesoHamming_C.c -o pesoHamming_C{% endhighlight %}
 
 Donde ***<n>*** es el nivel de optimización.
 
@@ -286,7 +286,7 @@ Como queda demostrado, en función de cómo se plantee la resolución de un prob
 
 El caso del cálculo de la paridad es similar, en esta caso simplemente proporciono el código para los curiosos:
 
-<pre lang="c" >/*
+{% highlight c %} >/*
  ============================================================================
  Name        : Paridad.c
  Author      : Alejandro
@@ -479,7 +479,7 @@ int main() {
     crono(paridad6, "Paridad6 (Bucle interno con setpe)");
     exit(0);
 }
-</pre>
+{% endhighlight %}
 
 ### Descargar guión
 

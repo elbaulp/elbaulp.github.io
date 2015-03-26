@@ -68,17 +68,17 @@ Como introducción vamos a ver algunos elementos y conceptos básicos del lengua
     </div>
 
   * LITERAL: Es un valor de tipo numérico, carácter, cadena o lógico no representado&nbsp;por un identificador (es un valor explícito). 
-  * COMENTARIO: Es una aclaración que el programador incluye en el código. Son&nbsp;soportados 2 estilos de comentarios, el de línea simple y de multilínea, para lo cual&nbsp;son empleados ciertos caracters especiales como son: <pre lang="plsql">-- Linea simple
+  * COMENTARIO: Es una aclaración que el programador incluye en el código. Son&nbsp;soportados 2 estilos de comentarios, el de línea simple y de multilínea, para lo cual&nbsp;son empleados ciertos caracters especiales como son: {% highlight sql %}>-- Linea simple
 /*
 Conjunto de Líneas
 */
 
-</pre>
+{% endhighlight %}
 
   * Cuando se escribe código en PL/SQL, este puede estar agrupado en unidades denominadas&nbsp;“conjunto de instrucciones”. Un conjunto de instrucciones puede contener otros subconjuntos y&nbsp;así sucesivamente. 
     Un conjunto de instrucciones queda delimitado por las palabras reservadas BEGIN y END.
     
-    <pre lang="plsql">BEGIN
+    {% highlight sql %}>BEGIN
   Sentencias . . .
   Sentencias . . .
   BEGIN
@@ -89,7 +89,7 @@ Conjunto de Líneas
   Sentencias . . .
   Sentencias . . .
 END;
-</pre>
+{% endhighlight %}
 
 
 

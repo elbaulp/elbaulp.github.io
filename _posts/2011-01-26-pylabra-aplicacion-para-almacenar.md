@@ -29,7 +29,7 @@ Hace bastante tiempo que Haitike y yo dejamos de desarrollar [Pylabra][1], y nun
 
 Antes de nada, el programa necesita instalar algunas dependencias, entre ellas la libreria sqllite y las librerias de wxWidgets (python-wxgtk2.8), que podemos instalar de la siguiente manera:
 
-<pre>sudo aptitude install libsqlite python-wxgtk2.8</pre>
+{% highlight bash %}sudo aptitude install libsqlite python-wxgtk2.8{% endhighlight %}
 
   
 <!--more-->
@@ -37,7 +37,7 @@ Antes de nada, el programa necesita instalar algunas dependencias, entre ellas l
   
 Una vez instaladas podemos ejecutar el programa haciendo clic en el archivo llamado main.py, o bien desde consola con: 
 
-<pre>./main.py</pre>
+{% highlight bash %}./main.py{% endhighlight %}
 
 Podéis descargar Pylabra desde <a target=_blank" href="http://www.megaupload.com/?d=JS34AFA6">megaupload</a>
 

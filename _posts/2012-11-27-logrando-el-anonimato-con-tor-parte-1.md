@@ -35,8 +35,8 @@ Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este art
 <div>
 </div>
 
-<pre lang="bash" lang="bash"># echo "deb http://deb.torproject.org/torproject.org lucid main" >> /etc/apt/sources.list
- # echo "deb-src http://deb.torproject.org/torproject.org lucid main" >> /etc/apt/sources.list</pre>
+{% highlight bash %} lang="bash"># echo "deb http://deb.torproject.org/torproject.org lucid main" >> /etc/apt/sources.list
+ # echo "deb-src http://deb.torproject.org/torproject.org lucid main" >> /etc/apt/sources.list{% endhighlight %}
 
 <div>
 </div>
@@ -48,8 +48,8 @@ Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este art
   <span style="font-family: arial,helvetica,sans-serif">Luego</span> instalemos Tor y Privoxy
 </div>
 
-<pre lang="bash"># apt-get update
- # apt-get install tor privoxy</pre>
+{% highlight bash %}># apt-get update
+ # apt-get install tor privoxy{% endhighlight %}
 
 <div>
 </div>
@@ -71,30 +71,30 @@ Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este art
 
 Agrega la siguiente línea al archivo /etc/privoxy/config:
 
-<pre lang="bash"># echo "forward-socks4a / <a href="http://127.0.0.1:9050" target="_blank">127.0.0.1:9050</a> ." >> /etc/privoxy/config</pre>
+{% highlight bash %}># echo "forward-socks4a / <a href="http://127.0.0.1:9050" target="_blank">127.0.0.1:9050</a> ." >> /etc/privoxy/config{% endhighlight %}
 
 Además debes agregar las siguientes línas al archivo /etc/tor/torrc:  
   
 <!--more-->
 
-<pre lang="bash">AvoidDiskWrites 1
+{% highlight bash %}>AvoidDiskWrites 1
  ControlPort 9051
  Log notice stdout
  SafeSocks 1
  WarnUnsafeSocks 1
  SocksListenAddress 127.0.0.1
- SocksPort 9050</pre>
+ SocksPort 9050{% endhighlight %}
 
 Por el momento no entraremos en detalles sobre qué significa cada opción, pero describiremos las variables de configuración interesantes más adelante. Primero iniciemos Tor y Privoxy:
 
-<pre lang="bash"># /etc/init.d/tor start
- # /etc/init.d/privoxy start</pre>
+{% highlight bash %}># /etc/init.d/tor start
+ # /etc/init.d/privoxy start{% endhighlight %}
 
 Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Comprobemoslo:
 
-<pre lang="bash"># netstat -lntup
+{% highlight bash %}># netstat -lntup
  tcp 0 0 127.0.0.1:8118 0.0.0.0:* LISTEN 8520/privoxy
- tcp 0 0 127.0.0.1:9050 0.0.0.0:* LISTEN 8540/tor</pre>
+ tcp 0 0 127.0.0.1:9050 0.0.0.0:* LISTEN 8540/tor{% endhighlight %}
 
 <div>
   Ok, los puertos están en estado de escucha, lo que significa que todo está bien, porque pueden aceptar conexiones. el único paso que nos falta es configurar nuestro navegador para que use privoxy. Un ejemplo de configuración de Firefox se presenta en la siguiente imagen:
@@ -138,9 +138,9 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 <div>
 </div>
 
-<pre lang="bash"># tar -xvzf tor-browser-gnu-linux-x86_64-2.2.37-1-dev-en-US.tar.gz
+{% highlight bash %}># tar -xvzf tor-browser-gnu-linux-x86_64-2.2.37-1-dev-en-US.tar.gz
  # cd tor-browser_en-US
- # ./start-tor-browser</pre>
+ # ./start-tor-browser{% endhighlight %}
 
 <div>
 </div>
@@ -195,7 +195,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 <div>
 </div>
 
-<pre lang="bash"># traceroute www.google.com</pre>
+{% highlight bash %}># traceroute www.google.com{% endhighlight %}
 
 <div>
 </div>
@@ -309,9 +309,9 @@ Nuestro navegador web usa un proxy SOCKS para conectarse a Tor. Debemos saber qu
 
 Para probar si estamos resolviendo hostnames de forma local o remota, podemos editar la configuración torrc agregándole las siguientes líneas al archivo:
 
-<pre lang="bash">TestSocks 1
+{% highlight bash %}>TestSocks 1
 SafeSocks 1
-WarnUnsafeSocks 1</pre>
+WarnUnsafeSocks 1{% endhighlight %}
 
 &nbsp;
 

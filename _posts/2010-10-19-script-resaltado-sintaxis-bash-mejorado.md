@@ -23,11 +23,11 @@ categories:
 ---
 Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:
 
-<pre>keywords=$keywords`<span class="bash">ls</span> '<em>Directorio de comandos</em>'`</pre>
+{% highlight bash %}keywords=$keywords`<span class="bash">ls</span> '<em>Directorio de comandos</em>'`{% endhighlight %}
 
 
 
-<pre><span class="path">#!/bin/bash</span>
+{% highlight bash %}<span class="path">#!/bin/bash</span>
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 <span class="bash">case</span> $? in
@@ -54,7 +54,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
-</pre>
+{% endhighlight %}
 
 <div class="sharedaddy">
   <div class="sd-content">

@@ -28,7 +28,7 @@ Continuando por donde lo dejamos en el último artículo, hoy veremos cómo incl
 
 Nuestra nueva sección se va a llamar:
 
-<pre lang="latex">\section{Código del programa}</pre>
+{% highlight latex %}>\section{Código del programa}{% endhighlight %}
 
 Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete **minted**. En El baúl del programador ya hay una [pequeña guía][3] sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:
 
@@ -38,21 +38,21 @@ Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proc
 
 Incluimos el paquete `minted` en nuestra cabecera:
 
-<pre lang="latex">\usepackage{minted} % para resaltar código fuente</pre>
+{% highlight latex %}>\usepackage{minted} % para resaltar código fuente{% endhighlight %}
 
 Y ahora:
 
   1. Si no tenemos nuestro código en un fichero aparte o si vamos a escribir muy poco código, podemos usar directamente el paquete con la siguiente sintaxis:
 
-<pre lang="latex">cout &lt;&lt; "Hola mundo" &lt;&lt; endl;
+{% highlight latex %}>cout &lt;&lt; "Hola mundo" &lt;&lt; endl;
 return 0;
-</pre>
+{% endhighlight %}
 
 ## Añadir ficheros
 
   1. Si, como en nuestro caso, tenemos el fichero en un fichero a parte podemos exportarlo directamente a nuestro documento, Copiando lo siguiente en nuestra cabecera:
 
-<pre lang="latex">\newmintedfile[micodigofuente]{milenguajedeprogramacion}{
+{% highlight latex %}>\newmintedfile[micodigofuente]{milenguajedeprogramacion}{
     linenos,
     numbersep=5pt,
     gobble=0,
@@ -60,16 +60,16 @@ return 0;
     framesep=2mm,
     tabsize=3,
 }
-</pre>
+{% endhighlight %}
 
 Y esto justo en el sitio en el que quieras insertar tu código:
 
-<pre lang="latex">\micodigofuente[label="nombredemifichero.extension"]{nombredemifichero.extension}
-</pre>
+{% highlight latex %}>\micodigofuente[label="nombredemifichero.extension"]{nombredemifichero.extension}
+{% endhighlight %}
 
 En nuestro caso sería, insertar lo siguiente en la cabecera (porque estamos haciéndolo en c++):
 
-<pre lang="latex">\newmintedfile[mycplusplus]{c++}{
+{% highlight latex %}>\newmintedfile[mycplusplus]{c++}{
     linenos, % muestra el número de línea
     numbersep=5pt, % separación entre el código y el número de línea
     gobble=0, % columna desde la que empieza a mostrar código
@@ -77,12 +77,12 @@ En nuestro caso sería, insertar lo siguiente en la cabecera (porque estamos hac
     framesep=2mm, % separación entre la línea y el código
     tabsize=3, % tamaño de la tabulación
 }
-</pre>
+{% endhighlight %}
 
 y esto en nuestro código:
 
-<pre lang="latex">\mycplusplus[label="postfija.h"]{postfija.h}
-</pre>
+{% highlight latex %}>\mycplusplus[label="postfija.h"]{postfija.h}
+{% endhighlight %}
 
 Debéis tener cuidado con el paquete minted pues no hace saltos de línea si vuestro código es muy extenso, y además, no reconoce los carácteres acentuados ni la ñ.
 
@@ -92,15 +92,15 @@ Empezamos nueva sección, para ello:
 
 ### Símbolos matemáticos
 
-<pre lang="latex">\newpage
+{% highlight latex %}>\newpage
 \section{Análisis de la eficiencia del programa}
-</pre>
+{% endhighlight %}
 
 Así es, alguna vez tendremos que analizar la eficiencia de algún programa que hagamos, y para ello vamos a tener que hacer uso de las matemáticas. En este caso, vamos a imaginar que nos piden la eficiencia del algoritmo usado para pasar de notación infija a postfija, es decir, la función infija2postfija.
 
 Para analizar la eficiencia del algoritmo, tendremos que combinar matemáticas y texto. Para las matemáticas utilizaremos la orden `displaymath`:
 
-<pre lang="latex">\noindent
+{% highlight latex %}>\noindent
 En primer lugar, nos encontramos un for que va desde $i=0$ hasta $s.size()$, 
 donde $s.size()$ es el tamaño de string que contiene la operación aritmética 
 en notación infija. Este for equivaldría a la siguiente sumatoria, teniendo
@@ -110,7 +110,7 @@ en cuenta que todos las operaciones dentro del for tienen eficiencia $O(1)$:
 \sum_{i=0}^{s.size()} = s.size(), \qquad\ \textrm{siendo $s.size()$ 
     el tamaño del string que contiene la operación aritmética}
 \end{displaymath}
-</pre>
+{% endhighlight %}
 
 Para representar la sumatoria dentro del entorno matemático utilizamos la opción `\sum`, después, utilizamos `_` y `^` para establecer los límites de la sumatoria. `\qquad\` lo usamos para dejar un pequeño espacio (podemos usar `\quad` o `\qquad\`). Así, el texto de arriba quedaría <img src="//s0.wp.com/latex.php?latex=%5Csum_%7Bi%3D0%7D%5E%7Bs.size%28%29%7D+%3D+s.size%28%29&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;sum_{i=0}^{s.size()} = s.size()" title="&#92;sum_{i=0}^{s.size()} = s.size()" class="latex" />
 
@@ -118,7 +118,7 @@ Otro detalle a destacar, es que en el párrafo de introducción, cuando menciono
 
 Seguimos analizando la eficiencia, y ahora recurrimos a la estructura `enumerate` que vimos antes, pero con un "contador" un tanto especial:
 
-<pre lang="latex">\noindent
+{% highlight latex %}>\noindent
 Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
 \begin{enumerate}[$\heartsuit$]
     \item Tenemos en primer lugar una asignación, cuya eficiencia es $O(1)$
@@ -132,13 +132,13 @@ Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
 
 \noindent
 Por tanto, tal y como dijimos antes, la eficiencia del bucle es de $O(s.size())$.
-</pre>
+{% endhighlight %}
 
 Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una [lista][4] de algunos símbolos que podéis usar.
 
 Ahora seguiríamos con nuestro análisis de la eficiencia:
 
-<pre lang="latex">\noindent
+{% highlight latex %}>\noindent
 Después, tenemos un pequeño bucle, en el que insertamos en la cola de la 
 operación postfija, los operadores con menos prioridad que han quedado en la pila. 
 Este bucle iría desde $0$ hasta $t$, siendo $t$ el tamaño de la pila. 
@@ -147,13 +147,13 @@ Y se traduciría en la siguiente sumatoria:
 \begin{displaymath}
 \sum_0^t 1 = t
 \end{displaymath}
-</pre>
+{% endhighlight %}
 
 Esta vez, los límites de la sumatoria estaban formados por un único carácter, por eso podemos poner `\sum_0^t` en vez de `\sum_{0}^{t}`.
 
 Terminamos de analizar la eficiencia del último bucle que nos queda:
 
-<pre lang="latex">\noindent
+{% highlight latex %}>\noindent
 Por último,  tenemos otro bucle más en el que metemos en un string la 
 operación en notación postfija que hemos calculado y lo devolvemos. 
 La devolución tiene eficiencia $O(1)$, y las operaciones que hacemos 
@@ -163,11 +163,11 @@ siguiente sumatoria:
 \begin{displaymath}
 \sum_{i=0}^{c.size()} 1 = c.size();
 \end{displaymath}
-</pre>
+{% endhighlight %}
 
 Y ahora vamos a hacer una subsección a modo de conclusión. Para ello, usamos la orden `\subsection{Conclusión}`:
 
-<pre lang="latex">\subsection{Conclusión}
+{% highlight latex %}>\subsection{Conclusión}
 Tenemos tres bucles, al ser independientes, la eficiencia de todo el 
 código es la suma de la eficiencia de cada bucle por separado, es decir:
 
@@ -177,7 +177,7 @@ eficiencia = \underbrace{s.size() + t + c.size()}_{O(n)} = O(n)
 
 \noindent
 Podemos concluir diciendo que la eficiencia de nuestra función es $O(n)$.
-</pre>
+{% endhighlight %}
 
 Esto ha sido un pequeño ejemplo del uso de las matemáticas en LaTeX, los demás símbolos matemáticos que hay se usan exactamente igual a como hemos visto aquí.
 

@@ -21,13 +21,13 @@ Así que como es habitual busqué en stackoverflow y encontré la solución, el 
   
 <!--more-->
 
-<pre lang="java">Intent sendIntent = new Intent();
+{% highlight java %}>Intent sendIntent = new Intent();
 sendIntent.setAction(Intent.ACTION_SEND);
 sendIntent.putExtra(Intent.EXTRA_TEXT, name);
 sendIntent.setType("text/plain");
 sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 startActivity(Intent.createChooser(sendIntent, "Compartir en");
-</pre>
+{% endhighlight %}
 
 ### La solución
 
@@ -35,9 +35,9 @@ Sin embargo, aún añadiendo el Flag *FLAG\_ACTIVITY\_NEW_TASK* el error persist
 
 Una posible solución es:
 
-<pre lang="java">startActivity(Intent.createChooser(sendIntent, "Compartir en")
+{% highlight java %}>startActivity(Intent.createChooser(sendIntent, "Compartir en")
    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-</pre>
+{% endhighlight %}
 
 De esta forma el error ***Calling startActivity() from outside of an Activity context requires the FLAG\_ACTIVITY\_NEW_TASK flag*** deberá estar solucionado.
 

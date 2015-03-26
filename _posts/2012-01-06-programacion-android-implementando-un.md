@@ -60,7 +60,7 @@ También necesitamos configurar unas cuantas cosas antes de implementarlo. Los p
 
 El siguiente planteamiento de la base de datos pertenece a la aplicación [FavSites][5], proyecto que realicé tiempo atrás y registrado bajo licencia [GPLv3][6]. Esta base de datos contiene una única tabla con las columnas nombre, descripción, latitud, longitud y foto. Estos nombres de columnas pasarán a formar parte de los metadatos en nuestra clase FavSitesProviderMetadata.
 
-<pre lang="java">//FavSites for Android
+{% highlight java %}>//FavSites for Android
 //    Copyright (C) 2011  Alejandro Alcalde Barros
 //    
 //This file is part of FavSites.
@@ -164,17 +164,17 @@ public class FavSitesProviderMetaData {
 
 }
 
-</pre>
+{% endhighlight %}
 
 Esta clase *FavSitesProviderMetaData* comienza definiendo que su authority será *com.elbauldelprogramador.provider.FavSites*. Usaremos esta cadena de texto para registrar el proveedor en el Android Manifest. Esta cadena forma la parte principal de la URI de este proveedor.
 
 Despues procedemos a definir una tabla (favSites) como una clase interna de *FavSitesProviderMetaData*. Posteriormente, la clase *favSitesTableMEtaData* define una URI para identificar las colecciones de sítios. Dada la authority del párrafo anterior, la URI para una colección de sítios será como la siguiente:
 
-<pre>content://com.elbauldelprogramador.provider.FavSites/sites</pre>
+{% highlight bash %}content://com.elbauldelprogramador.provider.FavSites/sites{% endhighlight %}
 
 La constante que se refiere a esta URI es:
 
-<pre>FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI</pre>
+{% highlight bash %}FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI{% endhighlight %}
 
 La clase *favSitesTableMEtaData* define los MIME types para una colección de sitios y de un único sítio. La implementación del proveedor usará estas constantes para devolver los MIME types para las URIs entrantes.
 

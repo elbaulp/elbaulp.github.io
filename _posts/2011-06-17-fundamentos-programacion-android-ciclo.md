@@ -37,7 +37,7 @@ Tienen un ciclo de vida muy corto, ya que se activan al producirse un mensaje de
   
 <!--more-->
 
-<pre lang="java">void onReceive(Context curContext, Intent broadcastMsg)</pre>
+{% highlight java %}>void onReceive(Context curContext, Intent broadcastMsg){% endhighlight %}
 
 Si este método se está ejecutando, se considera el Receiver activo. Esto supone un problema si la tarea a ejecutar es pesada y la lanzamos a un hilo aparte. Cuando termine el método, Android considera que el receiver está inactivo, pero el hilo sigue ejecutándose y puede ser eliminado de la pila, interrumpiendo la tarea.
 

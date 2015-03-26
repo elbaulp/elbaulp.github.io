@@ -27,9 +27,9 @@ En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. La
 existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  
 Su sintaxis es :
 
-<pre lang="sql">[ FROM {&lt;table_source&gt;} [,...n] ]
+{% highlight sql %}>[ FROM {&lt;table_source&gt;} [,...n] ]
 &lt;table_source&gt; ::= table_name | view_name | derived_table | &lt;joined_table&gt;
-</pre>
+{% endhighlight %}
 
   
 <!--more-->
@@ -70,7 +70,7 @@ En Oracle 9i, 10g y posteriores se puede realizar un JOIN natural mediante la si
 JOIN ... USING; en este caso, las columnas por las que se hace la yunción deben tener el mismo  
 nombre.
 
-<pre lang="sql"><span class="comentario">-- El siguiente select devuelve datos de 3 tablas
+{% highlight sql %}><span class="comentario">-- El siguiente select devuelve datos de 3 tablas
 -- Dos tablas tienen un campo departament_id y
 -- dos tablas tiene un campo location_id</span>
 SELECT e.employee_id, e.last_name, e.first_name, e.department_id,
@@ -107,11 +107,11 @@ SELECT e.employee_id,e.last_name, d.department_id, d.department_name
 FROM employees e
 FULL OUTER JOIN departments d
 ON (e.department_id = d.department_id);
-</pre>
+{% endhighlight %}
 
 Otro ejemplo:
 
-<pre lang="sql">CREATE TABLE Clientes (
+{% highlight sql %}>CREATE TABLE Clientes (
 cCodCli varchar2(13),
 cNomCli varchar2(50)
 );
@@ -151,7 +151,7 @@ RIGHT OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 SELECT * FROM CLIENTES c
 FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 
-</pre>
+{% endhighlight %}
 
 
 

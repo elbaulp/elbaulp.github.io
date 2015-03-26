@@ -25,7 +25,7 @@ categories:
   I decided to create a small script that highlights the words reserved of c++.<br /> Here the code:
 </p>
 
-<pre class="ejemplo"><span class="path">#!/bin/bash</span>
+{% highlight bash %}<span class="path">#!/bin/bash</span>
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 <span class="bash">case</span> $? <span class="bash">in</span>
@@ -48,7 +48,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
-</pre>
+{% endhighlight %}
 
 ** I am going to explain a bit the code: **
 
@@ -56,7 +56,7 @@ The variable * keyWords * contains the key words of c ++, fewer &#8220;class&#82
 
 Both following lines 
 
-<pre>sed "s/^#include..... and sed "s/^#define...</pre>
+{% highlight bash %}sed "s/^#include..... and sed "s/^#define...{% endhighlight %}
 
 search the pattern &#8220;#define&#8221; or &#8220;#include&#8221;, initially of every line of the text, this is indicated by * ^ *, and replaces it with his corresponding style, to format the text. Once we enter the &#8220;for&#8221;, there is applied basically the same procedure that for it &#8220;define&#8221; and &#8220;include&#8221;, but with every word of the variable keyWords.
 

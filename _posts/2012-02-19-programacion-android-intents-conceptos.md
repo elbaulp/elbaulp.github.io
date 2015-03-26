@@ -47,34 +47,34 @@ Como mecanismo para invocar componentes, los intents son bastante fáciles de co
 
 Vamos a mostrar un ejemplo, supongamos que tenemos la siguiente activity:
 
-<pre lang="java">public class MiActivity extends Activity {
+{% highlight java %}>public class MiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.MiActivity);
     }
 }
-</pre>
+{% endhighlight %}
 
 El layout *R.Layout.MiActivity* debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el [AndroidManifest][3], que será algo así:
 
-<pre lang="xml">&lt;activity android:name=".MiActivity"
+{% highlight xml %}>&lt;activity android:name=".MiActivity"
           android:label="Mi Activity">
    &lt;intent -filter>
       &lt;action android:name="nuestra.accion.nombreAccion"/>
       &lt;category android:name="android.intent.category.DEFAULT" />
    &lt;/intent>
 &lt;/activity>
-</pre>
+{% endhighlight %}
 
 Al registrar la activity en el AndroidManifest, registramos también una acción que podremos usar para invocar a dicha actividad. El diseñador de la actividad puede asignar el nombre que crea conveniente a la acción. Ahora que ya está todo listo, podemos lanzar un intent para llamar a esta actividad:
 
-<pre lang="java">public static void invokeMiActivity(Activity activity){
+{% highlight java %}>public static void invokeMiActivity(Activity activity){
    String actionName= "nuestra.accion.nombreAccion";
    Intent intent = new Intent(actionName);
    activity.startActivity(intent);
 }
-</pre>
+{% endhighlight %}
 
 <p class="alert">
   La convención que se usa para nombrar una acción suele ser <nombredenuestropaquete>.intent.action.NOMBRE_ACCION</nombredenuestropaquete>
@@ -82,12 +82,12 @@ Al registrar la activity en el AndroidManifest, registramos también una acción
 
 Una vez que se invoca a la actividad, ésta tiene la posibilidad de recuperar el intent que la llamó. Y podemos recuperarlo del siguiente modo:
 
-<pre lang="java">//Este código se inserta en el método onCreate() de la actividad.
+{% highlight java %}>//Este código se inserta en el método onCreate() de la actividad.
 Intent intent = this.getIntent();
 if (intent == null){
    Log.d("Tag", "La actividad no se ha llamado mediante un intent.")
 }
-</pre>
+{% endhighlight %}
 
 ### Intents disponibles en Android
 
@@ -97,7 +97,7 @@ En el caso del dialer (marcador), tenemos las acciones CALL y DIAL, que vienen d
 
 Vamos a ver ejemplos de intents que invocan a las aplicaciones mencionadas en la documentación de Android:
 
-<pre lang="java">public static void invokeWebBrowser(Activity activity){
+{% highlight java %}>public static void invokeWebBrowser(Activity activity){
    Intent intent = new Intent(Intent.ACTION_VIEW);
    intent.setData(Uri.parse("http://www.google.com"));
    activity.startActivity(intent);
@@ -125,7 +125,7 @@ public static void showMapAtLatLong(Activity activity){
    intent.setData(Uri.parse("geo:0,0?z=4&#038;q=restaurantes"));
    activity.startActivity(intent);
 }
-</pre>
+{% endhighlight %}
 
 ### Composición de los intents
 
@@ -139,8 +139,8 @@ Un intent está formado por una acción, datos (que se representan mediante URIs
 
 Como vimos un poco más arriba los URIs para las acciones ACTION\_DIAL y ACTION\_CALL tienen la estructura *tel:número*, y la manera de usar esta URI en el intent para pasarla como dato es la siguiente:
 
-<pre lang="java">intent.setData(Uri.parse("tel:555-555-555"));
-</pre>
+{% highlight java %}>intent.setData(Uri.parse("tel:555-555-555"));
+{% endhighlight %}
 
 El nombre de las acciones normalmente suele ser un String o un String constante con el nombre del paquete como prefijo.
 
@@ -150,21 +150,21 @@ La sección de *datos* de un intent no son datos realmente, se trata de punteros
 
 Vamos a volver a ver el código que invoca al navegador web para analizarlo más en profundidad:
 
-<pre lang="java">Intent intent = new Intent(Intent.ACTION_VIEW);
+{% highlight java %}>Intent intent = new Intent(Intent.ACTION_VIEW);
 intent.setData(Uri.parse("http://www.google.com"));
 activity.startActivity(intent);
-</pre>
+{% endhighlight %}
 
 En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:
 
-<pre lang="xml">&lt;activity ...>
+{% highlight xml %}>&lt;activity ...>
    &lt;intent -filter>
       &lt;action android:name="android.intent.action.VIEW"/>
       &lt;data android:scheme="http" />
       &lt;data android:scheme="https" />
    &lt;/intent>
 &lt;/activity>
-</pre>
+{% endhighlight %}
 
 SE puede obtener más informacion del elemento *data* en <a target="_blank" href="http://developer.android.com/guide/topics/manifest/data-element.html">developer.android.com/guide/topics/manifest/data-element.html</a>
 
@@ -172,7 +172,7 @@ SE puede obtener más informacion del elemento *data* en <a target="_blank" href
 
 Los intents admiten además de las acciones y datos, un atributo adicional llamado *extras*. Este tipo de dato viene dado por la forma clave/valor, en la cual el nombre de la clave normalmente suele empezar con el nombre del paquete y el valor puede ser de cualqueira de los tipos fundamentales u objetos arbitrários, siempre que se implemente la inrefaz android.os.Parcelable. Esta información extra se representa mediante la clase *android.os.Bundle*
 
-<pre lang="java">//Obtener un bundle
+{% highlight java %}>//Obtener un bundle
 Bundle b = intent.getExtras();
 
 //Colocar un bundle en un intent
@@ -196,7 +196,7 @@ putExtra(String name, Intent otroIntent);
 
 //Añadir el bundle al intent
 intent.putExtras(b2)
-</pre>
+{% endhighlight %}
 
 getExtras devuelve el bundle que contenga el intent. Si el intent ya tiene un bundle, putExtras transfiere los pares clave/valor adicionales del bundle nuevo al que ya existía. Si no existe ningun bundle asociado, putExtras creará uno y copiará todos los valores.
 
@@ -206,33 +206,33 @@ La clase intent tiene declarados unas claves extras que acompañan a ciertas acc
 
 Una forma más directa de iniciar una actividad es mediante el su ComponentName, que es una abstracción del nombre del paquete y de la clase. Existen varios métodos para realizar esta acción en la clase Intent:
 
-<pre lang="java">setComponent(ComponentName name);
+{% highlight java %}>setComponent(ComponentName name);
 SeClassName(String packName, String className);
 setClassName(Context context, String ClassName);
 setClass(Context context, Class classObject);
-</pre>
+{% endhighlight %}
 
 Se puede usar el nombre de una clase directamente sin necesidad de construir un ComponentName. Por ejemplo, si tenemos la siguiente actividad:
 
-<pre lang="java">public class MiActivity extends Activity {
+{% highlight java %}>public class MiActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.MiActivity);
     }
 }
-</pre>
+{% endhighlight %}
 
 Podemos usar el siguiente código para llamarla:
 
-<pre lang="java">Intent intent = new Intent(activity, MiActivity.class);
+{% highlight java %}>Intent intent = new Intent(activity, MiActivity.class);
 activity.start(intent);
-</pre>
+{% endhighlight %}
 
 Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:
 
-<pre lang="xml">&lt;activity android:name=".MiActivity" android:label="Mi Activity" />
-</pre>
+{% highlight xml %}>&lt;activity android:name=".MiActivity" android:label="Mi Activity" />
+{% endhighlight %}
 
 Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.
 

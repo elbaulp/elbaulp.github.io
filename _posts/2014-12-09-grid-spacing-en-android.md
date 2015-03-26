@@ -36,7 +36,7 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
 
 #### layout/activity_main.xml
 
-<pre lang="xml">&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}>&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:orientation="vertical"
@@ -83,7 +83,7 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
   &lt;/LinearLayout>
 
 &lt;/LinearLayout>
-</pre>
+{% endhighlight %}
 
 <img src="http://elbauldelprogramador.com/content/uploads/2014/12/Grid-Spacing-en-Android-take_1.png" alt="Grid Spacing en Android - take_1" width="1080" height="624" class="size-full wp-image-2499" />
 
@@ -107,7 +107,7 @@ En realidad, `LinearLayout` gestiona la idea del espacio entre elementos. Ésta 
 
 #### drawable/spacer_medium.xml
 
-<pre lang="xml"><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
 &lt;shape xmlns:android="http://schemas.android.com/apk/res/android"
   android:shape="rectangle">
 
@@ -118,13 +118,13 @@ En realidad, `LinearLayout` gestiona la idea del espacio entre elementos. Ésta 
     &lt;solid android:color="@android:color/transparent" />
 
   &lt;/shape>
-</pre>
+{% endhighlight %}
 
 Ahora se puede usar el `Drawable` creado como un separador entre elementos estableciéndolo como el separador del `LinearLayout`:
 
 #### layout/activity_main.xml
 
-<pre lang="xml">&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}>&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:divider="@drawable/spacer_medium"
@@ -149,7 +149,7 @@ Ahora se puede usar el `Drawable` creado como un separador entre elementos estab
   &lt;/LinearLayout>
 
 &lt;/LinearLayout>
-</pre>
+{% endhighlight %}
 
 <img src="http://elbauldelprogramador.com/content/uploads/2014/12/Grid-Spacing-en-Android-take_3.png" alt="Grid Spacing en Android - take_3" width="1080" height="672" class="aligncenter size-full wp-image-2502" />
 

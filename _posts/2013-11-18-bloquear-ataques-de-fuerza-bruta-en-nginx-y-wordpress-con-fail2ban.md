@@ -22,21 +22,21 @@ Cuando se administra un servidor, te das cuenta de la cantidad de máquinas auto
 
 Si no se encuentra instalado en nuestro sistema:
 
-<pre lang="bash">$ sudo apt-get install fail2ban
-</pre>
+{% highlight bash %}>$ sudo apt-get install fail2ban
+{% endhighlight %}
 
 ### Antes de empezar
 
 Antes de modificar el archivo */etc/fail2ban/jail.conf*, es recomendable &#8211;y de hecho lo menciona el propio archivo en su cabecera &#8212; realizar una copia y trabajar sobre ella:
 
-<pre lang="bash">cd /etc/fail2ban &#038;&#038; cp jail.conf jail.local
-</pre>
+{% highlight bash %}>cd /etc/fail2ban &#038;&#038; cp jail.conf jail.local
+{% endhighlight %}
 
 ### Bloquear ataques de fuerza bruta a WordPress
 
 La siguiente configuración bloqueará durante 20 minutos cualquier intento de loggearse en WordPress de forma incorrecta más de 3 veces. Hay que escribirla en el *jail.local*:
 
-<pre lang="bash">[nginx-wp-login]
+{% highlight bash %}>[nginx-wp-login]
 
 enabled = true
 port = http,https
@@ -45,15 +45,15 @@ logpath = /ruta/log/wordpress/access.log
 maxretry = 3
 findtime = 120
 bantime = 1200
-</pre>
+{% endhighlight %}
 
 Ahora queda añadir el filtro para esta regla, en el archivo *filter.d/nginx-wp-login.conf*:
 
-<pre lang="bash">[Definition]
+{% highlight bash %}>[Definition]
 
 failregex = &lt;HOST>.*] "POST /wp-login.php
 ignoreregex = 
-</pre>
+{% endhighlight %}
 
 ### Inconvenientes a tener en cuenta
 
@@ -74,7 +74,7 @@ Las siguientes configuraciones serán a nivel del servidor web nginx, no de Word
 
 Al igual que antes, en el fichero *jail.local* añadimos:
 
-<pre lang="bash">[nginx-auth]
+{% highlight bash %}>[nginx-auth]
 enabled = true
 filter = nginx-auth
 action = iptables-multiport[name=NoAuthFailures, port="http,https"]
@@ -113,11 +113,11 @@ filter = nginx-proxy
 logpath = /var/log/nginx*/*access*.log
 maxretry = 0
 bantime  = 86400 # 1 day
-</pre>
+{% endhighlight %}
 
 Y sus correspondientes filtros en */etc/fail2ban/filter.d/* (Cada uno en un fichero separado, con el mismo nombre que aparece en la primera línea):
 
-<pre lang="bash"># Proxy filter /etc/fail2ban/filter.d/proxy.conf:
+{% highlight bash %}># Proxy filter /etc/fail2ban/filter.d/proxy.conf:
 #
 # Block IPs trying to use server as proxy.
 #
@@ -161,15 +161,15 @@ ignoreregex =
 [Definition]
 failregex = ^&lt;HOST> -.*POST /sessions HTTP/1\.." 200
 ignoreregex =
-</pre>
+{% endhighlight %}
 
 ### Enviar por correo los bloqueos
 
 Para terminar, si queremos recibir un correo por cada bloqueo que se produzca, basta con añadir estas dos líneas al fichero *jail.local*:
 
-<pre lang="bash">destemail = direccion@correo
+{% highlight bash %}>destemail = direccion@correo
 mta = sendmail
-</pre>
+{% endhighlight %}
 
 ¿Administras un servidor? ¿Qué técnicas usas?, deja un comentario.
 

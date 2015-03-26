@@ -23,29 +23,29 @@ La cadena de texto con el enlace en cuestión reside en el archivo de recursos *
   
 ***layout***:
 
-<pre lang="xml">&lt;TextView
+{% highlight xml %}>&lt;TextView
                 <!-- .... -->
                 android:autoLink="web"
                 
 
 <!-- .... --> />
-</pre>
+{% endhighlight %}
 
 ***string***:
 
-<pre lang="xml">&lt;string name="aboutAuthor">Developed by <a href="http://elbauldelprogramador.com">Alejandro Alcalde.</a>&lt;/string>
-</pre>
+{% highlight xml %}>&lt;string name="aboutAuthor">Developed by <a href="http://elbauldelprogramador.com">Alejandro Alcalde.</a>&lt;/string>
+{% endhighlight %}
 
 Pero la propiedad `autoLink="web"`, funciona únicamente cuando el texto al que hace referencia contiene explícitamente la dirección, es decir, con esta cadena de texto sí funcionaría:
 
-<pre lang="xml">&lt;string name="aboutAuthor">Developed by http://elbauldelprogramador.com&lt;/string>
-</pre>
+{% highlight xml %}>&lt;string name="aboutAuthor">Developed by http://elbauldelprogramador.com&lt;/string>
+{% endhighlight %}
 
 Para conseguir hacer funcionar el primer ejemplo hay que hacer uso del método `setMovementMethod()` de la clase `TextView`:
 
-<pre lang="java">final TextView author = (TextView) view.findViewById(R.id.tv_about_athor);
+{% highlight java %}>final TextView author = (TextView) view.findViewById(R.id.tv_about_athor);
 author.setMovementMethod(LinkMovementMethod.getInstance());
-</pre>
+{% endhighlight %}
 
 Con el código anterior se consigue el comportamiento deseado:  
 [<img src="http://elbauldelprogramador.com/content/uploads/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android" width="180" height="300" class="aligncenter size-medium wp-image-1547" />][3]{.thumbnail}

@@ -46,9 +46,9 @@ El método query requiere el conjunto de columnas que tiene devolver. Es similar
 
 La mayoría de los métodos que se van a implementar reciben como parámetro una [URI][5]. Aunque a todas las URIs a las que este proveedor es capaz de responder empiezan de la misma forma, el final de dicha URI sí que puede ser diferente (Como cualquier sítio web). Cada URI, puede ser distinta al final para identificar datos o documentos:
 
-<pre>content://com.elbauldelprogramador.provider.FavSites/sites
+{% highlight bash %}content://com.elbauldelprogramador.provider.FavSites/sites
 content://com.elbauldelprogramador.provider.FavSites/sites/64
-</pre>
+{% endhighlight %}
 
 Dadas estas dos URIs, el proveedor de FavSites necesita distinguir cada una de ellas. Si, por ejemplo, nuestro proveedor usara más objetos a parte de lugares, entonces habría más URIs que identificaran cada objeto.
 
@@ -56,7 +56,7 @@ La implementación del proveedor necesita un mecanismo para distinguir una URI d
 
 El código que se muestra a continuación, sobreescribe el método onCreate() para crear la base de datos. Despues se implementan los métodos query, insert, update, delete y getType. Por razones de claridad del código, no voy a mostrar el código de estos métodos, ya que se explicarán en [entradas posteriores][6].
 
-<pre lang="java">/**
+{% highlight java %}>/**
 FavSites for Android
     Copyright (C) 2011  Alejandro Alcalde Barros
     
@@ -213,7 +213,7 @@ public class SitesProvider extends ContentProvider{
    }
 
 }
-&lt;/string></pre>
+&lt;/string>{% endhighlight %}
 
 * * *
 

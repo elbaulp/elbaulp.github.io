@@ -30,7 +30,7 @@ Los dos tipos deben ser definidos como un nuevo tipo antes de [declarar variable
 El modo de definir nuevos tipos de variables en PL/SQL es a través de la palabra reservada TYPE:  
 
 
-<pre lang="plsql">TYPE nuevo_tipo IS tipo_original.</pre>
+{% highlight sql %}>TYPE nuevo_tipo IS tipo_original.{% endhighlight %}
 
   
 <!--more-->
@@ -46,22 +46,22 @@ Los registros no son más que agrupaciones de tipos de variables que se acceden 
 
 
 
-<pre lang="plsql">TYPE nombre_registro IS RECORD(
+{% highlight sql %}>TYPE nombre_registro IS RECORD(
   Campo1 tipo,
   Campo2 tipo,
   Campo3 tipo );
-</pre>
+{% endhighlight %}
 
 
 
 Por ejemplo:  
 
 
-<pre lang="plsql">TYPE alumno IS RECORD(
+{% highlight sql %}>TYPE alumno IS RECORD(
   n_alumno VARCHAR2(5),
   nombre VARCHAR2(25),
   tlf VARCHAR2(15) );
-</pre>
+{% endhighlight %}
 
 
 
@@ -69,20 +69,20 @@ Por ejemplo:
 
 Una tabla no es más que una colección de elementos identificados cada uno de ellos por un índice. En muchos lenguajes se les denomina arrays o matrices.
 
-<pre lang="plsql">TYPE nombre_tabla IS TABLE OF tipo_de_elementos;</pre>
+{% highlight sql %}>TYPE nombre_tabla IS TABLE OF tipo_de_elementos;{% endhighlight %}
 
 
 
 El tamaño de la tabla se define durante la declaración de la variable.
 
-<pre lang="plsql">Nombre_variable nombre_tabla := nombre_variable( lista de elementos );</pre>
+{% highlight sql %}>Nombre_variable nombre_tabla := nombre_variable( lista de elementos );{% endhighlight %}
 
 Pro ejemplo:
 
-<pre lang="plsql">DECLARE
+{% highlight sql %}>DECLARE
   TYPE array_enteros IS TABLE OF INTEGER;
   Un_array array_enteros := array_enteros( 0, 0, 0, 0 );
-</pre>
+{% endhighlight %}
 
 * * *
 

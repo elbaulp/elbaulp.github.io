@@ -33,22 +33,22 @@ Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo,
   
 <!--more-->
 
-<pre lang="xml">&lt;resources>
+{% highlight xml %}>&lt;resources>
 &lt;plurals name="huevos_en_una_cesta">
    &lt;item quantity="one">Hay 1 huevo&lt;/item>
    &lt;item quantity="other">Hay %d huevos&lt;/item>
 &lt;/plurals>
 &lt;/resources>
-</pre>
+{% endhighlight %}
 
 Las dos variaciones se representan como dos cadenas de texto diferentes bajo el mismo plural. Ahora, podemos usarlo desde el código Java para mostrar correctamente la cadena correspondiente a la cantidad de huevos. El primer parámetro de ***getQuantityString()*** es el ID del plural. El segundo selecciona la cadena a usar. Cuando el valor de la cantidad es 1, usamos la cadena tal como es. Cuando el valor es distinto a 1, debemos pasar un tercer parámetro que será el valor a colocar en el lugar de %d. Siempre deberá haber al menos 3 parámetros si usamos cadenas formateadas en los plurales.
 
-<pre lang="java">Resources res = tu_actividad.getResources();
+{% highlight java %}>Resources res = tu_actividad.getResources();
 String s1 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 0, 0);
 String s2 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 1, 1);
 String s3 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 2, 2);
 String s4 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 10, 10);
-</pre>
+{% endhighlight %}
 
 Con este código, cada cantidad se mostrará con su correcta cadena de texto.
 
@@ -56,7 +56,7 @@ Existen otras posibilidades que podemos aplicar al atributo *quantity* del eleme
 
 ### PluralRules.java
 
-<pre lang="java">abstract class PluralRules {
+{% highlight java %}>abstract class PluralRules {
 
     static final int QUANTITY_OTHER = 0x0000;
     static final int QUANTITY_ZERO  = 0x0001;
@@ -141,11 +141,11 @@ Existen otras posibilidades que podemos aplicar al atributo *quantity* del eleme
         }
     }
 }
-</pre>
+{% endhighlight %}
 
 ### Resources.java
 
-<pre lang="java">public CharSequence getQuantityText(int id, int quantity) throws NotFoundException {
+{% highlight java %}>public CharSequence getQuantityText(int id, int quantity) throws NotFoundException {
         PluralRules rule = getPluralRule();
         CharSequence res = mAssets.getResourceBagText(id, rule.attrForNumber(quantity));
         if (res != null) {
@@ -168,7 +168,7 @@ Existen otras posibilidades que podemos aplicar al atributo *quantity* del eleme
             return mPluralRule;
         }
     }
-</pre>
+{% endhighlight %}
 
 En la mayoria de los idiomas normalmente hay dos posibles valores, &#8220;one&#8221; y &#8220;other&#8221;, pero para el Checo, los valores son &#8220;one&#8221; para 1, &#8220;few&#8221; del 2 al 4 y &#8220;other&#8221; para el resto.
 

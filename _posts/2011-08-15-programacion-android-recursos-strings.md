@@ -37,18 +37,18 @@ Existen mucho recursos en Android, que vamos a ver a lo largo de las etradas pos
 
 Android permite definir strings en uno o más archivos XML de recursos. Estos archivos están bajo el directorio ***./res/values***. El nombre del archivo XML para este tipo de recurso puede ser cualquiera, pero por convención se suele llamar ***strings.xml***. Veamos un ejemplo de este fichero:
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
    &lt;string name="hello">Hello&lt;/string>
    &lt;string name="app_name">Hello app_name&lt;/string>
 &lt;/resources>
-</pre>
+{% endhighlight %}
 
 Cuando este archivo se crea o modifica, el plugin ADT de eclipse automáticamente creará o actualizará una clase java de nuestra aplicación llamada ***R.java*** alojada en el directorio ./gen, que contiene los IDs únicos para las dos cadenas que acabamos de crear.
 
 Para el fichero strings.xml que acabamos de crear, tendremos lo siguiente en la clase R:
 
-<pre lang="java">package nombre.de.nuestro.paquete;
+{% highlight java %}>package nombre.de.nuestro.paquete;
 
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
@@ -61,7 +61,7 @@ public final class R {
    }
    //.. otras entradas dependiendo de tu proyecto y aplicación
 }
-</pre>
+{% endhighlight %}
 
 Como vemos como primero R.java define una clase principal en el paquete raiz: ***public final class R***. Depues, define una clase interna llamada ***public static final class string***. R.java crea esta clase estática interna como espacio de nombres para guardar los IDs de los recursos string.
 
@@ -71,16 +71,16 @@ La estructura del fichero string.xml es muy fácil de seguir. Tenemos un element
 
 Para comprobar que se permiten varios recursos de string en el directorio values, vamos a crear otro fichero llamado strings1.xml con lo siguiente:
 
-<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
    &lt;string name="hello1">Hello&lt;/string>
    &lt;string name="app_name1">Hello app_name&lt;/string>
 &lt;/resources>
-</pre>
+{% endhighlight %}
 
 Ahora, el plugin ADT de eclipse se encargará de actualizar el fichero R.java, que contendrá lo siguiente:
 
-<pre lang="java">package nombre.de.nuestro.paquete;
+{% highlight java %}>package nombre.de.nuestro.paquete;
 
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
@@ -95,7 +95,7 @@ public final class R {
    }
    //.. otras entradas dependiendo de tu proyecto y aplicación
 }
-</pre>
+{% endhighlight %}
 
 * * *
 

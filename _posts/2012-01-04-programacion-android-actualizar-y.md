@@ -39,24 +39,24 @@ Vimos cómo [insertar registros y consultarlos][1], bien, pues actualizar y borr
   
 <!--more-->
 
-<pre lang="java">int numeroDeLineasActualizadas =
+{% highlight java %}>int numeroDeLineasActualizadas =
    activity.getContentResolver().update(
       Uri uri,
       ContentValues values, 
       String whereClause,
       String[] selectionArgs )
-</pre>
+{% endhighlight %}
 
 El argumento *whereClause*, restringe la actualización a los registros de la BD que cumplan esa condición.
 
 La sentencia para borrar registros es:
 
-<pre lang="java">int numeroDeLineasBorradas =
+{% highlight java %}>int numeroDeLineasBorradas =
    activity.getContentResolver().delete(
       Uri uri,
       String whereClause,
       String[] selectionArgs )
-</pre>
+{% endhighlight %}
 
 Logicamente, el método *delete* no necesita un argumento que contenga el *ContentValues*.
 

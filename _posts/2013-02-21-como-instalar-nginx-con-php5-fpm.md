@@ -26,34 +26,34 @@ Nginx (Pronunciado engine-x) es un <a href="http://elbauldelprogramador.com/sear
 
 Antes de poder compilar nginx, es necesario instalar unos cuantos paquetes:
 
-<pre lang="bash"># apt-get install build-essential libssl-dev libpcre3-dev
-</pre>
+{% highlight bash %}># apt-get install build-essential libssl-dev libpcre3-dev
+{% endhighlight %}
 
 El paquete `build-essential` contiene las herramientas básicas para compilar programas desde código fuente, las otras dos librerías son necesarias para nginx durante el proceso de compilación.
 
 ### Descargar y compilar Nginx
 
-<pre lang="bash">$ wget http://nginx.org/download/nginx-1.2.6.tar.gz
-</pre>
+{% highlight bash %}>$ wget http://nginx.org/download/nginx-1.2.6.tar.gz
+{% endhighlight %}
 
 Descomprimimos el fichero:
 
-<pre lang="bash">$ tar zxvf nginx-1.2.6.tar.gz
-</pre>
+{% highlight bash %}>$ tar zxvf nginx-1.2.6.tar.gz
+{% endhighlight %}
 
 Una vez descomprimido, entramos en el directorio y compilamos:
 
-<pre lang="bash">$ cd nginx-1.2.6
+{% highlight bash %}>$ cd nginx-1.2.6
 ~/nginx-1.2.6$ ./configure --sbin-path=/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module
 
 ~/nginx-1.2.6$ make
 
 ~/nginx-1.2.6$ sudo make install
-</pre>
+{% endhighlight %}
 
 Para consultar qué modulos hay disponibles hay que visitar la <a href="http://wiki.nginx.org/Modules" target="_blank">pagina oficial de Nginx</a> y decidir cuales queremos habilitar. Con la opción `--sbin-path=/usr/local/sbin` establecemos la ruta en la que se instalará el ejecutable. Tras compilar se mostrará información de la localización de los distintos ficheros:
 
-<pre lang="bash">nginx path prefix: "/usr/local/nginx"
+{% highlight bash %}>nginx path prefix: "/usr/local/nginx"
   nginx binary file: "/usr/local/sbin"
   nginx configuration prefix: "/usr/local/nginx/conf"
   nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
@@ -65,28 +65,28 @@ Para consultar qué modulos hay disponibles hay que visitar la <a href="http://w
   nginx http fastcgi temporary files: "fastcgi_temp"
   nginx http uwsgi temporary files: "uwsgi_temp"
   nginx http scgi temporary files: "scgi_temp"
-</pre>
+{% endhighlight %}
 
 Es necesario descargar un script que permita detener, reiniciar e iniciar nginx, podemos descargar el siguiente:
 
-<pre lang="bash">$ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+{% highlight bash %}>$ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
 $ sudo mv nginx /etc/init.d/nginx
 $ sudo chmod +x /etc/init.d/nginx
 $ sudo chown root:root /etc/init.d/nginx
-</pre>
+{% endhighlight %}
 
 En el tercer comando otorgamos permiso de ejecución al [script][2], con el cuarto hacemos al usuario root propietario del mismo.
 
 Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los [runlevel][3] correspondientes: 
 
-<pre lang="bash"># update-rc.d nginx defaults
-</pre>
+{% highlight bash %}># update-rc.d nginx defaults
+{% endhighlight %}
 
 Ahora estamos en condiciones de ejecutar nginx:
 
-<pre lang="bash"># /etc/init.d/nginx start
+{% highlight bash %}># /etc/init.d/nginx start
 [ ok ] Starting Nginx Server...:.
-</pre>
+{% endhighlight %}
 
 Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones **localhost**. Si todo ha ido bien deberíamos ver esta pantalla:
 
@@ -100,7 +100,7 @@ Usando firebug se puede comprobar que efectivamente se está corriendo un servid
 
 Sustituimos la configuración por defecto por esta:
 
-<pre lang="bash">user  www-data;
+{% highlight bash %}>user  www-data;
 worker_processes  1;
  
 pid        /var/run/nginx.pid;
@@ -148,7 +148,7 @@ http {
     }
  
 }
-</pre>
+{% endhighlight %}
 
 Los cambios más relevantes sobre la configuración por defecto son:
 
@@ -159,9 +159,9 @@ Los cambios más relevantes sobre la configuración por defecto son:
 
 Cambiamos los permisos de los ficheros que contienen la web y reiniciamos nginx para aplicar los cambios:
 
-<pre lang="bash">$ sudo chown -R www-data:www-data html/
+{% highlight bash %}>$ sudo chown -R www-data:www-data html/
 $ sudo service nginx destroy &#038;&#038; sudo service nginx start
-</pre>
+{% endhighlight %}
 
 ### Instalar php5-fpm
 
@@ -169,35 +169,35 @@ En lugar de instalar php5, instalaremos php5-fpm (*FastCGI Process Manager*), un
 
 En ubuntu, ejecutamamos el siguiente comando:
 
-<pre lang="bash"># apt-get install php5-fpm
-</pre>
+{% highlight bash %}># apt-get install php5-fpm
+{% endhighlight %}
 
 En debian agregamos el repositorio al *sources.list*:
 
-<pre lang="bash">deb http://packages.dotdeb.org stable all
+{% highlight bash %}>deb http://packages.dotdeb.org stable all
 deb-src http://packages.dotdeb.org stable all
-</pre>
+{% endhighlight %}
 
 Agregamos la llave [GnuPG][6] del repositorio:
 
-<pre lang="bash">apt-get update
+{% highlight bash %}>apt-get update
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg | sudo apt-key add -
-</pre>
+{% endhighlight %}
 
 Instalamos php:
 
-<pre lang="bash"># apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql
-</pre>
+{% highlight bash %}># apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql
+{% endhighlight %}
 
 Lo iniciamos:
 
-<pre lang="bash"># /etc/init.d/php5-fpm start
-</pre>
+{% highlight bash %}># /etc/init.d/php5-fpm start
+{% endhighlight %}
 
 Para lograr que nginx interprete php, hay que hacer algunas modificaciones a la configuración:
 
-<pre lang="bash">user  www-data;
+{% highlight bash %}>user  www-data;
 worker_processes  1;
  
 pid        /var/run/nginx.pid;
@@ -254,7 +254,7 @@ http {
         }
     }
 }
-</pre>
+{% endhighlight %}
 
 Los principales cambios realizados son los siguientes:
 
@@ -264,7 +264,7 @@ Los principales cambios realizados son los siguientes:
 
 Para terminar, añadimos los siguientes parámetros al final del archivo */usr/local/nginx/fastcgi_params*:
 
-<pre lang="bash">fastcgi_connect_timeout 60;
+{% highlight bash %}>fastcgi_connect_timeout 60;
 fastcgi_send_timeout 180;
 fastcgi_read_timeout 180;
 fastcgi_buffer_size 128k;
@@ -272,12 +272,12 @@ fastcgi_buffers 4 256k;
 fastcgi_busy_buffers_size 256k;
 fastcgi_temp_file_write_size 256k;
 fastcgi_intercept_errors on;
-</pre>
+{% endhighlight %}
 
 Para aplicar los cambios, reiniciamos nginx:
 
-<pre lang="bash"># service nginx restart
-</pre>
+{% highlight bash %}># service nginx restart
+{% endhighlight %}
 
 Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutando archivos php.
 

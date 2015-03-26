@@ -42,10 +42,10 @@ En la página oficial ofrecen tres formas de instalar Bolt. **Desde línea de co
 
 Empecemos por la más sencilla, bastarán 3 órdenes en la terminal para finalizar la instalación:
 
-<pre lang="bash">curl -O http://bolt.cm/distribution/bolt_latest.tgz
+{% highlight bash %}>curl -O http://bolt.cm/distribution/bolt_latest.tgz
 tar -xzf bolt_latest.tgz
 chmod -R 777 files/ app/database/ app/cache/ app/config/ theme/
-</pre>
+{% endhighlight %}
 
 La razón de establecer los permisos a [777][7] es porque en la mayoría de servidores el servidor web está en un grupo distinto a tu cuenta de usuario, por eso es necesario dar permisos de escritura a los ficheros de arriba.
 
@@ -59,53 +59,53 @@ Ya en el panel de administración, puedes agregar contenido de muestra dirigiend
 
 Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo: 
 
-<pre lang="bash"># aptitude install php5-sqlite
-</pre>
+{% highlight bash %}># aptitude install php5-sqlite
+{% endhighlight %}
 
 Si prefieres usar MySQL o PostgreSQL debes editar el fichero de configuración **/app/config/config.yml**:
 
 *Para MySQL:*
 
-<pre>database:
+{% highlight bash %}database:
   driver: mysql
   username: bolt
   password: password
   databasename: bolt
-</pre>
+{% endhighlight %}
 
 *Para PostgreSQL (**Experimental**)*
 
-<pre>database:
+{% highlight bash %}database:
   driver: postgres
   username: bolt
   password: password
   databasename: bolt
-</pre>
+{% endhighlight %}
 
 ### Instalar Bolt por el método para desarrolladores
 
 Este método no es mucho más complicado que el anterior. La ventaja es que permite estar a la última en cuanto a la versión, y el método de actualización es muy sencillo. En este caso se usará **git** y **Composer**:
 
-<pre lang="bash">git clone git://github.com/bobdenotter/bolt.git bolt
+{% highlight bash %}>git clone git://github.com/bobdenotter/bolt.git bolt
 cd bolt
 curl -s http://getcomposer.org/installer | php
 php composer.phar install
-</pre>
+{% endhighlight %}
 
 Normalmente los ficheros creados deberían tener los permisos correctos, de no ser así, ejecuta:
 
-<pre lang="bash">chmod -R 777 files/ app/database/ app/cache/ app/config/ theme/
-</pre>
+{% highlight bash %}>chmod -R 777 files/ app/database/ app/cache/ app/config/ theme/
+{% endhighlight %}
 
 Listo, puedes dirigirte a la web, registrar un usuario y empezar a escribir.
 
 Para actualizar la instalación basta con hacer lo siguiente:
 
-<pre lang="bash">git pull
+{% highlight bash %}>git pull
 cd bolt
 php composer.phar self-update
 php composer.phar update
-</pre>
+{% endhighlight %}
 
 Algo que me ha llamado mucho la atención es la facilidad que se le da al desarrollador para depurar el entorno. Si estás logeado y con el modo depuración activado (*debug:true* en el archivo *config.yml*) verás una barra de depuración abajo a la derecha:
 

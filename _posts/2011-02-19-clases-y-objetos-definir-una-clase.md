@@ -33,7 +33,7 @@ Consideremos una clase denominada Punto, con tres miembros dato: dos variables e
 
 Se declaran las variables que van a guardar los datos, y las funciones que van a manipular dichos datos. Se sitúan convenientemente los controladores de acceso a la clase public o private (por defecto), teniendo en cuenta la regla general de que una clase debe ocultar tanta información como sea posible.
 
-<pre>class Punto{
+{% highlight bash %}class Punto{
   int x;          <span class="comentario">//miembros dato</span>
   int y;
   char ch;
@@ -43,13 +43,13 @@ public:
   void mostrar(); <span class="comentario">//miembros función</span>
   void ocultar();
 };
-</pre>
+{% endhighlight %}
 
 
 
 Se definen las funciones miembro de la clase. Para indicar que una función es miembro de una determinada clase se pone, entre el tipo de variable que retorna y el nombre de la función, el nombre de la clase y el símbolo (operador de resolución de ámbito).
 
-<pre>void <b>Punto</b>::mostrar() {
+{% highlight bash %}void <b>Punto</b>::mostrar() {
   gotoxy(x,y);
   cout < < ch;
 }
@@ -57,7 +57,7 @@ void <b>Punto::ocultar() {
   gotoxy(x,y);
   cout < < " ";
 }
-</pre>
+{% endhighlight %}
 
 
 <p>

@@ -25,7 +25,7 @@ categories:
   As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.<br /> Here the code:
 </p>
 
-<pre class="ejemplo"><span class="path">#!/bin/bash</span>
+{% highlight bash %}<span class="path">#!/bin/bash</span>
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 <span class="bash">case</span> $? <span class="bash">in</span>
@@ -47,11 +47,11 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
-</pre>
+{% endhighlight %}
 
 I am going to explain a bit the code:
 
-<pre>sed 's/#.*/<span class="comentario">&#038;</span>/'</pre>
+{% highlight bash %}sed 's/#.*/<span class="comentario">&#038;</span>/'{% endhighlight %}
 
 This line is the one that takes charge highlighting the comments. We look for one &#8220;\*&#8221;, that are the comments in bash, and any character after &#8221; (. \*) &#8220;. &#8220;&&#8221;, it is in order that in this place, it prints everything what coincided with the pattern &#8221; (. *) &#8220;, that is to say, the comment.
 

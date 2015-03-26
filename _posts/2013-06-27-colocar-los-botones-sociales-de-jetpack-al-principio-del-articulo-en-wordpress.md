@@ -25,21 +25,21 @@ A día de hoy, el famoso plugin para wordpress** *jetpack*** no soporta colocar 
 
 El primer paso es editar el archivo ***modules/sharedaddy/sharing-service.php*** del plugin y eliminar o comentar las últimas líneas, que deberían ser: 
 
-<pre lang="php">add_filter( 'the_content', 'sharing_display', 19 );
+{% highlight php %}>add_filter( 'the_content', 'sharing_display', 19 );
 add_filter( 'the_excerpt', 'sharing_display', 19 );
-</pre>
+{% endhighlight %}
 
 Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal. 
 
 Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función 
 
-<pre lang="php">sharing_display()
-</pre>
+{% highlight php %}>sharing_display()
+{% endhighlight %}
 
 En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama ***content-single.php***. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:
 
-<pre lang="php"><?php agregador_bitacoras_com('mini');  echo sharing_display(); ?>
-</pre>
+{% highlight php %}><?php agregador_bitacoras_com('mini');  echo sharing_display(); ?>
+{% endhighlight %}
 
 Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.
 
@@ -47,9 +47,9 @@ Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.
 
 En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos los artículos, ya que es aquí donde se genera la página principal. Como antes, por lo general suele existir un archivo llamado ***loop.php***, pero este no era mi caso. Sea cual sea el nombre del archivo, en el interior hemos de encontrar el código encargado de generar el contenido del artículo para la página principal (Que suele estar resumido). Yo he decidido colocar los botones sociales debajo del enlace **Seguir leyendo**:
 
-<pre lang="php">the_content( __( 'Seguir leyendo <span class="meta-nav">&rarr;</span>');
+{% highlight php %}>the_content( __( 'Seguir leyendo <span class="meta-nav">&rarr;</span>');
 echo sharing_display(); 
-</pre>
+{% endhighlight %}
 
 Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y listo.
 

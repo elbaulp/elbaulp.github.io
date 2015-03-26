@@ -53,7 +53,7 @@ Antes de realizar ninguna optimización, es importante entender el formato del A
 
 Éste es el aspecto del **APK** tras ejecutar `unzip <app.apk>`:
 
-<pre lang="bash">/assets
+{% highlight bash %}>/assets
 /lib
   /armeabi
   /armeabi-v7a
@@ -67,7 +67,7 @@ Antes de realizar ninguna optimización, es importante entender el formato del A
 AndroidManifest.xml
 classes.dex
 resources.arsc
-</pre>
+{% endhighlight %}
 
 La mayor parte del contenido anterior debe resultar familiar a todo programador. Refleja la estructura del proyecto que se puede observar durante el desarrollo. [/assets][5], `/lib`, [/res][6], [AndroidManifest.xml][7]. `classes.dex` contiene la versión compilada (dex) del código en Java y `resources.arsc` los recursos precompilados, por ejemplo XML binarios (values, XML drawables etc).
 
@@ -130,12 +130,12 @@ El desarrollo en Android a menudo recae en el uso de librerías externas como la
 
 Desde la versión **0.7** del plugin **Gradle**, es posible pasar información sobre qué configuraciones son necesarias para nuestra aplicación al *build system*. Ésto es posible gracias a las configuraciones en `resConfig` y `resConfigs`. El archivo `build.gradle` de abajo previene que `aapt` empaquete recursos que no coincidan con los que usa la aplicación:
 
-<pre lang="groovy">defaultConfig {
+{% highlight groovy %}>defaultConfig {
     // ...
     resConfigs "en", "de", "fr", "it"
     resConfigs "nodpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"
 }
-</pre>
+{% endhighlight %}
 
 ### Comprimir imágenes
 
@@ -157,14 +157,14 @@ También es posible evitar guardar recursos que solo sean rotaciones de otro. Di
 
 Podemos deshacernos fácilmente de `ic_arrow_collapse` creando un `RotateDrawable` basándonos en `ic_arrow_expand`. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:
 
-<pre lang="xml"><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
 &lt;rotate xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/ic_arrow_expand"
     android:fromDegrees="180"
     android:pivotX="50%"
     android:pivotY="50%"
     android:toDegrees="180" />
-</pre>
+{% endhighlight %}
 
 ### Renderizar en código cuando sea necesario
 
@@ -176,7 +176,7 @@ Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el 
 
 La animación para el “éxito” se construye con un `AnimationDrawable` definido en un XML:
 
-<pre lang="xml"><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
 &lt;animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
     &lt;item android:drawable="@drawable/generic_confirmation_00163" android:duration="33"/>
     &lt;item android:drawable="@drawable/generic_confirmation_00164" android:duration="33"/>
@@ -201,7 +201,7 @@ La animación para el “éxito” se construye con un `AnimationDrawable` defin
     &lt;item android:drawable="@drawable/generic_confirmation_00192" android:duration="33"/>
     &lt;item android:drawable="@drawable/generic_confirmation_00193" android:duration="33"/>
 &lt;/animation-list>
-</pre>
+{% endhighlight %}
 
 Lo malo es, que cada *frame* se muestra durante 33ms, lo que hace que la animación se ejecute a 30fps. Mostrar un *frame* cada 16ms habría resultado en una librería dos veces más pesada. El *frame* `generic_confirmation_00175` (línea 15) se muestra durante 333ms, le sigue `generic_confirmation_00185`. Ésta es una gran optimización que evita que 9 *frames* (del 176 al 184 incluidos) se empaqueten en la aplicación. Desafortunadamente, `wearable-support.aar` contiene estos 9 *frames* que no son usados para 3 densidades.
 

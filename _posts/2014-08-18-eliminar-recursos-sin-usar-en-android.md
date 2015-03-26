@@ -28,15 +28,15 @@ A medida que un proyecto va creciendo, se usan más y más [recursos][3]. Con el
 
 Bastante sencillo:
 
-<pre lang="bash">pip install android-resource-remover
-</pre>
+{% highlight bash %}>pip install android-resource-remover
+{% endhighlight %}
 
 ## Ejecutar Android Resource Remover
 
 Bastante sencillo también, basta con ejecutar
 
-<pre lang="bash">android-resource-remover
-</pre>
+{% highlight bash %}>android-resource-remover
+{% endhighlight %}
 
 en el directorio del proyecto a limpiar.
 
@@ -44,22 +44,22 @@ en el directorio del proyecto a limpiar.
 
 Si por algún motivo, el proceso de instalación no finaliza correctamente, es posible que falten los siguientes paquetes en el sistema.
 
-<pre lang="bash">sudo apt-get install libxml2-dev libxslt1-dev
-</pre>
+{% highlight bash %}>sudo apt-get install libxml2-dev libxslt1-dev
+{% endhighlight %}
 
 En mi caso tuve que instalarlos.
 
 También es posible que sea necesario actualizar la librería xml con
 
-<pre lang="bash">easy_install --upgrade lxml
-</pre>
+{% highlight bash %}>easy_install --upgrade lxml
+{% endhighlight %}
 
 ## Uso avanzado
 
 En mi caso, me encontré con problemas al usar el programa sin argumentos. Concretamente los pasos que seguí fueron:
 
-<pre lang="bash">lint --xml lint-result.xml -Wall --quiet --showall .
-</pre>
+{% highlight bash %}>lint --xml lint-result.xml -Wall --quiet --showall .
+{% endhighlight %}
 
 El significado de los parámetros es:
 
@@ -71,8 +71,8 @@ El significado de los parámetros es:
 
 Una vez finalizado el análisis, es posible eliminar los recursos sin usar usando *Android Resource Remover* con los siguientes parámetros:
 
-<pre lang="bash">android-resource-remover --xml lint-result.xml
-</pre>
+{% highlight bash %}>android-resource-remover --xml lint-result.xml
+{% endhighlight %}
 
 ## Eliminar Identificadores sin usar
 

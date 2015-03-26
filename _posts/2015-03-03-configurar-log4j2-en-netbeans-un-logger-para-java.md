@@ -26,7 +26,7 @@ En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proy
 
 <!--more-->
 
-<pre lang="xml">&lt;dependencies>
+{% highlight xml %}>&lt;dependencies>
     &lt;dependency>
         &lt;groupId>org.apache.logging.log4j&lt;/groupId>
         &lt;artifactId>log4j-api&lt;/artifactId>
@@ -38,7 +38,7 @@ En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proy
         &lt;version>2.2&lt;/version>
     &lt;/dependency>
 &lt;/dependencies>
-</pre>
+{% endhighlight %}
 
 Hecho ésto, en la carpeta *dependencias*, hacemos click derecho y damos a que descargue las dependencias declaradas.
 
@@ -46,7 +46,7 @@ Hecho ésto, en la carpeta *dependencias*, hacemos click derecho y damos a que d
 
 Por defecto *Log4j2* ofrece un fichero de configuración, pero podemos modificarlo a nuestro gusto, para colorear la salida de los distintos niveles de log, y formatear la línea a nuestro gusto. En éste caso usaré el siguiente fichero `log4j2.json`:
 
-<pre lang="json">{
+{% highlight json %}>{
     "configuration":
             {
                 "appenders": {
@@ -76,7 +76,7 @@ Por defecto *Log4j2* ofrece un fichero de configuración, pero podemos modificar
                 }
             }
 }
-</pre>
+{% endhighlight %}
 
 En él, se especifica un fichero `app.log` en el que se almacenará el log con el formato `"%d %p %c{1.} [%t] %m%n"`. Y en la consola aparecerá con el siguiente formato: `"%highlight{[%-5level] - [%t] - .%c{1}: %msg%n}"` que como veremos, colorea el resultado en función del nivel del log. Más información acerca del fichero de configuración en la [web oficial][2].
 
@@ -84,7 +84,7 @@ El fichero `log4j2.json` hay que colocarlo en la carpeta `resources` del proyect
 
 Debido a que el fichero de configuración está en `json`, hay que añadir las siguientes dependencias al proyecto:
 
-<pre lang="xml">&lt;dependency>
+{% highlight xml %}>&lt;dependency>
     &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>
     &lt;artifactId>jackson-core&lt;/artifactId>
     &lt;version>2.2.2&lt;/version>
@@ -95,13 +95,13 @@ Debido a que el fichero de configuración está en `json`, hay que añadir las s
     &lt;artifactId>jackson-databind&lt;/artifactId>
     &lt;version>2.2.2&lt;/version>
 &lt;/dependency>
-</pre>
+{% endhighlight %}
 
 ## Ejemplo de uso
 
 Crearemos una clase básica a modo de ejemplo:
 
-<pre lang="java">import org.apache.logging.log4j.LogManager;
+{% highlight java %}>import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
@@ -121,7 +121,7 @@ public class EjemploLog4j2 {
         LOGGER.fatal("Log level fatal");
     }
 }
-</pre>
+{% endhighlight %}
 
 Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log coloreados, como se muestra en la imagen:
 
@@ -131,7 +131,7 @@ Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log col
 
 Cuando depuremos, será útil que aparezcan todos los niveles de log en la consola, desde *fatal* hasta *trace*. Pero en producción sería conveniente loggear únicamente eventos a un nivel determinado, por ejemplo, a partir de `warn`. Para ello podemos crear ésta función que encontré en [SO][3]:
 
-<pre lang="java">/**
+{% highlight java %}>/**
  * Credit: http://stackoverflow.com/a/18409096/1612432
  *
  * @param l The log level to set
@@ -143,11 +143,11 @@ public static void setLogLevel(Level l) {
     conf.getLoggerConfig(LogManager.ROOT_LOGGER_NAME).setLevel(l);
     ctx.updateLoggers(conf);
 }
-</pre>
+{% endhighlight %}
 
 Para establecer un nivel básta con llamar a la función así `setLogLevel(Level.ERROR)`. Con lo cual, sólo aparecerían los niveles `error` y `fatal`. La clase quedaría así:
 
-<pre lang="java">import org.apache.logging.log4j.Level;
+{% highlight java %}>import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
@@ -184,7 +184,7 @@ public class EjemploLog4j2 {
         ctx.updateLoggers(conf);
     }
 }
-</pre>
+{% endhighlight %}
 
 <img src="http://elbauldelprogramador.com/content/uploads/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434" height="49" class="aligncenter size-full wp-image-2556" />
 
