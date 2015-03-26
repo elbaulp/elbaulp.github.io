@@ -1,7 +1,6 @@
 ---
 id: 763
 title: Contacto
-author: Alejandro Alcalde
 layout: page
 guid: /?page_id=763
 if_page_sidebar:

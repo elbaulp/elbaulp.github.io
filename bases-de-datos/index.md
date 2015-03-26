@@ -1,7 +1,6 @@
 ---
 id: 424
 title: Bases de Datos
-author: Alejandro Alcalde
 layout: page
 guid: http://elbauldelprogramador.org/?page_id=424
 blogger_permalink:
@@ -100,7 +99,7 @@ if_page_sidebar:
 
 
 
-* * *</p> 
+* * *</p>
 
 <h3 style="text-align:center;">
   ÍNDICE PL/SQL
@@ -151,4 +150,3 @@ if_page_sidebar:
     </li>
   </ul>
 </div>
-

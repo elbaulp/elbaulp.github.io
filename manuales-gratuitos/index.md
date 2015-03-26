@@ -1,7 +1,6 @@
 ---
 id: 449
 title: Manuales gratuítos
-author: Alejandro Alcalde
 layout: page
 guid: http://elbauldelprogramador.org/?page_id=449
 blogger_permalink:

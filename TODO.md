@@ -18,3 +18,4 @@
 - [ ] Post Poker
 - [ ] Descargas
 - [ ] Ping Google
+- [ ] Featured Images

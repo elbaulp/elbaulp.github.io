@@ -1,7 +1,6 @@
 ---
 id: 1714
 title: Colabora
-author: Alejandro Alcalde
 layout: page
 guid: http://elbauldelprogramador.com/?page_id=1714
 ---

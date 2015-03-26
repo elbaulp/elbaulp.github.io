@@ -1,7 +1,6 @@
 ---
 id: 2342
 title: Tutorial Programación ABAP
-author: Alejandro Alcalde
 layout: page
 guid: http://elbauldelprogramador.com/?page_id=2342
 ---
@@ -17,4 +16,3 @@ guid: http://elbauldelprogramador.com/?page_id=2342
     </li>
   </ul>
 </div>
-

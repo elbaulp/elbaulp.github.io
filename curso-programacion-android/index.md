@@ -1,7 +1,6 @@
 ---
 id: 391
 title: Android
-author: Alejandro Alcalde
 layout: page
 guid: http://elbauldelprogramador.org/?page_id=391
 blogger_blog:
