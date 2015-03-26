@@ -35,7 +35,7 @@ En éste artículo veremos cómo instalarlo y qué paquetes de los que no vienen
 
 Una vez instalados los requisitos, comenzamos a instalar **Atom**:
 
-{% highlight bash %}>git clone https://github.com/atom/atom
+{% highlight bash %}git clone https://github.com/atom/atom
 cd atom
 script/build # Crea la aplicación en $TMPDIR/atom-build/Atom
 sudo script/grunt install # Instala los binarios a /usr/local/bin/atom
@@ -70,7 +70,7 @@ Uno de ellos es *build*, que permite compilar el projecto abierto directamente d
 
 Para instalarlo:
 
-{% highlight bash %}>apm install build
+{% highlight bash %}apm install build
 {% endhighlight %}
 
 Una vez instalado, basta con situarnos en el proyecto y pulsar `alt-Ctrl-b`. Si necesitamos añadir opciones adicionales a make, podemos hacerlo en la preferencias del paquete.
@@ -79,7 +79,7 @@ Una vez instalado, basta con situarnos en el proyecto y pulsar `alt-Ctrl-b`. Si 
 
 Otro paquete interesante es **<a href="https://atom.io/packages/git-plus" title="Git Plus" target="_blank">git-plus</a>**, que permite hacer cosas en git sin necesidad de la línea de comandos, para instalarlo:
 
-{% highlight bash %}>apm install git-plus
+{% highlight bash %}apm install git-plus
 {% endhighlight %}
 
 Una demostración de su uso:

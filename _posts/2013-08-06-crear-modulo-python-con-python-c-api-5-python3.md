@@ -30,7 +30,7 @@ El proceso de compatibilidad se realiza mediante varios *#define* y macros en C 
 
 ### Código fuente compatible con Python 3
 
-{% highlight c %}>#include &lt;Python.h>
+{% highlight c %}#include &lt;Python.h>
 #include &lt;string.h>
 #include &lt;sys/socket.h>
 #include &lt;netinet/in.h>
@@ -148,7 +148,7 @@ initherramientasRed(void)
 
 Para comprobar que funciona, compilamos e instalamos el módulo con Python 3 de la siguiente forma:
 
-{% highlight bash %}>$ python3 setup.py install
+{% highlight bash %}$ python3 setup.py install
 running install
 running build
 running build_ext
@@ -165,7 +165,7 @@ Writing /usr/local/lib/python3.2/dist-packages/HerramientasRed-1.0.egg-info
 
 Todo ha salido bien, abrimos el intérprete de Python 3 y probamos el módulo:
 
-{% highlight python %}>Python 3.2.4 (default, May  8 2013, 20:55:18) 
+{% highlight python %}Python 3.2.4 (default, May  8 2013, 20:55:18) 
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed
@@ -176,7 +176,7 @@ elbauldelprogramador.com tiene dirección IP &lt;ip>
 
 Para asegurarnos de que el módulo sigue funcionando con python 2, volvemos a compilar y ejecutar desde la versión 2 de pyton:
 
-{% highlight bash %}>$ sudo python2.7 setup.py install
+{% highlight bash %}$ sudo python2.7 setup.py install
 running install
 running build
 running build_ext
@@ -193,7 +193,7 @@ Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
 
 Y por último:
 
-{% highlight bash %}>Python 2.7.5+ (default, Jun  2 2013, 13:26:34) 
+{% highlight bash %}Python 2.7.5+ (default, Jun  2 2013, 13:26:34) 
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed

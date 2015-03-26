@@ -36,30 +36,30 @@ Se trata de un programa que permitirá tener un sistema debian básico en el dis
   
 Conectamos el teléfono al pc mediante adb con `./adb shell` y ejecutamos los comandos de **botbrew** así:
 
-{% highlight bash %}>/data/botbrew-basil/init -- comando aquí
+{% highlight bash %}/data/botbrew-basil/init -- comando aquí
 {% endhighlight %}
 
 Es decir, para instalar un entorno debian completo, se haría lo siguiente:
 
-{% highlight bash %}>sh-4.1# /data/botbrew-basil/init -- apt-get install repository-emdebian
+{% highlight bash %}sh-4.1# /data/botbrew-basil/init -- apt-get install repository-emdebian
 sh-4.1# /data/botbrew-basil/init -- apt-get install debianbotbrew-debian-minimal
 {% endhighlight %}
 
 Existe la posibilidad de instalar el paquete **botbrew-wrapper** para evitar tener que preceder los comandos con la ruta mencionada arriba:
 
-{% highlight bash %}>shell@android:/ # /data/botbrew-basil/init -- apt-get install botbrew-wrapper
+{% highlight bash %}shell@android:/ # /data/botbrew-basil/init -- apt-get install botbrew-wrapper
 {% endhighlight %}
 
 A partir de ahora basta con ejecutar el comando **botbrew2** y seguidamente los comandos deseados, por ejemplo, para isntalar gcc y g++:
 
-{% highlight bash %}>shell@android:/ # su
+{% highlight bash %}shell@android:/ # su
 shell@android:/ # botbrew2
 shell@android:/ # apt-get install gcc g++
 {% endhighlight %}
 
 Instalados los compiladores, podemos ejecutar aplicaciones escritas en C/C++, probemos con un hola Mundo:
 
-{% highlight cpp %}>#include &lt;iostream>
+{% highlight cpp %}#include &lt;iostream>
 
 int main(){
    std::cout &lt;&lt; "Hola mundo!" &lt;&lt; std::endl;   
@@ -74,7 +74,7 @@ Ya solo queda compilarlo y ejecutarlo, dejo una captura de pantalla como prueba 
 
 Y no solo eso, también podemos instalar python:
 
-{% highlight python %}>shell@android:/tmp # apt-get install python2.7-minimal
+{% highlight python %}shell@android:/tmp # apt-get install python2.7-minimal
 shell@android:/ # cd /tmp
 shell@android:/ # echo "print "Hola Mundo desde Android!"" >> hello.py
 shell@android:/ # python2.7 hello.py

@@ -19,7 +19,7 @@ Seguramente alguna vez hayas encontrado alguna web con montones de ficheros que 
   
 <!--more-->
 
-{% highlight bash %}>wget -r -A.tar.gz &lt;url>
+{% highlight bash %}wget -r -A.tar.gz &lt;url>
 {% endhighlight %}
 
 Donde:

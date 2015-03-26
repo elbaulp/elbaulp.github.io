@@ -29,17 +29,17 @@ DWM es un gestor de ventanas dinámico que permite organizar las ventanas de var
 
 La mejor forma es clonar el repositorio [git][2]:
 
-{% highlight bash %}>$ git clone http://git.suckless.org/dwm
+{% highlight bash %}$ git clone http://git.suckless.org/dwm
 {% endhighlight %}
 
 Una vez clonado y dentro del directorio, compilamos e instalamos:
 
-{% highlight bash %}>$ sudo make clean install
+{% highlight bash %}$ sudo make clean install
 {% endhighlight %}
 
 Ya está listo para usar, pero hay que hacer una última cosa para poder ejecutarlo tras introducir nuestro usuario y contraseña del ordenador. Si usas Ubuntu o Debian, probablemente **lightdm** sea el gestor de login. De ser así, añadiremos una entrada a la lista de sesiones de **lightdm** para poder acceder a DWM. Para ello creamos el fichero *dwm-personalized.desktop* y lo copiamos a `/usr/share/xsessions/`
 
-{% highlight bash %}>[Desktop Entry]
+{% highlight bash %}[Desktop Entry]
 Encoding=UTF-8
 Name=Dwm-personalized
 Comment=Dynamic window manager
@@ -50,7 +50,7 @@ Type=XSession
 
 En éste archivo estamos definiendo la información necesaria para que **lightdm** sea capaz de ejecutar DWM cuando entremos en el pc. `Exec=dwm-personalized` indica qué script debe ejecutarse, pero aún no lo hemos creado. Éste archivo debe contener todos los programas que queramos iniciar y, en la última línea, se debe ejecutar DWM. Mi script es así:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 
 # setting keuboard layout /usr/share/X11/xkb/rules/base.lst
 setxkbmap us intl
@@ -73,7 +73,7 @@ exec dwm
 
 Creado el script, hay que darle permisos de ejecución y copiarlo a `/usr/bin`
 
-{% highlight bash %}>$ chmo +x dwm-personalized
+{% highlight bash %}$ chmo +x dwm-personalized
 $ sudo cp dwm-personalized /usr/bin
 {% endhighlight %}
 
@@ -81,12 +81,12 @@ $ sudo cp dwm-personalized /usr/bin
 
 Ejecutados los pasos anteriores, ahora basta con salir de la sesión actual y entrar con DWM. Algunas cosas que probablemente sean adecuadas cambiar antes de ejecutar dwm es qué terminal usar. Para ello hay que modificar la variable `termcmd` en `config.def.h`, que por defecto es:
 
-{% highlight c %}>static const char *termcmd[]  = { "st", NULL };
+{% highlight c %}static const char *termcmd[]  = { "st", NULL };
 {% endhighlight %}
 
 Por el terminal preferido de cada uno, el mio por ejemplo es **Terminator**:
 
-{% highlight c %}>static const char *termcmd[]  = { "terminator", NULL };
+{% highlight c %}static const char *termcmd[]  = { "terminator", NULL };
 {% endhighlight %}
 
 Recompilamos y listo.
@@ -99,17 +99,17 @@ Un programa muy útil es dmenu, permite lanzar cualquier programa abriendo una v
 
 Para instalarlo:
 
-{% highlight bash %}>$ sudo apt-get install suckless-tools
+{% highlight bash %}$ sudo apt-get install suckless-tools
 {% endhighlight %}
 
 Debemos modificar una línea en `config.def.h` ya que parece ser que la versión que instala Ubuntu no concuerda con la que supone dwm y hay un parámetro que no existe. Para ello eliminamos `, "-m", dmenumon` de ésta línea:
 
-{% highlight c %}>static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+{% highlight c %}static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 {% endhighlight %}
 
 Quedando así:
 
-{% highlight c %}>static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+{% highlight c %}static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 {% endhighlight %}
 
 ## Probando DWM
@@ -120,12 +120,12 @@ Ahora que está todo al entrar podremos ejecutar un terminal pulsando ALT+Shift+
 
 Para los usuarios de Linux, la tecla de Windows no se usa prácticamente para nada, lo cual viene muy bien para este tipo de programas, y así de paso evitamos interferir con cualquier otro atajo que haya definido otro programa. Para cambiar el modificador ALT por la tecla de Windows basta con cambiar 
 
-{% highlight c %}>#define MODKEY Mod1Mask
+{% highlight c %}#define MODKEY Mod1Mask
 {% endhighlight %}
 
 por 
 
-{% highlight c %}>#define MODKEY Mod4Mask
+{% highlight c %}#define MODKEY Mod4Mask
 {% endhighlight %}
 
 en el fichero `config.def.h`

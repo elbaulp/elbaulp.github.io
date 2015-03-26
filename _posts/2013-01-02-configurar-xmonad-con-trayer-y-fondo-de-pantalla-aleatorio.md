@@ -24,7 +24,7 @@ La <a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerze
 
 La documentación oficial de xmonad configura **trayer** de forma se ejecute al iniciar sesión modificando el archivo **~/.xsession** tal que así:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
  
 # Load resources
  
@@ -59,7 +59,7 @@ exec xmonad
 
 Este xsession no me lanzaba trayer, así que lo saqué fuera a un script aparte:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 15 --height 20 --transparent true --tint 0x000000 --monitor 1 &#038;
 
@@ -87,7 +87,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 Pero no dió resultado, así que como última opción, asigne una combinación de teclas al script en el archivo de configuración de xmonad (**xmonad.hs**):
 
-{% highlight bash %}>import XMonad  
+{% highlight bash %}import XMonad  
 import XMonad.Config.Azerty  
 import XMonad.Hooks.DynamicLog  
 import XMonad.Hooks.ManageDocks  
@@ -179,11 +179,11 @@ Concretamente la tecla con el iconito de la calculadora:
 
 Antes de continuar, es necesario instalar **feh** para establecer fondos de pantalla:
 
-{% highlight bash %}>sudo aptitude install feh{% endhighlight %}
+{% highlight bash %}sudo aptitude install feh{% endhighlight %}
 
 Para conseguir que cada x tiempo el fondo de pantalla cambie, creé un script, que selecciona aleatoriamente una imagen de una carpeta:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 export DISPLAY=:0.0
 

@@ -77,12 +77,12 @@ Este firewall lo controla un programa llamado iptables que gestiona el filtrado 
 
 Teclea el siguiente comando como root:
 
-{% highlight bash %}>iptables -L -n -v
+{% highlight bash %}iptables -L -n -v
 {% endhighlight %}
 
 Ejemplos de salidas:
 
-{% highlight bash %}>Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+{% highlight bash %}Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
  pkts bytes target     prot opt in     out     source               destination
 Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
  pkts bytes target     prot opt in     out     source               destination
@@ -92,7 +92,7 @@ Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
 
 El resultado de arriba indica que el firewall no está activo. La siguiente salida es la del firewall activado:
 
-{% highlight bash %}>Chain INPUT (policy DROP 0 packets, 0 bytes)
+{% highlight bash %}Chain INPUT (policy DROP 0 packets, 0 bytes)
  pkts bytes target     prot opt in     out     source               destination
     0     0 DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0           state INVALID
   394 43586 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
@@ -123,12 +123,12 @@ Donde,
 
 #### #1.1:Para Inspeccionar el firewall con número de lineas:
 
-{% highlight bash %}>iptables -n -L -v --line-numbers
+{% highlight bash %}iptables -n -L -v --line-numbers
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>Chain INPUT (policy DROP)
+{% highlight bash %}Chain INPUT (policy DROP)
 num  target     prot opt source               destination
 1    DROP       all  --  0.0.0.0/0            0.0.0.0/0           state INVALID
 2    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
@@ -155,7 +155,7 @@ Podemos usar los números de línea para borrar o añadir nuevas reglas al firew
 
 #### #1.2: Mostrar las reglas de cadena de entrada y salida:
 
-{% highlight bash %}>iptables -L INPUT -n -v
+{% highlight bash %}iptables -L INPUT -n -v
 iptables -L OUTPUT -n -v --line-numbers
 {% endhighlight %}
 
@@ -163,14 +163,14 @@ iptables -L OUTPUT -n -v --line-numbers
 
 Si usas CentOS / RHEL / Fedora linux:
 
-{% highlight bash %}>service iptables stop
+{% highlight bash %}service iptables stop
 service iptables start
 service iptables restart
 {% endhighlight %}
 
 También se puede usar propio comando iptables para detenerlo y borrar todas las reglas.
 
-{% highlight bash %}>iptables -F
+{% highlight bash %}iptables -F
 iptables -X
 iptables -t nat -F
 iptables -t nat -X
@@ -192,7 +192,7 @@ Donde:
 
 Para mostrar los números de línea junto a otra información para reglas existentes:
 
-{% highlight bash %}>iptables -L INPUT -n --line-numbers
+{% highlight bash %}iptables -L INPUT -n --line-numbers
 iptables -L OUTPUT -n --line-numbers
 iptables -L OUTPUT -n --line-numbers | less
 iptables -L OUTPUT -n --line-numbers | grep 202.54.1.1
@@ -200,12 +200,12 @@ iptables -L OUTPUT -n --line-numbers | grep 202.54.1.1
 
 Obtendrendremos la lista de IPs. Miramos el número de la izquierda y lo usamos para borrarla. Por ejemplo para borrar la línea 4:
 
-{% highlight bash %}>iptables -D INPUT 4
+{% highlight bash %}iptables -D INPUT 4
 {% endhighlight %}
 
 O para encontrar una ip de origen y borrarla de la regla
 
-{% highlight bash %}>iptables -D INPUT -s 202.54.1.1 -j DROP
+{% highlight bash %}iptables -D INPUT -s 202.54.1.1 -j DROP
 {% endhighlight %}
 
 Donde:
@@ -216,12 +216,12 @@ Donde:
 
 Para insertar una o más reglas en la cadena seleccionada como el número de cadena dada usamos la siguiente sintaxis. Primero encontramos el número de línea:
 
-{% highlight bash %}>iptables -L INPUT -n --line-numbers
+{% highlight bash %}iptables -L INPUT -n --line-numbers
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>Chain INPUT (policy DROP)
+{% highlight bash %}Chain INPUT (policy DROP)
 num  target     prot opt source               destination
 1    DROP       all  --  202.54.1.1           0.0.0.0/0
 2    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state NEW,ESTABLISHED
@@ -229,17 +229,17 @@ num  target     prot opt source               destination
 
 Para insertar una regla entre 1 y 2;
 
-{% highlight bash %}>iptables -I INPUT 2 -s 202.54.1.2 -j DROP
+{% highlight bash %}iptables -I INPUT 2 -s 202.54.1.2 -j DROP
 {% endhighlight %}
 
 Para ver las reglas actualizadas
 
-{% highlight bash %}>iptables -L INPUT -n --line-numbers
+{% highlight bash %}iptables -L INPUT -n --line-numbers
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>Chain INPUT (policy DROP)
+{% highlight bash %}Chain INPUT (policy DROP)
 num  target     prot opt source               destination
 1    DROP       all  --  202.54.1.1           0.0.0.0/0
 2    DROP       all  --  202.54.1.2           0.0.0.0/0
@@ -250,18 +250,18 @@ num  target     prot opt source               destination
 
 Para guardar reglas en CentOS / RHEL / Fedora Linux:
 
-{% highlight bash %}>service iptables save
+{% highlight bash %}service iptables save
 {% endhighlight %}
 
 En este ejemplo, eliminamos una ip y guardamos las reglas del firewall:
 
-{% highlight bash %}>iptables -A INPUT -s 202.5.4.1 -j DROP
+{% highlight bash %}iptables -A INPUT -s 202.5.4.1 -j DROP
 service iptables save
 {% endhighlight %}
 
 Para todas las dem��s distros usamos:
 
-{% highlight bash %}>iptables-save > /root/my.active.firewall.rules
+{% highlight bash %}iptables-save > /root/my.active.firewall.rules
 cat /root/my.active.firewall.rules
 {% endhighlight %}
 
@@ -269,19 +269,19 @@ cat /root/my.active.firewall.rules
 
 Para restaurar reglas desde un archivo llamado /root/my.active.firewall.rules:
 
-{% highlight bash %}>iptables-restore &lt; /root/my.active.firewall.rules
+{% highlight bash %}iptables-restore &lt; /root/my.active.firewall.rules
 {% endhighlight %}
 
 Bajo CentOS / RHEL / Fedora Linux:
 
-{% highlight bash %}>service iptables restart
+{% highlight bash %}service iptables restart
 {% endhighlight %}
 
 # #7: Estableces políticas de firewall por defecto
 
 Para borrar todo el tráfico:
 
-{% highlight bash %}>iptables -P INPUT DROP
+{% highlight bash %}iptables -P INPUT DROP
 iptables -P OUTPUT DROP
 iptables -P FORWARD DROP
 iptables -L -v -n
@@ -294,7 +294,7 @@ wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
 
 Para borrar todos los paquetes entrantes / enviados pero permitir el tráfico saliente:
 
-{% highlight bash %}>iptables -P INPUT DROP
+{% highlight bash %}iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 iptables -A INPUT -m state --state NEW,ESTABLISHED -j ACCEPT
@@ -308,7 +308,7 @@ wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
 
 IP Spoofing es nada más que para detener los siguientes rangos de direcciones IPv4 para redes privadas en sus interfaces públicas. Los paquetes con direcciones de origen no enrutables deben rechazarse mediante la siguiente sintaxis:
 
-{% highlight bash %}>iptables -A INPUT -i eth1 -s 192.168.0.0/24 -j DROP
+{% highlight bash %}iptables -A INPUT -i eth1 -s 192.168.0.0/24 -j DROP
 iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
 {% endhighlight %}
 
@@ -316,7 +316,7 @@ iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
 
 PAra bloquear una ip atacante llamada 1.2.3.4:
 
-{% highlight bash %}>iptables -A INPUT -s 1.2.3.4 -j DROP
+{% highlight bash %}iptables -A INPUT -s 1.2.3.4 -j DROP
 iptables -A INPUT -s 192.168.0.0/24 -j DROP
 {% endhighlight %}
 
@@ -324,13 +324,13 @@ iptables -A INPUT -s 192.168.0.0/24 -j DROP
 
 Para bloquear todas las solicitudes de servicio en el puerto 80:
 
-{% highlight bash %}>iptables -A INPUT -p tcp --dport 80 -j DROP
+{% highlight bash %}iptables -A INPUT -p tcp --dport 80 -j DROP
 iptables -A INPUT -i eth1 -p tcp --dport 80 -j DROP
 {% endhighlight %}
 
 Para bloquear el puerto 80 para una ip:
 
-{% highlight bash %}>iptables -A INPUT -p tcp -s 1.2.3.4 --dport 80 -j DROP
+{% highlight bash %}iptables -A INPUT -p tcp -s 1.2.3.4 --dport 80 -j DROP
 iptables -A INPUT -i eth1 -p tcp -s 192.168.1.0/24 --dport 80 -j DROP
 {% endhighlight %}
 
@@ -338,22 +338,22 @@ iptables -A INPUT -i eth1 -p tcp -s 192.168.1.0/24 --dport 80 -j DROP
 
 Para bloquear el tráfico saliente a un host o dominio en concreto como por ejemplo cyberciti.biz:
 
-{% highlight bash %}>host -t a cyberciti.biz
+{% highlight bash %}host -t a cyberciti.biz
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>cyberciti.biz has address 75.126.153.206
+{% highlight bash %}cyberciti.biz has address 75.126.153.206
 {% endhighlight %}
 
 Una vez conocida la dirección ip, bloqueamos todo el tráfico saliente para dicha ip así:
 
-{% highlight bash %}>iptables -A OUTPUT -d 75.126.153.206 -j DROP
+{% highlight bash %}iptables -A OUTPUT -d 75.126.153.206 -j DROP
 {% endhighlight %}
 
 Se puede usar una subred como la siguiente:
 
-{% highlight bash %}>iptables -A OUTPUT -d 192.168.1.0/24 -j DROP
+{% highlight bash %}iptables -A OUTPUT -d 192.168.1.0/24 -j DROP
 iptables -A OUTPUT -o eth1 -d 192.168.1.0/24 -j DROP
 {% endhighlight %}
 
@@ -361,32 +361,32 @@ iptables -A OUTPUT -o eth1 -d 192.168.1.0/24 -j DROP
 
 Primero, encontrar la dirección ip de facebook.com
 
-{% highlight bash %}>host -t a www.facebook.com
+{% highlight bash %}host -t a www.facebook.com
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>www.facebook.com has address 69.171.228.40
+{% highlight bash %}www.facebook.com has address 69.171.228.40
 {% endhighlight %}
 
 Buscar el CIDR para 69.171.228.40:
 
-{% highlight bash %}>whois 69.171.228.40 | grep CIDR
+{% highlight bash %}whois 69.171.228.40 | grep CIDR
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>CIDR:           69.171.224.0/19
+{% highlight bash %}CIDR:           69.171.224.0/19
 {% endhighlight %}
 
 Para prevenir el acceso externo a facebook.com:
 
-{% highlight bash %}>iptables -A OUTPUT -p tcp -d 69.171.224.0/19 -j DROP
+{% highlight bash %}iptables -A OUTPUT -p tcp -d 69.171.224.0/19 -j DROP
 {% endhighlight %}
 
 Podemos usar también nombres de dominio:
 
-{% highlight bash %}>iptables -A OUTPUT -p tcp -d www.facebook.com -j DROP
+{% highlight bash %}iptables -A OUTPUT -p tcp -d www.facebook.com -j DROP
 iptables -A OUTPUT -p tcp -d facebook.com -j DROP
 {% endhighlight %}
 
@@ -398,13 +398,13 @@ De la página del man de iptables:
 
 Escribe lo siguiente para añadir al log y bloquear IP spoofing en una interfaz pública llamada eth1
 
-{% highlight bash %}>iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j LOG --log-prefix "IP_SPOOF A: "
+{% highlight bash %}iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j LOG --log-prefix "IP_SPOOF A: "
 iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
 {% endhighlight %}
 
 Por defecto el log está en el archivo /var/log/messages
 
-{% highlight bash %}>tail -f /var/log/messages
+{% highlight bash %}tail -f /var/log/messages
 grep --color 'IP SPOOF' /var/log/messages
 {% endhighlight %}
 
@@ -412,13 +412,13 @@ grep --color 'IP SPOOF' /var/log/messages
 
 El módulo -m limit puede limitar el número de entradas al log creadas por tiempo. Se usa para prevenir que el archivo de log se inunde. Para añadir al log y elminar spoofing cada 5 minutos, en ráfagas de 7 entradas:
 
-{% highlight bash %}>iptables -A INPUT -i eth1 -s 10.0.0.0/8 -m limit --limit 5/m --limit-burst 7 -j LOG --log-prefix "IP_SPOOF A: "
+{% highlight bash %}iptables -A INPUT -i eth1 -s 10.0.0.0/8 -m limit --limit 5/m --limit-burst 7 -j LOG --log-prefix "IP_SPOOF A: "
 iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
 {% endhighlight %}
 
 # #14: Aceptar o denegar tráfico desde dirección MAC
 
-{% highlight bash %}>iptables -A INPUT -m mac --mac-source 00:0F:EA:91:04:08 -j DROP
+{% highlight bash %}iptables -A INPUT -m mac --mac-source 00:0F:EA:91:04:08 -j DROP
 ## *only accept traffic for TCP port # 8080 from mac 00:0F:EA:91:04:07 * ##
 iptables -A INPUT -p tcp --destination-port 22 -m mac --mac-source 00:0F:EA:91:04:07 -j ACCEPT
 {% endhighlight %}
@@ -427,18 +427,18 @@ iptables -A INPUT -p tcp --destination-port 22 -m mac --mac-source 00:0F:EA:91:0
 
 Para bloquear peticiones ping ICMP
 
-{% highlight bash %}>iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+{% highlight bash %}iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 iptables -A INPUT -i eth1 -p icmp --icmp-type echo-request -j DROP
 {% endhighlight %}
 
 Las respuestas al ping también se puede limitar a ciertas redes o hosts.
 
-{% highlight bash %}>iptables -A INPUT -s 192.168.1.0/24 -p icmp --icmp-type echo-request -j ACCEPT
+{% highlight bash %}iptables -A INPUT -s 192.168.1.0/24 -p icmp --icmp-type echo-request -j ACCEPT
 {% endhighlight %}
 
 Lo siguiente solo acepta limitados tipos de peticiones ICMP:
 
-{% highlight bash %}>### ** assumed that default INPUT policy set to DROP ** #############
+{% highlight bash %}### ** assumed that default INPUT policy set to DROP ** #############
 iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type destination-unreachable -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type time-exceeded -j ACCEPT
@@ -448,22 +448,22 @@ iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 
 # #16: Abrir un rango de puertos
 
-{% highlight bash %}>iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 7000:7010 -j ACCEPT
+{% highlight bash %}iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 7000:7010 -j ACCEPT
 {% endhighlight %}
 
 # #17: Abrir un rango de direcciones ip
 
-{% highlight bash %}>## only accept connection to tcp port 80 (Apache) if ip is between 192.168.1.100 and 192.168.1.200 ##
+{% highlight bash %}## only accept connection to tcp port 80 (Apache) if ip is between 192.168.1.100 and 192.168.1.200 ##
 iptables -A INPUT -p tcp --destination-port 80 -m iprange --src-range 192.168.1.100-192.168.1.200 -j ACCEPT
 {% endhighlight %}
 
-{% highlight bash %}>## nat example ##
+{% highlight bash %}## nat example ##
 iptables -t nat -A POSTROUTING -j SNAT --to-source 192.168.1.20-192.168.1.25
 {% endhighlight %}
 
 # #19: Bloquear o abrir puertos comunes
 
-{% highlight bash %}>Replace ACCEPT with DROP to block port:
+{% highlight bash %}Replace ACCEPT with DROP to block port:
 ## open port ssh tcp port 22 ##
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 22 -j ACCEPT
@@ -509,12 +509,12 @@ iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
 
 Se puede usar connlimit para crear algunas restricciones. Para permitir 3 conexiones ssh por cliente:
 
-{% highlight bash %}>iptables -A INPUT -p tcp --syn --dport 22 -m connlimit --connlimit-above 3 -j REJECT
+{% highlight bash %}iptables -A INPUT -p tcp --syn --dport 22 -m connlimit --connlimit-above 3 -j REJECT
 {% endhighlight %}
 
 Establecer las peticiones HTTP a 20:
 
-{% highlight bash %}>iptables -p tcp --syn --dport 80 -m connlimit --connlimit-above 20 --connlimit-mask 24 -j DROP
+{% highlight bash %}iptables -p tcp --syn --dport 80 -m connlimit --connlimit-above 20 --connlimit-mask 24 -j DROP
 {% endhighlight %}
 
 donde:
@@ -526,12 +526,12 @@ donde:
 
 Para más información sobre iptables, échale un vistazo al manual:
 
-{% highlight bash %}>man iptables
+{% highlight bash %}man iptables
 {% endhighlight %}
 
 Para ver la ayuda en general o de un comando específico:
 
-{% highlight bash %}>iptables -h
+{% highlight bash %}iptables -h
 iptables -j DROP -h
 {% endhighlight %}
 
@@ -539,7 +539,7 @@ iptables -j DROP -h
 
 Conocer si hay puertos abiertos o no:
 
-{% highlight bash %}>netstat -tulpn
+{% highlight bash %}netstat -tulpn
 {% endhighlight %}
 
 Es recomendable instalarse un [sniffer][1] como tcpdupm y ngrep para probar la configuración de nuestro firewall.
@@ -556,7 +556,7 @@ Es recomendable instalarse un [sniffer][1] como tcpdupm y ngrep para probar la c
 
 a)a. Reestablece las reglas por defecto.
 
-{% highlight bash %}>sudo su
+{% highlight bash %}sudo su
 iptables -F
 iptables -t nat -F
 iptables -t mangle -F
@@ -567,30 +567,30 @@ IPtables -nL para ver que estan vacias
 
 b)b. Configura la máquina para que sólo se pueda acceder desde ella a las webs http://www.google.es y http://www.iesgoya.com y a ninguna otra.
 
-{% highlight bash %}>iptables -A OUTPUT -d http://www.google.es -j ACCEPT
+{% highlight bash %}iptables -A OUTPUT -d http://www.google.es -j ACCEPT
 iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
 iptables -A OUTPUT -p tcp –dport 80 -j DROP # Mas exigente –> iptables -A OUTPUT -p all -j DROP
 {% endhighlight %}
 
 ##como google tiene muchas IPs puede que tengamos un problema para ello realizamos lo siguiente antes de la regla EXIGENTE:
 
-{% highlight bash %}>iptables -I OUTPUT 1 -d 212.106.221.0/24 -j ACCEPT
+{% highlight bash %}iptables -I OUTPUT 1 -d 212.106.221.0/24 -j ACCEPT
 iptables -I OUTPUT 1 -d 173.194.0.0/16 -j ACCEPT
 {% endhighlight %}
 
 # MOstrar las reglas que llevamos hasta el momento:
 
-{% highlight bash %}>iptables -nL –line-numbers
+{% highlight bash %}iptables -nL –line-numbers
 {% endhighlight %}
 
 #Si queremos borrar reglas:
 
-{% highlight bash %}>iptables -D OUTPUT 5
+{% highlight bash %}iptables -D OUTPUT 5
 {% endhighlight %}
 
 c)c. Cierra todos los puertos bien conocidos menos los necesarios para acceder a estas dos webs.
 
-{% highlight bash %}>iptables -A OUTPUT -p TCP –dport 53 -j ACCEPT
+{% highlight bash %}iptables -A OUTPUT -p TCP –dport 53 -j ACCEPT
 iptables -A OUTPUT -p UDP –dport 53 -j ACCEPT
 iptables -A OUTPUT -p TCP –dport 1:1024 -j DROP
 iptables -A OUTPUT -p UDP –dport 1:1024 -j DROP
@@ -606,24 +606,24 @@ Ahora desde la maquina fisica intentamos acceder desde el puerto 81 con la IP es
 
 Habilitamos el enrutamiento entre tarjetas de red de nuestro equipo:
 
-{% highlight bash %}>echo 1 > /proc/sys/net/ipv4/ip_forward
+{% highlight bash %}echo 1 > /proc/sys/net/ipv4/ip_forward
 {% endhighlight %}
 
 #Ejecutamos las siguientes reglas
 
-{% highlight bash %}>iptables -t nat -A PREROUTING -p tcp –dport 81 -j DNAT –to- destination 192.168.203.200:80
+{% highlight bash %}iptables -t nat -A PREROUTING -p tcp –dport 81 -j DNAT –to- destination 192.168.203.200:80
 
 iptables -t nat -A POSTROUTING -s 192.168.203.0/24 -j MASQUERADE
 {% endhighlight %}
 
 #Para ver las reglas introducidas:
 
-{% highlight bash %}>iptables -t nat -nL –line-numbers
+{% highlight bash %}iptables -t nat -nL –line-numbers
 {% endhighlight %}
 
 e)e. Permite sólo los mensajes entrantes desde la IP del compañero de tu máquina física (prueba desde otro sitio para ver si funciona).
 
-{% highlight bash %}>iptables -A INPUT -s 192.168.203.200 -j ACCEPT
+{% highlight bash %}iptables -A INPUT -s 192.168.203.200 -j ACCEPT
 iptables -A INPUT -j DROP
 
 iptables -A FORWARD -s 192.168.203.200 -j ACCEPT
@@ -634,7 +634,7 @@ f) #Activa el log sobre todas las reglas y verifica que se anotan los mensajes.
 
 Insertamos en IPTABLEs las reglas para activar el log:
 
-{% highlight bash %}>iptables -I FORWARD 1 -j LOG –log-prefix ‘IPTABLESFORWARD: ‘
+{% highlight bash %}iptables -I FORWARD 1 -j LOG –log-prefix ‘IPTABLESFORWARD: ‘
 iptables -I INPUT 1 -j LOG –log-prefix ‘IPTABLESINPUT: ‘
 
 iptables -t nat -I PREROUTING 1 -j LOG –log-prefix ‘IPTABLESPREROUTING: ‘
@@ -647,12 +647,12 @@ NOTA: hay que ponerlas las primeras para que haga log antes de rechazarlo.
 
 #Ahora editamos el archivo:
 
-{% highlight bash %}>gedit /etc/rsyslog.d/50-default.conf
+{% highlight bash %}gedit /etc/rsyslog.d/50-default.conf
 {% endhighlight %}
 
 #E incluimos al final:
 
-{% highlight bash %}>kern.warning /var/log/iptables.log
+{% highlight bash %}kern.warning /var/log/iptables.log
 {% endhighlight %}
 
 

@@ -41,7 +41,7 @@ Actualemente hay dos tipos de políticas disponibles para usar con *StrictMode*.
 
 No es una buena práctica hacer lecturas/escrituras a disco desde el hilo principal, como tampoco lo es realizar accesos a red. Google ha añadido al código del disco y de red *hooks* o *ganchos*, que son algoritmos abstractos que invocan a métodos abstractos. Por lo tanto, si activamos StrictMode para uno de nuestros hilos, y ese hilo realiza cualquiera de las dos acciones mencionadas anteriormente, seremos informados. Podemos elegir sobre qué aspectos de la política de hilos queremos ser informados, así como el método por el cual se nos informará. Normalmente las que usaremos serán accesos a disco y red. En cuanto al método por el que seremos informados, pordemos elegir: Escribirlo en el LogCat, mostrar un [diálogo][3], hacer un destello en la pantalla, escribir en el archivo log de DropBox o forzar el cierre de la aplicación. Normalmente se usa el LogCat o forzar el cierre. A continuación vemos un ejemplo de como configurar StrictMode para políticas de hilos:
 
-{% highlight java %}>StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+{% highlight java %}StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
           .detectDiskReads()
           .detectDiskWrites()
           .detectNetwork()   // or .detectAll() for all detectable problems
@@ -55,7 +55,7 @@ Debido a que con el código de arriba hemos activado el StrictMode, no necesitam
 
 StrictMode también dispone de *VmPolicy*, que comprueba pérdidas de memoria si un objeto SQLite finaliza antes de que haya sido cerrado, o si cualquier objeto que pueda ser cerrado ha finalizado antes de ser cerrado. Las VmPolicy se crean de una forma similar como se muestra a continuación. Sin embargo, hay una diferencia entre éstas y ThreadPolicy, que no pueden usar alertas a través de diálogos.
 
-{% highlight java %}>StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+{% highlight java %}StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
           .detectLeakedSqlLiteObjects()
           .penaltyLog()
           .penaltyDeath()
@@ -68,7 +68,7 @@ Algo importante que debemos hacer a la hora de distribuir nuestra aplicación es
 
 Un método más elegante para resolver este problema, es usar el atributo *debuggable* en nuestro [AndroidManifest][4]. Este atributo se coloca en el tag *<application></application>* de la forma *android:debuggable*. Una vez activado este atributo, puede fijarse como verdadero o falso dependiendo de si queremos depurar la aplicación o no. Podemos comprobar el estado de este atributo como se muestra más abajo. De modo que cuando esté activado, tendremos StrictMode activo, y cuando no lo esté, no.
 
-{% highlight java %}>//Devuelve si la aplicación está en modo debug o no
+{% highlight java %}//Devuelve si la aplicación está en modo debug o no
 ApplicationInfo appInfo = context.getApplicationInfo();
 int appFlags = appInfo.flags;
 if ((appFlags &#038; ApplicationInfo.FLAG_DEBUGGABLE) != 0){
@@ -80,7 +80,7 @@ Si usamos eclipse como IDE, el plugin ADT configura el atributo debuggable autom
 
 StrictMode no funciona en versiones Android anteriores a la 2.3. Si queremos usarlo con versiones anteriores, podemos usar técnicas espejo para llamar indirectamente a los métodos de StrictMode:
 
-{% highlight java %}>try{
+{% highlight java %}try{
    Class strictMode = Class.forName("android.os.StrictMode");
    Method enableDefaults = strictMode.getMethod("enableDefaults");
    enableDefaults.invoke(null);
@@ -95,7 +95,7 @@ El código de arriba determina si la clase StrictMode existe, y si existe, llama
 
 Si el StrictMode no está disponible para nuestra aplicación, se lanzará un error del tipo *VerifyError* al intentar acceder a él. Si envolvemos a StrictMode en una clase y capturamos el error, lo prodremos ignorar si StrictMode no está habilitado. A continuación vamos a ver un ejemplo creando esta clase.
 
-{% highlight java %}>import android.content.Context;
+{% highlight java %}import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.os.StrictMode;
  
@@ -122,7 +122,7 @@ public class StrictModeWrapper{
 
 Como se puede apreciar, simplemente hemos metido todos los ejemplos que vimos anteriormente en una clase. Ahora para configurar StrictMode tenemos que hacer lo siguiete:
 
-{% highlight java %}>try{
+{% highlight java %}try{
    StrictModeWrapper.init(this);
 
 }catch(Throwable throwable){

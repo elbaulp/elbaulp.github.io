@@ -37,7 +37,7 @@ argumentos.
 
 ### Paso por valor
 
-{% highlight cpp %}>int funcion (int parm); // declaración
+{% highlight cpp %}int funcion (int parm); // declaración
 funcion (arg);          // llamada
 inf funcion (int parm)  // definición
 {
@@ -57,7 +57,7 @@ está fuera de ámbito y se libera la memoria que ocupaba. En este caso, se asig
 
 ### Paso por dirección
 
-{% highlight cpp %}>int funcion(int* parml); // declaración
+{% highlight cpp %}int funcion(int* parml); // declaración
 funcion (&#038;arg1);         // llamada
 int funcion (int * parm) // definición
 {
@@ -92,7 +92,7 @@ referencias.
 ### Paso por referencia  
 
 
-{% highlight cpp %}>int funcion (int&#038; parm);  // declaración
+{% highlight cpp %}int funcion (int&#038; parm);  // declaración
 funcion (arg);            // llamada
 int funcion (int&#038; parm)   // definición
 {

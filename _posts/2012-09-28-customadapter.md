@@ -54,7 +54,7 @@ Terminada, la aplicación de prueba debe quedar algo así:
 
 Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fila del ListView:
 
-{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
 &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LinearLayout1"
     android:layout_width="wrap_content"
@@ -107,7 +107,7 @@ Creando así el aspecto deseado para cada línea del ListView:
 
 El primer paso es crear una clase que representará los datos a almacenar:
 
-{% highlight java %} >package com.example.adapter;
+{% highlight java %}package com.example.adapter;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -186,7 +186,7 @@ Una vez definido el objeto con el que se va a trabajar, se creará otra clase ex
 
 El objetivo del adapter consiste en rellenar objetos `View` con los datos a mostrar. En este ejemplo, los datos son instancias de la clase `PostData`. Abajo se muestra la implementación del adapter y una explicación:
 
-{% highlight java %} >package com.example.adapter;
+{% highlight java %}package com.example.adapter;
 
 import java.util.ArrayList;
 
@@ -390,7 +390,7 @@ Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que h
 
 El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:
 
-{% highlight xml %}>&lt;CheckBox
+{% highlight xml %}&lt;CheckBox
         android:id="@+id/leido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -400,7 +400,7 @@ El principal problema que hay cuando se añade un checkBox a un ListView, es que
 
 Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al checkbox:
 
-{% highlight java %}>private OnClickListener checkListener = new OnClickListener()
+{% highlight java %}private OnClickListener checkListener = new OnClickListener()
 {
 
    @Override
@@ -413,7 +413,7 @@ Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al 
 
 Se asocia en el método `getView()`:
 
-{% highlight java %}>holder.cb.setOnClickListener(checkListener);{% endhighlight %}
+{% highlight java %}holder.cb.setOnClickListener(checkListener);{% endhighlight %}
 
 De esta forma se puede hacer click tanto en el checkbox como en una fila de la lista.
 
@@ -427,7 +427,7 @@ Este problema se debe a que no se está almacenando el estado del checkbox en lo
 
 En el evento que se lanza al pulsar un elemento de la lista (`onListItemClick()`), se llama desde el adapter al método `setCheck()` así: `adapter.setCheck(position);` para que se actualize el valor del objeto `PostData` en esa posición, como se vio más arriba, PostData consta de tres miembros, dos strings y un booleano. Con lo cual, al pulsar en un elemento se actualiza el valor del booleano que representa el estado del checkbox. El código del método es el siguiente:
 
-{% highlight java %}>public void setCheck(int position)
+{% highlight java %}public void setCheck(int position)
 {
    PostData d = data.get(position);
 
@@ -448,7 +448,7 @@ Aquí es donde cobra sentido la implementación de <a href="http://developer.and
 
 Una vez implementado estos métodos, se podrá guardar el estado de los datos así:
 
-{% highlight java %}>@Override
+{% highlight java %}@Override
 protected void onSaveInstanceState(Bundle outState) {
    outState.putParcelableArrayList("savedData", data);
    super.onSaveInstanceState(outState);
@@ -456,7 +456,7 @@ protected void onSaveInstanceState(Bundle outState) {
 
 y recuperarlos en `onCreate()`:
 
-{% highlight java %}>@Override
+{% highlight java %}@Override
 public void onCreate(Bundle savedInstanceState) {
    super.onCreate(savedInstanceState);
    //...

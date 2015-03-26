@@ -440,7 +440,7 @@ Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">Supp
       <strong>Pero, ¿qué pasa con toda la transferencia extra de datos?</strong><br /> Veamos esto con un ejemplo del mundo real. He bajado un poco de datos de la <a href="https://api.github.com/users/veesahni" target="_blank">API de GitHub</a>, la cual usa pretty print por default. También estuve haciendo algunas comparaciones con gzip:
     </p>
     
-    {% highlight bash %}>$ curl https://api.github.com/users/veesahni > with-whitespace.txt
+    {% highlight bash %}$ curl https://api.github.com/users/veesahni > with-whitespace.txt
 $ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' &lt; with-whitespace.txt > without-whitespace.txt
 $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
 $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
@@ -480,7 +480,7 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Muchas APIs empaquetan sus respuestas en envoltorios como este:
     </p>
     
-    {% highlight python %}>{
+    {% highlight python %}{
    "data" : {
       "id" : 123,
       "name" : "John"
@@ -491,7 +491,7 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Hay un par de justificaciones para hacer esto &#8211; facilita incluir metadata adicional o información de paginación, algunos clientes REST no permiten fácil acceso a los encabezados HTTP y las peticiones <a href="http://en.wikipedia.org/wiki/JSONP" target="_blank">JSONP</a> no tienen acceso a sus encabezados. Sin embargo con standards que están siendo rápidamente adoptados como <a href="http://www.w3.org/TR/cors/" target="_blank">CORS</a> y <a href="http://tools.ietf.org/html/rfc5988#page-6" target="_blank">Link header from RFC5988</a>, empaquetar se está volviendo innecesario.<br /> Podemos profundizar a futuro la API manteniéndola sin empaquetamiento por default y empaquetando sólo en casos excepcionales.<br /> <strong>¿Cómo debería usarse un envoltorio en casos excepcionales?</strong><br /> Hay 2 situaciones donde un envoltorio es realmente necesario &#8211; si la API necesita soportar peticiones cross domain sobre JSONP o si el cliente es incapaz de trabajar con encabezados HTTP.<br /> Las peticiones JSONP vienen con un parámetro adicional de consulta (usualmente llamado <em>callback</em> o <em>jsonp</em>) representando el nombre de la función callback. Si este parámetro está presente, la API debería cambiarse a un modo completo de empaquetamiento donde siempre responda con un código de status HTTP 200 y pase el código de status real dentro de la respuesta JSON. Cualquier encabezado HTTP adicional que debería pasar a través de la respuesta debería ser mapeado a los campos JSON, como se ve a continuación:
     </p>
     
-    {% highlight javascript %}>callback_function({
+    {% highlight javascript %}callback_function({
     status_code: 200,
     next_page: "https://..",
     response: {
@@ -563,7 +563,7 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Esto debería devolver un ticket con detalles adicionales embebidos, como:
     </p>
     
-    {% highlight python %}>{
+    {% highlight python %}{
  "id" : 12,
  "subject" : "I have a question!",
  "summary" : "Hi, ....",
@@ -696,7 +696,7 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       El cuerpo de un error JSON debería proveer algunas cosas para el desarrollador &#8211; un mensaje de error útil, un código de error único (que pueda ser buscado para más detalles en la documentación) y una descripción detallada. Una representación de salida JSON de esta forma podría ser:
     </p>
     
-    {% highlight python %}>{
+    {% highlight python %}{
   "code" : 1234,
   "message" : "Algo malo ocurrió :(",
   "description" : "Mas detalles del error aqui"
@@ -706,7 +706,7 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Los errores de validación para peticiones PUT, PATCH y POST necesitarán un breakdown en el campo. Esto se modela mejor utilizando un código de error de alto nivel arreglado para fallas de validación que proveen detalles del error en el campo adicional <em>error</em>, como por ejemplo:
     </p>
     
-    {% highlight python %}>{
+    {% highlight python %}{
   "code" : 1024,
   "message" : "Validacion fallida",
   "errors" : [

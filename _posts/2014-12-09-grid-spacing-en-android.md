@@ -36,7 +36,7 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
 
 #### layout/activity_main.xml
 
-{% highlight xml %}>&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:orientation="vertical"
@@ -107,7 +107,7 @@ En realidad, `LinearLayout` gestiona la idea del espacio entre elementos. Ésta 
 
 #### drawable/spacer_medium.xml
 
-{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
 &lt;shape xmlns:android="http://schemas.android.com/apk/res/android"
   android:shape="rectangle">
 
@@ -124,7 +124,7 @@ Ahora se puede usar el `Drawable` creado como un separador entre elementos estab
 
 #### layout/activity_main.xml
 
-{% highlight xml %}>&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:divider="@drawable/spacer_medium"

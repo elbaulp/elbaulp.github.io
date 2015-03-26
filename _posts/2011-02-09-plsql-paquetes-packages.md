@@ -50,7 +50,7 @@ Como hemos dicho anteriormente, la creación de un paquete pasa por dos fases:
 
 Para crear la cabecera del paquete utilizaremos la siguiente instrucción:
 
-{% highlight sql %}>CREATE {OR REPLACE} PACKAGE nombre_de_paquete IS
+{% highlight sql %}CREATE {OR REPLACE} PACKAGE nombre_de_paquete IS
 <span class="comentario">-- Declaraciones</span>
 END;
 {% endhighlight %}
@@ -59,7 +59,7 @@ END;
 
 Para crear el cuerpo del paquete utilizaremos la siguiente instrucción:
 
-{% highlight sql %}>CREATE {OR REPLACE} PACKAGE BODY nombre_paquete IS
+{% highlight sql %}CREATE {OR REPLACE} PACKAGE BODY nombre_paquete IS
 <span class="comentario">--Bloques de código</span>
 END;
 {% endhighlight %}
@@ -71,12 +71,12 @@ Hay que tener en cuenta que toda declaración de función o procedimiento debe e
 Cuando se quiera acceder a las funciones, procedimientos y variables de un paquete se debe  
 anteponer el nombre de este:
 
-{% highlight sql %}>Nombre_paquete.función(x);
+{% highlight sql %}Nombre_paquete.función(x);
 Nombre_paquete.procedimiento(x);
 Nombre_paquete.variable;
 {% endhighlight %}
 
-{% highlight sql %}>CREATE OR REPLACE PACKAGE PK1 IS
+{% highlight sql %}CREATE OR REPLACE PACKAGE PK1 IS
   PROCEDURE xLis (xfamilia IN Articulos.cArtFml%TYPE);
 END;
 

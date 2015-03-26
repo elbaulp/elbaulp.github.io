@@ -39,7 +39,7 @@ tags:
 
 Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo **named.conf.local**, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:
 
-{% highlight bash %}>zone "elbauldelprogramador.com" {
+{% highlight bash %}zone "elbauldelprogramador.com" {
         type master;
         allow-transfer {DNS_SECUNDARIO;};
         file "/etc/bind/pri.elbauldelprogramador.com";
@@ -47,7 +47,7 @@ Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior
 
 El contenido de **/etc/bind/pri.elbauldelprogramador.com**:
 
-{% highlight bash %}>$TTL        3600
+{% highlight bash %}$TTL        3600
 @       IN      SOA     ks3277174.kimsufi.com. correo.electronico.com. (
                         2013011703       ; serial, todays date + todays serial #
                         7200              ; refresh, seconds
@@ -115,14 +115,14 @@ Además de los registros *NS*, se definen los registros **MX**, que identifican 
 
 En el ejemplo existe un único registro **MX**, pero puede haber más. Por ejemplo:
 
-{% highlight bash %}>MX 10 mail.elbauldelprogramador.com.
+{% highlight bash %}MX 10 mail.elbauldelprogramador.com.
 MX 20 mail.otrodominio.com.{% endhighlight %}
 
 Si se envia un email al dominio, el servidor de correo que envía el email intenta conectarse a *mail.elbauldelprogramador.com* ya que tiene prioridad 10, si no puede establecer conexión, lo intentará con * mail.otrodominio.com*.
 
 El último tipo de registro que vamos a ver es el de tipo **CNAME** (*Canonical Name*). Se suele referir a ellos como registros alias del tipo **A**. Por ejemplo:
 
-{% highlight bash %}>ftp        CNAME www{% endhighlight %}
+{% highlight bash %}ftp        CNAME www{% endhighlight %}
 
 significa que *ftp.elbauldelprogramador.com* es un alias de *www.elbauldelprogramador.com*. Es decir, *ftp.elbauldelprogramador.com* apunta al mismo servidor que *www.elbauldelprogramador.com*. Un registro **CNAME** debe apuntar a un registro de tipo **A** y solo de tipo **A**.
 

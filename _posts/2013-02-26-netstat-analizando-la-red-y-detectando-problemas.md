@@ -41,7 +41,7 @@ Tras esta pequeña introducción, veamos algunas salidas de este comando:
 
 Es posible mostrar las conexiones que existen actualmente entre tu máquina y otras máquinas, así como sockets escuchando en un puerto para que otra máquina se conecte. También muestra qué programas están activos en la red:
 
-{% highlight bash %}>$ sudo netstat -apA inet
+{% highlight bash %}$ sudo netstat -apA inet
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 *:sunrpc                *:*                     LISTEN      1775/rpcbind    
@@ -108,7 +108,7 @@ El singnificado de cada columna es el siguiente:
 
 Procedamos a interpretar los resultados de netstat. En el ejemplo de arriba las direcciones de la columna **Foreign adress** aparecen cortadas. Para verlas completas es necesario ejecutar netstat con el parámetro **-W**:
 
-{% highlight bash %}>$ sudo netstat -apWA inet | grep https
+{% highlight bash %}$ sudo netstat -apWA inet | grep https
 tcp        0      0 hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
@@ -144,7 +144,7 @@ Netstat también sirve para mostrar la tabla de rutas (**Routing Table**)
 
 La tabla de rutas significa dedidir dónde mandar un paquete en base a su destino. Un ejemplo de estas tablas es el siguiente:
 
-{% highlight bash %}>$ netstat -r
+{% highlight bash %}$ netstat -r
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 default         10.61.29.89     0.0.0.0         UG        0 0          0 eth1
@@ -174,7 +174,7 @@ Una breve explicación del significado de las columnas:
 
 También es posible, con netstat, mostrar las interfaces disponibles y listar algunas estadísticas de cómo se están comportando:
 
-{% highlight bash %}>$ netstat -i
+{% highlight bash %}$ netstat -i
 Kernel Interface table
 Iface       MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0       1500 0         0      0      0 0             0      0      0      0 BMU

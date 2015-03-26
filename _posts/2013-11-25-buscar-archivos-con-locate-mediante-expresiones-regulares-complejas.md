@@ -31,7 +31,7 @@ El problema básicamente es el siguiente. A partir de un texto con los nombres *
 
 Empezaré mostrando la expresión regular y luego la explicaré:
 
-{% highlight bash %}>$i.*(\.mp4|\.mp3)
+{% highlight bash %}$i.*(\.mp4|\.mp3)
 {% endhighlight %}
 
 En `$i` está el nombre de la canción, `.*` permite que haya cero o más caracteres tras el nombre de la canción y finalmente `(\.mp4|\.mp3)` obliga a que la extensión del fichero sea [**mp3** o **mp4**][4].
@@ -44,7 +44,7 @@ Siempre que necesito crear una expresión regular uso una herramienta llamada **
 
 Con la expresión regular construida, solo resta crear un script que procese el texto con el nombre de las canciones y cree la lista de reproducción:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 
 nombres=`cat ARCHIVO_CON_LISTA_DE_NOMBRES`
 

@@ -25,7 +25,7 @@ Con todo esto en mente busqué cómo crear **errores 404 personalizados** y modi
   
 <!--more-->
 
-{% highlight php %} ><p>
+{% highlight php %}<p>
   You 
   <?php
 #some variables for the script to use
@@ -65,7 +65,7 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
 
 Esta porción de código hay que pegarla en el archivo 404.php de la plantilla en uso. Con este código informamos al lector que la página no existe y se proporciona un formulario de búsqueda, además se envía un correo al administrador del blog informándo de este error 404. Aún podemos tratar el error de una manera más amigable y ofrecer más opciones. Por ejemplo las últimas publicaciones del blog:
 
-{% highlight php %} ><h4>
+{% highlight php %}<h4>
   Publicaciones recientes
 </h4>
    
@@ -87,7 +87,7 @@ Esta porción de código hay que pegarla en el archivo 404.php de la plantilla e
 
 Incluso es posible sugerir entradas relacionadas en base a la url que devolvió el 404:
 
-{% highlight php %} ><?php 
+{% highlight php %}<?php 
 $query_args = array( 's' => basename($_SERVER['REQUEST_URI']) );
 $query = new WP_Query( $query_args );
      
@@ -129,7 +129,7 @@ if($query->have_posts()){
     </p>
     
     
-    {% highlight php %} >
+    {% highlight php %}
 
 
 <p>

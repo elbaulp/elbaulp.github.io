@@ -26,7 +26,7 @@ Veamos primero el .h:
   
 <!--more-->
 
-{% highlight cpp %} >/**
+{% highlight cpp %}/**
   * @file imagenES.h
   * @brief Fichero cabecera para la E/S de imágenes
   *
@@ -135,7 +135,7 @@ bool EscribirImagenPGM (const char nombre[], const unsigned char datos[], int f,
 
 Y el cpp:
 
-{% highlight cpp %} >/**
+{% highlight cpp %}/**
   * @file imagenES.cpp
   * @brief Fichero con definiciones para la E/S de imágenes
   *
@@ -293,7 +293,7 @@ Una vez detectada la imagen, se llama a **LeerCabecera (ifstream& f, int& filas,
 
 En lugar de usar la función *TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas)* se puede usar también *bool LeerImagenPNG (const char nombre[], int& filas, int& columnas* veamos un ejemplo completo:
 
-{% highlight cpp %} >/**
+{% highlight cpp %}/**
  * @file main.cpp
  * @brief Fichero principal encargado de ocultar el mensaje
  *
@@ -328,7 +328,7 @@ int main(int argc, char *argv[]) {
 
 Cuya salida es:
 
-{% highlight bash %} >hkr-> ls
+{% highlight bash %}hkr-> ls
 imagenESP.cpp  imagenESP.h  main  main.cpp  Makefile  s.png
 [~/Documents/Grado Ing.Informatica/MP/Practica 3/mp_grado/PNG]
 hkr-> g++ -Wall -I./ *.cpp -o main

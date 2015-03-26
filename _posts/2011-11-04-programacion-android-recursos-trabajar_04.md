@@ -27,7 +27,7 @@ Android ofrece más de un directorio en el que guardar ficheros que se incluirá
   
 <!--more-->
 
-{% highlight java %}>String getStringFromAssetFile(Context activity)
+{% highlight java %}String getStringFromAssetFile(Context activity)
    throws IOException
    {
        AssetManager am = activity.getAssets();

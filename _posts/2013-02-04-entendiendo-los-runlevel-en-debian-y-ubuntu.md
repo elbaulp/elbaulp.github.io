@@ -55,7 +55,7 @@ Como todo en un sitema Linux, están definidos mediante ficheros, y se encuentra
 
 Echemos un vistazo al contenido del runlevel 2:
 
-{% highlight bash %}>[~]
+{% highlight bash %}[~]
 hkr-&gt; ls /etc/rc2.d/
 README      S15nfs-common      S17sudo     S19anacron  S19dbus   S19speech-dispatcher  S20network-manager  S21pulseaudio  S22libvirt-guests  S23rmnologin
 S01motd     S17binfmt-support  S18apache2  S19atd      S19exim4  S20avahi-daemon       S21gdm3             S21saned       S23minissdpd
@@ -75,7 +75,7 @@ El comando **runlevel **mostará el último runlevel que fue ejecutado, y el act
 
 &nbsp;
 
-{% highlight bash %}>hkr-&gt; runlevel 
+{% highlight bash %}hkr-&gt; runlevel 
 N 2{% endhighlight %}
 
 La **N **significa None, informando de que no ha habido ningún cambio de runlevel desde que se inició el sistema. **2 ** es el runlevel actual.
@@ -86,15 +86,15 @@ Para moverse de un runlevel a otro basta con ejectar el comando **telinit **segu
 
 ****Si deseamos agregar un servicio a un runlevel deberemos usar el comando **update-rc.d **. Por ejemplo, si quieres que **nginx **o **Apache **se ejecuten en cada inicio del sistema, basta con agregarlos a los runlevel 2-5, correspondientes al modo multiusuario:
 
-{% highlight bash %}># update-rc.d nginx start 90 2 3 4 5 . stop 01 0 1 6 .{% endhighlight %}
+{% highlight bash %}# update-rc.d nginx start 90 2 3 4 5 . stop 01 0 1 6 .{% endhighlight %}
 
 El 90 es el número de prioridad para el inicio (**S90nginx**) aplicado a los runlevles 2-5, el 01 para la prioridad de detención (**K01nginx**) en los runlevel 0 1 y 6. Lo más sencillo es aplicar los valores por defecto con
 
-{% highlight bash %}># update-rc.d nginx defaults{% endhighlight %}
+{% highlight bash %}# update-rc.d nginx defaults{% endhighlight %}
 
 A continuación varios ejemplos extraidos del manual de **update-rc.d:**
 
-{% highlight bash %}>EXAMPLES
+{% highlight bash %}EXAMPLES
        Insert links using the defaults:
           update-rc.d foobar defaults
        The equivalent dependency header would have start and stop

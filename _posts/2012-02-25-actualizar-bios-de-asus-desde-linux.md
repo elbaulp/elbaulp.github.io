@@ -46,7 +46,7 @@ Lo primero que hay que hacer es bajarse el archivo de la página de ASUS, lo des
 
 El siguiente paso es insertar un usb que formatearemos para realizar la actualización. Una vez insertado lo desmontamos y ejecutamos lo siguiente:
 
-{% highlight bash %}>fdisk -cu /dev/sdb
+{% highlight bash %}fdisk -cu /dev/sdb
 
 Command (m for help): p
 
@@ -64,19 +64,19 @@ Disk identifier: 0x00025eb4
 
 El siguiete paso es formatearlo:
 
-{% highlight bash %}>mkfs.msdos -F 16 /dev/sdb1
+{% highlight bash %}mkfs.msdos -F 16 /dev/sdb1
 {% endhighlight %}
 
 Despues de esto, retiramos el usb y lo volvemos a introducir en el puerto. Si se monta automáticamente, lo desmontamos. Una vez desmontado, lo montamos con el siguiente comando:
 
-{% highlight bash %}>mount /dev/sdb1 /mnt/temp/ -o rw,flush,uid=1000,utf8,shortname=win95
+{% highlight bash %}mount /dev/sdb1 /mnt/temp/ -o rw,flush,uid=1000,utf8,shortname=win95
 {% endhighlight %}
 
 Copiamos el archivo ROM de la bios dentro del USB (Asegúrate de que el nombre del archivo está en mayúsculas.)
 
 Desmontamos.
 
-{% highlight bash %}>umount /dev/sdb1
+{% highlight bash %}umount /dev/sdb1
 {% endhighlight %}
 
 Ahora reiniciamos con el usb insertado y tan pronto como veamos la pantalla de la BIOS pulsamos Alt+F2 para empezar el proceso de actualización. Seleccionamos el archivo ROM y esperamos a que finalize el proceso.

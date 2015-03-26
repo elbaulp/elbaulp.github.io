@@ -38,7 +38,7 @@ Durante la transacción, todas las modificaciones que hagamos sobre base de dato
 
 Dentro de una transacción se pueden crear los llamados “punto de control” mediante la sentencia:
 
-{% highlight sql %}>SAVEPOINT Nombre_punto_control;
+{% highlight sql %}SAVEPOINT Nombre_punto_control;
 {% endhighlight %}
 
 Las sentencias de finalización de transacción son:
@@ -49,7 +49,7 @@ Las sentencias de finalización de transacción son:
 
 A la hora de hacer un ROLLBACK o un COMMIT se podrá hacer hasta cierto punto con la sintaxis:
 
-{% highlight sql %}>COMMIT TO punto_control;
+{% highlight sql %}COMMIT TO punto_control;
 ROLLBACK TO punto_control;
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ el [trigger][1] están dentro del ámbito de la transacción, y son confirmadas 
 
 El siguiente ejemplo muestra una supuesta transacción bancaria:
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   importe NUMBER;
   ctaOrigen VARCHAR2(23);
   ctaDestino VARCHAR2(23);

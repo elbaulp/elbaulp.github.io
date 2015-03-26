@@ -27,7 +27,7 @@ tags:
 
 Especifica una condición de selección para un grupo. HAVING se usa normalmente con el GROUP BY. Cuando no está con el GROUP BY, HAVING se comporta como la cláusula WHERE, aunque esto es erróneo utilizarlo, puesto que ralentiza el sistema. Su sintaxis es:
 
-{% highlight sql %}>[ HAVING &lt;search_condition_group> ]{% endhighlight %}
+{% highlight sql %}[ HAVING &lt;search_condition_group> ]{% endhighlight %}
 
   
 <!--more-->
@@ -35,7 +35,7 @@ Especifica una condición de selección para un grupo. HAVING se usa normalmente
   
 donde search\_condition\_group determina la condición o condiciones de selección del agregado. Normalmente la condición de selección utiliza un agregado que se compara con un valor. Por ejemplo camiones que han realizado un porte o más:
 
-{% highlight sql %}>Select cCmnMtr from porte
+{% highlight sql %}Select cCmnMtr from porte
 Group by cCmnMtr
 Having count(*) > =1;
 {% endhighlight %}
@@ -46,7 +46,7 @@ Having count(*) > =1;
 
 Nos devuelve las filas ordenadas por una serie de columnas. Su sintaxis es:
 
-{% highlight sql %}>[ORDER BY {order_by_expression [ ASC | DESC ] } [,...n] ]
+{% highlight sql %}[ORDER BY {order_by_expression [ ASC | DESC ] } [,...n] ]
 {% endhighlight %}
 
 donde order\_by\_expression determina la columna o columnas por la cual deseamos obtener los resultados ordenados. Se puede especificar una columna, una columna renombrada, una columna cualificada por su tabla, una expresión, o un número entero positivo (mayor a cero) que determina la posición de la columna en el select list.

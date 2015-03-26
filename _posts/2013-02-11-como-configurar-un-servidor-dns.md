@@ -52,7 +52,7 @@ Debo reconocer que el tema de los DNS me ha dado muchos problemas, es algo que p
 
 En Linux, **BIND **es el encargado de gestionar los DNS, como su página de ayuda indica (*bind &#8211; bind a name to a socket*), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de **BIND **es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:
 
-{% highlight bash %}>$ nslookup -type=txt -class=chaos version.bind servidor
+{% highlight bash %}$ nslookup -type=txt -class=chaos version.bind servidor
 Server:     servidor
 Address:    IP#53
 
@@ -102,7 +102,7 @@ El proceso *named* escucha en el puerto 53 en los sitemas Linux. Al recibir una 
 
 El fichero tiene la siguiente estructura:
 
-{% highlight cpp %}>// This is the primary configuration file for the BIND DNS server named.
+{% highlight cpp %}// This is the primary configuration file for the BIND DNS server named.
 //
 // Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
 // structure of BIND configuration files in Debian, *BEFORE* you customize 
@@ -118,7 +118,7 @@ Veamos el contenido de los tres archivos que incluye:
 
 **named.conf.options**
 
-{% highlight bash %}>options {
+{% highlight bash %}options {
     directory "/var/cache/bind";
 };{% endhighlight %}
 
@@ -126,7 +126,7 @@ Aquí se definen el directorio por defecto para named.
 
 **named.conf.default-zones**
 
-{% highlight bash %}>zone "." {
+{% highlight bash %}zone "." {
    type hint;
   file "/etc/bind/db.root";
 };

@@ -60,7 +60,7 @@ Para éste ejemplo, la API que vamos a crear será muy sencilla, consistirá en:
 
 Debido a la simplicidad de la API, gran parte del código, incluídas las rutas estarán en el fichero `server.js`. A medida que incrementa el tamaño del código, lo ideal es crear un fichero propio para las rutas. La estructura será la siguiente:
 
-{% highlight bash %}>- app/
+{% highlight bash %}- app/
 ----- models/
 ---------- article.js  // Modelo para el artículo
 - node_modules/        // Lo crea npm, mantiene las dependencias/paquetes
@@ -72,7 +72,7 @@ Debido a la simplicidad de la API, gran parte del código, incluídas las rutas 
 
 En Node.js es necesario especificar los paquetes necesarios en el fichero `package.json`, los necesarios en éste caso son:
 
-{% highlight json %}>{
+{% highlight json %}{
   "name": "node-api",
   "main": "server.js",
   "dependencies": {
@@ -91,7 +91,7 @@ En Node.js es necesario especificar los paquetes necesarios en el fichero `packa
 
 Tan simple como
 
-{% highlight bash %}>$ npm install
+{% highlight bash %}$ npm install
 {% endhighlight %}
 
 en el directorio donde está `package.json`.
@@ -100,7 +100,7 @@ en el directorio donde está `package.json`.
 
 Para ello editaremos el fichero `server.js` con lo siguiente:
 
-{% highlight javascript %}>// CONFIGURACIÓN BÁSICA
+{% highlight javascript %}// CONFIGURACIÓN BÁSICA
 // =============================================================================
 
 // Paquetes necesarios
@@ -139,7 +139,7 @@ router.get('/', function(req, res) {
 
 Basta con ejecutar:
 
-{% highlight bash %}>$ node server.js
+{% highlight bash %}$ node server.js
 {% endhighlight %}
 
 Deberá aparecer: `La magia ocurre en el puerto 8080`.
@@ -148,7 +148,7 @@ Deberá aparecer: `La magia ocurre en el puerto 8080`.
 
 Para comprobar que la API está funcionando correctamente, podemos usar `curl` y realizar una petición al servidor:
 
-{% highlight bash %}>$ curl -X GET http://ip-servidor/api
+{% highlight bash %}$ curl -X GET http://ip-servidor/api
 {% endhighlight %}
 
 Debería devolvernos `{ message: "Hola desde la API!!" }`
@@ -157,7 +157,7 @@ Debería devolvernos `{ message: "Hola desde la API!!" }`
 
 Ahora que tenemos una aplicación sencilla, crearemos un modelo para la base de datos, que almacenará el nombre de un artículo y su precio. Pero antes de ello, suponiendo que ya tenemos instalado *MongoDB*, creamos la base de datos con los siguientes comandos (Dentro del shell de Mongo):
 
-{% highlight bash %}>use articulosDB
+{% highlight bash %}use articulosDB
 switched to db articulosDB
 j = { name : "Lampara", price: 10 }
 { "name" : "Lampara", "price" : 10 }
@@ -170,11 +170,11 @@ Tras esto, tenemos la base de datos creada con un elemento. Pasemos a crear la c
 
 Al tener creada la base de datos, podemos conectarnos a ella mediante una URI, con el siguiente formato
 
-{% highlight bash %}>mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]{% endhighlight %}
+{% highlight bash %}mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]{% endhighlight %}
 
 en nuestro caso, el código a añadir en el fichero `server.js` sería:
 
-{% highlight bash %}>// ..
+{% highlight bash %}// ..
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017//articulosDB');
 // ..
@@ -184,7 +184,7 @@ mongoose.connect('mongodb://127.0.0.1:27017//articulosDB');
 
 Consiste en representar los datos almacenados en la base de datos, para nuestro caso, será:
 
-{% highlight javascript %}>// app/models/article.js
+{% highlight javascript %}// app/models/article.js
 
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
@@ -199,7 +199,7 @@ module.exports = mongoose.model('Article', ArticleSchema);
 
 Solo resta añadir el modelo al fichero `server.js` con
 
-{% highlight javascript %}>var Article = requiere('./app/models/article'){% endhighlight %}
+{% highlight javascript %}var Article = requiere('./app/models/article'){% endhighlight %}
 
 A partir de ahora, la aplicación está lista para interactuar con la base de datos. Pasemos a escribir el resto de rutas para la API.
 
@@ -219,7 +219,7 @@ Una breve descripción de lo que se usará:
 
 Para registrar todo lo que pasa en la API, estableceremos un *Middleware* por el que pasarán todas las peticiones antes de ser procesadas.
 
-{% highlight javascript %}>router.use(function(req, res, next) {
+{% highlight javascript %}router.use(function(req, res, next) {
   console.log('Recibida peticion de ' +  req.ip);
   next(); // make sure we go to the next routes and don't stop here
 });
@@ -233,7 +233,7 @@ Empezaremos creando las rutas que para devolver todos los artículos de la base 
 
 Para ello, necesitamos poder gestionar peticiones `POST`:
 
-{% highlight javascript %}>router.route('/articles')
+{% highlight javascript %}router.route('/articles')
 
   // create an article (accessed at POST http://localhost:8080/api/articles)
   .post(function(req, res) {
@@ -255,7 +255,7 @@ Para ello, necesitamos poder gestionar peticiones `POST`:
 
 Para probrala, basta con enviar una petición `POST`, con `curl` por ejemplo:
 
-{% highlight bash %}>$ curl -H "Content-Type: application/json" -d '{"name":"Articulo1",  "cost":100}' -X POST http://ip.servidor:8080/api/articles
+{% highlight bash %}$ curl -H "Content-Type: application/json" -d '{"name":"Articulo1",  "cost":100}' -X POST http://ip.servidor:8080/api/articles
 
 {"message":"Article created!"}
 {% endhighlight %}
@@ -264,7 +264,7 @@ Para probrala, basta con enviar una petición `POST`, con `curl` por ejemplo:
 
 En la misma ruta que antes, pero ahora usando el método `GET`, devolveremos al cliente todos los artículos existentes en la base de datos.
 
-{% highlight javascript %}>.get(function(req, res) {
+{% highlight javascript %}.get(function(req, res) {
     Article.find(function(err, articles) {
 
       if (err)
@@ -281,7 +281,7 @@ En la misma ruta que antes, pero ahora usando el método `GET`, devolveremos al 
 
 Para probarla, enviamos una petición `GET` a la misma ruta (`/api/articles`):
 
-{% highlight json %}>curl -X GET http://ip.servidor:8080/api/articles/ | python -mjson.tool
+{% highlight json %}curl -X GET http://ip.servidor:8080/api/articles/ | python -mjson.tool
 [
     {
         "__v": 0,
@@ -310,7 +310,7 @@ Hasta ahora, se han manejado el grupo de rutas acabado en `/articles`. A continu
 
 Se añadirá otra ruta que maneje las peticiones con el parámetro `:article_id`:
 
-{% highlight javascript %}>router.route('/articles/:article_id')
+{% highlight javascript %}router.route('/articles/:article_id')
    .get(function(req, res) {
     Article.findById(req.params.article_id, function(err, article) {
       if (err)
@@ -322,7 +322,7 @@ Se añadirá otra ruta que maneje las peticiones con el parámetro `:article_id`
 
 Y para probralo, podemos escoger alguno de los ids devueltos en la consulta anterior, por ejemplo `54aa901312bf8f4207000001`:
 
-{% highlight bash %}>curl -X GET http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
+{% highlight bash %}curl -X GET http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
 {
     "__v": 0,
     "_id": "54aa901312bf8f4207000001",
@@ -335,7 +335,7 @@ Y para probralo, podemos escoger alguno de los ids devueltos en la consulta ante
 
 Para ello, necesitamos añadir el método `PUT`:
 
-{% highlight javascript %}>.put(function(req, res) {
+{% highlight javascript %}.put(function(req, res) {
 
   // use our article model to find the article we want
   Article.findById(req.params.article_id, function(err, article) {
@@ -362,7 +362,7 @@ Para ello, necesitamos añadir el método `PUT`:
 
 Una vez ejecutando, es posible actualizar los datos de un artículo proporcionando su ID, usaremos el mismo de antes:
 
-{% highlight bash %}>curl -H "Content-Type: application/json" -d '{"name":"Articulo Modificado",  "cost":5.90}' -X PUT http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
+{% highlight bash %}curl -H "Content-Type: application/json" -d '{"name":"Articulo Modificado",  "cost":5.90}' -X PUT http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
 {
     "message": "Article updated!"
 }
@@ -372,7 +372,7 @@ Una vez ejecutando, es posible actualizar los datos de un artículo proporcionan
 
 Por último, falta crear el método `DELETE` para eliminar artículos de la base de datos:
 
-{% highlight javascript %}>.delete(function(req, res) {
+{% highlight javascript %}.delete(function(req, res) {
   Article.remove({
     _id: req.params.article_id
   }, function(err, article) {
@@ -388,7 +388,7 @@ Por último, falta crear el método `DELETE` para eliminar artículos de la base
 
 Borremos el elemento con el ID usado hasta ahora:
 
-{% highlight bash %}>curl -X DELETE http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
+{% highlight bash %}curl -X DELETE http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
 {
     "message": "Successfully deleted"
 }
@@ -401,7 +401,7 @@ Queda bastante claro lo sencillo que es crear una API RESTful con *Node.js* y es
 
 # Código completo
 
-{% highlight javascript %}>// Thanks to https://scotch.io/tutorials/build-a-restful-api-using-node-and-expre
+{% highlight javascript %}// Thanks to https://scotch.io/tutorials/build-a-restful-api-using-node-and-expre
 
 // BASE SETUP
 // =============================================================================

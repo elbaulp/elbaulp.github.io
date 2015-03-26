@@ -51,14 +51,14 @@ Luego, por otro lado, tienes que asegurarte que **tu servidor web canaliza todas
 
 En Apache:
 
-{% highlight bash %}>RewriteEngine On
+{% highlight bash %}RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 {% endhighlight %}
 
 En [nginx][10]:
 
-{% highlight bash %}>location / {
+{% highlight bash %}location / {
    try_files   $uri $uri/ /index.php;
 }
 {% endhighlight %}

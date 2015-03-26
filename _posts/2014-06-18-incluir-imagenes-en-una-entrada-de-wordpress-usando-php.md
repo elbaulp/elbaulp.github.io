@@ -24,14 +24,14 @@ Antes de pasar al fragmento de código, tenemos que asumir algunas cosas. El `ID
 
 Tenemos que encontrar el año en que fue subida la imagen. El código que vamos a escribir está fuera del **WordPress loop**. Por eso utilizamos la función `get_the_time()` para encontrar el año de la carga.
 
-{% highlight php %}>$year = get_the_time('Y', $att_id);
+{% highlight php %}$year = get_the_time('Y', $att_id);
 {% endhighlight %}
 
 ## Incluir imágenes a la página
 
 Ahora nuestro trabajo es comprobar si `$year` es 2014. En caso afirmativo, añadimos la imagen. En WordPress como hemos mencionado, los detalles de cada archivo se almacenan en la tabla `wp_posts` que contiene una columna llamada `post_parent`. Esta columna es el punto de conexión para la imagen a una página o entrada. Para una imagen sin adjuntar, el valor `post_parent` será 0.
 
-{% highlight php %}>if(2014 == $year){
+{% highlight php %}if(2014 == $year){
     wp_update_post( array(
         'ID' => $att_id,
         'post_parent' => $page_id

@@ -49,7 +49,7 @@ El cursor tiene unos métodos que nos permiten navegar por él. A continuación 
   
 <!--more-->
 
-{% highlight java %}>if (cur.moveToFirst() == false){
+{% highlight java %}if (cur.moveToFirst() == false){
    //el cursor está vacío
    return;
 }
@@ -78,7 +78,7 @@ isClosed()
 
 Haciendo uso de estos métodos podemos recorrer el cursor con un *for* en lugar de con un *while:*
 
-{% highlight java %}>// Obtenemos los índices de las columnas
+{% highlight java %}// Obtenemos los índices de las columnas
 int nameColumn = cur.getColumnIndex(People.NAME);
 int phoneColumn = cur.getColumnIndex(People.NUMBER);
 

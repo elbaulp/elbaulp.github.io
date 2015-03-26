@@ -56,7 +56,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
   Por defecto no se mostrará en la versión movil:
 </p>
 
-{% highlight xml %}>
+{% highlight xml %}
 <b:widget id='BlogArchive1' title='Blog Archive' type='BlogArchive'>
 {% endhighlight %}
 
@@ -66,7 +66,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}>
+{% highlight xml %}
 <b:widget id='BlogArchive1' mobile='yes' title='Blog Archive' type='BlogArchive'>
 {% endhighlight %}
 
@@ -76,7 +76,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}>
+{% highlight xml %}
 <b:widget id='BlogArchive1' mobile='no' title='Blog Archive' type='BlogArchive'>
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}>
+{% highlight xml %}
 <b:widget id='BlogArchive1' mobile='only' title='Blog Archive' type='BlogArchive'>
 {% endhighlight %}
 
@@ -96,7 +96,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}>
+{% highlight xml %}
 
 
 <div class="widget-content">
@@ -129,7 +129,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
   </p>
   
   
-  {% highlight xml %}>
+  {% highlight xml %}
 
 {% endhighlight %}
 

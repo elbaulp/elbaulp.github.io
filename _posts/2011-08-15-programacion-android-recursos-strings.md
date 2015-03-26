@@ -37,7 +37,7 @@ Existen mucho recursos en Android, que vamos a ver a lo largo de las etradas pos
 
 Android permite definir strings en uno o más archivos XML de recursos. Estos archivos están bajo el directorio ***./res/values***. El nombre del archivo XML para este tipo de recurso puede ser cualquiera, pero por convención se suele llamar ***strings.xml***. Veamos un ejemplo de este fichero:
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
    &lt;string name="hello">Hello&lt;/string>
    &lt;string name="app_name">Hello app_name&lt;/string>
@@ -48,7 +48,7 @@ Cuando este archivo se crea o modifica, el plugin ADT de eclipse automáticament
 
 Para el fichero strings.xml que acabamos de crear, tendremos lo siguiente en la clase R:
 
-{% highlight java %}>package nombre.de.nuestro.paquete;
+{% highlight java %}package nombre.de.nuestro.paquete;
 
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
@@ -71,7 +71,7 @@ La estructura del fichero string.xml es muy fácil de seguir. Tenemos un element
 
 Para comprobar que se permiten varios recursos de string en el directorio values, vamos a crear otro fichero llamado strings1.xml con lo siguiente:
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
    &lt;string name="hello1">Hello&lt;/string>
    &lt;string name="app_name1">Hello app_name&lt;/string>
@@ -80,7 +80,7 @@ Para comprobar que se permiten varios recursos de string en el directorio values
 
 Ahora, el plugin ADT de eclipse se encargará de actualizar el fichero R.java, que contendrá lo siguiente:
 
-{% highlight java %}>package nombre.de.nuestro.paquete;
+{% highlight java %}package nombre.de.nuestro.paquete;
 
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación

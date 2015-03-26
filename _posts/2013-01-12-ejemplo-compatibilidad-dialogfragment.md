@@ -37,7 +37,7 @@ Dicho esto, comencemos con el <a href="http://developer.android.com/reference/an
 
 El primer paso es crear una clase *fragment* que herede de *DialogFragment* y devuelva un `<em>TimePickerDialog</em>` desde el método <a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html#onCreateDialog%28android.os.Bundle%29" target="_blank"><code>&lt;em> onCreateDialog()&lt;/em></code></a> del *fragment*:
 
-{% highlight java %}>import android.app.Dialog;
+{% highlight java %}import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -73,7 +73,7 @@ Para cerciorarnos que se está usando la librería de compatibilidad, basta con 
 
 Por ahora dejaremos el método `onTimeSet` vacío; pasemos a crear la interfaz. A modo de ejemplo, crearemos un botón que muestre el dialogo cuando sea pulsado:
 
-{% highlight xml %}>&lt;Button
+{% highlight xml %}&lt;Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mostrarDialogoDeTiempo"
@@ -82,7 +82,7 @@ Por ahora dejaremos el método `onTimeSet` vacío; pasemos a crear la interfaz. 
 
 Luego, creamos el método `mostrarDialogoDeTiempo` que será llamado al pulsar el botón:
 
-{% highlight java %}>public void mostrarDialogoDeTiempo(View v) {
+{% highlight java %}public void mostrarDialogoDeTiempo(View v) {
    DialogFragment newFragment = new TimePickerFragment();
    newFragment.show(getSupportFragmentManager(), "timePicker");
 }
@@ -102,7 +102,7 @@ El proceso de creación de un **DatePickerDialog** es muy similar.
 
 Definimos la clase:
 
-{% highlight java %}>import android.app.DatePickerDialog;
+{% highlight java %}import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -133,7 +133,7 @@ public class DatePickerFragment extends DialogFragment
 
 Al igual que antes, creamos un botón que muestre el diálogo:
 
-{% highlight xml %}>&lt;Button
+{% highlight xml %}&lt;Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mostrarDialogoDeFecha"
@@ -142,7 +142,7 @@ Al igual que antes, creamos un botón que muestre el diálogo:
 
 He implementamos el método que responderá al pulsar el botón:
 
-{% highlight java %}>public void mostrarDialogoDeFecha(View v){
+{% highlight java %}public void mostrarDialogoDeFecha(View v){
    DialogFragment newFragment = new DatePickerFragment();
    newFragment.show(getSupportFragmentManager(), "datePicker");
 }

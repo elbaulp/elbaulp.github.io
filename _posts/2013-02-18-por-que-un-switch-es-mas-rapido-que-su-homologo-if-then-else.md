@@ -30,7 +30,7 @@ Esa es la clave que explica el mayor rendimiento de un switch frente a una larga
   
 **Sentencia switch**
 
-{% highlight c %} >int switch_eg(int x, int n){
+{% highlight c %}int switch_eg(int x, int n){
    int result = x;
 
    switch (n) {
@@ -62,7 +62,7 @@ Esa es la clave que explica el mayor rendimiento de un switch frente a una larga
 
 **Traducción a extended C**
 
-{% highlight c %} >int switch_eg_impl(int x, int n) {
+{% highlight c %}int switch_eg_impl(int x, int n) {
    /*Tabla de punteros a código*/
    static void *jt[7] = {
       &#038;&#038;loc_A, &#038;&#038;loc_def, &#038;&#038;loc_B,
@@ -114,7 +114,7 @@ En este ejemplo, los cases del switch no son contiguos, no existen casos para lo
 
 El código ensamblador generado es muy parecido a la versión extended C:
 
-{% highlight asm %} >.file   "sw.c"
+{% highlight asm %}.file   "sw.c"
   .text
    .globl  switch_eg
    .type   switch_eg, @function
@@ -192,7 +192,7 @@ Cada una de estas etiquetas identifica el trozo de código a ejecutar en funció
 
 El paso clave en la ejecución de una sentencia switch es acceder a una posición de código mediante la tabla de saltos, cosa que pasa en la línea 16 del código C extendido con la sentencia **goto** que referencia a la tabla de saltos *jt*. En la versión ensamblador, ocurre algo similar en la línea 21. El cálculo de a qué elemento del array jt se accede está en la línea 20 concretamente *.L7(,%eax,4)*. .L7 es la tabla de saltos, si observamos el contenido
 
-{% highlight asm %}>.L7:
+{% highlight asm %}.L7:
   .long   .L3 ; eax = 0
    .long   .L2 ; eax = 1
    .long   .L4 ; eax = 2
@@ -211,7 +211,7 @@ En la versión C extendida, se declara la tabla de saltos como un array de siete
 
 Echemos un vistazo a la tabla de saltos:
 
-{% highlight c %}>static void *jt[7] = {
+{% highlight c %}static void *jt[7] = {
       &#038;&#038;loc_A, &#038;&#038;loc_def, &#038;&#038;loc_B,
       &#038;&#038;loc_C, &#038;&#038;loc_D, &#038;&#038;loc_def,
       &#038;&#038;loc_D
@@ -220,7 +220,7 @@ Echemos un vistazo a la tabla de saltos:
 
 Algunos valores están duplicados, por ejemplo *loc_D* aparece en la posición 4 y 6 del array. Es lógico ya que para los valores 104 y 106 se debe ejecutar la misma porción del código:
 
-{% highlight c %}>case 104:
+{% highlight c %}case 104:
 case 106:
    result *= result;
    break;
@@ -228,7 +228,7 @@ case 106:
 
 En el caso *index = 5* o *index = 1* (No existe case para 105 o 101), se saltará al trozo de código etiquetado como *loc_def*, correspondiente al *default* del switch. Ahora estamos en condiciones de comprender mejor la estructura de la tabla de saltos en código ensamblador:
 
-{% highlight asm %}>.section    .rodata
+{% highlight asm %}.section    .rodata
  .align 4        ; Alinea las direcciones a multiplos de 4 (Un entero ocupa 4B)
   .align 4
 .L7:
@@ -251,7 +251,7 @@ Comprender todo el código visto requiere examinarlo con detenimiento y paso a p
 
 La versión ensamblador de arriba corresponde a la compilación para procesadores de 32 Bits, a continuación la versión para 64-Bits:
 
-{% highlight asm %} >.file   "sw.c"
+{% highlight asm %}.file   "sw.c"
   .text
    .globl  switch_eg
    .type   switch_eg, @function

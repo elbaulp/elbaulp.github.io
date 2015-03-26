@@ -56,7 +56,7 @@ La implementación del proveedor necesita un mecanismo para distinguir una URI d
 
 El código que se muestra a continuación, sobreescribe el método onCreate() para crear la base de datos. Despues se implementan los métodos query, insert, update, delete y getType. Por razones de claridad del código, no voy a mostrar el código de estos métodos, ya que se explicarán en [entradas posteriores][6].
 
-{% highlight java %}>/**
+{% highlight java %}/**
 FavSites for Android
     Copyright (C) 2011  Alejandro Alcalde Barros
     

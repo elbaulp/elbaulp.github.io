@@ -82,7 +82,7 @@ tags:
 
 <!-more-->
 
-{% highlight c %}>/*******************************************************************************
+{% highlight c %}/*******************************************************************************
 * TEST DE SUMAS EN PARALELO
 *
 * Copyleft 2012 Victor Manuel Fernandez Castro - Todos los derechos revocados.

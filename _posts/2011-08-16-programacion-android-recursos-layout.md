@@ -28,7 +28,7 @@ En Android, cada pantalla de una aplicación habitualmente se carga desde un fic
   
 <!--more-->
 
-{% highlight java %}>public class PrincipalActivity extends Activity {
+{% highlight java %}public class PrincipalActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ En Android, cada pantalla de una aplicación habitualmente se carga desde un fic
 
 La línea ***setContentView(R.layout.main);*** señala que hay una clase estática llamada *R.layout* y, que dentro de esa clase hay una constante entera llamada *main* que apunta a una vista definida por un fichero de recursos layout xML. El nombre del fichero XML es main.xml, el cual debe estar en el directorio *./res/layout*. El contenido de este fichero es el siguiente:
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -64,7 +64,7 @@ Para cada pantalla que queramos hacer, necesitaremos ficheros layout distintos, 
 
 Por cada archivo de layout que tengamos en ./res/layout, se generará una entrada en R.java. Por ejemplo, si tenemos estos dos archivos, file1.xml y file2.xml, en R.java aparecerá:
 
-{% highlight java %}>// ...
+{% highlight java %}// ...
 public static final class layout {
    public static final int file1=0x7f030000;
    public static final int file2=0x7f030001;
@@ -74,13 +74,13 @@ public static final class layout {
 
 Las vistas definidas en estos layout, como el TextView son accesibles mediante código java a través sus IDs de recursos generadas en R.java.
 
-{% highlight java %}>TextView tv = (TextView) this.findViewById(R.id.text1);
+{% highlight java %}TextView tv = (TextView) this.findViewById(R.id.text1);
 tv.setText("Texto para el TextView")
 {% endhighlight %}
 
 En este ejemplo, hemos localizado el TextView usando el método ***findViewById()*** de la clase Activity. La constante *R.id.text1* corresponde al ID definido para el TextView en el fichero XML, que creamos de la siguiente manera:
 
-{% highlight xml %}>&lt;textview android:id="@+id/text1"
+{% highlight xml %}&lt;textview android:id="@+id/text1"
 ....
 />
 {% endhighlight %}

@@ -37,17 +37,17 @@ Para colocar un enlace en nuestro documento, debemos hacer dos cosas:
 
 Para ello, ponemos justo al inicio de la sección *Código del programa* lo siguiente:
 
-{% highlight latex %}>\label{codigo_programa}{% endhighlight %}
+{% highlight latex %}\label{codigo_programa}{% endhighlight %}
 
 Y justo al inicio de la sección Salida del programa esto otro:
 
-{% highlight latex %}>\hyperref[codigo_programa]{texto del enlace}{% endhighlight %}
+{% highlight latex %}\hyperref[codigo_programa]{texto del enlace}{% endhighlight %}
 
 Este sería el resultado final:
 
 <!--more-->
 
-{% highlight latex %}>\newpage
+{% highlight latex %}\newpage
 \section{Salida del programa}
 \noindent
 La salida por terminal que obtener al ejecutar el \hyperref[codigo_programa]{programa} es la siguiente:
@@ -59,7 +59,7 @@ Debemos compilar dos veces para que LaTeX establezca bien los enlaces, y tras co
 
 Ahora vamos a ver como introducir una imagen en nuestro documento. Debemos tenerla en la misma carpeta que nuestro arhivo .tex, y para insertarla usamos la orden figure e includegraphics, cuya sintaxis es:
 
-{% highlight latex %}>\begin{figure}[opciones donde insertar la imagen]
+{% highlight latex %}\begin{figure}[opciones donde insertar la imagen]
 \centering % si queremos la imagen centrada
 \includegraphics[opciones de tamaño]{imagen}
 \caption{texto a poner debajo de la imagen}
@@ -68,7 +68,7 @@ Ahora vamos a ver como introducir una imagen en nuestro documento. Debemos tener
 
 Para usar includegraphics debemos incluir el siguiente paquete en la cabecera:
 
-{% highlight latex %}>\usepackage{graphicx} % para incluir imágenes en nuestro código{% endhighlight %}
+{% highlight latex %}\usepackage{graphicx} % para incluir imágenes en nuestro código{% endhighlight %}
 
 Respecto a las opciones de tamaño, son las siguientes:  
 * **width** : para escalar las imágenes un determinado ancho  
@@ -85,7 +85,7 @@ Respecto a las opciones sobre donde insertar la imagen, pueedn ser las siguiente
 
 Estos parámetros también nos valen para las tablas. También podemos combinarlos o establecer una jerarquía. Por ejemplo:
 
-{% highlight latex %}>\begin{table}[!hbp]{% endhighlight %}
+{% highlight latex %}\begin{table}[!hbp]{% endhighlight %}
 
 Así, permitimos a LaTeX poner la tabla justo aquí (`h`), o al final de la página (`b`) o en una página especial para tablas, incluso si no queda bien (!). Si no se da ninguna opción, por defecto se asume `[tbp]`.
 
@@ -93,7 +93,7 @@ Sobre la orden `\caption{texto}`, nos sirve para describir un poco la imagen, o 
 
 Después de este pequeño repaso de teoría, vamos a insertar nuestra imagen en el documento, en mi caso, la imagen se llama 1:
 
-{% highlight latex %}>\begin{figure}[!h]
+{% highlight latex %}\begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{1}
 \caption{Salida por terminal del programa}
@@ -104,25 +104,25 @@ Después de este pequeño repaso de teoría, vamos a insertar nuestra imagen en 
 
 Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un [post][3] sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete **fancyhdr**:
 
-{% highlight latex %}>\usepackage{fancyhdr} % para personalizar la cabecera y el pie de pagina{% endhighlight %}
+{% highlight latex %}\usepackage{fancyhdr} % para personalizar la cabecera y el pie de pagina{% endhighlight %}
 
 También debemos establecer el estilo de página a **fancy**:
 
-{% highlight latex %}>\pagestyle{fancy}{% endhighlight %}
+{% highlight latex %}\pagestyle{fancy}{% endhighlight %}
 
 También, para ver el uso de dos paquetes muy útiles, vamos a darle color a nuestra cabecera y además, vamos a numerar las páginas con el estilo: &#8220;página x de n&#8221;, para ello incluimos también el paquete **color** (que habíamos incluido al principio) y el paquete **lastpage**:
 
-{% highlight latex %}>\usepackage{lastpage} % para saber el numero de pagina del documento{% endhighlight %}
+{% highlight latex %}\usepackage{lastpage} % para saber el numero de pagina del documento{% endhighlight %}
 
 Vamos a empezar personalizando la cabecera, para ello usamos el siguiente comando:
 
-{% highlight latex %}>\fancyhead[opciones de localizacion]{la salida que quieras}{% endhighlight %}
+{% highlight latex %}\fancyhead[opciones de localizacion]{la salida que quieras}{% endhighlight %}
 
 Donde las opciones de localización son E, O, L, C y R.
 
 En nuestro código, vamos a hacer lo siguiente:
 
-{% highlight latex %}>% CABECERA
+{% highlight latex %}% CABECERA
 % el nombre del autor en la izquierda de las paginas pares y a la derecha de las paginas impares
 \fancyhead[LE,RO]{\textcolor[rgb]{0.5,0.2,0.6}{Marta Gómez}}
 \fancyhead[RE,LO]{\textcolor[rgb]{0.2,0.2,0.9}{\date{\today}}} % en el lado contrario, la fecha
@@ -138,17 +138,17 @@ Un último detale: si os habéis dado cuenta, los links tal y como tenemos el do
 
 Así, nuestro paquete `hyperref` quedaría de la siguiente forma:
 
-{% highlight latex %}>\usepackage[colorlinks=true,linkcolor=magenta]{hyperref} % para poder poner "enlaces" en nuestro codigo{% endhighlight %}
+{% highlight latex %}\usepackage[colorlinks=true,linkcolor=magenta]{hyperref} % para poder poner "enlaces" en nuestro codigo{% endhighlight %}
 
 ## Compilar el documento y generar el PDF
 
 Ahora que ya tenemos nuestro fichero escrito, ¿cómo lo convertimos a PDF?. Si usas Linux, tienes que bajarte el paquete `texlive` y ejecutar en terminal el siguiente comando en el directorio donde tengas tu fichero .tex:
 
-{% highlight latex %}>pdflatex nombrefichero.tex{% endhighlight %}
+{% highlight latex %}pdflatex nombrefichero.tex{% endhighlight %}
 
 Y si usas el paquete `minted` deberás incluir también:
 
-{% highlight latex %}>pdflatex -shell-escape nombrefichero.tex{% endhighlight %}
+{% highlight latex %}pdflatex -shell-escape nombrefichero.tex{% endhighlight %}
 
 ## Editores de Texto
 
@@ -156,7 +156,7 @@ También tienes la opción de configurar tu editor de texto favorito con un plug
 1. Ve a Tools > build system > new build system  
 2. Pega el siguiente código y guarda el archivo con el nombre que quieras:
 
-{% highlight latex %}>{
+{% highlight latex %}{
     "cmd": ["pdflatex","-shell-escape","$file_name"],
     "selector": "text.tex.latex"
 }

@@ -21,7 +21,7 @@ Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. 
 
 Para ello hay que hacer uso de la función `ptrace()`:
 
-{% highlight c %}>#include &lt;sys/ptrace.h>
+{% highlight c %}#include &lt;sys/ptrace.h>
 
        long ptrace(enum __ptrace_request request, pid_t pid,
                    void *addr, void *data);
@@ -36,7 +36,7 @@ Consite en un proceso observe el control de ejecución de otro. Se usa normalmen
 
 Esta función será usada como constructor para que se ejecute antes de llamar a la función `main()`:
 
-{% highlight c %}>/*
+{% highlight c %}/*
  * evilgrin.c, tweaking ptrace() to induced whatever we been debugged
  */
 
@@ -64,7 +64,7 @@ int main(int argc, char **argv) {
 
 El código de arriba realiza un `ptrace` a sí mismo. Si falla al intentar realizar un seguimiento a él mismo, quiere decir que otro proceso ya esté realizando el seguimiento (el depurador, por ejemplo). Veamos el ejemplo en práctica:
 
-{% highlight bash %}>$ gdb trace
+{% highlight bash %}$ gdb trace
 (gdb) r
 Starting program: trace 
 alguien está depurando

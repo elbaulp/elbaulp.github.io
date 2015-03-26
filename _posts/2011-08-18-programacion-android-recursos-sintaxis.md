@@ -29,7 +29,7 @@ La sintaxis que usamos para crear un ID de recurso en un fichero XML se llama re
   
 <!--more-->
 
-{% highlight java %}>@[package:]type/name
+{% highlight java %}@[package:]type/name
 {% endhighlight %}
 
 El tipo (type), corresponde a uno de los espacios de nombres de tipos de recursos disponible en R.java, que son algunos de los siguientes:
@@ -58,7 +58,7 @@ Si no se especifica ningún paquete en @\[package:\] (de ahí que en la represen
 
 Si especificamos android:type/name, el id referenciado será resuelto usando el paquete android y específicamente a través del archivo android.R.java. Podemos usar cualquier nombre de paquete java en el lugar de @[package:] para localizar el archivo R.java correcto y resolver la referencia al recurso en cuestión. Ahora que conocemos la sintaxis, vamos a analizar unos ejemplos. Nótese que la parte izquierda del ID android:id no es parte de la sintaxis. “android:id” simplemente indica que vamos a crear un id para un control como lo es el TextView. 
 
-{% highlight xml %}>&lt;textview android:id=”text”> 
+{% highlight xml %}&lt;textview android:id=”text”> 
 <!-- Error de compilación, como id no tomará cadenas de texto sin formato. -->
 
 &lt;/textview>&lt;textview android:id=”@text”> 

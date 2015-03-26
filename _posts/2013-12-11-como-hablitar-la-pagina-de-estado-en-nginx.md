@@ -20,7 +20,7 @@ Nginx dispone de una página que muestra el estado del servidor, que mostrará i
 
 Es necesario compilar nginx con éste módulo. Para comprobar si está compilado debe aparecer `--with-http_stub_status_module` al ejecutar el comando
 
-{% highlight bash %}>nginx -V
+{% highlight bash %}nginx -V
 {% endhighlight %}
 
 De no tenerlo, hay que volver a [compilar nginx][1] con éste módulo activo. 
@@ -29,7 +29,7 @@ De no tenerlo, hay que volver a [compilar nginx][1] con éste módulo activo.
 
 Hay que editar el fichero *nginx.conf*, y añadir en el bloque ***server { /\*&#8230;\*/ }*** lo siguiente:
 
-{% highlight bash %}>location /nginx_status {
+{% highlight bash %}location /nginx_status {
         # Hablitar las estadísticas
         stub_status on;
         # No registrar en los logs los accesos a la página de estado
@@ -43,12 +43,12 @@ Hay que editar el fichero *nginx.conf*, y añadir en el bloque ***server { /\*&#
 
 Tras esto, es necesario reiniciar nginx para que sea consciente de los cambios:
 
-{% highlight bash %}>service nginx reload
+{% highlight bash %}service nginx reload
 {% endhighlight %}
 
 Ahora al dirigirse a la dirección ***midominio.com/nginx_status*** veremos algo así:
 
-{% highlight bash %}>Active connections: 291
+{% highlight bash %}Active connections: 291
 server accepts handled requests
    16630948 16630948 31070465
 Reading: 6 Writing: 179 Waiting: 106

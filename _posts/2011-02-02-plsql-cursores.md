@@ -62,7 +62,7 @@ Los cursores implícitos se utilizan para realizar consultas SELECT que devuelve
 
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>SET SERVEROUTPUT ON;
+{% highlight sql %}SET SERVEROUTPUT ON;
 declare
   vdescripcion VARCHAR2(50);
 begin
@@ -88,7 +88,7 @@ Al igual que cualquier otra variable, el cursor se declara en la sección DECLAR
 
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>CURSOR nombre_cursor IS instrucción_SELECT
+{% highlight sql %}CURSOR nombre_cursor IS instrucción_SELECT
 CURSOR nombre_cursor(param1 tipo1, ..., paramN tipoN) IS instrucción_SELECT
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ La sintaxis de apertura de un cursor es:
 
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>OPEN nombre_cursor;
+{% highlight sql %}OPEN nombre_cursor;
 OPEN nombre_cursor(valor1, valor2, ..., valorN);
 {% endhighlight %}
 
@@ -120,7 +120,7 @@ Una vez que el cursor está abierto en el servidor se podrá hacer la petición 
 
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>FETCH nombre_cursor INTO variables;
+{% highlight sql %}FETCH nombre_cursor INTO variables;
 {% endhighlight %}
 
 <!--INFOLINKS_ON-->
@@ -137,7 +137,7 @@ Así lo acción más típica es recuperar filas mientras queden alguna por recup
 
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>OPEN nombre_cursor;
+{% highlight sql %}OPEN nombre_cursor;
 LOOP
   FETCH nombre_cursor INTO variables;
   EXIT WHEN nombre_cursor%NOTFOUND;
@@ -169,7 +169,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>CLOSE numbre_cursor;{% endhighlight %}
+{% highlight sql %}CLOSE numbre_cursor;{% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
@@ -199,7 +199,7 @@ Ejemplos:
 
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   CURSOR cpaises IS
   SELECT CO_PAIS, DESCRIPCION, CONTINENTE FROM PAISES;
   co_pais VARCHAR2(3);
@@ -218,7 +218,7 @@ END;
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   CURSOR cpaises IS
   SELECT CO_PAIS, DESCRIPCION, CONTINENTE FROM PAISES;
   registro cpaises%ROWTYPE;
@@ -235,7 +235,7 @@ END;
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   r ARTICULOS%ROWTYPE;
 BEGIN
   FOR r IN ( SELECT * FROM ARTICULOS ) LOOP
@@ -249,7 +249,7 @@ END;
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>BEGIN
+{% highlight sql %}BEGIN
   UPDATE ARTICULOS SET cArtDsc = `Pantalla LCD’ WHERE cCodArt = ‘LCD’;
   IF SQL%NOTFOUND THEN <span class="comentario">-- Otra opción : SQL%ROWCOUNT = 0</span>
     INSERT INTO ARTICULOS (cCodArt,cDesArt)
@@ -270,7 +270,7 @@ uno o varios de sus parámetros.
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   CURSOR cArt (cFml Articulos.cArtFml%TYPE) 
     IS SELECT cArtCdg,cArtDsc FROM Articulos WHERE cArtFml = cFml;
   xCod Articulos.cArtCdg%TYPE;
@@ -297,7 +297,7 @@ Los cursores de actualización se declaran igual que los cursores explícitos, a
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>CURSOR nombre_cursor IS instrucción_SELECT FOR UPDATE{% endhighlight %}
+{% highlight sql %}CURSOR nombre_cursor IS instrucción_SELECT FOR UPDATE{% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
@@ -307,7 +307,7 @@ Para actualizar los datos del cursor hay que ejecutar una sentencia UPDATE espec
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>UPDATE &lt;nombre_tabla> SET &lt;campo_1> = &lt;valor_1>[,&lt;campo_2> = &lt;valor_2>]
+{% highlight sql %}UPDATE &lt;nombre_tabla> SET &lt;campo_1> = &lt;valor_1>[,&lt;campo_2> = &lt;valor_2>]
 WHERE CURRENT OF &lt;cursor_name>
 {% endhighlight %}
 
@@ -319,7 +319,7 @@ Cuando trabajamos con cursores de actualización debemos tener en cuenta que la 
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   CURSOR cpaises IS
    select CO_PAIS, DESCRIPCION, CONTINENTE from paises
   FOR UPDATE;

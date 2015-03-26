@@ -27,7 +27,7 @@ En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. La
 existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  
 Su sintaxis es :
 
-{% highlight sql %}>[ FROM {&lt;table_source&gt;} [,...n] ]
+{% highlight sql %}[ FROM {&lt;table_source&gt;} [,...n] ]
 &lt;table_source&gt; ::= table_name | view_name | derived_table | &lt;joined_table&gt;
 {% endhighlight %}
 
@@ -70,7 +70,7 @@ En Oracle 9i, 10g y posteriores se puede realizar un JOIN natural mediante la si
 JOIN ... USING; en este caso, las columnas por las que se hace la yunción deben tener el mismo  
 nombre.
 
-{% highlight sql %}><span class="comentario">-- El siguiente select devuelve datos de 3 tablas
+{% highlight sql %}<span class="comentario">-- El siguiente select devuelve datos de 3 tablas
 -- Dos tablas tienen un campo departament_id y
 -- dos tablas tiene un campo location_id</span>
 SELECT e.employee_id, e.last_name, e.first_name, e.department_id,
@@ -111,7 +111,7 @@ ON (e.department_id = d.department_id);
 
 Otro ejemplo:
 
-{% highlight sql %}>CREATE TABLE Clientes (
+{% highlight sql %}CREATE TABLE Clientes (
 cCodCli varchar2(13),
 cNomCli varchar2(50)
 );

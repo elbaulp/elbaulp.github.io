@@ -23,12 +23,12 @@ Para ello he creado un pequeño script en python que genera automáticamente las
 
 Para leer la duración de cada fichero he usado un módulo llamado <a href="https://code.google.com/p/mutagen/" title="Mutagen Homepage" target="_blank">Mutagen</a>. Para instalarlo:
 
-{% highlight bash %}>$ pip install mutagen
+{% highlight bash %}$ pip install mutagen
 {% endhighlight %}
 
 Una vez instalado, podremos ejecutar el programa, el código es el siguiente:
 
-{% highlight python %}>#!/usr/bin/env python
+{% highlight python %}#!/usr/bin/env python
 
 '''
 Created on Apr 4, 2014
@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
 El uso del programa es sencillo:
 
-{% highlight bash %}>$ ./genPlayListByLength.py -h
+{% highlight bash %}$ ./genPlayListByLength.py -h
 usage: genPlayListByLength.py [-h] -d DIRECTORY -l LENGTH
 
 Generate playlists with the indicated length

@@ -34,14 +34,14 @@ Pero si ésto no funciona, debemos modificar el fichero de configuración del em
 
 Si dispones de muchos emuladores, es posible habilitar el teclado en todos ellos con:
 
-{% highlight bash %}>for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.keyboard=yes' >> "$f"; done
+{% highlight bash %}for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.keyboard=yes' >> "$f"; done
 {% endhighlight %}
 
 ## Habilitar la navegación con los cursores
 
 De igual manera, pero esta vez hay que añadir `hw.dPad=yes` al fichero de configuración, para habilitarlo en todos los emuladores:
 
-{% highlight bash %}>for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.dPad=yes' >> "$f"; done
+{% highlight bash %}for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.dPad=yes' >> "$f"; done
 {% endhighlight %}
 
 #### Referencias

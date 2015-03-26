@@ -21,7 +21,7 @@ La estructura del programa consta de tres clases, *Persona*, *Alumno* y *Asignat
   
 <!--more-->
 
-{% highlight ruby %}>require 'date' #Para trabajar con fechas 
+{% highlight ruby %}require 'date' #Para trabajar con fechas 
 require 'time'
 
 #Clase Persona
@@ -86,7 +86,7 @@ Concretamente en esta clase se implementa la interfaz **Comparable**, usada para
 
 Echemos un vistazo a la clase Asignatura:
 
-{% highlight ruby %}>class Asignatura
+{% highlight ruby %}class Asignatura
   attr_accessor :codigo, :titulo, :creditosECTS
   
   def initialize(codigo, titulo, creditos)
@@ -107,7 +107,7 @@ En este caso hay poco que comentar, ya que es más sencilla que la anterior. Ún
 
 Por último, veamos la clase Alumno, la cual hereda de Persona:
 
-{% highlight ruby %}>require './Persona.rb'
+{% highlight ruby %}require './Persona.rb'
 require './Asignatura'
 
 class Alumno &lt; Persona
@@ -184,7 +184,7 @@ Varias cosas a comentar. Para indicar la herencia de una clase sobre otra, se us
 Las variables estáticas se definen anteponiendo dos @@ al nombre de la variable. (`@@NUM_MAX_CRED = 60`).  
 `asignaturas` es un objeto HashMap sobre el que podemos iterar, un ejemplo es el método `getNumCreditos`:
 
-{% highlight ruby %}>total = 0
+{% highlight ruby %}total = 0
     asignaturas.each_pair do |k,v|
       total += asignaturas[k].creditosECTS
     end
@@ -198,7 +198,7 @@ Por último, el manejo de excepciones. En esta clase, se lanzan varias. Por ejem
 
 Para probar el funcionamiento del programa, usaremos esta pieza de código:
 
-{% highlight ruby %}>#!/usr/bin/env ruby
+{% highlight ruby %}#!/usr/bin/env ruby
 
 require './Persona.rb'
 require './Alumno.rb'
@@ -263,7 +263,7 @@ end
 
 En este fragmento de código se muestra un ejemplo del tratado de excepciones, en lugar del clásico `try{...}catch(){...}` en Ruby se usa la siguiente sintaxis:
 
-{% highlight ruby %}>begin
+{% highlight ruby %}begin
     alumno1.desmatricularAsignatura(1000)
   rescue Exception => e
     puts e.message
@@ -274,7 +274,7 @@ Debido a la ausencia de tipos en Ruby, el lenguaje proporciona un mecanismo para
 
 Vamos a ejecutar el programa:
 
-{% highlight bash %}>hkr-> ruby Main.rb
+{% highlight bash %}hkr-> ruby Main.rb
 Mostrando personas almacenadas en el sistema
 Persona [nombre=Alejandro Alcalde], fechaNacimiento=1991-02-10]
 Persona [nombre=Pepe], fechaNacimiento=1980-02-08]

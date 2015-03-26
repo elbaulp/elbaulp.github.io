@@ -44,7 +44,7 @@ Existen varios tipos de Layouts para Android, vamos a ver los más comunes:
 
 Este tipo de Layout es el más básico, coloca a sus objetos hijos en la parte superior izquierda de la pantalla.
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;framelayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -70,7 +70,7 @@ Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se a
 
 Este tipo de layout coloca sus hijos unos detras de otros, también comenzando por la esquina superior izquierda de la pantalla. Podemos colocarlos alineados horizontalmente o verticalmente mediante su propiedad ***android:orientation=&#8221;horizontal | vertical&#8221;***
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
@@ -101,7 +101,7 @@ Este Layout permite que coloquemos los elementos en un lugar con respecto a la p
 
 Para conseguir esto, ***RelativeLayout*** proporciona propiedades como ***android:layout\_toRightOf o android:layout\_alignLeft***, que toman como valores los identificadores de los objetos, o valores booleanos.
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"

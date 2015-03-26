@@ -43,7 +43,7 @@ El **algoritmo de Dijkstra** consiste en ir explorando todos los caminos más co
 
 #### Algoritmo de Dijkstra
 
-{% highlight cpp %} >#include &lt;string.h>
+{% highlight cpp %}#include &lt;string.h>
 #include &lt;fstream>
 #include "grafo_heap.h"
 using namespace std;

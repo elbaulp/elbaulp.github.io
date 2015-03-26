@@ -22,21 +22,21 @@ Cuando se administra un servidor, te das cuenta de la cantidad de máquinas auto
 
 Si no se encuentra instalado en nuestro sistema:
 
-{% highlight bash %}>$ sudo apt-get install fail2ban
+{% highlight bash %}$ sudo apt-get install fail2ban
 {% endhighlight %}
 
 ### Antes de empezar
 
 Antes de modificar el archivo */etc/fail2ban/jail.conf*, es recomendable &#8211;y de hecho lo menciona el propio archivo en su cabecera &#8212; realizar una copia y trabajar sobre ella:
 
-{% highlight bash %}>cd /etc/fail2ban &#038;&#038; cp jail.conf jail.local
+{% highlight bash %}cd /etc/fail2ban &#038;&#038; cp jail.conf jail.local
 {% endhighlight %}
 
 ### Bloquear ataques de fuerza bruta a WordPress
 
 La siguiente configuración bloqueará durante 20 minutos cualquier intento de loggearse en WordPress de forma incorrecta más de 3 veces. Hay que escribirla en el *jail.local*:
 
-{% highlight bash %}>[nginx-wp-login]
+{% highlight bash %}[nginx-wp-login]
 
 enabled = true
 port = http,https
@@ -49,7 +49,7 @@ bantime = 1200
 
 Ahora queda añadir el filtro para esta regla, en el archivo *filter.d/nginx-wp-login.conf*:
 
-{% highlight bash %}>[Definition]
+{% highlight bash %}[Definition]
 
 failregex = &lt;HOST>.*] "POST /wp-login.php
 ignoreregex = 
@@ -74,7 +74,7 @@ Las siguientes configuraciones serán a nivel del servidor web nginx, no de Word
 
 Al igual que antes, en el fichero *jail.local* añadimos:
 
-{% highlight bash %}>[nginx-auth]
+{% highlight bash %}[nginx-auth]
 enabled = true
 filter = nginx-auth
 action = iptables-multiport[name=NoAuthFailures, port="http,https"]
@@ -117,7 +117,7 @@ bantime  = 86400 # 1 day
 
 Y sus correspondientes filtros en */etc/fail2ban/filter.d/* (Cada uno en un fichero separado, con el mismo nombre que aparece en la primera línea):
 
-{% highlight bash %}># Proxy filter /etc/fail2ban/filter.d/proxy.conf:
+{% highlight bash %}# Proxy filter /etc/fail2ban/filter.d/proxy.conf:
 #
 # Block IPs trying to use server as proxy.
 #
@@ -167,7 +167,7 @@ ignoreregex =
 
 Para terminar, si queremos recibir un correo por cada bloqueo que se produzca, basta con añadir estas dos líneas al fichero *jail.local*:
 
-{% highlight bash %}>destemail = direccion@correo
+{% highlight bash %}destemail = direccion@correo
 mta = sendmail
 {% endhighlight %}
 

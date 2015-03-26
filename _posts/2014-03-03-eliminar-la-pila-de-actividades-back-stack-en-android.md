@@ -27,7 +27,7 @@ Por ejemplo, si la pila contiene las activities A, B, C, D. Si D llama a `startA
 
 Un ejemplo sería el siguiente:
 
-{% highlight java %}>startActivity(new Intent(getBaseContext(), SWADMain.class)
+{% highlight java %}startActivity(new Intent(getBaseContext(), SWADMain.class)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
 finish();
 {% endhighlight %}

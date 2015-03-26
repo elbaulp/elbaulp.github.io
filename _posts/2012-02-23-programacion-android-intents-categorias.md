@@ -46,7 +46,7 @@ La forma de declarar las categorías en el AndroidManifest es la siguiente:
   
 <!--more-->
 
-{% highlight xml %}>&lt;activity android:name=".PrincipalActivity" android:label="@string/app_name">
+{% highlight xml %}&lt;activity android:name=".PrincipalActivity" android:label="@string/app_name">
    &lt;intent -filter>
       &lt;action android:name="android.intent.action.MAIN" />
       &lt;category android:name="android.intent.category.LAUNCHER" />
@@ -63,7 +63,7 @@ Vamos a ver algunas categorías predefinidas, podéis encontrar la lista de toda
 
 Cuando usamos un intent para iniciar una actividad podemos especificar qué tipo de actividad queremos especificando la categoría. Otra opción es buscar las actividades que coincidan con una determinada categoría, por ejemplo:
 
-{% highlight java %}>Intent i = new Intent(Intent.ACTION_MAIN, null);
+{% highlight java %}Intent i = new Intent(Intent.ACTION_MAIN, null);
 i.addCategory(Intent.CATEGORY_LAUNCHER);
 PackageManager pm = getPackageManager();
 List&lt;resolveinfo> list = pm.queryIntentActivities(i, 0);
@@ -71,7 +71,7 @@ List&lt;resolveinfo> list = pm.queryIntentActivities(i, 0);
 
 PackageManager permite encontrar actividades que coincidan con un intent sin llegar a invocarlas. Una vez ejecutado lo de arriba, podemos iterar sobre la lista e invocar a la actividad que coincida con el nombre que deseemos:
 
-{% highlight java %}>for(ResolveInfo ri: list){
+{% highlight java %}for(ResolveInfo ri: list){
    Log.d("Info", ri.toString());
    String pkgName = ri.activityInfo.packageName;
    String className = ri.activityInfo.name;
@@ -85,7 +85,7 @@ PackageManager permite encontrar actividades que coincidan con un intent sin lle
 
 Es posible lanzar una actividad basándonos en el nombre de la categoría:
 
-{% highlight java %}>Intent i = new Intent(Intent.ACTION_MAIN, null);
+{% highlight java %}Intent i = new Intent(Intent.ACTION_MAIN, null);
 i.addCategory(Intent.CATEGORY_LAUNCHER);
 activity.startActivity(i);
 {% endhighlight %}

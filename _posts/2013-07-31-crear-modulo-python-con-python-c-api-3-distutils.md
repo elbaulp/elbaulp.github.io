@@ -30,7 +30,7 @@ Como dijimos en la entrada[ anterior][5], vamos a hablar de *DistUtils*, una her
 
 El esquema básico de un paquete **distutils** contiene un fichero *setup.py*, su versión más simple es:
 
-{% highlight python %}>from distutils.core import setup, Extension
+{% highlight python %}from distutils.core import setup, Extension
 
 module1 = Extension('ejemplo',
                     sources = ['ejemplo.c'])
@@ -42,7 +42,7 @@ setup (name = 'NombreDelPaquete',
 
 Una vez definido el *setup.py* ejecutando
 
-{% highlight bash %}>$ python setup.py build
+{% highlight bash %}$ python setup.py build
 running build
 running build_ext
 building 'ejemplo' extension
@@ -57,7 +57,7 @@ compilaremos el fichero *ejemplo.c* y se generará un módulo llamado *ejemplo* 
 
 Normalmente los módulos son más complejos y es necesario usar librerías externas, indicar dónde se encuentran las cabeceras etc, para ello se usan estas reglas:
 
-{% highlight python %}>from distutils.core import setup, Extension
+{% highlight python %}from distutils.core import setup, Extension
 
 module1 = Extension('demo',
                     define_macros = [('MAJOR_VERSION', '1'),
@@ -82,7 +82,7 @@ This is really just a demo package.
 
 Sin embargo, con *python setup.py build* no se está instalando el módulo en el lugar adecuado para que python sea capaz de utilizarlo, para ello es necesario usar *install* de a siguiente forma:
 
-{% highlight bash %}># python setup.py install
+{% highlight bash %}# python setup.py install
 running install
 running build
 running build_ext
@@ -100,7 +100,7 @@ Writing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info{% e
 
 Y ahora sí que podremos usar el módulo como antes:
 
-{% highlight python %}>In [1]: import ejemplo
+{% highlight python %}In [1]: import ejemplo
 
 In [2]: ejemplo.saluda('Alejandro')
 Out[2]: 'Hola Alejandro desde la Python C API!'{% endhighlight %}

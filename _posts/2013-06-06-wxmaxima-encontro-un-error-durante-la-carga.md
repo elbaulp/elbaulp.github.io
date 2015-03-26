@@ -25,7 +25,7 @@ Que indica que wxmaxima ha encontrado un error intentando convertir el fichero a
 
 Usaremos el programa *file* para determinar el tipo de fichero:
 
-{% highlight bash %}>$ file -i Pr06\ -\ Grafos.wxm 
+{% highlight bash %}$ file -i Pr06\ -\ Grafos.wxm 
 Pr06 - Grafos.wxm: text/x-pascal; charset=iso-8859-1
 {% endhighlight %}
 
@@ -33,14 +33,14 @@ Así hemos obtenido la codificación actual del archivo, la cual nos hará falta
 
 Ahora necesitamos hacer una conversión de formato usando el comando *iconv* de la siguiente forma:
 
-{% highlight bash %}>iconv -f ISO_8859-1 -t UTF-8 -o ficheroSalida ficheroEntrada
+{% highlight bash %}iconv -f ISO_8859-1 -t UTF-8 -o ficheroSalida ficheroEntrada
 {% endhighlight %}
 
 Con esto ya tendremos el fichero codificado en utf-8 y wxmaxmima lo abrirá sin problemas. 
 
 Para terminar os dejo un script que hice para convertir todos los archivos *.wxm* de una sola vez. El resultado será un fichero con el mismo nombre que el original pero de extensión *utf8.wxm*:
 
-{% highlight bash %}>IFS='
+{% highlight bash %}IFS='
 '
 for i in `ls *.wxm`
 do

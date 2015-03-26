@@ -22,7 +22,7 @@ Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamo
   
 <!--more-->
 
-{% highlight bash %}>$ dig @example.com -c CH -t txt version.bind # Consultamos la versión para el dominio de la web
+{% highlight bash %}$ dig @example.com -c CH -t txt version.bind # Consultamos la versión para el dominio de la web
 $ dig @direcciónDNS -c CH -t txt version.bind # Consultamos también en nuestros servidores DNS secundarios
 {% endhighlight %}
 
@@ -40,18 +40,18 @@ Abrimos el fichero de configuración de **BIND**, concretamente */etc/bind/named
 
 Guardamos el fichero y reiniciamos **BIND**:
 
-{% highlight bash %}># service bind9 restart
+{% highlight bash %}# service bind9 restart
 {% endhighlight %}
 
 ### Mostrar versión de BIND aún cuando está oculta
 
 Instalamos *fpdns*:
 
-{% highlight bash %}>sudo apt-get install fpdns{% endhighlight %}
+{% highlight bash %}sudo apt-get install fpdns{% endhighlight %}
 
 Lo ejecutamos pasando como argumento el servidor del cual queremos determinar la versión:
 
-{% highlight bash %}>$ fpdns -D &lt;dominio>{% endhighlight %}
+{% highlight bash %}$ fpdns -D &lt;dominio>{% endhighlight %}
 
 La salida será algo de este estilo:
 

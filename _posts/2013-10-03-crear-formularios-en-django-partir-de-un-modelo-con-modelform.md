@@ -24,7 +24,7 @@ Hoy quiero hablar sobre cómo podemos crear formularios de una forma muy sencill
 
 Vamos a crear una aplicación trivial a modo de ejemplo, la llamaremos **pruebaformularios**. Para crearla ejecutamos:
 
-{% highlight bash %}>$ python manage.py startapp pruebaformularios
+{% highlight bash %}$ python manage.py startapp pruebaformularios
 {% endhighlight %}
 
 La aplicación hemos de crearla dentro de un proyecto existente.
@@ -103,14 +103,14 @@ De esta forma nuestra plantilla hereda todo el contenido de *base.html* y le añ
 
 Con la plantilla creada, el siguiente paso es configurar el proyecto para que sea capaz de encontrar la plantilla. Abrimos el *settings.py* de nuestro proyecto y en *TEMPLATE_DIRS* escribimos:
 
-{% highlight python %}>TEMPLATE_DIRS = (
+{% highlight python %}TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH,'pruebaformularios/templates/pruebaformularios'),
 )
 {% endhighlight %}
 
 Donde PROJECT_PATH es:
 
-{% highlight python %}>PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
+{% highlight python %}PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
 {% endhighlight %}
 
 De esta manera django encontrará nuestras plantillas y podremos usarlas.
@@ -119,7 +119,7 @@ De esta manera django encontrará nuestras plantillas y podremos usarlas.
 
 Falta configurar el mapeo URL para la vista que acabamos de crear (*PersonaList*). Para ello creamos un archivo llamado **urls.py** en el directorio de nuestra aplicación con el siguiente contenido:
 
-{% highlight python %}># pruebaformularios/urls.py
+{% highlight python %}# pruebaformularios/urls.py
 from django.conf.urls import patterns
 from django.conf.urls import url
 
@@ -134,7 +134,7 @@ Con esto estamos diciendo a *Django* que cuando encuentre el patrón url list/ (
 
 El archivo *urls.py* que acabamos de crear pertenece a la aplicación *pruebaformularios*, ahora es necesario agregar estos patrones al fichero *urls.py* global, es decir, el del proyecto.
 
-{% highlight python %}># Fichero urls.py del proyecto
+{% highlight python %}# Fichero urls.py del proyecto
 from django.conf.urls import patterns
 from django.conf.urls import include
 from django.conf.urls import url
@@ -152,7 +152,7 @@ Con esto, estamos añadiendo bajo la ruta */personas/* todas las urls del proyec
 
 Ya debería estar todo, para probar el ejemplo ejecutamos:
 
-{% highlight bash %}>$ python manage.py syncdb
+{% highlight bash %}$ python manage.py syncdb
 $ python manage.py runserver
 {% endhighlight %}
 
@@ -166,7 +166,7 @@ Si todo ha ido bien, deberíamos ver la siguiente página en <a href="http://127
 
 Ahora que tenemos todo listo para mostrar al usuario una lista de personas, vamos a ofrecerle la posibilidad de añadir gente a la lista. Para ello crearemos una clase que extienda de *ModelForm* (3) en *models.py*
 
-{% highlight python %}># models.py
+{% highlight python %}# models.py
 from django.forms import ModelForm
 
 class PersonaForm(ModelForm):
@@ -181,7 +181,7 @@ Con esto crearemos un formulario basándonos en los campos del modelo *Persona*,
 
 Para ser capaces de registrar una nueva Persona en la base de datos, debemos declarar una función que se encargue de dicha tarea y mapear ésta función con una URL, en nuestro ejemplo la dirección que usaremos para añadir una nueva persona será */personas/add*. La función la creamos en el fichero *views.py*
 
-{% highlight python %}># views.py
+{% highlight python %}# views.py
 from .models import PersonaForm
 
 def add_persona(request):
@@ -265,9 +265,9 @@ La siguiente tabla pretende resumir los flujos posibles:
 
 ## Asociar la función con una url
 
-Lo siguiente que hacemos es mapear la función anterior con una URL, de modo que al acceder a */personas/add* se nos presente el formulario:
+Lo siguiente que hacemos es mapear la funci��n anterior con una URL, de modo que al acceder a */personas/add* se nos presente el formulario:
 
-{% highlight python %}>urlpatterns = patterns('',
+{% highlight python %}urlpatterns = patterns('',
     url(r'^list/$', views.PersonaList.as_view(), name='plist'),
     url(r'^add/$', views.add_persona, name='padd'),
 )
@@ -303,7 +303,7 @@ Ya sabemos que *upersonas* es */personas/* y *padd* es *add*, luego este enlace 
 
 ## Código completo
 
-{% highlight python %}># models.py
+{% highlight python %}# models.py
 from django.db import models
 from django.forms import ModelForm
 
@@ -325,7 +325,7 @@ class PersonaForm(ModelForm):
 
 {% endhighlight %}
 
-{% highlight python %}># views.py
+{% highlight python %}# views.py
 from django.views.generic import ListView
 from django.shortcuts import render
 from django.shortcuts import redirect
@@ -352,7 +352,7 @@ def add_persona(request):
     return render(request, 'pruebaformularios/persona_form.html', {'form': form})
 {% endhighlight %}
 
-{% highlight python %}># urls.py
+{% highlight python %}# urls.py
 from django.conf.urls import patterns
 from django.conf.urls import url
 

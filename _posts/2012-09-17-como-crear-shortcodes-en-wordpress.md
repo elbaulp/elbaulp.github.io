@@ -27,7 +27,7 @@ Este archivo está en el directorio del tema. Actua como un plugin, y, si existe
 Abre el fichero con tu editor favorito y añade lo siguiente:  
 <!--more-->
 
-{% highlight php %}>//[foo]
+{% highlight php %}//[foo]
 function foo_demo( $atts ){
  return "Esto es una prueba.";
 }
@@ -52,7 +52,7 @@ La API del shortcode facilita mucho la tarea para poder añadirle parámetros co
 
 Añade lo siguiente a tu archivo&nbsp;**functions.php :&nbsp;**
 
-{% highlight php %}>// shortcode [music]
+{% highlight php %}// shortcode [music]
 function show_music( $atts ){
    $music_details="";
    // get attibutes and set defaults

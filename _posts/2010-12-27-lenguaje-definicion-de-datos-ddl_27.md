@@ -35,21 +35,21 @@ Un sinónimo es un nuevo nombre que se puede asignar a una tabla o a una vista y
 Cuando tenemos acceso a las tablas, vistas etc, de otros esquemas y deseamos consultarlas, hay que anteponer al nombre del objeto que queremos consultar el nombre del esquema y separarlos por un punto.  
 <!--more--> Por ejemplo para consultar una tabla de otro esquema la sintaxis sería:
 
-{% highlight sql %}>Nombre_Esquema.Nombre_Tabla{% endhighlight %}
+{% highlight sql %}Nombre_Esquema.Nombre_Tabla{% endhighlight %}
 
 En estos casos es conveniente el uso de sinónimos. La sintaxis para crear un sinónimo es:
 
-{% highlight sql %}>CREATE [PUBLIC] SYNONYM Nombre_Sinonimo FOR Esquema.Nombre_Tabla{% endhighlight %}
+{% highlight sql %}CREATE [PUBLIC] SYNONYM Nombre_Sinonimo FOR Esquema.Nombre_Tabla{% endhighlight %}
 
 La cláusula public hace que el sinónimo este libre para todos los usuarios.
 
 Ejemplo: 
 
-{% highlight sql %}>CREATE SYNONYM EMPLEADOSCOTT FROM SCOTT.EMP;{% endhighlight %}
+{% highlight sql %}CREATE SYNONYM EMPLEADOSCOTT FROM SCOTT.EMP;{% endhighlight %}
 
 Para borrar sinónimos se utiliza la orden:
 
-{% highlight sql %}>DROP [PUBLIC] SYNONYM [Esquema.]Nombre_Sinonimo;{% endhighlight %}
+{% highlight sql %}DROP [PUBLIC] SYNONYM [Esquema.]Nombre_Sinonimo;{% endhighlight %}
 
 Solamente el administrador de la BD y usuarios con privilegios adecuados pueden suprimir sinónimos de tipo public.
 
@@ -63,7 +63,7 @@ Oracle proporciona varias de ellas, entre las cuales, se encuentran: *SYSDATE* q
 
 Ejemplos: 
 
-{% highlight sql %}>SELECT SYSDATE "Fecha actual" FROM DUAL;
+{% highlight sql %}SELECT SYSDATE "Fecha actual" FROM DUAL;
 SELECT USER FROM DUAL;
 <span class="comentario">-- usando ROWNUM &lt; 10 limitamos el número de filas devueltas a 10</span>
 SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM &lt; 10;{% endhighlight %}

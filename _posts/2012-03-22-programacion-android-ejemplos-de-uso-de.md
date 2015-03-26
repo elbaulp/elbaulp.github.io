@@ -52,14 +52,14 @@ Para este tipo de [acción][2]**(ACTION_PICK)**, no podemos usar **startActivity
 
 Por lo tanto debemos usar **startActivityForResult()**, que sí que tiene callback. Este método acepta dos parámetros, el primero es el intent que queremos lanzar, y el segundo es un requestCode. Cuando la actividad que hemos lanzado finalize, se llamará en la actividad desde la que se lanzó el intent a **onActivityResult()** con el requestCode que le proporcionamos. La cabecera de este método de callback es la siguiente:
 
-{% highlight java %} >protected void onActivityResult (int requestCode, int resultCode, Intent data)
+{% highlight java %}protected void onActivityResult (int requestCode, int resultCode, Intent data)
 {% endhighlight %}
 
 Donde el primer argumento es el código que le hemos pasado a **startActivityForResult()**, el segundo argumento (resultcode), puede ser *RESULT\_OK, RESULT\_CANCELED* o un código propio. Si decidimos usar un código propio, debe empezar en *RESULT\_FIRST\_USER*. El tercer parámetro contiene cualquier dato adicional que la actividad invocada devuelva. Para *ACTION_PICK* tendremos una URI apuntando a un elemento.
 
 Para este ejemplo de uso de ACTION_PICK, es necesario tener instalada la aplicación **NotePad**, que está disponible para instalar en los ejemplos que vienen al instalar el SDK:
 
-{% highlight java %}>public static void invokePick(Activity activity)
+{% highlight java %}public static void invokePick(Activity activity)
 {
    Intent pickIntent = new Intent(Intent.ACTION_PICK);
    int requestCode = 1;
@@ -103,14 +103,14 @@ public static void parseResult(MainActivity activity
 
 Las constantes **RESTULT\_OK, RESULT\_CANCEL Y RESULT\_FIRST\_USER** están definidas en la clase de la Actividad y sus respectivos valores son:
 
-{% highlight java %}>RESTULT_OK         = -1; 
+{% highlight java %}RESTULT_OK         = -1; 
 RESULT_CANCEL      =  0;  
 RESULT_FIRST_USER  =  1;
 {% endhighlight %}
 
 Por otro lado, en la aplicación **notePad**, debe haber un código devuelva un valor en el caso de que se haya llamado a la actividad desde un intent con ACTION_PICK como acción:
 
-{% highlight java %}>@Override
+{% highlight java %}@Override
 protected void onListItemClick(ListView l, View v, int position, long id){
    Uri uri = ContentUris.withAppendedId(getIntent().getData(), id);
 

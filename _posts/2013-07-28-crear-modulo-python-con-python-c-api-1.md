@@ -44,14 +44,14 @@ Muchas de las funciones de la API son útiles independientemente de si estamos e
 
 Todas las definiciones de funciones, tipos y macros necesarias para usar la **Python C API** se incluyen en nuestro código mediante la siguiente cabecera:
 
-{% highlight c %}>#include "Python.h"
+{% highlight c %}#include "Python.h"
 {% endhighlight %}
 
 Esta línea implica la inclusión de las siguientes cabeceras estándares: ***<stdio.h>, <string.h>, <errno.h>, <limits.h>, <assert.h> y <stdlib.h>***
 
 Si en nuestro sistema no tenemos la cabecera *Python.h* es necesario instalarla mediante:
 
-{% highlight bash %}># aptitude install python-dev
+{% highlight bash %}# aptitude install python-dev
 {% endhighlight %}
 
 <div class="alert">
@@ -86,7 +86,7 @@ Por otro lado, cuando una función pasa una referencia a un objeto hay dos posib
 
 Pocas funciones roban referencias; Las excepciones más notables son <a href="http://docs.python.org/3/c-api/list.html#PyList_SetItem" target="_blank">PyList_SetItem()</a> y <a href="http://docs.python.org/3/c-api/tuple.html#PyTuple_SetItem" target="_blank">PyTuple_SetItem()</a>, ambas roban una referencia al **elemento** (pero no a la tupla o lista en la que se coloca el elemento). Por ejemplo, el código para crear una tupla **(1, 2, &#8220;three&#8221;)** sería como esto (Sin manejar errores por ahora)
 
-{% highlight c %}>PyObject *t;
+{% highlight c %}PyObject *t;
 
 t = PyTuple_New(3);
 PyTuple_SetItem(t, 0, PyLong_FromLong(1L));
@@ -102,7 +102,7 @@ Equivalentemente para crear una lista podemos usar **PyList_New()** y **PyList_S
 
 Sin embargo la forma habitual de crear listas y tuplas es mediante **Py_BuildValue()**, con la cual podemos crear los tipos de objetos más comunes a partir de una cadena de formato (*format string*). El ejemplo anterior se puede reemplazar por esto otro, que además comprueba si se producen errores:
 
-{% highlight c %}>PyObject *tuple, *list;
+{% highlight c %}PyObject *tuple, *list;
 
 tuple = Py_BuildValue("(iis)", 1, 2, "three");
 list = Py_BuildValue("[iis]", 1, 2, "three");

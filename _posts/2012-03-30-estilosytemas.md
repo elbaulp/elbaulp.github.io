@@ -39,7 +39,7 @@ Como podemos comprobar con este ejemplo, el código queda mucho más límpio usa
 
 Sin estilos:
 
-{% highlight xml %}>&lt;textview android:layout_width="fill_parent"
+{% highlight xml %}&lt;textview android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#00FF00"
     android:typeface="monospace"
@@ -48,7 +48,7 @@ Sin estilos:
 
 Con estilos:
 
-{% highlight xml %}>&lt;textview style="@style/CodeFont"
+{% highlight xml %}&lt;textview style="@style/CodeFont"
     android:text="@string/hello" />
 {% endhighlight %}
 
@@ -63,7 +63,7 @@ Para cada estilo que queramos definir, hay que añadir un elemento ***
 
 </b></i> y un atributo ***name*** para ese estílo (es obligatorio), después, añadiremos un elemento ***<item></item>*** para cada propiedad del estilo, que debe tener obligatoriamente el atributo ***name*** que declara la propiedad del estilo y su valor. Los valores para ***<item></item>*** pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:
 
-{% highlight xml %}>{% endhighlight %}
+{% highlight xml %}{% endhighlight %}
 
 En tiempo de compilación, los elementos se convierten en un recurso que podremos referenciar posteriormente mediante el atributo name del estilo, como vimos en el primer ejemplo (***@style/CodeFont***).
 
@@ -75,11 +75,11 @@ Como acabamos de ver, el atributo parent sirve para heredar propiedades de otros
 
 Del sistema:
 
-{% highlight xml %}>{% endhighlight %}
+{% highlight xml %}{% endhighlight %}
 
 De nuestros propios estilos:
 
-{% highlight xml %}>{% endhighlight %}
+{% highlight xml %}{% endhighlight %}
 
 En este caso, no usamos el atributo parent, ya que estamos usando un estilo propio, también se puede apreciar que podemos heredar cuantas veces queramos, como es el caso de (***CodeFont.Red.Big***)
 
@@ -94,12 +94,12 @@ Como vimos al principio, para aplicar un estilo a una View concreta usamos ***st
 
 Para aplicar un tema a una actividad o aplicación usaremos:
 
-{% highlight xml %}>&lt;application android:theme="@style/CustomTheme">
+{% highlight xml %}&lt;application android:theme="@style/CustomTheme">
 &lt;/application>{% endhighlight %}
 
 Para aplicarlos sobre actividades, usamos:
 
-{% highlight xml %}>&lt;activity android:theme="@android:style/Theme.Dialog">
+{% highlight xml %}&lt;activity android:theme="@android:style/Theme.Dialog">
 &lt;/activity>&lt;activity android:theme="@android:style/Theme.Translucent">
 &lt;/activity>{% endhighlight %}
 

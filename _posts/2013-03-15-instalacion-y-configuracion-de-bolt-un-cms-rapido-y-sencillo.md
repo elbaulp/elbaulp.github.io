@@ -42,7 +42,7 @@ En la página oficial ofrecen tres formas de instalar Bolt. **Desde línea de co
 
 Empecemos por la más sencilla, bastarán 3 órdenes en la terminal para finalizar la instalación:
 
-{% highlight bash %}>curl -O http://bolt.cm/distribution/bolt_latest.tgz
+{% highlight bash %}curl -O http://bolt.cm/distribution/bolt_latest.tgz
 tar -xzf bolt_latest.tgz
 chmod -R 777 files/ app/database/ app/cache/ app/config/ theme/
 {% endhighlight %}
@@ -59,7 +59,7 @@ Ya en el panel de administración, puedes agregar contenido de muestra dirigiend
 
 Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo: 
 
-{% highlight bash %}># aptitude install php5-sqlite
+{% highlight bash %}# aptitude install php5-sqlite
 {% endhighlight %}
 
 Si prefieres usar MySQL o PostgreSQL debes editar el fichero de configuración **/app/config/config.yml**:
@@ -86,7 +86,7 @@ Si prefieres usar MySQL o PostgreSQL debes editar el fichero de configuración *
 
 Este método no es mucho más complicado que el anterior. La ventaja es que permite estar a la última en cuanto a la versión, y el método de actualización es muy sencillo. En este caso se usará **git** y **Composer**:
 
-{% highlight bash %}>git clone git://github.com/bobdenotter/bolt.git bolt
+{% highlight bash %}git clone git://github.com/bobdenotter/bolt.git bolt
 cd bolt
 curl -s http://getcomposer.org/installer | php
 php composer.phar install
@@ -94,14 +94,14 @@ php composer.phar install
 
 Normalmente los ficheros creados deberían tener los permisos correctos, de no ser así, ejecuta:
 
-{% highlight bash %}>chmod -R 777 files/ app/database/ app/cache/ app/config/ theme/
+{% highlight bash %}chmod -R 777 files/ app/database/ app/cache/ app/config/ theme/
 {% endhighlight %}
 
 Listo, puedes dirigirte a la web, registrar un usuario y empezar a escribir.
 
 Para actualizar la instalación basta con hacer lo siguiente:
 
-{% highlight bash %}>git pull
+{% highlight bash %}git pull
 cd bolt
 php composer.phar self-update
 php composer.phar update

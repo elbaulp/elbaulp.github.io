@@ -29,7 +29,7 @@ Empezaré con **freegeoip**, al ser la más simple. El código para armar la pet
   
 <!--more-->
 
-{% highlight java %}>RestRequest rq = new JSONRestRequest();
+{% highlight java %}RestRequest rq = new JSONRestRequest();
 rq.setMethod(RestRequest.GET_METHOD);
 rq.setURL("http://freegeoip.net/json/");
 
@@ -41,12 +41,12 @@ task.execute(rq);
 
 En cada clase que se use la librería es necesario implementar la interfaz `AsyncTaskCompleteListener<RestResponse>`, Por ejemplo:
 
-{% highlight java %}>public class MainActivity extends Activity implements AsyncTaskCompleteListener&lt;RestResponse>
+{% highlight java %}public class MainActivity extends Activity implements AsyncTaskCompleteListener&lt;RestResponse>
 {% endhighlight %}
 
 Además, añadir el callback `onTaskComplete()`, que será llamado una vez obtengamos la respuesta del Web Service, la cabecera del método es la siguiente:
 
-{% highlight java %}>@Override
+{% highlight java %}@Override
     public void onTaskComplete(RestResponse result)
 {% endhighlight %}
 
@@ -56,7 +56,7 @@ Cuando hay que proporcionar parámetros a la consulta, se debe crear un objeto H
 
 Así pues, para realizar la petición en este caso el código sería el siguiente:
 
-{% highlight java %}>RestRequest apiWordpress = new JSONRestRequest();
+{% highlight java %}RestRequest apiWordpress = new JSONRestRequest();
 apiWordpress.setMethod(RestRequest.GET_METHOD);
 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
                 
@@ -77,7 +77,7 @@ task2.execute(apiWordpress);
 
 A continuación escribo el código de la aplicación de ejemplo que he programado para Android, en las referencias habrá un enlace para descargar el proyecto.
 
-{% highlight java %}>package com.elbauldelprogramador.webservicelibexample;
+{% highlight java %}package com.elbauldelprogramador.webservicelibexample;
 
 import android.app.Activity;
 import android.os.Bundle;

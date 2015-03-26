@@ -29,7 +29,7 @@ A diferencia de los archivos XML, colocados en ./res/xml, estos archivos no se c
   
 <!--more-->
 
-{% highlight java %}>private String getStringFromRawFile(Context activity)
+{% highlight java %}private String getStringFromRawFile(Context activity)
    throws IOException
    {
       Resources r = activity.getResources();

@@ -21,7 +21,7 @@ Así que como es habitual busqué en stackoverflow y encontré la solución, el 
   
 <!--more-->
 
-{% highlight java %}>Intent sendIntent = new Intent();
+{% highlight java %}Intent sendIntent = new Intent();
 sendIntent.setAction(Intent.ACTION_SEND);
 sendIntent.putExtra(Intent.EXTRA_TEXT, name);
 sendIntent.setType("text/plain");
@@ -35,7 +35,7 @@ Sin embargo, aún añadiendo el Flag *FLAG\_ACTIVITY\_NEW_TASK* el error persist
 
 Una posible solución es:
 
-{% highlight java %}>startActivity(Intent.createChooser(sendIntent, "Compartir en")
+{% highlight java %}startActivity(Intent.createChooser(sendIntent, "Compartir en")
    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 {% endhighlight %}
 

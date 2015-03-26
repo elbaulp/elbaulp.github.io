@@ -19,12 +19,12 @@ tags:
 
 Antes de poder usar el script es necesario instalar *inotify-tools*
 
-{% highlight bash %}># aptitude install inotify-tools
+{% highlight bash %}# aptitude install inotify-tools
 {% endhighlight %}
 
 Hecho esto, ahora es posible ejecutar el script que he creado:
 
-{% highlight bash %}>function help {
+{% highlight bash %}function help {
    echo "$0 <directory> <file to watch> <script to execute>"
 }
 
@@ -47,7 +47,7 @@ done
 </p>
 
 
-{% highlight bash %}>
+{% highlight bash %}
 $ cat ejemplo 
 elbauldelprogramador.com
 $ cat script.sh 
@@ -68,7 +68,7 @@ Watches established.
 </p>
 
 
-{% highlight bash %}>
+{% highlight bash %}
 $ cat ejemplo
 elbauldelprogramador.com
 

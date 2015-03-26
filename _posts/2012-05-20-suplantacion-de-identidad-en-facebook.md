@@ -39,7 +39,7 @@ En resumen, todo el proceso queda como sigue:
   
 <!--more-->
 
-{% highlight bash %}>telnet smtpin.mx.facebook.com smtp
+{% highlight bash %}telnet smtpin.mx.facebook.com smtp
 Trying 69.171.244.11...
 Connected to smtpin.mx.facebook.com.
 Escape character is '^]'.
@@ -67,7 +67,7 @@ Connection closed by foreign host*)
 
 También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [python][2] que encontré en stackoverflow:
 
-{% highlight cpp %}>#include &lt;iostream>
+{% highlight cpp %}#include &lt;iostream>
      #include &lt;sys /types.h>
      #include &lt;/sys>&lt;sys /socket.h>
      #include &lt;netinet /in.h>
@@ -176,7 +176,7 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
 
 La versión en python:
 
-{% highlight python %}>#!/usr/bin/python
+{% highlight python %}#!/usr/bin/python
 
 import smtplib
 import sys

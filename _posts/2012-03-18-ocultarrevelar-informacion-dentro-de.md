@@ -124,7 +124,7 @@ Una vez terminado el programa, se me ocurrió trastear un poco con la informaci�
 
 Por ejemplo, si para cada pixel invertimos sus valores, es decir, cambiar 0 por 1 y 1 por 0, obtenemos una imagen en negativo:
 
-{% highlight cpp %}>//Esto va dentro de un bucle que recorre todos los pixeles de la imagen, 
+{% highlight cpp %}//Esto va dentro de un bucle que recorre todos los pixeles de la imagen, 
 //ambas sentencias son equivalentes
 buffer[i] ^= 0xff;      //igual que buffer[i] = buffer[i] ^ 0xff
 buffer[i] = ~buffer[i]; //igual que buffer[i] = ~buffer[i]
@@ -138,7 +138,7 @@ El resultado es:
 
 Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos haciendo la imagen más oscura:
 
-{% highlight cpp %}>buffer[i] >>= 1; //Más oscura
+{% highlight cpp %}buffer[i] >>= 1; //Más oscura
 {% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">
@@ -147,7 +147,7 @@ Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos hac
 
 Por último, si deplazamos todos los bits la izquierda una posición, es decir, pasa lo siguiente:
 
-{% highlight cpp %}>buffer[i] &lt; &lt;=1;
+{% highlight cpp %}buffer[i] &lt; &lt;=1;
 {% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">

@@ -23,12 +23,12 @@ Sin embargo, una de las cosas que más me ha costado conseguir es encontrar algu
 
 Para instalarlo, es necesaria una versión de python igual o superior a la 2.6, y *Pygments*. Para instalar el último ejecuta:
 
-{% highlight bash %}># easy_install Pygments
+{% highlight bash %}# easy_install Pygments
 {% endhighlight %}
 
 Si no tienes instalado el programa *easy_install*, ejecuta:
 
-{% highlight bash %}># aptitude install python-setuptools
+{% highlight bash %}# aptitude install python-setuptools
 {% endhighlight %}
 
 ### Instalar minted
@@ -39,7 +39,7 @@ Descarga el paquete desde su <a href="http://code.google.com/p/minted/downloads/
 
 Ya está todo listo para usar, empecemos con un ejemplo básico extraido del manual, disponible para descargar en las referencias:
 
-{% highlight latex %}>\documentclass{article}
+{% highlight latex %}\documentclass{article}
 
 \usepackage{minted}
 
@@ -64,7 +64,7 @@ Este trozo de código dará como resultado lo siguiente:
 
 Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
 
-{% highlight latex %}>\newmintedfile[myJava]{java}{
+{% highlight latex %}\newmintedfile[myJava]{java}{
     linenos,
     numbersep=5pt,
     gobble=0,
@@ -75,7 +75,7 @@ Normalmente, si tenemos un código fuente con muchas líneas es más cómodo inc
 
 Con este comando, hemos definido una nueva función (*myJava*), que permitirá incluir el código fuente de un archivo al documento pdf. Por ejemplo. Supongamos que el contenido del fichero *miCodigo.java* es el siguiente:
 
-{% highlight java %}>package com.elbauldelprogramador.actividades;
+{% highlight java %}package com.elbauldelprogramador.actividades;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -114,7 +114,7 @@ public class Activity1 extends Activity {
 
 Para incluirlo en el documento, haremos lo siguiente:
 
-{% highlight latex %}>\documentclass{article}
+{% highlight latex %}\documentclass{article}
 
 \usepackage{minted}
 
@@ -142,7 +142,7 @@ El resultado será:
 
 Puede resultar incómodo y pesado tener que escribir una y otra vez *\myJava[label=&#8221;\*&#8221;]{\*.java}*. Así que creamos un comando para facilitar las cosas:
 
-{% highlight latex %}>\newmintedfile[myJava]{java}{
+{% highlight latex %}\newmintedfile[myJava]{java}{
     linenos,
     numbersep=5pt,
     gobble=0,
@@ -156,7 +156,7 @@ Puede resultar incómodo y pesado tener que escribir una y otra vez *\myJava[lab
 
 Ahora en lugar de usar *myJava* para incluir ficheros fuente en el documento, usamos un comando definido por nosotros (myJavaCode). Sustituyendo la línea *\myJava[label=&#8221;miCodigo.java&#8221;]{miCodigo.java}* del ejemplo anterior por
 
-{% highlight latex %}>\myJavaCode{src/miCodigo}{miCodigo}
+{% highlight latex %}\myJavaCode{src/miCodigo}{miCodigo}
 {% endhighlight %}
 
 Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el segundo la etiqueta a mostrar en el documento.

@@ -43,7 +43,7 @@ A la hora de guardar un bloque de código hay que tener en cuenta ciertas normas
   
 Un procedimiento [almacenado] es un subprograma que ejecuta una acción específica y que no devuelve ningún valor por si mismo, como sucede con las funciones. Un procedimiento tiene un nombre, un conjunto de parámetros (opcional) y un bloque de código. Para crear un procedimiento (stored procedure: procedimiento almacenado) usaremos la siguiente sintaxis:
 
-{% highlight sql %}>CREATE {OR REPLACE} PROCEDURE nombre_proc( param1 [IN | OUT | IN OUT] tipo,... )
+{% highlight sql %}CREATE {OR REPLACE} PROCEDURE nombre_proc( param1 [IN | OUT | IN OUT] tipo,... )
 IS
   <span class="comentario">-- Declaración de variables locales</span>
   BEGIN
@@ -60,7 +60,7 @@ El uso de OR REPLACE permite sobrescribir un procedimiento existente. Si se omit
 Al especificar el tipo de dato del parámetro no debemos especificar la longitud del tipo, aunque si puede ser utilizando el operador [%TYPE][2].  
 
 
-{% highlight sql %}>CREATE OR REPLACE
+{% highlight sql %}CREATE OR REPLACE
 PROCEDURE Actualiza_Saldo(cuenta NUMBER, new_saldo NUMBER)
 IS
   <span class="comentario">-- Declaracion de variables locales</span>
@@ -74,7 +74,7 @@ END Actualiza_Saldo;
 
 También podemos asignar un valor por defecto a los parámetros, utilizando la cláusula DEFAULT o el operador de asignación (:=) .
 
-{% highlight sql %}>CREATE OR REPLACE
+{% highlight sql %}CREATE OR REPLACE
   PROCEDURE Actualiza_Saldo(cuenta NUMBER, new_saldo NUMBER DEFAULT 10)
 {% endhighlight %}
 
@@ -83,7 +83,7 @@ Una vez creado y compilado el procedimiento almacenado podemos ejecutarlo. Exist
 **Notación posicional:** Se pasan los valores de los parámetros en el mismo orden en que el procedure los define.  
 
 
-{% highlight sql %}>BEGIN
+{% highlight sql %}BEGIN
   Actualiza_Saldo(200501,2500);
   COMMIT;
 END;
@@ -91,7 +91,7 @@ END;
 
 **Notación nominal:** Se pasan los valores en cualquier orden nombrando explícitamente el parámetro y su valor separados por el símbolo =>.
 
-{% highlight sql %}>BEGIN
+{% highlight sql %}BEGIN
   Actualiza_Saldo(cuenta => 200501,new_saldo => 2500);
   COMMIT;
 END;
@@ -99,7 +99,7 @@ END;
 
 Ejemplos:
 
-{% highlight sql %}>CREATE OR REPLACE PROCEDURE today_is AS
+{% highlight sql %}CREATE OR REPLACE PROCEDURE today_is AS
 BEGIN
   DBMS_OUTPUT.PUT_LINE( 'Hoy es ' || TO_CHAR(SYSDATE, ' DD/MM/YYYY') );
 END today_is;
@@ -111,7 +111,7 @@ BEGIN
 END;
 {% endhighlight %}
 
-{% highlight sql %}>CREATE OR REPLACE PROCEDURE today2_is ( fecha DATE ) AS
+{% highlight sql %}CREATE OR REPLACE PROCEDURE today2_is ( fecha DATE ) AS
 BEGIN
   DBMS_OUTPUT.PUT_LINE( 'Hoy es ' || TO_CHAR(fecha, ' DD/MM/YYYY') );
 END;
@@ -133,7 +133,7 @@ END;
 
 Para crear una función usaremos la siguiente sintaxis:
 
-{% highlight sql %}>CREATE {OR REPLACE} FUNCTION nombre_func(param1 tipo,param2 tipo,... ) RETURN tipo_dato IS
+{% highlight sql %}CREATE {OR REPLACE} FUNCTION nombre_func(param1 tipo,param2 tipo,... ) RETURN tipo_dato IS
   <span class="comentario">-- Declaración de variables locales</span>
 BEGIN
   <span class="comentario">-- Instrucciones de ejecución</span>

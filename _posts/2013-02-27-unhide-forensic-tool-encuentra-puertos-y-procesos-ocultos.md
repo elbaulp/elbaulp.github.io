@@ -36,7 +36,7 @@ Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes co
   
 <!--more-->
 
-{% highlight bash %}>gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
+{% highlight bash %}gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
 gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
 gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 {% endhighlight %}
@@ -45,7 +45,7 @@ gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-
 
 Los posibles argumentos de cada herramienta son los siguientes:
 
-{% highlight bash %}>./unhide-tcp --help
+{% highlight bash %}./unhide-tcp --help
 Unhide-tcp 20121229
 Copyright © 2012 Yago Jesus &#038; Patrick Gouin
 License GPLv3+ : GNU GPL version 3 or later
@@ -69,7 +69,7 @@ Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jes
 
 Las opciones de **unhide-linux**:
 
-{% highlight bash %}>./unhide-linux --help
+{% highlight bash %}./unhide-linux --help
 Unhide 20121229
 Copyright © 2012 Yago Jesus &#038; Patrick Gouin
 License GPLv3+ : GNU GPL version 3 or later

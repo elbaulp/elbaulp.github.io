@@ -63,7 +63,7 @@ El proveedor *MediaStore* define dos URIs y *Contacts* uno. Si te das cuenta, la
 
 Dadas estas URIs, el código para recuperar una única fila del proveedor de contactos sería: 
 
-{% highlight java %}>Uri uriBase = Contacts.People.CONTENT_URI;
+{% highlight java %}Uri uriBase = Contacts.People.CONTENT_URI;
 Uri uriPersona = Uri.withAppendedPath(Contacts.People.CONTENT_URI, "21");
 
 //Consultamos el registro
@@ -77,7 +77,7 @@ En el método managedQuery podemos especificar el orden de los resultados, las c
 
 Vamos a ver ahora como crear un cursor que devuelva una lista de columnas de la tabla People del proveedor contatcs.
 
-{% highlight java %}>// Array que especifica la proyección (columnas a seleccionar)
+{% highlight java %}// Array que especifica la proyección (columnas a seleccionar)
 String[] projection = new String[] {
    People._ID,
    People.NAME,

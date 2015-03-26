@@ -18,13 +18,13 @@ Cuando se declara una variable referencia (Un objeto), realmente se está creand
 
 <!--more-->
 
-{% highlight java %}>int x;
+{% highlight java %}int x;
 x = 10;
 {% endhighlight %}
 
 En el ejemplo la variable `x` es un `int` y JAva lo inicializa a 0. Cuando se le asigna el 10 en la segunda línea el valor se escribe el la posición de memoria a la que apunta `x`. Pero cuando la variable es de tipo referencia ocurre algo distinto. Por ejemplo:
 
-{% highlight java %}>Integer num;
+{% highlight java %}Integer num;
 num = new Integer(10);
 {% endhighlight %}
 
@@ -36,19 +36,19 @@ La excepción `NullPointerException` ocurre al declarar una variable y no crear 
 
 Por ejemplo se puede tener un método como el siguiente:
 
-{% highlight java %}>public void doSomething(Integer num){
+{% highlight java %}public void doSomething(Integer num){
    // Usar num
 }
 {% endhighlight %}
 
 En el cual no se está creando el objeto, si no asumiendo que fue creado antes de llamar al método `doSomething`. El problema es que puede que se llame al método así:
 
-{% highlight java %}>doSomething(null);
+{% highlight java %}doSomething(null);
 {% endhighlight %}
 
 En cuyo caso `num` es Null. La mejor forma de evitar este tipo de excepciones es comprobar siempre si es null en caso de no haber creado el objeto nosotros mismos. Por tanto, `doSomething()` debería escribirse así:
 
-{% highlight java %}>public void doSomething(Integer num){
+{% highlight java %}public void doSomething(Integer num){
     if(num != null){
        // Usar num
     }

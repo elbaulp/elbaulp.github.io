@@ -42,7 +42,7 @@ Hay tres tipos básicos de subconsultas que son:
 
 Las instrucciones que incluyen una subconsulta normalmente tienen uno de estos formatos:
 
-{% highlight sql %}>WHERE expression [NOT] IN (subconsulta)
+{% highlight sql %}WHERE expression [NOT] IN (subconsulta)
 WHERE expression comparison_operator [ANY | ALL] (subconsulta)
 WHERE [NOT] EXISTS (subconsulta)
 {% endhighlight %}

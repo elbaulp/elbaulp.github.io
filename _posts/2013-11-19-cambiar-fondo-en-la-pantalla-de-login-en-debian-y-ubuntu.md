@@ -25,7 +25,7 @@ Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible
 
 Añadiendo o modificando las siguientes líneas:
 
-{% highlight bash %}># Theming options
+{% highlight bash %}# Theming options
 [org.gnome.desktop.background]
 picture-uri='file:///path/a/fondo'
 picture-options='zoom'
@@ -33,7 +33,7 @@ picture-options='zoom'
 
 La última línea puede tomar valores **&#8220;zoom&#8221;, &#8220;scaled&#8221;, &#8220;stretched&#8221;**. Tras editar el archivo hay que ejecutar el comando
 
-{% highlight bash %}>dpkg-reconfigure gdm3
+{% highlight bash %}dpkg-reconfigure gdm3
 {% endhighlight %}
 
 para aplicar los cambios.
@@ -42,32 +42,32 @@ para aplicar los cambios.
 
 Hay que asegurarse que el fondo tenga permisos de lectura tanto para el usuario, el grupo y otros, esto se puede lograr con
 
-{% highlight bash %}>$ chmod 644 &lt;nombre_fondo>
+{% highlight bash %}$ chmod 644 &lt;nombre_fondo>
 {% endhighlight %}
 
 Ahora seguimos los siguientes pasos:
 
-{% highlight bash %}>sudo -i
+{% highlight bash %}sudo -i
 {% endhighlight %}
 
 Introducimos la contraseña, luego permitimos al usuario *lightdm* conectarse al servidor X (La pantalla):
 
-{% highlight bash %}>xhost +SI:localuser:lightdm
+{% highlight bash %}xhost +SI:localuser:lightdm
 {% endhighlight %}
 
 Nos loggeamos como el usuario *lightdm*:
 
-{% highlight bash %}>su lightdm -s /bin/bash
+{% highlight bash %}su lightdm -s /bin/bash
 {% endhighlight %}
 
 Desactivamos el cambio dinámico de fondos de pantalla:
 
-{% highlight bash %}>gsettings set com.canonical.unity-greeter draw-user-backgrounds 'false'
+{% highlight bash %}gsettings set com.canonical.unity-greeter draw-user-backgrounds 'false'
 {% endhighlight %}
 
 Cambiar el fondo por uno de nuestra elección:
 
-{% highlight bash %}>gsettings set com.canonical.unity-greeter background '/foo/wallpaper.png'
+{% highlight bash %}gsettings set com.canonical.unity-greeter background '/foo/wallpaper.png'
 {% endhighlight %}
 
 Hay que tener en cuenta que, si nuestro */home/* está [cifrado][1], no podemos especificar un fondo que esté dentro de ese directorio, puesto que la partición */home* aún no estará descifrada en la pantalla de login.
@@ -76,7 +76,7 @@ Hay que tener en cuenta que, si nuestro */home/* está [cifrado][1], no podemos 
 
 La imagen se encuentra en `/usr/share/xfce4/backdrops/xubuntu-wallpaper.png` como un enlace simbólico, basta con ver a dónde apunta ese enlace y reemplazarlo con la imagen deseada. En mi caso dicha imagen era `xubuntu-trusty.png`, situada en el mismo directorio. Lo más fácil sería hacer:
 
-{% highlight bash %}>sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
+{% highlight bash %}sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 {% endhighlight %}
 
 [<img src="http://elbauldelprogramador.com/content/uploads/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="3264" height="2448" class="aligncenter size-full wp-image-1982" />][2]{.thumbnail}

@@ -30,7 +30,7 @@ Llegó el momento de crear un módulo con la Python C API algo más complejo, co
 
 Mostraremos el código completo, puesto que ya se ha explicado el significado de este trozo de código no nos extenderemos mucho:
 
-{% highlight c %}>#include &lt;Python.h>
+{% highlight c %}#include &lt;Python.h>
 #include &lt;string.h>
 #include &lt;sys/socket.h>
 #include &lt;netinet/in.h>
@@ -84,7 +84,7 @@ initherramientasRed(void)
 
 Ahora que hemos visto cómo usar DistUtils, haremos uso de esta herramienta para compilar e instalar el módulo, el contenido del fichero *setup.py* es:
 
-{% highlight python %}>from distutils.core import setup, Extension
+{% highlight python %}from distutils.core import setup, Extension
 
 hRed = Extension('herramientasRed',
                     sources = ['herramientasRed.c'])
@@ -99,7 +99,7 @@ setup (name = 'HerramientasRed',
 
 Lo ejecutamos:
 
-{% highlight bash %}># python setup.py install
+{% highlight bash %}# python setup.py install
 running install
 running build
 running build_ext
@@ -110,7 +110,7 @@ Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
 
 Y para usarlo:
 
-{% highlight python %}>In [1]: import herramientasRed 
+{% highlight python %}In [1]: import herramientasRed 
 In [2]: print herramientasRed.imprimeIP('elbauldelprogramador.com')
 elbauldelprogramador.com tiene dirección IP &lt;ip>
 {% endhighlight %}
@@ -121,22 +121,22 @@ Es probable que durante el desarrollo de un módulo para Python sea necesario de
 
 **Añadir la siguiente línea al fichero *.gdbinit***
 
-{% highlight bash %}>br _PyImport_LoadDynamicModule
+{% highlight bash %}br _PyImport_LoadDynamicModule
 {% endhighlight %}
 
 Compilar el módulo mediante [gcc sin optimizaciones][6]:
 
-{% highlight bash %}># CFLAGS='-Wall -O0 -g' python setup.py install
+{% highlight bash %}# CFLAGS='-Wall -O0 -g' python setup.py install
 {% endhighlight %}
 
 Por último ejecutamos gdb de la siguiente forma:
 
-{% highlight bash %}>$ gdb -ex r --args python test.py
+{% highlight bash %}$ gdb -ex r --args python test.py
 {% endhighlight %}
 
 Tras ejecutar la línea de arriba, establecemos un punto de ruptura en la función deseada, en este caso **herramientasRed_imprimeIP** y ya podremos depurar el módulo:
 
-{% highlight bash %}>(gdb) b herramientasRed_imprimeIP 
+{% highlight bash %}(gdb) b herramientasRed_imprimeIP 
 Breakpoint 1 at 0x7ffff695496a: file herramientasRed.c, line 17.
 (gdb) r
 Starting program: /usr/bin/python2.7 test.py

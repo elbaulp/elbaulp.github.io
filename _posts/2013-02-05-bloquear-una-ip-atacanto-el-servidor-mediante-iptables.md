@@ -29,7 +29,7 @@ Además de bloquearlo, añadí una regla a las directivas de iptables para que q
   
 <!--more-->
 
-{% highlight bash %}>iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix "IP DROP SPOOF A:"
+{% highlight bash %}iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix "IP DROP SPOOF A:"
 iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 {% endhighlight %}
 
@@ -39,12 +39,12 @@ El primer comando es el que define cómo se registrará en el log, el segundo es
 
 Para comprobar que efectivamente se está bloqueando al atacante, basta con mirar al log:
 
-{% highlight bash %}>Feb  5 02:15:30 NOMBRESERVIDOR kernel: IP DROP SPOOF A:IN=ethX OUT= MAC=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX SRC=IPBLOQUEADA DST=IPSERVIDOR LEN=LONGITUDPAQUETE TOS=0x00 PREC=0x00 TTL=117 ID=15234 DF PROTO=TCP SPT=17652 DPT=PUERTODESTINO WINDOW=65535 RES=0x00 SYN URGP=0
+{% highlight bash %}Feb  5 02:15:30 NOMBRESERVIDOR kernel: IP DROP SPOOF A:IN=ethX OUT= MAC=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX SRC=IPBLOQUEADA DST=IPSERVIDOR LEN=LONGITUDPAQUETE TOS=0x00 PREC=0x00 TTL=117 ID=15234 DF PROTO=TCP SPT=17652 DPT=PUERTODESTINO WINDOW=65535 RES=0x00 SYN URGP=0
 {% endhighlight %}
 
 Decidí investigar desde cuando se estaba produciendo el ataque, y, para mi sorpresa, se estaba intentando acceder por fuerza bruta al blog desde hacía 8 días. Concretamente, hubo **18209** intentos de conexión. Este número puede sacarse fácilmente contando las líneas del log en las que estaba involucrada la ip atacante:
 
-{% highlight bash %}>cat /ruta/log/acceso.log | grep xx.xx.xx.xx | wc -l
+{% highlight bash %}cat /ruta/log/acceso.log | grep xx.xx.xx.xx | wc -l
 {% endhighlight %}
 
 Donde **xx.xx.xx.xx** debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.

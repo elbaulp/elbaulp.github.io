@@ -53,12 +53,12 @@ En general la estructura de toda sentencia en ABAP sigue el mismo esquema, empie
 
 Para declarar una variable simple utilizaremos la palabra clave **DATA** seguida del nombre de nuestra variable, su longitud, el tipo de variable y acabando con un punto.
 
-{% highlight abap %}>DATA &lt;nombre_variable> type &lt;tipo>
+{% highlight abap %}DATA &lt;nombre_variable> type &lt;tipo>
 {% endhighlight %}
 
 En este caso nuestra variable contendrá la cadena de caracteres de nuestro ‘Hola mundo’ y por lo tanto será de tipo carácter (c).
 
-{% highlight abap %}>DATA g_texto(10) type c
+{% highlight abap %}DATA g_texto(10) type c
 {% endhighlight %}
 
 ### Eventos
@@ -69,14 +69,14 @@ En todo report ABAP hay dos eventos muy importantes, el evento **START-OF-SELECT
 
 Todas las sentencias que siguen a este evento hacen referencia a operaciones a realizar antes de que el programa presente resultados en pantalla. Aquí incluimos la asignación de nuestro texto ‘hola mundo’ (entre comillas simples) a nuestra variable mediante la palabra clave **MOVE**.
 
-{% highlight abap %}>MOVE ‘Hola mundo’ TO g_texto.
+{% highlight abap %}MOVE ‘Hola mundo’ TO g_texto.
 {% endhighlight %}
 
 #### Evento END-OF-SELECTION
 
 Cualquier sentencia que siga a este evento provoca la presentación de resultados en pantalla. Aquí pues escribimos la sentencia **WRITE** que muestra nuestro texto en pantalla.
 
-{% highlight abap %}>WRITE g_texto.
+{% highlight abap %}WRITE g_texto.
 {% endhighlight %}
 
 <img src="http://elbauldelprogramador.com/content/uploads/2014/04/hola-mundo-abap.png" alt="hola-mundo-abap" width="688" height="331" class="aligncenter size-full wp-image-2330" />

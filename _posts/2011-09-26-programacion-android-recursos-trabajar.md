@@ -30,7 +30,7 @@ Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el direc
   
 <!--more-->
 
-{% highlight xml %}>&lt;rootelem1>
+{% highlight xml %}&lt;rootelem1>
    &lt;subelem1>
       Hello World from an xml sub element
    &lt;/subelem1>
@@ -39,13 +39,13 @@ Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el direc
 
 Como hace con cualquier otro fichero XML de recursos, el AAPT compila este fichero antes de colocarlo en el paquete de la aplicación. Ahora necesitamos usar una instancia de *XmlPullParser* para poder parsear el archivo. Para obtener la instancia de *XmlPullParser* usando el siguiente código desde cualquier contexto (incluyendo una activity):
 
-{% highlight java %}>Resources res = activity.getResources();
+{% highlight java %}Resources res = activity.getResources();
 XmlResourceParser xpp = res.getXml(R.xml.test);
 {% endhighlight %}
 
 El *XmlResourceParser* devuelto es una instancia de *XmlPullParser*, y también implementa java.util.AttributeSet. En el siguiente fragmento de código se muestra como leer el fichero:
 
-{% highlight java %}>private String getEventsFromAnXMLFile(Context activity)
+{% highlight java %}private String getEventsFromAnXMLFile(Context activity)
  throws XmlPullParserException, IOException
  {
     StringBuffer sb = new StringBuffer();

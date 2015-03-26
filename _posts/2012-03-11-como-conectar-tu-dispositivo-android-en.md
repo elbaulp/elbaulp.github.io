@@ -32,7 +32,7 @@ tags:
 ---
 Ya me ha sucedido en varias ocasiones que he intentado conectar mi **Samsung Galaxy S** al **adb** del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:
 
-{% highlight bash %}>$ adb devices
+{% highlight bash %}$ adb devices
 List of devices attached
 ???????????? no permissions{% endhighlight %}
 
@@ -59,25 +59,25 @@ De estas líneas nos interesa la que está en negrita, donde vamos a usar el ver
 
 &#8211; El siguiente paso es crear un archivo llamado *51-android.rules* bajo el directorio */etc/udev/rules.d/*, y añadimos
 
-{% highlight bash %}>SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", SYMLINK+="android_adb", MODE="0666", OWNER="nombre-de-usuario"{% endhighlight %}
+{% highlight bash %}SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", SYMLINK+="android_adb", MODE="0666", OWNER="nombre-de-usuario"{% endhighlight %}
 
 Donde tendremos que poner en idVendor el número que nos daba como resultado el comando lsusb, y en el propietario nuestro nombre de usuario.
 
 Guardamos el fichero y reiniciamos el servicio udev
 
-{% highlight bash %}>sudo restart udev{% endhighlight %}
+{% highlight bash %}sudo restart udev{% endhighlight %}
 
 ó
 
-{% highlight bash %}>sudo /etc/init.d/udev restart{% endhighlight %}
+{% highlight bash %}sudo /etc/init.d/udev restart{% endhighlight %}
 
 Tambíen tenemos que finalizar el adb
 
-{% highlight bash %}>./adb kill-server{% endhighlight %}
+{% highlight bash %}./adb kill-server{% endhighlight %}
 
 Desconectamos el teléfono del usb y lo volvemos a enchufar, Ahora el resultado de *adb devices* debería ser algo así:
 
-{% highlight bash %}>./adb devices
+{% highlight bash %}./adb devices
 List of devices attached
 900339eb5012 device{% endhighlight %}
 

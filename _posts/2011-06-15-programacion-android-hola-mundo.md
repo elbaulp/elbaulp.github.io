@@ -108,7 +108,7 @@ Ahora que hemos explicado la estructura de un proyecto Android, veamos el ejempl
 
 ## Profundizando en el &#8220;Hola Mundo&#8221;
 
-{% highlight java %}>package app.tutorial.holaMundo;
+{% highlight java %}package app.tutorial.holaMundo;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -131,7 +131,7 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
 
 ### Archivo ./res/layout/main.xml
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -148,7 +148,7 @@ En este archivo se define una pantalla en la que los elementos se agruparán de 
 
 ### Archivo ./res/values/strings.xml
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;resources>
     &lt;string name="hello">Hello World, MainActivity!&lt;/string>
     &lt;string name="app_name">Hola Mundo&lt;/string>
@@ -157,7 +157,7 @@ En este archivo se define una pantalla en la que los elementos se agruparán de 
 
 Para que la aplicación funcione es necesario crear el AndroidManifest:
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="app.tutorial.holaMundo"
       android:versionCode="1"

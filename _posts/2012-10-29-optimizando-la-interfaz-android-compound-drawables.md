@@ -27,7 +27,7 @@ Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un 
   
 &nbsp;
 
-{% highlight xml %}>&lt;LinearLayout
+{% highlight xml %}&lt;LinearLayout
     <!--....--> >
  
     &lt;ImageView
@@ -54,14 +54,14 @@ Los cuatro parámetros que acepta este método son las imágenes a adjuntar al t
 
 Una vez unida la imagen al texto, con `setCompoundDrawablePadding()` se puede establecer un relleno (padding) para separar el texto de la imagen la distancia deseada, por ejemplo.
 
-{% highlight java %}>TextView tv = (TextView) findViewById( R.id.textView );
+{% highlight java %}TextView tv = (TextView) findViewById( R.id.textView );
 tv.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_launcher, 0, 0, 0 );
 tv.setCompoundDrawablePadding(10);
 {% endhighlight %}
 
 Es posible realizar el proceso anterior mediante XML, en lugar de java:
 
-{% highlight xml %}>&lt;TextView
+{% highlight xml %}&lt;TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_launcher"

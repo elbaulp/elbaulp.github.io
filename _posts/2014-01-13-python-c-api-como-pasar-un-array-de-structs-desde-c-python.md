@@ -19,7 +19,7 @@ Hace algún tiempo estaba desarrollando un módulo para python, con el cual apre
 
 El struct a pasar puede ser cualquiera, pero en el ejemplo concreto era este:
 
-{% highlight c %}>struct tcpstat
+{% highlight c %}struct tcpstat
 {
     inet_prefix local;
     inet_prefix remote;
@@ -41,7 +41,7 @@ El struct a pasar puede ser cualquiera, pero en el ejemplo concreto era este:
 
 La solución consiste en crear un objeto <a href="http://docs.python.org/3.2/c-api/list.html" title="C API doc" target="_blank">PyListObject</a> y un <a href="http://docs.python.org/3.2/c-api/structures.html#PyObject" target="_blank">PyObject</a>. Éste último lo usaremos como un diccionario y será donde iremos añadiendo los datos necesarios del struct. De esta forma estamos construyendo una lista cuyos elementos son diccionarios, algo así:
 
-{% highlight python %}>[
+{% highlight python %}[
    {'clave1': 'valor1',  # Diccionario 1, con dos elementos.
     'clave1_2': 'valor1_2'}, 
    {'clave2' : 'valor2'}, # Diccionario 2, con un elemento.
@@ -53,7 +53,7 @@ La solución consiste en crear un objeto <a href="http://docs.python.org/3.2/c-a
 
 El código es el siguiente:
 
-{% highlight c %}>PyObject *dict = NULL;
+{% highlight c %}PyObject *dict = NULL;
 PyListObject *list;
 
 list = (PyListObject *) Py_BuildValue("[]");
@@ -69,7 +69,7 @@ return (PyObject *) list;
 
 En el ejemplo sólo se está almacenando un campo del struct, para almacenar más, simplemente habría que modificar la línea por:
 
-{% highlight c %}>dict = Py_BuildValue("{"
+{% highlight c %}dict = Py_BuildValue("{"
                      "   s:i,"
                      "   s:i"
                      "}",

@@ -60,7 +60,7 @@ También necesitamos configurar unas cuantas cosas antes de implementarlo. Los p
 
 El siguiente planteamiento de la base de datos pertenece a la aplicación [FavSites][5], proyecto que realicé tiempo atrás y registrado bajo licencia [GPLv3][6]. Esta base de datos contiene una única tabla con las columnas nombre, descripción, latitud, longitud y foto. Estos nombres de columnas pasarán a formar parte de los metadatos en nuestra clase FavSitesProviderMetadata.
 
-{% highlight java %}>//FavSites for Android
+{% highlight java %}//FavSites for Android
 //    Copyright (C) 2011  Alejandro Alcalde Barros
 //    
 //This file is part of FavSites.

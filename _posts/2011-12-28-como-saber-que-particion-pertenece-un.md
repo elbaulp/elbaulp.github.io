@@ -38,40 +38,40 @@ Para eso podemos usar el comando df, que informa del uso del espacio en disco de
   
 <!--more-->
 
-{% highlight bash %}>df
+{% highlight bash %}df
 df /ruta/a un/directorio
 df /ruta/a un/archivo
 {% endhighlight %}
 
 En el siguiente ejemplo se busca el nombre de la partición donde se encuentra el fichero llamado */home/hkr/Desktop/combinaciones.cpp*
 
-{% highlight bash %}>df -T /home/hkr/Desktop/combinaciones.cpp
+{% highlight bash %}df -T /home/hkr/Desktop/combinaciones.cpp
 {% endhighlight %}
 
 Que tiene como salida:
 
-{% highlight bash %}>Filesystem    Type   1K-blocks      Used Available Use% Mounted on
+{% highlight bash %}Filesystem    Type   1K-blocks      Used Available Use% Mounted on
 /dev/sda6     ext4   186362292 140452228  36443368  80% /home
 {% endhighlight %}
 
 Como vemos, el resultado es que el archivo *combinaciones.cpp* pertenece a la partición */dev/sda6*. Con el siguiente comando mostramos solo el nombre de la partición:
 
-{% highlight bash %}>df /home/hkr/Desktop/combinaciones.cpp | awk '/^/dev/ {print $1}'
+{% highlight bash %}df /home/hkr/Desktop/combinaciones.cpp | awk '/^/dev/ {print $1}'
 {% endhighlight %}
 
 O con este otro:
 
-{% highlight bash %}>awk '/^/dev/ {print $1}' &lt;&lt;&lt;"$(df /home/hkr/Desktop/combinaciones.cpp)"
+{% highlight bash %}awk '/^/dev/ {print $1}' &lt;&lt;&lt;"$(df /home/hkr/Desktop/combinaciones.cpp)"
 {% endhighlight %}
 
 La salida para los dos comandos anteriores es la misma:
 
-{% highlight bash %}>/dev/sda6
+{% highlight bash %}/dev/sda6
 {% endhighlight %}
 
 Es recomendable colocar la siguiente función bash en nuestro archivo *~/.bashrc*
 
-{% highlight bash %}># find partition name for a given filename
+{% highlight bash %}# find partition name for a given filename
 findpart() { 
    [ -e "$1" ] &#038;&#038; df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found"; 
 }
@@ -79,7 +79,7 @@ findpart() {
 
 Ejemplos de uso:
 
-{% highlight bash %}>findpart /foo/bar
+{% highlight bash %}findpart /foo/bar
 findpart /etc
 findpart /home/vivek/test.txt
 {% endhighlight %}

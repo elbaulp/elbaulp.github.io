@@ -40,7 +40,7 @@ En esta última parte de una serie de [4 artículos][1] en los que se ha ido exp
 
 Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3]
 
-{% highlight xml %}>&lt;provider android:name=".SitesProvider"
+{% highlight xml %}&lt;provider android:name=".SitesProvider"
    android:authorities="com.elbauldelprogramador.provider.FavSites" />
 {% endhighlight %}
 
@@ -49,7 +49,7 @@ Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3
 
 #### Añadir registros
 
-{% highlight java %}>String tag = "Insertando registros...";
+{% highlight java %}String tag = "Insertando registros...";
 ContentValues cv = new ContentValues();
 
 Log.d(tag,"Adding a site...");
@@ -73,7 +73,7 @@ Log.d(tag,"inserted uri:" + insertedUri);
 
 #### Eliminar registros
 
-{% highlight java %}>ContentResolver cr = getContentResolver();
+{% highlight java %}ContentResolver cr = getContentResolver();
 Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 
 Log.d("Deleting site...","site delete uri:" + uri);
@@ -86,7 +86,7 @@ Log.d("Deleting site...","site delete uri:" + uri);
 
 Para realizar esto, debemos crear un [cursor][4] y contar el número de registros de este:
 
-{% highlight java %}>Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
+{% highlight java %}Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 Cursor cur = managedQuery(uri,
                          null, // projection
                          null, // selection strings
@@ -100,7 +100,7 @@ cur.close();
 
 Muestra todo el contenido de la tabla sites de la base de datos.
 
-{% highlight java %}>/**
+{% highlight java %}/**
     * Función que imprime los resultados por el Log.
     */
    public void logOutput(Context context){

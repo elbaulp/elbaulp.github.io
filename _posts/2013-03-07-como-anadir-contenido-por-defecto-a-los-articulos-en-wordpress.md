@@ -18,7 +18,7 @@ Si escribes en un blog, seguramente en cada artículo repites algunos textos, co
 
 Es bastante sencillo lograr esta funcionalidad, en el archivo *functions.php* de tu tema añade:
 
-{% highlight php %}>add_filter( 'default_content', 'my_default_content' );
+{% highlight php %}add_filter( 'default_content', 'my_default_content' );
 function my_default_content( $content ) {
    $content = "AQUI TU CONTENIDO POR DEFECTO";
  return $content;

@@ -39,7 +39,7 @@ CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos
 
 ### Creación de una tabla
 
-{% highlight sql %}>CREATE TABLE nombre tabla
+{% highlight sql %}CREATE TABLE nombre tabla
 (nombrecol1 tipocol1 
   [CONSTRAINT nombre_restricción]
   [not NULL]
@@ -99,7 +99,7 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
     
     La sentencia CREATE TABLE también nos permite crear una tabla a partir de una consulta a otra u otras tablas que ya existen. La nueva tabla obtendrá los datos obtenidos de la consulta. 
     
-    {% highlight sql %}>CREATE TABLE nombre tabla
+    {% highlight sql %}CREATE TABLE nombre tabla
 (nombrecol1 tipocol1 
   [CONSTRAINT nombre_restricción]
   [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check &lt;condición>]
@@ -115,7 +115,7 @@ AS Consulta_SQL;
     
     ### Ejemplo 1: Restricciones sobre columnas
     
-    {% highlight sql %}>CREATE TABLE Emp1 
+    {% highlight sql %}CREATE TABLE Emp1 
 
    (empno     NUMBER        CONSTRAINT pk_emp1 PRIMARY KEY, 
     ename     VARCHAR2(10)  CONSTRAINT nn_ename1 NOT NULL 
@@ -133,7 +133,7 @@ AS Consulta_SQL;
     
     ### Ejemplo 2: Restricciones sobre la tabla
     
-    {% highlight sql %}>CREATE TABLE docindex
+    {% highlight sql %}CREATE TABLE docindex
   ( token CHAR(20),
     doc_oid INTEGER,
     token_frequency SMALLINT,
@@ -152,7 +152,7 @@ CREATE TABLE emp
     
     ### Descripción de la estructura de una tabla
     
-    {% highlight sql %}>DESCRIBE nombre_tabla;
+    {% highlight sql %}DESCRIBE nombre_tabla;
 {% endhighlight %}
     
     #### Siguiente Tema: [Data Definition Language(DDL) &#8211; DROP.][1] {.referencia}

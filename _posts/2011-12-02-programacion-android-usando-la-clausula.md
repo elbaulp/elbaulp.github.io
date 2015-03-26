@@ -48,7 +48,7 @@ Imaginemos que queremos recuperar un lugar (De la aplicación [FavSites][2]) cuy
   
 <!--more-->
 
-{% highlight java %}>Activity activity;
+{% highlight java %}Activity activity;
 //... Inicializamos la actividad...
 String siteUri = "content://com.elbauldelprogramador.provider.FavSites/sites/23";
 Cursor managedCursor = activity.managedQuery( siteUri,
@@ -59,7 +59,7 @@ Cursor managedCursor = activity.managedQuery( siteUri,
 
 En este ejemplo se ha dejado el argumento que hace referencia a la cláusula where a null ya que hemos especificado el ID del registro que queremos en la URI. En este caso el ID está embebido en la URI. Se usa la URI como vehículo para pasar la cláusula where. Esto se hace evidente cuando nos fijamos cómo se implementa el proveedor para los Sites de la aplicación, que corresponde al método query. A continuación un fragmento de código del método query:
 
-{% highlight java %}>//Devuelve un id de sitio
+{% highlight java %}//Devuelve un id de sitio
 //content://.../sites/23
 int siteId = uri.getPathSegments().get(1);
 
@@ -78,7 +78,7 @@ Como vemos la id del sitio se extrae de la URI. La Uri se divide en segmentos (p
 
 Vamos a ver una vez más la estructura del método *managedQuery* de la clase Activity:
 
-{% highlight java %}>public final Cursor managedQuery(Uri uri,
+{% highlight java %}public final Cursor managedQuery(Uri uri,
    String[] projection,
    String selection,
    String[] selectionArgs,
@@ -89,7 +89,7 @@ El parámetro *selection*, es el que actúa como cláusula Where (Representa un 
 
 Los siguientes códigos que se muestran son equivalentes:
 
-{% highlight java %}>//Método Uri
+{% highlight java %}//Método Uri
 managedQuery("content://com.elbauldelprogramador.provider.FavSites/sites/23"
    ,null
    ,null

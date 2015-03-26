@@ -22,7 +22,7 @@ Veamos un ejemplo para aclarar su funcionamiento:
   
 <!--more-->
 
-{% highlight c %}>#include &lt;stdio.h>
+{% highlight c %}#include &lt;stdio.h>
 #include &lt;stdlib.h>
 
 static void
@@ -62,7 +62,7 @@ Para localizar las funciones hay que usar el programa **nm**, y **objdump** para
 
 Sin embargo, mientras escribía este artículo me dí cuenta de que ya no existen dichas secciones, han sido reemplazadas por *.init\_array/.fini\_array*. Del mismo modo pueden verse usando **nm**, y **objdump**. Empecemos con **nm**:
 
-{% highlight bash %}>$ nm dtors
+{% highlight bash %}$ nm dtors
 080495f0 d _DYNAMIC
 080496e4 d _GLOBAL_OFFSET_TABLE_
 080484dc R _IO_stdin_used
@@ -105,7 +105,7 @@ Sin embargo, mientras escribía este artículo me dí cuenta de que ya no existe
 
 En la salida se muestran como *_init* y *_fini*. También es posible obtener más información sobre las secciones de la tabla con **objdumb**:
 
-{% highlight bash %}>$ objdump -h ./dtors
+{% highlight bash %}$ objdump -h ./dtors
 
 ./dtors:     file format elf32-i386
 
@@ -169,7 +169,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
 
 El contenido que nos interesa es:
 
-{% highlight bash %}>18 .init_array   00000008  080495dc  080495dc  000005dc  2**2
+{% highlight bash %}18 .init_array   00000008  080495dc  080495dc  000005dc  2**2
                   CONTENTS, ALLOC, LOAD, DATA
  19 .fini_array   00000008  080495e4  080495e4  000005e4  2**2
                   CONTENTS, ALLOC, LOAD, DATA
@@ -177,7 +177,7 @@ El contenido que nos interesa es:
 
 Esta vez hemos obtenido más información, sabemos que ambas secciones ocupan 8 Bytes y se puede escribir en ellas, ya que no tienen la etiqueta READONLY. Para examinar el contenido basta con ejecutar:
 
-{% highlight c %}>$ objdump -s -j .fini_array ./dtors
+{% highlight c %}$ objdump -s -j .fini_array ./dtors
 Contents of section .fini_array:
  80495e4 c0830408 3c840408
 {% endhighlight %}

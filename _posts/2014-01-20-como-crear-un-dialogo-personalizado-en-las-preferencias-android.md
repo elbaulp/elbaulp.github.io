@@ -26,7 +26,7 @@ Para explicar cómo conseguir este comportamiento escribiremos una aplicación t
 
 El único propósito de esta [actividad][2] es abrir un menú que lanzará nuestras preferencias. Para simplificar el código se muestra sin las sentencias import y package:
 
-{% highlight java %}>public class MainActivity extends Activity {
+{% highlight java %}public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ En el método `onOptionsItemSelected` comprobamos qué elemento del [menú][3] s
 
 ### Crear una Actividad para las Preferencias
 
-{% highlight java %}>public class MyPrefecenceActivity extends PreferenceActivity implements OnPreferenceChangeListener {
+{% highlight java %}public class MyPrefecenceActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
     private Preference mDialogoNormal;
     private Preference mDialogoPersonalizado;
@@ -148,7 +148,7 @@ Aunque esta no es la mejor forma de hacerlo, para ilustrar la diferencia entre a
 
 Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de texto apareciera vacío, para ello crearemos nosotros mismos el diálogo extendiendo de `DialogPreference`.
 
-{% highlight java %}>public class MyDialogPreference extends DialogPreference {
+{% highlight java %}public class MyDialogPreference extends DialogPreference {
 
     private EditText mEditTextPassword;
 
@@ -184,7 +184,7 @@ Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de t
 
 En el constructor de esta clase es necesario establecer el layout que usará el diálogo, en este caso un simple `EditText`:
 
-{% highlight xml %}><?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -208,7 +208,7 @@ El método `callChangeListener` llamará a `onPreferenceChange`, donde decidirem
 
 Con esto ya está todo listo, simplemente falta hacer referencia al diálogo que acabamos de crear en el archivo de preferencias de la siguiente forma:
 
-{% highlight xml %}><?xml version="1.0" encoding="UTF-8"?>
+{% highlight xml %}<?xml version="1.0" encoding="UTF-8"?>
 &lt;PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
     &lt;PreferenceCategory android:title="TituloCategoría" >

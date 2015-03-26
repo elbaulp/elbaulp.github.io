@@ -22,7 +22,7 @@ Es bastante simple:
 
 Buscamos el archivo ***function.php*** de nuestro tema instalado y pegamos el siguiente código php.
 
-{% highlight php %} >&lt; ?php
+{% highlight php %}&lt; ?php
 // Short code
 function Nombre_de_nuestro_shortcode( $atts, $content = null ) {
    return 'Código de nuestro shortcode';

@@ -36,14 +36,14 @@ En general, los índices se crean sobre todas las claves externas y sobre los cr
   
 <!--more-->
 
-{% highlight sql %}>CREATE [unique] INDEX nombre_indice
+{% highlight sql %}CREATE [unique] INDEX nombre_indice
 ON nombre_tabla (columnas [{asc | desc}] [,.....])
 [TABLESPACE Nombre_Tablespace]
 {% endhighlight %}
 
 Ejemplo:
 
-{% highlight sql %}><span class="comentario">-- Creacion de un índice en una columna simple para hacer las consultas más rápidas</span>
+{% highlight sql %}<span class="comentario">-- Creacion de un índice en una columna simple para hacer las consultas más rápidas</span>
 CREATE INDEX emp_hiredate_idx ON employees (hire_date);
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ CREATE INDEX emp_hiredate_idx ON employees (hire_date);
 
 Cuando se borra una tabla, automáticamente se borran los índices asociados a ella. Los índices ocupan espacio dentro de la BD como si de una tabla se tratara y por esa razón se aconseja tener solo como índices aquellas columnas por las cuales se realizan consultas de forma periódica. Para borrar un índice se utiliza la orden:
 
-{% highlight sql %}>drop index nombre_indice;{% endhighlight %}
+{% highlight sql %}drop index nombre_indice;{% endhighlight %}
 
 
 
@@ -61,7 +61,7 @@ Cuando se borra una tabla, automáticamente se borran los índices asociados a e
 
 Las secuencias se utilizan para generar números de forma automática, sin embargo, esto no garantiza la ausencia de ‘huecos’: si se solicitan números a una secuencia y no se utilizan, estos valores se pierdan. 
 
-{% highlight sql %}>CREATE SEQUENCE Nombre_secuencia
+{% highlight sql %}CREATE SEQUENCE Nombre_secuencia
 [INCREMENT BY entero]
 [START WITH entero]
 [{MAXVALUE entero | NOMAXVALUE}]
@@ -78,7 +78,7 @@ Las secuencias se utilizan para generar números de forma automática, sin embar
 
 Ejemplo:
 
-{% highlight sql %}>CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
+{% highlight sql %}CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
 
 <span class="comentario">-- Para usar la secuencia, primero hay que inicializarla con nextval</span>
 

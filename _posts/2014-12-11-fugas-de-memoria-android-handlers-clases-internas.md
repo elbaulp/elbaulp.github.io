@@ -18,7 +18,7 @@ tags:
 
 Seamos directos, consideremos el siguiente código:
 
-{% highlight java %}>public class SampleActivity extends Activity {
+{% highlight java %}public class SampleActivity extends Activity {
 
   private final Handler mLeakyHandler = new Handler() {
     @Override
@@ -51,7 +51,7 @@ Pero, ¿dónde ocurre ésta pérdida o filtración de memoria (*memory leak*) y 
 
 Entonces, ¿Dónte está exáctamente la pérdida de memoria (*memory leak*)?, es muy sutil, pero consideremos ahora el siguiente fragmento de código:
 
-{% highlight java %}>public class SampleActivity extends Activity {
+{% highlight java %}public class SampleActivity extends Activity {
 
   private final Handler mLeakyHandler = new Handler() {
     @Override
@@ -82,7 +82,7 @@ Cuando la actividad [finaliza][9] al llamar a `finish`, el mensaje que hemos ret
 
 Para corregir el problema, podemos crear una subclase de `Handler` en un nuevo fichero o crear una clase interna estática. Las clases estáticas internas no mantienen una referencia implícita a su clase externa, de modo que la `Activity` no tendrá fugas de memoria (*memory leak*). Si se necesita invocar métodos de la clase externa desde el `Handler`, basta con que el `Handler` mantenga una referencia débil (`WeakReference`) a la `Activity`, así no habrá fugas de memoria accidentales. Para corregir la otra fuga existente al instanciar la clase anónima `Runnable`, basta con crear una variable estática de la clase (Ya que, como hemos dicho, instancias estáticas de clases anónimas no mantienen una referencia implícita a su clase externa):
 
-{% highlight java %}>public class SampleActivity extends Activity {
+{% highlight java %}public class SampleActivity extends Activity {
 
   /**
   * Clase interna estática

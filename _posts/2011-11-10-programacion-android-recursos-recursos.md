@@ -95,7 +95,7 @@ Ahora vamos a ver algunas reglas de precedencia con unos ejemplos de recursos st
 
 El siguiente código muestra las variaciones del directorio values:
 
-{% highlight xml %}>// values/string.xml
+{% highlight xml %}// values/string.xml
 &lt;resources xmlns="http://schemas.android.com/apk/res/android">
    &lt;string name="teststring_all">teststring in root&lt;/string>
    &lt;string name="t1_enport">t1 in root&lt;/string>
@@ -133,7 +133,7 @@ El siguiente código muestra las variaciones del directorio values:
 
 El listado siguiente muestra el archivo R.java para estos recursos:
 
-{% highlight java %}>public static final class string {
+{% highlight java %}public static final class string {
         public static final int t1_1_en_port=0x7f070004;
         public static final int t1_enport=0x7f070003;
         public static final int t2=0x7f070005;

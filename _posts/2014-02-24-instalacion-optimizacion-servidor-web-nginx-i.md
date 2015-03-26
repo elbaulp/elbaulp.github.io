@@ -34,34 +34,34 @@ Hace tiempo se vío en este blog [cómo instalar y configurar Nginx con php5-fpm
 
 Lo primero que debemos hacer es instalar las dependencias necesarias para la compilación, para ello:
 
-{% highlight bash %}>apt-get install build-essential libssl-dev libpcre3-dev
+{% highlight bash %}apt-get install build-essential libssl-dev libpcre3-dev
 {% endhighlight %}
 
 Tras esto descargamos la última versión de nginx, al momento de escribir este texto la 1.4.4:
 
-{% highlight bash %}>wget http://nginx.org/download/nginx-1.4.4.tar.gz
+{% highlight bash %}wget http://nginx.org/download/nginx-1.4.4.tar.gz
 {% endhighlight %}
 
 Descomprimimos el archivo:
 
-{% highlight bash %}>tar xzvf nginx-1.4.4.tar.gz
+{% highlight bash %}tar xzvf nginx-1.4.4.tar.gz
 {% endhighlight %}
 
 Antes de compilar cambiaremos un valor en el código fuente como medida de seguridad por ocultación. El valor a cambiar es la cadena asignada a la cabecera que indica el servidor usado en las peticiones HTTP. En concreto el archivo a cambiar es el alojado en `src/http/ngx_http_header_filter_module.c`, concretamente en la línea 48:
 
-{% highlight c %}>static char ngx_http_server_string[] = "Server: nginx" CRLF;
+{% highlight c %}static char ngx_http_server_string[] = "Server: nginx" CRLF;
 static char ngx_http_server_full_string[] = "Server: " NGINX_VER CRLF;
 {% endhighlight %}
 
 Cambiamos estas dos líneas a algo del estilo:
 
-{% highlight c %}>static char ngx_http_server_string[] = "Server: Mi servidor Web" CRLF;
+{% highlight c %}static char ngx_http_server_string[] = "Server: Mi servidor Web" CRLF;
 static char ngx_http_server_full_string[] = "Server: Mi servidor Web" CRLF;
 {% endhighlight %}
 
 Ya solo queda compilarlo e instalarlo, de momento necesitaremos los módulos siguientes:
 
-{% highlight bash %}>--with-http_gzip_static_module --sbin-path=/usr/local/sbin -with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
+{% highlight bash %}--with-http_gzip_static_module --sbin-path=/usr/local/sbin -with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
 {% endhighlight %}
 
 Aquí estamos habilitando la compresión de las páginas con gzip, SSL para conexiones seguras, deshabilitando el módulo de correo POP3, IMAP y SMTP. Dependiendo de las necesidades de nuestro servidor, deberemos activar o desactivar algunos módulos. Más tarde necesitaremos recompilar para añadir el módulo **pagespeed**. La lista de todos los módulos disponibles se puede consultar en la <a href="http://wiki.nginx.org/Modules" title="Módulos nginx" target="_blank">documentación de nginx</a>.
@@ -70,14 +70,14 @@ Aquí estamos habilitando la compresión de las páginas con gzip, SSL para cone
 
 Ya está todo listo para compilar e instalar, dentro del directorio de nginx ejecutamos:
 
-{% highlight bash %}>./configure --with-http_gzip_static_module --sbin-path=/usr/local/sbin \
+{% highlight bash %}./configure --with-http_gzip_static_module --sbin-path=/usr/local/sbin \
 --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module\
 --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
 {% endhighlight %}
 
 Tras esto deberíamos ver un resumen de la operación realizada:
 
-{% highlight bash %}>Configuration summary
+{% highlight bash %}Configuration summary
   + using system PCRE library
   + using system OpenSSL library
   + md5: using OpenSSL library
@@ -100,12 +100,12 @@ Tras esto deberíamos ver un resumen de la operación realizada:
 
 Para compilar e instalar:
 
-{% highlight bash %}>make -j 4 &#038;&#038; make install
+{% highlight bash %}make -j 4 &#038;&#038; make install
 {% endhighlight %}
 
 Tras esto, es necesario descargar el script que permite iniciar, detener, reiniciar y recargar nginx mediante el comando **service**, podemos descargarlo desde
 
-{% highlight bash %}>wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+{% highlight bash %}wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
 mv nginx /etc/init.d/nginx
 sudo chmod +x /etc/init.d/nginx
 sudo chown root:root /etc/init.d/nginx
@@ -114,7 +114,7 @@ update-rc.d nginx defaults
 
 Con esto hemos descargaro el script, lo hemos movido al directorio en el que será llamado al inicio del sistema, dado permisos de ejecución y asignado a root como propietario. Hecho esto, para iniciar nuestro servidor web hay que ejecutar el comando:
 
-{% highlight bash %}>service nginx start
+{% highlight bash %}service nginx start
 {% endhighlight %}
 
 Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección *localhost*, donde veremos lo siguiente:
@@ -125,7 +125,7 @@ Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está 
 
 Ya que está todo listo, vamos a realizar unos cuantos ajustes a la configuración por defecto:
 
-{% highlight bash %}>user  www-data;
+{% highlight bash %}user  www-data;
 worker_processes  1;
 
 pid        /var/run/nginx.pid;
@@ -184,7 +184,7 @@ Los cambios más relevantes sobre la configuración por defecto son:
 
 Cambiamos los permisos del directorio donde se alojan los recursos web a este último usuario y reiniciamos nginx:
 
-{% highlight bash %}>chown -R www-data:www-data /usr/local/nginx/html/
+{% highlight bash %}chown -R www-data:www-data /usr/local/nginx/html/
 service nginx destroy &#038;&#038; service nginx start
 {% endhighlight %}
 

@@ -27,17 +27,17 @@ El otro día me hacía falta convertir cada una de las páginas de un documento 
 
 Es necesario tener instalado el paquete imagemagick, si no lo tenemos instalado ejecutamos:
 
-{% highlight bash %}>sudo aptitude install imagemagick{% endhighlight %}
+{% highlight bash %}sudo aptitude install imagemagick{% endhighlight %}
 
 Tras instalarlo basta con ejecutar el comando siguiente:
 
-{% highlight bash %}>convert foo.pdf foo.png{% endhighlight %}
+{% highlight bash %}convert foo.pdf foo.png{% endhighlight %}
 
 La extensión de la imagen podemos cambiarla a jpg por ejemplo.
 
 Si las imágenes resultan con poca calidad, podemos ejecutar el siguiente comando:
 
-{% highlight bash %}>convert -density 400 foo.pdf -resize 25% foo.png{% endhighlight %}
+{% highlight bash %}convert -density 400 foo.pdf -resize 25% foo.png{% endhighlight %}
 
 Espero que os sea útil si alguna vez lo necesitáis.
 

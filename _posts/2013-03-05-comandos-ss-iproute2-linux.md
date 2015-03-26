@@ -45,7 +45,7 @@ Aquí entra en acción el comando **ss**, sustituto de **netstat**. Este comando
 
 La función de **ss** es mostrar estadísticas de los sockets, mostrar información similar a netstat. Además, revela más información sobre TCP que otras herramientas. Las opciones más usadas son:
 
-{% highlight bash %}>-n, --numeric
+{% highlight bash %}-n, --numeric
               Do now try to resolve service names.
 
        -r, --resolve
@@ -85,7 +85,7 @@ Algunos ejemplos prácticos:
 
 ### Mostrar todos los sockects a la escucha
 
-{% highlight bash %}>$ ss -l
+{% highlight bash %}$ ss -l
 State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port   
 LISTEN     0      128                                                           :::sunrpc                                                         :::*       
 LISTEN     0      128                                                            *:sunrpc                                                          *:*       
@@ -100,7 +100,7 @@ Para entender el significado de las columnas, puedes dirigirte al artículo de [
 
 ### Mostrar conexiones ssh establecidas
 
-{% highlight bash %}># ss -o state stablished '( dport = :ssh or sport = :ssh)'
+{% highlight bash %}# ss -o state stablished '( dport = :ssh or sport = :ssh)'
 Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port   
 0      0                                                       192.168.1.36:60240                                                  207.97.227.239:ssh 
 {% endhighlight %}
@@ -109,17 +109,17 @@ El parámetro **-o** permite establecer qué opciones mostrar, varios ejemplos s
 
 ### Mostrar conexiones SMTP establecidas
 
-{% highlight bash %}># ss -o state established '( dport = :smtp or sport = :smtp )'
+{% highlight bash %}# ss -o state established '( dport = :smtp or sport = :smtp )'
 {% endhighlight %}
 
 ### Mostrar conexiones HTTP establecidas
 
-{% highlight bash %}># ss -o state established '( dport = :http or sport = :http )'
+{% highlight bash %}# ss -o state established '( dport = :http or sport = :http )'
 {% endhighlight %}
 
 En los casos anteriores se ha filtrado únicamente los paquetes TCP con estado *established*. Para mostrar otros estados puedes escribir:
 
-{% highlight bash %}># ss -4 state NOMBRE-DEL-FILTRO
+{% highlight bash %}# ss -4 state NOMBRE-DEL-FILTRO
 {% endhighlight %}
 
 Donde **-4** indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguientes valores:
@@ -143,17 +143,17 @@ Donde **-4** indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguie
 
 Por ejemplo:
 
-{% highlight bash %}># ss -4 state time-wait
+{% highlight bash %}# ss -4 state time-wait
 {% endhighlight %}
 
 ### Encontrar procesos locales conectados al servidor X (Servidor Gráfico)
 
-{% highlight bash %}># ss -x src /tmp/.X11-unix/*
+{% highlight bash %}# ss -x src /tmp/.X11-unix/*
 {% endhighlight %}
 
 ### Hacer coincidir direcciones remotas y puertos
 
-{% highlight bash %}>ss dst ADDRESS_PATTERN
+{% highlight bash %}ss dst ADDRESS_PATTERN
 
 ## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5## 
 ss dst 192.168.1.5
@@ -166,17 +166,17 @@ ss dst 192.168.1.5:443
 
 Mostrar conexiones realizadas por una ip en el puerto http hacia nuestra máquina
 
-{% highlight bash %}>ss dst 123.1.2.100:http
+{% highlight bash %}ss dst 123.1.2.100:http
 {% endhighlight %}
 
 Es posible mostrar todas las conexiones realizadas por cualquier máquina, por el puerto http por ejemplo:
 
-{% highlight bash %}># ss dst *:http
+{% highlight bash %}# ss dst *:http
 {% endhighlight %}
 
 ### Hacer coincidir direcciones locales y puertos
 
-{% highlight bash %}>ss src ADDRESS_PATTERN
+{% highlight bash %}ss src ADDRESS_PATTERN
 ### Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###
 ## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##
 ss src 5.39.89.44
@@ -192,24 +192,24 @@ ss src 5.39.89.44:25
 
 ### Mostrar el número y el tipo de conexiones activas
 
-{% highlight bash %}>ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c 
+{% highlight bash %}ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c 
 {% endhighlight %}
 
 ### Mostrar un resumen del estado de los sockets
 
-{% highlight bash %}># ss -s
+{% highlight bash %}# ss -s
 {% endhighlight %}
 
 ### Listar todos los puertos a la escucha junto con el PID del programa
 
-{% highlight bash %}>ss -tlnp 
+{% highlight bash %}ss -tlnp 
 {% endhighlight %}
 
 ### Configuración de la interfaz de red
 
 Antiguamente se usaba el comando ifconfig:
 
-{% highlight bash %}># ifconfig eth0 up
+{% highlight bash %}# ifconfig eth0 up
 # ifconfig eth0 192.168.1.1 netmask 255.255.255.0
 {% endhighlight %}
 
@@ -217,19 +217,19 @@ En **iproute2** la configuración de interfaces de red se lleva a cabo con el su
 
 ### Activar interfaz
 
-{% highlight bash %}># ip link set eth0 up
+{% highlight bash %}# ip link set eth0 up
 {% endhighlight %}
 
 Donde eth0 debe ser la interfaz de red a activar.
 
 ### Establecer dirección ip a la interfaz
 
-{% highlight bash %}># ip addr add 192.168.1.33/24 dev eth0
+{% highlight bash %}# ip addr add 192.168.1.33/24 dev eth0
 {% endhighlight %}
 
 Para comprobar la correcta configuración de la interfaz, muestra la información de dicha interfaz:
 
-{% highlight bash %}># ip addr ls
+{% highlight bash %}# ip addr ls
 # ip addr show
 # ip addr ls eth0
 {% endhighlight %}
@@ -238,12 +238,12 @@ Para comprobar la correcta configuración de la interfaz, muestra la informació
 
 La versión moderna del comando `route -n` o `netstat -r` es:
 
-{% highlight bash %}># ip ro
+{% highlight bash %}# ip ro
 {% endhighlight %}
 
 Para añádir o eliminar reglas de enrutamiento se usa `ip ro add|del destino via gateway`. Para añadir una nueva ruta a 10.0.0.0/16:
 
-{% highlight bash %}># ip ro add 10.0.0.0/16 via 192.168.0.1
+{% highlight bash %}# ip ro add 10.0.0.0/16 via 192.168.0.1
 # ip ro del 10.0.0.0/16 via 192.168.0.1
 {% endhighlight %}
 
@@ -251,7 +251,7 @@ Para añádir o eliminar reglas de enrutamiento se usa `ip ro add|del destino vi
 
 Para averiguar qué interfaz está usando tu pc, puedes usar el comando *ip route get IP*. Así:
 
-{% highlight bash %}># ip route get 5.39.89.44
+{% highlight bash %}# ip route get 5.39.89.44
 5.39.89.44 via 10.61.29.89 dev eth1  src 192.168.1.36 
 {% endhighlight %}
 

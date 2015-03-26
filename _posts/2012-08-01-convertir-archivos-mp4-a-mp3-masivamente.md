@@ -22,7 +22,7 @@ Ya mostré cómo <a href="/linux/renombrar-archivos-masivamente-en/" target="_bl
 
 Es bastante sencillo a la vez que útil:
 
-{% highlight bash %} >#!/bin/bash
+{% highlight bash %}#!/bin/bash
 
 IFS='
 '

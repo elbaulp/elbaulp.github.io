@@ -32,11 +32,11 @@ Me permito extraer el la definición de genbeta::Dev. Para una explicación más
 
 Descarga el plugin <a href="http://www.vim.org/scripts/download_script.php?src_id=18070" target="_blank">gnupg.vim</a>. Una vez descargado, pégalo en el directorio *$HOME/.vim/plugin/*. El último paso es añadir la siguiente línea al archivo **.bashrc**:
 
-{% highlight bash %}>export GPG_TTY=`tty`{% endhighlight %}
+{% highlight bash %}export GPG_TTY=`tty`{% endhighlight %}
 
 Es recomendable establecer algunas variables en el fichero de configuracón de Vim (*.vimrc*). El mio está así:
 
-{% highlight bash %}>$ cat ~/.vimrc
+{% highlight bash %}$ cat ~/.vimrc
 :let g:GPGDefaultRecipients=["&lt;tu-correo"]
 :let g:GPGPreferSign=1
 {% endhighlight %}
@@ -47,7 +47,7 @@ Para usar vim con este plugin es necesario que los archivos terminen en las exte
 
 ### Ejemplos de uso
 
-{% highlight bash %}>$ vim test.gpg
+{% highlight bash %}$ vim test.gpg
 {% endhighlight %}
 
 Una vez en Vim, escribimos contenido en el archivo y guardamos con *:wq*. Tras esto, Vim pedirá que introduzcamos la *passphrase* de nuestra llave. En caso de disponer de más de una clave pública en nuestro anillo de llaves GPG, Vim nos dará a escoger con cual cifrar el archivo. Una vez seleccionada la clave el archivo estará listo:
@@ -83,7 +83,7 @@ Os82c2XLJ1jWjLGG0GbIPOUz
 
 Es recomendable firmar todos los archivos que cifremos con **gpg** para asegurar la vericidad del firmante, por ejemplo podemos pasarle las siguientes opciones a **gpg**:
 
-{% highlight bash %}>gpg --encrypt -r &lt;ID_PUBLICA> -u &lt;ID_PRIVADA> --output &lt;NOMBRE_ARCHIVO.signed.gpg> --sign &lt;ARCHIVO_ORIGINAL>
+{% highlight bash %}gpg --encrypt -r &lt;ID_PUBLICA> -u &lt;ID_PRIVADA> --output &lt;NOMBRE_ARCHIVO.signed.gpg> --sign &lt;ARCHIVO_ORIGINAL>
 {% endhighlight %}
 
 #### Referencias

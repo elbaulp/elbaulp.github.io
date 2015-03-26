@@ -53,7 +53,7 @@ Una notificación Toast es un mensaje que se muestra superpuesto en la pantalla.
 
 A lo largo de todas las [entradas sobre Android][1], se ha usado mucho este típo de notificaciones:
 
-{% highlight java %}>Toast.makeText(context, text, duration).show();
+{% highlight java %}Toast.makeText(context, text, duration).show();
 {% endhighlight %}
 
 Para pasar el contexto, tenemos varias posibilidades, ***NombreActividad.this***, o ***getApplicationContext().***
@@ -62,7 +62,7 @@ Para fijar la duración del mensaje, usamos una de las dos constantes predefinid
 
 En este caso, vamos a crear un layout personalizado para mostrar el Toast:
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/toastLayout"
   android:orientation="horizontal"
@@ -92,7 +92,7 @@ Hay que asignar un id al LinearLayout, que usaremos posteriormente. También hem
 
 El siguiente paso es inflar este layout desde el código:
 
-{% highlight java %}>LayoutInflater inflater = getLayoutInflater();
+{% highlight java %}LayoutInflater inflater = getLayoutInflater();
 View layout = inflater.inflate(
    R.layout.toast_layout
    ,(ViewGroup) findViewById(R.id.toastLayout));
@@ -118,7 +118,7 @@ Este tipo de notificaciones muestran un icono en la barra de estado, cuando desp
 
 Los pasos necesarios para crear este tipo de notificaciones son, usar el gestor de notificaciones del sistema (NotificationManager) y posteriormente crear un objeto Notification en el que configuraremos nuestra notificación. Vamos a ver como hacerlo.
 
-{% highlight java %}>NotificationManager mNotificationManager =
+{% highlight java %}NotificationManager mNotificationManager =
     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 //Agregando el icono, texto y momento para lanzar la notificación
@@ -173,7 +173,7 @@ La clase Activity implementa métodos para gestionar los dialogos, son:
 
 Vamos a ver un ejemplo de AlertDialog, que preguntará si queremos salir de la aplicación:
 
-{% highlight java %}>AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+{% highlight java %}AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
 dialog.setMessage("¿Salir?");
 dialog.setCancelable(false);
@@ -200,7 +200,7 @@ dialog.show();
 
 También vamos a ver un ProgressDialog, indefinido (Que nunca termina).
 
-{% highlight java %}>ProgressDialog.show(
+{% highlight java %}ProgressDialog.show(
              NotificacionesActivity.this
             ,"ProgressDialog"
             ,"Ejemplo diálogo de progreso"

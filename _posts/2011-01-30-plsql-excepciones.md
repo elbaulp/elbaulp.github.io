@@ -35,7 +35,7 @@ Una excepción es una situación especial dentro de la ejecución de un programa
 Las excepciones deben ser declaradas dentro de la sección DECLARE, como si de una variable se tratase:  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
 e_sin_alumnos EXCEPTION;
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automá
 
 La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
 
-{% highlight sql %}>EXCEPTION
+{% highlight sql %}EXCEPTION
   WHEN nb_excepcion_1 THEN
     instrucciones excep1;
   WHEN nb_excepcion_2 THEN
@@ -64,7 +64,7 @@ La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
 
 Ejemplo:
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   VALOR_NEGATIVO EXCEPTION;
   valor NUMBER;
 BEGIN
@@ -86,7 +86,7 @@ Cuando se produce un error, se ejecuta el bloque EXCEPTION. Si existe un bloque 
 En ocasiones queremos enviar un mensaje de error personalizado al producirse una excepción PL/SQL. Para ello es necesario utilizar la instruccion **RAISE\_APPLICATION\_ERROR.**  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>RAISE_APPLICATION_ERROR(&lt;error_num>,&lt;mensaje>);{% endhighlight %}
+{% highlight sql %}RAISE_APPLICATION_ERROR(&lt;error_num>,&lt;mensaje>);{% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
@@ -99,7 +99,7 @@ Ejemplo:
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   v_div NUMBER;
 BEGIN
   SELECT 1/0 INTO v_div FROM DUAL;
@@ -121,7 +121,7 @@ Dentro del bloque de excepciones conviene recordar la existencia de la excepció
 Estas funciones no pueden ser utilizadas directamente en una sentencia SQL, pero sí se puede asignar su valor a alguna variable de programa y luego usar esta última en alguna sentencia.  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}>SET SERVEROUTPUT ON;
+{% highlight sql %}SET SERVEROUTPUT ON;
 DECLARE
   err_num NUMBER;
   err_msg VARCHAR2(255);
@@ -142,7 +142,7 @@ END;
 
 
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   e_sinreg EXCEPTION;
   a number(10) := 25;
   b number(10) := 0;

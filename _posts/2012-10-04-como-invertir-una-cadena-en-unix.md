@@ -21,37 +21,37 @@ Algunos ejemplos:
   
 <!--more-->
 
-{% highlight bash %}>echo "elbauldelprogramador" | rev
+{% highlight bash %}echo "elbauldelprogramador" | rev
 {% endhighlight %}
 
 Dará el siguiente resultado:
 
-{% highlight bash %}>rodamargorpledluable
+{% highlight bash %}rodamargorpledluable
 {% endhighlight %}
 
 Es posible usar la siguiente sintaxis:
 
-{% highlight bash %}>rev&lt;&lt;&lt;"Esta línea es una prueba"
+{% highlight bash %}rev&lt;&lt;&lt;"Esta línea es una prueba"
 {% endhighlight %}
 
 Salida:
 
-{% highlight bash %}>abeurp anu se aeníl atsE
+{% highlight bash %}abeurp anu se aeníl atsE
 {% endhighlight %}
 
 ### Ejemplo en Perl
 
-{% highlight bash %}>perl -ne 'chomp;print scalar reverse . "n";'&lt;&lt;&lt;"elbauldelprogramador"
+{% highlight bash %}perl -ne 'chomp;print scalar reverse . "n";'&lt;&lt;&lt;"elbauldelprogramador"
 {% endhighlight %}
 
 Ó
 
-{% highlight bash %}>echo 'elbauldelprogramador' | perl -ne 'chomp;print scalar reverse . "n";'
+{% highlight bash %}echo 'elbauldelprogramador' | perl -ne 'chomp;print scalar reverse . "n";'
 {% endhighlight %}
 
 ### Script bash para invertir cadenas
 
-{% highlight bash %} >#!/bin/bash
+{% highlight bash %}#!/bin/bash
 input="$1"
 reverse=""
  
@@ -66,20 +66,20 @@ echo "$reverse"
 
 Para ejecutarlo escribimos lo siguiente en la terminal:
 
-{% highlight bash %}>./script elbauldelprogramador
+{% highlight bash %}./script elbauldelprogramador
 {% endhighlight %}
 
 > En los comentarios de la fuente original en nixcraft (enlace al final de la entrada) un lector escribió dos ejemplos más, en [python][2] y [PHP][3]:
 
 Ejemplo en python:
 
-{% highlight bash %}>echo foo | python -c 'import sys;print(sys.stdin.read().strip()[::-1])'
+{% highlight bash %}echo foo | python -c 'import sys;print(sys.stdin.read().strip()[::-1])'
 python -c 'import sys;print(sys.stdin.read().strip()[::-1])' &lt;&lt;&lt; foo
 {% endhighlight %}
 
 Ejemplo en PHP:
 
-{% highlight bash %}>echo foo | php -r 'print strrev(trim(fgets(STDIN)));'
+{% highlight bash %}echo foo | php -r 'print strrev(trim(fgets(STDIN)));'
 php -r 'print strrev(trim(fgets(STDIN)));' &lt;&lt;&lt; foo
 {% endhighlight %}
 

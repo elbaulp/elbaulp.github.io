@@ -52,7 +52,7 @@ Este problema es consecuencia de una nueva característica introducida por Micro
     
     Reinicia el equipo y el problema debería haber desaparecido. En caso contrario, abre un terminal pulsando **Win+X** y selecciona **Símbolo del sistema (Administrador)**. Introduce lo siguiente:
     
-    {% highlight bash %}>bcdedit /set disabledynamictick yes
+    {% highlight bash %}bcdedit /set disabledynamictick yes
 {% endhighlight %}
     
     #### Desactivar programas de inicio innecesarios

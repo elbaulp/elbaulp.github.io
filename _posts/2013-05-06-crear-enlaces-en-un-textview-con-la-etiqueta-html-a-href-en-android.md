@@ -23,7 +23,7 @@ La cadena de texto con el enlace en cuestión reside en el archivo de recursos *
   
 ***layout***:
 
-{% highlight xml %}>&lt;TextView
+{% highlight xml %}&lt;TextView
                 <!-- .... -->
                 android:autoLink="web"
                 
@@ -33,17 +33,17 @@ La cadena de texto con el enlace en cuestión reside en el archivo de recursos *
 
 ***string***:
 
-{% highlight xml %}>&lt;string name="aboutAuthor">Developed by <a href="http://elbauldelprogramador.com">Alejandro Alcalde.</a>&lt;/string>
+{% highlight xml %}&lt;string name="aboutAuthor">Developed by <a href="http://elbauldelprogramador.com">Alejandro Alcalde.</a>&lt;/string>
 {% endhighlight %}
 
 Pero la propiedad `autoLink="web"`, funciona únicamente cuando el texto al que hace referencia contiene explícitamente la dirección, es decir, con esta cadena de texto sí funcionaría:
 
-{% highlight xml %}>&lt;string name="aboutAuthor">Developed by http://elbauldelprogramador.com&lt;/string>
+{% highlight xml %}&lt;string name="aboutAuthor">Developed by http://elbauldelprogramador.com&lt;/string>
 {% endhighlight %}
 
 Para conseguir hacer funcionar el primer ejemplo hay que hacer uso del método `setMovementMethod()` de la clase `TextView`:
 
-{% highlight java %}>final TextView author = (TextView) view.findViewById(R.id.tv_about_athor);
+{% highlight java %}final TextView author = (TextView) view.findViewById(R.id.tv_about_athor);
 author.setMovementMethod(LinkMovementMethod.getInstance());
 {% endhighlight %}
 

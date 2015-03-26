@@ -40,7 +40,7 @@ Voy a explicar dos formas, la primera que apliqué y una segunda que es el méto
 
 Para mi caso concreto eligiré **0x31B**. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de **10_linux**:
 
-{% highlight bash %}>message="$(gettext_printf "Loading Linux %s ..." ${version})"
+{% highlight bash %}message="$(gettext_printf "Loading Linux %s ..." ${version})"
     cat &lt;&lt; EOF
          echo    '$message'
          linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B                                                          
@@ -58,12 +58,12 @@ La segunda forma es mucho más cómoda, al igual que en el apartado anterior con
 
 Para aplicar los cambios es necesario regenerar el archivo **/boot/grub/grub.cfg** con el siguiente comando:
 
-{% highlight bash %}># update-grub2
+{% highlight bash %}# update-grub2
 {% endhighlight %}
 
 Una vez terminado, el apartado de sistemas operativos Linux disponibles quedará así:
 
-{% highlight bash %}>### BEGIN /etc/grub.d/10_linux ###
+{% highlight bash %}### BEGIN /etc/grub.d/10_linux ###
 menuentry 'Debian GNU/Linux, with Linux 3.2.0-4-amd64' --class debian --class gnu-linux --class gnu --class os {
  load_video
   insmod gzio

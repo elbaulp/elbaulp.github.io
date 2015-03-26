@@ -30,7 +30,7 @@ Siempre que nos enseñan a ordenar un vector, o una lista, nos enseñan los algo
 El ordenamiento por **burbuja** es el algoritmo más sencillo probablemente. Ideal para empezar. Consiste en ciclar repetidamente a través de la lista, comparando elementos adyacentes de dos en dos. Si un elemento es mayor que el que está en la siguiente posición se intercambian. Es un algoritmo estable. El inconveniente es que es muy lento.  
 <!--more-->
 
-{% highlight cpp %} >static void burbuja_lims(int T[], int inicial, int final)
+{% highlight cpp %}static void burbuja_lims(int T[], int inicial, int final)
 {
   int i, j;
   int aux;
@@ -50,7 +50,7 @@ El ordenamiento por **inserción** técnicamente es la forma mas lógica de orde
   <div>
     Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.</p> 
     
-    {% highlight cpp %} >
+    {% highlight cpp %}
 static void insercion_lims(int T[], int inicial, int final)
 {
   int i, j;
@@ -76,7 +76,7 @@ static void insercion_lims(int T[], int inicial, int final)
   Por último,<strong> el ordenamiento por selección</strong>: Al igual que el algoritmo de inserción es muy trivial, puesto que recorre el vector o la lista, buscando el elemento mas pequeño y colocandolo en la posición 0 del vector, y así sucesivamente n-1 veces, tanto de grande como sea el vector. Al igual que los algoritmos anteriores, requiere O(n²) .
 </div>
 
-{% highlight cpp %} >static void seleccion_lims(int T[], int inicial, int final)
+{% highlight cpp %}static void seleccion_lims(int T[], int inicial, int final)
 {
   int i, j, indice_menor;
   int menor, aux;
@@ -135,7 +135,7 @@ static void insercion_lims(int T[], int inicial, int final)
     </li>
   </ol>
   
-  {% highlight cpp %} >
+  {% highlight cpp %}
 static void mergesort_lims(int T[], int inicial, int final)
 {
   if (final - inicial &lt; UMBRAL_MS)
@@ -183,7 +183,7 @@ static void mergesort_lims(int T[], int inicial, int final)
     &nbsp;
   </p>
   
-  {% highlight cpp %} >
+  {% highlight cpp %}
 static void quicksort_lims(int T[], int inicial, int final)
 {
   int k;

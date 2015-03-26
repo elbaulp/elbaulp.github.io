@@ -20,7 +20,7 @@ En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremo
 
 Editamos el archivo *functions.php* de nuestro tema y añadimos el siguiente código:
 
-{% highlight php %}>function show_category_posts( $atts ){
+{% highlight php %}function show_category_posts( $atts ){
         extract(shortcode_atts(array(
                 'cat'=> ''
         ), $atts));

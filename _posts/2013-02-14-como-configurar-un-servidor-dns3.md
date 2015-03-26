@@ -48,7 +48,7 @@ Ya se ha visto que existe una base de datos centralizada que asocia nombres de d
 
 Con objetivo de que los emails enviados desde el dominio que se está configurando no sean clasificados como spam, es necesario crear la zona inversa en el archivo **named.conf.local**:
 
-{% highlight bash %}>zone "89.39.5.in-addr.arpa" {
+{% highlight bash %}zone "89.39.5.in-addr.arpa" {
  type master;
     file "pri.89.39.5.in-addr.arpa";
 };
@@ -62,7 +62,7 @@ El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador
   
 <!--more-->
 
-{% highlight bash %}>@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. (
+{% highlight bash %}@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. (
                         2013021001       ; serial, todays date + todays serial #
                         7200              ; refresh, seconds
                         540              ; retry, seconds
@@ -75,14 +75,14 @@ El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador
 
 A continuación, es necesario añadir un registro del tipo **PTR**. Los registros **PTR** son punteros. Apuntan a un nombre de dominio. Quedaría así:
 
-{% highlight bash %}>44   PTR elbauldelprogramador.com.
+{% highlight bash %}44   PTR elbauldelprogramador.com.
 {% endhighlight %}
 
 El 44 es el último valor de la dirección IP del servidor.
 
 Eso es todo, en este punto usaremos el comando **dig** para comprobar la configuración.
 
-{% highlight bash %}>$ dig elbauldelprogramador.com
+{% highlight bash %}$ dig elbauldelprogramador.com
 
 ; &lt;&lt;>> DiG 9.8.4-P1 &lt;&lt;>> elbauldelprogramador.com
 ;; global options: +cmd
@@ -104,7 +104,7 @@ elbauldelprogramador.com. 532    IN  A   5.39.89.44
 
 Así, estamos buscando la ip del dominio. Como se aprecia, devuelve el valor correcto en la sección **ANSWER SECTION**.
 
-{% highlight bash %}>$ dig -x 5.39.89.44
+{% highlight bash %}$ dig -x 5.39.89.44
 
 ; &lt;&lt;>> DiG 9.8.4-P1 &lt;&lt;>> -x 5.39.89.44
 ;; global options: +cmd
@@ -130,7 +130,7 @@ Esta vez, se está realizando la petición inversa, preguntamos por el dominio.
 
 En caso de disponer de otro servidor DSN propio, para configurarlo de modo que haga las veces de servidor DNS secundario es necesario añadir otra zona al archivo **named.conf.local** en el servidor **secundario**
 
-{% highlight bash %}>zone "DOMINIO" {
+{% highlight bash %}zone "DOMINIO" {
      type slave;
      file "sec.DOMINIO.COM";
      masters { DIRECCION IP SERVIDOR PRIMARIO; };
@@ -141,7 +141,7 @@ Esta vez, se declara la zona como **slave** o esclava y se especifica la direcci
 
 Por último, por razones de seguridad es recomendable agregar una línea adicional en archivo de zona del servidor **principal** que únicamente permita al servidor secundario realizar la transferencia de zona:
 
-{% highlight bash %}>zone "elbauldelprogramador.com" {
+{% highlight bash %}zone "elbauldelprogramador.com" {
         type master;
         allow-transfer {IP SERVIDOR DNS SECUNDARIO;};
         file "/etc/bind/pri.elbauldelprogramador.com";

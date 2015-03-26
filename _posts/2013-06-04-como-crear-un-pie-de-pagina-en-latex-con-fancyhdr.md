@@ -22,7 +22,7 @@ tags:
 
 Para poder crear pies de página y cabeceras es necesario usar el paquete *fancyhdr*, y establecer el estilo de página a *fancy*:
 
-{% highlight latex %}>\usepackage{fancyhdr}
+{% highlight latex %}\usepackage{fancyhdr}
 \pagestyle{fancy}
 {% endhighlight %}
 
@@ -44,20 +44,20 @@ Es necesario conocer el significado de las siguientes letras:
 
 Conocido el significado de las mismas, ahora es posible definir el estilo en el preámbulo:
 
-{% highlight latex %}>\fancyhead[CO,CE]{---Draft---}
+{% highlight latex %}\fancyhead[CO,CE]{---Draft---}
 \fancyfoot[C]{Confidential}
 \fancyfoot[RO, LE] {\thepage}
 {% endhighlight %}
 
 El grosor de las líneas decorativas puede cambiarse con:
 
-{% highlight latex %}>\renewcommand{\headrulewidth}{0.4pt}
+{% highlight latex %}\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 {% endhighlight %}
 
 Como apunte personal, uso plantillas para distintos tipos de documentos, estas plantillas vienen con un fichero de estilo propio y para no modificar directamente el valor del pie de página podemos crear un comando que permita establecer el contenido del pie de página. Por ejemplo, en el fichero que define la estructura del documento creamos el comando:
 
-{% highlight latex %}>\newcommand{\setFooterL}[1]{
+{% highlight latex %}\newcommand{\setFooterL}[1]{
     \fancyfoot[L]{\small\textit{#1}}
 }
 \newcommand{\setFooterR}[1]{
@@ -67,7 +67,7 @@ Como apunte personal, uso plantillas para distintos tipos de documentos, estas p
 
 Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambiar el texto del pie de página de la siguiente manera:
 
-{% highlight latex %}>\setFooterL{\href{http://twitter.com/elbaulp}{Alejandro Alcalde}}
+{% highlight latex %}\setFooterL{\href{http://twitter.com/elbaulp}{Alejandro Alcalde}}
 \setFooterR{\href{http://elbauldelprogramador.com}{elbauldelprogramador.com}}
 {% endhighlight %}
 

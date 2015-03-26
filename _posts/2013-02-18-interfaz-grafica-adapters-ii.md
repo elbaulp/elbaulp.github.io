@@ -43,7 +43,7 @@ Para explicar el funcionamiento nos vamos a basar en un ejemplo que listará las
 
 Lo primero que debemos hacer es crearnos una clase que almacenará los datos de cada una de las versiones:
 
-{% highlight java %}>package app.elbauldelprogramador.adapters2;
+{% highlight java %}package app.elbauldelprogramador.adapters2;
 
 public class VersionesUbuntu {
 
@@ -74,7 +74,7 @@ public class VersionesUbuntu {
 
 A continuación vamos a crear el adaptador desde cero, siendo necesario extender de la clase BaseAdapter.
 
-{% highlight java %}>package app.elbauldelprogramador.adapters2;
+{% highlight java %}package app.elbauldelprogramador.adapters2;
 
 import java.util.ArrayList;
 
@@ -145,7 +145,7 @@ El método ***getView()*** se invoca cada vez que hay que dibujar la lista.
 
 En este caso, para la lista, hemos usado un layout personalizado, que es el siguiente:
 
-{% highlight xml %}>&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
 &lt;relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -177,7 +177,7 @@ En este caso, para la lista, hemos usado un layout personalizado, que es el sigu
 
 Por último, tan solo queda usar el adaptador que hemos creado en los pasos anteriores en nuesta Actividad principal, en este caso, una ListActivity:
 
-{% highlight java %}>package app.elbauldelprogramador.adapters2;
+{% highlight java %}package app.elbauldelprogramador.adapters2;
 
 import java.util.ArrayList;
 

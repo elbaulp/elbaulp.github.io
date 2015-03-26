@@ -36,11 +36,11 @@ Antes de instalarlo es necesario resolver las dependencias del paquete instaland
 
 &nbsp;
 
-{% highlight bash %}>sudo aptitude install libgtk2-perl libyaml-perl{% endhighlight %}
+{% highlight bash %}sudo aptitude install libgtk2-perl libyaml-perl{% endhighlight %}
 
 Tras instalarlos, bajamos el e instalamos SelfControl:
 
-{% highlight bash %}>wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
+{% highlight bash %}wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
 sudo dpkg --install selfcontrol_0.9-1_all.deb{% endhighlight %}
 
 Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:  
@@ -56,7 +56,7 @@ Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos un
 
 &nbsp;
 
-{% highlight bash %}>$ sudo iptables --list
+{% highlight bash %}$ sudo iptables --list
 Chain INPUT (policy ACCEPT)
   target     prot opt source               destination         
 
@@ -70,7 +70,7 @@ Si no sale algo parecido quizá no tengas instalado iptables, aunque la mayoría
 
 Una vez que ejecutemos el programa aparecerá algo así:
 
-{% highlight bash %}>$ sudo iptables --list
+{% highlight bash %}$ sudo iptables --list
 Chain INPUT (policy ACCEPT)
   target     prot opt source               destination         
 

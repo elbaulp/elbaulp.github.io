@@ -37,13 +37,13 @@ constructor es que no tiene tipo de retorno, por lo que su sintaxis es más simp
 
 
 
-{% highlight cpp %}>Punto:: Punto (argumentos){% endhighlight %}
+{% highlight cpp %}Punto:: Punto (argumentos){% endhighlight %}
 
 
 
 Declaración del constructor: 
 
-{% highlight cpp %}>class Punto{
+{% highlight cpp %}class Punto{
     //...
   public:
     Punto (char chl, int x1, int yl);
@@ -53,7 +53,7 @@ Declaración del constructor:
 
 Definición del constructor. El constructor inicializa los miembros dato:
 
-{% highlight cpp %}>Punto::Punto (char ch1,int x1, int y1){
+{% highlight cpp %}Punto::Punto (char ch1,int x1, int y1){
   ch=chl;
   x=xl;
   y=yl; 
@@ -70,7 +70,7 @@ el número entero 40, y el miembro y, el entero 13.
 
 Se llama a las funciones miembro desde el objeto pt1
 
-{% highlight cpp %}>pt1.mostrar();
+{% highlight cpp %}pt1.mostrar();
 ptl.ocultar();
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ que permita cambiar las coordenadas del punto.
 
 Declaración del constructor
 
-{% highlight cpp %}>class Punto{
+{% highlight cpp %}class Punto{
     //...
   public:
     Punto (int xl, int yl);
@@ -89,7 +89,7 @@ Declaración del constructor
 
 Definición del constructor: se fija el carácter, y se le pasan las coordenadas del punto.
 
-{% highlight cpp %}>Punto::Punto(int xl, int yl){
+{% highlight cpp %}Punto::Punto(int xl, int yl){
   x 1=xl;
   y=y1;
   ch=’*’;
@@ -105,7 +105,7 @@ el número entero 40, y el miembro y, el entero 13.
 
 Se llama a las funciones miembro desde el objeto pt2
 
-{% highlight cpp %}>pt2.mostrar();
+{% highlight cpp %}pt2.mostrar();
 pt2.ocultar();
 {% endhighlight %}
 
@@ -114,7 +114,7 @@ constructor no tiene argumentos, se dice que es el constructor por defecto.
 
 Declaración del constructor por defecto de la clase
 
-{% highlight cpp %}>class Punto{
+{% highlight cpp %}class Punto{
     //...
   public:
     Punto();
@@ -125,7 +125,7 @@ Declaración del constructor por defecto de la clase
 Definición del constructor por defecto: los miembros dato se inicializan en el bloque  
 de dicho constructor
 
-{% highlight cpp %}>Punto::Punto(){
+{% highlight cpp %}Punto::Punto(){
   ch=’*’;
   x=40;
   y=13;
@@ -138,7 +138,7 @@ Para llamar al constructor por defecto, basta escribir:
 
 No escribir la sentencia:
 
-{% highlight cpp %}>Punto def();
+{% highlight cpp %}Punto def();
 //Error
 //Se llama a las funciones miembro desde el objeto def
 def.mostrar();

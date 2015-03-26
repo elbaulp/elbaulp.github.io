@@ -33,7 +33,7 @@ Por ejemplo, pongamos que los archivos son los siguientes:
   
 <!--more-->
 
-{% highlight bash %}>hkr@hkr:~/Desktop/RAP/d$ ls
+{% highlight bash %}hkr@hkr:~/Desktop/RAP/d$ ls
 01. Rafael Lechowski (Flowklorikos) - Uno - www.HHGroups.com.mp3
 02. Rafael Lechowski (Flowklorikos) - Lluvia y fuego - www.HHGroups.com.mp3
 03. Rafael Lechowski (Flowklorikos) - Donde duele inspira - www.HHGroups.com.mp3
@@ -51,14 +51,14 @@ Por ejemplo, pongamos que los archivos son los siguientes:
 
 Queremos elmininar las siguientes partes del nombre: **Rafael Lechowski (Flowklorikos)** y **www.HHGroups.com**. Para ello usamos la orden rename con la siguiente sintaxis:
 
-{% highlight bash %}>rename 's/Rafael Lechowski (Flowklorikos) - //g' *.mp3
+{% highlight bash %}rename 's/Rafael Lechowski (Flowklorikos) - //g' *.mp3
 {% endhighlight %}
 
 Lo que decimos con esa expresión regular es que reemplace lo que coincida con Rafael Lechowski (Flowklorikos) por nada, es decir, que lo elimine del nombre. Es necesario escapar con los espacios en blanco y los parentesis. El *.mp3 quiere decir que aplique el renombramiento a los archivos mp3.
 
 Como resultado, ahora los ficheros tienen el siguiente nombre:
 
-{% highlight bash %}>hkr@hkr:~/Desktop/RAP/d$ ls -1
+{% highlight bash %}hkr@hkr:~/Desktop/RAP/d$ ls -1
 01. Uno - www.HHGroups.com.mp3
 02. Lluvia y fuego - www.HHGroups.com.mp3
 03. Donde duele inspira - www.HHGroups.com.mp3
@@ -76,12 +76,12 @@ Como resultado, ahora los ficheros tienen el siguiente nombre:
 
 Falta eliminar la parte www.HHGroups.com, que lo conseguimos con esta orden:
 
-{% highlight bash %}>rename 's/ - www.HHGroups.com//g' *.mp3
+{% highlight bash %}rename 's/ - www.HHGroups.com//g' *.mp3
 {% endhighlight %}
 
 Y finalmente, tenemos todos nuestros archivos renombrados:
 
-{% highlight bash %}>hkr@hkr:~/Desktop/RAP/d$ ls -1
+{% highlight bash %}hkr@hkr:~/Desktop/RAP/d$ ls -1
 01. Uno.mp3
 02. Lluvia y fuego.mp3
 03. Donde duele inspira.mp3

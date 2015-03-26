@@ -36,7 +36,7 @@ Como PL/SQL es un lenguaje 3GL, cuenta con las estructuras típicas de control d
 
 La sintaxis básica es:
 
-{% highlight sql %}>IF condición THEN
+{% highlight sql %}IF condición THEN
   Bloque de instrucciones;
 [ELSIF condición THEN
   Bloque de instrucciones;]
@@ -55,13 +55,13 @@ Como en cualquier lenguaje de programación, &#8220;condición&#8221; es cualqui
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa o nula**, NO se realiza NINGUNA acción.
 
-{% highlight sql %}>IF fecha_nac &lt; '1-01-1970' THEN   <span class="comentario">--No termina con un ;</span>
+{% highlight sql %}IF fecha_nac &lt; '1-01-1970' THEN   <span class="comentario">--No termina con un ;</span>
   Salario := salario *1.15;       <span class="comentario">--aumento de salario en un 15%</span>
 END IF;{% endhighlight %}
 
 Se pueden anidar varias instrucciones:
 
-{% highlight sql %}>IF fecha_nac &lt; ‘1-01-1970’ THEN
+{% highlight sql %}IF fecha_nac &lt; ‘1-01-1970’ THEN
   IF apellido =‘Martínez’ THEN
     salario:= salario *1.15;
   END IF;
@@ -71,7 +71,7 @@ END IF;{% endhighlight %}
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa**, se ejecutan las instrucciones que siguen a la instrucción ELSE. Sólo se permite una instrucción ELSE en cada instrucción IF.
 
-{% highlight sql %}>IF fecha_nac &lt;’1-01-1970’ THEN
+{% highlight sql %}IF fecha_nac &lt;’1-01-1970’ THEN
   salario:= salario *1.15;
 ELSE
   salario:= salario* 1.05;
@@ -81,7 +81,7 @@ END IF;{% endhighlight %}
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte ser **falsa**, se evalúa la condición especificada en el ELSIF.
 
-{% highlight sql %}>IF condicion THEN
+{% highlight sql %}IF condicion THEN
   instrucciones;
 ELSE
   IF condicion2 THEN
@@ -93,7 +93,7 @@ ELSE
   END IF;
 END IF;{% endhighlight %}
 
-{% highlight sql %}>IF apellido =„Pérez‟ THEN
+{% highlight sql %}IF apellido =„Pérez‟ THEN
   salario:= salario *1.10;     <span class="comentario">--aumento de salario en un 10%</span>
 ELSIF apellido =‘Martínez’ THEN
   salario:= salario *1.15;     <span class="comentario">--aumento de salario en un 15%</span>
@@ -109,7 +109,7 @@ La instrucción CASE puede evaluar múltiples expresiones y devolver para cada u
 
 Su sintaxis:
 
-{% highlight sql %}>CASE variable
+{% highlight sql %}CASE variable
   WHEN expresión1 THEN valor1/bloque de instrucciones
   WHEN expresión2 THEN valor2/bloque de instrucciones
   WHEN expresión3 THEN valor3/bloque de instrucciones
@@ -119,7 +119,7 @@ END{% endhighlight %}
 
 Ejemplos:
 
-{% highlight sql %}>CREATE TABLE C2(
+{% highlight sql %}CREATE TABLE C2(
   Nombre  VARCHAR2(20 ),
   EC      VARCHAR2(1)
 );
@@ -143,7 +143,7 @@ FROM C2;{% endhighlight %}
 
 Otra sintaxis es:
 
-{% highlight sql %}>CASE
+{% highlight sql %}CASE
   WHEN condición1 THEN expresión1/bloque de instrucciones
   WHEN condición2 THEN expresión2/bloque de instrucciones
   WHEN condición3 THEN expresión3/bloque de instrucciones
@@ -155,14 +155,14 @@ En esta sintaxis después del CASE no aparece ninguna variable y cada WHEN tiene
 
 #### BUCLES
 
-{% highlight sql %}>LOOP
+{% highlight sql %}LOOP
   sentencias;
 END LOOP;{% endhighlight %}
 
 Las sentencias de dentro del bucle se ejecutarán durante un número indefinido de vueltas, hasta que aparezca la instrucción EXIT; que finalizará el bucle. Este tipo de bucle se denomina bucle  
 incondicional.
 
-{% highlight sql %}>LOOP
+{% highlight sql %}LOOP
   Sentencias
   IF (expresion) THEN
     Sentencias
@@ -172,7 +172,7 @@ END LOOP;{% endhighlight %}
 
 Otra opción es incluir la estructura EXIT WHEN condición, se terminará el bucle cuando la condición se cumpla:
 
-{% highlight sql %}>LOOP
+{% highlight sql %}LOOP
   Sentencias
   EXIT WHEN condición;
   Sentencias
@@ -180,7 +180,7 @@ END LOOP;{% endhighlight %}
 
 Ejemplo:
 
-{% highlight sql %}>DECLARE <span class="comentario">-- Declaración y asignación de variables</span>
+{% highlight sql %}DECLARE <span class="comentario">-- Declaración y asignación de variables</span>
   total NUMBER(9) := 0;
   counter NUMBER(6) := 0;
 BEGIN
@@ -196,13 +196,13 @@ END;{% endhighlight %}
 
 Un tipo de bucle más común son los bucles condicionales:
 
-{% highlight sql %}>WHILE condicion LOOP
+{% highlight sql %}WHILE condicion LOOP
   Sentencias
 END LOOP;{% endhighlight %}
 
 Ejemplo:
 
-{% highlight sql %}>DECLARE
+{% highlight sql %}DECLARE
   i       NUMBER := 1;
   i_cubed NUMBER;
 BEGIN
@@ -217,7 +217,7 @@ En los bucles WHILE también se pueden utilizar las órdenes EXIT o EXIT WHEN pa
 
 Y por último el bucle FOR:
 
-{% highlight sql %}>FOR contador IN [REVERSE] limite_inferior..limite_superior LOOP
+{% highlight sql %}FOR contador IN [REVERSE] limite_inferior..limite_superior LOOP
   sentencias
 END LOOP;{% endhighlight %}
 
@@ -225,7 +225,7 @@ Contador deberá ser una variable de tipo numérico que sea capaz de contener lo
 
 Si la variable contador no está definida, PL/SQL definirá una variable de tipo INTEGER al iniciar el bucle, y la liberará al finalizar el bucle.
 
-{% highlight sql %}>SET SERVEROUTPUT ON;
+{% highlight sql %}SET SERVEROUTPUT ON;
 BEGIN
   FOR loop_counter IN 1..10 LOOP
     DBMS_OUTPUT.PUT_LINE('Number: ' || TO_CHAR(loop_counter) || ' Square: ' || TO_CHAR(loop_counter**2));

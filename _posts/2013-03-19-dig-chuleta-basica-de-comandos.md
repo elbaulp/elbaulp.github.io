@@ -25,19 +25,19 @@ En un comentario hecho en la página de <a href="https://plus.google.com/b/10800
 
 El ejemplo más básico es:
 
-{% highlight bash %}>dig ejemplo.com
+{% highlight bash %}dig ejemplo.com
 {% endhighlight %}
 
 #### Obtener distintos tipos de registros DNS
 
 La sintaxis es:
 
-{% highlight bash %}>dig @servidor-dns ejemplo.com tipo-de-registro
+{% highlight bash %}dig @servidor-dns ejemplo.com tipo-de-registro
 {% endhighlight %}
 
 Ejemplo de uso:
 
-{% highlight bash %}>dig @208.67.222.222 google.com A
+{% highlight bash %}dig @208.67.222.222 google.com A
 
 ;; QUESTION SECTION:
 ;google.com.          IN  A
@@ -58,7 +58,7 @@ google.com.       300 IN  A   173.194.34.233
 
 #### Obtener los servidores de nombres
 
-{% highlight bash %}>dig @208.67.222.222 google.com NS
+{% highlight bash %}dig @208.67.222.222 google.com NS
 
 ;; QUESTION SECTION:
 ;google.com.            IN  NS
@@ -73,7 +73,7 @@ google.com.      172749  IN  NS  ns4.google.com.
 
 #### Obtener registros MX (De correo)
 
-{% highlight bash %}>dig @208.67.222.222 google.com MX
+{% highlight bash %}dig @208.67.222.222 google.com MX
 
 ;; QUESTION SECTION:
 ;google.com.            IN  MX
@@ -88,7 +88,7 @@ google.com.      469 IN  MX  30 alt2.aspmx.l.google.com.
 
 #### Obtener registros TXT
 
-{% highlight bash %}>dig @208.67.222.222 google.com TXT
+{% highlight bash %}dig @208.67.222.222 google.com TXT
 
 ;; QUESTION SECTION:
 ;google.com.          IN  TXT
@@ -100,7 +100,7 @@ google.com.        3600    IN  TXT "v=spf1 include:_spf.google.com ip4:216.73.93
 
 #### Obtener todos los tipos de registros en una misma consulta
 
-{% highlight bash %}>dig any google.com
+{% highlight bash %}dig any google.com
 
 ;; QUESTION SECTION:
 ;google.com.           IN  ANY
@@ -119,7 +119,7 @@ google.com.      172781  IN  NS  ns4.google.com.
 
 #### Realizar una consulta inversa
 
-{% highlight bash %}>dig -x 173.194.34.233
+{% highlight bash %}dig -x 173.194.34.233
 
 ;; QUESTION SECTION:
 ;233.34.194.173.in-addr.arpa.  IN  PTR

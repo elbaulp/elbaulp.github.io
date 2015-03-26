@@ -18,7 +18,7 @@ Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por r
 
 ## El script
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 
 for image in *.jpg *.JPG *.jpeg *.JPEG *.gif *.GIF *.bmp *.BMP *.png *.PNG;
 do 
@@ -30,7 +30,7 @@ done
 
 Yo lo modifiqué un poco acorde a mis necesidades:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 
 cd /ruta/mis/fondos
 
@@ -54,7 +54,7 @@ Para no modificar las imágenes originales, ya que están en *Drive*, y así pod
 
 Tras ésto, tenemos organizadas todas las imágenes en carpetas por resolución. Mi objetivo era eliminar las de menor resolución, así que fui apuntando dichas imágenes para luego borrarlas en la carpeta original (La de Drive), donde están todas juntas. Tras almacenar en un archivo los nombres de las imágenes a borrar, ejecuté el siguiente comando en la carpeta original:
 
-{% highlight bash %}>for i in $(cat ../ABorrar)
+{% highlight bash %}for i in $(cat ../ABorrar)
 do 
    find /Carpeta/original/ -iname $i -exec rm '{}' \; 
 done
@@ -64,7 +64,7 @@ done
 
 Como menciona Juanjo en el comentario, otra opción más adecuada es [renombrar][2] cada imagen con su resolución, para ello el siguiente script podría servir:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
  
 cd /ruta/imagenes/
 

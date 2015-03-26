@@ -48,14 +48,14 @@ Encontré un pequeño problema al instalarla, y era que al tener dos pantallas c
 
 Después de un poco de búsqueda por la red encontré solución al problema, usando el comando xrandr de la siguiente manera:
 
-{% highlight bash %}>xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2
+{% highlight bash %}xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2
 {% endhighlight %}
 
 Con esto estamos diciendo que la pantalla DVI-I-1 estará a la derecha la pantalla DVI-I-2
 
 El siguiente paso es hacer que este comando se ejecute siempre al iniciar el pc, para ello tenemos que modificar el archivo de autoarranque de OpenBox, que se llama *autostart* y suele estar en *~/.config/openbox*. Añadimos la siguiente línea debajo de *lxsession &*:
 
-{% highlight bash %}>xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &#038;
+{% highlight bash %}xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &#038;
 {% endhighlight %}
 
 De esta forma lo tenemos todo solucionado.
@@ -64,7 +64,7 @@ De esta forma lo tenemos todo solucionado.
 
 Para lograr esto usé un script que encontré en la red hace tiempo y lo modifiqué para adaptarlo a openbox, con la particularidad de que aplico un fondo de pantalla distinto y seleccionado aleatoriamente para cada una de las pantallas. El script en cuestión es el siguiente:
 
-{% highlight bash %}>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 picsfolder=$HOME"/Ruta/Imagenes/"
 bgSaved=$HOME"/.config/nitrogen/bg-saved.cfg"
 
@@ -104,7 +104,7 @@ Las siguientes líneas seleccionan dos imágenes aleatórias y una vez seleccion
 
 Para conseguir que esto funcione debemos volver a modificar el archivo *autostart* de openbox, colocando las siguientes líneas (En este caso debajo del comando xrandr):
 
-{% highlight bash %}>## Set desktop wallpaper
+{% highlight bash %}## Set desktop wallpaper
 /home/hkr/Pictures/wall_aleatorio.sh
 nitrogen --restore &#038;{% endhighlight %}
 
