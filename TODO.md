@@ -9,7 +9,7 @@
 - [ ] Google Analytics.
 - [ ] SEO.
 - [ ] Tradepub.
-- [ ] Mover imágenes.
+- [x] Mover imágenes.
 - [ ] Terminar de formatear todo.
 - [ ] Buy Sell Ads
 - [x] Add favicon
@@ -20,4 +20,5 @@
 - [ ] Ping Google
 - [ ] Featured Images
 - [ ] Importar comentarios
-- [ ] Cambiar default-thumb.png
+- [x] Cambiar default-thumb.png
+- [ ] Solucionar referencias
