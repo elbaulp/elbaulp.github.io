@@ -22,3 +22,4 @@
 - [ ] Importar comentarios
 - [x] Cambiar default-thumb.png
 - [ ] Solucionar referencias
+- [ ] Solucionar * * 
