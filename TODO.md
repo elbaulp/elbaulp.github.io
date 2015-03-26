@@ -12,7 +12,7 @@
 - [ ] Mover imágenes.
 - [ ] Terminarde formatear todo.
 - [ ] Buy Sell Ads
-- [ ] Add favicon
+- [x] Add favicon
 - [ ] Substitute old links with new
 - [ ] Subir logo.
 - [ ] Post Poker
