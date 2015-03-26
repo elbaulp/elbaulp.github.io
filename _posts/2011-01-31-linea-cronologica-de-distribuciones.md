@@ -33,3 +33,6 @@ A partir de estas 3, se abre un abanico inmenso de distribuciones, y seguro que 
   
 <!--more-->
 
+
+
+{% include _toc.html %}

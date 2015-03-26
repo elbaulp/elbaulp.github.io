@@ -49,3 +49,5 @@ Configura tu Sentinella con las mismas opciones de la imagen, pero asegurate que
 
 
  [1]: http://www.howtoforge.com/how-to-automatically-shut-down-your-computer-after-a-download-finishes
+
+{% include _toc.html %}

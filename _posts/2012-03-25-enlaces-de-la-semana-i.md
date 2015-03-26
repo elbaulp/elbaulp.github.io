@@ -40,3 +40,6 @@ Aquí el primer post de esta sección:
   * <a target="_blank" href="http://alt1040.com/2012/03/investigacion-grabar-terabytes-en-un-segundo">Investigadores desarrollan técnica para grabar terabytes de información en un segundo</a>
   * <a target="_blank" href="http://www.guzman6001.com.ve/posts/view/35/redes-sociales-y-su-codigo">Redes sociales y su código</a></p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p></p> 
 
+
+
+{% include _toc.html %}

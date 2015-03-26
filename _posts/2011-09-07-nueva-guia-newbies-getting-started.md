@@ -30,3 +30,5 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
  [1]:  http://img.tradepub.com/free/w_make07/images/w_make07c.gif "A Newbie's Getting Started Guide to Linux"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make07/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

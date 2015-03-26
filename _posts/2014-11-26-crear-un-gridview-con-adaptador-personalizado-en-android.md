@@ -212,3 +212,5 @@ Ahora solo ejecuta la aplicación y prueba su funcionamiento.
  [2]: http://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/ "Optimizando la interfaz Android – Compound Drawables"
  [3]: http://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
  [4]: https://www.dropbox.com/s/9m7ghv37tdrh781/Pics.rar?dl=0
+
+{% include _toc.html %}

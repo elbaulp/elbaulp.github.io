@@ -201,3 +201,6 @@ El ejemplo de esta entrada esta disponible para su descarga:
 
  [1]: /programacion-android-interfaz-grafica_25/
  [2]: /programacion-android-interfaz-grafica-2/
+
+
+{% include _toc.html %}

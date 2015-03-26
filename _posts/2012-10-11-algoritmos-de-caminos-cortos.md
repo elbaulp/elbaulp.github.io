@@ -170,3 +170,5 @@ Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para 
 
  [1]: /images/2012/10/Matriz_de_adyacencia1.jpg
  [2]: /images/2012/10/Caminosmascortos1.jpg
+
+{% include _toc.html %}

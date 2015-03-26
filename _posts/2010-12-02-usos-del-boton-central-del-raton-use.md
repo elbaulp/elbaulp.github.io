@@ -41,3 +41,6 @@ Y además podemos copiar dos cosas distintas al portapapeles, yo lo uso mucho en
 
 Aquí os dejo este pequeño truquito como curiosidad
 
+
+
+{% include _toc.html %}

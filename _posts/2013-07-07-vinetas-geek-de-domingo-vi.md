@@ -136,3 +136,6 @@ Disfrutad de lo que queda de fin de semana!
 *7* **|** <a href="http://thecodinglove.com/post/54685719434" target="_blank">Visitar sitio</a>  
 *8* **|** <a href="http://thecodinglove.com/post/54609919840" target="_blank">Visitar sitio</a>
 
+
+
+{% include _toc.html %}

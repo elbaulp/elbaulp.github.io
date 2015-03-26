@@ -39,3 +39,5 @@ Aunque el *logging* es necesario, tiene un impacto negativo significante en el r
  [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Android"
  [2]: http://elbauldelprogramador.com/?s=depurar&submit=
  [3]: http://elbauldelprogramador.com/opensource/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
+
+{% include _toc.html %}

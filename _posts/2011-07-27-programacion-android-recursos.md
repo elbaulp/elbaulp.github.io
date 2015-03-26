@@ -64,3 +64,5 @@ Para saber más acerca de los tipos de sufijos que se pueden usar, visita [Provi
 
  [1]: http://developer.android.com/guide/topics/resources/providing-resources.html
  [2]: /programacion-android-recursos-usando/
+
+{% include _toc.html %}

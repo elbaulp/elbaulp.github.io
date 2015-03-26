@@ -82,3 +82,5 @@ También dejo el link de pastebin: <http://pastebin.com/BhKYpYJf>
 
 
  [1]: http://elbauldelprogramador.com/crear-imagenes-en-miniaturas/
+
+{% include _toc.html %}

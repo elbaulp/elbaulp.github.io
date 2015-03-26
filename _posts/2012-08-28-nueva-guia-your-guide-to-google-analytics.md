@@ -44,3 +44,5 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
  [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make88/prgm.cgi
  [2]: http://www.topsecretwriters.com/
  [3]: /manuales-gratuitos/
+
+{% include _toc.html %}

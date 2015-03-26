@@ -41,3 +41,5 @@ Entonces, ¿como consiguen el efecto?, pues como bien han explicado en muyComput
 
 
  [1]: http://www.muycomputer.com/2011/04/12/ipad-2-mostrando-contenidos-3d-sin-necesidad-de-gafas
+
+{% include _toc.html %}

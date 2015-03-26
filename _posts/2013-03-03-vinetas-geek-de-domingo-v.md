@@ -29,3 +29,6 @@ Otro domingo más, otra entrada de la sección Viñetas Geek de Domingo. Disfrut
 
 *thecodinglove* **|** <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a> 
 
+
+
+{% include _toc.html %}

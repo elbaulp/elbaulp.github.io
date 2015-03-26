@@ -187,3 +187,5 @@ Marta.
  [4]: http://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/ "Instalar ATOM"
  [5]: http://miktex.org/ "MikTeX"
  [6]: https://github.com/mgmacias95/CursoLaTex/ "github"
+
+{% include _toc.html %}

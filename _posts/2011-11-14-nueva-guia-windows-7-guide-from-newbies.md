@@ -43,3 +43,5 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
  [1]:  http://img.tradepub.com/free/w_make13/images/w_make13c.gif " The Windows 7 Guide: From Newbies to Pros"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make13/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

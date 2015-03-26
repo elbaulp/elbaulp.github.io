@@ -109,3 +109,6 @@ Make any link standout more when applying the `.btn` class.
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 {: .notice}
+
+
+{% include _toc.html %}

@@ -136,3 +136,5 @@ Creo que este CMS promete mucho, personalmente me ha gustado y en un futuro no d
  [8]: /images/2013/03/Login-to-bolt-CMS.png
  [9]: /images/2013/03/Bolt-Home-PAge-CMS.png
  [10]: /images/2013/03/bolt-debug.png
+
+{% include _toc.html %}

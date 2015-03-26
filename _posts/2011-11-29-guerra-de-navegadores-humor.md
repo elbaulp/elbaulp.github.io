@@ -32,3 +32,6 @@ categories:
   <a href="http://1.bp.blogspot.com/-wZ_f7F4Pu0U/TtQVMHdSYfI/AAAAAAAAB24/ULWxHKOWEro/s1600/iechromefirefox.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="chrome firefox internet explorer" border="0" height="309" width="400" src="http://1.bp.blogspot.com/-wZ_f7F4Pu0U/TtQVMHdSYfI/AAAAAAAAB24/ULWxHKOWEro/s400/iechromefirefox.jpg" /></a>
 </div>
 
+
+
+{% include _toc.html %}

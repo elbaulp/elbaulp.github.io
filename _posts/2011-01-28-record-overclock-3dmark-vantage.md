@@ -36,3 +36,6 @@ En muy computer he leido esta notícia en la que un overclocker muy conocido ha 
 
 <a target="_blank" href="http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDBooJjurzs9I78Vdg8PSoSmChGc3DKEx4BqDcX1tjzFYzL9cxbnQ_iJ">Entrada original.</a></p> 
 
+
+
+{% include _toc.html %}

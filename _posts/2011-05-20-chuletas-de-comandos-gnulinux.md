@@ -124,3 +124,5 @@ Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLi
  [68]: http://www.scottklarr.com/media/cheatsheets/linux/38.jpg "Chuletas a cascoporro"
  [69]: http://thesiblog.blogspot.com/2007/11/ubuntu-cheat-sheet-keyboard-shortcut.html
  [70]: http://www.muylinux.com/2009/12/17/chuletas-a-cascoporro/
+
+{% include _toc.html %}

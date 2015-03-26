@@ -25,3 +25,5 @@ Computing surveyed 140 business decision makers in order to understand how organ
 
  [1]: /manuales-gratuitos/
  [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
+
+{% include _toc.html %}

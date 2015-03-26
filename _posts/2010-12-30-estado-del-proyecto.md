@@ -43,3 +43,5 @@ He depositado mucha ilusión en esta aventura que espero que merezca la pena. Co
 
  [1]: http://elbauldelprogramador.com/nuevo-proyecto-aventura-grafica-con-sdl/
  [2]: https://code.launchpad.net/~algui91/+junk/SpyWar
+
+{% include _toc.html %}

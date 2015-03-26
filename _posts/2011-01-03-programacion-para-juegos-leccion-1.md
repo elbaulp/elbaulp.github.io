@@ -54,3 +54,5 @@ Para los usuarios de GNU/Linux dejo el comando de instalación de las librerias:
  [3]: http://www.lazyfoo.net/SDL_tutorials/lesson01/mac/index.php
  [4]: http://www.lazyfoo.net/SDL_tutorials/
  [5]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-12/#more
+
+{% include _toc.html %}

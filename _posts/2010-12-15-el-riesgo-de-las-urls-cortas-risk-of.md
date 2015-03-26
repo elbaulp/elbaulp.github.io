@@ -26,3 +26,6 @@ Existen algunos métodos para realizar esta comprobación. <a target="_blank" hr
 
 Ambos nos devolverán la dirección del enlace *&#8220;real&#8221;*. Pero si el enlace nos lo envía álguien que no conocemos, lo lógico es no abrirlo.
 
+
+
+{% include _toc.html %}

@@ -230,3 +230,5 @@ public class SitesProvider extends ContentProvider{
  [5]: /2011/11/programacion-android-proveedores-de_28.html
  [6]: /2012/01/programacion-android-implementando-un_14.html
  [7]: /programacion-android-implementando-un_14/
+
+{% include _toc.html %}

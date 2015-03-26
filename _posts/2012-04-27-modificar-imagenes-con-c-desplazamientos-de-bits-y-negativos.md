@@ -14,3 +14,6 @@ categories:
 ---
 Debido a una comunicación que recibí desde mi facultad, este artículo no puede estar disponible en la red, disculpad las molestias. Un saludo.
 
+
+
+{% include _toc.html %}

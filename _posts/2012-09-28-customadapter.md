@@ -506,3 +506,5 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
  [7]: #desplazarLista
  [8]: #SavedInstanceState
  [9]: /programacion/fundamentos-programacion-android-ciclo/
+
+{% include _toc.html %}

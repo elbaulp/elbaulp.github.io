@@ -90,3 +90,5 @@ Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he
 
  [1]: /2010/10/chistes-de-informaticos.html
  [2]: /2011/12/humor-grafico-informaticos.html
+
+{% include _toc.html %}

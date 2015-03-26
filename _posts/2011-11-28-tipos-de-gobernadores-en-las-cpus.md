@@ -59,3 +59,5 @@ Fuentes: <a target="_blank" href="http://publib.boulder.ibm.com/infocenter/lnxin
 
 
  [1]: /2011/09/rootear-samsung-galaxy-s-gt-i9003.html
+
+{% include _toc.html %}

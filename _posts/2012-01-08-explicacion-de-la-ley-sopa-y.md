@@ -51,3 +51,6 @@ Quizás muchos no sepan siquiera que existe esta ley, pero si se llega a aprobar
   * <a target="_blank" href="http://alt1040.com/2012/01/opcion-nuclear-el-23-de-enero-google-podria-desconectar-la-red-contra-sopa"><b>Opción nuclear: el 23 de enero Google podría desconectar la red contra SOPA</b></a>
   * <a target="_blank" href="http://alt1040.com/2011/11/dot-bit-proyecto-de-internet-anonima-contra-sopa-y-el-bloqueo-dns">Dot-BIT, construyen una red anónima contra SOPA y el bloqueo DNS</a>
 
+
+
+{% include _toc.html %}

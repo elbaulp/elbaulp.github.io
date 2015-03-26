@@ -98,3 +98,6 @@ Listo, ya puedes usar este shortcode.
 
 *cyberciti* **|** <a href="http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/" target="_blank">Visitar sitio</a> 
 
+
+
+{% include _toc.html %}

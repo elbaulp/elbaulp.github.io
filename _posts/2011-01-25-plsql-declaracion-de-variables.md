@@ -75,3 +75,5 @@ Un bloque tiene acceso a los objetos identificados dentro de su esquema. Solo po
 
 
  [1]: http://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/
+
+{% include _toc.html %}

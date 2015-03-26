@@ -25,3 +25,6 @@ Se llama backtrack linux, y aqui esta su pagina:
 http://www.backtrack-linux.org/?lang=es  
 <span class="fullpost"> </span>
 
+
+
+{% include _toc.html %}

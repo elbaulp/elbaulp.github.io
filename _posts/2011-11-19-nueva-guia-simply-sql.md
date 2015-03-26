@@ -40,3 +40,5 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
  [1]: https://lh5.googleusercontent.com/-ZfWCIW0WLzc/TsbiIHxeMpI/AAAAAAAAByg/wbKLITU4u5c/s150/w_sitb13c.gif "Simply SQL"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb13/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

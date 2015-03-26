@@ -249,3 +249,5 @@ Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invo
  [3]: /fundamentos-programacion-android_16/
  [4]: http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT
  [5]: /programacion-android-intents-categorias/
+
+{% include _toc.html %}

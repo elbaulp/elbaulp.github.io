@@ -103,3 +103,5 @@ sudo apt-get install grub-customizer</code>{% endhighlight %}
       </h4>
       
       
+
+{% include _toc.html %}

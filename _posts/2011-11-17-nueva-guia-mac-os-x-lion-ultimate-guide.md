@@ -41,3 +41,5 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
  [1]: https://lh3.googleusercontent.com/-yeaRQKAqtZ4/TslfYMSpdTI/AAAAAAAABzs/h9H-nIMmma8/s300/lion1-240x300.jpg "Mac OS X Lion: The Ultimate Guide"
  [2]: http://elbauldelprogramador.tradepub.com/free/w_make45/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

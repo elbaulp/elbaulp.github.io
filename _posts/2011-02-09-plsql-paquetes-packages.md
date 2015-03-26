@@ -160,3 +160,5 @@ PL/SQL nos permite que varios procedimientos o funciones almacenadas, declaradas
  [3]: http://elbauldelprogramador.com/plsql-excepciones/
  [4]: http://elbauldelprogramador.com/plsql-cursores/
  [5]: http://elbauldelprogramador.com/plsql-disparadores-o-triggers/
+
+{% include _toc.html %}

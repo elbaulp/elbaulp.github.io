@@ -39,3 +39,6 @@ Para ver todas las características puedes ver el artículo completo en <a targe
   
 Descarga: <a target="_blank" href="http://code.google.com/p/feedindicator/downloads/detail?name=feedindicator-20110207.tar.gz">FeedIndicator</a></p> 
 
+
+
+{% include _toc.html %}

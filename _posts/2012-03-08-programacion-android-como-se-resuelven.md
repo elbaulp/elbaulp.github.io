@@ -90,3 +90,5 @@ Si una actividad no tiene declarada la categoría por defecto, pero conocemos su
  [1]: /2012/02/programacion-android-intents-categorias.html
  [2]: /2012/02/programacion-android-intents-conceptos.html
  [3]: /programacion-android-ejemplos-de-uso-de/
+
+{% include _toc.html %}

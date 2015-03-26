@@ -96,3 +96,5 @@ content://contacts/people/23
  [3]: /fundamentos-programacion-android_16/
  [4]: /search/?q=favsites
  [5]: /programacion-android-proveedores-de_28/
+
+{% include _toc.html %}

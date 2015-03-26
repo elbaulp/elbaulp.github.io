@@ -84,3 +84,5 @@ Para mostrar el contenido de una expresión se debe utilizar la sentencia:
 
 
  [1]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/
+
+{% include _toc.html %}

@@ -42,3 +42,5 @@ categories:
 
 
  [1]: http://theoatmeal.com/blog/fix_computer
+
+{% include _toc.html %}

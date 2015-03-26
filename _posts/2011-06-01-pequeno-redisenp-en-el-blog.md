@@ -34,3 +34,5 @@ Los cambios que he realizado son los siguientes,
 
 
  [1]: http://elbauldelprogramador.com/video-demostracion-del-proyecto-wifibar/
+
+{% include _toc.html %}

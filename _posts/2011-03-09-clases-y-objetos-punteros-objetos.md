@@ -95,3 +95,5 @@ por ptro_pt, sin esperar a que se alcance el final del bloque de su ámbito de d
 
 
  [1]: http://elbauldelprogramador.com/clases-y-objetos-arrays/
+
+{% include _toc.html %}

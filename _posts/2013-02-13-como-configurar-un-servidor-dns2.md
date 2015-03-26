@@ -136,3 +136,5 @@ En el siguiente artículo se verá el archivo de zona inversa y la configuració
 
  [1]: /articulos/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
  [2]: /articulos/como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
+
+{% include _toc.html %}

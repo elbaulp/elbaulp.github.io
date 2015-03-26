@@ -51,3 +51,5 @@ De igual manera, pero esta vez hay que añadir `hw.dPad=yes` al fichero de confi
 
 
  [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
+
+{% include _toc.html %}

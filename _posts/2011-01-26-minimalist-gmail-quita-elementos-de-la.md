@@ -38,3 +38,6 @@ Podemos controlar hasta más de 40 elementos y, entre algunas de opciones que in
 Fuente: <a target="_blank" href="http://www.genbeta.com/linux/minimalist-gmail-quita-elementos-de-la-interfaz-de-gmail-en-chrome">GenBeta</a>  
 
 
+
+
+{% include _toc.html %}

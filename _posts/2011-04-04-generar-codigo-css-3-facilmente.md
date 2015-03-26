@@ -41,3 +41,5 @@ Espero que sea útil para los lectores del blog. Saludos
  [2]: http://www.css3maker.com/
  [3]: http://css3generator.com/
  [4]: http://elbauldelprogramador.com/probando-css3-en-el-blog/
+
+{% include _toc.html %}

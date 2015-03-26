@@ -85,3 +85,5 @@ Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiemp
  [4]: http://support.microsoft.com/kb/313100
  [5]: http://www.akadia.com/download/documents/sqlsrv_jdbc.tar.gz
  [6]: http://www.akadia.com/services/sqlsrv_jdbc.html
+
+{% include _toc.html %}

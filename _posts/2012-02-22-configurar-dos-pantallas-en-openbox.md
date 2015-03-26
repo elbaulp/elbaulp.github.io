@@ -114,3 +114,6 @@ Os dejo una captura:
   <a href="http://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="160" width="400" src="http://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" /></a>
 </div>
 
+
+
+{% include _toc.html %}

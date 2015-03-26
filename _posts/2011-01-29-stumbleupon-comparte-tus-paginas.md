@@ -38,3 +38,6 @@ En cada post del blog hay un boton con el sinbolo de stumbleUpon <img border="0"
 
 Dejo mi <a target="_blank" href="http://www.stumbleupon.com/stumbler/algui91/">perfil en StumbleUpon</a> para quien quiera seguirme, y un pequeño <a target="_blank" href="http://www.stumbleupon.com/productdemo/">video tutorial de iniciación</a>
 
+
+
+{% include _toc.html %}

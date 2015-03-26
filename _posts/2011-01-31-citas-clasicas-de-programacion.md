@@ -127,3 +127,6 @@ Einstein argued that there must be simplified explanations of nature, because Go
   
 *- Fred Brooks*
 
+
+
+{% include _toc.html %}

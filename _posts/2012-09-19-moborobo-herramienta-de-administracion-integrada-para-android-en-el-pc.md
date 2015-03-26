@@ -87,3 +87,6 @@ tags:
   Para descargarlo, puedes visitar la página oficial de la aplicación: <a href="http://es.moborobo.com/" target="_blank">http://es.moborobo.com</a> (para instalar la aplicación para el PC y móvil)o instalarla desde <a href="https://play.google.com/store/apps/details?id=com.moborobo.daemon&feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb2Jvcm9iby5kYWVtb24iXQ.." target="_blank">Google Play</a> (Solo la parte para el móvil).
 </p>
 
+
+
+{% include _toc.html %}

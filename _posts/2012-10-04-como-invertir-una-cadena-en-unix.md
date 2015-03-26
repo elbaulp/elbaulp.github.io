@@ -94,3 +94,5 @@ php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
  [1]: https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png
  [2]: /python/
  [3]: /php/
+
+{% include _toc.html %}

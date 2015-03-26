@@ -250,3 +250,5 @@ Os dejo otras crónicas de gente que participó en este evento:
  [17]: http://detraducciones.blogspot.com/2012/03/3-hackathon-de-proyectos-de-software.html
  [18]: http://www.rubencaceres.com/proyecto/espanol-free-publi-displays-en-el-3o-hackathon-de-proyectos-de-software-libre
  [19]: /2012/03/mi-experiencia-en-el-3-hackathon-de-la.html
+
+{% include _toc.html %}

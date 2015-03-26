@@ -91,3 +91,6 @@ Es recomendable firmar todos los archivos que cifremos con **gpg** para asegurar
 *Plugin para Vim* **|** <a href="http://www.vim.org/scripts/script.php?script_id=3645" target="_blank">Visitar sitio</a>  
 *Introducción a <strong>gpg</strong>* **|** <a href="http://www.genbetadev.com/seguridad-informatica/manual-de-gpg-cifra-y-envia-datos-de-forma-segura" target="_blank">genbeta::dev</a>
 
+
+
+{% include _toc.html %}

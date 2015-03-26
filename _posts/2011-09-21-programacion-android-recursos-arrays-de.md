@@ -56,3 +56,5 @@ for (String s: strings)
 
 
  [1]: /programacion-android-recursos-plurales/
+
+{% include _toc.html %}

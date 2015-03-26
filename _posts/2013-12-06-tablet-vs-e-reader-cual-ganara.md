@@ -50,3 +50,6 @@ En definitiva, parece que las tablets serían las claras ganadoras en una batall
 *Autora:  
 Gloria Lorenzi es una estudiante italiana de Periodismo y Mass Media en la Westminster University de Londres. Es una apasionada de tecnología y le encantan los idiomas: dos intereses que intenta conciliar a menudo en sus artículos. Ha elegido el Reino Unido para perseguir su objetivo de llegar a ser un día periodista.*
 
+
+
+{% include _toc.html %}

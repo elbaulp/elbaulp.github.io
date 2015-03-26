@@ -37,3 +37,5 @@ Por ejemplo, [esta extensión][1] permite buscar y cambiar entre las pestañas a
 
  [1]: https://chrome.google.com/webstore/detail/gbfhhcljihbgcobpfnceegfmooomhhli
  [2]: http://2.bp.blogspot.com/-xmmCeTmlNto/TWQT84LU5zI/AAAAAAAAAC8/5PG5f9FI__U/s1600/Screen%2Bshot%2B2011-02-22%2Bat%2B10.01.28%2BAM.png
+
+{% include _toc.html %}

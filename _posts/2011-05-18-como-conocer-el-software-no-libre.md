@@ -65,3 +65,5 @@ $ cowsay -f rms -W 60 `vrms`
 
  [1]: http://proyectosbeta.blogspot.com
  [2]: http://proyectosbeta.blogspot.com/2011/05/crear-la-cara-de-richard-stallmann-con.html
+
+{% include _toc.html %}

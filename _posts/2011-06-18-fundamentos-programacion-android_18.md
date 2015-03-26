@@ -50,3 +50,5 @@ Es muy importante implementar bien los métodos de estado, para evitar perden in
 
 
  [1]: /programacion-android-trabajar-con/
+
+{% include _toc.html %}

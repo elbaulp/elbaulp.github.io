@@ -56,3 +56,6 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 <span class="bash">esac</span>
 {% endhighlight %}
 
+
+
+{% include _toc.html %}

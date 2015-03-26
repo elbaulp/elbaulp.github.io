@@ -66,3 +66,6 @@ Este resultado contiene 3 números que significan:
 
 El kernel de Linux asigna los identificadores de archivos de forma dinámica, pero no los libera de nuevo. Si el número de archivos asignados se encuentra cercano al máximo, se debe considerar aumentar el <a target="_blank" href="http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/">número máximo de archivos abiertos permitidos</a> editando el archivo <a target="_blank" href="http://www.cyberciti.biz/faq/making-changes-to-proc-filesystem-permanently/">/etc/sysctl.conf</a>
 
+
+
+{% include _toc.html %}

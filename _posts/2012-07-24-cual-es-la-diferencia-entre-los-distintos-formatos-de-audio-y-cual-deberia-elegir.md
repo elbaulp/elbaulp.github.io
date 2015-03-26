@@ -82,3 +82,5 @@ Imagen | <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" targ
 
 
  [1]: /images/2012/07/original-11.jpg
+
+{% include _toc.html %}

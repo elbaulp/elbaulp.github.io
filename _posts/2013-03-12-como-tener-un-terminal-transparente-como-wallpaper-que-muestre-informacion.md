@@ -112,3 +112,5 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
  [4]: /category/script/
  [5]: /tag/xmonad/
  [6]: /tag/openbox/
+
+{% include _toc.html %}

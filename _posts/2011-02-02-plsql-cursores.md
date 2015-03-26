@@ -351,3 +351,5 @@ END;
  [3]: http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
  [4]: http://elbauldelprogramador.com/introduccion-plsql-transacciones/
  [5]: http://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+
+{% include _toc.html %}

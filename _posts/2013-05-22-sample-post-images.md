@@ -60,3 +60,5 @@ And you'll get something that looks like this:
 	<img src="http://placehold.it/600x300.jpg">
 	<figcaption>Three images.</figcaption>
 </figure>
+
+{% include _toc.html %}

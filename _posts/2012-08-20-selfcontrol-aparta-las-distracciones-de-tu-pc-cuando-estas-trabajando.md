@@ -94,3 +94,5 @@ Fuente | <a href="http://www.datamation.com/open-source/15-must-have-linux-appli
 
  [1]: /images/2012/08/selfcontrol11.png
  [2]: /images/2012/08/Selfcontro11.png
+
+{% include _toc.html %}

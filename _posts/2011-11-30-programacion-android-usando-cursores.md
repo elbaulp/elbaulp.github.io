@@ -100,3 +100,5 @@ Por último, para obtener el número de registros que hay en el cursor, podemos 
 
 
  [1]: /programacion-android-usando-la-clausula/
+
+{% include _toc.html %}

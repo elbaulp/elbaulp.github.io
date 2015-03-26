@@ -190,3 +190,5 @@ En este archivo se definen el paquete por defecto, datos de versión, icono (med
  [3]: http://lmgtfy.com/?q=instalar+y+configurar+android+sdk+eclipse
  [4]: /p/guia-de-desarrollo-android.html
  [5]: /opensource/fundamentos-programacion-android/
+
+{% include _toc.html %}

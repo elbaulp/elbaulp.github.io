@@ -37,3 +37,5 @@ Espero que os sea útil esta información, y que os animéis a programar.
 
  [1]: http://elbauldelprogramador.com/manual-de-python/
  [2]: http://bashyc.blogspot.com/p/curso-c.html
+
+{% include _toc.html %}

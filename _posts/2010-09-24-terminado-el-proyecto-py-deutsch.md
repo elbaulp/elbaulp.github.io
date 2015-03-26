@@ -28,3 +28,6 @@ Hola, recientemente, un compañero (Haitike), y yo,Terminamos un proyecto que co
   Espero que les guste.<br /> En cuanto podamos sacaremos la versión en c++.<br /> </span>
 </p>
 
+
+
+{% include _toc.html %}

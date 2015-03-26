@@ -436,3 +436,6 @@ Espero que os haya servido de ayuda.
 
  [1]: http://elbauldelprogramador.com/django/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
  [2]: http://elbauldelprogramador.com/articulos/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
+
+
+{% include _toc.html %}

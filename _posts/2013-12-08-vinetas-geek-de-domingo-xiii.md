@@ -90,3 +90,5 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
  [1]: http://elbauldelprogramador.com/category/offtopic/vinetas-geek/ "Viñetas Geek de Domingo"
  [2]: http://elbauldelprogramador.com/articulos/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: http://elbauldelprogramador.com/python/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
+
+{% include _toc.html %}

@@ -183,3 +183,6 @@ Espero que os sirva de ayuda.
  [1]: http://developer.android.com/guide/topics/ui/menus.html
  [2]: http://devgui-android-es.netii.net/descargar.php?archivo=menus.zip&sub=android
  [3]: /programacion-android-interfaz-grafica_11/
+
+
+{% include _toc.html %}

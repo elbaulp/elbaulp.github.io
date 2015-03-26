@@ -110,3 +110,6 @@ Las características principales de los procesos son:
 
 &#8211; Los sistemas operativos deben proporcionar alguna forma de crear y destruir los procesos. Cada proceso tiene un padre y cero o más hijos. Así, existe una jerarquía de procesos que se puede representar en forma de árbol.
 
+
+
+{% include _toc.html %}

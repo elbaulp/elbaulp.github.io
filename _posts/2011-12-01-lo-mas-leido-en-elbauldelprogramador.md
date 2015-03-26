@@ -68,3 +68,5 @@ Claramente gana Windows con un 68%, seguido de Linux (17%), MAC (4%) y Android (
  [8]: /2011/11/los-desarrolladores-de-gnome-crean.html
  [9]: /programacion-android-interfaz-grafica_23/
  [10]: /2011/07/programacion-android-interfaz-grafica_11.html
+
+{% include _toc.html %}

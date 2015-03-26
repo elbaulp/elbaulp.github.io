@@ -37,3 +37,6 @@ He estado buscando logos para el blog, y me gustaría que votárais cual de esto
   
 <!--more-->
 
+
+
+{% include _toc.html %}

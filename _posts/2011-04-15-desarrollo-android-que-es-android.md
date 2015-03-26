@@ -213,3 +213,5 @@ tags:
 
 
  [1]: http://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte/
+
+{% include _toc.html %}

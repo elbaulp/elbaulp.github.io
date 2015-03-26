@@ -48,3 +48,5 @@ La interfaz aún es un poco fría y no muy amigable, pero de momento nos estamos
 
 
  [1]: http://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/
+
+{% include _toc.html %}

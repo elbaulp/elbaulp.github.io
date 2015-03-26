@@ -90,3 +90,6 @@ findpart /home/vivek/test.txt
 
 Vía <a target="_blank" href="http://www.cyberciti.biz/faq/linux-unix-command-findout-on-which-partition-file-directory-exits/">cyberciti</a>
 
+
+
+{% include _toc.html %}

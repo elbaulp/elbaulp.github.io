@@ -132,3 +132,5 @@ objs--;          <span class="comentario">//retrocede a objs[1]</span>
 
 
  [1]: http://elbauldelprogramador.com/clases-y-objetos-pasar-un-objeto-una/
+
+{% include _toc.html %}

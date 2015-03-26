@@ -56,3 +56,6 @@ La nueva versi&oacute;n **beta 9** de **Mozilla Firefox 4.0 **est&aacute; replic
   Hace tan s&oacute;lo dos d&iacute;as <a href="http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDAuTGbDGO9VGMaFYVz8198fvhnjoDi3v267m0betOw5f36BZymLcDOH" target="_blank">os informamos</a> sobre la fecha estimada de llegada de la <strong>versi&oacute;n final</strong>, que si todo va seg&uacute;n lo previsto ser&aacute; para <a href="http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDAuTGbDGO9VGMaFYVz8198fvhnjoDi3v267m0betOw5f36BZymLcDOH" target="_blank">antes de que finalice febrero</a>.
 </p>
 
+
+
+{% include _toc.html %}

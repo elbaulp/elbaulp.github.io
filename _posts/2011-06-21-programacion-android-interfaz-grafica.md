@@ -89,3 +89,6 @@ Podemos acceder al contexto de diferentes formas en función de donde nos encont
  [1]: /programacion-android-trabajar-con/
  [2]: /fundamentos-programacion-android_16/
  [3]: /programacion-android-interfaz-grafica_23/
+
+
+{% include _toc.html %}

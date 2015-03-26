@@ -33,3 +33,5 @@ He visto en muyComputer Un Curso de linux que dejo a vuestra dispocición en est
     <a href="http://muycomputer.com/files/302-14956-FICHEROLAB/Curso_Linux_ACastro.pdf"><img src="http://lh4.ggpht.com/_IlK2pNFFgGM/TTGW5XRJ6FI/AAAAAAAAAQU/7AeQSIC57tM/descargar.gif" alt="Descargar" /></a> </div> 
     
     
+
+{% include _toc.html %}

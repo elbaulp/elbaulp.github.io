@@ -70,3 +70,6 @@ Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en esp
  30. Action Bar 
  31. Selected Topics in Android 3.0 
 
+
+
+{% include _toc.html %}

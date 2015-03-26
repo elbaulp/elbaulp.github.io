@@ -79,3 +79,5 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
 
  [1]: http://elbauldelprogramador.com/articulos/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [2]: http://elbauldelprogramador.com/opensource/ "Categoría OpenSource"
+
+{% include _toc.html %}

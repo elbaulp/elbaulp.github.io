@@ -111,3 +111,5 @@ Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Prefer
  [1]: http://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/ "Cómo crear un diálogo personalizado en las preferencias Android"
  [2]: http://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/ "Programación Android: Interfaz gráfica – Layouts"
  [3]: http://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/ "Programación Android: Interfaz gráfica – Estilos y Temas"
+
+{% include _toc.html %}

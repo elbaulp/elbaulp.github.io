@@ -72,3 +72,5 @@ Estrictamente hablando, la responsabilidad de los CV abarcan más mecanismos de 
 
 
  [1]: /programacion-android-arquitectura-de/
+
+{% include _toc.html %}

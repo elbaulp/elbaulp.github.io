@@ -47,3 +47,6 @@ Con esto se tiene la posibilidad de dispositivos Android más baratos con una au
 
 Vía <a target="_blank" href="http://www.slashgear.com/linux-3-3-eats-android-19218970/">slashgear.com</a> Vía <a target="_blank" href="http://kernelnewbies.org/Linux_3.3#head-b733d694037e0b34ad47e1b5d38ebc4d1bd1d89f">kernelnewbies.org</a>
 
+
+
+{% include _toc.html %}

@@ -53,3 +53,5 @@ Por último, decir como siempre, que toda crítica es bienvenida, pero por favor
 
  [1]: /2011/09/mejoras-en-la-aplicacion-fav-sites.html
  [2]: http://qrcode.kaywa.com/img.php?s=6&d=http%3A%2F%2Fwww.megaupload.com%2F%3Fd%3DJ8Q7TH0M
+
+{% include _toc.html %}

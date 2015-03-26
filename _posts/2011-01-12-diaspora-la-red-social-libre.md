@@ -87,3 +87,5 @@ Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red so
  [1]: http://www.ubuntizandoelplaneta.com/
  [2]: https://joindiaspora.com/
  [3]: http://www.ubuntizandoelplaneta.com/2011/01/probamos-diaspora-la-red-social-libre.html
+
+{% include _toc.html %}

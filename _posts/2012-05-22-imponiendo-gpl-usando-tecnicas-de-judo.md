@@ -136,3 +136,6 @@ Detrás de las principales historias de litigios subyace una realidad más tranq
 
 ## Fuente: <a href="http://www.h-online.com/open/features/Enforcing-the-GPL-with-Judo-moves-1471698.html" target="_blank">h-online</a>
 
+
+
+{% include _toc.html %}

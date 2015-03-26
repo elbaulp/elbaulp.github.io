@@ -71,3 +71,5 @@ Por ultimo algunas capturas:
 
  [1]: http://elbauldelprogramador.com/programa-que-envia-mensajes-desde/
  [2]: http://casidiablo.net/java-socket-chat-basico/
+
+{% include _toc.html %}

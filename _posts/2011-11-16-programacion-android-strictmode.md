@@ -159,3 +159,5 @@ Como se puede apreciar, simplemente hemos metido todos los ejemplos que vimos an
  [3]: /programacion-android-interfaz-grafica_11/
  [4]: /fundamentos-programacion-android_16/
  [5]: /programacion-android-proveedores-de/
+
+{% include _toc.html %}

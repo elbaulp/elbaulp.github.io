@@ -37,3 +37,6 @@ Podemos ver nuevos consejos usando el icono del Applet en la parte superior de d
 
 Descargar: <a target="_blank" href="http://gtk-apps.org/content/show.php/Ubuntu+Tips+Applet?content=137860">(Desde Gnome-look)</a>
 
+
+
+{% include _toc.html %}

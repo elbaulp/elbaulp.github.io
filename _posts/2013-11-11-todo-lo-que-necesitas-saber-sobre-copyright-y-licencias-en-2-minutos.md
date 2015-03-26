@@ -45,3 +45,5 @@ Si usas **[GitHub][1]**, aún tardarás menos tiempo en escoger licencia, ya que
 
 
  [1]: http://elbauldelprogramador.com/articulos/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
+
+{% include _toc.html %}

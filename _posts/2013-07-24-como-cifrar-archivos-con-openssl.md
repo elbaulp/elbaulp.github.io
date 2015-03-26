@@ -119,3 +119,5 @@ Espero que os sea de utilidad.
 
  [1]: http://elbauldelprogramador.com/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
  [2]: http://elbauldelprogramador.com/category/script/
+
+{% include _toc.html %}

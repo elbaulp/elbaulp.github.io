@@ -306,3 +306,6 @@ Como introducción al lenguaje Ruby, ya que nunca lo había usado, leí el sigui
 
 *Ruby in Twenty MinutesRuby in Twenty Minutes* **|** <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a> 
 
+
+
+{% include _toc.html %}

@@ -229,3 +229,6 @@ Como siempre, se puede descargar este ejemplo:
 
  [1]: /2011/06/programacion-android-interfaz-grafica_28.html
  [2]: /programacion-android-interfaz-grafica_08/
+
+
+{% include _toc.html %}

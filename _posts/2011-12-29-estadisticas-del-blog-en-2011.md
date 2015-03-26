@@ -94,3 +94,6 @@ En esta entrada voy a dar a conocer los datos estad√≠sticos del blog en este pr√
   <a href="http://1.bp.blogspot.com/-hjIQHHBnFlM/TvxpmxavjQI/AAAAAAAACC8/j6inzd3a6iI/s1600/Screenshot-2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="86" width="400" src="http://1.bp.blogspot.com/-hjIQHHBnFlM/TvxpmxavjQI/AAAAAAAACC8/j6inzd3a6iI/s400/Screenshot-2.png" /></a>
 </div>
 
+
+
+{% include _toc.html %}

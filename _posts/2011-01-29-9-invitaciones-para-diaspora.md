@@ -36,3 +36,5 @@ En cuanto disponga de las invitaciones, publicaré una entrada en la cual mandar
 
 
  [1]: http://elbauldelprogramador.com/diaspora-la-red-social-libre/
+
+{% include _toc.html %}

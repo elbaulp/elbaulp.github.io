@@ -57,3 +57,5 @@ Los dos primeros enlaces están creados con el método `setMovementMethod()`, lo
  [1]: /opensource/programacion-android-recursos-strings/
  [2]: /opensource/programacion-android-recursos-layout/
  [3]: /images/2013/05/setMovementMethod-example.png
+
+{% include _toc.html %}

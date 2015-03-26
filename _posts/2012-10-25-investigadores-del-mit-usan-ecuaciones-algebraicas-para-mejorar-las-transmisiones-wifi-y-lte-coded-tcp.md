@@ -38,3 +38,5 @@ En un futuro, se espera que el protocolo TCP codificado tenga una gran repercusi
 
 
  [1]: /images/2012/10/Algebra-Packets-MIT1.jpg
+
+{% include _toc.html %}

@@ -222,3 +222,5 @@ Si el lector ha llegado hasta este punto, estaba interesado en conseguir un cicl
  [3]: http://elbauldelprogramador.com/introduccion-a-ruby/ "Introducción rápida a Ruby"
  [4]: http://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
  [5]: http://wp-cli.org/#install
+
+{% include _toc.html %}

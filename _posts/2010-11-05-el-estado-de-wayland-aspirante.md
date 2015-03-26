@@ -45,3 +45,5 @@ Todo esto suena muy bien para Wayland, y hay que tener en cuenta que este servid
  [7]: http://hoegsberg.blogspot.com/2008/12/two-x-servers-and-microphone.html
  [8]: http://wayland.freedesktop.org/architecture.html
  [9]: http://www.markshuttleworth.com/archives/551
+
+{% include _toc.html %}

@@ -47,3 +47,6 @@ Y las galerías fotográficas asi:
 
 Para visitar la página del blog en facebook podeis pinchar en el icono de la derecha de vuestra pantalla.
 
+
+
+{% include _toc.html %}

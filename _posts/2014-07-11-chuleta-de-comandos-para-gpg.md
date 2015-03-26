@@ -147,3 +147,5 @@ NOTA: los siguientes casos de uso indican porqué los comandos secret-key import
 
 
  [1]: http://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+
+{% include _toc.html %}

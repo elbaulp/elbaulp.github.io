@@ -44,3 +44,6 @@ Oracle no quiso hacer comentarios sobre la propuesta PowerPC-OpenJDK. SAP se uni
 
 Fuente | <a href="http://www.itworldcanada.com/news/open-source-java-moving-to-linux-aix-on-powerpc/145416" target="_blank">IT World Canada</a>
 
+
+
+{% include _toc.html %}

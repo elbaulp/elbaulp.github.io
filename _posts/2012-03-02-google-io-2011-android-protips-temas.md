@@ -42,3 +42,6 @@ El vídeo es extenso, pero muy recomendable, pueden habilitar los subtítulos pu
 <p style="text-align:center;">
 </p>
 
+
+
+{% include _toc.html %}

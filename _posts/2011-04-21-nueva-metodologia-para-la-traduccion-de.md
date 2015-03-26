@@ -40,3 +40,6 @@ En cuando a la Wiki, voy a usar mediaWiki-1.16.4, tan pronto como esté disponib
 
 Solo me queda agradecer a la gente que va a colaborar en este proyecto, Muchas Gracias a todos.
 
+
+
+{% include _toc.html %}

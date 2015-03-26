@@ -212,3 +212,5 @@ Espero que os sea útil.
 
 
  [1]: http://pastebin.com/CUDjz0kc
+
+{% include _toc.html %}

@@ -47,3 +47,6 @@ En este ranking tenemos en primer lugar a un IBM que es capaz de realizar **2026
 
 Y nuestro Supercomputador situado en Barcelona asciende de la posición 114 a la 7 en el ranking verde con **1266.23 MFLOPS/W**
 
+
+
+{% include _toc.html %}

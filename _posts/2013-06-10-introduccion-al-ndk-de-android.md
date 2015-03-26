@@ -126,3 +126,5 @@ Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con
 
  [1]: /opensource/programacion-android-hola-mundo/
  [2]: /images/2013/06/helloJni-NDK-de-android.png
+
+{% include _toc.html %}

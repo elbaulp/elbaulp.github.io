@@ -179,3 +179,6 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
  [1]: /programacion-android-interfaz-grafica/
  [2]: /programacion-android-interfaz-grafica_23/
  [3]: /programacion-android-interfaz-grafica_28
+
+
+{% include _toc.html %}

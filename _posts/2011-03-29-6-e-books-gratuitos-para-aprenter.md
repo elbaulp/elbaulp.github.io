@@ -30,3 +30,5 @@ El único inconveniente es que están en inglés ;).
  [1]: http://picotea.com/yunn
  [2]: http://picotea.com/
  [3]: http://www.readwriteweb.com/hack/2011/03/python-is-an-increasingly-popu.php
+
+{% include _toc.html %}

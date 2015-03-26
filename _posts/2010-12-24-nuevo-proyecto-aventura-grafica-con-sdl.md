@@ -40,3 +40,5 @@ Como siempre, cualquiera que quiera participar es bienvenido, de esta forma avan
  [2]: http://bashyc.blogspot.com/p/proyecto-pylabra.html
  [3]: http://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/
  [4]: http://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/
+
+{% include _toc.html %}

@@ -102,3 +102,6 @@ grep(const char* palabra, const char* nombre)
 
 </firchero1></fstream></string></iostream></firchero1>
 
+
+
+{% include _toc.html %}

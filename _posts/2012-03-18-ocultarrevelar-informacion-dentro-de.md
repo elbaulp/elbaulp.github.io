@@ -156,3 +156,6 @@ Por último, si deplazamos todos los bits la izquierda una posición, es decir, 
 
 Eso es todo, Saludos!
 
+
+
+{% include _toc.html %}

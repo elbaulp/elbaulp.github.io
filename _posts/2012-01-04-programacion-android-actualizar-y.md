@@ -74,3 +74,5 @@ Casi todas las llamadas que se hacen desde *managedQuery* y *ContentResolver* se
  [2]: /2010/12/lenguaje-manipulacion-de-datos-dml.html
  [3]: /2012/01/programacion-android-implementando-un.html
  [4]: /programacion-android-implementando-un/
+
+{% include _toc.html %}

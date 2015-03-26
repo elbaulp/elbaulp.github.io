@@ -91,3 +91,5 @@ Como se ha hablado mucho acerca de este tema, voy a recopilar alguna informació
 
  [1]: http://alt1040.com/2010/12/wikileaks-no-te-embriagues-de-poder
  [2]: http://alt1040.com/2010/12/twitter-no-estamos-censurando-a-wikileaks-en-los-trending-topics
+
+{% include _toc.html %}

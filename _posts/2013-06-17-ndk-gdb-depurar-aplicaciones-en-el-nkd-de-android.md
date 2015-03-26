@@ -410,3 +410,5 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
  [4]: /opensource/programacion-android-interfaz-grafica_25/
  [5]: /fundamentos-programacion-android_17/
  [6]: /images/2013/06/Screenshot_2013-06-17-17-20-53.png
+
+{% include _toc.html %}

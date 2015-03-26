@@ -12,3 +12,6 @@ categories:
 
 Bueno, he creado este blog principalmente para ir publicando todo lo que desarrolle tanto en bash como en cualquier lenguaje de programación. Intentare mantenerlo lo mas actualizado posible y espero que sea útil.
 
+
+
+{% include _toc.html %}

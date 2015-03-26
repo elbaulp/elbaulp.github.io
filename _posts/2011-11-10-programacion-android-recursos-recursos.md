@@ -161,3 +161,6 @@ El SDK de Android tiene algoritmos más detallados aún, sin embargo, con este e
   * <a target="_blank" href="http://androidbook.com/item/3542">Understanding Android Resource Arrays, Plurals, Configuration qualifiers</a>
   * <a target="_blank" href="http://androidbook.com/akc/filestorage/satya/documentfiles/3540/ProAndroid3_Ch04_TestProvider.zip">Descargar proyecto de ejemplo para testear los recursos</a>
 
+
+
+{% include _toc.html %}

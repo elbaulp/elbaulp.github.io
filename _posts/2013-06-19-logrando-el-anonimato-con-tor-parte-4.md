@@ -227,3 +227,5 @@ Hemos visto suficiente información para poder decidir si queremos ayudar a la c
  [7]: /images/2013/06/081712_1525_AchievingAn4.png
  [8]: /images/2013/06/081712_1525_AchievingAn5.png
  [9]: /images/2013/06/081712_1525_AchievingAn7.png
+
+{% include _toc.html %}

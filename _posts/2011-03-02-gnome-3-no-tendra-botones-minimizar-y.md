@@ -33,3 +33,5 @@ Leyendo algunas noticias en mi lector de RSS, me he enterado que GNOME 3 no tend
 
 
  [1]: http://www.muylinux.com/
+
+{% include _toc.html %}

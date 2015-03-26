@@ -496,3 +496,5 @@ Para todo aquel interesado, tengo permiso para distribuir el guión bajo licenci
 
  [1]: /images/2012/12/Screenshot-from-2012-12-17-2207421.png
  [2]: /images/2012/12/Screenshot-from-2012-12-17-2308081.png
+
+{% include _toc.html %}

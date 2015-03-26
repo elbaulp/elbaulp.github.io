@@ -34,3 +34,5 @@ A parte del cambio de domínio, traigo otra buena notícia, pero esta tardará u
 
 
  [1]: http://twitter.com/#!/bashycBlog
+
+{% include _toc.html %}

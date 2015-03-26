@@ -128,3 +128,5 @@ A continuación varios ejemplos extraidos del manual de **update-rc.d:**
 
  [1]: http://elbauldelprogramador.com/noticias/grub-customizer-20-personaliza-tu-grub2/ "Grub Customizer 2.0, personaliza tu GRUB2"
  [2]: http://elbauldelprogramador.com/category/script/
+
+{% include _toc.html %}

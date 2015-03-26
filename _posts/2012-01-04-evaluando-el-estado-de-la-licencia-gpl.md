@@ -66,3 +66,6 @@ Naturalmente, esto es aún suponiendo que la comunidad de software libre esté i
 
 <a target="_blank" href="http://www.itworld.com/it-managementstrategy/234223/evaluating-state-gpl">Fuente original (En inglés)</a>
 
+
+
+{% include _toc.html %}

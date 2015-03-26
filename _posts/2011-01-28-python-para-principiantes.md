@@ -38,3 +38,5 @@ El tutorial en cuestión lo podeis encontrar en <a target="_blank" href="http://
 
 
  [1]: http://bashyc.blogspot.com/p/tutorial-sdl.html
+
+{% include _toc.html %}

@@ -34,3 +34,5 @@ Lo mantendré actualizado conforme vaya encontrando nuevos manuales. Pronto pond
 
 
  [1]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

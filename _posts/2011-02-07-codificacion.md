@@ -523,3 +523,5 @@ Se pone el numero y al final se añade el signo:
  [5]: http://elbauldelprogramador.com/codificacion/#hex
  [6]: http://elbauldelprogramador.com/codificacion/#otro
  [7]: #indices
+
+{% include _toc.html %}

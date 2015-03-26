@@ -27,3 +27,6 @@ Hace poco blogger añadió una nueva característica para los feeds, las vistas 
 
 Para verlo, solo teneis que seguir este enlace: <http://bashyc.blogspot.com/view/>, En la esquina superior derecha se puede cambiar el estilo de la vista dinámica.
 
+
+
+{% include _toc.html %}

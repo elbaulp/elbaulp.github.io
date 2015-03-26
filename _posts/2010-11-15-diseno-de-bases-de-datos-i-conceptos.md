@@ -243,3 +243,5 @@ Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya q
 
 
  [1]: http://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/
+
+{% include _toc.html %}

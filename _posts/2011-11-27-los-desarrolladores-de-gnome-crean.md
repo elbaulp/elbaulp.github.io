@@ -43,3 +43,6 @@ El desarrollador Zeeshan Ali Khattak (aka Zeenix) explica en una <a target="_bla
 
 Traducción de : <a target="_blank" href="http://www.h-online.com/open/news/item/GNOME-developers-create-Boxes-for-virtualisation-1383765.html">h-online.com</a>
 
+
+
+{% include _toc.html %}

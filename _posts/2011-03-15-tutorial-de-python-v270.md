@@ -44,3 +44,5 @@ Espero que sea útil.
  [1]: http://elbauldelprogramador.com/python-para-principiantes/
  [2]: http://elbauldelprogramador.com/manual-de-python/
  [3]: http://python.org.ar/pyar/
+
+{% include _toc.html %}

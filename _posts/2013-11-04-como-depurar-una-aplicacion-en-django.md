@@ -105,3 +105,6 @@ Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
 
  [1]: http://elbauldelprogramador.com/django/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
  [2]: http://elbauldelprogramador.com/?s=gdb&submit= "Depuradores"
+
+
+{% include _toc.html %}

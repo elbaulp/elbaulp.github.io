@@ -118,3 +118,5 @@ El código usa el flujo de salida para escribir.
  [3]: /p/bases-de-datos.html
  [4]: /2011/11/programacion-android-arquitectura-de.html
  [5]: /programacion-android-actualizar-y/
+
+{% include _toc.html %}

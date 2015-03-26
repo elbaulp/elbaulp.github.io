@@ -47,3 +47,5 @@ He estado buscando la dev guide de Android en PDF para no tener que leerla en el
 
 
  [1]: http://czechxan.com/index.php/android/20-android-sdk-dev-guide-in-pdf
+
+{% include _toc.html %}

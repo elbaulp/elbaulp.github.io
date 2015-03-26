@@ -66,3 +66,5 @@ Para participar en el curso, simplemente realiza las acciones que aparecen abajo
  [1]: https://www.udemy.com/curso-basico-de-wordpress/ "Wordpress desde cero: Nivel básico e intermedio"
  [2]: https://www.udemy.com/plugins-de-wordpress/ "Desarrollo de Plugins para principiantes"
  [3]: http://elbauldelprogramador.com/how-to/como-crear-shortcodes-en-wordpress/ "Cómo crear shortcodes en WordPress que soporten parámetros"
+
+{% include _toc.html %}

@@ -235,3 +235,6 @@ printf("Algoritmo 3: %d ms.n", (int)((double)(tStop - tStart) / CLOCKS_PER_SEC *
 return 0;
 }{% endhighlight %}
 
+
+
+{% include _toc.html %}

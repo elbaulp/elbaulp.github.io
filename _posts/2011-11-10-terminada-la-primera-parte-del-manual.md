@@ -70,3 +70,5 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
  [2]: /2011/11/programacion-android-recursos-recursos.html
  [3]: /p/guia-de-desarrollo-android.html
  [4]: http://www.megaupload.com/?d=RDZ1J1MQ
+
+{% include _toc.html %}

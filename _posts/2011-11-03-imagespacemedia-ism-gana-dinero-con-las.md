@@ -37,3 +37,6 @@ A continuación dejo un vídeo que explica el funcionamiento de esta plataforma:
   <a href="http://pubstop.imagespacemedia.com/users/edit/0001909308895492">Registrarme en Image Space Media</a>
 </p></p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p></p> 
 
+
+
+{% include _toc.html %}

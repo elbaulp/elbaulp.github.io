@@ -211,3 +211,5 @@ Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de 
  [2]: /images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
  [3]: http://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
  [4]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+
+{% include _toc.html %}

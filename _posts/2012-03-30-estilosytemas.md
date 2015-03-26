@@ -129,3 +129,6 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
 
  [1]: http://developer.android.com/guide/topics/ui/themes.html
  [2]: /programacion-android-recursos/
+
+
+{% include _toc.html %}

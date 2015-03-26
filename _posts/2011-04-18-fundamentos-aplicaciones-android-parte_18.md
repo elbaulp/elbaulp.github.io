@@ -129,3 +129,5 @@ componente en particular. El sistema activará el componente por ti.
  [4]: http://developer.android.com/guide/topics/providers/content-providers.html
  [5]: http://developer.android.com/guide/topics/ui/notifiers/notifications.html
  [6]: http://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_19/
+
+{% include _toc.html %}

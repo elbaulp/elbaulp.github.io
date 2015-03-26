@@ -80,3 +80,6 @@ El desarrollo en ABAP se realiza sobre un entorno de desarrollo al cual sólo ti
 
 Finalmente, hay que decir que el *ABAP workbench* es propio de SAP pero últimamente SAP también permite programar ABAP mediante herramientas no propietarias de SAP, sobre todo con *Eclipse*. Sin embargo, con estas plataformas se pierde mucha de la funcionalidad propia del *ABAP Workbench*.
 
+
+
+{% include _toc.html %}

@@ -41,3 +41,5 @@ To assign Billy Rick as an author for our post. You'd add the following YAML fro
 {% highlight yaml %}
 
 {% endhighlight %}
+
+{% include _toc.html %}

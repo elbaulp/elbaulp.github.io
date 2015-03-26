@@ -198,3 +198,6 @@ static void quicksort_lims(int T[], int inicial, int final)
 {% endhighlight %}
 </div>
 
+
+
+{% include _toc.html %}

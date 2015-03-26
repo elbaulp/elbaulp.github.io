@@ -86,3 +86,5 @@ Y continuar rellenando el diccionario según nuestras necesidades.
 
 
  [1]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I) – Introducción"
+
+{% include _toc.html %}

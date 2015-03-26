@@ -24,3 +24,5 @@ format: image
 
 
  [1]: /images/2012/06/AvpFizXCAAA3RXp1.jpg
+
+{% include _toc.html %}

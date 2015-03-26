@@ -252,3 +252,5 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
  [2]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de datos"
  [3]: http://elbauldelprogramador.com/programacion/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
  [4]: http://elbauldelprogramador.com/basededatos/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
+
+{% include _toc.html %}

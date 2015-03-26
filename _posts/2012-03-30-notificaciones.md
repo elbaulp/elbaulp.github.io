@@ -224,3 +224,6 @@ Se puede descargar el proyecto de esta entrada aquí:
 
  [1]: /p/guia-de-desarrollo-android.html
  [2]: /programacion-android-interfaz-grafica_18/
+
+
+{% include _toc.html %}

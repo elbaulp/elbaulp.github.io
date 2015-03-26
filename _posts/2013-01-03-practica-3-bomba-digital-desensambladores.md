@@ -528,3 +528,6 @@ int main(_, v) double *v; int _;{
 </div>
 
  [1]: /programacion/desafio-de-ingenieria-inversa-en-c/
+
+
+{% include _toc.html %}

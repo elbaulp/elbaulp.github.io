@@ -43,3 +43,5 @@ He estado investigando y he encontrado un sitio en el que nos permiten agregar n
 
  [1]: http://elbauldelprogramador.com/boton-1-de-google-ya-disponible-en/
  [2]: http://buzz.blogger.com/2011/06/add-1-button-to-your-blog.html
+
+{% include _toc.html %}

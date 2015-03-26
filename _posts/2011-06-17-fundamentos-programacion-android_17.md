@@ -107,3 +107,5 @@ Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en 
 
  [1]: http://developer.android.com/guide/topics/manifest/manifest-intro.html
  [2]: /fundamentos-programacion-android-ciclo/
+
+{% include _toc.html %}

@@ -23,3 +23,6 @@ Navegando por la red he encontrado dos vídeos curiosos y graciosos, que compart
 *Página de Facebook* **|** <a href="https://www.facebook.com/elbauldelprogramador/posts/113933772096687" target="_blank">Visitar sitio</a>  
 *Código fuente Swad* **|** <a href="http://swad.ugr.es/source/" target="_blank">Visitar sitio</a>
 
+
+
+{% include _toc.html %}

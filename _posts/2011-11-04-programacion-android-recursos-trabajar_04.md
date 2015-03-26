@@ -47,3 +47,5 @@ Android ofrece más de un directorio en el que guardar ficheros que se incluirá
 
 
  [1]: /programacion-android-recursos-repasando/
+
+{% include _toc.html %}

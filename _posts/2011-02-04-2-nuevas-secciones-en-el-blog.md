@@ -34,3 +34,5 @@ Me gustaría que me comentárais que os parece la idea, y si os parecen bien los
 
 
  [1]: http://bashyc.blogspot.com/p/sistemas-operativos.html
+
+{% include _toc.html %}

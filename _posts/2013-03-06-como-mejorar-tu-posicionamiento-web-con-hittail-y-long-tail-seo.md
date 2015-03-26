@@ -82,3 +82,5 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
  [1]: /images/2013/03/longTail2.jpg
  [2]: /curso-programacion-android/
  [3]: /images/2013/03/long-tail-result.png
+
+{% include _toc.html %}

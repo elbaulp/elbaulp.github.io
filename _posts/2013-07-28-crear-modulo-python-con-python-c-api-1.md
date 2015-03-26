@@ -123,3 +123,5 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
  [5]: http://elbauldelprogramador.com/how-to/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
  [6]: http://elbauldelprogramador.com/programacion/clases-y-objetos-punteros-objetos/ "Clases y Objetos – Punteros a objetos"
  [7]: http://docs.python.org/3/c-api/refcounting.html#Py_INCREF "Python C API Py_INCREF"
+
+{% include _toc.html %}

@@ -35,3 +35,6 @@ La solución consiste en añadir al nombre de nuestra red la cadena ***_nomap***
 
 Vía <a target=_blank" href="http://www.genbeta.com/seguridad/quieres-que-google-deje-de-usar-tu-wifi-para-obtener-datos-de-geolocalizacion-solo-hay-que-cambiarle-el-nombre">GenBeta</a>
 
+
+
+{% include _toc.html %}

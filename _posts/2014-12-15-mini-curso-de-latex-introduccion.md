@@ -197,3 +197,5 @@ Con esto completamos una pequeña introducción a LaTeX, en el siguiente artícu
 
  [1]: http://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/ "Curso de LaTeX - Incluir código fuente y símbolos matemáticos"
  [2]: http://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
+
+{% include _toc.html %}

@@ -28,3 +28,5 @@ Por último, recomiendo a los lectores escuchar el podcast:
 
 
  [1]: http://elbauldelprogramador.com/como-funciona-el-bitcoin-la-cripto-moneda/ "Cómo funciona el Bitcoin, la cripto-moneda"
+
+{% include _toc.html %}

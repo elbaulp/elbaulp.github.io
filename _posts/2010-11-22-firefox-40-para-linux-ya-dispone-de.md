@@ -44,3 +44,5 @@ Una vez lo tengamos en ejecución, **podremos ir a View->Toolbars** y podremos d
 
  [1]: http://www.webupd8.org/2010/11/firefox-40-for-linux-finally-gets.html
  [2]: http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/
+
+{% include _toc.html %}

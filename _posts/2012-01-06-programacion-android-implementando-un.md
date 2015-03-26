@@ -201,3 +201,5 @@ Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la c
  [5]: /2011/10/prueba-la-aplicacion-favsites-en-tu.html
  [6]: /2012/01/evaluando-el-estado-de-la-licencia-gpl.html
  [7]: /programacion-android-implementando-un_08/
+
+{% include _toc.html %}

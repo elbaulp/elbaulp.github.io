@@ -680,3 +680,5 @@ tags:
 
 
  [1]: http://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/
+
+{% include _toc.html %}

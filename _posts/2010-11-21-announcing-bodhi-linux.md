@@ -83,3 +83,6 @@ categories:
 
 #### Source: <a href="http://jeffhoogland.blogspot.com/2010/11/announcing-bodhi-linux.html" target="_blank">jeffhoogland.blogspot.com</a> {.referencia}
 
+
+
+{% include _toc.html %}

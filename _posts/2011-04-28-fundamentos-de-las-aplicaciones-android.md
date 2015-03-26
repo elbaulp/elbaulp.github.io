@@ -40,3 +40,5 @@ Y por favor, quien se una, que no séa para copiar y pegar el resultado del trad
  [2]: http://bashyc.blogspot.com/p/guia-de-desarrollo-android.html
  [3]: http://devgui-android-es.netii.net/index.php/Fundamentos_de_las_aplicaciones
  [4]: http://devgui-android-es.netii.net/index.php/Nomas_de_edici%C3%B3n
+
+{% include _toc.html %}

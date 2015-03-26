@@ -43,3 +43,6 @@ Note: The image is Photoshopped.
 
 #### Source:<a href="http://technott.com/2010/11/samsung-galaxy-tab-hacked-to-run-ubuntu-video" target="_blank">Technott.com</a> {.referencia}
 
+
+
+{% include _toc.html %}

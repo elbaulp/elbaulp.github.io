@@ -63,3 +63,5 @@ Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
  [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make72/prgm.cgi
  [2]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

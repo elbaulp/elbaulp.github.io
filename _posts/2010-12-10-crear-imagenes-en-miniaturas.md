@@ -57,3 +57,5 @@ El * significa que convertirá todas las imagenes del directorio
 
 
  [1]: http://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/
+
+{% include _toc.html %}

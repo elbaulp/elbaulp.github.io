@@ -36,3 +36,6 @@ La tecnología de GameStrings permite **transmitir los juegos desde la nube a cu
 
 #### Fuente: <a href="http://muycomputer.com" target="_blank">MuyComputer.com</a> {.referencia}
 
+
+
+{% include _toc.html %}

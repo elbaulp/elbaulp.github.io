@@ -72,3 +72,5 @@ Debido al éxito y la [gran y satisfactoria experiencia][1] que me causó el 3er
  [9]: http://fkp.workespeis-projects.com/blog/
  [10]: http://etsiit.ugr.es
  [11]: https://docs.google.com/spreadsheet/viewform?formkey=dDNkVXBJV0ZZNG5uOEpZYl84eHlUUlE6MA#gid=0
+
+{% include _toc.html %}

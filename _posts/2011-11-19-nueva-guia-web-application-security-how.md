@@ -47,3 +47,5 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
  [1]: https://lh5.googleusercontent.com/-4W0jWyPhnBw/Tsbi4Z9x9SI/AAAAAAAABy8/RjHQ0Zgh2VQ/s150/w_qa26c.gif "Web Application Security; How to Minimize Prevalent Risk of Attacks"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_qa26/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+
+{% include _toc.html %}

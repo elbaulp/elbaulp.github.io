@@ -49,3 +49,5 @@ No me queda claro si puedo copiar los códigos de ejemplo de la web, siempre me 
  [1]: http://bashyc.blogspot.com/p/guia-de-desarrollo-android.html
  [2]: http://developer.android.com/license.html
  [3]: http://www.apache.org/licenses/LICENSE-2.0
+
+{% include _toc.html %}

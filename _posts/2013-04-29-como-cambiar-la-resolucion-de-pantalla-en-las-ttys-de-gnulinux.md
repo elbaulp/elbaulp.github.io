@@ -93,3 +93,6 @@ menuentry 'Debian GNU/Linux, with Linux 3.2.0-4-amd64 (recovery mode)' --class d
 
 Como se aprecia, aparece el parámetro **vga**.
 
+
+
+{% include _toc.html %}

@@ -41,3 +41,5 @@ Espero que os sirva de ayuda.
 
 
  [1]: /2011/01/diaspora-la-red-social-libre.html
+
+{% include _toc.html %}

@@ -40,3 +40,5 @@ Un saludo.
 
 
  [1]: /p/fundamentos-del-software_03.html
+
+{% include _toc.html %}

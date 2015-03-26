@@ -44,3 +44,5 @@ Voy a publicarlos en la página [Curso C++][1], pero los dejo en esta entrada ta
  [2]: http://www.megaupload.com/?d=QWC9N1XD
  [3]: http://www.megaupload.com/?d=KJZEH63T
  [4]: http://www.megaupload.com/?d=XHSXGZRC
+
+{% include _toc.html %}

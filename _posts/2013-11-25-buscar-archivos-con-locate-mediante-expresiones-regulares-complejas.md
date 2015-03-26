@@ -75,3 +75,5 @@ IFS=' '
  [3]: http://elbauldelprogramador.com/opensource/programacion-bash-expresiones-regulares/ "Programación bash – Expresiones Regulares"
  [4]: http://elbauldelprogramador.com/articulos/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/ "¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?"
  [5]: http://elbauldelprogramador.com/bash/programacion-bash-metacaracteres-de/ "Programación Bash – Metacaracteres de redirección"
+
+{% include _toc.html %}

@@ -53,3 +53,6 @@ Una vez que se accede a la versión móvil, ya sea desde la aplicación o desde 
 
 Por último dejo los enlaces para descargar las aplicaciones para <a target="_blank" href="http://www.megaupload.com/?d=X79OS2UW">Android</a> y <a target="_blank" href="http://www.megaupload.com/?d=3KQSICFF">Windows mobile</a>. Para más información de los dispositivos disponibles accedan a esta dirección: <http://elbauldelprogramador.mobapp.at/>
 
+
+
+{% include _toc.html %}

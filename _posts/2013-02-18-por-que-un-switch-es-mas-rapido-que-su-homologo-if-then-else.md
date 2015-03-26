@@ -327,3 +327,5 @@ Tras analizar y entender cómo se implementa el switch, la razón por la que es 
  [1]: /search/?q=array
  [2]: /tag/asm/
  [3]: /opensource/compilacion-de-programas-makefile-y-g/
+
+{% include _toc.html %}

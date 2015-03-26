@@ -237,3 +237,5 @@ if($query->have_posts()){
     
 
  [1]: /images/2012/08/4041.jpg
+
+{% include _toc.html %}

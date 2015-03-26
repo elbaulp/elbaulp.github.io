@@ -70,3 +70,6 @@ A partir de ahora, recibiremos en nuestra bandeja de entrada los mensajes del si
 
 *How to send emails stored in /var/spool/mail/root to a gmail inbox* **|** <a href="http://serverfault.com/questions/554922/how-to-send-emails-stored-in-var-spool-mail-root-to-a-gmail-inboxbr/" target="_blank">serverfault.com</a> 
 
+
+
+{% include _toc.html %}

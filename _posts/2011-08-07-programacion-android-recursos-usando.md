@@ -119,3 +119,6 @@ style=&#8221;?attr/cabecera&#8221; />
 #### Siguiente Tema: [Programación Android: Recursos &#8211; Strings][1] {.referencia}
 
  [1]: /programacion-android-recursos-strings/
+
+
+{% include _toc.html %}

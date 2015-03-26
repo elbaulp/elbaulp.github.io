@@ -48,3 +48,5 @@ Podéis seguirme en mi cuenta de usuario de Stumble en [esta dirección.][3], pa
  [2]: http://www.stumbleupon.com/help/download_stumbleupon/
  [3]: http://www.stumbleupon.com/stumbler/algui91/
  [4]: http://www.stumbleupon.com/aboutus/
+
+{% include _toc.html %}

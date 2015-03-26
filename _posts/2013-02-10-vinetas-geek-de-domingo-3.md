@@ -24,3 +24,6 @@ format: gallery
 
 *xkcd* **|** <a href="http://xkcd.com" target="_blank">Visitar sitio</a> 
 
+
+
+{% include _toc.html %}

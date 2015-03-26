@@ -148,3 +148,5 @@ Tenéis el código disponible en [PasteBin][3] también.
  [1]: /2011/04/conectar-base-de-datos-sql-server-2008.html
  [2]: https://twitter.com/muymuynica
  [3]: http://pastebin.com/embed_js.php?i=zU4sfhzv
+
+{% include _toc.html %}

@@ -150,3 +150,5 @@ photo credit: [nyuhuhuu][10] via [photopin][11] [cc][12]
  [10]: https://www.flickr.com/photos/nyuhuhuu/4653088356/
  [11]: http://photopin.com
  [12]: http://creativecommons.org/licenses/by/2.0/
+
+{% include _toc.html %}

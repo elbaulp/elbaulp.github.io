@@ -74,3 +74,6 @@ Leyendo el blog <a target="_blank" href="http://proyectosbeta.blogspot.com/">pro
 
 **Fuente**: <a target="_blank" href="http://proyectosbeta.blogspot.com/2011/03/curso-de-programacion-de-android-en.html">Proyectos Beta</a> </p> 
 
+
+
+{% include _toc.html %}

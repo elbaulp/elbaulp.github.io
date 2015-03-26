@@ -51,3 +51,5 @@ Fuente: <a href="http://lifehacker.com/5918086/understanding-oauth-what-happens-
 
 
  [1]: /images/2012/06/medium1.jpg
+
+{% include _toc.html %}

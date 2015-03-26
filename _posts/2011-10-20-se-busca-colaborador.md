@@ -23,3 +23,6 @@ Por este motivo, me gustaría buscar a alguien dispuesto a colaborar como redact
 
 Pido disculpas a los lectores habituales por tener el blog un poco desactualizado.
 
+
+
+{% include _toc.html %}

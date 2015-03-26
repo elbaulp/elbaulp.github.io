@@ -97,3 +97,5 @@ Fuente: <a target="_blank" href="http://www.developer.com/ws/android/programming
  [1]: /opensource/programacion-android-hola-mundo/
  [2]: /2011/11/programacion-android-proveedores-de.html
  [3]: /fundamentos-programacion-android_16/
+
+{% include _toc.html %}

@@ -82,3 +82,6 @@ Y el estilo es el siguiente:
 
 Eso es todo.
 
+
+
+{% include _toc.html %}

@@ -193,3 +193,5 @@ public class EjemploLog4j2 {
  [1]: https://logging.apache.org/log4j/2.x/maven-artifacts.html
  [2]: http://logging.apache.org/log4j/2.0/manual/layouts.html
  [3]: http://stackoverflow.com/a/18409096/1612432
+
+{% include _toc.html %}

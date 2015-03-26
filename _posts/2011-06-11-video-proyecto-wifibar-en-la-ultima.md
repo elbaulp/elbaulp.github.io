@@ -56,3 +56,5 @@ Bueno, eso es todo, aún falta hacer una pequeña modificación, que al cerrar u
 
 
  [1]: http://elbauldelprogramador.com/video-demostracion-del-proyecto-wifibar/
+
+{% include _toc.html %}

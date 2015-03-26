@@ -99,3 +99,6 @@ A partir de ahora, se notará un descenso drástico en los comentarios de spam. 
  [3]: http://elbauldelprogramador.com/basededatos/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
  [4]: http://elbauldelprogramador.com/internet/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
  [5]: http://elbauldelprogramador.com/category/script/ "Scripts del blog"
+
+
+{% include _toc.html %}

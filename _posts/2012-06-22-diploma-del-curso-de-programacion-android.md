@@ -19,3 +19,5 @@ Hoy me ha llegado el diploma del curso que hice en exitae sobre Android, que com
 
 
  [1]: /images/2012/06/Certificado1.jpg
+
+{% include _toc.html %}

@@ -171,3 +171,5 @@ Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el pr
  [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
  [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
  [5]: http://elbauldelprogramador.com/opensource/compilacion-de-programas-makefile-y-g/ "Compilación de programas: makefile y g++"
+
+{% include _toc.html %}

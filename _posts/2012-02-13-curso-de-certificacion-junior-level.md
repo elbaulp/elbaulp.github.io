@@ -89,3 +89,6 @@ En la plataforma del curso, hay una sección dedicada a dudas sobre conceptos qu
   <a href="http://1.bp.blogspot.com/-hA42RLMDjqk/TzuX2xt0zJI/AAAAAAAACFE/eGSZrP3wbKg/s1600/Screenshot-2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="280" src="http://1.bp.blogspot.com/-hA42RLMDjqk/TzuX2xt0zJI/AAAAAAAACFE/eGSZrP3wbKg/s400/Screenshot-2.png" /></a>
 </div>
 
+
+
+{% include _toc.html %}

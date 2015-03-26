@@ -347,3 +347,6 @@ Tipo imagen: 3
 Documentación | <a href="http://www.fileformat.info/format/png/corion.htm" target="_blank">fileformat.info</a>  
 Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-to-get-the-image-size-of-a-png-file-in-directory" target="_blank">StackOverflow</a></p> 
 
+
+
+{% include _toc.html %}

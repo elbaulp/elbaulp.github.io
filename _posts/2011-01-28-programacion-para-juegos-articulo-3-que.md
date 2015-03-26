@@ -131,3 +131,5 @@ Eso estaria bien, ¿no? =)
 
  [1]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-5/
  [2]: http://bashyc.blogspot.com/p/tutorial-sdl.html
+
+{% include _toc.html %}

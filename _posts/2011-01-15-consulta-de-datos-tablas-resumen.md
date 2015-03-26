@@ -39,3 +39,5 @@ Dejo un Pdf con un resumen y algunos ejemplos de funciones en ORACLE que podéis
  [2]: http://elbauldelprogramador.com/introduccion-plsql/
  [3]: http://lh4.ggpht.com/_IlK2pNFFgGM/TTGW5XRJ6FI/AAAAAAAAAQU/7AeQSIC57tM/descargar.gif
  [4]: http://mueblesbari.es/CosasBlog/SOLOTABLAS.pdf
+
+{% include _toc.html %}

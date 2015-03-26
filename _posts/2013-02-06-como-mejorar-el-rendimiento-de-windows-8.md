@@ -94,3 +94,5 @@ Este problema es consecuencia de una nueva característica introducida por Micro
     *Imagen: kotaku* **|** <a href="http://kotaku.com/5897763/three-killer-problems-that-threaten-windows-8" target="_blank">Visitar sitio</a>
     
     
+
+{% include _toc.html %}

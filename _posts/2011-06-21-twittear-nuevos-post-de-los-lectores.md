@@ -27,3 +27,5 @@ He decidido que todos los lectores que quieran que a través de la cuenta de [Tw
 
  [1]: https://twitter.com/#!/bashycBlog
  [2]: https://twitter.com/#!/Libertex
+
+{% include _toc.html %}

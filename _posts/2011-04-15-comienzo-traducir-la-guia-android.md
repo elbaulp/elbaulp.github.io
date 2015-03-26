@@ -31,3 +31,5 @@ Espero que la gente que quiere iniciarse en android y no sabe mucho ingles aprec
  [1]: https://twitter.com/#!/bashycBlog/status/58490987898605568
  [2]: http://developer.android.com/guide/basics/what-is-android.html
  [3]: http://elbauldelprogramador.com/desarrollo-android-que-es-android/
+
+{% include _toc.html %}

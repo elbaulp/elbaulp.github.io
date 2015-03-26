@@ -117,3 +117,5 @@ Te preguntarás qué método usar en según que situación. Por convención se s
  [1]: /2011/01/consulta-de-datos-clausula-where.html
  [2]: /2011/10/prueba-la-aplicacion-favsites-en-tu.html
  [3]: /programacion-android-insertando/
+
+{% include _toc.html %}

@@ -38,3 +38,5 @@ Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta direcci√
  [1]: /programacion/desafio-de-ingenieria-inversa-en-c-soluciones/
  [2]: /?tag=criptografia
  [3]: https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador
+
+{% include _toc.html %}

@@ -164,3 +164,5 @@ El *markdown* convierte texto a HTML.
  [3]: /content/uploads/2013/12/favicon.ico "Título"
  [4]: /content/uploads/2013/12/favicon.ico
  [5]: / "Imágenes enlazadas"
+
+{% include _toc.html %}

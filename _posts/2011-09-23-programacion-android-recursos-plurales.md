@@ -181,3 +181,5 @@ En la mayoria de los idiomas normalmente hay dos posibles valores, &#8220;one&#8
 
 
  [1]: /programacion-android-recursos-trabajar/
+
+{% include _toc.html %}

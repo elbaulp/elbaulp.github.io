@@ -25,3 +25,6 @@ En genbeta he leido esta noticia, y resulta que esta semana ya se han repartido 
 
 Para más información lee la entrada original en <a target="_blank" href="http://www.genbeta.com/actualidad/las-ultimas-direcciones-ipv4-se-han-agotado-ipv6-es-la-solucion">GenBeta</a>
 
+
+
+{% include _toc.html %}

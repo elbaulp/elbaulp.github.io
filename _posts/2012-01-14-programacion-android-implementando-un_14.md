@@ -176,3 +176,5 @@ qb.setProjectionMap(sSitesProjectionMap);
  [6]: http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html
  [7]: /2011/01/consulta-de-datos-clausula-from.html
  [8]: /programacion-android-implementando-un_29/
+
+{% include _toc.html %}

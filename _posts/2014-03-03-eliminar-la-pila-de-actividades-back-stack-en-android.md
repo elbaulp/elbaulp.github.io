@@ -40,3 +40,5 @@ finish();
 
  [1]: http://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
  [2]: http://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
+
+{% include _toc.html %}
