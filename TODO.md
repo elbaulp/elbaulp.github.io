@@ -14,8 +14,9 @@
 - [ ] Buy Sell Ads
 - [x] Add favicon
 - [ ] Substitute old links with new
-- [ ] Subir logo.
+- [x] Subir logo.
 - [ ] Post Poker
 - [ ] Descargas
 - [ ] Ping Google
 - [ ] Featured Images
+- [ ] Importar comentarios
