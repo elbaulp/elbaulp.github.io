@@ -13,7 +13,7 @@ tags:
   - pygments
   - resaltar sintaxis codigo latex
 ---
-Hace unas semanas que aprendí a usar <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
+Hace unas semanas que aprendí a usar <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
 
 Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.  
   
@@ -62,7 +62,7 @@ Este trozo de código dará como resultado lo siguiente:
 
 ### Insertar código desde un archivo de código fuente
 
-Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
+Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
 
 {% highlight latex %}\newmintedfile[myJava]{java}{
     linenos,
@@ -163,7 +163,7 @@ Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el seg
 
 ### Conclusiones
 
-Para mi, minted es el mejor paquete que hay para resaltar código en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />. Y recomiendo a todo el mundo que aprenda a programar en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />.
+Para mi, minted es el mejor paquete que hay para resaltar código en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />. Y recomiendo a todo el mundo que aprenda a programar en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />.
 
 #### Referencias
 

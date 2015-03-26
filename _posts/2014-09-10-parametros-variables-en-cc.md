@@ -118,7 +118,7 @@ Al igual que en el ejemplo anterior, en `fmtargs` se recibirán los parámetros 
 {% highlight cpp %}/**
   * Valorar cada jugada
  **/
-double Valoracion(const Environment &#038;state, int jugador) {
+double Valoracion(const Environment &state, int jugador) {
   int score = 0;
 
 // Eval horizontal

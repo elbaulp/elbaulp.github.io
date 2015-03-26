@@ -155,7 +155,7 @@ void Laberinto::cargarLaberinto(unsigned int FIL,unsigned int COL){
             for(unsigned int j=0; j &lt; COL; j++){
                 char car;
                 cin >> car;
-                if (car != 'e' &#038;&#038; car != 's')
+                if (car != 'e' && car != 's')
                    (*this).laberinto[i][j] = (car == 'p' ? getShapeP() : getShapeL());
                 else
                     (*this).laberinto[i][j] = car;
@@ -190,7 +190,7 @@ void Laberinto::resolverLaberinto(){
     recorrido[path[0][0]][path[0][1]] = true;
 
     vector&lt;int> ultimoPath;
-    while(!(*this).path.empty() &#038;&#038;
+    while(!(*this).path.empty() &&
           (*this).laberinto[(*this).path[(*this).path.size()-1][0]][(*this).path[(*this).path.size()-1][1]] != 's'){
         ultimoPath.clear();
         ultimoPath.push_back((*this).path[(*this).path.size()-1][0]);
@@ -198,27 +198,27 @@ void Laberinto::resolverLaberinto(){
 
         //Elemento a la izquierda de la ultima posicion de (*this).path
         if(((*this).laberinto[ultimoPath[0]][ultimoPath[1]-1] != getShapeP())
-           &#038;&#038; (!recorrido[ultimoPath[0]][ultimoPath[1]-1])){
+           && (!recorrido[ultimoPath[0]][ultimoPath[1]-1])){
             ultimoPath[1] = ultimoPath[1]-1;
             (*this).path.push_back(ultimoPath);
             recorrido[ultimoPath[0]][ultimoPath[1]] = true;
         }
         //Elemento a la derecha
         else if ((*this).laberinto[ultimoPath[0]][ultimoPath[1]+1] != getShapeP()
-           &#038;&#038; !recorrido[ultimoPath[0]][ultimoPath[1]+1]){
+           && !recorrido[ultimoPath[0]][ultimoPath[1]+1]){
             ultimoPath[1] = ultimoPath[1]+1;
             (*this).path.push_back(ultimoPath);
             recorrido[ultimoPath[0]][ultimoPath[1]] = true;
         }
         //Elemento de arriba
         else if ((*this).laberinto[ultimoPath[0]-1][ultimoPath[1]] != getShapeP()
-           &#038;&#038; !recorrido[ultimoPath[0]-1][ultimoPath[1]]){
+           && !recorrido[ultimoPath[0]-1][ultimoPath[1]]){
             ultimoPath[0] = ultimoPath[0]-1;
             (*this).path.push_back(ultimoPath);
             recorrido[ultimoPath[0]][ultimoPath[1]] = true;
         }//Elemento de abajo
         else if ((*this).laberinto[ultimoPath[0]+1][ultimoPath[1]] != getShapeP()
-           &#038;&#038; !recorrido[ultimoPath[0]+1][ultimoPath[1]]){
+           && !recorrido[ultimoPath[0]+1][ultimoPath[1]]){
             ultimoPath[0] = ultimoPath[0]+1;
             (*this).path.push_back(ultimoPath);
             recorrido[ultimoPath[0]][ultimoPath[1]] = true;
@@ -238,8 +238,8 @@ vector&lt;int> Laberinto::findEnter() const{
     //Buscamos la entrada
     bool encontrada = false;
     vector&lt;int> pos;
-    for(unsigned int i=0; i &lt; (*this).laberinto.size() &#038;&#038; !encontrada; i++)
-        for(unsigned int j=0; j &lt; (*this).laberinto[i].size() &#038;&#038; !encontrada; j++)
+    for(unsigned int i=0; i &lt; (*this).laberinto.size() && !encontrada; i++)
+        for(unsigned int j=0; j &lt; (*this).laberinto[i].size() && !encontrada; j++)
             if((*this).laberinto[i][j] == 'e'){
                 pos.push_back(i);
                 pos.push_back(j);
@@ -250,8 +250,8 @@ vector&lt;int> Laberinto::findEnter() const{
 
 void Laberinto::addPathToLab(unsigned int i, unsigned int j){
     for (unsigned int k=0; k &lt; (*this).path.size(); k++)
-        if((*this).path[k][0] == i &#038;&#038; (*this).path[k][1] == j
-           &#038;&#038; (*this).laberinto[i][j] != 'e' &#038;&#038; (*this).laberinto[i][j] != 's')
+        if((*this).path[k][0] == i && (*this).path[k][1] == j
+           && (*this).laberinto[i][j] != 'e' && (*this).laberinto[i][j] != 's')
             (*this).laberinto[i][j] = getShapeC();
 }
 {% endhighlight %}

@@ -78,9 +78,9 @@ Debido a que estos códigos pueden usarse para representar cualquier cosa, hay g
 
 Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un [buffer overflow][3] en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.
 
-Por ese motivo Symantec ha creado un intérprete llamado **<a href="https://play.google.com/store/apps/details?id=com.symantec.norton.snap&#038;hl=en" target="_blank">Norton Snap</a>** disponible tanto para Android como iOS.
+Por ese motivo Symantec ha creado un intérprete llamado **<a href="https://play.google.com/store/apps/details?id=com.symantec.norton.snap&hl=en" target="_blank">Norton Snap</a>** disponible tanto para Android como iOS.
 
-Otro buen intérprete es **<a href="https://play.google.com/store/apps/details?id=com.google.zxing.client.android&#038;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ.." target="_blank">Barcode Scanner</a>**, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.
+Otro buen intérprete es **<a href="https://play.google.com/store/apps/details?id=com.google.zxing.client.android&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ.." target="_blank">Barcode Scanner</a>**, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.
 
 <p class="alert">
   <strong>NOTA:</strong>Este artículo ha sido escrito a partir del episodio 382 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio

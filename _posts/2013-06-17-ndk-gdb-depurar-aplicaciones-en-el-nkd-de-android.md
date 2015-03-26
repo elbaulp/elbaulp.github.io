@@ -19,7 +19,7 @@ En el artículo [Introducción al NDK de Android][1] se explicaron las nociones 
   
 <!--more-->
 
-El proyecto está disponible para descargar en <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">GitHub</a>. He de decir que el código [C][3] usado en el ejemplo es una adaptación de un trozo de código del libro *<a href="http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&#038;tag=elbaudelpro-21&#038;linkCode=as2&#038;camp=3626&#038;creative=24822&#038;creativeASIN=1593271441" target="_blank">Hacking: The Art of Exploitation</a>*, concretamente el ejemplo *simple_server.c* de la sección *0x425 A simple Server Example*. 
+El proyecto está disponible para descargar en <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">GitHub</a>. He de decir que el código [C][3] usado en el ejemplo es una adaptación de un trozo de código del libro *<a href="http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&tag=elbaudelpro-21&linkCode=as2&camp=3626&creative=24822&creativeASIN=1593271441" target="_blank">Hacking: The Art of Exploitation</a>*, concretamente el ejemplo *simple_server.c* de la sección *0x425 A simple Server Example*. 
 
 Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad principal le añadiremos el siguiente código:
 
@@ -125,15 +125,15 @@ startServer(void) {
   if ((sockfd = socket(PF_INET, SOCK_STREAM, 0)) == -1)
     __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en socket");
 
-  if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &#038;yes, sizeof(int)) == -1)
+  if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
     __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en setsockopt");
 
   host_addr.sin_family = AF_INET;       // host byte order
   host_addr.sin_port = htons(PORT);   // short, network byte order
   host_addr.sin_addr.s_addr = INADDR_ANY;  // automatically fill with my IP
-  memset(&#038;(host_addr.sin_zero), '\0', 8);  // zero the rest of the struct
+  memset(&(host_addr.sin_zero), '\0', 8);  // zero the rest of the struct
 
-  if (bind(sockfd, (struct sockaddr *) &#038;host_addr, sizeof(struct sockaddr))
+  if (bind(sockfd, (struct sockaddr *) &host_addr, sizeof(struct sockaddr))
       == -1)
     __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en bind");
 
@@ -142,7 +142,7 @@ startServer(void) {
 
   while (1) {    // Accept loop
     sin_size = sizeof(struct sockaddr_in);
-    new_sockfd = accept(sockfd, (struct sockaddr *) &#038;client_addr, &#038;sin_size);
+    new_sockfd = accept(sockfd, (struct sockaddr *) &client_addr, &sin_size);
     if (new_sockfd == -1)
       __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en accpct");
 
@@ -152,7 +152,7 @@ startServer(void) {
                         ntohs(client_addr.sin_port));
 
     send(new_sockfd, "Bienvenido!\n", 12, 0);
-    recv_length = recv(new_sockfd, &#038;buffer, 1024, 0);
+    recv_length = recv(new_sockfd, &buffer, 1024, 0);
 
     while (recv_length > 0) {
       buffer[recv_length] = 0;
@@ -202,7 +202,7 @@ startServer(void) {
       __android_log_print(ANDROID_LOG_INFO, TAG,
                           "Recibidos %d bytes mensaje: %s", recv_length,
                           buffer);
-      recv_length = recv(new_sockfd, &#038;buffer, 1024, 0);
+      recv_length = recv(new_sockfd, &buffer, 1024, 0);
     }
     close(new_sockfd);
     close(sockfd);
@@ -295,7 +295,7 @@ typedef enum android_LogPriority {
 
 Nos situamos en el directorio del proyecto y ejecutamos:
 
-{% highlight bash %}ndk-build &#038;&#038; ant debug &#038;&#038; adb install -r bin/MainActivity-debug.apk
+{% highlight bash %}ndk-build && ant debug && adb install -r bin/MainActivity-debug.apk
 {% endhighlight %}
 
 Si todo está bien, la aplicación deberá estar instalada en el dispositivo. 

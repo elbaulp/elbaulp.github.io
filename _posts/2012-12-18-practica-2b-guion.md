@@ -64,7 +64,7 @@ int popcount1(unsigned* array, int len) {
         for (k = 0; k &lt; len; k++)
                 for (i = 0; i &lt; WSIZE; i++) {
                         unsigned mask = 1 &lt;&lt; i;
-                        result += (array[k] &#038; mask) != 0;
+                        result += (array[k] & mask) != 0;
                 }
         return result;
 }
@@ -76,7 +76,7 @@ int popcount2(unsigned* array, int len) {
         for (i = 0; i &lt; len; i++) {
                 x = array[i];
                 while (x) {
-                        result += x &#038; 0x1;
+                        result += x & 0x1;
                         x >>= 1;
                 }
         }
@@ -113,13 +113,13 @@ int popcount4(unsigned* array, int len) {
                 int val = 0;
                 unsigned x = array[i];
                 for (k = 0; k &lt; 8; k++) {
-                        val += x &#038; 0x01010101; //00000001 00000001 00000001 00000001
+                        val += x & 0x01010101; //00000001 00000001 00000001 00000001
                         x >>= 1;
                 }
                 //val += (val >> 32);
                 val += (val >> 16);
                 val += (val >> 8);
-                result += (val &#038; 0xff);
+                result += (val & 0xff);
         }
         return result;
 }
@@ -133,7 +133,7 @@ int popcount5(unsigned* array, int len) {
         int SSE_mask[] = { 0x0f0f0f0f, 0x0f0f0f0f, 0x0f0f0f0f, 0x0f0f0f0f };
         int SSE_LUTb[] = { 0x02010100, 0x03020201, 0x03020201, 0x04030302 };
 
-        if (len &#038; 0x3)
+        if (len & 0x3)
                 printf("leyendo 128b pero len no múltiplo de 4?n");
         for (i = 0; i &lt; len; i += 4) {
                 asm("movdqu        %[x], %%xmm0 nt"
@@ -185,7 +185,7 @@ int popcount7(unsigned* array, int len) {
         int i;
         unsigned x1, x2;
         int val, result = 0;
-        if (len &#038; 0x1)
+        if (len & 0x1)
                 printf("Leer 64b y len impar?n");
         for (i = 0; i &lt; len; i += 2) {
                 x1 = array[i];
@@ -207,9 +207,9 @@ void crono(int (*func)(), char* msg) {
         struct timeval tv1, tv2; // gettimeofday() secs-usecs
         long tv_usecs; // y sus cuentas
 
-        gettimeofday(&#038;tv1, NULL);
+        gettimeofday(&tv1, NULL);
         resultado = func(lista, SIZE);
-        gettimeofday(&#038;tv2, NULL);
+        gettimeofday(&tv2, NULL);
 
         tv_usecs = (tv2.tv_sec - tv1.tv_sec) * 1E6 + (tv2.tv_usec - tv1.tv_usec);
 #if ! COPY_PASTE_CALC
@@ -329,10 +329,10 @@ int paridad1(unsigned* array, int len) {
        paridad = 0;
       entero = array[i];
         for (j = 0; j &lt; WSIZE; j++) {
-         paridad ^= (entero &#038; 1);
+         paridad ^= (entero & 1);
           entero >>= 1;
      }
-     result += paridad &#038; 0x01;
+     result += paridad & 0x01;
  }
  return result;
 }
@@ -347,10 +347,10 @@ int paridad2(unsigned* array, int len) {
        paridad = 0;
       entero = array[i];
         while (entero) {
-          paridad ^= (entero &#038; 1);
+          paridad ^= (entero & 1);
           entero >>= 1;
      }
-     result += paridad &#038; 0x1;
+     result += paridad & 0x1;
   }
  return result;
 }
@@ -370,7 +370,7 @@ int paridad3(unsigned* array, int len) {
            val ^= x;
          x >>= 1;
       }
-     result += val &#038; 0x1;
+     result += val & 0x1;
   }
  return result;
 
@@ -398,7 +398,7 @@ int paridad4(unsigned* array, int len) {
                : [v]"+r"(val) // e/s: inicialemnte 0, salida valor final
              : [x]"r"(x)// entrada: valor del elemento
      );
-        result += val &#038; 0x1;
+        result += val & 0x1;
   }
  return result;
 
@@ -416,7 +416,7 @@ int paridad5(unsigned* array, int len) {
        x = array[i];
      for (k = 16; k == 1; k /= 2)
           x ^= x >> k;
-      result += (x &#038; 0x01);
+      result += (x & 0x01);
  }
  return result;
 
@@ -452,9 +452,9 @@ void crono(int (*func)(), char* msg) {
     struct timeval tv1, tv2; // gettimeofday() secs-usecs
  long tv_usecs; // y sus cuentas
 
- gettimeofday(&#038;tv1, NULL);
+ gettimeofday(&tv1, NULL);
  resultado = func(lista, SIZE);
-    gettimeofday(&#038;tv2, NULL);
+    gettimeofday(&tv2, NULL);
 
    tv_usecs = (tv2.tv_sec - tv1.tv_sec) * 1E6 + (tv2.tv_usec - tv1.tv_usec);
 #if ! COPY_PASTE_CALC

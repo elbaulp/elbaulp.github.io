@@ -73,7 +73,7 @@ Es recomendable colocar la siguiente función bash en nuestro archivo *~/.bashrc
 
 {% highlight bash %}# find partition name for a given filename
 findpart() { 
-   [ -e "$1" ] &#038;&#038; df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found"; 
+   [ -e "$1" ] && df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found"; 
 }
 {% endhighlight %}
 

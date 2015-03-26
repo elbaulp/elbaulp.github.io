@@ -55,7 +55,7 @@ Con esto estamos diciendo que la pantalla DVI-I-1 estará a la derecha la pantal
 
 El siguiente paso es hacer que este comando se ejecute siempre al iniciar el pc, para ello tenemos que modificar el archivo de autoarranque de OpenBox, que se llama *autostart* y suele estar en *~/.config/openbox*. Añadimos la siguiente línea debajo de *lxsession &*:
 
-{% highlight bash %}xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &#038;
+{% highlight bash %}xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &
 {% endhighlight %}
 
 De esta forma lo tenemos todo solucionado.
@@ -106,7 +106,7 @@ Para conseguir que esto funcione debemos volver a modificar el archivo *autostar
 
 {% highlight bash %}## Set desktop wallpaper
 /home/hkr/Pictures/wall_aleatorio.sh
-nitrogen --restore &#038;{% endhighlight %}
+nitrogen --restore &{% endhighlight %}
 
 Os dejo una captura:
 

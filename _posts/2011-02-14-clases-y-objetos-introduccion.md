@@ -74,7 +74,7 @@ printf (“Numero real %f=n”, f);
 
 {% highlight bash %}int i;
 cin&gt;&gt;i;
-scanf (“%d”, &#038;i);
+scanf (“%d”, &i);
 {% endhighlight %}
 
 * * *

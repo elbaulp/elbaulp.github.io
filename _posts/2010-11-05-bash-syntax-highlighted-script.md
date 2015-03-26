@@ -32,7 +32,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 0)
   keywords="<span class="bash">alias</span> <span class="bash">bg</span> <span class="bash">bind</span> <span class="bash">break</span> <span class="bash">builtin</span> <span class="bash">case</span> <span class="bash">cd</span> <span class="bash">command</span> <span class="bash">continue</span> <span class="bash">declare</span> <span class="bash">dirs</span> <span class="bash">disown</span> <span class="bash">do</span> <span class="bash">done</span> <span class="bash">echo</span> <span class="bash">elif</span> <span class="bash">else</span> <span class="bash">enable-<span class="bash">in</span></span> <span class="bash">esac</span> <span class="bash">eval</span> <span class="bash">exec</span> <span class="bash">exit</span> <span class="bash">export</span> <span class="bash">fc</span> <span class="bash">fg</span> <span class="bash">fi</span> <span class="bash">for</span> <span class="bash">function</span> <span class="bash">getopts</span> <span class="bash">hash</span> <span class="bash">help</span> <span class="bash">history</span> <span class="bash">if</span> in <span class="bash">jobs</span> <span class="bash">kill</span> <span class="bash">let</span> <span class="bash">local</span> <span class="bash">logout</span> <span class="bash">popd</span> <span class="bash">pushd</span> <span class="bash">pwd</span> <span class="bash">read</span> <span class="bash">readonly</span> <span class="bash">return</span> <span class="bash">select</span> <span class="bash">set</span> <span class="bash">shift</span> <span class="bash">suspend</span> <span class="bash">test</span> <span class="bash">then</span> <span class="bash">time</span> <span class="bash">times</span> <span class="bash">trap</span> <span class="bash">type</span> <span class="bash">typeset</span> <span class="bash">ulimit</span> <span class="bash">umask</span> <span class="bash">unalias</span> <span class="bash">unset</span> <span class="bash">until</span> <span class="bash">wait</span> <span class="bash">while</span> <span class="bash">sed</span> <span class="bash">rm</span> <span class="bash">IFS</span> <span class="bash">cp</span> <span class="bash">mv</span> <span class="bash">mkdir</span>"
  
- <span class="bash">sed</span> 's/#.*/<span class="comentario">&#038;</span>/' &lt; "$rutaCodigo" > temp # &#038; print the coincidence with the pattern
+ <span class="bash">sed</span> 's/#.*/<span class="comentario">&</span>/' &lt; "$rutaCodigo" > temp # & print the coincidence with the pattern
  <span class="bash">cp</span> temp "$rutaCodigo"
  
   <span class="bash">for</span> word <span class="bash">in</span> $keywords
@@ -51,7 +51,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 
 I am going to explain a bit the code:
 
-{% highlight bash %}sed 's/#.*/<span class="comentario">&#038;</span>/'{% endhighlight %}
+{% highlight bash %}sed 's/#.*/<span class="comentario">&</span>/'{% endhighlight %}
 
 This line is the one that takes charge highlighting the comments. We look for one &#8220;\*&#8221;, that are the comments in bash, and any character after &#8221; (. \*) &#8220;. &#8220;&&#8221;, it is in order that in this place, it prints everything what coincided with the pattern &#8221; (. *) &#8220;, that is to say, the comment.
 

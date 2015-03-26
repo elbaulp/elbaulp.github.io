@@ -45,10 +45,10 @@ Hay varias aproximaciones para determinar el valor adecuado de estos parámetros
 El primero (<a href="http://nls.io/optimize-nginx-and-php-fpm-max_children/" title="Optimize nginx and PHP-FPM (max\_children)" target="_blank">Guillaume Moigneu</a>) consiste en calcular *pm.max_children* basándonos en la fórmula:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+%28RAM_%7Btotal%7D+-+RAM_%7Bresto+Proc%7D%29%2F+RAM_%7BmediaPHP%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="pm.max&#92;_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}" title="pm.max&#92;_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+%28RAM_%7Btotal%7D+-+RAM_%7Bresto+Proc%7D%29%2F+RAM_%7BmediaPHP%7D&bg=ffffff&fg=000&s=0" alt="pm.max&#92;_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}" title="pm.max&#92;_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}" class="latex" />
 </p>
 
-Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7Bresto+Proc%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="RAM_{resto Proc}" title="RAM_{resto Proc}" class="latex" /> es la memoria usada por los otros procesos y <img src="//s0.wp.com/latex.php?latex=RAM_%7BmediaPHP%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="RAM_{mediaPHP}" title="RAM_{mediaPHP}" class="latex" /> es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
+Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7Bresto+Proc%7D&bg=ffffff&fg=000&s=0" alt="RAM_{resto Proc}" title="RAM_{resto Proc}" class="latex" /> es la memoria usada por los otros procesos y <img src="//s0.wp.com/latex.php?latex=RAM_%7BmediaPHP%7D&bg=ffffff&fg=000&s=0" alt="RAM_{mediaPHP}" title="RAM_{mediaPHP}" class="latex" /> es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
 
 {% highlight bash %}ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
 {% endhighlight %}
@@ -61,7 +61,7 @@ Y la consumida por PHP:
 Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de *max_children*, *min\_spare\_servers* y *max\_spare\_servers* se suelen calcular evaluando el rendimiento y *start_servers*, suele ser:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=start%5C_servers+%3D+min%5C_spare%5C_servers+%2B+%28max%5C_spare%5C_servers+-+min%5C_spare%5C_servers%29+%2F+2&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="start&#92;_servers = min&#92;_spare&#92;_servers + (max&#92;_spare&#92;_servers - min&#92;_spare&#92;_servers) / 2" title="start&#92;_servers = min&#92;_spare&#92;_servers + (max&#92;_spare&#92;_servers - min&#92;_spare&#92;_servers) / 2" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=start%5C_servers+%3D+min%5C_spare%5C_servers+%2B+%28max%5C_spare%5C_servers+-+min%5C_spare%5C_servers%29+%2F+2&bg=ffffff&fg=000&s=0" alt="start&#92;_servers = min&#92;_spare&#92;_servers + (max&#92;_spare&#92;_servers - min&#92;_spare&#92;_servers) / 2" title="start&#92;_servers = min&#92;_spare&#92;_servers + (max&#92;_spare&#92;_servers - min&#92;_spare&#92;_servers) / 2" class="latex" />
 </p>
 
 #### Segundo método
@@ -69,17 +69,17 @@ Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. U
 El segundo método (<a href="http://myshell.co.uk/index.php/adjusting-child-processes-for-php-fpm-nginx/" title="Adjusting child processes for PHP-FPM (Nginx)" target="_blank">myshell.co.uk</a>) es calcularlo en base a:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+RAM_%7Btotal%7D+%2F+RAM_%7BmaxPHP%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="pm.max&#92;_children = RAM_{total} / RAM_{maxPHP}" title="pm.max&#92;_children = RAM_{total} / RAM_{maxPHP}" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+RAM_%7Btotal%7D+%2F+RAM_%7BmaxPHP%7D&bg=ffffff&fg=000&s=0" alt="pm.max&#92;_children = RAM_{total} / RAM_{maxPHP}" title="pm.max&#92;_children = RAM_{total} / RAM_{maxPHP}" class="latex" />
 </p>
 
-Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7BmaxPHP%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="RAM_{maxPHP}" title="RAM_{maxPHP}" class="latex" /> es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.
+Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7BmaxPHP%7D&bg=ffffff&fg=000&s=0" alt="RAM_{maxPHP}" title="RAM_{maxPHP}" class="latex" /> es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.
 
 #### Tercer método
 
 Por último, otro método (<a href="https://github.com/perusio/php-fpm-example-config" title="Example configuration of php-fpm" target="_blank">Perusio</a>) es realizando la operación siguiente:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+1.2+%5Ccdot+RAM_%7Btotal%7D%2FRAM_%7BmediaPHP%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="pm.max&#92;_children = 1.2 &#92;cdot RAM_{total}/RAM_{mediaPHP}" title="pm.max&#92;_children = 1.2 &#92;cdot RAM_{total}/RAM_{mediaPHP}" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+1.2+%5Ccdot+RAM_%7Btotal%7D%2FRAM_%7BmediaPHP%7D&bg=ffffff&fg=000&s=0" alt="pm.max&#92;_children = 1.2 &#92;cdot RAM_{total}/RAM_{mediaPHP}" title="pm.max&#92;_children = 1.2 &#92;cdot RAM_{total}/RAM_{mediaPHP}" class="latex" />
 </p>
 
 ### Optimizando Nginx
@@ -311,12 +311,12 @@ apc.localcache.size = "384"
 
 Algunos valores por defecto de la configuración de nginx no son adecuados en términos de seguridad, basándonos en las recomendaciones de <a href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html" title="Top 20 Nginx WebServer Best Security Practices" target="_blank">NIX Craft</a> podemos ajustar éstos parámetros según nuestras necesidades para obtener una mayor seguridad frente a ataques. Todos estos parámetros irán en el bloque *http* de nginx.
 
-{% highlight bash %}## Start: Size Limits &#038; Buffer Overflows ##
+{% highlight bash %}## Start: Size Limits & Buffer Overflows ##
       client_body_buffer_size  8K;
       client_header_buffer_size 1k;
       client_max_body_size 1m;
       large_client_header_buffers 2 1k;
-    ## END: Size Limits &#038; Buffer Overflows ##
+    ## END: Size Limits & Buffer Overflows ##
 
     ## Start: Timeouts ##
       client_body_timeout   10;

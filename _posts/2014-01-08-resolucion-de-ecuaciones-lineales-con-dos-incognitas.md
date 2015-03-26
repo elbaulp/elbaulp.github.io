@@ -20,10 +20,10 @@ Una ecuación no es más que una igualdad en la que hay cantidades desconocidas 
 <!--more-->
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=x%2By%3D3%5C%5C2x%2B3y%3D3%5C%5C+&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="x+y=3&#92;&#92;2x+3y=3&#92;&#92; " title="x+y=3&#92;&#92;2x+3y=3&#92;&#92; " class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=x%2By%3D3%5C%5C2x%2B3y%3D3%5C%5C+&bg=ffffff&fg=000&s=0" alt="x+y=3&#92;&#92;2x+3y=3&#92;&#92; " title="x+y=3&#92;&#92;2x+3y=3&#92;&#92; " class="latex" />
 </p>
 
-Es un sistema de ecuaciones cuyas soluciones son <img src="//s0.wp.com/latex.php?latex=x%3D6%2C+y%3D-3&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="x=6, y=-3" title="x=6, y=-3" class="latex" />. Los sistemas de ecuaciones tienen aplicaciones en todas las ciencias entonces es útil tener un algoritmo que las resuelva y comprender qué es lo que hace. Normalmente utilizaríamos algo de algebra lineal para resolverlo pero hoy vamos a hacerlo de otro modo.
+Es un sistema de ecuaciones cuyas soluciones son <img src="//s0.wp.com/latex.php?latex=x%3D6%2C+y%3D-3&bg=ffffff&fg=000&s=0" alt="x=6, y=-3" title="x=6, y=-3" class="latex" />. Los sistemas de ecuaciones tienen aplicaciones en todas las ciencias entonces es útil tener un algoritmo que las resuelva y comprender qué es lo que hace. Normalmente utilizaríamos algo de algebra lineal para resolverlo pero hoy vamos a hacerlo de otro modo.
 
 ### Tipos de sistemas de ecuaciones
 
@@ -34,26 +34,26 @@ Aunque de manera intuitiva nos puede parecer que todo sistema tiene soluciones �
 El **determinante** de nuestro sistema es el que nos dirá qué tipo de sistema es. El determinante del sistema:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=ax%2Bby%3Dc%5C%5Cdx%2Bey%3Df+&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="ax+by=c&#92;&#92;dx+ey=f " title="ax+by=c&#92;&#92;dx+ey=f " class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=ax%2Bby%3Dc%5C%5Cdx%2Bey%3Df+&bg=ffffff&fg=000&s=0" alt="ax+by=c&#92;&#92;dx+ey=f " title="ax+by=c&#92;&#92;dx+ey=f " class="latex" />
 </p>
 
-Viene dado por <img src="//s0.wp.com/latex.php?latex=ae-bd&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="ae-bd" title="ae-bd" class="latex" />, en el primer ejemplo el determinante es **1** pues <img src="//s0.wp.com/latex.php?latex=1%5Ccdot+3-1%5Ccdot+2%3D1&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="1&#92;cdot 3-1&#92;cdot 2=1" title="1&#92;cdot 3-1&#92;cdot 2=1" class="latex" />.En general si el determinante (<img src="//s0.wp.com/latex.php?latex=D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="D" title="D" class="latex" />) es distinto de cero tenemos soluciones únicas, si el determinante es cero entonces o hay infinitas soluciones o no hay ninguna. En &#8220;el caso fácil&#8221; cuando <img src="//s0.wp.com/latex.php?latex=D%5Cneq+0&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="D&#92;neq 0" title="D&#92;neq 0" class="latex" /> las soluciones están dadas por:
+Viene dado por <img src="//s0.wp.com/latex.php?latex=ae-bd&bg=ffffff&fg=000&s=0" alt="ae-bd" title="ae-bd" class="latex" />, en el primer ejemplo el determinante es **1** pues <img src="//s0.wp.com/latex.php?latex=1%5Ccdot+3-1%5Ccdot+2%3D1&bg=ffffff&fg=000&s=0" alt="1&#92;cdot 3-1&#92;cdot 2=1" title="1&#92;cdot 3-1&#92;cdot 2=1" class="latex" />.En general si el determinante (<img src="//s0.wp.com/latex.php?latex=D&bg=ffffff&fg=000&s=0" alt="D" title="D" class="latex" />) es distinto de cero tenemos soluciones únicas, si el determinante es cero entonces o hay infinitas soluciones o no hay ninguna. En &#8220;el caso fácil&#8221; cuando <img src="//s0.wp.com/latex.php?latex=D%5Cneq+0&bg=ffffff&fg=000&s=0" alt="D&#92;neq 0" title="D&#92;neq 0" class="latex" /> las soluciones están dadas por:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=x%3D%5Cfrac%7Bec-bf%7D%7Bae-bd%7D%5C%5Cy%3D%5Cfrac%7Baf-dc%7D%7Bae-bd%7D&#038;bg=ffffff&#038;fg=000&#038;s=2" alt="x=&#92;frac{ec-bf}{ae-bd}&#92;&#92;y=&#92;frac{af-dc}{ae-bd}" title="x=&#92;frac{ec-bf}{ae-bd}&#92;&#92;y=&#92;frac{af-dc}{ae-bd}" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=x%3D%5Cfrac%7Bec-bf%7D%7Bae-bd%7D%5C%5Cy%3D%5Cfrac%7Baf-dc%7D%7Bae-bd%7D&bg=ffffff&fg=000&s=2" alt="x=&#92;frac{ec-bf}{ae-bd}&#92;&#92;y=&#92;frac{af-dc}{ae-bd}" title="x=&#92;frac{ec-bf}{ae-bd}&#92;&#92;y=&#92;frac{af-dc}{ae-bd}" class="latex" />
 </p>
 
-Ahora &#8220;el caso difícil&#8221; cuando <img src="//s0.wp.com/latex.php?latex=D%3D0&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="D=0" title="D=0" class="latex" /> ¿Cómo saber si el sistema tiene infinitas soluciones o ninguna? Pongamos atención en los siguientes sistemas:
+Ahora &#8220;el caso difícil&#8221; cuando <img src="//s0.wp.com/latex.php?latex=D%3D0&bg=ffffff&fg=000&s=0" alt="D=0" title="D=0" class="latex" /> ¿Cómo saber si el sistema tiene infinitas soluciones o ninguna? Pongamos atención en los siguientes sistemas:
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=x%2By%3D3%5C%5C+2x%2B2y%3D6&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="x+y=3&#92;&#92; 2x+2y=6" title="x+y=3&#92;&#92; 2x+2y=6" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=x%2By%3D3%5C%5C+2x%2B2y%3D6&bg=ffffff&fg=000&s=0" alt="x+y=3&#92;&#92; 2x+2y=6" title="x+y=3&#92;&#92; 2x+2y=6" class="latex" />
 </p>
 
 <p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=x%2By%3D3%5C%5C+2x%2B2y%3D5&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="x+y=3&#92;&#92; 2x+2y=5" title="x+y=3&#92;&#92; 2x+2y=5" class="latex" />
+  <img src="//s0.wp.com/latex.php?latex=x%2By%3D3%5C%5C+2x%2B2y%3D5&bg=ffffff&fg=000&s=0" alt="x+y=3&#92;&#92; 2x+2y=5" title="x+y=3&#92;&#92; 2x+2y=5" class="latex" />
 </p>
 
-En el primer sistema es fácil ver que la segunda ecuación es solo la primera multiplicada por 2 y es coherente el resultado. Sin embargo en el segundo sistema el lado izquierdo de la igualdad nos dice de nuevo que la segunda ecuación es solo la primera multiplicada por 2 pero el lado derecho no puede ser cierto pues el doble de 3 no es 5. Entonces decimos que el primer sistema tiene soluciones infinitas pues las soluciones de la primera ecuación siempre cumplen la segunda pues básicamente es la misma ecuación. El segundo sistema no tiene soluciones y podemos verlo en el absurdo de que el doble de 3 es 5. Podemos decir pues que en un sistema con <img src="//s0.wp.com/latex.php?latex=D%3D0&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="D=0" title="D=0" class="latex" /> lo importante es ver por qué número debemos multiplicar la primera ecuación para obtener la segunda y la parte derecha de las ecuaciones nos dirán si es coherente o no, en otras palabras si tiene infinitas soluciones o ninguna.
+En el primer sistema es fácil ver que la segunda ecuación es solo la primera multiplicada por 2 y es coherente el resultado. Sin embargo en el segundo sistema el lado izquierdo de la igualdad nos dice de nuevo que la segunda ecuación es solo la primera multiplicada por 2 pero el lado derecho no puede ser cierto pues el doble de 3 no es 5. Entonces decimos que el primer sistema tiene soluciones infinitas pues las soluciones de la primera ecuación siempre cumplen la segunda pues básicamente es la misma ecuación. El segundo sistema no tiene soluciones y podemos verlo en el absurdo de que el doble de 3 es 5. Podemos decir pues que en un sistema con <img src="//s0.wp.com/latex.php?latex=D%3D0&bg=ffffff&fg=000&s=0" alt="D=0" title="D=0" class="latex" /> lo importante es ver por qué número debemos multiplicar la primera ecuación para obtener la segunda y la parte derecha de las ecuaciones nos dirán si es coherente o no, en otras palabras si tiene infinitas soluciones o ninguna.
 
 ### Ideas llevadas a Python
 

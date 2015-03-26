@@ -128,7 +128,7 @@ Primero creamos un objeto de tipo SDL\_Rect. Hacemos esto porque SDL\_BlitSurfac
 SDL_Rect es un tipo de dato que representa un rectángulo. Tiene cuatro miembros representando los valores X e Y de un rectángulo (Ancho y alto).
 
 {% highlight bash %}//Fusión de la imagen
-    SDL_BlitSurface( source, NULL, destination, &#038;offset );
+    SDL_BlitSurface( source, NULL, destination, &offset );
 }
 {% endhighlight %}
 

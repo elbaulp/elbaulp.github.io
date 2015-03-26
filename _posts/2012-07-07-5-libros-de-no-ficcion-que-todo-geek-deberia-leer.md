@@ -4,14 +4,14 @@ title: 14 Libros de No-Ficción que todo Geek debería leer
 
 excerpt: |
   Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
-  
+
   Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
 layout: post
 guid: /?p=790
 permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Artículos
   - Tecnología
@@ -25,7 +25,7 @@ Siempre he estado fascinado por la tecnología de consumo, que es la razón por 
 Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
 
 &nbsp;  
-  
+
 <!--more-->
 
 ### &#8220;<a href="http://www.biogamergirl.com/2012/05/generation-xbox-how-videogames-invaded.html" target="_blank">Generation Xbox</a>&#8221; (La Generación Xbox), por Jamie Russell
@@ -37,7 +37,7 @@ Esta no es la única razón por la que recomiendo este libro, de todas maneras. 
 
 &nbsp;
 
-### &#8220;<a href="http://www.amazon.es/gp/product/0307390993/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=0307390993&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">The Master Switch</a>&#8221; (El interruptor maestro) por Tim Wu
+### &#8220;<a href="http://www.amazon.es/gp/product/0307390993/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0307390993&linkCode=as2&tag=elbaudelpro-21" target="_blank">The Master Switch</a>&#8221; (El interruptor maestro) por Tim Wu
 
 [<img src="http://elbauldelprogramador.com/content/uploads/2012/07/themasterswitch1.jpg" alt="" title="themasterswitch" width="318" height="500" class="aligncenter size-full wp-image-820" />][2]
 
@@ -46,7 +46,7 @@ La mayor parte del libro se centra en el gigante que fue AT&T. Hay mucha histori
 
 &nbsp;
 
-### &#8220;<a href="http://www.amazon.es/gp/product/0806531010/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=0806531010&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">The Race For A New Game Machine</a>&#8220;(La carrera por una nueva máquina de videojuegos)
+### &#8220;<a href="http://www.amazon.es/gp/product/0806531010/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0806531010&linkCode=as2&tag=elbaudelpro-21" target="_blank">The Race For A New Game Machine</a>&#8220;(La carrera por una nueva máquina de videojuegos)
 
 por David Shippy And Mickie Phipps
 
@@ -58,7 +58,7 @@ Este libro es importante además porque las consolas son importantes. Ellas est�
 
 &nbsp;
 
-### <a href="http://www.amazon.es/gp/product/1451648537/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=1451648537&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">Steve Jobs</a>, por Walter Isaacson
+### <a href="http://www.amazon.es/gp/product/1451648537/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1451648537&linkCode=as2&tag=elbaudelpro-21" target="_blank">Steve Jobs</a>, por Walter Isaacson
 
 [<img src="http://elbauldelprogramador.com/content/uploads/2012/07/stevejobs11.jpg" alt="" title="stevejobs1" width="299" height="447" class="aligncenter size-full wp-image-818" />][4]
 
@@ -68,7 +68,7 @@ Apple no fue su único trabajo, no obstante, por el cual este libro es una lectu
 
 &nbsp;
 
-### &#8220;<a href="http://www.amazon.es/gp/product/0307389979/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=0307389979&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">You Are Not A Gadget</a>&#8221; (No eres un aparato), por Jaron Lanier
+### &#8220;<a href="http://www.amazon.es/gp/product/0307389979/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0307389979&linkCode=as2&tag=elbaudelpro-21" target="_blank">You Are Not A Gadget</a>&#8221; (No eres un aparato), por Jaron Lanier
 
 [<img src="http://elbauldelprogramador.com/content/uploads/2012/07/youarenotagadget1.jpg" alt="" title="youarenotagadget" width="333" height="500" class="aligncenter size-full wp-image-817" />][5]
 
@@ -78,13 +78,13 @@ Lanier cree que Internet no ha disfrutado todo su potencial. Señala que la libe
 
 Esto es realmente sólo la punta del iceberg. Hay muchísimo encerrado en este pequeño libro y hay incluso algunos capítulos dedicados a encontrar soluciones a las criticas que enfrenta el autor.
 
-### &#8220;<a href="http://www.amazon.es/gp/product/B00BY4Z6EQ/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=B00BY4Z6EQ&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">Biopreguntas y la respuesta mecánica</a>&#8221; de Didier Newman
+### &#8220;<a href="http://www.amazon.es/gp/product/B00BY4Z6EQ/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00BY4Z6EQ&linkCode=as2&tag=elbaudelpro-21" target="_blank">Biopreguntas y la respuesta mecánica</a>&#8221; de Didier Newman
 
 [<img src="http://elbauldelprogramador.com/content/uploads/2012/07/Biopreguntas-y-la-respuesta-mecánica.jpg" alt="Biopreguntas y la respuesta mecánica de Didier Newman" width="318" height="479" class="aligncenter size-full wp-image-1992" />][6]
 
 Este es un libro de preguntas, algunas divertidas y muchas otras más serias e inquietantes. Un libro que a partir de la ciencia biológica, que se usa como columna vertebral necesaria para seguir una narración con los pies en el suelo, además pretende tratar todos los temas de interés humano, desde una perspectiva moderna, desenfadada y holística. Así pues, un libro excelente para cuestionar la vida y la muerte; cuestionar las religiones y las filosofías; cuestionar el universo y el yo; cuestionar el sufrimiento y el amor; en resumen, cuestionar lo cuestionable, de forma diferente y con sustancia suficiente para los sueños y las reflexiones de naturaleza tanto científica como humanística. Sobretodo, con sustancia suficiente para que el lector pueda cuestionar por sí mismo la música o el ruido del mundo que quizás lo envuelve constantemente.
 
-### <a href="http://www.amazon.es/gp/product/8498752035/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=8498752035&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">Y Google, ¿cómo lo haría?</a> de Jeff Jarvis
+### <a href="http://www.amazon.es/gp/product/8498752035/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8498752035&linkCode=as2&tag=elbaudelpro-21" target="_blank">Y Google, ¿cómo lo haría?</a> de Jeff Jarvis
 
 <img src="http://elbauldelprogramador.com/content/uploads/2012/07/Y-Google-¿cómo-lo-haría.jpg" alt="Y Google, ¿cómo lo haría?" width="318" height="480" class="thumbnail aligncenter size-full wp-image-2007" />
 

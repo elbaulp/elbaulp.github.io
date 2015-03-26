@@ -71,7 +71,7 @@ Un método más elegante para resolver este problema, es usar el atributo *debug
 {% highlight java %}//Devuelve si la aplicación está en modo debug o no
 ApplicationInfo appInfo = context.getApplicationInfo();
 int appFlags = appInfo.flags;
-if ((appFlags &#038; ApplicationInfo.FLAG_DEBUGGABLE) != 0){
+if ((appFlags & ApplicationInfo.FLAG_DEBUGGABLE) != 0){
    //Aquí configuraríamos el StrictMode
 }
 {% endhighlight %}
@@ -103,7 +103,7 @@ public class StrictModeWrapper{
     public static void init(Context context){
        ApplicationInfo appInfo = context.getApplicationInfo();
        int appFlags = appInfo.flags;
-       if ((appFlags &#038; ApplicationInfo.FLAG_DEBUGGABLE) != 0){
+       if ((appFlags & ApplicationInfo.FLAG_DEBUGGABLE) != 0){
           StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
                     .detectDiskWrites()

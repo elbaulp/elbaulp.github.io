@@ -98,18 +98,18 @@ drw_colored_st(Drw *drw, int x, int y, unsigned int w, unsigned int h, char text
   if(!text || !drw->font)
     return;
   olen = strlen(ptext);
-  drw_font_getexts(drw->font, ptext, olen, &#038;tex);
+  drw_font_getexts(drw->font, ptext, olen, &tex);
   th = drw->font->ascent + drw->font->descent;
   ty = y + (h / 2) - (th / 2) + drw->font->ascent;
   tx = x + (h / 2);
   /* shorten text if necessary */
-  for(len = MIN(olen, sizeof buf); len &#038;&#038; (tex.w > w - tex.h || w &lt; tex.h); len--)
-    drw_font_getexts(drw->font, ptext, len, &#038;tex);
+  for(len = MIN(olen, sizeof buf); len && (tex.w > w - tex.h || w &lt; tex.h); len--)
+    drw_font_getexts(drw->font, ptext, len, &tex);
   if(!len)
     return;
   memcpy(buf, ptext, len);
   if(len &lt; olen)
-    for(i = len; i &#038;&#038; i > len - 3; buf[--i] = '.');
+    for(i = len; i && i > len - 3; buf[--i] = '.');
 
   for (int k = 0; color[k]; k++) {
     XSetForeground(drw->dpy, drw->gc, color[k]);

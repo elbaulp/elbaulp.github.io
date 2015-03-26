@@ -151,10 +151,10 @@ unsigned long long operA = ((unsigned long long)a->x &lt;&lt; 48) | ((unsigned l
 unsigned long long operB = ((unsigned long long)b->x &lt;&lt; 48) | ((unsigned long long)b->y &lt;&lt; 32) | (b->z &lt;&lt; 16) | b->w;
 unsigned long long result = operA + operB;
 
-c->x = (result &#038; 0xffff000000000000) >> 48;
-c->y = (result &#038; 0xffff00000000) >> 32;
-c->z = (result &#038; 0xffff0000) >> 16;
-c->w = result &#038; 0xffff;
+c->x = (result & 0xffff000000000000) >> 48;
+c->y = (result & 0xffff00000000) >> 32;
+c->z = (result & 0xffff0000) >> 16;
+c->w = result & 0xffff;
 }
 
 /***************************************
@@ -185,15 +185,15 @@ srand(time(0));
 tStart = clock();
 
 for (i = 0; i &lt; N; i++) {
-a[i].x = rand() &#038; 0x7fff; // 32767 &lt; (65536 / 2) => No desbordamiento
-a[i].y = rand() &#038; 0x7fff;
-a[i].z = rand() &#038; 0x7fff;
-a[i].w = rand() &#038; 0x7fff;
+a[i].x = rand() & 0x7fff; // 32767 &lt; (65536 / 2) => No desbordamiento
+a[i].y = rand() & 0x7fff;
+a[i].z = rand() & 0x7fff;
+a[i].w = rand() & 0x7fff;
 
-b[i].x = rand() &#038; 0x7fff;
-b[i].y = rand() &#038; 0x7fff;
-b[i].z = rand() &#038; 0x7fff;
-b[i].w = rand() &#038; 0x7fff;
+b[i].x = rand() & 0x7fff;
+b[i].y = rand() & 0x7fff;
+b[i].z = rand() & 0x7fff;
+b[i].w = rand() & 0x7fff;
 }
 
 tInit = clock() - tStart;
@@ -204,7 +204,7 @@ printf("Inicializacion: %d ms.n", (int)((double)tInit / CLOCKS_PER_SEC * 1000));
 tStart = clock();
 
 for (i = 0; i &lt; N; i++) {
-suma1(&#038;a[i], &#038;b[i], &#038;c[i]);
+suma1(&a[i], &b[i], &c[i]);
 }
 
 tStop = clock();
@@ -215,7 +215,7 @@ printf("Algoritmo 1: %d ms.n", (int)((double)(tStop - tStart) / CLOCKS_PER_SEC *
 tStart = clock();
 
 for (i = 0; i &lt; N; i++) {
-suma2(&#038;a[i], &#038;b[i], &#038;c[i]);
+suma2(&a[i], &b[i], &c[i]);
 }
 
 tStop = clock();
@@ -226,7 +226,7 @@ printf("Algoritmo 2: %d ms.n", (int)((double)(tStop - tStart) / CLOCKS_PER_SEC *
 tStart = clock();
 
 for (i = 0; i &lt; N; i++) {
-suma3(&#038;a[i], &#038;b[i], &#038;c[i]);
+suma3(&a[i], &b[i], &c[i]);
 }
 
 tStop = clock();

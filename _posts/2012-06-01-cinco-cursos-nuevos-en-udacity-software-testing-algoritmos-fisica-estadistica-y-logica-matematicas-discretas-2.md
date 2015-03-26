@@ -1,6 +1,6 @@
 ---
 id: 771
-title: 'Cinco cursos nuevos en Udacity: Software Testing, Algoritmos, Física, Estadística y Lógica &#038; matemáticas discretas'
+title: 'Cinco cursos nuevos en Udacity: Software Testing, Algoritmos, Física, Estadística y Lógica & matemáticas discretas'
 
 layout: post
 guid: /?p=771

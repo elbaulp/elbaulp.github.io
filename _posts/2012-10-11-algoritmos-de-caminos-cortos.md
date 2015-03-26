@@ -90,7 +90,7 @@ grafo obtenerGrafo (char * nombre){
 }
  
  
-void dijkstra(grafo &#038; G, vertice s){
+void dijkstra(grafo & G, vertice s){
     vertice u;
     vector&lt;vertice> P(G.size(), -1);      //Vector de soluciones.
     vector&lt;distancia> D(G.size(),INFINITO);  // Vector de distancias

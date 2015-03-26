@@ -53,7 +53,7 @@ $ apt-get install grive
 
 Nos autentificamos y otorgamos los permisos necesarios a Grive:
 
-{% highlight bash %}cd ~/Drive &#038;&#038; grive -a
+{% highlight bash %}cd ~/Drive && grive -a
 {% endhighlight %}
 
 El comando de arriba mostrará un link, clica en él y autoriza a Grive para que pueda acceder a **Google Drive**.
@@ -88,7 +88,7 @@ TIMEOUT=300              # Timeout time in seconds, for periodic syncs. Nicely p
 while true
 do
     inotifywait -t $TIMEOUT -e modify -e move -e create -e delete -r $GDRIVE_PATH
-    cd $GDRIVE_PATH &#038;&#038; $GRIVE_COMMAND_WITH_PATH
+    cd $GDRIVE_PATH && $GRIVE_COMMAND_WITH_PATH
 done
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ Por último añadelo a las aplicaciones de inicio. Dependiendo de la distribuci�
 
 Hasta el momento, los únicos cambios que se sincronizan son los locales, para lograr detectar cambios en **Google Drive** añadiremos una entrada a [cron][3]. Para ello ejecutamos el comando `crontab -e` y añadimos la siguiente línea:
 
-{% highlight bash %}*/10 * * * *  cd "$HOME/Drive" &#038;&#038; grive >/dev/null 2>&#038;1
+{% highlight bash %}*/10 * * * *  cd "$HOME/Drive" && grive >/dev/null 2>&1
 {% endhighlight %}
 
 Con esto *grive* detectará si ha habido cambios en el servidor remoto cada 10 minutos.
@@ -114,21 +114,21 @@ A los scripts mencionados arriba les hice unas pequeñas modificaciones que mues
 
 Mi entrada en el crontab es la siguiente:
 
-{% highlight bash %}*/10 * * * * cd "$HOME"/Drive &#038;&#038; grive > /tmp/GRIVE_LOG
+{% highlight bash %}*/10 * * * * cd "$HOME"/Drive && grive > /tmp/GRIVE_LOG
 {% endhighlight %}
 
 La única diferencia es que guardo la salida del programa en un fichero temporal a modo de log, dentro de poco veremos por qué. 
 
 Yo uso [xmonad][3], y para lograr que grive se ejecute al iniciar sesión añadí una línea al script que es ejecutado cuando me loggeo:
 
-{% highlight bash %}exec /home/hkr/bin/grive.sh 2>&#038;1 | tee /tmp/GRIVE_LOG &#038;
+{% highlight bash %}exec /home/hkr/bin/grive.sh 2>&1 | tee /tmp/GRIVE_LOG &
 {% endhighlight %}
 
 De nuevo vuelvo a redirigir la salida del programa a un fichero, esta vez con [tee][4].
 
 Por último, en este mismo archivo, añadí otra línea para que se muestre el fichero que estoy usando como log en el escritorio, y poder así observar si se están sincronizando correctamente los archivos:
 
-{% highlight bash %}xrootconsole --wrap --bottomup -geometry 233x16+5+570 /tmp/GRIVE_LOG &#038;
+{% highlight bash %}xrootconsole --wrap --bottomup -geometry 233x16+5+570 /tmp/GRIVE_LOG &
 {% endhighlight %}
 
 Hace algún tiempo expliqué cómo usar xroot en el artículo [Cómo tener un terminal transparente como wallpaper que muestre información][5]

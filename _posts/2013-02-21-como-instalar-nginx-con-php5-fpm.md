@@ -160,7 +160,7 @@ Los cambios más relevantes sobre la configuración por defecto son:
 Cambiamos los permisos de los ficheros que contienen la web y reiniciamos nginx para aplicar los cambios:
 
 {% highlight bash %}$ sudo chown -R www-data:www-data html/
-$ sudo service nginx destroy &#038;&#038; sudo service nginx start
+$ sudo service nginx destroy && sudo service nginx start
 {% endhighlight %}
 
 ### Instalar php5-fpm

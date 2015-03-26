@@ -90,7 +90,7 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination 
     offset.y = y;
     
     //Blit the surface
-    SDL_BlitSurface( source, NULL, destination, &#038;offset );
+    SDL_BlitSurface( source, NULL, destination, &offset );
 }
 {% endhighlight %}
 
@@ -196,7 +196,7 @@ Con éste fragmento de código mostramos la imágen en pantalla.
 Comenzamos el bucle principal, el cual seguirá funcionando hasta que el usuario fije la variable <var>quit</var> a true.
 
 {% highlight bash %}//While there's an event to handle
-        while( SDL_PollEvent( &#038;event ) )
+        while( SDL_PollEvent( &event ) )
         {
 {% endhighlight %}
 

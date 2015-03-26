@@ -1,6 +1,6 @@
 ---
 id: 214
-title: 'Nueva guía: Run Your Own Web Server Using Linux &#038; Apache'
+title: 'Nueva guía: Run Your Own Web Server Using Linux & Apache'
 
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-run-your-own-web-server-using-linux-apache/

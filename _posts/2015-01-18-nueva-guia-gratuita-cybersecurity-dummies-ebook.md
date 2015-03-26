@@ -19,7 +19,7 @@ Controlling these threats requires multiple security disciplines working togethe
 # Descargar
 
 <div class="button-container">
-  <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&#038;_t=oc:&#038;qf=w_palo12" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+  <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_palo12" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 

@@ -157,10 +157,10 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
 
 \begin{tabular}{|p{4cm} | p{4cm} |}
 \hline % para poner una linea horizontal
-Notación infija &#038; Notación postfija \\ % el &#038; se usa para separar columnas y el \\ para saltos de linea
+Notación infija & Notación postfija \\ % el & se usa para separar columnas y el \\ para saltos de linea
 \hline
-$1 + 2$ &#038; $1$ $2 +$ \\
-$5 + ((1 + 2) * 4) - 3$ &#038;  $5$ $1$ $2 + 4 * + 3 -$ \\
+$1 + 2$ & $1$ $2 +$ \\
+$5 + ((1 + 2) * 4) - 3$ &  $5$ $1$ $2 + 4 * + 3 -$ \\
 \hline
 \end{tabular}
 {% endhighlight %}

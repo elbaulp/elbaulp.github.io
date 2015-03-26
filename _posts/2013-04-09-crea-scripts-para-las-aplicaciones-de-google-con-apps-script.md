@@ -115,7 +115,7 @@ function fetchEmails_() {
           if (j == 0) {
             youStartedTheConversation = true;
           }
-          if (j > 0 &#038;&#038; !youStartedTheConversation) {
+          if (j > 0 && !youStartedTheConversation) {
             youReplied = true;
           }
           variables.nbrOfEmailsSent++;
@@ -133,7 +133,7 @@ function fetchEmails_() {
                 found = true;
               }
             }
-            if (!found &#038;&#038; to[l].length &lt; 50) {
+            if (!found && to[l].length &lt; 50) {
               variables.people.push([
                   to[l], 0, 1
               ]);
@@ -147,7 +147,7 @@ function fetchEmails_() {
               found = true;
             }
           }
-          if (!found &#038;&#038; from.length &lt; 50) {
+          if (!found && from.length &lt; 50) {
             variables.people.push([
                 from, 1, 0
             ]);

@@ -120,7 +120,7 @@ Existen otras posibilidades que podemos aplicar al atributo *quantity* del eleme
             if (n == 1) {
                 return QUANTITY_ONE;
             }
-            else if (n >= 2 &#038;&#038; n &lt; = 4) {
+            else if (n >= 2 && n &lt; = 4) {
                 return QUANTITY_FEW;
             }
             else {

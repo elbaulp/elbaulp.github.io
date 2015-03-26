@@ -24,7 +24,7 @@ categories:
 Hace muy poco que blogger [anunció sus vistas dinámicas][1], y ahora han lanzado una extensión para chrome:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3-www-accel-pss.googleusercontent.com/gadgets/proxy?container=accel&#038;gadget=buzz.blogger.com&#038;debug=0&#038;nocache=0&#038;rooe=1&#038;html_tag_context=img&#038;url=http%3A%2F%2F4.bp.blogspot.com%2F_UUTay7LUoq0%2FTZkQ4W68PpI%2FAAAAAAAAAEc%2FW9HrUwOTDGM%2FUntitled3.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="144" width="391" src="http://3-www-accel-pss.googleusercontent.com/gadgets/proxy?container=accel&#038;gadget=buzz.blogger.com&#038;debug=0&#038;nocache=0&#038;rooe=1&#038;html_tag_context=img&#038;url=http%3A%2F%2F4.bp.blogspot.com%2F_UUTay7LUoq0%2FTZkQ4W68PpI%2FAAAAAAAAAEc%2FW9HrUwOTDGM%2FUntitled3.png" /></a>
+  <a href="http://3-www-accel-pss.googleusercontent.com/gadgets/proxy?container=accel&gadget=buzz.blogger.com&debug=0&nocache=0&rooe=1&html_tag_context=img&url=http%3A%2F%2F4.bp.blogspot.com%2F_UUTay7LUoq0%2FTZkQ4W68PpI%2FAAAAAAAAAEc%2FW9HrUwOTDGM%2FUntitled3.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="144" width="391" src="http://3-www-accel-pss.googleusercontent.com/gadgets/proxy?container=accel&gadget=buzz.blogger.com&debug=0&nocache=0&rooe=1&html_tag_context=img&url=http%3A%2F%2F4.bp.blogspot.com%2F_UUTay7LUoq0%2FTZkQ4W68PpI%2FAAAAAAAAAEc%2FW9HrUwOTDGM%2FUntitled3.png" /></a>
 </div>
 
   

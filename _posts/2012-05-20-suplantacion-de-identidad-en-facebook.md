@@ -133,9 +133,9 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
     }
 
     /*=====Connect to port 25 on remote host=====*/
-    memcpy((char *) &#038;server.sin_addr, (char *) hp->h_addr, hp->h_length);
+    memcpy((char *) &server.sin_addr, (char *) hp->h_addr, hp->h_length);
     server.sin_port=htons(25); /* SMTP PORT */
-    if (connect(sock, (struct sockaddr *) &#038;server, sizeof server)==-1)
+    if (connect(sock, (struct sockaddr *) &server, sizeof server)==-1)
     {
      perror("connecting stream socket");
      return 1;

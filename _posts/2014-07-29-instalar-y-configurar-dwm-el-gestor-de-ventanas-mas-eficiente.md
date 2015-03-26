@@ -58,15 +58,15 @@ setxkbmap us intl
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
-nm-applet &#038;
-insync start &#038;
-transmission-gtk &#038;
-.dropbox-dist/dropboxd &#038;
-parcellite &#038;
-xfce4-volumed &#038;
+nm-applet &
+insync start &
+transmission-gtk &
+.dropbox-dist/dropboxd &
+parcellite &
+xfce4-volumed &
 
-#Set status bar &#038; start DWM
-dwmstatus &#038;
+#Set status bar & start DWM
+dwmstatus &
 
 exec dwm
 {% endhighlight %}

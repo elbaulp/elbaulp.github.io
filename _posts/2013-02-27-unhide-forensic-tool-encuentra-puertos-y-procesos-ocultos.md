@@ -47,7 +47,7 @@ Los posibles argumentos de cada herramienta son los siguientes:
 
 {% highlight bash %}./unhide-tcp --help
 Unhide-tcp 20121229
-Copyright © 2012 Yago Jesus &#038; Patrick Gouin
+Copyright © 2012 Yago Jesus & Patrick Gouin
 License GPLv3+ : GNU GPL version 3 or later
 
 http://www.unhide-forensics.info
@@ -71,7 +71,7 @@ Las opciones de **unhide-linux**:
 
 {% highlight bash %}./unhide-linux --help
 Unhide 20121229
-Copyright © 2012 Yago Jesus &#038; Patrick Gouin
+Copyright © 2012 Yago Jesus & Patrick Gouin
 License GPLv3+ : GNU GPL version 3 or later
 
 http://www.unhide-forensics.info
@@ -84,7 +84,7 @@ Option :
    -V          Show version and exit
    -v          verbose
    -h          display this help
-   -m          more checks (available only with procfs, checkopendir &#038; checkchdir commands)
+   -m          more checks (available only with procfs, checkopendir & checkchdir commands)
    -r          use alternate sysinfo test in meta-test
    -f          log result into unhide-linux.log file
    -o          same as '-f'

@@ -581,7 +581,7 @@ void myInit() {
 
 int main(int argc, char **argv) {
   srand(time(NULL));
-  glutInit(&#038;argc, argv);
+  glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
   glutInitWindowSize(500, 500);
   glutCreateWindow("Hierarchical Robot");

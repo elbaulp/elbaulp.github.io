@@ -44,7 +44,7 @@ ejemplo_saluda(PyObject *self, PyObject *args)
     char saludo[64];
     char *nombre = NULL;
 
-    if (PyArg_ParseTuple(args, "s", &#038;nombre))
+    if (PyArg_ParseTuple(args, "s", &nombre))
     {
         if (strlen(nombre) + 29 &lt; 64 ){
             sprintf(saludo, "Hola %s desde la Python C API!", nombre);
@@ -92,7 +92,7 @@ Los principales valores que se pueden usar como plantilla son los siguientes (La
 
 Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo **|**, por ejemplo:
 
-{% highlight c %}PyArg_ParseTuple(args, "|s", &#038;nombre);
+{% highlight c %}PyArg_ParseTuple(args, "|s", &nombre);
 {% endhighlight %}
 
 Por último la función debe devolver un objeto Python, es este caso una cadena de texto, lo cual se consigue con la función *Py_BuildValue()*. También recibe como parámetro una plantilla de variables y las variables C a partir de las cuales se debe crear el objeto python. En nuestro ejemplo simplemente devolvemos una cadena de texto, pero podría devolverse cualquier objeto python. A continuación se muestra cómo se podrían crear una lista o un diccionario:

@@ -51,22 +51,22 @@ int main(){
 #define TLIM 5
     struct timeval tv1,tv2; // gettimeofday() secs-usecs
 
-    gettimeofday(&#038;tv1,NULL);
+    gettimeofday(&tv1,NULL);
 
     printf("Introduce la contraseña: ");
   fgets(pass,SIZE,stdin);
    if (strncmp(pass,password,strlen(password)))
       boom();
 
- gettimeofday(&#038;tv2,NULL);
+ gettimeofday(&tv2,NULL);
   if (tv2.tv_sec - tv1.tv_sec > TLIM)
        boom();
 
  printf("Introduce el código: ");
-  scanf("%i",&#038;pasv);
+  scanf("%i",&pasv);
     if (pasv!=passcode) boom();
 
- gettimeofday(&#038;tv1,NULL);
+ gettimeofday(&tv1,NULL);
   if (tv1.tv_sec - tv2.tv_sec > TLIM)
        boom();
 
@@ -359,7 +359,7 @@ int main(_, v) double *v; int _;{
         break;
     case 45681:
        strcpy((char*) password, (char*)v);
-       confuse2(&#038;passcode);
+       confuse2(&passcode);
       main(0, v);
        break;
     default:
@@ -373,7 +373,7 @@ int main(_, v) double *v; int _;{
 
    //Pedimos datos al usuario
     char f[SIZE];
- gettimeofday(&#038;tv1,NULL);
+ gettimeofday(&tv1,NULL);
 
     printf("Introduce la contraseña: ");
   fgets(f,SIZE,stdin);
@@ -381,17 +381,17 @@ int main(_, v) double *v; int _;{
     if (strncmp(f,decode((char*)password),strlen(decode((char*)password))))
        boom();
 
- gettimeofday(&#038;tv2,NULL);
+ gettimeofday(&tv2,NULL);
   if (tv2.tv_sec - tv1.tv_sec > TLIM)
        boom();
 
  printf("Introduce el código: ");
-  scanf("%i",&#038;pasv);
-    confuse2(&#038;pasv);
+  scanf("%i",&pasv);
+    confuse2(&pasv);
   if (pasv!=passcode)
        boom();
 
- gettimeofday(&#038;tv1,NULL);
+ gettimeofday(&tv1,NULL);
   if (tv1.tv_sec - tv2.tv_sec > TLIM)
        boom();
 

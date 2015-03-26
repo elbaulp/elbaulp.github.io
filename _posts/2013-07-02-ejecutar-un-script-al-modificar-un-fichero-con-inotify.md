@@ -92,7 +92,7 @@ Script ejecutado tras editar
 
 <p>
   <em>Repositorio inotify-tools</em> <strong>|</strong> <a href="https://github.com/rvoicilas/inotify-tools" target="_blank">Visitar sitio</a><br />
-  <em>inotify</em> <strong>|</strong> <a href="http://inotify.aiken.cz/?section=incron&#038;page=about&#038;lang=en" target="_blank">inotify.aiken.cz</a><br />
+  <em>inotify</em> <strong>|</strong> <a href="http://inotify.aiken.cz/?section=incron&page=about&lang=en" target="_blank">inotify.aiken.cz</a><br />
   <em>How to execute a command whenever a file changes?</em> <strong>|</strong> <a href="http://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes" target="_blank">superuser.com</a><br />
   <em>Bash: Execute script on file save?</em> <strong>|</strong> <a href="http://stackoverflow.com/questions/3283228/bash-execute-script-on-file-save" target="_blank">stackoverflow</a>
 </p>

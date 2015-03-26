@@ -37,11 +37,10 @@ blogger_author:
 
 ### Primera parte
 
-> Descubre cómo adquirir esta primera parte del curso<a href="http://elbauldelprogramador.com/opensource/disponible-la-primera-parte-del-curso/" target="_blank"> en pdf</a> 
+> Descubre cómo adquirir esta primera parte del curso<a href="http://elbauldelprogramador.com/opensource/disponible-la-primera-parte-del-curso/" target="_blank"> en pdf</a>
 
 ### Artículos de interés
 
-<div class="wi-list list-minus">
   <ul>
     <li>
       <a href="http://elbauldelprogramador.com/how-to/adapter-personalizado-en-android/" target="_blank">Cómo crear un adapter personalizado en Android</a>
@@ -52,12 +51,11 @@ blogger_author:
     <li>
       <a href="http://wp.me/p2kdv9-gg" target="_blank" alt="Crear DialogFragment compatibles con versiones inferiores a Android 3.0">Crear DialogFragment compatibles con versiones inferiores a Android 3.0</a> <li>
         <a href="http://elbauldelprogramador.com/pon-dieta-tus-apks/" title="Pon a dieta a tus APKs">Pon a dieta tus APKs</a>
-      </li></ul> </div> 
+      </li></ul> </div>
       <h3>
         NDK
       </h3>
-      
-      <div class="wi-list list-minus">
+
         <ul>
           <li>
             <a href="/android/introduccion-al-ndk-de-android/" title="Introducción al NDK de Android">Introducción al NDK de Android</a>
@@ -66,13 +64,11 @@ blogger_author:
             <a href="/how-to/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/" title="NDK-gdb – Depurar aplicaciones en el NKD de Android">NDK-gdb – Depurar aplicaciones en el NKD de Android</a>
           </li>
         </ul>
-      </div>
-      
+
       <h2>
         Curso Programación Android
       </h2>
-      
-      <div class="wi-list list-minus">
+
         <ul>
           <li>
             <a href="http://elbauldelprogramador.com/opensource/programacion-android-hola-mundo/">Programación Android: Hola Mundo</a>
@@ -159,13 +155,11 @@ blogger_author:
             <a href="http://elbauldelprogramador.com/programacion-android-recursos-recursos/">Programación Android: Recursos &#8211; Recursos y cambios de configuración</a>
           </li>
         </ul>
-      </div>
-      
+
       <h3>
         Segunda parte
       </h3>
-      
-      <div class="wi-list list-minus">
+
         <ul>
           <li>
             <a href="http://elbauldelprogramador.com/programacion-android-strictmode/">StrictMode</a>
@@ -216,8 +210,5 @@ blogger_author:
             <a href="http://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/">Ejemplo de uso de ACTION_PICK</a>
           </li>
         </ul>
-      </div>
-      
-      
 
  [1]: http://elbauldelprogramador.com/los-10-errores-de-novato-que-todo/

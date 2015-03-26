@@ -122,7 +122,7 @@ public static void call(Activity activity){
 
 public static void showMapAtLatLong(Activity activity){
    Intent intent = new Intent(Intent.ACTION_VIEW);
-   intent.setData(Uri.parse("geo:0,0?z=4&#038;q=restaurantes"));
+   intent.setData(Uri.parse("geo:0,0?z=4&q=restaurantes"));
    activity.startActivity(intent);
 }
 {% endhighlight %}

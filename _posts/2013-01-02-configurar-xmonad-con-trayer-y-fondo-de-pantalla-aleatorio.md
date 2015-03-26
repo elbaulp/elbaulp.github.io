@@ -33,7 +33,7 @@ xrdb -merge .Xresources
 # Set up an icon tray
  
 trayer --edge top --align right --SetDockType true --SetPartialStrut true 
- --expand true --width 10 --transparent true --tint 0x191970 --height 12 &#038;
+ --expand true --width 10 --transparent true --tint 0x191970 --height 12 &
  
 # Set the background color&lt;
  
@@ -41,17 +41,17 @@ xsetroot -solid midnightblue
  
 # Fire up apps
  
-gajim &#038;
+gajim &
  
-xscreensaver -no-splash &#038;
+xscreensaver -no-splash &
  
 if [ -x /usr/bin/nm-applet ] ; then
-   nm-applet --sm-disable &#038;
+   nm-applet --sm-disable &
 fi
  
 if [ -x /usr/bin/gnome-power-manager ] ; then
    sleep 3
-   gnome-power-manager &#038;
+   gnome-power-manager &
 fi
  
 exec xmonad
@@ -61,15 +61,15 @@ Este xsession no me lanzaba trayer, así que lo saqué fuera a un script aparte:
 
 {% highlight bash %}#!/bin/bash
 
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 15 --height 20 --transparent true --tint 0x000000 --monitor 1 &#038;
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 15 --height 20 --transparent true --tint 0x000000 --monitor 1 &
 
 if [ -x /usr/bin/nm-applet ] ; then
-   nm-applet --sm-disable &#038;
+   nm-applet --sm-disable &
 fi
  
 if [ -x /usr/bin/gnome-power-manager ] ; then
    sleep 1
-   gnome-power-manager &#038;
+   gnome-power-manager &
 fi
 {% endhighlight %}
 
@@ -144,7 +144,7 @@ main = do
         , borderWidth    = 2  
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
-        , ((mod4Mask, xK_KP_Enter), spawn "exe=`dmenu_run -b -nb black -nf yellow -sf yellow` &#038;&#038; eval "exec $exe"") -- spawn dmenu
+        , ((mod4Mask, xK_KP_Enter), spawn "exe=`dmenu_run -b -nb black -nf yellow -sf yellow` && eval "exec $exe"") -- spawn dmenu
         , ((mod4Mask, xK_Return), spawn "terminator") -- spawn terminator terminal 
         , ((mod4Mask, xK_w), spawn "/usr/bin/firefox")
         , ((mod4Mask, xK_f), spawn "nautilus --no-desktop")  

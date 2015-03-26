@@ -30,7 +30,7 @@ Start turning your ideas into mobile apps with the 8 Steps to Building Mobile Ap
 #### Descargar la guía
 
 <div class="button-container">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&#038;_t=oc:&#038;pc=w_sale38" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sale38" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***  

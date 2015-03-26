@@ -16,7 +16,7 @@ Firesheep is a Mozilla Firefox extension which was first released in Autumn 2010
 Computing surveyed 140 business decision makers in order to understand how organisations view the threats posed by Firesheep and its mobile counterpart FaceNiff and how they are mitigating them. This paper features a detailed discussion of the survey findings and the implications of Firesheep and other session hijacking attacks for both corporate data security as well as customers and end users of websites.
 
 <div class="button-container">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&#038;_t=oc:&#038;pc=w_thaw01" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_thaw01" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].*** 

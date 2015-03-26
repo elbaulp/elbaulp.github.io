@@ -45,7 +45,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
     struct hostent *host_info;
     struct in_addr *address;
 
-    if (!PyArg_ParseTuple(args, "s", &#038;domainName))
+    if (!PyArg_ParseTuple(args, "s", &domainName))
         return NULL;
 
     char returnValue[100];
@@ -142,7 +142,7 @@ Breakpoint 1 at 0x7ffff695496a: file herramientasRed.c, line 17.
 Starting program: /usr/bin/python2.7 test.py
 
 Breakpoint 1, herramientasRed_imprimeIP (self=0x0, args=0x965990) at herramientasRed.c:17
-17     if (!PyArg_ParseTuple(args, "s", &#038;domainName)){
+17     if (!PyArg_ParseTuple(args, "s", &domainName)){
 (gdb) display /s domainName 
 1: x/s domainName  0x7ffff7f5e454:   "elbauldelprogramador.com"
 22        memset(returnValue, 0, 100);

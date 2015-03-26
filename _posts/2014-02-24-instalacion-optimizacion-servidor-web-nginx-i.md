@@ -100,7 +100,7 @@ Tras esto deberíamos ver un resumen de la operación realizada:
 
 Para compilar e instalar:
 
-{% highlight bash %}make -j 4 &#038;&#038; make install
+{% highlight bash %}make -j 4 && make install
 {% endhighlight %}
 
 Tras esto, es necesario descargar el script que permite iniciar, detener, reiniciar y recargar nginx mediante el comando **service**, podemos descargarlo desde
@@ -185,7 +185,7 @@ Los cambios más relevantes sobre la configuración por defecto son:
 Cambiamos los permisos del directorio donde se alojan los recursos web a este último usuario y reiniciamos nginx:
 
 {% highlight bash %}chown -R www-data:www-data /usr/local/nginx/html/
-service nginx destroy &#038;&#038; service nginx start
+service nginx destroy && service nginx start
 {% endhighlight %}
 
 

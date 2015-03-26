@@ -48,7 +48,7 @@ This amazing manual will teach you:
   * Securing your Android phone
 
 <div class="button-container">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&#038;_t=oc:&#038;pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 

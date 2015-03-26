@@ -65,9 +65,9 @@ Esa es la clave que explica el mayor rendimiento de un switch frente a una larga
 {% highlight c %}int switch_eg_impl(int x, int n) {
    /*Tabla de punteros a código*/
    static void *jt[7] = {
-      &#038;&#038;loc_A, &#038;&#038;loc_def, &#038;&#038;loc_B,
-      &#038;&#038;loc_C, &#038;&#038;loc_D, &#038;&#038;loc_def,
-      &#038;&#038;loc_D
+      &&loc_A, &&loc_def, &&loc_B,
+      &&loc_C, &&loc_D, &&loc_def,
+      &&loc_D
    };
 
    unsigned index = n - 100;
@@ -212,9 +212,9 @@ En la versión C extendida, se declara la tabla de saltos como un array de siete
 Echemos un vistazo a la tabla de saltos:
 
 {% highlight c %}static void *jt[7] = {
-      &#038;&#038;loc_A, &#038;&#038;loc_def, &#038;&#038;loc_B,
-      &#038;&#038;loc_C, &#038;&#038;loc_D, &#038;&#038;loc_def,
-      &#038;&#038;loc_D
+      &&loc_A, &&loc_def, &&loc_B,
+      &&loc_C, &&loc_D, &&loc_def,
+      &&loc_D
 };
 {% endhighlight %}
 
@@ -320,7 +320,7 @@ Tras analizar y entender cómo se implementa el switch, la razón por la que es 
 
 #### Referencias
 
-*Computer Systems: A Programmer's Perspective* **|** <a href="http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=013034074X&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">Ver libro en Amazon</a> 
+*Computer Systems: A Programmer's Perspective* **|** <a href="http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=013034074X&linkCode=as2&tag=elbaudelpro-21" target="_blank">Ver libro en Amazon</a> 
 
 
 

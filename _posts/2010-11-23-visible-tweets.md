@@ -26,7 +26,7 @@ Se trata de un servicio online que nos muestra determinados tweets relacionados 
 
 Escribir algo en el cuadro de búsqueda, y disfrutad de la presentación.
 
-<a target="_blank" href="http://oloblogger.blogspot.com/2010/11/presentando-tweets.html?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+Oloblogger+%28Oloblogger%29">Aqui os dejo el post original.</a>
+<a target="_blank" href="http://oloblogger.blogspot.com/2010/11/presentando-tweets.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Oloblogger+%28Oloblogger%29">Aqui os dejo el post original.</a>
 
 
 

@@ -60,7 +60,7 @@ El par de claves pública/privada que acabamos de generar debe aparecer en *Disp
 
 ### Ejemplo
 
-Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de [contacto][3] o en este otro <a href="http://keyserver.borgnet.us:11371/pks/lookup?op=get&#038;search=0x083EDE12BE101B2B" target="_blank">enlace</a>. La copiamos y en la sección **Import Keys** de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves. 
+Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de [contacto][3] o en este otro <a href="http://keyserver.borgnet.us:11371/pks/lookup?op=get&search=0x083EDE12BE101B2B" target="_blank">enlace</a>. La copiamos y en la sección **Import Keys** de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves. 
 
 Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.
 

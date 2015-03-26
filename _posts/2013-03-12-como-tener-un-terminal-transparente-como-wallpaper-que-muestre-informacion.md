@@ -37,7 +37,7 @@ xrootconsole muestra en una ventana transparente el fichero que se le proporcion
 
 Un ejemplo más completo sería el siguiente:
 
-{% highlight bash %}$ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &#038;
+{% highlight bash %}$ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
 {% endhighlight %}
 
 Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo. *&#8211;bottomup* inserta líneas al final. *&#8211;geometry* establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN\_IZQUIERDO+MARGEN\_SUPERIOR*. Puedes obtener más información consultando la ayuda del programa o su manual.
@@ -51,7 +51,7 @@ En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] q
 while [ 1 ] 
 do
         ss > /tmp/ss.out
-        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &#038;
+        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &
         XROOT_PID=$!
         sleep 30
         kill $XROOT_PID

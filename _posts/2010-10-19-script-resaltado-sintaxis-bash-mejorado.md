@@ -38,8 +38,8 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
  keywords=$keywords`<span class="bash">ls</span> /bin/`
  keywords=$keywords`<span class="bash">ls</span> /sbin/` 
  
- <span class="comentario"># Para lo comentarios, el &#038; hace que se escriba lo que coincidio con el patron</span>
- <span class="bash">sed</span> 's/#.*/<span class="comentario">&#038;</span>/' &lt; "$rutaCodigo" > temp
+ <span class="comentario"># Para lo comentarios, el & hace que se escriba lo que coincidio con el patron</span>
+ <span class="bash">sed</span> 's/#.*/<span class="comentario">&</span>/' &lt; "$rutaCodigo" > temp
  <span class="bash">cp</span> temp "$rutaCodigo"
  
   <span class="bash">for</span> word in $keywords

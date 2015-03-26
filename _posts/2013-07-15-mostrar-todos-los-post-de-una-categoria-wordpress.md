@@ -24,7 +24,7 @@ Editamos el archivo *functions.php* de nuestro tema y añadimos el siguiente có
         extract(shortcode_atts(array(
                 'cat'=> ''
         ), $atts));
-        query_posts('cat='.$cat.'&#038;orderby=date&#038;order=ASC&#038;posts_per_page=-1');
+        query_posts('cat='.$cat.'&orderby=date&order=ASC&posts_per_page=-1');
         if ( have_posts() ){
                 $content = '
 

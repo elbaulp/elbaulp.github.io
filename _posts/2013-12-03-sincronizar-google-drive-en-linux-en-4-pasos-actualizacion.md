@@ -60,7 +60,7 @@ do
         echo "Grive está ejecutandose, PID: $esta_grive_ejecutando. Esperando..."
         sleep $TIMEOUT
     else
-        cd $GDRIVE_PATH &#038;&#038; $GRIVE_COMMAND_WITH_PATH
+        cd $GDRIVE_PATH && $GRIVE_COMMAND_WITH_PATH
     fi
 done
 {% endhighlight %}
@@ -85,7 +85,7 @@ then
     echo "Grive está corriendo en cron: $is_grive_cron_running. Esperando..."
     sleep $TIMEOUT
 else
-    cd "$HOME/Drive" &#038;&#038; grive | tee /tmp/GRIVE_LOG
+    cd "$HOME/Drive" && grive | tee /tmp/GRIVE_LOG
 fi
 {% endhighlight %}
 

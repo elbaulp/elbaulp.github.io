@@ -61,7 +61,7 @@ A continuación paso a describir uno a uno los archivos :
 #define CODIFICAR_H_
 #include &lt;iostream>
 
-int get_file_size(std::ifstream&#038; );
+int get_file_size(std::ifstream& );
 
 int ocultar(unsigned char[],int , char[]);
 
@@ -70,7 +70,7 @@ int revelar(unsigned char[],int, char[], int);
 #endif /* CODIFICAR_H_ */
 {% endhighlight %}
 
-`int get_file_size(std::ifstream&#038; );` será útil para obtener el tamaño en bytes del fichero a ocultar.  
+`int get_file_size(std::ifstream& );` será útil para obtener el tamaño en bytes del fichero a ocultar.  
 `int ocultar(unsigned char[],int , char[]);` se encarga de ocultar el archivo en sí, el primer parámetro es el buffer de la imagen (contiene el valor de los píxeles), el segundo el tamaño de la imagen y el tercero el nombre del archivo a ocultar.
 
 ### *./src/codificar.cpp*
@@ -91,7 +91,7 @@ const bool WRITE_FROM_FILE = true;
 const bool WRITE_FROM_ARRAY = false;
 
 //TODO hacer que ifstream sea opcional
-int write_bit_by_bit(unsigned char buffer[], ifstream&#038; f, int from, int to, char sms[], bool type){
+int write_bit_by_bit(unsigned char buffer[], ifstream& f, int from, int to, char sms[], bool type){
 
  unsigned short int indiceLetra        = 0;
   unsigned char mask                    = 0x80; //Empezamos por el bit más significativo (10000000)
@@ -110,10 +110,10 @@ int write_bit_by_bit(unsigned char buffer[], ifstream&#038; f, int from, int to,
 
   for (int i = 0; i &lt; to; i++) {
       for (int k = 7; k >= 0; k--){
-           char c = (letra &#038; mask) >> k;
+           char c = (letra & mask) >> k;
            mask >>= 1;
 
-         buffer[indice] &#038;= 0xfe; //hacemos 0 último bit con máscara 11111110
+         buffer[indice] &= 0xfe; //hacemos 0 último bit con máscara 11111110
          buffer[indice++] ^= c;
       }
        letra = place_to_get_stuff_from[++indiceLetra];//letra = sms[++indiceLetra];
@@ -175,7 +175,7 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
     int i = 1;
   while (i != in-1){
       for (int k = 8; k > 0; k--)
-         value = value &lt;&lt; 1 | (buffer[i++] &#038; 0x01); //vamos almacenando en value los 8 bits
+         value = value &lt;&lt; 1 | (buffer[i++] & 0x01); //vamos almacenando en value los 8 bits
       sms[indice_sms++] = value;
       value = 0;
       if (indice_sms > tamSMS)
@@ -189,14 +189,14 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
       bool fin_datos = false;
      int indice = in;
         value = 0;
-      for (int i = in; i &lt; tamImage &#038;&#038; !fin_datos; i++) {
+      for (int i = in; i &lt; tamImage && !fin_datos; i++) {
          for (int k = 0; k &lt; 8; k++)
-             value = value &lt;&lt; 1 | (buffer[indice++] &#038; 0x01); //vamos almacenando en value los 8 bits
+             value = value &lt;&lt; 1 | (buffer[indice++] & 0x01); //vamos almacenando en value los 8 bits
          if (value == 0x7f) {
                 fin_datos = true;
                continue;
            }
-           f.write(&#038;value, 1); //TODO, ir almacenanto en array y luego escribir a archivo
+           f.write(&value, 1); //TODO, ir almacenanto en array y luego escribir a archivo
           value = 0;
       }
    }
@@ -205,7 +205,7 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
 }
 
 //Calcula el tamaño en bytes del fichero
-int get_file_size(ifstream&#038; f){
+int get_file_size(ifstream& f){
    f.seekg(0, std::ios_base::end);
  size_t size = f.tellg();
     f.seekg(0, std::ios_base::beg);
@@ -262,18 +262,18 @@ La función `write_bit_by_bit()` desempeña el nucleo del programa, la cual cons
 El bucle for de esta función itera sobre los píxeles de la imagen y almacena la información a ocultar. Usando una máscara ((0x80)<sub>16</sub> -> (10000000)<sub>2</sub>) extraemos el bit más significativo del caracter a ocultar y se guarda en una variable (Desplazandolo en número de bits correspondientes). Veamoslo mejor con un ejemplo, de nuevo con el caracter **H**:
 
 {% highlight cpp %}for (int k = 7; k >= 0; k--){
-   char c = (letra &#038; mask) >> k;
+   char c = (letra & mask) >> k;
    mask >>= 1;
 
-   buffer[indice] &#038;= 0xfe; //hacemos 0 último bit con máscara 11111110
+   buffer[indice] &= 0xfe; //hacemos 0 último bit con máscara 11111110
    buffer[indice++] ^= c;
 }
 {% endhighlight %}
 
 Esto es lo que pasa en la primera iteración en la variable c (suponiendo que letra='H'):  
-`char c = (01001000 &#038; 10000000) >> 7`. La operación lógica entre paréntesis extrae el bit más significativo (el primero), en este caso 0, y se desplaza 7 posiciones a la derecha (en este caso no tiene sentido), finalmente se almacena en `c` un cero.
+`char c = (01001000 & 10000000) >> 7`. La operación lógica entre paréntesis extrae el bit más significativo (el primero), en este caso 0, y se desplaza 7 posiciones a la derecha (en este caso no tiene sentido), finalmente se almacena en `c` un cero.
 
-Pero veamos otra iteración más: `char c = (01001000 &#038; 01000000) >> 6`. En cada iteración la máscara se desplaza un bit para obtener el siguiente valor de la letra, en este caso el segundo bit. La operación entre paréntesis es `01000000`, y se desplaza 6 posiciones para terminar almacenando en `c` el correspondiente valor del bit, 1 en este caso.
+Pero veamos otra iteración más: `char c = (01001000 & 01000000) >> 6`. En cada iteración la máscara se desplaza un bit para obtener el siguiente valor de la letra, en este caso el segundo bit. La operación entre paréntesis es `01000000`, y se desplaza 6 posiciones para terminar almacenando en `c` el correspondiente valor del bit, 1 en este caso.
 
 Por último, para guardar el valor de `c` en el bit menos significativo del píxel, aplicamos otra máscara al píxel para hacer cero dicho bit (`(0xfe)<sub>16</sub> -> (11111110)<sub>2</sub>`) y se guarda el valor de `c` con otra operación lógica (`píxel XOR c`).
 
@@ -299,7 +299,7 @@ Expliquemos ahora cómo se revelan los datos:
     int i = 1;
   while (i != in-1){
       for (int k = 8; k > 0; k--)
-         value = value &lt;&lt; 1 | (buffer[i++] &#038; 0x01); //vamos almacenando en value los 8 bits
+         value = value &lt;&lt; 1 | (buffer[i++] & 0x01); //vamos almacenando en value los 8 bits
       sms[indice_sms++] = value;
       value = 0;
       if (indice_sms > tamSMS)
@@ -313,14 +313,14 @@ Expliquemos ahora cómo se revelan los datos:
       bool fin_datos = false;
      int indice = in;
         value = 0;
-      for (int i = in; i &lt; tamImage &#038;&#038; !fin_datos; i++) {
+      for (int i = in; i &lt; tamImage && !fin_datos; i++) {
          for (int k = 0; k &lt; 8; k++)
-             value = value &lt;&lt; 1 | (buffer[indice++] &#038; 0x01); 
+             value = value &lt;&lt; 1 | (buffer[indice++] & 0x01); 
             if (value == 0x7f) {
                 fin_datos = true;
                continue;
            }
-           f.write(&#038;value, 1); //TODO, ir almacenanto en array y luego escribir a archivo
+           f.write(&value, 1); //TODO, ir almacenanto en array y luego escribir a archivo
           value = 0;
       }
    }

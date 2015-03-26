@@ -61,7 +61,7 @@ enum TipoImagen {IMG_DESCONOCIDO, ///&lt; Tipo de imagen desconocido
   *
   * @see TipoImagen
   */
-TipoImagen LeerTipoImagen(const char nombre[], int&#038; filas, int&#038; columnas);
+TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas);
 
 /**
   * @brief Lee una imagen de tipo PNG sobre memoria reservada
@@ -71,7 +71,7 @@ TipoImagen LeerTipoImagen(const char nombre[], int&#038; filas, int&#038; column
   * @param columnas Parámetro de salida con las columnas de la imagen. 
   * @return si ha  tenido éxito en la lectura
   */
-bool LeerImagenPNG (const char nombre[], int&#038; filas, int&#038; columnas);
+bool LeerImagenPNG (const char nombre[], int& filas, int& columnas);
 
 /**
   * @brief Lee una imagen de tipo PPM sobre memoria reservada
@@ -86,7 +86,7 @@ bool LeerImagenPNG (const char nombre[], int&#038; filas, int&#038; columnas);
   * @pre buffer debe ser una zona de memoria suficientemente grande como para
   * almacenar @a filas x @a columnas x 3  * bytes de datos de la imagen.
   */
-bool LeerImagenPPM (const char nombre[], int&#038; filas, int&#038; columnas, unsigned char buffer[]);
+bool LeerImagenPPM (const char nombre[], int& filas, int& columnas, unsigned char buffer[]);
 
 /**
   * @brief Escribe una imagen de tipo PPM
@@ -113,7 +113,7 @@ bool EscribirImagenPPM (const char nombre[], const unsigned char datos[], int f,
   * @pre buffer debe ser una zona de memoria suficientemente grande como para
   * almacenar @a filas x @a columnas bytes de datos de la imagen.
   */
-bool LeerImagenPGM (const char nombre[], int&#038; filas, int&#038; columnas, unsigned char buffer[]);
+bool LeerImagenPGM (const char nombre[], int& filas, int& columnas, unsigned char buffer[]);
 
 /**
   * @brief Escribe una imagen de tipo PGM
@@ -153,7 +153,7 @@ Y el cpp:
 using namespace std;
 
 
-TipoImagen LeerTipo(ifstream&#038; f)
+TipoImagen LeerTipo(ifstream& f)
 {
   char c1,c2;
   TipoImagen res= IMG_DESCONOCIDO;
@@ -170,7 +170,7 @@ TipoImagen LeerTipo(ifstream&#038; f)
     unsigned char check[8] = {0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A};
     bool fallo = false;
     f.read(reinterpret_cast&lt;char*>(cas), 8);
-    for (int i = 0; i &lt; 8 &#038;&#038; !fallo; i++)
+    for (int i = 0; i &lt; 8 && !fallo; i++)
         if (check[i] != cas[i])
             fallo = true;
             //cout.setf ( ios::hex, ios::basefield );
@@ -185,7 +185,7 @@ TipoImagen LeerTipo(ifstream&#038; f)
     c1=f.get();
     c2=f.get();
 
-    if (f &#038;&#038; c1=='P')
+    if (f && c1=='P')
       switch (c2) {
         case '5': res= IMG_PGM; break;
         case '6': res= IMG_PPM; break;
@@ -197,7 +197,7 @@ TipoImagen LeerTipo(ifstream&#038; f)
 
 // _____________________________________________________________________________
 
-char SaltarSeparadores (ifstream&#038; f)
+char SaltarSeparadores (ifstream& f)
 {
   char c;
   do {
@@ -209,14 +209,14 @@ char SaltarSeparadores (ifstream&#038; f)
 
 // _____________________________________________________________________________
 
-bool LeerCabecera (ifstream&#038; f, int&#038; filas, int&#038; columnas, bool png = false)
+bool LeerCabecera (ifstream& f, int& filas, int& columnas, bool png = false)
 {
     //Si la imagen es PNG leemos algunos datos.
  if (png){
        f.seekg(16L, ios::beg);
 
-     f.read(reinterpret_cast&lt;char*>(&#038;columnas), 4);
-      f.read(reinterpret_cast&lt;char*>(&#038;filas), 4);
+     f.read(reinterpret_cast&lt;char*>(&columnas), 4);
+      f.read(reinterpret_cast&lt;char*>(&filas), 4);
 
      columnas = ntohl(columnas);
      filas = ntohl(filas);
@@ -230,7 +230,7 @@ bool LeerCabecera (ifstream&#038; f, int&#038; filas, int&#038; columnas, bool p
 
           f >> columnas >> filas >> maxvalor;
 
-         if (/*str &#038;&#038;*/ f &#038;&#038; filas>0 &#038;&#038; filas &lt;5000 &#038;&#038; columnas >0 &#038;&#038; columnas&lt;5000) {
+         if (/*str &&*/ f && filas>0 && filas &lt;5000 && columnas >0 && columnas&lt;5000) {
                f.get(); // Saltamos separador
               return true;
             }
@@ -240,7 +240,7 @@ bool LeerCabecera (ifstream&#038; f, int&#038; filas, int&#038; columnas, bool p
 
 // _____________________________________________________________________________
 
-TipoImagen LeerTipoImagen(const char nombre[], int&#038; filas, int&#038; columnas)
+TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas)
 {
   TipoImagen tipo;
   filas=columnas=0;
@@ -258,7 +258,7 @@ TipoImagen LeerTipoImagen(const char nombre[], int&#038; filas, int&#038; column
 
 // _____________________________________________________________________________
 
-bool LeerImagenPNG (const char nombre[], int&#038; filas, int&#038; columnas){
+bool LeerImagenPNG (const char nombre[], int& filas, int& columnas){
 
  bool exito = false;
  filas      = 0;

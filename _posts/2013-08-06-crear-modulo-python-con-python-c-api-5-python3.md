@@ -45,7 +45,7 @@ struct module_state {
 #if PY_MAJOR_VERSION >= 3
 #define GETSTATE(m) ((struct module_state*)PyModule_GetState(m))
 #else
-#define GETSTATE(m) (&#038;_state)
+#define GETSTATE(m) (&_state)
 static struct module_state _state;
 #endif
 
@@ -64,7 +64,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
     struct hostent *host_info;
   struct in_addr *address;
 
-    if (!PyArg_ParseTuple(args, "s", &#038;domainName)){
+    if (!PyArg_ParseTuple(args, "s", &domainName)){
         return NULL;
     }
 
@@ -126,7 +126,7 @@ initherramientasRed(void)
 #endif
 {
 #if PY_MAJOR_VERSION >= 3
-    PyObject *module = PyModule_Create(&#038;moduledef);
+    PyObject *module = PyModule_Create(&moduledef);
 #else
     PyObject *module = Py_InitModule("herramientasRed", herramientasRed_methods);
 #endif
