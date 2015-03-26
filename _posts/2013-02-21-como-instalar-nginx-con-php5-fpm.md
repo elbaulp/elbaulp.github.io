@@ -286,51 +286,7 @@ Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutan
 *Learn how to setup a web server pt2: Installing Nginx and PHP* **|** <a href="http://blog.bryanbibat.net/2011/12/19/learn-how-to-setup-a-web-server-pt2-installing-nginx-and-php/" target="_blank">blog.bryanbibat.net</a>  
 *HOWTO install php5-fpm on Debian Squeeze* **|** <a href="http://fak3r.com/2011/09/27/howto-install-php5-fpm-on-debian-squeeze/" target="_blank">fak3r.com</a>
 
-<div class="sharedaddy">
-  <div class="sd-content">
-    <ul>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Cómo instalar y configurar Nginx con php5-fpm+http://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&t=Cómo instalar y configurar Nginx con php5-fpm+http://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Cómo instalar y configurar Nginx con php5-fpm+http://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
-      </li>
-    </ul>
-  </div>
-</div>
 
-<span id="socialbottom" class="highlight style-2">
-
-<p>
-  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
-</p>
-
-<h6>
-  Únete a la comunidad
-</h6>
-
-<div class="iconsc hastip" title="2240 seguidores">
-  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
-</div>
-
-<div class="iconsc hastip" title="2452 fans">
-  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
-</div>
-
-<div class="iconsc hastip" title="0 +1s">
-  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Repositorios">
-  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Feed RSS">
-  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
-</div></span>
 
  [1]: http://elbauldelprogramador.com/category/opensource/
  [2]: /category/script/

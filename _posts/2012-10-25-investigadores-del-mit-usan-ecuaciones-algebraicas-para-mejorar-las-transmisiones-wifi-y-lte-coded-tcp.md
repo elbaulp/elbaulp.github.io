@@ -35,50 +35,6 @@ En un futuro, se espera que el protocolo TCP codificado tenga una gran repercusi
 *Increasing wireless network speed by 1000%, by replacing packets with algebra* **|** <a href="http://www.extremetech.com/computing/138424-increasing-wireless-network-speed-by-1000-by-replacing-packets-with-algebra" target="_blank">Visitar sitio</a>  
 *MIT researchers use algebraic equation that improves WiFi and LTE data streams* **|** <a href="http://www.engadget.com/2012/10/24/mit-researchers-algebraic-equation-to-weave-wifi-and-lte-signals/" target="_blank">Visitar sitio</a>
 
-<div class="sharedaddy">
-  <div class="sd-content">
-    <ul>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Investigadores del MIT usan ecuaciones algebráicas para mejorar las transmisiones WIFI y LTE con coded TCP+http://elbauldelprogramador.com/investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/&t=Investigadores del MIT usan ecuaciones algebráicas para mejorar las transmisiones WIFI y LTE con coded TCP+http://elbauldelprogramador.com/investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Investigadores del MIT usan ecuaciones algebráicas para mejorar las transmisiones WIFI y LTE con coded TCP+http://elbauldelprogramador.com/investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
-      </li>
-    </ul>
-  </div>
-</div>
 
-<span id="socialbottom" class="highlight style-2">
-
-<p>
-  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
-</p>
-
-<h6>
-  Únete a la comunidad
-</h6>
-
-<div class="iconsc hastip" title="2240 seguidores">
-  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
-</div>
-
-<div class="iconsc hastip" title="2452 fans">
-  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
-</div>
-
-<div class="iconsc hastip" title="0 +1s">
-  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Repositorios">
-  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Feed RSS">
-  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
-</div></span>
 
  [1]: http://elbauldelprogramador.com/content/uploads/2012/10/Algebra-Packets-MIT1.jpg

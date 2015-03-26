@@ -55,50 +55,6 @@ Para descargar el demo debéis ir a la página de arriba y en la parte de la der
   <a href="http://3.bp.blogspot.com/_IlK2pNFFgGM/TP5l6xToHtI/AAAAAAAAAIg/4YCI6tXtnng/s1600/The_Clockwork_Man_2_The_Hidden_World_Ireland_Map_1_nu_51920FC7.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="150" src="http://3.bp.blogspot.com/_IlK2pNFFgGM/TP5l6xToHtI/AAAAAAAAAIg/4YCI6tXtnng/s200/The_Clockwork_Man_2_The_Hidden_World_Ireland_Map_1_nu_51920FC7.jpg" width="200" /></a> <a href="http://2.bp.blogspot.com/_IlK2pNFFgGM/TP5l8u1kstI/AAAAAAAAAIk/JYQEE5LRCDQ/s1600/The_Clockwork_Man_2_The_Hidden_World_London_Graveyard_1_nu_9BD24FA5.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="150" src="http://2.bp.blogspot.com/_IlK2pNFFgGM/TP5l8u1kstI/AAAAAAAAAIk/JYQEE5LRCDQ/s200/The_Clockwork_Man_2_The_Hidden_World_London_Graveyard_1_nu_9BD24FA5.jpg" width="200" /></a> <a href="http://1.bp.blogspot.com/_IlK2pNFFgGM/TP5l-1MdvCI/AAAAAAAAAIo/3mBUV8vpRF4/s1600/The_Clockwork_Man_2_The_Hidden_World_Miranda_Martha_1_nu_76FCF17D.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="150" src="http://1.bp.blogspot.com/_IlK2pNFFgGM/TP5l-1MdvCI/AAAAAAAAAIo/3mBUV8vpRF4/s200/The_Clockwork_Man_2_The_Hidden_World_Miranda_Martha_1_nu_76FCF17D.jpg" width="200" /></a> <a href="http://3.bp.blogspot.com/_IlK2pNFFgGM/TP5mA4RM-dI/AAAAAAAAAIs/SLdx8rneHzY/s1600/The_Clockwork_Man_2_The_Hidden_World_Stream_by_the_Bridge_1_nu_16F6F4DD.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="150" src="http://3.bp.blogspot.com/_IlK2pNFFgGM/TP5mA4RM-dI/AAAAAAAAAIs/SLdx8rneHzY/s200/The_Clockwork_Man_2_The_Hidden_World_Stream_by_the_Bridge_1_nu_16F6F4DD.jpg" width="200" /></a>
 </div>
 
-<div class="sharedaddy">
-  <div class="sd-content">
-    <ul>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Juegos Linux, The Clockwork Man 1 y 2+http://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/&t=Juegos Linux, The Clockwork Man 1 y 2+http://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Juegos Linux, The Clockwork Man 1 y 2+http://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
-      </li>
-    </ul>
-  </div>
-</div>
 
-<span id="socialbottom" class="highlight style-2">
-
-<p>
-  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
-</p>
-
-<h6>
-  Únete a la comunidad
-</h6>
-
-<div class="iconsc hastip" title="2240 seguidores">
-  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
-</div>
-
-<div class="iconsc hastip" title="2452 fans">
-  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
-</div>
-
-<div class="iconsc hastip" title="0 +1s">
-  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Repositorios">
-  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Feed RSS">
-  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
-</div></span>
 
  [1]: http://elbauldelprogramador.com/3-juegos-para-linux/

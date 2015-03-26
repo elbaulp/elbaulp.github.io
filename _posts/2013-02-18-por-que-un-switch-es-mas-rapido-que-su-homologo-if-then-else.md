@@ -322,51 +322,7 @@ Tras analizar y entender cómo se implementa el switch, la razón por la que es 
 
 *Computer Systems: A Programmer's Perspective* **|** <a href="http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&#038;camp=3626&#038;creative=24822&#038;creativeASIN=013034074X&#038;linkCode=as2&#038;tag=elbaudelpro-21" target="_blank">Ver libro en Amazon</a> 
 
-<div class="sharedaddy">
-  <div class="sd-content">
-    <ul>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Por qué un switch es más rápido que su homólogo if-then-else+http://elbauldelprogramador.com/por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/&t=Por qué un switch es más rápido que su homólogo if-then-else+http://elbauldelprogramador.com/por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Por qué un switch es más rápido que su homólogo if-then-else+http://elbauldelprogramador.com/por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
-      </li>
-    </ul>
-  </div>
-</div>
 
-<span id="socialbottom" class="highlight style-2">
-
-<p>
-  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
-</p>
-
-<h6>
-  Únete a la comunidad
-</h6>
-
-<div class="iconsc hastip" title="2240 seguidores">
-  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
-</div>
-
-<div class="iconsc hastip" title="2452 fans">
-  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
-</div>
-
-<div class="iconsc hastip" title="0 +1s">
-  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Repositorios">
-  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Feed RSS">
-  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
-</div></span>
 
  [1]: /search/?q=array
  [2]: /tag/asm/

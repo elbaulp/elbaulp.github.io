@@ -521,17 +521,7 @@ int main(_, v) double *v; int _;{
 </p>
 
 
-<div class="sharedaddy">
-  <div class="sd-content">
-    <ul>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Práctica 3 &#8211; Bomba Digital &#8211; Desensambladores+http://elbauldelprogramador.com/?post_type=dlm_download&p=2162+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/?post_type=dlm_download&p=2162&t=Práctica 3 &#8211; Bomba Digital &#8211; Desensambladores+http://elbauldelprogramador.com/?post_type=dlm_download&p=2162+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Práctica 3 &#8211; Bomba Digital &#8211; Desensambladores+http://elbauldelprogramador.com/?post_type=dlm_download&p=2162+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+</a>
       </li>
     </ul>
   </div>

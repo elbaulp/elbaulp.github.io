@@ -58,51 +58,7 @@ Esto debería bastar, con cualquier editor, en este caso con Geany, podemos busc
 
 Lo cual sustituirá la URL antigua por lo que coincidión en la expresión *((?:\w+-?)+)*, cuyo contenido se puede referenciar con \1, donde 1 es el número del grupo, si hubiera varios, se referenciarían con \1, \2 etc. Con esto, ya podemos dejar de usar el plugin.
 
-<div class="sharedaddy">
-  <div class="sd-content">
-    <ul>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma+http://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/&t=Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma+http://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
-      </li>
-      <li>
-        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma+http://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
-      </li>
-    </ul>
-  </div>
-</div>
 
-<span id="socialbottom" class="highlight style-2">
-
-<p>
-  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
-</p>
-
-<h6>
-  Únete a la comunidad
-</h6>
-
-<div class="iconsc hastip" title="2240 seguidores">
-  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
-</div>
-
-<div class="iconsc hastip" title="2452 fans">
-  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
-</div>
-
-<div class="iconsc hastip" title="0 +1s">
-  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Repositorios">
-  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
-</div>
-
-<div class="iconsc hastip" title="Feed RSS">
-  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
-</div></span>
 
  [1]: http://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
  [2]: http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
