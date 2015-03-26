@@ -12,3 +12,9 @@
 - [ ] Mover imágenes.
 - [ ] Terminarde formatear todo.
 - [ ] Buy Sell Ads
+- [ ] Add favicon
+- [ ] Substitute old links with new
+- [ ] Subir logo.
+- [ ] Post Poker
+- [ ] Descargas
+- [ ] Ping Google
