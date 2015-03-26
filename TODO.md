@@ -10,7 +10,7 @@
 - [ ] SEO.
 - [ ] Tradepub.
 - [ ] Mover imágenes.
-- [ ] Terminarde formatear todo.
+- [ ] Terminar de formatear todo.
 - [ ] Buy Sell Ads
 - [x] Add favicon
 - [ ] Substitute old links with new
