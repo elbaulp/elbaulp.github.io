@@ -60,7 +60,7 @@ El siguiente paso es desvincular el repositorio del original (WP-deploy) y conec
 
 Solo resta añadir nuestro repositorio:
 
-{% highlight bash %}$ git remote add origin &lt;repo_url>
+{% highlight bash %}$ git remote add origin <repo_url>
 {% endhighlight %}
 
 Y, por último, instalar las dependencias de ruby con **Bundler**:

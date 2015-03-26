@@ -27,13 +27,13 @@ Se pueden definir arrays de strings como recursos en cualquier archivo bajo el s
   
 <!--more-->
 
-{% highlight xml %}&lt;resources>
-&lt;string -array name="test_array">
-   &lt;item>uno&lt;/item>
-   &lt;item>dos&lt;/item>
-   &lt;item>tres&lt;/item>
-&lt;/string>
-&lt;/resources>
+{% highlight xml %}<resources>
+<string -array name="test_array">
+   <item>uno</item>
+   <item>dos</item>
+   <item>tres</item>
+</string>
+</resources>
 {% endhighlight %}
 
 Una vez definido el recurso, podemos usarlo en el código Java de la siguiente manera:

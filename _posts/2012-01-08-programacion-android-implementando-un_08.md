@@ -73,7 +73,7 @@ This file is part of FavSites.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with FavSites.  If not, see &lt;http: //www.gnu.org/licenses/>.
+    along with FavSites.  If not, see <http: //www.gnu.org/licenses/>.
 */
 
 package com.elbauldelprogramador.favsites;
@@ -104,9 +104,9 @@ public class SitesProvider extends ContentProvider{
    
    //Configurando el projection Map
    //El projection map es similar a "as" (alias de columna)
-   private static HashMap&lt;string , String> sSitesProjectionMap;
+   private static HashMap<string , String> sSitesProjectionMap;
    static{
-      sSitesProjectionMap = new HashMap&lt;/string>&lt;string , String>();
+      sSitesProjectionMap = new HashMap</string><string , String>();
       sSitesProjectionMap.put(favSitesTableMEtaData._ID,
                               favSitesTableMEtaData._ID);
       
@@ -213,7 +213,7 @@ public class SitesProvider extends ContentProvider{
    }
 
 }
-&lt;/string>{% endhighlight %}
+</string>{% endhighlight %}
 
 * * *
 

@@ -135,7 +135,7 @@ Pero hay también varias opciones de log que podemos configurar en el archivo /e
 
 Envía todos los mensajes entre la mínima y máxima severidad a alguno de los canales de salida: standard error, standard output o syslog.
 
-{% highlight bash %}Log minSeverity-maxSeverity file &lt;filename&gt;{% endhighlight %}
+{% highlight bash %}Log minSeverity-maxSeverity file <filename&gt;{% endhighlight %}
 
 Envía todos los mensajes entre la mínima y máxima severidad a un archivo de nombre <filename>.
 

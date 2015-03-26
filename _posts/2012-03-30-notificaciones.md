@@ -62,8 +62,8 @@ Para fijar la duración del mensaje, usamos una de las dos constantes predefinid
 
 En este caso, vamos a crear un layout personalizado para mostrar el Toast:
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/toastLayout"
   android:orientation="horizontal"
   android:layout_width="match_parent"
@@ -72,20 +72,20 @@ En este caso, vamos a crear un layout personalizado para mostrar el Toast:
   android:background="#DAAA"
   >
 
-  &lt;imageview android:layout_width="48px"
+  <imageview android:layout_width="48px"
     android:layout_height="48px"
     android:src="@drawable/ok"
     android:padding="5dip"
     android:id="@+id/ok"/>
 
-  &lt;textview android:id="@+id/textview"
+  <textview android:id="@+id/textview"
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
     android:text="Toast con layout personalizado"
     android:textColor="#fff"
     android:gravity="center_vertical|center_horizontal"/>
 
-&lt;/linearlayout>
+</linearlayout>
 {% endhighlight %}
 
 Hay que asignar un id al LinearLayout, que usaremos posteriormente. También hemos creado un ImageView para mostrar un icono, y un TextView para mostrar el mensaje.

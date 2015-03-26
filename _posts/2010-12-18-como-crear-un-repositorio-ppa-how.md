@@ -46,7 +46,7 @@ En primer lugar, hay que decirle a dput dónde enviar su paquete y por qué mét
 {% highlight bash %}[my-ppa]
 fqdn = ppa.launchpad.net
 method = ftp
-incoming = ~&lt;your_launchpad_id>/&lt;ppa_name>/ubuntu/
+incoming = ~<your_launchpad_id>/<ppa_name>/ubuntu/
 login = anonymous
 allow_unsigned_uploads = 0
 {% endhighlight %}

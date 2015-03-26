@@ -61,7 +61,7 @@ Como vemos, el resultado es que el archivo *combinaciones.cpp* pertenece a la pa
 
 O con este otro:
 
-{% highlight bash %}awk '/^/dev/ {print $1}' &lt;&lt;&lt;"$(df /home/hkr/Desktop/combinaciones.cpp)"
+{% highlight bash %}awk '/^/dev/ {print $1}' <<<"$(df /home/hkr/Desktop/combinaciones.cpp)"
 {% endhighlight %}
 
 La salida para los dos comandos anteriores es la misma:

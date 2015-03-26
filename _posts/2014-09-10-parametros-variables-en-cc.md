@@ -32,8 +32,8 @@ Inicializa `ap` para recuperar argumentos adicionales después del parámetro `p
 ## Primer ejemplo de parámetros variables
 
 {% highlight cpp %}/* va_start example */
-#include &lt;stdio.h>      /* printf */
-#include &lt;stdarg.h>     /* va_list, va_start, va_arg, va_end */
+#include <stdio.h>      /* printf */
+#include <stdarg.h>     /* va_list, va_start, va_arg, va_end */
 
 void PrintFloats (int n, ...)
 {
@@ -42,7 +42,7 @@ void PrintFloats (int n, ...)
   printf ("Printing floats:");
   va_list vl;
   va_start(vl,n);
-  for (i=0;i&lt;n;i++)
+  for (i=0;i<n;i++)
   {
     val=va_arg(vl,double);
     printf (" [%.2f]",val);
@@ -105,7 +105,7 @@ Al igual que en el ejemplo anterior, en `fmtargs` se recibirán los parámetros 
   va_start(vl, n);
   int vals[n];
 
-  for (int i = 0; i &lt; n; i++) {
+  for (int i = 0; i < n; i++) {
     vals[i] = va_arg(vl, int);
   }
 
@@ -122,14 +122,14 @@ double Valoracion(const Environment &state, int jugador) {
   int score = 0;
 
 // Eval horizontal
-  for (int i = 0; i &lt; 7; ++i) {
+  for (int i = 0; i < 7; ++i) {
     score += checkLine(jugador, 7, state.See_Casilla(0, i),
                        state.See_Casilla(1, i), state.See_Casilla(2, i),
                        state.See_Casilla(3, i), state.See_Casilla(4, i),
                        state.See_Casilla(5, i), state.See_Casilla(6, i));
   }
 // Eval vertical
-  for (int i = 0; i &lt; 7; i++) {
+  for (int i = 0; i < 7; i++) {
     score += checkLine(jugador, 7, state.See_Casilla(i, 0),
                        state.See_Casilla(i, 1), state.See_Casilla(i, 2),
                        state.See_Casilla(i, 3), state.See_Casilla(i, 4),
@@ -188,7 +188,7 @@ double Valoracion(const Environment &state, int jugador) {
                      state.See_Casilla(5, 4), state.See_Casilla(4, 5),
                      state.See_Casilla(3, 6));
 
-//  cout &lt;&lt; "score " &lt;&lt; score &lt;&lt; endl;
+//  cout << "score " << score << endl;
 
   return score;
 }

@@ -52,7 +52,7 @@ Por ejemplo, un listener muy común será ***setOnClickListener()***, que respon
 
 Botones simples, para realizar acciones al pulsar sobre ellos.
 
-{% highlight xml %}&lt;button android:layout_width="wrap_content"
+{% highlight xml %}<button android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Púlsame"
         android:layout_centerInParent="true"
@@ -85,7 +85,7 @@ En este caso, hemos declarado una variable como miembro de la clase, (***public 
 
 Son campos de texto en los que el usuario puede escribir.
 
-{% highlight xml %}&lt;edittext android:layout_width="200dip"
+{% highlight xml %}<edittext android:layout_width="200dip"
         android:layout_height="wrap_content"
         android:layout_above="@id/button1"
         android:id="@+id/editText1"
@@ -121,7 +121,7 @@ Lo que hemos hecho con este EditText, es fijarle un onKeyListener, que comprobar
 
 Nos permite mostrar imágenes en la pantalla.
 
-{% highlight xml %}&lt;imageview android:id="@+id/imageView"
+{% highlight xml %}<imageview android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon"/>
@@ -141,7 +141,7 @@ El icono es el que viene por defecto al crear un proyecto. Este es el resultado:
 
 Es un tipo de botón con dos estados, activo o inactivo, practicamente tiene el mismo comportamiento de un botón, una de sus características es que podemos comprobar si el botón esta activo o no:
 
-{% highlight xml %}&lt;checkbox android:layout_height="wrap_content"
+{% highlight xml %}<checkbox android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="CheckBox"
         android:layout_centerInParent="true"

@@ -58,13 +58,13 @@ Vamos a mostrar un ejemplo, supongamos que tenemos la siguiente activity:
 
 El layout *R.Layout.MiActivity* debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el [AndroidManifest][3], que será algo así:
 
-{% highlight xml %}&lt;activity android:name=".MiActivity"
+{% highlight xml %}<activity android:name=".MiActivity"
           android:label="Mi Activity">
-   &lt;intent -filter>
-      &lt;action android:name="nuestra.accion.nombreAccion"/>
-      &lt;category android:name="android.intent.category.DEFAULT" />
-   &lt;/intent>
-&lt;/activity>
+   <intent -filter>
+      <action android:name="nuestra.accion.nombreAccion"/>
+      <category android:name="android.intent.category.DEFAULT" />
+   </intent>
+</activity>
 {% endhighlight %}
 
 Al registrar la activity en el AndroidManifest, registramos también una acción que podremos usar para invocar a dicha actividad. El diseñador de la actividad puede asignar el nombre que crea conveniente a la acción. Ahora que ya está todo listo, podemos lanzar un intent para llamar a esta actividad:
@@ -157,13 +157,13 @@ activity.startActivity(intent);
 
 En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:
 
-{% highlight xml %}&lt;activity ...>
-   &lt;intent -filter>
-      &lt;action android:name="android.intent.action.VIEW"/>
-      &lt;data android:scheme="http" />
-      &lt;data android:scheme="https" />
-   &lt;/intent>
-&lt;/activity>
+{% highlight xml %}<activity ...>
+   <intent -filter>
+      <action android:name="android.intent.action.VIEW"/>
+      <data android:scheme="http" />
+      <data android:scheme="https" />
+   </intent>
+</activity>
 {% endhighlight %}
 
 SE puede obtener más informacion del elemento *data* en <a target="_blank" href="http://developer.android.com/guide/topics/manifest/data-element.html">developer.android.com/guide/topics/manifest/data-element.html</a>
@@ -231,7 +231,7 @@ activity.start(intent);
 
 Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:
 
-{% highlight xml %}&lt;activity android:name=".MiActivity" android:label="Mi Activity" />
+{% highlight xml %}<activity android:name=".MiActivity" android:label="Mi Activity" />
 {% endhighlight %}
 
 Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.

@@ -131,50 +131,50 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
 
 ### Archivo ./res/layout/main.xml
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-&lt;textview android:layout_width="fill_parent" 
+<textview android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
     android:text="@string/hello"
     />
-&lt;/linearlayout>
+</linearlayout>
 {% endhighlight %}
 
 En este archivo se define una pantalla en la que los elementos se agruparán de forma lineal (LinearLayout) y con un componente de texto (TextView). Al componente de texto le fijamos el texto a mostrar con la referencia ***@string/hello*** (valor del item en ./res/values/strings.xml)
 
 ### Archivo ./res/values/strings.xml
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;resources>
-    &lt;string name="hello">Hello World, MainActivity!&lt;/string>
-    &lt;string name="app_name">Hola Mundo&lt;/string>
-&lt;/resources>
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">Hola Mundo</string>
+</resources>
 {% endhighlight %}
 
 Para que la aplicación funcione es necesario crear el AndroidManifest:
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="app.tutorial.holaMundo"
       android:versionCode="1"
       android:versionName="1.0">
-    &lt;uses -sdk android:minSdkVersion="8" />
+    <uses -sdk android:minSdkVersion="8" />
 
-    &lt;application android:icon="@drawable/icon" android:label="@string/app_name">
-        &lt;activity android:name=".MainActivity"
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
                   android:label="@string/app_name">
-            &lt;intent -filter>
-                &lt;action android:name="android.intent.action.MAIN" />
-                &lt;category android:name="android.intent.category.LAUNCHER" />
-            &lt;/intent>
-        &lt;/activity>
+            <intent -filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent>
+        </activity>
 
-    &lt;/application>
-&lt;/manifest>
+    </application>
+</manifest>
 {% endhighlight %}
 
 En este archivo se definen el paquete por defecto, datos de versión, icono (mediante una referencia). El nombre de la aplicación (otra referencia al fichero strings.xml). Despues se define el comportamiento de la aplicación. Se añaden dos filtros para que la actividad que definimos anteriormente sea usada como principal (***android.intent.action.MAIN***) y para que sea incluida en el menú de aplicaciones (***android.intent.category.LAUNCHER***)

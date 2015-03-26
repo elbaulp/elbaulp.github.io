@@ -53,7 +53,7 @@ Cada CV de un dispositivo se registra a sí mismo de manera similar a como lo ha
 
 El registro de la authority se hace en el [androidManifest][3]. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación [FavSItes][4]):
 
-{% highlight xml %}&lt;provider android:name=".SitesProvider"
+{% highlight xml %}<provider android:name=".SitesProvider"
    android:authorities="com.elbauldelprogramador.provider.FavSites" />
 {% endhighlight %}
 

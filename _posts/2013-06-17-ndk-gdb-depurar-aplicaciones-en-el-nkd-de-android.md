@@ -38,11 +38,11 @@ Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad princip
         switch (target.getId()) {
             case R.id.button1:
 
-                mTextView.setText("Ejecuta 'telnet &lt;ip> 7890' desde el pc");
+                mTextView.setText("Ejecuta 'telnet <ip> 7890' desde el pc");
                 mButton = (Button) findViewById(R.id.button1);
                 mButton.setEnabled(false);
 
-                new AsyncTask&lt;Void, Void, String>() {
+                new AsyncTask<Void, Void, String>() {
                     @Override
                     protected String doInBackground(Void... params) {
                         return startTelnetSession();
@@ -84,18 +84,18 @@ El hecho de crear un *AsyncTask* impide que la interfaz gráfica se quede bloque
 
 Veamos ahora el código C, que implementa el servidor:
 
-{% highlight c %}#include &lt;jni.h>
+{% highlight c %}#include <jni.h>
 
-#include &lt;android/log.h>
+#include <android/log.h>
 
-#include &lt;stdio.h>
-#include &lt;stdlib.h>
-#include &lt;string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-#include &lt;sys/socket.h>
-#include &lt;netinet/in.h>
-#include &lt;arpa/inet.h>
-#include &lt;netdb.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
 
 #include "hacking.h"
 

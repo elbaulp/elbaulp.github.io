@@ -22,10 +22,10 @@ Como comenté, la practica consiste en averiguar dos contraseñas de un programa
 
 Todos los programas escritos por los alumnos estan basados en este:
 
-{% highlight c %}#include &lt;stdio.h>    // para printf()
-#include &lt;stdlib.h>   // para exit()
-#include &lt;string.h> // para strncmp()/strlen()
-#include &lt;sys/time.h>   // para gettimeofday(), struct timeval
+{% highlight c %}#include <stdio.h>    // para printf()
+#include <stdlib.h>   // para exit()
+#include <string.h> // para strncmp()/strlen()
+#include <sys/time.h>   // para gettimeofday(), struct timeval
 
 char password[]="abracadabran";
 int  passcode  = 7777;
@@ -150,7 +150,7 @@ Llegados al punto donde se llama a strncmp, vemos claramente en la pila qué par
 
 {% highlight asm %}2: x/32xw $esp
 0xffffd2f0:    0xffffd318  0x0804a034  0x0000000a  0xffffd3a4
-1: x/xw $eip  0x804871e &lt;strncmp>:  0xfffe01e8
+1: x/xw $eip  0x804871e <strncmp>:  0xfffe01e8
 {% endhighlight %}
 
 {% highlight bash %}(%esp)    [0xffffd318] -> puntero a la contraseña introducida por el usuario
@@ -204,8 +204,8 @@ Si el usuario introduce como contraseña **C4b3Z0n**, la bomba explota, ya que e
 
 {% highlight asm %}movzbl (%eax),%eax
 cmp    $0x43,%al
-jne    80486a1 &lt;cambio+0x15>
-call   804860c &lt;boomb>
+jne    80486a1 <cambio+0x15>
+call   804860c <boomb>
 {% endhighlight %}
 
 Llegados a este punto, si no ha explotado, se compara la primera letra con &#8216;Q&#8217;, si la primera letra de la contraseña introducida es **&#8216;Q&#8217;** también, se cambia por **&#8216;c&#8217;**.  
@@ -214,7 +214,7 @@ En resumen, la función cambio comprueba que la primera letra no sea **&#8216;C&
 
 {% highlight asm %}80486be: 0f b6 00                movzbl (%eax),%eax          ; Extrae la primera letra
     80486c1: 3c 63                   cmp    $0x63,%al            ; La compara con 'C'
-    80486c3:    75 06                   jne    80486cb &lt;change+0x13>; Si no son iguales sale de la funcion
+    80486c3:    75 06                   jne    80486cb <change+0x13>; Si no son iguales sale de la funcion
     80486c5:    8b 45 08                mov    0x8(%ebp),%eax       ; si son iguales carga la contraseña entera en eax
     80486c8:    c6 00 43                movb   $0x43,(%eax)         ; y sustituye la primera letra por 'C'
 {% endhighlight %}
@@ -235,7 +235,7 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
  80486f6:  83 45 08 02             addl   $0x2,0x8(%ebp)
  80486fa:    8b 45 08                mov    0x8(%ebp),%eax
  80486fd:    89 45 f0                mov    %eax,-0x10(%ebp)
- 8048700:  eb 4f                   jmp    8048751 &lt;code+0x84>
+ 8048700:  eb 4f                   jmp    8048751 <code+0x84>
  8048702:   8b 4d f0                mov    -0x10(%ebp),%ecx
  8048705:  ba 67 66 66 66          mov    $0x66666667,%edx
  804870a:  89 c8                   mov    %ecx,%eax
@@ -267,18 +267,18 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
  804874a: 89 45 f0                mov    %eax,-0x10(%ebp)
  804874d:  83 45 ec 01             addl   $0x1,-0x14(%ebp)
  8048751:  83 7d ec 04             cmpl   $0x4,-0x14(%ebp)
- 8048755:  7e ab                   jle    8048702 &lt;code+0x35>
+ 8048755:  7e ab                   jle    8048702 <code+0x35>
  8048757:   83 7d e8 17             cmpl   $0x17,-0x18(%ebp)
- 804875b: 74 07                   je     8048764 &lt;code+0x97>
- 804875d:   e8 aa fe ff ff          call   804860c &lt;boomb>
- 8048762:   eb 05                   jmp    8048769 &lt;code+0x9c>
- 8048764:   e8 d9 fe ff ff          call   8048642 &lt;bomb>
+ 804875b: 74 07                   je     8048764 <code+0x97>
+ 804875d:   e8 aa fe ff ff          call   804860c <boomb>
+ 8048762:   eb 05                   jmp    8048769 <code+0x9c>
+ 8048764:   e8 d9 fe ff ff          call   8048642 <bomb>
  8048769:    8b 45 08                mov    0x8(%ebp),%eax
  804876c:    c9                      leave  
  804876d:  c3                      ret  
 {% endhighlight %}
 
-Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción &lt;code>div</code> a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.</p>
+Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción <code>div</code> a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.</p>
 
 
 <h4>
@@ -301,10 +301,10 @@ Gran parte de este código se usa para calcular un simple módulo, la razón; gc
  ============================================================================
  */
 
-#include &lt;stdio.h>    // para printf()
-#include &lt;stdlib.h>   // para exit()
-#include &lt;string.h> // para strncmp()/strlen()
-#include &lt;sys/time.h>   // para gettimeofday(), struct timeval
+#include <stdio.h>    // para printf()
+#include <stdlib.h>   // para exit()
+#include <string.h> // para strncmp()/strlen()
+#include <sys/time.h>   // para gettimeofday(), struct timeval
 
 #define SIZE 15
 #define ESTO printf(
@@ -335,7 +335,7 @@ char* decode(char* p){
     char* f;
   f = (char*) malloc(sizeof(char)*SIZE);
 
-  for (a = 0; a &lt; 10; a++)
+  for (a = 0; a < 10; a++)
       f[a] = p[a * 2 + 1];
   return f;
 }
@@ -343,7 +343,7 @@ char* decode(char* p){
 void confuse2(int* pw){
    int i = 0;
     char* salt = "wE9mg9pu2KSmp5lh";
-  for (i = 0; i &lt; 16; i++)
+  for (i = 0; i < 16; i++)
       *pw ^= salt[i];
    *pw+=7777;
 }
@@ -418,19 +418,19 @@ int main(_, v) double *v; int _;{
 
 
 {% highlight asm %}
-08048870 &lt;decode>:
+08048870 <decode>:
  8048870: 53                      push   %ebx
  8048871:  83 ec 18                sub    $0x18,%esp
  8048874:    c7 04 24 0f 00 00 00    movl   $0xf,(%esp)
  804887b:   8b 5c 24 20             mov    0x20(%esp),%ebx
- 804887f:   e8 4c fc ff ff          call   80484d0 &lt;malloc@plt>
+ 804887f:   e8 4c fc ff ff          call   80484d0 <malloc@plt>
  8048884:  31 d2                   xor    %edx,%edx
  8048886: 66 90                   xchg   %ax,%ax
  8048888:   0f b6 4c 53 01          movzbl 0x1(%ebx,%edx,2),%ecx
  804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
  8048890: 83 c2 01                add    $0x1,%edx
  8048893: 83 fa 0a                cmp    $0xa,%edx
- 8048896: 75 f0                   jne    8048888 &lt;decode+0x18>
+ 8048896: 75 f0                   jne    8048888 <decode+0x18>
  8048898: 83 c4 18                add    $0x18,%esp
  804889b:    5b                      pop    %ebx
  804889c:  c3                      ret
@@ -448,7 +448,7 @@ int main(_, v) double *v; int _;{
  804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
  8048890: 83 c2 01                add    $0x1,%edx
  8048893: 83 fa 0a                cmp    $0xa,%edx
- 8048896: 75 f0                   jne    8048888 &lt;decode+0x18>
+ 8048896: 75 f0                   jne    8048888 <decode+0x18>
 {% endhighlight %}
 
 
@@ -488,7 +488,7 @@ int main(_, v) double *v; int _;{
  80486b3:   83 c0 01                add    $0x1,%eax
  80486b6: 31 ca                   xor    %ecx,%edx
  80486b8: 3d 90 89 04 08          cmp    $0x8048990,%eax
- 80486bd:   75 f1                   jne    80486b0 &lt;main+0x160>
+ 80486bd:   75 f1                   jne    80486b0 <main+0x160>
  80486bf:  81 c2 61 1e 00 00       add    $0x1e61,%edx
 {% endhighlight %}
 

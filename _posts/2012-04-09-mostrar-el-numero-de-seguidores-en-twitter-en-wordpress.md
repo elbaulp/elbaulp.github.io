@@ -50,7 +50,7 @@ Y en el widget tengo lo siguiente:
 {% highlight php %}<p class="twittercount">
   <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank">
      <img style="vertical-align:middle;padding-right:5px" src="twitter.png" alt="Twitter" /></a>
-     <span>&lt; ?php echo followers_count();?></span> Followers
+     <span>< ?php echo followers_count();?></span> Followers
   
 </p>
 {% endhighlight %}

@@ -88,10 +88,10 @@ Para corregir el problema, podemos crear una subclase de `Handler` en un nuevo f
   * Clase interna estática
   */
   private static class MyHandler extends Handler {
-    private final WeakReference&lt;SampleActivity> mActivity;
+    private final WeakReference<SampleActivity> mActivity;
 
     public MyHandler(SampleActivity activity) {
-      mActivity = new WeakReference&lt;SampleActivity>(activity);
+      mActivity = new WeakReference<SampleActivity>(activity);
     }
 
     @Override

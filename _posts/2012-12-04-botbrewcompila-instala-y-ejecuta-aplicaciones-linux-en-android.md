@@ -59,11 +59,11 @@ shell@android:/ # apt-get install gcc g++
 
 Instalados los compiladores, podemos ejecutar aplicaciones escritas en C/C++, probemos con un hola Mundo:
 
-{% highlight cpp %}#include &lt;iostream>
+{% highlight cpp %}#include <iostream>
 
 int main(){
-   std::cout &lt;&lt; "Hola mundo!" &lt;&lt; std::endl;   
-   std::cout &lt;&lt; "Compilado y ejecutado desde Android" &lt;&lt; std::endl;
+   std::cout << "Hola mundo!" << std::endl;   
+   std::cout << "Compilado y ejecutado desde Android" << std::endl;
    return 0; 
 }
 {% endhighlight %}

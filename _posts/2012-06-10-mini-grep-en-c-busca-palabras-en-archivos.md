@@ -21,19 +21,19 @@ tags:
 Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:  
 Para buscar una palabra:
 
-{% highlight bash %}grep palabra fichero1 &lt; [ficheros2...]>{% endhighlight %}
+{% highlight bash %}grep palabra fichero1 < [ficheros2...]>{% endhighlight %}
 
 Para buscar frases:
 
-{% highlight bash %}grep "palabra1 palabra2..." fichero1 &lt; [ficheros2...]>{% endhighlight %}
+{% highlight bash %}grep "palabra1 palabra2..." fichero1 < [ficheros2...]>{% endhighlight %}
 
 Un ejemplo de ejecución:
 
 {% highlight bash %}hkr-> ./grep cout max.php grep.cpp smtp.cpp 
-grep.cpp(22)     cout &lt; &lt; "Uso: grep &lt;palabra a buscar> &lt;firchero1 [&lt;ficheros...>]>" &lt; &lt; endl;
-grep.cpp(56)     cout &lt;&lt; nombre &lt;&lt; "(" &lt;&lt; nlinea &lt;&lt; ") t" &lt;&lt; remove_left_white_spaces(cadena) &lt;&lt; endl;
-smtp.cpp(56)     cout &lt;&lt; "socket createdn";
-smtp.cpp(75)    cout &lt;&lt; "Connectedn";
+grep.cpp(22)     cout < < "Uso: grep <palabra a buscar> <firchero1 [<ficheros...>]>" < < endl;
+grep.cpp(56)     cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
+smtp.cpp(56)     cout << "socket createdn";
+smtp.cpp(75)    cout << "Connectedn";
 {% endhighlight %}
 
 El programa nos indica el fichero en el que se encontró la palabra, el número de línea y la linea en sí.
@@ -47,9 +47,9 @@ Código:
 // Description : Mini Grep
 //============================================================================
 
-#include &lt;iostream>
-#include &lt;string .h>
-#include &lt;fstream>
+#include <iostream>
+#include <string .h>
+#include <fstream>
 
 using namespace std;
 
@@ -59,11 +59,11 @@ void grep(const char*, const char*);
 int
 main(int argc, char* argv[])
 {
-      if (argc &lt; 3){
-         cout &lt;&lt; "Uso: grep &lt;palabra a buscar> &lt;firchero1 [&lt;ficheros...>]>" &lt; &lt; endl;
+      if (argc < 3){
+         cout << "Uso: grep <palabra a buscar> <firchero1 [<ficheros...>]>" < < endl;
          return -1;
       } else {
-         for (int i = 2; i &lt; argc; i++)
+         for (int i = 2; i < argc; i++)
             grep(argv[1], argv[i]);
       }
 }
@@ -95,7 +95,7 @@ grep(const char* palabra, const char* nombre)
          nlinea++;
          if (fichero)
             if (strstr(cadena, palabra))
-               cout &lt;&lt; nombre &lt;&lt; "(" &lt;&lt; nlinea &lt;&lt; ") t" &lt;&lt; remove_left_white_spaces(cadena) &lt;&lt; endl;
+               cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
       }
    
 {% endhighlight %}

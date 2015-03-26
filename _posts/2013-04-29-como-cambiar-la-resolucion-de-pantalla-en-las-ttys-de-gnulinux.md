@@ -41,7 +41,7 @@ Voy a explicar dos formas, la primera que apliqué y una segunda que es el méto
 Para mi caso concreto eligiré **0x31B**. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de **10_linux**:
 
 {% highlight bash %}message="$(gettext_printf "Loading Linux %s ..." ${version})"
-    cat &lt;&lt; EOF
+    cat << EOF
          echo    '$message'
          linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B                                                          
 EOF

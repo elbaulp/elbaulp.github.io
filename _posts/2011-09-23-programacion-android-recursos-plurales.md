@@ -33,12 +33,12 @@ Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo,
   
 <!--more-->
 
-{% highlight xml %}&lt;resources>
-&lt;plurals name="huevos_en_una_cesta">
-   &lt;item quantity="one">Hay 1 huevo&lt;/item>
-   &lt;item quantity="other">Hay %d huevos&lt;/item>
-&lt;/plurals>
-&lt;/resources>
+{% highlight xml %}<resources>
+<plurals name="huevos_en_una_cesta">
+   <item quantity="one">Hay 1 huevo</item>
+   <item quantity="other">Hay %d huevos</item>
+</plurals>
+</resources>
 {% endhighlight %}
 
 Las dos variaciones se representan como dos cadenas de texto diferentes bajo el mismo plural. Ahora, podemos usarlo desde el código Java para mostrar correctamente la cadena correspondiente a la cantidad de huevos. El primer parámetro de ***getQuantityString()*** es el ID del plural. El segundo selecciona la cadena a usar. Cuando el valor de la cantidad es 1, usamos la cadena tal como es. Cuando el valor es distinto a 1, debemos pasar un tercer parámetro que será el valor a colocar en el lugar de %d. Siempre deberá haber al menos 3 parámetros si usamos cadenas formateadas en los plurales.
@@ -120,7 +120,7 @@ Existen otras posibilidades que podemos aplicar al atributo *quantity* del eleme
             if (n == 1) {
                 return QUANTITY_ONE;
             }
-            else if (n >= 2 && n &lt; = 4) {
+            else if (n >= 2 && n < = 4) {
                 return QUANTITY_FEW;
             }
             else {

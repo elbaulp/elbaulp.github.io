@@ -301,7 +301,7 @@ BEGIN
   /*If the current time is before 8:00AM or after
   6:00PM, then return an error. */
  
-  IF (TO_CHAR(SYSDATE, 'HH24') &lt; 8 OR TO_CHAR(SYSDATE, 'HH24') >= 18) THEN
+  IF (TO_CHAR(SYSDATE, 'HH24') < 8 OR TO_CHAR(SYSDATE, 'HH24') >= 18) THEN
     raise_application_error( -20502, 'May only change employee table during working hours');
   END IF;
 END;
@@ -319,7 +319,7 @@ La cláusula WHEN sólo es válida para disparadores con nivel de fila. Si está
 
 {% highlight sql %}CREATE TRIGGER tr1
   BEFORE INSERT OR UPDATE OF salario ON scott.emp
-  FOR EACH ROW WHEN (new.job &lt;> 'PRESIDENT')
+  FOR EACH ROW WHEN (new.job <> 'PRESIDENT')
 BEGIN
   /* Cuerpo del disparador */
 END;
@@ -334,7 +334,7 @@ Esto último es equivalente a:
   BEFORE INSERT OR UPDATE OF salario ON scott.emp
   FOR EACH ROW
 BEGIN
-  IF :new.job &lt;> 'PRESIDENT' THEN
+  IF :new.job <> 'PRESIDENT' THEN
     <span class="comentario">/* Cuerpo del disparador */</span>
   END IF;
 END;

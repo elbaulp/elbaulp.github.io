@@ -29,13 +29,13 @@ Antes de empezar, es necesario descargar **<a href="http://developer.android.com
 
 Otra forma de agregar la librería es hacer click derecho en el **proyecto » Android Tools » Add support library**.
 
-Dicho esto, comencemos con el <a href="http://developer.android.com/reference/android/app/TimePickerDialog.html" target="_blank"><code>&lt;strong>TimePickerDialog&lt;/strong></code></a>  
+Dicho esto, comencemos con el <a href="http://developer.android.com/reference/android/app/TimePickerDialog.html" target="_blank"><code><strong>TimePickerDialog</strong></code></a>  
   
 <!--more-->
 
 #### Crear un TimePickerDialog
 
-El primer paso es crear una clase *fragment* que herede de *DialogFragment* y devuelva un `<em>TimePickerDialog</em>` desde el método <a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html#onCreateDialog%28android.os.Bundle%29" target="_blank"><code>&lt;em> onCreateDialog()&lt;/em></code></a> del *fragment*:
+El primer paso es crear una clase *fragment* que herede de *DialogFragment* y devuelva un `<em>TimePickerDialog</em>` desde el método <a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html#onCreateDialog%28android.os.Bundle%29" target="_blank"><code><em> onCreateDialog()</em></code></a> del *fragment*:
 
 {% highlight java %}import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -73,7 +73,7 @@ Para cerciorarnos que se está usando la librería de compatibilidad, basta con 
 
 Por ahora dejaremos el método `onTimeSet` vacío; pasemos a crear la interfaz. A modo de ejemplo, crearemos un botón que muestre el dialogo cuando sea pulsado:
 
-{% highlight xml %}&lt;Button
+{% highlight xml %}<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mostrarDialogoDeTiempo"
@@ -133,7 +133,7 @@ public class DatePickerFragment extends DialogFragment
 
 Al igual que antes, creamos un botón que muestre el diálogo:
 
-{% highlight xml %}&lt;Button
+{% highlight xml %}<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mostrarDialogoDeFecha"

@@ -40,7 +40,7 @@ En esta última parte de una serie de [4 artículos][1] en los que se ha ido exp
 
 Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3]
 
-{% highlight xml %}&lt;provider android:name=".SitesProvider"
+{% highlight xml %}<provider android:name=".SitesProvider"
    android:authorities="com.elbauldelprogramador.provider.FavSites" />
 {% endhighlight %}
 

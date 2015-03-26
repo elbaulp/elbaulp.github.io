@@ -35,7 +35,7 @@ Un evento es simplemete algo que pasa. Como presionar una tecla, mover el ratón
 {% highlight bash %}//The headers
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
-#include &lt;string>
+#include <string>
 
 //Screen attributes
 const int SCREEN_WIDTH = 640;

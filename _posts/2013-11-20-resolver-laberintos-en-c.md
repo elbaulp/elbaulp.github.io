@@ -42,8 +42,8 @@ Donde:
 
 Dado esto, es posible implementar un programa que lea el fichero, cree una matriz representando el laberinto e intente resolverlo. Esto se podría hacer con:
 
-{% highlight cpp %}#include &lt;iostream>
-#include &lt;vector>
+{% highlight cpp %}#include <iostream>
+#include <vector>
 
 #include "Laberinto.h"
 
@@ -66,7 +66,7 @@ int main()
 
 La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almacenando el tamaño que tiene y se construye un laberinto de dicho tamaño y cambiando la representación del laberinto, es decir `Laberinto lab('+',' ','#',FIL,COL);` crea un laberinto de tamaño *FILxCOL*, cuya representación será un *#* para el camino que conduce a la salida, </em>+</em> para las paredes y un espacio en blanco para las celdas libres. La siguiente línea imprime el laberinto sin resolver, quedando así:
 
-{% highlight bash %}./bin/laberinto &lt; labs/lab_peque.txt 
+{% highlight bash %}./bin/laberinto < labs/lab_peque.txt 
 +++++++
 +e    +
 + + +++
@@ -90,7 +90,7 @@ Las dos siguientes líneas resuelven e imprimen el laberinto con el camino hacia
 
 En caso de que el laberinto no tenga solución se informa de ello:
 
-{% highlight bash %}./bin/laberinto &lt; labs/lab_sinsolucion.txt 
+{% highlight bash %}./bin/laberinto < labs/lab_sinsolucion.txt 
 +++++++
 +e  +s+
 +++++++
@@ -101,19 +101,19 @@ El laberinto no tiene salida
 
 La definición del Laberinto es la siguiente:
 
-{% highlight cpp %}#include &lt;vector>
+{% highlight cpp %}#include <vector>
 
 class Laberinto{
 
 private:
-    std::vector&lt;std::vector&lt;int> > path;
-    std::vector&lt;std::vector&lt;char> > laberinto;
+    std::vector<std::vector<int> > path;
+    std::vector<std::vector<char> > laberinto;
     char shapeP,
          shapeL,
          shapeC;
 
     void addPathToLab(unsigned int,unsigned int);
-    std::vector&lt;int> findEnter() const;
+    std::vector<int> findEnter() const;
     void cargarLaberinto(unsigned int,unsigned int);
 
 public:
@@ -143,16 +143,16 @@ En `path` se almacena el camino recorrido hasta el momento. Internamente, se cre
 
 La implementación:
 
-{% highlight cpp %}#include &lt;iostream>
+{% highlight cpp %}#include <iostream>
 
 #include "Laberinto.h"
 
 using namespace std;
 
 void Laberinto::cargarLaberinto(unsigned int FIL,unsigned int COL){
-    (*this).laberinto.assign(FIL,vector&lt;char>(COL));
-        for(unsigned int i=0; i &lt; FIL; i++)
-            for(unsigned int j=0; j &lt; COL; j++){
+    (*this).laberinto.assign(FIL,vector<char>(COL));
+        for(unsigned int i=0; i < FIL; i++)
+            for(unsigned int j=0; j < COL; j++){
                 char car;
                 cin >> car;
                 if (car != 'e' && car != 's')
@@ -163,33 +163,33 @@ void Laberinto::cargarLaberinto(unsigned int FIL,unsigned int COL){
 }
 
 void Laberinto::printLab() const{
-    for(unsigned int i=0; i &lt; (*this).laberinto.size(); i++){
-        for(unsigned int j=0; j &lt; (*this).laberinto[i].size(); j++)
-            cout &lt;&lt; (*this).laberinto[i][j];
-        cout &lt;&lt; endl;
+    for(unsigned int i=0; i < (*this).laberinto.size(); i++){
+        for(unsigned int j=0; j < (*this).laberinto[i].size(); j++)
+            cout << (*this).laberinto[i][j];
+        cout << endl;
     }
 }
 
 void Laberinto::printLabResuelto() const{
     if(!(*this).path.empty()){
         //Añadir el camino al laberinto
-        cout &lt;&lt; "LABERINTO RESUELTO: "&lt;&lt; endl;
+        cout << "LABERINTO RESUELTO: "<< endl;
         printLab();
     }
     else
-        cout &lt;&lt; "El laberinto no tiene salida" &lt;&lt; endl;
+        cout << "El laberinto no tiene salida" << endl;
 }
 
 
 void Laberinto::resolverLaberinto(){
 
-    vector&lt;vector&lt;bool> > recorrido((*this).laberinto.size(), vector&lt;bool>((*this).laberinto[0].size(),false));
+    vector<vector<bool> > recorrido((*this).laberinto.size(), vector<bool>((*this).laberinto[0].size(),false));
 
 
     (*this).path.push_back(findEnter());
     recorrido[path[0][0]][path[0][1]] = true;
 
-    vector&lt;int> ultimoPath;
+    vector<int> ultimoPath;
     while(!(*this).path.empty() &&
           (*this).laberinto[(*this).path[(*this).path.size()-1][0]][(*this).path[(*this).path.size()-1][1]] != 's'){
         ultimoPath.clear();
@@ -228,18 +228,18 @@ void Laberinto::resolverLaberinto(){
 
     if(!(*this).path.empty()){
         //Añadir el camino al laberinto
-        for(unsigned int i=0; i &lt; (*this).laberinto.size(); i++)
-            for(unsigned int j=0; j &lt; (*this).laberinto[i].size(); j++)
+        for(unsigned int i=0; i < (*this).laberinto.size(); i++)
+            for(unsigned int j=0; j < (*this).laberinto[i].size(); j++)
                 addPathToLab(i,j);
     }
 }
 
-vector&lt;int> Laberinto::findEnter() const{
+vector<int> Laberinto::findEnter() const{
     //Buscamos la entrada
     bool encontrada = false;
-    vector&lt;int> pos;
-    for(unsigned int i=0; i &lt; (*this).laberinto.size() && !encontrada; i++)
-        for(unsigned int j=0; j &lt; (*this).laberinto[i].size() && !encontrada; j++)
+    vector<int> pos;
+    for(unsigned int i=0; i < (*this).laberinto.size() && !encontrada; i++)
+        for(unsigned int j=0; j < (*this).laberinto[i].size() && !encontrada; j++)
             if((*this).laberinto[i][j] == 'e'){
                 pos.push_back(i);
                 pos.push_back(j);
@@ -249,7 +249,7 @@ vector&lt;int> Laberinto::findEnter() const{
 }
 
 void Laberinto::addPathToLab(unsigned int i, unsigned int j){
-    for (unsigned int k=0; k &lt; (*this).path.size(); k++)
+    for (unsigned int k=0; k < (*this).path.size(); k++)
         if((*this).path[k][0] == i && (*this).path[k][1] == j
            && (*this).laberinto[i][j] != 'e' && (*this).laberinto[i][j] != 's')
             (*this).laberinto[i][j] = getShapeC();
@@ -258,7 +258,7 @@ void Laberinto::addPathToLab(unsigned int i, unsigned int j){
 
 ### Más ejemplos
 
-{% highlight latex %}./bin/laberinto &lt; labs/laberinto1.txt 
+{% highlight latex %}./bin/laberinto < labs/laberinto1.txt 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e  +     +       +               +     +               +             +   +   + +
 + +++ + +++ +++ +++ +++++++++++ +++ +++ + +++ +++++++++ + +++++ +++++ + + + + + +
@@ -304,7 +304,7 @@ LABERINTO RESUELTO:
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-./bin/laberinto &lt; labs/laberinto2.txt 
+./bin/laberinto < labs/laberinto2.txt 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e    +                     +       +   +           +           +             +     +               +
 + +++ +++++ +++++ +++++++++ + +++++ + + + +++ +++++++ + + +++++ +++++++ +++++++ +++ + +++++ +++++++ +

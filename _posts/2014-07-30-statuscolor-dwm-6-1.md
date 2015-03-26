@@ -103,12 +103,12 @@ drw_colored_st(Drw *drw, int x, int y, unsigned int w, unsigned int h, char text
   ty = y + (h / 2) - (th / 2) + drw->font->ascent;
   tx = x + (h / 2);
   /* shorten text if necessary */
-  for(len = MIN(olen, sizeof buf); len && (tex.w > w - tex.h || w &lt; tex.h); len--)
+  for(len = MIN(olen, sizeof buf); len && (tex.w > w - tex.h || w < tex.h); len--)
     drw_font_getexts(drw->font, ptext, len, &tex);
   if(!len)
     return;
   memcpy(buf, ptext, len);
-  if(len &lt; olen)
+  if(len < olen)
     for(i = len; i && i > len - 3; buf[--i] = '.');
 
   for (int k = 0; color[k]; k++) {
@@ -134,7 +134,7 @@ parsestatus(char *text, unsigned long *color_queue, char tokens[][256]) {
   char delim[NUMCOLORS+1];
 
   /* Thanks to http://stackoverflow.com/a/24931903/1612432 */
-  for (int i = 0; i &lt; NUMCOLORS; ++i)
+  for (int i = 0; i < NUMCOLORS; ++i)
       delim[i] = i + 1;
   /* Terminates as string */
   delim[NUMCOLORS] = '\0';
@@ -187,7 +187,7 @@ Por último, solo queda usar los métodos creados, deben ir en el método `drawb
 +	  parsestatus(stext, color_queue, tokens);
  		w = TEXTW(stext);
  		x = m->ww - w;
- 		if(x &lt; xx) {
+ 		if(x < xx) {
  			x = xx;
  			w = m->ww - xx;
  		}

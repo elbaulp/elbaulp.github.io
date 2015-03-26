@@ -26,7 +26,7 @@ categories:
 La cláusula WHERE se utiliza para seleccionar aquellos registros que cumplen una o más  
 condiciones. Su sintaxis es:
 
-{% highlight sql %}WHERE &lt;search_condition>{% endhighlight %}
+{% highlight sql %}WHERE <search_condition>{% endhighlight %}
 
 Selecciona aquellas filas que cumplen la condición especificada por esta orden. La  
 condición de búsqueda o de selección de registros se puede conformar utilizando columnas de la tabla, constantes, funciones y/o expresiones y operadores.  

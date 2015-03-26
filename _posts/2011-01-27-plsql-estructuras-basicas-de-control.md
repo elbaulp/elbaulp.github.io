@@ -55,13 +55,13 @@ Como en cualquier lenguaje de programación, &#8220;condición&#8221; es cualqui
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa o nula**, NO se realiza NINGUNA acción.
 
-{% highlight sql %}IF fecha_nac &lt; '1-01-1970' THEN   <span class="comentario">--No termina con un ;</span>
+{% highlight sql %}IF fecha_nac < '1-01-1970' THEN   <span class="comentario">--No termina con un ;</span>
   Salario := salario *1.15;       <span class="comentario">--aumento de salario en un 15%</span>
 END IF;{% endhighlight %}
 
 Se pueden anidar varias instrucciones:
 
-{% highlight sql %}IF fecha_nac &lt; ‘1-01-1970’ THEN
+{% highlight sql %}IF fecha_nac < ‘1-01-1970’ THEN
   IF apellido =‘Martínez’ THEN
     salario:= salario *1.15;
   END IF;
@@ -71,7 +71,7 @@ END IF;{% endhighlight %}
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa**, se ejecutan las instrucciones que siguen a la instrucción ELSE. Sólo se permite una instrucción ELSE en cada instrucción IF.
 
-{% highlight sql %}IF fecha_nac &lt;’1-01-1970’ THEN
+{% highlight sql %}IF fecha_nac <’1-01-1970’ THEN
   salario:= salario *1.15;
 ELSE
   salario:= salario* 1.05;
@@ -206,7 +206,7 @@ Ejemplo:
   i       NUMBER := 1;
   i_cubed NUMBER;
 BEGIN
-  WHILE i &lt;= 10 LOOP
+  WHILE i <= 10 LOOP
     i_cubed := i**3;
     DBMS_OUTPUT.PUT_LINE('Number: ' || TO_CHAR(i) || ' Cube: ' || TO_CHAR(i_cubed));
     i := i + 1;

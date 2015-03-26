@@ -54,7 +54,7 @@ A la actividad basada en el `GridView` se le ha denominado `Main` y a aquella qu
 
 En el archivo de diseño de `Main` se escribirá un layout cuyo nodo principal sea un elemento `<GridView>`. Veamos:
 
-{% highlight xml %}&lt;GridView xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}<GridView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gridview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -84,7 +84,7 @@ La distribución de nuestros elementos se ve afectada en el GridView por los sig
   * `android:gravity`: Define la ubicación del contenido dentro de cada celda. Existen muchos valores que puedes utilizar, entre ellos: `top`, `rigth`, `left`, `bottom` y `center`.  
     Por otra parte, el layout para `Details` consta simplemente de un `ImageView` como nodo raíz:
 
-{% highlight xml %}&lt;ImageView xmlns:android="http://schemas.android.com/apk/res/android"    
+{% highlight xml %}<ImageView xmlns:android="http://schemas.android.com/apk/res/android"    
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/imageDesc"

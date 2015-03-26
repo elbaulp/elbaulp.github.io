@@ -88,10 +88,10 @@ import android.widget.TextView;
 
 public class VersionesUbuntuAdapter extends BaseAdapter{
 
-   private ArrayList&lt;versionesubuntu> listadoVersiones;
+   private ArrayList<versionesubuntu> listadoVersiones;
    private LayoutInflater lInflater;
 
-   public VersionesUbuntuAdapter(Context context, ArrayList&lt;/versionesubuntu>&lt;versionesubuntu> versiones) {
+   public VersionesUbuntuAdapter(Context context, ArrayList</versionesubuntu><versionesubuntu> versiones) {
       this.lInflater = LayoutInflater.from(context);
       this.listadoVersiones = versiones;
    }
@@ -135,7 +135,7 @@ public class VersionesUbuntuAdapter extends BaseAdapter{
       ImageView logoVersion;
    }
 }
-&lt;/versionesubuntu>{% endhighlight %}
+</versionesubuntu>{% endhighlight %}
 
 Lo que hace esta clase es lo siguente, en su constructor, carga un objeto LayoutInflater, que infla los objetos XML del layout para que podamos usarlos, convirtiéndolos en un objeto java.
 
@@ -145,34 +145,34 @@ El método ***getView()*** se invoca cada vez que hay que dibujar la lista.
 
 En este caso, para la lista, hemos usado un layout personalizado, que es el siguiente:
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
 
-    &lt;imageview android:id="@+id/logo"
+    <imageview android:id="@+id/logo"
         android:src="@drawable/ocelot"
         android:layout_alignParentLeft="true"
         android:padding="5px"
         android:layout_width="128px"
         android:layout_height="128px"/>
 
-    &lt;textview android:id="@+id/nomVersion"
+    <textview android:id="@+id/nomVersion"
         android:layout_toRightOf="@id/logo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="15dip"
         android:text="VersionNom" />
 
-    &lt;textview android:id="@+id/numVersion"
+    <textview android:id="@+id/numVersion"
         android:layout_below="@id/nomVersion"
         android:layout_toRightOf="@id/logo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="VersionNum" />
 
-&lt;/relativelayout>
+</relativelayout>
 {% endhighlight %}
 
 Por último, tan solo queda usar el adaptador que hemos creado en los pasos anteriores en nuesta Actividad principal, en este caso, una ListActivity:
@@ -191,8 +191,8 @@ public class Adaptadores2Activity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        ArrayList&lt;versionesubuntu> versiones =
-           new ArrayList&lt;/versionesubuntu>&lt;versionesubuntu>();
+        ArrayList<versionesubuntu> versiones =
+           new ArrayList</versionesubuntu><versionesubuntu>();
 
         versiones.add(
               new VersionesUbuntu("Lucid Lynx", "10.4 LTS", R.drawable.lucid));
@@ -211,7 +211,7 @@ public class Adaptadores2Activity extends ListActivity {
         setListAdapter(adaptador);
     }
 }
-&lt;/versionesubuntu>{% endhighlight %}
+</versionesubuntu>{% endhighlight %}
 
 Ya solo resta ejecutarlo y ver el resultado:
 

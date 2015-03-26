@@ -44,20 +44,20 @@ Existen varios tipos de Layouts para Android, vamos a ver los más comunes:
 
 Este tipo de Layout es el más básico, coloca a sus objetos hijos en la parte superior izquierda de la pantalla.
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;framelayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<framelayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    &lt;textview android:layout_width="fill_parent"
+    <textview android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello"/>
 
-    &lt;textview android:layout_width="fill_parent"
+    <textview android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"/>
 
-&lt;/framelayout>
+</framelayout>
 {% endhighlight %}
 
 Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se amontonan unos encima de otros.
@@ -70,23 +70,23 @@ Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se a
 
 Este tipo de layout coloca sus hijos unos detras de otros, también comenzando por la esquina superior izquierda de la pantalla. Podemos colocarlos alineados horizontalmente o verticalmente mediante su propiedad ***android:orientation=&#8221;horizontal | vertical&#8221;***
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    &lt;textview android:layout_width="wrap_content"
+    <textview android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:background="#0ff"/>
 
-    &lt;textview android:layout_width="wrap_content"
+    <textview android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello"
         android:background="#ff0"/>
 
-&lt;/linearlayout>
+</linearlayout>
 {% endhighlight %}
 
 En este caso, he pueso un fondo de color a cada texto (con la propiedad ***android:background***) para diferenciarlo bien, y he usado la horientación horizontal, de haber usado la orientación vertical, los textos aparecerían uno debajo del otro:
@@ -101,27 +101,27 @@ Este Layout permite que coloquemos los elementos en un lugar con respecto a la p
 
 Para conseguir esto, ***RelativeLayout*** proporciona propiedades como ***android:layout\_toRightOf o android:layout\_alignLeft***, que toman como valores los identificadores de los objetos, o valores booleanos.
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    &lt;textview android:layout_width="wrap_content"
+    <textview android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:background="#0ff"
         android:layout_centerInParent="true"
         android:id="@+id/text1"/>
 
-    &lt;textview android:id="@+id/text2"
+    <textview android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello"
         android:background="#ff0"
         android:layout_below="@id/text1"/>
 
-&lt;/relativelayout>
+</relativelayout>
 {% endhighlight %}
 
 Como vemos, hemos centrado el texto1 en la pantalla con ***android:layout_centerInParent=&#8221;true&#8221;*** y hemos puesto debajo del texto1 al texto2 con ***android:layout_below=&#8221;@id/text1&#8243;***

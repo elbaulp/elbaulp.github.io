@@ -67,13 +67,13 @@ Connection closed by foreign host*)
 
 También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [python][2] que encontré en stackoverflow:
 
-{% highlight cpp %}#include &lt;iostream>
-     #include &lt;sys /types.h>
-     #include &lt;/sys>&lt;sys /socket.h>
-     #include &lt;netinet /in.h>
-     #include &lt;netdb .h>
-     #include &lt;stdio .h>
-     #include &lt;string .h>
+{% highlight cpp %}#include <iostream>
+     #include <sys /types.h>
+     #include </sys><sys /socket.h>
+     #include <netinet /in.h>
+     #include <netdb .h>
+     #include <stdio .h>
+     #include <string .h>
      using namespace std;
      #define HELO "HELO xxxxxx@xxxx.xxxxrn"
      #define DATA "DATArn"
@@ -122,7 +122,7 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
      return 1;
     }
     else
-      cout &lt; &lt; "socket createdn";
+      cout < < "socket createdn";
     /*=====Verify host=====*/
     server.sin_family = AF_INET;
     hp = gethostbyname(host_id);
@@ -141,7 +141,7 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
      return 1;
     }
     else
-      cout &lt; &lt; "Connectedn";
+      cout < < "Connectedn";
     /*=====Write some data then read some =====*/
     read_socket(); /* SMTP Server logon string */
     send_socket(HELO); /* introduce ourselves */

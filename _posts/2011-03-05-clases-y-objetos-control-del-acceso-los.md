@@ -116,8 +116,8 @@ Punto, se escribirán:
 
 
 {% highlight bash %}ptl.mostrar ();
-cout &lt; &lt; "nabscisa del punto= " &lt;&lt; ptl.getx();
-cout &lt;&lt; "nordenada del punto= "&lt;&lt; ptl.gety ();
+cout < < "nabscisa del punto= " << ptl.getx();
+cout << "nordenada del punto= "<< ptl.gety ();
 {% endhighlight %}
 
 * * *

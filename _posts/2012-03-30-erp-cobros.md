@@ -68,7 +68,7 @@ for each row
        noPagada    exception;
        descFPago   fPagos.descripcion%type;
     begin
-         if :new.importe &lt; 0 then raise imptMayCero; end if;
+         if :new.importe < 0 then raise imptMayCero; end if;
          if upper(:new.abono) = 'N' then 
             --Compruebo la forma de pago
             select descripcion into descfPAgo from fPAgos where cCodFpago = :new.cCodFPago;
@@ -131,7 +131,7 @@ begin
      end if; 
      
      --Comprobacion fecha emision
-     if :new.fechaPago &lt; :new.fechaEmis then raise errorFechas; end if;
+     if :new.fechaPago < :new.fechaEmis then raise errorFechas; end if;
      
      -- si se cambia ele importe ha de ser 10% mayot
      if (:new.importe != :old.importe) and (:new.importe > :old.importe*1.1) then raise imporMuyAlto; end if;

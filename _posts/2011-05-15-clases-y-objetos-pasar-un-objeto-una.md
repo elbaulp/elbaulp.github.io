@@ -41,7 +41,7 @@ argumentos.
 funcion (arg);          // llamada
 inf funcion (int parm)  // definición
 {
-  cout &lt; &lt; parm &lt;&lt; 'n';
+  cout < < parm << 'n';
   //...
   parm=88;
 }
@@ -61,7 +61,7 @@ está fuera de ámbito y se libera la memoria que ocupaba. En este caso, se asig
 funcion (&arg1);         // llamada
 int funcion (int * parm) // definición
 {
-  cout &lt; &lt; *parm &lt;&lt; 'n';
+  cout < < *parm << 'n';
   //...
   *parm=88;
 }
@@ -96,7 +96,7 @@ referencias.
 funcion (arg);            // llamada
 int funcion (int& parm)   // definición
 {
-  cout &lt; &lt; parm &lt;&lt; 'n';
+  cout < < parm << 'n';
   parm=88;
 }
 {% endhighlight %}

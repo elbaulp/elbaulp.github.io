@@ -59,7 +59,7 @@ PyListObject *list;
 list = (PyListObject *) Py_BuildValue("[]");
 
 int i = 0;
-for (i; i &lt; stats_length; i++) {
+for (i; i < stats_length; i++) {
     dict = Py_BuildValue("{s:i}", "LPort", stats[i].lport);
     PyList_Append(list, dict);
 }

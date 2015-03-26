@@ -87,7 +87,7 @@ Como suele ser habitual, los [scripts bash][2] nos facilitan las tareas repetiti
 {% highlight bash %}#/bin/bash
 
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 &lt;Directorio a los archivos cifrados>"
+    echo "Usage: $0 <Directorio a los archivos cifrados>"
     exit
 fi
 

@@ -65,7 +65,7 @@ Agrupa las filas seleccionadas por la cláusula WHERE por los campos que aparece
 cláusula GROUP BY. Estos grupos devuelven una única fila por grupo a la que se le pueden añadir  
 una serie de funciones estadísticas llamadas agregados. Su sintaxis es:
 
-{% highlight sql %}GROUP BY &lt;group_by_expression>
+{% highlight sql %}GROUP BY <group_by_expression>
 {% endhighlight %}
 
 donde <group\_by\_expression> es la columna o columnas por la cuales se desea agrupar. No se  

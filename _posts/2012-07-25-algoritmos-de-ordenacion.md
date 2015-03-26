@@ -35,7 +35,7 @@ El ordenamiento por **burbuja** es el algoritmo más sencillo probablemente. Ide
   int i, j;
   int aux;
   for (i = inicial; i  i; j--)
-      if (T[j] &lt; T[j-1])
+      if (T[j] < T[j-1])
   {
      aux = T[j];
      T[j] = T[j-1];
@@ -55,7 +55,7 @@ static void insercion_lims(int T[], int inicial, int final)
 {
   int i, j;
   int aux;
-  for (i = inicial + 1; i &lt; final; i++) {
+  for (i = inicial + 1; i < final; i++) {
     j = i;
     while ((T[j]  0)) {
       aux = T[j];
@@ -80,11 +80,11 @@ static void insercion_lims(int T[], int inicial, int final)
 {
   int i, j, indice_menor;
   int menor, aux;
-  for (i = inicial; i &lt; final - 1; i++) {
+  for (i = inicial; i < final - 1; i++) {
     indice_menor = i;
     menor = T[i];
-    for (j = i; j &lt; final; j++)
-      if (T[j] &lt; menor) {
+    for (j = i; j < final; j++)
+      if (T[j] < menor) {
  indice_menor = j;
    menor = T[j];
       }
@@ -138,7 +138,7 @@ static void insercion_lims(int T[], int inicial, int final)
   {% highlight cpp %}
 static void mergesort_lims(int T[], int inicial, int final)
 {
-  if (final - inicial &lt; UMBRAL_MS)
+  if (final - inicial < UMBRAL_MS)
     {
       insercion_lims(T, inicial, final);
     } else {
@@ -147,13 +147,13 @@ static void mergesort_lims(int T[], int inicial, int final)
       int * U = new int [k - inicial + 1];
       assert(U);
       int l, l2;
-      for (l = 0, l2 = inicial; l &lt; k; l++, l2++)
+      for (l = 0, l2 = inicial; l < k; l++, l2++)
     U[l] = T[l2];
       U[l] = INT_MAX;
 
       int * V = new int [final - k + 1];
       assert(V);
-      for (l = 0, l2 = k; l &lt; final - k; l++, l2++)
+      for (l = 0, l2 = k; l < final - k; l++, l2++)
    V[l] = T[l2];
       V[l] = INT_MAX;
 
@@ -187,7 +187,7 @@ static void mergesort_lims(int T[], int inicial, int final)
 static void quicksort_lims(int T[], int inicial, int final)
 {
   int k;
-  if (final - inicial &lt; UMBRAL_QS) {
+  if (final - inicial < UMBRAL_QS) {
     insercion_lims(T, inicial, final);
   } else {
     dividir_qs(T, inicial, final, k);

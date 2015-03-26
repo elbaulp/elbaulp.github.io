@@ -185,12 +185,12 @@ Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de t
 En el constructor de esta clase es necesario establecer el layout que usará el diálogo, en este caso un simple `EditText`:
 
 {% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
-&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    &lt;EditText
+    <EditText
         android:id="@+id/etpPassword"
         android:name="DialogoPersonalidazo"
         android:layout_width="fill_parent"
@@ -201,7 +201,7 @@ En el constructor de esta clase es necesario establecer el layout que usará el 
         android:password="true"
         android:title="Dialogo Personalizado" />
 
-&lt;/LinearLayout>
+</LinearLayout>
 {% endhighlight %}
 
 El método `callChangeListener` llamará a `onPreferenceChange`, donde decidiremos qué hacer con el valor de la preferencia, si guardarlo o descartarlo.
@@ -209,10 +209,10 @@ El método `callChangeListener` llamará a `onPreferenceChange`, donde decidirem
 Con esto ya está todo listo, simplemente falta hacer referencia al diálogo que acabamos de crear en el archivo de preferencias de la siguiente forma:
 
 {% highlight xml %}<?xml version="1.0" encoding="UTF-8"?>
-&lt;PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    &lt;PreferenceCategory android:title="TituloCategoría" >
-        &lt;EditTextPreference
+    <PreferenceCategory android:title="TituloCategoría" >
+        <EditTextPreference
             android:name="DialogoNormal"
             android:defaultValue=""
             android:hint="dialogonormal"
@@ -220,16 +220,16 @@ Con esto ya está todo listo, simplemente falta hacer referencia al diálogo que
             android:password="true"
             android:title="Dialogo Normal" />
 
-        &lt;com.example.dialogpreferenceexample.MyDialogPreference
+        <com.example.dialogpreferenceexample.MyDialogPreference
             android:name="DialogoPersonalidazo"
             android:defaultValue=""
             android:hint="dialogoPersonalizado"
             android:key="diagPerso"
             android:password="true"
             android:title="Dialogo Personalizado" />
-    &lt;/PreferenceCategory>
+    </PreferenceCategory>
 
-&lt;/PreferenceScreen>
+</PreferenceScreen>
 {% endhighlight %}
 
 Donde `com.example.dialogpreferenceexample.MyDialogPreference` es el nombre de la clase del diálogo personalizado.

@@ -95,7 +95,7 @@ pObjs[2]=new Punto(‘@’, 60, 10);
 <span class="comentario">//desde cada elemento se llama a las funciones miembro</span>
 <span class="comentario">//pObjs[1] mostrar();</span>
 <span class="comentario">//destrucción del array</span>
-for (int i=0; i&lt;3; i++)
+for (int i=0; i<3; i++)
    delete pObjs[i];
 delete[] pObjs;
 {% endhighlight %}

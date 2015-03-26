@@ -93,9 +93,9 @@ tags:
 * Sugerencia: gcc -O2 -o sumas sumas.c
 ******************************************************************************/
 
-#include &lt;stdlib.h>
-#include &lt;stdio.h>
-#include &lt;time.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 /***************************************
 * Tipo operando de suma de 64 bits con 4 celdas de 16 bits
@@ -147,8 +147,8 @@ c->w = a->w + b->w;
 **************************************/
 
 void suma2(const Sumando *a, const Sumando *b, Sumando *c) {
-unsigned long long operA = ((unsigned long long)a->x &lt;&lt; 48) | ((unsigned long long)a->y &lt;&lt; 32) | (a->z &lt;&lt; 16) | a->w;
-unsigned long long operB = ((unsigned long long)b->x &lt;&lt; 48) | ((unsigned long long)b->y &lt;&lt; 32) | (b->z &lt;&lt; 16) | b->w;
+unsigned long long operA = ((unsigned long long)a->x << 48) | ((unsigned long long)a->y << 32) | (a->z << 16) | a->w;
+unsigned long long operB = ((unsigned long long)b->x << 48) | ((unsigned long long)b->y << 32) | (b->z << 16) | b->w;
 unsigned long long result = operA + operB;
 
 c->x = (result & 0xffff000000000000) >> 48;
@@ -184,8 +184,8 @@ printf("Inicializando datos...n");
 srand(time(0));
 tStart = clock();
 
-for (i = 0; i &lt; N; i++) {
-a[i].x = rand() & 0x7fff; // 32767 &lt; (65536 / 2) => No desbordamiento
+for (i = 0; i < N; i++) {
+a[i].x = rand() & 0x7fff; // 32767 < (65536 / 2) => No desbordamiento
 a[i].y = rand() & 0x7fff;
 a[i].z = rand() & 0x7fff;
 a[i].w = rand() & 0x7fff;
@@ -203,7 +203,7 @@ printf("Inicializacion: %d ms.n", (int)((double)tInit / CLOCKS_PER_SEC * 1000));
 
 tStart = clock();
 
-for (i = 0; i &lt; N; i++) {
+for (i = 0; i < N; i++) {
 suma1(&a[i], &b[i], &c[i]);
 }
 
@@ -214,7 +214,7 @@ printf("Algoritmo 1: %d ms.n", (int)((double)(tStop - tStart) / CLOCKS_PER_SEC *
 
 tStart = clock();
 
-for (i = 0; i &lt; N; i++) {
+for (i = 0; i < N; i++) {
 suma2(&a[i], &b[i], &c[i]);
 }
 
@@ -225,7 +225,7 @@ printf("Algoritmo 2: %d ms.n", (int)((double)(tStop - tStart) / CLOCKS_PER_SEC *
 
 tStart = clock();
 
-for (i = 0; i &lt; N; i++) {
+for (i = 0; i < N; i++) {
 suma3(&a[i], &b[i], &c[i]);
 }
 

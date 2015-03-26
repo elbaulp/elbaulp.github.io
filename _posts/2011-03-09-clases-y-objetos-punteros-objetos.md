@@ -39,7 +39,7 @@ reserva memoria para un entero, y lo inicializa con el número 3. El operador ne
 devuelve la dirección del bloque de la memoria donde está guardado el valor de la  
 variable. Para conocer el valor de la variable a la que apunta int_ptr, basta escribir:
 
-{% highlight bash %}cout &lt; &lt; *int_Ptr;
+{% highlight bash %}cout < < *int_Ptr;
 {% endhighlight %}
 
 Algo que podemos expresar mediante la siguiente regla general:

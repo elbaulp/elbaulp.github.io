@@ -106,8 +106,8 @@ function fetchEmails_() {
         // Fetch sender of each emails
         // ////////////////////////////////
         var from = messages[j].getFrom();
-        if (from.match(/&lt;/) != null) {
-          from = from.match(/&lt;([^>]*)/)[1];
+        if (from.match(/</) != null) {
+          from = from.match(/<([^>]*)/)[1];
         }
         var time = Utilities.formatDate(date, variables.userTimeZone, "H");
         var day = Utilities.formatDate(date, variables.userTimeZone, "d");
@@ -123,9 +123,9 @@ function fetchEmails_() {
           variables.dayOfEmailsSent[day]++;
           var to = messages[j].getTo();
           to = to.split(/,/);
-          for (l = 0; l &lt; to.length; l = l + 2) {
-            if (to[l].match(/&lt;/) != null) {
-              to[l] = to[l].match(/&lt;([^>]*)/)[1];
+          for (l = 0; l < to.length; l = l + 2) {
+            if (to[l].match(/</) != null) {
+              to[l] = to[l].match(/<([^>]*)/)[1];
             }
             for (k in variables.people) {
               if (to[l] == variables.people[k][0]) {
@@ -133,7 +133,7 @@ function fetchEmails_() {
                 found = true;
               }
             }
-            if (!found && to[l].length &lt; 50) {
+            if (!found && to[l].length < 50) {
               variables.people.push([
                   to[l], 0, 1
               ]);
@@ -147,7 +147,7 @@ function fetchEmails_() {
               found = true;
             }
           }
-          if (!found && from.length &lt; 50) {
+          if (!found && from.length < 50) {
             variables.people.push([
                 from, 1, 0
             ]);
@@ -191,7 +191,7 @@ function fetchEmails_() {
       Utilities.sleep(2000);
     }
   }
-  if (conversations.length &lt;= 100) {
+  if (conversations.length <= 100) {
     sendReport_(variables);
   }
 }
@@ -199,12 +199,12 @@ function fetchEmails_() {
 function sendReport_(variables) {
   variables.people.sort(sortArrayOfPeopleFrom_);
   var report =
-    "&lt;h2 style=\"color:#cccccc; font-family:verdana,geneva,sans-serif;\">Gmail Stats - " +
+    "<h2 style=\"color:#cccccc; font-family:verdana,geneva,sans-serif;\">Gmail Stats - " +
       Utilities.formatDate(
         new Date(variables.previous),
         variables.userTimeZone,
         "MMMM") +
-      "&lt;/h2>
+      "</h2>
 
 <p>
   " +
@@ -234,10 +234,10 @@ function sendReport_(variables) {
         100 +
         "% of them.
 </p>" +
-      "&lt;table style=\"border-collapse: collapse;\">
+      "<table style=\"border-collapse: collapse;\">
 
 <tr>
-  &lt;td style=\"border: 0px solid white;\">" +
+  <td style=\"border: 0px solid white;\">" +
         "
   
   <h3>
@@ -248,11 +248,11 @@ function sendReport_(variables) {
     ";
       var r = 0;
       var s = 0;
-      while (s &lt; 5) {
+      while (s < 5) {
         if (variables.people[r][0].search(/notification|noreply|update/) == -1) {
           report +=
-            "&lt;li title=\"" + variables.people[r][1] + " emails\">" +
-              variables.people[r][0] + "&lt;/li>";
+            "<li title=\"" + variables.people[r][1] + " emails\">" +
+              variables.people[r][0] + "</li>";
           s++;
         }
         r++;
@@ -260,7 +260,7 @@ function sendReport_(variables) {
       variables.people.sort(sortArrayOfPeopleTo_);
       report +=
         "
-  </ul>&lt;/td>&lt;td style=\"border: 0px solid white;\">
+  </ul></td><td style=\"border: 0px solid white;\">
   
   <h3>
     Top 5 recipients:
@@ -268,16 +268,16 @@ function sendReport_(variables) {
   
   <ul>
     ";
-      for (i = 0; i &lt; 5; i++) {
+      for (i = 0; i < 5; i++) {
         report +=
-          "&lt;li title=\"" + variables.people[i][2] + " emails\">" +
-            variables.people[i][0] + "&lt;/li>";
+          "<li title=\"" + variables.people[i][2] + " emails\">" +
+            variables.people[i][0] + "</li>";
       }
       report += "
-  </ul>&lt;/td>
-</tr>&lt;/table>
+  </ul></td>
+</tr></table>
 
-<br />&lt;img src=\'";
+<br /><img src=\'";
 
   var dataTable = Charts.newDataTable();
   dataTable.addColumn(Charts.ColumnType['STRING'], 'Time');
@@ -285,7 +285,7 @@ function sendReport_(variables) {
   dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Sent');
 
   var time = '';
-  for ( var i = 0; i &lt; variables.timeOfEmailsReceived.length; i++) { // create
+  for ( var i = 0; i < variables.timeOfEmailsReceived.length; i++) { // create
                                                                       // the
                                                                       // rows
     switch (i) {
@@ -321,14 +321,14 @@ function sendReport_(variables) {
       650,
       400).build();
 
-  report += "cid:Averageflow\'/>" + "&lt;img src=\'";
+  report += "cid:Averageflow\'/>" + "<img src=\'";
 
   var dataTable = Charts.newDataTable();
   dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Date'); // Era STRING
   dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Received');
   dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Sent');
 
-  for ( var i = 0; i &lt; variables.dayOfEmailsReceived.length; i++) { // create
+  for ( var i = 0; i < variables.dayOfEmailsReceived.length; i++) { // create
                                                                     // the rows
     dataTable.addRow([
       i + 1, variables.dayOfEmailsReceived[i], variables.dayOfEmailsSent[i]
@@ -356,11 +356,11 @@ function sendReport_(variables) {
 }
 
 function sortArrayOfPeopleFrom_(a, b) {
-  return ((a[1] > b[1]) ? -1 : ((a[1] &lt; b[1]) ? 1 : 0));
+  return ((a[1] > b[1]) ? -1 : ((a[1] < b[1]) ? 1 : 0));
 }
 
 function sortArrayOfPeopleTo_(a, b) {
-  return ((a[2] > b[2]) ? -1 : ((a[2] &lt; b[2]) ? 1 : 0));
+  return ((a[2] > b[2]) ? -1 : ((a[2] < b[2]) ? 1 : 0));
 }
 
 function daysInMonth_(month, year) {
@@ -382,11 +382,11 @@ function init_() {
   var previousMonth = previous.getMonth();
   var year = previous.getYear();
   var lastDay = daysInMonth_(previousMonth, year);
-  for (i = 0; i &lt; lastDay + 1; i++) {
+  for (i = 0; i < lastDay + 1; i++) {
     dayOfEmailsSent[i] = 0;
     dayOfEmailsReceived[i] = 0;
   }
-  for (i = 0; i &lt; 24; i++) {
+  for (i = 0; i < 24; i++) {
     timeOfEmailsSent[i] = 0;
     timeOfEmailsReceived[i] = 0;
   }

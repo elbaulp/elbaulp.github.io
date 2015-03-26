@@ -27,19 +27,19 @@ Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un 
   
 &nbsp;
 
-{% highlight xml %}&lt;LinearLayout
+{% highlight xml %}<LinearLayout
     <!--....--> >
  
-    &lt;ImageView
+    <ImageView
         
 
 <!--....--> />
  
-    &lt;TextView
+    <TextView
        
 
 <!--....--> />
-&lt;/LinearLayout>
+</LinearLayout>
 {% endhighlight %}
 
 Si el layout consta de estos dos elementos, Lint muestra el siguiente mensaje : *This tag and its children can be replaced by one <TextView> and a compound drawable*. Viene a decir que es posible simplificar el layout eliminando la imagen y usarla dentro del elemento TextView como **Compound Drawable**.
@@ -61,7 +61,7 @@ tv.setCompoundDrawablePadding(10);
 
 Es posible realizar el proceso anterior mediante XML, en lugar de java:
 
-{% highlight xml %}&lt;TextView
+{% highlight xml %}<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_launcher"

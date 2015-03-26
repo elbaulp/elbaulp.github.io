@@ -69,7 +69,7 @@ A partir de aquí la depuración es muy parecida a **gdb**, lo primero que debe 
 
 {% highlight bash %}(Pdb) help
 
-Documented commands (type help &lt;topic>):
+Documented commands (type help <topic>):
 ========================================
 EOF    bt         cont      enable  jump  pp       run      unt
 a      c          continue  exit    l     q        s        until
@@ -90,7 +90,7 @@ retval  rv
 Por ejemplo, con * p <exp>* se imprimirá por pantalla el valor de la expresión:
 
 {% highlight bash %}p Poll.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
-[&lt;Poll: Titulo encuesta>]
+[<Poll: Titulo encuesta>]
 {% endhighlight %}
 
 Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.

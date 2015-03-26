@@ -46,12 +46,12 @@ La forma de declarar las categorías en el AndroidManifest es la siguiente:
   
 <!--more-->
 
-{% highlight xml %}&lt;activity android:name=".PrincipalActivity" android:label="@string/app_name">
-   &lt;intent -filter>
-      &lt;action android:name="android.intent.action.MAIN" />
-      &lt;category android:name="android.intent.category.LAUNCHER" />
-   &lt;/intent>
-&lt;/activity>
+{% highlight xml %}<activity android:name=".PrincipalActivity" android:label="@string/app_name">
+   <intent -filter>
+      <action android:name="android.intent.action.MAIN" />
+      <category android:name="android.intent.category.LAUNCHER" />
+   </intent>
+</activity>
 {% endhighlight %}
 
 Vamos a ver algunas categorías predefinidas, podéis encontrar la lista de todas ellas en <a target="_blank" href="http://developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE">developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE</a>:
@@ -66,8 +66,8 @@ Cuando usamos un intent para iniciar una actividad podemos especificar qué tipo
 {% highlight java %}Intent i = new Intent(Intent.ACTION_MAIN, null);
 i.addCategory(Intent.CATEGORY_LAUNCHER);
 PackageManager pm = getPackageManager();
-List&lt;resolveinfo> list = pm.queryIntentActivities(i, 0);
-&lt;/resolveinfo>{% endhighlight %}
+List<resolveinfo> list = pm.queryIntentActivities(i, 0);
+</resolveinfo>{% endhighlight %}
 
 PackageManager permite encontrar actividades que coincidan con un intent sin llegar a invocarlas. Una vez ejecutado lo de arriba, podemos iterar sobre la lista e invocar a la actividad que coincida con el nombre que deseemos:
 

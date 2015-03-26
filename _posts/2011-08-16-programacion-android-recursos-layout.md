@@ -40,22 +40,22 @@ En Android, cada pantalla de una aplicación habitualmente se carga desde un fic
 
 La línea ***setContentView(R.layout.main);*** señala que hay una clase estática llamada *R.layout* y, que dentro de esa clase hay una constante entera llamada *main* que apunta a una vista definida por un fichero de recursos layout xML. El nombre del fichero XML es main.xml, el cual debe estar en el directorio *./res/layout*. El contenido de este fichero es el siguiente:
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    &lt;textview android:id="@+id/text1"
+    <textview android:id="@+id/text1"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
         android:text="@string/hello" />
-    &lt;button android:id="@+id/b1"
+    <button android:id="@+id/b1"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
         android:text="@string/hello"/>
     
-&lt;/linearlayout>
+</linearlayout>
 {% endhighlight %}
 
 Vamos a ver la composición de este fichero, como elemento raiz tenemos un elemento llamado <linearlayout>, que contiene un *TextView* seguido de un *Button*. Un LinearLayout coloca a sus hijos uno detrás de otro vertical u horizontalmente.</linearlayout> 
@@ -80,7 +80,7 @@ tv.setText("Texto para el TextView")
 
 En este ejemplo, hemos localizado el TextView usando el método ***findViewById()*** de la clase Activity. La constante *R.id.text1* corresponde al ID definido para el TextView en el fichero XML, que creamos de la siguiente manera:
 
-{% highlight xml %}&lt;textview android:id="@+id/text1"
+{% highlight xml %}<textview android:id="@+id/text1"
 ....
 />
 {% endhighlight %}

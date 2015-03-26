@@ -158,7 +158,7 @@ También es posible evitar guardar recursos que solo sean rotaciones de otro. Di
 Podemos deshacernos fácilmente de `ic_arrow_collapse` creando un `RotateDrawable` basándonos en `ic_arrow_expand`. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:
 
 {% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
-&lt;rotate xmlns:android="http://schemas.android.com/apk/res/android"
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/ic_arrow_expand"
     android:fromDegrees="180"
     android:pivotX="50%"
@@ -177,30 +177,30 @@ Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el 
 La animación para el “éxito” se construye con un `AnimationDrawable` definido en un XML:
 
 {% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
-&lt;animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
-    &lt;item android:drawable="@drawable/generic_confirmation_00163" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00164" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00165" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00166" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00167" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00168" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00169" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00170" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00171" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00172" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00173" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00174" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00175" android:duration="333"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00185" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00186" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00187" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00188" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00189" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00190" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00191" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00192" android:duration="33"/>
-    &lt;item android:drawable="@drawable/generic_confirmation_00193" android:duration="33"/>
-&lt;/animation-list>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:drawable="@drawable/generic_confirmation_00163" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00164" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00165" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00166" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00167" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00168" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00169" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00170" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00171" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00172" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00173" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00174" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00175" android:duration="333"/>
+    <item android:drawable="@drawable/generic_confirmation_00185" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00186" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00187" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00188" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00189" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00190" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00191" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00192" android:duration="33"/>
+    <item android:drawable="@drawable/generic_confirmation_00193" android:duration="33"/>
+</animation-list>
 {% endhighlight %}
 
 Lo malo es, que cada *frame* se muestra durante 33ms, lo que hace que la animación se ejecute a 30fps. Mostrar un *frame* cada 16ms habría resultado en una librería dos veces más pesada. El *frame* `generic_confirmation_00175` (línea 15) se muestra durante 333ms, le sigue `generic_confirmation_00185`. Ésta es una gran optimización que evita que 9 *frames* (del 176 al 184 incluidos) se empaqueten en la aplicación. Desafortunadamente, `wearable-support.aar` contiene estos 9 *frames* que no son usados para 3 densidades.

@@ -46,7 +46,7 @@ CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos
   [PRIMARY KEY]
   [UNIQUE]
   [DEFAULT valor]
-  [check &lt;condición>]
+  [check <condición>]
   [REFERENCES Nombre_tabla_ref (colref)[ON DELETE CASCADE]],...
 
   [Restricciones de la tabla]
@@ -102,7 +102,7 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
     {% highlight sql %}CREATE TABLE nombre tabla
 (nombrecol1 tipocol1 
   [CONSTRAINT nombre_restricción]
-  [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check &lt;condición>]
+  [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check <condición>]
   [REFERENCES Nombre_tabla_ref (colref)[ON DELETE CASCADE]],...
   [Restricciones de la tabla]
 )

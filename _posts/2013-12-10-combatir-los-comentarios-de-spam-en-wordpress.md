@@ -57,18 +57,18 @@ if [ $# = 2 ]; then
         echo $esta
     fi
 else
-    echo "$0 &lt;ip> &lt;Comentario>"
+    echo "$0 <ip> <Comentario>"
 fi
 {% endhighlight %}
 
 Tras guardar el script con el nombre deseado, el uso es el siguiente:
 
-{% highlight bash %}./nombre_script.sh &lt;IP> &lt;mensaje en el log>
+{% highlight bash %}./nombre_script.sh <IP> <mensaje en el log>
 {% endhighlight %}
 
 Si la IP ya está bloqueada, no se añadirá otra entrada a Iptables, el segundo parámetro aparecerá en los logs del sistema, algo así:
 
-{% highlight bash %}Dec  8 18:40:36 nombreServidor kernel: &lt;MENSAJE EN EL LOG>=eth0 OUT= MAC=XXXXXXXXXXXXXX SRC=X.X.X.X DST=Y.Y.Y.Y LEN=X TOS=X PREC=X TTL=X ID=X DF PROTO=TCP SPT=XX DPT=XX WINDOW=XXX RES=XXX SYN URGP=X
+{% highlight bash %}Dec  8 18:40:36 nombreServidor kernel: <MENSAJE EN EL LOG>=eth0 OUT= MAC=XXXXXXXXXXXXXX SRC=X.X.X.X DST=Y.Y.Y.Y LEN=X TOS=X PREC=X TTL=X ID=X DF PROTO=TCP SPT=XX DPT=XX WINDOW=XXX RES=XXX SYN URGP=X
 {% endhighlight %}
 
 Para automatizar el bloqueo, recorreremos cada una de las líneas del archivo que hemos exportado de la base de datos con las direcciones IPs de los spammers:

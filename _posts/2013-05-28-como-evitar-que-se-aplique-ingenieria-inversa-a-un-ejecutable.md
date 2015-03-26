@@ -21,7 +21,7 @@ Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. 
 
 Para ello hay que hacer uso de la función `ptrace()`:
 
-{% highlight c %}#include &lt;sys/ptrace.h>
+{% highlight c %}#include <sys/ptrace.h>
 
        long ptrace(enum __ptrace_request request, pid_t pid,
                    void *addr, void *data);
@@ -40,8 +40,8 @@ Esta función será usada como constructor para que se ejecute antes de llamar a
  * evilgrin.c, tweaking ptrace() to induced whatever we been debugged
  */
 
-#include &lt;stdio.h>
-#include &lt;sys/ptrace.h>
+#include <stdio.h>
+#include <sys/ptrace.h>
 
 void ptrace_trap(void) __attribute__ ((constructor));
 
@@ -50,7 +50,7 @@ void ptrace_trap(void) {
     /*    
      * If ptrace fails here, means someone already ptrace()'ed us.
      */
-     if (ptrace(PTRACE_TRACEME, 0, 0, 0) &lt; 0) { 
+     if (ptrace(PTRACE_TRACEME, 0, 0, 0) < 0) { 
          printf("alguien está depurando");
          exit(0);
      }

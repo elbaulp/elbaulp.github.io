@@ -53,7 +53,7 @@ En general la estructura de toda sentencia en ABAP sigue el mismo esquema, empie
 
 Para declarar una variable simple utilizaremos la palabra clave **DATA** seguida del nombre de nuestra variable, su longitud, el tipo de variable y acabando con un punto.
 
-{% highlight abap %}DATA &lt;nombre_variable> type &lt;tipo>
+{% highlight abap %}DATA <nombre_variable> type <tipo>
 {% endhighlight %}
 
 En este caso nuestra variable contendrá la cadena de caracteres de nuestro ‘Hola mundo’ y por lo tanto será de tipo carácter (c).

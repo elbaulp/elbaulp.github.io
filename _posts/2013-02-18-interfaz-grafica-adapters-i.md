@@ -48,21 +48,21 @@ Para que quede más claro este concepto, vamos a verlo mediante un ejemplo:
 
 Primero creamos el layout, que va a contener un ListView con un Id ya definido por android, y un TextView también con un id ya definido.
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-&lt;listview android:layout_width="fill_parent"
+<listview android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@android:id/list" />
 
-&lt;textview android:layout_width="fill_parent"
+<textview android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@android:id/empty" />
 
-&lt;/linearlayout>
+</linearlayout>
 {% endhighlight %}
 
 Ahora, el código donde creamos el adaptador, y lo asociamos al ListView:
@@ -94,7 +94,7 @@ public class AdaptadoresActivity extends Activity {
 
         //Creación del adaptador, vamos a escoger el layout
         //simple_list_item_1, que los mostr
-        ListAdapter adaptador = new ArrayAdapter&lt;string>(
+        ListAdapter adaptador = new ArrayAdapter<string>(
               this, android.R.layout.simple_list_item_1, array);
 
         //Asociamos el adaptador a la vista.
@@ -102,7 +102,7 @@ public class AdaptadoresActivity extends Activity {
         lv.setAdapter(adaptador);
     }
 }
-&lt;/string>{% endhighlight %}
+</string>{% endhighlight %}
 
 Como vemos, al crear el arrayAdapter, tenemos que pasar tres parámetros, el contexto, un layout que se usará para dibujar cada item (en este caso ***simple\_list\_item_1***, que ya viene definido por android), más adelante veremos como crear los nuestros propios, y como tercer parámetro la colección de datos.
 
@@ -112,7 +112,7 @@ Aprovechando que en la anterior [entrada hablamos de los eventos][1], voy a expl
 lv.setOnItemClickListener(new OnItemClickListener() {
 
    @Override
-   public void onItemClick(AdapterView&lt; ?> arg0, View arg1, int arg2,
+   public void onItemClick(AdapterView< ?> arg0, View arg1, int arg2,
       long arg3) {
 
       ListAdapter la = (ListAdapter) arg0.getAdapter();
@@ -158,7 +158,7 @@ public class AdaptadoresActivity extends ListActivity {
 
         //Creación del adaptador, vamos a escoger el layout
         //simple_list_item_1, que los mostr
-        ListAdapter adaptador = new ArrayAdapter&lt;string>(
+        ListAdapter adaptador = new ArrayAdapter<string>(
               this, android.R.layout.simple_list_item_1, array);
 
         //Asociamos el adaptador a la vista.
@@ -177,7 +177,7 @@ public class AdaptadoresActivity extends ListActivity {
             .show();
     }
 }
-&lt;/string>{% endhighlight %}
+</string>{% endhighlight %}
 
 El resultado de este código es el siguiente, para una adaptador con datos:
 

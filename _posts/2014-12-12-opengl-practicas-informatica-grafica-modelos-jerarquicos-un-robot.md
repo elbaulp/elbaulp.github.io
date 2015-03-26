@@ -36,17 +36,17 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
  */
 
 #ifdef __APPLE__
-#include &lt;GLUT/glut.h>
+#include <GLUT/glut.h>
 #else
-//  #include &lt;windows.h>
-#include &lt;GL/glut.h>
+//  #include <windows.h>
+#include <GL/glut.h>
 #endif
 
-#include &lt;math.h>
-#include &lt;stdlib.h>
-#include &lt;iostream>
-#include &lt;unistd.h>
-#include &lt;time.h>
+#include <math.h>
+#include <stdlib.h>
+#include <iostream>
+#include <unistd.h>
+#include <time.h>
 
 using namespace std;
 
@@ -332,7 +332,7 @@ void Display(void) {
  * Generar direcciones aleatorias
  */
 void genDirec() {
-  for (int i = 0; i &lt; QUIT; i++) {
+  for (int i = 0; i < QUIT; i++) {
     int s = randRange(-2, 2);
     while (s == 0)
       s = randRange(-2, 2);
@@ -356,21 +356,21 @@ void Idle(int d) {
     theta[LLL] += 3 * direccion[LLL];
     theta[RUL] += 3 * direccion[RUL];
     theta[RLL] += 3 * direccion[RLL];
-    if (theta[LUA] > 60 || theta[LUA] &lt; -60)
+    if (theta[LUA] > 60 || theta[LUA] < -60)
       direccion[LUA] *= -1;
-    if (theta[LLA] > 30 || theta[LLA] &lt; -30)
+    if (theta[LLA] > 30 || theta[LLA] < -30)
       direccion[LLA] *= -1;
-    if (theta[RUA] > 60 || theta[RUA] &lt; -60)
+    if (theta[RUA] > 60 || theta[RUA] < -60)
       direccion[RUA] *= -1;
-    if (theta[RLA] > 30 || theta[RLA] &lt; -30)
+    if (theta[RLA] > 30 || theta[RLA] < -30)
       direccion[RLA] *= -1;
-    if (theta[LUL] > 90 || theta[LUL] &lt; -90)
+    if (theta[LUL] > 90 || theta[LUL] < -90)
       direccion[LUL] *= -1;
-    if (theta[LLL] > 45 || theta[LLL] &lt; -45)
+    if (theta[LLL] > 45 || theta[LLL] < -45)
       direccion[LLL] *= -1;
-    if (theta[RUL] > 90 || theta[RUL] &lt; -90)
+    if (theta[RUL] > 90 || theta[RUL] < -90)
       direccion[RUL] *= -1;
-    if (theta[RLL] > 45 || theta[RLL] &lt; -45)
+    if (theta[RLL] > 45 || theta[RLL] < -45)
       direccion[RLL] *= -1;
     glutPostRedisplay();
   }

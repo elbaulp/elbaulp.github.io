@@ -65,8 +65,8 @@ Ejemplos:
 
 {% highlight sql %}SELECT SYSDATE "Fecha actual" FROM DUAL;
 SELECT USER FROM DUAL;
-<span class="comentario">-- usando ROWNUM &lt; 10 limitamos el número de filas devueltas a 10</span>
-SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM &lt; 10;{% endhighlight %}
+<span class="comentario">-- usando ROWNUM < 10 limitamos el número de filas devueltas a 10</span>
+SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;{% endhighlight %}
 
 * * *
 

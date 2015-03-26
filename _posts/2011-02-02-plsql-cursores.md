@@ -307,8 +307,8 @@ Para actualizar los datos del cursor hay que ejecutar una sentencia UPDATE espec
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}UPDATE &lt;nombre_tabla> SET &lt;campo_1> = &lt;valor_1>[,&lt;campo_2> = &lt;valor_2>]
-WHERE CURRENT OF &lt;cursor_name>
+{% highlight sql %}UPDATE <nombre_tabla> SET <campo_1> = <valor_1>[,<campo_2> = <valor_2>]
+WHERE CURRENT OF <cursor_name>
 {% endhighlight %}
 
 <!--INFOLINKS_ON-->

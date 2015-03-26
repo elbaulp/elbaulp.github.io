@@ -39,7 +39,7 @@ Como podemos comprobar con este ejemplo, el código queda mucho más límpio usa
 
 Sin estilos:
 
-{% highlight xml %}&lt;textview android:layout_width="fill_parent"
+{% highlight xml %}<textview android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textColor="#00FF00"
     android:typeface="monospace"
@@ -48,7 +48,7 @@ Sin estilos:
 
 Con estilos:
 
-{% highlight xml %}&lt;textview style="@style/CodeFont"
+{% highlight xml %}<textview style="@style/CodeFont"
     android:text="@string/hello" />
 {% endhighlight %}
 
@@ -94,14 +94,14 @@ Como vimos al principio, para aplicar un estilo a una View concreta usamos ***st
 
 Para aplicar un tema a una actividad o aplicación usaremos:
 
-{% highlight xml %}&lt;application android:theme="@style/CustomTheme">
-&lt;/application>{% endhighlight %}
+{% highlight xml %}<application android:theme="@style/CustomTheme">
+</application>{% endhighlight %}
 
 Para aplicarlos sobre actividades, usamos:
 
-{% highlight xml %}&lt;activity android:theme="@android:style/Theme.Dialog">
-&lt;/activity>&lt;activity android:theme="@android:style/Theme.Translucent">
-&lt;/activity>{% endhighlight %}
+{% highlight xml %}<activity android:theme="@android:style/Theme.Dialog">
+</activity><activity android:theme="@android:style/Theme.Translucent">
+</activity>{% endhighlight %}
 
 En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente:
 

@@ -31,7 +31,7 @@ Dará el siguiente resultado:
 
 Es posible usar la siguiente sintaxis:
 
-{% highlight bash %}rev&lt;&lt;&lt;"Esta línea es una prueba"
+{% highlight bash %}rev<<<"Esta línea es una prueba"
 {% endhighlight %}
 
 Salida:
@@ -41,7 +41,7 @@ Salida:
 
 ### Ejemplo en Perl
 
-{% highlight bash %}perl -ne 'chomp;print scalar reverse . "n";'&lt;&lt;&lt;"elbauldelprogramador"
+{% highlight bash %}perl -ne 'chomp;print scalar reverse . "n";'<<<"elbauldelprogramador"
 {% endhighlight %}
 
 Ó
@@ -74,13 +74,13 @@ Para ejecutarlo escribimos lo siguiente en la terminal:
 Ejemplo en python:
 
 {% highlight bash %}echo foo | python -c 'import sys;print(sys.stdin.read().strip()[::-1])'
-python -c 'import sys;print(sys.stdin.read().strip()[::-1])' &lt;&lt;&lt; foo
+python -c 'import sys;print(sys.stdin.read().strip()[::-1])' <<< foo
 {% endhighlight %}
 
 Ejemplo en PHP:
 
 {% highlight bash %}echo foo | php -r 'print strrev(trim(fgets(STDIN)));'
-php -r 'print strrev(trim(fgets(STDIN)));' &lt;&lt;&lt; foo
+php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
 {% endhighlight %}
 
 * * *

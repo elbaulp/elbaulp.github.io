@@ -77,7 +77,7 @@ server: gws
 set-cookie: PREF=ID=0a30ac3a5dbcfef5:FF=0:TM=1414671486:LM=1414671486:S=v_Z2N_ZyX1n_uoLc; expires=Sat, 29-Oct-2016 12:18:06 GMT; path=/; domain=.google.es
 x-frame-options: SAMEORIGIN
 x-xss-protection: 1; mode=block
-&lt;!doctype html>
+<!doctype html>
 # Resto de la página web
 {% endhighlight %}
 

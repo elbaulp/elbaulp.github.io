@@ -96,39 +96,39 @@ Ahora vamos a ver algunas reglas de precedencia con unos ejemplos de recursos st
 El siguiente código muestra las variaciones del directorio values:
 
 {% highlight xml %}// values/string.xml
-&lt;resources xmlns="http://schemas.android.com/apk/res/android">
-   &lt;string name="teststring_all">teststring in root&lt;/string>
-   &lt;string name="t1_enport">t1 in root&lt;/string>
-   &lt;string name="t1_1_en_port">t1_1 in root&lt;/string>
-   &lt;string name="t2">t2 in root&lt;/string>
-   &lt;string name="testport_port">testport in root&lt;/string>
-&lt;/resources>
+<resources xmlns="http://schemas.android.com/apk/res/android">
+   <string name="teststring_all">teststring in root</string>
+   <string name="t1_enport">t1 in root</string>
+   <string name="t1_1_en_port">t1_1 in root</string>
+   <string name="t2">t2 in root</string>
+   <string name="testport_port">testport in root</string>
+</resources>
 
 // values-en/string_en.xml
-&lt;resources xmlns="http://schemas.android.com/apk/res/android">
- &lt;string name="teststring_all">teststring-en&lt;/string>
- &lt;string name="t1_enport">t1_en&lt;/string>
- &lt;string name="t1_1_en_port">t1_1_en&lt;/string>
-&lt;/resources>
+<resources xmlns="http://schemas.android.com/apk/res/android">
+ <string name="teststring_all">teststring-en</string>
+ <string name="t1_enport">t1_en</string>
+ <string name="t1_1_en_port">t1_1_en</string>
+</resources>
 
 // values-en-rUS/string_en_us.xml
-&lt;resources xmlns="http://schemas.android.com/apk/res/android">
-&lt;string name="teststring_all">test-en-us&lt;/string>
-&lt;/resources>
+<resources xmlns="http://schemas.android.com/apk/res/android">
+<string name="teststring_all">test-en-us</string>
+</resources>
 
 // values-port/string_port.xml
-&lt;resources xmlns="http://schemas.android.com/apk/res/android">
- &lt;string name="teststring_all">test-en-us-port&lt;/string>
- &lt;string name="testport_port">testport-port&lt;/string>
- &lt;string name="t1_enport">t1_port&lt;/string>
- &lt;string name="t1_1_en_port">t1_1_port&lt;/string>
-&lt;/resources>
+<resources xmlns="http://schemas.android.com/apk/res/android">
+ <string name="teststring_all">test-en-us-port</string>
+ <string name="testport_port">testport-port</string>
+ <string name="t1_enport">t1_port</string>
+ <string name="t1_1_en_port">t1_1_port</string>
+</resources>
 
 // values/string_en_port.xml
-&lt;resources xmlns="http://schemas.android.com/apk/res/android">
- &lt;string name="teststring_all">test-en-port&lt;/string>
- &lt;string name="t1_1_en_port">t1_1_en_port&lt;/string>
-&lt;/resources>
+<resources xmlns="http://schemas.android.com/apk/res/android">
+ <string name="teststring_all">test-en-port</string>
+ <string name="t1_1_en_port">t1_1_en_port</string>
+</resources>
 {% endhighlight %}
 
 El listado siguiente muestra el archivo R.java para estos recursos:

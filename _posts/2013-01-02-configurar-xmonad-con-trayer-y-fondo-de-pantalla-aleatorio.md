@@ -35,7 +35,7 @@ xrdb -merge .Xresources
 trayer --edge top --align right --SetDockType true --SetPartialStrut true 
  --expand true --width 10 --transparent true --tint 0x191970 --height 12 &
  
-# Set the background color&lt;
+# Set the background color<
  
 xsetroot -solid midnightblue
  
@@ -128,10 +128,10 @@ myManageHook = composeAll
      , className =? "Vlc" --> doShift "7"  
      ]  
 main = do
-    xmproc &lt;- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
+    xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
     xmonad $ defaultConfig
-        { manageHook = manageDocks &lt;+> myManageHook -- make sure to include myManageHook definition from above
-                        &lt;+> manageHook defaultConfig
+        { manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
+                        <+> manageHook defaultConfig
         , layoutHook = avoidStruts $ myLayout
         , logHook = dynamicLogWithPP xmobarPP  
             { ppOutput = hPutStrLn xmproc  

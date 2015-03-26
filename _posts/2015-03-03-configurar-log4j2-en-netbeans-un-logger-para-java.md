@@ -26,18 +26,18 @@ En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proy
 
 <!--more-->
 
-{% highlight xml %}&lt;dependencies>
-    &lt;dependency>
-        &lt;groupId>org.apache.logging.log4j&lt;/groupId>
-        &lt;artifactId>log4j-api&lt;/artifactId>
-        &lt;version>2.2&lt;/version>
-    &lt;/dependency>
-    &lt;dependency>
-        &lt;groupId>org.apache.logging.log4j&lt;/groupId>
-        &lt;artifactId>log4j-core&lt;/artifactId>
-        &lt;version>2.2&lt;/version>
-    &lt;/dependency>
-&lt;/dependencies>
+{% highlight xml %}<dependencies>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.2</version>
+    </dependency>
+</dependencies>
 {% endhighlight %}
 
 Hecho ésto, en la carpeta *dependencias*, hacemos click derecho y damos a que descargue las dependencias declaradas.
@@ -84,17 +84,17 @@ El fichero `log4j2.json` hay que colocarlo en la carpeta `resources` del proyect
 
 Debido a que el fichero de configuración está en `json`, hay que añadir las siguientes dependencias al proyecto:
 
-{% highlight xml %}&lt;dependency>
-    &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>
-    &lt;artifactId>jackson-core&lt;/artifactId>
-    &lt;version>2.2.2&lt;/version>
-&lt;/dependency>
+{% highlight xml %}<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.2.2</version>
+</dependency>
 
-&lt;dependency>
-    &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>
-    &lt;artifactId>jackson-databind&lt;/artifactId>
-    &lt;version>2.2.2&lt;/version>
-&lt;/dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.2.2</version>
+</dependency>
 {% endhighlight %}
 
 ## Ejemplo de uso

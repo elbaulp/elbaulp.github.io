@@ -133,9 +133,9 @@ Si leemos la documentación del método <a href="http://developer.android.com/re
 
 En nuestro ejemplo, así es como se a configurado el projection map:
 
-{% highlight java %}private static HashMap&lt;string , String> sSitesProjectionMap;
+{% highlight java %}private static HashMap<string , String> sSitesProjectionMap;
 static{
-   sSitesProjectionMap = new HashMap&lt;/string>&lt;string , String>();
+   sSitesProjectionMap = new HashMap</string><string , String>();
    sSitesProjectionMap.put(favSitesTableMEtaData._ID,
                            favSitesTableMEtaData._ID);
 
@@ -151,7 +151,7 @@ static{
    sSitesProjectionMap.put(favSitesTableMEtaData.FOTO,
                            favSitesTableMEtaData.FOTO);
 }
-&lt;/string>{% endhighlight %}
+</string>{% endhighlight %}
 
 El queryBuilder usa la variable *sSitesProjectionMap* así:
 

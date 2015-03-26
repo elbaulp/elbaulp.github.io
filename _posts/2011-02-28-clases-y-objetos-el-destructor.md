@@ -55,7 +55,7 @@ también fuera de la clase.
 {% highlight bash %}class Punto{
   public:
     <span class="comentario">//...</span>
-    ~Punto() { cout&lt; &lt;"nobjeto Punto destruido"; }
+    ~Punto() { cout< <"nobjeto Punto destruido"; }
 };
 {% endhighlight %}
 

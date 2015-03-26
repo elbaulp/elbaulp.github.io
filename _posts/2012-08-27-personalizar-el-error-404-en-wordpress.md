@@ -77,7 +77,7 @@ Esta porción de código hay que pegarla en el archivo 404.php de la plantilla e
        echo '
   
   <li>
-    &lt;a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'&lt;/a> 
+    <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> 
   </li> ';
            }
         ?>

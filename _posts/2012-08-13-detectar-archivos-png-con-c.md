@@ -44,10 +44,10 @@ Veamos primero el .h:
   *
   * @see LeerTipoImagen
   */
-enum TipoImagen {IMG_DESCONOCIDO, ///&lt; Tipo de imagen desconocido
-                 IMG_PGM,         ///&lt; Imagen tipo PGM
-                 IMG_PPM,         ///&lt; Imagen tipo PPM
-                 IMG_PNG         ///&lt; Imagen PNG
+enum TipoImagen {IMG_DESCONOCIDO, ///< Tipo de imagen desconocido
+                 IMG_PGM,         ///< Imagen tipo PGM
+                 IMG_PPM,         ///< Imagen tipo PPM
+                 IMG_PNG         ///< Imagen PNG
                };
 
 
@@ -143,10 +143,10 @@ Y el cpp:
   *
   */
 
-#include &lt;fstream>
-#include &lt;string>
-#include &lt;iostream>
-#include &lt;netinet/in.h>
+#include <fstream>
+#include <string>
+#include <iostream>
+#include <netinet/in.h>
 
 #include "./imagenESP.h"
 
@@ -169,13 +169,13 @@ TipoImagen LeerTipo(ifstream& f)
     unsigned char cas[8];
     unsigned char check[8] = {0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A};
     bool fallo = false;
-    f.read(reinterpret_cast&lt;char*>(cas), 8);
-    for (int i = 0; i &lt; 8 && !fallo; i++)
+    f.read(reinterpret_cast<char*>(cas), 8);
+    for (int i = 0; i < 8 && !fallo; i++)
         if (check[i] != cas[i])
             fallo = true;
             //cout.setf ( ios::hex, ios::basefield );
             //cout.setf ( ios::showbase ); 
-            //cout &lt;&lt; (int)check[i] &lt;&lt; " "; 
+            //cout << (int)check[i] << " "; 
             
     if (!fallo)
         return IMG_PNG;
@@ -215,8 +215,8 @@ bool LeerCabecera (ifstream& f, int& filas, int& columnas, bool png = false)
  if (png){
        f.seekg(16L, ios::beg);
 
-     f.read(reinterpret_cast&lt;char*>(&columnas), 4);
-      f.read(reinterpret_cast&lt;char*>(&filas), 4);
+     f.read(reinterpret_cast<char*>(&columnas), 4);
+      f.read(reinterpret_cast<char*>(&filas), 4);
 
      columnas = ntohl(columnas);
      filas = ntohl(filas);
@@ -230,7 +230,7 @@ bool LeerCabecera (ifstream& f, int& filas, int& columnas, bool png = false)
 
           f >> columnas >> filas >> maxvalor;
 
-         if (/*str &&*/ f && filas>0 && filas &lt;5000 && columnas >0 && columnas&lt;5000) {
+         if (/*str &&*/ f && filas>0 && filas <5000 && columnas >0 && columnas<5000) {
                f.get(); // Saltamos separador
               return true;
             }
@@ -268,13 +268,13 @@ bool LeerImagenPNG (const char nombre[], int& filas, int& columnas){
  if (LeerTipo(f) == IMG_PNG)
      if (LeerCabecera(f, filas, columnas, true))
          exito = true;
-           //if (f.read(reinterpret_cast&lt;char *>(buffer), filas * columnas))
+           //if (f.read(reinterpret_cast<char *>(buffer), filas * columnas))
 
    return exito;
 }
 
 /* Fin Fichero: imagenES.cpp */
-       //if (f.read(reinterpret_cast&lt;char *>(buffer), filas * columnas))
+       //if (f.read(reinterpret_cast<char *>(buffer), filas * columnas))
 
    return exito;
 }
@@ -302,7 +302,7 @@ En lugar de usar la función *TipoImagen LeerTipoImagen(const char nombre[], int
  */
 #include "./imagenESP.h"
 
-#include &lt;iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -311,17 +311,17 @@ int main(int argc, char *argv[]) {
     int filas;
     int columnas;
 
-    cout &lt;&lt; "Probando con LeerTipoImagen: ";
+    cout << "Probando con LeerTipoImagen: ";
    TipoImagen tipo = LeerTipoImagen(argv[1], filas, columnas);
- cout &lt;&lt; "INFO: La imagen tiene " &lt;&lt; columnas &lt;&lt; " pixels de ancho y " &lt;&lt; filas
-       &lt;&lt; " pixels de alto.n";
-    cout &lt;&lt; "Tipo imagen: " &lt;&lt; tipo &lt;&lt; endl;
+ cout << "INFO: La imagen tiene " << columnas << " pixels de ancho y " << filas
+       << " pixels de alto.n";
+    cout << "Tipo imagen: " << tipo << endl;
     
-    cout &lt;&lt; "Probando con LeerImagenPNG: ";
+    cout << "Probando con LeerImagenPNG: ";
  LeerImagenPNG(argv[1], filas, columnas);
-    cout &lt;&lt; "INFO: La imagen tiene " &lt;&lt; columnas &lt;&lt; " pixels de ancho y " &lt;&lt; filas
-       &lt;&lt; " pixels de alto.n";
-    cout &lt;&lt; "Tipo imagen: " &lt;&lt; tipo &lt;&lt; endl;
+    cout << "INFO: La imagen tiene " << columnas << " pixels de ancho y " << filas
+       << " pixels de alto.n";
+    cout << "Tipo imagen: " << tipo << endl;
     return 0;
 }
 {% endhighlight %}

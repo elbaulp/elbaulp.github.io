@@ -25,7 +25,7 @@ Al principio, obtuve el *TextView* que representa el summary, pero cambiarle el 
 
 
 <!-- Layout for a visually child-like Preference in a PreferenceActivity. -->
-&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:baselineAligned="false"
@@ -34,7 +34,7 @@ Al principio, obtuve el *TextView* que representa el summary, pero cambiarle el 
     android:paddingEnd="?android:attr/scrollbarSize"
     android:paddingStart="16dip" >
 
-    &lt;RelativeLayout
+    <RelativeLayout
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dip"
@@ -42,7 +42,7 @@ Al principio, obtuve el *TextView* que representa el summary, pero cambiarle el 
         android:layout_marginTop="6dip"
         android:layout_weight="1" >
 
-        &lt;TextView
+        <TextView
             android:id="@+android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@ Al principio, obtuve el *TextView* que representa el summary, pero cambiarle el 
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        &lt;TextView
+        <TextView
             android:id="@+android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,8 +60,8 @@ Al principio, obtuve el *TextView* que representa el summary, pero cambiarle el 
             android:maxLines="4"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="?android:attr/textColorSecondary" />
-    &lt;/RelativeLayout>
-&lt;/LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
 {% endhighlight %}
 
 ### Layout para mostrar el error
@@ -81,16 +81,16 @@ La definición del c[olor se declara][3] en un archivo dentro de la carpeta *val
 ***./res/values/colors.xml***
 
 {% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
-&lt;resources>
-    &lt;color name="red">#ff0000&lt;/color>
-&lt;/resources>
+<resources>
+    <color name="red">#ff0000</color>
+</resources>
 {% endhighlight %}
 
 ### Cambiar el color en tiempo de ejecución
 
 Ahora que tenemos el diseño listo, veremos cómo cambiarlo cuando ocurra cierta condición. En el caso que nos ocupa necesitaremos resaltar el summary en color rojo cuando el usuario introduzca una contraseña que no cumple con los requisitos establecidos por la aplicación, el código quedará algo así:
 
-{% highlight java %}if (newValue.toString().length() &lt;= 8) {
+{% highlight java %}if (newValue.toString().length() <= 8) {
     mDialogoPersonalizado.setLayoutResource(R.layout.preference_child_summary_error);
     mDialogoPersonalizado.setSummary("Mensaje de error");
 } else {

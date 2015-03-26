@@ -32,17 +32,17 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 0)
   keyWords="continue float new signed try auto default for operator sizeof typedef break delete friend private static union case do goto protected struct unsigned catch double if public switch virtual char else inline register template void enum int return this volatile const extern long short throw while bool cout cin using namespace"
 
-  <span class="bash">sed</span> "s/^#include/<span class="prp">#include</span>/" &lt; "$rutaCodigo" > temp # coloreo el include
-  <span class="bash">sed</span> "s/^#define/<span class="prp">#define</span>/" &lt; temp > "$rutaCodigo" # coloreo el define
+  <span class="bash">sed</span> "s/^#include/<span class="prp">#include</span>/" < "$rutaCodigo" > temp # coloreo el include
+  <span class="bash">sed</span> "s/^#define/<span class="prp">#define</span>/" < temp > "$rutaCodigo" # coloreo el define
 
   <span class="bash">for</span> word <span class="bash">in</span> $keyWords
   <span class="bash">do</span>
     <span class="comentario">#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span</span>
-    <span class="bash">sed</span> "s/b$wordb/<span class="cpp">$word</span>/" &lt; "$rutaCodigo" > temp
+    <span class="bash">sed</span> "s/b$wordb/<span class="cpp">$word</span>/" < "$rutaCodigo" > temp
     <span class="bash">cp</span> temp $rutaCodigo
   <span class="bash">done</span>
 
-  <span class="bash">sed</span> "s/^class /<span class="cpp">class</span>/g" &lt; "$rutaCodigo" > temp
+  <span class="bash">sed</span> "s/^class /<span class="cpp">class</span>/g" < "$rutaCodigo" > temp
   <span class="bash">rm</span> temp
   ;;            
 *)

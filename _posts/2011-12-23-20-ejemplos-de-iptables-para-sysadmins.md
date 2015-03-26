@@ -269,7 +269,7 @@ cat /root/my.active.firewall.rules
 
 Para restaurar reglas desde un archivo llamado /root/my.active.firewall.rules:
 
-{% highlight bash %}iptables-restore &lt; /root/my.active.firewall.rules
+{% highlight bash %}iptables-restore < /root/my.active.firewall.rules
 {% endhighlight %}
 
 Bajo CentOS / RHEL / Fedora Linux:

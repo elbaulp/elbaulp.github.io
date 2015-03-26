@@ -37,7 +37,7 @@ Descarga el plugin <a href="http://www.vim.org/scripts/download_script.php?src_i
 Es recomendable establecer algunas variables en el fichero de configuracón de Vim (*.vimrc*). El mio está así:
 
 {% highlight bash %}$ cat ~/.vimrc
-:let g:GPGDefaultRecipients=["&lt;tu-correo"]
+:let g:GPGDefaultRecipients=["<tu-correo"]
 :let g:GPGPreferSign=1
 {% endhighlight %}
 
@@ -83,7 +83,7 @@ Os82c2XLJ1jWjLGG0GbIPOUz
 
 Es recomendable firmar todos los archivos que cifremos con **gpg** para asegurar la vericidad del firmante, por ejemplo podemos pasarle las siguientes opciones a **gpg**:
 
-{% highlight bash %}gpg --encrypt -r &lt;ID_PUBLICA> -u &lt;ID_PRIVADA> --output &lt;NOMBRE_ARCHIVO.signed.gpg> --sign &lt;ARCHIVO_ORIGINAL>
+{% highlight bash %}gpg --encrypt -r <ID_PUBLICA> -u <ID_PRIVADA> --output <NOMBRE_ARCHIVO.signed.gpg> --sign <ARCHIVO_ORIGINAL>
 {% endhighlight %}
 
 #### Referencias

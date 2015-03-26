@@ -25,11 +25,11 @@ Hoy vamos a hablar de cómo usar la librería *Jackson* para mapear fácilmente 
 
 El primer paso es declarar la dependencia en el proyecto, en éste caso usando *maven*, en el fichero `pom.xml` añadimos:
 
-{% highlight xml %}&lt;dependency>
-    &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>
-    &lt;artifactId>jackson-databind&lt;/artifactId>
-    &lt;version>2.4.4&lt;/version>
-  &lt;/dependency>
+{% highlight xml %}<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.4.4</version>
+  </dependency>
 {% endhighlight %}
 
 Hecho esto, ya es posible usar la librería en el proyecto.
@@ -209,24 +209,24 @@ Los arrays en json:
 
 Con estos datos, queremos des-serializar el `json` en un `ArrayList` del tipo de clase que sea, en éste caso `ArrayList<Personas` y `ArrayList<Producto>`. La forma **NO** genérica de hacerlo sería:
 
-{% highlight java %}ArrayList&lt;Persona> personas = JSON_MAPPER.readValue(new File("personas.json"),
+{% highlight java %}ArrayList<Persona> personas = JSON_MAPPER.readValue(new File("personas.json"),
                     JSON_MAPPER.getTypeFactory().constructCollectionType(ArrayList.class, Persona.class));
 
 // Para productos
 
-ArrayList&lt;Producto> productos = JSON_MAPPER.readValue(new File("productos.json"),
+ArrayList<Producto> productos = JSON_MAPPER.readValue(new File("productos.json"),
                     JSON_MAPPER.getTypeFactory().constructCollectionType(ArrayList.class, Producto.class));
 {% endhighlight %}
 
 Ahora bien, si tenemos más modelos, a parte de `Personas` y `Productos`, y normalmente, los `json` se obtienen mediante la *API*, vamos a repetir un montón de código. Podríamos crear un método genérico para mapear `json` a objetos java, como el siguiente:
 
-{% highlight java %}public static &lt;T> List&lt;T> getList(String url, Class&lt;T> clazz) {
+{% highlight java %}public static <T> List<T> getList(String url, Class<T> clazz) {
 
    HttpClient client = HttpClientBuilder.create().build();
    HttpGet getRequest = new HttpGet(url);
    getRequest.setHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON);
 
-   List&lt;T> data = null;
+   List<T> data = null;
 
    HttpResponse response;
    try {
@@ -243,9 +243,9 @@ Ahora bien, si tenemos más modelos, a parte de `Personas` y `Productos`, y norm
 Éste método se usaría así:
 
 {% highlight java %}// Para personas
-ArrayList&lt;Persona> personas = getList(URL DE LA API PARA OBTENER PERSONAS, Persona.class);
+ArrayList<Persona> personas = getList(URL DE LA API PARA OBTENER PERSONAS, Persona.class);
 // Para productos
-ArrayList&lt;Producto> personas = getList(URL DE LA API PARA OBTENER PRODUCTOS, Producto.class);
+ArrayList<Producto> personas = getList(URL DE LA API PARA OBTENER PRODUCTOS, Producto.class);
 {% endhighlight %}
 
 ## Conclusión

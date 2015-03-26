@@ -58,10 +58,10 @@ Si no se especifica ningún paquete en @\[package:\] (de ahí que en la represen
 
 Si especificamos android:type/name, el id referenciado será resuelto usando el paquete android y específicamente a través del archivo android.R.java. Podemos usar cualquier nombre de paquete java en el lugar de @[package:] para localizar el archivo R.java correcto y resolver la referencia al recurso en cuestión. Ahora que conocemos la sintaxis, vamos a analizar unos ejemplos. Nótese que la parte izquierda del ID android:id no es parte de la sintaxis. “android:id” simplemente indica que vamos a crear un id para un control como lo es el TextView. 
 
-{% highlight xml %}&lt;textview android:id=”text”> 
+{% highlight xml %}<textview android:id=”text”> 
 <!-- Error de compilación, como id no tomará cadenas de texto sin formato. -->
 
-&lt;/textview>&lt;textview android:id=”@text”> 
+</textview><textview android:id=”@text”> 
 
 
 <!--  Sintaxis incorrecta.  No disponde de tipo y nombre-->
@@ -72,7 +72,7 @@ Si especificamos android:type/name, el id referenciado será resuelto usando el 
 
 <!--  obtendremos el siguiente error: “No resource type specified”-->
 
-&lt;/textview>&lt;textview android:id=”@id/text”>
+</textview><textview android:id=”@id/text”>
 
 
 <!--  Error: No hay ningún recurso que coincida con el id “text”-->
@@ -80,7 +80,7 @@ Si especificamos android:type/name, el id referenciado será resuelto usando el 
 
 <!--  a no ser que lo hayamos definido nosotros mismos con anterioridad.-->
 
-&lt;/textview>&lt;textview android:id=”@android:id/text”>
+</textview><textview android:id=”@android:id/text”>
 
 
 <!--  Error: el recurso no es público-->
@@ -91,11 +91,11 @@ Si especificamos android:type/name, el id referenciado será resuelto usando el 
 
 <!--  Por supuesto esto será válido si el archivo android R.java definió un id con este nombre.-->
 
-&lt;/textview>&lt;textview android:id=”@+id/text”>
+</textview><textview android:id=”@+id/text”>
 
 
 <!-- Correcto: crea un id llamado text  en el paquete R.java local.-->
-&lt;/textview>{% endhighlight %}
+</textview>{% endhighlight %}
 
 En la sintaxis “@+id/text”, el signo + tiene un significado especial. Le dice a Android que el ID puede no existir aún y, que en ese caso, cree uno nuevo y lo llame text.
 

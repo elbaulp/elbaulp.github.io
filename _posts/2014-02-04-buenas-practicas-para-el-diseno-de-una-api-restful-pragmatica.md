@@ -441,7 +441,7 @@ Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">Supp
     </p>
     
     {% highlight bash %}$ curl https://api.github.com/users/veesahni > with-whitespace.txt
-$ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' &lt; with-whitespace.txt > without-whitespace.txt
+$ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' < with-whitespace.txt > without-whitespace.txt
 $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
 $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
     
@@ -535,7 +535,7 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Una API que usa el encabezado Link puede devolver un set de hipervínculos listos para que el consumidor de la API no tenga que construir los hipervínculos por su propia cuenta. Esto es especialmente importante cuando la paginación está<a href="https://developers.facebook.com/docs/reference/api/pagination/" target="_blank"> basada en el cursor</a>. Aquí hay un ejemplo de un encabezado Link utilizado correctamente, obtenido de la documentación de <a href="http://developer.github.com/v3/#pagination" target="_blank">GitHub</a>:
     </p>
     
-    {% highlight bash %}Link: &lt;https://api.github.com/user/repos?page=3&per_page=100&gt;; rel="next", &lt;https://api.github.com/user/repos?page=50&per_page=100&gt;; rel="last"{% endhighlight %}
+    {% highlight bash %}Link: <https://api.github.com/user/repos?page=3&per_page=100&gt;; rel="next", <https://api.github.com/user/repos?page=50&per_page=100&gt;; rel="last"{% endhighlight %}
     
     <p>
       Pero esto no es una solución completa para muchas APIs que quieren devolver información adicional de paginación, por ejemplo el conteo del total de resultados disponibles. Una API que requiere enviar un contador puede usar un encabezado HTTP personalizado como <em>X-Total-Count</em>.<br /> <a name="16"></a>

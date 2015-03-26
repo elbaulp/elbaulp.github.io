@@ -27,8 +27,8 @@ En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. La
 existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  
 Su sintaxis es :
 
-{% highlight sql %}[ FROM {&lt;table_source&gt;} [,...n] ]
-&lt;table_source&gt; ::= table_name | view_name | derived_table | &lt;joined_table&gt;
+{% highlight sql %}[ FROM {<table_source&gt;} [,...n] ]
+<table_source&gt; ::= table_name | view_name | derived_table | <joined_table&gt;
 {% endhighlight %}
 
   

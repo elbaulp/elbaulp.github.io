@@ -82,7 +82,7 @@ randomfile2=${files[$N]}
 
 
 
-cat &lt;&lt;&lt;"[:0.0]
+cat <<<"[:0.0]
 file=/usr/share/backgrounds/transparent--i.e-solid-colour.png
 mode=1
 bgcolor=#252627

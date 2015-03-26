@@ -130,10 +130,10 @@ tags:
         Un <a href="/guide/topics/resources/resources-i18n.html">Gestor de Recursos<br /> </a>, que facilita el acceso a recursos que no son código, como cadenas de<br /> traducción, gráficos y archivos de diseño(layout)
       </li>
       <li>
-        Un <code>&lt;a href="/reference/android/app/NotificationManager.html">Gestor de notificaciones&lt;/a></code> que<br /> permite a las aplicaciones mostrar alertas personalizadas en la barra de estado
+        Un <code><a href="/reference/android/app/NotificationManager.html">Gestor de notificaciones</a></code> que<br /> permite a las aplicaciones mostrar alertas personalizadas en la barra de estado
       </li>
       <li>
-        Un <code>&lt;a href="/reference/android/app/Activity.html">Gestor de antividades&lt;/a></code> que gestiona<br /> el ciclo de vida de las aplicaciones y proporciona una navegación backstack común
+        Un <code><a href="/reference/android/app/Activity.html">Gestor de antividades</a></code> que gestiona<br /> el ciclo de vida de las aplicaciones y proporciona una navegación backstack común
       </li>
     </ul>
     

@@ -53,11 +53,11 @@ class Persona
   end
   
   def esMenorQue otro
-    return fechaNacimiento &lt;=> otro
+    return fechaNacimiento <=> otro
   end
   
-  def &lt;=>(otraPersona)
-    if self.fechaNacimiento &lt; otraPersona.fechaNacimiento
+  def <=>(otraPersona)
+    if self.fechaNacimiento < otraPersona.fechaNacimiento
       -1
     elsif self.fechaNacimiento > otraPersona.fechaNacimiento
       1
@@ -110,7 +110,7 @@ Por último, veamos la clase Alumno, la cual hereda de Persona:
 {% highlight ruby %}require './Persona.rb'
 require './Asignatura'
 
-class Alumno &lt; Persona
+class Alumno < Persona
 
   #Variable estática
   @@NUM_MAX_CRED = 60
@@ -148,7 +148,7 @@ class Alumno &lt; Persona
   end
 
   def matricularAsignatura(asig)
-    if not estaMatriculado(asig.codigo) and (getNumCreditos + asig.creditosECTS) &lt;= Alumno.NUM_MAX_CRED
+    if not estaMatriculado(asig.codigo) and (getNumCreditos + asig.creditosECTS) <= Alumno.NUM_MAX_CRED
       asignaturas[asig.codigo] = asig
     else
       raise 'El alumno ya esta matriculado en esta asignatura'

@@ -41,7 +41,7 @@ task.execute(rq);
 
 En cada clase que se use la librería es necesario implementar la interfaz `AsyncTaskCompleteListener<RestResponse>`, Por ejemplo:
 
-{% highlight java %}public class MainActivity extends Activity implements AsyncTaskCompleteListener&lt;RestResponse>
+{% highlight java %}public class MainActivity extends Activity implements AsyncTaskCompleteListener<RestResponse>
 {% endhighlight %}
 
 Además, añadir el callback `onTaskComplete()`, que será llamado una vez obtengamos la respuesta del Web Service, la cabecera del método es la siguiente:
@@ -60,7 +60,7 @@ Así pues, para realizar la petición en este caso el código sería el siguient
 apiWordpress.setMethod(RestRequest.GET_METHOD);
 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
                 
-HashMap&lt;String, Object> args = new HashMap&lt;String, Object>() {
+HashMap<String, Object> args = new HashMap<String, Object>() {
    {
       put("pretty", "true");
       put("default_string", "Test App WS www.elbauldelprogramador.org");
@@ -97,7 +97,7 @@ import thecocktaillab.restJsonLib.RestServiceTask;
 
 import java.util.HashMap;
 
-public class MainActivity extends Activity implements AsyncTaskCompleteListener&lt;RestResponse> {
+public class MainActivity extends Activity implements AsyncTaskCompleteListener<RestResponse> {
 
     private TextView ciudadD;
     private TextView codRegD;
@@ -153,7 +153,7 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener&
                 apiWordpress.setMethod(RestRequest.GET_METHOD);
                 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
                 
-                HashMap&lt;String, Object> args = new HashMap&lt;String, Object>() {
+                HashMap<String, Object> args = new HashMap<String, Object>() {
                     {
                         put("pretty", "true");
                         put("default_string", "Test App WS www.elbauldelprogramador.org");

@@ -49,22 +49,22 @@ Se dispone de distintos tipo de menús:
 
 Lo más simple y sencillo es definir los menús en XML, colocado en ./res/menu, para este ejemplo he definido el siguiente menu, que contiene dos elementos, un About y un Quit:
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
 
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  &lt;item android:id="@+id/about"
+  <item android:id="@+id/about"
           android:icon="@drawable/about"
           android:title="About App">
 
 
   <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    &lt;item android:id="@+id/submenu"
+    <item android:id="@+id/submenu"
                     android:title="Submenú de &quot;About App&quot;"/>
 
   </menu>
-      &lt;/item>
-      &lt;item android:id="@+id/quit"
+      </item>
+      <item android:id="@+id/quit"
           android:title="Quit App"
           android:icon="@drawable/quit"/>
 

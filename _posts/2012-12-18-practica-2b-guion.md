@@ -43,7 +43,7 @@ Empecemos con *popCount*:
 
 #if ! TEST
         #define NBITS 20
-        #define SIZE (1&lt;&lt;NBITS) //Tamaño suficiente para tiempo apreciable
+        #define SIZE (1<<NBITS) //Tamaño suficiente para tiempo apreciable
         unsigned lista[SIZE];
         #define RESULT 10485760
 #else
@@ -52,18 +52,18 @@ Empecemos con *popCount*:
         #define RESULT 4
 #endif
 
-#include &lt;stdio.h>      // para printf()
-#include &lt;stdlib.h>     // para exit()
-#include &lt;sys/time.h>   // para gettimeofday(), struct timeval
+#include <stdio.h>      // para printf()
+#include <stdlib.h>     // para exit()
+#include <sys/time.h>   // para gettimeofday(), struct timeval
 #define WSIZE 8*sizeof(int)
 int resultado = 0;
 
 int popcount1(unsigned* array, int len) {
         int i, k;
         int result = 0;
-        for (k = 0; k &lt; len; k++)
-                for (i = 0; i &lt; WSIZE; i++) {
-                        unsigned mask = 1 &lt;&lt; i;
+        for (k = 0; k < len; k++)
+                for (i = 0; i < WSIZE; i++) {
+                        unsigned mask = 1 << i;
                         result += (array[k] & mask) != 0;
                 }
         return result;
@@ -73,7 +73,7 @@ int popcount2(unsigned* array, int len) {
         int result = 0;
         int i;
         unsigned x;
-        for (i = 0; i &lt; len; i++) {
+        for (i = 0; i < len; i++) {
                 x = array[i];
                 while (x) {
                         result += x & 0x1;
@@ -87,7 +87,7 @@ int popcount3(unsigned* array, int len) {
         int result = 0;
         int i;
         unsigned x;
-        for (i = 0; i &lt; len; i++) {
+        for (i = 0; i < len; i++) {
                 x = array[i];
                 asm("n"
                                 "ini3:                             nt"
@@ -109,10 +109,10 @@ int popcount4(unsigned* array, int len) {
 
         int i, k;
         int result = 0;
-        for (i = 0; i &lt; len; i++) {
+        for (i = 0; i < len; i++) {
                 int val = 0;
                 unsigned x = array[i];
-                for (k = 0; k &lt; 8; k++) {
+                for (k = 0; k < 8; k++) {
                         val += x & 0x01010101; //00000001 00000001 00000001 00000001
                         x >>= 1;
                 }
@@ -135,7 +135,7 @@ int popcount5(unsigned* array, int len) {
 
         if (len & 0x3)
                 printf("leyendo 128b pero len no múltiplo de 4?n");
-        for (i = 0; i &lt; len; i += 4) {
+        for (i = 0; i < len; i += 4) {
                 asm("movdqu        %[x], %%xmm0 nt"
                                 "movdqa  %%xmm0, %%xmm1 nt" // dos copias de x
                                 "movdqu    %[m], %%xmm6 nt"// máscara
@@ -170,7 +170,7 @@ int popcount6(unsigned* array, int len) {
         int i;
         unsigned x;
         int val, result = 0;
-        for (i = 0; i &lt; len; i++) {
+        for (i = 0; i < len; i++) {
                 x = array[i];
                 asm("popcnt %[x], %[val]        nt"
                                 : [val]"=r"(val)
@@ -187,7 +187,7 @@ int popcount7(unsigned* array, int len) {
         int val, result = 0;
         if (len & 0x1)
                 printf("Leer 64b y len impar?n");
-        for (i = 0; i &lt; len; i += 2) {
+        for (i = 0; i < len; i += 2) {
                 x1 = array[i];
                 x2 = array[i + 1];
                 asm("popcnt %[x1], %[val]       nt"
@@ -223,7 +223,7 @@ void crono(int (*func)(), char* msg) {
 int main() {
 #if ! TEST
         int i; // inicializar array
-        for (i = 0; i &lt; SIZE; i++) // se queda en cache
+        for (i = 0; i < SIZE; i++) // se queda en cache
                 lista[i] = i;
 #endif
         crono(popcount1, "popcount1 (    en lenguaje C for  )");
@@ -254,7 +254,7 @@ resultado = 10485760    popcount7 (        SSSE4.2 64b    ):      825 us
 
 Como se aprecia, las versiones 5 y 7 parecen ser las más rápidas, y la primera notablemente más lenta. Veamos las razones de estas mejoras (Extraidas del guión de prática.)
 
-**En la versión 3** (popcount3), sustituimos el bucle while de la versión dos por unas pocas líneas ensamblador que incluyen la instrucción ADC (suma con acarreo). La instrucción SHR desplaza bits hacia la derecha, si el último bit desplazado fue un 1, éste se almacena en el flag de acarreo (CF), con lo cual podemos sumarlo y ahorramos aplicar la máscara. En principio, debería suponer alguna mejora.
+**En la versión 3** (popcount3), sustituimos el bucle while de la versión dos por unas pocas líneas ensamblador que incluyen la instrucción ADC (suma con acarreo). La instrucción SHR desplaza bits hacia la derecha, si el último bit desplazado fue un 1, éste se almacena en el flag de acarreo (CF), con lo cual podemos sumarlo y ahorramos aplicar la m��scara. En principio, debería suponer alguna mejora.
 
 **La cuarta versión** (popcount4) aplica sucesivamente la máscara a cada elemento, para acumular los bits de cada byte en una variable `val` y suma en árbol los 4 Bytes.
 
@@ -266,7 +266,7 @@ Por último, las versiones **seis y siete** hacen uso de la instrucción `popcnt
 
 A fin de conseguir unos resultados estadísticamente aceptables, el programa se ejecuta 11 veces como se menciona arriba, para los tres niveles de optimización que ofrece el compilador. Las opciones usadas por gcc han sido las siguientes:
 
-{% highlight bash %}gcc -O&lt;n> -Wall -m32 -fno-omit-frame-pointer pesoHamming_C.c -o pesoHamming_C{% endhighlight %}
+{% highlight bash %}gcc -O<n> -Wall -m32 -fno-omit-frame-pointer pesoHamming_C.c -o pesoHamming_C{% endhighlight %}
 
 Donde ***<n>*** es el nivel de optimización.
 
@@ -301,7 +301,7 @@ El caso del cálculo de la paridad es similar, en esta caso simplemente proporci
 
 #if ! TEST
 #define NBITS 20
-#define SIZE (1&lt;&lt;NBITS) /*Tamaño suficiente para tiempo apreciable*/
+#define SIZE (1<<NBITS) /*Tamaño suficiente para tiempo apreciable*/
 unsigned lista[SIZE];
 #define RESULT 10485760
 #else
@@ -311,11 +311,11 @@ unsigned lista[SIZE];
 //    0x00356700, 0x8900ac00, 0x00bd00ef};
 #endif
 
-#include &lt;stdio.h>      // para printf()
-#include &lt;stdlib.h>     // para exit()
-#include &lt;sys/time.h>   // para gettimeofday(), struct timeval
+#include <stdio.h>      // para printf()
+#include <stdlib.h>     // para exit()
+#include <sys/time.h>   // para gettimeofday(), struct timeval
 #define WSIZE 8*sizeof(int)
-//#define SIZE (1&lt;&lt;20)  // tamaño suficiente para tiempo apreciable
+//#define SIZE (1<<20)  // tamaño suficiente para tiempo apreciable
 //unsigned lista[SIZE]; // = { 0x01010101 }; // 0x00000003, 0x00000003};
 int resultado = 0;
 
@@ -325,10 +325,10 @@ int paridad1(unsigned* array, int len) {
   unsigned entero;
   int result = 0;
 
- for (i = 0; i &lt; len; i++) {
+ for (i = 0; i < len; i++) {
        paridad = 0;
       entero = array[i];
-        for (j = 0; j &lt; WSIZE; j++) {
+        for (j = 0; j < WSIZE; j++) {
          paridad ^= (entero & 1);
           entero >>= 1;
      }
@@ -343,7 +343,7 @@ int paridad2(unsigned* array, int len) {
   unsigned entero;
   int result = 0;
 
- for (i = 0; i &lt; len; i++) {
+ for (i = 0; i < len; i++) {
        paridad = 0;
       entero = array[i];
         while (entero) {
@@ -364,7 +364,7 @@ int paridad3(unsigned* array, int len) {
   int i;
     unsigned x;
    int result = 0;
-   for (i = 0; i &lt; len; i++) {
+   for (i = 0; i < len; i++) {
        x = array[i];
      while (x) {
            val ^= x;
@@ -386,7 +386,7 @@ int paridad4(unsigned* array, int len) {
     unsigned x;
    int result = 0;
 
- for (i = 0; i &lt; len; i++) {
+ for (i = 0; i < len; i++) {
        x = array[i];
      val = 0;
       asm(
@@ -412,7 +412,7 @@ int paridad5(unsigned* array, int len) {
   int i, k;
  int result = 0;
    unsigned x;
-   for (i = 0; i &lt; len; i++) {
+   for (i = 0; i < len; i++) {
        x = array[i];
      for (k = 16; k == 1; k /= 2)
           x ^= x >> k;
@@ -429,7 +429,7 @@ int paridad6(unsigned* array, int len) {
 
   int resultado = 0;
 
-  for (j = 0; j &lt; len; j++) { //Cuando acabe de recorrer el vector se saldrá del bucle
+  for (j = 0; j < len; j++) { //Cuando acabe de recorrer el vector se saldrá del bucle
 
         entero = array[j]; //Cargo en entero el siguiente numero de la lista
       asm(
@@ -468,7 +468,7 @@ void crono(int (*func)(), char* msg) {
 int main() {
 #if ! TEST
   int i; // inicializar array
-   for (i = 0; i &lt; SIZE; i++) // se queda en cache
+   for (i = 0; i < SIZE; i++) // se queda en cache
        lista[i] = i;
 #endif
  crono(paridad1, "Paridad1 (    en lenguaje C for  )");

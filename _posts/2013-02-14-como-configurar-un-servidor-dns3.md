@@ -84,10 +84,10 @@ Eso es todo, en este punto usaremos el comando **dig** para comprobar la configu
 
 {% highlight bash %}$ dig elbauldelprogramador.com
 
-; &lt;&lt;>> DiG 9.8.4-P1 &lt;&lt;>> elbauldelprogramador.com
+; <<>> DiG 9.8.4-P1 <<>> elbauldelprogramador.com
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 10156
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10156
 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
 ;; QUESTION SECTION:
@@ -106,10 +106,10 @@ Así, estamos buscando la ip del dominio. Como se aprecia, devuelve el valor cor
 
 {% highlight bash %}$ dig -x 5.39.89.44
 
-; &lt;&lt;>> DiG 9.8.4-P1 &lt;&lt;>> -x 5.39.89.44
+; <<>> DiG 9.8.4-P1 <<>> -x 5.39.89.44
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 50347
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50347
 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
 ;; QUESTION SECTION:

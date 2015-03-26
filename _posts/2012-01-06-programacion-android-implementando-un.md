@@ -76,7 +76,7 @@ El siguiente planteamiento de la base de datos pertenece a la aplicación [FavSi
 //    GNU General Public License for more details.
 //
 //    You should have received a copy of the GNU General Public License
-//    along with FavSites.  If not, see &lt;http: //www.gnu.org/licenses/>.
+//    along with FavSites.  If not, see <http: //www.gnu.org/licenses/>.
 
 
 package com.elbauldelprogramador.favsites.provider;

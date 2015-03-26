@@ -41,13 +41,13 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
 
 La sentencia INSERT nos permite introducir nuevas filas en una tabla de la base de datos. Su sintaxis más simple es:
 
-{% highlight sql %}Insert into  tabla ([&lt;lista_campos>]) Values ([&lt;lista de valores>]){% endhighlight %}
+{% highlight sql %}Insert into  tabla ([<lista_campos>]) Values ([<lista de valores>]){% endhighlight %}
 
 donde tabla representa la tabla a la que queremos añadir el registro y los valores que siguen a la clausula VALUES son los valores que damos a los distintos campos del registro. Si no se especifica la lista de campos, la lista de valores debe seguir el orden de todos los campos de la tabla.
 
 La lista de campos a rellenar se indica si no queremos rellenar todos los campos. Los campos no rellenados explícitamente con la orden INSERT, se rellenan con su valor por defecto (DEFAULT) o bien con NULL si no se indicó valor alguno. 
 
-{% highlight sql %}Insert into tabla ([&lt;lista_campos>])
+{% highlight sql %}Insert into tabla ([<lista_campos>])
 Select .....{% endhighlight %}
 
 En esta segunda sintaxis se permite añadir registros a una tabla obteniéndolos mediante una consulta SELECT. Por supuesto el tipo de los campos y el orden de estos debe coincidir con los de la lista de campos o con los de la tabla destino si estos últimos no se indican.
@@ -81,7 +81,7 @@ SELECT * FROM MATRICULAS;{% endhighlight %}
 
 La sentencia DELETE nos permite borrar filas de una tabla de la base de datos. Su sintaxis más simple es:
 
-{% highlight sql %}Delete [from] tabla [Where &lt;condición>]{% endhighlight %}
+{% highlight sql %}Delete [from] tabla [Where <condición>]{% endhighlight %}
 
 La sentencia DELETE es de tipo DML mientras que la sentencia TRUNCATE es de tipo DDL; la diferencia está en dos aspectos:
 
@@ -95,13 +95,13 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.
 
 La sentencia UPDATE nos permite modificar filas de una tabla de la base de datos. Su sintaxis más simple es:
 
-{% highlight sql %}Update tabla Set columna1= valor1 [, columna2= valor2, .....] [Where &lt;condición>]{% endhighlight %}
+{% highlight sql %}Update tabla Set columna1= valor1 [, columna2= valor2, .....] [Where <condición>]{% endhighlight %}
 
 Se modifican las columnas indicadas en el apartado SET con los valores indicados. La cláusula WHERE permite especificar qué registros serán modificados.
 
 Su segundo tipo de sintaxis es:
 
-{% highlight sql %}Update tabla Set columna1= (Sentencia SELECT) [Where &lt;condición>]{% endhighlight %}
+{% highlight sql %}Update tabla Set columna1= (Sentencia SELECT) [Where <condición>]{% endhighlight %}
 
 Este tipo de actualizaciones sólo son válidas si la Sentencia SELECT devuelve un único valor, que además debe de ser compatible con la columna que se actualiza.
 

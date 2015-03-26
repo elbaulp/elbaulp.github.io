@@ -31,7 +31,7 @@ Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda part
 
 {% highlight bash %}//Cabeceras
 #include "SDL/SDL.h"
-#include &lt;string>
+#include <string>
 {% endhighlight %}
 
 Estos son los archivos de cabecera para este programa.  

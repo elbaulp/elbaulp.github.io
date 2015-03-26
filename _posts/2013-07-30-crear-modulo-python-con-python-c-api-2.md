@@ -36,7 +36,7 @@ El módulo consistirá en una función llamada *saluda()* que recibirá una cade
 
 Empecemos mostrando el código e iremos explicándolo a lo largo del artículo:
 
-{% highlight c %}#include &lt;Python.h>
+{% highlight c %}#include <Python.h>
 
 static PyObject*
 ejemplo_saluda(PyObject *self, PyObject *args)
@@ -46,7 +46,7 @@ ejemplo_saluda(PyObject *self, PyObject *args)
 
     if (PyArg_ParseTuple(args, "s", &nombre))
     {
-        if (strlen(nombre) + 29 &lt; 64 ){
+        if (strlen(nombre) + 29 < 64 ){
             sprintf(saludo, "Hola %s desde la Python C API!", nombre);
             return Py_BuildValue("s", saludo);
         }

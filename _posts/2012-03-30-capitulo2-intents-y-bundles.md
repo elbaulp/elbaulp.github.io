@@ -45,27 +45,27 @@ Voy a explicar un poco por encima que hace cada fichero del proyecto:
 
 ### ./res/layout/main.xml
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" 
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
  
- &lt;textview android:id="@+id/textView1" 
+ <textview android:id="@+id/textView1" 
            android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:text="@string/hello" />
   
- &lt;button android:id="@+id/button1" 
+ <button android:id="@+id/button1" 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:text="@string/cadena1" />
     
- &lt;button android:id="@+id/button2" 
+ <button android:id="@+id/button2" 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:text="@string/cadena2" />
-&lt;/linearlayout>
+</linearlayout>
 
 {% endhighlight %}
 
@@ -73,28 +73,28 @@ En este layout principal vamos a añadir dos botones que nos servirán para lanz
 
 ### ./res/layout/segunda_actividad.xml
 
-{% highlight xml %}&lt; ?xml version="1.0" encoding="utf-8"?>
-&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
  android:orientation="vertical" 
  android:layout_width="fill_parent"
  android:layout_height="fill_parent">
  
- &lt;textview android:id="@+id/textView1" 
+ <textview android:id="@+id/textView1" 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:text="@string/cadena1" />
   
- &lt;textview android:id="@+id/params" 
+ <textview android:id="@+id/params" 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:text="@string/hello" />
   
- &lt;button android:id="@+id/boton" 
+ <button android:id="@+id/boton" 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" 
     android:text="@string/cadena1" />
   
-&lt;/linearlayout>
+</linearlayout>
 
 {% endhighlight %}
 

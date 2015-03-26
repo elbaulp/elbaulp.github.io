@@ -72,8 +72,8 @@ Por último, al final del código, como se comentó al principio del artículo s
 
 La implementación del método *stringFromJNI()* es la siguiente:
 
-{% highlight c %}#include &lt;string.h>
-#include &lt;jni.h>
+{% highlight c %}#include <string.h>
+#include <jni.h>
 
 /* This is a trivial JNI example where we use a native method
  * to return a new VM String. See the corresponding Java source
@@ -98,7 +98,7 @@ Para compilar y ejecutar el programa, con el proyecto *Hello-Jni* de ejemplo imp
 {% highlight bash %}$ ndk-build 
 Gdbserver      : [arm-linux-androideabi-4.6] libs/armeabi/gdbserver
 Gdbsetup       : libs/armeabi/gdb.setup
-Compile thumb  : hello-jni &lt;= hello-jni.c
+Compile thumb  : hello-jni <= hello-jni.c
 SharedLibrary  : libhello-jni.so
 Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
 {% endhighlight %}

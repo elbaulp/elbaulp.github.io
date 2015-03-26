@@ -51,7 +51,7 @@ Instalamos *fpdns*:
 
 Lo ejecutamos pasando como argumento el servidor del cual queremos determinar la versión:
 
-{% highlight bash %}$ fpdns -D &lt;dominio>{% endhighlight %}
+{% highlight bash %}$ fpdns -D <dominio>{% endhighlight %}
 
 La salida será algo de este estilo:
 

@@ -427,10 +427,10 @@ nombre <b>CHAR(20); </b>
                 La sintaxis general es la siguiente:
               </p>
               
-              {% highlight bash %}<b>TYPE</b> &lt;nombre> <b>IS RECORD</b>
+              {% highlight bash %}<b>TYPE</b> <nombre> <b>IS RECORD</b>
 (
-  campo &lt;tipo_datos> [NULL | NOT NULL]
-  [,&lt;tipo_datos>...]
+  campo <tipo_datos> [NULL | NOT NULL]
+  [,<tipo_datos>...]
 );
 {% endhighlight %}
               
@@ -497,8 +497,8 @@ nombre <b>CHAR(20); </b>
                           La sintaxis general es la siguiente:
                         </p>
                         
-                        {% highlight bash %}<b>TYPE</b> &lt;nombre_tipo_tabla> <b>IS TABLE OF</b>
-&lt;tipo_datos> [NOT NULL]
+                        {% highlight bash %}<b>TYPE</b> <nombre_tipo_tabla> <b>IS TABLE OF</b>
+<tipo_datos> [NOT NULL]
 <b>INDEX BY BINARY_INTEGER</b>;
 {% endhighlight %}
                         

@@ -69,7 +69,7 @@ Ejemplo:
   valor NUMBER;
 BEGIN
   valor := -1;
-  IF valor &lt; 0 THEN
+  IF valor < 0 THEN
     RAISE VALOR_NEGATIVO;
   END IF;
   EXCEPTION
@@ -86,7 +86,7 @@ Cuando se produce un error, se ejecuta el bloque EXCEPTION. Si existe un bloque 
 En ocasiones queremos enviar un mensaje de error personalizado al producirse una excepción PL/SQL. Para ello es necesario utilizar la instruccion **RAISE\_APPLICATION\_ERROR.**  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}RAISE_APPLICATION_ERROR(&lt;error_num>,&lt;mensaje>);{% endhighlight %}
+{% highlight sql %}RAISE_APPLICATION_ERROR(<error_num>,<mensaje>);{% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
@@ -149,7 +149,7 @@ END;
   c number(10);
 BEGIN
   Select count(*) INTO a FROM Articulos;
-  If a &lt; 10 THEN
+  If a < 10 THEN
     RAISE e_sinreg;
   END IF;
   c := a / b;

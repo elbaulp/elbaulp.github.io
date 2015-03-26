@@ -51,7 +51,7 @@ Ahora queda añadir el filtro para esta regla, en el archivo *filter.d/nginx-wp-
 
 {% highlight bash %}[Definition]
 
-failregex = &lt;HOST>.*] "POST /wp-login.php
+failregex = <HOST>.*] "POST /wp-login.php
 ignoreregex = 
 {% endhighlight %}
 
@@ -125,7 +125,7 @@ Y sus correspondientes filtros en */etc/fail2ban/filter.d/* (Cada uno en un fich
 # 192.168.1.1 - - "GET http://www.something.com/
 #
 [Definition]
-failregex = ^&lt;HOST> -.*GET http.*
+failregex = ^<HOST> -.*GET http.*
 ignoreregex =
  
 # Noscript filter /etc/fail2ban/filter.d/nginx-noscript.conf:
@@ -136,7 +136,7 @@ ignoreregex =
 # 192.168.1.1 - - "GET /something.php
 #
 [Definition]
-failregex = ^&lt;HOST> -.*GET.*(\.php|\.asp|\.exe|\.pl|\.cgi|\scgi)
+failregex = ^<HOST> -.*GET.*(\.php|\.asp|\.exe|\.pl|\.cgi|\scgi)
 ignoreregex =
  
 #
@@ -146,9 +146,9 @@ ignoreregex =
 #
 [Definition]
  
-failregex = no user/password was provided for basic authentication.*client: &lt;HOST>
-            user .* was not found in.*client: &lt;HOST>
-            user .* password mismatch.*client: &lt;HOST>
+failregex = no user/password was provided for basic authentication.*client: <HOST>
+            user .* was not found in.*client: <HOST>
+            user .* password mismatch.*client: <HOST>
  
 ignoreregex =
 
@@ -159,7 +159,7 @@ ignoreregex =
 #
 # Scan access log for HTTP 200 + POST /sessions => failed log in
 [Definition]
-failregex = ^&lt;HOST> -.*POST /sessions HTTP/1\.." 200
+failregex = ^<HOST> -.*POST /sessions HTTP/1\.." 200
 ignoreregex =
 {% endhighlight %}
 

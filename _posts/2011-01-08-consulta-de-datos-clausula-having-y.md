@@ -27,7 +27,7 @@ tags:
 
 Especifica una condición de selección para un grupo. HAVING se usa normalmente con el GROUP BY. Cuando no está con el GROUP BY, HAVING se comporta como la cláusula WHERE, aunque esto es erróneo utilizarlo, puesto que ralentiza el sistema. Su sintaxis es:
 
-{% highlight sql %}[ HAVING &lt;search_condition_group> ]{% endhighlight %}
+{% highlight sql %}[ HAVING <search_condition_group> ]{% endhighlight %}
 
   
 <!--more-->

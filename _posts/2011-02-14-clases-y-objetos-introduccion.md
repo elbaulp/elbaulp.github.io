@@ -66,7 +66,7 @@ En C++, los detalles de la entrada/salida estándar están en el archivo *IOSTRE
 **Salida**
 
 {% highlight bash %}float f=3.24;
-cout &lt; &lt; “Numero real =”&lt;&lt;f&lt;&lt;’n’;
+cout < < “Numero real =”<<f<<’n’;
 printf (“Numero real %f=n”, f);
 {% endhighlight %}
 

@@ -30,13 +30,13 @@ El proceso de compatibilidad se realiza mediante varios *#define* y macros en C 
 
 ### Código fuente compatible con Python 3
 
-{% highlight c %}#include &lt;Python.h>
-#include &lt;string.h>
-#include &lt;sys/socket.h>
-#include &lt;netinet/in.h>
-#include &lt;arpa/inet.h>
+{% highlight c %}#include <Python.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
-#include &lt;netdb.h>
+#include <netdb.h>
 
 struct module_state {
     PyObject *error;
@@ -170,7 +170,7 @@ Todo ha salido bien, abrimos el intérprete de Python 3 y probamos el módulo:
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed
 >>> print(herramientasRed.imprimeIP('elbauldelprogramador.com'))
-elbauldelprogramador.com tiene dirección IP &lt;ip>
+elbauldelprogramador.com tiene dirección IP <ip>
 >>> 
 {% endhighlight %}
 

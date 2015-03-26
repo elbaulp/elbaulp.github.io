@@ -64,9 +64,9 @@ Vamos a ir viendo las diferentes clausulas que componen la sentencia SELECT:
 
 Especifica qué columnas o expresiones han de ser devueltas por la consulta. Su sintaxis es:
 
-{% highlight sql %}SELECT [ DISTINCT ] &lt;select_list>
+{% highlight sql %}SELECT [ DISTINCT ] <select_list>
 
-&lt;select_list> ::= [esquema.][table. | view. | alias. ] * | { column_name | expression }
+<select_list> ::= [esquema.][table. | view. | alias. ] * | { column_name | expression }
 [ [AS] column_alias ]} [,...n]
 {% endhighlight %}
 

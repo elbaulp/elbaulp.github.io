@@ -43,8 +43,8 @@ El **algoritmo de Dijkstra** consiste en ir explorando todos los caminos más co
 
 #### Algoritmo de Dijkstra
 
-{% highlight cpp %}#include &lt;string.h>
-#include &lt;fstream>
+{% highlight cpp %}#include <string.h>
+#include <fstream>
 #include "grafo_heap.h"
 using namespace std;
  
@@ -60,13 +60,13 @@ grafo obtenerGrafo (char * nombre){
    ifstream fichero;// Abro el fichero.
    fichero.open(nombre);
    if(!fichero){
-       cerr &lt;&lt; "Se ha producido un error al abrir el fichero: " &lt;&lt; nombre;
+       cerr << "Se ha producido un error al abrir el fichero: " << nombre;
        exit(1);
    }
  
 //Recorro hasta quedarme en la linea 7 para
 //despues leer directamente la matriz de adyacencia
-   while (cont_line &lt; 7){
+   while (cont_line < 7){
        fichero.getline(vector_aux, TOPE_LEC);
        cont_line++;
        if (cont_line == 4){ //La linea 4 está la dimensión.
@@ -79,8 +79,8 @@ grafo obtenerGrafo (char * nombre){
    grafo G(tam);      //Creo el grafo con el tamaño.
     
     //Asigno los pesos dados por la matriz de adyacencia
-   for (int i = 0; i &lt; tam; i++)
-       for (int j = 0; j &lt; tam; j++){
+   for (int i = 0; i < tam; i++)
+       for (int j = 0; j < tam; j++){
            fichero >> peso;  G.asignar_peso(i,j,peso);
        }
     
@@ -92,13 +92,13 @@ grafo obtenerGrafo (char * nombre){
  
 void dijkstra(grafo & G, vertice s){
     vertice u;
-    vector&lt;vertice> P(G.size(), -1);      //Vector de soluciones.
-    vector&lt;distancia> D(G.size(),INFINITO);  // Vector de distancias
+    vector<vertice> P(G.size(), -1);      //Vector de soluciones.
+    vector<distancia> D(G.size(),INFINITO);  // Vector de distancias
     heap Q(G.size());
     D[s]=0; //La distancia hasta el mismo es cero.
     P[s] = s; //Su camino es el mismo.
  
-    for (vertice i = 0 ; i &lt; G.size() ; i++ )
+    for (vertice i = 0 ; i < G.size() ; i++ )
  //Relleno el heap.
         Q.insert(D[i],i);
  
@@ -116,14 +116,14 @@ void dijkstra(grafo & G, vertice s){
     }
  
     //Mostramos el vector D de distancia.
-    cout &lt;&lt; "El vector de distancias es:n";
-    for (vertice i = 0 ; i &lt; G.size() ; i++ )
-        cout &lt;&lt; D[i] &lt;&lt; " - ";
+    cout << "El vector de distancias es:n";
+    for (vertice i = 0 ; i < G.size() ; i++ )
+        cout << D[i] << " - ";
  
     //Mostramos el vector P de distancia.
-    cout &lt;&lt; "nnEl vector de soluciones es:n";
-    for (vertice i = 0 ; i &lt; G.size() ; i++ )
-        cout &lt;&lt; P[i] &lt;&lt; " - ";
+    cout << "nnEl vector de soluciones es:n";
+    for (vertice i = 0 ; i < G.size() ; i++ )
+        cout << P[i] << " - ";
  
  
 }
@@ -135,8 +135,8 @@ int main(int argc,char** argv){
   grafo G(obtenerGrafo(argv[1]));
  
   vertice org=3;
-  cout &lt;&lt; "Tamaño del Grafo"  &lt;&lt; G.size() &lt;&lt; endl;
-  cout &lt;&lt; "Llamo a Dijkstra (origen) " &lt;&lt; org &lt;&lt;  endl &lt;&lt; endl &lt;&lt; endl;
+  cout << "Tamaño del Grafo"  << G.size() << endl;
+  cout << "Llamo a Dijkstra (origen) " << org <<  endl << endl << endl;
   dijkstra(G,org);
  
 }

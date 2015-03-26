@@ -48,7 +48,7 @@ $(BIN)/$(target): $(OBJS)
 
 {% highlight make %}$(OBJ)/%.o: %.cpp
 	@echo Creando $@... con $^
-	$(CXX) $(CPPFLAGS) -c $&lt; -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 {% endhighlight %}
 
 Con esta regla se crean los ficheros objeto necesarios para la regla anterior. La regla crea objetos a partir de sus correspondientes cpps, de ahí `%.o : %.cpp`.
@@ -74,7 +74,7 @@ $(BIN)/$(target): $(OBJS)
 
 $(OBJ)/%.o: %.cpp
 	@echo Creando $@... con $^
-	$(CXX) $(CPPFLAGS) -c $&lt; -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 
 # ************ Limpieza ************
 .PHONY: clean

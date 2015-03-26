@@ -44,7 +44,7 @@ Y ahora:
 
   1. Si no tenemos nuestro código en un fichero aparte o si vamos a escribir muy poco código, podemos usar directamente el paquete con la siguiente sintaxis:
 
-{% highlight latex %}cout &lt;&lt; "Hola mundo" &lt;&lt; endl;
+{% highlight latex %}cout << "Hola mundo" << endl;
 return 0;
 {% endhighlight %}
 

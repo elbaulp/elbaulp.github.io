@@ -55,21 +55,21 @@ Terminada, la aplicación de prueba debe quedar algo así:
 Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fila del ListView:
 
 {% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
-&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LinearLayout1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#999999"
     android:padding="2dp" >
 
-    &lt;CheckBox
+    <CheckBox
         android:id="@+id/leido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:focusable="false" />
             
-    &lt;TextView
+    <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
         android:text="Titulo del post"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    &lt;TextView
+    <TextView
         android:id="@+id/tvFecha_publicacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,7 +88,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
         android:text="25/05/2012"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    &lt;ImageView
+    <ImageView
         android:id="@+id/ivCalendar"
         android:layout_width="22dp"
         android:layout_height="22dp"
@@ -98,7 +98,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
         android:contentDescription="@string/imagen_content_description"
         android:src="@drawable/calendar" />
 
-&lt;/RelativeLayout>
+</RelativeLayout>
 {% endhighlight %}
 
 Creando así el aspecto deseado para cada línea del ListView:
@@ -167,7 +167,7 @@ public class PostData implements Parcelable {
        dest.writeInt(getChecked() ? 1 : 0);
     }
 
-   public static final Parcelable.Creator&lt;PostData> CREATOR = new Parcelable.Creator&lt;PostData>() {
+   public static final Parcelable.Creator<PostData> CREATOR = new Parcelable.Creator<PostData>() {
      public PostData createFromParcel(Parcel in) {
            return new PostData(in);
         }
@@ -215,10 +215,10 @@ public class PostAdapter extends BaseAdapter
    private static final String TAG = "CustomAdapter";
   private static int convertViewCounter = 0;
 
-  private ArrayList&lt;PostData> data;
+  private ArrayList<PostData> data;
    private LayoutInflater inflater = null;
 
- public PostAdapter(Context c, ArrayList&lt;PostData> d)
+ public PostAdapter(Context c, ArrayList<PostData> d)
     {
        Log.v(TAG, "Constructing CustomAdapter");
 
@@ -318,7 +318,7 @@ public class PostAdapter extends BaseAdapter
 
    public void checkAll(boolean state)
  {
-       for (int i = 0; i &lt; data.size(); i++)
+       for (int i = 0; i < data.size(); i++)
            data.get(i).setChecked(state);
   }
 
@@ -326,7 +326,7 @@ public class PostAdapter extends BaseAdapter
     {
 
        int i = 0;
-      while (i &lt; getCount())
+      while (i < getCount())
       {
            if (data.get(i).getChecked())
            {
@@ -340,7 +340,7 @@ public class PostAdapter extends BaseAdapter
 
    public boolean haveSomethingSelected()
   {
-       for (int i = 0; i &lt; data.size(); i++)
+       for (int i = 0; i < data.size(); i++)
            if (data.get(i).getChecked())
                return true;
         return false;
@@ -390,7 +390,7 @@ Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que h
 
 El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:
 
-{% highlight xml %}&lt;CheckBox
+{% highlight xml %}<CheckBox
         android:id="@+id/leido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -461,7 +461,7 @@ public void onCreate(Bundle savedInstanceState) {
    super.onCreate(savedInstanceState);
    //...
    if (savedInstanceState == null){
-      data = new ArrayList&lt;PostData>();
+      data = new ArrayList<PostData>();
 
       data.add(new PostData("19/09/2012", "Moborobo, herramienta de Administración Integrada para Android en el PC" , false));
       data.add(new PostData("23/09/2012", "Cómo crear shortcodes en WordPress que soporten parámetros" , false));

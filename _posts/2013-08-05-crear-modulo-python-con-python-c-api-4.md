@@ -30,13 +30,13 @@ Llegó el momento de crear un módulo con la Python C API algo más complejo, co
 
 Mostraremos el código completo, puesto que ya se ha explicado el significado de este trozo de código no nos extenderemos mucho:
 
-{% highlight c %}#include &lt;Python.h>
-#include &lt;string.h>
-#include &lt;sys/socket.h>
-#include &lt;netinet/in.h>
-#include &lt;arpa/inet.h>
+{% highlight c %}#include <Python.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
-#include &lt;netdb.h>
+#include <netdb.h>
 
 static PyObject*
 herramientasRed_imprimeIP(PyObject *self, PyObject *args)
@@ -112,7 +112,7 @@ Y para usarlo:
 
 {% highlight python %}In [1]: import herramientasRed 
 In [2]: print herramientasRed.imprimeIP('elbauldelprogramador.com')
-elbauldelprogramador.com tiene dirección IP &lt;ip>
+elbauldelprogramador.com tiene dirección IP <ip>
 {% endhighlight %}
 
 ### Depuración de módulos Python C API
@@ -149,11 +149,11 @@ Breakpoint 1, herramientasRed_imprimeIP (self=0x0, args=0x965990) at herramienta
 (gdb) p *args 
 $1 = {
   ob_refcnt = 1, 
-  ob_type = 0x888280 &lt;PyTuple_Type>
+  ob_type = 0x888280 <PyTuple_Type>
 }
 (gdb) c
 Continuing.
-elbauldelprogramador.com tiene dirección IP &lt;ip>
+elbauldelprogramador.com tiene dirección IP <ip>
 
 [Inferior 1 (process 28242) exited normally]
 

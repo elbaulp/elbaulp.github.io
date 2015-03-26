@@ -42,7 +42,7 @@ para aplicar los cambios.
 
 Hay que asegurarse que el fondo tenga permisos de lectura tanto para el usuario, el grupo y otros, esto se puede lograr con
 
-{% highlight bash %}$ chmod 644 &lt;nombre_fondo>
+{% highlight bash %}$ chmod 644 <nombre_fondo>
 {% endhighlight %}
 
 Ahora seguimos los siguientes pasos:

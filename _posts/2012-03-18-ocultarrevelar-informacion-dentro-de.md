@@ -147,7 +147,7 @@ Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos hac
 
 Por último, si deplazamos todos los bits la izquierda una posición, es decir, pasa lo siguiente:
 
-{% highlight cpp %}buffer[i] &lt; &lt;=1;
+{% highlight cpp %}buffer[i] < <=1;
 {% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">

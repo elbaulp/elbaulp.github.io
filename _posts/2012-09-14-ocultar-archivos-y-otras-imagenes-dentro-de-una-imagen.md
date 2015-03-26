@@ -59,7 +59,7 @@ A continuación paso a describir uno a uno los archivos :
 
 #ifndef CODIFICAR_H_
 #define CODIFICAR_H_
-#include &lt;iostream>
+#include <iostream>
 
 int get_file_size(std::ifstream& );
 
@@ -82,8 +82,8 @@ int revelar(unsigned char[],int, char[], int);
  *      @
  */
 #include "../include/codificar.h"
-#include &lt;fstream>
-#include &lt;string.h>
+#include <fstream>
+#include <string.h>
 
 using namespace std;
 
@@ -108,7 +108,7 @@ int write_bit_by_bit(unsigned char buffer[], ifstream& f, int from, int to, char
  char letra = place_to_get_stuff_from[0];
     int indice = from;
 
-  for (int i = 0; i &lt; to; i++) {
+  for (int i = 0; i < to; i++) {
       for (int k = 7; k >= 0; k--){
            char c = (letra & mask) >> k;
            mask >>= 1;
@@ -175,7 +175,7 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
     int i = 1;
   while (i != in-1){
       for (int k = 8; k > 0; k--)
-         value = value &lt;&lt; 1 | (buffer[i++] & 0x01); //vamos almacenando en value los 8 bits
+         value = value << 1 | (buffer[i++] & 0x01); //vamos almacenando en value los 8 bits
       sms[indice_sms++] = value;
       value = 0;
       if (indice_sms > tamSMS)
@@ -189,9 +189,9 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
       bool fin_datos = false;
      int indice = in;
         value = 0;
-      for (int i = in; i &lt; tamImage && !fin_datos; i++) {
-         for (int k = 0; k &lt; 8; k++)
-             value = value &lt;&lt; 1 | (buffer[indice++] & 0x01); //vamos almacenando en value los 8 bits
+      for (int i = in; i < tamImage && !fin_datos; i++) {
+         for (int k = 0; k < 8; k++)
+             value = value << 1 | (buffer[indice++] & 0x01); //vamos almacenando en value los 8 bits
          if (value == 0x7f) {
                 fin_datos = true;
                continue;
@@ -299,7 +299,7 @@ Expliquemos ahora cómo se revelan los datos:
     int i = 1;
   while (i != in-1){
       for (int k = 8; k > 0; k--)
-         value = value &lt;&lt; 1 | (buffer[i++] & 0x01); //vamos almacenando en value los 8 bits
+         value = value << 1 | (buffer[i++] & 0x01); //vamos almacenando en value los 8 bits
       sms[indice_sms++] = value;
       value = 0;
       if (indice_sms > tamSMS)
@@ -313,9 +313,9 @@ Expliquemos ahora cómo se revelan los datos:
       bool fin_datos = false;
      int indice = in;
         value = 0;
-      for (int i = in; i &lt; tamImage && !fin_datos; i++) {
-         for (int k = 0; k &lt; 8; k++)
-             value = value &lt;&lt; 1 | (buffer[indice++] & 0x01); 
+      for (int i = in; i < tamImage && !fin_datos; i++) {
+         for (int k = 0; k < 8; k++)
+             value = value << 1 | (buffer[indice++] & 0x01); 
             if (value == 0x7f) {
                 fin_datos = true;
                continue;

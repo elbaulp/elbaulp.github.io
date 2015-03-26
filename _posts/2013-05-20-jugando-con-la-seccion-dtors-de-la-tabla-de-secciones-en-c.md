@@ -22,8 +22,8 @@ Veamos un ejemplo para aclarar su funcionamiento:
   
 <!--more-->
 
-{% highlight c %}#include &lt;stdio.h>
-#include &lt;stdlib.h>
+{% highlight c %}#include <stdio.h>
+#include <stdlib.h>
 
 static void
 miConstructor(void) __attribute__ ((constructor));
