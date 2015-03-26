@@ -1,0 +1,107 @@
+---
+id: 1580
+title: 'Gource: Visualizar la evolución de un repositorio Git'
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.com/?p=1580
+permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/
+categories:
+  - aplicaciones
+  - opensource
+tags:
+  - como instalar gource
+  - gource git
+  - grabar video con gource
+  - tutorial gource
+---
+Hace unas semanas hablé de [logstalgia][1], que visualiza las visitas a una web en forma del juego Pong. Hoy hablo de *Gource*, herramienta similar que visualiza la evolución de un repositorio en [git][2].  
+  
+<!--more-->
+
+  
+Para instalar el programa basta con ejecutar:
+
+<pre lang="bash"># aptitude install gource
+</pre>
+
+Una vez instalado, basta con ejecutar el programa y pasarle la ruta a la carpeta *.git* del repositorio que queramos visualizar:
+
+<pre lang="bash">gource /ruta/a/.git
+</pre>
+
+El resultado es algo como esto:
+
+[<img src="http://elbauldelprogramador.com/content/uploads/2013/05/gourceGit-1024x804.png" alt="gourceGit" width="770" height="604" class="aligncenter size-large wp-image-1581" />][3]{.thumbnail}
+
+Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.
+
+Es posible grabar en vídeo la visualización de *gource* con el comando:
+
+<pre lang="bash">gource ruta/a/.git/  -1280x1024 --max-files 99999 --disable-progress --stop-at-end \
+       --user-scale 2 --highlight-all-users --output-ppm-stream - \
+       | ffmpeg -y -b 3000K -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 gource.mp4
+</pre>
+
+Donde:
+
+  * -1280&#215;1024 es la resolución.
+  * &ndash;max-files 99999 Límite de archivos a mostrar en la animación.
+  * &ndash;disable-progress Desabilita la barra para seleccionar fecha que mencioné.
+  * &ndash;stop-at-end Cierra la gource al terminar la animación.
+  * &ndash;user-scale 2 Escala de los iconos que representan a los desarrolladores
+  * &ndash;highlight-all-users Muestra siempre el nombre del desarrollador
+  * &ndash;output-ppm-stream &ndash; Envia la salida de gource a un archivo
+
+A continuación os dejo un vídeo de uno de mis repositorios:
+
+<span class='embed-youtube' style='text-align:center; display: block;'></span> 
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Gource: Visualizar la evolución de un repositorio Git+http://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/&t=Gource: Visualizar la evolución de un repositorio Git+http://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Gource: Visualizar la evolución de un repositorio Git+http://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://elbauldelprogramador.com/opensource/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
+ [2]: http://elbauldelprogramador.com/articulos/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: http://elbauldelprogramador.com/content/uploads/2013/05/gourceGit.png

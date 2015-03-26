@@ -1,0 +1,295 @@
+---
+id: 341
+title: 'Programación Android: Intents &#8211; Conceptos básicos'
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.org/programacion-android-intents-conceptos-basicos/
+permalink: /programacion-android-intents-conceptos/
+blogger_blog:
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+blogger_author:
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+blogger_permalink:
+  - /2012/02/programacion-android-intents-conceptos.html
+  - /2012/02/programacion-android-intents-conceptos.html
+share_data:
+  - '[]'
+  - '[]'
+share_all_data:
+  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551706}'
+  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551706}'
+share_count:
+  - 0
+  - 0
+categories:
+  - android
+  - opensource
+tags:
+  - android ejemplo intent filter
+  - curso android pdf
+  - ejemplo intentfilter implicito
+  - uso de intents android
+---
+<div class="separator" style="clear: both; text-align: center;">
+  <img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+</div>
+
+Un intent sirve para invocar componentes, en android entendemos por componentes las [activities,][1] Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y [proveedores de contenido][2], código que abstráe los datos.
+
+  
+<!--more-->
+
+### Introducción a los Intents
+
+Como mecanismo para invocar componentes, los intents son bastante fáciles de comprender. Básicamente nos permiten llamar a aplicaciones externas a la nuestra, lanzar eventos a los que otras aplicaciones puedan responder, lanzar alarmas etc.
+
+Vamos a mostrar un ejemplo, supongamos que tenemos la siguiente activity:
+
+<pre lang="java">public class MiActivity extends Activity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.MiActivity);
+    }
+}
+</pre>
+
+El layout *R.Layout.MiActivity* debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el [AndroidManifest][3], que será algo así:
+
+<pre lang="xml">&lt;activity android:name=".MiActivity"
+          android:label="Mi Activity">
+   &lt;intent -filter>
+      &lt;action android:name="nuestra.accion.nombreAccion"/>
+      &lt;category android:name="android.intent.category.DEFAULT" />
+   &lt;/intent>
+&lt;/activity>
+</pre>
+
+Al registrar la activity en el AndroidManifest, registramos también una acción que podremos usar para invocar a dicha actividad. El diseñador de la actividad puede asignar el nombre que crea conveniente a la acción. Ahora que ya está todo listo, podemos lanzar un intent para llamar a esta actividad:
+
+<pre lang="java">public static void invokeMiActivity(Activity activity){
+   String actionName= "nuestra.accion.nombreAccion";
+   Intent intent = new Intent(actionName);
+   activity.startActivity(intent);
+}
+</pre>
+
+<p class="alert">
+  La convención que se usa para nombrar una acción suele ser <nombredenuestropaquete>.intent.action.NOMBRE_ACCION</nombredenuestropaquete>
+</p>
+
+Una vez que se invoca a la actividad, ésta tiene la posibilidad de recuperar el intent que la llamó. Y podemos recuperarlo del siguiente modo:
+
+<pre lang="java">//Este código se inserta en el método onCreate() de la actividad.
+Intent intent = this.getIntent();
+if (intent == null){
+   Log.d("Tag", "La actividad no se ha llamado mediante un intent.")
+}
+</pre>
+
+### Intents disponibles en Android
+
+En <a target="_blank" href="http://developer.android.com/guide/appendix/g-app-intents.html">developer.android.com/guide/appendix/g-app-intents.html</a> se puede encontrar una lista con las aplicaciones disponibles en Android junto con los intents que las invocan. Por ejemplo, para el navegador web, tenemos dos acciones, **VIEW ** y **WEB_SEARCH**, que abren el navegador en una url específica o realizan una búsqueda. 
+
+En el caso del dialer (marcador), tenemos las acciones CALL y DIAL, que vienen dadas por la URI *tel:numero\_de\_teléfono*, la diferencia entre estas dos acciones, es que CALL realiza la llamada al número de la URI, y DIAL solo lo marca, pero no realiza la llamada.
+
+Vamos a ver ejemplos de intents que invocan a las aplicaciones mencionadas en la documentación de Android:
+
+<pre lang="java">public static void invokeWebBrowser(Activity activity){
+   Intent intent = new Intent(Intent.ACTION_VIEW);
+   intent.setData(Uri.parse("http://www.google.com"));
+   activity.startActivity(intent);
+}
+
+public static void invokeWebSearch(Activity activity){
+   Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+   intent.setData(Uri.parse("http://www.google.com"));
+   activity.startActivity(intent);
+}
+
+public static void dial(Activity activity){
+   Intent intent = new Intent(Intent.ACTION_DIAL);
+   activity.startActivity(intent);
+}
+   
+public static void call(Activity activity){
+   Intent intent = new Intent(Intent.ACTION_CALL);
+   intent.setData(Uri.parse("tel:555-555-555"));
+   activity.startActivity(intent);
+}
+
+public static void showMapAtLatLong(Activity activity){
+   Intent intent = new Intent(Intent.ACTION_VIEW);
+   intent.setData(Uri.parse("geo:0,0?z=4&#038;q=restaurantes"));
+   activity.startActivity(intent);
+}
+</pre>
+
+### Composición de los intents
+
+Un intent está formado por una acción, datos (que se representan mediante URIs), datos extra en pares clave/valor y un nombre de clase explícito, llamado nombre del componente.
+
+<p class="alert">
+  Es necesario aclarar algo, cuando un intent trae consigo un nombre de componente, se le llama intent explícito. Cuando no lo lleva y depende de la acción y los datos se llama intent implícito.
+</p>
+
+### Intents y Data URIs
+
+Como vimos un poco más arriba los URIs para las acciones ACTION\_DIAL y ACTION\_CALL tienen la estructura *tel:número*, y la manera de usar esta URI en el intent para pasarla como dato es la siguiente:
+
+<pre lang="java">intent.setData(Uri.parse("tel:555-555-555"));
+</pre>
+
+El nombre de las acciones normalmente suele ser un String o un String constante con el nombre del paquete como prefijo.
+
+La sección de *datos* de un intent no son datos realmente, se trata de punteros a datos. Está representado por un string que representa una URI. Una Uri de un intent puede contener argumentos, como las urls de las web.
+
+### Acciones genéricas
+
+Vamos a volver a ver el código que invoca al navegador web para analizarlo más en profundidad:
+
+<pre lang="java">Intent intent = new Intent(Intent.ACTION_VIEW);
+intent.setData(Uri.parse("http://www.google.com"));
+activity.startActivity(intent);
+</pre>
+
+En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:
+
+<pre lang="xml">&lt;activity ...>
+   &lt;intent -filter>
+      &lt;action android:name="android.intent.action.VIEW"/>
+      &lt;data android:scheme="http" />
+      &lt;data android:scheme="https" />
+   &lt;/intent>
+&lt;/activity>
+</pre>
+
+SE puede obtener más informacion del elemento *data* en <a target="_blank" href="http://developer.android.com/guide/topics/manifest/data-element.html">developer.android.com/guide/topics/manifest/data-element.html</a>
+
+### Infomación extra
+
+Los intents admiten además de las acciones y datos, un atributo adicional llamado *extras*. Este tipo de dato viene dado por la forma clave/valor, en la cual el nombre de la clave normalmente suele empezar con el nombre del paquete y el valor puede ser de cualqueira de los tipos fundamentales u objetos arbitrários, siempre que se implemente la inrefaz android.os.Parcelable. Esta información extra se representa mediante la clase *android.os.Bundle*
+
+<pre lang="java">//Obtener un bundle
+Bundle b = intent.getExtras();
+
+//Colocar un bundle en un intent
+Bundle b2 = new Bundle();
+
+//Rellenar el bundle con datos fundamentales
+putExtra(String name, boolean value);
+putExtra(String name, int value);
+putExtra(String name, double value);
+putExtra(String name, String value);
+
+//Otros tipos de datos
+putExtra(String name, int[] value);
+putExtra(String name, float[] value);
+putExtra(String name, Serializable value);
+putExtra(String name, Parcelable value);
+putExtra(String name, Bundle value);
+
+//Añadir bundles de otros intents
+putExtra(String name, Intent otroIntent);
+
+//Añadir el bundle al intent
+intent.putExtras(b2)
+</pre>
+
+getExtras devuelve el bundle que contenga el intent. Si el intent ya tiene un bundle, putExtras transfiere los pares clave/valor adicionales del bundle nuevo al que ya existía. Si no existe ningun bundle asociado, putExtras creará uno y copiará todos los valores.
+
+La clase intent tiene declarados unas claves extras que acompañan a ciertas acciones, pueden verse en [developer.android.com/reference/android/content/Intent.html#EXTRA\_ALARM\_COUNT][4]. Por ejemplo EXTRA_SUBJECT nos permite almacenar el asunto de un email. El valor de esta clave es *android.intent.extra.SUBJECT*.
+
+### Usar componentes para invocar directamente una activity
+
+Una forma más directa de iniciar una actividad es mediante el su ComponentName, que es una abstracción del nombre del paquete y de la clase. Existen varios métodos para realizar esta acción en la clase Intent:
+
+<pre lang="java">setComponent(ComponentName name);
+SeClassName(String packName, String className);
+setClassName(Context context, String ClassName);
+setClass(Context context, Class classObject);
+</pre>
+
+Se puede usar el nombre de una clase directamente sin necesidad de construir un ComponentName. Por ejemplo, si tenemos la siguiente actividad:
+
+<pre lang="java">public class MiActivity extends Activity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.MiActivity);
+    }
+}
+</pre>
+
+Podemos usar el siguiente código para llamarla:
+
+<pre lang="java">Intent intent = new Intent(activity, MiActivity.class);
+activity.start(intent);
+</pre>
+
+Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:
+
+<pre lang="xml">&lt;activity android:name=".MiActivity" android:label="Mi Activity" />
+</pre>
+
+Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.
+
+* * *
+
+#### Siguiente Tema: [Intents &#8211; Categorías][5] {.referencia}
+
+
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Programación Android: Intents &#8211; Conceptos básicos+http://elbauldelprogramador.com/programacion-android-intents-conceptos/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/programacion-android-intents-conceptos/&t=Programación Android: Intents &#8211; Conceptos básicos+http://elbauldelprogramador.com/programacion-android-intents-conceptos/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Programación Android: Intents &#8211; Conceptos básicos+http://elbauldelprogramador.com/programacion-android-intents-conceptos/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: /programacion-android-trabajar-con/
+ [2]: /2011/11/programacion-android-proveedores-de.html
+ [3]: /fundamentos-programacion-android_16/
+ [4]: http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT
+ [5]: /programacion-android-intents-categorias/

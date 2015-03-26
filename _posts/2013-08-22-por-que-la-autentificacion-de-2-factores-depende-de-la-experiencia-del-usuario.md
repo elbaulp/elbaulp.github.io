@@ -1,0 +1,99 @@
+---
+id: 1856
+title: Por qué la autentificación de 2 factores depende de la experiencia del usuario
+author: Luzcila
+layout: post
+guid: http://elbauldelprogramador.com/?p=1856
+permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/
+categories:
+  - Artículos
+tags:
+  - problemas autentificación de 2 factores
+  - que es autentificación de 2 factores
+  - usuarios autentificación de 2 factores
+---
+<img src="http://elbauldelprogramador.com/content/uploads/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700" height="349" class="thumbnail aligncenter size-full wp-image-1863" />
+
+Ya vimos en hace algún tiempo [todos los lugares en los que deberías habilitar la autentificación de 2 factores][1]. Hoy, en este artículo original de Duo Security analizaremos los problemas que puede ocasionar esta tecnología en el usuario final.
+
+<!--more-->
+
+Con el reciente paso de Twitter a la criptografía de clave pública con &#8220;*push*&#8220;, nosotros y muchos otros nos alegramos de verlos abandonar el sistema de autenticación de 2 factores SMS-only. No solo agregaron mejor seguridad, sino que también brindaron a sus usuarios una experiencia más atractiva. Como las distintas alternativas de *2 factores* entre proveedores de servicios y plataformas continúan creciendo y cambiando, es importante que la industria se mantenga enfocada en los objetivos correctos para adoptar el sistema *2 Factores*. Sin un enfoque diferenciado en cómo los usuarios experimentan la autenticación de 2 factores, la industria podría forzarse a una batalla innecesaria entre riesgo y conveniencia que podría terminar en un futuro negativo para esta tecnología &#8211; no por razones técnicas como por estéticas.
+
+### El usuario final determina el éxito de cualquier tecnología nueva
+
+De todos los controles de seguridad que dependen de la aceptación del usuario final, las decisiones respecto a cómo una tecnología es implementada deberían considerar un rango extenso de potenciales errores de usuario. Cuando construyes seguridad para usuarios finales, pero ignoras las necesidades fundamentales, tu implementación será más costosa para tu potencial usuario base. Es más, dado que el usuario promedio es lento en olvidar malas experiencias, desarrollarán un prejuicio contra la autentificación de *2 Factores * en general.
+
+Tomemos por ejemplo el software de criptografía [PGP][2]. La mayoría de nosotros luchará por recordar cuándo fue la útima vez que realmente usó <a href="https://es.wikipedia.org/wiki/PGP" title="Definición de PGP en Wikipedia" target="_blank">PGP</a>. Luego, consideremos qué tan poco frecuente usamos PGP para manejar un problema de encriptado de archivos. PGP no es un mal software porque sea inseguro o no funcione, **es malo porque nadie realmente solucionó los problemas de aceptación del usuario final a tiempo para que sea ampliamente adoptado.**
+
+Para los usuarios que necesitaron PGP, la idea de servidores de claves, keyrings, huellas digitales, y el resto de los matices de PGP que solo un profesional de la seguridad podría apreciar descartando la viabilidad del software. Donde algunos softwares (especialmente los relacionados con [seguridad][3]) fallan porque no cubren los requerimientos tecnológicos, PGP falla en ser adoptado ampliamente porque sus desarrolladores nunca respondieron a la pregunta &#8220;¿Cómo podemos hacerlo viable para el usuario diario?&#8221;.
+
+### Con la Autentificación de 2 Factores, Todas las rutas deben *llevar a buen puerto*
+
+Twitter y muchas otras organizaciones ahora se encuentran luchando por unir las necesidades de seguridad junto con los deseos del usuario final con autenticación de 2 Factores. Desafortunadamente no muchas de ellas están teniendo en cuenta qué tan rápido mejora este proceso antes de que el usuario final quede impresionado con la 2FA. Dado que las organizaciones quieren facilitar cierto sentido de autenticación fuerte, integran el nivel mínimo de 2 factores requerido para tacharlo de su lista de cosas pendientes por hacer. Este alcance suele resultar en una experiencia pobre para el usuario, el cual acumula prejuicios contra la autenticación de 2 factores en general.
+
+La falla más obvia en la práctica es la idea de que los usuarios deberían estar atados a un dispositivo. Esto es de alguna forma irónico, considerando una de las principales quejas sobre la primera generación de la autenticación de 2 factores es que tienes que recordar tomar un solo token contigo todo el tiempo. Esto fue una queja, de hecho, algunas personas debieron incluso configurar una cámara web apuntando a su token para que de esa forma pudieran accederlo sin tener que recordar el dispositivo cada vez que se van de su casa. ¿Por qué entonces muchas soluciones de la segunda generación de la autenticación de 2 factores repiten esta mala práctica?
+
+Si un usuario no puede identificarse en un servicio o sistema ellos se preocupan sobre porqué debido a una restricción con la plataforma de 2 Factores puedes apostar que te desactivarán la autenticación de 2 factores tan pronto como puedan. La conveniencia versus la ecuación de compensación de riesgo cambia dramáticamente cuando no permites que un usuario final haga lo que quiera. Los usuarios continuarán olvidando su teléfono, o no tendrán señal, o plan de datos, o perderán el token, o tendrán la linea no disponible. No darle lugar a estas cuestiones de la realidad crea críticas más que fans. La seguridad de la información ya tiene muchas críticas &#8211; necesitamos muchos, muchos más fans.
+
+### Cuando la primera impresión cuenta
+
+Ofrecer a los usuarios demasiadas opciones para configurar la autentificación de 2 factores, la &#8220;culpa&#8221; vuelve al individuo si su experiencia es pobre. Las plataformas y servicios deberían ofrecer a sus usuarios la capacidad de determinar lo que tomará para 2 autenticación de factor para aumentar la seguridad(el valor) sin impedir su vida.
+
+Si alguien quiere actuar recíprocamente con Facebook, Gorjeo, GMail, o un juego del ordenador, cuando ellos quieren usar algo, ellos quieren usarlo. Si los proveedores de servicio grandes y plataformas que ofrecen 2 autenticación de factor siguen forzando a usar otro dispositivo o requieren el envío de un mensaje de texto, la batalla por la amplia adopción de 2 factor será mucho más difícil de lo que tiene que ser &#8211; un enorme impacto negativo para la seguridad de la información en su conjunto.
+
+La oportunidad de resolver muchos de los problemas de seguridad con una autentificación fuerte es demasiado beneficiosa para perderla. Es de una importancia crítica que cuando un servicio o plataforma ofrece autentificación de 2 factores proporcionen a sus usuarios una experiencia positiva y no con un simple *checkbox*. Los *checkboxs* seguirán liderando la falla de la seguridad de los métodos de autentifiación que usen una sola contraseña.
+
+#### Referencias
+
+*Duo Security* **|** <a href="https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/" target="_blank">Why 2 Factor Authentication Hinges on the User Experience</a> 
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Por qué la autentificación de 2 factores depende de la experiencia del usuario+http://elbauldelprogramador.com/por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/&t=Por qué la autentificación de 2 factores depende de la experiencia del usuario+http://elbauldelprogramador.com/por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Por qué la autentificación de 2 factores depende de la experiencia del usuario+http://elbauldelprogramador.com/por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://elbauldelprogramador.com/articulos/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo"
+ [2]: http://elbauldelprogramador.com/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [3]: http://elbauldelprogramador.com/category/articulos/security-now-articulos/ "Categoría Seguridad"

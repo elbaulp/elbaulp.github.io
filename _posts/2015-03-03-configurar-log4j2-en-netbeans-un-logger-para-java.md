@@ -1,0 +1,239 @@
+---
+id: 2552
+title: Configurar Log4j2 en Netbeans, un logger para Java
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.com/?p=2552
+permalink: /configurar-log4j2-en-netbeans-un-logger-para-java/
+categories:
+  - Java
+tags:
+  - configurar log4j2
+  - instalar log4j2
+  - logger para java
+  - loggers
+  - loggers en aplicaciones
+---
+*Log4j2* es un *Logger* para Java que descubrí hace poco y me gustó bastante. En éste artículo veremos cómo instalar y configurar Log4j2 en Netbeans. Aunque el proceso es similar para cualquier IDE.
+
+## Requisitos
+
+Asumiremos que el lector ya tiene Netbeans y Maven instalados y configurados en su máquina. Hay más instrucciones de instalación en la web de [Log4j2][1].
+
+## Instalar Log4j2
+
+En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proyecto » Maven » Aplicación Java). Una vez hecho ésto, añadimos las siguientes dependencias en el fichero `pom.xml`:
+
+<!--more-->
+
+<pre lang="xml">&lt;dependencies>
+    &lt;dependency>
+        &lt;groupId>org.apache.logging.log4j&lt;/groupId>
+        &lt;artifactId>log4j-api&lt;/artifactId>
+        &lt;version>2.2&lt;/version>
+    &lt;/dependency>
+    &lt;dependency>
+        &lt;groupId>org.apache.logging.log4j&lt;/groupId>
+        &lt;artifactId>log4j-core&lt;/artifactId>
+        &lt;version>2.2&lt;/version>
+    &lt;/dependency>
+&lt;/dependencies>
+</pre>
+
+Hecho ésto, en la carpeta *dependencias*, hacemos click derecho y damos a que descargue las dependencias declaradas.
+
+## Anadir un fichero de configuración personalizado
+
+Por defecto *Log4j2* ofrece un fichero de configuración, pero podemos modificarlo a nuestro gusto, para colorear la salida de los distintos niveles de log, y formatear la línea a nuestro gusto. En éste caso usaré el siguiente fichero `log4j2.json`:
+
+<pre lang="json">{
+    "configuration":
+            {
+                "appenders": {
+                    "RandomAccessFile": {
+                        "name": "FILE",
+                        "fileName": "app.log",
+                        "PatternLayout": {
+                            "pattern": "%d %p %c{1.} [%t] %m%n"
+                        }
+                    },
+                    "Console": {
+                        "name": "STDOUT",
+                        "PatternLayout": {
+                            "pattern": "%highlight{[%-5level] - [%t] - .%c{1}: %msg%n}"
+                        }
+                    }
+                },
+                "loggers": {
+                    "root": {
+                        "level": "all",
+                        "AppenderRef": [
+                            {
+                                "ref": "STDOUT"
+                            }
+                        ]
+                    }
+                }
+            }
+}
+</pre>
+
+En él, se especifica un fichero `app.log` en el que se almacenará el log con el formato `"%d %p %c{1.} [%t] %m%n"`. Y en la consola aparecerá con el siguiente formato: `"%highlight{[%-5level] - [%t] - .%c{1}: %msg%n}"` que como veremos, colorea el resultado en función del nivel del log. Más información acerca del fichero de configuración en la [web oficial][2].
+
+El fichero `log4j2.json` hay que colocarlo en la carpeta `resources` del proyecto (`src/main/resources`).
+
+Debido a que el fichero de configuración está en `json`, hay que añadir las siguientes dependencias al proyecto:
+
+<pre lang="xml">&lt;dependency>
+    &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>
+    &lt;artifactId>jackson-core&lt;/artifactId>
+    &lt;version>2.2.2&lt;/version>
+&lt;/dependency>
+
+&lt;dependency>
+    &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>
+    &lt;artifactId>jackson-databind&lt;/artifactId>
+    &lt;version>2.2.2&lt;/version>
+&lt;/dependency>
+</pre>
+
+## Ejemplo de uso
+
+Crearemos una clase básica a modo de ejemplo:
+
+<pre lang="java">import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+/**
+ *
+ * @author Elbauldelprogramador.com
+ */
+public class EjemploLog4j2 {
+
+    private static final Logger LOGGER = LogManager.getLogger(EjemploLog4j2.class);
+
+    public static void main(String[] args) {
+        LOGGER.trace("Log level trace");
+        LOGGER.debug("Log level debug");
+        LOGGER.info("Log level info");
+        LOGGER.warn("Log level warn");
+        LOGGER.error("Log level error");
+        LOGGER.fatal("Log level fatal");
+    }
+}
+</pre>
+
+Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log coloreados, como se muestra en la imagen:
+
+<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1" width="364" height="89" class="aligncenter size-full wp-image-2555" />
+
+## Establecer un nivel de log por defecto en toda la aplicación
+
+Cuando depuremos, será útil que aparezcan todos los niveles de log en la consola, desde *fatal* hasta *trace*. Pero en producción sería conveniente loggear únicamente eventos a un nivel determinado, por ejemplo, a partir de `warn`. Para ello podemos crear ésta función que encontré en [SO][3]:
+
+<pre lang="java">/**
+ * Credit: http://stackoverflow.com/a/18409096/1612432
+ *
+ * @param l The log level to set
+ */
+public static void setLogLevel(Level l) {
+    LOGGER.info("Setting log level to " + l.name());
+    LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
+    Configuration conf = ctx.getConfiguration();
+    conf.getLoggerConfig(LogManager.ROOT_LOGGER_NAME).setLevel(l);
+    ctx.updateLoggers(conf);
+}
+</pre>
+
+Para establecer un nivel básta con llamar a la función así `setLogLevel(Level.ERROR)`. Con lo cual, sólo aparecerían los niveles `error` y `fatal`. La clase quedaría así:
+
+<pre lang="java">import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.Configuration;
+
+/**
+ *
+ * @author Elbauldelprogramador.com
+ */
+public class EjemploLog4j2 {
+
+    private static final Logger LOGGER = LogManager.getLogger(EjemploLog4j2.class);
+
+    public static void main(String[] args) {
+        setLogLevel(Level.ERROR);
+        LOGGER.trace("Log level trace");
+        LOGGER.debug("Log level debug");
+        LOGGER.info("Log level info");
+        LOGGER.warn("Log level warn");
+        LOGGER.error("Log level error");
+        LOGGER.fatal("Log level fatal");
+    }
+
+    /**
+     * Credit: http://stackoverflow.com/a/18409096/1612432
+     *
+     * @param l The log level to set
+     */
+    public static void setLogLevel(Level l) {
+        LOGGER.info("Setting log level to " + l.name());
+        LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
+        Configuration conf = ctx.getConfiguration();
+        conf.getLoggerConfig(LogManager.ROOT_LOGGER_NAME).setLevel(l);
+        ctx.updateLoggers(conf);
+    }
+}
+</pre>
+
+<img src="http://elbauldelprogramador.com/content/uploads/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434" height="49" class="aligncenter size-full wp-image-2556" />
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Configurar Log4j2 en Netbeans, un logger para Java+http://elbauldelprogramador.com/configurar-log4j2-en-netbeans-un-logger-para-java/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/configurar-log4j2-en-netbeans-un-logger-para-java/&t=Configurar Log4j2 en Netbeans, un logger para Java+http://elbauldelprogramador.com/configurar-log4j2-en-netbeans-un-logger-para-java/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Configurar Log4j2 en Netbeans, un logger para Java+http://elbauldelprogramador.com/configurar-log4j2-en-netbeans-un-logger-para-java/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: https://logging.apache.org/log4j/2.x/maven-artifacts.html
+ [2]: http://logging.apache.org/log4j/2.0/manual/layouts.html
+ [3]: http://stackoverflow.com/a/18409096/1612432

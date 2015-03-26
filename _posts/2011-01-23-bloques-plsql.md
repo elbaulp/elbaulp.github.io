@@ -1,0 +1,130 @@
+---
+id: 101
+title: Bloques PL/SQL
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.org/bloques-plsql/
+permalink: /bloques-plsql/
+blogger_blog:
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+blogger_author:
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+blogger_permalink:
+  - /2011/01/bloques-plsql.html
+  - /2011/01/bloques-plsql.html
+  - /2011/01/bloques-plsql.html
+categories:
+  - BaseDeDatos
+---
+<div class="icosql">
+</div>
+
+Los bloques PL/SQL son de varios tipos:
+
+  * **Anónimos (Anonymous blocks).** Se construyen de forma dinámica y se ejecutan una sola vez.
+  * **Con nombre (Named blocks).** Son bloques con nombre, que al igual que el anterior se construyen, generalmente, de forma dinámica y se ejecutan una sola vez.
+  * **Subprogramas.** Procedimientos, paquetes o funciones almacenados en la BD. No suelen cambiar después de su construcción y se ejecutan múltiples veces mediante una llamada call.
+  * Disparadores(Triggers). Son bloques con nombre que también se almacenan en la BD. Tampoco suelen cambiar después de su construcción y se ejecutan varias veces. Se ejecutan de forma automática ante algún suceso de disparo, que será una orden del lenguaje de manipulación de datos (INSERT, UPDATE o DELETE) que se ejecuta sobre una tabla de la BD. 
+
+  
+<!--more-->
+
+  
+Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas:
+
+  * La **sección declarativa** en donde se declaran todas las constantes y variables que se van a utilizar en la ejecución del bloque. Esta sección es opcional.
+  * La **sección de ejecución** que incluye las instrucciones a ejecutar en el bloque PL/SQL. Estas instrucciones pueden ser tanto de tipo DML como DDL, así como ordenes procedimentales. Esta es la única sección que es obligatoria.
+  * La **sección de excepciones** en donde se definen los manejadores de errores que soportará el bloque PL/SQL. Esta sección es opcional y no se ejecutará a menos que aparezca un error.
+
+Cada una de las partes anteriores se delimita por una palabra reservada, de modo que un bloque  
+PL/SQL se puede representar como sigue:
+
+<pre lang="plsql">[DECLARE
+  Declaración de variables] <span class="comentario">/*Parte declarativa*/</span>
+BEGIN
+  Sentencias SQL y PL/SQL <span class="comentario">/*Parte de ejecucion*/</span>
+[EXCEPTION
+  Manejadores de excepciones] <span class="comentario">/*Parte de excepciones*/</span>
+END;
+
+</pre>
+
+Un bloque anónimo es aquel bloque que no tiene asignado un nombre.
+
+<pre lang="plsql">SET SERVEROUTPUT ON;
+
+DECLARE
+  A VARCHAR(10) := '';
+BEGIN
+  SELECT TO_CHAR(SYSDATE) INTO A FROM DUAL;
+  DBMS_OUTPUT.PUT_LINE('LA FECHA ACTUAL ES : ' || A);
+EXCEPTION
+  WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('HOLA');
+END;
+</pre>
+
+Para que la salida pueda verse al ejecutar el programa tiene que estar activa la siguiente variable:
+
+<pre lang="plsql">SET SEVEROUTPUT ON;</pre>
+
+Para mostrar el contenido de una expresión se debe utilizar la sentencia:
+
+<pre lang="plsql">DBMS_OUTPUT.PUT_LINE (cadena_caracteres);</pre>
+
+
+
+* * *
+
+#### Siguiente Tema: [PL/SQL &#8211; Declaración de variables][1] {.referencia}
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Bloques PL/SQL+http://elbauldelprogramador.com/bloques-plsql/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/bloques-plsql/&t=Bloques PL/SQL+http://elbauldelprogramador.com/bloques-plsql/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Bloques PL/SQL+http://elbauldelprogramador.com/bloques-plsql/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/

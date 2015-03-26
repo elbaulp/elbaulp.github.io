@@ -1,0 +1,165 @@
+---
+id: 1780
+title: Cómo cifrar archivos con openssl
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.com/?p=1780
+permalink: /como-cifrar-archivos-con-openssl/
+categories:
+  - Administración de Servidores
+  - seguridad
+tags:
+  - cifrar copias de seguridad con openssl
+  - cifrar tar con openssl
+  - comandos openssl
+---
+<img src="http://elbauldelprogramador.com/content/uploads/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="Homomorphic Encryption" width="256" height="256" class="thumbnail alignleft size-full wp-image-1016" alt=""Cómo cifrar archivos con openssl title="Cómo cifrar archivos con openssl"/>  
+Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**.  
+  
+<!--more-->
+
+### Generar las claves públicas y privadas
+
+Al igual que en [GPG][1], necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:
+
+<pre lang="bash">$ openssl genrsa -out clave.pem 4096
+$ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
+</pre>
+
+Con el primer comando generamos la clave, en *clave.pem* se encuentran tanto la clave privada como la pública, con el segundo comando extraemos la pública a un archivo distinto.
+
+### Método elegido para cifrar los archivos
+
+El sistema de claves pública/privada no puede cifrar archivos de gran tamaño. Por tanto usaremos un <a href="http://es.wikipedia.org/wiki/Criptograf%C3%ADa_sim%C3%A9trica" target="_blank">cifrado simétrico</a> para el cifrado normal. Cada vez que cifremos un fichero se usará una clave simétrica generada aleatoriamente. Esta clave simétrica es la que **cifraremos de forma <a href="http://es.wikipedia.org/wiki/Criptograf%C3%ADa_asim%C3%A9trica" target="_blank">asimétrica</a>** con la **llave pública** que hemos generado con los comandos de arriba. En resumen:
+
+##### Para cifrar los archivos
+
+  1. Generamos una clave aleatoriamente, de gran longitud (40-50 caracteres por ejemplo).
+  2. Ciframos el archivo con la clave generada en 1.
+  3. Ciframos la clave generada en 1 con nuestra clave pública.
+
+##### Para descifrar los archivos
+
+  1. Desciframos la clave generada en 1 y cifrada con la llave pública en 3
+  2. Desciframos el archivo con la clave que acabamos de descifrar en 1
+
+### Aplicar los pasos con openssl
+
+Ahora procedemos a aplicar los pasos descritos anteriormente con openssl:
+
+##### Cifrando los archivos
+
+<pre lang="bash"># Paso 1, generar clave aleatoria
+$ openssl rand -base64 48 -out key.txt
+# Paso 2, cifrar el archivo con la clave simétrica
+$ openssl enc -aes-256-cbc -pass file:key.txt -in archivoSINcifrar -out archivoCIFRADO.encrypted
+# Paso 3, cifrar la clave generada en el paso 1 con la llave pública
+$ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin
+</pre>
+
+Los argumentos significan:
+
+  * **enc -aes-256-cbc:** Tipo de cifrado simétrico.
+  * **-pass file:key.txt:** La clave con la que cifrar el archivo.
+  * **-in:** Fichero de entrada.
+  * **-out:** Fichero de salida.
+  * **rsautl:** Indica que vamos a usar RSA para firmar, verificar, cifrar o descifrar.
+  * **-encrypt:** Encriptar el fichero de entrada con una llave RSA pública.
+  * **-inkey:** Llave con la que cifrar
+  * **-pubin:** Indica que vamos a firmar con una llave pública.
+
+##### Descifrado de archivos
+
+<pre lang="bash"># Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3
+$ openssl rsautl -decrypt -inkey ./clave.pem -in key.enc -out key.txt
+# Paso 2, Descifrar el archivo con la clave
+$ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -out archivoSINcifrar
+</pre>
+
+Donde:
+
+  * **-d:** Descifra los datos de entrada.
+
+### Script para descifrar varios archivos de una vez 
+
+Como suele ser habitual, los [scripts bash][2] nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un **script** que automatize el proceso de descrifrar todos los archivos de un directorio:
+
+<pre lang="bash">#/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 &lt;Directorio a los archivos cifrados>"
+    exit
+fi
+
+openssl rsautl -decrypt -inkey ./clave.pem -in "$1/key.enc" -out "$1/key.txt"
+echo "openssl rsautl -decrypt -inkey ./clave.pem -in \"$1/key.enc\" -out \"$1/key.txt\""
+
+OIFS="$IFS"
+IFS=$'\n'
+
+
+for i in `find $1 -type f -name "*.encrypted"`
+do
+    echo "Decrypting $1/$i"
+    openssl enc -aes-256-cbc -d -pass file:"$1/key.txt" -in "$i" -out $1/$(basename "$i" .encrypted)
+done
+
+IFS="$OIFS"
+</pre>
+
+Espero que os sea de utilidad.
+
+#### Referencias
+
+*Encrypt tar.gz file on create* **|** <a href="http://askubuntu.com/questions/95920/encrypt-tar-gz-file-on-create/96182#96182" target="_blank">askubuntu.com</a>  
+*how to encrypt a large file in openssl using public key* **|** <a href="http://stackoverflow.com/questions/7143514/how-to-encrypt-a-large-file-in-openssl-using-public-key" target="_blank">stackoverflow.com</a>  
+*Documentación oficial de openssl* **|** <a href="http://www.openssl.org/docs/apps/openssl.html" target="_blank">Visitar sitio</a>
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Cómo cifrar archivos con openssl+http://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&t=Cómo cifrar archivos con openssl+http://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Cómo cifrar archivos con openssl+http://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://elbauldelprogramador.com/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
+ [2]: http://elbauldelprogramador.com/category/script/

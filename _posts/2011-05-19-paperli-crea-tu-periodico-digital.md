@@ -1,0 +1,108 @@
+---
+id: 195
+title: 'Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook'
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.org/paper-li-crea-tu-periodico-digital-automaticamente-con-lo-mas-relevante-de-twitter-y-facebook/
+permalink: /paperli-crea-tu-periodico-digital/
+blogger_blog:
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+blogger_author:
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+blogger_permalink:
+  - /2011/05/paperli-crea-tu-periodico-digital.html
+  - /2011/05/paperli-crea-tu-periodico-digital.html
+  - /2011/05/paperli-crea-tu-periodico-digital.html
+categories:
+  - internet
+  - noticias
+---
+<div class="iconews">
+</div>
+
+Gracias a un usuario de Twitter (@joanballester), he descubierto esta web que permite generar un periódico a tu gusto.
+
+Básicamente esta web recopila información en twitter y facebook siguiendo unas directrices que configuramos, para crear un periódico con toda esa información. (Siempre se nombra al autor original y para leer la noticia completa hay que dirigirse a la fuente original)
+
+Los pasos a seguir para crear nuestro periódico son simples.
+
+Primero entramos en [paper.li][1], nos registramos y clicamos en **Create a paper**. Ahora entramos directamente a configurar el contenido del periódico, agregamos todo lo que queramos pulsando en ellos y tendremos lo siguiente:
+
+  
+<!--more-->
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s1600/paper.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="259" width="400" src="http://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s400/paper.png" /></a>
+</div>
+
+Hay variar formas de agregar contenido al periódico:
+
+La primera, **Single Twitter user**: Publicaremos todo lo que el usuario de twitter que introduzcamos escriba en su twitter, podemos añadir un filtro para publicar solo los tweets que coincidan con esas palabras clave.
+
+**Me & the people I follow**, igual que el anterior, pero en este caso debemos poner nuestro usuario de twitter, Por ejemplo, si señaláis esta opción, me seguís en twitter ([@bashycblog][2]) y agregáis como palabras clave *linux, programacion*, es muy probable que en vuestro periódico aparezcan entradas de este blog, ya que todas las entradas que se publican de este blog en twitter contienen esas palabras clave.
+
+**Twitter #tag**, Filtrar por tags de twitter (solo permite una, no conozco la razón.)
+
+**Keywords on Twitter**, igual que las dos primeras, pero en este caso de cualquier usuario en twitter.
+
+**Keywords on Facebook**, igua que la de arriba pero en facebook.</p> 
+
+Por último os dejo una captura del periódico que cree, y la dirección, [Bashyc Paper][3]
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s1600/peperbashyc.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="343" width="400" src="http://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s400/peperbashyc.png" /></a>
+</div>
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook+http://elbauldelprogramador.com/paperli-crea-tu-periodico-digital/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/paperli-crea-tu-periodico-digital/&t=Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook+http://elbauldelprogramador.com/paperli-crea-tu-periodico-digital/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook+http://elbauldelprogramador.com/paperli-crea-tu-periodico-digital/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://paper.li/
+ [2]: https://twitter.com/#!/bashycBlog
+ [3]: http://paper.li/bashycBlog/1305713883

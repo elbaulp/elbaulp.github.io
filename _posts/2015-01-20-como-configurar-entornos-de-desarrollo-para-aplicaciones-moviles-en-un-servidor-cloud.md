@@ -1,0 +1,591 @@
+---
+id: 2534
+title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.com/?p=2534
+permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
+categories:
+  - JavaScript
+tags:
+  - api restfull nodejs
+  - crear api con nodejs
+  - crear base de datos mongodb
+  - tutorial express
+---
+En un [artículo anterior][1] se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.
+
+Para conseguir nuestro objetivo necesitaremos **Node.js**, **Express** y **mongodb**. Usaremos el servicio [cloudbuilder de Arsys][2].
+
+La razón de usar un servicio cloud es muy sencilla, éstos entornos ofrecen la flexibilidad necesaria para escalar nuestra plataforma en cualquier momento, sin tener que embarcarnos nosotros mismos en instalar y configurar más servidores dedicados, y se paga en función de las horas de uso. A medida que los requisitos de nuestro sistema aumentan, es posible incrementar las capacidades de nuestros servidores únicamente desplazando una barrita que diga cuanta RAM más necesitamos, cuantos cores, cuantos servidores&#8230; Así de sencillo.
+
+Otra ventaja viene dada a la hora de hacer pruebas, ya que se puede crear un entorno de prueba en minutos, sin necesidad de afectar al entorno estable.
+
+<!--more-->
+
+## Crear el servidor
+
+### Crear el tipo de servidor
+
+En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
+
+<img src="http://elbauldelprogramador.com/content/uploads/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817" height="448" class="aligncenter size-full wp-image-2526" />
+
+### Configurar la capacidad del servidor
+
+Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
+
+<img src="http://elbauldelprogramador.com/content/uploads/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817" height="575" class="aligncenter size-full wp-image-2527" />
+
+### Establecer la contraseña de usuario
+
+Por último, solo resta proporcionar una contraseña al usuario **root**.
+
+<img src="http://elbauldelprogramador.com/content/uploads/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815" height="581" class="aligncenter size-full wp-image-2528" />
+
+## Instalar Node.js
+
+Descargamos el binario de su [página web][3], descomprimimos el fichero y listo. En linux estaría bien añadir la carpeta `bin` al `PATH` para que sea accesible desde cualquier lugar en la terminal.
+
+## Descripción de la API
+
+Para éste ejemplo, la API que vamos a crear será muy sencilla, consistirá en:
+
+  * Manejo de operaciones CRUD para elementos en la base de datos
+  * Dos URLs `http://example.com/api/articles` y `http://example.com/api/articles/:id_articulo`.
+  * Se usarán los nombres convencionales HTTP (`GET` `POST`, `PUT` y `DELETE`).
+  * Los datos se devolverán en formato JSON.
+
+## Estructura del directorio de trabajo
+
+Debido a la simplicidad de la API, gran parte del código, incluídas las rutas estarán en el fichero `server.js`. A medida que incrementa el tamaño del código, lo ideal es crear un fichero propio para las rutas. La estructura será la siguiente:
+
+<pre lang="bash">- app/
+----- models/
+---------- article.js  // Modelo para el artículo
+- node_modules/        // Lo crea npm, mantiene las dependencias/paquetes
+- package.json         // Dependencias de la aplicación
+- server.js            // Configuración de la app y definición de rutas
+</pre>
+
+## Definir los paquetes necesarios
+
+En Node.js es necesario especificar los paquetes necesarios en el fichero `package.json`, los necesarios en éste caso son:
+
+<pre lang="json">{
+  "name": "node-api",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongoose": "~3.6.13",
+    "body-parser": "~1.0.1"
+  }
+}
+</pre>
+
+  * `express` es el framework de Node.
+  * `mongoose` el ORM que usaremos para comunicarnos con la base de datos MongoDB.
+  * `body-parser` permitirá extraer el contenido de las peticiones HTTP POST para poder hacer cosas como crear nuevos artículos.
+
+## Instalar los paquetes Node
+
+Tan simple como
+
+<pre lang="bash">$ npm install
+</pre>
+
+en el directorio donde está `package.json`.
+
+## Configurar el servidor
+
+Para ello editaremos el fichero `server.js` con lo siguiente:
+
+<pre lang="javascript">// CONFIGURACIÓN BÁSICA
+// =============================================================================
+
+// Paquetes necesarios
+var express    = require('express');        // Express
+var app        = express();                 // Nuestra app usará Express
+var bodyParser = require('body-parser');
+
+// Configurar la app para que use bodyParser, como se mencionó arriba
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+var port = process.env.PORT || 8080;        // Escuchará en el puerto 8080
+
+// RUTAS PARA LA API
+// =============================================================================
+var router = express.Router();              // Obtener una instancia del router express
+
+// Ruta de prueba para comprobar que todo funciona correcto (acceder con GET http://localhost:8080/api)
+router.get('/', function(req, res) {
+  res.json({ message: 'Hola desde la API!!' });
+  });
+
+  // El resto de rutas se escribirán aquí
+
+  // Registrar rutas -------------------------------
+  // Todas irán precedidas de /api
+  app.use('/api', router);
+
+  // INICIAR EL SERVIDOR
+  // =============================================================================
+  app.listen(port);
+  console.log('La magia ocurre en el puerto ' + port);
+</pre>
+
+## Iniciar el servidor
+
+Basta con ejecutar:
+
+<pre lang="bash">$ node server.js
+</pre>
+
+Deberá aparecer: `La magia ocurre en el puerto 8080`.
+
+### Probar la API
+
+Para comprobar que la API está funcionando correctamente, podemos usar `curl` y realizar una petición al servidor:
+
+<pre lang="bash">$ curl -X GET http://ip-servidor/api
+</pre>
+
+Debería devolvernos `{ message: "Hola desde la API!!" }`
+
+# Segundo ejemplo con base de datos MongoDB
+
+Ahora que tenemos una aplicación sencilla, crearemos un modelo para la base de datos, que almacenará el nombre de un artículo y su precio. Pero antes de ello, suponiendo que ya tenemos instalado *MongoDB*, creamos la base de datos con los siguientes comandos (Dentro del shell de Mongo):
+
+<pre lang="bash">use articulosDB
+switched to db articulosDB
+j = { name : "Lampara", price: 10 }
+{ "name" : "Lampara", "price" : 10 }
+ db.articulos.insert(j)
+</pre>
+
+Tras esto, tenemos la base de datos creada con un elemento. Pasemos a crear la conexión entre la base de datos y Node.
+
+## Conectar MongoDB con Node.js
+
+Al tener creada la base de datos, podemos conectarnos a ella mediante una URI, con el siguiente formato
+
+<pre lang="bash">mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]</pre>
+
+en nuestro caso, el código a añadir en el fichero `server.js` sería:
+
+<pre lang="bash">// ..
+var mongoose   = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017//articulosDB');
+// ..
+</pre>
+
+## Crear el modelo para la base de datos
+
+Consiste en representar los datos almacenados en la base de datos, para nuestro caso, será:
+
+<pre lang="javascript">// app/models/article.js
+
+var mongoose     = require('mongoose');
+var Schema       = mongoose.Schema;
+
+var ArticleSchema   = new Schema({
+    name: String,
+    cost: Number
+});
+
+module.exports = mongoose.model('Article', ArticleSchema);
+</pre>
+
+Solo resta añadir el modelo al fichero `server.js` con
+
+<pre lang="javascript">var Article = requiere('./app/models/article')</pre>
+
+A partir de ahora, la aplicación está lista para interactuar con la base de datos. Pasemos a escribir el resto de rutas para la API.
+
+## Router Express y rutas
+
+Una breve descripción de lo que se usará:
+
+|           Ruta            | Verbo HTTP |              Descripción               |
+|:-------------------------:|:----------:|:--------------------------------------:|
+|       /api/articles       |   `GET`    |      Devolver todos los artículos      |
+|       /api/articles       |   `POST`   |           Crear un artículo            |
+| /api/articles/:article_id |   `GET`    |  Obtener artículo con ID especificado  |
+| /api/articles/:article_id |   `PUT`    | Modificar artículo con ID especificado |
+| /api/articles/:article_id |  `DELETE`  | Eliminar artículo con ID especificado  |
+
+## Middleware para las rutas
+
+Para registrar todo lo que pasa en la API, estableceremos un *Middleware* por el que pasarán todas las peticiones antes de ser procesadas.
+
+<pre lang="javascript">router.use(function(req, res, next) {
+  console.log('Recibida peticion de ' +  req.ip);
+  next(); // make sure we go to the next routes and don't stop here
+});
+</pre>
+
+`next()` es necesario para indicar que la aplicación deberá continuar procesando otras rutas, de no añadirlo, la aplicación se dentendría ahí.
+
+Empezaremos creando las rutas que para devolver todos los artículos de la base de datos y para crear un artículo nuevo. Ambas se realizarán sobre la ruta `/api/articles`. Empezaremos con crear artículos.
+
+### Crear un artículo
+
+Para ello, necesitamos poder gestionar peticiones `POST`:
+
+<pre lang="javascript">router.route('/articles')
+
+  // create an article (accessed at POST http://localhost:8080/api/articles)
+  .post(function(req, res) {
+      var article = new Article(); // create a new instance of the Article model
+      article.name = req.body.name; // set the articles name (comes from the request)
+      article.cost = req.body.cost;
+
+      // save the article and check for errors
+      article.save(function(err) {
+        if (err)
+          res.send(err);
+
+        res.json({
+          message: 'Article created!'
+        });
+      });
+  });
+</pre>
+
+Para probrala, basta con enviar una petición `POST`, con `curl` por ejemplo:
+
+<pre lang="bash">$ curl -H "Content-Type: application/json" -d '{"name":"Articulo1",  "cost":100}' -X POST http://ip.servidor:8080/api/articles
+
+{"message":"Article created!"}
+</pre>
+
+### Obtener todos los artículos
+
+En la misma ruta que antes, pero ahora usando el método `GET`, devolveremos al cliente todos los artículos existentes en la base de datos.
+
+<pre lang="javascript">.get(function(req, res) {
+    Article.find(function(err, articles) {
+
+      if (err)
+        res.send(err);
+      if (articles == '')
+        res.json({
+          message: 'There is no data!'
+        });
+
+      res.json(articles);
+    });
+  });
+</pre>
+
+Para probarla, enviamos una petición `GET` a la misma ruta (`/api/articles`):
+
+<pre lang="json">curl -X GET http://ip.servidor:8080/api/articles/ | python -mjson.tool
+[
+    {
+        "__v": 0,
+        "_id": "54a90d91548e4fd207000002",
+        "cost": 1.99,
+        "name": "Lamp"
+    },
+    {
+        "__v": 0,
+        "_id": "54aa901312bf8f4207000001",
+        "cost": 100,
+        "name": "Articulo1"
+    }
+]
+</pre>
+
+## Crear rutas para elementos individuales
+
+Hasta ahora, se han manejado el grupo de rutas acabado en `/articles`. A continuación crearemos las rutas para manejar peticiones que contengan parámetros, como el identificador de artículo. Serán de la forma `/articles/:article_id` y harán cosas como:
+
+  * Obtener un artículo por ID.
+  * Actualizar los datos de un artículo.
+  * Eliminar un artículo.
+
+### Obtener un único artículo
+
+Se añadirá otra ruta que maneje las peticiones con el parámetro `:article_id`:
+
+<pre lang="javascript">router.route('/articles/:article_id')
+   .get(function(req, res) {
+    Article.findById(req.params.article_id, function(err, article) {
+      if (err)
+        res.send(err);
+      res.json(article);
+    });
+  });
+</pre>
+
+Y para probralo, podemos escoger alguno de los ids devueltos en la consulta anterior, por ejemplo `54aa901312bf8f4207000001`:
+
+<pre lang="bash">curl -X GET http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
+{
+    "__v": 0,
+    "_id": "54aa901312bf8f4207000001",
+    "cost": 100,
+    "name": "Articulo1"
+}
+</pre>
+
+### Actualizar datos de un artículo
+
+Para ello, necesitamos añadir el método `PUT`:
+
+<pre lang="javascript">.put(function(req, res) {
+
+  // use our article model to find the article we want
+  Article.findById(req.params.article_id, function(err, article) {
+
+    if (err)
+      res.send(err);
+
+    article.name = req.body.name; // update the articles info
+    article.cost = req.body.cost;
+
+    // save the article
+    article.save(function(err) {
+      if (err)
+        res.send(err);
+
+      res.json({
+        message: 'Article updated!'
+      });
+    });
+
+  });
+})
+</pre>
+
+Una vez ejecutando, es posible actualizar los datos de un artículo proporcionando su ID, usaremos el mismo de antes:
+
+<pre lang="bash">curl -H "Content-Type: application/json" -d '{"name":"Articulo Modificado",  "cost":5.90}' -X PUT http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
+{
+    "message": "Article updated!"
+}
+</pre>
+
+### Eliminar un artículo
+
+Por último, falta crear el método `DELETE` para eliminar artículos de la base de datos:
+
+<pre lang="javascript">.delete(function(req, res) {
+  Article.remove({
+    _id: req.params.article_id
+  }, function(err, article) {
+    if (err)
+      res.send(err);
+
+    res.json({
+      message: 'Successfully deleted'
+    });
+  });
+});
+</pre>
+
+Borremos el elemento con el ID usado hasta ahora:
+
+<pre lang="bash">curl -X DELETE http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 | python -mjson.tool
+{
+    "message": "Successfully deleted"
+}
+
+</pre>
+
+## Conclusión
+
+Queda bastante claro lo sencillo que es crear una API RESTful con *Node.js* y espero que el lector haya disfrutado del artículo. A continuación dejo el código completo del fichero `server.js`:
+
+# Código completo
+
+<pre lang="javascript">// Thanks to https://scotch.io/tutorials/build-a-restful-api-using-node-and-expre
+
+// BASE SETUP
+// =============================================================================
+// call the packages we need
+var express = require('express'); // call express
+var app = express(); // define our app using express
+var bodyParser = require('body-parser');
+var Article = require('./app/models/article');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/articlesDb'); // connect to our database
+
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
+var port = process.env.PORT || 8080; // set our port
+
+// ROUTES FOR OUR API
+// =============================================================================
+var router = express.Router(); // get an instance of the express Router
+
+// middleware to use for all requests
+router.use(function(req, res, next) {
+  // do logging
+  console.log('Recibida peticion de ' +  req.ip);
+  next(); // make sure we go to the next routes and don't stop here
+});
+
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+router.get('/', function(req, res) {
+  res.json({
+    message: 'hooray! welcome to our api!\n\n'
+  });
+});
+
+// more routes for our API will happen here
+// on routes that end in /articles
+// ----------------------------------------------------
+router.route('/articles')
+
+  // create an article (accessed at POST http://localhost:8080/api/articles)
+  .post(function(req, res) {
+      var article = new Article(); // create a new instance of the Article model
+      article.name = req.body.name; // set the articles name (comes from the request)
+      article.cost = req.body.cost;
+
+      // save the article and check for errors
+      article.save(function(err) {
+        if (err)
+          res.send(err);
+
+        res.json({
+          message: 'Article created!'
+        });
+      });
+  })
+  // get all the articles (accessed at GET http://localhost:8080/api/articles)
+  .get(function(req, res) {
+    Article.find(function(err, articles) {
+
+      if (err)
+        res.send(err);
+      if (articles == '')
+        res.json({
+          message: 'There is no data!'
+        });
+
+      res.json(articles);
+    });
+  });
+
+// on routes that end in /articles/:article_id
+// ----------------------------------------------------
+router.route('/articles/:article_id')
+
+  // get the article with that id (accessed at GET http://localhost:8080/api/articles/:article_id)
+  .get(function(req, res) {
+    Article.findById(req.params.article_id, function(err, article) {
+      if (err)
+        res.send(err);
+      res.json(article);
+    });
+  })
+  // update the article with this id (accessed at PUT http://localhost:8080/api/articles/:article_id)
+  .put(function(req, res) {
+
+    // use our article model to find the article we want
+    Article.findById(req.params.article_id, function(err, article) {
+
+      if (err)
+        res.send(err);
+
+      article.name = req.body.name; // update the articles info
+      article.cost = req.body.cost;
+
+      // save the article
+      article.save(function(err) {
+        if (err)
+          res.send(err);
+
+        res.json({
+          message: 'Article updated!'
+        });
+      });
+
+    });
+  })
+  // delete the article with this id (accessed at DELETE http://localhost:8080/api/articles/:article_id)
+  .delete(function(req, res) {
+    Article.remove({
+      _id: req.params.article_id
+    }, function(err, article) {
+      if (err)
+        res.send(err);
+
+      res.json({
+        message: 'Successfully deleted'
+      });
+    });
+  });
+
+// REGISTER OUR ROUTES -------------------------------
+// all of our routes will be prefixed with /api
+app.use('/api', router);
+
+// START THE SERVER
+// =============================================================================
+app.listen(port);
+console.log('Magic happens on port ' + port);
+</pre>
+
+#### Referencias
+
+*scotch.io* **|** <a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4" target="_blank">Build a RESTful API Using Node and Express 4</a> 
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud+http://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/&t=Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud+http://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud+http://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/ "Cómo desarrollar aplicaciones en un servidor Cloud"
+ [2]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm_medium=baul&utm_term=appmovil&utm_content=online&utm_campaign=cloud "Arsys cloudbuilder"
+ [3]: http://nodejs.org/download/

@@ -1,0 +1,158 @@
+---
+id: 713
+title: Introducción a las expresiones regulares en python
+author: Alejandro Alcalde
+layout: post
+guid: /?p=713
+permalink: /introduccion-a-las-expresiones-regulares-en-python/
+sif_eo_description:
+  - Tutorial sobre expresiones regulares en python
+  - Tutorial sobre expresiones regulares en python
+if_seo_keywords:
+  - re python, regexp python, expresiones regulares python
+  - re python, regexp python, expresiones regulares python
+if_slider_image:
+  - 
+  - 
+categories:
+  - python
+tags:
+  - ejemplos de expresiones regulares
+  - expresiones regulares
+  - probar expresiones regulares
+  - python
+  - regexp
+---
+En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).
+
+Son recopilaciones que he hecho durante el curso de *Programming languages *[en udacity][1] y voy a intentar explicarlos lo más claramente posible.
+
+Lo primero que hay que hacer para usar expresiones regulares es importar el módulo **re **de python con ***import re***
+
+Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:  
+<!--more-->
+
+<pre lang="python">regex = r'[a-z]+-?[a-z]+'</pre>
+
+La expresión de arriba considerará válida cualquier cadena que empieze con una o más letras (*[a-z]+*), seguido de un guión, que es opcional, es decir, puede aparecer o no en la cadena (*-?*) seguido nuevamente de uno o más caracteres de la **a **a la **z**, en minúsculas.
+
+Algunos casos de ejemplo son los siguientes:
+
+<pre lang="python"># Ejemplos válidos:
+print re.findall(regexp,"well-liked") == ["well-liked"]
+#>>> True
+print re.findall(regexp,"html") == ["html"]
+#>>> True
+# Ejemplos no válidos:
+print re.findall(regexp,"a-b-c") != ["a-b-c"]
+#>>> True
+print re.findall(regexp,"a--b") != ["a--b"]
+#>>> True</pre>
+
+La primera expresión de los ejemplos no válidos no es correcta ya que el segundo guión no es esperado por la expresión regular, en el segundo ejemplo, ocurre lo mismo.
+
+El siguiente ejemplo servirá para coincidir con cadenas que representen funciones matemáticas de un solo parámetro:
+
+<pre lang="python">regexp = r"[a-z]+( *[0-9]+ *)"</pre>
+
+Esto encontrará cadenas que empiecen con una o más letras (*[a-z]+*)*, *tenemos que escapar los paréntesis para que los tome como algo que queremos que forme parte de la cadena, ya que los paréntesis tienen un significado especial en la expresiones regulares, los escapamos con , despues buscamos por cero o más espácios ( *) seguidos de números (*[0-9]+*) y nuevamente cero o más espacios.
+
+Ejemplos:
+
+<pre lang="python"># Ejemplos válidos
+print re.findall(regexp,"cos(0)") == ["cos(0)"]
+#>>> True
+print re.findall(regexp,"sqrt(   2     )") == ["sqrt(   2     )"]
+#>>> True
+# Ejemplos no válidos
+print re.findall(regexp,"cos     (0)") != ["cos     (0)"]
+#>>> True
+print re.findall(regexp,"sqrt(x)") != ["sqrt(x)"]
+#>>> True
+</pre>
+
+Como vemos, el primer ejemplo no válido precisamente no es válido porque no permitimos espacios entre el nombre de la función y los paréntesis. El segundo es erróneo porque el parámetro es una letra en lugar de un número.
+
+Veamos otro más, esta vez queremos encontrar cadenas que contengan caracteres de escape () y comillas
+
+<pre lang="python">regexp = r'"(?:[^\]|(?:\.))*"'
+</pre>
+
+En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (*r&#8217;""&#8217;*), lo que encontremos, lo vamos a encontrar cero o más veces (*r'&#8221;(?:)*&#8221;&#8216;*), **(?:)** coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que **no** sea un , y nótese que debemos escaparlo (*r'&#8221;(?:[^\])*&#8221;&#8216;*) **ó (*|*)** un seguido de cualquier caracter  
+(*r'&#8221;(?:[^\]|(?:\.))*&#8221;&#8216;*)
+
+Ejemplos:
+
+<pre lang="python">regexp = r'"(?:[^\]|(?:\.))*"' 
+#  Ejemplos válidos:
+print re.findall(regexp,'"I say, \"hello.\""') == ['"I say, \"hello.\""']
+#>>> True
+#  Ejemplos no válidos:
+print re.findall(regexp,'"\"') != ['"\"']
+#>>> True
+</pre>
+
+Por último una expresión regular que coincidirá con todas las cadenas que estén entre dobles comillas:
+
+<pre lang="python">regexp = r'"[^"]*"'
+</pre>
+
+Con esta expresión buscamos cadenas que empiecen y acaben obligatóriamente con **&#8220;** (*r'&#8221;&#8221;&#8216;*), no pueden contener ningún caracter **&#8220;** entre la cadena (*r'&#8221;[^&#8221;]&#8221;&#8216;*), finalmente, daremos por buena la cadena que cumpla esto con cualquier caracter cero o más veces (*r'&#8221;[^&#8221;]*&#8221;&#8216;*)
+
+Ejemplos:
+
+<pre lang="python">#  Ejemplos  válidos:
+print re.findall(regexp,'"cuneiform"')
+print re.findall(regexp,'"sumerian writing"')
+print re.findall(regexp,'""')
+#  Ejemplos no válidos
+print re.findall(regexp,'"esc " ape"')
+</pre>
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Introducción a las expresiones regulares en python+http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&t=Introducción a las expresiones regulares en python+http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Introducción a las expresiones regulares en python+http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: /noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/ "Nuevos Cursos disponibles en Udacity, la universidad online gratuita"

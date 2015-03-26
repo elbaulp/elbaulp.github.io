@@ -1,0 +1,327 @@
+---
+id: 231
+title: 'Programación Android: Trabajar con actividades y pasar parámetros entre ellas'
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.org/programacion-android-trabajar-con-actividades-y-pasar-parametros-entre-ellas/
+permalink: /programacion-android-trabajar-con/
+blogger_blog:
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+blogger_author:
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+blogger_permalink:
+  - /programacion-android-trabajar-con/
+  - /programacion-android-trabajar-con/
+  - /programacion-android-trabajar-con/
+fsb_social_twitter:
+  - 0
+fsb_social_facebook:
+  - 1
+categories:
+  - android
+  - opensource
+tags:
+  - android usar boton para ir a otra actividad
+  - android view setonclicklistener example
+  - curso android pdf
+  - startactivityforresult android example
+---
+<img border="0" src="http://elbauldelprogramador.com/content/uploads/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+
+En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el conocido [Hola Mundo][1], en esta entrada, vamos a ver como crear varias [actividades][2] y cómo hacer que se pasen parámetros las unas a las otras.
+
+El proyecto con este ejemplo está disponible para su descarga (Comentado paso a paso): 
+
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/capitulo2-intents-y-bundles/" rel="nofollow"> Download &ldquo;Capitulo2 Intents Y Bundles&rdquo; <small>capitulo2_intents_y_bundles.zip &ndash; Downloaded 1272 times &ndash; </small> </a>
+
+Voy a explicar un poco por encima que hace cada fichero del proyecto:
+
+  
+<!--more-->
+
+### ./res/layout/main.xml
+
+<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+ 
+ &lt;textview android:id="@+id/textView1" 
+           android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/hello" />
+  
+ &lt;button android:id="@+id/button1" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/cadena1" />
+    
+ &lt;button android:id="@+id/button2" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/cadena2" />
+&lt;/linearlayout>
+
+</pre>
+
+En este layout principal vamos a añadir dos botones que nos servirán para lanzar las nuevas actividades que creemos después.
+
+### ./res/layout/segunda_actividad.xml
+
+<pre lang="xml">&lt; ?xml version="1.0" encoding="utf-8"?>
+&lt;linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:orientation="vertical" 
+ android:layout_width="fill_parent"
+ android:layout_height="fill_parent">
+ 
+ &lt;textview android:id="@+id/textView1" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/cadena1" />
+  
+ &lt;textview android:id="@+id/params" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/hello" />
+  
+ &lt;button android:id="@+id/boton" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/cadena1" />
+  
+&lt;/linearlayout>
+
+</pre>
+
+Este layout vamos a usarlo para mostrar los parámetros que pasemos de una actividad a otra
+
+### ./src/mainActivity.java
+
+<pre lang="java">package com.elbauldelprogramador.actividades;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class mainActivity extends Activity {
+
+   protected static final int REQUEST_CODE = 10;
+
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.main);
+      
+      // Capturamos los objetos gráficos que vamos a usar
+      Button button1 = (Button) findViewById(R.id.button1);
+      Button button2 = (Button) findViewById(R.id.button2);
+
+      // Fijamos un evento onclick para el button1, cada vez que
+      // lo pulsemos se llamará a este método (que abrirá una actividad)
+      button1.setOnClickListener(new OnClickListener() {
+         public void onClick(View v) {
+            Intent intent = new Intent(mainActivity.this, Activity1.class);
+            startActivity(intent);
+         }
+      });
+      
+      //button2 pasará parámetros a otra actividad, y los devolverá
+      button2.setOnClickListener(new OnClickListener() {
+         public void onClick(View v) {
+            Intent intent = new Intent(mainActivity.this, ParametrosActivity.class);
+            
+            // damos valor al parámetro a pasar
+            intent.putExtra("param1", "valor del parámetro 1 (viene de mainActivity)");
+            /*
+             * Inicia una actividad que devolverá un resultado cuando
+             * haya terminado. Cuando la actividad termina, se llama al método
+             * onActivityResult() con el requestCode dado.
+             * El uso de un requestCode negativo es lo mismo que llamar a 
+             * startActivity(intent) (la actividad no se iniciará como una
+             * sub-actividad).
+             */
+            startActivityForResult(intent, REQUEST_CODE);
+         }
+      });
+   }
+
+   /*
+    * Éste método se llama cuando la actividad que iniciamos con un startActivityForResult
+    * finaliza, dandi el REQUEST_CODE con el que llamó, el resultCode se devuelve, junto con
+    * algunos datos adicionales, el resultCode será RESULT_CANCELED si la actividad devuelve
+    * eso explícitamente, si no devuelve ningún resultado o si la operación finalizó de forma inesperada.
+    */
+   @Override
+   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+      super.onActivityResult(requestCode, resultCode, data);
+      if (requestCode == REQUEST_CODE) {
+         // cogemos el valor devuelto por la otra actividad
+         String result = data.getStringExtra("result");
+         // enseñamos al usuario el resultado
+         Toast.makeText(this, "ParametrosActivity devolvió: " + result, Toast.LENGTH_LONG).show();
+      }
+   }
+}
+
+</pre>
+
+En esta clase vamos a modificar el comportamiento de los botones, añadiendoles listeners para cuando el usuario haga click en ellos.
+
+Por último, vamos a crear otras dos actividades, la primera (./src/activity1.java), no va a hacer nada, solo mostrarse. La segunda (./src/ParametrosActivity.java), va a recibir un parámetro y devolver otro.
+
+### ./src/activity1.java
+
+<pre lang="java">package com.elbauldelprogramador.actividades;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class Activity1 extends Activity {
+   /** Called when the activity is first created. */
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.segunda_actividad);
+      
+      // Capturamos los objetos gráficos que vamos a usar
+      TextView text = (TextView) findViewById(R.id.textView1);
+      Button button = (Button) findViewById(R.id.boton);
+      
+      // Agregamos al textView un texto
+      text.setText(R.string.cadena1);
+      
+      // Cambiamos el texto al botón
+      button.setText(R.string.salir);
+      
+      // Evento onclick del botón, cuando se pulse, cerramos la actividad
+      button.setOnClickListener(new OnClickListener() {
+         public void onClick(View v) {
+            finish();
+         }
+      });
+   }
+}
+
+
+</pre>
+
+### ./src/ParametrosActivity.java
+
+<pre lang="java">package com.elbauldelprogramador.actividades;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class ParametrosActivity extends Activity {
+   private static final int OK_RESULT_CODE = 1;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      // TODO Auto-generated method stub
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.segunda_actividad);
+      
+      // Capturamos los objetos gráficos que vamos a usar
+      TextView text = (TextView) findViewById(R.id.textView1);
+      Button button = (Button) findViewById(R.id.boton);
+      TextView params = (TextView) findViewById(R.id.params);
+      
+      text.setText(R.string.cadena2);
+
+      button.setText(R.string.salir);
+      
+      //Al pulsar el botón cerramos la ventana y volveremos a la anterior
+      button.setOnClickListener(new OnClickListener() {
+         public void onClick(View v) {
+            //Cierra la actividad y la saca de la pila
+            returnParams();
+         }
+      });
+      
+      // Mostramos los parámetros recibidos de la actividad mainActivity
+      Bundle reicieveParams = getIntent().getExtras();
+      params.setText(reicieveParams.getString("param1"));
+   }
+
+   protected void returnParams() {
+      Intent intent = new Intent();
+      intent.putExtra("result", "'Valor devuelto por ParametrosActivity'");
+      setResult(OK_RESULT_CODE, intent);
+      finish();
+   }
+}
+
+</pre>
+
+* * *
+
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Conceptos básicos][3] {.referencia}
+
+
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Capitulo2 Intents Y Bundles+http://elbauldelprogramador.com/?post_type=dlm_download&p=2139+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/?post_type=dlm_download&p=2139&t=Capitulo2 Intents Y Bundles+http://elbauldelprogramador.com/?post_type=dlm_download&p=2139+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Capitulo2 Intents Y Bundles+http://elbauldelprogramador.com/?post_type=dlm_download&p=2139+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: /opensource/programacion-android-hola-mundo/
+ [2]: /fundamentos-programacion-android_17/
+ [3]: /programacion-android-interfaz-grafica/

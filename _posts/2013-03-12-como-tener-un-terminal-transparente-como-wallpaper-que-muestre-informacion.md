@@ -1,0 +1,158 @@
+---
+id: 1392
+title: Cómo tener un terminal transparente como wallpaper que muestre información
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.com/?p=1392
+permalink: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/
+categories:
+  - How To
+  - linux
+tags:
+  - comando xrootconsole
+  - eterm
+  - fluxbox
+  - gnome
+  - htop
+  - log
+  - openbox
+  - system logs
+  - terminal
+  - terminal transparente
+  - terminal window
+  - tilda
+  - wallpaper
+  - xrootconsole
+---
+Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:  
+  
+<!--more-->
+
+### xrootconsole
+
+xrootconsole muestra en una ventana transparente el fichero que se le proporcione como entrada (o la entrada estándar stdin). Su objetivo es ser lo más simple posible y consumir pocos recursos. Este programa no es interactivo, por lo que solo servirá para mostrar información y nada más. Un ejemplo de uso:
+
+<pre lang="bash">$ xrootconsole [archivo]
+</pre>
+
+Un ejemplo más completo sería el siguiente:
+
+<pre lang="bash">$ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &#038;
+</pre>
+
+Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo. *&#8211;bottomup* inserta líneas al final. *&#8211;geometry* establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN\_IZQUIERDO+MARGEN\_SUPERIOR*. Puedes obtener más información consultando la ayuda del programa o su manual.
+
+[<img src="http://elbauldelprogramador.com/content/uploads/2013/03/xroot-example-1024x817.jpg" alt="xroot example" width="770" height="614" class="aligncenter size-large wp-image-1469" />][2]{.thumbnail}
+
+En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
+
+<pre lang="bash">#!/bin/bash
+
+while [ 1 ] 
+do
+        ss > /tmp/ss.out
+        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &#038;
+        XROOT_PID=$!
+        sleep 30
+        kill $XROOT_PID
+done
+</pre>
+
+Si decides usar este programa, es probable que quieras agregarlo al [script][4] de inicio de tu entorno de escritorio favorito, como fluxbox, [xmonad][5] u [openbox][6].
+
+Como he mencionado, xrootconsole no es interactivo, si quieres ejecutar algo como htop, necesitas Tilda.
+
+### Tilda
+
+Tilda es una ventana de terminal muy configurable. No tiene bordes y permanece oculta al escritorio hasta que se pulsa una tecla. Lo primero que hay que hacer es instalarlo:
+
+<pre lang="bash">$ sudo aptitude install tilda
+</pre>
+
+Una vez instalado, lo ejecutamos y haremos algunos cambios:
+
+<pre><em>Pestaña General    » desabilita “Always on top”
+Pestaña Appearance » habilita la transparencia y fíjalo al 100%
+Pestaña Colors     » Elige “Green on Black” o “Personalize”
+Pestaña Scrolling  » Desabilítalo</em>
+</pre>
+
+Listo, ya tienes configurado un terminal transparente. Puedes ver más información sobre cómo configurar Tilda en las referencias.
+
+### Eterm
+
+La última opción es Eterm, otra terminal que podemos usar para tener de fondo de pantalla mostrando información. Por ejemplo mostrar la salida del **dmesg**:
+
+<pre lang="bash">$ Eterm --buttonbar 0 --scrollbar off -f white -n dmesg -g 211×10+0+0 -O -0 -e watch --no-title -n10 -d 'dmesg | tail'
+</pre>
+
+Una breve explicación de los argumentos:
+
+  * **&#8211;buttonbar 0**: Elimina la barra de menú el botón superior.
+  * **&#8211;scroll off**: Elimina la barra de scroll
+  * **-f white**: Color de la letras
+  * **-O**: Ventana transparente
+  * **-0**: Habilita algunas optimizaciones para la transparencia
+  * **-e**: Ejecuta el programa que se le indique
+
+Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmente, es posible tener tantas terminales como se quiera.
+
+<img src="http://elbauldelprogramador.com/content/uploads/2013/03/5809765.png" alt="Eterm" width="640" height="375" class="thumbnail aligncenter size-full wp-image-1468" />
+
+#### Referencias
+
+*Terminal as a Transparent Wallpaper* **|** <a href="https://wiki.archlinux.org/index.php/Terminal_as_a_Transparent_Wallpaper" target="_blank">wiki.archlinux.org</a>  
+*How to have a transparent terminal as wallpaper that displays information* **|** <a href="http://linuxaria.com/pills/how-to-have-a-transparent-terminal-as-wallpaper-that-displays-information" target="_blank">linuxaria.com</a>
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=Cómo tener un terminal transparente como wallpaper que muestre información+http://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/&t=Cómo tener un terminal transparente como wallpaper que muestre información+http://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=Cómo tener un terminal transparente como wallpaper que muestre información+http://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: /tag/htop/ "htop"
+ [2]: http://elbauldelprogramador.com/content/uploads/2013/03/xroot-example.jpg
+ [3]: /aplicaciones/comandos-ss-iproute2-linux/ "Algunos comandos útiles con iproute2"
+ [4]: /category/script/
+ [5]: /tag/xmonad/
+ [6]: /tag/openbox/

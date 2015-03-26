@@ -1,0 +1,226 @@
+---
+id: 119
+title: 'PL/SQL &#8211; Excepciones'
+author: Alejandro Alcalde
+layout: post
+guid: http://elbauldelprogramador.org/plsql-excepciones/
+permalink: /plsql-excepciones/
+blogger_blog:
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+blogger_author:
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+blogger_permalink:
+  - /2011/01/plsql-excepciones.html
+  - /2011/01/plsql-excepciones.html
+  - /2011/01/plsql-excepciones.html
+categories:
+  - BaseDeDatos
+tags:
+  - ejecutar excepciones en sql
+---
+<div class="icosql">
+</div>
+
+<!--INFOLINKS_ON-->
+
+  
+Anteriormente dijimos que un bloque de código puede contener una sección denominada EXCEPTION. Esta sección es la encargada de recoger todas las anomalías que se puedan producir dentro del bloque de código.
+
+Una excepción es una situación especial dentro de la ejecución de un programa, que puede ser capturada para asignar un nuevo comportamiento. Una excepción puede ser un error de ejecución (una división entre 0) o cualquier otro tipo de suceso.
+
+Las excepciones deben ser declaradas dentro de la sección DECLARE, como si de una variable se tratase:  
+<!--INFOLINKS_OFF-->
+
+<pre lang="plsql">DECLARE
+e_sin_alumnos EXCEPTION;
+</pre>
+
+  
+<!--more-->
+
+  
+<!--INFOLINKS_ON-->
+
+  
+Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción **RAISE <excepción>.**
+
+La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
+
+<pre lang="plsql">EXCEPTION
+  WHEN nb_excepcion_1 THEN
+    instrucciones excep1;
+  WHEN nb_excepcion_2 THEN
+    instrucciones excep2;
+  ...
+  WHEN nb_excepcion_n THEN
+    instrucciones excepn;
+  [WHEN OTHERS THEN
+    instrucciones;]
+</pre>
+
+Ejemplo:
+
+<pre lang="plsql">DECLARE
+  VALOR_NEGATIVO EXCEPTION;
+  valor NUMBER;
+BEGIN
+  valor := -1;
+  IF valor &lt; 0 THEN
+    RAISE VALOR_NEGATIVO;
+  END IF;
+  EXCEPTION
+    WHEN VALOR_NEGATIVO THEN
+    dbms_output.put_line('El valor no puede ser negativo');
+END;
+</pre>
+
+<!--INFOLINKS_ON-->
+
+  
+Cuando se produce un error, se ejecuta el bloque EXCEPTION. Si existe un bloque de excepción apropiado para el tipo de error producido se ejecuta dicho bloque. Si este último no existe, se ejecutará el bloque de excepción WHEN OTHERS THEN ( en el caso de haberlo definido, este bloque debe ser el último manejador de excepciones ). Una vez finalizada la ejecución del bloque de EXCEPTION no se continúa ejecutando el bloque anterior.
+
+En ocasiones queremos enviar un mensaje de error personalizado al producirse una excepción PL/SQL. Para ello es necesario utilizar la instruccion **RAISE\_APPLICATION\_ERROR.**  
+<!--INFOLINKS_OFF-->
+
+<pre lang="plsql">RAISE_APPLICATION_ERROR(&lt;error_num>,&lt;mensaje>);</pre>
+
+<!--INFOLINKS_ON-->
+
+  
+Donde:  
+**error_num** es un entero negativo comprendido entre -20001 y -20999.  
+**mensaje** es la descripción del error.
+
+Ejemplo:  
+  
+<!--INFOLINKS_OFF-->
+
+<pre lang="plsql">DECLARE
+  v_div NUMBER;
+BEGIN
+  SELECT 1/0 INTO v_div FROM DUAL;
+EXCEPTION
+  WHEN OTHERS THEN
+    RAISE_APPLICATION_ERROR(-20001,'No se puede dividir por cero');
+END;
+</pre>
+
+<!--INFOLINKS_ON-->
+
+  
+Dentro del bloque de excepciones conviene recordar la existencia de la excepción **OTHERS**, que simboliza cualquier condición de excepción que no ha sido declarada. Se utiliza comúnmente para controlar cualquier tipo de error que no ha sido previsto. En ese caso, es común observar la sentencia **ROLLBACK** en el grupo de sentencias de la excepción o alguna de las funciones **SQLCODE** – **SQLERRM**.
+
+**SQLCODE** devuelve el número del error de Oracle y un 0 (cero) en caso de éxito al ejecutarse una sentencia SQL.
+
+**SQLERRM** devuelve el la descripción del correspondiente mensaje de error. También es posible entregarle a la función SQLERRM un número negativo que represente un error de Oracle y ésta devolverá el mensaje asociado.
+
+Estas funciones no pueden ser utilizadas directamente en una sentencia SQL, pero sí se puede asignar su valor a alguna variable de programa y luego usar esta última en alguna sentencia.  
+<!--INFOLINKS_OFF-->
+
+<pre lang="plsql">SET SERVEROUTPUT ON;
+DECLARE
+  err_num NUMBER;
+  err_msg VARCHAR2(255);
+  result NUMBER;
+  msg VARCHAR2(255);
+BEGIN
+  msg := SQLERRM(-1403);
+  DBMS_OUTPUT.put_line(MSG);
+  SELECT 1/0 INTO result FROM DUAL;
+EXCEPTION
+  WHEN OTHERS THEN
+    err_num := SQLCODE;
+    err_msg := SQLERRM;
+    DBMS_OUTPUT.put_line('Error:'||TO_CHAR(err_num));
+    DBMS_OUTPUT.put_line(err_msg);
+END;
+</pre>
+
+
+
+<pre lang="plsql">DECLARE
+  e_sinreg EXCEPTION;
+  a number(10) := 25;
+  b number(10) := 0;
+  c number(10);
+BEGIN
+  Select count(*) INTO a FROM Articulos;
+  If a &lt; 10 THEN
+    RAISE e_sinreg;
+  END IF;
+  c := a / b;
+  DBMS_OUTPUT.PUT_LINE(' Esto nunca llegará a mostrarse. ');
+EXCEPTION
+  WHEN ZERO_DIVIDE THEN DBMS_OUTPUT.PUT_LINE('No se puede dividir por 0');
+  WHEN e_sinreg THEN DBMS_OUTPUT.PUT_LINE('Hay menos de 10 articulos.');
+  WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Se ha producido otra excepción.');
+END;
+</pre>
+
+<!--INFOLINKS_ON-->
+
+  
+Las líneas de código debajo del manejador específico se ejecutarán cuando esa excepción se produzca. Algunas excepciones se lanzarán automáticamente cuando se produzcan ciertos tipos de errores en la ejecución del bloque de código. Cada excepción automática tiene asociado un código de error ORA-XXXX el cual si se produce, hará que se lance la excepción correspondiente.  
+A continuación se muestra una lista de las excepciones automáticas predefinidas por Oracle:
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="http://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
+</div>
+
+<!--INFOLINKS_OFF-->
+
+* * *
+
+#### Siguiente tema: [PL/SQL - Cursores][1] {.referencia}
+
+<div class="sharedaddy">
+  <div class="sd-content">
+    <ul>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://twitter.com/home?status=PL/SQL &#8211; Excepciones+http://elbauldelprogramador.com/plsql-excepciones/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Twitter" target="_blank"><span class="iconbox-title"><i class="icon-twitter icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://elbauldelprogramador.com/plsql-excepciones/&t=PL/SQL &#8211; Excepciones+http://elbauldelprogramador.com/plsql-excepciones/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en Facebook" target="_blank"><span class="iconbox-title"><i class="icon-facebook icon-2x"></i></span></a>
+      </li>
+      <li>
+        <a class="hastip" rel="nofollow" href="https://plus.google.com/share?url=PL/SQL &#8211; Excepciones+http://elbauldelprogramador.com/plsql-excepciones/+V%C3%ADa+%40elbaulp" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" title="Compartir en G+" target="_blank"><span class="iconbox-title"><i class="icon-google-plus icon-2x"></i></span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<span id="socialbottom" class="highlight style-2">
+
+<p>
+  <strong>¿Eres curioso? » <a onclick="javascript:_gaq.push(['_trackEvent','random','click-random']);" href="/index.php?random=1">sigue este enlace</a></strong>
+</p>
+
+<h6>
+  Únete a la comunidad
+</h6>
+
+<div class="iconsc hastip" title="2240 seguidores">
+  <a href="http://twitter.com/elbaulp" target="_blank"><i class="icon-twitter"></i></a>
+</div>
+
+<div class="iconsc hastip" title="2452 fans">
+  <a href="http://facebook.com/elbauldelprogramador" target="_blank"><i class="icon-facebook"></i></a>
+</div>
+
+<div class="iconsc hastip" title="0 +1s">
+  <a href="http://plus.google.com/+Elbauldelprogramador" target="_blank"><i class="icon-google-plus"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Repositorios">
+  <a href="http://github.com/algui91" target="_blank"><i class="icon-github"></i></a>
+</div>
+
+<div class="iconsc hastip" title="Feed RSS">
+  <a href="http://elbauldelprogramador.com/feed" target="_blank"><i class="icon-rss"></i></a>
+</div></span>
+
+ [1]: http://elbauldelprogramador.com/plsql-cursores/
