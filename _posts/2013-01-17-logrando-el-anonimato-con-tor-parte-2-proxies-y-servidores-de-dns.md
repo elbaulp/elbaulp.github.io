@@ -221,7 +221,7 @@ Queda pendiente analizar Torbutton y tsocks para ver cómo anonimizarnos en Inte
 
 Referencias
 
-*InfoSec Institute Resources* **|** <a href="http://resources.infosecinstitute.com/tor-part-2/" target="_blank">Visitar sitio</a> 
+*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-2/" target="_blank">Visitar sitio</a> 
 
 
 

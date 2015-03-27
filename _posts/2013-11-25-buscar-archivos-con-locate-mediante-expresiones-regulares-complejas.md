@@ -65,8 +65,8 @@ IFS=' '
 
 #### Referencias
 
-*RegEx Tester* **|** <a href="http://regexpal.com/" target="_blank">regexpal.com</a>  
-*Créditos de la imagen* **|** <a href="https://www.iconfinder.com/icons/33644/terminal_icon" target="_blank">inconfinder</a>
+*RegEx Tester* »» <a href="http://regexpal.com/" target="_blank">regexpal.com</a>  
+*Créditos de la imagen* »» <a href="https://www.iconfinder.com/icons/33644/terminal_icon" target="_blank">inconfinder</a>
 
 
 

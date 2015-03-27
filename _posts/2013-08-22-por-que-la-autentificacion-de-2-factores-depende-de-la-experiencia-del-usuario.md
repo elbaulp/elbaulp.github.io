@@ -46,7 +46,7 @@ La oportunidad de resolver muchos de los problemas de seguridad con una autentif
 
 #### Referencias
 
-*Duo Security* **|** <a href="https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/" target="_blank">Why 2 Factor Authentication Hinges on the User Experience</a> 
+*Duo Security* »» <a href="https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/" target="_blank">Why 2 Factor Authentication Hinges on the User Experience</a> 
 
 
 

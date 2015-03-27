@@ -120,7 +120,7 @@ Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con
 
 #### Referencias
 
-*Documentación del NDK* **|** <a href="http://developer.android.com/tools/sdk/ndk/index.html" target="_blank">Visitar sitio</a> 
+*Documentación del NDK* »» <a href="http://developer.android.com/tools/sdk/ndk/index.html" target="_blank">Visitar sitio</a> 
 
 
 

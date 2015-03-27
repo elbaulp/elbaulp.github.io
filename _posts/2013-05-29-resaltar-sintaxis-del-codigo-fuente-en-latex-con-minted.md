@@ -167,8 +167,8 @@ Para mi, minted es el mejor paquete que hay para resaltar código en <img src="/
 
 #### Referencias
 
-*Manual de referencia Minted* **|** <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>  
-*Repositorio del paquete* **|** <a href="http://code.google.com/p/minted/downloads/list" target="_blank">Visitar repositorio</a>
+*Manual de referencia Minted* »» <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>  
+*Repositorio del paquete* »» <a href="http://code.google.com/p/minted/downloads/list" target="_blank">Visitar repositorio</a>
 
 
 

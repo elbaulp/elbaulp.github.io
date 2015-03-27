@@ -46,7 +46,7 @@ De igual manera, pero esta vez hay que añadir `hw.dPad=yes` al fichero de confi
 
 #### Referencias
 
-*Respuesta de James Wald a * **|** <a href="http://stackoverflow.com/a/11252510/1612432" target="_blank">Android emulator doesn't take keyboard input - SDK tools rev 20</a> 
+*Respuesta de James Wald a * »» <a href="http://stackoverflow.com/a/11252510/1612432" target="_blank">Android emulator doesn't take keyboard input - SDK tools rev 20</a> 
 
 
 

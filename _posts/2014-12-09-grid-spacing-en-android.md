@@ -159,7 +159,7 @@ El framework de Android contiene unas cuantas características que pueden usarse
 
 ### Referencias
 
-*Grid Spacing on Android* **|** <a href="http://cyrilmottier.com/2014/11/17/grid-spacing-on-android/" target="_blank">cyrilmottier.com</a> 
+*Grid Spacing on Android* »» <a href="http://cyrilmottier.com/2014/11/17/grid-spacing-on-android/" target="_blank">cyrilmottier.com</a> 
 
 
 

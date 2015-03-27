@@ -55,7 +55,7 @@ Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un 
 
 #### Referencias
 
-*blog.duosecurity.com* **|** <a href="https://blog.duosecurity.com/2013/06/7-ways-cybercriminals-steal-or-defeat-login-credentials-2/" target="_blank">7 Ways Cybercriminals Steal or Defeat Login Credentials</a> 
+*blog.duosecurity.com* »» <a href="https://blog.duosecurity.com/2013/06/7-ways-cybercriminals-steal-or-defeat-login-credentials-2/" target="_blank">7 Ways Cybercriminals Steal or Defeat Login Credentials</a> 
 
 
 

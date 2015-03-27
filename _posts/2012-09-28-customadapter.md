@@ -490,10 +490,10 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
 
 ### Referencias
 
-*Android: Checkable Linear Layout* **|** <a href="http://tokudu.com/2010/android-checkable-linear-layout/" target="_blank">Visitar sitio</a>  
-*Android ListView and ListActivity - Tutorial* **|** <a href="http://www.vogella.com/articles/AndroidListView/article.html" target="_blank">Visitar sitio</a>  
-*Saving state of ArrayList of custom objects* **|** <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
-*AndroidBook* **|** <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
+*Android: Checkable Linear Layout* »» <a href="http://tokudu.com/2010/android-checkable-linear-layout/" target="_blank">Visitar sitio</a>  
+*Android ListView and ListActivity - Tutorial* »» <a href="http://www.vogella.com/articles/AndroidListView/article.html" target="_blank">Visitar sitio</a>  
+*Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
+*AndroidBook* »» <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
 
 
 

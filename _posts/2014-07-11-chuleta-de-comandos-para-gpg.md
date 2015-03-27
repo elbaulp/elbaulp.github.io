@@ -142,7 +142,7 @@ NOTA: los siguientes casos de uso indican porqué los comandos secret-key import
 
 ### Referencias
 
-*Quick'n easy gpg cheatsheet* **|** <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html" target="_blank">Visitar sitio</a> 
+*Quick'n easy gpg cheatsheet* »» <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html" target="_blank">Visitar sitio</a> 
 
 
 

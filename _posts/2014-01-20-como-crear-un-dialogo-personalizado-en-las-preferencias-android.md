@@ -236,8 +236,8 @@ Donde `com.example.dialogpreferenceexample.MyDialogPreference` es el nombre de l
 
 #### Referencias
 
-*Concise way of writing new DialogPreference classes?* **|** <a href="http://stackoverflow.com/a/4805325/1612432" target="_blank">stackoverflow.com</a>  
-*Custom EditTextPreference and setOnPreferenceChangeListener not called* **|** <a href="http://stackoverflow.com/questions/13501099/custom-edittextpreference-and-setonpreferencechangelistener-not-called" target="_blank">stackoverflow.com</a>
+*Concise way of writing new DialogPreference classes?* »» <a href="http://stackoverflow.com/a/4805325/1612432" target="_blank">stackoverflow.com</a>  
+*Custom EditTextPreference and setOnPreferenceChangeListener not called* »» <a href="http://stackoverflow.com/questions/13501099/custom-edittextpreference-and-setonpreferencechangelistener-not-called" target="_blank">stackoverflow.com</a>
 
 
 

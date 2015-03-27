@@ -206,7 +206,7 @@ Eso es todo, espero que os hayan gustado estos cinco artículos sobre **cómo cr
 
 #### Referencias
 
-*Porting Extension Modules to Python 3* **|** <a href="http://docs.python.org/3/howto/cporting.html" target="_blank">docs.python.org</a> 
+*Porting Extension Modules to Python 3* »» <a href="http://docs.python.org/3/howto/cporting.html" target="_blank">docs.python.org</a> 
 
 
 

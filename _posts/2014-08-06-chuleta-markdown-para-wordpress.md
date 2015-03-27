@@ -154,7 +154,7 @@ El *markdown* convierte texto a HTML.
 
 #### Referencias
 
-*Artículo de Jetpack sobre el Markdown* **|** <a href="http://jetpack.me/support/markdown/" target="_blank">jetpack.me</a> 
+*Artículo de Jetpack sobre el Markdown* »» <a href="http://jetpack.me/support/markdown/" target="_blank">jetpack.me</a> 
 
 <li id="fn-2416-1">
   Notal al pie.&#160;<a href="#fnref-2416-1" rev="footnote">&#8617;</a> </fn></footnotes> 

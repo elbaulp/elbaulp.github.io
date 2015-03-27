@@ -143,8 +143,8 @@ El resultado de estas modificaciones es el siguiente:
 
 #### Referencias
 
-*Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* **|** <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>  
-*Créditos de la imagen* **|** <a href="https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR" target="_blank">plus.google.com</a>
+*Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>  
+*Créditos de la imagen* »» <a href="https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR" target="_blank">plus.google.com</a>
 
 
 

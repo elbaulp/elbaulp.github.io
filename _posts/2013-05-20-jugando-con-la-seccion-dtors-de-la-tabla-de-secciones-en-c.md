@@ -191,8 +191,8 @@ http://www.exploit-db.com/papers/13234/
 
 #### Referencias
 
-*Replace .ctors/.dtors with .init\_array/.fini\_array* **|** <a href="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46770" target="_blank">gcc.gnu.org</a>  
-*Abusing .CTORS and .DTORS For FUN and PROFIT* **|** <a href="http://www.exploit-db.com/papers/13234/" target="_blank">exploit-db.com</a>
+*Replace .ctors/.dtors with .init\_array/.fini\_array* »» <a href="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46770" target="_blank">gcc.gnu.org</a>  
+*Abusing .CTORS and .DTORS For FUN and PROFIT* »» <a href="http://www.exploit-db.com/papers/13234/" target="_blank">exploit-db.com</a>
 
 
 

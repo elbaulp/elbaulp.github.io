@@ -53,7 +53,7 @@ En las referencias puedes encontrar más información sobre iptables. También p
 
 #### Referencias
 
-*Iptables Drop IP Address* **|** <a href="http://www.cyberciti.biz/faq/linux-iptables-drop/" target="_blank">Visitar sitio</a> 
+*Iptables Drop IP Address* »» <a href="http://www.cyberciti.biz/faq/linux-iptables-drop/" target="_blank">Visitar sitio</a> 
 
 
 

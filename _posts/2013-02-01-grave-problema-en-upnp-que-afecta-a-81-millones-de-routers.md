@@ -96,8 +96,8 @@ El informe del escaner se puede encontrar en PDF en el siguiente enlace: <a href
 > 
 > #### Referencias
 > 
-> *Test UPnP* **|** <a href="https://www.grc.com/x/ne.dll?bh0bkyd2" target="_blank">grc.com</a>  
-> *Unplug UPnP* **|** <a href="http://twit.tv/show/security-now/389" target="_blank">twit.tv</a>
+> *Test UPnP* »» <a href="https://www.grc.com/x/ne.dll?bh0bkyd2" target="_blank">grc.com</a>  
+> *Unplug UPnP* »» <a href="http://twit.tv/show/security-now/389" target="_blank">twit.tv</a>
 > 
 > 
 > 

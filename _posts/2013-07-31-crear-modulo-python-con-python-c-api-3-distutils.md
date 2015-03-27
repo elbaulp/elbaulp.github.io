@@ -109,7 +109,7 @@ En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de u
 
 #### Referencias
 
-*Documentación de Distutils* **|** <a href="http://docs.python.org/3/extending/building.html#building" target="_blank">docs.python</a> 
+*Documentación de Distutils* »» <a href="http://docs.python.org/3/extending/building.html#building" target="_blank">docs.python</a> 
 
 
 

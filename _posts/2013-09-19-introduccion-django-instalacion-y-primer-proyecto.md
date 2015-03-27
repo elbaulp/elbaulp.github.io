@@ -243,8 +243,8 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
 
 #### Referencias
 
-*Documentación Oficial* **|** <a href="https://docs.djangoproject.com/en/1.5/intro/tutorial01/" target="_blank">djangoproject.com</a>  
-*Imagen de aruseni* **|** <a href="http://aruseni.deviantart.com/art/Django-white-and-green-318200642" target="_blank">deviantart</a>
+*Documentación Oficial* »» <a href="https://docs.djangoproject.com/en/1.5/intro/tutorial01/" target="_blank">djangoproject.com</a>  
+*Imagen de aruseni* »» <a href="http://aruseni.deviantart.com/art/Django-white-and-green-318200642" target="_blank">deviantart</a>
 
 
 

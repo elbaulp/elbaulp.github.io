@@ -132,7 +132,7 @@ Personalmente es un editor que me ha gustado mucho, muy fácil de usar y con una
 
 #### Referencias
 
-*Readme.MD linux* **|** <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">github.com</a> 
+*Readme.MD linux* »» <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">github.com</a> 
 
 
 

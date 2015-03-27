@@ -75,7 +75,7 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
 
 #### Referencias
 
-*www.hittail.com* **|** <a href="http://www.hittail.com" target="_blank">Visitar sitio</a> 
+*www.hittail.com* »» <a href="http://www.hittail.com" target="_blank">Visitar sitio</a> 
 
 
 

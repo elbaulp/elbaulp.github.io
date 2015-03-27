@@ -68,9 +68,9 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Referencias
 
-*thecodinglove* **|** <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>  
-*XKCD* **|** <a href="http://xkcd.com/" target="_blank">Visitar sitio</a>  
-*Geek&Poke* **|** <a href="http://geek-and-poke.com" target="_blank">Visitar sitio</a>
+*thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>  
+*XKCD* »» <a href="http://xkcd.com/" target="_blank">Visitar sitio</a>  
+*Geek&Poke* »» <a href="http://geek-and-poke.com" target="_blank">Visitar sitio</a>
 
 
 

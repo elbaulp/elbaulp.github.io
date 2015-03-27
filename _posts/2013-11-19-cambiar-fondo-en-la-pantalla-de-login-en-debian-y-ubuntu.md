@@ -83,8 +83,8 @@ La imagen se encuentra en `/usr/share/xfce4/backdrops/xubuntu-wallpaper.png` com
 
 #### Referencias
 
-*Debian* **|** <a href="http://lists.debian.org/debian-desktop/2012/03/msg00054.html" target="_blank">lists.debian.org</a>  
-*Ubuntu* **|** <a href="http://askubuntu.com/questions/64001/how-do-i-change-the-wallpaper-in-lightdm" target="_blank">askubuntu.com</a>
+*Debian* »» <a href="http://lists.debian.org/debian-desktop/2012/03/msg00054.html" target="_blank">lists.debian.org</a>  
+*Ubuntu* »» <a href="http://askubuntu.com/questions/64001/how-do-i-change-the-wallpaper-in-lightdm" target="_blank">askubuntu.com</a>
 
 
 

@@ -79,7 +79,7 @@ Así, las imágenes quedarán, por ejemplo, `[1280x1024] - nombre original.jpg`.
 
 #### Referencias
 
-*How to sort images into folders, based on resolution?* **|** <a href="http://superuser.com/questions/17562/how-to-sort-images-into-folders-based-on-resolution" target="_blank">superuser.com</a> 
+*How to sort images into folders, based on resolution?* »» <a href="http://superuser.com/questions/17562/how-to-sort-images-into-folders-based-on-resolution" target="_blank">superuser.com</a> 
 
 
 

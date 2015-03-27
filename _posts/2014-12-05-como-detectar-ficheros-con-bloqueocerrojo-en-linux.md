@@ -45,7 +45,7 @@ Donde las columnas significan:
 
 #### Referencias
 
-*How to detect exceptionally long file locks in linux?* **|** <a href="http://serverfault.com/a/593873/181098" target="_blank">serverfault.com</a> 
+*How to detect exceptionally long file locks in linux?* »» <a href="http://serverfault.com/a/593873/181098" target="_blank">serverfault.com</a> 
 
 
 

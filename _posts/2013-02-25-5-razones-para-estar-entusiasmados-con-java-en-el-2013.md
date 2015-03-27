@@ -65,7 +65,7 @@ Con plataformas en la nube convirtiendose rápidamente en la norma, es probable 
 
 #### Referencias
 
-*5 Reasons to be excited about Java in 2013* **|** <a href="http://jaxenter.com/5-reasons-to-be-excited-about-java-in-2013-45938.html" target="_blank">jaxenter.com</a> 
+*5 Reasons to be excited about Java in 2013* »» <a href="http://jaxenter.com/5-reasons-to-be-excited-about-java-in-2013-45938.html" target="_blank">jaxenter.com</a> 
 
 &nbsp;
 

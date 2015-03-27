@@ -99,7 +99,7 @@ Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
 
 #### Referencias
 
-*How to debug in django* **|** <a href="http://stackoverflow.com/questions/1118183/how-to-debug-in-django-the-good-way" target="_blank">stackoverflow</a>
+*How to debug in django* »» <a href="http://stackoverflow.com/questions/1118183/how-to-debug-in-django-the-good-way" target="_blank">stackoverflow</a>
 
 
 

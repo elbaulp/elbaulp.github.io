@@ -95,7 +95,7 @@ Si estás interesado en saber más acerca de este tema puede que te interesen lo
 
 #### Referencias
 
-*thehackernews.com* **|** <a href="http://thehackernews.com/2013/01/the-use-of-passwords-in-technological.html" target="_blank">Visitar sitio</a> 
+*thehackernews.com* »» <a href="http://thehackernews.com/2013/01/the-use-of-passwords-in-technological.html" target="_blank">Visitar sitio</a> 
 
 
 

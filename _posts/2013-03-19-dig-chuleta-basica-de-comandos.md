@@ -132,7 +132,7 @@ Puedes encontrar una descripción un poco más extensa sobre el funcionamiento d
 
 #### Referencias
 
-*dig – Linux DNS Lookup utility cheat sheet* **|** <a href="http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet" target="_blank">linuxaria</a> 
+*dig – Linux DNS Lookup utility cheat sheet* »» <a href="http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet" target="_blank">linuxaria</a> 
 
 
 

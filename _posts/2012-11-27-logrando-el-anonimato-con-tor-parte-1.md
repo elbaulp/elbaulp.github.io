@@ -336,7 +336,7 @@ Referencias:
 [1] Guía de instalación de Tor de Ubuntu, <https://help.ubuntu.com/community/Tor>.
 
 [2] Manual de Tor, <a href="https://www.torproject.org/docs/tor-manual.html.en" target="_blank">https://www.torproject.org/docs/tor-manual.html.en</a>.  
-*Infosec* **|** <a href="http://resources.infosecinstitute.com/tor-part-1/" target="_blank">Visitar sitio</a>
+*Infosec* »» <a href="http://resources.infosecinstitute.com/tor-part-1/" target="_blank">Visitar sitio</a>
 
 
 

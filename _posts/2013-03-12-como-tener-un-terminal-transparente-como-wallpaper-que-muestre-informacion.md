@@ -101,8 +101,8 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
 
 #### Referencias
 
-*Terminal as a Transparent Wallpaper* **|** <a href="https://wiki.archlinux.org/index.php/Terminal_as_a_Transparent_Wallpaper" target="_blank">wiki.archlinux.org</a>  
-*How to have a transparent terminal as wallpaper that displays information* **|** <a href="http://linuxaria.com/pills/how-to-have-a-transparent-terminal-as-wallpaper-that-displays-information" target="_blank">linuxaria.com</a>
+*Terminal as a Transparent Wallpaper* »» <a href="https://wiki.archlinux.org/index.php/Terminal_as_a_Transparent_Wallpaper" target="_blank">wiki.archlinux.org</a>  
+*How to have a transparent terminal as wallpaper that displays information* »» <a href="http://linuxaria.com/pills/how-to-have-a-transparent-terminal-as-wallpaper-that-displays-information" target="_blank">linuxaria.com</a>
 
 
 

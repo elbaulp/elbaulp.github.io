@@ -96,7 +96,7 @@ Lo guardamos como *update-grive.sh*, le damos permisos de ejecución `chmod +x u
 
 #### Referencias
 
-*Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* **|** <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a> 
+*Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a> 
 
 
 

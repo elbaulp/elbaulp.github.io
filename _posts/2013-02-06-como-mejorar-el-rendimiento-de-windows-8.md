@@ -89,9 +89,9 @@ Este problema es consecuencia de una nueva característica introducida por Micro
     
     #### Referencias
     
-    *How to speed up Windows 8 PC?* **|** <a href="http://mywindows8.org/speed-up-windows-8/" target="_blank">Visitar sitio</a>  
-    *Fix Windows 8 Restart and Shutdown Problems by Disabling “Hybrid Shutdown” Feature* **|** <a href="http://www.askvg.com/fix-windows-8-restart-and-shutdown-problems-by-disabling-hybrid-shutdown-feature/" target="_blank">Visitar sitio</a>  
-    *Imagen: kotaku* **|** <a href="http://kotaku.com/5897763/three-killer-problems-that-threaten-windows-8" target="_blank">Visitar sitio</a>
+    *How to speed up Windows 8 PC?* »» <a href="http://mywindows8.org/speed-up-windows-8/" target="_blank">Visitar sitio</a>  
+    *Fix Windows 8 Restart and Shutdown Problems by Disabling “Hybrid Shutdown” Feature* »» <a href="http://www.askvg.com/fix-windows-8-restart-and-shutdown-problems-by-disabling-hybrid-shutdown-feature/" target="_blank">Visitar sitio</a>  
+    *Imagen: kotaku* »» <a href="http://kotaku.com/5897763/three-killer-problems-that-threaten-windows-8" target="_blank">Visitar sitio</a>
     
     
 

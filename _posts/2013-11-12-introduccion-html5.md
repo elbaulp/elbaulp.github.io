@@ -100,7 +100,7 @@ externos y metadatos.</li>
     
     #### Referencias
     
-    *Referencia etiquetas HTML5* **|** <a href="https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos" target="_blank">developer.mozilla.org</a> 
+    *Referencia etiquetas HTML5* »» <a href="https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos" target="_blank">developer.mozilla.org</a> 
     
     
 

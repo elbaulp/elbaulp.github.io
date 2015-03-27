@@ -57,7 +57,7 @@ En cuyo caso `num` es Null. La mejor forma de evitar este tipo de excepciones es
 
 #### Referencias
 
-*What is a Null Pointer Exception, and how do I fix it?* **|** <a href="http://stackoverflow.com/a/218510/1612432" target="_blank">stackoverflow</a> 
+*What is a Null Pointer Exception, and how do I fix it?* »» <a href="http://stackoverflow.com/a/218510/1612432" target="_blank">stackoverflow</a> 
 
 
 

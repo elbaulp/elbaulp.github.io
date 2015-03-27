@@ -130,7 +130,7 @@ En el siguiente artículo se verá el archivo de zona inversa y la configuració
 
 #### Referencias
 
-*Traditional DNS Howto* **|** <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a> 
+*Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a> 
 
 
 

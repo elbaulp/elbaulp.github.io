@@ -76,7 +76,7 @@ Como se vé, el ejecutable termina ántes de llegar a ejecutar siquiera la funci
 
 #### Referencias
 
-*exploit-db.com* **|** <a href="http://www.exploit-db.com/papers/13234/" target="_blank">Visitar sitio</a> 
+*exploit-db.com* »» <a href="http://www.exploit-db.com/papers/13234/" target="_blank">Visitar sitio</a> 
 
 
 

@@ -212,8 +212,8 @@ Si el lector ha llegado hasta este punto, estaba interesado en conseguir un cicl
 
 #### Referencias
 
-*Wp-Deploy* **|** <a href="https://github.com/Mixd/wp-deploy" target="_blank">github.com</a>  
-*Capistrano* **|** <a href="http://capistranorb.com/" target="_blank">capistranorb.com</a>
+*Wp-Deploy* »» <a href="https://github.com/Mixd/wp-deploy" target="_blank">github.com</a>  
+*Capistrano* »» <a href="http://capistranorb.com/" target="_blank">capistranorb.com</a>
 
 
 

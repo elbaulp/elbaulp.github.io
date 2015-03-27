@@ -116,7 +116,7 @@ else :
 
 #### Créditos
 
-*Imágen gracias a eriwst* **|** <a href="http://www.flickr.com/photos/eriwst/2421129047/sizes/z/" target="_blank">flickr.com</a> 
+*Imágen gracias a eriwst* »» <a href="http://www.flickr.com/photos/eriwst/2421129047/sizes/z/" target="_blank">flickr.com</a> 
 
 
 

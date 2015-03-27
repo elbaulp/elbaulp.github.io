@@ -210,11 +210,11 @@ Hemos visto suficiente información para poder decidir si queremos ayudar a la c
 
 #### Referencias
 
-*InfoSec Institute Resources* **|** <a href="http://resources.infosecinstitute.com/tor-part-4/" target="_blank">Achieving Anonymity with Tor Part 4</a> 
+*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-4/" target="_blank">Achieving Anonymity with Tor Part 4</a> 
 
-*&#8221;[1* **|** <a href="" target="_blank">Visitar sitio</a> Tor Project&#8221; texto=&#8221;Tips for Running an Exit Node with Minimal Harassment&#8221; link=&#8221;<https://blog.torproject.org/blog/tips-running-exit-node-minimal-harassment>&#8220;]
+*&#8221;[1* »» <a href="" target="_blank">Visitar sitio</a> Tor Project&#8221; texto=&#8221;Tips for Running an Exit Node with Minimal Harassment&#8221; link=&#8221;<https://blog.torproject.org/blog/tips-running-exit-node-minimal-harassment>&#8220;]
 
-*&#8221;[2* **|** <a href="" target="_blank">Visitar sitio</a> Tor Project&#8221; texto=&#8221;Tor Manual&#8221; link=&#8221;<https://www.torproject.org/docs/tor-manual.html.en>&#8220;]
+*&#8221;[2* »» <a href="" target="_blank">Visitar sitio</a> Tor Project&#8221; texto=&#8221;Tor Manual&#8221; link=&#8221;<https://www.torproject.org/docs/tor-manual.html.en>&#8220;]
 
 
 

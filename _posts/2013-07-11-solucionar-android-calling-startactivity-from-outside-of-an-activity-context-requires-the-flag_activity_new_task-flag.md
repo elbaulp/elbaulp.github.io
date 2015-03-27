@@ -43,7 +43,7 @@ De esta forma el error ***Calling startActivity() from outside of an Activity co
 
 #### Referencias
 
-*Solución en Stackoverflow* **|** <a href="http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag" target="_blank">Visitar sitio</a> 
+*Solución en Stackoverflow* »» <a href="http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag" target="_blank">Visitar sitio</a> 
 
 
 

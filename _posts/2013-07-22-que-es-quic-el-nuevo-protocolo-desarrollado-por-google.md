@@ -120,7 +120,7 @@ Sí, <proto-quic@chromium.org> | <a href="https://groups.google.com/a/chromium.o
 
 #### Referencias
 
-*QUIC FAQ for Geeks* **|** <a href="https://docs.google.com/document/d/1lmL9EF6qKrk7gbazY8bIdvq3Pno2Xj_l_YShP40GLQE/edit#heading=h.h3jsxme7rovm" target="_blank">Visitar Documento en Drive</a> 
+*QUIC FAQ for Geeks* »» <a href="https://docs.google.com/document/d/1lmL9EF6qKrk7gbazY8bIdvq3Pno2Xj_l_YShP40GLQE/edit#heading=h.h3jsxme7rovm" target="_blank">Visitar Documento en Drive</a> 
 
 
 

@@ -22,8 +22,8 @@ format: gallery
 
 #### Fuentes
 
-*XKCD* **|** <a href="http://xkcd.com/" target="_blank">Visitar sitio</a>  
-*IAPIHNL* **|** <a href="https://www.facebook.com/pages/I-am-ProgrammerI-have-no-life/241806149201604" target="_blank">Visitar sitio</a>
+*XKCD* »» <a href="http://xkcd.com/" target="_blank">Visitar sitio</a>  
+*IAPIHNL* »» <a href="https://www.facebook.com/pages/I-am-ProgrammerI-have-no-life/241806149201604" target="_blank">Visitar sitio</a>
 
 
 

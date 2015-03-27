@@ -202,8 +202,8 @@ Por último, solo queda usar los métodos creados, deben ir en el método `drawb
 
 Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de DWM como mi DWMstatus. En los siguientes enlaces.
 
-*myDWMstatus* **|** <a href="https://github.com/algui91/myDWMstatus" target="_blank">github.com/algui91/myDWMstatus</a>  
-*myDWM* **|** <a href="https://github.com/algui91/myDWM" target="_blank">github.com/algui91/myDWM</a>
+*myDWMstatus* »» <a href="https://github.com/algui91/myDWMstatus" target="_blank">github.com/algui91/myDWMstatus</a>  
+*myDWM* »» <a href="https://github.com/algui91/myDWM" target="_blank">github.com/algui91/myDWM</a>
 
 
 

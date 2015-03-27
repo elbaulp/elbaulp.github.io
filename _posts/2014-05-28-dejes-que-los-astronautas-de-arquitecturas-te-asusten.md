@@ -56,7 +56,7 @@ Es bueno que podamos utilizar XML ahora para los formatos por cable. Estupendo. 
 
 ### Referencias
 
-*Joel on Software* **|** <a href="http://www.joelonsoftware.com/articles/fog0000000018.html" target="_blank">Visitar sitio</a> 
+*Joel on Software* »» <a href="http://www.joelonsoftware.com/articles/fog0000000018.html" target="_blank">Visitar sitio</a> 
 
 
 

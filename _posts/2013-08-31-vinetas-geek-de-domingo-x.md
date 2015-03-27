@@ -74,9 +74,9 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Referencias
 
-*devopsreactions* **|** <a href="http://devopsreactions.tumblr.com/" target="_blank">Visitar sitio</a>  
-*thecodinglove* **|** <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>  
-*xkcd* **|** <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
+*devopsreactions* »» <a href="http://devopsreactions.tumblr.com/" target="_blank">Visitar sitio</a>  
+*thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>  
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
 
 
 

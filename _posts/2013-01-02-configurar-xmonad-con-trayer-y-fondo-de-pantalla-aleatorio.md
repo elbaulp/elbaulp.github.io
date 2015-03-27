@@ -213,7 +213,7 @@ Así luce mi escritorio con xmonad:
 
 #### Referencias
 
-*Askubuntu* **|** <a href="http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone" target="_blank">Visitar sitio</a> 
+*Askubuntu* »» <a href="http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone" target="_blank">Visitar sitio</a> 
 
 
 

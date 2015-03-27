@@ -87,8 +87,8 @@ format: gallery
 
 #### Fuentes
 
-*xkcd* **|** <a href="http://xkcd.com" target="_blank">Visitar sitio</a>  
-*CoderFacts* **|** <a href="http://coderfacts.com/" target="_blank">Visitar sitio</a>
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>  
+*CoderFacts* »» <a href="http://coderfacts.com/" target="_blank">Visitar sitio</a>
 
 
 

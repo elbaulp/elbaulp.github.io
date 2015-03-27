@@ -40,8 +40,8 @@ Además de los rayos de luz en forma de T generados por el enlace en éste estud
 #### Referencias
 
 **Créditos de la imagen: Vuckovic Lab**  
-*Artículo original* **|** <a href="http://www.iflscience.com/physics/researchers-closer-using-optics-instead-wires-computers" target="_blank">iflscience.com</a>  
-*Paper de la investigación* **|** <a href="" target="_blank">nature.com</a>
+*Artículo original* »» <a href="http://www.iflscience.com/physics/researchers-closer-using-optics-instead-wires-computers" target="_blank">iflscience.com</a>  
+*Paper de la investigación* »» <a href="" target="_blank">nature.com</a>
 
 
 

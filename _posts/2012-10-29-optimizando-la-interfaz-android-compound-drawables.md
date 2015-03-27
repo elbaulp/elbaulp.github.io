@@ -77,8 +77,8 @@ Con esta pequeña optimización estamos reduciendo el layout de dos a un View, p
 
 ### Referencias
 
-*setCompoundDrawablesWithIntrinsicBounds() Android Reference* **|** <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablesWithIntrinsicBounds%28int,%20int,%20int,%20int%29" target="_blank">Visitar sitio</a>  
-*setCompoundDrawablePadding() Android Reference* **|** <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablePadding%28int%29" target="_blank">Visitar sitio</a>
+*setCompoundDrawablesWithIntrinsicBounds() Android Reference* »» <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablesWithIntrinsicBounds%28int,%20int,%20int,%20int%29" target="_blank">Visitar sitio</a>  
+*setCompoundDrawablePadding() Android Reference* »» <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablePadding%28int%29" target="_blank">Visitar sitio</a>
 
 
 

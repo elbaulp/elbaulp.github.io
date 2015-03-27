@@ -158,10 +158,10 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
 
 #### Referencias
 
-*devopsreactions* **|** <a href="http://devopsreactions.tumblr.com/" target="_blank">Visitar sitio</a>  
-*geek-and-poke* **|** <a href="http://geek-and-poke.com/" target="_blank">Visitar sitio</a>  
-*GAF* **|** <a href="https://www.facebook.com/comics.gaf" target="_blank">Visitar sitio</a>  
-*xkcd* **|** <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
+*devopsreactions* »» <a href="http://devopsreactions.tumblr.com/" target="_blank">Visitar sitio</a>  
+*geek-and-poke* »» <a href="http://geek-and-poke.com/" target="_blank">Visitar sitio</a>  
+*GAF* »» <a href="https://www.facebook.com/comics.gaf" target="_blank">Visitar sitio</a>  
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
 
 
 

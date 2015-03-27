@@ -231,7 +231,7 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 
 ### Referencias
 
-*Crédito de la imágen* **|** <a href="http://www.occupy.com/article/learn-safeguard-internet-privacy-youre-007" target="_blank">occupy.com</a> *WonderHowTo* **|** <a href="http://null-byte.wonderhowto.com/how-to/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet-0131741/i" target="_blank">How to Remove Your Online Identity: The Ultimate Guide to Anonymity and Security on the Internet</a> 
+*Crédito de la imágen* »» <a href="http://www.occupy.com/article/learn-safeguard-internet-privacy-youre-007" target="_blank">occupy.com</a> *WonderHowTo* »» <a href="http://null-byte.wonderhowto.com/how-to/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet-0131741/i" target="_blank">How to Remove Your Online Identity: The Ultimate Guide to Anonymity and Security on the Internet</a> 
 
 
 

@@ -47,7 +47,7 @@ Los investigadores comunicaron la vulnerabilidad a Google y el problema ya ha si
 
 #### Fuente
 
-*Bypassing Google’s Two-Factor Authentication* **|** <a href="http://thehackernews.com/2013/02/bypassing-google-two-factor.html" target="_blank">thehackernews.com</a> 
+*Bypassing Google’s Two-Factor Authentication* »» <a href="http://thehackernews.com/2013/02/bypassing-google-two-factor.html" target="_blank">thehackernews.com</a> 
 
 
 

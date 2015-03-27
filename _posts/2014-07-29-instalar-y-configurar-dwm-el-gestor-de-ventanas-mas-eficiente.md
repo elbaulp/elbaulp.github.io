@@ -144,7 +144,7 @@ Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explic
 
 #### Referencias
 
-*Web Oficial de DWM* **|** <a href="" target="_blank">dwm.suckless.org</a> 
+*Web Oficial de DWM* »» <a href="" target="_blank">dwm.suckless.org</a> 
 
 
 

@@ -175,8 +175,8 @@ mta = sendmail
 
 #### Referencias
 
-*Fail2Ban para wordpress* **|** <a href="http://codepoets.co.uk/2013/fail2ban-filter-for-wordpress/" target="_blank">codepoets.co.uk</a>  
-*Fail2Ban para Nginx* **|** <a href="http://snippets.aktagon.com/snippets/554-how-to-secure-an-nginx-server-with-fail2ban" target="_blank">snippets.aktagon.com</a>
+*Fail2Ban para wordpress* »» <a href="http://codepoets.co.uk/2013/fail2ban-filter-for-wordpress/" target="_blank">codepoets.co.uk</a>  
+*Fail2Ban para Nginx* »» <a href="http://snippets.aktagon.com/snippets/554-how-to-secure-an-nginx-server-with-fail2ban" target="_blank">snippets.aktagon.com</a>
 
 
 

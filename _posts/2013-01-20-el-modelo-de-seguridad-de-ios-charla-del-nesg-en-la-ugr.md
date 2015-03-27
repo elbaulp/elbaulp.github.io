@@ -19,8 +19,8 @@ Personalmente me gustó mucho la charla, no conocía gran parte de los aspectos 
 
 #### Referencias
 
-*Grupo investigación NESG* **|** <a href="http://nesg.ugr.es/" target="_blank">Visitar sitio</a>  
-*Javier Tallón* **|** <a href="http://jtsec.es/" target="_blank">Visitar sitio</a>
+*Grupo investigación NESG* »» <a href="http://nesg.ugr.es/" target="_blank">Visitar sitio</a>  
+*Javier Tallón* »» <a href="http://jtsec.es/" target="_blank">Visitar sitio</a>
 
 
 

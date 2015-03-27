@@ -85,8 +85,8 @@ Queda así abierto un nuevo campo en la investigación criptográfica. De aquí 
 
 ### Referencias
 
-*Transcipciones a texto y audio del episodio* **|** <a href="http://www.grc.com/securitynow.htm" target="_blank">grc.com</a>  
-*Episode 376: Fully Homomorphic Encryption* **|** <a href="http://twit.tv/show/security-now/376" target="_blank">twit.tv</a>
+*Transcipciones a texto y audio del episodio* »» <a href="http://www.grc.com/securitynow.htm" target="_blank">grc.com</a>  
+*Episode 376: Fully Homomorphic Encryption* »» <a href="http://twit.tv/show/security-now/376" target="_blank">twit.tv</a>
 
 
 

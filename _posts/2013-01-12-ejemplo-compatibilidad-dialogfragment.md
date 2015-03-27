@@ -158,7 +158,7 @@ El código de ejemplo está disponible para descarga:
 <a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/ejemplo-compatibilidad-dialogfragment/" rel="nofollow"> Download &ldquo;Ejemplo compatibilidad DialogFragment&rdquo; <small>Ejemplo_datatimePickerFragment.zip &ndash; Downloaded 635 times &ndash; </small> </a>
 
   
-*developer.android* **|** <a href="http://developer.android.com/guide/topics/ui/controls/pickers.html" target="_blank">Visitar sitio</a>
+*developer.android* »» <a href="http://developer.android.com/guide/topics/ui/controls/pickers.html" target="_blank">Visitar sitio</a>
 
 
 

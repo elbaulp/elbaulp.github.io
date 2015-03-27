@@ -34,7 +34,7 @@ finish();
 
 #### Referencias
 
-*Finish all previous activities* **|** <a href="http://stackoverflow.com/questions/6330260/finish-all-previous-activities" target="_blank">stackoverflow.com</a> 
+*Finish all previous activities* »» <a href="http://stackoverflow.com/questions/6330260/finish-all-previous-activities" target="_blank">stackoverflow.com</a> 
 
 
 

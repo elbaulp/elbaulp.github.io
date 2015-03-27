@@ -150,8 +150,8 @@ El cacheo de recursos en el cliente lo previene de tener que preguntar por más 
 
 <span class='embed-youtube' style='text-align:center; display: block;'></span>
 
-*Borrador HTTP2* **|** <a href="http://tools.ietf.org/pdf/draft-ietf-httpbis-http2-17.pdf" target="_blank">tools.ietf.org</a>  
-*Crédito de la imagen* **|** <a href="https://httpwg.github.io/" target="_blank">https://httpwg.github.io/</a>
+*Borrador HTTP2* »» <a href="http://tools.ietf.org/pdf/draft-ietf-httpbis-http2-17.pdf" target="_blank">tools.ietf.org</a>  
+*Crédito de la imagen* »» <a href="https://httpwg.github.io/" target="_blank">https://httpwg.github.io/</a>
 
 
 

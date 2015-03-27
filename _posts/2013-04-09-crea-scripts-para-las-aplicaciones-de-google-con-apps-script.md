@@ -426,7 +426,7 @@ function init_() {
 
 #### Referencias
 
-*Google Apps Script* **|** <a href="http://www.google.com/script/start/" target="_blank">Visitar sitio</a> 
+*Google Apps Script* »» <a href="http://www.google.com/script/start/" target="_blank">Visitar sitio</a> 
 
 
 

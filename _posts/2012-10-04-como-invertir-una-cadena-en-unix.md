@@ -87,7 +87,7 @@ php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
 
 #### Fuente original
 
-*NixCraft* **|** <a href="http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/" target="_blank">Visitar sitio</a> 
+*NixCraft* »» <a href="http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/" target="_blank">Visitar sitio</a> 
 
 
 

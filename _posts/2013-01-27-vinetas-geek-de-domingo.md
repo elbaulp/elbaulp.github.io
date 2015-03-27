@@ -20,10 +20,10 @@ Con el objetivo de hacer las los Domingos más amenos a los lectores, el último
 
 #### Fuentes
 
-*xkcd* **|** <a href="http://xkcd.com" target="_blank">Visitar sitio</a>  
-*fuckyeahcomputerscience* **|** <a href="http://fuckyeahcomputerscience.tumblr.com" target="_blank">Visitar sitio</a>  
-*somethingofthatilk* **|** <a href="http://www.somethingofthatilk.com/index.php?id=502" target="_blank">Visitar sitio</a>  
-*I am a programmer, I have no Life* **|** <a href="https://www.facebook.com/pages/I-am-ProgrammerI-have-no-life/241806149201604" target="_blank">Visitar sitio</a>
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>  
+*fuckyeahcomputerscience* »» <a href="http://fuckyeahcomputerscience.tumblr.com" target="_blank">Visitar sitio</a>  
+*somethingofthatilk* »» <a href="http://www.somethingofthatilk.com/index.php?id=502" target="_blank">Visitar sitio</a>  
+*I am a programmer, I have no Life* »» <a href="https://www.facebook.com/pages/I-am-ProgrammerI-have-no-life/241806149201604" target="_blank">Visitar sitio</a>
 
 
 

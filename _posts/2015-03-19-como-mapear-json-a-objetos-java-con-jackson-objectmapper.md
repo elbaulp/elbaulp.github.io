@@ -254,7 +254,7 @@ La librería *Jackson* de *fasterXML* ofrece muchísimas más cosas de las vista
 
 #### Referencias
 
-*Jackson databind* **|** <a href="https://github.com/FasterXML/jackson-databind/" target="_blank">github.com</a>
+*Jackson databind* »» <a href="https://github.com/FasterXML/jackson-databind/" target="_blank">github.com</a>
 
 
 

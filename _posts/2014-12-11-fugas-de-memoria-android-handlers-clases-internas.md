@@ -132,7 +132,7 @@ La diferencia entre clases internas estáticas y no-estáticas es sutil, pero es
 
 #### Referencias
 
-*How to Leak a Context: Handlers & Inner Classes* **|** <a href="http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html" target="_blank">androiddesignpatterns.com</a> 
+*How to Leak a Context: Handlers & Inner Classes* »» <a href="http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html" target="_blank">androiddesignpatterns.com</a> 
 
 photo credit: [nyuhuhuu][10] via [photopin][11] [cc][12]
 

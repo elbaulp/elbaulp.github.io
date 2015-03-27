@@ -165,7 +165,7 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
 
 #### Referencias
 
-*Python Extension Debugging* **|** <a href="http://stackoverflow.com/questions/15253586/python-extension-debugging" target="_blank">stackoverflow.com</a> 
+*Python Extension Debugging* »» <a href="http://stackoverflow.com/questions/15253586/python-extension-debugging" target="_blank">stackoverflow.com</a> 
 
 
 

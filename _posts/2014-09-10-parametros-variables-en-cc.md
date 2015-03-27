@@ -200,7 +200,7 @@ Espero que estos tres ejemplos sencillos hayan servido para comprender el funcio
 
 #### Referencias
 
-*Documentación va_start* **|** <a href="http://www.cplusplus.com/reference/cstdarg/va_start/" target="_blank">cplusplus.com</a> 
+*Documentación va_start* »» <a href="http://www.cplusplus.com/reference/cstdarg/va_start/" target="_blank">cplusplus.com</a> 
 
 
 

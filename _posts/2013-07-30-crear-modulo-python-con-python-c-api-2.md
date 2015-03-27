@@ -90,7 +90,7 @@ Los principales valores que se pueden usar como plantilla son los siguientes (La
   * f (float) [float]
   * O (object) [PyObject *]
 
-Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo **|**, por ejemplo:
+Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo »», por ejemplo:
 
 {% highlight c %}PyArg_ParseTuple(args, "|s", &nombre);
 {% endhighlight %}
@@ -161,8 +161,8 @@ Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el pr
 
 #### Referencias
 
-*Extending Python with C or C++* **|** <a href="http://docs.python.org/2/extending/extending.html" target="_blank">docs.python.org</a>  
-*Bindings python* **|** <a href="http://www.menudoproblema.es/blog/entries/2012/03/26/bindings-python-para-bibliotecas-c-parte-2/" target="_blank">menudoproblema.es</a>
+*Extending Python with C or C++* »» <a href="http://docs.python.org/2/extending/extending.html" target="_blank">docs.python.org</a>  
+*Bindings python* »» <a href="http://www.menudoproblema.es/blog/entries/2012/03/26/bindings-python-para-bibliotecas-c-parte-2/" target="_blank">menudoproblema.es</a>
 
 
 

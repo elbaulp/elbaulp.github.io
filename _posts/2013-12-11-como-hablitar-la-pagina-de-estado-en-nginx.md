@@ -62,8 +62,8 @@ Reading: 6 Writing: 179 Waiting: 106
 
 #### Referencias
 
-*Enable and see current status page* **|** <a href="http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page" target="_blank">cyberciti</a>  
-*HttpStubStatusModule* **|** <a href="http://wiki.nginx.org/HttpStubStatusModule" target="_blank">wiki.nginx.org</a>
+*Enable and see current status page* »» <a href="http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page" target="_blank">cyberciti</a>  
+*HttpStubStatusModule* »» <a href="http://wiki.nginx.org/HttpStubStatusModule" target="_blank">wiki.nginx.org</a>
 
 
 

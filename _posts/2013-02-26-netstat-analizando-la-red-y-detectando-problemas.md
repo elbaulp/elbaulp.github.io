@@ -202,8 +202,8 @@ Como nota final, y aunque este no es un artículo patrocinado, considero que deb
 
 #### Referencias
 
-*Netstat: network analysis and troubleshooting, explained* **|** <a href="http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/" target="_blank">pinehead.tv</a>  
-*Lista posibles estados TCP* **|** <a href="http://www.tcpipguide.com/free/t_TCPOperationalOverviewandtheTCPFiniteStateMachineF-2.htm" target="_blank">tcpipguide.com</a>
+*Netstat: network analysis and troubleshooting, explained* »» <a href="http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/" target="_blank">pinehead.tv</a>  
+*Lista posibles estados TCP* »» <a href="http://www.tcpipguide.com/free/t_TCPOperationalOverviewandtheTCPFiniteStateMachineF-2.htm" target="_blank">tcpipguide.com</a>
 
 
 

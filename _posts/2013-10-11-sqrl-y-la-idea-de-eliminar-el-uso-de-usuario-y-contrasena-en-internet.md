@@ -54,7 +54,7 @@ A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de
 
 #### Referencias
 
-*(1) SQRL en la página de su creador, Steve* **|** <a href="https://www.grc.com/sqrl/sqrl.htm" target="_blank">grc.com</a> 
+*(1) SQRL en la página de su creador, Steve* »» <a href="https://www.grc.com/sqrl/sqrl.htm" target="_blank">grc.com</a> 
 
 
 

@@ -236,7 +236,7 @@ Aunque Android Studio está todavía en desarrollo, promete mucho y voy a empeza
 
 #### Referencias
 
-*Instalar JDK en Debian* **|** <a href="http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html" target="_blank">webupd8</a> 
+*Instalar JDK en Debian* »» <a href="http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html" target="_blank">webupd8</a> 
 
 
 

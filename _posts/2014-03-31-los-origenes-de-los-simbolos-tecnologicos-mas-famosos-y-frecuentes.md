@@ -128,7 +128,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 
 #### Referencias
 
-*Lifehack* **|** <a href="http://www.lifehack.org/articles/technology/the-origins-famous-iconic-and-frequently-used-tech-symbols.html" target="_blank">The Origins Of Famous, Iconic and Frequently Used Tech Symbols</a> 
+*Lifehack* »» <a href="http://www.lifehack.org/articles/technology/the-origins-famous-iconic-and-frequently-used-tech-symbols.html" target="_blank">The Origins Of Famous, Iconic and Frequently Used Tech Symbols</a> 
 
 
 

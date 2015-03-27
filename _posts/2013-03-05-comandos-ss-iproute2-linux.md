@@ -263,10 +263,10 @@ Aunque este artículo ha sido una remezcla de comandos, espero que haya quedado 
 
 #### Referencias
 
-*Socket Statistics on Linux* **|** <a href="http://linuxaria.com/pills/ss-iproute2-linux" target="_blank">linuxaria</a>  
-*Some useful command with iproute2* **|** <a href="http://linuxaria.com/howto/useful-command-of-iproute2" target="_blank">linuxaria</a>  
-*ss: Display Linux TCP / UDP Network and Socket Information* **|** <a href="http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html" target="_blank">cyberciti.biz</a>  
-*SS Utility: Quick Intro* **|** <a href="http://www.cyberciti.biz/files/ss.html" target="_blank">cyberciti.biz</a>
+*Socket Statistics on Linux* »» <a href="http://linuxaria.com/pills/ss-iproute2-linux" target="_blank">linuxaria</a>  
+*Some useful command with iproute2* »» <a href="http://linuxaria.com/howto/useful-command-of-iproute2" target="_blank">linuxaria</a>  
+*ss: Display Linux TCP / UDP Network and Socket Information* »» <a href="http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html" target="_blank">cyberciti.biz</a>  
+*SS Utility: Quick Intro* »» <a href="http://www.cyberciti.biz/files/ss.html" target="_blank">cyberciti.biz</a>
 
 
 

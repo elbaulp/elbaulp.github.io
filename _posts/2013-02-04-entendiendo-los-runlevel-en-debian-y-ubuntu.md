@@ -122,7 +122,7 @@ A continuación varios ejemplos extraidos del manual de **update-rc.d:**
           update-rc.d -f foobar remove
           update-rc.d foobar stop 45 S .{% endhighlight %}
 
-*An introduction to run-levels* **|** <a href="http://www.debian-administration.org/articles/212" target="_blank">Visitar sitio</a> 
+*An introduction to run-levels* »» <a href="http://www.debian-administration.org/articles/212" target="_blank">Visitar sitio</a> 
 
 
 

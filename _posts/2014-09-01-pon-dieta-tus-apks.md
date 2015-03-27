@@ -223,7 +223,7 @@ El diseño trata de obtener lo mejor posible a partir de un conjunto de restricc
 
 #### Referencias
 
-*Putting Your APKs on Diet por Cyril Mottier* **|** <a href="http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/" target="_blank">cyrilmottier.com</a> 
+*Putting Your APKs on Diet por Cyril Mottier* »» <a href="http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/" target="_blank">cyrilmottier.com</a> 
 
 
 

@@ -88,8 +88,8 @@ Otro buen intérprete es **<a href="https://play.google.com/store/apps/details?i
 
 ### Referencias
 
-*Transcipciones a texto y audio del episodio* **|** <a href="http://www.grc.com/securitynow.htm" target="_blank">Visitar sitio</a>  
-*Episode 382: QR Codes* **|** <a href="http://twit.tv/show/security-now/382" target="_blank">Visitar sitio</a>
+*Transcipciones a texto y audio del episodio* »» <a href="http://www.grc.com/securitynow.htm" target="_blank">Visitar sitio</a>  
+*Episode 382: QR Codes* »» <a href="http://twit.tv/show/security-now/382" target="_blank">Visitar sitio</a>
 
 
 

@@ -76,7 +76,7 @@ Produciendo el siguiente resultado:
 
 #### Referencias
 
-*Header/Footer in Latex with Fancyhdr* **|** <a href="http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr/" target="_blank">texblog.org</a> 
+*Header/Footer in Latex with Fancyhdr* »» <a href="http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr/" target="_blank">texblog.org</a> 
 
 
 

@@ -400,7 +400,7 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
 
 #### Referencias
 
-*Repositorio en GitHub del ejemplo* **|** <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">Visitar sitio</a> 
+*Repositorio en GitHub del ejemplo* »» <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">Visitar sitio</a> 
 
 
 

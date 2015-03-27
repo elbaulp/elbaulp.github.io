@@ -32,7 +32,7 @@ Aunque el *logging* es necesario, tiene un impacto negativo significante en el r
 
 #### Referencias
 
-*Code Style* **|** <a href="http://source.android.com/source/code-style.html#log-sparingly" target="_blank">source.android.com</a> 
+*Code Style* »» <a href="http://source.android.com/source/code-style.html#log-sparingly" target="_blank">source.android.com</a> 
 
 
 

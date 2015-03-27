@@ -22,7 +22,7 @@ format: gallery
 
 #### Fuentes
 
-*xkcd* **|** <a href="http://xkcd.com" target="_blank">Visitar sitio</a> 
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a> 
 
 
 

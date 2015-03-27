@@ -80,8 +80,8 @@ Al final, todo esto se reduce a una cosa: **tú eres el dueño de tu dispositivo
 
 #### Referencias
 
-*Top 10 Reasons to Root Your Android Phone* **|** <a href="http://lifehacker.com/top-10-reasons-to-root-your-android-phone-1079161983" target="_blank">LifeHacker</a>  
-*Fotos por* **|** <a href="http://www.flickr.com/photos/a_mason/4255426890/" target="_blank">Andrew Mason</a>
+*Top 10 Reasons to Root Your Android Phone* »» <a href="http://lifehacker.com/top-10-reasons-to-root-your-android-phone-1079161983" target="_blank">LifeHacker</a>  
+*Fotos por* »» <a href="http://www.flickr.com/photos/a_mason/4255426890/" target="_blank">Andrew Mason</a>
 
 
 

@@ -121,8 +121,8 @@ Creo que este CMS promete mucho, personalmente me ha gustado y en un futuro no d
 
 #### Referencias
 
-*Visto en* **|** <a href="http://www.genbetadev.com/gestores-de-contenido/bolt-un-cms-sencillo-y-rapido-como-un-rayo" target="_blank">Genbeta::Dev</a>  
-*Sitio Oficial* **|** <a href="http://bolt.cm/" target="_blank">bolt.cm</a>
+*Visto en* »» <a href="http://www.genbetadev.com/gestores-de-contenido/bolt-un-cms-sencillo-y-rapido-como-un-rayo" target="_blank">Genbeta::Dev</a>  
+*Sitio Oficial* »» <a href="http://bolt.cm/" target="_blank">bolt.cm</a>
 
 
 

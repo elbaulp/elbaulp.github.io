@@ -161,7 +161,7 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 
 #### Referencias
 
-*Traditional DNS Howto* **|** <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a> 
+*Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a> 
 
 
 

@@ -55,7 +55,7 @@ Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y 
 
 #### Referencias
 
-*Foro WordPress* **|** <a href="http://wordpress.org/support/topic/plugin-sharedaddy-adding-this-manually?replies=26#post-2293386" target="_blank">Visitar sitio</a> 
+*Foro WordPress* »» <a href="http://wordpress.org/support/topic/plugin-sharedaddy-adding-this-manually?replies=26#post-2293386" target="_blank">Visitar sitio</a> 
 
 
 

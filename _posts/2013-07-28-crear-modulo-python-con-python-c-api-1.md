@@ -112,7 +112,7 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
 
 #### Referencias
 
-*Introducción a Python C API* **|** <a href="http://docs.python.org/3/c-api/intro.html" target="_blank">docs.python.org</a> 
+*Introducción a Python C API* »» <a href="http://docs.python.org/3/c-api/intro.html" target="_blank">docs.python.org</a> 
 
 
 

@@ -68,7 +68,7 @@ Para terminar dejo el podcast del episodio de security now!
 
 #### Referencias
 
-*BitTorrent Sync* **|** <a href="http://labs.bittorrent.com/experiments/sync.html" target="_blank">Visitar sitio</a> 
+*BitTorrent Sync* »» <a href="http://labs.bittorrent.com/experiments/sync.html" target="_blank">Visitar sitio</a> 
 
 
 

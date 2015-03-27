@@ -111,9 +111,9 @@ Espero que os sea de utilidad.
 
 #### Referencias
 
-*Encrypt tar.gz file on create* **|** <a href="http://askubuntu.com/questions/95920/encrypt-tar-gz-file-on-create/96182#96182" target="_blank">askubuntu.com</a>  
-*how to encrypt a large file in openssl using public key* **|** <a href="http://stackoverflow.com/questions/7143514/how-to-encrypt-a-large-file-in-openssl-using-public-key" target="_blank">stackoverflow.com</a>  
-*Documentación oficial de openssl* **|** <a href="http://www.openssl.org/docs/apps/openssl.html" target="_blank">Visitar sitio</a>
+*Encrypt tar.gz file on create* »» <a href="http://askubuntu.com/questions/95920/encrypt-tar-gz-file-on-create/96182#96182" target="_blank">askubuntu.com</a>  
+*how to encrypt a large file in openssl using public key* »» <a href="http://stackoverflow.com/questions/7143514/how-to-encrypt-a-large-file-in-openssl-using-public-key" target="_blank">stackoverflow.com</a>  
+*Documentación oficial de openssl* »» <a href="http://www.openssl.org/docs/apps/openssl.html" target="_blank">Visitar sitio</a>
 
 
 

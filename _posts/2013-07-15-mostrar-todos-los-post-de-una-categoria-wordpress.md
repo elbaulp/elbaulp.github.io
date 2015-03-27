@@ -71,8 +71,8 @@ Para usar el shortcode debemos conocer el **id** de la categoría a mostrar, o r
 
 #### Referencias
 
-*Documentación función query_posts* **|** <a href="http://codex.wordpress.org/Function_Reference/query_posts" target="_blank">codex.wordpress.org</a>  
-*Parámetros de query_posts* **|** <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Parameters" target="_blank">codex.wordpress.org</a>
+*Documentación función query_posts* »» <a href="http://codex.wordpress.org/Function_Reference/query_posts" target="_blank">codex.wordpress.org</a>  
+*Parámetros de query_posts* »» <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Parameters" target="_blank">codex.wordpress.org</a>
 
 
 

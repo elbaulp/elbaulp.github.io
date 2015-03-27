@@ -47,7 +47,7 @@ Es cierto que a los IDEs de la web actualmente les faltan características de va
 
 #### Referencias
 
-*DZone* **|** <a href="http://architects.dzone.com/articles/5-reasons-why-5-years-desktop" target="_blank">5 Reasons Why in 5 Years Desktop IDEs Will Be Dead</a> 
+*DZone* »» <a href="http://architects.dzone.com/articles/5-reasons-why-5-years-desktop" target="_blank">5 Reasons Why in 5 Years Desktop IDEs Will Be Dead</a> 
 
 
 

@@ -283,8 +283,8 @@ Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutan
 
 #### Referencias
 
-*Learn how to setup a web server pt2: Installing Nginx and PHP* **|** <a href="http://blog.bryanbibat.net/2011/12/19/learn-how-to-setup-a-web-server-pt2-installing-nginx-and-php/" target="_blank">blog.bryanbibat.net</a>  
-*HOWTO install php5-fpm on Debian Squeeze* **|** <a href="http://fak3r.com/2011/09/27/howto-install-php5-fpm-on-debian-squeeze/" target="_blank">fak3r.com</a>
+*Learn how to setup a web server pt2: Installing Nginx and PHP* »» <a href="http://blog.bryanbibat.net/2011/12/19/learn-how-to-setup-a-web-server-pt2-installing-nginx-and-php/" target="_blank">blog.bryanbibat.net</a>  
+*HOWTO install php5-fpm on Debian Squeeze* »» <a href="http://fak3r.com/2011/09/27/howto-install-php5-fpm-on-debian-squeeze/" target="_blank">fak3r.com</a>
 
 
 

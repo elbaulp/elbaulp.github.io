@@ -74,7 +74,7 @@ Donde **/dev/sdX** ha de ser el dispositivo USB
 
 ### Referencias
 
-*Boot Debian from an USB device* **|** <a href="http://www.debian-administration.org/article/Boot_Debian_from_an_USB_device" target="_blank">Visitar sitio</a> 
+*Boot Debian from an USB device* »» <a href="http://www.debian-administration.org/article/Boot_Debian_from_an_USB_device" target="_blank">Visitar sitio</a> 
 
 
 

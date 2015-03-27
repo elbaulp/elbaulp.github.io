@@ -61,7 +61,7 @@ fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
 
 #### Referencias
 
-*Cybercity* **|** <a href="http://www.cyberciti.biz/faq/hide-bind9-dns-sever-version/" target="_blank">Visitar sitio</a> 
+*Cybercity* »» <a href="http://www.cyberciti.biz/faq/hide-bind9-dns-sever-version/" target="_blank">Visitar sitio</a> 
 
 
 

@@ -73,7 +73,7 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
 
 #### Referencias
 
-*The GitHub generation: why we're all in open source now* **|** <a href="http://www.wired.co.uk/news/archive/2013-03/11/github-democracy" target="_blank">Wired.co.uk</a> 
+*The GitHub generation: why we're all in open source now* »» <a href="http://www.wired.co.uk/news/archive/2013-03/11/github-democracy" target="_blank">Wired.co.uk</a> 
 
 
 

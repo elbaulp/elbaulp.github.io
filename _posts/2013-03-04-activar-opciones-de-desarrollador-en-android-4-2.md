@@ -37,9 +37,9 @@ Una vez en el modo rescate, desactivé la opción y problema resuelto.
 
 #### Referencias
 
-*New built-in developer options* **|** <a href="http://developer.android.com/about/versions/jelly-bean.html#42-dev-options" target="_blank">developer.android.com</a>  
-*developer options disappear from settings* **|** <a href="http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings" target="_blank">stackOverflow</a>  
-*&#091;Q&#93 Help! Messed with 'Simulate Secondary Display' settings!* **|** <a href="http://forum.xda-developers.com/showthread.php?t=2076180" target="_blank">forum.xda-developers</a>
+*New built-in developer options* »» <a href="http://developer.android.com/about/versions/jelly-bean.html#42-dev-options" target="_blank">developer.android.com</a>  
+*developer options disappear from settings* »» <a href="http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings" target="_blank">stackOverflow</a>  
+*&#091;Q&#93 Help! Messed with 'Simulate Secondary Display' settings!* »» <a href="http://forum.xda-developers.com/showthread.php?t=2076180" target="_blank">forum.xda-developers</a>
 
 
 

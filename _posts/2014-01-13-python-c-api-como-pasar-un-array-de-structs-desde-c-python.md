@@ -81,7 +81,7 @@ Y continuar rellenando el diccionario según nuestras necesidades.
 
 #### Referencias
 
-*Python C API How to pass array of structs from C to Python* **|** <a href="http://stackoverflow.com/questions/15786525/python-c-api-how-to-pass-array-of-structs-from-c-to-python/15833209#15833209" target="_blank">stackoverflow.com</a> 
+*Python C API How to pass array of structs from C to Python* »» <a href="http://stackoverflow.com/questions/15786525/python-c-api-how-to-pass-array-of-structs-from-c-to-python/15833209#15833209" target="_blank">stackoverflow.com</a> 
 
 
 

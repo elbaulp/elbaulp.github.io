@@ -84,8 +84,8 @@ Tras pasar *Android Resource Remover*, *SWADroid* paso a ocupar **1,5Mb** frente
 
 #### Referencias
 
-*Proyecto en Github* **|** <a href="https://github.com/KeepSafe/android-resource-remover" target="_blank">github.com/KeepSafe/android-resource-remover</a>  
-*Remove unused Android resources to reduce APK size* **|** <a href="http://keepsafe-engineering.tumblr.com/post/85828806276/remove-unused-android-resources" target="_blank">keepsafe-engineering.com</a>
+*Proyecto en Github* »» <a href="https://github.com/KeepSafe/android-resource-remover" target="_blank">github.com/KeepSafe/android-resource-remover</a>  
+*Remove unused Android resources to reduce APK size* »» <a href="http://keepsafe-engineering.tumblr.com/post/85828806276/remove-unused-android-resources" target="_blank">keepsafe-engineering.com</a>
 
 
 

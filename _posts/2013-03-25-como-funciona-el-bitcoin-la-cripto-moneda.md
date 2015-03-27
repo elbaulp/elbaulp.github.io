@@ -93,7 +93,7 @@ Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más cl
 
 #### Referencias
 
-** **|** <a href="http://www.grc.com/securitynow.htm" target="_blank">grc.com</a> 
+** »» <a href="http://www.grc.com/securitynow.htm" target="_blank">grc.com</a> 
 
 
 

@@ -28,7 +28,7 @@ Los ideales del Open Source ya se han difundido en los gobiernos por todo el mun
 
 ### Referencias
 
-*Open-source code: by the people, for the people* **|** <a href="http://venturebeat.com/2013/08/29/open-source-code-by-the-people-for-the-people/" target="_blank">Visitar sitio</a> 
+*Open-source code: by the people, for the people* »» <a href="http://venturebeat.com/2013/08/29/open-source-code-by-the-people-for-the-people/" target="_blank">Visitar sitio</a> 
 
 
 

@@ -84,7 +84,7 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 > 
 > #### Referencias
 > 
-> *Más información* **|** <a href="http://osl.ugr.es/2013/02/14/v-hackathon-de-proyectos-del-concurso-universitario-de-software-libre/" target="_blank">osl.ugr.es</a> 
+> *Más información* »» <a href="http://osl.ugr.es/2013/02/14/v-hackathon-de-proyectos-del-concurso-universitario-de-software-libre/" target="_blank">osl.ugr.es</a> 
 > 
 > 
 

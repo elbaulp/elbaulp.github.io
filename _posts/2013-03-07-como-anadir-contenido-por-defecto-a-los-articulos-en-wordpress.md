@@ -29,7 +29,7 @@ Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenid
 
 #### Fuente
 
-*How to Add Default Content in Your WordPress Post Editor* **|** <a href="http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/" target="_blank">wpbeginner</a> 
+*How to Add Default Content in Your WordPress Post Editor* »» <a href="http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/" target="_blank">wpbeginner</a> 
 
 
 

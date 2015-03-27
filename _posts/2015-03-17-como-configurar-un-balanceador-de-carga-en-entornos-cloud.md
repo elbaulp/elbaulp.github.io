@@ -108,7 +108,7 @@ La opción de crear y configurar el balanceador a mano puede ser buena para apre
 
 #### Referencias
 
-*Nginx Docs* **|** <a href="http://nginx.org/en/docs/http/load_balancing.html" target="_blank">nginx.org</a> 
+*Nginx Docs* »» <a href="http://nginx.org/en/docs/http/load_balancing.html" target="_blank">nginx.org</a> 
 
 
 

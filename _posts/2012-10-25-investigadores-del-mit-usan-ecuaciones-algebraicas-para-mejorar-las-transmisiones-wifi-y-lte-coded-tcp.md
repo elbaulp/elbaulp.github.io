@@ -31,9 +31,9 @@ En un futuro, se espera que el protocolo TCP codificado tenga una gran repercusi
 
 ### Referencias
 
-*A Bandwidth Breakthrough* **|** <a href="http://www.technologyreview.com/news/429722/a-bandwidth-breakthrough/" target="_blank">Visitar sitio</a>  
-*Increasing wireless network speed by 1000%, by replacing packets with algebra* **|** <a href="http://www.extremetech.com/computing/138424-increasing-wireless-network-speed-by-1000-by-replacing-packets-with-algebra" target="_blank">Visitar sitio</a>  
-*MIT researchers use algebraic equation that improves WiFi and LTE data streams* **|** <a href="http://www.engadget.com/2012/10/24/mit-researchers-algebraic-equation-to-weave-wifi-and-lte-signals/" target="_blank">Visitar sitio</a>
+*A Bandwidth Breakthrough* »» <a href="http://www.technologyreview.com/news/429722/a-bandwidth-breakthrough/" target="_blank">Visitar sitio</a>  
+*Increasing wireless network speed by 1000%, by replacing packets with algebra* »» <a href="http://www.extremetech.com/computing/138424-increasing-wireless-network-speed-by-1000-by-replacing-packets-with-algebra" target="_blank">Visitar sitio</a>  
+*MIT researchers use algebraic equation that improves WiFi and LTE data streams* »» <a href="http://www.engadget.com/2012/10/24/mit-researchers-algebraic-equation-to-weave-wifi-and-lte-signals/" target="_blank">Visitar sitio</a>
 
 
 

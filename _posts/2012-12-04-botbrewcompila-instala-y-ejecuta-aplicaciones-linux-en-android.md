@@ -90,8 +90,8 @@ A continuación un vídeo explicando el proceso de instalación de busybox sin p
 
 ### Referencias
 
-*Geeknizer* **|** <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>  
-*XDA-Developers* **|** <a href="http://forum.xda-developers.com/showpost.php?p=26261600&postcount=119" target="_blank">Visitar sitio</a>
+*Geeknizer* »» <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>  
+*XDA-Developers* »» <a href="http://forum.xda-developers.com/showpost.php?p=26261600&postcount=119" target="_blank">Visitar sitio</a>
 
 
 

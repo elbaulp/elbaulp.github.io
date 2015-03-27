@@ -304,7 +304,7 @@ Como mencioné al principio, el código de ambos programas está disponible para
 
 Como introducción al lenguaje Ruby, ya que nunca lo había usado, leí el siguiente artículo:
 
-*Ruby in Twenty MinutesRuby in Twenty Minutes* **|** <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a> 
+*Ruby in Twenty MinutesRuby in Twenty Minutes* »» <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a> 
 
 
 

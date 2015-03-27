@@ -191,8 +191,8 @@ Podemos ver que el nodo Tor está ubicado en Alemania, tiene la IP 31.172.30.1, 
 
 #### Referencias
 
-*InfoSec Institute Resources* **|** <a href="http://resources.infosecinstitute.com/tor-part-3/" target="_blank">Achieving Anonymity with Tor Part 3</a>  
-*(1) Tor Project* **|** <a href="https://www.torproject.org/torbutton/en/design/" target="_blank">Torbutton Design Documentation</a>
+*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-3/" target="_blank">Achieving Anonymity with Tor Part 3</a>  
+*(1) Tor Project* »» <a href="https://www.torproject.org/torbutton/en/design/" target="_blank">Torbutton Design Documentation</a>
 
 
 

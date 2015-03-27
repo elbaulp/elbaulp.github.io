@@ -42,7 +42,7 @@ Pero lo que es realemente patético es que esas funcionalidades vienen en Java 8
 
 #### Referencias
 
-*DZone* **|** <a href="http://java.dzone.com/articles/functional-programming-java-%E2%80%93" target="_blank">On Functional Programming in Java – It's Coming...</a> 
+*DZone* »» <a href="http://java.dzone.com/articles/functional-programming-java-%E2%80%93" target="_blank">On Functional Programming in Java – It's Coming...</a> 
 
 
 
