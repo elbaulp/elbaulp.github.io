@@ -2,24 +2,29 @@
    Site wide styles
    ========================================================================== */
 
-/* 
+/*
    Selection
    ========================================================================== */
 
-::-moz-selection { 
-	background-color: lighten($basecolor, 65%); 
-	color: $basecolor; 
-	text-shadow: none; 
-}  	
-::selection { 
-	background-color: lighten($basecolor, 65%); 
-	color: $basecolor; 
-	text-shadow: none; 
+::-moz-selection {
+	background-color: lighten($basecolor, 65%);
+	color: $basecolor;
+	text-shadow: none;
+}
+::selection {
+	background-color: lighten($basecolor, 65%);
+	color: $basecolor;
+	text-shadow: none;
 }
 
-/* 
+/*
    Global classes
    ========================================================================== */
+	
+/* Adsense ads */
+.google-ads {
+	text-align: center;
+}
 
 /* Capitalize */
 .all-caps {
@@ -63,7 +68,7 @@
 	}
 }
 
-/* 
+/*
    Global transition
    ========================================================================== */
 
