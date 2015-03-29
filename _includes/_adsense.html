@@ -1,11 +1,22 @@
 {% if site.owner.google.ad-client and site.owner.google.ad-slot %}
 <div class="google-ads">
-  <!-- 320 x 50 ad -->
   <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Recomendación Adaptable, mitad inferior -->
   <ins class="adsbygoogle"
-       style="display:inline-block;width:320px;height:50px"
+       style="display:block"
        data-ad-client="{{ site.owner.google.ad-client }}"
-       data-ad-slot="{{ site.owner.google.ad-slot }}"></ins>
+       data-ad-slot="{{ site.owner.google.ad-slot }}"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Recomendación Sidebar 336x280 -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:336px;height:280px"
+       data-ad-client="{{ site.owner.google.ad-client }}"
+       data-ad-slot="{{ site.owner.google.ad-slot2 }}"></ins>
   <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
