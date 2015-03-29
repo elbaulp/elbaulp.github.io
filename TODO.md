@@ -5,7 +5,7 @@
 - [ ] Tags.
 - [ ] Related Post.
 - [x] Google Markup Schema.
-- [ ] Google Analytics.
+- [x] Google Analytics.
 - [ ] SEO.
 - [ ] Tradepub.
 - [x] Mover imágenes.
