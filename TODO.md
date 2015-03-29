@@ -1,16 +1,15 @@
 # TODO
-
 - [ ] Twitter Cards.
 - [ ] Facebook open graph.
 - [ ] Correo y dominio.
 - [ ] Tags.
 - [ ] Related Post.
-- [ ] Google Markup.
+- [x] Google Markup Schema.
 - [ ] Google Analytics.
 - [ ] SEO.
 - [ ] Tradepub.
 - [x] Mover imágenes.
-- [ ] Terminar de formatear todo.
+- [x] Terminar de formatear todo.
 - [ ] Buy Sell Ads
 - [x] Add favicon
 - [ ] Substitute old links with new
@@ -21,5 +20,5 @@
 - [ ] Featured Images
 - [ ] Importar comentarios
 - [x] Cambiar default-thumb.png
-- [ ] Solucionar referencias
-- [ ] Solucionar * * 
+- [x] Solucionar referencias
+- [x] Solucionar * *

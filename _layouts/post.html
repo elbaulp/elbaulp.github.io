@@ -28,24 +28,26 @@
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div id="main" role="main">
+<div itemscope itemtype="http://schema.org/Article" class="hentry" id="main" role="main">
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
   <article class="post">
     <div class="headline-wrap">
       {% if page.link %}
-        <h1><a href="{{ page.link }}">{{ page.title }}</a></h1>
+        <h1><a href="{{ page.link }}"><span itemprop="name">{{ page.title }}</span></a></h1>
       {% else %}
-        <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
+        <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}"><span itemprop="name">{{ page.title }}</span></a></h1>
       {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      {{ content }}
+      <span itemprop="articleBody">
+        {{ content }}
+      </span>
       <hr />
       <footer role="contentinfo">
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+        <p class="byline"><strong>{{ page.title }}</strong> was published on <time itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
       </footer>
     </div><!-- /.article-wrap -->
   {% if site.owner.disqus-shortname and page.comments == true %}
@@ -69,7 +71,7 @@
   </footer>
 </div><!-- /.footer-wrap -->
 
-{% include _scripts.html %}	        
+{% include _scripts.html %}
 
 </body>
 </html>
