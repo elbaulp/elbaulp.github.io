@@ -1,7 +1,7 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+excerpt: "Blog sobre programación y noticias de software libre, lenguajes c++, java, python, android, bases de datos, sql y pl/sql"
+tags: [c++, java, python, android, bases de datos, sql y pl/sql]
 #image:
 #  feature: sample-image-1.jpg
 #  credit: WeGraphics
