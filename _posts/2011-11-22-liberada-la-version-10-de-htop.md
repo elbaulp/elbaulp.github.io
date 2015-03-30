@@ -1,0 +1,135 @@
+---
+id: 294
+title: Liberada la versión 1.0 de htop
+
+layout: post
+guid: http://elbauldelprogramador.org/liberada-la-version-1-0-de-htop/
+permalink: /liberada-la-version-10-de-htop/
+blogger_blog:
+  - www.elbauldelprogramador.org
+  - www.elbauldelprogramador.org
+blogger_author:
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
+blogger_permalink:
+  - /2011/11/liberada-la-version-10-de-htop.html
+  - /2011/11/liberada-la-version-10-de-htop.html
+share_count:
+  - 0
+  - 0
+share_all_data:
+  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551789}'
+  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551789}'
+share_data:
+  - '[]'
+  - '[]'
+categories:
+  - linux
+  - opensource
+  - procesos
+tags:
+  - htop
+---
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
+</div>
+
+Si monitorizáis el estado de vuestros sistemas con [Linux][1] probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.
+
+Podéis **consultar las mejoras** en la <a target="_blank" href="http://htop.sourceforge.net/index.php?page=downloads">página oficial del proyecto en SourceForge</a>, y por supuesto tenéis a vuestra disposición tanto el <a target="_blank" href="http://htop.sourceforge.net/index.php?page=downloads#sources">código fuente</a> como [binarios][2] preparados para diversas distribuciones. Quien quiera agradecer al autor su trabajo, puede <a target="_blank" href="http://sourceforge.net/donate/index.php?group_id=108839">invitarle a una cervecita.</a>
+
+El autor explica en la página del proyecto las mejoras de esta nueva versión:
+
+  
+<!--more-->
+
+***</p> 
+
+I am extremely happy to announce htop 1.0!
+
+Time flies, I can&#8217;t believe it&#8217;s been eight years of development  
+already. It seems like yesterday that I&#8217;ve decided to stop writing PID  
+numbers every time I wanted to kill a process and started this  
+project. I am very happy to see this little project grow into a  
+reality, see it being included in repositories for many distributions,  
+reading nice reviews arond the web, receiving many contributions from  
+coders from all over the world who helped making htop better and  
+better over the years, and getting short &#8220;thank you!&#8221; emails that  
+always make my day. Thanks to all distro packagers, reviewers, code  
+contributors, users. The free software community is amazing; if it  
+wasn&#8217;t for all of you, htop wouldn&#8217;t be what it is now. Version  
+numbers are more symbolic than anything, but the stability of htop 0.9  
+in the past year and the cool new features introduced in this release  
+compelled me to call this version 1.0. We all deserve this little  
+&#8220;achievement&#8221;. <img src="http://elbauldelprogramador.com/wordpress/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+
+<li class="x">
+  Performance improvements
+</li>
+<li class="x">
+  Support for splitting CPU meters into two or four columns<br /> (thanks to Wim Heirman)
+</li>
+<li class="x">
+  Switch from PLPA, which is now deprecated, to HWLOC.
+</li>
+<li class="x">
+  Bring back support for native Linux sched_setaffinity,<br /> so we don&#8217;t have to use HWLOC where we don&#8217;t need to.
+</li>
+<li class="x">
+  Support for typing in user names and column fields in selection panels.
+</li>
+<li class="x">
+  Support for UTF-8 tree drawing<br /> (thanks to Bin Guo)
+</li>
+<li class="x">
+  Option for counting CPUs from zero<br /> (thanks to Sean Noonan)
+</li>
+<li class="x">
+  Meters update in every screen (no longer halting while on Setup, etc.)
+</li>
+<li class="x">
+  Stricter checks for command-line options<br /> (thanks to Sebastian Pipping)
+</li>
+<li class="x">
+  Incremental filtering<br /> (thanks to Seth Heeren for the idea and initial implementation)
+</li>
+<li class="x">
+  Try harder to find the ncurses header<br /> (thanks to Moritz Barsnick)
+</li>
+<li class="x">
+  Man page updates<br /> (thanks to Vincent Launchbury)
+</li>
+<li class="x">
+  BUGFIX: Support larger numbers for process times.<br /> (thanks to Tristan Nakagawa for the report.)
+</li>
+<li class="x">
+  BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths<br /> (patch by Sebastian Pipping)
+</li>
+
+</i></b>
+
+Que traduzco a continuación:
+
+El tiempo vuela, no puedo creer que hayan pasado ya 8 años de desarrollo. Parece que fue ayer cuando decidí dejar de escribir números de PID cada vez que quería matar un proceso y empecé este proyecto. Estoy muy contento de ver este proyecto crecer hasta llegar a ser una realida, verlo incluido en los repositorios de muchas distribuciones, leer agradables revisiones por toda la web, recibir correos de muchos contribuidores de todo el mundo que han ayudado a htop a mejorar con los años, y recibir emails cortos que simplemente decían &#8220;gracias!&#8221; y me alegraban el día. Gracias a todos los empaquetadores de distros, revisores, contribuidores de código, usuarios. La comunidad del software libre es increible; si no fuera por todos ellos, htop no sería lo que es hoy. Los números de las versiones son méramente simbólicos, pero la estabilidad de htop 0.9 el los años pasados y las nuevas características introducidas en esta &#8220;release&#8221;, me obliga a llamar a esta versión la 1.0. Todos merecemos este pequeño logro.
+
+Para instalarlo tan solo debéis escribir en el terminal:
+
+{% highlight bash %}sudo aptitude install htop
+{% endhighlight %}
+
+Al ejecutarlo veremos algo parecido a lo siguiente:
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="linux htop" border="0" height="320" width="400" src="http://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
+</div>
+
+Vía <a target="_blank" href="http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/">MuyLinux</a>
+
+Fuente <a target="_blank" href="http://htop.sourceforge.net/index.php?page=main">htop.sourceforge.net</a>
+
+
+
+ [1]: /search/label/linux
+ [2]: http://htop.sourceforge.net/index.php?page=downloads#binaries
+
+{% include _toc.html %}
