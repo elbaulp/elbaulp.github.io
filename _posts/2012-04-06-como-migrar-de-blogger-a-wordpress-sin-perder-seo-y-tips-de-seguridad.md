@@ -108,7 +108,7 @@ Sitemap: http://tuweb.com/feed
 # Ficheros y directorios a des/indexar de nuestro WordPress
 
 User-Agent: *
-Allow: /content/uploads/
+Allow: /images/
 Allow: /feed/$
 Disallow: /wp-
 Disallow: /wp-content/plugins/
@@ -149,7 +149,7 @@ User-agent: Googlebot
 
 User-agent: Googlebot-Image
 Disallow: /wp-includes/
-Allow: /content/uploads/
+Allow: /images/
 
 User-agent: Mediapartners-Google*
 Disallow:

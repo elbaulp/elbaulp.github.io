@@ -39,7 +39,7 @@ En su última actualización, el plugin [JetPack][1] introdujo la notación Mark
 
 #### Imágenes en línea: ![Alt][3]:
 
-    ![Alt](/content/uploads/2013/12/favicon.ico "Título")
+    ![Alt](/images/2013/12/favicon.ico "Título")
     
 
 #### Imágenes referenciadas: ![Alt][3]
@@ -49,7 +49,7 @@ En su última actualización, el plugin [JetPack][1] introdujo la notación Mark
 
 #### Imágenes enlazadas: [![Texto Alternativo][4]][5]
 
-    [![Texto Alternativo](/content/uploads/2013/12/favicon.ico)](/ "Imágenes enlazadas")
+    [![Texto Alternativo](/images/2013/12/favicon.ico)](/ "Imágenes enlazadas")
     
 
 #### Notas al pie<sup id="fnref-2416-1"><a href="#fn-2416-1" rel="footnote">1</a></sup>:
@@ -161,8 +161,8 @@ El *markdown* convierte texto a HTML.
 
  [1]: http://jetpack.me/support/markdown/ "Artículo de Jetpack sobre el Markdown"
  [2]: / "Texto alternativo"
- [3]: /content/uploads/2013/12/favicon.ico "Título"
- [4]: /content/uploads/2013/12/favicon.ico
+ [3]: /images/2013/12/favicon.ico "Título"
+ [4]: /images/2013/12/favicon.ico
  [5]: / "Imágenes enlazadas"
 
 {% include _toc.html %}

@@ -22,7 +22,7 @@ categories:
 ---
 Como señalan [nuestros compañeros de MuyComputer][1], la **empresa respaldada por Marc Andreessen** – fundador de Netscape- ha presentado un nuevo navegador web enfocado a uso de redes sociales.
 
-[<img class="aligncenter size-medium wp-image-12286" title="Rockmelt" src="http://www.muylinux.com/content/uploads/2010/11/Rockmelt-500x391.jpg" alt="" height="391" width="500" />][2]
+[<img class="aligncenter size-medium wp-image-12286" title="Rockmelt" src="http://www.muylinux.com/images/2010/11/Rockmelt-500x391.jpg" alt="" height="391" width="500" />][2]
 
 RockMelt está construido internamente en torno a Chromium, el desarrollo de código abierto en el que se basa el Chrome de Google aunque la integración con redes sociales es su verdadera novedad y objetivo. **Actualmente en fase beta cerrada** puedes probar el desarrollo desde invitaciones servidas desde Facebook.
 
@@ -44,7 +44,7 @@ Ya os contaremos cuando lo probemos, aunque veremos si este desarrollo puede ofr
 
 
  [1]: http://www.muycomputer.com/Actualidad/Noticias/RockMelt-el-navegador-social/_wE9ERk2XxDC0g_DH3CC9QUuuHsX3wKj1cQZyau99m55NwZa46YIwMNsMxvxMpWok
- [2]: http://www.muylinux.com/content/uploads/2010/11/Rockmelt.jpg
+ [2]: http://www.muylinux.com/images/2010/11/Rockmelt.jpg
  [3]: http://www.muylinux.com/2010/06/16/flock-cambia-de-novia-antes-firefox-ahora-chromium
 
 {% include _toc.html %}

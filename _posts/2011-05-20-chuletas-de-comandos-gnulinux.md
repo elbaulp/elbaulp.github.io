@@ -30,7 +30,7 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
   
 <!--more-->
 
-[<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/content/uploads/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros" width="500" height="335" />][1]
+[<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/images/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros" width="500" height="335" />][1]
 
 <a href="http://files.fosswire.com/2007/08/fwunixref.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="http://lh4.ggpht.com/_aVtbdMo1J34/SuF8zBeSIII/AAAAAAAACBk/KHhhymZj7LY/Linux-Cheat-sheets.png" alt="Linux Cheat sheets 25 chuletas para linuxeros" /></a>
 
@@ -54,7 +54,7 @@ Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLi
 
 
 
- [1]: http://www.muylinux.com/content/uploads/2009/10/Chuletas-Linux.jpg
+ [1]: http://www.muylinux.com/images/2009/10/Chuletas-Linux.jpg
  [2]: http://www.scottklarr.com/media/cheatsheets/linux/1.jpg "Chuletas a cascoporro"
  [3]: http://columbia.edu/%7Ethl2102/linuxrefcard.pdf
  [4]: http://www.scottklarr.com/media/cheatsheets/linux/2.jpg "Chuletas a cascoporro"

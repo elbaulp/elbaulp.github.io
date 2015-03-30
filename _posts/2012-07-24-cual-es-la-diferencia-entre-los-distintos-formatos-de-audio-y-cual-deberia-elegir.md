@@ -3,7 +3,7 @@ id: 841
 title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
 
 excerpt: |
-  <a href="http://www.elbauldelprogramador.com/content/uploads/2012/07/original1.jpg"><img src="http://www.elbauldelprogramador.com/content/uploads/2012/07/original1.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-844" /></a>
+  <a href="http://www.elbauldelprogramador.com/images/2012/07/original1.jpg"><img src="http://www.elbauldelprogramador.com/images/2012/07/original1.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-844" /></a>
   
   
   Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:
