@@ -258,5 +258,4 @@ La librería *Jackson* de *fasterXML* ofrece muchísimas más cosas de las vista
 
  [1]: http://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/ "Buenas prácticas para el Diseño de una API RESTful Pragmática"
 
-
 {% include _toc.html %}

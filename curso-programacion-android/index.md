@@ -32,11 +32,14 @@ blogger_author:
   - Alejandro Alcalde
   - Alejandro Alcalde
 ---
-> #### De lectura recomendable: [Los 10 errores de novato que todo desarrollador Android debería evitar][1]
+
+#### De lectura recomendable:
+
+> [Los 10 errores de novato que todo desarrollador Android debería evitar](http://elbauldelprogramador.com/los-10-errores-de-novato-que-todo/)
 
 ### Primera parte
 
-> Descubre cómo adquirir esta primera parte del curso<a href="http://elbauldelprogramador.com/opensource/disponible-la-primera-parte-del-curso/" target="_blank"> en pdf</a>
+> Descubre cómo adquirir esta primera parte del curso [en pdf](http://elbauldelprogramador.com/opensource/disponible-la-primera-parte-del-curso/)
 
 ### Artículos de interés
 
@@ -209,5 +212,3 @@ blogger_author:
             <a href="http://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/">Ejemplo de uso de ACTION_PICK</a>
           </li>
         </ul>
-
- [1]: http://elbauldelprogramador.com/los-10-errores-de-novato-que-todo/
