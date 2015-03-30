@@ -38,8 +38,6 @@ Hecho esto, ya es posible usar la librería en el proyecto.
 
 Veamos una guía de uso rápido de jackson. Para los siguientes ejemplos supondremos la siguiente clase:
 
-<!--more-->
-
 {% highlight java %}// Nota: Para atributos públicos, no es necesario usar getters y setters.
 public class MiClase {
   public String nombre;
