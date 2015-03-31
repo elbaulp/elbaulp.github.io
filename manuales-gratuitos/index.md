@@ -74,7 +74,7 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
 
 <ul class="tt-wrapper">
   <li>
-    <a href="http://elbauldelprogramador.com/6-steps-to-securing-your-domains/"><img src="http://elbauldelprogramador.com/content/uploads/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="262" class=" size-full wp-image-2097" /><span>6 Steps to Securing Your Domains</span></a>
+    <a href="http://elbauldelprogramador.com/6-steps-to-securing-your-domains/"><img src="http://elbauldelprogramador.com/images/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="262" class=" size-full wp-image-2097" /><span>6 Steps to Securing Your Domains</span></a>
   </li>
   <li>
     <a href="http://elbauldelprogramador.tradepub.com/free/w_make45/prgm.cgi"><img width="200" height="262" src="https://lh3.googleusercontent.com/-yeaRQKAqtZ4/TslfYMSpdTI/AAAAAAAABzs/h9H-nIMmma8/s300/lion1-240x300.jpg"  alt="Mac OS X Lion: The Ultimate Guide" /><span>Mac OS X Lion: The Ultimate Guide</span></a>
@@ -110,28 +110,28 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
     <a href="/nueva-guia-ubuntu-absolute-beginners/"><img width="200" height="262" src="https://lh5.googleusercontent.com/-pOL8x3wV9cE/Tzk33Qbuj7I/AAAAAAAACEk/2VSVxrYjFeU/s640/ubuntu-large.jpg" alt="Ubuntu: An Absolute Beginner’s Guide" /><span>Ubuntu: An Absolute Beginner’s Guide</span></a>
   </li>
   <li>
-    <a href="/noticias/nueva-guia-computer-inside-your-computer-how-to-use-virtualbox/"><img style="border:none;" width="200" height="262" class="aligncenter size-full wp-image-782" src="http://elbauldelprogramador.com/content/uploads/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" /><span>Computer Inside Your Computer: How To Use VirtualBox</span></a>
+    <a href="/noticias/nueva-guia-computer-inside-your-computer-how-to-use-virtualbox/"><img style="border:none;" width="200" height="262" class="aligncenter size-full wp-image-782" src="http://elbauldelprogramador.com/images/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" /><span>Computer Inside Your Computer: How To Use VirtualBox</span></a>
   </li>
   <li>
-    <a href="/noticias/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/"><img style="border:none;" width="200" height="262" class="aligncenter size-full wp-image-782" src="http://elbauldelprogramador.com/content/uploads/2012/08/w_sitb33c1.gif" title="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" alt="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" /><span>PHP & MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview</span></a>
+    <a href="/noticias/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/"><img style="border:none;" width="200" height="262" class="aligncenter size-full wp-image-782" src="http://elbauldelprogramador.com/images/2012/08/w_sitb33c1.gif" title="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" alt="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" /><span>PHP & MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview</span></a>
   </li>
   <li>
-    <a href="/noticias/nueva-guia-your-guide-to-google-analytics/"><img src="http://elbauldelprogramador.com/content/uploads/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="200" height="262" class=" size-medium wp-image-925" /><span>Your Guide To Google Analytics</span></a>
+    <a href="/noticias/nueva-guia-your-guide-to-google-analytics/"><img src="http://elbauldelprogramador.com/images/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="200" height="262" class=" size-medium wp-image-925" /><span>Your Guide To Google Analytics</span></a>
   </li>
   <li>
-    <a href="/noticias/nueva-guia-voip-vulnerabilities/"><br /> <img class="size-full wp-image-1285 " alt="VoIP Vulnerabilities" title="VoIP Vulnerabilities" src="http://elbauldelprogramador.com/content/uploads/2013/01/voip-vulnerabilities.png" width="200" height="262" /><span>VoIP Vulnerabilities</span></a>
+    <a href="/noticias/nueva-guia-voip-vulnerabilities/"><br /> <img class="size-full wp-image-1285 " alt="VoIP Vulnerabilities" title="VoIP Vulnerabilities" src="http://elbauldelprogramador.com/images/2013/01/voip-vulnerabilities.png" width="200" height="262" /><span>VoIP Vulnerabilities</span></a>
   </li>
   <li>
-    <a href="/noticias/nueva-guia-the-essentials-of-information-security-kit/"><img src="http://elbauldelprogramador.com/content/uploads/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="262" class=" size-full wp-image-1497" /><span>The Essentials of Information Security Kit: Includes a Free PC Security Handbook &#8211; 2nd Edition eBook</span></a>
+    <a href="/noticias/nueva-guia-the-essentials-of-information-security-kit/"><img src="http://elbauldelprogramador.com/images/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="262" class=" size-full wp-image-1497" /><span>The Essentials of Information Security Kit: Includes a Free PC Security Handbook &#8211; 2nd Edition eBook</span></a>
   </li>
   <li>
-    <a href="http://elbauldelprogramador.com/history-of-cryptography/"><img src="http://elbauldelprogramador.com/content/uploads/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178" height="229" class="alignleft size-full wp-image-2315" /><span>history of cryptography</span></a>
+    <a href="http://elbauldelprogramador.com/history-of-cryptography/"><img src="http://elbauldelprogramador.com/images/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178" height="229" class="alignleft size-full wp-image-2315" /><span>history of cryptography</span></a>
   </li>
   <li>
-    <a href="http://elbauldelprogramador.com/10-herramientas-seguridad-redes-tests-todo-mundo-deberia-usar/" target="_blank"><img src="http://elbauldelprogramador.com/content/uploads/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar" width="199" height="259" class="alignleft size-full wp-image-2383" /><span>10 herramientas de seguridad de redes y tests que todo el mundo debería usar</span></a>
+    <a href="http://elbauldelprogramador.com/10-herramientas-seguridad-redes-tests-todo-mundo-deberia-usar/" target="_blank"><img src="http://elbauldelprogramador.com/images/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar" width="199" height="259" class="alignleft size-full wp-image-2383" /><span>10 herramientas de seguridad de redes y tests que todo el mundo debería usar</span></a>
   </li>
   <li>
-    <a href="http://elbauldelprogramador.com/nueva-guia-gratuita-cybersecurity-dummies-ebook/"><img src="http://elbauldelprogramador.com/content/uploads/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="199" height="259" class="alignleft size-full wp-image-2533" /><span>Nueva guía gratuita: Cybersecurity for Dummies eBook</span></a>
+    <a href="http://elbauldelprogramador.com/nueva-guia-gratuita-cybersecurity-dummies-ebook/"><img src="http://elbauldelprogramador.com/images/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="199" height="259" class="alignleft size-full wp-image-2533" /><span>Nueva guía gratuita: Cybersecurity for Dummies eBook</span></a>
   </li>
 </ul>
 
