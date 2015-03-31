@@ -22,3 +22,5 @@
 - [x] Cambiar default-thumb.png
 - [x] Solucionar referencias
 - [x] Solucionar * *
+- [ ] Traducir
+- [ ] SecurityNow
