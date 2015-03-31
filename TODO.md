@@ -2,7 +2,8 @@
 - [x] Twitter Cards.
 - [x] Facebook open graph.
 - [ ] Correo y dominio.
-- [x] Tags.
+- [ ] Tags (Poner enlace).
+- [ ] Menu cursos
 - [ ] Related Post.
 - [x] Google Markup Schema.
 - [x] Google Analytics.
@@ -14,7 +15,6 @@
 - [x] Add favicon
 - [ ] Substitute old links with new
 - [x] Subir logo.
-- [ ] Post Poker
 - [ ] Descargas
 - [ ] Ping Google
 - [ ] Featured Images
