@@ -27,3 +27,4 @@
 - [x] Robots.
 - [x] Schema validator
 - [ ] drafts
+- [ ] Arreglar git

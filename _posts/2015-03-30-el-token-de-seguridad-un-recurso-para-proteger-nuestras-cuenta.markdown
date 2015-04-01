@@ -3,7 +3,7 @@ layout: post
 title: "El Token De Seguridad, Un Recurso Para Proteger Nuestras Cuenta"
 modified:
 categories:
-excerpt:
+excerpt: "A medida que han ido siendo más habituales todo tipo de transaccione online, tanto los servicios que las ofrecen como los usuarios que la utilizan muestran una mayor preocupación por reforzar la seguridad a acometer este tipo de operaciones. Buena prueba de ello es como la banc ha trabajado sin descanso por evitar el fraude que se comete a través d la suplantación de identidad con fórmulas como el sistema de pag [Vini](https://be.ceca.es/2000/vini/index.html), con tarjetas virtuale y diversos métodos"
 tags: []
 image:
   feature:
