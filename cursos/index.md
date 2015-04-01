@@ -5,8 +5,6 @@ excerpt: "Colección de cursos escritos en el blog"
 search_omit: false
 ---
 
-# HOLA
-
 #### [Curso de Android][Android]
 
 #### [Git: Mini Tutorial y chuleta de comandos][git]
