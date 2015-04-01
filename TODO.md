@@ -2,8 +2,8 @@
 - [x] Twitter Cards.
 - [x] Facebook open graph.
 - [ ] Correo y dominio.
-- [ ] Tags (Poner enlace).
-- [ ] Menu cursos
+- [x] Tags (Poner enlace).
+- [x] Menu cursos
 - [ ] Related Post.
 - [x] Google Markup Schema.
 - [x] Google Analytics.
@@ -23,5 +23,6 @@
 - [x] Solucionar referencias
 - [x] Solucionar * *
 - [ ] Traducir
-- [ ] SecurityNow
-- [ ] Robots.
+- [x] SecurityNow
+- [x] Robots.
+- [ ] Schema validator

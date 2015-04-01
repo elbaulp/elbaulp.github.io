@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: search
 title: "Buscar"
 excerpt: "Busca contenido en el blog"
 sitemap: false
