@@ -97,15 +97,9 @@ if_page_sidebar:
   </ul>
 </div>
 
-
-
-* * *</p>
-
 <h3 style="text-align:center;">
   ÍNDICE PL/SQL
 </h3>
-
-
 
 <div class="wi-list list-minus">
   <ul>

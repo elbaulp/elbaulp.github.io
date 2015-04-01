@@ -5,15 +5,15 @@ excerpt: "Colección de cursos escritos en el blog"
 search_omit: false
 ---
 
-#### [Curso de Android][Android]
+## [Curso de Android][Android]
 
-#### [Git: Mini Tutorial y chuleta de comandos][git]
+## [Git: Mini Tutorial y chuleta de comandos][git]
 
-#### [Mini Curso de LaTeX – Introducción][latex1]
+## [Mini Curso de LaTeX – Introducción][latex1]
 
-#### [Dig – Chuleta básica de comandos][dig]
+## [Dig – Chuleta básica de comandos][dig]
 
-#### [Bases de datos][bd]
+## [Bases de datos][bd]
 
 [Android]: /curso-programacion-android/
 [git]: /mini-tutorial-y-chuleta-de-comandos-git/
