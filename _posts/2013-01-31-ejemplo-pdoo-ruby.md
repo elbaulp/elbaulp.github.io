@@ -295,12 +295,12 @@ Persona [nombre=Nombre del alum1], fechaNacimiento=1980-02-08]Esta estudiando In
 
 Como mencioné al principio, el código de ambos programas está disponible para descargar:
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/ejemplo-pdoo-java/" rel="nofollow"> Download &ldquo;Ejemplo PDOO JAva&rdquo; <small>EjemploJava.zip &ndash; Downloaded 746 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/ejemplo-pdoo-java/" rel="nofollow"> Download &ldquo;Ejemplo PDOO JAva&rdquo; <small>EjemploJava.zip &ndash; Downloaded 746 times &ndash; </small> </a>
 
   
 
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/ejemplo-pdoo-ruby/" rel="nofollow"> Download &ldquo;Ejemplo PDOO Ruby&rdquo; <small>EjemploRuby.zip &ndash; Downloaded 408 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/ejemplo-pdoo-ruby/" rel="nofollow"> Download &ldquo;Ejemplo PDOO Ruby&rdquo; <small>EjemploRuby.zip &ndash; Downloaded 408 times &ndash; </small> </a>
 
 Como introducción al lenguaje Ruby, ya que nunca lo había usado, leí el siguiente artículo:
 

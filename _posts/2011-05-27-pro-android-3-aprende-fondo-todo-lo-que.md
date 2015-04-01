@@ -29,7 +29,7 @@ tags:
 
 Hace unas semanas encargué este libro en Amazon, y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).
 
-Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto <img src="http://elbauldelprogramador.com/wordpress/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
+Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
 
   
 <!--more-->

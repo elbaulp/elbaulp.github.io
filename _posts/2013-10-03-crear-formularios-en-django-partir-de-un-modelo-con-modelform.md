@@ -434,8 +434,8 @@ Espero que os haya servido de ayuda.
 *(2) Vistas genéricas* »» <a href="https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/" target="_blank">docs.django.org</a>  
 *(3) ModelForm* »» <a href="https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/" target="_blank">docs.django.org</a>
 
- [1]: http://elbauldelprogramador.com/django/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
- [2]: http://elbauldelprogramador.com/articulos/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
+ [1]: http://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
+ [2]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
 
 
 {% include _toc.html %}

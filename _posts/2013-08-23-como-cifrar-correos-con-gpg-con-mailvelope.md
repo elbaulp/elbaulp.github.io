@@ -86,9 +86,9 @@ Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnolog�
 
 
 
- [1]: http://elbauldelprogramador.com/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
- [2]: http://elbauldelprogramador.com/articulos/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: http://elbauldelprogramador.com/contacto/ "Contacto"
+ [1]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: http://elbauldelprogramador.com/ "Contacto"
  [4]: /images/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png
 
 {% include _toc.html %}

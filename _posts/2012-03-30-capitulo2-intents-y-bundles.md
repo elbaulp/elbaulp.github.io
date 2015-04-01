@@ -36,7 +36,7 @@ En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el 
 
 El proyecto con este ejemplo está disponible para su descarga (Comentado paso a paso): 
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/capitulo2-intents-y-bundles/" rel="nofollow"> Download &ldquo;Capitulo2 Intents Y Bundles&rdquo; <small>capitulo2_intents_y_bundles.zip &ndash; Downloaded 1272 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/capitulo2-intents-y-bundles/" rel="nofollow"> Download &ldquo;Capitulo2 Intents Y Bundles&rdquo; <small>capitulo2_intents_y_bundles.zip &ndash; Downloaded 1272 times &ndash; </small> </a>
 
 Voy a explicar un poco por encima que hace cada fichero del proyecto:
 

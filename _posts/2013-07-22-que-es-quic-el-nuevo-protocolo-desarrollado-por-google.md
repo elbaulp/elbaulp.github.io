@@ -30,10 +30,10 @@ Escuchando el podcast <a href="http://twit.tv/show/security-now/411" target="_bl
  13. [¿Dónde puedo aprender más sobre QUIC?][14]
  14. [¿Hay algún grupo de discusión para QUIC?][15]
 
-  
+
 <!--more-->
 
-  
+
 <a name="1"></a>
 
 ### ¿Qué es QUIC?
@@ -120,11 +120,11 @@ Sí, <proto-quic@chromium.org> | <a href="https://groups.google.com/a/chromium.o
 
 #### Referencias
 
-*QUIC FAQ for Geeks* »» <a href="https://docs.google.com/document/d/1lmL9EF6qKrk7gbazY8bIdvq3Pno2Xj_l_YShP40GLQE/edit#heading=h.h3jsxme7rovm" target="_blank">Visitar Documento en Drive</a> 
+*QUIC FAQ for Geeks* »» <a href="https://docs.google.com/document/d/1lmL9EF6qKrk7gbazY8bIdvq3Pno2Xj_l_YShP40GLQE/edit#heading=h.h3jsxme7rovm" target="_blank">Visitar Documento en Drive</a>
 
 
 
- [1]: http://elbauldelprogramador.com/category/articulos/security-now-articulos/
+ [1]: http://elbauldelprogramador.com/security-now-articulos/
  [2]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#1
  [3]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#2
  [4]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#3
@@ -139,7 +139,7 @@ Sí, <proto-quic@chromium.org> | <a href="https://groups.google.com/a/chromium.o
  [13]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#11
  [14]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#12
  [15]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#13
- [16]: http://elbauldelprogramador.com/tag/seguridad
- [17]: http://elbauldelprogramador.com/tag/criptografia/
+ [16]: http://elbauldelprogramador.com/seguridad
+ [17]: http://elbauldelprogramador.com/
 
 {% include _toc.html %}

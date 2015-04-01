@@ -102,7 +102,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1830'>
-      Intentar subir un conflicto de <a href="http://elbauldelprogramador.com/articulos/mini-tutorial-y-chuleta-de-comandos-git/" title="Git: Mini Tutorial y chuleta de comandos">merge</a> corregido y obtener otro
+      Intentar subir un conflicto de <a href="http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/" title="Git: Mini Tutorial y chuleta de comandos">merge</a> corregido y obtener otro
     </dd>
   </dl>
   
@@ -117,6 +117,6 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
 
- [1]: http://elbauldelprogramador.com/category/offtopic/vinetas-geek/ "Viñetas Geek de Domingo"
+ [1]: http://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
 
 {% include _toc.html %}

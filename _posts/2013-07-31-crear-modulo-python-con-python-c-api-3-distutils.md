@@ -117,6 +117,6 @@ En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de u
  [2]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
  [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
  [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
- [5]: http://elbauldelprogramador.com/python/crear-modulo-python-con-python-c-api-2
+ [5]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2
 
 {% include _toc.html %}

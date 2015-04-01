@@ -218,8 +218,8 @@ Hemos visto suficiente información para poder decidir si queremos ayudar a la c
 
 
 
- [1]: http://elbauldelprogramador.com/articulos/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
- [2]: http://elbauldelprogramador.com/articulos/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
+ [1]: http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
+ [2]: http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
  [3]: /articulos/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
  [4]: /images/2013/05/081712_1525_AchievingAn1.png
  [5]: /images/2013/06/081712_1525_AchievingAn2.png

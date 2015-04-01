@@ -31,7 +31,7 @@ Ahora me gustaría que todo aquel que quiera probarla y ver como funciona, la de
 
 Si alguien quere participar y traducir la aplicación a un idioma distinto del Inglés y Español, le estaría agredecido y lo colocaría en el &#8220;Acerca de&#8221;.
 
-Por último, decir como siempre, que toda crítica es bienvenida, pero por favor no seáis demasiado duros, que es mi 2 aplicación para esta plataforma <img src="http://elbauldelprogramador.com/wordpress/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
+Por último, decir como siempre, que toda crítica es bienvenida, pero por favor no seáis demasiado duros, que es mi 2 aplicación para esta plataforma <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 
 <p class="alert">
   Para instalar FavSites debes disponer de Android 2.2 o superior.

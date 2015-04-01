@@ -170,7 +170,7 @@ Estos son los componentes gráficos básicos, también disponemos de RadioButton
 
 En general con echar un vistazo a los métodos y listeners de cada componente, y con la documentación que ofrece javadoc en eclipse, lograremos entender como funciona cada uno, y podremos usarlos fácilmente.
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/ejemplocomponentesgraficos/" rel="nofollow"> Download &ldquo;EjemploComponentesGraficos&rdquo; <small>ejemploComponentesGraficos.zip &ndash; Downloaded 1421 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;EjemploComponentesGraficos&rdquo; <small>ejemploComponentesGraficos.zip &ndash; Downloaded 1421 times &ndash; </small> </a>
 
 * * *
 

@@ -221,7 +221,7 @@ Ya solo resta ejecutarlo y ver el resultado:
 
 Como siempre, se puede descargar este ejemplo:
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/interfaz-grafica-adapters-ii/" rel="nofollow"> Download &ldquo;Interfaz gráfica – Adapters II&rdquo; <small>Adaptadores2.zip &ndash; Downloaded 1190 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/interfaz-grafica-adapters-ii/" rel="nofollow"> Download &ldquo;Interfaz gráfica – Adapters II&rdquo; <small>Adaptadores2.zip &ndash; Downloaded 1190 times &ndash; </small> </a>
 
 * * *
 

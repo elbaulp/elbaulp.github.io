@@ -365,6 +365,6 @@ puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
 
 
 
- [1]: http://elbauldelprogramador.com/seguridad/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+ [1]: http://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
 {% include _toc.html %}

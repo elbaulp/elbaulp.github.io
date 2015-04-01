@@ -87,7 +87,7 @@ Al final, todo esto se reduce a una cosa: **tú eres el dueño de tu dispositivo
 
  [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Android"
  [2]: http://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
- [3]: http://elbauldelprogramador.com/android/tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"
+ [3]: http://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"
  [4]: http://elbauldelprogramador.com/sin-categoria/ubuntu-running-on-samsung-galaxy-tab/ "Ubuntu running on the Samsung Galaxy Tab"
 
 {% include _toc.html %}

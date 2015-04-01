@@ -44,7 +44,7 @@ Como vengo anunciando desde <a target="_blank" href="/2011/11/terminada-la-prime
 
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/primer-capitulo-programacion-android/" rel="nofollow"> Download &ldquo;Primer Capítulo Programación Android&rdquo; <small>ProgramacionAndroidSample1.pdf &ndash; Downloaded 2460 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/primer-capitulo-programacion-android/" rel="nofollow"> Download &ldquo;Primer Capítulo Programación Android&rdquo; <small>ProgramacionAndroidSample1.pdf &ndash; Downloaded 2460 times &ndash; </small> </a>
 
 <del datetime="2014-02-08T09:06:51+00:00">El documento lo enviaré a todo aquel que haga una donación de <b>al menos 1.5 euros (Paypal se queda con 40 céntimos)</b></del>.
 

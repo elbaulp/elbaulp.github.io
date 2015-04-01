@@ -248,9 +248,9 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
 
 
 
- [1]: http://elbauldelprogramador.com/articulos/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
+ [1]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
  [2]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de datos"
- [3]: http://elbauldelprogramador.com/programacion/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
- [4]: http://elbauldelprogramador.com/basededatos/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
+ [3]: http://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
+ [4]: http://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
 
 {% include _toc.html %}

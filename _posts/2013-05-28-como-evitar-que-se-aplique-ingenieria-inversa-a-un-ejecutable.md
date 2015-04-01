@@ -80,6 +80,6 @@ Como se vé, el ejecutable termina ántes de llegar a ejecutar siquiera la funci
 
 
 
- [1]: http://elbauldelprogramador.com/programacion/lenguaje-c/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/ "Jugando con las secciones .dtors y .ctors de la tabla de secciones en C"
+ [1]: http://elbauldelprogramador.com/lenguaje-c/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/ "Jugando con las secciones .dtors y .ctors de la tabla de secciones en C"
 
 {% include _toc.html %}

@@ -96,9 +96,9 @@ A partir de ahora, se notará un descenso drástico en los comentarios de spam. 
 
  [1]: http://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
  [2]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
- [3]: http://elbauldelprogramador.com/basededatos/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
- [4]: http://elbauldelprogramador.com/internet/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
- [5]: http://elbauldelprogramador.com/category/script/ "Scripts del blog"
+ [3]: http://elbauldelprogramador.com/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
+ [4]: http://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
+ [5]: http://elbauldelprogramador.com/ "Scripts del blog"
 
 
 {% include _toc.html %}

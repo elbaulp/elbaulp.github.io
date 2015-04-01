@@ -99,8 +99,8 @@ Si estás interesado en saber más acerca de este tema puede que te interesen lo
 
 
 
- [1]: http://elbauldelprogramador.com/articulos/lo-ultimo-en-criptografia-fully-homomorphic-encryption/ "Lo último en criptografía: Fully Homomorphic Encryption"
- [2]: http://elbauldelprogramador.com/articulos/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/ "Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras"
- [3]: http://elbauldelprogramador.com/articulos/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
+ [1]: http://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/ "Lo último en criptografía: Fully Homomorphic Encryption"
+ [2]: http://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/ "Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras"
+ [3]: http://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
 
 {% include _toc.html %}

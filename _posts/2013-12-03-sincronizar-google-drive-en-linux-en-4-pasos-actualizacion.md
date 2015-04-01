@@ -100,8 +100,8 @@ Lo guardamos como *update-grive.sh*, le damos permisos de ejecución `chmod +x u
 
 
 
- [1]: http://elbauldelprogramador.com/linux/sincronizar-google-drive-en-linux-en-4-pasos/ "Sincronizar Google Drive en Linux en 4 pasos"
- [2]: http://elbauldelprogramador.com/category/script/
- [3]: http://elbauldelprogramador.com/script/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
+ [1]: http://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/ "Sincronizar Google Drive en Linux en 4 pasos"
+ [2]: http://elbauldelprogramador.com/
+ [3]: http://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
 
 {% include _toc.html %}

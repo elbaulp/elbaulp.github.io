@@ -215,7 +215,7 @@ Para finalizar, decir que la librería por ahora está muy limitada, pero es per
 
 #### Referencias
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/webservicelibexample/" rel="nofollow"> Download &ldquo;WebserviceLibExample&rdquo; <small>WebserviceLibExample.zip &ndash; Downloaded 811 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;WebserviceLibExample&rdquo; <small>WebserviceLibExample.zip &ndash; Downloaded 811 times &ndash; </small> </a>
 
 *FreeGeoIp* »» <a href="http://freegeoip.net/static/index.html" target="_blank">Visitar sitio</a>  
 *developer.wordpress.com* »» <a href="http://developer.wordpress.com/docs/api/1/get/test/%24ID/" target="_blank">Visitar sitio</a>  

@@ -80,7 +80,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
 
- [1]: http://elbauldelprogramador.com/category/offtopic/vinetas-geek/ "Viñetas Geek de Domingo"
+ [1]: http://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
  [2]: /images/2013/08/questions.png
  [3]: /images/2013/08/when-I-quickly-solve-a-colleagues-bug.gif
  [4]: /images/2013/08/Typical-bug-fixing.gif

@@ -47,7 +47,7 @@ De esta forma el error ***Calling startActivity() from outside of an Activity co
 
 
 
- [1]: http://elbauldelprogramador.com/opensource/fundamentos-programacion-android/
- [2]: http://elbauldelprogramador.com/opensource/programacion-android-intents-conceptos/
+ [1]: http://elbauldelprogramador.com/fundamentos-programacion-android/
+ [2]: http://elbauldelprogramador.com/programacion-android-intents-conceptos/
 
 {% include _toc.html %}

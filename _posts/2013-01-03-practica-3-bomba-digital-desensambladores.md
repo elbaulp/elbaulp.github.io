@@ -510,7 +510,7 @@ int main(_, v) double *v; int _;{
 
 <p>
   <p>
-    <a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/practica-3-bomba-digital-desensambladores/" rel="nofollow">
+    <a class="aligncenter download-button" href="http://elbauldelprogramador.com/practica-3-bomba-digital-desensambladores/" rel="nofollow">
     		Download &ldquo;Práctica 3 - Bomba Digital - Desensambladores&rdquo;		<small> &ndash; Downloaded 498 times &ndash; 371 kB</small>
     	</a>
   </p>

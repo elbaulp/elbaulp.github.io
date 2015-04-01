@@ -484,7 +484,7 @@ public void onCreate(Bundle savedInstanceState) {
 
 Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si tienes alguna duda o se te ocurre alguna otra forma de hacerlo, no dudes en dejar tu comentario. El código puede descargarse abajo:
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/download/customadapter/" rel="nofollow"> Download &ldquo;CustomAdapter&rdquo; <small>CustomAdapter.tar.gz &ndash; Downloaded 1020 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="http://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;CustomAdapter&rdquo; <small>CustomAdapter.tar.gz &ndash; Downloaded 1020 times &ndash; </small> </a>
 
 * * *
 
