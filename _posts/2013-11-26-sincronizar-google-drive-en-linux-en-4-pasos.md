@@ -150,9 +150,9 @@ El resultado de estas modificaciones es el siguiente:
 
  [1]: http://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
  [2]: http://elbauldelprogramador.com/
- [3]: http://elbauldelprogramador.com/how-to/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
+ [3]: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
  [4]: http://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
- [5]: http://elbauldelprogramador.com/how-to/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
+ [5]: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
  [6]: /images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png
 
 {% include _toc.html %}

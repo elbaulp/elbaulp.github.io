@@ -45,7 +45,7 @@ blogger_author:
 
   <ul>
     <li>
-      <a href="http://elbauldelprogramador.com/how-to/adapter-personalizado-en-android/" target="_blank">Cómo crear un adapter personalizado en Android</a>
+      <a href="/adapter-personalizado-en-android/" target="_blank">Cómo crear un adapter personalizado en Android</a>
     </li>
     <li>
       <a href="http://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/" target="_blank">Optimizando la interfaz Android – Compound Drawables</a>

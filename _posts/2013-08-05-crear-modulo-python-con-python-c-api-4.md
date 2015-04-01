@@ -173,7 +173,7 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
  [2]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
  [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
  [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
- [5]: http://elbauldelprogramador.com/how-to/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
+ [5]: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
  [6]: http://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
 
 {% include _toc.html %}
