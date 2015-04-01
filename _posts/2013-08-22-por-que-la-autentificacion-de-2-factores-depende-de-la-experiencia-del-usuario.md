@@ -52,6 +52,6 @@ La oportunidad de resolver muchos de los problemas de seguridad con una autentif
 
  [1]: http://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo"
  [2]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
- [3]: http://elbauldelprogramador.com/security-now-articulos/ "Categoría Seguridad"
+ [3]: /security-now/ "Categoría Seguridad"
 
 {% include _toc.html %}

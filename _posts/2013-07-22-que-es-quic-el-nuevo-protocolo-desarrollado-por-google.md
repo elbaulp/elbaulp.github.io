@@ -124,7 +124,7 @@ Sí, <proto-quic@chromium.org> | <a href="https://groups.google.com/a/chromium.o
 
 
 
- [1]: http://elbauldelprogramador.com/security-now-articulos/
+ [1]: /security-now/
  [2]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#1
  [3]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#2
  [4]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#3

@@ -58,7 +58,7 @@ A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de
 
 
 
- [1]: http://elbauldelprogramador.com/security-now-articulos/ "Artículos sobre Security now!"
+ [1]: /security-now/ "Artículos sobre Security now!"
  [2]: http://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/ "Estructura y seguridad de los QR Codes"
  [3]: http://www.w3.org/ "W3 org"
  [4]: http://elbauldelprogramador.com/ "Artículos de Luzcila"
