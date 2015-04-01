@@ -23,5 +23,5 @@ Para contactar conmigo de forma segura puedes obtener mi clave [GPG][1] pública
 
 
 
- [1]: http://elbauldelprogramador.com/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
- [2]: http://elbauldelprogramador.com/seguridad/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+ [1]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [2]: http://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"

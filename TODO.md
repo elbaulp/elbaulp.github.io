@@ -24,3 +24,4 @@
 - [x] Solucionar * *
 - [ ] Traducir
 - [ ] SecurityNow
+- [ ] Robots.

@@ -39,7 +39,7 @@ blogger_author:
 
 ### Primera parte
 
-> Descubre cómo adquirir esta primera parte del curso [en pdf](http://elbauldelprogramador.com/opensource/disponible-la-primera-parte-del-curso/)
+> Descubre cómo adquirir esta primera parte del curso [en pdf](http://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/)
 
 ### Artículos de interés
 
@@ -48,7 +48,7 @@ blogger_author:
       <a href="http://elbauldelprogramador.com/how-to/adapter-personalizado-en-android/" target="_blank">Cómo crear un adapter personalizado en Android</a>
     </li>
     <li>
-      <a href="http://elbauldelprogramador.com/programacion/optimizando-la-interfaz-android-compound-drawables/" target="_blank">Optimizando la interfaz Android – Compound Drawables</a>
+      <a href="http://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/" target="_blank">Optimizando la interfaz Android – Compound Drawables</a>
     </li>
     <li>
       <a href="http://wp.me/p2kdv9-gg" target="_blank" alt="Crear DialogFragment compatibles con versiones inferiores a Android 3.0">Crear DialogFragment compatibles con versiones inferiores a Android 3.0</a> <li>
@@ -73,10 +73,10 @@ blogger_author:
 
         <ul>
           <li>
-            <a href="http://elbauldelprogramador.com/opensource/programacion-android-hola-mundo/">Programación Android: Hola Mundo</a>
+            <a href="http://elbauldelprogramador.com/programacion-android-hola-mundo/">Programación Android: Hola Mundo</a>
           </li>
           <li>
-            <a href="http://elbauldelprogramador.com/opensource/fundamentos-programacion-android/">Fundamentos programación Android: Conceptos básicos y componentes</a>
+            <a href="http://elbauldelprogramador.com/fundamentos-programacion-android/">Fundamentos programación Android: Conceptos básicos y componentes</a>
           </li>
           <li>
             <a href="http://elbauldelprogramador.com/fundamentos-programacion-android_16/">Fundamentos programación Android: Intents y AndroidManifest</a>
