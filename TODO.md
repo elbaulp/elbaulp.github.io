@@ -25,4 +25,4 @@
 - [ ] Traducir
 - [x] SecurityNow
 - [x] Robots.
-- [ ] Schema validator
+- [x] Schema validator
