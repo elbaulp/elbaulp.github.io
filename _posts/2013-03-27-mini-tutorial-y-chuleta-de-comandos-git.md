@@ -57,26 +57,26 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 
 - **git log &#45;p &#45;2**  #  Muestra 2 últimos commits con diff
 - **git log &#45;&#45;stat**
-- **git log &#45;&#45;pretty &lt;short|full|fuller>**
+- **git log &#45;&#45;pretty &lt;short&#124;full&#124;fuller>**
 - **git log &#45;&#45;pretty=format:&#8221;%h &#45; %an, %ar : %s&#8221;**
 - **git log &#45;&#45;pretty=format;&#8221;%h %s&#8221; &#45;&#45;graph**
 - **git log &#45;&#45;since=2.weeks**
 - **git log &lt;branch> &#45;&#45;not master**  # Muestra commit de &lt;branch> sin incluir los de master
-- git log &#45;&#45;abbrev&#45;commit &#45;&#45;pretty=oneline
+- **git log &#45;&#45;abbrev&#45;commit &#45;&#45;pretty=oneline**
 - **git diff master&#8230;contrib**  # Muestra solo el trabajo que la rama contrib actual ha introducido desde su antecesor común con master
 - **git log &lt;branch1>..&lt;branch2>**   # Commits de branch2 que no están en branch1
 - **git log origin/master..master**  # Muestra qué commits se van a enviar al servidor
-- **git log origin/master.. **  # Igual que el anterior. Se asume master o HEAD
+- **git log origin/master..**  # Igual que el anterior. Se asume master o HEAD
 - **git log refA refB &#45;&#45;not refC**  #  commits en refA y refB que no están en refC
 - **git log master&#8230;experiment**  # commits de master o experiment, pero sin ser comunes. Con &#45;&#45;left&#45;right indica a qué rama pertenece cada uno
 
 ## REMOTES # repos en internet
 
 - **git remote &#45;v**  #  lista los repos remotos
-- **git remote add \[shortname\] \[url\] **  #  crea nuevo remote, es posible descargar el contenido de ese repo con git fetch [shortname]. Master branch en [shortcode]/master
+- **git remote add \[shortname\] \[url\]**  #  crea nuevo remote, es posible descargar el contenido de ese repo con git fetch [shortname]. Master branch en [shortcode]/master
 - **git fetch &lt;remote>**   #  descarga trabajo nuevo a máquina local, no sobreescribe nada tuyo. ( git pull sí hace merge automaticamente si se esta realizando un seguimiento de esa branch)
-- **git push \[remote&#45;name\] \[branch&#45;name\] **  #  sii nadie ha hecho push antes
-- **git remote show [remote&#45;name] **  #  inspecciona remote.
+- **git push \[remote&#45;name\] \[branch&#45;name\]**  #  sii nadie ha hecho push antes
+- **git remote show [remote&#45;name]**  #  inspecciona remote.
 - **git remote rename &lt;old&#45;name> &lt;new&#45;name>**   #  también renombra branches: quedaría &lt;new&#45;name>/master
 - **git remote rm &lt;remote&#45;name>**   #  p.e si el contribuidor ya no contribuye más
 
@@ -100,17 +100,17 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 - **git tag &#45;s &lt;tag&#45;name> &#45;m &#8216;message&#8217;**   #  la firma con gpg
 - **git tag &lt;tag&#45;name>**   #  lightweight tag
 - **git tag &#45;v &lt;tag&#45;name>**   #  verifica tags firmadas
-- **git tag &#45;a &lt;tag&#45;name> [commit&#45;chksum] **  #  crea tag para commit con dicho chksum
+- **git tag &#45;a &lt;tag&#45;name> [commit&#45;chksum]**  #  crea tag para commit con dicho chksum
 - Por defecto no se transfieren los tags, para subirlos al servidor:
-- **git push origin [tag&#45;name] **  #  una sola
+- **git push origin [tag&#45;name]**  #  una sola
 - **git push origin &#45;&#45;tags**  #  Enviar todas
 
 - Para usar GPG y firmar tags, hay que subir la clave pública al repositorio:
 - **gpg &#45;&#45;list&#45;keys**  # Coges la id pública
-- **gpg &#45;a &#45;&#45;export &lt;id> | git hash&#45;object &#45;w &#45;&#45;stdin**  # Copia el SHA&#45;1 devuelto
+- **gpg &#45;a &#45;&#45;export &lt;id> &#124; git hash&#45;object &#45;w &#45;&#45;stdin**  # Copia el SHA&#45;1 devuelto
 - **git tag &#45;a maintainer&#45;gpg&#45;pub &lt;SHA&#45;1>**
 - **git push &#45;&#45;tags**  # Comparte la clave con todos los usuarios
-- **git show maintainer&#45;gpg&#45;pub | gpg &#45;&#45;import**  # Cada usuario importa la clave así
+- **git show maintainer&#45;gpg&#45;pub &#124; gpg &#45;&#45;import**  # Cada usuario importa la clave así
 - **git show &lt;tag>**   # Devuelve más información sobre la etiqueta
 - **git tag -d nombre_tag**  #  eliminar la etiqueta
 - **git push origin :refs/tags/nombre_tag**  #  Eliminar la etiqueta del repositorio remoto.
@@ -135,7 +135,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
     - **git fetch origin**  #  Descarga el contenido del servidor
     - **git push &lt;remote> &lt;branch>**   # Las ramas no se suben por defecto, has de subirlas explícitamente
     - **git push &lt;remote> &lt;branch>:&lt;nuevoNombre>**   # Igual que la de arriba, pero en el servidor se llama a la rama con nuevoNombre en lugar de branch
-    - # Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:
+    - **Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:**
     - **git fetch origin**  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)
     - **git checkout &#45;b rama\_nueva origin/rama\_nueva**  #  Crea una rama local a partir de la remota
     - **git merge origin/nueva_rama**  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama
@@ -148,21 +148,21 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
     - **git chekout &#45;b &lt;nuevo_nombre> origin/&lt;rama>**   #  Establece un nombre distinto para la rama local
     ## REBASE
 
-    # Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re&#45;merges
+    **Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re&#45;merges**
 
     - **git checkout &lt;una rama>**
     - **git rebase master**  #  aplica todos los cambios de &lt;una rama> a master
     - **git merge master**  # hay que hacer un merge de tipo fast forward
-    - # Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:
+    - **Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:**
     - **git rebase &#45;&#45;onto master server client**  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.
     - **git checkout master***
     - **git merge client**  #  fast&#45;forward. Client y master en el mismo snapshot
-    - # Si se quiere aplicar también los cambios de server, basta con:
+    - **Si se quiere aplicar también los cambios de server, basta con:**
     - **git rebase master server***
     - **git checkout master***
     - **git merge server***
 
-    - **git rebase \[basebranch\] \[topicbranch\] **  #  sintaxis de rebase
+    - **git rebase \[basebranch\] \[topicbranch\]**  #  sintaxis de rebase
     - **git rebase &#45;i**  #  Rebase interactivo
 
     # SERVIDOR
@@ -173,9 +173,9 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
     - **git describe master**  # Solo funciona para tags creadas con &#45;s ó &#45;a
     ## PREPARAR UNA RELEASE
 
-    - **git archive master &#45;&#45; prefix=&#8221;project/&#8217; | gzip > \`git describe master\`.tar.gz&lt;/li>
+    - **git archive master &#45;&#45; prefix=&#8221;project/&#8217; &#124; gzip > \`git describe master\`.tar.gz**
 
-        - git archive master &#45;&#45; prefix=&#8221;project/&#8217; &#45;&#45;format=zip | \`git describe master\`.zip
+        - git archive master &#45;&#45; prefix=&#8221;project/&#8217; &#45;&#45;format=zip &#124; \`git describe master\`.zip
         - test/ export&#45;ignore  # Al crear el tarball no incluye el directorio test/
 
         ## GENERAR UN CHANGELOG
@@ -218,7 +218,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
         - git push myFork featureA
         - git request&#45;pull origin/master myFork  # enviar la salida por mail al propietario del proyecto, o hacer click en pull request.
         - Buena practica tener siempre una rama master que apunte a origin/master, para estar siempre actualizado con los ultimos cambios en el proyecto original.
-        - #Separar cada trabajo realizado en topic branch, que trackeen a origin/master
+        - **Separar cada trabajo realizado en topic branch, que trackeen a origin/master**
 
 
         - git checkout &#45;b featureB origin/master
@@ -228,7 +228,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
         - (Contactar con el propietario del proyecto)
         - git fetch origin
 
-        - #Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en**featureB**, resuelves conflictos, y haces push:
+        - **Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en**featureB**, resuelves conflictos, y haces push:**
 
 
         - git checkout &#45;b featureBv2 origin/master
@@ -238,7 +238,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
         - git push myFork featureBv2
 
 
-        - #&#45;&#45;squash coge todo el trabajo de la rama mezclada y la aplasta en un no&#45;merge commit encima de la rama en la que estas. &#45;&#45;no&#45;commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit
+        - **&#45;&#45;squash coge todo el trabajo de la rama mezclada y la aplasta en un no&#45;merge commit encima de la rama en la que estas. &#45;&#45;no&#45;commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit**
 
         ## REFLOG
 
@@ -324,44 +324,45 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 
         Otro ejemplo interesante es la expansión de la palabra clave**$Date$**. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:
 
-        {% highlight ruby %}#! /usr/bin/env ruby
+{% highlight ruby %}
+#! /usr/bin/env ruby
 data = STDIN.read
 last_date = `git log &#45;&#45;pretty=format:"%ad" &#45;1`
 puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
 {% endhighlight %}
 
-        Puedes nombrar este script como**expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:  
-        **git config filter.dater.smudge expand_date**  
-        **git config filter.dater.clean &#8216;perl &#45;pe &#8220;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&#8221;&#8216;**
+Puedes nombrar este script como**expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:  
+**git config filter.dater.smudge expand_date**  
+**git config filter.dater.clean &#8216;perl &#45;pe &#8220;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&#8221;&#8216;**
 
-        Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:
+Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:
 
-        **echo &#8216;# $Date$&#8217; > date_test.txt  
-        echo &#8216;date*.txt filter=dater&#8217; >> .gitattributes
+**echo &#8216;# $Date$&#8217; > date_test.txt  
+echo &#8216;date*.txt filter=dater&#8217; >> .gitattributes
 
-        git add date_test.txt .gitattributes  
-        git commit &#45;m &#8220;Testing date expansion in Git&#8221;  
-        rm date_test.txt  
-        git checkout date_test.txt  
-        cat date_test.txt  
-        $Date: Tue Apr 21 07:26:52 2009 &#45;0700$
+git add date_test.txt .gitattributes  
+git commit &#45;m &#8220;Testing date expansion in Git&#8221;  
+rm date_test.txt  
+git checkout date_test.txt  
+cat date_test.txt  
+$Date: Tue Apr 21 07:26:52 2009 &#45;0700$
 
-        ## GIT HOOKS
+## GIT HOOKS
 
-        Hay dos tipos, de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.
+Hay dos tipos, de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.
 
-        ## CONCEPTOS
+## CONCEPTOS
 
-        Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.
+Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.
 
-        ## GITIGNORE:
+## GITIGNORE:
 
-        # a comment &#45; this is ignored  
-        ***.a**  #  no .a files*  
-        **!lib.a**  #  but do track lib.a, even though you&#8217;re ignoring .a files above*  
-        **/TODO**  #  only ignore the root TODO file, not subdir/TODO*  
-        **build/**  #  ignore all files in the build/ directory*  
-        **doc/*.txt**  #  ignore doc/notes.txt, but not doc/server/arch.txt
+# a comment &#45; this is ignored  
+***.a**  #  no .a files*  
+**!lib.a**  #  but do track lib.a, even though you&#8217;re ignoring .a files above*  
+**/TODO**  #  only ignore the root TODO file, not subdir/TODO*  
+**build/**  #  ignore all files in the build/ directory*  
+**doc/*.txt**  #  ignore doc/notes.txt, but not doc/server/arch.txt
 
 
 
