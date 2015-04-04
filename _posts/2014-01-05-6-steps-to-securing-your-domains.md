@@ -20,7 +20,7 @@ Domain hijacking is now front page news. Learn how to prevent your company&#8217
 
 #### Descargar 6 Steps to Securing Your Domains
 
-<div class="button-container">
+<div class="btn-success">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_mm47/" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

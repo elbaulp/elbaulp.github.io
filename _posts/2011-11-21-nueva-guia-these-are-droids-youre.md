@@ -47,7 +47,7 @@ This amazing manual will teach you:
   * How and why you should root your phone
   * Securing your Android phone
 
-<div class="button-container">
+<div class="btn-success">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

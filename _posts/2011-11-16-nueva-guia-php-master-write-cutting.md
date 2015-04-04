@@ -39,7 +39,7 @@ What&#8217;s inside?
 
 Also with this free preview you will also receive updates covering all the technical aspects of web development. From the latest PHP techniques to advanced HTML, JavaScript, DHTML, XML, ASP and a whole lot more courtesy of SitePoint.
 
-<div class="button-container">
+<div class="btn-success">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_sitb30" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

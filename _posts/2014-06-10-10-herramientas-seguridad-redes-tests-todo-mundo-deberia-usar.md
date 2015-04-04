@@ -20,7 +20,7 @@ Whether you are operating a home system, overseeing a small startup, or performi
 
 # Descargar
 
-<div class="button-container">
+<div class="btn-success">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
