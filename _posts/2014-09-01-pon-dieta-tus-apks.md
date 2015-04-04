@@ -29,16 +29,16 @@ En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación
 
 No es ningún secreto que las aplicaciones cada vez ocupan más espacio. Las primeras aplicaciones solían ocupar unas **2MB** en las versiones iniciales de [Android][4]. Ahora es bastante común ver aplicaciones que pesan entre 10 y 20MB. Éste incremento en el tamaño es una consecuencia directa tanto de las expectativas del usuario como de la adquisición de experiencia por parte de los desarrolladores. Las principales razones del aumento en el tamaño de los **APKs** son:
 
-  * Más categorías *dpi* (*[l|m|tv|h|x|xx|xxx]dpi*).
+  * Más categorías *dpi* (*[l\|m\|tv\|h\|x\|xx\|xxx]dpi*).
   * La evolución de la plataforma Android, herramientas de desarrollo y el ecosistema de librerías.
   * Las incesantes expectativas del usuario en cuanto a *Interfaces Gráficas* (UI) de mayor calidad.
   * etc..etc..
 
 Publicar aplicaciones *ligeras* en la **Play Store** es una buena práctica a la que todo buen programador debería prestar atención al diseñar una aplicación. ¿Por qué?.
 
-  * Primero, porque es sinónimo de un código base simple, mantenible y probado (*future-proof*). 
+  * Primero, porque es sinónimo de un código base simple, mantenible y probado (*future-proof*).
   * Segundo, porque los programadores por norma general preferirán mantenerse por debajo del límite actual de la Play Store, 50MB por **APK** si no quieren tener que usar descargas adicionales.
-  * Por último, porque vivimos en un mundo de restricciones: 
+  * Por último, porque vivimos en un mundo de restricciones:
       * Ancho de banda limitado.
       * Espacio en disco limitado.
       * etc.
@@ -112,7 +112,7 @@ Como habrás adivinado **Proguard** es extremadamente útil y eficiente. Pero un
 
 **Lint** analiza recuros (ficheros en el directorio `/res`) pero ignora los assets (Ficheros en `/assets`). Debido a que los assets se acceden mediante su nombre en lugar de una referencia Java o XML (Ver [Recursos compilados y no compilados][11]). Y por ello **Lint** no puede determinar si un asset se usa en el proyecto. Ésto es tarea del programador.
 
-> **Nota del traductor**: Existen otras herramientas para eliminar los recursos sin usar automáticamente, como la vista en el artículo “ELIMINAR RECURSOS SIN USAR EN ANDROID” mencionado al principio de éste artículo. 
+> **Nota del traductor**: Existen otras herramientas para eliminar los recursos sin usar automáticamente, como la vista en el artículo “ELIMINAR RECURSOS SIN USAR EN ANDROID” mencionado al principio de éste artículo.
 
 ### Ser obstinado con los recursos
 
@@ -219,11 +219,11 @@ El empaquetado del **APK** del lado del servidor parece extremadamente potente. 
 
 El diseño trata de obtener lo mejor posible a partir de un conjunto de restricciones. El peso/tamaño de un **APK** es claramente una de esas restricciones. No hay que tener miedo de empeorar un aspecto de la aplicación para mejorar otros. Por ejemplo, no hay que dudar en reducir la calidad del renderizado de la UI si como consecuencia se logra reducir el tamaño del APK y la aplicación se hace más fluida. El 99% de los usuarios no notarán que la calidad ha bajado, pero sí notarán que la aplicación va más fluida. Al fin y al cabo, una aplicación se juzga por su totalidad, no por la suma de ciertos aspecto por separado.
 
-> Gracias al [Cyril][20] por permitirme traducir su artículo original *“Putting Your APKs on Diet”* 
+> Gracias al [Cyril][20] por permitirme traducir su artículo original *“Putting Your APKs on Diet”*
 
 #### Referencias
 
-*Putting Your APKs on Diet por Cyril Mottier* »» <a href="http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/" target="_blank">cyrilmottier.com</a> 
+*Putting Your APKs on Diet por Cyril Mottier* »» <a href="http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/" target="_blank">cyrilmottier.com</a>
 
 
 
