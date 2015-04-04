@@ -188,9 +188,9 @@ public class EjemploLog4j2 {
 }
 {% endhighlight %}
 
-<img src="/images/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434" height="49" class="aligncenter size-full wp-image-2556" />
-
-
+<figure>
+  <img src="/images/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434" height="49" />
+</figure>
 
  [1]: https://logging.apache.org/log4j/2.x/maven-artifacts.html
  [2]: http://logging.apache.org/log4j/2.0/manual/layouts.html
