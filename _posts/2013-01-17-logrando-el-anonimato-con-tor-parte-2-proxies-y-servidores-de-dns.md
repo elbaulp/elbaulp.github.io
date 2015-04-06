@@ -226,7 +226,7 @@ Referencias
 
 
  [1]: http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/ "Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks"
- [2]: /articulos/logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
+ [2]: /logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
  [3]: /images/2012/12/081012_1604_AchievingAn11.png
 
 {% include _toc.html %}

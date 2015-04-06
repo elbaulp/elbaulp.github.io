@@ -97,10 +97,10 @@ Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más cl
 
 
 
- [1]: /category/articulos/security-now-articulos/
+ [1]: /category/security-now-articulos/
  [2]: /category/opensource/
  [3]: /?s=criptografia
- [4]: /articulos/lo-ultimo-en-criptografia-fully-homomorphic-encryption/
+ [4]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
  [5]: /rssfeed/
 
 {% include _toc.html %}

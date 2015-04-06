@@ -165,8 +165,8 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 
 
 
- [1]: /articulos/como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
- [2]: /articulos/como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
+ [1]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
+ [2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
  [3]: http://elbauldelprogramador.com/bases-de-datos/
 
 {% include _toc.html %}

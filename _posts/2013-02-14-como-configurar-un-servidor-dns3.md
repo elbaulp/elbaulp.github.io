@@ -54,12 +54,12 @@ Con objetivo de que los emails enviados desde el dominio que se está configuran
 };
 {% endhighlight %}
 
-Los números son la dirección ip del servidor escritos en orden inverso. Es decir, la ip es **5.39.89.x**, así pues, la zona ha de llamarse *89.39.5.in-addr.arpa*. 
+Los números son la dirección ip del servidor escritos en orden inverso. Es decir, la ip es **5.39.89.x**, así pues, la zona ha de llamarse *89.39.5.in-addr.arpa*.
 
 Es necesario crear el archivo de zone inversa también, *pri.89.39.5.in-addr.arpa*. Este archivo es necesario crearlo en el mismo directorio en el que se encuentra el archivo de zona primario (*pri.elbauldelprogramador.com*).
 
 El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador.com*:  
-  
+
 <!--more-->
 
 {% highlight bash %}@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. (
@@ -156,11 +156,11 @@ Para finalizar, reiterar que todos los artículos están basados en un How to de
 
 #### Referencias
 
-*Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a> 
+*Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a>
 
 
 
- [1]: /articulos/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
- [2]: /articulos/como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
+ [1]: /como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
+ [2]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
 
 {% include _toc.html %}

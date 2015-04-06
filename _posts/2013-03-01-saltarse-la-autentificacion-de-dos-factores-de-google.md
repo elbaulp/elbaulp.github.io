@@ -51,6 +51,6 @@ Los investigadores comunicaron la vulnerabilidad a Google y el problema ya ha si
 
 
 
- [1]: /articulos/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo"
+ [1]: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo"
 
 {% include _toc.html %}
