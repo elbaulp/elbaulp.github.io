@@ -86,7 +86,7 @@ Como hemos aprendido con SPDY y otros protocolos, si no ciframos el tráfico, en
 
 ### UDP no tiene controles de congestión, ¿No causará QUIC un colapso en internet si es ampliamente adoptado?
 
-*QUIC* emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. *QUIC* tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar \\(\mathcal{Q}\\) flujos multiplexados, y compartir un ancho de banda con \\(\mathcal{T}\\) flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de \\(\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}\\) de ancho de banda. (Es decir, *una parte justa* para los flujos \\(\mathcal{Q}\\) adicionales).
+*QUIC* emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. *QUIC* tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar $$\mathcal{Q}$$ flujos multiplexados, y compartir un ancho de banda con $$\mathcal{T}$$ flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de $$\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}$$ de ancho de banda. (Es decir, *una parte justa* para los flujos $$\mathcal{Q}$$ adicionales).
 
 <a name="20"></a>
 
