@@ -2,6 +2,7 @@
 id: 2463
 title: 'QUIC: Análisis práctico del protocolo de Google'
 
+modified: 2015-04-08
 layout: post
 guid: http://elbauldelprogramador.com/?p=2463
 permalink: /quic-analisis-practico-del-protocolo-de-google/
@@ -99,16 +100,16 @@ Como se mencionó arriba, todos los paquetes comienzan con una cabecera común:
 |Flags(8)|      (variable length)                                                |
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
 
-     9       10       11        12   
+     9       10       11        12
 +--------+--------+--------+--------+
 |      Quic Version (32)            |  ->
-|         (optional)                |                           
+|         (optional)                |
 +--------+--------+--------+--------+
 
     13      14       15        16        17       18       19       20
 +--------+--------+--------+--------+--------+--------+--------+--------+
-|         Sequence Number (8, 16, 32, or 48)          |Private | FEC (8)| 
-|                         (variable length)           |Flags(8)|  (opt) | 
+|         Sequence Number (8, 16, 32, or 48)          |Private | FEC (8)|
+|                         (variable length)           |Flags(8)|  (opt) |
 +--------+--------+--------+--------+--------+--------+--------+--------+
 
 {% endhighlight %}
@@ -132,17 +133,17 @@ Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits u
 
 <div id="attachment_2465" style="width: 380px" class="wp-caption aligncenter">
   <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" alt="Análisis práctico del protocolo de Google QUIC - primerPaquete" width="370" height="118" class="size-full wp-image-2465" />
-  
+
   <p class="wp-caption-text">
     ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
   </p>
 </div>
 
-**Header: CID**. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga <img src="//s0.wp.com/latex.php?latex=2%5E%7B32%7D&bg=ffffff&fg=000&s=0" alt="2^{32}" title="2^{32}" class="latex" /> conexiones concurrentes, habrá un 50\% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de <img src="//s0.wp.com/latex.php?latex=2%5E%7B32%7D&bg=ffffff&fg=000&s=0" alt="2^{32}" title="2^{32}" class="latex" /> en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.
+**Header: CID**. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga \\(2^{32}\\) conexiones concurrentes, habrá un 50\% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de \\(2^{32}\\) en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.
 
 **Header: QUIC version**. A medida que QUIC evolucione, éste campo estará presente en el primer paquete para asegurar que el servidor y el cliente hablan en la misma versión del protocolo. Una vez establecida la conexión, ésta información es redundante y se omitirá usando los flags correspondientes para indicar que dicho campo se omitirá (longitud 0).
 
-**Header: Packet Sequence Number**. Además de secuenciar paquetes, mirar por duplicaciones y comunicar qué paquetes faltan, éste número es una parte crítica para el cifrado. Éste número es la base de las IV que se usan para descifrar cada paquete. Como resultado, conceptualmente debe ser grande, ya que no debe repetirse durante el periodo de una conexión. Por eso el tamaño conceptual del número de secuencia debe ser grande, unos <img src="//s0.wp.com/latex.php?latex=2%5E%7B64%7D&bg=ffffff&fg=000&s=0" alt="2^{64}" title="2^{64}" class="latex" /> (Más paquetes de los que cualquier conexión enviará), sin embargo, normalmente no es necesario proporcionar los 8 bytes en cada paquete.
+**Header: Packet Sequence Number**. Además de secuenciar paquetes, mirar por duplicaciones y comunicar qué paquetes faltan, éste número es una parte crítica para el cifrado. Éste número es la base de las IV que se usan para descifrar cada paquete. Como resultado, conceptualmente debe ser grande, ya que no debe repetirse durante el periodo de una conexión. Por eso el tamaño conceptual del número de secuencia debe ser grande, unos \\(2^{64}\\) (Más paquetes de los que cualquier conexión enviará), sin embargo, normalmente no es necesario proporcionar los 8 bytes en cada paquete.
 
 En cualquier momento dado, solo habrá un numero finito (pequeño) depaquetes de secuencia que no hayan sido admitidos. Ésta restricción es una consecuencia natural del hecho de que el emisor debe mantener un buffer con datos para los paquetes pendientes, y la memoria del emisor es finita. Además, se ha optado por no “retransmitir” los paquetes perdidos, en su lugar, se “reempaqueta” su contenido en paquetes posteriores. Como resultado, el receptor comunicará que no ha recibido un paquete, y el emisor notificará al receptor para que “deje de esperar” al paquete, y por tanto el margen de paquetes no admitidos estará siempre acotado. Basándonos en esta restricción, un emisor puede reducir significativamente el número de bytes necesarios para expresar el número de secuencia del paquete (usando los Flags públicos).
 
@@ -182,7 +183,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 |        |    (Variable length SLEN bytes)   |
 +--------+--------+--------+--------+--------+
 
-  SLEN+1  SLEN+2     …                                         SLEN+OLEN   
+  SLEN+1  SLEN+2     …                                         SLEN+OLEN
 +--------+--------+--------+--------+--------+--------+--------+--------+
 |   Offset (0, 16, 24, 32, 40, 48, 56, or 64 bits) (variable length)    |
 |                    (Variable length: OLEN  bytes)                     |
@@ -197,7 +198,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 
   * **ACK_FRAME**. Un frame ACK se usa para coordinar la recuperación de paquetes perdidos, y es parecido, pero no idéntico a los paquetes ACK de TCP. Un ACK en QUIC siempre es acumulativo, es decir, nuevos ACKs contienen suficiente información que es seguro descartar cualquier ACK previo. Como resultado, si un paquete con un frame ACK se pierde, no es necesario retransmitir el Frame ACK adjunto. Éste tipo de paquete se identifica con el valor **01ntllmmB**, donde 01 indica que es de tipo ACK, y los 6 bits restantes son flags. Su estructura:
 
-{% highlight bash %}0        1                           N                          
+{% highlight bash %}0        1                           N
 +--------+--------+-----------------------------------------------------+
 |Type (8)|Received|    Largest Observed (8, 16, 32, or 48 bits)         |
 |        |Entropy |                     (variable length)               |
@@ -212,13 +213,13 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 +--------+--------+---------+--------+--------------------------------+
 
    N+9         N+11 - X
-+--------+------------------+              
++--------+------------------+
 | Delta  |       Time       |
 |Largest |  Since Previous  |
 |Observed|Timestamp (Repeat)|
 +--------+------------------+
     X                        X+1 - Y                              Y+1
-+--------+-----------------------------------------------------+--------+              
++--------+-----------------------------------------------------+--------+
 | Number |    Missing Packet Sequence Number Delta             | Range  |
 | Ranges | (repeats Number Ranges times with Range Length)     | Length |
 | (opt)  |                                                     |(Repeat)|
@@ -263,7 +264,7 @@ La captura realizada fue la siguiente:
 
 <div id="attachment_2466" style="width: 1930px" class="wp-caption aligncenter">
   <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" alt="Análisis práctico del protocolo de Google QUIC - CapturaQUIC" width="1920" height="1080" class="size-full wp-image-2466" />
-  
+
   <p class="wp-caption-text">
     Captura completa de la conexión
   </p>
@@ -275,7 +276,7 @@ Como se mostró más arriba, la cabecera del primer paquete indica que el paquet
 
 <div id="attachment_2465" style="width: 380px" class="wp-caption aligncenter">
   <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" alt="Análisis práctico del protocolo de Google QUIC - primerPaquete" width="370" height="118" class="size-full wp-image-2465" />
-  
+
   <p class="wp-caption-text">
     ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
   </p>
@@ -285,7 +286,7 @@ Dicha información se encuentra aquí:
 
 <div id="attachment_2467" style="width: 604px" class="wp-caption aligncenter">
   <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" alt="Análisis práctico del protocolo de Google QUIC - quicVersion" width="594" height="244" class="size-full wp-image-2467" />
-  
+
   <p class="wp-caption-text">
     Información sobre la versión a usar
   </p>
@@ -295,7 +296,7 @@ También se puede apreciar en la captura el número de secuencia y el identifica
 
 <div id="attachment_2468" style="width: 606px" class="wp-caption aligncenter">
   <img src="/images/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" alt="Análisis práctico del protocolo de Google QUIC - quicOtrosPaquetes" width="596" height="246" class="size-full wp-image-2468" />
-  
+
   <p class="wp-caption-text">
     Paquetes distintos al primero
   </p>
