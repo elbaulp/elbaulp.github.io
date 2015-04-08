@@ -1,6 +1,7 @@
 ---
 id: 1583
 title: Resaltar sintaxis del código fuente en LaTeX con minted
+modified: 2015-04-08
 
 layout: post
 guid: http://elbauldelprogramador.com/?p=1583
@@ -13,10 +14,10 @@ tags:
   - pygments
   - resaltar sintaxis codigo latex
 ---
-Hace unas semanas que aprendí a usar <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" />, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
+Hace unas semanas que aprendí a usar \\(tex\\), y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
 
 Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.  
-  
+
 <!--more-->
 
 ### Instalando dependencias
@@ -90,18 +91,18 @@ public class Activity1 extends Activity {
    public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.segunda_actividad);
-      
+
       // Capturamos los objetos gráficos que vamos a usar
       TextView text = (TextView) findViewById(R.id.textView1);
       Button button = (Button) findViewById(R.id.boton);
-      
+
       // Agregamos al textView un texto
       text.setText(R.string.cadena1);
-      
+
       // Cambiamos el texto al botón
       button.setText(R.string.salir);
-      
-      // Evento onclick del botón, cuando se pulse, 
+
+      // Evento onclick del botón, cuando se pulse,
       // cerramos la actividad
       button.setOnClickListener(new OnClickListener() {
          public void onClick(View v) {
