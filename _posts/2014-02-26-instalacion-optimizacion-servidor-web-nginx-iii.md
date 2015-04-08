@@ -47,7 +47,7 @@ El primero (<a href="http://nls.io/optimize-nginx-and-php-fpm-max_children/" tit
 
 $$ \mathsf{pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}} $$
 
-Donde \\( RAM\_{restoProc} \\) es la memoria usada por los otros procesos y \\( RAM_{mediaPHP} \\) es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
+Donde \( RAM\_{restoProc} \) es la memoria usada por los otros procesos y \( RAM_{mediaPHP} \) es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
 
 {% highlight bash %}ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
 {% endhighlight %}
