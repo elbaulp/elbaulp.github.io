@@ -11,7 +11,7 @@
 {% endif %}
 
   <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <h3 class="author fn" rel="author"><span itemprop="name" class="author">{{ author.name }}</span></h3>
+    <h3 class="author fn" rel="author"><span itemprop="name" class="vcard author"><span class="fn">{{ author.name }}</span></span></h3>
   </span>
   <p>{{ author.bio }}</p>
   {% if author.email %}<a href="mailto:{{ author.email }}" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>{% endif %}
