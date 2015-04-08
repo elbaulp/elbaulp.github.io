@@ -2,6 +2,7 @@
 id: 2260
 title: Instalación y optimización de un servidor web con Nginx (III)
 
+modified: 2015-04-08
 layout: post
 guid: http://elbauldelprogramador.com/?p=2260
 permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
@@ -30,13 +31,13 @@ En éste último artículo se verá cómo realizar optimizaciones al servidor we
 La configuración por defecto de PHP no suele ser la óptima, dependiendo de nuestras necesidades y hardware deberemos ajustar algunos parámetros. En esta sección nos centraremos en el número de procesos y recursos que se dedicarán a una aplicación web. Estos parámetros se encuentran en el directorio */etc/php/fpm/pools.d*, se debe tener una archivo por cada aplicación, en nuestro caso será *www.conf*.  
 Los parámetros a ajustar son:
 
-  * **pm**: Decide cómo el controlador de procesos administra los procesos hijos, es recomendable establecerlo a dinámico. 
+  * **pm**: Decide cómo el controlador de procesos administra los procesos hijos, es recomendable establecerlo a dinámico.
   * **pm.max_children**: Cuando pm es estático, el número de hijos a crear, cuando es dinámico, el máximo número de hijos que se podrán tener.
   * **pm.start_servers**: Número de hijos a crear al inicio.
   * **pm.min\_spare\_servers**: El número mínimo de procesos libres (Sin hacer nada).
-  * **pm.max\_spare\_servers**: Número máximo de procesos libres.</li> 
+  * **pm.max\_spare\_servers**: Número máximo de procesos libres.
 
-**pm.max_requests**: El número de peticiones que cada hijo aceptará antes de reiniciarse, útil para evitar pérdidas de memoria.</li> </ul> 
+**pm.max_requests**: El número de peticiones que cada hijo aceptará antes de reiniciarse, útil para evitar pérdidas de memoria.
 
 Hay varias aproximaciones para determinar el valor adecuado de estos parámetros, en esta guía se verán 3, y todas con *pm = dynamic*.
 
@@ -44,11 +45,9 @@ Hay varias aproximaciones para determinar el valor adecuado de estos parámetros
 
 El primero (<a href="http://nls.io/optimize-nginx-and-php-fpm-max_children/" title="Optimize nginx and PHP-FPM (max\_children)" target="_blank">Guillaume Moigneu</a>) consiste en calcular *pm.max_children* basándonos en la fórmula:
 
-<p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+%28RAM_%7Btotal%7D+-+RAM_%7Bresto+Proc%7D%29%2F+RAM_%7BmediaPHP%7D&bg=ffffff&fg=000&s=0" alt="pm.max&#92;_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}" title="pm.max&#92;_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}" class="latex" />
-</p>
+$$ \mathsf{pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}} $$
 
-Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7Bresto+Proc%7D&bg=ffffff&fg=000&s=0" alt="RAM_{resto Proc}" title="RAM_{resto Proc}" class="latex" /> es la memoria usada por los otros procesos y <img src="//s0.wp.com/latex.php?latex=RAM_%7BmediaPHP%7D&bg=ffffff&fg=000&s=0" alt="RAM_{mediaPHP}" title="RAM_{mediaPHP}" class="latex" /> es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
+Donde \\(RAM\_{resto Proc}\\) es la memoria usada por los otros procesos y \\(RAM_{mediaPHP}\\) es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
 
 {% highlight bash %}ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
 {% endhighlight %}
@@ -60,27 +59,21 @@ Y la consumida por PHP:
 
 Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de *max_children*, *min\_spare\_servers* y *max\_spare\_servers* se suelen calcular evaluando el rendimiento y *start_servers*, suele ser:
 
-<p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=start%5C_servers+%3D+min%5C_spare%5C_servers+%2B+%28max%5C_spare%5C_servers+-+min%5C_spare%5C_servers%29+%2F+2&bg=ffffff&fg=000&s=0" alt="start&#92;_servers = min&#92;_spare&#92;_servers + (max&#92;_spare&#92;_servers - min&#92;_spare&#92;_servers) / 2" title="start&#92;_servers = min&#92;_spare&#92;_servers + (max&#92;_spare&#92;_servers - min&#92;_spare&#92;_servers) / 2" class="latex" />
-</p>
+$$ \mathsf{start\_servers = \frac{min\_spare\_servers + (max\_spare\_servers - min\_spare\_servers)}{2}} $$
 
 #### Segundo método
 
 El segundo método (<a href="http://myshell.co.uk/index.php/adjusting-child-processes-for-php-fpm-nginx/" title="Adjusting child processes for PHP-FPM (Nginx)" target="_blank">myshell.co.uk</a>) es calcularlo en base a:
 
-<p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+RAM_%7Btotal%7D+%2F+RAM_%7BmaxPHP%7D&bg=ffffff&fg=000&s=0" alt="pm.max&#92;_children = RAM_{total} / RAM_{maxPHP}" title="pm.max&#92;_children = RAM_{total} / RAM_{maxPHP}" class="latex" />
-</p>
+$$ \mathsf{pm.max\_children = RAM_{total} / RAM_{maxPHP}} $$
 
-Donde <img src="//s0.wp.com/latex.php?latex=RAM_%7BmaxPHP%7D&bg=ffffff&fg=000&s=0" alt="RAM_{maxPHP}" title="RAM_{maxPHP}" class="latex" /> es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.
+Donde \\(RAM\_{maxPHP}\\) es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.
 
 #### Tercer método
 
 Por último, otro método (<a href="https://github.com/perusio/php-fpm-example-config" title="Example configuration of php-fpm" target="_blank">Perusio</a>) es realizando la operación siguiente:
 
-<p style="text-align:center">
-  <img src="//s0.wp.com/latex.php?latex=pm.max%5C_children+%3D+1.2+%5Ccdot+RAM_%7Btotal%7D%2FRAM_%7BmediaPHP%7D&bg=ffffff&fg=000&s=0" alt="pm.max&#92;_children = 1.2 &#92;cdot RAM_{total}/RAM_{mediaPHP}" title="pm.max&#92;_children = 1.2 &#92;cdot RAM_{total}/RAM_{mediaPHP}" class="latex" />
-</p>
+$$\mathsf{pm.max\_children = 1.2 \cdot RAM_{total}/RAM_{mediaPHP}}$$
 
 ### Optimizando Nginx
 
