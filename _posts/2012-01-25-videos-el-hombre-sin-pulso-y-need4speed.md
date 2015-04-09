@@ -45,6 +45,6 @@ Sin más dilaciones, a continuación os dejo los vídeos:
 
 
 
- [1]: /search/label/v%C3%ADdeos
+ [1]: /label/v%C3%ADdeos
 
 {% include _toc.html %}

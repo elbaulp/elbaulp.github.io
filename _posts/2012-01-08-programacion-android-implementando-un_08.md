@@ -223,7 +223,7 @@ public class SitesProvider extends ContentProvider{
 
 
 
- [1]: /p/guia-de-desarrollo-android.html
+ [1]: /guia-de-desarrollo-android.html
  [2]: /2012/01/programacion-android-implementando-un.html
  [3]: /2011/10/prueba-la-aplicacion-favsites-en-tu.html
  [4]: /2011/01/consulta-de-datos-clausula-select.html

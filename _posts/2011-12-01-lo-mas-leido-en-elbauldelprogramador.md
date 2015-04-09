@@ -64,7 +64,7 @@ Claramente gana Windows con un 68%, seguido de Linux (17%), MAC (4%) y Android (
  [4]: /2011/04/conectar-base-de-datos-sql-server-2008.html
  [5]: /2011/11/por-que-nuestro-pc-necesita-un-firewall.html
  [6]: /2011/11/guerra-de-navegadores-humor.html
- [7]: /opensource/programacion-android-hola-mundo/
+ [7]: /programacion-android-hola-mundo/
  [8]: /2011/11/los-desarrolladores-de-gnome-crean.html
  [9]: /programacion-android-interfaz-grafica_23/
  [10]: /2011/07/programacion-android-interfaz-grafica_11.html

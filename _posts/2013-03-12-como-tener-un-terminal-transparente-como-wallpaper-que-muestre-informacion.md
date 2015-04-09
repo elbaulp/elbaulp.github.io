@@ -106,11 +106,11 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
 
 
 
- [1]: /tag/htop/ "htop"
+ [1]: /htop/ "htop"
  [2]: /images/2013/03/xroot-example.jpg
- [3]: /aplicaciones/comandos-ss-iproute2-linux/ "Algunos comandos útiles con iproute2"
- [4]: /category/script/
- [5]: /tag/xmonad/
- [6]: /tag/openbox/
+ [3]: /comandos-ss-iproute2-linux/ "Algunos comandos útiles con iproute2"
+ [4]: /script/
+ [5]: /xmonad/
+ [6]: /openbox/
 
 {% include _toc.html %}

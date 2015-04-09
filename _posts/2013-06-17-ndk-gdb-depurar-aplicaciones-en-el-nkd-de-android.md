@@ -16,10 +16,10 @@ tags:
 ---
 En el artículo [Introducción al NDK de Android][1] se explicaron las nociones básicas del NDK, hoy vamos a ver un ejemplo un poco más complejo en el que aprenderemos a depurar código nativo en aplicaciones [Android][2]. La aplicación de ejemplo actuará como servidor esperando conexiones mediante *telnet*. Cuando un cliente se conecte al dispositivo a través *telnet*, será posible enviar y recibir mensajes. Así como ejecutar dos comandos, *ip_de <dominio>*, que devolverá la *IP* de dicho dominio, y *adios*, que finalizará la conexión.
 
-  
+
 <!--more-->
 
-El proyecto está disponible para descargar en <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">GitHub</a>. He de decir que el código [C][3] usado en el ejemplo es una adaptación de un trozo de código del libro *<a href="http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&tag=elbaudelpro-21&linkCode=as2&camp=3626&creative=24822&creativeASIN=1593271441" target="_blank">Hacking: The Art of Exploitation</a>*, concretamente el ejemplo *simple_server.c* de la sección *0x425 A simple Server Example*. 
+El proyecto está disponible para descargar en <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">GitHub</a>. He de decir que el código [C][3] usado en el ejemplo es una adaptación de un trozo de código del libro *<a href="http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&tag=elbaudelpro-21&linkCode=as2&camp=3626&creative=24822&creativeASIN=1593271441" target="_blank">Hacking: The Art of Exploitation</a>*, concretamente el ejemplo *simple_server.c* de la sección *0x425 A simple Server Example*.
 
 Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad principal le añadiremos el siguiente código:
 
@@ -70,15 +70,15 @@ Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad princip
 }
 {% endhighlight %}
 
-Por ahora es bastante sencillo, tenemos un [*TextView* y un *Button*][4] en la interfaz. Con el primero mostraremos un log de los datos transferidos durante la sesión *telnet*, y con el botón conectaremos y desconectaremos la sesión. El método 
+Por ahora es bastante sencillo, tenemos un [*TextView* y un *Button*][4] en la interfaz. Con el primero mostraremos un log de los datos transferidos durante la sesión *telnet*, y con el botón conectaremos y desconectaremos la sesión. El método
 
 {% highlight java %}startTelnetSession(){% endhighlight %}
 
-es el que está implementado en C y por ello se declara como 
+es el que está implementado en C y por ello se declara como
 
 {% highlight java %}public native String startTelnetSession();{% endhighlight %}
 
-en la *[Activity][5]*. 
+en la *[Activity][5]*.
 
 El hecho de crear un *AsyncTask* impide que la interfaz gráfica se quede bloqueada durante la conexión *telnet*, ya que el servidor se ejecuta en un hilo distinto.
 
@@ -220,15 +220,15 @@ Java_com_elbauldelprogramador_simpleserver_MainActivity_startTelnetSession(
 }
 {% endhighlight %}
 
-Consta de 3 métodos, 
+Consta de 3 métodos,
 
 {% highlight c %}jstring Java_com_elbauldelprogramador_simpleserver_MainActivity_startTelnetSession(){% endhighlight %}
 
-que será llamado desde la activity principal y simplemente llama al método 
+que será llamado desde la activity principal y simplemente llama al método
 
 {% highlight c %}char *startServer(){% endhighlight %}
 
-que ejecuta el servidor esperando a que devuelva un log de los datos transmitidos durante la conexión. Una vez finalizada, el método *startTelnetSession* devuelve el log al código Java para mostrarlo en pantalla. Por último la función 
+que ejecuta el servidor esperando a que devuelva un log de los datos transmitidos durante la conexión. Una vez finalizada, el método *startTelnetSession* devuelve el log al código Java para mostrarlo en pantalla. Por último la función
 
 {% highlight c %}void addToLog(){% endhighlight %}
 
@@ -247,11 +247,11 @@ LOCAL_LDLIBS := -llog
 include $(BUILD_SHARED_LIBRARY)
 {% endhighlight %}
 
-La línea 
+La línea
 
 {% highlight make %}LOCAL_LDLIBS := -llog{% endhighlight %}
 
-enlaza la librería que permite imprimir mensajes de log al logcat desde C/C++ usando las funciones 
+enlaza la librería que permite imprimir mensajes de log al logcat desde C/C++ usando las funciones
 
 {% highlight c %}__android_log_print()
 __android_log_write()
@@ -298,11 +298,11 @@ Nos situamos en el directorio del proyecto y ejecutamos:
 {% highlight bash %}ndk-build && ant debug && adb install -r bin/MainActivity-debug.apk
 {% endhighlight %}
 
-Si todo está bien, la aplicación deberá estar instalada en el dispositivo. 
+Si todo está bien, la aplicación deberá estar instalada en el dispositivo.
 
 ### Depurando la aplicación con ndk-gdb
 
-El comando para iniciar el depurador es 
+El comando para iniciar el depurador es
 
 {% highlight bash %}ndk-gdb --start --verbose
 {% endhighlight %}
@@ -333,26 +333,26 @@ Al pulsar enter, se detiene la ejecución del programa debido al *breakpoint* en
 
 {% highlight bash %}Breakpoint 1, addToLog (log=0x54b38c1c "", new_entry=0x54b3881c "ip_de elbauldelprogramador.com\r\n") at jni/sServer.c:21
 21   addToLog(char log[], char *new_entry) {
-(gdb) 
+(gdb)
 {% endhighlight %}
 
 GDB espera a que le demos instrucciones, examinamos el contenido de los parámetros de la función *addToLog*:
 
 {% highlight bash %}(gdb) x /s log
 0x54b38c1c:     ""
-(gdb) x /s new_entry 
+(gdb) x /s new_entry
 0x54b3881c:  "ip_de elbauldelprogramador.com\r\n"
 (gdb) s
 23      strcpy(log + command_log_pos, new_entry);
-(gdb) display /s log 
+(gdb) display /s log
 1: x/s log  0x54b38c1c:  ""
-(gdb) display /s new_entry 
+(gdb) display /s new_entry
 2: x/s new_entry  0x54b3881c:  "ip_de elbauldelprogramador.com\r\n"
 (gdb) s
 24      command_log_pos += strlen(new_entry);
 2: x/s new_entry  0x54b3881c:     "ip_de elbauldelprogramador.com\r\n"
 1: x/s log  0x54b38c1c:   "ip_de elbauldelprogramador.com\r\n"
-(gdb) 
+(gdb)
 25 }
 2: x/s new_entry  0x54b3881c:   "ip_de elbauldelprogramador.com\r\n"
 1: x/s log  0x54b38c1c:   "ip_de elbauldelprogramador.com\r\n"
@@ -400,14 +400,14 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
 
 #### Referencias
 
-*Repositorio en GitHub del ejemplo* »» <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">Visitar sitio</a> 
+*Repositorio en GitHub del ejemplo* »» <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">Visitar sitio</a>
 
 
 
- [1]: /android/introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
- [2]: /category/android/
- [3]: /category/programacion/lenguaje-c/
- [4]: /opensource/programacion-android-interfaz-grafica_25/
+ [1]: /introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
+ [2]: /android/
+ [3]: /programacion/lenguaje-c/
+ [4]: /programacion-android-interfaz-grafica_25/
  [5]: /fundamentos-programacion-android_17/
  [6]: /images/2013/06/Screenshot_2013-06-17-17-20-53.png
 

@@ -154,7 +154,7 @@ Como se puede apreciar, simplemente hemos metido todos los ejemplos que vimos an
 
 
 
- [1]: /search/label/android
+ [1]: /label/android
  [2]: /fundamentos-programacion-android_17/
  [3]: /programacion-android-interfaz-grafica_11/
  [4]: /fundamentos-programacion-android_16/

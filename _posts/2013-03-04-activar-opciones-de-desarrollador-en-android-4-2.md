@@ -43,7 +43,7 @@ Una vez en el modo rescate, desactivé la opción y problema resuelto.
 
 
 
- [1]: /category/android
- [2]: /tag/xda
+ [1]: /android
+ [2]: /xda
 
 {% include _toc.html %}

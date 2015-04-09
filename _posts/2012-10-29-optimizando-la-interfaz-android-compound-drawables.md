@@ -83,6 +83,6 @@ Con esta pequeña optimización estamos reduciendo el layout de dos a un View, p
 
 
  [1]: /how-to/adapter-personalizado-en-android/ "Cómo crear un adapter personalizado en Android"
- [2]: /programacion/programacion-android-interfaz-grafica/ "Programación Android: Interfaz gráfica – Conceptos básicos"
+ [2]: /programacion-android-interfaz-grafica/ "Programación Android: Interfaz gráfica – Conceptos básicos"
 
 {% include _toc.html %}

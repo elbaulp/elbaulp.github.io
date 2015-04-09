@@ -222,6 +222,6 @@ Statistics is about extracting meaning from data. In this class, we will introdu
 
 
 
- [1]: /noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/ "Nuevos Cursos disponibles en Udacity, la universidad online gratuita"
+ [1]: /nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/ "Nuevos Cursos disponibles en Udacity, la universidad online gratuita"
 
 {% include _toc.html %}

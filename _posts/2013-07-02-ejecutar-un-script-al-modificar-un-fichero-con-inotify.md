@@ -100,7 +100,7 @@ Script ejecutado tras editar
 
 
 
- [1]: /category/script/
- [2]: /seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [1]: /script/
+ [2]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
 
 {% include _toc.html %}

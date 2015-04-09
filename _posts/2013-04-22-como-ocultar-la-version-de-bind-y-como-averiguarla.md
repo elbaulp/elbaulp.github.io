@@ -66,6 +66,6 @@ fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
 
 
  [1]: /como-configurar-un-servidor-dns/
- [2]: /opensource/dig-chuleta-basica-de-comandos/ "Dig – Chuleta básica de comandos"
+ [2]: /dig-chuleta-basica-de-comandos/ "Dig – Chuleta básica de comandos"
 
 {% include _toc.html %}

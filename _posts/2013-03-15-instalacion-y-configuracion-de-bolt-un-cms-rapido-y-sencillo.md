@@ -126,13 +126,13 @@ Creo que este CMS promete mucho, personalmente me ha gustado y en un futuro no d
 
 
 
- [1]: /category/opensource/
+ [1]: /opensource/
  [2]: /?s=html5
- [3]: /category/php/
- [4]: /category/basededatos/
+ [3]: /php/
+ [4]: /basededatos/
  [5]: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
  [6]: /como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
- [7]: /programacion/programacion-bash-metacaracteres_12/
+ [7]: /programacion-bash-metacaracteres_12/
  [8]: /images/2013/03/Login-to-bolt-CMS.png
  [9]: /images/2013/03/Bolt-Home-PAge-CMS.png
  [10]: /images/2013/03/bolt-debug.png

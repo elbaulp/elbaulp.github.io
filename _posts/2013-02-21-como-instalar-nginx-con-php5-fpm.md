@@ -289,8 +289,8 @@ Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutan
 
 
  [1]: http://elbauldelprogramador.com/
- [2]: /category/script/
- [3]: /so/entendiendo-los-runlevel-en-debian-y-ubuntu/
+ [2]: /script/
+ [3]: /entendiendo-los-runlevel-en-debian-y-ubuntu/
  [4]: /images/2013/02/instalar-nginx-en-debian.png
  [5]: /images/2013/02/instalar-nginx-en-debian2.png
  [6]: http://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"

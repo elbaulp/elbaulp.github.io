@@ -69,6 +69,6 @@ Una chica en medio de la nada tiene que encontrar el camino de vuelta. El tiempo
 
 
 
- [1]: /search/label/v%C3%ADdeo%20de%20la%20semana
+ [1]: /label/v%C3%ADdeo%20de%20la%20semana
 
 {% include _toc.html %}

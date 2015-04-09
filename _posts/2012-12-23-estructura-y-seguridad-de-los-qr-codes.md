@@ -95,8 +95,8 @@ Otro buen intérprete es **<a href="https://play.google.com/store/apps/details?i
 
 
 
- [1]: /seguridad/lo-ultimo-en-criptografia-fully-homomorphic-encryption/
- [2]: /seguridad/lo-ultimo-en-criptografia-fully-homomorphic-encryption/ "Lo último en criptografía: Fully Homomorphic Encryption"
- [3]: /programacion/explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits (Parte I)"
+ [1]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
+ [2]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/ "Lo último en criptografía: Fully Homomorphic Encryption"
+ [3]: /explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits (Parte I)"
 
 {% include _toc.html %}

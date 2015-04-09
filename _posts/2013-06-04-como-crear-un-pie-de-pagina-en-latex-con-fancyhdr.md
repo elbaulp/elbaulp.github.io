@@ -80,7 +80,7 @@ Produciendo el siguiente resultado:
 
 
 
- [1]: /programacion/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted"
- [2]: /opensource/disponible-la-primera-parte-del-curso/ "Disponible la primera parte del curso Android en PDF"
+ [1]: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted"
+ [2]: /disponible-la-primera-parte-del-curso/ "Disponible la primera parte del curso Android en PDF"
 
 {% include _toc.html %}

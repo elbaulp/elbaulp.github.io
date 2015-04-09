@@ -497,14 +497,14 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
 
 
 
- [1]: /programacion/programacion-android-interfaz-grafica_28/
- [2]: /programacion/programacion-android-interfaz-grafica-2/
+ [1]: /programacion-android-interfaz-grafica_28/
+ [2]: /programacion-android-interfaz-grafica-2/
  [3]: /curso-programacion-android/
- [4]: /programacion/programacion-android-recursos-layout/
+ [4]: /programacion-android-recursos-layout/
  [5]: /images/2012/09/customrow1.png
  [6]: #estadoCheckBox
  [7]: #desplazarLista
  [8]: #SavedInstanceState
- [9]: /programacion/fundamentos-programacion-android-ciclo/
+ [9]: /fundamentos-programacion-android-ciclo/
 
 {% include _toc.html %}

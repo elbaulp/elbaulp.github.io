@@ -243,8 +243,8 @@ Aunque Android Studio está todavía en desarrollo, promete mucho y voy a empeza
  [1]: http://dl.google.com/android/studio/android-studio-bundle-130.677228-linux.tgz
  [2]: http://dl.google.com/android/studio/android-studio-bundle-130.677228-windows.exe
  [3]: /images/2013/05/AndroidStudioIDE.png
- [4]: /opensource/programacion-android-hola-mundo/
- [5]: /opensource/fundamentos-programacion-android_16/
+ [4]: /programacion-android-hola-mundo/
+ [5]: /fundamentos-programacion-android_16/
  [6]: /images/2013/05/LayoutPreviewAndroidStudio.png
  [7]: /images/2013/05/AndroidStudioPreviewAPI10.png
  [8]: /images/2013/05/Screenshot-from-2013-05-16-121607.png

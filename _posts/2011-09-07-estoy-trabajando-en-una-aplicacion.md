@@ -36,6 +36,6 @@ Aplicación de proyecto final de curso que almacena los lugares preferidos del u
 
 
 
- [1]: /p/guia-de-desarrollo-android.html
+ [1]: /guia-de-desarrollo-android.html
 
 {% include _toc.html %}

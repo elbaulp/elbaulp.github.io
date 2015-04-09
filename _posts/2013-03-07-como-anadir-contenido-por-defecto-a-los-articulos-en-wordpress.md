@@ -33,7 +33,7 @@ Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenid
 
 
 
- [1]: /tag/shortcodes/
+ [1]: /shortcodes/
  [2]: /rssfeed/
 
 {% include _toc.html %}

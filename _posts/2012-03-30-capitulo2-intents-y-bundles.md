@@ -278,7 +278,7 @@ public class ParametrosActivity extends Activity {
 
 
 
- [1]: /opensource/programacion-android-hola-mundo/
+ [1]: /programacion-android-hola-mundo/
  [2]: /fundamentos-programacion-android_17/
  [3]: /programacion-android-interfaz-grafica/
 

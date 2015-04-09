@@ -48,7 +48,7 @@ Fuente original [En inglés]: <a target="_blank" href="http://www.articlesbase.c
 
 
 
- [1]: /search/label/linux
- [2]: /search/label/opensource
+ [1]: /label/linux
+ [2]: /label/opensource
 
 {% include _toc.html %}

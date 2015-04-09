@@ -79,6 +79,6 @@ Pero para tomar ventaja de esta próxima generación de chips, el equipo de Barc
 
 
 
- [1]: /curiosidades/el-top-500-de-los-supercomputadores-mas/
+ [1]: /el-top-500-de-los-supercomputadores-mas/
 
 {% include _toc.html %}

@@ -12,8 +12,8 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 blogger_permalink:
-  - /android/los-10-errores-de-novato-que-todo/
-  - /android/los-10-errores-de-novato-que-todo/
+  - /los-10-errores-de-novato-que-todo/
+  - /los-10-errores-de-novato-que-todo/
 share_data:
   - '[]'
   - '[]'
@@ -41,7 +41,7 @@ La web de <a target="_blank" href="http://developer.android.com/index.html">Andr
 
 Recientemente se ha incluido <a target="_blank" href="http://developer.android.com/training/index.html">Android Training</a>, que organiza tutoriales dentro de clases y lecciones para guiarnos a resolver problemas o implementar características particulares.
 
-  
+
 <!--more-->
 
 ### 2. No familiarizarse con la herramientas de Android
@@ -94,7 +94,7 @@ Fuente: <a target="_blank" href="http://www.developer.com/ws/android/programming
 
 
 
- [1]: /opensource/programacion-android-hola-mundo/
+ [1]: /programacion-android-hola-mundo/
  [2]: /2011/11/programacion-android-proveedores-de.html
  [3]: /fundamentos-programacion-android_16/
 
