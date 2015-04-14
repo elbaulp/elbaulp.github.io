@@ -12,11 +12,11 @@ tags:
   - instalar BitTorrent Sync
   - que es BitTorrent Sync
 ---
-[<img src="/images/2013/05/BiTTorrentSYnc-300x260.png" alt="BiTTorrentSYnc" width="300" height="260" class="alignleft size-medium wp-image-1553" />][1]
+<img src="/images/2013/05/BiTTorrentSYnc-300x260.png" alt="BiTTorrentSYnc" width="300" height="260" class="alignleft size-medium wp-image-1553" />
 
 Escuchando el programa de radio **[security now!][2]** he descubierto una herramienta increíble. Se trata de **BitTorrrent Sync** y permite tener archivos sincronizados en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube, como es el caso de dropbox por ejemplo. En este artículo voy a explicar cómo usarlo.
 
-  
+
 <!--more-->
 
 BitTorrent Sync sincroniza los archivos usando el protocolo P2P. Cuando se configuran dos dispositivos para que estén sincronizados se conectan directamente entre ellos usando UDP, NAT y [UPnP][3], con lo cual no se depende de ningún tercero que tenga que almacenar los ficheros en la nube. Si ambos dispositivos se encuentran bajo la misma red local, BitTorrent Sync usará dicha red para realizar la sincronización más rápido.
@@ -40,7 +40,7 @@ El siguiente paso es elegir una carpeta que queramos sincronizar y *generar un s
 
 <div id="attachment_1551" style="width: 780px" class="wp-caption aligncenter">
   <a class="thumbnail" href="/images/2013/05/Crear-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1551" alt="Crear carpeta BitTorrent Sync" src="/images/2013/05/Crear-carpeta-BitTorrent-Sync-1024x803.png" width="770" height="603" /></a>
-  
+
   <p class="wp-caption-text">
     Crear carpeta BitTorrent Sync
   </p>
@@ -50,7 +50,7 @@ Hecho lo anterior, en el otro dispositivo, elegimos una carpeta en la que queram
 
 <div id="attachment_1552" style="width: 780px" class="wp-caption aligncenter">
   <a class="thumbnail" href="/images/2013/05/Anadir-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1552" alt="Anadir carpeta BitTorrent Sync" src="/images/2013/05/Anadir-carpeta-BitTorrent-Sync-1024x801.png" width="770" height="602" /></a>
-  
+
   <p class="wp-caption-text">
     Añadir carpeta BitTorrent Sync
   </p>
@@ -68,11 +68,8 @@ Para terminar dejo el podcast del episodio de security now!
 
 #### Referencias
 
-*BitTorrent Sync* »» <a href="http://labs.bittorrent.com/experiments/sync.html" target="_blank">Visitar sitio</a> 
+*BitTorrent Sync* »» <a href="http://labs.bittorrent.com/experiments/sync.html" target="_blank">Visitar sitio</a>
 
-
-
- [1]: /images/2013/05/BiTTorrentSYnc.png
  [2]: /security-now-articulos/
  [3]: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
 
