@@ -1,0 +1,58 @@
+# Site wide configuration
+
+title: El Baúl del programador
+locale: es_ES
+url: http://elbauldelprogramador.com
+
+
+# Jekyll configuration
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+# Site owner
+owner:
+  name: Alejandro Alcalde
+  avatar: bio-photo.jpg
+  bio: "Estudiante de Grado en Ingeniería Informática en la ETSIIT, Granada. Especialidad, Inteligencia Artificial."
+  email: contacto@elbauldelprogramador.com
+  disqus-shortname: bashyc
+  twitter: elbaulp
+  facebook: elbauldelprogramador
+  google:
+    plus: elbauldelprogramador
+    analytics: UA-19017085-2
+    verify: FBg0GK1_H_PyCw6AD2iaBOclPbEC3LOV8hHXje5276w
+    ad-client: ca-pub-9043332344373532
+    ad-slot: 9782918042
+    ad-slot2: 2727042844
+  bsa: true
+  amazon:
+    id: elbaudelpro-21
+  bing-verify:
+  github: algui91
+  stackoverflow: 1612432/algui91
+  linkedin: #username
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
+
+include: [".htaccess"]
+exclude: ["TODO.md", "lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
