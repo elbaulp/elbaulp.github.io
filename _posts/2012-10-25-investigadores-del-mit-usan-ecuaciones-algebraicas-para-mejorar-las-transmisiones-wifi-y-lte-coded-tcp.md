@@ -16,8 +16,12 @@ tags:
   - packets
   - paquetes
   - WiFi
+excerpt: "Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione."
 ---
-[<img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/images/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="207" height="259" />][1]
+
+<figure>
+  <img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/images/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="207" height="259" />
+</figure>
 
 Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione.
 
@@ -34,9 +38,5 @@ En un futuro, se espera que el protocolo TCP codificado tenga una gran repercusi
 *A Bandwidth Breakthrough* »» <a href="http://www.technologyreview.com/news/429722/a-bandwidth-breakthrough/" target="_blank">Visitar sitio</a>  
 *Increasing wireless network speed by 1000%, by replacing packets with algebra* »» <a href="http://www.extremetech.com/computing/138424-increasing-wireless-network-speed-by-1000-by-replacing-packets-with-algebra" target="_blank">Visitar sitio</a>  
 *MIT researchers use algebraic equation that improves WiFi and LTE data streams* »» <a href="http://www.engadget.com/2012/10/24/mit-researchers-algebraic-equation-to-weave-wifi-and-lte-signals/" target="_blank">Visitar sitio</a>
-
-
-
- [1]: /images/2012/10/Algebra-Packets-MIT1.jpg
 
 {% include _toc.html %}

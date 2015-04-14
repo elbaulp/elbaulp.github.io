@@ -9,16 +9,19 @@ categories:
   - How To
 tags:
   - invertir cadena
-format: aside
+excerpt: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
 ---
-[<img alt="invertir cadenas en bash" src="https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png" title="Shell Bash" class="alignleft" width="128" height="128" />][1]
+
+<figure>
+  <img alt="invertir cadenas en bash" src="https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png" title="Shell Bash" class="alignleft" width="128" height="128" />
+</figure>
 
 Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera:
 
 > Copia los archivos especificados a la salida estandar, invirtiendo el orden de los caracteres de cada línea. Si no se especifican ficheros, rev lee de la entrada estandar (el teclado).
 
 Algunos ejemplos:  
-  
+
 <!--more-->
 
 {% highlight bash %}echo "elbauldelprogramador" | rev
@@ -54,13 +57,13 @@ Salida:
 {% highlight bash %}#!/bin/bash
 input="$1"
 reverse=""
- 
+
 len=${#input}
 for (( i=$len-1; i>=0; i-- ))
 do
    reverse="$reverse${input:$i:1}"
 done
- 
+
 echo "$reverse"
 {% endhighlight %}
 
@@ -87,11 +90,8 @@ php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
 
 #### Fuente original
 
-*NixCraft* »» <a href="http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/" target="_blank">Visitar sitio</a> 
+*NixCraft* »» <a href="http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/" target="_blank">Visitar sitio</a>
 
-
-
- [1]: https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png
  [2]: /python/
  [3]: /php/
 

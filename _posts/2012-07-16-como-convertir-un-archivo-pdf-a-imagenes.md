@@ -6,8 +6,8 @@ layout: post
 guid: /?p=835
 permalink: /como-convertir-un-archivo-pdf-a-imagenes/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - bash
   - How To
@@ -19,9 +19,11 @@ tags:
   - imagemagick
   - pdf a imagenes
   - pdf to imagen
-format: aside
+excerpt: "El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros."
 ---
-[<img class="alignleft size-full wp-image-836" title="sh" src="/images/2012/07/sh1.png" alt="" width="128" height="128" />][1]
+<figure>
+  <img class="alignleft size-full wp-image-836" title="sh" src="/images/2012/07/sh1.png" alt="" width="128" height="128" />
+</figure>
 
 El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.
 
@@ -44,9 +46,5 @@ Espero que os sea útil si alguna vez lo necesitáis.
 &nbsp;
 
 Vía | <a href="http://www.cyberciti.biz/faq/howto-convert-a-pdf-file-to-an-image/" target="_blank">cyberciti</a> | <a href="http://www.imagemagick.org/discourse-server/viewtopic.php?f=10&t=13371" target="_blank">imagemagick.org</a>
-
-
-
- [1]: /images/2012/07/sh1.png
 
 {% include _toc.html %}

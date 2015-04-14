@@ -5,28 +5,28 @@ title: Personalizar el Error 404 en wordpress
 layout: post
 guid: /?p=896
 permalink: /personalizar-el-error-404-en-wordpress/
-if_slider_image:
-  - 
-  - 
 categories:
   - php
 tags:
   - 404
   - error 404
   - personalizar 404 wordpress
+excerpt: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
 ---
-[<img src="/images/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />][1]
+<figure>
+  <img src="/images/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />
+</figure>
 
 El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.
 
 Es una buena práctica sugerir enlaces que puedan estar relacionados con lo que estaba buscando, poner un enlace a la página principal o al mapa de la web.
 
 Con todo esto en mente busqué cómo crear **errores 404 personalizados** y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:  
-  
+
 <!--more-->
 
 {% highlight php %}<p>
-  You 
+  You
   <?php
 #some variables for the script to use
 #if you have some reason to change these, do.  but wordpress can handle it
@@ -48,18 +48,18 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
         They came from ".$_SERVER['HTTP_REFERER'];
     mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'],
         $failuremess, "From: $websitename <noreply@$website>"); #email you about problem
-   $casemessage = "An administrator has been emailed 
+   $casemessage = "An administrator has been emailed
           about this problem, too.";#set a friendly message
     }
-    echo " ".$website.$_SERVER['REQUEST_URI']; ?> 
-  and it doesn't exist. 
-  
-  <?php echo $casemessage; ?>  You can click back 
+    echo " ".$website.$_SERVER['REQUEST_URI']; ?>
+  and it doesn't exist.
+
+  <?php echo $casemessage; ?>  You can click back
   and try again or search for what you're looking for:
-    
-  
+
+
   <?php include(TEMPLATEPATH . "/searchform.php"); ?>
-  
+
 </p>
 {% endhighlight %}
 
@@ -68,36 +68,36 @@ Esta porción de código hay que pegarla en el archivo 404.php de la plantilla e
 {% highlight php %}<h4>
   Publicaciones recientes
 </h4>
-   
+
 
 <ul>
   <?php
          $recent_posts = wp_get_recent_posts( array('post_status' => 'publish') );
            foreach( $recent_posts as $recent ){
        echo '
-  
+
   <li>
-    <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> 
+    <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a>
   </li> ';
            }
         ?>
-     
+
 </ul>
 {% endhighlight %}
 
 Incluso es posible sugerir entradas relacionadas en base a la url que devolvió el 404:
 
-{% highlight php %}<?php 
+{% highlight php %}<?php
 $query_args = array( 's' => basename($_SERVER['REQUEST_URI']) );
 $query = new WP_Query( $query_args );
-     
+
 if($query->have_posts()){
    echo "
 
 <h4>
   Quizá buscaba...
 </h4>";
-                 
+
    // The Loop
    echo '
 
@@ -105,35 +105,35 @@ if($query->have_posts()){
   ';
      while ( $query->have_posts() ) : $query->the_post();
         echo '
-  
+
   <li>
     ';
     ?>
           <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-    
-    
+
+
     <?php
       echo '</li>';
        endwhile;
        echo '</ul>';
-    
+
        // Reset Post Data
        wp_reset_postdata();
     }
     ?>
     {% endhighlight %}
-    
-    
+
+
     <p>
       Al juntarlo todo, la estructura del código queda así:
     </p>
-    
-    
+
+
     {% highlight php %}
 
 
 <p>
-  Ha 
+  Ha
   <?php
    #some variables for the script to use
    #if you have some reason to change these, do.  but wordpress can handle it
@@ -157,29 +157,29 @@ if($query->have_posts()){
       $failuremess, "From: $websitename <noreply@$website>"); #email you about problem
         $casemessage = "El administrador ha sido informado sobre este error.";#set a friendly message
      }
-     echo " ".$website.$_SERVER['REQUEST_URI']; ?> 
-     y no existe. 
-  
-  <?php echo $casemessage; ?>  Puede volver atrás 
+     echo " ".$website.$_SERVER['REQUEST_URI']; ?>
+     y no existe.
+
+  <?php echo $casemessage; ?>  Puede volver atrás
      e intentarlo de nuevo o buscar lo que desee en el formulario:
-     
-  
+
+
   <?php include(TEMPLATEPATH . "/searchform.php"); ?>
-  
+
 </p>
 
 
-<?php 
+<?php
    $query_args = array( 's' => basename($_SERVER['REQUEST_URI']) );
    $query = new WP_Query( $query_args );
-          
+
    if($query->have_posts()){
       echo "
 
 <h4>
   Quizá buscaba...
 </h4>";
-                       
+
       // The Loop
       echo '
 
@@ -187,13 +187,13 @@ if($query->have_posts()){
   ';
         while ( $query->have_posts() ) : $query->the_post();
            echo '
-  
+
   <li>
     ';
     ?>
              <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-             
-    
+
+
     <?php
     echo '</li>';
           endwhile;
@@ -202,40 +202,37 @@ if($query->have_posts()){
           wp_reset_postdata();
     }
     ?>
-    
-    
+
+
     <br />
     <h4>
       Publicaciones recientes
     </h4>
-    
-    
+
+
     <ul>
       <?php
    $recent_posts = wp_get_recent_posts( array('post_status' => 'publish') );
          foreach( $recent_posts as $recent ){
             echo '
-      
+
       <li>
-        <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> 
+        <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a>
       </li> ';
          }
       ?>
-      
+
     </ul>
     {% endhighlight %}
-    
-    
+
+
     <p>
       Para ver un ejemplo haz click en el siguiente enlace: <a href="/404" target="_blank">elbauldelprogramador.org/404</a>.
     </p>
-    
-    
-    <hr />
-    Fuente | 
-    <a href="http://codex.wordpress.org/Creating_an_Error_404_Page" target="_blank">Creating an Error 404 Page</a></p>
-    
 
- [1]: /images/2012/08/4041.jpg
+
+    <hr />
+    Fuente |
+    <a href="http://codex.wordpress.org/Creating_an_Error_404_Page" target="_blank">Creating an Error 404 Page</a></p>
 
 {% include _toc.html %}

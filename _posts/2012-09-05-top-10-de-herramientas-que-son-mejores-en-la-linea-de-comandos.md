@@ -6,8 +6,8 @@ layout: post
 guid: /?p=887
 permalink: /top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Artículos
   - linux
@@ -15,8 +15,11 @@ tags:
   - comandos
   - herramientas
   - htop
+excerpt: "Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario)."
 ---
-[<img class=" wp-image-938 alignleft" title="Top 10 de las Mejores Herramientas en la Línea de Comandos" src="/images/2012/08/original1.jpg" alt="Comandos" width="328" height="184" />][1]
+<figure>
+  <img class=" wp-image-938 alignleft" title="Top 10 de las Mejores Herramientas en la Línea de Comandos" src="/images/2012/08/original1.jpg" alt="Comandos" width="328" height="184" />
+</figure>
 
 Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).
 
@@ -108,9 +111,5 @@ Si te has cansado de la interfaz gráfica de usuario, checkea nuestra <a href="h
 * * *
 
 Fuente | <a href="http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line" target="_blank">lifehacker</a>
-
-
-
- [1]: /images/2012/08/original1.jpg
 
 {% include _toc.html %}
