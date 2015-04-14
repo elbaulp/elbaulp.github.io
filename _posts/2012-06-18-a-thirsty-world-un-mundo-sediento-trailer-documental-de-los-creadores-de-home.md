@@ -6,8 +6,8 @@ layout: post
 guid: /?p=791
 permalink: /a-thirsty-world-un-mundo-sediento-trailer-documental-de-los-creadores-de-home/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - offtopic
 tags:
@@ -15,6 +15,7 @@ tags:
   - documentales
   - home project
 format: video
+excerpt: "(Un mundo sediento) Trailer. Documental de los creadores de HOME"
 ---
 [<img src="/images/2012/06/Screenshot-06182012-120818-AM1-1024x578.png" alt="" title="Screenshot - 06182012 - 12:08:18 AM" width="1024" height="578" class="aligncenter size-large wp-image-792" />][1]
 
@@ -33,8 +34,8 @@ Hoy en Rio de Janero se emitía una serie de <a href="http://rio.goodplanet.org/
 <span class='embed-youtube' style='text-align:center; display: block;'></span>
 
 > Fiel a la reputación de Yann Arthus-Bertrand, &#8220;A thirsty world&#8221; se ha rodado en más de 20 países, revela el misterioso y fascinante mundo de agua dulce a través de espectaculares imágenes aéreas tomadas en regiones que son difíciles de alcanzar y ráramente grabadas, como el sur de Sudán o el Congo del Norte. Además nos permite descubrir los paisajes más bellos de nuestro planeta, lágos, ríos y humedales creados por el agua.
-> 
-> Con **A THIRSTY WORLD** se pretende mostrar la dura realidad, el día a día de todas aquellas personas que están privadas de agua e incluso pueden morir por falta de la misma, y las personas que participan en la lucha diária para encontrar agua, purificarla o llevarla a aquellos que la necesitan. 
+>
+> Con **A THIRSTY WORLD** se pretende mostrar la dura realidad, el día a día de todas aquellas personas que están privadas de agua e incluso pueden morir por falta de la misma, y las personas que participan en la lucha diária para encontrar agua, purificarla o llevarla a aquellos que la necesitan.
 
 Cuando se lance el documental entero informaré de ello.
 

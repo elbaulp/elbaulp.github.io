@@ -28,3 +28,5 @@
 - [x] Schema validator
 - [ ] drafts
 - [ ] Arreglar git
+- [ ] HTML improvements
+- [ ] 
