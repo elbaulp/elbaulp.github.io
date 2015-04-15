@@ -12,8 +12,8 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 blogger_permalink:
-  - /2011/11/terminada-la-primera-parte-del-manual.html
-  - /2011/11/terminada-la-primera-parte-del-manual.html
+  - /terminada-la-primera-parte-del-manual
+  - /terminada-la-primera-parte-del-manual
 categories:
   - android
   - opensource
@@ -66,7 +66,7 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
 
 
 
- [1]: /2011/11/terminada-la-primera-parte-del-manual.html
+ [1]: /terminada-la-primera-parte-del-manual
  [2]: /2011/11/programacion-android-recursos-recursos.html
  [3]: /guia-de-desarrollo-android.html
  [4]: http://www.megaupload.com/?d=RDZ1J1MQ
