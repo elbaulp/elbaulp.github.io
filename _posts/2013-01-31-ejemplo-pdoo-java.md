@@ -24,7 +24,7 @@ if_seo_keywords:
   - cpp, c++, java, curso java, curso cpp, curso c++, manual c++ pdf, manual cpp pdf, manual java pdf
   - cpp, c++, java, curso java, curso cpp, curso c++, manual c++ pdf, manual cpp pdf, manual java pdf
   - cpp, c++, java, curso java, curso cpp, curso c++, manual c++ pdf, manual cpp pdf, manual java pdf
-blogger_permalink:
+
   - http://www.elbauldelprogramador.org/p/manual-c.html
   - http://www.elbauldelprogramador.org/p/manual-c.html
   - http://www.elbauldelprogramador.com/p/manual-c.html

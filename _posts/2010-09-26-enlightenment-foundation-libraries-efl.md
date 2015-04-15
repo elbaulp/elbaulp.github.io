@@ -13,10 +13,10 @@ blogger_author:
   - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
   - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
   - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-blogger_permalink:
-  - /2010/09/enlightenment-foundation-libraries-efl.html
-  - /2010/09/enlightenment-foundation-libraries-efl.html
-  - /2010/09/enlightenment-foundation-libraries-efl.html
+
+  
+  
+  
 categories:
   - linux
 ---

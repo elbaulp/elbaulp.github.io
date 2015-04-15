@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2012/03/crear-webapps-con-soporte-html5-css3-y.html
-  - /2012/03/crear-webapps-con-soporte-html5-css3-y.html
+
+  
+  
 share_data:
   - '[]'
   - '[]'

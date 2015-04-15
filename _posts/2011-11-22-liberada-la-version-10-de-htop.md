@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/11/liberada-la-version-10-de-htop.html
-  - /2011/11/liberada-la-version-10-de-htop.html
+
+  
+  
 share_count:
   - 0
   - 0

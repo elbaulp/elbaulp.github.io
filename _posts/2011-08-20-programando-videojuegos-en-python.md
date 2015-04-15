@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
   - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-blogger_permalink:
-  - /2011/08/programando-videojuegos-en-python.html
-  - /2011/08/programando-videojuegos-en-python.html
+
+  
+  
 categories:
   - juegos
   - python

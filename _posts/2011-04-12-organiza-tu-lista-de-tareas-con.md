@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/04/organiza-tu-lista-de-tareas-con.html
-  - /2011/04/organiza-tu-lista-de-tareas-con.html
-  - /2011/04/organiza-tu-lista-de-tareas-con.html
+
+  
+  
+  
 categories:
   - curiosidades
   - internet

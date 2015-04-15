@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/06/blogger-buzz-add-1-button-to-your-blog.html
-  - /2011/06/blogger-buzz-add-1-button-to-your-blog.html
-  - /2011/06/blogger-buzz-add-1-button-to-your-blog.html
+
+  
+  
+  
 categories:
   - Sin categoría
 ---

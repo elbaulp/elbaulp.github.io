@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/04/celebrando-los-20-anos-de-linux-video.html
-  - /2011/04/celebrando-los-20-anos-de-linux-video.html
-  - /2011/04/celebrando-los-20-anos-de-linux-video.html
+
+  
+  
+  
 categories:
   - linux
   - noticias

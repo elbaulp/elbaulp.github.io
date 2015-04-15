@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/11/anunciate-en-elbauldelprogramadorcom_11.html
-  - /2011/11/anunciate-en-elbauldelprogramadorcom_11.html
+
+  
+  
 share_data:
   - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549447}'
   - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549447}'

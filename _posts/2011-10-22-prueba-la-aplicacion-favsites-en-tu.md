@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/10/prueba-la-aplicacion-favsites-en-tu.html
-  - /2011/10/prueba-la-aplicacion-favsites-en-tu.html
+
+  
+  
 categories:
   - android
   - opensource

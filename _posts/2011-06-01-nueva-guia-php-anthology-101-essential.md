@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/06/nueva-guia-php-anthology-101-essential.html
-  - /2011/06/nueva-guia-php-anthology-101-essential.html
-  - /2011/06/nueva-guia-php-anthology-101-essential.html
+
+  
+  
+  
 categories:
   - cursos
   - internet

@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/05/avances-en-el-proyecto-android-de-fin.html
-  - /2011/05/avances-en-el-proyecto-android-de-fin.html
-  - /2011/05/avances-en-el-proyecto-android-de-fin.html
+
+  
+  
+  
 categories:
   - android
   - aplicaciones

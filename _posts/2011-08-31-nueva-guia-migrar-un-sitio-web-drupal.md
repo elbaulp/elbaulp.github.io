@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/08/nueva-guia-migrar-un-sitio-web-drupal.html
-  - /2011/08/nueva-guia-migrar-un-sitio-web-drupal.html
+
+  
+  
 categories:
   - cursos
   - internet

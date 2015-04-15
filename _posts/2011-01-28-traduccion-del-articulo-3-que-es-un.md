@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/01/traduccion-del-articulo-3-que-es-un.html
-  - /2011/01/traduccion-del-articulo-3-que-es-un.html
-  - /2011/01/traduccion-del-articulo-3-que-es-un.html
+
+  
+  
+  
 categories:
   - juegos
 ---

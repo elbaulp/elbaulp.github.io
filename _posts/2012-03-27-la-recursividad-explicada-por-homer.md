@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2012/03/la-recursividad-explicada-por-homer.html
-  - /2012/03/la-recursividad-explicada-por-homer.html
+
+  
+  
 share_data:
   - '[]'
   - '[]'

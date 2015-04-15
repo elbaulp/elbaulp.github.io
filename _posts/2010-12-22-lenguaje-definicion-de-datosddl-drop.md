@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2010/12/lenguaje-definicion-de-datosddl-drop.html
-  - /2010/12/lenguaje-definicion-de-datosddl-drop.html
-  - /2010/12/lenguaje-definicion-de-datosddl-drop.html
+
+  
+  
+  
 categories:
   - BaseDeDatos
 tags:

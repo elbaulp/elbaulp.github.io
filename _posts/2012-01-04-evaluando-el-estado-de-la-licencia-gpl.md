@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2012/01/evaluando-el-estado-de-la-licencia-gpl.html
-  - /2012/01/evaluando-el-estado-de-la-licencia-gpl.html
+
+  
+  
 share_data:
   - '[]'
   - '[]'

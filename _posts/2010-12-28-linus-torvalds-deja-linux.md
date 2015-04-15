@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2010/12/linus-torvalds-deja-linux.html
-  - /2010/12/linus-torvalds-deja-linux.html
-  - /2010/12/linus-torvalds-deja-linux.html
+
+  
+  
+  
 categories:
   - noticias
 ---

@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2010/11/3-juegos-para-linux.html
-  - /2010/11/3-juegos-para-linux.html
-  - /2010/11/3-juegos-para-linux.html
+
+  
+  
+  
 categories:
   - juegos
 tags:

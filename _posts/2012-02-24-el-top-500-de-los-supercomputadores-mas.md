@@ -11,9 +11,9 @@ blogger_blog:
 blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2012/02/el-top-500-de-los-supercomputadores-mas.html
-  - /2012/02/el-top-500-de-los-supercomputadores-mas.html
+
+  
+  
 share_data:
   - '[]'
   - '[]'

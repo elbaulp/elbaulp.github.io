@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/04/nueva-metodologia-para-la-traduccion-de.html
-  - /2011/04/nueva-metodologia-para-la-traduccion-de.html
-  - /2011/04/nueva-metodologia-para-la-traduccion-de.html
+
+  
+  
+  
 categories:
   - android
   - noticias

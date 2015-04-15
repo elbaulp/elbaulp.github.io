@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/04/programa-que-envia-mensajes-desde_10.html
-  - /2011/04/programa-que-envia-mensajes-desde_10.html
-  - /2011/04/programa-que-envia-mensajes-desde_10.html
+
+  
+  
+  
 if_slider_image:
   - 
   - 

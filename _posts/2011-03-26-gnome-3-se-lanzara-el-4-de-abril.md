@@ -13,10 +13,10 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-blogger_permalink:
-  - /2011/03/gnome-3-se-lanzara-el-4-de-abril.html
-  - /2011/03/gnome-3-se-lanzara-el-4-de-abril.html
-  - /2011/03/gnome-3-se-lanzara-el-4-de-abril.html
+
+  
+  
+  
 categories:
   - linux
   - noticias
