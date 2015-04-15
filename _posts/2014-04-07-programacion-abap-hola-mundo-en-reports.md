@@ -11,6 +11,7 @@ tags:
   - curso ABAP
   - hola mundo abap
   - programación ABAP
+excerpt: "Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje."
 ---
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 
@@ -102,7 +103,7 @@ Si queremos avanzar un poco más en nuestro “Hola mundo” podemos incluir nue
   * Como nombre de transacción escribiremos Z_HOLA. De nuevo, recordar que como clientes sólo podemos utilizar la Z o la Y como letra de inicio de nuestros objetos ABAP.
   * Pulsamos crear, damos una descripción e indicamos que nuestra transacción es transacción de report.
   * Indicamos el nombre de nuestro programa y grabamos como objeto local.  
-    <img src="/images/2014/04/hola-mundo-transaccion.png" alt="hola-mundo-transaccion" width="469" height="219" class="aligncenter size-full wp-image-2334" /></p> 
+    <img src="/images/2014/04/hola-mundo-transaccion.png" alt="hola-mundo-transaccion" width="469" height="219" class="aligncenter size-full wp-image-2334" /></p>
 
 Ya está. Ahora utilizando la transacción Z\_HOLA se ejecutará el resultado del programa Z\_HOLA_MUNDO.
 

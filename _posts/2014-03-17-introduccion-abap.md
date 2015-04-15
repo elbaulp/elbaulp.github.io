@@ -11,6 +11,8 @@ tags:
   - curso ABAP
   - programación ABAP
   - que es ABAP
+
+excerpt: "El lenguaje de programación ABAP (antiguamente ABAP/4) es un lenguaje propio del ERP SAP y su uso sólo se puede entender a través de este software empresarial. En un principio, SAP era sinónimo de ERP. Sin embargo, en la actualidad SAP comprende un paquete mucho más amplio de herramientas. Por supuesto, el ERP sigue siendo el núcleo del negocio de SAP, pero su cartera se ido ampliando con otros productos como CRM (customer relationship management), SCM (Supply Chain Management) y SRM (Supplier Relationship Management) entre otros."
 ---
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 
@@ -31,7 +33,7 @@ Como lenguaje de programación propietario de SAP, ABAP se ha utilizado y se uti
   * Contiene sentencias y palabras clave propias del lenguaje.
   * Es un lenguaje orientado a eventos bien definidos.
   * Es interpretado, no compilado.
-  * Se utiliza tanto en programación de informes como en programación de diálogo para SAP. 
+  * Se utiliza tanto en programación de informes como en programación de diálogo para SAP.
   * Se encuentra completamente integrado dentro del entorno de desarrollo de SAP.
 
 ### Como lenguaje orientado a objetos contiene
@@ -46,7 +48,7 @@ Se podría decir que ABAP se comporta como lenguaje de cuarta generación y como
 
 ## Para qué sirve el lenguaje ABAP
 
-Los usuarios interactúan con SAP a través de transacciones. Estas transacciones representan procesos y funcionalidades propias del negocio de las empresas que instalan SAP. 
+Los usuarios interactúan con SAP a través de transacciones. Estas transacciones representan procesos y funcionalidades propias del negocio de las empresas que instalan SAP.
 
 ABAP es el lenguaje utilizado por programadores ABAP para crear nuevas transacciones que no existen en el estándar de SAP. Pero también sirve para ampliar transacciones que ya existen en el estándar cuando la funcionalidad que proveen es insuficiente para su negocio. Ya que SAP está programado en ABAP, todas las funciones complementarias al estándar se han de programar también en ABAP mediante alguna de las formas que SAP permite&#8230; user exits, BADIs, enhancements, BTEs&#8230;
 
