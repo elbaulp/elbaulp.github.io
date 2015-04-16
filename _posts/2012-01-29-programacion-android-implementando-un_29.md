@@ -172,9 +172,9 @@ Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los p
 
 
  [1]: /guia-de-desarrollo-android.html
- [2]: /2011/11/programacion-android-proveedores-de.html
+ [2]: /programacion-android-proveedores-de.html
  [3]: /fundamentos-programacion-android_16/
- [4]: /2011/02/plsql-cursores.html
+ [4]: /plsql-cursores.html
  [5]: /programacion-android-intents-conceptos/
 
 {% include _toc.html %}

@@ -29,6 +29,6 @@ tags:
 
 
 
- [1]: /2011/09/estoy-trabajando-en-una-aplicacion.html
+ [1]: /estoy-trabajando-en-una-aplicacion.html
 
 {% include _toc.html %}

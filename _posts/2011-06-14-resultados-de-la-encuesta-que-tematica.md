@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - android
   - python
@@ -44,6 +44,6 @@ En principio voy a empezar un manual que sería como una visión general que os 
 
 
  [1]: /bases-de-datos.html
- [2]: /2011/05/pro-android-3-aprende-fondo-todo-lo-que.html
+ [2]: /pro-android-3-aprende-fondo-todo-lo-que.html
 
 {% include _toc.html %}

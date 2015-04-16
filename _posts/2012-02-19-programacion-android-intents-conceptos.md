@@ -245,7 +245,7 @@ Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invo
 
 
  [1]: /programacion-android-trabajar-con/
- [2]: /2011/11/programacion-android-proveedores-de.html
+ [2]: /programacion-android-proveedores-de.html
  [3]: /fundamentos-programacion-android_16/
  [4]: http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT
  [5]: /programacion-android-intents-categorias/

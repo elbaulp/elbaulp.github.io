@@ -67,7 +67,7 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
 
 
  [1]: /terminada-la-primera-parte-del-manual
- [2]: /2011/11/programacion-android-recursos-recursos.html
+ [2]: /programacion-android-recursos-recursos.html
  [3]: /guia-de-desarrollo-android.html
  [4]: http://www.megaupload.com/?d=RDZ1J1MQ
 

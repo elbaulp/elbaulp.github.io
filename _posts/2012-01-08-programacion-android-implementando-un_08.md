@@ -224,11 +224,11 @@ public class SitesProvider extends ContentProvider{
 
 
  [1]: /guia-de-desarrollo-android.html
- [2]: /2012/01/programacion-android-implementando-un.html
- [3]: /2011/10/prueba-la-aplicacion-favsites-en-tu.html
- [4]: /2011/01/consulta-de-datos-clausula-select.html
- [5]: /2011/11/programacion-android-proveedores-de_28.html
- [6]: /2012/01/programacion-android-implementando-un_14.html
+ [2]: /programacion-android-implementando-un.html
+ [3]: /prueba-la-aplicacion-favsites-en-tu.html
+ [4]: /consulta-de-datos-clausula-select.html
+ [5]: /programacion-android-proveedores-de_28.html
+ [6]: /programacion-android-implementando-un_14.html
  [7]: /programacion-android-implementando-un_14/
 
 {% include _toc.html %}

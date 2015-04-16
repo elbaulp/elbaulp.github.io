@@ -36,7 +36,7 @@ Un saludo y gracias.
 
 
 
- [1]: /2012/01/secretos-peligrosos-de-megaupload-que.html
+ [1]: /secretos-peligrosos-de-megaupload-que.html
  [2]: /guia-de-desarrollo-android.html
  [3]: /manual-c.html
 

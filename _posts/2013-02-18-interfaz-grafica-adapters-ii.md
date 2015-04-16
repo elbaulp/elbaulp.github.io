@@ -227,7 +227,7 @@ Como siempre, se puede descargar este ejemplo:
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Menús][2] {.referencia}
 
- [1]: /2011/06/programacion-android-interfaz-grafica_28.html
+ [1]: /programacion-android-interfaz-grafica_28.html
  [2]: /programacion-android-interfaz-grafica_08/
 
 

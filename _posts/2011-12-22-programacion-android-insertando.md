@@ -113,10 +113,10 @@ El código usa el flujo de salida para escribir.
 
 
 
- [1]: /2011/12/programacion-android-usando-la-clausula.html
- [2]: /2011/11/programacion-android-proveedores-de.html
+ [1]: /programacion-android-usando-la-clausula.html
+ [2]: /programacion-android-proveedores-de.html
  [3]: /bases-de-datos.html
- [4]: /2011/11/programacion-android-arquitectura-de.html
+ [4]: /programacion-android-arquitectura-de.html
  [5]: /programacion-android-actualizar-y/
 
 {% include _toc.html %}

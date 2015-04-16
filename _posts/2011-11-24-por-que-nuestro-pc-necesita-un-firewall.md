@@ -80,6 +80,6 @@ Tracucción de : <a target="_blank" href="http://www.linuxbsdos.com/2011/11/21/w
 
 
 
- [1]: /2011/11/por-que-gnulinux-no-es-solo-para-geeks.html
+ [1]: /por-que-gnulinux-no-es-solo-para-geeks.html
 
 {% include _toc.html %}
