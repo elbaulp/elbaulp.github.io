@@ -126,7 +126,7 @@ protected void onListItemClick(ListView l, View v, int position, long id){
 
 
 
- [1]: /programacion-android-implementando-un.html
- [2]: /programacion-android-como-se-resuelven.html
+ [1]: /programacion-android-implementando-un
+ [2]: /programacion-android-como-se-resuelven
 
 {% include _toc.html %}

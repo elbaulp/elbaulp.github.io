@@ -55,7 +55,7 @@ El compilador de recursos AAPT (Android Asset Packaging Tool), compila todos los
 
 #### Siguiente Tema: [Programación Android:Recursos &#8211; Arrays de strings][3] {.referencia}
 
- [1]: /programacion-android-recursos-strings.html
+ [1]: /programacion-android-recursos-strings
  [2]: /programacion-android-recursos-layout
  [3]: /programacion-android-recursos-arrays-de/
 

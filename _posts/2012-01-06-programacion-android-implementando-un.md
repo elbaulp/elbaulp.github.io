@@ -194,12 +194,12 @@ Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la c
 
 
 
- [1]: /programacion-android-actualizar-y.html
- [2]: /bases-de-datos.html
- [3]: /programacion-android-proveedores-de_28.html
- [4]: /programacion-android-implementando-un_08.html
- [5]: /prueba-la-aplicacion-favsites-en-tu.html
- [6]: /evaluando-el-estado-de-la-licencia-gpl.html
+ [1]: /programacion-android-actualizar-y
+ [2]: /bases-de-datos
+ [3]: /programacion-android-proveedores-de_28
+ [4]: /programacion-android-implementando-un_08
+ [5]: /prueba-la-aplicacion-favsites-en-tu
+ [6]: /evaluando-el-estado-de-la-licencia-gpl
  [7]: /programacion-android-implementando-un_08/
 
 {% include _toc.html %}

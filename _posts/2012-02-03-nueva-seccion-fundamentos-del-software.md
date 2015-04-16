@@ -39,6 +39,6 @@ Un saludo.
 
 
 
- [1]: /fundamentos-del-software_03.html
+ [1]: /fundamentos-del-software_03
 
 {% include _toc.html %}

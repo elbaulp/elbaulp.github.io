@@ -88,7 +88,7 @@ Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he
 
 
 
- [1]: /chistes-de-informaticos.html
- [2]: /humor-grafico-informaticos.html
+ [1]: /chistes-de-informaticos
+ [2]: /humor-grafico-informaticos
 
 {% include _toc.html %}

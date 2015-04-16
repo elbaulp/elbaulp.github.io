@@ -185,10 +185,10 @@ En este archivo se definen el paquete por defecto, datos de versión, icono (med
 
 
 
- [1]: /resultados-de-la-encuesta-que-tematica.html
+ [1]: /resultados-de-la-encuesta-que-tematica
  [2]: video-tutorial-programacion-android
  [3]: http://lmgtfy.com/?q=instalar+y+configurar+android+sdk+eclipse
- [4]: /guia-de-desarrollo-android.html
+ [4]: /guia-de-desarrollo-android
  [5]: /fundamentos-programacion-android/
 
 {% include _toc.html %}

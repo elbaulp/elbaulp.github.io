@@ -40,6 +40,6 @@ Espero que os sirva de ayuda.
 
 
 
- [1]: /diaspora-la-red-social-libre.html
+ [1]: /diaspora-la-red-social-libre
 
 {% include _toc.html %}

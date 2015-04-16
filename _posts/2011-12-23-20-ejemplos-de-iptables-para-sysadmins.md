@@ -657,6 +657,6 @@ NOTA: hay que ponerlas las primeras para que haga log antes de rechazarlo.
 
 
 
- [1]: /esnifando-la-red-pruebas-de-seguridad.html
+ [1]: /esnifando-la-red-pruebas-de-seguridad
 
 {% include _toc.html %}

@@ -64,7 +64,7 @@ Un saludo
 
 
 
- [1]: /guia-de-desarrollo-android.html
- [2]: /pro-android-3-aprende-fondo-todo-lo-que.html
+ [1]: /guia-de-desarrollo-android
+ [2]: /pro-android-3-aprende-fondo-todo-lo-que
 
 {% include _toc.html %}

@@ -43,7 +43,7 @@ En principio voy a empezar un manual que sería como una visión general que os 
 
 
 
- [1]: /bases-de-datos.html
- [2]: /pro-android-3-aprende-fondo-todo-lo-que.html
+ [1]: /bases-de-datos
+ [2]: /pro-android-3-aprende-fondo-todo-lo-que
 
 {% include _toc.html %}

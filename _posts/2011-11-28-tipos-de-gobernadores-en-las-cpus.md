@@ -58,6 +58,6 @@ Fuentes: <a target="_blank" href="http://publib.boulder.ibm.com/infocenter/lnxin
 
 
 
- [1]: /rootear-samsung-galaxy-s-gt-i9003.html
+ [1]: /rootear-samsung-galaxy-s-gt-i9003
 
 {% include _toc.html %}

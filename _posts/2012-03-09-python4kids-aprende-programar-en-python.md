@@ -42,7 +42,7 @@ Que no os engañe el que el nombre del tutorial sea python para niños, a lo lar
 
 
  [1]: /label/python
- [2]: /6-e-books-gratuitos-para-aprenter.html
- [3]: /python-para-principiantes.html
+ [2]: /6-e-books-gratuitos-para-aprenter
+ [3]: /python-para-principiantes
 
 {% include _toc.html %}

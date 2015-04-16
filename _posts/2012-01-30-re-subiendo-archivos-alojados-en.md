@@ -36,8 +36,8 @@ Un saludo y gracias.
 
 
 
- [1]: /secretos-peligrosos-de-megaupload-que.html
- [2]: /guia-de-desarrollo-android.html
- [3]: /manual-c.html
+ [1]: /secretos-peligrosos-de-megaupload-que
+ [2]: /guia-de-desarrollo-android
+ [3]: /manual-c
 
 {% include _toc.html %}
