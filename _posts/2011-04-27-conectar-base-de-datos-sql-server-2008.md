@@ -14,13 +14,13 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 if_slider_image:
-  - 
-  - 
-  - 
+  -
+  -
+  -
 categories:
   - android
   - aplicaciones
@@ -40,7 +40,7 @@ Bien, ahora voy a explicar en que consiste la aplicación exactamente, que aún 
 
 Para esto es necesario establecer una conexión PDA-Base de datos del Servidor.
 
-  
+
 <!--more-->
 
 Lo primero que hay que hacer es intalar SQL server 2008 y configurarlo para que se pueda acceder de dos formas (con autentificación windows y con autentificación SQl server), esto se pregunta durante la instalación de SQL server, posteriormente hay que crear un usuario SQL server, [aqui se explica como hacerlo][2]. Tambien debemos permitir [conexiones remotas.][3]
@@ -50,7 +50,7 @@ Ahora vamos al código, (que he sacado de un ejemplo de la web de [microsoft][4]
 Ahora vamos a crear un proyecto, yo lo he creado en ecplise, es necesario agregarle las librerías JDBC para que hagan de puente entre la aplicación y la base de datos. En ecplise se añaden en las propiedades del proyecto/JAva Build Path/Libraries, estas librerías podeis descargarlas de [aqui][5], si no lo hacéis en ecplise, en este [enlace][6] se ve como configurarlo
 
 <p class="alert">
-  También puedes ver cómo <a href="/2012/02/conectar-base-de-datos-oracle.html">Conectar una base de datos ORACLE a aplicación Java remotamente</a>
+  También puedes ver cómo <a href="/conectar-base-de-datos-oracle.html">Conectar una base de datos ORACLE a aplicación Java remotamente</a>
 </p>
 
 Dejo el código por aquí:
@@ -64,7 +64,7 @@ Driver Information
  Driver Name: SQLServer
  Driver Version: 2.2.0022
 
-Database Information 
+Database Information
  Database Name: Microsoft SQL Server
  Database Version: Microsoft SQL Server Yukon - 10.0.1600
 Algunos datos de la BD
@@ -75,7 +75,7 @@ Apellido: Alcalde
 Dni: 12345678
 {% endhighlight %}
 
-Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiempo, así que si algo no se entiende no dudes en preguntar e intentaré ayudarte.</p> 
+Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiempo, así que si algo no se entiende no dudes en preguntar e intentaré ayudarte.</p>
 
 
 
