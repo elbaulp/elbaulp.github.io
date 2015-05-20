@@ -133,11 +133,9 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
   <li>
     <a href="http://elbauldelprogramador.com/nueva-guia-gratuita-cybersecurity-dummies-ebook/"><img src="http://elbauldelprogramador.com/images/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="199" height="259" class="alignleft size-full wp-image-2533" /><span>Nueva guía gratuita: Cybersecurity for Dummies eBook</span></a>
   </li>
+  <li>
+    <a href="/nueva-gua-gratuita-java-concurrency-essentials"><img src="/images/Nueva Guía Gratuita: Java Concurrency Essentials.jpg" alt="Nueva Guía Gratuita: Java Concurrency Essentials" width="199" height="259"/><span>Nueva Guía Gratuita: Java Concurrency Essentials</span></a>
+  </li>
 </ul>
 
-<div style="clear:both">
-</div>
-
-
-
- [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
+[1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
