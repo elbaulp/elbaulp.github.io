@@ -49,6 +49,16 @@ $ git config filter.siteurl.clean siteurl.clean
 **Nota:** Los _scripts_ tienen que estar en el _PATH_ del sistema, y tener permisos de ejecucion.
 {: .notice}
 
+## El Gitattributes
+
+Gracias al comentario de Felipe, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero `.gitattributes`:
+
+{% highlight bash %}
+_config.yml filter=siteurl
+{% endhighlight %}
+
+Gracias felipe.
+
 ## Conclusión
 
 Ejecutados todos los pasos, ahora tendremos la url en local cuando estemos desarrollando, y se sustituirá automáticamente por el dominio cuando se publique en _github_.
