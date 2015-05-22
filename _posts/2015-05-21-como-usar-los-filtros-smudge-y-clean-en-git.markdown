@@ -51,13 +51,13 @@ $ git config filter.siteurl.clean siteurl.clean
 
 ## El Gitattributes
 
-Gracias al comentario de Felipe, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero `.gitattributes`:
+Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero `.gitattributes`:
 
 {% highlight bash %}
 _config.yml filter=siteurl
 {% endhighlight %}
 
-Gracias Felipe.
+Gracias Julián.
 
 ## Conclusión
 
