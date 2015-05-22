@@ -57,7 +57,7 @@ Gracias al comentario de Felipe, me dí cuenta de que faltaba una última cosa p
 _config.yml filter=siteurl
 {% endhighlight %}
 
-Gracias felipe.
+Gracias Felipe.
 
 ## Conclusión
 
