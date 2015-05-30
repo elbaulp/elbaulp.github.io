@@ -133,6 +133,9 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
   <li>
     <a href="/cursos/internet/noticias/opensource/nueva-gua-gratuita-java-concurrency-essentials/nueva-gua-gratuita-java-concurrency-essentials"><img src="/images/Nueva Guía Gratuita: Java Concurrency Essentials.jpg" alt="Nueva Guía Gratuita: Java Concurrency Essentials" width="199" height="259"/><span>Nueva Guía Gratuita: Java Concurrency Essentials</span></a>
   </li>
+  <li>
+    <a href="/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt"><img src="/images/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" alt="Guía Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt" width="199" height="259"/><span>Guía Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
