@@ -61,30 +61,13 @@ function show_music( $atts ){
                 'autor' => 'No especificado',
                 'date' => 0
        ), $atts));
-    // Display info 
-    $music_details = '
+    // Display info
+    $music_details = '<div class="info"><ul>';
+    $music_details .= '<li>Genero: ' .$genero. '</li>';
+    $music_details .= '<li>Autor: ' .$autor. '</li>';
+    $music_details .= '<li>Fecha: ' .$date. '</li>';
+    $music_details .= '</ul></div>';
 
-<div class="info">
-  <ul>
-    ';
-        $music_details .= '
-    
-    <li>
-      Genero: ' .$genero. '
-    </li>';
-        $music_details .= '
-    
-    <li>
-      Autor: ' .$autor. '
-    </li>';
-        $music_details .= '
-    
-    <li>
-      Fecha: ' .$date. '
-    </li>';
-        $music_details .= '
-  </ul>
-</div>';
     return $music_details;
 }
 //add our shortcode music
@@ -96,7 +79,7 @@ Listo, ya puedes usar este shortcode.
 
 #### Referencias
 
-*cyberciti* »» <a href="http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/" target="_blank">Visitar sitio</a> 
+*cyberciti* »» <a href="http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/" target="_blank">Visitar sitio</a>
 
 
 
