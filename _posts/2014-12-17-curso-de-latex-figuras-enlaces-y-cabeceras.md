@@ -1,4 +1,5 @@
 ---
+author: marta
 id: 2514
 title: 'Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras'
 

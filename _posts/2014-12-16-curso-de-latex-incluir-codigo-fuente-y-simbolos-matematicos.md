@@ -1,4 +1,5 @@
 ---
+author: marta
 id: 2513
 title: 'Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos'
 
@@ -101,13 +102,13 @@ Así es, alguna vez tendremos que analizar la eficiencia de algún programa que 
 Para analizar la eficiencia del algoritmo, tendremos que combinar matemáticas y texto. Para las matemáticas utilizaremos la orden `displaymath`:
 
 {% highlight latex %}\noindent
-En primer lugar, nos encontramos un for que va desde $i=0$ hasta $s.size()$, 
-donde $s.size()$ es el tamaño de string que contiene la operación aritmética 
+En primer lugar, nos encontramos un for que va desde $i=0$ hasta $s.size()$,
+donde $s.size()$ es el tamaño de string que contiene la operación aritmética
 en notación infija. Este for equivaldría a la siguiente sumatoria, teniendo
 en cuenta que todos las operaciones dentro del for tienen eficiencia $O(1)$:
 
 \begin{displaymath}
-\sum_{i=0}^{s.size()} = s.size(), \qquad\ \textrm{siendo $s.size()$ 
+\sum_{i=0}^{s.size()} = s.size(), \qquad\ \textrm{siendo $s.size()$
     el tamaño del string que contiene la operación aritmética}
 \end{displaymath}
 {% endhighlight %}
@@ -122,11 +123,11 @@ Seguimos analizando la eficiencia, y ahora recurrimos a la estructura `enumerate
 Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
 \begin{enumerate}[$\heartsuit$]
     \item Tenemos en primer lugar una asignación, cuya eficiencia es $O(1)$
-    \item Y después un if, como sabemos las comparaciones también tienen $O(1)$, 
+    \item Y después un if, como sabemos las comparaciones también tienen $O(1)$,
                     y dentro de dicho if una llamada a una función que lo único que
                     hace es añadir un elemento a la cola, por lo que también es $O(1)$.
     \item Luego tenemos un else, cuyas operaciones también tienen un coste
-                    de $O(1)$ puesto que tanto Pila como Cola están implementadas 
+                    de $O(1)$ puesto que tanto Pila como Cola están implementadas
                     con celdas enlazadas.
 \end{enumerate}
 
@@ -139,9 +140,9 @@ Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco
 Ahora seguiríamos con nuestro análisis de la eficiencia:
 
 {% highlight latex %}\noindent
-Después, tenemos un pequeño bucle, en el que insertamos en la cola de la 
-operación postfija, los operadores con menos prioridad que han quedado en la pila. 
-Este bucle iría desde $0$ hasta $t$, siendo $t$ el tamaño de la pila. 
+Después, tenemos un pequeño bucle, en el que insertamos en la cola de la
+operación postfija, los operadores con menos prioridad que han quedado en la pila.
+Este bucle iría desde $0$ hasta $t$, siendo $t$ el tamaño de la pila.
 Y se traduciría en la siguiente sumatoria:
 
 \begin{displaymath}
@@ -154,10 +155,10 @@ Esta vez, los límites de la sumatoria estaban formados por un único carácter,
 Terminamos de analizar la eficiencia del último bucle que nos queda:
 
 {% highlight latex %}\noindent
-Por último,  tenemos otro bucle más en el que metemos en un string la 
-operación en notación postfija que hemos calculado y lo devolvemos. 
-La devolución tiene eficiencia $O(1)$, y las operaciones que hacemos 
-dentro del bucle también, por tanto, el bucle se traduciría en la 
+Por último,  tenemos otro bucle más en el que metemos en un string la
+operación en notación postfija que hemos calculado y lo devolvemos.
+La devolución tiene eficiencia $O(1)$, y las operaciones que hacemos
+dentro del bucle también, por tanto, el bucle se traduciría en la
 siguiente sumatoria:
 
 \begin{displaymath}
@@ -168,7 +169,7 @@ siguiente sumatoria:
 Y ahora vamos a hacer una subsección a modo de conclusión. Para ello, usamos la orden `\subsection{Conclusión}`:
 
 {% highlight latex %}\subsection{Conclusión}
-Tenemos tres bucles, al ser independientes, la eficiencia de todo el 
+Tenemos tres bucles, al ser independientes, la eficiencia de todo el
 código es la suma de la eficiencia de cada bucle por separado, es decir:
 
 \begin{displaymath}
