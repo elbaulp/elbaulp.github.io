@@ -15,10 +15,10 @@ search_omit: false
 
 ## [Bases de datos][bd]
 
-[Android]: /curso-programacion-android/
-[git]: /mini-tutorial-y-chuleta-de-comandos-git/
-[latex1]: /mini-curso-de-latex-introduccion/
-[latex2]: /curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/
-[latex3]: /curso-de-latex-figuras-enlaces-y-cabeceras/
-[dig]: /dig-chuleta-basica-de-comandos/
-[bd]: /bases-de-datos/
+[Android]: http://elbauldelprogramador.com/curso-programacion-android/
+[git]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/
+[latex1]: http://elbauldelprogramador.com/mini-curso-de-latex-introduccion/
+[latex2]: http://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/
+[latex3]:http://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
+[dig]: http://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/
+[bd]: http://elbauldelprogramador.com/bases-de-datos/
