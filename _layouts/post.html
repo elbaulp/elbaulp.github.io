@@ -41,11 +41,20 @@
       {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <hr/>
-      {% include _adtext.html %}
-      <hr/>
       <span itemprop="articleBody">
-        {{ content }}
+        {% assign c = content | split: '<!--more-->' %}
+        {% if content contains '<!--more-->' %}
+          {{ c | first }}
+          <hr/>
+            {% include _adtext.html %}
+          <hr/>
+          {{ c | last }}
+        {% else %}
+          <hr/>
+            {% include _adtext.html %}
+          <hr/>
+          {{ content }}
+        {% endif %}
       </span>
       <hr />
       {% include _adsense.html %}

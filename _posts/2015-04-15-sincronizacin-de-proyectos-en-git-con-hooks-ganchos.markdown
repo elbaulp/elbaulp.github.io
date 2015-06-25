@@ -23,6 +23,8 @@ image:
 
 Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en [git](/mini-tutorial-y-chuleta-de-comandos-git/ "Chuleta de comandos en git"), y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (_mirror repos_)
 
+<!--more-->
+
 ### Repositorios a sincronizar
 
 Supongamos que los repositorios se llaman _repo1_ y _repo2_. Pretendemos que _repo2_ esté sincronizado (sea un espejo) del _repo1_. Ésto significa que no tendremos que clonar en ningún momento el _repo2_. En local únicamente tendremos el _repo1_.

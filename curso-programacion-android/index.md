@@ -60,10 +60,10 @@ blogger_author:
 
         <ul>
           <li>
-            <a href="/android/introduccion-al-ndk-de-android/" title="Introducción al NDK de Android">Introducción al NDK de Android</a>
+            <a href="/introduccion-al-ndk-de-android/" title="Introducción al NDK de Android">Introducción al NDK de Android</a>
           </li>
           <li>
-            <a href="/how-to/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/" title="NDK-gdb – Depurar aplicaciones en el NKD de Android">NDK-gdb – Depurar aplicaciones en el NKD de Android</a>
+            <a href="/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/" title="NDK-gdb – Depurar aplicaciones en el NKD de Android">NDK-gdb – Depurar aplicaciones en el NKD de Android</a>
           </li>
         </ul>
 
