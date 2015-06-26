@@ -29,7 +29,7 @@ Realmente no se puede decir &#8220;Repaso del año&#8221;, ya que empecé a escr
 
 Para el año que entra, voy a intentar en la medida de lo posible escribir más post sobre python y C++, y tambien tengo pensado escribir una introducción a CSS (Hojas de estilo en cascada).  
   
-<!--more-->
+<!--ad-->
 
   
 Actualmente solo estoy escribiendo yo en el blog, de ahí que algunos dias no se publiquen entradas, como digo siempre, si alguien quiere partipar, es bienvenido.

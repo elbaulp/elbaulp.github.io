@@ -20,7 +20,7 @@ tags:
 ---
 Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en [Android][1] 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.  
   
-<!--more-->
+<!--ad-->
 
   
 Si quieres activarla has de ir a **Configuración » Acerca del teléfono » Número de compilación** (*Settings » About phone » Build number*) y pulsarlo siete veces.

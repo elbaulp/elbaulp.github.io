@@ -34,7 +34,7 @@ A veces queremos descargar algo y no queremos esperar a que finalice, pero sí q
 Sentinella aparecerá en el menu &#8220;Sistema&#8221; del escritorio. Si lo lanzamos veremos algo parecido a esto:
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://1.bp.blogspot.com/-Ti5_cz6URsM/TbqiIheW6YI/AAAAAAAAAcw/mDH3EbaI50E/s1600/R1vvF.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="223" width="320" src="http://1.bp.blogspot.com/-Ti5_cz6URsM/TbqiIheW6YI/AAAAAAAAAcw/mDH3EbaI50E/s320/R1vvF.png" /></a>

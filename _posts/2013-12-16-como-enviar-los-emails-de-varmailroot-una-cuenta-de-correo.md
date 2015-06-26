@@ -30,7 +30,7 @@ tags:
 <div class="clearfix">
 </div>
 
-<!--more-->
+<!--ad-->
 
 ## Requisitos
 

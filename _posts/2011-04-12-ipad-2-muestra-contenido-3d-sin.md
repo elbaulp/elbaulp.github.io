@@ -27,7 +27,7 @@ categories:
 
 Ahora que se ha puesto tan de moda el 3D, no paran de salir televisores y demás aparatos que nos muestran contenido 3D sin la necesidad de tener que tener las gafas puestas, pero lo que han conseguido los creadores de esta aplicación es algo muy distinto, ya que el iPad 2 no dispone de hardware 3D.  
   
-<!--more-->
+<!--ad-->
 
 Entonces, ¿como consiguen el efecto?, pues como bien han explicado en muyComputer, la aplicación usa la cámara frontal para reconocer la cara y generar la imagen con la perspectiva adecuada para conseguir dicho efecto. Podéis comprobarlo en este vídeo:
 

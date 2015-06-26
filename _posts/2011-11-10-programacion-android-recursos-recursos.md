@@ -27,7 +27,7 @@ Los recursos ayudan a la localización. Por ejemplo, podemos tener valores para 
 Android permite elegir distintas configuraciones de layout basandose en el tipo de layout. Y ambos tendrán el mismo ID de recurso. Esto se consigue usando directorios diferentes para cada configuración. Vamos a verlo con un ejemplo:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}/res/layout/main_layout.xml
 /res/layout-port/main_layout.xml

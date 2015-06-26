@@ -16,7 +16,7 @@ categories:
 
 Cuando grandes pensadores piensan en problemas, empiezan a ver patrones. Miran el problema de la gente enviándose entre ellos archivos de procesador de texto, luego miran el problema de la gente enviándose hojas de cálculo, y descubren que hay un patrón general: *envío de archivos*. Ese ya es un nivel de abstracción. Entonces suben un nivel más: la gente envía archivos, pero los navegadores web también “envían” peticiones para las páginas web. Y cuando piensas en ésto, llamar a un método sobre un objeto ¡es como enviar un mensaje a un objeto! ¡Es lo mismo otra vez! Esas cosas son todas operaciones de envío, por lo tanto nuestros inteligentes pensadores inventan una nueva, más alta y más amplia abstracción llamada mensajería, pero ahora está volviéndose vaga y ya nadie sabe realmente de qué están hablando. Blah.
 
-<!--more-->
+<!--ad-->
 
 Cuando vas un poco más allá, siguiendo la abstracción, te quedas sin oxígeno. A veces pensadores inteligentes simplemente no saben cuándo parar, y crean estos absurdos, ampliamente abarcativos, gráficos universales de alto nivel que son correctos y buenos, pero realmente no significan nada en absoluto.
 

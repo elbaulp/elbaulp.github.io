@@ -39,7 +39,7 @@ Si intentáis acceder al blog desde el móvil os preguntará si queréis ser red
 </div>
 
   
-<!--more-->
+<!--ad-->
 
 Una vez que se accede a la versión móvil, ya sea desde la aplicación o desde el navegador, en la parte inferior hay tres pestañas para ver las publicaciones en el blog, twitter y facebook respectivamente:
 

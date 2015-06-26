@@ -30,7 +30,7 @@ Son recopilaciones que he hecho durante el curso de *Programming languages *[en 
 Lo primero que hay que hacer para usar expresiones regulares es importar el módulo **re **de python con ***import re***
 
 Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:  
-<!--more-->
+<!--ad-->
 
 {% highlight python %}regex = r'[a-z]+-?[a-z]+'{% endhighlight %}
 

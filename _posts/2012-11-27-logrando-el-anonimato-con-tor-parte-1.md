@@ -75,7 +75,7 @@ Agrega la siguiente línea al archivo /etc/privoxy/config:
 
 Además debes agregar las siguientes línas al archivo /etc/tor/torrc:  
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}AvoidDiskWrites 1
  ControlPort 9051

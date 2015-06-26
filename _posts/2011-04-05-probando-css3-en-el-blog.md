@@ -25,7 +25,7 @@ Hace muy poco tiempo hablé de como [generar código css3 fácilmente][1] y he e
 
 Yo he probado los efectos en Chromium 10 y firefox 4, espero vuestros comentarios para decidir si dejo estos efectos o los quito.  
   
-<!--more-->
+<!--ad-->
 
 Los efectos están en:
 

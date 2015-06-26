@@ -21,7 +21,7 @@ tags:
 
 <img src="/images/2013/03/Bypassing-Google-Two-Factor-Authentication.jpg" alt="Bypassing Google Two Factor Authentication" width="460" height="349" class="thumbnail aligncenter size-full wp-image-1395" />  
   
-<!--more-->
+<!--ad-->
 
   
 La vulnerabilidad está en la implementación del mecanismo de auto-login en la ultima versión del navegador Chrome para Android. Dicha vulnerabilidad permitión a Duo Security usar un ASP (Application-Specific-Password) para ganar acceso al panel de recuperación de cuentas de Google y gestionar la configuración de la autentificación de dos factores.

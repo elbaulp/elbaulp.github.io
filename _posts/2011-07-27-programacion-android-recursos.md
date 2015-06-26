@@ -26,7 +26,7 @@ tags:
 Ya hemos visto que Android separa los recursos (imágenes, sonidos etc) del código colocándolos organizados dentro del directorio ***./res***. Esto nos facilita su mantenimiento, además de permitirnos usar diferentes recursos dependiendo de la configuración del terminal.
 
   
-<!--more-->
+<!--ad-->
 
 Separar los recursos permite proporcionar alternativas para dar soporte a las distintas configuraciones de dispositivos, como idiomas o tamaños de pantalla. Para conseguir compatibilidad con las diferentes configuraciones, debemos organizar los recursos en el directorio ***./res*** de nuestros proyectos, dentro de subdirectorios para agruparlos por tipo y configuración.
 

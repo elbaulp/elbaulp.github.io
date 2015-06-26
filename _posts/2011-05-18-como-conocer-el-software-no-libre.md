@@ -32,7 +32,7 @@ Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las
 Los pasos a seguir son los siguientes:
 
   
-<!--more-->
+<!--ad-->
 
 Instalamos el programa:
 

@@ -17,7 +17,7 @@ La luz es mucho más eficiente a la hora de transmitir datos que la electricidad
 
 Vuckovic dijo en una [rueda de prensa][1]:
 
-<!--more-->
+<!--ad-->
 
 > La luz puede transportar más datos que un cable, y es menos costoso energéticamente transmitir fotones que electrones. 
 

@@ -32,7 +32,7 @@ Los disparadores (o triggers) son [bloques de código PL/SQL][1] asociados a una
 En definitiva, los disparadores son eventos a nivel de tabla que se ejecutan automáticamente cuando se realizan ciertas operaciones sobre la tabla.
 
 Para crear un disparador utilizaremos la siguiente instrucción:  
-<!--more-->
+<!--ad-->
 
 
 

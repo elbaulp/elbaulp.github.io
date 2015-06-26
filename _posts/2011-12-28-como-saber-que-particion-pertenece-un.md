@@ -36,7 +36,7 @@ categories:
 Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}df
 df /ruta/a un/directorio

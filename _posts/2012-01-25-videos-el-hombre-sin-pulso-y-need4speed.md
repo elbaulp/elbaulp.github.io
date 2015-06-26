@@ -37,7 +37,7 @@ El segundo simplemente me parece increíble, muestra cómo varios hombres vuelan
 Sin más dilaciones, a continuación os dejo los vídeos:
 
   
-<!--more-->
+<!--ad-->
 
 
 

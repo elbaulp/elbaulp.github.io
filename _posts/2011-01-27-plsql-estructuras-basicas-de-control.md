@@ -46,7 +46,7 @@ La sintaxis básica es:
 END IF;{% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
   
 Como en cualquier lenguaje de programación, &#8220;condición&#8221; es cualquier expresión que de cómo resultado un valor booleano. Hay que saber que las estructuras IF se pueden anidar unas dentro de otras.

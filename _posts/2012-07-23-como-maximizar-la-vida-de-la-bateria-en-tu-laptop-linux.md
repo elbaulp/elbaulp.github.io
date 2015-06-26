@@ -58,7 +58,7 @@ Según<a href="http://www.lesswatts.org/tips/" target="_blank"> Less Watts.org</
 
 Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.  
   
-<!--more-->
+<!--ad-->
 
   
 &nbsp;
@@ -178,7 +178,7 @@ You can install PowerTop through the Ubuntu Software Centre and run it by typing
 
 {% highlight bash %}sudo powertop{% endhighlight %}
 
-&#8220;Wakeups per second&#8221; es un buen indicador para nuestra eficiencia del consumo de energía de la laptop. Nuestra laptop ahorra la mayor cantidad de energía cuando &#8220;Wakeups per second&#8221; muestra un valor bajo. De acuerdo con Intel el número más bajo de wakeups en un entorno de Escritorio Gnome es 3 y deberíamos poder lograrlo ajustando la configuración del hardware o cerrando algunos softwares activos en el sistema.
+&#8220;Wakeups per second&#8221; es un buen indicador para nuestra eficiencia del consumo de energía de la laptop. Nuestra laptop ahorra la mayor cantidad de energía cuando &#8220;Wakeups per second&#8221; muestra un valor bajo. De acuerdo con Intel el número más bajo de wakeups en un entorno de Escritorio Gnome es 3 y deberíamos poder lograrlo ajustando la configuraci��n del hardware o cerrando algunos softwares activos en el sistema.
 
 A continuación vemos un ejemplo de análisis de PowerTOP en el consumo de energía de mi laptop.
 

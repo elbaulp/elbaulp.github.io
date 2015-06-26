@@ -44,7 +44,7 @@ La convención usada para nombrar a las categorías es (para el caso de CATEGORY
 La forma de declarar las categorías en el AndroidManifest es la siguiente:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight xml %}<activity android:name=".PrincipalActivity" android:label="@string/app_name">
    <intent -filter>

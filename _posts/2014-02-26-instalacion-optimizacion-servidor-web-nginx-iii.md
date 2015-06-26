@@ -22,7 +22,7 @@ tags:
 
 En éste último artículo se verá cómo realizar optimizaciones al servidor web nginx, PHP y se cubrirá la instalación del sistema de caches APC y el módulo Page Speed de Google.
 
-<!--more-->
+<!--ad-->
 
 ## Optimizando
 

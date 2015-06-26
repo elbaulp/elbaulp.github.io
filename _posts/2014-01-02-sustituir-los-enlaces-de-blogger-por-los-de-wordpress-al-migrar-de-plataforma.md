@@ -14,7 +14,7 @@ tags:
 ---
 Hace tiempo, cuando migramos de blogger a WordPress escribimos un [artículo][1] sobre cómo realizar la migración sin perder el posicionamiento web. Una parte fundamental para mantener ese posicionamiento es conseguir que los enlaces sigan funcionando. Para ello existe un plugin que he estado usando hasta ahora. Sin embargo he decicido dejar de usarlo y sustituir todos los enlaces antiguos por los nuevos usando [expresiones regulares][2]. En éste artículo veremos cómo aplicar este cambio.
 
-<!--more-->
+<!--ad-->
 
 ### Descargar la base de datos
 

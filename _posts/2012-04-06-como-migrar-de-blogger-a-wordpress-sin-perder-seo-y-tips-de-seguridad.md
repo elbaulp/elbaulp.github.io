@@ -41,7 +41,7 @@ Una vez tenemos wordpress instalado y funcionando, vamos a importar todos las en
 Hecho esto, debemos conceder permisos a blogger para que deje a wordpress acceder a la información, le damos al botón de autorizar, una vez concedido el acceso, le damos al botón mágico (Magic Button) y se empezarán a importar las entradas y comentarios.
 
   
-<!--more-->
+<!--ad-->
 
 ### <a name="camb"></a>Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress
 

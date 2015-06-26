@@ -30,7 +30,7 @@ tags:
 Un colaborador que se ofreció a ayudar en la traducción de la Guía para desarrolladores Android, me sugirió que cambiara la metodología creando una Wiki. Y ahora que estamos varias personas para traducir, es lo más correcto.
 
   
-<!--more-->
+<!--ad-->
 
 De esta forma estaremos más organizados y coordinados a la hora de traducir, y estará todo mucho más ordenado. Debido a esto, probablemente deje de publicar entradas traducidas en el blog, ya que para ese fin crearé la Wiki.
 

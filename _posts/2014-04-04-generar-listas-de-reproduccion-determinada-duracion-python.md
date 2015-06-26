@@ -17,7 +17,7 @@ A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me 
 
 Para ello he creado un pequeño script en python que genera automáticamente las listas de reproducción dado un directorio con ficheros mp3 o mp4 y una duración en minutos.
 
-<!--more-->
+<!--ad-->
 
 ### Requisitos
 

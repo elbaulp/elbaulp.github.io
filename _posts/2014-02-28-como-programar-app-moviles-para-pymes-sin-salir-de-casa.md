@@ -12,7 +12,7 @@ Hace unos días se publicó un estudio (<a href="http://geekytheory.com/los-inge
 
 Junto a esta falta de empatía va unida cierta introversión que puede dificultar el encontrar una salida laboral. ¿Cuántos controláis a la perfección los aspectos técnicos pero sentís que necesitáis mejorar en el aspecto comercial?
 
-<!--more-->
+<!--ad-->
 
 Si el cara a cara no es tu punto fuerte pero eres el mejor desarrollando aplicaciones móviles, ¿por qué no te ganas un dinero extra desarrollando aplicaciones para pequeñas y medianas empresas? 
 

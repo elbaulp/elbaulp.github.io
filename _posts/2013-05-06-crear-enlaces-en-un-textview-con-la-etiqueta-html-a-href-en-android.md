@@ -18,7 +18,7 @@ Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un
 
 La cadena de texto con el enlace en cuestión reside en el archivo de recursos **[string.xml][1]**. En un principio pensé que me bastaría usar la propiedad `android:autoLink="web"` en el [layout.xml][2] de la siguiente forma:  
   
-<!--more-->
+<!--ad-->
 
   
 ***layout***:

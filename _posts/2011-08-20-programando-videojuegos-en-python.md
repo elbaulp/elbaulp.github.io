@@ -28,7 +28,7 @@ Aunque no es la faceta más famosa de Python, Python es un lenguage con bastante
 </div>
 
   
-<!--more-->
+<!--ad-->
 
 <div>
   <p>

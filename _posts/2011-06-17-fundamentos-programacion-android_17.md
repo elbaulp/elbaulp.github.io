@@ -39,7 +39,7 @@ Las actividades conforme se van ejecutando van apilandose en una pila. Cuando fi
 Si ejecutamos una actividad varias veces sin cerrarla, ésta aparecerá en la pila tantas veces como la hayamos ejecutado. La pila de actividades se envía al segundo plano cuando la aplicación pierde el foco, y vuelve al primer plano cuando la aplicación vuelve a tomar el control.
 
   
-<!--more-->
+<!--ad-->
 
 Podemos modificar este comportamiento con ***flags*** que pasamos al objeto Intent a partir de las propiedades de la activity descritas en el [AndroidManifest][1]
 

@@ -17,7 +17,7 @@ excerpt: "Para iniciarnos en la programación ABAP nada mejor que el clásico �
 
 Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje.
 
-<!--more-->
+<!--ad-->
 
 ### CREAR NUESTRO PROGRAMA ABAP
 

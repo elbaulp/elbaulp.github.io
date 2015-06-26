@@ -12,7 +12,7 @@ Estos días he estado liado aprendiendo a usar *inkscape* para rediseñar el log
 
 Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.  
   
-<!--more-->
+<!--ad-->
 
   
   

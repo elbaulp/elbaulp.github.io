@@ -27,7 +27,7 @@ Estoy trabajando en una aplicación Android que consiste en almacenar los lugare
 De momento la aplicación es muy básica y la interfaz muy simple. Dejo un vídeo para que os hagáis una idea de como es:
 
   
-<!--more-->
+<!--ad-->
 
 <p style="text-align: center;">
 </p>

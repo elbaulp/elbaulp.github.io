@@ -42,8 +42,8 @@
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       <span itemprop="articleBody">
-        {% assign c = content | split: '<!--more-->' %}
-        {% if content contains '<!--more-->' %}
+        {% assign c = content | split: '<!--ad-->' %}
+        {% if content contains '<!--ad-->' %}
           {{ c | first }}
           <hr/>
             {% include _adtext.html %}

@@ -24,7 +24,7 @@ excerpt: "Escribir commandos en una terminal puede parecer tedioso, pero con las
 Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).
 
 Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden <a href="http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i" target="_blank">chequear Cygwin</a> para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.  
-<!--more-->
+<!--ad-->
 
 ## 10. Top
 

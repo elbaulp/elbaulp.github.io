@@ -64,7 +64,7 @@ El segundo componente es llamado *resolver library* o biblioteca de resolución,
 
 El tercer y último componente de **BIND** proporciona herramientas para probar el servidor DNS. Entre estas herramientas se encuentran comandos como **dig**, que se verá más adelante.  
   
-<!--more-->
+<!--ad-->
 
 ### ¿Cual es tu responsabilidad como parte del sistema DNS?
 

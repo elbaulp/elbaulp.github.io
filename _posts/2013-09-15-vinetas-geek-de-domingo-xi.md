@@ -29,7 +29,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <p style="text-align: center;">
   <p>
-    <!--more-->
+    <!--ad-->
   </p>
   
   <h2>

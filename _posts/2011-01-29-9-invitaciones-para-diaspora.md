@@ -31,7 +31,7 @@ En los próximos días tendré disponible invitaciones, creo que son 10, de ser 
 En cuanto disponga de las invitaciones, publicaré una entrada en la cual mandaré las invitaciones a los 9 primeros comentarios.
 
   
-<!--more-->
+<!--ad-->
 
 
 

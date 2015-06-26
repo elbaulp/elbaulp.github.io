@@ -25,7 +25,7 @@ Para poder hacer frente a la ICANN, organización de Estados Unidos que gestiona
 
 ![foto dominio .42][1]  
   
-<!--more-->
+<!--ad-->
 
   
 Según la web de registros 42registry.org, como requisito es necesario que las webs no alberguen proyectos comerciales o con publicidad. Por su parte, el sistema utiliza los principios de las redes Global Anycast para saltarse las restricciones de ICANN.  

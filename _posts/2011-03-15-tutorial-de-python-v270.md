@@ -31,7 +31,7 @@ Ya he publicado otras veces entradas dedicadas a compartir tutoriales y cursos s
 
 En esta entrada voy a recomendar otro tutorial que me parece muy interesante y fácil de comprender. Pertenece a la documentacion de la comunidad de [PyAr][3] (Una Comunidad Argentina dedicada a este lenguaje de programación que me gusta mucho).  
   
-<!--more-->
+<!--ad-->
 
 
 

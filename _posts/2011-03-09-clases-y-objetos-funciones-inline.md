@@ -25,7 +25,7 @@ categories:
 
 Podemos declarar y definir funciones dentro de la clase, para no tener que definirla a parte en su respectivo archivo .cpp: a estas funciones se las  
 denomina inline.  
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}class Punto.{
   <span class="comentarios">//...</span>

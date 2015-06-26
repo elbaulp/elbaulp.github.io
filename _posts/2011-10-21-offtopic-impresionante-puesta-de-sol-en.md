@@ -23,7 +23,7 @@ Quiero escribir esta entrada aunque no esté relacionada con la temática del bl
 
 
   
-<!--more-->
+<!--ad-->
 
 ***Pocos lugares en el mundo ofrecen tantos recursos para un fotógrafo como Islandia. A la composición y formas únicas de su paisaje se le suman la grandiosidad de fenómenos como la aurora boreal o el sol de medianoche. El fotógrafo Scientifantastic logró captar este último fenómeno a través de un viaje que le llevó durante 17 días en solitario por los parajes más solitarios del planeta. 38.000 imágenes recopiladas en este espectacular time lapse donde el sol siempre esta visible y nunca se pone totalmente, una maravilla para el fotógrafo.***
 

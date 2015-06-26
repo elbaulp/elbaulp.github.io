@@ -31,7 +31,7 @@ Esa es una visión general de cómo deberían trabajar todos en conjunto, pero t
 
 `# netstat -lntup tcp6 0 0 127.0.0.1:8080 :::* LISTEN 4315/java`  
   
-<!--more-->
+<!--ad-->
 
   
 Dado que el navegador web debería enviar todas las peticiones a Burp, es necesario configurar el navegador web para que use Burp en lugar de Privoxy. La configuración para Firefox se presenta a continuación:

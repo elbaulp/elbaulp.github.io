@@ -34,7 +34,7 @@ R.drawable.icon (que es un identificador estático de tipo int y sirve para acce
 al recurso).
 
 
-<!--more-->
+<!--ad-->
 
 Así pues los ID de recurso están compuestos de:
 

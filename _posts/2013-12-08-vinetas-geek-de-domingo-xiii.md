@@ -13,7 +13,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 #### Cuando consigo un ordenador nuevo y mis colegas quieren verlo
 
 <img class="thumbnail aligncenter size-full wp-image-2023" alt="Cuando tengo un ordenador nuevo y mis colegas quieren verlo" src="/images/2013/12/when-I-get-a-new-computer-and-my-colleagues-want-to-see-it.gif" width="297" height="329" />  
-<!--more-->
+<!--ad-->
 
 #### Cuando pienso que mi refactorización será inofensiva
 

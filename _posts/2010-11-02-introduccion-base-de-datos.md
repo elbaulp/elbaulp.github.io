@@ -44,7 +44,7 @@ tags:
 </p>
 
   
-<!--more-->
+<!--ad-->
 
 <p style="margin-left: 1em">
   <strong>Hardware.-</strong> Toda la informaci&oacute;n a la que hace referencia en el punto anterior debe tener una capacidad adaptada a los requerimientos de la base de datos.

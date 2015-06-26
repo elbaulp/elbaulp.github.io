@@ -37,7 +37,7 @@ Java ha sido ampliamente exitoso por varias razones:
 
 Estos son aspectos importantes en cualquier lenguaje, y se nota, ya que Java ha disfrutado de una larga racha de ser uno de los lenguajes más populares. Entonces, ¿por qué entre el 2010 y 2011, Java se volvió repentinamente el demonio más odiado?  
   
-<!--more-->
+<!--ad-->
 
   
 1. Está de moda odiar Java

@@ -33,7 +33,7 @@ categories:
 De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 
   
-<!--more-->
+<!--ad-->
 
 <h3 style="float:left; clear:left;">
   Like in a dream

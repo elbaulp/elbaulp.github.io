@@ -35,7 +35,7 @@ Probablemente sepas que las imágenes están formadas por píxeles, pero, ¿Cóm
 
 Aquí tenemos una línea de código de la [Lección 5 &#8211; Colores Clave][1]. Ya sabemos que SDL_MapRGB() devuelve un pixel, pero ¿Cómo es la estructura &#8220;Uint32&#8243; un píxel?  
   
-<!--more-->
+<!--ad-->
 
   
 Bien, Uint32 es lo siguiente:

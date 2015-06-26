@@ -33,7 +33,7 @@ Hace un tiempo hice un script para gestionar los usuarios en linux de forma senc
   6. Listar usuarios de un grupo
 
   
-<!--more-->
+<!--ad-->
 
 Todos las acciones que realizamos se almacenan en un log que se muestra al finalizar el script, y despues éste se borra.
 

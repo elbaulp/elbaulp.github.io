@@ -31,7 +31,7 @@ Se trata de un programa que permitirá tener un sistema debian básico en el dis
 
 **Paso 3: **Instalar los paquetes necesarios  
   
-<!--more-->
+<!--ad-->
 
   
 Conectamos el teléfono al pc mediante adb con `./adb shell` y ejecutamos los comandos de **botbrew** así:

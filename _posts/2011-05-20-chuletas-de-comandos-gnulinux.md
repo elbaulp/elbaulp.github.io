@@ -28,7 +28,7 @@ categories:
 En este post traigo una gran lista de comandos GNU/Linux para tener a mano siempre que no recordemos su sintaxis: (Hay como para aburrirse)
 
   
-<!--more-->
+<!--ad-->
 
 [<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/images/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros" width="500" height="335" />][1]
 

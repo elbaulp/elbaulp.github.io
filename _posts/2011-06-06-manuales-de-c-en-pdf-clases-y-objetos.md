@@ -30,7 +30,7 @@ Hasta ahora he ido colocando pequeñas entradas sobre C++, pero creo que es más
 Voy a publicarlos en la página [Curso C++][1], pero los dejo en esta entrada también:
 
   
-<!--more-->
+<!--ad-->
 
 [Clases y Objetos][2]
 

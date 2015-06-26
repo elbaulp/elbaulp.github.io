@@ -22,7 +22,7 @@ Existe un comando que realiza esta operaci√≥n, `rev`. De acuerdo a la descripci√
 
 Algunos ejemplos:  
 
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}echo "elbauldelprogramador" | rev
 {% endhighlight %}

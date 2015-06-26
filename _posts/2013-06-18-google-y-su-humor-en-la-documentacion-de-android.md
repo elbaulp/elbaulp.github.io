@@ -26,7 +26,7 @@ Abriremos la recopilación con la pregunta en stackoverflow, la cual tuvo bastan
 
 <img src="/images/2013/06/UserManager.isuseragoat.png" alt="UserManager.isuseragoat" width="741" height="253" class="thumbnail aligncenter size-full wp-image-1680" />  
   
-<!--more-->
+<!--ad-->
 
   
 La documentación oficial está en <a href="http://developer.android.com/reference/android/os/UserManager.html#isUserAGoat%28%29" target="_blank">/android/os/UserManager.isUserAGoat</a>, que viene a ser algo como *¿Es el usuario una cabra?*:

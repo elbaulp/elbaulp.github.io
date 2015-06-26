@@ -30,7 +30,7 @@ parte del lenguaje C++, no son funciones de una librería. Hay dos tipos de oper
 new y delete, según traten o no con arrays. En el segundo caso, **operator new**( admite  
 opcionalmente una inicialización. La sentencia:  
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}int* int_ptr= new int(3);
 {% endhighlight %}

@@ -21,7 +21,7 @@ tags:
 
 Continuando con el artículo anterior, ahora procedemos a instalar PHP-FPM.
 
-<!--more-->
+<!--ad-->
 
 ## Instalar PHP-FPM
 

@@ -32,7 +32,7 @@ Su sintaxis es :
 {% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
   
 Es posible hacer consultas que incluyan más de una tabla dentro de la cláusula FROM, es  

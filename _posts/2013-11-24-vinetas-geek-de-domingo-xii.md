@@ -14,7 +14,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <img src="/images/2013/11/when-I-find-a-stupid-bug-on-a-big-company’s-website-that-gives-me-backend-access.gif" alt="Cuando encuentro un bug estúpido en la web de una gran compañía que me dá acceso backend" width="320" height="220" class="thumbnail aligncenter size-full wp-image-1994" />
 
-<!--more-->
+<!--ad-->
 
 #### Indirecciones
 

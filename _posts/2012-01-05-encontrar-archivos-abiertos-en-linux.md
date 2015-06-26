@@ -39,7 +39,7 @@ Por defecto el kernel de Linux establece un límite (para propósitos de segurid
 El archivo <a target="_blank" href="http://www.cyberciti.biz/tips/linux-procfs-file-descriptors.html">/proc/sys/fs/file-nr</a> es un archivo de solo lectura que proporciona el número de archivos actuales abiertos.
 
   
-<!--more-->
+<!--ad-->
 
 #### Encontrar cuantos archivos hay abiertos
 

@@ -75,7 +75,7 @@ int main(){
 {% endhighlight %}
 
 
-<!--more-->
+<!--ad-->
 
 
 Al cual se le aplican los métodos deseados por el alumno para cifrar la contraseña que elija.

@@ -28,7 +28,7 @@ tags:
 Hace poco tiempo empecé a seguir los [videotutoriales de Android][1], en parte porque estoy interesado en aprender a programar para android, y por otra parte porque necesito hacer un proyecto de fin de curso en el que me es imprescindible que se establezca una comunicación PC-Dispositivo Android.
 
 Así que después de mucho buscar, encotré un programita en java que me iba a ser útil, concretamente este pequeño [chat][2] que encontré en CasiDiablo.  
-<!--more-->
+<!--ad-->
 
 A este código le hice algunas modificaciones en la parte del Cliente, y, finalmente conseguí que el dispositivo android enviara un mensaje y que el pc lo recibiera. Aún tengo que hacer algunas modificaciones porque tiene un pequeño problema, y es que, el cliente(El dispositivo android) se conecta y desconecta del server cada vez que envia un mensaje. 
 

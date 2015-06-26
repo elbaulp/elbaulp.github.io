@@ -37,7 +37,7 @@ tags:
 En [Programación Android: Interfaz gráfica &#8211; Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
 
 
-<!--more-->
+<!--ad-->
 
 Para explicar el funcionamiento nos vamos a basar en un ejemplo que listará las distintas versiones de Ubuntu.
 

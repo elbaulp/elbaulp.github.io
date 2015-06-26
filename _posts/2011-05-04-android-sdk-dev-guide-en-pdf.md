@@ -28,7 +28,7 @@ tags:
 He estado buscando la dev guide de Android en PDF para no tener que leerla en el PC y poder imprimirla, la encontré en [czechxan.com][1]. A continuación dejo los enlaces:
 
   
-<!--more-->
+<!--ad-->
 
 
 

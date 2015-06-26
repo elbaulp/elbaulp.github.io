@@ -33,7 +33,7 @@ Recientemente he leido los problemas de seguridad que tiene [WhatsApp][1], con l
 Bien, vamos con los programas, he usado [ettercap][3] y [wireshark][4]. Estos programitas se usan para lo siguiente, Ettercap principalmente lo he usado para el envenenamiento ARP de la máquina objetivo (en este caso el móvil), para realizar la técnica de *Man on the Middle*, que consiste en establecer la puerta de enlace predeterminada del equipo objetivo a la dirección ip del equipo atacante. De esta manera nuestro equipo atacante estará situado entre el router y el objetivo, logrando así escuchar todo el tráfico de red que genera el objetivo. (Más adelante explicaré como hacer esto).
 
   
-<!--more-->
+<!--ad-->
 
 Wireshark finalmente lo uso para *&#8220;Ver&#8221;* el tráfico que genera el objetivo.
 

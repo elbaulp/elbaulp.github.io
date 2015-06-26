@@ -27,7 +27,7 @@ categories:
 
 Minimalist Gmail es una extensión para Chrome que nos ayuda optimizar la interfaz del correo, dejándola más a nuestro gusto. Lo que hace básicamente es permitirnos ocultar o personalizar gran cantidad de elementos de la interfaz, por no decir que todos. En la imagen, podéis ver como queda tras suprimir algunas cosas gracias a ella (y usando el tema “Minimalista”, que es el que recomienda el autor).  
   
-<!--more-->
+<!--ad-->
 
   
 Podemos controlar hasta más de 40 elementos y, entre algunas de opciones que incluye esta extensión, tenemos: la posibilidad de cambiar el logo por una imagen personalizada, personalizar los enlaces de la barra superior u ocultarla toda ella (pudiendo volver a verla con un solo clic), mostrar notificaciones cuando recibamos un correo, incluir en la pestaña un icono que indique los mensajes no leídos y eliminar los anuncios.

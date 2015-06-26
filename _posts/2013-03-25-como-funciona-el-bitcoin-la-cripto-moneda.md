@@ -24,7 +24,7 @@ Bicoint fue creado por el criptógrafo Japonés Satoshi Nakamoto y es [open sour
 La idea del bitcoin es ofrecer una moneda basada en internet, con fuerza industrial, en la que se haga uso del peer-to-peer donde se pueda intercambiar dinero entre dos partes sin necesidad de un intermediario. Esto último es uno de los mayores problemas porque, *¿de donde viene la moneda?*  
 , *¿Qué crea la moneda?*, *¿Cuanta cantidad fluye a través del sistema?*, *¿Cómo la monitorizas y la regulas?*, *¿Cómo se previene que se produzca inflación?*, *¿Cómo previenes que la gente cree la moneda de forma fraudulenta?*, *¿Cómo evitas que alguien, en caso de disponer de monedas, reutilice la misma moneda?*. Todas estas preguntas se han resuelto en el sistema de una manera muy inteligente e innovadora.  
   
-<!--more-->
+<!--ad-->
 
   
 Pero, *¿Cómo se inventa una moneda?*. En realidad, una moneda no es más que un acuerdo entre partes que establecen que esa *‘cosa’* sintética tiene valor. Cuando el dólar se regía a los estándares del oro, la idea era que debía haber oro salvaguardando los dólares. De manera que cuando recibías los llamados *‘pagarés’*, eran equivalentes a una cantidad X de oro. El problema fue que se necesitaba más dinero del que oro se disponía, así que se dejó de salvaguardar el dólar con el oro.

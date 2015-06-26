@@ -39,7 +39,7 @@ Despues del éxito de los cursos impartidos por Stanford sobre inteligencia arti
 Las clases comenzarán el día 20 de febrero y aquí os dejo los detalles de estos dos cursos, a los que ya me he apuntado:
 
   
-<!--more-->
+<!--ad-->
 
 #### Building a Search Engine
 

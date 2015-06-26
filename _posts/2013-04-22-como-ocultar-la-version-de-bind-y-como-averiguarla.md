@@ -20,7 +20,7 @@ Realizando un análisis en *<a href="http://www.dnsinspect.com" target="_blank">
 
 Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos **[dig][2]** para ello:  
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}$ dig @example.com -c CH -t txt version.bind # Consultamos la versión para el dominio de la web
 $ dig @direcciónDNS -c CH -t txt version.bind # Consultamos también en nuestros servidores DNS secundarios

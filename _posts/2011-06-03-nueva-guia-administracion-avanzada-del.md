@@ -30,7 +30,7 @@ El objetivo principal de este libro es introducirnos en el mundo de la administr
 Los sistemas GNU/Linux han llegado a un grado de madurez importante, que los hacen válidos para integrarlos en cualquier ambiente de trabajo, ya sea desde el escritorio del PC personal, hasta el servidor de una gran empresa.
 
   
-<!--more-->
+<!--ad-->
 
   
 Aprenderemos cómo proporcionar desde GNU/Linux los servicios necesariosa diferentes ambientes de usuarios y máquinas. El campo de la administración de sistemas es enorme, hay muchas tareas, muchos problemas por tratar, hay que tener grandes conocimientos de hardware y software, y no está de más un poco de psicología para tratar con los usuarios finales de los sistemas. El libro no pretende abordar una distribución GNU/Linux particular, pero se han escogido un par de ellas para tratar los ejemplos: Debian y Fedora (y deri- vadas de Red Hat).

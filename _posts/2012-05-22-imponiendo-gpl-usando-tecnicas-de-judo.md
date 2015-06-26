@@ -33,7 +33,7 @@ El software libre permite el acceso al trabajo de miles de programadores, es rel
 
 Sin embargo, la aplicación del copyleft depende de la voluntad de los proveedores de software GPL para cumplir con los términos de la licencia, y/o la voluntad de los titulares del copyright para actuar en defensa de la GPL. Y por diversas razones los términos de la GPL son a menudo ignorados por los distribuidores de software libre y los titulares del copyright no siempre están dispuestos a involucrarse.  
   
-<!--more-->
+<!--ad-->
 
   
 El único requisito de la GPL es que el código fuente sea accesible a los usuarios finales, pero este requisito se olvida con frecuencia, especialmente cuando el código se reutiliza en el firmware y dispositivos embebidos.

@@ -24,7 +24,7 @@ El código solo detecta si la imagen es PNG, no implementé la lectura de la ima
 
 Veamos primero el .h:  
   
-<!--more-->
+<!--ad-->
 
 {% highlight cpp %}/**
   * @file imagenES.h

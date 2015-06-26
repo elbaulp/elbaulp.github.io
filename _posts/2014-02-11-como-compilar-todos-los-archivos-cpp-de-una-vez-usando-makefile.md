@@ -17,7 +17,7 @@ Los makefile sirven para automatizar el proceso de compilación de un proyecto e
 
 La creación de un fichero MakeFile puede llegar a ser compleja conforme va incrementando el tamaño del proyecto. En este artículo vamos a ver cómo se pueden compilar con una sola regla todos los archivos cpp del proyecto.
 
-<!--more-->
+<!--ad-->
 
 Se irá mostrando línea a línea el fichero MakeFile para ir explicándolo y luego se mostrará todo:
 

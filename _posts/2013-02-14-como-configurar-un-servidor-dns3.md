@@ -60,7 +60,7 @@ Es necesario crear el archivo de zone inversa también, *pri.89.39.5.in-addr.arp
 
 El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador.com*:  
 
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. (
                         2013021001       ; serial, todays date + todays serial #

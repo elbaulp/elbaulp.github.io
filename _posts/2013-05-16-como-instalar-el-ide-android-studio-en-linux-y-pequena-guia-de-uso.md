@@ -20,7 +20,7 @@ Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJ
 
 Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos el el fichero *studio.sh*, que se encuentra en la carpeta *bin*. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:  
   
-<!--more-->
+<!--ad-->
 
 ### Instalar el JDK de ORACLE en Linux desde repositorio
 

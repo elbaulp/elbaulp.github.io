@@ -30,7 +30,7 @@ En <a target="blank" href="http://www.omgubuntu.co.uk/2011/01/get-random-ubuntu-
 
 La aplicación &#8220;Ubuntu Tips&#8221; muestra consejos útiles con el paquete fortunes-Ubuntu-server usando notify.  
   
-<!--more-->
+<!--ad-->
 
   
 Podemos ver nuevos consejos usando el icono del Applet en la parte superior de de la pantalla, o configurando una frecuencia en segundos para que se muestren los consejos cada cierto tiempo.

@@ -24,7 +24,7 @@ Asumiremos que el lector ya tiene Netbeans y Maven instalados y configurados en 
 
 En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proyecto » Maven » Aplicación Java). Una vez hecho ésto, añadimos las siguientes dependencias en el fichero `pom.xml`:
 
-<!--more-->
+<!--ad-->
 
 {% highlight xml %}<dependencies>
     <dependency>

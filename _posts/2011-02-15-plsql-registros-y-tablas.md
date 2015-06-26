@@ -33,7 +33,7 @@ El modo de definir nuevos tipos de variables en PL/SQL es a través de la palabr
 {% highlight sql %}TYPE nuevo_tipo IS tipo_original.{% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
   
 Una vez definido en nuevo tipo, ya se pueden definir variables de ese nuevo tipo.

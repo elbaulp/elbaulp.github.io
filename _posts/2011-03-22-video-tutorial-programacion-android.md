@@ -27,7 +27,7 @@ tags:
 Leyendo el blog <a target="_blank" href="http://proyectosbeta.blogspot.com/">proyectos beta</a> he encontrado este videotutorial para aprender a programar en android.
 
   
-<!--more-->
+<!--ad-->
 
   
   

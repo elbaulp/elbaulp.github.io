@@ -27,7 +27,7 @@ Desde mi experiencia, la pérdida del **imei** ocurre al instalar una ROM no com
   * Un explorador Root
   * El [SDK de Android][2]
 
-<!--more-->
+<!--ad-->
 
 # Recuperar el IMEI en Android
 

@@ -30,7 +30,7 @@ Los chicos de <a href="http://es.wikipedia.org/wiki/RSA" target="_blank">RSA</a>
 Y hace solo tres años un estudiante de posgrado sorprendió al mundo al demostrar que este sistema es posible. Lo que este estudiante hizo fue demostrar matemáticamente que es posible realizar operaciones de cálculo estándares &#8212; como sumar, multiplicar etc &#8212; a datos cifrados sin la necesidad de descifrarlos previamente.
 
 Por ejemplo, es posible cifrar datos, enviarlos a la *nube* y operar sobre estos datos **sin descifrarlos ** . La *nube *no tiene la menor idea del contenido de los datos sobre los que está operando, no vé ningún resultado intermedio. La totalidad de los datos permanecen cifrados durante todo el tiempo. De manera que obtienes el resultado encriptado, y solamente tú puedes desencriptarlo. En eso consiste el cifrado homomórfico o** **Homomorphic Encryption, ** **y funciona.  
-<!--more-->
+<!--ad-->
 
 ### Analizando los sistemas de cifrado actuales
 

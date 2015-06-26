@@ -14,7 +14,7 @@ tags:
 <img src="/images/2013/11/cpp.png" alt="Resolver laberintos en C++" width="128" height="128" class="thumbnail alignleft size-full wp-image-1984" />  
 Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona.
 
-<!--more-->
+<!--ad-->
 
 ### Formato del laberinto en el fichero
 

@@ -31,7 +31,7 @@ Hay 10 huevos
 Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo, la frase para 1 huevo es diferente. Android permite representar esta variación con el recurso llamado plurals. En el siguiente ejemplo vemos como se representan estas dos variaciones.
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight xml %}<resources>
 <plurals name="huevos_en_una_cesta">

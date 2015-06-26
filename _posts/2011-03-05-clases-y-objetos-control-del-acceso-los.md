@@ -25,7 +25,7 @@ categories:
 
 Veamos la diferencia entre las siguientes declaraciones de la [clase Punto][1]:  
   
-<!--more-->
+<!--ad-->
 
   
 

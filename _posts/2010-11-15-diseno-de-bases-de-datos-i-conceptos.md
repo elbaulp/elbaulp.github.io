@@ -36,7 +36,7 @@ categories:
 </p>
 
   
-<!--more-->
+<!--ad-->
 
 <p lang="es">
   Cada fila posee una ocurrencia o ejemplar de la instancia o relación representada por la tabla (a las filas se las llama también <strong>tuplas o registros</strong>).

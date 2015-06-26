@@ -59,7 +59,7 @@ tags:
               </ul>
               
               <p>
-                <br /><!--more--></div> </div> 
+                <br /><!--ad--></div> </div> 
                 
                 <h1>
                   Fundamentos de las aplicaciones

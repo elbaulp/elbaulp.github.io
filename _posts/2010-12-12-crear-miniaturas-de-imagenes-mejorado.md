@@ -26,7 +26,7 @@ tags:
 He mejorado el [script que subí hace unos días][1] para crear miniaturas de imágenes, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.
 
   
-<!--more-->
+<!--ad-->
 
   
 También dejo el link de pastebin: <http://pastebin.com/BhKYpYJf>

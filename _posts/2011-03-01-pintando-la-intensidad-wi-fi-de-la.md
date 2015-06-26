@@ -23,7 +23,7 @@ categories:
 Esta iluminación de las señales de las redes Wi-Fi es un precioso proyecto de un grupo de estudiantes noruegos. El invento es una gigantesca vara con LEDs de unos cuatro metros de altura capaz de detectar las señales Wi-Fi y marcar su potencia; uno de los miebros del equipo va paseando por la ciudad con la vara en vertical mientras los demás hacen las fotos de larga exposición.
 
 El resultado es tan mágico como informativo, como puede verse en el vídeo:  
-<!--more-->
+<!--ad-->
 
 <div style="align:center;">
 </div>

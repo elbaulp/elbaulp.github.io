@@ -26,7 +26,7 @@ categories:
 Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red social opensource en fase de desarrollo [Diaspora*][2], más abajo os dejo su análisis, si quereis leer la entrada original podeis hacerlo [aquí.][3] 
 
   
-<!--more-->
+<!--ad-->
 
 <span style="font-family: 'Droid Sans';">Al ser un proyecto en estado alfa ya podemos destacar algunas cosas muy interesantes sobre Diaspora*, su manejo de &#8220;<i>a quién quieres que llegue lo que quieras que llegue</i>&#8221; es uno de sus puntos más fuertes:</span>
 

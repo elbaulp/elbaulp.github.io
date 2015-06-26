@@ -20,7 +20,7 @@ Hemos visto en otros artículos varias maneras de mejorar la seguridad en un ser
 
 Hoy veremos cómo recibir alertas de correo SSH cada vez que un usuario logre acceder al sistema mediante este protocolo. El artículo original es de <a href="http://www.tecmint.com" title="TecMint" target="_blank">tecmint</a>.
 
-<!--more-->
+<!--ad-->
 
 En linux, cada vez que un usuario accede al sistema, el archivo *.bashrc* se ejecuta. De modo que si añadimos a dicho archivo una sentencia que nos envíe un correo, lograremos monitorizar los accesos al sistema. Antes hay que instalar un cliente de correo, aunque al ser un servidor, es probable que ya exista uno instalado.
 

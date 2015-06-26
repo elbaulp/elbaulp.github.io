@@ -31,7 +31,7 @@ La donación se haría mediante paypal, pulsando en el botón negro de la derech
 Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadir los siguientes temas.
 
   
-<!--more-->
+<!--ad-->
 
 <ul style="list-style-type: none;">
   <li>

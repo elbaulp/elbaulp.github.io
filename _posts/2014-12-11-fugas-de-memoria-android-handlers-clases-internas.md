@@ -31,7 +31,7 @@ Seamos directos, consideremos el siguiente código:
 
 Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (*memory leak*).
 
-<!--more-->
+<!--ad-->
 
 [*Android Lint*][2] mostrará la siguiente advertencia:
 

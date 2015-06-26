@@ -22,7 +22,7 @@ Hace poco, mientras escribía un [CustomAdapter][1] para una aplicación en la q
 
 Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un TextView. Suele ser frecuente encontrarse en una lista de elementos una imagen junto a un texto. Algo así:  
   
-<!--more-->
+<!--ad-->
 
   
 &nbsp;

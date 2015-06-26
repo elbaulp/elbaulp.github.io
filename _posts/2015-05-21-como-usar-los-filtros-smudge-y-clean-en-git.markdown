@@ -19,7 +19,7 @@ En el anterior artículo, hablamos sobre [cómo sincronizar dos repositorios en 
 
 Hoy vamos a ver cómo usar filtros en [git](/mini-tutorial-y-chuleta-de-comandos-git/) para cambiar automáticamente la `url` de una web hecha con _jekyll_ en función de si estamos en local o en el servidor. Es decir, cuando estemos desarrollando o escribiendo un artículo, querremos ir viendo los resultados en local, para ello la `url` del fichero `_config.yml` debe estar vacía, cuando esté en el servidor deberá ser el nombre del dominio.
 
-<!--more-->
+<!--ad-->
 
 ## Creando el script para smudge
 

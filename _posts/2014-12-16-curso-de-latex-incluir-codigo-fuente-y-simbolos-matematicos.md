@@ -33,7 +33,7 @@ Nuestra nueva sección se va a llamar:
 
 Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete **minted**. En El baúl del programador ya hay una [pequeña guía][3] sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:
 
-<!--more-->
+<!--ad-->
 
 ### Paquetes necesarios
 

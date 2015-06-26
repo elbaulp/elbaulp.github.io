@@ -23,7 +23,7 @@ Un tema obvio para comenzar para la mayoría de los desarrolladores Java, es la 
 
 Es bastante probable que en el período inmediatamente siguiente a la salida de Java 8, veamos publicaciones en blogs tanto sobre quejas por la complejidad de las nuevas características como porque estas mismas no son lo suficientemente importantes como para justificar su interés.  
   
-<!--more-->
+<!--ad-->
 
   
 De cualquier manera, algunas características muy necesarias que estaban demoradas finalmente aparecen y tendremos que ponernos a trabajar en serio. La mejorada API de Date and Time en Java 8 también merece una mención.

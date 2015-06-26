@@ -27,7 +27,7 @@ tags:
 
 Bueno, hemos llegado al fin del temario de base de datos, todo lo que he ido escribiendo a lo largo de estos meses lo encontrarás en la página de [Base de Datos][1]. El último tema de este curso va a tratar de &#8220;Tunning básico de SQL&#8221;.  
   
-<!--more-->
+<!--ad-->
 
 ## Tunning básico de SQL
 

@@ -13,7 +13,7 @@ A medida que han ido siendo más habituales todo tipo de transaccione online, ta
 
 Aunque la obsesión por la seguridad no es exclusiva de las entidade bancarias ya que hay miles de sites que dependen en gran medida de l confianza que ofrecen a sus usuarios. Por ello un servicio de token d seguridad puede ser un respaldo más que interesante para las persona que manejan passwords que protegen su información personal y su actividades
 
-<!--more-->
+<!--ad-->
 
 Un ejemplo de esto podría ser la sala de póker online PokerStars dond sus usuarios pueden disponer de un servicio opcional de [token de seguridad](http://www.pokerstars.es/poker/room/features/security/token/) para proteger su cuenta personal. En este caso la misma sala proporciona el token de autenticación a través  de su Tienda VIP, algo que e habitual en estos dispositivos.
 

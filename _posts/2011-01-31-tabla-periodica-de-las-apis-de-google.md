@@ -22,7 +22,7 @@ categories:
   - curiosidades
 ---
 En www.browsermedia.co.uk he visto esta curiosa tabla de todas las APIs de google, al hacer clic en la imagen iréis a la tabla periódica, donde podeis seleccionar la API que queráis.  
-<!--more-->
+<!--ad-->
 
 En un esfuerzo por ayudar a los millones de los desarrolladores de todo el mundo que utilizan las APIs de Google para crear millones de aplicaciones y servicios, Google ha creado un lugar al estilo de la tabla periódica mostrando sus APIs y productos para desarrolladores.
 

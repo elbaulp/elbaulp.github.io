@@ -27,7 +27,7 @@ Además, si instalamos su <a target="_blank" href="http://www.stumbleupon.com/he
 
 Otra de las características que tiene este servício es que en nuestro perfil, marcámos los temas que nos interesan y al pinchar en el botón **Stumble!** (En la parte izquierda de la barra de herramientas) nos abrirá páginas relacionadas con nuestros intereses. Podemos elegir que abra páginas relacionadas con todos, varios, o solo un tema en concreto, todo ello desde la propia barra de herrmaientas.  
   
-<!--more-->
+<!--ad-->
 
   
 Podemos votar una página tanto positivamente como negativamente, de esta manerá iremos dando forma a nuestros intereses para que las páginas mostradas sean cada vez mas acertadas a nuestro criterio.

@@ -26,7 +26,7 @@ tags:
 ---
 Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:  
   
-<!--more-->
+<!--ad-->
 
 ### xrootconsole
 

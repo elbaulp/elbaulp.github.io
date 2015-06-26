@@ -31,7 +31,7 @@ Días atrás leí una entrada en [MuyLinux][1] sobre 3 distribuciones que posibl
 Leyendo esa entrada conocí una distro de la que nunca habia oido hablar, se llama Suicide Linux, y por el nombre podréis deducir que no se trata de nada bueno.
 
   
-<!--more-->
+<!--ad-->
 
 Y es cierto, esta distribución no trae nada bueno, es para quienes se consideren todo unos expertos de la terminal, y es que si te equivocas al introducir algún comando, es decir, introduces algo que el terminal no reconozca, automáticamente se ejecutará *&#8220;rm -rf /&#8221;*, y ya vimos en [esta imagen][2] que publiqué lo que hace este comando.
 

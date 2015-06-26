@@ -41,7 +41,7 @@ Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 </p>
 
   
-<!--more-->
+<!--ad-->
 
   
 Terminada, la aplicación de prueba debe quedar algo así:

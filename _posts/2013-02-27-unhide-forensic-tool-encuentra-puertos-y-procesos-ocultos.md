@@ -34,7 +34,7 @@ Está disponible tanto para <a href="http://sourceforge.net/projects/unhide/file
 
 Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:  
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
 gcc -Wall -O2 --static unhide_rb.c -o unhide_rb

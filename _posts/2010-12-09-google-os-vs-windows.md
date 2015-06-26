@@ -23,7 +23,7 @@ categories:
 Uno de los responsables de Google Chrome OS ha revelado que el sistema operativo que están preparando y que saldrá en los próximos meses podría servir como sustituto perfecto para la mayoría de PCs con Windows. La mayoría de los usuarios se centran en el uso del navegador y de servicios web para sus tareas, lo que haría que Chrome OS pudiese ofrecer todas las prestaciones que muchos usuarios -personales y profesionales- necesitan en su día a día con el ordenador.
 
   
-<!--more-->
+<!--ad-->
 
   
 Chrome Web Store, será el centralizador y suministrador de aplicaciones, juegos y herramientas web.

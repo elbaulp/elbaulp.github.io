@@ -19,7 +19,7 @@ La semana pasada, **en el [Curso de Programación PHP guay][2], desarrollamos un
 
 [![¡Aprende a programar 1 agenda CSV con PHP! 1ª parte][4]][5]
 
-<!--more-->
+<!--ad-->
 
 Seguro que a algunos os habrá gustado esta decisión porque pensáis que **a veces es mejor no usar ningún framework**, sobre todo cuando la aplicación es muy sencilla (en los años recientes este ha venido siendo un argumento muy habitual), aunque con la llegada de los micro frameworks como [Slim][6] más de uno comenzará a plantearse esta cuestión, ¿verdad?
 

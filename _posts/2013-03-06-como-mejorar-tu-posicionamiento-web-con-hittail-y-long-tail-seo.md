@@ -15,7 +15,7 @@ Hace apenas dos meses que descubrí navegando por internet esta herramienta, ***
 
 Si como yo nunca has oido hablar de este término, no te preocupes, a continuación intentaré explicarlo lo más claro posible (Traducido literalmente sería SEO de cola larga, aunque creo que una definición más acertada sería seguimiento SEO prolongado):  
   
-<!--more-->
+<!--ad-->
 
 <h2 style="font-size:1.5em">
   ¿Qué es el Long Tail SEO y por qué debería tenerlo en cuenta?

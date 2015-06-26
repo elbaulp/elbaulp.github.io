@@ -26,7 +26,7 @@ Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto 
 
 &nbsp;  
 
-<!--more-->
+<!--ad-->
 
 ### &#8220;<a href="http://www.biogamergirl.com/2012/05/generation-xbox-how-videogames-invaded.html" target="_blank">Generation Xbox</a>&#8221; (La Generación Xbox), por Jamie Russell
 

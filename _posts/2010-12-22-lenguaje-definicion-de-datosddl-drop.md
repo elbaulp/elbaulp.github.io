@@ -37,7 +37,7 @@ En este post explicaré el funcionamiento de la orden DROP.
 
 Al borrar una tabla, se borra tanto su estructura como sus datos, sus índices asociados y los privilegios concedidos sobre estas también se borran, las vistas creadas directa o indirectamente sobre esta tabla son desactivadas de forma automática por ORACLE pero no borradas.  
   
-<!--more-->
+<!--ad-->
 
   
 Cada usuario puede borrar sus propias tablas, pero no puede borrar las de otro usuario al menos que tenga concedido un permiso adecuado.  

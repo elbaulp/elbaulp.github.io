@@ -17,7 +17,7 @@ tags:
 ---
 **Dig (Domain Information Groper)** es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &#8212; entre otras cosas &#8212; para el diagnóstico de [Servidores DNS][1]. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.  
   
-<!--more-->
+<!--ad-->
 
 #### [Actualización]
 

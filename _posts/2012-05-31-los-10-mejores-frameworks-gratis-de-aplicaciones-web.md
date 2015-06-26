@@ -44,7 +44,7 @@ Hay una amplia gama de frameworks para aplicaciones web disponibles para Linux q
 Ahora, exploremos los 10 frameworks en cuestión. Para cada título se ha incluido un hipervínculo hacia el propio portal, una descripción completa con un análisis en profundidad de sus características, junto con enlaces a recursos y revisiones relevantes.
 
   
-<!--more-->
+<!--ad-->
 
 <table class="aligncenter" border="0" cellspacing="0" cellpadding="5">
   <tr>

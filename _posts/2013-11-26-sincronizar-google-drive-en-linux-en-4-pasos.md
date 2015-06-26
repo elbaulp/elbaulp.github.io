@@ -16,7 +16,7 @@ Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive 
 
 <span class="highlight style-2">Hay una modificación para este método en <a href="http://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]">Sincronizar Google Drive en Linux en 4 pasos [Actualización]</a></span>
 
-<!--more-->
+<!--ad-->
 
 ### 1. Preparar el entorno
 

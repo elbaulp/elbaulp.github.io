@@ -36,7 +36,7 @@ Bien, supongamos que queremos fusionar esta imagen llamada &#8220;foo&#8221;:
 </div>
 
   
-<!--more-->
+<!--ad-->
 
   
 a este fondo:

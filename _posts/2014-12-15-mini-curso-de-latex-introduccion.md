@@ -31,7 +31,7 @@ En este tutorial, curso o como queráis llamarlo os voy a enseñar lo básico qu
 
 Bueno, podría empezar contándote qué significa LaTeX o quién lo creó pero me gusta ser directa, así que abre tu editor de texto preferido que vamos a empezar a escribir ya!
 
-<!--more-->
+<!--ad-->
 
 Vamos a imaginar que tenemos que hacer una pequeña documentación que acompañe a un programa muy simple que hemos hecho para unas prácticas.
 

@@ -45,7 +45,7 @@ Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3
 {% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
 #### Añadir registros
 

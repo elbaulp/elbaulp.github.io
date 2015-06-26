@@ -28,7 +28,7 @@ Oracle Magazine contains technology strategy articles, sample code, tips, Oracle
 For more information about Oracle, please visit their Web site at http://www.oracle.com. Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.
 
   
-<!--more-->
+<!--ad-->
 
 ## [![Descargar][3]][2]
 

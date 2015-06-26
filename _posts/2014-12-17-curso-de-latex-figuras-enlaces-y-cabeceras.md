@@ -46,7 +46,7 @@ Y justo al inicio de la sección Salida del programa esto otro:
 
 Este sería el resultado final:
 
-<!--more-->
+<!--ad-->
 
 {% highlight latex %}\newpage
 \section{Salida del programa}

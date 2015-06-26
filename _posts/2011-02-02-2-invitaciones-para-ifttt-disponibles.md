@@ -31,7 +31,7 @@ El diseño es bastante simple y sencillo:
 </div>
 
   
-<!--more-->
+<!--ad-->
 
 Para crear nuestras tareas simeplemente tenemos que hacer click en &#8220;create new task&#8221;, y seguir 7 pasos para configurarlo, en los proximos dias crearé una entrada con imágenes de como hacerlo paso a paso.
 

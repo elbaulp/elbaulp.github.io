@@ -36,7 +36,7 @@ Los menús en las aplicaciones son algo que encontramos frecuentemente, de hecho
 Se dispone de distintos tipo de menús:
 
 
-<!--more-->
+<!--ad-->
 
   * ***Options Menu:*** El menú típico, que se despliega al pulsar la tecla menú, que se divide en dos grupos:
 

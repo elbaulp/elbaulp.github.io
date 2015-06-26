@@ -38,7 +38,7 @@ Los layout nos permiten posicionar cada objeto gráfico en el lugar que queramos
 Existen varios tipos de Layouts para Android, vamos a ver los más comunes:
 
 
-<!--more-->
+<!--ad-->
 
 ### FrameLayout
 

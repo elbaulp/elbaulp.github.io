@@ -27,7 +27,7 @@ Tal y como lo leéis, la noticia acaba de saltar al primer plano del terreno tec
 </p>
 
   
-<!--more-->
+<!--ad-->
 
 Lo noticia se ha hecho pública vía <a title="Twitter" href="http://twitter.com/" target="_blank">Twitter</a>, gracias al aviso de uno de sus colaboradores más cercanos, quien bajo seudónimo ha soltado la liebre en todo Internet: **Linus Torvalds deja el proyecto de su vida con carácter inminente**.
 

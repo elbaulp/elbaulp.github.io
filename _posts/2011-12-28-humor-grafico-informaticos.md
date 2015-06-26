@@ -34,7 +34,7 @@ Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] 
 </div>
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://2.bp.blogspot.com/-uBOjIVp-O7g/TvsBJJ7ID0I/AAAAAAAAB90/813_kDaOaYk/s1600/892124_460s.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="341" src="http://2.bp.blogspot.com/-uBOjIVp-O7g/TvsBJJ7ID0I/AAAAAAAAB90/813_kDaOaYk/s400/892124_460s.jpg" /></a>

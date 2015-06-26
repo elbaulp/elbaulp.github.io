@@ -18,7 +18,7 @@ tags:
 
 Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">SupportFu</a> (una alternativa para <a href="http://www.supportfu.com/zendesk-alternative" target="_blank">Zendesk</a>), intenté encontrar respuestas pragmáticas a estas preguntas. Mi objetivo para la <a href="http://dev.supportfu.com/api/v1" target="_blank">API de SupportFu</a> es que sea fácil de usar, facil de adoptar y lo suficientemente flexible para implementarla en nuestras propias interfaces de usuario.
 
-<!--more-->
+<!--ad-->
 
 ## TL,DR
 

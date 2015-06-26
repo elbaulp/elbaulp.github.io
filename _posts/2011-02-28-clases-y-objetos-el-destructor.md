@@ -25,7 +25,7 @@ categories:
 
 Ya hemos visto como [definir una clase][1], y como crear un [constructor][2] para ella. Ahora vamos a ver como destruir un objeto creado.  
   
-<!--more-->
+<!--ad-->
 
 El destructor es una función especial, que tiene el mismo nombre que la clase  
 pero que va precedido del símbolo ~ (ASCII 126). El destructor es único y no tiene  

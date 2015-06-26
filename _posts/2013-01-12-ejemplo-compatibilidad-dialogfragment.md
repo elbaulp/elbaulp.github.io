@@ -31,7 +31,7 @@ Otra forma de agregar la librería es hacer click derecho en el **proyecto » An
 
 Dicho esto, comencemos con el <a href="http://developer.android.com/reference/android/app/TimePickerDialog.html" target="_blank"><code><strong>TimePickerDialog</strong></code></a>  
   
-<!--more-->
+<!--ad-->
 
 #### Crear un TimePickerDialog
 

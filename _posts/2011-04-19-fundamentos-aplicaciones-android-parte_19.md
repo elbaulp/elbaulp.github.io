@@ -39,7 +39,7 @@ Un intent se crea con un objeto `<a href="http://developer.android.com/reference
 define un mensaje a activar, un componente específico o un *tipo* específico de componente; un intent puede ser explicito o implícito, respectivamente. 
 
   
-<!--more-->
+<!--ad-->
 
 Para las actividades y los servicios, un intent define una acción a realizar (como &#8220;ver&#8221; o &#8220;mandar&#8221; algo)  
 y puede especificar la URI de algún dato necesario (entre otras cosas que el componente que está  

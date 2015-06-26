@@ -16,7 +16,7 @@ tags:
 
 Cuando se declara una variable referencia (Un objeto), realmente se está creando un puntero a un objeto. Consideremos el siguiente código que declara un entero con el tipo de dato primitivo:
 
-<!--more-->
+<!--ad-->
 
 {% highlight java %}int x;
 x = 10;

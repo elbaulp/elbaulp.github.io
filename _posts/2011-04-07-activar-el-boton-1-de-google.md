@@ -23,7 +23,7 @@ categories:
 ---
 Días atrás leí que google está planeando lanzar un botón +1, que es algo parecido al &#8220;me gusta&#8221; de facebook, pero no igual, ya que por lo visto este botón tendrá repercusión en el posicionamiento de las webs en los resultados de búsqueda.  
   
-<!--more-->
+<!--ad-->
 
 No escribí antes sobre esto porque no sabía como activarlo, pero ahora sí, a través de [google.com/experimental/][1]
 

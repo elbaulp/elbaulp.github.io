@@ -18,7 +18,7 @@ tags:
 
 Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el <a target="_blank" href="http://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/" title="Grub Customizer 2.0, personaliza tu GRUB2">GRUB</a>. Por defecto el GRUB se muestra a una resolución de **640&#215;480**, la cual es bastante ‘fea’. Igual ocurre con las terminales **ttys**, a las cuales se puede acceder con pulsando **Ctrl + Alt + F[1-6]**. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.  
   
-<!--more-->
+<!--ad-->
 
 ### Cambiar resolución de pantalla del GRUB
 

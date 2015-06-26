@@ -45,7 +45,7 @@ Anroid utiliza una clase llamada *android.content.ContentValues* para retener lo
 Abajo se muestra un ejemplo de cómo rellenar una fila con un ContentValues y prepararlo para un insert:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight java %}ContentValues cv = new ContentValues();
 cv.put("NombreColumna1", "valor1");

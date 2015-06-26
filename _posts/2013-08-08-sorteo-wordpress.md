@@ -10,7 +10,7 @@ categories:
 ---
 Me alegra comunicaros que me han ofrecido realizar este sorteo en el que los lectores podrán participar en el sorteo de **5 matriculaciones gratuitas para un curso sobre WordPress, 5 matriculaciones gratuitas para un curso de desarrollo de plugins para WordPress y 10 cupones de descuento para los dos cursos**. Participa!.  
   
-<!--more-->
+<!--ad-->
 
 ### Detalles de los cursos
 

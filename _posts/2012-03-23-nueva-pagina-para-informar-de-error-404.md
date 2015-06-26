@@ -40,7 +40,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <br /><!--more-->
+    <br /><!--ad-->
   </p>
   
   <p>

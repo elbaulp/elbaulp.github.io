@@ -17,7 +17,7 @@ En el blog <a href="http://www.techdrivein.com" title="Tech Drive In" target="_b
 
 La pregunta anterior genera mucho debate. Algunos dicen que es un mito pero la mayoría de usuarios Linux saben que no lo es. En cierta manera porque casi todo aquel que instala Linux fue un usuario Windows descontento. Sin embargo, ¿Qué hace a Linux más rápido?, citaremos los puntos que el usuario de Reddit *ok\_you\_win* mencionó.
 
-<!--more-->
+<!--ad-->
 
   * Uno de los mayores beneficios ocultos de Linux es que las aplicaciones comparten archivos mejor que Windows. En lugar de usar DLLs como en Windows, Linux usa ficheros .so (Shared Objects [Objetos Compartidos]), que vienen a llamarse librerías. Existen también ficheros .ko, que son los homólogos para el kernel, de alguna manera, como los drivers en Windows.
   * Una aplicación Windows puede depender de una versión muy específica de una DLL. El desarrollador de ésta aplicación no conoce en qué versión de Windows se instalará, ni tampoco qué DLL estará presente en el sistema. Por lo tanto, la solución más fácil es incluir la DLL necesaria junto a la aplicación. Como consecuencia los instaladores son mucho más pesados, ocupará más espacio en disco y usará más memoria RAM.

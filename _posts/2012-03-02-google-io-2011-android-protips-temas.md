@@ -37,7 +37,7 @@ Hace unas semanas atrás encontré este vídeo de la Google I/O 2011 en el que s
 El vídeo es extenso, pero muy recomendable, pueden habilitar los subtítulos pulsando en el botón CC:
 
   
-<!--more-->
+<!--ad-->
 
 <p style="text-align:center;">
 </p>

@@ -29,7 +29,7 @@ En OMGUbuntu he leido esta noticia sobre el applet para gnome que nos permite ac
 </div>
 
   
-<!--more-->
+<!--ad-->
 
   
 Para ver todas las características puedes ver el artículo completo en <a target="_blank" href="http://www.omgubuntu.co.uk/2011/02/feed-indicator-a-new-rss-applet-for-your-panel/">OMGUbuntu</a>.

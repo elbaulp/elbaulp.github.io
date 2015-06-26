@@ -25,7 +25,7 @@ Este archivo está en el directorio del tema. Actua como un plugin, y, si existe
 #### Crea la función en wordpress
 
 Abre el fichero con tu editor favorito y añade lo siguiente:  
-<!--more-->
+<!--ad-->
 
 {% highlight php %}//[foo]
 function foo_demo( $atts ){

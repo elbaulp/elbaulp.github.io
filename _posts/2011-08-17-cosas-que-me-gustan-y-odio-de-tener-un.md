@@ -22,7 +22,7 @@ categories:
 </div>
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://2.bp.blogspot.com/-aPJ-XUYzKx8/TkvvBRxT-jI/AAAAAAAAAuQ/rrEYvG2Lttc/s1600/3.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" src="http://2.bp.blogspot.com/-aPJ-XUYzKx8/TkvvBRxT-jI/AAAAAAAAAuQ/rrEYvG2Lttc/s1600/3.png" /></a>

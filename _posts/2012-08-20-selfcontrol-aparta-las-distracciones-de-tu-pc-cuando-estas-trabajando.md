@@ -45,7 +45,7 @@ sudo dpkg --install selfcontrol_0.9-1_all.deb{% endhighlight %}
 
 Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:  
   
-<!--more-->
+<!--ad-->
 
   
 [<img class="aligncenter size-full wp-image-894" title="Selfcontro1" src="/images/2012/08/Selfcontro11.png" alt="" width="415" height="378" />][2]

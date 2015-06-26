@@ -40,7 +40,7 @@ PL/SQL crea implícitamente un cursor para todas las sentencias SQL de manipulac
 En PL/SQL no se pueden utilizar sentencias SELECT de sintaxis básica ( SELECT <lista> FROM <tabla(s)> ). PL/SQL utiliza cursores para gestionar las instrucciones SELECT. Un cursor es un conjunto de registros devuelto por una instrucción SQL.
 
   
-<!--more-->
+<!--ad-->
 
   
 Podemos distinguir dos tipos de cursores:

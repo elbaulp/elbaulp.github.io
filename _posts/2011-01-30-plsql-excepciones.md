@@ -40,7 +40,7 @@ e_sin_alumnos EXCEPTION;
 {% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
   
 <!--INFOLINKS_ON-->

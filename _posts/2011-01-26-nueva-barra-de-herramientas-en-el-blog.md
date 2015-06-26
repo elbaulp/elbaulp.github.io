@@ -25,7 +25,7 @@ He cambiado la anterior barra de herramientas que había en el blog (La de Aptur
 Voy a explicar para que sirve cada elemento de esta nueva barra.  
 De izquierda a derecha lo que hace cada elemento es:  
   
-<!--more-->
+<!--ad-->
 
   
 **Formulário de búsqueda:** Aqui podeis buscar lo que querais en el blog, o en google.

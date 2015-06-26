@@ -32,7 +32,7 @@ Hace unas semanas encargué este libro en Amazon, y me llego ayer. Con este libr
 Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="288" width="263" src="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png" /></a>

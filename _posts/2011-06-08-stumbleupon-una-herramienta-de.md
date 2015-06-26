@@ -30,7 +30,7 @@ categories:
 StumbleUpon te ayuda a descubrir y compartir sitios web. Al hacer click en <img src="http://cdn.stumble-upon.com/images/stumble.png" alt="" align="top" /> <span class="textEm">Stumble!</span>, se te mostrará una web basada en tus preferencias e intereses personales. Estas páginas las han recomendado tus amigos o cualquiera de los 15 millones de usuarios que están en stumbleUpon. Si te gusta el sítio y haces click en (<img src="http://cdn.stumble-upon.com/images/thumbup.gif" alt="" align="top" />) &#8220;Me gusta&#8221;, compartirás automáticamente esa web con las personas que tienen los mismo intereses que tu.
 
   
-<!--more-->
+<!--ad-->
 
 Es una muy buena forma de conocer sitios interesantes, y, sobre todo, de generar tráfico hacia tu web/blog para hacerlo llegar a toda la gente a la que le pueda interesar.
 

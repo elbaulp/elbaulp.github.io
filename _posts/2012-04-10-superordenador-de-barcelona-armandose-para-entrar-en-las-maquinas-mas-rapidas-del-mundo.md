@@ -30,7 +30,7 @@ El centro de Superordenadores de Barcelona está construyendo uno de los <a href
 Ramirez, un director del centro, es la mente tras la construcción del nuevo superordenador, llamado Mont-Blanc, que usará el mismo tipo de chips de baja potencia que puede encontrarse en tabletas y smartphones hoy en día. Comenzando el próximo mes, su equipo comenzará a montar el primer prototipo del Mont-Blanc usando procesadores nvidia Tegra3 en lugar de los procesadores RISC o compatibles con Intel x86 que son usados en prácticamente todos los superordenadores actuales. Tegra 3 , manejará las comunicaciones entre las diferentes partes del sistema mientras el cálculo de numeros será hecho por procesadores gráficos multinucleo Nvidia de baja potencia aún por determinar, pero similares a la <a href="http://www.geforce.com/hardware/notebook-gpus/geforce-gt-520mx" target="_blank">GeForce 520MX</a>.
 
   
-<!--more-->
+<!--ad-->
 
 Para Junio, Ramirez planea realizar los benchmarks de la ampliamente seguida <a href="http://top500.org/" target="_blank">Lista Top500 de superordenadores</a>, que mide los resultados del benchmark de supercomputación conocido como Linpack. Aún así Ramirez ha dicho que tiene sus ojos en otro objetivo: <a href="http://www.green500.org/" target="_blank">La lista de los 500 más verdes</a>. Esta lista clasifica los ordenadores por eficiencia, en lugar de por rendimiento puro. &#8220;Esperamos estar en el top 10 ahí&#8221; dice Ramirez.
 

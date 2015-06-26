@@ -14,7 +14,8 @@ tags:
   - instalar bolt
 ---
 Leyendo notícias en mi lector RSS, encontré en Genbeta Dev un artículo hablando de **Bolt**, un CMS muy ligero y rápido. Tras ojear un poco la página oficial del proyecto decidí probarlo y la verdad es que ma ha causado muy buenas sensaciones. En esta entrada explicaré cómo instalar Bolt y cómo manejar este sencillo CMS.  
-<!--more -->
+
+<!--ad-->
 
 ### Objetivos de Bolt
 
@@ -51,13 +52,13 @@ La razón de establecer los permisos a [777][7] es porque en la mayoría de serv
 
 Eso es todo, así de fácil es instalar Bolt. La primera vez que visites la web deberás registrar un usuario para administar la web:
 
-[<img src="/images/2013/03/Login-to-bolt-CMS-1024x819.png" alt="crear usuario en bolt" width="770" height="615" class="aligncenter size-large wp-image-1474" />][8]{.thumbnail} 
+[<img src="/images/2013/03/Login-to-bolt-CMS-1024x819.png" alt="crear usuario en bolt" width="770" height="615" class="aligncenter size-large wp-image-1474" />][8]{.thumbnail}
 
 Ya en el panel de administración, puedes agregar contenido de muestra dirigiendote a *Settings » Check Database* y hacer click en **Add some sample Records with Loripsum text**. Tras hacer click tendremos contenido que mostrar en la web:
 
 [<img src="/images/2013/03/Bolt-Home-PAge-CMS-1024x819.png" alt="Bolt Home PAge CMS" width="770" height="615" class="aligncenter size-large wp-image-1476" />][9]{.thumbnail}
 
-Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo: 
+Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo:
 
 {% highlight bash %}# aptitude install php5-sqlite
 {% endhighlight %}

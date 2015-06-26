@@ -21,7 +21,7 @@ categories:
   - noticias
 ---
 Visto el panorama de como ha quedado Japón despues de tan terrible catastrofe, quiero dedicarles esta entrada, y deseo con todas mis fuerzas que pronto se recuperen y, a los que lo han perdido todo darles mucho ánimo.   
-<!--more-->Os dejo unas cuantas fotos: 
+<!--ad-->Os dejo unas cuantas fotos: 
 
 [El terremoto y tsunami de Japón en imágenes][1]
 

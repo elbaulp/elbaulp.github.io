@@ -87,7 +87,7 @@ format: status
                             </div>
                             
                             <div>
-                              Todo es totalmente <b>GRATUITO</b>, el horario será:<br /><!--more-->
+                              Todo es totalmente <b>GRATUITO</b>, el horario será:<br /><!--ad-->
                             </div>
                             
                             <div>

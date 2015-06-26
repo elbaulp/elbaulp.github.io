@@ -31,7 +31,7 @@ condiciones. Su sintaxis es:
 Selecciona aquellas filas que cumplen la condición especificada por esta orden. La  
 condición de búsqueda o de selección de registros se puede conformar utilizando columnas de la tabla, constantes, funciones y/o expresiones y operadores.  
   
-<!--more-->
+<!--ad-->
 
 Los operadores más utilizados en las condiciones de selección son:
 

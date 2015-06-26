@@ -33,7 +33,7 @@ Vamos a estudiar cómo se pasa una variable a una función en uno de sus
 argumentos. 
 
   
-<!--more-->
+<!--ad-->
 
 ### Paso por valor
 

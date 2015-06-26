@@ -31,7 +31,7 @@ Si queremos renombrar todos los archivos para eliminar la página web del nombre
 Por ejemplo, pongamos que los archivos son los siguientes:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}hkr@hkr:~/Desktop/RAP/d$ ls
 01. Rafael Lechowski (Flowklorikos) - Uno - www.HHGroups.com.mp3

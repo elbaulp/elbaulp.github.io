@@ -37,7 +37,7 @@ tags:
 Vimos cómo [insertar registros y consultarlos][1], bien, pues actualizar y borrar registros es bastante sencillo. Realizar un [update][2] (Actualizar registros) es muy similar a hacer una inserción, en la cual los valores de la columna a modificar se pasan mediante un objeto [ContentResolver][1]. Abajo se muestra una sentencia para realizar dicho update:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight java %}int numeroDeLineasActualizadas =
    activity.getContentResolver().update(

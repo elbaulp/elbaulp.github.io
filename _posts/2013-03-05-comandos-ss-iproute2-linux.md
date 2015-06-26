@@ -37,7 +37,7 @@ A día de hoy la mayoría de distribuciones traen **iproute** instalado por defe
 
 Veamos algunos de los comandos más útiles que nos ofrece este relativamente “*nuevo*” conjunto de comandos:  
   
-<!--more-->
+<!--ad-->
 
 ### Obtener información sobre TCP/UDP y Sockets
 

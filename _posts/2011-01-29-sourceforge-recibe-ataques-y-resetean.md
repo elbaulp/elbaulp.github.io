@@ -24,7 +24,7 @@ He recibido un correo de SourceForge comunicandome que debo cambiar mi contrase√
 
 Aqu√≠ os dejo el comunicado que me enviaron:  
   
-<!--more-->
+<!--ad-->
 
 > Hello,
 > 

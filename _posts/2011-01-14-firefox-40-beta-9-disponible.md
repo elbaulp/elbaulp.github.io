@@ -26,7 +26,7 @@ El artículo original podeis encontrarlo <a target="_blank" href="http://muycomp
 Mozilla acaba de liberar la que se espera que sea la &uacute;ltima o pen&uacute;ltima versi&oacute;n beta de Firefox 4.0 antes de la llegada de la fase Release Candidate y la versi&oacute;n final que se espera para &uacute;ltimos del pr&oacute;ximo mes de&nbsp; febrero. Esta nueva beta dispone a&uacute;n de bugs conocidos por la compa&ntilde;&iacute;a pero ha solucionado gran parte de los anteriores, por lo que el uso de ella ayudar&aacute; a comprobar que han realizado un buen trabajo mientras siguen puliendo los bugs bloqueantes que est&aacute;n frenando Firefox 4.0.
 
   
-<!--more-->
+<!--ad-->
 
 La nueva versi&oacute;n **beta 9** de **Mozilla Firefox 4.0 **est&aacute; replic&aacute;ndose por los mirrors y estar&aacute; disponible oficialmente durante esta tarde noche. Seg&uacute;n la propia compa&ntilde;&iacute;a, los cambios frente a la beta 8 son la soluci&oacute;n de un problema relacionado con los marcadores y el historial que permite un **arranque m&aacute;s r&aacute;pido **del navegador y una **mejor&iacute;a notable en rendimiento** durante la reproducci&oacute;n de animaciones complejas.
 

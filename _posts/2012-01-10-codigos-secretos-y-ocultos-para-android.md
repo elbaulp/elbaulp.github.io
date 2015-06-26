@@ -47,7 +47,7 @@ Si te gusta jugar con tu <a href="http://elbauldelprogramador.com/curso-programa
 </p>
 
   
-<!--more-->
+<!--ad-->
 
 **\*#\*#4636#\*#\***
 

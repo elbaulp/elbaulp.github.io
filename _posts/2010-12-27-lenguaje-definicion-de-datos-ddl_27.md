@@ -33,7 +33,7 @@ tags:
 Un sinónimo es un nuevo nombre que se puede asignar a una tabla o a una vista y con ellos podemos darle nombres diferentes a un mismo objeto.
 
 Cuando tenemos acceso a las tablas, vistas etc, de otros esquemas y deseamos consultarlas, hay que anteponer al nombre del objeto que queremos consultar el nombre del esquema y separarlos por un punto.  
-<!--more--> Por ejemplo para consultar una tabla de otro esquema la sintaxis sería:
+<!--ad--> Por ejemplo para consultar una tabla de otro esquema la sintaxis sería:
 
 {% highlight sql %}Nombre_Esquema.Nombre_Tabla{% endhighlight %}
 

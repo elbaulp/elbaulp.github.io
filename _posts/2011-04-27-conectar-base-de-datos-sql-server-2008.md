@@ -41,7 +41,7 @@ Bien, ahora voy a explicar en que consiste la aplicación exactamente, que aún 
 Para esto es necesario establecer una conexión PDA-Base de datos del Servidor.
 
 
-<!--more-->
+<!--ad-->
 
 Lo primero que hay que hacer es intalar SQL server 2008 y configurarlo para que se pueda acceder de dos formas (con autentificación windows y con autentificación SQl server), esto se pregunta durante la instalación de SQL server, posteriormente hay que crear un usuario SQL server, [aqui se explica como hacerlo][2]. Tambien debemos permitir [conexiones remotas.][3]
 

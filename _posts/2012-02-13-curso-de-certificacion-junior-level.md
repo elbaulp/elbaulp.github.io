@@ -40,7 +40,7 @@ En este <a target="_blank" href="http://www.ucertify.com/about/prepkit-tour.html
 </center>
 
   
-<!--more-->
+<!--ad-->
 
 Os hablo de ucertify, porque he llegado a un acuerto con ellos, que consiste en que los lectores del blog tienen un 10% de descuento sobre los precios de los cursos (Para que se aplique el descuento, debéis introducir este código **UCPREP** cuando estéis comprando el curso). Además, en los próximos días me darán dos claves para regalar dos cursos a los ganadores de un concurso que haré.
 

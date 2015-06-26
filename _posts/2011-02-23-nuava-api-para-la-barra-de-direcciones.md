@@ -23,7 +23,7 @@ categories:
 ---
 Uno de los aspectos más importantes de Google Chrome es el Omnibox, o la barra de direcciones. Se pueden escribir URLs y realizar búsquedas en el mismo lugar. Con el nuevo API del Omnibox, los desarrolladores de extensiones puede hacer la barra de direcciones aún más potente.  
   
-<!--more-->
+<!--ad-->
 
 Esta API permite a los desarrolladores de extensiones agregar palabras clave de comandos. Cuando el usuario escribe una consulta prefijada por esta palabra clave, la extensión puede sugerir posibles terminaciones y reaccionar a lo que el usuario escriba.
 

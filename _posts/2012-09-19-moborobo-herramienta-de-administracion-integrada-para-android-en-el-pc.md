@@ -21,7 +21,7 @@ tags:
 </p>
 
   
-<!--more-->
+<!--ad-->
 
 <p dir="ltr">
   A continuación un listado de las funcionalidades disponibles:

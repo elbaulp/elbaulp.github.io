@@ -29,7 +29,7 @@ Llevamos ya mucho tiempo esperando la llegada de la que probablemente sea la rev
 </p>
 
   
-<!--more-->
+<!--ad-->
 
   
 Y es que los desarrolladores de GNOME han puesto en marcha la web www.gnome3.org en la cual han preparado un recorrido visual por las principales características de un entorno de escritorio que dará un giro radical respecto a lo que teníamos disponible hasta ahora.

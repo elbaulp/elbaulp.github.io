@@ -33,7 +33,7 @@ Los pasos a seguir para crear nuestro periódico son simples.
 Primero entramos en [paper.li][1], nos registramos y clicamos en **Create a paper**. Ahora entramos directamente a configurar el contenido del periódico, agregamos todo lo que queramos pulsando en ellos y tendremos lo siguiente:
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s1600/paper.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="259" width="400" src="http://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s400/paper.png" /></a>

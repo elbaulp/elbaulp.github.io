@@ -35,7 +35,7 @@ El primer paso es declarar la dependencia en el proyecto, en éste caso usando *
 
 Hecho esto, ya es posible usar la librería en el proyecto.
 
-<!--more-->
+<!--ad-->
 
 ## Introducción a Jackson
 

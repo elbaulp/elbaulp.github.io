@@ -19,7 +19,7 @@ En este artículo voy a escribir únicamente el código Ruby, al final pondré d
 
 La estructura del programa consta de tres clases, *Persona*, *Alumno* y *Asignatura*. Heredando Alumno de Persona. Empecemos viendo la clase Persona:  
   
-<!--more-->
+<!--ad-->
 
 {% highlight ruby %}require 'date' #Para trabajar con fechas 
 require 'time'

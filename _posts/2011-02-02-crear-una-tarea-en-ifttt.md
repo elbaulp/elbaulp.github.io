@@ -22,7 +22,7 @@ categories:
   - internet
 ---
 Voy a explicar como crear una nueva tarea en [IFTTT][1], es bastante simple, pero lo explicaré paso a paso con imágenes:  
-<!--more-->
+<!--ad-->
 
 En la pantalla principal, le damos a &#8220;create new task&#8221;, al darle, nos aparecerá un texto enorme diciendo &#8220;If this, then that&#8221;, con el &#8220;this&#8221;, en azul, lo pinchamos. Esto nos llevará al paso 1 de la configuración de la tarea:
 

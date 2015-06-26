@@ -31,7 +31,7 @@ En <a target="_blank" href="http://www.ubuntizandoelplaneta.com/2011/01/meme-los
 en nuestro terminal para saber cuales son los comandos que más usamos en linux, seguro que os sorprendéis al ver vuestros resultados.
 
   
-<!--more-->
+<!--ad-->
 
   
 Invito a participar en el meme a:

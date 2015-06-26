@@ -29,7 +29,7 @@ http://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/
 De la web de un amigo blogger ([EtnasSoft][1]), me llega la iniciativa Humanstxt Creator. Que trata de:
 
 **  
-<!--more-->
+<!--ad-->
 
   
 *&#8221;  

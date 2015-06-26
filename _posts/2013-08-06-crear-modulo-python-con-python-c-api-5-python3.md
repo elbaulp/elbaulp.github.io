@@ -24,7 +24,7 @@ tags:
 Este es el último artículo de esta serie de 5 sobre cómo crear un módulo con la Python C API. Para terminar, veremos la forma de hacer compatible un módulo con **Python 3**. Nos basaremos en el módulo **herramientasRed** que hemos creado en la parte 3.
 
   
-<!--more-->
+<!--ad-->
 
 El proceso de compatibilidad se realiza mediante varios *#define* y macros en C para comprobar qué versión de Python se está usando, el código que se muestra a continuación hace del módulo **herramientasRed** un módulo compatible tanto con Python 2 como Python 3. Es posible usar este código como plantilla para otros módulos.
 

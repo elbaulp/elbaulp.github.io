@@ -29,7 +29,7 @@ Ahora que el [temario de SQL][1] está terminado, voy a empezar a escribir sobre
 
 El trabajo realizado [hasta ahora][3] con la base de datos se ha hecho de forma interactiva: el usuario introducía una orden (en SQL) y Oracle proporcionaba una respuesta. Esta forma de trabajar no resulta operativa en un entorno de producción, porque todos los usuarios no conocen ni utilizan SQL, y además suelen producirse frecuentes errores.  
   
-<!--more-->
+<!--ad-->
 
   
 Para superar estas limitaciones, Oracle incorpora un gestor PL/SQL en el servidor de la BD y  

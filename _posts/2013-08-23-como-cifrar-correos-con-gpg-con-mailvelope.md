@@ -19,7 +19,7 @@ tags:
 
 En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante GPG, **Mailvelope**.
 
-<!--more-->
+<!--ad-->
 
 ### Introducción
 

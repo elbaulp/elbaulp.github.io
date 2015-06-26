@@ -22,7 +22,7 @@ Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de 
 
 Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno **local**, para realizar modificaciones, otro de **desarrollo**, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de **producción**, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado **Wp-Deploy**.
 
-<!--more-->
+<!--ad-->
 
 ### Configurar el entorno local
 

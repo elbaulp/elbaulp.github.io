@@ -18,7 +18,7 @@ tags:
 [<img src="/images/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1-300x200.jpg" alt="Cómo resolver sistemas de ecuaciones lineales con dos incógnitas1" width="300" height="200" class="alignleft size-medium wp-image-2224" />][1]  
 Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:
 
-<!--more-->
+<!--ad-->
 
 $$x+y=3\\2x+3y=3$$
 

@@ -35,7 +35,7 @@ A continuación voy a explicar mediante capturas de pantalla algunas funcionalid
 Icono de la aplicación
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://1.bp.blogspot.com/-7UI6P-RRixQ/TdAVCyzDQ6I/AAAAAAAAAeY/SZHOWPXVFcg/s1600/icono.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="320" width="195" src="http://1.bp.blogspot.com/-7UI6P-RRixQ/TdAVCyzDQ6I/AAAAAAAAAeY/SZHOWPXVFcg/s320/icono.png" /></a>

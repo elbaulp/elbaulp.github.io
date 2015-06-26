@@ -49,7 +49,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 <p>
-  <br /><!--more-->
+  <br /><!--ad-->
 </p>
 
 <p>

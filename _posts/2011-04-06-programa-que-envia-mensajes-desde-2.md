@@ -26,7 +26,7 @@ tags:
 ---
 <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />  
 Como ya comenté en una entrada hace varios días, necesito hacer una [aplicación para android que se comunique con el PC por red][1], y he seguido mejorandola ya que aún está muy limitada, le he hecho algunos cambios, estos cambios son:  
-<!--more-->
+<!--ad-->
 
 Al ejecutar la aplicación en el teléfono, se conecta al servidor ejecutandose en el pc que está esperando una conexión.
 

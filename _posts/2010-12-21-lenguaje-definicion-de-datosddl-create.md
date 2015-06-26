@@ -55,7 +55,7 @@ CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos
 {% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
 Donde:
 

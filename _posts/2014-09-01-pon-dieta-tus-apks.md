@@ -16,7 +16,7 @@ tags:
 ---
 En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android [eliminando recursos sin usar][1]. En el blog de **[Cyril Mottier][2]** encontré un artículo muy interesante con varios consejos para reducir el tamaño del *APK* y optimizar el código en [producción][3]. A continuación pasamos a traducir las partes importantes:
 
-<!--more-->
+<!--ad-->
 
 <div class="clearfix">
 </div>

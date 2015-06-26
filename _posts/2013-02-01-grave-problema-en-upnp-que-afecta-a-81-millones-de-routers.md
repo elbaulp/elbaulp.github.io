@@ -28,7 +28,7 @@ El problema es que el servicio UPnP nunca debería estar en el lado público del
 
 El fallo está en el diseño del protocolo. Ya que se antepuso la facilidad de uso a la seguridad. Pasemos a explicar el objetivo que pretende lograr este servicio.  
   
-<!--more-->
+<!--ad-->
 
   
 Cada vez son más los dispositivos que pueden acceder a internet, como las televisiones. Para poder autoconfigurarse, tienen implementado el protocolo DHCP, que permite obtener una dirección IP del router. Así como UPnP, lo cual permite a esos dispositivos ser descubiertos dentro de la red. Por ejemplo, cualquier pc que tengamos en casa puede enviar un paquete a nuestra red privada (Un paquete de broadcast) para que cualquier dispositivo con UPnP responda al pc haciendole saber que dispone de este servicio. Despues, el pc sigue preguntando al dispositivo sobre sus capacidades, qué interfaces tiene disponibles etc. 

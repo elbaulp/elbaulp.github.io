@@ -22,7 +22,7 @@ Para los que estéis acostumbrados a escribir vuestros documentos en $$\LaTeX$$,
 
 Si estás interesado en aprender a usar $$\LaTeX$$ echa un vistazo al [mini curso que tenemos](/mini-curso-de-latex-introduccion/ "Mini curso de Latex - introducción").
 
-<!--more-->
+<!--ad-->
 
 ## Cómo usar latexmk
 

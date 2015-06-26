@@ -25,7 +25,7 @@ Esa es la clave que explica el mayor rendimiento de un switch frente a una larga
 
 [GCC][3] selecciona qué metodo de traducción aplica al switch dependiendo del número de casos y valores. Las tablas de saltos se usan cuando hay un número determinado de casos (cuatro por ejemplo) y abarcan un número pequeño de valores. Por ejemplo:  
   
-<!--more-->
+<!--ad-->
 
   
 **Sentencia switch**

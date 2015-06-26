@@ -26,7 +26,7 @@ categories:
 Hace poco estaba disponible el [botón +1 de google][1] en los resultados de búsqueda, ahora podemos añadirlo directamente en nuestro blog, como explican en [Blogger Buzz][2], es bastante sencillo (solo para blogger), debemos ir a Diseño->Elementos de la página y editar las entradas del blog, tal como se vé en la imágen:
 
   
-<!--more-->
+<!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="356" width="400" src="http://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" /></a>

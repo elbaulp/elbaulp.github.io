@@ -38,7 +38,7 @@ Android llama Proveedor de contenido a la abstracción de datos en Servícios. D
 Para recuperar datos de un cv o guardarlos en él, se necesitan usar un conjunto de Uris REST. Por ejemplo, si quisiéramos recuperar un conjunto de notas desde un cv que es una encapsulación de una base de datos de Notas, necesitaríamos usar una URI parecida a esta:
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}content://com.android.note.NoteProvider/notes{% endhighlight %}
 

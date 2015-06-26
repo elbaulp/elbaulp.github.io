@@ -32,7 +32,7 @@ Empecemos:
 [Pueden descargar el código fuente de esta lección.][2]
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}//Include SDL functions and datatypes
 #include "SDL/SDL.h"{% endhighlight %}

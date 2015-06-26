@@ -43,7 +43,7 @@ También quiero aprovechar para hablaros de <a target="_blank" href="http://www.
 Dicho todo esto, aquí tenéis los screencast:
 
   
-<!--more-->
+<!--ad-->
 
 <div style="text-align:center;">
   <p>

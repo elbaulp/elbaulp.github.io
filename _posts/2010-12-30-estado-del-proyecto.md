@@ -30,7 +30,7 @@ Consiste en crear un pequeño juego en C++ con la librería grafica SDL.
 Escribo este post para informaros un poco del estado del proyecto, que avanza lento, pero avanza.  
 Ya hemos creado el [repositorio en Launchpad, se llama SpyWar][2], que a su vez es el nombre del juego.  
   
-<!--more-->
+<!--ad-->
 
   
 Aún nos estamos estudiando el <a target="_blank" href="http://www.lazyfoo.net/SDL_tutorials/index.php">tutorial de SDL</a>, que nos está resultando bastante útil e iré publicando entradas traducidas de este tutorial para que las tengáis a vuestra disposición.

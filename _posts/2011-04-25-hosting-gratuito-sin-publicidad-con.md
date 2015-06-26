@@ -29,7 +29,7 @@ Hasta que encontré 000webhost que creo que merece la pena, y por eso lo compart
 000webhost ofrece 1500 MB de espacio, y lo más importante, NO coloca anuncios, os dejo una serie de características:
 
   
-<!--more-->
+<!--ad-->
 
   * 1500 MB de espacio en disco 
       * 100 GB ancho de banda 

@@ -28,7 +28,7 @@ Hace muy poco que blogger [anunció sus vistas dinámicas][1], y ahora han lanza
 </div>
 
   
-<!--more-->
+<!--ad-->
 
 Una vez instalado, la extensión detecta automáticamente cuando se está viendo un blog de Blogger, a continuación, muestra un icono de Blogger (la naranja &#8220;B&#8221;!) en la barra de direcciones que permite seleccionar y ver el blog en una de las cinco vistas dinámicas.Así de simple.
 

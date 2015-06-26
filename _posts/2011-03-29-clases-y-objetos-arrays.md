@@ -32,7 +32,7 @@ se reserva espacio en memoria para un array de 3 enteros. Se inicializan, se usa
 array.
 
   
-<!--more-->
+<!--ad-->
 
 {% highlight bash %}<span class="comentario">//se reserva espacio en memoria para un array de 3 elementos</span>
 int* ip=new int[3];

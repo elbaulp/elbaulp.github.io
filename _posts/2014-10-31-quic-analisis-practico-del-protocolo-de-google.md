@@ -41,7 +41,7 @@ $ build/install-build-deps.sh --no-arm
 $ gclient sync
 {% endhighlight %}
 
-<!--more-->
+<!--ad-->
 
 Una vez hecho esto, y siguiendo los pasos de (4), se compila el cliente y servidor usados para QUIC:
 

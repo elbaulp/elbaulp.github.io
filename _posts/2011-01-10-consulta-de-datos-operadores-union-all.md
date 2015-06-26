@@ -29,7 +29,7 @@ Podemos combinar múltiples consultas utilizando los operadores UNION, UNION ALL
 
 Los correspondientes campos y/o expresiones que aparecen en la listas de los SELECT de las consultas a las que se le aplican los operadores anteriores deben coincidir en tipo y número, o al menos, tener un tipo compatible o sobre el cual se pueda aplicar un casting automático.  
   
-<!--more-->
+<!--ad-->
 
 {% highlight sql %}SELECT location_id, department_name "Department", TO_CHAR(NULL) "Warehouse" FROM departments
 UNION

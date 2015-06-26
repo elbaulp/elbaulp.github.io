@@ -19,7 +19,7 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
 
 <span class='embed-youtube' style='text-align:center; display: block;'></span> 
 
-<!--more-->
+<!--ad-->
 
 ## Código Fuente
 

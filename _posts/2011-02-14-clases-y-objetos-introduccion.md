@@ -25,7 +25,7 @@ categories:
 
 Hace poco puse a vuestra disposición unos [tutoriales básicos de C++][1], y ahora voy a comenzar a explicar las clases y los objetos en C++:  
   
-<!--more-->
+<!--ad-->
 
 ## Introducción
 

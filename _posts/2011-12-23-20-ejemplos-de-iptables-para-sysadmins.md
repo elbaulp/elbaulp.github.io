@@ -71,7 +71,7 @@ Este firewall lo controla un programa llamado iptables que gestiona el filtrado 
   * Esto NO es un tutorial de como configurar iptables. Puedes ver un tutorial <a target="_blank" href="http://www.cyberciti.biz/faq/rhel-fedorta-linux-iptables-firewall-configuration-tutorial/">aquí</a>. Es más bien una referencia rápida de los comandos más comunes de iptables.
 
   
-<!--more-->
+<!--ad-->
 
 # #1: Mostrando el estado de nuestro firewall
 

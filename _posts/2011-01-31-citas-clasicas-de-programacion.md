@@ -46,7 +46,7 @@ Some people, when confronted with a problem, think &#8220;I know, I’ll use reg
   
 *- Jamie Zawinski  
   
-<!--more-->
+<!--ad-->
 
   
 *

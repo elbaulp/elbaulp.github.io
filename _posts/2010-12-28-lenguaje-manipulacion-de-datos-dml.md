@@ -35,7 +35,7 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
   * **UPDATE**: permite modificar registros de una tabla.
 
   
-<!--more-->
+<!--ad-->
 
 ### Inserción de registros
 

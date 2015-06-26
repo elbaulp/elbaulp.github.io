@@ -35,7 +35,7 @@ La biblioteca la podéis encontrar en *[Biblioteca Creative Commons][2]*, pero d
 Os dejo con un poquito de historia sobre esta iniciativa:
 
   
-<!--more-->
+<!--ad-->
 
   
 ***</p> 

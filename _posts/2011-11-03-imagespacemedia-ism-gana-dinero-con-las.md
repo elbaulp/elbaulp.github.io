@@ -28,7 +28,7 @@ Una vez registrados, elegimos las categorías de anuncios que queremos mostrar y
 A continuación dejo un vídeo que explica el funcionamiento de esta plataforma:
 
   
-<!--more-->
+<!--ad-->
 
 <p style="text-align:center">
 </p>

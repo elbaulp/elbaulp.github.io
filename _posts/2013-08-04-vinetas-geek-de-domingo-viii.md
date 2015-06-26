@@ -17,7 +17,7 @@ tags:
 ---
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!  
   
-<!--more-->
+<!--ad-->
 
   
 

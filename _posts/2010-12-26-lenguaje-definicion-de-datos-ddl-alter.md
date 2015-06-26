@@ -38,7 +38,7 @@ Para modificar la estructura de una tabla se utiliza el comando ALTER TABLE.
  [DROP CONSTRAINTS restricción]};{% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
   
 Añadir o modificar columnas ( nombre, tipo, valor por defecto, restricción NOT NULL)

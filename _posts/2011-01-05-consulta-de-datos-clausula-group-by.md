@@ -37,7 +37,7 @@ GROUP BY C_CLIENTE;
 {% endhighlight %}
 
   
-<!--more-->
+<!--ad-->
 
   
 Un error muy común cuando se construyen consultas agrupadas, es el siguiente: ORA-  
