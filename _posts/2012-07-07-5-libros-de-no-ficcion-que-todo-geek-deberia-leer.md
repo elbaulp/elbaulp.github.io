@@ -31,8 +31,6 @@ Siempre he estado fascinado por la tecnología de consumo, que es la razón por 
 
 Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
 
-<!--ad-->
-
 ### Generation Xbox (La Generación Xbox), por Jamie Russell
 
 <figure>
@@ -69,6 +67,8 @@ por David Shippy And Mickie Phipps
 </figure>
 
 Este libro está un poco fuera de lugar en esta lista ya que, por lejos, es menos bien redactado. Su autores son David Shippy, quien estuvo a cargo de diseñar el procesador Cell para Sony, y Mickie Phipps, un compañero de trabajo que también ocupa un lugar alto en el totem. El carácter de este libro es tan autocomplaciente como útil.
+
+<!--ad-->
 
 Sin embargo, es una historia importante y ellos son los únicos que se ocuparon de contarla. El procesador Cell fue un facinante logro de la ingeniería y teóricamente le dio a Sony una ventaja, aunque es a su vez responsable de muchas de las fallas de la PlayStation 3. Probablemente tendrás un nuevo respeto por la habilidad de Microsoft de llevar a cabo amplias estrategias de negocio antes de que termines el libro &#8211; y menos respeto por la poca precisión de Sony para generar nuevos productos.  
 
