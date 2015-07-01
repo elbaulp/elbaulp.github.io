@@ -12,8 +12,8 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
+
+
 share_data:
   - '[]'
   - '[]'
@@ -36,17 +36,15 @@ tags:
   - menu oculto android
   - menu oculto tablet android
 ---
-<div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
-</div>
+<figure>
+  <img border="0" src="/images/2013/07/iconoAndroid.png" />
+</figure>
 
 Si te gusta jugar con tu <a href="http://elbauldelprogramador.com/curso-programacion-android/" title="Curso Android" target="_blank">Android</a>, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android.
 
-<p class="alert">
-  He probado estos códigos yo mismo, no asumo ninguna responsabilidad si algún código causa algún problema. Este artículo es solo para usuarios avanzados.
-</p>
+He probado estos códigos yo mismo, no asumo ninguna responsabilidad si algún código causa algún problema. Este artículo es solo para usuarios avanzados.
+{: .notice }
 
-  
 <!--ad-->
 
 **\*#\*#4636#\*#\***
@@ -82,7 +80,5 @@ Con este código entramos en el modo servício. Podemos cambiar configuraciones 
 Veremos un monitor del servicio Gtalk.
 
 Fuente: <a target="_blank" href="http://www.googez.com/2012/01/secret-and-hidden-codes-for-android/">googez.com</a>
-
-
 
 {% include _toc.html %}
