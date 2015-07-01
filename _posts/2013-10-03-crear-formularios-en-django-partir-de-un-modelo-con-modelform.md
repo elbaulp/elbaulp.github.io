@@ -70,32 +70,20 @@ Como vemos, de una forma tan sencilla como esta estamos creando una vista que pe
 
 Para ser capaces de mostrar al usuario una lista de *personas* es necesario crear una plantilla. Nos basaremos en una plantilla base llamada *base.html* que se puede encontrar en *django/contrib/databrowse/templates/databrowse/base.html*
 
+{% highlight html %}
 {% raw %}
-{% extends "base.html" %}
-
-{% block content %}
-
-
-<h2>
-  Personas
-</h2>
-
-
-<em>Persona - DNI</em>
-
-
-<ul>
-  {% for persona in object_list %}
-
-
-  <li>
-    {{ persona.nombre }} - {{ persona.dni }}
-  </li>
-      {% endfor %}
-
-</ul>
-{% endblock %}
+  {% extends "base.html" %}
+  {% block content %}
+  <h2>Personas</h2>
+  <em>Persona - DNI</em>
+  <ul>
+    {% for persona in object_list %}
+      <li>{{ persona.nombre }} - {{ persona.dni }} </li>
+    {% endfor %}
+  </ul>
+  {% endblock %}
 {% endraw %}
+{% endhighlight %}
 
 De esta forma nuestra plantilla hereda todo el contenido de *base.html* y le añadimos contenido en el bloque *content*. Es importante que guardemos ambas plantillas dentro de nuestra aplicación *pruebaformularios* en el directorio *./templates/pruebaformularios/*.
 
@@ -279,25 +267,33 @@ El nombre será usado después en la plantilla.
 
 Por último, la plantilla que contiene el formulario quedaría así:
 
+
+{% highlight html %}
 {% raw %}
 {% extends "base.html" %}
 {% block content %}
-
-
+  <form action="{% url 'upersonas:padd' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Añadir persona" />
+  </form>
 {% endblock %}
 {% endraw %}
+{% endhighlight %}
 
 De nuevo usamos el *namespace* creado anteriormente en el *urls.py* global y el nombre que acabamos de darle a la función para agregar personas.
 
-## Probando el ejemplo</h3>
+## Probando el ejemplo
 
 Eso es todo, accediendo a <a href="http://127.0.0.1:8000/personas/add" target="_blank">http://127.0.0.1:8000/personas/add</a> veremos el formulario y podremos añadir nuevas personas, que irán apareciendo en la lista.
 
 Por último estaría bien colocar un enlace en la página que lista las personas para poder acceder rápidamente al formulario, para ello añadimos al final de la plantilla *personas_list.html* el siguiente enlace:
 
+{% highlight html %}
 {% raw %}
 Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
 {% endraw %}
+{% endhighlight %}
 
 Ya sabemos que *upersonas* es */personas/* y *padd* es *add*, luego este enlace nos llevará a la dirección */personas/add*, mostrando el formulario.
 
@@ -364,52 +360,44 @@ urlpatterns = patterns('',
 )
 {% endhighlight %}
 
+
+{% highlight html %}
 {% raw %}
 # templates/pruebaformularios/persona_list.html
 {% extends "base.html" %}
 
 {% block content %}
+  <h2>Personas</h2>
+  <em>Persona - DNI</em>
+  <ul>
+    {% for persona in object_list %}
+      <li>{{ persona.nombre }} - {{ persona.dni }} </li>
+    {% endfor %}
+  </ul>
 
+  <h2>Añadir persona</h2>
 
-<h2>
-  Personas
-</h2>
-
-
-<em>Persona - DNI</em>
-
-
-<ul>
-  {% for persona in object_list %}
-
-
-  <li>
-    {{ persona.nombre }} - {{ persona.dni }}
-  </li>
-      {% endfor %}
-
-</ul>
-
-
-
-<h2>
-  Añadir persona
-</h2>
-
-Haga click
-
-<a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
+  Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
 {% endblock %}
 {% endraw %}
+{% endhighlight %}
 
+{% highlight html %}
 {% raw %}
 # templates/pruebaformularios/persona_form.html
+
 {% extends "base.html" %}
+
 {% block content %}
-
-
+  <form action="{% url 'upersonas:padd' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Añadir persona" />
+  </form>
 {% endblock %}
 {% endraw %}
+{% endhighlight %}
+
 
 {% highlight python %}
 # urls.py del proyecto
