@@ -13,7 +13,7 @@ image:
 date: 2015-06-30T18:48:42+02:00
 ---
 
-En [Android](curso-programacion-android), cuando se tiene un [`ListView`](/programacion-android-interfaz-grafica_28/), dentro de un `ScrollView`, es posible que el último capture todos los eventos `onTouch`, y no sea posible utilizar el `ListView`.
+En [Android](/curso-programacion-android), cuando se tiene un [`ListView`](/programacion-android-interfaz-grafica_28/), dentro de un `ScrollView`, es posible que el último capture todos los eventos `onTouch`, y no sea posible utilizar el `ListView`.
 
 Para solucionar el problema, bastaría con deshabilitar la captura del evento `onTouch` para el `ScrollView`, si lo que estamos pulsando es el `ListView`, es decir:
 
