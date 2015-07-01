@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -32,21 +32,21 @@ tags:
 
 <!--INFOLINKS_ON-->
 
-  
+
 Un cursor es el nombre para un área memoria privada que contiene información procedente de la ejecución de una sentencia SELECT. Cada cursor tiene unos atributos que nos devuelven información útil sobre el estado del cursor en la ejecución de la sentencia SQL. Cuando un cursor está abierto y los datos referenciados por la consulta SELECT cambian, estos cambios no son recogidos por el cursor.
 
 PL/SQL crea implícitamente un cursor para todas las sentencias SQL de manipulación de datos sobre un conjunto de filas, incluyendo aquellas que solo devuelven una sola fila.
 
 En PL/SQL no se pueden utilizar sentencias SELECT de sintaxis básica ( SELECT <lista> FROM <tabla(s)> ). PL/SQL utiliza cursores para gestionar las instrucciones SELECT. Un cursor es un conjunto de registros devuelto por una instrucción SQL.
 
-  
+
 <!--ad-->
 
-  
+
 Podemos distinguir dos tipos de cursores:
 
-  * **Cursores implícitos**. Este tipo de cursores se utiliza para operaciones **SELECT INTO**. Se usan cuando la consulta devuelve un único registro. 
-  * **Cursores explícitos.** Son los cursores que son declarados y controlados por el programador. Se utilizan cuando la consulta devuelve un conjunto de registros. Ocasionalmente también se utilizan en consultas que devuelven un único registro por razones de eficiencia. Son más rápidos. 
+  * **Cursores implícitos**. Este tipo de cursores se utiliza para operaciones **SELECT INTO**. Se usan cuando la consulta devuelve un único registro.
+  * **Cursores explícitos.** Son los cursores que son declarados y controlados por el programador. Se utilizan cuando la consulta devuelve un conjunto de registros. Ocasionalmente también se utilizan en consultas que devuelven un único registro por razones de eficiencia. Son más rápidos.
 
 Un cursor se define como cualquier otra variable de PL/SQL y debe nombrarse de acuerdo a los mismos convenios que cualquier otra variable.
 
@@ -54,7 +54,7 @@ Los cursores implícitos se utilizan para realizar consultas SELECT que devuelve
 
   * Los cursores implícitos no deben ser declarados
   * Con cada cursor implícito debe existir la palabra clave **INTO**.
-  * Las variables que reciben los datos devueltos por el cursor tienen que contener el mismo tipo de dato que las columnas de la tabla. 
+  * Las variables que reciben los datos devueltos por el cursor tienen que contener el mismo tipo de dato que las columnas de la tabla.
   * Los cursores implícitos solo pueden devolver una única fila. En caso de que se devuelva más de una fila (o ninguna fila) se producirá una [excepción][1]. Las más comunes son:
 
 **NO\_DATA\_FOUND**: Se produce cuando una sentencia SELECT intenta recuperar datos pero ninguna fila satisface sus condiciones. Es decir, cuando &#8220;no hay datos&#8221;  
@@ -141,40 +141,40 @@ Así lo acción más típica es recuperar filas mientras queden alguna por recup
 LOOP
   FETCH nombre_cursor INTO variables;
   EXIT WHEN nombre_cursor%NOTFOUND;
-  <span class="comentario">--procesar cada una de las filas</span>
+  --procesar cada una de las filas
 END LOOP;
 OPEN nombre_cursor;
 FETCH nombre_cursor INTO lista_variables;
 WHILE nombre_cursor%FOUND
 LOOP
-  <span class="comentario">/* Procesamiento de los registros recuperados */</span>
+  /* Procesamiento de los registros recuperados */
   FETCH nombre_cursor INTO lista_variables;
 END LOOP;
 CLOSE nombre_cursor;
 
 FOR variable IN nombre_cursor LOOP
-  <span class="comentario">/* Procesamiento de los registros recuperados */</span>
+  /* Procesamiento de los registros recuperados */
 END LOOP;
 {% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
-  
+
 
 
 ## 4. Cerrar el cursor
 
 Una vez que se han recuperado todas las filas del cursor, hay que cerrarlo para que se liberen de la memoria del servidor los objetos temporales creados. Si no cerrásemos el cursor, la tabla  
 temporal quedaría en el servidor almacenada con el nombre dado al cursor y la siguiente vez ejecutásemos ese bloque de código, nos daría la excepción CURSOR\_ALREADY\_OPEN (cursor ya abierto) cuando intentásemos abrir el cursor. Para cerrar el cursor se utiliza la siguiente sintaxis:  
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}CLOSE numbre_cursor;{% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
-  
-  
+
+
 Cuando trabajamos con cursores debemos considerar:
 
   * Cuando un cursor está cerrado, no se puede leer.
@@ -192,8 +192,8 @@ En este caso, se debe anteponer al nombre del atributo el prefijo SQL, en lugar 
 
   * **SQL%NOTFOUND** devuelve TRUE cuando la última sentencia SELECT no recuperó ninguna fila, o cuando INSERT, DELETE o UPDATE no afectan a ninguna fila
   * **SQL%FOUND** devuelve TRUE cuando la última sentencia SELECT devuelve alguna fila, o cuando INSERT, DELETE o UPDATE afectan a alguna fila
-  * **SQL%ROWCOUNT** devuelve el número de filas afectadas por INSERT, DELETE o UPDATE o las filas devueltas por una sentencia SELECT 
-  * **SQL%ISOPEN** siempre devuelve FALSE, porque Oracle cierra automáticamente el cursor implícito cuando termina la ejecución de la sentencia SELECT 
+  * **SQL%ROWCOUNT** devuelve el número de filas afectadas por INSERT, DELETE o UPDATE o las filas devueltas por una sentencia SELECT
+  * **SQL%ISOPEN** siempre devuelve FALSE, porque Oracle cierra automáticamente el cursor implícito cuando termina la ejecución de la sentencia SELECT
 
 Ejemplos:
 
@@ -215,7 +215,7 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}DECLARE
@@ -232,7 +232,7 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}DECLARE
@@ -246,12 +246,12 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}BEGIN
   UPDATE ARTICULOS SET cArtDsc = `Pantalla LCD’ WHERE cCodArt = ‘LCD’;
-  IF SQL%NOTFOUND THEN <span class="comentario">-- Otra opción : SQL%ROWCOUNT = 0</span>
+  IF SQL%NOTFOUND THEN -- Otra opción : SQL%ROWCOUNT = 0
     INSERT INTO ARTICULOS (cCodArt,cDesArt)
     VALUES (‘LCD’,’Pantalla LCD’);
   END IF;
@@ -260,18 +260,18 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 
 
 ## Cursores Parametrizados
 
 Los cursores son aquellos que permiten utilizar la orden OPEN para pasarle al cursor el valor de  
 uno o varios de sus parámetros.  
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}DECLARE
-  CURSOR cArt (cFml Articulos.cArtFml%TYPE) 
+  CURSOR cArt (cFml Articulos.cArtFml%TYPE)
     IS SELECT cArtCdg,cArtDsc FROM Articulos WHERE cArtFml = cFml;
   xCod Articulos.cArtCdg%TYPE;
   xDes Articulos.cArtDsc%TYPE;
@@ -288,23 +288,23 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 
 
 ## Cursores de actualización
 
 Los cursores de actualización se declaran igual que los cursores explícitos, añadiendo FOR UPDATE al final de la sentencia SELECT.  
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}CURSOR nombre_cursor IS instrucción_SELECT FOR UPDATE{% endhighlight %}
 
 <!--INFOLINKS_ON-->
 
-  
-  
+
+
 Para actualizar los datos del cursor hay que ejecutar una sentencia UPDATE especificando la cláusula WHERE CURRENT OF <cursor_name>.  
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}UPDATE <nombre_tabla> SET <campo_1> = <valor_1>[,<campo_2> = <valor_2>]
@@ -313,10 +313,10 @@ WHERE CURRENT OF <cursor_name>
 
 <!--INFOLINKS_ON-->
 
-  
-  
+
+
 Cuando trabajamos con cursores de actualización debemos tener en cuenta que la sentencia UPDATE genera bloqueos en la base de datos ( [transacciones][4], disparadores,etc).  
-  
+
 <!--INFOLINKS_OFF-->
 
 {% highlight sql %}DECLARE

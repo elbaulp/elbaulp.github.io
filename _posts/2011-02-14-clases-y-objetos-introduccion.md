@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - C
 ---
@@ -24,7 +24,7 @@ categories:
 </div>
 
 Hace poco puse a vuestra disposición unos [tutoriales básicos de C++][1], y ahora voy a comenzar a explicar las clases y los objetos en C++:  
-  
+
 <!--ad-->
 
 ## Introducción
@@ -51,7 +51,7 @@ Además, introduciremos dos aspectos del lenguaje C++: los comentarios en una so
 Recordaremos que el lenguaje C++ mantiene los delimitadores de comentarios empleados en el lenguaje C, pero añade comentarios en una sola línea.  
 
 
-{% highlight bash %}<span class="comentario">//éste es un comentario de una sola línea</span>{% endhighlight %}
+{% highlight bash %}//éste es un comentario de una sola línea{% endhighlight %}
 
 
 

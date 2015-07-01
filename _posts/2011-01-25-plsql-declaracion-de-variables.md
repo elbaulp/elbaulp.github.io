@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -30,10 +30,10 @@ Las variables deben declararse dentro de la sección DECLARE y deben seguir la s
 {% highlight sql %}Nombre_variable [CONSTANT] TIPO [NOT NULL] [:= inicialización];{% endhighlight %}
 
 Cualquier variable que se declare y no se inicialice tiene por defecto el valor NULL. Los tipos posibles son todos aquellos válidos para SQL añadiendo algunos propios de PL/SQL. Para más información sobre los tipos propios de PL/SQL consultar el PL/SQL User’s Guide and Referente. Podemos hacer que una variable nunca tome valores nulos utilizando la cláusula NOT NULL, en este caso, hay que inicializar la variable.  
-  
+
 <!--ad-->
 
-  
+
 La declaración de una constante es similar a la declaración de una variable, añadiendo la palabra CONSTANT y asignándole a continuación un valor a la constante.
 
 Ejemplos:
@@ -61,7 +61,7 @@ En la declaración: si tenemos una variable “ y ” por ejemplo, y está decla
 
 Lo mismo ocurriría para declarar una estructura que ya esta declarada como por ejemplo una tabla que ya tenemos declarada:
 
-{% highlight sql %}J employee%rowtype; <span class="comentario">--J tendría la misma estructura que la tabla employee.</span>
+{% highlight sql %}J employee%rowtype; --J tendría la misma estructura que la tabla employee.
 {% endhighlight %}
 
 En este caso para acceder a cada campo que tuviera el tabla employee mediante la variable J tendríamos que usar la estructura variable.nombre_campo.

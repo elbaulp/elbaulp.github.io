@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - C
 ---
@@ -24,7 +24,7 @@ categories:
 </div>
 
 Consideremos una clase denominada Punto, con tres miembros dato: dos variables enteras x e y que se usan para guardar las coordenadas de un punto de la pantalla, y una variable del tipo char, ch, que se usa para visualizar el punto en una pantalla de texto. Vamos a declarar y definir dos funciones miembro que permitan mostrar u ocultar el punto. De este modo, la clase Punto no solamente sirve para guardar datos, sino también para usar dichos datos. Los pasos para definir la clase, crear un objeto perteneciente a dicha clase y llamar desde dicho objeto a las funciones miembro o métodos de la clase se exponen a continuación.  
-  
+
 <!--ad-->
 
 ## Definir la clase
@@ -34,13 +34,13 @@ Consideremos una clase denominada Punto, con tres miembros dato: dos variables e
 Se declaran las variables que van a guardar los datos, y las funciones que van a manipular dichos datos. Se sitúan convenientemente los controladores de acceso a la clase public o private (por defecto), teniendo en cuenta la regla general de que una clase debe ocultar tanta información como sea posible.
 
 {% highlight bash %}class Punto{
-  int x;          <span class="comentario">//miembros dato</span>
+  int x;          //miembros dato
   int y;
   char ch;
 
 public:
 
-  void mostrar(); <span class="comentario">//miembros función</span>
+  void mostrar(); //miembros función
   void ocultar();
 };
 {% endhighlight %}
@@ -61,7 +61,7 @@ void <b>Punto::ocultar() {
 
 
 <p>
-  
+
 </p>
 
 

@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -33,7 +33,7 @@ tags:
 Los índices sirven para mejorar el rendimiento de las consultas. El optimizador de Oracle los utiliza implícitamente y se actualizan de forma automática al actualizar las filas.
 
 En general, los índices se crean sobre todas las claves externas y sobre los criterios de búsqueda actuales.  
-  
+
 <!--ad-->
 
 {% highlight sql %}CREATE [unique] INDEX nombre_indice
@@ -43,7 +43,7 @@ ON nombre_tabla (columnas [{asc | desc}] [,.....])
 
 Ejemplo:
 
-{% highlight sql %}<span class="comentario">-- Creacion de un índice en una columna simple para hacer las consultas más rápidas</span>
+{% highlight sql %}-- Creacion de un índice en una columna simple para hacer las consultas más rápidas
 CREATE INDEX emp_hiredate_idx ON employees (hire_date);
 {% endhighlight %}
 
@@ -59,14 +59,14 @@ Cuando se borra una tabla, automáticamente se borran los índices asociados a e
 
 ### Creación de una secuencia
 
-Las secuencias se utilizan para generar números de forma automática, sin embargo, esto no garantiza la ausencia de ‘huecos’: si se solicitan números a una secuencia y no se utilizan, estos valores se pierdan. 
+Las secuencias se utilizan para generar números de forma automática, sin embargo, esto no garantiza la ausencia de ‘huecos’: si se solicitan números a una secuencia y no se utilizan, estos valores se pierdan.
 
 {% highlight sql %}CREATE SEQUENCE Nombre_secuencia
 [INCREMENT BY entero]
 [START WITH entero]
 [{MAXVALUE entero | NOMAXVALUE}]
 [{MINVALUE entero | NOMINVALUE}]
-[{CYCLE | NOCYCLE}] [{ORDER | NOODER}] 
+[{CYCLE | NOCYCLE}] [{ORDER | NOODER}]
 {% endhighlight %}
 
 
@@ -80,28 +80,22 @@ Ejemplo:
 
 {% highlight sql %}CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
 
-<span class="comentario">-- Para usar la secuencia, primero hay que inicializarla con nextval</span>
+-- Para usar la secuencia, primero hay que inicializarla con nextval
 
 SELECT new_employees_seq.NEXTVAL FROM DUAL;
 
-<span class="comentario">--Despues de inicializarla, usamos currval para usar el valor actual</span>
+--Despues de inicializarla, usamos currval para usar el valor actual
 
-INSERT INTO employees VALUES 
+INSERT INTO employees VALUES
   (new_employees_seq.CURRVAL, 'Pilar', 'Valdivia', 'pilar.valdivia',
   '555.111.3333', '01-SEP-05', 'AC_MGR', 9100, .1, 101, 110);
 
-<span class="comentario">--Consultamos la tabla de trabajadores para comprobar el valor actual de la secuencia.</span>
+--Consultamos la tabla de trabajadores para comprobar el valor actual de la secuencia.
 
 SELECT employee_id, last_name FROM employees WHERE last_name = 'Valdivia';
 {% endhighlight %}
 
-
-
-* * *</p> 
-
 #### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas][1] {.referencia}
-
-
 
  [1]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
 

@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - C
 ---
@@ -24,7 +24,7 @@ categories:
 </div>
 
 Ya hemos visto como [definir una clase][1], y como crear un [constructor][2] para ella. Ahora vamos a ver como destruir un objeto creado.  
-  
+
 <!--ad-->
 
 El destructor es una función especial, que tiene el mismo nombre que la clase  
@@ -42,7 +42,7 @@ dos mensajes idénticos (objeto de la clase Punto destruido).
 {% highlight bash %}int (main){
   Punto ptl(‘*’, 20, 10);
   Punto def;
-  <span class="comentario">//...</span>
+  //...
   return 0;
 }
 {% endhighlight %}
@@ -54,7 +54,7 @@ también fuera de la clase.
 
 {% highlight bash %}class Punto{
   public:
-    <span class="comentario">//...</span>
+    //...
     ~Punto() { cout< <"nobjeto Punto destruido"; }
 };
 {% endhighlight %}

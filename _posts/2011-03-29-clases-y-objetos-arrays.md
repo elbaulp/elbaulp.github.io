@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - C
 ---
@@ -31,17 +31,17 @@ se reserva espacio en memoria para un array de 3 enteros. Se inicializan, se usa
 último, se libera dicho espacio en memoria reservado cuando ya no se precisa más el  
 array.
 
-  
+
 <!--ad-->
 
-{% highlight bash %}<span class="comentario">//se reserva espacio en memoria para un array de 3 elementos</span>
+{% highlight bash %}//se reserva espacio en memoria para un array de 3 elementos
 int* ip=new int[3];
-<span class="comentario">//se inicializan los elementos del array</span>
+//se inicializan los elementos del array
 ip[0]=1;
 ip[1]=2;
 ip[3]=3;
-<span class="comentario">//... se usa el array</span>
-<span class="comentario">//se libera la porción de memoria reservada</span>
+//... se usa el array
+//se libera la porción de memoria reservada
 delete[] ip;
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ un máximo de 20.
 
 {% highlight bash %}char* cp= new char[20];
 strcpy(cp, “esto es una cadena”);
-<span class="comentario">//... se usa el array</span>
+//... se usa el array
 delete[] cp;
 {% endhighlight %}
 
@@ -64,17 +64,17 @@ Luego inicializamos dichos objetos, llamando al constructor. Hacemos uso de los
 objetos, y por último, liberamos el espacio de memoria reservada.  
 
 
-{% highlight bash %}<span class="comentario">//reserva espacio para tres elementos</span>
+{% highlight bash %}//reserva espacio para tres elementos
 <b>Punto* objs= new Punto[3];</b>
-<span class="comentario">//inicializa los elementos del array</span>
+//inicializa los elementos del array
 objs[0]=Punto();
 objs[1]=Punto(‘+’,40,5);
 objs[2]=Punto(60,10);
-<span class="comentario">//desde cada elemento se llama a las funciones miembro</span>
+//desde cada elemento se llama a las funciones miembro
 objs[1].mostrar();
-<span class="comentario">//destructor del array</span>
+//destructor del array
 delete[] objs;
-<span class="comentario">//llama tres veces al destructor</span>
+//llama tres veces al destructor
 {% endhighlight %}
 
 
@@ -86,15 +86,15 @@ Punto. Luego asignamos las direcciones de los objetos creados a los elementos de
 array, hacernos uso de los punteros a objetos, y por último, liberamos el espacio de  
 memoria reservada, destruyendo cada elemento del array, y el array mismo.
 
-{% highlight bash %}<span class="comentario">//reserva espacio para tres elementos</span>
+{% highlight bash %}//reserva espacio para tres elementos
 <b>Punto** pObjs=new Punto*[3];</b>
-<span class="comentario">//inicializa los elementos del array</span>
+//inicializa los elementos del array
 pObjs[0l=new Punto(10, 20);
 pObjs[l]=new Punto('+', 40, 5);
 pObjs[2]=new Punto(‘@’, 60, 10);
-<span class="comentario">//desde cada elemento se llama a las funciones miembro</span>
-<span class="comentario">//pObjs[1] mostrar();</span>
-<span class="comentario">//destrucción del array</span>
+//desde cada elemento se llama a las funciones miembro
+//pObjs[1] mostrar();
+//destrucción del array
 for (int i=0; i<3; i++)
    delete pObjs[i];
 delete[] pObjs;
@@ -117,10 +117,10 @@ Podemos usar los operadores unarios ++ y &#8212; para acceder a elementos
 consecutivos del array objs del siguiente modo:  
 
 
-{% highlight bash %}<span class="comentario">//objs es objs[0]</span>
-objs++;          <span class="comentario">//avanza a objs[1]</span>
-objs++;          <span class="comentario">//avanza a objs[2]</span>
-objs--;          <span class="comentario">//retrocede a objs[1]</span>
+{% highlight bash %}//objs es objs[0]
+objs++;          //avanza a objs[1]
+objs++;          //avanza a objs[2]
+objs--;          //retrocede a objs[1]
 {% endhighlight %}
 
 

@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -37,19 +37,19 @@ A la hora de guardar un bloque de código hay que tener en cuenta ciertas normas
   * La palabra reservada DECLARE desaparece.
   * Podremos crear procedimientos y funciones. Los procedimientos no podrán retornar ningún valor sobre su nombre, mientras que las funciones deben retornar un valor de un tipo de dato básico.
 
-  
+
 <!--ad-->
 
-  
+
 Un procedimiento [almacenado] es un subprograma que ejecuta una acción específica y que no devuelve ningún valor por si mismo, como sucede con las funciones. Un procedimiento tiene un nombre, un conjunto de parámetros (opcional) y un bloque de código. Para crear un procedimiento (stored procedure: procedimiento almacenado) usaremos la siguiente sintaxis:
 
 {% highlight sql %}CREATE {OR REPLACE} PROCEDURE nombre_proc( param1 [IN | OUT | IN OUT] tipo,... )
 IS
-  <span class="comentario">-- Declaración de variables locales</span>
+  -- Declaración de variables locales
   BEGIN
-  <span class="comentario">-- Instrucciones de ejecución</span>
+  -- Instrucciones de ejecución
   [EXCEPTION]
-  <span class="comentario">-- Instrucciones de excepción</span>
+  -- Instrucciones de excepción
 END;
 {% endhighlight %}
 
@@ -63,7 +63,7 @@ Al especificar el tipo de dato del parámetro no debemos especificar la longitud
 {% highlight sql %}CREATE OR REPLACE
 PROCEDURE Actualiza_Saldo(cuenta NUMBER, new_saldo NUMBER)
 IS
-  <span class="comentario">-- Declaracion de variables locales</span>
+  -- Declaracion de variables locales
 BEGIN
   UPDATE SALDOS_CUENTAS
     SET SALDO = new_saldo,
@@ -104,7 +104,7 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE( 'Hoy es ' || TO_CHAR(SYSDATE, ' DD/MM/YYYY') );
 END today_is;
 
-<span class="comentario">-- para ejecutarlo</span>
+-- para ejecutarlo
 SET SERVEROUTPUT ON;
 BEGIN
   today_is(); -- the parentheses are optional here
@@ -116,13 +116,13 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE( 'Hoy es ' || TO_CHAR(fecha, ' DD/MM/YYYY') );
 END;
 
-<span class="comentario">-- para ejecutarlo</span>
+-- para ejecutarlo
 SET SERVEROUTPUT ON;
 BEGIN
   today2_is(to_date('01/02/2008')); -- the parentheses are optional here
 END;
 
-<span class="comentario">-- para ejecutarlo</span>
+-- para ejecutarlo
 SET SERVEROUTPUT ON;
 BEGIN
   today2_is(fecha => to_date('01/02/2008')); -- the parentheses are optional here
@@ -134,11 +134,11 @@ END;
 Para crear una función usaremos la siguiente sintaxis:
 
 {% highlight sql %}CREATE {OR REPLACE} FUNCTION nombre_func(param1 tipo,param2 tipo,... ) RETURN tipo_dato IS
-  <span class="comentario">-- Declaración de variables locales</span>
+  -- Declaración de variables locales
 BEGIN
-  <span class="comentario">-- Instrucciones de ejecución</span>
+  -- Instrucciones de ejecución
 [EXCEPTION]
-  <span class="comentario">-- Instrucciones de excepción</span>
+  -- Instrucciones de excepción
 END;
 {% endhighlight %}
 

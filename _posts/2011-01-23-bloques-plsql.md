@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 ---
@@ -28,12 +28,12 @@ Los bloques PL/SQL son de varios tipos:
   * **Anónimos (Anonymous blocks).** Se construyen de forma dinámica y se ejecutan una sola vez.
   * **Con nombre (Named blocks).** Son bloques con nombre, que al igual que el anterior se construyen, generalmente, de forma dinámica y se ejecutan una sola vez.
   * **Subprogramas.** Procedimientos, paquetes o funciones almacenados en la BD. No suelen cambiar después de su construcción y se ejecutan múltiples veces mediante una llamada call.
-  * Disparadores(Triggers). Son bloques con nombre que también se almacenan en la BD. Tampoco suelen cambiar después de su construcción y se ejecutan varias veces. Se ejecutan de forma automática ante algún suceso de disparo, que será una orden del lenguaje de manipulación de datos (INSERT, UPDATE o DELETE) que se ejecuta sobre una tabla de la BD. 
+  * Disparadores(Triggers). Son bloques con nombre que también se almacenan en la BD. Tampoco suelen cambiar después de su construcción y se ejecutan varias veces. Se ejecutan de forma automática ante algún suceso de disparo, que será una orden del lenguaje de manipulación de datos (INSERT, UPDATE o DELETE) que se ejecuta sobre una tabla de la BD.
 
-  
+
 <!--ad-->
 
-  
+
 Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas:
 
   * La **sección declarativa** en donde se declaran todas las constantes y variables que se van a utilizar en la ejecución del bloque. Esta sección es opcional.
@@ -44,11 +44,11 @@ Cada una de las partes anteriores se delimita por una palabra reservada, de modo
 PL/SQL se puede representar como sigue:
 
 {% highlight sql %}[DECLARE
-  Declaración de variables] <span class="comentario">/*Parte declarativa*/</span>
+  Declaración de variables] /*Parte declarativa*/
 BEGIN
-  Sentencias SQL y PL/SQL <span class="comentario">/*Parte de ejecucion*/</span>
+  Sentencias SQL y PL/SQL /*Parte de ejecucion*/
 [EXCEPTION
-  Manejadores de excepciones] <span class="comentario">/*Parte de excepciones*/</span>
+  Manejadores de excepciones] /*Parte de excepciones*/
 END;
 
 {% endhighlight %}
@@ -74,10 +74,6 @@ Para que la salida pueda verse al ejecutar el programa tiene que estar activa la
 Para mostrar el contenido de una expresión se debe utilizar la sentencia:
 
 {% highlight sql %}DBMS_OUTPUT.PUT_LINE (cadena_caracteres);{% endhighlight %}
-
-
-
-* * *
 
 #### Siguiente Tema: [PL/SQL &#8211; Declaración de variables][1] {.referencia}
 

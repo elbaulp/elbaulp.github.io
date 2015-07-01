@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - C
 ---
@@ -28,9 +28,9 @@ denomina inline.
 <!--ad-->
 
 {% highlight bash %}class Punto.{
-  <span class="comentarios">//...</span>
+  //...
 public:
-  <span class="comentarios">//...</span>
+  //...
   int gety () {return y;}
 };
 {% endhighlight %}

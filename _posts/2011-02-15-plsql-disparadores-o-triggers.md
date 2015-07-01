@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -121,53 +121,53 @@ Tipos de disparadores.
     <th>
       Categoria
     </th>
-    
+
     <th>
       Valores
     </th>
-    
+
     <th>
       Comentarios
     </th>
   </tr>
-  
+
   <tr>
     <td>
       Orden
     </td>
-    
+
     <td>
       INSERT, DELETE, UPDATE
     </td>
-    
+
     <td>
       Define que tipo de operación <a href="http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a> provoca la<br /> activación del trigger
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Temporalización
     </td>
-    
+
     <td>
       BEFORE o AFTER
     </td>
-    
+
     <td>
       Define si el disparador se activa antes o después de<br /> que se ejecute la operación <a href="http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Nivel
     </td>
-    
+
     <td>
       Fila u Orden
     </td>
-    
+
     <td>
       Los disparadores con nivel de fila se activan una<br /> vez por cada fila afectada por la orden que provocó<br /> el disparo. Los Triggers con nivel de orden se<br /> activan sólo una vez, antes o después de la orden.<br /> Los disparadores con nivel de fila se identifican<br /> por la cláusula FOR EACH ROW en la definición<br /> del disparador.
     </td>
@@ -219,53 +219,53 @@ En principio tanto :old como :new son del tipo **tabla_disparo%ROWTYPE;**
     <th>
       Orden de Disparo
     </th>
-    
+
     <th>
       :old
     </th>
-    
+
     <th>
       :new
     </th>
   </tr>
-  
+
   <tr>
     <td>
       INSERT
     </td>
-    
+
     <td>
       No definido; todos los campos toman<br /> el valor NULL.
     </td>
-    
+
     <td>
       Valores que serán insertados cuando<br /> se complete la orden
     </td>
   </tr>
-  
+
   <tr>
     <td>
       UPDATE
     </td>
-    
+
     <td>
       Valores originales de la fila, antes de<br /> la actualización.
     </td>
-    
+
     <td>
       Nuevos valores que serán escritos<br /> cuando se complete la orden.
     </td>
   </tr>
-  
+
   <tr>
     <td>
       DELETE
     </td>
-    
+
     <td>
       Valores originales, antes del borrado<br /> de la fila.
     </td>
-    
+
     <td>
       No definido; todos los campos toman<br /> el valor NULL.
     </td>
@@ -294,13 +294,13 @@ BEGIN
 
   SELECT COUNT(*) INTO dummy FROM company_holidays
   WHERE day = TRUNC(SYSDATE);
-  IF dummy > 0 THEN 
+  IF dummy > 0 THEN
     raise_application_error( -20501,'May not change employee table during a holiday');
   END IF;
 
   /*If the current time is before 8:00AM or after
   6:00PM, then return an error. */
- 
+
   IF (TO_CHAR(SYSDATE, 'HH24') < 8 OR TO_CHAR(SYSDATE, 'HH24') >= 18) THEN
     raise_application_error( -20502, 'May only change employee table during working hours');
   END IF;
@@ -335,7 +335,7 @@ Esto último es equivalente a:
   FOR EACH ROW
 BEGIN
   IF :new.job <> 'PRESIDENT' THEN
-    <span class="comentario">/* Cuerpo del disparador */</span>
+    /* Cuerpo del disparador */
   END IF;
 END;
 

@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -45,18 +45,18 @@ La sintaxis básica es:
   Bloque de instrucciones;]
 END IF;{% endhighlight %}
 
-  
+
 <!--ad-->
 
-  
+
 Como en cualquier lenguaje de programación, &#8220;condición&#8221; es cualquier expresión que de cómo resultado un valor booleano. Hay que saber que las estructuras IF se pueden anidar unas dentro de otras.
 
 #### IF &#8211; THEN
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa o nula**, NO se realiza NINGUNA acción.
 
-{% highlight sql %}IF fecha_nac < '1-01-1970' THEN   <span class="comentario">--No termina con un ;</span>
-  Salario := salario *1.15;       <span class="comentario">--aumento de salario en un 15%</span>
+{% highlight sql %}IF fecha_nac < '1-01-1970' THEN   --No termina con un ;
+  Salario := salario *1.15;       --aumento de salario en un 15%
 END IF;{% endhighlight %}
 
 Se pueden anidar varias instrucciones:
@@ -94,14 +94,14 @@ ELSE
 END IF;{% endhighlight %}
 
 {% highlight sql %}IF apellido =„Pérez‟ THEN
-  salario:= salario *1.10;     <span class="comentario">--aumento de salario en un 10%</span>
+  salario:= salario *1.10;     --aumento de salario en un 10%
 ELSIF apellido =‘Martínez’ THEN
-  salario:= salario *1.15;     <span class="comentario">--aumento de salario en un 15%</span>
+  salario:= salario *1.15;     --aumento de salario en un 15%
 ELSIF apellido=‘Alvarez’ THEN
-  salario:= salario *1.20;     <span class="comentario">--aumento de salario en un 20%</span>
+  salario:= salario *1.20;     --aumento de salario en un 20%
 ELSE
-  salario:= salario* 1.05;     <span class="comentario">--aumento de salario en un 5%</span>
-END IF;                        <span class="comentario">--Sólo se necesita un único END IF</span>{% endhighlight %}
+  salario:= salario* 1.05;     --aumento de salario en un 5%
+END IF;                        --Sólo se necesita un único END IF{% endhighlight %}
 
 #### CASE
 
@@ -180,14 +180,14 @@ END LOOP;{% endhighlight %}
 
 Ejemplo:
 
-{% highlight sql %}DECLARE <span class="comentario">-- Declaración y asignación de variables</span>
+{% highlight sql %}DECLARE -- Declaración y asignación de variables
   total NUMBER(9) := 0;
   counter NUMBER(6) := 0;
 BEGIN
   LOOP
-    counter := counter + 1; <span class="comentario">-- Incrementamos la variable contador</span>
-    total := total + counter * counter; 
-    <span class="comentario">-- Salimos del bucle cuando la condición de cumpla</span>
+    counter := counter + 1; -- Incrementamos la variable contador
+    total := total + counter * counter;
+    -- Salimos del bucle cuando la condición de cumpla
     EXIT WHEN total &gt; 25000;
   END LOOP;
 

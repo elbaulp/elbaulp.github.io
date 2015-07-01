@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 ---
@@ -31,10 +31,10 @@ Su sintaxis es :
 <table_source&gt; ::= table_name | view_name | derived_table | <joined_table&gt;
 {% endhighlight %}
 
-  
+
 <!--ad-->
 
-  
+
 Es posible hacer consultas que incluyan más de una tabla dentro de la cláusula FROM, es  
 los que llamamos **JOIN o yunción**. Esto se realiza cuando necesitamos acceder a datos que se  
 encuentran en más de una tabla.
@@ -70,39 +70,39 @@ En Oracle 9i, 10g y posteriores se puede realizar un JOIN natural mediante la si
 JOIN ... USING; en este caso, las columnas por las que se hace la yunción deben tener el mismo  
 nombre.
 
-{% highlight sql %}<span class="comentario">-- El siguiente select devuelve datos de 3 tablas
+{% highlight sql %}-- El siguiente select devuelve datos de 3 tablas
 -- Dos tablas tienen un campo departament_id y
--- dos tablas tiene un campo location_id</span>
+-- dos tablas tiene un campo location_id
 SELECT e.employee_id, e.last_name, e.first_name, e.department_id,
 d.department_name, d.manager_id, d.location_id, l.country_id
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id
 JOIN locations l ON d.location_id = l.location_id
 WHERE l.location_id = 1700;
-<span class="comentario">-- Este select devuelve datos de la tabla employees, mostrando eployeed_id y last_name, junto con manager_id y last_name, haciendo un auto-join
--- Las tablas tienen un alias, e y m </span>
+-- Este select devuelve datos de la tabla employees, mostrando eployeed_id y last_name, junto con manager_id y last_name, haciendo un auto-join
+-- Las tablas tienen un alias, e y m
 SELECT e.employee_id emp_id, e.last_name emp_lastname, m.employee_id mgr_id, m.last_name
 mgr_lastname
 FROM employees e
 JOIN employees m ON e.manager_id = m.employee_id;
 
-<span class="comentario">-- Usando left outer join
+-- Usando left outer join
 -- todas las filas de la tabla de la izquierda se muestran (employees) incluso
--- si no hay coincidencia con la tabla de la deracha (departments)</span>
+-- si no hay coincidencia con la tabla de la deracha (departments)
 SELECT e.employee_id, e.last_name, e.department_id,
 d.department_name
 FROM employees e
 LEFT OUTER JOIN departments d
 ON (e.department_id = d.department_id);
-<span class="comentario">-- the following uses a RIGHT OUTER JOIN
+-- the following uses a RIGHT OUTER JOIN
 -- Se muestran todas las filas de la tabla de la derecha (departments) incluso si
--- no hay coincidencias con la tabla de la izquierda (employees)</span>
+-- no hay coincidencias con la tabla de la izquierda (employees)
 SELECT e.employee_id, e.last_name, d.department_id,d.department_name
 FROM employees e
 RIGHT OUTER JOIN departments d
 ON (e.department_id = d.department_id);
-<span class="comentario">-- the following uses a FULL OUTER JOIN
--- Se muestran todos tanto de la tabla de la derecha como de la izquierda</span>
+-- the following uses a FULL OUTER JOIN
+-- Se muestran todos tanto de la tabla de la derecha como de la izquierda
 SELECT e.employee_id,e.last_name, d.department_id, d.department_name
 FROM employees e
 FULL OUTER JOIN departments d
@@ -137,7 +137,7 @@ SELECT * FROM CLIENTES c ,FACTURAS f
 WHERE c.ccodcli = f.ccodcli(+);
 SELECT * FROM CLIENTES c ,FACTURAS f
 WHERE c.ccodcli(+) = f.ccodcli;
-<span class="comentario">-- ERROR ORA-01468: un predicado sólo puede hacer referencia a una tabla de unión externa</span>
+-- ERROR ORA-01468: un predicado sólo puede hacer referencia a una tabla de unión externa
 SELECT * FROM CLIENTES c ,FACTURAS f
 WHERE c.ccodcli(+) = f.ccodcli(+);
 SELECT * FROM CLIENTES c
@@ -152,10 +152,6 @@ SELECT * FROM CLIENTES c
 FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 
 {% endhighlight %}
-
-
-
-* * *
 
 #### Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] {.referencia}
 

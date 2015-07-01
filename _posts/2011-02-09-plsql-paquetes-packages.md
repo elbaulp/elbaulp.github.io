@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -29,7 +29,7 @@ tags:
 Además de brindarnos múltiples elementos que nos permiten desarrollar una aplicación robusta, Oracle nos ofrece la posibilidad de programar en forma modular, clara y eficiente. En este apartado veremos cómo embeber [procedimientos, funciones][1], definiciones de tipos de datos y [declaraciones de variables][2] en una misma estructura que los agrupe y relacione lógicamente. Esta estructura se denomina Package (Paquete) y su uso nos permite no sólo mejorar la calidad de diseño de nuestras aplicaciones sino también optimizar el desempeño de las mismas.
 
 Un Paquete es un objeto PL/Sql que agrupa lógicamente otros objetos PL/Sql relacionados entre sí, encapsulándolos y convirtiéndolos en una unidad dentro de la base de datos.  
-  
+
 <!--ad-->
 
 Los Paquetes están divididos en 2 partes: especificación (obligatoria) y cuerpo (no obligatoria). La especificación o encabezado es la interfaz entre el Paquete y las aplicaciones que lo utilizan y es allí donde se declaran los tipos, variables, constantes, [excepciones][3], [cursores][4], procedimientos y funciones que podrán ser invocados desde fuera del paquete.
@@ -45,13 +45,13 @@ ejemplo, inicializarse variables que utiliza el paquete. La sección de iniciali
 
 Como hemos dicho anteriormente, la creación de un paquete pasa por dos fases:
 
-  * Crear la cabecera del paquete donde se definen que procedimientos, funciones, variables, cursores, etc. Disponibles para su uso posterior fuera del paquete. En esta parte solo se declaran los objetos, no se implementa el código. 
-  * Crear el cuerpo del paquete, donde se definen los bloques de código de las funciones y procedimientos definidos en la cabecera del paquete. 
+  * Crear la cabecera del paquete donde se definen que procedimientos, funciones, variables, cursores, etc. Disponibles para su uso posterior fuera del paquete. En esta parte solo se declaran los objetos, no se implementa el código.
+  * Crear el cuerpo del paquete, donde se definen los bloques de código de las funciones y procedimientos definidos en la cabecera del paquete.
 
 Para crear la cabecera del paquete utilizaremos la siguiente instrucción:
 
 {% highlight sql %}CREATE {OR REPLACE} PACKAGE nombre_de_paquete IS
-<span class="comentario">-- Declaraciones</span>
+-- Declaraciones
 END;
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ END;
 Para crear el cuerpo del paquete utilizaremos la siguiente instrucción:
 
 {% highlight sql %}CREATE {OR REPLACE} PACKAGE BODY nombre_paquete IS
-<span class="comentario">--Bloques de código</span>
+--Bloques de código
 END;
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ CREATE OR REPLACE PACKAGE BODY PK1 IS
     xfam Articulos.cArtFml%type;
     xCod Articulos.cArtCdg%TYPE;
     xDes Articulos.cArtDsc%TYPE;
-    
+
     CURSOR cArticulos IS SELECT cArtCdg,cArtDsc FROM Articulos
         WHERE cArtFml = xfam;
   BEGIN

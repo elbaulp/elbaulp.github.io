@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - linux
   - script
@@ -40,41 +40,42 @@ El unico requisito es que tengais instalado zenity (que casi siempre vien por de
 
 Aqui os dejo el codigo:
 
-{% highlight bash %}<span class="path">#!/bin/bash</span>
-<span class="bash">IFS</span>='
+{% highlight bash %}
+#!/bin/bash
+IFS='
 '
 DIR=`zenity --file-selection --directory --title="Selecciona los archivos a copiar"`
 
-<span class="bash">case</span> $? <span class="bash">in</span>
+case $? in
   0)
     DES=`zenity --file-selection --directory --title="Selecciona destino"`
-    <span class="bash">case</span> $? <span class="bash">in</span>
+    case $? in
     0)
-      <span class="bash">echo</span> "Ruta destino "$DES" seleccionado."
-      <span class="bash">echo</span> "Ruta origen "$DIR" seleccionado."
+      echo "Ruta destino "$DES" seleccionado."
+      echo "Ruta origen "$DIR" seleccionado."
       datos=$(ls -p "$DIR")
-      <span class="bash">echo</span> "--------------------"
-      nuevaCarpeta=$(<span class="bash">echo</span> "$DIR" | <span class="bash">sed</span> -n 's//.*///gp') <span class="comentario"># Me quedo solo con el nombre de la carpeta destino</span>
-      <span class="bash">cd</span> "$DES"
+      echo "--------------------"
+      nuevaCarpeta=$(echo "$DIR" | sed -n 's//.*///gp') # Me quedo solo con el nombre de la carpeta destino
+      cd "$DES"
       mkdir "$nuevaCarpeta"
-      <span class="bash">cd</span> "$nuevaCarpeta"
-      cp -v "$DIR"/*.mp3 "$DES/$nuevaCarpeta" <span class="comentario">#Copio lo que hay en la raiz de esa carpeta</span>
-      <span class="bash">for</span> carpeta <span class="bash">in</span> $datos
-      <span class="bash">do</span>
-        <span class="bash">if</span> [ -d "$DIR/$carpeta" ] ; <span class="bash">then</span>
-          <span class="bash">cd</span> "$DIR/$carpeta"
+      cd "$nuevaCarpeta"
+      cp -v "$DIR"/*.mp3 "$DES/$nuevaCarpeta" #Copio lo que hay en la raiz de esa carpeta
+      for carpeta in $datos
+      do
+        if [ -d "$DIR/$carpeta" ] ; then
+          cd "$DIR/$carpeta"
           cp -v *.mp3 "$DES/$nuevaCarpeta"
-        <span class="bash">fi</span>
-      <span class="bash">done</span>              
+        fi
+      done
       ;;
     *)
-      <span class="bash">echo</span> "no selecciono nada.";;
-      <span class="bash">esac</span>                                                      
-    ;; <span class="comentario"># Fin del <span class="bash">case</span> 0) principal</span>
+      echo "no selecciono nada.";;
+      esac
+    ;; # Fin del case 0) principal
   *)
-    <span class="bash">echo</span> "No selecciono nada.";;
-    <span class="bash">esac</span>
-<span class="bash">IFS</span>=' '
+    echo "No selecciono nada.";;
+    esac
+IFS=' '
 
 {% endhighlight %}
 

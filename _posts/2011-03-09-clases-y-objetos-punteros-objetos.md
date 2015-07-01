@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - C
 ---
@@ -29,7 +29,7 @@ las funciones **malloc y free**. La ventaja principal estriba en que **new y del
 parte del lenguaje C++, no son funciones de una librería. Hay dos tipos de operadores  
 new y delete, según traten o no con arrays. En el segundo caso, **operator new**( admite  
 opcionalmente una inicialización. La sentencia:  
-  
+
 <!--ad-->
 
 {% highlight bash %}int* int_ptr= new int(3);
@@ -64,9 +64,9 @@ con otras variables:
 dirección del comienzo del bloque que ocupa dicho objeto en memoria, y luego se llama  
 a un constructor, inicializando los miembros dato.
 
-{% highlight bash %}ptro_pt=new Punto('*', 20, 10); <span class="comentarios">//primer constructor</span>
-ptro_pt=new Punto(20, 10);      <span class="comentarios">//segundo constructor</span>
-ptro_pt=new Punto();            <span class="comentarios">//constructor por defecto</span>
+{% highlight bash %}ptro_pt=new Punto('*', 20, 10); //primer constructor
+ptro_pt=new Punto(20, 10);      //segundo constructor
+ptro_pt=new Punto();            //constructor por defecto
 {% endhighlight %}
 
 &#8211;Para acceder a los miembros públicos de la clase se utiliza la flecha(-». Por  
@@ -85,7 +85,7 @@ desde un puntero a un objeto se escribirá:
 delete, en cualquier momento en el que no necesitemos ya más del objeto reverenciado  
 por ptro_pt, sin esperar a que se alcance el final del bloque de su ámbito de definición.
 
-{% highlight bash %}delete ptro_pt;   <span class="comentarios">//llama al destructor</span>
+{% highlight bash %}delete ptro_pt;   //llama al destructor
 {% endhighlight %}
 
 * * *

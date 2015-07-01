@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -43,7 +43,7 @@ En estos casos es conveniente el uso de sinónimos. La sintaxis para crear un si
 
 La cláusula public hace que el sinónimo este libre para todos los usuarios.
 
-Ejemplo: 
+Ejemplo:
 
 {% highlight sql %}CREATE SYNONYM EMPLEADOSCOTT FROM SCOTT.EMP;{% endhighlight %}
 
@@ -57,18 +57,16 @@ NOTA: Para ver los sinónimos que son propiedad del usuario se utiliza la vista 
 
 ### Pseudocolumnas
 
-Las pesudocolumnas son similares a los campos de una tabla, pero no lo son, aunque si pueden ser utilizados en instrucciones DML (Select, Insert…). 
+Las pesudocolumnas son similares a los campos de una tabla, pero no lo son, aunque si pueden ser utilizados en instrucciones DML (Select, Insert…).
 
 Oracle proporciona varias de ellas, entre las cuales, se encuentran: *SYSDATE* que nos devuelve la fecha y hora actual del S.O donde reside la base de datos,* USER* que nos devuelve el nombre del usuario de la sesión actual y *ROWNUM* que nos sirve para limitar el número de registros que nos devuelve una consulta.
 
-Ejemplos: 
+Ejemplos:
 
 {% highlight sql %}SELECT SYSDATE "Fecha actual" FROM DUAL;
 SELECT USER FROM DUAL;
-<span class="comentario">-- usando ROWNUM < 10 limitamos el número de filas devueltas a 10</span>
+-- usando ROWNUM < 10 limitamos el número de filas devueltas a 10</span>
 SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;{% endhighlight %}
-
-* * *
 
 #### Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] {.referencia}
 
