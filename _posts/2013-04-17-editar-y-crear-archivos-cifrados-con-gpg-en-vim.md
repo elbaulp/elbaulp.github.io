@@ -15,7 +15,9 @@ tags:
   - gpg vim plugin
   - vim plugin
 ---
-<img src="/images/2013/04/GnuPG-Logo.png" alt="Editar y crear archivos cifrados con GPG en Vim" title="Editar y crear archivos cifrados con GPG en Vim" width="400" height="175" class="thumbnail aligncenter size-full wp-image-1519" />
+<figure>
+<img src="/images/2013/04/GnuPG-Logo.png" alt="Editar y crear archivos cifrados con GPG en Vim" title="Editar y crear archivos cifrados con GPG en Vim" width="400" height="175" />
+</figure>
 
 Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo **gpg** (*GNU Privacy Guard*).
 
@@ -25,7 +27,7 @@ Me permito extraer el la definición de genbeta::Dev. Para una explicación más
 
 > *Antes de empezar con lo interesante tenemos que saber que es **gpg** (GNU Privacy Guard), que es un derivado libre de **PGP** y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (<a href="http://www.gnupg.org/download/index.en.html" target="_blank">podéis descargarlo desde la página oficial</a>) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).*
 
-  
+
 <!--ad-->
 
 ### Instalar el plugin para Vim
@@ -52,7 +54,7 @@ Para usar vim con este plugin es necesario que los archivos terminen en las exte
 
 Una vez en Vim, escribimos contenido en el archivo y guardamos con *:wq*. Tras esto, Vim pedirá que introduzcamos la *passphrase* de nuestra llave. En caso de disponer de más de una clave pública en nuestro anillo de llaves GPG, Vim nos dará a escoger con cual cifrar el archivo. Una vez seleccionada la clave el archivo estará listo:
 
-{% highlight bash %}cat test.gpg 
+{% highlight bash %}cat test.gpg
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
