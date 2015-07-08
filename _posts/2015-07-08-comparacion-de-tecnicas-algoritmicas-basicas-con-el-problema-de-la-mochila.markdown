@@ -75,8 +75,8 @@ En el problema de la mochila, la ecuación recursiva que deberíamos seguir ser�
 \begin{equation}
 Mochila(k,m) =
 \begin{cases}
-0 & \text{si } k = 0 \text{ ó } m = 0,\newline
--\infty & \text{si } k<0 \text{ ó } m<0\newline
+0 & \text{si } k = 0 \text{ ó } m = 0,\\
+-\infty & \text{si } k<0 \text{ ó } m<0\\
 max\{Mochila(k-1,m), b_k + Mochila(k-1,m-p_k)\}
 \end{cases}
 \end{equation}
