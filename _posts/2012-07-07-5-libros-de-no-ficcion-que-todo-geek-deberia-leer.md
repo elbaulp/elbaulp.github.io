@@ -1,6 +1,6 @@
 ---
 id: 790
-title: 14 Libros de No-Ficción que todo Geek debería leer
+title: 16 Libros de No-Ficción que todo Geek debería leer
 
 excerpt: |
   Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
@@ -19,7 +19,7 @@ tags:
   - geek
   - libros
   - libros geek
-modified: 2015-07-01T18:39:00+00:00
+modified: 2015-07-09T13:23:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:
   feature:
@@ -30,6 +30,26 @@ image:
 Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
 
 Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
+
+### En el principio fue la línea de comandos: de Neal Stephenson (Gracias a Miguel)
+
+<figure>
+  <img src="/images/En el principio fue la línea de comandos: de Neal Stephenson.jpg" title="En el principio fue la línea de comandos: de Neal Stephenson" alt="En el principio fue la línea de comandos: de Neal Stephenson">
+</figure>
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/gp/product/B00HCO2RJ4/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00HCO2RJ4&linkCode=as2&tag=elbaudelpro-21" target="_blank">Ver en Amazon</a>
+</div>
+
+### Software libre para una sociedad libre: de Richard Stallman (Gracias a Miguel)
+
+<figure>
+  <img src="/images/Software libre para una sociedad libre: de Richard Stallman.jpg" title="Software libre para una sociedad libre: de Richard Stallman" alt="Software libre para una sociedad libre: de Richard Stallman">
+</figure>
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/gp/product/8493355518/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8493355518&linkCode=as2&tag=elbaudelpro-21" target="_blank">Ver en Amazon</a>
+</div>
 
 ### Generation Xbox (La Generación Xbox), por Jamie Russell
 
