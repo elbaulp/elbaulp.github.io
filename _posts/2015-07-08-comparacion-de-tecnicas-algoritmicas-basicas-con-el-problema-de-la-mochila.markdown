@@ -72,14 +72,13 @@ La programación dinámica es, por decirlo de una forma intuitiva, una manera it
 
 En el problema de la mochila, la ecuación recursiva que deberíamos seguir sería la siguiente:
 
-\begin{equation}
-Mochila(k,m) =
+$$Mochila(k,m) =
 \begin{cases}
-0 & \text{si } k = 0 \text{ ó } m = 0,\newline
--\infty & \text{si } k<0 \text{ ó } m<0\newline
+0 & \text{si } k = 0 \text{ ó } m = 0,\\
+-\infty & \text{si } k<0 \text{ ó } m<0\\
 max\{Mochila(k-1,m), b_k + Mochila(k-1,m-p_k)\}
 \end{cases}
-\end{equation}
+$$
 
 Es decir, el caso base sería o bien no tener ningún objeto ($$k = 0$$) o que el peso de nuestra mochila sea 0 ($$m = 0$$). El caso general sería quedarnos con lo que más beneficio nos dé: o coger el objeto ($$Mochila (k-1, m-p_k)$$) o no cogerlo ($$Mochila(k-1, m)$$).
 
