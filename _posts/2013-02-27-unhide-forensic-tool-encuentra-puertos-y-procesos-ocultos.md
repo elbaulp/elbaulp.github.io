@@ -14,26 +14,23 @@ tags:
   - unhide
   - unhide forensic tool
 ---
-<img src="/images/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200" height="176" class="thumbnail alignleft size-full wp-image-1378" />
+<figure>
+<img src="/images/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200" height="176" />
+</figure>
 
 Unhide Forensic Tool o simplemente ***Unhide*** es una herramienta forense que permite encontrar los procesos que ocultan los <a href="https://es.wikipedia.org/wiki/Rootkit" target="_blank">RootKits</a>, por módulos del kernel Linux o por otras técnicas.  
-<!--</p>
+
 <ul>
 <li>Compara las salidas /proc frente a /bin/ps</li>
 <li>Compara la información adquirida a partir de /bin/ps con la información recopilada de procfs. <strong>Solo para versiones Linux 2.6</strong></li>
 <li>Compara la información recopilada de /bin/ps con la información de las llamadas al sistema (syscall scannig).</li>
 <li>PIDs bruteforce. <strong>Solo para versiones Linux 2.6</strong></li>
-<li></li>
-<li></li>
 </ul>
-<p>-->
-
-<!-- -->
 
 Está disponible tanto para <a href="http://sourceforge.net/projects/unhide/files/latest/download?source=files" target="_blank">Windows</a> como para <a href="http://sourceforge.net/projects/unhide/files/" target="_blank">Linux</a>.
 
 Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:  
-  
+
 <!--ad-->
 
 {% highlight bash %}gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
@@ -41,7 +38,7 @@ gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
 gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 {% endhighlight %}
 
-**unhide-tcp** es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en [/bin/netstat][1].
+__unhide-tcp__ es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en [/bin/netstat][1].
 
 Los posibles argumentos de cada herramienta son los siguientes:
 
@@ -52,7 +49,7 @@ License GPLv3+ : GNU GPL version 3 or later
 
 http://www.unhide-forensics.info
 
-Usage: ./unhide-tcp [options] 
+Usage: ./unhide-tcp [options]
 
 Options :
    -V          Show version and exit
@@ -76,7 +73,7 @@ License GPLv3+ : GNU GPL version 3 or later
 
 http://www.unhide-forensics.info
 
-NOTE : This version of unhide is for systems using Linux >= 2.6 
+NOTE : This version of unhide is for systems using Linux >= 2.6
 
 Usage: ./unhide-linux [options] test_list
 
@@ -123,10 +120,9 @@ Test_list :
 
 #### Fuente
 
-*Unhide Forensic Tool, Find hidden processes and ports* »» <a href="http://toolsyard.thehackernews.com/2013/02/unhide-forensic-tool-find-hidden.html" target="_blank">toolsyard.thehackernews.com</a> 
+*Unhide Forensic Tool, Find hidden processes and ports* »» <a href="http://toolsyard.thehackernews.com/2013/02/unhide-forensic-tool-find-hidden.html" target="_blank">toolsyard.thehackernews.com</a>
 
 
-
- [1]: /netstat-analizando-la-red-y-detectando-problemas/
+[1]: /netstat-analizando-la-red-y-detectando-problemas/
 
 {% include _toc.html %}
