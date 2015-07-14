@@ -4,14 +4,14 @@ title: Cómo se almacenan tus contraseñas en internet (y cuando la longitud de 
 
 excerpt: |
   Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online.  pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan las contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.
-  
+
   Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algonos de los métodos más populares, y cómo afectan a la seguridad de tus datos.
 layout: post
 guid: /?p=838
 permalink: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Artículos
   - How To
@@ -21,12 +21,20 @@ tags:
   - algoritmos de cifrado
   - metodos de cifrado
   - seguridad
+modified: 2015-07-14T21:00:00+00:00
+date: 2015-07-14T21:00:00+00:00
 ---
-[<img src="/images/2012/07/original2.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-839" />][1]  
+
+{% include _toc.html %}
+
+<figure>
+<img src="/images/2012/07/original2.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-839" />
+</figure>
+
 Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.
 
 Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.  
-  
+
 <!--ad-->
 
 ### Método uno: Contraseñas en texto plano
@@ -83,33 +91,27 @@ A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan 
 
 ### Bcrypt
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S66XVE68NCc" frameborder="0" allowfullscreen></iframe>
 
 ### Rainbow Tables
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SOV0AeHuHaQ" frameborder="0" allowfullscreen></iframe>
 
 ### Crear Salts
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hcWQNwdQVx0" frameborder="0" allowfullscreen></iframe>
 
 ### Hashear Salts
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yBN3r2Fwze8" frameborder="0" allowfullscreen></iframe>
 
 ### Validar Salts
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gDLUM38mm6c" frameborder="0" allowfullscreen></iframe>
 
 ### Validar Salts (Solución)
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zy6eNdzmn1w" frameborder="0" allowfullscreen></iframe>
 
 Imagen | de <a href="http://www.shutterstock.com/pic.mhtml?id=47788978" target="_blank">palsur</a>  
 Fuente | <a href="http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter" target="_blank">LifeHacker</a>
-
-
-
- [1]: /images/2012/07/original2.jpg
-
-{% include _toc.html %}
