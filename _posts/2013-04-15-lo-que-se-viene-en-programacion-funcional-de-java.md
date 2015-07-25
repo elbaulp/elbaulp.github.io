@@ -12,13 +12,14 @@ tags:
   - haskell
   - java 8
   - programacion funcional java
+author: luzila
 ---
 Elliott Rusty Harold <a href="http://cafe.elharo.com/programming/java-programming/why-functional-programming-in-java-is-dangerous/" target="_blank">está anunciando en su blog</a> que la programación funcional en Java es peligrosa. Está equivocado, y ya perdió su turno &#8212; Está viniendo con Java le guste o no.  
 Un resumen de las razones que menciona en su artículo son:  
-  
+
 <!--ad-->
 
-  
+
 1. Java no es un lenguaje de <a href="http://en.wikipedia.org/wiki/Lazy_evaluation" target="_blank">evaluación perezosa</a>. En Java, los programadores pueden enredarse y terminar generando errores con heap y stack.
 
 2. El artículo presenta una implementación simple de código Clojure que al pasarla a lenguaje Java falla en tiempo de ejecución.
@@ -42,7 +43,7 @@ Pero lo que es realemente patético es que esas funcionalidades vienen en Java 8
 
 #### Referencias
 
-*DZone* »» <a href="http://java.dzone.com/articles/functional-programming-java-%E2%80%93" target="_blank">On Functional Programming in Java – It's Coming...</a> 
+*DZone* »» <a href="http://java.dzone.com/articles/functional-programming-java-%E2%80%93" target="_blank">On Functional Programming in Java – It's Coming...</a>
 
 
 

@@ -13,6 +13,7 @@ categories:
 tags:
   - navegacion anonima
   - Tor
+author: luzila
 ---
   * <a href="http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>
   * Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies
@@ -30,10 +31,10 @@ Se puede observar que cada petición del navegador primero pasa por algún proxy
 Esa es una visión general de cómo deberían trabajar todos en conjunto, pero todavía falta configurar todos los componentes para que funcionen juntos correctamente. Primero se debe instalar Burp Suite (No se considera necesario detallar los pasos para ello). Cuando Burp está inicializado, se debe ver el puerto 8080 abierto y en estado LISTEN:
 
 `# netstat -lntup tcp6 0 0 127.0.0.1:8080 :::* LISTEN 4315/java`  
-  
+
 <!--ad-->
 
-  
+
 Dado que el navegador web debería enviar todas las peticiones a Burp, es necesario configurar el navegador web para que use Burp en lugar de Privoxy. La configuración para Firefox se presenta a continuación:
 
 <a class="thumbnail" href="/?attachment_id=1053" rel="attachment wp-att-1053"><img class="size-full wp-image-1053 alignnone" alt="081012_1604_AchievingAn2" src="/images/2012/12/081012_1604_AchievingAn21.png" width="501" height="498" /></a>
@@ -221,7 +222,7 @@ Queda pendiente analizar Torbutton y tsocks para ver cómo anonimizarnos en Inte
 
 Referencias
 
-*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-2/" target="_blank">Visitar sitio</a> 
+*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-2/" target="_blank">Visitar sitio</a>
 
 
 

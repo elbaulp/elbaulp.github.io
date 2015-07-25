@@ -12,6 +12,7 @@ tags:
   - java en 2013
   - noticias java
   - novedades java
+author: luzila
 ---
 <img src="/images/2012/12/java1-300x227.jpg" alt="java" width="300" height="227" class="thumbnail alignleft size-medium wp-image-1043" />
 
@@ -22,10 +23,10 @@ Habiendo terminado el 2012, es tiempo de mirar hacia los próximos 12 meses en e
 Un tema obvio para comenzar para la mayoría de los desarrolladores Java, es la *release* del 2013. Asumiendo que no habrá demoras, podemos esperar que Java 8 llegue en Septiembre, trayendo consigo muchas funciones lambda esperadas.
 
 Es bastante probable que en el período inmediatamente siguiente a la salida de Java 8, veamos publicaciones en blogs tanto sobre quejas por la complejidad de las nuevas características como porque estas mismas no son lo suficientemente importantes como para justificar su interés.  
-  
+
 <!--ad-->
 
-  
+
 De cualquier manera, algunas características muy necesarias que estaban demoradas finalmente aparecen y tendremos que ponernos a trabajar en serio. La mejorada API de Date and Time en Java 8 también merece una mención.
 
 **2. Los lenguajes de la JVM van un paso adelante**
@@ -65,7 +66,7 @@ Con plataformas en la nube convirtiendose rápidamente en la norma, es probable 
 
 #### Referencias
 
-*5 Reasons to be excited about Java in 2013* »» <a href="http://jaxenter.com/5-reasons-to-be-excited-about-java-in-2013-45938.html" target="_blank">jaxenter.com</a> 
+*5 Reasons to be excited about Java in 2013* »» <a href="http://jaxenter.com/5-reasons-to-be-excited-about-java-in-2013-45938.html" target="_blank">jaxenter.com</a>
 
 &nbsp;
 

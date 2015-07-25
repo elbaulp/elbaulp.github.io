@@ -12,6 +12,7 @@ tags:
   - instalar tor
   - navegar anonimamente
   - Tor
+author: luzila
 ---
   * [Logrando el anonimato con Tor (Parte 1)][1]
   * [Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies][2]
@@ -23,10 +24,10 @@ tags:
 Hemos visto que la red Tor está constituida de nodos Tor, a través de los cuales enviamos nuestro tráfico para mantenernos anónimos. No hemos profundizado mucho en terminología, porque no era tan importante; todo lo que queríamos era lograr el anonimato, y así fue.
 
 Pero cuando intentamos configurar un Tor Relay, entonces el proyecto Tor se pone realmente interesante y no podemos prescindir de la terminología. Aquí están las expresiones más frecuentemente utilizadas (manenemos la expresión en inglés por su normal utilización, y su traducción al español):  
-  
+
 <!--ad-->
 
-  
+
 **Tor Node **:
 
 Exactamente lo mismo que Tor Relay, los términos pueden intercambiarse.
@@ -210,7 +211,7 @@ Hemos visto suficiente información para poder decidir si queremos ayudar a la c
 
 #### Referencias
 
-*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-4/" target="_blank">Achieving Anonymity with Tor Part 4</a> 
+*InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-4/" target="_blank">Achieving Anonymity with Tor Part 4</a>
 
 *&#8221;[1* »» <a href="" target="_blank">Visitar sitio</a> Tor Project&#8221; texto=&#8221;Tips for Running an Exit Node with Minimal Harassment&#8221; link=&#8221;<https://blog.torproject.org/blog/tips-running-exit-node-minimal-harassment>&#8220;]
 

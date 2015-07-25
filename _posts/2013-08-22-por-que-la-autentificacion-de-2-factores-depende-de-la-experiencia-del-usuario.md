@@ -11,6 +11,7 @@ tags:
   - problemas autentificación de 2 factores
   - que es autentificación de 2 factores
   - usuarios autentificación de 2 factores
+author: luzila
 ---
 <img src="/images/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700" height="349" class="thumbnail aligncenter size-full wp-image-1863" />
 
@@ -46,7 +47,7 @@ La oportunidad de resolver muchos de los problemas de seguridad con una autentif
 
 #### Referencias
 
-*Duo Security* »» <a href="https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/" target="_blank">Why 2 Factor Authentication Hinges on the User Experience</a> 
+*Duo Security* »» <a href="https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/" target="_blank">Why 2 Factor Authentication Hinges on the User Experience</a>
 
 
 

@@ -7,8 +7,8 @@ layout: post
 guid: /?p=776
 permalink: /entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Artículos
   - seguridad
@@ -16,14 +16,15 @@ tags:
   - aplicaciones web
   - OAuth
   - seguridad
+author: luzila
 ---
 Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
 
 Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps" target="_blank"> una aplicación de Twitter llamada Tweetgif fue hackeada</a>, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.  
-  
+
 <!--ad-->
 
-  
+
 **Cómo funciona OAuth**
 
 [<img src="/images/2012/06/medium1.jpg" alt="" title="medium" width="300" height="166" class="alignright size-full wp-image-809" />][1]  

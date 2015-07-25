@@ -13,6 +13,7 @@ categories:
 tags:
   - navegacion anonima
   - Tor
+author: luzila
 ---
   * Logrando el anonimato con Tor (Parte 1)
   * [Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies][1]
@@ -74,7 +75,7 @@ Agrega la siguiente línea al archivo /etc/privoxy/config:
 {% highlight bash %}# echo "forward-socks4a / <a href="http://127.0.0.1:9050" target="_blank">127.0.0.1:9050</a> ." >> /etc/privoxy/config{% endhighlight %}
 
 Además debes agregar las siguientes línas al archivo /etc/tor/torrc:  
-  
+
 <!--ad-->
 
 {% highlight bash %}AvoidDiskWrites 1
@@ -273,15 +274,15 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
   <p>
     3. Variables de configuración de Tor
   </p>
-  
+
   <p>
     Presentemos lo que el manual dice sobre las variables de configuración que usamos en este artículo:
   </p>
-  
+
   <p>
     <strong>AvoidDiskWrites</strong>: Si es distinto de cero, intenta escribir en el disco con menos frecuencia. Esto es útil cuando usamos memoria flash u otro dispositivo que soporta solo un limitado número de escrituras. (Default: 0)
   </p>
-  
+
   <p>
     <strong>ControlPort</strong>: Si está seteado, Tor aceptará conexiones en este puerto y permitirá a esas conexiones controlar el proceso de Tor usando el protocolo &#8220;Tor Control Protocol&#8221; (descripto en control-spec.txt) Nota: a menos que especifiques también uno o más HashedControlPassword o CookieAuthentication, seteando esta opción causará que Tor permita que cualquier proceso en el localhost lo controle. (Setear ambos métodos de autenticación significa que cualquiera de los dos es suficiente para autenticar Tor). Esta opción es requerida por muchos controladores de Tor; muchos usan el valor 9051. Setealo en &#8220;auto&#8221; para dejar que Tor elija un puerto por vos. (Default: 0)
   </p>

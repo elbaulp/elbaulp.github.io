@@ -13,8 +13,9 @@ tags:
   - redes sociales
   - seguridad
   - tracking
+author: luzila
 ---
-> Esta es la traducción de un artículo que me pareció muy interesante para tener en cuenta si queremos ir implementando al menos algunas costumbres y buenas prácticas para navegar anónimamente en internet. Hay algunos tips que propone que no pueden aplicarse en todos los países, pero sin embargo vale la pena conocer las formas para que cada uno pueda pensar de qué forma puede lograrlo. *Luzcila* 
+> Esta es la traducción de un artículo que me pareció muy interesante para tener en cuenta si queremos ir implementando al menos algunas costumbres y buenas prácticas para navegar anónimamente en internet. Hay algunos tips que propone que no pueden aplicarse en todos los países, pero sin embargo vale la pena conocer las formas para que cada uno pueda pensar de qué forma puede lograrlo. *Luzcila*
 
 El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.
@@ -116,7 +117,7 @@ En la configuración de los diferentes navegadores (Chrome, Firefox, Opera, etc)
 
 Puedes también usar [Tor bundle][3] y tener un navegador standalon que pueda ser borrado de forma segura en cualquier momento. Esto además encriptará tu tráfico y enmascarará tu dirección IP (tu ID único en internet). Esto hace que tu tráfico no esté disponible para ser buscado, encontrado y husmeado, **incluso por tu ISP** . Tu IP además se vuelve segura de la gente que no quieres que la vea (o cualquiera sea la razón por la que quieres esconder tu IP).
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span> 
+<span class='embed-youtube' style='text-align:center; display: block;'></span>
 
 ### Asegura tu tráfico del análisis y realiza conexiones anónimas a los sitios
 
@@ -231,7 +232,7 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 
 ### Referencias
 
-*Crédito de la imágen* »» <a href="http://www.occupy.com/article/learn-safeguard-internet-privacy-youre-007" target="_blank">occupy.com</a> *WonderHowTo* »» <a href="http://null-byte.wonderhowto.com/how-to/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet-0131741/i" target="_blank">How to Remove Your Online Identity: The Ultimate Guide to Anonymity and Security on the Internet</a> 
+*Crédito de la imágen* »» <a href="http://www.occupy.com/article/learn-safeguard-internet-privacy-youre-007" target="_blank">occupy.com</a> *WonderHowTo* »» <a href="http://null-byte.wonderhowto.com/how-to/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet-0131741/i" target="_blank">How to Remove Your Online Identity: The Ultimate Guide to Anonymity and Security on the Internet</a>
 
 
 

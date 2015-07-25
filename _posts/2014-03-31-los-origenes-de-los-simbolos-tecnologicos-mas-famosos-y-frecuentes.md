@@ -11,6 +11,7 @@ tags:
   - origen simbolo @
   - origen simbolo usb
   - origen símbolos tecnológicos
+author: luzila
 ---
 Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.
 
@@ -128,7 +129,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 
 #### Referencias
 
-*Lifehack* »» <a href="http://www.lifehack.org/articles/technology/the-origins-famous-iconic-and-frequently-used-tech-symbols.html" target="_blank">The Origins Of Famous, Iconic and Frequently Used Tech Symbols</a> 
+*Lifehack* »» <a href="http://www.lifehack.org/articles/technology/the-origins-famous-iconic-and-frequently-used-tech-symbols.html" target="_blank">The Origins Of Famous, Iconic and Frequently Used Tech Symbols</a>
 
 
 

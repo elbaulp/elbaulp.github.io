@@ -15,6 +15,7 @@ tags:
   - instalar tor
   - navegar anonimamente
   - Tor
+author: luzila
 ---
   * [Logrando el anonimato con Tor (Parte 1)][1]
   * [Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies][2]
@@ -35,7 +36,7 @@ Con Tor Browser Bundle, podemos facilmente comenzar a usar Tor sin instalar ni c
 Podemos además descargar el código fuente de Tor Browser Bundle de <a href="https://www.torproject.org/projects/torbrowser-details.html" target="_blank">aquí</a> y construirlo nosotros mismos.
 
 Al iniciar Firefox, aparecerá la siguiente pantalla:  
-  
+
 <!--ad-->
 
 #### [<img class="alignnone size-medium wp-image-1536" alt="081712_1515_AchievingAn1" src="/images/2013/04/081712_1515_AchievingAn1-300x114.png" width="300" height="114" />][4]{.thumbnail}

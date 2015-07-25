@@ -11,12 +11,13 @@ tags:
   - futuro de los ides de escritorio
   - IDES en la nube
   - IDES para internet
+author: luzila
 ---
 Sí, no es broma. En 5 años, todos los desarrolladores codificarán en la nube. No sólo codificarán allí sino que también compilarán*, *****testearán, correrán, depurarán y desplegarán* *las aplicaciones en la nube. Es inevitable, aunque no sea muy obvio todavía. De hecho, los proyectos IDE basados en la nube están saliendo al mercado como los jugadores más importantes con serias intenciones y visiones claras y estratégicas. Sí, es imposible hacer una predicción del 100% sobre cómo se comportará el mercado en 1-2 años. Las nuevas tendencias en la industria del desarrollo de software hablan de la necesidad de una forma más productiva de codificar. Hay un largo incremento en el número de aplicaciones desarrolladas en todo el mundo, mientras que el número de desarrolladores se mantiene bastante igual. ¿Qué significa esto? Significa que los desarrolladores tienen que volverse más productivos. Al margen de los limites que existen en la resistencia y productividad del ser humano, es posible ganar algo de tiempo optimizando los procesos de codificación, compilación, testeo, ejecución y despliegue. Aquí es exactamente cuando un IDE ubicado en la nube entra en juego como un serio rival para las herramientas offline. Algunas de las ventajas más obvias de los IDEs online incluyen:  
-  
+
 <!--ad-->
 
-  
+
 ** Mayor productividad y fácil integración**
 
 ¿Cuánto tiempo lleva instalar y configurar el entorno, VM y plugins para probar, ejecutar e implementar una simple aplicación Java? ¿Cuáles son tus estimaciones más conservadoras? ¿Una hora? ¡Piensa un poco mejor! Son cuatro largas horas, mínimo. Una máquina limpia necesitará Java, Maven (o cualquier otro administrador de construcción de proyectos), Tomcat, Eclipse, plug-in para su PaaS elegido (nombrando herramientas de forma aleatoria). ¿No es mucho para una simple aplicación Spring? Bueno, un IDE en la nube ya está configurado y listo para empezar en cualquier momento. Eso es como un automóvil con un conductor que nunca apaga el motor. Un desarrollador puede utilizar cualquier máquina, ejecutar cualquier Sistema Operativo. No hay necesidad de descargar y configurar el entorno y buscar los plugins necesarios. Aquí está la forma de crear una simple aplicación Spring en Codenvy e implementarla en CloudFoundry:
@@ -47,7 +48,7 @@ Es cierto que a los IDEs de la web actualmente les faltan características de va
 
 #### Referencias
 
-*DZone* »» <a href="http://architects.dzone.com/articles/5-reasons-why-5-years-desktop" target="_blank">5 Reasons Why in 5 Years Desktop IDEs Will Be Dead</a> 
+*DZone* »» <a href="http://architects.dzone.com/articles/5-reasons-why-5-years-desktop" target="_blank">5 Reasons Why in 5 Years Desktop IDEs Will Be Dead</a>
 
 
 
