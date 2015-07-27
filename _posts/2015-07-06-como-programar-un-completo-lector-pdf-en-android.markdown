@@ -13,7 +13,7 @@ image:
   credit:
   creditlink:
 date: 2015-07-06T19:00:00+00:00
-author: colaboraciones
+author: jordi
 ---
 {% include _toc.html %}
 
