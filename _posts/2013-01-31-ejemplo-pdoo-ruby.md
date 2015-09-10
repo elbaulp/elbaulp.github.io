@@ -18,44 +18,44 @@ En la asignatura **PDOO** (**Programación y Diseño Orientado a Objetos**) tuve
 En este artículo voy a escribir únicamente el código Ruby, al final pondré disponible para descarga ambos proyectos, tanto en Java como en Ruby.
 
 La estructura del programa consta de tres clases, *Persona*, *Alumno* y *Asignatura*. Heredando Alumno de Persona. Empecemos viendo la clase Persona:  
-  
+
 <!--ad-->
 
-{% highlight ruby %}require 'date' #Para trabajar con fechas 
+{% highlight ruby %}require 'date' #Para trabajar con fechas
 require 'time'
 
 #Clase Persona
 class Persona
   include Comparable
-  
+
   #Declara metodos gets y sets
   attr_accessor :nombre, :fechaNacimiento
-  
+
   def initialize(nombre, fechaNacimiento)
     #Inicializar atributos
     @nombre = nombre
     @fechaNacimiento = fechaNacimiento
   end
-  
+
   def edad
     dob = fechaNacimiento() or return nil
     now = Time.now
     now.year - dob.year
     #now.year - dob.year - (dob.to_time.change(:year => now.year) > now ? 1 : 0)
   end
-  
+
   def to_s
     "Persona [nombre=" + nombre + "], fechaNacimiento=" + fechaNacimiento.to_s + "]"
   end
-  
+
   def cumple
     "Su cumpleanos es el ".concat fechaNacimiento.month.to_s.concat " del ".concat fechaNacimiento.day.to_s
   end
-  
+
   def esMenorQue otro
     return fechaNacimiento <=> otro
   end
-  
+
   def <=>(otraPersona)
     if self.fechaNacimiento < otraPersona.fechaNacimiento
       -1
@@ -68,7 +68,7 @@ class Persona
 =begin
     los metodos getdianac, getmes etc no se implementan porque pueden ser facilmente accesibles con fechanacimiento.year etc
 =end
-  
+
 end
 {% endhighlight %}
 
@@ -88,18 +88,18 @@ Echemos un vistazo a la clase Asignatura:
 
 {% highlight ruby %}class Asignatura
   attr_accessor :codigo, :titulo, :creditosECTS
-  
+
   def initialize(codigo, titulo, creditos)
     @codigo = codigo
     @titulo = titulo
     @creditosECTS = creditos
   end
-  
+
   def to_s
     "La asignatura ".concat(titulo.to_s).concat(" con codigo ").concat(codigo.to_s).
         concat(", consta de ").concat(creditosECTS().to_s).concat(" creditos ECTS")
   end
-  
+
 end
 {% endhighlight %}
 
@@ -194,7 +194,7 @@ total
 Este método itera sobre el HashMap sumando los créditos de las asignaturas. **k** corresponde a la clave del HashMap, y **v** al valor.  
 Cabe destacar la asuencia de la sentencia `return` en todos los métodos.
 
-Por último, el manejo de excepciones. En esta clase, se lanzan varias. Por ejemplo, el método `matricularAsignatura` lanzará una excepción si el alumno ya está matriculado o supera el número máximo de créditos. 
+Por último, el manejo de excepciones. En esta clase, se lanzan varias. Por ejemplo, el método `matricularAsignatura` lanzará una excepción si el alumno ya está matriculado o supera el número máximo de créditos.
 
 Para probar el funcionamiento del programa, usaremos esta pieza de código:
 
@@ -204,15 +204,15 @@ require './Persona.rb'
 require './Alumno.rb'
 
 if __FILE__ == $0
-  
+
   arrayPersonas = Hash.new
-      
+
   #Creando personas y Alumnos
   alex = Persona.new("Alejandro Alcalde",Date.new(1991,2,10))
   pepe = Persona.new("Pepe",Date.new(1980,2,8))
   alumno1 = Alumno.new("Nombre del alum1",Date.new(1980,2,8),"Ing. Informatica")
   alumno2 = Alumno.new("Nombre del alum2",Date.new(1980,2,8),"Ing. Teleco")
-  
+
   #Almacenarlas en un HashMap
   arrayPersonas[alex.nombre] = alex
   arrayPersonas[pepe.nombre] = pepe
@@ -227,13 +227,13 @@ if __FILE__ == $0
   asig5 = Asignatura.new(1004,"Ing.Informatica",6)
   asig6 = Asignatura.new(1005,"Ing.Informatica",6)
   asig7 = Asignatura.new(1006,"Ing.Informatica",6)
-  
+
   #Imprimir las personas
   puts "Mostrando personas almacenadas en el sistema"
   arrayPersonas.each_pair do |k,v|
     puts arrayPersonas[k]
   end
-  
+
   #Matriculas a alumnos en asignaturas
   if alex.respond_to?("matricularAsignatura")
     alex.matricularAsignatura(asig1) #Nunca se ejecuta, porque alex es Persona
@@ -242,7 +242,7 @@ if __FILE__ == $0
     alumno1.matricularAsignatura(asig1)
     alumno1.matricularAsignatura(asig7)
   end
-  
+
   alumno1.mostrarMatricula
   puts "El numero total de creditos del alumno es ".concat(alumno1.getNumCreditos.to_s)
   puts "Desmatriculando al almuno de una asignatura..."
@@ -257,7 +257,7 @@ if __FILE__ == $0
   puts
   puts "To string de Alumno, reutilizando el de persona"
   puts alumno1.to_s
-  
+
 end
 {% endhighlight %}
 
@@ -295,16 +295,9 @@ Persona [nombre=Nombre del alum1], fechaNacimiento=1980-02-08]Esta estudiando In
 
 Como mencioné al principio, el código de ambos programas está disponible para descargar:
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/ejemplo-pdoo-java/" rel="nofollow"> Download &ldquo;Ejemplo PDOO JAva&rdquo; <small>EjemploJava.zip &ndash; Downloaded 746 times &ndash; </small> </a>
-
-  
-
-
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/ejemplo-pdoo-ruby/" rel="nofollow"> Download &ldquo;Ejemplo PDOO Ruby&rdquo; <small>EjemploRuby.zip &ndash; Downloaded 408 times &ndash; </small> </a>
-
 Como introducción al lenguaje Ruby, ya que nunca lo había usado, leí el siguiente artículo:
 
-*Ruby in Twenty MinutesRuby in Twenty Minutes* »» <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a> 
+*Ruby in Twenty MinutesRuby in Twenty Minutes* »» <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a>
 
 
 
