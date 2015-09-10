@@ -15,6 +15,10 @@ tags:
   - SQRL steve gibson
   - uso de usuario y contraseña
 ---
+
+**Nota:** Puedes echar un ojo al artículo más actualizado [SQRL -Secure Quick Reliable Login a Fondo](/sqrl-secure-quick-reliable-login-a-fondo/)
+{: .notice}
+
 Los lectores habituales sabrán que suelo escuchar el programa de radio *[Security Now!][1]*, la semana pasada, **Steve Gibson**, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención **SQRL** (*Secure [QR][2] Login*) y ha tenido bastante éxito en la comunidad, tanto que hasta el [W3][3] se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.
 
 <!--ad-->
@@ -54,7 +58,7 @@ A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de
 
 #### Referencias
 
-*(1) SQRL en la página de su creador, Steve* »» <a href="https://www.grc.com/sqrl/sqrl.htm" target="_blank">grc.com</a> 
+*(1) SQRL en la página de su creador, Steve* »» <a href="https://www.grc.com/sqrl/sqrl.htm" target="_blank">grc.com</a>
 
 
 
