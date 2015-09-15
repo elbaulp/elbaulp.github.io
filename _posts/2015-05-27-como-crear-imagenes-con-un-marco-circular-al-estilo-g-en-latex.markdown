@@ -7,7 +7,7 @@ excerpt: "Cómo crear una imagen desde latex, usando el paquete tikz, para inser
 tags: [latex, tikz, tikzpicture, imagenes marco Circular]
 image:
   feature:
-  thumb: "Cómo Crear Imagenes Con Un Marco Circular Al Estilo G+ en LaTeX.jpg"
+  thumb: "Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg"
   credit:
   creditlink:
 date: 2015-05-27T12:28:05+02:00
@@ -48,7 +48,7 @@ Donde:
 Tras compilar el código, el resultado es el siguiente:
 
 <figure>
-  <img src="/images/Cómo Crear Imagenes Con Un Marco Circular Al Estilo G+ en LaTeX.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg" title="{{ title }}" alt="{{ title }}" />
 </figure>
 
 ### Referencias
