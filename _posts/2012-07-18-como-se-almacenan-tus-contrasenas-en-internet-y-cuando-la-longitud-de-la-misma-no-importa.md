@@ -23,6 +23,9 @@ tags:
   - seguridad
 modified: 2015-07-14T21:00:00+00:00
 date: 2015-07-14T21:00:00+00:00
+image:
+  feature: 2012/07/original2.jpg
+  thumb: 2012/07/original2.jpg
 ---
 
 {% include _toc.html %}
