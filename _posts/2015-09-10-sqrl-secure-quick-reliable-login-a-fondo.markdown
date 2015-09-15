@@ -16,7 +16,7 @@ tags:
   - security now!
 image:
   feature:
-  thumb: SQRL -Secure Quick Reliable Login a Fondo.png
+  thumb: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png
   credit:
   creditlink:
 date: 2015-09-10T11:08:37+02:00
@@ -26,7 +26,7 @@ math: true
 {% include _toc.html %}
 
 <figure>
-  <img src="/images/SQRL -Secure Quick Reliable Login a Fondo.png" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png" title="{{ title }}" alt="{{ title }}" />
 </figure>
 
 Hace unos años, hablé aquí sobre la idea de Steve Gibson, __SQRL__, sistema con el que pretende eliminar [el uso de usuarios y contraseñas en internet](/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/). Unos dos años más tarde, con el proyecto bastante maduro, en [Security Now!](/security-now/ "Todos los artículos traducidos") Steve ha vuelto a dar detalles del funcionamiento de __SQRL__, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio [\#424](https://twit.tv/shows/security-now/episodes/424) del podcast.
