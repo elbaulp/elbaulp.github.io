@@ -24,7 +24,7 @@ tags:
 modified: 2015-07-14T21:00:00+00:00
 date: 2015-07-14T21:00:00+00:00
 image:
-  feature: 2012/07/original2.jpg
+  feature:
   thumb: 2012/07/original2.jpg
 ---
 
