@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Compilar e Instalar El Kenerl 4.2"
+title: "Compilar e Instalar El Kernel 4.2"
 date: 2015-10-12T17:18:41+02:00
 modified:
 categories:
