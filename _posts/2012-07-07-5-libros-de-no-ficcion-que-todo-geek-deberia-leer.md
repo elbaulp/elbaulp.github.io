@@ -254,4 +254,8 @@ Estos libros son algunos de los mejores que puedes leer si estás interesado en 
 
 Fuente: <a href="http://www.makeuseof.com/tag/5-non-fiction-books-every-technology-geek-must-read/" target="_blank">makeuseof</a>
 
+### Más libros
+
+Echa un vistazo a nuestra lista de [libros que todo Data Scientist y Data Engineer debería leer](http://elbauldelprogramador.com/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/).
+
 {% include _toc.html %}
