@@ -3,7 +3,7 @@ layout: post
 title: "9 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer"
 modified:
 categories:
-excerpt:
+excerpt: "Tras mucho buscar, al fin he conseguido recopilar una lista de libros que todo Científico de Datos o Ingeniero de Datos debería tener en su biblioteca personal."
 tags: [libros, data Scientist, data Engineer, libros big data]
 image:
   feature:
