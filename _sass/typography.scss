@@ -103,6 +103,17 @@ figcaption {
 	@include rounded(3px);
 }
 
+.notice:before {
+	font-family: FontAwesome;
+  content: "\f05a";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+	font-size: 2em;
+	float: left;
+	padding-right: 10px;
+}
+
 /*
    Blockquotes
    ========================================================================== */
