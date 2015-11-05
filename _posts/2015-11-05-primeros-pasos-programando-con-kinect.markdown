@@ -7,14 +7,14 @@ excerpt: "Este artículo es parte de una práctica de una asignatura de mi facul
 tags: [programar kinect, programación kinect, tutorial kinect, aplicaciones kinect]
 image:
   feature:
-  thumb: Primeros Pasos Programando Con Kinect.png
+  thumb: Primeros-Pasos-Programando-Con-Kinect.png
   credit:
   creditlink:
 date: 2015-11-05T19:30:26+01:00
 math: true
 ---
 <figure>
-  <img src="/images/Primeros Pasos Programando Con Kinect.png" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ title }}" alt="{{ title }}" />
 </figure>
 
 {% include _toc.html %}
