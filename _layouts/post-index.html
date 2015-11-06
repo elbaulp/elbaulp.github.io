@@ -28,7 +28,7 @@
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div id="main" role="main">
+<div itemscope itemtype="http://schema.org/Article" class="hentry" id="main" role="main">
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
@@ -45,10 +45,12 @@
         {% endif %}
       {% endunless %}
       <article>
+        <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
+        <img style="display:none;" itemprop="image" src="{% if post.image.thumb %}{{ site.url }}/images/{{ post.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}" alt="{{ post.title }}">
         {% if post.link %}
-          <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+          <h2 itemprop="headline" class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
         {% else %}
-          <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+          <h2 itemprop="headline"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
           <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
         {% endif %}
       </article>
