@@ -37,6 +37,7 @@
     {% for post in site.posts limit:5 %}
     <article>
       <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
+      <img style="display:none;" itemprop="image" src="{{ site.url }}/images/default-thumb.png" alt="Image summary">
       {% if post.link %}
         <h2 itemprop="headline" class="link-post entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><span itemprop="name">{{ post.title }}</span></a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
       {% else %}
