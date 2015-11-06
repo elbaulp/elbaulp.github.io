@@ -7,7 +7,7 @@ excerpt:
 tags: []
 image:
   feature:
-  thumb:
+  thumb: contributorad.png
   credit:
   creditlink:
 date: 2015-11-06T16:38:37+01:00
