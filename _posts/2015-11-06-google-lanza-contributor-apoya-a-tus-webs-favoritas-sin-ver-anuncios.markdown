@@ -31,7 +31,7 @@ Los usuarios que contribuyan con $2, verán entre 5/15% menos anuncios, con $5 s
 
 ## ¿Cómo puedo hacerme contribuidor?
 
-Pinchando en el siguiente _badge_ : <script src="https://www.gstatic.com/xads/publisher_badge/contributor_badge.js" data-width="88" data-height="31" data-theme="light" data-pub-name="El Baúl del Programador" data-pub-id="ca-pub-9043332344373532"></script>
+Pinchando en el _badge_ que aparece a la izquierda de la pantalla, en la sección “Invítanos a un café”.
 
 O en la siguiente imagen:
 
