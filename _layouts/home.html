@@ -38,9 +38,9 @@
     <article>
       <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
       {% if post.link %}
-        <h2 class="link-post entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><span itemprop="name">{{ post.title }}</span></a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
+        <h2 itemprop="headline" class="link-post entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><span itemprop="name">{{ post.title }}</span></a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
       {% else %}
-        <h2 class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><span itemprop="name">{{ post.title }}</span></a></h2>
+        <h2 itemprop="headline" class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><span itemprop="name">{{ post.title }}</span></a></h2>
         <p>{{ post.excerpt }}</p>
       {% endif %}
     </article>
