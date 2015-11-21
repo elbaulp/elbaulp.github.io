@@ -1,6 +1,6 @@
 ---
 id: 790
-title: 16 Libros de No-Ficción que todo Geek debería leer
+title: 17 Libros de No-Ficción que todo Geek debería leer
 
 excerpt: |
   Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
@@ -19,8 +19,8 @@ tags:
   - geek
   - libros
   - libros geek
-modified: 2015-07-09T13:23:00+00:00
-date: 2015-06-30T18:48:42+02:00
+modified: 2020-11-21T20:16:00+00:00
+date: 2020-06-30T18:48:42+02:00
 image:
   feature:
   thumb: 2012/07/generationxbox1.jpg
@@ -30,6 +30,18 @@ image:
 Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
 
 Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
+
+### The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin
+
+<figure>
+  <img src="/images/The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin.jpg" title="The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin" alt="The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin">
+</figure>
+
+The Magic of Math is the math book you wish you had in school. Using a delightful assortment of examples—from ice cream scoops and poker hands to measuring mountains and making magic squares—this book empowers you to see the beauty, simplicity, and truly magical properties behind those formulas and equations that once left your head spinning. You’ll learn the key ideas of classic areas of mathematics like arithmetic, algebra, geometry, trigonometry, and calculus, but you’ll also have fun fooling around with Fibonacci numbers, investigating infinity, and marveling over mathematical magic tricks that will make you look like a math genius!
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/gp/product/0465054722?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+</div>
 
 ### En el principio fue la línea de comandos: de Neal Stephenson (Gracias a Miguel)
 
