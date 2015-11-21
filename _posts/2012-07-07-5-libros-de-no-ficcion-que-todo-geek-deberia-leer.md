@@ -19,8 +19,8 @@ tags:
   - geek
   - libros
   - libros geek
-modified: 2020-11-21T20:16:00+00:00
-date: 2020-06-30T18:48:42+02:00
+modified: 2015-11-21T20:16:00+00:00
+date: 2015-06-30T18:48:42+02:00
 image:
   feature:
   thumb: 2012/07/generationxbox1.jpg
