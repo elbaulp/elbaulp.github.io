@@ -14,12 +14,19 @@ tags:
   - Cómo funcionan los códigod QR
   - qr code
   - security now
+image:
+  feature:
+  thumb: 2012/12/qrbaulinnercorners2.png
+  credit:
+  creditlink:
 ---
 > Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.
-> 
-> El anterior espisodio traducido fué [Lo último en criptografía: Fully Homomorphic Encryption][1] 
+>
+> El anterior espisodio traducido fué [Lo último en criptografía: Fully Homomorphic Encryption][1]
 
+<figure>
 <img src="/images/2012/12/linkentrada2-300x300.png" alt="QR Code" width="300" height="300" class="thumbnail alignleft size-medium wp-image-1063" />
+</figure>
 
 Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.
 
@@ -28,19 +35,22 @@ Sin embargo esta tecnología se inventó hace 18 años para rastrear rápidament
 Todos son cuadrados y siempre tienen una zona llamada *zona tranquila* ó **quiet zone**. Una de las mejores características de estos códigos es que son neutrales respecto a la orientación, es decir, no es necesario estar exactamente enfrente a ellos o alineados verticalmente para escanearlos. La imagen en sí proporciona toda la información necesaria para permitir al software girarla, orientarla y aplanarla, incluso si se fotografía el código con ángulo.
 
 La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:  
-  
+
 <!--ad-->
 
-  
+<figure>
 <img src="/images/2012/12/qrbaultargetdownright2.png" alt="qrbaultargetdownright" width="280" height="280" class="thumbnail aligncenter size-full wp-image-1060" />
+</figure>
 
 Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un <a href="http://es.wikipedia.org/wiki/Ciclo_de_trabajo" target="_blank">ciclo de trabajo del 50%</a>. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.
 
+<figure>
 <img src="/images/2012/12/qrbaulinnercorners2.png" alt="qrbaulinnercorners" width="280" height="280" class="thumbnail aligncenter size-full wp-image-1061" />
+</figure>
 
 El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.
 
-La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres. 
+La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres.
 
 A la hora de codificar los caracteres los creadores no usaron 1 Byte como es habitual, sino un conjunto de caracteres de 45 elementos. Por lo que solo exiten mayúsculas y algunos caracteres especiales. Lo cual es suficiente para codificar URLs. Aún así, existe un modo binario que permite almacenar caracteres de 8 bits.
 
@@ -50,7 +60,9 @@ Los diseñadores prestaron mucha atención a la corrección de errores, y desarr
 
 El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:
 
+<figure>
 <img src="/images/2012/12/Custom_QR_code_Wikipedia2.png" alt="Custom_QR_code_Wikipedia" width="564" height="396" class="thumbnail aligncenter size-full wp-image-1062" />
+</figure>
 
 A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.
 
@@ -68,7 +80,7 @@ La solución tomada por los diseñadores fue establecer una máscara para uno de
 
 Estos patrones de 8&#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.
 
-Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación. 
+Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación.
 
 Finalmente para decodificar el contenido, se empieza por la esquina inferior derecha, donde se encuentra el tipo de codificación (de 4 bits de tamaño), luego la longitud (8 bits) seguido de los datos almacenados. Despues de los datos puede haber otra codificación y otra longitud para seguir obteniendo datos. Por consiguiente, es posible disponer de múltiples formatos en un solo QR code. Incluso densidad y correncción de errores variable. Hay que tener una concepto claro, la corrección de errores significa redundancia, a más corrección de errores, mayor porcentaje del área no serán datos.
 
@@ -90,10 +102,6 @@ Otro buen intérprete es **<a href="https://play.google.com/store/apps/details?i
 
 *Transcipciones a texto y audio del episodio* »» <a href="http://www.grc.com/securitynow.htm" target="_blank">Visitar sitio</a>  
 *Episode 382: QR Codes* »» <a href="http://twit.tv/show/security-now/382" target="_blank">Visitar sitio</a>
-
-
-
-
 
  [1]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
  [2]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/ "Lo último en criptografía: Fully Homomorphic Encryption"
