@@ -42,6 +42,7 @@
       {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
+      {% if page.share != false %}{% include _social-share.html %}{% endif %}
       <span itemprop="articleBody">
         {% assign c = content | split: '<!--ad-->' %}
         {% if content contains '<!--ad-->' %}
