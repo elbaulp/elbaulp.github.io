@@ -38,13 +38,14 @@ tags:
   - programacion en android
   - programar en android pdf
 ---
-<a href="http://lh6.googleusercontent.com/-BEVM46k50KQ/Tr5WHaJiGHI/AAAAAAAABjc/b_-CmRixBY4/s128/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
 
-Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="/p/guia-de-desarrollo-android.html">curso</a> y voy a comenzar a escribir la <a target="_blank" href="/2011/11/planteamiento-de-la-segunda-parte-del.html">segunda parte</a>.
+Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="http://elbauldelprogramador.com/curso-programacion-android/">curso</a>.
 
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/primer-capitulo-programacion-android/" rel="nofollow"> Download &ldquo;Primer Capítulo Programación Android&rdquo; <small>ProgramacionAndroidSample1.pdf &ndash; Downloaded 2460 times &ndash; </small> </a>
+<div class="btn-success">
+  <a href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar</a>
+</div>
 
 <del datetime="2014-02-08T09:06:51+00:00">El documento lo enviaré a todo aquel que haga una donación de <b>al menos 1.5 euros (Paypal se queda con 40 céntimos)</b></del>.
 
@@ -52,19 +53,10 @@ El documento tiene un precio mínimo de **1.5 euros (Paypal se queda con 40 cén
 
 En el momento de realizar la donación es imprescindible que me indiquéis una dirección de correo eletrónico donde enviaros en manual.
 
-La donación se hará por Paypal pulsando en el botón **Hacer una donación** en la parte derecha, o en el botón que dejo a continuación:
+La donación se hará por Paypal usando [este enlace](https://www.paypal.me/elbaul)
 
-<center>
-  <br /> 
-  
-  <p>
-    </center>
-  </p>
-  
   <p>
     Por último, quiero daros las gracias a todos los lectore del blog. Un saludo
   </p>
-  
-  
 
 {% include _toc.html %}
