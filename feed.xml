@@ -36,6 +36,7 @@ sitemap: false
   </author>
   <content type="html">
     &lt;strong&gt;Inv&iacute;tanos a un caf&eacute; usando nuestro enlace de afiliados de &lt;a href=&quot;http://www.amazon.es?tag=bmacoc-21&quot;&gt;&lt;strong&gt;&lt;em&gt;Amazon (Si vives en Espa&ntilde;a)&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; (Sin coste adicional en compras) o a trav&eacute;s de &lt;a href=&quot;https://www.paypal.me/elbaul&quot;&gt;&lt;strong&gt;&lt;em&gt;paypal&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;    O con &lt;strong&gt;&lt;em&gt;&lt;a href=&quot;http://elbauldelprogramador.com/google-lanza-contributor-apoya-a-tus-webs-favoritas-sin-ver-anuncios/&quot;&gt;Google Contributor&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;: &lt;script data-cfasync=&quot;false&quot; src=&quot;https://www.gstatic.com/xads/publisher_badge/contributor_badge.js&quot; data-width=&quot;88&quot; data-height=&quot;31&quot; data-theme=&quot;light&quot; data-pub-name=&quot;El Ba&uacute;l del Programador&quot; data-pub-id=&quot;ca-pub-9043332344373532&quot;&gt;&lt;/script&gt;&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;img src=&quot;/images/{{ post.image.thumb }}&quot;/&gt;
     {{ post.excerpt | xml_escape }}
     &lt;br/&gt;
     &lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Seguir leyendo.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
