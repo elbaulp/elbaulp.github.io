@@ -9,12 +9,11 @@ image:
   thumb: hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png
   credit:
   creditlink:
-date: 2015-11-26T19:16:00+00:00
+date: 2015-11-27T12:25:00+00:00
 modified: 2015-11-27T11:14:00+00:00
 ---
 
 {% include _toc.html %}
-
 <figure>
   <img src="/images/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ title }}" alt="{{ title }}" />
 </figure>
