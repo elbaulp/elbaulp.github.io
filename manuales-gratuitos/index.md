@@ -125,7 +125,7 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
     <a href="/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt"><img src="/images/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" alt="Guía Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt" width="199" height="259"/><span>Guía Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt</span></a>
   </li>
   <li>
-    <a href="/nueva-guia-system-administration-and-security-salary-and-skills-report/"><img src="/images/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" alt="System Administration & Security - Salary & Skills Report" width="199" height="259"/><span>System Administration & Security - Salary & Skills Report</span></a>
+    <a href="/nueva-guia-system-administration-and-security-salary-and-skills-report/"><img src="/images/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report2.jpg" alt="System Administration & Security - Salary & Skills Report" width="199" height="259"/><span>System Administration & Security - Salary & Skills Report</span></a>
   </li>
 </ul>
 
