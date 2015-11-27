@@ -1,7 +1,7 @@
 <div class="social-share">
   <ul>
     <li>
-      <a target="_blank" href="/feed.xml" class="rss" title="Suscribir al RSS"><i class="fa fa-rss"></i><span> RSS</span></a>
+      <a onClick="ga('send', 'event', 'feed', 'inside');" target="_blank" href="/feed.xml" class="rss" title="Suscribir al RSS"><i class="fa fa-rss"></i><span> RSS</span></a>
     </li>
     <li>
       <a target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}+{{ site.url }}{{ page.url }}+Vía @{{ site.owner.twitter }}" class="twitter" title="Comparte en Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
