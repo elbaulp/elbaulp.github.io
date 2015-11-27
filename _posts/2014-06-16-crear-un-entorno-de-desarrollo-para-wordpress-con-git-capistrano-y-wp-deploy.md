@@ -15,8 +15,22 @@ tags:
   - entornos de desarrollo Wordpress
   - staging Worpress
   - Wp-Deploy
+image:
+  feature:
+  thumb: hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png
+  credit:
+  creditlink:
+date: 2015-11-27T16:17:00+00:00
+excerpt: "Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web."
 ---
-Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web. 
+
+{% include _toc.html %}
+
+<figure>
+  <img src="/images/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png" title="{{ page.title }}" alt="{{ page.title }}" />
+</figure>
+
+Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.
 
 Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de [git][1], capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.
 
@@ -40,7 +54,7 @@ Es una herramienta de automatización remota de servidores y despliegues escrita
 
 **Capistrano** requiere acceso [SSH][4] entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).
 
-  * **Bunder**: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar <a href="http://bundler.io/" target="_blank">Bundler</a>. 
+  * **Bunder**: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar <a href="http://bundler.io/" target="_blank">Bundler</a>.
   * **WP-CLI**: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su [web.][5]
 
 ## Instalar Wp-Deploy
@@ -147,7 +161,7 @@ desarrollo:
 
 {% endhighlight %}
 
-Hecho esto, todo debería estar listo para usar. 
+Hecho esto, todo debería estar listo para usar.
 
 ### Uso
 
@@ -222,5 +236,3 @@ Si el lector ha llegado hasta este punto, estaba interesado en conseguir un cicl
  [3]: http://elbauldelprogramador.com/introduccion-a-ruby/ "Introducción rápida a Ruby"
  [4]: http://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
  [5]: http://wp-cli.org/#install
-
-{% include _toc.html %}
