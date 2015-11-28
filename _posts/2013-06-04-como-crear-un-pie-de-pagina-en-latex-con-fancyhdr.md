@@ -14,8 +14,15 @@ tags:
   - personalizar pie de página latex
   - pie de pagina latex
   - latex
+image:
+  thumb: 2013/05/latex_logo.png
 ---
-<img src="/images/2013/05/latex_logo.png" alt="latex_logo" width="300" height="114" class="thumbnail alignleft size-full wp-image-1594" />Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.  
+
+<figure>
+<img src="/images/2013/05/latex_logo.png" alt="latex_logo" width="300" height="114" class="thumbnail alignleft size-full wp-image-1594" />
+</figure>
+
+Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.  
 
 <!--ad-->
 

@@ -19,6 +19,8 @@ tags:
   - programación Latex
   - simbolos latex
   - latex
+image:
+  thumb: 2013/05/latex_logo.png
 ---
   * Mini Curso de LaTeX &#8211; Introducción
   * [Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos][1]
