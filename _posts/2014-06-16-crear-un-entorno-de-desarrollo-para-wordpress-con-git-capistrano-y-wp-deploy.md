@@ -9,6 +9,7 @@ categories:
   - How To
   - opensource
 tags:
+  - git
   - Configurar capistrano
   - configurar WP-Deploy
   - ejemplo capistrano

@@ -8,6 +8,7 @@ permalink: /mini-tutorial-y-chuleta-de-comandos-git/
 categories:
   - Artículos
 tags:
+  - git
   - chuleta comandos git
   - comandos git
   - git cheatsheet
