@@ -9,7 +9,7 @@ search_omit: false
 
 ### [Tutoriales sobre Git][git]
 
-### [Mini Curso de LaTeX – Introducción][latex1]
+### [Tutoriales sobre LaTeX][latex1]
 
 ### [Dig – Chuleta básica de comandos][dig]
 
@@ -17,8 +17,6 @@ search_omit: false
 
 [Android]: http://elbauldelprogramador.com/curso-programacion-android/
 [git]: /git/
-[latex1]: http://elbauldelprogramador.com/mini-curso-de-latex-introduccion/
-[latex2]: http://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/
-[latex3]:http://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
+[latex1]: /latex/
 [dig]: http://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/
 [bd]: http://elbauldelprogramador.com/bases-de-datos/

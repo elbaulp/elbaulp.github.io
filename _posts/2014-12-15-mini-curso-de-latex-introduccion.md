@@ -18,6 +18,7 @@ tags:
   - incluir codigo latex
   - programación Latex
   - simbolos latex
+  - latex
 ---
   * Mini Curso de LaTeX &#8211; Introducción
   * [Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos][1]
