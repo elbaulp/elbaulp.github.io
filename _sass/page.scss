@@ -241,6 +241,11 @@ $button-size: 1.5rem;
 		@media #{$x-large} {
 			@include grid(12,4.5);
 		}
+		h1.entry-title {
+			a {
+				color: #007EA7;
+			}
+		}
 	}
 }
 
@@ -284,6 +289,9 @@ $button-size: 1.5rem;
 			&.link-post {
 				margin-bottom: 0px + $doc-line-height;
 				margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
+			}
+			a {
+				color: #007EA7;
 			}
 		}
 		p {
