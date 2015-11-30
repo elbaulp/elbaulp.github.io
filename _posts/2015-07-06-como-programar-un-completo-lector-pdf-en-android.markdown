@@ -30,37 +30,37 @@ En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo
 <!--ad-->
 
 <figure>
-  <img src="/images/Lector PDF Android con barra de navegación.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Lector PDF Android con barra de navegación.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 1. Lector PDF Android que incluye una barra de navegación con varios controles
 
 <figure>
-  <img src="/images/Bloquear la rotación.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Bloquear la rotación.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 2. Bloquear la rotación
 
 <figure>
-  <img src="/images/Modo de visualización de la página.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Modo de visualización de la página.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 3. Modo de visualización
 
 <figure>
-  <img src="/images/Brillo.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Brillo.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 4. Brillo
 
 <figure>
-  <img src="/images/outline.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/outline.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 5. Outline
 
 <figure>
-  <img src="/images/Búsqueda de texto.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Búsqueda de texto.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 6. Búsqueda de texto
 
 <figure>
-  <img src="/images/Insertar anotaciones.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Insertar anotaciones.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 7. Insertar anotaciones: subrayar texto, tachado, dibujo a mano alzada, etc.
 
@@ -99,7 +99,7 @@ En aplicaciones Android más complejas que cuentan con varias clases, es recomen
 Ahora vamos a crear un proyecto Android nuevo que llamaremos `SimpleDocumentReader`, y justo a continuación, importaremos PlugPDF como un módulo nuevo. La estructura de la aplicación tiene que quedar como sigue.
 
 <figure>
-  <img src="/images/Estructura de la aplicación.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Estructura de la aplicación.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 Figura 8. Estructura de la aplicación

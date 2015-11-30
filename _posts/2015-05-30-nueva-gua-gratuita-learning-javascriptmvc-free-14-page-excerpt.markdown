@@ -14,7 +14,7 @@ date: 2015-05-30T13:53:41+02:00
 ---
 
 <figure>
-  <img src="/images/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 JavaScriptMVC is a client-side, JavaScript framework that builds maintainable, error-free, lightweight applications as quickly as possible.

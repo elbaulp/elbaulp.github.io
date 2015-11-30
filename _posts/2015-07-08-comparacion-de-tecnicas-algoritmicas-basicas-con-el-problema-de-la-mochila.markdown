@@ -17,7 +17,7 @@ math: true
 {% include _toc.html %}
 
 <figure>
-  <img src="/images/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ title }}" alt="{{ title }}" />
+  <img src="/images/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 _Créditos de la imagen [Wikipedia](https://en.wikipedia.org/wiki/File:Knapsack.svg)_.
 
