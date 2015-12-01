@@ -13,29 +13,28 @@ tags:
   - iniciar servicio linux
   - runlevel
 ---
-<img class="alignleft size-full wp-image-836" alt="sh" src="/images/2012/07/sh1.png" width="128" height="128" />  
+
+<figure>
+<img class="alignleft size-full wp-image-836" alt="sh" src="/images/2012/07/sh1.png" width="128" height="128" />
+</figure>
+
 Visto de forma simple, los runlevel  determinan qué programas se ejecutan al inicio del sistema.
 
 Existen 7 runlevel, numerados del 0 al 6 , aunque es posible crear más. Cada runlevel tiene los siguientes roles:
 
-&nbsp;
-
-&nbsp;
-
-  * 0    » Apagado del sistema
-  * 1    » Modo monousuario
-  * 2    » Modo multiusuario (Por defecto)
-  * 3-5 » Igual que runlevel 2
-  * 6    » Reinicio del sistema
+- 0    » Apagado del sistema
+- 1    » Modo monousuario
+- 2    » Modo multiusuario (Por defecto)
+- 3-5  » Igual que runlevel 2
+- 6    » Reinicio del sistema
 
 Pasemos a describir cada runlevel:  
-  
+
 <!--ad-->
 
-  
 El runlevel 0 es la condición de apagado del sistema. La mayoría de ordenadores actuales se apagarán al llegar a este nivel.
 
-El 1 es conocido como de monousuario o usuario único. Suele llamarsele modo de rescate (**rescue mode ó trouble-shooting). **En este nivel no se ejecuta ningún servicio o demonio. Normalmente es posible iniciar el sistema en modo rescate desde el [GRUB][1], o añadiendo la palabra **single** al final de la línea de comandos del kernel.
+El 1 es conocido como de monousuario o usuario único. Suele llamarsele modo de rescate (_rescue mode ó trouble-shooting_). En este nivel no se ejecuta ningún servicio o demonio. Normalmente es posible iniciar el sistema en modo rescate desde el [GRUB][1], o añadiendo la palabra __single__ al final de la línea de comandos del kernel.
 
 Del runlevel 2 al 5 son modos multiusuario, y el modo usado por defecto.
 
@@ -43,48 +42,51 @@ Si el 0 era la condición de apagado, el 6 es la señal de reinicio del sistema.
 
 #### ¿Dónde residen los Run Level?
 
-Como todo en un sitema Linux, están definidos mediante ficheros, y se encuentran bajo el directorio */etc:*
+Como todo en un sitema Linux, están definidos mediante ficheros, y se encuentran bajo el directorio `/etc`:
 
-{% highlight bash %}/etc/rc0.d      Run level 0
+{% highlight bash %}
+/etc/rc0.d      Run level 0
 /etc/rc1.d       Run level 1
 /etc/rc2.d       Run level 2
 /etc/rc3.d       Run level 3
 /etc/rc4.d       Run level 4
 /etc/rc5.d       Run level 5
-/etc/rc6.d       Run level 6{% endhighlight %}
+/etc/rc6.d       Run level 6
+{% endhighlight %}
 
 Echemos un vistazo al contenido del runlevel 2:
 
-{% highlight bash %}[~]
-hkr-&gt; ls /etc/rc2.d/
+{% highlight bash %}
+$ ls /etc/rc2.d/
 README      S15nfs-common      S17sudo     S19anacron  S19dbus   S19speech-dispatcher  S20network-manager  S21pulseaudio  S22libvirt-guests  S23rmnologin
 S01motd     S17binfmt-support  S18apache2  S19atd      S19exim4  S20avahi-daemon       S21gdm3             S21saned       S23minissdpd
-S14rpcbind  S17rsyslog         S19acpid    S19cron     S19rsync  S20bluetooth          S21libvirt-bin      S22bootlogs    S23rc.local{% endhighlight %}
+S14rpcbind  S17rsyslog         S19acpid    S19cron     S19rsync  S20bluetooth          S21libvirt-bin      S22bootlogs    S23rc.local
+{% endhighlight %}
 
-Cada fichero es un enlace simbólico a su respectivo [script][2] residente en */etc/init.d*. Estos scripts controlan la detención o inicio de un servicio.
+Cada fichero es un enlace simbólico a su respectivo [script][2] residente en `/etc/init.d`. Estos scripts controlan la detención o inicio de un servicio.
 
 El nombre de los enlaces de estos directorios puede ser poco intuitivos al principio, pero veamos su significado, la sintaxis es:
 
 {% highlight bash %}[K | S] + nn + [string]{% endhighlight %}
 
-Es decir, la primera letra del nombre puede ser una **K ** o una **S, **seguidas de un número de dos dígitos, del 01 al 99 y por último una cadena de texto. La K significa que el servicio será detenido al entrar al runlevel (Kill), la S para iniciarlo (Start). El número indica la prioridad del servicio dentro del runlevel, por ejemplo, **S02apache ** y **S01php **iniciará primero php y luego apache. Si dos servicios tienen el mismo orden de prioridad numérico, se procede en orden alfabético.
+Es decir, la primera letra del nombre puede ser una **K** o una **S**, seguidas de un número de dos dígitos, del 01 al 99 y por último una cadena de texto. La K significa que el servicio será detenido al entrar al runlevel (Kill), la S para iniciarlo (Start). El número indica la prioridad del servicio dentro del runlevel, por ejemplo, **S02apache** y **S01php** iniciará primero php y luego apache. Si dos servicios tienen el mismo orden de prioridad numérico, se procede en orden alfabético.
 
 #### Cómo determinar en qué runlevel se encuentra el sistema
 
-El comando **runlevel **mostará el último runlevel que fue ejecutado, y el actual:
+El comando **runlevel** mostará el último runlevel que fue ejecutado, y el actual:
 
-&nbsp;
+{% highlight bash %}
+$ runlevel
+N 2
+{% endhighlight %}
 
-{% highlight bash %}hkr-&gt; runlevel 
-N 2{% endhighlight %}
+La **N** significa None, informando de que no ha habido ningún cambio de runlevel desde que se inició el sistema. **2** es el runlevel actual.
 
-La **N **significa None, informando de que no ha habido ningún cambio de runlevel desde que se inició el sistema. **2 ** es el runlevel actual.
-
-Para moverse de un runlevel a otro basta con ejectar el comando **telinit **seguido del número del runlevel deseado. Aunque pueda parecer correcto, no se recomienda apagar o reiniciar el sistema cambiando a los runlevel 0 o 6.
+Para moverse de un runlevel a otro basta con ejectar el comando **telinit** seguido del número del runlevel deseado. Aunque pueda parecer correcto, no se recomienda apagar o reiniciar el sistema cambiando a los runlevel 0 o 6.
 
 #### Cómo agregar un servicio a un runlevel
 
-****Si deseamos agregar un servicio a un runlevel deberemos usar el comando **update-rc.d **. Por ejemplo, si quieres que **nginx **o **Apache **se ejecuten en cada inicio del sistema, basta con agregarlos a los runlevel 2-5, correspondientes al modo multiusuario:
+Si deseamos agregar un servicio a un runlevel deberemos usar el comando **update-rc.d**. Por ejemplo, si quieres que **nginx** o **Apache** se ejecuten en cada inicio del sistema, basta con agregarlos a los runlevel 2-5, correspondientes al modo multiusuario:
 
 {% highlight bash %}# update-rc.d nginx start 90 2 3 4 5 . stop 01 0 1 6 .{% endhighlight %}
 
@@ -122,9 +124,9 @@ A continuación varios ejemplos extraidos del manual de **update-rc.d:**
           update-rc.d -f foobar remove
           update-rc.d foobar stop 45 S .{% endhighlight %}
 
-*An introduction to run-levels* »» <a href="http://www.debian-administration.org/articles/212" target="_blank">Visitar sitio</a> 
+#### Referencias
 
-
+*An introduction to run-levels* »» <a href="http://www.debian-administration.org/articles/212" target="_blank">Visitar sitio</a>
 
  [1]: http://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/ "Grub Customizer 2.0, personaliza tu GRUB2"
  [2]: http://elbauldelprogramador.com/
