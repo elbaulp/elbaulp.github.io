@@ -12,6 +12,8 @@ tags:
   - 'null'
   - NullPointerException java
 modified: 2015-12-02T22:53:26+01:00
+image:
+  thumb: 2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
 ---
 
 <figure>
