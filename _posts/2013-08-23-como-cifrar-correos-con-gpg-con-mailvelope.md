@@ -15,7 +15,10 @@ tags:
   - tutorial mailvelope
   - user gpg en correo
 ---
-<img src="/images/2013/04/GnuPG-Logo.png" alt="Cómo cifrar correos con GPG usando Mailvelope" width="400" height="175" class="thumbnail aligncenter size-full wp-image-1519" />
+
+<figure>
+  <img src="/images/2013/04/GnuPG-Logo.png" alt="Cómo cifrar correos con GPG usando Mailvelope" width="400" height="175" class="thumbnail aligncenter size-full wp-image-1519" />
+</figure>
 
 En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante GPG, **Mailvelope**.
 
@@ -39,7 +42,7 @@ source bin/activate
 cd ..
 git clone git://github.com/toberndo/mailvelope.git
 cd mailvelope
-git checkout -t origin/firefox    
+git checkout -t origin/firefox
 git submodule init
 git submodule update
 make build
@@ -60,7 +63,7 @@ El par de claves pública/privada que acabamos de generar debe aparecer en *Disp
 
 ### Ejemplo
 
-Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de [contacto][3] o en este otro <a href="http://keyserver.borgnet.us:11371/pks/lookup?op=get&search=0x083EDE12BE101B2B" target="_blank">enlace</a>. La copiamos y en la sección **Import Keys** de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves. 
+Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de [contacto][3] o en este otro <a href="http://keyserver.borgnet.us:11371/pks/lookup?op=get&search=0x083EDE12BE101B2B" target="_blank">enlace</a>. La copiamos y en la sección **Import Keys** de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.
 
 Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.
 
@@ -82,7 +85,7 @@ El proceso contrario, es decir, cuando nos envíen un email cifrado es bastante 
 
 El cursor adaptará la forma de una llave, hacemos click, introducimos nuestro **passphrase** y descifraremos el mensaje.
 
-Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología. 
+Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología.
 
 
 
