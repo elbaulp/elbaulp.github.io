@@ -32,7 +32,8 @@ This kit also includes these valuable resources:
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_bund84" target="_blank">Descárgala ahora</a>
 </div>
 
-#### Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].
+Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].
+{: .notice-info }
 
 [2]: /manuales-gratuitos/
 [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
