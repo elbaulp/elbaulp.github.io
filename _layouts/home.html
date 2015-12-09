@@ -34,7 +34,7 @@
   </div>
   <div id="index">
     <h3><a href="{{ site.url}}/posts/">Últimos artículos</a></h3>
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts limit:10 %}
     <article>
       <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
       <img style="display:none;" itemprop="image" src="{{ site.url }}/images/default-thumb.png" alt="Image summary">
