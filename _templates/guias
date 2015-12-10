@@ -1,0 +1,28 @@
+---
+layout: {{ layout }}
+title: {{ title }}
+modified:
+categories: {{ dir }}
+excerpt:
+tags: []
+image:
+  thumb:
+---
+<figure>
+  <a href=""><img src="/images/" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+{% include _toc.html %}
+
+
+<!--ad-->
+
+<div class="btn-success">
+  <a href="" target="_blank">Descárgala ahora</a>
+</div>
+
+Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
+{: .notice-info }
+
+[1]: /manuales-gratuitos/
+[2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
