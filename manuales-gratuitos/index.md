@@ -134,6 +134,10 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
     <a href="/nueva-guia-behind-the-mask-the-changing-face-of-hacking/"><img src="
     /images/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" alt="Behind the Mask, the Changing Face of Hacking" width="199" height="259"/><span>Behind the Mask, the Changing Face of Hacking</span></a>
   </li>
+  <li>
+    <a href="/nueva-guia-5-ways-zenith-insurance-are-using-predictive-analytics-to-leverage-big-data/"><img src="
+    /images/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData2.jpg" alt="5 Ways Zenith Insurance Are Using Predictive Analytics to Leverage Big Data" width="199" height="259"/><span>5 Ways Zenith Insurance Are Using Predictive Analytics to Leverage Big Data</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
