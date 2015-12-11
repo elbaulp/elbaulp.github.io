@@ -5,6 +5,8 @@ excerpt: "Colección de cursos escritos en el blog"
 search_omit: false
 ---
 
+### [Curso de Android Nuevo][Android2] (En proceso)
+
 ### [Curso de Android][Android]
 
 ### [Tutoriales sobre Git][git]
@@ -16,6 +18,7 @@ search_omit: false
 ### [Bases de datos][bd]
 
 [Android]: http://elbauldelprogramador.com/curso-programacion-android/
+[Android2]: /android/
 [git]: /git/
 [latex1]: /latex/
 [dig]: http://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/
