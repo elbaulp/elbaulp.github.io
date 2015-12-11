@@ -6,10 +6,7 @@ categories:
 excerpt: "Tras mucho buscar, al fin he conseguido recopilar una lista de libros que todo Científico de Datos o Ingeniero de Datos debería tener en su biblioteca personal."
 tags: [libros, data Scientist, data Engineer, libros big data]
 image:
-  feature:
   thumb: ml/Machine-Learning-for-Hackers.jpg
-  credit:
-  creditlink:
 date: 2015-11-01T21:30:17+01:00
 ---
 {% include _toc.html %}
