@@ -39,6 +39,10 @@ GEM
       jekyll (~> 3.0)
     octopress-hooks (2.6.1)
       jekyll (>= 2.0)
+    posix-spawn (0.3.11)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -47,6 +51,7 @@ GEM
     safe_yaml (1.0.4)
     sass (3.4.20)
     titlecase (0.1.1)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -57,6 +62,7 @@ DEPENDENCIES
   jekyll
   jekyll-sitemap
   octopress (~> 3.0.0.rc.12)
+  pygments.rb
 
 BUNDLED WITH
    1.10.5
