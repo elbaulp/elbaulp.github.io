@@ -4,7 +4,7 @@ title: Privacy and Cookie Policy
 layout: page
 guid: http://elbauldelprogramador.com/?page_id=2428
 ---
-<script type="text/javascript" src="http://auditor.optanon.com/cookie-policy/elbauldelprogramador.com.js"></script>
+<script async type="text/javascript" src="http://auditor.optanon.com/cookie-policy/elbauldelprogramador.com.js"></script>
 <link rel="stylesheet" href="http://cdn.cookielaw.org/css/cookie-policy.css" />
 <div class="optanon-cookie-policy">
     <h1>How We Use Cookies</h1>
