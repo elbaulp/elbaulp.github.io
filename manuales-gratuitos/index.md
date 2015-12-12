@@ -138,6 +138,10 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
     <a href="/nueva-guia-5-ways-zenith-insurance-are-using-predictive-analytics-to-leverage-big-data/"><img src="
     /images/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData2.jpg" alt="5 Ways Zenith Insurance Are Using Predictive Analytics to Leverage Big Data" width="199" height="259"/><span>5 Ways Zenith Insurance Are Using Predictive Analytics to Leverage Big Data</span></a>
   </li>
+  <li>
+    <a href="/nueva-guia-computer-and-hacking-forensics-free-video-training-course/"><img src="
+    /images/Computer-and-Hacking-Forensics---FREE-Video-Training-Course2.jpg" alt="Computer and Hacking Forensics - FREE Video Training Course" width="199" height="259"/><span>Computer and Hacking Forensics - FREE Video Training Course</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
