@@ -142,6 +142,10 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
     <a href="/nueva-guia-computer-and-hacking-forensics-free-video-training-course/"><img src="
     /images/Computer-and-Hacking-Forensics---FREE-Video-Training-Course2.jpg" alt="Computer and Hacking Forensics - FREE Video Training Course" width="199" height="259"/><span>Computer and Hacking Forensics - FREE Video Training Course</span></a>
   </li>
+  <li>
+    <a href="/nueva-guia-preserving-your-privacy-in-windows-10/"><img src="
+    /images/Preserving-Your-Privacy-in-Windows-102.jpg" alt="Preserving Your Privacy in Windows 10" width="199" height="259"/><span>Preserving Your Privacy in Windows 10</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
