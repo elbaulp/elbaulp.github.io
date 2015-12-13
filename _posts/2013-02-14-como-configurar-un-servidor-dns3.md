@@ -39,10 +39,17 @@ tags:
   - servidores dns
   - soa correo
   - zona dns inversa
+image:
+  thumb: 2013/04/dns.jpg
 ---
-  * [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]
-  * [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][2]
-  * Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)
+
+<figure>
+  <a href="/images/2013/04/dns.jpg"><img src="/images/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+* [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]
+* [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][2]
+* Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)
 
 Ya se ha visto que existe una base de datos centralizada que asocia nombres de dominios a direccines IP, también se mencionó el caso inverso, una copia inversa de dicha base de datos, que asocia IP&#8217;s a nombres de dominios. Ésta búsqueda inversa es usada por muchos programas, que rechazarán establecer una conexión si la búsqueda inversa y la búsqueda directa (*Dominio»IP*) no coinciden. Muchos proveedores de correo usan la búsqueda inversa para clasificar correos como spam.
 
