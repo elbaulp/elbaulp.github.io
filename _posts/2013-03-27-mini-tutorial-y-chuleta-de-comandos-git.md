@@ -10,6 +10,7 @@ categories:
 tags:
   - git
   - chuleta comandos git
+  - chuleta git
   - comandos git
   - git cheatsheet
   - git tutorial
