@@ -9,23 +9,22 @@ excerpt: |
 layout: post
 guid: /?p=790
 permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/
-if_slider_image:
-  -
-  -
 categories:
   - Artículos
   - Tecnología
 tags:
+  - mejores libros no ficcion
+  - libros de tecnologia
+  - libros sobre la tecnologia
   - geek
   - libros
   - libros geek
-modified: 2015-11-21T20:16:00+00:00
+  - didier newman
+  - libros para geeks
+modified: 2015-12-13T20:16:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:
-  feature:
   thumb: 2012/07/generationxbox1.jpg
-  credit:
-  creditlink:
 ---
 Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
 
