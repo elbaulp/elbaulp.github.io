@@ -15,6 +15,8 @@ tags:
   - bind tutorial dns
   - CNAME
   - como crear dns localhost
+  - crear servidor dns
+  - como montar servidor dns
   - como crear una zona primaria en dns
   - configura un servidor dns
   - configuración de servidores
