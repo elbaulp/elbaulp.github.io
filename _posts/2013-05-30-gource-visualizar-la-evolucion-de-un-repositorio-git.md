@@ -13,12 +13,18 @@ tags:
   - gource git
   - grabar video con gource
   - tutorial gource
+  - gource tutorial
+image:
+  thumb: 2013/05/gourceGit-1024x804.png
+excerpt: "Tutorial de gource y ejemplo de uso"
+modified: 2015-12-13T19:30:12+01:00
 ---
 Hace unas semanas hablé de [logstalgia][1], que visualiza las visitas a una web en forma del juego Pong. Hoy hablo de *Gource*, herramienta similar que visualiza la evolución de un repositorio en [git][2].  
-  
+
 <!--ad-->
 
-  
+# Instalación de Gource
+
 Para instalar el programa basta con ejecutar:
 
 {% highlight bash %}# aptitude install gource
@@ -31,7 +37,9 @@ Una vez instalado, basta con ejecutar el programa y pasarle la ruta a la carpeta
 
 El resultado es algo como esto:
 
-[<img src="/images/2013/05/gourceGit-1024x804.png" alt="gourceGit" width="770" height="604" class="aligncenter size-large wp-image-1581" />][3]{.thumbnail}
+<figure>
+  <a href="/images/2013/05/gourceGit-1024x804.png"><img src="/images/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.
 
@@ -54,9 +62,9 @@ Donde:
 
 A continuación os dejo un vídeo de uno de mis repositorios:
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span> 
-
-
+<figure>
+  <iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen></iframe>
+</figure>
 
  [1]: http://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
  [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
