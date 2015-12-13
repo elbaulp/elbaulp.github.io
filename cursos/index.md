@@ -3,6 +3,7 @@ layout: page
 title: Cursos
 excerpt: "Colección de cursos escritos en el blog"
 search_omit: false
+tags: [cursos de programador, cursos de programación]
 ---
 
 ### [Curso de Android Nuevo][Android2] (En proceso)

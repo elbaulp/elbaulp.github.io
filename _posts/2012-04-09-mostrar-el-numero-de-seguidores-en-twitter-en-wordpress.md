@@ -5,15 +5,7 @@ title: Mostrar el número de seguidores en Twitter en WordPress
 layout: post
 guid: /?p=704
 permalink: /mostrar-el-numero-de-seguidores-en-twitter-en-wordpress/
-if_slider_image:
-  - 
-  - 
-if_seo_keywords:
-  - contador seguidores, seguidores twitter, followers count, seguidores twitter wordpress, twitter count
-  - contador seguidores, seguidores twitter, followers count, seguidores twitter wordpress, twitter count
-sif_eo_description:
-  - Código php para mostrar en wordpress nuestro número de seguidores en twitter.
-  - Código php para mostrar en wordpress nuestro número de seguidores en twitter.
+excerpt: "Código php para mostrar en wordpress nuestro número de seguidores en twitter"
 categories:
   - internet
 tags:
@@ -24,7 +16,7 @@ format: aside
 ---
 Hoy voy a explicar cómo mostrar los seguidores de nuestra cuenta de Twitter en el blog. Antes de nada, necesitamos instalar un plugin que nos permite añadir widgets que contengan código PHP, se llama WP PHP Widget y podéis descargarlo de la página de <a href="http://wordpress.org/extend/plugins/wp-php-widget/" target="_blank">plugins de WordPress</a>. Una vez que tengamos instalado el plugin, agregamos el widget a nuestra plantilla y pegamos el siguiente código:
 
-  
+
 <!--ad-->
 
 {% highlight php %}$url = "http://twitter.com/users/show/elbaulp";
@@ -51,7 +43,7 @@ Y en el widget tengo lo siguiente:
   <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank">
      <img style="vertical-align:middle;padding-right:5px" src="twitter.png" alt="Twitter" /></a>
      <span>< ?php echo followers_count();?></span> Followers
-  
+
 </p>
 {% endhighlight %}
 

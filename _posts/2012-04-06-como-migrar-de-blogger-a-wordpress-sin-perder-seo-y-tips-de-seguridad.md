@@ -6,18 +6,6 @@ excerpt: 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo d
 layout: post
 guid: /?p=688
 permalink: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/
-sif_eo_description:
-  - 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo de blogger a una en wordpress bajo un hosting propio así como la configuración necesaria para no perder a los  lectores habituales, los suscriptores al feed ni el posicionamiento en los buscadores'
-  - 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo de blogger a una en wordpress bajo un hosting propio así como la configuración necesaria para no perder a los  lectores habituales, los suscriptores al feed ni el posicionamiento en los buscadores'
-if_seo_keywords:
-  - blogger a wordpress, migrar blogger wordpress, migracion
-  - blogger a wordpress, migrar blogger wordpress, migracion
-if_seo_title:
-  - Cómo migrar de Blogger a Wordpress sin perder SEO y Tips de seguridad
-  - Cómo migrar de Blogger a Wordpress sin perder SEO y Tips de seguridad
-if_slider_image:
-  - 
-  - 
 categories:
   - How To
   - internet
@@ -40,7 +28,7 @@ Una vez tenemos wordpress instalado y funcionando, vamos a importar todos las en
 
 Hecho esto, debemos conceder permisos a blogger para que deje a wordpress acceder a la información, le damos al botón de autorizar, una vez concedido el acceso, le damos al botón mágico (Magic Button) y se empezarán a importar las entradas y comentarios.
 
-  
+
 <!--ad-->
 
 ### <a name="camb"></a>Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress
@@ -245,7 +233,7 @@ RewriteRule ^download/([^/]+)$ wp-content/plugins/download-monitor/download.php?
 #######################################################
 #               __                          __
 #   ____ ______/ /______ _____  ____ ______/ /_  ___
-#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _ 
+#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _
 # / /_/ (__  ) ,< / /_/ / /_/ / /_/ / /__/ / / /  __/
 # __,_/____/_/|_|__,_/ .___/__,_/___/_/ /_/___/
 #                     /_/
@@ -326,7 +314,7 @@ RewriteRule .* - [F,NS,L]
 # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #               __                          __
 #   ____ ______/ /______ _____  ____ ______/ /_  ___
-#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _ 
+#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _
 # / /_/ (__  ) ,< / /_/ / /_/ / /_/ / /__/ / / /  __/
 # __,_/____/_/|_|__,_/ .___/__,_/___/_/ /_/___/
 #                     /_/
