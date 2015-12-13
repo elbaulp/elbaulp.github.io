@@ -10,10 +10,12 @@ categories:
 tags:
   - imei android
   - imei perdido
-  - perdi imei
-  - recuperar imei
+  - perdi imei android
   - recuperar imei android
-  - restaurar imei
+  - recuperar imei android
+  - restaurar imei android
+  - como recuperar el imei android
+  - como restaurar el imei android
 ---
 Éste artículo pretende ser una guía para todo aquel que ha perdido el **imei** de su teléfono y no puede acceder a la red telefónica. Y como referencia para mí, que he perdido el **imei** dos veces. Veremos cómo recuperar el IMEI del teléfono mediante dos métodos. Antes de realizar alguno de ellos, <span class="highlight style-1">HAZLO BAJO TU RESPONSABILIDAD</span>.
 
