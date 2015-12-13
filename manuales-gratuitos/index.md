@@ -2,71 +2,8 @@
 id: 449
 title: Manuales gratuítos
 layout: page
-guid: http://elbauldelprogramador.org/?page_id=449
-blogger_permalink:
-  - http://www.elbauldelprogramador.org/p/guias-gratuitas.html
-  - http://www.elbauldelprogramador.org/p/guias-gratuitas.html
-  - http://www.elbauldelprogramador.com/p/guias-gratuitas.html
-if_seo_keywords:
-  - manuales, cursos, descargar manuales, manuales programacion, guias
-  - manuales, cursos, descargar manuales, manuales programacion, guias
-  - manuales, cursos, descargar manuales, manuales programacion, guias
-sif_eo_description:
-  - Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática
-  - Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática
-  - Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática
-if_seo_title:
-  - Manuales gratuitos
-  - Manuales gratuitos
-  - Manuales gratuitos
-if_page_sidebar:
-  - 0
-  - 0
-  - 0
-if_hide_page_title:
-  - on
-  - on
-  - on
-if_page_section_order:
-  - breadcrumbs,page_section,twitterbar_section
-  - breadcrumbs,page_section,twitterbar_section
-  - breadcrumbs,page_section,twitterbar_section
-if_twitter_reply:
-  - off
-  - off
-  - off
-if_product_text_align:
-  - 0
-  - 0
-  - 0
-if_product_title:
-  - Product
-  - Product
-  - Product
-if_product_text:
-  - 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '
-  - 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '
-  - 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. '
-if_product_type:
-  - 0
-  - 0
-  - 0
-if_product_image:
-  - http://www.elbauldelprogramador.org/wp-content/themes/ifeature/images/product.jpg
-  - http://www.elbauldelprogramador.org/wp-content/themes/ifeature/images/product.jpg
-  - http://www.elbauldelprogramador.com/wp-content/themes/ifeature/images/product.jpg
-if_product_link_toggle:
-  - on
-  - on
-  - on
-if_product_link_url:
-  - http://www.elbauldelprogramador.org
-  - http://www.elbauldelprogramador.org
-  - http://www.elbauldelprogramador.com
-if_product_link_text:
-  - Buy Now
-  - Buy Now
-  - Buy Now
+tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
+excerpt: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
 ---
 En esta sección iré poniendo las mejores manuales gratuítos referidos a tecnología, Internet, redes, productividad, uso de software y mucho más. El catálogo completo está disponible en [esta página.][1]
 
