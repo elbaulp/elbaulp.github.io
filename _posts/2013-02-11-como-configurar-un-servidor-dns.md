@@ -35,18 +35,21 @@ tags:
   - servidor dns debian
   - servidores dns
   - soa correo
+image:
+  thumb: 2013/04/dns.jpg
 ---
-  * Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)
-  * [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][1]
-  * [Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)][2]
 
-<p class="alert">
-  En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge.
-</p>
+<figure>
+  <a href="/images/2013/04/dns.jpg"><img src="/images/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
-<p class="alert">
-  Ya que los artículos están basados en distintas fuentes de información que he ido recopilando, no sé de cuantas partes estará formada esta serie, así que la lista de arriba irá cambiando hasta que estén completos todos los artículos.
-</p>
+* Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)
+* [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][1]
+* [Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)][2]
+
+>En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge.
+
+>Ya que los artículos están basados en distintas fuentes de información que he ido recopilando, no sé de cuantas partes estará formada esta serie, así que la lista de arriba irá cambiando hasta que estén completos todos los artículos.
 
 Debo reconocer que el tema de los DNS me ha dado muchos problemas, es algo que para mí ha sido dificil de entender. A base de leer y releer muchos artículos por internet, aprendí a configurar un servidor DNS manualmente. Hoy voy a explicar cómo.
 
@@ -63,7 +66,7 @@ version.bind   text = "VERSION"{% endhighlight %}
 El segundo componente es llamado *resolver library* o biblioteca de resolución, encargada de realizar peticiones a servidores DNS para intentar traducir un nombre a una dirección IP. El archivo de configuración para este componente es **resolv.conf**.
 
 El tercer y último componente de **BIND** proporciona herramientas para probar el servidor DNS. Entre estas herramientas se encuentran comandos como **dig**, que se verá más adelante.  
-  
+
 <!--ad-->
 
 ### ¿Cual es tu responsabilidad como parte del sistema DNS?
@@ -76,7 +79,9 @@ Por ejemplo, supongamos que quieres encontrar a **google.com**. Tu resolver pide
 
 Así, el servidor root envia la petición a un servidor COM. Éste último servidor dice: “*No tengo esa información, pero sé de un servidor de nombres que sí, tiene dirección 173.194.34.6 y nombre ns1.google.com. Dirígete a esa dirección y te dirá la dirección del sitio web google.com.”*
 
-<img class="thumbnail aligncenter size-full wp-image-1334" alt="Esquema servidores DNS" src="/images/2013/02/dns.png" width="513" height="399" />
+<figure>
+  <img alt="Esquema servidores DNS" src="/images/2013/02/dns.png" width="513" height="399" />
+</figure>
 
 En la figura de arriba, la parte superior izquierda representa los servidores root. En la jerga DNS, éstos servidores reprensentan el comienzo del camino en el sistema DNS. Suelen representarse con un punto (“.”). En los archivos de configuración, el mapeo entre IP y nombre acabará en un punto. A lo largo de esta series de artículos quedará más claro este concepto.
 
@@ -88,10 +93,12 @@ En este punto es donde **BIND** entra en acción. El primer componente que menci
 
 En la figura 2, *named* ha recibido una petición. Busca en su fichero de configuración *named.conf*, que busca en el archivo de zona primaria y pasa la información solicitada al resolver desde el exterior.
 
-<div id="attachment_1335" style="width: 421px" class="wp-caption aligncenter">
-  <img class="thumbnail size-full wp-image-1335" alt="Figura 2 - Respondiendo a una petición" src="/images/2013/02/config.png" width="411" height="185" />
-  
-  <p class="wp-caption-text">
+<div style="width: 421px">
+
+<figure>
+  <img alt="Figura 2 - Respondiendo a una petición" src="/images/2013/02/config.png" width="411" height="185" />
+</figure>
+  <p>
     Figura 2 &#8211; Respondiendo a una petición
   </p>
 </div>
@@ -104,8 +111,8 @@ El fichero tiene la siguiente estructura:
 
 {% highlight cpp %}// This is the primary configuration file for the BIND DNS server named.
 //
-// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
-// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the
+// structure of BIND configuration files in Debian, *BEFORE* you customize
 // this configuration file.
 //
 // If you are just adding zones, please do that in /etc/bind/named.conf.local
@@ -161,12 +168,10 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 
 #### Referencias
 
-*Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a> 
+*Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a>
 
-
-
- [1]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
- [2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
- [3]: http://elbauldelprogramador.com/bases-de-datos/
+[1]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
+[2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
+[3]: http://elbauldelprogramador.com/bases-de-datos/
 
 {% include _toc.html %}
