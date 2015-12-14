@@ -24,11 +24,10 @@ tags:
 modified: 2015-12-14T16:50:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:
-  thumb: 2012/07/generationxbox1.jpg
+  thumb: 2012/07/Hackstory.es-La-historia-nunca-contada-del-underground-hacker-en-la-Península-Ibérica.jpg
 ---
-Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
 
-Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
+Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!
 
 ### Seven Brief Lessons On Physics
 
@@ -36,7 +35,7 @@ Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto 
   <a href="/images/Seven Brief Lessons On Physics.jpg"><img src="/images/Seven Brief Lessons On Physics.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-Este libro del italiano _Carlo Rovelli_ se ha vendido en Itala más que 50 sombras de Grey.
+> Este libro del italiano _Carlo Rovelli_ se ha vendido en Itala más que 50 sombras de Grey.
 
 Here, on the edge of what we know, in contact with the ocean of the unknown, shines the mystery and the beauty of the world. And it's breathtaking
 
