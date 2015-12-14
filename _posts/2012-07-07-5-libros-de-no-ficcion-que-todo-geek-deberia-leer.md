@@ -24,7 +24,7 @@ tags:
 modified: 2015-12-14T16:50:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:
-  thumb: 2012/07/Hackstory.es-La-historia-nunca-contada-del-underground-hacker-en-la-Península-Ibérica.jpg
+  thumb: 2012/07/The-Design-of-Everyday-Things.jpg
 ---
 
 Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!
