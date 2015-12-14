@@ -1,28 +1,9 @@
 ---
 id: 314
 title: 20 ejemplos de iptables para SysAdmins novatos
-
 layout: post
 guid: http://elbauldelprogramador.org/20-ejemplos-de-iptables-para-sysadmins-novatos/
 permalink: /20-ejemplos-de-iptables-para-sysadmins/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551761}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551761}'
-share_count:
-  - 0
-  - 0
 categories:
   - aplicaciones
   - internet
@@ -47,6 +28,12 @@ tags:
   - iptables mangle
   - iptables tutorial
   - politicas con iptables firewall
+  - reglas iptable
+  - ver reglas iptable
+  - iptables ejemlos
+  - comandos iptables
+  - iptables bloquear ping
+  - iptables listar reglas
 ---
 <div class="separator" style="clear: both; float:left; text-align: center;">
   <a href="http://3.bp.blogspot.com/-_5WvmCXMYjk/TvTkTNhQPUI/AAAAAAAAB88/VP8jxCu5y3A/s1600/Applic-Firewall-icon.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="http://3.bp.blogspot.com/-_5WvmCXMYjk/TvTkTNhQPUI/AAAAAAAAB88/VP8jxCu5y3A/s320/Applic-Firewall-icon.png" /></a>
@@ -62,7 +49,7 @@ Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil 
   </blockquote>
 </div>
 
-Este firewall lo controla un programa llamado iptables que gestiona el filtrado para IPv4, y ip6tables para IPv6. 
+Este firewall lo controla un programa llamado iptables que gestiona el filtrado para IPv4, y ip6tables para IPv6.
 
 ## Ejemplos de reglas IPTABLES
 
@@ -70,7 +57,7 @@ Este firewall lo controla un programa llamado iptables que gestiona el filtrado 
   * Los siguientes comandos deberían funcionar en cualquier distro linux moderna.
   * Esto NO es un tutorial de como configurar iptables. Puedes ver un tutorial <a target="_blank" href="http://www.cyberciti.biz/faq/rhel-fedorta-linux-iptables-firewall-configuration-tutorial/">aquí</a>. Es más bien una referencia rápida de los comandos más comunes de iptables.
 
-  
+
 <!--ad-->
 
 # #1: Mostrando el estado de nuestro firewall
@@ -392,7 +379,7 @@ iptables -A OUTPUT -p tcp -d facebook.com -j DROP
 
 De la página del man de iptables:
 
-> ... specifying any name to be resolved with a remote query such as DNS (e.g., facebook.com is a really bad idea), a network IP address (with /mask), or a plain IP address ... 
+> ... specifying any name to be resolved with a remote query such as DNS (e.g., facebook.com is a really bad idea), a network IP address (with /mask), or a plain IP address ...
 
 # #12: Log y borrar paquetes
 
@@ -467,40 +454,40 @@ iptables -t nat -A POSTROUTING -j SNAT --to-source 192.168.1.20-192.168.1.25
 ## open port ssh tcp port 22 ##
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 22 -j ACCEPT
- 
+
 ## open cups (printing service) udp/tcp port 631 for LAN users ##
 iptables -A INPUT -s 192.168.1.0/24 -p udp -m udp --dport 631 -j ACCEPT
 iptables -A INPUT -s 192.168.1.0/24 -p tcp -m tcp --dport 631 -j ACCEPT
- 
+
 ## allow time sync via NTP for lan users (open udp port 123) ##
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p udp --dport 123 -j ACCEPT
- 
+
 ## open tcp port 25 (smtp) for all ##
 iptables -A INPUT -m state --state NEW -p tcp --dport 25 -j ACCEPT
- 
+
 # open dns server ports for all ##
 iptables -A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT
 iptables -A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT
- 
+
 ## open http/https (Apache) server port to all ##
 iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
- 
+
 ## open tcp port 110 (pop3) for all ##
 iptables -A INPUT -m state --state NEW -p tcp --dport 110 -j ACCEPT
- 
+
 ## open tcp port 143 (imap) for all ##
 iptables -A INPUT -m state --state NEW -p tcp --dport 143 -j ACCEPT
- 
+
 ## open access to Samba file server for lan users only ##
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 137 -j ACCEPT
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 138 -j ACCEPT
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 139 -j ACCEPT
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 445 -j ACCEPT
- 
+
 ## open access to proxy server for lan users only ##
 iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport 3128 -j ACCEPT
- 
+
 ## open access to mysql server for lan users only ##
 iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
 {% endhighlight %}
@@ -545,8 +532,8 @@ Conocer si hay puertos abiertos o no:
 Es recomendable instalarse un [sniffer][1] como tcpdupm y ngrep para probar la configuración de nuestro firewall.
 
 > ## Conclusión
-> 
-> Esta entrada solo lista las reglas básicas para los usuarios nuevos en linux. Se pueden crear reglas más complejas. Requiere una buena comprensión de TCP/IP, tunning del kernel linux via sysctl.conf y un buen conocimiento de nuestra configuración. 
+>
+> Esta entrada solo lista las reglas básicas para los usuarios nuevos en linux. Se pueden crear reglas más complejas. Requiere una buena comprensión de TCP/IP, tunning del kernel linux via sysctl.conf y un buen conocimiento de nuestra configuración.
 
 <p class="alert">
   Fuente original: <a target="_blank" href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">cyberciti</a>
