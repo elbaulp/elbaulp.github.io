@@ -32,7 +32,7 @@ Esta lista de libros geeks se mantiene en constante actualización, si deseas qu
 ### Seven Brief Lessons On Physics
 
 <figure>
-  <a href="/images/Seven Brief Lessons On Physics.jpg"><img src="/images/Seven Brief Lessons On Physics.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <img src="/images/Seven Brief Lessons On Physics.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 > Este libro del italiano _Carlo Rovelli_ se ha vendido en Itala más que 50 sombras de Grey.
