@@ -5,28 +5,6 @@ title: Códigos secretos y ocultos para Android
 layout: post
 guid: http://elbauldelprogramador.org/codigos-secretos-y-ocultos-para-android/
 permalink: /codigos-secretos-y-ocultos-para-android/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551738}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551738}'
-share_count:
-  - 0
-  - 0
-fsb_social_twitter:
-  - 4
-fsb_social_facebook:
-  - 5
 categories:
   - android
   - curiosidades

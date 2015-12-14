@@ -1,6 +1,6 @@
 ---
 id: 790
-title: 17 Libros de No-Ficción que todo Geek debería leer
+title: 18 Libros de No-Ficción que todo Geek debería leer
 
 excerpt: |
   Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
@@ -21,7 +21,7 @@ tags:
   - libros geek
   - didier newman
   - libros para geeks
-modified: 2015-12-13T20:16:00+00:00
+modified: 2015-12-14T16:50:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:
   thumb: 2012/07/generationxbox1.jpg
@@ -29,6 +29,22 @@ image:
 Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
 
 Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
+
+### Seven Brief Lessons On Physics
+
+<figure>
+  <a href="/images/Seven Brief Lessons On Physics.jpg"><img src="/images/Seven Brief Lessons On Physics.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+Este libro del italiano _Carlo Rovelli_ se ha vendido en Itala más que 50 sombras de Grey.
+
+Here, on the edge of what we know, in contact with the ocean of the unknown, shines the mystery and the beauty of the world. And it's breathtaking
+
+These seven short lessons guide us, with simplicity and clarity, through the scientific revolution that shook physics in the twentieth century and still continues to shake us today. In this beautiful and mind-bending introduction to modern physics, Carlo Rovelli explains Einstein's theory of general relativity, quantum mechanics, black holes, the complex architecture of the universe, elementary particles, gravity, and the nature of the mind. In under eighty pages, readers will understand the most transformative scientific discoveries of the twentieth century and what they mean for us. Not since Richard Feynman's celebrated best-seller Six Easy Pieces has physics been so vividly, intelligently and entertainingly revealed.
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/gp/product/0241235960/?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+</div>
 
 ### The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin
 

@@ -14,13 +14,6 @@ excerpt: |
 layout: post
 guid: /?p=841
 permalink: /cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/
-if_slider_image:
-  -
-  -
-fsb_social_twitter:
-  - 0
-fsb_social_facebook:
-  - 13
 categories:
   - Artículos
 tags:
@@ -42,6 +35,8 @@ tags:
   - que es formato Ogg Vorbis
   - que es formato wav
   - que es formato WMA
+image:
+  thumb: 2012/07/original1.jpg
 ---
 
 <figure>
