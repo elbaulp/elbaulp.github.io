@@ -9,6 +9,12 @@ En esta sección iré poniendo las mejores manuales gratuítos referidos a tecno
 
 Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir un correo electrónico para recibir el enlace de descarga. Algunos productos son e-books, otros son papers y también hay revistas &#8220;de papel&#8221; a las se puede suscribir y recibir en casa, todo gratuito, hasta el envío.(Para ver el título del libro mantén el ratón encima de la imagen.)
 
+Si estás buscando libros de texto, quizá te intersen estos dos artículos:
+
+- <a onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="16 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">16 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
+- <a onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="18 Libros de No-Ficción que todo Geek debería leer">18 Libros de No-Ficción que todo Geek debería leer</a> 
+
+
 <ul class="tt-wrapper">
   <li>
     <a href="http://elbauldelprogramador.com/6-steps-to-securing-your-domains/"><img src="http://elbauldelprogramador.com/images/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="262" class=" size-full wp-image-2097" /><span>6 Steps to Securing Your Domains</span></a>
