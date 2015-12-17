@@ -2,7 +2,7 @@
 id: 2463
 title: 'QUIC: Análisis práctico del protocolo de Google'
 math: true
-modified: 2015-04-08
+modified: 2015-04-08T00:00:00+00:00
 layout: post
 guid: http://elbauldelprogramador.com/?p=2463
 permalink: /quic-analisis-practico-del-protocolo-de-google/

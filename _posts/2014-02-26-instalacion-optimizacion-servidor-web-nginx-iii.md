@@ -2,7 +2,7 @@
 id: 2260
 title: Instalación y optimización de un servidor web con Nginx (III)
 math: true
-modified: 2015-04-08
+modified: 2015-04-08T00:00:00+00:00
 layout: post
 guid: http://elbauldelprogramador.com/?p=2260
 permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
