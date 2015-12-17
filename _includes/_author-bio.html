@@ -4,11 +4,24 @@
 
 <div>
 
-{% if author.avatar contains 'http' %}
-	<a href="{{ site.url }}"><img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
-{% else %}
-	<a href="{{ site.url }}"><img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
-{% endif %}
+  <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    {% if author.avatar contains 'http' %}
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <a href="{{ site.url }}"><img width="150px" height="150px" src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+        <meta itemprop="url" content="{{ author.avatar }}">
+        <meta itemprop="width" content="150">
+        <meta itemprop="height" content="150">
+      </div>
+    {% else %}
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <a href="{{ site.url }}"><img width="150px" height="150px" src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+        <meta itemprop="url" content="{{ site.url }}/images/{{ author.avatar }}">
+        <meta itemprop="width" content="150">
+        <meta itemprop="height" content="150">
+      </div>
+    {% endif %}
+    <meta itemprop="name" content="{{ site.title }}">
+  </div>
 
   <h3 itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></h3>
 

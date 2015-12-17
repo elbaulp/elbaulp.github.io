@@ -28,13 +28,22 @@
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Article" class="hentry" id="main" role="main">
+<div itemscope itemtype="http://schema.org/BlogPosting" class="hentry" id="main" role="main">
+  <meta itemprop="mainEntityOfPage" content="{{ site.url }}" />
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
   <article class="post">
     <div class="headline-wrap">
+
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
       <img style="display:none;" itemprop="image" src="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}" alt="{{ page.title }}">
+      <meta itemprop="url" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+      <meta itemprop="width" content="600">
+      <meta itemprop="height" content="400">
+      <meta itemprop="thumbnailUrl" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+    </div>
+
       {% if page.link %}
         <h1 itemprop="headline" class="entry-title"><a href="{{ page.link }}"><span itemprop="name">{{ page.title }}</span></a></h1>
       {% else %}
@@ -64,7 +73,7 @@
       {% include _adsense.html %}
       <footer role="contentinfo">
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        <p class="byline"><strong>{{ page.title }}</strong> se publicó el <time itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}"><span class="date updated">{{ page.date | date: "%B %d, %Y" }}</span></time>{% if page.modified %} y se actualizó el <time content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+        <p class="byline"><strong>{{ page.title }}</strong> se publicó el <time itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}"><span class="date updated">{{ page.date | date: "%B %d, %Y" }}</span></time> y se actualizó el <time itemprop="dateModified" content="{% if page.modified %}{{ page.modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}" datetime="{% if page.modified %}{{ page.modified | date: "%Y-%m-%d" }}{% else %}{{ page.date | date: "%Y-%m-%d" }}{% endif %}">{% if page.modified %}{{ page.modified | date: "%B %d, %Y" }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   {% if site.owner.disqus-shortname and page.comments == true %}
