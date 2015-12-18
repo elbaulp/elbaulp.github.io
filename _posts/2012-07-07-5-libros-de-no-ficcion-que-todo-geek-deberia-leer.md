@@ -1,11 +1,8 @@
 ---
 id: 790
-title: 18 Libros de No-Ficción que todo Geek debería leer
+title: 20 Libros de No-Ficción que todo Geek debería leer
 
-excerpt: |
-  Siempre he estado fascinado por la tecnología de consumo, que es la razón por la que escribo. Nuevas innovaciones aparecen constantemente. Algunas de ellas son prometedoras. Otras no. Y las ideas que tienen mayor peso en la cultura popular no son siempre las que eventualmente ganan.
-
-  Leyendo blogs, se puede aprender mucho sobre tecnología de consumo y su efecto en la sociedad, pero las fuentes online tienen una tendencia a seguir las últimas modas en lugar de proveer una investigación exhaustiva de un tema. El clásico libro tecnológico no-ficción todavía tiene valor significante.
+excerpt: "Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!"
 layout: post
 guid: /?p=790
 permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/
@@ -21,13 +18,43 @@ tags:
   - libros geek
   - didier newman
   - libros para geeks
-modified: 2015-12-14T16:50:00+00:00
+modified: 2015-12-18T15:44:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:
-  thumb: 2012/07/The-Design-of-Everyday-Things.jpg
+  thumb: What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg
 ---
 
 Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!
+
+### Thing Explainer: Complicated Stuff in Simple Words
+
+<figure>
+  <a href="/images/Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg"><img src="/images/Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg" title="Thing Explainer: Complicated Stuff in Simple Words" alt="Thing Explainer: Complicated Stuff in Simple Words" /></a>
+</figure>
+
+Libro del gran _Randall Munroe_, quién trabajó como ingeniero robótico en la NASA. Ahora se dedica a escribir los fantásticos comics en <a href="https://xkcd.com/" target="_blank" title="Comics de XKCD">xkcd</a> y a contestar preguntas en <a href="http://what-if.xkcd.com/" target="_blank" title="What if Randall Munroe">what-if.xkcd</a>.
+
+En _Thing Explainer_ Randall describe conceptos y cosas muy complejas, desde cómo funciona un cohete espacial hasta el funcionamiento de una célula usando únicamente las 10.000 palabras más usadas del inglés.
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/gp/product/0544668251/?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+</div>
+
+### What If?: Serious Scientific Answers to Absurd Hypothetical Questions
+
+<figure>
+  <a href="/images/What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg"><img src="/images/What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg" title="What If?: Serious Scientific Answers to Absurd Hypothetical Questions" alt="What If?: Serious Scientific Answers to Absurd Hypothetical Questions" /></a>
+</figure>
+
+Otro libro de _Randall Munroe_, en esta ocasión una recopilación de las preguntas que le hacen en su blog _What if?_, en el que responde cualquier tipo de pregunta que le hagan, por rara que sea, de forma científica. Aquí la descripción de Amazon:
+
+> From the creator of the wildly popular xkcd.com, hilarious and informative answers to important questions you probably never thought to ask.
+Millions visit xkcd.com each week to read Randall Munroe's iconic webcomic. Fans ask him a lot of strange questions: How fast can you hit a speed bump, driving, and live? When (if ever) did the sun go down on the British Empire? When will Facebook contain more profiles of dead people than living? How many humans would a T Rex rampaging through New York need to eat a day?
+In pursuit of answers, Munroe runs computer simulations, pores over stacks of declassified military research memos, solves differential equations and consults nuclear reactor operators. His responses are masterpieces of clarity and hilarity, complemented by comics. They often predict the complete annihilation of humankind, or at least a really big explosion.
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/What-If-Scientific-Hypothetical-Questions/dp/0544272994?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+</div>
 
 ### Seven Brief Lessons On Physics
 
