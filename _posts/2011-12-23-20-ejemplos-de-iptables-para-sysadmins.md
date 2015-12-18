@@ -34,6 +34,7 @@ tags:
   - comandos iptables
   - iptables bloquear ping
   - iptables listar reglas
+excerpt: "netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red."
 ---
 <div class="separator" style="clear: both; float:left; text-align: center;">
   <a href="http://3.bp.blogspot.com/-_5WvmCXMYjk/TvTkTNhQPUI/AAAAAAAAB88/VP8jxCu5y3A/s1600/Applic-Firewall-icon.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="http://3.bp.blogspot.com/-_5WvmCXMYjk/TvTkTNhQPUI/AAAAAAAAB88/VP8jxCu5y3A/s320/Applic-Firewall-icon.png" /></a>
@@ -41,13 +42,9 @@ tags:
 
 Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:
 
-<div style="text-align:center">
-  <blockquote>
-    <p>
-      netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red.
-    </p>
-  </blockquote>
-</div>
+
+>netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red.
+
 
 Este firewall lo controla un programa llamado iptables que gestiona el filtrado para IPv4, y ip6tables para IPv6.
 

@@ -1,33 +1,15 @@
 ---
 id: 323
 title: 10 errores de novato que todo desarrollador Android debería evitar
-
 layout: post
 guid: http://elbauldelprogramador.org/los-10-errores-de-novato-que-todo-desarrollador-android-deberia-evitar/
 permalink: /los-10-errores-de-novato-que-todo/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /los-10-errores-de-novato-que-todo/
-  - /los-10-errores-de-novato-que-todo/
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551748}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551748}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - aplicaciones
 tags:
   - curso android pdf
+excerpt: "Últimamente recibo muchos correos haciendome preguntas sobre cuestiones sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento) suficiente para responder a todas ellas. Por eso, aprovechando que encontré un artículo en inglés que nombraba los 10 errores comunes de los nuevos programadores en esta plataforma. Aquí los dejo traducidos, ya que son de lectura recomendable:"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
