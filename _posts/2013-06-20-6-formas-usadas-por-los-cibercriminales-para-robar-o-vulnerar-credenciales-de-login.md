@@ -18,11 +18,15 @@ tags:
   - robo de credenciales
   - saltar autentificacion de dos factores
   - Vulnerabilidades en las aplicaciones
+image:
+  thumb: 2013/06/blog_sevenways.png
+modified: 2015-12-18T15:00:00+00:00
+excerpt: "El mundo digital es un vecindario muy peligroso lleno de atacantes listos para robar los datos más personales e importantes para los negocios. A estas alturas deberíamos saber que la ”seguridad” significa algo más que disponer de una contraseña única y larga. Para entender cómo proteger nuestros datos y cuentas, en duosecurity han hecho una recopilación de las formas más comunes que usan los atacantes para robar datos ajenos en la red."
 ---
 <img src="/images/2013/06/blog_sevenways.png" alt="7 formas usadas por cibercriminales para robar o vulnerar credenciales de login" width="700" height="350" class="thumbnail aligncenter size-full wp-image-1685" />
 
 El mundo digital es un vecindario muy peligroso lleno de atacantes listos para robar los datos más personales e importantes para los negocios. A estas alturas deberíamos saber que la ”*[seguridad][1]*” significa algo más que disponer de una contraseña única y larga. Para entender cómo proteger nuestros datos y cuentas, en *duosecurity* han hecho una recopilación de las formas más comunes que usan los atacantes para robar datos ajenos en la red.  
-  
+
 <!--ad-->
 
 ### 1: Malware
@@ -35,7 +39,7 @@ Confiamos una gran cantidad de datos sensibles a sitios webs de todo tipo, y los
 
 ### 3: Configuraciones de software incorrectas
 
-Si alguna vez has configurado un software destinado al entorno empresarial, seguramente sabrás que seleccionar por error (o no seleccionar) una casilla o cualquier configuración sensible puede marcar la diferencia entre estar seguro o ser un blanco fácil. Éstas configuraciones incorrectas que conducen a las brechas en la seguridad son bastante comunes. La complejidad de la seguridad frecuentemente da lugar a descuidos menores que se convierten en graves problemas. 
+Si alguna vez has configurado un software destinado al entorno empresarial, seguramente sabrás que seleccionar por error (o no seleccionar) una casilla o cualquier configuración sensible puede marcar la diferencia entre estar seguro o ser un blanco fácil. Éstas configuraciones incorrectas que conducen a las brechas en la seguridad son bastante comunes. La complejidad de la seguridad frecuentemente da lugar a descuidos menores que se convierten en graves problemas.
 
 ### 4: Vulnerabilidades en las aplicaciones
 
@@ -55,7 +59,7 @@ Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un 
 
 #### Referencias
 
-*blog.duosecurity.com* »» <a href="https://blog.duosecurity.com/2013/06/7-ways-cybercriminals-steal-or-defeat-login-credentials-2/" target="_blank">7 Ways Cybercriminals Steal or Defeat Login Credentials</a> 
+*blog.duosecurity.com* »» <a href="https://blog.duosecurity.com/2013/06/7-ways-cybercriminals-steal-or-defeat-login-credentials-2/" target="_blank">7 Ways Cybercriminals Steal or Defeat Login Credentials</a>
 
 
 
