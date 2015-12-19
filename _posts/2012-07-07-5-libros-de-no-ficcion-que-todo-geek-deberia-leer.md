@@ -1,6 +1,6 @@
 ---
 id: 790
-title: 20 Libros de No-Ficción que todo Geek debería leer
+title: 21 Libros de No-Ficción que todo Geek debería leer
 
 excerpt: "Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!"
 layout: post
@@ -19,7 +19,7 @@ tags:
   - didier newman
   - libros para geeks
 modified: 2015-12-18T15:44:00+00:00
-date: 2015-06-30T18:48:42+02:00
+date: 2025-06-30T18:48:42+02:00
 image:
   thumb: What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg
 ---
@@ -54,6 +54,28 @@ In pursuit of answers, Munroe runs computer simulations, pores over stacks of de
 
 <div class="btn-success">
   <a href="http://www.amazon.es/What-If-Scientific-Hypothetical-Questions/dp/0544272994?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+</div>
+
+### ¿Que Pasaría Si...?
+
+<figure>
+  <a href="/images/Que-Pasaria-Si.jpg"><img src="/images/Que-Pasaria-Si.jpg" title="¿Que Pasaría Si...?" alt="¿Que Pasaría Si...?" /></a>
+</figure>
+
+La versión en castellano del libro anterior:
+
+>Un libro en el que el humor y la ciencia se unen para dar explicación a todo tipo de preguntas curiosas.
+
+>¡Ey! Gracias por fijarte en mi libro. Si estás pensando en comprarlo hay dos cosas que no tendrías por qué saber pero que quiero contarte por si finalmente no te gusta y decides darle otro uso:
+
+>- Los humanos no podemos digerir el papel de celulosa, pero en caso de que pudiéramos, si decidieras comerte este libro engordarías 2.300 calorías -¡incluida la cubierta, claro!
+
+>- Si tienes un buen brazo, podrías lanzar este libro a más de 13 metros. Con práctica es posible llegar a lanzar un libro cada 800 milisegundos, lo que significa que si un agresor te estuviera persiguiendo, podrías tener tres o cuatro oportunidades de golpearlo antes de que te alcanzara. Si en cambio el ataque fuera por parte de un coyote que corre a la máxima velocidad que puede, solo tendrías una oportunidad. ¡Apunta bien!
+
+>¿Qué pasaría si...? es un libro de divulgación científica en el que se recopilan algunos de los mejores posts así como otros nuevos elaborados a partir de las preguntas del blog de Randall Munroe, en el que responde a los lectores haciendo uso de sus conocimientos científicos y matemáticos. Munroe fue físico en la NASA antes de crear la web www.xkcd, que ha recibido más de un millón de visitas. Este es un libro original, inteligente y con mucho humor.
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/%C2%BFQue-Pasar%C3%ADa-Si-SIN-ASIGNAR/dp/8403015283/ref=sr_1_1?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Seven Brief Lessons On Physics
