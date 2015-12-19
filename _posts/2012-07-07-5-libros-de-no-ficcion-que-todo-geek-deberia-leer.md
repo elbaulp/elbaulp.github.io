@@ -18,8 +18,8 @@ tags:
   - libros geek
   - didier newman
   - libros para geeks
-modified: 2015-12-18T15:44:00+00:00
-date: 2025-06-30T18:48:42+02:00
+modified: 2015-12-19T22:00:00+00:00
+date: 2015-06-30T18:48:42+02:00
 image:
   thumb: What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg
 ---
