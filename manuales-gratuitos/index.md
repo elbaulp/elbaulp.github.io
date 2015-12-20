@@ -4,6 +4,8 @@ title: Manuales gratuítos
 layout: page
 tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
 excerpt: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
+image:
+  thumb: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
 ---
 En esta sección iré poniendo las mejores manuales gratuítos referidos a tecnología, Internet, redes, productividad, uso de software y mucho más. El catálogo completo está disponible en [esta página.][1]
 
@@ -12,7 +14,7 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
 Si estás buscando libros de texto, quizá te intersen estos dos artículos:
 
 - <a onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="16 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">16 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
-- <a onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="18 Libros de No-Ficción que todo Geek debería leer">18 Libros de No-Ficción que todo Geek debería leer</a> 
+- <a onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="18 Libros de No-Ficción que todo Geek debería leer">18 Libros de No-Ficción que todo Geek debería leer</a>
 
 
 <ul class="tt-wrapper">
