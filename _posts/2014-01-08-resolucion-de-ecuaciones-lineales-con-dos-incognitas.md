@@ -4,7 +4,7 @@ title: Cómo resolver sistemas de ecuaciones lineales con dos incógnitas en Pyt
 modified: 2015-04-08T00:00:00+00:00
 math: true
 layout: post
-guid: http://elbauldelprogramador.com/?p=2217
+guid: https://elbauldelprogramador.com/?p=2217
 permalink: /como-resolver-sistemas-de-ecuaciones-lineales-con-dos-incognitas/
 categories:
   - Algoritmos
@@ -103,7 +103,7 @@ else :
 
 ¿Por qué tantas matemáticas y poco código? Creo que todos lo sabemos: la idea que soporta el código es lo interesante y no solo lo interesante *es* lo importante. No todo programador es matemático (no es necesario serlo) pero es una gran ventaja tener esa &#8220;intuición&#8221; que nos dan las matemáticas.
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/resolucion-de-ecuaciones-lineales-con-dos-incognitas/" rel="nofollow"> Download &ldquo;Resolución de ecuaciones lineales con dos incógnitas&rdquo; <small>ResoluciónEcuaciones.pdf &ndash; Downloaded 918 times &ndash; 51 kB</small> </a>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/resolucion-de-ecuaciones-lineales-con-dos-incognitas/" rel="nofollow"> Download &ldquo;Resolución de ecuaciones lineales con dos incógnitas&rdquo; <small>ResoluciónEcuaciones.pdf &ndash; Downloaded 918 times &ndash; 51 kB</small> </a>
 
 #### Créditos
 

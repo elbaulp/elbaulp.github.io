@@ -3,7 +3,7 @@ id: 1926
 title: Cómo depurar una aplicación en Django
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1926
+guid: https://elbauldelprogramador.com/?p=1926
 permalink: /como-depurar-una-aplicacion-en-django/
 categories:
   - django
@@ -103,8 +103,8 @@ Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
 
 
 
- [1]: http://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
- [2]: http://elbauldelprogramador.com/?s=gdb&submit= "Depuradores"
+ [1]: https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
+ [2]: https://elbauldelprogramador.com/?s=gdb&submit= "Depuradores"
 
 
 {% include _toc.html %}

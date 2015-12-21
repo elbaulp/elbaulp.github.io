@@ -3,7 +3,7 @@ id: 1947
 title: Cambiar fondo en la pantalla de login en Debian y Ubuntu
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1947
+guid: https://elbauldelprogramador.com/?p=1947
 permalink: /cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/
 categories:
   - linux
@@ -88,7 +88,7 @@ La imagen se encuentra en `/usr/share/xfce4/backdrops/xubuntu-wallpaper.png` com
 
 
 
- [1]: http://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
+ [1]: https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
  [2]: /images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg
 
 {% include _toc.html %}

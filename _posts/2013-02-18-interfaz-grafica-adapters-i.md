@@ -193,7 +193,7 @@ Y para un adaptador sin datos:
 
 El ejemplo de esta entrada esta disponible para su descarga:
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/interfaz-grafica-adapters-i/" rel="nofollow"> Download &ldquo;Interfaz gráfica – Adapters I&rdquo; <small>Adaptadores.zip &ndash; Downloaded 986 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/interfaz-grafica-adapters-i/" rel="nofollow"> Download &ldquo;Interfaz gráfica – Adapters I&rdquo; <small>Adaptadores.zip &ndash; Downloaded 986 times &ndash; </small> </a>
 
 * * *
 

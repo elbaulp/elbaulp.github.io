@@ -3,7 +3,7 @@ id: 1778
 title: 'Crear un módulo para python con la Python C API (II) &#8211; Primer ejemplo'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1778
+guid: https://elbauldelprogramador.com/?p=1778
 permalink: /crear-modulo-python-con-python-c-api-2/
 categories:
   - C
@@ -166,10 +166,10 @@ Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el pr
 
 
 
- [1]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I)"
- [2]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
- [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
- [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
- [5]: http://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/ "Compilación de programas: makefile y g++"
+ [1]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I)"
+ [2]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
+ [3]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
+ [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
+ [5]: https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/ "Compilación de programas: makefile y g++"
 
 {% include _toc.html %}

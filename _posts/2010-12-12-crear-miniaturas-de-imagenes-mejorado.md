@@ -81,6 +81,6 @@ fi
 
 
 
- [1]: http://elbauldelprogramador.com/crear-imagenes-en-miniaturas/
+ [1]: https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/
 
 {% include _toc.html %}

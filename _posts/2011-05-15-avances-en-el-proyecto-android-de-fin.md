@@ -77,13 +77,13 @@ Cosas a tener en cuenta:
 
 - Como el código es bastante extenso no lo voy a mostrar aquí, sin embargo se puede ver en el repositorio de [github&#8211;WifiBar][4]
 
-- El proyecto debemos realizarlo todos los alumnos del curso, por lo que si alguno anda perdido y ver el código le sirve de ayuda no me importa que copien algo en concreto, o si les aporta ideas nuevas para su proyecto, pero por favor, no me lo plagieis <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
+- El proyecto debemos realizarlo todos los alumnos del curso, por lo que si alguno anda perdido y ver el código le sirve de ayuda no me importa que copien algo en concreto, o si les aporta ideas nuevas para su proyecto, pero por favor, no me lo plagieis <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 
 Estoy bastante contento con este proyecto, ya que me ha permitido iniciarme en la programación para Android.
 
 
 
- [1]: http://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008/
+ [1]: https://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008/
  [2]: http://bashyc.blogspot.com/p/bases-de-datos.html
  [3]: http://www.gnu.org/licenses/
  [4]: https://github.com/algui91/WifiBar

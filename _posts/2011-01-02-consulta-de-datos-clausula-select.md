@@ -135,9 +135,9 @@ pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.
 
 
 
- [1]: http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
- [2]: http://elbauldelprogramador.com/consulta-de-datos-clausula-from/
- [3]: http://elbauldelprogramador.com/consulta-de-datos-clausula-where/
- [4]: http://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/
+ [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/
+ [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/
+ [4]: https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 2387
 title: Incluir imágenes en una entrada de WordPress usando PHP
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2387
+guid: https://elbauldelprogramador.com/?p=2387
 permalink: /incluir-imagenes-en-una-entrada-de-wordpress-usando-php/
 categories:
   - php
@@ -43,6 +43,6 @@ El código anterior se explica por sí mismo. `wp_update_post` es una función d
 
 
 
- [1]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
+ [1]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
 
 {% include _toc.html %}

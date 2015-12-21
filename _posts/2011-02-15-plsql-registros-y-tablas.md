@@ -90,7 +90,7 @@ Pro ejemplo:
 
 
 
- [1]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/
- [2]: http://elbauldelprogramador.com/tunning-basico-de-sql/
+ [1]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [2]: https://elbauldelprogramador.com/tunning-basico-de-sql/
 
 {% include _toc.html %}

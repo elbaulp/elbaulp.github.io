@@ -3,7 +3,7 @@ id: 2403
 title: Instalar y configurar DWM, el gestor de ventanas más eficiente
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2403
+guid: https://elbauldelprogramador.com/?p=2403
 permalink: /instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/
 categories:
   - aplicaciones
@@ -148,10 +148,10 @@ Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explic
 
 
 
- [1]: http://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
- [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: http://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
- [4]: http://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Colorear la barra de estado con Simple StatusColor en DWM 6.1"
+ [1]: https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
+ [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
+ [4]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Colorear la barra de estado con Simple StatusColor en DWM 6.1"
  [5]: /images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
 
 {% include _toc.html %}

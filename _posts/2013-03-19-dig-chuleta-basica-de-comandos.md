@@ -3,7 +3,7 @@ id: 1479
 title: 'Dig &#8211; Chuleta básica de comandos'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1479
+guid: https://elbauldelprogramador.com/?p=1479
 permalink: /dig-chuleta-basica-de-comandos/
 categories:
   - Administración de Servidores
@@ -136,7 +136,7 @@ Puedes encontrar una descripción un poco más extensa sobre el funcionamiento d
 
 
 
- [1]: http://elbauldelprogramador.com/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
+ [1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
  [2]: /como-configurar-un-servidor-dns3/
 
 {% include _toc.html %}

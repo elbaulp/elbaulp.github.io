@@ -3,7 +3,7 @@ id: 2449
 title: 'Cómo eliminar tu identidad online: Guía Fundamental para el Anonimato y Seguridad en Internet'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2449
+guid: https://elbauldelprogramador.com/?p=2449
 permalink: /como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/
 categories:
   - Artículos
@@ -237,8 +237,8 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 
 
  [1]: /images/2014/10/draft.jpg
- [2]: http://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
- [3]: http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
+ [2]: https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
+ [3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
  [4]: /images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1487
 title: 'Crear un módulo para python con la Python C API (I) &#8211; Introducción'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1487
+guid: https://elbauldelprogramador.com/?p=1487
 permalink: /crear-modulo-python-con-python-c-api-1/
 categories:
   - C
@@ -55,7 +55,7 @@ Si en nuestro sistema no tenemos la cabecera *Python.h* es necesario instalarla 
 {% endhighlight %}
 
 <div class="alert">
-  Ya que Python puede definir algunas directivas para el <a href="http://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/" title="Compilación de programas: makefile y g++">pre-procesador</a> que afectan a las cabeceras estandar, es necesario incluir <em>Python.h</em> antes que cualquier cabecera estandar.
+  Ya que Python puede definir algunas directivas para el <a href="https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/" title="Compilación de programas: makefile y g++">pre-procesador</a> que afectan a las cabeceras estandar, es necesario incluir <em>Python.h</em> antes que cualquier cabecera estandar.
 </div>
 
 <a name="referencecounts"></a>
@@ -116,12 +116,12 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
 
 
 
- [1]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
- [2]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
- [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
- [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
+ [1]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
+ [2]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
+ [3]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
+ [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
  [5]: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
- [6]: http://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/ "Clases y Objetos – Punteros a objetos"
+ [6]: https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/ "Clases y Objetos – Punteros a objetos"
  [7]: http://docs.python.org/3/c-api/refcounting.html#Py_INCREF "Python C API Py_INCREF"
 
 {% include _toc.html %}

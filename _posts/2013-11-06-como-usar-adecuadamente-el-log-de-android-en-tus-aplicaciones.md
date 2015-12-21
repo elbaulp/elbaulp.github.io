@@ -3,7 +3,7 @@ id: 1665
 title: Cómo usar adecuadamente el Log de Android en tus aplicaciones
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1665
+guid: https://elbauldelprogramador.com/?p=1665
 permalink: /como-usar-adecuadamente-el-log-de-android-en-tus-aplicaciones/
 categories:
   - android
@@ -36,8 +36,8 @@ Aunque el *logging* es necesario, tiene un impacto negativo significante en el r
 
 
 
- [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Android"
- [2]: http://elbauldelprogramador.com/?s=depurar&submit=
- [3]: http://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
+ [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"
+ [2]: https://elbauldelprogramador.com/?s=depurar&submit=
+ [3]: https://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
 
 {% include _toc.html %}

@@ -141,7 +141,7 @@ Tipos de disparadores.
     </td>
 
     <td>
-      Define que tipo de operación <a href="http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a> provoca la<br /> activación del trigger
+      Define que tipo de operación <a href="https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a> provoca la<br /> activación del trigger
     </td>
   </tr>
 
@@ -155,7 +155,7 @@ Tipos de disparadores.
     </td>
 
     <td>
-      Define si el disparador se activa antes o después de<br /> que se ejecute la operación <a href="http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a>
+      Define si el disparador se activa antes o después de<br /> que se ejecute la operación <a href="https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a>
     </td>
   </tr>
 
@@ -370,13 +370,13 @@ Si queremos conocer los valores del registro de la tabla sobre la que se ha disp
 
 
 
- [1]: http://elbauldelprogramador.com/bloques-plsql/
- [2]: http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
- [3]: http://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
- [4]: http://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/
- [5]: http://elbauldelprogramador.com/introduccion-plsql-transacciones/
- [6]: http://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
- [7]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/
- [8]: http://elbauldelprogramador.com/plsql-registros-y-tablas/
+ [1]: https://elbauldelprogramador.com/bloques-plsql/
+ [2]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [3]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
+ [4]: https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/
+ [5]: https://elbauldelprogramador.com/introduccion-plsql-transacciones/
+ [6]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+ [7]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [8]: https://elbauldelprogramador.com/plsql-registros-y-tablas/
 
 {% include _toc.html %}

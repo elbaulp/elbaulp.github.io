@@ -30,7 +30,7 @@ categories:
   <a href="http://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="http://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>
 
-De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
+De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 
   
 <!--ad-->

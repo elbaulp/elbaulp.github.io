@@ -517,11 +517,11 @@ Se pone el numero y al final se añade el signo:
 
 
  [1]: http://bashyc.blogspot.com/p/sistemas-operativos.html
- [2]: http://elbauldelprogramador.com/#representacion
- [3]: http://elbauldelprogramador.com/#bin
- [4]: http://elbauldelprogramador.com/#oc
- [5]: http://elbauldelprogramador.com/#hex
- [6]: http://elbauldelprogramador.com/#otro
+ [2]: https://elbauldelprogramador.com/#representacion
+ [3]: https://elbauldelprogramador.com/#bin
+ [4]: https://elbauldelprogramador.com/#oc
+ [5]: https://elbauldelprogramador.com/#hex
+ [6]: https://elbauldelprogramador.com/#otro
  [7]: #indices
 
 {% include _toc.html %}

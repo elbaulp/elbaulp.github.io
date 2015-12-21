@@ -3,7 +3,7 @@ id: 2214
 title: 'Python C API &#8211; Cómo pasar un array de structs desde C a Python'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2214
+guid: https://elbauldelprogramador.com/?p=2214
 permalink: /python-c-api-como-pasar-un-array-de-structs-desde-c-python/
 categories:
   - C
@@ -85,6 +85,6 @@ Y continuar rellenando el diccionario según nuestras necesidades.
 
 
 
- [1]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I) – Introducción"
+ [1]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I) – Introducción"
 
 {% include _toc.html %}

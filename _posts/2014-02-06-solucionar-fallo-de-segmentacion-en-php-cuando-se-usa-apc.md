@@ -3,7 +3,7 @@ id: 2014
 title: Solucionar fallo de segmentación en PHP cuando se usa APC
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2014
+guid: https://elbauldelprogramador.com/?p=2014
 permalink: /solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/
 categories:
   - Administración de Servidores

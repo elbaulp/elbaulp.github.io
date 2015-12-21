@@ -3,7 +3,7 @@ id: 1786
 title: Sobre el blog
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1786
+guid: https://elbauldelprogramador.com/?p=1786
 permalink: /sobre-el-blog/
 categories:
   - Artículos

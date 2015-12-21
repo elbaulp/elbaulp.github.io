@@ -3,7 +3,7 @@ id: 2416
 title: Chuleta de Markdown para wordpress
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2416
+guid: https://elbauldelprogramador.com/?p=2416
 permalink: /chuleta-markdown-para-wordpress/
 categories:
   - How To

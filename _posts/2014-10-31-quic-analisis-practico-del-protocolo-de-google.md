@@ -4,7 +4,7 @@ title: 'QUIC: Análisis práctico del protocolo de Google'
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post
-guid: http://elbauldelprogramador.com/?p=2463
+guid: https://elbauldelprogramador.com/?p=2463
 permalink: /quic-analisis-practico-del-protocolo-de-google/
 categories:
   - Artículos
@@ -318,6 +318,6 @@ Los siguientes datos del paquete correspondientes al payload no se pueden analiz
 
 
 
- [1]: http://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/ "Qué es QUIC, el nuevo protocolo desarrollado por Google"
+ [1]: https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/ "Qué es QUIC, el nuevo protocolo desarrollado por Google"
 
 {% include _toc.html %}

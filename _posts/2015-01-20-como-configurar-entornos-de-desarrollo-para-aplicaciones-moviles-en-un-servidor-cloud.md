@@ -3,7 +3,7 @@ id: 2534
 title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2534
+guid: https://elbauldelprogramador.com/?p=2534
 permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
 categories:
   - JavaScript
@@ -542,7 +542,7 @@ console.log('Magic happens on port ' + port);
 
 
 
- [1]: http://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/ "Cómo desarrollar aplicaciones en un servidor Cloud"
+ [1]: https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/ "Cómo desarrollar aplicaciones en un servidor Cloud"
  [2]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm_medium=baul&utm_term=appmovil&utm_content=online&utm_campaign=cloud "Arsys cloudbuilder"
  [3]: http://nodejs.org/download/
 

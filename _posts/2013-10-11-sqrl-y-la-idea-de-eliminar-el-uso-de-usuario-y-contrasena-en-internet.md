@@ -3,7 +3,7 @@ id: 1929
 title: SQRL y la idea de eliminar el uso de usuario y contraseña en internet
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1929
+guid: https://elbauldelprogramador.com/?p=1929
 permalink: /sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/
 categories:
   - Security Now!
@@ -63,9 +63,9 @@ A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de
 
 
  [1]: /security-now/ "Artículos sobre Security now!"
- [2]: http://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/ "Estructura y seguridad de los QR Codes"
+ [2]: https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/ "Estructura y seguridad de los QR Codes"
  [3]: http://www.w3.org/ "W3 org"
- [4]: http://elbauldelprogramador.com/ "Artículos de Luzcila"
- [5]: http://elbauldelprogramador.com/ "Contacto"
+ [4]: https://elbauldelprogramador.com/ "Artículos de Luzcila"
+ [5]: https://elbauldelprogramador.com/ "Contacto"
 
 {% include _toc.html %}

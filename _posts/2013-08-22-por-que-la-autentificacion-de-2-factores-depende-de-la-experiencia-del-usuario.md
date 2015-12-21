@@ -3,7 +3,7 @@ id: 1856
 title: Por qué la autentificación de 2 factores depende de la experiencia del usuario
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1856
+guid: https://elbauldelprogramador.com/?p=1856
 permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/
 categories:
   - Artículos
@@ -51,8 +51,8 @@ La oportunidad de resolver muchos de los problemas de seguridad con una autentif
 
 
 
- [1]: http://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo"
- [2]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [1]: https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo"
+ [2]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
  [3]: /security-now/ "Categoría Seguridad"
 
 {% include _toc.html %}

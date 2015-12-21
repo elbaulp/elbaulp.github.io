@@ -3,7 +3,7 @@ id: 1586
 title: Cómo crear un pie de página en LaTeX con fancyhdr
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1586
+guid: https://elbauldelprogramador.com/?p=1586
 permalink: /como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/
 categories:
   - How To
@@ -76,7 +76,7 @@ Como apunte personal, uso plantillas para distintos tipos de documentos, estas p
 Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambiar el texto del pie de página de la siguiente manera:
 
 {% highlight latex %}\setFooterL{\href{http://twitter.com/elbaulp}{Alejandro Alcalde}}
-\setFooterR{\href{http://elbauldelprogramador.com}{elbauldelprogramador.com}}
+\setFooterR{\href{https://elbauldelprogramador.com}{elbauldelprogramador.com}}
 {% endhighlight %}
 
 Produciendo el siguiente resultado:  

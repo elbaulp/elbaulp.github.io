@@ -3,7 +3,7 @@ id: 1559
 title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1559
+guid: https://elbauldelprogramador.com/?p=1559
 permalink: /jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/
 categories:
   - C
@@ -196,8 +196,8 @@ http://www.exploit-db.com/papers/13234/
 
 
 
- [1]: http://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/ "Desafío de ingeniería inversa en C – Soluciones"
- [2]: http://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits (Parte I)"
+ [1]: https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/ "Desafío de ingeniería inversa en C – Soluciones"
+ [2]: https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits (Parte I)"
  [3]: /clases-y-objetos-el-destructor/
  [4]: /clases-y-objetos-el-constructor/
  [5]: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/ "Ocultar archivos dentro de una imagen"

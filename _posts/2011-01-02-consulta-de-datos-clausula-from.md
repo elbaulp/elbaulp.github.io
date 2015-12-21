@@ -157,6 +157,6 @@ FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 
 
 
- [1]: http://elbauldelprogramador.com/consulta-de-datos-clausula-where/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1833
 title: 10 razones para rootear tu teléfono Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1833
+guid: https://elbauldelprogramador.com/?p=1833
 permalink: /10-razones-para-rootear-tu-telefono-android/
 categories:
   - Artículos
@@ -89,9 +89,9 @@ Al final, todo esto se reduce a una cosa: **tú eres el dueño de tu dispositivo
 
 
 
- [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Android"
- [2]: http://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
- [3]: http://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"
- [4]: http://elbauldelprogramador.com/sin-categoria/ubuntu-running-on-samsung-galaxy-tab/ "Ubuntu running on the Samsung Galaxy Tab"
+ [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"
+ [2]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
+ [3]: https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"
+ [4]: https://elbauldelprogramador.com/sin-categoria/ubuntu-running-on-samsung-galaxy-tab/ "Ubuntu running on the Samsung Galaxy Tab"
 
 {% include _toc.html %}

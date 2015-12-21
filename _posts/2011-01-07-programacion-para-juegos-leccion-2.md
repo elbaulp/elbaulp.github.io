@@ -279,8 +279,8 @@ Ya que hemos terminado nuestro programa, usamos SDL_FreeSurface() para eliminar 
 
 
  [1]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson02
- [2]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-12/
+ [2]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-12/
  [3]: http://www.lazyfoo.net/SDL_tutorials/
- [4]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-3/
+ [4]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-3/
 
 {% include _toc.html %}

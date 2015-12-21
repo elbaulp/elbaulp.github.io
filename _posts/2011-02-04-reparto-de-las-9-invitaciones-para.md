@@ -31,7 +31,7 @@ Lo que si que os pediría es que repartáis vuestras invitaciones para que más 
 
 
 
- [1]: http://elbauldelprogramador.com/9-invitaciones-para-diaspora/
- [2]: http://elbauldelprogramador.com/diaspora-la-red-social-libre/
+ [1]: https://elbauldelprogramador.com/9-invitaciones-para-diaspora/
+ [2]: https://elbauldelprogramador.com/diaspora-la-red-social-libre/
 
 {% include _toc.html %}

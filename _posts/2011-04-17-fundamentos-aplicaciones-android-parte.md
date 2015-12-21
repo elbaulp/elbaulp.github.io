@@ -108,7 +108,7 @@ tags:
                 <hr />
                 
                 <h4 class="referencia">
-                  Siguiente: <a href="http://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/">Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes</a>
+                  Siguiente: <a href="https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/">Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes</a>
                 </h4>
                 
                 

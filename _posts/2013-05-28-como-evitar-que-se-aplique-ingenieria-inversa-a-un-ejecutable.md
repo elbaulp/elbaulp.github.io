@@ -3,7 +3,7 @@ id: 1576
 title: Cómo evitar que se aplique ingeniería inversa a un ejecutable
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1576
+guid: https://elbauldelprogramador.com/?p=1576
 permalink: /como-evitar-que-se-aplique-ingenieria-inversa-a-un-ejecutable/
 categories:
   - C
@@ -80,6 +80,6 @@ Como se vé, el ejecutable termina ántes de llegar a ejecutar siquiera la funci
 
 
 
- [1]: http://elbauldelprogramador.com/lenguaje-c/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/ "Jugando con las secciones .dtors y .ctors de la tabla de secciones en C"
+ [1]: https://elbauldelprogramador.com/lenguaje-c/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/ "Jugando con las secciones .dtors y .ctors de la tabla de secciones en C"
 
 {% include _toc.html %}

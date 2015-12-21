@@ -92,8 +92,8 @@ END;
 
 
 
- [1]: http://elbauldelprogramador.com/plsql-disparadores-o-triggers/
- [2]: http://elbauldelprogramador.com/fundamentos-de-plsql/
+ [1]: https://elbauldelprogramador.com/plsql-disparadores-o-triggers/
+ [2]: https://elbauldelprogramador.com/fundamentos-de-plsql/
 
 
 {% include _toc.html %}

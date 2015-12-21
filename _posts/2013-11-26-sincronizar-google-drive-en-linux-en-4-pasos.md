@@ -3,7 +3,7 @@ id: 1941
 title: Sincronizar Google Drive en Linux en 4 pasos
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1941
+guid: https://elbauldelprogramador.com/?p=1941
 permalink: /sincronizar-google-drive-en-linux-en-4-pasos/
 categories:
   - linux
@@ -14,7 +14,7 @@ tags:
 ---
 Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive en Linux** con carpetas locales del mismo modo que Dropbox. Pensé en usar el programa [inotify][1], pero no sabía muy bien por donde empezar. Hace unos días encontré la respuesta en <a href="https://openlinuxforums.org" title="Foro linux" target="_blank">openlinuxforums</a> y al parecer no iba mal encaminado, es una solución bastante sencilla usando inotify y nos permitirá mantener sincronizados los archivos y carpetas de **Google Drive** en todos los ordenadores que queramos.
 
-<span class="highlight style-2">Hay una modificación para este método en <a href="http://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]">Sincronizar Google Drive en Linux en 4 pasos [Actualización]</a></span>
+<span class="highlight style-2">Hay una modificación para este método en <a href="https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]">Sincronizar Google Drive en Linux en 4 pasos [Actualización]</a></span>
 
 <!--ad-->
 
@@ -148,10 +148,10 @@ El resultado de estas modificaciones es el siguiente:
 
 
 
- [1]: http://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
- [2]: http://elbauldelprogramador.com/
+ [1]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
+ [2]: https://elbauldelprogramador.com/
  [3]: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
- [4]: http://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
+ [4]: https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
  [5]: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
  [6]: /images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png
 

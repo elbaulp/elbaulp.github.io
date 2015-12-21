@@ -3,7 +3,7 @@ id: 1671
 title: 6 formas usadas por los cibercriminales para robar o vulnerar credenciales de login
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1671
+guid: https://elbauldelprogramador.com/?p=1671
 permalink: /6-formas-usadas-por-los-cibercriminales-para-robar-o-vulnerar-credenciales-de-login/
 categories:
   - Artículos

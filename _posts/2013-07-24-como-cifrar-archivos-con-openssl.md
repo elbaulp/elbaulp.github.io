@@ -3,7 +3,7 @@ id: 1780
 title: Cómo cifrar archivos con openssl
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1780
+guid: https://elbauldelprogramador.com/?p=1780
 permalink: /como-cifrar-archivos-con-openssl/
 categories:
   - Administración de Servidores
@@ -121,7 +121,7 @@ Espero que os sea de utilidad.
 
 
 
- [1]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
- [2]: http://elbauldelprogramador.com/
+ [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
+ [2]: https://elbauldelprogramador.com/
 
 {% include _toc.html %}

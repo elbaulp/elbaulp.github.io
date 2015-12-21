@@ -18,9 +18,9 @@ tags: [cursos de programador, cursos de programación]
 
 ### [Bases de datos][bd]
 
-[Android]: http://elbauldelprogramador.com/curso-programacion-android/
+[Android]: https://elbauldelprogramador.com/curso-programacion-android/
 [Android2]: /android/
 [git]: /git/
 [latex1]: /latex/
-[dig]: http://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/
-[bd]: http://elbauldelprogramador.com/bases-de-datos/
+[dig]: https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/
+[bd]: https://elbauldelprogramador.com/bases-de-datos/

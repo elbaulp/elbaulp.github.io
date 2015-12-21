@@ -3,7 +3,7 @@ id: 2552
 title: Configurar Log4j2 en Netbeans, un logger para Java
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2552
+guid: https://elbauldelprogramador.com/?p=2552
 permalink: /configurar-log4j2-en-netbeans-un-logger-para-java/
 categories:
   - Java

@@ -3,7 +3,7 @@ id: 2287
 title: Introducción a ABAP
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2287
+guid: https://elbauldelprogramador.com/?p=2287
 permalink: /introduccion-abap/
 categories:
   - ABAP

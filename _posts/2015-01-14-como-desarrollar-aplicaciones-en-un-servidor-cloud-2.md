@@ -3,7 +3,7 @@ id: 2525
 title: Cómo desarrollar aplicaciones en un servidor Cloud
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2525
+guid: https://elbauldelprogramador.com/?p=2525
 permalink: /como-desarrollar-aplicaciones-en-un-servidor-cloud-2/
 categories:
   - Java

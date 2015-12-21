@@ -4,7 +4,7 @@ title: Qué es QUIC, el nuevo protocolo desarrollado por Google
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post
-guid: http://elbauldelprogramador.com/?p=1728
+guid: https://elbauldelprogramador.com/?p=1728
 permalink: /que-es-quic-el-nuevo-protocolo-desarrollado-por-google/
 categories:
   - Security Now!
@@ -140,7 +140,7 @@ Sí, <proto-quic@chromium.org> | <a href="https://groups.google.com/a/chromium.o
  [13]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#11
  [14]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#12
  [15]: http:/elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/#13
- [16]: http://elbauldelprogramador.com/seguridad
- [17]: http://elbauldelprogramador.com/
+ [16]: https://elbauldelprogramador.com/seguridad
+ [17]: https://elbauldelprogramador.com/
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1709
 title: 'Nueva Guía: The Top 10 Reports for Managing Vulnerabilities'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1709
+guid: https://elbauldelprogramador.com/?p=1709
 permalink: /nueva-guia-the-top-10-reports-for-managing-vulnerabilities/
 categories:
   - cursos

@@ -3,7 +3,7 @@ id: 2090
 title: Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2090
+guid: https://elbauldelprogramador.com/?p=2090
 permalink: /sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/
 categories:
   - How To
@@ -31,7 +31,7 @@ Ahora que tenemos la base de datos descargada, la descomprimimos y nos paramos a
 
 #### Explicación de la expresión regular
 
-Lo que tienen las expresiones regulares es que cuando pasa un tiempo, y aunque la hayas creado tú, es probable que no tengas ni idea de por qué la hiciste y cómo se te ocurrió. Hace tiempo en la sección <a href="http://elbauldelprogramador.com/vinetas-geek/" title="Sección Viñetas Geek" target="_blank">Viñetas Geek de Domingo</a> apareció una imagen que refleja esta sensación:
+Lo que tienen las expresiones regulares es que cuando pasa un tiempo, y aunque la hayas creado tú, es probable que no tengas ni idea de por qué la hiciste y cómo se te ocurrió. Hace tiempo en la sección <a href="https://elbauldelprogramador.com/vinetas-geek/" title="Sección Viñetas Geek" target="_blank">Viñetas Geek de Domingo</a> apareció una imagen que refleja esta sensación:
 
 <div id="attachment_2027" style="width: 339px" class="wp-caption aligncenter">
   <img src="/images/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" alt="Explicado simplemente - Expresiones regulares del día anterior" width="329" height="533" class="size-full wp-image-2027" />
@@ -60,7 +60,7 @@ Lo cual sustituirá la URL antigua por lo que coincidión en la expresión *((?:
 
 
 
- [1]: http://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
- [2]: http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
+ [1]: https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
+ [2]: https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
 
 {% include _toc.html %}

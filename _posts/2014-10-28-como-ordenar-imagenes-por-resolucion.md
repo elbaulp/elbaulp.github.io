@@ -3,7 +3,7 @@ id: 2457
 title: Cómo ordenar imágenes por resolución
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2457
+guid: https://elbauldelprogramador.com/?p=2457
 permalink: /como-ordenar-imagenes-por-resolucion/
 categories:
   - script
@@ -84,6 +84,6 @@ Así, las imágenes quedarán, por ejemplo, `[1280x1024] - nombre original.jpg`.
 
 
  [1]: http://superuser.com/users/4421/flammable
- [2]: http://elbauldelprogramador.com/renombrar-archivos-masivamente-en/ "Renombrar archivos masívamente"
+ [2]: https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/ "Renombrar archivos masívamente"
 
 {% include _toc.html %}

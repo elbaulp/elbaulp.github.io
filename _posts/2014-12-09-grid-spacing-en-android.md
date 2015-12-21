@@ -3,7 +3,7 @@ id: 2473
 title: Grid Spacing en Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2473
+guid: https://elbauldelprogramador.com/?p=2473
 permalink: /grid-spacing-en-android/
 categories:
   - android
@@ -164,12 +164,12 @@ El framework de Android contiene unas cuantas características que pueden usarse
 
 
  [1]: http://cyrilmottier.com/ "Blog de Cyril"
- [2]: http://elbauldelprogramador.com/pon-dieta-tus-apks/ "Pon a Dieta Tus APKs"
- [3]: http://elbauldelprogramador.com/crear-un-gridview-con-adaptador-personalizado-en-android/ "Crear un GridView con Adaptador personalizado en Android"
- [4]: http://elbauldelprogramador.com/curso-programacion-android/ "Curso de programación en Android"
- [5]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 11 mejores frameworks gratuitos para aplicaciones Web"
- [6]: http://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/ "Programación Android: Layouts"
- [7]: http://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/ "Programación Android: Componentes Gráficos"
- [8]: http://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/ "Optimizando la interfaz Android – Compound Drawables"
+ [2]: https://elbauldelprogramador.com/pon-dieta-tus-apks/ "Pon a Dieta Tus APKs"
+ [3]: https://elbauldelprogramador.com/crear-un-gridview-con-adaptador-personalizado-en-android/ "Crear un GridView con Adaptador personalizado en Android"
+ [4]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso de programación en Android"
+ [5]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 11 mejores frameworks gratuitos para aplicaciones Web"
+ [6]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/ "Programación Android: Layouts"
+ [7]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/ "Programación Android: Componentes Gráficos"
+ [8]: https://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/ "Optimizando la interfaz Android – Compound Drawables"
 
 {% include _toc.html %}

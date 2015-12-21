@@ -62,6 +62,6 @@ Hay un pequeño problema, y es que no conseguí formar la expresión regular 100
 Espero que os sea útil, y si quieren modificarlo, háganlo, me lo envian, y yo lo subo al blog sin problemas.  
 Saludos.
 
-[1]: http://elbauldelprogramador.com/script-resaltado-sintaxis/
+[1]: https://elbauldelprogramador.com/script-resaltado-sintaxis/
 
 {% include _toc.html %}

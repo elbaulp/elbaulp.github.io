@@ -40,7 +40,7 @@ Las mejoras que ahora quiero realizar son:
 
 Que el server soporte varias conexiones de varios clientes, para ello tendré que usar un thread (hilo), que sea el que encargue de la conexión con cada cliente.
 
-Al checkar o des-checkear el checkBox (valga la redundancia <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ), se debe conectar o desconectar realmente del server.
+Al checkar o des-checkear el checkBox (valga la redundancia <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ), se debe conectar o desconectar realmente del server.
 
 Mejorar el diseño, evidentemente la aplicación no va a ser así de simple, pero mientras programo la parte de la conexión esa me vale.
 
@@ -69,7 +69,7 @@ Por ultimo algunas capturas:
 
 
 
- [1]: http://elbauldelprogramador.com/programa-que-envia-mensajes-desde/
+ [1]: https://elbauldelprogramador.com/programa-que-envia-mensajes-desde/
  [2]: http://casidiablo.net/java-socket-chat-basico/
 
 {% include _toc.html %}

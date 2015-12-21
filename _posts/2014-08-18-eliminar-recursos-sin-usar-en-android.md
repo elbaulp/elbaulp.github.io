@@ -3,7 +3,7 @@ id: 2421
 title: Eliminar recursos sin usar en Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2421
+guid: https://elbauldelprogramador.com/?p=2421
 permalink: /eliminar-recursos-sin-usar-en-android/
 categories:
   - android
@@ -89,8 +89,8 @@ Tras pasar *Android Resource Remover*, *SWADroid* paso a ocupar **1,5Mb** frente
 
 
 
- [1]: http://elbauldelprogramador.com/swadroid "Artículos en el blog de SWADroid"
+ [1]: https://elbauldelprogramador.com/swadroid "Artículos en el blog de SWADroid"
  [2]: https://github.com/Amab/SWADroid/tree/develop "Proyecto en Github"
- [3]: http://elbauldelprogramador.com/programacion-android-recursos/ "PROGRAMACIÓN ANDROID: RECURSOS – INTRODUCCIÓN"
+ [3]: https://elbauldelprogramador.com/programacion-android-recursos/ "PROGRAMACIÓN ANDROID: RECURSOS – INTRODUCCIÓN"
 
 {% include _toc.html %}

@@ -485,12 +485,12 @@ int main() {
 
 Para todo aquel interesado, tengo permiso para distribuir el guión bajo licencia creative commons desarrollado por los profesores Francisco Javier Fernández Baldomero y Mancia Anguita López del departamento de <a href="http://atc.ugr.es/" target="_blank">Arquitectura y Tecnología de Computadores</a> de la Universidad de Granada.
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/practica-2a-tutorial/" rel="nofollow"> Download &ldquo;Practica 2a Tutorial&rdquo; <small>Practica-2a-Tutorial.pdf &ndash; Downloaded 594 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-2a-tutorial/" rel="nofollow"> Download &ldquo;Practica 2a Tutorial&rdquo; <small>Practica-2a-Tutorial.pdf &ndash; Downloaded 594 times &ndash; </small> </a>
 
   
 
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/practica-2b-guion/" rel="nofollow"> Download &ldquo;Practica 2b Guion&rdquo; <small>Practica-2b-Guion.pdf &ndash; Downloaded 411 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-2b-guion/" rel="nofollow"> Download &ldquo;Practica 2b Guion&rdquo; <small>Practica-2b-Guion.pdf &ndash; Downloaded 411 times &ndash; </small> </a>
 
 
 

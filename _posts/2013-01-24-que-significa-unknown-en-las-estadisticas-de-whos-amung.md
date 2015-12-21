@@ -3,7 +3,7 @@ id: 1192
 title: '¿Qué significa &#8216;Unknown&#8217; en las estadísticas de Whos amung?'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1192
+guid: https://elbauldelprogramador.com/?p=1192
 permalink: /que-significa-unknown-en-las-estadisticas-de-whos-amung/
 categories:
   - Artículos
@@ -23,6 +23,6 @@ Otro caso en el que aparecerá este estado desconocido para un visitante es cuan
 
 
 
- [1]: http://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/
+ [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/
 
 {% include _toc.html %}

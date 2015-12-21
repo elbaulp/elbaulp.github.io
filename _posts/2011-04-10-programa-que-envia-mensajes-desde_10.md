@@ -71,6 +71,6 @@ Clase AtiendeConextion
 
 
 
- [1]: http://elbauldelprogramador.com/programa-que-envia-mensajes-desde/
+ [1]: https://elbauldelprogramador.com/programa-que-envia-mensajes-desde/
 
 {% include _toc.html %}

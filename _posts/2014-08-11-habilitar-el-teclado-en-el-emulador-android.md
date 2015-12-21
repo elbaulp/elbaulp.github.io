@@ -3,7 +3,7 @@ id: 2419
 title: Cómo habilitar el teclado en el emulador Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2419
+guid: https://elbauldelprogramador.com/?p=2419
 permalink: /habilitar-el-teclado-en-el-emulador-android/
 categories:
   - How To
@@ -50,6 +50,6 @@ De igual manera, pero esta vez hay que añadir `hw.dPad=yes` al fichero de confi
 
 
 
- [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
+ [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
 
 {% include _toc.html %}

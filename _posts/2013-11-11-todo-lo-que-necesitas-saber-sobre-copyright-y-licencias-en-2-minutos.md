@@ -3,7 +3,7 @@ id: 1967
 title: Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1967
+guid: https://elbauldelprogramador.com/?p=1967
 permalink: /todo-lo-que-necesitas-saber-sobre-copyright-y-licencias-en-2-minutos/
 categories:
   - Artículos
@@ -44,6 +44,6 @@ Si usas **[GitHub][1]**, aún tardarás menos tiempo en escoger licencia, ya que
 
 
 
- [1]: http://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
+ [1]: https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
 
 {% include _toc.html %}

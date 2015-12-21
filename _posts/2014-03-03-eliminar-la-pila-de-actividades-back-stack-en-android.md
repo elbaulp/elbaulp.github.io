@@ -3,7 +3,7 @@ id: 2276
 title: Eliminar la pila de actividades (Back Stack) en Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2276
+guid: https://elbauldelprogramador.com/?p=2276
 permalink: /eliminar-la-pila-de-actividades-back-stack-en-android/
 categories:
   - android
@@ -38,7 +38,7 @@ finish();
 
 
 
- [1]: http://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
- [2]: http://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
+ [1]: https://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
+ [2]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
 
 {% include _toc.html %}

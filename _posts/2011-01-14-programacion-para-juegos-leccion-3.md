@@ -45,11 +45,11 @@ Como en el primer turorial, [Programación para Juegos &#8211; Lección 1 &#8211
 
 
 
- [1]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
+ [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
  [2]: http://www.lazyfoo.net/SDL_tutorials/lesson03/linux/index.php
  [3]: http://www.lazyfoo.net/SDL_tutorials/lesson03/windows/index.php
  [4]: http://www.lazyfoo.net/SDL_tutorials/lesson03/mac/index.php
  [5]: http://www.lazyfoo.net/SDL_tutorials/
- [6]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-4/
+ [6]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-4/
 
 {% include _toc.html %}

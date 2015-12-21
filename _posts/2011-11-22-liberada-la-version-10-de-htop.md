@@ -61,7 +61,7 @@ wasn&#8217;t for all of you, htop wouldn&#8217;t be what it is now. Version
 numbers are more symbolic than anything, but the stability of htop 0.9  
 in the past year and the cool new features introduced in this release  
 compelled me to call this version 1.0. We all deserve this little  
-&#8220;achievement&#8221;. <img src="http://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+&#8220;achievement&#8221;. <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
 
 <li class="x">
   Performance improvements

@@ -68,6 +68,6 @@ La orden para borrar una vista es DROP VIEW. Su sintaxis es:
 
 
  [1]: http://es.wikipedia.org/wiki/Lenguaje_de_Manipulaci%C3%B3n_de_Datos
- [2]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
+ [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
 
 {% include _toc.html %}

@@ -79,7 +79,7 @@ Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiemp
 
 
 
- [1]: http://elbauldelprogramador.com/programa-que-envia-mensajes-desde_10/
+ [1]: https://elbauldelprogramador.com/programa-que-envia-mensajes-desde_10/
  [2]: http://kbase.gfi.com/showarticle.asp?id=KBID002804
  [3]: http://www.blogdemegastar.com/2010/09/pasos-para-configurar-sql-server-2008.html
  [4]: http://support.microsoft.com/kb/313100

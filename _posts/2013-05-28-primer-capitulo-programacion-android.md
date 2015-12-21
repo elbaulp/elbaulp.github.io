@@ -39,7 +39,7 @@ tags:
   - programar en android pdf
 ---
 
-Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="http://elbauldelprogramador.com/curso-programacion-android/">curso</a>.
+Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="https://elbauldelprogramador.com/curso-programacion-android/">curso</a>.
 
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 

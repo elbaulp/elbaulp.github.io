@@ -3,7 +3,7 @@ id: 2391
 title: Chuleta de comandos para GPG
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2391
+guid: https://elbauldelprogramador.com/?p=2391
 permalink: /chuleta-de-comandos-para-gpg/
 categories:
   - Artículos
@@ -146,6 +146,6 @@ NOTA: los siguientes casos de uso indican porqué los comandos secret-key import
 
 
 
- [1]: http://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+ [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
 {% include _toc.html %}

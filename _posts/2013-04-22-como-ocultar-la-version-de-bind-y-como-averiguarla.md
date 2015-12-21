@@ -3,7 +3,7 @@ id: 1518
 title: Cómo ocultar la versión de BIND (Y cómo averiguarla)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1518
+guid: https://elbauldelprogramador.com/?p=1518
 permalink: /como-ocultar-la-version-de-bind-y-como-averiguarla/
 categories:
   - Administración de Servidores

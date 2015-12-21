@@ -3,7 +3,7 @@ id: 1692
 title: Ejecutar un script al modificar un fichero con inotify
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1692
+guid: https://elbauldelprogramador.com/?p=1692
 permalink: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/
 categories:
   - bash

@@ -3,7 +3,7 @@ id: 1789
 title: 'Crear un módulo para python con la Python C API (IV) &#8211; HerramientasRed'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1789
+guid: https://elbauldelprogramador.com/?p=1789
 permalink: /crear-modulo-python-con-python-c-api-4/
 categories:
   - C
@@ -169,11 +169,11 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
 
 
 
- [1]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I)"
- [2]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
- [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
- [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
+ [1]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I)"
+ [2]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
+ [3]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
+ [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
  [5]: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
- [6]: http://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
+ [6]: https://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1695
 title: Vota por el logo que más te guste para El Baúl del Programador
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1695
+guid: https://elbauldelprogramador.com/?p=1695
 permalink: /vota-por-el-logo-que-mas-te-guste-para-el-baul-del-programador/
 categories:
   - offtopic

@@ -1181,7 +1181,7 @@ dbms_output.put_line(misCiudades(i));
                           </p>
 
                           <h4 class="referencia">
-                            Siguiente tema: <a href="http://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/">Lenguaje Definición de Datos(DDL) &#8211; CREATE.</a>
+                            Siguiente tema: <a href="https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/">Lenguaje Definición de Datos(DDL) &#8211; CREATE.</a>
                           </h4>
 
 

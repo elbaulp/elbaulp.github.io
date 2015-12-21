@@ -65,8 +65,8 @@ también fuera de la clase.
 
 
 
- [1]: http://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
- [2]: http://elbauldelprogramador.com/clases-y-objetos-el-constructor/
- [3]: http://elbauldelprogramador.com/clases-y-objetos-control-del-acceso-los/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
+ [2]: https://elbauldelprogramador.com/clases-y-objetos-el-constructor/
+ [3]: https://elbauldelprogramador.com/clases-y-objetos-control-del-acceso-los/
 
 {% include _toc.html %}

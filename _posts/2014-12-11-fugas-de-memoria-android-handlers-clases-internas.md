@@ -3,7 +3,7 @@ id: 2478
 title: 'Fugas de memoria en Android: Handlers & Clases Internas'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2478
+guid: https://elbauldelprogramador.com/?p=2478
 permalink: /fugas-de-memoria-android-handlers-clases-internas/
 categories:
   - android
@@ -139,14 +139,14 @@ photo credit: [nyuhuhuu][10] via [photopin][11] [cc][12]
 
 
  [1]: http://www.androiddesignpatterns.com "Blog de Alex"
- [2]: http://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/ "Eliminar recursos sin usar en Android"
- [3]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "11 Framewors web gratuitos"
+ [2]: https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/ "Eliminar recursos sin usar en Android"
+ [3]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "11 Framewors web gratuitos"
  [4]: http://developer.android.com/reference/android/os/Looper.html
  [5]: http://developer.android.com/reference/android/os/Message.html
- [6]: http://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/ "Programación Android - Ciclo de vida de las Activities"
+ [6]: https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/ "Programación Android - Ciclo de vida de las Activities"
  [7]: http://developer.android.com/reference/android/os/Handler.html
  [8]: http://developer.android.com/reference/android/os/Handler.html#handleMessage(android.os.Message)
- [9]: http://elbauldelprogramador.com/eliminar-la-pila-de-actividades-back-stack-en-android/ "Finalizar actividades en Android"
+ [9]: https://elbauldelprogramador.com/eliminar-la-pila-de-actividades-back-stack-en-android/ "Finalizar actividades en Android"
  [10]: https://www.flickr.com/photos/nyuhuhuu/4653088356/
  [11]: http://photopin.com
  [12]: http://creativecommons.org/licenses/by/2.0/

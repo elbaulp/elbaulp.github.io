@@ -3,7 +3,7 @@ id: 1385
 title: Algunos comandos útiles con iproute2
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1385
+guid: https://elbauldelprogramador.com/?p=1385
 permalink: /comandos-ss-iproute2-linux/
 categories:
   - aplicaciones

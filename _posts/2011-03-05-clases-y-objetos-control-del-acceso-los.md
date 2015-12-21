@@ -126,7 +126,7 @@ cout << "nordenada del punto= "<< ptl.gety ();
 
 
 
- [1]: http://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
- [2]: http://elbauldelprogramador.com/clases-y-objetos-funciones-inline/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
+ [2]: https://elbauldelprogramador.com/clases-y-objetos-funciones-inline/
 
 {% include _toc.html %}

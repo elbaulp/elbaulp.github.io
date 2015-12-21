@@ -3,7 +3,7 @@ id: 2370
 title: Instalar Atom, el editor de GitHub en Linux
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2370
+guid: https://elbauldelprogramador.com/?p=2370
 permalink: /instalar-atom-el-editor-de-github-en-linux/
 categories:
   - Artículos
@@ -136,7 +136,7 @@ Personalmente es un editor que me ha gustado mucho, muy fácil de usar y con una
 
 
 
- [1]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [2]: http://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
+ [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [2]: https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
 
 {% include _toc.html %}

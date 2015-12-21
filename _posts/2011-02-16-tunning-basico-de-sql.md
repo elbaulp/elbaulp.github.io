@@ -54,7 +54,7 @@ A continuación se dan unas normas básicas para escribir sentencias SELECT opti
 
 
  [1]: http://bashyc.blogspot.com/p/bases-de-datos.html
- [2]: http://elbauldelprogramador.com/consulta-de-datos-clausula-from/
- [3]: http://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
+ [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/
+ [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
 
 {% include _toc.html %}

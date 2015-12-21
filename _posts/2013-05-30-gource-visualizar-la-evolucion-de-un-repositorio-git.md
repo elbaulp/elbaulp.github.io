@@ -3,7 +3,7 @@ id: 1580
 title: 'Gource: Visualizar la evolución de un repositorio Git'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1580
+guid: https://elbauldelprogramador.com/?p=1580
 permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/
 categories:
   - aplicaciones
@@ -66,8 +66,8 @@ A continuación os dejo un vídeo de uno de mis repositorios:
   <iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen></iframe>
 </figure>
 
- [1]: http://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
- [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [1]: https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
+ [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: /images/2013/05/gourceGit.png
 
 {% include _toc.html %}

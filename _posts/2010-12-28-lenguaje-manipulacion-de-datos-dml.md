@@ -158,12 +158,12 @@ y el resultado después de ejecutar la sentencia MERGE sería:
 
 
 
- [1]: http://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
- [2]: http://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/
- [3]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/
- [4]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
- [5]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
- [6]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
- [7]: http://elbauldelprogramador.com/consulta-de-datos-clausula-select/
+ [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
+ [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/
+ [3]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/
+ [4]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
+ [5]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
+ [6]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
+ [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/
 
 {% include _toc.html %}

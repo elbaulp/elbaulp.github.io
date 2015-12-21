@@ -179,6 +179,6 @@ A continuación se muestra una lista de las excepciones automáticas predefinida
 
 
 
- [1]: http://elbauldelprogramador.com/plsql-cursores/
+ [1]: https://elbauldelprogramador.com/plsql-cursores/
 
 {% include _toc.html %}

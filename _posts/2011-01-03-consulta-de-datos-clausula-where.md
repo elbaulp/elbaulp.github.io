@@ -185,7 +185,7 @@ Los símbolos utilizados en el patrón son:
     <hr />
     
     <h4 class="referencia">
-      Siguiente Tema: <a href="http://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/">Consulta de Datos &#8211; Cláusula GROUP BY</a>
+      Siguiente Tema: <a href="https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/">Consulta de Datos &#8211; Cláusula GROUP BY</a>
     </h4>
     
     

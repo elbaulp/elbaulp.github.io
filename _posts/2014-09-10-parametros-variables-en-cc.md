@@ -3,7 +3,7 @@ id: 2376
 title: Pasar parámetros variables en C/C++
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2376
+guid: https://elbauldelprogramador.com/?p=2376
 permalink: /parametros-variables-en-cc/
 categories:
   - C
@@ -204,6 +204,6 @@ Espero que estos tres ejemplos sencillos hayan servido para comprender el funcio
 
 
 
- [1]: http://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Dwm Status"
+ [1]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Dwm Status"
 
 {% include _toc.html %}

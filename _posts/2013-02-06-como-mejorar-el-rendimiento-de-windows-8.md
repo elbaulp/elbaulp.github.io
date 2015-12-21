@@ -3,7 +3,7 @@ id: 1322
 title: Cómo mejorar el rendimiento de Windows 8
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1322
+guid: https://elbauldelprogramador.com/?p=1322
 permalink: /como-mejorar-el-rendimiento-de-windows-8/
 categories:
   - How To

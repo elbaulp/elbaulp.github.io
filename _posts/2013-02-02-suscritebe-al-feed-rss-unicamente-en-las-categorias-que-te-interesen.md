@@ -3,7 +3,7 @@ id: 1295
 title: Suscríbete al feed RSS únicamente en las categorías que te interesen
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1295
+guid: https://elbauldelprogramador.com/?p=1295
 permalink: /suscritebe-al-feed-rss-unicamente-en-las-categorias-que-te-interesen/
 categories:
   - noticias
@@ -12,7 +12,7 @@ Puede que solo te interesen algunas publicaciones del blog y no desees recibir t
 
 WordPress proporciona un mecanismo de suscripción por categorías, de modo que puedas recibir actualizaciones cuando se publiquen artículos bajo una categoría determinada. A continuación describo el contenido que se suele publicar en cada una.
 
-  1. El feed principal, con el que recibirás todas las publicaciones es <a href="http://elbauldelprogramador.com/feed" target="_blank">/feed</a>.
+  1. El feed principal, con el que recibirás todas las publicaciones es <a href="https://elbauldelprogramador.com/feed" target="_blank">/feed</a>.
   2. En <a href="/category/feed/" target="_blank">/articulos</a> se publican traducciones de noticias interesantes. 
       1. Una subsección de /articulos es <a href="/category/security-now-articulos/feed" target="_blank">articulos/security-now</a>, en la cual se publican algunas traducciones del programa de radio <a href="http://twit.tv/sn" target="_blank">Security Now</a>
   3. <a href="/category/cursos/feed" target="_blank">/noticias/cursos</a> Acoge todos los artículos en los que se presenta una nueva guía para descargar. Así como cursos en Udacity.

@@ -3,7 +3,7 @@ id: 2408
 title: Colorear la barra de estado con Simple StatusColor en DWM 6.1
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2408
+guid: https://elbauldelprogramador.com/?p=2408
 permalink: /statuscolor-dwm-6-1/
 categories:
   - C
@@ -207,9 +207,9 @@ Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de 
 
 
 
- [1]: http://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM, el gestor de ventanas más eficiente"
+ [1]: https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM, el gestor de ventanas más eficiente"
  [2]: /images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
- [3]: http://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
- [4]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: https://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
+ [4]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
 
 {% include _toc.html %}

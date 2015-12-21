@@ -3,7 +3,7 @@ id: 1491
 title: 'Git: Mini Tutorial y chuleta de comandos'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1491
+guid: https://elbauldelprogramador.com/?p=1491
 permalink: /mini-tutorial-y-chuleta-de-comandos-git/
 categories:
   - Artículos
@@ -370,6 +370,6 @@ Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta just
 
 
 
- [1]: http://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+ [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
 {% include _toc.html %}

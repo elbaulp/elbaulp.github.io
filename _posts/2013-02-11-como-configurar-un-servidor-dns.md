@@ -3,7 +3,7 @@ id: 1308
 title: 'Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1308
+guid: https://elbauldelprogramador.com/?p=1308
 permalink: /como-configurar-un-servidor-dns/
 categories:
   - Administración de Servidores
@@ -174,6 +174,6 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 
 [1]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
 [2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
-[3]: http://elbauldelprogramador.com/bases-de-datos/
+[3]: https://elbauldelprogramador.com/bases-de-datos/
 
 {% include _toc.html %}

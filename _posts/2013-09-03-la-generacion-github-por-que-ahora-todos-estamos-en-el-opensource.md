@@ -3,7 +3,7 @@ id: 1854
 title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1854
+guid: https://elbauldelprogramador.com/?p=1854
 permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
 categories:
   - Artículos
@@ -77,7 +77,7 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
 
 
 
- [1]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [2]: http://elbauldelprogramador.com/ "Categoría OpenSource"
+ [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [2]: https://elbauldelprogramador.com/ "Categoría OpenSource"
 
 {% include _toc.html %}

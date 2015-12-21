@@ -3,7 +3,7 @@ id: 1864
 title: Cómo cifrar correos con GPG usando Mailvelope
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1864
+guid: https://elbauldelprogramador.com/?p=1864
 permalink: /como-cifrar-correos-con-gpg-con-mailvelope/
 categories:
   - seguridad
@@ -89,9 +89,9 @@ Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnolog�
 
 
 
- [1]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
- [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: http://elbauldelprogramador.com/ "Contacto"
+ [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: https://elbauldelprogramador.com/ "Contacto"
  [4]: /images/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png
 
 {% include _toc.html %}

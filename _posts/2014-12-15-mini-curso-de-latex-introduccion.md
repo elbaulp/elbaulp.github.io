@@ -4,7 +4,7 @@ id: 2491
 title: 'Mini Curso de LaTeX &#8211; Introducción'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2491
+guid: https://elbauldelprogramador.com/?p=2491
 permalink: /mini-curso-de-latex-introduccion/
 categories:
   - LaTeX
@@ -199,7 +199,7 @@ Con esto completamos una pequeña introducción a LaTeX, en el siguiente artícu
 
 
 
- [1]: http://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/ "Curso de LaTeX - Incluir código fuente y símbolos matemáticos"
- [2]: http://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
+ [1]: https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/ "Curso de LaTeX - Incluir código fuente y símbolos matemáticos"
+ [2]: https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
 
 {% include _toc.html %}

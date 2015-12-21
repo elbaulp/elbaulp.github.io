@@ -3,7 +3,7 @@ id: 1734
 title: Viñetas Geek de Domingo (VI)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1734
+guid: https://elbauldelprogramador.com/?p=1734
 permalink: /vinetas-geek-de-domingo-vi/
 categories:
   - Humor

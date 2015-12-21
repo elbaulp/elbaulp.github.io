@@ -3,7 +3,7 @@ id: 2464
 title: ¿Cómo detectar ficheros con bloqueo/cerrojo en Linux?
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2464
+guid: https://elbauldelprogramador.com/?p=2464
 permalink: /como-detectar-ficheros-con-bloqueocerrojo-en-linux/
 categories:
   - linux
@@ -49,6 +49,6 @@ Donde las columnas significan:
 
 
 
- [1]: http://elbauldelprogramador.com/introduccion-los-procesos/ "Intro a los procesos"
+ [1]: https://elbauldelprogramador.com/introduccion-los-procesos/ "Intro a los procesos"
 
 {% include _toc.html %}

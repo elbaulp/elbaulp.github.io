@@ -3,7 +3,7 @@ id: 1993
 title: Viñetas Geek de Domingo (XII)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1993
+guid: https://elbauldelprogramador.com/?p=1993
 permalink: /vinetas-geek-de-domingo-xii/
 categories:
   - Viñetas Geek
@@ -74,8 +74,8 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
 
- [1]: http://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
- [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
+ [1]: https://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
+ [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
 
 {% include _toc.html %}

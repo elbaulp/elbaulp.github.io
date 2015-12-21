@@ -3,7 +3,7 @@ id: 1899
 title: 'Introducción a Django &#8211; Instalación y primer proyecto'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1899
+guid: https://elbauldelprogramador.com/?p=1899
 permalink: /introduccion-django-instalacion-y-primer-proyecto/
 categories:
   - django
@@ -248,9 +248,9 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
 
 
 
- [1]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
- [2]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de datos"
- [3]: http://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
- [4]: http://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
+ [1]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
+ [2]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de datos"
+ [3]: https://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
+ [4]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
 
 {% include _toc.html %}

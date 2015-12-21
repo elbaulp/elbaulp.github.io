@@ -45,7 +45,7 @@ Except as noted, this content is licensed under [http://developer.android.comhtt
 
 
 
- [1]: http://elbauldelprogramador.com/nueva-metodologia-para-la-traduccion-de/
+ [1]: https://elbauldelprogramador.com/nueva-metodologia-para-la-traduccion-de/
  [2]: http://devgui-android-es.netii.net/
  [3]: http://www.ebruni.it/en/software/os/i_love_wiki/index.mpl
 

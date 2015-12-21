@@ -3,7 +3,7 @@ id: 2096
 title: 'Nueva guía: 6 Steps to Securing Your Domains'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2096
+guid: https://elbauldelprogramador.com/?p=2096
 permalink: /6-steps-to-securing-your-domains/
 categories:
   - cursos

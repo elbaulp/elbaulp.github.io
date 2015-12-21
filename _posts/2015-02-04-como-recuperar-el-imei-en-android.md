@@ -3,7 +3,7 @@ id: 2540
 title: Cómo recuperar el IMEI en Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2540
+guid: https://elbauldelprogramador.com/?p=2540
 permalink: /como-recuperar-el-imei-en-android/
 categories:
   - Artículos
@@ -93,8 +93,8 @@ Espero que os sirva alguno de los métodos, como me sirvieron en su día a mi.
 
 
 
- [1]: http://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
- [2]: http://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/
+ [1]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
+ [2]: https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/
  [3]: http://forum.xda-developers.com/galaxy-s2/general/guide-recover-imei-9-steps-t1264021 "[GUIDE] Recover your IMEI in 9 steps."
  [4]: http://forum.cyanogenmod.org/topic/76511-updating-the-basebandradiomodem/#entry405203 "Updating The Baseband/radio/modem"
  [5]: http://wiki.cyanogenmod.org/w/I9100_Info "Descargar radios i9100"

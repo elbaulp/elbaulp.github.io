@@ -3,7 +3,7 @@ id: 2361
 title: No dejes que los Astronautas de Arquitecturas te asusten
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2361
+guid: https://elbauldelprogramador.com/?p=2361
 permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
 categories:
   - Artículos
@@ -60,6 +60,6 @@ Es bueno que podamos utilizar XML ahora para los formatos por cable. Estupendo. 
 
 
 
- [1]: http://elbauldelprogramador.com/bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/ "BitTorrent Sync: Tus archivos sincronizados sin intermediarios"
+ [1]: https://elbauldelprogramador.com/bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/ "BitTorrent Sync: Tus archivos sincronizados sin intermediarios"
 
 {% include _toc.html %}

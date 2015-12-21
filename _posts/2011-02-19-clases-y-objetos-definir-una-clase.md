@@ -83,7 +83,7 @@ void <b>Punto::ocultar() {
 <hr />
 
 <h4 class="referencia">
-  Siguiente tema: <a href="http://elbauldelprogramador.com/clases-y-objetos-el-constructor/">Clases y Objetos - El Constructor</a>
+  Siguiente tema: <a href="https://elbauldelprogramador.com/clases-y-objetos-el-constructor/">Clases y Objetos - El Constructor</a>
 </h4>
 
 

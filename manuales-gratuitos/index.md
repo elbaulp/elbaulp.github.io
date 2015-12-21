@@ -19,7 +19,7 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
 
 <ul class="tt-wrapper">
   <li>
-    <a href="http://elbauldelprogramador.com/6-steps-to-securing-your-domains/"><img src="http://elbauldelprogramador.com/images/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="262" class=" size-full wp-image-2097" /><span>6 Steps to Securing Your Domains</span></a>
+    <a href="https://elbauldelprogramador.com/6-steps-to-securing-your-domains/"><img src="https://elbauldelprogramador.com/images/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="262" class=" size-full wp-image-2097" /><span>6 Steps to Securing Your Domains</span></a>
   </li>
   <li>
     <a href="http://elbauldelprogramador.tradepub.com/free/w_make45/prgm.cgi"><img width="200" height="262" src="https://lh3.googleusercontent.com/-yeaRQKAqtZ4/TslfYMSpdTI/AAAAAAAABzs/h9H-nIMmma8/s300/lion1-240x300.jpg"  alt="Mac OS X Lion: The Ultimate Guide" /><span>Mac OS X Lion: The Ultimate Guide</span></a>
@@ -55,13 +55,13 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
     <a href="/nueva-guia-ubuntu-absolute-beginners/"><img width="200" height="262" src="https://lh5.googleusercontent.com/-pOL8x3wV9cE/Tzk33Qbuj7I/AAAAAAAACEk/2VSVxrYjFeU/s640/ubuntu-large.jpg" alt="Ubuntu: An Absolute Beginner’s Guide" /><span>Ubuntu: An Absolute Beginner’s Guide</span></a>
   </li>
   <li>
-    <a href="/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/"><img style="border:none;" width="200" height="262" class="aligncenter size-full wp-image-782" src="http://elbauldelprogramador.com/images/2012/08/w_sitb33c1.gif" title="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" alt="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" /><span>PHP & MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview</span></a>
+    <a href="/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/"><img style="border:none;" width="200" height="262" class="aligncenter size-full wp-image-782" src="https://elbauldelprogramador.com/images/2012/08/w_sitb33c1.gif" title="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" alt="Nueva guía: PHP &#038; MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview" /><span>PHP & MySQL: Novice to Ninja, 5th Edition–Free 57 Page Preview</span></a>
   </li>
   <li>
-    <a href="/nueva-guia-your-guide-to-google-analytics/"><img src="http://elbauldelprogramador.com/images/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="200" height="262" class=" size-medium wp-image-925" /><span>Your Guide To Google Analytics</span></a>
+    <a href="/nueva-guia-your-guide-to-google-analytics/"><img src="https://elbauldelprogramador.com/images/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="200" height="262" class=" size-medium wp-image-925" /><span>Your Guide To Google Analytics</span></a>
   </li>
   <li>
-    <a href="/nueva-guia-the-essentials-of-information-security-kit/"><img src="http://elbauldelprogramador.com/images/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="262" class=" size-full wp-image-1497" /><span>The Essentials of Information Security Kit: Includes a Free PC Security Handbook &#8211; 2nd Edition eBook</span></a>
+    <a href="/nueva-guia-the-essentials-of-information-security-kit/"><img src="https://elbauldelprogramador.com/images/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="262" class=" size-full wp-image-1497" /><span>The Essentials of Information Security Kit: Includes a Free PC Security Handbook &#8211; 2nd Edition eBook</span></a>
   </li>
   <li>
     <a href="/cursos/internet/noticias/opensource/nueva-gua-gratuita-java-concurrency-essentials/"><img src="/images/Nueva Guía Gratuita: Java Concurrency Essentials.jpg" alt="Nueva Guía Gratuita: Java Concurrency Essentials" width="199" height="259"/><span>Nueva Guía Gratuita: Java Concurrency Essentials</span></a>

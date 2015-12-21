@@ -213,7 +213,7 @@ biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de l
 
 ### Más libros
 
-Si te interesan los libros _geek_, visita nuestra recopilación [16 Libros de No-Ficción que todo Geek debería leer](http://elbauldelprogramador.com/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/)
+Si te interesan los libros _geek_, visita nuestra recopilación [16 Libros de No-Ficción que todo Geek debería leer](https://elbauldelprogramador.com/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/)
 
 #### Referencias
 

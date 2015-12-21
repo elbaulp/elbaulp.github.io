@@ -3,7 +3,7 @@ id: 1792
 title: Viñetas Geek de Domingo (VII)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1792
+guid: https://elbauldelprogramador.com/?p=1792
 permalink: /vinetas-geek-de-domingo-vii/
 categories:
   - Viñetas Geek
@@ -129,6 +129,6 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
 
- [1]: http://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
+ [1]: https://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
 
 {% include _toc.html %}

@@ -56,8 +56,8 @@ Espero que vuestra experiencia con el blog sea ahora más fluida.
 
 
 
- [1]: http://elbauldelprogramador.com/video-demostracion-del-proyecto-wifibar/
- [2]: http://elbauldelprogramador.com/pequeno-redisenp-en-el-blog/
+ [1]: https://elbauldelprogramador.com/video-demostracion-del-proyecto-wifibar/
+ [2]: https://elbauldelprogramador.com/pequeno-redisenp-en-el-blog/
  [3]: http://tools.pingdom.com/
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 2379
 title: Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2379
+guid: https://elbauldelprogramador.com/?p=2379
 permalink: /crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/
 categories:
   - How To
@@ -233,8 +233,8 @@ Si el lector ha llegado hasta este punto, estaba interesado en conseguir un cicl
 
 
 
- [1]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [2]: http://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
- [3]: http://elbauldelprogramador.com/introduccion-a-ruby/ "Introducción rápida a Ruby"
- [4]: http://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
+ [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [2]: https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
+ [3]: https://elbauldelprogramador.com/introduccion-a-ruby/ "Introducción rápida a Ruby"
+ [4]: https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
  [5]: http://wp-cli.org/#install

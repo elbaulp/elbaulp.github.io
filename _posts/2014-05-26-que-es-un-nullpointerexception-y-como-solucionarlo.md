@@ -3,7 +3,7 @@ id: 2360
 title: Qué es un NullPointerException y cómo solucionarlo
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2360
+guid: https://elbauldelprogramador.com/?p=2360
 permalink: /que-es-un-nullpointerexception-y-como-solucionarlo/
 categories:
   - Java

@@ -3,7 +3,7 @@ id: 1955
 title: Resolver laberintos en C++
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1955
+guid: https://elbauldelprogramador.com/?p=1955
 permalink: /resolver-laberintos-en-c/
 categories:
   - C

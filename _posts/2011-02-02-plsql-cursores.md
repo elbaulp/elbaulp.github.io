@@ -346,10 +346,10 @@ END;
 
 
 
- [1]: http://elbauldelprogramador.com/plsql-excepciones/
- [2]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/
- [3]: http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
- [4]: http://elbauldelprogramador.com/introduccion-plsql-transacciones/
- [5]: http://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+ [1]: https://elbauldelprogramador.com/plsql-excepciones/
+ [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [3]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [4]: https://elbauldelprogramador.com/introduccion-plsql-transacciones/
+ [5]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
 
 {% include _toc.html %}

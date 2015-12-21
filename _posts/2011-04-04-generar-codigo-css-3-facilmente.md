@@ -40,6 +40,6 @@ Espero que sea útil para los lectores del blog. Saludos
  [1]: http://www.susannakosic.net/css/126-herramientas-on-line-para-la-generacion-de-codigo-css3-cross-browser
  [2]: http://www.css3maker.com/
  [3]: http://css3generator.com/
- [4]: http://elbauldelprogramador.com/probando-css3-en-el-blog/
+ [4]: https://elbauldelprogramador.com/probando-css3-en-el-blog/
 
 {% include _toc.html %}

@@ -115,7 +115,7 @@ En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente
 
 A continuación, dejo una captura del ejemplo que he hecho para esta entrada, que se puede descargar desde:
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;EstilosyTemas&rdquo; <small>EstilosyTemas.zip &ndash; Downloaded 1629 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;EstilosyTemas&rdquo; <small>EstilosyTemas.zip &ndash; Downloaded 1629 times &ndash; </small> </a>
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="http://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>

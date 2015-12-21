@@ -148,8 +148,8 @@ END;
 
 
 
- [1]: http://elbauldelprogramador.com/bloques-plsql/
- [2]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/
- [3]: http://elbauldelprogramador.com/plsql-paquetes-packages/
+ [1]: https://elbauldelprogramador.com/bloques-plsql/
+ [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [3]: https://elbauldelprogramador.com/plsql-paquetes-packages/
 
 {% include _toc.html %}

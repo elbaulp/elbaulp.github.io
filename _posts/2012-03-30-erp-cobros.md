@@ -31,7 +31,7 @@ Voy a dejar el examen que hice hace poco de base de datos, junto con el enunciad
 
 El examen tiene un 9, por lo que hay algunas pequeñas cosas que no estan hechas bien del todo.
 
-<a class="aligncenter download-button" href="http://elbauldelprogramador.com/erp-cobros/" rel="nofollow"> Download &ldquo;ERP COBROS&rdquo; <small>ERP_COBROS.pdf &ndash; Downloaded 1411 times &ndash; </small> </a>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/erp-cobros/" rel="nofollow"> Download &ldquo;ERP COBROS&rdquo; <small>ERP_COBROS.pdf &ndash; Downloaded 1411 times &ndash; </small> </a>
 
 
 

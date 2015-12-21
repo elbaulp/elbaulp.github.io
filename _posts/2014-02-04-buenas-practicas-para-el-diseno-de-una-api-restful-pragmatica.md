@@ -3,7 +3,7 @@ id: 2082
 title: Buenas prácticas para el Diseño de una API RESTful Pragmática
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2082
+guid: https://elbauldelprogramador.com/?p=2082
 permalink: /buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/
 categories:
   - Artículos

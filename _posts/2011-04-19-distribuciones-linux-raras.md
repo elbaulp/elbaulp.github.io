@@ -42,7 +42,7 @@ así que supongo que para obtener este comportamiento solo seŕa necesario agreg
 
 
  [1]: http://www.muylinux.com/2011/04/18/3-distros-linux-que-no-querras-probar/comment-page-1/
- [2]: http://elbauldelprogramador.com/nunca-lo-hagas-humor/
+ [2]: https://elbauldelprogramador.com/nunca-lo-hagas-humor/
  [3]: http://www.muylinux.com/2010/03/08/suicide-linux-una-distro-muy-muy-delicada/
  [4]: http://qntm.org/suicide
 

@@ -3,7 +3,7 @@ id: 2041
 title: Cómo enviar los emails de /var/mail/root a una cuenta de correo
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2041
+guid: https://elbauldelprogramador.com/?p=2041
 permalink: /como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/
 categories:
   - Administración de Servidores
@@ -24,7 +24,7 @@ tags:
 </div>
 
 <div class="column column-last column-5-6">
-  En sistemas operativos como <a href="http://elbauldelprogramador.com/?s=debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario <em>root</em> para informar del estado del sistema. Los mensajes se almacenan en el archivo <em>/var/mail/root</em>. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como <strong>mutt</strong> para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica.
+  En sistemas operativos como <a href="https://elbauldelprogramador.com/?s=debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario <em>root</em> para informar del estado del sistema. Los mensajes se almacenan en el archivo <em>/var/mail/root</em>. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como <strong>mutt</strong> para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica.
 </div>
 
 <div class="clearfix">

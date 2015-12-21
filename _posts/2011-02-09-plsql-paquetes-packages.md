@@ -155,10 +155,10 @@ PL/SQL nos permite que varios procedimientos o funciones almacenadas, declaradas
 
 
 
- [1]: http://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
- [2]: http://elbauldelprogramador.com/plsql-declaracion-de-variables/
- [3]: http://elbauldelprogramador.com/plsql-excepciones/
- [4]: http://elbauldelprogramador.com/plsql-cursores/
- [5]: http://elbauldelprogramador.com/plsql-disparadores-o-triggers/
+ [1]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+ [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [3]: https://elbauldelprogramador.com/plsql-excepciones/
+ [4]: https://elbauldelprogramador.com/plsql-cursores/
+ [5]: https://elbauldelprogramador.com/plsql-disparadores-o-triggers/
 
 {% include _toc.html %}

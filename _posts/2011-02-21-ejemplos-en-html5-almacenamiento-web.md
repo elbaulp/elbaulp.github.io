@@ -135,7 +135,7 @@ socket.<b>onclose</b> = function(event) { alert('closed'); }
               
               
 
- [1]: http://elbauldelprogramador.com/15-demostraciones-del-potencial-de/
+ [1]: https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/
  [2]: http://slides.html5rocks.com/#landing-slide
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1730
 title: 'Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1730
+guid: https://elbauldelprogramador.com/?p=1730
 permalink: /solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/
 categories:
   - android
@@ -47,7 +47,7 @@ De esta forma el error ***Calling startActivity() from outside of an Activity co
 
 
 
- [1]: http://elbauldelprogramador.com/fundamentos-programacion-android/
- [2]: http://elbauldelprogramador.com/programacion-android-intents-conceptos/
+ [1]: https://elbauldelprogramador.com/fundamentos-programacion-android/
+ [2]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/
 
 {% include _toc.html %}

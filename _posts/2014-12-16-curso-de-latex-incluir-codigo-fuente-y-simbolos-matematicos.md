@@ -4,7 +4,7 @@ id: 2513
 title: 'Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2513
+guid: https://elbauldelprogramador.com/?p=2513
 permalink: /curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/
 categories:
   - LaTeX
@@ -189,9 +189,9 @@ En el proximo artículo veremos cómo añadir figuras, enlaces y tablas al docum
 
 
 
- [1]: http://elbauldelprogramador.com/mini-curso-de-latex-introduccion/ "Mini Curso de LaTeX - Introducción"
- [2]: http://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
- [3]: http://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Intro a Minted"
+ [1]: https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/ "Mini Curso de LaTeX - Introducción"
+ [2]: https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/
+ [3]: https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Intro a Minted"
  [4]: http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html "lista"
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1891
 title: Viñetas Geek de Domingo (XI)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1891
+guid: https://elbauldelprogramador.com/?p=1891
 permalink: /vinetas-geek-de-domingo-xi/
 categories:
   - Viñetas Geek
@@ -92,7 +92,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
             <a class="thumbnail" href="/images/2013/09/Reassuring.png"><img class="size-full wp-image-1912" alt="Razonamiento" src="/images/2013/09/Reassuring.png" width="740" height="263" /></a>
             
             <p class="wp-caption-text">
-              &#8211; Parece que los ordenadores vencerán a los humanos en <strong>GO</strong>(Gracias a mundoff, por aclarar que es un juego japonés) muy pronto.<br />- Wow, esa es una de las últimas grandes notícias.<br />- Sí<br />- Bueno, al menos los humanos seguimos siendo mejores en&#8230;uh, ¿elaborar razonamientos sobre cosas en las que los humanos somos mejores?<br />- He creado un script en <a href="http://elbauldelprogramador.com/">python</a> que genera miles de razonamientos por segundo.<br />- joder&#8230;<br />- Lo ordenadores jamás entenderán un soneto. Nunca disfrutarán una ensalada&#8230;
+              &#8211; Parece que los ordenadores vencerán a los humanos en <strong>GO</strong>(Gracias a mundoff, por aclarar que es un juego japonés) muy pronto.<br />- Wow, esa es una de las últimas grandes notícias.<br />- Sí<br />- Bueno, al menos los humanos seguimos siendo mejores en&#8230;uh, ¿elaborar razonamientos sobre cosas en las que los humanos somos mejores?<br />- He creado un script en <a href="https://elbauldelprogramador.com/">python</a> que genera miles de razonamientos por segundo.<br />- joder&#8230;<br />- Lo ordenadores jamás entenderán un soneto. Nunca disfrutarán una ensalada&#8230;
             </p>
           </div>
           
@@ -131,6 +131,6 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
             
             
 
- [1]: http://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
+ [1]: https://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
 
 {% include _toc.html %}

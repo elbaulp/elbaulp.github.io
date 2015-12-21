@@ -3,7 +3,7 @@ id: 2314
 title: 'Nueva guía: History of cryptography'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2314
+guid: https://elbauldelprogramador.com/?p=2314
 permalink: /history-of-cryptography/
 categories:
   - cursos

@@ -3,7 +3,7 @@ id: 2022
 title: Viñetas Geek de Domingo (XIII)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2022
+guid: https://elbauldelprogramador.com/?p=2022
 permalink: /vinetas-geek-de-domingo-xiii/
 categories:
   - Viñetas Geek
@@ -87,8 +87,8 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
 
- [1]: http://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
- [2]: http://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: http://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
+ [1]: https://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
+ [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
 
 {% include _toc.html %}

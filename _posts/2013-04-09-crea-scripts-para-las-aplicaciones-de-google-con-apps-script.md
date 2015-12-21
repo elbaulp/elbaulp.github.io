@@ -3,7 +3,7 @@ id: 1470
 title: Crea scripts para las aplicaciones de Google con Apps Script
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1470
+guid: https://elbauldelprogramador.com/?p=1470
 permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
 categories:
   - internet
@@ -430,6 +430,6 @@ function init_() {
 
 
 
- [1]: http://elbauldelprogramador.com/futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"
+ [1]: https://elbauldelprogramador.com/futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"
 
 {% include _toc.html %}

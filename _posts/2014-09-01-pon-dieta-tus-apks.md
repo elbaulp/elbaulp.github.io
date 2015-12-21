@@ -3,7 +3,7 @@ id: 2432
 title: Pon a dieta a tus APKs
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2432
+guid: https://elbauldelprogramador.com/?p=2432
 permalink: /pon-dieta-tus-apks/
 categories:
   - android
@@ -229,23 +229,23 @@ El diseño trata de obtener lo mejor posible a partir de un conjunto de restricc
 
 
 
- [1]: http://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/ "Eliminar recursos sin usar en Android"
+ [1]: https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/ "Eliminar recursos sin usar en Android"
  [2]: http://cyrilmottier.com/ "Blog de Cyril"
- [3]: http://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/ "Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy"
- [4]: http://elbauldelprogramador.com/curso-programacion-android/ "Curso Android"
- [5]: http://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/ "Trabajar con recursos Assets"
- [6]: http://elbauldelprogramador.com/programacion-android-recursos/ "Introducción a los recursos Android"
- [7]: http://elbauldelprogramador.com/fundamentos-programacion-android_16/ "Qué es el AndroidManifest.xml"
- [8]: http://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/ "Ofuscamiento de código"
- [9]: http://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Introducción a las Clases"
+ [3]: https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/ "Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy"
+ [4]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso Android"
+ [5]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/ "Trabajar con recursos Assets"
+ [6]: https://elbauldelprogramador.com/programacion-android-recursos/ "Introducción a los recursos Android"
+ [7]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/ "Qué es el AndroidManifest.xml"
+ [8]: https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/ "Ofuscamiento de código"
+ [9]: https://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Introducción a las Clases"
  [10]: http://en.wikipedia.org/wiki/Reflection_(computer_programming) "Definición de Reflexión"
- [11]: http://elbauldelprogramador.com/programacion-android-recursos-2/ "Recursos compilados y no compilados"
+ [11]: https://elbauldelprogramador.com/programacion-android-recursos-2/ "Recursos compilados y no compilados"
  [12]: http://sebastien-gabriel.com/designers-guide-to-dpi/home "Designers guide to DPI"
- [13]: http://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/ "¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?"
+ [13]: https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/ "¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?"
  [14]: https://developer.android.com/tools/help/draw9patch.html "Documentación Android"
- [15]: http://elbauldelprogramador.com/introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
+ [15]: https://elbauldelprogramador.com/introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
  [16]: http://blog.algolia.com/android-ndk-how-to-reduce-libs-size/ "Android NDK How to reduce libs size"
- [17]: http://elbauldelprogramador.com/adapter-personalizado-en-android/ "Crear un adapter personalizado"
+ [17]: https://elbauldelprogramador.com/adapter-personalizado-en-android/ "Crear un adapter personalizado"
  [18]: https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary
  [19]: http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY "CONFIG_DENSITY"
  [20]: https://twitter.com/cyrilmottier "@cyrilmottier"

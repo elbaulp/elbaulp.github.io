@@ -3,7 +3,7 @@ id: 2393
 title: ¿Eres chica y te gusta la informática?, participa en el campus UGR/Google para chicas
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2393
+guid: https://elbauldelprogramador.com/?p=2393
 permalink: /eres-chica-y-te-gusta-la-informatica-participa-en-el-campus-ugrgoogle-para-chicas/
 categories:
   - Artículos
@@ -52,6 +52,6 @@ Sandra Cámara, Community Manager No Solo Una Idea:
 
 
 
- [1]: http://elbauldelprogramador.com/curso-programacion-android/ "Android"
+ [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"
 
 {% include _toc.html %}

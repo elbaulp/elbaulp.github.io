@@ -3,7 +3,7 @@ id: 1374
 title: 'Unhide Forensic Tool: Encuentra puertos y procesos ocultos'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1374
+guid: https://elbauldelprogramador.com/?p=1374
 permalink: /unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/
 categories:
   - aplicaciones

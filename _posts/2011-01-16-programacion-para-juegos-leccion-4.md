@@ -247,8 +247,8 @@ Hay otras maneras de controlar eventos como SDL\_WaitEvent() y SDL\_PeepEvents()
 
 
  [1]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson04
- [2]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-2/
+ [2]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-2/
  [3]: http://www.lazyfoo.net/SDL_tutorials/
- [4]: http://elbauldelprogramador.com/programacion-para-juegos-leccion-5/
+ [4]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-5/
 
 {% include _toc.html %}

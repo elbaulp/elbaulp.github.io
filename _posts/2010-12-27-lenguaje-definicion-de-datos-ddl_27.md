@@ -72,6 +72,6 @@ SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;{% endhi
 
 
 
- [1]: http://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
 
 {% include _toc.html %}

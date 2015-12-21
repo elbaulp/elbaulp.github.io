@@ -4,7 +4,7 @@ id: 2514
 title: 'Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2514
+guid: https://elbauldelprogramador.com/?p=2514
 permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/
 categories:
   - LaTeX
@@ -185,10 +185,10 @@ Marta.
 
 
 
- [1]: http://elbauldelprogramador.com/mini-curso-de-latex-introduccion/ "Mini Curso de LaTeX – Introducción"
- [2]: http://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/ "Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos"
- [3]: http://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/ "Pie de página con FancyHdr"
- [4]: http://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/ "Instalar ATOM"
+ [1]: https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/ "Mini Curso de LaTeX – Introducción"
+ [2]: https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/ "Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos"
+ [3]: https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/ "Pie de página con FancyHdr"
+ [4]: https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/ "Instalar ATOM"
  [5]: http://miktex.org/ "MikTeX"
  [6]: https://github.com/mgmacias95/CursoLaTex/ "github"
 

@@ -3,7 +3,7 @@ id: 2244
 title: Aceptamos BitCoins como método de donación
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2244
+guid: https://elbauldelprogramador.com/?p=2244
 permalink: /aceptamos-bitcoins-como-metodo-de-donacion/
 categories:
   - noticias
@@ -27,6 +27,6 @@ Por último, recomiendo a los lectores escuchar el podcast:
 
 
 
- [1]: http://elbauldelprogramador.com/como-funciona-el-bitcoin-la-cripto-moneda/ "Cómo funciona el Bitcoin, la cripto-moneda"
+ [1]: https://elbauldelprogramador.com/como-funciona-el-bitcoin-la-cripto-moneda/ "Cómo funciona el Bitcoin, la cripto-moneda"
 
 {% include _toc.html %}

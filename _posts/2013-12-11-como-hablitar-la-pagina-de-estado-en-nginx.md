@@ -3,7 +3,7 @@ id: 2040
 title: Cómo habilitar la página de estado en Nginx
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2040
+guid: https://elbauldelprogramador.com/?p=2040
 permalink: /como-hablitar-la-pagina-de-estado-en-nginx/
 categories:
   - Administración de Servidores

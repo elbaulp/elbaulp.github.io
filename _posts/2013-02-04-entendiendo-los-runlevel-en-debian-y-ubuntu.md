@@ -3,7 +3,7 @@ id: 1311
 title: Entendiendo los runlevel en Debian
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1311
+guid: https://elbauldelprogramador.com/?p=1311
 permalink: /entendiendo-los-runlevel-en-debian-y-ubuntu/
 categories:
   - linux
@@ -128,7 +128,7 @@ A continuación varios ejemplos extraidos del manual de **update-rc.d:**
 
 *An introduction to run-levels* »» <a href="http://www.debian-administration.org/articles/212" target="_blank">Visitar sitio</a>
 
- [1]: http://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/ "Grub Customizer 2.0, personaliza tu GRUB2"
- [2]: http://elbauldelprogramador.com/
+ [1]: https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/ "Grub Customizer 2.0, personaliza tu GRUB2"
+ [2]: https://elbauldelprogramador.com/
 
 {% include _toc.html %}

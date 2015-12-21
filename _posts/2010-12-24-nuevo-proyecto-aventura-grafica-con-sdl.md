@@ -38,7 +38,7 @@ Como siempre, cualquiera que quiera participar es bienvenido, de esta forma avan
 
  [1]: http://es.wikipedia.org/wiki/Simple_DirectMedia_Layer
  [2]: http://bashyc.blogspot.com/p/proyecto-pylabra.html
- [3]: http://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/
- [4]: http://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/
+ [3]: https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/
+ [4]: https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/
 
 {% include _toc.html %}

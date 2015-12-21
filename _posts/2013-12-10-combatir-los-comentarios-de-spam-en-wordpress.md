@@ -3,7 +3,7 @@ id: 2036
 title: Combatir los comentarios de spam en WordPress
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2036
+guid: https://elbauldelprogramador.com/?p=2036
 permalink: /combatir-los-comentarios-de-spam-en-wordpress/
 categories:
   - Administración de Servidores
@@ -94,11 +94,11 @@ A partir de ahora, se notará un descenso drástico en los comentarios de spam. 
 
 
 
- [1]: http://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
- [2]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
- [3]: http://elbauldelprogramador.com/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
- [4]: http://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
- [5]: http://elbauldelprogramador.com/ "Scripts del blog"
+ [1]: https://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
+ [2]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
+ [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
+ [4]: https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
+ [5]: https://elbauldelprogramador.com/ "Scripts del blog"
 
 
 {% include _toc.html %}

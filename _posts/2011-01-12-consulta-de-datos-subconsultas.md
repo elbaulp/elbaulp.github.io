@@ -61,7 +61,7 @@ El predicado EXISTS se utiliza en comparaciones de verdad/falso para determinar 
 
 
 
- [1]: http://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/
 
 
 {% include _toc.html %}

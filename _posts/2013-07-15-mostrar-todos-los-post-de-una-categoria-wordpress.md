@@ -3,7 +3,7 @@ id: 1712
 title: Mostrar todos los post de una categoría en WordPress
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1712
+guid: https://elbauldelprogramador.com/?p=1712
 permalink: /mostrar-todos-los-post-de-una-categoria-wordpress/
 categories:
   - php
@@ -79,6 +79,6 @@ Para usar el shortcode debemos conocer el **id** de la categoría a mostrar, o r
 
  [1]: /como-crear-shortcodes-en-wordpress/
  [2]: http://codex.wordpress.org/Class_Reference/WP_Query#Parameters
- [3]: http://elbauldelprogramador.com/?s=shortcode
+ [3]: https://elbauldelprogramador.com/?s=shortcode
 
 {% include _toc.html %}

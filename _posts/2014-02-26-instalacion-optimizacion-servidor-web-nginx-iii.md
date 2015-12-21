@@ -4,7 +4,7 @@ title: Instalación y optimización de un servidor web con Nginx (III)
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post
-guid: http://elbauldelprogramador.com/?p=2260
+guid: https://elbauldelprogramador.com/?p=2260
 permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
 categories:
   - Administración de Servidores
@@ -343,8 +343,8 @@ Con esto concluyen los tres artículos sobre instalación y optimización de un 
 
 
 
- [1]: http://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
- [2]: http://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"
- [3]: http://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/ "Solucionar fallo de segmentación en PHP cuando se usa APC"
+ [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
+ [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"
+ [3]: https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/ "Solucionar fallo de segmentación en PHP cuando se usa APC"
 
 {% include _toc.html %}

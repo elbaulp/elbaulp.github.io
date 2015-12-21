@@ -3,7 +3,7 @@ id: 2233
 title: Cambiar el color del summary en una Preferencia Android
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2233
+guid: https://elbauldelprogramador.com/?p=2233
 permalink: /cambiar-el-color-del-summary-en-una-preferencia-android/
 categories:
   - android
@@ -108,8 +108,8 @@ Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Prefer
 
 
 
- [1]: http://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/ "Cómo crear un diálogo personalizado en las preferencias Android"
- [2]: http://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/ "Programación Android: Interfaz gráfica – Layouts"
- [3]: http://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/ "Programación Android: Interfaz gráfica – Estilos y Temas"
+ [1]: https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/ "Cómo crear un diálogo personalizado en las preferencias Android"
+ [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/ "Programación Android: Interfaz gráfica – Layouts"
+ [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/ "Programación Android: Interfaz gráfica – Estilos y Temas"
 
 {% include _toc.html %}

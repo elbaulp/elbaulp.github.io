@@ -3,7 +3,7 @@ id: 2255
 title: Instalación y optimización de un servidor web con Nginx (II)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2255
+guid: https://elbauldelprogramador.com/?p=2255
 permalink: /instalacion-optimizacion-servidor-web-nginx-ii/
 categories:
   - Administración de Servidores
@@ -69,8 +69,8 @@ chown www-data:www-data /usr/local/nginx/html/index.php
                 
                 
 
- [1]: http://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
- [2]: http://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
- [3]: http://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
+ [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
+ [3]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
 
 {% include _toc.html %}

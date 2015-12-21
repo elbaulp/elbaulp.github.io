@@ -3,7 +3,7 @@ id: 2558
 title: Cómo mapear json a objetos Java con Jackson ObjectMapper
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2558
+guid: https://elbauldelprogramador.com/?p=2558
 permalink: /como-mapear-json-a-objetos-java-con-jackson-objectmapper/
 modified: 2015-03-30T00:00:00+00:00
 categories:
@@ -259,6 +259,6 @@ La librería *Jackson* de *fasterXML* ofrece muchísimas más cosas de las vista
 
 
 
- [1]: http://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/ "Buenas prácticas para el Diseño de una API RESTful Pragmática"
+ [1]: https://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/ "Buenas prácticas para el Diseño de una API RESTful Pragmática"
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 2215
 title: 'Nueva Guía: How the Cloud will Change Application Release Applications'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2215
+guid: https://elbauldelprogramador.com/?p=2215
 permalink: /how-the-cloud-will-change-application-release-applications/
 categories:
   - cursos

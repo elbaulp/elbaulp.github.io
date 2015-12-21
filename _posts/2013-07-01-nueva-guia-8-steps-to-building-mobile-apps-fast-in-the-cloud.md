@@ -3,7 +3,7 @@ id: 1705
 title: 'Nueva guía: 8 Steps to Building Mobile Apps Fast in the Cloud'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1705
+guid: https://elbauldelprogramador.com/?p=1705
 permalink: /nueva-guia-8-steps-to-building-mobile-apps-fast-in-the-cloud/
 categories:
   - cursos

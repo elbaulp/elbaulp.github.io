@@ -3,7 +3,7 @@ id: 1659
 title: 'NDK-gdb &#8211; Depurar aplicaciones en el NKD de Android'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1659
+guid: https://elbauldelprogramador.com/?p=1659
 permalink: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/
 categories:
   - android

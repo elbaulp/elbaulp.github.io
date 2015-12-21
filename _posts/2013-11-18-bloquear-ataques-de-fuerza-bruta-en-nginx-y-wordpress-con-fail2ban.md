@@ -3,7 +3,7 @@ id: 1979
 title: Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1979
+guid: https://elbauldelprogramador.com/?p=1979
 permalink: /bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/
 categories:
   - Administración de Servidores
@@ -180,7 +180,7 @@ mta = sendmail
 
 
 
- [1]: http://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables"
+ [1]: https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables"
  [2]: /como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
 
 {% include _toc.html %}

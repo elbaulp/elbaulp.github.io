@@ -3,7 +3,7 @@ id: 1788
 title: 'Crear un módulo para python con la Python C API (III) &#8211; DistUtils'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1788
+guid: https://elbauldelprogramador.com/?p=1788
 permalink: /crear-modulo-python-con-python-c-api-3-distutils/
 categories:
   - C
@@ -113,10 +113,10 @@ En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de u
 
 
 
- [1]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I)"
- [2]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
- [3]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
- [4]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
- [5]: http://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2
+ [1]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/ "Crear un módulo para python con la Python C API (I)"
+ [2]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2/ "Crear un módulo para python con la Python C API (II)"
+ [3]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
+ [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
+ [5]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2
 
 {% include _toc.html %}

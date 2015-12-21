@@ -3,7 +3,7 @@ id: 1811
 title: Viñetas Geek de Domingo (VIII)
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1811
+guid: https://elbauldelprogramador.com/?p=1811
 permalink: /vinetas-geek-de-domingo-viii/
 categories:
   - Viñetas Geek

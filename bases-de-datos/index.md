@@ -6,7 +6,7 @@ guid: http://elbauldelprogramador.org/?page_id=424
 blogger_permalink:
   - http://www.elbauldelprogramador.org/p/bases-de-datos.html
   - http://www.elbauldelprogramador.org/p/bases-de-datos.html
-  - http://www.elbauldelprogramador.com/p/bases-de-datos.html
+  - https://elbauldelprogramador.com/p/bases-de-datos.html
 if_seo_keywords:
   - sql, pl/sql, oracle sql , oracle pl/sql
   - sql, pl/sql, oracle sql , oracle pl/sql

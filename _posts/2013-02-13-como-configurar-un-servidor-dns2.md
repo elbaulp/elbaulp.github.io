@@ -3,7 +3,7 @@ id: 1346
 title: 'Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1346
+guid: https://elbauldelprogramador.com/?p=1346
 permalink: /como-configurar-un-servidor-dns2/
 categories:
   - Administración de Servidores

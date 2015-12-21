@@ -3,7 +3,7 @@ id: 2447
 title: Cómo crear un Front Controller en PHP
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2447
+guid: https://elbauldelprogramador.com/?p=2447
 permalink: /como-crear-un-front-controller-en-php/
 categories:
   - php
@@ -69,13 +69,13 @@ En [nginx][10]:
 
  [1]: http://programarivm.com
  [2]: http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/ "Curso de Programación PHP guay"
- [3]: http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 11 Mejores Frameworks gratuitos para Aplicaciones Web"
+ [3]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 11 Mejores Frameworks gratuitos para Aplicaciones Web"
  [4]: http://img.youtube.com/vi/eYoDqz29qSA/0.jpg
  [5]: http://www.youtube.com/watch?v=eYoDqz29qSA "Imágenes enlazadas"
  [6]: http://www.slimframework.com/ "Slim Framework"
  [7]: https://github.com/programarivm/phpguay/tree/master/agenda "AgendaPHPGuay disponible en GitHub"
  [8]: http://en.wikipedia.org/wiki/Front_Controller_pattern "Front Controller"
  [9]: http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application "Estructura de directorios de una app MVC"
- [10]: http://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/ "Instalación y optimización de un servidor web con Nginx (I)"
+ [10]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/ "Instalación y optimización de un servidor web con Nginx (I)"
 
 {% include _toc.html %}

@@ -3,7 +3,7 @@ id: 1971
 title: Introducción a HTML5
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1971
+guid: https://elbauldelprogramador.com/?p=1971
 permalink: /introduccion-html5/
 categories:
   - HTML5
@@ -22,7 +22,7 @@ Como bien indica su propio nombre es la 5 versión del estándar de WWW (*World 
 
 ### ¿Por dónde empezar?
 
-Lo primero que debemos saber es que HTML sea cual sea su versión **no es un lenguaje de programación**, tan solo es un lenguaje de marcas, se usan una serie de etiquetas estandarizadas, HTML se usa para crear la estructura de una web, y se ha puesto de moda para las aplicaciones móviles, gracias a <a href="http://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/" title="Los 10 Mejores Frameworks gratuitos para Aplicaciones Web" target="_blank">Frameworks</a> como PhoneGap a esta moda se a sumado Mozilla, con su S.O. Firefox OS; así que como podemos comprobar es casi obligatorio como mínimo conocerlo sea cual sea la plataforma a la que queramos desarrollar; como he dicho nos sirve para dar la estructura a una web (el esqueleto) después podremos darle colores, formas y organizarlo con las hojas de estilo en cascada (CSS) y se recomienda usar su ultima versión <a href="http://elbauldelprogramador.com/generar-codigo-css-3-facilmente/" title="Generar código CSS 3 fácilmente" target="_blank">CSS3</a>, aunque esta es otra batalla de la que hablaremos en otra ocasión; ahora que sabemos que es, y para que sirve, es el momento de conocer la etiqueta que debe aparecer en cualquier documento HTML5.
+Lo primero que debemos saber es que HTML sea cual sea su versión **no es un lenguaje de programación**, tan solo es un lenguaje de marcas, se usan una serie de etiquetas estandarizadas, HTML se usa para crear la estructura de una web, y se ha puesto de moda para las aplicaciones móviles, gracias a <a href="https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/" title="Los 10 Mejores Frameworks gratuitos para Aplicaciones Web" target="_blank">Frameworks</a> como PhoneGap a esta moda se a sumado Mozilla, con su S.O. Firefox OS; así que como podemos comprobar es casi obligatorio como mínimo conocerlo sea cual sea la plataforma a la que queramos desarrollar; como he dicho nos sirve para dar la estructura a una web (el esqueleto) después podremos darle colores, formas y organizarlo con las hojas de estilo en cascada (CSS) y se recomienda usar su ultima versión <a href="https://elbauldelprogramador.com/generar-codigo-css-3-facilmente/" title="Generar código CSS 3 fácilmente" target="_blank">CSS3</a>, aunque esta es otra batalla de la que hablaremos en otra ocasión; ahora que sabemos que es, y para que sirve, es el momento de conocer la etiqueta que debe aparecer en cualquier documento HTML5.
 
 {% highlight html %} {% endhighlight %}
 
@@ -104,7 +104,7 @@ externos y metadatos.</li>
     
     
 
- [1]: http://elbauldelprogramador.com/ejemplos-en-html5-almacenamiento-web/ "Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket"
- [2]: http://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/ "Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework"
+ [1]: https://elbauldelprogramador.com/ejemplos-en-html5-almacenamiento-web/ "Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket"
+ [2]: https://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/ "Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework"
 
 {% include _toc.html %}

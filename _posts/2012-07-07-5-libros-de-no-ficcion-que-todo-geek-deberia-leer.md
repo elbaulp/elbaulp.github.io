@@ -331,6 +331,6 @@ Fuente: <a href="http://www.makeuseof.com/tag/5-non-fiction-books-every-technolo
 
 ### Más libros
 
-Echa un vistazo a nuestra lista de [libros que todo Data Scientist y Data Engineer debería leer](http://elbauldelprogramador.com/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/).
+Echa un vistazo a nuestra lista de [libros que todo Data Scientist y Data Engineer debería leer](https://elbauldelprogramador.com/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/).
 
 {% include _toc.html %}

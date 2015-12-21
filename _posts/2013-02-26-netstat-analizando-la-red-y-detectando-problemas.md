@@ -3,7 +3,7 @@ id: 1354
 title: 'Netstat: Analizando la red y detectando problemas'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1354
+guid: https://elbauldelprogramador.com/?p=1354
 permalink: /netstat-analizando-la-red-y-detectando-problemas/
 categories:
   - Artículos

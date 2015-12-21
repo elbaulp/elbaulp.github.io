@@ -75,7 +75,7 @@ Intent Filters][2]. Más información sobre activar componentes específicos dis
 
 
 
- [1]: http://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/
+ [1]: https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/
  [2]: http://developer.android.com/guide/topics/intents/intents-filters.html
  [3]: http://developer.android.com/guide/topics/fundamentals/activities.html
  [4]: http://developer.android.com/guide/topics/fundamentals/services.html

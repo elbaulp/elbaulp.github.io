@@ -3,7 +3,7 @@ id: 1452
 title: Editar y crear archivos cifrados con GPG en Vim
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=1452
+guid: https://elbauldelprogramador.com/?p=1452
 permalink: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/
 categories:
   - linux

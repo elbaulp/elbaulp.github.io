@@ -75,7 +75,7 @@ ln -s metafiles/main.pdf
 
 ## Usando latexmk
 
-Para aportar algo al artículo de _Tom_, miré la documentación de LatexMK, [comando que ya hemos visto en este blog](http://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/ "Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos"), y tiene la opción `-output-directory` que permite especificar donde se guardaran todos los metaficheros, su uso es simple:
+Para aportar algo al artículo de _Tom_, miré la documentación de LatexMK, [comando que ya hemos visto en este blog](https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/ "Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos"), y tiene la opción `-output-directory` que permite especificar donde se guardaran todos los metaficheros, su uso es simple:
 
 {% highlight bash %}
 latexmk -shell-escape -pdf -pvc -output-directory=metafiles main.tex

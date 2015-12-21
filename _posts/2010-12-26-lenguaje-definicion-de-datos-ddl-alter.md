@@ -111,6 +111,6 @@ Ejemplos:
 
 
 
- [1]: http://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
+ [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
 
 {% include _toc.html %}

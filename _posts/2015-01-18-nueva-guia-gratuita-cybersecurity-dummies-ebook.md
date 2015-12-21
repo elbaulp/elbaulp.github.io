@@ -3,7 +3,7 @@ id: 2532
 title: 'Nueva guía gratuita: Cybersecurity for Dummies eBook'
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2532
+guid: https://elbauldelprogramador.com/?p=2532
 permalink: /nueva-guia-gratuita-cybersecurity-dummies-ebook/
 categories:
   - cursos

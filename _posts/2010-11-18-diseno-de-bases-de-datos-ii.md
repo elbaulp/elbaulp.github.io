@@ -178,6 +178,6 @@ tags:
 
 
 
- [1]: http://elbauldelprogramador.com/introduccion-sql-sql-introduction/
+ [1]: https://elbauldelprogramador.com/introduccion-sql-sql-introduction/
 
 {% include _toc.html %}

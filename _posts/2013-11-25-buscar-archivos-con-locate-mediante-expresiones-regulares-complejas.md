@@ -3,7 +3,7 @@ id: 2008
 title: Buscar archivos con locate mediante expresiones regulares
 
 layout: post
-guid: http://elbauldelprogramador.com/?p=2008
+guid: https://elbauldelprogramador.com/?p=2008
 permalink: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/
 categories:
   - script
@@ -70,10 +70,10 @@ IFS=' '
 
 
 
- [1]: http://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
- [2]: http://elbauldelprogramador.com/ "Categoría script"
- [3]: http://elbauldelprogramador.com/programacion-bash-expresiones-regulares/ "Programación bash – Expresiones Regulares"
- [4]: http://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/ "¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?"
- [5]: http://elbauldelprogramador.com/programacion-bash-metacaracteres-de/ "Programación Bash – Metacaracteres de redirección"
+ [1]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
+ [2]: https://elbauldelprogramador.com/ "Categoría script"
+ [3]: https://elbauldelprogramador.com/programacion-bash-expresiones-regulares/ "Programación bash – Expresiones Regulares"
+ [4]: https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/ "¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?"
+ [5]: https://elbauldelprogramador.com/programacion-bash-metacaracteres-de/ "Programación Bash – Metacaracteres de redirección"
 
 {% include _toc.html %}
