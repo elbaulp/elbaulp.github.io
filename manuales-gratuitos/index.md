@@ -91,6 +91,10 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
     <a href="/nueva-guia-preserving-your-privacy-in-windows-10/"><img src="
     /images/Preserving-Your-Privacy-in-Windows-102.jpg" alt="Preserving Your Privacy in Windows 10" width="199" height="259"/><span>Preserving Your Privacy in Windows 10</span></a>
   </li>
+  <li>
+    <a href="/nueva-guia-administracion-avanzada-del/"><img src="
+    /images/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg" alt="Administración Avanzada del Sistema Operativo GNU/Linux" width="199" height="259"/><span>Administración Avanzada del Sistema Operativo GNU/Linux</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
