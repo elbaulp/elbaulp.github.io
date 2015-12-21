@@ -28,7 +28,7 @@
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/BlogPosting" class="hentry" id="main" role="main">
+<div itemscope itemtype="http://schema.org/BlogPosting" class="" id="main" role="main">
   <meta itemprop="mainEntityOfPage" content="{{ site.url }}" />
   <div class="article-author-side">
     {% include _author-bio.html %}
@@ -45,9 +45,9 @@
     </div>
 
       {% if page.link %}
-        <h1 itemprop="headline" class="entry-title"><a href="{{ page.link }}"><span itemprop="name">{{ page.title }}</span></a></h1>
+        <h1 itemprop="headline"><a href="{{ page.link }}"><span itemprop="name">{{ page.title }}</span></a></h1>
       {% else %}
-        <h1 itemprop="headline" class="entry-title"><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}"><span itemprop="name">{{ page.title }}</span></a></h1>
+        <h1 itemprop="headline"><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}"><span itemprop="name">{{ page.title }}</span></a></h1>
       {% endif %}
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
