@@ -12,6 +12,8 @@ tags:
   - cifrar copias de seguridad con openssl
   - cifrar tar con openssl
   - comandos openssl
+image:
+  thumb: 2012/11/Apps-preferences-desktop-cryptography-icon1.png
 ---  
 
 <figure>
