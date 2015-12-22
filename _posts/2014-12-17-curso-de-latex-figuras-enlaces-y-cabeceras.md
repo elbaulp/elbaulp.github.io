@@ -21,10 +21,22 @@ tags:
   - latex
 image:
   thumb: 2013/05/latex_logo.png
+excerpt: |
+  <figure>
+    <a href="/images/2013/05/latex_logo.png"><img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  </figure>
+
+  Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas...
+modified: 2015-12-22T17:36
 ---
-  * [Mini Curso de LaTeX &#8211; Introducción][1]
-  * [Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos][2]
-  * Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras
+
+<figure>
+  <a href="/images/2013/05/latex_logo.png"><img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+* [Mini Curso de LaTeX &#8211; Introducción][1]
+* [Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos][2]
+* Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras
 
 ## Mini curso de Latex
 
