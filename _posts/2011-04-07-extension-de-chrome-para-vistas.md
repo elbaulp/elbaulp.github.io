@@ -33,7 +33,7 @@ Hace muy poco que blogger [anunció sus vistas dinámicas][1], y ahora han lanza
 Una vez instalado, la extensión detecta automáticamente cuando se está viendo un blog de Blogger, a continuación, muestra un icono de Blogger (la naranja &#8220;B&#8221;!) en la barra de direcciones que permite seleccionar y ver el blog en una de las cinco vistas dinámicas.Así de simple.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/_UUTay7LUoq0/TZkQqGWQsrI/AAAAAAAAAEY/_mW8IOqVZ_Y/3001%20(1).jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="202" width="400" src="http://1.bp.blogspot.com/_UUTay7LUoq0/TZkQqGWQsrI/AAAAAAAAAEY/_mW8IOqVZ_Y/3001%20(1).jpg" /></a>
+  <a href="https://1.bp.blogspot.com/_UUTay7LUoq0/TZkQqGWQsrI/AAAAAAAAAEY/_mW8IOqVZ_Y/3001%20(1).jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="202" width="400" src="https://1.bp.blogspot.com/_UUTay7LUoq0/TZkQqGWQsrI/AAAAAAAAAEY/_mW8IOqVZ_Y/3001%20(1).jpg" /></a>
 </div>
 
 Como no, también es posible desabilitar la extensión si no queremos usarla en algún momento.

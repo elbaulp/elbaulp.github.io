@@ -106,11 +106,11 @@ Para aplicarlos sobre actividades, usamos:
 En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="http://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png" /></a>
+  <a href="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png" /></a>
 </div>
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="http://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png" /></a>
+  <a href="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png" /></a>
 </div>
 
 A continuación, dejo una captura del ejemplo que he hecho para esta entrada, que se puede descargar desde:
@@ -118,7 +118,7 @@ A continuación, dejo una captura del ejemplo que he hecho para esta entrada, qu
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;EstilosyTemas&rdquo; <small>EstilosyTemas.zip &ndash; Downloaded 1629 times &ndash; </small> </a>
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="http://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>
+  <a href="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>
 </div>
 
 Para saber más acerca de los estilos y temas visite la página oficial: [Applying Styles and Themes][1]

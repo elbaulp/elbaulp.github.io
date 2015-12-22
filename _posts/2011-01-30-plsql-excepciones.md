@@ -168,7 +168,7 @@ Las líneas de código debajo del manejador específico se ejecutarán cuando es
 A continuación se muestra una lista de las excepciones automáticas predefinidas por Oracle:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="http://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
+  <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
 </div>
 
 <!--INFOLINKS_OFF-->

@@ -49,11 +49,11 @@ categories:
 A continuación dejo dos imágenes con el índice completo de esta guía:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="275" src="http://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s400/Screenshot.png" /></a>
+  <a href="https://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="275" src="https://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s400/Screenshot.png" /></a>
 </div>
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s1600/Screenshot-2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="365" width="400" src="http://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s400/Screenshot-2.png" /></a>
+  <a href="https://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s1600/Screenshot-2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="365" width="400" src="https://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s400/Screenshot-2.png" /></a>
 </div>
 
 [Descárgala desde aqui][1] o  

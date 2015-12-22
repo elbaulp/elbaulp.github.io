@@ -125,7 +125,7 @@ tags:
   * **Independencia de los dispositivos:** se consigue cuando la ejecuci&oacute;n de los programas es independiente del sistema de almacenamiento.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a target="_blank" href="http://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="http://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
+  <a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
 </div>
 
 <p style="margin-left: 1em">
@@ -196,7 +196,7 @@ tags:
 </p>
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a target="_blank" href="http://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="66" src="http://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
+  <a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
 </div>
 
 
@@ -605,7 +605,7 @@ tags:
 
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a target="_blank" href="http://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img title="Funcionamiento de un SGBD" border="0" height="255" src="http://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
+  <a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img title="Funcionamiento de un SGBD" border="0" height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
 </div>
 
 

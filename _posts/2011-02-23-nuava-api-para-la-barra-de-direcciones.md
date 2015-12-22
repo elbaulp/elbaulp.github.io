@@ -29,13 +29,13 @@ Esta API permite a los desarrolladores de extensiones agregar palabras clave de 
 
 Por ejemplo, [esta extensión][1] permite buscar y cambiar entre las pestañas abiertas de la barra de direcciones.
 
-[<img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 400px; height: 239px;" src="http://2.bp.blogspot.com/-xmmCeTmlNto/TWQT84LU5zI/AAAAAAAAAC8/5PG5f9FI__U/s400/Screen%2Bshot%2B2011-02-22%2Bat%2B10.01.28%2BAM.png" border="0" alt=""id="BLOGGER_PHOTO_ID_5576604175184488242" />][2]
+[<img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 400px; height: 239px;" src="https://2.bp.blogspot.com/-xmmCeTmlNto/TWQT84LU5zI/AAAAAAAAAC8/5PG5f9FI__U/s400/Screen%2Bshot%2B2011-02-22%2Bat%2B10.01.28%2BAM.png" border="0" alt=""id="BLOGGER_PHOTO_ID_5576604175184488242" />][2]
 
 * * *Fuente: blog.chromium.org</p> 
 
 
 
  [1]: https://chrome.google.com/webstore/detail/gbfhhcljihbgcobpfnceegfmooomhhli
- [2]: http://2.bp.blogspot.com/-xmmCeTmlNto/TWQT84LU5zI/AAAAAAAAAC8/5PG5f9FI__U/s1600/Screen%2Bshot%2B2011-02-22%2Bat%2B10.01.28%2BAM.png
+ [2]: https://2.bp.blogspot.com/-xmmCeTmlNto/TWQT84LU5zI/AAAAAAAAAC8/5PG5f9FI__U/s1600/Screen%2Bshot%2B2011-02-22%2Bat%2B10.01.28%2BAM.png
 
 {% include _toc.html %}

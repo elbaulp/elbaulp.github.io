@@ -34,7 +34,7 @@ Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red so
 <span style="font-family: 'Droid Sans';"><b><i>1. Aspectos</i></b>: Al llegar a Diaspora* será lo primero que veremos, al principio tendremos tres &#8220;<i>Aspectos</i>&#8221; predeterminados <i>Familia, Trabajo y Amigos</i>, y dentro de esos &#8220;grupos&#8221; o &#8220;círculos&#8221;, estarán organizados nuestros contactos. En el caso de que queramos compartir algo, se hará de manera grupal, es decir, si eliges compartir algo con tus amigos, entonces todos ellos recibirán esa publicación, sin que tus otros contactos dentro de otros aspectos puedan acceder a ello, de igual forma puedes crear publicaciones para todos tus aspectos, y así todos tus contactos se podrán enterar de lo que estas pensando.</span><span style="font-family: 'Droid Sans';"></p> 
 
 <p>
-  </span><br /> <a href="http://3.bp.blogspot.com/_MFeNDOG66h4/TSkGeCVzn5I/AAAAAAAAAVE/XBYgNTJRs0g/s1600/37.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559982328059764626" src="http://3.bp.blogspot.com/_MFeNDOG66h4/TSkGeCVzn5I/AAAAAAAAAVE/XBYgNTJRs0g/s320/37.png" style="cursor: hand; cursor: pointer; display: block; height: 218px; margin: 0px auto 10px; text-align: center; width: 320px;" /></a>
+  </span><br /> <a href="https://3.bp.blogspot.com/_MFeNDOG66h4/TSkGeCVzn5I/AAAAAAAAAVE/XBYgNTJRs0g/s1600/37.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559982328059764626" src="https://3.bp.blogspot.com/_MFeNDOG66h4/TSkGeCVzn5I/AAAAAAAAAVE/XBYgNTJRs0g/s320/37.png" style="cursor: hand; cursor: pointer; display: block; height: 218px; margin: 0px auto 10px; text-align: center; width: 320px;" /></a>
 </p>
 
 <p>
@@ -42,11 +42,11 @@ Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red so
 </p>
 
 <p>
-  <a href="http://4.bp.blogspot.com/_MFeNDOG66h4/TSkHNsoq_kI/AAAAAAAAAVM/xVoeOA3xOhM/s1600/scaled_full_O6z8lXTPgq4d2498332c1743085d00854b.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559983146867031618" src="http://4.bp.blogspot.com/_MFeNDOG66h4/TSkHNsoq_kI/AAAAAAAAAVM/xVoeOA3xOhM/s320/scaled_full_O6z8lXTPgq4d2498332c1743085d00854b.png" style="cursor: hand; cursor: pointer; display: block; height: 147px; margin: 0px auto 10px; text-align: center; width: 148px;" /></a><span style="font-family: 'Droid Sans';"><b><i>3. Interfaz</i></b>: es otro de los puntos fuertes de Diaspora*, su interfaz sencilla, limpia y elegante, ofrece algo nada recargado o pesado a la vista, lo que hace muy comodo el navegar a través de la pagina y explorarla.</span>
+  <a href="https://4.bp.blogspot.com/_MFeNDOG66h4/TSkHNsoq_kI/AAAAAAAAAVM/xVoeOA3xOhM/s1600/scaled_full_O6z8lXTPgq4d2498332c1743085d00854b.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559983146867031618" src="https://4.bp.blogspot.com/_MFeNDOG66h4/TSkHNsoq_kI/AAAAAAAAAVM/xVoeOA3xOhM/s320/scaled_full_O6z8lXTPgq4d2498332c1743085d00854b.png" style="cursor: hand; cursor: pointer; display: block; height: 147px; margin: 0px auto 10px; text-align: center; width: 148px;" /></a><span style="font-family: 'Droid Sans';"><b><i>3. Interfaz</i></b>: es otro de los puntos fuertes de Diaspora*, su interfaz sencilla, limpia y elegante, ofrece algo nada recargado o pesado a la vista, lo que hace muy comodo el navegar a través de la pagina y explorarla.</span>
 </p>
 
 <p>
-  <a href="http://3.bp.blogspot.com/_MFeNDOG66h4/TSkKRNYn_jI/AAAAAAAAAVc/EporcVNwruU/s1600/50.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559986505732587058" src="http://3.bp.blogspot.com/_MFeNDOG66h4/TSkKRNYn_jI/AAAAAAAAAVc/EporcVNwruU/s320/50.png" style="cursor: hand; cursor: pointer; display: block; height: 235px; margin: 0px auto 10px; text-align: center; width: 320px;" /></a>
+  <a href="https://3.bp.blogspot.com/_MFeNDOG66h4/TSkKRNYn_jI/AAAAAAAAAVc/EporcVNwruU/s1600/50.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559986505732587058" src="https://3.bp.blogspot.com/_MFeNDOG66h4/TSkKRNYn_jI/AAAAAAAAAVc/EporcVNwruU/s320/50.png" style="cursor: hand; cursor: pointer; display: block; height: 235px; margin: 0px auto 10px; text-align: center; width: 320px;" /></a>
 </p>
 
 <p>
@@ -61,7 +61,7 @@ Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red so
   </p>
   
   <p>
-    <a href="http://4.bp.blogspot.com/_MFeNDOG66h4/TSkI4IXsmhI/AAAAAAAAAVU/oFBDnZ4zJ9g/s1600/04.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559984975378160146" src="http://4.bp.blogspot.com/_MFeNDOG66h4/TSkI4IXsmhI/AAAAAAAAAVU/oFBDnZ4zJ9g/s320/04.png" style="cursor: hand; cursor: pointer; display: block; height: 194px; margin: 0px auto 10px; text-align: center; width: 243px;" /></a>
+    <a href="https://4.bp.blogspot.com/_MFeNDOG66h4/TSkI4IXsmhI/AAAAAAAAAVU/oFBDnZ4zJ9g/s1600/04.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559984975378160146" src="https://4.bp.blogspot.com/_MFeNDOG66h4/TSkI4IXsmhI/AAAAAAAAAVU/oFBDnZ4zJ9g/s320/04.png" style="cursor: hand; cursor: pointer; display: block; height: 194px; margin: 0px auto 10px; text-align: center; width: 243px;" /></a>
   </p>
   
   <p>

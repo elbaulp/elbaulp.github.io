@@ -30,7 +30,7 @@ tags:
 Creo que es hora de valorar los resultados de la encuesta que propuse hace unas semanas, aqui van los resultados:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-vKzrgelKoZQ/TfeF6FiU37I/AAAAAAAAAmE/7C40FzXjBro/s1600/Resuldatosencuesta.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="129" width="400" src="http://2.bp.blogspot.com/-vKzrgelKoZQ/TfeF6FiU37I/AAAAAAAAAmE/7C40FzXjBro/s400/Resuldatosencuesta.png" /></a>
+  <a href="https://2.bp.blogspot.com/-vKzrgelKoZQ/TfeF6FiU37I/AAAAAAAAAmE/7C40FzXjBro/s1600/Resuldatosencuesta.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="129" width="400" src="https://2.bp.blogspot.com/-vKzrgelKoZQ/TfeF6FiU37I/AAAAAAAAAmE/7C40FzXjBro/s400/Resuldatosencuesta.png" /></a>
 </div>
 
 Como se puede apreciar, ha ganado programación Android con el 44% de los votos (12 votos), frente a 9 y 6 de python y bash respectivamente.

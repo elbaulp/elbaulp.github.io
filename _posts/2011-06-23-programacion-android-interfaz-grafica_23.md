@@ -63,7 +63,7 @@ Este tipo de Layout es el más básico, coloca a sus objetos hijos en la parte s
 Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se amontonan unos encima de otros.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s1600/frameLayout.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="FrameLayout Android" title="FrameLayout Android" border="0" height="400" width="301" src="http://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s400/frameLayout.png" /></a>
+  <a href="https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s1600/frameLayout.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="FrameLayout Android" title="FrameLayout Android" border="0" height="400" width="301" src="https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s400/frameLayout.png" /></a>
 </div>
 
 ### LinearLayout
@@ -92,7 +92,7 @@ Este tipo de layout coloca sus hijos unos detras de otros, también comenzando p
 En este caso, he pueso un fondo de color a cada texto (con la propiedad ***android:background***) para diferenciarlo bien, y he usado la horientación horizontal, de haber usado la orientación vertical, los textos aparecerían uno debajo del otro:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s1600/LinearLayout.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="LinearLayout Android" title="LinearLayout Android" border="0" height="400" width="300" src="http://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s400/LinearLayout.png" /></a>
+  <a href="https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s1600/LinearLayout.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="LinearLayout Android" title="LinearLayout Android" border="0" height="400" width="300" src="https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s400/LinearLayout.png" /></a>
 </div>
 
 ### RelativeLayout
@@ -127,7 +127,7 @@ Para conseguir esto, ***RelativeLayout*** proporciona propiedades como ***androi
 Como vemos, hemos centrado el texto1 en la pantalla con ***android:layout_centerInParent=&#8221;true&#8221;*** y hemos puesto debajo del texto1 al texto2 con ***android:layout_below=&#8221;@id/text1&#8243;***
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s1600/RelativeLayout.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img title="relativeLayout Android" alt="relativeLayout Android" border="0" height="400" width="298" src="http://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s400/RelativeLayout.png" /></a>
+  <a href="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s1600/RelativeLayout.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img title="relativeLayout Android" alt="relativeLayout Android" border="0" height="400" width="298" src="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s400/RelativeLayout.png" /></a>
 </div>
 
 Para saber más acerca de todos los tipos de layouts que hay podéis visitar <http://developer.android.com/guide/topics/ui/layout-objects.html>

@@ -30,7 +30,7 @@ categories:
   </p>
   
   <div style="text-align: center;">
-    <img alt="Firefox 4.0 Windows menu" src="http://2.bp.blogspot.com/_IlK2pNFFgGM/TOpKfEqxsoI/AAAAAAAAAFg/HAojDM7vC20/s1600/Firefox-menuunificado-windows.jpg" />
+    <img alt="Firefox 4.0 Windows menu" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOpKfEqxsoI/AAAAAAAAAFg/HAojDM7vC20/s1600/Firefox-menuunificado-windows.jpg" />
   </div>
   
   <p>
@@ -38,7 +38,7 @@ categories:
   </p>
   
   <div style="text-align: center;">
-    <img alt="Firefox 4.0 menu linux" src="http://1.bp.blogspot.com/_IlK2pNFFgGM/TOpKeo-73nI/AAAAAAAAAFc/LAOUt4nZY_I/s1600/Firefox-menuunificado-500x388.jpg" />
+    <img alt="Firefox 4.0 menu linux" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOpKeo-73nI/AAAAAAAAAFc/LAOUt4nZY_I/s1600/Firefox-menuunificado-500x388.jpg" />
   </div>
   
   <div style="text-align: justify;">

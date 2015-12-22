@@ -137,13 +137,13 @@ Como se puede apreciar, simplemente hemos metido todos los ejemplos que vimos an
 ### Mediante el penaltyLog():
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="android development" border="0" height="260" width="400" src="http://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
+  <a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="android development" border="0" height="260" width="400" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
 </div>
 
 ### Mediante penaltyDialog():
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="android" height="302" width="400" src="http://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
+  <a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="android" height="302" width="400" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
 </div>
 
 * * *

@@ -23,7 +23,7 @@ categories:
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img src="<br />
-http://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/humanstxt-creator-logo.png" />
+https://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/humanstxt-creator-logo.png" />
 </div>
 
 De la web de un amigo blogger ([EtnasSoft][1]), me llega la iniciativa Humanstxt Creator. Que trata de:

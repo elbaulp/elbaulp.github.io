@@ -55,7 +55,7 @@ En la parte técnica de este hackathon, me he dedicado a implementar algunas int
 Participar en este evento me ha servido también para ir atenuando el temor escénico que tengo a hablar en público, ya que el último día presenté los avances que se habían logrado en el proyecto, y tengo la foto que así lo demuestra (Aunque he de decir que Raul me apoyó en la presentación):
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://4.bp.blogspot.com/-B5Wk6N-_7zo/T1Ug9b0LIVI/AAAAAAAACJw/zxLSIOIaKfo/s1600/531265382.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="267" width="400" src="http://4.bp.blogspot.com/-B5Wk6N-_7zo/T1Ug9b0LIVI/AAAAAAAACJw/zxLSIOIaKfo/s400/531265382.jpg" /></a>
+  <a href="https://4.bp.blogspot.com/-B5Wk6N-_7zo/T1Ug9b0LIVI/AAAAAAAACJw/zxLSIOIaKfo/s1600/531265382.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="267" width="400" src="https://4.bp.blogspot.com/-B5Wk6N-_7zo/T1Ug9b0LIVI/AAAAAAAACJw/zxLSIOIaKfo/s400/531265382.jpg" /></a>
 </div>
 
 Quiero hacer una especial mención al grupo de traductoras que han trabajado duro estos días para poner al día en varios idiomas el blog de GeoRemindMe: [@Rutmg1][1], [@Nazapn][2], Natalia, [@FernandoMeleroG][3], Fátima, Clara, Ana y [@_AnaJi][4]
@@ -184,39 +184,39 @@ A modo de resumen os dejo esta galería de fotos:
 
 <div class="galeriaBook">
   <p>
-    <a href="http://1.bp.blogspot.com/-ULfLso5f-Ag/T1UmC5fK-7I/AAAAAAAACKM/NceiGys8JSw/s1600/531200681.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="134" width="200" src="http://1.bp.blogspot.com/-ULfLso5f-Ag/T1UmC5fK-7I/AAAAAAAACKM/NceiGys8JSw/s200/531200681.jpg" /></a>
+    <a href="https://1.bp.blogspot.com/-ULfLso5f-Ag/T1UmC5fK-7I/AAAAAAAACKM/NceiGys8JSw/s1600/531200681.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="134" width="200" src="https://1.bp.blogspot.com/-ULfLso5f-Ag/T1UmC5fK-7I/AAAAAAAACKM/NceiGys8JSw/s200/531200681.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://1.bp.blogspot.com/-Vuhit_H5k4g/T1Un-fgs-QI/AAAAAAAACLE/IAxCGOlsqwk/s1600/6810240886_ae4487fc7c_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="150" width="200" src="http://1.bp.blogspot.com/-Vuhit_H5k4g/T1Un-fgs-QI/AAAAAAAACLE/IAxCGOlsqwk/s200/6810240886_ae4487fc7c_o.jpg" /></a>
+    <a href="https://1.bp.blogspot.com/-Vuhit_H5k4g/T1Un-fgs-QI/AAAAAAAACLE/IAxCGOlsqwk/s1600/6810240886_ae4487fc7c_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-Vuhit_H5k4g/T1Un-fgs-QI/AAAAAAAACLE/IAxCGOlsqwk/s200/6810240886_ae4487fc7c_o.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://2.bp.blogspot.com/-swmH0aJRSDw/T1Un7iqI6_I/AAAAAAAACKY/zfn2sVSZKUg/s1600/6809730880_23b920058f_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="http://2.bp.blogspot.com/-swmH0aJRSDw/T1Un7iqI6_I/AAAAAAAACKY/zfn2sVSZKUg/s200/6809730880_23b920058f_o.jpg" /></a>
+    <a href="https://2.bp.blogspot.com/-swmH0aJRSDw/T1Un7iqI6_I/AAAAAAAACKY/zfn2sVSZKUg/s1600/6809730880_23b920058f_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="https://2.bp.blogspot.com/-swmH0aJRSDw/T1Un7iqI6_I/AAAAAAAACKY/zfn2sVSZKUg/s200/6809730880_23b920058f_o.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://3.bp.blogspot.com/-wGMJQYbifbU/T1Un9JIzzGI/AAAAAAAACKk/AwbMLBSXzr4/s1600/6809731574_237a24f063_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="http://3.bp.blogspot.com/-wGMJQYbifbU/T1Un9JIzzGI/AAAAAAAACKk/AwbMLBSXzr4/s200/6809731574_237a24f063_o.jpg" /></a>
+    <a href="https://3.bp.blogspot.com/-wGMJQYbifbU/T1Un9JIzzGI/AAAAAAAACKk/AwbMLBSXzr4/s1600/6809731574_237a24f063_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="https://3.bp.blogspot.com/-wGMJQYbifbU/T1Un9JIzzGI/AAAAAAAACKk/AwbMLBSXzr4/s200/6809731574_237a24f063_o.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://3.bp.blogspot.com/-l_fnsN-iutw/T1Un9YIeGnI/AAAAAAAACKw/SwwkzagfaRA/s1600/6809754022_12a704cf93_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="http://3.bp.blogspot.com/-l_fnsN-iutw/T1Un9YIeGnI/AAAAAAAACKw/SwwkzagfaRA/s200/6809754022_12a704cf93_o.jpg" /></a>
+    <a href="https://3.bp.blogspot.com/-l_fnsN-iutw/T1Un9YIeGnI/AAAAAAAACKw/SwwkzagfaRA/s1600/6809754022_12a704cf93_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="https://3.bp.blogspot.com/-l_fnsN-iutw/T1Un9YIeGnI/AAAAAAAACKw/SwwkzagfaRA/s200/6809754022_12a704cf93_o.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://1.bp.blogspot.com/-Fd01vQLxu8I/T1Un97smZZI/AAAAAAAACK4/NNAbAIX2-YE/s1600/6810238782_a9722bdac6_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="150" width="200" src="http://1.bp.blogspot.com/-Fd01vQLxu8I/T1Un97smZZI/AAAAAAAACK4/NNAbAIX2-YE/s200/6810238782_a9722bdac6_o.jpg" /></a>
+    <a href="https://1.bp.blogspot.com/-Fd01vQLxu8I/T1Un97smZZI/AAAAAAAACK4/NNAbAIX2-YE/s1600/6810238782_a9722bdac6_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-Fd01vQLxu8I/T1Un97smZZI/AAAAAAAACK4/NNAbAIX2-YE/s200/6810238782_a9722bdac6_o.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://2.bp.blogspot.com/-QVjr4dnGbk8/T1UoiOcaK0I/AAAAAAAACLc/fijzrx3jCrM/s1600/Foto_terce_hackathon_georemindme.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="150" width="200" src="http://2.bp.blogspot.com/-QVjr4dnGbk8/T1UoiOcaK0I/AAAAAAAACLc/fijzrx3jCrM/s200/Foto_terce_hackathon_georemindme.jpg" /></a>
+    <a href="https://2.bp.blogspot.com/-QVjr4dnGbk8/T1UoiOcaK0I/AAAAAAAACLc/fijzrx3jCrM/s1600/Foto_terce_hackathon_georemindme.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="150" width="200" src="https://2.bp.blogspot.com/-QVjr4dnGbk8/T1UoiOcaK0I/AAAAAAAACLc/fijzrx3jCrM/s200/Foto_terce_hackathon_georemindme.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://2.bp.blogspot.com/-U910AhjzIFE/T1Uoh_rPYkI/AAAAAAAACLU/TEm1of3va6c/s1600/6955869477_e81f1d58c0_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="http://2.bp.blogspot.com/-U910AhjzIFE/T1Uoh_rPYkI/AAAAAAAACLU/TEm1of3va6c/s200/6955869477_e81f1d58c0_o.jpg" /></a>
+    <a href="https://2.bp.blogspot.com/-U910AhjzIFE/T1Uoh_rPYkI/AAAAAAAACLU/TEm1of3va6c/s1600/6955869477_e81f1d58c0_o.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="200" src="https://2.bp.blogspot.com/-U910AhjzIFE/T1Uoh_rPYkI/AAAAAAAACLU/TEm1of3va6c/s200/6955869477_e81f1d58c0_o.jpg" /></a>
   </p>
   
   <p>
-    <a href="http://2.bp.blogspot.com/-es7EndNd2Oc/T1XlgSVtWiI/AAAAAAAACLw/G4TJEnS4Mvo/s1600/todoEl3Hackathon.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="134" width="200" src="http://2.bp.blogspot.com/-es7EndNd2Oc/T1XlgSVtWiI/AAAAAAAACLw/G4TJEnS4Mvo/s200/todoEl3Hackathon.jpg" /></a>
+    <a href="https://2.bp.blogspot.com/-es7EndNd2Oc/T1XlgSVtWiI/AAAAAAAACLw/G4TJEnS4Mvo/s1600/todoEl3Hackathon.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="134" width="200" src="https://2.bp.blogspot.com/-es7EndNd2Oc/T1XlgSVtWiI/AAAAAAAACLw/G4TJEnS4Mvo/s200/todoEl3Hackathon.jpg" /></a>
   </p>
 </div>
 

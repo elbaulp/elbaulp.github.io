@@ -61,7 +61,7 @@ En la siguiente figura se muestra un ejemplo de imagen 256&#215;256 de niveles d
 el zoom de una región 10&#215;10 para apreciar con detalle los grises que la componen:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s1600/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="215" width="400" src="http://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png" /></a>
+  <a href="https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s1600/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="215" width="400" src="https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png" /></a>
 </div>
 
 ### Imágenes PPM (Portable Pix Map file format)
@@ -101,7 +101,7 @@ significativos de la imagen, podemos “repartir” cada carácter del mensaje e
 consecutivos. En la siguiente figura mostramos un esquema que refleja esta idea:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s1600/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="125" width="400" src="http://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png" /></a>
+  <a href="https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s1600/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="125" width="400" src="https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png" /></a>
 </div>
 
 Donde los valores de arriba corresponden a los píxeles de la imágen y los de abajo al mensaje.
@@ -109,13 +109,13 @@ Donde los valores de arriba corresponden a los píxeles de la imágen y los de a
 Hasta aquí el planteamiento del problema. Para resolverlo va a ser necesario usar operadores a nivel de bits, que en C++ son los siguientes:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s1600/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="273" width="400" src="http://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png" /></a>
+  <a href="https://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s1600/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="273" width="400" src="https://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png" /></a>
 </div>
 
 Siento no poder poner algún trozo de código de ejemplo para que lo veáis, pero debido a que son unas prácticas evaluables, no puedo arriesgarme a que algún compañero copie el código. (Que ya me pasó una vez y me suspendieron). Sin embargo os dejo unas capturas del programa:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s1600/ejemplo.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="316" width="400" src="http://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s400/ejemplo.png" /></a>
+  <a href="https://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s1600/ejemplo.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="316" width="400" src="https://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s400/ejemplo.png" /></a>
 </div>
 
 Como podéis comprobar, Lenna aparentemente no ha cambiado su aspecto :D. En el caso de la imagen a color pasaría exactamente lo mismo.
@@ -133,7 +133,7 @@ buffer[i] = ~buffer[i]; //igual que buffer[i] = ~buffer[i]
 El resultado es:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s1600/invertidas.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="175" width="320" src="http://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s320/invertidas.png" /></a>
+  <a href="https://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s1600/invertidas.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="175" width="320" src="https://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s320/invertidas.png" /></a>
 </div>
 
 Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos haciendo la imagen más oscura:
@@ -142,7 +142,7 @@ Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos hac
 {% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s1600/oscura.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="316" width="320" src="http://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s320/oscura.png" /></a>
+  <a href="https://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s1600/oscura.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="316" width="320" src="https://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s320/oscura.png" /></a>
 </div>
 
 Por último, si deplazamos todos los bits la izquierda una posición, es decir, pasa lo siguiente:
@@ -151,7 +151,7 @@ Por último, si deplazamos todos los bits la izquierda una posición, es decir, 
 {% endhighlight %}
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s1600/clara.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="177" width="320" src="http://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s320/clara.png" /></a>
+  <a href="https://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s1600/clara.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="177" width="320" src="https://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s320/clara.png" /></a>
 </div>
 
 Eso es todo, Saludos!

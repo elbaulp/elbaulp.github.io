@@ -31,7 +31,7 @@ tags:
   - programar motor de busqueda
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="98" width="228" src="http://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s400/Screenshot.png" /></a>
+  <a href="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="98" width="228" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s400/Screenshot.png" /></a>
 </div>
 
 Despues del éxito de los cursos impartidos por Stanford sobre inteligencia artificial, machine learning y bases de datos, se han propuesto seguir enseñando gratuitamente a través de la red, ésta vez serán David Evans, profesor de la ciencia de la computación en la universidad de Virginia y Sebastian Thrun, de la universidad de Stanford.

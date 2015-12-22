@@ -27,7 +27,7 @@ tags:
 </p>
 
 <p style="text-align: center;">
-  <img title="Ubuntu on Galaxy tab" src="http://3.bp.blogspot.com/_IlK2pNFFgGM/TOlphf1faPI/AAAAAAAAAFY/FyKSKncrQYc/s1600/galaxy_tab_ubuntu.jpg" alt="Ubuntu on Galaxy tab" />
+  <img title="Ubuntu on Galaxy tab" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TOlphf1faPI/AAAAAAAAAFY/FyKSKncrQYc/s1600/galaxy_tab_ubuntu.jpg" alt="Ubuntu on Galaxy tab" />
 </p>
 
 <p lang="en">

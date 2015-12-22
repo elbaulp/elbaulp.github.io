@@ -25,7 +25,7 @@ categories:
 Desde **MuyComputer **ya os hemos comentado en varias ocasiones el desarrollo de <a target="_blank" href="http://www.google.es/url?sa=t&source=web&cd=1&ved=0CBYQFjAA&url=http%3A%2F%2Fmuycomputer.com%2FActualidad%2FNoticias%2FLlega-Jolicloud-1-0-para-todos%2F_wE9ERk2XxDD62VSgUAVcjevVCpREbxKbl5ZF4TTd024PJKsobX269CIqLVyGVW4s6ZrXur1v_O8&rct=j&q=jolicloud%20muycomputer&ei=pd3mTO3HF4jJhAfL5bH1DA&usg=AFQjCNETieA6N9yOm5EL6KIkXXiGNYFlRg&sig2=LIzZNwi_JA2X7k0DVnb79A&cad=rja">JoliCloud como sistema operativo</a>.&nbsp;Si eres un usuario que utiliza principalmente aplicaciones web y redes sociales, JoliCloud es tu sistema operativo. La compañía **Vye **ha ido un paso más allá y ha lanzado finalmente al mercado **Jolibook**.
 
 <p style="text-align: center;">
-  <img style="" alt="" src="http://1.bp.blogspot.com/_IlK2pNFFgGM/TOkB0Ecb0-I/AAAAAAAAAFE/_J6F9IuV9xE/s1600/jolibook.JPG" />
+  <img style="" alt="" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkB0Ecb0-I/AAAAAAAAAFE/_J6F9IuV9xE/s1600/jolibook.JPG" />
 </p>
 
 <p style="text-align: left;">

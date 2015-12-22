@@ -47,7 +47,7 @@ categories:
 </p>
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s1600/m.rf1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="57" src="http://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s320/m.rf1.png" width="320" /></a>
+  <a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s1600/m.rf1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="57" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s320/m.rf1.png" width="320" /></a>
 </div>
 
 <h2 lang="es">
@@ -233,7 +233,7 @@ Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de 
 Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya que se utiliza para referenciar a una tupla de PROVEEDORES mediante la clave primaria NIF.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s1600/m.rf2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="230" src="http://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320" /></a>
+  <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s1600/m.rf2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="230" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320" /></a>
 </div></p> 
 
 

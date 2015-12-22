@@ -120,7 +120,7 @@ Para instalarlo tan solo debéis escribir en el terminal:
 Al ejecutarlo veremos algo parecido a lo siguiente:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="linux htop" border="0" height="320" width="400" src="http://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
+  <a href="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="linux htop" border="0" height="320" width="400" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
 </div>
 
 Vía <a target="_blank" href="http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/">MuyLinux</a>

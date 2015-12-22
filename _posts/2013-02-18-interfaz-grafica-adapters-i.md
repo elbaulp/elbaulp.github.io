@@ -182,13 +182,13 @@ public class AdaptadoresActivity extends ListActivity {
 El resultado de este código es el siguiente, para una adaptador con datos:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s1600/Adaptadores.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="Adaptadores Android" title="Adaptadores Android" height="400" width="240" src="http://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s400/Adaptadores.png" /></a>
+  <a href="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s1600/Adaptadores.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="Adaptadores Android" title="Adaptadores Android" height="400" width="240" src="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s400/Adaptadores.png" /></a>
 </div>
 
 Y para un adaptador sin datos:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s1600/listaVacia.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="http://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s400/listaVacia.png" /></a>
+  <a href="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s1600/listaVacia.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s400/listaVacia.png" /></a>
 </div>
 
 El ejemplo de esta entrada esta disponible para su descarga:

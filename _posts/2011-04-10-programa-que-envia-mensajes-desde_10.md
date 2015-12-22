@@ -46,13 +46,13 @@ Dejo capturas y el nuevo código:
 Toast:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="256" width="320" src="http://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s320/Screenshot-1.png" /></a>
+  <a href="https://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="256" width="320" src="https://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s320/Screenshot-1.png" /></a>
 </div>
 
 Servidor:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="http://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="256" width="320" src="http://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s320/Screenshot.png" /></a>
+  <a href="https://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="256" width="320" src="https://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s320/Screenshot.png" /></a>
 </div>
 
 Código cliente:

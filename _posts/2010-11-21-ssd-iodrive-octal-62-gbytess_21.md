@@ -28,7 +28,7 @@ categories:
   </p>
   
   <p style="text-align: center;">
-    <img src="http://4.bp.blogspot.com/_IlK2pNFFgGM/TOjwkIrLpjI/AAAAAAAAAE4/wSfF8q7Yzy8/s1600/iodrive_octal.JPG" alt="iodrive_octal" />
+    <img src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOjwkIrLpjI/AAAAAAAAAE4/wSfF8q7Yzy8/s1600/iodrive_octal.JPG" alt="iodrive_octal" />
   </p>
   
   <p>
