@@ -19,7 +19,7 @@ categories:
 ---
 <div lang="en">
   <div style="text-align: center;">
-    <a href="http://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/grub-customizer-2.0.png"><img alt="Grub Customizer 2.0" src="http://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/s400/grub-customizer-2.0.png" /></a>
+    <a href="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/grub-customizer-2.0.png"><img alt="Grub Customizer 2.0" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/s400/grub-customizer-2.0.png" /></a>
   </div>
 
   <div style="text-align: justify;">
@@ -38,7 +38,7 @@ categories:
         </p>
 
         <div style="text-align: center;">
-          <a href="http://lh4.ggpht.com/_1QSDkzYY2vc/TOmPgMD2l4I/AAAAAAAACUs/O4iov5Q5lMY/grub-customizer-appearence.png"><img alt="Grub Customizer appearance" src="http://lh4.ggpht.com/_1QSDkzYY2vc/TOmPgMD2l4I/AAAAAAAACUs/O4iov5Q5lMY/s400/grub-customizer-appearence.png" /></a>
+          <a href="https://lh4.ggpht.com/_1QSDkzYY2vc/TOmPgMD2l4I/AAAAAAAACUs/O4iov5Q5lMY/grub-customizer-appearence.png"><img alt="Grub Customizer appearance" src="https://lh4.ggpht.com/_1QSDkzYY2vc/TOmPgMD2l4I/AAAAAAAACUs/O4iov5Q5lMY/s400/grub-customizer-appearence.png" /></a>
         </div>
 
         <div style="text-align: center;">
@@ -52,7 +52,7 @@ categories:
           Besides the above new features, <b>Grub Customizer 2.0</b> also brings some GRUB 2 only specific settings (they don&#8217;t work for BURG) like changing the menu colors or background image. Please note that these appearance options worked for me in Ubuntu 10.04 but did not work in Ubuntu 10.10 &#8211; however this might happen because I&#8217;ve messed a lot with the GRUB 2 configuration (including running the <a href="http://www.webupd8.org/2010/10/script-to-fix-ubuntu-plymouth-for.html" title="Script To Fix The Ubuntu Plymouth For Proprietary Nvidia And ATI Graphics Drivers">script for fixing the Plymouth</a>).</p>
 
           <div style="text-align: center;">
-            <a href="http://lh3.ggpht.com/_1QSDkzYY2vc/TOmWY9zu60I/AAAAAAAACUw/T1I8twGbj9g/grub2-colors.png"><img alt="Grub 2 - colors" src="http://lh3.ggpht.com/_1QSDkzYY2vc/TOmWY9zu60I/AAAAAAAACUw/T1I8twGbj9g/s288/grub2-colors.png" /></a>
+            <a href="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmWY9zu60I/AAAAAAAACUw/T1I8twGbj9g/grub2-colors.png"><img alt="Grub 2 - colors" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmWY9zu60I/AAAAAAAACUw/T1I8twGbj9g/s288/grub2-colors.png" /></a>
           </div>
         </div>
 

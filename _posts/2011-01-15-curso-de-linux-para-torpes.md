@@ -30,7 +30,7 @@ He visto en muyComputer Un Curso de linux que dejo a vuestra dispocición en est
   Nombre: Curso de Linux para novatos, <br /> brutos y extremadamente torpes <br /> Idioma Español <br /> Licencia GPL </p> 
   
   <p>
-    <a href="http://muycomputer.com/files/302-14956-FICHEROLAB/Curso_Linux_ACastro.pdf"><img src="http://lh4.ggpht.com/_IlK2pNFFgGM/TTGW5XRJ6FI/AAAAAAAAAQU/7AeQSIC57tM/descargar.gif" alt="Descargar" /></a> </div> 
+    <a href="http://muycomputer.com/files/302-14956-FICHEROLAB/Curso_Linux_ACastro.pdf"><img src="https://lh4.ggpht.com/_IlK2pNFFgGM/TTGW5XRJ6FI/AAAAAAAAAQU/7AeQSIC57tM/descargar.gif" alt="Descargar" /></a> </div> 
     
     
 

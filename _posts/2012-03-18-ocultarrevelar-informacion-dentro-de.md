@@ -36,7 +36,7 @@ tags:
 <
 
 div class=&#8221;separator&#8221; style=&#8221;clear: both; text-align: center;&#8221;>  
-<img border="0" src="http://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 El jueves pasado me mandaron hacer una práctica en MP (Metodología de la Programación) que consiste en la inserción y extracción de un mensaje &#8216;oculto&#8217; en una imagen.
 

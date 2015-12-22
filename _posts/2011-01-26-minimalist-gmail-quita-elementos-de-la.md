@@ -22,7 +22,7 @@ categories:
   - noticias
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img src="http://lh5.ggpht.com/_IlK2pNFFgGM/TUATGV63PcI/AAAAAAAAARo/-zSZ_QsOyVw/minimalist-gmail.jpg" alt="minimalist Gmail" />
+  <img src="https://lh5.ggpht.com/_IlK2pNFFgGM/TUATGV63PcI/AAAAAAAAARo/-zSZ_QsOyVw/minimalist-gmail.jpg" alt="minimalist Gmail" />
 </div>
 
 Minimalist Gmail es una extensión para Chrome que nos ayuda optimizar la interfaz del correo, dejándola más a nuestro gusto. Lo que hace básicamente es permitirnos ocultar o personalizar gran cantidad de elementos de la interfaz, por no decir que todos. En la imagen, podéis ver como queda tras suprimir algunas cosas gracias a ella (y usando el tema “Minimalista”, que es el que recomienda el autor).  

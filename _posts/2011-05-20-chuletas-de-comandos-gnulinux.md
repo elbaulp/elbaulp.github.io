@@ -32,15 +32,15 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
 
 [<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/images/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros" width="500" height="335" />][1]
 
-<a href="http://files.fosswire.com/2007/08/fwunixref.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="http://lh4.ggpht.com/_aVtbdMo1J34/SuF8zBeSIII/AAAAAAAACBk/KHhhymZj7LY/Linux-Cheat-sheets.png" alt="Linux Cheat sheets 25 chuletas para linuxeros" /></a>
+<a href="http://files.fosswire.com/2007/08/fwunixref.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuF8zBeSIII/AAAAAAAACBk/KHhhymZj7LY/Linux-Cheat-sheets.png" alt="Linux Cheat sheets 25 chuletas para linuxeros" /></a>
 
-<a href="http://www.digilife.be/quickreferences/QRC/The%20One%20Page%20Linux%20Manual.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="http://lh3.ggpht.com/_aVtbdMo1J34/SuF9rZXMLtI/AAAAAAAACBw/0SciY4iDaM8/Linux-cheat-sheet.png" alt="Linux cheat sheet 25 chuletas para linuxeros" /></a>
+<a href="http://www.digilife.be/quickreferences/QRC/The%20One%20Page%20Linux%20Manual.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh3.ggpht.com/_aVtbdMo1J34/SuF9rZXMLtI/AAAAAAAACBw/0SciY4iDaM8/Linux-cheat-sheet.png" alt="Linux cheat sheet 25 chuletas para linuxeros" /></a>
 
-<a href="http://www.rain.org/%7Emkummel/unix.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Unix Cheat Sheets" src="http://lh5.ggpht.com/_aVtbdMo1J34/SuF_Xub99yI/AAAAAAAACB4/sRCV9W6117o/Solarix-unix-cheet-sheets.png" alt="Solarix unix cheet sheets 25 chuletas para linuxeros" /></a>
+<a href="http://www.rain.org/%7Emkummel/unix.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Unix Cheat Sheets" src="https://lh5.ggpht.com/_aVtbdMo1J34/SuF_Xub99yI/AAAAAAAACB4/sRCV9W6117o/Solarix-unix-cheet-sheets.png" alt="Solarix unix cheet sheets 25 chuletas para linuxeros" /></a>
 
-<a href="http://www.unixguide.net/linux/linuxshortcuts.shtml" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Shortcuts and Commands" src="http://lh4.ggpht.com/_aVtbdMo1J34/SuF_zgFYEAI/AAAAAAAACB8/21NeK1xc0fA/Linux-essential-commands.png" alt="Linux essential commands 25 chuletas para linuxeros" /></a>
+<a href="http://www.unixguide.net/linux/linuxshortcuts.shtml" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Shortcuts and Commands" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuF_zgFYEAI/AAAAAAAACB8/21NeK1xc0fA/Linux-essential-commands.png" alt="Linux essential commands 25 chuletas para linuxeros" /></a>
 
-<a href="http://www.tuxfiles.org/linuxhelp/linuxcommands.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="http://lh4.ggpht.com/_aVtbdMo1J34/SuGAjso052I/AAAAAAAACCA/EzwoUoDstuE/Ultimate-linux-cheat-sheet.png" alt="Ultimate linux cheat sheet 25 chuletas para linuxeros" /></a></p> 
+<a href="http://www.tuxfiles.org/linuxhelp/linuxcommands.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuGAjso052I/AAAAAAAACCA/EzwoUoDstuE/Ultimate-linux-cheat-sheet.png" alt="Ultimate linux cheat sheet 25 chuletas para linuxeros" /></a></p> 
 
 ### Linux Command Line Cheat Sheets
 

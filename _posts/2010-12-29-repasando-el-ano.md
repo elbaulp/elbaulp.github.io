@@ -35,7 +35,7 @@ Para el año que entra, voy a intentar en la medida de lo posible escribir más 
 Actualmente solo estoy escribiendo yo en el blog, de ahí que algunos dias no se publiquen entradas, como digo siempre, si alguien quiere partipar, es bienvenido.
 
 Si no os gusta la idea de escribir, pero disponeis de scripts, programas que hagais o cualquier cosa que esté relacionada con la temática del blog, contactad conmigo via e-mail, haciendome vuestra propuesta.   
-Para contactar solo teneis que hacer clic en el icono [<img src="http://lh3.ggpht.com/_IlK2pNFFgGM/TROHfpoBTBI/AAAAAAAAAN4/tsRODJlIw3s/contactar.png" alt="Contactar" title="Contactar" width="32px" height="32px" />][1] de arriba a la derecha.
+Para contactar solo teneis que hacer clic en el icono [<img src="https://lh3.ggpht.com/_IlK2pNFFgGM/TROHfpoBTBI/AAAAAAAAAN4/tsRODJlIw3s/contactar.png" alt="Contactar" title="Contactar" width="32px" height="32px" />][1] de arriba a la derecha.
 
 Por último quiero agradecer, como no, a todos los seguidores del blog, que lo leen habitualmente ya que sin vosotros, escribir a diario en el blog no tendría sentido. Y tambien a mi compañero de <a target="_blank" href="http://usemoslinux.blogspot.com/">UsemosLinux</a>, que me ha ayudado mucho con el diseño del blog.
 
