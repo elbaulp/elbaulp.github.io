@@ -13,32 +13,35 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
+image:
+  thumb: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+excerpt: "En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que podamos importar en nuestra aplicación *python*. Al finalizar, tendremos creado un módulo llamado **herramientasRed** con el que podremos obtener la dirección ip de un dominio, al igual que hicimos en el artículo NDK-gdb – Depurar aplicaciones en el NKD de Android, para ello será necesario usar la Python C API."
+modified: 2015-12-22T10:44:00+00:00
 ---
-  * Crear un módulo para python con la Python C API (I) – Introducción
-  * [Crear un módulo para python con la Python C API (II) – Primer ejemplo][1]
-  * [Crear un módulo para python con la Python C API (III) – DistUtils][2]
-  * [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
-  * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
-<img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" alt="Crear un módulo para python con la Python C API - Parte I" width="201" height="190" class="thumbnail alignleft size-full wp-image-1777" />  
-En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que podamos importar en nuestra aplicación *python*. Al finalizar, tendremos creado un módulo llamado ***herramientasRed*** con el que podremos obtener la dirección ip de un dominio, al igual que hicimos en el artículo [NDK-gdb – Depurar aplicaciones en el NKD de Android][5], para ello será necesario usar la Python C API.
+* Crear un módulo para python con la Python C API (I) – Introducción
+* [Crear un módulo para python con la Python C API (II) – Primer ejemplo][1]
+* [Crear un módulo para python con la Python C API (III) – DistUtils][2]
+* [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
+* [Crear un módulo para python con la Python C API (V) – Python 3][4]
+
+<figure>
+  <a href="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que podamos importar en nuestra aplicación *python*. Al finalizar, tendremos creado un módulo llamado **herramientasRed** con el que podremos obtener la dirección ip de un dominio, al igual que hicimos en el artículo [NDK-gdb – Depurar aplicaciones en el NKD de Android][5], para ello será necesario usar la Python C API.
 
 Pero antes, debemos introducir algunos conceptos:  
-  
-<!--ad-->
 
-  
-<a name="queEslaPythonCAPI"></a>
+<!--ad-->
 
 ### ¿Qué es la Python C API?
 
-La *API (Application Programmer&#8217;s Interface)* para Python proporciona a los programadores de los lenguajes C/C++ la posibilidad de acceder al intérprete de *python* a varios niveles. La API es igualmente válida para C++, pero se suele usar únicamente el término **C-API**. 
+La *API (Application Programmer&#8217;s Interface)* para Python proporciona a los programadores de los lenguajes C/C++ la posibilidad de acceder al intérprete de *python* a varios niveles. La API es igualmente válida para C++, pero se suele usar únicamente el término **C-API**.
 
 Hay dos razones principales para hacer uso de esta API. La primera es para **escribir módulos** para propósitos específicos, estos módulos se escriben en C y extienden la funcionalidad del intérprete de *python*, es el uso más común y en el que nos centraremos en los artículos siguientes. La segunda razón es para usar *python* como un componente en una aplicación más compleja, esta técnica se conoce como “*Embeber Python en una aplicación* (embedding Python)”.
 
 Muchas de las funciones de la API son útiles independientemente de si estamos extendiendo o embebiendo Python, sin embargo, las mayoría de aplicaciones que embeben Python necesitarán proporcionar un módulo o extensión, así que probablemente la mejor idea es familiarizarse antes con el proceso de creación de módulos antes de embeber Python en otra aplicación.
-
-<a name="Requisitos"></a>
 
 ### Requisitos para usar la Python C API
 
@@ -47,7 +50,7 @@ Todas las definiciones de funciones, tipos y macros necesarias para usar la **Py
 {% highlight c %}#include "Python.h"
 {% endhighlight %}
 
-Esta línea implica la inclusión de las siguientes cabeceras estándares: ***<stdio.h>, <string.h>, <errno.h>, <limits.h>, <assert.h> y <stdlib.h>***
+Esta línea implica la inclusión de las siguientes cabeceras estándares: `<stdio.h>, <string.h>, <errno.h>, <limits.h>, <assert.h>` y `<stdlib.h>`
 
 Si en nuestro sistema no tenemos la cabecera *Python.h* es necesario instalarla mediante:
 
@@ -112,7 +115,7 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
 
 #### Referencias
 
-*Introducción a Python C API* »» <a href="http://docs.python.org/3/c-api/intro.html" target="_blank">docs.python.org</a> 
+*Introducción a Python C API* »» <a href="http://docs.python.org/3/c-api/intro.html" target="_blank">docs.python.org</a>
 
 
 

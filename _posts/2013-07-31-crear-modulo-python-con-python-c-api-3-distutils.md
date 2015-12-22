@@ -13,17 +13,24 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
+image:
+  thumb: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+excerpt: "Como dijimos en la entrada anterior, vamos a hablar de *DistUtils*, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API."
+modified: 2015-12-22T10:44:00+00:00
 ---
-  * [Crear un módulo para python con la Python C API (I) – Introducción][1]
-  * [Crear un módulo para python con la Python C API (II) – Primer ejemplo][2]
-  * Crear un módulo para python con la Python C API (III) – DistUtils
-  * [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
-  * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
-<img class="thumbnail alignleft size-full wp-image-1777" alt="Crear un módulo para python con la Python C API - DistUtils" src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" width="201" height="190" />  
+* [Crear un módulo para python con la Python C API (I) – Introducción][1]
+* [Crear un módulo para python con la Python C API (II) – Primer ejemplo][2]
+* Crear un módulo para python con la Python C API (III) – DistUtils
+* [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
+* [Crear un módulo para python con la Python C API (V) – Python 3][4]
+
+<figure>
+  <a href="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Como dijimos en la entrada[ anterior][5], vamos a hablar de *DistUtils*, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API.
 
-  
 <!--ad-->
 
 ### Compilar el módulo
@@ -109,7 +116,7 @@ En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de u
 
 #### Referencias
 
-*Documentación de Distutils* »» <a href="http://docs.python.org/3/extending/building.html#building" target="_blank">docs.python</a> 
+*Documentación de Distutils* »» <a href="http://docs.python.org/3/extending/building.html#building" target="_blank">docs.python</a>
 
 
 

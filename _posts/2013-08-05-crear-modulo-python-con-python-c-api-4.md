@@ -13,17 +13,27 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
+modified: 2015-12-22T10:44:00+00:00
+image:
+  thumb: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+excerpt: "Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado **herramientasRed** que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en NDK-gdb – Depurar aplicaciones en el NKD de Android."
+modified: 2015-12-22T10:44:00+00:00
 ---
-  * [Crear un módulo para python con la Python C API (I) – Introducción][1]
-  * [Crear un módulo para python con la Python C API (II) – Primer ejemplo][2]
-  * [Crear un módulo para python con la Python C API (III) – DistUtils][3]
-  * Crear un módulo para python con la Python C API (IV) – HerramientasRed
-  * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
-<img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" alt="Crear un módulo para python con la Python C API - DistUtils" width="201" height="190" class="thumbnail alignleft size-full wp-image-1777" />  
+* [Crear un módulo para python con la Python C API (I) – Introducción][1]
+* [Crear un módulo para python con la Python C API (II) – Primer ejemplo][2]
+* [Crear un módulo para python con la Python C API (III) – DistUtils][3]
+* Crear un módulo para python con la Python C API (IV) – HerramientasRed
+* [Crear un módulo para python con la Python C API (V) – Python 3][4]
+
+
+<figure>
+  <a href="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado **herramientasRed** que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en [NDK-gdb – Depurar aplicaciones en el NKD de Android.][5]
 
-  
+
 <!--ad-->
 
 ### Creación del módulo
@@ -63,7 +73,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
     return Py_BuildValue("s", returnValue);
 }
 
-static 
+static
 PyMethodDef herramientasRed_methods[] = {
     {"imprimeIP", herramientasRed_imprimeIP, METH_VARARGS, "Documentación del módulo ejemplo"},
     {NULL, NULL, 0, NULL}, /* Sentinel */
@@ -110,7 +120,7 @@ Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
 
 Y para usarlo:
 
-{% highlight python %}In [1]: import herramientasRed 
+{% highlight python %}In [1]: import herramientasRed
 In [2]: print herramientasRed.imprimeIP('elbauldelprogramador.com')
 elbauldelprogramador.com tiene dirección IP <ip>
 {% endhighlight %}
@@ -136,19 +146,19 @@ Por último ejecutamos gdb de la siguiente forma:
 
 Tras ejecutar la línea de arriba, establecemos un punto de ruptura en la función deseada, en este caso **herramientasRed_imprimeIP** y ya podremos depurar el módulo:
 
-{% highlight bash %}(gdb) b herramientasRed_imprimeIP 
+{% highlight bash %}(gdb) b herramientasRed_imprimeIP
 Breakpoint 1 at 0x7ffff695496a: file herramientasRed.c, line 17.
 (gdb) r
 Starting program: /usr/bin/python2.7 test.py
 
 Breakpoint 1, herramientasRed_imprimeIP (self=0x0, args=0x965990) at herramientasRed.c:17
 17     if (!PyArg_ParseTuple(args, "s", &domainName)){
-(gdb) display /s domainName 
+(gdb) display /s domainName
 1: x/s domainName  0x7ffff7f5e454:   "elbauldelprogramador.com"
 22        memset(returnValue, 0, 100);
-(gdb) p *args 
+(gdb) p *args
 $1 = {
-  ob_refcnt = 1, 
+  ob_refcnt = 1,
   ob_type = 0x888280 <PyTuple_Type>
 }
 (gdb) c
@@ -165,7 +175,7 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
 
 #### Referencias
 
-*Python Extension Debugging* »» <a href="http://stackoverflow.com/questions/15253586/python-extension-debugging" target="_blank">stackoverflow.com</a> 
+*Python Extension Debugging* »» <a href="http://stackoverflow.com/questions/15253586/python-extension-debugging" target="_blank">stackoverflow.com</a>
 
 
 

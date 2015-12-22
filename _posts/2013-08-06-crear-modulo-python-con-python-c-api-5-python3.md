@@ -13,17 +13,24 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
+image:
+  thumb: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+excerpt: "Este es el último artículo de esta serie de 5 sobre cómo crear un módulo con la Python C API. Para terminar, veremos la forma de hacer compatible un módulo con **Python 3**. Nos basaremos en el módulo **herramientasRed** que hemos creado en la parte 3."
+modified: 2015-12-22T10:44:00+00:00
 ---
-  * [Crear un módulo para python con la Python C API (I) – Introducción][1]
-  * [Crear un módulo para python con la Python C API (II) – Primer ejemplo][2]
-  * [Crear un módulo para python con la Python C API (III) – DistUtils][3]
-  * [Crear un módulo para python con la Python C API (IV) – HerramientasRed][4]
-  * Crear un módulo para python con la Python C API (V) – Python 3
 
-<img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" alt="Crear un módulo para python con la Python C API - DistUtils" width="201" height="190" class="thumbnail alignleft size-full wp-image-1777" />  
+* [Crear un módulo para python con la Python C API (I) – Introducción][1]
+* [Crear un módulo para python con la Python C API (II) – Primer ejemplo][2]
+* [Crear un módulo para python con la Python C API (III) – DistUtils][3]
+* [Crear un módulo para python con la Python C API (IV) – HerramientasRed][4]
+* Crear un módulo para python con la Python C API (V) – Python 3
+
+<figure>
+  <a href="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Este es el último artículo de esta serie de 5 sobre cómo crear un módulo con la Python C API. Para terminar, veremos la forma de hacer compatible un módulo con **Python 3**. Nos basaremos en el módulo **herramientasRed** que hemos creado en la parte 3.
 
-  
 <!--ad-->
 
 El proceso de compatibilidad se realiza mediante varios *#define* y macros en C para comprobar qué versión de Python se está usando, el código que se muestra a continuación hace del módulo **herramientasRed** un módulo compatible tanto con Python 2 como Python 3. Es posible usar este código como plantilla para otros módulos.
@@ -83,7 +90,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
     return Py_BuildValue("s", returnValue);
 }
 
-static 
+static
 PyMethodDef herramientasRed_methods[] = {
     {"imprimeIP", herramientasRed_imprimeIP, METH_VARARGS, "Documentación del módulo ejemplo"},
     {NULL, NULL, 0, NULL}, /* Sentinel */
@@ -165,13 +172,13 @@ Writing /usr/local/lib/python3.2/dist-packages/HerramientasRed-1.0.egg-info
 
 Todo ha salido bien, abrimos el intérprete de Python 3 y probamos el módulo:
 
-{% highlight python %}Python 3.2.4 (default, May  8 2013, 20:55:18) 
+{% highlight python %}Python 3.2.4 (default, May  8 2013, 20:55:18)
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed
 >>> print(herramientasRed.imprimeIP('elbauldelprogramador.com'))
 elbauldelprogramador.com tiene dirección IP <ip>
->>> 
+>>>
 {% endhighlight %}
 
 Para asegurarnos de que el módulo sigue funcionando con python 2, volvemos a compilar y ejecutar desde la versión 2 de pyton:
@@ -193,7 +200,7 @@ Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
 
 Y por último:
 
-{% highlight bash %}Python 2.7.5+ (default, Jun  2 2013, 13:26:34) 
+{% highlight bash %}Python 2.7.5+ (default, Jun  2 2013, 13:26:34)
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed
@@ -206,7 +213,7 @@ Eso es todo, espero que os hayan gustado estos cinco artículos sobre **cómo cr
 
 #### Referencias
 
-*Porting Extension Modules to Python 3* »» <a href="http://docs.python.org/3/howto/cporting.html" target="_blank">docs.python.org</a> 
+*Porting Extension Modules to Python 3* »» <a href="http://docs.python.org/3/howto/cporting.html" target="_blank">docs.python.org</a>
 
 
 

@@ -13,25 +13,30 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
+image:
+  thumb: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+excerpt: "Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*. El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:"
+modified: 2015-12-22T10:44:00+00:00
 ---
-  * [Crear un módulo para python con la Python C API (I) – Introducción][1]
-  * Crear un módulo para python con la Python C API (II) – Primer ejemplo
-  * [Crear un módulo para python con la Python C API (III) – DistUtils][2]
-  * [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
-  * [Crear un módulo para python con la Python C API (V) – Python 3][4]
+* [Crear un módulo para python con la Python C API (I) – Introducción][1]
+* Crear un módulo para python con la Python C API (II) – Primer ejemplo
+* [Crear un módulo para python con la Python C API (III) – DistUtils][2]
+* [Crear un módulo para python con la Python C API (IV) – HerramientasRed][3]
+* [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
-<img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" alt="Crear un módulo para python con la Python C API - Parte II" width="201" height="190" class="thumbnail alignleft size-full wp-image-1777" />  
+<figure>
+  <a href="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*.  
+
 El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:
 
-<div style="width:70%">
-  {% highlight python %}
+{% highlight python %}
 >>> import ejemplo
 >>> ejemplo.saluda('Alejandro')
 {% endhighlight %}
-</div>
 
-  
 <!--ad-->
 
 Empecemos mostrando el código e iremos explicándolo a lo largo del artículo:
@@ -54,7 +59,7 @@ ejemplo_saluda(PyObject *self, PyObject *args)
     return NULL;
 }
 
-static 
+static
 PyMethodDef ejemplo_methods[] = {
     {"saluda", ejemplo_saluda, METH_VARARGS, "Documentación del módulo ejemplo"},
     {NULL, NULL, 0, NULL}, /* Sentinel */
@@ -79,16 +84,16 @@ El parámetro **args** será un puntero a una tupla conteniendo los argumentos, 
 
 Los principales valores que se pueden usar como plantilla son los siguientes (La lista completa <a target="_blank" href="http://docs.python.org/3/c-api/arg.html#strings-and-buffers">aquí</a>
 
-  * s (string or Unicode) [const char *]
-  * z (string, Unicode or None) [const char *]
-  * u (Unicode) [Py_UNICODE *]
-  * b (integer) [unsigned char]
-  * B (integer) [unsigned char]
-  * i (integer) [int]
-  * I (integer) [unsigned int]
-  * c (string of length 1) [char]
-  * f (float) [float]
-  * O (object) [PyObject *]
+* s (string or Unicode) [const char *]
+* z (string, Unicode or None) [const char *]
+* u (Unicode) [Py_UNICODE *]
+* b (integer) [unsigned char]
+* B (integer) [unsigned char]
+* i (integer) [int]
+* I (integer) [unsigned int]
+* c (string of length 1) [char]
+* f (float) [float]
+* O (object) [PyObject *]
 
 Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo »», por ejemplo:
 
@@ -111,7 +116,7 @@ Py_BuildValue("{"
 
 ### Función de inicialización
 
-{% highlight c %}static 
+{% highlight c %}static
 PyMethodDef ejemplo_methods[] = {
     {"saluda", ejemplo_saluda, METH_VARARGS, "Documentación del módulo ejemplo"},
     {NULL, NULL, 0, NULL}, /* Sentinel */
