@@ -12,12 +12,17 @@ tags:
   - practicas IG ugr
   - practicas informática Gráfica
   - practicas opengl
+excerpt: |
+  El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad http://www.csc.villanova.edu.
+
+  <iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/ZBX2a1c3KCE" frameborder="0" allowfullscreen></iframe>
+modified: 2015-12-22T17:50
 ---
 El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad [http://www.csc.villanova.edu][1].
 
 Aquí dejo el código y un vídeo demostrativo, también está disponible en [Github][2].
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span> 
+<iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/ZBX2a1c3KCE" frameborder="0" allowfullscreen></iframe>
 
 <!--ad-->
 
