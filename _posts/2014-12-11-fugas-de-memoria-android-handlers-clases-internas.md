@@ -13,8 +13,27 @@ tags:
   - fugas de memoria Java
   - fugas de memoria runnable
   - memory leaks
+excerpt: |
+  Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso.
+
+  Seamos directos, consideremos el siguiente código:
+
+  <pre>
+    public class SampleActivity extends Activity {
+
+    private final Handler mLeakyHandler = new Handler() {
+      @Override
+      public void handleMessage(Message msg) {
+        // ...
+      }
+    }
+  }
+  </pre>
+
+  Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (*memory leak*).
+modified: 2015-12-22T17:50
 ---
-> Éste artículo es una traducción del blog de [Alex Lockwood][1]. Gracias por el permiso. 
+> Éste artículo es una traducción del blog de [Alex Lockwood][1]. Gracias por el permiso.
 
 Seamos directos, consideremos el siguiente código:
 
@@ -35,7 +54,7 @@ Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (*m
 
 [*Android Lint*][2] mostrará la siguiente advertencia:
 
-> In Android, Handler classes should be static or leaks might occur. 
+> In Android, Handler classes should be static or leaks might occur.
 
 Es decir, las clases de tipo `Handler` deben ser estáticas, de lo contrario pueden ocurrir fugas de memoria (*memory leak*).
 
@@ -132,7 +151,7 @@ La diferencia entre clases internas estáticas y no-estáticas es sutil, pero es
 
 #### Referencias
 
-*How to Leak a Context: Handlers & Inner Classes* »» <a href="http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html" target="_blank">androiddesignpatterns.com</a> 
+*How to Leak a Context: Handlers & Inner Classes* »» <a href="http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html" target="_blank">androiddesignpatterns.com</a>
 
 photo credit: [nyuhuhuu][10] via [photopin][11] [cc][12]
 
