@@ -53,7 +53,11 @@
           <meta itemprop="name" content="{{ author.name }}" />
         </div>
         <meta itemprop="mainEntityOfPage" content="{{ site.url }}" />
-        <meta itemprop="image" content="{% if post.image.thumb %}{{ site.url }}/images/{{ post.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="{% if post.image.thumb %}{{ site.url }}/images/{{ post.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+          <meta itemprop="width" content="600">
+          <meta itemprop="height" content="400">
+        </div>
         <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
         <meta itemprop="dateModified" content="{% if post.modified %}{{ post.modified | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}" />
         <meta itemprop="name" content="{{ post.title }}" />
