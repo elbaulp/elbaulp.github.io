@@ -12,7 +12,15 @@ tags:
   - modulos python
   - python C API
   - structs c
+image:
+  thumb: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+excerpt: "Hace algún tiempo estaba desarrollando un módulo para python, con el cual aprendí bastante y sirvió para crear una serie de artículos sobre el tema (Crear un módulo para python con la Python C API). Uno de los problemas encontrados fue cómo conseguir pasar un array de structs desde C a Python, para resolver la duda pregunté, cómo no, en stackoverflow. Al final terminé respondiéndome a mí mismo, pero aprendí bastante, veamos cómo hacerlo."
 ---
+
+<figure>
+  <a href="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/images/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Hace algún tiempo estaba desarrollando un módulo para python, con el cual aprendí bastante y sirvió para crear una serie de artículos sobre el tema ([Crear un módulo para python con la Python C API][1]). Uno de los problemas encontrados fue cómo conseguir pasar un array de structs desde C a Python, para resolver la duda pregunté, cómo no, en <a href="http://stackoverflow.com/users/1612432/algui91" title="PErfil en SO" target="_blank">stackoverflow</a>. Al final terminé respondiéndome a mí mismo, pero aprendí bastante, veamos cómo hacerlo.
 
 <!--ad-->
@@ -43,7 +51,7 @@ La solución consiste en crear un objeto <a href="http://docs.python.org/3.2/c-a
 
 {% highlight python %}[
    {'clave1': 'valor1',  # Diccionario 1, con dos elementos.
-    'clave1_2': 'valor1_2'}, 
+    'clave1_2': 'valor1_2'},
    {'clave2' : 'valor2'}, # Diccionario 2, con un elemento.
    {'clave3' : 'valor3',
     #........ : .......,
@@ -81,7 +89,7 @@ Y continuar rellenando el diccionario según nuestras necesidades.
 
 #### Referencias
 
-*Python C API How to pass array of structs from C to Python* »» <a href="http://stackoverflow.com/questions/15786525/python-c-api-how-to-pass-array-of-structs-from-c-to-python/15833209#15833209" target="_blank">stackoverflow.com</a> 
+*Python C API How to pass array of structs from C to Python* »» <a href="http://stackoverflow.com/questions/15786525/python-c-api-how-to-pass-array-of-structs-from-c-to-python/15833209#15833209" target="_blank">stackoverflow.com</a>
 
 
 
