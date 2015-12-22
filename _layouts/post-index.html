@@ -28,7 +28,7 @@
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/BlogPosting" id="main" role="main">
+<div id="main" role="main">
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
@@ -44,13 +44,24 @@
           <h3>{{ post.date | date: '%Y' }}</h3>
         {% endif %}
       {% endunless %}
-      <article>
+      {% if post.author %}{% assign author = site.data.authors[post.author] %}{% else %}{% assign author = site.owner %}{% endif %}
+      <article itemscope itemtype="http://schema.org/BlogPosting">
+        <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="name" content="{{ author.name }}" />
+        </div>
+        <div itemprop="publisher" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="name" content="{{ author.name }}" />
+          <meta itemprop="logo" content="{{ site.url }}/images/{{ author.avatar }}" />
+        </div>
+        <meta itemprop="mainEntityOfPage" content="{{ site.url }}" />
+        <meta itemprop="image" content="{% if post.image.thumb %}{{ site.url }}/images/{{ post.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
         <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
-        <img style="display:none;" itemprop="image" src="{% if post.image.thumb %}{{ site.url }}/images/{{ post.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}" alt="{{ post.title }}">
+        <meta itemprop="dateModified" content="{% if post.modified %}{{ post.modified | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}" />
+        <meta itemprop="name" content="{{ post.title }}" />
         {% if post.link %}
-          <h2 itemprop="headline" class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+          <h2 itemprop="headline" class="link-post"><a itemprop="url" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
         {% else %}
-          <h2 itemprop="headline"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+          <h2 itemprop="headline"><a itemprop="url" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
           <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
         {% endif %}
       </article>
