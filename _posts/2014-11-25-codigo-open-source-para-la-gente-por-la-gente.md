@@ -7,6 +7,9 @@ guid: https://elbauldelprogramador.com/?p=2471
 permalink: /codigo-open-source-para-la-gente-por-la-gente/
 categories:
   - Artículos
+modified: 2015-12-23T9:35
+excerpt: |
+  Muchas organizaciones eligen Open Source por razones como flexibilidad y agilidad. Todos necesitamos hacer más con menos. Pero en el gobierno, Open Source maneja simultáneamente el compromiso cívico junto con la participación del gobierno, como nunca antes. Gracias a la digitalización, el mundo se siente mucho más pequeño y más conectado. Y Open Source le da a la gente la oportunidad de unirse a la causa, sin importar dónde viven.
 ---
 Muchas organizaciones eligen Open Source por razones como flexibilidad y agilidad. Todos necesitamos hacer más con menos. Pero en el gobierno, Open Source maneja simultáneamente el compromiso cívico junto con la participación del gobierno, como nunca antes. Gracias a la digitalización, el mundo se siente mucho más pequeño y más conectado. Y Open Source le da a la gente la oportunidad de unirse a la causa, sin importar dónde viven.
 
@@ -28,9 +31,7 @@ Los ideales del Open Source ya se han difundido en los gobiernos por todo el mun
 
 ### Referencias
 
-*Open-source code: by the people, for the people* »» <a href="http://venturebeat.com/2013/08/29/open-source-code-by-the-people-for-the-people/" target="_blank">Visitar sitio</a> 
-
-
+*Open-source code: by the people, for the people* »» <a href="http://venturebeat.com/2013/08/29/open-source-code-by-the-people-for-the-people/" target="_blank">Visitar sitio</a>
 
  [1]: https://petitions.whitehouse.gov/%20
  [2]: https://github.com/WhiteHouse/petitions
