@@ -1,5 +1,5 @@
 {% if post.author %}{% assign author = site.data.authors[post.author] %}{% else %}{% assign author = site.owner %}{% endif %}
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="h-entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 	<div itemprop="author" itemscope itemtype="http://schema.org/Person">
 		<meta itemprop="name" content="{{ author.name }}" />
 	</div>
@@ -17,13 +17,13 @@
 		<meta itemprop="width" content="600">
 		<meta itemprop="height" content="400">
 	</div>
-	<meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
-	<meta itemprop="dateModified" content="{% if post.modified %}{{ post.modified | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}" />
+	<meta class="dt-published" itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">
+	<meta class="dt-updated" itemprop="dateModified" content="{% if post.modified %}{{ post.modified | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}" />
 	<meta itemprop="name" content="{{ post.title }}" />
 	{% if post.link %}
-		<h2 itemprop="headline" class="link-post"><a itemprop="url" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+		<h2 class="p-name" itemprop="headline" class="link-post"><a class="u-url" itemprop="url" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
 	{% else %}
-		<h2 itemprop="headline"><a itemprop="url" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-		<p>{{ post.excerpt }}</p>
+		<h2 class="p-name" itemprop="headline"><a class="u-url" itemprop="url" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<p class="p-summary">{{ post.excerpt }}</p>
 	{% endif %}
 </article>
