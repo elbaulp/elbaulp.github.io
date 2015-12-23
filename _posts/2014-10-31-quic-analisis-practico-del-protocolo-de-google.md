@@ -15,6 +15,8 @@ tags:
   - paquetes quic
   - quic
   - wireshark
+image:
+  thumb: 2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
 ---
 **QUIC** es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña *FAQ* (Frequently Asked Questions) en *Google Drive*, al parecer dicha *FAQ* es autoría del propio grupo de desarrollo de *QUIC*, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en [Qué es QUIC, el nuevo protocolo desarrollado por Google][1].
 
