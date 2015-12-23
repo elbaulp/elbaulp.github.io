@@ -11,8 +11,23 @@ tags:
   - adaptador gridview
   - crear gridview
   - gridview android
+modified: 2015-12-23T9:30
+image:
+  thumb: 2014/11/gridview-scrolling-horizontal.png
+excerpt: |
+  <figure>
+    <a href="/images/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/images/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  </figure>
+
+  Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor permite scrolling horizontal y vertical en sus interacciones.
+
+  Si sigues leyendo este artículo aprenderás a crear un GridView cuyos elementos sean imágenes en miniatura. Al ser seleccionadas el usuario visualizará la imagen en tamaño real. Este ejemplo comprende la creación un layout efectivo para un GridView, la implementación de un adaptador personalizado con elementos ImageView y la comunicación con Intents para acceder a los detalles completos de cada imagen.
 ---
-> Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias. 
+> Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.
+
+<figure>
+  <a href="/images/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/images/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 # Poblar un GridView con un Adaptador de ImageViews en Android
 
@@ -32,7 +47,9 @@ Son considerados mejor alternativa que las listas, si se desea aprovechar el esp
 
 El despliegue por defecto de los elementos de un GridView es vertical. El orden de los elementos va de izquierda a derecha y así mismo se definen los indices (basados en inicio 0) en nuestras estructuras de datos relacionadas.
 
-<img src="/images/2014/11/gridview-scrolling-vertical.png" alt="gridview-scrolling-vertical" width="700" height="350" class="aligncenter size-full wp-image-2481" />
+<figure>
+  <a href="/images/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/images/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con el indice 0 hasta terminar el recorrido de izquierda a derecha en la parte inferior derecha con el indice 5.
 
@@ -40,7 +57,9 @@ Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con 
 
 En este caso se recorre el Grid en función de cada fila. Lo que quiere decir que accederemos a las posiciones de arriba hacia abajo.
 
-<img src="/images/2014/11/gridview-scrolling-horizontal.png" alt="gridview-scrolling-horizontal" width="700" height="350" class="aligncenter size-full wp-image-2482" />
+<figure>
+  <a href="/images/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/images/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 La ilustración muestra el recorrido vertical de los elementos.
 
@@ -84,7 +103,7 @@ La distribución de nuestros elementos se ve afectada en el GridView por los sig
   * `android:gravity`: Define la ubicación del contenido dentro de cada celda. Existen muchos valores que puedes utilizar, entre ellos: `top`, `rigth`, `left`, `bottom` y `center`.  
     Por otra parte, el layout para `Details` consta simplemente de un `ImageView` como nodo raíz:
 
-{% highlight xml %}<ImageView xmlns:android="http://schemas.android.com/apk/res/android"    
+{% highlight xml %}<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/imageDesc"
