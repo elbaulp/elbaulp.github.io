@@ -19,7 +19,7 @@ Los que me leéis habitualmente probablemente hayais visto los artículos que es
 Estas secciones se crean para los [destructores][3] y [constructores][4], respectivamente. Los constructores se llaman justo antes de ejecutar la función `main()` y los destructores se llaman justo antes de que `main()` finalize con la llamada al sistema `exit`.
 
 Veamos un ejemplo para aclarar su funcionamiento:  
-  
+
 <!--ad-->
 
 {% highlight c %}#include <stdio.h>
@@ -50,7 +50,7 @@ miDestructor(void) {
 La salida de este programa será:
 
 {% highlight bash %}En el constructor
-En main() 
+En main()
 En el destructor
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ La forma de controrlar la ejecución de ambas funciones es mediante las seccione
 
 Para localizar las funciones hay que usar el programa **nm**, y **objdump** para encontrar las dos secciones.
 
-Sin embargo, mientras escribía este artículo me dí cuenta de que ya no existen dichas secciones, han sido reemplazadas por *.init\_array/.fini\_array*. Del mismo modo pueden verse usando **nm**, y **objdump**. Empecemos con **nm**:
+Sin embargo, mientras escribía este artículo [me dí cuenta de que ya no existen dichas secciones](http://stackoverflow.com/q/16569495/1612432 "Pregunta en stackoverflow"), han sido reemplazadas por *.init\_array/.fini\_array*. Del mismo modo pueden verse usando **nm**, y **objdump**. Empecemos con **nm**:
 
 {% highlight bash %}$ nm dtors
 080495f0 d _DYNAMIC
@@ -183,7 +183,7 @@ Contents of section .fini_array:
 {% endhighlight %}
 
 La primera dirección apunta a la tabla de desplazamiento global (\_GLOBAL\_OFFSET\_TABLE\_) y la segunda a _\_do\_global\_dtors\_aux.  
-La última dirección (3c840408) corresponde con la dirección de la función `miDestructor`, pero en little-endian (0804843c). Al poder modificar dicha tabla, sería posible tomar el control del programa explotando alguna vulnerabilidad y obtener una shell con permisos de root. El propósito inicial del artículo era mostar cómo explotar dicha vulnerabilidad, pero al no existir la sección .ctors y .dtors no va a ser posible, ya que he estado trasteando un poco con estas secciones nuevas y no he conseguido nada. 
+La última dirección (3c840408) corresponde con la dirección de la función `miDestructor`, pero en little-endian (0804843c). Al poder modificar dicha tabla, sería posible tomar el control del programa explotando alguna vulnerabilidad y obtener una shell con permisos de root. El propósito inicial del artículo era mostar cómo explotar dicha vulnerabilidad, pero al no existir la sección .ctors y .dtors no va a ser posible, ya que he estado trasteando un poco con estas secciones nuevas y no he conseguido nada.
 
 Aún así, espero que os haya resultado útil para aprender sobre los constructores y destructores en C, y hayáis conocido un poco más a fondo la estructura de un ejecutable.
 
