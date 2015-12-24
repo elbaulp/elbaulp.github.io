@@ -13,7 +13,20 @@ tags:
   - gpg
   - manual gpg
   - tutorial gpg
+excerpt: |
+  <figure>
+    <a href="/images/2014/04/Chuleta-de-comandos-GPG.png"><img src="/images/2014/04/Chuleta-de-comandos-GPG.png" title="Chuleta de comandos para GPG" alt="Chuleta de comandos para GPG" /></a>
+  </figure>
+
+  Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo.
+image:
+  thumb: 2014/04/Chuleta-de-comandos-GPG.png
+modified: 2015-12-24T19:55
 ---
+<figure>
+  <a href="/images/2014/04/Chuleta-de-comandos-GPG.png"><img src="/images/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para [GPG][1]. Si encuentras algún error, no dudes en comentarlo.
 
 He usado el “**Nombre de Usuario**” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es *Charles Lockhart*, pero puedo referenciarlo simplemente poniendo Lockhart.
@@ -143,8 +156,6 @@ NOTA: los siguientes casos de uso indican porqué los comandos secret-key import
 ### Referencias
 
 *Quick'n easy gpg cheatsheet* »» <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html" target="_blank">Visitar sitio</a>
-
-
 
  [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 

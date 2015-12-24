@@ -8,11 +8,24 @@ permalink: /incluir-imagenes-en-una-entrada-de-wordpress-usando-php/
 categories:
   - php
 tags:
-  - añádir imagenes php
+  - añadir imagenes php
   - añadir imagenes wordpress
   - imagenes en entradas wordpress
+excerpt: |
+  <figure>
+    <a href="/images/2013/07/wordpress.png"><img src="/images/2013/07/wordpress.png" title="Incluir imágenes en una entrada de WordPress usando PHP" alt="Incluir imágenes en una entrada de WordPress usando PHP" /></a>
+  </figure>
+
+  Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página “2014 Galery”, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.
+modified: 2015-12-24T19:55
+image:
+  thumb: 2013/07/wordpress.png
 ---
 > Éste artículo es una colaboración de <a href="http://reinspirit.com/blog/" target="_blank">Pedro Mendez</a> en el que se verá cómo insertar imágenes en una entrada de WordPress. Desarrollador y diseñador de sitios web en Sevilla
+
+<figure>
+  <a href="/images/2013/07/wordpress.png"><img src="/images/2013/07/wordpress.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página &#8220;2014 Galery&#8221;, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.
 
@@ -43,6 +56,6 @@ El código anterior se explica por sí mismo. `wp_update_post` es una función d
 
 
 
- [1]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
+[1]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
 
 {% include _toc.html %}

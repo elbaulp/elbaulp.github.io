@@ -11,9 +11,17 @@ tags:
   - excepciones java
   - 'null'
   - NullPointerException java
-modified: 2015-12-02T22:53:26+01:00
 image:
   thumb: 2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
+modified: 2015-12-24T19:58
+excerpt: |
+  <figure>
+    <img src="/images/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="Qué es un NullPointerException y cómo solucionarlo" alt="Qué es un NullPointerException y cómo solucionarlo"/>
+  </figure>
+
+  El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario ziggy, que preguntaba ¿Qué es un NullPointerException y cómo se puede solucionar?. La respuesta es del usuario vincent-ramdhanie
+
+  Cuando se declara una variable referencia (Un objeto), realmente se está creando un puntero a un objeto. Consideremos el siguiente código que declara un entero con el tipo de dato primitivo:
 ---
 
 <figure>
