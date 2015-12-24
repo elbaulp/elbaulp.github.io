@@ -11,6 +11,16 @@ tags:
   - habilitar el teclado en el emulador Android
   - hw.dPad=yes
   - hw.keyboard=yes
+image:
+  thumb: 2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png
+excerpt: |
+  <figure>
+    <a href="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="Cómo habilitar el teclado en el emulador Android" alt="Cómo habilitar el teclado en el emulador Android" /></a>
+    <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
+  </figure>
+
+  En ocasiones, al crear un emulador Android, aún habiendo habilitado el soporte para teclado éste no funciona. Hoy veremos cómo habilitar el teclado en el emulador Android y, además, cómo habilitar la navegación mediante los cursores del teclado.
+modified: 2015-12-24T17:50
 ---
 En ocasiones, al crear un emulador [Android][1], aún habiendo habilitado el soporte para teclado éste no funciona. Hoy veremos cómo habilitar el teclado en el emulador Android y, además, cómo habilitar la navegación mediante los cursores del teclado.
 
@@ -20,13 +30,10 @@ En ocasiones, al crear un emulador [Android][1], aún habiendo habilitado el sop
 
 Al crear un emulador, hemos de marcar las siguientes casillas:
 
-<div id="attachment_2420" style="width: 482px" class="wp-caption aligncenter">
-  <img src="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" alt="Cómo habilitar el teclado en el emulador Android" width="472" height="532" class="size-full wp-image-2420" />
-  
-  <p class="wp-caption-text">
-    Crédito de la imagen, <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow
-  </p>
-</div>
+<figure>
+  <a href="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
+</figure>
 
 Pero si ésto no funciona, debemos modificar el fichero de configuración del emulador. Normalmente éstos ficheros se encuentran en `~/.android/avd/<emulator-device-name>.avd/config.ini`. Una vez en el fichero, añadimos la línea `hw.keyboard=yes`. Guardamos y al iniciar el emulador deberemos poder escribir con el teclado.
 
@@ -46,10 +53,8 @@ De igual manera, pero esta vez hay que añadir `hw.dPad=yes` al fichero de confi
 
 #### Referencias
 
-*Respuesta de James Wald a * »» <a href="http://stackoverflow.com/a/11252510/1612432" target="_blank">Android emulator doesn't take keyboard input - SDK tools rev 20</a> 
+*Respuesta de James Wald a * »» <a href="http://stackoverflow.com/a/11252510/1612432" target="_blank">Android emulator doesn't take keyboard input - SDK tools rev 20</a>
 
-
-
- [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
+[1]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
 
 {% include _toc.html %}

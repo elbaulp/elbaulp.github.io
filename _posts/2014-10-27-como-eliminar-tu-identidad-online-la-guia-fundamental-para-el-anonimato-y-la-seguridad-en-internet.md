@@ -14,13 +14,21 @@ tags:
   - seguridad
   - tracking
 author: luzila
+
+image:
+  thumb: 2014/10/draft.jpg
+modified: 2015-12-24T17:37
+excerpt: "El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
+Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google."
 ---
 > Esta es la traducción de un artículo que me pareció muy interesante para tener en cuenta si queremos ir implementando al menos algunas costumbres y buenas prácticas para navegar anónimamente en internet. Hay algunos tips que propone que no pueden aplicarse en todos los países, pero sin embargo vale la pena conocer las formas para que cada uno pueda pensar de qué forma puede lograrlo. *Luzcila*
 
 El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.
 
-[<img class="aligncenter size-full wp-image-2453" src="/images/2014/10/draft.jpg" alt="draft" width="592" height="312" />][1]
+<figure>
+  <a href="/images/2014/10/draft.jpg"><img src="/images/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 <!--ad-->
 
@@ -178,7 +186,9 @@ Puedes:
 
 No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ubicación estén desactivadas. Por defecto, sé que el iTouch guarda tu ubicación GPS en cada foto que tomas. Si ésta aparece en algún momento en internet, ya se puede examinar en hexadecimal para determinar las coordenadas.
 
-[<img class="aligncenter size-full wp-image-2454" src="/images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" alt="remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654" width="381" height="515" />][4]
+<figure>
+  <a href="/images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><img src="/images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 El Explorador de Archivos de Windows (Windows File Explorer) además provee lectura de ubicación de GPS en su vista de propiedades
 
@@ -234,11 +244,7 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 
 *Crédito de la imágen* »» <a href="http://www.occupy.com/article/learn-safeguard-internet-privacy-youre-007" target="_blank">occupy.com</a> *WonderHowTo* »» <a href="http://null-byte.wonderhowto.com/how-to/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet-0131741/i" target="_blank">How to Remove Your Online Identity: The Ultimate Guide to Anonymity and Security on the Internet</a>
 
-
-
- [1]: /images/2014/10/draft.jpg
- [2]: https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
- [3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
- [4]: /images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg
+[2]: https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
+[3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
 
 {% include _toc.html %}

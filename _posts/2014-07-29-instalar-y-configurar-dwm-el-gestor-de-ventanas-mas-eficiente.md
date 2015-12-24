@@ -16,6 +16,15 @@ tags:
   - que es dwm
   - statuscolor dwm 6.1
   - tiling desktop
+image:
+  thumb: 2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
+modified: 2015-12-24T18:00
+excerpt: |
+  <figure>
+    <a href="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="Instalar y configurar DWM, el gestor de ventanas más eficiente" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" /></a>
+  </figure>
+
+  Hace tiempo que hablé de Xmonad, y hasta hace poco ha sido mi gestor de ventanas, durante varios años. Pero semanas atrás descubrí el proyecto original en el que se basaba xmonad, DWM. Xmonad es un clon de DWM escrito en Haskell, lo cual lo hace un poco más pesado y lento debido a las dependencias que tiene y la necesidad de instalar su compilador. Tras probar DWM, no puedo estar más contento con el resultado, está escrito en C, y todas las modificaciones en la configuración se hacen sobre el propio código, lo cual lo hace muy eficiente y rápido. En este artículo veremos cómo instalar y configurar DWM.
 ---
 Hace tiempo que hablé de [Xmonad][1], y hasta hace poco ha sido mi gestor de ventanas, durante varios años. Pero semanas atrás descubrí el proyecto original en el que se basaba xmonad, DWM. Xmonad es un clon de DWM escrito en <a href="http://www.haskell.org/haskellwiki/Haskell" title="Web de Haskell" target="_blank">Haskell</a>, lo cual lo hace un poco más pesado y lento debido a las dependencias que tiene y la necesidad de instalar su compilador. Tras probar DWM, no puedo estar más contento con el resultado, está escrito en C, y todas las modificaciones en la configuración se hacen sobre el propio código, lo cual lo hace muy eficiente y rápido. En este artículo veremos cómo instalar y configurar DWM.
 
@@ -118,12 +127,12 @@ Ahora que está todo al entrar podremos ejecutar un terminal pulsando ALT+Shift+
 
 ## Cambiar la tecla ALT por la de Windows
 
-Para los usuarios de Linux, la tecla de Windows no se usa prácticamente para nada, lo cual viene muy bien para este tipo de programas, y así de paso evitamos interferir con cualquier otro atajo que haya definido otro programa. Para cambiar el modificador ALT por la tecla de Windows basta con cambiar 
+Para los usuarios de Linux, la tecla de Windows no se usa prácticamente para nada, lo cual viene muy bien para este tipo de programas, y así de paso evitamos interferir con cualquier otro atajo que haya definido otro programa. Para cambiar el modificador ALT por la tecla de Windows basta con cambiar
 
 {% highlight c %}#define MODKEY Mod1Mask
 {% endhighlight %}
 
-por 
+por
 
 {% highlight c %}#define MODKEY Mod4Mask
 {% endhighlight %}
@@ -140,11 +149,13 @@ Espero que esta pequeña introducción haya servido al lector. Desde que entré 
 
 Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explicaré cómo desarrollé la posibilidad de colorear la barra de estado (Ya está disponible [aquí][4]), ya que por defecto la versión 6.1 de DWM no lo permite.
 
-[<img src="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" width="1280" height="768" class="aligncenter size-full wp-image-2407" />][5]
+<figure>
+  <a href="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 #### Referencias
 
-*Web Oficial de DWM* »» <a href="" target="_blank">dwm.suckless.org</a> 
+*Web Oficial de DWM* »» <a href="" target="_blank">dwm.suckless.org</a>
 
 
 
@@ -152,6 +163,5 @@ Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explic
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
  [4]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Colorear la barra de estado con Simple StatusColor en DWM 6.1"
- [5]: /images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
 
 {% include _toc.html %}

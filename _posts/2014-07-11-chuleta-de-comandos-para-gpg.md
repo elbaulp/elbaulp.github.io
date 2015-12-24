@@ -107,15 +107,15 @@ Un interesante comentario al margen, encripté el patch preventivo del kernel, u
 {% highlight bash %}gpg -d mydata.tar.gpg{% endhighlight %}
 
 Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, *mydata.tar.gpg*.  
-NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “gpg -d* mydata.tar.gpg*” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar 
+NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “gpg -d* mydata.tar.gpg*” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar
 
 {% highlight bash %}gpg --o archivodesalida -d archivoencriptado.gpg{% endhighlight %}
 
-, o utilizar *mydata.tar.gpg* como por ejemplo, 
+, o utilizar *mydata.tar.gpg* como por ejemplo,
 
 {% highlight bash %}gpg -o mydata.tar -d mydata.tar.gpg{% endhighlight %}
 
-Otra alternativa es ejecutar algo como 
+Otra alternativa es ejecutar algo como
 
 {% highlight bash %}gpg -d mydata.tar.gpg > mydata.tar{% endhighlight %}
 
@@ -142,7 +142,7 @@ NOTA: los siguientes casos de uso indican porqué los comandos secret-key import
 
 ### Referencias
 
-*Quick'n easy gpg cheatsheet* »» <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html" target="_blank">Visitar sitio</a> 
+*Quick'n easy gpg cheatsheet* »» <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html" target="_blank">Visitar sitio</a>
 
 
 

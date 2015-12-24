@@ -12,8 +12,12 @@ tags:
   - front controller
   - nginx
   - patrones de diseño
+image:
+  thumb: https://img.youtube.com/vi/eYoDqz29qSA/0.jpg
+excerpt: "La semana pasada, en el Curso de Programación PHP guay, desarrollamos una agenda PHP basada en archivos CSV. El ejercicio era tan sencillo que no utilizamos ningún framework de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito."
+modified: 2015-12-24T17:40
 ---
-> Éste artículo es una colaboración de [Jordi Bassagañas][1] 
+> Éste artículo es una colaboración de [Jordi Bassagañas][1]
 
 La semana pasada, **en el [Curso de Programación PHP guay][2], desarrollamos una agenda PHP basada en archivos CSV**. El ejercicio era tan sencillo que no utilizamos ningún [framework][3] de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.
 
@@ -70,7 +74,7 @@ En [nginx][10]:
  [1]: http://programarivm.com
  [2]: http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/ "Curso de Programación PHP guay"
  [3]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 11 Mejores Frameworks gratuitos para Aplicaciones Web"
- [4]: http://img.youtube.com/vi/eYoDqz29qSA/0.jpg
+ [4]: https://img.youtube.com/vi/eYoDqz29qSA/0.jpg
  [5]: http://www.youtube.com/watch?v=eYoDqz29qSA "Imágenes enlazadas"
  [6]: http://www.slimframework.com/ "Slim Framework"
  [7]: https://github.com/programarivm/phpguay/tree/master/agenda "AgendaPHPGuay disponible en GitHub"

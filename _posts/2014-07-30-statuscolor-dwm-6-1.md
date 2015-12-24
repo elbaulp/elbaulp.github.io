@@ -11,8 +11,17 @@ tags:
   - simplestatuscolor dwm 6.1
   - statuscolor dwm 6.1
   - statuscolor for dwm 6.1
+modified: 2015-12-24T17:55
+image:
+  thumb: 2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
+excerpt: |
+  <figure>
+    <a href="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="Colorear la barra de estado con Simple StatusColor en DWM 6.1" alt="Colorear la barra de estado con Simple StatusColor en DWM 6.1" /></a>
+  </figure>
+
+  Días atrás hablamos sobre DWM y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
 ---
-Días atrás hablamos [sobre DWM][1] y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco. 
+Días atrás hablamos [sobre DWM][1] y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
 
 <!--ad-->
 
@@ -60,7 +69,9 @@ Por defecto el parche tiene 7 colores, para indicar el color a usar se debe escr
 
 Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el color 3. He aquí un ejemplo de la mía:
 
-[<img src="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" alt="simplestatuscolor in dwmstatus dwm6.1" width="702" height="13" class="aligncenter size-full wp-image-2410" />][2]
+<figure>
+  <a href="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 ## Dentro del código
 
@@ -205,11 +216,8 @@ Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de 
 *myDWMstatus* »» <a href="https://github.com/algui91/myDWMstatus" target="_blank">github.com/algui91/myDWMstatus</a>  
 *myDWM* »» <a href="https://github.com/algui91/myDWM" target="_blank">github.com/algui91/myDWM</a>
 
-
-
- [1]: https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM, el gestor de ventanas más eficiente"
- [2]: /images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
- [3]: https://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
- [4]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+[1]: https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM, el gestor de ventanas más eficiente"
+[3]: https://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
+[4]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
 
 {% include _toc.html %}

@@ -13,6 +13,8 @@ tags:
   - markdown jetpack
   - markdown worpress
   - tutorial markdown
+excerpt: "En su última actualización, el plugin JetPack introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato."
+modified: 2015-12-24T17:50
 ---
 En su última actualización, el plugin [JetPack][1] introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.
 
@@ -161,5 +163,3 @@ El *markdown* convierte texto a HTML.
 [3]: /images/2013/12/favicon.ico "Título"
 [4]: /images/2013/12/favicon.ico
 [5]: / "Imágenes enlazadas"
-
-{% include _toc.html %}
