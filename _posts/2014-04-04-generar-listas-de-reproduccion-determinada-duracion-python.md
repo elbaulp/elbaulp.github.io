@@ -13,7 +13,6 @@ tags:
   - python
   - script python
 modified: 2015-12-25T13:00
-date: 2115-12-25T13:00
 excerpt: |
   <figure>
     <a href="/images/Generar listas de reproducción de una determinada duración con Python.png"><img src="/images/Generar listas de reproducción de una determinada duración con Python.png" title="Generar listas de reproducción de una determinada duración con Python" alt="Generar listas de reproducción de una determinada duración con Python" /></a>
