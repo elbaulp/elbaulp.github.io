@@ -12,7 +12,21 @@ tags:
   - música
   - python
   - script python
+modified: 2015-12-25T13:00
+date: 2115-12-25T13:00
+excerpt: |
+  <figure>
+    <a href="/images/Generar listas de reproducción de una determinada duración con Python.png"><img src="/images/Generar listas de reproducción de una determinada duración con Python.png" title="Generar listas de reproducción de una determinada duración con Python" alt="Generar listas de reproducción de una determinada duración con Python" /></a>
+  </figure>
+
+  A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la técnica Pomodoro, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.
+image:
+  thumb: "Generar listas de reproducción de una determinada duración con Python.png"
 ---
+<figure>
+  <a href="/images/Generar listas de reproducción de una determinada duración con Python.png"><img src="/images/Generar listas de reproducción de una determinada duración con Python.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la <a href="http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro" title="Técnica pomodoro" target="_blank">técnica Pomodoro</a>, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.
 
 Para ello he creado un pequeño script en python que genera automáticamente las listas de reproducción dado un directorio con ficheros mp3 o mp4 y una duración en minutos.
@@ -73,9 +87,9 @@ def main():
     for music_file in os.listdir(directory):
         if fnmatch.fnmatch(music_file, '*.mp[43]'):
             all_items.append(directory + music_file)
-    
+
     shuffle(all_items)
-    
+
     for item in all_items:
         if curr_length >= length:
             name = path + playlist_basename + str(playlist_number) + '.m3u'
@@ -171,7 +185,5 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 Ya que el script lo he hecho en media hora, se puede mejorar bastante. Ahora mismo no busca los ficheros de música recursivamente, en el futuro lo añadiré. <del datetime="2014-04-05T15:37:18+00:00">Tiene un fallo, cuando se está generando la lista, si la duración total es menor que la indicada por parámetro, y el fichero de música procesándose en ese momento es muy grande (por ejemplo 40 min), la lista de reproducción no será del tamaño correcto.</del> (Solucionado)
 
 Para aquellos que estén interesados, el código está en <a href="https://github.com/algui91/genPlaylistByName" title="Repositorio" target="_blank">GitHub</a>
-
-
 
 {% include _toc.html %}

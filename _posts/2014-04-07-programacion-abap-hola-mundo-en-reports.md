@@ -12,6 +12,9 @@ tags:
   - hola mundo abap
   - programación ABAP
 excerpt: "Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje."
+modified: 2015-12-25T12:55
+image:
+  thumb: 2014/04/hola-mundo-salida.png
 ---
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 
@@ -106,7 +109,5 @@ Si queremos avanzar un poco más en nuestro “Hola mundo” podemos incluir nue
     <img src="/images/2014/04/hola-mundo-transaccion.png" alt="hola-mundo-transaccion" width="469" height="219" class="aligncenter size-full wp-image-2334" /></p>
 
 Ya está. Ahora utilizando la transacción Z\_HOLA se ejecutará el resultado del programa Z\_HOLA_MUNDO.
-
-
 
 {% include _toc.html %}
