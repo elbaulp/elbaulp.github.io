@@ -42,12 +42,12 @@ service php5-fpm start
 
 Ahora probaremos que php funciona bajo nginx, para ello es necesario modificar ligeramente el archivo *nginx.conf*, concretamente:
 
-  * En el bloque *http* hay que añadir index.php a la directiva index, para que quede index *index.php index.html index.htm;*. 
+  * En el bloque *http* hay que añadir index.php a la directiva index, para que quede index *index.php index.html index.htm;*.
       * Necesitamos crear la comunicación entre nginx y php mediante un socket, para ello añadimos lo siguiente en el bloque *http*. {% highlight bash %}upstream php {
     server unix://var/run/php-fpm.socket;
 }
         {% endhighlight %}
-        
+
           * Por último, dentro del bloque *server*, añadimos una regla que permita manejar los archivos php: {% highlight bash %}location ~ \.php$ {
     include fastcgi_params;
     fastcgi_index index.php;
@@ -55,19 +55,19 @@ Ahora probaremos que php funciona bajo nginx, para ello es necesario modificar l
     fastcgi_pass php;
 }
     {% endhighlight %}
-            
-              * Una última modificación al archivo */etc/php5/fpm/pool.d/www.conf* y agregamos la línea *listen = /var/run/php-fpm.socket*. </ul> 
+
+              * Una última modificación al archivo */etc/php5/fpm/pool.d/www.conf* y agregamos la línea *listen = /var/run/php-fpm.socket*. </ul>
                 ### Probando PHP
-                
+
                 Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en */usr/local/nginx/http/* y asignarle como grupo y usuario *www-data*:
-                
+
                 {% highlight bash %}echo '<?php echo "Probando que PHP funciona";?>' > /usr/local/nginx/html/index.php
 chown www-data:www-data /usr/local/nginx/html/index.php
 {% endhighlight %}
-                
+
                 De nuevo nos dirigimos al *localhost* y deberíamos ver el mensaje, lo cual indica que se está ejecutando PHP.
-                
-                
+
+
 
  [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
  [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
