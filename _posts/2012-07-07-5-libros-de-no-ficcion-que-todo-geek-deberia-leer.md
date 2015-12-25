@@ -187,10 +187,10 @@ Apple no fue su único trabajo, no obstante, por el cual este libro es una lectu
   <a href="http://www.amazon.es/gp/product/1451648537?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
-### You Are Not A Gadget (No eres un aparato), por Jaron Lanier
+### Contra el rebaño digital: Un manifiesto, por Jaron Lanier
 
 <figure>
-  <img src="/images/2012/07/youarenotagadget1.jpg" title="You Are Not A Gadget (No eres un aparato), por Jaron Lanier" alt="You Are Not A Gadget (No eres un aparato), por Jaron Lanier" />
+  <img src="/images/Contra-el-rebano-digital-Un-manifiesto.jpg" title="Contra el rebaño digital: Un manifiesto, por Jaron Lanier" alt="Contra el rebaño digital: Un manifiesto, por Jaron Lanier" />
 </figure>
 
 *You Are Not A Gadget* no es un libro fácil de digerir. Los argumentos filosóficos de Jaron Lanier y su prosa densa pueden hacerlo difícil al principio, particularmente para alguien que está acostumbrado al rápido-y-fácil estilo de los blogs online. Sugiero que no despegues la nariz de la página. Este libro es el mejor análisis crítico de Internet y la cultura online que puedes haber leído.
@@ -199,8 +199,16 @@ Lanier cree que Internet no ha disfrutado todo su potencial. Señala que la libe
 
 Esto es realmente sólo la punta del iceberg. Hay muchísimo encerrado en este pequeño libro y hay incluso algunos capítulos dedicados a encontrar soluciones a las criticas que enfrenta el autor.
 
+>El fascinante manifiesto por un uso creativo de la tecnología de uno de los creadores de Internet.
+
+>Contra el rebaño digital es uno de los libros que más han dado que hablar en los últimos tiempos: un aviso contra nuestra obsesión por la tecnología y, en concreto, por internet, escrito por uno de los expertos más estimulantes y visionarios. La temprana dedicación de Lanier a la realidad virtual y el desarrollo de tecnologías en red son legendarias, así como sus artículos, que atacan muchas de las cuestiones que el mundo de la tecnología considera sagradas.
+
+>En este manifiesto, Lanier apunta contra lo que ha bautizado como la cultura nerd de internet o el «maoísmo digital», es decir, la tendencia de la comunidad tecnológica de primar la plataforma sobre el contenido y los ordenadores sobre las personas. En total contraste con los que saludan el triunfo del contenido generado por los usuarios, Lanier ve una internet desinformada y tediosa, en la que la cantidad se impone a la calidad y las buenas ideas son acalladas a base de gritos.
+
+>Pero Contra el rebaño digital no es una diatriba antitecnológica. Es un manifiesto fresco y energizante dedicado a quienes la tecnología les inspira aunque les decepcione el modo en que es empleada. Lanier propone a los usuarios de la red frenar un poco, generar contenidos profundos en vez de llamativos y sacar el máximo partido de internet en vez de usarla ciegamente para todo.
+
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0307389979?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/Contra-reba%C3%B1o-digital-manifiesto-DEBATE/dp/8483069172/?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Biopreguntas y la respuesta mecánica, de Didier Newman
