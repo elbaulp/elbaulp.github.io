@@ -133,4 +133,4 @@ Aquí se definen las cadenas de texto a usar en la aplicación. Siempre deben es
 En el siguiente artículo se verá a fondo la aplicación _Hola Mundo_ tal y como la crea en estos momentos _Android Studio_, usando _Fragments_ en lugar de _Activity_.
 {: .notice-info }
 
-<!-- <a href="#" class="btn btn-info">Siguiente artículo: Hola Mundo a fondo</a> -->
+<!-- <a href="/tutorial-android-hola-mundo-a-fondo/" class="btn btn-info">Siguiente artículo: Hola Mundo a fondo</a> -->
