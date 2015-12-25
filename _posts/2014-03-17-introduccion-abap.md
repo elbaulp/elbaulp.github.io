@@ -12,7 +12,15 @@ tags:
   - programación ABAP
   - que es ABAP
 
-excerpt: "El lenguaje de programación ABAP (antiguamente ABAP/4) es un lenguaje propio del ERP SAP y su uso sólo se puede entender a través de este software empresarial. En un principio, SAP era sinónimo de ERP. Sin embargo, en la actualidad SAP comprende un paquete mucho más amplio de herramientas. Por supuesto, el ERP sigue siendo el núcleo del negocio de SAP, pero su cartera se ido ampliando con otros productos como CRM (customer relationship management), SCM (Supply Chain Management) y SRM (Supplier Relationship Management) entre otros."
+excerpt: |
+  <figure>
+    <a href="/images/2014/03/SAP-Apariencia.png"><img src="/images/2014/03/SAP-Apariencia.png" title="Introducción a ABAP" alt="Introducción a ABAP" /></a>
+  </figure>
+
+  El lenguaje de programación ABAP (antiguamente ABAP/4) es un lenguaje propio del ERP SAP y su uso sólo se puede entender a través de este software empresarial. En un principio, SAP era sinónimo de ERP. Sin embargo, en la actualidad SAP comprende un paquete mucho más amplio de herramientas. Por supuesto, el ERP sigue siendo el núcleo del negocio de SAP, pero su cartera se ido ampliando con otros productos como CRM (customer relationship management), SCM (Supply Chain Management) y SRM (Supplier Relationship Management) entre otros.
+modified: 2015-12-25T13:10
+image:
+  thumb: 2014/03/SAP-Apariencia.png
 ---
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 

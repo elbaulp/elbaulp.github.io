@@ -12,17 +12,31 @@ tags:
   - configuracion nginx
   - instalar nginx linux
   - montar un servidor web
+modified: 2015-12-25T13:25
+excerpt: |
+  <figure>
+    <a href="/images/Instalación y optimización de un servidor web con Nginx1.png"><img src="/images/Instalación y optimización de un servidor web con Nginx1.png" title="Instalación y optimización de un servidor web con Nginx (I)" alt="Instalación y optimización de un servidor web con Nginx (I)" /></a>
+  </figure>
+
+  La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
+
+  A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.
+image:
+  thumb: "Instalación y optimización de un servidor web con Nginx1.png"
 ---
 > La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
 
-*A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.  
-*
+<figure>
+  <a href="/images/Instalación y optimización de un servidor web con Nginx1.png"><img src="/images/Instalación y optimización de un servidor web con Nginx1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+_A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web._
 
 # Tabla de contenidos
 
-  * Instalación y optimización de un servidor web con Nginx (I)
-  * [Instalación y optimización de un servidor web con Nginx (II)][1]
-  * [Instalación y optimización de un servidor web con Nginx (III)][2]
+* Instalación y optimización de un servidor web con Nginx (I)
+* [Instalación y optimización de un servidor web con Nginx (II)][1]
+* [Instalación y optimización de un servidor web con Nginx (III)][2]
 
 Hace tiempo se vío en este blog [cómo instalar y configurar Nginx con php5-fpm][3], en los próximos artículos se intentará explicar de forma más detallada cómo llevar a cabo éste proceso junto con algunas mejoras adicionales en términos de optimización. Es necesario informar al lector que todas las recomendaciones aquí explicadas se basan únicamente en la experiencias del autor.
 
@@ -119,7 +133,9 @@ Con esto hemos descargaro el script, lo hemos movido al directorio en el que ser
 
 Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección *localhost*, donde veremos lo siguiente:
 
-<img src="/images/2014/02/instalacionNginx.png" alt="Instalación y optimización de un servidor web con Nginx (I)" width="554" height="192" class="aligncenter size-full wp-image-2254" />
+<figure>
+  <a href="/images/2014/02/instalacionNginx.png"><img src="/images/2014/02/instalacionNginx.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 ### Configuración
 
@@ -177,17 +193,16 @@ http {
 
 Los cambios más relevantes sobre la configuración por defecto son:
 
-  * Se ha cambiado el usuario del servidor de *nobody* a *www-data*, éste último es el usuario por defecto para servidores webs.
-  * Se define el archivo donde se localizará el PID (Process ID) del servidor. Esto permite al script que hemos instalado iniciar o detener nginx.
-  * Se habilita la compresión gzip para reducir el ancho de banda consumido.
-  * Se define el formato que tendrán los ficheros de log.
+* Se ha cambiado el usuario del servidor de *nobody* a *www-data*, éste último es el usuario por defecto para servidores webs.
+* Se define el archivo donde se localizará el PID (Process ID) del servidor. Esto permite al script que hemos instalado iniciar o detener nginx.
+* Se habilita la compresión gzip para reducir el ancho de banda consumido.
+* Se define el formato que tendrán los ficheros de log.
 
 Cambiamos los permisos del directorio donde se alojan los recursos web a este último usuario y reiniciamos nginx:
 
 {% highlight bash %}chown -R www-data:www-data /usr/local/nginx/html/
 service nginx destroy && service nginx start
 {% endhighlight %}
-
 
 
  [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"

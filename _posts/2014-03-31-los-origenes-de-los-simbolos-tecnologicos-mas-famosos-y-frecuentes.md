@@ -12,7 +12,21 @@ tags:
   - origen simbolo usb
   - origen símbolos tecnológicos
 author: luzila
+excerpt: |
+  <figure>
+    <a href="/images/Los orígenes de los símbolos tecnológicos más famosos y frecuentes.jpg"><img src="/images/Los orígenes de los símbolos tecnológicos más famosos y frecuentes.jpg" title="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" alt="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" /></a>
+  </figure>
+
+  Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.
+modified: 2015-12-25T13:10
+image:
+  thumb: "Los orígenes de los símbolos tecnológicos más famosos y frecuentes.jpg"
 ---
+
+<figure>
+  <a href="/images/Los orígenes de los símbolos tecnológicos más famosos y frecuentes.jpg"><img src="/images/Los orígenes de los símbolos tecnológicos más famosos y frecuentes.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.
 
 <!--ad-->
