@@ -12,10 +12,12 @@ categories:
 tags:
   - ecuaciones lineales
   - resolver ecuaciones python
+modified: 2015-12-28T9:55
+excerpt: "Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:"
 ---
-<span class="highlight style-1">El siguiente artículo es una colaboración de <a href="http://dealgebra.blogspot.mx/" title="Visitar blog" target="_blank">Rogelio González</a>, al que agradezco su interés por colaborar en este blog.</span>
 
-[<img src="/images/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1-300x200.jpg" alt="Cómo resolver sistemas de ecuaciones lineales con dos incógnitas1" width="300" height="200" class="alignleft size-medium wp-image-2224" />][1]  
+> El siguiente artículo es una colaboración de <a href="http://dealgebra.blogspot.mx/" title="Visitar blog" target="_blank">Rogelio González</a>, al que agradezco su interés por colaborar en este blog.
+
 Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:
 
 <!--ad-->
@@ -102,15 +104,5 @@ else :
 ### Conclusion
 
 ¿Por qué tantas matemáticas y poco código? Creo que todos lo sabemos: la idea que soporta el código es lo interesante y no solo lo interesante *es* lo importante. No todo programador es matemático (no es necesario serlo) pero es una gran ventaja tener esa &#8220;intuición&#8221; que nos dan las matemáticas.
-
-<a class="aligncenter download-button" href="https://elbauldelprogramador.com/resolucion-de-ecuaciones-lineales-con-dos-incognitas/" rel="nofollow"> Download &ldquo;Resolución de ecuaciones lineales con dos incógnitas&rdquo; <small>ResoluciónEcuaciones.pdf &ndash; Downloaded 918 times &ndash; 51 kB</small> </a>
-
-#### Créditos
-
-*Imágen gracias a eriwst* »» <a href="http://www.flickr.com/photos/eriwst/2421129047/sizes/z/" target="_blank">flickr.com</a>
-
-
-
- [1]: /images/2014/01/Cómo-resolver-sistemas-de-ecuaciones-lineales-con-dos-incógnitas1.jpg
 
 {% include _toc.html %}

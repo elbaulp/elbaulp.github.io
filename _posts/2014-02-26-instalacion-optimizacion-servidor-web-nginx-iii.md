@@ -13,12 +13,19 @@ tags:
   - instalar apc
   - instalar pagespeed nginx
   - optimizacion nginx
+modified: 2015-12-28T9:34
+excerpt: |
+  La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
+
+  A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.
+image:
+  thumb: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
 ---
 # Tabla de contenidos
 
-  * [Instalación y optimización de un servidor web con Nginx (I)][1]
-  * [Instalación y optimización de un servidor web con Nginx (II)][2]
-  * Instalación y optimización de un servidor web con Nginx (III)
+* [Instalación y optimización de un servidor web con Nginx (I)][1]
+* [Instalación y optimización de un servidor web con Nginx (II)][2]
+* Instalación y optimización de un servidor web con Nginx (III)
 
 En éste último artículo se verá cómo realizar optimizaciones al servidor web nginx, PHP y se cubrirá la instalación del sistema de caches APC y el módulo Page Speed de Google.
 
@@ -31,11 +38,11 @@ En éste último artículo se verá cómo realizar optimizaciones al servidor we
 La configuración por defecto de PHP no suele ser la óptima, dependiendo de nuestras necesidades y hardware deberemos ajustar algunos parámetros. En esta sección nos centraremos en el número de procesos y recursos que se dedicarán a una aplicación web. Estos parámetros se encuentran en el directorio */etc/php/fpm/pools.d*, se debe tener una archivo por cada aplicación, en nuestro caso será *www.conf*.  
 Los parámetros a ajustar son:
 
-  * **pm**: Decide cómo el controlador de procesos administra los procesos hijos, es recomendable establecerlo a dinámico.
-  * **pm.max_children**: Cuando pm es estático, el número de hijos a crear, cuando es dinámico, el máximo número de hijos que se podrán tener.
-  * **pm.start_servers**: Número de hijos a crear al inicio.
-  * **pm.min\_spare\_servers**: El número mínimo de procesos libres (Sin hacer nada).
-  * **pm.max\_spare\_servers**: Número máximo de procesos libres.
+* **pm**: Decide cómo el controlador de procesos administra los procesos hijos, es recomendable establecerlo a dinámico.
+* **pm.max_children**: Cuando pm es estático, el número de hijos a crear, cuando es dinámico, el máximo número de hijos que se podrán tener.
+* **pm.start_servers**: Número de hijos a crear al inicio.
+* **pm.min\_spare\_servers**: El número mínimo de procesos libres (Sin hacer nada).
+* **pm.max\_spare\_servers**: Número máximo de procesos libres.
 
 **pm.max_requests**: El número de peticiones que cada hijo aceptará antes de reiniciarse, útil para evitar pérdidas de memoria.
 
@@ -49,12 +56,14 @@ $$ \mathsf{pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}} 
 
 Donde $$RAM_{restoProc}$$ es la memoria usada por los otros procesos y $$RAM_{mediaPHP}$$ es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
 
-{% highlight bash %}ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
+{% highlight bash %}
+ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
 {% endhighlight %}
 
 Y la consumida por PHP:
 
-{% highlight bash %}ps -ylC php5-fpm --sort:rss  | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria consumida por PHP: "; printf "%dM\n", s/1024 }'
+{% highlight bash %}
+ps -ylC php5-fpm --sort:rss  | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria consumida por PHP: "; printf "%dM\n", s/1024 }'
 {% endhighlight %}
 
 Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de *max_children*, *min\_spare\_servers* y *max\_spare\_servers* se suelen calcular evaluando el rendimiento y *start_servers*, suele ser:
@@ -227,7 +236,9 @@ Por último hay que añadir la configuración a nginx, dentro del bloque *server
 
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
 
-<img src="/images/2014/02/pagespeed.png" alt="Configuración pagespeed nginx" width="255" height="135" class="aligncenter size-full wp-image-2268" />
+<figure>
+  <a href="/images/2014/02/pagespeed.png"><img src="/images/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" /></a>
+</figure>
 
 Como vemos, la cabecera de pagespeed está presente, luego está habilitado.
 
@@ -330,11 +341,11 @@ Algunos valores por defecto de la configuración de nginx no son adecuados en t�
 Una breve explicación del propósito de cada directiva:
 
   * **client\_body\_buffer_size**: El tamaño máximo del buffer de petición del cliente.
-  * ** client\_header\_buffer_size**: Normalmente el tamaño de las cabeceras de la mayoría de peticiones son inferiores a 1k, si hay problemas deberemos subir el valor.
+  * **client\_header\_buffer_size**: Normalmente el tamaño de las cabeceras de la mayoría de peticiones son inferiores a 1k, si hay problemas deberemos subir el valor.
   * **client\_max\_body_size**: Si vamos a aceptar que se suban archivos a nuestra web, este valor debería ser dado en Megas, de lo contrario podremos establecer un valor bajo, como 1k.
   * **large\_client\_header_buffers**: Número máximo y tamaño de los buffers para peticiones que tengan cabeceras de mayor tamaño enviadas por el cliente. Útil para combatir bad bots y ataques DoS.
   * **client\_body\_timeout**: Establece el tiempo de espera para leer el cuerpo de la petición del cliente. Si tras pasar el tiempo el cliente no envía nada, nginx devolverá un error 408 (Request timeout).
-  * ** client\_header\_timeout**: Similar al anterior pero para la cabecera.
+  * **client\_header\_timeout**: Similar al anterior pero para la cabecera.
   * **keepalive_timeout**: El primer parámetro asigna el tiempo de espera para mantener la conexión activa con el cliente, el servidor cerrará la conxión tras pasar éste tiempo. El segundo parámetro establece el valor de la cabecera *Keep-Alive:timeout=time* en la respuesta del servidor, esta cabecera puede hacer que algunos navegadore cierren la conexión para que no sea el servidor el que tenga que hacerlo.
   * **send_timeout**: Asigna el tiempo de espera al cliente.
   * **limit\_conn\_zone**: Controla el número de conexiones simultaneas de un mismo cliente.
@@ -343,8 +354,8 @@ Con esto concluyen los tres artículos sobre instalación y optimización de un 
 
 
 
- [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
- [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"
- [3]: https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/ "Solucionar fallo de segmentación en PHP cuando se usa APC"
+[1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
+[2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"
+[3]: https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/ "Solucionar fallo de segmentación en PHP cuando se usa APC"
 
 {% include _toc.html %}

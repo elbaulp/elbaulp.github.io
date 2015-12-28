@@ -12,6 +12,15 @@ tags:
   - CUSL
   - preferencias android
   - summary android
+modified: 2015-12-28T9:50
+image:
+  thumb: 2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png
+excerpt: |
+  <figure>
+    <a href="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="Cambiar el color del summary en una Preferencia Android" alt="Cambiar el color del summary en una Preferencia Android" /></a>
+  </figure>
+  
+  En un artículo anterior vimos cómo crear un diálogo personalizado en las preferencias para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el summary que aparece debajo del título de una preferencia.
 ---
 En un artículo anterior vimos [cómo crear un diálogo personalizado en las preferencias][1] para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el *summary* que aparece debajo del título de una preferencia.
 
@@ -104,8 +113,9 @@ Ahora que tenemos el diseño listo, veremos cómo cambiarlo cuando ocurra cierta
 
 Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Preference`. Cuando se introduzca una contraseña inferior a 8 caracteres, se mostrará el mensaje como aparece en la imagen:
 
-<img src="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" alt="Cambiar el color del summary en una Preferencia Android" width="419" height="97" class="aligncenter size-full wp-image-2245" />
-
+<figure>
+  <a href="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 
  [1]: https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/ "Cómo crear un diálogo personalizado en las preferencias Android"

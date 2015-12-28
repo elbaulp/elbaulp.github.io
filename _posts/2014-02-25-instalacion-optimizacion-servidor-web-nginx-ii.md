@@ -12,6 +12,13 @@ tags:
   - configuración php
   - instalar php-fpm
   - nginx y php
+modified: 2015-12-28T9:34
+excerpt: |
+  La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
+
+  A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.
+image:
+  thumb: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
 ---
 # Tabla de contenidos
 
@@ -42,35 +49,40 @@ service php5-fpm start
 
 Ahora probaremos que php funciona bajo nginx, para ello es necesario modificar ligeramente el archivo *nginx.conf*, concretamente:
 
-  * En el bloque *http* hay que añadir index.php a la directiva index, para que quede index *index.php index.html index.htm;*.
-      * Necesitamos crear la comunicación entre nginx y php mediante un socket, para ello añadimos lo siguiente en el bloque *http*. {% highlight bash %}upstream php {
+* En el bloque *http* hay que añadir index.php a la directiva index, para que quede index *index.php index.html index.htm;*.
+* Necesitamos crear la comunicación entre nginx y php mediante un socket, para ello añadimos lo siguiente en el bloque *http*.
+
+{% highlight bash %}
+upstream php {
     server unix://var/run/php-fpm.socket;
 }
-        {% endhighlight %}
+{% endhighlight %}
 
-          * Por último, dentro del bloque *server*, añadimos una regla que permita manejar los archivos php: {% highlight bash %}location ~ \.php$ {
+* Por último, dentro del bloque *server*, añadimos una regla que permita manejar los archivos php:
+{% highlight bash %}
+location ~ \.php$ {
     include fastcgi_params;
     fastcgi_index index.php;
     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     fastcgi_pass php;
 }
-    {% endhighlight %}
+{% endhighlight %}
 
-              * Una última modificación al archivo */etc/php5/fpm/pool.d/www.conf* y agregamos la línea *listen = /var/run/php-fpm.socket*. </ul>
-                ### Probando PHP
+* Una última modificación al archivo */etc/php5/fpm/pool.d/www.conf* y agregamos la línea *listen = /var/run/php-fpm.socket*. </ul>
 
-                Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en */usr/local/nginx/http/* y asignarle como grupo y usuario *www-data*:
+### Probando PHP
 
-                {% highlight bash %}echo '<?php echo "Probando que PHP funciona";?>' > /usr/local/nginx/html/index.php
+Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en */usr/local/nginx/http/* y asignarle como grupo y usuario *www-data*:
+
+{% highlight bash %}
+echo '<?php echo "Probando que PHP funciona";?>' > /usr/local/nginx/html/index.php
 chown www-data:www-data /usr/local/nginx/html/index.php
 {% endhighlight %}
 
-                De nuevo nos dirigimos al *localhost* y deberíamos ver el mensaje, lo cual indica que se está ejecutando PHP.
+De nuevo nos dirigimos al *localhost* y deberíamos ver el mensaje, lo cual indica que se está ejecutando PHP.
 
-
-
- [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
- [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
- [3]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+[1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
+[2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
+[3]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
 
 {% include _toc.html %}

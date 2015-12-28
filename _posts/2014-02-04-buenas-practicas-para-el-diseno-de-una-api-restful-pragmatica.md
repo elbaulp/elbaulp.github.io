@@ -12,6 +12,18 @@ tags:
   - apis
   - buenas practicas apis
 author: luzila
+modified: 2015-12-28T9:34
+image:
+  thumb: 2014/01/201305-xml-vs-json-api.png
+excerpt: |
+
+  <figure>
+    <a href="/images/2014/01/201305-xml-vs-json-api.png"><img src="/images/2014/01/201305-xml-vs-json-api.png" title="Buenas prácticas para el Diseño de una API RESTful Pragmática" alt="Buenas prácticas para el Diseño de una API RESTful Pragmática" /></a>
+  </figure>
+
+  Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
+
+  Tu modelo de datos ha empezado a estabilizarse y es el momento de crear una API pública para tu aplicación web. Te das cuenta de que es difícil hacer cambios significativos a tu API una vez que fue liberada, quieres lo mejor y lo antes posible. Ahora, en internet no escasean opiniones sobre diseño de APIs. Pero, debido a que no hay un standard adoptado popularmente que funcione en todos los casos, te quedas con un manojo de opciones: ¿Qué formatos deberías aceptar? ¿Cómo deberías autenticar? ¿Debería tu API ser versionada?
 ---
 > Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
 
@@ -397,9 +409,9 @@ Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">Supp
       Es tiempo de dejar XML atras en las APIs. Es verborrágico, es difícil de parsear, dificil de leer, su modelo de datos es incompatible con la mayoría de los modelos de datos de los lenguajes de programación y sus ventajas son irrelevantes cuando tus necesidades primarias de respuesta son serializaciones de una representación de datos interna.<br /> No voy a poner mucho esfuerzo en explicar las razones de lo dicho arriba si se puede ver cómo otros (<a href="http://apiblog.youtube.com/2012/12/the-simpler-yet-more-powerful-new.html" target="_blank">Youtube</a>, <a href="https://dev.twitter.com/docs/api/1.1/overview#JSON_support_only" target="_blank">Twitter</a> & <a href="http://developers.blog.box.com/2012/12/14/v2_api/" target="_blank">Box</a>) ya han comenzado el éxodo XML.<br /> Simplemente te dejaré que veas las gráficas de Google Trends (<a href="http://www.google.com/trends/explore?q=xml+api#q=xml%20api%2C%20json%20api&cmpt=q" target="_blank">XML API vs JSON API</a>) para que medites:
     </p>
 
-    <h4>
-      <a href="/images/2014/01/201305-xml-vs-json-api.png"><img class="alignleft size-full wp-image-2241" alt="201305-xml-vs-json-api" src="/images/2014/01/201305-xml-vs-json-api.png" width="817" height="237" /></a>
-    </h4>
+    <figure>
+      <a href="/images/2014/01/201305-xml-vs-json-api.png"><img src="/images/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+    </figure>
 
     <p>
       No obstante, si tu base de clientes consiste en un gran número de clientes empresariales, puedes tener que dar soporte XML de todas maneras. Si debes hacerlo, te surgirá una nueva pregunta:
