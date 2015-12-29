@@ -12,8 +12,14 @@ tags:
   - cambiar fondo login debian
   - cambiar fondo login ubuntu
   - lightdm
+image:
+  thumb: 2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg
+excerpt: "Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos."
+modified: 2015-12-29T10:20
 ---
-<img src="/images/2012/08/sh1.png" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="128" height="128" class="thumbnail alignleft size-full wp-image-868" />
+<figure>
+  <a href="/images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg"><img src="/images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos.
 
@@ -79,16 +85,15 @@ La imagen se encuentra en `/usr/share/xfce4/backdrops/xubuntu-wallpaper.png` com
 {% highlight bash %}sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 {% endhighlight %}
 
-[<img src="/images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" alt="Cambiar fondo en la pantalla de login en Debian y Ubuntu" width="3264" height="2448" class="aligncenter size-full wp-image-1982" />][2]{.thumbnail}
+<figure>
+  <a href="/images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg"><img src="/images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 #### Referencias
 
 *Debian* »» <a href="http://lists.debian.org/debian-desktop/2012/03/msg00054.html" target="_blank">lists.debian.org</a>  
 *Ubuntu* »» <a href="http://askubuntu.com/questions/64001/how-do-i-change-the-wallpaper-in-lightdm" target="_blank">askubuntu.com</a>
 
-
-
- [1]: https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
- [2]: /images/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg
+[1]: https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
 
 {% include _toc.html %}

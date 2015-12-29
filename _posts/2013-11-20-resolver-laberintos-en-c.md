@@ -10,8 +10,15 @@ categories:
 tags:
   - practica laberintos fp
   - resolver laberinto fp
+modified: 2015-12-29T10:20
+excerpt: "Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona."
+image:
+  thumb: 2013/11/cpp.png
 ---
-<img src="/images/2013/11/cpp.png" alt="Resolver laberintos en C++" width="128" height="128" class="thumbnail alignleft size-full wp-image-1984" />  
+<figure>
+  <a href="/images/2013/11/cpp.png"><img src="/images/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona.
 
 <!--ad-->
@@ -66,7 +73,7 @@ int main()
 
 La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almacenando el tamaño que tiene y se construye un laberinto de dicho tamaño y cambiando la representación del laberinto, es decir `Laberinto lab('+',' ','#',FIL,COL);` crea un laberinto de tamaño *FILxCOL*, cuya representación será un *#* para el camino que conduce a la salida, </em>+</em> para las paredes y un espacio en blanco para las celdas libres. La siguiente línea imprime el laberinto sin resolver, quedando así:
 
-{% highlight bash %}./bin/laberinto < labs/lab_peque.txt 
+{% highlight bash %}./bin/laberinto < labs/lab_peque.txt
 +++++++
 +e    +
 + + +++
@@ -78,7 +85,7 @@ La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almac
 
 Las dos siguientes líneas resuelven e imprimen el laberinto con el camino hacia la salida:
 
-{% highlight cpp %}LABERINTO RESUELTO: 
+{% highlight cpp %}LABERINTO RESUELTO:
 +++++++
 +e##  +
 + +#+++
@@ -90,7 +97,7 @@ Las dos siguientes líneas resuelven e imprimen el laberinto con el camino hacia
 
 En caso de que el laberinto no tenga solución se informa de ello:
 
-{% highlight bash %}./bin/laberinto < labs/lab_sinsolucion.txt 
+{% highlight bash %}./bin/laberinto < labs/lab_sinsolucion.txt
 +++++++
 +e  +s+
 +++++++
@@ -258,7 +265,7 @@ void Laberinto::addPathToLab(unsigned int i, unsigned int j){
 
 ### Más ejemplos
 
-{% highlight latex %}./bin/laberinto < labs/laberinto1.txt 
+{% highlight latex %}./bin/laberinto < labs/laberinto1.txt
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e  +     +       +               +     +               +             +   +   + +
 + +++ + +++ +++ +++ +++++++++++ +++ +++ + +++ +++++++++ + +++++ +++++ + + + + + +
@@ -280,7 +287,7 @@ void Laberinto::addPathToLab(unsigned int i, unsigned int j){
 + +++ +++++ + + +++++++++ +++ + + +++++ +++++ +++ + +++++++++++ + +++++ +++ + + +
 +     +       +         +     +       +           +         +   +           +  s+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-LABERINTO RESUELTO: 
+LABERINTO RESUELTO:
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e  +###  +#####  +#############  +#####+###############+      #######+###+###+ +
 +#+++#+#+++#+++#+++#+++++++++++#+++#+++#+#+++ +++++++++#+ +++++#+++++#+#+#+#+#+ +
@@ -304,7 +311,7 @@ LABERINTO RESUELTO:
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-./bin/laberinto < labs/laberinto2.txt 
+./bin/laberinto < labs/laberinto2.txt
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e    +                     +       +   +           +           +             +     +               +
 + +++ +++++ +++++ +++++++++ + +++++ + + + +++ +++++++ + + +++++ +++++++ +++++++ +++ + +++++ +++++++ +
@@ -336,7 +343,7 @@ LABERINTO RESUELTO:
 +++ + + +++ + + + + + +++ +++++++ +++ +++ + +++++++ +++ +++++ +++++ + + +++++++ + +++++ + +++ + + + +
 +   +     +     + +     +               +         +               +   +         +       +     +    s+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-LABERINTO RESUELTO: 
+LABERINTO RESUELTO:
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +e    +                     +       +   +           +           +             +     +               +
 +#+++ +++++ +++++ +++++++++ + +++++ + + + +++ +++++++ + + +++++ +++++++ +++++++ +++ + +++++ +++++++ +

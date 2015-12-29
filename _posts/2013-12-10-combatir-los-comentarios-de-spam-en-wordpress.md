@@ -11,7 +11,20 @@ tags:
   - bloquear spam wodpress
   - eliminar spam wordpress
   - iptables wordpress comentarios
+modified: 2015-12-29T10:00
+excerpt: |
+  <figure>
+    <a href="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="Combatir los comentarios de spam en WordPress" alt="Combatir los comentarios de spam en WordPress" /></a>
+  </figure>
+
+  Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.
+image:
+  thumb: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
 ---
+<figure>
+  <a href="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo [bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban][1]. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.
 
 <!--ad-->
@@ -92,13 +105,10 @@ LOG        all  --  Y.Y.Y.Y        anywhere            LOG level warning prefix 
 
 A partir de ahora, se notará un descenso drástico en los comentarios de spam. Espero que haya servido de ayuda.
 
-
-
- [1]: https://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
- [2]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
- [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
- [4]: https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
- [5]: https://elbauldelprogramador.com/ "Scripts del blog"
-
+[1]: https://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
+[2]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
+[3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
+[4]: https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
+[5]: https://elbauldelprogramador.com/ "Scripts del blog"
 
 {% include _toc.html %}

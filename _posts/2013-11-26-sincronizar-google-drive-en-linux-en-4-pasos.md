@@ -11,10 +11,24 @@ tags:
   - cliente google drive linux
   - grive
   - tutorial grive
+modified: 2015-12-29T10:00
+image:
+  thumb: 2013/11/google-drive-linux3.jpg
+excerpt: |
+  <figure>
+    <a href="/images/2013/11/google-drive-linux3.jpg"><img src="/images/2013/11/google-drive-linux3.jpg" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" alt="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" /></a>
+  </figure>
+
+  Llevaba tiempo buscando la manera de sincronizar los archivos de Google Drive en Linux con carpetas locales del mismo modo que Dropbox. Pensé en usar el programa inotify, pero no sabía muy bien por donde empezar. Hace unos días encontré la respuesta en openlinuxforums y al parecer no iba mal encaminado, es una solución bastante sencilla usando inotify y nos permitirá mantener sincronizados los archivos y carpetas de Google Drive en todos los ordenadores que queramos.
 ---
+
+<figure>
+  <a href="/images/2013/11/google-drive-linux3.jpg"><img src="/images/2013/11/google-drive-linux3.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
 Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive en Linux** con carpetas locales del mismo modo que Dropbox. Pensé en usar el programa [inotify][1], pero no sabía muy bien por donde empezar. Hace unos días encontré la respuesta en <a href="https://openlinuxforums.org" title="Foro linux" target="_blank">openlinuxforums</a> y al parecer no iba mal encaminado, es una solución bastante sencilla usando inotify y nos permitirá mantener sincronizados los archivos y carpetas de **Google Drive** en todos los ordenadores que queramos.
 
-<span class="highlight style-2">Hay una modificación para este método en <a href="https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]">Sincronizar Google Drive en Linux en 4 pasos [Actualización]</a></span>
+> Hay una modificación para este método en <a href="/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]">Sincronizar Google Drive en Linux en 4 pasos [Actualización]</a>
 
 <!--ad-->
 
@@ -80,11 +94,11 @@ Ahora crearemos un script que monitorize la carpeta local para detectar cualquie
 # Also thanks to Google for lending some free disk space to me
 #
 # Peter Österberg, 2012
- 
+
 GRIVE_COMMAND_WITH_PATH=/usr/bin/grive    # Path to your grive binary, change to match your system
 GDRIVE_PATH=~/Drive         # Path to the folder that you want to be synced
 TIMEOUT=300              # Timeout time in seconds, for periodic syncs. Nicely pointed out by ivanmacx
- 
+
 while true
 do
     inotifywait -t $TIMEOUT -e modify -e move -e create -e delete -r $GDRIVE_PATH
@@ -117,7 +131,7 @@ Mi entrada en el crontab es la siguiente:
 {% highlight bash %}*/10 * * * * cd "$HOME"/Drive && grive > /tmp/GRIVE_LOG
 {% endhighlight %}
 
-La única diferencia es que guardo la salida del programa en un fichero temporal a modo de log, dentro de poco veremos por qué. 
+La única diferencia es que guardo la salida del programa en un fichero temporal a modo de log, dentro de poco veremos por qué.
 
 Yo uso [xmonad][3], y para lograr que grive se ejecute al iniciar sesión añadí una línea al script que es ejecutado cuando me loggeo:
 
@@ -139,20 +153,19 @@ Con estos 4 pasos hemos conseguido mantener sincronizado nuestro Google Drive en
 
 El resultado de estas modificaciones es el siguiente:
 
-[<img src="/images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos-1024x575.png" alt="Sincronizar Google Drive en Linux en 4 pasos" width="770" height="432" class="aligncenter size-large wp-image-2013" />][6]{.thumbnail}
+<figure>
+  <a href="/images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png"><img src="/images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 #### Referencias
 
 *Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>  
 *Créditos de la imagen* »» <a href="https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR" target="_blank">plus.google.com</a>
 
-
-
- [1]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
- [2]: https://elbauldelprogramador.com/
- [3]: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
- [4]: https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
- [5]: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
- [6]: /images/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png
+[1]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
+[2]: https://elbauldelprogramador.com/
+[3]: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
+[4]: https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
+[5]: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
 
 {% include _toc.html %}

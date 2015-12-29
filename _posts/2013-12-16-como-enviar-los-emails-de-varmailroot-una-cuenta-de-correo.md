@@ -10,25 +10,11 @@ categories:
 tags:
   - /var/mail/root a gmail
   - enviar mensajes del sistema a correo
+excerpt: "En sistemas operativos como Debian, muchos de los programas y demonios envían mensajes al usuario root para informar del estado del sistema. Los mensajes se almacenan en el archivo /var/mail/root. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como mutt para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica."
+modified: 2015-12-29T10:00
 ---
-<div class="column column-1-6">
-  <div class="wi-progress-container">
-    <div class="wi-progress" data-percent="10" data-color="#222" data-thickness="3" data-size="100">
-      <span class="number" style="font-size:22.666666666667px;"></span><sup class="percent" style="font-size:13.333333333333px;">%</sup>
-    </div>
-    
-    <div class="progress-title" style="font-size:12px;">
-      Dificultad
-    </div>
-  </div>
-</div>
 
-<div class="column column-last column-5-6">
-  En sistemas operativos como <a href="https://elbauldelprogramador.com/?s=debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario <em>root</em> para informar del estado del sistema. Los mensajes se almacenan en el archivo <em>/var/mail/root</em>. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como <strong>mutt</strong> para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica.
-</div>
-
-<div class="clearfix">
-</div>
+En sistemas operativos como <a href="https://elbauldelprogramador.com/?s=debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario <em>root</em> para informar del estado del sistema. Los mensajes se almacenan en el archivo <em>/var/mail/root</em>. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como <strong>mutt</strong> para administrar los mensajes. Sin embargo, considero más organizado redireccionar t\odos los mensajes a una cuenta de correo típica.
 
 <!--ad-->
 
@@ -68,7 +54,7 @@ A partir de ahora, recibiremos en nuestra bandeja de entrada los mensajes del si
 
 #### Referencias
 
-*How to send emails stored in /var/spool/mail/root to a gmail inbox* »» <a href="http://serverfault.com/questions/554922/how-to-send-emails-stored-in-var-spool-mail-root-to-a-gmail-inboxbr/" target="_blank">serverfault.com</a> 
+*How to send emails stored in /var/spool/mail/root to a gmail inbox* »» <a href="http://serverfault.com/questions/554922/how-to-send-emails-stored-in-var-spool-mail-root-to-a-gmail-inboxbr/" target="_blank">serverfault.com</a>
 
 
 
