@@ -29,12 +29,12 @@
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Blog">
-  <div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="main">
+  <div class="h-entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="main">
     <meta itemprop="mainEntityOfPage" content="{{ site.url }}" />
     <div class="article-author-side">
       {% include _author-bio.html %}
     </div>
-    <article class="post h-entry">
+    <article class="post">
       <div class="headline-wrap">
       <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <img style="display:none;" itemprop="image" src="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}" alt="{{ page.title }}">
