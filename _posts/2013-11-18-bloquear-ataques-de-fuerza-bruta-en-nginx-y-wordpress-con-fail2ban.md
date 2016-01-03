@@ -11,8 +11,19 @@ tags:
   - fail2ban fuerza bruta
   - fail2ban nginx
   - fail2ban wordpress
+image:
+  thumb: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
+excerpt: |
+  <figure>
+    <a href="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban" alt="Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban" /></a>
+  </figure>
+
+  Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada Fail2Ban, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar Fail2Ban para bloquear el acceso a nuestra máquina a robots atacando por fuerza bruta a WordPress y al servidor web Nginx
+modified: 2015-12-30T11:00
 ---
-<img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" alt="Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban2" width="600" height="600" class="thumbnail aligncenter size-full wp-image-1980" />
+<figure>
+  <a href="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada ***Fail2Ban***, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar **Fail2Ban** para bloquear el acceso a nuestra máquina a robots atacando por [fuerza bruta][1] a *WordPress* y al servidor web *[Nginx][2]*
 
@@ -52,7 +63,7 @@ Ahora queda añadir el filtro para esta regla, en el archivo *filter.d/nginx-wp-
 {% highlight bash %}[Definition]
 
 failregex = <HOST>.*] "POST /wp-login.php
-ignoreregex = 
+ignoreregex =
 {% endhighlight %}
 
 ### Inconvenientes a tener en cuenta
@@ -89,7 +100,7 @@ action = iptables-multiport[name=NoLoginFailures, port="http,https"]
 logpath = /var/log/nginx*/*access*.log
 bantime = 600 # 10 minutes
 maxretry = 6
- 
+
 [nginx-badbots]
 enabled  = true
 filter = apache-badbots
@@ -97,7 +108,7 @@ action = iptables-multiport[name=BadBots, port="http,https"]
 logpath = /var/log/nginx*/*access*.log
 bantime = 86400 # 1 day
 maxretry = 1
- 
+
 [nginx-noscript]
 enabled = true
 action = iptables-multiport[name=NoScript, port="http,https"]
@@ -105,7 +116,7 @@ filter = nginx-noscript
 logpath = /var/log/nginx*/*access*.log
 maxretry = 6
 bantime  = 86400 # 1 day
- 
+
 [nginx-proxy]
 enabled = true
 action = iptables-multiport[name=NoProxy, port="http,https"]
@@ -127,7 +138,7 @@ Y sus correspondientes filtros en */etc/fail2ban/filter.d/* (Cada uno en un fich
 [Definition]
 failregex = ^<HOST> -.*GET http.*
 ignoreregex =
- 
+
 # Noscript filter /etc/fail2ban/filter.d/nginx-noscript.conf:
 #
 # Block IPs trying to execute scripts such as .php, .pl, .exe and other funny scripts.
@@ -138,18 +149,18 @@ ignoreregex =
 [Definition]
 failregex = ^<HOST> -.*GET.*(\.php|\.asp|\.exe|\.pl|\.cgi|\scgi)
 ignoreregex =
- 
+
 #
 # Auth filter /etc/fail2ban/filter.d/nginx-auth.conf:
 #
 # Blocks IPs that fail to authenticate using basic authentication
 #
 [Definition]
- 
+
 failregex = no user/password was provided for basic authentication.*client: <HOST>
             user .* was not found in.*client: <HOST>
             user .* password mismatch.*client: <HOST>
- 
+
 ignoreregex =
 
 #
