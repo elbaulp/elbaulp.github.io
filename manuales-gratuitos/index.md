@@ -95,6 +95,10 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
     <a href="/nueva-guia-administracion-avanzada-del/"><img src="
     /images/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg" alt="Administración Avanzada del Sistema Operativo GNU/Linux" width="199" height="259"/><span>Administración Avanzada del Sistema Operativo GNU/Linux</span></a>
   </li>
+  <li>
+    <a href="/nueva-guia-bootstrap-programming-cookbook/"><img src="
+    /images/Bootstrap-Programming-Cookbook.jpg" alt="Bootstrap Programming Cookbook" width="199" height="259"/><span>Bootstrap Programming Cookbook</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
