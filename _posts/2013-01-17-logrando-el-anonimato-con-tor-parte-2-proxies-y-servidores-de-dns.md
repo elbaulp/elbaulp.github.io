@@ -56,7 +56,7 @@ Repasando, hemos configurado el navegador para que use el proxy Burp en el puert
 
 2. Configurar Tor para resolver los hostnames de forma segura
 
-En el artículo anterior aparecen los tipos de proxies SOCKS y algunas variables de configuración de Tor que se pueden usar en el archivo de configuración torrc. Además se debate porqué es importante resolver los hostnames de forma segura. Para revisar esta información visita la <a href="/opensource/logrando-el-anonimato-con-tor-parte-1/" target="_blank">parte 1</a>. Para continuar profundizando, analizaremos cómo configurar Tor para resolver los hostnames de forma segura.
+En el artículo anterior aparecen los tipos de proxies SOCKS y algunas variables de configuración de Tor que se pueden usar en el archivo de configuración torrc. Además se debate porqué es importante resolver los hostnames de forma segura. Para revisar esta información visita la <a href="/logrando-el-anonimato-con-tor-parte-1/" target="_blank">parte 1</a>. Para continuar profundizando, analizaremos cómo configurar Tor para resolver los hostnames de forma segura.
 
 Para realizarlo, disponemos de las siguientes soluciones:
 

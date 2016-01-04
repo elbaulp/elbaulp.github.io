@@ -30,6 +30,6 @@ Sin más explicaciones, lo mejor es verlo en acción. A continuación proporcion
 
 
 
- [1]: /security-now-articulos/
+ [1]: /security-now//
 
 {% include _toc.html %}

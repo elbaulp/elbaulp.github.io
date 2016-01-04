@@ -131,6 +131,6 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
             
             
 
- [1]: https://elbauldelprogramador.com/vinetas-geek/ "Viñetas Geek de Domingo"
+ [1]: https://elbauldelprogramador.com/ "Viñetas Geek de Domingo"
 
 {% include _toc.html %}

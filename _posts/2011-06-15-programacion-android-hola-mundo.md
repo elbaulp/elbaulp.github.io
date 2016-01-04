@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  - /opensource/programacion-android-hola-mundo/
-  - /opensource/programacion-android-hola-mundo/
-  - /opensource/programacion-android-hola-mundo/
+  - /programacion-android-hola-mundo/
+  - /programacion-android-hola-mundo/
+  - /programacion-android-hola-mundo/
 categories:
   - android
   - opensource

@@ -52,7 +52,7 @@ Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y 
 
 Donde aparecen las webs bloqueadas, una entrada de texto para añadir las páginas a bloquear y por cuanto tiempo.
 
-Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos una terminal para ver el estado de <a title="20 ejemplos de iptables para SysAdmins novatos" href="/linux/20-ejemplos-de-iptables-para-sysadmins/" target="_blank">iptables</a>:
+Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos una terminal para ver el estado de <a title="20 ejemplos de iptables para SysAdmins novatos" href="//20-ejemplos-de-iptables-para-sysadmins/" target="_blank">iptables</a>:
 
 &nbsp;
 

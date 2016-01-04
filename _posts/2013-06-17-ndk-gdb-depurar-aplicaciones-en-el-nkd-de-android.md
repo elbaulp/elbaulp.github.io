@@ -406,7 +406,7 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
 
  [1]: /introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
  [2]: /android/
- [3]: /programacion/lenguaje-c/
+ [3]: /lenguaje-c/
  [4]: /programacion-android-interfaz-grafica_25/
  [5]: /fundamentos-programacion-android_17/
  [6]: /images/2013/06/Screenshot_2013-06-17-17-20-53.png

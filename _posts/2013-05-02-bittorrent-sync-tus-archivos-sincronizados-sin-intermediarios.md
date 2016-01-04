@@ -74,7 +74,7 @@ Para terminar dejo el podcast del episodio de security now!
 
 *BitTorrent Sync* »» <a href="http://labs.bittorrent.com/experiments/sync.html" target="_blank">Visitar sitio</a>
 
- [2]: /security-now-articulos/
+ [2]: /security-now//
  [3]: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
 
 {% include _toc.html %}

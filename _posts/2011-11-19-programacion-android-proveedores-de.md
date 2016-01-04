@@ -60,7 +60,7 @@ Estrictamente hablando, la responsabilidad de los CV abarcan más mecanismos de 
   * ***Red:*** Un mecanismo que permite recibir o almacenar datos externamente a través de internet.
 
 <p class="alert">
-  A pesar de los numerosos mecanismos de acceso a datos permitidos en Android, en este <a href="/2011/11/planteamiento-de-la-segunda-parte-del.html">segundo tomo del Curso de programación Android</a>, me voy a centrar en SQlite y la abstracción del CV, ya que los CV componen la base del intercambio de datos, el cual es mucho más común en Android que en cualquier otro Framework.
+  A pesar de los numerosos mecanismos de acceso a datos permitidos en Android, en este <a href="/planteamiento-de-la-segunda-parte-del.html">segundo tomo del Curso de programación Android</a>, me voy a centrar en SQlite y la abstracción del CV, ya que los CV componen la base del intercambio de datos, el cual es mucho más común en Android que en cualquier otro Framework.
 </p>
 
 * * *

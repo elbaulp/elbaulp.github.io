@@ -413,7 +413,7 @@ int main(_, v) double *v; int _;{
 
 
 <p>
-  En cualquier optimización, ya sea <a href="/programacion/peso-hamming-y-optimizacion/">0, 1 o 2</a>, para averiguar la contraseña basta con poner un punto de ruptura en la función <code>decode</code>:
+  En cualquier optimización, ya sea <a href="/peso-hamming-y-optimizacion/">0, 1 o 2</a>, para averiguar la contraseña basta con poner un punto de ruptura en la función <code>decode</code>:
 </p>
 
 

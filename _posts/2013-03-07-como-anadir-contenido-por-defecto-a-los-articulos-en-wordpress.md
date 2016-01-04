@@ -14,7 +14,7 @@ tags:
   - contenido por defecto en post wordpress
 ---
 <img src="/images/2012/05/Screenshot-05302012-111511-AM1.png" alt="Wordpress" width="123" height="116" class="thumbnail alignleft size-full wp-image-761" />  
-Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir [shortcodes][1] que usas habitualmente, pedir a los lectores que se suscriban al [feed del blog][2], que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto. 
+Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al [feed del blog][2], que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto. 
 
 Es bastante sencillo lograr esta funcionalidad, en el archivo *functions.php* de tu tema añade:
 
@@ -29,11 +29,10 @@ Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenid
 
 #### Fuente
 
-*How to Add Default Content in Your WordPress Post Editor* »» <a href="http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/" target="_blank">wpbeginner</a> 
+*How to Add Default Content in Your WordPress Post Editor* »» <a href="http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/" target="_blank">wpbeginner</a>
 
 
 
- [1]: /shortcodes/
  [2]: /rssfeed/
 
 {% include _toc.html %}

@@ -21,22 +21,22 @@ Hace poco, mientras escribía un [CustomAdapter][1] para una aplicación en la q
 #### Compound Drawables
 
 Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un TextView. Suele ser frecuente encontrarse en una lista de elementos una imagen junto a un texto. Algo así:  
-  
+
 <!--ad-->
 
-  
+
 &nbsp;
 
 {% highlight xml %}<LinearLayout
     <!--....--> >
- 
+
     <ImageView
-        
+
 
 <!--....--> />
- 
+
     <TextView
-       
+
 
 <!--....--> />
 </LinearLayout>
@@ -48,7 +48,7 @@ Como es frecuente en Android, hay dos formas de hacer esto, mediante código o m
 
 El método `setCompoundDrawableWithIntrinsicBounds()`, se encarga de unir un ImageView a un TextView, como menciona su documentación:
 
-> Sets the Drawables (if any) to appear to the left of, above, to the right of, and below the text. Use 0 if you do not want a Drawable there. The Drawables&#8217; bounds will be set to their intrinsic bounds. 
+> Sets the Drawables (if any) to appear to the left of, above, to the right of, and below the text. Use 0 if you do not want a Drawable there. The Drawables&#8217; bounds will be set to their intrinsic bounds.
 
 Los cuatro parámetros que acepta este método son las imágenes a adjuntar al texto, se puede adjuntar a la izquierda, arriba, derecha o abajo. Si solo interesa fijar una imagen a la izquierda del texto, basta con pasar un 0 a los 3 parámetros restantes.
 
@@ -82,7 +82,7 @@ Con esta pequeña optimización estamos reduciendo el layout de dos a un View, p
 
 
 
- [1]: /how-to/adapter-personalizado-en-android/ "Cómo crear un adapter personalizado en Android"
+ [1]: /adapter-personalizado-en-android/ "Cómo crear un adapter personalizado en Android"
  [2]: /programacion-android-interfaz-grafica/ "Programación Android: Interfaz gráfica – Conceptos básicos"
 
 {% include _toc.html %}

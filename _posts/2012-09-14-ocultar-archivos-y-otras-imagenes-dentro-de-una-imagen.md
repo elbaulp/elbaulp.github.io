@@ -19,7 +19,7 @@ tags:
   <a href="/images/2012/09/winzip_xp_encrypt_icon11.gif"><img class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/images/2012/09/winzip_xp_encrypt_icon11.gif" alt="" width="316" height="304" /></a>
 </p>
 
-Hace unos meses publiqué una <a href="/programacion/ocultarrevelar-informacion-dentro-de/" target="_blank">entrada</a> en la que explicaba (Sin mostar código) una práctica que me mandaron en la asignatura metodología de la programación.
+Hace unos meses publiqué una <a href="/ocultarrevelar-informacion-dentro-de/" target="_blank">entrada</a> en la que explicaba (Sin mostar código) una práctica que me mandaron en la asignatura metodología de la programación.
 
 En estos meses de verano he ido modificando esta práctica para cambiarle la funcionalidad y así poder compartirla con vosotros.
 

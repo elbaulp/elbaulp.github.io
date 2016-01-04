@@ -55,7 +55,7 @@ Lo último que una empresa desea es aparecer en una lista de las <a href="http:/
 
 ### Conclusión
 
-Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un atacante puede hacerse con nuestros datos, está claro que con una contraseña no estamos protegidos, así que lo recomendable es usar, siempre que se pueda, otra capa de seguridad como la [autentificación de dos factores][4]. Además, para generar contraseñas bastante fuertes es posible usar webs como <a href="http://passwordsgenerator.net/" target="_blank">passwordsgenerator.net</a>. El problema de este tipo de contraseñas es que son imposibles de recordar. Una solución es guardarlas en un fichero de texto y encriptarlas con <a href="/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/" title="Editar y crear archivos cifrados con GPG en Vim" target="_blank">GPG</a>.
+Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un atacante puede hacerse con nuestros datos, está claro que con una contraseña no estamos protegidos, así que lo recomendable es usar, siempre que se pueda, otra capa de seguridad como la [autentificación de dos factores][4]. Además, para generar contraseñas bastante fuertes es posible usar webs como <a href="http://passwordsgenerator.net/" target="_blank">passwordsgenerator.net</a>. El problema de este tipo de contraseñas es que son imposibles de recordar. Una solución es guardarlas en un fichero de texto y encriptarlas con <a href="/editar-y-crear-archivos-cifrados-con-gpg-en-vim/" title="Editar y crear archivos cifrados con GPG en Vim" target="_blank">GPG</a>.
 
 #### Referencias
 

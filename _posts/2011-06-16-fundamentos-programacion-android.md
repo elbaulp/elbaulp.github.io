@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  - /opensource/fundamentos-programacion-android/
-  - /opensource/fundamentos-programacion-android/
-  - /opensource/fundamentos-programacion-android/
+  - /fundamentos-programacion-android/
+  - /fundamentos-programacion-android/
+  - /fundamentos-programacion-android/
 categories:
   - android
   - opensource

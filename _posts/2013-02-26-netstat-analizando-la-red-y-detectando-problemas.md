@@ -28,7 +28,7 @@ tags:
 ---
 <img src="/images/2012/07/sh1.png" alt="netstat" width="128" height="128" class="thumbnail alignleft size-full wp-image-836" style="float:left" />  
 netstat es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.  
-  
+
 <!--ad-->
 
 ### Netstat es un paquete de herramienas de red
@@ -44,50 +44,50 @@ Es posible mostrar las conexiones que existen actualmente entre tu máquina y ot
 {% highlight bash %}$ sudo netstat -apA inet
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 *:sunrpc                *:*                     LISTEN      1775/rpcbind    
+tcp        0      0 *:sunrpc                *:*                     LISTEN      1775/rpcbind
 tcp        0      0 *:38768                 *:*                     LISTEN      1808/rpc.statd  
-tcp        0      0 localhost:smtp          *:*                     LISTEN      2861/exim4      
-tcp        0      0 *:17500                 *:*                     LISTEN      2477/dropbox    
+tcp        0      0 localhost:smtp          *:*                     LISTEN      2861/exim4
+tcp        0      0 *:17500                 *:*                     LISTEN      2477/dropbox
 tcp        0      0 hkr-pc.local:48985      wordpress.com:https     ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:60706      93.184.220.111:http     TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:60684      93.184.220.111:http     TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:44415      216.151.210.122:http    TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:43597      72.21.91.121:http       TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:35340      178-33-113-45.ovh.:http TIME_WAIT   -               
+tcp        0      0 hkr-pc.local:60706      93.184.220.111:http     TIME_WAIT   -
+tcp        0      0 hkr-pc.local:60684      93.184.220.111:http     TIME_WAIT   -
+tcp        0      0 hkr-pc.local:44415      216.151.210.122:http    TIME_WAIT   -
+tcp        0      0 hkr-pc.local:43597      72.21.91.121:http       TIME_WAIT   -
+tcp        0      0 hkr-pc.local:35340      178-33-113-45.ovh.:http TIME_WAIT   -
 tcp        0      0 hkr-pc.local:36162      76.74.254.120:https     ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:44472      76.74.254.123:http      TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:35336      178-33-113-45.ovh.:http TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:43599      72.21.91.121:http       TIME_WAIT   -               
+tcp        0      0 hkr-pc.local:44472      76.74.254.123:http      TIME_WAIT   -
+tcp        0      0 hkr-pc.local:35336      178-33-113-45.ovh.:http TIME_WAIT   -
+tcp        0      0 hkr-pc.local:43599      72.21.91.121:http       TIME_WAIT   -
 tcp        0      0 hkr-pc.local:37806      amung.us:http           ESTABLISHED 3451/firefox.real
-tcp        0  13352 hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED 2477/dropbox    
+tcp        0  13352 hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED 2477/dropbox
 tcp        0      0 hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:52897      wg-in-f95.1e100.ne:http TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:60689      93.184.220.111:http     TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:60687      93.184.220.111:http     TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:60685      93.184.220.111:http     TIME_WAIT   -               
+tcp        0      0 hkr-pc.local:52897      wg-in-f95.1e100.ne:http TIME_WAIT   -
+tcp        0      0 hkr-pc.local:60689      93.184.220.111:http     TIME_WAIT   -
+tcp        0      0 hkr-pc.local:60687      93.184.220.111:http     TIME_WAIT   -
+tcp        0      0 hkr-pc.local:60685      93.184.220.111:http     TIME_WAIT   -
 tcp        0      0 hkr-pc.local:43335      wordpress.com:https     ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:52902      wg-in-f95.1e100.ne:http TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:44416      216.151.210.122:http    TIME_WAIT   -               
-tcp       38      0 hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  2477/dropbox    
+tcp        0      0 hkr-pc.local:52902      wg-in-f95.1e100.ne:http TIME_WAIT   -
+tcp        0      0 hkr-pc.local:44416      216.151.210.122:http    TIME_WAIT   -
+tcp       38      0 hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  2477/dropbox
 tcp        0      0 hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:43601      72.21.91.121:http       TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:60704      93.184.220.111:http     TIME_WAIT   -               
+tcp        0      0 hkr-pc.local:43601      72.21.91.121:http       TIME_WAIT   -
+tcp        0      0 hkr-pc.local:60704      93.184.220.111:http     TIME_WAIT   -
 tcp        0      0 hkr-pc.local:41758      199.119.233.72.sta:http ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:60710      93.184.220.111:http     TIME_WAIT   -               
+tcp        0      0 hkr-pc.local:60710      93.184.220.111:http     TIME_WAIT   -
 tcp        0      0 hkr-pc.local:52920      wordpress.com:http      ESTABLISHED 3451/firefox.real
 tcp        0      0 hkr-pc.local:36232      76.74.254.123:https     ESTABLISHED 3451/firefox.real
-tcp        0      0 hkr-pc.local:60688      93.184.220.111:http     TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED 2477/dropbox    
-tcp        0      0 hkr-pc.local:60686      93.184.220.111:http     TIME_WAIT   -               
-tcp        0      0 hkr-pc.local:43600      72.21.91.121:http       TIME_WAIT   -               
-udp        0      0 *:bootpc                *:*                                 2405/dhclient   
-udp        0      0 *:sunrpc                *:*                                 1775/rpcbind    
-udp        0      0 *:678                   *:*                                 1775/rpcbind    
+tcp        0      0 hkr-pc.local:60688      93.184.220.111:http     TIME_WAIT   -
+tcp        0      0 hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED 2477/dropbox
+tcp        0      0 hkr-pc.local:60686      93.184.220.111:http     TIME_WAIT   -
+tcp        0      0 hkr-pc.local:43600      72.21.91.121:http       TIME_WAIT   -
+udp        0      0 *:bootpc                *:*                                 2405/dhclient
+udp        0      0 *:sunrpc                *:*                                 1775/rpcbind
+udp        0      0 *:678                   *:*                                 1775/rpcbind
 udp        0      0 localhost:712           *:*                                 1808/rpc.statd  
-udp        0      0 *:17500                 *:*                                 2477/dropbox    
-udp        0      0 *:mdns                  *:*                                 2298/avahi-daemon: 
+udp        0      0 *:17500                 *:*                                 2477/dropbox
+udp        0      0 *:mdns                  *:*                                 2298/avahi-daemon:
 udp        0      0 *:44290                 *:*                                 1808/rpc.statd  
-udp        0      0 *:53066                 *:*                                 2405/dhclient   
+udp        0      0 *:53066                 *:*                                 2405/dhclient
 udp        0      0 *:1900                  *:*                                 2905/minissdpd  
 udp        0      0 *:45008                 *:*                                 2298/avahi-daemon:
 {% endhighlight %}
@@ -96,7 +96,7 @@ Las parámetros pasados a netstat son; *-a* para mostrar todos los sockets, *-p*
 
 El singnificado de cada columna es el siguiente:
 
-**Proto**: Indica el protocolo usado por el socket, puede ser TCP o UDP (Son protocolos de red). TCP se usa para obtener conexiones en las que se asegura que todos los paquetes llegan a su destino, en el orden correcto. El problema es que se vuelve muy lento si la conexión es mala. UDP es mucho más rápido, pero puede perder paquetes o entregarlos en un orden incorrecto. En resumen, TCP se usa para navegar por internet y descargar ficheros y UDP se usa en videos streaming y juegos. 
+**Proto**: Indica el protocolo usado por el socket, puede ser TCP o UDP (Son protocolos de red). TCP se usa para obtener conexiones en las que se asegura que todos los paquetes llegan a su destino, en el orden correcto. El problema es que se vuelve muy lento si la conexión es mala. UDP es mucho más rápido, pero puede perder paquetes o entregarlos en un orden incorrecto. En resumen, TCP se usa para navegar por internet y descargar ficheros y UDP se usa en videos streaming y juegos.
 
 **Recv-Q y Send-Q**: Indican la cantidad de bytes que hay en cola para dicho socket. En Recv-Q datos esperando a ser leidos y en Send-Q a ser enviados. Normalmente ambas columnas han de estar a 0. De lo contrario puede que exista algún problema. En el ejemplo hay dos sockets con valores distintos a cero, los miraremos más adelante.
 
@@ -122,7 +122,7 @@ tcp        0      0 hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute
 tcp        0      0 hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
-tcp        0      0 hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -               
+tcp        0      0 hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -
 tcp        0      0 hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 {% endhighlight %}
@@ -154,9 +154,9 @@ default         10.61.29.89     0.0.0.0         UG        0 0          0 eth1
 
 Una breve explicación del significado de las columnas:
 
-**Destination**: Patrón con el que se compara la dirección de destino del paquete. Cuando se envia un paquete a internet, se comprueba esta tabla de arriba a abajo hasta que se cumpla el patrón, luego se envía. El valor 0 se usa como comodín, si usamos este patrón 192.168.1.0, las direcciones desde 192.168.1.1 hasta 192.168.1.255 serán valores válidos para dicho patrón. 
+**Destination**: Patrón con el que se compara la dirección de destino del paquete. Cuando se envia un paquete a internet, se comprueba esta tabla de arriba a abajo hasta que se cumpla el patrón, luego se envía. El valor 0 se usa como comodín, si usamos este patrón 192.168.1.0, las direcciones desde 192.168.1.1 hasta 192.168.1.255 serán valores válidos para dicho patrón.
 
-**Gateway**: Indica dónde mandar el paquete que coincide con el patrón de la columna anterior. El * en esta columna significa *“enviar localmente”* (El destino estará en la misma red.) 
+**Gateway**: Indica dónde mandar el paquete que coincide con el patrón de la columna anterior. El * en esta columna significa *“enviar localmente”* (El destino estará en la misma red.)
 
 **Genmask**: La máscara de subred. Se usa para determinar cuantos bits desde el principio de la ip se usan para identificar una subred.
 
@@ -192,13 +192,13 @@ El significado de cada columna es el siguiente:
 
 **TX-OK/ERR/DRP/OVR**: Significan lo mismo que sus homólogos en la columna RX, pero para paquetes enviados por la interfaz.
 
-**FLG**: Flags activas para la interfaz. “*B*” de “*Capacidad de broadcast*”, es decir, la interfaz es capaz de transmitir un paquete a todos los equipos de su misma subred. “*M*” de “*capacidad de Multicast*”, la interfaz puede enviar paquetes con múltiples destinos. “*L*” de “*interfaz loopback*”, la interfaz con dicho flag activa coloca todo que envía inmediatamente en su cola de recibido. “*U*” y “*R*” significan “*Up*”(Activa) y “*running*”(ejecutandose) respectivamente. 
+**FLG**: Flags activas para la interfaz. “*B*” de “*Capacidad de broadcast*”, es decir, la interfaz es capaz de transmitir un paquete a todos los equipos de su misma subred. “*M*” de “*capacidad de Multicast*”, la interfaz puede enviar paquetes con múltiples destinos. “*L*” de “*interfaz loopback*”, la interfaz con dicho flag activa coloca todo que envía inmediatamente en su cola de recibido. “*U*” y “*R*” significan “*Up*”(Activa) y “*running*”(ejecutandose) respectivamente.
 
 El motivo por el que el valor del “*MTU*” es mayor en la interfaz de loopback se debe a motivos de rendimiento, ya que no tendrá que partir los paquetes en trozos más pequeños.
 
 Como se aprecia en el ejemplo, todo parece estar correcto, ya que las columnas de errores están a 0. Una opción interesante de este comando es añadirle la opción *-c*, es decir “*netstat -ci*”, para ver la tabla cada segundo, y comprobar así si hay algún error.
 
-Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la <a href="http://linuxacademy.com" target="_blank">Linux Academy</a>, perteneciente al autor cuyo artículo he traducido. 
+Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la <a href="http://linuxacademy.com" target="_blank">Linux Academy</a>, perteneciente al autor cuyo artículo he traducido.
 
 #### Referencias
 
@@ -207,6 +207,6 @@ Como nota final, y aunque este no es un artículo patrocinado, considero que deb
 
 
 
- [1]: /nginx/
+ [1]: /tag/#nginx
 
 {% include _toc.html %}

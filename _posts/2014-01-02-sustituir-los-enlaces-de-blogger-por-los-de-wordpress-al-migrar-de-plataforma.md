@@ -43,7 +43,7 @@ Ahora que tenemos la base de datos descargada, la descomprimimos y nos paramos a
 
 #### Explicación de la expresión regular
 
-Lo que tienen las expresiones regulares es que cuando pasa un tiempo, y aunque la hayas creado tú, es probable que no tengas ni idea de por qué la hiciste y cómo se te ocurrió. Hace tiempo en la sección <a href="https://elbauldelprogramador.com/vinetas-geek/" title="Sección Viñetas Geek" target="_blank">Viñetas Geek de Domingo</a> apareció una imagen que refleja esta sensación:
+Lo que tienen las expresiones regulares es que cuando pasa un tiempo, y aunque la hayas creado tú, es probable que no tengas ni idea de por qué la hiciste y cómo se te ocurrió. Hace tiempo en la sección <a href="https://elbauldelprogramador.com/" title="Sección Viñetas Geek" target="_blank">Viñetas Geek de Domingo</a> apareció una imagen que refleja esta sensación:
 
 <figure>
   <a href="/images/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg"><img src="/images/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" title="Explicado simplemente - Expresiones regulares del día anterior" alt="Explicado simplemente - Expresiones regulares del día anterior" /></a>

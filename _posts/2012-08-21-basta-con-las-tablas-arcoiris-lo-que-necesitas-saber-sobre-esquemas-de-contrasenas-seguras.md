@@ -6,8 +6,8 @@ layout: post
 guid: /?p=870
 permalink: /basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Artículos
   - Hacking
@@ -24,7 +24,7 @@ tags:
 
 En la esfera social de bookmark (&#8220;socialbookmarkosphere&#8221;) se habla [insistentemente][1] de las &#8220;<a href="http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html" target="_blank">Tablas Arcoiris</a>&#8220;, cuál es el significado real de *password security*, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de *Windows for Workgroups *hace 15 años. Esto realmente me enloquece. Si el eje soporte &#8220;avanzado&#8221; de tu modelo de amenazas es &#8220;Tablas Arcoiris&#8221;, deja de trabajar en tu aplicación *Calendario Social de Compras* ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.
 
-**Para comenzar, almacenamiento de contraseñas 101**: Los servidores <a title="Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)" href="/internet/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/" target="_blank">no suelen almacenar las contraseñas reales</a>. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.
+**Para comenzar, almacenamiento de contraseñas 101**: Los servidores <a title="Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)" href="/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/" target="_blank">no suelen almacenar las contraseñas reales</a>. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.
 
 Ahora re-expliquemos las Tablas Arcoiris:  
 <!--ad-->

@@ -12,8 +12,8 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  - /opensource/disponible-la-primera-parte-del-curso/
-  - /opensource/disponible-la-primera-parte-del-curso/
+  - /disponible-la-primera-parte-del-curso/
+  - /disponible-la-primera-parte-del-curso/
 share_data:
   - '{"like_count":"0","share_count":"0","twitter":0,"plusone":3,"stumble":0,"pinit":0,"count":3,"time":1333549437}'
   - '{"like_count":"0","share_count":"0","twitter":0,"plusone":3,"stumble":0,"pinit":0,"count":3,"time":1333549437}'

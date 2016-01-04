@@ -23,10 +23,10 @@ tags:
 
 Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.
 
-Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante [iptables][1]. 
+Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante [iptables][1].
 
 Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:  
-  
+
 <!--ad-->
 
 {% highlight bash %}iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix "IP DROP SPOOF A:"
@@ -53,12 +53,12 @@ En las referencias puedes encontrar más información sobre iptables. También p
 
 #### Referencias
 
-*Iptables Drop IP Address* »» <a href="http://www.cyberciti.biz/faq/linux-iptables-drop/" target="_blank">Visitar sitio</a> 
+*Iptables Drop IP Address* »» <a href="http://www.cyberciti.biz/faq/linux-iptables-drop/" target="_blank">Visitar sitio</a>
 
 
 
  [1]: https://elbauldelprogramador.com/?s=iptables
- [2]: /internet/20-ejemplos-de-iptables-para-sysadmins/
+ [2]: /20-ejemplos-de-iptables-para-sysadmins/
  [3]: https://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
 
 {% include _toc.html %}

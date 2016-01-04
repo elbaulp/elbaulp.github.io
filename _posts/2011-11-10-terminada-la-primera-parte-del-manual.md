@@ -35,33 +35,33 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
 
 <ul style="list-style-type: none;">
   <li>
-    <a href="/2011/09/programacion-android-recursos.html">Programación Android: Recursos compilados y no compilados</a>
+    <a href="//programacion-android-recursos">Programación Android: Recursos compilados y no compilados</a>
   </li>
   <li>
-    <a href="/2011/09/programacion-android-recursos-arrays-de.html">Programación Android:Recursos &#8211; Arrays de strings</a>
+    <a href="//programacion-android-recursos-arrays-de">Programación Android:Recursos &#8211; Arrays de strings</a>
   </li>
   <li>
-    <a href="/2011/09/programacion-android-recursos-plurales.html">Programación Android: Recursos &#8211; Plurales</a>
+    <a href="/programacion-android-recursos-plurales.html">Programación Android: Recursos &#8211; Plurales</a>
   </li>
   <li>
-    <a href="/2011/09/programacion-android-recursos-trabajar.html">Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios</a>
+    <a href="/programacion-android-recursos-trabajar.html">Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios</a>
   </li>
   <li>
-    <a href="/2011/11/programacion-android-recursos-trabajar.html">Programación Android: Recursos &#8211; Trabajar con recursos RAW</a>
+    <a href="//programacion-android-recursos-trabajar">Programación Android: Recursos &#8211; Trabajar con recursos RAW</a>
   </li>
   <li>
-    <a href="/2011/11/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos &#8211; Trabajar con recursos Assets</a>
+    <a href="/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos &#8211; Trabajar con recursos Assets</a>
   </li>
   <li>
-    <a href="/2011/11/programacion-android-recursos-repasando.html">Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos</a>
+    <a href="//programacion-android-recursos-repasando">Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos</a>
   </li>
   <li>
-    <a href="/2011/11/programacion-android-recursos-recursos.html">Programación Android: Recursos &#8211; Recursos y cambios de configuración</a>
+    <a href="//programacion-android-recursos-recursos">Programación Android: Recursos &#8211; Recursos y cambios de configuración</a>
   </li>
 </ul>
 
 <p class="alert">
-  <a href="/opensource/disponible-la-primera-parte-del-curso/">Pasos a seguir para obtener el curso en pdf</a>
+  <a href="/disponible-la-primera-parte-del-curso/">Pasos a seguir para obtener el curso en pdf</a>
 </p>
 
 

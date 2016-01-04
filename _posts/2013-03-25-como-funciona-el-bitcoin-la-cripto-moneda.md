@@ -97,7 +97,7 @@ Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más cl
 
 
 
- [1]: /security-now-articulos/
+ [1]: /security-now//
  [2]: /opensource/
  [3]: /?s=criptografia
  [4]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
