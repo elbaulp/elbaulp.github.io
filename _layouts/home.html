@@ -28,7 +28,7 @@
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
-  <div id="index" itemscope itemtype="http://schema.org/Blog">
+  <div class="h-entry" id="index" itemscope itemtype="http://schema.org/Blog">
     <h3><a href="{{ site.url}}/posts/">Últimos artículos</a></h3>
     {% for post in site.posts limit:10 %}
       {% include _postsLoop.html %}
