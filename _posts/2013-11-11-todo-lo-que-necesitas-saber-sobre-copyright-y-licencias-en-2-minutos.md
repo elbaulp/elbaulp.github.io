@@ -40,7 +40,7 @@ Si usas **[GitHub][1]**, aún tardarás menos tiempo en escoger licencia, ya que
 
 #### Referencias
 
-*Everything You NEED to Know About Software Copyright and Licensing-to-Share in 2 Minutes* »» <a href="http://www.outercurve.org/Blogs/EntryId/100/Everything-You-NEED-to-Know-About-Software-Copyright-and-Licensing-to-Share-in-2-Minutes" target="_blank">outercurve.org</a> 
+*Everything You NEED to Know About Software Copyright and Licensing-to-Share in 2 Minutes* »» <a href="http://www.outercurve.org/Blogs/EntryId/100/Everything-You-NEED-to-Know-About-Software-Copyright-and-Licensing-to-Share-in-2-Minutes" target="_blank">outercurve.org</a>
 
 
 

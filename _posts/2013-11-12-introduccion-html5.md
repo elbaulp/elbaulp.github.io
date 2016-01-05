@@ -58,9 +58,11 @@ Todo el que empieza en esto esta deseando ir al código escribir su primera pagi
 
 A esta estructura le podemos dar “vida” simplemente abriendo nuestro blog de notas, y pegándolo, dándole el nombre que deseemos y la extensión html. Después de eso si la abrimos con cualquier navegador podemos verla funcionando.
 
-<img src="/images/2013/11/Introducción-a-HTML5.png" alt="Introducción a HTML5" width="481" height="409" class="thumbnail aligncenter size-full wp-image-1972" />
+<figure>
+  <a href="/images/2013/11/Introducción-a-HTML5.png"><img src="/images/2013/11/Introducción-a-HTML5.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
-Ahora os explicare qué es cada etiqueta, la primera: el **Doctipe**, ya la conocemos, seguidamente tenemos una etiqueta **<html>**; que cierra al final del documento **</html>** podemos intuir que hay que incluir dentro todo el contenido html y justamente es así como funciona debemos escribir dentro todo el contenido de nuestra página, la siguiente etiqueta es el **<head>** allí debemos incluir los enlaces a nuestras hojas de estilo, etiquetas de metadatos (mas adelante veremos que son y para que sirven), el titulo de la página, este se incluye dentro de las etiquetas **<title> </title>** y como vemos en la imagen superior lo que escribamos aquí va a aparecer en la pestaña de nuestra pagina; se debe cerrar con **</head>**; seguidamente nos encontramos con **<body>** aquí es donde escribiremos todo el cuerpo de nuestra web.
+Ahora os explicare qué es cada etiqueta, la primera: el **Doctipe**, ya la conocemos, seguidamente tenemos una etiqueta **<html>**; que cierra al final del documento **</html>** podemos intuir que hay que incluir dentro todo el contenido html y justamente es así como funciona debemos escribir dentro todo el contenido de nuestra página, la siguiente etiqueta es el **<head>** allí debemos incluir los enlaces a nuestras hojas de estilo, etiquetas de metadatos (mas adelante veremos que son y para que sirven), el titulo de la página, este se incluye dentro de las etiquetas **<title>** **</title>** y como vemos en la imagen superior lo que escribamos aquí va a aparecer en la pestaña de nuestra pagina; se debe cerrar con **</head>**; seguidamente nos encontramos con **<body>** aquí es donde escribiremos todo el cuerpo de nuestra web.
 
 Estas son las etiquetas básicas, el body podemos complicarlo todo lo que queramos o necesitemos añadiendo tantas etiquetas <div> </div> conocidas como divisiones, o capas, y dentro de cada una meteremos el contenido que deseemos, imágenes, texto, vídeo&#8230;
 
@@ -68,47 +70,45 @@ Estas son las etiquetas básicas, el body podemos complicarlo todo lo que queram
 
 Las etiquetas mas usadas son:
 
-  * <html>: ya la conocemos; es la raíz de cualquier pagina, y todos los demás elementos deben
-descender de él.</li>
-
-  * <head>. Es la cabecera de la pagina, en ella incluiremos todos los enlaces a documentos
-externos y metadatos.</li>
-
-  * <title>: es el titulo de la pagina.
-  * <link> la usaremos para enlazar a documentos JS([Java Script][2]) y CSS.
-  * <meta>: define algún metadato, como las palabras clave, descripción de la pagina, etc
-  * <body> Dentro de él tendremos el contenido de la página
-  * <section> Nueva etiqueta solo disponible en paginas HTML5 y define una sección de la página
-  * <nav> también es nueva en HTML5 se utiliza para contener los enlaces de navegación
-  * <article> es otra de las novedades de la ultima versión del HTML aquí escribiremos los artículos, lo cual viene siendo algo que no tiene necesariamente que ver con el resto de la web.
-  * <hx> sustituiremos la X por un numero desde el 1 al 6 se usa para definir encabezados, cuanto mas bajo sea el numero mas importante sera el encabezado, por lo que <h1> es mas importante que <h2> predefinido por nuestros navegadores disminuye la fuente de cada <hx> según aumente el numero por lo que <h2> tendrá una fuente (tamaño de letra) mayor que un <h3>, lo suyo es mantener esta concordancia aunque podemos editarlo desde nuestras hojas de estilos.
-  * <header> nuevo elemento del HTML5 aquí escribiremos la cabecera de la pagina, normalmente es el lugar donde se coloca el logo, titulo de la web, y menú de navegación
-      * <footer> también hemos hablado de el antes, es otro de los nuevos elementos del HTML5 y como su nombre indica es el pie, generalmente de la pagina en la que este declarado, pero también es correcto usarlo para escribir cualquier otro pie que pueda aparecer en la pagina, por ejemplo el pie de un articulo, en donde podríamos colocar el nombre del autor que lo escribió
-      * <p> lo que pongamos en su interior se mostrara como un párrafo
-      * <hr> indica una separación entre secciones, artículos, o algún contenido, visualmente lo veremos como una linea horizontal
-      * <ol> define una lista ordenada normalmente se visualizaran con un numero delante de cada elemento
-      * <ul> define una lista sin orden
-      * <li> se incluye dentro de cualquiera de los 2 elementos anteriores, son los elementos de la lista.
-      * <figure> Nuevo elemento en HTML5 cada vez mas usado, se utiliza para incluir una imagen en su interior
-      * <img> aquí declararemos la imagen que queremos mostrar
-      * <div> la etiqueta mas usada, podemos sustituir casi cualquiera de las anteriores por esta, hasta la aparición del HTML5 se solían incluir todas las divisiones de la web con esta etiqueta y se le daban distintos estilos, según se fuera a usar, aun así, se recomienda no usarla si existe otra etiqueta mas moderna que haga lo que queremos hacer.
-          * <a> una de las etiquetas mas utilizadas, se utiliza para definir enlaces, ya sean interiores(dentro de las misma web) o exteriores (hacia otras webs)
-          * <mark> cada vez mas utilizada es otra de las novedades HTML5 se utiliza para resaltar una parte de la pagina.
-          * <span> muy usado para dar un estilo distinto a alguna parte de un párrafo
-          * <iframe> se utiliza para insertar un contenido dentro de la pagina, ya sea un vídeo (si quisiéramos insertar un vídeo de YouTube esta seria la etiqueta) u otra pagina, así como cualquier otro contenido externo a nuestra pagina y que necesitemos se visualice en ella.
-          * <embed> muy similar al anterior, pero con algunas mejoras, es otra de las novedades del HTML5
-          * <vídeo> es la etiqueta que usaremos para visualizar un vídeo en nuestra web
-          * <audio> exactamente lo mismo que la anterior, pero para audio, ambas son novedades del HTML5.
-          * <canvas> es una capa especial para imágenes,(bitmaps) es utilizada para dibujar, especial para juegos e imágenes en movimiento
-          * <table> como su nombre indica se usa para incluir tablas en la pagina, no se aconseja usarla
-          * <tr> representa una fila de la tabla
-          * <td> representa una celda de la tabla
-          * <form> se usa para crear formularios, desde los cuales introduciremos datos, y ejecutaremos ciertas funciones.
-          * <label> dentro de los formularios suele usarse para sacar un texto estático, el típico que aparece encima de la ya estándar caja de texto blanca que dice teclee su nombre.
-          * <input> tenemos gran variedad de campos en artículos posteriores hablaremos de ellos, pero todos ellos sirven para interactuar con el usuario, ya sean un checkbox (la cajita blanca que marcaremos con un check); campos de texto para introducir nuestro nombre, teléfono, etc&#8230;
-          * <select> es el desplegable con distintas opciones que todos hemos visto para seleccionar nuestro país por ejemplo.
-          * <option> cada una de las opciones del <select>
-          * <textarea> es un campo de texto con varias lineas para escribir un texto extenso.</ul>
+  * &lt;html>: ya la conocemos; es la raíz de cualquier pagina, y todos los demás elementos deben
+descender de él.
+  * &lt;head>. Es la cabecera de la pagina, en ella incluiremos todos los enlaces a documentos
+externos y metadatos
+  * &lt;title>: es el titulo de la pagina.
+  * &lt;link> la usaremos para enlazar a documentos JS([Java Script][2]) y CSS.
+  * &lt;meta>: define algún metadato, como las palabras clave, descripción de la pagina, etc
+  * &lt;body> Dentro de él tendremos el contenido de la página
+  * &lt;section> Nueva etiqueta solo disponible en paginas HTML5 y define una sección de la página
+  * &lt;nav> también es nueva en HTML5 se utiliza para contener los enlaces de navegación
+  * &lt;article> es otra de las novedades de la ultima versión del HTML aquí escribiremos los artículos, lo cual viene siendo algo que no tiene necesariamente que ver con el resto de la web.
+  * &lt;hx> sustituiremos la X por un numero desde el 1 al 6 se usa para definir encabezados, cuanto mas bajo sea el numero mas importante sera el encabezado, por lo que &lt;h1> es mas importante que &lt;h2> predefinido por nuestros navegadores disminuye la fuente de cada &lt;hx> según aumente el numero por lo que &lt;h2> tendrá una fuente (tamaño de letra) mayor que un &lt;h3>, lo suyo es mantener esta concordancia aunque podemos editarlo desde nuestras hojas de estilos.
+  * &lt;header> nuevo elemento del HTML5 aquí escribiremos la cabecera de la pagina, normalmente es el lugar donde se coloca el logo, titulo de la web, y menú de navegación
+      * &lt;footer> también hemos hablado de el antes, es otro de los nuevos elementos del HTML5 y como su nombre indica es el pie, generalmente de la pagina en la que este declarado, pero también es correcto usarlo para escribir cualquier otro pie que pueda aparecer en la pagina, por ejemplo el pie de un articulo, en donde podríamos colocar el nombre del autor que lo escribió
+      * &lt;p> lo que pongamos en su interior se mostrara como un párrafo
+      * &lt;hr> indica una separación entre secciones, artículos, o algún contenido, visualmente lo veremos como una linea horizontal
+      * &lt;ol> define una lista ordenada normalmente se visualizaran con un numero delante de cada elemento
+      * &lt;ul> define una lista sin orden
+      * &lt;li> se incluye dentro de cualquiera de los 2 elementos anteriores, son los elementos de la lista.
+      * &lt;figure> Nuevo elemento en HTML5 cada vez mas usado, se utiliza para incluir una imagen en su interior
+      * &lt;img> aquí declararemos la imagen que queremos mostrar
+      * &lt;div> la etiqueta mas usada, podemos sustituir casi cualquiera de las anteriores por esta, hasta la aparición del HTML5 se solían incluir todas las divisiones de la web con esta etiqueta y se le daban distintos estilos, según se fuera a usar, aun así, se recomienda no usarla si existe otra etiqueta mas moderna que haga lo que queremos hacer.
+          * &lt;a> una de las etiquetas mas utilizadas, se utiliza para definir enlaces, ya sean interiores(dentro de las misma web) o exteriores (hacia otras webs)
+          * &lt;mark> cada vez mas utilizada es otra de las novedades HTML5 se utiliza para resaltar una parte de la pagina.
+          * &lt;span> muy usado para dar un estilo distinto a alguna parte de un párrafo
+          * &lt;iframe> se utiliza para insertar un contenido dentro de la pagina, ya sea un vídeo (si quisiéramos insertar un vídeo de YouTube esta seria la etiqueta) u otra pagina, así como cualquier otro contenido externo a nuestra pagina y que necesitemos se visualice en ella.
+          * &lt;embed> muy similar al anterior, pero con algunas mejoras, es otra de las novedades del HTML5
+          * &lt;vídeo> es la etiqueta que usaremos para visualizar un vídeo en nuestra web
+          * &lt;audio> exactamente lo mismo que la anterior, pero para audio, ambas son novedades del HTML5.
+          * &lt;canvas> es una capa especial para imágenes,(bitmaps) es utilizada para dibujar, especial para juegos e imágenes en movimiento
+          * &lt;table> como su nombre indica se usa para incluir tablas en la pagina, no se aconseja usarla
+          * &lt;tr> representa una fila de la tabla
+          * &lt;td> representa una celda de la tabla
+          * &lt;form> se usa para crear formularios, desde los cuales introduciremos datos, y ejecutaremos ciertas funciones.
+          * &lt;label> dentro de los formularios suele usarse para sacar un texto estático, el típico que aparece encima de la ya estándar caja de texto blanca que dice teclee su nombre.
+          * &lt;input> tenemos gran variedad de campos en artículos posteriores hablaremos de ellos, pero todos ellos sirven para interactuar con el usuario, ya sean un checkbox (la cajita blanca que marcaremos con un check); campos de texto para introducir nuestro nombre, teléfono, etc&#8230;
+          * &lt;select> es el desplegable con distintas opciones que todos hemos visto para seleccionar nuestro país por ejemplo.
+          * &lt;option> cada una de las opciones del &lt;select>
+          * &lt;textarea> es un campo de texto con varias lineas para escribir un texto extenso.
     Estas son las mas usadas, y estandarizadas, podemos ver todas desde multitud de webs, una buena de referencia es la de Mozilla.
 
     #### Referencias
