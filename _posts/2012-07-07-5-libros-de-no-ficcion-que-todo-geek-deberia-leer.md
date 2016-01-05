@@ -18,6 +18,8 @@ tags:
   - libros geek
   - didier newman
   - libros para geeks
+  - libros de no ficcion recomendados
+  - didier newman wikipedia
 modified: 2015-12-19T22:00:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image:

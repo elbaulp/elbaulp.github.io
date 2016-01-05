@@ -35,6 +35,11 @@ tags:
   - que es formato Ogg Vorbis
   - que es formato wav
   - que es formato WMA
+  - mejor formato de audio
+  - cual es el mejor codec de audio
+  - calidad lossless
+  - calidades de audio
+  - formatos alac
 image:
   thumb: 2012/07/original1.jpg
 ---

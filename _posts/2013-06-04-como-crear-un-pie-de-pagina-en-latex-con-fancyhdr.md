@@ -14,6 +14,8 @@ tags:
   - personalizar pie de página latex
   - pie de pagina latex
   - latex
+  - fancy hdr
+  - latex nota al pie
 image:
   thumb: 2013/05/latex_logo.png
 ---
