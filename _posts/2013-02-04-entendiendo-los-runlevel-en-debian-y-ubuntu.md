@@ -12,6 +12,11 @@ tags:
   - autoejecutar servicios linux
   - iniciar servicio linux
   - runlevel
+  - runlevel Debian
+  - runlevel linux
+  - init 3 debian
+  - linux runlevel
+  - modificar runlevel debian
 ---
 
 <figure>
