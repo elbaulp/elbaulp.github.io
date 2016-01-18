@@ -69,20 +69,21 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-newer');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
-    'uglify',
-    'imagemin',
-    'svgmin'
+    'newer:uglify',
+    'newer:imagemin',
+    'newer:svgmin'
   ]);
   grunt.registerTask('dev', [
     'watch'
   ]);
   grunt.registerTask('images', [
-    'imagemin',
-    'svgmin'
+    'newer:imagemin',
+    'newer:svgmin'
   ]);
 
 };
