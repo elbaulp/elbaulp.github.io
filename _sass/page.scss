@@ -199,7 +199,7 @@ $button-size: 1.5rem;
 }
 // When JavaScript is enabled, we hide the menu
 .js .nav ul {
-	max-height: 0;
+	max-height: 30em;
 	overflow: hidden;
 	@media #{$small} {
 		max-height: 30em;
