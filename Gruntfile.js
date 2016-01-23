@@ -59,6 +59,28 @@ module.exports = function(grunt) {
       dist: [
         'assets/js/scripts.min.js'
       ]
+    },
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'compressed',
+          sourcemap: 'none'
+        },
+        files: {                         // Dictionary of files
+          'assets/css/main.css': '_sass/main.scss'       // 'destination': 'source'
+        }
+      }
+    },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'assets/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'assets/css',
+          ext: '.min.css'
+        }]
+      }
     }
   });
 
@@ -68,6 +90,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-newer');
 
@@ -84,6 +108,9 @@ module.exports = function(grunt) {
   grunt.registerTask('images', [
     'newer:imagemin',
     'newer:svgmin'
+  ]);
+  grunt.registerTask('default', [
+    'sass'
   ]);
 
 };
