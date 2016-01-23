@@ -115,7 +115,10 @@ module.exports = function(grunt) {
     'clean',
     'newer:uglify',
     'newer:imagemin',
-    'newer:svgmin'
+    'newer:svgmin',
+    'newer:sass',
+    'newer:critical',
+    'newer:cssmin'
   ]);
   grunt.registerTask('dev', [
     'watch'
@@ -124,8 +127,9 @@ module.exports = function(grunt) {
     'newer:imagemin',
     'newer:svgmin'
   ]);
-  grunt.registerTask('default', [
-    'sass'
+  grunt.registerTask('css', [
+    'newer:sass',
+    'newer:critical',
+    'newer:cssmin'
   ]);
-
 };
