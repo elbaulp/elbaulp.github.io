@@ -63,12 +63,26 @@ module.exports = function(grunt) {
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
-          style: 'compressed',
+          style: 'expanded',
           sourcemap: 'none'
         },
         files: {                         // Dictionary of files
           'assets/css/main.css': '_sass/main.scss'       // 'destination': 'source'
         }
+      }
+    },
+    critical: {
+      test: {
+          options: {
+              base: './',
+              css: [
+                  'assets/css/main.css'
+              ],
+              width: 1366,
+              height: 768
+          },
+          src: '_site/index.html',
+          dest: 'assets/css/critical.css'
       }
     },
     cssmin: {
@@ -81,7 +95,7 @@ module.exports = function(grunt) {
           ext: '.min.css'
         }]
       }
-    }
+    },
   });
 
   // Load tasks
@@ -92,6 +106,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-newer');
 
