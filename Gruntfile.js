@@ -81,7 +81,7 @@ module.exports = function(grunt) {
               width: 1366,
               height: 768
           },
-          src: '_site/index.html',
+          src: '_site/como-recuperar-datos-borrados-de-un-disco/index.html',
           dest: 'assets/css/critical.css'
       }
     },

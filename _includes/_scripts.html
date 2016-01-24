@@ -36,7 +36,7 @@ ga('send', 'pageview');
   var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';
     l.href = '{{ site.url }}/assets/css/main.min.css';
-    var h = document.getElementsByTagName('head')[0]; h.appendChild(l);
+    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
   };
   var raf = requestAnimationFrame || mozRequestAnimationFrame ||
       webkitRequestAnimationFrame || msRequestAnimationFrame;
