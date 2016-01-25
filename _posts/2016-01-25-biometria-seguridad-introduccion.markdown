@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Biometría Aplicada a La Seguridad - Introduccion
+title: Biometría Aplicada a La Seguridad - Introducción
 date: 2016-01-25T12:05:30+01:00
 modified:
 categories:
