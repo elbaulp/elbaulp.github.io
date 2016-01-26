@@ -282,6 +282,10 @@ No obstante, el patrón puede verse alterado por situaciones como el
 estado físico o psíquico del usuario o la falta de costumbre de usar
 teclado (evolución del patrón).
 
+- Biometría aplicada a la seguiridad - Introducción
+- [Biometría aplicada a la seguiridad - Reconocimiento de patrones](/biometria-seguridad-patrones "Biometría aplicada a la seguiridad - Reconocimiento de patrones")
+<!-- - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos") -->
+
 #### Referencias
 
 - [M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la

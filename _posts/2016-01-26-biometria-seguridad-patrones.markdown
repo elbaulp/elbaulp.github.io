@@ -140,6 +140,9 @@ Esto está todavía mejorándose, pero ya se habla de que en un futuro se
 podrían desarrollar técnicas avanzadas de biometría, como por ejemplo,
 reconocimiento mediante ADN.
 
+- [Biometría aplicada a la seguiridad - Introducción](/biometria-seguridad-introduccion "Biometría aplicada a la seguiridad - Introducción")
+- Biometría aplicada a la seguiridad - Reconocimiento de patrones
+<!-- - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos") -->
 
 #### Referencias
 
