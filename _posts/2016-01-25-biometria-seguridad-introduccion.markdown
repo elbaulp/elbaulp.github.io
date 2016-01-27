@@ -21,9 +21,11 @@ image:
 El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura _Seguridad en Sistemas Operativos_ de la facultad de Ingeniería Informática de Granada (ETSIIT). Los componentes del grupo fueron [@MPV_Prod](http://twitter.com/MPV_Prod) , [@_musicalnote](http://twitter.com/_musicalnote) y [@ElBaulP](http://twitter.com/elbaulp). Este primer artículo es autoría de @MPV_Prod.
 {: .notice-info }
 
+# Índice
+
 - Biometría aplicada a la seguiridad - Introducción
 - [Biometría aplicada a la seguiridad - Reconocimiento de patrones](/biometria-seguridad-patrones "Biometría aplicada a la seguiridad - Reconocimiento de patrones")
-<!-- - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos") -->
+- [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos")
 
 <!--ad-->
 
@@ -282,9 +284,11 @@ No obstante, el patrón puede verse alterado por situaciones como el
 estado físico o psíquico del usuario o la falta de costumbre de usar
 teclado (evolución del patrón).
 
+# Índice
+
 - Biometría aplicada a la seguiridad - Introducción
 - [Biometría aplicada a la seguiridad - Reconocimiento de patrones](/biometria-seguridad-patrones "Biometría aplicada a la seguiridad - Reconocimiento de patrones")
-<!-- - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos") -->
+- [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos")
 
 #### Referencias
 

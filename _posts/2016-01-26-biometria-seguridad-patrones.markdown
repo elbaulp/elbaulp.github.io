@@ -21,9 +21,11 @@ author: cristina
 El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura _Seguridad en Sistemas Operativos_ de la facultad de Ingeniería Informática de Granada (ETSIIT). Los componentes del grupo fueron [@MPV_Prod](http://twitter.com/MPV_Prod) , [@_musicalnote](http://twitter.com/_musicalnote) y [@ElBaulP](http://twitter.com/elbaulp). Este artículo es autoría de @_musicalnote.
 {: .notice-info }
 
+#Índice
+
 - [Biometría aplicada a la seguiridad - Introducción](/biometria-seguridad-introduccion "Biometría aplicada a la seguiridad - Introducción")
 - Biometría aplicada a la seguiridad - Reconocimiento de patrones
-<!-- - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos") -->
+- [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos")
 
 <!--ad-->
 
@@ -140,9 +142,11 @@ Esto está todavía mejorándose, pero ya se habla de que en un futuro se
 podrían desarrollar técnicas avanzadas de biometría, como por ejemplo,
 reconocimiento mediante ADN.
 
+#Índice
+
 - [Biometría aplicada a la seguiridad - Introducción](/biometria-seguridad-introduccion "Biometría aplicada a la seguiridad - Introducción")
 - Biometría aplicada a la seguiridad - Reconocimiento de patrones
-<!-- - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos") -->
+- [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos")
 
 #### Referencias
 
