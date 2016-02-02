@@ -10,12 +10,6 @@ image:
   thumb: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 ---
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
 <figure>
   <a href="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
