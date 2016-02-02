@@ -40,7 +40,8 @@ Por último, solo resta proporcionar una contraseña al usuario **root**.
 
 El fichero `Servidor.java`, código encargado de aceptar las peticiones de nuevos jugadores.
 
-{% highlight java %}import java.io.IOException;
+```java
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -66,11 +67,13 @@ public class Servidor {
     }
   }
 }
-{% endhighlight %}
+
+```
 
 El fichero `Procesador.java` es el encargado de procesar cada una de las peticiones entrantes en un hilo separado.
 
-{% highlight java %}import java.io.BufferedReader;
+```java
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -178,11 +181,13 @@ public class Procesador extends Thread {
     return randomNum;
   }
 }
-{% endhighlight %}
+
+```
 
 El código para el lado del cliente es el siguiente:
 
-{% highlight java %}//package pregunta5;
+```java
+//package pregunta5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -282,44 +287,57 @@ public class Cliente {
     }
   }
 }  
-{% endhighlight %}
+
+```
 
 ## Enviar el programa al servidor.
 
 Para el servidor únicamente nos hacen falta los ficheros `Servidor.java` y `Procesador.java`, podemos enviarlos con *scp*:
 
-{% highlight bash %}scp Servidor.java Procesador.java root@ip:
-{% endhighlight %}
+```bash
+scp Servidor.java Procesador.java root@ip:
+
+```
 
 ### Compilar el programa en el servidor
 
 Accedemos al servidor mediante ssh y compilamos el programa:
 
-{% highlight bash %}javac Servidor.java
+```bash
+javac Servidor.java
 javac Procesador.java
-{% endhighlight %}
+
+```
 
 ### Ejecutar el programa servidor
 
-{% highlight bash %}java Servidor
-{% endhighlight %}
+```bash
+java Servidor
+
+```
 
 ## En el lado cliente
 
 En la máquina que hará de cliente, compilamos el programa `Cliente.java`:
 
-{% highlight bash %}javac Cliente.java
-{% endhighlight %}
+```bash
+javac Cliente.java
+
+```
 
 y lo ejecutamos:
 
-{% highlight bash %}java Cliente
-{% endhighlight %}
+```bash
+java Cliente
+
+```
 
 Sin embargo, no funcionará, ya que el programa usa el puerto 8989, el cual no está permitido explícitamente por el firewall, para ello, bastaría con añadir una regla a iptables:
 
-{% highlight bash %}iptables -A INPUT -m state --state NEW -p tcp --dport 8989 -j ACCEPT
-{% endhighlight %}
+```bash
+iptables -A INPUT -m state --state NEW -p tcp --dport 8989 -j ACCEPT
+
+```
 
 O, desde Arsys, en políticas de firewall añadir lo siguiente:
 

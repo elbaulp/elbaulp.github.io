@@ -53,7 +53,9 @@ Vamos a imaginar que tenemos que hacer una pequeña documentación que acompañe
 
 Lo primero que debemos hacer en un documento de LaTeX es poner una cabecera, esto es, establecer la configuración del documento. La primera línea de cualquier documento LaTeX sería la siguiente:
 
-{% highlight latex %}\documentclass[opciones]{clase}{% endhighlight %}
+```latex
+\documentclass[opciones]{clase}
+```
 
 La parte de clase podemos rellenarla con varias opciones, dependiendo del tipo de archivo que queramos hacer. Los más populares son:  
 1. `article`: para documentos cortos tales como artículos, presentaciones&#8230;  
@@ -70,70 +72,92 @@ Y la parte de opciones, con algunas opciones que queramos añadirle a nuestro do
 
 Sabiendo esto ya podemos poner la primera línea de nuestro documento, que en nuestro caso será:
 
-{% highlight latex %}\documentclass[11pt,a4paper]{article}{% endhighlight %}
+```latex
+\documentclass[11pt,a4paper]{article}
+```
 
 El siguiente paso, es especificarle a LaTeX los paquetes que necesitaremos usar en nuestro documento, podemos ir añadiéndolos conforme los vayamos necesitando a la hora de hacer el documento, pero vamos a añadir de primeras los más básicos. La sintáxis de uso de paquetes es:
 
 ### Paquetes
 
-{% highlight latex %}\usepackage[opciones]{paquete}{% endhighlight %}
+```latex
+\usepackage[opciones]{paquete}
+```
 
 Los paquetes que añadiremos de primeras son:
 
-{% highlight latex %}\usepackage[utf8]{inputenc} % para que nos acepte la codificación UTF-8
+```latex
+\usepackage[utf8]{inputenc} % para que nos acepte la codificación UTF-8
 \usepackage[spanish]{babel} % establecemos el idioma del documento al español
 \usepackage{hyperref} % para poder poner "enlaces" en nuestro codigo
 \usepackage{color} % para darle color a nuestros documentos
 \usepackage{enumerate} % para poder añadirle a enumerate un argumento con el tipo de "contador" que queremos
-{% endhighlight %}
+
+```
 
 ## Comienzo del documento
 
 Tras añadir los paquetes podríamos añadir otras opciones al documento tales como el encabezado, el pie de página&#8230; Pero no nos vamos a entretener ahora en eso. Vamos a empezar nuestro documento con el comando:
 
-{% highlight latex %}\begin{document}{% endhighlight %}
+```latex
+\begin{document}
+```
 
 Y para acabarlo escribiremos un
 
-{% highlight latex %}\end{document}{% endhighlight %}
+```latex
+\end{document}
+```
 
 Como truco os diré que debajo del *end document* podéis escribir lo que queráis, que el compilador no lo va a leer. Yo apunto ahí los comandos que más uso, o de los que no recuerdo su sintaxis para poder tenerlos a mano.
 
 Y ahora vamos a empezar a escribir. Lo primero que debemos hacer es especificarle a LaTeX el título de nuestro artículo, y nuestro nombre como autores, para ello:
 
-{% highlight latex %}% especificamos el titulo del documento y le ponemos un tamaño de letra grande
+```latex
+% especificamos el titulo del documento y le ponemos un tamaño de letra grande
 \title{\huge Portafolios de prácticas}
 % Y ahora, el autor
 \author{Marta Gómez}
-{% endhighlight %}
+
+```
 
 También, si queremos, podemos añadirle la fecha actual:
 
-{% highlight latex %}% le añadimos la fecha actual
+```latex
+% le añadimos la fecha actual
 \date{\today}
-{% endhighlight %}
+
+```
 
 Y por último, le añadimos el título a nuestro documento y un pequeño índice:
 
-{% highlight latex %}\maketitle % nos crea el titulo, el autor y la fecha en el inicio del documento
+```latex
+\maketitle % nos crea el titulo, el autor y la fecha en el inicio del documento
 \tableofcontents % nos crea un indice con enlaces a las diferentes secciones y subsecciones
-{% endhighlight %}
+
+```
 
 ### Secciones
 
 Y ahora vamos a empezar en la primera sección, para indicarle a LaTeX que vamos a empezar una sección lo hacemos de la siguiente manera:
 
-{% highlight latex %}\section{Descripción del programa}{% endhighlight %}
+```latex
+\section{Descripción del programa}
+```
 
 Así crearíamos una sección llamada &#8220;Descripción del programa&#8221;. Que se correspondería con la primera sección del artículo. Si por casualidad quisieramos que empezara por otro número tendríamos que usar el siguiente comando:
 
-{% highlight latex %}\setcounter{section}{4}{% endhighlight %}
+```latex
+\setcounter{section}{4}
+```
 
 y así empezaríamos a contar desde la sección 5.
 
 Y sí ahora queremos hacer una subsección lo haríamos con el siguiente comando:
 
-{% highlight latex %}\subsection{Funcionamiento general}{% endhighlight %}
+```latex
+\subsection{Funcionamiento general}
+```
 
 Con este comando tendríamos una subsección en Descripción del programa llamada Funcionamiento general.
 
@@ -141,33 +165,42 @@ Con este comando tendríamos una subsección en Descripción del programa llamad
 
 Ahora tenemos que empezar a escribir normalmente, cuando queramos cambiar de párrafo hacemos un doble salto de línea, si queremos hacer un salto de línea lo hacemos con una doble barra y, si queremos poner nuestro texto en negrita, en cursiva o con subrayado lo haríamos con los siguientes comandos:
 
-{% highlight latex %}\textbf{Esto es un texto en negrita} \\
+```latex
+\textbf{Esto es un texto en negrita} \\
 \textit{Esto es un texto en cursiva} \\
 \underline{Este texto está subrayado}.
-{% endhighlight %}
+
+```
 
 Otro dato importante es, que si no nos gusta el indentado que hace LaTeX al principio del párrafo podemos eliminarlo con el siguiente comando:
 
-{% highlight latex %}\noindent{% endhighlight %}
+```latex
+\noindent
+```
 
 Ahora que sabemos esto, podemos empezar a escribir:
 
-{% highlight latex %}\noindent
+```latex
+\noindent
 El programa da al usuario a elegir entre escribir en la \textit{entrada estándar} una operación aritmética
 en \textbf{notación postfija} o \textbf{notación infija} y después, devuelve el resultado de dicha operación por la \textit{salida estándar}.
-{% endhighlight %}
+
+```
 
 Ahora vamos a hacer una pequeña tabla, para ello, tenemos que añadir el paquete `multirow` para poder hacer tablas con más de una celda. También tendríamos que añadir los paquetes de matemáticas pues vamos a usar expresiones matemáticas en la tabla:
 
-{% highlight latex %}\usepackage{multirow} % para hacer tablas con mas de una columna
+```latex
+\usepackage{multirow} % para hacer tablas con mas de una columna
 \usepackage{amsmath} % paquete basico de matematicas
-{% endhighlight %}
+
+```
 
 ### Tablas en Latex
 
 Y para hacer una tabla usamos la orden `tabular` (si escribimos `tab` en Sublime Text y le damos a tabulación nos completa la sintaxis) cuya sintaxis es:
 
-{% highlight latex %}\noindent
+```latex
+\noindent
 La siguiente tabla refleja la diferencia entre notación postfija y notación infija:
 
 \begin{tabular}{|p{4cm} | p{4cm} |}
@@ -178,7 +211,8 @@ $1 + 2$ & $1$ $2 +$ \\
 $5 + ((1 + 2) * 4) - 3$ &  $5$ $1$ $2 + 4 * + 3 -$ \\
 \hline
 \end{tabular}
-{% endhighlight %}
+
+```
 
 Hay varios puntos a tener en cuenta:  
 1. Entre las llaves que hay después del `tabular` podemos poner c, l, r para especificar la alineación del texto, esto mejor hacerlo si no tenemos mucho texto en la celda ya que no pone saltos de línea. Y una p con una medida entre llaves que especifica el ancho de la celda y pone saltos de línea al texto de dentro.  
@@ -189,7 +223,8 @@ Hay varios puntos a tener en cuenta:
 
 Si queremos hacer un listado, podemos hacerlo con la orden `enumerate` (si escribimos `enum` en Sublime Text y le damos a tabulador nos autocompleta la sintaxis) o la orden `itemize` (y lo mismo si escribimos `item`) o, incluso, combinando las dos haciendo listas con sublistas:
 
-{% highlight latex %}Las distintas estructuras que hay en el fichero son:
+```latex
+Las distintas estructuras que hay en el fichero son:
 \begin{enumerate}[1.]
     \item \textbf{clase Postfija}: que contiene los siguientes métodos:
     \begin{itemize}
@@ -198,13 +233,16 @@ Si queremos hacer un listado, podemos hacerlo con la orden `enumerate` (si escri
     \end{itemize}
     \item \textbf{función infija2postfija}: función que pasa de infija a postfija.
 \end{enumerate}
-{% endhighlight %}
+
+```
 
 Con el 1. que le pasamos a enumerate hacemos que nuestra lista sea 1. 2. 3. etc.
 
 Vamos a cambiar de sección, para ello usamos la orden `section`, como hemos visto antes, si además queremos que nuestra nueva sección empiece en una nueva página usamos el siguiente comando
 
-{% highlight latex %}\newpage{% endhighlight %}
+```latex
+\newpage
+```
 
 Con esto completamos una pequeña introducción a LaTeX, en el siguiente artículo veremos cómo incluir código fuente en nuestro documento.
 

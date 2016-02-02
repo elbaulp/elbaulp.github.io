@@ -63,26 +63,34 @@ Es una herramienta de automatización remota de servidores y despliegues escrita
 
 En primer lugar, hay que clonar el repositorio. Para ello:
 
-{% highlight bash %}$ cd /directorio/desado
+```bash
+$ cd /directorio/desado
 $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
-{% endhighlight %}
+
+```
 
 El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.
 
 El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:
 
-{% highlight bash %}$ bash config/prepare.sh
-{% endhighlight %}
+```bash
+$ bash config/prepare.sh
+
+```
 
 Solo resta añadir nuestro repositorio:
 
-{% highlight bash %}$ git remote add origin <repo_url>
-{% endhighlight %}
+```bash
+$ git remote add origin <repo_url>
+
+```
 
 Y, por último, instalar las dependencias de ruby con **Bundler**:
 
-{% highlight bash %}$ bundle install
-{% endhighlight %}
+```bash
+$ bundle install
+
+```
 
 Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.
 
@@ -90,17 +98,21 @@ Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configur
 
 Primero, es necesario establecer las preferencias globales de WordPress en el fichero `config/deploy.rb`:
 
-{% highlight ruby %}set :wp_user, "usuario" # El usuario administrador de WordPress
+```ruby
+set :wp_user, "usuario" # El usuario administrador de WordPress
 set :wp_email, "aaaa@aaaa.com" # El email del administrador de WordPress
 set :wp_sitename, "El Baúl del Programador" # El título del sitio WordPress
 set :wp_localurl, "http://localhost" # La dirección URL local de desarrollo
-{% endhighlight %}
+
+```
 
 Luego definimos los parámetros para el repositorio git, en el mismo archivo:
 
-{% highlight ruby %}set :application, "nombreDelRepo"
+```ruby
+set :application, "nombreDelRepo"
 set :repo_url, "git@github.com:TuUsuario/nombreDelRepo.git"
-{% endhighlight %}
+
+```
 
 Wp-Deploy usa por defecto dos entornos, **staging** y **production**. En este artículo configuraremos tres.
 
@@ -110,29 +122,35 @@ Dichos entornos se declaran en el directorio `./config/deploy/`, por defecto exi
 
 Un ejemplo para `production.rb` sería:
 
-{% highlight ruby %}set :stage_url, "http://www.miweb.com"
+```ruby
+set :stage_url, "http://www.miweb.com"
 server "IP.DEL.SERVIDOR.", user: "USUARIO SSH", roles: %w{web app db}
 set :deploy_to, "/ruta/donde/reside/la/web
 set :branch, "master" # Rama del repositorio que se subirá
-{% endhighlight %}
+
+```
 
 Para `staging.rb` tendríamos:
 
-{% highlight ruby %}set :stage_url, "http://localhost"
+```ruby
+set :stage_url, "http://localhost"
 server "localhost", user: "USUARIO SSH", roles: %w{web app db}
 set :deploy_to, "/ruta/donde/reside/la/web/en/local
 set :branch, "development" # Rama del repositorio que se subirá
-{% endhighlight %}
+
+```
 
 La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama **development** y se prueban en local. Una vez probados, traspasamos los cambios a la rama **master** y los subimos al servidor en producción.
 
 Además, crearemos otro entorno llamado `desarrollo.rb`, que usaremos para probar los cambios de la rama **development** en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero `desarrollo.rb` en `./config/deploy/`:
 
-{% highlight ruby %}set :stage_url, "http://desarrollo.miweb.com"
+```ruby
+set :stage_url, "http://desarrollo.miweb.com"
 server "IP.DEL.SERVIDOR.", user: "USUARIO SSH", roles: %w{web app db}
 set :deploy_to, "/ruta/donde/reside/el/subdominio/de/la/web/
 set :branch, "development" # Rama del repositorio que se subirá
-{% endhighlight %}
+
+```
 
 Como vemos, también se usa la rama **development**, ya que es donde probaremos los cambios aplicados al código.
 
@@ -140,7 +158,8 @@ Como vemos, también se usa la rama **development**, ya que es donde probaremos 
 
 En el directorio `./config` renombramos el fichero `database.example.yml` a `database.yml` y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:
 
-{% highlight yaml %}staging:
+```yaml
+staging:
   host: localhost
   database: db_name
   username: db_user
@@ -161,7 +180,8 @@ desarrollo:
   username: root
   password: 'root'
 
-{% endhighlight %}
+
+```
 
 Hecho esto, todo debería estar listo para usar.
 
@@ -169,8 +189,10 @@ Hecho esto, todo debería estar listo para usar.
 
 El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:
 
-{% highlight bash %}$ bundle exec cap production wp:setup:remote
-{% endhighlight %}
+```bash
+$ bundle exec cap production wp:setup:remote
+
+```
 
 Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero `wp-config.php` (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un `wp-config.php` para producción en **remote** (El servidor).
 
@@ -178,8 +200,10 @@ Que instalará WordPress usando los detalles de los archivos de configuración, 
 
 Para volcar los cambios aplicados al servidor:
 
-{% highlight bash %}$ bundle exec cap production deploy
-{% endhighlight %}
+```bash
+$ bundle exec cap production deploy
+
+```
 
 Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de `production`, `desarrollo` ó `staging` para aplicar los cambios al entorno correspondiente.
 
@@ -193,32 +217,42 @@ Al migrar la base de datos, se reemplazarán automáticamente las urls necesaria
 
 #### Enviar la base de datos al entorno de producción
 
-{% highlight bash %}$ bundle exec cap production db:push
-{% endhighlight %}
+```bash
+$ bundle exec cap production db:push
+
+```
 
 #### De producción a desarrollo
 
-{% highlight bash %}$ bundle exec cap production db:pull
-{% endhighlight %}
+```bash
+$ bundle exec cap production db:pull
+
+```
 
 #### Realizar una copia de seguridad del a BD de producción
 
-{% highlight bash %}$ bundle exec cap production db:backup
-{% endhighlight %}
+```bash
+$ bundle exec cap production db:backup
+
+```
 
 ### Sincronizando la carpeta Uploads
 
 La carpeta **Uploads** de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:
 
-{% highlight bash %}$ bundle exec cap production uploads:sync
-{% endhighlight %}
+```bash
+$ bundle exec cap production uploads:sync
+
+```
 
 ### Actualizar el núcleo de WordPress
 
 A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:
 
-{% highlight bash %}$ bundle exec cap production wp:core:update
-{% endhighlight %}
+```bash
+$ bundle exec cap production wp:core:update
+
+```
 
 De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.
 

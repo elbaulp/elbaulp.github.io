@@ -31,7 +31,9 @@ Voy a explicar lo que yo he hecho:
 
 Al principio al establecer comunicación mediante telnet por el puerto 25 (el de SMTP) y escribrir los comandos siempre recibía el siguiente error:
 
-{% highlight bash %}<strong>550 5.6.0 Invalid header found (see RFC2822 section 3.6)</strong>{% endhighlight %}
+```bash
+<strong>550 5.6.0 Invalid header found (see RFC2822 section 3.6)</strong>
+```
 
 Tras buscar un poco el motivo descubrí que se debía a que me estaba saltando algunas cabeceras del protocolo, concretamente *From, To * y *Date.*
 
@@ -39,7 +41,8 @@ En resumen, todo el proceso queda como sigue:
   
 <!--ad-->
 
-{% highlight bash %}telnet smtpin.mx.facebook.com smtp
+```bash
+telnet smtpin.mx.facebook.com smtp
 Trying 69.171.244.11...
 Connected to smtpin.mx.facebook.com.
 Escape character is '^]'.
@@ -60,14 +63,16 @@ Date: xxx, xx xxx xxxx xx:xx:xx -xxxx
 This is an example
 .
 450 4.3.2 INT-T14 http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int Server busy, try again later
-Connection closed by foreign host.{% endhighlight %}
+Connection closed by foreign host.
+```
 
 Pero sigo recibiendo un error (*450 4.3.2 INT-T14 http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int Server busy, try again later  
 Connection closed by foreign host*)
 
 También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [python][2] que encontré en stackoverflow:
 
-{% highlight cpp %}#include <iostream>
+```cpp
+#include <iostream>
      #include <sys /types.h>
      #include </sys><sys /socket.h>
      #include <netinet /in.h>
@@ -172,11 +177,13 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
     close(sock);
     return 0;
   }
-{% endhighlight %}
+
+```
 
 La versión en python:
 
-{% highlight python %}#!/usr/bin/python
+```python
+#!/usr/bin/python
 
 import smtplib
 import sys
@@ -196,7 +203,8 @@ try:
    smtpObj.sendmail(sender, receivers, message)         
    print "Successfully sent email"
 except Exception, exc:
-   sys.exit( "mail failed; %s" % str(exc) ) # give a error message{% endhighlight %}
+   sys.exit( "mail failed; %s" % str(exc) ) # give a error message
+```
 
 Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.
 

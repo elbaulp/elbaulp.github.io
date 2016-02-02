@@ -31,10 +31,12 @@ Ultimamente uso mucho esta red social, y estuve buscando para añadir un botón 
 
 Es muy sencillo de agregar a nuestro sítio, simplemente colocamos este código en el lugar en el que queramos que aparezca:
 
-{% highlight xml %}<a expr:href='&quot;https://joindiaspora.com/bookmarklet?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>
+```xml
+<a expr:href='&quot;https://joindiaspora.com/bookmarklet?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' target='_blank'>
    <img alt='compartir en Diaspora*' height='32px' src='http://lh3.googleusercontent.com/-BtpsAHPELfY/TfzF4u54aoI/AAAAAAAAApA/BOgUWG9-sVk/s288/diaspora.png' title='compartir en Diaspora*' width='32px' />
 </a>
-{% endhighlight %}
+
+```
 
 Espero que os sirva de ayuda.
 

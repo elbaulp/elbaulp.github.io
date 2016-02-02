@@ -27,7 +27,8 @@ Si trabajas habitualmente con $$\LaTeX$$, estás acostumbrado a ver múltiples f
 ## Estructura del directorio
 
 La idea sería tener el directorio de trabajo organizado del siguiente modo:
-{% highlight bash %}
+```bash
+
 Directorio del proyecto/
 |__ main.tex
 |__ main.bib
@@ -47,13 +48,15 @@ Directorio del proyecto/
 |__ figures/
      |__ figure1.pdf
      |__ …
-{% endhighlight %}
+
+```
 
 ## Mediante un script
 
 Este script lo encontré en el blog de <a href="http://texblog.org" target="_blank" title="TexBlog">Tom</a>, en su artículo <a href="http://texblog.org/2015/08/20/hiding-latex-metafiles-from-project-directory/" target="_blank" title="Hiding LaTeX metafiles from project directory">Hiding LaTeX metafiles from project directory</a>:
 
-{% highlight bash %}
+```bash
+
 #!/bin/bash
 
 # Create directory if it doesn't exist
@@ -71,20 +74,25 @@ pdflatex -output-directory=metafiles main
 
 # Create a softlink to the output PDF
 ln -s metafiles/main.pdf
-{% endhighlight %}
+
+```
 
 ## Usando latexmk
 
 Para aportar algo al artículo de _Tom_, miré la documentación de LatexMK, [comando que ya hemos visto en este blog](https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/ "Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos"), y tiene la opción `-output-directory` que permite especificar donde se guardaran todos los metaficheros, su uso es simple:
 
-{% highlight bash %}
+```bash
+
 latexmk -shell-escape -pdf -pvc -output-directory=metafiles main.tex
-{% endhighlight %}
+
+```
 
 Esto tendrá un efecto parecido al script de _Tom_, sin embargo el pdf también queda generado dentro de esta carpeta, podemos solucionarlo con un _soft link_:
 
-{% highlight bash %}
+```bash
+
 ln -s metafiles/main.pdf
-{% endhighlight %}
+
+```
 
 Espero que os haya sido de utilidad, yo ya lo uso de forma habitual.

@@ -40,7 +40,8 @@ Llegó el momento de crear un módulo con la Python C API algo más complejo, co
 
 Mostraremos el código completo, puesto que ya se ha explicado el significado de este trozo de código no nos extenderemos mucho:
 
-{% highlight c %}#include <Python.h>
+```c
+#include <Python.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -88,13 +89,15 @@ initherramientasRed(void)
     if (m == NULL)
         return;
 }
-{% endhighlight %}
+
+```
 
 ### Compilación y uso
 
 Ahora que hemos visto cómo usar DistUtils, haremos uso de esta herramienta para compilar e instalar el módulo, el contenido del fichero *setup.py* es:
 
-{% highlight python %}from distutils.core import setup, Extension
+```python
+from distutils.core import setup, Extension
 
 hRed = Extension('herramientasRed',
                     sources = ['herramientasRed.c'])
@@ -105,25 +108,30 @@ setup (name = 'HerramientasRed',
               license = 'GPLv3',
               description = 'Un simple modulo para obtener la IP de un dominio',
               ext_modules = [hRed])
-{% endhighlight %}
+
+```
 
 Lo ejecutamos:
 
-{% highlight bash %}# python setup.py install
+```bash
+# python setup.py install
 running install
 running build
 running build_ext
 running install_lib
 running install_egg_info
 Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
-{% endhighlight %}
+
+```
 
 Y para usarlo:
 
-{% highlight python %}In [1]: import herramientasRed
+```python
+In [1]: import herramientasRed
 In [2]: print herramientasRed.imprimeIP('elbauldelprogramador.com')
 elbauldelprogramador.com tiene dirección IP <ip>
-{% endhighlight %}
+
+```
 
 ### Depuración de módulos Python C API
 
@@ -131,22 +139,29 @@ Es probable que durante el desarrollo de un módulo para Python sea necesario de
 
 **Añadir la siguiente línea al fichero *.gdbinit***
 
-{% highlight bash %}br _PyImport_LoadDynamicModule
-{% endhighlight %}
+```bash
+br _PyImport_LoadDynamicModule
+
+```
 
 Compilar el módulo mediante [gcc sin optimizaciones][6]:
 
-{% highlight bash %}# CFLAGS='-Wall -O0 -g' python setup.py install
-{% endhighlight %}
+```bash
+# CFLAGS='-Wall -O0 -g' python setup.py install
+
+```
 
 Por último ejecutamos gdb de la siguiente forma:
 
-{% highlight bash %}$ gdb -ex r --args python test.py
-{% endhighlight %}
+```bash
+$ gdb -ex r --args python test.py
+
+```
 
 Tras ejecutar la línea de arriba, establecemos un punto de ruptura en la función deseada, en este caso **herramientasRed_imprimeIP** y ya podremos depurar el módulo:
 
-{% highlight bash %}(gdb) b herramientasRed_imprimeIP
+```bash
+(gdb) b herramientasRed_imprimeIP
 Breakpoint 1 at 0x7ffff695496a: file herramientasRed.c, line 17.
 (gdb) r
 Starting program: /usr/bin/python2.7 test.py
@@ -167,7 +182,8 @@ elbauldelprogramador.com tiene dirección IP <ip>
 
 [Inferior 1 (process 28242) exited normally]
 
-{% endhighlight %}
+
+```
 
 Como se puede observar, si imprimimos en pantalla el argumento *args*, que representa los parámetros que se pasan desde python, se aprecia el **reference count** del que hablamos en la parte 1.
 

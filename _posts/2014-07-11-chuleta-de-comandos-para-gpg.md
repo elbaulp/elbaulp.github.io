@@ -37,25 +37,35 @@ Empecemos:
 
 ### Crear una clave
 
-{% highlight bash %}gpg --gen-key{% endhighlight %}
+```bash
+gpg --gen-key
+```
 
 Generalmente puedes seleccionar las que vienen por defecto.
 
 ### exportar una clave pública dentro del archivo *public.key*
 
-{% highlight bash %}gpg --export -a "Nombre de Usuario" > public.key{% endhighlight %}
+```bash
+gpg --export -a "Nombre de Usuario" > public.key
+```
 
 Esto creará un archivo llamado *public.key* con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:
 
-{% highlight bash %}gpg --export{% endhighlight %}
+```bash
+gpg --export
+```
 
 el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.
 
-{% highlight bash %}gpg --export -a “Nombre de Usuario"{% endhighlight %}
+```bash
+gpg --export -a “Nombre de Usuario"
+```
 
 imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:
 
-{% highlight bash %}gpg --export-secret-key -a "Nombre de Usuario" > private.key{% endhighlight %}
+```bash
+gpg --export-secret-key -a "Nombre de Usuario" > private.key
+```
 
 Esto creará un archivo llamado *private.key* con la representación ascii de la clave privada para ‘Nombre de Usuario’.
 
@@ -63,20 +73,26 @@ Es muy parecido a exportar una clave pública, pero tienes que pisar algunas pro
 
 ### importar una clave pública
 
-{% highlight bash %}gpg --import public.key{% endhighlight %}
+```bash
+gpg --import public.key
+```
 
 Si encontraste esta página, por suerte es lo que estabas buscando  
 Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de claves públicas.
 
 ### importar una clave privada
 
-{% highlight bash %}gpg --allow-secret-key-import --import private.key{% endhighlight %}
+```bash
+gpg --allow-secret-key-import --import private.key
+```
 
 Esto agrega una clave privada en el archivo “*private.key*” a tu anillo de claves privadas. Hay una nota (*) al pie explicando porqué desearías hacer esto.
 
 ### eliminar una clave pública (de tu anillo de claves públicas):
 
-{% highlight bash %}gpg --delete-key "Nombre de Usuario"{% endhighlight %}
+```bash
+gpg --delete-key "Nombre de Usuario"
+```
 
 Esto elimina la clave pública de tu anillo de claves públicas.
 
@@ -84,32 +100,44 @@ Esto elimina la clave pública de tu anillo de claves públicas.
 
 ### eliminar una clave secreta (una clave de tu anillo de claves secreta)
 
-{% highlight bash %}gpg --delete-secret-key "Nombre de Usuario"{% endhighlight %}
+```bash
+gpg --delete-secret-key "Nombre de Usuario"
+```
 
 Esto elimina la clave secreta de tu anillo de claves secretas.
 
 ### listar las claves de tu anillo de claves públicas
 
-{% highlight bash %}gpg --list-keys{% endhighlight %}
+```bash
+gpg --list-keys
+```
 
 ### listar las claves de tu anillo de claves secretas
 
-{% highlight bash %}gpg --list-secret-keys{% endhighlight %}
+```bash
+gpg --list-secret-keys
+```
 
 ### generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública
 
-{% highlight bash %}gpg --fingerprint > fingerprint{% endhighlight %}
+```bash
+gpg --fingerprint > fingerprint
+```
 
 Esto crea el archivo fingerprint con la información de la firma digital.
 
 ### encriptar datos
 
-{% highlight bash %}gpg -e -u "Nombre de Usuario del Emisor" -r "Nombre de Usuario del Destinatario" <em>somefile</em>{% endhighlight %}
+```bash
+gpg -e -u "Nombre de Usuario del Emisor" -r "Nombre de Usuario del Destinatario" <em>somefile</em>
+```
 
 Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.  
 Como por ejemplo:
 
-{% highlight bash %}gpg -e -u "Manuel Ginobili" -r “Un amigo" mydata.tar{% endhighlight %}
+```bash
+gpg -e -u "Manuel Ginobili" -r “Un amigo" mydata.tar
+```
 
 Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)  
 NOTA: *mydata.tar* no se elimina, terminas teniendo dos archivos, por lo tanto si quieres tener sólo el archivo encriptado, deberás eliminar *mydata.tar* tú mismo.  
@@ -117,29 +145,41 @@ Un interesante comentario al margen, encripté el patch preventivo del kernel, u
 
 ### desencriptar datos
 
-{% highlight bash %}gpg -d mydata.tar.gpg{% endhighlight %}
+```bash
+gpg -d mydata.tar.gpg
+```
 
 Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, *mydata.tar.gpg*.  
 NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “gpg -d* mydata.tar.gpg*” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar
 
-{% highlight bash %}gpg --o archivodesalida -d archivoencriptado.gpg{% endhighlight %}
+```bash
+gpg --o archivodesalida -d archivoencriptado.gpg
+```
 
 , o utilizar *mydata.tar.gpg* como por ejemplo,
 
-{% highlight bash %}gpg -o mydata.tar -d mydata.tar.gpg{% endhighlight %}
+```bash
+gpg -o mydata.tar -d mydata.tar.gpg
+```
 
 Otra alternativa es ejecutar algo como
 
-{% highlight bash %}gpg -d mydata.tar.gpg > mydata.tar{% endhighlight %}
+```bash
+gpg -d mydata.tar.gpg > mydata.tar
+```
 
 y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.  
 Ok, entonces si eres un paranoico y quieres encriptar alguno de tus propios archivos, para que nadie pueda entrar en tu computadora y obtenerlos, simplemente encríptalos usandote a tí mismo como el contenedor.
 
 No he utilizado estos comandos:
 
-{% highlight bash %}gpg --edit-key{% endhighlight %}
+```bash
+gpg --edit-key
+```
 
-{% highlight bash %}gpg --gen-revoke{% endhighlight %}
+```bash
+gpg --gen-revoke
+```
 
 `--gen-revoke` crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: <a href="http://www.gnupg.org/gph/en/manual/r721.html" target="_blank">http://www.gnupg.org/gph/en/manual/r721.html</a>.
 

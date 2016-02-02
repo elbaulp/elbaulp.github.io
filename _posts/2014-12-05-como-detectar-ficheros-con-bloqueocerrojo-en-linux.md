@@ -36,7 +36,8 @@ Creo que lo que buscas es el fichero `/proc/locks`. Éste fichero muestra los ar
 
 <!--ad-->
 
-{% highlight bash %}$ cat /proc/locks
+```bash
+$ cat /proc/locks
 1: POSIX  ADVISORY  WRITE 2245 08:06:1182714 1073741824 1073741824
 2: POSIX  ADVISORY  WRITE 2245 08:06:1182714 1073741826 1073742335
 3: POSIX  ADVISORY  WRITE 3058 08:06:10752740 0 0
@@ -45,7 +46,8 @@ Creo que lo que buscas es el fichero `/proc/locks`. Éste fichero muestra los ar
 6: POSIX  ADVISORY  WRITE 2421 08:06:11142048 0 EOF
 7: POSIX  ADVISORY  WRITE 2421 08:06:9964366 1073741824 1073742335
 8: POSIX  ADVISORY  WRITE 2421 08:06:11142040 0 EOF
-{% endhighlight %}
+
+```
 
 Donde las columnas significan:
 

@@ -23,46 +23,52 @@ Vamos a explicar hoy cómo compilar e instalar la versión 4.2 del __kernel__.
 
 Para compilar el __kernel__ hara falta instalar los siguientes paquetes en el sistema:
 
-{% highlight bash%}
+```bash
 $ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils
-{% endhighlight %}
+
+```
 
 <!--ad-->
 
 y además este:
 
-{% highlight bash%}
+```bash
 $ sudo apt-get install kernel-package
-{% endhighlight %}
+
+```
 
 ## Descargar el código fuente del kernel
 
 Para ello
 
-{% highlight bash%}
+```bash
 wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz
-{% endhighlight %}
+
+```
 
 Una vez descargado, lo extraemos:
 
-{% highlight bash%}
+```bash
 $ tar xvf linux-4.2.tar.xz
-{% endhighlight %}
+
+```
 
 ## Configurar el kernel
 
 Copiamos la configuración existente del kernel instalado
 
-{% highlight bash%}
+```bash
 $ cd linux-4.2
 $ cp /boot/config-$(uname -r) .config
-{% endhighlight %}
+
+```
 
 y lo configuramos
 
-{% highlight bash%}
+```bash
 $ make menuconfig
-{% endhighlight %}
+
+```
 
 Si no estamos seguros de qué podemos quitar y añadir de la configuración, es mejor dejarlo tal y como está, ya que al haber copiado la configuración del kernel actual, estamos seguros de que funcionará.
 
@@ -70,16 +76,18 @@ Si no estamos seguros de qué podemos quitar y añadir de la configuración, es 
 
 Primero debemos hacer una limpieza:
 
-{% highlight bash%}
+```bash
 $ make-kpkg clean
-{% endhighlight %}
+
+```
 
 y por último compilarlo con
 
-{% highlight bash%}
+```bash
 $ export CONCURRENCY_LEVEL=X
 $ fakeroot make-kpkg --initrd --revision=1.0.NAS kernel_image kernel_headers
-{% endhighlight %}
+
+```
 
 es importante reemplazar la __X__ de `CONCURRENCY_LEVEL=X` por el número de procesadores de tu máquina, para una compilación más rápida.
 
@@ -87,20 +95,22 @@ es importante reemplazar la __X__ de `CONCURRENCY_LEVEL=X` por el número de pro
 
 Una vez compilado, basta con ejecutar:
 
-{% highlight bash%}
+```bash
 $ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
 $ sudo dpkg -i ../linux-image-4.2.0_1.0.NAS_amd64.deb
-{% endhighlight %}
+
+```
 
 Reiniciamos y listo, podemos comprobar que estamos usando este kernel con cualquiera de estos comandos:
 
-{% highlight bash%}
+```bash
 $ uname -a
 $ uname -r
 $ uname -mrs
 $ dmesg | more
 $ dmesg | egrep -i --color 'error|critical|failed'
-{% endhighlight %}
+
+```
 
 ### Referencias
 

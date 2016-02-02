@@ -36,12 +36,15 @@ Para ello he creado un pequeño script en python que genera automáticamente las
 
 Para leer la duración de cada fichero he usado un módulo llamado <a href="https://code.google.com/p/mutagen/" title="Mutagen Homepage" target="_blank">Mutagen</a>. Para instalarlo:
 
-{% highlight bash %}$ pip install mutagen
-{% endhighlight %}
+```bash
+$ pip install mutagen
+
+```
 
 Una vez instalado, podremos ejecutar el programa, el código es el siguiente:
 
-{% highlight python %}#!/usr/bin/env python
+```python
+#!/usr/bin/env python
 
 '''
 Created on Apr 4, 2014
@@ -126,13 +129,15 @@ def handleException(e):
 
 if __name__ == '__main__':
     main()
-{% endhighlight %}
+
+```
 
 ### Generar listas de reproducción
 
 El uso del programa es sencillo:
 
-{% highlight bash %}$ ./genPlayListByLength.py -h
+```bash
+$ ./genPlayListByLength.py -h
 usage: genPlayListByLength.py [-h] -d DIRECTORY -l LENGTH
 
 Generate playlists with the indicated length
@@ -177,7 +182,8 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_29.m3u  length  
 Playlist generated, name:  ./playlists/genPlayListByLength.py20_30.m3u  length  20.7996613757 min
 Playlist generated, name:  ./playlists/genPlayListByLength.py20_31.m3u  length  21.3372033258 min
 Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  22.5926288738 min
-{% endhighlight %}
+
+```
 
 ### Qué queda por mejorar
 

@@ -34,39 +34,47 @@ Continuando con el artículo anterior, ahora procedemos a instalar PHP-FPM.
 
 En lugar de instalar php5, instalaremos php5-fpm (FastCGI Process Manager), una implementación alternativa con algunas características adicionales. En Ubuntu se puede instalar desde repositorios, para debian los agregamos a mano al *sources.list*:
 
-{% highlight bash %}deb http://packages.dotdeb.org stable all
+```bash
+deb http://packages.dotdeb.org stable all
 deb-src http://packages.dotdeb.org stable all
-{% endhighlight %}
+
+```
 
 Es necesario agregar la [llave GnuPG][3], instalamos php5-fpm y lo iniciamos:
 
-{% highlight bash %}apt-get update
+```bash
+apt-get update
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg | sudo apt-key add -
 apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql
 service php5-fpm start
-{% endhighlight %}
+
+```
 
 Ahora probaremos que php funciona bajo nginx, para ello es necesario modificar ligeramente el archivo *nginx.conf*, concretamente:
 
 * En el bloque *http* hay que añadir index.php a la directiva index, para que quede index *index.php index.html index.htm;*.
 * Necesitamos crear la comunicación entre nginx y php mediante un socket, para ello añadimos lo siguiente en el bloque *http*.
 
-{% highlight bash %}
+```bash
+
 upstream php {
     server unix://var/run/php-fpm.socket;
 }
-{% endhighlight %}
+
+```
 
 * Por último, dentro del bloque *server*, añadimos una regla que permita manejar los archivos php:
-{% highlight bash %}
+```bash
+
 location ~ \.php$ {
     include fastcgi_params;
     fastcgi_index index.php;
     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     fastcgi_pass php;
 }
-{% endhighlight %}
+
+```
 
 * Una última modificación al archivo */etc/php5/fpm/pool.d/www.conf* y agregamos la línea *listen = /var/run/php-fpm.socket*. </ul>
 
@@ -74,10 +82,12 @@ location ~ \.php$ {
 
 Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en */usr/local/nginx/http/* y asignarle como grupo y usuario *www-data*:
 
-{% highlight bash %}
+```bash
+
 echo '<?php echo "Probando que PHP funciona";?>' > /usr/local/nginx/html/index.php
 chown www-data:www-data /usr/local/nginx/html/index.php
-{% endhighlight %}
+
+```
 
 De nuevo nos dirigimos al *localhost* y deberíamos ver el mensaje, lo cual indica que se está ejecutando PHP.
 

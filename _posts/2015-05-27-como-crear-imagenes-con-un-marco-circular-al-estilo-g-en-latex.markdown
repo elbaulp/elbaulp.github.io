@@ -26,7 +26,8 @@ Por supuesto, podría haber creado la imagen directamente con forma circular, pe
 
 Resulta que es bastante sencillo, el siguiente código conseguirá el efecto deseado:
 
-{% highlight latex %}
+```latex
+
 \documentclass[border=5mm]{article}
 \usepackage[skins]{tcolorbox}
 
@@ -39,7 +40,8 @@ Resulta que es bastante sencillo, el siguiente código conseguirá el efecto des
   }
 
 \end{document}
-{% endhighlight %}
+
+```
 
 Donde:
 

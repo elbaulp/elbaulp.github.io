@@ -25,8 +25,10 @@ categories:
 
 En <a target="_blank" href="http://www.ubuntizandoelplaneta.com/2011/01/meme-los-10-comandos-que-mas-utilizo.html">ubuntizando el planeta</a> he leido este meme que voy a publicar, que consiste en ejecutar la orden 
 
-{% highlight bash %}history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
-{% endhighlight %}
+```bash
+history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
+
+```
 
 en nuestro terminal para saber cuales son los comandos que más usamos en linux, seguro que os sorprendéis al ver vuestros resultados.
 
@@ -41,7 +43,8 @@ Invito a participar en el meme a:
 
 Aqui mi salida del comando de mi PC de sobremesa:
 
-{% highlight bash %}hkr@alexpc:~$ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
+```bash
+hkr@alexpc:~$ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
      68 cd
      60 bzr
      49 sudo
@@ -53,11 +56,13 @@ Aqui mi salida del comando de mi PC de sobremesa:
      15 gpg
      11 locate
 hkr@alexpc:~$
-{% endhighlight %}
+
+```
 
 Los del portátil:
 
-{% highlight bash %}hkr@HKR-->/$ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
+```bash
+hkr@HKR-->/$ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
     296 sudo
     128 cd
      89 ls
@@ -69,7 +74,8 @@ Los del portátil:
      21 python
      14 telnet
 hkr@HKR-->/$
-{% endhighlight %}
+
+```
 
 
 

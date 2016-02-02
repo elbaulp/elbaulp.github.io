@@ -42,10 +42,12 @@ Hay tres tipos básicos de subconsultas que son:
 
 Las instrucciones que incluyen una subconsulta normalmente tienen uno de estos formatos:
 
-{% highlight sql %}WHERE expression [NOT] IN (subconsulta)
+```sql
+WHERE expression [NOT] IN (subconsulta)
 WHERE expression comparison_operator [ANY | ALL] (subconsulta)
 WHERE [NOT] EXISTS (subconsulta)
-{% endhighlight %}
+
+```
 
 El predicado IN se emplea para recuperar únicamente aquellos registros de la consulta principal para los que algunos registros de la subconsulta contienen un valor igual. Inversamente se puede utilizar NOT IN para recuperar únicamente aquellos registros de la consulta principal para los que no hay ningún registro de la subconsulta que contenga un valor igual.
 

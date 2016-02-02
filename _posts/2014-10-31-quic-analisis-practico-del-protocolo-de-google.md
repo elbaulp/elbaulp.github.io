@@ -40,7 +40,8 @@ Para hacer pruebas con éste protocolo, se ha descargado el código fuente de **
 
 Los pasos se encuentran en (3), los seguidos para la prueba de concepto fueron:
 
-{% highlight bash %}# Instalar depot_tools
+```bash
+# Instalar depot_tools
 
 $ git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 $ export PATH=`pwd`/depot_tools:"$PATH"
@@ -53,35 +54,45 @@ $ git checkout master
 # Compilar para Linux
 $ build/install-build-deps.sh --no-arm
 $ gclient sync
-{% endhighlight %}
+
+```
 
 <!--ad-->
 
 Una vez hecho esto, y siguiendo los pasos de (4), se compila el cliente y servidor usados para QUIC:
 
-{% highlight bash %}$ ninja -C out/Debug quic_server quic_client
-{% endhighlight %}
+```bash
+$ ninja -C out/Debug quic_server quic_client
+
+```
 
 Se procede a descargar una copia de una página web, por ejemplo, google.com, la cual se servirá localmente usando el programa **quic_server**.
 
-{% highlight bash %}$ mkdir /tmp/quic-data
+```bash
+$ mkdir /tmp/quic-data
 $ cd /tmp/quic-data
 $ wget -p --save-headers http://google.com
-{% endhighlight %}
+
+```
 
 Es necesario editar el fichero **index.html** para eliminar la cabecera **&#8220;Transfer-Encoding: chunked&#8221;** y añadir **X-Original-Url: http://www.google.com/**.Tras esto, se ejecuta el servidor QUIC apuntando al fichero descargado:
 
-{% highlight bash %}$ ./out/Debug/quic_server --port=8081 --quic_in_memory_cache_dir=/tmp/quic-data/google.com
-{% endhighlight %}
+```bash
+$ ./out/Debug/quic_server --port=8081 --quic_in_memory_cache_dir=/tmp/quic-data/google.com
+
+```
 
 Y debería ser posible realizar una petición al fichero sobre QUIC usando el cliente:
 
-{% highlight bash %}./out/Debug/quic_client --port=8081 --address=192.168.1.16 http://www.google.com/
-{% endhighlight %}
+```bash
+./out/Debug/quic_client --port=8081 --address=192.168.1.16 http://www.google.com/
+
+```
 
 En este caso, se ha configurado el servidor en una máquina distinta a la cliente. Pero podría hacerse en la misma máquina todo, y escuchar en la interfaz **lop** con WireShark. Tras ejecutar el comando anterior, aparecerá por pantalla algo similar a:
 
-{% highlight bash %}HTTP/1.1 200 OK
+```bash
+HTTP/1.1 200 OK
 alternate-protocol: 80:quic,p=0.01
 cache-control: private, max-age=0
 content-type: text/html; charset=ISO-8859-1
@@ -94,7 +105,8 @@ x-frame-options: SAMEORIGIN
 x-xss-protection: 1; mode=block
 <!doctype html>
 # Resto de la página web
-{% endhighlight %}
+
+```
 
 ### Estructura de un paquete QUIC
 
@@ -108,7 +120,8 @@ Todo paquete QUIC consiste en una sección de cabecera (**Header** a partir de a
 
 Como se mencionó arriba, todos los paquetes comienzan con una cabecera común:
 
-{% highlight bash %}0        1        2        3        4        5        6        7       8
+```bash
+0        1        2        3        4        5        6        7       8
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
 | Public |    Connection ID (0, 8, 32, or 64)                                    |   ->
 |Flags(8)|      (variable length)                                                |
@@ -126,7 +139,8 @@ Como se mencionó arriba, todos los paquetes comienzan con una cabecera común:
 |                         (variable length)           |Flags(8)|  (opt) |
 +--------+--------+--------+--------+--------+--------+--------+--------+
 
-{% endhighlight %}
+
+```
 
 La cabecera para cada paquete consiste en:
 
@@ -189,7 +203,8 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 
   * **STREAM_FRAME**. Cada conexión QUIC puede multiplexar una colección de flujos, y cada frame de flujo transmite datos de la aplicación para un único flujo. Un paquete es de éste tipo si el bit más significativo del Byte de tipo es 1. La composición de éste paquete es la siguiente:
 
-{% highlight bash %}0        1       …               SLEN
+```bash
+0        1       …               SLEN
 +--------+--------+--------+--------+--------+
 |Type (8)| Stream id (8, 16, 24, or 32 bits) |
 |        |    (Variable length SLEN bytes)   |
@@ -206,11 +221,13 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 | Data length (0 or 16 bits)|
 |  Optional(maybe 0 bytes)  |
 +------------+--------------+
-    {% endhighlight %}
+    
+```
 
   * **ACK_FRAME**. Un frame ACK se usa para coordinar la recuperación de paquetes perdidos, y es parecido, pero no idéntico a los paquetes ACK de TCP. Un ACK en QUIC siempre es acumulativo, es decir, nuevos ACKs contienen suficiente información que es seguro descartar cualquier ACK previo. Como resultado, si un paquete con un frame ACK se pierde, no es necesario retransmitir el Frame ACK adjunto. Éste tipo de paquete se identifica con el valor **01ntllmmB**, donde 01 indica que es de tipo ACK, y los 6 bits restantes son flags. Su estructura:
 
-{% highlight bash %}0        1                           N
+```bash
+0        1                           N
 +--------+--------+-----------------------------------------------------+
 |Type (8)|Received|    Largest Observed (8, 16, 32, or 48 bits)         |
 |        |Entropy |                     (variable length)               |
@@ -243,22 +260,26 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 | Revived|       Sequence Number (variable length)             |
 | (opt)  |         (repeats Number Revied times)               |
 +--------+-----------------------------------------------------+
-    {% endhighlight %}
+    
+```
 
   * **CONGESTION\_CONTROL\_FRAME**. El frame de control de congestión se usa para tramsmitir información relativa a un algoritmo específico de control de gestión. Al inicio de la conexión, la negociación de las credenciales criptográficas también incluyen la negociación del algoritmo de control de congestión.
   * **RST\_STREAM\_FRAME**. El frame de reseteo del flujo se usa para terminar anormalmente un flujo. Puede usarse por ejemplo cuando un receptor desee que el emisor deje de enviar datos, o cuando la fuente de datos deja de proporcionar los datos a recibir. Para ayudar al depurado, en éstos frames se incluyen dos campos, **Reason Phrase** y **Error Code**.
   * **CONNECTION\_CLOSE\_FRAME**. Se usa para terminar una conexión agresiva e inmediatamente, cerrando todos los flujos implícitos. Éste frame se identifica con valor 0x5. Su estructura:
 
-{% highlight bash %}0        1        2        3         4        5        6      7        X
+```bash
+0        1        2        3         4        5        6      7        X
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
 |Type(8) |         Error code (32 bits)      | Reason phrase   |  Reason phrase  |
 |        |                                   | length (16 bits)|(variable length)|
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
-    {% endhighlight %}
+    
+```
 
   * **GOAWAY\_STREAM\_FRAME**. Es una petición para terminar una conexión de forma elegante, en la que no se crearán nuevos flujos, y se mantienen los ya existentes (los cuales se finalizarán rápido). Éste frame también incluye los campos **Reason Phrase** y **Error Code**. Se identifica con el valor 0x6. Su estructura:
 
-{% highlight bash %}0        1        2        3         4        5        6        7
+```bash
+0        1        2        3         4        5        6        7
 +--------+--------+--------+--------+--------+--------+--------+--------+
 |Type(8) |         Error code (32 bits)      | Last Good Stream id (32 bits) ->
 +--------+--------+--------+--------+--------+--------+--------+--------+
@@ -268,7 +289,8 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
  stream  | Reason phrase   |  Reason phrase    ->
    id    | length (16 bits)|(variable length)
 +--------+--------+--------+--------+--------+
-    {% endhighlight %}
+    
+```
 
 ### Análisis del tráfico con WireShark
 

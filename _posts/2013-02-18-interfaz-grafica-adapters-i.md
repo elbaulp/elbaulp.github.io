@@ -48,7 +48,8 @@ Para que quede más claro este concepto, vamos a verlo mediante un ejemplo:
 
 Primero creamos el layout, que va a contener un ListView con un Id ya definido por android, y un TextView también con un id ya definido.
 
-{% highlight xml %}< ?xml version="1.0" encoding="utf-8"?>
+```xml
+< ?xml version="1.0" encoding="utf-8"?>
 <linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -63,11 +64,13 @@ Primero creamos el layout, que va a contener un ListView con un Id ya definido p
     android:id="@android:id/empty" />
 
 </linearlayout>
-{% endhighlight %}
+
+```
 
 Ahora, el código donde creamos el adaptador, y lo asociamos al ListView:
 
-{% highlight java %}package app.elbauldelprogramador.adapters;
+```java
+package app.elbauldelprogramador.adapters;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -102,13 +105,15 @@ public class AdaptadoresActivity extends Activity {
         lv.setAdapter(adaptador);
     }
 }
-</string>{% endhighlight %}
+</string>
+```
 
 Como vemos, al crear el arrayAdapter, tenemos que pasar tres parámetros, el contexto, un layout que se usará para dibujar cada item (en este caso ***simple\_list\_item_1***, que ya viene definido por android), más adelante veremos como crear los nuestros propios, y como tercer parámetro la colección de datos.
 
 Aprovechando que en la anterior [entrada hablamos de los eventos][1], voy a explicar como fijar un evento onclick para cada elemento de la lista.
 
-{% highlight java %}//Evento que se disparará al pulsar en un elemento de la lista
+```java
+//Evento que se disparará al pulsar en un elemento de la lista
 lv.setOnItemClickListener(new OnItemClickListener() {
 
    @Override
@@ -125,11 +130,13 @@ lv.setOnItemClickListener(new OnItemClickListener() {
 
    };
 });
-{% endhighlight %}
+
+```
 
 Para realizar este tipo de cosas, android proporciona una clase llamada ListActivity, este tipo de clase necesita que exista una vista con el id ya definido por Android ***@android:id/list*** y otra con el id *****@android:id/empty* (Tal y como lo definimos en nuestro layout), así, si el adaptador que le asiganamos a la lista no tiene datos, se mostrará al usuario la vista empty, el código quedaría de la siguiente manera:
 
-{% highlight java %}package app.elbauldelprogramador.adapters;
+```java
+package app.elbauldelprogramador.adapters;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -177,7 +184,8 @@ public class AdaptadoresActivity extends ListActivity {
             .show();
     }
 }
-</string>{% endhighlight %}
+</string>
+```
 
 El resultado de este código es el siguiente, para una adaptador con datos:
 

@@ -67,9 +67,11 @@ categories:
           <b>Install Grub Customizer in Ubuntu:</b>
         </p>
 
-        {% highlight bash %}<code>sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+        ```bash
+<code>sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
-sudo apt-get install grub-customizer</code>{% endhighlight %}
+sudo apt-get install grub-customizer</code>
+```
 
         <div style="text-align: justify;">
           Once installed, you can find it under <i>Applications > System Tools > Grub Customizer</i>.

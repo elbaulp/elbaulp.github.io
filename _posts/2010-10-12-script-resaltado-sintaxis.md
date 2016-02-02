@@ -27,7 +27,8 @@ He estado un tiempo intentando instalar unos script hechos en javascript, para r
 Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje.  
  <br /> Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.<br /> Aqui esta el codigo:</p>
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 case $? in
@@ -50,7 +51,8 @@ case $? in
 *)
   echo "No se seleciciono nada.";;
 esac
-{% endhighlight %}
+
+```
 
 <p>
   <b>Voy a explicar un poco el código:</b><br /> La variable <em>keyWords</em> contiene las palabras claves de c++, menos &#8220;class&#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..
@@ -59,7 +61,9 @@ esac
 <p>
   Las dos siguientes lineas
 
-  {% highlight bash %}sed "s/^#include..... y sed "s/^#define...{% endhighlight %}
+  ```bash
+sed "s/^#include..... y sed "s/^#define...
+```
 
   <p>
     buscan el patrón #define o #include, al principio de cada linea del texto, esto se indica con <em>^</em>, y lo reemplaza con su estilo correspondiente, para formatear el texto.<br /> Una vez entramos al for, se aplica básicamente el mismo procedimiento que para define e include, pero con cada palabra de la variable keyWords.

@@ -35,9 +35,11 @@ Una excepción es una situación especial dentro de la ejecución de un programa
 Las excepciones deben ser declaradas dentro de la sección DECLARE, como si de una variable se tratase:  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}DECLARE
+```sql
+DECLARE
 e_sin_alumnos EXCEPTION;
-{% endhighlight %}
+
+```
 
   
 <!--ad-->
@@ -50,7 +52,8 @@ Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automá
 
 La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
 
-{% highlight sql %}EXCEPTION
+```sql
+EXCEPTION
   WHEN nb_excepcion_1 THEN
     instrucciones excep1;
   WHEN nb_excepcion_2 THEN
@@ -60,11 +63,13 @@ La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
     instrucciones excepn;
   [WHEN OTHERS THEN
     instrucciones;]
-{% endhighlight %}
+
+```
 
 Ejemplo:
 
-{% highlight sql %}DECLARE
+```sql
+DECLARE
   VALOR_NEGATIVO EXCEPTION;
   valor NUMBER;
 BEGIN
@@ -76,7 +81,8 @@ BEGIN
     WHEN VALOR_NEGATIVO THEN
     dbms_output.put_line('El valor no puede ser negativo');
 END;
-{% endhighlight %}
+
+```
 
 <!--INFOLINKS_ON-->
 
@@ -86,7 +92,9 @@ Cuando se produce un error, se ejecuta el bloque EXCEPTION. Si existe un bloque 
 En ocasiones queremos enviar un mensaje de error personalizado al producirse una excepción PL/SQL. Para ello es necesario utilizar la instruccion **RAISE\_APPLICATION\_ERROR.**  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}RAISE_APPLICATION_ERROR(<error_num>,<mensaje>);{% endhighlight %}
+```sql
+RAISE_APPLICATION_ERROR(<error_num>,<mensaje>);
+```
 
 <!--INFOLINKS_ON-->
 
@@ -99,7 +107,8 @@ Ejemplo:
   
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}DECLARE
+```sql
+DECLARE
   v_div NUMBER;
 BEGIN
   SELECT 1/0 INTO v_div FROM DUAL;
@@ -107,7 +116,8 @@ EXCEPTION
   WHEN OTHERS THEN
     RAISE_APPLICATION_ERROR(-20001,'No se puede dividir por cero');
 END;
-{% endhighlight %}
+
+```
 
 <!--INFOLINKS_ON-->
 
@@ -121,7 +131,8 @@ Dentro del bloque de excepciones conviene recordar la existencia de la excepció
 Estas funciones no pueden ser utilizadas directamente en una sentencia SQL, pero sí se puede asignar su valor a alguna variable de programa y luego usar esta última en alguna sentencia.  
 <!--INFOLINKS_OFF-->
 
-{% highlight sql %}SET SERVEROUTPUT ON;
+```sql
+SET SERVEROUTPUT ON;
 DECLARE
   err_num NUMBER;
   err_msg VARCHAR2(255);
@@ -138,11 +149,13 @@ EXCEPTION
     DBMS_OUTPUT.put_line('Error:'||TO_CHAR(err_num));
     DBMS_OUTPUT.put_line(err_msg);
 END;
-{% endhighlight %}
+
+```
 
 
 
-{% highlight sql %}DECLARE
+```sql
+DECLARE
   e_sinreg EXCEPTION;
   a number(10) := 25;
   b number(10) := 0;
@@ -159,7 +172,8 @@ EXCEPTION
   WHEN e_sinreg THEN DBMS_OUTPUT.PUT_LINE('Hay menos de 10 articulos.');
   WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Se ha producido otra excepción.');
 END;
-{% endhighlight %}
+
+```
 
 <!--INFOLINKS_ON-->
 

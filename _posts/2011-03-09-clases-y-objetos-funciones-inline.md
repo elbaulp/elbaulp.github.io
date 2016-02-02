@@ -27,13 +27,15 @@ Podemos declarar y definir funciones dentro de la clase, para no tener que defin
 denomina inline.  
 <!--ad-->
 
-{% highlight bash %}class Punto.{
+```bash
+class Punto.{
   //...
 public:
   //...
   int gety () {return y;}
 };
-{% endhighlight %}
+
+```
 
 
 

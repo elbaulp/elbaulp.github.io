@@ -28,8 +28,10 @@ categories:
 
 A veces queremos descargar algo y no queremos esperar a que finalice, pero sí que queremos apagar el pc. Una buena opción para el problema es instalar Sentinella. Lo instalamos así:
 
-{% highlight bash %}sudo apt-get install sentinella 
-{% endhighlight %}
+```bash
+sudo apt-get install sentinella 
+
+```
 
 Sentinella aparecerá en el menu &#8220;Sistema&#8221; del escritorio. Si lo lanzamos veremos algo parecido a esto:
 

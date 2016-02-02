@@ -24,8 +24,10 @@ Hoy quiero hablar sobre cómo podemos crear formularios de una forma muy sencill
 
 Vamos a crear una aplicación trivial a modo de ejemplo, la llamaremos **pruebaformularios**. Para crearla ejecutamos:
 
-{% highlight bash %}$ python manage.py startapp pruebaformularios
-{% endhighlight %}
+```bash
+$ python manage.py startapp pruebaformularios
+
+```
 
 La aplicación hemos de crearla dentro de un proyecto existente.
 
@@ -33,7 +35,8 @@ La aplicación hemos de crearla dentro de un proyecto existente.
 
 El ejemplo que vamos a ver va a disponer de un solo modelo *Persona* que estará compuesto de varios campos:
 
-{% highlight python %}
+```python
+
 # pruebaformularios/models.py
 from django.db import models
 
@@ -47,13 +50,15 @@ class Persona(models.Model):
 
     def __unicode__(self):
         return self.dni
-{% endhighlight %}
+
+```
 
 ## Crear la Vista
 
 El siguiente paso es crear la vista para este modelo. En este ejemplo se mostrará una lista de Personas y se dará la posibilidad de añadir nuevas personas mediante un formulario. Dado que crear una lista de objetos es algo muy común Django proporciona una clase llamada *ListView* de la que podemos heredar para facilitar la tarea. A esto se le llama **vistas genéricas** En las referencias (2) se dispone de más información sobre este tema.
 
-{% highlight python %}
+```python
+
 # pruebaformularios/views.py
 from django.views.generic import ListView
 
@@ -62,7 +67,8 @@ from .models import Persona
 class PersonaList(ListView):
 
     model = Persona
-{% endhighlight %}
+
+```
 
 Como vemos, de una forma tan sencilla como esta estamos creando una vista que permitirá mostrar una lista de objetos persona.
 
@@ -70,7 +76,8 @@ Como vemos, de una forma tan sencilla como esta estamos creando una vista que pe
 
 Para ser capaces de mostrar al usuario una lista de *personas* es necesario crear una plantilla. Nos basaremos en una plantilla base llamada *base.html* que se puede encontrar en *django/contrib/databrowse/templates/databrowse/base.html*
 
-{% highlight html %}
+```html
+
 {% raw %}
   {% extends "base.html" %}
   {% block content %}
@@ -83,7 +90,8 @@ Para ser capaces de mostrar al usuario una lista de *personas* es necesario crea
   </ul>
   {% endblock %}
 {% endraw %}
-{% endhighlight %}
+
+```
 
 De esta forma nuestra plantilla hereda todo el contenido de *base.html* y le añadimos contenido en el bloque *content*. Es importante que guardemos ambas plantillas dentro de nuestra aplicación *pruebaformularios* en el directorio *./templates/pruebaformularios/*.
 
@@ -91,15 +99,19 @@ De esta forma nuestra plantilla hereda todo el contenido de *base.html* y le añ
 
 Con la plantilla creada, el siguiente paso es configurar el proyecto para que sea capaz de encontrar la plantilla. Abrimos el *settings.py* de nuestro proyecto y en *TEMPLATE_DIRS* escribimos:
 
-{% highlight python %}TEMPLATE_DIRS = (
+```python
+TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH,'pruebaformularios/templates/pruebaformularios'),
 )
-{% endhighlight %}
+
+```
 
 Donde PROJECT_PATH es:
 
-{% highlight python %}PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
-{% endhighlight %}
+```python
+PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
+
+```
 
 De esta manera django encontrará nuestras plantillas y podremos usarlas.
 
@@ -107,7 +119,8 @@ De esta manera django encontrará nuestras plantillas y podremos usarlas.
 
 Falta configurar el mapeo URL para la vista que acabamos de crear (*PersonaList*). Para ello creamos un archivo llamado **urls.py** en el directorio de nuestra aplicación con el siguiente contenido:
 
-{% highlight python %}# pruebaformularios/urls.py
+```python
+# pruebaformularios/urls.py
 from django.conf.urls import patterns
 from django.conf.urls import url
 
@@ -116,13 +129,15 @@ from . import views
 urlpatterns = patterns('',
     url(r'list/$', views.PersonaList.as_view(), name='plist'),
 )
-{% endhighlight %}
+
+```
 
 Con esto estamos diciendo a *Django* que cuando encuentre el patrón url list/ (No es exáctamente así, pero lo aclararemos a continuación) muestre la vista *PersonaList*, también le hemos dado un nombre a este patrón para poder referenciarlo más tarde tanto en código como en plantillas, y así no escribir directamente las URLs, lo cual es bastante útil, ya que podemos cambiar la estructura de las direcciones URLs de nuestra aplicación sin necesidad de modificar nada del código, únicamente el archivo *urls.py*
 
 El archivo *urls.py* que acabamos de crear pertenece a la aplicación *pruebaformularios*, ahora es necesario agregar estos patrones al fichero *urls.py* global, es decir, el del proyecto.
 
-{% highlight python %}# Fichero urls.py del proyecto
+```python
+# Fichero urls.py del proyecto
 from django.conf.urls import patterns
 from django.conf.urls import include
 from django.conf.urls import url
@@ -134,15 +149,18 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^personas/', include('pruebaformularios.urls', namespace="upersonas")),
 )
-{% endhighlight %}
+
+```
 
 Con esto, estamos añadiendo bajo la ruta */personas/* todas las urls del proyecto *pruebaformularios*. Es como si fuera un #include de C/C++. Luego la lista de personas que pretendemos mostrar estará en la ruta */personas/list/*. El *namespace* lo usaremos en las plantillas y en el código.
 
 Ya debería estar todo, para probar el ejemplo ejecutamos:
 
-{% highlight bash %}$ python manage.py syncdb
+```bash
+$ python manage.py syncdb
 $ python manage.py runserver
-{% endhighlight %}
+
+```
 
 El primer comando se encarga de actualizar la base de datos con los modelos creados y el segundo arranca el servidor de desarrollo para que podamos acceder a la web.
 
@@ -154,14 +172,16 @@ Si todo ha ido bien, deberíamos ver la siguiente página en <a href="http://127
 
 Ahora que tenemos todo listo para mostrar al usuario una lista de personas, vamos a ofrecerle la posibilidad de añadir gente a la lista. Para ello crearemos una clase que extienda de *ModelForm* (3) en *models.py*
 
-{% highlight python %}# models.py
+```python
+# models.py
 from django.forms import ModelForm
 
 class PersonaForm(ModelForm):
 
     class Meta:
         model = Persona
-{% endhighlight %}
+
+```
 
 Con esto crearemos un formulario basándonos en los campos del modelo *Persona*, lo cual transformará cada campo del modelo en su correspondiente widget en HTML.
 
@@ -169,7 +189,8 @@ Con esto crearemos un formulario basándonos en los campos del modelo *Persona*,
 
 Para ser capaces de registrar una nueva Persona en la base de datos, debemos declarar una función que se encargue de dicha tarea y mapear ésta función con una URL, en nuestro ejemplo la dirección que usaremos para añadir una nueva persona será */personas/add*. La función la creamos en el fichero *views.py*
 
-{% highlight python %}# views.py
+```python
+# views.py
 from .models import PersonaForm
 
 def add_persona(request):
@@ -183,7 +204,8 @@ def add_persona(request):
         form = PersonaForm() # Unbound form
 
     return render(request, 'pruebaformularios/persona_form.html', {'form': form})
-{% endhighlight %}
+
+```
 
 Hay 3 posibles flujos en esta función:
 
@@ -255,11 +277,13 @@ La siguiente tabla pretende resumir los flujos posibles:
 
 Lo siguiente que hacemos es mapear la funci��n anterior con una URL, de modo que al acceder a */personas/add* se nos presente el formulario:
 
-{% highlight python %}urlpatterns = patterns('',
+```python
+urlpatterns = patterns('',
     url(r'^list/$', views.PersonaList.as_view(), name='plist'),
     url(r'^add/$', views.add_persona, name='padd'),
 )
-{% endhighlight %}
+
+```
 
 El nombre será usado después en la plantilla.
 
@@ -268,7 +292,8 @@ El nombre será usado después en la plantilla.
 Por último, la plantilla que contiene el formulario quedaría así:
 
 
-{% highlight html %}
+```html
+
 {% raw %}
 {% extends "base.html" %}
 {% block content %}
@@ -279,7 +304,8 @@ Por último, la plantilla que contiene el formulario quedaría así:
   </form>
 {% endblock %}
 {% endraw %}
-{% endhighlight %}
+
+```
 
 De nuevo usamos el *namespace* creado anteriormente en el *urls.py* global y el nombre que acabamos de darle a la función para agregar personas.
 
@@ -289,17 +315,20 @@ Eso es todo, accediendo a <a href="http://127.0.0.1:8000/personas/add" target="_
 
 Por último estaría bien colocar un enlace en la página que lista las personas para poder acceder rápidamente al formulario, para ello añadimos al final de la plantilla *personas_list.html* el siguiente enlace:
 
-{% highlight html %}
+```html
+
 {% raw %}
 Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
 {% endraw %}
-{% endhighlight %}
+
+```
 
 Ya sabemos que *upersonas* es */personas/* y *padd* es *add*, luego este enlace nos llevará a la dirección */personas/add*, mostrando el formulario.
 
 ## Código completo
 
-{% highlight python %}# models.py
+```python
+# models.py
 from django.db import models
 from django.forms import ModelForm
 
@@ -319,9 +348,11 @@ class PersonaForm(ModelForm):
     class Meta:
         model = Persona
 
-{% endhighlight %}
 
-{% highlight python %}# views.py
+```
+
+```python
+# views.py
 from django.views.generic import ListView
 from django.shortcuts import render
 from django.shortcuts import redirect
@@ -346,9 +377,11 @@ def add_persona(request):
         form = PersonaForm()
 
     return render(request, 'pruebaformularios/persona_form.html', {'form': form})
-{% endhighlight %}
 
-{% highlight python %}# urls.py
+```
+
+```python
+# urls.py
 from django.conf.urls import patterns
 from django.conf.urls import url
 
@@ -358,10 +391,12 @@ urlpatterns = patterns('',
     url(r'^list/$', views.PersonaList.as_view(), name='plist'),
     url(r'^add/$', views.add_persona, name='padd'),
 )
-{% endhighlight %}
+
+```
 
 
-{% highlight html %}
+```html
+
 {% raw %}
 # templates/pruebaformularios/persona_list.html
 {% extends "base.html" %}
@@ -380,9 +415,11 @@ urlpatterns = patterns('',
   Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
 {% endblock %}
 {% endraw %}
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
+
 {% raw %}
 # templates/pruebaformularios/persona_form.html
 
@@ -396,10 +433,12 @@ urlpatterns = patterns('',
   </form>
 {% endblock %}
 {% endraw %}
-{% endhighlight %}
+
+```
 
 
-{% highlight python %}
+```python
+
 # urls.py del proyecto
 from django.conf.urls import patterns
 from django.conf.urls import include
@@ -412,7 +451,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^personas/', include('pruebaformularios.urls', namespace="upersonas")),
 )
-{% endhighlight %}
+
+```
 
 Espero que os haya servido de ayuda.
 

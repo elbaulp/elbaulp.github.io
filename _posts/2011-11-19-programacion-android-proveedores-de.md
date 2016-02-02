@@ -40,7 +40,9 @@ Para recuperar datos de un cv o guardarlos en él, se necesitan usar un conjunto
   
 <!--ad-->
 
-{% highlight bash %}content://com.android.note.NoteProvider/notes{% endhighlight %}
+```bash
+content://com.android.note.NoteProvider/notes
+```
 
 <p class="alert">
   REST (REpresentational State Transfer). Es simplemente un concepto que, como usuarios de la web, casi todos estamos famirializados con él. Cuando introducimos una URL en el navegador y el servidor web responde con HTML, esencialmente estamos realizando una consulta basada en REST sobre el servidor web. De manera similar, cuando actualizamos algún contenido de un formulario web, estamos haciendo una actualización (update) basada en <a target="_blank" href="http://es.wikipedia.org/wiki/Representational_State_Transfer">REST</a> en el servidor web y cambiando su estado.
@@ -48,7 +50,9 @@ Para recuperar datos de un cv o guardarlos en él, se necesitan usar un conjunto
 
 Para recuperar una nota específica de la base de datos de notas, (la nota 25 por ejemplo), se necistará una URI como la siguiente:
 
-{% highlight bash %}content://com.android.note.NoteProvider/notes/25{% endhighlight %}
+```bash
+content://com.android.note.NoteProvider/notes/25
+```
 
 En futuras entradas veremos como estas Uris se traducen para usarse con los mecanismos de acceso a la base de datos. Cualquier aplicación del dispositivo puede usar estas URIs para acceder y manipular datos. Como consecuencia, los CV desempeñan un papel importante compartiendo datos entre aplicaciones.
 

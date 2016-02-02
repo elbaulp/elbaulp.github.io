@@ -19,8 +19,10 @@ Seguramente alguna vez hayas encontrado alguna web con montones de ficheros que 
   
 <!--ad-->
 
-{% highlight bash %}wget -r -A.tar.gz <url>
-{% endhighlight %}
+```bash
+wget -r -A.tar.gz <url>
+
+```
 
 Donde:
 

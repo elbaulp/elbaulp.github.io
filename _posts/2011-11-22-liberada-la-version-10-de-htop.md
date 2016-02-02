@@ -114,8 +114,10 @@ El tiempo vuela, no puedo creer que hayan pasado ya 8 años de desarrollo. Parec
 
 Para instalarlo tan solo debéis escribir en el terminal:
 
-{% highlight bash %}sudo aptitude install htop
-{% endhighlight %}
+```bash
+sudo aptitude install htop
+
+```
 
 Al ejecutarlo veremos algo parecido a lo siguiente:
 

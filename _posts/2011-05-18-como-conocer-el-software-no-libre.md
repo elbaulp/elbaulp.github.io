@@ -36,7 +36,9 @@ Los pasos a seguir son los siguientes:
 
 Instalamos el programa:
 
-{% highlight bash %}sudo aptitude install vrms{% endhighlight %}
+```bash
+sudo aptitude install vrms
+```
 
 Y lo ejecutamos con `vrms`
 
@@ -48,10 +50,12 @@ El resultado es el siguiente:
 
 Para que nos salga la el dibujito de **Stallman** hay que seguir los siguientes pasos.
 
-{% highlight bash %}$ sudo aptitude install vrms cowsay
+```bash
+$ sudo aptitude install vrms cowsay
 $ sudo mv rms.cow /usr/share/cowsay/cows/rms.cow
 $ cowsay -f rms -W 60 `vrms`
-{% endhighlight %}
+
+```
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s1600/stallman.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="256" width="238" src="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png" /></a>

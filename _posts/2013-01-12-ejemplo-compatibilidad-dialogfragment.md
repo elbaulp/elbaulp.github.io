@@ -37,7 +37,8 @@ Dicho esto, comencemos con el <a href="http://developer.android.com/reference/an
 
 El primer paso es crear una clase *fragment* que herede de *DialogFragment* y devuelva un `<em>TimePickerDialog</em>` desde el método <a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html#onCreateDialog%28android.os.Bundle%29" target="_blank"><code><em> onCreateDialog()</em></code></a> del *fragment*:
 
-{% highlight java %}import android.app.Dialog;
+```java
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -67,26 +68,31 @@ public class TimePickerFragment extends DialogFragment implements
     {
     }
 }
-{% endhighlight %}
+
+```
 
 Para cerciorarnos que se está usando la librería de compatibilidad, basta con ver el `import android.support.v4.app.DialogFragment;`
 
 Por ahora dejaremos el método `onTimeSet` vacío; pasemos a crear la interfaz. A modo de ejemplo, crearemos un botón que muestre el dialogo cuando sea pulsado:
 
-{% highlight xml %}<Button
+```xml
+<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mostrarDialogoDeTiempo"
         android:text="Diálogo de tiempo" />
-{% endhighlight %}
+
+```
 
 Luego, creamos el método `mostrarDialogoDeTiempo` que será llamado al pulsar el botón:
 
-{% highlight java %}public void mostrarDialogoDeTiempo(View v) {
+```java
+public void mostrarDialogoDeTiempo(View v) {
    DialogFragment newFragment = new TimePickerFragment();
    newFragment.show(getSupportFragmentManager(), "timePicker");
 }
-{% endhighlight %}
+
+```
 
 Llegados a este punto, es importante saber qué clase hemos de importar. Ya que el objetivo buscado es lograr compatibilidad entre las distintas versiones de android, para que la interfaz de la aplicación sea la misma en cualquier versión, la clase a importar es `import android.support.v4.app.DialogFragment;<br />
 `. De lo contrario, sería `import android.app.DialogFragment;`  
@@ -102,7 +108,8 @@ El proceso de creación de un **DatePickerDialog** es muy similar.
 
 Definimos la clase:
 
-{% highlight java %}import android.app.DatePickerDialog;
+```java
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -129,24 +136,29 @@ public class DatePickerFragment extends DialogFragment
         // Do something with the date chosen by the user
     }
 }
-{% endhighlight %}
+
+```
 
 Al igual que antes, creamos un botón que muestre el diálogo:
 
-{% highlight xml %}<Button
+```xml
+<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mostrarDialogoDeFecha"
         android:text="Diálogo de fecha" />
-{% endhighlight %}
+
+```
 
 He implementamos el método que responderá al pulsar el botón:
 
-{% highlight java %}public void mostrarDialogoDeFecha(View v){
+```java
+public void mostrarDialogoDeFecha(View v){
    DialogFragment newFragment = new DatePickerFragment();
    newFragment.show(getSupportFragmentManager(), "datePicker");
 }
-{% endhighlight %}
+
+```
 
 [<img src="/images/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180" height="300" class="aligncenter size-medium wp-image-1106" />][2]{.thumbnail}
 

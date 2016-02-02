@@ -25,9 +25,11 @@ Hoy vamos a ver cómo usar filtros en [git](/mini-tutorial-y-chuleta-de-comandos
 
 Bastará con crear un _script_ que contenga:
 
-{% highlight ruby %}
+```ruby
+
 ruby -e '$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, "url: ")'
-{% endhighlight %}
+
+```
 
 Lo llamaremos `siteurl.smudge`, y le daremos permisos de ejecución.
 
@@ -35,18 +37,22 @@ Lo llamaremos `siteurl.smudge`, y le daremos permisos de ejecución.
 
 Similar al anterior:
 
-{% highlight ruby %}
+```ruby
+
 ruby -e '$stdout.puts $stdin.read.gsub(/url: /, "url: http:\/\/elbauldelprogramador\.com")'
-{% endhighlight %}
+
+```
 
 ## Añadir los scripts a los filtros
 
 Solo resta añadir los filtros a la configuración de git:
 
-{% highlight bash %}
+```bash
+
 $ git config filter.siteurl.smudge siteurl.smudge
 $ git config filter.siteurl.clean siteurl.clean
-{% endhighlight %}
+
+```
 
 **Nota:** Los _scripts_ tienen que estar en el _PATH_ del sistema, y tener permisos de ejecucion.
 {: .notice}
@@ -55,9 +61,11 @@ $ git config filter.siteurl.clean siteurl.clean
 
 Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero `.gitattributes`:
 
-{% highlight bash %}
+```bash
+
 _config.yml filter=siteurl
-{% endhighlight %}
+
+```
 
 Gracias Julián.
 

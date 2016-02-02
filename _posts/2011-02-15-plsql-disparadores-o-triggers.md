@@ -36,7 +36,8 @@ Para crear un disparador utilizaremos la siguiente instrucción:
 
 
 
-{% highlight sql %}CREATE {OR REPLACE} TRIGGER nombre_disp
+```sql
+CREATE {OR REPLACE} TRIGGER nombre_disp
   [BEFORE|AFTER]
   [DELETE|INSERT|UPDATE {OF columnas}] [ OR [DELETE|INSERT|UPDATE {OF columnas}]...]
   ON tabla
@@ -48,7 +49,8 @@ BEGIN
 [EXCEPTION]
   -- Instrucciones de excepción
 END;
-{% endhighlight %}
+
+```
 
 
 
@@ -76,7 +78,8 @@ Cuando se crea un trigger para más de una operación DML, se puede utilizar un 
 
 
 
-{% highlight sql %}CREATE TRIGGER audit_trigger BEFORE INSERT OR DELETE OR UPDATE
+```sql
+CREATE TRIGGER audit_trigger BEFORE INSERT OR DELETE OR UPDATE
   ON classified_table FOR EACH ROW
 BEGIN
   IF INSERTING THEN
@@ -99,7 +102,8 @@ BEGIN
     ' new key: ' || :new.key);
   END IF;
 END;
-{% endhighlight %}
+
+```
 
 
 
@@ -278,7 +282,8 @@ Ejemplo:
 
 
 
-{% highlight sql %}CREATE TRIGGER scott.emp_permit_changes
+```sql
+CREATE TRIGGER scott.emp_permit_changes
   BEFORE DELETE OR INSERT OR UPDATE ON scott.emp
 DECLARE
   dummy INTEGER;
@@ -305,7 +310,8 @@ BEGIN
     raise_application_error( -20502, 'May only change employee table during working hours');
   END IF;
 END;
-{% endhighlight %}
+
+```
 
 
 
@@ -317,20 +323,23 @@ La cláusula WHEN sólo es válida para disparadores con nivel de fila. Si está
 
 
 
-{% highlight sql %}CREATE TRIGGER tr1
+```sql
+CREATE TRIGGER tr1
   BEFORE INSERT OR UPDATE OF salario ON scott.emp
   FOR EACH ROW WHEN (new.job <> 'PRESIDENT')
 BEGIN
   /* Cuerpo del disparador */
 END;
-{% endhighlight %}
+
+```
 
 
 
 Esto último es equivalente a:  
 
 
-{% highlight sql %}CREATE TRIGGER tr1
+```sql
+CREATE TRIGGER tr1
   BEFORE INSERT OR UPDATE OF salario ON scott.emp
   FOR EACH ROW
 BEGIN
@@ -339,14 +348,17 @@ BEGIN
   END IF;
 END;
 
-{% endhighlight %}
+
+```
 
 
 
 Para hacer que un trigger ejecute un ROLLBACK de la transacción que tiene activa y teniendo en cuenta que en las sentencias que componen el cuerpo de un trigger no puede haber este tipo de sentencias (rollback, commit,&#8230;) hay que ejecutar **“error / excepcion”** mediante la sentencia raise\_application\_error cuya sintaxis es:  
 
 
-{% highlight sql %}RAISE_APPLICATION_ERROR(num_error,’mensaje’);{% endhighlight %}
+```sql
+RAISE_APPLICATION_ERROR(num_error,’mensaje’);
+```
 
 
 
@@ -354,7 +366,9 @@ El num_error es un número entero cualquiera, aunque se aconseja que tenga 5 dí
 
 
 
-{% highlight sql %}raise_application_error( 20000,’ No se puede modificar el cliente.’);{% endhighlight %}
+```sql
+raise_application_error( 20000,’ No se puede modificar el cliente.’);
+```
 
 ## Tabla Mutando
 

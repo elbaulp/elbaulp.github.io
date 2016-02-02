@@ -27,25 +27,29 @@ Se pueden definir arrays de strings como recursos en cualquier archivo bajo el s
   
 <!--ad-->
 
-{% highlight xml %}<resources>
+```xml
+<resources>
 <string -array name="test_array">
    <item>uno</item>
    <item>dos</item>
    <item>tres</item>
 </string>
 </resources>
-{% endhighlight %}
+
+```
 
 Una vez definido el recurso, podemos usarlo en el código Java de la siguiente manera:
 
-{% highlight java %}//Accedemos al objeto 'Recursos' desde la Activity
+```java
+//Accedemos al objeto 'Recursos' desde la Activity
 Resources res = nombre-de-la-actividad.getResources();
 String strings[] = res.getStringArray(R.array.test_array);
 
 //Mostramos el array
 for (String s: strings)
    Log.d("ejemplo", s);
-{% endhighlight %}
+
+```
 
 * * *
 

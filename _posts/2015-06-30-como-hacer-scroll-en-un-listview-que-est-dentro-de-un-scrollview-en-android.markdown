@@ -21,7 +21,8 @@ Para solucionar el problema, bastaría con deshabilitar la captura del evento `o
 
 Al `ScrollView`, le añadimos un evento `onTouch`. Dentro, recuperaremos el `ListView`, para deshabilitar en su padre la intercepción de eventos `onTouch`. En éste caso, el padre del `ListView` es el `ScrollView`.
 
-{% highlight java %}
+```java
+
 miScrollView.setOnTouchListener(new View.OnTouchListener() {
 
     public boolean onTouch(View v, MotionEvent event) {
@@ -30,11 +31,13 @@ miScrollView.setOnTouchListener(new View.OnTouchListener() {
         return false;
     }
 });
-{% endhighlight %}
+
+```
 
 Al `ListView`, le añadimos también un `onTouch`, y haremos el proceso inverso.
 
-{% highlight java %}
+```java
+
 miListView.setOnTouchListener(new View.OnTouchListener() {
 
     public boolean onTouch(View v, MotionEvent event) {
@@ -42,7 +45,8 @@ miListView.setOnTouchListener(new View.OnTouchListener() {
         return false;
     }
 });
-{% endhighlight %}
+
+```
 
 La documentación oficial del método es:
 

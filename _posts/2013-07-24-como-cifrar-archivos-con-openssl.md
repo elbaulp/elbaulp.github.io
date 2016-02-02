@@ -29,9 +29,11 @@ Las copias de seguridad son algo que debemos tener a buen resguardo por si algú
 
 Al igual que en [GPG][1], necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:
 
-{% highlight bash %}$ openssl genrsa -out clave.pem 4096
+```bash
+$ openssl genrsa -out clave.pem 4096
 $ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
-{% endhighlight %}
+
+```
 
 Con el primer comando generamos la clave, en *clave.pem* se encuentran tanto la clave privada como la pública, con el segundo comando extraemos la pública a un archivo distinto.
 
@@ -56,13 +58,15 @@ Ahora procedemos a aplicar los pasos descritos anteriormente con openssl:
 
 ##### Cifrando los archivos
 
-{% highlight bash %}# Paso 1, generar clave aleatoria
+```bash
+# Paso 1, generar clave aleatoria
 $ openssl rand -base64 48 -out key.txt
 # Paso 2, cifrar el archivo con la clave simétrica
 $ openssl enc -aes-256-cbc -pass file:key.txt -in archivoSINcifrar -out archivoCIFRADO.encrypted
 # Paso 3, cifrar la clave generada en el paso 1 con la llave pública
 $ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin
-{% endhighlight %}
+
+```
 
 Los argumentos significan:
 
@@ -77,11 +81,13 @@ Los argumentos significan:
 
 ##### Descifrado de archivos
 
-{% highlight bash %}# Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3
+```bash
+# Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3
 $ openssl rsautl -decrypt -inkey ./clave.pem -in key.enc -out key.txt
 # Paso 2, Descifrar el archivo con la clave
 $ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -out archivoSINcifrar
-{% endhighlight %}
+
+```
 
 Donde:
 
@@ -91,7 +97,8 @@ Donde:
 
 Como suele ser habitual, los [scripts bash][2] nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un **script** que automatize el proceso de descrifrar todos los archivos de un directorio:
 
-{% highlight bash %}#/bin/bash
+```bash
+#/bin/bash
 
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <Directorio a los archivos cifrados>"
@@ -112,7 +119,8 @@ do
 done
 
 IFS="$OIFS"
-{% endhighlight %}
+
+```
 
 Espero que os sea de utilidad.
 

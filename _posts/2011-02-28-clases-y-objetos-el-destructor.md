@@ -39,25 +39,29 @@ dos mensajes idénticos (objeto de la clase Punto destruido).
 
 
 
-{% highlight bash %}int (main){
+```bash
+int (main){
   Punto ptl(‘*’, 20, 10);
   Punto def;
   //...
   return 0;
 }
-{% endhighlight %}
+
+```
 
 
 
 Declaración y definición del destructor de la clase. La definición puede hacerse  
 también fuera de la clase.
 
-{% highlight bash %}class Punto{
+```bash
+class Punto{
   public:
     //...
     ~Punto() { cout< <"nobjeto Punto destruido"; }
 };
-{% endhighlight %}
+
+```
 
 * * *
 

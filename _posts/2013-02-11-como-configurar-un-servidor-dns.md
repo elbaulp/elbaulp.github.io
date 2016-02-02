@@ -57,11 +57,13 @@ Debo reconocer que el tema de los DNS me ha dado muchos problemas, es algo que p
 
 En Linux, **BIND **es el encargado de gestionar los DNS, como su página de ayuda indica (*bind &#8211; bind a name to a socket*), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de **BIND **es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:
 
-{% highlight bash %}$ nslookup -type=txt -class=chaos version.bind servidor
+```bash
+$ nslookup -type=txt -class=chaos version.bind servidor
 Server:     servidor
 Address:    IP#53
 
-version.bind   text = "VERSION"{% endhighlight %}
+version.bind   text = "VERSION"
+```
 
 **BIND** tiene tres componentes, el primero es llamado *named* o *name-dee*, es un demonio que ejecuta el lado servidor del DNS.
 
@@ -111,7 +113,8 @@ El proceso *named* escucha en el puerto 53 en los sitemas Linux. Al recibir una 
 
 El fichero tiene la siguiente estructura:
 
-{% highlight cpp %}// This is the primary configuration file for the BIND DNS server named.
+```cpp
+// This is the primary configuration file for the BIND DNS server named.
 //
 // Please read /usr/share/doc/bind9/README.Debian.gz for information on the
 // structure of BIND configuration files in Debian, *BEFORE* you customize
@@ -121,21 +124,25 @@ El fichero tiene la siguiente estructura:
 
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
-include "/etc/bind/named.conf.default-zones";{% endhighlight %}
+include "/etc/bind/named.conf.default-zones";
+```
 
 Veamos el contenido de los tres archivos que incluye:
 
 **named.conf.options**
 
-{% highlight bash %}options {
+```bash
+options {
     directory "/var/cache/bind";
-};{% endhighlight %}
+};
+```
 
 Aquí se definen el directorio por defecto para named.
 
 **named.conf.default-zones**
 
-{% highlight bash %}zone "." {
+```bash
+zone "." {
    type hint;
   file "/etc/bind/db.root";
 };
@@ -158,7 +165,8 @@ zone "0.in-addr.arpa" {
 zone "255.in-addr.arpa" {
    type master;
     file "/etc/bind/db.255";
-};{% endhighlight %}
+};
+```
 
 **zone &#8220;.&#8221;** contiene los nombres y direcciones de los servidores root. Como se mencionó arriba, éstos servidores saben en qué servidores autorizados existe tu dominio &#8212; Siendo el primero los TLD (com, org, net etc) y el segundo el servidor autorizado para tu dominio.
 

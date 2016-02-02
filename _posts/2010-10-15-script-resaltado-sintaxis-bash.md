@@ -25,7 +25,8 @@ Como os dije, he hecho el script para el resaltado de bash, me ha costado un poc
 
 Aquí el código:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 rutaCodigo=`zenity --file-selection --title="Select a File"`
 case $? in
@@ -47,13 +48,16 @@ case $? in
 *)
   echo "No se seleciciono nada.";;
 esac
-{% endhighlight %}
+
+```
 
 Bien, voy a explicarlo un poco:
 
 La estructura es bastante similar a la del [script de resaltado de sintáxis de c++][1].
 
-{% highlight bash %}sed 's/#.*/&/'{% endhighlight %}
+```bash
+sed 's/#.*/&/'
+```
 
 Esta línea es la que se encarga de resaltar los comentarios. Simplemente buscamos una #, que es como se defienen los comentarios en bash, y cualquier carácter despues (.\*). El & que hay en la siguiente sección, es para que en ese lugar, se coloque todo lo que coincidió con el patrón (.\*), es decir, el comentario.
 

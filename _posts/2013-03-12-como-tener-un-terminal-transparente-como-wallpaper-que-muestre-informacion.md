@@ -32,13 +32,17 @@ Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xr
 
 xrootconsole muestra en una ventana transparente el fichero que se le proporcione como entrada (o la entrada estándar stdin). Su objetivo es ser lo más simple posible y consumir pocos recursos. Este programa no es interactivo, por lo que solo servirá para mostrar información y nada más. Un ejemplo de uso:
 
-{% highlight bash %}$ xrootconsole [archivo]
-{% endhighlight %}
+```bash
+$ xrootconsole [archivo]
+
+```
 
 Un ejemplo más completo sería el siguiente:
 
-{% highlight bash %}$ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
-{% endhighlight %}
+```bash
+$ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
+
+```
 
 Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo. *&#8211;bottomup* inserta líneas al final. *&#8211;geometry* establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN\_IZQUIERDO+MARGEN\_SUPERIOR*. Puedes obtener más información consultando la ayuda del programa o su manual.
 
@@ -46,7 +50,8 @@ Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las
 
 En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 while [ 1 ] 
 do
@@ -56,7 +61,8 @@ do
         sleep 30
         kill $XROOT_PID
 done
-{% endhighlight %}
+
+```
 
 Si decides usar este programa, es probable que quieras agregarlo al [script][4] de inicio de tu entorno de escritorio favorito, como fluxbox, [xmonad][5] u [openbox][6].
 
@@ -66,16 +72,20 @@ Como he mencionado, xrootconsole no es interactivo, si quieres ejecutar algo com
 
 Tilda es una ventana de terminal muy configurable. No tiene bordes y permanece oculta al escritorio hasta que se pulsa una tecla. Lo primero que hay que hacer es instalarlo:
 
-{% highlight bash %}$ sudo aptitude install tilda
-{% endhighlight %}
+```bash
+$ sudo aptitude install tilda
+
+```
 
 Una vez instalado, lo ejecutamos y haremos algunos cambios:
 
-{% highlight bash %}<em>Pestaña General    » desabilita “Always on top”
+```bash
+<em>Pestaña General    » desabilita “Always on top”
 Pestaña Appearance » habilita la transparencia y fíjalo al 100%
 Pestaña Colors     » Elige “Green on Black” o “Personalize”
 Pestaña Scrolling  » Desabilítalo</em>
-{% endhighlight %}
+
+```
 
 Listo, ya tienes configurado un terminal transparente. Puedes ver más información sobre cómo configurar Tilda en las referencias.
 
@@ -83,8 +93,10 @@ Listo, ya tienes configurado un terminal transparente. Puedes ver más informaci
 
 La última opción es Eterm, otra terminal que podemos usar para tener de fondo de pantalla mostrando información. Por ejemplo mostrar la salida del **dmesg**:
 
-{% highlight bash %}$ Eterm --buttonbar 0 --scrollbar off -f white -n dmesg -g 211×10+0+0 -O -0 -e watch --no-title -n10 -d 'dmesg | tail'
-{% endhighlight %}
+```bash
+$ Eterm --buttonbar 0 --scrollbar off -f white -n dmesg -g 211×10+0+0 -O -0 -e watch --no-title -n10 -d 'dmesg | tail'
+
+```
 
 Una breve explicación de los argumentos:
 

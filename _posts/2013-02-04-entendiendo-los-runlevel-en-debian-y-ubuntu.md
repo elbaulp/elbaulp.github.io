@@ -49,7 +49,8 @@ Si el 0 era la condición de apagado, el 6 es la señal de reinicio del sistema.
 
 Como todo en un sitema Linux, están definidos mediante ficheros, y se encuentran bajo el directorio `/etc`:
 
-{% highlight bash %}
+```bash
+
 /etc/rc0.d      Run level 0
 /etc/rc1.d       Run level 1
 /etc/rc2.d       Run level 2
@@ -57,22 +58,27 @@ Como todo en un sitema Linux, están definidos mediante ficheros, y se encuentra
 /etc/rc4.d       Run level 4
 /etc/rc5.d       Run level 5
 /etc/rc6.d       Run level 6
-{% endhighlight %}
+
+```
 
 Echemos un vistazo al contenido del runlevel 2:
 
-{% highlight bash %}
+```bash
+
 $ ls /etc/rc2.d/
 README      S15nfs-common      S17sudo     S19anacron  S19dbus   S19speech-dispatcher  S20network-manager  S21pulseaudio  S22libvirt-guests  S23rmnologin
 S01motd     S17binfmt-support  S18apache2  S19atd      S19exim4  S20avahi-daemon       S21gdm3             S21saned       S23minissdpd
 S14rpcbind  S17rsyslog         S19acpid    S19cron     S19rsync  S20bluetooth          S21libvirt-bin      S22bootlogs    S23rc.local
-{% endhighlight %}
+
+```
 
 Cada fichero es un enlace simbólico a su respectivo [script][2] residente en `/etc/init.d`. Estos scripts controlan la detención o inicio de un servicio.
 
 El nombre de los enlaces de estos directorios puede ser poco intuitivos al principio, pero veamos su significado, la sintaxis es:
 
-{% highlight bash %}[K | S] + nn + [string]{% endhighlight %}
+```bash
+[K | S] + nn + [string]
+```
 
 Es decir, la primera letra del nombre puede ser una **K** o una **S**, seguidas de un número de dos dígitos, del 01 al 99 y por último una cadena de texto. La K significa que el servicio será detenido al entrar al runlevel (Kill), la S para iniciarlo (Start). El número indica la prioridad del servicio dentro del runlevel, por ejemplo, **S02apache** y **S01php** iniciará primero php y luego apache. Si dos servicios tienen el mismo orden de prioridad numérico, se procede en orden alfabético.
 
@@ -80,10 +86,12 @@ Es decir, la primera letra del nombre puede ser una **K** o una **S**, seguidas 
 
 El comando **runlevel** mostará el último runlevel que fue ejecutado, y el actual:
 
-{% highlight bash %}
+```bash
+
 $ runlevel
 N 2
-{% endhighlight %}
+
+```
 
 La **N** significa None, informando de que no ha habido ningún cambio de runlevel desde que se inició el sistema. **2** es el runlevel actual.
 
@@ -93,15 +101,20 @@ Para moverse de un runlevel a otro basta con ejectar el comando **telinit** segu
 
 Si deseamos agregar un servicio a un runlevel deberemos usar el comando **update-rc.d**. Por ejemplo, si quieres que **nginx** o **Apache** se ejecuten en cada inicio del sistema, basta con agregarlos a los runlevel 2-5, correspondientes al modo multiusuario:
 
-{% highlight bash %}# update-rc.d nginx start 90 2 3 4 5 . stop 01 0 1 6 .{% endhighlight %}
+```bash
+# update-rc.d nginx start 90 2 3 4 5 . stop 01 0 1 6 .
+```
 
 El 90 es el número de prioridad para el inicio (**S90nginx**) aplicado a los runlevles 2-5, el 01 para la prioridad de detención (**K01nginx**) en los runlevel 0 1 y 6. Lo más sencillo es aplicar los valores por defecto con
 
-{% highlight bash %}# update-rc.d nginx defaults{% endhighlight %}
+```bash
+# update-rc.d nginx defaults
+```
 
 A continuación varios ejemplos extraidos del manual de **update-rc.d:**
 
-{% highlight bash %}EXAMPLES
+```bash
+EXAMPLES
        Insert links using the defaults:
           update-rc.d foobar defaults
        The equivalent dependency header would have start and stop
@@ -127,7 +140,8 @@ A continuación varios ejemplos extraidos del manual de **update-rc.d:**
           update-rc.d foobar start 45 S . stop 31 0 6 .
        Example of a command for disabling a system initialization-and-shutdown script:
           update-rc.d -f foobar remove
-          update-rc.d foobar stop 45 S .{% endhighlight %}
+          update-rc.d foobar stop 45 S .
+```
 
 #### Referencias
 

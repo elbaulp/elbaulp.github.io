@@ -382,7 +382,9 @@ Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">Supp
       El consumidor de la API no siempre necesita la representación completa de un recurso. La habilidad de seleccionar y elegir los campos devueltos permite el doble beneficio de dejar que el consumidor de la API minimice el tráfico de red y acelere su propio uso de la API.<br /> Usa el parámetro de consulta <em>fields</em> que tome una lista de campos separados con coma. Por ejemplo, la siguiente petición debería traer sólo la información suficiente para mostrar una lista ordenada de tickets abiertos:
     </p>
 
-    {% highlight bash %}GET /tickets?fields=id,subject,customer_name,updated_at&state=open&sort=-updated_at{% endhighlight %}
+    ```bash
+GET /tickets?fields=id,subject,customer_name,updated_at&state=open&sort=-updated_at
+```
 
     <p>
       <a name="8"></a>
@@ -456,10 +458,12 @@ Diseñando una API para <a href="http://www.supportfu.com/" target="_blank">Supp
       <strong>Pero, ¿qué pasa con toda la transferencia extra de datos?</strong><br /> Veamos esto con un ejemplo del mundo real. He bajado un poco de datos de la <a href="https://api.github.com/users/veesahni" target="_blank">API de GitHub</a>, la cual usa pretty print por default. También estuve haciendo algunas comparaciones con gzip:
     </p>
 
-    {% highlight bash %}$ curl https://api.github.com/users/veesahni > with-whitespace.txt
+    ```bash
+$ curl https://api.github.com/users/veesahni > with-whitespace.txt
 $ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' < with-whitespace.txt > without-whitespace.txt
 $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
-$ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
+$ gzip -c without-whitespace.txt > without-whitespace.txt.gz
+```
 
     <p>
       Los archivos de salida tienen los siguientes tamaños:
@@ -496,24 +500,28 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Muchas APIs empaquetan sus respuestas en envoltorios como este:
     </p>
 
-    {% highlight python %}{
+    ```python
+{
    "data" : {
       "id" : 123,
       "name" : "John"
    }
-}{% endhighlight %}
+}
+```
 
     <p>
       Hay un par de justificaciones para hacer esto &#8211; facilita incluir metadata adicional o información de paginación, algunos clientes REST no permiten fácil acceso a los encabezados HTTP y las peticiones <a href="http://en.wikipedia.org/wiki/JSONP" target="_blank">JSONP</a> no tienen acceso a sus encabezados. Sin embargo con standards que están siendo rápidamente adoptados como <a href="http://www.w3.org/TR/cors/" target="_blank">CORS</a> y <a href="http://tools.ietf.org/html/rfc5988#page-6" target="_blank">Link header from RFC5988</a>, empaquetar se está volviendo innecesario.<br /> Podemos profundizar a futuro la API manteniéndola sin empaquetamiento por default y empaquetando sólo en casos excepcionales.<br /> <strong>¿Cómo debería usarse un envoltorio en casos excepcionales?</strong><br /> Hay 2 situaciones donde un envoltorio es realmente necesario &#8211; si la API necesita soportar peticiones cross domain sobre JSONP o si el cliente es incapaz de trabajar con encabezados HTTP.<br /> Las peticiones JSONP vienen con un parámetro adicional de consulta (usualmente llamado <em>callback</em> o <em>jsonp</em>) representando el nombre de la función callback. Si este parámetro está presente, la API debería cambiarse a un modo completo de empaquetamiento donde siempre responda con un código de status HTTP 200 y pase el código de status real dentro de la respuesta JSON. Cualquier encabezado HTTP adicional que debería pasar a través de la respuesta debería ser mapeado a los campos JSON, como se ve a continuación:
     </p>
 
-    {% highlight javascript %}callback_function({
+    ```javascript
+callback_function({
     status_code: 200,
     next_page: "https://..",
     response: {
         ... actual JSON response body ...
     }
-}){% endhighlight %}
+})
+```
 
     <p>
       De forma similar, para soportar clientes con HTTP limitado, habilita un parámetro especial de consulta ?envelope=true, el cual debería disparar un empaquetamiento full (sin la función callback JSONP).
@@ -551,7 +559,9 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       Una API que usa el encabezado Link puede devolver un set de hipervínculos listos para que el consumidor de la API no tenga que construir los hipervínculos por su propia cuenta. Esto es especialmente importante cuando la paginación está<a href="https://developers.facebook.com/docs/reference/api/pagination/" target="_blank"> basada en el cursor</a>. Aquí hay un ejemplo de un encabezado Link utilizado correctamente, obtenido de la documentación de <a href="http://developer.github.com/v3/#pagination" target="_blank">GitHub</a>:
     </p>
 
-    {% highlight bash %}Link: <https://api.github.com/user/repos?page=3&per_page=100&gt;; rel="next", <https://api.github.com/user/repos?page=50&per_page=100&gt;; rel="last"{% endhighlight %}
+    ```bash
+Link: <https://api.github.com/user/repos?page=3&per_page=100&gt;; rel="next", <https://api.github.com/user/repos?page=50&per_page=100&gt;; rel="last"
+```
 
     <p>
       Pero esto no es una solución completa para muchas APIs que quieren devolver información adicional de paginación, por ejemplo el conteo del total de resultados disponibles. Una API que requiere enviar un contador puede usar un encabezado HTTP personalizado como <em>X-Total-Count</em>.<br /> <a name="16"></a>
@@ -573,13 +583,16 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       En este caso, <em>embed</em> podría ser una lista separada por comas de campos a ser embebidos. La notación con punto puede ser usada para referir sub-campos. Por ejemplo:
     </p>
 
-    {% highlight bash %}GET /ticket/12?embed=customer.name,assigned_user{% endhighlight %}
+    ```bash
+GET /ticket/12?embed=customer.name,assigned_user
+```
 
     <p>
       Esto debería devolver un ticket con detalles adicionales embebidos, como:
     </p>
 
-    {% highlight python %}{
+    ```python
+{
  "id" : 12,
  "subject" : "I have a question!",
  "summary" : "Hi, ....",
@@ -590,7 +603,8 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
  "id" : 42,
  "name" : "Jim",
  }
-}{% endhighlight %}
+}
+```
 
     <p>
       Por supuesto, la habilidad de implementar algo así realmente depende de la complejidad interna. Este tipo de embebido puede facilmente resultar en un problema de <a href="http://stackoverflow.com/questions/97197/what-is-the-n1-selects-issue" target="_blank">N+1 select</a>.
@@ -712,17 +726,20 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       El cuerpo de un error JSON debería proveer algunas cosas para el desarrollador &#8211; un mensaje de error útil, un código de error único (que pueda ser buscado para más detalles en la documentación) y una descripción detallada. Una representación de salida JSON de esta forma podría ser:
     </p>
 
-    {% highlight python %}{
+    ```python
+{
   "code" : 1234,
   "message" : "Algo malo ocurrió :(",
   "description" : "Mas detalles del error aqui"
- }{% endhighlight %}
+ }
+```
 
     <p>
       Los errores de validación para peticiones PUT, PATCH y POST necesitarán un breakdown en el campo. Esto se modela mejor utilizando un código de error de alto nivel arreglado para fallas de validación que proveen detalles del error en el campo adicional <em>error</em>, como por ejemplo:
     </p>
 
-    {% highlight python %}{
+    ```python
+{
   "code" : 1024,
   "message" : "Validacion fallida",
   "errors" : [
@@ -737,7 +754,8 @@ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz{% endhighlight %}
       "message" : "Password cannot be blank"
     }
   ]
- }{% endhighlight %}
+ }
+```
 
     <p>
       <a name="22"></a>

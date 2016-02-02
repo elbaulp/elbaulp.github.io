@@ -76,7 +76,8 @@ En **[este enlace](https://plugpdf.com/download/ "¡Consigue una licencia de pru
 
 Cuando solicitas tu licencia de uso, entonces ya te puedes descargar el SDK, y luego, solo tienes que inicializarlo en tu aplicación; por ejemplo, en el método `onCreate` de tu actividad principal.
 
-{% highlight java %}
+```java
+
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -90,7 +91,8 @@ protected void onCreate(Bundle savedInstanceState) {
     }
     // your code here...
 }
-{% endhighlight %}
+
+```
 
 En aplicaciones Android más complejas que cuentan con varias clases, es recomendable ejecutar el método `PlugPDF.init` dentro de una clase que extienda de `Application` para que dicha inicialización tenga un alcance global, y no tengas que ejecutarla en todas y cada una de las actividades de tu app.
 
@@ -106,13 +108,15 @@ Figura 8. Estructura de la aplicación
 
 No olvides añadir la dependencia `compile project(':plugpdf')` en tu archivo `build.gradle (Module: app)`
 
-{% highlight java %}
+```java
+
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         compile 'com.android.support:appcompat-v7:22.0.0'
         compile project(':plugpdf')
     }
-{% endhighlight %}
+
+```
 
 ## ¿Qué viene con la librería PDF? ##
 
@@ -137,7 +141,8 @@ Para más detalles, puedes echar un vistazo al código fuente del archivo `Simpl
 
 Entonces, dicho todo lo anterior, tan solo hay que instanciar un objeto de tipo `SimpleDocumentReader`, tal y como muestra el código que viene a continuación.
 
-{% highlight java %}
+```java
+
 package com.mycompany.simpledocumentreader;
 
 import android.app.Activity;
@@ -221,14 +226,17 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 	}
 }
-{% endhighlight %}
+
+```
 
 Como ves, la magia está en estas dos líneas:
 
-{% highlight java %}
+```java
+
 // launch the PDF viewer
 mReader = SimpleReaderFactory.createSimpleViewer(this, listener);
 mReader.openFile(fileUri.getPath(), "");
-{% endhighlight %}
+
+```
 
 ¡Ya lo tenemos! Esperamos que hayas podido correr este lector PDF nativo en tu Android, en pocos minutos. Si te gustó este post estás invitado/a a compartirlo con tus amigos/as. Muchas gracias.

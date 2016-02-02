@@ -48,7 +48,8 @@ A continuación paso a describir uno a uno los archivos :
 
 ### *./include/codificar.h*
 
-{% highlight cpp %}/**
+```cpp
+/**
   * @file codificar.h
   * @brief Fichero cabecera que oculta/revela mensajes
   *
@@ -68,14 +69,16 @@ int ocultar(unsigned char[],int , char[]);
 int revelar(unsigned char[],int, char[], int);
 
 #endif /* CODIFICAR_H_ */
-{% endhighlight %}
+
+```
 
 `int get_file_size(std::ifstream& );` será útil para obtener el tamaño en bytes del fichero a ocultar.  
 `int ocultar(unsigned char[],int , char[]);` se encarga de ocultar el archivo en sí, el primer parámetro es el buffer de la imagen (contiene el valor de los píxeles), el segundo el tamaño de la imagen y el tercero el nombre del archivo a ocultar.
 
 ### *./src/codificar.cpp*
 
-{% highlight cpp %}/*
+```cpp
+/*
  * @file codificar.cpp
  * @brief Encargada de codificar y descodificar mensajes ocultos
  *  Created on: Mar 15, 2012
@@ -212,13 +215,15 @@ int get_file_size(ifstream& f){
 
  return size;
 }
-{% endhighlight %}
+
+```
 
 En este archivo se definen las funciones mencionadas en el .h, es la base del programa y por esa razón voy a detenerme más en él para explicarlo lo mejor posible.
 
 Empecemos por ocultar:
 
-{% highlight cpp %}int ocultar(unsigned char buffer[],int tamImage, char archivo[]){
+```cpp
+int ocultar(unsigned char buffer[],int tamImage, char archivo[]){
 
    ifstream f(archivo);
 
@@ -243,7 +248,8 @@ Empecemos por ocultar:
    }
    return 0;
 }
-{% endhighlight %}
+
+```
 
 Comenzamos abriendo el nombre del archivo que se pasa como parámetro, si se lee con éxito, elimina la ruta del archivo para quedarse solo con el nombre `strcpy(archivo,basename(archivo));`.
 
@@ -261,14 +267,16 @@ La función `write_bit_by_bit()` desempeña el nucleo del programa, la cual cons
 
 El bucle for de esta función itera sobre los píxeles de la imagen y almacena la información a ocultar. Usando una máscara ((0x80)<sub>16</sub> -> (10000000)<sub>2</sub>) extraemos el bit más significativo del caracter a ocultar y se guarda en una variable (Desplazandolo en número de bits correspondientes). Veamoslo mejor con un ejemplo, de nuevo con el caracter **H**:
 
-{% highlight cpp %}for (int k = 7; k >= 0; k--){
+```cpp
+for (int k = 7; k >= 0; k--){
    char c = (letra & mask) >> k;
    mask >>= 1;
 
    buffer[indice] &= 0xfe; //hacemos 0 último bit con máscara 11111110
    buffer[indice++] ^= c;
 }
-{% endhighlight %}
+
+```
 
 Esto es lo que pasa en la primera iteración en la variable c (suponiendo que letra='H'):  
 `char c = (01001000 & 10000000) >> 7`. La operación lógica entre paréntesis extrae el bit más significativo (el primero), en este caso 0, y se desplaza 7 posiciones a la derecha (en este caso no tiene sentido), finalmente se almacena en `c` un cero.
@@ -283,7 +291,8 @@ Para terminar con la función `ocultar()`, es necesario escribir algún valor qu
 
 Expliquemos ahora cómo se revelan los datos:
 
-{% highlight cpp %}int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
+```cpp
+int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
 
   int indice_sms            = 0;
   char value            = 0;
@@ -327,7 +336,8 @@ Expliquemos ahora cómo se revelan los datos:
 
    return 0;
 }
-{% endhighlight %}
+
+```
 
 Al estar delimitado por una cabecera el nombre del archivo, se usa un puntero para buscar en qué posición se encuentra el píxel blanco que determina el fin del nombre del fichero. Con un for se recorren los píxeles entre dicha cabecera para extraer el nombre y escribirlo con `ofstream` al disco duro. El proceso de extracción de los bits es similar a ocultar, usando máscaras.
 
@@ -337,19 +347,23 @@ Es el momento de ver un ejemplo:
 
 Se va a ocultar el archivo llamado `Nombre_fichero`, cuyo contenido es:
 
-{% highlight bash %}$ cat Nombre_fichero 
+```bash
+$ cat Nombre_fichero 
 Contenido del fichero
-{% endhighlight %}
+
+```
 
 `ocultar` espera dos parámetros, la imagen de entrada y el nombre de la imagen con el archivo oculto:
 
-{% highlight bash %}$ ./ocultar imagenEntrada.pgm imagenSalida
+```bash
+$ ./ocultar imagenEntrada.pgm imagenSalida
 Nombre_fichero
 Ocultando...Se ha ocultado correctamente el archivo Nombre_fichero en imagenSalida.pgm
 
 $ ls
 doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fichero  obj  ocultar  README.md  revelar  src
-{% endhighlight %}
+
+```
 
 En la imagen de salida se pueden apreciar los dos píxeles blancos que contienen el nombre del archivo:
 
@@ -357,18 +371,22 @@ En la imagen de salida se pueden apreciar los dos píxeles blancos que contienen
 
 Para revelar la información, usamos el programa para tal propósito, que espera un único parámetro, la imagen con los datos ucultos:
 
-{% highlight bash %}$ ./revelar imagenSalida.pgm 
+```bash
+$ ./revelar imagenSalida.pgm 
 Descifrado el archivo: Nombre_fichero en la imagen imagenSalida.pgm
 
 $ ls
 doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fichero  obj  ocultar  README.md  revelar  src
-{% endhighlight %}
+
+```
 
 Como indica, ha descifrado un fichero de nombre **Nombre_fichero**, con el comando `ls` vemos efectivamente que ha creado el fichero, y su contenido es:
 
-{% highlight bash %}$ cat Nombre_fichero 
+```bash
+$ cat Nombre_fichero 
 Contenido del fichero
-{% endhighlight %}
+
+```
 
 Este programa no tiene un uso útil, meramente acadámico, el proyecto es accesible en su repositorio en gitHub.
 

@@ -44,11 +44,15 @@ Buscando cómo hacer esto me encontré con plugins para wordpress que bloquean a
 
 En su web oficial nos ofrecen dos tipos de implementaciones:
 
-{% highlight javascript %}{% endhighlight %}
+```javascript
+
+```
 
 y
 
-{% highlight javascript %}{% endhighlight %}
+```javascript
+
+```
 
 Basta con modificar el contenido de las funciones **_enabled()** y **_disabled()** en el primer caso por el contenido que deseemos, o **_status** en el segundo método y listo.
 

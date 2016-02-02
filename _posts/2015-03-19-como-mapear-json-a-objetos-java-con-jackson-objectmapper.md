@@ -26,12 +26,14 @@ Hoy vamos a hablar de cómo usar la librería *Jackson* para mapear fácilmente 
 
 El primer paso es declarar la dependencia en el proyecto, en éste caso usando *maven*, en el fichero `pom.xml` añadimos:
 
-{% highlight xml %}<dependency>
+```xml
+<dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
     <version>2.4.4</version>
   </dependency>
-{% endhighlight %}
+
+```
 
 Hecho esto, ya es posible usar la librería en el proyecto.
 
@@ -41,47 +43,57 @@ Hecho esto, ya es posible usar la librería en el proyecto.
 
 Veamos una guía de uso rápido de jackson. Para los siguientes ejemplos supondremos la siguiente clase:
 
-{% highlight java %}// Nota: Para atributos públicos, no es necesario usar getters y setters.
+```java
+// Nota: Para atributos públicos, no es necesario usar getters y setters.
 public class MiClase {
   public String nombre;
   public int edad;
   // Nota: Si los campos son private o protected, es obligatorio usar getters y setters.
   // Es recomendable crear el constructor por defecto
 }
-{% endhighlight %}
+
+```
 
 Supongamos también el siguiente json, almacenado en un fichero `mijson.json`:
 
-{% highlight json %}{
+```json
+{
    "nombre":"Alicia",
    "edad":13
 }
-{% endhighlight %}
+
+```
 
 Es necesario crear un `ObjectMapper`, y lo típico es hacerlo estático para re-utilizarlo a lo largo de la aplicación. Un buen lugar para él sería un clase `Constant` y declarar el `ObjectMapper` así:
 
-{% highlight java %}public static final ObjectMapper JSON_MAPPER = new ObjectMapper();
-{% endhighlight %}
+```java
+public static final ObjectMapper JSON_MAPPER = new ObjectMapper();
+
+```
 
 ### Json a Objeto Java (Des-Serializar)
 
 Para des-serializar el `json` y crear el objeto en Java:
 
-{% highlight java %}MiClase objeto = JSON_MAPPER.readValue(new File("mijson.json", MiClase.class);
+```java
+MiClase objeto = JSON_MAPPER.readValue(new File("mijson.json", MiClase.class);
 // o
 MiClase objeto = JSON_MAPPER.readValue(new URL("http://ruta/a/mijson.json", MiClase.class);
-{% endhighlight %}
+
+```
 
 ### Objeto Java a Json (Serializar)
 
 Para realizar el proceso inverso, basta con:
 
-{% highlight java %}JSON_MAPPER.writeValue(new File("mijson.json"), objeto);
+```java
+JSON_MAPPER.writeValue(new File("mijson.json"), objeto);
 // ó:
 byte[] jsonBytes = JSON_MAPPER.writeValueAsBytes(objeto);
 // ó:
 String jsonString = JSON_MAPPER.writeValueAsString(objeto);
-{% endhighlight %}
+
+```
 
 ### Generalizar el tipo de objeto a des-serializar
 
@@ -89,7 +101,8 @@ Al trabajar con una [API][1], serializar y des-serializar objetos es una tarea c
 
 Supongamos que nuestra api devuelve arrays de objetos, por ejemplo una lista de Personas, una lista de productos etc. El modelo en Java sería el siguiente:
 
-{% highlight java %}public class Persona {
+```java
+public class Persona {
 
     private String Nombre;
     private String Apellidos;
@@ -121,9 +134,11 @@ Supongamos que nuestra api devuelve arrays de objetos, por ejemplo una lista de 
         this.DNI = DNI;
     }
 }
-{% endhighlight %}
 
-{% highlight java %}public class Producto {
+```
+
+```java
+public class Producto {
     private String Nombre;
     private String Modelo;
     private int precio;
@@ -163,11 +178,13 @@ Supongamos que nuestra api devuelve arrays de objetos, por ejemplo una lista de 
         this.valoracion = valoracion;
     }
 }
-{% endhighlight %}
+
+```
 
 Los arrays en json:
 
-{% highlight json %}// Personas
+```json
+// Personas
 [
    {
       "Nombre":"Bob",
@@ -206,22 +223,26 @@ Los arrays en json:
       "Valoracion": 5
    }
 ]
-{% endhighlight %}
+
+```
 
 Con estos datos, queremos des-serializar el `json` en un `ArrayList` del tipo de clase que sea, en éste caso `ArrayList<Personas` y `ArrayList<Producto>`. La forma **NO** genérica de hacerlo sería:
 
-{% highlight java %}ArrayList<Persona> personas = JSON_MAPPER.readValue(new File("personas.json"),
+```java
+ArrayList<Persona> personas = JSON_MAPPER.readValue(new File("personas.json"),
                     JSON_MAPPER.getTypeFactory().constructCollectionType(ArrayList.class, Persona.class));
 
 // Para productos
 
 ArrayList<Producto> productos = JSON_MAPPER.readValue(new File("productos.json"),
                     JSON_MAPPER.getTypeFactory().constructCollectionType(ArrayList.class, Producto.class));
-{% endhighlight %}
+
+```
 
 Ahora bien, si tenemos más modelos, a parte de `Personas` y `Productos`, y normalmente, los `json` se obtienen mediante la *API*, vamos a repetir un montón de código. Podríamos crear un método genérico para mapear `json` a objetos java, como el siguiente:
 
-{% highlight java %}public static <T> List<T> getList(String url, Class<T> clazz) {
+```java
+public static <T> List<T> getList(String url, Class<T> clazz) {
 
    HttpClient client = HttpClientBuilder.create().build();
    HttpGet getRequest = new HttpGet(url);
@@ -239,15 +260,18 @@ Ahora bien, si tenemos más modelos, a parte de `Personas` y `Productos`, y norm
    }
    return data;
 }
-{% endhighlight %}
+
+```
 
 Éste método se usaría así:
 
-{% highlight java %}// Para personas
+```java
+// Para personas
 ArrayList<Persona> personas = getList(URL DE LA API PARA OBTENER PERSONAS, Persona.class);
 // Para productos
 ArrayList<Producto> personas = getList(URL DE LA API PARA OBTENER PRODUCTOS, Producto.class);
-{% endhighlight %}
+
+```
 
 ## Conclusión
 

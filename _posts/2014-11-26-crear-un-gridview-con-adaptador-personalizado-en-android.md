@@ -73,7 +73,8 @@ A la actividad basada en el `GridView` se le ha denominado `Main` y a aquella qu
 
 En el archivo de diseño de `Main` se escribirá un layout cuyo nodo principal sea un elemento `<GridView>`. Veamos:
 
-{% highlight xml %}<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+```xml
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gridview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -83,7 +84,8 @@ En el archivo de diseño de `Main` se escribirá un layout cuyo nodo principal s
     android:horizontalSpacing="10dp"
     android:stretchMode="columnWidth"
     android:gravity="center"/>
-{% endhighlight %}
+
+```
 
 La distribución de nuestros elementos se ve afectada en el GridView por los siguientes atributos descriptivos:
 
@@ -103,12 +105,14 @@ La distribución de nuestros elementos se ve afectada en el GridView por los sig
   * `android:gravity`: Define la ubicación del contenido dentro de cada celda. Existen muchos valores que puedes utilizar, entre ellos: `top`, `rigth`, `left`, `bottom` y `center`.  
     Por otra parte, el layout para `Details` consta simplemente de un `ImageView` como nodo raíz:
 
-{% highlight xml %}<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+```xml
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/imageDesc"
     android:id="@+id/originalImage" >
-{% endhighlight %}
+
+```
 
 ## Crear un Adaptador personalizado para el GridView
 
@@ -116,7 +120,8 @@ El siguiente paso es crear un adaptador que infle Image Views a partir de los re
 
 Este concepto facilitará el trabajo para poblar el GridView , ya que podemos controlar el orden de aparición de las imágenes. Teniendo esto en mente, la definición de la clase se verá de la siguiente forma:
 
-{% highlight java %}public class ImageAdapter extends BaseAdapter {
+```java
+public class ImageAdapter extends BaseAdapter {
     // Contexto de la aplicación
     private Context mContext;
 
@@ -172,7 +177,8 @@ Este concepto facilitará el trabajo para poblar el GridView , ya que podemos co
     }
 
 }
-{% endhighlight %}
+
+```
 
 El adaptador establece por defecto los métodos `getItem()` y `getItemId()` debido a que no se está usando fuentes de datos estructuradas como una lista o mapa hash.
 
@@ -185,7 +191,8 @@ Luego de ello solo seteas el contenido con el método `setImageResource(),` apun
 Para que `Details` se entere de que imagen debemos expandir, es necesario enviar la posición del recurso drawable desde `Main`. La forma de averiguar la posición es mediante la sobrescritura del método `onItemClick()` de la interfaz `OnItemClickListener`.  
 Recuerda que este método recibe como parámetro la posición del item presionado. Así que obtendremos la instancia del `GridView` y la relacionaremos con una nueva escucha en el método `onCreate()`:
 
-{% highlight java %}/*
+```java
+/*
 Seteando el adaptador al GridView
  */
 GridView gridview = (GridView) findViewById(R.id.gridview);
@@ -205,11 +212,13 @@ gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
     }
 });
-{% endhighlight %}
+
+```
 
 Si observas, el `Intent` creado en `onItemClick()` lleva consigo el valor de la posición del item actualmente procesado y luego se inicia la actividad `Details`. Finalmente recibes ese valor desde `onCreate()`en `Details` y asignas el recurso drawable con la referencia:
 
-{% highlight java %}/*
+```java
+/*
 Recibiendo el identificador de la imagen
  */
 Intent i = getIntent();
@@ -221,7 +230,8 @@ Seteando el recurso en el ImageView
  */
 ImageView originalImage = (ImageView)findViewById(R.id.originalImage);
 originalImage.setImageResource(adapter.getThumbId(position));
-{% endhighlight %}
+
+```
 
 Ahora solo ejecuta la aplicación y prueba su funcionamiento.
 

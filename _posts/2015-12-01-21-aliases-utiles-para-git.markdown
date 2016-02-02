@@ -27,9 +27,11 @@ Todo aquel que use [git](/mini-tutorial-y-chuleta-de-comandos-git/ "Tutorial de 
 
 Como no, el primer alias tenía que ser uno que nos permita editar la configuración de git rápidamente:
 
-{% highlight bash %}
+```bash
+
 git config --global alias.ec "config --global -e"
-{% endhighlight %}
+
+```
 
 A partir de ahora, podremos abrir la configuración de git con nuestro editor por defecto con `git ec`.
 
@@ -39,12 +41,14 @@ El resto del artículo asumirá que se tiene la configuración abierta con un ed
 
 Estos _aliases_ pretenden más que facilitar la escritura de `checkout`, `branch`, `commit -am` y `status`. Básicamente los comandos que más uso.
 
-{% highlight bash %}
+```bash
+
 co = checkout
 br = branch
 cm = commit -am
 st = status
-{% endhighlight %}
+
+```
 
 Veamos ahora una serie de aliases que he extraido de <a href="http://haacked.com/archive/2014/07/28/github-flow-aliases/" target="_blank" title="github Flow">haacked</a>:
 
@@ -52,16 +56,20 @@ Veamos ahora una serie de aliases que he extraido de <a href="http://haacked.com
 
 Para simplificar estos dos comandos
 
-{% highlight bash %}
+```bash
+
 git pull --rebase --prune
 git submodule update --init --recursive
-{% endhighlight %}
+
+```
 
 en los que el primero obtiene los cambios desde el servidor, si se tienen commits locales, se ponen al principio de los descargados (`rebase`), y con `prune` se eliminan ramas que ya no existan en el servidor. El segundo simplemente actualiza recursivamente submódulos. El  _alias_ quedará:
 
-{% highlight bash %}
+```bash
+
 up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-{% endhighlight %}
+
+```
 
 Este _alias_ es algo distinto, la exclamación indica que se va a ejecutar un comando en la _shell_, es decir, podemos ejecutar cualquier comando, no solo de git. En este caso, se están ejecutando dos comandos git.
 
@@ -69,30 +77,38 @@ Este _alias_ es algo distinto, la exclamación indica que se va a ejecutar un co
 
 Estos dos _alias_ están destinados a cuando simplemente queremos guardar nuestros cambios, ya sea porque tenemos que irnos a hacer otras cosas, o simplemente no hemos acabado el trabajo y aún no tenemos un nombre para el commit adecuado. Con ellos, se guardan los cambios con un mensaje de commit `SAVEPOINT` o `WIP`, en función del alias que os guste más:
 
-{% highlight bash %}
+```bash
+
 save = !git add -A && git commit -m 'SAVEPOINT'
 wip = commit -am "WIP"
-{% endhighlight %}
+
+```
 
 Una vez volvamos a trabajar, simplemente ejecutamos el _alias_ `undo`, que elimina el último commit, pero deja intactos los cambios:
 
-{% highlight bash %}
+```bash
+
 undo = reset HEAD~1 --mixed
-{% endhighlight %}
+
+```
 
 O si simplemente queremos modificar el mensaje del commit, usamos el _alias_ `amend`:
 
-{% highlight bash %}
+```bash
+
 amend = commit -a --amend
-{% endhighlight %}
+
+```
 
 ## Resetear el directorio de trabajo adecuadamente, git wipe
 
 Cuantas veces hemos comenzado a trabajar o intentar añadir algo al código y al final lo único que hicimos fue ensuciar todo el directorio, montones de líneas de código sin ordenar etc. Lo mejor en estos casos es descartar todo y volver a empezar. Para ello es posible usar `git reset HEAD --hard`, pero esto borrará todo, sin que quede constancia de lo que hicimos. Para descartar el código, pero que quede constancia de lo que hicimios, por si alguna vez nos hace falta, crearemos el _alias_ _wipe_:
 
-{% highlight bash %}
+```bash
+
 wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
-{% endhighlight %}
+
+```
 
 Hace un commit de todo lo que hay en el directorio de trabajo para luego hacer un _hard reset_ y eliminar dicho commit. A pesar de ello, el commit seguirá ahí, en la historia del repositorio, aunque inalcanzable. Estos commits son un poco complejos de recuperar, pero al menos seguimos teniendo aquel trabajo del que no quedamos del todo convencidos. Quizá algún día recuerdes que necesitabas una línea de código que escribiste. Para recuperarlo hay que ejecutar `git reflog` y buscar el SHA del commit que tenga como mensaje “WIPE SAVEPOINT”.
 
@@ -108,9 +124,11 @@ Veamos ahora una serie de _alias_ para mostrar los logs de los commits de distin
 
 El _alias_ es el siguiente:
 
-{% highlight bash %}
+```bash
+
 ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-{% endhighlight %}
+
+```
 
 ## Listar commits y ficheros modificados, git ll
 
@@ -120,9 +138,11 @@ ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decor
 
 El _alias_ es el siguiente:
 
-{% highlight bash %}
+```bash
+
 ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-{% endhighlight %}
+
+```
 
 ## Mostar commits de forma compacta y con fechas, git lds
 
@@ -130,9 +150,11 @@ ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decor
   <a href="/images/gitlds.png"><img src="/images/gitlds.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-{% highlight bash %}
+```bash
+
 lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-{% endhighlight %}
+
+```
 
 Si lo preferimos con fechas relativas, usaremos el _alias_ `git ld`:
 
@@ -140,21 +162,26 @@ Si lo preferimos con fechas relativas, usaremos el _alias_ `git ld`:
   <a href="/images/gitld.png"><img src="/images/gitld.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-{% highlight bash %}
+```bash
+
 ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-{% endhighlight %}
+
+```
 
 ## Buscar ficheros y contenido dentro de ficheros (grep)
 
 Para buscar ficheros con conteniendo el nombre indicado:
 
-{% highlight bash %}
+```bash
+
 f = "!git ls-files | grep -i"
-{% endhighlight %}
+
+```
 
 Ejemplo:
 
-{% highlight bash %}
+```bash
+
 $ git f one
 
 P3/oneway/Utils.py
@@ -166,51 +193,64 @@ P3/oneway/ej4.py
 P3/oneway/ej5.py
 P3/oneway/ej6.py
 P3/oneway/ej7.py
-{% endhighlight %}
+
+```
 
 Para buscar contenido dentro de todo el repositorio:
 
-{% highlight bash %}
+```bash
+
 grep = grep -Ii
 gr = grep -Ii
-{% endhighlight %}
+
+```
 
 Ejemplo:
 
-{% highlight bash %}
+```bash
+
 $ git grep Rabin
 
 P1/modularArith/ej4.py:def MillerRabin(p):
 P1/modularArith/ej4.py:    print MillerRabin(90221078753392184154149622269679731705920869572364323146777389106744249167893287091491005751893264013854756094230384816436985035887367570198390830836626929620930395458607390051335962764852769424941031051670131521265969408350800112779692655340042253991970492761524977413231930703094065023050574077317620529581736775256036443993928340221545607375549860405933153255776836414051570996984167934585339322850189347872718439350738428272565094611168867981011370318335242028953808721309056435214502065537377043)
-{% endhighlight %}
+
+```
 
 Para buscar desde el directorio raíz:
 
-{% highlight bash %}
+```bash
+
 gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
-{% endhighlight %}
+
+```
 
 ## Listar todos los aliases, git la
 
 Ahora que ya llevamos unos cuantos _aliases_, quizá sean dificil de recordar hasta que nos acostumbremos, por ello, podemos crear un _alias_ que liste todos los nuestros _aliases_ :-):
 
-{% highlight bash %}
+```bash
+
 la = "!git config -l | grep alias | cut -c 7-"
-{% endhighlight %}
+
+```
 
 ## Listar la última etiqueta, git lt
 
-{% highlight bash %}
+```bash
+
 lasttag = describe --tags --abbrev=0
 lt = describe --tags --abbrev=0
-{% endhighlight %}
+
+```
 
 ## Alias para hacer merges, git ours, git theirs
 
-{% highlight bash %}
+```bash
+
 ours = "!f() { git co --ours $@ && git add $@; }; f"
 theirs = "!f() { git co --theirs $@ && git add $@; }; f"
-{% endhighlight %}
+
+```
 
 Eso es todo, comentad vuestras _alias_ para completar este artículo!
 
@@ -218,7 +258,8 @@ Eso es todo, comentad vuestras _alias_ para completar este artículo!
 
 Aquí se muestran todos los _alias_ vistos:
 
-{% highlight bash %}
+```bash
+
 [alias]
   ec = config --global -e
   co = checkout
@@ -244,7 +285,8 @@ Aquí se muestran todos los _alias_ vistos:
   lt = describe --tags --abbrev=0
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
-{% endhighlight %}
+
+```
 
 ### Referencias
 

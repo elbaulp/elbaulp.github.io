@@ -32,61 +32,79 @@ opcionalmente una inicialización. La sentencia:
 
 <!--ad-->
 
-{% highlight bash %}int* int_ptr= new int(3);
-{% endhighlight %}
+```bash
+int* int_ptr= new int(3);
+
+```
 
 reserva memoria para un entero, y lo inicializa con el número 3. El operador new  
 devuelve la dirección del bloque de la memoria donde está guardado el valor de la  
 variable. Para conocer el valor de la variable a la que apunta int_ptr, basta escribir:
 
-{% highlight bash %}cout < < *int_Ptr;
-{% endhighlight %}
+```bash
+cout < < *int_Ptr;
+
+```
 
 Algo que podemos expresar mediante la siguiente regla general:
 
-{% highlight bash %}contenido = *direccion;
-{% endhighlight %}
+```bash
+contenido = *direccion;
+
+```
 
 Para liberar la memoria anteriormente reservada se llama a **operator delete()**.
 
-{% highlight bash %}delete int_ptr;
-{% endhighlight %}
+```bash
+delete int_ptr;
+
+```
 
 Los pasos para declarar y usar punteros a objetos son idénticos a los empleados  
 con otras variables:
 
 &#8211;Se declara un puntero a un objeto de la clase Punto
 
-{% highlight bash %}Punto* ptro_pt;
-{% endhighlight %}
+```bash
+Punto* ptro_pt;
+
+```
 
 &#8211;Se reserva espacio en memoria mediante el operador new, el cual devuelve la  
 dirección del comienzo del bloque que ocupa dicho objeto en memoria, y luego se llama  
 a un constructor, inicializando los miembros dato.
 
-{% highlight bash %}ptro_pt=new Punto('*', 20, 10); //primer constructor
+```bash
+ptro_pt=new Punto('*', 20, 10); //primer constructor
 ptro_pt=new Punto(20, 10);      //segundo constructor
 ptro_pt=new Punto();            //constructor por defecto
-{% endhighlight %}
+
+```
 
 &#8211;Para acceder a los miembros públicos de la clase se utiliza la flecha(-». Por  
 ejemplo, para llamar a la función mostrar, basta escribir:
 
-{% highlight bash %}ptro_pt->mostrar ();
-{% endhighlight %}
+```bash
+ptro_pt->mostrar ();
+
+```
 
 En general, para acceder a un miembro público (dato o función) de una clase  
 desde un puntero a un objeto se escribirá:
 
-{% highlight bash %}puntero_a_objeto->miembro_público;
-{% endhighlight %}
+```bash
+puntero_a_objeto->miembro_público;
+
+```
 
 &#8211;Podemos liberar la porción de la memoria reservada mediante el operador  
 delete, en cualquier momento en el que no necesitemos ya más del objeto reverenciado  
 por ptro_pt, sin esperar a que se alcance el final del bloque de su ámbito de definición.
 
-{% highlight bash %}delete ptro_pt;   //llama al destructor
-{% endhighlight %}
+```bash
+delete ptro_pt;   //llama al destructor
+
+```
 
 * * *
 

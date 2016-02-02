@@ -26,7 +26,9 @@ categories:
 La cláusula WHERE se utiliza para seleccionar aquellos registros que cumplen una o más  
 condiciones. Su sintaxis es:
 
-{% highlight sql %}WHERE <search_condition>{% endhighlight %}
+```sql
+WHERE <search_condition>
+```
 
 Selecciona aquellas filas que cumplen la condición especificada por esta orden. La  
 condición de búsqueda o de selección de registros se puede conformar utilizando columnas de la tabla, constantes, funciones y/o expresiones y operadores.  
@@ -114,7 +116,9 @@ Los operadores más utilizados en las condiciones de selección son:
 Para indicar que deseamos recuperar los registros según el intervalo de valores de un campo  
 emplearemos el operador BETWEEN cuya sintaxis es:
 
-{% highlight sql %}Columna o Expresión [Not] Between valor1 And valor2{% endhighlight %}
+```sql
+Columna o Expresión [Not] Between valor1 And valor2
+```
 
 en este caso la consulta devolvería los registros que contengan en columna o expresión un  
 valor incluido en el intervalo valor1, valor2 (ambos inclusive). Si anteponemos el operador NOT  
@@ -125,7 +129,9 @@ devolverá aquellos valores no incluidos en el intervalo.
 Este operador se utiliza para realizar comprobaciones de columnas o expresiones con  
 patrones de caracteres. Su sintaxis es:
 
-{% highlight sql %}expresión_a_comparar [ NOT ] LIKE patrón{% endhighlight %}
+```sql
+expresión_a_comparar [ NOT ] LIKE patrón
+```
 
 Los símbolos utilizados en el patrón son:
 
@@ -168,7 +174,9 @@ Los símbolos utilizados en el patrón son:
       Se utiliza para comprobar si un valor pertenece a una lista de valores. Su sintaxis es:
     </p>
     
-    {% highlight sql %}expresion [ NOT ] IN ( subconsulta | expresion o valor [ ,...n ]){% endhighlight %}
+    ```sql
+expresion [ NOT ] IN ( subconsulta | expresion o valor [ ,...n ])
+```
     
     <p>
       La lista de valores se puede obtener a partir de una setencia select o bien indicando el<br /> conjunto de valores separados por comas

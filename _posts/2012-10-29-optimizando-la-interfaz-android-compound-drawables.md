@@ -27,7 +27,8 @@ Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un 
 
 &nbsp;
 
-{% highlight xml %}<LinearLayout
+```xml
+<LinearLayout
     <!--....--> >
 
     <ImageView
@@ -40,7 +41,8 @@ Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un 
 
 <!--....--> />
 </LinearLayout>
-{% endhighlight %}
+
+```
 
 Si el layout consta de estos dos elementos, Lint muestra el siguiente mensaje : *This tag and its children can be replaced by one <TextView> and a compound drawable*. Viene a decir que es posible simplificar el layout eliminando la imagen y usarla dentro del elemento TextView como **Compound Drawable**.
 
@@ -54,14 +56,17 @@ Los cuatro parámetros que acepta este método son las imágenes a adjuntar al t
 
 Una vez unida la imagen al texto, con `setCompoundDrawablePadding()` se puede establecer un relleno (padding) para separar el texto de la imagen la distancia deseada, por ejemplo.
 
-{% highlight java %}TextView tv = (TextView) findViewById( R.id.textView );
+```java
+TextView tv = (TextView) findViewById( R.id.textView );
 tv.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_launcher, 0, 0, 0 );
 tv.setCompoundDrawablePadding(10);
-{% endhighlight %}
+
+```
 
 Es posible realizar el proceso anterior mediante XML, en lugar de java:
 
-{% highlight xml %}<TextView
+```xml
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_launcher"
@@ -69,7 +74,8 @@ Es posible realizar el proceso anterior mediante XML, en lugar de java:
         android:gravity="center_vertical"
         android:text="@string/text"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-{% endhighlight %}
+
+```
 
 Cos los atributos (`android:drawableLeft`, y `android:drawablePadding`) se logra el mismo resultado.
 

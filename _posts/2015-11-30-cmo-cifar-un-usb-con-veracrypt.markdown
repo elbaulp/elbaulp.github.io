@@ -93,9 +93,11 @@ Una vez formateado, en la pantalla princpial de _Veracrypt_, seleccionamos un _s
 
 Para los que se sientan más cómodos usando la terminal, es posible instalar _Veracrypt_ sin interfaz gráfica y ejecutar el comando:
 
-{% highlight bash %}
+```bash
+
 veracrypt -t -c /dev/dispositivo
-{% endhighlight %}
+
+```
 
 Y seguir los pasos indicados, similares a los vistos arriba
 
@@ -107,14 +109,18 @@ Y seguir los pasos indicados, similares a los vistos arriba
 
 Para montar, basta ejecutar el comando
 
-{% highlight bash %}
+```bash
+
 veracrypt /dev/dispositivo /ruta/a/montar
-{% endhighlight %}
+
+```
 
 y para desmontar
 
-{% highlight bash %}
+```bash
+
 veracrypt -d /dev/dispositivo
-{% endhighlight %}
+
+```
 
 Listo, ya tenemos nuestro USB cifrado!

@@ -28,13 +28,17 @@ Sin embargo, una de las cosas que más me ha costado conseguir es encontrar algu
 
 Para instalarlo, es necesaria una versión de python igual o superior a la 2.6, y *Pygments*. Para instalar el último ejecuta:
 
-{% highlight bash %}# easy_install Pygments
-{% endhighlight %}
+```bash
+# easy_install Pygments
+
+```
 
 Si no tienes instalado el programa *easy_install*, ejecuta:
 
-{% highlight bash %}# aptitude install python-setuptools
-{% endhighlight %}
+```bash
+# aptitude install python-setuptools
+
+```
 
 ### Instalar minted
 
@@ -44,7 +48,8 @@ Descarga el paquete desde su <a href="http://code.google.com/p/minted/downloads/
 
 Ya está todo listo para usar, empecemos con un ejemplo básico extraido del manual, disponible para descargar en las referencias:
 
-{% highlight latex %}\documentclass{article}
+```latex
+\documentclass{article}
 
 \usepackage{minted}
 
@@ -60,7 +65,8 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
     }
 \end{minted}
 \end{document}
-{% endhighlight %}
+
+```
 
 Este trozo de código dará como resultado lo siguiente:  
 <img src="/images/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599" height="246" class="aligncenter size-full wp-image-1587" />
@@ -69,18 +75,21 @@ Este trozo de código dará como resultado lo siguiente:
 
 Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
 
-{% highlight latex %}\newmintedfile[myJava]{java}{
+```latex
+\newmintedfile[myJava]{java}{
     linenos,
     numbersep=5pt,
     gobble=0,
     frame=lines,
     framesep=2mm,
 }
-{% endhighlight %}
+
+```
 
 Con este comando, hemos definido una nueva función (*myJava*), que permitirá incluir el código fuente de un archivo al documento pdf. Por ejemplo. Supongamos que el contenido del fichero *miCodigo.java* es el siguiente:
 
-{% highlight java %}package com.elbauldelprogramador.actividades;
+```java
+package com.elbauldelprogramador.actividades;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -115,11 +124,13 @@ public class Activity1 extends Activity {
       });
    }
 }
-{% endhighlight %}
+
+```
 
 Para incluirlo en el documento, haremos lo siguiente:
 
-{% highlight latex %}\documentclass{article}
+```latex
+\documentclass{article}
 
 \usepackage{minted}
 
@@ -136,7 +147,8 @@ Para incluirlo en el documento, haremos lo siguiente:
 Ejemplo de \textbackslash newmintedfile:
 \myJava[label="miCodigo.java"]{miCodigo.java}
 \end{document}
-{% endhighlight %}
+
+```
 
 linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.
 
@@ -147,7 +159,8 @@ El resultado será:
 
 Puede resultar incómodo y pesado tener que escribir una y otra vez *\myJava[label=&#8221;\*&#8221;]{\*.java}*. Así que creamos un comando para facilitar las cosas:
 
-{% highlight latex %}\newmintedfile[myJava]{java}{
+```latex
+\newmintedfile[myJava]{java}{
     linenos,
     numbersep=5pt,
     gobble=0,
@@ -157,12 +170,15 @@ Puede resultar incómodo y pesado tener que escribir una y otra vez *\myJava[lab
 \newcommand{\myJavaCode}[2]{
     \myJava[label=#2.java]{#1.java}
 }
-{% endhighlight %}
+
+```
 
 Ahora en lugar de usar *myJava* para incluir ficheros fuente en el documento, usamos un comando definido por nosotros (myJavaCode). Sustituyendo la línea *\myJava[label=&#8221;miCodigo.java&#8221;]{miCodigo.java}* del ejemplo anterior por
 
-{% highlight latex %}\myJavaCode{src/miCodigo}{miCodigo}
-{% endhighlight %}
+```latex
+\myJavaCode{src/miCodigo}{miCodigo}
+
+```
 
 Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el segundo la etiqueta a mostrar en el documento.
 

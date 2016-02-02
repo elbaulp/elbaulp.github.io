@@ -37,24 +37,30 @@ Como bien indica su propio nombre es la 5 versión del estándar de WWW (*World 
 
 Lo primero que debemos saber es que HTML sea cual sea su versión **no es un lenguaje de programación**, tan solo es un lenguaje de marcas, se usan una serie de etiquetas estandarizadas, HTML se usa para crear la estructura de una web, y se ha puesto de moda para las aplicaciones móviles, gracias a <a href="https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/" title="Los 10 Mejores Frameworks gratuitos para Aplicaciones Web" target="_blank">Frameworks</a> como PhoneGap a esta moda se a sumado Mozilla, con su S.O. Firefox OS; así que como podemos comprobar es casi obligatorio como mínimo conocerlo sea cual sea la plataforma a la que queramos desarrollar; como he dicho nos sirve para dar la estructura a una web (el esqueleto) después podremos darle colores, formas y organizarlo con las hojas de estilo en cascada (CSS) y se recomienda usar su ultima versión <a href="https://elbauldelprogramador.com/generar-codigo-css-3-facilmente/" title="Generar código CSS 3 fácilmente" target="_blank">CSS3</a>, aunque esta es otra batalla de la que hablaremos en otra ocasión; ahora que sabemos que es, y para que sirve, es el momento de conocer la etiqueta que debe aparecer en cualquier documento HTML5.
 
-{% highlight html %} {% endhighlight %}
+```html
+ 
+```
 
 Con esta etiqueta decimos que el documento es una pagina web HTML5; como vemos es muy sencilla, incluso nos la podemos aprender a diferencia de su antecesor HTML4.
 
-{% highlight html %}
+```html
+
 ó
- {% endhighlight %}
+ 
+```
 
 según fuera tradicional o estricto, no vamos a entrar en las diferencias ya que esto hoy en día a pasado a la historia.
 
 Todo el que empieza en esto esta deseando ir al código escribir su primera pagina web y verla funcionando. Esto se puede lograr con una estructura básica como la siguiente:
 
-{% highlight html %}
+```html
+
 
 
     El contenido de la pagina  
 
-{% endhighlight %}
+
+```
 
 A esta estructura le podemos dar “vida” simplemente abriendo nuestro blog de notas, y pegándolo, dándole el nombre que deseemos y la extensión html. Después de eso si la abrimos con cualquier navegador podemos verla funcionando.
 

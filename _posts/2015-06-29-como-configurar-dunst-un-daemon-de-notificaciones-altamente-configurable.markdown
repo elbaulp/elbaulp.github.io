@@ -26,15 +26,18 @@ Hoy quiero hablaros de _dunst_, un demonio de notificaciones que me instalé hac
 
 Tan simple como ejecutar:
 
-{% highlight bash %}
+```bash
+
 $ sudo apt-get install dunst
-{% endhighlight %}
+
+```
 
 ## Configurar dunst
 
 _Dunst_ es áltamente configurable, mediante su fichero de configuración, situado en `~/.config/dunst/dunstrc`, podemos cambiar su aspecto por completo. Aquí dejo un ejemplo de mi configuración actual:
 
-{% highlight bash %}
+```bash
+
 [global] # Configuración global
     font = "Ubuntu Light 12"
     # Permitir etiquetas html
@@ -102,18 +105,21 @@ _Dunst_ es áltamente configurable, mediante su fichero de configuración, situa
     appname = Pidgin
     summary = "*signed on*"
     urgency = low
-{% endhighlight %}
+
+```
 
 ## Probar la configuración
 
 Para probar cómo queda nuestra configuración, podemos usar el comando `notify-send`:
 
-{% highlight bash %}
+```bash
+
 notify-send -u low -t 0 "Low sumary" "Low body"
 notify-send -u normal -t 0 "Normal sumary" "Normal body"
 notify-send -u critical -t 0 "Critical sumary" "Critical body"
 notify-send -u critical -t 0 "test" "Critical body"
-{% endhighlight %}
+
+```
 
 Eso es todo, sencillo de configurar, y minimalista.
 

@@ -32,7 +32,8 @@ Nota: Si tenéis una web, os aconsejo que creeis miniaturas para las imágenes q
 
 Para ejecutar el script, hay que instalar imagemagick:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 FILES="$@"
 mkdir miniaturas
 for i in $FILES
@@ -40,7 +41,8 @@ do
  echo "Processing image $i ..."
  /usr/bin/convert -thumbnail 180x128 $i miniaturas/$i
 done
-{% endhighlight %}
+
+```
 
 Básicamente el script crea una carpeta que contendrá las miniaturas, y procesa las imagenes que le pasémos como parámetros al script, copiándolas a la carpeta creada. Para modificar el tamaño de las miniaturas, hay que cambiar *128&#215;128* por el valor que queramos.
 
@@ -48,9 +50,11 @@ Nota: El script hay que copiarlo en el directorio donde se encuentren las imáge
 
 Ejemplo de uso
 
-{% highlight bash %}$ cd Directorio/de/nuestras/imagenes
+```bash
+$ cd Directorio/de/nuestras/imagenes
 $ ./NombreDelScript *
-{% endhighlight %}
+
+```
 
 El * significa que convertirá todas las imagenes del directorio
 

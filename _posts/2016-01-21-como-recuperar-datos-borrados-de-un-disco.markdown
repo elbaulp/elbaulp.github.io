@@ -31,43 +31,53 @@ Esta técnica puede ser usada en el análisis forense de un sistema informático
 
 Para el primer ejemplo crearemos un fichero de texto con una amenaza (En un USB de poco tamaño, a ser posible), el texto es el siguiente:
 
-{% highlight bash %}
+```bash
+
 $ echo "Esto es una amenaza" > carta.txt
-{% endhighlight %}
+
+```
 
 Tras esto, borraremos el fichero que acabamos de crear.
 
-{% highlight bash %}
+```bash
+
 $ rm carta.txt
-{% endhighlight %}
+
+```
 
 ## Crear una imagen del disco a analizar
 
 En informática forense, lo ideal es crear una imagen del disco a analizar, para evitar modificarlo. Usaremos un pendrive por ser de menor capacidad:
 
-{% highlight bash %}
+```bash
+
 $ dd if=/dev/sdc of=image.disco bs=512 # /dev/sdc es el pendrive
 $ chmod 444 image.disco # Asignamos permisos de solo lectura para evitar contaminar las pruebas
 $ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla
-{% endhighlight %}
+
+```
 
 ## Análisis de la imagen
 
 Una vez montada la imagen, crearemos un fichero que contendrá las palabras más frecuentes usadas en una amenaza. En este caso se usarán dos únicamente:
 
-{% highlight bash %}
+```bash
+
 $ cat busquedaEvidencias.txt
 esto
 amenaza
-{% endhighlight %}
+
+```
 
 ## Buscando evidencias en la imagen
 
 Ahora solo resta buscar en la imagen creada del pendrive por palabras contenidas en el fichero creado arriba:
 
-{% highlight bash %}
+```bash
+
 grep -aibf busquedaEvidencias.txt imagen.disco
-{% endhighlight %}
+
+```
 
 La opción -b nos dice el desplazamiento en bytes en la imagen. El resultado es:
 
@@ -91,11 +101,13 @@ Para realizar este proceso vamos a usar una herramienta llamada _autopsy_ una pl
 
 Lo primero es copiar cualquier imagen, luego la borramos. Volvemos a crear una imagen del disco como en el paso anterior, con:
 
-{% highlight bash %}
+```bash
+
 $ dd if=/dev/sdc of=image.disco bs=512 # /dev/sdc es el pendrive
 $ chmod 444 image.disco # Asignamos permisos de solo lectura para evitar contaminar las pruebas
 $ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla
-{% endhighlight %}
+
+```
 
 ## Instalar autopsy
 

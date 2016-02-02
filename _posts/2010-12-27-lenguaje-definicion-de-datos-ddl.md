@@ -36,16 +36,20 @@ En general, los índices se crean sobre todas las claves externas y sobre los cr
 
 <!--ad-->
 
-{% highlight sql %}CREATE [unique] INDEX nombre_indice
+```sql
+CREATE [unique] INDEX nombre_indice
 ON nombre_tabla (columnas [{asc | desc}] [,.....])
 [TABLESPACE Nombre_Tablespace]
-{% endhighlight %}
+
+```
 
 Ejemplo:
 
-{% highlight sql %}-- Creacion de un índice en una columna simple para hacer las consultas más rápidas
+```sql
+-- Creacion de un índice en una columna simple para hacer las consultas más rápidas
 CREATE INDEX emp_hiredate_idx ON employees (hire_date);
-{% endhighlight %}
+
+```
 
 
 
@@ -53,7 +57,9 @@ CREATE INDEX emp_hiredate_idx ON employees (hire_date);
 
 Cuando se borra una tabla, automáticamente se borran los índices asociados a ella. Los índices ocupan espacio dentro de la BD como si de una tabla se tratara y por esa razón se aconseja tener solo como índices aquellas columnas por las cuales se realizan consultas de forma periódica. Para borrar un índice se utiliza la orden:
 
-{% highlight sql %}drop index nombre_indice;{% endhighlight %}
+```sql
+drop index nombre_indice;
+```
 
 
 
@@ -61,13 +67,15 @@ Cuando se borra una tabla, automáticamente se borran los índices asociados a e
 
 Las secuencias se utilizan para generar números de forma automática, sin embargo, esto no garantiza la ausencia de ‘huecos’: si se solicitan números a una secuencia y no se utilizan, estos valores se pierdan.
 
-{% highlight sql %}CREATE SEQUENCE Nombre_secuencia
+```sql
+CREATE SEQUENCE Nombre_secuencia
 [INCREMENT BY entero]
 [START WITH entero]
 [{MAXVALUE entero | NOMAXVALUE}]
 [{MINVALUE entero | NOMINVALUE}]
 [{CYCLE | NOCYCLE}] [{ORDER | NOODER}]
-{% endhighlight %}
+
+```
 
 
 
@@ -78,7 +86,8 @@ Las secuencias se utilizan para generar números de forma automática, sin embar
 
 Ejemplo:
 
-{% highlight sql %}CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
+```sql
+CREATE SEQUENCE new_employees_seq START WITH 1000 INCREMENT BY 1;
 
 -- Para usar la secuencia, primero hay que inicializarla con nextval
 
@@ -93,7 +102,8 @@ INSERT INTO employees VALUES
 --Consultamos la tabla de trabajadores para comprobar el valor actual de la secuencia.
 
 SELECT employee_id, last_name FROM employees WHERE last_name = 'Valdivia';
-{% endhighlight %}
+
+```
 
 #### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas][1] {.referencia}
 

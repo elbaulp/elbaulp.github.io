@@ -21,26 +21,33 @@ tags:
 Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:  
 Para buscar una palabra:
 
-{% highlight bash %}grep palabra fichero1 < [ficheros2...]>{% endhighlight %}
+```bash
+grep palabra fichero1 < [ficheros2...]>
+```
 
 Para buscar frases:
 
-{% highlight bash %}grep "palabra1 palabra2..." fichero1 < [ficheros2...]>{% endhighlight %}
+```bash
+grep "palabra1 palabra2..." fichero1 < [ficheros2...]>
+```
 
 Un ejemplo de ejecución:
 
-{% highlight bash %}hkr-> ./grep cout max.php grep.cpp smtp.cpp 
+```bash
+hkr-> ./grep cout max.php grep.cpp smtp.cpp 
 grep.cpp(22)     cout < < "Uso: grep <palabra a buscar> <firchero1 [<ficheros...>]>" < < endl;
 grep.cpp(56)     cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
 smtp.cpp(56)     cout << "socket createdn";
 smtp.cpp(75)    cout << "Connectedn";
-{% endhighlight %}
+
+```
 
 El programa nos indica el fichero en el que se encontró la palabra, el número de línea y la linea en sí.
 
 Código:
 
-{% highlight cpp %}//============================================================================
+```cpp
+//============================================================================
 // Name        : grep.cpp
 // Author      : Alex
 // Version     :
@@ -98,7 +105,8 @@ grep(const char* palabra, const char* nombre)
                cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
       }
    
-{% endhighlight %}
+
+```
 
 </firchero1></fstream></string></iostream></firchero1>
 

@@ -37,7 +37,8 @@ En el caso del problema de la mochila, se implementaría de la siguiente forma:
 2. Vamos cogiendo objetos hasta llenar la mochila.
 3. Ahora tenemos dos opciones: si el siguiente objeto ya no cabe completo en la mochila podemos quedarnos con una fracción de él (obteniendo un beneficio igual a $$(pesototal - pesoactual)/pesoobjeto$$) o no meter ningún objeto más en la mochila. La primera opción se la conoce como _mochila fraccional_ y la segunda, como _mochila 0/1_.
 
-{% highlight cpp %}
+```cpp
+
 list<float> Mochila (int lim_peso, list<Objeto> & objetos) {
     list<float> sol;
     int peso_actual = 0;
@@ -62,7 +63,8 @@ list<float> Mochila (int lim_peso, list<Objeto> & objetos) {
 
     return sol;
 }
-{% endhighlight %}
+
+```
 
 Así obtenemos una lista donde especificamos qué fracción de cada objeto de nuestra lista inicial hemos tomado para la solución.
 
@@ -84,7 +86,8 @@ Es decir, el caso base sería o bien no tener ningún objeto ($$k = 0$$) o que e
 
 Con esta función rellenamos la tabla de beneficios, pero no sabemos qué objetos cogemos y cuáles no.
 
-{% highlight cpp %}
+```cpp
+
 vector<vector<unsigned> > Mochila(vector<Elemento> & elems, unsigned m) {
     unsigned i = 0, j = 0;
     vector<vector<unsigned> > V(elems.size()+1);
@@ -113,11 +116,13 @@ vector<vector<unsigned> > Mochila(vector<Elemento> & elems, unsigned m) {
 
     return V;
 }
-{% endhighlight %}
+
+```
 
 Para saber qué objetos cogemos y cuáles no, usamos la siguiente función:
 
-{% highlight cpp %}
+```cpp
+
 vector<unsigned> Solucion (vector<vector<unsigned> > & mochila, vector<Elemento> & elems) {
     vector<unsigned> sol(elems.size());
 
@@ -133,7 +138,8 @@ vector<unsigned> Solucion (vector<vector<unsigned> > & mochila, vector<Elemento>
 
     return sol;
 }
-{% endhighlight %}
+
+```
 
 ### Branch & Bound
 
@@ -146,7 +152,8 @@ En el problema de la mochila, para estimar las cotas podemos hacer lo siguiente:
 
 Así, la función para explorar el árbol sería la siguiente:
 
-{% highlight cpp %}
+```cpp
+
 vector<bool> Mochila(list<Elemento> & elementos, unsigned m) {
     Nodo inic = NodoInicial(elementos, m);
     int C = inic.CI;
@@ -178,11 +185,13 @@ vector<bool> Mochila(list<Elemento> & elementos, unsigned m) {
 
     return resultado;
 }
-{% endhighlight %}
+
+```
 
 Como véis, no generamos todo el árbol, sino que vamos generando nodos sobre la marcha según vamos explorando. La función para generar un nodo es:
 
-{% highlight cpp %}
+```cpp
+
 Nodo Generar (Nodo & nodo_actual, bool eleccion, list<Elemento> & objs, double m) {
     Nodo res = Nodo(0, 0, nodo_actual.nivel+1, 0, 0, nodo_actual.tupla);
 
@@ -221,7 +230,8 @@ Nodo Generar (Nodo & nodo_actual, bool eleccion, list<Elemento> & objs, double m
 
     return res;
 }
-{% endhighlight %}
+
+```
 
 La solución de nuestro programa sería la tupla del último nodo que exploremos.
 
@@ -240,7 +250,8 @@ El ejemplo a usar será el siguiente: Tenemos una mochila con una capacidad de 1
 
 La salida que obtenemos en terminal es la siguiente:
 
-{% highlight bash %}
+```bash
+
 [marta@marta-PC BaulP]$ ./mochila_voraz 7 3 4 2 2 4 3 6 11
 La proporcion de cada uno que cogemos es:
 Peso: 3 Beneficio: 7(2.33333) -> 1
@@ -249,7 +260,8 @@ Peso: 4 Beneficio: 2(0.5) -> 1
 Peso: 6 Beneficio: 3(0.5) -> 0.333333
 El beneficio total es, por tanto 14
 Tiempo: 8e-06
-{% endhighlight %}
+
+```
 
 Este resultado tiene un pequeño problema, tenemos dos objetos con la misma proporción $$\frac{beneficio}{peso}$$ por lo tanto se queda con el primero que entramos por terminal (el objeto con beneficio 2 y peso 4), pero sin embargo, obtendríamos mayor beneficio si usásemos el objeto con beneficio 3 y peso 6.
 
@@ -257,7 +269,8 @@ Este resultado tiene un pequeño problema, tenemos dos objetos con la misma prop
 
 La salida obtenida en terminal es la siguiente:
 
-{% highlight bash %}
+```bash
+
 [marta@marta-PC BaulP]$ ./mochila_din 7 3 4 2 2 4 3 6 11
    0    1       2       3       4       5       6       7       8       9       10      11
 -------------------------------------------------------------------------------------------------
@@ -272,7 +285,8 @@ Usamos el objeto Peso: 2        Beneficio: 4
 NO usamos el objeto Peso: 4     Beneficio: 2
 Usamos el objeto Peso: 6        Beneficio: 3
 Tiempo: 3e-06
-{% endhighlight %}
+
+```
 
 La tabla obtenida debemos interpretarla de la siguiente forma:
 
@@ -289,7 +303,8 @@ Por tanto, con programación dinámica hemos afinado bastante la solución obten
 
 La salida obtenida por terminal es la siguiente:
 
-{% highlight bash %}
+```bash
+
 [marta@marta-PC BaulP]$ ./mochila_bb 7 3 4 2 2 4 3 6 11
 Peso de la mochila: 11
 Los objetos utilizados son:
@@ -297,7 +312,8 @@ Usamos el objetoBeneficio = 7   Peso = 3
 Usamos el objetoBeneficio = 4   Peso = 2
 Usamos el objetoBeneficio = 3   Peso = 6
 Tiempo: 2.7e-05
-{% endhighlight %}
+
+```
 
 De nuevo hemos obtenido la solución óptima al problema. En esta versión, el tiempo es un poco mayor a las demás, pero éste siempre dependerá de cómo establezcamos las cotas y del número de nodos del árbol que exploremos.
 

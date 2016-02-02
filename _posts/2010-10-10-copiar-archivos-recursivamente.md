@@ -40,7 +40,8 @@ El unico requisito es que tengais instalado zenity (que casi siempre vien por de
 
 Aqui os dejo el codigo:
 
-{% highlight bash %}
+```bash
+
 #!/bin/bash
 IFS='
 '
@@ -77,7 +78,8 @@ case $? in
     esac
 IFS=' '
 
-{% endhighlight %}
+
+```
 
 Podéis hacer todas las preguntas que querais si no entendeis algo, y no repareis en criticarlo, si creeis que algo esta mal, o podria mejorarse.
 

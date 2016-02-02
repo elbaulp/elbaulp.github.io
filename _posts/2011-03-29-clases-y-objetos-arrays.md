@@ -34,7 +34,8 @@ array.
 
 <!--ad-->
 
-{% highlight bash %}//se reserva espacio en memoria para un array de 3 elementos
+```bash
+//se reserva espacio en memoria para un array de 3 elementos
 int* ip=new int[3];
 //se inicializan los elementos del array
 ip[0]=1;
@@ -43,17 +44,20 @@ ip[3]=3;
 //... se usa el array
 //se libera la porción de memoria reservada
 delete[] ip;
-{% endhighlight %}
+
+```
 
 Lo mismo podremos hacer para un array de caracteres, que puede guardar hasta  
 un máximo de 20.  
 
 
-{% highlight bash %}char* cp= new char[20];
+```bash
+char* cp= new char[20];
 strcpy(cp, “esto es una cadena”);
 //... se usa el array
 delete[] cp;
-{% endhighlight %}
+
+```
 
 
 
@@ -64,7 +68,8 @@ Luego inicializamos dichos objetos, llamando al constructor. Hacemos uso de los
 objetos, y por último, liberamos el espacio de memoria reservada.  
 
 
-{% highlight bash %}//reserva espacio para tres elementos
+```bash
+//reserva espacio para tres elementos
 <b>Punto* objs= new Punto[3];</b>
 //inicializa los elementos del array
 objs[0]=Punto();
@@ -75,7 +80,8 @@ objs[1].mostrar();
 //destructor del array
 delete[] objs;
 //llama tres veces al destructor
-{% endhighlight %}
+
+```
 
 
 
@@ -86,7 +92,8 @@ Punto. Luego asignamos las direcciones de los objetos creados a los elementos de
 array, hacernos uso de los punteros a objetos, y por último, liberamos el espacio de  
 memoria reservada, destruyendo cada elemento del array, y el array mismo.
 
-{% highlight bash %}//reserva espacio para tres elementos
+```bash
+//reserva espacio para tres elementos
 <b>Punto** pObjs=new Punto*[3];</b>
 //inicializa los elementos del array
 pObjs[0l=new Punto(10, 20);
@@ -98,7 +105,8 @@ pObjs[2]=new Punto(‘@’, 60, 10);
 for (int i=0; i<3; i++)
    delete pObjs[i];
 delete[] pObjs;
-{% endhighlight %}
+
+```
 
 
 
@@ -111,17 +119,21 @@ las reglas de la aritmética de punteros, si se añade un entero i al nombre de 
 resultado es un puntero al elemento i del array: esto es, objs+i es equivalente a  
 &objs[i). Esta equivalencia la podemos expresar mediante la regla:
 
-{% highlight bash %}<i>*(objs+i) es equivalente a objs[i]</i>{% endhighlight %}
+```bash
+<i>*(objs+i) es equivalente a objs[i]</i>
+```
 
 Podemos usar los operadores unarios ++ y &#8212; para acceder a elementos  
 consecutivos del array objs del siguiente modo:  
 
 
-{% highlight bash %}//objs es objs[0]
+```bash
+//objs es objs[0]
 objs++;          //avanza a objs[1]
 objs++;          //avanza a objs[2]
 objs--;          //retrocede a objs[1]
-{% endhighlight %}
+
+```
 
 
 

@@ -37,7 +37,8 @@ El proceso de compatibilidad se realiza mediante varios *#define* y macros en C 
 
 ### Código fuente compatible con Python 3
 
-{% highlight c %}#include <Python.h>
+```c
+#include <Python.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -151,11 +152,13 @@ initherramientasRed(void)
     return module;
 #endif
 }
-{% endhighlight %}
+
+```
 
 Para comprobar que funciona, compilamos e instalamos el módulo con Python 3 de la siguiente forma:
 
-{% highlight bash %}$ python3 setup.py install
+```bash
+$ python3 setup.py install
 running install
 running build
 running build_ext
@@ -168,22 +171,26 @@ running install_lib
 copying build/lib.linux-x86_64-3.2/herramientasRed.cpython-32mu.so -> /usr/local/lib/python3.2/dist-packages
 running install_egg_info
 Writing /usr/local/lib/python3.2/dist-packages/HerramientasRed-1.0.egg-info
-{% endhighlight %}
+
+```
 
 Todo ha salido bien, abrimos el intérprete de Python 3 y probamos el módulo:
 
-{% highlight python %}Python 3.2.4 (default, May  8 2013, 20:55:18)
+```python
+Python 3.2.4 (default, May  8 2013, 20:55:18)
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed
 >>> print(herramientasRed.imprimeIP('elbauldelprogramador.com'))
 elbauldelprogramador.com tiene dirección IP <ip>
 >>>
-{% endhighlight %}
+
+```
 
 Para asegurarnos de que el módulo sigue funcionando con python 2, volvemos a compilar y ejecutar desde la versión 2 de pyton:
 
-{% highlight bash %}$ sudo python2.7 setup.py install
+```bash
+$ sudo python2.7 setup.py install
 running install
 running build
 running build_ext
@@ -196,18 +203,21 @@ copying build/lib.linux-x86_64-2.7/herramientasRed.so -> /usr/local/lib/python2.
 running install_egg_info
 Removing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
 Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
-{% endhighlight %}
+
+```
 
 Y por último:
 
-{% highlight bash %}Python 2.7.5+ (default, Jun  2 2013, 13:26:34)
+```bash
+Python 2.7.5+ (default, Jun  2 2013, 13:26:34)
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import herramientasRed
 >>> print herramientasRed.imprimeIP('elbauldelprogramador.com')
 elbauldelprogramador.com tiene dirección IP 5.39.89.44
 >>>
-{% endhighlight %}
+
+```
 
 Eso es todo, espero que os hayan gustado estos cinco artículos sobre **cómo crear un módulo para python con la Python C API.** Dejad vuestros comentarios!
 

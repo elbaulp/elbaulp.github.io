@@ -24,37 +24,50 @@ Algunos ejemplos:
 
 <!--ad-->
 
-{% highlight bash %}echo "elbauldelprogramador" | rev
-{% endhighlight %}
+```bash
+echo "elbauldelprogramador" | rev
+
+```
 
 Dará el siguiente resultado:
 
-{% highlight bash %}rodamargorpledluable
-{% endhighlight %}
+```bash
+rodamargorpledluable
+
+```
 
 Es posible usar la siguiente sintaxis:
 
-{% highlight bash %}rev<<<"Esta línea es una prueba"
-{% endhighlight %}
+```bash
+rev<<<"Esta línea es una prueba"
+
+```
 
 Salida:
 
-{% highlight bash %}abeurp anu se aeníl atsE
-{% endhighlight %}
+```bash
+abeurp anu se aeníl atsE
+
+```
 
 ### Ejemplo en Perl
 
-{% highlight bash %}perl -ne 'chomp;print scalar reverse . "n";'<<<"elbauldelprogramador"
-{% endhighlight %}
+```bash
+perl -ne 'chomp;print scalar reverse . "n";'<<<"elbauldelprogramador"
+
+```
 
 Ó
 
-{% highlight bash %}echo 'elbauldelprogramador' | perl -ne 'chomp;print scalar reverse . "n";'
-{% endhighlight %}
+```bash
+echo 'elbauldelprogramador' | perl -ne 'chomp;print scalar reverse . "n";'
+
+```
 
 ### Script bash para invertir cadenas
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 input="$1"
 reverse=""
 
@@ -65,26 +78,33 @@ do
 done
 
 echo "$reverse"
-{% endhighlight %}
+
+```
 
 Para ejecutarlo escribimos lo siguiente en la terminal:
 
-{% highlight bash %}./script elbauldelprogramador
-{% endhighlight %}
+```bash
+./script elbauldelprogramador
+
+```
 
 > En los comentarios de la fuente original en nixcraft (enlace al final de la entrada) un lector escribió dos ejemplos más, en [python][2] y [PHP][3]:
 
 Ejemplo en python:
 
-{% highlight bash %}echo foo | python -c 'import sys;print(sys.stdin.read().strip()[::-1])'
+```bash
+echo foo | python -c 'import sys;print(sys.stdin.read().strip()[::-1])'
 python -c 'import sys;print(sys.stdin.read().strip()[::-1])' <<< foo
-{% endhighlight %}
+
+```
 
 Ejemplo en PHP:
 
-{% highlight bash %}echo foo | php -r 'print strrev(trim(fgets(STDIN)));'
+```bash
+echo foo | php -r 'print strrev(trim(fgets(STDIN)));'
 php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
-{% endhighlight %}
+
+```
 
 * * *
 

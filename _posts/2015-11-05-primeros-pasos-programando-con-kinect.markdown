@@ -36,7 +36,8 @@ Para esta primera práctica consistente en familiarizarse con _Kinect_ , nos hem
 
 Estando de frente en la _kinect_, con los brazos en posición normal, hay que subir la muñeca de forma que sobrepase la cadera, y luego volver a bajarla. El brazo derecho se usa para avanzar una diapositiva, mientras que el izquierdo retrocede. Para ello se hace uso de un _[framework](https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/)_ simple que declara una relación entre una o varias articulaciones, el ejemplo que pusimos al principio implica la relación de dos articulaciones (muñeca y cadera) y la relación arriba y abajo. Los posibles tipos de relaciones entre articulaciones se definen en la siguiente enumeración:
 
-{% highlight csharp %}
+```csharp
+
 public enum JointRelationship
 {
   None,
@@ -49,12 +50,14 @@ public enum JointRelationship
   AboveAndLeft,
   BelowAndLeft
 }
-{% endhighlight %}
+
+```
 
 <!--ad-->
 
 La relación por defecto usada en el ejemplo se define en el siguiente fichero _XML_
-{% highlight xml %}
+```xml
+
 <Gestures GestureResetTimeout="500">
   <Gesture Description="Previous Bullet" MaxExecutionTime="1000" MappedKeyCode="PRIOR">
     <GestureComponent FirstJoint="WristLeft" SecondJoint="HipLeft" EndingRelationship="BelowAndLeft" BeginningRelationship="AboveAndLeft" />
@@ -63,24 +66,28 @@ La relación por defecto usada en el ejemplo se define en el siguiente fichero _
     <GestureComponent FirstJoint="WristRight" SecondJoint="HipRight" EndingRelationship="BelowAndRight" BeginningRelationship="AboveAndRight" />
   </Gesture>
 </Gestures>
-{% endhighlight %}
+
+```
 
 Jugando con los atributos de la etiqueta `<GestureComponent>` es posible cambiar el tipo de gesto que reconocerá el programa, tanto articulaciones como la relación entre ellas, o usar solo una única articulación.
 
 Antes de comenzar una presentación en Power Point, o un PDF, hay que realizar un gesto que active el procesamiento. Para ello se ha definido un nuevo gesto consistente en desplazar la rodilla a la derecha del hombro derecho. Y su homólogo izquierdo para desactivar el procesamiento. Esto se define en el xml:
 
-{% highlight xml %}
+```xml
+
 <Gesture Description="Ready Position" MaxExecutionTime="1000" MappedKeyCode="ACCEPT">
   <GestureComponent FirstJoint="KneeRight" SecondJoint="ShoulderRight" EndingRelationship="LeftOf" BeginningRelationship="RightOf" />
 </Gesture>
 <Gesture Description="Cancel Position" MaxExecutionTime="1000" MappedKeyCode="CANCEL">
   <GestureComponent FirstJoint="KneeLeft" SecondJoint="ShoulderLeft" EndingRelationship="RightOf" BeginningRelationship="LeftOf" />
 </Gesture>
-{% endhighlight %}
+
+```
 
 Para proporcionar _feedback_ al usuario, inicialmente el esqueleto está de color rojo. Se proporcionan una serie de instrucciones para que se active el procesamiento. Una vez activado, el esqueleto se pone de color verde. Cuando se detectan los gestos para avanzar o retroceder también cambia de color, aunque sólo la extremidad con la cual se realizó el gesto. Azul para avanzar y rosa para retroceder. Todos estos cambios de color se realizan en el método `AddSkeletonToDepthBitmap` como sigue:
 
-{% highlight csharp %}
+```csharp
+
 Pen pen = new Pen(Color.Red, 5);
 var gobject = Graphics.FromImage(bitmap);
 
@@ -92,7 +99,8 @@ else if (isActive)
 {
   pen = new Pen(Color.Red, 5);
 }
-{% endhighlight %}
+
+```
 
 Se intentó hacer uso de la distancia Euclídea para establecer umbrales de tal forma que cuando la distancia entre dos articulaciones superara dicho umbral, el movimiento se procesara:
 

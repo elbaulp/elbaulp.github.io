@@ -39,7 +39,8 @@ Los usuarios de este navegador simplemente deben instalar Mailvelope como cualqu
 
 El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en [Git][2] para compilarlo e instalarlo. Los siguientes pasos se han extraído de la <a href="https://github.com/toberndo/mailvelope/tree/firefox#firefox" title="Compilar Mailvelope" target="_blank">documentación oficial</a>:
 
-{% highlight bash %}git clone git://github.com/mozilla/addon-sdk.git
+```bash
+git clone git://github.com/mozilla/addon-sdk.git
 cd addon-sdk
 source bin/activate
 cd ..
@@ -50,7 +51,8 @@ git submodule init
 git submodule update
 make build
 make dist-ff
-{% endhighlight %}
+
+```
 
 Tras esto, en **dist/mailvelope.xpi** se encuentra el plugin para instalarlo.
 

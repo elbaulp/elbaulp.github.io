@@ -37,28 +37,34 @@ La respuesta, como es habitual, la encontré tras buscar un poco en _stackoverfl
 
 Dentro de _repo1_ añadiremos un nuevo _remote_ que sea el _repo2_:
 
-{% highlight bash %}
+```bash
+
 git remote add repo2 <url-repo2>
-{% endhighlight %}
+
+```
 
 #### Configurar el hook (gancho) post-commit
 
 Dentro del repositorio, crearemos un nuevo _hook_ que se ejecute cada vez que hagamos un _commit_ en _repo1_. Por cada _commit_, ejecutaremos un _git push repo2_, lo cual enviará los cambios al _repo2_.
 
-{% highlight bash %}
+```bash
+
 # Crear el hook que se ejecutará en cada commit
 mv .git/hooks/pre-commit.sample .git/hooks/post-commit
 # Añadir el comando a ejecutar
 echo -e "#!/bin/bash\n\ngit push repo2 -f --mirror" > .git/hooks/post-commit
-{% endhighlight %}
+
+```
 
 En contenido del _hook_, para que se vea más claro es el siguiente:
 
-{% highlight bash %}
+```bash
+
 #!/bin/bash
 
 git push repo2 -f --mirror
-{% endhighlight %}
+
+```
 
 ### Conclusión
 
@@ -71,20 +77,24 @@ Un problema similar podría ser mantener sincronizado en _repo2_ únicamente las
 
 Para activarlo:
 
-{% highlight bash %}
+```bash
+
 # Crear el hook que se ejecutará en cada commit
 mv .git/hooks/pre-commit.sample .git/hooks/post-merge
 # Añadir el comando a ejecutar
 echo -e "#!/bin/bash\n\ngit push repo2 master:master" > .git/hooks/post-merge
-{% endhighlight %}
+
+```
 
 El contenido del _hook_ es:
 
-{% highlight bash %}
+```bash
+
 #!/bin/bash
 
 git push repo2 master:master
-{% endhighlight %}
+
+```
 
 `git push repo2 master:master` podría leerse como: _Publica en el repo2 en la rama master, el contenido de la rama master del repo actual_
 

@@ -71,7 +71,8 @@ Es recomendable, eso sí, que antes eches un vistazo a la serie de tutoriales of
 
 Total, que cuando ya estás familiarizado con la librería, solo tienes que programar un método `openDocument(final String fileName, String password)` como el siguiente para lanzar el diálogo de alerta de la Figura 2.
 
-{% highlight java %}
+```java
+
     /**
      * Tries to open the given PDF.
      *
@@ -101,11 +102,13 @@ Total, que cuando ya estás familiarizado con la librería, solo tienes que prog
 		    Log.e("PlugPDF", "[ERROR] open fail because, ", e);
 	    }
     }
-{% endhighlight %}
+
+```
 
 El método initGUI() se encarga de inicializar la pantalla que muestra la Figura 1.
 
-{% highlight java %}
+```java
+
     /**
      * Initializes a Graphic User Interface (GUI) for the user to encrypt his/her PDF file.
      */
@@ -137,11 +140,13 @@ El método initGUI() se encarga de inicializar la pantalla que muestra la Figura
 		    }
 	    });
     }
-{% endhighlight %}
+
+```
 
 Luego, para proteger las operaciones de gestión que hemos listado antes, hay que programar el método `encryptPDF(String filePath)`:
 
-{% highlight java %}
+```java
+
     /**
      * Encrypts the given PDF.
      *
@@ -168,7 +173,8 @@ Luego, para proteger las operaciones de gestión que hemos listado antes, hay qu
 		    return false;
 	    }
     }
-{% endhighlight %}
+
+```
 
 Este código es el que se ejecuta cuando el usuario clica en el botón Accept de la Figura 1.
 

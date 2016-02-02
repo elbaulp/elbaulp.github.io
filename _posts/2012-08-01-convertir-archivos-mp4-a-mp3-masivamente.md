@@ -24,7 +24,8 @@ Ya mostré cómo <a href="/renombrar-archivos-masivamente-en/" target="_blank">R
 
 Es bastante sencillo a la vez que útil:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 IFS='
 '
@@ -44,7 +45,8 @@ done
 
 IFS=' '
 
-{% endhighlight %}
+
+```
 
 Hay que establecer la variable IFS al salto de línea, ya que por defecto es el espacio. Por lo tanto en el for, si hay un archivo con espacios, por ejemplo &#8220;Song of The Week.mp4&#8243;, el for considerará cada palabra un archivo distinto e intentará convertir **Song, of, The, Week.mp4.** por separado.
 

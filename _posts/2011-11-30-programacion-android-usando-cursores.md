@@ -49,7 +49,8 @@ El cursor tiene unos métodos que nos permiten navegar por él. A continuación 
   
 <!--ad-->
 
-{% highlight java %}if (cur.moveToFirst() == false){
+```java
+if (cur.moveToFirst() == false){
    //el cursor está vacío
    return;
 }
@@ -65,20 +66,24 @@ while(cur.moveToNext()){
    //El curosr se ha movido correctamente
    //Accedemos a los campos
 }
-{% endhighlight %}
+
+```
 
 En el ejemplo de arriba se asume que el cursor está posicionado antes de la primera fila. Para posicionarlo en la primera fila usamos ***moteToFirst()***. Este método devuelve ***false*** si el cursor está vacío. Después usamos ***moveToNext()*** repetitivamente para avanzar en el cursor.
 
 Para ayudarnos a saber donde se encuentra el cursor, Android proporciona los siguientes métodos:
 
-{% highlight bash %}isBeforeFirst()
+```bash
+isBeforeFirst()
 isAfterLast()
 isClosed()
-{% endhighlight %}
+
+```
 
 Haciendo uso de estos métodos podemos recorrer el cursor con un *for* en lugar de con un *while:*
 
-{% highlight java %}// Obtenemos los índices de las columnas
+```java
+// Obtenemos los índices de las columnas
 int nameColumn = cur.getColumnIndex(People.NAME);
 int phoneColumn = cur.getColumnIndex(People.NUMBER);
 
@@ -87,7 +92,8 @@ for(cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext()){
    String name = cur.getString(nameColumn);
    String phoneNumber = cur.getString(phoneColumn);
 }
-{% endhighlight %}
+
+```
 
 Por último, para obtener el número de registros que hay en el cursor, podemos usar el método ***getCount().***
 

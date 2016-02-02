@@ -30,9 +30,11 @@ Como revelan en [WebUpd8][2] y otras webs, **hay bastantes mejoras en Grub Custo
 
 Además en el caso de GRUB2 hay algunas características especiales como **cambiar los colores del menú o la imagen de fondo**. Para instalar la aplicación en Ubuntu podéis hacer lo siguiente:
 
-{% highlight bash %}sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+```bash
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get updatesudo
-apt-get install grub-customizer{% endhighlight %}
+apt-get install grub-customizer
+```
 
 Y a partir de ahí podréis lanzar la aplicación desde terminal o con el menú **Aplicaciones/Herramientas de Sistema/Grub Customizer**.
 

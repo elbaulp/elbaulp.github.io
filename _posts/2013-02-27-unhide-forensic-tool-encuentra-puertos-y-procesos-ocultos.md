@@ -33,16 +33,19 @@ Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes co
 
 <!--ad-->
 
-{% highlight bash %}gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
+```bash
+gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
 gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
 gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
-{% endhighlight %}
+
+```
 
 __unhide-tcp__ es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en [/bin/netstat][1].
 
 Los posibles argumentos de cada herramienta son los siguientes:
 
-{% highlight bash %}./unhide-tcp --help
+```bash
+./unhide-tcp --help
 Unhide-tcp 20121229
 Copyright © 2012 Yago Jesus & Patrick Gouin
 License GPLv3+ : GNU GPL version 3 or later
@@ -60,13 +63,15 @@ Options :
    -o          log result into unhide-tcp.log file
    -s          use very quick version for server with lot of opened ports
    -n          use netstat instead of ss
-{% endhighlight %}
+
+```
 
 Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, <a href="http://www.securitybydefault.com/2013/01/unhide-20121229-is-out.html" target="_blank">securitybydefault</a>.
 
 Las opciones de **unhide-linux**:
 
-{% highlight bash %}./unhide-linux --help
+```bash
+./unhide-linux --help
 Unhide 20121229
 Copyright © 2012 Yago Jesus & Patrick Gouin
 License GPLv3+ : GNU GPL version 3 or later
@@ -116,7 +121,8 @@ Test_list :
       checksysinfo
       checksysinfo2
       checksysinfo3
-{% endhighlight %}
+
+```
 
 #### Fuente
 

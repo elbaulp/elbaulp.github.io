@@ -44,8 +44,10 @@ El problema básicamente es el siguiente. A partir de un texto con los nombres *
 
 Empezaré mostrando la expresión regular y luego la explicaré:
 
-{% highlight bash %}$i.*(\.mp4|\.mp3)
-{% endhighlight %}
+```bash
+$i.*(\.mp4|\.mp3)
+
+```
 
 En `$i` está el nombre de la canción, `.*` permite que haya cero o más caracteres tras el nombre de la canción y finalmente `(\.mp4|\.mp3)` obliga a que la extensión del fichero sea [**mp3** o **mp4**][4].
 
@@ -59,7 +61,8 @@ Siempre que necesito crear una expresión regular uso una herramienta llamada **
 
 Con la expresión regular construida, solo resta crear un script que procese el texto con el nombre de las canciones y cree la lista de reproducción:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 nombres=`cat ARCHIVO_CON_LISTA_DE_NOMBRES`
 
@@ -74,7 +77,8 @@ do
     locate --regex -i "$i.*(\.mp4|\.mp3)" | tee -a /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
 done
 IFS=' '
-{% endhighlight %}
+
+```
 
 `IFS` se establece al salto de línea para que el `for` tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de `IFS`). De esta forma, si una línea del fichero contiene **Nombre canción**, en el `for` el contenido de `$i` valdrá **Nombre canción** y no **Nombre** y en la siguiente iteración **canción**. `> /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u` borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la [tubería][5] con `tee` permite escribir tanto a la salida estándar como a la lista.
 

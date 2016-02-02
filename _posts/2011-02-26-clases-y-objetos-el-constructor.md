@@ -37,113 +37,139 @@ constructor es que no tiene tipo de retorno, por lo que su sintaxis es más simp
 
 
 
-{% highlight cpp %}Punto:: Punto (argumentos){% endhighlight %}
+```cpp
+Punto:: Punto (argumentos)
+```
 
 
 
 Declaración del constructor: 
 
-{% highlight cpp %}class Punto{
+```cpp
+class Punto{
     //...
   public:
     Punto (char chl, int x1, int yl);
     //...
 };
-{% endhighlight %}
+
+```
 
 Definición del constructor. El constructor inicializa los miembros dato:
 
-{% highlight cpp %}Punto::Punto (char ch1,int x1, int y1){
+```cpp
+Punto::Punto (char ch1,int x1, int y1){
   ch=chl;
   x=xl;
   y=yl; 
 }
-{% endhighlight %}
+
+```
 
 Llamada al constructor. Para crear un objeto pt1 de la clase Punto, basta una única  
 sentencia
 
-{% highlight bash %}Punto ptl(‘*’, 40, 13);{% endhighlight %}
+```bash
+Punto ptl(‘*’, 40, 13);
+```
 
 En dicho objeto, el miembro dato ch guardará el carácter *, el miembro dato x,  
 el número entero 40, y el miembro y, el entero 13.
 
 Se llama a las funciones miembro desde el objeto pt1
 
-{% highlight cpp %}pt1.mostrar();
+```cpp
+pt1.mostrar();
 ptl.ocultar();
-{% endhighlight %}
+
+```
 
 Podemos tener más de un constructor, por ejemplo uno que fije el carácter pero  
 que permita cambiar las coordenadas del punto.
 
 Declaración del constructor
 
-{% highlight cpp %}class Punto{
+```cpp
+class Punto{
     //...
   public:
     Punto (int xl, int yl);
     //...
 };
-{% endhighlight %}
+
+```
 
 Definición del constructor: se fija el carácter, y se le pasan las coordenadas del punto.
 
-{% highlight cpp %}Punto::Punto(int xl, int yl){
+```cpp
+Punto::Punto(int xl, int yl){
   x 1=xl;
   y=y1;
   ch=’*’;
 }
-{% endhighlight %}
+
+```
 
 Se llama al constructor para crear un objeto pt2
 
-{% highlight bash %}Punto pt2(40, 13);{% endhighlight %}
+```bash
+Punto pt2(40, 13);
+```
 
 En dicho objeto, el miembro dato ch guardará el carácter *, el miembro dato x,  
 el número entero 40, y el miembro y, el entero 13.
 
 Se llama a las funciones miembro desde el objeto pt2
 
-{% highlight cpp %}pt2.mostrar();
+```cpp
+pt2.mostrar();
 pt2.ocultar();
-{% endhighlight %}
+
+```
 
 Una clase, como hemos visto, puede tener más de un constructor. Cuando un  
 constructor no tiene argumentos, se dice que es el constructor por defecto.
 
 Declaración del constructor por defecto de la clase
 
-{% highlight cpp %}class Punto{
+```cpp
+class Punto{
     //...
   public:
     Punto();
     //...
 };
-{% endhighlight %}
+
+```
 
 Definición del constructor por defecto: los miembros dato se inicializan en el bloque  
 de dicho constructor
 
-{% highlight cpp %}Punto::Punto(){
+```cpp
+Punto::Punto(){
   ch=’*’;
   x=40;
   y=13;
 }
-{% endhighlight %}
+
+```
 
 Para llamar al constructor por defecto, basta escribir:
 
-{% highlight bash %}Punto def;{% endhighlight %}
+```bash
+Punto def;
+```
 
 No escribir la sentencia:
 
-{% highlight cpp %}Punto def();
+```cpp
+Punto def();
 //Error
 //Se llama a las funciones miembro desde el objeto def
 def.mostrar();
 def.ocultar();
-{% endhighlight %}
+
+```
 
 * * *
 

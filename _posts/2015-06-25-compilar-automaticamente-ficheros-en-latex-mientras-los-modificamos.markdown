@@ -29,22 +29,28 @@ Si estás interesado en aprender a usar $$\LaTeX$$ echa un vistazo al [mini curs
 El comando `latexmk` tiene muchas opciones, pero  en mi caso particular, no he necesitado más que estas (La opción `-shell-escape` la uso porque normalmente utilizo el paquete [minted](/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted") para colorear la sintáxis del código):
 
 #### Para pdflatex
-{% highlight bash %}
+```bash
+
 $ latexmk -shell-escape -pdf -pvc
-{% endhighlight %}
+
+```
 
 #### Para xelatex
-{% highlight bash %}
+```bash
+
 $ latexmk -shell-escape -xelatex -pdf -pvc
-{% endhighlight %}
+
+```
 
 El comando asume que en el directorio donde se ejecuta solo exite un fichero `.tex`, de no ser así, deberemos pasarle el nombre del fichero que debe observar para detectar cambios.
 
 Una vez en ejecución, veremos en la consola algo así:
 
-{% highlight bash %}
+```bash
+
 === Watching for updated files. Use ctrl/C to stop ...
-{% endhighlight %}
+
+```
 
 A partir de ahora, cada vez que se modifique el fichero, se compilará y podremos ver el resultado.
 
@@ -52,17 +58,21 @@ A partir de ahora, cada vez que se modifique el fichero, se compilará y podremo
 
 Ya que el comando es un poco largo, es recomendable crearse un alias para poder ejecutar `latexmk` escribiendo únicamente una palabra:
 
-{% highlight bash %}
+```bash
+
 alias mlatexmk='latexmk -shell-escape -pdf -pvc ; latexmk -C'
 alias mlatexmkx='latexmk -shell-escape -xelatex -pdf -pvc ; latexmk -C'
-{% endhighlight %}
+
+```
 
 `latexmk -C` eliminará todos los ficheros intermedios. Ahora, para ejecutar basta con escribir:
 
-{% highlight bash %}
+```bash
+
 $ mlatexmk # Para compilar con pdflatex
 $ mlatexmkx # Para compilar con xelatex
-{% endhighlight %}
+
+```
 
 
 {% include _toc.html %}

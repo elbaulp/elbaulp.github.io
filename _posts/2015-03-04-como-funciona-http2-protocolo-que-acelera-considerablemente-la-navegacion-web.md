@@ -85,7 +85,8 @@ El flujo TCP se divide en *frames* de longitud aleatoria. Los *frames* están po
 
 ### Frame Header (La cabecera de los Frames)
 
-{% highlight bash %}+-----------------------------------------------+
+```bash
++-----------------------------------------------+
 | Length (24) |
 +---------------+---------------+---------------+
 | Type (8) | Flags (8) |
@@ -94,7 +95,8 @@ El flujo TCP se divide en *frames* de longitud aleatoria. Los *frames* están po
 +=+=============================================================+
 | Frame Payload (0...) ...
 +---------------------------------------------------------------+
-{% endhighlight %}
+
+```
 
 De los 9 bytes, los 24 primeros (3 bytes), componen la longitud del *frame*, es decir, la longitud del *payload* en dicho *frame*, sin contar los 9 bytes de la cabecera. Sin el permiso del otro participante en la conexión, sólo se usarán 14 de los 24 bits. De modo que, si ambas partes se ponen de acuerdo, un *frame* podría tener una longitud de 16MB (24 bits). Aunque normalmente se usarán como mucho *frames* de 16K bytes (14 bits). La mayoría de *frames* serán mucho más pequeños que eso.
 

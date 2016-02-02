@@ -21,41 +21,50 @@ La creación de un fichero MakeFile puede llegar a ser compleja conforme va incr
 
 Se irá mostrando línea a línea el fichero MakeFile para ir explicándolo y luego se mostrará todo:
 
-{% highlight make %}BIN       = bin
+```make
+BIN       = bin
 SRC 	  = src
 OBJ 	  = obj
 CXX 	  = g++
 CPPFLAGS  = -Wall -g -ansi
-{% endhighlight %}
+
+```
 
 Con esto se establecen los nombres de los directorios correspondientes en la carpeta del proyecto. Nota: los directorios deben estar creados previamente.
 
-{% highlight make %}SOURCES = $(wildcard $(SRC)/*.cpp)
+```make
+SOURCES = $(wildcard $(SRC)/*.cpp)
 OBJS = $(addprefix $(OBJ)/, $(notdir $(SOURCES:.cpp=.o)))
-{% endhighlight %}
+
+```
 
 Con esto almacenamos en la variable `SOURCES` todos los ficheros cpp que residan en el directorio *src*. En la variable `OBJS` se hacen varias cosas, `$(SOURCES:.cpp=.o)` reemplaza la extensión de los ficheros `.cpp` por `.o`, `$(notdir $(SOURCES:.cpp=.o))` elimina cualquier ruta que existiera para dejar únicamente el nombre del fichero, por ejemplo */src/fichero.cpp* pasaría a ser *fichero.cpp*. Con `$(addprefix $(OBJ)/` añadimos el prefijo indicado, en este caso *obj* al nombre del fichero, siguiendo con el ejemplo anterior, de *fichero.o* obtendríamos *obj/fichero.o*. 
 
-{% highlight make %}target = programa
+```make
+target = programa
 all: $(BIN)/$(target)
 
 $(BIN)/$(target): $(OBJS)
 	@echo Creando $@... con $^
 	$(CXX) $(CPPFLAGS) $(OBJS) -o $@
-{% endhighlight %}
+
+```
 
 Ésta regla define cómo compilar el programa final, para generar dicho programa dependemos de los ficheros objeto guardados en la variable `$(OBJS)`, *$@* contiene el nombre del destino (target), en este caso *bin/programa*.
 
-{% highlight make %}$(OBJ)/%.o: %.cpp
+```make
+$(OBJ)/%.o: %.cpp
 	@echo Creando $@... con $^
 	$(CXX) $(CPPFLAGS) -c $< -o $@
-{% endhighlight %}
+
+```
 
 Con esta regla se crean los ficheros objeto necesarios para la regla anterior. La regla crea objetos a partir de sus correspondientes cpps, de ahí `%.o : %.cpp`.
 
 El makefile completo es el siguiente:
 
-{% highlight make %}BIN       = bin
+```make
+BIN       = bin
 SRC 	  = src
 OBJ 	  = obj
 CXX 	  = g++
@@ -82,7 +91,8 @@ clean :
 	@echo Limpiando archivos intermedios...
 	rm $(OBJ)/*
 	rm $(SRC)/*.*~
-{% endhighlight %}
+
+```
 
 La parte de limpieza simplemente elimina los ficheros generados automáticamente en el proceso de compilación.
 

@@ -33,7 +33,9 @@ En este post explicaré el funcionamiento de la orden DROP.
 
 #### Borrado de una tabla (estructura y datos)
 
-{% highlight sql %}Drop table nombre_tabla [CASCADE CONSTRAINT];{% endhighlight %}
+```sql
+Drop table nombre_tabla [CASCADE CONSTRAINT];
+```
 
 Al borrar una tabla, se borra tanto su estructura como sus datos, sus índices asociados y los privilegios concedidos sobre estas también se borran, las vistas creadas directa o indirectamente sobre esta tabla son desactivadas de forma automática por ORACLE pero no borradas.  
   
@@ -47,7 +49,9 @@ Si se hace referencia a la clave primaria de esta tabla mediante restricciones F
 
 Con la orden TRUNCATE se eliminan todas las filas de una tabla y se puede liberar espacio utilizado por esta tabla. Es una orden del lenguaje DDL y por tanto no se puede anular. Tampoco activa disparadores DELETE por lo que es más rápido que una orden DELETE. Su sintaxis es:
 
-{% highlight sql %}Truncate table nombre_table [{DROP | REUSE} STORAGE];{% endhighlight %}
+```sql
+Truncate table nombre_table [{DROP | REUSE} STORAGE];
+```
 
 Con DROP STORAGE se desasigna todo el espacio.  
 Con DROP REUSE mantendrá reservado el espacio para nuevas filas.

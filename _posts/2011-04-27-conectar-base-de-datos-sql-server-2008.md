@@ -59,7 +59,8 @@ Dejo el código por aquí:
 
 Y la sálida de ejecutar la aplicación:
 
-{% highlight bash %}Connection Successful!
+```bash
+Connection Successful!
 Driver Information
  Driver Name: SQLServer
  Driver Version: 2.2.0022
@@ -73,7 +74,8 @@ Nombre: Alejandro
 Apellido: Alcalde
 
 Dni: 12345678
-{% endhighlight %}
+
+```
 
 Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiempo, así que si algo no se entiende no dudes en preguntar e intentaré ayudarte.</p>
 

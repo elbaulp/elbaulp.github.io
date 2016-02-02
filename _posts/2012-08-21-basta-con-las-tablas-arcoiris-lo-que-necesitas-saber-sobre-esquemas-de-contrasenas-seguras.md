@@ -93,7 +93,9 @@ Hay tres grandes diferencias entre Provos-Mazieres y el esquema de PHK:
 
 1. Bcrypt fue inventado por dos hombres inteligentes y el de PHK fue
 
-{% highlight bash %}inventado sólo por un hombre inteligente. Eso es literalmente el doble de inteligente.{% endhighlight %}
+```bash
+inventado sólo por un hombre inteligente. Eso es literalmente el doble de inteligente.
+```
 
 2. Bcrypt usa Blowfish en lugar de MD5. Blowfish es un cifrador en bloque con un notoriamente caro tiempo de configuración. Optimizar Blowfish para que sea más rápido, tendrías que contribuir con un importante avance en la criptografía. Nuestros practicantes de seguridad son todos &#8220;apostadores&#8221;, y usualmente nos gusta apostar a lo que nos &#8220;demande importantes avances en criptografía&#8221;.
 

@@ -32,13 +32,16 @@ Lo primero que hay que hacer para usar expresiones regulares es importar el mód
 Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:  
 <!--ad-->
 
-{% highlight python %}regex = r'[a-z]+-?[a-z]+'{% endhighlight %}
+```python
+regex = r'[a-z]+-?[a-z]+'
+```
 
 La expresión de arriba considerará válida cualquier cadena que empieze con una o más letras (*[a-z]+*), seguido de un guión, que es opcional, es decir, puede aparecer o no en la cadena (*-?*) seguido nuevamente de uno o más caracteres de la **a **a la **z**, en minúsculas.
 
 Algunos casos de ejemplo son los siguientes:
 
-{% highlight python %}# Ejemplos válidos:
+```python
+# Ejemplos válidos:
 print re.findall(regexp,"well-liked") == ["well-liked"]
 #>>> True
 print re.findall(regexp,"html") == ["html"]
@@ -47,19 +50,23 @@ print re.findall(regexp,"html") == ["html"]
 print re.findall(regexp,"a-b-c") != ["a-b-c"]
 #>>> True
 print re.findall(regexp,"a--b") != ["a--b"]
-#>>> True{% endhighlight %}
+#>>> True
+```
 
 La primera expresión de los ejemplos no válidos no es correcta ya que el segundo guión no es esperado por la expresión regular, en el segundo ejemplo, ocurre lo mismo.
 
 El siguiente ejemplo servirá para coincidir con cadenas que representen funciones matemáticas de un solo parámetro:
 
-{% highlight python %}regexp = r"[a-z]+( *[0-9]+ *)"{% endhighlight %}
+```python
+regexp = r"[a-z]+( *[0-9]+ *)"
+```
 
 Esto encontrará cadenas que empiecen con una o más letras (*[a-z]+*)*, *tenemos que escapar los paréntesis para que los tome como algo que queremos que forme parte de la cadena, ya que los paréntesis tienen un significado especial en la expresiones regulares, los escapamos con , despues buscamos por cero o más espácios ( *) seguidos de números (*[0-9]+*) y nuevamente cero o más espacios.
 
 Ejemplos:
 
-{% highlight python %}# Ejemplos válidos
+```python
+# Ejemplos válidos
 print re.findall(regexp,"cos(0)") == ["cos(0)"]
 #>>> True
 print re.findall(regexp,"sqrt(   2     )") == ["sqrt(   2     )"]
@@ -69,45 +76,54 @@ print re.findall(regexp,"cos     (0)") != ["cos     (0)"]
 #>>> True
 print re.findall(regexp,"sqrt(x)") != ["sqrt(x)"]
 #>>> True
-{% endhighlight %}
+
+```
 
 Como vemos, el primer ejemplo no válido precisamente no es válido porque no permitimos espacios entre el nombre de la función y los paréntesis. El segundo es erróneo porque el parámetro es una letra en lugar de un número.
 
 Veamos otro más, esta vez queremos encontrar cadenas que contengan caracteres de escape () y comillas
 
-{% highlight python %}regexp = r'"(?:[^\]|(?:\.))*"'
-{% endhighlight %}
+```python
+regexp = r'"(?:[^\]|(?:\.))*"'
+
+```
 
 En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (*r&#8217;""&#8217;*), lo que encontremos, lo vamos a encontrar cero o más veces (*r'&#8221;(?:)*&#8221;&#8216;*), **(?:)** coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que **no** sea un , y nótese que debemos escaparlo (*r'&#8221;(?:[^\])*&#8221;&#8216;*) **ó (*|*)** un seguido de cualquier caracter  
 (*r'&#8221;(?:[^\]|(?:\.))*&#8221;&#8216;*)
 
 Ejemplos:
 
-{% highlight python %}regexp = r'"(?:[^\]|(?:\.))*"' 
+```python
+regexp = r'"(?:[^\]|(?:\.))*"' 
 #  Ejemplos válidos:
 print re.findall(regexp,'"I say, \"hello.\""') == ['"I say, \"hello.\""']
 #>>> True
 #  Ejemplos no válidos:
 print re.findall(regexp,'"\"') != ['"\"']
 #>>> True
-{% endhighlight %}
+
+```
 
 Por último una expresión regular que coincidirá con todas las cadenas que estén entre dobles comillas:
 
-{% highlight python %}regexp = r'"[^"]*"'
-{% endhighlight %}
+```python
+regexp = r'"[^"]*"'
+
+```
 
 Con esta expresión buscamos cadenas que empiecen y acaben obligatóriamente con **&#8220;** (*r'&#8221;&#8221;&#8216;*), no pueden contener ningún caracter **&#8220;** entre la cadena (*r'&#8221;[^&#8221;]&#8221;&#8216;*), finalmente, daremos por buena la cadena que cumpla esto con cualquier caracter cero o más veces (*r'&#8221;[^&#8221;]*&#8221;&#8216;*)
 
 Ejemplos:
 
-{% highlight python %}#  Ejemplos  válidos:
+```python
+#  Ejemplos  válidos:
 print re.findall(regexp,'"cuneiform"')
 print re.findall(regexp,'"sumerian writing"')
 print re.findall(regexp,'""')
 #  Ejemplos no válidos
 print re.findall(regexp,'"esc " ape"')
-{% endhighlight %}
+
+```
 
 
 

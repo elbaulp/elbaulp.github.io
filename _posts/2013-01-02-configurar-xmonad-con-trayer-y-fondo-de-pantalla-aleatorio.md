@@ -24,7 +24,8 @@ La <a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerze
 
 La documentación oficial de xmonad configura **trayer** de forma se ejecute al iniciar sesión modificando el archivo **~/.xsession** tal que así:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
  
 # Load resources
  
@@ -55,11 +56,13 @@ if [ -x /usr/bin/gnome-power-manager ] ; then
 fi
  
 exec xmonad
-{% endhighlight %}
+
+```
 
 Este xsession no me lanzaba trayer, así que lo saqué fuera a un script aparte:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 15 --height 20 --transparent true --tint 0x000000 --monitor 1 &
 
@@ -71,7 +74,8 @@ if [ -x /usr/bin/gnome-power-manager ] ; then
    sleep 1
    gnome-power-manager &
 fi
-{% endhighlight %}
+
+```
 
 <p class="alert">
   NOTA: En el portatil tuve problemas con gnome-power-manager y decidí instalar xfce4-power-manager, que funcionó correctamente
@@ -79,15 +83,18 @@ fi
 
 Finalmente, añadí el script al crontab con la opción @reboot, que en teoría debe ejecutarse en cada inicio del pc (ejecutando **crontab -e**):
 
-{% highlight bash %}SHELL=/bin/bash
+```bash
+SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 @reboot /home/hkr/bin/trayerxmonad.sh
-{% endhighlight %}
+
+```
 
 Pero no dió resultado, así que como última opción, asigne una combinación de teclas al script en el archivo de configuración de xmonad (**xmonad.hs**):
 
-{% highlight bash %}import XMonad  
+```bash
+import XMonad  
 import XMonad.Config.Azerty  
 import XMonad.Hooks.DynamicLog  
 import XMonad.Hooks.ManageDocks  
@@ -168,22 +175,28 @@ main = do
         , ((0, xF86XK_Calculator), spawn "~/bin/trayerxmonad.sh")
         , ((mod4Mask .|. shiftMask, xK_e), spawn "~/Desktop/eclipse/eclipse") -- eclipse
         ]
-{% endhighlight %}
+
+```
 
 Concretamente la tecla con el iconito de la calculadora:
 
-{% highlight bash %}, ((0, xF86XK_Calculator), spawn "~/bin/trayerxmonad.sh")
-{% endhighlight %}
+```bash
+, ((0, xF86XK_Calculator), spawn "~/bin/trayerxmonad.sh")
+
+```
 
 #### Configurar fondos de pantalla aleatorios
 
 Antes de continuar, es necesario instalar **feh** para establecer fondos de pantalla:
 
-{% highlight bash %}sudo aptitude install feh{% endhighlight %}
+```bash
+sudo aptitude install feh
+```
 
 Para conseguir que cada x tiempo el fondo de pantalla cambie, creé un script, que selecciona aleatoriamente una imagen de una carpeta:
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 export DISPLAY=:0.0
 
@@ -197,15 +210,18 @@ N=${#files[@]}
 randomfile1=${files[$N]}
 
 feh --bg-fill $picsfolder$randomfile1
-{% endhighlight %}
+
+```
 
 Seguidamente, configuré crontab para que ejecutara dicho script cada 5 minutos por ejemplo:
 
-{% highlight bash %}$ hkr-> crontab -l
+```bash
+$ hkr-> crontab -l
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 */5 * * * * /home/hkr/Pictures/wall_aleatorio.sh
-{% endhighlight %}
+
+```
 
 Así luce mi escritorio con xmonad:
 

@@ -29,9 +29,10 @@ Asumo que ya tenemos composer instalado, si no es así, se puede instalar [sigui
 Lo primero es instalar symfony, en este caso voy a instalar la versión 2.3, que es la versión menor con soporte ahora mismo, ya que quiero que sea compatible con el máximo de versiones posible y para ello lo mejor es crearlo sobre la menor versión.
 Lo instalamos usando el comando siguiente:
 
-{% highlight bash %}
+```bash
+
 composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony 2.3.0
-{% endhighlight  %}
+```
 
 ###**Creamos la base del bundle**
 
@@ -41,7 +42,8 @@ Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcion
 
 **DependencyInjection/SmsupapiExtension.php**: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.
 
-{% highlight php %}
+```php
+
 namespace smsup\SmsupapiBundle\DependencyInjection;
 	use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -55,19 +57,21 @@ class SmsupapiExtension extends Extension
         $loader->load('services.yml');
     }
 }
-{% endhighlight  %}
+```
 
 **Resources/config/services.yml**: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.
 
-{% highlight bash %}
+```bash
+
 services:
   smsup.smsupapi.sender:
       class: smsup\SmsupapiBundle\Clases\SmsupSender
-{% endhighlight  %}
+```
 
 **Clases/SmsupSender.php**: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.
 
-{% highlight php %}
+```php
+
 namespace smsup\SmsupapiBundle\Clases;
 class SmsupSender {
 	public function Send($mensaje)
@@ -75,39 +79,43 @@ class SmsupSender {
 		echo "Su mensaje es: " . $mensaje;
 	}
 }
-{% endhighlight  %}
+```
 
 **SmsupapiBundle.php**: clase que extiende de Bundle y sirve para cargarlo.
 
-{% highlight php %}
+```php
+
 namespace smsup\SmsupapiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 class SmsupapiBundle extends Bundle
 {
 }
-{% endhighlight  %}
+```
 
 Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.
 
 En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:
 
-{% highlight php %}
+```php
+
 'smsup\\SmsupapiBundle\\' => array($vendorDir . '/smsup/SmsupapiBundle'),
-{% endhighlight  %}
+```
 
 En AppKernel añadimos:
 
-{% highlight php %}
+```php
+
 new smsup\SmsupapiBundle\SmsupapiBundle(),
-{% endhighlight  %}
+```
 
 Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:
 
-{% highlight php %}
+```php
+
 $sender = $this->get('smsup.smsupapi.sender');
 $sender->send('entró y funciona');
-{% endhighlight  %}
+```
 
 Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje "entró y funciona". Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto "Su mensaje es: entró funciona", lo cual nos indica que todo ha ido bien.
 
@@ -115,7 +123,8 @@ Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al m
 
 Como ya sabemos que funciona correctamente nuestro bundle, aunque no haga nada útil aun, vamos a subirlo a nuestro repositorio git y a añadirlo a packagist para que pueda ser descargado usando composer. Para esto debemos añadir el archivo composer.json, en el que vamos a definir nuestro bundle. En nuestro caso quedaría así:
 
-{% highlight json %}
+```json
+
 {
   "name": "smsup/smsup-api-bundle",
   "type": "symfony-bundle",
@@ -131,7 +140,7 @@ Como ya sabemos que funciona correctamente nuestro bundle, aunque no haga nada �
       "psr-4": { "smsup\\SmsupapiBundle\\": "" }
   }
 }
-{% endhighlight  %}
+```
 
 Los parámetros importantes aquí son los siguientes:
 
@@ -146,15 +155,17 @@ Una vez hecho esto vamos a instalar nuestro bundle desde composer para ver que t
 
 Como no hemos definido ninguna versión en nuestro repositorio, para que composer descargue el paquete, debemos cambiar en el archivo composer.json de symonfy, la estabilidad mínima de los paquetes a descargar, ya que la rama master se considera de desarrollo. Esto se hace cambiando "stable" por "dev" en:
 
-{% highlight json %}
+```json
+
 "minimum-stability": "stable"
-{% endhighlight  %}
+```
 
 Para instalarlo ejecutamos la siguiente instruccion:
 
-{% highlight bash %}
+```bash
+
 composer require smsup/smsup-api-bundle master
-{% endhighlight  %}
+```
 
 Hemos incluido "master" para indicar que se descargue la rama master, ya que aún no definimos ninguna versión estable.
 
@@ -168,7 +179,8 @@ Vamos a añadir la funcionalidad y luego veremos como crear la primera versión 
 Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.
 
-{% highlight php %}
+```php
+
 namespace smsup\SmsupapiBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -193,13 +205,14 @@ class Configuration implements ConfigurationInterface
         return $treeBuilder;
     }
 }
-{% endhighlight  %}
+```
 
 Aquí indicamos que en el nodo "smsupapi" debe haber dos parámetros "api_id" y "api_secret" y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.
 
 Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.
 
-{% highlight php %}
+```php
+
 public function load(array $configs, ContainerBuilder $container)
 {
     $processor = new Processor();
@@ -212,11 +225,12 @@ public function load(array $configs, ContainerBuilder $container)
     $container->getDefinition('smsup.smsupapi.sender')
                 ->addMethodCall('setApisecret', array($config['api_secret']));
 }
-{% endhighlight  %}
+```
 
 Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:
 
-{% highlight php %}
+```php
+
 protected $apiId;
 protected $apiSecret;
 public function setApiid($apiId)
@@ -227,7 +241,7 @@ public function setApisecret($apiSecret)
 {
 	$this->apiSecret = $apiSecret;
 }
-{% endhighlight  %}
+```
 
 Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.
 
@@ -236,7 +250,8 @@ Inyectamos de esta forma los parámetros para evitar inyectar el container al se
 Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería "smsuplib". Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:
 
-{% highlight php %}
+```php
+
   namespace smsup\SmsupapiBundle\Clases;
   use smsup\smsuplib;
 class SmsupSender {
@@ -293,13 +308,14 @@ class SmsupSender {
 		return new Result($respuesta['httpcode'], $respuesta['resultado']);
 	}
 }
-{% endhighlight  %}
+```
 
 Añadimos dos clases como ayuda:
 
 ### Sms.php
 
-{% highlight php %}
+```php
+
 namespace smsup\SmsupapiBundle\Clases;
 class Result {
 	protected $httpcode;
@@ -318,11 +334,13 @@ class Result {
 		return $this->result;
 	}
 }
-{% endhighlight %}
+
+```
 
 ### Result.php
 
-{% highlight php %}
+```php
+
 namespace smsup\SmsupapiBundle\Clases;
 class Result {
 	protected $httpcode;
@@ -341,7 +359,7 @@ class Result {
 		return $this->result;
 	}
 }
-{% endhighlight  %}
+```
 
 Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.
 
@@ -350,9 +368,10 @@ Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que ac
 Para definir una versión solo debemos añadir una etiqueta con la versión al repositorio y packagist se encarga del resto. La etiqueta debe tener el formato 'X.Y.Z' o 'vX.Y.Z' (también puede llevar un sufijo RC, beta, etc). En nuestro caso será la etiqueta "v1.0.0".
 Hecho esto, ya está disponible una versión estable de nuestro bundle que puede instalarse de la siguiente forma:
 
-{% highlight bash %}
+```bash
+
 composer require smsup/smsup-api-bundle
-{% endhighlight  %}
+```
 
 Podéis ver como quedan todos los archivos [en el repositorio](https://github.com/smsup/SmsupapiBundle).
 

@@ -39,11 +39,15 @@ Wireshark finalmente lo uso para *&#8220;Ver&#8221;* el tráfico que genera el o
 
 Podemos instalar estos dos programas mediante la consola:
 
-{% highlight bash %}hkr@hkr-pc:~$ sudo aptitude install ettercap wireshark{% endhighlight %}</p> 
+```bash
+hkr@hkr-pc:~$ sudo aptitude install ettercap wireshark
+```</p> 
 
 Una vez instalado, abrimos ettercap:
 
-{% highlight bash %}hkr@hkr-pc:~$ sudo ettercap -C{% endhighlight %}
+```bash
+hkr@hkr-pc:~$ sudo ettercap -C
+```
 
 Y nos abrirá una pantalla como esta:
 
@@ -79,7 +83,9 @@ Si ejecutamos antes de realizar todo esto arp -a en el equipo objetivo, vemos qu
 
 Ahora llega el turno de wireshark, 
 
-{% highlight bash %}hkr@hkr-pc:~$ sudo wireshark{% endhighlight %}
+```bash
+hkr@hkr-pc:~$ sudo wireshark
+```
 
 Vamos a Capture -> Options, aquí seleccionaremos la interfaz a esniffar, que debe ser la misma que usamos en ettercap, dejamos marcada la casilla *Capture packets in promiscuous mode* y clicamos en start:
 

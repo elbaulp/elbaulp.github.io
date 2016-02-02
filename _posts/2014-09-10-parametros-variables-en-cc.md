@@ -32,8 +32,10 @@ En ocasiones, es necesario tener una función a la que podamos pasar un número 
 
 Para ello, usaremos la macro `va_start`, encargada de inicializar una lista de argumentos variables. Su prototipo es:
 
-{% highlight cpp %}void va_start (va_list ap, paramN);
-{% endhighlight %}
+```cpp
+void va_start (va_list ap, paramN);
+
+```
 
 Inicializa `ap` para recuperar argumentos adicionales después del parámetro `paramN`. Una función que invoque a `va_start` debe invocar también a `va_end` antes de finalizar. Pasemos a dar una descripción más detallada de los parámetros:
 
@@ -45,7 +47,8 @@ Inicializa `ap` para recuperar argumentos adicionales después del parámetro `p
 
 ## Primer ejemplo de parámetros variables
 
-{% highlight cpp %}/* va_start example */
+```cpp
+/* va_start example */
 #include <stdio.h>      /* printf */
 #include <stdarg.h>     /* va_list, va_start, va_arg, va_end */
 
@@ -70,7 +73,8 @@ int main ()
   PrintFloats (3,3.14159,2.71828,1.41421);
   return 0;
 }
-{% endhighlight %}
+
+```
 
 La función `PrintFloats` tiene como parámetro el número de argumentos adicionales (`n`), que son leídos y mostrados secuencialmente.
 
@@ -78,7 +82,8 @@ La función `PrintFloats` tiene como parámetro el número de argumentos adicion
 
 Éste ejemplo está sacado de la función que usa [DWM Status][1] para imprimir el estado (`smprintf`):
 
-{% highlight c %}char *
+```c
+char *
 smprintf(char *fmt, ...) {
   va_list fmtargs;
   char *ret;
@@ -100,12 +105,15 @@ smprintf(char *fmt, ...) {
 
   return ret;
 }
-{% endhighlight %}
+
+```
 
 La función toma como primer parámetro una cadena de texto a ser formateada, al estilo de `printf`. Los argumentos adicionales son los valores correspondientes a cada cadena de formateo. Por ejemplo:
 
-{% highlight cpp %}smprintf("%dK", rx_rate);
-{% endhighlight %}
+```cpp
+smprintf("%dK", rx_rate);
+
+```
 
 Al igual que en el ejemplo anterior, en `fmtargs` se recibirán los parámetros adicionales. Con `vsnprintf` se calcula el tamaño de la cadena de texto formateada, es decir, con los valores substituidos. Finalmente, se vuelve a inicializar la lista de argumentos variables, para luego llamar de nuevo a `vsnprintf`, pero ésta vez almacenando el resultado de la cadena formateada en `ret`.
 
@@ -113,7 +121,8 @@ Al igual que en el ejemplo anterior, en `fmtargs` se recibirán los parámetros 
 
 Éste ejemplo es de una práctica de Inteligencia Artificial de la facultad en la que teníamos que implementar la poda **Alpha-beta** en el 4 en raya:
 
-{% highlight cpp %}int checkLine(int jug, int n, ...) {
+```cpp
+int checkLine(int jug, int n, ...) {
 
   va_list vl;
   va_start(vl, n);
@@ -127,9 +136,11 @@ Al igual que en el ejemplo anterior, en `fmtargs` se recibirán los parámetros 
   // Calcular puntuación de la jugada.
   return score;
 }
-{% endhighlight %}
 
-{% highlight cpp %}/**
+```
+
+```cpp
+/**
   * Valorar cada jugada
  **/
 double Valoracion(const Environment &state, int jugador) {
@@ -206,7 +217,8 @@ double Valoracion(const Environment &state, int jugador) {
 
   return score;
 }
-{% endhighlight %}
+
+```
 
 En éste caso, queremos llamar a `checkLine` con un número indeterminado de parámetros. Como se puede apreciar en la función `Valoracion`, la cual llama a `checkLine` con el jugador actual, el número de casillas a comprobar y, a continuación, las casillas a comprobar.
 

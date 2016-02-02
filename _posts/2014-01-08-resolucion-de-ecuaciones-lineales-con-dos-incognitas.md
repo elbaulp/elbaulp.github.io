@@ -52,7 +52,8 @@ En el primer sistema es fácil ver que la segunda ecuación es solo la primera m
 
 &#8220;El caso difícil&#8221; lo podemos resolver sabiendo cuál es el número por el que tengo que multiplicar la primera ecuación para obtener la segunda, podríamos hacer `m = d / a` donde **m** sería nuestro &#8220;número&#8221;y después ver si `m * c = f` :
 
-{% highlight python %}from sys import argv
+```python
+from sys import argv
 script, a, b, c, d, e, f = argv
 
 a = float(a)
@@ -69,11 +70,13 @@ if m * c == f :
 else:
     print "El sistema no tiene soluciones"
 
-{% endhighlight %}
+
+```
 
 Uniendo &#8220;el caso difícil&#8221; con &#8220;el caso fácil&#8221; tenemos el código completo del algoritmo, tendremos que verificar antes que a,b,d,e no sean todos cero pues entonces no sería un sistema de ecuaciones, salvando esto podemos usar el algoritmo:
 
-{% highlight python %}from sys import argv
+```python
+from sys import argv
 script, a, b, c, d, e, f = argv
 
 a = float(a)
@@ -99,7 +102,8 @@ else :
     else:
         print "El sistema no tiene soluciones"
 
-{% endhighlight %}
+
+```
 
 ### Conclusion
 

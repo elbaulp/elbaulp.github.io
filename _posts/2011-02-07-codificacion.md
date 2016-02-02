@@ -481,19 +481,23 @@ El complemento a 2 se ideo para el problema de que el cero tenga positivos y neg
 DESEMPAQUETADO: (Se usa para transmitir)  
 El uso de esto viene del manejo del BCD, ya que si metemos un 23 y un 71, al pasarlo a BDC, el pc recibe una cadena, al cogerlos de 4 en 4, el resultado es 2371, que no tiene nada que ver, para ello se empaqueta:
 
-{% highlight bash %}2      3      7      1
+```bash
+2      3      7      1
 0010   0011   0111   0001
-{% endhighlight %}
+
+```
 
 como en BCD el 1111 no existe, lo usa para marcar que va a empezar un numero, menos el que precede al ultimo.  
 También usa el 1100(que no existe en BCD) para indicar que el numero será positivo, y el 1101(Tampoco existe) para negativo, seria:  
 
 
-{% highlight bash %}2             3             7      +      1
+```bash
+2             3             7      +      1
 1111   0010   1111   0011   1111   0111   1100   0001 → 2371
 1111   0010   1111   0011   1111   0111   1101   0001 → -2371
          2             3             7      -      1 
-{% endhighlight %}
+
+```
 
 
 
@@ -503,9 +507,11 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
 
 Se pone el numero y al final se añade el signo:
 
-{% highlight bash %}0010   0011   0111   0001   1100
+```bash
+0010   0011   0111   0001   1100
   2      3      7      1      +
-{% endhighlight %}
+
+```
 
 * * *
 

@@ -47,8 +47,10 @@ A continuación es necesario configurar Burp para usar proxy SOCKS, el cual se i
 
 De esta forma se configura Burp para que use el proxy SOCKS corriendo en el host 127.0.0.1 (localhost) en el puerto 9050. Si se consultan nuevamente los puertos que estan en estado de escucha nuevamente, se puede observar que el puerto 9050 está asociado al servicio Tor:
 
-{% highlight bash %}# netstat -lntup
-tcp 0 0 127.0.0.1:9050 0.0.0.0:* LISTEN 8520/tor{% endhighlight %}
+```bash
+# netstat -lntup
+tcp 0 0 127.0.0.1:9050 0.0.0.0:* LISTEN 8520/tor
+```
 
 Repasando, hemos configurado el navegador para que use el proxy Burp en el puerto 8080, el cual en turnos utiliza el proxy SOCKS en el puerto 9050, razón por la cual exitosamente se logra el encadenamiento de proxies y en consecuencia se navega en internet de manera anónima, mientras seguimos teniendo la ventaja de poder modificar las peticiones con Burp.
 
@@ -80,7 +82,9 @@ C: **Usar tor-resolve**
 
 Con tor-resolve se puede obtener la dirección IP de un hostname de manera muy sencilla. Todo lo que se necesita hacer es correr este programa con el hostname especificado, por ejemplo:
 
-{% highlight bash %}# tor-resolve www.google.com 127.0.0.1:9050{% endhighlight %}
+```bash
+# tor-resolve www.google.com 127.0.0.1:9050
+```
 
 Este comando dice que queremos obtener la dirección IP del hostname www.google.com, y que queremos usar el proxy SOCKS de Tor corriendo en el host 127.0.0.1 en el puerto 9050, la cual es la combinación host:port default, pero la especificamos igual, por claridad.
 
@@ -88,13 +92,17 @@ D: **Usar el servidor DNS local TorDNS**
 
 El servidor DNS local puede ser configurado, el cual direccionará todas las peticiones DNS através de la red de Tor. Tor provee un servidor DNS built-in, el cual puede ser setteado agregando variables de configuración al archivo /etc/tor/torrc . Más específicamente, es necesario agregar las siguientes variables:
 
-{% highlight bash %}DNSPort 53
+```bash
+DNSPort 53
 AutomapHostsOnResolve 1
-AutomapHostsSuffixes .exit,.onion{% endhighlight %}
+AutomapHostsSuffixes .exit,.onion
+```
 
 Para probar si TorDNS funciona, se puede usar el comando dig para consultarle a nuestro servidor DNS por una dirección IP. Por ejemplo:
 
-{% highlight bash %}# dig @localhost -p 53 www.google.com{% endhighlight %}
+```bash
+# dig @localhost -p 53 www.google.com
+```
 
 Para asegurarnos que todas las peticiones DNS son realmente enviadas a través de nuestro servidor DNS local, es necesario además cambiar el archivo /etc/resolv.conf para apuntar al servidor DNS 127.0.0.1:53, por lo tanto todas las aplicaciones de la máquina usarán el sevidor DNS TorDNS para la resolución de hostnames. Si hacemos esto, notaremos un poco de retardo cuando consultemos un hostname que todavía no esté en caché, pero con las conecciones de internet actuales esto no debería ser un problema. Pero si de todos modos molesta, podemos configurar un servidor de nombres local para cacheo que podría almacenar los hostnames y sus correspondientes direcciones IP. En Linux hay un programa llamado dnsmasq, el cual es un servidor liviano de cacheo de DHCP y DNS, entre otros, el cual acepta consultas DNS y las responde directamente de la caché local o las redirecciona a un servidor DNS real. Una buena explicación de ello puede encontrase en [1].
 
@@ -118,7 +126,9 @@ Veamos qué pasa si intentamos resolver un hostname de DuckDuckGo, el cual es un
 
     # tor-resolve 3g2upl4pq6kufc4m.onion 127.0.0.1:9050
 
-{% highlight bash %}# dig @localhost -p 53 3g2upl4pq6kufc4m.onion{% endhighlight %}
+```bash
+# dig @localhost -p 53 3g2upl4pq6kufc4m.onion
+```
 
 Ambos comandos reportan la dirección IP 127.192.0.10. Podemos observar que esa dirección IP pertenerce al localhost, dado que todas las direcciones IP 127.0.0.0/24 son asignadas al localhost, de hecho 127.0.0.1 es la más comunmente usada. Esto efectivamente logra anonimizar los servidores web en la red Tor, ergo, no se pueden rastrear.
 
@@ -136,7 +146,9 @@ Pero hay también varias opciones de log que podemos configurar en el archivo /e
 
 Envía todos los mensajes entre la mínima y máxima severidad a alguno de los canales de salida: standard error, standard output o syslog.
 
-{% highlight bash %}Log minSeverity-maxSeverity file <filename&gt;{% endhighlight %}
+```bash
+Log minSeverity-maxSeverity file <filename&gt;
+```
 
 Envía todos los mensajes entre la mínima y máxima severidad a un archivo de nombre <filename>.
 

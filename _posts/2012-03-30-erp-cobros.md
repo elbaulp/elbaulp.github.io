@@ -35,7 +35,8 @@ El examen tiene un 9, por lo que hay algunas pequeñas cosas que no estan hechas
 
 
 
-{% highlight sql %}--ejercicio 1
+```sql
+--ejercicio 1
 create or replace procedure p_genRecibos(fac facturas.nfactura%type, cli facturas.cCodCliente%type, fechaE facturas.fecha%type, fPago facturas.cCodFPago%type, importe number) 
 is
   numRecibos fpagos.nRecibos%type;
@@ -203,7 +204,8 @@ sp_Lis_FacxCli('C002', xSumRecNoPag,xSumRecPag);
 end;
 
 
-{% endhighlight %}
+
+```
 
 [Enlace al resultado.][1]
 

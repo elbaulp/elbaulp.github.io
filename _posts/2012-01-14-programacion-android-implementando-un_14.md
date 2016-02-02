@@ -81,7 +81,8 @@ Funciona de la siguiente manera: Se le dice a una instancia de UriMatcher qué t
 
 En el ejemplo que estamos viendo de FavSites, existen dos patrones de URIs, uno para una colección de lugares y otro para un único lugar. En el código de abajo se muestra la implementación que registra ambos patrones. Asigna un 1 a una colección de lugares y un 2 a un único lugar. Los patrones que se usan para la URI se definieron como meta datos en la tabla de lugares:
 
-{% highlight java %}private static final UriMatcher sUriMatcher;
+```java
+private static final UriMatcher sUriMatcher;
 //Define Ids para cada tipo de URI
 private static final int INCOMING_SITE_COLLECTION_URI_INDICATOR = 1;
 private static final int INCOMING_SINGLE_SITE_URI_INDICATOR = 2;
@@ -94,11 +95,13 @@ static {
    sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#", 
                       INCOMING_SINGLE_SITE_URI_INDICATOR);
 }
-{% endhighlight %}
+
+```
 
 Conciendo esta implementación, ahora es más fácil saber cómo usan los otros métodos el UriMatcher, por ejemplo, el método query:
 
-{% highlight java %}switch (sUriMatcher.match(uri)) {
+```java
+switch (sUriMatcher.match(uri)) {
       case INCOMING_SITE_COLLECTION_URI_INDICATOR:
          //...
          break;
@@ -110,18 +113,21 @@ Conciendo esta implementación, ahora es más fácil saber cómo usan los otros 
       default:
          throw new IllegalArgumentException("Unknow URI " + uri);
       }
-{% endhighlight %}
+
+```
 
 Como se aprecia en el código de arriba, el método *match* devuelve el mísmo número que hemos registrado en el paso anterior.El constructor de UriMatcher toma un entero que se usará para la raiz de la URI, se devolverá dicho número si en la URL no existen segmentos en el path o authorities. También devolverá la constante NO\_MATCH cuando los patrones no coincidan. Es posible crear un UriMatcher sin un identificador para la raiz de la URI, en tal caso, Android inicializará UriMatcher a NO\_MATCH internamente. Por lo tanto, el código que se muestra a continuación es equivalente al anterior:
 
-{% highlight java %}static {
+```java
+static {
    sUriMatcher = new UriMatcher();
    sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites", 
                       INCOMING_SITE_COLLECTION_URI_INDICATOR);
    sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#", 
                       INCOMING_SINGLE_SITE_URI_INDICATOR);
 }
-{% endhighlight %}
+
+```
 
 #### Usando los mapas de proyecciones (Projection Maps)
 
@@ -133,7 +139,8 @@ Si leemos la documentación del método <a href="http://developer.android.com/re
 
 En nuestro ejemplo, así es como se a configurado el projection map:
 
-{% highlight java %}private static HashMap<string , String> sSitesProjectionMap;
+```java
+private static HashMap<string , String> sSitesProjectionMap;
 static{
    sSitesProjectionMap = new HashMap</string><string , String>();
    sSitesProjectionMap.put(favSitesTableMEtaData._ID,
@@ -151,14 +158,17 @@ static{
    sSitesProjectionMap.put(favSitesTableMEtaData.FOTO,
                            favSitesTableMEtaData.FOTO);
 }
-</string>{% endhighlight %}
+</string>
+```
 
 El queryBuilder usa la variable *sSitesProjectionMap* así:
 
-{% highlight java %}SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+```java
+SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 qb.setTables(favSitesTableMEtaData.TABLE_NAME);
 qb.setProjectionMap(sSitesProjectionMap);
-{% endhighlight %}
+
+```
 
 * * *
 

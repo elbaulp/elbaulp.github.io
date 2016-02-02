@@ -56,9 +56,11 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
   Por defecto no se mostrará en la versión movil:
 </p>
 
-{% highlight xml %}
+```xml
+
 <b:widget id='BlogArchive1' title='Blog Archive' type='BlogArchive'>
-{% endhighlight %}
+
+```
 
 
 <p>
@@ -66,9 +68,11 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}
+```xml
+
 <b:widget id='BlogArchive1' mobile='yes' title='Blog Archive' type='BlogArchive'>
-{% endhighlight %}
+
+```
 
 
 <p>
@@ -76,9 +80,11 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}
+```xml
+
 <b:widget id='BlogArchive1' mobile='no' title='Blog Archive' type='BlogArchive'>
-{% endhighlight %}
+
+```
 
 
 <p>
@@ -86,9 +92,11 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}
+```xml
+
 <b:widget id='BlogArchive1' mobile='only' title='Blog Archive' type='BlogArchive'>
-{% endhighlight %}
+
+```
 
 
 <p>
@@ -96,7 +104,8 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight xml %}
+```xml
+
 
 
 <div class="widget-content">
@@ -116,7 +125,8 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
       </a>
     </b:if>
   </div>
-  {% endhighlight %}
+  
+```
   
   
   <p>
@@ -129,9 +139,11 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
   </p>
   
   
-  {% highlight xml %}
+  ```xml
 
-{% endhighlight %}
+
+
+```
 
 
 <p>
@@ -139,7 +151,8 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 </p>
 
 
-{% highlight bash %}
+```bash
+
 /* For desktop view */
 .date-posts {
   margin: 0 -$(separator.outdent);
@@ -151,7 +164,8 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
   margin: 0;
   padding: 0;
 }
-{% endhighlight %}
+
+```
 
 
 <p>

@@ -30,7 +30,8 @@ Veamos la diferencia entre las siguientes declaraciones de la [clase Punto][1]:
   
 
 
-{% highlight bash %}class Punto{
+```bash
+class Punto{
  
 public:
   int x;
@@ -41,9 +42,11 @@ public:
   void mostrar ();
   void ocultar ();
 };
-{% endhighlight %}
 
-{% highlight bash %}class Punto{
+```
+
+```bash
+class Punto{
   int x;
   int y;
   char ch;
@@ -53,7 +56,8 @@ public:
   void mostrar();
   void ocultar();
 };
-{% endhighlight %}
+
+```
 
 
 
@@ -65,10 +69,12 @@ ordenada y, o del carácter ch, dará lugar a un error en tiempo de compilación
 
 
 
-{% highlight bash %}pt.x=19;
+```bash
+pt.x=19;
 pt.y=5;
 pt.ch=’+’;
-{% endhighlight %}
+
+```
 
 El hecho de que los datos sean privados no quiere decir que sean invisibles:  
 simplemente quiere decir que no se pueden cambiar desde el exterior. Si es imposible  
@@ -79,7 +85,8 @@ valores de *x* y de *y*.
 
 
 
-{% highlight bash %}class Punto{
+```bash
+class Punto{
   int y;
   char ch;
 public:
@@ -89,7 +96,8 @@ public:
   int getx () { return x;}
   int gety () { return y;}
 };
-{% endhighlight %}
+
+```
 
 
 
@@ -106,8 +114,10 @@ Punto basta escribir:
 
 
 
-{% highlight bash %}objeto.miembro_público;
-{% endhighlight %}
+```bash
+objeto.miembro_público;
+
+```
 
 Habitualmente, los miembros públicos son funciones, como mostrar, ocultar,  
 *getx, gety*. Las llamadas a dichas funciones miembro desde un objeto *pt1* de la clase  
@@ -115,10 +125,12 @@ Punto, se escribirán:
 
 
 
-{% highlight bash %}ptl.mostrar ();
+```bash
+ptl.mostrar ();
 cout < < "nabscisa del punto= " << ptl.getx();
 cout << "nordenada del punto= "<< ptl.gety ();
-{% endhighlight %}
+
+```
 
 * * *
 

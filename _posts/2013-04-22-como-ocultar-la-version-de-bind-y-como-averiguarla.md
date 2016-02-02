@@ -22,9 +22,11 @@ Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamo
   
 <!--ad-->
 
-{% highlight bash %}$ dig @example.com -c CH -t txt version.bind # Consultamos la versión para el dominio de la web
+```bash
+$ dig @example.com -c CH -t txt version.bind # Consultamos la versión para el dominio de la web
 $ dig @direcciónDNS -c CH -t txt version.bind # Consultamos también en nuestros servidores DNS secundarios
-{% endhighlight %}
+
+```
 
 Tras ejecutar el primer comando deberiamos ver si estamos mostrando la versión de **BIND**. En mi caso la respuesta era afirmativa, sin embargo al consultar la versión en el servidor DNS secundario la respuesta era ***&#8220;[Secured]&#8221;***.
 
@@ -36,28 +38,38 @@ Esto no es más que **seguridad mediante oscuridad**, ya que aunque se oculte la
 
 Abrimos el fichero de configuración de **BIND**, concretamente */etc/bind/named.conf.options* y añadimos la siguiente línea:
 
-{% highlight bash %}version "Texto a mostrar"; {% endhighlight %}
+```bash
+version "Texto a mostrar"; 
+```
 
 Guardamos el fichero y reiniciamos **BIND**:
 
-{% highlight bash %}# service bind9 restart
-{% endhighlight %}
+```bash
+# service bind9 restart
+
+```
 
 ### Mostrar versión de BIND aún cuando está oculta
 
 Instalamos *fpdns*:
 
-{% highlight bash %}sudo apt-get install fpdns{% endhighlight %}
+```bash
+sudo apt-get install fpdns
+```
 
 Lo ejecutamos pasando como argumento el servidor del cual queremos determinar la versión:
 
-{% highlight bash %}$ fpdns -D <dominio>{% endhighlight %}
+```bash
+$ fpdns -D <dominio>
+```
 
 La salida será algo de este estilo:
 
-{% highlight bash %}fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version  
+```bash
 fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version  
-{% endhighlight %}
+fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version  
+
+```
 
 #### Referencias
 

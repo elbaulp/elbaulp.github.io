@@ -30,7 +30,8 @@ En el [artículo anterior](/android/conceptos-basicos/) se dieron unas nociones 
 
 Empezaremos creando la primera pantalla que verá el usuario al acceder a la aplicación. En este caso consiste en una caja de texto (_EditText_) y un botón:
 
-{% highlight xml %}
+```xml
+
 <!-- ./layout/activity_hello_world_main -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
@@ -54,7 +55,8 @@ Empezaremos creando la primera pantalla que verá el usuario al acceder a la apl
           android:layout_height="wrap_content"
           android:text="@string/button_send"/>
 </LinearLayout>
-{% endhighlight %}
+
+```
 
 Un `LinearLayout` especifica cómo se ordenarán las vistas que hay dentro de él. Hay dos tipos, vertical u horizontal. Si no se especifica nada por defecto es horizontal, lo cual significa que se irán colocando las vistas una debajo de otra. En nuestro caso, el _EditText_ estará colocado encima del botón.
 
@@ -76,7 +78,8 @@ El resultado de este `layout` es:
 
 A esta pantalla se enviará el mensaje escrito en la anterior. Se define con el siguiente código:
 
-{% highlight xml %}
+```xml
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
@@ -93,7 +96,8 @@ A esta pantalla se enviará el mensaje escrito en la anterior. Se define con el 
             android:text="@string/hello_world"/>
 
 </RelativeLayout>
-{% endhighlight %}
+
+```
 
 Es más simple que la anterior, simplemente tiene un `TextView` que será usado para mostrar el texto recibido. Para saber más sobre cómo trabajar con `layouts` puedes visitar el artículo [interfaz gráfica - layouts](/programacion-android-interfaz-grafica_23/ "Programación Android: Interfaz gráfica – Layouts").
 
@@ -103,7 +107,8 @@ Es más simple que la anterior, simplemente tiene un `TextView` que será usado 
 
 Veamos ahora cómo implementar el funcionamiento de la pantalla principal. Al crear el proyecto también se crea un fichero .java de nombre _MainActivity_ en la mayoría de los casos. Aquí se ha cambiado el nombre por _HelloWorldMain_, con el siguiente código:
 
-{% highlight java %}
+```java
+
 public class HelloWorldMain extends Fragment {
 
     public final static String EXTRA_MESSAGE = "com.tutorial.holamundo.MESSAGE";
@@ -170,7 +175,8 @@ public class HelloWorldMain extends Fragment {
         return root;
     }
 }
-{% endhighlight %}
+
+```
 
 Lo que vemos en la declaración de una clase, que hereda de _Fragment_. Los _Fragments_ son un concepto introducido en Android 3 que pretendía modularizar aún más una pantalla (_Activity_). El obetivo es poder reutilzar más código. Si en una pantalla, supongamos, disponemos de dos botones abajo (Aceptar, Cancelar) y dichos botones queremos reutilzarlos a lo largo de muchas pantallas, bastaría con crearlos en un _Fragment_. De usar una _Activity_  sería necesario copiar y pegar el código de ambos botones en todas y cada una de las pantallas en las que quisieremos los botones.
 
@@ -180,7 +186,8 @@ Una vez se pulse el botón, se lanzará la segunda pantalla, veamos qué hace.
 
 ## Código fuente de la segunda pantalla
 
-{% highlight java %}
+```java
+
 /**
  * Clase que hereda de la clase Activity, por lo cual dispondrá de
  * interfaz de usuario. Al crear una Activity, Android invoca a una serie de
@@ -218,7 +225,8 @@ public class DisplayMessageActivity extends Activity {
         setContentView(textView);
     }
 }
-{% endhighlight %}
+
+```
 
 En este caso, en lugar de un _Fragment_ tenemos una _Activity_. Como vemos, se recupera la información enviada desde la primera pantalla usando el identificador que le asociamos (*EXTRA_MESSAGE*. Luego, en vez de establecer la interfaz gráfica mediante un fichero XML, se realiza mediante programación, por lo tanto, el XML de la segunda pantalla que vimos arriba no se usa. Aunque es posible implementar la interfaz desde código se recomienda hacerlo desde XML siempre que sea posible.
 
@@ -226,7 +234,8 @@ Esto es todo, solo resta ver el *AndroidManifest*, el fichero que recoge todas l
 
 # El AndroidManifest
 
-{% highlight xml %}
+```xml
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="es.tformacion.helloworld">
 
@@ -252,7 +261,8 @@ Esto es todo, solo resta ver el *AndroidManifest*, el fichero que recoge todas l
     </application>
 
 </manifest>
-{% endhighlight %}
+
+```
 
 En este fichero se definen las pantallas que la aplicación va a usar, así como los permisos que necesita (En este caso ninguno).
 

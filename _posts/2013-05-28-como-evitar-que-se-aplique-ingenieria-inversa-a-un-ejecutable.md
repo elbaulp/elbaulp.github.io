@@ -21,7 +21,8 @@ Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. 
 
 Para ello hay que hacer uso de la función `ptrace()`:
 
-{% highlight c %}#include <sys/ptrace.h>
+```c
+#include <sys/ptrace.h>
 
        long ptrace(enum __ptrace_request request, pid_t pid,
                    void *addr, void *data);
@@ -30,13 +31,15 @@ The  ptrace()  system  call  provides  a  means  by  which  one process (the "tr
 and control the execution of another process (the "tracee"), and examine and change the tracees 
 memory and registers.  It is primarily used to implement breakpoint debugging and system 
 call  tracing.
-{% endhighlight %}
+
+```
 
 Consite en un proceso observe el control de ejecución de otro. Se usa normalmente para implementar puntos de ruptura para depurar.
 
 Esta función será usada como constructor para que se ejecute antes de llamar a la función `main()`:
 
-{% highlight c %}/*
+```c
+/*
  * evilgrin.c, tweaking ptrace() to induced whatever we been debugged
  */
 
@@ -60,17 +63,20 @@ int main(int argc, char **argv) {
      printf("Hello World!\n");
      return 1;
 }
-{% endhighlight %}
+
+```
 
 El código de arriba realiza un `ptrace` a sí mismo. Si falla al intentar realizar un seguimiento a él mismo, quiere decir que otro proceso ya esté realizando el seguimiento (el depurador, por ejemplo). Veamos el ejemplo en práctica:
 
-{% highlight bash %}$ gdb trace
+```bash
+$ gdb trace
 (gdb) r
 Starting program: trace 
 alguien está depurando
 [Inferior 1 (process 17027) exited normally]
 (gdb) 
-{% endhighlight %}
+
+```
 
 Como se vé, el ejecutable termina ántes de llegar a ejecutar siquiera la función `main()`.
 

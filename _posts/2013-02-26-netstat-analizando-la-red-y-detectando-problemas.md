@@ -41,7 +41,8 @@ Tras esta pequeña introducción, veamos algunas salidas de este comando:
 
 Es posible mostrar las conexiones que existen actualmente entre tu máquina y otras máquinas, así como sockets escuchando en un puerto para que otra máquina se conecte. También muestra qué programas están activos en la red:
 
-{% highlight bash %}$ sudo netstat -apA inet
+```bash
+$ sudo netstat -apA inet
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 *:sunrpc                *:*                     LISTEN      1775/rpcbind
@@ -90,7 +91,8 @@ udp        0      0 *:44290                 *:*                                 
 udp        0      0 *:53066                 *:*                                 2405/dhclient
 udp        0      0 *:1900                  *:*                                 2905/minissdpd  
 udp        0      0 *:45008                 *:*                                 2298/avahi-daemon:
-{% endhighlight %}
+
+```
 
 Las parámetros pasados a netstat son; *-a* para mostrar todos los sockets, *-p* muestra la columna PID/Program, *-A inet* muestra solo sockets TCP/UDP. En Windows la opción *-A inet* puede omitirse y *-p* debe reemplazarse por *-o*. En Mac, no hay equivalente a *-p* y *-A inet* debe reemplzarse por *-f inet*. Para conocer los nombres de los programas en Mac usa *lsof -i*
 
@@ -108,7 +110,8 @@ El singnificado de cada columna es el siguiente:
 
 Procedamos a interpretar los resultados de netstat. En el ejemplo de arriba las direcciones de la columna **Foreign adress** aparecen cortadas. Para verlas completas es necesario ejecutar netstat con el parámetro **-W**:
 
-{% highlight bash %}$ sudo netstat -apWA inet | grep https
+```bash
+$ sudo netstat -apWA inet | grep https
 tcp        0      0 hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
@@ -125,7 +128,8 @@ tcp        0      0 hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.a
 tcp        0      0 hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -
 tcp        0      0 hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        0      0 hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
-{% endhighlight %}
+
+```
 
 Con el comando de arriba estoy mostrando únicamente las conexiones *https* establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección <a href=" http://ec2-176-34-135-167.eu-west-1.compute.amazonaws.com" target="_blank"><br /> ec2-176-34-135-167.eu-west-1.compute.amazonaws.com</a> podrás comprobar que dicha dirección pertenece al buscador **duckduckgo**. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.
 
@@ -144,13 +148,15 @@ Netstat también sirve para mostrar la tabla de rutas (**Routing Table**)
 
 La tabla de rutas significa dedidir dónde mandar un paquete en base a su destino. Un ejemplo de estas tablas es el siguiente:
 
-{% highlight bash %}$ netstat -r
+```bash
+$ netstat -r
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 default         10.61.29.89     0.0.0.0         UG        0 0          0 eth1
 10.61.29.89     *               255.255.255.255 UH        0 0          0 eth1
 192.168.1.32    *               255.255.255.248 U         0 0          0 eth1
-{% endhighlight %}
+
+```
 
 Una breve explicación del significado de las columnas:
 
@@ -174,13 +180,15 @@ Una breve explicación del significado de las columnas:
 
 También es posible, con netstat, mostrar las interfaces disponibles y listar algunas estadísticas de cómo se están comportando:
 
-{% highlight bash %}$ netstat -i
+```bash
+$ netstat -i
 Kernel Interface table
 Iface       MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0       1500 0         0      0      0 0             0      0      0      0 BMU
 eth1       1500 0    253744      0      0 0        153622      0      0      0 BMRU
 lo        16436 0         4      0      0 0             4      0      0      0 LRU
-{% endhighlight %}
+
+```
 
 El significado de cada columna es el siguiente:
 

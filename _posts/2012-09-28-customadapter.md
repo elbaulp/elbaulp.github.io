@@ -54,7 +54,8 @@ Terminada, la aplicación de prueba debe quedar algo así:
 
 Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fila del ListView:
 
-{% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LinearLayout1"
     android:layout_width="wrap_content"
@@ -99,7 +100,8 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
         android:src="@drawable/calendar" />
 
 </RelativeLayout>
-{% endhighlight %}
+
+```
 
 Creando así el aspecto deseado para cada línea del ListView:
 
@@ -107,7 +109,8 @@ Creando así el aspecto deseado para cada línea del ListView:
 
 El primer paso es crear una clase que representará los datos a almacenar:
 
-{% highlight java %}package com.example.adapter;
+```java
+package com.example.adapter;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -178,7 +181,8 @@ public class PostData implements Parcelable {
    };
 }
 
-{% endhighlight %}
+
+```
 
 La razón por la que se implementa `Parcelable` se verá más adelante, el resto del código es sencillo, el constructor, y los getters y setters correspondientes a cada miembro de la clase.
 
@@ -186,7 +190,8 @@ Una vez definido el objeto con el que se va a trabajar, se creará otra clase ex
 
 El objetivo del adapter consiste en rellenar objetos `View` con los datos a mostrar. En este ejemplo, los datos son instancias de la clase `PostData`. Abajo se muestra la implementación del adapter y una explicación:
 
-{% highlight java %}package com.example.adapter;
+```java
+package com.example.adapter;
 
 import java.util.ArrayList;
 
@@ -362,7 +367,8 @@ public class PostAdapter extends BaseAdapter
    };
 }
 
-{% endhighlight %}
+
+```
 
 Al instanciar el adapter, en este caso `PostAdapter`, se guarda el `LayoutInflater`, útil para mejorar el rendimiento cuando se cree un objeto `View` para devolverlo al `ListView`. Cuando los datos vienen de forma externa al adapter, hay que pasarlos al constructor (`ArrayList d `). Terminando con el constructor, es costumbre guardar el contexto de la aplicación por si hiciera falta, aunque este no es el caso.
 
@@ -390,17 +396,20 @@ Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que h
 
 El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:
 
-{% highlight xml %}<CheckBox
+```xml
+<CheckBox
         android:id="@+id/leido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:focusable="false" />
-{% endhighlight %}
+
+```
 
 Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al checkbox:
 
-{% highlight java %}private OnClickListener checkListener = new OnClickListener()
+```java
+private OnClickListener checkListener = new OnClickListener()
 {
 
    @Override
@@ -409,11 +418,14 @@ Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al 
       PostData d = (PostData) v.getTag();
       d.setChecked(!d.getChecked());
    }
-};{% endhighlight %}
+};
+```
 
 Se asocia en el método `getView()`:
 
-{% highlight java %}holder.cb.setOnClickListener(checkListener);{% endhighlight %}
+```java
+holder.cb.setOnClickListener(checkListener);
+```
 
 De esta forma se puede hacer click tanto en el checkbox como en una fila de la lista.
 
@@ -427,13 +439,15 @@ Este problema se debe a que no se está almacenando el estado del checkbox en lo
 
 En el evento que se lanza al pulsar un elemento de la lista (`onListItemClick()`), se llama desde el adapter al método `setCheck()` así: `adapter.setCheck(position);` para que se actualize el valor del objeto `PostData` en esa posición, como se vio más arriba, PostData consta de tres miembros, dos strings y un booleano. Con lo cual, al pulsar en un elemento se actualiza el valor del booleano que representa el estado del checkbox. El código del método es el siguiente:
 
-{% highlight java %}public void setCheck(int position)
+```java
+public void setCheck(int position)
 {
    PostData d = data.get(position);
 
    d.setChecked(!d.getChecked());
    notifyDataSetChanged();
-}{% endhighlight %}
+}
+```
 
 Simplemente cambia el valor del booleano y notifica al ListView de que los datos han cambiado y debe actualizarse. `CheckAll()` es similar, activa o desactiva todos los checkBox dependiendo del parametro booleano que reciba. Y `cancelSelectedPost()` elimina del ListView los elementos con el checkbox activo.  
 <a name="SavedInstanceState"></a>
@@ -448,15 +462,18 @@ Aquí es donde cobra sentido la implementación de <a href="http://developer.and
 
 Una vez implementado estos métodos, se podrá guardar el estado de los datos así:
 
-{% highlight java %}@Override
+```java
+@Override
 protected void onSaveInstanceState(Bundle outState) {
    outState.putParcelableArrayList("savedData", data);
    super.onSaveInstanceState(outState);
-}{% endhighlight %}
+}
+```
 
 y recuperarlos en `onCreate()`:
 
-{% highlight java %}@Override
+```java
+@Override
 public void onCreate(Bundle savedInstanceState) {
    super.onCreate(savedInstanceState);
    //...
@@ -480,7 +497,8 @@ public void onCreate(Bundle savedInstanceState) {
       adapter = new PostAdapter(MainActivity.this, data);
    }
       setListAdapter(adapter);
-}{% endhighlight %}
+}
+```
 
 Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si tienes alguna duda o se te ocurre alguna otra forma de hacerlo, no dudes en dejar tu comentario. El código puede descargarse abajo:
 

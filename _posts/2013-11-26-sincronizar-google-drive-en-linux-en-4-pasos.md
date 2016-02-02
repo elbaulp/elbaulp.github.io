@@ -36,39 +36,51 @@ Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive 
 
 Es recomendable crear un directorio *bin* para alojar los [scripts][2] necesarios:
 
-{% highlight bash %}mkdir ~/bin
-{% endhighlight %}
+```bash
+mkdir ~/bin
+
+```
 
 Para asegurarse de que la carpeta se ha añadido al PATH cierra sesión y vuelve a entrar, ahora debería aparecer el directorio creado en la variable *PATH*
 
-{% highlight bash %}echo $PATH
-{% endhighlight %}
+```bash
+echo $PATH
+
+```
 
 ### 2. Crear la carpeta local a sincronizar
 
 En esta carpeta se descargarán y mantendrán sincronizados los ficheros de Google Drive:
 
-{% highlight bash %}mkdir ~/Drive
-{% endhighlight %}
+```bash
+mkdir ~/Drive
+
+```
 
 Ahora instalamos **grive**:
 
 En debian:
 
-{% highlight bash %}$ sudo apt-get install grive
-{% endhighlight %}
+```bash
+$ sudo apt-get install grive
+
+```
 
 En Ubuntu:
 
-{% highlight bash %}$ sudo add-apt-repository ppa:nilarimogard/webupd8
+```bash
+$ sudo add-apt-repository ppa:nilarimogard/webupd8
 $ apt-get update
 $ apt-get install grive
-{% endhighlight %}
+
+```
 
 Nos autentificamos y otorgamos los permisos necesarios a Grive:
 
-{% highlight bash %}cd ~/Drive && grive -a
-{% endhighlight %}
+```bash
+cd ~/Drive && grive -a
+
+```
 
 El comando de arriba mostrará un link, clica en él y autoriza a Grive para que pueda acceder a **Google Drive**.
 
@@ -76,12 +88,15 @@ El comando de arriba mostrará un link, clica en él y autoriza a Grive para que
 
 Instala *inotify-tools* si es necesario:
 
-{% highlight bash %}$ sudo apt-get install inotify-tools
-{% endhighlight %}
+```bash
+$ sudo apt-get install inotify-tools
+
+```
 
 Ahora crearemos un script que monitorize la carpeta local para detectar cualquier cambio (Script gracias a Peter Österberg, 2012):
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 # Google Drive Grive script that syncs your Google Drive folder on change
 # This functionality is currently missing in Grive and there are still no
 # official Google Drive app for Linux coming from Google.
@@ -104,12 +119,15 @@ do
     inotifywait -t $TIMEOUT -e modify -e move -e create -e delete -r $GDRIVE_PATH
     cd $GDRIVE_PATH && $GRIVE_COMMAND_WITH_PATH
 done
-{% endhighlight %}
+
+```
 
 Modifica las rutas conforme a tu configuración y dale permisos de ejecución:
 
-{% highlight bash %}$ chmod +x grive.sh
-{% endhighlight %}
+```bash
+$ chmod +x grive.sh
+
+```
 
 Por último añadelo a las aplicaciones de inicio. Dependiendo de la distribución que uses el método puede variar en Xfce dirígete a Settings » Sesiones e Inicio » Pestaña aplicaciones » ánadir.
 
@@ -117,8 +135,10 @@ Por último añadelo a las aplicaciones de inicio. Dependiendo de la distribuci�
 
 Hasta el momento, los únicos cambios que se sincronizan son los locales, para lograr detectar cambios en **Google Drive** añadiremos una entrada a [cron][3]. Para ello ejecutamos el comando `crontab -e` y añadimos la siguiente línea:
 
-{% highlight bash %}*/10 * * * *  cd "$HOME/Drive" && grive >/dev/null 2>&1
-{% endhighlight %}
+```bash
+*/10 * * * *  cd "$HOME/Drive" && grive >/dev/null 2>&1
+
+```
 
 Con esto *grive* detectará si ha habido cambios en el servidor remoto cada 10 minutos.
 
@@ -128,22 +148,28 @@ A los scripts mencionados arriba les hice unas pequeñas modificaciones que mues
 
 Mi entrada en el crontab es la siguiente:
 
-{% highlight bash %}*/10 * * * * cd "$HOME"/Drive && grive > /tmp/GRIVE_LOG
-{% endhighlight %}
+```bash
+*/10 * * * * cd "$HOME"/Drive && grive > /tmp/GRIVE_LOG
+
+```
 
 La única diferencia es que guardo la salida del programa en un fichero temporal a modo de log, dentro de poco veremos por qué.
 
 Yo uso [xmonad][3], y para lograr que grive se ejecute al iniciar sesión añadí una línea al script que es ejecutado cuando me loggeo:
 
-{% highlight bash %}exec /home/hkr/bin/grive.sh 2>&1 | tee /tmp/GRIVE_LOG &
-{% endhighlight %}
+```bash
+exec /home/hkr/bin/grive.sh 2>&1 | tee /tmp/GRIVE_LOG &
+
+```
 
 De nuevo vuelvo a redirigir la salida del programa a un fichero, esta vez con [tee][4].
 
 Por último, en este mismo archivo, añadí otra línea para que se muestre el fichero que estoy usando como log en el escritorio, y poder así observar si se están sincronizando correctamente los archivos:
 
-{% highlight bash %}xrootconsole --wrap --bottomup -geometry 233x16+5+570 /tmp/GRIVE_LOG &
-{% endhighlight %}
+```bash
+xrootconsole --wrap --bottomup -geometry 233x16+5+570 /tmp/GRIVE_LOG &
+
+```
 
 Hace algún tiempo expliqué cómo usar xroot en el artículo [Cómo tener un terminal transparente como wallpaper que muestre información][5]
 

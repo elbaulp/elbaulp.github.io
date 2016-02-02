@@ -43,7 +43,8 @@ Los bloques PL/SQL presentan una estructura específica compuesta de tres partes
 Cada una de las partes anteriores se delimita por una palabra reservada, de modo que un bloque  
 PL/SQL se puede representar como sigue:
 
-{% highlight sql %}[DECLARE
+```sql
+[DECLARE
   Declaración de variables] /*Parte declarativa*/
 BEGIN
   Sentencias SQL y PL/SQL /*Parte de ejecucion*/
@@ -51,11 +52,13 @@ BEGIN
   Manejadores de excepciones] /*Parte de excepciones*/
 END;
 
-{% endhighlight %}
+
+```
 
 Un bloque anónimo es aquel bloque que no tiene asignado un nombre.
 
-{% highlight sql %}SET SERVEROUTPUT ON;
+```sql
+SET SERVEROUTPUT ON;
 
 DECLARE
   A VARCHAR(10) := '';
@@ -65,15 +68,20 @@ BEGIN
 EXCEPTION
   WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('HOLA');
 END;
-{% endhighlight %}
+
+```
 
 Para que la salida pueda verse al ejecutar el programa tiene que estar activa la siguiente variable:
 
-{% highlight sql %}SET SEVEROUTPUT ON;{% endhighlight %}
+```sql
+SET SEVEROUTPUT ON;
+```
 
 Para mostrar el contenido de una expresión se debe utilizar la sentencia:
 
-{% highlight sql %}DBMS_OUTPUT.PUT_LINE (cadena_caracteres);{% endhighlight %}
+```sql
+DBMS_OUTPUT.PUT_LINE (cadena_caracteres);
+```
 
 #### Siguiente Tema: [PL/SQL &#8211; Declaración de variables][1] {.referencia}
 

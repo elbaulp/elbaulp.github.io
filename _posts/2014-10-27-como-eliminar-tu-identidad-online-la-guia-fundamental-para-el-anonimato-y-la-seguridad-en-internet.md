@@ -135,7 +135,9 @@ Tenemos algunas soluciones a mano. Encriptar el tráfico y falsificar nuestra IP
 
 Primero y principal, necesitas falsificar tu dirección MAC si estás usando una conexión fuera de tu casa. Esto hará que las direcciones de tus computadoras se falsifique con una que vos especifiques. Con esta práctica, estarás protegido de otros usuarios en la red y el router. Esto además te asegura que tu dirección MAC no puede ser rastreada hasta tu persona (porque si fue comprada con cualquier otra cosa que no sea efectivo o prepago, ellos saben exactamente quién sos). Si alguien ve tu dirección MAC, los usuarios de Windows pueden usar <a href="https://encrypted.google.com/url?q=http://www.klcconsulting.net/Change_MAC_w2k.htm&sa=U&ei=WhvSTvqaCq7jsQKjn6H9Dg&ved=0CCIQFjAC&usg=AFQjCNHMPDy30kh_Gn0DdmNz7mYs_LrmHA" target="_blank">esta</a> guía. Si eres usuario de Linux, ingresa el siguiente comando en la terminal:
 
-{% highlight bash %}sudo ifconfig wlan0 down && sudo ifconfig hw ether 00:11:22:33:44:55 && sudo ifconfig wlan0 up{% endhighlight %}
+```bash
+sudo ifconfig wlan0 down && sudo ifconfig hw ether 00:11:22:33:44:55 && sudo ifconfig wlan0 up
+```
 
 #### Encripta tu tráfico con un tunel SSH o una VPN
 

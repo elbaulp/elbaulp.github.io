@@ -28,7 +28,8 @@ La forma más fácil es editar el fichero ***/etc/defaults/grub*** y cambiar la 
 
 Voy a explicar dos formas, la primera que apliqué y una segunda que es el método más recomendado y fácil, pero que descubrí posteriormente ojeando los archivos de configuración. La configuración del GRUB se encuentra dividida en ficheros en el directorio ***/etc/grub.d/***. El fichero **10_linux** se encarga de generar las entradas del GRUB para sistemas operativos linux, aquí se establecen los parámetros para iniciar el sistema, y nosotros le pasaremos un parámetro adicional, **vga**, que establecerá el tipo de resolución deseada. Dicho tipo hay que elegirlo de entre los valores de la siguiente tabla:
 
-{% highlight bash %}Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
+```bash
+Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
 --------+-----------------------------------------------------
  4 bits |                  0x302      
  8 bits |  0x300   0x301   0x303    0x305    0x307     0x31C
@@ -36,11 +37,13 @@ Voy a explicar dos formas, la primera que apliqué y una segunda que es el méto
 16 bits |          0x311   0x314    0x317    0x31A     0x31E
 24 bits |          0x312   0x315    0x318    0x31B     0x31F
 32 bits |     
-{% endhighlight %}
+
+```
 
 Para mi caso concreto eligiré **0x31B**. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de **10_linux**:
 
-{% highlight bash %}message="$(gettext_printf "Loading Linux %s ..." ${version})"
+```bash
+message="$(gettext_printf "Loading Linux %s ..." ${version})"
     cat << EOF
          echo    '$message'
          linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B                                                          
@@ -48,7 +51,8 @@ EOF
   if test -n "${initrd}" ; then
     message="$(gettext_printf "Loading initial ramdisk ...")"
 
-{% endhighlight %}
+
+```
 
 Este trozo del script es el encargado de pasar los parámetros a la secuencia de inicio.
 
@@ -58,12 +62,15 @@ La segunda forma es mucho más cómoda, al igual que en el apartado anterior con
 
 Para aplicar los cambios es necesario regenerar el archivo **/boot/grub/grub.cfg** con el siguiente comando:
 
-{% highlight bash %}# update-grub2
-{% endhighlight %}
+```bash
+# update-grub2
+
+```
 
 Una vez terminado, el apartado de sistemas operativos Linux disponibles quedará así:
 
-{% highlight bash %}### BEGIN /etc/grub.d/10_linux ###
+```bash
+### BEGIN /etc/grub.d/10_linux ###
 menuentry 'Debian GNU/Linux, with Linux 3.2.0-4-amd64' --class debian --class gnu-linux --class gnu --class os {
  load_video
   insmod gzio
@@ -89,7 +96,8 @@ menuentry 'Debian GNU/Linux, with Linux 3.2.0-4-amd64 (recovery mode)' --class d
  initrd  /boot/initrd.img-3.2.0-4-amd64
 }
 ### END /etc/grub.d/10_linux ###
-{% endhighlight %}
+
+```
 
 Como se aprecia, aparece el parámetro **vga**.
 

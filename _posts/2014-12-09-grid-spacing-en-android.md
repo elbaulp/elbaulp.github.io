@@ -43,7 +43,8 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
 
 #### layout/activity_main.xml
 
-{% highlight xml %}<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:orientation="vertical"
@@ -90,7 +91,8 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
   </LinearLayout>
 
 </LinearLayout>
-{% endhighlight %}
+
+```
 
 <figure>
   <a href="/images/2014/12/Grid-Spacing-en-Android-take_1.png"><img width="1080" height="624" src="/images/2014/12/Grid-Spacing-en-Android-take_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
@@ -121,7 +123,8 @@ En realidad, `LinearLayout` gestiona la idea del espacio entre elementos. Ésta 
 
 #### drawable/spacer_medium.xml
 
-{% highlight xml %}<?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
   android:shape="rectangle">
 
@@ -132,13 +135,15 @@ En realidad, `LinearLayout` gestiona la idea del espacio entre elementos. Ésta 
     <solid android:color="@android:color/transparent" />
 
   </shape>
-{% endhighlight %}
+
+```
 
 Ahora se puede usar el `Drawable` creado como un separador entre elementos estableciéndolo como el separador del `LinearLayout`:
 
 #### layout/activity_main.xml
 
-{% highlight xml %}<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:divider="@drawable/spacer_medium"
@@ -160,7 +165,8 @@ Ahora se puede usar el `Drawable` creado como un separador entre elementos estab
   </LinearLayout>
 
 </LinearLayout>
-{% endhighlight %}
+
+```
 
 <figure>
   <a href="/images/2014/12/Grid-Spacing-en-Android-take_3.png"><img width="1080" height="672" src="/images/2014/12/Grid-Spacing-en-Android-take_3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

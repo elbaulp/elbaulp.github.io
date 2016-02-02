@@ -47,8 +47,10 @@ Los pasos a seguir son:
 
 1) Haz una copia de la carpeta **/efs** actual, tanto a la tarjeta del teléfono como a tu móvil. Si no tienes navegador root, puedes usar `adb`:
 
-{% highlight bash %}$ adb pull -p /efs /copia/en/pc
-{% endhighlight %}
+```bash
+$ adb pull -p /efs /copia/en/pc
+
+```
 
 2) Elmina la carpeta **/efs** del teléfono.
 
@@ -58,9 +60,11 @@ Los pasos a seguir son:
 
 5) En la copia de seguridad que se hizo en 1), copia la carpeta `imei` a **/efs**, también el fichero `.nv_data` (OJO:, lleva un punto delante). Puedes hacerlo con el navegador root o `adb`:
 
-{% highlight bash %}$ adb push -p /copia/en/pc/imei /efs/
+```bash
+$ adb push -p /copia/en/pc/imei /efs/
 $ adb push -p /copia/en/pc/.nv_data /efs/
-{% endhighlight %}
+
+```
 
 6) Haz otra copia del fichero `.nv_data` a la carpeta **/efs**.
 
@@ -68,10 +72,12 @@ $ adb push -p /copia/en/pc/.nv_data /efs/
 
 8) Desde el PC, con `adb`, ejecuta lo siguiente:
 
-{% highlight bash %}$ adb shell
+```bash
+$ adb shell
 $ su
 $ chown 1001:radio /efs/nv_data.bin
-{% endhighlight %}
+
+```
 
 9) Reinicia el teléfono&#8230; si todo ha ido bien, deberías tener número IMEI. Puedes comprobarlo marcando `*#06#`.
 
@@ -90,8 +96,10 @@ La segunda alternativa para recuperar el **imei** consiste en flashear de nuevo 
   3. Ponemos el *Samsung Galaxy S2 (i9100)* en modo **Download**, apagándolo, y manteniendo pulsado VOLUMEN ABAJO + BOTÓN DEL CENTRO.
   4. Ejecutamos **heimdall** con el móvil conectado al pc mediante usb:
 
-{% highlight bash %}sudo heimdall flash --MODEM modem.bin --verbose --no-reboot
-{% endhighlight %}
+```bash
+sudo heimdall flash --MODEM modem.bin --verbose --no-reboot
+
+```
 
 Si todo sale bien, veremos cómo se sube e instala el fichero, y se completa una barra de progreso en el móvil. Tras ésto, reiniciamos y deberíamos volver a tener red, y por tanto **imei**.
 

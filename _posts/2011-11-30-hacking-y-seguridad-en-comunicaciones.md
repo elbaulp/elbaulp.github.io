@@ -47,9 +47,11 @@ Esta suplantación, que se puede hacer a las redes GSM, se puede extender, como 
 
 
 
-{% highlight bash %}Fuente: <a target="_blank" href="http://www.elladodelmal.com/2011/11/nuevo-libro-de-hacking-y-seguridad-en.html">elladodelmal</a>
+```bash
+Fuente: <a target="_blank" href="http://www.elladodelmal.com/2011/11/nuevo-libro-de-hacking-y-seguridad-en.html">elladodelmal</a>
 Más info: <a target="_blank" href="http://www.seguridadapple.com/2011/01/atacando-iphone-e-ipad-con-redes-falsas.html">seguridadApple</a>
-{% endhighlight %}
+
+```
 
 
 

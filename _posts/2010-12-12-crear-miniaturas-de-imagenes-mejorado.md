@@ -33,7 +33,8 @@ También dejo el link de pastebin: <http://pastebin.com/BhKYpYJf>
 
 
 
-{% highlight bash %}#!/bin/bash
+```bash
+#!/bin/bash
 
 if [ -e /usr/bin/convert ] ; then #Compruebo que el programa imagemagick esta insatado
  dir=`zenity --file-selection --directory --title="Selecciona el directorio de las imágenes"`
@@ -77,7 +78,8 @@ else
  echo "Imagemagick no esta instalado, puede instalarlo haciendo 'sudo aptitude install imagemagick'"
 fi
 
-{% endhighlight %}
+
+```
 
 
 

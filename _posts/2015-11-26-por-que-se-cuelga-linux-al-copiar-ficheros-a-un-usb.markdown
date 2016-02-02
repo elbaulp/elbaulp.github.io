@@ -33,10 +33,12 @@ Este problema ocurre en sistemas de 64bits con bastante memoria, es un bug del <
 
 Una posible solución consiste en ejecutar los siguientes comandos como _root_ :
 
-{% highlight bash %}
+```bash
+
 echo $((16*1024*1024)) > /proc/sys/vm/dirty_background_bytes
 echo $((48*1024*1024)) > /proc/sys/vm/dirty_bytes
-{% endhighlight %}
+
+```
 
 Si queremos que se conserven entre reinicios, debemos añadirlos al fichero `/etc/rc.local`
 
@@ -46,10 +48,12 @@ Sin embargo, cambiar dichos valores afectará a la tasa de transferencia entre e
 
 Para volver a los valores normales, hay que fijar los valores a
 
-{% highlight bash %}
+```bash
+
 echo 0 > /proc/sys/vm/dirty_background_bytes
 echo 0 > /proc/sys/vm/dirty_bytes
-{% endhighlight %}
+
+```
 
 El significado de estos parámetros es:
 

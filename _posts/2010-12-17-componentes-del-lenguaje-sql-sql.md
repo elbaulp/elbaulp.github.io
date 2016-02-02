@@ -343,10 +343,12 @@ Nota: El tama&ntilde;o del campo varía en función de cada base de datos, 255 e
 
 <ul style="list-style:none;">
   <li>
-    <strong>NUMBER</strong>(Numérico): Almacena números enteros o de punto flotante, virtualmente de cualquier longitud, aunque se puede especificar la precisión y la escala. {% highlight bash %}<span style="color:#a70d0d">-- NUMBER [(precisión, escala)]</span>
+    <strong>NUMBER</strong>(Numérico): Almacena números enteros o de punto flotante, virtualmente de cualquier longitud, aunque se puede especificar la precisión y la escala. ```bash
+<span style="color:#a70d0d">-- NUMBER [(precisión, escala)]</span>
 saldo <b>NUMBER(16,2);</b>
 <span style="color:#a70d0d">/*Indica que puede almacenar un valor numérico de 16 dígitos, 2 de ellas decimales. Es decir, 14 enteros y dos decimales o 16 enteros */</span>
-{% endhighlight %}
+
+```
 
     <p>
       La precisión indica el número de dígitos (contanto los decimales) que contendrá el número como máximo. La escala indica el máximo de dígitos decimales. Si declaramos un NUMBER(10,5), podrá contener como máximo cualquier número siempre y cuando el número de dígitos enteros más el número de dígitos decimales no supere 10 (y no 15).
@@ -358,23 +360,29 @@ saldo <b>NUMBER(16,2);</b>
   </li>
 
   <li>
-    <strong>VARCHAR2</strong> (Carácter de longitud variable): Almacena datos de tipo carácter empleando sólo la cantidad necesaria aún cuando la longitud máxima sea mayor. {% highlight bash %}<span style="color:#a70d0d">‐‐ VARCHAR2 (longitud_maxima)</span>
+    <strong>VARCHAR2</strong> (Carácter de longitud variable): Almacena datos de tipo carácter empleando sólo la cantidad necesaria aún cuando la longitud máxima sea mayor. ```bash
+<span style="color:#a70d0d">‐‐ VARCHAR2 (longitud_maxima)</span>
 nombre <b>VARCHAR2(20);</b>
 <span style="color:#a70d0d">/* Indica que puede almacenar valores alfanuméricos de hasta 20 posiciones */ </span>
 <span style="color:#a70d0d">/* Cuando la longitud de los datos sea menor de 20 no se rellena con blancos */</span>
-{% endhighlight %}
+
+```
   </li>
 
   <li>
-    <strong>CHAR</strong> (Caracter): Almacena datos de tipo carácter con una longitud máxima de 32767 y cuyo valor de longitud por defecto es 1. {% highlight bash %}<span style="color:#a70d0d">‐‐ CHAR [(longitud_maxima)] </span>
+    <strong>CHAR</strong> (Caracter): Almacena datos de tipo carácter con una longitud máxima de 32767 y cuyo valor de longitud por defecto es 1. ```bash
+<span style="color:#a70d0d">‐‐ CHAR [(longitud_maxima)] </span>
 nombre <b>CHAR(20); </b>
 <span style="color:#a70d0d">/* Indica que puede almacenar valores alfanuméricos de 20 posiciones*/</span>
-{% endhighlight %}
+
+```
   </li>
 
   <li>
-    <strong>BOOLEAN</strong> (lógico): Se emplea para almacenar valores TRUE o FALSE. {% highlight bash %}hay_error <b>BOOLEAN;</b>
-{% endhighlight %}
+    <strong>BOOLEAN</strong> (lógico): Se emplea para almacenar valores TRUE o FALSE. ```bash
+hay_error <b>BOOLEAN;</b>
+
+```
   </li>
 
   <li>
@@ -400,14 +408,16 @@ nombre <b>CHAR(20); </b>
         <p>
           </strong> Un atributo de tipo en PL/SQL permiter obtener información de un objeto de la base de datos. %TYPE permite conocer el tipo de una variable, constante o campo. %ROWTYPE obtiene los tipos de todos los campos de una tabla, vista o cursor.
 
-          {% highlight bash %}<b>DECLARE</b>
+          ```bash
+<b>DECLARE</b>
 <span style="color:#a70d0d">‐‐ declare record variable that represents a row fetched from the employees table </span>
   emp_rec employees%ROWTYPE; <span style="color:#a70d0d">‐‐ declare variable with %ROWTYPE attribute </span>
 <b>BEGIN</b>
   SELECT * INTO emp_rec FROM EMPLOYEES WHERE employee_id = 120; ‐‐ retrieve record
   DBMS_OUTPUT.PUT_LINE('Employee name: ' || emp_rec.first_name || ' ' || emp_rec.last_name);
 <b>END; </b>
-{% endhighlight %}</li>
+
+```</li>
 
           <li>
             <strong>
@@ -427,17 +437,20 @@ nombre <b>CHAR(20); </b>
                 La sintaxis general es la siguiente:
               </p>
 
-              {% highlight bash %}<b>TYPE</b> <nombre> <b>IS RECORD</b>
+              ```bash
+<b>TYPE</b> <nombre> <b>IS RECORD</b>
 (
   campo <tipo_datos> [NULL | NOT NULL]
   [,<tipo_datos>...]
 );
-{% endhighlight %}
+
+```
 
               <p>
                 Los registros son un tipo de datos, se pueden declarar variables de dicho tipo de datos. (Son como los struct en C++)
 
-                {% highlight bash %}<b>DECLARE </b>
+                ```bash
+<b>DECLARE </b>
   <b>TYPE</b> PAIS <b>IS RECORD</b>
   (
     CO_PAIS <b>NUMBER</b>,
@@ -453,13 +466,16 @@ nombre <b>CHAR(20); </b>
   miPAIS.DESCRIPCION := 'ITALIA';
   miPAIS.CONTINENTE := 'EUROPA';
 <b>END; </b>
-{% endhighlight %}
+
+```
 
                 <p>
                   Los registros pueden estar anidados. Es decir, un campo de un registro puede ser de un tipo de dato de otro registro. Pueden asignarse todos los campos de un registro utilizando una sentencia SELECT.
 
-                  {% highlight bash %}SELECT CO_PAIS, DESCRIPCION, CONTINENTE INTO miPAIS FROM PAISES WHERE CO_PAIS = 27;
-{% endhighlight %}</li>
+                  ```bash
+SELECT CO_PAIS, DESCRIPCION, CONTINENTE INTO miPAIS FROM PAISES WHERE CO_PAIS = 27;
+
+```</li>
 
                   <li>
                     <strong>
@@ -497,16 +513,19 @@ nombre <b>CHAR(20); </b>
                           La sintaxis general es la siguiente:
                         </p>
 
-                        {% highlight bash %}<b>TYPE</b> <nombre_tipo_tabla> <b>IS TABLE OF</b>
+                        ```bash
+<b>TYPE</b> <nombre_tipo_tabla> <b>IS TABLE OF</b>
 <tipo_datos> [NOT NULL]
 <b>INDEX BY BINARY_INTEGER</b>;
-{% endhighlight %}
+
+```
 
                         <p>
                           Una vez definido el tipo, podemos declarar variables y asignarles valores.
                         </p>
 
-                        {% highlight bash %}<b>DECLARE</b>
+                        ```bash
+<b>DECLARE</b>
   /* Definimos el tipo PAISES como tabla PL/SQL */
   <b>TYPE</b> PAISES <b>IS TABLE OF</b> NUMBER <b>INDEX BY BINARY_INTEGER</b>;
   /* Declaramos una variable del tipo PAISES */
@@ -516,7 +535,8 @@ nombre <b>CHAR(20); </b>
   tPAISES(2) := 2;
   tPAISES(3) := 3;
 <b>END;</b>
-{% endhighlight %}</li> </ul>
+
+```</li> </ul>
 
                         <h3>
                           Funciones para el manejo de tablas PL/SQL
@@ -562,7 +582,8 @@ nombre <b>CHAR(20); </b>
                           </li>
                         </ol>
 
-                        {% highlight bash %}<b>DECLARE</b>
+                        ```bash
+<b>DECLARE</b>
 <b>TYPE</b> ARR_CIUDADES <b>IS TABLE OF VARCHAR2(50) INDEX BY BINARY_INTEGER</b>;
 misCiudades ARR_CIUDADES;
 <b>BEGIN </b>
@@ -573,7 +594,8 @@ misCiudades(3) := 'MALAGA';
 dbms_output.put_line(misCiudades(i));
 <b>END LOOP</b>;
 <b>END</b>;
-{% endhighlight %}
+
+```
 
                         <h3>
                           ROWID

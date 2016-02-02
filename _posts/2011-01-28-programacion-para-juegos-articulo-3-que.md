@@ -29,9 +29,11 @@ Este artículo hace referéncia a la [Lección 5 &#8211; Colores Clave][1].
 
 Probablemente sepas que las imágenes están formadas por píxeles, pero, ¿Cómo se forman los píxeles?
 
-{% highlight bash %}//Map the color key
+```bash
+//Map the color key
             Uint32 colorkey = SDL_MapRGB( optimizedImage-&gt;format, 0, 0xFF, 0xFF );
-{% endhighlight %}
+
+```
 
 Aquí tenemos una línea de código de la [Lección 5 &#8211; Colores Clave][1]. Ya sabemos que SDL_MapRGB() devuelve un pixel, pero ¿Cómo es la estructura &#8220;Uint32&#8243; un píxel?  
   
@@ -46,12 +48,15 @@ Bien, Uint32 es lo siguiente:
 
 Os preguntaréis, ¿Cómo puede ser un número un píxel?, probablemente sepas algo de HTML, y lo que hacemos en HTML para cambiar los colores de los elementos es configurar el color combinando 3 números desde el 0 al 255.
 
-{% highlight bash %}<span style="color: rgb(Red,Green,Blue)">Text</span>
-{% endhighlight %}
+```bash
+<span style="color: rgb(Red,Green,Blue)">Text</span>
+
+```
 
 Arriba he usado el código HTML/CSS para cambiar el color del texto. Combinando los valores Red, Green y Blue (Rojo, Verde y Azul) podemos obtener cualquier color. Por ejemplo:
 
-{% highlight bash %}<span style="color: rgb(255,255,255)">Esto</span> tiene Red 255, Green 255, y Blue 255.
+```bash
+<span style="color: rgb(255,255,255)">Esto</span> tiene Red 255, Green 255, y Blue 255.
 <span style="color: rgb(255,0,0)">Esto</span> tiene Red 255, Green 0, y Blue 0.
 <span style="color: rgb(0,0,255)">Esto</span> tiene Red 0, Green 0, y Blue 255.
 <span style="color: rgb(0,0,0)">Esto</span> tiene Red , Green 0, y Blue 0. 
@@ -59,7 +64,8 @@ Arriba he usado el código HTML/CSS para cambiar el color del texto. Combinando 
 <span style="color: rgb(0,255,255)">Esto</span> tiene Red 0, Green 255, y Blue 255. 
 <span style="color: rgb(192,128,64)">Esto</span> tiene Red 192, Green 128, y Blue 64.
 <span style="color: rgb(186,3,207)">Esto</span> tiene Red 186, Green 3, y Blue 207.
-{% endhighlight %}
+
+```
 
 Dicho esto, una estructura Uint32 es tan solo un número. ¿Si los píxeles están hechos por un conjunto de numeros, no deberían ser un array?
 
@@ -69,19 +75,23 @@ Los valores red, green y blue que crean un píxel pueden ser un número del 0 al
 
 Un Uint32 es simplemente cada uno de esos 8 bits juntos uno detrás de otro en el mismo número. En la memoria del ordenador los píxeles en esencia son así.
 
-{% highlight bash %}<span style="color: rgb(255,0,0)">10101011</span><span style="color: rgb(0,255,0)">00101011</span><span style="color: rgb(0,0,255)">01011011</span>
-{% endhighlight %}
+```bash
+<span style="color: rgb(255,0,0)">10101011</span><span style="color: rgb(0,255,0)">00101011</span><span style="color: rgb(0,0,255)">01011011</span>
+
+```
 
 Puesto que es sólo una serie de números de 8 bits, todo lo que hay que hacer para conseguir colores individuales es hacer un &#8220;casting&#8221; al número de 32 bits.
 
-{% highlight bash %}//Obtenemos la dirección de memoria del píxel
+```bash
+//Obtenemos la dirección de memoria del píxel
 Uint8 *colors = (Uint8*)&pixel;
 
 //Obtenemos los colores individuales
 red = colors[ 0 ];
 green = colors[ 1 ];
 blue = colors[ 2 ];
-{% endhighlight %}
+
+```
 
 Por lo general nunca necesitarás hacer esto. Para obtener los colores individuales de un píxel se debe usar SDL_GetRGB(). Explicaré porqué:
 

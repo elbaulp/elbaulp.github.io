@@ -31,11 +31,13 @@ tags:
 
 Para modificar la estructura de una tabla se utiliza el comando ALTER TABLE.
 
-{% highlight sql %}ALTER TABLE Tabla
+```sql
+ALTER TABLE Tabla
  {[ADD       ( Columna Tipodato [restricción de columna][…])]
  [MODIFY ( Columna Tipodato[restricción de columna]][…])]
  [ADD CONSTRAINTS restricción]
- [DROP CONSTRAINTS restricción]};{% endhighlight %}
+ [DROP CONSTRAINTS restricción]};
+```
 
   
 <!--ad-->
@@ -43,23 +45,33 @@ Para modificar la estructura de una tabla se utiliza el comando ALTER TABLE.
   
 Añadir o modificar columnas ( nombre, tipo, valor por defecto, restricción NOT NULL)
 
-{% highlight sql %}alter table nombre_table {ADD | MODIFY} ( columna tipo [restricción,..]){% endhighlight %}
+```sql
+alter table nombre_table {ADD | MODIFY} ( columna tipo [restricción,..])
+```
 
 Eliminación de columnas
 
-{% highlight sql %}alter table nombre_table DROP COLUMN nombre_columna{% endhighlight %}
+```sql
+alter table nombre_table DROP COLUMN nombre_columna
+```
 
 Añadir restricción de tabla
 
-{% highlight sql %}alter table nombre_tabla ADD CONSTRAINT nombre_restricción restricción{% endhighlight %}
+```sql
+alter table nombre_tabla ADD CONSTRAINT nombre_restricción restricción
+```
 
 Eliminar una restricción.
 
-{% highlight sql %}alter table nombre_table DROP CONSTRAINT nombre_restricción {% endhighlight %}
+```sql
+alter table nombre_table DROP CONSTRAINT nombre_restricción 
+```
 
 Activación y desactivación de una restricción.
 
-{% highlight sql %}alter table nombre_table [ENABLE VALIDATE|ENABLE NOVALIDATE|DISABLE] nombre_restricción{% endhighlight %}
+```sql
+alter table nombre_table [ENABLE VALIDATE|ENABLE NOVALIDATE|DISABLE] nombre_restricción
+```
 
 Donde:
 
@@ -73,35 +85,51 @@ Hay que tener en cuenta que si la tabla está vacía, al añadir una columna con
 
 Ejemplos:
 
-{% highlight sql %}alter table CabFacturas ADD dFecPago DATE;{% endhighlight %}
+```sql
+alter table CabFacturas ADD dFecPago DATE;
+```
 
 
 
-{% highlight sql %}alter table CabFacturas MODIFY dFecPago DEFAULT SYSDATE;{% endhighlight %}
+```sql
+alter table CabFacturas MODIFY dFecPago DEFAULT SYSDATE;
+```
 
 
 
-{% highlight sql %}alter table CabFacturas DROP COLUMN dFecAux;{% endhighlight %}
+```sql
+alter table CabFacturas DROP COLUMN dFecAux;
+```
 
 
 
-{% highlight sql %}alter table CabFacturas ADD CONSTRAINT CK_CabFacturas CHECK ( dFecPago >= dFecFac);{% endhighlight %}
+```sql
+alter table CabFacturas ADD CONSTRAINT CK_CabFacturas CHECK ( dFecPago >= dFecFac);
+```
 
 
 
-{% highlight sql %}alter table LinFacturas ADD CONSTRAINT CK1_LinFact CHECK ( Precio > 0);{% endhighlight %}
+```sql
+alter table LinFacturas ADD CONSTRAINT CK1_LinFact CHECK ( Precio > 0);
+```
 
 
 
-{% highlight sql %}alter table LinFacturas DROP CONSTRAINT CK1_LinFact;{% endhighlight %}
+```sql
+alter table LinFacturas DROP CONSTRAINT CK1_LinFact;
+```
 
 
 
-{% highlight sql %}alter table CabFacturas DISABLE CK_CabFacturas;{% endhighlight %}
+```sql
+alter table CabFacturas DISABLE CK_CabFacturas;
+```
 
 
 
-{% highlight sql %}alter table nombre_table DROP COLUMN nombre_columna;{% endhighlight %}
+```sql
+alter table nombre_table DROP COLUMN nombre_columna;
+```
 
 
 

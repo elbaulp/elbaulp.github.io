@@ -325,12 +325,14 @@ Es posible hacer lo mismo para imágenes jpeg, es necesario instalar**exiftool**
 
 Otro ejemplo interesante es la expansión de la palabra clave**$Date$**. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:
 
-{% highlight ruby %}
+```ruby
+
 #! /usr/bin/env ruby
 data = STDIN.read
 last_date = `git log &#45;&#45;pretty=format:"%ad" &#45;1`
 puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
-{% endhighlight %}
+
+```
 
 Puedes nombrar este script como**expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:  
 **git config filter.dater.smudge expand_date**  
@@ -338,7 +340,8 @@ Puedes nombrar este script como**expand_date**. Crea un filtro en git, llamado d
 
 Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:
 
-{% highlight bash %}
+```bash
+
 echo '# $Date$' > date_test.txt
 echo 'date.txt filter=dater' » .gitattributes
 
@@ -348,7 +351,8 @@ rm date_test.txt
 git checkout date_test.txt
 cat date_test.txt
 $Date: Tue Apr 21 07:26:52 2009 -0700$
-{% endhighlight %}
+
+```
 
 
 ## GIT HOOKS

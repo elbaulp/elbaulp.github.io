@@ -43,15 +43,18 @@ Los pasos para configurar y dejar funcionando el script se pueden encontrar en e
 
 Sin embargo, encontré un pequeño error que no dejará que se ejecute el script. En la línea 244 se declara una columna para la hoja de cálculo de tipo `STRING`, pero cuando se ejecuta el script dará error. La solución que encontré fue declarar el tipo de columna como numérico:
 
-{% highlight javascript %}var dataTable = Charts.newDataTable();
+```javascript
+var dataTable = Charts.newDataTable();
 dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Date'); // Era STRING
 dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Received');
 dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Sent');
-{% endhighlight %}
+
+```
 
 Para mayor comodidad, proporciono el script completo para que solo tengáis que copiar y pegar:
 
-{% highlight javascript %}/**
+```javascript
+/**
  * Check the date and the status of the report
  *
  */
@@ -422,7 +425,8 @@ function init_() {
   };
   UserProperties.setProperty("status", Utilities.jsonStringify(status));
 }
-{% endhighlight %}
+
+```
 
 #### Referencias
 

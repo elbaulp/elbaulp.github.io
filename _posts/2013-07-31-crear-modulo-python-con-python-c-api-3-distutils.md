@@ -37,7 +37,8 @@ Como dijimos en la entrada[ anterior][5], vamos a hablar de *DistUtils*, una her
 
 El esquema básico de un paquete **distutils** contiene un fichero *setup.py*, su versión más simple es:
 
-{% highlight python %}from distutils.core import setup, Extension
+```python
+from distutils.core import setup, Extension
 
 module1 = Extension('ejemplo',
                     sources = ['ejemplo.c'])
@@ -45,11 +46,13 @@ module1 = Extension('ejemplo',
 setup (name = 'NombreDelPaquete',
        version = '1.0',
        description = 'Descripción del paquete',
-       ext_modules = [module1]){% endhighlight %}
+       ext_modules = [module1])
+```
 
 Una vez definido el *setup.py* ejecutando
 
-{% highlight bash %}$ python setup.py build
+```bash
+$ python setup.py build
 running build
 running build_ext
 building 'ejemplo' extension
@@ -58,13 +61,15 @@ creating build/lib.linux-x86_64-2.7
 x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/ejemplo.o -o build/lib.linux-x86_64-2.7/ejemplo.so
 
 $ ll build/lib.linux-x86_64-2.7/ejemplo.so
--rwxr-xr-x 1 hkr hkr 18K Jul 26 16:57 build/lib.linux-x86_64-2.7/ejemplo.so*{% endhighlight %}
+-rwxr-xr-x 1 hkr hkr 18K Jul 26 16:57 build/lib.linux-x86_64-2.7/ejemplo.so*
+```
 
 compilaremos el fichero *ejemplo.c* y se generará un módulo llamado *ejemplo* en el directorio *build*.
 
 Normalmente los módulos son más complejos y es necesario usar librerías externas, indicar dónde se encuentran las cabeceras etc, para ello se usan estas reglas:
 
-{% highlight python %}from distutils.core import setup, Extension
+```python
+from distutils.core import setup, Extension
 
 module1 = Extension('demo',
                     define_macros = [('MAJOR_VERSION', '1'),
@@ -83,13 +88,15 @@ setup (name = 'PackageName',
        long_description = '''
 This is really just a demo package.
 ''',
-       ext_modules = [module1]){% endhighlight %}
+       ext_modules = [module1])
+```
 
 ### Instalar el módulo
 
 Sin embargo, con *python setup.py build* no se está instalando el módulo en el lugar adecuado para que python sea capaz de utilizarlo, para ello es necesario usar *install* de a siguiente forma:
 
-{% highlight bash %}# python setup.py install
+```bash
+# python setup.py install
 running install
 running build
 running build_ext
@@ -103,14 +110,17 @@ running install_lib
 copying build/lib.linux-x86_64-2.7/ejemplo.so -> /usr/local/lib/python2.7/dist-packages
 running install_egg_info
 Removing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info
-Writing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info{% endhighlight %}
+Writing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info
+```
 
 Y ahora sí que podremos usar el módulo como antes:
 
-{% highlight python %}In [1]: import ejemplo
+```python
+In [1]: import ejemplo
 
 In [2]: ejemplo.saluda('Alejandro')
-Out[2]: 'Hola Alejandro desde la Python C API!'{% endhighlight %}
+Out[2]: 'Hola Alejandro desde la Python C API!'
+```
 
 En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de un dominio web.
 

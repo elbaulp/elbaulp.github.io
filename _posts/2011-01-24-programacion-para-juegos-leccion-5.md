@@ -54,7 +54,8 @@ Pero no queremos que aparezca el fondo azul claro de la primera imagen:
 Para que no se muestre el fondo de la primera imagen, necesitamos fijarlo como &#8220;color key&#8221;, en este caso el valor de este color es (En hexadecimal): Red 0, Green FF, Blue FF.   
 El color key se suele fijar normalmente al cargar la imagen.
 
-{% highlight bash %}SDL_Surface *load_image( std::string filename ) 
+```bash
+SDL_Surface *load_image( std::string filename ) 
 {
     //The image that's loaded
     SDL_Surface* loadedImage = NULL;
@@ -73,26 +74,31 @@ El color key se suele fijar normalmente al cargar la imagen.
         
         //Free the old image
         SDL_FreeSurface( loadedImage );
-{% endhighlight %}
+
+```
 
 Esta es la función que carga la imagen, y que vamos a modificar.
 
 En primer lugar, cargamos la imagen optimizada, como hacíamos hasta ahora.
 
-{% highlight bash %}//If the image was optimized just fine
+```bash
+//If the image was optimized just fine
         if( optimizedImage != NULL )
         {
             //Map the color key
             Uint32 colorkey = SDL_MapRGB( optimizedImage->format, 0, 0xFF, 0xFF );
-{% endhighlight %}
+
+```
 
 Comprobamos que la imagen fue optimizada.  
 Si todo va bien, necesitamos mapear el color que queremos ocultar. Llamamos a SDL_MapRGB() para tomar los valores de rojo, verde y azul. Esta función nos devuelve el valor del pixel en el mismo formato que el de la imagen. Puedes leer más acerca de los pixeles en el [artículo 3][2].
 
-{% highlight bash %}//Set all pixels of color R 0, G 0xFF, B 0xFF to be transparent
+```bash
+//Set all pixels of color R 0, G 0xFF, B 0xFF to be transparent
             SDL_SetColorKey( optimizedImage, SDL_SRCCOLORKEY, colorkey );
         }
-{% endhighlight %}
+
+```
 
 Ahora vamos a configurar el &#8220;color Key&#8221;, lo que vamos a hacer es fijar todos los pixeles de color 00ffff a transparentes.  
 El primer argumento de esta función es la imagen para la cual queremos aplicar el &#8220;color key&#8221;.
@@ -101,14 +107,17 @@ El segundo es para los flags que desee aplicar, en este caso, el flag SDL_SRCCOL
 
 El tercero es el color que deseamos fijar como &#8220;color key&#8221;, como vemos, es el color que hemos mapeado hace un momento. 
 
-{% highlight bash %}//Return the optimized image
+```bash
+//Return the optimized image
     return optimizedImage;
 }
-{% endhighlight %}
+
+```
 
 Para finalizar, la función devuelve la imagen optimizada con el color clave.
 
-{% highlight bash %}//Apply the surfaces to the screen
+```bash
+//Apply the surfaces to the screen
     apply_surface( 0, 0, background, screen );
     apply_surface( 240, 190, foo, screen );
     
@@ -117,7 +126,8 @@ Para finalizar, la función devuelve la imagen optimizada con el color clave.
     {
         return 1;    
     }
-{% endhighlight %}
+
+```
 
 El resultado de hacer todo esto da como resultado la imagen siguiente:
 

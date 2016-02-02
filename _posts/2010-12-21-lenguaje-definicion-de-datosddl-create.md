@@ -39,7 +39,8 @@ CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos
 
 ### Creación de una tabla
 
-{% highlight sql %}CREATE TABLE nombre tabla
+```sql
+CREATE TABLE nombre tabla
 (nombrecol1 tipocol1 
   [CONSTRAINT nombre_restricción]
   [not NULL]
@@ -52,7 +53,8 @@ CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos
   [Restricciones de la tabla]
 )
 [tablespace nombre-tablespace];
-{% endhighlight %}
+
+```
 
   
 <!--ad-->
@@ -99,7 +101,8 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
     
     La sentencia CREATE TABLE también nos permite crear una tabla a partir de una consulta a otra u otras tablas que ya existen. La nueva tabla obtendrá los datos obtenidos de la consulta. 
     
-    {% highlight sql %}CREATE TABLE nombre tabla
+    ```sql
+CREATE TABLE nombre tabla
 (nombrecol1 tipocol1 
   [CONSTRAINT nombre_restricción]
   [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check <condición>]
@@ -109,13 +112,15 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
 [tablespace nombre-tablespace]
 
 AS Consulta_SQL;
-{% endhighlight %}
+
+```
     
     
     
     ### Ejemplo 1: Restricciones sobre columnas
     
-    {% highlight sql %}CREATE TABLE Emp1 
+    ```sql
+CREATE TABLE Emp1 
 
    (empno     NUMBER        CONSTRAINT pk_emp1 PRIMARY KEY, 
     ename     VARCHAR2(10)  CONSTRAINT nn_ename1 NOT NULL 
@@ -127,13 +132,15 @@ AS Consulta_SQL;
     comm      NUMBER(9,0)   DEFAULT NULL, 
     deptno    NUMBER(2)     CONSTRAINT nn_deptno1 NOT NULL 
                             CONSTRAINT fk_deptno1 REFERENCES scott.dept(deptno) ) ;
-{% endhighlight %}
+
+```
     
     
     
     ### Ejemplo 2: Restricciones sobre la tabla
     
-    {% highlight sql %}CREATE TABLE docindex
+    ```sql
+CREATE TABLE docindex
   ( token CHAR(20),
     doc_oid INTEGER,
     token_frequency SMALLINT,
@@ -146,14 +153,17 @@ CREATE TABLE emp
    job       VARCHAR2(9), 
    deptno    VARCHAR2(9), 
    CONSTRAINT fk_deptno FOREIGN KEY (deptno,job) REFERENCES  dept(deptno,job)); 
-{% endhighlight %}
+
+```
     
     
     
     ### Descripción de la estructura de una tabla
     
-    {% highlight sql %}DESCRIBE nombre_tabla;
-{% endhighlight %}
+    ```sql
+DESCRIBE nombre_tabla;
+
+```
     
     #### Siguiente Tema: [Data Definition Language(DDL) &#8211; DROP.][1] {.referencia}
     

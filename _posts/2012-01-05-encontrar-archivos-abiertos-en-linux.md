@@ -45,18 +45,24 @@ El archivo <a target="_blank" href="http://www.cyberciti.biz/tips/linux-procfs-f
 
 Para ver el estado actual, introducimos:
 
-{% highlight bash %}cat /proc/sys/fs/file-nr
-{% endhighlight %}
+```bash
+cat /proc/sys/fs/file-nr
+
+```
 
 Ó:
 
-{% highlight bash %}/sbin/sysctl fs.file-nr
-{% endhighlight %}
+```bash
+/sbin/sysctl fs.file-nr
+
+```
 
 omo salida podemos obtener (en mi caso):
 
-{% highlight bash %}5344 0 205074
-{% endhighlight %}
+```bash
+5344 0 205074
+
+```
 
 Este resultado contiene 3 números que significan:
 

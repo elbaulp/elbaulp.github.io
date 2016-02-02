@@ -52,14 +52,17 @@ Por ejemplo, un listener muy común será ***setOnClickListener()***, que respon
 
 Botones simples, para realizar acciones al pulsar sobre ellos.
 
-{% highlight xml %}<button android:layout_width="wrap_content"
+```xml
+<button android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Púlsame"
         android:layout_centerInParent="true"
         android:id="@+id/button1"/>
-{% endhighlight %}
 
-{% highlight java %}//Recoger el botón en una variable para usarlo
+```
+
+```java
+//Recoger el botón en una variable para usarlo
         final Button button1 = (Button) findViewById(R.id.button1);
 
         button1.setOnClickListener(new OnClickListener() {
@@ -73,7 +76,8 @@ Botones simples, para realizar acciones al pulsar sobre ellos.
                   .show();
          }
       });
-{% endhighlight %}
+
+```
 
 En este caso, hemos declarado una variable como miembro de la clase, (***public int contador = 0;***), para que cada vez que pulsemos el botón nos salga un mensaje con el número de veces que lo hemos pulsado:
 
@@ -85,14 +89,17 @@ En este caso, hemos declarado una variable como miembro de la clase, (***public 
 
 Son campos de texto en los que el usuario puede escribir.
 
-{% highlight xml %}<edittext android:layout_width="200dip"
+```xml
+<edittext android:layout_width="200dip"
         android:layout_height="wrap_content"
         android:layout_above="@id/button1"
         android:id="@+id/editText1"
         android:layout_centerInParent="true"/>
-{% endhighlight %}
 
-{% highlight java %}final EditText editText1 = (EditText) findViewById(R.id.editText1);
+```
+
+```java
+final EditText editText1 = (EditText) findViewById(R.id.editText1);
 
  editText1.setOnKeyListener(new OnKeyListener() {
 
@@ -109,7 +116,8 @@ Son campos de texto en los que el usuario puede escribir.
             return false;
          }
       });
-{% endhighlight %}
+
+```
 
 Lo que hemos hecho con este EditText, es fijarle un onKeyListener, que comprobará (con el if), que hemos pulsado la tecla enter, y si es cierto, mostrar el texto escrito:
 
@@ -121,15 +129,19 @@ Lo que hemos hecho con este EditText, es fijarle un onKeyListener, que comprobar
 
 Nos permite mostrar imágenes en la pantalla.
 
-{% highlight xml %}<imageview android:id="@+id/imageView"
+```xml
+<imageview android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon"/>
-{% endhighlight %}
 
-{% highlight java %}final ImageView imageView1 = (ImageView) findViewById(R.id.imageView);
+```
+
+```java
+final ImageView imageView1 = (ImageView) findViewById(R.id.imageView);
 imageView1.setImageResource(R.drawable.icon);
-{% endhighlight %}
+
+```
 
 El icono es el que viene por defecto al crear un proyecto. Este es el resultado:
 
@@ -141,15 +153,18 @@ El icono es el que viene por defecto al crear un proyecto. Este es el resultado:
 
 Es un tipo de botón con dos estados, activo o inactivo, practicamente tiene el mismo comportamiento de un botón, una de sus características es que podemos comprobar si el botón esta activo o no:
 
-{% highlight xml %}<checkbox android:layout_height="wrap_content"
+```xml
+<checkbox android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="CheckBox"
         android:layout_centerInParent="true"
         android:layout_below="@id/button1"
         android:id="@+id/checkBox1" />
-{% endhighlight %}
 
-{% highlight java %}final CheckBox checkbox1 = (CheckBox) findViewById(R.id.checkBox1);
+```
+
+```java
+final CheckBox checkbox1 = (CheckBox) findViewById(R.id.checkBox1);
 checkbox1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
    @Override
@@ -158,7 +173,8 @@ checkbox1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
       else Toast.makeText(checkbox1.getContext(), "Inactivo", Toast.LENGTH_SHORT).show();
    }
 });
-{% endhighlight %}
+
+```
 
 En este caso, hemos usado como listener onCheckedChanged, que se ejecutará cada vez que el estado del checkbox cambie.
 

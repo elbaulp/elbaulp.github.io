@@ -32,7 +32,8 @@ Hay distintas formas de definir un color específico en $$\LaTeX$$. Normalmente 
 
 El paquete <a href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf" target="_blank" title="">xcolor</a> trae definidos una gama amplia de colores, especificados en su <a href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf" target="_blank" title="Documentación xcolor">documentación</a>. Es tan simple de usar como se muestra en este trozo de código:
 
-{% highlight latex %}
+```latex
+
 \documentclass[11pt]{article}
 \usepackage{blindtext}
 
@@ -43,7 +44,8 @@ El paquete <a href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.p
 \textcolor{RoyalBlue2}{\blindtext}
 
 \end{document}
-{% endhighlight %}
+
+```
 
 <figure>
   <a href="/images/xcolorlatex1.png"><img src="/images/xcolorlatex1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
@@ -54,7 +56,8 @@ El paquete <a href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.p
 
 El paquete xcolor permite definir colores usando modelos de color (_gris, RGB, HTML, CMYK_ y otros ). Veamos un ejemplo de RGB, al que estamos más acostumbrados:
 
-{% highlight latex %}
+```latex
+
 \documentclass[11pt]{article}
 \usepackage{blindtext}
 
@@ -66,7 +69,8 @@ El paquete xcolor permite definir colores usando modelos de color (_gris, RGB, H
 \textcolor{myOrange}{\blindtext}
 
 \end{document}
-{% endhighlight %}
+
+```
 
 <figure>
   <a href="/images/xcolorlatex2.png"><img src="/images/xcolorlatex2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
@@ -77,7 +81,8 @@ El paquete xcolor permite definir colores usando modelos de color (_gris, RGB, H
 
 Para terminar, el paquete xcolor también permite definir un color mediante la mezcla de dos colores predefinidos. Por ejemplo, para definir un morado con 40% de azul y 60% de rojo:
 
-{% highlight latex %}
+```latex
+
 \documentclass[11pt]{article}
 \usepackage{blindtext}
 
@@ -89,7 +94,8 @@ Para terminar, el paquete xcolor también permite definir un color mediante la m
 \textcolor{myPurple}{\blindtext}
 
 \end{document}
-{% endhighlight %}
+
+```
 
 <figure>
   <a href="/images/xcolorlatex3.png"><img src="/images/xcolorlatex3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
@@ -107,7 +113,8 @@ Los colores básicos como el rojo, verde o amarillo son demasiado chillones a la
 
 Aquí el código que genera la imagen de arriba:
 
-{% highlight latex %}
+```latex
+
 \documentclass[border=10pt,varwidth]{standalone}
 \usepackage{pgffor}
 \usepackage[x11names]{xcolor}
@@ -129,7 +136,8 @@ Aquí el código que genera la imagen de arriba:
     \colorrulemix{\name}}
 \end{center}
 \end{document}
-{% endhighlight %}
+
+```
 
 ### Referencias
 

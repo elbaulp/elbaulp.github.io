@@ -26,15 +26,19 @@ En linux, cada vez que un usuario accede al sistema, el archivo *.bashrc* se eje
 
 ## Instalar MailX
 
-{% highlight bash %}apt-get install mailx
-{% endhighlight %}
+```bash
+apt-get install mailx
+
+```
 
 ## Modificar el archivo .bashrc
 
 Para cada usuario del que deseemos recibir alertas, habrá que añadir la siguiente línea a su *bashrc*:
 
-{% highlight bash %}echo 'ALERTA - Acceso a la Shell (ServerName) el:' `date` `who` | mail -s "Alerta: Acceso shell de `who | cut -d'(' -f2 | cut -d')' -f1`" correo@electrónico.com
-{% endhighlight %}
+```bash
+echo 'ALERTA - Acceso a la Shell (ServerName) el:' `date` `who` | mail -s "Alerta: Acceso shell de `who | cut -d'(' -f2 | cut -d')' -f1`" correo@electrónico.com
+
+```
 
 Listo, ahora recibiremos un correo por cada acceso al sistema.
 

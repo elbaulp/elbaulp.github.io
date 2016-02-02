@@ -22,7 +22,8 @@ Veamos un ejemplo para aclarar su funcionamiento:
 
 <!--ad-->
 
-{% highlight c %}#include <stdio.h>
+```c
+#include <stdio.h>
 #include <stdlib.h>
 
 static void
@@ -45,14 +46,17 @@ void
 miDestructor(void) {
     printf("En el destructor\n");
 }
-{% endhighlight %}
+
+```
 
 La salida de este programa será:
 
-{% highlight bash %}En el constructor
+```bash
+En el constructor
 En main()
 En el destructor
-{% endhighlight %}
+
+```
 
 Al declarar `miConstructor` como constructor la función se llama antes de ejecutar `main`, lo mismo pasa para `miDescructor`, pero en este caso se la llamará justo antes de salir de `main`.
 
@@ -62,7 +66,8 @@ Para localizar las funciones hay que usar el programa **nm**, y **objdump** para
 
 Sin embargo, mientras escribía este artículo [me dí cuenta de que ya no existen dichas secciones](http://stackoverflow.com/q/16569495/1612432 "Pregunta en stackoverflow"), han sido reemplazadas por *.init\_array/.fini\_array*. Del mismo modo pueden verse usando **nm**, y **objdump**. Empecemos con **nm**:
 
-{% highlight bash %}$ nm dtors
+```bash
+$ nm dtors
 080495f0 d _DYNAMIC
 080496e4 d _GLOBAL_OFFSET_TABLE_
 080484dc R _IO_stdin_used
@@ -101,11 +106,13 @@ Sin embargo, mientras escribía este artículo [me dí cuenta de que ya no exist
 0804843c t miDestructor
          U puts@@GLIBC_2.0
 08048380 t register_tm_clones
-{% endhighlight %}
+
+```
 
 En la salida se muestran como *_init* y *_fini*. También es posible obtener más información sobre las secciones de la tabla con **objdumb**:
 
-{% highlight bash %}$ objdump -h ./dtors
+```bash
+$ objdump -h ./dtors
 
 ./dtors:     file format elf32-i386
 
@@ -165,22 +172,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  26 .comment      00000038  00000000  00000000  00000704  2**0
                   CONTENTS, READONLY
-{% endhighlight %}
+
+```
 
 El contenido que nos interesa es:
 
-{% highlight bash %}18 .init_array   00000008  080495dc  080495dc  000005dc  2**2
+```bash
+18 .init_array   00000008  080495dc  080495dc  000005dc  2**2
                   CONTENTS, ALLOC, LOAD, DATA
  19 .fini_array   00000008  080495e4  080495e4  000005e4  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-{% endhighlight %}
+
+```
 
 Esta vez hemos obtenido más información, sabemos que ambas secciones ocupan 8 Bytes y se puede escribir en ellas, ya que no tienen la etiqueta READONLY. Para examinar el contenido basta con ejecutar:
 
-{% highlight c %}$ objdump -s -j .fini_array ./dtors
+```c
+$ objdump -s -j .fini_array ./dtors
 Contents of section .fini_array:
  80495e4 c0830408 3c840408
-{% endhighlight %}
+
+```
 
 La primera dirección apunta a la tabla de desplazamiento global (\_GLOBAL\_OFFSET\_TABLE\_) y la segunda a _\_do\_global\_dtors\_aux.  
 La última dirección (3c840408) corresponde con la dirección de la función `miDestructor`, pero en little-endian (0804843c). Al poder modificar dicha tabla, sería posible tomar el control del programa explotando alguna vulnerabilidad y obtener una shell con permisos de root. El propósito inicial del artículo era mostar cómo explotar dicha vulnerabilidad, pero al no existir la sección .ctors y .dtors no va a ser posible, ya que he estado trasteando un poco con estas secciones nuevas y no he conseguido nada.
