@@ -18,7 +18,7 @@ image:
 
 >La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:
 
-<!-- - [GPS QR](/programar-navegador-gps-android) -->
+- [GPS QR](/programar-navegador-gps-android)
 <!-- - [Photo Gesture](/patron-desbloqueo-android) -->
 <!-- - [Movement Sound](/giroscopio-acelerometro-movimientos-android) -->
 
