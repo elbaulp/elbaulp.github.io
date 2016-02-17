@@ -19,8 +19,11 @@ image:
 >La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:
 
 - [GPS QR](/programar-navegador-gps-android)
-<!-- - [Photo Gesture](/patron-desbloqueo-android) -->
+- [Photo Gesture](/patron-desbloqueo-android)
 <!-- - [Movement Sound](/giroscopio-acelerometro-movimientos-android) -->
+
+Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, [Android1](/curso-programacion-android/ "Curso de Android"), [Android2](/android/ "Curso nuevo de Android")
+{: .notice-info }
 
 ## Brujula Compass
 

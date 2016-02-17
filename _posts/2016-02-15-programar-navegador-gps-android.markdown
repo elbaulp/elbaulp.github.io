@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Crear Un Navegador GPS Que Dibuje El Camino Seguido en Android
-date: 2016-02-15T21:05:38+01:00
+date: 2016-02-16T21:05:38+01:00
 modified:
 categories:
 excerpt: "Enunciado: se facilitarán las coordenadas de una serie de puntos GPS (latitud/longitud) mediante códigos QR a la appGPSQR que iniciará automáticamente la navegación GPS hacia dicho punto, debe guardar el recorrido realizado y mostrarlo en un mapa al finalizar el mismo. En el anexo I tenéis ejemplos de los códigos QR que se deben detectar, en la defensa serán distintos."
@@ -15,8 +15,11 @@ image:
 >La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:
 
 - [Brújula Compass](/brujula-android-asr-voz)
-<!-- - [Photo Gesture](/patron-desbloqueo-android) -->
+- [Photo Gesture](/patron-desbloqueo-android)
 <!-- - [Movement Sound](/giroscopio-acelerometro-movimientos-android) -->
+
+Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, [Android1](/curso-programacion-android/ "Curso de Android"), [Android2](/android/ "Curso nuevo de Android")
+{: .notice-info }
 
 ## GPSQR
 
