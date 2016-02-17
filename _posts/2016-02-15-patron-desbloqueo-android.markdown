@@ -27,6 +27,10 @@ Si te interesa android, puedes echar un vistazo a los cursos disponibles en el b
 
 _Enunciado: reconozca un patrón de gestos sobre pantalla de vuestra elección. Una vez detectado el patrón se debe ejecutar la aplicación de cámara y realizar automáticamente una foto transcurridos 3 segundos. Los gestos a detectar son similares a los que se realizan con la pantalla de bloqueo Android, cuanto más complejo sea el que se detecta mejor puntuación tendrá._
 
+Veamos un vídeo de la aplicación funcioando:
+
+<iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/j3w9ai3LHyU" frameborder="0" allowfullscreen></iframe>
+
 
 Para realizar esta aplicación se ha usado una librería llamada [PatterLock](https://github.com/DreaminginCodeZH/PatternLock).
 
