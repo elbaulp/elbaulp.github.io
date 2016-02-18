@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - internet
   - linux
@@ -30,15 +30,11 @@ categories:
 
 La biblioteca la podéis encontrar en *[Biblioteca Creative Commons][2]*, pero debido al gran exito que ha tenido esta iniciativa, quiere hacer mejoras y necesita de nuestra ayuda, entre otras cosas, le gustaría alojar la web en un hosting independiente, ya que actualmente está ligado a su blog:
 
-***Si se quiere hacer crecer el proyecto, un paso necesario a tomar en el futuro será desligarlo del dominio en el que actualmente se encuentra y convertirlo en un sitio independiente. </em>**</p> 
+>Si se quiere hacer crecer el proyecto, un paso necesario a tomar en el futuro será desligarlo del dominio en el que actualmente se encuentra y convertirlo en un sitio independiente.
 
 Os dejo con un poquito de historia sobre esta iniciativa:
 
-  
 <!--ad-->
-
-  
-***</p> 
 
 La *Biblioteca Creative Commons* se inici&oacute; hace apenas un par de meses como un simple repositorio en el que ir&iacute;a colgando de vez en cuando aquellos libros t&eacute;cnicos bajo licencias libres que pudieran resultar interesantes para la comunidad de desarrolladores.
 
@@ -49,8 +45,6 @@ La acogida no pudo ser mejor. En apenas una semana, y con solo la ayuda de Twitt
 Al mes de existencia, y con m&aacute;s de 50 t&iacute;tulos *online*, los medios digitales comenzaron a hacerse eco del proyecto y las visitas se multiplicaron. Actualmente, son m&aacute;s de 1.000 usuarios diarios los que se acercan a ojear las &uacute;ltimas novedades o que entran a buscar alg&uacute;n determinado t&iacute;tulo que les pueda resultar &uacute;til en su quehacer diario.
 
 Muchos de sus desde entonces habituales, comenzaron a sugerir nuevos libros y a comentar posibles mejoras que har&iacute;an del servicio una aplicaci&oacute;n m&aacute;s c&oacute;moda para todos. Tras atender y estudiar cada una de estas sugerencias, decid&iacute; ponerme a trabajar plenamente en la versi&oacute;n 2 del proyecto que finalmente ver&aacute; la luz en pocos d&iacute;as: la Biblioteca ha sido reprogramada desde cero y se han a&ntilde;adido la mayor&iacute;a de las funcionalidades que vosotros, los usuarios, hab&eacute;is sugerido como m&aacute;s interesantes o necesarias para mantener la escalabilidad del proyecto en el futuro.
-
-</em></b>
 
 Actualmente dispone de una Web promocional anunciando las características de la Versión 2 de este proyecto, y lo que llegará con la versión 3. [OpenLibra Promo][3]
 

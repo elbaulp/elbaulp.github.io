@@ -16,7 +16,7 @@ image:
 
 - [Brújula Compass](/brujula-android-asr-voz)
 - [GPS QR](/programar-navegador-gps-android)
-<!-- - [Movement Sound](/giroscopio-acelerometro-movimientos-android) -->
+- [Movement Sound](/giroscopio-acelerometro-movimientos-android)
 
 <!--ad-->
 

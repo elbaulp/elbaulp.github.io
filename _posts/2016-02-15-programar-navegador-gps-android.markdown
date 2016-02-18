@@ -16,7 +16,7 @@ image:
 
 - [Brújula Compass](/brujula-android-asr-voz)
 - [Photo Gesture](/patron-desbloqueo-android)
-<!-- - [Movement Sound](/giroscopio-acelerometro-movimientos-android) -->
+- [Movement Sound](/giroscopio-acelerometro-movimientos-android)
 
 Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, [Android1](/curso-programacion-android/ "Curso de Android"), [Android2](/android/ "Curso nuevo de Android")
 {: .notice-info }
