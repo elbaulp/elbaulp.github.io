@@ -51,7 +51,7 @@
       </div><!--/ .headline-wrap -->
       <div class="article-wrap">
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        <h3><em>¿Eres curioso? pulsa el botón » <a onClick="ga('send', 'event', 'random', 'button');" href="/random/"><i class="fa fa-fw fa-random"></i></a></em></h3>
+        <p class="notice-info">Este año participamos en los <strong>Premios 20 Blogs</strong>,  <a href="http://lablogoteca.20minutos.es/el-baul-del-programador-33724/0/">vótanos</a> por mejor blog de tecnología!, te estaremos muy agradecidos.</p>
         <span itemprop="articleBody" class="e-content">
           {% assign c = content | split: '<!--ad-->' %}
           {% if content contains '<!--ad-->' %}
@@ -69,7 +69,7 @@
         </span>
         <hr />
         <p class="notice"><i class="fa fa-heart fa-2x"></i>Invítanos a un café donando lo que estimes mediante <i class="fa fa-fw fa-paypal"></i><a style="text-decoration: underline" onClick="ga('send', 'event', 'paypal', 'inside');" href="https://www.paypal.me/elbaul"><strong><em>paypal</em></strong></a> O con <strong><em><a onClick="ga('send', 'event', 'gContributor', 'button');" style="text-decoration: underline" href="https://elbauldelprogramador.com/google-lanza-contributor-apoya-a-tus-webs-favoritas-sin-ver-anuncios/">Google Contributor</a></em></strong></p>
-        {% include _adsense.html %}
+        <h3><em>¿Eres curioso? pulsa el botón » <a onClick="ga('send', 'event', 'random', 'button');" href="/random/"><i class="fa fa-fw fa-random"></i></a></em></h3>
         <footer role="contentinfo">
           {% if page.share != false %}{% include _social-share.html %}{% endif %}
           <p class="byline"><strong>{{ page.title }}</strong> se publicó el <time class="dt-published" itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}"><span class="date updated">{{ page.date | date: "%B %d, %Y" }}</span></time> y se actualizó el <time class="dt-updated" itemprop="dateModified" content="{% if page.modified %}{{ page.modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}" datetime="{% if page.modified %}{{ page.modified | date: "%Y-%m-%d" }}{% else %}{{ page.date | date: "%Y-%m-%d" }}{% endif %}">{% if page.modified %}{{ page.modified | date: "%B %d, %Y" }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time>.</p>
