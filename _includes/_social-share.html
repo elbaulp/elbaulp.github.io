@@ -7,7 +7,7 @@
       <a target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}+{{ site.url }}{{ page.url }}+Vía @{{ site.owner.twitter }}" class="twitter" title="Comparte en Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.title }}+{{ site.url }}{{ page.url }}" class="facebook" title="Comparte en Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a target="_blank" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption={{ page.title | url_encode }}&link={{ site.url | url_encode }}{{ page.url | url_encode }}&redirect_uri=https://developers.facebook.com/tools/explorer" class="facebook" title="Comparte en Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
       <a target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="google-plus" title="Comparte en Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
