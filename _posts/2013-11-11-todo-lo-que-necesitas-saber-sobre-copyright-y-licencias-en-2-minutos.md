@@ -14,8 +14,14 @@ tags:
   - licencia BSD
   - licencia MIT
   - licencias libres
+excerpt: "A la hora de crear proyectos, suele ser una tarea difícil elegir bajo qué licencia liberar el código, al menos para mi. Con este artículo que traduzco de outercurve.org espero facilitar la tarea de selección de una licencia."
+image:
+  thumb: 2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png
 ---
-<img src="/images/2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png" alt="Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos" width="672" height="656" class="thumbnail aligncenter size-full wp-image-1970" />
+
+<figure>
+  <a href="/images/2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png"><img src="/images/2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
 
 A la hora de crear proyectos, suele ser una tarea difícil elegir bajo qué licencia liberar el código, al menos para mi. Con este artículo que traduzco de *<a title="Outercurve" href="http://www.outercurve.org" target="_blank">outercurve.org</a>* espero facilitar la tarea de selección de una licencia.
 
