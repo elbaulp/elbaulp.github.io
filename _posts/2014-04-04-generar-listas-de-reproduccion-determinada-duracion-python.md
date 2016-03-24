@@ -12,6 +12,11 @@ tags:
   - música
   - python
   - script python
+  - python m3u parser
+  - playlist m3u
+  - python m3u
+  - listas 20 minutos
+  - from sys import argv
 modified: 2015-12-25T13:00
 excerpt: |
   <figure>
