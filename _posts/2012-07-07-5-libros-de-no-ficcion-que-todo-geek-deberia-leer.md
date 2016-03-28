@@ -39,7 +39,7 @@ Libro del gran _Randall Munroe_, quién trabajó como ingeniero robótico en la 
 En _Thing Explainer_ Randall describe conceptos y cosas muy complejas, desde cómo funciona un cohete espacial hasta el funcionamiento de una célula usando únicamente las 10.000 palabras más usadas del inglés.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0544668251/?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0544668251/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0544668251&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### What If?: Serious Scientific Answers to Absurd Hypothetical Questions
@@ -55,7 +55,7 @@ Millions visit xkcd.com each week to read Randall Munroe's iconic webcomic. Fans
 In pursuit of answers, Munroe runs computer simulations, pores over stacks of declassified military research memos, solves differential equations and consults nuclear reactor operators. His responses are masterpieces of clarity and hilarity, complemented by comics. They often predict the complete annihilation of humankind, or at least a really big explosion.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/What-If-Scientific-Hypothetical-Questions/dp/0544272994?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0544272994/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0544272994&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### ¿Que Pasaría Si...?
@@ -77,7 +77,7 @@ La versión en castellano del libro anterior:
 >¿Qué pasaría si...? es un libro de divulgación científica en el que se recopilan algunos de los mejores posts así como otros nuevos elaborados a partir de las preguntas del blog de Randall Munroe, en el que responde a los lectores haciendo uso de sus conocimientos científicos y matemáticos. Munroe fue físico en la NASA antes de crear la web www.xkcd, que ha recibido más de un millón de visitas. Este es un libro original, inteligente y con mucho humor.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/%C2%BFQue-Pasar%C3%ADa-Si-SIN-ASIGNAR/dp/8403015283/ref=sr_1_1?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/8403015283/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8403015283&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Seven Brief Lessons On Physics
@@ -93,7 +93,7 @@ Here, on the edge of what we know, in contact with the ocean of the unknown, shi
 These seven short lessons guide us, with simplicity and clarity, through the scientific revolution that shook physics in the twentieth century and still continues to shake us today. In this beautiful and mind-bending introduction to modern physics, Carlo Rovelli explains Einstein's theory of general relativity, quantum mechanics, black holes, the complex architecture of the universe, elementary particles, gravity, and the nature of the mind. In under eighty pages, readers will understand the most transformative scientific discoveries of the twentieth century and what they mean for us. Not since Richard Feynman's celebrated best-seller Six Easy Pieces has physics been so vividly, intelligently and entertainingly revealed.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0241235960/?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0241235960/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0241235960&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin
@@ -105,7 +105,7 @@ These seven short lessons guide us, with simplicity and clarity, through the sci
 The Magic of Math is the math book you wish you had in school. Using a delightful assortment of examples—from ice cream scoops and poker hands to measuring mountains and making magic squares—this book empowers you to see the beauty, simplicity, and truly magical properties behind those formulas and equations that once left your head spinning. You’ll learn the key ideas of classic areas of mathematics like arithmetic, algebra, geometry, trigonometry, and calculus, but you’ll also have fun fooling around with Fibonacci numbers, investigating infinity, and marveling over mathematical magic tricks that will make you look like a math genius!
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0465054722?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0465054722/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0465054722&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### En el principio fue la línea de comandos: de Neal Stephenson (Gracias a Miguel)
@@ -115,7 +115,7 @@ The Magic of Math is the math book you wish you had in school. Using a delightfu
 </figure>
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/B00HCO2RJ4?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/8493298220/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8493298220&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Software libre para una sociedad libre: de Richard Stallman (Gracias a Miguel)
@@ -125,7 +125,7 @@ The Magic of Math is the math book you wish you had in school. Using a delightfu
 </figure>
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/8493355518?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/8493355518/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8493355518&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Generation Xbox (La Generación Xbox), por Jamie Russell
@@ -152,7 +152,7 @@ Si buscas activamente libros sobre tecnología y comunicación, ya debes haber o
 La mayor parte del libro se centra en el gigante que fue AT&T. Hay mucha historia útil almacenada en este tomo, pero el libro va un paso adelante aprendiendo lecciones de la historia y aplicándolas a la era de la internet. Wo no asegura que internet sea naturalmente una herramienta para la libertad de expresión y hace algunas predicciones sobre cómo podría cambiar si ciertos intereses (corporaciones principales) se vuelven demasiado poderosas.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0307390993?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0307390993/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0307390993&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### The Race For A New Game Machine (La carrera por una nueva máquina de videojuegos)
@@ -169,10 +169,10 @@ Este libro está un poco fuera de lugar en esta lista ya que, por lejos, es meno
 
 Sin embargo, es una historia importante y ellos son los únicos que se ocuparon de contarla. El procesador Cell fue un facinante logro de la ingeniería y teóricamente le dio a Sony una ventaja, aunque es a su vez responsable de muchas de las fallas de la PlayStation 3. Probablemente tendrás un nuevo respeto por la habilidad de Microsoft de llevar a cabo amplias estrategias de negocio antes de que termines el libro &#8211; y menos respeto por la poca precisión de Sony para generar nuevos productos.  
 
-Este libro es importante además porque las consolas son importantes. Ellas están transformando las máquinas de juego a<a href="http://www.makeuseof.com/tag/xbox-360-dashboard-update-brings-ui-features-galore-news/" target="_blank"> Media Centers que toda la familia puede disfrutar</a> y serán más populares la próxima década. Esto no es accidental, y si quisieras aprender más sobre porqué Microsoft decidió entrar en el negocio te sugiero que leas &#8220;<a href="http://www.amazon.es/gp/product/0761537082?tag=libros-geek-21" target="_blank">Opening the Xbox</a>&#8221; (Abriendo la Xbox), de Dean Takahashi para investigar.
+Este libro es importante además porque las consolas son importantes. Ellas están transformando las máquinas de juego a<a href="http://www.makeuseof.com/tag/xbox-360-dashboard-update-brings-ui-features-galore-news/" target="_blank"> Media Centers que toda la familia puede disfrutar</a> y serán más populares la próxima década. Esto no es accidental, y si quisieras aprender más sobre porqué Microsoft decidió entrar en el negocio te sugiero que leas &#8220;<a href="http://www.amazon.es/gp/product/0761537082/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0761537082&linkCode=as2&tag=libros-geek-21" target="_blank">Opening the Xbox</a>&#8221; (Abriendo la Xbox), de Dean Takahashi para investigar.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0806531010?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0806531010/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0806531010&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Steve Jobs, por Walter Isaacson
@@ -186,7 +186,7 @@ Este libro es importante además porque las consolas son importantes. Ellas est�
 Apple no fue su único trabajo, no obstante, por el cual este libro es una lectura obligada. Jobs además contribuyó decisivamente para que la compañía Pixar sea conocida hoy en día, y se involucró en muchos otros proyectos, como the NeXT Computer. <a href="http://www.makeuseof.com/tag/legacy-steve-jobs-geeks-weigh/" target="_blank">Los éxitos y fallos de Job en la tecnología</a> son informativos, pero es la historia de su vida y la excelente escritura de Walter Isaacson lo que te mantendrá leyendo hasta la página final.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/1451648537?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/1451648537/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1451648537&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Contra el rebaño digital: Un manifiesto, por Jaron Lanier
@@ -210,7 +210,7 @@ Esto es realmente sólo la punta del iceberg. Hay muchísimo encerrado en este p
 >Pero Contra el rebaño digital no es una diatriba antitecnológica. Es un manifiesto fresco y energizante dedicado a quienes la tecnología les inspira aunque les decepcione el modo en que es empleada. Lanier propone a los usuarios de la red frenar un poco, generar contenidos profundos en vez de llamativos y sacar el máximo partido de internet en vez de usarla ciegamente para todo.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/Contra-reba%C3%B1o-digital-manifiesto-DEBATE/dp/8483069172/?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/8483069172/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8483069172&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Biopreguntas y la respuesta mecánica, de Didier Newman
@@ -222,7 +222,7 @@ Esto es realmente sólo la punta del iceberg. Hay muchísimo encerrado en este p
 Este es un libro de preguntas, algunas divertidas y muchas otras más serias e inquietantes. Un libro que a partir de la ciencia biológica, que se usa como columna vertebral necesaria para seguir una narración con los pies en el suelo, además pretende tratar todos los temas de interés humano, desde una perspectiva moderna, desenfadada y holística. Así pues, un libro excelente para cuestionar la vida y la muerte; cuestionar las religiones y las filosofías; cuestionar el universo y el yo; cuestionar el sufrimiento y el amor; en resumen, cuestionar lo cuestionable, de forma diferente y con sustancia suficiente para los sueños y las reflexiones de naturaleza tanto científica como humanística. Sobretodo, con sustancia suficiente para que el lector pueda cuestionar por sí mismo la música o el ruido del mundo que quizás lo envuelve constantemente.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/B00BY4Z6EQ?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/B00BY4Z6EQ/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00BY4Z6EQ&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Y Google, ¿cómo lo haría? de Jeff Jarvis
@@ -234,7 +234,7 @@ Este es un libro de preguntas, algunas divertidas y muchas otras más serias e i
 A nadie sorprende la pregunta que plantea el título de este libro. Y es que Google ha sido la empresa con el mayor crecimiento en el menor período de tiempo de la historia. Es una marca cuya dimensión ha alcanzado cotas inusitadas y cuya gestión se ha convertido en ejemplar en todos los ámbitos.Con la voluntad de saber qué se esconde tras ese éxito y, más importante aún, qué podemos aprender de él, Jarvis nos descubre 40 sencillas reglas que toda empresa debe seguir.Asimismo, nos enseña la realidad de la era digital, una era de cambios y retos constantes pero que nos ofrece grandes oportunidades. Y para ello nos pone ilustrativos ejemplos tales como: un coche diseñado por sus conductores o una universidad en la que los estudiantes determinan su plan de estudios. Un libro sorprendente e imprescindible.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/8498752035?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/8498752035/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8498752035&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ## Aportaciones de los lectores
@@ -250,7 +250,7 @@ A continuación una lista de libros que han recomendado los lectores del blog en
 Even the smartest among us can feel inept as we fail to figure out which light switch or oven burner to turn on, or whether to push, pull, or slide a door. The fault, argues this ingenious-even liberating-book, lies not in ourselves, but in product design that ignores the needs of users and the principles of cognitive psychology. The problems range from ambiguous and hidden controls to arbitrary relationships between controls and functions, coupled with a lack of feedback or other assistance and unreasonable demands on memorization. The Design of Everyday Things shows that good, usable design is possible. The rules are simple: make things visible, exploit natural relationships that couple function and control, and make intelligent use of constraints. The goal: guide the user effortlessly to the right action on the right control at the right time. In this entertaining and insightful analysis, cognitive scientist Donald A. Norman hails excellence of design as the most important key to regaining the competitive edge in influencing consumer behavior. Now fully expanded and updated, with a new introduction by the author, The Design of Everyday Things is a powerful primer on how-and why-some products satisfy customers while others only frustrate them.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/0465050654?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/0465050654/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=0465050654&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Underground &#8211; Julian Assange
@@ -258,7 +258,7 @@ Even the smartest among us can feel inept as we fail to figure out which light s
 Un libro necesario sobre la fascinante contracultura que mezcla las reivindicaciones políticas, el candor anarquista y la demostración de la genialidad. Ésta es la asombrosa historia real de cómo Julian Assange, bajo el pseudónimo de Mendax, y sus compañeros en el reino del underground se infiltran en los sitios de la Nasa, el Ejército Americano o Citibank. Descubren la ciberguerra, escuchan al FBI escucharlos, buscan un refugio a su infelicidad. Tienen entre 15 y 18 años y se sienten exploradores, pero la policía los busca como a criminales. Lleno de suspense como la mejor novela de detectives, Underground es el gran libro sobre esta revolucionara forma de activismo político que está cambiando nuestro mundo.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/B006GFT56S?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/B006GFT56S/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B006GFT56S&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Cypherpunks: La libertad y el futuro de internet
@@ -270,7 +270,7 @@ Un libro necesario sobre la fascinante contracultura que mezcla las reivindicaci
 Lejos de ser una herramienta que permita la libertad de expresión, internet se ha convertido,en opinión de Julian Assange, en «una amenaza para la civilización humana», debido a quelos Estados se han convertido en el mayor aparato de espionaje y vigilancia de los ciudadanosque haya existido jamás.A su juicio, si en internet se pudiera compartir y transmitir libremente la información, la redpodría constituir el mejor impulso para el progreso. No obstante, ocurre justo lo contrario:los poderes fácticos, que quieren que nada cambie, obstaculizan la difusión por este medioy procuran que nada de lo que se transmita quede fuera de su alcance y de su control. Conello, consiguen eliminar cualquier amenaza al statu quo.Para Assange y sus colaboradores, sólo existe una herramienta para salvaguardar la libertaden internet: el conocimiento detallado de cómo está organizado el sistema de controlestatal y el desarrollo de la criptografía para hacerle frente.En este libro, se describen las amenazas a las que la sociedad está expuesta debido al controlque los gobiernos hacen de internet, denuncian las acotaciones más fl agrantes de injerenciay censura, y proponen los mecanismos para que, gracias a la red, nuestro mundo seamejor o, al menos, más justo.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/B00BWX6YMW?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/B00BWX6YMW/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00BWX6YMW&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Hackstory.es: La historia nunca contada del underground hacker en la Península Ibérica
@@ -282,7 +282,7 @@ Lejos de ser una herramienta que permita la libertad de expresión, internet se 
 Historia de la comunidad hacker en España, centrada en la década de los 90, cuando aparecen los primeros grupos y nace la cultura hacker. El libro narra el quién fue quién, así como sus hazañas, anécdotas y colectivos e individuales más punteros. Este ingente trabajo de investigación nació en 2009, con la puesta en marcha de un wiki, al estilo wikipedia, llamado Hackstory.net y donde en estos años la autora ha ido creando fichas, accesibles al público, que le han permitido escribir este libro, sin parangón en Europa. La comunidad hacker ha revisado los textos así como apoyado a la autora, tanto a la hora de aportar información, como en una campaña de &#8220;crowdfunding&#8221; con la que se consiguió una respetable cantidad para tener el tiempo suficiente de escribir el libro. Además de ser sus principales mecenas, protagonistas y aportadores de información, los hackers españoles han participado en todos los aspectos organizativos relacionados con la producción y distribución del libro, a través de un grupo en Facebook creado ex professo.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/B00N1T40OO?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/B00N1T40OO/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00N1T40OO&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Hackers: Heroes of the Computer Revolution &#8211; 25th Anniversary Edition
@@ -296,7 +296,7 @@ This 25th anniversary edition of Steven Levy&#8217;s classic book traces the exp
 Levy profiles the imaginative brainiacs who found clever and unorthodox solutions to computer engineering problems. They had a shared sense of values, known as &#8220;the hacker ethic,&#8221; that still thrives today. Hackers captures a seminal period in recent history when underground activities blazed a trail for today&#8217;s digital world, from MIT students finagling access to clunky computer-card machines to the DIY culture that spawned the Altair and the Apple II.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/1449388396?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/1449388396/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1449388396&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### El Arte de la Intrusión
@@ -308,7 +308,7 @@ Levy profiles the imaginative brainiacs who found clever and unorthodox solution
 &#8220;Entra en el mundo hostil de los delitos informáticos desde la comodidad de tu propio sofá. Mitnick presenta diez capítulos obligatorios, todos ellos resultado de una entrevista con un hacker de verdad. Un libro de lectura obligada para todo el que este interesado en la seguridad de la información.&#8221; -Tom Parker, analista de seguridad informática y fundador de Global InterSec, LLC. &#8220;Uno se queda atónito ante la tremenda brillantez que se halla en estas hazañas ilegales. Imaginen cuánto se podría conseguir si estos genios utilizaran sus capacidades para el bien. Como ocio o como formación, recomiendo este libro&#8221; -About.com
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/8478977481?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/8478977481/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8478977481&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ### Hackers & Painters: Big Ideas from the Computer Age
@@ -328,7 +328,7 @@ Hackers & Painters: Big Ideas from the Computer Age, by Paul Graham, explains th
 The ideas discussed in this book will have a powerful and lasting impact on how we think, how we work, how we develop technology, and how we live. Topics include the importance of beauty in software design, how to make wealth, heresy and free speech, the programming language renaissance, the open-source movement, digital design, internet startups, and more.
 
 <div class="btn-success">
-  <a href="http://www.amazon.es/gp/product/1449389554?tag=libros-geek-21" target="_blank">Ver en Amazon</a>
+  <a href="http://www.amazon.es/gp/product/1449389554/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1449389554&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
 </div>
 
 ## Conclusión
