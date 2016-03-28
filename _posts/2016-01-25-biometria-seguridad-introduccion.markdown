@@ -293,9 +293,9 @@ teclado (evolución del patrón).
 #### Referencias
 
 - [M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
-seguridad](http://www.amazon.es/gp/product/8478976361?tag=bmacoc-21 "M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
+seguridad](http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8478976361&linkCode=as2&tag=bmacoc-21 "M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
 seguridad")
-- [C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition](http://www.amazon.es/gp/product/9814656526?tag=bmab-21 "C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition")
+- [C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition](http://www.amazon.es/gp/product/9814656526/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=9814656526&linkCode=as2&tag=bmab-21 "C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition")
 - [Wikipedia, “Biometría, según wikipedia.”](https://es.wikipedia.org/wiki/
 Biometr%C3%ADa "Wikipedia, “Biometría, según wikipedia.”")
 - [G. Argentina, “Historia de la biometría.”](http://www.biometria.gov.ar/
