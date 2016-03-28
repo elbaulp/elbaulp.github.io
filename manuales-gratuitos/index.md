@@ -13,7 +13,7 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
 
 Si estás buscando libros de texto, quizá te intersen estos dos artículos:
 
-- <a onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="16 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">16 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
+- <a onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="17 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">17 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
 - <a onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="21 Libros de No-Ficción que todo Geek debería leer">21 Libros de No-Ficción que todo Geek debería leer</a>
 
 
