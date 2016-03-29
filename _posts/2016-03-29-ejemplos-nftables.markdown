@@ -21,7 +21,7 @@ El siguiente artículo forma parte de un trabajo en grupo realizado para la asig
 
 ## Qué es nftables
 
-__nftables__  es un  nuevo  framework  que  sustituye  al antiguo  __iptables__. Este  nuevo  software aún  no está  desarrollado  al 100% de sus funciones, tenemos  la problemática de la implantación,   que aunque  se incluye desde el kernel  3.13, las personas  aún  no están acostumbradas a su uso y por tanto  siguen usando  __iptables__  o en su defecto la nomenclatura  de sus reglas.
+<a href="http://netfilter.org/projects/nftables/" target="_blank" title="">__nftables__</a> es un  nuevo  framework  que  sustituye  al antiguo  __iptables__. Este  nuevo  software aún  no está  desarrollado  al 100% de sus funciones, tenemos  la problemática de la implantación,   que aunque  se incluye desde el kernel  3.13, las personas  aún  no están acostumbradas a su uso y por tanto  siguen usando  __iptables__  o en su defecto la nomenclatura  de sus reglas.
 
 > Quizá te interese el artículo [20 ejemplos de __iptables__ para SysAdmins novatos,](/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos") u otro de los múltiples artículos sobre [iptables disponibles](/tag/#iptables "Artículos etiquetados con iptables").
 
