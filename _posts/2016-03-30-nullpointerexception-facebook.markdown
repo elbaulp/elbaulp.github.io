@@ -34,4 +34,5 @@ _Koçulu_ ya se ha disculpado por la situación, aunque desconocía que borrar s
 ### Referencias
 
 A programmer almost broke the Internet last week by deleting 11 lines of code \| [sciencealert.com](http://www.sciencealert.com/how-a-programmer-almost-broke-the-internet-by-deleting-11-lines-of-code "A programmer almost broke the Internet last week by deleting 11 lines of code")
+
 Rage-quit: Coder unpublished 17 lines of JavaScript and “broke the Internet” \| [arstechnica.com](http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/ "Rage-quit: Coder unpublished 17 lines of JavaScript and “broke the Internet”")
