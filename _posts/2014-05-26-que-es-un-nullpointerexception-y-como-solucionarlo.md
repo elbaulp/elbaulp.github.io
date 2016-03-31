@@ -17,7 +17,7 @@ tags:
   - nullpointerexception
 image:
   thumb: 2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
-modified: 2015-12-24T19:58
+modified: 2016-03-31T12:00
 excerpt: |
   <figure>
     <img src="/images/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="Qué es un NullPointerException y cómo solucionarlo" alt="Qué es un NullPointerException y cómo solucionarlo"/>
