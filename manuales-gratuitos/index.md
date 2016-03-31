@@ -108,10 +108,6 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
     /images/Spring-Data-Programming-Cookbook2.jpg" alt="Spring Data Programming Cookbook" width="199" height="259"/><span>Spring Data Programming Cookbook</span></a>
   </li>
   <li>
-    <a href="/libro-gratuito-windows-malware-analysis/"><img src="
-    /images/Windows-Malware-Analysis-Essentials2.jpg" alt="Windows Malware Analysis" width="199" height="259"/><span>Windows Malware Analysis</span></a>
-  </li>
-  <li>
     <a href="/impact-internet-things/"><img src="
     /images/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management2.jpg" alt="The Impact of Internet of Things (IoT) on Facilities Management" width="199" height="259"/><span>The Impact of Internet of Things (IoT) on Facilities Management</span></a>
   </li>
