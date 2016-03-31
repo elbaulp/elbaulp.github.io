@@ -32,7 +32,7 @@ excerpt: |
   <img src="/images/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="{{page.title}}" alt="{{ page.title }}"/>
 </figure>
 
-Si has llegado aquí porque tienes problemas con facebook, tu respuesta está en este artículo: <a href="https://elbauldelprogramador.com/nullpointerexception-facebook/" target="_blank" title="Qué Esta Causando Un NullPointerException en Facebook E Internet">Qué Esta Causando Un NullPointerException en Facebook E Internet</a>
+Si has llegado aquí porque tienes problemas con **facebook**, tu respuesta está en este artículo: [Qué Esta Causando Un NullPointerException en Facebook E Internet](/nullpointerexception-facebook "Qué Esta Causando Un NullPointerException en Facebook E Internet")
 {: .notice-info }
 
 > El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario <a href="http://stackoverflow.com/users/29182/ziggy" target="_blank">ziggy</a>, que preguntaba ¿Qué es un **NullPointerException** y cómo se puede solucionar?. La respuesta es del usuario <a href="http://stackoverflow.com/users/27439/vincent-ramdhanie" target="_blank">vincent-ramdhanie</a>
