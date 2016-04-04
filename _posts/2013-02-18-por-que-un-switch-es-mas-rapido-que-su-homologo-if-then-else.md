@@ -24,10 +24,10 @@ El switch se basa en una implementación muy eficiente llamada en inglés **jump
 Esa es la clave que explica el mayor rendimiento de un switch frente a una larga secuencia de **if-then-else**. Ya que el tiempo necesario para realizar el switch es independiente del número de casos (sentencia case:) que éste tiene.
 
 [GCC][3] selecciona qué metodo de traducción aplica al switch dependiendo del número de casos y valores. Las tablas de saltos se usan cuando hay un número determinado de casos (cuatro por ejemplo) y abarcan un número pequeño de valores. Por ejemplo:  
-  
+
 <!--ad-->
 
-  
+
 **Sentencia switch**
 
 ```c
@@ -35,11 +35,11 @@ int switch_eg(int x, int n){
    int result = x;
 
    switch (n) {
-      
+
       case 100:
          result *= 13;
          break;
-      
+
       case 102:
          result += 10;
          /*Fall through*/
@@ -86,7 +86,7 @@ loc_def:   /*Default case*/
    result = 0;
    goto done;
 
-loc_C:     /*Case 103*/ 
+loc_C:     /*Case 103*/
    result = x;
    goto rest;
 
@@ -118,7 +118,7 @@ En este ejemplo, los cases del switch no son contiguos, no existen casos para lo
 
 El código ensamblador generado es muy parecido a la versión extended C:
 
-```asm
+```nasm
 .file   "sw.c"
   .text
    .globl  switch_eg
@@ -186,7 +186,7 @@ switch_eg:
 Una vez que disponemos del ejemplo representado de 3 formas distintas, profundicemos en el funcionamiento.  
 En la versión extendida de C se define el array **jt** que contiene siete entradas, cada una es la dirección de un bloque de código. Dichos bloques de código se definen con etiquetas en el código (*loc\_A, loc\_def etc*) e identificadas en el array **jt** por *punteros a código*. Para conseguir un puntero a un trozo de código hay que anteponer *&&* a la etiqueta. El operador *&* crea un puntero para el valor de un dato. Cuando se creó esta extensión de C, los autores crearon el operador *&&* para hacer referencia a la dirección de una porción de código.
 
-El código C tiene cases para los valores *100, 102-104 y 106*, pero la variable *n* puede contener cualquier valor entero. El compilador desplaza el rango a los valores 0-6, restando 100 a *n*. Creando así una nueva variable que llamaremos *index* en la versión C del código. Al hacer este desplazamiento facilita las posibilidades de ramificación tratando a *index* como un valor sin signo *(unsigned*). Así, se sabrá fácilmente que *index* está fuera del rango 0-6 cuando sea mayor que 6. Tanto en el código C como ensamblador hay cinco posiciones distintas a las que saltar basandose en el valor de *index*. Las posiciones son: 
+El código C tiene cases para los valores *100, 102-104 y 106*, pero la variable *n* puede contener cualquier valor entero. El compilador desplaza el rango a los valores 0-6, restando 100 a *n*. Creando así una nueva variable que llamaremos *index* en la versión C del código. Al hacer este desplazamiento facilita las posibilidades de ramificación tratando a *index* como un valor sin signo *(unsigned*). Así, se sabrá fácilmente que *index* está fuera del rango 0-6 cuando sea mayor que 6. Tanto en el código C como ensamblador hay cinco posiciones distintas a las que saltar basandose en el valor de *index*. Las posiciones son:
 
   * loc_A » Identificado en código ensamblador como .L3
   * loc_B » .L4
@@ -245,7 +245,7 @@ En el caso *index = 5* o *index = 1* (No existe case para 105 o 101), se saltar�
  .align 4        ; Alinea las direcciones a multiplos de 4 (Un entero ocupa 4B)
   .align 4
 .L7:
-    .long   .L3      ; case 100 : loc_A      
+    .long   .L3      ; case 100 : loc_A
    .long   .L2      ; case 101 : loc_def
    .long   .L4      ; case 102 : loc_B
  .long   .L5      ; case 103 : loc_C
@@ -257,7 +257,7 @@ En el caso *index = 5* o *index = 1* (No existe case para 105 o 101), se saltar�
 ```
 
 Estas declaraciones dicen que dentro de la sección llamada **.rodata** *(Read-Only Data)* debería haber una secuencia de siete palabras **long** (4-byte) cuyo valor se dá por la dirección de la instrucción asociada a la etiqueta (.L3 etc). La etiqueta **.L7** marca el inicio de la asignación de la tabla de saltos. La dirección asociada a esta etiqueta sirve como la base para el salto indirecto en la línea 21.  
-Tanto en la versión extendida de C, como en ensamblador, el código asociado a las etiquetas (loc_\* para extended C y .L\* para ensamblador) implementan las distintas ramas del switch. La mayoría calculan un valor para devolver en la variable *result* (o el registro *%eax*) y saltan al final de la función (en el código ensamblador se salta a la etiqueta **.L8**). 
+Tanto en la versión extendida de C, como en ensamblador, el código asociado a las etiquetas (loc_\* para extended C y .L\* para ensamblador) implementan las distintas ramas del switch. La mayoría calculan un valor para devolver en la variable *result* (o el registro *%eax*) y saltan al final de la función (en el código ensamblador se salta a la etiqueta **.L8**).
 
 El patrón seguido para calcular un resultado no se da para los cases 102 y 103 en el código C. La lógica del programa para estos dos casos en las versiones ensamblador y C extendido es tener dos destinos ditintos para ambos casos (*loc\_C, loc\_B y .L5, .L4 *). Los dos bloques de código convergen en el código que incrementa *result* en 11 (etiquetado como *rest* en C extendido y .L5 en ensamblador)
 
@@ -336,7 +336,7 @@ Tras analizar y entender cómo se implementa el switch, la razón por la que es 
 
 #### Referencias
 
-*Computer Systems: A Programmer's Perspective* »» <a href="http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=013034074X&linkCode=as2&tag=elbaudelpro-21" target="_blank">Ver libro en Amazon</a> 
+*Computer Systems: A Programmer's Perspective* »» <a href="http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=013034074X&linkCode=as2&tag=elbaudelpro-21" target="_blank">Ver libro en Amazon</a>
 
 
 
