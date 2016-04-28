@@ -6,7 +6,7 @@ excerpt: "Tras mucho buscar, al fin he conseguido recopilar una lista de libros 
 tags: [libros, data Scientist, data Engineer, libros big data, hadoop spark, curso apache spark, book hadoop, hadoop for dummies]
 image:
   thumb: ml/Machine-Learning-for-Hackers.jpg
-date: 2016-04-28T11:14:00+00:00
+date: 2015-11-01T21:30:17+01:00
 modified: 2016-04-28T11:00:00+00:00
 ---
 {% include _toc.html %}
