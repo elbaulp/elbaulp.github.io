@@ -34,7 +34,7 @@ Este es uno de los libros principales que hemos usado en mi facultad en la asign
 ## Data Science from Scratch: First Principles with Python
 
 <figure>
-  <a href="/images/Data Science from Scratch: First Principles with Python.jpg"><img src="/images/Data Science from Scratch: First Principles with Python.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/images/ml/Data Science from Scratch: First Principles with Python.jpg"><img src="/images/ml/Data Science from Scratch: First Principles with Python.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 > Data science libraries, frameworks, modules, and toolkits are great for doing data science, but they’re also a good way to dive into the discipline without actually understanding data science. In this book, you’ll learn how many of the most fundamental data science tools and algorithms work by implementing them from scratch.
