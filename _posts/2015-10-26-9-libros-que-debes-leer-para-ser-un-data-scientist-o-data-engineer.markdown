@@ -1,14 +1,13 @@
 ---
 layout: post
-title: "17 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer"
-modified:
+title: "18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer"
 categories:
 excerpt: "Tras mucho buscar, al fin he conseguido recopilar una lista de libros que todo Científico de Datos o Ingeniero de Datos debería tener en su biblioteca personal."
 tags: [libros, data Scientist, data Engineer, libros big data, hadoop spark, curso apache spark, book hadoop, hadoop for dummies]
 image:
   thumb: ml/Machine-Learning-for-Hackers.jpg
-date: 2015-11-01T21:30:17+01:00
-modified: 2016-03-28T20:20:17+01:00
+date: 2016-04-28T11:00:17+01:00
+modified: 2016-04-28T11:00:17+01:00
 ---
 {% include _toc.html %}
 
@@ -29,6 +28,20 @@ Este es uno de los libros principales que hemos usado en mi facultad en la asign
 
 <div class="btn-success">
   <a href="http://www.amazon.es/gp/product/B00YDJC98K/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00YDJC98K&linkCode=as2&tag=mlds-21" target="_blank">Ver Learning from Data en Amazon</a>
+</div>
+
+## Data Science from Scratch: First Principles with Python
+
+<figure>
+  <a href="/images/Data Science from Scratch: First Principles with Python.jpg"><img src="/images/Data Science from Scratch: First Principles with Python.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+</figure>
+
+> Data science libraries, frameworks, modules, and toolkits are great for doing data science, but they’re also a good way to dive into the discipline without actually understanding data science. In this book, you’ll learn how many of the most fundamental data science tools and algorithms work by implementing them from scratch.
+
+> If you have an aptitude for mathematics and some programming skills, author Joel Grus will help you get comfortable with the math and statistics at the core of data science, and with hacking skills you need to get started as a data scientist. Today’s messy glut of data holds answers to questions no one’s even thought to ask. This book provides you with the know-how to dig those answers out.
+
+<div class="btn-success">
+  <a href="http://www.amazon.es/gp/product/149190142X/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=149190142X&linkCode=as2&tag=mlds-21" target="_blank">Ver Data Science from Scratch en Amazon</a>
 </div>
 
 ## R Cookbook (O'Reilly Cookbooks)
