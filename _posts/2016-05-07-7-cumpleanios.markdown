@@ -26,7 +26,7 @@ No siempre se llamó “El Baúl del Programador”, en sus orígenes se llamaba
 - [Copiar archivos recursivamente](/copiar-archivos-recursivamente/ "Copiar archivos recursivamente")
 - [Script resaltado sintaxis bash](/script-resaltado-sintaxis-bash/ "Script resaltado sintaxis bash")
 
-Pero pronto empecé ha hablar sobre más cosas, así que surgió la necesidad de cambiarle el nombre, y así llegó “El Baúl del Programador”.
+Pero pronto empecé a hablar sobre más cosas, así que surgió la necesidad de cambiarle el nombre, y así llegó “El Baúl del Programador”.
 
 ## Plataformas usadas
 
