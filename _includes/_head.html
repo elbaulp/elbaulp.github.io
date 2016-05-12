@@ -87,25 +87,37 @@
     {% endif %}
     "description": "{{ page.excerpt | strip_html }}",
     "url": "{{ page.url | replace:'index.html','' | prepend: site.url }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb | cgi_escape }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}",
+      "width": 640,
+      "height": 435
+    },
     "author": {
       "@type": "Person",
-      "name": "{{ author.name }}"
+      "name": "{{ author.name }}",
+      "url" : "{{ site.url }}",
+      "sameAs" : [
+        "https://www.facebook.com/{{ author.facebook }}",
+        "https://www.twitter.com/{{ author.twitter }}",
+        "https://www.linkedin.com/in/{{ author.linkedin }}",
+        "https://plus.google.com/+{{ author.google.plus }}"
+      ]
     },
     "publisher": {
       "@type": "Organization",
       "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
       "logo": {
         "@type": "ImageObject",
-        "url": "{{ site.url }}/images/default-thumb.png",
-        "width": 550,
-        "height": 414
-      }
-    },
-    "image": {
-      "@type": "ImageObject",
-      "url": "{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb | cgi_escape }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}",
-      "width": 550,
-      "height": 414
+        "url": "{{ site.url }}/images/bio-photo.png",
+        "width": 150
+      },
+      "sameAs" : [
+        "https://www.facebook.com/elbauldelprogramador",
+        "https://www.twitter.com/elbaulp",
+        "https://plus.google.com/+elbauldelprogramador"
+      ]
     }
   }
 </script>
