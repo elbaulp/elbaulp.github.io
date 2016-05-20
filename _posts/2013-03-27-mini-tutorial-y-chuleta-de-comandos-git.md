@@ -17,6 +17,7 @@ tags:
   - introduccion git
   - ramas con git
   - tutorial git
+  - tutoriales sobre git
 date: 2015-12-13T19:10:12+01:00
 modified: 2015-12-13T19:10:12+01:00
 excerpt: "Un mini tutorial y lista extensa de comandos git"
