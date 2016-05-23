@@ -27,8 +27,8 @@ Si trabajas habitualmente con $$\LaTeX$$, estás acostumbrado a ver múltiples f
 ## Estructura del directorio
 
 La idea sería tener el directorio de trabajo organizado del siguiente modo:
-```bash
 
+```bash
 Directorio del proyecto/
 |__ main.tex
 |__ main.bib
