@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cómo Mostrar Información De Un Repositorio Git en El Prompt de tu terminal
+title: Cómo mostrar información de un repositorio Git en el prompt de tu terminal
 date: 2016-05-23T14:40:25+02:00
 modified: 2016-05-24T10:00:00+00:00
 categories:
