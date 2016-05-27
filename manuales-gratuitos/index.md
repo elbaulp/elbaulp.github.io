@@ -111,6 +111,10 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
     <a href="/impact-internet-things/"><img src="
     /images/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management2.jpg" alt="The Impact of Internet of Things (IoT) on Facilities Management" width="199" height="259"/><span>The Impact of Internet of Things (IoT) on Facilities Management</span></a>
   </li>
+  <li>
+    <a href="/descargar-apache-hadoop-cookbook/"><img src="
+    /images/Apache-Hadoop-Cookbook2.jpg" alt="Apache Hadoop Cookbook" width="199" height="259"/><span>Apache Hadoop Cookbook</span></a>
+  </li>
 </ul>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
