@@ -57,17 +57,13 @@ $$ \mathsf{pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}} 
 Donde $$RAM_{restoProc}$$ es la memoria usada por los otros procesos y $$RAM_{mediaPHP}$$ es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:
 
 ```bash
-
 ps -ylA --sort:rss | grep -v php5-fpm | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria total usada por otros procesos"; printf "%dM\n", s/1024 }'
-
 ```
 
 Y la consumida por PHP:
 
 ```bash
-
 ps -ylC php5-fpm --sort:rss  | awk '!/RSS/ { s+=$8 } END { printf "%s\n", "Memoria consumida por PHP: "; printf "%dM\n", s/1024 }'
-
 ```
 
 Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de *max_children*, *min\_spare\_servers* y *max\_spare\_servers* se suelen calcular evaluando el rendimiento y *start_servers*, suele ser:
@@ -96,7 +92,6 @@ Para aprovechar todos los núcleos de un procesador, nginx necesita ajustar el p
 
 ```bash
 cat /proc/cpuinfo| grep processor | wc -l
-
 ```
 
 En la directiva *worker_connections* dentro del bloque *events* escribiremos un 1024. Con esto nginx tendrá un proceso por núcleo y cada proceso podrá procesar hasta 1024 conexiones.
@@ -107,7 +102,6 @@ Estableceremos ahora los parámetros que permitirán cachear los resultados para
 fastcgi_cache_path /var/cache/nginx levels=1:2 keys_zone=microcache:500m max_size=1000m inactive=60m;
 fastcgi_cache_key "$scheme$request_method$host$request_uri";
 fastcgi_cache_use_stale updating error timeout invalid_header http_500;
-
 ```
 
 Lo cual establece el directorio donde se guardarán los objetos cacheados, los niveles de cache, un nombre y el espacio reservado (500Mb), así como un tope máximo (1Gb). La segunda directiva establece bajo qué nombre se almacenará la clave para la cache. Por último la tercera servirá contenido antiguo en la caché cuando haya errores en el servidor web, cuando se esté actualizando la caché, cuando haya errores del tipo 5xx o cuando la cabecera de la petición sea inválida.
@@ -125,7 +119,6 @@ set $no_cache 0;
       fastcgi_cache microcache;
       fastcgi_cache_valid 60m;
     }
-
 ```
 
 En esta porción de código hemos declarado una variable que determinará qué peticiones se cachean y cuales no. No cachearemos ninguna petición POST ni nada que tenga consultas en la URL (?arg&#8230;&arg1&#8230;). Con ayuda de esta variable podremos decidir en el bloque *location* si cacheamos la petición (directivas bypass y no_cache), aquí hacemos referencia al nombre que dimos anteriormente al espacio de caché y fijamos un periodo de validez.
@@ -142,7 +135,6 @@ Antes de poder compilar, será necesario instalar algunas dependencias:
 
 ```bash
 apt-get install build-essential zlib1g-dev libpcre3 libpcre3-dev
-
 ```
 
 Una vez hecho, estamos en condiciones para descargar y compilar:
@@ -154,7 +146,6 @@ unzip v1.7.30.1-beta.zip # or unzip v1.7.30.1-beta
 cd ngx_pagespeed-1.7.30.1-beta/
 wget https://dl.google.com/dl/page-speed/psol/1.7.30.1.tar.gz
 tar -xzvf 1.7.30.1.tar.gz
-
 ```
 
 Hecho esto, será necesario recompilar nginx con este módulo, como comentamos al inicio de esta guía, para ello simplemente ejecutamos:
@@ -167,7 +158,6 @@ cd ~/nginx-1.4.4/ # compilaremos nginx con el nuevo módulo (--ad-module)
 make -j 4 # compilamos
 service nginx destroy # detenemos la instancia actual de nginx
 make install # instalamos la nueva versión con pagespeed
-
 ```
 
 #### Configurando PageSpeed
@@ -189,7 +179,6 @@ rewrite_css
 rewrite_images
 rewrite_javascript
 rewrite_style_attributes_with_url
-
 ```
 
 Veamos cómo habilitar pagespeed en nginx, para ello crearemos un fichero y un directorio en */usr/local/nginx/conf/global/pagespeed.conf* conteniendo:
@@ -244,7 +233,6 @@ pagespeed RewriteLevel CoreFilters;
 
 # Specifying the value for the PageSpeed header
 pagespeed XHeaderValue "Gracias a ngx_pagespeed";
-
 ```
 
 Esto debería ser suficiente para la mayoría de webs, es posible habilitar más filtros usando la directiva *pagespeed EnableFilters*.
@@ -253,7 +241,6 @@ Por último hay que añadir la configuración a nginx, dentro del bloque *server
 
 ```bash
 service nginx reload
-
 ```
 
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
@@ -274,7 +261,6 @@ Para instalarlo basta con ejecutar:
 
 ```bash
 apt-get install php-apc
-
 ```
 
 El archivo de configuración reside en */etc/php5/fpm/conf.d/apc.ini*, un ejemplo de configuración es el siguiente:
@@ -332,7 +318,6 @@ apc.lazy_functions=0
 apc.localcache = "1"
 ;The size of the local process shadow-cache, should be set to a sufficiently large value, approximately half of apc.num_files_hint.
 apc.localcache.size = "384"
-
 ```
 
 [APC][3] proporciona una mejora considerable en cuanto al rendimiento, ya que no es necesario volver a interpretar el código PHP cada vez que el servidor recibe una petición, el código quedará compilado en cache listo para ser servido. Uno de los parámetros más importantes es *apc.shm_size=*, el cual establece el tamaño reservado para la caché.
@@ -363,7 +348,6 @@ Algunos valores por defecto de la configuración de nginx no son adecuados en t�
     ### Control maximum number of simultaneous connections for one session i.e. ###
     ### restricts the amount of connections from a single ip address ###
       limit_conn addr 10;
-
 ```
 
 Una breve explicación del propósito de cada directiva:
