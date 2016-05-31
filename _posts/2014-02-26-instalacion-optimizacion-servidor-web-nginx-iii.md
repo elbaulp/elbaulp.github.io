@@ -380,7 +380,11 @@ Una breve explicación del propósito de cada directiva:
 
 Con esto concluyen los tres artículos sobre instalación y optimización de un servidor web con nginx, espero que haya resultado útil.
 
+# Tabla de contenidos
 
+* [Instalación y optimización de un servidor web con Nginx (I)][1]
+* [Instalación y optimización de un servidor web con Nginx (II)][2]
+* Instalación y optimización de un servidor web con Nginx (III)
 
 [1]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i "Instalación y optimización de un servidor web con Nginx (I)"
 [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"
