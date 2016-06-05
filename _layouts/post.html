@@ -1,105 +1,19 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-{% include _head.html %}
-</head>
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+    {% include head.html %}
+    <body>
+        {% include svg-icons.html %}
+        {% include header-post.html %}
+        <section class="post">
 
-<body class="post">
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                {{ content }}
+            </article>
 
-{% include _browser-upgrade.html %}
-
-{% include _navigation.html %}
-
-{% if page.image.feature %}
-  <div class="image-wrap">
-  <img src=
-    {% if page.image.feature contains 'http' %}
-      "{{ page.image.feature }}"
-    {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
-    {% endif %}
-  alt="{{ page.title }} feature image">
-  {% if page.image.credit %}
-    <span class="image-credit">Crédito de la foto: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
-  {% endif %}
-  </div><!-- /.image-wrap -->
-{% endif %}
-
-<div itemscope itemtype="http://schema.org/Blog">
-  <div class="h-entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="main">
-    <meta itemprop="mainEntityOfPage" content="{{ site.url }}" />
-    <div class="article-author-side">
-      {% include _author-bio.html %}
-    </div>
-    <article class="post">
-      <div class="headline-wrap">
-      <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <img style="display:none;" itemprop="image" src="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}" alt="{{ page.title }}">
-        <meta itemprop="url" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
-        <meta itemprop="width" content="600">
-        <meta itemprop="height" content="400">
-        <meta itemprop="thumbnailUrl" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
-      </div>
-        {% if page.link %}
-          <h1 class="p-name" itemprop="headline"><a class="u-url" href="{{ page.link }}"><span itemprop="name">{{ page.title }}</span></a></h1>
-        {% else %}
-          <h1 class="p-name" itemprop="headline"><a class="u-url" href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}"><span itemprop="name">{{ page.title }}</span></a></h1>
-        {% endif %}
-      </div><!--/ .headline-wrap -->
-      <div class="article-wrap">
-        {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        <span itemprop="articleBody" class="e-content">
-          {% assign c = content | split: '<!--ad-->' %}
-          {% if content contains '<!--ad-->' %}
-            {{ c | first }}
-            <hr/>
-              {% include _adtext.html %}
-            <hr/>
-            {{ c | last }}
-          {% else %}
-            <hr/>
-              {% include _adtext.html %}
-            <hr/>
-            {{ content }}
-          {% endif %}
-        </span>
-        <hr />
-        <p class="notice"><i class="fa fa-heart fa-2x"></i>Invítanos a un café donando lo que estimes mediante <i class="fa fa-fw fa-paypal"></i><a style="text-decoration: underline" onClick="ga('send', 'event', 'paypal', 'inside');" href="https://www.paypal.me/elbaul"><strong><em>paypal</em></strong></a> O con <strong><em><a onClick="ga('send', 'event', 'gContributor', 'button');" style="text-decoration: underline" href="https://elbauldelprogramador.com/google-lanza-contributor-apoya-a-tus-webs-favoritas-sin-ver-anuncios/">Google Contributor</a></em></strong></p>
-        <h3><em>¿Eres curioso? pulsa el botón » <a onClick="ga('send', 'event', 'random', 'button');" href="/random/"><i class="fa fa-fw fa-random"></i></a></em></h3>
-        <footer role="contentinfo">
-          {% if page.share != false %}{% include _social-share.html %}{% endif %}
-          <p class="byline"><strong>{{ page.title }}</strong> se publicó el <time class="dt-published" itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}"><span class="date updated">{{ page.date | date: "%B %d, %Y" }}</span></time> y se actualizó el <time class="dt-updated" itemprop="dateModified" content="{% if page.modified %}{{ page.modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}" datetime="{% if page.modified %}{{ page.modified | date: "%Y-%m-%d" }}{% else %}{{ page.date | date: "%Y-%m-%d" }}{% endif %}">{% if page.modified %}{{ page.modified | date: "%B %d, %Y" }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time>.</p>
-        </footer>
-      </div><!-- /.article-wrap -->
-    {% if site.owner.disqus-shortname and page.comments == true %}
-      <section id="disqus_thread"></section><!-- /#disqus_thread -->
-    {% endif %}
-    </article>
-  </div><!-- /#main -->
-</div>
-<div class="footer-wrap">
-  <div class="related-articles">
-  <h4>Quizá te interese <small class="pull-right">(<a href="{{ site.url }}/posts/">Ver todos los artículos</a>)</small></h4>
-    <ul>
-    {% for post in site.related_posts limit:5 %}
-      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
-  <footer>
-    {% include _footer.html %}
-  </footer>
-</div><!-- /.footer-wrap -->
-
-{% include _scripts.html %}
-{% if page.math == true %}
-  <script type="text/javascript"
-    src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
-{% endif %}
-</body>
+            {% include share.html %}
+            {% include author.html %}
+            {% include comments.html %}
+            {% include footer.html %}
+        </section>
+    </body>
 </html>

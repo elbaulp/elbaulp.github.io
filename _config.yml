@@ -1,61 +1,42 @@
-# Site wide configuration
-
-title: El Baúl del programador
-locale: es_ES
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: https://elbauldelprogramador.com "" # the subpath of your site, e.g. /blog
 url: https://elbauldelprogramador.com
 
-# Jekyll configuration
-permalink:   /:categories/:title/
-markdown:    kramdown
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+disqus_username: lorem_ipsum
+
+# Build settings
+markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+permalink: /:title/
 
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
 
-# Site owner
-owner:
-  name: Alejandro Alcalde
-  avatar: bio-photo.png
-  bio: "Estudiante de Grado en Ingeniería Informática en la ETSIIT, Granada. Especialidad, Inteligencia Artificial."
-  email: contacto@elbauldelprogramador.com
-  disqus-shortname: bashyc
-  twitter: elbaulp
-  facebook: elbauldelprogramador
-  google:
-    plus: elbauldelprogramador
-    analytics: UA-19017085-2
-    verify: FBg0GK1_H_PyCw6AD2iaBOclPbEC3LOV8hHXje5276w
-    ad-client: ca-pub-9043332344373532
-    # ad-slot: 9782918042
-    # ad-slot2: 2727042844
-    ad-slot3: 2633319248
-  bsa: false
-  amazon:
-    id: elbaudelpro-21
-  bing-verify:
-  github: algui91
-  stackoverflow: 1612432/algui91
-  stackcareers: algui91
-  linkedin: algui91
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      comments: true
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: https://elbauldelprogramador.com /
+  - title: Series
+    url: https://elbauldelprogramador.com /series
+  - title: Tags
+    url: https://elbauldelprogramador.com /tags
+  - title: About Me
+    url: https://elbauldelprogramador.com /about
 
-include: [".htaccess"]
-exclude: ["TODO.md", "lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']

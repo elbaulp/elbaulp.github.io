@@ -9,14 +9,13 @@ categories:
   - Humor
   - offtopic
 tags:
-  - 300
   - what is your programming language
   - write in c
 format: video
 ---
 Navegando por la red he encontrado dos vídeos curiosos y graciosos, que comparto con vosotros este día de fiesta Nacional en España.
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span> <span class='embed-youtube' style='text-align:center; display: block;'></span> 
+<span class='embed-youtube' style='text-align:center; display: block;'></span> <span class='embed-youtube' style='text-align:center; display: block;'></span>
 
 ### Referencias
 
