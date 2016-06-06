@@ -95,7 +95,7 @@
         "url": "{{site.url}}",
         "blogPost": {
           "@type": "BlogPosting",
-          "articleBody": {{content | jsonify}},
+          "articleBody": {{content | escape | jsonify}},
           "wordCount": "{{content | number_of_words}}",
           "mainEntityOfPage": "{{ canonical }}",
           "headline": "{{ page.title }}",
