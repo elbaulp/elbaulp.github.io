@@ -1,7 +1,7 @@
 ---
 layout: search
 title: "Buscar"
-excerpt: "Busca contenido en el blog"
+description: "Busca contenido en el blog"
 sitemap: false
 ---
 

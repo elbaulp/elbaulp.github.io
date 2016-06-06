@@ -2,7 +2,7 @@
 id: 509
 title: Sección de descargas
 
-layout: page
+layout: minimal
 guid: http://elbauldelprogramador.org/?page_id=509
 if_page_sidebar:
   - 0

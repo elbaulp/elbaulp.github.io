@@ -1,9 +1,9 @@
 ---
 id: 449
 title: Manuales gratuítos
-layout: page
+layout: minimal
 tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
-excerpt: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
+description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
 image:
   thumb: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
 ---

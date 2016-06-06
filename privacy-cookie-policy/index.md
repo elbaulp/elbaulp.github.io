@@ -1,7 +1,7 @@
 ---
 id: 2428
 title: Privacy and Cookie Policy
-layout: page
+layout: minimal
 guid: https://elbauldelprogramador.com/?page_id=2428
 ---
 <script async type="text/javascript" src="http://auditor.optanon.com/cookie-policy/elbauldelprogramador.com.js"></script>

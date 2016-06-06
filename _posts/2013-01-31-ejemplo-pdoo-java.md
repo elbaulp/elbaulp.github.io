@@ -2,7 +2,7 @@
 id: 497
 title: C++ y Java
 
-layout: page
+layout: minimal
 guid: http://elbauldelprogramador.org/?page_id=497
 if_page_sidebar:
   - 0

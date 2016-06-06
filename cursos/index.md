@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: minimal
 title: Cursos
-excerpt: "Colección de cursos escritos en el blog"
+description: "Colección de cursos escritos en el blog"
 search_omit: false
 tags: [cursos de programador, cursos de programación]
 ---
