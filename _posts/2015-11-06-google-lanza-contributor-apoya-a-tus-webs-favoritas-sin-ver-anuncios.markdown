@@ -6,10 +6,10 @@ categories:
 description:
 tags: []
 image:
-  feature:
-  thumb: contributorad.png
-  credit:
-  creditlink:
+
+image: contributorad.png
+
+  
 date: 2015-11-06T16:38:37+01:00
 main-class: 'dev'
 ---

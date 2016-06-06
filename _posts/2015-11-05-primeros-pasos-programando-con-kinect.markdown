@@ -6,10 +6,10 @@ categories:
 description: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
 tags: [programar kinect, programación kinect, tutorial kinect, aplicaciones kinect]
 image:
-  feature:
-  thumb: Primeros-Pasos-Programando-Con-Kinect.png
-  credit:
-  creditlink:
+
+image: Primeros-Pasos-Programando-Con-Kinect.png
+
+  
 date: 2015-11-05T19:30:26+01:00
 math: true
 main-class: 'dev'

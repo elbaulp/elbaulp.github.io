@@ -6,10 +6,10 @@ categories:
 description: "Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña."
 tags: [android, pdf, plugpdf, lector pdf android]
 image:
-  feature:
-  thumb: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
-  credit:
-  creditlink:
+
+image: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
+
+  
 date: 2015-07-07T17:38:30+02:00
 author: jordi
 main-class: 'dev'

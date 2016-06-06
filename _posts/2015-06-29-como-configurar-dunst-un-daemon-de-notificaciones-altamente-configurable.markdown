@@ -6,10 +6,10 @@ categories:
 description: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con DWM."
 tags: [dunst, notify-send, notificaciones, dwm]
 image:
-  feature:
-  thumb: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
-  credit:
-  creditlink:
+
+image: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
+
+  
 date: 2015-06-29T18:43:06+02:00
 main-class: 'dev'
 ---

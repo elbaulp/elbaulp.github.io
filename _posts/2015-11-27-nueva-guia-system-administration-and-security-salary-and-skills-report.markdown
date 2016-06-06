@@ -6,10 +6,10 @@ categories:
 description: "This kit will tell you what you need to know to earn more in system administration and security. Diverse and rapidly changing, network administration and security is the backbone of the 21st century workplace. What are the essential skills of the modern sysadmin? Does it pay to specialize, or go polyglot? Which tech is the overwhelming top pick in the world of configuration management?"
 tags: [guia gratuita, ebook , libros gratuitos]
 image:
-  feature:
-  thumb: Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg
-  credit:
-  creditlink:
+
+image: Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg
+
+  
 date: 2015-11-27T08:55:00+00:00
 main-class: 'dev'
 ---

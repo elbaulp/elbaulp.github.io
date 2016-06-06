@@ -8,10 +8,10 @@ description: "¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documen
 En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo lector y visor de documentos PDF, totalmente funcional, que incluye una barra de navegación con todo lo siguiente:"
 tags: [android, pdf, plugpdf, lector pdf android]
 image:
-  feature:
-  thumb: Lector PDF Android con barra de navegación.jpg
-  credit:
-  creditlink:
+
+image: Lector PDF Android con barra de navegación.jpg
+
+  
 date: 2015-07-06T19:00:00+00:00
 author: jordi
 main-class: 'dev'

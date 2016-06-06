@@ -15,10 +15,10 @@ tags:
   - qr code
   - security now
 image:
-  feature:
-  thumb: 2012/12/qrbaulinnercorners2.png
-  credit:
-  creditlink:
+
+image: 2012/12/qrbaulinnercorners2.png
+
+  
 main-class: 'dev'
 ---
 > Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.

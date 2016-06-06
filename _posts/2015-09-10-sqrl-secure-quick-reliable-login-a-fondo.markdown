@@ -15,10 +15,10 @@ tags:
   - uso de usuario y contraseña
   - security now!
 image:
-  feature:
-  thumb: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png
-  credit:
-  creditlink:
+
+image: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png
+
+  
 date: 2015-09-10T11:08:37+02:00
 math: true
 main-class: 'dev'

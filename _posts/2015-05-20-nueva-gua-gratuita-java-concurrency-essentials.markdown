@@ -10,10 +10,10 @@ categories:
 description: "Delve into the world of Java concurrency with this compact guide that discusses everything around concurrency and synchronization!"
 tags: [java, manuales, guias, descargas]
 image:
-  feature:
-  thumb:
-  credit:
-  creditlink:
+
+image:
+
+  
 date: 2015-05-20T16:07:56+02:00
 main-class: 'dev'
 ---

@@ -6,10 +6,10 @@ categories:
 description: "Reccientemente hemos cerrado un acuerdo con Oja.la, plataforma de educación digital, con mentores personales y más de 320 cursos sobre desarrollo en Android, para ofrecerte, por ser lector de El Baúl del Programador, un descuento del 50% durante los próximos 5 días para cualquier curso elegido."
 tags: []
 image:
-  feature:
-  thumb:
-  credit:
-  creditlink:
+
+image:
+
+  
 date: 2015-09-30T16:38:44+02:00
 main-class: 'dev'
 ---
