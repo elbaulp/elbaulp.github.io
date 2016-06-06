@@ -4,8 +4,7 @@ title: Manuales gratuítos
 layout: minimal
 tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
 description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
-image:
-  thumb: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
+image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
 ---
 En esta sección iré poniendo las mejores manuales gratuítos referidos a tecnología, Internet, redes, productividad, uso de software y mucho más. El catálogo completo está disponible en [esta página.][1]
 

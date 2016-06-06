@@ -34,7 +34,6 @@ En el caso del problema de la mochila, se implementaría de la siguiente forma:
 3. Ahora tenemos dos opciones: si el siguiente objeto ya no cabe completo en la mochila podemos quedarnos con una fracción de él (obteniendo un beneficio igual a $$(pesototal - pesoactual)/pesoobjeto$$) o no meter ningún objeto más en la mochila. La primera opción se la conoce como _mochila fraccional_ y la segunda, como _mochila 0/1_.
 
 ```cpp
-
 list<float> Mochila (int lim_peso, list<Objeto> & objetos) {
     list<float> sol;
     int peso_actual = 0;
