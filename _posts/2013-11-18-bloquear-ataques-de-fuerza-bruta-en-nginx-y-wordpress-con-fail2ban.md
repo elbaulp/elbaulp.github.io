@@ -11,7 +11,7 @@ tags:
   - fail2ban fuerza bruta
   - fail2ban nginx
   - fail2ban wordpress
-image: /assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
+image: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
 description: |
   <figure>
     <a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban" alt="Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban" /></a>

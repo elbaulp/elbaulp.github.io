@@ -15,7 +15,7 @@ tags:
   - tracking
 author: luzila
 
-image: /assets/img/2014/10/draft.jpg
+image: 2014/10/draft.jpg
 modified: 2015-12-24T17:37
 description: "El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google."

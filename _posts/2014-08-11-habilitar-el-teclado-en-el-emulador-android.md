@@ -11,7 +11,7 @@ tags:
   - habilitar el teclado en el emulador Android
   - hw.dPad=yes
   - hw.keyboard=yes
-image: /assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png
+image: 2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png
 description: |
   <figure>
     <a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="Cómo habilitar el teclado en el emulador Android" alt="Cómo habilitar el teclado en el emulador Android" /></a>

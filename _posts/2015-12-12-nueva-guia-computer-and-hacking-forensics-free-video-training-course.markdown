@@ -6,7 +6,7 @@ modified:
 categories:
 description: "Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks."
 tags: []
-image: /assets/img/hotlink-ok/Computer-and-Hacking-Forensics---FREE-Video-Training-Course.jpg
+image: hotlink-ok/Computer-and-Hacking-Forensics---FREE-Video-Training-Course.jpg
 main-class: 'dev'
 ---
 

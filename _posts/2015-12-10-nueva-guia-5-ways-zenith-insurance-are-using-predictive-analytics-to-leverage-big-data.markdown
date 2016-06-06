@@ -5,7 +5,7 @@ modified:
 categories:
 description: "This exclusive interview looks at the ways in which predictive analytics will affect five key areas of the insurance industry."
 tags: []
-image: /assets/img/hotlink-ok/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData.jpg
+image: hotlink-ok/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData.jpg
 date: 2015-12-10T21:04:29+01:00
 main-class: 'dev'
 ---

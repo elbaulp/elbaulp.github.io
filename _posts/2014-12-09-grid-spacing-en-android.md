@@ -17,7 +17,7 @@ tags:
   - gridlayout
   - spacer android
   - spacer linearlayout
-image: /assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png
+image: 2014/12/Grid-Spacing-en-Android-take_2_1.png
 description: |
   <figure>
     <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

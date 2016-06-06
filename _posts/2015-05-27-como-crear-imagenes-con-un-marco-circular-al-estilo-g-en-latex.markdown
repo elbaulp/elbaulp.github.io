@@ -12,7 +12,7 @@ image:
   creditlink:
 date: 2015-05-27T12:28:05+02:00
 math: true
-image: /assets/img/2013/05/latex_logo.png
+image: 2013/05/latex_logo.png
 main-class: 'dev'
 ---
 

@@ -13,7 +13,7 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
-image: /assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*. El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:"
 modified: 2015-12-22T10:44:00+00:00
 main-class: 'dev'

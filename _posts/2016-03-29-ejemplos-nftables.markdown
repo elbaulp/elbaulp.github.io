@@ -6,7 +6,7 @@ modified:
 categories:
 description: "nftables  es un  nuevo  framework  que  sustituye  al antiguo  iptables. Este  nuevo  software aún  no está  desarrollado  al 100% de sus funciones, tenemos  la problemática de la implantación,   que aunque  se incluye desde el kernel  3.13, las personas  aún  no están acostumbradas a su uso y por tanto  siguen usando  iptables  o en su defecto la nomenclatura  de sus reglas."
 tags: [ejemplos nftables, introduccion Netfilter, tutorial nftables, ejemplos nftables iptables, comparacion nftables iptables, diferencias nftables iptables]
-image: /assets/img/ejemplos-nftables.png
+image: ejemplos-nftables.png
 main-class: 'dev'
 ---
 

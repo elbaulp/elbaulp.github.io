@@ -4,7 +4,7 @@ title: Los 10 Artículos Más Visitados De 2015
 date: 2015-12-15T08:17:53+01:00
 modified:
 description: "Se nos va otro año, estos son los 10 artículos que más os han gustado"
-image: /assets/img/los10articulosmasvisitados2015.png
+image: los10articulosmasvisitados2015.png
 main-class: 'dev'
 ---
 {% include _toc.html %}

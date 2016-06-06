@@ -6,7 +6,7 @@ modified:
 categories:
 description: "Enunciado: se debe identificar mediante interfaz vocal un punto cardinal (Norte, Sur, Este y Oeste) y el porcentaje de error (cantidad entera) en la detección del punto, solo el número, por ejemplo “Norte diez”. Una vez reconocido el patrón vocal se debe mostrar una brújula para que el usuario se oriente en la dirección indicada, cuando lo realice se le debe indicar que ya se ha conseguido."
 tags: [brujula android, crear brujula android, programar brujula android, reconocimiento de voz android, tutorial ASR android]
-image: /assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png
+image: hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png
 main-class: 'dev'
 ---
 

@@ -12,7 +12,7 @@ tags:
   - modulos python
   - python C API
   - structs c
-image: /assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "Hace algún tiempo estaba desarrollando un módulo para python, con el cual aprendí bastante y sirvió para crear una serie de artículos sobre el tema (Crear un módulo para python con la Python C API). Uno de los problemas encontrados fue cómo conseguir pasar un array de structs desde C a Python, para resolver la duda pregunté, cómo no, en stackoverflow. Al final terminé respondiéndome a mí mismo, pero aprendí bastante, veamos cómo hacerlo."
 modified: 2015-12-22T10:55:00+00:00
 main-class: 'dev'

@@ -21,7 +21,7 @@ tags:
 date: 2015-12-13T19:10:12+01:00
 modified: 2015-12-13T19:10:12+01:00
 description: "Un mini tutorial y lista extensa de comandos git"
-image: /assets/img/2013/03/git-logo.png
+image: 2013/03/git-logo.png
 main-class: 'dev'
 ---
 <figure>

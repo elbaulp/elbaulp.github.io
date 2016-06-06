@@ -6,7 +6,7 @@ modified:
 categories:
 description: "Learn how to stop Windows 10 from exporting your personal data. Windows 10 is the fastest, most efficient and powerful Operating System Microsoft has ever created. Fast and responsive, this software is being continually being refined via your user feedback and telemetry."
 tags: []
-image: /assets/img/hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
+image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
 main-class: 'dev'
 ---
 

@@ -12,7 +12,7 @@ tags:
   - front controller
   - nginx
   - patrones de diseño
-image: /assets/img/https://img.youtube.com/vi/eYoDqz29qSA/0.jpg
+image: https://img.youtube.com/vi/eYoDqz29qSA/0.jpg
 description: "La semana pasada, en el Curso de Programación PHP guay, desarrollamos una agenda PHP basada en archivos CSV. El ejercicio era tan sencillo que no utilizamos ningún framework de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito."
 modified: 2015-12-24T17:40
 main-class: 'dev'

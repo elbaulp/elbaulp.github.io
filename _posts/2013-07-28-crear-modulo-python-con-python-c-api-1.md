@@ -13,7 +13,7 @@ tags:
   - reference count python
   - tutorial crear modulos python
   - tutorial python c api
-image: /assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
+image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que podamos importar en nuestra aplicación *python*. Al finalizar, tendremos creado un módulo llamado **herramientasRed** con el que podremos obtener la dirección ip de un dominio, al igual que hicimos en el artículo NDK-gdb – Depurar aplicaciones en el NKD de Android, para ello será necesario usar la Python C API."
 modified: 2015-12-22T10:44:00+00:00
 main-class: 'dev'

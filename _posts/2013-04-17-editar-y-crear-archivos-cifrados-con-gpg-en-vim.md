@@ -14,7 +14,7 @@ tags:
   - editor archivos gpg
   - gpg vim plugin
   - vim plugin
-image: /assets/img/2013/04/GnuPG-Logo.png
+image: 2013/04/GnuPG-Logo.png
 description: "Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo **gpg** (*GNU Privacy Guard*)."
 main-class: 'dev'
 ---

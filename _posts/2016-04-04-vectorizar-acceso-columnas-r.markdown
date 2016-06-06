@@ -5,7 +5,7 @@ modified:
 categories:
 description: "En unas prácticas de Aprendizaje automático para la facultad en las que usamos R. Me surgió un problema intentando vectorizar el acceso a un Data set por columnas, así que pregunté en StackOVerflow."
 tags: [vectorizar en r, vectorizar codigo, mejorar codigo en r, optimizar codigo en R, vectorizar data set R, vectorizar columnas en R]
-image: /assets/img/vectorizar-acceso-columnas-r.png
+image: vectorizar-acceso-columnas-r.png
 date: 2016-04-04T20:56:12+02:00
 main-class: 'dev'
 ---

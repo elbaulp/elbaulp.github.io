@@ -10,7 +10,7 @@ categories:
 tags:
   - curso html5
   - etiquetas html5
-image: /assets/img/2013/11/Introducción-a-HTML51.png
+image: 2013/11/Introducción-a-HTML51.png
 modified: 2015-12-30T11:00
 description: |
   <figure>

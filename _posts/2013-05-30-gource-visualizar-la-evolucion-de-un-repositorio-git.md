@@ -14,7 +14,7 @@ tags:
   - grabar video con gource
   - tutorial gource
   - gource tutorial
-image: /assets/img/2013/05/gourceGit-1024x804.png
+image: 2013/05/gourceGit-1024x804.png
 description: "Tutorial de gource y ejemplo de uso"
 modified: 2015-12-13T19:30:12+01:00
 main-class: 'dev'

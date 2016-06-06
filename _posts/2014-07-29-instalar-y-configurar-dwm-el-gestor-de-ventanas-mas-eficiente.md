@@ -16,7 +16,7 @@ tags:
   - que es dwm
   - statuscolor dwm 6.1
   - tiling desktop
-image: /assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
+image: 2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
 modified: 2015-12-24T18:00
 description: |
   <figure>

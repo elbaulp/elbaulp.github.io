@@ -5,7 +5,7 @@ modified:
 categories:
 description:
 tags: []
-image: /assets/img/hotlink-ok/Bootstrap-Programming-Cookbook1.jpg
+image: hotlink-ok/Bootstrap-Programming-Cookbook1.jpg
 date: 2016-01-04T18:20:11+01:00
 description: |
   <figure>

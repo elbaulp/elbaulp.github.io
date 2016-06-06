@@ -5,7 +5,7 @@ modified:
 categories:
 description: "Haciendo una práctica de Aprendijaze Automático, en concreto implementando Gradiente Descendente Estocástico (Stochastic Gradient Descent) o SGD para Regresión Logística e intentando hacer el código lo más eficiente posible (Y eso en R significa evitar el uso de for a toda costa) me encontré con la siguiente situación:"
 tags: [tutorial R, variables globales R, acceder variable en funcion R, aprendijaze automático, etsiit R]
-image: /assets/img/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png
+image: Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png
 date: 2016-04-22T08:40:33+02:00
 main-class: 'dev'
 ---
