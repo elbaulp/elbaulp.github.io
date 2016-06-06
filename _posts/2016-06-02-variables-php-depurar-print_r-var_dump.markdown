@@ -13,7 +13,6 @@ tags:
 - metodologia
 - frontend
 categories:
-introduction: 'Escrevendo CSS sem perder a sanidade. Com essa introdução, Rico St. Cruz o criador chama a atenção de todos sobre uma metodologia melhor para se escrever CSS.'
 main-class: 'dev'
 ---
 

@@ -21,7 +21,7 @@ main-class: 'dev'
                             </h2>
                         </a>
                         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                            <p class="description">{{ post.introduction }}</p>
+                            <p class="description">{% if post.introduction %}{{ post.introduction }}{% else %}{{ post.description }}{% endif %}</p>
                         </a>
                         <div class="tags">
                             {% for tag in post.tags %}
