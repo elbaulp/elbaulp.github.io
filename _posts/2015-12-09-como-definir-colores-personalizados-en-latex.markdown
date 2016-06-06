@@ -13,7 +13,7 @@ description: |
   </figure>  
 
   En este artículo veremos cómo podemos definir colores personalizados en LateX usando el paquete xcolor.
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

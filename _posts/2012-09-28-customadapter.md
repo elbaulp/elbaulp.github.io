@@ -21,7 +21,7 @@ tags:
   - listview setlistadapter español
   - manual android parcelable
   - simple adapter android ejemplo
-main-class: dev
+main-class: 'dev'
 ---
 Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3].
 

@@ -8,14 +8,13 @@ tags: [depurar en php, mostrar variables depurando php, mostrar variables legibl
 date: 2016-06-02T16:52:24+02:00
 image: /assets/img/como-mostrar-variables-php-depurar-print_r-var_dump.png
 main-class: 'dev'
-color: '#2DA0C3'
 tags:
 - css
 - metodologia
 - frontend
 categories:
 introduction: 'Escrevendo CSS sem perder a sanidade. Com essa introdução, Rico St. Cruz o criador chama a atenção de todos sobre uma metodologia melhor para se escrever CSS.'
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

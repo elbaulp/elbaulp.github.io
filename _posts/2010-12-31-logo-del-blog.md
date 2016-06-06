@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - noticias
-main-class: dev
+main-class: 'dev'
 ---
 He estado buscando logos para el blog, y me gustaría que votárais cual de estos dos os gusta más:
 

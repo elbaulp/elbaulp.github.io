@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - noticias
-main-class: dev
+main-class: 'dev'
 ---
 Si queires saber más sobre RockMelt, haz clic [aqui][1]
 

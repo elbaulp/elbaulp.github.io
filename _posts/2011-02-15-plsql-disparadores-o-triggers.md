@@ -23,7 +23,7 @@ tags:
   - algoritmos trigger
   - como hacer un trigger
   - trigger de actualizacion
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icosql">
 </div>

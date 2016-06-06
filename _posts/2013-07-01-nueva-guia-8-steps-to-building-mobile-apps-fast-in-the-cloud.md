@@ -17,7 +17,7 @@ tags:
   - mobile applications
   - mobile computing
   - mobile design
-main-class: dev
+main-class: 'dev'
 ---
 [<img src="/assets/img/2013/07/8-Steps-to-Building-Mobile-Apps-Fast-in-the-Cloud-300x1431.png" alt="8 Steps to Building Mobile Apps Fast in the Cloud" width="300" height="143" class="alignleft size-medium wp-image-1706" />][1]
 

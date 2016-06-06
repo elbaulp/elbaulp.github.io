@@ -12,7 +12,7 @@ image:
   creditlink:
 date: 2015-07-07T17:38:30+02:00
 author: jordi
-main-class: dev
+main-class: 'dev'
 ---
 
 {% include _toc.html %}

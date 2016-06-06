@@ -16,7 +16,7 @@ blogger_author:
   
 categories:
   - Sin categoría
-main-class: dev
+main-class: 'dev'
 ---
 [![A Newbie's Getting Started Guide to Linux][1]][2]
 

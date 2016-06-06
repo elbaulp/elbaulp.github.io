@@ -26,7 +26,7 @@ share_count:
 categories:
   - cursos
   - SO
-main-class: dev
+main-class: 'dev'
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make49/prgm.cgi"><img style="border:none;" width="202" height="262" src="https://lh3.googleusercontent.com/-V-wgDMAGwqA/TvUPwxgCeGI/AAAAAAAAB9U/7-7AjtCe7AU/s626/hackintosh1.jpg" title="Think Different: How to Build Your Own Hackintosh" alt="Think Different: How to Build Your Own Hackintosh" /></a>

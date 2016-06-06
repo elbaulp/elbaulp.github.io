@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - Sin categoría
-main-class: dev
+main-class: 'dev'
 ---
 <p lang="en">
   There is a new web browser in town – the socially integrated, user focused <a href="http://www.rockmelt.com/" target="_blank">RockMelt</a>.

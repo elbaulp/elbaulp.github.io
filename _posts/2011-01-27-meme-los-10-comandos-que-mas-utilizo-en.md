@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - meme
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icosh">
 </div>

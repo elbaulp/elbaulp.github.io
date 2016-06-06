@@ -13,7 +13,7 @@ tags:
   - botones sociales jetpack
   - botones sociales para wordpress
   - botones sociales wordpress
-main-class: dev
+main-class: 'dev'
 ---
 <img src="/assets/img/2013/06/jetpack-300x222.png" alt="Colocar los botones sociales de jetpack al principio del artículo en WordPress" width="300" height="222" class="thumbnail alignleft size-medium wp-image-1699" />
 

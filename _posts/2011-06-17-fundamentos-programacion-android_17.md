@@ -28,7 +28,7 @@ tags:
   - Hilos
   - Procesos
   - Tareas
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icodroid">
 </div>

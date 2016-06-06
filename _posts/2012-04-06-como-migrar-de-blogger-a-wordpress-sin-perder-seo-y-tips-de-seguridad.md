@@ -15,7 +15,7 @@ tags:
   - migrar blogger wordpress
   - wordpress
 format: status
-main-class: dev
+main-class: 'dev'
 ---
   * [Importar entradas y comentários][1]
   * [Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress][2]

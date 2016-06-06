@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - cursos
   - python
-main-class: dev
+main-class: 'dev'
 ---
 Gracias a un enlace que publicó [Yunn][1] en [Picotea][2], he descubierto estos [interesantes 6 libros][3] para la gente que quiera aprender a programar en python, que es uno de los lenguajes escogidos por la mayoria de personas que quieren iniciarse en los lenguajes de programación.
 

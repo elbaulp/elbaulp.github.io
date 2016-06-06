@@ -12,7 +12,7 @@ tags:
   - feh
   - trayer
   - xmonad
-main-class: dev
+main-class: 'dev'
 ---
 A lo largo de los años he probado varios gestores de ventanas, como fluxbox, [openbox][1] y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.
 

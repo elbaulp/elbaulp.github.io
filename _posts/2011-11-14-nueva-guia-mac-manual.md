@@ -25,7 +25,7 @@ share_count:
   - 1
 categories:
   - cursos
-main-class: dev
+main-class: 'dev'
 ---
 [![The Mac Manual][1]][2]  
   

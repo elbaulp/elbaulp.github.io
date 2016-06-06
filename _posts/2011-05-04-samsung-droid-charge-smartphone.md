@@ -22,7 +22,7 @@ categories:
   - curiosidades
 tags:
   - curso android pdf
-main-class: dev
+main-class: 'dev'
 ---
 <div class="iconews">
 </div>

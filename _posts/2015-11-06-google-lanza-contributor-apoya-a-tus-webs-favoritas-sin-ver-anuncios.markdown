@@ -11,7 +11,7 @@ image:
   credit:
   creditlink:
 date: 2015-11-06T16:38:37+01:00
-main-class: dev
+main-class: 'dev'
 ---
 
 {% include _toc.html %}

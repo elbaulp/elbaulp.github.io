@@ -19,7 +19,7 @@ description: |
   </figure>
 
   Días atrás hablamos sobre DWM y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
-main-class: dev
+main-class: 'dev'
 ---
 Días atrás hablamos [sobre DWM][1] y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
 

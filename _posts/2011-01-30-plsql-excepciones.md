@@ -21,7 +21,7 @@ categories:
   - BaseDeDatos
 tags:
   - ejecutar excepciones en sql
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icosql">
 </div>

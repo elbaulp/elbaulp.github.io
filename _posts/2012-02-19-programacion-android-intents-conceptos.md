@@ -31,7 +31,7 @@ tags:
   - curso android pdf
   - ejemplo intentfilter implicito
   - uso de intents android
-main-class: dev
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

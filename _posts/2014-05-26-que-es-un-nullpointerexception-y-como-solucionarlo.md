@@ -26,7 +26,7 @@ description: |
   El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario ziggy, que preguntaba ¿Qué es un NullPointerException y cómo se puede solucionar?. La respuesta es del usuario vincent-ramdhanie
 
   Cuando se declara una variable referencia (Un objeto), realmente se está creando un puntero a un objeto. Consideremos el siguiente código que declara un entero con el tipo de dato primitivo:
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

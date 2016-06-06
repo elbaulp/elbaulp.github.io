@@ -21,7 +21,7 @@ categories:
   - android
 tags:
   - curso android pdf
-main-class: dev
+main-class: 'dev'
 ---
 Algo que no pensé al empezar a traducir la [documentación de android][1] era si en su licencia estaba permitido usar el contenido para traducir o cualquier otra cosa.
 

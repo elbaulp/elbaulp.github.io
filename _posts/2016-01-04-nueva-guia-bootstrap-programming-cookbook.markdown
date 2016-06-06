@@ -13,7 +13,7 @@ description: |
   </figure>
 
   Kick-start your Bootstrap projects with these hot recipes!
-main-class: dev
+main-class: 'dev'
 ---
 <figure>
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img src="/assets/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>

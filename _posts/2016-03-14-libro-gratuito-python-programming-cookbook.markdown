@@ -7,7 +7,7 @@ categories:
 description: "Kick-start your Python projects with these hot recipes!"
 tags: [guias Gratuita, descargar guias python, manuales de python, curso de python, Cookbook python]
 image: /assets/img/Python-Programming-Cookbook.jpg
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

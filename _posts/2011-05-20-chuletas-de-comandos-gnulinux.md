@@ -21,7 +21,7 @@ categories:
   - linux
   - script
   - SO
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icoso">
 </div>

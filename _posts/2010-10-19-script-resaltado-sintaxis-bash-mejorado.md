@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - linux
   - script
-main-class: dev
+main-class: 'dev'
 ---
 Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:
 

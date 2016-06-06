@@ -23,7 +23,7 @@ categories:
   - seguridad
 tags:
   - ettercap en español
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icoso">
 </div>

@@ -12,7 +12,7 @@ image:
   thumb:
   credit:
   creditlink:
-main-class: dev
+main-class: 'dev'
 ---
 
 > Éste artículo es una colaboración de _Alejandro Blanco_, Director de desarrollo en [smsup.es](http://smsup.es)

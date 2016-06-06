@@ -27,7 +27,7 @@ categories:
   - hackathon
   - noticias
   - opensource
-main-class: dev
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://planeta-irislibre.rediris.es/assets/img/oslugr.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="87" width="200" src="http://planeta-irislibre.rediris.es/assets/img/oslugr.png" /></a>

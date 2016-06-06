@@ -27,7 +27,7 @@ description: |
 
   En este tutorial, curso o como queráis llamarlo os voy a enseñar lo básico que debéis saber para hacer vuestros documentos en <strong>LaTeX</strong>! Como estamos en un blog sobre informática vamos a orientarlo un poco hacia la informática.
 modified: 2015-12-22T17:36
-main-class: dev
+main-class: 'dev'
 ---
 <figure>
   <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
@@ -238,7 +238,7 @@ Las distintas estructuras que hay en el fichero son:
 
 Con el 1. que le pasamos a enumerate hacemos que nuestra lista sea 1. 2. 3. etc.
 
-Vamos a cambiar de sección, para ello usamos la orden `section`, como hemos visto antes, si además queremos que nuestra nueva sección empiece en una nueva página usamos el siguiente comando
+Vamos a cambiar de sección, para ello usamos la orden `section`, como hemos visto antes, si además queremos que nuestra nueva secci��n empiece en una nueva página usamos el siguiente comando
 
 ```latex
 \newpage

@@ -27,7 +27,7 @@ categories:
   - aplicaciones
   - cursos
   - internet
-main-class: dev
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s1600/LungoJS.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s400/LungoJS.png" /></a>

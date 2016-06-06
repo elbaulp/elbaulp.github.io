@@ -7,7 +7,7 @@ description: Delve into the world of Spring Data Programming with this compact c
 tags: [guias gratuitas de hadoop, libros gratuitos hadoop, tutoriales sobre hadoop, descargar libros hadoop, descargar guias hadoop, descargar apache hadoop cookbook, libros sobre apache hadoop, descargar tutoriales apache hadoop]
 image: /assets/img/Apache-Hadoop-Cookbook2.jpg
 date: 2016-05-27T12:08:44+02:00
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

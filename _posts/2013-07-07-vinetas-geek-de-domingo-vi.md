@@ -16,7 +16,7 @@ tags:
   - humor informatico
   - viñetas humor
 format: gallery
-main-class: dev
+main-class: 'dev'
 ---
 Disfrutad de lo que queda de fin de semana!
 

@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - noticias
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icoCalen">
 </div>

@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - linux
   - noticias
-main-class: dev
+main-class: 'dev'
 ---
 Hace pocos días se lanzó GNOME Shell 2.91.92, y ahora ya se sabe que la versión 3 de Gnome saldrá el día 4 de abril, espero con ganas la llegada de este nuevo entorno de escritorio. Esta notícia la he leido en MuyLinux, a la cual se puede acceder desde este enlace: [GNOME 3 estará disponible el 4 de abril.][1]
 

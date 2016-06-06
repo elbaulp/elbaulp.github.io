@@ -22,7 +22,7 @@ categories:
   - curiosidades
   - How To
   - linux
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icoso">
 </div>

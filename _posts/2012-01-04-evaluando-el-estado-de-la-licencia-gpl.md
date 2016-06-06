@@ -26,7 +26,7 @@ share_count:
 categories:
   - noticias
   - opensource
-main-class: dev
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png" style="border:none;" /></a>

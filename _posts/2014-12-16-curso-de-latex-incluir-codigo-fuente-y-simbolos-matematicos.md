@@ -27,7 +27,7 @@ description: |
 
   Continuando por donde lo dejamos en el último artículo, hoy veremos cómo incluir código fuente en el documento.
 modified: 2015-12-22T17:36
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

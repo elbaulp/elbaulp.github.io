@@ -16,7 +16,7 @@ tags:
   - smtp
   - spoofing facebook
 format: aside
-main-class: dev
+main-class: 'dev'
 ---
 Leyendo el blog de <a href="http://www.elladodelmal.com/" target="_blank">Chema Alonso</a> me he encontrado con una entrada interesante que, aunque no he logrado realizarla al 100% quiero compartirla con vosotros para que lo intente quien quiera.
 

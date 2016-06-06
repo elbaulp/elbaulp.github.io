@@ -11,7 +11,7 @@ image:
   credit:
   creditlink:
 date: 2015-09-30T16:38:44+02:00
-main-class: dev
+main-class: 'dev'
 ---
 Recientemente hemos cerrado un acuerdo con __Oja.la__, plataforma de educación digital, con mentores personales y más de __320 cursos__ sobre desarrollo en Android, para ofrecerte, por ser lector de El Baúl del Programador, un __descuento del 50%__ durante los próximos __5 días__ para cualquier curso elegido.
 

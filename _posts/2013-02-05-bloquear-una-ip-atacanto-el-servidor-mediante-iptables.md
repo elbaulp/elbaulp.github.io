@@ -18,7 +18,7 @@ tags:
   - iptables
   - iptables con servidor debian
   - politicas con iptables firewall
-main-class: dev
+main-class: 'dev'
 ---
 <img src="/assets/img/2013/02/Applic-Firewall-icon.png" alt="Applic-Firewall-icon" width="256" height="256" class="thumbnail alignleft size-full wp-image-1321" />
 

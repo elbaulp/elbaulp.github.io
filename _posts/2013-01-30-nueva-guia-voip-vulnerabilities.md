@@ -10,7 +10,7 @@ categories:
   - noticias
 tags:
   - VoIP Vulnerabilities
-main-class: dev
+main-class: 'dev'
 ---
 [  
 <img class="size-full wp-image-1285 alignleft" alt="VoIP Vulnerabilities" src="/assets/img/2013/01/voip-vulnerabilities.png" width="285" height="362" />  

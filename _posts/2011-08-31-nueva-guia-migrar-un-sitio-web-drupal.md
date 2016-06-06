@@ -17,7 +17,7 @@ blogger_author:
 categories:
   - cursos
   - internet
-main-class: dev
+main-class: 'dev'
 ---
 [![Migrating a Web Site to Drupal][1]][2]
 

@@ -19,7 +19,7 @@ description: |
 
   Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en *superuser*. El usuario flammable preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:
 modified: 2015-12-24T17:37
-main-class: dev
+main-class: 'dev'
 ---
 <figure>
   <a href="/assets/img/2012/07/sh.png"><img src="/assets/img/2012/07/sh.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

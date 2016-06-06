@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - internet
-main-class: dev
+main-class: 'dev'
 ---
 <div class="icoso">
 </div>

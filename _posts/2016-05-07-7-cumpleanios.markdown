@@ -7,7 +7,7 @@ description: "Hoy el blog cumple años, 7 para ser exáctos, echamos la vista at
 tags: []
 image: /assets/img/7-cumpleanios0.png
 date: 2016-05-07T11:55:51+02:00
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

@@ -8,7 +8,7 @@ description: |
   Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad no lo estamos borrando físicamente. Realmente se libera el espacio que tenía ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado. Hoy veremos cómo es posible recuperar datos borrados de un disco duro.
 tags: [autopsy, análisis forense, informática forense, recuperar fotos borradas, recuperar ficheros borrados, he borrado mi disco duro, tutorial autopsy, recuperar ficheros con autopsy, autopsy tutorial, restore deleted files with autopsy, restore deleted image with autopsy, como recuperar información de un disco duro]
 image: /assets/img/hotlink-ok/Como-Recuperar-Datos-Borrados-De-Un-Disco.png
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

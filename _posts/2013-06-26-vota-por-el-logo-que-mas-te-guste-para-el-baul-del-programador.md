@@ -7,7 +7,7 @@ guid: https://elbauldelprogramador.com/?p=1695
 permalink: /vota-por-el-logo-que-mas-te-guste-para-el-baul-del-programador/
 categories:
   - offtopic
-main-class: dev
+main-class: 'dev'
 ---
 Estos días he estado liado aprendiendo a usar *inkscape* para rediseñar el logo de la web. Hoy lo he terminado y me gustaría contar con vuestra opinión para decidirme por un diseño. Para ello he creado esta encuesta en la que es posible seleccionar más de una respuesta en caso de que os gusten varios diseños.
 

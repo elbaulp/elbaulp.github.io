@@ -12,7 +12,7 @@ tags:
   - libros seguridad
   - manuales seguridad
   - seguridad de la información
-main-class: dev
+main-class: 'dev'
 ---
 [<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="259" class="alignleft size-full wp-image-1497" />][1]
 

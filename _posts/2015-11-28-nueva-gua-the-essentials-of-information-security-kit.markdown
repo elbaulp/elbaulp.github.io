@@ -11,7 +11,7 @@ image:
   thumb: /hotlink-ok/The-Essentials-of-Information-Security-Kit.jpg
   credit:
   creditlink:
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

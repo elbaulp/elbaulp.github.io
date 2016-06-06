@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - internet
   - noticias
-main-class: dev
+main-class: 'dev'
 ---
 <div class="iconews">
 </div>

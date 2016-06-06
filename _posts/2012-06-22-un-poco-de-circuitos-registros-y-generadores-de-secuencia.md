@@ -16,7 +16,7 @@ tags:
   - logic works
   - registros
 format: video
-main-class: dev
+main-class: 'dev'
 ---
 Repasando hoy para un examen que tengo próximamente de TOC (Tecnología y Organización de Computadores) se me ha ocurrido grabar algunos de los ejercícios que estaba haciendo por si le son de interés a alguien.
 

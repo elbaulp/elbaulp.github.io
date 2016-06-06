@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
-main-class: dev
+main-class: 'dev'
 ---
 [![WAN Optimization for Today and Tomorrow][1]][2]
 

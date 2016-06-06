@@ -12,7 +12,7 @@ image:
   creditlink:
 date: 2015-06-25T18:50:48+02:00
 math: true
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

@@ -11,7 +11,7 @@ image:
   thumb: Veracryptlogo.png
   credit:
   creditlink:
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

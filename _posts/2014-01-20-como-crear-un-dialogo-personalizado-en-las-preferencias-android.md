@@ -23,7 +23,7 @@ description: |
 
   La primera tarea que se me asignó fue lograr que el diálogo para introducir la contraseña de usuario en las preferencias se mostrara vacío. Ya que al cifrar la contraseña para almacenarla en el diálogo se mostraba la contraseña cifrada (Con los típicos •••), lo cual podía ser algo desconcertante para el usuario, ya que no veía un número de • que correspondieran con la longitud de su contraseña, si no con la contraseña cifrada.
 image: /assets/img/2014/01/CrearDialogoAndroid.png
-main-class: dev
+main-class: 'dev'
 ---
 Este año estoy participando en el <a href="http://www.concursosoftwarelibre.org/1314/" title="CUSL" target="_blank">concurso universitario de software libre</a>, concretamente en el proyecto <a href="http://swadroid.wordpress.com/" title="Blog SWADroid" target="_blank">SWADroid</a>. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.
 

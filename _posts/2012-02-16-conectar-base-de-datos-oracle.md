@@ -36,7 +36,7 @@ tags:
   - conectar java con oracle
   - curso android pdf
   - integrar oracle en android
-main-class: dev
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img style="clear: left; float: left; margin-right: 1em; margin-bottom: 1em;" src="/assets/img/2013/07/iconoAndroid.png" alt="" border="0" />

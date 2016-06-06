@@ -28,7 +28,7 @@ categories:
   - SO
 tags:
   - como actualizar bios asus p5b
-main-class: dev
+main-class: 'dev'
 ---
 <div class="separator" style="float:left; margin-right:10px;">
   <img border="0" height="128" width="128" src="https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png" />

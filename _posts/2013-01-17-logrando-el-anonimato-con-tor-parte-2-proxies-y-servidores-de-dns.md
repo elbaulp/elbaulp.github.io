@@ -14,7 +14,7 @@ tags:
   - navegacion anonima
   - Tor
 author: luzila
-main-class: dev
+main-class: 'dev'
 ---
   * <a href="https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>
   * Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies
@@ -115,7 +115,7 @@ Hay algunos proxies disponibles que podríamos usar, pero la mayoría de las com
 
   * Privoxy no tiene pipelining para HTTP 1.1
   * Privoxy cachea los objetos más pedidos
-  * Privoxy necesita transferir la página entera para parsearla y mostrarla al usuario. Esto significa que la experiencia del usuario con Privoxy es mucho peor, debido a que el usuario debe esperar constantemente que los datos de la página web completa sean transferidos desde el servidor, antes de ser mostrados.
+  * Privoxy necesita transferir la página entera para parsearla y mostrarla al usuario. Esto significa que la experiencia del usuario con Privoxy es mucho peor, debido a que el usuario debe esperar constantemente que los datos de la p��gina web completa sean transferidos desde el servidor, antes de ser mostrados.
 
 Pero hay otra pregunta que debemos hacernos. ¿Por qué necesitamos incluso un proxy HTTP si podemos usar el proxy de Tor SOCKS desde el navegador? La respuesta es que generalmente el proxy SOCKS del navegador usa algunas variables de configuración default que no toleran Tor de la misma forma que Privoxy o Polipo pueden. Lo más sorprendente son los timeouts, que ocurren muy frecuentemente si usamos directamente el proxy SOCKS.
 

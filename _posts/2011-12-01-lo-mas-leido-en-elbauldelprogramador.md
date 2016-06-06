@@ -25,7 +25,7 @@ share_count:
   - 0
 categories:
   - noticias
-main-class: dev
+main-class: 'dev'
 ---
 Con esta entrada os dejo lo más leido del més en el blog, junto con algunos datos estadísticos:
 

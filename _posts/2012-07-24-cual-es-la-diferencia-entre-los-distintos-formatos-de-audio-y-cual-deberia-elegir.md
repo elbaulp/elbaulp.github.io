@@ -41,7 +41,7 @@ tags:
   - calidades de audio
   - formatos alac
 image: /assets/img/2012/07/original1.jpg
-main-class: dev
+main-class: 'dev'
 ---
 
 <figure>

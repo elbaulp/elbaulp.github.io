@@ -13,7 +13,7 @@ tags:
   - paridad
   - peso hamming
   - popcount
-main-class: dev
+main-class: 'dev'
 ---
 Hace un més aproximadamente terminó el plazo de entrega de la práctica que voy a hablar hoy, lo que me permite hablaros de la misma.
 

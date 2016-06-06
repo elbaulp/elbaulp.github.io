@@ -26,7 +26,7 @@ tags:
   - windows 8 lento
   - windows 8 se bloquea
   - windows 8 se traba
-main-class: dev
+main-class: 'dev'
 ---
 <img src="/assets/img/2013/02/Windows8problem.jpg" alt="Windows8problem" width="640" height="360" class="thumbnail aligncenter size-full wp-image-1331" />  
 Aunque llevo años sin usar Windows, hace poco una amiga me comentó que había comprado un portatil con Windows 8 e iba fatal, cada dos por tres se colgaba y ni siquiera se apabaga.

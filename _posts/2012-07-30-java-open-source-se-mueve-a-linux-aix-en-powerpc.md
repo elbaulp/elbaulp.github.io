@@ -16,7 +16,7 @@ tags:
   - Java Open Source
   - Linux
   - PowerPC
-main-class: dev
+main-class: 'dev'
 ---
 <img alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256" height="256" />
 
