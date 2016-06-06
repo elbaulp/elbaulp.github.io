@@ -26,6 +26,7 @@ share_count:
 categories:
   - cursos
   - internet
+main-class: dev
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>

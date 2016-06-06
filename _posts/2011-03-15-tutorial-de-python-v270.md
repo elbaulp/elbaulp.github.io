@@ -23,6 +23,7 @@ categories:
 tags:
   - curso python para principiantes
   - tutorial de python
+main-class: dev
 ---
 <div class="icopy">
 </div>

@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - linux
+main-class: dev
 ---
 Esta es mi primera entrada así que intentad ser amable conmigo.
 

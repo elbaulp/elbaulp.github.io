@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - BaseDeDatos
+main-class: dev
 ---
 <div class="icosql">
 </div>

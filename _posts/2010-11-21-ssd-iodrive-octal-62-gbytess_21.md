@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - Sin categoría
+main-class: dev
 ---
 <div lang="en">
   <strong>The company Fusion-io has shown in its latest development SuperComputing 2010 hardware: Octal ioDrive SSD has broken all records to date in terms of speed of data transfer in SSD. We talk about rates up to 6.2 Gbytes / s, ie a Blu-ray would be transferred within four seconds, for example. But not only that but the PCIe format drive is capable of delivering up to 1 million IOPS being the highest in the market today.</strong></p> 

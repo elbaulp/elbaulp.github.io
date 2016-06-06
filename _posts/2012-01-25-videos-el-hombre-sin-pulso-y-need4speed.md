@@ -27,6 +27,7 @@ categories:
   - curiosidades
   - offtopic
   - vídeo de la semana
+main-class: dev
 ---
 Como sabéis, de vez en cuando me gusta escribir algunos [post sobre vídeos][1] que me han gustado y creo que merecen la pena que sean compartidos para que los vea el mayor número de personas por su contenido
 

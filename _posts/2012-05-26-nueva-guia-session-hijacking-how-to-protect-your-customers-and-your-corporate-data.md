@@ -10,6 +10,7 @@ if_slider_image:
   - 
 categories:
   - cursos
+main-class: dev
 ---
 Firesheep is a Mozilla Firefox extension which was first released in Autumn 2010 in order to demonstrate the insecurity inherent in social media websites which encrypt their log-in pages with SSL, but revert to HTTP as soon as the user leaves the log-in page.
 

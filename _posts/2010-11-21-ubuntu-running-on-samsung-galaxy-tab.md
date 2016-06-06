@@ -21,6 +21,7 @@ categories:
   - Sin categoría
 tags:
   - xda
+main-class: dev
 ---
 <p lang="en">
   Android running on the iPhone is making great news these days. Now, someone from <a href="http://forum.xda-developers.com/showthread.php?t=836022" target="_blank">XDA-developers</a> forum has successfully installed Ubuntu on Samsung Galaxy Tab which originally runs Android. As latest Ubuntu version has touch support and Galaxy Tab’s hardware is OK for Ubuntu, the hack seems to be working well.

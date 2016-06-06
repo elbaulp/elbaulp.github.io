@@ -22,6 +22,7 @@ tags:
   - probar expresiones regulares
   - python
   - regexp
+main-class: dev
 ---
 En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).
 

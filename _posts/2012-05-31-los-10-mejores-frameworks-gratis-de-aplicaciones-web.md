@@ -34,6 +34,7 @@ tags:
   - tipos de frameworks
   - framework para desarrollo web
 format: aside
+main-class: dev
 ---
 Un framework de aplicaciones web es un tipo de framework que permite el desarrollo de sitios web dinámicos, web services (servicios web) y aplicaciones web. El propósito de este tipo de framework es permitir a los desarrolladores construir aplicaciones web y centrarse en los aspectos interesantes, aliviando la típica tarea repetitiva asociada con patrones comunes de desarrollo web. La mayoría de los frameworks de aplicaciones web proporcionan los tipos de funcionalidad básica común, tales como sistemas de templates (plantillas), manejo de sesiones de usuario, interfaces comunes con el disco o el almacenamiento en base de datos de contenido *cacheado*, y persistencia de datos. Normalmente, los frameworks de aplicación web además promueven la reutilización y conectividad de los componentes, así como la reutilización de código, y la implementación de bibliotecas para el acceso a base de datos.
 

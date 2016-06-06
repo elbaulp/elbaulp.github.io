@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - juegos
+main-class: dev
 ---
 Puedes encontrar más juegos para Linux [aquí][1].
 

@@ -22,6 +22,7 @@ categories:
   - internet
   - noticias
   - opensource
+main-class: dev
 ---
 [![Build Your Own WordPress Site Guide][1]][2]
 

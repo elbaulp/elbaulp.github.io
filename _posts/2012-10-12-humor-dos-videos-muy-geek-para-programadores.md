@@ -12,6 +12,7 @@ tags:
   - what is your programming language
   - write in c
 format: video
+main-class: dev
 ---
 Navegando por la red he encontrado dos vídeos curiosos y graciosos, que comparto con vosotros este día de fiesta Nacional en España.
 

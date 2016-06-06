@@ -27,6 +27,7 @@ tags:
   - sentencia create
   - sentencias dml y ddl
   - unique para varias columnas
+main-class: dev
 ---
 <div class="icosql">
 </div>

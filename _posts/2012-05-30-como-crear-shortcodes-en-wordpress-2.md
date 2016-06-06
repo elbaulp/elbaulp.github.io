@@ -17,6 +17,7 @@ tags:
   - shortcodes
   - wordpress shortcodes
 format: aside
+main-class: dev
 ---
 Es bastante simple:
 

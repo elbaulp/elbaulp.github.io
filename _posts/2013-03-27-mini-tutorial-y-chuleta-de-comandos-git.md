@@ -22,6 +22,7 @@ date: 2015-12-13T19:10:12+01:00
 modified: 2015-12-13T19:10:12+01:00
 description: "Un mini tutorial y lista extensa de comandos git"
 image: /assets/img/2013/03/git-logo.png
+main-class: dev
 ---
 <figure>
   <img src="/assets/img/2013/03/git-logo.png" alt="Tutorial git y comandos git" width="910" height="380" title="Git: Mini Tutorial y chuleta de comandos git" alt="Git: Mini Tutorial y chuleta de comandos"/>

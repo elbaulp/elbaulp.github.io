@@ -21,6 +21,7 @@ image:
   creditlink:
 date: 2015-09-10T11:08:37+02:00
 math: true
+main-class: dev
 ---
 
 {% include _toc.html %}

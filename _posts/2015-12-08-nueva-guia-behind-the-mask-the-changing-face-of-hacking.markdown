@@ -11,6 +11,7 @@ image:
   credit:
   creditlink:
 date: 2015-12-08T10:00:00+00:00
+main-class: dev
 ---
 
 <figure>

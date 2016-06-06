@@ -9,6 +9,7 @@ tags: [git, smudge, git smudge, git clean, git hooks]
 image:
   feature:
   thumb: 2013/03/git-logo.png
+main-class: dev
 ---
 
 <figure>

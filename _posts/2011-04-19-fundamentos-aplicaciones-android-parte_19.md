@@ -23,6 +23,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
+main-class: dev
 ---
 Continuando con el [tema de los componentes][1], en esta entrada vamos a ver:  
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />  

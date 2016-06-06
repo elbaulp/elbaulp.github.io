@@ -26,6 +26,7 @@ tags:
   - ss
   - tc iproute2 debian
   - UDP
+main-class: dev
 ---
 <img src="/assets/img/2012/07/sh1.png" alt="sh" width="128" height="128" class="thumbnail alignleft size-full wp-image-836" />El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
 

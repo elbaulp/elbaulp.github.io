@@ -571,7 +571,7 @@ router.route('/articles/:article_id')
     });
   });
 
-// REGISTER OUR ROUTES -------------------------------
+// REGISTER OUR ROUTES ----------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
@@ -584,7 +584,7 @@ console.log('Magic happens on port ' + port);
 
 #### Referencias
 
-*scotch.io* »» <a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4" target="_blank">Build a RESTful API Using Node and Express 4</a> 
+*scotch.io* »» <a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4" target="_blank">Build a RESTful API Using Node and Express 4</a>
 
 
 

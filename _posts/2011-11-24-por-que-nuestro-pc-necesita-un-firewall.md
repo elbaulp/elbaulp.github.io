@@ -32,6 +32,7 @@ tags:
   - ejemplos de firewall
   - seguridad en la red
   - seguridad firewall
+main-class: dev
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="so" class="icono" /></a>

@@ -25,6 +25,7 @@ share_count:
   - 0
 categories:
   - cursos
+main-class: dev
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_view10/prgm.cgi"><img style="border:none;" width="202" height="262" src="http://img.tradepub.com/free/w_view10/assets/img/w_view10c.gif" title="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" alt="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" /></a>

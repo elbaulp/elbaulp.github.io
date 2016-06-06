@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - linux
   - script
+main-class: dev
 ---
 <p lang="en">
   As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.<br /> Here the code:

@@ -13,6 +13,7 @@ tags:
   - que es BitTorrent Sync
 
 description: "Escuchando el programa de radio security now! he descubierto una herramienta increíble. Se trata de **BitTorrrent Sync** y permite tener archivos sincronizados en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube, como es el caso de dropbox por ejemplo. En este artículo voy a explicar cómo usarlo."
+main-class: dev
 ---
 <figure>
   <img src="/assets/img/2013/05/BiTTorrentSYnc-300x260.png" alt="BiTTorrentSYnc" width="300" height="260" class="alignleft size-medium wp-image-1553" />

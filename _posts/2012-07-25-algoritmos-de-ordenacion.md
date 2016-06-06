@@ -18,6 +18,7 @@ tags:
   - metodo ordenamiento burbuja
   - pseudocodigo ordenamiento burbuja
   - pseudocodigo ordenamiento por seleccion
+main-class: dev
 ---
 Bueno, como dice el título de la entrada, voy a hablar sobre los algoritmos de ordenación, vamos a distinguir entre lentos y rápidos. La diferencia mas grande es la eficiencia, es decir, como se comportan al ordenar una gran entrada de datos, los lentos se comportan en un orden cuadrático, es decir, O(n²), mientras que los algoritmos rápidos se comportan, en un caso promedio en un orden logarítmico, osea, O (n log n).
 

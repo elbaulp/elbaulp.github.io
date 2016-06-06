@@ -23,6 +23,7 @@ categories:
   - script
 tags:
   - curso android pdf
+main-class: dev
 ---
 <div class="icoso">
 </div>

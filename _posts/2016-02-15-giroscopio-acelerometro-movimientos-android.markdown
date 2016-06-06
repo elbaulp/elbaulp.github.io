@@ -7,6 +7,7 @@ categories:
 description: "Una appMovimientoSonido que reconozca un patrón de movimientos de vuestra elección usando el giroscopio y/o el acelerómetro, una vez detectado el patrón, se reproducirá un sonido"
 tags: [tutorial acelerometro android, tutorial giroscopio android, detectar rotación giroscopio android, detectar golpe acelerometro android]
 image: /assets/img/npi/movementSound.png
+main-class: dev
 ---
 {% include _toc.html %}
 

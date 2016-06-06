@@ -13,6 +13,7 @@ tags:
   - concurrencia
   - paralelo
   - ps3
+main-class: dev
 ---
 <div>
   Hace unos días leí acerca del procesador de la consola PS3 y su capacidad para realizar <b>varias operaciones aritméticas en una sola instrucción</b>. Es decir, dado que tiene un bus de 128 bits, podría sumar 4 valores de 32 bits en una operación. Me sirvió para darle vueltas a la cabeza e intentar hacer lo mismo en mi ordenador.

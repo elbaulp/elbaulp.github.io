@@ -21,6 +21,7 @@ categories:
   - curiosidades
   - linux
   - opensource
+main-class: dev
 ---
 De <a target="_blank" href="http://futurist.se/gldt/">futurist.se</a> he sacado esta imagen que representa la evolución de las distribuciones GNU/Linux, partiendo de las 3 principales, debian, slackware y Red Hat, aunque hay algunas independientes de las anteriores.
 

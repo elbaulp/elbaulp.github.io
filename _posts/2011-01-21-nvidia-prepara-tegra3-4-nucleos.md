@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: dev
 ---
 La compañía NVIDIA presentó oficialmente el año pasado durante CES 2010 su SoC Tegra 2 que integraba una CPU ARM de dos núcleos junto un un chip gráfico muy potente capaz de acelerar contenidos 1.080p y tener un buen rendimiento 3D. Según parece la compañía está finalizando el desarrollo de su sucesor, Tegra 3, que hará gala de un diseño interno de CPU ARM de nada menos que cuatro núcleos y una mejorada arquitectura interna que ofrece mejores resultados en consumo y de potencia gráfica.  
   

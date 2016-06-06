@@ -27,6 +27,7 @@ categories:
   - linux
   - noticias
   - opensource
+main-class: dev
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://2.bp.blogspot.com/-oTy__i3px1g/TtKbNmGPIBI/AAAAAAAAB1k/Y6daIcbwi5k/s1600/Boxes-d7ad4bbc04e8d56d.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img style="border:none;" border="0" height="200" width="149" src="https://2.bp.blogspot.com/-oTy__i3px1g/TtKbNmGPIBI/AAAAAAAAB1k/Y6daIcbwi5k/s320/Boxes-d7ad4bbc04e8d56d.png" /></a>

@@ -22,6 +22,7 @@ categories:
 tags:
   - group by
   - orden group by sql
+main-class: dev
 ---
 <div class="icosql">
 </div>

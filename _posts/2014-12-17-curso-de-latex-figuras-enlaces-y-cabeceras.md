@@ -27,6 +27,7 @@ description: |
 
   Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas...
 modified: 2015-12-22T17:36
+main-class: dev
 ---
 
 <figure>

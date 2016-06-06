@@ -25,6 +25,7 @@ description: |
 
   La mayoría de interfaces de usuario (en móviles o web) se basan en el concepto de [rejillas][3] (**Grids** a partir de ahora). Los **Grids** consisten básicamente en separar la interfaz de usuario en una serie de cuadrados alineados que pueden ser fusionados para crear bloques. Usando el principio Grid en el desarrollo de la UI (Interfaz de usuario) ayuda a alinear elementos, trae consistencia, genera un código limpio, asegura que el usuario pueda analizar fácilmente el contenido de la interfaz etc. En resumen, los **Grids** son una herramienta de diseño extremadamante potentes.
 modified: 2015-12-22T17:55
+main-class: dev
 ---
 *Éste artículo es una traducción del blog de [Cyril Mottier][1], al cual le agradezco que me diera permiso para escribirlo. Quizás te interese leer ([Pon a dieta tus APKs][2]), otra traducción de su blog.*
 

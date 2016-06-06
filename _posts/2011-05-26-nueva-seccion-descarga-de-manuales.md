@@ -23,6 +23,7 @@ categories:
   - linux
   - noticias
   - opensource
+main-class: dev
 ---
 <div class="icoso">
 </div>

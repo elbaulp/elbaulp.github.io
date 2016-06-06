@@ -14,6 +14,7 @@ tags:
   - navegacion anonima
   - Tor
 author: luzila
+main-class: dev
 ---
   * <a href="https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>
   * Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies

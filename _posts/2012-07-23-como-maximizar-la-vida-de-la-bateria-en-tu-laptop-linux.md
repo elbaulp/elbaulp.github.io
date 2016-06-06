@@ -40,6 +40,7 @@ tags:
   - kernel
   - laptop
   - optimizar energia en ubuntu
+main-class: dev
 ---
 [<img src="/assets/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c" width="650" height="306" class="aligncenter size-full wp-image-853" />][1]
 

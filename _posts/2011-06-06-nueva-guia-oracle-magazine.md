@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: dev
 ---
 [![Oracle Magazine][1]][2]
 

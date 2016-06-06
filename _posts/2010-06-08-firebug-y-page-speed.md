@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: dev
 ---
 Buscando por la pagina de addons de firefox encontre unos complementos llamados  
 <span class="fullpost"><br /> firebug y page speed, me parecieron muy interesantes ya que el primero permite a los desarrolladores de webs revisar bastante bien el codigo, y permite hacer cambios instantaneos en el codigo de la pagina para visualizarlos, si que la pagina real se vea afectada. El segundo, page speed, analiza nuestro codigo entre otras cosas para sugerirnos que deberiamos modificar para que nuestra web fuera mas eficiente, y que cosas estan correctamente. Ademas dispone de una herramienta en la que veriamos la actividad de nuestra página.<br /> Para poder instalar pagespeed necesitamos intalar antes firebug<br /> Los enlaces:<br /> Firebug: https://addons.mozilla.org/en-US/firefox/addon/1843/<br /> page speed: https://dl-ssl.google.com/page-speed/current/page-speed.xpi</p> 

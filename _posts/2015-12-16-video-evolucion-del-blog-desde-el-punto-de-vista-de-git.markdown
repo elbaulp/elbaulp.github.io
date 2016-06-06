@@ -7,6 +7,7 @@ categories:
 description: "Video de Cómo visualizar la evolución de un repositorio git con el comando gource."
 tags: [git gource, gource tutorial, gource git, gource github]
 image: /assets/img/Gource-Evolucion-del-blog-desde-el-punto-de-vista-de-Git.png
+main-class: dev
 ---
 
 <figure>

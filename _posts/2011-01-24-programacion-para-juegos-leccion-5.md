@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - juegos
+main-class: dev
 ---
 <div class="icosdl">
 </div>

@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - aplicaciones
   - curiosidades
+main-class: dev
 ---
 En www.browsermedia.co.uk he visto esta curiosa tabla de todas las APIs de google, al hacer clic en la imagen iréis a la tabla periódica, donde podeis seleccionar la API que queráis.  
 <!--ad-->

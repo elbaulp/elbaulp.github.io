@@ -11,6 +11,7 @@ if_slider_image:
 categories:
   - cursos
 format: aside
+main-class: dev
 ---
 Hoy me ha llegado el diploma del curso que hice en exitae sobre Android, que comparto aquí con vosotros:
 

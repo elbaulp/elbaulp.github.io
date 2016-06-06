@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - curiosidades
   - internet
+main-class: dev
 ---
 <div class="iconews">
 </div>

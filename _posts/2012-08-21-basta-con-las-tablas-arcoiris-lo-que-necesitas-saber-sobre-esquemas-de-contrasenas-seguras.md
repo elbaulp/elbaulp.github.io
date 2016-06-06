@@ -17,6 +17,7 @@ tags:
   - rainbow tables
   - rainbow tables como funciona
   - srp protocolo
+main-class: dev
 ---
 <p style="text-align: center;">
   <a href="/assets/img/2012/08/rainbow1.png"><img class="wp-image-901 aligncenter" title="rainbow" alt="" src="/assets/img/2012/08/rainbow1.png" width="429" height="242" /></a>

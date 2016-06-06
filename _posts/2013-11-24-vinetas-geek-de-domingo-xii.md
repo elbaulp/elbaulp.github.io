@@ -7,6 +7,7 @@ guid: https://elbauldelprogramador.com/?p=1993
 permalink: /vinetas-geek-de-domingo-xii/
 categories:
   - Viñetas Geek
+main-class: dev
 ---
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 

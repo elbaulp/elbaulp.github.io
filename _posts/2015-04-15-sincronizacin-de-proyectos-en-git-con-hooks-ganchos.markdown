@@ -11,6 +11,7 @@ image:
   thumb: 2013/03/git-logo.png
   credit:
   creditlink:
+main-class: dev
 ---
 
 <figure>

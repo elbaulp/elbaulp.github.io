@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - curiosidades
   - internet
+main-class: dev
 ---
 Hace muy poco tiempo hablé de como [generar código css3 fácilmente][1] y he estado haciendo algunas pruebas en el blog con él. Me gustaría que me comentarais como se os vé en vuestros navegadores, si es molesto o no. Si alguien usa Internet Explorer me gustaría que me dijera como le va, ya que como de costumbre es el navegador que mas problemas dá a la hora de visualizar Webs.
 

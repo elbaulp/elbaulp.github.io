@@ -16,6 +16,7 @@ tags:
   - DialogFragment
   - supportv4
   - TimeoPickerDialog
+main-class: dev
 ---
 En un proyecto reciente he tenido que trabajar con las librerías de compatibilidad de Android, en este caso para crear diálogos que permitan elegir fecha y hora, como estos:
 

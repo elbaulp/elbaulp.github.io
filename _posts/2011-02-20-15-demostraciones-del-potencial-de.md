@@ -21,6 +21,7 @@ categories:
   - curiosidades
   - internet
   - noticias
+main-class: dev
 ---
 En tech Drive-In he visto esta entrada que enlaza con 15 demos en HTML5 que pretenden hacernos ver la potencia que tiene esta nueva versión que se está preparando de HTML, entre las que se pueden destacar consultas [SQL][1] y almacenamineto en la web, creación y desrucción de objetos etc, de las 15 la que más interesante me parece es la que explica en varios pasos las caractarísticas: <a target="_blank" href="http://slides.html5rocks.com/#landing-slide">HTML5 Presentation</a>.  
   

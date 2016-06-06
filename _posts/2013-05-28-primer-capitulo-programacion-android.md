@@ -37,6 +37,7 @@ tags:
   - programacion aplicaciones android pdf
   - programacion en android
   - programar en android pdf
+main-class: dev
 ---
 
 Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="https://elbauldelprogramador.com/curso-programacion-android/">curso</a>.

@@ -26,6 +26,7 @@ share_data:
 categories:
   - BaseDeDatos
   - cursos
+main-class: dev
 ---
 [![Simply SQL][1]][2]  
 

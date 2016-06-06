@@ -19,6 +19,7 @@ tags:
   - debian en android
   - samsung galaxy scl gti9003
   - xda
+main-class: dev
 ---
 <img class="alignleft size-full wp-image-1038" title="linux-apps-on-android" src="/assets/img/2012/12/linux-apps-on-android1.jpg" alt="" width="373" height="294" />
 

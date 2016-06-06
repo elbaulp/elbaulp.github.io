@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: dev
 ---
 [![The JavaScript Anthology: 101 Essential Tips, Tricks & Hacks - Free 158 Page Preview][1]][2]
 

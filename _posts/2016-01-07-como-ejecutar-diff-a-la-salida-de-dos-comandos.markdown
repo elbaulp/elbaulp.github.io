@@ -14,6 +14,7 @@ description: |
   <pre>
   $ diff $(readelf --all ./helloc) $(readelf --all ./hellocpp)
   </pre>
+main-class: dev
 ---
 <figure>
   <a href="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png"><img src="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - linux
   - script
+main-class: dev
 ---
 <p lang="en">
   I decided to create a small script that highlights the words reserved of c++.<br /> Here the code:

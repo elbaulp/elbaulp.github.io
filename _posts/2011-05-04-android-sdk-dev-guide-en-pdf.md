@@ -22,6 +22,7 @@ categories:
   - cursos
 tags:
   - curso android pdf
+main-class: dev
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 

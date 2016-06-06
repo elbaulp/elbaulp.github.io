@@ -14,9 +14,9 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - BaseDeDatos
 tags:
@@ -37,7 +37,7 @@ El examen tiene un 9, por lo que hay algunas pequeñas cosas que no estan hechas
 
 ```sql
 --ejercicio 1
-create or replace procedure p_genRecibos(fac facturas.nfactura%type, cli facturas.cCodCliente%type, fechaE facturas.fecha%type, fPago facturas.cCodFPago%type, importe number) 
+create or replace procedure p_genRecibos(fac facturas.nfactura%type, cli facturas.cCodCliente%type, fechaE facturas.fecha%type, fPago facturas.cCodFPago%type, importe number)
 is
   numRecibos fpagos.nRecibos%type;
   daBancarios clientes_cuentas%rowtype;
@@ -49,7 +49,7 @@ begin
      select idcuenta into id_cuenta from clientes where cCodCliente = cli;
      select * into daBancarios from clientes_cuentas where cCodCliente || idcuenta = cli || id_cuenta;
      imp := importe/numRecibos;
-     loop 
+     loop
           exit when numRecibos = 0;
           fechaPago := last_day(add_months(fechaE,numRecibos));
           insert into recibos values (fac, numRecibos, fechaE, fechaPago, imp, 'N', cli, daBancarios.cCodBanco, daBancarios.sucursal, daBancarios.CodControl, daBancarios.numCuenta);
@@ -70,12 +70,12 @@ for each row
        descFPago   fPagos.descripcion%type;
     begin
          if :new.importe < 0 then raise imptMayCero; end if;
-         if upper(:new.abono) = 'N' then 
+         if upper(:new.abono) = 'N' then
             --Compruebo la forma de pago
             select descripcion into descfPAgo from fPAgos where cCodFpago = :new.cCodFPago;
             if descfPago = 'PAGO AL CONTADO' or :new.cCodCliente = 'C001' then
                if upper(:new.pagada) = 'N' then raise noPagada; end if;
-               insert into recibos values (:new.nfactura, 1, :new.fecha, :new.fecha, :new.importe, 'S', :new.cCodCliente, ' ',' ',' ', ' ');           
+               insert into recibos values (:new.nfactura, 1, :new.fecha, :new.fecha, :new.importe, 'S', :new.cCodCliente, ' ',' ',' ', ' ');
             else
                 p_genRecibos(:new.nfactura, :new.cCodCliente, :new.fecha, :new.cCodFPago, :new.importe);
             end if;
@@ -84,10 +84,10 @@ for each row
              when imptMayCero then raise_application_error(-20001,'El importe ha de ser siempre mayor a cero');
              when noPagada then raise_application_error(-20002,'La factura para PAGO AL CONTADO ha de estar pagada');
     end;
-    
-    
-    
-    
+
+
+
+
     -------------------------------------
 --ejercicio 2
 create or replace trigger up_recibos
@@ -128,12 +128,12 @@ begin
                  end if;
              end loop;
         close c_dBancarios;
-     
-     end if; 
-     
+
+     end if;
+
      --Comprobacion fecha emision
      if :new.fechaPago < :new.fechaEmis then raise errorFechas; end if;
-     
+
      -- si se cambia ele importe ha de ser 10% mayot
      if (:new.importe != :old.importe) and (:new.importe > :old.importe*1.1) then raise imporMuyAlto; end if;
      -- Nmo se pueden modificar las claves primarias
@@ -150,16 +150,16 @@ end;
 
 
 
------------------------------------
+--------------------------------
 
 --ejercicio 3
-create or replace procedure sp_Lis_FacxCli (xCodCli clientes.cCodCliente%type, xSumRecNoPag out number, xSumRecPag out number) 
+create or replace procedure sp_Lis_FacxCli (xCodCli clientes.cCodCliente%type, xSumRecNoPag out number, xSumRecPag out number)
 is
-  cursor c_cliente(xCodCli clientes.cCodCliente%type) 
-  is 
+  cursor c_cliente(xCodCli clientes.cCodCliente%type)
+  is
      select nombre, direccion, codPostal, poblacion, provincia, pais from clientes where cCodCliente = xCodCli;
   xDatosCli c_cliente%rowtype;
-  
+
   cursor c_CliFact(xCodCli clientes.cCodCliente%type)
   is
     select * from facturas where cCodCliente = xCodCli;
@@ -183,10 +183,10 @@ begin
               else tipo := 'Abono'; end if;
               --Cuento los recibos de la factura
               select count(*) into numRecibos from recibos where cCodCliente = xCodCli;
-              select sum(decode(pagado, 'S', importe)) into xSumRecPag from recibos where cCodCliente = xCodCli; 
+              select sum(decode(pagado, 'S', importe)) into xSumRecPag from recibos where cCodCliente = xCodCli;
               select sum(decode(pagado, 'N', importe)) into xSumRecNoPag from recibos where cCodCliente = xCodCli;
-              select descripcion into descfPAgo from fPAgos where cCodFpago = xDatosFact.cCodFPago; 
-              dbms_output.put_line(rpad(tipo, 10 ,' ') || rpad(xDatosFact.nFactura, 10, ' ') 
+              select descripcion into descfPAgo from fPAgos where cCodFpago = xDatosFact.cCodFPago;
+              dbms_output.put_line(rpad(tipo, 10 ,' ') || rpad(xDatosFact.nFactura, 10, ' ')
               || rpad(xDatosFact.fecha, 10, ' ') || rpad(xDatosFact.cCodFPago, 10, ' ')
               || rpad(descfPAgo, 20, ' ')|| rpad(xDatosFact.importe, 13, ' ') || rpad(xDatosFact.pagada, 11, ' ')
               || rpad(numRecibos, 20, ' ')|| rpad(xSumRecPag, 20, ' ')|| rpad(xSumRecNoPag, 20, ' '));

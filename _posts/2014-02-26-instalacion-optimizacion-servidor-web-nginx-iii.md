@@ -19,6 +19,7 @@ description: |
 
   A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.
 image: /assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
+main-class: dev
 ---
 # Tabla de contenidos
 

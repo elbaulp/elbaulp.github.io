@@ -32,6 +32,7 @@ description: |
 
   Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (*memory leak*).
 modified: 2015-12-22T17:50
+main-class: dev
 ---
 > Éste artículo es una traducción del blog de [Alex Lockwood][1]. Gracias por el permiso.
 

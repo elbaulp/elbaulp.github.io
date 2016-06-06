@@ -17,6 +17,7 @@ blogger_author:
 categories:
   - juegos
   - python
+main-class: dev
 ---
 <div class="icopy">
 </div>

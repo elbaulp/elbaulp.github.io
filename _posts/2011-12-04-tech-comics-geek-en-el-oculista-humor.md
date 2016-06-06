@@ -27,6 +27,7 @@ categories:
   - curiosidades
   - Humor
   - meme
+main-class: dev
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://2.bp.blogspot.com/-416se6qXRuw/Ttud2uYW22I/AAAAAAAAB5k/H23TdwAkINE/s1600/geek-eye-doctor.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="354" src="https://2.bp.blogspot.com/-416se6qXRuw/Ttud2uYW22I/AAAAAAAAB5k/H23TdwAkINE/s400/geek-eye-doctor.jpg" /></a>

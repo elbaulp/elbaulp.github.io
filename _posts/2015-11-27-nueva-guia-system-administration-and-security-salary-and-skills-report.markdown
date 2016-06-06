@@ -11,6 +11,7 @@ image:
   credit:
   creditlink:
 date: 2015-11-27T08:55:00+00:00
+main-class: dev
 ---
 <figure>
   <img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />

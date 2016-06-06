@@ -29,6 +29,7 @@ categories:
   - opensource
 tags:
   - programar motor de busqueda
+main-class: dev
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="98" width="228" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s400/Screenshot.png" /></a>

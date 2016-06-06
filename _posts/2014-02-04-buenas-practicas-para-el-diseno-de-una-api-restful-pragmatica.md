@@ -26,6 +26,7 @@ description: |
   Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
 
   Tu modelo de datos ha empezado a estabilizarse y es el momento de crear una API pública para tu aplicación web. Te das cuenta de que es difícil hacer cambios significativos a tu API una vez que fue liberada, quieres lo mejor y lo antes posible. Ahora, en internet no escasean opiniones sobre diseño de APIs. Pero, debido a que no hay un standard adoptado popularmente que funcione en todos los casos, te quedas con un manojo de opciones: ¿Qué formatos deberías aceptar? ¿Cómo deberías autenticar? ¿Debería tu API ser versionada?
+main-class: dev
 ---
 > Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
 

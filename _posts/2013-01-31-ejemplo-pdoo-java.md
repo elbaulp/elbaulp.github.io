@@ -32,6 +32,7 @@ if_page_section_order:
   - breadcrumbs,page_section
   - breadcrumbs,page_section
   - breadcrumbs,page_section
+main-class: dev
 ---
 > Visita la [sección de descargas][1] para ver todo el material disponible.
 

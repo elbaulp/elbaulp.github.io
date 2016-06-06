@@ -26,6 +26,7 @@ share_count:
 categories:
   - cursos
   - python
+main-class: dev
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img border="0" src="" id="logo" name="py" class="icono" />

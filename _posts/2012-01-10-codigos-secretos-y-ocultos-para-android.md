@@ -13,6 +13,7 @@ tags:
   - curso android pdf
   - menu oculto android
   - menu oculto tablet android
+main-class: dev
 ---
 <figure>
   <img border="0" src="/assets/img/2013/07/iconoAndroid.png" />

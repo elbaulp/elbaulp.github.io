@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: dev
 ---
 [![The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition][1]][2]
 

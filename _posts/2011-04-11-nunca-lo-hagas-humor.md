@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - curiosidades
+main-class: dev
 ---
 <div class="separator galeria" style="padding:100px; clear: both; text-align: center;">
   <a href="http://www.muylinux.com/assets/img/2011/03/rm.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="318" width="350" src="http://www.muylinux.com/assets/img/2011/03/rm.jpg" /></a>

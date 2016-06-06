@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - noticias
   - opensource
+main-class: dev
 ---
 <div class="icodias" style="padding:1em;">
 </div>

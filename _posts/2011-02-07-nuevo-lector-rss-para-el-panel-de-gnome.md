@@ -21,6 +21,7 @@ categories:
   - aplicaciones
   - linux
   - opensource
+main-class: dev
 ---
 En OMGUbuntu he leido esta noticia sobre el applet para gnome que nos permite acceder a nuestras suscripcciones via RSS. Personalmente me gusta la idea, ya que de esta forma no tenemos que tener el navegador abierto para ver si se publican nuevos artículos.
 
