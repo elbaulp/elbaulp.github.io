@@ -15,7 +15,7 @@ tags:
   - flock
   - locks
 image: /assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg"><img src="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
     <span class="image-credit">Crédito de la imagen: pixabay.com</span>

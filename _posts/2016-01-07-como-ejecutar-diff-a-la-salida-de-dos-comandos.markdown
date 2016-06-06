@@ -4,7 +4,7 @@ title: Cómo Ejecutar Diff a La Salida De Dos Comandos
 date: 2016-01-07T12:54:12+01:00
 tags: [comando diff, ejemplos diff, diff sin ficheros, diff con parametros, diff salida dos comandos, diff tuberías, diff pipes]
 image: /assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos2.png"><img src="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos2.png" title="Cómo Ejecutar Diff a La Salida De Dos Comandos" alt="Cómo Ejecutar Diff a La Salida De Dos Comandos" /></a>
   </figure>

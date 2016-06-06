@@ -4,7 +4,7 @@ title: 14 Ejemplos De Las Mejores Visualizaciones De Datos
 date: 2016-05-02T19:41:09+02:00
 modified:
 categories:
-excerpt: "La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet."
+description: "La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet."
 tags: [ejemplos visualización de datos, datos, imagenes de visualización]
 image: /assets/img/20-ejemplos-visualizacion-datos-genoma-enfermedades.png
 ---

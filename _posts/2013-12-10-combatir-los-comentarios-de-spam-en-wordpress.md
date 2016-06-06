@@ -12,7 +12,7 @@ tags:
   - eliminar spam wordpress
   - iptables wordpress comentarios
 modified: 2015-12-29T10:00
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="Combatir los comentarios de spam en WordPress" alt="Combatir los comentarios de spam en WordPress" /></a>
   </figure>

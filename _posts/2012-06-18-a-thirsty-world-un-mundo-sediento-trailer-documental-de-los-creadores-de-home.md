@@ -15,7 +15,7 @@ tags:
   - documentales
   - home project
 format: video
-excerpt: "(Un mundo sediento) Trailer. Documental de los creadores de HOME"
+description: "(Un mundo sediento) Trailer. Documental de los creadores de HOME"
 ---
 En 2009, la organización GoodPlanet.org lanzó a los cines de todo el mundo su documental sobre el impacto que está teniendo el ser humano en la tierra, y tuvo un gran éxito, aunque a mi parecer debería haber llegado a más gente.
 

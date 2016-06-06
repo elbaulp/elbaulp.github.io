@@ -9,7 +9,7 @@ categories:
   - cursos
 tags:
   - Cybersecurity
-excerpt: "APTs (Advanced Persistent Threats) have changed the world of enterprise security and how networks and organizations are attacked. These threats, and the cyber-criminals behind them, are experts at remaining hidden from traditional security while exhibiting an intelligence, resiliency, and patience that has never been seen before."
+description: "APTs (Advanced Persistent Threats) have changed the world of enterprise security and how networks and organizations are attacked. These threats, and the cyber-criminals behind them, are experts at remaining hidden from traditional security while exhibiting an intelligence, resiliency, and patience that has never been seen before."
 ---
 
 <figure>

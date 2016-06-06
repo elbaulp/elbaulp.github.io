@@ -3,7 +3,7 @@ layout: post
 title: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila"
 modified:
 categories:
-excerpt: "Este artículo se basa en las prácticas que he hecho para una asignatura llamada *Algorítmica*. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura."
+description: "Este artículo se basa en las prácticas que he hecho para una asignatura llamada *Algorítmica*. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura."
 tags: [mochila, algorítmica, técnicas algorítmicas, problema de la mochila, greedy, voraces, Branch and bound, programación dinámica]
 image:
   feature:

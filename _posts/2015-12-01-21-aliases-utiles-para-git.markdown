@@ -4,7 +4,7 @@ title: "21 alias útiles para git"
 date: 2015-12-01T11:56:26+01:00
 modified:
 categories:
-excerpt: "Todo aquel que use git sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los alias, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos alias útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos."
+description: "Todo aquel que use git sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los alias, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos alias útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos."
 tags: [git, github, alias git, configurar git, configuraciones git]
 image:
   feature:

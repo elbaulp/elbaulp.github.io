@@ -12,7 +12,7 @@ tags:
   - etiquetas html5
 image: /assets/img/2013/11/Introducción-a-HTML51.png
 modified: 2015-12-30T11:00
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/11/Introducción-a-HTML51.png"><img src="/assets/img/2013/11/Introducción-a-HTML51.png" title="Introducción a HTML5" alt="Introducción a HTML5" /></a>
   </figure>

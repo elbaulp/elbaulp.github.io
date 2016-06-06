@@ -20,7 +20,7 @@ tags:
   - simbolos latex
   - latex
 image: /assets/img/2013/05/latex_logo.png
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   </figure>

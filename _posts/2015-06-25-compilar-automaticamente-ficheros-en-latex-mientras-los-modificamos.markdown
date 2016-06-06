@@ -3,7 +3,7 @@ layout: post
 title: "Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos"
 modified:
 categories:
-excerpt: "Para los que estéis acostumbrados a escribir vuestros documentos en LaTeX, sin ningún editor específico, sabréis que llega a ser un poco tedioso compilar cada vez que queremos ver el resultado. Hace poco, descubrí un comando, latexmk, que nos facilitará bastante la vida."
+description: "Para los que estéis acostumbrados a escribir vuestros documentos en LaTeX, sin ningún editor específico, sabréis que llega a ser un poco tedioso compilar cada vez que queremos ver el resultado. Hace poco, descubrí un comando, latexmk, que nos facilitará bastante la vida."
 tags: [latex, latexmk, pdflatex, xelatex, compilar latex, minted]
 image:
   feature:

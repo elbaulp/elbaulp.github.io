@@ -13,7 +13,7 @@ tags:
   - instalar nginx linux
   - montar un servidor web
 modified: 2015-12-25T13:25
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png"><img src="/assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png" title="Instalación y optimización de un servidor web con Nginx (I)" alt="Instalación y optimización de un servidor web con Nginx (I)" /></a>
   </figure>

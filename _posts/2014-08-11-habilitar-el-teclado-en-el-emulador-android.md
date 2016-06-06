@@ -12,7 +12,7 @@ tags:
   - hw.dPad=yes
   - hw.keyboard=yes
 image: /assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="Cómo habilitar el teclado en el emulador Android" alt="Cómo habilitar el teclado en el emulador Android" /></a>
     <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>

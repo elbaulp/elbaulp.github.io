@@ -14,7 +14,7 @@ tags:
   - settings android
   - swadroid
 modified: 2015-12-28T9:51
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/01/CrearDialogoAndroid.png"><img src="/assets/img/2014/01/CrearDialogoAndroid.png" title="Cómo crear un diálogo personalizado en las preferencias Android" alt="Cómo crear un diálogo personalizado en las preferencias Android" /></a>
   </figure>

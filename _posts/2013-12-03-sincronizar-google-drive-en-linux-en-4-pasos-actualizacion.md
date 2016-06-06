@@ -13,7 +13,7 @@ tags:
   - tutorial grive
 modified: 2015-12-29T10:00
 image: /assets/img/2013/11/google-drive-linux3.jpg
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/11/google-drive-linux3.jpg"><img src="/assets/img/2013/11/google-drive-linux3.jpg" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" alt="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" /></a>
   </figure>

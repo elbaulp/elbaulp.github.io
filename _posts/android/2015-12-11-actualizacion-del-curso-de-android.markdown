@@ -3,7 +3,7 @@ layout: post
 title: Actualización Del Curso De Android
 modified:
 categories: android
-excerpt: "Hacía mucho tiempo que tenía pendiente escribir este artículo. Años atrás tuve que crear un curso de Android básico para impartirlo en una academia. Mi idea era integrarlo con el curso de Android disponible en el blog desde hace unos años, pero como suele pasar, se va dejando y dejando... Aunque no esté publicando en el blog estos meses, sí que estoy escribiendo bastante (El curso de criptogrfía por ejemplo)."
+description: "Hacía mucho tiempo que tenía pendiente escribir este artículo. Años atrás tuve que crear un curso de Android básico para impartirlo en una academia. Mi idea era integrarlo con el curso de Android disponible en el blog desde hace unos años, pero como suele pasar, se va dejando y dejando... Aunque no esté publicando en el blog estos meses, sí que estoy escribiendo bastante (El curso de criptogrfía por ejemplo)."
 tags: [curso android, programación android, aprende android, tutorial android]
 image:
   thumb: 2014/01/iconoAndroid.png

@@ -3,7 +3,7 @@ layout: post
 title: "Primeros Pasos Programando Con Kinect"
 modified:
 categories:
-excerpt: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
+description: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
 tags: [programar kinect, programación kinect, tutorial kinect, aplicaciones kinect]
 image:
   feature:

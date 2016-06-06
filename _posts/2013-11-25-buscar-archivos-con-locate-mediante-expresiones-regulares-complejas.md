@@ -14,7 +14,7 @@ tags:
   - locate
 modified: 2015-12-29T10:20
 image: /assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png"><img src="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" title="Buscar archivos con locate mediante expresiones regulares" alt="Buscar archivos con locate mediante expresiones regulares" /></a>
   </figure>

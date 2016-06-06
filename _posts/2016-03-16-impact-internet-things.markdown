@@ -4,7 +4,7 @@ title: Guía Gratuita - The Impact of Internet of Things (IoT) on Facilities Man
 date: 2016-03-16T11:02:52+01:00
 modified:
 categories:
-excerpt: "How IoT is set to revolutionize the commercial real estate industry."
+description: "How IoT is set to revolutionize the commercial real estate industry."
 tags: [guia Impact of Internet of Things, guia para el internet de las cosas, IoT security]
 image: /assets/img/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg
 ---

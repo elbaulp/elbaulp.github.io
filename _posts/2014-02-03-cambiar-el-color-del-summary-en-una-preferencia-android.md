@@ -14,7 +14,7 @@ tags:
   - summary android
 modified: 2015-12-28T9:50
 image: /assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="Cambiar el color del summary en una Preferencia Android" alt="Cambiar el color del summary en una Preferencia Android" /></a>
   </figure>

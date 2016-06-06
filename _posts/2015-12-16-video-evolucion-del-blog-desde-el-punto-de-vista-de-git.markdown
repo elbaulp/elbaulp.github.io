@@ -4,7 +4,7 @@ title: "Vídeo - Evolución Del Blog Desde El Punto De Vista De Git"
 date: 2015-12-16T15:51:46+01:00
 modified:
 categories:
-excerpt: "Video de Cómo visualizar la evolución de un repositorio git con el comando gource."
+description: "Video de Cómo visualizar la evolución de un repositorio git con el comando gource."
 tags: [git gource, gource tutorial, gource git, gource github]
 image: /assets/img/Gource-Evolucion-del-blog-desde-el-punto-de-vista-de-Git.png
 ---

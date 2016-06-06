@@ -2,7 +2,7 @@
 layout: post
 title: "¿Por Qué Se Cuelga Linux Al Copiar Ficheros a Un Usb?"
 categories:
-excerpt: "Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:"
+description: "Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:"
 tags: [usb, linux, usb se cuelga, usb lento]
 image:
   feature:

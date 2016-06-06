@@ -18,7 +18,7 @@ tags:
   - listas 20 minutos
   - from sys import argv
 modified: 2015-12-25T13:00
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/Generar-listas-de-reproducción-de-una-determinada-duración-con-Python.png"><img src="/assets/img/Generar-listas-de-reproducción-de-una-determinada-duración-con-Python.png" title="Generar listas de reproducción de una determinada duración con Python" alt="Generar listas de reproducción de una determinada duración con Python" /></a>
   </figure>

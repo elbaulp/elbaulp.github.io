@@ -13,7 +13,7 @@ tags:
   - pasar paramestros
 image: /assets/img/2013/11/cpp.png
 modified: 2015-12-24T17:44
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="Pasar parámetros variables en C/C++" alt="Pasar parámetros variables en C/C++" /></a>
   </figure>

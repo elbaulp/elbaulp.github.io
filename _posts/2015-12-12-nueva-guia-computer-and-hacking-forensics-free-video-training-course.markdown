@@ -4,7 +4,7 @@ title: "Nueva Guía: Computer and Hacking Forensics - FREE Video Training Course
 date: 2015-12-12T13:48:51+01:00
 modified:
 categories:
-excerpt: "Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks."
+description: "Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks."
 tags: []
 image: /assets/img/hotlink-ok/Computer-and-Hacking-Forensics---FREE-Video-Training-Course.jpg
 ---

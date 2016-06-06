@@ -12,7 +12,7 @@ tags:
   - migrar blogger wordpress
   - url de blogger a wordpress
 modified: 2015-12-28T10:00
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png"><img src="/assets/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png" title="Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma" alt="Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma" /></a>
   </figure>

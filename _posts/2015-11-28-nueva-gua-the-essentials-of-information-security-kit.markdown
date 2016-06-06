@@ -4,7 +4,7 @@ title: "Nueva Guía: The Essentials of Information Security Kit"
 date: 2015-11-28T09:14:31+01:00
 modified:
 categories:
-excerpt: "Essentials of Information Security brings together the latest in information, coverage of important developments, and expert commentary to help with your Information Security related decisions."
+description: "Essentials of Information Security brings together the latest in information, coverage of important developments, and expert commentary to help with your Information Security related decisions."
 tags: [guias gratuitas, cursos, pdfs, ebooks gratuitos]
 image:
   feature:

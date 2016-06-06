@@ -13,7 +13,7 @@ tags:
   - fugas de memoria Java
   - fugas de memoria runnable
   - memory leaks
-excerpt: |
+description: |
   Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso.
 
   Seamos directos, consideremos el siguiente código:

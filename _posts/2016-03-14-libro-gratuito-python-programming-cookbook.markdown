@@ -4,7 +4,7 @@ title: Guía Gratuita - Python Programming Cookbook
 date: 2016-03-14T09:38:01+01:00
 modified:
 categories:
-excerpt: "Kick-start your Python projects with these hot recipes!"
+description: "Kick-start your Python projects with these hot recipes!"
 tags: [guias Gratuita, descargar guias python, manuales de python, curso de python, Cookbook python]
 image: /assets/img/Python-Programming-Cookbook.jpg
 ---

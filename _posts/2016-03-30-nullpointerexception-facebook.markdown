@@ -3,7 +3,7 @@ layout: post
 title: Qué Esta Causando Un NullPointerException en Facebook E Internet y cómo solucionarlo
 modified:
 categories:
-excerpt: "Explicación de por qué muchos usuarios de internet están obteniendo un error nullpointerexception, en facebook entre otras aplicaciones"
+description: "Explicación de por qué muchos usuarios de internet están obteniendo un error nullpointerexception, en facebook entre otras aplicaciones"
 tags: [Facebook NullPointerException, que es NullPointerException, nullpointerexception null]
 image: nullpointerexception-facebook-line-numbers.jpg
 date: 2016-03-30T08:29:58+02:00

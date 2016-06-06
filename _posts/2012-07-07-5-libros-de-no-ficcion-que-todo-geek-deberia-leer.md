@@ -2,7 +2,7 @@
 id: 790
 title: 21 Libros de No-Ficción que todo Geek debería leer
 
-excerpt: "Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!"
+description: "Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!"
 layout: post
 guid: /?p=790
 permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/

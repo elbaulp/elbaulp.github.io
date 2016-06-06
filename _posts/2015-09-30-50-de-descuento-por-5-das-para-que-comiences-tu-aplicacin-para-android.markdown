@@ -3,7 +3,7 @@ layout: post
 title: "50% De Descuento Por 5 Días Para Que Comiences Tu Aplicación Para Android"
 modified:
 categories:
-excerpt: "Reccientemente hemos cerrado un acuerdo con Oja.la, plataforma de educación digital, con mentores personales y más de 320 cursos sobre desarrollo en Android, para ofrecerte, por ser lector de El Baúl del Programador, un descuento del 50% durante los próximos 5 días para cualquier curso elegido."
+description: "Reccientemente hemos cerrado un acuerdo con Oja.la, plataforma de educación digital, con mentores personales y más de 320 cursos sobre desarrollo en Android, para ofrecerte, por ser lector de El Baúl del Programador, un descuento del 50% durante los próximos 5 días para cualquier curso elegido."
 tags: []
 image:
   feature:

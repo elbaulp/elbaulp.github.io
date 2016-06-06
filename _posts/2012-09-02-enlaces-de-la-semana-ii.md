@@ -2,7 +2,7 @@
 id: 935
 title: Enlaces de la semana ( II )
 
-excerpt: '<!--:es-->Recopilación semanal de enlaces sobre noticias de la tecnología, informática y software libre<!--:-->'
+description: '<!--:es-->Recopilación semanal de enlaces sobre noticias de la tecnología, informática y software libre<!--:-->'
 layout: post
 guid: /?p=935
 permalink: /enlaces-de-la-semana-ii/

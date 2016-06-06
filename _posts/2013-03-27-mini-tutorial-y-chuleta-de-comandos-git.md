@@ -20,7 +20,7 @@ tags:
   - tutoriales sobre git
 date: 2015-12-13T19:10:12+01:00
 modified: 2015-12-13T19:10:12+01:00
-excerpt: "Un mini tutorial y lista extensa de comandos git"
+description: "Un mini tutorial y lista extensa de comandos git"
 image: /assets/img/2013/03/git-logo.png
 ---
 <figure>

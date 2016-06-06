@@ -18,7 +18,7 @@ tags:
   - tiling desktop
 image: /assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png
 modified: 2015-12-24T18:00
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="Instalar y configurar DWM, el gestor de ventanas más eficiente" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" /></a>
   </figure>

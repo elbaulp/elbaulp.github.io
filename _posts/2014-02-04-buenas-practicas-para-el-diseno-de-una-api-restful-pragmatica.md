@@ -17,7 +17,7 @@ tags:
 author: luzila
 modified: 2015-12-28T9:34
 image: /assets/img/2014/01/201305-xml-vs-json-api.png
-excerpt: |
+description: |
 
   <figure>
     <a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><img src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="Buenas prácticas para el Diseño de una API RESTful Pragmática" alt="Buenas prácticas para el Diseño de una API RESTful Pragmática" /></a>

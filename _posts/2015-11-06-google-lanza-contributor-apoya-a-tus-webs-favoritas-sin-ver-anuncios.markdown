@@ -3,7 +3,7 @@ layout: post
 title: "Google Lanza Contributor, Apoya a Tus Webs Favoritas Sin Ver Anuncios"
 modified:
 categories:
-excerpt:
+description:
 tags: []
 image:
   feature:

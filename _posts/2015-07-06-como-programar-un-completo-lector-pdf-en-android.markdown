@@ -3,7 +3,7 @@ layout: post
 title: "Cómo Programar Un Completo Lector PDF en Android"
 modified:
 categories:
-excerpt: "¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en Android como en iOS.\
+description: "¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en Android como en iOS.\
 
 En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo lector y visor de documentos PDF, totalmente funcional, que incluye una barra de navegación con todo lo siguiente:"
 tags: [android, pdf, plugpdf, lector pdf android]

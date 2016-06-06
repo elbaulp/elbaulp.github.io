@@ -13,7 +13,7 @@ tags:
   - gridview android
 modified: 2015-12-23T9:30
 image: /assets/img/2014/11/gridview-scrolling-horizontal.png
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   </figure>

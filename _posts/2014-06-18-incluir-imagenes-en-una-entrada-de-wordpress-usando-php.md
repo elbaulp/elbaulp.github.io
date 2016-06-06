@@ -11,7 +11,7 @@ tags:
   - añadir imagenes php
   - añadir imagenes wordpress
   - imagenes en entradas wordpress
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2013/07/wordpress.png"><img src="/assets/img/2013/07/wordpress.png" title="Incluir imágenes en una entrada de WordPress usando PHP" alt="Incluir imágenes en una entrada de WordPress usando PHP" /></a>
   </figure>

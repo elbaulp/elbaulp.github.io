@@ -2,7 +2,7 @@
 id: 825
 title: Cómo maximizar la Vida de la Batería en tu Laptop Linux
 
-excerpt: |
+description: |
   <a href="https://elbauldelprogramador.com/assets/img/2012/07/sshot4cb822438c27c.jpg"><img src="https://elbauldelprogramador.com/assets/img/2012/07/sshot4cb822438c27c.jpg" alt="" title="sshot4cb822438c27c" width="650" height="306" class="aligncenter size-full wp-image-853" /></a>
   
   <strong><em><a href="http://www.flickr.com/photos/wolfhound/3167885873/sizes/m/in/photostream/" target="_blank">Foto por Sighthound</a></em></strong>

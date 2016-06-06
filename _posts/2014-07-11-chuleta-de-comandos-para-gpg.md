@@ -13,7 +13,7 @@ tags:
   - gpg
   - manual gpg
   - tutorial gpg
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="Chuleta de comandos para GPG" alt="Chuleta de comandos para GPG" /></a>
   </figure>

@@ -2,7 +2,7 @@
 id: 841
 title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
 
-excerpt: |
+description: |
   <a href="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg"><img src="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-844" /></a>
 
 

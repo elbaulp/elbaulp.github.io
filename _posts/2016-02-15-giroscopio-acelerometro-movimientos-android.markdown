@@ -4,7 +4,7 @@ title: Utilizando El Acelerómetro Y Giroscopio en Android Para Detectar Movimie
 date: 2016-02-18T09:32:53+01:00
 modified:
 categories:
-excerpt: "Una appMovimientoSonido que reconozca un patrón de movimientos de vuestra elección usando el giroscopio y/o el acelerómetro, una vez detectado el patrón, se reproducirá un sonido"
+description: "Una appMovimientoSonido que reconozca un patrón de movimientos de vuestra elección usando el giroscopio y/o el acelerómetro, una vez detectado el patrón, se reproducirá un sonido"
 tags: [tutorial acelerometro android, tutorial giroscopio android, detectar rotación giroscopio android, detectar golpe acelerometro android]
 image: /assets/img/npi/movementSound.png
 ---

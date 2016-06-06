@@ -7,7 +7,7 @@ image: /assets/img/latexxcolorbrillantes.png
 date: 2015-12-09T16:55:32+01:00
 modified: 2015-12-30T08:38:32+01:00
 math: true
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/latexxcolorbrillantes.png"><img src="/assets/img/latexxcolorbrillantes.png" title="Cómo Definir Colores Personalizados en LaTeX" alt="Cómo Definir Colores Personalizados en LaTeX" /></a>
   </figure>  

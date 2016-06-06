@@ -4,7 +4,7 @@ title: Un Conversor De Markdown a LaTeX Casero en Lex
 date: 2016-05-09T13:20:10+02:00
 modified:
 categories:
-excerpt: "Hace tiempo, para la asignatura “Modelos de Computación” desarrollé un conversor de MarkDown a LaTeX usando flex. Básicamente con flex se van reconociendo partes del documento MarkDown mediante expresiones regulares y se traduce a su comando homólogo en LaTeX."
+description: "Hace tiempo, para la asignatura “Modelos de Computación” desarrollé un conversor de MarkDown a LaTeX usando flex. Básicamente con flex se van reconociendo partes del documento MarkDown mediante expresiones regulares y se traduce a su comando homólogo en LaTeX."
 tags: [MarkDown, conversor latex markdown, lex, tutorial lex]
 ---
 

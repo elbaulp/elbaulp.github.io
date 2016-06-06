@@ -4,7 +4,7 @@ title: Programación Android - Conceptos básicos
 date: 2015-12-14T08:53:53+01:00
 modified:
 categories: android
-excerpt: "En este primer artículo veremos los conceptos fundamentales que componen una aplicación Android."
+description: "En este primer artículo veremos los conceptos fundamentales que componen una aplicación Android."
 tags: [Curso de Android, programación Android, tutoriales Android, NPI]
 image:
   thumb: hotlink-ok/activityLifecycle.png

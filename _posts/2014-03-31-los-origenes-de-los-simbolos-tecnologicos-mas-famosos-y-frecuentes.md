@@ -12,7 +12,7 @@ tags:
   - origen simbolo usb
   - origen símbolos tecnológicos
 author: luzila
-excerpt: |
+description: |
   <figure>
     <a href="/assets/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png"><img src="/assets/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png" title="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" alt="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" /></a>
   </figure>
