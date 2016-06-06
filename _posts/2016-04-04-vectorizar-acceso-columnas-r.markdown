@@ -11,7 +11,7 @@ date: 2016-04-04T20:56:12+02:00
 ---
 
 <figure>
-  <a href="/images/vectorizar-acceso-columnas-r.png"><img src="/images/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/vectorizar-acceso-columnas-r.png"><img src="/assets/img/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 {% include _toc.html %}

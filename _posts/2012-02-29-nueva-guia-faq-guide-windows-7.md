@@ -27,7 +27,7 @@ categories:
   - cursos
 ---
 <div style="float:left; margin-right:1em;">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_view10/prgm.cgi"><img style="border:none;" width="202" height="262" src="http://img.tradepub.com/free/w_view10/images/w_view10c.gif" title="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" alt="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_view10/prgm.cgi"><img style="border:none;" width="202" height="262" src="http://img.tradepub.com/free/w_view10/assets/img/w_view10c.gif" title="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" alt="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" /></a>
 </div>
 
 This FAQ Guide for enterprise IT management explains why Windows 7 migrations are prompting organizations to re-assess their approach to securing and managing desktops. Users who are &#8220;Administrators&#8221; on their endpoints do not need admin rights to accomplish daily tasks &#8211; and having free reign on software installation and endpoint based operations often leads to malware and data breaches that are costly to your company&#8217;s reputation and bottom line.

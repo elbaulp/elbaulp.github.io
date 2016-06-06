@@ -20,7 +20,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Estoy trabajando en una aplicación Android que consiste en almacenar los lugares favoritos del usuario en un mapa, debido al tiempo que dedico a la misma, estos días no he podido seguir publicando entradas sobre [Programación Android][1], en breve seguiré con el ritmo de publicación.
 

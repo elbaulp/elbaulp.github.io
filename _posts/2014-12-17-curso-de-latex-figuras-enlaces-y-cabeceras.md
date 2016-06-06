@@ -23,7 +23,7 @@ image:
   thumb: 2013/05/latex_logo.png
 excerpt: |
   <figure>
-    <a href="/images/2013/05/latex_logo.png"><img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+    <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   </figure>
 
   Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas...
@@ -31,7 +31,7 @@ modified: 2015-12-22T17:36
 ---
 
 <figure>
-  <a href="/images/2013/05/latex_logo.png"><img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 * [Mini Curso de LaTeX &#8211; Introducción][1]

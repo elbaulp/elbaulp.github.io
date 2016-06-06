@@ -19,7 +19,7 @@ tags:
 ---
 En un proyecto reciente he tenido que trabajar con las librerías de compatibilidad de Android, en este caso para crear diálogos que permitan elegir fecha y hora, como estos:
 
-<img src="/images/2012/11/pickers1.png" alt="" title="pickers" width="400" height="186" class="aligncenter size-full wp-image-1023" />
+<img src="/assets/img/2012/11/pickers1.png" alt="" title="pickers" width="400" height="186" class="aligncenter size-full wp-image-1023" />
 
 En Android recomiendan usar un `<a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html" title="DialogFrgment" target="_blank">DialogFragment</a>`, que permite mostrar éstos diálogos en distintos layouts. Si pretendes que tu aplicación soporte este tipo de diálogos para versiones inferiores a Android 3.0, debes usar el DialogFragment mencionado anteriormente, si por lo contrario tu aplicación usa un *minSdkVersion* igual o superior a 11, puedes usar este otro `<a href="http://developer.android.com/reference/android/app/DialogFragment.html" target="_blank">DialogFragment</a>`. En este artículo se va a tratar la versión para soportar versiones anteriores a la 3.0.
 
@@ -100,7 +100,7 @@ Otro aspecto importante de cara a la compatibilidad, es la llamada a `<a href="h
 
 Para comprobar que funciona, lanzamos el emulador, en este caso, con la versión 2.3 de Android:
 
-[<img src="/images/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4" width="180" height="300" class="aligncenter size-medium wp-image-1105" />][1]{.thumbnail}
+[<img src="/assets/img/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4" width="180" height="300" class="aligncenter size-medium wp-image-1105" />][1]{.thumbnail}
 
 El proceso de creación de un **DatePickerDialog** es muy similar.
 
@@ -160,7 +160,7 @@ public void mostrarDialogoDeFecha(View v){
 
 ```
 
-[<img src="/images/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180" height="300" class="aligncenter size-medium wp-image-1106" />][2]{.thumbnail}
+[<img src="/assets/img/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180" height="300" class="aligncenter size-medium wp-image-1106" />][2]{.thumbnail}
 
 Así de simple, es similar a crear un **timePickerDialog**  
 El código de ejemplo está disponible para descarga:
@@ -174,7 +174,7 @@ El código de ejemplo está disponible para descarga:
 
 
 
- [1]: /images/2013/01/device-2013-01-12-1337262.png
- [2]: /images/2013/01/device-2013-01-12-1352432.png
+ [1]: /assets/img/2013/01/device-2013-01-12-1337262.png
+ [2]: /assets/img/2013/01/device-2013-01-12-1352432.png
 
 {% include _toc.html %}

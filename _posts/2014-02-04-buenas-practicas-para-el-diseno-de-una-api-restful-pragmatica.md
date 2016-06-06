@@ -21,7 +21,7 @@ image:
 excerpt: |
 
   <figure>
-    <a href="/images/2014/01/201305-xml-vs-json-api.png"><img src="/images/2014/01/201305-xml-vs-json-api.png" title="Buenas prácticas para el Diseño de una API RESTful Pragmática" alt="Buenas prácticas para el Diseño de una API RESTful Pragmática" /></a>
+    <a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><img src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="Buenas prácticas para el Diseño de una API RESTful Pragmática" alt="Buenas prácticas para el Diseño de una API RESTful Pragmática" /></a>
   </figure>
 
   Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
@@ -415,7 +415,7 @@ GET /tickets?fields=id,subject,customer_name,updated_at&state=open&sort=-updated
     </p>
 
     <figure>
-      <a href="/images/2014/01/201305-xml-vs-json-api.png"><img src="/images/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+      <a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><img src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
     </figure>
 
     <p>

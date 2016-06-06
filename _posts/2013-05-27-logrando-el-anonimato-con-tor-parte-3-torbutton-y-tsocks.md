@@ -39,7 +39,7 @@ Al iniciar Firefox, aparecerá la siguiente pantalla:
 
 <!--ad-->
 
-#### [<img class="alignnone size-medium wp-image-1536" alt="081712_1515_AchievingAn1" src="/images/2013/04/081712_1515_AchievingAn1-300x114.png" width="300" height="114" />][4]{.thumbnail}
+#### [<img class="alignnone size-medium wp-image-1536" alt="081712_1515_AchievingAn1" src="/assets/img/2013/04/081712_1515_AchievingAn1-300x114.png" width="300" height="114" />][4]{.thumbnail}
 
 #### 2. Torbutton
 
@@ -180,7 +180,7 @@ En el log de acceso deberíamos observar una entrada como la siguiente:
 
 Podemos ver que pedimos el archivo image.png de la dirección IP 31.172.30.1. Para verificar incluso si la IP es parte de la red Tor, podemos clickear en &#8220;View the Network&#8221; en la GUI Vidalia, la cual nos lista todos los nodos en la red Tor. Entre todos ellos está también el nodo con la IP 31.172.30.1 como se representa en la imagen siguiente:
 
-[<img class="alignnone size-medium wp-image-1575" alt="081712_1515_AchievingAn2" src="/images/2013/05/081712_1515_AchievingAn2-300x99.png" width="300" height="99" />][5]{.thumbnail}
+[<img class="alignnone size-medium wp-image-1575" alt="081712_1515_AchievingAn2" src="/assets/img/2013/05/081712_1515_AchievingAn2-300x99.png" width="300" height="99" />][5]{.thumbnail}
 
 &nbsp;
 
@@ -200,7 +200,7 @@ Podemos ver que el nodo Tor está ubicado en Alemania, tiene la IP 31.172.30.1, 
  [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
  [2]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
  [3]: /logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
- [4]: /images/2013/04/081712_1515_AchievingAn1.png
- [5]: /images/2013/05/081712_1515_AchievingAn2.png
+ [4]: /assets/img/2013/04/081712_1515_AchievingAn1.png
+ [5]: /assets/img/2013/05/081712_1515_AchievingAn2.png
 
 {% include _toc.html %}

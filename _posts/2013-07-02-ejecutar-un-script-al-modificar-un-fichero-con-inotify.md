@@ -14,7 +14,7 @@ tags:
   - ejemplo inotify
   - ejemplo inotify-tools
 ---
-<img src="/images/2013/07/Screenshot-from-2013-07-02-164301.png" alt="Ejecutar un script al modificar un fichero con inotify" width="269" height="105" class="thumbnail alignleft size-full wp-image-1713" />La idea de querer ejecutar un [script][1] al modificar un fichero surgió a raiz del artículo donde expliqué cómo [editar y crear archivos cifrados con GPG en Vim][2]. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.  
+<img src="/assets/img/2013/07/Screenshot-from-2013-07-02-164301.png" alt="Ejecutar un script al modificar un fichero con inotify" width="269" height="105" class="thumbnail alignleft size-full wp-image-1713" />La idea de querer ejecutar un [script][1] al modificar un fichero surgió a raiz del artículo donde expliqué cómo [editar y crear archivos cifrados con GPG en Vim][2]. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.  
 <!--ad--> A mi personalmente me hacía falta para cifrar un archivo automáticamente tras modificarlo, pero más tarde caí en la cuenta de que eso ya lo hace el plugin de Vim.
 
 Antes de poder usar el script es necesario instalar *inotify-tools*

@@ -15,7 +15,7 @@ tags:
   - seguridad en bind
   - usar fpdns
 ---
-<img src="/images/2013/04/dns-300x240.jpg" alt="Cómo ocultar la versión de BIND (Y como averiguarla)" width="300" height="240" class="thumbnail alignleft size-medium wp-image-1533" />  
+<img src="/assets/img/2013/04/dns-300x240.jpg" alt="Cómo ocultar la versión de BIND (Y como averiguarla)" width="300" height="240" class="thumbnail alignleft size-medium wp-image-1533" />  
 Realizando un análisis en *<a href="http://www.dnsinspect.com" target="_blank">dnsInspect</a>* me dí cuenta de que el servidor estaba mostrando la versión de [BIND][1], lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.
 
 Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos **[dig][2]** para ello:  

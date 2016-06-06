@@ -42,7 +42,7 @@ gource /ruta/a/.git
 El resultado es algo como esto:
 
 <figure>
-  <a href="/images/2013/05/gourceGit-1024x804.png"><img src="/images/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/05/gourceGit-1024x804.png"><img src="/assets/img/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.
@@ -74,6 +74,6 @@ A continuación os dejo un vídeo de uno de mis repositorios:
 
  [1]: https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: /images/2013/05/gourceGit.png
+ [3]: /assets/img/2013/05/gourceGit.png
 
 {% include _toc.html %}

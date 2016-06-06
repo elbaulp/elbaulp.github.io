@@ -13,7 +13,7 @@ image:
 date: 2015-11-27T08:55:00+00:00
 ---
 <figure>
-  <img src="/images/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 This kit will tell you what you need to know to earn more in system administration and security.

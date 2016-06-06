@@ -24,7 +24,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Poco a poco, todos los dias intento traducir uno o dos párrafos de la guía Android, y esto me ha llevado a completar el siguiente tema, [Application Fundamentals][1].
 

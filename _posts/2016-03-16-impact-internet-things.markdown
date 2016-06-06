@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01"><img src="/images/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01"><img src="/assets/img/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 How IoT is set to revolutionize the commercial real estate industry.

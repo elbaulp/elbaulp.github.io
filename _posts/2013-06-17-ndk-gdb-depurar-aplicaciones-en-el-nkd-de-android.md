@@ -438,7 +438,7 @@ Con el comando adios terminamos la sesión, y el buffer ha registrado toda la co
 
 y se muestra en la pantalla del dispositivo:
 
-[<img src="/images/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb" width="180" height="300" class="aligncenter size-medium wp-image-1678" />][6]{.thumbnail}
+[<img src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb" width="180" height="300" class="aligncenter size-medium wp-image-1678" />][6]{.thumbnail}
 
 Con esto concluye el artículo, espero que haya sido de utilidad.
 
@@ -453,6 +453,6 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
  [3]: /lenguaje-c/
  [4]: /programacion-android-interfaz-grafica_25/
  [5]: /fundamentos-programacion-android_17/
- [6]: /images/2013/06/Screenshot_2013-06-17-17-20-53.png
+ [6]: /assets/img/2013/06/Screenshot_2013-06-17-17-20-53.png
 
 {% include _toc.html %}

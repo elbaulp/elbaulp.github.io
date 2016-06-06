@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="/images/Compilar-e-Instalar-El-Kernel-4.2.png"><img src="/images/Compilar-e-Instalar-El-Kernel-4.2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/Compilar-e-Instalar-El-Kernel-4.2.png"><img src="/assets/img/Compilar-e-Instalar-El-Kernel-4.2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: <a href="https://pixabay.com/en/linux-logo-penguin-tux-text-151619/" target="_blank" title="">pixabay</a></span><br/>
 </figure>
 

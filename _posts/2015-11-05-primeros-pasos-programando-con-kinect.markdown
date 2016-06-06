@@ -14,7 +14,7 @@ date: 2015-11-05T19:30:26+01:00
 math: true
 ---
 <figure>
-  <img src="/images/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 {% include _toc.html %}

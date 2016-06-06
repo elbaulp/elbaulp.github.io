@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc2"><img src="/images/Python-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc2"><img src="/assets/img/Python-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Kick-start your Python projects with these hot recipes!

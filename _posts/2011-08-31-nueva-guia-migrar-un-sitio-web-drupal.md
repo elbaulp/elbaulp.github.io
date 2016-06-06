@@ -27,7 +27,7 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
 
 
 
- [1]:  http://img.tradepub.com/free/w_acqu02/images/w_acqu02c.gif "Migrating a Web Site to Drupal"
+ [1]:  http://img.tradepub.com/free/w_acqu02/assets/img/w_acqu02c.gif "Migrating a Web Site to Drupal"
  [2]: http://elbauldelprogramador.tradepub.com/free/w_acqu02/prgm.cgi/
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 

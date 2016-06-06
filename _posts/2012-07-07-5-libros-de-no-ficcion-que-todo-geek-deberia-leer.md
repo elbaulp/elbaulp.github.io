@@ -31,7 +31,7 @@ Esta lista de libros geeks se mantiene en constante actualización, si deseas qu
 ### Thing Explainer: Complicated Stuff in Simple Words
 
 <figure>
-  <a href="/images/Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg"><img src="/images/Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg" title="Thing Explainer: Complicated Stuff in Simple Words" alt="Thing Explainer: Complicated Stuff in Simple Words" /></a>
+  <a href="/assets/img/Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg"><img src="/assets/img/Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg" title="Thing Explainer: Complicated Stuff in Simple Words" alt="Thing Explainer: Complicated Stuff in Simple Words" /></a>
 </figure>
 
 Libro del gran _Randall Munroe_, quién trabajó como ingeniero robótico en la NASA. Ahora se dedica a escribir los fantásticos comics en <a href="https://xkcd.com/" target="_blank" title="Comics de XKCD">xkcd</a> y a contestar preguntas en <a href="http://what-if.xkcd.com/" target="_blank" title="What if Randall Munroe">what-if.xkcd</a>.
@@ -45,7 +45,7 @@ En _Thing Explainer_ Randall describe conceptos y cosas muy complejas, desde có
 ### What If?: Serious Scientific Answers to Absurd Hypothetical Questions
 
 <figure>
-  <a href="/images/What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg"><img src="/images/What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg" title="What If?: Serious Scientific Answers to Absurd Hypothetical Questions" alt="What If?: Serious Scientific Answers to Absurd Hypothetical Questions" /></a>
+  <a href="/assets/img/What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg"><img src="/assets/img/What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg" title="What If?: Serious Scientific Answers to Absurd Hypothetical Questions" alt="What If?: Serious Scientific Answers to Absurd Hypothetical Questions" /></a>
 </figure>
 
 Otro libro de _Randall Munroe_, en esta ocasión una recopilación de las preguntas que le hacen en su blog _What if?_, en el que responde cualquier tipo de pregunta que le hagan, por rara que sea, de forma científica. Aquí la descripción de Amazon:
@@ -61,7 +61,7 @@ In pursuit of answers, Munroe runs computer simulations, pores over stacks of de
 ### ¿Que Pasaría Si...?
 
 <figure>
-  <a href="/images/Que-Pasaria-Si.jpg"><img src="/images/Que-Pasaria-Si.jpg" title="¿Que Pasaría Si...?" alt="¿Que Pasaría Si...?" /></a>
+  <a href="/assets/img/Que-Pasaria-Si.jpg"><img src="/assets/img/Que-Pasaria-Si.jpg" title="¿Que Pasaría Si...?" alt="¿Que Pasaría Si...?" /></a>
 </figure>
 
 La versión en castellano del libro anterior:
@@ -83,7 +83,7 @@ La versión en castellano del libro anterior:
 ### Seven Brief Lessons On Physics
 
 <figure>
-  <img src="/images/Seven Brief Lessons On Physics.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Seven Brief Lessons On Physics.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 > Este libro del italiano _Carlo Rovelli_ se ha vendido en Itala más que 50 sombras de Grey.
@@ -99,7 +99,7 @@ These seven short lessons guide us, with simplicity and clarity, through the sci
 ### The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin
 
 <figure>
-  <img src="/images/The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin.jpg" title="The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin" alt="The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin">
+  <img src="/assets/img/The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin.jpg" title="The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin" alt="The Magic of Math: Solving for X and Figuring Out Why, de Arthur Benjamin">
 </figure>
 
 The Magic of Math is the math book you wish you had in school. Using a delightful assortment of examples—from ice cream scoops and poker hands to measuring mountains and making magic squares—this book empowers you to see the beauty, simplicity, and truly magical properties behind those formulas and equations that once left your head spinning. You’ll learn the key ideas of classic areas of mathematics like arithmetic, algebra, geometry, trigonometry, and calculus, but you’ll also have fun fooling around with Fibonacci numbers, investigating infinity, and marveling over mathematical magic tricks that will make you look like a math genius!
@@ -111,7 +111,7 @@ The Magic of Math is the math book you wish you had in school. Using a delightfu
 ### En el principio fue la línea de comandos: de Neal Stephenson (Gracias a Miguel)
 
 <figure>
-  <img src="/images/En el principio fue la línea de comandos: de Neal Stephenson.jpg" title="En el principio fue la línea de comandos: de Neal Stephenson" alt="En el principio fue la línea de comandos: de Neal Stephenson">
+  <img src="/assets/img/En el principio fue la línea de comandos: de Neal Stephenson.jpg" title="En el principio fue la línea de comandos: de Neal Stephenson" alt="En el principio fue la línea de comandos: de Neal Stephenson">
 </figure>
 
 <div class="btn-success">
@@ -121,7 +121,7 @@ The Magic of Math is the math book you wish you had in school. Using a delightfu
 ### Software libre para una sociedad libre: de Richard Stallman (Gracias a Miguel)
 
 <figure>
-  <img src="/images/Software libre para una sociedad libre: de Richard Stallman.jpg" title="Software libre para una sociedad libre: de Richard Stallman" alt="Software libre para una sociedad libre: de Richard Stallman">
+  <img src="/assets/img/Software libre para una sociedad libre: de Richard Stallman.jpg" title="Software libre para una sociedad libre: de Richard Stallman" alt="Software libre para una sociedad libre: de Richard Stallman">
 </figure>
 
 <div class="btn-success">
@@ -131,7 +131,7 @@ The Magic of Math is the math book you wish you had in school. Using a delightfu
 ### Generation Xbox (La Generación Xbox), por Jamie Russell
 
 <figure>
-  <img src="/images/2012/07/generationxbox1.jpg" title="Generation Xbox (La Generación Xbox), por Jamie Russell" alt="Generation Xbox (La Generación Xbox), por Jamie Russell" />
+  <img src="/assets/img/2012/07/generationxbox1.jpg" title="Generation Xbox (La Generación Xbox), por Jamie Russell" alt="Generation Xbox (La Generación Xbox), por Jamie Russell" />
 </figure>
 
 El libro con la versión más reciente de esta lista, *Generación Xbox* se centra menos en la consola de lo que el título sugiere. Es realmente un libro sobre cómo la relación entre la industria del video-juego y Hollywood se ha involucrado a través de los años. Incluye curiosidades acerca del fracaso de la película Halo y la creación de la película de Mario Bros., que cualquier fan de los video-juegos o <a href="http://www.makeuseof.com/tag/video-games-movies-muo-gaming/" target="_blank">aficionado al cine</a> le gustará leer.
@@ -145,7 +145,7 @@ Esta no es la única razón por la que recomiendo este libro, de todas maneras. 
 ### The Master Switch (El interruptor maestro) por Tim Wu
 
 <figure>
-  <img src="/images/2012/07/themasterswitch1.jpg" title="The Master Switch (El interruptor maestro) por Tim Wu" alt="The Master Switch (El interruptor maestro) por Tim Wu" />
+  <img src="/assets/img/2012/07/themasterswitch1.jpg" title="The Master Switch (El interruptor maestro) por Tim Wu" alt="The Master Switch (El interruptor maestro) por Tim Wu" />
 </figure>
 
 Si buscas activamente libros sobre tecnología y comunicación, ya debes haber oido sobre este libro, o incluso leído. Aunque es un poco antiguo, se ha establecido como uno de los más importantes libros escritos sobre la historia de la industria de las comunicaciones en América.  
@@ -160,7 +160,7 @@ La mayor parte del libro se centra en el gigante que fue AT&T. Hay mucha histori
 por David Shippy And Mickie Phipps
 
 <figure>
-  <img src="/images/2012/07/raceforgame1.jpg" title="The Race For A New Game Machine (La carrera por una nueva máquina de videojuegos)" alt="The Race For A New Game Machine (La carrera por una nueva máquina de videojuegos)" />
+  <img src="/assets/img/2012/07/raceforgame1.jpg" title="The Race For A New Game Machine (La carrera por una nueva máquina de videojuegos)" alt="The Race For A New Game Machine (La carrera por una nueva máquina de videojuegos)" />
 </figure>
 
 Este libro está un poco fuera de lugar en esta lista ya que, por lejos, es menos bien redactado. Su autores son David Shippy, quien estuvo a cargo de diseñar el procesador Cell para Sony, y Mickie Phipps, un compañero de trabajo que también ocupa un lugar alto en el totem. El carácter de este libro es tan autocomplaciente como útil.
@@ -178,7 +178,7 @@ Este libro es importante además porque las consolas son importantes. Ellas est�
 ### Steve Jobs, por Walter Isaacson
 
 <figure>
-  <img src="/images/2012/07/stevejobs11.jpg" title="Steve Jobs, por Walter Isaacson" alt="Steve Jobs, por Walter Isaacson" />
+  <img src="/assets/img/2012/07/stevejobs11.jpg" title="Steve Jobs, por Walter Isaacson" alt="Steve Jobs, por Walter Isaacson" />
 </figure>
 
 ¿Cómo podría escribir una lista de libros no-ficción para geeks sin incluir Steve Jobs? Esta increiblemente oportuna biografía es una profunda (y en 656 páginas, bastante larga) retrospectiva en la vida de la persona que era reconocida como uno de los más inteligentes e implacables líderes en la industria al mismo tiempo que se retiraba de su posición como CEO de Apple.
@@ -192,7 +192,7 @@ Apple no fue su único trabajo, no obstante, por el cual este libro es una lectu
 ### Contra el rebaño digital: Un manifiesto, por Jaron Lanier
 
 <figure>
-  <img src="/images/Contra-el-rebano-digital-Un-manifiesto.jpg" title="Contra el rebaño digital: Un manifiesto, por Jaron Lanier" alt="Contra el rebaño digital: Un manifiesto, por Jaron Lanier" />
+  <img src="/assets/img/Contra-el-rebano-digital-Un-manifiesto.jpg" title="Contra el rebaño digital: Un manifiesto, por Jaron Lanier" alt="Contra el rebaño digital: Un manifiesto, por Jaron Lanier" />
 </figure>
 
 *You Are Not A Gadget* no es un libro fácil de digerir. Los argumentos filosóficos de Jaron Lanier y su prosa densa pueden hacerlo difícil al principio, particularmente para alguien que está acostumbrado al rápido-y-fácil estilo de los blogs online. Sugiero que no despegues la nariz de la página. Este libro es el mejor análisis crítico de Internet y la cultura online que puedes haber leído.
@@ -216,7 +216,7 @@ Esto es realmente sólo la punta del iceberg. Hay muchísimo encerrado en este p
 ### Biopreguntas y la respuesta mecánica, de Didier Newman
 
 <figure>
-  <img src="/images/2012/07/Biopreguntas-y-la-respuesta-mecánica.jpg" title="Biopreguntas y la respuesta mecánica, de Didier Newman" alt="Biopreguntas y la respuesta mecánica, de Didier Newman" />
+  <img src="/assets/img/2012/07/Biopreguntas-y-la-respuesta-mecánica.jpg" title="Biopreguntas y la respuesta mecánica, de Didier Newman" alt="Biopreguntas y la respuesta mecánica, de Didier Newman" />
 </figure>
 
 Este es un libro de preguntas, algunas divertidas y muchas otras más serias e inquietantes. Un libro que a partir de la ciencia biológica, que se usa como columna vertebral necesaria para seguir una narración con los pies en el suelo, además pretende tratar todos los temas de interés humano, desde una perspectiva moderna, desenfadada y holística. Así pues, un libro excelente para cuestionar la vida y la muerte; cuestionar las religiones y las filosofías; cuestionar el universo y el yo; cuestionar el sufrimiento y el amor; en resumen, cuestionar lo cuestionable, de forma diferente y con sustancia suficiente para los sueños y las reflexiones de naturaleza tanto científica como humanística. Sobretodo, con sustancia suficiente para que el lector pueda cuestionar por sí mismo la música o el ruido del mundo que quizás lo envuelve constantemente.
@@ -228,7 +228,7 @@ Este es un libro de preguntas, algunas divertidas y muchas otras más serias e i
 ### Y Google, ¿cómo lo haría? de Jeff Jarvis
 
 <figure>
-  <img src="/images/2012/07/Y-Google-¿cómo-lo-haría.jpg" title="Y Google, ¿cómo lo haría? de Jeff Jarvis" alt="Y Google, ¿cómo lo haría? de Jeff Jarvis" />
+  <img src="/assets/img/2012/07/Y-Google-¿cómo-lo-haría.jpg" title="Y Google, ¿cómo lo haría? de Jeff Jarvis" alt="Y Google, ¿cómo lo haría? de Jeff Jarvis" />
 </figure>
 
 A nadie sorprende la pregunta que plantea el título de este libro. Y es que Google ha sido la empresa con el mayor crecimiento en el menor período de tiempo de la historia. Es una marca cuya dimensión ha alcanzado cotas inusitadas y cuya gestión se ha convertido en ejemplar en todos los ámbitos.Con la voluntad de saber qué se esconde tras ese éxito y, más importante aún, qué podemos aprender de él, Jarvis nos descubre 40 sencillas reglas que toda empresa debe seguir.Asimismo, nos enseña la realidad de la era digital, una era de cambios y retos constantes pero que nos ofrece grandes oportunidades. Y para ello nos pone ilustrativos ejemplos tales como: un coche diseñado por sus conductores o una universidad en la que los estudiantes determinan su plan de estudios. Un libro sorprendente e imprescindible.
@@ -244,7 +244,7 @@ A continuación una lista de libros que han recomendado los lectores del blog en
 ### Design of Everyday Things
 
 <figure>
-  <img src="/images/2012/07/The-Design-of-Everyday-Things.jpg" title="Design of Everyday Things" alt="Design of Everyday Things" />
+  <img src="/assets/img/2012/07/The-Design-of-Everyday-Things.jpg" title="Design of Everyday Things" alt="Design of Everyday Things" />
 </figure>
 
 Even the smartest among us can feel inept as we fail to figure out which light switch or oven burner to turn on, or whether to push, pull, or slide a door. The fault, argues this ingenious-even liberating-book, lies not in ourselves, but in product design that ignores the needs of users and the principles of cognitive psychology. The problems range from ambiguous and hidden controls to arbitrary relationships between controls and functions, coupled with a lack of feedback or other assistance and unreasonable demands on memorization. The Design of Everyday Things shows that good, usable design is possible. The rules are simple: make things visible, exploit natural relationships that couple function and control, and make intelligent use of constraints. The goal: guide the user effortlessly to the right action on the right control at the right time. In this entertaining and insightful analysis, cognitive scientist Donald A. Norman hails excellence of design as the most important key to regaining the competitive edge in influencing consumer behavior. Now fully expanded and updated, with a new introduction by the author, The Design of Everyday Things is a powerful primer on how-and why-some products satisfy customers while others only frustrate them.
@@ -264,7 +264,7 @@ Un libro necesario sobre la fascinante contracultura que mezcla las reivindicaci
 ### Cypherpunks: La libertad y el futuro de internet
 
 <figure>
-  <img src="/images/2012/07/Cypherpunks-La-libertad-y-el-futuro-de-internet.jpg" title="Cypherpunks: La libertad y el futuro de internet" alt="Cypherpunks: La libertad y el futuro de internet" />
+  <img src="/assets/img/2012/07/Cypherpunks-La-libertad-y-el-futuro-de-internet.jpg" title="Cypherpunks: La libertad y el futuro de internet" alt="Cypherpunks: La libertad y el futuro de internet" />
 </figure>
 
 Lejos de ser una herramienta que permita la libertad de expresión, internet se ha convertido,en opinión de Julian Assange, en «una amenaza para la civilización humana», debido a quelos Estados se han convertido en el mayor aparato de espionaje y vigilancia de los ciudadanosque haya existido jamás.A su juicio, si en internet se pudiera compartir y transmitir libremente la información, la redpodría constituir el mejor impulso para el progreso. No obstante, ocurre justo lo contrario:los poderes fácticos, que quieren que nada cambie, obstaculizan la difusión por este medioy procuran que nada de lo que se transmita quede fuera de su alcance y de su control. Conello, consiguen eliminar cualquier amenaza al statu quo.Para Assange y sus colaboradores, sólo existe una herramienta para salvaguardar la libertaden internet: el conocimiento detallado de cómo está organizado el sistema de controlestatal y el desarrollo de la criptografía para hacerle frente.En este libro, se describen las amenazas a las que la sociedad está expuesta debido al controlque los gobiernos hacen de internet, denuncian las acotaciones más fl agrantes de injerenciay censura, y proponen los mecanismos para que, gracias a la red, nuestro mundo seamejor o, al menos, más justo.
@@ -276,7 +276,7 @@ Lejos de ser una herramienta que permita la libertad de expresión, internet se 
 ### Hackstory.es: La historia nunca contada del underground hacker en la Península Ibérica
 
 <figure>
-  <img src="/images/2012/07/Hackstory.es-La-historia-nunca-contada-del-underground-hacker-en-la-Península-Ibérica.jpg" title="Hackstory.es: La historia nunca contada del underground hacker en la Península Ibérica" alt="Hackstory.es: La historia nunca contada del underground hacker en la Península Ibérica" />
+  <img src="/assets/img/2012/07/Hackstory.es-La-historia-nunca-contada-del-underground-hacker-en-la-Península-Ibérica.jpg" title="Hackstory.es: La historia nunca contada del underground hacker en la Península Ibérica" alt="Hackstory.es: La historia nunca contada del underground hacker en la Península Ibérica" />
 </figure>
 
 Historia de la comunidad hacker en España, centrada en la década de los 90, cuando aparecen los primeros grupos y nace la cultura hacker. El libro narra el quién fue quién, así como sus hazañas, anécdotas y colectivos e individuales más punteros. Este ingente trabajo de investigación nació en 2009, con la puesta en marcha de un wiki, al estilo wikipedia, llamado Hackstory.net y donde en estos años la autora ha ido creando fichas, accesibles al público, que le han permitido escribir este libro, sin parangón en Europa. La comunidad hacker ha revisado los textos así como apoyado a la autora, tanto a la hora de aportar información, como en una campaña de &#8220;crowdfunding&#8221; con la que se consiguió una respetable cantidad para tener el tiempo suficiente de escribir el libro. Además de ser sus principales mecenas, protagonistas y aportadores de información, los hackers españoles han participado en todos los aspectos organizativos relacionados con la producción y distribución del libro, a través de un grupo en Facebook creado ex professo.
@@ -288,7 +288,7 @@ Historia de la comunidad hacker en España, centrada en la década de los 90, cu
 ### Hackers: Heroes of the Computer Revolution &#8211; 25th Anniversary Edition
 
 <figure>
-  <img src="/images/2012/07/Hackers-Heroes-of-the-Computer-Revolution-25th-Anniversary-Edition.jpg" title="Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition" alt="Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition" />
+  <img src="/assets/img/2012/07/Hackers-Heroes-of-the-Computer-Revolution-25th-Anniversary-Edition.jpg" title="Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition" alt="Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition" />
 </figure>
 
 This 25th anniversary edition of Steven Levy&#8217;s classic book traces the exploits of the computer revolution&#8217;s original hackers &#8212; those brilliant and eccentric nerds from the late 1950s through the early &#8217;80s who took risks, bent the rules, and pushed the world in a radical new direction. With updated material from noteworthy hackers such as Bill Gates, Mark Zuckerberg, Richard Stallman, and Steve Wozniak, Hackers is a fascinating story that begins in early computer research labs and leads to the first home computers.
@@ -302,7 +302,7 @@ Levy profiles the imaginative brainiacs who found clever and unorthodox solution
 ### El Arte de la Intrusión
 
 <figure>
-  <img src="/images/2012/07/El-Arte-de-la-Intrusión.jpg" title="El Arte de la Intrusión" alt="El Arte de la Intrusión" />
+  <img src="/assets/img/2012/07/El-Arte-de-la-Intrusión.jpg" title="El Arte de la Intrusión" alt="El Arte de la Intrusión" />
 </figure>
 
 &#8220;Entra en el mundo hostil de los delitos informáticos desde la comodidad de tu propio sofá. Mitnick presenta diez capítulos obligatorios, todos ellos resultado de una entrevista con un hacker de verdad. Un libro de lectura obligada para todo el que este interesado en la seguridad de la información.&#8221; -Tom Parker, analista de seguridad informática y fundador de Global InterSec, LLC. &#8220;Uno se queda atónito ante la tremenda brillantez que se halla en estas hazañas ilegales. Imaginen cuánto se podría conseguir si estos genios utilizaran sus capacidades para el bien. Como ocio o como formación, recomiendo este libro&#8221; -About.com
@@ -314,7 +314,7 @@ Levy profiles the imaginative brainiacs who found clever and unorthodox solution
 ### Hackers & Painters: Big Ideas from the Computer Age
 
 <figure>
-  <img src="/images/2012/07/Hackers-Painters-Big-Ideas-from-the-Computer-Age.jpg" title="Hackers & Painters: Big Ideas from the Computer Age" alt="Hackers & Painters: Big Ideas from the Computer Age" />
+  <img src="/assets/img/2012/07/Hackers-Painters-Big-Ideas-from-the-Computer-Age.jpg" title="Hackers & Painters: Big Ideas from the Computer Age" alt="Hackers & Painters: Big Ideas from the Computer Age" />
 </figure>
 
 &#8220;The computer world is like an intellectual Wild West, in which you can shoot anyone you wish with your ideas, if you&#8217;re willing to risk the consequences. &#8221; &#8211;from Hackers & Painters: Big Ideas from the Computer Age, by Paul Graham

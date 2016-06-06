@@ -11,7 +11,7 @@ date: 2015-12-10T21:04:29+01:00
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_iqpc83"><img src="/images/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_iqpc83"><img src="/assets/img/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 This exclusive interview looks at the ways in which predictive analytics will affect five key areas of the insurance industry.

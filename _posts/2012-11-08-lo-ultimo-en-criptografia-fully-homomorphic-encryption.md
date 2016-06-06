@@ -18,7 +18,7 @@ tags:
   - criptografia homomorfica
   - Fully Homomorphic Encryption
 ---
-[<img class="alignleft size-full wp-image-1016" title="Homomorphic Encryption" src="/images/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="" width="256" height="256" />][1]  
+[<img class="alignleft size-full wp-image-1016" title="Homomorphic Encryption" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="" width="256" height="256" />][1]  
 Me he aficionado a escuchar un programa de radio llamado **Security Now!**, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.
 
 Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama **Homomorphic Encryption** (Cifrado Homomórfico) ó **Fully Homomorphic Encryption** (Cifrado totalmente homomórfico).
@@ -92,6 +92,6 @@ Queda así abierto un nuevo campo en la investigación criptográfica. De aquí 
 
 
 
- [1]: /images/2012/11/Apps-preferences-desktop-cryptography-icon1.png
+ [1]: /assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png
 
 {% include _toc.html %}

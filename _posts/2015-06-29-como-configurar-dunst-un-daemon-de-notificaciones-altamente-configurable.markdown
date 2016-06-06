@@ -13,7 +13,7 @@ image:
 date: 2015-06-29T18:43:06+02:00
 ---
 <figure>
-  <img src="/images/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 Si eres lector habitual del blog, sabrás que me gustan los entornos minimalistas y configurables, como puede comprobarse en los artículos [instalar y configurar dwm](/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM"), y el patch para colorear la [barra de estado](/statuscolor-dwm-6-1/).

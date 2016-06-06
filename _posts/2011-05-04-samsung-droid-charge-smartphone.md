@@ -26,7 +26,7 @@ tags:
 <div class="iconews">
 </div>
 
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Dejo este vídeo que me ha parecido interesante y que describe las características de este nuevo terminal. Sus características más destacadas son:
 

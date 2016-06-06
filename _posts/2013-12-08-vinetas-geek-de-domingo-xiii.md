@@ -12,17 +12,17 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Cuando consigo un ordenador nuevo y mis colegas quieren verlo
 
-<img class="thumbnail aligncenter size-full wp-image-2023" alt="Cuando tengo un ordenador nuevo y mis colegas quieren verlo" src="/images/2013/12/when-I-get-a-new-computer-and-my-colleagues-want-to-see-it.gif" width="297" height="329" />  
+<img class="thumbnail aligncenter size-full wp-image-2023" alt="Cuando tengo un ordenador nuevo y mis colegas quieren verlo" src="/assets/img/2013/12/when-I-get-a-new-computer-and-my-colleagues-want-to-see-it.gif" width="297" height="329" />  
 <!--ad-->
 
 #### Cuando pienso que mi refactorización será inofensiva
 
-<img class="thumbnail aligncenter size-full wp-image-2024" alt="Cuando pienso que mi refactorización será inofensiva" src="/images/2013/12/when-I-think-my-refactor-will-be-harmless.gif" width="400" height="259" />
+<img class="thumbnail aligncenter size-full wp-image-2024" alt="Cuando pienso que mi refactorización será inofensiva" src="/assets/img/2013/12/when-I-think-my-refactor-will-be-harmless.gif" width="400" height="259" />
 
 #### Explicado simplemente &#8211; [Git Blame][2]
 
 <div id="attachment_2026" style="width: 425px" class="wp-caption aligncenter">
-  <img class="thumbnail size-full wp-image-2026" alt="Explicado simplemente - Git Blame" src="/images/2013/12/Simply-Explained-git-blame.jpg" width="415" height="541" />
+  <img class="thumbnail size-full wp-image-2026" alt="Explicado simplemente - Git Blame" src="/assets/img/2013/12/Simply-Explained-git-blame.jpg" width="415" height="541" />
   
   <p class="wp-caption-text">
     &#8211; Por favor,por favor&#8230;.Mierda!!! fui yo.
@@ -32,7 +32,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 #### Explicado simplemente &#8211; [Expresiones regulares][3] del día anterior
 
 <div id="attachment_2027" style="width: 339px" class="wp-caption aligncenter">
-  <img class="thumbnail size-full wp-image-2027" alt="Explicado simplemente - Expresiones regulares del día anterior" src="/images/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" width="329" height="533" />
+  <img class="thumbnail size-full wp-image-2027" alt="Explicado simplemente - Expresiones regulares del día anterior" src="/assets/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" width="329" height="533" />
   
   <p class="wp-caption-text">
     ¿Estaba borracho?, ¿o soy un genio?
@@ -41,24 +41,24 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Explicado simplemente &#8211; Void
 
-<img class="thumbnail aligncenter size-full wp-image-2028" alt="Explicado simplemente - Void" src="/images/2013/12/Explicado-simplemente-Void.jpg" width="352" height="433" />
+<img class="thumbnail aligncenter size-full wp-image-2028" alt="Explicado simplemente - Void" src="/assets/img/2013/12/Explicado-simplemente-Void.jpg" width="352" height="433" />
 
 #### Revisando las especificaciones
 
-<img class="thumbnail aligncenter size-full wp-image-2029" alt="Revisando las especificaciones" src="/images/2013/12/Examing-the-specs.gif" width="346" height="194" />
+<img class="thumbnail aligncenter size-full wp-image-2029" alt="Revisando las especificaciones" src="/assets/img/2013/12/Examing-the-specs.gif" width="346" height="194" />
 
 #### Cuando mi jefe me pide que compruebe la web en IE
 
-<img class="thumbnail aligncenter size-full wp-image-2030" alt="Cuando mi jefe me pide que compruebe la web en IE" src="/images/2013/12/Cuando-mi-jefe-me-pide-que-compruebe-la-web-en-IE.gif" width="250" height="202" />
+<img class="thumbnail aligncenter size-full wp-image-2030" alt="Cuando mi jefe me pide que compruebe la web en IE" src="/assets/img/2013/12/Cuando-mi-jefe-me-pide-que-compruebe-la-web-en-IE.gif" width="250" height="202" />
 
 #### Cuando un interino me pide que solucione un bug
 
-<img class="thumbnail aligncenter size-full wp-image-2025" alt="Cuando un interino me pide que solucione un bug" src="/images/2013/12/when-an-intern-asks-me-to-solve-a-bug.gif" width="297" height="300" />
+<img class="thumbnail aligncenter size-full wp-image-2025" alt="Cuando un interino me pide que solucione un bug" src="/assets/img/2013/12/when-an-intern-asks-me-to-solve-a-bug.gif" width="297" height="300" />
 
 #### Git commit
 
 <div id="attachment_2031" style="width: 449px" class="wp-caption aligncenter">
-  <img class="thumbnail size-full wp-image-2031" alt="Merge branch 'asdfasjkfdlas / alkdjf' into sdkjfls-final" src="/images/2013/12/git_commit-Merge-branch-asdfasjkfdlas-slash-alkdjf-into-sdkjfls-final.png" width="439" height="250" />
+  <img class="thumbnail size-full wp-image-2031" alt="Merge branch 'asdfasjkfdlas / alkdjf' into sdkjfls-final" src="/assets/img/2013/12/git_commit-Merge-branch-asdfasjkfdlas-slash-alkdjf-into-sdkjfls-final.png" width="439" height="250" />
   
   <p class="wp-caption-text">
     Merge branch &#8216;asdfasjkfdlas / alkdjf&#8217; into sdkjfls-final
@@ -68,7 +68,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 #### Quiero intentarlo
 
 <div id="attachment_2032" style="width: 750px" class="wp-caption aligncenter">
-  <img class="thumbnail size-full wp-image-2032" alt="Espera, vuelve" src="/images/2013/12/I-wanna-try.-Hang-on-be-right-back.png" width="740" height="254" />
+  <img class="thumbnail size-full wp-image-2032" alt="Espera, vuelve" src="/assets/img/2013/12/I-wanna-try.-Hang-on-be-right-back.png" width="740" height="254" />
   
   <p class="wp-caption-text">
     &#8211; Te has fijado en ese punto brillante allá en la distancia?<br />- Sí. Qué pasa?<br />- No sé, voy a echarle un vistazo<br />- Wow. No vayas por allí.
@@ -77,7 +77,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Cuando modifican mi código
 
-<img class="thumbnail aligncenter size-full wp-image-2033" alt="Cuando alguien modifica mi código" src="/images/2013/12/Cuando-alguien-modifica-mi-código.gif" width="460" height="254" />
+<img class="thumbnail aligncenter size-full wp-image-2033" alt="Cuando alguien modifica mi código" src="/assets/img/2013/12/Cuando-alguien-modifica-mi-código.gif" width="460" height="254" />
 
 #### Referencias
 

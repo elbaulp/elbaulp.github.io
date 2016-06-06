@@ -31,7 +31,7 @@ tags:
   - htop
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
+  <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
 </div>
 
 Si monitorizáis el estado de vuestros sistemas con [Linux][1] probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.
@@ -61,7 +61,7 @@ wasn&#8217;t for all of you, htop wouldn&#8217;t be what it is now. Version
 numbers are more symbolic than anything, but the stability of htop 0.9  
 in the past year and the cool new features introduced in this release  
 compelled me to call this version 1.0. We all deserve this little  
-&#8220;achievement&#8221;. <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+&#8220;achievement&#8221;. <img src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
 
 <li class="x">
   Performance improvements

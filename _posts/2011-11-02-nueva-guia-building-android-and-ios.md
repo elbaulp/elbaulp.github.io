@@ -35,7 +35,7 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
 
 
 
- [1]:  http://img.tradepub.com/free/w_lynd34/images/w_lynd34c.gif "Building Android and iOS Apps with Dreamweaver CS5.5- Free Video Training Tutorial"
+ [1]:  http://img.tradepub.com/free/w_lynd34/assets/img/w_lynd34c.gif "Building Android and iOS Apps with Dreamweaver CS5.5- Free Video Training Tutorial"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_lynd34/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 

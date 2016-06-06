@@ -278,11 +278,11 @@ Donde ***<n>*** es el nivel de optimización.
 
 Introdujimos los resultados de los tiempos de ejecución en una hoja de cálculo para crear una tabla comparativa con gráficos:
 
-[<img src="/images/2012/12/Screenshot-from-2012-12-17-2207421-1024x677.png" alt="Screenshot from 2012-12-17 22:07:42" width="770" height="509" class="aligncenter size-large wp-image-1054" />][1]{.thumbnail}
+[<img src="/assets/img/2012/12/Screenshot-from-2012-12-17-2207421-1024x677.png" alt="Screenshot from 2012-12-17 22:07:42" width="770" height="509" class="aligncenter size-large wp-image-1054" />][1]{.thumbnail}
 
 Y creamos las gráficas:
 
-[<img src="/images/2012/12/Screenshot-from-2012-12-17-2308081-300x296.png" alt="Gráfica tiempo ejecución popcount" width="300" height="296" class="aligncenter size-medium wp-image-1055" />][2]{.thumbnail}
+[<img src="/assets/img/2012/12/Screenshot-from-2012-12-17-2308081-300x296.png" alt="Gráfica tiempo ejecución popcount" width="300" height="296" class="aligncenter size-medium wp-image-1055" />][2]{.thumbnail}
 
 La diferencia de resultados es notoria, se aprecia que la mejor optimización se consigue con **O1** u **O2**, siendo la versión **popcount7** la más eficiente.
 
@@ -502,7 +502,7 @@ Para todo aquel interesado, tengo permiso para distribuir el guión bajo licenci
 
 
 
- [1]: /images/2012/12/Screenshot-from-2012-12-17-2207421.png
- [2]: /images/2012/12/Screenshot-from-2012-12-17-2308081.png
+ [1]: /assets/img/2012/12/Screenshot-from-2012-12-17-2207421.png
+ [2]: /assets/img/2012/12/Screenshot-from-2012-12-17-2308081.png
 
 {% include _toc.html %}

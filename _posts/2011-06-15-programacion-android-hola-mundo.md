@@ -24,7 +24,7 @@ tags:
   - curso android pdf
   - hola mundo android
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Como [dije][1], voy a comenzar a escribir tutoriales sobre programación Android.  
 Antes de comenzar es necesario tener configurado correctamente eclipse con el Android SDK, que se puede encontrar en este mismo blog, mediante el [primer videotutorial][2] de una entrada que publiqué hace tiempo, o simplemente buscando en [google][3].

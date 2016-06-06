@@ -25,7 +25,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 <div id='gallery-7' class='gallery galleryid-1792 gallery-columns-1 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/Future-proof-your-data-model2.png'><img width="96" height="96" src="/images/2013/07/Future-proof-your-data-model2-150x150.png" class="attachment-thumbnail" alt="Future-proof your data model2" aria-describedby="gallery-7-1800" /></a>
+      <a href='/assets/img/2013/07/Future-proof-your-data-model2.png'><img width="96" height="96" src="/assets/img/2013/07/Future-proof-your-data-model2-150x150.png" class="attachment-thumbnail" alt="Future-proof your data model2" aria-describedby="gallery-7-1800" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1800'>
@@ -37,7 +37,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='/images/2013/07/QR-Code.png'><img width="96" height="96" src="/images/2013/07/QR-Code-150x150.png" class="attachment-thumbnail" alt="QR Code" aria-describedby="gallery-7-1793" /></a>
+      <a href='/assets/img/2013/07/QR-Code.png'><img width="96" height="96" src="/assets/img/2013/07/QR-Code-150x150.png" class="attachment-thumbnail" alt="QR Code" aria-describedby="gallery-7-1793" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1793'>
@@ -49,7 +49,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/when-the-intern-wants-to-help-me.gif'><img width="96" height="96" src="/images/2013/07/when-the-intern-wants-to-help-me-150x150.gif" class="attachment-thumbnail" alt="when the intern wants to help me" aria-describedby="gallery-7-1794" /></a>
+      <a href='/assets/img/2013/07/when-the-intern-wants-to-help-me.gif'><img width="96" height="96" src="/assets/img/2013/07/when-the-intern-wants-to-help-me-150x150.gif" class="attachment-thumbnail" alt="when the intern wants to help me" aria-describedby="gallery-7-1794" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1794'>
@@ -61,7 +61,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/when-I-finally-have-to-admit-that-I-wrote-something-wrong.gif'><img width="96" height="96" src="/images/2013/07/when-I-finally-have-to-admit-that-I-wrote-something-wrong-150x150.gif" class="attachment-thumbnail" alt="when I finally have to admit that I wrote something wrong" aria-describedby="gallery-7-1795" /></a>
+      <a href='/assets/img/2013/07/when-I-finally-have-to-admit-that-I-wrote-something-wrong.gif'><img width="96" height="96" src="/assets/img/2013/07/when-I-finally-have-to-admit-that-I-wrote-something-wrong-150x150.gif" class="attachment-thumbnail" alt="when I finally have to admit that I wrote something wrong" aria-describedby="gallery-7-1795" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1795'>
@@ -73,7 +73,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/when-legacy-code-gives-an-unexpected-result.gif'><img width="96" height="96" src="/images/2013/07/when-legacy-code-gives-an-unexpected-result-150x150.gif" class="attachment-thumbnail" alt="when legacy code gives an unexpected result" aria-describedby="gallery-7-1796" /></a>
+      <a href='/assets/img/2013/07/when-legacy-code-gives-an-unexpected-result.gif'><img width="96" height="96" src="/assets/img/2013/07/when-legacy-code-gives-an-unexpected-result-150x150.gif" class="attachment-thumbnail" alt="when legacy code gives an unexpected result" aria-describedby="gallery-7-1796" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1796'>
@@ -85,7 +85,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/Paying-for-SQL-Server.gif'><img width="96" height="96" src="/images/2013/07/Paying-for-SQL-Server-150x150.gif" class="attachment-thumbnail" alt="Paying for SQL Server" aria-describedby="gallery-7-1797" /></a>
+      <a href='/assets/img/2013/07/Paying-for-SQL-Server.gif'><img width="96" height="96" src="/assets/img/2013/07/Paying-for-SQL-Server-150x150.gif" class="attachment-thumbnail" alt="Paying for SQL Server" aria-describedby="gallery-7-1797" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1797'>
@@ -97,7 +97,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/Crap-I-have-no-idea-which-branch-Im-working-on.gif'><img width="96" height="96" src="/images/2013/07/Crap-I-have-no-idea-which-branch-Im-working-on-150x150.gif" class="attachment-thumbnail" alt="Crap, I have no idea which branch I&#039;m working on" aria-describedby="gallery-7-1798" /></a>
+      <a href='/assets/img/2013/07/Crap-I-have-no-idea-which-branch-Im-working-on.gif'><img width="96" height="96" src="/assets/img/2013/07/Crap-I-have-no-idea-which-branch-Im-working-on-150x150.gif" class="attachment-thumbnail" alt="Crap, I have no idea which branch I&#039;m working on" aria-describedby="gallery-7-1798" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1798'>
@@ -109,7 +109,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/images/2013/07/Pushed-sensitive-data-to-Github.gif'><img width="96" height="96" src="/images/2013/07/Pushed-sensitive-data-to-Github-150x150.gif" class="attachment-thumbnail" alt="Pushed sensitive data to Github" aria-describedby="gallery-7-1799" /></a>
+      <a href='/assets/img/2013/07/Pushed-sensitive-data-to-Github.gif'><img width="96" height="96" src="/assets/img/2013/07/Pushed-sensitive-data-to-Github-150x150.gif" class="attachment-thumbnail" alt="Pushed sensitive data to Github" aria-describedby="gallery-7-1799" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-1799'>

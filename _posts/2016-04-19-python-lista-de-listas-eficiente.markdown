@@ -11,7 +11,7 @@ date: 2016-04-19T10:48:34+02:00
 ---
 
 <figure>
-  <a href="/images/python-lista-de-listas-eficiente.png"><img src="/images/python-lista-de-listas-eficiente.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/python-lista-de-listas-eficiente.png"><img src="/assets/img/python-lista-de-listas-eficiente.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 {% include _toc.html %}

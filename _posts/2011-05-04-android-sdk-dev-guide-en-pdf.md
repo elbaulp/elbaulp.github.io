@@ -23,7 +23,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 He estado buscando la dev guide de Android en PDF para no tener que leerla en el PC y poder imprimirla, la encontré en [czechxan.com][1]. A continuación dejo los enlaces:
 
@@ -34,15 +34,15 @@ He estado buscando la dev guide de Android en PDF para no tener que leerla en el
 
 ### **Android SDK Dev Guide in PDF in sections:**
 
-<a href="http://czechxan.com/images/pdf/android_sdk.pdf" target="_blank">Android SDK Dev Guide &#8211; Framework Topics</a>
+<a href="http://czechxan.com/assets/img/pdf/android_sdk.pdf" target="_blank">Android SDK Dev Guide &#8211; Framework Topics</a>
 
-<a href="http://czechxan.com/images/pdf/android_sdk_developing.pdf" target="_blank">Android SDK Dev Guide &#8211; Developing</a>
+<a href="http://czechxan.com/assets/img/pdf/android_sdk_developing.pdf" target="_blank">Android SDK Dev Guide &#8211; Developing</a>
 
-<a href="http://czechxan.com/images/pdf/android_sdk_publishing.pdf" target="_blank">Android SDK Dev Guide &#8211; Publishing</a>
+<a href="http://czechxan.com/assets/img/pdf/android_sdk_publishing.pdf" target="_blank">Android SDK Dev Guide &#8211; Publishing</a>
 
-<a href="http://czechxan.com/images/pdf/android_sdk_best_practices.pdf" target="_blank">Android SDK Dev Guide &#8211; Best Practice</a>
+<a href="http://czechxan.com/assets/img/pdf/android_sdk_best_practices.pdf" target="_blank">Android SDK Dev Guide &#8211; Best Practice</a>
 
-<a href="http://czechxan.com/images/pdf/android_sdk_appendix.pdf" target="_blank">Android SDK Dev Guide &#8211; Appendix</a>
+<a href="http://czechxan.com/assets/img/pdf/android_sdk_appendix.pdf" target="_blank">Android SDK Dev Guide &#8211; Appendix</a>
 
 
 

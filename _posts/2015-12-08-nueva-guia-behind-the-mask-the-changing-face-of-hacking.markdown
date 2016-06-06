@@ -14,7 +14,7 @@ date: 2015-12-08T10:00:00+00:00
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><img src="/images/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><img src="/assets/img/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 {% include _toc.html %}

@@ -114,7 +114,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 </div>
 
 <div>
-  <img class="size-medium wp-image-1027 alignnone" src="/images/2012/11/081012_1601_AchievingAn12-300x298.png" alt="" width="300" height="298" />
+  <img class="size-medium wp-image-1027 alignnone" src="/assets/img/2012/11/081012_1601_AchievingAn12-300x298.png" alt="" width="300" height="298" />
 </div>
 
 <div>
@@ -135,7 +135,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 </div>
 
 <div>
-  <a class="thumbnail" href="/images/2012/11/081012_1601_AchievingAn21.png"><img class="alignnone size-medium wp-image-1028" src="/images/2012/11/081012_1601_AchievingAn21-300x86.png" alt="" width="300" height="86" /></a>
+  <a class="thumbnail" href="/assets/img/2012/11/081012_1601_AchievingAn21.png"><img class="alignnone size-medium wp-image-1028" src="/assets/img/2012/11/081012_1601_AchievingAn21-300x86.png" alt="" width="300" height="86" /></a>
 </div>
 
 <div>
@@ -168,7 +168,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 </div>
 
 <div>
-  <a class="thumbnail" href="/images/2012/11/081012_1601_AchievingAn31.png"><img class="alignnone size-medium wp-image-1029" src="/images/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284" height="300" /></a>
+  <a class="thumbnail" href="/assets/img/2012/11/081012_1601_AchievingAn31.png"><img class="alignnone size-medium wp-image-1029" src="/assets/img/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284" height="300" /></a>
 </div>
 
 <div>
@@ -186,7 +186,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 </div>
 
 <div>
-  <a class="thumbnail" href="/images/2012/11/081012_1601_AchievingAn41.png"><img class="alignnone size-medium wp-image-1030" src="/images/2012/11/081012_1601_AchievingAn41-300x86.png" alt="" width="300" height="86" /></a>
+  <a class="thumbnail" href="/assets/img/2012/11/081012_1601_AchievingAn41.png"><img class="alignnone size-medium wp-image-1030" src="/assets/img/2012/11/081012_1601_AchievingAn41-300x86.png" alt="" width="300" height="86" /></a>
 </div>
 
 <div>

@@ -15,7 +15,7 @@ tags:
   - tutorial gpg
 excerpt: |
   <figure>
-    <a href="/images/2014/04/Chuleta-de-comandos-GPG.png"><img src="/images/2014/04/Chuleta-de-comandos-GPG.png" title="Chuleta de comandos para GPG" alt="Chuleta de comandos para GPG" /></a>
+    <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="Chuleta de comandos para GPG" alt="Chuleta de comandos para GPG" /></a>
   </figure>
 
   Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo.
@@ -24,7 +24,7 @@ image:
 modified: 2015-12-24T19:55
 ---
 <figure>
-  <a href="/images/2014/04/Chuleta-de-comandos-GPG.png"><img src="/images/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para [GPG][1]. Si encuentras algún error, no dudes en comentarlo.

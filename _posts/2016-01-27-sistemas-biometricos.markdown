@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
 </figure>
 
@@ -108,7 +108,7 @@ experimentos, se mostró que con 4000 iteraciones la imagen generada
 acertaba en el 99.9% de los casos.
 
 <figure>
-  <a href="/images/Eigenfaces.png"><img src="/images/Eigenfaces.png" title="Eigenfaces" alt="Eigenfaces" /></a>
+  <a href="/assets/img/Eigenfaces.png"><img src="/assets/img/Eigenfaces.png" title="Eigenfaces" alt="Eigenfaces" /></a>
   <span class="image-credit">Crédito de la imagen: <a href="https://commons.wikimedia.org/wiki/File:Eigenfaces.png" target="_blank" title="">Wikipedia</a></span>
 </figure>
 
@@ -152,7 +152,7 @@ criptosistema la seguridad.
 
 
 <figure>
-  <a href="/images/two-steps-framework.png"><img src="/images/two-steps-framework.png" title="Enfoque híbrido de un sistema
+  <a href="/assets/img/two-steps-framework.png"><img src="/assets/img/two-steps-framework.png" title="Enfoque híbrido de un sistema
   biométrico" alt="Enfoque híbrido de un sistema
   biométrico" /></a>
 </figure>

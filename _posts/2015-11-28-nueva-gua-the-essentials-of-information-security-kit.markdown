@@ -14,7 +14,7 @@ image:
 ---
 
 <figure>
-  <img src="/images/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 {% include _toc.html %}

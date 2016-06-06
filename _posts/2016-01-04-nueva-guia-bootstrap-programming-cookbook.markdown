@@ -10,13 +10,13 @@ image:
 date: 2016-01-04T18:20:11+01:00
 excerpt: |
   <figure>
-    <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img width="199" height="259" src="/images/Bootstrap-Programming-Cookbook2.jpg" title="Guía gratuita: Bootstrap Programming Cookbook" alt="Guía gratuita: Bootstrap Programming Cookbook" /></a>
+    <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img width="199" height="259" src="/assets/img/Bootstrap-Programming-Cookbook2.jpg" title="Guía gratuita: Bootstrap Programming Cookbook" alt="Guía gratuita: Bootstrap Programming Cookbook" /></a>
   </figure>
 
   Kick-start your Bootstrap projects with these hot recipes!
 ---
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img src="/images/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img src="/assets/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Kick-start your Bootstrap projects with these hot recipes!

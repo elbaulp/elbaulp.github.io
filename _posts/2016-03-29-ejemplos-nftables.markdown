@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="/images/ejemplos-nftables.png"><img src="/images/ejemplos-nftables.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/ejemplos-nftables.png"><img src="/assets/img/ejemplos-nftables.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 {% include _toc.html %}

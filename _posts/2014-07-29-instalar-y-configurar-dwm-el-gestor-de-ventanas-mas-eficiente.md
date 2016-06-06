@@ -21,7 +21,7 @@ image:
 modified: 2015-12-24T18:00
 excerpt: |
   <figure>
-    <a href="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="Instalar y configurar DWM, el gestor de ventanas más eficiente" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" /></a>
+    <a href="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="Instalar y configurar DWM, el gestor de ventanas más eficiente" alt="Instalar y configurar DWM, el gestor de ventanas más eficiente" /></a>
   </figure>
 
   Hace tiempo que hablé de Xmonad, y hasta hace poco ha sido mi gestor de ventanas, durante varios años. Pero semanas atrás descubrí el proyecto original en el que se basaba xmonad, DWM. Xmonad es un clon de DWM escrito en Haskell, lo cual lo hace un poco más pesado y lento debido a las dependencias que tiene y la necesidad de instalar su compilador. Tras probar DWM, no puedo estar más contento con el resultado, está escrito en C, y todas las modificaciones en la configuración se hacen sobre el propio código, lo cual lo hace muy eficiente y rápido. En este artículo veremos cómo instalar y configurar DWM.
@@ -118,7 +118,7 @@ Recompilamos y listo.
 
 Un programa muy útil es dmenu, permite lanzar cualquier programa abriendo una ventanita en la que podemos escribir el nombre del programa a ejecutar:
 
-<img src="/images/2014/07/dmenu.png" alt="Dmenu" width="478" height="13" class="alignleft size-full wp-image-2405" />
+<img src="/assets/img/2014/07/dmenu.png" alt="Dmenu" width="478" height="13" class="alignleft size-full wp-image-2405" />
 
 Para instalarlo:
 
@@ -174,7 +174,7 @@ Espero que esta pequeña introducción haya servido al lector. Desde que entré 
 Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explicaré cómo desarrollé la posibilidad de colorear la barra de estado (Ya está disponible [aquí][4]), ya que por defecto la versión 6.1 de DWM no lo permite.
 
 <figure>
-  <a href="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/images/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><img src="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 #### Referencias

@@ -16,7 +16,7 @@ tags:
 modified: 2015-12-28T9:51
 excerpt: |
   <figure>
-    <a href="/images/2014/01/CrearDialogoAndroid.png"><img src="/images/2014/01/CrearDialogoAndroid.png" title="Cómo crear un diálogo personalizado en las preferencias Android" alt="Cómo crear un diálogo personalizado en las preferencias Android" /></a>
+    <a href="/assets/img/2014/01/CrearDialogoAndroid.png"><img src="/assets/img/2014/01/CrearDialogoAndroid.png" title="Cómo crear un diálogo personalizado en las preferencias Android" alt="Cómo crear un diálogo personalizado en las preferencias Android" /></a>
   </figure>
 
   Este año estoy participando en el concurso universitario de software libre, concretamente en el proyecto SWADroid. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.
@@ -160,7 +160,7 @@ public class MyPrefecenceActivity extends PreferenceActivity implements OnPrefer
 Aunque esta no es la mejor forma de hacerlo, para ilustrar la diferencia entre ambas preferencias se almacenarán como dos objetos distintos. `mDialogoNormal` se comportará como una preferencia por defecto, en este caso es un `EditTtextPreference`, `mDialogoPersonalizado`, como su nombre indica, será la preferencia sobre la cual implementaremos nosotros el diálogo. En esta actividad que extiende de `PreferenceActivity` inicializamos todos los objetos necesarios en el `onCreate`. El método que realmente nos interesa es `onPreferenceChange`, que será llamado cuando se detecte algún cambio en los datos de las preferencias. En este caso se pretende mostrar cómo implementar una preferencia para almacenar una contraseña. Cuando el usuario introduce en el diálogo su contraseña, ésta será cifrada en el método `cifrar` y será éste el valor almacenado en el archivo de preferencias. Con el diálogo normal, si el usuario vuelve a lanzar el diálogo con una contraseña ya almacenada verá esto:
 
 <figure>
-  <a href="/images/2014/01/CrearDialogoAndroid.png"><img src="/images/2014/01/CrearDialogoAndroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/01/CrearDialogoAndroid.png"><img src="/assets/img/2014/01/CrearDialogoAndroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Lo cual corresponde a la contraseña cifrada, lo ideal sería que el cuadro de texto apareciera vacío, para ello crearemos nosotros mismos el diálogo extendiendo de `DialogPreference`.

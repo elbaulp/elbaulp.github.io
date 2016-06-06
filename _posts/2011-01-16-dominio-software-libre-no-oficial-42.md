@@ -37,7 +37,7 @@ Los creadores de este proyecto pretenden crear un Internet abierto, orientado ha
 
 
 
- [1]: http://www.muylinux.com/images/2011/01/42-500x455.jpg "dominio .42"
+ [1]: http://www.muylinux.com/assets/img/2011/01/42-500x455.jpg "dominio .42"
  [2]: http://www.muylinux.com/
 
 {% include _toc.html %}

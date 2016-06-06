@@ -246,7 +246,7 @@ service nginx reload
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
 
 <figure>
-  <a href="/images/2014/02/pagespeed.png"><img src="/images/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" /></a>
+  <a href="/assets/img/2014/02/pagespeed.png"><img src="/assets/img/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" /></a>
 </figure>
 
 Como vemos, la cabecera de pagespeed está presente, luego está habilitado.

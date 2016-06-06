@@ -38,7 +38,7 @@ Hecho esto, debemos conceder permisos a blogger para que deje a wordpress accede
 </p>
 
 <p style="text-align: left;">
-  <a href="/images/2012/04/Screenshot-04042012-055625-PM1.png"><img class="aligncenter size-full wp-image-695" title="DNS settings blogger to wordpress" src="/images/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613" height="98" /></a>
+  <a href="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png"><img class="aligncenter size-full wp-image-695" title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613" height="98" /></a>
 </p>
 
 <p style="text-align: left;">
@@ -97,7 +97,7 @@ Sitemap: http://tuweb.com/feed
 # Ficheros y directorios a des/indexar de nuestro WordPress
 
 User-Agent: *
-Allow: /images/
+Allow: /assets/img/
 Allow: /feed/$
 Disallow: /wp-
 Disallow: /wp-content/plugins/
@@ -138,7 +138,7 @@ User-agent: Googlebot
 
 User-agent: Googlebot-Image
 Disallow: /wp-includes/
-Allow: /images/
+Allow: /assets/img/
 
 User-agent: Mediapartners-Google*
 Disallow:

@@ -20,7 +20,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Antes de nada, quiero pedir disculpas por haber estado poco activo estos meses de verano en el blog, a partir de ahora voy a intentar ser más regular con respecto a la publicación de entradas.
 

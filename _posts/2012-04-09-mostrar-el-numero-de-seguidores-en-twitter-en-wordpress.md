@@ -76,7 +76,7 @@ Y el estilo es el siguiente:
 
 <div style="text-align:center">
   <p class="twittercount">
-    <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank"><img style="vertical-align:middle;padding-right:5px" src="/wp-content/themes/ifeature/images/social/round/twitter.png" alt="Twitter" /></a><span>693</span> Followers
+    <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank"><img style="vertical-align:middle;padding-right:5px" src="/wp-content/themes/ifeature/assets/img/social/round/twitter.png" alt="Twitter" /></a><span>693</span> Followers
   </p>
 </div>
 

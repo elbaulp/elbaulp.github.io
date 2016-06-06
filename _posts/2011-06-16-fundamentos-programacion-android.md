@@ -25,7 +25,7 @@ tags:
   - curso android pdf
   - Fundamentos programación Android
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 ## Conceptos básicos
 

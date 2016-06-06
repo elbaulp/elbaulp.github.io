@@ -15,7 +15,7 @@ math: true
 ---
 
 <figure>
-  <img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 Para los que estéis acostumbrados a escribir vuestros documentos en $$\LaTeX$$, sin ningún editor específico, sabréis que llega a ser un poco tedioso compilar cada vez que queremos ver el resultado. Hace poco, descubrí un comando, `latexmk`, que nos facilitará bastante la vida.

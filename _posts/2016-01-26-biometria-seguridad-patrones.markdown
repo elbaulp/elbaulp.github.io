@@ -12,7 +12,7 @@ author: cristina
 ---
 
 <figure>
-  <a href="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
 </figure>
 
@@ -108,7 +108,7 @@ perfectamente separables cuando se usan las dos componentes del vector
 clases,resultando imposible separarlas.
 
 <figure>
-  <a href="/images/separability.png"><img src="/images/separability.png" title="Separabilidad de dos clases con vectores
+  <a href="/assets/img/separability.png"><img src="/assets/img/separability.png" title="Separabilidad de dos clases con vectores
   bidimensionales" alt="Separabilidad de dos clases con vectores
   bidimensionales" /></a>
 </figure>

@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_cybr02"><img src="/images/Computer-and-Hacking-Forensics---FREE-Video-Training-Course2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_cybr02"><img src="/assets/img/Computer-and-Hacking-Forensics---FREE-Video-Training-Course2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks.

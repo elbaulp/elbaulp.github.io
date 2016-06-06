@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02"><img src="/images/Preserving-Your-Privacy-in-Windows-102.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02"><img src="/assets/img/Preserving-Your-Privacy-in-Windows-102.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Learn how to stop Windows 10 from exporting your personal data.

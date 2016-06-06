@@ -22,7 +22,7 @@ Informalmente se define como G = (V, E), siendo los elementos de V los vértices
 Existen diferentes implementaciones del tipo grafo: con una matriz de adyacencias (forma acotada) y con listas y multilistas de adyacencia (no acotadas).  
 Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo, siendo los elementos de la matriz la relación entre los mismos, tomando los valores de 1 si existe la arista y 0 en caso contrario.
 
-[<img src="/images/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia" width="546" height="232" class="aligncenter size-full wp-image-980" />][1]{.thumbnail}  
+[<img src="/assets/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia" width="546" height="232" class="aligncenter size-full wp-image-980" />][1]{.thumbnail}  
   
 <!--ad-->
 
@@ -39,7 +39,7 @@ Para solucionar este problema, los tres algoritmos mas conocidos son:
 
 El **algoritmo de Dijkstra** consiste en ir explorando todos los caminos más cortos que parten del vértice origen y que llevan a todos los demás vértices; cuando se obtiene el camino más corto desde el vértice origen, al resto de vértices que componen el grafo, el algoritmo se detiene.
 
-[<img src="/images/2012/10/Caminosmascortos1.jpg" alt="" title="Caminosmascortos" width="744" height="500" class="aligncenter size-full wp-image-981" />][2]{.thumbnail}
+[<img src="/assets/img/2012/10/Caminosmascortos1.jpg" alt="" title="Caminosmascortos" width="744" height="500" class="aligncenter size-full wp-image-981" />][2]{.thumbnail}
 
 #### Algoritmo de Dijkstra
 
@@ -170,7 +170,7 @@ Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para 
 
 
 
- [1]: /images/2012/10/Matriz_de_adyacencia1.jpg
- [2]: /images/2012/10/Caminosmascortos1.jpg
+ [1]: /assets/img/2012/10/Matriz_de_adyacencia1.jpg
+ [2]: /assets/img/2012/10/Caminosmascortos1.jpg
 
 {% include _toc.html %}

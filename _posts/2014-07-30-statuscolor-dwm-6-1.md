@@ -16,7 +16,7 @@ image:
   thumb: 2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
 excerpt: |
   <figure>
-    <a href="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="Colorear la barra de estado con Simple StatusColor en DWM 6.1" alt="Colorear la barra de estado con Simple StatusColor en DWM 6.1" /></a>
+    <a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="Colorear la barra de estado con Simple StatusColor en DWM 6.1" alt="Colorear la barra de estado con Simple StatusColor en DWM 6.1" /></a>
   </figure>
 
   Días atrás hablamos sobre DWM y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
@@ -82,7 +82,7 @@ status = smprintf("L:%s\x01 A:%s\x02 U:%s %s\x03", avgs, tmar, tmutc, tmbln);
 Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el color 3. He aquí un ejemplo de la mía:
 
 <figure>
-  <a href="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/images/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ## Dentro del código

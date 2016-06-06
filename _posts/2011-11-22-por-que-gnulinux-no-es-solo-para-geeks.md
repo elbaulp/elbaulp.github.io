@@ -28,7 +28,7 @@ categories:
   - opensource
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="/images/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="so" class="icono" /></a>
+  <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="so" class="icono" /></a>
 </div>
 
 Si alguna vez has tenido un ordernador con Windows posiblemente en algún momento ha estado infectado con algún virus. La solución a este problema no es comprar un antivirus. La solución es abandonar windows como Sistema operativo principal, sin embargo para algunos parece que es algo imposible de hacer.Los ordenadores de Apple son bastante caros y si bien puede ejecutar Windows como sistema operativo secundario, la mayoría de la gente preferiría ser capaz de ejecutar aplicaciones de Windows en su sistema operativo principal, sin una perdida de eficiencia notable.

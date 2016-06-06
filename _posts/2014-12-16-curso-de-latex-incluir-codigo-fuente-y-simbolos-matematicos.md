@@ -23,7 +23,7 @@ image:
   thumb: 2013/05/latex_logo.png
 excerpt: |
   <figure>
-    <a href="/images/2013/05/latex_logo.png"><img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+    <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   </figure>
 
   Continuando por donde lo dejamos en el último artículo, hoy veremos cómo incluir código fuente en el documento.
@@ -31,7 +31,7 @@ modified: 2015-12-22T17:36
 ---
 
 <figure>
-  <a href="/images/2013/05/latex_logo.png"><img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 * [Mini Curso de LaTeX &#8211; Introducción][1]

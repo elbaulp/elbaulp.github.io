@@ -13,7 +13,7 @@ date: 2016-03-03T21:30:24+01:00
 {% include _toc.html %}
 
 <figure>
-  <a href="/images/openlibra-biblioteca-libre-online.jpg"><img src="/images/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/openlibra-biblioteca-libre-online.jpg"><img src="/assets/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Hace unos años, concretamente 5, un compañero bloggero lanzaba [OpenLibra: La Biblioteca Libre Online tal como la esperabas](/openlibra-la-biblioteca-libre-online/ "OpenLibra: La Biblioteca Libre Online tal como la esperabas").

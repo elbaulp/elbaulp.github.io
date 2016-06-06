@@ -21,5 +21,5 @@ date: 2015-07-21T20:36:47+02:00
 Sin más rodeos, aquí está!, espero que os guste a todos!:
 
 <figure>
-  <img src="/images/logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>

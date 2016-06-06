@@ -12,22 +12,22 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Cuando encuentro un bug estúpido en la web de una gran compañía que me dá acceso backend
 
-<img src="/images/2013/11/when-I-find-a-stupid-bug-on-a-big-company’s-website-that-gives-me-backend-access.gif" alt="Cuando encuentro un bug estúpido en la web de una gran compañía que me dá acceso backend" width="320" height="220" class="thumbnail aligncenter size-full wp-image-1994" />
+<img src="/assets/img/2013/11/when-I-find-a-stupid-bug-on-a-big-company’s-website-that-gives-me-backend-access.gif" alt="Cuando encuentro un bug estúpido en la web de una gran compañía que me dá acceso backend" width="320" height="220" class="thumbnail aligncenter size-full wp-image-1994" />
 
 <!--ad-->
 
 #### Indirecciones
 
-<img src="/images/2013/11/Indirection.png" alt="Indirection" width="606" height="872" class="thumbnail aligncenter size-full wp-image-1995" />
+<img src="/assets/img/2013/11/Indirection.png" alt="Indirection" width="606" height="872" class="thumbnail aligncenter size-full wp-image-1995" />
 
 #### Sustituciones
 
-<img src="/images/2013/11/Sustituciones.png" alt="Sustituciones" width="438" height="376" class="thumbnail aligncenter size-full wp-image-1996" />
+<img src="/assets/img/2013/11/Sustituciones.png" alt="Sustituciones" width="438" height="376" class="thumbnail aligncenter size-full wp-image-1996" />
 
 #### Respuestas sencillas
 
 <div id="attachment_1998" style="width: 466px" class="wp-caption aligncenter">
-  <img src="/images/2013/11/simple_answers-Will-allow-us-to-better-understand-each-other-and-thus-make-war-undesirable-is-one-that-pops-up-whenever-we-invent-a-new-communication-medium.png" alt="Simples respuestas" width="456" height="556" class="thumbnail size-full wp-image-1998" />
+  <img src="/assets/img/2013/11/simple_answers-Will-allow-us-to-better-understand-each-other-and-thus-make-war-undesirable-is-one-that-pops-up-whenever-we-invent-a-new-communication-medium.png" alt="Simples respuestas" width="456" height="556" class="thumbnail size-full wp-image-1998" />
   
   <p class="wp-caption-text">
     Nos hará [ ] genios a todos? » No<br />Nos hará [ ] idiotas a todos?» No<br />Destruirá [ ] industrias entrras? » Sí<br />Nos hará [ ] más empáticos ? » No<br />Nos hará [ ] menos cuidadosos ? » No<br />Usarán los adolescentes [ ] para el sexo? » Sí<br />Iban a tener de todos modos sexo? » Sí<br />Destruirá [ ] la música? » No<br />Destruirá [ ] el arte? » No<br />Pero no podemos regresar a un tiempo donde&#8211; » No<br />Provocará [ ] la paz mundial? » No<br />Causará [ ] la alienación generalizada mediante la creación de un mundo de expeciencias vacías? [ ] » Ya los estamos<br />Nos permitirá [ ] entendernos mejor entre nosotros y por tanto hacer la guerra no deseada? &#8212; Ésta es una<br />que siempre aparece cada vez que nos inventamos un nuevo medio de comunicación
@@ -36,35 +36,35 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Cuando mi jefe se acerca y me apresuro a cerrar las pestañas de mi navegador
 
-<img src="/images/2013/11/when-my-boss-is-coming-and-I-rush-to-close-my-browsers-tabs.gif" alt="cuando mi jefe se acerca y me apresure a cerrar las pestañas de mi navegador" width="380" height="248" class="thumbnail aligncenter size-full wp-image-1999" />
+<img src="/assets/img/2013/11/when-my-boss-is-coming-and-I-rush-to-close-my-browsers-tabs.gif" alt="cuando mi jefe se acerca y me apresure a cerrar las pestañas de mi navegador" width="380" height="248" class="thumbnail aligncenter size-full wp-image-1999" />
 
 #### Cuando les dije a los júnior que usaran [Git Bash][2] en lugar de GUI
 
-<img src="/images/2013/11/when-I-told-to-the-junior-to-use-Git-Bash-instead-of-GUI.gif" alt="When I told to the junior to use Git Bash instead of GUI" width="250" height="141" class="thumbnail aligncenter size-full wp-image-2000" />
+<img src="/assets/img/2013/11/when-I-told-to-the-junior-to-use-Git-Bash-instead-of-GUI.gif" alt="When I told to the junior to use Git Bash instead of GUI" width="250" height="141" class="thumbnail aligncenter size-full wp-image-2000" />
 
 #### Cuando veo una web hecha con tablas
 
-<img src="/images/2013/11/when-I-see-a-page-built-with-tables.gif" alt="Cuando veo una web hecha con tablas" width="370" height="260" class="thumbnail aligncenter size-full wp-image-2001" />
+<img src="/assets/img/2013/11/when-I-see-a-page-built-with-tables.gif" alt="Cuando veo una web hecha con tablas" width="370" height="260" class="thumbnail aligncenter size-full wp-image-2001" />
 
 #### Cuando me veo forzado a trabajar en un [framework][3] que no conozco
 
-<img src="/images/2013/11/when-Im-forced-to-work-on-a-framework-I-dont-know.gif" alt="when I&#039;m forced to work on a framework I don&#039;t know" width="400" height="224" class="thumbnail aligncenter size-full wp-image-2002" />
+<img src="/assets/img/2013/11/when-Im-forced-to-work-on-a-framework-I-dont-know.gif" alt="when I&#039;m forced to work on a framework I don&#039;t know" width="400" height="224" class="thumbnail aligncenter size-full wp-image-2002" />
 
 #### Cuando me dicen que arregle unos cuantos bugs en IE
 
-<img src="/images/2013/11/Cuando-me-dicen-que-arregle-unos-cuantos-bugs-en-IE.gif" alt="Cuando me dicen que arregle unos cuantos bugs en IE" width="500" height="213" class="thumbnail aligncenter size-full wp-image-2003" />
+<img src="/assets/img/2013/11/Cuando-me-dicen-que-arregle-unos-cuantos-bugs-en-IE.gif" alt="Cuando me dicen que arregle unos cuantos bugs en IE" width="500" height="213" class="thumbnail aligncenter size-full wp-image-2003" />
 
 #### Cuando tengo que decidir entre hacer código de calidad o simplemente hacer el trabajo
 
-<img src="/images/2013/11/Cuando-tengo-que-decidir-entre-hacer-código-de-calidad-o-simplemente-hacer-el-trabajo.gif" alt="Cuando tengo que decidir entre hacer código de calidad o simplemente hacer el trabajo" width="400" height="297" class="thumbnail aligncenter size-full wp-image-2004" />
+<img src="/assets/img/2013/11/Cuando-tengo-que-decidir-entre-hacer-código-de-calidad-o-simplemente-hacer-el-trabajo.gif" alt="Cuando tengo que decidir entre hacer código de calidad o simplemente hacer el trabajo" width="400" height="297" class="thumbnail aligncenter size-full wp-image-2004" />
 
 #### Cuando tengo ordenador nuevo
 
-<img src="/images/2013/11/when-I-get-a-new-computer.gif" alt="Cuando tengo ordenador nuevo" width="389" height="287" class="thumbnail aligncenter size-full wp-image-2005" />
+<img src="/assets/img/2013/11/when-I-get-a-new-computer.gif" alt="Cuando tengo ordenador nuevo" width="389" height="287" class="thumbnail aligncenter size-full wp-image-2005" />
 
 #### Port Knocking
 
-<img src="/images/2013/11/Port-knocking.gif" alt="Port knocking" width="250" height="295" class="thumbnail aligncenter size-full wp-image-2006" />
+<img src="/assets/img/2013/11/Port-knocking.gif" alt="Port knocking" width="250" height="295" class="thumbnail aligncenter size-full wp-image-2006" />
 
 #### Referencias
 

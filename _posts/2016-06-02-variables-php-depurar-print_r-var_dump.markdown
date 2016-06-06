@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="/images/como-mostrar-variables-php-depurar-print_r-var_dump.png"><img src="/images/como-mostrar-variables-php-depurar-print_r-var_dump.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/como-mostrar-variables-php-depurar-print_r-var_dump.png"><img src="/assets/img/como-mostrar-variables-php-depurar-print_r-var_dump.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario Plummer, que preguntaba <a href="http://stackoverflow.com/questions/19816438/make-var-dump-look-pretty" target="_blank" title="Make var_dump look pretty">Make var_dump look pretty</a>. La respuesta es del usuario AbraCadaver

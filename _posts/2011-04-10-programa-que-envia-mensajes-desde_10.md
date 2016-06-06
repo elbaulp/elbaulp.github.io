@@ -28,7 +28,7 @@ categories:
 tags:
   - curso android pdf
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Continúo con las mejoras a la aplicación que estoy desarrollando para Android, como dije en la [anterior mejora][1], necesitaba que varios clientes se puedan conectar al servidor, para ello he usado threads y la interface runnable de java.  
 En esta versión tambien he controlado las excepciones producidas al no poder conectar al servidor o al solicitar conectarse a una dirección desconocida, estas excepciones las he controlado con Alerts de android, de las cuales hay dos tipos, Toast o Dialog.  

@@ -11,7 +11,7 @@ tags:
   - ejemplos django
   - instalar django
 ---
-<img src="/images/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png" alt="Introducción a Django – Instalación y primer proyecto" width="1921" height="1080" class="thumbnail aligncenter size-full wp-image-1903" />
+<img src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png" alt="Introducción a Django – Instalación y primer proyecto" width="1921" height="1080" class="thumbnail aligncenter size-full wp-image-1903" />
 
 Hacía tiempo que el [framework][1] web ***Django*** estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de ***Django***.
 
@@ -219,7 +219,7 @@ urlpatterns = patterns('',
 
 Ejecutamos el servidor con *python manage.py runserver* y entramos a <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a>. Deberíamos ver:
 
-<img src="/images/2013/09/admin01.png" alt="Introducción a Django – Instalación y primer proyecto" width="336" height="192" class="thumbnail aligncenter size-full wp-image-1917" /> 
+<img src="/assets/img/2013/09/admin01.png" alt="Introducción a Django – Instalación y primer proyecto" width="336" height="192" class="thumbnail aligncenter size-full wp-image-1917" /> 
 
 Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado *admin.py* en el directorio *polls*:
 
@@ -233,7 +233,7 @@ admin.site.register(Poll)
 
 Debemos reiniciar el servidor para que los cambios se apliquen, ahora sí vemos la aplicación polls:
 
-<img src="/images/2013/09/admin03t.png" alt="Introducción a Django – Instalación y primer proyecto" width="400" height="134" class="thumbnail aligncenter size-full wp-image-1918" />
+<img src="/assets/img/2013/09/admin03t.png" alt="Introducción a Django – Instalación y primer proyecto" width="400" height="134" class="thumbnail aligncenter size-full wp-image-1918" />
 
 #### Escribir la primera vista
 

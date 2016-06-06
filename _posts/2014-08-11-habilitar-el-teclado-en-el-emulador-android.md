@@ -15,7 +15,7 @@ image:
   thumb: 2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png
 excerpt: |
   <figure>
-    <a href="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="Cómo habilitar el teclado en el emulador Android" alt="Cómo habilitar el teclado en el emulador Android" /></a>
+    <a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="Cómo habilitar el teclado en el emulador Android" alt="Cómo habilitar el teclado en el emulador Android" /></a>
     <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
   </figure>
 
@@ -31,7 +31,7 @@ En ocasiones, al crear un emulador [Android][1], aún habiendo habilitado el sop
 Al crear un emulador, hemos de marcar las siguientes casillas:
 
 <figure>
-  <a href="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/images/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
 </figure>
 

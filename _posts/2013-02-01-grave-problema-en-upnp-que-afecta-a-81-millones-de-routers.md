@@ -12,7 +12,7 @@ tags:
   - qué es upnp
   - upnp que es
 ---
-<img src="/images/2013/02/alert-300x300.jpeg" alt="alert" width="300" height="300" class="alignleft size-medium wp-image-1290" />
+<img src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert" width="300" height="300" class="alignleft size-medium wp-image-1290" />
 
 Como es habitual, hoy traigo otro episodio de [security Now!][1] que me parece interesante. Este en concreto, además de interesante es algo que afecta a millones de routers y dispositivos con el servicio UPnP activado.
 

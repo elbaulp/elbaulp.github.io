@@ -10,7 +10,7 @@ image:
 date: 2016-04-22T08:40:33+02:00
 ---
 <figure>
-  <a href="/images/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png"><img src="/images/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png"><img src="/assets/img/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 

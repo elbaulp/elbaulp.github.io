@@ -16,13 +16,13 @@ image:
   thumb: 2013/11/google-drive-linux3.jpg
 excerpt: |
   <figure>
-    <a href="/images/2013/11/google-drive-linux3.jpg"><img src="/images/2013/11/google-drive-linux3.jpg" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" alt="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" /></a>
+    <a href="/assets/img/2013/11/google-drive-linux3.jpg"><img src="/assets/img/2013/11/google-drive-linux3.jpg" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" alt="Sincronizar Google Drive en Linux en 4 pasos [Actualización]" /></a>
   </figure>
 
   Hace poco vimos en un artículo cómo Sincronizar Google Drive en Linux en 4 pasos. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que grive vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas.
 ---
 <figure>
-  <a href="/images/2013/11/google-drive-linux3.jpg"><img src="/images/2013/11/google-drive-linux3.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/google-drive-linux3.jpg"><img src="/assets/img/2013/11/google-drive-linux3.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Hace poco vimos en un artículo cómo [Sincronizar Google Drive en Linux en 4 pasos][1]. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que *grive* vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas.

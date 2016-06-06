@@ -11,7 +11,7 @@ image:
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc"><img src="/images/Spring-Data-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc"><img src="/assets/img/Spring-Data-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!

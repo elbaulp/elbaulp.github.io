@@ -63,7 +63,7 @@ Una notícia muy importante. Científicos de la universidad de Harvard han coseg
 Con el revuelo que ha causado el juicio de Apple contra Samsung, en <a href="/humor/" target="_blank">9Gag</a> encontré la siguiente imagen:
 
 <p style="text-align: center;">
-  <a href="/images/2012/09/5220021_700b1.jpg" target="_blank"><img class="aligncenter size-full wp-image-936" title="Apple vs Samsung" src="/images/2012/09/5220021_700b1.jpg" alt="" width="700" height="383" /></a>
+  <a href="/assets/img/2012/09/5220021_700b1.jpg" target="_blank"><img class="aligncenter size-full wp-image-936" title="Apple vs Samsung" src="/assets/img/2012/09/5220021_700b1.jpg" alt="" width="700" height="383" /></a>
 </p>
 
 > ¿Te gusta el iPhone? Cómprate un Samsung. Apple dice que los productos samsung son sustancialmente iguales que los suyos&#8230; con pantallas más grandes, mejor rendimiento, más características, más aplicaciones gratuitas, menor precio&#8230; Galaxy S3: el iPhone más sorprendente

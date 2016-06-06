@@ -32,14 +32,14 @@ Descargar el **boot.img.gz**, necesario para hacer el usb &#8220;*bootable*&#822
 
 ```bash
 cd ~
-wget ftp://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/images/hd-media/boot.img.gz
+wget ftp://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/assets/img/hd-media/boot.img.gz
 ```
 
 Este archivo es para procesadores de 64-bits, para procesadores de 32 hay que descargar el siguiente:
 
 ```bash
 cd ~
-wget ftp://ftp.debian.org/debian/dists/testing/main/installer-i386/current/images/hd-media/boot.img.gz
+wget ftp://ftp.debian.org/debian/dists/testing/main/installer-i386/current/assets/img/hd-media/boot.img.gz
 ```
 
 Una vez descargado, se extrae la imagen y se escribe en el usb:

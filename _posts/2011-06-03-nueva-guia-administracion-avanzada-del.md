@@ -14,7 +14,7 @@ modified: 2015-12-21T17:45:00+00:00
 ---
 
 <figure>
-  <a href="/images/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg"><img src="/images/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg"><img src="/assets/img/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 El objetivo principal de este libro es introducirnos en el mundo de la administración de los sistemas GNU/Linux.

@@ -10,7 +10,7 @@ image:
 {% include _toc.html %}
 
 <figure>
-  <a href="/images/los10articulosmasvisitados2015.png"><img src="/images/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/los10articulosmasvisitados2015.png"><img src="/assets/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: Buffer</span>
 </figure>
 
