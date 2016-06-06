@@ -18,7 +18,9 @@ disqus_username: bashyc
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /:categories/:title/
+gems:
+  - jekyll-sitemap
 
 # html minify
 compress_html:
@@ -44,7 +46,7 @@ links:
     url: https://elbauldelprogramador.com /manuales-gratuitos/
   - title: Security Now!
     url: https://elbauldelprogramador.com /security-now/
-  - title: <i class="fa fa-fw fa-glass fa-2x"></i>
+  - title: Apoyanos
     url: https://elbauldelprogramador.com /apoyanos/
   - title: Buscar
     url: https://elbauldelprogramador.com /buscar/
@@ -75,7 +77,6 @@ owner:
   stackoverflow: 1612432/algui91
   stackcareers: algui91
   linkedin: algui91
-
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']

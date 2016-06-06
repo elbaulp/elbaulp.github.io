@@ -6,8 +6,7 @@ modified:
 categories: android
 description: "En el artículo anterior se dieron unas nociones básicas de Android, sus compoenentes principales etc. En este artículo examinaremos a fondo una aplicación muy simple. Se componone de dos pantallas, en una de ellas se pide al usuario que introduzca un texto, dicho texto se enviará a otra pantalla."
 tags: [Curso de Android, programación Android, tutoriales Android, hola mundo Android, fragments Android]
-image:
-  thumb: android/layouthelloworldandroid.png
+image: android/layouthelloworldandroid.png
 ---
 
 {% include _toc.html %}
