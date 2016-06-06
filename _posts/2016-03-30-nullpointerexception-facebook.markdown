@@ -5,8 +5,7 @@ modified:
 categories:
 excerpt: "Explicación de por qué muchos usuarios de internet están obteniendo un error nullpointerexception, en facebook entre otras aplicaciones"
 tags: [Facebook NullPointerException, que es NullPointerException, nullpointerexception null]
-image:
-  thumb: nullpointerexception-facebook-line-numbers.jpg
+image: nullpointerexception-facebook-line-numbers.jpg
 date: 2016-03-30T08:29:58+02:00
 modified: 2016-04-05T08:29:58+02:00
 ---

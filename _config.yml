@@ -1,23 +1,22 @@
 # Site settings
-description: A blog about lorem ipsum dolor sit amet
+description: Blog sobre programación y noticias de software libre, lenguajes c++, java, python, android, bases de datos, sql y pl/sql
 baseurl: https://elbauldelprogramador.com "" # the subpath of your site, e.g. /blog
 url: https://elbauldelprogramador.com
 
 # User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+username: algui91
+user_description: Estudiante de Grado en Ingeniería Informática en la ETSIIT, Granada. Especialidad, Inteligencia Artificial.
+user_title: Alejandro Alcalde
+email: contacto@elbauldelprogramador.com
+twitter_username: elbaulp
+github_username:  algui91
+gplus_username:  ElBauldelProgramador
+disqus_username: bashyc
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-
 
 # html minify
 compress_html:
@@ -37,6 +36,16 @@ links:
     url: https://elbauldelprogramador.com /tags
   - title: About Me
     url: https://elbauldelprogramador.com /about
+  - title: Cursos
+    url: https://elbauldelprogramador.com /cursos/
+  - title: Manuales
+    url: https://elbauldelprogramador.com /manuales-gratuitos/
+  - title: Security Now!
+    url: https://elbauldelprogramador.com /security-now/
+  - title: <i class="fa fa-fw fa-glass fa-2x"></i>
+    url: https://elbauldelprogramador.com /apoyanos/
+  - title: Buscar
+    url: https://elbauldelprogramador.com /buscar/
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
