@@ -31,5 +31,10 @@ layout: compress
             {% include footer.html %}
         </section>
         {% include _scripts.html %}
+        {% if page.math == true %}
+          <script type="text/javascript"
+            src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+          </script>
+        {% endif %}
     </body>
 </html>
