@@ -8,7 +8,7 @@ layout: compress
         {% include svg-icons.html %}
         {% include header-post.html %}
         <section class="post">
-
+          {% include share.html %}
             <article role="article" id="post" class="post-content">
               {% assign c = content | split: '<!--ad-->' %}
               {% if content contains '<!--ad-->' %}
