@@ -7,8 +7,7 @@ categories:
 excerpt: |
   En este artículo se verá una introducción a lo que es la biometría, y cómo se puede aplicar a los sistemas informáticos para proporcionar seguridad. También se hará un repaso a los distintos tipos de biometría.
 tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
-image:
-  thumb: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
+image: /assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 ---
 
 <figure>

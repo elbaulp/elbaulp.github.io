@@ -41,8 +41,7 @@ tags:
   - servidores dns
   - soa correo
   - zona dns inversa
-image:
-  thumb: 2013/04/dns.jpg
+image: /assets/img/2013/04/dns.jpg
 ---
 
 <figure>

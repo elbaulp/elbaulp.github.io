@@ -19,8 +19,7 @@ excerpt: |
   </figure>
 
   Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo.
-image:
-  thumb: 2014/04/Chuleta-de-comandos-GPG.png
+image: /assets/img/2014/04/Chuleta-de-comandos-GPG.png
 modified: 2015-12-24T19:55
 ---
 <figure>

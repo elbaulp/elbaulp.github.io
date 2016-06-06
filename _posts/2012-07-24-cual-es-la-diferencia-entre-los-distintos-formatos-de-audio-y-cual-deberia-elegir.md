@@ -40,8 +40,7 @@ tags:
   - calidad lossless
   - calidades de audio
   - formatos alac
-image:
-  thumb: 2012/07/original1.jpg
+image: /assets/img/2012/07/original1.jpg
 ---
 
 <figure>

@@ -15,8 +15,7 @@ tags:
   - paquetes quic
   - quic
   - wireshark
-image:
-  thumb: 2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
+image: /assets/img/2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
 excerpt: |
   <figure>
     <a href="/assets/img/2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png"><img src="/assets/img/2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

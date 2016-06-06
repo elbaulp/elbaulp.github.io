@@ -16,8 +16,7 @@ tags:
   - que es una api rest
 author: luzila
 modified: 2015-12-28T9:34
-image:
-  thumb: 2014/01/201305-xml-vs-json-api.png
+image: /assets/img/2014/01/201305-xml-vs-json-api.png
 excerpt: |
 
   <figure>

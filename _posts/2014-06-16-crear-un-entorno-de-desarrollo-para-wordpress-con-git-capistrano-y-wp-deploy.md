@@ -20,8 +20,7 @@ tags:
   - capistrano wordpress
   - capistrano deploy
   - wordpress git
-image:
-  thumb: hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png
+image: /assets/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png
 date: 2015-11-27T16:17:00+00:00
 excerpt: "Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web."
 ---

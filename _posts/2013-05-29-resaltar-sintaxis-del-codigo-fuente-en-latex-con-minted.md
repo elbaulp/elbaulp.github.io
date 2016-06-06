@@ -14,8 +14,7 @@ tags:
   - pygments
   - resaltar sintaxis codigo latex
   - latex
-image:
-  thumb: 2013/05/latex_logo.png
+image: /assets/img/2013/05/latex_logo.png
 ---
 
 Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.

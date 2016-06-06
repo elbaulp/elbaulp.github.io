@@ -5,8 +5,7 @@ modified:
 categories:
 excerpt: "Hace unos años, concretamente 5, un compañero bloggero lanzaba OpenLibra: La Biblioteca Libre Online tal como la esperabas"
 tags: [openlibra, biblioteca online, descargar libros gratis]
-image:
-  thumb: openlibra-biblioteca-libre-online.jpg
+image: /assets/img/openlibra-biblioteca-libre-online.jpg
 date: 2016-03-03T21:30:24+01:00
 ---
 

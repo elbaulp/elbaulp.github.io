@@ -16,8 +16,7 @@ tags:
   - latex
   - fancy hdr
   - latex nota al pie
-image:
-  thumb: 2013/05/latex_logo.png
+image: /assets/img/2013/05/latex_logo.png
 ---
 
 <figure>

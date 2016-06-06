@@ -6,8 +6,7 @@ modified:
 categories:
 excerpt: "Kick-start your Python projects with these hot recipes!"
 tags: [guias Gratuita, descargar guias python, manuales de python, curso de python, Cookbook python]
-image:
-  thumb: Python-Programming-Cookbook.jpg
+image: /assets/img/Python-Programming-Cookbook.jpg
 ---
 
 <figure>

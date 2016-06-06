@@ -11,8 +11,7 @@ tags:
   - identify
   - imagenes por resolucion
   - ordenar por resolución
-image:
-  thumb: 2012/07/sh.png
+image: /assets/img/2012/07/sh.png
 excerpt: |
   <figure>
     <a href="/assets/img/2012/07/sh.png"><img src="/assets/img/2012/07/sh.png" title="Cómo ordenar imágenes por resolución" alt="Cómo ordenar imágenes por resolución" /></a>

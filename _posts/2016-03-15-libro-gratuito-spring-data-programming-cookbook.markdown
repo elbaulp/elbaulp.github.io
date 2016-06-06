@@ -6,8 +6,7 @@ modified:
 categories:
 excerpt: "Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!"
 tags: [manual de spring data, cookbook spring, manuales gratuitos programacion, tutorial spring data]
-image:
-  thumb: Spring-Data-Programming-Cookbook.jpg
+image: /assets/img/Spring-Data-Programming-Cookbook.jpg
 ---
 
 <figure>

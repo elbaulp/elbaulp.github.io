@@ -12,8 +12,7 @@ tags:
   - statuscolor dwm 6.1
   - statuscolor for dwm 6.1
 modified: 2015-12-24T17:55
-image:
-  thumb: 2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
+image: /assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
 excerpt: |
   <figure>
     <a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="Colorear la barra de estado con Simple StatusColor en DWM 6.1" alt="Colorear la barra de estado con Simple StatusColor en DWM 6.1" /></a>

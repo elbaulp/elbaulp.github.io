@@ -21,8 +21,7 @@ excerpt: |
   La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
 
   A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.
-image:
-  thumb: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
+image: /assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
 ---
 > La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
 

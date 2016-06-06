@@ -6,8 +6,7 @@ modified:
 categories:
 excerpt: "En este artículo veremos cómo descargar, compilar e instalar el kernel 4.2 de linux"
 tags: [kernel, linux kernel, compilar kernel 4.0]
-image:
-  thumb: Compilar-e-Instalar-El-Kernel-4.2.png
+image: /assets/img/Compilar-e-Instalar-El-Kernel-4.2.png
 ---
 
 <figure>

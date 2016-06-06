@@ -5,8 +5,7 @@ modified:
 categories:
 excerpt:
 tags: []
-image:
-  thumb: hotlink-ok/Bootstrap-Programming-Cookbook1.jpg
+image: /assets/img/hotlink-ok/Bootstrap-Programming-Cookbook1.jpg
 date: 2016-01-04T18:20:11+01:00
 excerpt: |
   <figure>

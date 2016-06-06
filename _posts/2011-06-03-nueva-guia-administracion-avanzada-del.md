@@ -8,8 +8,7 @@ permalink: /nueva-guia-administracion-avanzada-del/
 categories:
   - cursos
   - internet
-image:
-  thumb: AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
+image: /assets/img/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
 modified: 2015-12-21T17:45:00+00:00
 ---
 

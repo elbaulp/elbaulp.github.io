@@ -11,8 +11,7 @@ tags:
   - parametros indefinidos
   - parámetros variables en C/c++
   - pasar paramestros
-image:
-  thumb: 2013/11/cpp.png
+image: /assets/img/2013/11/cpp.png
 modified: 2015-12-24T17:44
 excerpt: |
   <figure>

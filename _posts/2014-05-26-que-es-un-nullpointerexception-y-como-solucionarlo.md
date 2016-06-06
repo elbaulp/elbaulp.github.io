@@ -15,8 +15,7 @@ tags:
   - error facebook nullpointerexception null
   - nullpointerexception facebook
   - nullpointerexception
-image:
-  thumb: 2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
+image: /assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
 modified: 2016-04-06T21:24:34+02:00
 date: 2016-04-06T21:24:34+02:00
 excerpt: |

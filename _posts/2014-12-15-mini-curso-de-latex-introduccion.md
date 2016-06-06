@@ -19,8 +19,7 @@ tags:
   - programación Latex
   - simbolos latex
   - latex
-image:
-  thumb: 2013/05/latex_logo.png
+image: /assets/img/2013/05/latex_logo.png
 excerpt: |
   <figure>
     <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

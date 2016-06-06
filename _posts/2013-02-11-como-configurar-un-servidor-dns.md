@@ -37,8 +37,7 @@ tags:
   - servidor dns debian
   - servidores dns
   - soa correo
-image:
-  thumb: 2013/04/dns.jpg
+image: /assets/img/2013/04/dns.jpg
 ---
 
 <figure>
