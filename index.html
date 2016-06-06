@@ -2,18 +2,17 @@
 layout: default
 ---
 
-<main class="home" id="post" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<main class="home" id="post" role="main">
     <div id="grid" class="row flex-grid">
     {% for post in site.posts limit:20 %}
-        <article class="box-item post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+        <article class="box-item post-{{post.main-class}}">
                 <span class="ribbon">
                     <a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}"><span>{{post.main-class}}</span></a>
                 </span>
                 <div class="box-body">
-                    <meta itemprop="datePublished" content="{{post.date | date_to_xmlschema }}">
-                    <time itemprop="datePublished" datetime="{{ post.date }}" class="date">{{ post.date | date_to_string }}</time>
+                    <time datetime="{{ post.date }}" class="date">{{ post.date | date_to_string }}</time>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <h2 class="post-title" itemprop="name">
+                        <h2 class="post-title">
                             {{ post.title }}
                         </h2>
                     </a>
