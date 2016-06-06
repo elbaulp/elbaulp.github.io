@@ -8,12 +8,7 @@ tags: [depurar en php, mostrar variables depurando php, mostrar variables legibl
 date: 2016-06-02T16:52:24+02:00
 image: /assets/img/como-mostrar-variables-php-depurar-print_r-var_dump.png
 main-class: 'dev'
-tags:
-- css
-- metodologia
-- frontend
 categories:
-main-class: 'dev'
 ---
 
 <figure>
