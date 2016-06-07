@@ -20,6 +20,7 @@ image: 2013/05/latex_logo.png
 description: "En este tutorial, curso o como queráis llamarlo os voy a enseñar lo básico que debéis saber para hacer vuestros documentos en <strong>LaTeX</strong>! Como estamos en un blog sobre informática vamos a orientarlo un poco hacia la informática."
 modified: 2015-12-22T17:36
 main-class: "latex"
+color: "#B31917"
 ---
 <figure>
   <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
