@@ -2,20 +2,21 @@
 layout: post
 title: "¿Por Qué Se Cuelga Linux Al Copiar Ficheros a Un Usb?"
 categories:
-excerpt: "Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:"
+description: "Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:"
 tags: [usb, linux, usb se cuelga, usb lento]
 image:
-  feature:
-  thumb: hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png
-  credit:
-  creditlink:
+
+image: hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png
+
+  
 modified: 2015-11-27T16:25:00+00:00
 date: 2015-11-27T12:25:00+00:00
+main-class: 'dev'
 ---
 
 {% include _toc.html %}
 <figure>
-  <img src="/images/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 <span class="image-credit">Crédito de la imagen: <a href="https://pixabay.com/en/usb-drive-storage-plug-flash-38264/">pixabay.com</a></span><br/>
 

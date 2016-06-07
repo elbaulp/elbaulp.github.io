@@ -4,10 +4,10 @@ title: Crear Un Patrón De Desbloqueo Android
 date: 2016-02-17T07:25:54+01:00
 modified:
 categories:
-excerpt: "Reconozca un patrón de gestos sobre pantalla de vuestra elección. Una vez detectado el patrón se debe ejecutar la aplicación de cámara y realizar automáticamente una foto transcurridos 3 segundos. Los gestos a detectar son similares a los que se realizan con la pantalla de bloqueo Android, cuanto más complejo sea el que se detecta mejor puntuación tendrá."
+description: "Reconozca un patrón de gestos sobre pantalla de vuestra elección. Una vez detectado el patrón se debe ejecutar la aplicación de cámara y realizar automáticamente una foto transcurridos 3 segundos. Los gestos a detectar son similares a los que se realizan con la pantalla de bloqueo Android, cuanto más complejo sea el que se detecta mejor puntuación tendrá."
 tags: [tutorial patrones android, patternlock android, echar foto tras cuenta atrás android, programar patrón de bloqueo android]
-image:
-  thumb: npi/drawingPatter.png
+image: npi/drawingPatter.png
+main-class: 'dev'
 ---
 
 {% include _toc.html %}
@@ -37,14 +37,14 @@ Para realizar esta aplicación se ha usado una librería llamada [PatterLock](ht
 En esta aplicación se le pide al usuario que establezca un patrón de bloqueo, puede ser tan complejo como el patrón de bloqueo usado en [Android](/curso-programacion-android/ "Curso de Android"). Una vez establecido, cuando se introduzca correctamente la aplicación tomará una foto a los 3 segundos. A continuación mostramos la pantalla principal de la aplicación.
 
 <figure>
-  <a href="/images/npi/photoGesture.png"><img src="/images/npi/photoGesture.png" title="Pantalla principal de photoGesture" alt="Pantalla principal de photoGesture" /></a>
+  <a href="/assets/img/npi/photoGesture.png"><img src="/assets/img/npi/photoGesture.png" title="Pantalla principal de photoGesture" alt="Pantalla principal de photoGesture" /></a>
   <span class="image-credit">Pantalla principal de photoGesture</span>
 </figure>
 
 Al pulsar _“Establecer patrón”_ veremos lo siguiente:
 
 <figure>
-  <a href="/images/npi/setPattern.png"><img src="/images/npi/setPattern.png" title="Establecer patrón" alt="Establecer patrón" /></a>
+  <a href="/assets/img/npi/setPattern.png"><img src="/assets/img/npi/setPattern.png" title="Establecer patrón" alt="Establecer patrón" /></a>
   <span class="image-credit">Establecer patrón</span>
 </figure>
 
@@ -53,14 +53,14 @@ Es posible hacer que el patrón no sea visible cuando lo introducimos, para aña
 Cuando pulsemos _Establecer patrón_ se nos pedirá que lo dibujemos dos veces, para confirmarlo:
 
 <figure>
-  <a href="/images/npi/drawingPatter.png"><img src="/images/npi/drawingPatter.png" title="Dibujando el patrón" alt="Dibujando el patrón" /></a>
+  <a href="/assets/img/npi/drawingPatter.png"><img src="/assets/img/npi/drawingPatter.png" title="Dibujando el patrón" alt="Dibujando el patrón" /></a>
   <span class="image-credit">Dibujando el patrón</span>
 </figure>
 
 Hecho esto, cuando volvamos a la pantalla principal, en lugar de “Establecer patrón” aparecerá “Echar foto”. Si pulsamos sobre ese botón, se nos pide el patrón establecido. Si se introduce bien, aparecerá la cámara con una cuenta atrás, al llegar a 0 se echará una foto:
 
 <figure>
-  <a href="/images/npi/countdown.png"><img src="/images/npi/countdown.png" title="Cuenta atrás para echar la foto" alt="Cuenta atrás para echar la foto" /></a>
+  <a href="/assets/img/npi/countdown.png"><img src="/assets/img/npi/countdown.png" title="Cuenta atrás para echar la foto" alt="Cuenta atrás para echar la foto" /></a>
   <span class="image-credit">Cuenta atrás para echar la foto</span>
 </figure>
 

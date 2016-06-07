@@ -2,7 +2,7 @@
 id: 770
 title: El Top 7 de dilemas que enfrentan los desarrolladores de hoy
 
-excerpt: |
+description: |
   Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan los desarrolladores. Cada elección, desde la plataforma hasta el almacenamiento de datos, incluyendo a cuánto control darle a los usuarios, está cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnología móvil y la acelerada vanguardia, pareciera como si el mundo de la programación enfrentara una nueva elección - y dilema - a un ritmo creciente.
 layout: post
 guid: /?p=770
@@ -15,6 +15,7 @@ tags:
   - desarrollo de aplicaciones
   - noSQL
 modified: 2015-12-18T14:57:00+00:00
+main-class: 'dev'
 ---
 **Plataformas, bases de datos, control de usuario &#8211; dilemas que atrapan al programador antes de la primera línea de código**
 

@@ -28,6 +28,7 @@ categories:
   - seguridad
 tags:
   - comunicaciones moviles lte
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-AAPPo38_9zQ/TtYml6wT_ZI/AAAAAAAAB3I/QBjz_ihLqFU/s1600/psn-hacker-540x220.jpg" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="82" width="200" src="https://3.bp.blogspot.com/-AAPPo38_9zQ/TtYml6wT_ZI/AAAAAAAAB3I/QBjz_ihLqFU/s200/psn-hacker-540x220.jpg" /></a>

@@ -2,7 +2,7 @@
 id: 776
 title: 'Entendiendo OAuth: Qué ocurre cuando te loggeas en un sitio con Google, Twitter o Facebook'
 
-excerpt: Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
+description: Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
 layout: post
 guid: /?p=776
 permalink: /entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/
@@ -17,6 +17,7 @@ tags:
   - OAuth
   - seguridad
 author: luzila
+main-class: 'dev'
 ---
 Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
 
@@ -27,7 +28,7 @@ Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacke
 
 **Cómo funciona OAuth**
 
-[<img src="/images/2012/06/medium1.jpg" alt="" title="medium" width="300" height="166" class="alignright size-full wp-image-809" />][1]  
+[<img src="/assets/img/2012/06/medium1.jpg" alt="" title="medium" width="300" height="166" class="alignright size-full wp-image-809" />][1]  
 Digamos que quieres usar una aplicación como Tweetgif para postear divertidas imágenes GIF animadas en tu cuenta de Twitter. Para lograrlo, es necesario darle a Tweetgif acceso a tu cuenta de Twitter, para poder obtener tu info y postear tweets en tu nombre. En los viejos tiempos, tenías que darle a una aplicación como Tweetgif tu nombre de usuario y contraseña de Twitter, para que pueda loggearse y acceder a los servicios. No solo tenías que confiar que usen esas credenciales sabiamente, sino que también debías mantenerlas protegidas de los hackers &#8211; lo que era un verdadero gran salto de fe. Es como darle las llaves de tu casa a un extraño y confiar que no hará copias para todos sus amigos y luego robar todas tus cosas.
 
 OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:  
@@ -51,6 +52,6 @@ Fuente: <a href="http://lifehacker.com/5918086/understanding-oauth-what-happens-
 
 
 
- [1]: /images/2012/06/medium1.jpg
+ [1]: /assets/img/2012/06/medium1.jpg
 
 {% include _toc.html %}

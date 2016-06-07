@@ -22,6 +22,7 @@ tags:
   - green500
   - supercomputadores
   - top500
+main-class: 'dev'
 ---
 **Hace unos meses os hablé del [El top 500 de los supercomputadores más potentes del mundo][1], y hoy os traigo una entrada traducida por mi compañero Haitike sobre este tema:**
 

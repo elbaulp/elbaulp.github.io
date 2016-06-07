@@ -12,6 +12,7 @@ tags:
   - feh
   - trayer
   - xmonad
+main-class: 'dev'
 ---
 A lo largo de los años he probado varios gestores de ventanas, como fluxbox, [openbox][1] y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.
 
@@ -225,7 +226,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 Así luce mi escritorio con xmonad:
 
-[<img src="/images/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png" alt="xmonad Desktop" width="770" height="307" class="aligncenter size-large wp-image-1072" />][2]{.thumbnail}
+[<img src="/assets/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png" alt="xmonad Desktop" width="770" height="307" class="aligncenter size-large wp-image-1072" />][2]{.thumbnail}
 
 #### Referencias
 
@@ -234,6 +235,6 @@ Así luce mi escritorio con xmonad:
 
 
  [1]: /configurar-dos-pantallas-en-openbox/
- [2]: /images/2013/01/Screenshot-from-2013-01-02-1852312.png
+ [2]: /assets/img/2013/01/Screenshot-from-2013-01-02-1852312.png
 
 {% include _toc.html %}

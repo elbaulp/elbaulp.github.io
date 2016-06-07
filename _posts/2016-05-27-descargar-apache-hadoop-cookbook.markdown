@@ -3,15 +3,15 @@ layout: post
 title: "Nueva Guía: Apache Hadoop Cookbook"
 modified:
 categories:
-excerpt: Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!
+description: Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!
 tags: [guias gratuitas de hadoop, libros gratuitos hadoop, tutoriales sobre hadoop, descargar libros hadoop, descargar guias hadoop, descargar apache hadoop cookbook, libros sobre apache hadoop, descargar tutoriales apache hadoop]
-image:
-  thumb: Apache-Hadoop-Cookbook2.jpg
+image: Apache-Hadoop-Cookbook2.jpg
 date: 2016-05-27T12:08:44+02:00
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc"><img src="/images/Apache-Hadoop-Cookbook2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc"><img src="/assets/img/Apache-Hadoop-Cookbook2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ___Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!___
@@ -24,7 +24,7 @@ With this free eBook you will also receive weekly news, tips and special offers 
 
 <!--ad-->
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 

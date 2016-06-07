@@ -13,21 +13,21 @@ tags:
   - instalar nginx linux
   - montar un servidor web
 modified: 2015-12-25T13:25
-excerpt: |
+description: |
   <figure>
-    <a href="/images/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png"><img src="/images/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png" title="Instalación y optimización de un servidor web con Nginx (I)" alt="Instalación y optimización de un servidor web con Nginx (I)" /></a>
+    <a href="/assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png"><img src="/assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png" title="Instalación y optimización de un servidor web con Nginx (I)" alt="Instalación y optimización de un servidor web con Nginx (I)" /></a>
   </figure>
 
   La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
 
   A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.
-image:
-  thumb: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
+image: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
+main-class: 'dev'
 ---
 > La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )
 
 <figure>
-  <a href="/images/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png"><img src="/images/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png"><img src="/assets/img/Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 _A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web._
@@ -156,7 +156,7 @@ service nginx start
 Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección *localhost*, donde veremos lo siguiente:
 
 <figure>
-  <a href="/images/2014/02/instalacionNginx.png"><img src="/images/2014/02/instalacionNginx.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/02/instalacionNginx.png"><img src="/assets/img/2014/02/instalacionNginx.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### Configuración

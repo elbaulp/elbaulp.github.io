@@ -3,15 +3,15 @@ layout: post
 title: El Baúl Del Programador Cumple 7 Años
 modified:
 categories:
-excerpt: "Hoy el blog cumple años, 7 para ser exáctos, echamos la vista atrás y repasamos su historia"
+description: "Hoy el blog cumple años, 7 para ser exáctos, echamos la vista atrás y repasamos su historia"
 tags: []
-image:
-  thumb: 7-cumpleanios0.png
+image: 7-cumpleanios0.png
 date: 2016-05-07T11:55:51+02:00
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/7-cumpleanios0.png"><img src="/images/7-cumpleanios0.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios0.png"><img src="/assets/img/7-cumpleanios0.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Hoy este humilde blog cumple nada más y nada menos que 7 años. Todo empezó con la recomendación de un profesor cuando cursaba un Módulo superior en Desarrollo de Aplicaciones Informáticas, y hasta estas fechas hemos llegado. La verdad es que nunca esperé que llegara a mantener tanto tiempo el blog.
@@ -61,31 +61,31 @@ Por este séptimo aniversario quisiera echar la vista atrás y mostrar cómo ha 
 ### Blogger
 
 <figure>
-  <a href="/images/7-cumpleanios1.png"><img src="/images/7-cumpleanios1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios1.png"><img src="/assets/img/7-cumpleanios1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 <figure>
-  <a href="/images/7-cumpleanios2.png"><img src="/images/7-cumpleanios2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios2.png"><img src="/assets/img/7-cumpleanios2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### WordPress
 
 <figure>
-  <a href="/images/7-cumpleanios3.png"><img src="/images/7-cumpleanios3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios3.png"><img src="/assets/img/7-cumpleanios3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 <figure>
-  <a href="/images/7-cumpleanios4.png"><img src="/images/7-cumpleanios4.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios4.png"><img src="/assets/img/7-cumpleanios4.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 <figure>
-  <a href="/images/7-cumpleanios5.png"><img src="/images/7-cumpleanios5.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios5.png"><img src="/assets/img/7-cumpleanios5.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### Jekyll
 
 <figure>
-  <a href="/images/7-cumpleanios6.png"><img src="/images/7-cumpleanios6.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/7-cumpleanios6.png"><img src="/assets/img/7-cumpleanios6.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 

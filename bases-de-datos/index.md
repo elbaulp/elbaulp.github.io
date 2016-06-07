@@ -1,7 +1,7 @@
 ---
 id: 424
 title: Bases de Datos
-layout: page
+layout: minimal
 guid: http://elbauldelprogramador.org/?page_id=424
 blogger_permalink:
   - http://www.elbauldelprogramador.org/p/bases-de-datos.html

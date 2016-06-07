@@ -30,9 +30,10 @@ tags:
   - android ejemplo intent filter
   - curso android pdf
   - ejemplo intentfilter implicito
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 </div>
 
 Las actividades se pueden clasificar en categorías para así poder buscarlas basándonos en el nombre de dicha categoría. Por ejemplo, mientras el sistema se está iniciando, busca en las actividades las que estén bajo la categoría *CATEGORY_LAUNCHER*.

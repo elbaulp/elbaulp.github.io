@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - internet
   - noticias
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img src="https://lh5.ggpht.com/_IlK2pNFFgGM/TUATGV63PcI/AAAAAAAAARo/-zSZ_QsOyVw/minimalist-gmail.jpg" alt="minimalist Gmail" />

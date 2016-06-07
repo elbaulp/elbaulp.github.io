@@ -9,7 +9,8 @@ categories:
   - How To
 tags:
   - invertir cadena
-excerpt: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
+description: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
+main-class: 'dev'
 ---
 
 <figure>

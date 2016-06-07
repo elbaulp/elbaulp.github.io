@@ -12,8 +12,9 @@ tags:
   - libros seguridad
   - manuales seguridad
   - seguridad de la información
+main-class: 'dev'
 ---
-[<img src="/images/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="259" class="alignleft size-full wp-image-1497" />][1]
+[<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="259" class="alignleft size-full wp-image-1497" />][1]
 
 Download this security kit to learn everything you need to know about Information Security.
 
@@ -30,7 +31,7 @@ The Essentials of Information Security brings together the latest in information
 
 </i>
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_bund20" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

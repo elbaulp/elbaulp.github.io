@@ -7,7 +7,8 @@ guid: http://elbauldelprogramador.org/nueva-guia-php-master-write-cutting-edge-c
 permalink: /nueva-guia-php-master-write-cutting/
 categories:
   - cursos
-excerpt: "PHP Master: Write Cutting-edge Code*** is tailor-made for PHP developers who are serious about refining their server-side applications. This book will help you to employ the most effective object oriented programming approaches, wrap your projects in layers of security, and ensure your code is doing its job perfectly"
+description: "PHP Master: Write Cutting-edge Code*** is tailor-made for PHP developers who are serious about refining their server-side applications. This book will help you to employ the most effective object oriented programming approaches, wrap your projects in layers of security, and ensure your code is doing its job perfectly"
+main-class: 'dev'
 ---
 
 <figure>
@@ -25,7 +26,7 @@ What&#8217;s inside?
 
 Also with this free preview you will also receive updates covering all the technical aspects of web development. From the latest PHP techniques to advanced HTML, JavaScript, DHTML, XML, ASP and a whole lot more courtesy of SitePoint.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_sitb30" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

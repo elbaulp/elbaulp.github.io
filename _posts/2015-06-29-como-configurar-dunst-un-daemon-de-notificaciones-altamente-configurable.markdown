@@ -3,17 +3,18 @@ layout: post
 title: "Cómo Configurar Dunst, Un Daemon De Notificaciones Altamente Configurable"
 modified:
 categories:
-excerpt: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con DWM."
+description: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con DWM."
 tags: [dunst, notify-send, notificaciones, dwm]
 image:
-  feature:
-  thumb: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
-  credit:
-  creditlink:
+
+image: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
+
+  
 date: 2015-06-29T18:43:06+02:00
+main-class: 'dev'
 ---
 <figure>
-  <img src="/images/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 Si eres lector habitual del blog, sabrás que me gustan los entornos minimalistas y configurables, como puede comprobarse en los artículos [instalar y configurar dwm](/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/ "Instalar y configurar DWM"), y el patch para colorear la [barra de estado](/statuscolor-dwm-6-1/).

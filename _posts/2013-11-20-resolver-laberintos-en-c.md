@@ -11,12 +11,12 @@ tags:
   - practica laberintos fp
   - resolver laberinto fp
 modified: 2015-12-29T10:20
-excerpt: "Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona."
-image:
-  thumb: 2013/11/cpp.png
+description: "Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona."
+image: 2013/11/cpp.png
+main-class: 'dev'
 ---
 <figure>
-  <a href="/images/2013/11/cpp.png"><img src="/images/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona.

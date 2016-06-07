@@ -25,6 +25,7 @@ share_count:
   - 0
 categories:
   - noticias
+main-class: 'dev'
 ---
 En este vídeo se explica lo qué puede pasarle a los usuarios que descargaron o subieron archivos con copyright usando megaupload, ya que en estos momentos todos los registros y archivos están en posesión del gobierno de Estados Unidos.</p> 
 

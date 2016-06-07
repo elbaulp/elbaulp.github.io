@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - C
+main-class: 'dev'
 ---
 <div class="iconcpp">
 </div>

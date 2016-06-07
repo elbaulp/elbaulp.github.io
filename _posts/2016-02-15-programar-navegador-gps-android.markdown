@@ -4,10 +4,10 @@ title: Crear Un Navegador GPS Que Dibuje El Camino Seguido en Android
 date: 2016-02-16T21:05:38+01:00
 modified:
 categories:
-excerpt: "Enunciado: se facilitarán las coordenadas de una serie de puntos GPS (latitud/longitud) mediante códigos QR a la appGPSQR que iniciará automáticamente la navegación GPS hacia dicho punto, debe guardar el recorrido realizado y mostrarlo en un mapa al finalizar el mismo. En el anexo I tenéis ejemplos de los códigos QR que se deben detectar, en la defensa serán distintos."
+description: "Enunciado: se facilitarán las coordenadas de una serie de puntos GPS (latitud/longitud) mediante códigos QR a la appGPSQR que iniciará automáticamente la navegación GPS hacia dicho punto, debe guardar el recorrido realizado y mostrarlo en un mapa al finalizar el mismo. En el anexo I tenéis ejemplos de los códigos QR que se deben detectar, en la defensa serán distintos."
 tags: [programar navegador gps android, tutorial gps android, leer QR code en android zxing, calcular rutas gps android]
-image:
-  thumb: npi/gqsqr_read.png
+image: npi/gqsqr_read.png
+main-class: 'dev'
 ---
 
 {% include _toc.html %}
@@ -28,7 +28,7 @@ _Enunciado: se facilitarán las coordenadas de una serie de puntos GPS (latitud/
 En esta aplicación se lee un destino mediante códigos QR, tras esto, se puede iniciar la navegación con _Google Maps_ (Usando la librería [Android-GoogleDirectionLibrary](https://github.com/akexorcist/Android-GoogleDirectionLibrary)). En la aplicación se muestran dos mapas. En el de abajo aparece el destino al que debemos llegar, además, se va dibujando un camino por el que el usuario va pasando. En el mapa de arriba se ve el mapa desde el punto de vista _StreetView_. Veamos la aplicación:
 
 <figure>
-  <a href="/images/npi/gpsQr.png"><img src="/images/npi/gpsQr.png" title="GPSQR" alt="GPSQR" /></a>
+  <a href="/assets/img/npi/gpsQr.png"><img src="/assets/img/npi/gpsQr.png" title="GPSQR" alt="GPSQR" /></a>
   <span class="image-credit">GPSQR</span>
 </figure>
 
@@ -37,7 +37,7 @@ En esta aplicación se lee un destino mediante códigos QR, tras esto, se puede 
 El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que usa una simplificación de la librería _Zxing_. Cuando se escanea una localización, veremos lo siguiente:
 
 <figure>
-  <a href="/images/npi/gqsqr_read.png"><img src="/images/npi/gqsqr_read.png" title="Codigo QR leido con el destino" alt="Codigo QR leido con el destino" /></a>
+  <a href="/assets/img/npi/gqsqr_read.png"><img src="/assets/img/npi/gqsqr_read.png" title="Codigo QR leido con el destino" alt="Codigo QR leido con el destino" /></a>
   <span class="image-credit">Codigo QR leido con el destino</span>
 </figure>
 

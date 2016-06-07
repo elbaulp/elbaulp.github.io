@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - internet
   - noticias
+main-class: 'dev'
 ---
 En genbeta he leido esta noticia, y resulta que esta semana ya se han repartido todas las direcciones IP que IPv4 proporciona (32 bits), es decir, 4.294.967.296 direcciones IP. Asi que parece que IPv6 va a ser usado antes de lo previsto. Con Ipv6 tenemos direcciones ips para rato, ya que dispone de 128 bits (340 sextillones de direcciones IP).
 

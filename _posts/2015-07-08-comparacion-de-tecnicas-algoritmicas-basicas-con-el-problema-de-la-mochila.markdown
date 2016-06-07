@@ -3,13 +3,9 @@ layout: post
 title: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila"
 modified:
 categories:
-excerpt: "Este artículo se basa en las prácticas que he hecho para una asignatura llamada *Algorítmica*. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura."
+description: "Este artículo se basa en las prácticas que he hecho para una asignatura llamada *Algorítmica*. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura."
 tags: [mochila, algorítmica, técnicas algorítmicas, problema de la mochila, greedy, voraces, Branch and bound, programación dinámica]
-image:
-  feature:
-  thumb: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png"
-  credit: Wikipedia
-  creditlink: https://en.wikipedia.org/wiki/File:Knapsack.svg
+image: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png"
 date: 2015-07-08T13:40:40+02:00
 author: marta
 math: true
@@ -17,7 +13,7 @@ math: true
 {% include _toc.html %}
 
 <figure>
-  <img src="/images/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 _Créditos de la imagen [Wikipedia](https://en.wikipedia.org/wiki/File:Knapsack.svg)_.
 
@@ -38,7 +34,6 @@ En el caso del problema de la mochila, se implementaría de la siguiente forma:
 3. Ahora tenemos dos opciones: si el siguiente objeto ya no cabe completo en la mochila podemos quedarnos con una fracción de él (obteniendo un beneficio igual a $$(pesototal - pesoactual)/pesoobjeto$$) o no meter ningún objeto más en la mochila. La primera opción se la conoce como _mochila fraccional_ y la segunda, como _mochila 0/1_.
 
 ```cpp
-
 list<float> Mochila (int lim_peso, list<Objeto> & objetos) {
     list<float> sol;
     int peso_actual = 0;
@@ -273,7 +268,7 @@ La salida obtenida en terminal es la siguiente:
 
 [marta@marta-PC BaulP]$ ./mochila_din 7 3 4 2 2 4 3 6 11
    0    1       2       3       4       5       6       7       8       9       10      11
--------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 0| 0    0       0       0       0       0       0       0       0       0       0       0
 1| 0    0       0       7       7       7       7       7       7       7       7       7
 2| 0    0       4       7       7       11      11      11      11      11      11      11

@@ -4,14 +4,14 @@ title: Guía Gratuita - Python Programming Cookbook
 date: 2016-03-14T09:38:01+01:00
 modified:
 categories:
-excerpt: "Kick-start your Python projects with these hot recipes!"
+description: "Kick-start your Python projects with these hot recipes!"
 tags: [guias Gratuita, descargar guias python, manuales de python, curso de python, Cookbook python]
-image:
-  thumb: Python-Programming-Cookbook.jpg
+image: Python-Programming-Cookbook.jpg
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc2"><img src="/images/Python-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc2"><img src="/assets/img/Python-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Kick-start your Python projects with these hot recipes!
@@ -24,7 +24,7 @@ In this eBook, we provide a compilation of Python examples that will help you ki
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Web Code Geeks.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 

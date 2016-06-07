@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - opensource
+main-class: 'dev'
 ---
 <div class="iconcpp">
 </div>

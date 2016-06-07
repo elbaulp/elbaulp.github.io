@@ -11,6 +11,7 @@ tags:
   - ejemplos ndk android
   - hola mundo ndk android
   - introducción ndk android
+main-class: 'dev'
 ---
 El NDK de Android es un conjunto de herramientas que permiten embeber código máquina nativo compilado en lenguajes C y/o C++, hoy veremos cómo crear un ejemplo en el NDK de Android.  
   
@@ -126,7 +127,7 @@ El primer comando compila y genera el *.apk* y con el segundo lo instalamos en e
 
 Por último, la aplicación es tan simple como esto:
 
-[<img src="/images/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180" height="300" class="aligncenter size-medium wp-image-1657" />][2]{.thumbnail}
+[<img src="/assets/img/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180" height="300" class="aligncenter size-medium wp-image-1657" />][2]{.thumbnail}
 
 Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con el NDK de android.
 
@@ -137,6 +138,6 @@ Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con
 
 
  [1]: /programacion-android-hola-mundo/
- [2]: /images/2013/06/helloJni-NDK-de-android.png
+ [2]: /assets/img/2013/06/helloJni-NDK-de-android.png
 
 {% include _toc.html %}

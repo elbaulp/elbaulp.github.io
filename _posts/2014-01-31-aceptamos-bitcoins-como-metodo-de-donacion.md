@@ -9,6 +9,7 @@ categories:
   - noticias
 tags:
   - donaciones
+main-class: 'dev'
 ---
 Hace algún tiempo hubo colocada en la barra lateral una dirección de Bitcoin para que todo aquel que quisiera apoyar el blog hiciera una donación. Desde que se actualizó el aspecto del blog no está disponible, pero ayer escuchando en el PodCast de Joe Rogan hablando con Andreas Antonopoulos sobre la criptomoneda me decidí a volver a colocar la dirección. 
 
@@ -18,7 +19,7 @@ La dirección a la que hacer las donaciones es la siguiente, y estará disponibl
 <!--ad-->
 
 <div style="text-align:center">
-  <img src="/images/2014/01/Donar.png" width="178" height="178" /><br /><a style="color:rgb(18, 218, 218)" href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
+  <img src="/assets/img/2014/01/Donar.png" width="178" height="178" /><br /><a style="color:rgb(18, 218, 218)" href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
 </div>
 
 Por último, recomiendo a los lectores escuchar el podcast:

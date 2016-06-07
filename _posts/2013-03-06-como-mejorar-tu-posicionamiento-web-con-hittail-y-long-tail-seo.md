@@ -10,6 +10,7 @@ categories:
 tags:
   - definicion long tail seo
   - que es long tail seo
+main-class: 'dev'
 ---
 Hace apenas dos meses que descubrí navegando por internet esta herramienta, ***<a href="http://www.hittail.com" target="_blank">HitTail</a>*.** Permite incrementar significativamente tu posición en los motores de búsqueda tales como Google, Bing, DuckDuckGo, Yahoo etc usando una técnica llamada ***Long Tail SEO***.
 
@@ -21,7 +22,7 @@ Si como yo nunca has oido hablar de este término, no te preocupes, a continuaci
   ¿Qué es el Long Tail SEO y por qué debería tenerlo en cuenta?
 </h2>
 
-[<img src="/images/2013/03/longTail2.jpg" alt="long Tail SEO" width="993" height="741" class="aligncenter size-full wp-image-1426" />][1]{.thumbnail}
+[<img src="/assets/img/2013/03/longTail2.jpg" alt="long Tail SEO" width="993" height="741" class="aligncenter size-full wp-image-1426" />][1]{.thumbnail}
 
 Para dar respuesta a la pregunta, fíjate en la gráfica. Como se aprecia en la parte izquierda, en la línea negra existe una gran competitividad para términos de búsqueda que contienen de una a tres palabras clave. Es muy dificil conseguir una posición óptima en los resultados de la búsqueda centrándose en términos de búsqueda tan cortos.
 
@@ -31,7 +32,7 @@ Desde el punto de vista del propietario de una web sin mucha popularidad en inte
 
 Aunque parezca que no se va a alcanzar a tantos visitantes como si te centraras en las palabras más competitivas, no es cierto. Si trazas una línea vertical en la línea verde hasta cortar el eje x, verás que el área que abarcan las Long Tail es incluso mayor que el de los términos cortos. Quizá en esta imagen quede más claro:
 
-<img src="/images/2013/03/longtailtraffic.jpg" alt="longtailtraffic" width="520" height="280" class="thumbnail aligncenter size-full wp-image-1441" />
+<img src="/assets/img/2013/03/longtailtraffic.jpg" alt="longtailtraffic" width="520" height="280" class="thumbnail aligncenter size-full wp-image-1441" />
 
 <h2 style="font-size:1.5em">
   ¿Cual es el objetivo de HitTail
@@ -53,13 +54,13 @@ Una vez registrado, ya sea para el periodo de prueba o de pago, la opción mas s
 
 El código necesario para el plugin lo encontarás en **Account** » **View** en el sitio que hayas dado de alta:
 
-<img src="/images/2013/03/Screenshot-from-2013-03-08-001738.jpg" alt="Screenshot from 2013-03-08 00:17:38" width="432" height="347" class="thumbnail aligncenter size-full wp-image-1442" />
+<img src="/assets/img/2013/03/Screenshot-from-2013-03-08-001738.jpg" alt="Screenshot from 2013-03-08 00:17:38" width="432" height="347" class="thumbnail aligncenter size-full wp-image-1442" />
 
 Una vez instalado, deberán visitar tu sítio unas 25-125 (Aproximadamente) personas para que empieces a ver sugerencias de palabras.
 
 La sección más importante de HitTail es **Suggestions**, en ella aparecen las palabras clave Long Tail:
 
-<img src="/images/2013/03/Screenshot-from-2013-03-08-002231.jpg" alt="Screenshot from 2013-03-08 00:22:31" width="571" height="304" class="thumbnail aligncenter size-full wp-image-1443" />
+<img src="/assets/img/2013/03/Screenshot-from-2013-03-08-002231.jpg" alt="Screenshot from 2013-03-08 00:22:31" width="571" height="304" class="thumbnail aligncenter size-full wp-image-1443" />
 
 Usa estas palabras para escribir artículos relacionados con lo que los lectores están buscando para llegar a tu web, o modifica artículos existentes relacionados con esas palabras y añáde dichas palabras como etiquetas de artículo. Aunque creas que has establecido las etiquetas correctamente para un artículo, te sorprenderás cuando veas las sugerencias de HitTail.
 
@@ -71,7 +72,7 @@ Sin embargo hay algunas cosas que podrían mejorar, es un poco dificil al princi
 
 Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta técnica. La imagen de abajo muestra las estadísticas de este blog, puedes observar el crecimiento progresivo existente entorno a la semana 4 del 2013 (La última columna tiene un valor menor porque al momento de escribir este artículo estamos a principios de semana):
 
-[<img src="/images/2013/03/long-tail-result-1024x248.png" alt="long tail result" width="770" height="186" class="aligncenter size-large wp-image-1428" />][3]{.thumbnail}
+[<img src="/assets/img/2013/03/long-tail-result-1024x248.png" alt="long tail result" width="770" height="186" class="aligncenter size-large wp-image-1428" />][3]{.thumbnail}
 
 #### Referencias
 
@@ -79,8 +80,8 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
 
 
 
- [1]: /images/2013/03/longTail2.jpg
+ [1]: /assets/img/2013/03/longTail2.jpg
  [2]: /curso-programacion-android/
- [3]: /images/2013/03/long-tail-result.png
+ [3]: /assets/img/2013/03/long-tail-result.png
 
 {% include _toc.html %}

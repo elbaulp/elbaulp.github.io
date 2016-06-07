@@ -2,7 +2,7 @@
 id: 509
 title: Sección de descargas
 
-layout: page
+layout: minimal
 guid: http://elbauldelprogramador.org/?page_id=509
 if_page_sidebar:
   - 0
@@ -20,6 +20,7 @@ if_seo_title:
   - Descargar manuales gratuitos programación
   - Descargar manuales gratuitos programación
   - Descargar manuales gratuitos programación
+main-class: 'dev'
 ---
 Descargas totales 34172, número total de ficheros 31.
 

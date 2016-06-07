@@ -3,15 +3,16 @@ layout: post
 title: "Aprende a Programar Una App Android Para Proteger Tus PDFs"
 modified:
 categories:
-excerpt: "Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña."
+description: "Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña."
 tags: [android, pdf, plugpdf, lector pdf android]
 image:
-  feature:
-  thumb: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
-  credit:
-  creditlink:
+
+image: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
+
+  
 date: 2015-07-07T17:38:30+02:00
 author: jordi
+main-class: 'dev'
 ---
 
 {% include _toc.html %}
@@ -19,7 +20,7 @@ author: jordi
 Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña.
 
 <figure>
-  <img src="/images/Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 ¿Por qué puede interesarte? Bien, esto es útil en varios escenarios, por ejemplo cuando quieres subir tus documentos sensibles a la nube, en formato PDF, y necesitas añadir una capa de seguridad encriptando el documento con un password.
@@ -50,14 +51,14 @@ La contraseña de usuario sirve para asegurar el documento cada vez que alguien 
 Lo que hace PDF Protector es preguntarte qué partes de tu PDF quieres asegurar.
 
 <figure>
-  <img src="/images/Protege tus documentos PDF nativos.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Protege tus documentos PDF nativos.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 1. Protegiendo tus documentos PDF nativos
 
 Como decimos, el user password es para proteger por contraseña la apertura del documento, y el master password para proteger las operaciones que desees. Así que cuando proteges tus PDF con un user password entonces te sale este diálogo al abrirlo.
 
 <figure>
-  <img src="/images/Documento protegido por user password.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Documento protegido por user password.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 Figura 2. Documento protegido por user password
 

@@ -28,6 +28,7 @@ categories:
   - noticias
   - opensource
   - SO
+main-class: 'dev'
 ---
 Acabo de estrenar una nueva sección, ya está disponible en el menú, se llama [Fundamentos del software][1].
 

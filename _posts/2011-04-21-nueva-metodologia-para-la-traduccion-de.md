@@ -23,6 +23,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
 <div class="iconews">
 </div>

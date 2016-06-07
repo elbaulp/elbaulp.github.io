@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - internet
   - noticias
+main-class: 'dev'
 ---
 Uno de los aspectos más importantes de Google Chrome es el Omnibox, o la barra de direcciones. Se pueden escribir URLs y realizar búsquedas en el mismo lugar. Con el nuevo API del Omnibox, los desarrolladores de extensiones puede hacer la barra de direcciones aún más potente.  
   

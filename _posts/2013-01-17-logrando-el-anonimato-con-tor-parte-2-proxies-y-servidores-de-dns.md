@@ -14,6 +14,7 @@ tags:
   - navegacion anonima
   - Tor
 author: luzila
+main-class: 'dev'
 ---
   * <a href="https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>
   * Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies
@@ -24,7 +25,7 @@ author: luzila
 
 Ya hemos visto en profundidad cómo configurar nuestro navegador web para usar Privoxy, el cual en turnos usa Tor para mantener el anonimato en internet. ¿Pero qué pasa si queremos interceptar peticiones con Burp? Para comprender mejor qué sucede, la imagen siguiente representa la cadena de nodos que cada petición (y respuesta) debe atravesar parapoder usar el proxy (en nuestro caso, Burp) sobre la red de Tor:
 
-[<img class="alignnone size-medium wp-image-1044" alt="diagrama de nodos" src="/images/2012/12/081012_1604_AchievingAn11-300x128.png" width="300" height="128" />][3]{.thumbnail}
+[<img class="alignnone size-medium wp-image-1044" alt="diagrama de nodos" src="/assets/img/2012/12/081012_1604_AchievingAn11-300x128.png" width="300" height="128" />][3]{.thumbnail}
 
 Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella &#8211; en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).
 
@@ -37,13 +38,13 @@ Esa es una visión general de cómo deberían trabajar todos en conjunto, pero t
 
 Dado que el navegador web debería enviar todas las peticiones a Burp, es necesario configurar el navegador web para que use Burp en lugar de Privoxy. La configuración para Firefox se presenta a continuación:
 
-<a class="thumbnail" href="/?attachment_id=1053" rel="attachment wp-att-1053"><img class="size-full wp-image-1053 alignnone" alt="081012_1604_AchievingAn2" src="/images/2012/12/081012_1604_AchievingAn21.png" width="501" height="498" /></a>
+<a class="thumbnail" href="/?attachment_id=1053" rel="attachment wp-att-1053"><img class="size-full wp-image-1053 alignnone" alt="081012_1604_AchievingAn2" src="/assets/img/2012/12/081012_1604_AchievingAn21.png" width="501" height="498" /></a>
 
 De esta forma Firefox envía todos los paquetes a través del proxy Burp, que corre en el host 127.0.0.1 en el puerto 8080.
 
 A continuación es necesario configurar Burp para usar proxy SOCKS, el cual se inicializa y configura a través de Tor. El proxy SOCKS trabaja en un nivel más bajo que el proxy HTTP, por lo tanto tiene la posibilidad de redirigir no sólo peticiones HTTP. SOCKS es básicamente un proxy TCP, el cual puede interceptar y filtrar todas las conexiones TCP que pasan a través de él, lo que le permite no ser específico por aplicación; la aplicación sólo necesita tener la capacidad de enviar sus paquetes de datos a través del proxy SOCKS. Es posible configurar Burp para usar SOCKS en las opciones de Burp indicando &#8220;use SOCKS proxy&#8221;, como se puede observar en la siguiente imagen:
 
-<a class="thumbnail" href="/?attachment_id=1069" rel="attachment wp-att-1069"><img class="alignnone size-full wp-image-1069" alt="081012_1604_AchievingAn3" src="/images/2013/01/081012_1604_AchievingAn32.png" width="642" height="234" /></a>
+<a class="thumbnail" href="/?attachment_id=1069" rel="attachment wp-att-1069"><img class="alignnone size-full wp-image-1069" alt="081012_1604_AchievingAn3" src="/assets/img/2013/01/081012_1604_AchievingAn32.png" width="642" height="234" /></a>
 
 De esta forma se configura Burp para que use el proxy SOCKS corriendo en el host 127.0.0.1 (localhost) en el puerto 9050. Si se consultan nuevamente los puertos que estan en estado de escucha nuevamente, se puede observar que el puerto 9050 está asociado al servicio Tor:
 
@@ -70,7 +71,7 @@ B: ***Torificar* la resolución de hostnames**
 
 Es posible intentar *torificar* la aplicación de resolución de DNS que utilizamos. Pero es necesario tener cuidado, debido a que algunas aplicaciones no fueron construidas pensando en el modo anónimo. Algunos protocolos, como FTP (modo activo/pasivo), envían la propia dirección IP en la sección de datos del FTP, lo que lo hace muy difícil de anonimizar. Esto ocurre en el modo activo del data transfer en FTP. La siguiente imagen resume la inicialización de la trasferencia FTP:
 
-<a class="thumbnail" href="/?attachment_id=1070" rel="attachment wp-att-1070"><img class="alignnone size-full wp-image-1070" alt="081012_1604_AchievingAn4" src="/images/2013/01/081012_1604_AchievingAn42.png" width="591" height="245" /></a>
+<a class="thumbnail" href="/?attachment_id=1070" rel="attachment wp-att-1070"><img class="alignnone size-full wp-image-1070" alt="081012_1604_AchievingAn4" src="/assets/img/2013/01/081012_1604_AchievingAn42.png" width="591" height="245" /></a>
 
 Se pueden observar todos los pasos necesarios para empezar a enviar la información del servidor al cliente. Parece no ser mucho si no se presta atención. En el paso C, se envía el comando PORT, el cual es la raiz de los problemas para anonimizar. El comando PORT usa un formato como el siguiente:
 
@@ -114,7 +115,7 @@ Hay algunos proxies disponibles que podríamos usar, pero la mayoría de las com
 
   * Privoxy no tiene pipelining para HTTP 1.1
   * Privoxy cachea los objetos más pedidos
-  * Privoxy necesita transferir la página entera para parsearla y mostrarla al usuario. Esto significa que la experiencia del usuario con Privoxy es mucho peor, debido a que el usuario debe esperar constantemente que los datos de la página web completa sean transferidos desde el servidor, antes de ser mostrados.
+  * Privoxy necesita transferir la página entera para parsearla y mostrarla al usuario. Esto significa que la experiencia del usuario con Privoxy es mucho peor, debido a que el usuario debe esperar constantemente que los datos de la p��gina web completa sean transferidos desde el servidor, antes de ser mostrados.
 
 Pero hay otra pregunta que debemos hacernos. ¿Por qué necesitamos incluso un proxy HTTP si podemos usar el proxy de Tor SOCKS desde el navegador? La respuesta es que generalmente el proxy SOCKS del navegador usa algunas variables de configuración default que no toleran Tor de la misma forma que Privoxy o Polipo pueden. Lo más sorprendente son los timeouts, que ocurren muy frecuentemente si usamos directamente el proxy SOCKS.
 
@@ -240,6 +241,6 @@ Referencias
 
  [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/ "Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks"
  [2]: /logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
- [3]: /images/2012/12/081012_1604_AchievingAn11.png
+ [3]: /assets/img/2012/12/081012_1604_AchievingAn11.png
 
 {% include _toc.html %}

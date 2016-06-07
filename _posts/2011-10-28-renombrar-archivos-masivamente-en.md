@@ -20,6 +20,7 @@ categories:
 tags:
   - renombrar archivos linux masivo
   - renombrar linux
+main-class: 'dev'
 ---
 <div class="icosh">
 </div>

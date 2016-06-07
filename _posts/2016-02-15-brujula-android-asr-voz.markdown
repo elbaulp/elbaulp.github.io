@@ -4,14 +4,14 @@ title: Crear Una Brújula Con Reconocimiento De Voz en Android
 date: 2016-02-15T20:36:34+01:00
 modified:
 categories:
-excerpt: "Enunciado: se debe identificar mediante interfaz vocal un punto cardinal (Norte, Sur, Este y Oeste) y el porcentaje de error (cantidad entera) en la detección del punto, solo el número, por ejemplo “Norte diez”. Una vez reconocido el patrón vocal se debe mostrar una brújula para que el usuario se oriente en la dirección indicada, cuando lo realice se le debe indicar que ya se ha conseguido."
+description: "Enunciado: se debe identificar mediante interfaz vocal un punto cardinal (Norte, Sur, Este y Oeste) y el porcentaje de error (cantidad entera) en la detección del punto, solo el número, por ejemplo “Norte diez”. Una vez reconocido el patrón vocal se debe mostrar una brújula para que el usuario se oriente en la dirección indicada, cuando lo realice se le debe indicar que ya se ha conseguido."
 tags: [brujula android, crear brujula android, programar brujula android, reconocimiento de voz android, tutorial ASR android]
-image:
-  thumb: hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png
+image: hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><img src="/images/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><img src="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 {% include _toc.html %}
@@ -41,7 +41,7 @@ Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MI
 ## Inicio de la aplicación
 
 <figure>
-  <a href="/images/npi/inicioBrujula.png"><img src="/images/npi/inicioBrujula.png" title="Primera pantalla de la aplicación brújula" alt="Primera pantalla de la aplicación brújula" /></a>
+  <a href="/assets/img/npi/inicioBrujula.png"><img src="/assets/img/npi/inicioBrujula.png" title="Primera pantalla de la aplicación brújula" alt="Primera pantalla de la aplicación brújula" /></a>
   <span class="image-credit">Primera pantalla de la aplicación brújula</span>
 </figure>
 
@@ -49,7 +49,7 @@ Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MI
 Al mostrarse esta pantalla, el usuario debe proporcionar un comando de voz, por ejemplo _“Norte 10”_. Tras dar el comando, en la brujula se añadirá un marcador indicando dónde está el Norte + 10 grados. Además de esto, mediante una voz, se le irá indicando al usuario si debe girar a la derecha/izquierda o va en la dirección correcta:
 
 <figure>
-  <a href="/images/npi/norte10.png"><img src="/images/npi/norte10.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" /></a>
+  <a href="/assets/img/npi/norte10.png"><img src="/assets/img/npi/norte10.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" /></a>
   <span class="image-credit">Indicaciones en la brujula</span>
 </figure>
 
@@ -57,7 +57,7 @@ Al mostrarse esta pantalla, el usuario debe proporcionar un comando de voz, por 
 Como vemos en la imagen, aparece un indicador rojo situado en el norte + 10 grados. Veamos otro ejemplo, Norte 45:
 
 <figure>
-  <a href="/images/npi/norte45.png"><img src="/images/npi/norte45.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" /></a>
+  <a href="/assets/img/npi/norte45.png"><img src="/assets/img/npi/norte45.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" /></a>
   <span class="image-credit">Indicaciones en la brujula</span>
 </figure>
 

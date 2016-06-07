@@ -22,6 +22,7 @@ categories:
 tags:
   - crear paquetes en oracle
   - usuarios package en pl/sql
+main-class: 'dev'
 ---
 <div class="icosql">
 </div>

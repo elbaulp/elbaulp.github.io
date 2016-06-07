@@ -3,7 +3,7 @@ layout: {{ layout }}
 title: {{ title }}
 modified:
 categories: {{ dir }}
-excerpt:
+description:
 tags: []
 image:
   feature:
@@ -12,7 +12,7 @@ image:
   creditlink:
 ---
 <figure>
-  <a href="/images/"><img src="/images/" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/"><img src="/assets/img/" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: <a href=""></a></span><br/>
 </figure>
 

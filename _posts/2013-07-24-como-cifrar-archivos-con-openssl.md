@@ -12,13 +12,12 @@ tags:
   - cifrar copias de seguridad con openssl
   - cifrar tar con openssl
   - comandos openssl
-image:
-  thumb: 2012/11/Apps-preferences-desktop-cryptography-icon1.png
-excerpt: "Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**."
+image: 2012/11/Apps-preferences-desktop-cryptography-icon1.png
+description: "Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**."
 ---  
 
 <figure>
-<img src="/images/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="Homomorphic Encryption" alt="Cómo cifrar archivos con openssl" title="Cómo cifrar archivos con openssl"/>
+<img src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="Homomorphic Encryption" alt="Cómo cifrar archivos con openssl" title="Cómo cifrar archivos con openssl"/>
 </figure>
 
 Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**.  

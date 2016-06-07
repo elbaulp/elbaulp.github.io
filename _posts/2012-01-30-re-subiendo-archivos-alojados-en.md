@@ -25,6 +25,7 @@ share_count:
   - 0
 categories:
   - noticias
+main-class: 'dev'
 ---
 Practicamente todos los archivos externos del blog estaban alojados en [megaupload][1], debido al cierre del mismo no están disponibles. Para evitar que este tipo de cosas vuelvan a ocurrir, estoy alojando los archivos en un servidor propio, de modo que no dependa de si cierran una web.
 

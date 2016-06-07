@@ -11,8 +11,9 @@ tags:
   - crear formularios a partir del modelo django
   - crear formularios en django
   - formularios en django
+main-class: 'dev'
 ---
-<img src="/images/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="700" height="394" class="thumbnail aligncenter size-full wp-image-1925" />
+<img src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="700" height="394" class="thumbnail aligncenter size-full wp-image-1925" />
 
 Como comenté cuando escribí el artículo sobre [Introducción a Django][1] he tenido que empezar a desarrollar aplicaciones web en este [framework][2] que cada día me gusta más.
 
@@ -166,7 +167,7 @@ El primer comando se encarga de actualizar la base de datos con los modelos crea
 
 Si todo ha ido bien, deberíamos ver la siguiente página en <a href="http://127.0.0.1:8000/personas/list" title="localhost" target="_blank">http://127.0.0.1:8000/personas/list</a>
 
-<img src="/images/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161" height="153" class="thumbnail aligncenter size-full wp-image-1927" />
+<img src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161" height="153" class="thumbnail aligncenter size-full wp-image-1927" />
 
 ## Crear un formulario a partir de un Modelo con ModelForm
 

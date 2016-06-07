@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: 'dev'
 ---
 [![Run Your Own Web Server Using Linux & Apache - Free 191 Page Preview][1]][2]
 
@@ -33,7 +34,7 @@ Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
 
 
 
- [1]: http://img.tradepub.com/free/w_sitb05/images/w_sitb05c.gif "Run Your Own Web Server Using Linux & Apache - Free 191 Page Preview"
+ [1]: http://img.tradepub.com/free/w_sitb05/assets/img/w_sitb05c.gif "Run Your Own Web Server Using Linux & Apache - Free 191 Page Preview"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb05/prgm.cgi/
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
  [4]: http://lh5.googleusercontent.com/-3xNROQvUyLw/Tez0xVWLW1I/AAAAAAAAAkc/3Gx7eUaLwxU/s288/descargar.png

@@ -8,13 +8,13 @@ permalink: /personalizar-el-error-404-en-wordpress/
 categories:
   - php
 tags:
-  - 404
   - error 404
   - personalizar 404 wordpress
-excerpt: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
+description: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
+main-class: 'dev'
 ---
 <figure>
-  <img src="/images/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />
+  <img src="/assets/img/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />
 </figure>
 
 El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.
@@ -126,7 +126,7 @@ if($query->have_posts()){
        wp_reset_postdata();
     }
     ?>
-    
+
 ```
 
 
@@ -230,7 +230,7 @@ if($query->have_posts()){
       ?>
 
     </ul>
-    
+
 ```
 
 

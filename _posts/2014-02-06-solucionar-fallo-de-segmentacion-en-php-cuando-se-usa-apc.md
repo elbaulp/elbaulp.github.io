@@ -14,6 +14,7 @@ tags:
   - parámetros kernel
   - shmmax
   - sysctl
+main-class: 'dev'
 ---
 Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro `apc.shm_size` junto con el parámetro del kernel `kernel.shmmax`. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.
 

@@ -4,14 +4,14 @@ title: Guía Gratuita - Spring Data Programming Cookbook
 date: 2016-03-15T08:39:18+01:00
 modified:
 categories:
-excerpt: "Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!"
+description: "Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!"
 tags: [manual de spring data, cookbook spring, manuales gratuitos programacion, tutorial spring data]
-image:
-  thumb: Spring-Data-Programming-Cookbook.jpg
+image: Spring-Data-Programming-Cookbook.jpg
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc"><img src="/images/Spring-Data-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc"><img src="/assets/img/Spring-Data-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!
@@ -24,7 +24,7 @@ In this eBook, we provide a compilation of Spring Data examples that will help y
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 

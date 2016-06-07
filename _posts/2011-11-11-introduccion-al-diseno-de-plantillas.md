@@ -27,6 +27,7 @@ categories:
   - curiosidades
   - internet
   - noticias
+main-class: 'dev'
 ---
 He visto en el blog de blogger que dan la posibilidad de crear una plantilla personalizada de nuestro blog para moviles.
 

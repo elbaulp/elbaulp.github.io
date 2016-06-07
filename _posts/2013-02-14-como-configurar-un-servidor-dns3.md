@@ -41,12 +41,12 @@ tags:
   - servidores dns
   - soa correo
   - zona dns inversa
-image:
-  thumb: 2013/04/dns.jpg
+image: 2013/04/dns.jpg
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/2013/04/dns.jpg"><img src="/images/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/04/dns.jpg"><img src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 * [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]

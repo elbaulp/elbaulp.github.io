@@ -4,10 +4,10 @@ title: Programación Android - Conceptos básicos
 date: 2015-12-14T08:53:53+01:00
 modified:
 categories: android
-excerpt: "En este primer artículo veremos los conceptos fundamentales que componen una aplicación Android."
+description: "En este primer artículo veremos los conceptos fundamentales que componen una aplicación Android."
 tags: [Curso de Android, programación Android, tutoriales Android, NPI]
 image:
-  thumb: hotlink-ok/activityLifecycle.png
+image: hotlink-ok/activityLifecycle.png
 ---
 
 {% include _toc.html %}
@@ -57,7 +57,7 @@ Los proyectos de Android siguen una estructura fija de carpetas que
 debemos respetar.
 
 <figure>
-  <a href="/images/android/estructuraCarpetas.png"><img src="/images/android/estructuraCarpetas.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/android/estructuraCarpetas.png"><img src="/assets/img/android/estructuraCarpetas.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### Carpeta Res
@@ -103,7 +103,7 @@ Es importante añadir la línea `setContentView(R.layout.activity_main);`, ya qu
 La siguiente imagen muestra el ciclo de vida de una _Activity_, esto es qué flujo de llamadas siguen las aplicaciones. Como vemos, `onCreate` es el primero método en llamarse al lanzar una _Activity_, es por ello que en él debemos hacer todas las inicializaciones necesarias. Si lo necesitamos, podemos implementar todos y cada uno de estos métodos. Por ejemplo, en una aplicación de vídeo, interesará detener la reproducción cuando se recibe una llamada, o cuando la pantalla se apaga, toda esa lógica deberá ir en el método `onPause` o `onStop`, y debería reanudarse implementando la lógica en `onRestart` o `onResume`.
 
 <figure>
-  <a href="/images/android/activityLifecycle.png"><img src="/images/android/activityLifecycle.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/android/activityLifecycle.png"><img src="/assets/img/android/activityLifecycle.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### ./res/layout/activity\_main.xml

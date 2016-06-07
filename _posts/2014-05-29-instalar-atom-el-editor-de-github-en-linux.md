@@ -12,6 +12,7 @@ tags:
   - editor atom github
   - instalar atom
   - instalar atom en Ubuntu
+main-class: 'dev'
 ---
 Hace unos días decidí instalar **Atom**, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:
 
@@ -52,7 +53,7 @@ Hecho esto, ya podemos ejecutar Atom desde la consola o desde el menú que nuest
 
 Si no se te da bien recordar atajos de teclado, basta con recordar uno solo para obtenerlos todos `ctrl-shift-P`, aparecerá algo así:
 
-<img src="/images/2014/05/cmd-alt-p-atom.png" alt="cmd-alt-p atom" width="548" height="390" class="aligncenter size-full wp-image-2373" />
+<img src="/assets/img/2014/05/cmd-alt-p-atom.png" alt="cmd-alt-p atom" width="548" height="390" class="aligncenter size-full wp-image-2373" />
 
 #### Encontrando archivos
 
@@ -90,7 +91,7 @@ apm install git-plus
 
 Una demostración de su uso:
 
-<img src="/images/2014/05/git-plus-atom.gif" alt="git-plus-atom" width="1075" height="340" class="aligncenter size-full wp-image-2374" />
+<img src="/assets/img/2014/05/git-plus-atom.gif" alt="git-plus-atom" width="1075" height="340" class="aligncenter size-full wp-image-2374" />
 
 Algunos comandos básicos:
 
@@ -126,7 +127,7 @@ Algunos comandos básicos:
 
 Éste paquete viene instalado por defecto, es bastante útil porque muestra el diff de forma gráfica, por ejemplo:
 
-<img src="/images/2014/05/git-diff-atom.png" alt="git diff atom" width="800" height="224" class="aligncenter size-full wp-image-2375" />
+<img src="/assets/img/2014/05/git-diff-atom.png" alt="git diff atom" width="800" height="224" class="aligncenter size-full wp-image-2375" />
 
 Donde el símbolo + significa que se ha agregado una línea nueva, y el punto amarillo que se ha modificado una existente.
 

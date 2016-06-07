@@ -16,6 +16,7 @@ blogger_author:
 
 categories:
   - Sin categoría
+main-class: 'dev'
 ---
 <div lang="en">
   <div style="text-align: center;">

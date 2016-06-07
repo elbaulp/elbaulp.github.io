@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: minimal
 title: Cursos
-excerpt: "Colección de cursos escritos en el blog"
+description: "Colección de cursos escritos en el blog"
 search_omit: false
 tags: [cursos de programador, cursos de programación]
 ---
@@ -18,9 +18,9 @@ tags: [cursos de programador, cursos de programación]
 
 ### [Bases de datos][bd]
 
-[Android]: https://elbauldelprogramador.com/curso-programacion-android/
+[Android]: /curso-programacion-android/
 [Android2]: /android/
 [git]: /git/
 [latex1]: /latex/
-[dig]: https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/
-[bd]: https://elbauldelprogramador.com/bases-de-datos/
+[dig]: /dig-chuleta-basica-de-comandos/
+[bd]: /bases-de-datos/

@@ -10,8 +10,9 @@ categories:
 tags:
   - /var/mail/root a gmail
   - enviar mensajes del sistema a correo
-excerpt: "En sistemas operativos como Debian, muchos de los programas y demonios envían mensajes al usuario root para informar del estado del sistema. Los mensajes se almacenan en el archivo /var/mail/root. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como mutt para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica."
+description: "En sistemas operativos como Debian, muchos de los programas y demonios envían mensajes al usuario root para informar del estado del sistema. Los mensajes se almacenan en el archivo /var/mail/root. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como mutt para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica."
 modified: 2015-12-29T10:00
+main-class: 'dev'
 ---
 
 En sistemas operativos como <a href="https://elbauldelprogramador.com/?s=debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario <em>root</em> para informar del estado del sistema. Los mensajes se almacenan en el archivo <em>/var/mail/root</em>. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como <strong>mutt</strong> para administrar los mensajes. Sin embargo, considero más organizado redireccionar t\odos los mensajes a una cuenta de correo típica.

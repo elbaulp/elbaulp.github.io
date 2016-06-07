@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: 'dev'
 ---
 Navegando por la red me he encontrado unas cuantas páginas en las que se dá la posibilidad de generar nuestro código css de una manera fácil y sencilla. Hasta este momento no había experimentado con CSS3, y me he sorprendido bastante de las cosas tan útiles y elegantes que se pueden llegar a hacer. Debajo dejo los links:  
   

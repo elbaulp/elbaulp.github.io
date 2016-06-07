@@ -27,9 +27,10 @@ categories:
   - android
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 </div>
 
 Hace unas semanas atrás encontré este vídeo de la Google I/O 2011 en el que se dan consejos para seamos capaces de crear las mejores aplicaciones Android y conseguir llegar al mayor número de personas debido a la calidad y eficiencia de nuestros productos.

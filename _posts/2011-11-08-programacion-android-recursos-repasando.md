@@ -19,6 +19,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
 En resumen, en el siguiente listado muestra la estructura global del directorio de recursos:
 

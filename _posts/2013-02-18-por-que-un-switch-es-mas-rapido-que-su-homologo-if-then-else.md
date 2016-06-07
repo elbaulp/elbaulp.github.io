@@ -14,6 +14,7 @@ tags:
   - jump table
   - switch
   - tabla de salto
+main-class: 'dev'
 ---
 En este artículo pretendo explicar el motivo por el cual un switch es mucho más rápido que su homólogo en secuencias if-then-else, para ello analizaremos la implementación del switch.
 

@@ -15,11 +15,11 @@ tags:
   - tracking
 author: luzila
 
-image:
-  thumb: 2014/10/draft.jpg
+image: 2014/10/draft.jpg
 modified: 2015-12-24T17:37
-excerpt: "El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
+description: "El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.  
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google."
+main-class: 'dev'
 ---
 > Esta es la traducción de un artículo que me pareció muy interesante para tener en cuenta si queremos ir implementando al menos algunas costumbres y buenas prácticas para navegar anónimamente en internet. Hay algunos tips que propone que no pueden aplicarse en todos los países, pero sin embargo vale la pena conocer las formas para que cada uno pueda pensar de qué forma puede lograrlo. *Luzcila*
 
@@ -27,7 +27,7 @@ El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, 
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.
 
 <figure>
-  <a href="/images/2014/10/draft.jpg"><img src="/images/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/draft.jpg"><img src="/assets/img/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 <!--ad-->
@@ -189,7 +189,7 @@ Puedes:
 No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ubicación estén desactivadas. Por defecto, sé que el iTouch guarda tu ubicación GPS en cada foto que tomas. Si ésta aparece en algún momento en internet, ya se puede examinar en hexadecimal para determinar las coordenadas.
 
 <figure>
-  <a href="/images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><img src="/images/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><img src="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 El Explorador de Archivos de Windows (Windows File Explorer) además provee lectura de ubicación de GPS en su vista de propiedades

@@ -1,7 +1,7 @@
 ---
 id: 391
 title: Android
-layout: page
+layout: minimal
 guid: http://elbauldelprogramador.org/?page_id=391
 blogger_blog:
   - http://www.elbauldelprogramador.org/p/guia-de-desarrollo-android.html

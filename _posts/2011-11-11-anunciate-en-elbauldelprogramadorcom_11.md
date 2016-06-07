@@ -25,6 +25,7 @@ share_count:
   - 2
 categories:
   - Sin categoría
+main-class: 'dev'
 ---
 He colocado unos banners en la parte derecha del blog, disponibles para todo aquel que se quiera anunciar y dar a conocer su página web.
 
@@ -42,7 +43,7 @@ Por último, debajo hay otro debajo en gris que dice &#8220;advertise here&#8221
 
 El pageRank de la web es de 4 (<a href="http://www.prchecker.info/" title="Free Page Rank Tool" target="_blank"><br /> <img src="http://pr.prchecker.info/getpr.php?codex=aHR0cDovL3d3dy5lbGJhdWxkZWxwcm9ncmFtYWRvci5jb20=&tag=1" alt="Free Page Rank Tool" style="border:0;" /></a>)
 
-Aprovecho para decir que he creado una página en Google+ para el blog que podéis seguir aquí ([<img alt="Sígueme en G+" class="sigueme" height="32px" src="https://ssl.gstatic.com/images/icons/gplus-32.png" title="Sígueme en G+" width="32px" />][1])
+Aprovecho para decir que he creado una página en Google+ para el blog que podéis seguir aquí ([<img alt="Sígueme en G+" class="sigueme" height="32px" src="https://ssl.gstatic.com/assets/img/icons/gplus-32.png" title="Sígueme en G+" width="32px" />][1])
 
 
 

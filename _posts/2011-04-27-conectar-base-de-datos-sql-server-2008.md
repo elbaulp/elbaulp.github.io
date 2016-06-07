@@ -31,8 +31,9 @@ tags:
   - conectar java con oracle
   - curso android pdf
   - programar base datoss java
+main-class: 'dev'
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 [En anteriores entradas][1] expliqué como he ido desarrollando una aplicación para Android que enviaba mensajes al pc para un proyecto de fin de curso.
 

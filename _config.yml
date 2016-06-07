@@ -1,27 +1,54 @@
-# Site wide configuration
-
-title: El Baúl del programador
-locale: es_ES
+# Site settings
+description: Blog sobre programación y noticias de software libre, lenguajes c++, java, python, android, bases de datos, sql y pl/sql
+baseurl: https://elbauldelprogramador.com "" # the subpath of your site, e.g. /blog
 url: https://elbauldelprogramador.com
+locale: es_ES
+title: El Baúl del programador
 
-# Jekyll configuration
-permalink:   /:categories/:title/
-markdown:    kramdown
+# User settings
+username: Alejandro Alcalde
+user_description: Estudiante de Grado en Ingeniería Informática en la ETSIIT, Granada. Especialidad, Inteligencia Artificial.
+user_title: Alejandro Alcalde
+email: contacto@elbauldelprogramador.com
+twitter_username: elbaulp
+github_username:  algui91
+gplus_username:  ElBauldelProgramador
+disqus_username: bashyc
+
+# Build settings
+markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
+permalink: /:categories/:title/
 gems:
   - jekyll-sitemap
-  - jekyll-seo-tag
 
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Inicio
+    url: https://elbauldelprogramador.com /
+  - title: Categorías
+    url: https://elbauldelprogramador.com /categorias
+  - title: Tags
+    url: https://elbauldelprogramador.com /tags
+  - title: Cursos
+    url: https://elbauldelprogramador.com /cursos/
+  - title: Manuales
+    url: https://elbauldelprogramador.com /manuales-gratuitos/
+  - title: Security Now!
+    url: https://elbauldelprogramador.com /security-now/
+  - title: Apoyanos
+    url: https://elbauldelprogramador.com /apoyanos/
+  - title: Contacto
+    url: https://elbauldelprogramador.com /contacto
+
 
 # Site owner
 owner:
@@ -49,13 +76,5 @@ owner:
   stackcareers: algui91
   linkedin: algui91
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      comments: true
-
-include: [".htaccess"]
-exclude: ["TODO.md", "lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']

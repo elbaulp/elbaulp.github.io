@@ -17,6 +17,7 @@ tags:
   - problema Simulate secondary displays
   - Simulate secondary displays
   - xda
+main-class: 'dev'
 ---
 Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en [Android][1] 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.  
   
@@ -31,7 +32,7 @@ Una vez activado, eché un vistazo a ver qué opciones nuevas había. Activé un
 
 La respuesta concretamente la encontré en el foro de [XDA][2]. Como sabía que el problema lo había causado la opción **Simular pantallas secundarias** bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de *rescate o modo seguro* que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:
 
-<img src="/images/2013/03/Screenshot_2013-03-03-13-48-30.png" alt="Safe Mode in Android o Modo rescate en Android" width="480" height="800" class="thumbnail aligncenter size-full wp-image-1399" />
+<img src="/assets/img/2013/03/Screenshot_2013-03-03-13-48-30.png" alt="Safe Mode in Android o Modo rescate en Android" width="480" height="800" class="thumbnail aligncenter size-full wp-image-1399" />
 
 Una vez en el modo rescate, desactivé la opción y problema resuelto.
 

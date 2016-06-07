@@ -38,7 +38,7 @@ sitemap: false
     <![CDATA[
     <strong>Invítanos a un café usando nuestro enlace de afiliados de <a href="http://www.amazon.es?tag=bmacoc-21"><strong><em>Amazon (Si vives en España)</em></strong></a> (Sin coste adicional en compras) o a través de <a href="https://www.paypal.me/elbaul"><strong><em>paypal</em></strong></a> O con <strong><em><a href="https://elbauldelprogramador.com/google-lanza-contributor-apoya-a-tus-webs-favoritas-sin-ver-anuncios/">Google Contributor</a></em></strong></strong>
 
-    <img src="{{ site.url }}/images/{{ post.image.thumb }}"/>
+    <img src="{{ site.url }}/assets/img/{{ post.image.thumb }}"/>
 
     ]]>
     {{ post.excerpt | xml_escape }}

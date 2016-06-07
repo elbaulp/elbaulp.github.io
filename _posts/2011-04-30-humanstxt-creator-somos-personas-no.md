@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - internet
   - noticias
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img src="<br />

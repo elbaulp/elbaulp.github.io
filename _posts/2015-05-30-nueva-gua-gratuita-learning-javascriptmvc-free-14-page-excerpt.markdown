@@ -3,18 +3,19 @@ layout: post
 title: "Nueva Guía Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt"
 modified:
 categories:
-excerpt: "JavaScriptMVC is a client-side, JavaScript framework that builds maintainable, error-free, lightweight applications as quickly as possible."
+description: "JavaScriptMVC is a client-side, JavaScript framework that builds maintainable, error-free, lightweight applications as quickly as possible."
 tags: [ cursos, internet, noticias, JavaScript]
 image:
-  feature:
-  thumb: nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg
-  credit:
-  creditlink:
+
+image: nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg
+
+  
 date: 2015-05-30T13:53:41+02:00
+main-class: 'dev'
 ---
 
 <figure>
-  <img src="/images/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 JavaScriptMVC is a client-side, JavaScript framework that builds maintainable, error-free, lightweight applications as quickly as possible.
@@ -29,7 +30,7 @@ This book will guide you on how to build a sample application from scratch, test
 
 Packt Enterprise books can be summed up through the tagline "Professional Expertise Distilled". They take in-the-trenches knowledge from experienced software professionals, and distil it into a single, easy to follow manuscript.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_pack39" target="_blank">Descárgala</a>
 </div>
 

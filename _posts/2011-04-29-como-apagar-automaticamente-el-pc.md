@@ -22,6 +22,7 @@ categories:
   - curiosidades
   - How To
   - internet
+main-class: 'dev'
 ---
 <div class="icoso">
 </div>

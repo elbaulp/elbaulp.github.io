@@ -10,19 +10,19 @@ categories:
 tags:
   - curso html5
   - etiquetas html5
-image:
-  thumb: 2013/11/Introducción-a-HTML51.png
+image: 2013/11/Introducción-a-HTML51.png
 modified: 2015-12-30T11:00
-excerpt: |
+description: |
   <figure>
-    <a href="/images/2013/11/Introducción-a-HTML51.png"><img src="/images/2013/11/Introducción-a-HTML51.png" title="Introducción a HTML5" alt="Introducción a HTML5" /></a>
+    <a href="/assets/img/2013/11/Introducción-a-HTML51.png"><img src="/assets/img/2013/11/Introducción-a-HTML51.png" title="Introducción a HTML5" alt="Introducción a HTML5" /></a>
   </figure>
 
   Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es Roberto. Si ya sabes algo puedes echar un vistazo al artículo Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket.
 
+main-class: 'dev'
 ---
 <figure>
-  <a href="/images/2013/11/Introducción-a-HTML51.png"><img src="/images/2013/11/Introducción-a-HTML51.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/Introducción-a-HTML51.png"><img src="/assets/img/2013/11/Introducción-a-HTML51.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es <a href="http://www.rogamainformatica.es/" title="Roberto" target="_blank">Roberto</a>. Si ya sabes algo puedes echar un vistazo al artículo [Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket][1].
@@ -65,7 +65,7 @@ Todo el que empieza en esto esta deseando ir al código escribir su primera pagi
 A esta estructura le podemos dar “vida” simplemente abriendo nuestro blog de notas, y pegándolo, dándole el nombre que deseemos y la extensión html. Después de eso si la abrimos con cualquier navegador podemos verla funcionando.
 
 <figure>
-  <a href="/images/2013/11/Introducción-a-HTML5.png"><img src="/images/2013/11/Introducción-a-HTML5.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/Introducción-a-HTML5.png"><img src="/assets/img/2013/11/Introducción-a-HTML5.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Ahora os explicare qué es cada etiqueta, la primera: el **Doctipe**, ya la conocemos, seguidamente tenemos una etiqueta **<html>**; que cierra al final del documento **</html>** podemos intuir que hay que incluir dentro todo el contenido html y justamente es así como funciona debemos escribir dentro todo el contenido de nuestra página, la siguiente etiqueta es el **<head>** allí debemos incluir los enlaces a nuestras hojas de estilo, etiquetas de metadatos (mas adelante veremos que son y para que sirven), el titulo de la página, este se incluye dentro de las etiquetas **<title>** **</title>** y como vemos en la imagen superior lo que escribamos aquí va a aparecer en la pestaña de nuestra pagina; se debe cerrar con **</head>**; seguidamente nos encontramos con **<body>** aquí es donde escribiremos todo el cuerpo de nuestra web.

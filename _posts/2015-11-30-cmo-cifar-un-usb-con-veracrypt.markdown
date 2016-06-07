@@ -4,17 +4,18 @@ title: "Cómo Cifar Un USB Con Veracrypt"
 date: 2015-11-30T19:15:43+01:00
 modified:
 categories:
-excerpt: "Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila etc, y en ocasiones pueden contener información sensible que no debería poder leer cualquiera. Por ello es buena idea llevarlo encriptado, ya sea por si se pierde o nos lo roban. Hoy veremos cómo podemos cifrar/encriptar nuestro usb con Veracrypt"
+description: "Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila etc, y en ocasiones pueden contener información sensible que no debería poder leer cualquiera. Por ello es buena idea llevarlo encriptado, ya sea por si se pierde o nos lo roban. Hoy veremos cómo podemos cifrar/encriptar nuestro usb con Veracrypt"
 tags: [criptografía, usb, truecrypt, truecript, Veracrypt, cifrar usb]
 image:
-  feature:
-  thumb: Veracryptlogo.png
-  credit:
-  creditlink:
+
+image: Veracryptlogo.png
+
+  
+main-class: 'dev'
 ---
 
 <figure>
-  <img src="/images/Veracryptlogo.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Veracryptlogo.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 {% include _toc.html %}
@@ -30,7 +31,7 @@ El primer paso es dirigirnos a la <a href="https://veracrypt.codeplex.com/wikipa
 ### Crear el usb cifrado
 
 <figure>
-  <a href="/images/2.png"><img src="/images/2.png" title="Crear un usb cifrado con veracrypt" alt="Crear un usb cifrado con veracrypt" /></a>
+  <a href="/assets/img/2.png"><img src="/assets/img/2.png" title="Crear un usb cifrado con veracrypt" alt="Crear un usb cifrado con veracrypt" /></a>
 </figure>
 
 A continuación se mostrarán una serie de pantallas, seguimos los pasos que aparecen en ellas:
@@ -38,13 +39,13 @@ A continuación se mostrarán una serie de pantallas, seguimos los pasos que apa
 ### Seleccionar el tipo de volumen
 
 <figure>
-  <a href="/images/3.png"><img src="/images/3.png" title="Volumen estándar Veracrypt" alt="Volumen estándar Veracrypt" /></a>
+  <a href="/assets/img/3.png"><img src="/assets/img/3.png" title="Volumen estándar Veracrypt" alt="Volumen estándar Veracrypt" /></a>
 </figure>
 
 ### Seleccionar el dispositivo
 
 <figure>
-  <a href="/images/4.png"><img src="/images/4.png" title="Selección del volumen a cifrar Veracrypt" alt="Selección del volumen a cifrar Veracrypt" /></a>
+  <a href="/assets/img/4.png"><img src="/assets/img/4.png" title="Selección del volumen a cifrar Veracrypt" alt="Selección del volumen a cifrar Veracrypt" /></a>
 </figure>
 
 ### Tipos de cifrados
@@ -52,11 +53,11 @@ A continuación se mostrarán una serie de pantallas, seguimos los pasos que apa
 En el tipo de cifrado, podemos ejecutar un _benchmark_ para ver el rendimiento de cada uno, el más rápido es AES, pero si preferimos podemos elegir otros que fortifiquen la seguridad del dispositivo. A continuación se muestra el resultado de las pruebas:
 
 <figure>
-  <a href="/images/bench.png"><img src="/images/bench.png" title="Benchmark Veracrypt" alt="Benchmark Veracrypt" /></a>
+  <a href="/assets/img/bench.png"><img src="/assets/img/bench.png" title="Benchmark Veracrypt" alt="Benchmark Veracrypt" /></a>
 </figure>
 
 <figure>
-  <a href="/images/5.png"><img src="/images/5.png" title="Tipo de cifrado Veracrypt" alt="Tipo de cifrado Veracrypt" /></a>
+  <a href="/assets/img/5.png"><img src="/assets/img/5.png" title="Tipo de cifrado Veracrypt" alt="Tipo de cifrado Veracrypt" /></a>
 </figure>
 
 ### Establecer contraseña
@@ -64,7 +65,7 @@ En el tipo de cifrado, podemos ejecutar un _benchmark_ para ver el rendimiento d
 A la hora de escoger la contraseña, es importante que sea fuerte y de más de 20 caractéres. Si es menor de este número, se recomienda establecer un PIM (_Personal Iterations Multiplier_)
 
 <figure>
-  <a href="/images/8.png"><img src="/images/8.png" title="Escoger contraseña  Veracrypt" alt="Escoger contraseña Veracrypt" /></a>
+  <a href="/assets/img/8.png"><img src="/assets/img/8.png" title="Escoger contraseña  Veracrypt" alt="Escoger contraseña Veracrypt" /></a>
 </figure>
 
 ### Seleccionar el sistema de ficheros
@@ -72,7 +73,7 @@ A la hora de escoger la contraseña, es importante que sea fuerte y de más de 2
 Ahora seleccionamos el tipo de sistema de ficheros que queremos. Se recomienda hacer un formateo completo en lugar de rápido. En mi caso marqué rápido porque ya lo había formateado previamente.
 
 <figure>
-  <a href="/images/9.png"><img src="/images/9.png" title="Pantalla principal Veracrypt" alt="Pantalla principal Veracrypt" /></a>
+  <a href="/assets/img/9.png"><img src="/assets/img/9.png" title="Pantalla principal Veracrypt" alt="Pantalla principal Veracrypt" /></a>
 </figure>
 
 ### Soporte multiplataforma
@@ -80,7 +81,7 @@ Ahora seleccionamos el tipo de sistema de ficheros que queremos. Se recomienda h
 Por último, si queremos usar el USB en otros sistemas, deberemos marcar la casilla adecuada.
 
 <figure>
-  <a href="/images/10.png"><img src="/images/10.png" title="Pantalla principal Veracrypt" alt="Pantalla principal Veracrypt" /></a>
+  <a href="/assets/img/10.png"><img src="/assets/img/10.png" title="Pantalla principal Veracrypt" alt="Pantalla principal Veracrypt" /></a>
 </figure>
 
 Ya solo queda pulsar el botón de formatear en la siguiente pantalla y esperar, puede tardar un poco y parecer que se ha quedado colgado, paciencia.
@@ -102,7 +103,7 @@ veracrypt -t -c /dev/dispositivo
 Y seguir los pasos indicados, similares a los vistos arriba
 
 <figure>
-  <a href="/images/cmdveracrypt.png"><img src="/images/cmdveracrypt.png" title="Veracrypt en línea de comandos" alt="Veracrypt en línea de comandos" /></a>
+  <a href="/assets/img/cmdveracrypt.png"><img src="/assets/img/cmdveracrypt.png" title="Veracrypt en línea de comandos" alt="Veracrypt en línea de comandos" /></a>
 </figure>
 
 ### Montar y desmontar el dispositivo mediante la línea de comandos

@@ -14,6 +14,7 @@ tags:
   - restlib
   - web services android
   - web services programacion
+main-class: 'dev'
 ---
 Trabajando con un compañero en una aplicación que hacía uso de web services, nos planteamos la posibilidad de crear un librería que nos facilitara el desarrollo en aplicaciones similares. Aunque hay muchas disponibles en la red decidimos crear la nuestra propia. Gran parte de la librería está desarrollada por mi compañero <a href="http://menudoproblema.es/" target="_blank">Vicente</a>, yo crontibuí poco.
 
@@ -219,7 +220,7 @@ Es necesario agregar la librería al proyecto, para ello, descárgala, crea una 
 
 La aplicación de ejemplo debe quedar así:
 
-[<img src="/images/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480" height="800" class="aligncenter size-full wp-image-1089" />][1]{.thumbnail}
+[<img src="/assets/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480" height="800" class="aligncenter size-full wp-image-1089" />][1]{.thumbnail}
 
 Para finalizar, decir que la librería por ahora está muy limitada, pero es perfectamente funcional para realizar peticiones básicas. Intentaremos seguir desarrollandola cuando dispongamos de más tiempo.
 
@@ -234,6 +235,6 @@ Para finalizar, decir que la librería por ahora está muy limitada, pero es per
 
 
 
- [1]: /images/2013/01/webservicelibexample2.png
+ [1]: /assets/img/2013/01/webservicelibexample2.png
 
 {% include _toc.html %}

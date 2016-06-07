@@ -11,8 +11,9 @@ categories:
 tags:
   - asm
   - Ingenieria inversa
+main-class: 'dev'
 ---
-<img src="/images/2012/12/logicbomb1.png" alt="" title="Bomba" width="532" height="449" class="thumbnail aligncenter size-full wp-image-1048" />
+<img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532" height="449" class="thumbnail aligncenter size-full wp-image-1048" />
 
 #### Puedes encontrar la solución a esta práctica en [Desafío de ingeniería inversa en C &#8211; Soluciones][1] {.alert}
 

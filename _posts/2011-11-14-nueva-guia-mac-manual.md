@@ -25,6 +25,7 @@ share_count:
   - 1
 categories:
   - cursos
+main-class: 'dev'
 ---
 [![The Mac Manual][1]][2]  
   
@@ -38,7 +39,7 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
 
 
 
- [1]:  http://img.tradepub.com/free/w_make05/images/w_make05c.gif "The Mac Manual"
+ [1]:  http://img.tradepub.com/free/w_make05/assets/img/w_make05c.gif "The Mac Manual"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make05/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 

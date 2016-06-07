@@ -21,6 +21,7 @@ categories:
   - aplicaciones
   - internet
   - noticias
+main-class: 'dev'
 ---
 Hace unos dias hablé del [servício ifttt][1], en cuanto conocí este servício solicité una invitación en la web, y hoy me ha llegado.
 

@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - procesos
   - SO
+main-class: 'dev'
 ---
 <div class="icoso">
 </div>

@@ -3,21 +3,22 @@ layout: post
 title: "Ocultar Los Metaficheros De LaTeX Del Directorio De Trabajo"
 modified:
 categories:
-excerpt: "Si trabajas habitualmente con LaTeX, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabaja limpio."
+description: "Si trabajas habitualmente con LaTeX, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabaja limpio."
 tags: [latex, latexmk, metafiles latex, metaficheros latex]
 image:
-  feature:
-  thumb: 2013/05/latex_logo.png
-  credit:
-  creditlink:
+
+image: 2013/05/latex_logo.png
+
+  
 date: 2015-11-19T09:20:00+00:00
 math: true
+main-class: 'dev'
 ---
 
 {% include _toc.html %}
 
 <figure>
-  <img src="/images/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 Si trabajas habitualmente con $$\LaTeX$$, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabaja limpio.

@@ -19,10 +19,11 @@ tags:
   - imagemagick
   - pdf a imagenes
   - pdf to imagen
-excerpt: "El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros."
+description: "El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros."
+main-class: 'dev'
 ---
 <figure>
-  <img class="alignleft size-full wp-image-836" title="sh" src="/images/2012/07/sh1.png" alt="" width="128" height="128" />
+  <img class="alignleft size-full wp-image-836" title="sh" src="/assets/img/2012/07/sh1.png" alt="" width="128" height="128" />
 </figure>
 
 El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.

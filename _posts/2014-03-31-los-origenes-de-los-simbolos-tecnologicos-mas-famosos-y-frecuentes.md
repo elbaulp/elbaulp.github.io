@@ -12,19 +12,19 @@ tags:
   - origen simbolo usb
   - origen símbolos tecnológicos
 author: luzila
-excerpt: |
+description: |
   <figure>
-    <a href="/images/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png"><img src="/images/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png" title="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" alt="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" /></a>
+    <a href="/assets/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png"><img src="/assets/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png" title="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" alt="Los orígenes de los símbolos tecnológicos más famosos y frecuentes" /></a>
   </figure>
 
   Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.
 modified: 2015-12-25T13:10
-image:
-  thumb: 2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png
+image: 2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png"><img src="/images/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png"><img src="/assets/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.
@@ -32,14 +32,14 @@ Contínuamente exploramos el mundo de los orígenes pero es muy raro que discuta
 <!--ad-->
 
 Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este infograma en ese tamaño, lo hemos desarmado:  
-[<img class="size-full wp-image-2297 aligncenter" alt="@" src="/images/2014/03/at.jpg" width="160" height="160" />][1]  
+[<img class="size-full wp-image-2297 aligncenter" alt="@" src="/assets/img/2014/03/at.jpg" width="160" height="160" />][1]  
 <span style="line-height: 1.5em;">Ah @, el único símbolo en la lista para ganar un lugar en el la colección de arquitectura y diseño del MoMa. ¿Cómo este símbolo fetichista se ha vuelto tan potente con los años? Probablemente tenga algo que ver con los profundos y misteriosos orígenes de la runa de las redes. Fue conocida con muchos nombres: el caracol (en Francia e Italia), el pequeño ratón (en China), la cola del mono (Alemania). En 1971, Raymond Tomlinson, un programador de Bolt, Beranek & Newman, decidió insertar el símbolo entre las direcciones de red del ordenador para separar al usuario de la terminal. Previamente al uso de Tomlinsons, el símbolo @ también embellecía el teclado de American Underwood en 1885 como un símbolo taquigráfico de contabilidad que significa “con una tasa de”. Vuelve aún más atrás y las cosas comenzarán a ponerse turbias. Algunos sugieren que @ tiene sus orígenes en el siglo VI, cuando los monjes lo adoptaron como una forma mejor para escribir la palabra latina para “en” (at) o “al rededor de” (toward) &#8211; lo que no debe confundirse con A.D., la abreviación para Anno Domini, o los años después de la muerte de Cristo.</span>
 
 <p dir="ltr">
   &#8211;
 </p>
 
-# <span style="line-height: 1.5em;"><a href="/images/2014/03/sweddishcampground.jpg"><img class="size-full wp-image-2298 aligncenter" alt="⌘" src="/images/2014/03/sweddishcampground.jpg" width="160" height="160" /></a></span>
+# <span style="line-height: 1.5em;"><a href="/assets/img/2014/03/sweddishcampground.jpg"><img class="size-full wp-image-2298 aligncenter" alt="⌘" src="/assets/img/2014/03/sweddishcampground.jpg" width="160" height="160" /></a></span>
 
 <p dir="ltr">
   <span style="line-height: 1.5em;">¿Qué tienen en común los campings suecos y el excesivo uso del logo de Apple? Mucho, de acuerdo con Andy Hertzfeld del equipo de desarrollo original de Mac. Mientras trabajaba con otros miembros del equipo para configurar comandos de menú directamente en teclas del teclado, Hetzferld y su equipo decidieron agregar una tecla funcional especial. La idea era simple: cuando se presionaba en combianción con otras teclas, esta &#8220;tecla Apple&#8221; debía seleccionar el comando de menú correspondiente. Jobs lo odió &#8211; o más precisamente el símbolo que representaba el botón &#8211; el cual era otra imagen más del logo Apple. Hetzfeld recuerda su reacción: &#8220;¡Hay demasiadas &#8216;Apples&#8217; en la pantalla! ¡Es ridículo! ¡Estamos tomando al logo Apple en vano!&#8221;. Luego le siguió un rediseño apresurado, en el cual Susan Kare, bitmap artist, filtró en un diccionario internacional de símbolos y eligió un simbólo floral que, en Suecia, indicaba una atracción importante en un camping. Conocido alternativamente como &#8220;el bucle Gorgon&#8221;, y en el estandard Unicode, señal de un lugar de interés&#8221;, el símbolo de comandos ha permanecido como pilar en el teclado Apple hasta la actualidad.</span>
@@ -50,7 +50,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 </p>
 
 <p style="text-align: center;">
-  <a href="/images/2014/03/power.jpg"><img class="size-full wp-image-2299 aligncenter" alt="power" src="/images/2014/03/power.jpg" width="160" height="160" /></a>
+  <a href="/assets/img/2014/03/power.jpg"><img class="size-full wp-image-2299 aligncenter" alt="power" src="/assets/img/2014/03/power.jpg" width="160" height="160" /></a>
 </p>
 
 <p dir="ltr">
@@ -62,7 +62,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 </p>
 
 <p style="text-align: center;">
-  <a href="/images/2014/03/Ethernet.jpg"><img class="aligncenter size-full wp-image-2306" alt="Ethernet" src="/images/2014/03/Ethernet.jpg" width="160" height="160" /></a>
+  <a href="/assets/img/2014/03/Ethernet.jpg"><img class="aligncenter size-full wp-image-2306" alt="Ethernet" src="/assets/img/2014/03/Ethernet.jpg" width="160" height="160" /></a>
 </p>
 
 <p dir="ltr">
@@ -74,7 +74,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 </p>
 
 <p style="text-align: center;">
-  <a href="/images/2014/03/bluetooth.jpg"><img class="size-full wp-image-2301 aligncenter" alt="bluetooth" src="/images/2014/03/bluetooth.jpg" width="160" height="160" /></a>
+  <a href="/assets/img/2014/03/bluetooth.jpg"><img class="size-full wp-image-2301 aligncenter" alt="bluetooth" src="/assets/img/2014/03/bluetooth.jpg" width="160" height="160" /></a>
 </p>
 
 <p dir="ltr">
@@ -85,7 +85,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2302" alt="pause" src="/images/2014/03/pause.jpg" width="160" height="160" />][2]
+[<img class="aligncenter size-full wp-image-2302" alt="pause" src="/assets/img/2014/03/pause.jpg" width="160" height="160" />][2]
 
 <p dir="ltr">
   Tan lejos como el símbolo de pausa ha llegado, muchos han notado que se parece a la notación para una conexión abierta de un esquema eléctrico. Algunos dicen que es sencillamente un símbolo de stop con un pedazo truncado en el medio. Nosotros hemos puesto nuestra moneda en un origen más clásico: En la notación musical, la cesura indica una &#8211; espera un momento &#8211; pausa.
@@ -95,7 +95,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2303" alt="firewire" src="/images/2014/03/Firewire.jpg" width="160" height="160" />][3]
+[<img class="aligncenter size-full wp-image-2303" alt="firewire" src="/assets/img/2014/03/Firewire.jpg" width="160" height="160" />][3]
 
 <p dir="ltr">
   Tiempo atrás en 1995, un pequeño grupo de Apple &#8211; el desarrollador principal de FireWire &#8211; con la tarea de diseñar un símbolo que pueda reflejar adecuadamente la nueva tecnología en la que estaban trabajando. Con la intención original de ser una alternativa serie a SCSI, el principal encanto de FireWire fue que prometía conectividad de alta velocidad para equipos de audio y video digital. Por lo tanto los diseñadores optaron por un símbolo con tres puntas, representando audio, video y datos. Inicialmente el símbolo era rojo, pero fue luego cambiado a amarillo por razones desconocidas.
@@ -105,7 +105,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2304" alt="sleep" src="/images/2014/03/Sleep.jpg" width="160" height="160" />][4]
+[<img class="aligncenter size-full wp-image-2304" alt="sleep" src="/assets/img/2014/03/Sleep.jpg" width="160" height="160" />][4]
 
 <p dir="ltr">
   La gente estaba confundida con el estado &#8220;standby&#8221; (en espera). Parecía un poco intuitivo para un equipo electrónico que no estaba ni encendido ni apagado. Por lo tanto, luego de que la IEEE apañara el botón de standby de ICE (¿recuerdas?), decidieron que un rebautismo era necesario. El cuerpo gubernamental renombró al modo standby como &#8220;sleep&#8221; (dormir), para invocar el estado en que los humanos no están ni activados ni apagados. Hoy en día, una luna creciente es de facto el símbolo de estado sleep en aparatos de Estados Unidos y Europa. ¡Su poder metafórico es innegable! Viaja a Japón, supongo, y probablemente verás el botón &#8220;zzz&#8221; ocasional.
@@ -115,7 +115,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2300" alt="usb" src="/images/2014/03/usb.jpg" width="160" height="160" />][5]
+[<img class="aligncenter size-full wp-image-2300" alt="usb" src="/assets/img/2014/03/usb.jpg" width="160" height="160" />][5]
 
 <p dir="ltr">
   Creado como parte de la especificación de USB 1.0, el ícono USB fue dibujado con la intención de parecerse al Tridente de Neptuno, el poderoso Dreizack (Pero esto no significa que deberías salir a pinchar gente o intentar domesticar delfines con tu disco flash). En lugar de los triángulos puntiagudos en el extremo de la lanza de tres puntas, los promotores del USB decidieron modificar las figuras a un triángulo, un cuadrado y un círculo. Esto se hizo para simbolizar los diferentes periféricos que pueden ser acoplados usando el standard.
@@ -125,7 +125,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2307" alt="Play" src="/images/2014/03/Play.jpg" width="160" height="160" />][6]
+[<img class="aligncenter size-full wp-image-2307" alt="Play" src="/assets/img/2014/03/Play.jpg" width="160" height="160" />][6]
 
 <p dir="ltr">
   Mientras que los símbolos de play/pause no son nativos de las computadoras, han hecho su trabajo con los teclados, reproductores multimedia (reales y virtuales) y todos los otros aparatos que pueden reproducir audio o video. Desafortunadamente, ni el triángulo que apunta hacia la derecha ni la doble barra de pausa parecen tener un origen definido. Su primera aparición fue como símbolos de la cinta en un magnetófono de bobina abierta a mediados de los &#8217;60. En algunos casos, estaban acompañados por los símbolos (doble triángulo) rebobinar y adelantar. La dirección de la flecha de play indicaba la dirección en que la sinta se movería. Fácil.
@@ -135,7 +135,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2308" alt="Play" src="/images/2014/03/sbbod.jpg" width="160" height="160" />][7]
+[<img class="aligncenter size-full wp-image-2308" alt="Play" src="/assets/img/2014/03/sbbod.jpg" width="160" height="160" />][7]
 
 <p dir="ltr">
   Este terror es conocido por muchos nombres: la hipnótica rueda del destino, la pizza giratoria, la ruleta de la muerte, la SBBOD: &#8220;Spinning Beach Ball Of Death&#8221; (la pelota playera de la muerte). Apple la llama oficialmente &#8220;spinning wait cursor&#8221; (el cursor de espera giratorio), pero muchos usuarios de Mac simplemente la llaman con una sola palabra. Su primera aparición fue en el OSX de Apple y sigue indicando que una aplicación no está respondiendo a los eventos del sistema. Como muchos han notado, la SBBOD es, de hecho, una evolución del cursor de espera tipo reloj-pulsera que la compañía usó al principio en las primeras versiones de Mac OS. Mientras los orígenes de su diseño permanecen en el misterio, Apple probablemente descartó el reloj porque recordaba a los usuarios el tiempo que pasaba mientras el programa permanecía perpetuamente colgado. A pesar de esto, las últimas revisiones han comprobado un sólo pensamiento: es completamente posible despreciar una bella e hipnótica rueda giratoria.
@@ -147,12 +147,12 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 
 
 
- [1]: /images/2014/03/at.jpg
- [2]: /images/2014/03/pause.jpg
- [3]: /images/2014/03/Firewire.jpg
- [4]: /images/2014/03/Sleep.jpg
- [5]: /images/2014/03/usb.jpg
- [6]: /images/2014/03/Play.jpg
- [7]: /images/2014/03/sbbod.jpg
+ [1]: /assets/img/2014/03/at.jpg
+ [2]: /assets/img/2014/03/pause.jpg
+ [3]: /assets/img/2014/03/Firewire.jpg
+ [4]: /assets/img/2014/03/Sleep.jpg
+ [5]: /assets/img/2014/03/usb.jpg
+ [6]: /assets/img/2014/03/Play.jpg
+ [7]: /assets/img/2014/03/sbbod.jpg
 
 {% include _toc.html %}

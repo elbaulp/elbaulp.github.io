@@ -16,6 +16,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://pubstop.imagespacemedia.com/users/edit/0001909308895492" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="https://2.bp.blogspot.com/-V0Bw-51hcj4/TrEQv4WjhHI/AAAAAAAABeI/IjjxG-bq0P8/s300/Screenshot-Image%2BSpace%2BMedia%2B%25E2%2580%2594%2BAdvertiser%2B-%2BGoogle%2BChrome.png" /></a>

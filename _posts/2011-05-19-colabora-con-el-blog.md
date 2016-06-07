@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: 'dev'
 ---
 <div class="iconews">
 </div>

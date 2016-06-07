@@ -3,17 +3,18 @@ layout: post
 title: "Nueva Guía: System Administration & Security - Salary & Skills Report"
 modified: 2015-11-27T10:25:00+00:00
 categories:
-excerpt: "This kit will tell you what you need to know to earn more in system administration and security. Diverse and rapidly changing, network administration and security is the backbone of the 21st century workplace. What are the essential skills of the modern sysadmin? Does it pay to specialize, or go polyglot? Which tech is the overwhelming top pick in the world of configuration management?"
+description: "This kit will tell you what you need to know to earn more in system administration and security. Diverse and rapidly changing, network administration and security is the backbone of the 21st century workplace. What are the essential skills of the modern sysadmin? Does it pay to specialize, or go polyglot? Which tech is the overwhelming top pick in the world of configuration management?"
 tags: [guia gratuita, ebook , libros gratuitos]
 image:
-  feature:
-  thumb: Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg
-  credit:
-  creditlink:
+
+image: Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg
+
+  
 date: 2015-11-27T08:55:00+00:00
+main-class: 'dev'
 ---
 <figure>
-  <img src="/images/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 This kit will tell you what you need to know to earn more in system administration and security.
@@ -28,7 +29,7 @@ This kit also includes these valuable resources:
 - Top Tips for Securing Big Data Environments
 - Encryption as an Enterprise Strategy
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_bund84" target="_blank">Descárgala ahora</a>
 </div>
 

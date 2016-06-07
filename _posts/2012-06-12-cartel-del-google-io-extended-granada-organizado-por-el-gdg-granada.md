@@ -17,13 +17,14 @@ tags:
   - google I/O extended
   - hackathon
 format: gallery
+main-class: 'dev'
 ---
 Ya tenemos el cartel del Google I/O Extended, organizado por el GDG Granada (Google Developers Group Granada) gracias a Sergio Almécija, ¿nos ayudáis a moverlo?
 
-[<img src="/images/2012/06/gdg1.jpg" alt="" title="gdg" width="1440" height="900" class="aligncenter size-full wp-image-780" />][1]
+[<img src="/assets/img/2012/06/gdg1.jpg" alt="" title="gdg" width="1440" height="900" class="aligncenter size-full wp-image-780" />][1]
 
 
 
- [1]: /images/2012/06/gdg1.jpg
+ [1]: /assets/img/2012/06/gdg1.jpg
 
 {% include _toc.html %}

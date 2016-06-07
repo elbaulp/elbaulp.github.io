@@ -24,6 +24,7 @@ tags:
   - funcion parametros sql
   - funcion sql
   - sql generar procedure
+main-class: 'dev'
 ---
 <div class="icosql">
 </div>

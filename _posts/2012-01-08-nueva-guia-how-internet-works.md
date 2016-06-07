@@ -26,6 +26,7 @@ share_count:
 categories:
   - cursos
   - internet
+main-class: 'dev'
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_make28/prgm.cgi"><img style="border:none;" width="202" height="262" src="https://lh5.googleusercontent.com/-fvbBeqczi8o/TwmLPVbKehI/AAAAAAAACDU/5VTDVQKFeTQ/s615/done_internet1.jpg" title="How the internet works" alt="How the internet works" /></a>

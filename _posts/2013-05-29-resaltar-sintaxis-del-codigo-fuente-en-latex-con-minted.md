@@ -14,8 +14,8 @@ tags:
   - pygments
   - resaltar sintaxis codigo latex
   - latex
-image:
-  thumb: 2013/05/latex_logo.png
+image: 2013/05/latex_logo.png
+main-class: 'dev'
 ---
 
 Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <img src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="&#92;LaTeX" title="&#92;LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
@@ -69,7 +69,7 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
 ```
 
 Este trozo de código dará como resultado lo siguiente:  
-<img src="/images/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599" height="246" class="aligncenter size-full wp-image-1587" />
+<img src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599" height="246" class="aligncenter size-full wp-image-1587" />
 
 ### Insertar código desde un archivo de código fuente
 
@@ -153,7 +153,7 @@ Ejemplo de \textbackslash newmintedfile:
 linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.
 
 El resultado será:  
-<img src="/images/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733" height="940" class="thumbnail aligncenter size-full wp-image-1588" />
+<img src="/assets/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733" height="940" class="thumbnail aligncenter size-full wp-image-1588" />
 
 ### Creando un comando
 

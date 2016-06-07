@@ -16,17 +16,17 @@ tags:
   - que es una api rest
 author: luzila
 modified: 2015-12-28T9:34
-image:
-  thumb: 2014/01/201305-xml-vs-json-api.png
-excerpt: |
+image: 2014/01/201305-xml-vs-json-api.png
+description: |
 
   <figure>
-    <a href="/images/2014/01/201305-xml-vs-json-api.png"><img src="/images/2014/01/201305-xml-vs-json-api.png" title="Buenas prácticas para el Diseño de una API RESTful Pragmática" alt="Buenas prácticas para el Diseño de una API RESTful Pragmática" /></a>
+    <a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><img src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="Buenas prácticas para el Diseño de una API RESTful Pragmática" alt="Buenas prácticas para el Diseño de una API RESTful Pragmática" /></a>
   </figure>
 
   Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
 
   Tu modelo de datos ha empezado a estabilizarse y es el momento de crear una API pública para tu aplicación web. Te das cuenta de que es difícil hacer cambios significativos a tu API una vez que fue liberada, quieres lo mejor y lo antes posible. Ahora, en internet no escasean opiniones sobre diseño de APIs. Pero, debido a que no hay un standard adoptado popularmente que funcione en todos los casos, te quedas con un manojo de opciones: ¿Qué formatos deberías aceptar? ¿Cómo deberías autenticar? ¿Debería tu API ser versionada?
+main-class: 'dev'
 ---
 > Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.
 
@@ -415,7 +415,7 @@ GET /tickets?fields=id,subject,customer_name,updated_at&state=open&sort=-updated
     </p>
 
     <figure>
-      <a href="/images/2014/01/201305-xml-vs-json-api.png"><img src="/images/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+      <a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><img src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
     </figure>
 
     <p>

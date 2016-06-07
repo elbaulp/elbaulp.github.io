@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: 'dev'
 ---
 Hace tiempo que quería hablar sobre el formato de video MKV (Matroska). Así que aqui va un poco de información sacada de Wikipedia.
 

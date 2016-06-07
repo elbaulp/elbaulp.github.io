@@ -6,14 +6,14 @@ modified:
 permalink: /whatsapp-mensajes-cifrados-extremo-a-extremo/
 categories:
   - Security Now!
-excerpt: "Seguro que muchos últimamente os preguntáis qué significa ese mensaje que aparece en vuestras conversaciones de WhatsApp: “Las llamadas y mensajes enviados a este chat ahora están seguros con cifrado extremo a extremo”. Para los curiosos, en el podcast Security Now!, episodio 555 Steve explicó el protocolo que han implementado para mantener las conversaciones y llamadas de __WhatsApp__ seguras. He pensado que puede ser de interés para los lectores del blog, así que lo he traducido. Comencemos"
+description: "Seguro que muchos últimamente os preguntáis qué significa ese mensaje que aparece en vuestras conversaciones de WhatsApp: “Las llamadas y mensajes enviados a este chat ahora están seguros con cifrado extremo a extremo”. Para los curiosos, en el podcast Security Now!, episodio 555 Steve explicó el protocolo que han implementado para mantener las conversaciones y llamadas de __WhatsApp__ seguras. He pensado que puede ser de interés para los lectores del blog, así que lo he traducido. Comencemos"
 tags: [seguridad en whatsapp, cifrado punto a punto whatsapp, cifrado extremo a extremo WhatsApp, Security Now!]
-image:
-  thumb: WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png
+image: WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png"><img src="/images/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png"><img src="/assets/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: <a href="https://whispersystems.org/blog/whatsapp­complete/ " target="_blank" title="whispersystems.org blog">whispersystems.org</a></span>
 </figure>
 
@@ -100,7 +100,7 @@ Para verificar que ambos tenéis el mísmo número basta con hacer click en la f
 Aún haciendo el paso anterior, nada nos protege si en algún momento las claves se ven comprometidas, para recibir notificaciones de seguridad hay que ir a los ajustes de nuestra cuenta de __WhatsApp__ y en la sección de seguridad activar la opción “Mostrar las notificaciones de seguridad”:
 
 <figure>
-  <a href="/images/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg"><img src="/images/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg"><img src="/assets/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ## Conclusión

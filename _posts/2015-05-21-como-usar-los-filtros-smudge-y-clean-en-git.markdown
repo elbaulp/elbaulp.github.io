@@ -4,15 +4,16 @@ title: "Como Usar Los Filtros Smudge Y Clean en Git"
 date: 2015-05-21T16:50:42+02:00
 modified: 2015-05-22T14:40:42+02:00
 categories:
-excerpt: Cómo crear filtros en git, smudge y clean
+description: Cómo crear filtros en git, smudge y clean
 tags: [git, smudge, git smudge, git clean, git hooks]
 image:
-  feature:
-  thumb: 2013/03/git-logo.png
+
+image: 2013/03/git-logo.png
+main-class: 'dev'
 ---
 
 <figure>
-  <img src="/images/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910" height="380"/>
+  <img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910" height="380"/>
 </figure>
 
 En el anterior artículo, hablamos sobre [cómo sincronizar dos repositorios en git](/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/), también se vio algo de _hooks_.

@@ -25,6 +25,7 @@ share_count:
   - 0
 categories:
   - Sin categoría
+main-class: 'dev'
 ---
 Ahora que blogger permite que creemos nuestra propia página para un error 404, he estado buscando y me decanté por este, que creo que es el más apropiado, sin embargo os dejo algunos que me gustaron. ¿Cual os gusta más?. Más de uno se llevaría un susto al ver algún de los 404 de esta lista:
 
@@ -108,11 +109,11 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://codesense.com.au/404"><img src="http://hongki.at/images/error_404_01/http-www.codesense.com.au404.jpg" width="500" height="351" title="49 Nice And Creative Error 404 Pages" alt="http www.codesense.com.au404 49 Nice And Creative Error 404 Pages" /></a>
+    <a href="http://codesense.com.au/404"><img src="http://hongki.at/assets/img/error_404_01/http-www.codesense.com.au404.jpg" width="500" height="351" title="49 Nice And Creative Error 404 Pages" alt="http www.codesense.com.au404 49 Nice And Creative Error 404 Pages" /></a>
   </p>
   
   <p>
-    <a href="http://www.project-euh.com/404/"><img src="http://hongki.at/images/error_404_01/www.project-euh.com404.jpg" width="500" height="351" title="49 Nice And Creative Error 404 Pages" alt="www.project euh.com404 49 Nice And Creative Error 404 Pages" /></a>
+    <a href="http://www.project-euh.com/404/"><img src="http://hongki.at/assets/img/error_404_01/www.project-euh.com404.jpg" width="500" height="351" title="49 Nice And Creative Error 404 Pages" alt="www.project euh.com404 49 Nice And Creative Error 404 Pages" /></a>
   </p>
 </div>
 

@@ -13,14 +13,14 @@ tags:
   - preferencias android
   - summary android
 modified: 2015-12-28T9:50
-image:
-  thumb: 2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png
-excerpt: |
+image: 2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png
+description: |
   <figure>
-    <a href="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="Cambiar el color del summary en una Preferencia Android" alt="Cambiar el color del summary en una Preferencia Android" /></a>
+    <a href="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="Cambiar el color del summary en una Preferencia Android" alt="Cambiar el color del summary en una Preferencia Android" /></a>
   </figure>
   
   En un artículo anterior vimos cómo crear un diálogo personalizado en las preferencias para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el summary que aparece debajo del título de una preferencia.
+main-class: 'dev'
 ---
 En un artículo anterior vimos [cómo crear un diálogo personalizado en las preferencias][1] para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el *summary* que aparece debajo del título de una preferencia.
 
@@ -122,7 +122,7 @@ if (newValue.toString().length() <= 8) {
 Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Preference`. Cuando se introduzca una contraseña inferior a 8 caracteres, se mostrará el mensaje como aparece en la imagen:
 
 <figure>
-  <a href="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/images/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 

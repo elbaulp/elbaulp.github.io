@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - internet
   - noticias
+main-class: 'dev'
 ---
 <a target="_blank" href="http://www.stumbleupon.com/">StumbleUpon</a> es un servício que usan más de 13 millones de personas que nos permite compartir con el resto de usuarios nuestras páginas favoritas y que los demás hagan valoraciones sobre ellas.
 
@@ -34,7 +35,7 @@ Podemos votar una página tanto positivamente como negativamente, de esta maner�
 
 Por supuesto la barra trae incorporada botones para compartir en Facebook, Twitter y por e-mail.
 
-En cada post del blog hay un boton con el sinbolo de stumbleUpon <img border="0" height="16" width="16" src="http://cdn.stumble-upon.com/images/stumble.png" /> para compartir las entradas.
+En cada post del blog hay un boton con el sinbolo de stumbleUpon <img border="0" height="16" width="16" src="http://cdn.stumble-upon.com/assets/img/stumble.png" /> para compartir las entradas.
 
 Dejo mi <a target="_blank" href="http://www.stumbleupon.com/stumbler/algui91/">perfil en StumbleUpon</a> para quien quiera seguirme, y un pequeño <a target="_blank" href="http://www.stumbleupon.com/productdemo/">video tutorial de iniciación</a>
 

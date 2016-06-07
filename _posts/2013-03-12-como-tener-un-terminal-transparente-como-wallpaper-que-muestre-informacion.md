@@ -23,6 +23,7 @@ tags:
   - tilda
   - wallpaper
   - xrootconsole
+main-class: 'dev'
 ---
 Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:  
   
@@ -46,7 +47,7 @@ $ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
 
 Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo. *&#8211;bottomup* inserta líneas al final. *&#8211;geometry* establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN\_IZQUIERDO+MARGEN\_SUPERIOR*. Puedes obtener más información consultando la ayuda del programa o su manual.
 
-[<img src="/images/2013/03/xroot-example-1024x817.jpg" alt="xroot example" width="770" height="614" class="aligncenter size-large wp-image-1469" />][2]{.thumbnail}
+[<img src="/assets/img/2013/03/xroot-example-1024x817.jpg" alt="xroot example" width="770" height="614" class="aligncenter size-large wp-image-1469" />][2]{.thumbnail}
 
 En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
 
@@ -109,7 +110,7 @@ Una breve explicación de los argumentos:
 
 Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmente, es posible tener tantas terminales como se quiera.
 
-<img src="/images/2013/03/5809765.png" alt="Eterm" width="640" height="375" class="thumbnail aligncenter size-full wp-image-1468" />
+<img src="/assets/img/2013/03/5809765.png" alt="Eterm" width="640" height="375" class="thumbnail aligncenter size-full wp-image-1468" />
 
 #### Referencias
 
@@ -119,7 +120,7 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
 
 
  [1]: /htop/ "htop"
- [2]: /images/2013/03/xroot-example.jpg
+ [2]: /assets/img/2013/03/xroot-example.jpg
  [3]: /comandos-ss-iproute2-linux/ "Algunos comandos útiles con iproute2"
  [4]: /script/
  [5]: /xmonad/

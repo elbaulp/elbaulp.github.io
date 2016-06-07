@@ -25,6 +25,7 @@ share_count:
   - 0
 categories:
   - vídeo de la semana
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>

@@ -17,10 +17,11 @@ tags:
   - init 3 debian
   - linux runlevel
   - modificar runlevel debian
+main-class: 'dev'
 ---
 
 <figure>
-<img class="alignleft size-full wp-image-836" alt="sh" src="/images/2012/07/sh1.png" width="128" height="128" />
+<img class="alignleft size-full wp-image-836" alt="sh" src="/assets/img/2012/07/sh1.png" width="128" height="128" />
 </figure>
 
 Visto de forma simple, los runlevel  determinan qué programas se ejecutan al inicio del sistema.

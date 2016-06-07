@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - aplicaciones
   - curiosidades
+main-class: 'dev'
 ---
 Os dejo un vídeo que encontré en youtube que me resultó gracioso:
 

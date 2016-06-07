@@ -11,19 +11,19 @@ tags:
   - parametros indefinidos
   - parámetros variables en C/c++
   - pasar paramestros
-image:
-  thumb: 2013/11/cpp.png
+image: 2013/11/cpp.png
 modified: 2015-12-24T17:44
-excerpt: |
+description: |
   <figure>
-    <a href="/images/2013/11/cpp.png"><img src="/images/2013/11/cpp.png" title="Pasar parámetros variables en C/C++" alt="Pasar parámetros variables en C/C++" /></a>
+    <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="Pasar parámetros variables en C/C++" alt="Pasar parámetros variables en C/C++" /></a>
   </figure>
 
   En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++.
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/2013/11/cpp.png"><img src="/images/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++.

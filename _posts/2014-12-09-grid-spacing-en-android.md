@@ -17,15 +17,15 @@ tags:
   - gridlayout
   - spacer android
   - spacer linearlayout
-image:
-  thumb: 2014/12/Grid-Spacing-en-Android-take_2_1.png
-excerpt: |
+image: 2014/12/Grid-Spacing-en-Android-take_2_1.png
+description: |
   <figure>
-    <a href="/images/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img src="/images/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+    <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   </figure>
 
   La mayoría de interfaces de usuario (en móviles o web) se basan en el concepto de [rejillas][3] (**Grids** a partir de ahora). Los **Grids** consisten básicamente en separar la interfaz de usuario en una serie de cuadrados alineados que pueden ser fusionados para crear bloques. Usando el principio Grid en el desarrollo de la UI (Interfaz de usuario) ayuda a alinear elementos, trae consistencia, genera un código limpio, asegura que el usuario pueda analizar fácilmente el contenido de la interfaz etc. En resumen, los **Grids** son una herramienta de diseño extremadamante potentes.
 modified: 2015-12-22T17:55
+main-class: 'dev'
 ---
 *Éste artículo es una traducción del blog de [Cyril Mottier][1], al cual le agradezco que me diera permiso para escribirlo. Quizás te interese leer ([Pon a dieta tus APKs][2]), otra traducción de su blog.*
 
@@ -95,13 +95,13 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
 ```
 
 <figure>
-  <a href="/images/2014/12/Grid-Spacing-en-Android-take_1.png"><img width="1080" height="624" src="/images/2014/12/Grid-Spacing-en-Android-take_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_1.png"><img width="1080" height="624" src="/assets/img/2014/12/Grid-Spacing-en-Android-take_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 La interfaz mostrada en la imagen de arriba depende claramente en la idea de un Grid. Sin embargo, carece de espacio entre elementos que permitan al usuario distinguir claramente la entidades independientes de la interfaz. Corrijamos éste problema añadiendo `android:layout_marginTop="@dimen/spacing_medium"` al `LinearLayout` identificado por `@id/buttons_container` y `android:layout_marginRight="@dimen/spacing_medium"` a los botones `@id/btn_first` y `@id/btn_second`:
 
 <figure>
-  <a href="/images/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img width="1080" height="672" src="/images/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img width="1080" height="672" src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: </span>
 </figure>
 
@@ -110,7 +110,7 @@ La interfaz mostrada en la imagen de arriba depende claramente en la idea de un 
 La interfaz de arriba tiene un aspecto bastante bueno: Buena apariencia, es legible, etc. Desafortunadamente, las cosas se ponen un poco mal cuando se ocultan dinámicamente algunas `Views` en el *layout*. De hecho, imaginemos que la función que se activaría con un click en el botón `@id/btn_third` requiere de alguna característica no disponible en el dispositivo (**Google Play Services** por ejemplo). La mejor forma de no desordenar la interfaz es ocultar el tercer botón con `View.GONE`:
 
 <figure>
-  <a href="/images/2014/12/Grid-Spacing-en-Android-take_2_2.png"><img width="1080" height="672" src="/images/2014/12/Grid-Spacing-en-Android-take_2_2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_2.png"><img width="1080" height="672" src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Como es de esperar, el botón `@id/btn_third` desaparece, pero el borde derecho de `@id/btn_second` no está alineado con el borde derecho del icono de la aplicación. La razón principal de éste problema se debe a que la técnica usando el margen funciona bien siempre que se mantenga la asunción hecha al principio: cada `View` con un margen derecho/superior tiene una `View` vecina a su derecha/arriba. Ocultar algunas `Views` en la barra va en contra de esta restricción.
@@ -169,7 +169,7 @@ Ahora se puede usar el `Drawable` creado como un separador entre elementos estab
 ```
 
 <figure>
-  <a href="/images/2014/12/Grid-Spacing-en-Android-take_3.png"><img width="1080" height="672" src="/images/2014/12/Grid-Spacing-en-Android-take_3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_3.png"><img width="1080" height="672" src="/assets/img/2014/12/Grid-Spacing-en-Android-take_3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ## Conclusión

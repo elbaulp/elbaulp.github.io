@@ -12,17 +12,17 @@ tags:
   - eliminar spam wordpress
   - iptables wordpress comentarios
 modified: 2015-12-29T10:00
-excerpt: |
+description: |
   <figure>
-    <a href="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="Combatir los comentarios de spam en WordPress" alt="Combatir los comentarios de spam en WordPress" /></a>
+    <a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="Combatir los comentarios de spam en WordPress" alt="Combatir los comentarios de spam en WordPress" /></a>
   </figure>
 
   Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.
-image:
-  thumb: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
+image: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
+main-class: 'dev'
 ---
 <figure>
-  <a href="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/images/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo [bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban][1]. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.

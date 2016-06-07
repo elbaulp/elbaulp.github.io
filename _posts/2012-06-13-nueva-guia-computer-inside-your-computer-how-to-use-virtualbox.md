@@ -13,10 +13,11 @@ categories:
   - noticias
 tags:
   - virtualbox
-excerpt: "Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware."
+description: "Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware."
+main-class: 'dev'
 ---
 <figure>
-  <img style="border:none;" width="500" height="608" class="aligncenter size-full wp-image-782" src="/images/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />
+  <img style="border:none;" width="500" height="608" class="aligncenter size-full wp-image-782" src="/assets/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />
 </figure>
 
 Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware.

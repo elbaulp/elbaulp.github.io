@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: 'dev'
 ---
 [![The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks - Free 156 Page Preview][1]][2]
 
@@ -33,7 +34,7 @@ Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
 
 
 
- [1]: http://img.tradepub.com/free/w_sitb03/images/w_sitb03c.gif "The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks - Free 156 Page Preview"
+ [1]: http://img.tradepub.com/free/w_sitb03/assets/img/w_sitb03c.gif "The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks - Free 156 Page Preview"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb03
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
  [4]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb03/prgm.cgi

@@ -30,9 +30,10 @@ tags:
   - Content Provider Android
   - curso android pdf
   - fundamentos sqlite android
+main-class: 'dev'
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 </div>
 
 En la anterior entrada de [programación Android][1], hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el [planteamiento de la base de datos.][2] En esta entrada vamos a ver cómo extender de la clase ContentProvider.

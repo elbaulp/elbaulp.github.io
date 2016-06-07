@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - curiosidades
+main-class: 'dev'
 ---
 En <a target="_blank" href="http://www.storm-consultancy.com/">storm-consultancy</a> he visto esta colección de citas clásicas relaciondas con la programación que quiero compartir con vosotros:
 

@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - noticias
   - opensource
+main-class: 'dev'
 ---
 Para poder hacer frente a la ICANN, organización de Estados Unidos que gestiona los DNS raíz de Internet, y para fomentar la neutralidad en la Red ha nacido .42, un dominio, por el momento no oficial, de primer nivel que surge con la premisa de crear un Internet abierto y orientado al software libre.
 
@@ -37,7 +38,7 @@ Los creadores de este proyecto pretenden crear un Internet abierto, orientado ha
 
 
 
- [1]: http://www.muylinux.com/images/2011/01/42-500x455.jpg "dominio .42"
+ [1]: http://www.muylinux.com/assets/img/2011/01/42-500x455.jpg "dominio .42"
  [2]: http://www.muylinux.com/
 
 {% include _toc.html %}

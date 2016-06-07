@@ -19,11 +19,12 @@ blogger_author:
   
 categories:
   - noticias
+main-class: 'dev'
 ---
 Tal y como lo leéis, la noticia acaba de saltar al primer plano del terreno tecnológico y Open Source de todo el mundo hace tan sólo un par de horas: **Linus deja Linux** (*casi ná*).
 
 <p style="text-align:center;">
-  <img class="aligncenter size-medium wp-image-13862" src="http://www.muylinux.com/images/2010/12/Linus_Torvalds-326x500.jpg" alt="Linus_Torvalds" width="326" height="500" />
+  <img class="aligncenter size-medium wp-image-13862" src="http://www.muylinux.com/assets/img/2010/12/Linus_Torvalds-326x500.jpg" alt="Linus_Torvalds" width="326" height="500" />
 </p>
 
   

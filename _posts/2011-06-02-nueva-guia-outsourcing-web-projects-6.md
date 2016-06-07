@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: 'dev'
 ---
 [![Outsourcing Web Projects: 6 Steps to a Smarter Business - Free Preview!][1]][2]
 
@@ -33,7 +34,7 @@ Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
 
 
 
- [1]: http://img.tradepub.com/free/w_sitb06/images/w_sitb06c.gif "Outsourcing Web Projects: 6 Steps to a Smarter Business - Free Preview!"
+ [1]: http://img.tradepub.com/free/w_sitb06/assets/img/w_sitb06c.gif "Outsourcing Web Projects: 6 Steps to a Smarter Business - Free Preview!"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb06/prgm.cgi/
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 

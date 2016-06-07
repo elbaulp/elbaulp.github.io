@@ -24,12 +24,13 @@ categories:
   - opensource
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Hace unas semanas encargué este libro en Amazon, y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).
 
-Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
+Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto <img src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
 
   
 <!--ad-->

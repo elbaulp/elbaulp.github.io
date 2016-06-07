@@ -4,15 +4,14 @@ title: Biometría Aplicada a La Seguridad - Reconocimiento De Patrones
 date: 2016-01-26T11:51:21+01:00
 modified:
 categories:
-excerpt: "En este artículo se dará un repaso por las distintas ténicas existentes de reconocimiento de patrones y cómo pueden usarse sobre datos biométricos."
+description: "En este artículo se dará un repaso por las distintas ténicas existentes de reconocimiento de patrones y cómo pueden usarse sobre datos biométricos."
 tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
-image:
-  thumb: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
+image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 author: cristina
 ---
 
 <figure>
-  <a href="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
 </figure>
 
@@ -108,7 +107,7 @@ perfectamente separables cuando se usan las dos componentes del vector
 clases,resultando imposible separarlas.
 
 <figure>
-  <a href="/images/separability.png"><img src="/images/separability.png" title="Separabilidad de dos clases con vectores
+  <a href="/assets/img/separability.png"><img src="/assets/img/separability.png" title="Separabilidad de dos clases con vectores
   bidimensionales" alt="Separabilidad de dos clases con vectores
   bidimensionales" /></a>
 </figure>

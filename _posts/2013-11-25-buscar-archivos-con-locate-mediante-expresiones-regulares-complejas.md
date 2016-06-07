@@ -13,11 +13,10 @@ tags:
   - expresiones regulares linux
   - locate
 modified: 2015-12-29T10:20
-image:
-  thumb: 2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png
-excerpt: |
+image: 2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png
+description: |
   <figure>
-    <a href="/images/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png"><img src="/images/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" title="Buscar archivos con locate mediante expresiones regulares" alt="Buscar archivos con locate mediante expresiones regulares" /></a>
+    <a href="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png"><img src="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" title="Buscar archivos con locate mediante expresiones regulares" alt="Buscar archivos con locate mediante expresiones regulares" /></a>
   </figure>
 
   En linux, existe un comando llamado locate que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su man es:
@@ -25,6 +24,7 @@ excerpt: |
   Locate lee una o más bases de datos preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.
 
   El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis canciones preferidas. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un script que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.
+main-class: 'dev'
 ---
 En linux, existe un comando llamado **locate** que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su *man* es:
 
@@ -54,7 +54,7 @@ En `$i` está el nombre de la canción, `.*` permite que haya cero o más caract
 Siempre que necesito crear una expresión regular uso una herramienta llamada **regex tester** que permite visualizar qué cadenas de texto coincidirían con el patrón:
 
 <figure>
-  <a href="/images/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png"><img src="/images/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png"><img src="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### Script completo

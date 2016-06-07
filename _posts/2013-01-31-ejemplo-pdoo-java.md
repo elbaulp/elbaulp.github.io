@@ -2,7 +2,7 @@
 id: 497
 title: C++ y Java
 
-layout: page
+layout: minimal
 guid: http://elbauldelprogramador.org/?page_id=497
 if_page_sidebar:
   - 0
@@ -32,6 +32,7 @@ if_page_section_order:
   - breadcrumbs,page_section
   - breadcrumbs,page_section
   - breadcrumbs,page_section
+main-class: 'dev'
 ---
 > Visita la [sección de descargas][1] para ver todo el material disponible.
 

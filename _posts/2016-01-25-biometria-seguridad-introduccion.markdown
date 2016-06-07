@@ -4,15 +4,14 @@ title: Biometría Aplicada a La Seguridad - Introducción
 date: 2016-01-25T12:05:30+01:00
 modified:
 categories:
-excerpt: |
+description: |
   En este artículo se verá una introducción a lo que es la biometría, y cómo se puede aplicar a los sistemas informáticos para proporcionar seguridad. También se hará un repaso a los distintos tipos de biometría.
 tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
-image:
-  thumb: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
+image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 ---
 
 <figure>
-  <a href="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/images/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
 </figure>
 
@@ -151,7 +150,7 @@ del mismo. Estas son:
         al usuario (introducción del número de ID o uso de tarjetas,
         tiempo de posicionamiento, etc).
 
-![EER](/images/Biometricserror.jpg)
+![EER](/assets/img/Biometricserror.jpg)
 
 Métodos de biometría estática
 -----------------------------
@@ -180,13 +179,13 @@ nos encontramos dos técnicas diferentes:
     reside en la complejidad de extraer de forma precisa las minucias
     cuando la calidad de la muestra es deficiente.
 
-![Minucias](/images/huellas3.png)
+![Minucias](/assets/img/huellas3.png)
 
 -   *Basada en correlación*: nos basamos en el patrón global seguido por
     la huella, es decir, un esquema general de la misma, sin atender a
     las minucias.
 
-![Correlación](/images/crestas.png)
+![Correlación](/assets/img/crestas.png)
 
 ### Geometría de la mano
 
@@ -201,9 +200,9 @@ relativa a curvas de los dedos, grosor y longitud, altura y anchura del
 dorso de la mano, etc. No obstante, no se tienen en cuenta rasgos
 superficiales.
 
-![Escaner morfología](/images/bio2.png)
+![Escaner morfología](/assets/img/bio2.png)
 
-![Modelo mano](/images/extraccionmano.png)
+![Modelo mano](/assets/img/extraccionmano.png)
 
 ### Modelo de la retina
 
@@ -218,14 +217,14 @@ de seguridad, la falta de aceptación por parte de los usuarios, unido al
 alto coste de los dispositivos, hacen que su utilización se limite a
 instalaciones militares, nucleares o laboratorios.
 
-![Modelo retina](/images/RetinaViewer.png)
+![Modelo retina](/assets/img/RetinaViewer.png)
 
 ### Modelo del iris
 
 Es un método muy similar al anterior en cuanto a FAR y FRR, aunque aquí
 utiliza un escáner externo del iris del ojo, en lugar de la retina.
 
-![Escáner Iris](/images/Iris_Scanner.jpg)
+![Escáner Iris](/assets/img/Iris_Scanner.jpg)
 
 ### Reconocimiento facial
 
@@ -242,7 +241,7 @@ Aun así, es una técnica satisfactoria para todas las personas y puede
 utilizarse para tareas de vigilancia sin necesidad de adquirir equipo
 específico.
 
-![Análisis facial](/images/keylemon-2.png)
+![Análisis facial](/assets/img/keylemon-2.png)
 
 Métodos de biometría dinámica
 -----------------------------

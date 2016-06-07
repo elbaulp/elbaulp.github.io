@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: 'dev'
 ---
 He cambiado la anterior barra de herramientas que había en el blog (La de Apture), por esta de wibiya. Creo que con esta barra se facilita la navegación por la web.
 

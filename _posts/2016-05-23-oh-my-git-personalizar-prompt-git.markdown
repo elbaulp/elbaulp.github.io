@@ -4,15 +4,15 @@ title: Cómo mostrar información de un repositorio Git en el prompt de tu termi
 date: 2016-05-23T14:40:25+02:00
 modified: 2016-05-24T10:00:00+00:00
 categories:
-excerpt: |
+description: |
   Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de Prompts para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un repositorio git. Ésto es lo realmente interesante, ya que el prompt nos mostrará información del estado del repositorio, lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “Rainbow bash”
 tags: [modificar el Prompt de bash, prompts con git, información de git prompts, instalar oh my git, configurar oh my git, configurar rainbow bash, instalar rainbow bash]
-image:
-  thumb: Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg
+image: Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="/images/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg"><img src="/images/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg"><img src="/assets/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: <a href="https://github.com/arialdomartini/oh-my-git" target="_blank" title="Repo Oh my Git">Repo Oh my Git</a></span>
 </figure>
 
@@ -78,7 +78,7 @@ source ~/.oh-my-git/prompt.sh
 A partir de ahora, al meternos en una carpeta con un repositorio git dentro, deberíamos ver lo siguiente:
 
 <figure>
-  <a href="/images/ohmygitprompt.png"><img src="/images/ohmygitprompt.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/ohmygitprompt.png"><img src="/assets/img/ohmygitprompt.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ### Volver a nuestro prompt por defecto

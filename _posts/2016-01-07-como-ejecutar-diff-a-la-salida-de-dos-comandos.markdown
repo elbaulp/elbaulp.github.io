@@ -3,11 +3,10 @@ layout: post
 title: Cómo Ejecutar Diff a La Salida De Dos Comandos
 date: 2016-01-07T12:54:12+01:00
 tags: [comando diff, ejemplos diff, diff sin ficheros, diff con parametros, diff salida dos comandos, diff tuberías, diff pipes]
-image:
-  thumb: Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png
-excerpt: |
+image: Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png
+description: |
   <figure>
-    <a href="/images/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos2.png"><img src="/images/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos2.png" title="Cómo Ejecutar Diff a La Salida De Dos Comandos" alt="Cómo Ejecutar Diff a La Salida De Dos Comandos" /></a>
+    <a href="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos2.png"><img src="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos2.png" title="Cómo Ejecutar Diff a La Salida De Dos Comandos" alt="Cómo Ejecutar Diff a La Salida De Dos Comandos" /></a>
   </figure>
 
   Recientemente necesité ejecutar el comando `diff` sobre la salida de otros dos comandos. Es decir, `diff` recibe como parámetros los ficheros sobre los que se quiere mostrar las diferencias, pero yo buscaba hacer un `diff` a la salida de dos comandos, no dos ficheros. Un ejemplo:
@@ -15,9 +14,10 @@ excerpt: |
   <pre>
   $ diff $(readelf --all ./helloc) $(readelf --all ./hellocpp)
   </pre>
+main-class: 'dev'
 ---
 <figure>
-  <a href="/images/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png"><img src="/images/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png"><img src="/assets/img/Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 # Problema

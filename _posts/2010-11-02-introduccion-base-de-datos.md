@@ -23,6 +23,7 @@ tags:
   - abstraccion de datos pl/sql
   - apuntes bases de datos
   - guia de sql basico
+main-class: 'dev'
 ---
 <div class="icosql">
 </div>

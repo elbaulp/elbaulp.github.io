@@ -13,8 +13,9 @@ tags:
   - noticias java
   - novedades java
 author: luzila
+main-class: 'dev'
 ---
-<img src="/images/2012/12/java1-300x227.jpg" alt="java" width="300" height="227" class="thumbnail alignleft size-medium wp-image-1043" />
+<img src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300" height="227" class="thumbnail alignleft size-medium wp-image-1043" />
 
 Habiendo terminado el 2012, es tiempo de mirar hacia los próximos 12 meses en el mundo del desarrollo. Luego de leer <a href="http://jaxenter.com/what-will-2013-bring-developers-place-their-bets-45933.html" target="_blank">este interesante artículo</a> sobre las predicciones de algunos respetados desarrolladores, presentamos cinco sencillas razones por las cuales debes entusiasmarte con lo que traerá el 2013&#8230;
 

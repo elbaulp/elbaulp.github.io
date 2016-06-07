@@ -28,6 +28,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
 [<img src="" id="logo" name="droid" class="icono" height="128px" width="128px" />][1]
 
@@ -54,7 +55,7 @@ A continuación dejo un índice del esquema que voy a seguir en esta segunda par
 
 
 
- [1]: /images/2013/07/iconoAndroid.png
+ [1]: /assets/img/2013/07/iconoAndroid.png
  [2]: /disponible-la-primera-parte-del-curso/
 
 {% include _toc.html %}

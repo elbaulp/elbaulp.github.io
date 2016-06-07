@@ -25,8 +25,9 @@ tags:
   - salida comando netstat
   - significado close_wait
   - usos netstat
+main-class: 'dev'
 ---
-<img src="/images/2012/07/sh1.png" alt="netstat" width="128" height="128" class="thumbnail alignleft size-full wp-image-836" style="float:left" />  
+<img src="/assets/img/2012/07/sh1.png" alt="netstat" width="128" height="128" class="thumbnail alignleft size-full wp-image-836" style="float:left" />  
 netstat es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.  
 
 <!--ad-->

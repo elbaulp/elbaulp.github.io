@@ -13,9 +13,10 @@ tags:
   - curso android pdf
   - menu oculto android
   - menu oculto tablet android
+main-class: 'dev'
 ---
 <figure>
-  <img border="0" src="/images/2013/07/iconoAndroid.png" />
+  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" />
 </figure>
 
 Si te gusta jugar con tu <a href="https://elbauldelprogramador.com/curso-programacion-android/" title="Curso Android" target="_blank">Android</a>, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android.

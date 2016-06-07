@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
+main-class: 'dev'
 ---
 [![Oracle Magazine][1]][2]
 
@@ -36,7 +37,7 @@ For more information about Oracle, please visit their Web site at http://www.ora
 
 
 
- [1]: http://img.tradepub.com/free/orm/images/ormc.gif "Oracle Magazine"
+ [1]: http://img.tradepub.com/free/orm/assets/img/ormc.gif "Oracle Magazine"
  [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=orm/prgm.cgi
  [3]: http://lh5.googleusercontent.com/-3xNROQvUyLw/Tez0xVWLW1I/AAAAAAAAAkc/3Gx7eUaLwxU/s288/descargar.png
  [4]: http://bashyc.blogspot.com/p/guias-gratuitas.html

@@ -3,18 +3,19 @@ layout: post
 title: "Primeros Pasos Programando Con Kinect"
 modified:
 categories:
-excerpt: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
+description: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
 tags: [programar kinect, programación kinect, tutorial kinect, aplicaciones kinect]
 image:
-  feature:
-  thumb: Primeros-Pasos-Programando-Con-Kinect.png
-  credit:
-  creditlink:
+
+image: Primeros-Pasos-Programando-Con-Kinect.png
+
+  
 date: 2015-11-05T19:30:26+01:00
 math: true
+main-class: 'dev'
 ---
 <figure>
-  <img src="/images/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
+  <img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
 {% include _toc.html %}

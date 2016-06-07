@@ -23,8 +23,9 @@ categories:
   - opensource
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
-<img border="0" src="/images/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />  
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />  
 Como ya comenté en una entrada hace varios días, necesito hacer una [aplicación para android que se comunique con el PC por red][1], y he seguido mejorandola ya que aún está muy limitada, le he hecho algunos cambios, estos cambios son:  
 <!--ad-->
 
@@ -40,7 +41,7 @@ Las mejoras que ahora quiero realizar son:
 
 Que el server soporte varias conexiones de varios clientes, para ello tendré que usar un thread (hilo), que sea el que encargue de la conexión con cada cliente.
 
-Al checkar o des-checkear el checkBox (valga la redundancia <img src="https://elbauldelprogramador.com/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ), se debe conectar o desconectar realmente del server.
+Al checkar o des-checkear el checkBox (valga la redundancia <img src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ), se debe conectar o desconectar realmente del server.
 
 Mejorar el diseño, evidentemente la aplicación no va a ser así de simple, pero mientras programo la parte de la conexión esa me vale.
 

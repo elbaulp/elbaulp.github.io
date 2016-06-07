@@ -13,8 +13,9 @@ tags:
   - markdown jetpack
   - markdown worpress
   - tutorial markdown
-excerpt: "En su última actualización, el plugin JetPack introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato."
+description: "En su última actualización, el plugin JetPack introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato."
 modified: 2015-12-24T17:50
+main-class: 'dev'
 ---
 En su última actualización, el plugin [JetPack][1] introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.
 
@@ -41,7 +42,7 @@ En su última actualización, el plugin [JetPack][1] introdujo la notación Mark
 
 #### Imágenes en línea: ![Alt][3]:
 
-    ![Alt](/images/2013/12/favicon.ico "Título")
+    ![Alt](/assets/img/2013/12/favicon.ico "Título")
 
 
 #### Imágenes referenciadas: ![Alt][3]
@@ -51,7 +52,7 @@ En su última actualización, el plugin [JetPack][1] introdujo la notación Mark
 
 #### Imágenes enlazadas: [![Texto Alternativo][4]][5]
 
-    [![Texto Alternativo](/images/2013/12/favicon.ico)](/ "Imágenes enlazadas")
+    [![Texto Alternativo](/assets/img/2013/12/favicon.ico)](/ "Imágenes enlazadas")
 
 
 #### Notas al pie<sup id="fnref-2416-1"><a href="#fn-2416-1" rel="footnote">1</a></sup>:
@@ -160,6 +161,6 @@ El *markdown* convierte texto a HTML.
 
 [1]: http://jetpack.me/support/markdown/ "Artículo de Jetpack sobre el Markdown"
 [2]: / "Texto alternativo"
-[3]: /images/2013/12/favicon.ico "Título"
-[4]: /images/2013/12/favicon.ico
+[3]: /assets/img/2013/12/favicon.ico "Título"
+[4]: /assets/img/2013/12/favicon.ico
 [5]: / "Imágenes enlazadas"

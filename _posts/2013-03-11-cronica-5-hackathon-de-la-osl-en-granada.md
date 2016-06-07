@@ -12,6 +12,7 @@ tags:
   - hackathon granada
   - oficina software libre
   - osl
+main-class: 'dev'
 ---
 El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficina de Software Libre de la facultad de Informática en Granada. Este año he participado en el 5°, y por supuesto la experiencia ha sido buena, al igual que en los anteriores. Los proyectos participantes este año eran los siquientes:  
   
@@ -73,7 +74,7 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 > Yo participé en este último, code-reimagined. La idea de este proyecto es facilitar el proceso de aprendizaje en el mundo de la programación, principalmente a los más jóvenes, creando una pantalla del Mario Brox a partir del código de un proyecto Java. Está en fase de desarrollo aunque de momento tiene mucha funcionalidad implementada. Expresiones y declaraciones se representan con cajitas. Los for con los tubos, los if se remifican en dos caminos etc, puedes descargar el código de github Un ejemplo:
 > 
 > <div id="attachment_1467" style="width: 780px" class="wp-caption aligncenter">
->   <a class="thumbnail" href="/images/2013/03/Screenshot-from-2013-03-11-175049.png"><img src="/images/2013/03/Screenshot-from-2013-03-11-175049-1024x817.png" alt="Maryo Brox" width="770" height="614" class="size-large wp-image-1467" /></a>
+>   <a class="thumbnail" href="/assets/img/2013/03/Screenshot-from-2013-03-11-175049.png"><img src="/assets/img/2013/03/Screenshot-from-2013-03-11-175049-1024x817.png" alt="Maryo Brox" width="770" height="614" class="size-large wp-image-1467" /></a>
 >   
 >   <p class="wp-caption-text">
 >     Maryo Brox

@@ -4,14 +4,14 @@ title: "Nueva Guía: Preserving Your Privacy in Windows 10"
 date: 2015-12-13T12:38:27+01:00
 modified:
 categories:
-excerpt: "Learn how to stop Windows 10 from exporting your personal data. Windows 10 is the fastest, most efficient and powerful Operating System Microsoft has ever created. Fast and responsive, this software is being continually being refined via your user feedback and telemetry."
+description: "Learn how to stop Windows 10 from exporting your personal data. Windows 10 is the fastest, most efficient and powerful Operating System Microsoft has ever created. Fast and responsive, this software is being continually being refined via your user feedback and telemetry."
 tags: []
-image:
-  thumb: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
+image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
+main-class: 'dev'
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02"><img src="/images/Preserving-Your-Privacy-in-Windows-102.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02"><img src="/assets/img/Preserving-Your-Privacy-in-Windows-102.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Learn how to stop Windows 10 from exporting your personal data.
@@ -30,7 +30,7 @@ You’ll also learn how to tweak them to give you as much privacy as possible.
 
 A quick, easy read that walks you through the different privacy settings in Windows 10, showing you how to turn them off.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02" target="_blank">Descárgala ahora</a>
 </div>
 

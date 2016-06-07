@@ -8,8 +8,9 @@ permalink: /nueva-guia-4-key-recommendations-cloud-integration/
 categories:
   - cursos
   - noticias
+main-class: 'dev'
 ---
-[<img src="/images/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration" width="125" height="160" class="alignleft size-full wp-image-1915" />][1]
+[<img src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration" width="125" height="160" class="alignleft size-full wp-image-1915" />][1]
 
 Cloud computing is changing how businesses manage their IT assets and automate their business processes. In this new environment, IT resources are no longer housed solely on-premise and boundaries of business-to-business applications have become blurred.
 
@@ -19,7 +20,7 @@ This white paper presents the key characteristics of cloud computing, the integr
 
 #### Descargar la guía
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_talb42" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

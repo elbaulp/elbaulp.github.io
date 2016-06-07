@@ -19,6 +19,7 @@ blogger_author:
   
 categories:
   - noticias
+main-class: 'dev'
 ---
 **En <a target="_blank" href="http://muycomputer.com/">muyComputer</a> he leido que firefox 4 beta 9 ya está disponible. Abajo podéis leer la notícia.  
 El artículo original podeis encontrarlo <a target="_blank" href="http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDBSKlo9aP5BlneQf-JbAUzAq3SjZVjMghSx7xRKARMzEWgh4Z-CGNcm">aquí</a>.**

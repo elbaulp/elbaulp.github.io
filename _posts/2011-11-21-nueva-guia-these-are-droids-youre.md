@@ -28,6 +28,7 @@ categories:
   - cursos
 tags:
   - curso android pdf
+main-class: 'dev'
 ---
 [<img class="alignleft" title="These Are The Droids You're Looking For: An Android Guide" alt="These Are The Droids You're Looking For: An Android Guide" src="https://lh4.googleusercontent.com/-Pn_3Sygxwqw/TsmHUU3hk3I/AAAAAAAAB1I/NzS8wVIBLtw/s291/android-guide-big-240x291.jpg" width="202" height="262" />][1]
 
@@ -47,7 +48,7 @@ This amazing manual will teach you:
   * How and why you should root your phone
   * Securing your Android phone
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

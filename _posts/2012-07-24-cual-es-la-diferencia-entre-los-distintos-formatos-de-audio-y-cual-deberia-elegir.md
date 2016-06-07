@@ -2,8 +2,8 @@
 id: 841
 title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
 
-excerpt: |
-  <a href="https://elbauldelprogramador.com/images/2012/07/original1.jpg"><img src="https://elbauldelprogramador.com/images/2012/07/original1.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-844" /></a>
+description: |
+  <a href="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg"><img src="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-844" /></a>
 
 
   Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:
@@ -40,12 +40,12 @@ tags:
   - calidad lossless
   - calidades de audio
   - formatos alac
-image:
-  thumb: 2012/07/original1.jpg
+image: 2012/07/original1.jpg
+main-class: 'dev'
 ---
 
 <figure>
-  <img src="https://elbauldelprogramador.com/images/2012/07/original1.jpg" />
+  <img src="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg" />
 </figure>
 
 Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido&#8230; echemos una vista rápida a los distintos formatos existentes:
@@ -63,7 +63,7 @@ Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="ht
 #### Formatos con pérdidas: MP3, AAC, OGG y más
 
 <figure>
-<img src="/images/2012/07/original-11-300x195.jpg" />
+<img src="/assets/img/2012/07/original-11-300x195.jpg" />
 </figure>
 
 Para el día a día, es más probable que usemos formatos con pérdidas. Ahorran bastante más espacio, y si tienen una <a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">tasa de bits suficientemente alta (bitrate)</a>, será muy dificil de distinguir la calidad de la fuente original. A continuación se muestran los formatos que más se usan:
