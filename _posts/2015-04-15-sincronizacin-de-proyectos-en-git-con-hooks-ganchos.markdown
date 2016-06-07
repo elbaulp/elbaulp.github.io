@@ -15,7 +15,7 @@ main-class: 'dev'
 ---
 
 <figure>
-  <img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910" height="380"/>
+  <img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" />
 </figure>
 
 ## Repositorio espejo (Mirror repo)
