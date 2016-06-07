@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1578
 permalink: /logrando-el-anonimato-con-tor-parte-4/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - configurar tor
   - instalar tor

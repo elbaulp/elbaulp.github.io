@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2561
 permalink: /como-configurar-un-balanceador-de-carga-en-entornos-cloud/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
 tags:
   - balanceador de carga
   - configurar load balancer nginx

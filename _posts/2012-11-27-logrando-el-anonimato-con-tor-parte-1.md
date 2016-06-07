@@ -7,7 +7,7 @@ guid: /?p=1019
 permalink: /logrando-el-anonimato-con-tor-parte-1/
 categories:
   - aplicaciones
-  - Artículos
+  - Articulos
   - opensource
   - seguridad
 tags:

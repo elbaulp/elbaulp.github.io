@@ -18,7 +18,7 @@ blogger_author:
   
   
 categories:
-  - Sin categoría
+  - Sin Categoria
 main-class: 'dev'
 ---
 <p lang="en">

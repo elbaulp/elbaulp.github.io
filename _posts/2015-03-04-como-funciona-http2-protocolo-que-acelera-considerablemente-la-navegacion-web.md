@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2554
 permalink: /como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/
 categories:
-  - Security Now!
+  - Security Now
 tags:
   - como funciona http2
   - detalles tecnicos http2

@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1811
 permalink: /vinetas-geek-de-domingo-viii/
 categories:
-  - Viñetas Geek
+  - Geek
 tags:
   - chiste grafico de informatica
   - geek

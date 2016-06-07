@@ -3,7 +3,7 @@ title: 'Código Open Source: Para la gente, por la gente'
 layout: post
 permalink: /codigo-open-source-para-la-gente-por-la-gente/
 categories:
-  - Artículos
+  - Articulos
 modified: 2015-12-23T9:35
 description: "Muchas organizaciones eligen Open Source por razones como flexibilidad y agilidad. Todos necesitamos hacer más con menos. Pero en el gobierno, Open Source maneja simultáneamente el compromiso cívico junto con la participación del gobierno, como nunca antes. Gracias a la digitalización, el mundo se siente mucho más pequeño y más conectado. Y Open Source le da a la gente la oportunidad de unirse a la causa, sin importar dónde viven."
 main-class: 'dev'

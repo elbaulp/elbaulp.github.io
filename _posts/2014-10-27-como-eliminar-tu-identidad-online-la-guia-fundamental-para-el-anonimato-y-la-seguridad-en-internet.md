@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2449
 permalink: /como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - anonimato en la red
   - anonimato internet

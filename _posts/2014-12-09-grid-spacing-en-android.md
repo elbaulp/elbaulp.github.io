@@ -7,7 +7,7 @@ guid: https://elbauldelprogramador.com/?p=2473
 permalink: /grid-spacing-en-android/
 categories:
   - android
-  - Artículos
+  - Articulos
 tags:
   - android
   - divider android

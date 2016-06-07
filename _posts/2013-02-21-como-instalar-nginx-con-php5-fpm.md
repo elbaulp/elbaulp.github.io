@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1309
 permalink: /como-instalar-nginx-con-php5-fpm/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - How To
 tags:
   - configurar nginx

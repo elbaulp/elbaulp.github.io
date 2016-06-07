@@ -4,7 +4,7 @@ title: "SQRL -Secure Quick Reliable Login a Fondo"
 modified:
 permalink: /sqrl-secure-quick-reliable-login-a-fondo/
 categories:
-  - Security Now!
+  - Security Now
 description: "Hace unos años, hablé aquí sobre la idea de Steve Gibson, SQRL, sistema con el que pretende eliminar el uso de usuarios y contraseñas en internet. Unos dos años más tarde, con el proyecto bastante maduro, en Security Now! Steve ha vuelto a dar detalles del funcionamiento de SQRL, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio 424 del podcast."
 tags:
   - metodos de autenticación
@@ -13,7 +13,7 @@ tags:
   - SQRL
   - SQRL steve gibson
   - uso de usuario y contraseña
-  - security now!
+  - Security Now
 image:
 
 image: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png

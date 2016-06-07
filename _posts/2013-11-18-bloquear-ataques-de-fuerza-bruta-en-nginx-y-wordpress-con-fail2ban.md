@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1979
 permalink: /bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
 tags:
   - fail2ban fuerza bruta
   - fail2ban nginx

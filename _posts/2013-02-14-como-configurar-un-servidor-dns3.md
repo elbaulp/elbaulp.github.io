@@ -6,8 +6,8 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1348
 permalink: /como-configurar-un-servidor-dns3/
 categories:
-  - Administración de Servidores
-  - Artículos
+  - Administracion de Servidores
+  - Articulos
   - internet
 tags:
   - A records

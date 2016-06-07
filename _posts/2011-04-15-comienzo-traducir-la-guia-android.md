@@ -18,7 +18,7 @@ blogger_author:
   
   
 categories:
-  - Sin categoría
+  - Sin Categoria
 main-class: 'dev'
 ---
 Siguiendo la proposición que hice en el [Twitter del blog][1], he comenzado a traducir la documentación de la [guía para desarrolladores de Android][2], y ya está disponible la primera traducción, [¿Qué es android?][3]

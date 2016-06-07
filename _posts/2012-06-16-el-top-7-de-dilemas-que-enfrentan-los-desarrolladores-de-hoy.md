@@ -5,7 +5,7 @@ layout: post
 permalink: /el-top-7-de-dilemas-que-enfrentan-los-desarrolladores-de-hoy/
 categories:
   - aplicaciones
-  - Artículos
+  - Articulos
 tags:
   - cloud computing
   - desarrollo de aplicaciones

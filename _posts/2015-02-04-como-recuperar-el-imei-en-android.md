@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2540
 permalink: /como-recuperar-el-imei-en-android/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - imei android
   - imei perdido

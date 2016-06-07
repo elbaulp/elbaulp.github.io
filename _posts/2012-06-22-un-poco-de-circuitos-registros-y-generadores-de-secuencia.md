@@ -9,7 +9,7 @@ if_slider_image:
   - 
   - 
 categories:
-  - Informática
+  - Informatica
 tags:
   - biestables
   - circuitos lógicos

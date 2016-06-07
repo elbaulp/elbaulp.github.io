@@ -10,7 +10,7 @@ if_slider_image:
   -
   -
 categories:
-  - Artículos
+  - Articulos
   - seguridad
 tags:
   - aplicaciones web

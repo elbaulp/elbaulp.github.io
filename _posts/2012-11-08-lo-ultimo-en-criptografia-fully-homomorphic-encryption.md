@@ -7,8 +7,8 @@ guid: /?p=1015
 permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
 categories:
   - Algoritmos
-  - Artículos
-  - Security Now!
+  - Articulos
+  - Security Now
   - seguridad
 tags:
   - cifrado determinista

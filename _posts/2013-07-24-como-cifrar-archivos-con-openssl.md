@@ -3,7 +3,7 @@ title: Cómo cifrar archivos con openssl
 layout: post
 permalink: /como-cifrar-archivos-con-openssl/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - seguridad
 tags:
   - cifrar copias de seguridad con openssl

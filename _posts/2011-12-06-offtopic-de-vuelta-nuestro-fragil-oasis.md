@@ -26,7 +26,7 @@ share_count:
 categories:
   - curiosidades
   - offtopic
-  - vídeo de la semana
+  - video de la semana
 main-class: 'dev'
 ---
 **** 

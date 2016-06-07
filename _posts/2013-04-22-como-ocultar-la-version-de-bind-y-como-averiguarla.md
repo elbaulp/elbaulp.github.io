@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1518
 permalink: /como-ocultar-la-version-de-bind-y-como-averiguarla/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - How To
 tags:
   - extract bind version

@@ -7,7 +7,7 @@ guid: https://elbauldelprogramador.com/?p=1349
 permalink: /chat-y-foros-de-proxima-generacion-de-pioneros-del-codigo-abierto/
 categories:
   - aplicaciones
-  - Artículos
+  - Articulos
   - noticias
   - opensource
 tags:

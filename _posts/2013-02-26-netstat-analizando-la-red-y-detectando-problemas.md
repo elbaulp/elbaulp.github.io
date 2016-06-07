@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1354
 permalink: /netstat-analizando-la-red-y-detectando-problemas/
 categories:
-  - Artículos
+  - Articulos
   - linux
 tags:
   - comando netstat

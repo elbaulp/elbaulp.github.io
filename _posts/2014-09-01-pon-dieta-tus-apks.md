@@ -7,7 +7,7 @@ guid: https://elbauldelprogramador.com/?p=2432
 permalink: /pon-dieta-tus-apks/
 categories:
   - android
-  - Artículos
+  - Articulos
 tags:
   - android
   - optimizar APK

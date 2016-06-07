@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1489
 permalink: /como-funciona-el-bitcoin-la-cripto-moneda/
 categories:
-  - Security Now!
+  - Security Now
 tags:
   - bitcoin es
   - como funciona bitcoin

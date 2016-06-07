@@ -6,8 +6,8 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1289
 permalink: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
 categories:
-  - Artículos
-  - Security Now!
+  - Articulos
+  - Security Now
 tags:
   - qué es upnp
   - upnp que es

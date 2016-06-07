@@ -6,7 +6,7 @@ layout: post
 guid: /?p=1026
 permalink: /odias-java-estas-peleando-una-batalla-equivocada/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - cobol
   - java

@@ -18,7 +18,7 @@ blogger_author:
   
   
 categories:
-  - Sin categoría
+  - Sin Categoria
 tags:
   - xda
 main-class: 'dev'

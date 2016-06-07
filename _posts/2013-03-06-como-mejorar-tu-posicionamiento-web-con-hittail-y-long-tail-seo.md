@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1425
 permalink: /como-mejorar-tu-posicionamiento-web-con-hittail-y-long-tail-seo/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - definicion long tail seo
   - que es long tail seo

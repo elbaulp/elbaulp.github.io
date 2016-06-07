@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1856
 permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - problemas autentificación de 2 factores
   - que es autentificación de 2 factores

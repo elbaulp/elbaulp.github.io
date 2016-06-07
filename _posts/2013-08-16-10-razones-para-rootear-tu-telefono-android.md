@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1833
 permalink: /10-razones-para-rootear-tu-telefono-android/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - como rootear android
   - problemas rootear android

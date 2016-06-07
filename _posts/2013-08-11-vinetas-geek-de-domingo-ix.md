@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1825
 permalink: /vinetas-geek-de-domingo-ix/
 categories:
-  - Viñetas Geek
+  - Geek
 tags:
   - chiste grafico de informatica
   - geek

@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2370
 permalink: /instalar-atom-el-editor-de-github-en-linux/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - atom
   - editor atom github

@@ -11,7 +11,7 @@ fsb_social_facebook:
   - 20
 categories:
   - android
-  - Artículos
+  - Articulos
 tags:
   - botbrew basil
   - como instalar aplicaciones de linux a android

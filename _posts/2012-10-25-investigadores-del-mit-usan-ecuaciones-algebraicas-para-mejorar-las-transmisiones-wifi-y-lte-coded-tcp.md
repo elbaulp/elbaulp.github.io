@@ -6,7 +6,7 @@ layout: post
 guid: /?p=1000
 permalink: /investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/
 categories:
-  - Informática
+  - Informatica
   - noticias
   - Tecnología
 tags:

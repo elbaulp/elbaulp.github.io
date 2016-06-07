@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1507
 permalink: /lo-que-se-viene-en-programacion-funcional-de-java/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - Elliott Rusty Harold
   - haskell

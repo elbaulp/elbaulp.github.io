@@ -27,7 +27,7 @@ categories:
   - curiosidades
   - internet
   - offtopic
-  - vídeo de la semana
+  - video de la semana
 main-class: 'dev'
 ---
 Aunque no tiene mucho que ver con la temática del blog, creo que debo compartir estos vídeos que me han gustado tanto para que más gente pueda disfrutar de ellos.

@@ -9,7 +9,7 @@ categories:
   - How To
   - php
 tags:
-  - artículos wordpress
+  - Articulos wordpress
   - contenido por defecto
   - contenido por defecto en post wordpress
 main-class: 'dev'

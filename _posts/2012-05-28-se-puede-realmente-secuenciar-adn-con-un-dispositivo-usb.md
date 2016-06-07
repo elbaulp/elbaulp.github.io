@@ -4,7 +4,7 @@ description: ¿Qué pasaría si pudieras poner algunas células bacterianas en u
 layout: post
 permalink: /se-puede-realmente-secuenciar-adn-con-un-dispositivo-usb/
 categories:
-  - Artículos
+  - Articulos
   - Tecnología
 tags:
   - ADN

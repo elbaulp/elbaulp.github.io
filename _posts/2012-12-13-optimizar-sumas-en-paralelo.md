@@ -7,7 +7,7 @@ guid: /?p=1051
 permalink: /optimizar-sumas-en-paralelo/
 categories:
   - Algoritmos
-  - Artículos
+  - Articulos
   - C
 tags:
   - concurrencia

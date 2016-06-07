@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1549
 permalink: /visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - aplicaciones
   - opensource
 tags:

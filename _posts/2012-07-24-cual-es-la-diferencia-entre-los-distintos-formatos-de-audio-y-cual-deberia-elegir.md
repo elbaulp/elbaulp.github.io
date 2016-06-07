@@ -4,7 +4,7 @@ description: "Hay tantos formatos de sonido que podemos hacernos un lío a la ho
 layout: post
 permalink: /cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - codec
   - cual es el mejor formato de audio

@@ -7,7 +7,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1728
 permalink: /que-es-quic-el-nuevo-protocolo-desarrollado-por-google/
 categories:
-  - Security Now!
+  - Security Now
 tags:
   - protocolo QUIC
   - que es QUIC

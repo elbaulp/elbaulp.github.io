@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1194
 permalink: /introduccion-a-ruby/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - ejemplos
   - ruby

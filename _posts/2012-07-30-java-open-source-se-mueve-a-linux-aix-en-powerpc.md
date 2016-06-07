@@ -9,7 +9,7 @@ if_slider_image:
   - 
   - 
 categories:
-  - Artículos
+  - Articulos
   - opensource
 tags:
   - AIX

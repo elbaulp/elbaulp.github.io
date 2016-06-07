@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2014
 permalink: /solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - linux
 tags:
   - configuración apc

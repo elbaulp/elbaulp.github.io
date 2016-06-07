@@ -7,7 +7,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2260
 permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - linux
 tags:
   - instalar apc

@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2265
 permalink: /por-que-es-linux-mas-rapido-que-windows/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - linux mas rapido que windows
   - windows vs linux

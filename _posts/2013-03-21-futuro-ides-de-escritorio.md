@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1437
 permalink: /futuro-ides-de-escritorio/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - futuro de los ides de escritorio
   - IDES en la nube

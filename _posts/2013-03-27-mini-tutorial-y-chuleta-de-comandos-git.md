@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1491
 permalink: /mini-tutorial-y-chuleta-de-comandos-git/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - git
   - chuleta comandos git

@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2393
 permalink: /eres-chica-y-te-gusta-la-informatica-participa-en-el-campus-ugrgoogle-para-chicas/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - campus ugr google
   - etsiit

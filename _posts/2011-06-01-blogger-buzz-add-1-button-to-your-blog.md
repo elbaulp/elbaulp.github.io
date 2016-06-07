@@ -18,7 +18,7 @@ blogger_author:
   
   
 categories:
-  - Sin categoría
+  - Sin Categoria
 main-class: 'dev'
 ---
 [Blogger Buzz: Add the +1 Button to Your Blog][1]

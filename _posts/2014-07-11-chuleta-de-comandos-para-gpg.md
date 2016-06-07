@@ -3,7 +3,7 @@ title: Chuleta de comandos para GPG
 layout: post
 permalink: /chuleta-de-comandos-para-gpg/
 categories:
-  - Artículos
+  - Articulos
   - How To
 tags:
   - chuleta de comandos gpg

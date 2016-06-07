@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1929
 permalink: /sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/
 categories:
-  - Security Now!
+  - Security Now
 tags:
   - metodos de autenticación
   - metodos de autentificacion

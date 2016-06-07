@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1479
 permalink: /dig-chuleta-basica-de-comandos/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - aplicaciones
   - opensource
 tags:

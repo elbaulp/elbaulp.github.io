@@ -24,7 +24,7 @@ share_count:
   - 2
   - 2
 categories:
-  - Sin categoría
+  - Sin Categoria
 main-class: 'dev'
 ---
 He colocado unos banners en la parte derecha del blog, disponibles para todo aquel que se quiera anunciar y dar a conocer su página web.

@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2497
 permalink: /investigadores-mas-cerca-de-usar-luz-en-lugar-de-cables-en-ordenadores/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - física
   - luz por cables

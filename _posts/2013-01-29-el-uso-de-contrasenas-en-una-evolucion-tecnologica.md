@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1207
 permalink: /el-uso-de-contrasenas-en-una-evolucion-tecnologica/
 categories:
-  - Artículos
+  - Articulos
   - seguridad
 tags:
   - deloitte

@@ -7,7 +7,7 @@ guid: https://elbauldelprogramador.com/?p=1363
 permalink: /vinetas-geek-de-domingo-iv/
 categories:
   - offtopic
-  - Viñetas Geek
+  - Geek
 tags:
   - chiste grafico de informatica
   - humor geek grafico

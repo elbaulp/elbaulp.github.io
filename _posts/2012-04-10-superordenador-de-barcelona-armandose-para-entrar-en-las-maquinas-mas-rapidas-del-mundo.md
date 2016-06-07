@@ -15,7 +15,7 @@ if_seo_keywords:
   - green500, top500, superordenadores, supercomputadores españoles, barcelona
   - green500, top500, superordenadores, supercomputadores españoles, barcelona
 categories:
-  - Artículos
+  - Articulos
   - noticias
   - Tecnología
 tags:

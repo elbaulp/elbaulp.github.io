@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2295
 permalink: /los-origenes-de-los-simbolos-tecnologicos-mas-famosos-y-frecuentes/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - origen simbolo @
   - origen simbolo usb

@@ -7,7 +7,7 @@ guid: /?p=1041
 permalink: /logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
 categories:
   - aplicaciones
-  - Artículos
+  - Articulos
   - opensource
   - seguridad
 tags:

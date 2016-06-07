@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2040
 permalink: /como-hablitar-la-pagina-de-estado-en-nginx/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
 tags:
   - estadisticas nginx
   - estado nginx

@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1854
 permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - cambios github
   - generacion github

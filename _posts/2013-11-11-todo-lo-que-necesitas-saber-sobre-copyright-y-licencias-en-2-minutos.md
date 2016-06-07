@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1967
 permalink: /todo-lo-que-necesitas-saber-sobre-copyright-y-licencias-en-2-minutos/
 categories:
-  - Artículos
+  - Articulos
   - opensource
 tags:
   - gpl

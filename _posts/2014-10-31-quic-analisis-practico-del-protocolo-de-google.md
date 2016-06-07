@@ -7,7 +7,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2463
 permalink: /quic-analisis-practico-del-protocolo-de-google/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - analisis de protocolos
   - especificaciones quic

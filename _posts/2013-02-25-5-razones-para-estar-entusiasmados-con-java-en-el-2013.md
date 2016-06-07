@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1350
 permalink: /5-razones-para-estar-entusiasmados-con-java-en-el-2013/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - java 8
   - java en 2013

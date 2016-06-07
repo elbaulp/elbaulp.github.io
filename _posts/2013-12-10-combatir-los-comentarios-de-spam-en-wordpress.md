@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2036
 permalink: /combatir-los-comentarios-de-spam-en-wordpress/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
 tags:
   - bloquear spam wodpress
   - eliminar spam wordpress

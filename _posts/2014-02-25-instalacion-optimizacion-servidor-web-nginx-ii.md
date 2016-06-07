@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2255
 permalink: /instalacion-optimizacion-servidor-web-nginx-ii/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
   - linux
 tags:
   - configuración php

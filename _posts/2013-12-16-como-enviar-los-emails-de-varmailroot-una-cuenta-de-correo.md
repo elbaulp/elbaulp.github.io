@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2041
 permalink: /como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
 tags:
   - /var/mail/root a gmail
   - enviar mensajes del sistema a correo

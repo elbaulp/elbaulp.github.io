@@ -6,7 +6,7 @@ layout: post
 guid: /?p=887
 permalink: /top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/
 categories:
-  - Artículos
+  - Articulos
   - linux
 tags:
   - comandos

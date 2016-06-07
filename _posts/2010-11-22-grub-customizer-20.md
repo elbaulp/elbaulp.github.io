@@ -15,7 +15,7 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
 categories:
-  - Sin categoría
+  - Sin Categoria
 main-class: 'dev'
 ---
 <div lang="en">

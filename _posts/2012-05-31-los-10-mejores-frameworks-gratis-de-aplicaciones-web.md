@@ -6,7 +6,7 @@ layout: post
 guid: /?p=759
 permalink: /los-10-mejores-frameworks-gratis-de-aplicaciones-web/
 categories:
-  - Artículos
+  - Articulos
   - internet
 tags:
   - aplicaciones web

@@ -6,8 +6,8 @@ layout: post
 guid: /?p=1056
 permalink: /estructura-y-seguridad-de-los-qr-codes/
 categories:
-  - Artículos
-  - Security Now!
+  - Articulos
+  - Security Now
   - seguridad
 tags:
   - como funciona qr

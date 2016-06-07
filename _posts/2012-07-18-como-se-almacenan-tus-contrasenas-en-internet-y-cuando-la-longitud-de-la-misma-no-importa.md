@@ -4,7 +4,7 @@ description: "Cuando algún sitio web que usamos frecuentemente es hackeado, com
 layout: post
 permalink: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/
 categories:
-  - Artículos
+  - Articulos
   - How To
   - internet
   - seguridad

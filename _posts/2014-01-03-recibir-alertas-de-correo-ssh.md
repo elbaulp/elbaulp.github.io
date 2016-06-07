@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2042
 permalink: /recibir-alertas-de-correo-ssh/
 categories:
-  - Administración de Servidores
+  - Administracion de Servidores
 tags:
   - alertar ssh
   - correo ssh

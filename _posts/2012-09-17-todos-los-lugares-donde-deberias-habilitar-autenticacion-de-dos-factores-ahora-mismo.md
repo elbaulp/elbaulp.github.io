@@ -6,7 +6,7 @@ layout: post
 guid: /?p=943
 permalink: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/
 categories:
-  - Artículos
+  - Articulos
   - seguridad
 tags:
   - autentificación de dos factores

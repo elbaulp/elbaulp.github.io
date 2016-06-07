@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=2275
 permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/
 categories:
-  - Artículos
+  - Articulos
 modified: 2015-12-25T13:10
 main-class: 'dev'
 ---

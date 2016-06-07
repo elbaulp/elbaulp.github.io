@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1466
 permalink: /cronica-5-hackathon-de-la-osl-en-granada/
 categories:
-  - Artículos
+  - Articulos
   - opensource
 tags:
   - hackathon granada

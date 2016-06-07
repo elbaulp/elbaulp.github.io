@@ -6,7 +6,7 @@ layout: post
 guid: https://elbauldelprogramador.com/?p=1192
 permalink: /que-significa-unknown-en-las-estadisticas-de-whos-amung/
 categories:
-  - Artículos
+  - Articulos
 tags:
   - estadisticas
   - whos amung

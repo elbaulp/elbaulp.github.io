@@ -7,7 +7,7 @@ layout: post
 guid: /?p=790
 permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/
 categories:
-  - Artículos
+  - Articulos
   - Tecnología
 tags:
   - mejores libros no ficcion
