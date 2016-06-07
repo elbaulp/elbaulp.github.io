@@ -1,10 +1,7 @@
 ---
 author: marta
-id: 2514
 title: 'Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras'
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2514
 permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/
 categories:
   - LaTeX
@@ -20,12 +17,7 @@ tags:
   - simbolos latex
   - latex
 image: 2013/05/latex_logo.png
-description: |
-  <figure>
-    <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  </figure>
-
-  Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas...
+description: "Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas..."
 modified: 2015-12-22T17:36
 main-class: 'dev'
 ---

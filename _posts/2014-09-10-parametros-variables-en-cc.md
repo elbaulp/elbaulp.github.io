@@ -1,9 +1,6 @@
 ---
-id: 2376
 title: Pasar parámetros variables en C/C++
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2376
 permalink: /parametros-variables-en-cc/
 categories:
   - C
@@ -13,12 +10,7 @@ tags:
   - pasar paramestros
 image: 2013/11/cpp.png
 modified: 2015-12-24T17:44
-description: |
-  <figure>
-    <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="Pasar parámetros variables en C/C++" alt="Pasar parámetros variables en C/C++" /></a>
-  </figure>
-
-  En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++.
+description: "En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++."
 main-class: 'dev'
 ---
 

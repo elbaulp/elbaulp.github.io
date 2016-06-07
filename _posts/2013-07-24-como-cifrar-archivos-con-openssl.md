@@ -1,9 +1,6 @@
 ---
-id: 1780
 title: Cómo cifrar archivos con openssl
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=1780
 permalink: /como-cifrar-archivos-con-openssl/
 categories:
   - Administración de Servidores

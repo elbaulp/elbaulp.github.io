@@ -1,9 +1,6 @@
 ---
-id: 2391
 title: Chuleta de comandos para GPG
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2391
 permalink: /chuleta-de-comandos-para-gpg/
 categories:
   - Artículos
@@ -13,12 +10,7 @@ tags:
   - gpg
   - manual gpg
   - tutorial gpg
-description: |
-  <figure>
-    <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="Chuleta de comandos para GPG" alt="Chuleta de comandos para GPG" /></a>
-  </figure>
-
-  Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo.
+description: "Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo."
 image: 2014/04/Chuleta-de-comandos-GPG.png
 modified: 2015-12-24T19:55
 main-class: 'dev'

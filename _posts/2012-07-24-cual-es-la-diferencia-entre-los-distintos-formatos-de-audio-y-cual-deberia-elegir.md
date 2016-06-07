@@ -1,18 +1,7 @@
 ---
-id: 841
 title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
-
-description: |
-  <a href="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg"><img src="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg" alt="" title="original" width="640" height="360" class="aligncenter size-full wp-image-844" /></a>
-
-
-  Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:
-
-  <h4>Formatos sin pérdidas: WAV, AIFF, FLAC, Apple Lossless y otros</h4>
-
-  Para conocer la diferencia entre formatos con y sin pérdida visita <em><a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">Does Bitrate Really Make a Difference In My Music?</a></em>. En resumen, hay dos tipos  de calidad de sonido: sin pérdida y con pérdida. La música si pérdida conserva la calidad de sonido de la fuente original -- en la mayoría de los casos, CD -- intacta, por otra parte, la música con pérdidas comprime el archivo para ahorrar espacio (a cambio de disminuir la calidad). En los formatos sin pérdidas se incluyen los siguientes formatos:
+description: "Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:"
 layout: post
-guid: /?p=841
 permalink: /cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/
 categories:
   - Artículos

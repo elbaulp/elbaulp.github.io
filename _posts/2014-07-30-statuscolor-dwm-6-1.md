@@ -1,9 +1,6 @@
 ---
-id: 2408
 title: Colorear la barra de estado con Simple StatusColor en DWM 6.1
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2408
 permalink: /statuscolor-dwm-6-1/
 categories:
   - C
@@ -13,12 +10,7 @@ tags:
   - statuscolor for dwm 6.1
 modified: 2015-12-24T17:55
 image: 2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png
-description: |
-  <figure>
-    <a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="Colorear la barra de estado con Simple StatusColor en DWM 6.1" alt="Colorear la barra de estado con Simple StatusColor en DWM 6.1" /></a>
-  </figure>
-
-  Días atrás hablamos sobre DWM y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
+description: "Días atrás hablamos sobre DWM y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco."
 main-class: 'dev'
 ---
 Días atrás hablamos [sobre DWM][1] y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
@@ -208,24 +200,24 @@ Por último, solo queda usar los métodos creados, deben ir en el método `drawb
 ```diff
 +void
  drawbar(Monitor *m) {
- 	int x, xx, w;
- 	unsigned int i, occ = 0, urg = 0;
+   int x, xx, w;
+   unsigned int i, occ = 0, urg = 0;
 @@ -716,13 +760,14 @@ drawbar(Monitor *m) {
- 	x += w;
- 	xx = x;
- 	if(m == selmon) { /* status is only drawn on selected monitor */
+   x += w;
+   xx = x;
+   if(m == selmon) { /* status is only drawn on selected monitor */
 +	  parsestatus(stext, color_queue, tokens);
- 		w = TEXTW(stext);
- 		x = m->ww - w;
- 		if(x < xx) {
- 			x = xx;
- 			w = m->ww - xx;
- 		}
+     w = TEXTW(stext);
+     x = m->ww - w;
+     if(x < xx) {
+       x = xx;
+       w = m->ww - xx;
+     }
 -		drw_text(drw, x, 0, w, bh, stext, 0);
 +		drw_colored_st(drw, x, 0, w, bh, tokens, color_queue, stext);
- 	}
- 	else
- 		x = m->ww;
+   }
+   else
+     x = m->ww;
 
 ```
 

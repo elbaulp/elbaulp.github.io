@@ -1,9 +1,6 @@
 ---
-id: 2231
 title: Cómo crear un diálogo personalizado en las preferencias Android
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2231
 permalink: /como-crear-un-dialogo-personalizado-en-las-preferencias-android/
 categories:
   - android
@@ -14,14 +11,7 @@ tags:
   - settings android
   - swadroid
 modified: 2015-12-28T9:51
-description: |
-  <figure>
-    <a href="/assets/img/2014/01/CrearDialogoAndroid.png"><img src="/assets/img/2014/01/CrearDialogoAndroid.png" title="Cómo crear un diálogo personalizado en las preferencias Android" alt="Cómo crear un diálogo personalizado en las preferencias Android" /></a>
-  </figure>
-
-  Este año estoy participando en el concurso universitario de software libre, concretamente en el proyecto SWADroid. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.
-
-  La primera tarea que se me asignó fue lograr que el diálogo para introducir la contraseña de usuario en las preferencias se mostrara vacío. Ya que al cifrar la contraseña para almacenarla en el diálogo se mostraba la contraseña cifrada (Con los típicos •••), lo cual podía ser algo desconcertante para el usuario, ya que no veía un número de • que correspondieran con la longitud de su contraseña, si no con la contraseña cifrada.
+description: Este año estoy participando en el concurso universitario de software libre, concretamente en el proyecto SWADroid. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.
 image: 2014/01/CrearDialogoAndroid.png
 main-class: 'dev'
 ---

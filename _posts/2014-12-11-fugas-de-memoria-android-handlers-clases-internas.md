@@ -1,9 +1,6 @@
 ---
-id: 2478
 title: 'Fugas de memoria en Android: Handlers & Clases Internas'
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2478
 permalink: /fugas-de-memoria-android-handlers-clases-internas/
 categories:
   - android
@@ -13,24 +10,7 @@ tags:
   - fugas de memoria Java
   - fugas de memoria runnable
   - memory leaks
-description: |
-  Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso.
-
-  Seamos directos, consideremos el siguiente código:
-
-  <pre>
-    public class SampleActivity extends Activity {
-
-    private final Handler mLeakyHandler = new Handler() {
-      @Override
-      public void handleMessage(Message msg) {
-        // ...
-      }
-    }
-  }
-  </pre>
-
-  Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (*memory leak*).
+description: "Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso."
 modified: 2015-12-22T17:50
 main-class: 'dev'
 ---

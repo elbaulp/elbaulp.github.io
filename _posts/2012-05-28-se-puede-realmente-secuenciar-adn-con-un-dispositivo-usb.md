@@ -1,20 +1,8 @@
 ---
-id: 749
 title: ¿Se puede realmente secuenciar ADN con un dispositivo USB?
-
 description: ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?
 layout: post
-guid: /?p=749
 permalink: /se-puede-realmente-secuenciar-adn-con-un-dispositivo-usb/
-if_slider_image:
-  - 
-  - 
-sif_eo_description:
-  - ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?
-  - ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?
-if_seo_keywords:
-  - ADN, DNA, secuenciar ADN, usb, pendrive,oxford nanopore
-  - ADN, DNA, secuenciar ADN, usb, pendrive,oxford nanopore
 categories:
   - Artículos
   - Tecnología
@@ -29,10 +17,10 @@ main-class: 'dev'
 ---
 [<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION" width="660" height="440" class="aligncenter size-full wp-image-754" />][1]  
 ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?  
-  
+
 <!--ad-->
 
-  
+
 Oxford Nanopore ha construido un dispositivo USB que hará precisamente eso. Al menos eso es lo que dice la compañía. Conocido como MinION, el dispositivo recibió una considerable cantidad de prensa cuando fue anunciado en Febrero, y está previsto para ser lanzado al mundo en general en la segunda mitad del año. Sin embargo muchos siguen siendo escépticos de que este pequeño dispositivo cumplirá realmente la función para lo que fue diseñado.
 
 &#8220;Si [las declaraciones] son ciertas, deberíamos comprarlo mañana&#8221;, dijo Jonathan Eisen, profesor de microbiología en la Universidad de California en Davis. &#8220;Pero me reservo la opinión. Hemos escuchado muchas presentaciones de empresas, donde estas cosas no son como se esperaban&#8221;.
