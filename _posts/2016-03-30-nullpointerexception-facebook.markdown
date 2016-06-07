@@ -12,7 +12,8 @@ main-class: 'dev'
 ---
 
 <figure>
-  <a href="/assets/img/nullpointerexception-facebook-line-numbers.jpg"><img src="/assets/img/nullpointerexception-facebook-line-numbers.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/nullpointerexception-facebook-line-numbers.jpg">
+  <img src="/assets/img/nullpointerexception-facebook-line-numbers.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
   <span class="image-credit">Crédito de la imagen: ScienceAlert</span>
 </figure>
 

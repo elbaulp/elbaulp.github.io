@@ -18,19 +18,12 @@ tags:
 image: 2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
 modified: 2016-04-06T21:24:34+02:00
 date: 2016-04-06T21:24:34+02:00
-description: |
-  <figure>
-    <img src="/assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="Qué es un NullPointerException y cómo solucionarlo" alt="Qué es un NullPointerException y cómo solucionarlo"/>
-  </figure>
-
-  El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario ziggy, que preguntaba ¿Qué es un NullPointerException y cómo se puede solucionar?. La respuesta es del usuario vincent-ramdhanie
-
-  Cuando se declara una variable referencia (Un objeto), realmente se está creando un puntero a un objeto. Consideremos el siguiente código que declara un entero con el tipo de dato primitivo:
+description: "El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario ziggy, que preguntaba ¿Qué es un NullPointerException y cómo se puede solucionar?. La respuesta es del usuario vincent-ramdhanie"
 main-class: 'dev'
 ---
 
 <figure>
-  <img src="/assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="{{page.title}}" alt="{{ page.title }}"/>
+  <img src="/assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="{{page.title}}" alt="{{ page.title }}" />
 </figure>
 
 Si has llegado aquí porque tienes problemas con **facebook**, tu respuesta está en este artículo: [Qué Esta Causando Un NullPointerException en Facebook E Internet](/nullpointerexception-facebook "Qué Esta Causando Un NullPointerException en Facebook E Internet")
