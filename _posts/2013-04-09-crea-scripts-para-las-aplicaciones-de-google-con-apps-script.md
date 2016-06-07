@@ -11,6 +11,7 @@ tags:
   - Gmail Inbox Statistics Report
   - Informe estadístico mensual de GMail
 main-class: 'dev'
+main-class: "internet"
 ---
 Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.
 

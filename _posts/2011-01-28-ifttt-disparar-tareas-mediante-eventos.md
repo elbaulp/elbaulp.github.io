@@ -22,6 +22,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <a target="_blank" href="http://ifttt.com/">Ifttt</a> es la abreviatura de un nuevo servicio web ( If This Then That ), que podría traducirse como *Si esto, entonces eso*, básicamente lo que esta aplicación hace es generar unos [triggers][1] o disparadores para que se ejecuten al producirse un evento en cualquiera de la red social que queramos.   
   

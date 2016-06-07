@@ -14,6 +14,7 @@ tags:
   - novedades java
 author: luzila
 main-class: 'dev'
+main-class: "Articulos"
 ---
 <img src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300" height="227" class="thumbnail alignleft size-medium wp-image-1043" />
 

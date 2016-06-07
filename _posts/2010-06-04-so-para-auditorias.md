@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - linux
 main-class: 'dev'
+main-class: "linux"
 ---
 Googleando por ahi me enonntré un SO que no se cuando salio ni nada, porque no habia oido hablar de el nunca, al parecer esta basado en Ubuntu, Y es sencillamente para auditorias y unas cuantas cosas mas, ahora lo estoy bajando, en cuanto lo pruebe les digo que me parecio.  
 Se llama backtrack linux, y aqui esta su pagina:  

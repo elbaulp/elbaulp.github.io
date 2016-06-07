@@ -22,6 +22,7 @@ categories:
   - noticias
   - opensource
 main-class: 'dev'
+main-class: "linux"
 ---
 <div class="iconews">
 </div>

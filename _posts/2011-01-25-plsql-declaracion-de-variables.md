@@ -22,6 +22,7 @@ categories:
 tags:
   - declare en pl sql
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

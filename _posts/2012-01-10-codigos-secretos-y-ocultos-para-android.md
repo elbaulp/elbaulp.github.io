@@ -14,6 +14,7 @@ tags:
   - menu oculto android
   - menu oculto tablet android
 main-class: 'dev'
+main-class: "android"
 ---
 <figure>
   <img border="0" src="/assets/img/2013/07/iconoAndroid.png" />

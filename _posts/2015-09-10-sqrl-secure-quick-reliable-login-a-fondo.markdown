@@ -14,14 +14,10 @@ tags:
   - SQRL steve gibson
   - uso de usuario y contraseña
   - Security Now
-image:
-
 image: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png
-
-  
 date: 2015-09-10T11:08:37+02:00
 math: true
-main-class: 'dev'
+main-class: "Security-Now"
 ---
 
 {% include _toc.html %}

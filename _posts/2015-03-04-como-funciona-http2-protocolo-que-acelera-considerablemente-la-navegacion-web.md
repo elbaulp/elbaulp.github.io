@@ -14,7 +14,7 @@ tags:
   - implementación http2
   - novedades http2
   - protocolo http2
-main-class: 'dev'
+main-class: "Security-Now"
 ---
 Hacía mucho tiempo que no traducía episodios del podcast [Security Now!][1]. Hoy os traigo la traducción del episodio [#495][2], donde *Steve* describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado *Google*. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.
 
@@ -31,17 +31,17 @@ Hacía mucho tiempo que no traducía episodios del podcast [Security Now!][1]. H
 
 HTTP2 se compone principalmente de (A lo largo del artículo se profundizará en éstos puntos):
 
-  * **Frames**: Dividen la única conexión existente en varios frames enumerados. Se componen de: 
+  * **Frames**: Dividen la única conexión existente en varios frames enumerados. Se componen de:
       * Una cabecera de 9 bytes:
       * Los primeros 24 bits (Solo se usan 14 bits si no se tiene el permiso del otro pc)
       * 8 bits que determinan el tipo de *frame*.
       * 8 bits conteniendo los *flags* del *frame*.
       * 32 bits para el Identificador del flujo (**Stream ID**). El bit más significativo siempre es 0.
       * *Payload* de longitud variada.
-  * **Streams** (*flujos*): 
+  * **Streams** (*flujos*):
       * El solicitante puede asignarles prioridades.
       * Se les puede asignar inter-dependencias.
-  * **Compresión de cabeceras HTTP**: 
+  * **Compresión de cabeceras HTTP**:
       * Cómo funciona LZ (*Lempel-Ziv*). (PKZIP, GZIP, LZW, LZA, etc).
       * Un único contexto comprimido para la conexión.
   * **Speculative Push** (Push especulativo).
@@ -58,7 +58,7 @@ El navegador solicita el contenido en texto plano de la página web. Luego busca
 
 HTTP es el único protocolo que tenemos para hacer éste tipo de cosas, y no puede usarse más de una vez a la vez, es decir, se solicita algo, el servidor lo proporciona y la conexión se cierra. Éste problema intentó subsanarse con la cabecera `keep-alive`, para así al menos no tener que crear otra conexión TCP (costoso). Así podíamos realizar otra petición HTTP sobre la misma conexión TCP. Aún así, sigue siendo lento, solicitamos un recurso, lo recibimos, solicitamos, recibimos etc.
 
-> El principal problema reside en que abrir una conexión TCP es muy lento. 
+> El principal problema reside en que abrir una conexión TCP es muy lento.
 
 Para solucionar ésto, TCP diseñó un sistema para explorar el ancho de banda disponible. Al principio, comienza a mandar paquetes léntamente (*slow-start*), aumenta la velocidad hasta que se dá cuenta que hay paquetes que se están perdiendo, entonces vuelve a bajar la velocidad e incrementa de nuevo poco a poco.
 
@@ -66,7 +66,7 @@ Con ésta solución, sigue habiendo un problema. Si abrimos varias conexiones, t
 
 Debido a que todo esto es un gran lío, y con el tiempo únicamente va a empeorar, **Google** ha decidido ponerse manos a la obra y solucionarlo. **Y lo han conseguido**.
 
-> Actualmente, todos los navegadores soportan HTTP2. 
+> Actualmente, todos los navegadores soportan HTTP2.
 
 # HTTP2
 
@@ -111,7 +111,7 @@ Recordemos que tenemos una única conexión entre el cliente y el servidor, es p
 
 El cliente emite consultas para obtener recursos, numerando sucesivamente cada petición con un *Stream ID*, sobre la misma conexión. El servidor comienza a buscar los recursos solicitados y enviarlos.
 
-> Por debajo de HTTP2, sigue existiendo HTTP/1.1, simplemente se encapsula en frames. 
+> Por debajo de HTTP2, sigue existiendo HTTP/1.1, simplemente se encapsula en frames.
 
 ## Stream Priority (Prioridad de flujo)
 
@@ -147,7 +147,7 @@ En resumen, enviamos la cabeceras una vez, y a partir de ahí simplemente se env
 
 El cacheo de recursos en el cliente lo previene de tener que preguntar por más recursos, pero es un arma de doble filo, ya que el servidor puede enviar mediante *speculative push* algo que el cliente ya tuviera en su caché. De modo que no hay que hacer un uso excesivo del *speculative push*.
 
-> Todo el mérito de éste protocolo es para Google 
+> Todo el mérito de éste protocolo es para Google
 
 #### Referencias
 

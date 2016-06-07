@@ -29,6 +29,7 @@ categories:
 tags:
   - top 500 supercomputadoras mundo
 main-class: 'dev'
+main-class: "curiosidades"
 ---
 <div style="text-align: center;">
   <img alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg" width="400" height="160" border="0" />

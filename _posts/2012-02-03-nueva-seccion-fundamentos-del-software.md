@@ -29,6 +29,7 @@ categories:
   - opensource
   - SO
 main-class: 'dev'
+main-class: "linux"
 ---
 Acabo de estrenar una nueva sección, ya está disponible en el menú, se llama [Fundamentos del software][1].
 

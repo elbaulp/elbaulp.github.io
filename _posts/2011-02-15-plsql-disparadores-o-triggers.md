@@ -24,6 +24,7 @@ tags:
   - como hacer un trigger
   - trigger de actualizacion
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

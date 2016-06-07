@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - noticias
 main-class: 'dev'
+main-class: "noticias"
 ---
 <input type="hidden" name="IL_RELATED_TAGS" value="1" />  
 Voy a estrenar dos nuevas secciones con el fin de abarcar más temas, y para que el blog siga creciendo.

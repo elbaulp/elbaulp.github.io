@@ -21,6 +21,7 @@ categories:
   - cursos
   - internet
 main-class: 'dev'
+main-class: "cursos"
 ---
 [![Run Your Own Web Server Using Linux & Apache - Free 191 Page Preview][1]][2]
 

@@ -21,6 +21,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "internet"
 ---
 Con este vídeo se resume en 2:22 minutos los avances que ha hecho blogger en 2010, y lo que tienen planeado mejorar para 2011:  
   

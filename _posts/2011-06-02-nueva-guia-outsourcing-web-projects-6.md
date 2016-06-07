@@ -21,6 +21,7 @@ categories:
   - cursos
   - internet
 main-class: 'dev'
+main-class: "cursos"
 ---
 [![Outsourcing Web Projects: 6 Steps to a Smarter Business - Free Preview!][1]][2]
 

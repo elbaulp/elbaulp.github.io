@@ -31,6 +31,7 @@ tags:
   - que es cpu conservative
   - samsung galaxy scl gti9003
 main-class: 'dev'
+main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s1600/gpu.jpg" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s200/gpu.jpg" /></a>

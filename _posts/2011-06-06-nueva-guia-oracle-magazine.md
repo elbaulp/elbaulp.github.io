@@ -21,6 +21,7 @@ categories:
   - cursos
   - internet
 main-class: 'dev'
+main-class: "cursos"
 ---
 [![Oracle Magazine][1]][2]
 

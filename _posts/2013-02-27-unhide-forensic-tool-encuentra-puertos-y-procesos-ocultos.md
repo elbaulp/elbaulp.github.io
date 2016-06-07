@@ -14,6 +14,7 @@ tags:
   - unhide
   - unhide forensic tool
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <figure>
 <img src="/assets/img/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200" height="176" />

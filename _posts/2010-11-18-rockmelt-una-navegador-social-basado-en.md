@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - noticias
 main-class: 'dev'
+main-class: "noticias"
 ---
 Como señalan [nuestros compañeros de MuyComputer][1], la **empresa respaldada por Marc Andreessen** – fundador de Netscape- ha presentado un nuevo navegador web enfocado a uso de redes sociales.
 

@@ -12,6 +12,7 @@ tags:
   - java
   - mainframes
 main-class: 'dev'
+main-class: "Articulos"
 ---
 <img src="/assets/img/2012/12/java1.jpg" alt="" title="java" width="460" height="349" class="thumbnail aligncenter size-full wp-image-1043" />  
 Una de las más interesantes tendencias que se ven ultimamente es la impopularidad de Java en los blogs, foros y otros. Pareciera que la gente está ofendida hasta incluso a nivel personal, cuando se sugiere a Java como el lenguaje superior en la web 2.0.

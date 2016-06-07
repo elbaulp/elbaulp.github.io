@@ -28,6 +28,7 @@ tags:
   - sentencias dml y ddl
   - unique para varias columnas
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

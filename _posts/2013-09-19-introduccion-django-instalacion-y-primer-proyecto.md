@@ -11,6 +11,7 @@ tags:
   - ejemplos django
   - instalar django
 main-class: 'dev'
+main-class: "django"
 ---
 <img src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png" alt="Introducción a Django – Instalación y primer proyecto" width="1921" height="1080" class="thumbnail aligncenter size-full wp-image-1903" />
 

@@ -23,6 +23,7 @@ tags:
   - crear paquetes en oracle
   - usuarios package en pl/sql
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

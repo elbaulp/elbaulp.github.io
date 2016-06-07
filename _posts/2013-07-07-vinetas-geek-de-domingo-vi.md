@@ -17,6 +17,7 @@ tags:
   - viñetas humor
 format: gallery
 main-class: 'dev'
+main-class: "Humor"
 ---
 Disfrutad de lo que queda de fin de semana!
 

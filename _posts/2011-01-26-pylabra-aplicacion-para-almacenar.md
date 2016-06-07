@@ -22,6 +22,7 @@ categories:
   - opensource
   - python
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <div class="icopy">
 </div>

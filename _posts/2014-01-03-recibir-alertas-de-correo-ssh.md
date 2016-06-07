@@ -12,6 +12,7 @@ tags:
   - correo ssh
   - seguridad ssh
 main-class: 'dev'
+main-class: "Administracion de Servidores"
 ---
 Hemos visto en otros artículos varias maneras de mejorar la seguridad en un servidor, medidas tales como:
 

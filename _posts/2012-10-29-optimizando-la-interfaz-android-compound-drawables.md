@@ -16,6 +16,7 @@ tags:
   - optimizacion de listas android
   - optimizar layout
 main-class: 'dev'
+main-class: "android"
 ---
 Hace poco, mientras escribía un [CustomAdapter][1] para una aplicación en la que estoy trabajando, descubrí una nueva característica gracias a la herramienta Lint del sdk, los compound drawables.
 

@@ -14,6 +14,7 @@ tags:
   - programacion funcional java
 author: luzila
 main-class: 'dev'
+main-class: "Articulos"
 ---
 Elliott Rusty Harold <a href="http://cafe.elharo.com/programming/java-programming/why-functional-programming-in-java-is-dangerous/" target="_blank">está anunciando en su blog</a> que la programación funcional en Java es peligrosa. Está equivocado, y ya perdió su turno &#8212; Está viniendo con Java le guste o no.  
 Un resumen de las razones que menciona en su artículo son:  

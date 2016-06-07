@@ -21,6 +21,7 @@ categories:
   - noticias
   - opensource
 main-class: 'dev'
+main-class: "noticias"
 ---
 <div class="icodias">
 </div>

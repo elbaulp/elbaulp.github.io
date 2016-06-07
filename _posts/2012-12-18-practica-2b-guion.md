@@ -14,6 +14,7 @@ tags:
   - peso hamming
   - popcount
 main-class: 'dev'
+main-class: "Algoritmos"
 ---
 Hace un més aproximadamente terminó el plazo de entrega de la práctica que voy a hablar hoy, lo que me permite hablaros de la misma.
 

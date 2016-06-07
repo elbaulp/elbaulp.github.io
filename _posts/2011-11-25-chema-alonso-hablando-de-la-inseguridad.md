@@ -27,6 +27,7 @@ categories:
   - internet
   - seguridad
 main-class: 'dev'
+main-class: "internet"
 ---
 OS dejo dos vídeos muy interesantes que recomiendo que veáis, ya que hablan de la seguiridad en la red
 

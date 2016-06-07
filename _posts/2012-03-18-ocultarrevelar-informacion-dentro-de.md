@@ -33,6 +33,7 @@ tags:
   - esconder informacion en imagen
   - ocultar texto en imagen
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <
 

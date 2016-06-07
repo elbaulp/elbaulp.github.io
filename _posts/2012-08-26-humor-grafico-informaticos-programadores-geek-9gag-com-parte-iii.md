@@ -13,6 +13,7 @@ categories:
   - offtopic
 format: gallery
 main-class: 'dev'
+main-class: "Humor"
 ---
 Otra recopilación de humor gráfico, para cerrar este domingo de verano.
 

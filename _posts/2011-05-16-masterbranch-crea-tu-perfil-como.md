@@ -22,6 +22,7 @@ categories:
   - internet
   - opensource
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 MasterBranch es una web para desarrolladores y empresarios que buscan buenos programadores. Es un lugar en el que los desarrolladores pueden crear su perfil, el cual se actualiza automáticamente a través de la actividad de su actividad en proyectos de código libre o privativo, y para los empresarios es un lugar donde encontrar cadidatos para crear sus aplicaciones mirando las habilidades de los desarrolladores.
 

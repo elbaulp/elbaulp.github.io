@@ -14,6 +14,7 @@ tags:
   - ensayos
 description: "Si se escribiesen ensayos con lenguajes de programación [HUMOR]"
 main-class: 'dev'
+main-class: "Humor"
 ---
 <figure>
   <img src="/assets/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp" width="650" height="1673" class="aligncenter size-full wp-image-795" />

@@ -21,6 +21,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "internet"
 ---
 <div class="iconews">
 </div>

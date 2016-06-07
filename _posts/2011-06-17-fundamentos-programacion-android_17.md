@@ -29,6 +29,7 @@ tags:
   - Procesos
   - Tareas
 main-class: 'dev'
+main-class: "android"
 ---
 <div class="icodroid">
 </div>

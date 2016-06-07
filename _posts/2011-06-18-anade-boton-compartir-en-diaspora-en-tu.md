@@ -22,6 +22,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "curiosidades"
 ---
 <div class="icodias">
 </div>

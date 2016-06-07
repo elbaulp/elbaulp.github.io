@@ -22,6 +22,7 @@ tags:
   - manual android parcelable
   - simple adapter android ejemplo
 main-class: 'dev'
+main-class: "android"
 ---
 Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3].
 

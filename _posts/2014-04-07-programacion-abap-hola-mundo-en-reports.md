@@ -15,6 +15,7 @@ description: "Para iniciarnos en la programación ABAP nada mejor que el clásic
 modified: 2015-12-25T12:55
 image: 2014/04/hola-mundo-salida.png
 main-class: 'dev'
+main-class: "ABAP"
 ---
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 

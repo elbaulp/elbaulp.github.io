@@ -19,6 +19,7 @@ tags:
   - vulnerabilities
   - Vulnerabilities Security Management
 main-class: 'dev'
+main-class: "cursos"
 ---
 [<img class="alignleft size-full wp-image-1708" alt="The Top 10 Reports for Managing Vulnerabilities" src="/assets/img/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250" height="301" />][1]
 

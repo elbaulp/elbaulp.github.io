@@ -13,6 +13,7 @@ tags:
   - write in c
 format: video
 main-class: 'dev'
+main-class: "Humor"
 ---
 Navegando por la red he encontrado dos vídeos curiosos y graciosos, que comparto con vosotros este día de fiesta Nacional en España.
 

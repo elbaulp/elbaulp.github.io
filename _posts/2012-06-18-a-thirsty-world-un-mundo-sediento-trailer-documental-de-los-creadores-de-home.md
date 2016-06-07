@@ -17,6 +17,7 @@ tags:
 format: video
 description: "(Un mundo sediento) Trailer. Documental de los creadores de HOME"
 main-class: 'dev'
+main-class: "offtopic"
 ---
 En 2009, la organización GoodPlanet.org lanzó a los cines de todo el mundo su documental sobre el impacto que está teniendo el ser humano en la tierra, y tuvo un gran éxito, aunque a mi parecer debería haber llegado a más gente.
 

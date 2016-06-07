@@ -25,6 +25,7 @@ tags:
   - funcion sql
   - sql generar procedure
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

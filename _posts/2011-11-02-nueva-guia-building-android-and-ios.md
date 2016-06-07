@@ -20,6 +20,7 @@ categories:
 tags:
   - curso android pdf
 main-class: 'dev'
+main-class: "android"
 ---
 [![Building Android and iOS Apps with Dreamweaver CS5.5- Free Video Training Tutorial][1]][2]  
 **Long Description: **The course covers basic app creation, including working with the built-in starter pages in Dreamweaver, as well as creating custom apps from scratch. It then focuses on packaging and preparing finished apps for debugging prior to deploying to the Android Market and the Apple App Store. Development techniques particular to the mobile arena, including the use of jQuery Mobile, are emphasized for developers to create apps on multiple platforms. Exercise files are included with the course. Topics include: 

@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - SO
 main-class: 'dev'
+main-class: "SO"
 ---
 <div class="icoso">
 </div>

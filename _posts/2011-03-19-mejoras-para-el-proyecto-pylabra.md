@@ -22,6 +22,7 @@ categories:
   - noticias
   - opensource
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <div class="icopy">
 </div>

@@ -22,6 +22,7 @@ categories:
 tags:
   - que es tuning sql
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

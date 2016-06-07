@@ -15,6 +15,7 @@ tags:
   - web services android
   - web services programacion
 main-class: 'dev'
+main-class: "android"
 ---
 Trabajando con un compañero en una aplicación que hacía uso de web services, nos planteamos la posibilidad de crear un librería que nos facilitara el desarrollo en aplicaciones similares. Aunque hay muchas disponibles en la red decidimos crear la nuestra propia. Gran parte de la librería está desarrollada por mi compañero <a href="http://menudoproblema.es/" target="_blank">Vicente</a>, yo crontibuí poco.
 

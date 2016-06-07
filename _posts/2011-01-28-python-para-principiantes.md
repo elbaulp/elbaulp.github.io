@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - python
 main-class: 'dev'
+main-class: "python"
 ---
 <div class="icopy">
 </div>

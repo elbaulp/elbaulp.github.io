@@ -22,6 +22,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "curiosidades"
 ---
 Cuando estuve mirando hosting para [crear la wiki][1] para la traducción de la guía Android, ninguno me convencía, ya que ofrecían muy poco espacio y demasiados anuncios.
 

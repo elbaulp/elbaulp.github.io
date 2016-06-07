@@ -21,6 +21,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "internet"
 ---
 <a target="_blank" href="http://www.stumbleupon.com/">StumbleUpon</a> es un servício que usan más de 13 millones de personas que nos permite compartir con el resto de usuarios nuestras páginas favoritas y que los demás hagan valoraciones sobre ellas.
 

@@ -22,6 +22,7 @@ categories:
 tags:
   - base de datos having
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

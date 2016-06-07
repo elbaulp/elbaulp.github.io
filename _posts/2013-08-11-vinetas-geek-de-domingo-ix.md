@@ -15,6 +15,7 @@ tags:
   - humor informatico
   - viñetas humor
 main-class: 'dev'
+main-class: "Geek"
 ---
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 

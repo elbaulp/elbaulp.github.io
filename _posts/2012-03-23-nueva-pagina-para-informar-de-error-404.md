@@ -26,6 +26,7 @@ share_count:
 categories:
   - Sin Categoria
 main-class: 'dev'
+main-class: "Sin Categoria"
 ---
 Ahora que blogger permite que creemos nuestra propia página para un error 404, he estado buscando y me decanté por este, que creo que es el más apropiado, sin embargo os dejo algunos que me gustaron. ¿Cual os gusta más?. Más de uno se llevaría un susto al ver algún de los 404 de esta lista:
 

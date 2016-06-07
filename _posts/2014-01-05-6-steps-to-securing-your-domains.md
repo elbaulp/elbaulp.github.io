@@ -12,6 +12,7 @@ tags:
   - internet
   - seguridad dominio
 main-class: 'dev'
+main-class: "cursos"
 ---
 [<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="259" class="alignleft size-full wp-image-2097" />][1]
 

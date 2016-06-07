@@ -18,6 +18,7 @@ tags:
   - seguridad
 author: luzila
 main-class: 'dev'
+main-class: "Articulos"
 ---
 Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
 

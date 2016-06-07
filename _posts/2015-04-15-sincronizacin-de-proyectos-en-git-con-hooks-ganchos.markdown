@@ -6,12 +6,8 @@ modified:
 categories:
 description: "Cómo sincronizar dos repositorios en git de forma que uno sea el espejo del otro, y cómo mantener sincronizada únicamente una rama."
 tags: [git, github, ganchos en git, ejemplos ganchos git, hooks en git, ejemplos hooks en git, post-commit, pre-commit, post-merge, sincronizar repositorios en git, repositorios espejo git, mirror repos]
-image:
-
 image: 2013/03/git-logo.png
-
-  
-main-class: 'dev'
+main-class: 'git'
 ---
 
 <figure>

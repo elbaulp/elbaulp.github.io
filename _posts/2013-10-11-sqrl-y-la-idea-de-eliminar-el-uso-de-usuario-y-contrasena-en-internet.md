@@ -1,9 +1,6 @@
 ---
-id: 1929
 title: SQRL y la idea de eliminar el uso de usuario y contraseña en internet
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=1929
 permalink: /sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/
 categories:
   - Security Now
@@ -14,7 +11,7 @@ tags:
   - SQRL
   - SQRL steve gibson
   - uso de usuario y contraseña
-main-class: 'dev'
+main-class: "Security-Now"
 ---
 
 **Nota:** Puedes echar un ojo al artículo más actualizado [SQRL -Secure Quick Reliable Login a Fondo](/sqrl-secure-quick-reliable-login-a-fondo/)

@@ -17,6 +17,7 @@ blogger_author:
 categories:
   - Sin Categoria
 main-class: 'dev'
+main-class: "Sin Categoria"
 ---
 [![A Newbie's Getting Started Guide to Linux][1]][2]
 

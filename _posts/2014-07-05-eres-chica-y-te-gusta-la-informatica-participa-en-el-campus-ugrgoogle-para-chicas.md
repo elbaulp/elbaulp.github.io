@@ -13,6 +13,7 @@ tags:
   - ingeniería para chicas
   - ugr
 main-class: 'dev'
+main-class: "Articulos"
 ---
 La facultad de informática de Granada (ETSIIT), en la cual estudio, está llevando a cabo una campaña junto a Google para que más chicas se animen a cursar carreras tecnológicas como Informática o Telecomunicaciones.
 

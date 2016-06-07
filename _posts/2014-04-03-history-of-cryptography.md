@@ -12,6 +12,7 @@ tags:
   - descargas
   - guias
 main-class: 'dev'
+main-class: "cursos"
 ---
 [<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178" height="229" class="alignleft size-full wp-image-2315" />][1]
 

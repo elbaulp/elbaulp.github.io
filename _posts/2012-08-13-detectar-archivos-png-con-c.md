@@ -16,6 +16,7 @@ tags:
   - leer imagen png c++
   - ocultar imagenes en imagenes
 main-class: 'dev'
+main-class: "C"
 ---
 Hace un tiempo trasteando con una librería que nos proporcionaron en la facultad (desarrollada por J.Baena y A. Garrido para las asignaturas de introducción a la programación en la ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación en Granada] de la UGR, Universidad de Granada.) para leer imágenes PGM y PPM, me propuse añadirle la capacidad de leer, o al menos detectar imágenes PNG, teniendo el permiso de ambos autores para publicar parte de la librería.
 

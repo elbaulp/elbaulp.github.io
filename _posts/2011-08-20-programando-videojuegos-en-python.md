@@ -18,6 +18,7 @@ categories:
   - juegos
   - python
 main-class: 'dev'
+main-class: "juegos"
 ---
 <div class="icopy">
 </div>

@@ -1,9 +1,6 @@
 ---
-id: 1056
 title: Estructura y seguridad de los QR Codes
-
 layout: post
-guid: /?p=1056
 permalink: /estructura-y-seguridad-de-los-qr-codes/
 categories:
   - Articulos
@@ -14,12 +11,8 @@ tags:
   - Cómo funcionan los códigod QR
   - qr code
   - security now
-image:
-
 image: 2012/12/qrbaulinnercorners2.png
-
-  
-main-class: 'dev'
+main-class: "Security-Now"
 ---
 > Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.
 >

@@ -31,6 +31,7 @@ categories:
   - hackathon
   - opensource
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a style="clear: left; float: left; margin-right: 1em; margin-bottom: 1em;" href="/assets/img/2012/04/oslugr1.png"><img src="/assets/img/2012/04/oslugr1.png" alt="" width="200" height="87" border="0" /></a>

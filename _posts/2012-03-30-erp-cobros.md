@@ -23,6 +23,7 @@ tags:
   - examenes resueltos bases de datos
   - examenes resueltos bases de datos pl/sql
   - examenes sql
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

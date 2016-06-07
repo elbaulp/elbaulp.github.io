@@ -13,6 +13,7 @@ tags:
   - humor geek grafico
 format: gallery
 main-class: 'dev'
+main-class: "offtopic"
 ---
 <p class="jetpack-slideshow-noscript robots-nocontent">
   This slideshow requires JavaScript.

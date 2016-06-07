@@ -9,6 +9,7 @@ categories:
   - cursos
   - noticias
 main-class: 'dev'
+main-class: "cursos"
 ---
 [<img src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration" width="125" height="160" class="alignleft size-full wp-image-1915" />][1]
 

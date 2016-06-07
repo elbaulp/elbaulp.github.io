@@ -24,6 +24,7 @@ tags:
   - iptables con servidor debian
   - selfcontrol
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 [<img class="alignleft size-full wp-image-893" title="selfcontrol" src="/assets/img/2012/08/selfcontrol11.png" alt="" width="192" height="192" />][1]
 

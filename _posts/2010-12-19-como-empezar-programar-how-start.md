@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - How To
 main-class: 'dev'
+main-class: "How To"
 ---
 A petición de un lector, voy a intentar resolver algunas dudas para la gente que quiere adentrarse en el mundo de la programación y no sabe por donde empezar.
 

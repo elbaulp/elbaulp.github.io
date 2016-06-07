@@ -31,6 +31,7 @@ tags:
   - formatos alac
 image: 2012/07/original1.jpg
 main-class: 'dev'
+main-class: "Articulos"
 ---
 
 <figure>

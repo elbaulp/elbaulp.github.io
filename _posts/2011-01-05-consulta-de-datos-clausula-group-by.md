@@ -23,6 +23,7 @@ tags:
   - group by
   - orden group by sql
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

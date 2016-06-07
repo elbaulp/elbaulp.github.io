@@ -27,6 +27,7 @@ tags:
   - for oracle cursor
   - tutoriales cursores sql
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>

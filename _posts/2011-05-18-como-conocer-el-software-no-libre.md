@@ -23,6 +23,7 @@ categories:
   - How To
   - linux
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <div class="icoso">
 </div>

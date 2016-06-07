@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - linux
 main-class: 'dev'
+main-class: "linux"
 ---
 Si quereis crear un PPA, encontrareis una explicación de como hacerlo [aquí][1].
 

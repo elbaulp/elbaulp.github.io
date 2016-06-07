@@ -22,6 +22,7 @@ categories:
   - curiosidades
   - noticias
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 <div class="iconews">
 </div>

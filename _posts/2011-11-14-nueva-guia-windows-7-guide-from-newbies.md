@@ -26,6 +26,7 @@ share_count:
 categories:
   - cursos
 main-class: 'dev'
+main-class: "cursos"
 ---
 [![ The Windows 7 Guide: From Newbies to Pros][1]][2]  
 

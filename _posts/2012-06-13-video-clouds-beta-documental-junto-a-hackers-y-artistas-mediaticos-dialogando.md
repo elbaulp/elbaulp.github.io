@@ -12,6 +12,7 @@ categories:
   - Tecnología
 format: video
 main-class: 'dev'
+main-class: "Tecnolog"
 ---
 Clouds es un documental computacional en el hackers y artistas mediáticos hablan sobre código, cultura y el futuro de la visualización.
 

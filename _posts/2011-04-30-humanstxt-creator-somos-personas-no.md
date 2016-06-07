@@ -21,6 +21,7 @@ categories:
   - internet
   - noticias
 main-class: 'dev'
+main-class: "internet"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img src="<br />

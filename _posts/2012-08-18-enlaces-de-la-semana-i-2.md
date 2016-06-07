@@ -22,6 +22,7 @@ tags:
   - SQLite forense
 format: link
 main-class: 'dev'
+main-class: "Enlaces de la semana"
 ---
 [<img class="aligncenter size-medium wp-image-889" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300" height="225" />][1]
 

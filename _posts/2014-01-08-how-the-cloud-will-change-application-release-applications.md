@@ -12,6 +12,7 @@ tags:
   - How the Cloud will Change Application Release Applications
   - internet
 main-class: 'dev'
+main-class: "cursos"
 ---
 [<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications" width="200" height="259" class="alignleft size-full wp-image-2216" />][1]
 

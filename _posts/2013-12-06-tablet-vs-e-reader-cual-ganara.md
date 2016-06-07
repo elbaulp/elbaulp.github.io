@@ -10,6 +10,7 @@ categories:
 tags:
   - tablet vs ereader
 main-class: 'dev'
+main-class: "Articulos"
 ---
 > Éste artículo que hoy publicamos pertenece a Gloria Lorenzi, una estudiante Italiana de periodismo, que se puso en contacto conmigo para pedirme si podía publicar un artículo en el blog para su proyecto de marketing online.
 

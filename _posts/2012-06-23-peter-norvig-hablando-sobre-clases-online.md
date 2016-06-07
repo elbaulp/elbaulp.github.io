@@ -17,6 +17,7 @@ tags:
   - udacity
 format: aside
 main-class: 'dev'
+main-class: "cursos"
 ---
 Junto Sebastian Thrun, Peter Norvig se planteó la idea de enseñar clase de otra forma para poder llegar a una mayor cantidad de alumnos.
 

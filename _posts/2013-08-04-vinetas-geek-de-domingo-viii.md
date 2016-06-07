@@ -15,6 +15,7 @@ tags:
   - humor informatico
   - viñetas humor
 main-class: 'dev'
+main-class: "Geek"
 ---
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!  
   

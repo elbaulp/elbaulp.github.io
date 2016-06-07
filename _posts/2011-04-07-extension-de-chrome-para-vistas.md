@@ -21,6 +21,7 @@ categories:
   - curiosidades
   - internet
 main-class: 'dev'
+main-class: "curiosidades"
 ---
 Hace muy poco que blogger [anunció sus vistas dinámicas][1], y ahora han lanzado una extensión para chrome:
 

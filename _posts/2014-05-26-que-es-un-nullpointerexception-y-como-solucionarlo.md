@@ -20,6 +20,7 @@ modified: 2016-04-06T21:24:34+02:00
 date: 2016-04-06T21:24:34+02:00
 description: "El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario ziggy, que preguntaba ¿Qué es un NullPointerException y cómo se puede solucionar?. La respuesta es del usuario vincent-ramdhanie"
 main-class: 'dev'
+main-class: "Java"
 ---
 
 <figure>

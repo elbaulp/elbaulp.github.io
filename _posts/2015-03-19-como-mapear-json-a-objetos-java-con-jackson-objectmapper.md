@@ -20,6 +20,7 @@ tags:
   - objectmapper
   - serializar objetos json java
 main-class: 'dev'
+main-class: "Java"
 ---
 Hoy vamos a hablar de cómo usar la librería *Jackson* para mapear fácilmente un *Json* a objetos Java.
 

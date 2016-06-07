@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - opensource
 main-class: 'dev'
+main-class: "opensource"
 ---
 En la lista de pyar, me tope con un articulo bastante bueno, se llama La catedral y el bazar, y basicamente habla sobre como encarar un proyecto de software libre, y que éste llegue a algún lado.  
 Me parecio interesante y lo publico aqui para el que quiera leerlo:

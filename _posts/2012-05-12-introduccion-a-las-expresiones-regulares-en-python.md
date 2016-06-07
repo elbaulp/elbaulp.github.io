@@ -23,6 +23,7 @@ tags:
   - python
   - regexp
 main-class: 'dev'
+main-class: "python"
 ---
 En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).
 

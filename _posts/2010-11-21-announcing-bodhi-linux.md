@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - Sin Categoria
 main-class: 'dev'
+main-class: "Sin Categoria"
 ---
 <p lang="en">
   You may have noticed the blog has been rather quiet the last couple of weeks, this is because I have been working on a project. Last month I <a target="_blank" href="http://jeffhoogland.blogspot.com/2010/10/ubuntu-1004-e17-livedvd.html">posted details</a> about an E17 LiveDVD I was working on that was modeled after <a href="http://jeffhoogland.blogspot.com/2010/07/pinguy-os-distro-review.html" target="_blank">PinguyOS</a>. It weighed in at a 1.4 gig download that was jam packed with every application you might ever use. It was also slightly crude in some aspects (such as the Enlightenment desktop it contained was compiled and installed from source).

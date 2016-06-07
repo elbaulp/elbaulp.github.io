@@ -12,6 +12,7 @@ tags:
   - crear api con nodejs
   - crear base de datos mongodb
   - tutorial express
+main-class: "JavaScript"
 ---
 En un [artículo anterior][1] se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.
 

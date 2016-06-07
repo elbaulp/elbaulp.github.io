@@ -13,6 +13,7 @@ tags:
   - CMS rápido
   - instalar bolt
 main-class: 'dev'
+main-class: "How To"
 ---
 Leyendo notícias en mi lector RSS, encontré en Genbeta Dev un artículo hablando de **Bolt**, un CMS muy ligero y rápido. Tras ojear un poco la página oficial del proyecto decidí probarlo y la verdad es que ma ha causado muy buenas sensaciones. En esta entrada explicaré cómo instalar Bolt y cómo manejar este sencillo CMS.  
 

@@ -27,6 +27,7 @@ categories:
   - curiosidades
   - Humor
 main-class: 'dev'
+main-class: "curiosidades"
 ---
 Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] relacionadas con la tecnología y la informática os traigo una nueva recopilación extraida de 9gag.com:
 

@@ -20,6 +20,7 @@ tags:
   - udacity
 format: status
 main-class: 'dev'
+main-class: "cursos"
 ---
 <img class="alignleft" title="Banner Udacity" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" alt="" width="228" height="98" style="float:left;" />
 

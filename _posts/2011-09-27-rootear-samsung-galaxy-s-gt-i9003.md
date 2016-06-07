@@ -22,6 +22,7 @@ tags:
   - samsung galaxy scl gti9003
   - xda
 main-class: 'dev'
+main-class: "android"
 ---
 <div class="icoso">
 </div>

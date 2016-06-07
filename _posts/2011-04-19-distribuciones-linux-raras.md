@@ -23,6 +23,7 @@ categories:
 tags:
   - distribucion linux curiosa
 main-class: 'dev'
+main-class: "curiosidades"
 ---
 <div class="icoso">
 </div>

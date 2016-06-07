@@ -28,6 +28,7 @@ categories:
   - linux
   - SO
 main-class: 'dev'
+main-class: "cursos"
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make72/prgm.cgi"><img style="border:none;" width="202" height="262" src="https://lh5.googleusercontent.com/-pOL8x3wV9cE/Tzk33Qbuj7I/AAAAAAAACEk/2VSVxrYjFeU/s640/ubuntu-large.jpg" title="Ubuntu: An Absolute Beginner’s Guide" alt="Ubuntu: An Absolute Beginner’s Guide" /></a>

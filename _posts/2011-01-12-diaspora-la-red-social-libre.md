@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - noticias
 main-class: 'dev'
+main-class: "noticias"
 ---
 <div class="icodias" style="padding:1em;">
 </div>

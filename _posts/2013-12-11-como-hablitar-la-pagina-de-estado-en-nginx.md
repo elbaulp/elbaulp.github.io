@@ -12,6 +12,7 @@ tags:
   - estado nginx
   - estado servidor web nginx
 main-class: 'dev'
+main-class: "Administracion de Servidores"
 ---
 Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.
 

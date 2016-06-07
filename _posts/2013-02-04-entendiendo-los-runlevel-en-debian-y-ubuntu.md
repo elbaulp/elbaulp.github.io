@@ -18,6 +18,7 @@ tags:
   - linux runlevel
   - modificar runlevel debian
 main-class: 'dev'
+main-class: "linux"
 ---
 
 <figure>

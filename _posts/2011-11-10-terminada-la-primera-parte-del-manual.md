@@ -20,6 +20,7 @@ categories:
 tags:
   - curso android pdf
 main-class: 'dev'
+main-class: "android"
 ---
 [<img id="logo" name="droid" class="icono" width="128px" height="128px" />][1]
 

@@ -17,6 +17,7 @@ tags:
   - registros
 format: video
 main-class: 'dev'
+main-class: "Informatica"
 ---
 Repasando hoy para un examen que tengo próximamente de TOC (Tecnología y Organización de Computadores) se me ha ocurrido grabar algunos de los ejercícios que estaba haciendo por si le son de interés a alguien.
 

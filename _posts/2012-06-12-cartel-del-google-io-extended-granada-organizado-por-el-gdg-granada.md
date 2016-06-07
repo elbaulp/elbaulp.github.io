@@ -18,6 +18,7 @@ tags:
   - hackathon
 format: gallery
 main-class: 'dev'
+main-class: "hackathon"
 ---
 Ya tenemos el cartel del Google I/O Extended, organizado por el GDG Granada (Google Developers Group Granada) gracias a Sergio Almécija, ¿nos ayudáis a moverlo?
 

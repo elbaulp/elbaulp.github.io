@@ -27,6 +27,7 @@ categories:
   - BaseDeDatos
   - cursos
 main-class: 'dev'
+main-class: "BaseDeDatos"
 ---
 [![Simply SQL][1]][2]  
 

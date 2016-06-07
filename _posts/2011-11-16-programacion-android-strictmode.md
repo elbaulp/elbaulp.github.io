@@ -30,6 +30,7 @@ tags:
   - curso android pdf
   - StrictMode Android
 main-class: 'dev'
+main-class: "android"
 ---
 <img id="logo" class="icono" border="0" height="128" width="128" src="" name="droid" />
 

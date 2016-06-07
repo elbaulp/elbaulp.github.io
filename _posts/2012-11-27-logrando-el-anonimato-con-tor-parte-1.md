@@ -15,6 +15,7 @@ tags:
   - Tor
 author: luzila
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
   * Logrando el anonimato con Tor (Parte 1)
   * [Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies][1]

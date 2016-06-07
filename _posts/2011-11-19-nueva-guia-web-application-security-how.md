@@ -28,6 +28,7 @@ categories:
   - internet
   - seguridad
 main-class: 'dev'
+main-class: "cursos"
 ---
 [![Web Application Security; How to Minimize Prevalent Risk of Attacks][1]][2]  
 

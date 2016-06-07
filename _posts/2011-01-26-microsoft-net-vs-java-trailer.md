@@ -21,6 +21,7 @@ categories:
   - aplicaciones
   - curiosidades
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 Os dejo un vídeo que encontré en youtube que me resultó gracioso:
 

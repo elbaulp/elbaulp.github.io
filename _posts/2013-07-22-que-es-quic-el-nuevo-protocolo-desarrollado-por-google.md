@@ -1,10 +1,8 @@
 ---
-id: 1728
 title: Qué es QUIC, el nuevo protocolo desarrollado por Google
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post
-guid: https://elbauldelprogramador.com/?p=1728
 permalink: /que-es-quic-el-nuevo-protocolo-desarrollado-por-google/
 categories:
   - Security Now
@@ -12,8 +10,8 @@ tags:
   - protocolo QUIC
   - que es QUIC
   - QUIC google
-main-class: 'dev'
 introduction: "Introducción al nuevo protocolo de Google"
+main-class: "Security-Now"
 ---
 <img src="/assets/img/2013/07/Qué-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" alt="Qué es QUIC, el nuevo protocolo desarrollado por Google" width="468" height="239" class="thumbnail aligncenter size-full wp-image-1763" />
 

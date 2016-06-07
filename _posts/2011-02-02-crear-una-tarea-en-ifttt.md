@@ -21,6 +21,7 @@ categories:
   - aplicaciones
   - internet
 main-class: 'dev'
+main-class: "aplicaciones"
 ---
 Voy a explicar como crear una nueva tarea en [IFTTT][1], es bastante simple, pero lo explicaré paso a paso con imágenes:  
 <!--ad-->

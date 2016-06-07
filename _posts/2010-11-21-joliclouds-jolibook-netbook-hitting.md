@@ -20,6 +20,7 @@ blogger_author:
 categories:
   - Sin Categoria
 main-class: 'dev'
+main-class: "Sin Categoria"
 ---
 <p lang="en">
   Jolicloud, the self-proclaimed &#8220;perfect OS for netbooks,&#8221; has been making headlines for a while with their consumer-focused, and frankly very cute Jolibook netbook. &nbsp;Word all around the web is that it is available today in the UK.
