@@ -87,7 +87,6 @@
         },
         _init : function() {
             this.items = Array.prototype.slice.call( document.querySelectorAll( '#' + this.el.id + ' > article' ) );
-            alert(this.items);
             this.itemsCount = this.items.length;
             this.itemsRenderedCount = 0;
             this.didScroll = false;
