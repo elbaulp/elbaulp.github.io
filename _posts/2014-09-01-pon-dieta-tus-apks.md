@@ -1,9 +1,6 @@
 ---
-id: 2432
 title: Pon a dieta a tus APKs
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2432
 permalink: /pon-dieta-tus-apks/
 categories:
   - android
@@ -17,7 +14,6 @@ image: hotlink-ok/Pon-a-dieta-a-tus-APKs.png
 date: 2015-12-11T10:47:00+00:00
 modified: 2015-12-11T10:47:00+00:00
 description: "En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android eliminando recursos sin usar. En el blog de Cyril Mottier encontré un artículo muy interesante con varios consejos para reducir el tamaño del APK y optimizar el código en producción. A continuación pasamos a traducir las partes importantes."
-main-class: 'dev'
 main-class: "android"
 ---
 
