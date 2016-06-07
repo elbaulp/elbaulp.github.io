@@ -11,7 +11,7 @@ tags:
   - que es QUIC
   - QUIC google
 introduction: "Introducción al nuevo protocolo de Google"
-main-class: "Security-Now"
+main-class: "security-now"
 ---
 <img src="/assets/img/2013/07/Qué-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" alt="Qué es QUIC, el nuevo protocolo desarrollado por Google" width="468" height="239" class="thumbnail aligncenter size-full wp-image-1763" />
 

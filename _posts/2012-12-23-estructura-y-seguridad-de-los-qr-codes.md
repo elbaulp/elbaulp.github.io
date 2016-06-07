@@ -12,7 +12,7 @@ tags:
   - qr code
   - security now
 image: 2012/12/qrbaulinnercorners2.png
-main-class: "Security-Now"
+main-class: "security-now"
 ---
 > Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.
 >

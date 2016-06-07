@@ -11,7 +11,7 @@ tags:
   - SQRL
   - SQRL steve gibson
   - uso de usuario y contraseña
-main-class: "Security-Now"
+main-class: "security-now"
 ---
 
 **Nota:** Puedes echar un ojo al artículo más actualizado [SQRL -Secure Quick Reliable Login a Fondo](/sqrl-secure-quick-reliable-login-a-fondo/)

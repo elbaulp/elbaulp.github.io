@@ -17,7 +17,7 @@ tags:
 image: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png
 date: 2015-09-10T11:08:37+02:00
 math: true
-main-class: "Security-Now"
+main-class: "security-now"
 ---
 
 {% include _toc.html %}

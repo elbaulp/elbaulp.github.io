@@ -8,7 +8,7 @@ categories:
 tags:
   - qué es upnp
   - upnp que es
-main-class: "Security-Now"
+main-class: "security-now"
 ---
 <img src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert" width="300" height="300" class="alignleft size-medium wp-image-1290" />
 
