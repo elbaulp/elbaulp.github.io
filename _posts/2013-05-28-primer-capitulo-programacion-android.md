@@ -44,7 +44,7 @@ Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte
 
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar</a>
 </div>
 

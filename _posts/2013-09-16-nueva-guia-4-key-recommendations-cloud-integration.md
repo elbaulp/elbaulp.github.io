@@ -20,7 +20,7 @@ This white paper presents the key characteristics of cloud computing, the integr
 
 #### Descargar la guía
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_talb42" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

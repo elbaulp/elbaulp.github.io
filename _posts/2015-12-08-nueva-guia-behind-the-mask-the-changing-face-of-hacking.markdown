@@ -30,7 +30,7 @@ This new report will help you learn more about hackers and how they work, which 
 - Why simple approaches like phishing still work
 - How HPE Security Research provides actionable security intelligence that can help make your organization safer
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467" target="_blank">Descárgala ahora</a>
 </div>
 

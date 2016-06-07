@@ -24,7 +24,7 @@ In this eBook, we provide a compilation of Spring Data examples that will help y
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 

@@ -20,7 +20,7 @@ Are you thinking of switching to or investing in a VoIP system for your company?
 
 If you&#8217;re thinking of purchasing a VoIP system, read on and discover exactly how you can get the most out of a new VoIP system, while protecting yourself from vulnerabilities and security threats!
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_come58/prgm.cgi" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

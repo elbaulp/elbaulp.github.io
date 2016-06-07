@@ -25,7 +25,7 @@ Cryptography is one of the oldest fields of technical study we can find records 
 
 # Descargar
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_thaw18" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

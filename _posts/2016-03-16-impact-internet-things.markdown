@@ -24,7 +24,7 @@ Gartner projects an estimated 8.4 billion connected “things” installed in th
 
 This paper discusses what’s driving the adoption of the Internet of Things (IoT) in building and facility management, how to create value from the IoT for your organization, and considerations for implementing an IoT strategy for your facility.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01" target="_blank">Descárgala ahora</a>
 </div>
 

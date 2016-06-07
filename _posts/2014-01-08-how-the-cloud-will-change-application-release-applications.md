@@ -21,7 +21,7 @@ The use of cloud computing for custom-built, mission-critical enterprise applica
 
 #### Descargar
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/free/w_comb31" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

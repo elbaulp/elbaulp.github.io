@@ -13,7 +13,7 @@ for theme, category-color in themes
         .title-category
             color category-color
         .post-content
-            h1,h2,h3,h4
+            h1,h2,h3,h4,h5,h6
                 color category-color
             a
                 color category-color
@@ -44,15 +44,15 @@ for theme, category-color in themes
         .share a
             &:hover svg
                 fill category-color
-                
+
         body
-            &.search-overlay 
+            &.search-overlay
                 &:after
                     +below(cut)
                         background-color category-color
         .icon-menu
             fill category-color
-            
+
         .box-body
             h2
                 color category-color

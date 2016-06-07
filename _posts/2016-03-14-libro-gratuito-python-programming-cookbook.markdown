@@ -24,7 +24,7 @@ In this eBook, we provide a compilation of Python examples that will help you ki
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Web Code Geeks.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 

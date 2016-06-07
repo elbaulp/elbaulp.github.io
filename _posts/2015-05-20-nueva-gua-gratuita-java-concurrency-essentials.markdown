@@ -28,7 +28,7 @@ Concurrency is always a challenge for developers and writing concurrent programs
 
 In this course, you will dive into the magic of concurrency. You will be introduced to the fundamentals of concurrency and concurrent code and you will learn about concepts like atomicity, synchronization and thread safety. As you advance, the following lessons will deal with the tools you can leverage, such as the Fork/Join framework, the java.util.concurrent JDK package. To sum those up, you will learn about testing concurrent applications.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java06" target="_blank">Descárgala</a>
 </div>
 

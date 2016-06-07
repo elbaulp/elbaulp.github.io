@@ -23,7 +23,7 @@ Controlling these threats requires multiple security disciplines working togethe
 
 # Descargar
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_palo12" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 

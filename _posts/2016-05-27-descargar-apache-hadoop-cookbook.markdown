@@ -24,7 +24,7 @@ With this free eBook you will also receive weekly news, tips and special offers 
 
 <!--ad-->
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 

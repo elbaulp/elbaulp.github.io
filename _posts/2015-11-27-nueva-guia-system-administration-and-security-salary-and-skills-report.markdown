@@ -29,7 +29,7 @@ This kit also includes these valuable resources:
 - Top Tips for Securing Big Data Environments
 - Encryption as an Enterprise Strategy
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_bund84" target="_blank">Descárgala ahora</a>
 </div>
 

@@ -22,7 +22,7 @@ Digital crime is more prevalent than ever, and the attacks are getting highly co
 
 This course runs for 7 hours and 8 minutes.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_cybr02" target="_blank">Descárgala ahora</a>
 </div>
 

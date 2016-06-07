@@ -30,7 +30,7 @@ You’ll also learn how to tweak them to give you as much privacy as possible.
 
 A quick, easy read that walks you through the different privacy settings in Windows 10, showing you how to turn them off.
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02" target="_blank">Descárgala ahora</a>
 </div>
 

@@ -33,7 +33,7 @@ The following kit contents will help you get the most out of your Information Se
 - Top Tips for Securing Big Data Environments
 - Encryption as an Enterprise Strategy
 
-<div class="btn-success">
+<div class="button-post">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_bund20" target="_blank">Descárgala ahora</a>
 </div>
 
