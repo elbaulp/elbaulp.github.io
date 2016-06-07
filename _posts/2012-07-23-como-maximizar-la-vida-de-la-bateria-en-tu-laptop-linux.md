@@ -1,38 +1,8 @@
 ---
-id: 825
 title: Cómo maximizar la Vida de la Batería en tu Laptop Linux
-
-description: |
-  <a href="https://elbauldelprogramador.com/assets/img/2012/07/sshot4cb822438c27c.jpg"><img src="https://elbauldelprogramador.com/assets/img/2012/07/sshot4cb822438c27c.jpg" alt="" title="sshot4cb822438c27c" width="650" height="306" class="aligncenter size-full wp-image-853" /></a>
-  
-  <strong><em><a href="http://www.flickr.com/photos/wolfhound/3167885873/sizes/m/in/photostream/" target="_blank">Foto por Sighthound</a></em></strong>
-  
-  Ahorro de energía es el tema hot para los usuarios de laptop que necesitan tener las cosas hechas cuando están en movimiento y corriendo con el límite de energía de la batería. Aquí hay una lista de ingeniosos trucos Linux para ahorrar la energía de tu batería.
-  
-  Según<a href="http://www.lesswatts.org/tips/" target="_blank"> Less Watts.org</a>, la principal fuente de consejos sobre ahorro de energía en Linux, los siguientes componentes de nuestra computadora consumen la mayor parte de la vida de la batería y podemos alargarla ajustándolos:
-  
-  1. Controlador de Red Ethernet
-  2. WiFi/Wireless
-  3. Tarjeta gráfica y Pantalla
-  4. Procesador
-  5. Discos y Sistema de archivos
-  6. Software
-  
-  Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.
+description: "Ahorro de energía es el tema hot para los usuarios de laptop que necesitan tener las cosas hechas cuando están en movimiento y corriendo con el límite de energía de la batería. Aquí hay una lista de ingeniosos trucos Linux para ahorrar la energía de tu batería."
 layout: post
-guid: /?p=825
 permalink: /como-maximizar-la-vida-de-la-bateria-en-tu-laptop-linux/
-if_slider_image:
-  - 
-  - 
-fsb_social_twitter:
-  - 7
-fsb_social_facebook:
-  - 2
-categories:
-  - Artículos
-  - How To
-  - SO
 tags:
   - ahorro energia
   - baterias notebook linux
@@ -40,7 +10,7 @@ tags:
   - kernel
   - laptop
   - optimizar energia en ubuntu
-main-class: 'dev'
+main-class: 'misc'
 ---
 [<img src="/assets/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c" width="650" height="306" class="aligncenter size-full wp-image-853" />][1]
 
@@ -58,10 +28,10 @@ Según<a href="http://www.lesswatts.org/tips/" target="_blank"> Less Watts.org</
 6. Software
 
 Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.  
-  
+
 <!--ad-->
 
-  
+
 &nbsp;
 
 **Consejos Básicos de Ahorro de Energía de la Batería**
@@ -95,7 +65,7 @@ Podemos extender la vida de la batería seleccionando estas opciones de la panta
 Nuestro radio Wifi/Wireless consume energía cuando recibe y envía data sobre la red y deberíamos apagarlo cuando no lo usamos. Esto podemos hacerlo si nuestra placa de red soporta el mecanismo de activado y desactivado del control de energía usando el comando &#8216;iwconfig&#8217; que podemos ejecutar en una consola de Ubuntu:
 
 ```bash
-sudo iwconfig wlan0 txpower off 
+sudo iwconfig wlan0 txpower off
 ```
 
 Usamos el siguiente comando para encender nuestra Wifi/Wireless nuevamente:

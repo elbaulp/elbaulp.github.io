@@ -13,14 +13,7 @@ tags:
   - gridview android
 modified: 2015-12-23T9:30
 image: 2014/11/gridview-scrolling-horizontal.png
-description: |
-  <figure>
-    <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  </figure>
-
-  Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor permite scrolling horizontal y vertical en sus interacciones.
-
-  Si sigues leyendo este artículo aprenderás a crear un GridView cuyos elementos sean imágenes en miniatura. Al ser seleccionadas el usuario visualizará la imagen en tamaño real. Este ejemplo comprende la creación un layout efectivo para un GridView, la implementación de un adaptador personalizado con elementos ImageView y la comunicación con Intents para acceder a los detalles completos de cada imagen.
+description: "Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor permite scrolling horizontal y vertical en sus interacciones."
 main-class: 'dev'
 ---
 > Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.

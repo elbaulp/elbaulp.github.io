@@ -16,12 +16,7 @@ tags:
   - quic
   - wireshark
 image: 2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
-description: |
-  <figure>
-    <a href="/assets/img/2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png"><img src="/assets/img/2013/07/Qu%C3%A9-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  </figure>
-
-  QUIC es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña FAQ (Frequently Asked Questions) en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de QUIC, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en Qué es QUIC, el nuevo protocolo desarrollado por Google.
+description: "QUIC es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña FAQ (Frequently Asked Questions) en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de QUIC, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en Qué es QUIC, el nuevo protocolo desarrollado por Google."
 modified: 2015-12-23T10:44
 main-class: 'dev'
 ---
@@ -221,7 +216,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 | Data length (0 or 16 bits)|
 |  Optional(maybe 0 bytes)  |
 +------------+--------------+
-    
+
 ```
 
   * **ACK_FRAME**. Un frame ACK se usa para coordinar la recuperación de paquetes perdidos, y es parecido, pero no idéntico a los paquetes ACK de TCP. Un ACK en QUIC siempre es acumulativo, es decir, nuevos ACKs contienen suficiente información que es seguro descartar cualquier ACK previo. Como resultado, si un paquete con un frame ACK se pierde, no es necesario retransmitir el Frame ACK adjunto. Éste tipo de paquete se identifica con el valor **01ntllmmB**, donde 01 indica que es de tipo ACK, y los 6 bits restantes son flags. Su estructura:
@@ -260,7 +255,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 | Revived|       Sequence Number (variable length)             |
 | (opt)  |         (repeats Number Revied times)               |
 +--------+-----------------------------------------------------+
-    
+
 ```
 
   * **CONGESTION\_CONTROL\_FRAME**. El frame de control de congestión se usa para tramsmitir información relativa a un algoritmo específico de control de gestión. Al inicio de la conexión, la negociación de las credenciales criptográficas también incluyen la negociación del algoritmo de control de congestión.
@@ -273,7 +268,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 |Type(8) |         Error code (32 bits)      | Reason phrase   |  Reason phrase  |
 |        |                                   | length (16 bits)|(variable length)|
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
-    
+
 ```
 
   * **GOAWAY\_STREAM\_FRAME**. Es una petición para terminar una conexión de forma elegante, en la que no se crearán nuevos flujos, y se mantienen los ya existentes (los cuales se finalizarán rápido). Éste frame también incluye los campos **Reason Phrase** y **Error Code**. Se identifica con el valor 0x6. Su estructura:
@@ -289,7 +284,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
  stream  | Reason phrase   |  Reason phrase    ->
    id    | length (16 bits)|(variable length)
 +--------+--------+--------+--------+--------+
-    
+
 ```
 
 ### Análisis del tráfico con WireShark
