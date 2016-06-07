@@ -4,20 +4,20 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-    
+
     'use strict';
-    
+
     var docElem = window.document.documentElement;
 
     function getViewportH() {
         var client = docElem['clientHeight'],
             inner = window['innerHeight'];
-        
+
         if( client < inner )
             return inner;
         else
@@ -61,7 +61,7 @@
     }
 
     function extend( a, b ) {
-        for( var key in b ) { 
+        for( var key in b ) {
             if( b.hasOwnProperty( key ) ) {
                 a[key] = b[key];
             }
@@ -69,7 +69,7 @@
         return a;
     }
 
-    function AnimOnScroll( el, options ) {  
+    function AnimOnScroll( el, options ) {
         this.el = el;
         this.options = extend( this.defaults, options );
         this._init();
@@ -81,12 +81,13 @@
             minDuration : 0,
             maxDuration : 0,
             // The viewportFactor defines how much of the appearing item has to be visible in order to trigger the animation
-            // if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport. 
+            // if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport.
             // If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
             viewportFactor : 0
         },
         _init : function() {
             this.items = Array.prototype.slice.call( document.querySelectorAll( '#' + this.el.id + ' > article' ) );
+            alert(this.items);
             this.itemsCount = this.items.length;
             this.itemsRenderedCount = 0;
             this.didScroll = false;
@@ -133,7 +134,7 @@
                             el.style.MozAnimationDuration = randDuration;
                             el.style.animationDuration = randDuration;
                         }
-                        
+
                         classie.add( el, 'animate' );
                     }, 25 );
                 }
