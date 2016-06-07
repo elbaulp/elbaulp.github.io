@@ -12,6 +12,7 @@ tags:
   - SQRL steve gibson
   - uso de usuario y contraseña
 main-class: "security-now"
+color: "#2DA0C3"
 ---
 
 **Nota:** Puedes echar un ojo al artículo más actualizado [SQRL -Secure Quick Reliable Login a Fondo](/sqrl-secure-quick-reliable-login-a-fondo/)
