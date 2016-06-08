@@ -1,20 +1,12 @@
 ---
 layout: post
 title: "Cómo Programar Un Completo Lector PDF en Android"
-modified:
-categories:
-description: "¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en Android como en iOS.\
-
-En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo lector y visor de documentos PDF, totalmente funcional, que incluye una barra de navegación con todo lo siguiente:"
+description: "¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en Android como en iOS."
 tags: [android, pdf, plugpdf, lector pdf android]
-image:
-
 image: Lector PDF Android con barra de navegación.jpg
-
-  
 date: 2015-07-06T19:00:00+00:00
 author: jordi
-main-class: "dev"
+main-class: "java"
 ---
 {% include _toc.html %}
 
@@ -162,70 +154,70 @@ import com.epapyrus.plugpdf.core.viewer.DocumentState;
 
 public class MainActivity extends Activity {
 
-	private SimpleDocumentReader mReader;
-	private Button selectFileButton;
-	final int ACTIVITY_CHOOSE_FILE = 1;
+  private SimpleDocumentReader mReader;
+  private Button selectFileButton;
+  final int ACTIVITY_CHOOSE_FILE = 1;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
 
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-		// init PlugPDF
-		try {
-			PlugPDF.init(getApplicationContext(),
-				"YOUR_PLUGPDF_LICENSE_HERE");
-		} catch (PlugPDFException.InvalidLicense ex) {
-			Log.e("PlugPDF", "Invalid license exception", ex);
-		}
+    // init PlugPDF
+    try {
+      PlugPDF.init(getApplicationContext(),
+        "YOUR_PLUGPDF_LICENSE_HERE");
+    } catch (PlugPDFException.InvalidLicense ex) {
+      Log.e("PlugPDF", "Invalid license exception", ex);
+    }
 
-		selectFileButton = (Button) findViewById(R.id.selectFileButton);
+    selectFileButton = (Button) findViewById(R.id.selectFileButton);
 
-		selectFileButton.setOnClickListener(new View.OnClickListener() {@Override
-			public void onClick(View arg0) {
-				Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
-				chooseFile.setType("application/pdf");
-				startActivityForResult(Intent.createChooser(chooseFile, "Choose a file"), ACTIVITY_CHOOSE_FILE);
-			}
-		});
+    selectFileButton.setOnClickListener(new View.OnClickListener() {@Override
+      public void onClick(View arg0) {
+        Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
+        chooseFile.setType("application/pdf");
+        startActivityForResult(Intent.createChooser(chooseFile, "Choose a file"), ACTIVITY_CHOOSE_FILE);
+      }
+    });
 
-	}
+  }
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// Check which request we're responding to
-		if (requestCode == ACTIVITY_CHOOSE_FILE) {
-			// Make sure the request was successful
-			if (resultCode == RESULT_OK) {
-				// get the file uri
-				Uri fileUri = data.getData();
-				// launch the PDF viewer
-				mReader = SimpleReaderFactory.createSimpleViewer(this, listener);
-				mReader.openFile(fileUri.getPath(), "");
-			}
-		}
-	}
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    // Check which request we're responding to
+    if (requestCode == ACTIVITY_CHOOSE_FILE) {
+      // Make sure the request was successful
+      if (resultCode == RESULT_OK) {
+        // get the file uri
+        Uri fileUri = data.getData();
+        // launch the PDF viewer
+        mReader = SimpleReaderFactory.createSimpleViewer(this, listener);
+        mReader.openFile(fileUri.getPath(), "");
+      }
+    }
+  }
 
-	/**
-	 * listener receiving event notifications on completion of PDF document loading on a {@link SimpleDocumentReader}
-	 */
-	private SimpleDocumentReaderListener listener = new SimpleDocumentReaderListener() {
+  /**
+   * listener receiving event notifications on completion of PDF document loading on a {@link SimpleDocumentReader}
+   */
+  private SimpleDocumentReaderListener listener = new SimpleDocumentReaderListener() {
 
-		@Override
-		public void onLoadFinish(DocumentState.OPEN state) {
-			Log.i("PlugPDF", "[INFO] Open " + state);
-		}
-	};
+    @Override
+    public void onLoadFinish(DocumentState.OPEN state) {
+      Log.i("PlugPDF", "[INFO] Open " + state);
+    }
+  };
 
-	@Override
-	protected void onDestroy() {
-		if (mReader.getDocument() != null) {
-			mReader.save();
-			mReader.clear();
-		}
-		super.onDestroy();
-	}
+  @Override
+  protected void onDestroy() {
+    if (mReader.getDocument() != null) {
+      mReader.save();
+      mReader.clear();
+    }
+    super.onDestroy();
+  }
 }
 
 ```

@@ -12,14 +12,13 @@ tags:
   - editor atom github
   - instalar atom
   - instalar atom en Ubuntu
-main-class: "dev"
 main-class: "articulos"
 ---
 Hace unos días decidí instalar **Atom**, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:
 
-> At GitHub, we&#8217;re building the text editor we&#8217;ve always wanted. A tool you can customize to do anything, but also use productively on the first day without ever touching a config file. Atom is modern, approachable, and hackable to the core. We can&#8217;t wait to see what you build with it. 
+> At GitHub, we&#8217;re building the text editor we&#8217;ve always wanted. A tool you can customize to do anything, but also use productively on the first day without ever touching a config file. Atom is modern, approachable, and hackable to the core. We can&#8217;t wait to see what you build with it.
 
-Y tras probarlo, puedo decir que es configurable a más no poder, fácil de usar y con una interfaz impecable. 
+Y tras probarlo, puedo decir que es configurable a más no poder, fácil de usar y con una interfaz impecable.
 
 En éste artículo veremos cómo instalarlo y qué paquetes de los que no vienen por defecto merece la pena instalar.
 
@@ -29,7 +28,7 @@ En éste artículo veremos cómo instalarlo y qué paquetes de los que no vienen
 
   * Un Sistema Operativo de 64-bits
   * <a target="_blank" href="http://nodejs.org/download/">node.js</a> v0.10.x
-  * <a target="_blank" href="http://www.npmjs.org/">npm</a> v1.4.x 
+  * <a target="_blank" href="http://www.npmjs.org/">npm</a> v1.4.x
   * libgnome-keyring-dev `sudo apt-get install libgnome-keyring-dev`
   * `npm config set python /usr/bin/python2 -g` Para asegurarnos que gyp usa Python2
 
@@ -66,7 +65,7 @@ La forma rápida de abrir las preferencias es pulsar `Ctrl-,`. Aquí podremos pe
 
 ### Paquetes útiles
 
-Hasta ahora, he encontrado dos paquetes que resultan bastánte útiles, la lista entera se puede encontrar en la <a href="https://atom.io/packages" target="_blank">página oficial</a>. 
+Hasta ahora, he encontrado dos paquetes que resultan bastánte útiles, la lista entera se puede encontrar en la <a href="https://atom.io/packages" target="_blank">página oficial</a>.
 
 #### Build
 
@@ -97,31 +96,31 @@ Una demostración de su uso:
 Algunos comandos básicos:
 
   1. `Git add [all]`
-    
+
     Git add añadirá el fichero actual y *&#8216;add all&#8217;* añadirá todos los modificados: `Ctrl-Shift-A`
 
   2. `Git commit`
-    
+
     Abrirá una ventana para escribir el mensaje de commit, se aplicará al guardar éste fichero: `Ctrl-Shift-C`
 
   3. `Git [checkout]`
-    
+
     Cambiar de rama
 
   4. `Git new branch`
-    
+
     Crear rama
 
   5. `Git [push|pull]`
-    
+
     Subir los cambios al repositorio.
 
   6. `Git Add and Commit`
-    
+
     Aplica `Git add` y `Git commit` sucesivamente: `Ctrl-Shift-A c`
 
   7. `Git Add All and Commit`
-    
+
     Aplica `Git add all` y `Git commit` sucesivamente: `Ctrl-Shift-A a`
 
 #### Git diff
@@ -140,7 +139,7 @@ Personalmente es un editor que me ha gustado mucho, muy fácil de usar y con una
 
 #### Referencias
 
-*Readme.MD linux* »» <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">github.com</a> 
+*Readme.MD linux* »» <a href="https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md" target="_blank">github.com</a>
 
 
 

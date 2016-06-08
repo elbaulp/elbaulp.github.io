@@ -5,14 +5,10 @@ modified:
 categories:
 description: "Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña."
 tags: [android, pdf, plugpdf, lector pdf android]
-image:
-
 image: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
-
-  
 date: 2015-07-07T17:38:30+02:00
 author: jordi
-main-class: "dev"
+main-class: "java"
 ---
 
 {% include _toc.html %}
@@ -84,24 +80,24 @@ Total, que cuando ya estás familiarizado con la librería, solo tienes que prog
      * @param password The file's password
      */
     public void openDocument(final String fileName, String password) {
-	    // if the PDF is not password protected the GUI is initialized
-	    try {
-		    doc = new PDFDocument(fileName, password);
-		    if (doc != null) {
-    			initGUI();
-		    }
-	    }
-	    // contrarily, a password dialog is displayed
-	    catch (PlugPDFException.WrongPassword e) {
-		    PasswordDialog dialog = new PasswordDialog(this) {
-		   	    public void onInputtedPassword(String password) {
-				    openDocument(fileName, password);
-			    }
-		    };
-		    dialog.show();
-	    } catch (Exception e) {
-		    Log.e("PlugPDF", "[ERROR] open fail because, ", e);
-	    }
+      // if the PDF is not password protected the GUI is initialized
+      try {
+        doc = new PDFDocument(fileName, password);
+        if (doc != null) {
+          initGUI();
+        }
+      }
+      // contrarily, a password dialog is displayed
+      catch (PlugPDFException.WrongPassword e) {
+        PasswordDialog dialog = new PasswordDialog(this) {
+             public void onInputtedPassword(String password) {
+            openDocument(fileName, password);
+          }
+        };
+        dialog.show();
+      } catch (Exception e) {
+        Log.e("PlugPDF", "[ERROR] open fail because, ", e);
+      }
     }
 
 ```
@@ -114,32 +110,32 @@ El método initGUI() se encarga de inicializar la pantalla que muestra la Figura
      * Initializes a Graphic User Interface (GUI) for the user to encrypt his/her PDF file.
      */
     protected void initGUI() {
-	    setContentView(R.layout.encrypt_pdf);
-	    // text fields
-	    userPwdEditText = (EditText) findViewById(R.id.userPwdEditText);
-	    masterPwdEditText = (EditText) findViewById(R.id.masterPwdEditText);
-	    // checkboxes
-	    checkPrint = (CheckBox) findViewById(R.id.checkPrint);
-	    checkModifyContent = (CheckBox) findViewById(R.id.checkModifyContent);
-	    checkCopyContent = (CheckBox) findViewById(R.id.checkCopyContent);
-	    checkModifyAnnot = (CheckBox) findViewById(R.id.checkModifyAnnot);
-	    checkFillField = (CheckBox) findViewById(R.id.checkFillField);
-	    checkExtract = (CheckBox) findViewById(R.id.checkExtract);
-	    checkDocumentAssembly = (CheckBox) findViewById(R.id.checkDocumentAssembly);
-	    // buttons
-	    encryptButton = (Button) findViewById(R.id.encryptButton);
-	    // listeners
-	    encryptButton.setOnClickListener(new View.OnClickListener() {
-		    @Override
-		    public void onClick(View arg0) {
-			    if (encryptPDF(doc.getFilePath())) {
-				    setResult(RESULT_OK);
-			    } else {
-				    setResult(RESULT_CANCELED);
-			    }
-			    finish();
-		    }
-	    });
+      setContentView(R.layout.encrypt_pdf);
+      // text fields
+      userPwdEditText = (EditText) findViewById(R.id.userPwdEditText);
+      masterPwdEditText = (EditText) findViewById(R.id.masterPwdEditText);
+      // checkboxes
+      checkPrint = (CheckBox) findViewById(R.id.checkPrint);
+      checkModifyContent = (CheckBox) findViewById(R.id.checkModifyContent);
+      checkCopyContent = (CheckBox) findViewById(R.id.checkCopyContent);
+      checkModifyAnnot = (CheckBox) findViewById(R.id.checkModifyAnnot);
+      checkFillField = (CheckBox) findViewById(R.id.checkFillField);
+      checkExtract = (CheckBox) findViewById(R.id.checkExtract);
+      checkDocumentAssembly = (CheckBox) findViewById(R.id.checkDocumentAssembly);
+      // buttons
+      encryptButton = (Button) findViewById(R.id.encryptButton);
+      // listeners
+      encryptButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View arg0) {
+          if (encryptPDF(doc.getFilePath())) {
+            setResult(RESULT_OK);
+          } else {
+            setResult(RESULT_CANCELED);
+          }
+          finish();
+        }
+      });
     }
 
 ```
@@ -155,24 +151,24 @@ Luego, para proteger las operaciones de gestión que hemos listado antes, hay qu
      * @return true if the file was successfully encrypted, otherwise false
      */
     public boolean encryptPDF(String filePath) {
-	    try {
-		    int perm = PDFDocument.getUserAccessPermissions(
-			    checkPrint.isChecked(),
-			    checkModifyContent.isChecked(),
-			    checkCopyContent.isChecked(),
-			    checkModifyAnnot.isChecked(),
-			    checkFillField.isChecked(),
-			    checkExtract.isChecked(),
-			    checkDocumentAssembly.isChecked());
-		    doc.setEncrypt(userPwdEditText.getText().toString(), masterPwdEditText.getText().toString(), perm);
-		    doc.saveFile();
-		    doc.release();
-		    return true;
-	    }
-	    catch (Exception e) {
-		    Log.e("PDF Protector", "Exception", e);
-		    return false;
-	    }
+      try {
+        int perm = PDFDocument.getUserAccessPermissions(
+          checkPrint.isChecked(),
+          checkModifyContent.isChecked(),
+          checkCopyContent.isChecked(),
+          checkModifyAnnot.isChecked(),
+          checkFillField.isChecked(),
+          checkExtract.isChecked(),
+          checkDocumentAssembly.isChecked());
+        doc.setEncrypt(userPwdEditText.getText().toString(), masterPwdEditText.getText().toString(), perm);
+        doc.saveFile();
+        doc.release();
+        return true;
+      }
+      catch (Exception e) {
+        Log.e("PDF Protector", "Exception", e);
+        return false;
+      }
     }
 
 ```

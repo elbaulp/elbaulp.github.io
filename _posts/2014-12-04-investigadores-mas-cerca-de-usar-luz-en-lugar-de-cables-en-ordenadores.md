@@ -12,7 +12,6 @@ tags:
   - luz por cables
   - transmitir datos por luz
   - Vuckovic Lab
-main-class: "dev"
 main-class: "articulos"
 ---
 La luz es mucho más eficiente a la hora de transmitir datos que la electricidad a través de cables, pero conseguir que funcione correctamente en un ordenador es algo problemático. Un equipo de ingenieros anunció recientemente un nuevo dispositivo *“enlace óptico”* hecho de silicio que es capaz de doblar la luz en ángulos rectos, lo cual es un gran avance de cara a reemplazar los cables eléctricos en ordenadores. La investigación fue dirigida por **Jelena Vuckovic**, de la universidad de Stanford. El paper se publicó en el *journal Scientific Reports*.
@@ -21,7 +20,7 @@ Vuckovic dijo en una [rueda de prensa][1]:
 
 <!--ad-->
 
-> La luz puede transportar más datos que un cable, y es menos costoso energéticamente transmitir fotones que electrones. 
+> La luz puede transportar más datos que un cable, y es menos costoso energéticamente transmitir fotones que electrones.
 
 El paper es fruto de un [trabajo previo][2] en el laboratorio, en el cual el equipo de *Vuckovic* desarrolló un algoritmo que permitía que los dispositivos ópticos se desarrollaran automáticamente. También les permitía diseñar la nanoestructura necesaria para manipular la luz para la transmisión de datos de forma óptica.
 
@@ -31,11 +30,11 @@ El enlace está hecho de silicio porque su índice de refracción (Indicador de 
 
 *Vuckovic* explicó:
 
-> Queríamos ser capaces de dejar que el software diseñara la estructura de un tamaño particular dada únicamente las entradas y salidas deseadas para el dispositivo. Durante muchos años, los investigadores de nanofotónica crearon estructuras usando geometrías simples y formas regulares. Las estructuras producidas por éste algoritmo no son como nada que se haya hecho hasta ahora. 
+> Queríamos ser capaces de dejar que el software diseñara la estructura de un tamaño particular dada únicamente las entradas y salidas deseadas para el dispositivo. Durante muchos años, los investigadores de nanofotónica crearon estructuras usando geometrías simples y formas regulares. Las estructuras producidas por éste algoritmo no son como nada que se haya hecho hasta ahora.
 
 Aunque el enlace es un dispositivo impresionante ahora, la primera aproximación del algoritmo fue una pieza ordinaria de silicio. Las líneas grabadas se añadieron y ajustaron según fue necesario, basándose en el éxito predicho por el uso del modelo de cálculo de la [optimización convexa][3]. Aunque el ordenador necesite ejecutar cientos de pruebas para asegurarse que el enlace óptico está calibrado correctamente, sólo necesitó de 15 minutos.
 
-> No hay forma de diseñar analíticamente este tipo de dispositivos 
+> No hay forma de diseñar analíticamente este tipo de dispositivos
 
 Además de los rayos de luz en forma de T generados por el enlace en éste estudio, el algoritmo hace posible tener infinitas formas de manipular la luz, lo cual podría ser muy útil en la transmisión óptica de datos conforme se avanza en éste campo.
 

@@ -8,8 +8,7 @@ permalink: /nueva-guia-4-key-recommendations-cloud-integration/
 categories:
   - cursos
   - noticias
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration"  class="alignleft size-full wp-image-1915" />][1]
 
@@ -25,7 +24,7 @@ This white paper presents the key characteristics of cloud computing, the integr
   <a href="http://elbauldelprogramador.tradepub.com/free/w_talb42" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

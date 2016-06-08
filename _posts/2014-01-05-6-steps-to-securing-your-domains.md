@@ -11,8 +11,7 @@ tags:
   - dominios
   - internet
   - seguridad dominio
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains"  class="alignleft size-full wp-image-2097" />][1]
 
@@ -26,7 +25,7 @@ Domain hijacking is now front page news. Learn how to prevent your company&#8217
   <a href="http://elbauldelprogramador.tradepub.com/free/w_mm47/" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

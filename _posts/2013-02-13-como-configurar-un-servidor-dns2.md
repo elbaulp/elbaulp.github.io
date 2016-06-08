@@ -36,7 +36,7 @@ tags:
   - soa correo
 image: 2013/04/dns.jpg
 main-class: "dev"
-main-class: "Administracion de Servidores"
+main-class: "servidores"
 ---
 <figure>
   <a href="/assets/img/2013/04/dns.jpg"><img src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>

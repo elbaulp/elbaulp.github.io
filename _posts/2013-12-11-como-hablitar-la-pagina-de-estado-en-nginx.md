@@ -11,8 +11,7 @@ tags:
   - estadisticas nginx
   - estado nginx
   - estado servidor web nginx
-main-class: "dev"
-main-class: "Administracion de Servidores"
+main-class: "servidores"
 ---
 Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.
 
@@ -27,7 +26,7 @@ nginx -V
 
 ```
 
-De no tenerlo, hay que volver a [compilar nginx][1] con éste módulo activo. 
+De no tenerlo, hay que volver a [compilar nginx][1] con éste módulo activo.
 
 ### Habilitar la página de estado en nginx
 

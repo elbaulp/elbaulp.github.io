@@ -7,7 +7,6 @@ guid: https://elbauldelprogramador.com/?p=2022
 permalink: /vinetas-geek-de-domingo-xiii/
 categories:
   - Geek
-main-class: "dev"
 main-class: "Geek"
 ---
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
@@ -25,7 +24,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <div id="attachment_2026" style="width: 425px" class="wp-caption aligncenter">
   <img class="thumbnail size-full wp-image-2026" alt="Explicado simplemente - Git Blame" src="/assets/img/2013/12/Simply-Explained-git-blame.jpg"  />
-  
+
   <p class="wp-caption-text">
     &#8211; Por favor,por favor&#8230;.Mierda!!! fui yo.
   </p>
@@ -35,7 +34,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <div id="attachment_2027" style="width: 339px" class="wp-caption aligncenter">
   <img class="thumbnail size-full wp-image-2027" alt="Explicado simplemente - Expresiones regulares del día anterior" src="/assets/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg"  />
-  
+
   <p class="wp-caption-text">
     ¿Estaba borracho?, ¿o soy un genio?
   </p>
@@ -61,7 +60,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <div id="attachment_2031" style="width: 449px" class="wp-caption aligncenter">
   <img class="thumbnail size-full wp-image-2031" alt="Merge branch 'asdfasjkfdlas / alkdjf' into sdkjfls-final" src="/assets/img/2013/12/git_commit-Merge-branch-asdfasjkfdlas-slash-alkdjf-into-sdkjfls-final.png"  />
-  
+
   <p class="wp-caption-text">
     Merge branch &#8216;asdfasjkfdlas / alkdjf&#8217; into sdkjfls-final
   </p>
@@ -71,7 +70,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <div id="attachment_2032" style="width: 750px" class="wp-caption aligncenter">
   <img class="thumbnail size-full wp-image-2032" alt="Espera, vuelve" src="/assets/img/2013/12/I-wanna-try.-Hang-on-be-right-back.png"  />
-  
+
   <p class="wp-caption-text">
     &#8211; Te has fijado en ese punto brillante allá en la distancia?<br />- Sí. Qué pasa?<br />- No sé, voy a echarle un vistazo<br />- Wow. No vayas por allí.
   </p>

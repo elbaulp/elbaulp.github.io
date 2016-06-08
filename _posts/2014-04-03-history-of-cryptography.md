@@ -11,8 +11,7 @@ tags:
   - criptografía
   - descargas
   - guias
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography"  class="alignleft size-full wp-image-2315" />][1]
 
@@ -30,7 +29,7 @@ Cryptography is one of the oldest fields of technical study we can find records 
   <a href="http://elbauldelprogramador.tradepub.com/free/w_thaw18" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

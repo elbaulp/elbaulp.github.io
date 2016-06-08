@@ -14,8 +14,7 @@ tags:
   - parámetros kernel
   - shmmax
   - sysctl
-main-class: "dev"
-main-class: "Administracion de Servidores"
+main-class: "servidores"
 ---
 Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro `apc.shm_size` junto con el parámetro del kernel `kernel.shmmax`. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.
 
@@ -26,33 +25,33 @@ Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. T
 Según la documentación del kernel:
 
 > shmmax:
-> 
+>
 > This value can be used to query and set the run time limit  
 > on the maximum shared memory segment size that can be created.  
 > Shared memory segments up to 1Gb are now supported in the  
-> kernel. This value defaults to SHMMAX. 
+> kernel. This value defaults to SHMMAX.
 
 Traducido:
 
 > shmmax:
-> 
-> Este valor puede usarse para consultar y establecer el límite máximo del segmento de memoria compartida que puede crearse. Se soportan segmentos de memoria compartida de hasta 1Gb. Su valor por defecto está definido por la constante SHMMAX. 
+>
+> Este valor puede usarse para consultar y establecer el límite máximo del segmento de memoria compartida que puede crearse. Se soportan segmentos de memoria compartida de hasta 1Gb. Su valor por defecto está definido por la constante SHMMAX.
 
 ### Para qué sirve el parámetro apc.shm_size
 
 Según la documentación de APC:
 
-> El tamaño de cada segmento de memoria compartida en MB. Por defecto, algunos sistemas (incluidos la mayoría de variantes de BSD) tienen límites muy bajos del tamaño de un segmento de memoria compartida. 
+> El tamaño de cada segmento de memoria compartida en MB. Por defecto, algunos sistemas (incluidos la mayoría de variantes de BSD) tienen límites muy bajos del tamaño de un segmento de memoria compartida.
 
 Sabiendo para qué sirve cada parámetro, en un foro encontré la respuesta a la solución:
 
 > From my Linux experience, this bug is caused only by one thing:
-> 
+>
 > Wrongly set SHM size in kernel and/or APC settings. With standard apc.shm_size = 30, i get segfault (11) every time i try to spawn php-cgi processes. But once i do the following:
-> 
+>
 > echo &#8220;512000000&#8221; > /proc/sys/kernel/shmmax  
 > set apc.shm_size = 64M
-> 
+>
 > Then the problem completely disappears. PHP with APC becomes ROCK-solid, and NEVER segfaults running 24/7.
 
 Por tanto, incrementando el valor del parámetro `/proc/sys/kernel/shmmax` a un valor igual o mayor que el del parámetro `apc.shm_size` de APC soluciona el problema. Desde que apliqué este cambio no he vuelto a tener caídas en los procesos de PHP.

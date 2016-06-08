@@ -12,7 +12,6 @@ tags:
   - crear formularios en django
   - formularios en django
 main-class: "dev"
-main-class: "django"
 ---
 <img src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm"  class="thumbnail aligncenter size-full wp-image-1925" />
 

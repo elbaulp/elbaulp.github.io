@@ -11,8 +11,7 @@ categories:
 tags:
   - descargas
   - herramientas de red
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 <a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100/prgm.cgi" target="_blank"><img src="/assets/img/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar"  class="alignleft size-full wp-image-2383" /></a>
 
@@ -26,7 +25,7 @@ Whether you are operating a home system, overseeing a small startup, or performi
   <a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].*** 
+***Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].***
 
 
 

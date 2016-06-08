@@ -12,7 +12,6 @@ description: "Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar 
 modified: 2015-12-24T19:55
 image: 2013/07/wordpress.png
 main-class: "dev"
-main-class: "php"
 ---
 > Éste artículo es una colaboración de <a href="http://reinspirit.com/blog/" target="_blank">Pedro Mendez</a> en el que se verá cómo insertar imágenes en una entrada de WordPress. Desarrollador y diseñador de sitios web en Sevilla
 

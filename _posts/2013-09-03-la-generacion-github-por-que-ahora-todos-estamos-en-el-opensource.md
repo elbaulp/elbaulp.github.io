@@ -12,7 +12,6 @@ tags:
   - generacion github
   - que es github
   - ventajas de github
-main-class: "dev"
 main-class: "articulos"
 ---
 <img src="/assets/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource"  class="thumbnail aligncenter size-full wp-image-1858" title="La generación GitHub: Por qué ahora todos estamos en el opensource" />  
@@ -20,7 +19,7 @@ main-class: "articulos"
 
 <!--ad-->
 
-  
+
 “Cualquiera puede ahora cambiar los datos de un mapa cuando se construyen nuevos caminos para montar en bici, cuando las carreteras estén en construcción y cuando se hagan nuevos edificios” <a href="http://digital.cityofchicago.org/index.php/chicago-on-github/" title="http://digital.cityofchicago.org/index.php/chicago-on-github/" target="_blank">anunció</a> hace poco la ciudad de Chicago, que ahora se encuentra en ***GitHub***. Ahora la gente <a href="http://www.wired.com/wiredenterprise/2013/01/this-old-house/" title="This Old (Open Source) House: Man Renovates Home on GitHub" target="_blank">administra las restauraciones de sus casas</a> en ***GitHub***. Hace poco un bufete de abogados anunció también que está publicando documentos legales para la financiación en fases iniciales en ***GitHub***. Alguien además <a href="https://github.com/bundestag/gesetze" target="_blank">publicó</a> el año pasado la totalidad de las leyes Alemanas en Github. (Quizá no sea muy sorprendente que tenga unas 17 peticiones de pull abiertas para realizar cambios). Y por supuesto, ***GitHub*** lo usan programadores y desarrolladores que <a href="http://nodecopter.com/" title="AR Drones" target="_blank">vuelan Drones AR</a> con **Node.js** o crean sitios webs con **jQuery**.
 
 ***GitHub***, según cree el autor original de artículo, está haciendo al software libre lo que internet le hizo a la industria: **Está creando un hueco cultural entre la generación anterior de grandes proyectos de software libre y una nueva, más aficionada cultura del software libre de hoy día.**
@@ -63,7 +62,7 @@ En el nuevo software libre, la gente quiere usar la tecnología sin tener que co
 
 ### Prevenir el exceso de ingeniería
 
-A los ingenieros les gustan los desafíos y las soluciones a ellos se vuelven más inteligentes conforme incrementan las posibilidades de resolverlos. Eso estaba bien cuando los consumidores de esas soluciones eran mentes muy técnicas como los propios ingenieros que disfrutaban resolviendo viejos problemas. 
+A los ingenieros les gustan los desafíos y las soluciones a ellos se vuelven más inteligentes conforme incrementan las posibilidades de resolverlos. Eso estaba bien cuando los consumidores de esas soluciones eran mentes muy técnicas como los propios ingenieros que disfrutaban resolviendo viejos problemas.
 
 Pero esto ha cambiado con los aficionados, una vez que el problema está resuelto raramente volverá a examinarlo. Lo cual fuerza a los desarrolladores a crear soluciones simples que hagan de los problemas complejos algo sencillo de entender.
 
@@ -75,7 +74,7 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
 
 #### Referencias
 
-*The GitHub generation: why we're all in open source now* »» <a href="http://www.wired.co.uk/news/archive/2013-03/11/github-democracy" target="_blank">Wired.co.uk</a> 
+*The GitHub generation: why we're all in open source now* »» <a href="http://www.wired.co.uk/news/archive/2013-03/11/github-democracy" target="_blank">Wired.co.uk</a>
 
 
 

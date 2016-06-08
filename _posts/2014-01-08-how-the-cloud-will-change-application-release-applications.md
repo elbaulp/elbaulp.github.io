@@ -11,8 +11,7 @@ tags:
   - cloud
   - How the Cloud will Change Application Release Applications
   - internet
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications"  class="alignleft size-full wp-image-2216" />][1]
 
@@ -26,7 +25,7 @@ The use of cloud computing for custom-built, mission-critical enterprise applica
   <a href="http://elbauldelprogramador.tradepub.com/free/w_comb31" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

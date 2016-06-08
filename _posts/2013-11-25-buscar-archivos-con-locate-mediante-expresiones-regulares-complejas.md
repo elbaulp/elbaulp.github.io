@@ -15,8 +15,7 @@ tags:
 modified: 2015-12-29T10:20
 image: 2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png
 description: "En linux, existe un comando llamado locate que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su man es:"
-main-class: "dev"
-main-class: "script"
+main-class: "linux"
 ---
 En linux, existe un comando llamado **locate** que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su *man* es:
 

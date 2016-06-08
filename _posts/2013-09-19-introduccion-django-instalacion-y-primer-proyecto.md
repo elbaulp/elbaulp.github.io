@@ -11,7 +11,6 @@ tags:
   - ejemplos django
   - instalar django
 main-class: "dev"
-main-class: "django"
 ---
 <img src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png" alt="Introducción a Django – Instalación y primer proyecto"  class="thumbnail aligncenter size-full wp-image-1903" />
 
@@ -48,7 +47,7 @@ Al ejecutar este comando tendremos una carpeta llamada python-env, entramos y ac
 
 ```bash
 $ cd python-env
-$ . bin/activate 
+$ . bin/activate
 
 ```
 
@@ -221,7 +220,7 @@ urlpatterns = patterns('',
 
 Ejecutamos el servidor con *python manage.py runserver* y entramos a <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a>. Deberíamos ver:
 
-<img src="/assets/img/2013/09/admin01.png" alt="Introducción a Django – Instalación y primer proyecto"  class="thumbnail aligncenter size-full wp-image-1917" /> 
+<img src="/assets/img/2013/09/admin01.png" alt="Introducción a Django – Instalación y primer proyecto"  class="thumbnail aligncenter size-full wp-image-1917" />
 
 Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado *admin.py* en el directorio *polls*:
 

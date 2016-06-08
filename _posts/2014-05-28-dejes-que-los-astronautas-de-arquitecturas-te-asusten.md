@@ -7,13 +7,12 @@ guid: https://elbauldelprogramador.com/?p=2361
 permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
 categories:
   - Articulos
-main-class: "dev"
 main-class: "articulos"
 ---
 > Encontrar las confusas líneas divisorias entre lo **ideal**, lo **viable** y lo **inaceptable** es un dilema siempre vigente en el diseño y desarrollo de sistemas.
-> 
+>
 > Este texto me hizo reflexionar mucho sobre el tema, más que nada porque en general yo disiento con el autor, por lo tanto me replanteé y revalué mis razones y argumentos. Considero de todas formas que son **necesarios** los distintos puntos de vista a la hora de tomar decisiones, y que en el momento de poner en marcha un proyecto es bueno tener premeditadas estas cuestiones ya que influirán en las diferentes etapas del desarrollo.
-> 
+>
 > Por último, creo que siempre la mejor decisión es la que se ajusta a la situación particular. Las generalizaciones sólo sirven para orientarnos en el análisis. *Luzcila*
 
 Cuando grandes pensadores piensan en problemas, empiezan a ver patrones. Miran el problema de la gente enviándose entre ellos archivos de procesador de texto, luego miran el problema de la gente enviándose hojas de cálculo, y descubren que hay un patrón general: *envío de archivos*. Ese ya es un nivel de abstracción. Entonces suben un nivel más: la gente envía archivos, pero los navegadores web también “envían” peticiones para las páginas web. Y cuando piensas en ésto, llamar a un método sobre un objeto ¡es como enviar un mensaje a un objeto! ¡Es lo mismo otra vez! Esas cosas son todas operaciones de envío, por lo tanto nuestros inteligentes pensadores inventan una nueva, más alta y más amplia abstracción llamada mensajería, pero ahora está volviéndose vaga y ya nadie sabe realmente de qué están hablando. Blah.
@@ -58,7 +57,7 @@ Es bueno que podamos utilizar XML ahora para los formatos por cable. Estupendo. 
 
 ### Referencias
 
-*Joel on Software* »» <a href="http://www.joelonsoftware.com/articles/fog0000000018.html" target="_blank">Visitar sitio</a> 
+*Joel on Software* »» <a href="http://www.joelonsoftware.com/articles/fog0000000018.html" target="_blank">Visitar sitio</a>
 
 
 

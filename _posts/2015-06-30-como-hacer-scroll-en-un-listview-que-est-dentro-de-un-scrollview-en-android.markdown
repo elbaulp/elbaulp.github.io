@@ -1,17 +1,10 @@
 ---
 layout: post
 title: "Cómo Hacer Scroll en Un ListView Que Está Dentro De Un ScrollView en Android"
-modified:
-categories:
 description: "Cómo solucionar un ListView no capturando el foco cuando está dentro de un ScrollView"
 tags: [android, Scroll, ScrollView, ListView, setOnTouchListener, ]
-image:
-
-image:
-
-  
 date: 2015-06-30T18:48:42+02:00
-main-class: "dev"
+main-class: "java"
 ---
 
 En [Android](/curso-programacion-android), cuando se tiene un [`ListView`](/programacion-android-interfaz-grafica_28/), dentro de un `ScrollView`, es posible que el último capture todos los eventos `onTouch`, y no sea posible utilizar el `ListView`.

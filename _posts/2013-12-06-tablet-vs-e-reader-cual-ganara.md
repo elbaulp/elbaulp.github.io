@@ -9,7 +9,6 @@ categories:
   - Articulos
 tags:
   - tablet vs ereader
-main-class: "dev"
 main-class: "articulos"
 ---
 > Éste artículo que hoy publicamos pertenece a Gloria Lorenzi, una estudiante Italiana de periodismo, que se puso en contacto conmigo para pedirme si podía publicar un artículo en el blog para su proyecto de marketing online.
@@ -41,7 +40,7 @@ En relación al peso, los e-Readers son más ligeros. Como ejemplo, el Kindle Fi
 
 ### Uso del dispositivo
 
-El uso de e-Readers está limitado únicamente para leer libros. En cambio, con una tablet puedes hacer fotos y videos, además de poder instalar una gran variedad de aplicaciones según tus preferencias. Si comparamos el catálogo de aplicaciones de Amazon y Apple, encontramos que para Kindle hay aproximadamente 10.000 aplicaciones y para Apple tenemos una oferta de más de 140.000. 
+El uso de e-Readers está limitado únicamente para leer libros. En cambio, con una tablet puedes hacer fotos y videos, además de poder instalar una gran variedad de aplicaciones según tus preferencias. Si comparamos el catálogo de aplicaciones de Amazon y Apple, encontramos que para Kindle hay aproximadamente 10.000 aplicaciones y para Apple tenemos una oferta de más de 140.000.
 
 ### Conectividad
 

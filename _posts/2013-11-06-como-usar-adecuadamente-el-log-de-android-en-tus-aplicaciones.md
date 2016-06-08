@@ -11,7 +11,6 @@ tags:
   - como usar log android
   - log android
   - logging android
-main-class: "dev"
 main-class: "android"
 ---
 <img src="/assets/img/2013/07/android2.png" alt="Cómo usar adecuadamente el Log de Android en tus aplicaciones"  class="thumbnail alignleft size-full wp-image-1756" />

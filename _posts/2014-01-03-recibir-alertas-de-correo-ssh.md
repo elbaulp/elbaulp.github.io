@@ -11,8 +11,7 @@ tags:
   - alertar ssh
   - correo ssh
   - seguridad ssh
-main-class: "dev"
-main-class: "Administracion de Servidores"
+main-class: "servidores"
 ---
 Hemos visto en otros artículos varias maneras de mejorar la seguridad en un servidor, medidas tales como:
 
@@ -46,7 +45,7 @@ Listo, ahora recibiremos un correo por cada acceso al sistema.
 
 #### Referencias
 
-*How to Get Root and User SSH Login Email Alerts* »» <a href="http://www.tecmint.com/get-root-ssh-login-email-alerts-in-linux" target="_blank">tecmint.com</a> 
+*How to Get Root and User SSH Login Email Alerts* »» <a href="http://www.tecmint.com/get-root-ssh-login-email-alerts-in-linux" target="_blank">tecmint.com</a>
 
 
 

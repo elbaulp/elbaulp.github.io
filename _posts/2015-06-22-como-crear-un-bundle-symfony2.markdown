@@ -3,15 +3,8 @@ author: colaboraciones
 layout: post
 title: "Cómo Crear Un Bundle Symfony2"
 date: 2015-06-22T09:00:00+00:00
-modified:
-categories:
 description: "En este articulo vamos a ver los pasos que he seguido para crear un bundle de symfony 2 de forma que sea redistribuible mediante composer. Este bundle servirá para facilitar la interacción con la api de smsup, desde symfony2 y poder enviar sms masivos. Es un bundle simple, pero tiene varias cosas interesantes (requiere otra librería, utiliza parámetros de configuración, etc.), y puede ser una buena introducción."
 tags: [bundle, php, Symfony2]
-image:
-
-image:
-
-  
 main-class: "dev"
 ---
 
@@ -46,7 +39,7 @@ Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcion
 ```php
 
 namespace smsup\SmsupapiBundle\DependencyInjection;
-	use Symfony\Component\DependencyInjection\ContainerBuilder;
+  use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
@@ -75,10 +68,10 @@ services:
 
 namespace smsup\SmsupapiBundle\Clases;
 class SmsupSender {
-	public function Send($mensaje)
-	{
-		echo "Su mensaje es: " . $mensaje;
-	}
+  public function Send($mensaje)
+  {
+    echo "Su mensaje es: " . $mensaje;
+  }
 }
 ```
 
@@ -192,16 +185,16 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('smsupapi');
         $rootNode->
-        	children()
-        		->scalarNode('api_id')
-		            ->isRequired()
-		            ->cannotBeEmpty()
-		        ->end()
-		        ->scalarNode('api_secret')
-		            ->isRequired()
-		            ->cannotBeEmpty()
-		        ->end()
-        	->end()
+          children()
+            ->scalarNode('api_id')
+                ->isRequired()
+                ->cannotBeEmpty()
+            ->end()
+            ->scalarNode('api_secret')
+                ->isRequired()
+                ->cannotBeEmpty()
+            ->end()
+          ->end()
         ;
         return $treeBuilder;
     }
@@ -236,11 +229,11 @@ protected $apiId;
 protected $apiSecret;
 public function setApiid($apiId)
 {
-	$this->apiId = $apiId;
+  $this->apiId = $apiId;
 }
 public function setApisecret($apiSecret)
 {
-	$this->apiSecret = $apiSecret;
+  $this->apiSecret = $apiSecret;
 }
 ```
 
@@ -256,58 +249,58 @@ SmsupSender.php quedaría así:
   namespace smsup\SmsupapiBundle\Clases;
   use smsup\smsuplib;
 class SmsupSender {
-	protected $apiId;
-	protected $apiSecret;
-	public function setApiid($apiId)
-	{
-		$this->apiId = $apiId;
-	}
-	public function setApisecret($apiSecret)
-	{
-		$this->apiSecret = $apiSecret;
-	}
-	public function getNewSms()
-	{
-		return new Sms;
-	}
-	public function enviarSms(Sms $sms)
-	{
-		$lib = $this->getSmsapilib();
-		$respuesta = $lib->NuevoSms($sms->getTexto(), $sms->getNumeros(), $sms->getFechaenvio(), $sms->getReferencia(), $sms->getRemitente());
-		return $this->setResult($respuesta);
-	}
-	public function eliminarSms($idsms)
-	{
-		$lib = $this->getSmsapilib();
-		$respuesta = $lib->EliminarSMS($idsms);
-		return $this->setResult($respuesta);
-	}
-	public function estadoSms($idsms)
-	{
-		$lib = $this->getSmsapilib();
-		$respuesta = $lib->EstadoSMS($idsms);
-		return $this->setResult($respuesta);
-	}
-	public function creditosDisponibles()
-	{
-		$lib = $this->getSmsapilib();
-		$respuesta = $lib->CreditosDisponibles();
-		return $this->setResult($respuesta);
-	}
-	public function resultadoPeticion($referencia)
-	{
-		$lib = $this->getSmsapilib();
-		$respuesta = $lib->ResultadoPeticion($referencia);
-		return $this->setResult($respuesta);
-	}
-	private function getSmsapilib()
-	{
-		return new smsuplib($this->apiId, $this->apiSecret);
-	}
-	private function setResult($respuesta)
-	{
-		return new Result($respuesta['httpcode'], $respuesta['resultado']);
-	}
+  protected $apiId;
+  protected $apiSecret;
+  public function setApiid($apiId)
+  {
+    $this->apiId = $apiId;
+  }
+  public function setApisecret($apiSecret)
+  {
+    $this->apiSecret = $apiSecret;
+  }
+  public function getNewSms()
+  {
+    return new Sms;
+  }
+  public function enviarSms(Sms $sms)
+  {
+    $lib = $this->getSmsapilib();
+    $respuesta = $lib->NuevoSms($sms->getTexto(), $sms->getNumeros(), $sms->getFechaenvio(), $sms->getReferencia(), $sms->getRemitente());
+    return $this->setResult($respuesta);
+  }
+  public function eliminarSms($idsms)
+  {
+    $lib = $this->getSmsapilib();
+    $respuesta = $lib->EliminarSMS($idsms);
+    return $this->setResult($respuesta);
+  }
+  public function estadoSms($idsms)
+  {
+    $lib = $this->getSmsapilib();
+    $respuesta = $lib->EstadoSMS($idsms);
+    return $this->setResult($respuesta);
+  }
+  public function creditosDisponibles()
+  {
+    $lib = $this->getSmsapilib();
+    $respuesta = $lib->CreditosDisponibles();
+    return $this->setResult($respuesta);
+  }
+  public function resultadoPeticion($referencia)
+  {
+    $lib = $this->getSmsapilib();
+    $respuesta = $lib->ResultadoPeticion($referencia);
+    return $this->setResult($respuesta);
+  }
+  private function getSmsapilib()
+  {
+    return new smsuplib($this->apiId, $this->apiSecret);
+  }
+  private function setResult($respuesta)
+  {
+    return new Result($respuesta['httpcode'], $respuesta['resultado']);
+  }
 }
 ```
 
@@ -319,21 +312,21 @@ Añadimos dos clases como ayuda:
 
 namespace smsup\SmsupapiBundle\Clases;
 class Result {
-	protected $httpcode;
-	protected $result;
-	public function __construct ($httpcode, $result)
-	{
-		$this->httpcode = $httpcode;
-		$this->result = $result;
-	}
-	public function getHttpcode()
-	{
-		return $this->httpcode;
-	}
-	public function getResult()
-	{
-		return $this->result;
-	}
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this->httpcode = $httpcode;
+    $this->result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this->httpcode;
+  }
+  public function getResult()
+  {
+    return $this->result;
+  }
 }
 
 ```
@@ -344,21 +337,21 @@ class Result {
 
 namespace smsup\SmsupapiBundle\Clases;
 class Result {
-	protected $httpcode;
-	protected $result;
-	public function __construct ($httpcode, $result)
-	{
-		$this->httpcode = $httpcode;
-		$this->result = $result;
-	}
-	public function getHttpcode()
-	{
-		return $this->httpcode;
-	}
-	public function getResult()
-	{
-		return $this->result;
-	}
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this->httpcode = $httpcode;
+    $this->result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this->httpcode;
+  }
+  public function getResult()
+  {
+    return $this->result;
+  }
 }
 ```
 
