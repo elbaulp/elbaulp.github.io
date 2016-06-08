@@ -25,14 +25,14 @@ layout: compress
               {% endif %}
             </article>
             {% include share.html %}
-            <div class="share">
-            {% if page.previous.url %}
-              <h4><a rel="prev" href="{{ page.previous.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.previous.title | escape }}">Anterior: {{ page.previous.title | escape }}</a></h4>
-            {% endif %}
+            <div class="near-posts">
             {% if page.next.url %}
-              <h4><a rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}">Siguiente: {{ page.next.title | escape }}</a></h4>
+              <a class="post-item" rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}">« {{ page.next.title | escape }}</a>
             {% endif %}
-            <h4><a href="/random">¿Pruebas suerte?</a></h4>
+            <a class="post-item" href="/random">¿Pruebas suerte?</a>
+            {% if page.previous.url %}
+              <a class="post-item" rel="prev" href="{{ page.previous.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.previous.title | escape }}">{{ page.previous.title | escape }} »</a>
+            {% endif %}
           </div>
             {% include author.html %}
             {% include comments.html %}
