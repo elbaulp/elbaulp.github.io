@@ -26,7 +26,7 @@ share_count:
 categories:
   - How To
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 Para quien no lo supiera, el coche de Google que va haciendo fotos a las calles para el streetView, recoge datos que deberían ser privados. Como por ejemplo datos de geolocalización mediante nuestra red wifi.

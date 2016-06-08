@@ -27,7 +27,7 @@ categories:
   - curiosidades
   - cursos
   - linux
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <div style="float:left; margin-right:1em;">

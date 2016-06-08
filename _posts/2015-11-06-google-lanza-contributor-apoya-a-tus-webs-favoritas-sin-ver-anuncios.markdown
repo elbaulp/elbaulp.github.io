@@ -5,13 +5,9 @@ modified:
 categories:
 description:
 tags: []
-image:
-
 image: contributorad.png
-
-  
 date: 2015-11-06T16:38:37+01:00
-main-class: 'dev'
+main-class: "articulos"
 ---
 
 {% include _toc.html %}

@@ -15,7 +15,7 @@ tags:
   - colaborador
   - traductor
 format: aside
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Últimamente el blog está algo desatendido debido a falta de tiempo para escribir. Me gustaría darle algo más de vida y contenido adicional, que no solo se publique contenido técnico con código fuente y demás.

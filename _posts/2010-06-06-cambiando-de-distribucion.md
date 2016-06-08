@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - linux
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 De vez en cuando me gusta cambiar de distribuciones linux, para no acostumbrarme unicamente a una. Asi que decidi probar opensuse, cuando   

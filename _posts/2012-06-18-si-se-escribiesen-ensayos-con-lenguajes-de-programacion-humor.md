@@ -13,7 +13,7 @@ tags:
   - ensayo lenguaje de programacion
   - ensayos
 description: "Si se escribiesen ensayos con lenguajes de programación [HUMOR]"
-main-class: 'dev'
+main-class: "dev"
 main-class: "Humor"
 ---
 <figure>

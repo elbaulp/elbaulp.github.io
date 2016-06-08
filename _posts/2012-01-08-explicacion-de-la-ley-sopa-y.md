@@ -25,7 +25,7 @@ share_count:
   - 0
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Quizás muchos no sepan siquiera que existe esta ley, pero si se llega a aprobar, internet tal y como lo conocemos se acabará. Os dejo esta recopilación de vídeos que explican en qué consiste esta ley. Además proporciono unos enlaces de gran interés sobre esta ley.

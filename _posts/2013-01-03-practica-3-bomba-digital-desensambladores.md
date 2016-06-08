@@ -13,7 +13,7 @@ tags:
   - bomba logica
   - contraseñas asm
   - Ingenieria inversa
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 <img width="532" height="449" class="thumbnail aligncenter size-full wp-image-1048" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" />

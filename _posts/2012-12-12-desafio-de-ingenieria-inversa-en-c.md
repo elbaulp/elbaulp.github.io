@@ -11,7 +11,7 @@ categories:
 tags:
   - asm
   - Ingenieria inversa
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 <img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532" height="449" class="thumbnail aligncenter size-full wp-image-1048" />

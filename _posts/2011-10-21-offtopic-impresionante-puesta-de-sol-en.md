@@ -17,7 +17,7 @@ blogger_author:
 categories:
   - offtopic
   - video de la semana
-main-class: 'dev'
+main-class: "dev"
 main-class: "offtopic"
 ---
 Quiero escribir esta entrada aunque no esté relacionada con la temática del blog porque me ha parecido impresionante el vídeo realizado por un fotógrafo en Islandia, que logró captar el sol de medianoche consiguiendo este impresionante Time lapse:

@@ -13,7 +13,7 @@ tags:
   - herramientas forenses
   - unhide
   - unhide forensic tool
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 <figure>

@@ -31,7 +31,7 @@ tags:
   - conectar java con oracle
   - curso android pdf
   - programar base datoss java
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

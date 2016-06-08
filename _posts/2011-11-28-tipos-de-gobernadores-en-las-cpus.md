@@ -30,7 +30,7 @@ tags:
   - curso android pdf
   - que es cpu conservative
   - samsung galaxy scl gti9003
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">

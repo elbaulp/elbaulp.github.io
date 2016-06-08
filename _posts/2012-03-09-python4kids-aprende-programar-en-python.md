@@ -26,7 +26,7 @@ share_count:
 categories:
   - cursos
   - python
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 <div class="separator" style="clear: both; text-align: center;">

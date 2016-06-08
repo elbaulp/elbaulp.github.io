@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 [![Agrupación En Clústeres Multisitio de Windows Server][1]][2]

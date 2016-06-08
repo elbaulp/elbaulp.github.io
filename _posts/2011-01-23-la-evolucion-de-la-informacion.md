@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - curiosidades
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 En <a target="_blank" href="http://www.nosolounix.com/2011/01/la-evolucion-de-la-informacion.html">noSoloUnix</a> he visto ésta imagen que me ha resultado graciosa, que trata de plasmar la evuloción (o mejor dicho retroceso) de la información en la era digital.

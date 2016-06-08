@@ -12,7 +12,7 @@ tags:
   - security ebook
   - Security for a Faster World
   - seguridad
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 [<img src="/assets/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif" alt="Executive eBook: Security for a Faster World" width="200" height="259" class="alignleft size-full wp-image-1500" />][1]

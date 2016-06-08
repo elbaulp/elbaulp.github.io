@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - curiosidades
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 Soy un lector habitual del blog <a target="_blank" href="http://oloblogger.blogspot.com">oloblogger</a>, y leí una entrada, que aunque este un poco fuera de contexto con la tematica de este blog, me pareció interesante compartirla.

@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - Sin Categoria
-main-class: 'dev'
+main-class: "dev"
 main-class: "Sin Categoria"
 ---
 <p lang="en">

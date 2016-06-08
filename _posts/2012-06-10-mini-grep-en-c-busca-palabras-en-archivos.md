@@ -17,7 +17,7 @@ tags:
   - comandos
   - cpp
   - grep
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:  

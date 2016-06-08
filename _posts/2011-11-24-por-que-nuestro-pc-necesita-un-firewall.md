@@ -32,7 +32,7 @@ tags:
   - ejemplos de firewall
   - seguridad en la red
   - seguridad firewall
-main-class: 'dev'
+main-class: "dev"
 main-class: "internet"
 ---
 <div class="separator" style="clear: both; text-align: center;">

@@ -21,7 +21,7 @@ categories:
   - juegos
 tags:
   - osmos para linux
-main-class: 'dev'
+main-class: "dev"
 main-class: "juegos"
 ---
 Encontré por internet estos juegos para linux que me parecieron interesantes, el post original es <a href="http://www.linuxaria.com/recensioni/unusual-game-linux?lang=en" target="_blank">este</a>:

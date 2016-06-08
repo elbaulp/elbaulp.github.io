@@ -16,7 +16,7 @@ blogger_author:
   
 categories:
   - Sin Categoria
-main-class: 'dev'
+main-class: "dev"
 main-class: "Sin Categoria"
 ---
 Como se puede apreciar, hace bastante que no escribo nada en el blog, ya que no dispongo de apenas tiempo. Voy a intentar hacer algún hueco para escribir aunque sea una entrada a la semana.

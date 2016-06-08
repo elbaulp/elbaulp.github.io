@@ -16,8 +16,8 @@ tags:
   - licencias GPL
   - software libre
 format: status
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 *&#8220;En judo, el objetivo es aprovechar el impulso del atacante para defenderse, y eso es exactamente lo que hace el copyleft&#8221;*
 

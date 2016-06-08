@@ -25,7 +25,7 @@ share_count:
   - 0
 categories:
   - video de la semana
-main-class: 'dev'
+main-class: "dev"
 main-class: "video de la semana"
 ---
 <div class="separator" style="clear: both; text-align: center;">

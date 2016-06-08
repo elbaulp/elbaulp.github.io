@@ -16,7 +16,7 @@ tags:
   - LIKE_TRANSACTION android
   - Log.wtf android
   - TWEET_TRANSACTION android
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 [<img src="/assets/img/2013/06/monkey-phone-300x269.jpg" alt="isUserAMonkey Android" width="300" height="269" class="alignleft size-medium wp-image-1681" />][1]  

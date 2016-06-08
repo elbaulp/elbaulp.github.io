@@ -12,8 +12,8 @@ tags:
   - autentificación de dos factores
   - contraseñas
   - google autenticator
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 La Autenticación de dos factores (Two-factor autenticación) es una de <a href="http://lifehacker.com/5932501/strong-passwords-arent-enough-how-to-to-ensure-the-apple-and-amazon-exploit-never-happens-to-you" target="_blank">las mejores cosas que puedes hacer</a> para asegurarte de que tus cuentas no sean hackeadas. Aquí hay una lista de todos los servicios populares que la ofrecen, y donde deberías ir para activarlo ahora mismo.
 

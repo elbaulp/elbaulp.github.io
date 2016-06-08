@@ -29,7 +29,7 @@ if_slider_image:
 categories:
   - Humor
   - internet
-main-class: 'dev'
+main-class: "dev"
 main-class: "Humor"
 ---
 <div class="separator" style="clear: both; text-align: center;">

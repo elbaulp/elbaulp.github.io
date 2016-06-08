@@ -12,8 +12,8 @@ tags:
   - que es autentificación de 2 factores
   - usuarios autentificación de 2 factores
 author: luzila
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 <img src="/assets/img/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700" height="349" class="thumbnail aligncenter size-full wp-image-1863" />
 

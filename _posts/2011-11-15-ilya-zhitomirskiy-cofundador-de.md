@@ -25,7 +25,7 @@ share_count:
   - 2
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Me acabo de enterar que el cofundador de [diaspora][1] ha muerto a la temprana edad de 21 años&#8230;

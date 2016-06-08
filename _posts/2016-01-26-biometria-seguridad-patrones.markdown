@@ -8,6 +8,7 @@ description: "En este artículo se dará un repaso por las distintas ténicas ex
 tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
 image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 author: cristina
+main-class: "articulos"
 ---
 
 <figure>

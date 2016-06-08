@@ -11,7 +11,7 @@ if_slider_image:
 categories:
   - cursos
 format: aside
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 Hoy me ha llegado el diploma del curso que hice en exitae sobre Android, que comparto aquí con vosotros:

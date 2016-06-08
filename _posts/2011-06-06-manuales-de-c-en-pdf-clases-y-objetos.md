@@ -21,7 +21,7 @@ categories:
   - C
   - cursos
   - opensource
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 <div class="iconcpp">

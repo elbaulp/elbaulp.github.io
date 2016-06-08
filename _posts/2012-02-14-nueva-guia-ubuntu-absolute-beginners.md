@@ -27,7 +27,7 @@ categories:
   - cursos
   - linux
   - SO
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 <div style="float:left; margin-right:1em;">

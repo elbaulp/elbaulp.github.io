@@ -14,7 +14,7 @@ categories:
 tags:
   - virtualbox
 description: "Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware."
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 <figure>

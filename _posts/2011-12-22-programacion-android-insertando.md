@@ -29,7 +29,7 @@ categories:
 tags:
   - curso android pdf
   - Insertando registros
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">

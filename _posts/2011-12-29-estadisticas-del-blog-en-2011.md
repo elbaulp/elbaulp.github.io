@@ -25,7 +25,7 @@ share_count:
   - 0
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 En esta entrada voy a dar a conocer los datos estadísticos del blog en este prácticamente acabado 2011. En líneas generales ha mejorado bastante con respecto al 2010.

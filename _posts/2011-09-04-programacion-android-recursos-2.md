@@ -21,7 +21,7 @@ tags:
   - curso android pdf
   - recursos compilados
   - recursos no compilados
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="icodroid">

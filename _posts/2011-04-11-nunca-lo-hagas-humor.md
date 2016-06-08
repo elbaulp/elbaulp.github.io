@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - curiosidades
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <div class="separator galeria" style="padding:100px; clear: both; text-align: center;">

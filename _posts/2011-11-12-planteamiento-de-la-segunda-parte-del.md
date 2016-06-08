@@ -28,7 +28,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 [<img src="" id="logo" name="droid" class="icono" height="128px" width="128px" />][1]

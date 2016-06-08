@@ -22,7 +22,7 @@ categories:
 tags:
   - que es un ddl
   - sentencias dml y ddl
-main-class: 'dev'
+main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

@@ -11,8 +11,8 @@ tags:
   - aplicaciones cliente servidor
   - desarrollo backend
   - servidores cloud
-main-class: 'dev'
-main-class: "Java"
+main-class: "dev"
+main-class: "java"
 ---
 En éste artículo vamos a ver cómo configurar un servidor cloud para ejecutar una aplicación básica a modo de ejemplo. Será el típico juego de adivinar qué número ha pensado el oponente, escrito en Java. Para el lado servidor, he elegido el servicio cloud de [Arsys][1], bastante sencillo de usar. Ya que permite crear servidores a base de clicks, e incrementar los recursos de cada servidor para que se ajusten a nuestras necesidades.
 

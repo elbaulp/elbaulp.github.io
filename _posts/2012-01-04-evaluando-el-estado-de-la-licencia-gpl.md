@@ -26,7 +26,7 @@ share_count:
 categories:
   - noticias
   - opensource
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 <div class="separator" style="clear: both; text-align: center;">

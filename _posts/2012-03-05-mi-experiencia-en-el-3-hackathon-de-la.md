@@ -27,7 +27,7 @@ categories:
   - hackathon
   - noticias
   - opensource
-main-class: 'dev'
+main-class: "dev"
 main-class: "hackathon"
 ---
 <div class="separator" style="clear: both; text-align: center;">

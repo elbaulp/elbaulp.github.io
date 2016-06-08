@@ -21,7 +21,7 @@ categories:
   - internet
   - linux
   - opensource
-main-class: 'dev'
+main-class: "dev"
 main-class: "internet"
 ---
 <div class="separator" style="clear: both; text-align: center;">

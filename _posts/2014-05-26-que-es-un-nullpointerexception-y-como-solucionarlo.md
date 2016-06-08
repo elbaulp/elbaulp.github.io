@@ -1,9 +1,6 @@
 ---
-id: 2360
 title: Qué es un NullPointerException y cómo solucionarlo
-
 layout: post
-guid: https://elbauldelprogramador.com/?p=2360
 permalink: /que-es-un-nullpointerexception-y-como-solucionarlo/
 categories:
   - Java
@@ -19,8 +16,7 @@ image: 2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png
 modified: 2016-04-06T21:24:34+02:00
 date: 2016-04-06T21:24:34+02:00
 description: "El siguiente artículo es una traducción de una pregunta en stackOverflow del usuario ziggy, que preguntaba ¿Qué es un NullPointerException y cómo se puede solucionar?. La respuesta es del usuario vincent-ramdhanie"
-main-class: 'dev'
-main-class: "Java"
+main-class: "java"
 ---
 
 <figure>

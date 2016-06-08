@@ -2,16 +2,10 @@
 layout: post
 title: "Cómo Cifar Un USB Con Veracrypt"
 date: 2015-11-30T19:15:43+01:00
-modified:
-categories:
 description: "Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila etc, y en ocasiones pueden contener información sensible que no debería poder leer cualquiera. Por ello es buena idea llevarlo encriptado, ya sea por si se pierde o nos lo roban. Hoy veremos cómo podemos cifrar/encriptar nuestro usb con Veracrypt"
 tags: [criptografía, usb, truecrypt, truecript, Veracrypt, cifrar usb]
-image:
-
 image: Veracryptlogo.png
-
-  
-main-class: 'dev'
+main-class: "articulos"
 ---
 
 <figure>

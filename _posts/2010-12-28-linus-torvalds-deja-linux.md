@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Tal y como lo leéis, la noticia acaba de saltar al primer plano del terreno tecnológico y Open Source de todo el mundo hace tan sólo un par de horas: **Linus deja Linux** (*casi ná*).

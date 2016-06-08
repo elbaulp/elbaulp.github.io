@@ -21,7 +21,7 @@ categories:
   - curiosidades
   - internet
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <div class="iconews">

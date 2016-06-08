@@ -11,8 +11,8 @@ tags:
   - linux mas rapido que windows
   - windows vs linux
 modified: 2015-12-28T9:40
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 En el blog <a href="http://www.techdrivein.com" title="Tech Drive In" target="_blank">techdrivein</a> escribieron un artículo hace poco a mi parecer interesante, **¿Por qué es Linux más rápido que Windows?**, veamos algunos de los motivos:
 

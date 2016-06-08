@@ -28,7 +28,7 @@ categories:
   - internet
 tags:
   - top 500 supercomputadoras mundo
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <div style="text-align: center;">

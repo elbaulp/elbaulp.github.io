@@ -14,7 +14,7 @@ tags:
   - navegacion anonima
   - Tor
 author: luzila
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
   * <a href="https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>

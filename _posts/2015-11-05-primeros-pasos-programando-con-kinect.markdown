@@ -1,18 +1,12 @@
 ---
 layout: post
 title: "Primeros Pasos Programando Con Kinect"
-modified:
-categories:
 description: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
 tags: [programar kinect, programación kinect, tutorial kinect, aplicaciones kinect]
-image:
-
 image: Primeros-Pasos-Programando-Con-Kinect.png
-
-  
 date: 2015-11-05T19:30:26+01:00
 math: true
-main-class: 'dev'
+main-class: "dev"
 ---
 <figure>
   <img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
@@ -106,7 +100,7 @@ else if (isActive)
 Se intentó hacer uso de la distancia Euclídea para establecer umbrales de tal forma que cuando la distancia entre dos articulaciones superara dicho umbral, el movimiento se procesara:
 
 \\[
-	d = \sqrt{(p1-q1)^2 + (p2-q2)^2 + (p3-q3)^2}
+  d = \sqrt{(p1-q1)^2 + (p2-q2)^2 + (p3-q3)^2}
 \\]
 
 ## Problemas encontrados

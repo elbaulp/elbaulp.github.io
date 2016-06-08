@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - linux
   - python
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 Hola, recientemente, un compañero (Haitike), y yo,Terminamos un proyecto que consistía en desarrollar una pequeña aplicación en la que es pudieran guardar Palabras en otro idioma (en este caso alemán), a modo de un diccionario o vocabulario personal. (Como en el colegio cuando escribias todas las palabras que aprendias en ingles con su significado en una libretita.)[&#8230;]  

@@ -26,7 +26,7 @@ share_count:
 categories:
   - How To
   - linux
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 <div class="separator" style="clear: both; text-align: center;">

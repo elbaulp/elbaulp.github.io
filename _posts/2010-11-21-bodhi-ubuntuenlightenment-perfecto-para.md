@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Los amantes de las distribuciones minimalistas puede que quieran echarle un vistazo a [Bodhi][1], una distribución que **está basada en Ubuntu 10.04** y que además aporta otro elemento importante: la última compilación de **Enlightenment (E17)** -aún en fase de desarrollo-, lo que permite contar con un escritorio singular tanto en su diseño como en su funcionamiento.

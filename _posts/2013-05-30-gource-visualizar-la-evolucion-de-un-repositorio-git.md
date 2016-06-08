@@ -17,7 +17,7 @@ tags:
 image: 2013/05/gourceGit-1024x804.png
 description: "Tutorial de gource y ejemplo de uso"
 modified: 2015-12-13T19:30:12+01:00
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 Hace unas semanas hablé de [logstalgia][1], que visualiza las visitas a una web en forma del juego Pong. Hoy hablo de *Gource*, herramienta similar que visualiza la evolución de un repositorio en [git][2].  

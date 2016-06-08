@@ -13,7 +13,7 @@ tags:
   - resolución grub
   - resolución tty
   - vga=0x31b
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 <img src="/assets/img/2012/08/sh1.png" alt="Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux" width="128" height="128" class="thumbnail alignleft size-full wp-image-868" />

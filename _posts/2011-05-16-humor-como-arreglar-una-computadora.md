@@ -22,7 +22,7 @@ categories:
   - How To
   - linux
   - SO
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <div class="separator" style="clear: both; text-align: center;">

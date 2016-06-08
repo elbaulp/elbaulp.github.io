@@ -21,7 +21,7 @@ categories:
   - curiosidades
   - Humor
   - internet
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he recopilado unas cuantas imágenes más:

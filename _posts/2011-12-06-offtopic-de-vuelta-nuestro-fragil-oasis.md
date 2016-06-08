@@ -27,7 +27,7 @@ categories:
   - curiosidades
   - offtopic
   - video de la semana
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 **** 

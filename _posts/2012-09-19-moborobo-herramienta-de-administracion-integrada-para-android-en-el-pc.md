@@ -11,7 +11,7 @@ categories:
 tags:
   - aplicaciones android
   - moborobo
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 <p dir="ltr">

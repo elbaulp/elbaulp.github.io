@@ -9,7 +9,7 @@ categories:
   - php
 tags:
   - Mostrar todos los artículos de una categoría en Wordpress
-main-class: 'dev'
+main-class: "dev"
 main-class: "php"
 ---
 <img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress" width="231" height="228" class="thumbnail alignleft size-full wp-image-1757" />  

@@ -25,7 +25,7 @@ share_data:
   - '[]'
 categories:
   - cursos
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 [![Mac OS X Lion: The Ultimate Guide][1]][2]  

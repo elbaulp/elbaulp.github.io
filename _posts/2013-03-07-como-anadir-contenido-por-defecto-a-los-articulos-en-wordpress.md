@@ -12,7 +12,7 @@ tags:
   - Articulos wordpress
   - contenido por defecto
   - contenido por defecto en post wordpress
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 <img src="/assets/img/2012/05/Screenshot-05302012-111511-AM1.png" alt="Wordpress" width="123" height="116" class="thumbnail alignleft size-full wp-image-761" />  

@@ -11,7 +11,7 @@ tags:
   - error 404
   - personalizar 404 wordpress
 description: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
-main-class: 'dev'
+main-class: "dev"
 main-class: "php"
 ---
 <figure>

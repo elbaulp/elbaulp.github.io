@@ -9,7 +9,7 @@ categories:
   - noticias
 tags:
   - donaciones
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Hace algún tiempo hubo colocada en la barra lateral una dirección de Bitcoin para que todo aquel que quisiera apoyar el blog hiciera una donación. Desde que se actualizó el aspecto del blog no está disponible, pero ayer escuchando en el PodCast de Joe Rogan hablando con Andreas Antonopoulos sobre la criptomoneda me decidí a volver a colocar la dirección. 

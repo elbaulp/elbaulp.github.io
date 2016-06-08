@@ -1,13 +1,11 @@
 ---
 layout: post
 title: "Nueva Guía: Apache Hadoop Cookbook"
-modified:
-categories:
 description: Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!
 tags: [guias gratuitas de hadoop, libros gratuitos hadoop, tutoriales sobre hadoop, descargar libros hadoop, descargar guias hadoop, descargar apache hadoop cookbook, libros sobre apache hadoop, descargar tutoriales apache hadoop]
 image: Apache-Hadoop-Cookbook2.jpg
 date: 2016-05-27T12:08:44+02:00
-main-class: 'dev'
+main-class: "misc"
 ---
 
 <figure>

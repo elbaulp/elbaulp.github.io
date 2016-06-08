@@ -15,7 +15,7 @@ image:
 
   
 date: 2015-05-20T16:07:56+02:00
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 

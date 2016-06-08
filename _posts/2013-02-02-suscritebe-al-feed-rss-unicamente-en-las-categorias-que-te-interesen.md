@@ -7,7 +7,7 @@ guid: https://elbauldelprogramador.com/?p=1295
 permalink: /suscritebe-al-feed-rss-unicamente-en-las-categorias-que-te-interesen/
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 Puede que solo te interesen algunas publicaciones del blog y no desees recibir todos y cada uno de los artículos que se escriben.

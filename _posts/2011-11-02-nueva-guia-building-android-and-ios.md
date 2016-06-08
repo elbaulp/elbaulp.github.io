@@ -19,7 +19,7 @@ categories:
   - cursos
 tags:
   - curso android pdf
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 [![Building Android and iOS Apps with Dreamweaver CS5.5- Free Video Training Tutorial][1]][2]  

@@ -24,7 +24,7 @@ categories:
 tags:
   - ettercap en español
   - tutorial ettercap comandos
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 <div class="icoso">

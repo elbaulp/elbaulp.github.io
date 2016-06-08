@@ -22,7 +22,7 @@ categories:
   - curiosidades
   - How To
   - internet
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 <div class="icoso">

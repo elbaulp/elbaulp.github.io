@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - curiosidades
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 En <a target="_blank" href="http://mundogeek.net/archivos/2011/01/17/programar-o-pensar/">mundoGeek</a> he leido esta cita que me gustó mucho, y la comparto con vosotros.

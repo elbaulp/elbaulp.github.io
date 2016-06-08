@@ -19,7 +19,7 @@ blogger_author:
 
 categories:
   - script
-main-class: 'dev'
+main-class: "dev"
 main-class: "script"
 ---
 ### Creé una Versión mejorada de este script [aquí][1]

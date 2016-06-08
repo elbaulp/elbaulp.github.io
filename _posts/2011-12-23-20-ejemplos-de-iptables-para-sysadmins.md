@@ -35,7 +35,7 @@ tags:
   - iptables bloquear ping
   - iptables listar reglas
 description: "netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red."
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 <div class="separator" style="clear: both; float:left; text-align: center;">

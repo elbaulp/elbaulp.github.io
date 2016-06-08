@@ -24,7 +24,7 @@ tags:
   - sintaxis de restricciones check
   - sintaxis de restricciones check unique default
   - unique
-main-class: 'dev'
+main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

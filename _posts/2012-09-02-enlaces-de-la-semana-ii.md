@@ -9,7 +9,7 @@ permalink: /enlaces-de-la-semana-ii/
 categories:
   - Enlaces de la semana
   - offtopic
-main-class: 'dev'
+main-class: "dev"
 main-class: "Enlaces de la semana"
 ---
 #### Programación

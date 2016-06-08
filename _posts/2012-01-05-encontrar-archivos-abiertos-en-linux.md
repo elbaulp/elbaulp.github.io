@@ -27,7 +27,7 @@ categories:
   - linux
   - opensource
   - SO
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">

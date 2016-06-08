@@ -10,7 +10,7 @@ categories:
   - noticias
 tags:
   - VoIP Vulnerabilities
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 [  

@@ -25,7 +25,7 @@ share_count:
   - 0
 categories:
   - cursos
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 <div style="float:left; margin-right:1em;">

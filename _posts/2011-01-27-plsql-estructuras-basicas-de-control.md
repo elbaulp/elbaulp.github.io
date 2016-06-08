@@ -22,7 +22,7 @@ categories:
 tags:
   - comandos basicos sql
   - sentencias sql while
-main-class: 'dev'
+main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

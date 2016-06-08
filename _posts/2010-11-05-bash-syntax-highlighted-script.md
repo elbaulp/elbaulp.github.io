@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - linux
   - script
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 <p lang="en">

@@ -11,7 +11,7 @@ if_slider_image:
 categories:
   - C
   - opensource
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 Debido a una comunicación que recibí desde mi facultad, este artículo no puede estar disponible en la red, disculpad las molestias. Un saludo.

@@ -23,7 +23,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 Continuando con el [tema de los componentes][1], en esta entrada vamos a ver:  

@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - Humor
-main-class: 'dev'
+main-class: "dev"
 main-class: "Humor"
 ---
 <div class="separator" style="clear: both; text-align: center;">

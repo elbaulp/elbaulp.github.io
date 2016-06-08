@@ -27,7 +27,7 @@ categories:
   - curiosidades
   - Humor
   - meme
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <div class="separator" style="clear: both; text-align: center;">

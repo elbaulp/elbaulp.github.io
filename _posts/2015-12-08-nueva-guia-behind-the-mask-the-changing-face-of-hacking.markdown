@@ -5,13 +5,9 @@ modified:
 categories:
 description: "Headlines featuring large-scale cyber breaches at Target, Home Depot, Sony Pictures, and others have taught us one thing--no one is safe. But who are the hackers who are able to pull off such huge attacks against sophisticated targets, including the U.S. Government? And how do they do it?"
 tags: []
-image:
-
 image: Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking.jpg
-
-  
 date: 2015-12-08T10:00:00+00:00
-main-class: 'dev'
+main-class: "misc"
 ---
 
 <figure>

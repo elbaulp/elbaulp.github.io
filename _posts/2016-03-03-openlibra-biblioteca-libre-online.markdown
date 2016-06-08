@@ -7,7 +7,7 @@ description: "Hace unos años, concretamente 5, un compañero bloggero lanzaba O
 tags: [openlibra, biblioteca online, descargar libros gratis]
 image: openlibra-biblioteca-libre-online.jpg
 date: 2016-03-03T21:30:24+01:00
-main-class: 'dev'
+main-class: "articulos"
 ---
 
 {% include _toc.html %}

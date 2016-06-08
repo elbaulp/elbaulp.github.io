@@ -14,7 +14,7 @@ tags:
   - ocultar fichero foto
   - ocultar imagenes en imagenes
   - ocultar informacion en imagenes
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 <p style="text-align: center;">

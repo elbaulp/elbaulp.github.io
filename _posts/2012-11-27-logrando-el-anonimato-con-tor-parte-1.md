@@ -14,7 +14,7 @@ tags:
   - navegacion anonima
   - Tor
 author: luzila
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
   * Logrando el anonimato con Tor (Parte 1)

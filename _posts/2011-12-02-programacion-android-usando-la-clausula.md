@@ -29,7 +29,7 @@ categories:
 tags:
   - Cláusula where android
   - curso android pdf
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">

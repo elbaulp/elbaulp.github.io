@@ -13,7 +13,7 @@ tags:
   - curso android pdf
   - menu oculto android
   - menu oculto tablet android
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <figure>

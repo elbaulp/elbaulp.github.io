@@ -18,7 +18,7 @@ tags:
   - software testing
   - udacity
 format: status
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 <img alt="" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" class="alignleft" width="228" height="98" />  

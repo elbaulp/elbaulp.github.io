@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - cursos
   - internet
-main-class: 'dev'
+main-class: "dev"
 main-class: "cursos"
 ---
 [![The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks - Free 156 Page Preview][1]][2]

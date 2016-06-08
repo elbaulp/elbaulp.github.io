@@ -22,7 +22,7 @@ categories:
   - script
 tags:
   - sintaxis c
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">esta</a>.  

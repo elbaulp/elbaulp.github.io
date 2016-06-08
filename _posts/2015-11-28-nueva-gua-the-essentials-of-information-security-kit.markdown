@@ -6,12 +6,8 @@ modified:
 categories:
 description: "Essentials of Information Security brings together the latest in information, coverage of important developments, and expert commentary to help with your Information Security related decisions."
 tags: [guias gratuitas, cursos, pdfs, ebooks gratuitos]
-image:
-
 image: /hotlink-ok/The-Essentials-of-Information-Security-Kit.jpg
-
-  
-main-class: 'dev'
+main-class: "misc"
 ---
 
 <figure>

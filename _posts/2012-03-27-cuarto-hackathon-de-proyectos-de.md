@@ -30,7 +30,7 @@ categories:
   - aplicaciones
   - hackathon
   - opensource
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 <div class="separator" style="clear: both; text-align: center;">

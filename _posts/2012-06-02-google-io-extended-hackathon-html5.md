@@ -18,7 +18,7 @@ tags:
   - hackathon
   - html5
 format: status
-main-class: 'dev'
+main-class: "dev"
 main-class: "hackathon"
 ---
 <div id="sites-canvas-main" class="sites-canvas-main">

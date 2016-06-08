@@ -28,7 +28,7 @@ categories:
   - seguridad
 tags:
   - comunicaciones moviles lte
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 <div class="separator" style="clear: both; text-align: center;">

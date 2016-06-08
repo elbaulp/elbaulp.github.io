@@ -7,8 +7,8 @@ guid: https://elbauldelprogramador.com/?p=2361
 permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
 categories:
   - Articulos
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 > Encontrar las confusas líneas divisorias entre lo **ideal**, lo **viable** y lo **inaceptable** es un dilema siempre vigente en el diseño y desarrollo de sistemas.
 > 

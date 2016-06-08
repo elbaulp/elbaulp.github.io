@@ -8,7 +8,7 @@ tags: [Facebook NullPointerException, que es NullPointerException, nullpointerex
 image: nullpointerexception-facebook-line-numbers.jpg
 date: 2016-03-30T08:29:58+02:00
 modified: 2016-04-05T08:29:58+02:00
-main-class: 'dev'
+main-class: "java"
 ---
 
 <figure>

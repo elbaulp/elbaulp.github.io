@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - curiosidades
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 En muy computer he leido esta notícia en la que un overclocker muy conocido ha conseguido un record, cito una parte de la entrada original:

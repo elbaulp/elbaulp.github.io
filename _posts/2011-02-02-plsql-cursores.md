@@ -26,7 +26,7 @@ tags:
   - eliminar cursores en oracle
   - for oracle cursor
   - tutoriales cursores sql
-main-class: 'dev'
+main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

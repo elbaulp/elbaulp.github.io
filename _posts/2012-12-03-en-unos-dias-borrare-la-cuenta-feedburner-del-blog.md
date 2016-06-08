@@ -7,7 +7,7 @@ guid: /?p=1035
 permalink: /en-unos-dias-borrare-la-cuenta-feedburner-del-blog/
 categories:
   - Sin Categoria
-main-class: 'dev'
+main-class: "dev"
 main-class: "Sin Categoria"
 ---
 Debido al reciente cierre de la API de Feedburner por parte de Google, me veo obligado a cambiar de gestor de RSS y suscripciones por correo electrónico. Con intención de que ningún lector deje de recibir artículos del blog, escribo esta entrada, que será la última en publicarse mediante feedburner.

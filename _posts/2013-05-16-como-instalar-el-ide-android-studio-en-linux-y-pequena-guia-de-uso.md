@@ -14,7 +14,7 @@ tags:
   - instalar android studio
   - manuales android studio
   - tutorial android studio
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <img src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402" height="302" class="thumbnail alignleft size-full wp-image-1567" />  

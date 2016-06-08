@@ -10,7 +10,7 @@ categories:
 tags:
   - invertir cadena
 description: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 

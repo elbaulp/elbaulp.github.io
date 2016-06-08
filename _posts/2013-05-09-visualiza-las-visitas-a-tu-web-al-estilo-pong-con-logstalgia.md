@@ -14,7 +14,7 @@ tags:
   - instalar logstalgia
   - tutorial logstalgia
 modified: 2015-12-13T19:40:12+01:00
-main-class: 'dev'
+main-class: "dev"
 main-class: "Administracion de Servidores"
 ---
 Hace poco he descubierto un programa muy curioso, **Logstalgia**, que a partir del fichero de log de acceso a una web crea una pantalla del juego Pong en la que cada línea del log representa una bola en el juego. Es una buena representación gráfica de lo que está pasando en el servidor web. Y su uso es bastante simple. Empecemos instalándolo:

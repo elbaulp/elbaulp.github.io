@@ -12,7 +12,7 @@ tags:
   - .init_array .fini_array
   - ELF
   - secciones C
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 <img src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" width="128" height="128" class="alignleft" />  

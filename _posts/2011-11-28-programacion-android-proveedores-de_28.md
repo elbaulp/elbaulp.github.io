@@ -31,7 +31,7 @@ tags:
   - curso android pdf
   - Proveedores de Contenidos Android
   - URI
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">

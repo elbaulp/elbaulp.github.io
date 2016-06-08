@@ -20,7 +20,7 @@ blogger_author:
 categories:
   - linux
   - script
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 Hola, Hice un pequeño script que consiste simplemente en dar dos rutas, una origen y otra destino, para copiar todos los archivos mp3 de la ruta origen (con una profundidad máxima de una  

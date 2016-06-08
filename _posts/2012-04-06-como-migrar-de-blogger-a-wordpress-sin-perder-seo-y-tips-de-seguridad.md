@@ -15,7 +15,7 @@ tags:
   - migrar blogger wordpress
   - wordpress
 format: status
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
   * [Importar entradas y comentários][1]

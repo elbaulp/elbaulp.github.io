@@ -14,7 +14,7 @@ tags:
   - ocultar version de bind
   - seguridad en bind
   - usar fpdns
-main-class: 'dev'
+main-class: "dev"
 main-class: "Administracion de Servidores"
 ---
 <img src="/assets/img/2013/04/dns-300x240.jpg" alt="Cómo ocultar la versión de BIND (Y como averiguarla)" width="300" height="240" class="thumbnail alignleft size-medium wp-image-1533" />  

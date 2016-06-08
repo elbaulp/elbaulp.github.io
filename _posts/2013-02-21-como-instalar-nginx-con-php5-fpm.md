@@ -15,7 +15,7 @@ tags:
   - nginx
   - php-fpm
   - servidor web
-main-class: 'dev'
+main-class: "dev"
 main-class: "Administracion de Servidores"
 ---
 <img src="/assets/img/2013/02/nginx-logo.png" alt="instalar y configurar nginx" width="350" height="90" class="thumbnail alignleft size-full wp-image-1377" />  

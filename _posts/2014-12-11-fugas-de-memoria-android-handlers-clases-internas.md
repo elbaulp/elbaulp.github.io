@@ -12,7 +12,7 @@ tags:
   - memory leaks
 description: "Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso."
 modified: 2015-12-22T17:50
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 > Éste artículo es una traducción del blog de [Alex Lockwood][1]. Gracias por el permiso.

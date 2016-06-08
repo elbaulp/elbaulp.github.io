@@ -10,8 +10,8 @@ categories:
 tags:
   - estadisticas
   - whos amung
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 Si usas Whos amung como herramienta de monitorización de los usuarios actuales en tu web, seguro que alguna vez has visto unos cuantos visitantes que aparecen como **Unknown**.
 

@@ -28,7 +28,7 @@ categories:
   - SO
 tags:
   - como actualizar bios asus p5b
-main-class: 'dev'
+main-class: "dev"
 main-class: "seguridad"
 ---
 <div class="separator" style="float:left; margin-right:10px;">

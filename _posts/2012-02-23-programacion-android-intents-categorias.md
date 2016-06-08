@@ -30,7 +30,7 @@ tags:
   - android ejemplo intent filter
   - curso android pdf
   - ejemplo intentfilter implicito
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">

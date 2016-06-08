@@ -30,7 +30,7 @@ tags:
   - content provider
   - curso android pdf
   - 'Programación Android: Arquitectura de los Proveedores de contenidos'
-main-class: 'dev'
+main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">

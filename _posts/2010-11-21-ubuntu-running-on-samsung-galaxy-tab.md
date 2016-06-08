@@ -21,7 +21,7 @@ categories:
   - Sin Categoria
 tags:
   - xda
-main-class: 'dev'
+main-class: "dev"
 main-class: "Sin Categoria"
 ---
 <p lang="en">

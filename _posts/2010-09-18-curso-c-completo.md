@@ -19,7 +19,7 @@ blogger_author:
   
 categories:
   - C
-main-class: 'dev'
+main-class: "dev"
 main-class: "C"
 ---
 En esta <a href="http://c.conclase.net/curso/index.php?cap=000#inicio" target="_blank">web</a>, encontrareis un completisimo manual de c++, el cual tambien podreis descargar, en la sección de <a href="http://conclase.net/?id=descargas" target="_blank">descarga</a> de la web.  

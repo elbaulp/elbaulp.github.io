@@ -13,7 +13,7 @@ tags:
   - concurrencia
   - paralelo
   - ps3
-main-class: 'dev'
+main-class: "dev"
 main-class: "Algoritmos"
 ---
 <div>

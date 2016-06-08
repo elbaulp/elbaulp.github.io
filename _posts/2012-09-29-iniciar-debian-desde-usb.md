@@ -15,7 +15,7 @@ tags:
   - linux instalar debian usb
   - linux para portatil
 format: aside
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 Recientemente formateé mi pc de sobremesa y el portatil para pasar de <a href="http://crunchbanglinux.org/" target="_blank">crunchbang</a> a debian testing y buscando formas de instalarlas desde un usb encontré la solución que comparto:

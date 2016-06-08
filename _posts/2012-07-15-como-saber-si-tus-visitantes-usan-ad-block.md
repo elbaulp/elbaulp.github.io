@@ -11,7 +11,7 @@ tags:
   - anuncios
   - javascript
 modified: 2016-02-07T09:33:22+01:00
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 

@@ -29,7 +29,7 @@ categories:
   - procesos
 tags:
   - htop
-main-class: 'dev'
+main-class: "dev"
 main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">

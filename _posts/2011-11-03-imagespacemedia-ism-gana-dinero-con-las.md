@@ -16,7 +16,7 @@ blogger_author:
   
 categories:
   - noticias
-main-class: 'dev'
+main-class: "dev"
 main-class: "noticias"
 ---
 <div class="separator" style="clear: both; text-align: center;">

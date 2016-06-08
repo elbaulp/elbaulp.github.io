@@ -12,7 +12,7 @@ tags:
   - factorización
   - html5
 format: aside
-main-class: 'dev'
+main-class: "dev"
 main-class: "curiosidades"
 ---
 <img src="/assets/img/2013/01/2013-01-13-105334_1256x830_scrot2-1024x676.png" alt="Factorización en html5" width="770" height="508" class="aligncenter size-large wp-image-1114" />

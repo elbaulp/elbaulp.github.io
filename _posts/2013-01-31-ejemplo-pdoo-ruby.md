@@ -10,8 +10,8 @@ categories:
 tags:
   - ejemplos
   - ruby
-main-class: 'dev'
-main-class: "Articulos"
+main-class: "dev"
+main-class: "articulos"
 ---
 En la asignatura **PDOO** (**Programación y Diseño Orientado a Objetos**) tuve que hacer un seminario sobre ruby, que consistía en traducir un proyecto escrito en Java a Ruby. El objetivo era ver las diferencias existentes en ambos lenguajes.
 

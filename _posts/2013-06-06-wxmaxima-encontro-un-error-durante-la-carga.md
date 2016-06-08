@@ -11,7 +11,7 @@ categories:
 tags:
   - convertir a utf8 maxima
   - wxmaxima error
-main-class: 'dev'
+main-class: "dev"
 main-class: "How To"
 ---
 <img src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga" width="271" height="256" class="thumbnail alignleft size-full wp-image-1625" />  

@@ -15,7 +15,7 @@ tags:
   - Discourse
   - Jeff Atwood
   - stack Exchange
-main-class: 'dev'
+main-class: "dev"
 main-class: "aplicaciones"
 ---
 <img class="size-full wp-image-1351 alignright" alt="Discourse" src="/assets/img/2013/02/discourse-bcc00733a70b7ad2.png" width="200" height="61" />Insatisfecho con la experiencia en los actuales paquetes de software para foros, el co-fundador de Stack Exchange, Jeff Atwood, fundó el *Civilized Discourse Construction <a href="http://www.codinghorror.com/blog/2013/02/civilized-discourse-construction-kit.html" target="_blank">Kit</a> Inc* para proponer un nuevo paquete que los reemplace. Este software, <a href="http://www.discourse.org/" target="_blank">Discourse</a>, de código abierto está construido con JavaScript, Ruby on Rails y PostgreSQL y, <a href="http://www.discourse.org/faq/" target="_blank">acorde</a> a los desarrolladores, puede ser usada en cualquier ocasión que se necesite una lista de mails o foro. Según dice el equipo: &#8220;Discourse es un reinicio desde cero, un intento de reimaginar cómo debería ser una plataforma de discusión moderna, sustentable y completamente open-source.&#8221;  

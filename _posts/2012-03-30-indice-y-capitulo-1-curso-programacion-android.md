@@ -20,7 +20,7 @@ if_seo_title:
   - Descargar manuales gratuitos programación
   - Descargar manuales gratuitos programación
   - Descargar manuales gratuitos programación
-main-class: 'dev'
+main-class: "dev"
 ---
 Descargas totales 34172, número total de ficheros 31.
 
