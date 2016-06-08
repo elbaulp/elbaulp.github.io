@@ -23,7 +23,6 @@ tags:
 modified: 2015-12-19T22:00:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image: What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg
-main-class: "dev"
 main-class: "articulos"
 ---
 
