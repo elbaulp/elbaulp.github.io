@@ -14,14 +14,13 @@ blogger_author:
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
   - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
 
-  
-  
-  
+
+
+
 categories:
   - linux
   - script
   - SO
-main-class: "dev"
 main-class: "linux"
 ---
 <div class="icoso">
@@ -29,7 +28,7 @@ main-class: "linux"
 
 En este post traigo una gran lista de comandos GNU/Linux para tener a mano siempre que no recordemos su sintaxis: (Hay como para aburrirse)
 
-  
+
 <!--ad-->
 
 [<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/assets/img/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros"  />][1]
@@ -42,7 +41,7 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
 
 <a href="http://www.unixguide.net/linux/linuxshortcuts.shtml" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Shortcuts and Commands" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuF_zgFYEAI/AAAAAAAACB8/21NeK1xc0fA/Linux-essential-commands.png" alt="Linux essential commands 25 chuletas para linuxeros" /></a>
 
-<a href="http://www.tuxfiles.org/linuxhelp/linuxcommands.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuGAjso052I/AAAAAAAACCA/EzwoUoDstuE/Ultimate-linux-cheat-sheet.png" alt="Ultimate linux cheat sheet 25 chuletas para linuxeros" /></a></p> 
+<a href="http://www.tuxfiles.org/linuxhelp/linuxcommands.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuGAjso052I/AAAAAAAACCA/EzwoUoDstuE/Ultimate-linux-cheat-sheet.png" alt="Ultimate linux cheat sheet 25 chuletas para linuxeros" /></a></p>
 
 ### Linux Command Line Cheat Sheets
 
@@ -52,7 +51,7 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
 
 [![36 Chuletas a cascoporro][64]][65] [![37 Chuletas a cascoporro][66]][67] [![38 Chuletas a cascoporro][68]][69]
 
-Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLinux: [Chuletas a cascoporro][70]</p> 
+Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLinux: [Chuletas a cascoporro][70]</p>
 
 
 

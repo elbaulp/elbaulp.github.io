@@ -98,15 +98,12 @@ En este punto es donde **BIND** entra en acción. El primer componente que menci
 
 En la figura 2, *named* ha recibido una petición. Busca en su fichero de configuración *named.conf*, que busca en el archivo de zona primaria y pasa la información solicitada al resolver desde el exterior.
 
-<div style="width: 421px">
-
 <figure>
   <img alt="Figura 2 - Respondiendo a una petición" src="/assets/img/2013/02/config.png"  />
 </figure>
   <p>
     Figura 2 &#8211; Respondiendo a una petición
   </p>
-</div>
 
 ### Usando Named.conf
 
