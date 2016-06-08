@@ -35,7 +35,7 @@ La nueva versi&oacute;n **beta 9** de **Mozilla Firefox 4.0 **est&aacute; replic
 &nbsp;
 
 <p style="text-align: center;">
-  <img width="430" height="307" src="http://muycomputer.com/files/264-1334-FOTO/firefox_logo.jpg" alt="" />
+  <img  src="http://muycomputer.com/files/264-1334-FOTO/firefox_logo.jpg" alt="" />
 </p>
 
 <p style="text-align: center;">

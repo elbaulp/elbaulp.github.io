@@ -20,7 +20,7 @@ main-class: "android"
 > Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.
 
 <figure>
-  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img  src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 # Poblar un GridView con un Adaptador de ImageViews en Android
@@ -42,7 +42,7 @@ Son considerados mejor alternativa que las listas, si se desea aprovechar el esp
 El despliegue por defecto de los elementos de un GridView es vertical. El orden de los elementos va de izquierda a derecha y así mismo se definen los indices (basados en inicio 0) en nuestras estructuras de datos relacionadas.
 
 <figure>
-  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img  src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con el indice 0 hasta terminar el recorrido de izquierda a derecha en la parte inferior derecha con el indice 5.
@@ -52,7 +52,7 @@ Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con 
 En este caso se recorre el Grid en función de cada fila. Lo que quiere decir que accederemos a las posiciones de arriba hacia abajo.
 
 <figure>
-  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img width="700" height="350" src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img  src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 La ilustración muestra el recorrido vertical de los elementos.

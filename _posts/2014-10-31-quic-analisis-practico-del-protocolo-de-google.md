@@ -293,7 +293,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 La captura realizada fue la siguiente:
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png"><img width="1920" height="1080" src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Se procederá a mostrar algunas capturas más detalladas de la cabecera únicamente, ya que el resto del paquete está cifrado, sin embargo, a lo largo de éste documento se ha detallado cómo sería la estructura del payload una vez descifrado.
@@ -303,7 +303,7 @@ Como se mostró más arriba, la cabecera del primer paquete indica que el paquet
 ##### ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><img width="370" height="118" src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Dicha información se encuentra aquí:
@@ -311,7 +311,7 @@ Dicha información se encuentra aquí:
 ##### Información sobre la versión a usar
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png"><img width="594" height="244" src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 También se puede apreciar en la captura el número de secuencia y el identificador de conexión. Si escogemos cualquier otro paquete que no sea el primero, se comprobará que el bit que especifica si existe la versión está desactivado:
@@ -319,7 +319,7 @@ También se puede apreciar en la captura el número de secuencia y el identifica
 ##### Paquetes distintos al primero
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png"><img width="596" height="246" src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 Y por tanto no aparece información relevante respecto a qué versión se usa.

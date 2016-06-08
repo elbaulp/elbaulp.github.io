@@ -28,7 +28,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 <div id='gallery-9' class='gallery galleryid-1825 gallery-columns-1 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/the-mother-of-all-suspicious-files/'><img width="96" height="96" src="/assets/img/2013/08/The-Mother-of-All-Suspicious-Files-150x150.png" class="attachment-thumbnail" alt="La madre de todos los archivos sospechosos" aria-describedby="gallery-9-1831" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/the-mother-of-all-suspicious-files/'><img  src="/assets/img/2013/08/The-Mother-of-All-Suspicious-Files-150x150.png" class="attachment-thumbnail" alt="La madre de todos los archivos sospechosos" aria-describedby="gallery-9-1831" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1831'>
@@ -40,7 +40,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-the-server-admin-unexpectedly-reboot-the-server/'><img width="96" height="96" src="/assets/img/2013/08/when-the-server-admin-unexpectedly-reboot-the-server-150x150.gif" class="attachment-thumbnail" alt="Cuando el administrador de sistemas reinicia el servidor de forma inesperada" aria-describedby="gallery-9-1832" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-the-server-admin-unexpectedly-reboot-the-server/'><img  src="/assets/img/2013/08/when-the-server-admin-unexpectedly-reboot-the-server-150x150.gif" class="attachment-thumbnail" alt="Cuando el administrador de sistemas reinicia el servidor de forma inesperada" aria-describedby="gallery-9-1832" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1832'>
@@ -52,7 +52,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-wake-up-on-monday-morning/'><img width="96" height="96" src="/assets/img/2013/08/when-I-wake-up-on-monday-morning-150x150.gif" class="attachment-thumbnail" alt="Cuando me despierto los lunes por la mañana" aria-describedby="gallery-9-1826" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-wake-up-on-monday-morning/'><img  src="/assets/img/2013/08/when-I-wake-up-on-monday-morning-150x150.gif" class="attachment-thumbnail" alt="Cuando me despierto los lunes por la mañana" aria-describedby="gallery-9-1826" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1826'>
@@ -64,7 +64,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-try-to-follow-an-example-on-stackoverflow/'><img width="96" height="96" src="/assets/img/2013/08/when-I-try-to-follow-an-example-on-stackoverflow-150x150.gif" class="attachment-thumbnail" alt="Cuando intento seguir un ejemplo en stackoverflow" aria-describedby="gallery-9-1827" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-try-to-follow-an-example-on-stackoverflow/'><img  src="/assets/img/2013/08/when-I-try-to-follow-an-example-on-stackoverflow-150x150.gif" class="attachment-thumbnail" alt="Cuando intento seguir un ejemplo en stackoverflow" aria-describedby="gallery-9-1827" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1827'>
@@ -76,7 +76,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-realize-after-2-hours-that-my-bug-is-caused-by-a-missing-semicolon/'><img width="96" height="96" src="/assets/img/2013/08/when-I-realize-after-2-hours-that-my-bug-is-caused-by-a-missing-semicolon-150x150.gif" class="attachment-thumbnail" alt="Cuando me doy cuenta, tras 2 horas, que el error lo estaba causando un punto y coma" aria-describedby="gallery-9-1828" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-realize-after-2-hours-that-my-bug-is-caused-by-a-missing-semicolon/'><img  src="/assets/img/2013/08/when-I-realize-after-2-hours-that-my-bug-is-caused-by-a-missing-semicolon-150x150.gif" class="attachment-thumbnail" alt="Cuando me doy cuenta, tras 2 horas, que el error lo estaba causando un punto y coma" aria-describedby="gallery-9-1828" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1828'>
@@ -88,7 +88,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-get-a-more-powerful-computer/'><img width="96" height="96" src="/assets/img/2013/08/when-I-get-a-more-powerful-computer-150x150.gif" class="attachment-thumbnail" alt="Cuando consigo un ordenador más potente" aria-describedby="gallery-9-1829" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-get-a-more-powerful-computer/'><img  src="/assets/img/2013/08/when-I-get-a-more-powerful-computer-150x150.gif" class="attachment-thumbnail" alt="Cuando consigo un ordenador más potente" aria-describedby="gallery-9-1829" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1829'>
@@ -100,7 +100,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/trying-to-push-a-merge-conflict-fix-and-receiving-a-merge-conflict/'><img width="96" height="96" src="/assets/img/2013/08/Trying-to-push-a-merge-conflict-fix-and-receiving-a-merge-conflict-150x150.gif" class="attachment-thumbnail" alt="Intentar subir un conflicto de merge corregido y obtener otro" aria-describedby="gallery-9-1830" /></a>
+      <a href='https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/trying-to-push-a-merge-conflict-fix-and-receiving-a-merge-conflict/'><img  src="/assets/img/2013/08/Trying-to-push-a-merge-conflict-fix-and-receiving-a-merge-conflict-150x150.gif" class="attachment-thumbnail" alt="Intentar subir un conflicto de merge corregido y obtener otro" aria-describedby="gallery-9-1830" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-9-1830'>
