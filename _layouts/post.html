@@ -24,8 +24,16 @@ layout: compress
                 {{ content }}
               {% endif %}
             </article>
-
             {% include share.html %}
+            <div class="share">
+            {% if page.previous.url %}
+              <h4><a rel="prev" href="{{ page.previous.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.previous.title | escape }}">Anterior: {{ page.previous.title | escape }}</a></h4>
+            {% endif %}
+            {% if page.next.url %}
+              <h4><a rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}">Siguiente: {{ page.next.title | escape }}</a></h4>
+            {% endif %}
+            <h4><a href="/random">¿Pruebas suerte?</a></h4>
+          </div>
             {% include author.html %}
             {% include comments.html %}
             {% include footer.html %}
