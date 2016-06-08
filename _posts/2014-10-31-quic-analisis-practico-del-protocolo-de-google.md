@@ -158,7 +158,7 @@ Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits u
 ##### ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" width="370" height="118" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"  title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 **Header: CID**. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga $$2^{32}$$ conexiones concurrentes, habrá un 50\% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de $$2^{32}$$ en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.

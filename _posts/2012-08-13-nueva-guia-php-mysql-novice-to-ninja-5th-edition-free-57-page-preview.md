@@ -18,7 +18,7 @@ tags:
 main-class: "dev"
 main-class: "cursos"
 ---
-[<img src="/assets/img/2012/08/w_sitb33c1.gif" alt="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" title="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" width="114" height="150" class="alignleft size-full wp-image-873" />][1]
+[<img src="/assets/img/2012/08/w_sitb33c1.gif" alt="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" title="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview"  class="alignleft size-full wp-image-873" />][1]
 
 PHP & MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you&#8217;ll learn how to use PHP (used on 20 million sites worldwide) to build your own working content management system using entirely free software. The book also teaches you best practices in database design using MySQL, and covers all the latest technologies.
 

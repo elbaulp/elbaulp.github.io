@@ -21,7 +21,7 @@ main-class: "offtopic"
 ---
 En 2009, la organización GoodPlanet.org lanzó a los cines de todo el mundo su documental sobre el impacto que está teniendo el ser humano en la tierra, y tuvo un gran éxito, aunque a mi parecer debería haber llegado a más gente.
 
-[<img src="/assets/img/2012/06/Screenshot-06182012-120818-AM1-1024x578.png" alt="" title="Screenshot - 06182012 - 12:08:18 AM" width="1024" height="578" class="aligncenter size-large wp-image-792" />][1]
+[<img src="/assets/img/2012/06/Screenshot-06182012-120818-AM1-1024x578.png" alt="" title="Screenshot - 06182012 - 12:08:18 AM"  class="aligncenter size-large wp-image-792" />][1]
 
 <span class='embed-youtube' style='text-align:center; display: block;'></span>
 

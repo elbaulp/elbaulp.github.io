@@ -31,7 +31,7 @@ _Enunciado: se debe identificar mediante interfaz vocal un punto cardinal (Norte
 
 Empecemos con un video de la aplicación funcionando:
 
-<iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/PSAfGnKJN0M" frameborder="0" allowfullscreen></iframe>
+<iframe  src="https://www.youtube-nocookie.com/embed/PSAfGnKJN0M" frameborder="0" allowfullscreen></iframe>
 
 
 Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MIUI. Se le ha añadido el reconocimiento de voz (_ASR_) y se modificó la la interfaz de la brújula para que mostrara hacia donde tiene que dirigirse el usuario en función del comando de voz. Veamos la primera pantalla:

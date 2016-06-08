@@ -12,7 +12,7 @@ tags:
   - optimizar energia en ubuntu
 main-class: 'misc'
 ---
-[<img src="/assets/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c" width="650" height="306" class="aligncenter size-full wp-image-853" />][1]
+[<img src="/assets/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c"  class="aligncenter size-full wp-image-853" />][1]
 
 ***<a href="http://www.flickr.com/photos/wolfhound/3167885873/sizes/m/in/photostream/" target="_blank">Foto por Sighthound</a>***
 
@@ -36,14 +36,14 @@ Te mostraremos algunos consejos básicos de ahorro de energía de la batería y 
 
 **Consejos Básicos de Ahorro de Energía de la Batería**
 
-[<img src="/assets/img/2012/07/linux_wallpaper1.jpg" alt="" title="linux_wallpaper" width="500" height="375" class="aligncenter size-full wp-image-854" />][2]
+[<img src="/assets/img/2012/07/linux_wallpaper1.jpg" alt="" title="linux_wallpaper"  class="aligncenter size-full wp-image-854" />][2]
 
 ***<a href="http://www.flickr.com/photos/acercanto/314496099/sizes/m/" target="_blank">Foto por acercanto</a>  
 ***
 
 Ubuntu viene con un módulo de manejo de energía que nos da un control básico para preservar la vida útil de la batería, abriendo &#8216;System&#8217; > &#8216;Preferences&#8217; > &#8216;Power Management&#8217;.
 
-[<img src="/assets/img/2012/07/battery_power1.png" alt="" title="battery_power" width="620" height="457" class="aligncenter size-full wp-image-855" />][3]
+[<img src="/assets/img/2012/07/battery_power1.png" alt="" title="battery_power"  class="aligncenter size-full wp-image-855" />][3]
 
 Podemos extender la vida de la batería seleccionando estas opciones de la pantalla de Power Management:
 
@@ -57,7 +57,7 @@ Podemos extender la vida de la batería seleccionando estas opciones de la panta
 
 **Wifi/Wireless**
 
-[<img src="/assets/img/2012/07/wifi1.jpg" alt="" title="wifi" width="500" height="375" class="aligncenter size-full wp-image-856" />][4]
+[<img src="/assets/img/2012/07/wifi1.jpg" alt="" title="wifi"  class="aligncenter size-full wp-image-856" />][4]
 
 ***<a href="http://www.flickr.com/photos/juicelog/363018869/sizes/m/" target="_blank">Foto por Juicelog</a>  
 ***
@@ -78,7 +78,7 @@ Nota: Reemplazar &#8216;wlan0&#8242; con el nombre de tu placa de red wireless q
 
 **Procesador**
 
-[<img src="/assets/img/2012/07/4503427549_5ee84b6ea51.jpg" alt="" title="4503427549_5ee84b6ea5" width="500" height="337" class="aligncenter size-full wp-image-857" />][5]
+[<img src="/assets/img/2012/07/4503427549_5ee84b6ea51.jpg" alt="" title="4503427549_5ee84b6ea5"  class="aligncenter size-full wp-image-857" />][5]
 
 ***<a href="http://www.flickr.com/photos/65819195@N00/4503427549/sizes/m/in/photostream/" target="_blank">Foto por chigmaroff</a>***
 
@@ -90,7 +90,7 @@ echo 1 &gt; /sys/devices/system/cpu/sched_mc_power_savings
 
 **Discos y Sistema de archivos**
 
-[<img src="/assets/img/2012/07/harddisk1.jpg" alt="" title="harddisk" width="500" height="334" class="aligncenter size-full wp-image-858" />][6]
+[<img src="/assets/img/2012/07/harddisk1.jpg" alt="" title="harddisk"  class="aligncenter size-full wp-image-858" />][6]
 
 ***Foto por fr3d.org***
 
@@ -173,7 +173,7 @@ sudo powertop
 
 A continuación vemos un ejemplo de análisis de PowerTOP en el consumo de energía de mi laptop.
 
-[<img src="/assets/img/2012/07/powertop1.png" alt="" title="powertop" width="534" height="514" class="aligncenter size-full wp-image-859" />][7]
+[<img src="/assets/img/2012/07/powertop1.png" alt="" title="powertop"  class="aligncenter size-full wp-image-859" />][7]
 
 De acuerdo con el análsis de PowerTOP la causa principal de wakeups en mi laptop es el &#8216;Rescheduling Interrupt&#8217; (reprogramación de la interrupción) que es frecuentemente invocado cuando mi laptop intenta desplegar la actividad del procesador a traves del core Dual Intel Centrino.La reprogramación de la interrupción ocurre cuando el mensaje del kernel IPI es enviado al core dormido para despertarlo del &#8216;low power sleep&#8217; y empezar a correr un proceso cuando el planificador decide descargar trabajo de un core hacia otro core dormido.
 

@@ -25,5 +25,5 @@ La plantilla de este blog es obra de <a href="http://mademistakes.com/minimal-mi
 Sin más dilaciones, aquí el vídeo, a la izquierda, en rojo, se ven los ficheros correspondientes a los artículos. A la derecha, en azul, las imágenes. Espero que os guste.
 
 <figure>
-  <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/i6OpgEh7iKw" frameborder="0" allowfullscreen></iframe>
+  <iframe  src="https://www.youtube-nocookie.com/embed/i6OpgEh7iKw" frameborder="0" allowfullscreen></iframe>
 </figure>

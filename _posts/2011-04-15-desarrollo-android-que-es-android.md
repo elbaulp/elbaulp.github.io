@@ -90,7 +90,7 @@ main-class: "android"
     </p>
     
     <p>
-      <img src="http://bit.ly/ebtxQx" alt="Android System Architecture" width="713" height="512" />
+      <img src="http://bit.ly/ebtxQx" alt="Android System Architecture"  />
     </p>
     
     <h2>

@@ -14,7 +14,7 @@ introduction: "Introducción al nuevo protocolo de Google"
 main-class: "security-now"
 color: "#2DA0C3"
 ---
-<img src="/assets/img/2013/07/Qué-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" alt="Qué es QUIC, el nuevo protocolo desarrollado por Google" width="468" height="239" class="thumbnail aligncenter size-full wp-image-1763" />
+<img src="/assets/img/2013/07/Qué-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" alt="Qué es QUIC, el nuevo protocolo desarrollado por Google"  class="thumbnail aligncenter size-full wp-image-1763" />
 
 Escuchando el podcast <a href="http://twit.tv/show/security-now/411" target="_blank">#411</a> de [security now!][1] Steve habló del protocolo *QUIC*, que está desarrollando Google y pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña **FAQ (Frequently Asked Questions)** en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de *QUIC*, el nombre original del documento es **QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that)**, aquí dejo la tabla de contenidos:
 

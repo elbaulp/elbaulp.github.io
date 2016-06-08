@@ -58,7 +58,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://www.studentmarket.ro/405.html"><img src="http://media02.hongkiat.com/error_404_01/studentmarket.jpg" width="500" height="441" title="60 Really Cool and Creative Error 404 Pages" alt="studentmarket 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://www.studentmarket.ro/405.html"><img src="http://media02.hongkiat.com/error_404_01/studentmarket.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="studentmarket 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
@@ -66,7 +66,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://www.catswhocode.com/blog/404"><img src="http://media02.hongkiat.com/error_404_01/catswhocode.jpg" width="500" height="396" title="60 Really Cool and Creative Error 404 Pages" alt="catswhocode 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://www.catswhocode.com/blog/404"><img src="http://media02.hongkiat.com/error_404_01/catswhocode.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="catswhocode 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
@@ -74,7 +74,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://www.limpfish.com/notfound.html"><img src="http://media02.hongkiat.com/error_404_01/limpfish.jpg" width="500" height="436" title="60 Really Cool and Creative Error 404 Pages" alt="limpfish 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://www.limpfish.com/notfound.html"><img src="http://media02.hongkiat.com/error_404_01/limpfish.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="limpfish 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
@@ -82,7 +82,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://www.ferdaze.com/errors/401/"><img src="http://media02.hongkiat.com/error_404_01/ferdaze.jpg" width="500" height="396" title="60 Really Cool and Creative Error 404 Pages" alt="ferdaze 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://www.ferdaze.com/errors/401/"><img src="http://media02.hongkiat.com/error_404_01/ferdaze.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="ferdaze 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
@@ -90,7 +90,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://scar.atspace.org/404.html"><img src="http://media02.hongkiat.com/error_404_01/atspace.jpg" width="500" height="298" title="60 Really Cool and Creative Error 404 Pages" alt="atspace 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://scar.atspace.org/404.html"><img src="http://media02.hongkiat.com/error_404_01/atspace.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="atspace 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
@@ -98,7 +98,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://amorphia-apparel.com/404.html"><img src="http://media02.hongkiat.com/error_404_01/amorphia-apparel.jpg" width="500" height="366" title="60 Really Cool and Creative Error 404 Pages" alt="amorphia apparel 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://amorphia-apparel.com/404.html"><img src="http://media02.hongkiat.com/error_404_01/amorphia-apparel.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="amorphia apparel 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
@@ -106,15 +106,15 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
   </p>
   
   <p>
-    <a href="http://www.acme.com/missing.html"><img src="http://media02.hongkiat.com/error_404_01/acme.jpg" width="500" height="240" title="60 Really Cool and Creative Error 404 Pages" alt="acme 60 Really Cool and Creative Error 404 Pages" /></a>
+    <a href="http://www.acme.com/missing.html"><img src="http://media02.hongkiat.com/error_404_01/acme.jpg"  title="60 Really Cool and Creative Error 404 Pages" alt="acme 60 Really Cool and Creative Error 404 Pages" /></a>
   </p>
   
   <p>
-    <a href="http://codesense.com.au/404"><img src="http://hongki.at/assets/img/error_404_01/http-www.codesense.com.au404.jpg" width="500" height="351" title="49 Nice And Creative Error 404 Pages" alt="http www.codesense.com.au404 49 Nice And Creative Error 404 Pages" /></a>
+    <a href="http://codesense.com.au/404"><img src="http://hongki.at/assets/img/error_404_01/http-www.codesense.com.au404.jpg"  title="49 Nice And Creative Error 404 Pages" alt="http www.codesense.com.au404 49 Nice And Creative Error 404 Pages" /></a>
   </p>
   
   <p>
-    <a href="http://www.project-euh.com/404/"><img src="http://hongki.at/assets/img/error_404_01/www.project-euh.com404.jpg" width="500" height="351" title="49 Nice And Creative Error 404 Pages" alt="www.project euh.com404 49 Nice And Creative Error 404 Pages" /></a>
+    <a href="http://www.project-euh.com/404/"><img src="http://hongki.at/assets/img/error_404_01/www.project-euh.com404.jpg"  title="49 Nice And Creative Error 404 Pages" alt="www.project euh.com404 49 Nice And Creative Error 404 Pages" /></a>
   </p>
 </div>
 

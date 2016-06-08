@@ -19,14 +19,14 @@ tags:
 main-class: "dev"
 main-class: "android"
 ---
-[<img src="/assets/img/2013/06/monkey-phone-300x269.jpg" alt="isUserAMonkey Android" width="300" height="269" class="alignleft size-medium wp-image-1681" />][1]  
+[<img src="/assets/img/2013/06/monkey-phone-300x269.jpg" alt="isUserAMonkey Android"  class="alignleft size-medium wp-image-1681" />][1]  
 Todos sabemos el humor que gastan chicos de Google, y a raiz de una pregunta en *<a href="http://stackoverflow.com/questions/13375357/proper-use-cases-for-android-usermanager-isuseragoat" target="_blank">stackoverflow</a>* descubrí que la documentación de Android tiene unos cuantos toques de humor de los de Mountain View. Así que decidí buscarlos y crear la siguiente recopilación:
 
 ### isUserAGoat()
 
 Abriremos la recopilación con la pregunta en stackoverflow, la cual tuvo bastante éxito como se puede apreciar en los votos:
 
-<img src="/assets/img/2013/06/UserManager.isuseragoat.png" alt="UserManager.isuseragoat" width="741" height="253" class="thumbnail aligncenter size-full wp-image-1680" />  
+<img src="/assets/img/2013/06/UserManager.isuseragoat.png" alt="UserManager.isuseragoat"  class="thumbnail aligncenter size-full wp-image-1680" />  
   
 <!--ad-->
 

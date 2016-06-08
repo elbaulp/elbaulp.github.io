@@ -18,7 +18,7 @@ main-class: "dev"
 
 Esta vez vamos a hacer las cosas al revés, en el vídeo se muestra el resultado de la aplicación. Permite realizar presentaciones, ya sean _PDFs_ o _Power Points_ mediante la detección de gestos del usuario. Por defecto el esqueleto aparece en rojo. Esto significa que el procesamiento de gestos está desactivado. Mediante un pequeño gesto, se activa y el esqueleto se vuelve verde. A partir de ahora, doblando el codo derecho, avanzaremos una transparencia, mientras que con el codo izquierdo retrocedemos.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Ws7lxY2jPUE" frameborder="0" allowfullscreen></iframe>
+<iframe  src="https://www.youtube.com/embed/Ws7lxY2jPUE" frameborder="0" allowfullscreen></iframe>
 
 El código está en [github](https://github.com/algui91/grado_informatica_npi), y la práctica la hemos realizado Cristina H.G y Alejandro Alcalde.
 {: .notice-info }

@@ -15,7 +15,7 @@ main-class: "dev"
 main-class: "php"
 ---
 <figure>
-  <img src="/assets/img/2012/08/4041.jpg" alt="" title="404" width="256" height="197" class="alignleft size-full wp-image-902" />
+  <img src="/assets/img/2012/08/4041.jpg" alt="" title="404"  class="alignleft size-full wp-image-902" />
 </figure>
 
 El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.

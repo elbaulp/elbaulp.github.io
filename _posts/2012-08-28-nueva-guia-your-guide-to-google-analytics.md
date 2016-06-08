@@ -18,7 +18,7 @@ tags:
 main-class: "dev"
 main-class: "cursos"
 ---
-[<img src="/assets/img/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="246" height="300" class="alignleft size-medium wp-image-925" />][1]
+[<img src="/assets/img/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics"  class="alignleft size-medium wp-image-925" />][1]
 
 Do you own a website or a blog? If so, do you have any idea how many visitors you get each day? And even if you’ve installed a counter and you’ve figured out how to gauge your traffic, do you have any idea where your visitors are coming from, what browsers most of them use, what search engines they use, or which of your pages is the most popular?
 

@@ -24,7 +24,7 @@ format: link
 main-class: "dev"
 main-class: "Enlaces de la semana"
 ---
-[<img class="aligncenter size-medium wp-image-889" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300" height="225" />][1]
+[<img class="aligncenter size-medium wp-image-889" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt=""  />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.
 

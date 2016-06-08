@@ -20,7 +20,7 @@ color: "#2DA0C3"
 > El anterior espisodio traducido fué [Lo último en criptografía: Fully Homomorphic Encryption][1]
 
 <figure>
-<img src="/assets/img/2012/12/linkentrada2-300x300.png" alt="QR Code" width="300" height="300" class="thumbnail alignleft size-medium wp-image-1063" />
+<img src="/assets/img/2012/12/linkentrada2-300x300.png" alt="QR Code"  class="thumbnail alignleft size-medium wp-image-1063" />
 </figure>
 
 Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.
@@ -34,13 +34,13 @@ La característica más prominente del QR Code son los tres cuadrados que aparec
 <!--ad-->
 
 <figure>
-<img src="/assets/img/2012/12/qrbaultargetdownright2.png" alt="qrbaultargetdownright" width="280" height="280" class="thumbnail aligncenter size-full wp-image-1060" />
+<img src="/assets/img/2012/12/qrbaultargetdownright2.png" alt="qrbaultargetdownright"  class="thumbnail aligncenter size-full wp-image-1060" />
 </figure>
 
 Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un <a href="http://es.wikipedia.org/wiki/Ciclo_de_trabajo" target="_blank">ciclo de trabajo del 50%</a>. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.
 
 <figure>
-<img src="/assets/img/2012/12/qrbaulinnercorners2.png" alt="qrbaulinnercorners" width="280" height="280" class="thumbnail aligncenter size-full wp-image-1061" />
+<img src="/assets/img/2012/12/qrbaulinnercorners2.png" alt="qrbaulinnercorners"  class="thumbnail aligncenter size-full wp-image-1061" />
 </figure>
 
 El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.
@@ -56,7 +56,7 @@ Los diseñadores prestaron mucha atención a la corrección de errores, y desarr
 El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:
 
 <figure>
-<img src="/assets/img/2012/12/Custom_QR_code_Wikipedia2.png" alt="Custom_QR_code_Wikipedia" width="564" height="396" class="thumbnail aligncenter size-full wp-image-1062" />
+<img src="/assets/img/2012/12/Custom_QR_code_Wikipedia2.png" alt="Custom_QR_code_Wikipedia"  class="thumbnail aligncenter size-full wp-image-1062" />
 </figure>
 
 A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.

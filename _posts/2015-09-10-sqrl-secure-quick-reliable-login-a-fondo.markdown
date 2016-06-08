@@ -134,4 +134,4 @@ Esto en esencia es SQRL, bastante prometedor. A continuación dejo el episodio d
 
 Documentación oficial SQRL | [gcr.com](https://www.grc.com/sqrl/sqrl.htm)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hsotcaizGjM" frameborder="0" allowfullscreen></iframe>
+<iframe  src="https://www.youtube.com/embed/hsotcaizGjM" frameborder="0" allowfullscreen></iframe>

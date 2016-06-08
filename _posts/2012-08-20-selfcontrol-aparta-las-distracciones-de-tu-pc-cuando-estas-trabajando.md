@@ -26,7 +26,7 @@ tags:
 main-class: "dev"
 main-class: "aplicaciones"
 ---
-[<img class="alignleft size-full wp-image-893" title="selfcontrol" src="/assets/img/2012/08/selfcontrol11.png" alt="" width="192" height="192" />][1]
+[<img class="alignleft size-full wp-image-893" title="selfcontrol" src="/assets/img/2012/08/selfcontrol11.png" alt=""  />][1]
 
 Es fácil distraerse cuando estás sentado enfrente de un ordenador, sobre todo cuando se tienen pocas ganas de trabajar. Leyendo mi RSS encontré una aplicación que puede llegar a ser muy útil si te distras fácilmente; SelfControl.
 
@@ -54,7 +54,7 @@ Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y 
 <!--ad-->
 
   
-[<img class="aligncenter size-full wp-image-894" title="Selfcontro1" src="/assets/img/2012/08/Selfcontro11.png" alt="" width="415" height="378" />][2]
+[<img class="aligncenter size-full wp-image-894" title="Selfcontro1" src="/assets/img/2012/08/Selfcontro11.png" alt=""  />][2]
 
 Donde aparecen las webs bloqueadas, una entrada de texto para añadir las páginas a bloquear y por cuanto tiempo.
 

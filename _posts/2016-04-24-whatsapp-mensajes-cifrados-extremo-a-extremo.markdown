@@ -123,4 +123,4 @@ Para quien quiera seguir leyendo sobre el tema:
 - [Artículo sobre Seguridad asíncrona en whispersystems.org](https://whispersystems.org/blog/asynchronous-security/ "Artículo sobre Seguridad asíncrona en whispersystems.org")
 - [Artículo sobre OTR en whispersystems.org](https://whispersystems.org/blog/simplifying-otr-deniability/ "Artículo sobre OTR en whispersystems.org")
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/tFzAMEye9Dk?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe  src="https://www.youtube-nocookie.com/embed/tFzAMEye9Dk?rel=0" frameborder="0" allowfullscreen></iframe>

@@ -15,7 +15,7 @@ main-class: "dev"
 main-class: "noticias"
 ---
 <p dir="ltr">
-  <a href="/assets/img/2012/09/moborobo-feature-image-1204261.jpg"><img class="aligncenter size-full wp-image-955" title="moborobo-feature-image-120426" src="/assets/img/2012/09/moborobo-feature-image-1204261.jpg" alt="" width="600" height="300" /></a>
+  <a href="/assets/img/2012/09/moborobo-feature-image-1204261.jpg"><img class="aligncenter size-full wp-image-955" title="moborobo-feature-image-120426" src="/assets/img/2012/09/moborobo-feature-image-1204261.jpg" alt=""  /></a>
 </p>
 
 <p dir="ltr">

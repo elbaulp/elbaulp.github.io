@@ -15,7 +15,7 @@ tags:
 main-class: "dev"
 main-class: "articulos"
 ---
-<img src="/assets/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png" alt="El uso de contraseñas en una evolución tecnológica" width="350" height="274" class="alignleft size-full wp-image-1283" />
+<img src="/assets/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png" alt="El uso de contraseñas en una evolución tecnológica"  class="alignleft size-full wp-image-1283" />
 
 Hoy os traigo un artículo sobre la gran problemática que hay entorno a las contraseñas, y es que, por todos es conocido que usar contraseñas débiles puede comprometer cualquier sistema informático. A continuación resumo un artículo muy interesante que leí en **The Hacker News**.
 

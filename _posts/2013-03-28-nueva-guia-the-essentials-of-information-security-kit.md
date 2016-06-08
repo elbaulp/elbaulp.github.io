@@ -15,7 +15,7 @@ tags:
 main-class: "dev"
 main-class: "cursos"
 ---
-[<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook" width="200" height="259" class="alignleft size-full wp-image-1497" />][1]
+[<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook"  class="alignleft size-full wp-image-1497" />][1]
 
 Download this security kit to learn everything you need to know about Information Security.
 

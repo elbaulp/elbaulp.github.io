@@ -19,7 +19,7 @@ tags:
 main-class: "dev"
 main-class: "articulos"
 ---
-<img alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256" height="256" />
+<img alt="" src="/assets/img/2012/07/Java.png" class="alignleft"  />
 
 ** La propuesta de *SAP-steered* aporta OpenJDK a nuevas plataformas**
 

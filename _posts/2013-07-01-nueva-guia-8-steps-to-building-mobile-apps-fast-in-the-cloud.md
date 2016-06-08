@@ -20,7 +20,7 @@ tags:
 main-class: "dev"
 main-class: "cursos"
 ---
-[<img src="/assets/img/2013/07/8-Steps-to-Building-Mobile-Apps-Fast-in-the-Cloud-300x1431.png" alt="8 Steps to Building Mobile Apps Fast in the Cloud" width="300" height="143" class="alignleft size-medium wp-image-1706" />][1]
+[<img src="/assets/img/2013/07/8-Steps-to-Building-Mobile-Apps-Fast-in-the-Cloud-300x1431.png" alt="8 Steps to Building Mobile Apps Fast in the Cloud"  class="alignleft size-medium wp-image-1706" />][1]
 
 Start turning your ideas into mobile apps with the 8 Steps to Building Mobile Apps Fast in the Cloud guide, learn how to:
 

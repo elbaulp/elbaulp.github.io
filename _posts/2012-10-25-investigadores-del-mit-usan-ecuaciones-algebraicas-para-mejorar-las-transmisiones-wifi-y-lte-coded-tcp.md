@@ -22,7 +22,7 @@ main-class: "Informatica"
 ---
 
 <figure>
-  <img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/assets/img/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="207" height="259" />
+  <img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/assets/img/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP"  />
 </figure>
 
 Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione.

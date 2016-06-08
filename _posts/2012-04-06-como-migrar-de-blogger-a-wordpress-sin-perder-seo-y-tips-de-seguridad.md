@@ -40,7 +40,7 @@ Hecho esto, debemos conceder permisos a blogger para que deje a wordpress accede
 </p>
 
 <p style="text-align: left;">
-  <a href="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png"><img class="aligncenter size-full wp-image-695" title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613" height="98" /></a>
+  <a href="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png"><img class="aligncenter size-full wp-image-695" title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt=""  /></a>
 </p>
 
 <p style="text-align: left;">

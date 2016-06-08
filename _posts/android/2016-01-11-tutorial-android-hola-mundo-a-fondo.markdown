@@ -18,7 +18,7 @@ image: android/layouthelloworldandroid.png
 En el [artículo anterior](/android/conceptos-basicos/) se dieron unas nociones básicas de Android, sus componentes principales etc. En este artículo examinaremos a fondo una aplicación muy simple. Se componone de dos pantallas, en una de ellas se pide al usuario que introduzca un texto, dicho texto se enviará a otra pantalla. He aquí el resultado:
 
 <figure>
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/WZLHJ9kuYQE" frameborder="0" allowfullscreen></iframe>
+  <iframe  src="https://www.youtube.com/embed/WZLHJ9kuYQE" frameborder="0" allowfullscreen></iframe>
 </figure>
 
 <!--ad-->

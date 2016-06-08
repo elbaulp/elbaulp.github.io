@@ -85,7 +85,7 @@ Por ejemplo, supongamos que quieres encontrar a **google.com**. Tu resolver pide
 Así, el servidor root envia la petición a un servidor COM. Éste último servidor dice: “*No tengo esa información, pero sé de un servidor de nombres que sí, tiene dirección 173.194.34.6 y nombre ns1.google.com. Dirígete a esa dirección y te dirá la dirección del sitio web google.com.”*
 
 <figure>
-  <img alt="Esquema servidores DNS" src="/assets/img/2013/02/dns.png" width="513" height="399" />
+  <img alt="Esquema servidores DNS" src="/assets/img/2013/02/dns.png"  />
 </figure>
 
 En la figura de arriba, la parte superior izquierda representa los servidores root. En la jerga DNS, éstos servidores reprensentan el comienzo del camino en el sistema DNS. Suelen representarse con un punto (“.”). En los archivos de configuración, el mapeo entre IP y nombre acabará en un punto. A lo largo de esta series de artículos quedará más claro este concepto.
@@ -101,7 +101,7 @@ En la figura 2, *named* ha recibido una petición. Busca en su fichero de config
 <div style="width: 421px">
 
 <figure>
-  <img alt="Figura 2 - Respondiendo a una petición" src="/assets/img/2013/02/config.png" width="411" height="185" />
+  <img alt="Figura 2 - Respondiendo a una petición" src="/assets/img/2013/02/config.png"  />
 </figure>
   <p>
     Figura 2 &#8211; Respondiendo a una petición

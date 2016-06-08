@@ -32,7 +32,7 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
   
 <!--ad-->
 
-[<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/assets/img/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros" width="500" height="335" />][1]
+[<img class="aligncenter size-medium wp-image-4232" title="Chuletas Linux" src="http://www.muylinux.com/assets/img/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros"  />][1]
 
 <a href="http://files.fosswire.com/2007/08/fwunixref.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuF8zBeSIII/AAAAAAAACBk/KHhhymZj7LY/Linux-Cheat-sheets.png" alt="Linux Cheat sheets 25 chuletas para linuxeros" /></a>
 

@@ -70,7 +70,7 @@ Donde:
 A continuación os dejo un vídeo de uno de mis repositorios:
 
 <figure>
-  <iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen></iframe>
+  <iframe  src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen></iframe>
 </figure>
 
  [1]: https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"

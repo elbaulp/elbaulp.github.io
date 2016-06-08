@@ -58,7 +58,7 @@ author.setMovementMethod(LinkMovementMethod.getInstance());
 ```
 
 Con el código anterior se consigue el comportamiento deseado:  
-[<img src="/assets/img/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android" width="180" height="300" class="aligncenter size-medium wp-image-1547" />][3]{.thumbnail}
+[<img src="/assets/img/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android"  class="aligncenter size-medium wp-image-1547" />][3]{.thumbnail}
 
 Los dos primeros enlaces están creados con el método `setMovementMethod()`, los otros dos con `android:autoLink="web"`.
 

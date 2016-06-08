@@ -14,7 +14,7 @@ tags:
 main-class: "dev"
 main-class: "cursos"
 ---
-<a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100/prgm.cgi" target="_blank"><img src="/assets/img/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar" width="199" height="259" class="alignleft size-full wp-image-2383" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100/prgm.cgi" target="_blank"><img src="/assets/img/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar"  class="alignleft size-full wp-image-2383" /></a>
 
 Be the IT expert for yourself by using these tools to strengthen the security of your systems.
 

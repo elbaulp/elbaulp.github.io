@@ -12,7 +12,7 @@ tags:
 main-class: "dev"
 main-class: "php"
 ---
-<img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress" width="231" height="228" class="thumbnail alignleft size-full wp-image-1757" />  
+<img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress"  class="thumbnail alignleft size-full wp-image-1757" />  
 En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.
 
 
