@@ -8,7 +8,7 @@
 <header class="header-post" role="banner">
      <div class="content">
         {% if page.date %}
-            <time datetime="{{ page.date | date_to_xmlschema }}" class="date">{{ page.date | date_to_string }}</time>
+            <time datetime="{% if page.modified %}{{ page.modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}" class="date">{% if page.modified %}{{ page.modified | date_to_string }}{% else %}{{ page.date | date_to_string }}{% endif %}</time>
         {% endif %}
         <h1 class="post-title">{{ page.title }}</h1>
         <p class="subtitle">{{ page.description }}</p>
