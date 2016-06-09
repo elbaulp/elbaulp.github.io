@@ -6,8 +6,8 @@ layout: post
 guid: /?p=802
 permalink: /un-poco-de-circuitos-registros-y-generadores-de-secuencia/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Informatica
 tags:
@@ -16,8 +16,7 @@ tags:
   - logic works
   - registros
 format: video
-main-class: "dev"
-main-class: "Informatica"
+main-class: "articulos"
 ---
 Repasando hoy para un examen que tengo próximamente de TOC (Tecnología y Organización de Computadores) se me ha ocurrido grabar algunos de los ejercícios que estaba haciendo por si le son de interés a alguien.
 
@@ -41,7 +40,7 @@ Dependiendo del valor de las entradas Y1 e Y0 que aparecen en la izquierda, se r
   11: No hace nada, mantiene los valores tal y como están.
 </p>
 
-Antes de nada decir que es el primer vídeo que edito y no ha salido demasiado bien, pido disculpas. 
+Antes de nada decir que es el primer vídeo que edito y no ha salido demasiado bien, pido disculpas.
 
 <span class='embed-youtube' style='text-align:center; display: block;'></span>
 

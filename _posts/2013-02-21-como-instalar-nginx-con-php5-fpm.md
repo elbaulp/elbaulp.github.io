@@ -15,13 +15,12 @@ tags:
   - nginx
   - php-fpm
   - servidor web
-main-class: "dev"
 main-class: "servidores"
 ---
 <img src="/assets/img/2013/02/nginx-logo.png" alt="instalar y configurar nginx"  class="thumbnail alignleft size-full wp-image-1377" />  
 Nginx (Pronunciado engine-x) es un <a href="https://elbauldelprogramador.com/?q=servidor" target="_blank">servidor</a> HTTP de alto rendimiento, gratuito, [software libre][1] y <a href="https://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso" target="_blank">proxy inverso</a>, así como un servidor proxy <a href="https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol" target="_blank">IMAP</a>/<a href="https://es.wikipedia.org/wiki/Post_Office_Protocol" target="_blank">POP3</a>. Desarrollado por Igor Sysoev. Acualmente el <a href="http://news.netcraft.com/archives/2012/01/03/january-2012-web-server-survey.html" target="_blank">12.18%</a> de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.
 
-  
+
 <!--ad-->
 
 ### Instalando dependencias
@@ -91,7 +90,7 @@ $ sudo chown root:root /etc/init.d/nginx
 
 En el tercer comando otorgamos permiso de ejecución al [script][2], con el cuarto hacemos al usuario root propietario del mismo.
 
-Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los [runlevel][3] correspondientes: 
+Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los [runlevel][3] correspondientes:
 
 ```bash
 # update-rc.d nginx defaults
@@ -121,40 +120,40 @@ Sustituimos la configuración por defecto por esta:
 ```bash
 user  www-data;
 worker_processes  1;
- 
+
 pid        /var/run/nginx.pid;
- 
+
 error_log  logs/error.log;
 
 events {
     worker_connections  1024;
 }
- 
+
 http {
     include       mime.types;
     default_type  application/octet-stream;
- 
+
     gzip on;
     gzip_buffers 16 8k;
     gzip_disable "MSIE [1-6]\.";
     gzip_proxied any;
     gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
- 
+
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
- 
+
     access_log  logs/access.log  main;
- 
+
     sendfile        on;
     keepalive_timeout  3;
     index              index.html index.htm;
- 
+
     server {
         listen       80;
         server_name localhost;
         root html;
- 
+
  access_log  logs/host.access.log  main;
 
         # Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
@@ -163,9 +162,9 @@ http {
                 access_log off;
                 log_not_found off;
         }
- 
+
     }
- 
+
 }
 
 ```
@@ -232,35 +231,35 @@ Para lograr que nginx interprete php, hay que hacer algunas modificaciones a la 
 ```bash
 user  www-data;
 worker_processes  1;
- 
+
 pid        /var/run/nginx.pid;
- 
+
 error_log  logs/error.log;
- 
+
 events {
     worker_connections  1024;
 }
- 
+
 http {
     include       mime.types;
     default_type  application/octet-stream;
- 
+
     gzip on;
     gzip_buffers 16 8k;
     gzip_disable "MSIE [1-6]\.";
     gzip_proxied any;
     gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
- 
+
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
- 
+
     access_log  logs/access.log  main;
- 
+
     sendfile        on;
     keepalive_timeout  3;
     index              index.php index.html index.htm;
- 
+
     upstream php {
         server 127.0.0.1:9000;
     }
@@ -269,9 +268,9 @@ http {
         listen       80;
         server_name localhost;
         root html;
- 
+
   access_log  logs/host.access.log  main;
- 
+
         # Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
         location ~ /\. {
                 deny all;

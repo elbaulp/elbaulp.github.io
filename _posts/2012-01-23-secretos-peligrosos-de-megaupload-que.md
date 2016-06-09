@@ -5,30 +5,11 @@ title: MegaUpload Dangerous Secrets affect YOU, Mike Mozart JeepersMedia ACTA _ 
 layout: post
 guid: http://elbauldelprogramador.org/megaupload-dangerous-secrets-affect-you-mike-mozart-jeepersmedia-acta-_-pipa-_-sopa/
 permalink: /secretos-peligrosos-de-megaupload-que/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551735}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551735}'
-share_count:
-  - 0
-  - 0
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
-En este vídeo se explica lo qué puede pasarle a los usuarios que descargaron o subieron archivos con copyright usando megaupload, ya que en estos momentos todos los registros y archivos están en posesión del gobierno de Estados Unidos.</p> 
+En este vídeo se explica lo qué puede pasarle a los usuarios que descargaron o subieron archivos con copyright usando megaupload, ya que en estos momentos todos los registros y archivos están en posesión del gobierno de Estados Unidos.</p>
 
 At minute 4:38 the video&#8217;s author says he grant permissions for spread the video in the whole internet.
 
@@ -69,7 +50,7 @@ RIAA Sues Family with NO Computer and NO Internet Access
 http://www.afterdawn.com/news/article.cfm/2006/04/25/riaa\_lawsuit\_hits\_family\_with\_no\_computer\_or\_internet_access  
 RIAA &#8220;Settles&#8221; with Family with No Computer  
 http://www.afterdawn.com/news/article.cfm/2009/06/21/woman\_with\_no\_computer\_settles\_with\_riaa\_over\_piracy_claim  
-Data Shows RIAA Employees Pirated   
+Data Shows RIAA Employees Pirated
 http://www.dslreports.com/shownews/Data-Shows-Piracy-at-DHS-RIAA-Headquarters-117549  
 RIAA Demands to Depose Dead Defendant&#8217;s Young Children  
 http://www.youtube.com/redirect?q=http%3A%2F%2Frecordingindustryvspeople.blogspot.com%2F2006%2F08%2Friaa-wants-to-depose-dead-defendants.html&session_token=BD8Yt72k-Lt7-ncyDkVMDAMl7218MTMyNzM1NjM5NkAxMzI3MjY5OTk2  

@@ -5,24 +5,6 @@ title: 'Programación Android: Intents &#8211; Conceptos básicos'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-intents-conceptos-basicos/
 permalink: /programacion-android-intents-conceptos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551706}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551706}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
@@ -31,7 +13,6 @@ tags:
   - curso android pdf
   - ejemplo intentfilter implicito
   - uso de intents android
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -40,7 +21,7 @@ main-class: "android"
 
 Un intent sirve para invocar componentes, en android entendemos por componentes las [activities,][1] Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y [proveedores de contenido][2], código que abstráe los datos.
 
-  
+
 <!--ad-->
 
 ### Introducción a los Intents
@@ -101,7 +82,7 @@ if (intent == null){
 
 ### Intents disponibles en Android
 
-En <a target="_blank" href="http://developer.android.com/guide/appendix/g-app-intents.html">developer.android.com/guide/appendix/g-app-intents.html</a> se puede encontrar una lista con las aplicaciones disponibles en Android junto con los intents que las invocan. Por ejemplo, para el navegador web, tenemos dos acciones, **VIEW ** y **WEB_SEARCH**, que abren el navegador en una url específica o realizan una búsqueda. 
+En <a target="_blank" href="http://developer.android.com/guide/appendix/g-app-intents.html">developer.android.com/guide/appendix/g-app-intents.html</a> se puede encontrar una lista con las aplicaciones disponibles en Android junto con los intents que las invocan. Por ejemplo, para el navegador web, tenemos dos acciones, **VIEW ** y **WEB_SEARCH**, que abren el navegador en una url específica o realizan una búsqueda.
 
 En el caso del dialer (marcador), tenemos las acciones CALL y DIAL, que vienen dadas por la URI *tel:numero\_de\_teléfono*, la diferencia entre estas dos acciones, es que CALL realiza la llamada al número de la URI, y DIAL solo lo marca, pero no realiza la llamada.
 
@@ -124,7 +105,7 @@ public static void dial(Activity activity){
    Intent intent = new Intent(Intent.ACTION_DIAL);
    activity.startActivity(intent);
 }
-   
+
 public static void call(Activity activity){
    Intent intent = new Intent(Intent.ACTION_CALL);
    intent.setData(Uri.parse("tel:555-555-555"));

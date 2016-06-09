@@ -12,7 +12,6 @@ tags:
   - asm
   - Ingenieria inversa
 main-class: "dev"
-main-class: "C"
 ---
 <img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba"  class="thumbnail aligncenter size-full wp-image-1048" />
 
@@ -31,7 +30,7 @@ La tarea consiste en aplicar ingeniería inversa usando herramientas como objdum
 
 Ambas contraseñas pueden estar ocultas, es decir, haciendo operaciones de suma y resta a la contraseña para cambiar su valor y que no sea visible directamente mientras se depura el programa o haciendo uso de un editor hexadecimal como bless. La forma de ocultarlas queda a elección de cada uno, eso sí, está prohibido usar [algoritmos de cifrado][2].
 
-Hoy con esta entrada te animo a que intentes descubrir las contraseñas de mi programa. Cualquier comentario que publique la contraseña será moderado hasta que termine el plazo de la práctica de clase, por razones obvias ;-). 
+Hoy con esta entrada te animo a que intentes descubrir las contraseñas de mi programa. Cualquier comentario que publique la contraseña será moderado hasta que termine el plazo de la práctica de clase, por razones obvias ;-).
 
 Cuando finalice este plazo, publicaré el código fuente y todos los comentarios, junto con alguna explicación de los programas que haya conseguido descifrar.
 

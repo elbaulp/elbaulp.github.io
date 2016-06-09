@@ -14,14 +14,13 @@ tags:
   - instalar android studio
   - manuales android studio
   - tutorial android studio
-main-class: "dev"
 main-class: "android"
 ---
 <img src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio"  class="thumbnail alignleft size-full wp-image-1567" />  
 Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en <a href="http://developer.android.com/sdk/installing/studio.html" target="_blank">developer.android.com</a>. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.
 
 Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos el el fichero *studio.sh*, que se encuentra en la carpeta *bin*. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:  
-  
+
 <!--ad-->
 
 ### Instalar el JDK de ORACLE en Linux desde repositorio
@@ -87,97 +86,97 @@ Para terminar os dejo unas cuantas combinaciones de teclas para ahorrar tiempo a
     <th>
       Action
     </th>
-    
+
     <th>
       Android Studio Key Command
     </th>
   </tr>
-  
+
   <tr>
     <td>
       Command look-up (autocomplete command name)
     </td>
-    
+
     <td>
       CTRL + SHIFT + A
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Project quick fix
     </td>
-    
+
     <td>
       ALT + ENTER
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Reformat code
     </td>
-    
+
     <td>
       CTRL + ALT + L (Win)<br /> OPTION + CMD + L (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Show docs for selected API
     </td>
-    
+
     <td>
       CTRL + Q (Win)<br /> F1 (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Show parameters for selected method
     </td>
-    
+
     <td>
       CTRL + P
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Generate method
     </td>
-    
+
     <td>
       ALT + Insert (Win)<br /> CMD + N (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Jump to source
     </td>
-    
+
     <td>
       F4 (Win)<br /> CMD + down-arrow (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Delete line
     </td>
-    
+
     <td>
       CTRL + Y (Win)<br /> CMD + Backspace (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Search by symbol name
     </td>
-    
+
     <td>
       CTRL + ALT + SHIFT + N (Win)<br /> OPTION + CMD + O (Mac)
     </td>
@@ -189,47 +188,47 @@ Para terminar os dejo unas cuantas combinaciones de teclas para ahorrar tiempo a
     <th>
       Action
     </th>
-    
+
     <th>
       Android Studio Key Command
     </th>
   </tr>
-  
+
   <tr>
     <td>
       Build
     </td>
-    
+
     <td>
       CTRL + F9 (Win)<br /> CMD + F9 (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Build and run
     </td>
-    
+
     <td>
       SHIFT + F10 (Win)<br /> CTRL + R (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Toggle project visibility
     </td>
-    
+
     <td>
       ALT + 1 (Win)<br /> CMD + 1 (Mac)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Navigate open tabs
     </td>
-    
+
     <td>
       ALT + left-arrow; ALT + right-arrow (Win)<br /> CTRL + left-arrow; CTRL + right-arrow (Mac)
     </td>
@@ -242,7 +241,7 @@ Aunque Android Studio está todavía en desarrollo, promete mucho y voy a empeza
 
 #### Referencias
 
-*Instalar JDK en Debian* »» <a href="http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html" target="_blank">webupd8</a> 
+*Instalar JDK en Debian* »» <a href="http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html" target="_blank">webupd8</a>
 
 
 

@@ -14,11 +14,10 @@ tags:
   - chuleta comandos dig
   - chuleta dig
   - estado DNS
-main-class: "dev"
 main-class: "servidores"
 ---
 **Dig (Domain Information Groper)** es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &#8212; entre otras cosas &#8212; para el diagnóstico de [Servidores DNS][1]. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.  
-  
+
 <!--ad-->
 
 #### [Actualización]
@@ -150,7 +149,7 @@ Puedes encontrar una descripción un poco más extensa sobre el funcionamiento d
 
 #### Referencias
 
-*dig – Linux DNS Lookup utility cheat sheet* »» <a href="http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet" target="_blank">linuxaria</a> 
+*dig – Linux DNS Lookup utility cheat sheet* »» <a href="http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet" target="_blank">linuxaria</a>
 
 
 

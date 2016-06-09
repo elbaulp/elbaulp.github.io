@@ -13,7 +13,6 @@ tags:
   - navegar anonimamente
   - Tor
 author: luzila
-main-class: "dev"
 main-class: "articulos"
 ---
   * [Logrando el anonimato con Tor (Parte 1)][1]

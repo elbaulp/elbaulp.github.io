@@ -13,12 +13,11 @@ tags:
   - vulnerability
   - Vulnerable
   - web application
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img class="size-medium wp-image-1108 alignleft" title="discovering vulnerable web applications" alt="discovering-vulnerable-web-applications" src="/assets/img/2013/01/discovering-vulnerable-web-applications2-197x300.png"  />][1]
 
-Vulnerabilities in web applications are a major vector for cybercrime. In large organizations, vulnerable web applications comprised 54% of all hacking breaches and led to 39% of compromised records, according to the 2012 Data Breach Investigation Report by Verizon Business. 
+Vulnerabilities in web applications are a major vector for cybercrime. In large organizations, vulnerable web applications comprised 54% of all hacking breaches and led to 39% of compromised records, according to the 2012 Data Breach Investigation Report by Verizon Business.
 
 This paper describes how large enterprises can effectively discover, catalog and scan web applications to control this major risk vector as part of their organization’s overall vulnerability management program.
 

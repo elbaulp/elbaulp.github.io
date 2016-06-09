@@ -19,8 +19,7 @@ tags:
   - debian en android
   - samsung galaxy scl gti9003
   - xda
-main-class: "dev"
-main-class: "android"
+main-class: "articulos"
 ---
 <img class="alignleft size-full wp-image-1038" title="linux-apps-on-android" src="/assets/img/2012/12/linux-apps-on-android1.jpg" alt=""  />
 
@@ -32,10 +31,10 @@ Se trata de un programa que permitirá tener un sistema debian básico en el dis
 **Paso 2: **Para conseguir que tu dispositivo sea aún más poderoso, instala <a href="https://play.google.com/store/apps/details?id=com.botbrew.basil" target="_blank">BostBrew Basil</a>, esta aplicación inicializa el sistema base y permite manejar la instalación de paquetes mediante Dpkg y Apt en lugar de Opkg. Permitiendo instalar algunos paquetes linux.
 
 **Paso 3: **Instalar los paquetes necesarios  
-  
+
 <!--ad-->
 
-  
+
 Conectamos el teléfono al pc mediante adb con `./adb shell` y ejecutamos los comandos de **botbrew** así:
 
 ```bash
@@ -73,9 +72,9 @@ Instalados los compiladores, podemos ejecutar aplicaciones escritas en C/C++, pr
 #include <iostream>
 
 int main(){
-   std::cout << "Hola mundo!" << std::endl;   
+   std::cout << "Hola mundo!" << std::endl;
    std::cout << "Compilado y ejecutado desde Android" << std::endl;
-   return 0; 
+   return 0;
 }
 
 ```

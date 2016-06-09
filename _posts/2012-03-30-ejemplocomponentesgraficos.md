@@ -5,22 +5,6 @@ title: 'Programación Android: Interfaz gráfica &#8211; Componentes gráficos y
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-componentes-graficos-y-eventos/
 permalink: /programacion-android-interfaz-grafica_25/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /programacion-android-interfaz-grafica_25/
-  - /programacion-android-interfaz-grafica_25/
-  - /programacion-android-interfaz-grafica_25/
-fsb_social_twitter:
-  - 0
-fsb_social_facebook:
-  - 3
 categories:
   - android
   - opensource
@@ -34,7 +18,6 @@ tags:
   - interfaz grafica en android
   - layout android
   - menu android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

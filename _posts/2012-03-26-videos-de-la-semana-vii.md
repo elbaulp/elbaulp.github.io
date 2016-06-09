@@ -5,31 +5,9 @@ title: Vídeos de la semana (VII)
 layout: post
 guid: http://elbauldelprogramador.org/videos-de-la-semana-vii/
 permalink: /videos-de-la-semana-vii/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-if_slider_image:
-  - 
-  - 
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"1","twitter":1,"plusone":1,"stumble":0,"pinit":0,"count":3,"time":1333551677}'
-  - '{"like_count":"0","share_count":"1","twitter":1,"plusone":1,"stumble":0,"pinit":0,"count":3,"time":1333551677}'
-share_count:
-  - 0
-  - 0
 categories:
   - video de la semana
-main-class: "dev"
-main-class: "video de la semana"
+main-class: "geek"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
@@ -43,8 +21,8 @@ Un vídeo realmente profundo, sobre un pastor al que le diagnosticaron ALS (amyo
 
 *It ain&#8217;t over * es el primero de la serie Ed&#8217;s Story. Ed Dobson nos recuerda que la vida no se ha acabado aún y que no debemos sentirnos agobiados por las luchas a las que nos enfrentamos día a día. Las dificultades que nos sobrevienen pueden en ocasiones hacernos sentir que nuestra vida ha acabado. Ed nos muestra que no conocemos el futuro, y que las cosas pueden resultar muy diferentes a lo que esperamos.
 
-  
-  
+
+
 <!--ad-->
 
 ### Arctic Motion

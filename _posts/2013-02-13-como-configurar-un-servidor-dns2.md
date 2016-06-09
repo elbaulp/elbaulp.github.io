@@ -35,7 +35,6 @@ tags:
   - servidores dns
   - soa correo
 image: 2013/04/dns.jpg
-main-class: "dev"
 main-class: "servidores"
 ---
 <figure>

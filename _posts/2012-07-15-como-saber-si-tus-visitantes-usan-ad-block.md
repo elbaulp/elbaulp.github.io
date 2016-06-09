@@ -11,8 +11,7 @@ tags:
   - anuncios
   - javascript
 modified: 2016-02-07T09:33:22+01:00
-main-class: "dev"
-main-class: "How To"
+main-class: "articulos"
 ---
 
 [<img class="alignleft size-full wp-image-831" title="adblock-plus-logo" src="/assets/img/2012/07/adblock-plus-logo11.png" alt=""  />][1]  

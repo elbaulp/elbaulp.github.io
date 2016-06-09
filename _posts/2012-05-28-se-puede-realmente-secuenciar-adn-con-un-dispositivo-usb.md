@@ -13,7 +13,6 @@ tags:
   - pendrive
   - secuenciar ADN
   - usb
-main-class: "dev"
 main-class: "articulos"
 ---
 [<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION"  class="aligncenter size-full wp-image-754" />][1]  

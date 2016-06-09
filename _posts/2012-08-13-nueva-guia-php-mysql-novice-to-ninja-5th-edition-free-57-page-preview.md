@@ -6,8 +6,8 @@ layout: post
 guid: /?p=872
 permalink: /nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - cursos
   - noticias
@@ -15,8 +15,7 @@ tags:
   - mysql
   - php
   - programación
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2012/08/w_sitb33c1.gif" alt="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" title="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview"  class="alignleft size-full wp-image-873" />][1]
 

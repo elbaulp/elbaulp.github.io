@@ -5,30 +5,11 @@ title: 'Nueva guía: Ubuntu: An Absolute Beginner’s Guide'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-ubuntu-an-absolute-beginners-guide/
 permalink: /nueva-guia-ubuntu-absolute-beginners/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551709}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551709}'
-share_count:
-  - 0
-  - 0
 categories:
   - cursos
   - linux
   - SO
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make72/prgm.cgi"><img style="border:none;"  src="https://lh5.googleusercontent.com/-pOL8x3wV9cE/Tzk33Qbuj7I/AAAAAAAACEk/2VSVxrYjFeU/s640/ubuntu-large.jpg" title="Ubuntu: An Absolute Beginner’s Guide" alt="Ubuntu: An Absolute Beginner’s Guide" /></a>

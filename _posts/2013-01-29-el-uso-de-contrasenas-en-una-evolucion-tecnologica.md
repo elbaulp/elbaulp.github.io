@@ -12,7 +12,6 @@ tags:
   - deloitte
   - la evolucion de las contraseñas tecnologicas
   - the hacker news
-main-class: "dev"
 main-class: "articulos"
 ---
 <img src="/assets/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png" alt="El uso de contraseñas en una evolución tecnológica"  class="alignleft size-full wp-image-1283" />
@@ -29,10 +28,10 @@ El informe se centra en la necesidad de reconsiderar la forma de gestionar contr
 
 > *”Las contraseñas con al menos ocho caracteres, un número, mezcla de mayúsculas y minúsculas y símbolos no alfanuméricos parecieran ser robustas hace algún tiempo. Pero pueden ser fácilmente crackeadas con la aparición de software y hardware avanzado.”*
 
-  
+
 <!--ad-->
 
-  
+
 ”*Lo ideal sería usar contraseñas largas y verdaderamente aleatorias, pero la gente no las usaría”, *dijo Stewart.
 
 > *”Una contraseña de ocho caracteres elegida de entre los 94 caracteres disponibles en un teclado estándar es una de las *6,095,689,385,410,816* combinaciones posibles. Un ordenador relatívamente rápido del 2011 tardaría aproximadamente un año en probar todas las combinaciones. Si se tratara de averiguar la contraseña de una tarjeta de crédito, no compensaría el tiempo de cómputo. Sin embargo, un número de factores relativos al comportamiento humano y cambios en la tecnología, se han combinado para hacer a las contraseñas **fuertes **vulnerables.”*
@@ -97,7 +96,7 @@ Si estás interesado en saber más acerca de este tema puede que te interesen lo
 
 #### Referencias
 
-*thehackernews.com* »» <a href="http://thehackernews.com/2013/01/the-use-of-passwords-in-technological.html" target="_blank">Visitar sitio</a> 
+*thehackernews.com* »» <a href="http://thehackernews.com/2013/01/the-use-of-passwords-in-technological.html" target="_blank">Visitar sitio</a>
 
 
 

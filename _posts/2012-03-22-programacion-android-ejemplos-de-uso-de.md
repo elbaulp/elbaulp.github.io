@@ -5,27 +5,6 @@ title: 'Programación Android &#8211; Ejemplo de uso de ACTION_PICK'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-ejemplo-de-uso-de-action_pick/
 permalink: /programacion-android-ejemplos-de-uso-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-if_slider_image:
-  - 
-  - 
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551680}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551680}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
@@ -36,7 +15,6 @@ tags:
   - como filtrar un action_pick
   - curso android pdf
   - startactivityforresult android example
-main-class: "dev"
 main-class: "android"
 ---
 La idea de ACTION_PICK es lanzar una actividad que muestre una liste de objetos a seleccionar para que el usuario elija uno de ellos. Una vez elegido, la actividad devuelve la URI del elemento elegido. Así se permite reusar la interfaz gráfica.
@@ -47,7 +25,7 @@ Se debe indicar usando MIME types la colección de datos que vamos a usar, el cu
 vnd.android.cursor.dir/vnd.favsites.site
 ```
 
-  
+
 <!--ad-->
 
 LA actividad es la encargada de recuperar los datos desde el [CV][1] basandose en la URI.
@@ -78,7 +56,7 @@ public static void invokePick(Activity activity)
 protected void onActivityResult(int requestCode
    ,int resultCode
    ,Intent outputIntent)
-{ 
+{
    //Llamamos a super para informar a la clase padre que la llamada a la actividad a finalizado
    super.onActivityResult(requestCode, resultCode, outputIntent);
    IntentsUtils.parseResult(this, requestCode, resultCode, outputIntent);
@@ -97,11 +75,11 @@ public static void parseResult(MainActivity activity
       Log.d("test", "ResultCode no es OK: " + resultCode);
       return;
    }
-   
+
    Log.d("Test", "Resulcode es OK:" + resultCode);
-   Uri selectedUri = outputIntent.getData(); 
+   Uri selectedUri = outputIntent.getData();
    Log.d("test", "La uri de salida:" + selectedUri.toString());
-   
+
    //Mostramos la nota
    outputIntent.setAction(Intent.ACTION_VIEW);
    startActivity(outputIntent);
@@ -112,7 +90,7 @@ public static void parseResult(MainActivity activity
 Las constantes **RESTULT\_OK, RESULT\_CANCEL Y RESULT\_FIRST\_USER** están definidas en la clase de la Actividad y sus respectivos valores son:
 
 ```java
-RESTULT_OK         = -1; 
+RESTULT_OK         = -1;
 RESULT_CANCEL      =  0;  
 RESULT_FIRST_USER  =  1;
 

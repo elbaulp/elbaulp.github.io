@@ -5,18 +5,6 @@ title: Resultados examen PL/SQL base de datos
 layout: post
 guid: http://elbauldelprogramador.org/resultados-examen-plsql-base-de-datos/
 permalink: /resultados-examen-plsql-base-de-datos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:

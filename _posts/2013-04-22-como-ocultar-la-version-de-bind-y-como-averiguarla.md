@@ -14,14 +14,13 @@ tags:
   - ocultar version de bind
   - seguridad en bind
   - usar fpdns
-main-class: "dev"
 main-class: "servidores"
 ---
 <img src="/assets/img/2013/04/dns-300x240.jpg" alt="Cómo ocultar la versión de BIND (Y como averiguarla)"  class="thumbnail alignleft size-medium wp-image-1533" />  
 Realizando un análisis en *<a href="http://www.dnsinspect.com" target="_blank">dnsInspect</a>* me dí cuenta de que el servidor estaba mostrando la versión de [BIND][1], lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.
 
 Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos **[dig][2]** para ello:  
-  
+
 <!--ad-->
 
 ```bash
@@ -41,7 +40,7 @@ Esto no es más que **seguridad mediante oscuridad**, ya que aunque se oculte la
 Abrimos el fichero de configuración de **BIND**, concretamente */etc/bind/named.conf.options* y añadimos la siguiente línea:
 
 ```bash
-version "Texto a mostrar"; 
+version "Texto a mostrar";
 ```
 
 Guardamos el fichero y reiniciamos **BIND**:
@@ -75,7 +74,7 @@ fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
 
 #### Referencias
 
-*Cybercity* »» <a href="http://www.cyberciti.biz/faq/hide-bind9-dns-sever-version/" target="_blank">Visitar sitio</a> 
+*Cybercity* »» <a href="http://www.cyberciti.biz/faq/hide-bind9-dns-sever-version/" target="_blank">Visitar sitio</a>
 
 
 

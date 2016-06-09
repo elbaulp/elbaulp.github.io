@@ -5,27 +5,6 @@ title: Ocultar/Revelar información dentro de imágenes con C++
 layout: post
 guid: http://elbauldelprogramador.org/ocultarrevelar-informacion-dentro-de-imagenes-con-c/
 permalink: /ocultarrevelar-informacion-dentro-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-if_slider_image:
-  - 
-  - 
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551685}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551685}'
-share_count:
-  - 0
-  - 0
 categories:
   - aplicaciones
   - C
@@ -33,11 +12,8 @@ tags:
   - esconder informacion en imagen
   - ocultar texto en imagen
 main-class: "dev"
-main-class: "aplicaciones"
 ---
-<
-
-div class=&#8221;separator&#8221; style=&#8221;clear: both; text-align: center;&#8221;>  
+<div class=&#8221;separator&#8221; style=&#8221;clear: both; text-align: center;&#8221;>  
 <img border="0" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 El jueves pasado me mandaron hacer una práctica en MP (Metodología de la Programación) que consiste en la inserción y extracción de un mensaje &#8216;oculto&#8217; en una imagen.
@@ -127,7 +103,7 @@ Una vez terminado el programa, se me ocurrió trastear un poco con la informaci�
 Por ejemplo, si para cada pixel invertimos sus valores, es decir, cambiar 0 por 1 y 1 por 0, obtenemos una imagen en negativo:
 
 ```cpp
-//Esto va dentro de un bucle que recorre todos los pixeles de la imagen, 
+//Esto va dentro de un bucle que recorre todos los pixeles de la imagen,
 //ambas sentencias son equivalentes
 buffer[i] ^= 0xff;      //igual que buffer[i] = buffer[i] ^ 0xff
 buffer[i] = ~buffer[i]; //igual que buffer[i] = ~buffer[i]

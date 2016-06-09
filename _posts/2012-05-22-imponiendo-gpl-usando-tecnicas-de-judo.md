@@ -6,8 +6,8 @@ layout: post
 guid: /?p=737
 permalink: /imponiendo-gpl-usando-tecnicas-de-judo/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Articulos
   - opensource
@@ -16,7 +16,6 @@ tags:
   - licencias GPL
   - software libre
 format: status
-main-class: "dev"
 main-class: "articulos"
 ---
 *&#8220;En judo, el objetivo es aprovechar el impulso del atacante para defenderse, y eso es exactamente lo que hace el copyleft&#8221;*
@@ -34,10 +33,10 @@ Bradley Kuhn toma una analogía de las artes marciales, y dice que &#8220;copyle
 El software libre permite el acceso al trabajo de miles de programadores, es relativamente libre de costo, y elimina la necesidad de reinventar la rueda una y otra vez. Compartir el código es útil para todos, al menos en teoría.
 
 Sin embargo, la aplicación del copyleft depende de la voluntad de los proveedores de software GPL para cumplir con los términos de la licencia, y/o la voluntad de los titulares del copyright para actuar en defensa de la GPL. Y por diversas razones los términos de la GPL son a menudo ignorados por los distribuidores de software libre y los titulares del copyright no siempre están dispuestos a involucrarse.  
-  
+
 <!--ad-->
 
-  
+
 El único requisito de la GPL es que el código fuente sea accesible a los usuarios finales, pero este requisito se olvida con frecuencia, especialmente cuando el código se reutiliza en el firmware y dispositivos embebidos.
 
 Los fabricantes de dispositivos móviles operan en un entorno que cambia rápidamente, con ciclos de producción cortos y un menor *time-to-market* (tiempo de lanzamiento al mercado). Los productos dominantes del año anterior ya están obsoletos, y los márgenes son muy cortos. El mercado es altamente competitivo, y cada nuevo producto llega al mercado con una nueva gama de características. En este contexto, liberar el código fuente, y arriesgarse a exponer los &#8220;secretos comerciales&#8221; de la compañía para un producto que puede ser de relativamente corta duración, es un riesgo trivial si se compara con las ventajas que se derivan del uso de Linux y otros con licencia GPL software, especialmente cuando se recuerda que es sólo el código GPL que tiene que ser puesto a disposición de los demás (en un sitio web, o por otros medios) -, pero cumpliendo con la GPL es bajo en la lista de prioridades.
@@ -59,7 +58,7 @@ La mayoría de las infracciones no son deliberadas, y probablemente pueden ser a
 Harald Welte tiene su propia perspectiva sobre este tema. &#8220;Creo que todavía hay demasiadas violaciones a la GPL, y necesitamos ver más casos positivos con el fin de obtener mayoría de involucrados en el cumplimiento en las respectivas líneas de negocio. Pero lidiar con los dispositivos embebidos en el 2012 y seguir obteniendo el cumplimiento totalmente mal aplicado en realidad significa que no ha habido la más mínima atención en este tema. Y sin refuerzos, nunca va a cambiar. Las personas que no están realmente interesadas deben utilizar simplemente licencias del estilo del MIT. &#8221;  
 
 
-## 
+##
 
 ## Los implementadores
 

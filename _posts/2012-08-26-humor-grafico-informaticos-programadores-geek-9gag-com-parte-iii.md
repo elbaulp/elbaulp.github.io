@@ -12,8 +12,7 @@ categories:
   - Humor
   - offtopic
 format: gallery
-main-class: "dev"
-main-class: "Humor"
+main-class: "Geek"
 ---
 Otra recopilación de humor gráfico, para cerrar este domingo de verano.
 

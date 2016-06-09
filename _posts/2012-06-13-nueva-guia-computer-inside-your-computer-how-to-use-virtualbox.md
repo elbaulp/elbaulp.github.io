@@ -5,17 +5,13 @@ title: 'Nueva Guía: Computer Inside Your Computer: How To Use VirtualBox'
 layout: post
 guid: /?p=781
 permalink: /nueva-guia-computer-inside-your-computer-how-to-use-virtualbox/
-if_slider_image:
-  -
-  -
 categories:
   - cursos
   - noticias
 tags:
   - virtualbox
 description: "Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware."
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 <figure>
   <img style="border:none;"  class="aligncenter size-full wp-image-782" src="/assets/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />

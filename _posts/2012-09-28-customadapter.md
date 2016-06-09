@@ -21,7 +21,6 @@ tags:
   - listview setlistadapter español
   - manual android parcelable
   - simple adapter android ejemplo
-main-class: "dev"
 main-class: "android"
 ---
 Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3].
@@ -42,10 +41,10 @@ Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
   <em>Un ImageView que mostrará un iconito de un calendario.</em>
 </p>
 
-  
+
 <!--ad-->
 
-  
+
 Terminada, la aplicación de prueba debe quedar algo así:
 
 <p style="text-align: center;">
@@ -71,7 +70,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:focusable="false" />
-            
+
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
@@ -129,7 +128,7 @@ public class PostData implements Parcelable {
         this.leido = checked;
 
    }
-   
+
     public PostData(Parcel in){
      this.titulo= in.readString();
        this.fecha_publicacion = in.readString();
@@ -289,7 +288,7 @@ public class PostAdapter extends BaseAdapter
 
           convertViewCounter++;
             Log.v(TAG, convertViewCounter + " convertViews have been created");
-            
+
             holder = new ViewHolder();
 
           holder.tvFecha_pub = (TextView) convertView
@@ -492,7 +491,7 @@ public void onCreate(Bundle savedInstanceState) {
       data.add(new PostData("11/11/2012", "Personalizar el Error 404 en wordpress" , false));
       data.add(new PostData("18/11/2012", "Humor gráfico – Informáticos, Programadores, geek… – 9GAG.COM Parte (III)" , false));
       data.add(new PostData("25/11/2012", "Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras" , false));
-          
+
       adapter = new PostAdapter(MainActivity.this, data);
    } else {
       data = savedInstanceState.getParcelableArrayList("savedData");

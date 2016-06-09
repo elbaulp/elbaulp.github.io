@@ -5,24 +5,6 @@ title: 'Programación Android: Intents &#8211; Categorías'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-intents-categorias/
 permalink: /programacion-android-intents-categorias/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551702}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551702}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
@@ -30,7 +12,6 @@ tags:
   - android ejemplo intent filter
   - curso android pdf
   - ejemplo intentfilter implicito
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -47,7 +28,7 @@ android.intent.category.LAUNCHER
 
 La forma de declarar las categorías en el AndroidManifest es la siguiente:
 
-  
+
 <!--ad-->
 
 ```xml

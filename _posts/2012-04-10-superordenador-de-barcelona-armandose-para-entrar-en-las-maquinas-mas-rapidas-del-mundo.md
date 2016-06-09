@@ -5,15 +5,6 @@ title: Superordenador de Barcelona ARMándose para entrar en las máquinas más 
 layout: post
 guid: /?p=707
 permalink: /superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/
-if_slider_image:
-  - 
-  - 
-sif_eo_description:
-  - El centro de Superordenadores de Barcelona está construyendo uno de los ordenadores de alto rendimiento más verdes del planeta, pero si Alex Ramirez consigue su objetivo, podría ser también uno de los más potentes.
-  - El centro de Superordenadores de Barcelona está construyendo uno de los ordenadores de alto rendimiento más verdes del planeta, pero si Alex Ramirez consigue su objetivo, podría ser también uno de los más potentes.
-if_seo_keywords:
-  - green500, top500, superordenadores, supercomputadores españoles, barcelona
-  - green500, top500, superordenadores, supercomputadores españoles, barcelona
 categories:
   - Articulos
   - noticias
@@ -22,7 +13,6 @@ tags:
   - green500
   - supercomputadores
   - top500
-main-class: "dev"
 main-class: "articulos"
 ---
 **Hace unos meses os hablé del [El top 500 de los supercomputadores más potentes del mundo][1], y hoy os traigo una entrada traducida por mi compañero Haitike sobre este tema:**
@@ -31,7 +21,7 @@ El centro de Superordenadores de Barcelona está construyendo uno de los <a href
 
 Ramirez, un director del centro, es la mente tras la construcción del nuevo superordenador, llamado Mont-Blanc, que usará el mismo tipo de chips de baja potencia que puede encontrarse en tabletas y smartphones hoy en día. Comenzando el próximo mes, su equipo comenzará a montar el primer prototipo del Mont-Blanc usando procesadores nvidia Tegra3 en lugar de los procesadores RISC o compatibles con Intel x86 que son usados en prácticamente todos los superordenadores actuales. Tegra 3 , manejará las comunicaciones entre las diferentes partes del sistema mientras el cálculo de numeros será hecho por procesadores gráficos multinucleo Nvidia de baja potencia aún por determinar, pero similares a la <a href="http://www.geforce.com/hardware/notebook-gpus/geforce-gt-520mx" target="_blank">GeForce 520MX</a>.
 
-  
+
 <!--ad-->
 
 Para Junio, Ramirez planea realizar los benchmarks de la ampliamente seguida <a href="http://top500.org/" target="_blank">Lista Top500 de superordenadores</a>, que mide los resultados del benchmark de supercomputación conocido como Linpack. Aún así Ramirez ha dicho que tiene sus ojos en otro objetivo: <a href="http://www.green500.org/" target="_blank">La lista de los 500 más verdes</a>. Esta lista clasifica los ordenadores por eficiencia, en lugar de por rendimiento puro. &#8220;Esperamos estar en el top 10 ahí&#8221; dice Ramirez.
@@ -54,19 +44,19 @@ Pero para tomar ventaja de esta próxima generación de chips, el equipo de Barc
   <p>
     El sistema rondará <a href="http://www.eesi-project.eu/media/BarcelonaConference/Day2/13-Mont-Blanc_Overview.pdf" target="_blank">probablemente el rango de los 200 Petaflop</a>, unas 20 veces la potencia del superordenador con mayor ptencia del mundo actualmente, el <a href="http://www.wired.com/wiredenterprise/2011/11/japanese_megamachine/" target="_blank">Japan’s K Computer.</a>
   </p>
-  
+
   <p>
     A pesar de toda esta excitación acerca del Mont-Blanc en el mundo de la supercomputación, ARM es crítica con el proyecto. Ve grandes beneficios en los smartphones y tabletas que los consumidores le están comprando, no en supeordenadores.
   </p>
-  
+
   <p>
     El mes pasado, el presidente de ARM &#8220;Simon Segars&#8221; nos contó en Barcelona que el proyecto de Superordenador era &#8220;interesante&#8221;, pero menospreció el mercado de la supercomputación. &#8220;Los superordenadores no son un mercado de alto volumen para ARM&#8221; dijo, &#8220;No es algo de lo que hablamos mucho. Nuestro negocio está basado en las ventas de unidades, por lo que estamos interesados en mercados de alto volumen&#8221;.
   </p>
-  
+
   <p>
     Fuente Original: <a href="http://www.wired.com/wiredenterprise/2012/04/barcelona" target="_blank">http://www.wired.<wbr>com/wiredenterprise/2012/04/</wbr><wbr>barcelona</wbr></a>
   </p>
-  
+
   <p>
     Autor: Robert McMillan con contribuciones de Cade Metz.
   </p>

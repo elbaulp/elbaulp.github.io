@@ -6,8 +6,8 @@ layout: post
 guid: /?p=756
 permalink: /como-crear-shortcodes-en-wordpress-2/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - How To
   - php
@@ -18,7 +18,6 @@ tags:
   - wordpress shortcodes
 format: aside
 main-class: "dev"
-main-class: "How To"
 ---
 Es bastante simple:
 

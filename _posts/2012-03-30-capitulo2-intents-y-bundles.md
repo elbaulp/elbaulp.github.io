@@ -5,22 +5,6 @@ title: 'Programación Android: Trabajar con actividades y pasar parámetros entr
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-trabajar-con-actividades-y-pasar-parametros-entre-ellas/
 permalink: /programacion-android-trabajar-con/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /programacion-android-trabajar-con/
-  - /programacion-android-trabajar-con/
-  - /programacion-android-trabajar-con/
-fsb_social_twitter:
-  - 0
-fsb_social_facebook:
-  - 1
 categories:
   - android
   - opensource
@@ -29,20 +13,19 @@ tags:
   - android view setonclicklistener example
   - curso android pdf
   - startactivityforresult android example
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el conocido [Hola Mundo][1], en esta entrada, vamos a ver como crear varias [actividades][2] y cómo hacer que se pasen parámetros las unas a las otras.
 
-El proyecto con este ejemplo está disponible para su descarga (Comentado paso a paso): 
+El proyecto con este ejemplo está disponible para su descarga (Comentado paso a paso):
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/capitulo2-intents-y-bundles/" rel="nofollow"> Download &ldquo;Capitulo2 Intents Y Bundles&rdquo; <small>capitulo2_intents_y_bundles.zip &ndash; Downloaded 1272 times &ndash; </small> </a>
 
 Voy a explicar un poco por encima que hace cada fichero del proyecto:
 
-  
+
 <!--ad-->
 
 ### ./res/layout/main.xml
@@ -50,23 +33,23 @@ Voy a explicar un poco por encima que hace cada fichero del proyecto:
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
 <linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" 
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
- 
- <textview android:id="@+id/textView1" 
+
+ <textview android:id="@+id/textView1"
            android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
+    android:layout_height="wrap_content"
     android:text="@string/hello" />
-  
- <button android:id="@+id/button1" 
+
+ <button android:id="@+id/button1"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
+    android:layout_height="wrap_content"
     android:text="@string/cadena1" />
-    
- <button android:id="@+id/button2" 
+
+ <button android:id="@+id/button2"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
+    android:layout_height="wrap_content"
     android:text="@string/cadena2" />
 </linearlayout>
 
@@ -80,25 +63,25 @@ En este layout principal vamos a añadir dos botones que nos servirán para lanz
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
 <linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
- android:orientation="vertical" 
+ android:orientation="vertical"
  android:layout_width="fill_parent"
  android:layout_height="fill_parent">
- 
- <textview android:id="@+id/textView1" 
+
+ <textview android:id="@+id/textView1"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
+    android:layout_height="wrap_content"
     android:text="@string/cadena1" />
-  
- <textview android:id="@+id/params" 
+
+ <textview android:id="@+id/params"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
+    android:layout_height="wrap_content"
     android:text="@string/hello" />
-  
- <button android:id="@+id/boton" 
+
+ <button android:id="@+id/boton"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
+    android:layout_height="wrap_content"
     android:text="@string/cadena1" />
-  
+
 </linearlayout>
 
 
@@ -127,7 +110,7 @@ public class mainActivity extends Activity {
    public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.main);
-      
+
       // Capturamos los objetos gráficos que vamos a usar
       Button button1 = (Button) findViewById(R.id.button1);
       Button button2 = (Button) findViewById(R.id.button2);
@@ -140,19 +123,19 @@ public class mainActivity extends Activity {
             startActivity(intent);
          }
       });
-      
+
       //button2 pasará parámetros a otra actividad, y los devolverá
       button2.setOnClickListener(new OnClickListener() {
          public void onClick(View v) {
             Intent intent = new Intent(mainActivity.this, ParametrosActivity.class);
-            
+
             // damos valor al parámetro a pasar
             intent.putExtra("param1", "valor del parámetro 1 (viene de mainActivity)");
             /*
              * Inicia una actividad que devolverá un resultado cuando
              * haya terminado. Cuando la actividad termina, se llama al método
              * onActivityResult() con el requestCode dado.
-             * El uso de un requestCode negativo es lo mismo que llamar a 
+             * El uso de un requestCode negativo es lo mismo que llamar a
              * startActivity(intent) (la actividad no se iniciará como una
              * sub-actividad).
              */
@@ -204,17 +187,17 @@ public class Activity1 extends Activity {
    public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.segunda_actividad);
-      
+
       // Capturamos los objetos gráficos que vamos a usar
       TextView text = (TextView) findViewById(R.id.textView1);
       Button button = (Button) findViewById(R.id.boton);
-      
+
       // Agregamos al textView un texto
       text.setText(R.string.cadena1);
-      
+
       // Cambiamos el texto al botón
       button.setText(R.string.salir);
-      
+
       // Evento onclick del botón, cuando se pulse, cerramos la actividad
       button.setOnClickListener(new OnClickListener() {
          public void onClick(View v) {
@@ -248,16 +231,16 @@ public class ParametrosActivity extends Activity {
       // TODO Auto-generated method stub
       super.onCreate(savedInstanceState);
       setContentView(R.layout.segunda_actividad);
-      
+
       // Capturamos los objetos gráficos que vamos a usar
       TextView text = (TextView) findViewById(R.id.textView1);
       Button button = (Button) findViewById(R.id.boton);
       TextView params = (TextView) findViewById(R.id.params);
-      
+
       text.setText(R.string.cadena2);
 
       button.setText(R.string.salir);
-      
+
       //Al pulsar el botón cerramos la ventana y volveremos a la anterior
       button.setOnClickListener(new OnClickListener() {
          public void onClick(View v) {
@@ -265,7 +248,7 @@ public class ParametrosActivity extends Activity {
             returnParams();
          }
       });
-      
+
       // Mostramos los parámetros recibidos de la actividad mainActivity
       Bundle reicieveParams = getIntent().getExtras();
       params.setText(reicieveParams.getString("param1"));

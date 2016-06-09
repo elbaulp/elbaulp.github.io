@@ -24,7 +24,7 @@ categories:
   - noticias
   - opensource
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 <div class="icoso">
 </div>

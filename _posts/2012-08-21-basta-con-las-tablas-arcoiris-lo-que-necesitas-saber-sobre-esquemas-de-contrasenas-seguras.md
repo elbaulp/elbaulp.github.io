@@ -17,7 +17,6 @@ tags:
   - rainbow tables
   - rainbow tables como funciona
   - srp protocolo
-main-class: "dev"
 main-class: "articulos"
 ---
 <p style="text-align: center;">

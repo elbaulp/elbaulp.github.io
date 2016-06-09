@@ -14,7 +14,6 @@ tags:
   - Algoritmo Dijkstra
   - prim java algoritmo
 main-class: "dev"
-main-class: "Algoritmos"
 ---
 Para hablar de este tipo de algoritmos, tengo que hacer una breve introducción a lo que es un grafo y cómo se representa en un ordenador.
 
@@ -25,10 +24,10 @@ Existen diferentes implementaciones del tipo grafo: con una matriz de adyacencia
 Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo, siendo los elementos de la matriz la relación entre los mismos, tomando los valores de 1 si existe la arista y 0 en caso contrario.
 
 [<img src="/assets/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia"  class="aligncenter size-full wp-image-980" />][1]{.thumbnail}  
-  
+
 <!--ad-->
 
-  
+
 &nbsp;
 
 Una vez dicho esto, existen algoritmos que se dedican a buscar el camino mas corto en un espacio, entre dos puntos dado, el coger un camino u otro conlleva un valor de mas o menos alto, es decir no es lo mismo ir del nodo 1 al nodo 3 con un valor de 5 unidades(metros), que ir del nodo 1 pasando por el 2 y llegando al 3 teniendo 4 unidades(metros), es preferible coger el que tenga menos coste, para que sea el valor mas corto. Es decir que el problema consiste en encontrar un camino entre dos vértices (o nodos) de tal manera que la suma de los pesos de las aristas que lo constituyen es mínima. Un ejemplo es encontrar el camino más rápido para ir de una ciudad a otra en un mapa. En este caso, los vértices representan las ciudades, y las aristas las carreteras que las unen, cuya ponderación viene dada por el tiempo que se emplea en atravesarlas.
@@ -50,23 +49,23 @@ El **algoritmo de Dijkstra** consiste en ir explorando todos los caminos más co
 #include <fstream>
 #include "grafo_heap.h"
 using namespace std;
- 
+
 grafo obtenerGrafo (char * nombre){
     int tam;                            //Tamaño del grafo (número de nodos)
     int peso;                       //El peso de cada nodo
    const int TOPE_LEC = 1000;   //Tamaño máximo que va a leer en cada linea.
    char vector_aux[TOPE_LEC];   //Vector que almacenará el contenido de cada linea.
 //Contador de las lineas, puesto que la que nos interesa es la 4 y seguir hasta las 7
-   int cont_line=0;            
+   int cont_line=0;
    char * c;            //Variable que almacenará el tamaño de la matriz de adyacencia.
- 
+
    ifstream fichero;// Abro el fichero.
    fichero.open(nombre);
    if(!fichero){
        cerr << "Se ha producido un error al abrir el fichero: " << nombre;
        exit(1);
    }
- 
+
 //Recorro hasta quedarme en la linea 7 para
 //despues leer directamente la matriz de adyacencia
    while (cont_line < 7){
@@ -77,22 +76,22 @@ grafo obtenerGrafo (char * nombre){
            tam = atoi(c);
        }
    }
-    
- 
+
+
    grafo G(tam);      //Creo el grafo con el tamaño.
-    
+
     //Asigno los pesos dados por la matriz de adyacencia
    for (int i = 0; i < tam; i++)
        for (int j = 0; j < tam; j++){
            fichero >> peso;  G.asignar_peso(i,j,peso);
        }
-    
+
    fichero.close();
-    
+
    return G;
 }
- 
- 
+
+
 void dijkstra(grafo & G, vertice s){
     vertice u;
     vector<vertice> P(G.size(), -1);      //Vector de soluciones.
@@ -100,11 +99,11 @@ void dijkstra(grafo & G, vertice s){
     heap Q(G.size());
     D[s]=0; //La distancia hasta el mismo es cero.
     P[s] = s; //Su camino es el mismo.
- 
+
     for (vertice i = 0 ; i < G.size() ; i++ )
  //Relleno el heap.
         Q.insert(D[i],i);
- 
+
     //Para cada nodo actualizo su peso buscando y lo introduzco en el heap actualizado
     while (!Q.empty()) {
         u = Q.erase_min().second;
@@ -117,31 +116,31 @@ void dijkstra(grafo & G, vertice s){
             }
         }
     }
- 
+
     //Mostramos el vector D de distancia.
     cout << "El vector de distancias es:n";
     for (vertice i = 0 ; i < G.size() ; i++ )
         cout << D[i] << " - ";
- 
+
     //Mostramos el vector P de distancia.
     cout << "nnEl vector de soluciones es:n";
     for (vertice i = 0 ; i < G.size() ; i++ )
         cout << P[i] << " - ";
- 
- 
+
+
 }
- 
- 
- 
+
+
+
 int main(int argc,char** argv){
- 
+
   grafo G(obtenerGrafo(argv[1]));
- 
+
   vertice org=3;
   cout << "Tamaño del Grafo"  << G.size() << endl;
   cout << "Llamo a Dijkstra (origen) " << org <<  endl << endl << endl;
   dijkstra(G,org);
- 
+
 }
 
 ```

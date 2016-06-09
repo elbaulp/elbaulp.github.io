@@ -11,8 +11,7 @@ categories:
 tags:
   - aplicaciones android
   - moborobo
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 <p dir="ltr">
   <a href="/assets/img/2012/09/moborobo-feature-image-1204261.jpg"><img class="aligncenter size-full wp-image-955" title="moborobo-feature-image-120426" src="/assets/img/2012/09/moborobo-feature-image-1204261.jpg" alt=""  /></a>
@@ -22,7 +21,7 @@ main-class: "noticias"
   Moborobo es un pc suite que te ayuda a controlar tu terminal Android tanto vía WiFi como USB. Es una combinación de software de sincronización y tienda de recursos de Android (dispone de aplicaciones, juegos, fondos de pantalla y temas). Sólo hace falta descargar e instalar el programa en el pc y conectarlo al teléfono. Así podrás mantener tus datos importantes o personales en el ordenador.
 </p>
 
-  
+
 <!--ad-->
 
 <p dir="ltr">

@@ -26,8 +26,7 @@ tags:
   - ss
   - tc iproute2 debian
   - UDP
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "linux"
 ---
 <img src="/assets/img/2012/07/sh1.png" alt="sh"  class="thumbnail alignleft size-full wp-image-836" />El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
 
@@ -38,12 +37,12 @@ Para situarnos en contexto, **netstat** forma parte de las comúnmente llamadas 
 A día de hoy la mayoría de distribuciones traen **iproute** instalado por defecto.
 
 Veamos algunos de los comandos más útiles que nos ofrece este relativamente “*nuevo*” conjunto de comandos:  
-  
+
 <!--ad-->
 
 ### Obtener información sobre TCP/UDP y Sockets
 
-Aquí entra en acción el comando **ss**, sustituto de **netstat**. Este comando está incluido en el paquete **iproute2**. 
+Aquí entra en acción el comando **ss**, sustituto de **netstat**. Este comando está incluido en el paquete **iproute2**.
 
 La función de **ss** es mostrar estadísticas de los sockets, mostrar información similar a netstat. Además, revela más información sobre TCP que otras herramientas. Las opciones más usadas son:
 
@@ -91,13 +90,13 @@ Algunos ejemplos prácticos:
 
 ```bash
 $ ss -l
-State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port   
-LISTEN     0      128                                                           :::sunrpc                                                         :::*       
-LISTEN     0      128                                                            *:sunrpc                                                          *:*       
-LISTEN     0      20                                                           ::1:smtp                                                           :::*       
-LISTEN     0      20                                                     127.0.0.1:smtp                                                            *:*       
-LISTEN     0      128                                                            *:17500                                                           *:*       
-LISTEN     0      128                                                            *:43076                                                           *:*       
+State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port
+LISTEN     0      128                                                           :::sunrpc                                                         :::*
+LISTEN     0      128                                                            *:sunrpc                                                          *:*
+LISTEN     0      20                                                           ::1:smtp                                                           :::*
+LISTEN     0      20                                                     127.0.0.1:smtp                                                            *:*
+LISTEN     0      128                                                            *:17500                                                           *:*
+LISTEN     0      128                                                            *:43076                                                           *:*
 LISTEN     0      128                                                           :::50925                                                          :::*
 
 ```
@@ -108,8 +107,8 @@ Para entender el significado de las columnas, puedes dirigirte al artículo de [
 
 ```bash
 # ss -o state stablished '( dport = :ssh or sport = :ssh)'
-Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port   
-0      0                                                       192.168.1.36:60240                                                  207.97.227.239:ssh 
+Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
+0      0                                                       192.168.1.36:60240                                                  207.97.227.239:ssh
 
 ```
 
@@ -174,7 +173,7 @@ Por ejemplo:
 ```bash
 ss dst ADDRESS_PATTERN
 
-## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5## 
+## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##
 ss dst 192.168.1.5
 
 ## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5:http##
@@ -205,11 +204,11 @@ ss src ADDRESS_PATTERN
 ### Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###
 ## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##
 ss src 5.39.89.44
- 
+
 ## http (80) port only ##
 ss src 5.39.89.44:http
 ss src 5.39.89.44:80
- 
+
 ## smtp (25) port only ##
 ss src 5.39.89.44:smtp
 ss src 5.39.89.44:25
@@ -219,7 +218,7 @@ ss src 5.39.89.44:25
 ### Mostrar el número y el tipo de conexiones activas
 
 ```bash
-ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c 
+ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c
 
 ```
 
@@ -233,7 +232,7 @@ ss -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c
 ### Listar todos los puertos a la escucha junto con el PID del programa
 
 ```bash
-ss -tlnp 
+ss -tlnp
 
 ```
 
@@ -297,7 +296,7 @@ Para averiguar qué interfaz está usando tu pc, puedes usar el comando *ip rout
 
 ```bash
 # ip route get 5.39.89.44
-5.39.89.44 via 10.61.29.89 dev eth1  src 192.168.1.36 
+5.39.89.44 via 10.61.29.89 dev eth1  src 192.168.1.36
 
 ```
 

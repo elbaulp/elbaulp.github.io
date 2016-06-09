@@ -17,17 +17,16 @@ tags:
   - problema Simulate secondary displays
   - Simulate secondary displays
   - xda
-main-class: "dev"
-main-class: "How To"
+main-class: "articulos"
 ---
 Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en [Android][1] 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.  
-  
+
 <!--ad-->
 
-  
+
 Si quieres activarla has de ir a **Configuración » Acerca del teléfono » Número de compilación** (*Settings » About phone » Build number*) y pulsarlo siete veces.
 
-Una vez activado, eché un vistazo a ver qué opciones nuevas había. Activé una llamada **Simular pantallas secundarias** (*Simulate secondary displays*) y el teléfono se quedó bloqueado. Reinicié y el teléfono había quedado en un bucle infinito en el proceso de inicio. Lo primero que pensé fue en volver a flashear la ROM. Pero una vez más buscando un poco por internet encontré una respuesta más adecuada, que no requería flashear. 
+Una vez activado, eché un vistazo a ver qué opciones nuevas había. Activé una llamada **Simular pantallas secundarias** (*Simulate secondary displays*) y el teléfono se quedó bloqueado. Reinicié y el teléfono había quedado en un bucle infinito en el proceso de inicio. Lo primero que pensé fue en volver a flashear la ROM. Pero una vez más buscando un poco por internet encontré una respuesta más adecuada, que no requería flashear.
 
 #### Desactivar la opción Simulate secondary displays (Simular pantallas secundarias)
 

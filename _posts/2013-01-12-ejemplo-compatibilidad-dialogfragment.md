@@ -16,7 +16,6 @@ tags:
   - DialogFragment
   - supportv4
   - TimeoPickerDialog
-main-class: "dev"
 main-class: "android"
 ---
 En un proyecto reciente he tenido que trabajar con las librerías de compatibilidad de Android, en este caso para crear diálogos que permitan elegir fecha y hora, como estos:
@@ -27,12 +26,12 @@ En Android recomiendan usar un `<a href="http://developer.android.com/reference/
 
 #### Requisitos previos
 
-Antes de empezar, es necesario descargar **<a href="http://developer.android.com/tools/extras/support-library.html" target="_blank">Support Library</a>** y agregarlas a nuestro proyecto Android (En eclipse, botón derecho en el proyecto &rsaquo;&rsaquo; propiedades &rsaquo;&rsaquo; Java Build Path &rsaquo;&rsaquo; lib). 
+Antes de empezar, es necesario descargar **<a href="http://developer.android.com/tools/extras/support-library.html" target="_blank">Support Library</a>** y agregarlas a nuestro proyecto Android (En eclipse, botón derecho en el proyecto &rsaquo;&rsaquo; propiedades &rsaquo;&rsaquo; Java Build Path &rsaquo;&rsaquo; lib).
 
 Otra forma de agregar la librería es hacer click derecho en el **proyecto » Android Tools » Add support library**.
 
 Dicho esto, comencemos con el <a href="http://developer.android.com/reference/android/app/TimePickerDialog.html" target="_blank"><code><strong>TimePickerDialog</strong></code></a>  
-  
+
 <!--ad-->
 
 #### Crear un TimePickerDialog
@@ -171,7 +170,7 @@ El código de ejemplo está disponible para descarga:
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/ejemplo-compatibilidad-dialogfragment/" rel="nofollow"> Download &ldquo;Ejemplo compatibilidad DialogFragment&rdquo; <small>Ejemplo_datatimePickerFragment.zip &ndash; Downloaded 635 times &ndash; </small> </a>
 
-  
+
 *developer.android* »» <a href="http://developer.android.com/guide/topics/ui/controls/pickers.html" target="_blank">Visitar sitio</a>
 
 

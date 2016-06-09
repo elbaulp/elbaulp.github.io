@@ -6,8 +6,8 @@ layout: post
 guid: /?p=924
 permalink: /nueva-guia-your-guide-to-google-analytics/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - cursos
   - noticias
@@ -15,8 +15,7 @@ tags:
   - google analytics
   - guias
   - Your Guide to Google Analytics
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics"  class="alignleft size-medium wp-image-925" />][1]
 

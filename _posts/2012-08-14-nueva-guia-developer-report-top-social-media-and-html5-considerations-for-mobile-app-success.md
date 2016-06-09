@@ -6,13 +6,12 @@ layout: post
 guid: /?p=876
 permalink: /nueva-guia-developer-report-top-social-media-and-html5-considerations-for-mobile-app-success/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - cursos
   - noticias
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2012/08/w_appc01c1.gif" alt="Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success" title="Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success"  class="alignleft size-full wp-image-877" />][1]
 

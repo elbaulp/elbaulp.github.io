@@ -14,7 +14,6 @@ tags:
   - peso hamming
   - popcount
 main-class: "dev"
-main-class: "Algoritmos"
 ---
 Hace un més aproximadamente terminó el plazo de entrega de la práctica que voy a hablar hoy, lo que me permite hablaros de la misma.
 
@@ -26,7 +25,7 @@ El cálculo del número de bits a 1 que tiene un número (<a href="http://es.wik
 El cálculo de la <a href="http://es.wikipedia.org/wiki/Bit_de_paridad" target="_blank">paridad impar</a> de un número.
 
 Empecemos con *popCount*:  
-  
+
 <!--ad-->
 
 ```c
@@ -497,7 +496,7 @@ Para todo aquel interesado, tengo permiso para distribuir el guión bajo licenci
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-2a-tutorial/" rel="nofollow"> Download &ldquo;Practica 2a Tutorial&rdquo; <small>Practica-2a-Tutorial.pdf &ndash; Downloaded 594 times &ndash; </small> </a>
 
-  
+
 
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-2b-guion/" rel="nofollow"> Download &ldquo;Practica 2b Guion&rdquo; <small>Practica-2b-Guion.pdf &ndash; Downloaded 411 times &ndash; </small> </a>

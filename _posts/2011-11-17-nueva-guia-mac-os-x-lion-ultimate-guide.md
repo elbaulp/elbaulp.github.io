@@ -26,7 +26,7 @@ share_data:
 categories:
   - cursos
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [![Mac OS X Lion: The Ultimate Guide][1]][2]  
 

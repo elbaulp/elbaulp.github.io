@@ -5,28 +5,9 @@ title: 'Nueva guía: FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PC
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-faq-guide-windows-7-migrations-are-the-time-to-lockdown-pcs/
 permalink: /nueva-guia-faq-guide-windows-7/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551697}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551697}'
-share_count:
-  - 0
-  - 0
 categories:
   - cursos
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_view10/prgm.cgi"><img style="border:none;"  src="http://img.tradepub.com/free/w_view10/assets/img/w_view10c.gif" title="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" alt="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" /></a>

@@ -15,7 +15,6 @@ tags:
   - humor informatico
   - viñetas humor
 format: gallery
-main-class: "dev"
 main-class: "Geek"
 ---
 Otro domingo más, otra entrada de la sección Viñetas Geek de Domingo. Disfrutad de lo que queda de fin de semana y comenzar con buen pie la que entra.
@@ -29,7 +28,7 @@ Otro domingo más, otra entrada de la sección Viñetas Geek de Domingo. Disfrut
 
 #### Referencias
 
-*thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a> 
+*thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>
 
 
 

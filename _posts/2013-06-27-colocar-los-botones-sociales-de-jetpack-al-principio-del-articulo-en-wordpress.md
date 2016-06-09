@@ -14,18 +14,17 @@ tags:
   - botones sociales para wordpress
   - botones sociales wordpress
 main-class: "dev"
-main-class: "opensource"
 ---
 <img src="/assets/img/2013/06/jetpack-300x222.png" alt="Colocar los botones sociales de jetpack al principio del artículo en WordPress"  class="thumbnail alignleft size-medium wp-image-1699" />
 
-A día de hoy, el famoso plugin para wordpress** *jetpack*** no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación. 
+A día de hoy, el famoso plugin para wordpress** *jetpack*** no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación.
 
-  
+
 <!--ad-->
 
 ### Colocar los botones sociales al principio de los artículos
 
-El primer paso es editar el archivo ***modules/sharedaddy/sharing-service.php*** del plugin y eliminar o comentar las últimas líneas, que deberían ser: 
+El primer paso es editar el archivo ***modules/sharedaddy/sharing-service.php*** del plugin y eliminar o comentar las últimas líneas, que deberían ser:
 
 ```php
 add_filter( 'the_content', 'sharing_display', 19 );
@@ -33,9 +32,9 @@ add_filter( 'the_excerpt', 'sharing_display', 19 );
 
 ```
 
-Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal. 
+Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal.
 
-Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función 
+Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función
 
 ```php
 sharing_display()
@@ -57,7 +56,7 @@ En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos 
 
 ```php
 the_content( __( 'Seguir leyendo <span class="meta-nav">&rarr;</span>');
-echo sharing_display(); 
+echo sharing_display();
 
 ```
 
@@ -65,7 +64,7 @@ Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y 
 
 #### Referencias
 
-*Foro WordPress* »» <a href="http://wordpress.org/support/topic/plugin-sharedaddy-adding-this-manually?replies=26#post-2293386" target="_blank">Visitar sitio</a> 
+*Foro WordPress* »» <a href="http://wordpress.org/support/topic/plugin-sharedaddy-adding-this-manually?replies=26#post-2293386" target="_blank">Visitar sitio</a>
 
 
 

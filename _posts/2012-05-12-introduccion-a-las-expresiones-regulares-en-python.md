@@ -12,8 +12,8 @@ if_seo_keywords:
   - re python, regexp python, expresiones regulares python
   - re python, regexp python, expresiones regulares python
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - python
 tags:
@@ -23,7 +23,6 @@ tags:
   - python
   - regexp
 main-class: "dev"
-main-class: "python"
 ---
 En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).
 
@@ -96,7 +95,7 @@ En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a
 Ejemplos:
 
 ```python
-regexp = r'"(?:[^\]|(?:\.))*"' 
+regexp = r'"(?:[^\]|(?:\.))*"'
 #  Ejemplos válidos:
 print re.findall(regexp,'"I say, \"hello.\""') == ['"I say, \"hello.\""']
 #>>> True

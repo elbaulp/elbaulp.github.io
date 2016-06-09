@@ -12,8 +12,7 @@ tags:
   - chiste grafico de informatica
   - humor geek grafico
 format: gallery
-main-class: "dev"
-main-class: "offtopic"
+main-class: "Geek"
 ---
 <p class="jetpack-slideshow-noscript robots-nocontent">
   This slideshow requires JavaScript.
@@ -24,7 +23,7 @@ main-class: "offtopic"
 
 #### Fuentes
 
-*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a> 
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
 
 
 

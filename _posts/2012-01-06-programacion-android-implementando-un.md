@@ -5,31 +5,12 @@ title: 'Programación Android: Implementando un Content Provider (Parte 1)'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-implementando-un-content-provider-parte-1/
 permalink: /programacion-android-implementando-un/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551743}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551743}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
 tags:
   - Content Provider Android
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -40,7 +21,7 @@ Esta es la primera entrada de un total de 4 en la que se irán describiendo los 
 
 Ya hemos visto cómo [interactuar con un Content provider][1], pero no hemos visto aún cómo escribir nuestro propio Content Provider. Para hacerlo, es necesario extender de *android.content.ContentProvider* e implementar los siguientes métodos:
 
-  
+
 <!--ad-->
 
   * query
@@ -65,7 +46,7 @@ El siguiente planteamiento de la base de datos pertenece a la aplicación [FavSi
 ```java
 //FavSites for Android
 //    Copyright (C) 2011  Alejandro Alcalde Barros
-//    
+//
 //This file is part of FavSites.
 //
 //    FavSites is free software: you can redistribute it and/or modify
@@ -87,45 +68,45 @@ package com.elbauldelprogramador.favsites.provider;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-/** 
+/**
  * @author Alejandro Alcalde
  * Definiciones necesarias para almacenar la información
  */
 public class FavSitesProviderMetaData {
-   
+
    public static final String AUTHORITY = "com.elbauldelprogramador.provider.FavSites";
-   
+
    public static final String DATABASE_NAME = "favsites.db";
    public static final int DATABASE_VERSION = 1;
    public static final String FAVSITES_TABLE_NAME = "favSites";
-   
+
    private FavSitesProviderMetaData() {}
-   
+
    /**
     * Clase interna para describit la tabla favSites
     */
    public static final class favSitesTableMEtaData implements BaseColumns{
-      
+
       private favSitesTableMEtaData() {}
-      
+
       public static final String TABLE_NAME = "favSites";
-      
+
       /**
        * DEfinición del Content URI y MIMEs
        */
       public static final Uri CONTENT_URI
               = Uri.parse("content://" + AUTHORITY + "/sites");
 
-      public static final String CONTENT_TYPE 
+      public static final String CONTENT_TYPE
                = "vnd.android.cursor.dir/vnd.favsites.site";
-      
-      public static final String CONTENT_ITEM_TYPE 
+
+      public static final String CONTENT_ITEM_TYPE
                = "vnd.android.cursor.item/vnd.favsites.site";
       /**
        * Orden por defecto de la tabla
        */
       public static final String DEFAULT_SORT_ORDER = "_ID DESC";
-      
+
       /**
        * Orden personalizado
        */
@@ -133,7 +114,7 @@ public class FavSitesProviderMetaData {
       public static final String SORT_BY_NAME_ASC = "name ASC";
 
       //Columnas propias
-      
+
       /**
        * Nombre del sitio
        * Type: TEXT
@@ -151,7 +132,7 @@ public class FavSitesProviderMetaData {
        * Type: INTEGER (long)
        */
       public static final String LATITUD = "latitud";
-      
+
       /**
        * LONGITUD
        * Type: INTEGER (long)

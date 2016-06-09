@@ -5,9 +5,6 @@ title: Detectar archivos PNG con C++
 layout: post
 guid: /?p=847
 permalink: /detectar-archivos-png-con-c/
-if_slider_image:
-  - 
-  - 
 categories:
   - C
 tags:
@@ -16,7 +13,6 @@ tags:
   - leer imagen png c++
   - ocultar imagenes en imagenes
 main-class: "dev"
-main-class: "C"
 ---
 Hace un tiempo trasteando con una librería que nos proporcionaron en la facultad (desarrollada por J.Baena y A. Garrido para las asignaturas de introducción a la programación en la ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación en Granada] de la UGR, Universidad de Granada.) para leer imágenes PGM y PPM, me propuse añadirle la capacidad de leer, o al menos detectar imágenes PNG, teniendo el permiso de ambos autores para publicar parte de la librería.
 
@@ -25,7 +21,7 @@ Por supuesto existen librerías que ya hacen este trabajo, como <a href="http://
 El código solo detecta si la imagen es PNG, no implementé la lectura de la imagen en sí ya que hay que tener muchos factores en cuenta (transparencia, color de fondo, corrección Gamma, histograma etc).
 
 Veamos primero el .h:  
-  
+
 <!--ad-->
 
 ```cpp
@@ -71,7 +67,7 @@ TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas);
   *
   * @param nombre nombre del archivo a leer
   * @param filas Parámetro de salida con las filas de la imagen.
-  * @param columnas Parámetro de salida con las columnas de la imagen. 
+  * @param columnas Parámetro de salida con las columnas de la imagen.
   * @return si ha  tenido éxito en la lectura
   */
 bool LeerImagenPNG (const char nombre[], int& filas, int& columnas);
@@ -84,7 +80,7 @@ bool LeerImagenPNG (const char nombre[], int& filas, int& columnas);
   * @param columnas Parámetro de salida con las columnas de la imagen.
   * @param buffer Zona de memoria para obtener el valor de cada uno de los píxeles
   * como tripletas consecutivas en formato RGB (RGBRGBRGB...) por filas
-  * desde la esquina superior izqda a la inferior drcha. 
+  * desde la esquina superior izqda a la inferior drcha.
   * @return si ha  tenido éxito en la lectura
   * @pre buffer debe ser una zona de memoria suficientemente grande como para
   * almacenar @a filas x @a columnas x 3  * bytes de datos de la imagen.
@@ -111,7 +107,7 @@ bool EscribirImagenPPM (const char nombre[], const unsigned char datos[], int f,
   * @param filas Parámetro de salida con las filas de la imagen.
   * @param columnas Parámetro de salida con las columnas de la imagen.
   * @param buffer Zona de memoria para obtener el valor de cada uno de los píxeles
-  * como un valor de gris desde la esquina superior izqda a la inferior drcha. 
+  * como un valor de gris desde la esquina superior izqda a la inferior drcha.
   * @return si ha  tenido éxito en la lectura
   * @pre buffer debe ser una zona de memoria suficientemente grande como para
   * almacenar @a filas x @a columnas bytes de datos de la imagen.
@@ -164,7 +160,7 @@ TipoImagen LeerTipo(ifstream& f)
   TipoImagen res= IMG_DESCONOCIDO;
 
   if (f) {
-    
+
     /*
         The first eight bytes of a PNG file always contain the following values:
         (decimal)              137  80  78  71  13  10  26  10
@@ -179,14 +175,14 @@ TipoImagen LeerTipo(ifstream& f)
         if (check[i] != cas[i])
             fallo = true;
             //cout.setf ( ios::hex, ios::basefield );
-            //cout.setf ( ios::showbase ); 
-            //cout << (int)check[i] << " "; 
-            
+            //cout.setf ( ios::showbase );
+            //cout << (int)check[i] << " ";
+
     if (!fallo)
         return IMG_PNG;
-  
+
     f.seekg(0L, ios::beg);
-    
+
     c1=f.get();
     c2=f.get();
 
@@ -323,7 +319,7 @@ int main(int argc, char *argv[]) {
  cout << "INFO: La imagen tiene " << columnas << " pixels de ancho y " << filas
        << " pixels de alto.n";
     cout << "Tipo imagen: " << tipo << endl;
-    
+
     cout << "Probando con LeerImagenPNG: ";
  LeerImagenPNG(argv[1], filas, columnas);
     cout << "INFO: La imagen tiene " << columnas << " pixels de ancho y " << filas
@@ -351,11 +347,11 @@ Tipo imagen: 3
 
 ```
 
-* * *Información PNG | 
+* * *Información PNG |
 
 <a href="http://www.libpng.org/pub/png/spec/1.1/PNG-Rationale.html#R.PNG-file-signature" target="_blank">libpng</a>  
 Documentación | <a href="http://www.fileformat.info/format/png/corion.htm" target="_blank">fileformat.info</a>  
-Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-to-get-the-image-size-of-a-png-file-in-directory" target="_blank">StackOverflow</a></p> 
+Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-to-get-the-image-size-of-a-png-file-in-directory" target="_blank">StackOverflow</a></p>
 
 
 

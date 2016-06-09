@@ -5,29 +5,10 @@ title: Encontrar archivos abiertos en Linux
 layout: post
 guid: http://elbauldelprogramador.org/encontrar-archivos-abiertos-en-linux/
 permalink: /encontrar-archivos-abiertos-en-linux/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551745}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551745}'
-share_count:
-  - 0
-  - 0
 categories:
   - linux
   - opensource
   - SO
-main-class: "dev"
 main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -40,7 +21,7 @@ Por defecto el kernel de Linux establece un límite (para propósitos de segurid
 
 El archivo <a target="_blank" href="http://www.cyberciti.biz/tips/linux-procfs-file-descriptors.html">/proc/sys/fs/file-nr</a> es un archivo de solo lectura que proporciona el número de archivos actuales abiertos.
 
-  
+
 <!--ad-->
 
 #### Encontrar cuantos archivos hay abiertos

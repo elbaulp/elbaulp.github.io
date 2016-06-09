@@ -21,7 +21,7 @@ categories:
   - cursos
   - internet
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [![Agrupación En Clústeres Multisitio de Windows Server][1]][2]
 

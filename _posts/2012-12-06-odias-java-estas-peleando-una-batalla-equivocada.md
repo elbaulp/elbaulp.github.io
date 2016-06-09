@@ -11,7 +11,6 @@ tags:
   - cobol
   - java
   - mainframes
-main-class: "dev"
 main-class: "articulos"
 ---
 <img src="/assets/img/2012/12/java1.jpg" alt="" title="java"  class="thumbnail aligncenter size-full wp-image-1043" />  
@@ -38,10 +37,10 @@ Java ha sido ampliamente exitoso por varias razones:
 &#8211; Tiene un gobierno comunitario vía JCP (pre-Oracle)
 
 Estos son aspectos importantes en cualquier lenguaje, y se nota, ya que Java ha disfrutado de una larga racha de ser uno de los lenguajes más populares. Entonces, ¿por qué entre el 2010 y 2011, Java se volvió repentinamente el demonio más odiado?  
-  
+
 <!--ad-->
 
-  
+
 1. Está de moda odiar Java
 
 2. La sintaxis estilo C ya no está de moda
@@ -84,7 +83,7 @@ Probablemente la semana próxima alguien invente un nuevo DSL que haga Twitter m
 
 ### Referencias
 
-*The Code Mechanic* »» <a href="http://thecodemechanic.wordpress.com/2011/05/30/hate-java/" target="_blank">Visitar sitio</a> 
+*The Code Mechanic* »» <a href="http://thecodemechanic.wordpress.com/2011/05/30/hate-java/" target="_blank">Visitar sitio</a>
 
 
 

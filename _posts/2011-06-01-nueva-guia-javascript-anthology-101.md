@@ -21,7 +21,7 @@ categories:
   - cursos
   - internet
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [![The JavaScript Anthology: 101 Essential Tips, Tricks & Hacks - Free 158 Page Preview][1]][2]
 

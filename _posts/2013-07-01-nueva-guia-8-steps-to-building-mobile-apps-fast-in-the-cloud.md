@@ -17,8 +17,7 @@ tags:
   - mobile applications
   - mobile computing
   - mobile design
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2013/07/8-Steps-to-Building-Mobile-Apps-Fast-in-the-Cloud-300x1431.png" alt="8 Steps to Building Mobile Apps Fast in the Cloud"  class="alignleft size-medium wp-image-1706" />][1]
 
@@ -36,7 +35,7 @@ Start turning your ideas into mobile apps with the 8 Steps to Building Mobile Ap
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***  
-  
+
 <!--ad-->
 
 

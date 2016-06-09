@@ -5,24 +5,6 @@ title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
 layout: post
 guid: http://elbauldelprogramador.org/configurar-dos-pantallas-en-openbox-bajo-cruchbang-y-wallpaper-aleatorio/
 permalink: /configurar-dos-pantallas-en-openbox/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551703}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551703}'
-share_count:
-  - 0
-  - 0
 categories:
   - aplicaciones
   - curiosidades
@@ -34,8 +16,7 @@ tags:
   - debian openbox distro
   - openbox
   - wallpaper para openbox
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png" /></a>
@@ -45,7 +26,7 @@ Llevaba tiempo queriendo instalar en mi equipo la distribución <a target="_blan
 
 Encontré un pequeño problema al instalarla, y era que al tener dos pantallas conectadas al pc, por defecto las clonaba, es decir, que aparecía lo mismo en las dos pantallas. Cuando cambiaba la configuración para mostrarlas como dos pantallas independientes todo iba bien, pero al reiniciar volvía a clonarlas.
 
-  
+
 <!--ad-->
 
 Después de un poco de búsqueda por la red encontré solución al problema, usando el comando xrandr de la siguiente manera:

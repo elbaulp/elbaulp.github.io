@@ -23,7 +23,7 @@ categories:
   - noticias
   - opensource
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [![Build Your Own WordPress Site Guide][1]][2]
 

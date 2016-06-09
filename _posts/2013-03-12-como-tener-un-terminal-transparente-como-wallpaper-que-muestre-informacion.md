@@ -23,11 +23,10 @@ tags:
   - tilda
   - wallpaper
   - xrootconsole
-main-class: "dev"
-main-class: "How To"
+main-class: "linux"
 ---
 Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:  
-  
+
 <!--ad-->
 
 ### xrootconsole
@@ -55,7 +54,7 @@ En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] q
 ```bash
 #!/bin/bash
 
-while [ 1 ] 
+while [ 1 ]
 do
         ss > /tmp/ss.out
         xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &

@@ -1,26 +1,7 @@
 ---
-id: 239
 title: 'Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones'
-
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-dialogos-y-notificaciones/
 permalink: /programacion-android-interfaz-grafica_11/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
-fsb_social_twitter:
-  - 0
-fsb_social_facebook:
-  - 2
 categories:
   - android
   - opensource
@@ -33,7 +14,6 @@ tags:
   - interfaz grafica en android
   - layout android
   - menu android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

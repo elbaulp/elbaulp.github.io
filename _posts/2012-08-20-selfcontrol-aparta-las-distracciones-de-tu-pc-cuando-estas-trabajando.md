@@ -6,8 +6,8 @@ layout: post
 guid: /?p=890
 permalink: /selfcontrol-aparta-las-distracciones-de-tu-pc-cuando-estas-trabajando/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - aplicaciones
   - opensource
@@ -23,8 +23,7 @@ tags:
   - iptables
   - iptables con servidor debian
   - selfcontrol
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 [<img class="alignleft size-full wp-image-893" title="selfcontrol" src="/assets/img/2012/08/selfcontrol11.png" alt=""  />][1]
 
@@ -50,10 +49,10 @@ sudo dpkg --install selfcontrol_0.9-1_all.deb
 ```
 
 Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:  
-  
+
 <!--ad-->
 
-  
+
 [<img class="aligncenter size-full wp-image-894" title="Selfcontro1" src="/assets/img/2012/08/Selfcontro11.png" alt=""  />][2]
 
 Donde aparecen las webs bloqueadas, una entrada de texto para añadir las páginas a bloquear y por cuanto tiempo.
@@ -65,10 +64,10 @@ Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos un
 ```bash
 $ sudo iptables --list
 Chain INPUT (policy ACCEPT)
-  target     prot opt source               destination         
+  target     prot opt source               destination
 
   Chain FORWARD (policy ACCEPT)
-  target     prot opt source               destination         
+  target     prot opt source               destination
 
   Chain OUTPUT (policy ACCEPT)
   target     prot opt source               destination
@@ -81,17 +80,17 @@ Una vez que ejecutemos el programa aparecerá algo así:
 ```bash
 $ sudo iptables --list
 Chain INPUT (policy ACCEPT)
-  target     prot opt source               destination         
+  target     prot opt source               destination
 
   Chain FORWARD (policy ACCEPT)
-  target     prot opt source               destination         
+  target     prot opt source               destination
 
   Chain OUTPUT (policy ACCEPT)
-  target     prot opt source               destination         
-  SelfControl  all  --  anywhere             anywhere            
+  target     prot opt source               destination
+  SelfControl  all  --  anywhere             anywhere
 
   Chain SelfControl (1 references)
-  target     prot opt source               destination         
+  target     prot opt source               destination
   DROP       all  --  anywhere             www.example.com
 ```
 

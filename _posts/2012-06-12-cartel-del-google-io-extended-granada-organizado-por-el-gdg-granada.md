@@ -5,9 +5,6 @@ title: Cartel del Google I/O Extended Granada organizado por el GDG Granada
 layout: post
 guid: /?p=779
 permalink: /cartel-del-google-io-extended-granada-organizado-por-el-gdg-granada/
-if_slider_image:
-  - 
-  - 
 categories:
   - hackathon
   - noticias
@@ -17,8 +14,7 @@ tags:
   - google I/O extended
   - hackathon
 format: gallery
-main-class: "dev"
-main-class: "hackathon"
+main-class: "articulos"
 ---
 Ya tenemos el cartel del Google I/O Extended, organizado por el GDG Granada (Google Developers Group Granada) gracias a Sergio Almécija, ¿nos ayudáis a moverlo?
 

@@ -10,7 +10,6 @@ categories:
 tags:
   - estadisticas
   - whos amung
-main-class: "dev"
 main-class: "articulos"
 ---
 Si usas Whos amung como herramienta de monitorización de los usuarios actuales en tu web, seguro que alguna vez has visto unos cuantos visitantes que aparecen como **Unknown**.
@@ -21,7 +20,7 @@ También listará como usuarios desconocidos a cualquiera que esté visitando tu
 
 Otro caso en el que aparecerá este estado desconocido para un visitante es cuando estás logeado y viendo artículos programados desde el panel de administración de wordpress, o si alguien está visitando una página privada
 
-*What does unknown mean in whos amung stats* »» <a href="http://www.techbuzz.in/what-does-unknown-mean-in-whos-amung-us-stats-page.php" target="_blank">Visitar sitio</a> 
+*What does unknown mean in whos amung stats* »» <a href="http://www.techbuzz.in/what-does-unknown-mean-in-whos-amung-us-stats-page.php" target="_blank">Visitar sitio</a>
 
 
 

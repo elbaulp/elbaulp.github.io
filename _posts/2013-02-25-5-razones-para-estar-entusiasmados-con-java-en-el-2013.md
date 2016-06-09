@@ -13,7 +13,6 @@ tags:
   - noticias java
   - novedades java
 author: luzila
-main-class: "dev"
 main-class: "articulos"
 ---
 <img src="/assets/img/2012/12/java1-300x227.jpg" alt="java"  class="thumbnail alignleft size-medium wp-image-1043" />

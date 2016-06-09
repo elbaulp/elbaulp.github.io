@@ -5,29 +5,10 @@ title: Python4Kids. Aprende a programar en python fácilmente
 layout: post
 guid: http://elbauldelprogramador.org/python4kids-aprende-a-programar-en-python-facilmente/
 permalink: /python4kids-aprende-programar-en-python/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551692}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551692}'
-share_count:
-  - 0
-  - 0
 categories:
   - cursos
   - python
 main-class: "dev"
-main-class: "cursos"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img border="0" src="" id="logo" name="py" class="icono" />

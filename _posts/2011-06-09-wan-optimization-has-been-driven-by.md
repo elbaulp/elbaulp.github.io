@@ -21,7 +21,7 @@ categories:
   - cursos
   - internet
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [![WAN Optimization for Today and Tomorrow][1]][2]
 

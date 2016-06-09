@@ -5,31 +5,12 @@ title: 'Programación Android: Implementando un Content Provider (Parte 4)'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-implementando-un-content-provider-parte-4/
 permalink: /programacion-android-implementando-un_29/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551731}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551731}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
 tags:
   - Content Provider Android
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -48,7 +29,7 @@ Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3
 
 ```
 
-  
+
 <!--ad-->
 
 #### Añadir registros
@@ -58,17 +39,17 @@ String tag = "Insertando registros...";
 ContentValues cv = new ContentValues();
 
 Log.d(tag,"Adding a site...");
-      
+
 cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.NAME,
    "NombreSitio");
-cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.DESCRIPCION, 
+cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.DESCRIPCION,
    "Descripcion");
-cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.LONGITUD, 
+cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.LONGITUD,
    paquete.getInt("long"));
-cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.LATITUD, 
-   paquete.getInt("lat")); 
-  
-ContentResolver cr = getContentResolver();      
+cv.put(FavSitesProviderMetaData.favSitesTableMEtaData.LATITUD,
+   paquete.getInt("lat"));
+
+ContentResolver cr = getContentResolver();
 Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 
 Log.d(tag,"site insert uri:" + uri);
@@ -84,8 +65,8 @@ ContentResolver cr = getContentResolver();
 Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 
 Log.d("Deleting site...","site delete uri:" + uri);
-   cr.delete(uri, 
-         "_ID=?", 
+   cr.delete(uri,
+         "_ID=?",
          new String[]{"5"});
 
 ```
@@ -124,26 +105,26 @@ Muestra todo el contenido de la tabla sites de la base de datos.
                                ,null //selection string
                                ,null //selection args array of string
                                ,null); //sort order
-      
+
       int iname = c.getColumnIndex(
             FavSitesProviderMetaData.favSitesTableMEtaData.NAME);
-      
+
       int iDesc = c.getColumnIndex(
             FavSitesProviderMetaData.favSitesTableMEtaData.DESCRIPCION);
-      
+
       int iLat = c.getColumnIndex(
             FavSitesProviderMetaData.favSitesTableMEtaData.LATITUD);
-      
+
       int iLong = c.getColumnIndex(
             FavSitesProviderMetaData.favSitesTableMEtaData.LONGITUD);
-      
+
       int iFoto = c.getColumnIndex(
             FavSitesProviderMetaData.favSitesTableMEtaData.FOTO);
-      
+
       //Informamos de los índices
-      Log.d(tag, "name, description, latitude, long, photo: " 
+      Log.d(tag, "name, description, latitude, long, photo: "
             + iname + iDesc + iLat + iLong + iFoto);
-      
+
       //Recorremos las filas basándonos en índices
       for(c.moveToFirst(); !c.isAfterLast();c.moveToNext()){
          //Recoger los valores
@@ -153,7 +134,7 @@ Muestra todo el contenido de la tabla sites de la base de datos.
          String lat = c.getString(iLat);
          String lon = c.getString(iLong);
          String foto = c.getString(iFoto);
-         
+
          //informar
          StringBuffer cbuf = new StringBuffer(id);
          cbuf.append(",").append(name);
@@ -166,7 +147,7 @@ Muestra todo el contenido de la tabla sites de la base de datos.
       //Numero de registros
       int numberOfRecords = c.getCount();
       Log.d(tag, "Num of records: " + numberOfRecords);
-      
+
       //cerrar el cursor
       c.close();
    }

@@ -13,13 +13,12 @@ tags:
   - resolución grub
   - resolución tty
   - vga=0x31b
-main-class: "dev"
-main-class: "How To"
+main-class: "linux"
 ---
 <img src="/assets/img/2012/08/sh1.png" alt="Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux"  class="thumbnail alignleft size-full wp-image-868" />
 
 Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el <a target="_blank" href="https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/" title="Grub Customizer 2.0, personaliza tu GRUB2">GRUB</a>. Por defecto el GRUB se muestra a una resolución de **640&#215;480**, la cual es bastante ‘fea’. Igual ocurre con las terminales **ttys**, a las cuales se puede acceder con pulsando **Ctrl + Alt + F[1-6]**. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.  
-  
+
 <!--ad-->
 
 ### Cambiar resolución de pantalla del GRUB
@@ -33,12 +32,12 @@ Voy a explicar dos formas, la primera que apliqué y una segunda que es el méto
 ```bash
 Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
 --------+-----------------------------------------------------
- 4 bits |                  0x302      
+ 4 bits |                  0x302
  8 bits |  0x300   0x301   0x303    0x305    0x307     0x31C
 15 bits |          0x310   0x313    0x316    0x319     0x31D
 16 bits |          0x311   0x314    0x317    0x31A     0x31E
 24 bits |          0x312   0x315    0x318    0x31B     0x31F
-32 bits |     
+32 bits |
 
 ```
 
@@ -48,7 +47,7 @@ Para mi caso concreto eligiré **0x31B**. Una vez conocido el valor, hay que esc
 message="$(gettext_printf "Loading Linux %s ..." ${version})"
     cat << EOF
          echo    '$message'
-         linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B                                                          
+         linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B
 EOF
   if test -n "${initrd}" ; then
     message="$(gettext_printf "Loading initial ramdisk ...")"

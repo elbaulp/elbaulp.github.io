@@ -17,7 +17,6 @@ tags:
   - init 3 debian
   - linux runlevel
   - modificar runlevel debian
-main-class: "dev"
 main-class: "linux"
 ---
 

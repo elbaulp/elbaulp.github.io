@@ -5,31 +5,12 @@ title: Cómo conectar tu dispositivo Android en Linux al adb para depurar y desa
 layout: post
 guid: http://elbauldelprogramador.org/como-conectar-tu-dispositivo-android-en-linux-al-adb-para-depurar-y-desarrollar-aplicaciones/
 permalink: /como-conectar-tu-dispositivo-android-en/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551690}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551690}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - aplicaciones
   - How To
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 Ya me ha sucedido en varias ocasiones que he intentado conectar mi **Samsung Galaxy S** al **adb** del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:

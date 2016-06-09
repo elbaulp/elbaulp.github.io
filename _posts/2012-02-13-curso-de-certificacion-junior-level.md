@@ -5,29 +5,10 @@ title: Curso de certificación Junior Level Linux Professional
 layout: post
 guid: http://elbauldelprogramador.org/curso-de-certificacion-junior-level-linux-professional/
 permalink: /curso-de-certificacion-junior-level/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551710}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551710}'
-share_count:
-  - 0
-  - 0
 categories:
   - cursos
   - linux
-main-class: "dev"
-main-class: "cursos"
+main-class: "articulos"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s1600/Screenshot.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="89" width="159" src="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s400/Screenshot.png" /></a>
@@ -41,7 +22,7 @@ En este <a target="_blank" href="http://www.ucertify.com/about/prepkit-tour.html
   <br />
 </center>
 
-  
+
 <!--ad-->
 
 Os hablo de ucertify, porque he llegado a un acuerto con ellos, que consiste en que los lectores del blog tienen un 10% de descuento sobre los precios de los cursos (Para que se aplique el descuento, debéis introducir este código **UCPREP** cuando estéis comprando el curso). Además, en los próximos días me darán dos claves para regalar dos cursos a los ganadores de un concurso que haré.
@@ -54,7 +35,7 @@ Para obtener la certificación, es necesario completar los dos exámenes de este
 
 El temario a seguir es el siguiente:
 
-  * Arquitectura del sistetema (54 páginas en diapositivas.) 
+  * Arquitectura del sistetema (54 páginas en diapositivas.)
   * Instalación de linux y el gestor de paquetes (44 páginas)
   * Comandos UNIX y GNU (96 páginas)
   * Dispositivos, Sistema de ficheros, Estandar de la jerarquía de Ficheros (74 páginas)

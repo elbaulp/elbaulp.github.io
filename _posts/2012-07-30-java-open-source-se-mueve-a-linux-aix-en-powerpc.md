@@ -6,8 +6,8 @@ layout: post
 guid: /?p=863
 permalink: /java-open-source-se-mueve-a-linux-aix-en-powerpc/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Articulos
   - opensource
@@ -16,7 +16,6 @@ tags:
   - Java Open Source
   - Linux
   - PowerPC
-main-class: "dev"
 main-class: "articulos"
 ---
 <img alt="" src="/assets/img/2012/07/Java.png" class="alignleft"  />
@@ -26,10 +25,10 @@ main-class: "articulos"
 SAN FRANCISCO &#8211; Java Open Source (Código Abierto) será llevado a la arquitectura PowerPC para Linux y al SO AIX de IBM bajo una propuesta que se dio a conocer la semana pasada, que eventualmente podría beneficiar a los diferentes distribuidores de Linux.
 
 El proyecto proporcionará una versión completa de OpenJDK para las dos plataformas. OpenJDK es la implementación open source de Java estándar. Los puertos de Java para PowerPC ya existen, pero podrían ser extendidos al reino Open Source. &#8220;El propósito de este proyecto es agrupar los recursos para desarrollo de Oracle, de IBM, y de SAP para proporcionar una implementación de referencia Java libre y de última generación en Linux y AIX en PowerPC&#8221;, dijo Volker Simonis, un Java VM hacker y evangelista OpenJDK de SAP, que encabeza el proyecto.  
-  
+
 <!--ad-->
 
-  
+
 &#8220;Esta implementación de referencia puede luego ser utilizada por IBM y SAP para ofrecer sus productos de Java con licencia comercial en la misma forma en que Oracle ofrece sus productos de Oracle JDK basado en OpenJDK&#8221;, dijo Simonis. &#8220;La gran ventaja para la comunidad de código abierto es que todo el mundo (por ej., distribuidores de Linux como Debian, Red Hat o Ubuntu) será capaz de construir y ofrecer versiones de Java gratuitas y de vanguardia basadas en los nuevos puertos de la plataforma OpenJDK. Y por supuesto que todos serán muy bienvenidos a participar en el proyecto. &#8221;
 
 En la actualidad, ni las distribuciones Linux ni Power vienen sin Java en absoluto, o los usuarios tienen que tener una Java Development Kit (JDK) propietaria, de IBM, dijo Volker. O se usan implementaciones alternativas, como Harmony. Pero estas implementaciones están desactualizadas y/o son en varios grados más lentas que las últimas JDK comerciales, dijo.

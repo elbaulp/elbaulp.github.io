@@ -10,8 +10,7 @@ categories:
 tags:
   - Gmail Inbox Statistics Report
   - Informe estadístico mensual de GMail
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.
 
@@ -20,7 +19,7 @@ Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo hab�
 Es un lenguaje de programación JavaScript en la nube que nos permite extender la funcionalidad de las aplicacoines de Google, así como crear las nuestras propias. Se desarrolla en un [editor desde el navegador web][1] y el código se guarda y ejecuta en los servidores de Google.
 
 Varios ejemplos de uso son:  
-  
+
 <!--ad-->
 
   * Construir funciones personalizadas para las hojas de Cálculo de Google.
@@ -41,7 +40,7 @@ Uno de los scripts que estoy usando actualmente recopila información de mi cuen
 <img src="/assets/img/2013/04/chart2.png" alt="chart2"  class="aligncenter size-large wp-image-1513" />
 
 Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google »  
-<a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>. 
+<a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>.
 
 Sin embargo, encontré un pequeño error que no dejará que se ejecute el script. En la línea 244 se declara una columna para la hoja de cálculo de tipo `STRING`, pero cuando se ejecuta el script dará error. La solución que encontré fue declarar el tipo de columna como numérico:
 
@@ -244,11 +243,11 @@ function sendReport_(variables) {
 <tr>
   <td style=\"border: 0px solid white;\">" +
         "
-  
+
   <h3>
     Top 5 senders:
   </h3>
-  
+
   <ul>
     ";
       var r = 0;
@@ -266,11 +265,11 @@ function sendReport_(variables) {
       report +=
         "
   </ul></td><td style=\"border: 0px solid white;\">
-  
+
   <h3>
     Top 5 recipients:
   </h3>
-  
+
   <ul>
     ";
       for (i = 0; i < 5; i++) {
@@ -432,7 +431,7 @@ function init_() {
 
 #### Referencias
 
-*Google Apps Script* »» <a href="http://www.google.com/script/start/" target="_blank">Visitar sitio</a> 
+*Google Apps Script* »» <a href="http://www.google.com/script/start/" target="_blank">Visitar sitio</a>
 
 
 

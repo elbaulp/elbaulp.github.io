@@ -5,31 +5,12 @@ title: 'Programación Android: Implementando un Content Provider (Parte 3)'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-implementando-un-content-provider-parte-3/
 permalink: /programacion-android-implementando-un_14/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551736}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551736}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
 tags:
   - Content Provider Android
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -40,7 +21,7 @@ Ya hemos visto como [plantear la base de datos][1] para un proveedor y cómo [im
 
 En el código que vimos en la anterior entrada, se implementa el método *getType()*, que devuelve los tipos MIME para una URI dada. Este método, al igual que muchos de los métodos del content provider, está sobrecargado con respecto a la URI entrante. La función de este método consiste en distinguir el tipo de URI. Para saber si es una colección de lugares (en el caso de la aplicación [FavSites][3]), o un único lugar.
 
-  
+
 <!--ad-->
 
 Como ya se vió en la [entrada anterior][2], se usa UriMatcher para descifrar el tipo de URI. En función de esta, la clase *favSitesTableMEtaData* tiene definida las constantes de los tipos MIME a devolver para cada URI.
@@ -91,10 +72,10 @@ private static final int INCOMING_SINGLE_SITE_URI_INDICATOR = 2;
 static {
    sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
    //Patrón para varios lugares
-   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites", 
+   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites",
                       INCOMING_SITE_COLLECTION_URI_INDICATOR);
    //Patrón para un único lugar.
-   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#", 
+   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#",
                       INCOMING_SINGLE_SITE_URI_INDICATOR);
 }
 
@@ -111,7 +92,7 @@ switch (sUriMatcher.match(uri)) {
       case INCOMING_SINGLE_SITE_URI_INDICATOR:
          //...
          break;
-      
+
       default:
          throw new IllegalArgumentException("Unknow URI " + uri);
       }
@@ -123,9 +104,9 @@ Como se aprecia en el código de arriba, el método *match* devuelve el mísmo n
 ```java
 static {
    sUriMatcher = new UriMatcher();
-   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites", 
+   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites",
                       INCOMING_SITE_COLLECTION_URI_INDICATOR);
-   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#", 
+   sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#",
                       INCOMING_SINGLE_SITE_URI_INDICATOR);
 }
 
@@ -137,7 +118,7 @@ El proveedor de contenido actúa de intermediario entre un conjunto abstracto de
 
 Si leemos la documentación del método <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html#setProjectionMap(java.util.Map<java.lang.String, java.lang.String>)&#8221;>setProjectionMap</a> en la documentación del SDK de Android vemos que sirve para lo siguiente:
 
-> Establece el mapa de proyección de la consulta. El mapa de proyección mapea los nombres de las columnas que la persona que llama pasa a la consulta a los nombres de columna de la base de datos. Esto es útil para renombrar las columnas, así como evitar ambigüedades en los nombres de las columnas al hacer [joins][7]. Por ejemplo, podría asignar &#8220;nombre&#8221; a &#8220;people.name&#8221;. Si un mapa de proyección se configura para que deba contener todos los nombres de las columnas que el usuario pueda solicitar, aunque la clave y el valor sean los mismos. 
+> Establece el mapa de proyección de la consulta. El mapa de proyección mapea los nombres de las columnas que la persona que llama pasa a la consulta a los nombres de columna de la base de datos. Esto es útil para renombrar las columnas, así como evitar ambigüedades en los nombres de las columnas al hacer [joins][7]. Por ejemplo, podría asignar &#8220;nombre&#8221; a &#8220;people.name&#8221;. Si un mapa de proyección se configura para que deba contener todos los nombres de las columnas que el usuario pueda solicitar, aunque la clave y el valor sean los mismos.
 
 En nuestro ejemplo, así es como se a configurado el projection map:
 

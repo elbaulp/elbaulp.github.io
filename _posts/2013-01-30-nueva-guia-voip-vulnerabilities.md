@@ -10,8 +10,7 @@ categories:
   - noticias
 tags:
   - VoIP Vulnerabilities
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [  
 <img class="size-full wp-image-1285 alignleft" alt="VoIP Vulnerabilities" src="/assets/img/2013/01/voip-vulnerabilities.png"  />  
@@ -25,7 +24,7 @@ If you&#8217;re thinking of purchasing a VoIP system, read on and discover exact
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_come58/prgm.cgi" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

@@ -5,9 +5,6 @@ title: Mini grep en C++, busca palabras en archivos
 layout: post
 guid: /?p=774
 permalink: /mini-grep-en-c-busca-palabras-en-archivos/
-if_slider_image:
-  - 
-  - 
 categories:
   - aplicaciones
   - C
@@ -18,7 +15,6 @@ tags:
   - cpp
   - grep
 main-class: "dev"
-main-class: "aplicaciones"
 ---
 Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:  
 Para buscar una palabra:
@@ -36,7 +32,7 @@ grep "palabra1 palabra2..." fichero1 < [ficheros2...]>
 Un ejemplo de ejecución:
 
 ```bash
-hkr-> ./grep cout max.php grep.cpp smtp.cpp 
+hkr-> ./grep cout max.php grep.cpp smtp.cpp
 grep.cpp(22)     cout < < "Uso: grep <palabra a buscar> <firchero1 [<ficheros...>]>" < < endl;
 grep.cpp(56)     cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
 smtp.cpp(56)     cout << "socket createdn";
@@ -106,7 +102,7 @@ grep(const char* palabra, const char* nombre)
             if (strstr(cadena, palabra))
                cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
       }
-   
+
 
 ```
 

@@ -1,28 +1,7 @@
 ---
-id: 278
 title: Disponible la primera parte del curso Android en PDF
-
 layout: post
-guid: http://elbauldelprogramador.org/disponible-la-primera-parte-del-curso-android-en-pdf/
 permalink: /disponible-la-primera-parte-del-curso/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /disponible-la-primera-parte-del-curso/
-  - /disponible-la-primera-parte-del-curso/
-share_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":3,"stumble":0,"pinit":0,"count":3,"time":1333549437}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":3,"stumble":0,"pinit":0,"count":3,"time":1333549437}'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":3,"stumble":0,"pinit":0,"count":3,"time":1333549437}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":3,"stumble":0,"pinit":0,"count":3,"time":1333549437}'
-share_count:
-  - 3
-  - 3
 categories:
   - android
   - opensource
@@ -37,8 +16,7 @@ tags:
   - programacion aplicaciones android pdf
   - programacion en android
   - programar en android pdf
-main-class: "dev"
-main-class: "android"
+main-class: "articulos"
 ---
 
 Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="https://elbauldelprogramador.com/curso-programacion-android/">curso</a>.

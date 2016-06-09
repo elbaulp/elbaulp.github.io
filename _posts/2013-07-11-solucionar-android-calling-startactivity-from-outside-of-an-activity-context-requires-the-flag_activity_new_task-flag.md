@@ -9,7 +9,6 @@ categories:
   - android
 tags:
   - error Calling startActivity from outside of an Activity context requires the FLAG_ACTIVITY_NEW_TASK flag android
-main-class: "dev"
 main-class: "android"
 ---
 <img src="/assets/img/2013/07/android2.png" alt="Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag"  class="thumbnail alignleft size-full wp-image-1756" />  
@@ -20,7 +19,7 @@ Calling startActivity from outside of an Activity context requires the FLAG\_ACT
 ***
 
 Así que como es habitual busqué en stackoverflow y encontré la solución, el código que generaba el problema era el siguiente:  
-  
+
 <!--ad-->
 
 ```java
@@ -35,7 +34,7 @@ startActivity(Intent.createChooser(sendIntent, "Compartir en");
 
 ### La solución
 
-Sin embargo, aún añadiendo el Flag *FLAG\_ACTIVITY\_NEW_TASK* el error persistia. El problema reside en que el método ***<a href="http://developer.android.com/reference/android/content/Intent.html#createChooser%28android.content.Intent,%20java.lang.CharSequence%29" target="_blank">createChooser()</a>***, devuelve un nuevo [intent][2], según la documentación, y por tanto el flag que acabamos de añadir no se copia automáticamente en el nuevo intent y es necesario volver a añadirlo. 
+Sin embargo, aún añadiendo el Flag *FLAG\_ACTIVITY\_NEW_TASK* el error persistia. El problema reside en que el método ***<a href="http://developer.android.com/reference/android/content/Intent.html#createChooser%28android.content.Intent,%20java.lang.CharSequence%29" target="_blank">createChooser()</a>***, devuelve un nuevo [intent][2], según la documentación, y por tanto el flag que acabamos de añadir no se copia automáticamente en el nuevo intent y es necesario volver a añadirlo.
 
 Una posible solución es:
 
@@ -49,7 +48,7 @@ De esta forma el error ***Calling startActivity() from outside of an Activity co
 
 #### Referencias
 
-*Solución en Stackoverflow* »» <a href="http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag" target="_blank">Visitar sitio</a> 
+*Solución en Stackoverflow* »» <a href="http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag" target="_blank">Visitar sitio</a>
 
 
 

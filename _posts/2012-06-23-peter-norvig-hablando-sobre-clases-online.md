@@ -6,8 +6,8 @@ layout: post
 guid: /?p=807
 permalink: /peter-norvig-hablando-sobre-clases-online/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - cursos
   - noticias
@@ -16,8 +16,7 @@ tags:
   - Sebastian Thrun
   - udacity
 format: aside
-main-class: "dev"
-main-class: "cursos"
+main-class: "articulos"
 ---
 Junto Sebastian Thrun, Peter Norvig se planteó la idea de enseñar clase de otra forma para poder llegar a una mayor cantidad de alumnos.
 

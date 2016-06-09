@@ -13,10 +13,9 @@ tags:
   - contenido por defecto
   - contenido por defecto en post wordpress
 main-class: "dev"
-main-class: "How To"
 ---
 <img src="/assets/img/2012/05/Screenshot-05302012-111511-AM1.png" alt="Wordpress"  class="thumbnail alignleft size-full wp-image-761" />  
-Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al [feed del blog][2], que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto. 
+Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al [feed del blog][2], que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.
 
 Es bastante sencillo lograr esta funcionalidad, en el archivo *functions.php* de tu tema añade:
 

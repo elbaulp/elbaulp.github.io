@@ -13,23 +13,22 @@ tags:
   - etiqueta a href android
   - etiqueta a href string.xml
   - etiqueta a href TextView android
-main-class: "dev"
 main-class: "android"
 ---
-Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta *<a href=&#8221;&#8221;></a>*. 
+Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta *<a href=&#8221;&#8221;></a>*.
 
 La cadena de texto con el enlace en cuestión reside en el archivo de recursos **[string.xml][1]**. En un principio pensé que me bastaría usar la propiedad `android:autoLink="web"` en el [layout.xml][2] de la siguiente forma:  
-  
+
 <!--ad-->
 
-  
+
 ***layout***:
 
 ```xml
 <TextView
                 <!-- .... -->
                 android:autoLink="web"
-                
+
 
 <!-- .... --> />
 

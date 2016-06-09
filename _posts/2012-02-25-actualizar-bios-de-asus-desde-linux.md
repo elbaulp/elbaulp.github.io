@@ -5,31 +5,12 @@ title: Actualizar BIOS de ASUS desde Linux
 layout: post
 guid: http://elbauldelprogramador.org/actualizar-bios-de-asus-desde-linux/
 permalink: /actualizar-bios-de-asus-desde-linux/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551699}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551699}'
-share_count:
-  - 0
-  - 0
 categories:
   - seguridad
   - SO
 tags:
   - como actualizar bios asus p5b
-main-class: "dev"
-main-class: "seguridad"
+main-class: "linux"
 ---
 <div class="separator" style="float:left; margin-right:10px;">
   <img border="0" height="128" width="128" src="https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png" />
@@ -41,7 +22,7 @@ Bueno, inserto la RAM en la placa base todo contento ya que ahora iba a tener 4G
 
 Tras una respuesta en uno de los foros miro a ver si la BIOS reconoce las 4Gb y el resultado es que solo reconoce 3Gb. Investigo el motivo por el cual solo reconoce 3Gb y llego a una página que dice que es un problema de la versión de la BIOS que se soluciona actualizando a la última versión. Así que voy a explicar el proceso de actualización de la BIOS, en mi caso para la placa base ASUS P5B Deluxe Wifi edition:
 
-  
+
 <!--ad-->
 
 Lo primero que hay que hacer es bajarse el archivo de la página de ASUS, lo descomprimimos y tenemos un archivo con el modelo de la placa y de extensión .rom.

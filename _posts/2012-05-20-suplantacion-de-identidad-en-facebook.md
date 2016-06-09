@@ -6,8 +6,8 @@ layout: post
 guid: /?p=744
 permalink: /suplantacion-de-identidad-en-facebook/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - seguridad
 tags:
@@ -16,8 +16,7 @@ tags:
   - smtp
   - spoofing facebook
 format: aside
-main-class: "dev"
-main-class: "seguridad"
+main-class: "articulos"
 ---
 Leyendo el blog de <a href="http://www.elladodelmal.com/" target="_blank">Chema Alonso</a> me he encontrado con una entrada interesante que, aunque no he logrado realizarla al 100% quiero compartirla con vosotros para que lo intente quien quiera.
 
@@ -40,7 +39,7 @@ Al principio al establecer comunicación mediante telnet por el puerto 25 (el de
 Tras buscar un poco el motivo descubrí que se debía a que me estaba saltando algunas cabeceras del protocolo, concretamente *From, To * y *Date.*
 
 En resumen, todo el proceso queda como sigue:  
-  
+
 <!--ad-->
 
 ```bash
@@ -51,9 +50,9 @@ Escape character is '^]'.
 220 smtpin.mx.facebook.com ESMTP
 HELO client.facebook.com
 250 smtpin.mx.facebook.com says HELO to xx.xxx.xxx.xx:xxxxx
-MAIL from: 
+MAIL from:
 250 MAIL FROM accepted
-RCPT to: 
+RCPT to:
 250 RCPT TO accepted
 DATA
 354 continue.  finished with "rn.rn"
@@ -153,7 +152,7 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
     read_socket(); /* SMTP Server logon string */
     send_socket(HELO); /* introduce ourselves */
     read_socket(); /*Read reply */
-    send_socket("MAIL FROM: "); 
+    send_socket("MAIL FROM: ");
     send_socket(from_id);
     send_socket("rn");
     read_socket(); /* Sender OK */
@@ -171,7 +170,7 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
     read_socket(); // Recipient OK*/
     send_socket(wkstr);
     send_socket(".rn");
-    read_socket(); 
+    read_socket();
     send_socket(QUIT); /* quit */
     read_socket(); // log off */
 
@@ -194,15 +193,15 @@ import os
 sender = 'xxxxx@xxxxx.com'
 receivers = ['xxxxx@facebook.com']
 
-message = """From: From Person 
-To: To Person 
+message = """From: From Person
+To: To Person
 Subject: SMTP e-mail test
 This is a test e-mail message.
 """
 
 try:
    smtpObj = smtplib.SMTP('69.171.244.12')
-   smtpObj.sendmail(sender, receivers, message)         
+   smtpObj.sendmail(sender, receivers, message)
    print "Successfully sent email"
 except Exception, exc:
    sys.exit( "mail failed; %s" % str(exc) ) # give a error message

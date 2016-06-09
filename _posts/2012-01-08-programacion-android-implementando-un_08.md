@@ -5,24 +5,6 @@ title: 'Programación Android: Implementando un Content Provider (Parte 2)'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-implementando-un-content-provider-parte-2/
 permalink: /programacion-android-implementando-un_08/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551739}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551739}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
@@ -30,7 +12,6 @@ tags:
   - Content Provider Android
   - curso android pdf
   - fundamentos sqlite android
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -41,7 +22,7 @@ En la anterior entrada de [programación Android][1], hablamos de cómo empezar 
 
 Para implementar el content provider de la aplicación [FavSites][3] hemos de extender de la clase ContentProvider y sobreescribir *onCreate()* para crear la base de datos y después implementar los métodos query, insert, update, delete y getType. En esta segunda parte de cuatro en la que se explica cómo implementar un content provider desde cero, vamos a ver cómo configurar inicialmente en conten provider, en la siguente entrada se verá como implementar los métodos query, insert, update, delete y getType.
 
-  
+
 <!--ad-->
 
 El método query requiere el conjunto de columnas que tiene devolver. Es similar a una cláusula [select][4], que necesita los nombres de las columnas junto con sus homólogos, a veces llamados también sinónimos. Android usa un objeto *map* al que llama *projection map* para representar los nombres de columnas y sus sinónimos. Es necesario crear este objeto para poder usarlo posteriormente en la implementación del método query.
@@ -64,7 +45,7 @@ El código que se muestra a continuación, sobreescribe el método onCreate() pa
 /**
 FavSites for Android
     Copyright (C) 2011  Alejandro Alcalde Barros
-    
+
 This file is part of FavSites.
 
     FavSites is free software: you can redistribute it and/or modify
@@ -106,7 +87,7 @@ public class SitesProvider extends ContentProvider{
 
    //Etiqueta ayuda para el loggeo. No tiene importancia para el cp.
    private static final String TAG = "SitesProvider";
-   
+
    //Configurando el projection Map
    //El projection map es similar a "as" (alias de columna)
    private static HashMap<string , String> sSitesProjectionMap;
@@ -114,7 +95,7 @@ public class SitesProvider extends ContentProvider{
       sSitesProjectionMap = new HashMap</string><string , String>();
       sSitesProjectionMap.put(favSitesTableMEtaData._ID,
                               favSitesTableMEtaData._ID);
-      
+
       //nombre, desc, lati, long, foto
       sSitesProjectionMap.put(favSitesTableMEtaData.NAME,
                               favSitesTableMEtaData.NAME);
@@ -127,7 +108,7 @@ public class SitesProvider extends ContentProvider{
       sSitesProjectionMap.put(favSitesTableMEtaData.FOTO,
                               favSitesTableMEtaData.FOTO);
    }
-   
+
    //Configuracion de las URIs
    //Propocionando un mecanismo para identificar
    //todos los patrones uri entrantes. (UriMatcher)
@@ -136,25 +117,25 @@ public class SitesProvider extends ContentProvider{
    private static final int INCOMING_SINGLE_SITE_URI_INDICATOR = 2;
    static {
       sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-      sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites", 
+      sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites",
                          INCOMING_SITE_COLLECTION_URI_INDICATOR);
-      sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#", 
+      sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#",
                          INCOMING_SINGLE_SITE_URI_INDICATOR);
    }
-   
+
    /**
     * Configurar/Crear la BD
     * Esta clase ayuda a abrir, crear y actualizar la bd
     */
    private static class DatabaseHelper extends SQLiteOpenHelper{
-      
+
       DatabaseHelper(Context context){
          super(context,
              FavSitesProviderMetaData.DATABASE_NAME,
              null,
              FavSitesProviderMetaData.DATABASE_VERSION);
       }
-      
+
       @Override
       public void onCreate(SQLiteDatabase db) {
          Log.d(TAG, "inner onCreate called");
@@ -174,15 +155,15 @@ public class SitesProvider extends ContentProvider{
          Log.w(TAG, "Upgrading database from version "
                + oldVersion + " to "
                + newVersion + ", wich will destroy all old data");
-         db.execSQL("DROP TABLE IF EXISTS " 
+         db.execSQL("DROP TABLE IF EXISTS "
                    + favSitesTableMEtaData.TABLE_NAME);
          onCreate(db);
       }
-      
+
    }
-   
+
    private DatabaseHelper mOpenHelper;
-   
+
    @Override
    public int delete(Uri uri, String where, String[] whereArgs) {
       //...

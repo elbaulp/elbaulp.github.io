@@ -14,7 +14,6 @@ tags:
   - restlib
   - web services android
   - web services programacion
-main-class: "dev"
 main-class: "android"
 ---
 Trabajando con un compañero en una aplicación que hacía uso de web services, nos planteamos la posibilidad de crear un librería que nos facilitara el desarrollo en aplicaciones similares. Aunque hay muchas disponibles en la red decidimos crear la nuestra propia. Gran parte de la librería está desarrollada por mi compañero <a href="http://menudoproblema.es/" target="_blank">Vicente</a>, yo crontibuí poco.
@@ -28,7 +27,7 @@ En la aplicación de ejemplo he trabajado con dos Web Services, el de **freegeoi
 Usando estos dos web services he querido proporcionar dos ejemplos, ambos son peticiones **GET**, la diferencia reside en que uno es con parámetros y el otro no.
 
 Empezaré con **freegeoip**, al ser la más simple. El código para armar la petición es el siguiente:  
-  
+
 <!--ad-->
 
 ```java
@@ -68,7 +67,7 @@ Así pues, para realizar la petición en este caso el código sería el siguient
 RestRequest apiWordpress = new JSONRestRequest();
 apiWordpress.setMethod(RestRequest.GET_METHOD);
 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
-                
+
 HashMap<String, Object> args = new HashMap<String, Object>() {
    {
       put("pretty", "true");
@@ -122,7 +121,7 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener<
     private TextView latdD;
     private EditText wordpress;
     private boolean testingGeoIp;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,15 +138,15 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener<
         ipD         = (TextView) findViewById(R.id.ipD);
         latdD       = (TextView) findViewById(R.id.latD);
         wordpress   = (EditText) findViewById(R.id.wordpress);
-        
+
     }
 
     public void onClickHandler(View target) {
         switch (target.getId()) {
             case R.id.testFreegeoip:
-                
+
                 testingGeoIp = true;
-                
+
                 RestRequest rq = new JSONRestRequest();
                 rq.setMethod(RestRequest.GET_METHOD);
                 rq.setURL("http://freegeoip.net/json/");
@@ -159,11 +158,11 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener<
             case R.id.testWordpress:
 
                 testingGeoIp = false;
-                
+
                 RestRequest apiWordpress = new JSONRestRequest();
                 apiWordpress.setMethod(RestRequest.GET_METHOD);
                 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
-                
+
                 HashMap<String, Object> args = new HashMap<String, Object>() {
                     {
                         put("pretty", "true");
@@ -178,12 +177,12 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener<
                 RestServiceTask task2 = new RestServiceTask(this, this, "Espere", "Obteniendo datos...");
                 task2.execute(apiWordpress);
                 break;
-                
+
             default:
                 break;
         }
     }
-    
+
     @Override
     public void onTaskComplete(RestResponse result) {
         JSONObject r = new JSONObject(result.getContent());

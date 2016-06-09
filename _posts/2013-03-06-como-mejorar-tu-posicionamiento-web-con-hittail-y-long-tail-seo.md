@@ -10,13 +10,12 @@ categories:
 tags:
   - definicion long tail seo
   - que es long tail seo
-main-class: "dev"
 main-class: "articulos"
 ---
 Hace apenas dos meses que descubrí navegando por internet esta herramienta, ***<a href="http://www.hittail.com" target="_blank">HitTail</a>*.** Permite incrementar significativamente tu posición en los motores de búsqueda tales como Google, Bing, DuckDuckGo, Yahoo etc usando una técnica llamada ***Long Tail SEO***.
 
 Si como yo nunca has oido hablar de este término, no te preocupes, a continuación intentaré explicarlo lo más claro posible (Traducido literalmente sería SEO de cola larga, aunque creo que una definición más acertada sería seguimiento SEO prolongado):  
-  
+
 <!--ad-->
 
 <h2 style="font-size:1.5em">
@@ -29,7 +28,7 @@ Para dar respuesta a la pregunta, fíjate en la gráfica. Como se aprecia en la 
 
 Sin embargo, como usuario de internet que eres, estoy seguro que cuando buscas algo en internet sueles preguntarle a tu buscador favorito por algo más concreto. Por ejemplo, si estás buscando Hoteles en los que alojarte, no buscas por “*Hoteles*”, buscar por algo más específico como “*ofertas de hoteles en Granada*”. Otro ejemplo, si buscas cursos sobre programación [Android][2] introducirás en tu navegador algo como “*curso gratuito de programación android*”. La tendencia en los últimos años es realizar búsquedas que tengan significado semántico, y esta tendencia seguirá aumentando. En eso consiste en Long Tail, centrarse en dichos términos de búsqueda, en los cuales existe una competencia menor.
 
-Desde el punto de vista del propietario de una web sin mucha popularidad en internet, como puede ser este blog, interesa centrarse en este típo de búsquedas Long Tail, ya que es imposible hacerse un hueco en los resultados de búsqueda para términos de una a tres palabras (*Sería como pretender aparecer el primero en los resultados de búsqueda con tan solo escribir **Programador*** en el buscador). 
+Desde el punto de vista del propietario de una web sin mucha popularidad en internet, como puede ser este blog, interesa centrarse en este típo de búsquedas Long Tail, ya que es imposible hacerse un hueco en los resultados de búsqueda para términos de una a tres palabras (*Sería como pretender aparecer el primero en los resultados de búsqueda con tan solo escribir **Programador*** en el buscador).
 
 Aunque parezca que no se va a alcanzar a tantos visitantes como si te centraras en las palabras más competitivas, no es cierto. Si trazas una línea vertical en la línea verde hasta cortar el eje x, verás que el área que abarcan las Long Tail es incluso mayor que el de los términos cortos. Quizá en esta imagen quede más claro:
 
@@ -39,7 +38,7 @@ Aunque parezca que no se va a alcanzar a tantos visitantes como si te centraras 
   ¿Cual es el objetivo de HitTail
 </h2>
 
-Tras esta breve definición del significado del Long Tail SEO, ahora estoy en condiciones de explicar el propósito de esta herramienta. HitTail es un software de seguimiento que analiza los datos de búsqueda basandose en la técnica Long Tail. Instalarlo es bastante sencillo, basta con introducir el código que proporcionan en tu sítio. Una vez instalado, registra las búsquedas que acceden a la web y la información sobre las palabras clave usadas. Cuando dispone de suficientes palabras analizadas usa su algoritmo para sugerir palabras clave que los usuarios están usando para acceder a tu web, las cuales son long tail. De esta forma, puedes centrarte en esas palabras clave para generar más contenido que atraiga a más lectores y añadir etiquetas a tus artículos para hacerlos subir de posición en los resultados los motores de búsqueda principales. 
+Tras esta breve definición del significado del Long Tail SEO, ahora estoy en condiciones de explicar el propósito de esta herramienta. HitTail es un software de seguimiento que analiza los datos de búsqueda basandose en la técnica Long Tail. Instalarlo es bastante sencillo, basta con introducir el código que proporcionan en tu sítio. Una vez instalado, registra las búsquedas que acceden a la web y la información sobre las palabras clave usadas. Cuando dispone de suficientes palabras analizadas usa su algoritmo para sugerir palabras clave que los usuarios están usando para acceder a tu web, las cuales son long tail. De esta forma, puedes centrarte en esas palabras clave para generar más contenido que atraiga a más lectores y añadir etiquetas a tus artículos para hacerlos subir de posición en los resultados los motores de búsqueda principales.
 
 En el momento de escribir este artículo, han analizado más de 1,356,280,933 palabras clave. Una vez instalado el código de seguimiento en tu web, empezarás a recibir sugerencias tras las primeras 25-50 visitas a tu sitio. Puedes probar el servicio gratuítamente durante 21 días.
 
@@ -67,7 +66,7 @@ Usa estas palabras para escribir artículos relacionados con lo que los lectores
 
 ## Conclusión
 
-Si eres un lector habitial de El Baúl de Programador, sabrás que no soy partidario de escribir artículos haciendo publicidad a ningún tipo de producto, pero con esta herramienta he conseguido aumentar el tráfico de una manera tan significativa que he considerado oportuno darosla a conocer. 
+Si eres un lector habitial de El Baúl de Programador, sabrás que no soy partidario de escribir artículos haciendo publicidad a ningún tipo de producto, pero con esta herramienta he conseguido aumentar el tráfico de una manera tan significativa que he considerado oportuno darosla a conocer.
 
 Sin embargo hay algunas cosas que podrían mejorar, es un poco dificil al principio averiguar dónde hay que hacer click para enviar una palabra clave a la lista de pendientes (TODO list), tras un rato investigando, averigué que hay que pinchar en la palabra clave para enviarla a dicha lista.
 
@@ -77,7 +76,7 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
 
 #### Referencias
 
-*www.hittail.com* »» <a href="http://www.hittail.com" target="_blank">Visitar sitio</a> 
+*www.hittail.com* »» <a href="http://www.hittail.com" target="_blank">Visitar sitio</a>
 
 
 

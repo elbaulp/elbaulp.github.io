@@ -18,7 +18,7 @@ categories:
   - cursos
   - internet
 main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [![Migrating a Web Site to Drupal][1]][2]
 

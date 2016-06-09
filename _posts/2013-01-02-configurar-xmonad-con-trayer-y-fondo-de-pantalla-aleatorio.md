@@ -12,14 +12,13 @@ tags:
   - feh
   - trayer
   - xmonad
-main-class: "dev"
-main-class: "How To"
+main-class: "linux"
 ---
 A lo largo de los años he probado varios gestores de ventanas, como fluxbox, [openbox][1] y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.
 
 La <a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration" target="_blank">instalación</a> es muy sencilla. En este artículo voy a profundizar más en los dos aspectos que más problemas me han causado, configurar apropiadamente trayer y establecer fondos de pantalla aleatoriamente.
 
-  
+
 <!--ad-->
 
 #### Configurar trayer
@@ -28,35 +27,35 @@ La documentación oficial de xmonad configura **trayer** de forma se ejecute al 
 
 ```bash
 #!/bin/bash
- 
+
 # Load resources
- 
+
 xrdb -merge .Xresources
- 
+
 # Set up an icon tray
- 
-trayer --edge top --align right --SetDockType true --SetPartialStrut true 
+
+trayer --edge top --align right --SetDockType true --SetPartialStrut true
  --expand true --width 10 --transparent true --tint 0x191970 --height 12 &
- 
+
 # Set the background color<
- 
+
 xsetroot -solid midnightblue
- 
+
 # Fire up apps
- 
+
 gajim &
- 
+
 xscreensaver -no-splash &
- 
+
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
- 
+
 if [ -x /usr/bin/gnome-power-manager ] ; then
    sleep 3
    gnome-power-manager &
 fi
- 
+
 exec xmonad
 
 ```
@@ -71,7 +70,7 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
- 
+
 if [ -x /usr/bin/gnome-power-manager ] ; then
    sleep 1
    gnome-power-manager &
@@ -124,16 +123,16 @@ myLayout = onWorkspace "4" pidginLayout $ onWorkspaces ["2", "7"] nobordersLayou
   ratio = 2/3  
   delta = 3/100  
   nobordersLayout = smartBorders $ Full  
-  gridLayout = spacing 8 $ Grid       
+  gridLayout = spacing 8 $ Grid
   --gimpLayout = withIM (0.20) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.20) (Role "gimp-dock") Full  
   pidginLayout = withIM (18/100) (Role "buddy_list") gridLayout  
-myManageHook = composeAll       
+myManageHook = composeAll
      [ className =? "File Operation Progress"   --> doFloat  
      , resource =? "desktop_window" --> doIgnore  
      , className =? "xfce4-notifyd" --> doIgnore  
      --, className =? "Iron" --> doShift "1:main"  
-     , className =? "Firefox" --> doShift "2"   
-     , className =? "Gimp" --> doFloat 
+     , className =? "Firefox" --> doShift "2"
+     , className =? "Gimp" --> doFloat
      , className =? "Vlc" --> doShift "7"  
      ]  
 main = do
@@ -149,15 +148,15 @@ main = do
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         , workspaces     = myWorkspaces  
         , normalBorderColor = "#60A1AD"  
-        , focusedBorderColor = "#68e862" 
+        , focusedBorderColor = "#68e862"
         , borderWidth    = 2  
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((mod4Mask, xK_KP_Enter), spawn "exe=`dmenu_run -b -nb black -nf yellow -sf yellow` && eval "exec $exe"") -- spawn dmenu
-        , ((mod4Mask, xK_Return), spawn "terminator") -- spawn terminator terminal 
+        , ((mod4Mask, xK_Return), spawn "terminator") -- spawn terminator terminal
         , ((mod4Mask, xK_w), spawn "/usr/bin/firefox")
         , ((mod4Mask, xK_f), spawn "nautilus --no-desktop")  
-        , ((mod4Mask, xK_s), spawn "~/Pictures/wall_aleatorio.sh") 
+        , ((mod4Mask, xK_s), spawn "~/Pictures/wall_aleatorio.sh")
         , ((0, xF86XK_HomePage), spawn "gedit ~/.xmonad/xmonad.hs") -- hit a button to open the xmonad.hs file  
         , ((mod4Mask, xK_m), spawn "vlc") -- hit a button to run mpd with ncmpcpp  
         , ((mod4Mask .|. shiftMask, xK_F4), spawn "sudo shutdown -h now") -- to shutdown  
@@ -167,11 +166,11 @@ main = do
         --, ((controlMask .|. shiftMask, xK_Right), spawn "ncmpcpp next") -- play next song in mpd  
         --, ((controlMask .|. shiftMask, xK_Left), spawn "ncmpcpp prev") -- play previous song  
         , ((mod4Mask, xK_Up ), windows W.swapUp) -- swap up window  
-        , ((mod4Mask, xK_Down ), windows W.swapDown) -- swap down window 
+        , ((mod4Mask, xK_Down ), windows W.swapDown) -- swap down window
         , ((mod4Mask, xK_KP_Add ), sendMessage (IncMasterN 1)) -- increase the number of window on master pane  
-        , ((mod4Mask, xK_KP_Subtract ), sendMessage (IncMasterN (-1))) -- decrease the number of window 
+        , ((mod4Mask, xK_KP_Subtract ), sendMessage (IncMasterN (-1))) -- decrease the number of window
         , ((controlMask,        xK_Right   ), sendMessage Expand) -- expand master pane  
-        , ((controlMask,        xK_Left   ), sendMessage Shrink) -- shrink master pane 
+        , ((controlMask,        xK_Left   ), sendMessage Shrink) -- shrink master pane
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "gnome-screenshot -i")
         , ((0, xF86XK_Calculator), spawn "~/bin/trayerxmonad.sh")
@@ -231,7 +230,7 @@ Así luce mi escritorio con xmonad:
 
 #### Referencias
 
-*Askubuntu* »» <a href="http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone" target="_blank">Visitar sitio</a> 
+*Askubuntu* »» <a href="http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone" target="_blank">Visitar sitio</a>
 
 
 

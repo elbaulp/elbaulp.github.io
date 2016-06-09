@@ -5,18 +5,6 @@ title: 'Programación Android: Interfaz gráfica &#8211; Estilos y Temas'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-estilos-y-temas/
 permalink: /programacion-android-interfaz-grafica_18/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - opensource
@@ -27,7 +15,6 @@ tags:
   - interfaces de usuario android
   - interfaz grafica en android
   - layout android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

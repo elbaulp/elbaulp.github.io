@@ -5,12 +5,6 @@ title: Enlaces de la semana (I)
 layout: post
 guid: /?p=888
 permalink: /enlaces-de-la-semana-i-2/
-if_slider_image:
-  - 
-  - 
-if_seo_keywords:
-  - SQLite forense, blogger, privacidad facebook, DARPA, api twitter
-  - SQLite forense, blogger, privacidad facebook, DARPA, api twitter
 categories:
   - Enlaces de la semana
   - noticias
@@ -21,8 +15,7 @@ tags:
   - privacidad facebook
   - SQLite forense
 format: link
-main-class: "dev"
-main-class: "Enlaces de la semana"
+main-class: "articulos"
 ---
 [<img class="aligncenter size-medium wp-image-889" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt=""  />][1]
 

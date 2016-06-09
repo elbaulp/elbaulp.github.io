@@ -5,30 +5,11 @@ title: Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framewo
 layout: post
 guid: http://elbauldelprogramador.org/crear-webapps-con-soporte-html5-css3-y-javascript-con-el-lungojs-framework/
 permalink: /crear-webapps-con-soporte-html5-css3-y/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":7,"plusone":3,"stumble":0,"pinit":0,"count":10,"time":1333551686}'
-  - '{"like_count":"0","share_count":"0","twitter":7,"plusone":3,"stumble":0,"pinit":0,"count":10,"time":1333551686}'
-share_count:
-  - 0
-  - 0
 categories:
   - aplicaciones
   - cursos
   - internet
 main-class: "dev"
-main-class: "aplicaciones"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s1600/LungoJS.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s400/LungoJS.png" /></a>
@@ -44,16 +25,16 @@ También quiero aprovechar para hablaros de <a target="_blank" href="http://www.
 
 Dicho todo esto, aquí tenéis los screencast:
 
-  
+
 <!--ad-->
 
 <div style="text-align:center;">
   <p>
   </p>
-  
+
   <p>
   </p>
-  
+
   <p>
   </p>
 </div>

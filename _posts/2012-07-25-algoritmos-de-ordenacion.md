@@ -6,8 +6,8 @@ layout: post
 guid: /?p=850
 permalink: /algoritmos-de-ordenacion/
 if_slider_image:
-  - 
-  - 
+  -
+  -
 categories:
   - Algoritmos
 tags:
@@ -18,8 +18,7 @@ tags:
   - metodo ordenamiento burbuja
   - pseudocodigo ordenamiento burbuja
   - pseudocodigo ordenamiento por seleccion
-main-class: "dev"
-main-class: "Algoritmos"
+main-class: "articulos"
 ---
 Bueno, como dice el título de la entrada, voy a hablar sobre los algoritmos de ordenación, vamos a distinguir entre lentos y rápidos. La diferencia mas grande es la eficiencia, es decir, como se comportan al ordenar una gran entrada de datos, los lentos se comportan en un orden cuadrático, es decir, O(n²), mientras que los algoritmos rápidos se comportan, en un caso promedio en un orden logarítmico, osea, O (n log n).
 
@@ -52,8 +51,8 @@ El ordenamiento por **inserción** técnicamente es la forma mas lógica de orde
 
 <div>
   <div>
-    Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.</p> 
-    
+    Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.</p>
+
     ```cpp
 
 static void insercion_lims(int T[], int inicial, int final)
@@ -125,15 +124,15 @@ static void seleccion_lims(int T[], int inicial, int final)
       Algoritmo Shellsort.
     </li>
   </ol>
-  
+
   <p>
     Todos estos muy interesantes en cuanto la implementación y a la idea de organizar un vector, pero me voy a centrar en el algoritmo <strong>mergesort</strong> y en el <strong>quicksort</strong>, que se basan en la técnica divide y vencerás, para quien lo sepa, esta técnica es de las mas famosas en cuanto a multiplicación de matrices puesto que la reduce de un n^3 a un n^2,78. Se basa en coger un problema <strong>P</strong> y dividirlo en subproblemas y resolver estos sin solapamientos, y luego recursivamente unirlos para formar la solución del problema original.
   </p>
-  
+
   <p>
     El algoritmo<strong> mergesort</strong> se basa en esta técnica, con lo cual si n=1, ya esta ordenado, pero si n>1, partimos el vector de elementos en dos o mas subcolecciones, ordenamos cada uno de ellaos y luego la unimos en un solo vector ordenado, es de orden O(n log n) . Pero, ¿ cómo hacemos la partición?
   </p>
-  
+
   <ol>
     <li>
       Método 1: Primeros n-1 elementos en un conjunto A, y último en B, ordenar A utilizando el esquema de división recursivamente, y B ya esta ordenado, combinar A y B con un método inserta().
@@ -142,7 +141,7 @@ static void seleccion_lims(int T[], int inicial, int final)
       Método 2: Intentamos repartir los elementos de forma equitativa entre los dos conjuntos, A toma <strong>n/k </strong>y B las sobrantes , ordenamos A y B recursivamente, y por último combinamos A y B utilizando el proceso de mezcla que combina dos listas en una.
     </li>
   </ol>
-  
+
   ```cpp
 
 static void mergesort_lims(int T[], int inicial, int final)
@@ -175,11 +174,11 @@ static void mergesort_lims(int T[], int inicial, int final)
 }
 
 ```
-  
+
   <p>
     El algoritmo <strong>quicksort </strong>ordena un vector <strong>V</strong> eligiendo entre sus elementos un valor clave <strong>P </strong>que actúa como pivote, organiza tres secciones, izquierda-P-derecha, todos los elementos a la izquierda deberán ser menores a P, y los de la derecha mayores, los ordena sin tener que hacer ningún tipo de mezcla para combinarlos, ¿cómo elegimos el pivote?.
   </p>
-  
+
   <ol>
     <li>
       Método 1: Lo ideal sería que el pivote fuera la mediana del vector para que las partes izquierda y derecha tuvieran el mismo tamaño.
@@ -188,11 +187,11 @@ static void mergesort_lims(int T[], int inicial, int final)
       Método 2: recorremos el vector con un indice <strong>i</strong> desde 0 a n-1, y otro indice <strong>j</strong> inversamente y cuando se crucen, es decir, tenga el mismo valor, ese se seleccionara como pivote.
     </li>
   </ol>
-  
+
   <p>
     &nbsp;
   </p>
-  
+
   ```cpp
 
 static void quicksort_lims(int T[], int inicial, int final)

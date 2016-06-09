@@ -15,7 +15,6 @@ tags:
   - ocultar imagenes en imagenes
   - ocultar informacion en imagenes
 main-class: "dev"
-main-class: "C"
 ---
 <p style="text-align: center;">
   <a href="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif"><img class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif" alt=""  /></a>
@@ -33,10 +32,10 @@ Empecemos explicando la estructura del directorio:
 
   * doc
   * imágenes
-  * include 
+  * include
       * codificar.h
       * imagenES.h
-  * src 
+  * src
       * codificar.cpp
       * imagenES.cpp
       * ocultar.cpp
@@ -257,9 +256,9 @@ Comenzamos abriendo el nombre del archivo que se pasa como parámetro, si se lee
 
 Esta función ocultará tanto el nombre del archivo como el contenido, para diferenciarlos, marqué con un píxel en blanco **0xff** el punto en el que se empieza a ocultar el nombre del fichero, y una vez terminado se vuelve a marcar otro píxel en blanco. De esta forma entre estos dos píxeles se sabe que se encuentra el nombre del archivo.
 
-Es el momento de explicar cómo se oculta la información. Como dije, las imágenes PGM y PPM representan el valor de los píxeles con **unsigned char** (1 byte), que da un rango de valores del 0 al 255, (0 negro, 255 blanco). Supongamos que queremos ocultar el caracter **H** (01001000 en binario). Se necesitan 8 píxeles para almacenar este caracter ya que cada bit del caracter **H** se guardará en el último bit de cada píxel (el menos significativo). 
+Es el momento de explicar cómo se oculta la información. Como dije, las imágenes PGM y PPM representan el valor de los píxeles con **unsigned char** (1 byte), que da un rango de valores del 0 al 255, (0 negro, 255 blanco). Supongamos que queremos ocultar el caracter **H** (01001000 en binario). Se necesitan 8 píxeles para almacenar este caracter ya que cada bit del caracter **H** se guardará en el último bit de cada píxel (el menos significativo).
 
-Por ejemplo, si hay 8 píxeles negros (`11111111, 11111111, 11111111, 11111111, 11111111, 11111111, 11111111, 11111111`), tras ocultar el caracter **H** quedará (`11111110, 11111111, 11111110, 11111110, 11111111, 11111110, 11111110, 11111110`). 
+Por ejemplo, si hay 8 píxeles negros (`11111111, 11111111, 11111111, 11111111, 11111111, 11111111, 11111111, 11111111`), tras ocultar el caracter **H** quedará (`11111110, 11111111, 11111110, 11111110, 11111111, 11111110, 11111110, 11111110`).
 
 Como solo varía el color del píxel en un bit, no se aprecia el cambio.
 
@@ -326,7 +325,7 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
         value = 0;
       for (int i = in; i < tamImage && !fin_datos; i++) {
          for (int k = 0; k < 8; k++)
-             value = value << 1 | (buffer[indice++] & 0x01); 
+             value = value << 1 | (buffer[indice++] & 0x01);
             if (value == 0x7f) {
                 fin_datos = true;
                continue;
@@ -350,7 +349,7 @@ Es el momento de ver un ejemplo:
 Se va a ocultar el archivo llamado `Nombre_fichero`, cuyo contenido es:
 
 ```bash
-$ cat Nombre_fichero 
+$ cat Nombre_fichero
 Contenido del fichero
 
 ```
@@ -374,7 +373,7 @@ En la imagen de salida se pueden apreciar los dos píxeles blancos que contienen
 Para revelar la información, usamos el programa para tal propósito, que espera un único parámetro, la imagen con los datos ucultos:
 
 ```bash
-$ ./revelar imagenSalida.pgm 
+$ ./revelar imagenSalida.pgm
 Descifrado el archivo: Nombre_fichero en la imagen imagenSalida.pgm
 
 $ ls
@@ -385,7 +384,7 @@ doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fi
 Como indica, ha descifrado un fichero de nombre **Nombre_fichero**, con el comando `ls` vemos efectivamente que ha creado el fichero, y su contenido es:
 
 ```bash
-$ cat Nombre_fichero 
+$ cat Nombre_fichero
 Contenido del fichero
 
 ```

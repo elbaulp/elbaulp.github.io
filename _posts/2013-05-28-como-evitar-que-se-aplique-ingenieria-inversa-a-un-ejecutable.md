@@ -14,11 +14,10 @@ tags:
   - ingenieria inversa C
   - ptrace
 main-class: "dev"
-main-class: "C"
 ---
 Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. Hoy voy a explicar un método muy sencillo para evitar que se aplique ingeniería inversa a nuestros ejecutables, que evitará la depuración del mismo.
 
-  
+
 <!--ad-->
 
 Para ello hay que hacer uso de la función `ptrace()`:
@@ -29,9 +28,9 @@ Para ello hay que hacer uso de la función `ptrace()`:
        long ptrace(enum __ptrace_request request, pid_t pid,
                    void *addr, void *data);
 
-The  ptrace()  system  call  provides  a  means  by  which  one process (the "tracer") may observe 
-and control the execution of another process (the "tracee"), and examine and change the tracees 
-memory and registers.  It is primarily used to implement breakpoint debugging and system 
+The  ptrace()  system  call  provides  a  means  by  which  one process (the "tracer") may observe
+and control the execution of another process (the "tracee"), and examine and change the tracees
+memory and registers.  It is primarily used to implement breakpoint debugging and system
 call  tracing.
 
 ```
@@ -52,10 +51,10 @@ void ptrace_trap(void) __attribute__ ((constructor));
 
 void ptrace_trap(void) {
 
-    /*    
+    /*
      * If ptrace fails here, means someone already ptrace()'ed us.
      */
-     if (ptrace(PTRACE_TRACEME, 0, 0, 0) < 0) { 
+     if (ptrace(PTRACE_TRACEME, 0, 0, 0) < 0) {
          printf("alguien está depurando");
          exit(0);
      }
@@ -73,10 +72,10 @@ El código de arriba realiza un `ptrace` a sí mismo. Si falla al intentar reali
 ```bash
 $ gdb trace
 (gdb) r
-Starting program: trace 
+Starting program: trace
 alguien está depurando
 [Inferior 1 (process 17027) exited normally]
-(gdb) 
+(gdb)
 
 ```
 
@@ -84,7 +83,7 @@ Como se vé, el ejecutable termina ántes de llegar a ejecutar siquiera la funci
 
 #### Referencias
 
-*exploit-db.com* »» <a href="http://www.exploit-db.com/papers/13234/" target="_blank">Visitar sitio</a> 
+*exploit-db.com* »» <a href="http://www.exploit-db.com/papers/13234/" target="_blank">Visitar sitio</a>
 
 
 

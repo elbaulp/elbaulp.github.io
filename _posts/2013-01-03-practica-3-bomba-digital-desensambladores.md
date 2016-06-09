@@ -14,7 +14,6 @@ tags:
   - contraseñas asm
   - Ingenieria inversa
 main-class: "dev"
-main-class: "C"
 ---
 <img  class="thumbnail aligncenter size-full wp-image-1048" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" />
 
@@ -549,8 +548,8 @@ int main(_, v) double *v; int _;{
 <p>
   <p>
     <a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-3-bomba-digital-desensambladores/" rel="nofollow">
-    		Download &ldquo;Práctica 3 - Bomba Digital - Desensambladores&rdquo;		<small> &ndash; Downloaded 498 times &ndash; 371 kB</small>
-    	</a>
+        Download &ldquo;Práctica 3 - Bomba Digital - Desensambladores&rdquo;		<small> &ndash; Downloaded 498 times &ndash; 371 kB</small>
+      </a>
   </p>
 
   <br />

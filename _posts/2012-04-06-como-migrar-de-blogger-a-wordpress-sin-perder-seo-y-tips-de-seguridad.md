@@ -16,7 +16,6 @@ tags:
   - wordpress
 format: status
 main-class: "dev"
-main-class: "How To"
 ---
   * [Importar entradas y comentários][1]
   * [Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress][2]

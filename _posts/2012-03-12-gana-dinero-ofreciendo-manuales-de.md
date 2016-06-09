@@ -5,29 +5,10 @@ title: Gana dinero ofreciendo manuales de todas las áreas de conocimiento a tus
 layout: post
 guid: http://elbauldelprogramador.org/gana-dinero-ofreciendo-manuales-de-todas-las-areas-de-conocimiento-a-tus-lectores-con-revresponse/
 permalink: /gana-dinero-ofreciendo-manuales-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551687}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551687}'
-share_count:
-  - 0
-  - 0
 categories:
   - cursos
   - internet
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>

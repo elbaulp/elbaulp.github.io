@@ -1,22 +1,7 @@
 ---
-id: 237
 title: 'Programación Android: Interfaz gráfica &#8211; Adapters II'
-
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-adapters-ii/
 permalink: /programacion-android-interfaz-grafica-2/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - opensource

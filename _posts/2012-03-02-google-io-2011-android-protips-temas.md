@@ -5,29 +5,10 @@ title: 'Google I/O 2011: Android Protips &#8211; Temas avanzados para desarrolla
 layout: post
 guid: http://elbauldelprogramador.org/google-io-2011-android-protips-temas-avanzados-para-desarrolladores-expertos/
 permalink: /google-io-2011-android-protips-temas/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551696}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551696}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -38,7 +19,7 @@ Hace unas semanas atrás encontré este vídeo de la Google I/O 2011 en el que s
 
 El vídeo es extenso, pero muy recomendable, pueden habilitar los subtítulos pulsando en el botón CC:
 
-  
+
 <!--ad-->
 
 <p style="text-align:center;">

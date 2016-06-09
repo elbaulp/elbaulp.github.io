@@ -5,31 +5,12 @@ title: El top 500 de los supercomputadores más potentes del mundo
 layout: post
 guid: http://elbauldelprogramador.org/el-top-500-de-los-supercomputadores-mas-potentes-del-mundo/
 permalink: /el-top-500-de-los-supercomputadores-mas/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551701}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551701}'
-share_count:
-  - 0
-  - 0
 categories:
   - curiosidades
   - internet
 tags:
   - top 500 supercomputadoras mundo
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 <div style="text-align: center;">
   <img alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg"  border="0" />

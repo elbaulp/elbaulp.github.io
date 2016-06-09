@@ -5,37 +5,18 @@ title: Explicación de la ley SOPA y recopilación de enlaces de interés
 layout: post
 guid: http://elbauldelprogramador.org/explicacion-de-la-ley-sopa-y-recopilacion-de-enlaces-de-interes/
 permalink: /explicacion-de-la-ley-sopa-y/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551742}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551742}'
-share_count:
-  - 0
-  - 0
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 Quizás muchos no sepan siquiera que existe esta ley, pero si se llega a aprobar, internet tal y como lo conocemos se acabará. Os dejo esta recopilación de vídeos que explican en qué consiste esta ley. Además proporciono unos enlaces de gran interés sobre esta ley.
 
 <div style="text-align:center;">
-  </p> 
-  
+  </p>
+
   <p>
   </p>
-  
+
   <p>
   </p>
 </div>

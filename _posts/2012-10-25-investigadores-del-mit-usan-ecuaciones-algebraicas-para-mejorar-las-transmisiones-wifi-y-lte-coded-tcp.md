@@ -17,8 +17,7 @@ tags:
   - paquetes
   - WiFi
 description: "Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione."
-main-class: "dev"
-main-class: "Informatica"
+main-class: "articulos"
 ---
 
 <figure>

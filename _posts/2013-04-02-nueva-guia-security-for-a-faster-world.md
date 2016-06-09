@@ -12,8 +12,7 @@ tags:
   - security ebook
   - Security for a Faster World
   - seguridad
-main-class: "dev"
-main-class: "cursos"
+main-class: "misc"
 ---
 [<img src="/assets/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif" alt="Executive eBook: Security for a Faster World"  class="alignleft size-full wp-image-1500" />][1]
 
@@ -25,7 +24,7 @@ A security breach can be a major catastrophe for any organization, but large ent
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_hp357" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

@@ -1,37 +1,7 @@
 ---
 id: 497
 title: C++ y Java
-
 layout: minimal
-guid: http://elbauldelprogramador.org/?page_id=497
-if_page_sidebar:
-  - 0
-  - 0
-  - 0
-if_hide_page_title:
-  - on
-  - on
-  - on
-if_seo_title:
-  - Manuales de C++ y Java pdf
-  - Manuales de C++ y Java pdf
-  - Manuales de C++ y Java pdf
-sif_eo_description:
-  - Recopilación de manuales y cursos sobre c++ y java
-  - Recopilación de manuales y cursos sobre c++ y java
-  - Recopilación de manuales y cursos sobre c++ y java
-if_seo_keywords:
-  - cpp, c++, java, curso java, curso cpp, curso c++, manual c++ pdf, manual cpp pdf, manual java pdf
-  - cpp, c++, java, curso java, curso cpp, curso c++, manual c++ pdf, manual cpp pdf, manual java pdf
-  - cpp, c++, java, curso java, curso cpp, curso c++, manual c++ pdf, manual cpp pdf, manual java pdf
-
-  - http://www.elbauldelprogramador.org/p/manual-c.html
-  - http://www.elbauldelprogramador.org/p/manual-c.html
-  - https://elbauldelprogramador.com/p/manual-c.html
-if_page_section_order:
-  - breadcrumbs,page_section
-  - breadcrumbs,page_section
-  - breadcrumbs,page_section
 main-class: "dev"
 ---
 > Visita la [sección de descargas][1] para ver todo el material disponible.
