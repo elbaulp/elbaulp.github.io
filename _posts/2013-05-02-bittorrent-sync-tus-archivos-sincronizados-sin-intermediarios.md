@@ -44,7 +44,7 @@ En Windows y mac, en linux hay que dirigirse a <a href="http://localhost:8888/gu
 El siguiente paso es elegir una carpeta que queramos sincronizar y *generar un secreto* para dicha carpeta. El secreto es aleatório y único, es la llave que conecta varios dispositivos a una red sincronizada.
 
 <div id="attachment_1551" style="width: 780px" class="wp-caption aligncenter">
-  <a  href="/assets/img/2013/05/Crear-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1551" alt="Crear carpeta BitTorrent Sync" src="/assets/img/2013/05/Crear-carpeta-BitTorrent-Sync-1024x803.png"  /></a>
+  <a  href="/assets/img/2013/05/Crear-carpeta-BitTorrent-Sync.png"><img  alt="Crear carpeta BitTorrent Sync" src="/assets/img/2013/05/Crear-carpeta-BitTorrent-Sync-1024x803.png"  /></a>
 
   <p class="wp-caption-text">
     Crear carpeta BitTorrent Sync
@@ -54,7 +54,7 @@ El siguiente paso es elegir una carpeta que queramos sincronizar y *generar un s
 Hecho lo anterior, en el otro dispositivo, elegimos una carpeta en la que queramos almacenar los ficheros e introducimos el secreto en el paso anterior. En cuanto hagamos esto, automáticamente comenzará a sincronizar datos.
 
 <div id="attachment_1552" style="width: 780px" class="wp-caption aligncenter">
-  <a  href="/assets/img/2013/05/Anadir-carpeta-BitTorrent-Sync.png"><img class="size-large wp-image-1552" alt="Anadir carpeta BitTorrent Sync" src="/assets/img/2013/05/Anadir-carpeta-BitTorrent-Sync-1024x801.png"  /></a>
+  <a  href="/assets/img/2013/05/Anadir-carpeta-BitTorrent-Sync.png"><img  alt="Anadir carpeta BitTorrent Sync" src="/assets/img/2013/05/Anadir-carpeta-BitTorrent-Sync-1024x801.png"  /></a>
 
   <p class="wp-caption-text">
     Añadir carpeta BitTorrent Sync
