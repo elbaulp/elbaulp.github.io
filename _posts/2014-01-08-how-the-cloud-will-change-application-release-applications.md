@@ -13,7 +13,7 @@ tags:
   - internet
 main-class: "misc"
 ---
-[<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications"  class="alignleft size-full wp-image-2216" />][1]
+[<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications"   />][1]
 
 The use of cloud computing for custom-built, mission-critical enterprise applications is in its infancy, but both the technology and mind-set are starting to influence enterprise application architectures and delivery.
 

@@ -16,7 +16,7 @@ description: "Si se escribiesen ensayos con lenguajes de programación [HUMOR]"
 main-class: "Geek"
 ---
 <figure>
-  <img src="/assets/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp"  class="aligncenter size-full wp-image-795" />
+  <img src="/assets/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp"   />
 </figure>
 
 > **<a href="http://www.genbetadev.com/lenguajes-y-plataformas/si-escribiesemos-ensayos-con-lenguajes-de-programacion" target="_blank">Fuente: GenbetaDev</a>**

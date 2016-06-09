@@ -14,7 +14,7 @@ tags:
   - seguridad de la información
 main-class: "misc"
 ---
-[<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook"  class="alignleft size-full wp-image-1497" />][1]
+[<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook"   />][1]
 
 Download this security kit to learn everything you need to know about Information Security.
 

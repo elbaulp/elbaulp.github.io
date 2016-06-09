@@ -15,7 +15,7 @@ tags:
   - usb
 main-class: "articulos"
 ---
-[<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION"  class="aligncenter size-full wp-image-754" />][1]  
+[<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION"   />][1]  
 ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?  
 
 <!--ad-->

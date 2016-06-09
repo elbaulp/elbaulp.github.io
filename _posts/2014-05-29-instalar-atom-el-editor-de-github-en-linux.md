@@ -53,7 +53,7 @@ Hecho esto, ya podemos ejecutar Atom desde la consola o desde el menú que nuest
 
 Si no se te da bien recordar atajos de teclado, basta con recordar uno solo para obtenerlos todos `ctrl-shift-P`, aparecerá algo así:
 
-<img src="/assets/img/2014/05/cmd-alt-p-atom.png" alt="cmd-alt-p atom"  class="aligncenter size-full wp-image-2373" />
+<img src="/assets/img/2014/05/cmd-alt-p-atom.png" alt="cmd-alt-p atom"   />
 
 #### Encontrando archivos
 
@@ -91,7 +91,7 @@ apm install git-plus
 
 Una demostración de su uso:
 
-<img src="/assets/img/2014/05/git-plus-atom.gif" alt="git-plus-atom"  class="aligncenter size-full wp-image-2374" />
+<img src="/assets/img/2014/05/git-plus-atom.gif" alt="git-plus-atom"   />
 
 Algunos comandos básicos:
 
@@ -127,7 +127,7 @@ Algunos comandos básicos:
 
 Éste paquete viene instalado por defecto, es bastante útil porque muestra el diff de forma gráfica, por ejemplo:
 
-<img src="/assets/img/2014/05/git-diff-atom.png" alt="git diff atom"  class="aligncenter size-full wp-image-2375" />
+<img src="/assets/img/2014/05/git-diff-atom.png" alt="git diff atom"   />
 
 Donde el símbolo + significa que se ha agregado una línea nueva, y el punto amarillo que se ha modificado una existente.
 

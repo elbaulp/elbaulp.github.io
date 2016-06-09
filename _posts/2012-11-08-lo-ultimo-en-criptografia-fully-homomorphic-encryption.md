@@ -20,7 +20,7 @@ tags:
 main-class: "security-now"
 color: "#2DA0C3"
 ---
-[<img class="alignleft size-full wp-image-1016" title="Homomorphic Encryption" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt=""  />][1]  
+[<img  title="Homomorphic Encryption" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt=""  />][1]  
 Me he aficionado a escuchar un programa de radio llamado **Security Now!**, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.
 
 Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama **Homomorphic Encryption** (Cifrado Homomórfico) ó **Fully Homomorphic Encryption** (Cifrado totalmente homomórfico).

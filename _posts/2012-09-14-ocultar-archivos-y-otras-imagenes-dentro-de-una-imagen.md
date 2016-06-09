@@ -368,7 +368,7 @@ doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fi
 
 En la imagen de salida se pueden apreciar los dos píxeles blancos que contienen el nombre del archivo:
 
-[<img src="/assets/img/2012/09/Screenshot-from-2012-09-13-1902101.png" alt="" title="Screenshot from 2012-09-13 19:02:10"  class="aligncenter size-full wp-image-948" />][1]
+[<img src="/assets/img/2012/09/Screenshot-from-2012-09-13-1902101.png" alt="" title="Screenshot from 2012-09-13 19:02:10"   />][1]
 
 Para revelar la información, usamos el programa para tal propósito, que espera un único parámetro, la imagen con los datos ucultos:
 

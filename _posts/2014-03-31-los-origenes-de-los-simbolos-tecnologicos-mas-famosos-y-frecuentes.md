@@ -57,7 +57,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 </p>
 
 <p style="text-align: center;">
-  <a href="/assets/img/2014/03/Ethernet.jpg"><img class="aligncenter size-full wp-image-2306" alt="Ethernet" src="/assets/img/2014/03/Ethernet.jpg"  /></a>
+  <a href="/assets/img/2014/03/Ethernet.jpg"><img  alt="Ethernet" src="/assets/img/2014/03/Ethernet.jpg"  /></a>
 </p>
 
 <p dir="ltr">
@@ -80,7 +80,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2302" alt="pause" src="/assets/img/2014/03/pause.jpg"  />][2]
+[<img  alt="pause" src="/assets/img/2014/03/pause.jpg"  />][2]
 
 <p dir="ltr">
   Tan lejos como el símbolo de pausa ha llegado, muchos han notado que se parece a la notación para una conexión abierta de un esquema eléctrico. Algunos dicen que es sencillamente un símbolo de stop con un pedazo truncado en el medio. Nosotros hemos puesto nuestra moneda en un origen más clásico: En la notación musical, la cesura indica una &#8211; espera un momento &#8211; pausa.
@@ -90,7 +90,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2303" alt="firewire" src="/assets/img/2014/03/Firewire.jpg"  />][3]
+[<img  alt="firewire" src="/assets/img/2014/03/Firewire.jpg"  />][3]
 
 <p dir="ltr">
   Tiempo atrás en 1995, un pequeño grupo de Apple &#8211; el desarrollador principal de FireWire &#8211; con la tarea de diseñar un símbolo que pueda reflejar adecuadamente la nueva tecnología en la que estaban trabajando. Con la intención original de ser una alternativa serie a SCSI, el principal encanto de FireWire fue que prometía conectividad de alta velocidad para equipos de audio y video digital. Por lo tanto los diseñadores optaron por un símbolo con tres puntas, representando audio, video y datos. Inicialmente el símbolo era rojo, pero fue luego cambiado a amarillo por razones desconocidas.
@@ -100,7 +100,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2304" alt="sleep" src="/assets/img/2014/03/Sleep.jpg"  />][4]
+[<img  alt="sleep" src="/assets/img/2014/03/Sleep.jpg"  />][4]
 
 <p dir="ltr">
   La gente estaba confundida con el estado &#8220;standby&#8221; (en espera). Parecía un poco intuitivo para un equipo electrónico que no estaba ni encendido ni apagado. Por lo tanto, luego de que la IEEE apañara el botón de standby de ICE (¿recuerdas?), decidieron que un rebautismo era necesario. El cuerpo gubernamental renombró al modo standby como &#8220;sleep&#8221; (dormir), para invocar el estado en que los humanos no están ni activados ni apagados. Hoy en día, una luna creciente es de facto el símbolo de estado sleep en aparatos de Estados Unidos y Europa. ¡Su poder metafórico es innegable! Viaja a Japón, supongo, y probablemente verás el botón &#8220;zzz&#8221; ocasional.
@@ -110,7 +110,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2300" alt="usb" src="/assets/img/2014/03/usb.jpg"  />][5]
+[<img  alt="usb" src="/assets/img/2014/03/usb.jpg"  />][5]
 
 <p dir="ltr">
   Creado como parte de la especificación de USB 1.0, el ícono USB fue dibujado con la intención de parecerse al Tridente de Neptuno, el poderoso Dreizack (Pero esto no significa que deberías salir a pinchar gente o intentar domesticar delfines con tu disco flash). En lugar de los triángulos puntiagudos en el extremo de la lanza de tres puntas, los promotores del USB decidieron modificar las figuras a un triángulo, un cuadrado y un círculo. Esto se hizo para simbolizar los diferentes periféricos que pueden ser acoplados usando el standard.
@@ -120,7 +120,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2307" alt="Play" src="/assets/img/2014/03/Play.jpg"  />][6]
+[<img  alt="Play" src="/assets/img/2014/03/Play.jpg"  />][6]
 
 <p dir="ltr">
   Mientras que los símbolos de play/pause no son nativos de las computadoras, han hecho su trabajo con los teclados, reproductores multimedia (reales y virtuales) y todos los otros aparatos que pueden reproducir audio o video. Desafortunadamente, ni el triángulo que apunta hacia la derecha ni la doble barra de pausa parecen tener un origen definido. Su primera aparición fue como símbolos de la cinta en un magnetófono de bobina abierta a mediados de los &#8217;60. En algunos casos, estaban acompañados por los símbolos (doble triángulo) rebobinar y adelantar. La dirección de la flecha de play indicaba la dirección en que la sinta se movería. Fácil.
@@ -130,7 +130,7 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
   &#8211;
 </p>
 
-[<img class="aligncenter size-full wp-image-2308" alt="Play" src="/assets/img/2014/03/sbbod.jpg"  />][7]
+[<img  alt="Play" src="/assets/img/2014/03/sbbod.jpg"  />][7]
 
 <p dir="ltr">
   Este terror es conocido por muchos nombres: la hipnótica rueda del destino, la pizza giratoria, la ruleta de la muerte, la SBBOD: &#8220;Spinning Beach Ball Of Death&#8221; (la pelota playera de la muerte). Apple la llama oficialmente &#8220;spinning wait cursor&#8221; (el cursor de espera giratorio), pero muchos usuarios de Mac simplemente la llaman con una sola palabra. Su primera aparición fue en el OSX de Apple y sigue indicando que una aplicación no está respondiendo a los eventos del sistema. Como muchos han notado, la SBBOD es, de hecho, una evolución del cursor de espera tipo reloj-pulsera que la compañía usó al principio en las primeras versiones de Mac OS. Mientras los orígenes de su diseño permanecen en el misterio, Apple probablemente descartó el reloj porque recordaba a los usuarios el tiempo que pasaba mientras el programa permanecía perpetuamente colgado. A pesar de esto, las últimas revisiones han comprobado un sólo pensamiento: es completamente posible despreciar una bella e hipnótica rueda giratoria.

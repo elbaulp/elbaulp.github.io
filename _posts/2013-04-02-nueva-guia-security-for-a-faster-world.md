@@ -14,7 +14,7 @@ tags:
   - seguridad
 main-class: "misc"
 ---
-[<img src="/assets/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif" alt="Executive eBook: Security for a Faster World"  class="alignleft size-full wp-image-1500" />][1]
+[<img src="/assets/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif" alt="Executive eBook: Security for a Faster World"   />][1]
 
 With Security for a Faster World, You&#8217;ll learn best practices for protecting your corporate data, keeping intruders and malware out of your network, and protecting against disgruntled employees who may attempt to use their access privileges to compromise your systems.
 

@@ -47,7 +47,7 @@ Para que conozcáis a las personas que han colaborado en el proyecto, copio un e
 
 > ### Ruth Moya: @Rutmg1
 >
-> [<img  alt="" src="http://blog.georemindme.com/assets/img/2012/03/Ruth.jpg" title="Ruth" style="margin-right: 10px; margin-bottom: 5px;" class="alignleft size-full wp-image-1664" />][5]
+> [<img  alt="" src="http://blog.georemindme.com/assets/img/2012/03/Ruth.jpg" title="Ruth" style="margin-right: 10px; margin-bottom: 5px;"  />][5]
 >
 > Salut! Soy licenciada en traducción e interpretación por la Universidad de Granada. Actualmente estudio un máster de traducción. Conocí GeoRemindMe! gracias a mi participación en el tercer Hackathon de informática. Junto con Nazareth Pérez, he realizado la traducción de la aplicación web de GeoRemindMe! al francés, enfrentándome así a la localización de software. Esta participación me ha permitido abrir mis horizontes laborales hasta límites insospechados y conocer gente con iniciativa y ganas de comerse el mundo, sobre todo si está relleno de pollo!
 >

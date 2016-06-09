@@ -30,19 +30,19 @@ Otra ventaja viene dada a la hora de hacer pruebas, ya que se puede crear un ent
 
 En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
 
-<img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud"  class="aligncenter size-full wp-image-2526" />
+<img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud"   />
 
 ### Configurar la capacidad del servidor
 
 Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
 
-<img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud"  class="aligncenter size-full wp-image-2527" />
+<img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud"   />
 
 ### Establecer la contraseña de usuario
 
 Por último, solo resta proporcionar una contraseña al usuario **root**.
 
-<img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud"  class="aligncenter size-full wp-image-2528" />
+<img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud"   />
 
 ## Instalar Node.js
 

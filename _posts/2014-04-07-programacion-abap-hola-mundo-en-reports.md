@@ -33,11 +33,11 @@ Al pulsar el botón **Crear** lo básico que SAP no solicita es:
   * **Status**: este programa es sólo una prueba así que le daremos el status de programa de test.
   * **Aplicación**: describe, dentro de los módulos disponibles de SAP, en qué categoría se puede introducir. Por ejemplo, puede estar asociado al módulo de compras, al de ventas, etc. Al ser un programa de test no lo asignaremos a ninguna aplicación.
 
-<img src="/assets/img/2014/04/hola-mundo-crear.png" alt="Crear Hola Mundo ABAP"  class="aligncenter size-full wp-image-2331" />
+<img src="/assets/img/2014/04/hola-mundo-crear.png" alt="Crear Hola Mundo ABAP"   />
 
 Al pulsar el botón **Grabar** SAP nos devuelve a otra pantalla, donde nos pide que asignemos la capa de transporte. Básicamente, nos está diciendo que este programa podrá ser transportado desde nuestro entorno de desarrollo a un entorno productivo.
 
-<img src="/assets/img/2014/04/hola-mundo-objeto.png" alt="hola-mundo-objeto"  class="aligncenter size-full wp-image-2332" />
+<img src="/assets/img/2014/04/hola-mundo-objeto.png" alt="hola-mundo-objeto"   />
 
 Sin embargo, como a nosotros esto ahora mismo no nos interesa pulsaremos el botón **Objeto Local**. Esto significa que no lo vamos a poder transportar a productivo nunca.
 
@@ -45,7 +45,7 @@ Sin embargo, como a nosotros esto ahora mismo no nos interesa pulsaremos el bot�
 
 Una vez creado nuestro programa, SAP nos genera automáticamente una serie de líneas de comentario y una línea de report.
 
-<img src="/assets/img/2014/04/hola-mundo-abap.png" alt="hola-mundo-abap"  class="aligncenter size-full wp-image-2330" />
+<img src="/assets/img/2014/04/hola-mundo-abap.png" alt="hola-mundo-abap"   />
 
 En ABAP todas las sentencias que empiezan por **asterisco** son comentarios no ejecutables. Y en estas líneas que SAP nos ha creado automáticamente se espera que escribamos una descripción general del propósito del programa.
 
@@ -91,7 +91,7 @@ WRITE g_texto.
 
 ```
 
-<img src="/assets/img/2014/04/hola-mundo-abap.png" alt="hola-mundo-abap"  class="aligncenter size-full wp-image-2330" />
+<img src="/assets/img/2014/04/hola-mundo-abap.png" alt="hola-mundo-abap"   />
 
 ### VERIFICACIÓN Y ACTIVACIÓN
 
@@ -104,7 +104,7 @@ Antes de poder ejecutar nuestro report hay que hacer dos pasos muy importantes:
 
 A través del menú **Programa / Ejecutar / Proceso directo** o, simplemente, pulsando **F8** obtendremos el resultado de nuestro programa en pantalla.
 
-<img src="/assets/img/2014/04/hola-mundo-salida.png" alt="hola-mundo-salida"  class="aligncenter size-full wp-image-2333" />
+<img src="/assets/img/2014/04/hola-mundo-salida.png" alt="hola-mundo-salida"   />
 
 ### TRANSACCIONES
 
@@ -114,7 +114,7 @@ Si queremos avanzar un poco más en nuestro “Hola mundo” podemos incluir nue
   * Como nombre de transacción escribiremos Z_HOLA. De nuevo, recordar que como clientes sólo podemos utilizar la Z o la Y como letra de inicio de nuestros objetos ABAP.
   * Pulsamos crear, damos una descripción e indicamos que nuestra transacción es transacción de report.
   * Indicamos el nombre de nuestro programa y grabamos como objeto local.  
-    <img src="/assets/img/2014/04/hola-mundo-transaccion.png" alt="hola-mundo-transaccion"  class="aligncenter size-full wp-image-2334" /></p>
+    <img src="/assets/img/2014/04/hola-mundo-transaccion.png" alt="hola-mundo-transaccion"   /></p>
 
 Ya está. Ahora utilizando la transacción Z\_HOLA se ejecutará el resultado del programa Z\_HOLA_MUNDO.
 

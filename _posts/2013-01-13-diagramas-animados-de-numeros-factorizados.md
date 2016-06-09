@@ -14,7 +14,7 @@ tags:
 format: aside
 main-class: "dev"
 ---
-<img src="/assets/img/2013/01/2013-01-13-105334_1256x830_scrot2-1024x676.png" alt="Factorización en html5"  class="aligncenter size-large wp-image-1114" />
+<img src="/assets/img/2013/01/2013-01-13-105334_1256x830_scrot2-1024x676.png" alt="Factorización en html5"   />
 
 En este domingo os traigo algo curioso que escuché en el programa de radio [security now!][1].
 
@@ -22,7 +22,7 @@ Se trata de una animación escrita en HTML5 que muestra números desde el 1, con
 
 En el caso de ser un número primo, dado que no es posible realizar la factorización, se forma un círculo. Por ejemplo el 31:
 
-<img src="/assets/img/2013/01/Animación-numeros-factorizados2.png" alt="Animación numeros factorizados"  class="aligncenter size-full wp-image-1115" />
+<img src="/assets/img/2013/01/Animación-numeros-factorizados2.png" alt="Animación numeros factorizados"   />
 
 Sin más explicaciones, lo mejor es verlo en acción. A continuación proporciono los enlaces de referencia:
 

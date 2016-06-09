@@ -10,7 +10,7 @@ categories:
   - noticias
 main-class: "misc"
 ---
-[<img src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration"  class="alignleft size-full wp-image-1915" />][1]
+[<img src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration"   />][1]
 
 Cloud computing is changing how businesses manage their IT assets and automate their business processes. In this new environment, IT resources are no longer housed solely on-premise and boundaries of business-to-business applications have become blurred.
 

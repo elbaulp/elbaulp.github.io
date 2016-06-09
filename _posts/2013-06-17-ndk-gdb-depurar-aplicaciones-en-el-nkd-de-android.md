@@ -439,7 +439,7 @@ Con el comando adios terminamos la sesión, y el buffer ha registrado toda la co
 
 y se muestra en la pantalla del dispositivo:
 
-[<img src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb"  class="aligncenter size-medium wp-image-1678" />][6]{.thumbnail}
+[<img src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb"   />][6]{.thumbnail}
 
 Con esto concluye el artículo, espero que haya sido de utilidad.
 

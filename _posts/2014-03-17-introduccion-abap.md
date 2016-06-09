@@ -23,7 +23,7 @@ Como lenguaje de programación propietario de SAP, ABAP se ha utilizado y se uti
 
 <!--ad-->
 
-<img src="/assets/img/2014/03/SAP-Apariencia.png" alt="SAP-Apariencia"  class="aligncenter size-full wp-image-2288" />
+<img src="/assets/img/2014/03/SAP-Apariencia.png" alt="SAP-Apariencia"   />
 
 ## Características del lenguaje ABAP
 
@@ -73,7 +73,7 @@ Es la herramienta utilizada en la creación y desarrollo de pantallas de diálog
 
 Agrupa todas o casi todas las transacciones de desarrollo ABAP en una sola transacción. Nos permite trabajar a la vez con diferentes herramientas de programación bajo un área común.
 
-<img src="/assets/img/2014/03/SAP-SE80-Object-Navigator.png" alt="SAP-SE80-Object-Navigator"  class="aligncenter size-full wp-image-2289" />
+<img src="/assets/img/2014/03/SAP-SE80-Object-Navigator.png" alt="SAP-SE80-Object-Navigator"   />
 
 ### SE09/STMS &#8211; Sistema gestor de transportes
 

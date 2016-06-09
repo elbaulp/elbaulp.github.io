@@ -13,7 +13,7 @@ tags:
   - seguridad dominio
 main-class: "misc"
 ---
-[<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains"  class="alignleft size-full wp-image-2097" />][1]
+[<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains"   />][1]
 
 Domain hijacking is now front page news. Learn how to prevent your company&#8217;s valuable domains from being next!
 

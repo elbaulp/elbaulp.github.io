@@ -14,7 +14,7 @@ tags:
   - ventajas de github
 main-class: "articulos"
 ---
-<img src="/assets/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource"  class="thumbnail aligncenter size-full wp-image-1858" title="La generación GitHub: Por qué ahora todos estamos en el opensource" />  
+<img src="/assets/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource"   title="La generación GitHub: Por qué ahora todos estamos en el opensource" />  
 [***GitHub***][1] se desarrolló con la idea de ser una plataforma colaborativa de [software libre][2], pero se ha convertido en mucho más que código. En la actualidad lo usan artistas, constructores, compañías enteras&#8230; y ciudades.
 
 <!--ad-->

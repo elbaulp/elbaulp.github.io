@@ -14,7 +14,7 @@ description: "Learn to use VirtualBox. Get virtual computers up and running insi
 main-class: "misc"
 ---
 <figure>
-  <img style="border:none;"  class="aligncenter size-full wp-image-782" src="/assets/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />
+  <img style="border:none;"   src="/assets/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />
 </figure>
 
 Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware.

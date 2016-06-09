@@ -47,7 +47,7 @@ $ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
 
 Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo. *&#8211;bottomup* inserta líneas al final. *&#8211;geometry* establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN\_IZQUIERDO+MARGEN\_SUPERIOR*. Puedes obtener más información consultando la ayuda del programa o su manual.
 
-[<img src="/assets/img/2013/03/xroot-example-1024x817.jpg" alt="xroot example"  class="aligncenter size-large wp-image-1469" />][2]{.thumbnail}
+[<img src="/assets/img/2013/03/xroot-example-1024x817.jpg" alt="xroot example"   />][2]{.thumbnail}
 
 En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
 
@@ -110,7 +110,7 @@ Una breve explicación de los argumentos:
 
 Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmente, es posible tener tantas terminales como se quiera.
 
-<img src="/assets/img/2013/03/5809765.png" alt="Eterm"  class="thumbnail aligncenter size-full wp-image-1468" />
+<img src="/assets/img/2013/03/5809765.png" alt="Eterm"   />
 
 #### Referencias
 

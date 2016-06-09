@@ -33,11 +33,11 @@ Todo lo necesario para comenzar a escribir código es una cuenta de google, un n
 
 Uno de los scripts que estoy usando actualmente recopila información de mi cuenta de gmail, para mandarme un correo al final de més con estadísticas y gráficos sobre quién me manda más correos electónicos, a quién respondo más etc. El informe que elabora este script es así:
 
-<img src="/assets/img/2013/04/gmailStats.png" alt="gmailStats"  class="aligncenter size-large wp-image-1514" />
+<img src="/assets/img/2013/04/gmailStats.png" alt="gmailStats"   />
 
-<img src="/assets/img/2013/04/chart1.png" alt="chart1"  class="aligncenter size-full wp-image-1512" />
+<img src="/assets/img/2013/04/chart1.png" alt="chart1"   />
 
-<img src="/assets/img/2013/04/chart2.png" alt="chart2"  class="aligncenter size-large wp-image-1513" />
+<img src="/assets/img/2013/04/chart2.png" alt="chart2"   />
 
 Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google »  
 <a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>.

@@ -24,7 +24,7 @@ Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 </noscript>
 
 
-[<img src="/assets/img/2013/06/LOGOS.png" alt="LOGOS"  class="aligncenter size-full wp-image-1696" />][1]{.thumbnail}
+[<img src="/assets/img/2013/06/LOGOS.png" alt="LOGOS"   />][1]{.thumbnail}
 
 
 

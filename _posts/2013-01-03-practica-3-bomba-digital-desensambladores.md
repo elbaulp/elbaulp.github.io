@@ -15,7 +15,7 @@ tags:
   - Ingenieria inversa
 main-class: "dev"
 ---
-<img  class="thumbnail aligncenter size-full wp-image-1048" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" />
+<img   title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" />
 
 Hace unas semanas [hablé de un desafío][1] propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.
 

@@ -21,7 +21,7 @@ main-class: "linux"
 ---
 
 <figure>
-<img class="alignleft size-full wp-image-836" alt="sh" src="/assets/img/2012/07/sh1.png"  />
+<img  alt="sh" src="/assets/img/2012/07/sh1.png"  />
 </figure>
 
 Visto de forma simple, los runlevel  determinan qué programas se ejecutan al inicio del sistema.

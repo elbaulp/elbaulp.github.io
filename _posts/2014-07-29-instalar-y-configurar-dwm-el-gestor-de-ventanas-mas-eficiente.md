@@ -113,7 +113,7 @@ Recompilamos y listo.
 
 Un programa muy útil es dmenu, permite lanzar cualquier programa abriendo una ventanita en la que podemos escribir el nombre del programa a ejecutar:
 
-<img src="/assets/img/2014/07/dmenu.png" alt="Dmenu"  class="alignleft size-full wp-image-2405" />
+<img src="/assets/img/2014/07/dmenu.png" alt="Dmenu"   />
 
 Para instalarlo:
 

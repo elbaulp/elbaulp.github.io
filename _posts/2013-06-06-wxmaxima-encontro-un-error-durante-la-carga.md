@@ -13,7 +13,7 @@ tags:
   - wxmaxima error
 main-class: "dev"
 ---
-<img src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga"  class="thumbnail alignleft size-full wp-image-1625" />  
+<img src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga"   />  
 En la facultad solemos usar wxMaxima en las prácticas de las asignturas. Hace poco al intentar abrir un fichero wxm me encontré con el siguiente error:
 
 wxMaxima encontró un error durante la carga ó Failed to convert file to Unicode.

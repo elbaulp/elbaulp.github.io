@@ -13,7 +13,7 @@ tags:
   - guias
 main-class: "misc"
 ---
-[<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography"  class="alignleft size-full wp-image-2315" />][1]
+[<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography"   />][1]
 
 An easy to understand history of cryptography.
 
