@@ -8,7 +8,6 @@ image: 2013/05/latex_logo.png
 date: 2015-11-19T09:20:00+00:00
 math: true
 main-class: "latex"
-color: "#B31917"
 ---
 
 {% include _toc.html %}

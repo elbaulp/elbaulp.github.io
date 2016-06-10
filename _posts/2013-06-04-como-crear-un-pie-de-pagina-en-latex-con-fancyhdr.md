@@ -16,7 +16,6 @@ tags:
   - latex nota al pie
 image: 2013/05/latex_logo.png
 main-class: "latex"
-color: "#B31917"
 ---
 
 <figure>

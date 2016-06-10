@@ -8,7 +8,6 @@ description: "Todo aquel que use git sabrá que en ocasiones es un poco tedioso 
 tags: [git, github, alias git, configurar git, configuraciones git]
 image: 2013/03/git-logo.png
 main-class: "git"
-color: "#f05033"
 ---
 <figure>
   <img src="/assets/img/2013/03/git-logo.png" title="{{ page.title }}" alt="{{ page.title }}" />
