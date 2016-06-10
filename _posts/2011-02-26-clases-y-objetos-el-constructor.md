@@ -2,7 +2,6 @@
 title: 'Clases y Objetos &#8211; El Constructor'
 
 layout: post
-guid: http://elbauldelprogramador.org/clases-y-objetos-el-constructor/
 permalink: /clases-y-objetos-el-constructor/
 blogger_blog:
   - www.elbauldelprogramador.org

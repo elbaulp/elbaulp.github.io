@@ -2,7 +2,6 @@
 title: Introducción al NDK de Android
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1542
 permalink: /introduccion-al-ndk-de-android/
 categories:
   - android

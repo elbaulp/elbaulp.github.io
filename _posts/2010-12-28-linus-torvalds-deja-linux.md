@@ -2,7 +2,6 @@
 title: Linus Torvalds deja Linux
 
 layout: post
-guid: http://elbauldelprogramador.org/linus-torvalds-deja-linux/
 permalink: /linus-torvalds-deja-linux/
 blogger_blog:
   - www.elbauldelprogramador.org

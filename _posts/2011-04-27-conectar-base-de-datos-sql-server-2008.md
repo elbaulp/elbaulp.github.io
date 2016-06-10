@@ -2,7 +2,6 @@
 title: Conectar base de datos sql Server 2008 a aplicación Java remotamente
 
 layout: post
-guid: http://elbauldelprogramador.org/conectar-base-de-datos-sql-server-2008-a-aplicacion-java-remotamente/
 permalink: /conectar-base-de-datos-sql-server-2008/
 blogger_blog:
   - www.elbauldelprogramador.org

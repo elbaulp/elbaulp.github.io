@@ -2,7 +2,6 @@
 title: 'Programación Android: Insertando registros'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-insertando-registros/
 permalink: /programacion-android-insertando/
 categories:
   - android

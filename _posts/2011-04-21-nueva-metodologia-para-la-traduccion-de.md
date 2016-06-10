@@ -2,7 +2,6 @@
 title: Nueva metodología para la traducción de la Guía Android
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-metodologia-para-la-traduccion-de-la-guia-android/
 permalink: /nueva-metodologia-para-la-traduccion-de/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'Introducción a PL/SQL &#8211; Transacciones'
 
 layout: post
-guid: http://elbauldelprogramador.org/introduccion-a-plsql-transacciones/
 permalink: /introduccion-plsql-transacciones/
 blogger_blog:
   - www.elbauldelprogramador.org

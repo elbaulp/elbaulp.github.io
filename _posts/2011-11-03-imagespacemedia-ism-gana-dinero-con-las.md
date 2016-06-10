@@ -2,7 +2,6 @@
 title: 'ImageSpaceMedia (ISM) &#8211; Gana dinero con las imágenes de tu web'
 
 layout: post
-guid: http://elbauldelprogramador.org/imagespacemedia-ism-gana-dinero-con-las-imagenes-de-tu-web/
 permalink: /imagespacemedia-ism-gana-dinero-con-las/
 categories:
   - noticias

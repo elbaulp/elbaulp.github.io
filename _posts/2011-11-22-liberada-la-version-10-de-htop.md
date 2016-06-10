@@ -2,7 +2,6 @@
 title: Liberada la versión 1.0 de htop
 
 layout: post
-guid: http://elbauldelprogramador.org/liberada-la-version-1-0-de-htop/
 permalink: /liberada-la-version-10-de-htop/
 categories:
   - linux

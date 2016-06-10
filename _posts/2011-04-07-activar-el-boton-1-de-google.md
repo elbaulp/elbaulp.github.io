@@ -2,7 +2,6 @@
 title: Activar el botón +1 de google
 
 layout: post
-guid: http://elbauldelprogramador.org/activar-el-boton-1-de-google/
 permalink: /activar-el-boton-1-de-google/
 blogger_blog:
   - www.elbauldelprogramador.org

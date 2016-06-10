@@ -2,7 +2,6 @@
 title: Google Os Vs Windows
 
 layout: post
-guid: http://elbauldelprogramador.org/google-os-vs-windows/
 permalink: /google-os-vs-windows/
 blogger_blog:
   - www.elbauldelprogramador.org

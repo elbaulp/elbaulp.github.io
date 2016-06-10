@@ -2,7 +2,6 @@
 title: Combatir los comentarios de spam en WordPress
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2036
 permalink: /combatir-los-comentarios-de-spam-en-wordpress/
 categories:
   - Administracion de Servidores

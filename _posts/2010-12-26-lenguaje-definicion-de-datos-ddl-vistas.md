@@ -2,7 +2,6 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
 
 layout: post
-guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-vistas/
 permalink: /lenguaje-definicion-de-datos-ddl-vistas/
 blogger_blog:
   - www.elbauldelprogramador.org

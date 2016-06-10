@@ -2,7 +2,6 @@
 title: 'BitTorrent Sync: Tus archivos sincronizados sin intermediarios'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1548
 permalink: /bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/
 categories:
   - internet

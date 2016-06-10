@@ -2,7 +2,6 @@
 title: 'Diseño de Bases de Datos ( II ) &#8211; Restricciones'
 
 layout: post
-guid: http://elbauldelprogramador.org/diseno-de-bases-de-datos-ii-restricciones/
 permalink: /diseno-de-bases-de-datos-ii/
 blogger_blog:
   - www.elbauldelprogramador.org

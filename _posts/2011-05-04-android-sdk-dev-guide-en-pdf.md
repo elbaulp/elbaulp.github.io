@@ -2,7 +2,6 @@
 title: Android SDK Dev Guide en PDF
 
 layout: post
-guid: http://elbauldelprogramador.org/android-sdk-dev-guide-en-pdf/
 permalink: /android-sdk-dev-guide-en-pdf/
 categories:
   - android

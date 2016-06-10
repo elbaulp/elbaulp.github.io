@@ -2,7 +2,6 @@
 title: Habilitadas las vistas dinámicas en el blog
 
 layout: post
-guid: http://elbauldelprogramador.org/habilitadas-las-vistas-dinamicas-en-el-blog/
 permalink: /habilitadas-las-vistas-dinamicas-en-el/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Reparto de las 9 invitaciones para Diaspora
 
 layout: post
-guid: http://elbauldelprogramador.org/reparto-de-las-9-invitaciones-para-diaspora/
 permalink: /reparto-de-las-9-invitaciones-para/
 blogger_blog:
   - www.elbauldelprogramador.org

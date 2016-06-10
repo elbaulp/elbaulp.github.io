@@ -2,7 +2,6 @@
 title: RockMelt, The social web browser that lives in the clouds
 
 layout: post
-guid: http://elbauldelprogramador.org/rockmelt-the-social-web-browser-that-lives-in-the-clouds/
 permalink: /rockmelt-social-web-browser-that-lives/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Instalación y optimización de un servidor web con Nginx (II)
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2255
 permalink: /instalacion-optimizacion-servidor-web-nginx-ii/
 categories:
   - Administracion de Servidores

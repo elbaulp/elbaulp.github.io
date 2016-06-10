@@ -2,7 +2,6 @@
 title: Investigadores más cerca de usar luz en lugar de cables en ordenadores
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2497
 permalink: /investigadores-mas-cerca-de-usar-luz-en-lugar-de-cables-en-ordenadores/
 categories:
   - Articulos

@@ -2,7 +2,6 @@
 title: Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework
 
 layout: post
-guid: http://elbauldelprogramador.org/crear-webapps-con-soporte-html5-css3-y-javascript-con-el-lungojs-framework/
 permalink: /crear-webapps-con-soporte-html5-css3-y/
 categories:
   - aplicaciones

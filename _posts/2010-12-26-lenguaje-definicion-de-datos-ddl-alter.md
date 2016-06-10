@@ -2,7 +2,6 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
 
 layout: post
-guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-alter-table/
 permalink: /lenguaje-definicion-de-datos-ddl-alter/
 blogger_blog:
   - www.elbauldelprogramador.org

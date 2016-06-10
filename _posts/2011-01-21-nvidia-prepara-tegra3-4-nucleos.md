@@ -2,7 +2,6 @@
 title: NVIDIA prepara Tegra3, 4 núcleos
 
 layout: post
-guid: http://elbauldelprogramador.org/nvidia-prepara-tegra3-4-nucleos/
 permalink: /nvidia-prepara-tegra3-4-nucleos/
 blogger_blog:
   - www.elbauldelprogramador.org

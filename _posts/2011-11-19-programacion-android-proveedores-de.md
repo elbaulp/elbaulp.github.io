@@ -2,7 +2,6 @@
 title: 'Programación Android: Proveedores de Contenido &#8211; Introducción'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-proveedores-de-contenido-introduccion/
 permalink: /programacion-android-proveedores-de/
 categories:
   - android

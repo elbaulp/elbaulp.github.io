@@ -2,7 +2,6 @@
 title: Terminada la primera parte del manual Android
 
 layout: post
-guid: http://elbauldelprogramador.org/terminada-la-primera-parte-del-manual-android/
 permalink: /terminada-la-primera-parte-del-manual/
 categories:
   - android

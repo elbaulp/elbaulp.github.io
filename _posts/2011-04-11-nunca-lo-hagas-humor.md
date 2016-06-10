@@ -2,7 +2,6 @@
 title: '¡Nunca lo hagas! [Humor]'
 
 layout: post
-guid: http://elbauldelprogramador.org/nunca-lo-hagas-humor/
 permalink: /nunca-lo-hagas-humor/
 blogger_blog:
   - www.elbauldelprogramador.org

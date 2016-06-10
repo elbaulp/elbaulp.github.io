@@ -2,7 +2,6 @@
 title: '[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)'
 
 layout: post
-guid: http://elbauldelprogramador.org/humor-como-arreglar-una-computadora-windows-linux-o-mac-osx/
 permalink: /humor-como-arreglar-una-computadora/
 categories:
   - curiosidades

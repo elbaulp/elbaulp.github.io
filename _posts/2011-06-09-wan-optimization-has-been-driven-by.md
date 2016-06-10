@@ -2,7 +2,6 @@
 title: 'Nueva guía: WAN Optimization for Today and Tomorrow'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-wan-optimization-for-today-and-tomorrow/
 permalink: /wan-optimization-has-been-driven-by/
 categories:
   - cursos

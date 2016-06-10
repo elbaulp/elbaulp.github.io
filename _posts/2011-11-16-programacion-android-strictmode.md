@@ -2,7 +2,6 @@
 title: 'Programación Android: StrictMode'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-strictmode/
 permalink: /programacion-android-strictmode/
 categories:
   - android

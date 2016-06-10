@@ -2,7 +2,6 @@
 title: Cómo empezar a programar
 
 layout: post
-guid: http://elbauldelprogramador.org/como-empezar-a-programar/
 permalink: /como-empezar-programar-how-start/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Cómo apagar automáticamente el PC cuando las descargas finalicen
 
 layout: post
-guid: http://elbauldelprogramador.org/como-apagar-automaticamente-el-pc-cuando-las-descargas-finalicen/
 permalink: /como-apagar-automaticamente-el-pc/
 categories:
   - aplicaciones

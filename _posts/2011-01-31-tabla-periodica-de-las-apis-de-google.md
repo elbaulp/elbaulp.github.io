@@ -2,7 +2,6 @@
 title: Tabla periódica de las APIs de google
 
 layout: post
-guid: http://elbauldelprogramador.org/tabla-periodica-de-las-apis-de-google/
 permalink: /tabla-periodica-de-las-apis-de-google/
 blogger_blog:
   - www.elbauldelprogramador.org

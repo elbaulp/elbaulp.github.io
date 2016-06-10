@@ -3,7 +3,6 @@ title: 'Entendiendo OAuth: Qué ocurre cuando te loggeas en un sitio con Google,
 
 description: Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
 layout: post
-guid: /?p=776
 permalink: /entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/
 if_slider_image:
   -

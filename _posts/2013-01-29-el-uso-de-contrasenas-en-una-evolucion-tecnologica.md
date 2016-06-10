@@ -2,7 +2,6 @@
 title: El uso de contraseñas en una evolución tecnológica
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1207
 permalink: /el-uso-de-contrasenas-en-una-evolucion-tecnologica/
 categories:
   - Articulos

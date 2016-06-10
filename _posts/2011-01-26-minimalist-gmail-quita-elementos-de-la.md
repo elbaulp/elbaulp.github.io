@@ -2,7 +2,6 @@
 title: 'Minimalist Gmail: quita elementos de la interfaz de Gmail en Chrome'
 
 layout: post
-guid: http://elbauldelprogramador.org/minimalist-gmail-quita-elementos-de-la-interfaz-de-gmail-en-chrome/
 permalink: /minimalist-gmail-quita-elementos-de-la/
 blogger_blog:
   - www.elbauldelprogramador.org

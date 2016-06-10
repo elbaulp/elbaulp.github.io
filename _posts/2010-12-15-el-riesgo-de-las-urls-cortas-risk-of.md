@@ -2,7 +2,6 @@
 title: El riesgo de las URLs cortas
 
 layout: post
-guid: http://elbauldelprogramador.org/el-riesgo-de-las-urls-cortas/
 permalink: /el-riesgo-de-las-urls-cortas-risk-of/
 blogger_blog:
   - www.elbauldelprogramador.org

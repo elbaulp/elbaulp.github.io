@@ -2,7 +2,6 @@
 title: Citas clásicas de programación
 
 layout: post
-guid: http://elbauldelprogramador.org/citas-clasicas-de-programacion/
 permalink: /citas-clasicas-de-programacion/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Usos del botón central del ratón
 
 layout: post
-guid: http://elbauldelprogramador.org/usos-del-boton-central-del-raton/
 permalink: /usos-del-boton-central-del-raton-use/
 blogger_blog:
   - www.elbauldelprogramador.org

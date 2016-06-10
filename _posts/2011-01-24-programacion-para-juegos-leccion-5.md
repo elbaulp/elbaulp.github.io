@@ -2,7 +2,6 @@
 title: 'Programación para Juegos &#8211; Lección 5 &#8211; Colores Clave'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-para-juegos-leccion-5-colores-clave/
 permalink: /programacion-para-juegos-leccion-5/
 blogger_blog:
   - www.elbauldelprogramador.org

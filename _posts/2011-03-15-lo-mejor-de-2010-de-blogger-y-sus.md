@@ -2,7 +2,6 @@
 title: Lo mejor de 2010 de blogger, y sus planes para 2011
 
 layout: post
-guid: http://elbauldelprogramador.org/lo-mejor-de-2010-de-blogger-y-sus-planes-para-2011/
 permalink: /lo-mejor-de-2010-de-blogger-y-sus/
 blogger_blog:
   - www.elbauldelprogramador.org

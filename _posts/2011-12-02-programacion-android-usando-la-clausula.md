@@ -2,7 +2,6 @@
 title: 'Programación Android: Usando la cláusula Where'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-usando-la-clausula-where/
 permalink: /programacion-android-usando-la-clausula/
 categories:
   - android

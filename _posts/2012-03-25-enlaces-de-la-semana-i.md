@@ -2,7 +2,6 @@
 title: Enlaces de la semana ( I )
 
 layout: post
-guid: http://elbauldelprogramador.org/enlaces-de-la-semana-i/
 permalink: /enlaces-de-la-semana-i/
 categories:
   - Enlaces de la semana

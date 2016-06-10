@@ -2,7 +2,6 @@
 title: 'Nueva guía: Outsourcing Web Projects: 6 Steps to a Smarter Business'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-outsourcing-web-projects-6-steps-to-a-smarter-business/
 permalink: /nueva-guia-outsourcing-web-projects-6/
 categories:
   - cursos

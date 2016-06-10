@@ -2,7 +2,6 @@
 title: Peter Norvig hablando sobre clases online
 
 layout: post
-guid: /?p=807
 permalink: /peter-norvig-hablando-sobre-clases-online/
 if_slider_image:
   -

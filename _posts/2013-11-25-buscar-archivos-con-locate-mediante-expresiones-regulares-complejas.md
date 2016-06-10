@@ -2,7 +2,6 @@
 title: Buscar archivos con locate mediante expresiones regulares
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2008
 permalink: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/
 categories:
   - script

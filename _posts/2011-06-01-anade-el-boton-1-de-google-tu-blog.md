@@ -2,7 +2,6 @@
 title: Añade el botón +1 de google a tu blog
 
 layout: post
-guid: http://elbauldelprogramador.org/anade-el-boton-1-de-google-a-tu-blog/
 permalink: /anade-el-boton-1-de-google-tu-blog/
 categories:
   - internet

@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos compilados y no compilados'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-compilados-y-no-compilados/
 permalink: /programacion-android-recursos-2/
 categories:
   - android

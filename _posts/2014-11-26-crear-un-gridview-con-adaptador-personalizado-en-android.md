@@ -2,7 +2,6 @@
 title: Crear un GridView con Adaptador personalizado en Android
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2476
 permalink: /crear-un-gridview-con-adaptador-personalizado-en-android/
 categories:
   - android

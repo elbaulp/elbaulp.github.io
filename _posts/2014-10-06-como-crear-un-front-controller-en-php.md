@@ -2,7 +2,6 @@
 title: Cómo crear un Front Controller en PHP
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2447
 permalink: /como-crear-un-front-controller-en-php/
 categories:
   - php

@@ -2,7 +2,6 @@
 title: Firebug y page speed
 
 layout: post
-guid: http://elbauldelprogramador.org/firebug-y-page-speed/
 permalink: /firebug-y-page-speed/
 blogger_blog:
   - www.elbauldelprogramador.org

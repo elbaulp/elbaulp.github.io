@@ -2,7 +2,6 @@
 title: 2 invitaciones para IFTTT disponibles
 
 layout: post
-guid: http://elbauldelprogramador.org/2-invitaciones-para-ifttt-disponibles/
 permalink: /2-invitaciones-para-ifttt-disponibles/
 blogger_blog:
   - www.elbauldelprogramador.org

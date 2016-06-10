@@ -2,7 +2,6 @@
 title: Introducción SQL
 
 layout: post
-guid: http://elbauldelprogramador.org/introduccion-sql/
 permalink: /introduccion-sql-sql-introduction/
 blogger_blog:
   - www.elbauldelprogramador.org

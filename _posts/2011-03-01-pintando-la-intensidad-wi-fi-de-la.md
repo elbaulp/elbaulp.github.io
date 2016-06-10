@@ -2,7 +2,6 @@
 title: Pintando la intensidad Wi-Fi de la Ciudad.
 
 layout: post
-guid: http://elbauldelprogramador.org/pintando-la-intensidad-wi-fi-de-la-ciudad/
 permalink: /pintando-la-intensidad-wi-fi-de-la/
 blogger_blog:
   - www.elbauldelprogramador.org

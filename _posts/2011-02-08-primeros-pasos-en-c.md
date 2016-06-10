@@ -2,7 +2,6 @@
 title: Primeros pasos en C++
 
 layout: post
-guid: http://elbauldelprogramador.org/primeros-pasos-en-c/
 permalink: /primeros-pasos-en-c/
 blogger_blog:
   - www.elbauldelprogramador.org

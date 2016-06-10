@@ -2,7 +2,6 @@
 title: Cómo crear shortcodes en WordPress que soporten parámetros
 
 layout: post
-guid: /?p=952
 permalink: /como-crear-shortcodes-en-wordpress/
 categories:
   - How To

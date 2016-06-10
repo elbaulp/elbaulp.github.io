@@ -2,7 +2,6 @@
 title: Introducción a las expresiones regulares en python
 
 layout: post
-guid: /?p=713
 permalink: /introduccion-a-las-expresiones-regulares-en-python/
 sif_eo_description:
   - Tutorial sobre expresiones regulares en python

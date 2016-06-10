@@ -2,7 +2,6 @@
 title: Samsung Droid Charge Smartphone
 
 layout: post
-guid: http://elbauldelprogramador.org/samsung-droid-charge-smartphone/
 permalink: /samsung-droid-charge-smartphone/
 categories:
   - android

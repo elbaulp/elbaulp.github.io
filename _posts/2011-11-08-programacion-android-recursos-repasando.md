@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-repasando-la-estructura-del-directorio-de-recursos/
 permalink: /programacion-android-recursos-repasando/
 categories:
   - android

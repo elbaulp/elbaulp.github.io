@@ -2,7 +2,6 @@
 title: Cómo programar apps móviles para pymes sin salir de casa
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2275
 permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/
 categories:
   - Articulos

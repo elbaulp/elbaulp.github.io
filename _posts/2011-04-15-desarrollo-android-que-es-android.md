@@ -2,7 +2,6 @@
 title: 'Desarrollo android &#8211; ¿Qué es Android? &#8211; Traducción de developer.android.com'
 
 layout: post
-guid: http://elbauldelprogramador.org/desarrollo-android-que-es-android-traduccion-de-developer-android-com/
 permalink: /desarrollo-android-que-es-android/
 blogger_blog:
   - www.elbauldelprogramador.org

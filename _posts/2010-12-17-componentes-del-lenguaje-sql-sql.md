@@ -2,7 +2,6 @@
 title: Componentes del lenguaje SQL
 
 layout: post
-guid: http://elbauldelprogramador.org/componentes-del-lenguaje-sql/
 permalink: /componentes-del-lenguaje-sql-sql/
 blogger_blog:
   - www.elbauldelprogramador.org

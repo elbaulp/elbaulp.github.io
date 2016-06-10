@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Layout'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-layout/
 permalink: /programacion-android-recursos-layout/
 categories:
   - android

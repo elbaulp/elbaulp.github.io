@@ -2,7 +2,6 @@
 title: 6 E-books gratuitos para aprenter a programar en Python
 
 layout: post
-guid: http://elbauldelprogramador.org/6-e-books-gratuitos-para-aprenter-a-programar-en-python/
 permalink: /6-e-books-gratuitos-para-aprenter/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Busca en google lo siguiente y verás que pasa
 
 layout: post
-guid: http://elbauldelprogramador.org/busca-en-google-lo-siguiente-y-veras-que-pasa/
 permalink: /busca-en-google-lo-siguiente-y-veras/
 categories:
   - curiosidades

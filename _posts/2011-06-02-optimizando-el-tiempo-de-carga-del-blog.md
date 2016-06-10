@@ -2,7 +2,6 @@
 title: Optimizando el tiempo de carga del blog
 
 layout: post
-guid: http://elbauldelprogramador.org/optimizando-el-tiempo-de-carga-del-blog/
 permalink: /optimizando-el-tiempo-de-carga-del-blog/
 categories:
   - internet

@@ -2,7 +2,6 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Conceptos básicos'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-conceptos-basicos/
 permalink: /programacion-android-interfaz-grafica/
 categories:
   - android

@@ -2,7 +2,6 @@
 title: '9 Invitaciones para Diaspora* disponibles.'
 
 layout: post
-guid: http://elbauldelprogramador.org/9-invitaciones-para-diaspora-disponibles/
 permalink: /9-invitaciones-para-diaspora/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Usando recursos'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-usando-recursos/
 permalink: /programacion-android-recursos-usando/
 categories:
   - android

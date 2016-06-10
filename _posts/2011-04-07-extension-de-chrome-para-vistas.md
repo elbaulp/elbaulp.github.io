@@ -2,7 +2,6 @@
 title: Extensión de chrome para Vistas Dinámicas
 
 layout: post
-guid: http://elbauldelprogramador.org/extension-de-chrome-para-vistas-dinamicas/
 permalink: /extension-de-chrome-para-vistas/
 blogger_blog:
   - www.elbauldelprogramador.org

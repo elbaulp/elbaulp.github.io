@@ -2,7 +2,6 @@
 title: Copiar archivos recursivamente
 
 layout: post
-guid: http://elbauldelprogramador.org/copiar-archivos-recursivamente/
 permalink: /copiar-archivos-recursivamente/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'Nueva sección: Descarga de Manuales gratuitos'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-seccion-descarga-de-manuales-gratuitos/
 permalink: /nueva-seccion-descarga-de-manuales/
 categories:
   - cursos

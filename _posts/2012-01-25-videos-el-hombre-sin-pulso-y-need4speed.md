@@ -2,7 +2,6 @@
 title: '[VÍDEOS] El hombre sin pulso y Need4Speed: Insight. Dos vídeos que merece la pena ver'
 
 layout: post
-guid: http://elbauldelprogramador.org/videos-el-hombre-sin-pulso-y-need4speed-insight-dos-videos-que-merece-la-pena-ver/
 permalink: /videos-el-hombre-sin-pulso-y-need4speed/
 categories:
   - curiosidades

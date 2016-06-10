@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Computer Inside Your Computer: How To Use VirtualBox'
 
 layout: post
-guid: /?p=781
 permalink: /nueva-guia-computer-inside-your-computer-how-to-use-virtualbox/
 categories:
   - cursos

@@ -2,7 +2,6 @@
 title: Curso de certificación Junior Level Linux Professional
 
 layout: post
-guid: http://elbauldelprogramador.org/curso-de-certificacion-junior-level-linux-professional/
 permalink: /curso-de-certificacion-junior-level/
 categories:
   - cursos

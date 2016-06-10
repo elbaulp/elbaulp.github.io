@@ -2,7 +2,6 @@
 title: Sobre el blog
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1786
 permalink: /sobre-el-blog/
 categories:
   - Articulos

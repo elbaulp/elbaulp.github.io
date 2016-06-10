@@ -2,7 +2,6 @@
 title: Codificación
 
 layout: post
-guid: http://elbauldelprogramador.org/codificacion/
 permalink: /codificacion/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'Celebrando los 20 años de Linux [Video]'
 
 layout: post
-guid: http://elbauldelprogramador.org/celebrando-los-20-anos-de-linux-video/
 permalink: /celebrando-los-20-anos-de-linux-video/
 blogger_blog:
   - www.elbauldelprogramador.org

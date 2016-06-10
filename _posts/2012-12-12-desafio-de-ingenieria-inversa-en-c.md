@@ -2,7 +2,6 @@
 title: Desafío de ingeniería inversa en C
 
 layout: post
-guid: /?p=1046
 permalink: /desafio-de-ingenieria-inversa-en-c/
 categories:
   - C

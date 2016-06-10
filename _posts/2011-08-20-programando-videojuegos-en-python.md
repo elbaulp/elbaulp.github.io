@@ -2,7 +2,6 @@
 title: Programando Videojuegos en Python
 
 layout: post
-guid: http://elbauldelprogramador.org/programando-videojuegos-en-python/
 permalink: /programando-videojuegos-en-python/
 categories:
   - juegos

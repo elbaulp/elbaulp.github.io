@@ -2,7 +2,6 @@
 title: Diagramas animados de números factorizados en HTML5
 
 layout: post
-guid: /?p=1113
 permalink: /diagramas-animados-de-numeros-factorizados/
 categories:
   - curiosidades

@@ -2,7 +2,6 @@
 title: Ubuntu running on the Samsung Galaxy Tab
 
 layout: post
-guid: http://elbauldelprogramador.org/ubuntu-running-on-the-samsung-galaxy-tab/
 permalink: /ubuntu-running-on-samsung-galaxy-tab/
 blogger_blog:
   - www.elbauldelprogramador.org

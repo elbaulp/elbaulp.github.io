@@ -2,7 +2,6 @@
 title: Manejar excepciones en Java
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2438
 permalink: /manejar-excepciones-en-java/
 categories:
   - Java

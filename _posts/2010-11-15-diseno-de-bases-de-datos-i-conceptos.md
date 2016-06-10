@@ -2,7 +2,6 @@
 title: 'Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional'
 
 layout: post
-guid: http://elbauldelprogramador.org/diseno-de-bases-de-datos-i-conceptos-del-modelo-relacional/
 permalink: /diseno-de-bases-de-datos-i-conceptos/
 blogger_blog:
   - www.elbauldelprogramador.org

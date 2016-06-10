@@ -2,7 +2,6 @@
 title: Crea scripts para las aplicaciones de Google con Apps Script
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1470
 permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
 categories:
   - internet

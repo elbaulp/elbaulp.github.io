@@ -2,7 +2,6 @@
 title: Repasando el Año.
 
 layout: post
-guid: http://elbauldelprogramador.org/repasando-el-ano/
 permalink: /repasando-el-ano/
 blogger_blog:
   - www.elbauldelprogramador.org

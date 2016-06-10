@@ -2,7 +2,6 @@
 title: Colocar los botones sociales de jetpack al principio del artículo en WordPress
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1698
 permalink: /colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/
 categories:
   - opensource

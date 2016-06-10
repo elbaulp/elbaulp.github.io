@@ -2,7 +2,6 @@
 title: Echando un vistazo a GNOME 3
 
 layout: post
-guid: http://elbauldelprogramador.org/echando-un-vistazo-a-gnome-3/
 permalink: /echando-un-vistazo-gnome-3/
 blogger_blog:
   - www.elbauldelprogramador.org

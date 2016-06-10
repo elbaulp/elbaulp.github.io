@@ -2,7 +2,6 @@
 title: Cuarto Hackathon de proyectos de software libre de la UGR
 
 layout: post
-guid: http://elbauldelprogramador.org/cuarto-hackathon-de-proyectos-de-software-libre-de-la-ugr/
 permalink: /cuarto-hackathon-de-proyectos-de/
 categories:
   - aplicaciones

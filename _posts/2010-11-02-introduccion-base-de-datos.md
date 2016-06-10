@@ -2,7 +2,6 @@
 title: Introduccion a base de datos
 
 layout: post
-guid: http://elbauldelprogramador.org/introduccion-a-base-de-datos/
 permalink: /introduccion-base-de-datos/
 blogger_blog:
   - www.elbauldelprogramador.org

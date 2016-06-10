@@ -2,7 +2,6 @@
 title: Generar listas de reproducción de una determinada duración con Python
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2320
 permalink: /generar-listas-de-reproduccion-determinada-duracion-python/
 categories:
   - python

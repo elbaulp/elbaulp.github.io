@@ -2,7 +2,6 @@
 title: MegaUpload Dangerous Secrets affect YOU, Mike Mozart JeepersMedia ACTA _ PIPA _ SOPA
 
 layout: post
-guid: http://elbauldelprogramador.org/megaupload-dangerous-secrets-affect-you-mike-mozart-jeepersmedia-acta-_-pipa-_-sopa/
 permalink: /secretos-peligrosos-de-megaupload-que/
 categories:
   - noticias

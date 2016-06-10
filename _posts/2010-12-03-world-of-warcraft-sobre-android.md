@@ -2,7 +2,6 @@
 title: World of Warcraft sobre Android
 
 layout: post
-guid: http://elbauldelprogramador.org/world-of-warcraft-sobre-android/
 permalink: /world-of-warcraft-sobre-android/
 blogger_blog:
   - www.elbauldelprogramador.org

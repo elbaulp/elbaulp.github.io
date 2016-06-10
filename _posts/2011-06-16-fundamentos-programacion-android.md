@@ -2,7 +2,6 @@
 title: 'Fundamentos programación Android: Conceptos básicos y componentes'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-programacion-android-conceptos-basicos-y-componentes/
 permalink: /fundamentos-programacion-android/
 categories:
   - android

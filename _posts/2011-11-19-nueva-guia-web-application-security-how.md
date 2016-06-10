@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Web Application Security; How to Minimize Prevalent Risk of Attacks'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-web-application-security-how-to-minimize-prevalent-risk-of-attacks/
 permalink: /nueva-guia-web-application-security-how/
 categories:
   - cursos

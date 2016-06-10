@@ -2,7 +2,6 @@
 title: 'Lenguaje Definición de Datos(DDL) &#8211; CREATE'
 
 layout: post
-guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datosddl-create/
 permalink: /lenguaje-definicion-de-datosddl-create/
 blogger_blog:
   - www.elbauldelprogramador.org

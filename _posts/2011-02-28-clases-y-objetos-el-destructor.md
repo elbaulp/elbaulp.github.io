@@ -2,7 +2,6 @@
 title: 'Clases y Objetos &#8211; El Destructor'
 
 layout: post
-guid: http://elbauldelprogramador.org/clases-y-objetos-el-destructor/
 permalink: /clases-y-objetos-el-destructor/
 blogger_blog:
   - www.elbauldelprogramador.org

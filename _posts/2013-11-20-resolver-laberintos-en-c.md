@@ -2,7 +2,6 @@
 title: Resolver laberintos en C++
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1955
 permalink: /resolver-laberintos-en-c/
 categories:
   - C

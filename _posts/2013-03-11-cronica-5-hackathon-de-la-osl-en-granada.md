@@ -2,7 +2,6 @@
 title: Crónica del 5° hackathon de la OSL en Granada
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1466
 permalink: /cronica-5-hackathon-de-la-osl-en-granada/
 categories:
   - Articulos

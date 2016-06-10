@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos RAW'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-trabajar-con-recursos-raw/
 permalink: /programacion-android-recursos-trabajar-2/
 categories:
   - android

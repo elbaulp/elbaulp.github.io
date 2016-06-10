@@ -2,7 +2,6 @@
 title: Organiza tu lista de Tareas con Remember the Milk
 
 layout: post
-guid: http://elbauldelprogramador.org/organiza-tu-lista-de-tareas-con-remember-the-milk/
 permalink: /organiza-tu-lista-de-tareas-con/
 blogger_blog:
   - www.elbauldelprogramador.org

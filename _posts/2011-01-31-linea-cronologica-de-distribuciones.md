@@ -2,7 +2,6 @@
 title: Linea cronológica de distribuciones GNU/Linux 1992-2011
 
 layout: post
-guid: http://elbauldelprogramador.org/linea-cronologica-de-distribuciones-gnulinux-1992-2011/
 permalink: /linea-cronologica-de-distribuciones/
 blogger_blog:
   - www.elbauldelprogramador.org

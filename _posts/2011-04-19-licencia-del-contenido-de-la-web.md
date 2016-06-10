@@ -2,7 +2,6 @@
 title: Licencia del contenido de la web developer.android
 
 layout: post
-guid: http://elbauldelprogramador.org/licencia-del-contenido-de-la-web-developer-android/
 permalink: /licencia-del-contenido-de-la-web/
 blogger_blog:
   - www.elbauldelprogramador.org

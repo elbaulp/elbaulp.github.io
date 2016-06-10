@@ -2,7 +2,6 @@
 title: Mejoras para el proyecto PyLabra
 
 layout: post
-guid: http://elbauldelprogramador.org/mejoras-para-el-proyecto-pylabra/
 permalink: /mejoras-para-el-proyecto-pylabra/
 blogger_blog:
   - www.elbauldelprogramador.org

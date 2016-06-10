@@ -2,7 +2,6 @@
 title: Cómo crear un adapter personalizado en Android
 
 layout: post
-guid: /?p=962
 permalink: /adapter-personalizado-en-android/
 categories:
   - android

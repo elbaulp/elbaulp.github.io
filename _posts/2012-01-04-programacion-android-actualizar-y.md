@@ -2,7 +2,6 @@
 title: 'Programación Android: Actualizar y borrar registros'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-actualizar-y-borrar-registros/
 permalink: /programacion-android-actualizar-y/
 categories:
   - android

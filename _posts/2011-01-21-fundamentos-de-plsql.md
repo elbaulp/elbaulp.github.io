@@ -2,7 +2,6 @@
 title: Fundamentos de PL/SQL
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-de-plsql/
 permalink: /fundamentos-de-plsql/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2534
 permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
 categories:
   - JavaScript

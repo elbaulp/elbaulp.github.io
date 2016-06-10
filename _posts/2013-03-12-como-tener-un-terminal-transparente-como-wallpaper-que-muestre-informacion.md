@@ -2,7 +2,6 @@
 title: Cómo tener un terminal transparente como wallpaper que muestre información
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1392
 permalink: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/
 categories:
   - How To

@@ -2,7 +2,6 @@
 title: Tunning básico de SQL
 
 layout: post
-guid: http://elbauldelprogramador.org/tunning-basico-de-sql/
 permalink: /tunning-basico-de-sql/
 blogger_blog:
   - www.elbauldelprogramador.org

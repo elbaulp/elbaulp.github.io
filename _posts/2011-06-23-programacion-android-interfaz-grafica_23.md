@@ -2,7 +2,6 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Layouts'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-layouts/
 permalink: /programacion-android-interfaz-grafica_23/
 categories:
   - android

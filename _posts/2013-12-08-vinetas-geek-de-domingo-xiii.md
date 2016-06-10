@@ -2,7 +2,6 @@
 title: Viñetas Geek de Domingo (XIII)
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2022
 permalink: /vinetas-geek-de-domingo-xiii/
 categories:
   - Geek

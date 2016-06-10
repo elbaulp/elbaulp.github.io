@@ -2,7 +2,6 @@
 title: Gestión básica de usuarios en linux
 
 layout: post
-guid: http://elbauldelprogramador.org/gestion-basica-de-usuarios-en-linux/
 permalink: /gestion-basica-de-usuarios-en-linux/
 blogger_blog:
   - www.elbauldelprogramador.org

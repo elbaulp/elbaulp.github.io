@@ -2,7 +2,6 @@
 title: Nueva aplicación móvil para el blog
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-aplicacion-movil-para-el-blog/
 permalink: /nueva-aplicacion-movil-para-el-blog/
 categories:
   - aplicaciones

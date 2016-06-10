@@ -2,7 +2,6 @@
 title: Llamada a los traductores
 
 layout: post
-guid: http://elbauldelprogramador.org/llamada-a-los-traductores/
 permalink: /llamada-los-traductores/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Comienzo a traducir la guía android
 
 layout: post
-guid: http://elbauldelprogramador.org/comienzo-a-traducir-la-guia-android/
 permalink: /comienzo-traducir-la-guia-android/
 blogger_blog:
   - www.elbauldelprogramador.org

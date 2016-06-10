@@ -2,7 +2,6 @@
 title: 'Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle'
 
 layout: post
-guid: http://elbauldelprogramador.org/consulta-de-datos-tablas-resumen-operadores-y-funciones-oracle/
 permalink: /consulta-de-datos-tablas-resumen/
 blogger_blog:
   - www.elbauldelprogramador.org

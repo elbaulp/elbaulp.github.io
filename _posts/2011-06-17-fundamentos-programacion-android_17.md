@@ -2,7 +2,6 @@
 title: 'Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-programacion-android-actividades-tareas-procesos-e-hilos/
 permalink: /fundamentos-programacion-android_17/
 categories:
   - android

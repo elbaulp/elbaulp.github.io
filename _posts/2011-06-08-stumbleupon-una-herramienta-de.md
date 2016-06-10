@@ -2,7 +2,6 @@
 title: 'StumbleUpon: Una herramienta de navegación personalizada'
 
 layout: post
-guid: http://elbauldelprogramador.org/stumbleupon-una-herramienta-de-navegacion-personalizada/
 permalink: /stumbleupon-una-herramienta-de/
 categories:
   - internet

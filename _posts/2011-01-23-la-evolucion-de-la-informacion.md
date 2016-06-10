@@ -2,7 +2,6 @@
 title: 'La &#8220;evolución&#8221; de la información'
 
 layout: post
-guid: http://elbauldelprogramador.org/la-evolucion-de-la-informacion/
 permalink: /la-evolucion-de-la-informacion/
 blogger_blog:
   - www.elbauldelprogramador.org

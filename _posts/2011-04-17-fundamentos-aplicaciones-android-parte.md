@@ -2,7 +2,6 @@
 title: 'Fundamentos aplicaciones Android &#8211; (Parte I)'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-aplicaciones-android-parte-i/
 permalink: /fundamentos-aplicaciones-android-parte/
 blogger_blog:
   - www.elbauldelprogramador.org

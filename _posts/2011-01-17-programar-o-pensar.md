@@ -2,7 +2,6 @@
 title: Programar o Pensar.
 
 layout: post
-guid: http://elbauldelprogramador.org/programar-o-pensar/
 permalink: /programar-o-pensar/
 blogger_blog:
   - www.elbauldelprogramador.org

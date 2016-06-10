@@ -2,7 +2,6 @@
 title: Manual de python
 
 layout: post
-guid: http://elbauldelprogramador.org/manual-de-python/
 permalink: /manual-de-python/
 blogger_blog:
   - www.elbauldelprogramador.org

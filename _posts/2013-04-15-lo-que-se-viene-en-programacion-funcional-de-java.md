@@ -2,7 +2,6 @@
 title: 'Lo que se viene en programación funcional de Java&#8230;'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1507
 permalink: /lo-que-se-viene-en-programacion-funcional-de-java/
 categories:
   - Articulos

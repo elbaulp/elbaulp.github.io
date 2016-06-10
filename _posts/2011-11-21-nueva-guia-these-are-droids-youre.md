@@ -2,7 +2,6 @@
 title: 'Nueva Guía: These Are The Droids You&#8217;re Looking For: An Android Guide'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-these-are-the-droids-youre-looking-for-an-android-guide/
 permalink: /nueva-guia-these-are-droids-youre/
 categories:
   - android

@@ -3,7 +3,6 @@ title: Cómo resolver sistemas de ecuaciones lineales con dos incógnitas en Pyt
 modified: 2015-04-08T00:00:00+00:00
 math: true
 layout: post
-guid: https://elbauldelprogramador.com/?p=2217
 permalink: /como-resolver-sistemas-de-ecuaciones-lineales-con-dos-incognitas/
 categories:
   - Algoritmos

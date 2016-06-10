@@ -2,7 +2,6 @@
 title: '[Vídeo] Demostración del proyecto WifiBar funcionando'
 
 layout: post
-guid: http://elbauldelprogramador.org/video-demostracion-del-proyecto-wifibar-funcionando/
 permalink: /video-demostracion-del-proyecto-wifibar/
 categories:
   - android

@@ -2,7 +2,6 @@
 title: Viñetas Geek de Domingo (VIII)
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1811
 permalink: /vinetas-geek-de-domingo-viii/
 categories:
   - Geek

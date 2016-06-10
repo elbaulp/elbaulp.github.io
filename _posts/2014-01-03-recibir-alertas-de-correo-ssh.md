@@ -2,7 +2,6 @@
 title: 'Recibir alertas de correo al acceder al  sistema mediante SSH'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2042
 permalink: /recibir-alertas-de-correo-ssh/
 categories:
   - Administracion de Servidores

@@ -2,7 +2,6 @@
 title: 'Consulta de Datos &#8211; Cláusula GROUP BY'
 
 layout: post
-guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-group-by/
 permalink: /consulta-de-datos-clausula-group-by/
 blogger_blog:
   - www.elbauldelprogramador.org

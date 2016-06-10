@@ -2,7 +2,6 @@
 title: Mostrar todos los post de una categoría en WordPress
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1712
 permalink: /mostrar-todos-los-post-de-una-categoria-wordpress/
 categories:
   - php

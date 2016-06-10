@@ -2,7 +2,6 @@
 title: Crear un módulo para python con la Python C API (V) – Python 3
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1790
 permalink: /crear-modulo-python-con-python-c-api-5-python3/
 categories:
   - C

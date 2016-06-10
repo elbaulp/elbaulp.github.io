@@ -2,7 +2,6 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias'
 
 layout: post
-guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-indices-y-secuencias/
 permalink: /lenguaje-definicion-de-datos-ddl/
 blogger_blog:
   - www.elbauldelprogramador.org

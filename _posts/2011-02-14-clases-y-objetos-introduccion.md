@@ -2,7 +2,6 @@
 title: 'Clases y objetos &#8211; Introducción'
 
 layout: post
-guid: http://elbauldelprogramador.org/clases-y-objetos-introduccion/
 permalink: /clases-y-objetos-introduccion/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Viñetas Geek de Domingo
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1299
 permalink: /vinetas-geek-de-domingo-2/
 categories:
   - offtopic

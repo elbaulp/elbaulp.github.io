@@ -2,7 +2,6 @@
 title: 'PL/SQL &#8211; Excepciones'
 
 layout: post
-guid: http://elbauldelprogramador.org/plsql-excepciones/
 permalink: /plsql-excepciones/
 blogger_blog:
   - www.elbauldelprogramador.org

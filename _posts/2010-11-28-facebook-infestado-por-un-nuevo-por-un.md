@@ -2,7 +2,6 @@
 title: Facebook infectado por un nuevo por un gusano
 
 layout: post
-guid: http://elbauldelprogramador.org/facebook-infectado-por-un-nuevo-por-un-gusano/
 permalink: /facebook-infestado-por-un-nuevo-por-un/
 blogger_blog:
   - www.elbauldelprogramador.org

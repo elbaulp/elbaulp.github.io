@@ -2,7 +2,6 @@
 title: 15 Demostraciones del potencial de HTML5
 
 layout: post
-guid: http://elbauldelprogramador.org/15-demostraciones-del-potencial-de-html5/
 permalink: /15-demostraciones-del-potencial-de/
 blogger_blog:
   - www.elbauldelprogramador.org

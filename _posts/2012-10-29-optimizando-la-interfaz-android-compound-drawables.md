@@ -2,7 +2,6 @@
 title: 'Optimizando la interfaz Android &#8211; Compound Drawables'
 
 layout: post
-guid: /?p=1006
 permalink: /optimizando-la-interfaz-android-compound-drawables/
 categories:
   - android

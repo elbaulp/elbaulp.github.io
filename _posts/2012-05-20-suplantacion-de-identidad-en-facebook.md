@@ -2,7 +2,6 @@
 title: Suplantación de identidad en Facebook
 
 layout: post
-guid: /?p=744
 permalink: /suplantacion-de-identidad-en-facebook/
 if_slider_image:
   -

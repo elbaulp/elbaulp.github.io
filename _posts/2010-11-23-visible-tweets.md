@@ -2,7 +2,6 @@
 title: Visible Tweets
 
 layout: post
-guid: http://elbauldelprogramador.org/visible-tweets/
 permalink: /visible-tweets/
 blogger_blog:
   - www.elbauldelprogramador.org

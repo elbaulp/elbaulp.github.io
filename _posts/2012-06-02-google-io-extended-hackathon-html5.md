@@ -2,7 +2,6 @@
 title: Google I/O Extended + Hackathon HTML5
 
 layout: post
-guid: /?p=772
 permalink: /google-io-extended-hackathon-html5/
 if_slider_image:
   -

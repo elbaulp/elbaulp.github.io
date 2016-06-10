@@ -2,7 +2,6 @@
 title: 'PL/SQL &#8211; Declaración de variables'
 
 layout: post
-guid: http://elbauldelprogramador.org/plsql-declaracion-de-variables/
 permalink: /plsql-declaracion-de-variables/
 blogger_blog:
   - www.elbauldelprogramador.org

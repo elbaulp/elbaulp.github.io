@@ -2,7 +2,6 @@
 title: El estado de Wayland, aspirante a reemplazar X.org
 
 layout: post
-guid: http://elbauldelprogramador.org/el-estado-de-wayland-aspirante-a-reemplazar-x-org/
 permalink: /el-estado-de-wayland-aspirante/
 blogger_blog:
   - www.elbauldelprogramador.org

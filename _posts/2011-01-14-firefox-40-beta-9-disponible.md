@@ -2,7 +2,6 @@
 title: Firefox 4.0 beta 9 disponible
 
 layout: post
-guid: http://elbauldelprogramador.org/firefox-4-0-beta-9-disponible/
 permalink: /firefox-40-beta-9-disponible/
 blogger_blog:
   - www.elbauldelprogramador.org

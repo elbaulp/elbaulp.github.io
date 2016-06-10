@@ -2,7 +2,6 @@
 title: 'Guía de Referencia de comandos Unix/Linux [IMG]'
 
 layout: post
-guid: http://elbauldelprogramador.org/guia-de-referencia-de-comandos-unixlinux-img/
 permalink: /guia-de-referencia-de-comandos/
 categories:
   - linux

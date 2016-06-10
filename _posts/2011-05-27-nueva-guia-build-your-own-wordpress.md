@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Build Your Own WordPress Site Guide'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-build-your-own-wordpress-site-guide/
 permalink: /nueva-guia-build-your-own-wordpress/
 categories:
   - cursos

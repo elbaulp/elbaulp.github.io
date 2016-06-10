@@ -2,7 +2,6 @@
 title: Saltarse la autentificación de dos factores de Google
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1394
 permalink: /saltarse-la-autentificacion-de-dos-factores-de-google/
 categories:
   - Articulos

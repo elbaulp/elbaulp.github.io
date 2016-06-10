@@ -2,7 +2,6 @@
 title: Python para principiantes
 
 layout: post
-guid: http://elbauldelprogramador.org/python-para-principiantes/
 permalink: /python-para-principiantes/
 blogger_blog:
   - www.elbauldelprogramador.org

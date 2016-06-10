@@ -2,7 +2,6 @@
 title: 2 nuevas secciones en el blog
 
 layout: post
-guid: http://elbauldelprogramador.org/2-nuevas-secciones-en-el-blog/
 permalink: /2-nuevas-secciones-en-el-blog/
 blogger_blog:
   - www.elbauldelprogramador.org

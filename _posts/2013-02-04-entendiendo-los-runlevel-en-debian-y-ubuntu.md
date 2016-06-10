@@ -2,7 +2,6 @@
 title: Entendiendo los runlevel en Debian
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1311
 permalink: /entendiendo-los-runlevel-en-debian-y-ubuntu/
 categories:
   - linux

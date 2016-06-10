@@ -2,7 +2,6 @@
 title: 'Nuevo Proyecto Android: Fav Sites'
 
 layout: post
-guid: http://elbauldelprogramador.org/nuevo-proyecto-android-fav-sites/
 permalink: /estoy-trabajando-en-una-aplicacion/
 categories:
   - android

@@ -2,7 +2,6 @@
 title: Algoritmos de ordenación.
 
 layout: post
-guid: /?p=850
 permalink: /algoritmos-de-ordenacion/
 if_slider_image:
   -

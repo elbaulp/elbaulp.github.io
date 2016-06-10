@@ -2,7 +2,6 @@
 title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in the middle)'
 
 layout: post
-guid: http://elbauldelprogramador.org/esnifando-la-red-pruebas-de-seguridad-ettercap-y-wireshark-man-in-the-middle/
 permalink: /esnifando-la-red-pruebas-de-seguridad/
 categories:
   - aplicaciones

@@ -2,7 +2,6 @@
 title: 'Nueva guía: The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-the-asp-net-2-0-anthology-101-essential-tips-tricks-hacks/
 permalink: /nueva-guia-aspnet-20-anthology-101/
 categories:
   - cursos

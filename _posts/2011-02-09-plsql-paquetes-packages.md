@@ -2,7 +2,6 @@
 title: 'PL/SQL &#8211; Paquetes (Packages)'
 
 layout: post
-guid: http://elbauldelprogramador.org/plsql-paquetes-packages/
 permalink: /plsql-paquetes-packages/
 blogger_blog:
   - www.elbauldelprogramador.org

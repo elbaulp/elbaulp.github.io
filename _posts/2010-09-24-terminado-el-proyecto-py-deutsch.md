@@ -2,7 +2,6 @@
 title: Terminado el Proyecto py-Deutsch
 
 layout: post
-guid: http://elbauldelprogramador.org/terminado-el-proyecto-py-deutsch/
 permalink: /terminado-el-proyecto-py-deutsch/
 blogger_blog:
   - www.elbauldelprogramador.org

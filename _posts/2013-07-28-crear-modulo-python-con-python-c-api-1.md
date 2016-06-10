@@ -2,7 +2,6 @@
 title: 'Crear un módulo para python con la Python C API (I) &#8211; Introducción'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1487
 permalink: /crear-modulo-python-con-python-c-api-1/
 categories:
   - C

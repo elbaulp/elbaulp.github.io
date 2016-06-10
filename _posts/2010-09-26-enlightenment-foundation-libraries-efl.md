@@ -2,7 +2,6 @@
 title: Enlightenment Foundation Libraries (EFL)
 
 layout: post
-guid: http://elbauldelprogramador.org/enlightenment-foundation-libraries-efl/
 permalink: /enlightenment-foundation-libraries-efl/
 blogger_blog:
   - www.elbauldelprogramador.org

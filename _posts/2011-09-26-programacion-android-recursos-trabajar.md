@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-trabajar-con-recursos-xml-arbitrarios/
 permalink: /programacion-android-recursos-trabajar/
 categories:
   - android

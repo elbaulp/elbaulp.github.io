@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Big Security for Big Data'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1534
 permalink: /nueva-guia-big-security-for-big-data/
 categories:
   - cursos

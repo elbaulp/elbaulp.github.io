@@ -2,7 +2,6 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; DROP'
 
 layout: post
-guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-drop/
 permalink: /lenguaje-definicion-de-datosddl-drop/
 blogger_blog:
   - www.elbauldelprogramador.org

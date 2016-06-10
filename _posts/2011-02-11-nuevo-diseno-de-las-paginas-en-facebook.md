@@ -2,7 +2,6 @@
 title: Nuevo diseño de las páginas en Facebook
 
 layout: post
-guid: http://elbauldelprogramador.org/nuevo-diseno-de-las-paginas-en-facebook/
 permalink: /nuevo-diseno-de-las-paginas-en-facebook/
 blogger_blog:
   - www.elbauldelprogramador.org

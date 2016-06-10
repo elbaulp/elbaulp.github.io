@@ -2,7 +2,6 @@
 title: Optimizando código y evaluando el rendimiento
 
 layout: post
-guid: /?p=1018
 permalink: /peso-hamming-y-optimizacion/
 categories:
   - Algoritmos

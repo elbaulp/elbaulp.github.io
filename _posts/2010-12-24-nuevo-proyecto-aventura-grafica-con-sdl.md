@@ -2,7 +2,6 @@
 title: 'Nuevo Proyecto: Aventura gráfica con SDL y C++'
 
 layout: post
-guid: http://elbauldelprogramador.org/nuevo-proyecto-aventura-grafica-con-sdl-y-c/
 permalink: /nuevo-proyecto-aventura-grafica-con-sdl/
 blogger_blog:
   - www.elbauldelprogramador.org

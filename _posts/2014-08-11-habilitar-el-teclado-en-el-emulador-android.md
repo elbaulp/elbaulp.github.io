@@ -2,7 +2,6 @@
 title: Cómo habilitar el teclado en el emulador Android
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2419
 permalink: /habilitar-el-teclado-en-el-emulador-android/
 categories:
   - How To

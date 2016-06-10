@@ -2,7 +2,6 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas'
 
 layout: post
-guid: http://elbauldelprogramador.org/lenguaje-definicion-de-datos-ddl-sinonimos-y-pseudocolumnas/
 permalink: /lenguaje-definicion-de-datos-ddl_27/
 blogger_blog:
   - www.elbauldelprogramador.org

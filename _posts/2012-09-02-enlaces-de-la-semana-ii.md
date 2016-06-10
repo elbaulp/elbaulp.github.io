@@ -3,7 +3,6 @@ title: Enlaces de la semana ( II )
 
 description: '<!--:es-->Recopilación semanal de enlaces sobre noticias de la tecnología, informática y software libre<!--:-->'
 layout: post
-guid: /?p=935
 permalink: /enlaces-de-la-semana-ii/
 categories:
   - Enlaces de la semana

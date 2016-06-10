@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Your Guide to Google Analytics'
 
 layout: post
-guid: /?p=924
 permalink: /nueva-guia-your-guide-to-google-analytics/
 if_slider_image:
   -

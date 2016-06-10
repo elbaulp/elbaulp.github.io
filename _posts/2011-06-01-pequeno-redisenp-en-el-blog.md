@@ -2,7 +2,6 @@
 title: 'Pequeño &#8220;Rediseño&#8221; en el blog'
 
 layout: post
-guid: http://elbauldelprogramador.org/pequeno-rediseno-en-el-blog/
 permalink: /pequeno-redisenp-en-el-blog/
 categories:
   - internet

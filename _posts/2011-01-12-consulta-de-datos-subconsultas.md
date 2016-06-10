@@ -2,7 +2,6 @@
 title: 'Consulta de Datos &#8211; Subconsultas'
 
 layout: post
-guid: http://elbauldelprogramador.org/consulta-de-datos-subconsultas/
 permalink: /consulta-de-datos-subconsultas/
 blogger_blog:
   - www.elbauldelprogramador.org

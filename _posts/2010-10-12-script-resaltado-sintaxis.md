@@ -2,7 +2,6 @@
 title: Script resaltado sintaxis c++
 
 layout: post
-guid: http://elbauldelprogramador.org/script-resaltado-sintaxis-c/
 permalink: /script-resaltado-sintaxis/
 blogger_blog:
   - www.elbauldelprogramador.org

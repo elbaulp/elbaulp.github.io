@@ -1,7 +1,6 @@
 ---
 title: Estadísticas del blog en 2011
 layout: post
-guid: http://elbauldelprogramador.org/estadisticas-del-blog-en-2011/
 permalink: /estadisticas-del-blog-en-2011/
 categories:
   - noticias

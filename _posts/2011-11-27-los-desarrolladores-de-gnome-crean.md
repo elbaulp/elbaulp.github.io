@@ -2,7 +2,6 @@
 title: 'Los desarrolladores de GNOME crean &#8220;Boxes&#8221; para la virtualización'
 
 layout: post
-guid: http://elbauldelprogramador.org/los-desarrolladores-de-gnome-crean-boxes-para-la-virtualizacion/
 permalink: /los-desarrolladores-de-gnome-crean/
 categories:
   - linux

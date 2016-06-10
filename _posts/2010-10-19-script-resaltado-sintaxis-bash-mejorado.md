@@ -2,7 +2,6 @@
 title: Script resaltado sintaxis bash (Mejorado)
 
 layout: post
-guid: http://elbauldelprogramador.org/script-resaltado-sintaxis-bash-mejorado/
 permalink: /script-resaltado-sintaxis-bash-mejorado/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Menús'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-menus/
 permalink: /programacion-android-interfaz-grafica_08/
 categories:
   - android

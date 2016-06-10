@@ -2,7 +2,6 @@
 title: JoliBook ya a la venta
 
 layout: post
-guid: http://elbauldelprogramador.org/jolibook-ya-a-la-venta/
 permalink: /el-sistema-operativo-jolicloud-basado/
 blogger_blog:
   - www.elbauldelprogramador.org

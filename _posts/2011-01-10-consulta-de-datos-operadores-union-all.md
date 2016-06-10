@@ -2,7 +2,6 @@
 title: 'Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.'
 
 layout: post
-guid: http://elbauldelprogramador.org/consulta-de-datos-operadores-union-all-intersect-minus/
 permalink: /consulta-de-datos-operadores-union-all/
 blogger_blog:
   - www.elbauldelprogramador.org

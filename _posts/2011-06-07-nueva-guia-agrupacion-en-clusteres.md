@@ -2,7 +2,6 @@
 title: 'Nueva guía: Agrupación En Clústeres Multisitio de Windows Server (En Español)'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-agrupacion-en-clusteres-multisitio-de-windows-server-en-espanol/
 permalink: /nueva-guia-agrupacion-en-clusteres/
 categories:
   - cursos

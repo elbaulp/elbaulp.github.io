@@ -2,7 +2,6 @@
 title: Rootear Samsung Galaxy S GT-I9003
 
 layout: post
-guid: http://elbauldelprogramador.org/rootear-samsung-galaxy-s-gt-i9003/
 permalink: /rootear-samsung-galaxy-s-gt-i9003/
 categories:
   - android

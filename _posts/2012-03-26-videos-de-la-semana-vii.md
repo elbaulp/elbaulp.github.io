@@ -2,7 +2,6 @@
 title: Vídeos de la semana (VII)
 
 layout: post
-guid: http://elbauldelprogramador.org/videos-de-la-semana-vii/
 permalink: /videos-de-la-semana-vii/
 categories:
   - video de la semana

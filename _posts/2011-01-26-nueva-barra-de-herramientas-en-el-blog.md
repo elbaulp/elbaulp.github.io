@@ -2,7 +2,6 @@
 title: Nueva barra de herramientas en el Blog
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-barra-de-herramientas-en-el-blog/
 permalink: /nueva-barra-de-herramientas-en-el-blog/
 blogger_blog:
   - www.elbauldelprogramador.org

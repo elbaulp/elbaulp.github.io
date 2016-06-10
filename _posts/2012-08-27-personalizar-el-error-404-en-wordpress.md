@@ -2,7 +2,6 @@
 title: Personalizar el Error 404 en wordpress
 
 layout: post
-guid: /?p=896
 permalink: /personalizar-el-error-404-en-wordpress/
 categories:
   - php

@@ -2,7 +2,6 @@
 title: '[HUMOR] Dos Vídeos muy geek para Programadores'
 
 layout: post
-guid: /?p=983
 permalink: /humor-dos-videos-muy-geek-para-programadores/
 categories:
   - Humor

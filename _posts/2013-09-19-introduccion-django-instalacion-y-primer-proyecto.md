@@ -2,7 +2,6 @@
 title: 'Introducción a Django &#8211; Instalación y primer proyecto'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1899
 permalink: /introduccion-django-instalacion-y-primer-proyecto/
 categories:
   - django

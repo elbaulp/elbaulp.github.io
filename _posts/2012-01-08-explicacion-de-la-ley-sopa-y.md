@@ -2,7 +2,6 @@
 title: Explicación de la ley SOPA y recopilación de enlaces de interés
 
 layout: post
-guid: http://elbauldelprogramador.org/explicacion-de-la-ley-sopa-y-recopilacion-de-enlaces-de-interes/
 permalink: /explicacion-de-la-ley-sopa-y/
 categories:
   - noticias

@@ -2,7 +2,6 @@
 title: 'Nueva guía: The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-the-php-anthology-101-essential-tips-tricks-hacks-2nd-edition/
 permalink: /nueva-guia-php-anthology-101-essential/
 categories:
   - cursos

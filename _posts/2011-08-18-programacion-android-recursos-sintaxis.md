@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Sintaxis de los Recursos'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-sintaxis-de-los-recursos/
 permalink: /programacion-android-recursos-sintaxis/
 categories:
   - android

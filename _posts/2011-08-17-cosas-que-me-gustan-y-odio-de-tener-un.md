@@ -2,7 +2,6 @@
 title: 'Cosas que me gustan y ódio de tener un smartphone [HUMOR]'
 
 layout: post
-guid: http://elbauldelprogramador.org/cosas-que-me-gustan-y-odio-de-tener-un-smartphone-humor/
 permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
 categories:
   - curiosidades

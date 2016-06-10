@@ -2,7 +2,6 @@
 title: 'Nueva guía: Session Hijacking: How to Protect your Customers and your Corporate Data'
 
 layout: post
-guid: /?p=751
 permalink: /nueva-guia-session-hijacking-how-to-protect-your-customers-and-your-corporate-data/
 if_slider_image:
   -

@@ -1,7 +1,6 @@
 ---
 title: 10 errores de novato que todo desarrollador Android debería evitar
 layout: post
-guid: http://elbauldelprogramador.org/los-10-errores-de-novato-que-todo-desarrollador-android-deberia-evitar/
 permalink: /los-10-errores-de-novato-que-todo/
 categories:
   - android

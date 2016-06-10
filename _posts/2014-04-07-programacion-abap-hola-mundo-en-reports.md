@@ -2,7 +2,6 @@
 title: 'Programación ABAP: Hola Mundo en Reports'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2329
 permalink: /programacion-abap-hola-mundo-en-reports/
 categories:
   - ABAP

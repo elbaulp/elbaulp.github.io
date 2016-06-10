@@ -2,7 +2,6 @@
 title: 'Clases y Objetos &#8211; Arrays'
 
 layout: post
-guid: http://elbauldelprogramador.org/clases-y-objetos-arrays/
 permalink: /clases-y-objetos-arrays/
 blogger_blog:
   - www.elbauldelprogramador.org

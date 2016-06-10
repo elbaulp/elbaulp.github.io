@@ -2,7 +2,6 @@
 title: Colabora con el blog
 
 layout: post
-guid: http://elbauldelprogramador.org/colabora-con-el-blog/
 permalink: /colabora-con-el-blog/
 categories:
   - noticias

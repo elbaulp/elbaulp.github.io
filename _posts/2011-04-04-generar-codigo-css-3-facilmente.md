@@ -2,7 +2,6 @@
 title: Generar código CSS 3 fácilmente
 
 layout: post
-guid: http://elbauldelprogramador.org/generar-codigo-css-3-facilmente/
 permalink: /generar-codigo-css-3-facilmente/
 blogger_blog:
   - www.elbauldelprogramador.org

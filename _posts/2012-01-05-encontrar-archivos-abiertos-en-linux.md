@@ -2,7 +2,6 @@
 title: Encontrar archivos abiertos en Linux
 
 layout: post
-guid: http://elbauldelprogramador.org/encontrar-archivos-abiertos-en-linux/
 permalink: /encontrar-archivos-abiertos-en-linux/
 categories:
   - linux

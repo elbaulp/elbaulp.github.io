@@ -2,7 +2,6 @@
 title: SelfControl, aparta las distracciones de tu pc cuando estás trabajando
 
 layout: post
-guid: /?p=890
 permalink: /selfcontrol-aparta-las-distracciones-de-tu-pc-cuando-estas-trabajando/
 if_slider_image:
   -

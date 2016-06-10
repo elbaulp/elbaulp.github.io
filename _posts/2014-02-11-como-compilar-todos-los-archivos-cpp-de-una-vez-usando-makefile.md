@@ -2,7 +2,6 @@
 title: Cómo compilar todos los archivos CPP de una vez usando MakeFile
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2234
 permalink: /como-compilar-todos-los-archivos-cpp-de-una-vez-usando-makefile/
 categories:
   - C

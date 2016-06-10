@@ -2,7 +2,6 @@
 title: 'Fundamentos aplicaciones Android &#8211; (Parte III) -Activando Componentes'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-aplicaciones-android-parte-iii-activando-componentes/
 permalink: /fundamentos-aplicaciones-android-parte_19/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Firefox 4.0 para Linux ya dispone de menú unificado
 
 layout: post
-guid: http://elbauldelprogramador.org/firefox-4-0-para-linux-ya-dispone-de-menu-unificado/
 permalink: /firefox-40-para-linux-ya-dispone-de/
 blogger_blog:
   - www.elbauldelprogramador.org

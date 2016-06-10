@@ -2,7 +2,6 @@
 title: Probando RockMelt
 
 layout: post
-guid: http://elbauldelprogramador.org/probando-rockmelt/
 permalink: /probando-rockmelt/
 blogger_blog:
   - www.elbauldelprogramador.org

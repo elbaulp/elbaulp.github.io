@@ -2,7 +2,6 @@
 title: 'Nueva guía: PHP Master: Write Cutting-edge Code&#8211;Free 135 Page Preview'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-php-master-write-cutting-edge-code-free-135-page-preview/
 permalink: /nueva-guia-php-master-write-cutting/
 categories:
   - cursos

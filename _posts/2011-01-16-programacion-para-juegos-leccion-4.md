@@ -2,7 +2,6 @@
 title: 'Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-para-juegos-leccion-4-programacion-orientada-a-eventos/
 permalink: /programacion-para-juegos-leccion-4/
 blogger_blog:
   - www.elbauldelprogramador.org

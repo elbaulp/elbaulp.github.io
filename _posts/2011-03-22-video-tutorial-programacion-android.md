@@ -2,7 +2,6 @@
 title: Vídeo tutorial programación Android
 
 layout: post
-guid: http://elbauldelprogramador.org/video-tutorial-programacion-android/
 permalink: /video-tutorial-programacion-android/
 blogger_blog:
   - www.elbauldelprogramador.org

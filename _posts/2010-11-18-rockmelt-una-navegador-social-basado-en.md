@@ -2,7 +2,6 @@
 title: Rockmelt, una navegador social basado en Chromium
 
 layout: post
-guid: http://elbauldelprogramador.org/rockmelt-una-navegador-social-basado-en-chromium/
 permalink: /rockmelt-una-navegador-social-basado-en/
 blogger_blog:
   - www.elbauldelprogramador.org

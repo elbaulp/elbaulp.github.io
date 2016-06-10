@@ -2,7 +2,6 @@
 title: '&#8220;La catedral y el bazar&#8221;'
 
 layout: post
-guid: http://elbauldelprogramador.org/la-catedral-y-el-bazar/
 permalink: /la-catedral-y-el-bazar/
 blogger_blog:
   - www.elbauldelprogramador.org

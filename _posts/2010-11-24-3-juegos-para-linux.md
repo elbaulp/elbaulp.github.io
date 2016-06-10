@@ -2,7 +2,6 @@
 title: 3 Juegos para Linux
 
 layout: post
-guid: http://elbauldelprogramador.org/3-juegos-para-linux/
 permalink: /3-juegos-para-linux/
 blogger_blog:
   - www.elbauldelprogramador.org

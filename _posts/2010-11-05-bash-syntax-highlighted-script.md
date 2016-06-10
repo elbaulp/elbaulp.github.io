@@ -2,7 +2,6 @@
 title: Bash syntax highlighted script
 
 layout: post
-guid: http://elbauldelprogramador.org/bash-syntax-highlighted-script/
 permalink: /bash-syntax-highlighted-script/
 blogger_blog:
   - www.elbauldelprogramador.org

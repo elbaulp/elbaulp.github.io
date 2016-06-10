@@ -2,7 +2,6 @@
 title: 'MasterBranch &#8211; Crea tu perfil como Programador y muestra todos tus proyectos'
 
 layout: post
-guid: http://elbauldelprogramador.org/masterbranch-crea-tu-perfil-como-programador-y-muestra-todos-tus-proyectos/
 permalink: /masterbranch-crea-tu-perfil-como/
 categories:
   - aplicaciones

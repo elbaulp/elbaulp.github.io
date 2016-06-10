@@ -2,7 +2,6 @@
 title: Planteamiento de la segunda parte del curso de Android
 
 layout: post
-guid: http://elbauldelprogramador.org/planteamiento-de-la-segunda-parte-del-curso-de-android/
 permalink: /planteamiento-de-la-segunda-parte-del/
 categories:
   - android

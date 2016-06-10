@@ -2,7 +2,6 @@
 title: Traducción del Artículo 3 (¿Qué es un Píxel?) disponible
 
 layout: post
-guid: http://elbauldelprogramador.org/traduccion-del-articulo-3-que-es-un-pixel-disponible/
 permalink: /traduccion-del-articulo-3-que-es-un/
 blogger_blog:
   - www.elbauldelprogramador.org

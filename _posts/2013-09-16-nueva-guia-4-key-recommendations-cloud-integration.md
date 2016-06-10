@@ -2,7 +2,6 @@
 title: 'Nueva guía: 4 Key Recommendations for Cloud Integration'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1916
 permalink: /nueva-guia-4-key-recommendations-cloud-integration/
 categories:
   - cursos

@@ -2,7 +2,6 @@
 title: 'Cómo crear  simples shortcodes en WordPress'
 
 layout: post
-guid: /?p=756
 permalink: /como-crear-shortcodes-en-wordpress-2/
 if_slider_image:
   -

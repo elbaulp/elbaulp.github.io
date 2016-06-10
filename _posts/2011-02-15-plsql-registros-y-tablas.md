@@ -2,7 +2,6 @@
 title: 'PL/SQL &#8211; Registros y Tablas'
 
 layout: post
-guid: http://elbauldelprogramador.org/plsql-registros-y-tablas/
 permalink: /plsql-registros-y-tablas/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: El top 500 de los supercomputadores más potentes del mundo
 
 layout: post
-guid: http://elbauldelprogramador.org/el-top-500-de-los-supercomputadores-mas-potentes-del-mundo/
 permalink: /el-top-500-de-los-supercomputadores-mas/
 categories:
   - curiosidades

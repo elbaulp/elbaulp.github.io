@@ -2,7 +2,6 @@
 title: 'Crear miniaturas de imágenes [Mejorado]'
 
 layout: post
-guid: http://elbauldelprogramador.org/crear-miniaturas-de-imagenes-mejorado/
 permalink: /crear-miniaturas-de-imagenes-mejorado/
 blogger_blog:
   - www.elbauldelprogramador.org

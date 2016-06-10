@@ -2,7 +2,6 @@
 title: Recopilación de Información del Boicot a WikiLeaks
 
 layout: post
-guid: http://elbauldelprogramador.org/recopilacion-de-informacion-del-boicot-a-wikileaks/
 permalink: /informacion-del-boicot-wikileaks/
 blogger_blog:
   - www.elbauldelprogramador.org

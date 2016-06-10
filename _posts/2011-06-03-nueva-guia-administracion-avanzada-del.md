@@ -2,7 +2,6 @@
 title: 'Guía gratuita: Administración Avanzada del Sistema Operativo GNU/Linux'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-administracion-avanzada-del-sistema-operativo-gnulinux-en-espanol/
 permalink: /nueva-guia-administracion-avanzada-del/
 categories:
   - cursos

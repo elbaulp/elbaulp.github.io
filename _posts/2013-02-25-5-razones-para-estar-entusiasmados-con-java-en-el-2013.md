@@ -2,7 +2,6 @@
 title: 5 Razones para estar entusiasmados con Java en el 2013
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1350
 permalink: /5-razones-para-estar-entusiasmados-con-java-en-el-2013/
 categories:
   - Articulos

@@ -2,7 +2,6 @@
 title: Estado del Proyecto
 
 layout: post
-guid: http://elbauldelprogramador.org/estado-del-proyecto/
 permalink: /estado-del-proyecto/
 blogger_blog:
   - www.elbauldelprogramador.org

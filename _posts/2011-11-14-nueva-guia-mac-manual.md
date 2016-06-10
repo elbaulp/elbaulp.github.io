@@ -2,7 +2,6 @@
 title: 'Nueva guía: The Mac Manual'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-the-mac-manual/
 permalink: /nueva-guia-mac-manual/
 categories:
   - cursos

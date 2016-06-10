@@ -2,7 +2,6 @@
 title: 'Nueva Guía: 50 buenos usos para los Live CDs'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-50-buenos-usos-para-los-live-cds/
 permalink: /nueva-guia-50-buenos-usos-para-los-live/
 categories:
   - curiosidades

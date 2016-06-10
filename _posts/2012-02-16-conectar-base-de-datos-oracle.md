@@ -2,7 +2,6 @@
 title: Conectar base de datos ORACLE a aplicación Java remotamente
 
 layout: post
-guid: http://elbauldelprogramador.org/conectar-base-de-datos-oracle-a-aplicacion-java-remotamente/
 permalink: /conectar-base-de-datos-oracle/
 categories:
   - android

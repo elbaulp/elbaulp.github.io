@@ -2,7 +2,6 @@
 title: 'Fundamentos programación Android: Limpieza de Procesos'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-programacion-android-limpieza-de-procesos/
 permalink: /fundamentos-programacion-android_18/
 categories:
   - android

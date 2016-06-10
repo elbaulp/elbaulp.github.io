@@ -2,7 +2,6 @@
 title: ¿Eres chica y te gusta la informática?, participa en el campus UGR/Google para chicas
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2393
 permalink: /eres-chica-y-te-gusta-la-informatica-participa-en-el-campus-ugrgoogle-para-chicas/
 categories:
   - Articulos

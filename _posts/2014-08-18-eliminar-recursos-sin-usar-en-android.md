@@ -2,7 +2,6 @@
 title: Eliminar recursos sin usar en Android
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2421
 permalink: /eliminar-recursos-sin-usar-en-android/
 categories:
   - android

@@ -2,7 +2,6 @@
 title: SO para auditorias
 
 layout: post
-guid: http://elbauldelprogramador.org/so-para-auditorias/
 permalink: /so-para-auditorias/
 blogger_blog:
   - www.elbauldelprogramador.org

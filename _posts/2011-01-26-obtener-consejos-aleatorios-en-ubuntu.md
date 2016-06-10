@@ -2,7 +2,6 @@
 title: Obtener consejos aleatorios en Ubuntu
 
 layout: post
-guid: http://elbauldelprogramador.org/obtener-consejos-aleatorios-en-ubuntu/
 permalink: /obtener-consejos-aleatorios-en-ubuntu/
 blogger_blog:
   - www.elbauldelprogramador.org

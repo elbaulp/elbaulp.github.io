@@ -2,7 +2,6 @@
 title: Introducción rápida a Ruby
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1194
 permalink: /introduccion-a-ruby/
 categories:
   - Articulos

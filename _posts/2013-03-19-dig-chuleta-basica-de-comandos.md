@@ -2,7 +2,6 @@
 title: 'Dig &#8211; Chuleta básica de comandos'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1479
 permalink: /dig-chuleta-basica-de-comandos/
 categories:
   - Administracion de Servidores

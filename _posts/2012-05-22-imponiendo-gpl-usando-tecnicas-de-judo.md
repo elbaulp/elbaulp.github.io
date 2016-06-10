@@ -2,7 +2,6 @@
 title: Imponiendo GPL usando técnicas de Judo
 
 layout: post
-guid: /?p=737
 permalink: /imponiendo-gpl-usando-tecnicas-de-judo/
 if_slider_image:
   -

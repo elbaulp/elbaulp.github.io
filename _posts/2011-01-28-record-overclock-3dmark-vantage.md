@@ -2,7 +2,6 @@
 title: Récord overclock 3DMark Vantage
 
 layout: post
-guid: http://elbauldelprogramador.org/record-overclock-3dmark-vantage/
 permalink: /record-overclock-3dmark-vantage/
 blogger_blog:
   - www.elbauldelprogramador.org

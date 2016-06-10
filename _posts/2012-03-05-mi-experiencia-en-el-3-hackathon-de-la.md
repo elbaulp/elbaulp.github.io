@@ -2,7 +2,6 @@
 title: Mi experiencia en el 3º Hackathon de la Universidad de Granada
 
 layout: post
-guid: http://elbauldelprogramador.org/mi-experiencia-en-el-3o-hackathon-de-la-universidad-de-granada/
 permalink: /mi-experiencia-en-el-3-hackathon-de-la/
 categories:
   - hackathon

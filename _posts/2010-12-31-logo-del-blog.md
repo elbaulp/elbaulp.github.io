@@ -2,7 +2,6 @@
 title: Logo del blog
 
 layout: post
-guid: http://elbauldelprogramador.org/logo-del-blog/
 permalink: /logo-del-blog/
 blogger_blog:
   - www.elbauldelprogramador.org

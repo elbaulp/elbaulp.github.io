@@ -2,7 +2,6 @@
 title: 'Programación para Juegos &#8211; Artículo 3 &#8211; ¿Qué es un pixel?'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-para-juegos-articulo-3-que-es-un-pixel/
 permalink: /programacion-para-juegos-articulo-3-que/
 blogger_blog:
   - www.elbauldelprogramador.org

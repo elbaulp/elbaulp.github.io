@@ -2,7 +2,6 @@
 title: Chuletas de Comandos GNU/Linux
 
 layout: post
-guid: http://elbauldelprogramador.org/chuletas-de-comandos-gnulinux/
 permalink: /chuletas-de-comandos-gnulinux/
 categories:
   - linux

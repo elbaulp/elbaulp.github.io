@@ -2,7 +2,6 @@
 title: Probando CSS3 en el blog
 
 layout: post
-guid: http://elbauldelprogramador.org/probando-css3-en-el-blog/
 permalink: /probando-css3-en-el-blog/
 blogger_blog:
   - www.elbauldelprogramador.org

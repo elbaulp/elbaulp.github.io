@@ -2,7 +2,6 @@
 title: Nuevo lector RSS para el panel de GNOME
 
 layout: post
-guid: http://elbauldelprogramador.org/nuevo-lector-rss-para-el-panel-de-gnome/
 permalink: /nuevo-lector-rss-para-el-panel-de-gnome/
 blogger_blog:
   - www.elbauldelprogramador.org

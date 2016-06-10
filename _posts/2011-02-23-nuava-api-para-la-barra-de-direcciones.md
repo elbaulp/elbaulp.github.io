@@ -2,7 +2,6 @@
 title: Nueva API para la barra de direcciones de Chrome
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-api-para-la-barra-de-direcciones-de-chrome/
 permalink: /nuava-api-para-la-barra-de-direcciones/
 blogger_blog:
   - www.elbauldelprogramador.org

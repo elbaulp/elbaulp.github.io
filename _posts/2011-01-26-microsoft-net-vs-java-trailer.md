@@ -2,7 +2,6 @@
 title: Microsoft .NET vs Java Trailer (Vídeo)
 
 layout: post
-guid: http://elbauldelprogramador.org/microsoft-net-vs-java-trailer-video/
 permalink: /microsoft-net-vs-java-trailer/
 blogger_blog:
   - www.elbauldelprogramador.org

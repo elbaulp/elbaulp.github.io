@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Simply SQL'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-simply-sql/
 permalink: /nueva-guia-simply-sql/
 categories:
   - BaseDeDatos

@@ -2,7 +2,6 @@
 title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
 
 layout: post
-guid: http://elbauldelprogramador.org/openlibra-la-biblioteca-libre-online-tal-como-la-esperabas/
 permalink: /openlibra-la-biblioteca-libre-online/
 categories:
   - internet

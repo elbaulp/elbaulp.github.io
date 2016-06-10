@@ -2,7 +2,6 @@
 title: 'Dominio software libre -no oficial- “.42″ disponible'
 
 layout: post
-guid: http://elbauldelprogramador.org/dominio-software-libre-no-oficial-42%e2%80%b3-disponible/
 permalink: /dominio-software-libre-no-oficial-42/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Cómo depurar una aplicación en Django
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1926
 permalink: /como-depurar-una-aplicacion-en-django/
 categories:
   - django

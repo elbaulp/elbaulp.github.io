@@ -2,7 +2,6 @@
 title: Aceptamos BitCoins como método de donación
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2244
 permalink: /aceptamos-bitcoins-como-metodo-de-donacion/
 categories:
   - noticias

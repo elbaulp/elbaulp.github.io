@@ -2,7 +2,6 @@
 title: Anúnciate en elbauldelprogramador.org
 
 layout: post
-guid: http://elbauldelprogramador.org/anunciate-en-elbauldelprogramador-com/
 permalink: /anunciate-en-elbauldelprogramadorcom_11/
 categories:
   - Sin Categoria

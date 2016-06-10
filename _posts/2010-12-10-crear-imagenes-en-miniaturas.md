@@ -2,7 +2,6 @@
 title: Crear miniaturas de imágenes
 
 layout: post
-guid: http://elbauldelprogramador.org/crear-miniaturas-de-imagenes/
 permalink: /crear-imagenes-en-miniaturas/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Announcing Bodhi Linux
 
 layout: post
-guid: http://elbauldelprogramador.org/announcing-bodhi-linux/
 permalink: /announcing-bodhi-linux/
 blogger_blog:
   - www.elbauldelprogramador.org

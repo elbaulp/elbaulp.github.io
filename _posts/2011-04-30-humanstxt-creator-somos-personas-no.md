@@ -2,7 +2,6 @@
 title: Humanstxt Creator. Somos personas, no máquinas
 
 layout: post
-guid: http://elbauldelprogramador.org/humanstxt-creator-somos-personas-no-maquinas/
 permalink: /humanstxt-creator-somos-personas-no/
 categories:
   - internet

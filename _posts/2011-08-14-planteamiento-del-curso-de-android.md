@@ -2,7 +2,6 @@
 title: Planteamiento del Curso de Android
 
 layout: post
-guid: http://elbauldelprogramador.org/planteamiento-del-curso-de-android/
 permalink: /planteamiento-del-curso-de-android/
 categories:
   - android

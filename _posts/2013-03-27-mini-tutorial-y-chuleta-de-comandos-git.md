@@ -2,7 +2,6 @@
 title: 'Git: Mini Tutorial y chuleta de comandos'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1491
 permalink: /mini-tutorial-y-chuleta-de-comandos-git/
 categories:
   - Articulos

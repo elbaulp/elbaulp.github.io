@@ -2,7 +2,6 @@
 title: Introducción a los Procesos
 
 layout: post
-guid: http://elbauldelprogramador.org/introduccion-a-los-procesos/
 permalink: /introduccion-los-procesos/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: Aprende a construir un motor de búsqueda y un coche autónomo con Udacity
 
 layout: post
-guid: http://elbauldelprogramador.org/aprende-a-construir-un-motor-de-busqueda-y-un-coche-autonomo-con-udacity/
 permalink: /aprende-construir-un-motor-de-busqueda/
 categories:
   - cursos

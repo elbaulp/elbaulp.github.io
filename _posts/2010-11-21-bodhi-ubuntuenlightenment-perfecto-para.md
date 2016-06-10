@@ -2,7 +2,6 @@
 title: 'Bodhi: Ubuntu+Enlightenment, perfecto para minimalistas'
 
 layout: post
-guid: http://elbauldelprogramador.org/bodhi-ubuntuenlightenment-perfecto-para-minimalistas/
 permalink: /bodhi-ubuntuenlightenment-perfecto-para/
 blogger_blog:
   - www.elbauldelprogramador.org

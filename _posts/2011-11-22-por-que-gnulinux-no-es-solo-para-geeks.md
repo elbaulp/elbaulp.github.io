@@ -2,7 +2,6 @@
 title: Por qué GNU/Linux no es solo para Geeks
 
 layout: post
-guid: http://elbauldelprogramador.org/por-que-gnulinux-no-es-solo-para-geeks/
 permalink: /por-que-gnulinux-no-es-solo-para-geeks/
 categories:
   - linux

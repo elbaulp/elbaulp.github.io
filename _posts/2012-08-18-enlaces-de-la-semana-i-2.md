@@ -2,7 +2,6 @@
 title: Enlaces de la semana (I)
 
 layout: post
-guid: /?p=888
 permalink: /enlaces-de-la-semana-i-2/
 categories:
   - Enlaces de la semana

@@ -2,7 +2,6 @@
 title: Cambiando de distribución
 
 layout: post
-guid: http://elbauldelprogramador.org/cambiando-de-distribucion/
 permalink: /cambiando-de-distribucion/
 blogger_blog:
   - www.elbauldelprogramador.org

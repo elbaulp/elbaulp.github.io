@@ -2,7 +2,6 @@
 title: Cómo usar adecuadamente el Log de Android en tus aplicaciones
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1665
 permalink: /como-usar-adecuadamente-el-log-de-android-en-tus-aplicaciones/
 categories:
   - android

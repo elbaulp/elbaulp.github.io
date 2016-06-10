@@ -2,7 +2,6 @@
 title: 'Cómo conocer el software &#8220;no libre&#8221; instalado en nuestro equipo'
 
 layout: post
-guid: http://elbauldelprogramador.org/como-conocer-el-software-no-libre-instalado-en-nuestro-equipo/
 permalink: /como-conocer-el-software-no-libre/
 categories:
   - aplicaciones

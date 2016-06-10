@@ -2,7 +2,6 @@
 title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
 
 layout: post
-guid: http://elbauldelprogramador.org/video-proyecto-wifibar-en-la-ultima-fase-de-desarrollo/
 permalink: /video-proyecto-wifibar-en-la-ultima/
 categories:
   - android

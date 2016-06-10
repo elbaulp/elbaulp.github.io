@@ -2,7 +2,6 @@
 title: ¿Odias Java? Estás peleando una batalla equivocada
 
 layout: post
-guid: /?p=1026
 permalink: /odias-java-estas-peleando-una-batalla-equivocada/
 categories:
   - Articulos

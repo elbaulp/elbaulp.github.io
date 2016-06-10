@@ -2,7 +2,6 @@
 title: Juegos Linux, The Clockwork Man 1 y 2
 
 layout: post
-guid: http://elbauldelprogramador.org/juegos-linux-the-clockwork-man-1-y-2/
 permalink: /juegos-linux-clockwork-man-1-y-2/
 blogger_blog:
   - www.elbauldelprogramador.org

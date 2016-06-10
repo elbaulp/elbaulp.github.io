@@ -2,7 +2,6 @@
 title: Algoritmos de caminos cortos.
 
 layout: post
-guid: /?p=978
 permalink: /algoritmos-de-caminos-cortos/
 categories:
   - Algoritmos

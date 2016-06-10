@@ -2,7 +2,6 @@
 title: 'Programación Android: Intents &#8211; Categorías'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-intents-categorias/
 permalink: /programacion-android-intents-categorias/
 categories:
   - android

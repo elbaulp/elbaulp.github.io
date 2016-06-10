@@ -2,7 +2,6 @@
 title: 'Consulta de Datos &#8211; Cláusula Select'
 
 layout: post
-guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-select/
 permalink: /consulta-de-datos-clausula-select/
 blogger_blog:
   - www.elbauldelprogramador.org

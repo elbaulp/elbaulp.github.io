@@ -2,7 +2,6 @@
 title: 'Programación Android: Cómo se resuelven los Intents'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-como-se-resuelven-los-intents/
 permalink: /programacion-android-como-se-resuelven/
 categories:
   - android

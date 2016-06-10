@@ -2,7 +2,6 @@
 title: 'PL/SQL &#8211; Disparadores o Triggers'
 
 layout: post
-guid: http://elbauldelprogramador.org/plsql-disparadores-o-triggers/
 permalink: /plsql-disparadores-o-triggers/
 blogger_blog:
   - www.elbauldelprogramador.org

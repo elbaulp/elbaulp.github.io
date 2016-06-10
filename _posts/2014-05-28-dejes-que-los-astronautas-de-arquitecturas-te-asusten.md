@@ -2,7 +2,6 @@
 title: No dejes que los Astronautas de Arquitecturas te asusten
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=2361
 permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
 categories:
   - Articulos

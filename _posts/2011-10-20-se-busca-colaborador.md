@@ -2,7 +2,6 @@
 title: Se busca colaborador
 
 layout: post
-guid: http://elbauldelprogramador.org/se-busca-colaborador/
 permalink: /se-busca-colaborador/
 categories:
   - Sin Categoria

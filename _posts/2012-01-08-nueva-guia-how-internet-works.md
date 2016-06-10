@@ -2,7 +2,6 @@
 title: 'Nueva guía: How the internet works'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-how-the-internet-works/
 permalink: /nueva-guia-how-internet-works/
 categories:
   - cursos

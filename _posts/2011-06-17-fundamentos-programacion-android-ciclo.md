@@ -2,7 +2,6 @@
 title: 'Fundamentos programación Android: Ciclo de vida de los componentes'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-programacion-android-ciclo-de-vida-de-los-componentes/
 permalink: /fundamentos-programacion-android-ciclo/
 categories:
   - android

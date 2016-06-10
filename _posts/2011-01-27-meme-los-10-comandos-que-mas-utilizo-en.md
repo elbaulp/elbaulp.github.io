@@ -2,7 +2,6 @@
 title: '[Meme] Los 10 comandos que más utilizo en Linux'
 
 layout: post
-guid: http://elbauldelprogramador.org/meme-los-10-comandos-que-mas-utilizo-en-linux/
 permalink: /meme-los-10-comandos-que-mas-utilizo-en/
 blogger_blog:
   - www.elbauldelprogramador.org

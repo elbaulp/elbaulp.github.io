@@ -2,7 +2,6 @@
 title: 'Pylabra &#8211; Aplicación para almacenar vocabulario'
 
 layout: post
-guid: http://elbauldelprogramador.org/pylabra-aplicacion-para-almacenar-vocabulario/
 permalink: /pylabra-aplicacion-para-almacenar/
 blogger_blog:
   - www.elbauldelprogramador.org

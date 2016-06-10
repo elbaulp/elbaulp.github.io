@@ -2,7 +2,6 @@
 title: 'Diaspora*, La red social libre'
 
 layout: post
-guid: http://elbauldelprogramador.org/diaspora-la-red-social-libre/
 permalink: /diaspora-la-red-social-libre/
 blogger_blog:
   - www.elbauldelprogramador.org

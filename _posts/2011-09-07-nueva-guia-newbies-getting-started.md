@@ -2,7 +2,6 @@
 title: 'Nueva guía: A Newbie&#8217;s Getting Started Guide to Linux'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-a-newbies-getting-started-guide-to-linux/
 permalink: /nueva-guia-newbies-getting-started/
 categories:
   - Sin Categoria

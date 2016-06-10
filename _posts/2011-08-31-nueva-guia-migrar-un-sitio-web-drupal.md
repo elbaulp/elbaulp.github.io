@@ -2,7 +2,6 @@
 title: 'Nueva guía: Migrar un sitio web a Drupal'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-migrar-un-sitio-web-a-drupal/
 permalink: /nueva-guia-migrar-un-sitio-web-drupal/
 categories:
   - cursos

@@ -2,7 +2,6 @@
 title: Crear una tarea en IFTTT
 
 layout: post
-guid: http://elbauldelprogramador.org/crear-una-tarea-en-ifttt/
 permalink: /crear-una-tarea-en-ifttt/
 blogger_blog:
   - www.elbauldelprogramador.org

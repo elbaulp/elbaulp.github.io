@@ -2,7 +2,6 @@
 title: ¿Qué son los PPA?
 
 layout: post
-guid: http://elbauldelprogramador.org/que-son-los-ppa/
 permalink: /que-son-los-ppa-what-ppa-is/
 blogger_blog:
   - www.elbauldelprogramador.org

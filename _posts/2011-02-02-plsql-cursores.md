@@ -2,7 +2,6 @@
 title: 'PL/SQL &#8211; Cursores'
 
 layout: post
-guid: http://elbauldelprogramador.org/plsql-cursores/
 permalink: /plsql-cursores/
 blogger_blog:
   - www.elbauldelprogramador.org

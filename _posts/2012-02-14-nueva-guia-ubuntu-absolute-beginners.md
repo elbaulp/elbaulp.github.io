@@ -2,7 +2,6 @@
 title: 'Nueva guía: Ubuntu: An Absolute Beginner’s Guide'
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-guia-ubuntu-an-absolute-beginners-guide/
 permalink: /nueva-guia-ubuntu-absolute-beginners/
 categories:
   - cursos

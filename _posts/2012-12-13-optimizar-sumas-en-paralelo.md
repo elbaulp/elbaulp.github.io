@@ -2,7 +2,6 @@
 title: Optimizar sumas en paralelo
 
 layout: post
-guid: /?p=1051
 permalink: /optimizar-sumas-en-paralelo/
 categories:
   - Algoritmos

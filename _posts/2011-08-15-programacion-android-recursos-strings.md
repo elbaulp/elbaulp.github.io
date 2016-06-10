@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Strings'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-strings/
 permalink: /programacion-android-recursos-strings/
 categories:
   - android

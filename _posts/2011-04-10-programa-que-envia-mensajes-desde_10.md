@@ -2,7 +2,6 @@
 title: Programa que envía mensajes desde Android a PC (Mejora II)
 
 layout: post
-guid: http://elbauldelprogramador.org/programa-que-envia-mensajes-desde-android-a-pc-mejora-ii/
 permalink: /programa-que-envia-mensajes-desde_10/
 blogger_blog:
   - www.elbauldelprogramador.org

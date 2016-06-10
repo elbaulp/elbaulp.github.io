@@ -2,7 +2,6 @@
 title: Introducción a PL/SQL
 
 layout: post
-guid: http://elbauldelprogramador.org/introduccion-a-plsql/
 permalink: /introduccion-plsql/
 blogger_blog:
   - www.elbauldelprogramador.org

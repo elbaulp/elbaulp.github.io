@@ -2,7 +2,6 @@
 title: 'Guerra de navegadores [Humor]'
 
 layout: post
-guid: http://elbauldelprogramador.org/guerra-de-navegadores-humor/
 permalink: /guerra-de-navegadores-humor/
 categories:
   - aplicaciones

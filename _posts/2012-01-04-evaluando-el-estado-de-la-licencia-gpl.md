@@ -2,7 +2,6 @@
 title: Evaluando el estado de la licencia GPL
 
 layout: post
-guid: http://elbauldelprogramador.org/evaluando-el-estado-de-la-licencia-gpl/
 permalink: /evaluando-el-estado-de-la-licencia-gpl/
 categories:
   - noticias

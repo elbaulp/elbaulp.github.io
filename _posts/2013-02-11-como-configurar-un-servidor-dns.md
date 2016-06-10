@@ -2,7 +2,6 @@
 title: 'Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1308
 permalink: /como-configurar-un-servidor-dns/
 categories:
   - Administracion de Servidores

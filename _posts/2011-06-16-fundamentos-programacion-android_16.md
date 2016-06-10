@@ -2,7 +2,6 @@
 title: 'Fundamentos programación Android: Intents y AndroidManifest'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-programacion-android-intents-y-androidmanifest/
 permalink: /fundamentos-programacion-android_16/
 categories:
   - android

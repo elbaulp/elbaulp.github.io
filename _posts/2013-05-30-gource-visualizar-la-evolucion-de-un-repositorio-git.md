@@ -2,7 +2,6 @@
 title: 'Gource: Visualizar la evolución de un repositorio Git'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1580
 permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/
 categories:
   - aplicaciones

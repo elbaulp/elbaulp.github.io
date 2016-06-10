@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Plurales'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-plurales/
 permalink: /programacion-android-recursos-plurales/
 categories:
   - android

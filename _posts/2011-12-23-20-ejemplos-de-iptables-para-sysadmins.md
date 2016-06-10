@@ -1,7 +1,6 @@
 ---
 title: 20 ejemplos de iptables para SysAdmins novatos
 layout: post
-guid: http://elbauldelprogramador.org/20-ejemplos-de-iptables-para-sysadmins-novatos/
 permalink: /20-ejemplos-de-iptables-para-sysadmins/
 categories:
   - aplicaciones

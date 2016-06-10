@@ -2,7 +2,6 @@
 title: 'Programación Android &#8211; Ejemplo de uso de ACTION_PICK'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-ejemplo-de-uso-de-action_pick/
 permalink: /programacion-android-ejemplos-de-uso-de/
 categories:
   - android

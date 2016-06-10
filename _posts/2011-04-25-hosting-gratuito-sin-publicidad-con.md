@@ -2,7 +2,6 @@
 title: Hosting gratuito sin publicidad con 000webhost.com
 
 layout: post
-guid: http://elbauldelprogramador.org/hosting-gratuito-sin-publicidad-con-000webhost-com/
 permalink: /hosting-gratuito-sin-publicidad-con/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'Programación Android: Hola Mundo'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-hola-mundo/
 permalink: /programacion-android-hola-mundo/
 categories:
   - android

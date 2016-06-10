@@ -2,7 +2,6 @@
 title: Como crear un PPA (Personal Package Archive)
 
 layout: post
-guid: http://elbauldelprogramador.org/como-crear-un-ppa-personal-package-archive/
 permalink: /como-crear-un-repositorio-ppa-how/
 blogger_blog:
   - www.elbauldelprogramador.org

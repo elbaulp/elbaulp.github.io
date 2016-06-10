@@ -2,7 +2,6 @@
 title: 'Nueva Guía: VoIP Vulnerabilities'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1206
 permalink: /nueva-guia-voip-vulnerabilities/
 categories:
   - cursos

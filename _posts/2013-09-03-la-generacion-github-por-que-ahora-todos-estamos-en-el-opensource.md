@@ -2,7 +2,6 @@
 title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1854
 permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
 categories:
   - Articulos

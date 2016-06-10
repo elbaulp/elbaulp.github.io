@@ -2,7 +2,6 @@
 title: 'Clases y Objetos &#8211; Punteros a objetos'
 
 layout: post
-guid: http://elbauldelprogramador.org/clases-y-objetos-punteros-a-objetos/
 permalink: /clases-y-objetos-punteros-objetos/
 blogger_blog:
   - www.elbauldelprogramador.org

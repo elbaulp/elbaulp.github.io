@@ -2,7 +2,6 @@
 title: Botón +1 de google ya disponible en España
 
 layout: post
-guid: http://elbauldelprogramador.org/boton-1-de-google-ya-disponible-en-espana/
 permalink: /boton-1-de-google-ya-disponible-en/
 categories:
   - curiosidades

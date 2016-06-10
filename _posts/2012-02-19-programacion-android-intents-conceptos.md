@@ -2,7 +2,6 @@
 title: 'Programación Android: Intents &#8211; Conceptos básicos'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-intents-conceptos-basicos/
 permalink: /programacion-android-intents-conceptos/
 categories:
   - android

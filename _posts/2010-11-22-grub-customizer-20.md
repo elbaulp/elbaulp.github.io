@@ -2,7 +2,6 @@
 title: Grub Customizer 2.0
 
 layout: post
-guid: http://elbauldelprogramador.org/grub-customizer-2-0/
 permalink: /grub-customizer-20/
 blogger_blog:
   - www.elbauldelprogramador.org

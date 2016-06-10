@@ -2,7 +2,6 @@
 title: 'Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes'
 
 layout: post
-guid: http://elbauldelprogramador.org/fundamentos-aplicaciones-android-parte-ii-componentes/
 permalink: /fundamentos-aplicaciones-android-parte_18/
 blogger_blog:
   - www.elbauldelprogramador.org

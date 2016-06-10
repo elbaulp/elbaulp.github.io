@@ -2,7 +2,6 @@
 title: Curso c++ completo.
 
 layout: post
-guid: http://elbauldelprogramador.org/curso-c-completo/
 permalink: /curso-c-completo/
 blogger_blog:
   - www.elbauldelprogramador.org

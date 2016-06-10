@@ -2,7 +2,6 @@
 title: Nueva página para informar de error 404 en el blog
 
 layout: post
-guid: http://elbauldelprogramador.org/nueva-pagina-para-informar-de-error-404-en-el-blog/
 permalink: /nueva-pagina-para-informar-de-error-404/
 categories:
   - Sin Categoria

@@ -2,7 +2,6 @@
 title: Renombrar archivos masivamente en GNU/Linux
 
 layout: post
-guid: http://elbauldelprogramador.org/renombrar-archivos-masivamente-en-gnulinux/
 permalink: /renombrar-archivos-masivamente-en/
 categories:
   - linux

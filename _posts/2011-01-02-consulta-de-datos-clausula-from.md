@@ -2,7 +2,6 @@
 title: 'Consulta de Datos &#8211; Cláusula FROM'
 
 layout: post
-guid: http://elbauldelprogramador.org/consulta-de-datos-clausula-from/
 permalink: /consulta-de-datos-clausula-from/
 blogger_blog:
   - www.elbauldelprogramador.org

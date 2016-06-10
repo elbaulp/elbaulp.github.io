@@ -2,7 +2,6 @@
 title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1522
 permalink: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
 categories:
   - aplicaciones

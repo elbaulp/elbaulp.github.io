@@ -2,7 +2,6 @@
 title: ¿Re-Diseño del blog?
 
 layout: post
-guid: http://elbauldelprogramador.org/re-diseno-del-blog/
 permalink: /re-diseno-del-blog/
 categories:
   - noticias

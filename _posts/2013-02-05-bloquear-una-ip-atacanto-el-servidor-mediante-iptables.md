@@ -2,7 +2,6 @@
 title: Bloquear una IP atacando el servidor mediante iptables
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1318
 permalink: /bloquear-una-ip-atacanto-el-servidor-mediante-iptables/
 categories:
   - internet

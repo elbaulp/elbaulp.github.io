@@ -2,7 +2,6 @@
 title: 10 razones para rootear tu teléfono Android
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1833
 permalink: /10-razones-para-rootear-tu-telefono-android/
 categories:
   - Articulos

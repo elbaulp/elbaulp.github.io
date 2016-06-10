@@ -2,7 +2,6 @@
 title: 'Lo último en criptografía: Fully Homomorphic Encryption'
 
 layout: post
-guid: /?p=1015
 permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
 categories:
   - Algoritmos

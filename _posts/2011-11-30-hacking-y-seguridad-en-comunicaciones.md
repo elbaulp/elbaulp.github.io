@@ -2,7 +2,6 @@
 title: Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE
 
 layout: post
-guid: http://elbauldelprogramador.org/hacking-y-seguridad-en-comunicaciones-moviles-gsm-gprs-umts-lte/
 permalink: /hacking-y-seguridad-en-comunicaciones/
 categories:
   - noticias

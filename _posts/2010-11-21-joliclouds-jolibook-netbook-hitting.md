@@ -2,7 +2,6 @@
 title: 'Jolicloud&#8217;s Jolibook Netbook Hitting Stores'
 
 layout: post
-guid: http://elbauldelprogramador.org/joliclouds-jolibook-netbook-hitting-stores/
 permalink: /joliclouds-jolibook-netbook-hitting/
 blogger_blog:
   - www.elbauldelprogramador.org

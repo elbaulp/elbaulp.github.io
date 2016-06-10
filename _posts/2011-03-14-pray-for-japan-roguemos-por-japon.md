@@ -2,7 +2,6 @@
 title: Pray For Japan | Roguemos por Japón
 
 layout: post
-guid: http://elbauldelprogramador.org/pray-for-japan-roguemos-por-japon/
 permalink: /pray-for-japan-roguemos-por-japon/
 blogger_blog:
   - www.elbauldelprogramador.org

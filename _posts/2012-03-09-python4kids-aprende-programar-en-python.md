@@ -2,7 +2,6 @@
 title: Python4Kids. Aprende a programar en python fácilmente
 
 layout: post
-guid: http://elbauldelprogramador.org/python4kids-aprende-a-programar-en-python-facilmente/
 permalink: /python4kids-aprende-programar-en-python/
 categories:
   - cursos

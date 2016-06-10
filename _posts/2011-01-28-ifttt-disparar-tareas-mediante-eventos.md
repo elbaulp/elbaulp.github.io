@@ -2,7 +2,6 @@
 title: 'Ifttt: Disparar tareas mediante eventos producidos en redes sociales'
 
 layout: post
-guid: http://elbauldelprogramador.org/ifttt-disparar-tareas-mediante-eventos-producidos-en-redes-sociales/
 permalink: /ifttt-disparar-tareas-mediante-eventos/
 blogger_blog:
   - www.elbauldelprogramador.org

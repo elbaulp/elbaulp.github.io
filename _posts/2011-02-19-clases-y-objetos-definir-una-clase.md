@@ -2,7 +2,6 @@
 title: 'Clases y Objetos &#8211; Definir una Clase'
 
 layout: post
-guid: http://elbauldelprogramador.org/clases-y-objetos-definir-una-clase/
 permalink: /clases-y-objetos-definir-una-clase/
 blogger_blog:
   - www.elbauldelprogramador.org

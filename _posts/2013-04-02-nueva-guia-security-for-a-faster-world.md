@@ -2,7 +2,6 @@
 title: 'Nueva Guía: Security for a Faster World'
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1499
 permalink: /nueva-guia-security-for-a-faster-world/
 categories:
   - cursos

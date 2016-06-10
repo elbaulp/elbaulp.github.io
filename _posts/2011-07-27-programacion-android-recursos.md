@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Introducción'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-introduccion/
 permalink: /programacion-android-recursos/
 categories:
   - android

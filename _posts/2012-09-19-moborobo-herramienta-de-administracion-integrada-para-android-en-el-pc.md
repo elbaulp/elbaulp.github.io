@@ -2,7 +2,6 @@
 title: Moborobo, herramienta de Administración Integrada para Android en el PC
 
 layout: post
-guid: /?p=954
 permalink: /moborobo-herramienta-de-administracion-integrada-para-android-en-el-pc/
 categories:
   - noticias

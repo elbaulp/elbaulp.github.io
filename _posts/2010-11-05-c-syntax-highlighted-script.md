@@ -2,7 +2,6 @@
 title: C++ syntax highlighted script
 
 layout: post
-guid: http://elbauldelprogramador.org/c-syntax-highlighted-script/
 permalink: /c-syntax-highlighted-script/
 blogger_blog:
   - www.elbauldelprogramador.org

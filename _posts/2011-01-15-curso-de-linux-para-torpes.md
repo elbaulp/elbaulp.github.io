@@ -2,7 +2,6 @@
 title: Curso de Linux para torpes
 
 layout: post
-guid: http://elbauldelprogramador.org/curso-de-linux-para-torpes/
 permalink: /curso-de-linux-para-torpes/
 blogger_blog:
   - www.elbauldelprogramador.org

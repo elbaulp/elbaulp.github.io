@@ -2,7 +2,6 @@
 title: Grub Customizer 2.0, personaliza tu GRUB2
 
 layout: post
-guid: http://elbauldelprogramador.org/grub-customizer-2-0-personaliza-tu-grub2/
 permalink: /grub-customizer-20-personaliza-tu-grub2/
 blogger_blog:
   - www.elbauldelprogramador.org

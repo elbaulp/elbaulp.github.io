@@ -2,7 +2,6 @@
 title: '[Offtopic] Impresionante puesta de sol en Islandia'
 
 layout: post
-guid: http://elbauldelprogramador.org/offtopic-impresionante-puesta-de-sol-en-islandia/
 permalink: /offtopic-impresionante-puesta-de-sol-en/
 categories:
   - offtopic

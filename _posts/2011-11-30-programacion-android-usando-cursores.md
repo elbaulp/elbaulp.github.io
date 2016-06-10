@@ -2,7 +2,6 @@
 title: 'Programación Android: Usando cursores'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-usando-cursores/
 permalink: /programacion-android-usando-cursores/
 categories:
   - android

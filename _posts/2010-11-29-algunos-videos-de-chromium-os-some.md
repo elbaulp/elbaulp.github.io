@@ -2,7 +2,6 @@
 title: Algunos vídeos de Chromium OS
 
 layout: post
-guid: http://elbauldelprogramador.org/algunos-videos-de-chromium-os/
 permalink: /algunos-videos-de-chromium-os-some/
 blogger_blog:
   - www.elbauldelprogramador.org

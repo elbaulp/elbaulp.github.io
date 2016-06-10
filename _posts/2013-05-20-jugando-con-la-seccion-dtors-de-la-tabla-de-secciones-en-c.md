@@ -2,7 +2,6 @@
 title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
 
 layout: post
-guid: https://elbauldelprogramador.com/?p=1559
 permalink: /jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/
 categories:
   - C

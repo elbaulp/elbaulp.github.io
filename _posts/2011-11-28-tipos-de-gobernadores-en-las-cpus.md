@@ -2,7 +2,6 @@
 title: Tipos de gobernadores en las CPUs
 
 layout: post
-guid: http://elbauldelprogramador.org/tipos-de-gobernadores-en-las-cpus/
 permalink: /tipos-de-gobernadores-en-las-cpus/
 categories:
   - android

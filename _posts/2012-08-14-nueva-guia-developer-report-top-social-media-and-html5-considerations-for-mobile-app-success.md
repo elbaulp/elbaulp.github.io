@@ -2,7 +2,6 @@
 title: 'Nueva guía: Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success'
 
 layout: post
-guid: /?p=876
 permalink: /nueva-guia-developer-report-top-social-media-and-html5-considerations-for-mobile-app-success/
 if_slider_image:
   -

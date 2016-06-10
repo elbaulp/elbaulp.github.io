@@ -2,7 +2,6 @@
 title: Distribuciones Linux raras
 
 layout: post
-guid: http://elbauldelprogramador.org/distribuciones-linux-raras/
 permalink: /distribuciones-linux-raras/
 blogger_blog:
   - www.elbauldelprogramador.org

@@ -2,7 +2,6 @@
 title: 'StumbleUpon &#8211; Comparte tus páginas favoritas'
 
 layout: post
-guid: http://elbauldelprogramador.org/stumbleupon-comparte-tus-paginas-favoritas/
 permalink: /stumbleupon-comparte-tus-paginas/
 blogger_blog:
   - www.elbauldelprogramador.org

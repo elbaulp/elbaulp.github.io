@@ -2,7 +2,6 @@
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos Assets'
 
 layout: post
-guid: http://elbauldelprogramador.org/programacion-android-recursos-trabajar-con-recursos-assets/
 permalink: /programacion-android-recursos-trabajar_04/
 categories:
   - android

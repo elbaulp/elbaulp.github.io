@@ -2,7 +2,6 @@
 title: Códigos secretos y ocultos para Android
 
 layout: post
-guid: http://elbauldelprogramador.org/codigos-secretos-y-ocultos-para-android/
 permalink: /codigos-secretos-y-ocultos-para-android/
 categories:
   - android

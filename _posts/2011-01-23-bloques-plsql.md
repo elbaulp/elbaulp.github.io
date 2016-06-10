@@ -2,7 +2,6 @@
 title: Bloques PL/SQL
 
 layout: post
-guid: http://elbauldelprogramador.org/bloques-plsql/
 permalink: /bloques-plsql/
 blogger_blog:
   - www.elbauldelprogramador.org
