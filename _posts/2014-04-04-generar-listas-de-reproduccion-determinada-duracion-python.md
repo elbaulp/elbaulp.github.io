@@ -1,5 +1,4 @@
 ---
-id: 2320
 title: Generar listas de reproducción de una determinada duración con Python
 
 layout: post

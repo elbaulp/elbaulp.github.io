@@ -1,5 +1,4 @@
 ---
-id: 124
 title: 2 invitaciones para IFTTT disponibles
 
 layout: post

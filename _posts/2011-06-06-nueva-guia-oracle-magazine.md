@@ -1,5 +1,4 @@
 ---
-id: 216
 title: 'Nueva guía: Oracle Magazine'
 
 layout: post

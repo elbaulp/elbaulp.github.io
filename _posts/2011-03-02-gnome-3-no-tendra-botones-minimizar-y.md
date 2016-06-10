@@ -1,5 +1,4 @@
 ---
-id: 147
 title: GNOME 3 no tendrá botones minimizar y maximizar
 
 layout: post

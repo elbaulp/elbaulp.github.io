@@ -1,5 +1,4 @@
 ---
-id: 756
 title: 'Cómo crear  simples shortcodes en WordPress'
 
 layout: post

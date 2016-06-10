@@ -1,5 +1,4 @@
 ---
-id: 315
 title: 'Nueva guía &#8211; Think Different: How to Build Your Own Hackintosh'
 
 layout: post

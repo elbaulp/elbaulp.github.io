@@ -1,5 +1,4 @@
 ---
-id: 129
 title: Reparto de las 9 invitaciones para Diaspora
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 2449
 title: 'Cómo eliminar tu identidad online: Guía Fundamental para el Anonimato y Seguridad en Internet'
 
 layout: post

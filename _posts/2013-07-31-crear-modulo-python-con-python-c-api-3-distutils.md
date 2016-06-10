@@ -1,5 +1,4 @@
 ---
-id: 1788
 title: 'Crear un módulo para python con la Python C API (III) &#8211; DistUtils'
 
 layout: post

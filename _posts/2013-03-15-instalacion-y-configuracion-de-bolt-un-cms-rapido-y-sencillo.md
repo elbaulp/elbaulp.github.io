@@ -1,5 +1,4 @@
 ---
-id: 1473
 title: Cómo instalar Bolt, un CMS rápido y sencillo
 
 layout: post

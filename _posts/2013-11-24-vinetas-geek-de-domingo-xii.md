@@ -1,5 +1,4 @@
 ---
-id: 1993
 title: Viñetas Geek de Domingo (XII)
 
 layout: post

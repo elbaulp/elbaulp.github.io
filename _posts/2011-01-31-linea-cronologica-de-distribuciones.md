@@ -1,5 +1,4 @@
 ---
-id: 122
 title: Linea cronológica de distribuciones GNU/Linux 1992-2011
 
 layout: post

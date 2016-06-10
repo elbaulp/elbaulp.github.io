@@ -1,5 +1,4 @@
 ---
-id: 280
 title: 'Nueva guía &#8211; The Windows 7 Guide: From Newbies to Pros'
 
 layout: post

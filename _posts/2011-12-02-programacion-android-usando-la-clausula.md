@@ -1,5 +1,4 @@
 ---
-id: 306
 title: 'Programación Android: Usando la cláusula Where'
 
 layout: post

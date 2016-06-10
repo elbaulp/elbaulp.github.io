@@ -1,5 +1,4 @@
 ---
-id: 1709
 title: 'Nueva Guía: The Top 10 Reports for Managing Vulnerabilities'
 
 layout: post

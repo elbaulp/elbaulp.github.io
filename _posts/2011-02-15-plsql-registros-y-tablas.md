@@ -1,5 +1,4 @@
 ---
-id: 138
 title: 'PL/SQL &#8211; Registros y Tablas'
 
 layout: post

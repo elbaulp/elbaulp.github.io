@@ -1,5 +1,4 @@
 ---
-id: 2295
 title: Los orígenes de los símbolos tecnológicos más famosos y frecuentes
 
 layout: post

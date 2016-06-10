@@ -1,5 +1,4 @@
 ---
-id: 127
 title: 2 nuevas secciones en el blog
 
 layout: post

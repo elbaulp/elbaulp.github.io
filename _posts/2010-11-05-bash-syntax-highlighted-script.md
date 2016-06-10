@@ -1,5 +1,4 @@
 ---
-id: 23
 title: Bash syntax highlighted script
 
 layout: post

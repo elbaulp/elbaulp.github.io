@@ -1,5 +1,4 @@
 ---
-id: 943
 title: Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo
 
 layout: post

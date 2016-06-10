@@ -1,5 +1,4 @@
 ---
-id: 359
 title: 'Programación Android &#8211; Ejemplo de uso de ACTION_PICK'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1113
 title: Diagramas animados de números factorizados en HTML5
 
 layout: post

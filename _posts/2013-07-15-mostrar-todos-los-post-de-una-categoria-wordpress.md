@@ -1,5 +1,4 @@
 ---
-id: 1712
 title: Mostrar todos los post de una categoría en WordPress
 
 layout: post

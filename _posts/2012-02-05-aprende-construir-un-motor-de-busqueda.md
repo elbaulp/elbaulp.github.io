@@ -1,5 +1,4 @@
 ---
-id: 337
 title: Aprende a construir un motor de búsqueda y un coche autónomo con Udacity
 
 layout: post

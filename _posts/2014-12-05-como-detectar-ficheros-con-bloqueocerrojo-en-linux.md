@@ -1,5 +1,4 @@
 ---
-id: 2464
 title: ¿Cómo detectar ficheros con bloqueo/cerrojo en Linux?
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 31
 title: 'SSD ioDrive Octal: 6,2 GBytes/s'
 
 layout: post

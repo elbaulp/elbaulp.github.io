@@ -1,5 +1,4 @@
 ---
-id: 1507
 title: 'Lo que se viene en programación funcional de Java&#8230;'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 108
 title: 'Pylabra &#8211; Aplicación para almacenar vocabulario'
 
 layout: post

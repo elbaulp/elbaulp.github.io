@@ -1,5 +1,4 @@
 ---
-id: 1518
 title: Cómo ocultar la versión de BIND (Y cómo averiguarla)
 
 layout: post

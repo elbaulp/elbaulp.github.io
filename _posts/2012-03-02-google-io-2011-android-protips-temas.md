@@ -1,5 +1,4 @@
 ---
-id: 349
 title: 'Google I/O 2011: Android Protips &#8211; Temas avanzados para desarrolladores expertos'
 
 layout: post

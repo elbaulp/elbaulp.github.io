@@ -1,5 +1,4 @@
 ---
-id: 198
 title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in the middle)'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 870
 title: 'Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras'
 
 layout: post

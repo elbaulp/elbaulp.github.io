@@ -1,5 +1,4 @@
 ---
-id: 363
 title: Cuarto Hackathon de proyectos de software libre de la UGR
 
 layout: post

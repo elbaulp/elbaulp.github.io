@@ -1,5 +1,4 @@
 ---
-id: 136
 title: 'Clases y objetos &#8211; Introducción'
 
 layout: post

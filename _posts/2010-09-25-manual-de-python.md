@@ -1,5 +1,4 @@
 ---
-id: 10
 title: Manual de python
 
 layout: post

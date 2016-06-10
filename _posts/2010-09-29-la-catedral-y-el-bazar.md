@@ -1,5 +1,4 @@
 ---
-id: 13
 title: '&#8220;La catedral y el bazar&#8221;'
 
 layout: post

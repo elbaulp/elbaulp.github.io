@@ -1,5 +1,4 @@
 ---
-id: 145
 title: 'Clases y Objetos &#8211; El Destructor'
 
 layout: post

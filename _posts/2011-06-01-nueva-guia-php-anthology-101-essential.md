@@ -1,5 +1,4 @@
 ---
-id: 206
 title: 'Nueva guía: The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition'
 
 layout: post

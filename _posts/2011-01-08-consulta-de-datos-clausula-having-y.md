@@ -1,5 +1,4 @@
 ---
-id: 84
 title: 'Consulta de Datos &#8211; Cláusula HAVING y ORDER BY'
 
 layout: post

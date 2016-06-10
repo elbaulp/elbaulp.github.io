@@ -1,5 +1,4 @@
 ---
-id: 243
 title: Planteamiento del Curso de Android
 
 layout: post

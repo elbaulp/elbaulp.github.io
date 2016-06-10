@@ -1,5 +1,4 @@
 ---
-id: 225
 title: 'Fundamentos programación Android: Conceptos básicos y componentes'
 
 layout: post

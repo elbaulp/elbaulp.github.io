@@ -1,5 +1,4 @@
 ---
-id: 1546
 title: 'Crear enlaces en un TextView con la etiqueta HTML <a href en Android'
 
 layout: post

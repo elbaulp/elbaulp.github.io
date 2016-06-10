@@ -1,5 +1,4 @@
 ---
-id: 271
 title: ¿Re-Diseño del blog?
 
 layout: post

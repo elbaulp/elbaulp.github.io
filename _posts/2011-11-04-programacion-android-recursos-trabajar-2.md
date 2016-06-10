@@ -1,5 +1,4 @@
 ---
-id: 267
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos RAW'
 
 layout: post

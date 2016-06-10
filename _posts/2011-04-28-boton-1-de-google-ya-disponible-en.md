@@ -1,5 +1,4 @@
 ---
-id: 184
 title: Botón +1 de google ya disponible en España
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 207
 title: 'Nueva guía: The JavaScript Anthology: 101 Essential Tips, Tricks & Hacks'
 
 layout: post

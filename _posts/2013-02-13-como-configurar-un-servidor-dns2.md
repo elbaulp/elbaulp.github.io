@@ -1,5 +1,4 @@
 ---
-id: 1346
 title: 'Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)'
 
 layout: post

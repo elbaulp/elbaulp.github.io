@@ -1,5 +1,4 @@
 ---
-id: 176
 title: Licencia del contenido de la web developer.android
 
 layout: post

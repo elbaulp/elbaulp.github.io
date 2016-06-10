@@ -1,5 +1,4 @@
 ---
-id: 2042
 title: 'Recibir alertas de correo al acceder al  sistema mediante SSH'
 
 layout: post

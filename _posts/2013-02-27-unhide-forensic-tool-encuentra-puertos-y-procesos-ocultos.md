@@ -1,5 +1,4 @@
 ---
-id: 1374
 title: 'Unhide Forensic Tool: Encuentra puertos y procesos ocultos'
 
 layout: post

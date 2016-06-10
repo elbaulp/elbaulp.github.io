@@ -1,5 +1,4 @@
 ---
-id: 220
 title: 'Nueva guía: WAN Optimization for Today and Tomorrow'
 
 layout: post

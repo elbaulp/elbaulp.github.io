@@ -1,5 +1,4 @@
 ---
-id: 119
 title: 'PL/SQL &#8211; Excepciones'
 
 layout: post

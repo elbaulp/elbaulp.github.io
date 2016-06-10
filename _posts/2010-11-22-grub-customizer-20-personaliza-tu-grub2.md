@@ -1,5 +1,4 @@
 ---
-id: 42
 title: Grub Customizer 2.0, personaliza tu GRUB2
 
 layout: post

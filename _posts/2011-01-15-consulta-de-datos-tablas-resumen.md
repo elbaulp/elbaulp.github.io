@@ -1,5 +1,4 @@
 ---
-id: 91
 title: 'Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle'
 
 layout: post

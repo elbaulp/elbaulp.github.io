@@ -1,5 +1,4 @@
 ---
-id: 277
 title: Planteamiento de la segunda parte del curso de Android
 
 layout: post

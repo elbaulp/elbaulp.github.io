@@ -1,5 +1,4 @@
 ---
-id: 1559
 title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
 
 layout: post

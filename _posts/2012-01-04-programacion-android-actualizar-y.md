@@ -1,5 +1,4 @@
 ---
-id: 321
 title: 'Programación Android: Actualizar y borrar registros'
 
 layout: post

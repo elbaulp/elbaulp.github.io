@@ -1,5 +1,4 @@
 ---
-id: 123
 title: 'PL/SQL &#8211; Cursores'
 
 layout: post

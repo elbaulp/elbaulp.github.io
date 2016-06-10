@@ -1,5 +1,4 @@
 ---
-id: 1206
 title: 'Nueva Guía: VoIP Vulnerabilities'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 354
 title: Gana dinero ofreciendo manuales de todas las áreas de conocimiento a tus lectores con RevResponse
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 19
 title: Script resaltado sintaxis bash (Mejorado)
 
 layout: post

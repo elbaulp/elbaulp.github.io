@@ -1,5 +1,4 @@
 ---
-id: 36
 title: 'Bodhi: Ubuntu+Enlightenment, perfecto para minimalistas'
 
 layout: post

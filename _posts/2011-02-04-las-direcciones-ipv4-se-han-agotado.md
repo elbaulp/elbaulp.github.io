@@ -1,5 +1,4 @@
 ---
-id: 128
 title: Las direcciones IPv4 se han agotado
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 20
 title: 'Chistes de informaticos &#8211; www.desmotivaciones.es'
 
 layout: post

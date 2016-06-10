@@ -1,5 +1,4 @@
 ---
-id: 241
 title: 'Programación Android: Recursos &#8211; Introducción'
 
 layout: post

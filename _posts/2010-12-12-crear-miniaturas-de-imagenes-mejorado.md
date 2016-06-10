@@ -1,5 +1,4 @@
 ---
-id: 59
 title: 'Crear miniaturas de imágenes [Mejorado]'
 
 layout: post

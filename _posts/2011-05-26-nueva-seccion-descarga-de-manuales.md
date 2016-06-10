@@ -1,5 +1,4 @@
 ---
-id: 201
 title: 'Nueva sección: Descarga de Manuales gratuitos'
 
 layout: post

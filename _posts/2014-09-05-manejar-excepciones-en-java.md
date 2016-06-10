@@ -1,5 +1,4 @@
 ---
-id: 2438
 title: Manejar excepciones en Java
 
 layout: post

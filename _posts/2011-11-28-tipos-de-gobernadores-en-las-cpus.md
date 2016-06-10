@@ -1,5 +1,4 @@
 ---
-id: 301
 title: Tipos de gobernadores en las CPUs
 
 layout: post

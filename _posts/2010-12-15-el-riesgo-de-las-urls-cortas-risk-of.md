@@ -1,5 +1,4 @@
 ---
-id: 60
 title: El riesgo de las URLs cortas
 
 layout: post

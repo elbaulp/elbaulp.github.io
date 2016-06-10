@@ -1,5 +1,4 @@
 ---
-id: 1192
 title: '¿Qué significa &#8216;Unknown&#8217; en las estadísticas de Whos amung?'
 
 layout: post

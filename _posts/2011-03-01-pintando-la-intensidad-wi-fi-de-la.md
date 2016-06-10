@@ -1,5 +1,4 @@
 ---
-id: 146
 title: Pintando la intensidad Wi-Fi de la Ciudad.
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 8
 title: Curso c++ completo.
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1979
 title: Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban
 
 layout: post

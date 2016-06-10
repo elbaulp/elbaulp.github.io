@@ -1,5 +1,4 @@
 ---
-id: 1400
 title: Cómo añadir contenido por defecto a los artículos en WordPress
 
 layout: post

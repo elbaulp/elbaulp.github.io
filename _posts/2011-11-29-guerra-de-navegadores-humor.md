@@ -1,5 +1,4 @@
 ---
-id: 302
 title: 'Guerra de navegadores [Humor]'
 
 layout: post

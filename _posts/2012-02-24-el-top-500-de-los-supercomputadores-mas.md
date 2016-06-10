@@ -1,5 +1,4 @@
 ---
-id: 345
 title: El top 500 de los supercomputadores más potentes del mundo
 
 layout: post

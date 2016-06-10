@@ -1,5 +1,4 @@
 ---
-id: 1006
 title: 'Optimizando la interfaz Android &#8211; Compound Drawables'
 
 layout: post

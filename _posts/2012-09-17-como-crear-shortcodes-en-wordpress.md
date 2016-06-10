@@ -1,5 +1,4 @@
 ---
-id: 952
 title: Cómo crear shortcodes en WordPress que soporten parámetros
 
 layout: post

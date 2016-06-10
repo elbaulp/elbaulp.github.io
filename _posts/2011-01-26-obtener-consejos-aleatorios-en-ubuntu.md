@@ -1,5 +1,4 @@
 ---
-id: 106
 title: Obtener consejos aleatorios en Ubuntu
 
 layout: post

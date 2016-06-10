@@ -1,5 +1,4 @@
 ---
-id: 300
 title: 'Programación Android: Proveedores de Contenidos &#8211; Leer datos mediante URIs'
 
 layout: post

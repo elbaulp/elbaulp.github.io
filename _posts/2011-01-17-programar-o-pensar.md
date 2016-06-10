@@ -1,5 +1,4 @@
 ---
-id: 94
 title: Programar o Pensar.
 
 layout: post

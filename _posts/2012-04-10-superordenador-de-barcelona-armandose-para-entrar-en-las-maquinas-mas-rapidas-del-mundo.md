@@ -1,5 +1,4 @@
 ---
-id: 707
 title: Superordenador de Barcelona ARMándose para entrar en las máquinas más rápidas del mundo
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 169
 title: Organiza tu lista de Tareas con Remember the Milk
 
 layout: post

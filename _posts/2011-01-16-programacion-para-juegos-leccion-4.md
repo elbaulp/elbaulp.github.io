@@ -1,5 +1,4 @@
 ---
-id: 93
 title: 'Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos'
 
 layout: post

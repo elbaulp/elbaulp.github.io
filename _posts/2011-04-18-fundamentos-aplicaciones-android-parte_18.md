@@ -1,5 +1,4 @@
 ---
-id: 175
 title: 'Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes'
 
 layout: post

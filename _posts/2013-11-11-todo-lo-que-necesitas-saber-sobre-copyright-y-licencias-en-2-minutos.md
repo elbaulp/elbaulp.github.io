@@ -1,5 +1,4 @@
 ---
-id: 1967
 title: Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos
 
 layout: post

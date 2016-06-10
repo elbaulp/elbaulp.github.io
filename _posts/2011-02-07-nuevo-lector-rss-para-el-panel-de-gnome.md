@@ -1,5 +1,4 @@
 ---
-id: 131
 title: Nuevo lector RSS para el panel de GNOME
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 178
 title: Distribuciones Linux raras
 
 layout: post

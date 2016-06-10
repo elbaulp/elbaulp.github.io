@@ -1,5 +1,4 @@
 ---
-id: 209
 title: Añade el botón +1 de google a tu blog
 
 layout: post

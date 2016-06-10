@@ -1,5 +1,4 @@
 ---
-id: 90
 title: Curso de Linux para torpes
 
 layout: post

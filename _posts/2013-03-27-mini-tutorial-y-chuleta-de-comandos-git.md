@@ -1,5 +1,4 @@
 ---
-id: 1491
 title: 'Git: Mini Tutorial y chuleta de comandos'
 
 layout: post

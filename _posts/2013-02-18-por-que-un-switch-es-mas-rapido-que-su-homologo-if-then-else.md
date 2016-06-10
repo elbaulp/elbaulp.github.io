@@ -1,5 +1,4 @@
 ---
-id: 1012
 title: Por qué un switch es más rápido que su homólogo if-then-else
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 102
 title: 'Programación para Juegos &#8211; Lección 5 &#8211; Colores Clave'
 
 layout: post

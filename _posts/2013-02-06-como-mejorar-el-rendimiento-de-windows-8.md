@@ -1,5 +1,4 @@
 ---
-id: 1322
 title: Cómo mejorar el rendimiento de Windows 8
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 97
 title: Echando un vistazo a GNOME 3
 
 layout: post

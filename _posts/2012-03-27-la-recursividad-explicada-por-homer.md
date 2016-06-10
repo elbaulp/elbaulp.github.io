@@ -1,5 +1,4 @@
 ---
-id: 364
 title: La recursividad, explicada por Homer Simpson
 
 layout: post

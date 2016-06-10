@@ -1,5 +1,4 @@
 ---
-id: 110
 title: 'PL/SQL &#8211; Estructuras básicas de control'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 2014
 title: Solucionar fallo de segmentación en PHP cuando se usa APC
 
 layout: post

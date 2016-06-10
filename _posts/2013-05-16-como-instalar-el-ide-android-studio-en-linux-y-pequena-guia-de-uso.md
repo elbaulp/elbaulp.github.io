@@ -1,5 +1,4 @@
 ---
-id: 1566
 title: Cómo instalar el IDE Android Studio en Linux y pequeña guía de uso
 
 layout: post

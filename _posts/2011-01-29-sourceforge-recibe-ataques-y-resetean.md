@@ -1,5 +1,4 @@
 ---
-id: 117
 title: SourceForge recibe ataques y resetean las contraseñas de los usuarios
 
 layout: post

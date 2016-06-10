@@ -1,5 +1,4 @@
 ---
-id: 9
 title: Terminado el Proyecto py-Deutsch
 
 layout: post

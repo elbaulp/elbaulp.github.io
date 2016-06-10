@@ -1,5 +1,4 @@
 ---
-id: 312
 title: 'Nueva Guía: 50 buenos usos para los Live CDs'
 
 layout: post

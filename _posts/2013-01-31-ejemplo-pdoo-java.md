@@ -1,5 +1,4 @@
 ---
-id: 497
 title: C++ y Java
 layout: minimal
 main-class: "dev"

@@ -1,5 +1,4 @@
 ---
-id: 230
 title: 'Fundamentos programación Android: Limpieza de Procesos'
 
 layout: post

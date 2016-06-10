@@ -1,5 +1,4 @@
 ---
-id: 35
 title: Announcing Bodhi Linux
 
 layout: post

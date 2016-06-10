@@ -1,5 +1,4 @@
 ---
-id: 285
 title: 'Programación Android: StrictMode'
 
 layout: post

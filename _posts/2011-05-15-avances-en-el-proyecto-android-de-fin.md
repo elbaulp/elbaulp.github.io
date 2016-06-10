@@ -1,5 +1,4 @@
 ---
-id: 190
 title: 'Avances en el proyecto Android de fin de curso [WifiBar]'
 
 layout: post

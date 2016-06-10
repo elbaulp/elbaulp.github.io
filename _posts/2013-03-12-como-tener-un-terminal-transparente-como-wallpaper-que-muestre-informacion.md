@@ -1,5 +1,4 @@
 ---
-id: 1392
 title: Cómo tener un terminal transparente como wallpaper que muestre información
 
 layout: post

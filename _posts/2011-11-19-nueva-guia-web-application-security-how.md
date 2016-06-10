@@ -1,5 +1,4 @@
 ---
-id: 289
 title: 'Nueva Guía: Web Application Security; How to Minimize Prevalent Risk of Attacks'
 
 layout: post

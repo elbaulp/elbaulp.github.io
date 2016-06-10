@@ -1,5 +1,4 @@
 ---
-id: 288
 title: 'Nueva Guía: Simply SQL'
 
 layout: post

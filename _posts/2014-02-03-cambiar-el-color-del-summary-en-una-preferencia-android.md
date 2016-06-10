@@ -1,5 +1,4 @@
 ---
-id: 2233
 title: Cambiar el color del summary en una Preferencia Android
 
 layout: post

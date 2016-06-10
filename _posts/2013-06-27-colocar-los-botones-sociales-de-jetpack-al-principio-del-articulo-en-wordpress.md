@@ -1,5 +1,4 @@
 ---
-id: 1698
 title: Colocar los botones sociales de jetpack al principio del artículo en WordPress
 
 layout: post

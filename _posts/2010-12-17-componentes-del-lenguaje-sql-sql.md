@@ -1,5 +1,4 @@
 ---
-id: 62
 title: Componentes del lenguaje SQL
 
 layout: post

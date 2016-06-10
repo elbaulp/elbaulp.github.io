@@ -1,5 +1,4 @@
 ---
-id: 48
 title: Introducción SQL
 
 layout: post

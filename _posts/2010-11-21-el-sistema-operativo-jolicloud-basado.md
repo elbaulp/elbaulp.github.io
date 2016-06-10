@@ -1,5 +1,4 @@
 ---
-id: 34
 title: JoliBook ya a la venta
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 2419
 title: Cómo habilitar el teclado en el emulador Android
 
 layout: post

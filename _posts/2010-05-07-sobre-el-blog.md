@@ -1,5 +1,4 @@
 ---
-id: 1786
 title: Sobre el blog
 
 layout: post

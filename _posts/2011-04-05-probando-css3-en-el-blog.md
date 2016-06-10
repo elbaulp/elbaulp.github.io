@@ -1,5 +1,4 @@
 ---
-id: 162
 title: Probando CSS3 en el blog
 
 layout: post

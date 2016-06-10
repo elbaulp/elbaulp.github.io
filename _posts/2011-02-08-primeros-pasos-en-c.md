@@ -1,5 +1,4 @@
 ---
-id: 132
 title: Primeros pasos en C++
 
 layout: post

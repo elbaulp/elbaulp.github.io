@@ -1,5 +1,4 @@
 ---
-id: 1018
 title: Optimizando código y evaluando el rendimiento
 
 layout: post

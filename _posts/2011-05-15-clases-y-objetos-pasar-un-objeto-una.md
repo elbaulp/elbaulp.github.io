@@ -1,5 +1,4 @@
 ---
-id: 189
 title: 'Clases y Objetos &#8211; Pasar un objeto a una función'
 
 layout: post

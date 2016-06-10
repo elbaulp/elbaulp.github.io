@@ -1,5 +1,4 @@
 ---
-id: 214
 title: 'Nueva guía: Run Your Own Web Server Using Linux & Apache'
 
 layout: post

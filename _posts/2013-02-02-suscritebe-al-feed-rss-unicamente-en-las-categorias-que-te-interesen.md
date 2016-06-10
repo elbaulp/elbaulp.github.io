@@ -1,5 +1,4 @@
 ---
-id: 1295
 title: Suscríbete al feed RSS únicamente en las categorías que te interesen
 
 layout: post

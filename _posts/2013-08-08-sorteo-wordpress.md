@@ -1,5 +1,4 @@
 ---
-id: 1807
 title: Sorteamos 10 matrículas gratuitas para cursos de desarrollo WordPress y cupones de descuento
 
 layout: post

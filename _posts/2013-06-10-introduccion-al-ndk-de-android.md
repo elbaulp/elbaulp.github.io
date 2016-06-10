@@ -1,5 +1,4 @@
 ---
-id: 1542
 title: Introducción al NDK de Android
 
 layout: post

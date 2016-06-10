@@ -1,5 +1,4 @@
 ---
-id: 1891
 title: Viñetas Geek de Domingo (XI)
 
 layout: post

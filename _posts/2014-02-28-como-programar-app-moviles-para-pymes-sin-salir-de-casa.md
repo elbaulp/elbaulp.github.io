@@ -1,5 +1,4 @@
 ---
-id: 2275
 title: Cómo programar apps móviles para pymes sin salir de casa
 
 layout: post

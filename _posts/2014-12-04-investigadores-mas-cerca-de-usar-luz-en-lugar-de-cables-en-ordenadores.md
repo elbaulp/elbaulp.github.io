@@ -1,5 +1,4 @@
 ---
-id: 2497
 title: Investigadores más cerca de usar luz en lugar de cables en ordenadores
 
 layout: post

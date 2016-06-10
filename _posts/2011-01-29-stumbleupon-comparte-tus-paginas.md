@@ -1,5 +1,4 @@
 ---
-id: 118
 title: 'StumbleUpon &#8211; Comparte tus páginas favoritas'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1499
 title: 'Nueva Guía: Security for a Faster World'
 
 layout: post

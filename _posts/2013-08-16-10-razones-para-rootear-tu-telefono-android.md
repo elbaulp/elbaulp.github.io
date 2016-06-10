@@ -1,5 +1,4 @@
 ---
-id: 1833
 title: 10 razones para rootear tu teléfono Android
 
 layout: post

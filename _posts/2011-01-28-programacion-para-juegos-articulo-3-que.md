@@ -1,5 +1,4 @@
 ---
-id: 113
 title: 'Programación para Juegos &#8211; Artículo 3 &#8211; ¿Qué es un pixel?'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 151
 title: Resultados examen PL/SQL base de datos
 
 layout: post

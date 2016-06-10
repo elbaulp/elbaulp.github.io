@@ -1,5 +1,4 @@
 ---
-id: 268
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos Assets'
 
 layout: post

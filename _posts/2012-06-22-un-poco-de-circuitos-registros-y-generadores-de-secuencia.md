@@ -1,5 +1,4 @@
 ---
-id: 802
 title: Un poco de circuitos, regístros y generadores de secuencia
 
 layout: post

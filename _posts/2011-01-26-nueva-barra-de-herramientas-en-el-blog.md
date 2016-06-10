@@ -1,5 +1,4 @@
 ---
-id: 104
 title: Nueva barra de herramientas en el Blog
 
 layout: post

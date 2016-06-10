@@ -1,5 +1,4 @@
 ---
-id: 1398
 title: Cómo activar opciones de desarrollador en Android 4.2
 
 layout: post

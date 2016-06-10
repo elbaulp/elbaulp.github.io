@@ -1,5 +1,4 @@
 ---
-id: 208
 title: 'Pequeño &#8220;Rediseño&#8221; en el blog'
 
 layout: post

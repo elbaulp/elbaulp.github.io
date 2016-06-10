@@ -1,5 +1,4 @@
 ---
-id: 98
 title: Fundamentos de PL/SQL
 
 layout: post

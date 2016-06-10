@@ -1,5 +1,4 @@
 ---
-id: 1671
 title: 6 formas usadas por los cibercriminales para robar o vulnerar credenciales de login
 
 layout: post

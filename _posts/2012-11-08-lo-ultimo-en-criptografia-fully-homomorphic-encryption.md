@@ -1,5 +1,4 @@
 ---
-id: 1015
 title: 'Lo último en criptografía: Fully Homomorphic Encryption'
 
 layout: post

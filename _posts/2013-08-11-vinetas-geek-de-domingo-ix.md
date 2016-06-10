@@ -1,5 +1,4 @@
 ---
-id: 1825
 title: Viñetas Geek de Domingo (IX)
 
 layout: post

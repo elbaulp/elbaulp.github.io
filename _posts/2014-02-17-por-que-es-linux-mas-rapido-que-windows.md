@@ -1,5 +1,4 @@
 ---
-id: 2265
 title: ¿Por qué es Linux más rápido que Windows?
 
 layout: post

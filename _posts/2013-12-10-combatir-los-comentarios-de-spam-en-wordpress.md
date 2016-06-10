@@ -1,5 +1,4 @@
 ---
-id: 2036
 title: Combatir los comentarios de spam en WordPress
 
 layout: post

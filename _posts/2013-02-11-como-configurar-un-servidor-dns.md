@@ -1,5 +1,4 @@
 ---
-id: 1308
 title: 'Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)'
 
 layout: post

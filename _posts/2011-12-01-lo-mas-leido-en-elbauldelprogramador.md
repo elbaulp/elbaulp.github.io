@@ -1,5 +1,4 @@
 ---
-id: 305
 title: Lo más leido en ElbaulDelProgramador (Noviembre 2011)
 
 layout: post

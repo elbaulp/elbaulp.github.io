@@ -1,5 +1,4 @@
 ---
-id: 61
 title: ¿Qué son los PPA?
 
 layout: post

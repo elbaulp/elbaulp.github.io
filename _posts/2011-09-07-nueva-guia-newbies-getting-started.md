@@ -1,5 +1,4 @@
 ---
-id: 252
 title: 'Nueva guía: A Newbie&#8217;s Getting Started Guide to Linux'
 
 layout: post

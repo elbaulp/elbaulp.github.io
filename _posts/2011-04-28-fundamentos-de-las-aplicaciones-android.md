@@ -1,5 +1,4 @@
 ---
-id: 183
 title: 'Fundamentos de las aplicaciones Android &#8211; Traducción completa'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1926
 title: Cómo depurar una aplicación en Django
 
 layout: post

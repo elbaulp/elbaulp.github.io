@@ -1,5 +1,4 @@
 ---
-id: 38
 title: Ubuntu funcionando en el Samsung Galaxy Tab
 
 layout: post

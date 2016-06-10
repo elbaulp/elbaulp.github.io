@@ -1,5 +1,4 @@
 ---
-id: 1790
 title: Crear un módulo para python con la Python C API (V) – Python 3
 
 layout: post

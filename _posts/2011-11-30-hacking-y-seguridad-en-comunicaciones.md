@@ -1,5 +1,4 @@
 ---
-id: 304
 title: Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE
 
 layout: post

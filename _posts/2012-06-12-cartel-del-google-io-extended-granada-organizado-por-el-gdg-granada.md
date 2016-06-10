@@ -1,5 +1,4 @@
 ---
-id: 779
 title: Cartel del Google I/O Extended Granada organizado por el GDG Granada
 
 layout: post

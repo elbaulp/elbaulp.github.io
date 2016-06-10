@@ -1,5 +1,4 @@
 ---
-id: 350
 title: Mi experiencia en el 3º Hackathon de la Universidad de Granada
 
 layout: post

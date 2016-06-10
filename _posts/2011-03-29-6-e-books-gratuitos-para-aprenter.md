@@ -1,5 +1,4 @@
 ---
-id: 159
 title: 6 E-books gratuitos para aprenter a programar en Python
 
 layout: post

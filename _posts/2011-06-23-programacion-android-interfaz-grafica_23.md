@@ -1,5 +1,4 @@
 ---
-id: 234
 title: 'Programación Android: Interfaz gráfica &#8211; Layouts'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 342
 title: 'Vídeos de la semana &#8211; Time-Lapses y cortos de animación'
 
 layout: post

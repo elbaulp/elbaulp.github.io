@@ -1,5 +1,4 @@
 ---
-id: 228
 title: 'Fundamentos programación Android: Ciclo de vida de los componentes'
 
 layout: post

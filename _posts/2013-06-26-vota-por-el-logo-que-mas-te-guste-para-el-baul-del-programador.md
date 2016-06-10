@@ -1,5 +1,4 @@
 ---
-id: 1695
 title: Vota por el logo que más te guste para El Baúl del Programador
 
 layout: post

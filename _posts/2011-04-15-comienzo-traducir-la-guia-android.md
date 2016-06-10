@@ -1,5 +1,4 @@
 ---
-id: 173
 title: Comienzo a traducir la guía android
 
 layout: post

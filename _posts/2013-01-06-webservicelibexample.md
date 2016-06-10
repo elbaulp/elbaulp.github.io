@@ -1,5 +1,4 @@
 ---
-id: 1013
 title: 'Restlib &#8211; Librería para realizar peticiones a Web Services en Android'
 
 layout: post

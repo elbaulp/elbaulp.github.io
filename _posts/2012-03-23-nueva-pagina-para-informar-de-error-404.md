@@ -1,5 +1,4 @@
 ---
-id: 360
 title: Nueva página para informar de error 404 en el blog
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1734
 title: Viñetas Geek de Domingo (VI)
 
 layout: post

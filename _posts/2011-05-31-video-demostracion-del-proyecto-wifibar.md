@@ -1,5 +1,4 @@
 ---
-id: 205
 title: '[Vídeo] Demostración del proyecto WifiBar funcionando'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 134
 title: Nuevo diseño de las páginas en Facebook
 
 layout: post

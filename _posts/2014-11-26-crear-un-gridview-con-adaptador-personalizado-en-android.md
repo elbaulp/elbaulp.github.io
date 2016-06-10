@@ -1,5 +1,4 @@
 ---
-id: 2476
 title: Crear un GridView con Adaptador personalizado en Android
 
 layout: post

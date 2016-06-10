@@ -1,5 +1,4 @@
 ---
-id: 1354
 title: 'Netstat: Analizando la red y detectando problemas'
 
 layout: post

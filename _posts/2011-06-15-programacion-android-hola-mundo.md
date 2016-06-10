@@ -1,5 +1,4 @@
 ---
-id: 224
 title: 'Programación Android: Hola Mundo'
 
 layout: post

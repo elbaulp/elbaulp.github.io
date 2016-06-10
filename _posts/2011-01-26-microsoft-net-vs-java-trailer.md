@@ -1,5 +1,4 @@
 ---
-id: 107
 title: Microsoft .NET vs Java Trailer (Vídeo)
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1534
 title: 'Nueva Guía: Big Security for Big Data'
 
 layout: post

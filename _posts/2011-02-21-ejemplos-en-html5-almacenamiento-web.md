@@ -1,5 +1,4 @@
 ---
-id: 142
 title: 'Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket'
 
 layout: post

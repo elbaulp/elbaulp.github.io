@@ -1,5 +1,4 @@
 ---
-id: 81
 title: 'Programación para Juegos &#8211; Lección 1.2 &#8211; Hello World'
 
 layout: post

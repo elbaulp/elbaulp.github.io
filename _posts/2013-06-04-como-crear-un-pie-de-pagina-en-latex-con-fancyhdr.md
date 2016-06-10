@@ -1,5 +1,4 @@
 ---
-id: 1586
 title: Cómo crear un pie de página en LaTeX con fancyhdr
 
 layout: post

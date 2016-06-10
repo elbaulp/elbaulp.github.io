@@ -1,5 +1,4 @@
 ---
-id: 351
 title: 'Programación Android: Cómo se resuelven los Intents'
 
 layout: post

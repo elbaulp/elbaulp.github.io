@@ -1,5 +1,4 @@
 ---
-id: 2403
 title: Instalar y configurar DWM, el gestor de ventanas más eficiente
 
 layout: post

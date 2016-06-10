@@ -1,5 +1,4 @@
 ---
-id: 215
 title: 'Guía gratuita: Administración Avanzada del Sistema Operativo GNU/Linux'
 
 layout: post

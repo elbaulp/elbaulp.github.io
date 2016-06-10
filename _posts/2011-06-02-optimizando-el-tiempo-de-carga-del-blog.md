@@ -1,5 +1,4 @@
 ---
-id: 212
 title: Optimizando el tiempo de carga del blog
 
 layout: post

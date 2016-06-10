@@ -1,5 +1,4 @@
 ---
-id: 89
 title: Firefox 4.0 beta 9 disponible
 
 layout: post

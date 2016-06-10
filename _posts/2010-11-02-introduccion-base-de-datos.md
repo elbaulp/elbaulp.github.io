@@ -1,5 +1,4 @@
 ---
-id: 22
 title: Introduccion a base de datos
 
 layout: post

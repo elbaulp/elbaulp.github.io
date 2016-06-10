@@ -1,5 +1,4 @@
 ---
-id: 1349
 title: Chat y Foros de Próxima Generación, de pioneros del Código Abierto
 
 layout: post

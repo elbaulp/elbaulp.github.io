@@ -1,5 +1,4 @@
 ---
-id: 192
 title: '[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)'
 
 layout: post

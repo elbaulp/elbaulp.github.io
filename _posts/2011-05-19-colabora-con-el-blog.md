@@ -1,5 +1,4 @@
 ---
-id: 196
 title: Colabora con el blog
 
 layout: post

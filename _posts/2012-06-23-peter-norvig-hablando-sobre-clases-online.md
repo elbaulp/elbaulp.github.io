@@ -1,5 +1,4 @@
 ---
-id: 807
 title: Peter Norvig hablando sobre clases online
 
 layout: post

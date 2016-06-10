@@ -1,5 +1,4 @@
 ---
-id: 67
 title: 'Nuevo Proyecto: Aventura gráfica con SDL y C++'
 
 layout: post

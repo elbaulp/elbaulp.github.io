@@ -1,5 +1,4 @@
 ---
-id: 1051
 title: Optimizar sumas en paralelo
 
 layout: post

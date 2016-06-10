@@ -1,5 +1,4 @@
 ---
-id: 939
 title: Ocultar archivos dentro de una imagen
 
 layout: post

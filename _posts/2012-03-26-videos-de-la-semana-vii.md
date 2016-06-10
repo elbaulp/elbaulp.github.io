@@ -1,5 +1,4 @@
 ---
-id: 362
 title: Vídeos de la semana (VII)
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 318
 title: Cómo saber a qué partición pertenece un archivo en GNU/Linux
 
 layout: post

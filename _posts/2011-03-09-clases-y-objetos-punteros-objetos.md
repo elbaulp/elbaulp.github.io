@@ -1,5 +1,4 @@
 ---
-id: 150
 title: 'Clases y Objetos &#8211; Punteros a objetos'
 
 layout: post

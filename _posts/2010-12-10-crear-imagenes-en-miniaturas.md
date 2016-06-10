@@ -1,5 +1,4 @@
 ---
-id: 58
 title: Crear miniaturas de imágenes
 
 layout: post

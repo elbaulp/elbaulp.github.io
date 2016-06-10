@@ -1,5 +1,4 @@
 ---
-id: 338
 title: Curso de certificación Junior Level Linux Professional
 
 layout: post

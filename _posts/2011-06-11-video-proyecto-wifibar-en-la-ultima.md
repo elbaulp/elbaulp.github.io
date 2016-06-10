@@ -1,5 +1,4 @@
 ---
-id: 221
 title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
 
 layout: post

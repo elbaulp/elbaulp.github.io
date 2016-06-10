@@ -1,5 +1,4 @@
 ---
-id: 924
 title: 'Nueva Guía: Your Guide to Google Analytics'
 
 layout: post

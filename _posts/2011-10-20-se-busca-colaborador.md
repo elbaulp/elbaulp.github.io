@@ -1,5 +1,4 @@
 ---
-id: 258
 title: Se busca colaborador
 
 layout: post

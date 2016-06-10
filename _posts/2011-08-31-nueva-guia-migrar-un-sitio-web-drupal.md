@@ -1,5 +1,4 @@
 ---
-id: 249
 title: 'Nueva guía: Migrar un sitio web a Drupal'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 130
 title: Codificación
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1107
 title: 'Nueva guía: Discovering Vulnerable Web Applications'
 
 layout: post

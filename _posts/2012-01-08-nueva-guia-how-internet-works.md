@@ -1,5 +1,4 @@
 ---
-id: 327
 title: 'Nueva guía: How the internet works'
 
 layout: post

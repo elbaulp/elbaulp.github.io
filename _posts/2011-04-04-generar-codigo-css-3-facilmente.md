@@ -1,5 +1,4 @@
 ---
-id: 161
 title: Generar código CSS 3 fácilmente
 
 layout: post

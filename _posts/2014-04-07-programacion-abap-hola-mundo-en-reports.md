@@ -1,5 +1,4 @@
 ---
-id: 2329
 title: 'Programación ABAP: Hola Mundo en Reports'
 
 layout: post

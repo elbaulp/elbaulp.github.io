@@ -1,5 +1,4 @@
 ---
-id: 156
 title: Vídeo tutorial programación Android
 
 layout: post

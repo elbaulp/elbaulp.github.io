@@ -1,5 +1,4 @@
 ---
-id: 52
 title: World of Warcraft sobre Android
 
 layout: post

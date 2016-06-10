@@ -1,5 +1,4 @@
 ---
-id: 158
 title: 'Clases y Objetos &#8211; Arrays'
 
 layout: post

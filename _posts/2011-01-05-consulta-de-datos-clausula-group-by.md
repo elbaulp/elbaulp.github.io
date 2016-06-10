@@ -1,5 +1,4 @@
 ---
-id: 82
 title: 'Consulta de Datos &#8211; Cláusula GROUP BY'
 
 layout: post

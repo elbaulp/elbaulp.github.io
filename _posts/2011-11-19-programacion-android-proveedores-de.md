@@ -1,5 +1,4 @@
 ---
-id: 290
 title: 'Programación Android: Proveedores de Contenido &#8211; Introducción'
 
 layout: post

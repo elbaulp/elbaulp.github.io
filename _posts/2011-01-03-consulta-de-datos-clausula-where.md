@@ -1,5 +1,4 @@
 ---
-id: 79
 title: 'Consulta de Datos &#8211; Cláusula WHERE'
 
 layout: post

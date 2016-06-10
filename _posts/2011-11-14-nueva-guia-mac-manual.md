@@ -1,5 +1,4 @@
 ---
-id: 279
 title: 'Nueva guía: The Mac Manual'
 
 layout: post

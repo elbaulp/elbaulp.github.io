@@ -1,5 +1,4 @@
 ---
-id: 863
 title: Java Open Source se mueve a Linux, AIX en PowerPC
 
 layout: post

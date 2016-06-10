@@ -1,5 +1,4 @@
 ---
-id: 2447
 title: Cómo crear un Front Controller en PHP
 
 layout: post

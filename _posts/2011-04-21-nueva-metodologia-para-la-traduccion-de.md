@@ -1,5 +1,4 @@
 ---
-id: 179
 title: Nueva metodología para la traducción de la Guía Android
 
 layout: post

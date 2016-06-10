@@ -1,5 +1,4 @@
 ---
-id: 200
 title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
 
 layout: post

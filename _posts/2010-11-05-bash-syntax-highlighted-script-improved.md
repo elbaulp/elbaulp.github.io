@@ -1,5 +1,4 @@
 ---
-id: 24
 title: 'Bash syntax highlighted script [Improved]'
 
 layout: post

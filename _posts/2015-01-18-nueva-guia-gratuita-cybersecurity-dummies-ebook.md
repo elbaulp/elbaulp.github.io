@@ -1,5 +1,4 @@
 ---
-id: 2532
 title: 'Nueva guía gratuita: Cybersecurity for Dummies eBook'
 
 layout: post

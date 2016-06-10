@@ -1,5 +1,4 @@
 ---
-id: 1337
 title: Viñetas Geek de Domingo
 
 layout: post

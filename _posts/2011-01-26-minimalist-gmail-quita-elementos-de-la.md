@@ -1,5 +1,4 @@
 ---
-id: 105
 title: 'Minimalist Gmail: quita elementos de la interfaz de Gmail en Chrome'
 
 layout: post

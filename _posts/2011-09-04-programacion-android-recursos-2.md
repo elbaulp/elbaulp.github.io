@@ -1,5 +1,4 @@
 ---
-id: 250
 title: 'Programación Android: Recursos compilados y no compilados'
 
 layout: post

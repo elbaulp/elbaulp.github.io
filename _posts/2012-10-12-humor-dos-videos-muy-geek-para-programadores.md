@@ -1,5 +1,4 @@
 ---
-id: 983
 title: '[HUMOR] Dos Vídeos muy geek para Programadores'
 
 layout: post

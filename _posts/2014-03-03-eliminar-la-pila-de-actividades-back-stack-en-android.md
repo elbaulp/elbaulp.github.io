@@ -1,5 +1,4 @@
 ---
-id: 2276
 title: Eliminar la pila de actividades (Back Stack) en Android
 
 layout: post

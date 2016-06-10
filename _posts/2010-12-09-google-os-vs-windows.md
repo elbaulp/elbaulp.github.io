@@ -1,5 +1,4 @@
 ---
-id: 57
 title: Google Os Vs Windows
 
 layout: post

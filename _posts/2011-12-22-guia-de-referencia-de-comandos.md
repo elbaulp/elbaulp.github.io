@@ -1,5 +1,4 @@
 ---
-id: 311
 title: 'Guía de Referencia de comandos Unix/Linux [IMG]'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 227
 title: 'Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos'
 
 layout: post

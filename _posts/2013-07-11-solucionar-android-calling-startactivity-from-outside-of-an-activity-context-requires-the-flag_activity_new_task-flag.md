@@ -1,5 +1,4 @@
 ---
-id: 1730
 title: 'Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 238
 title: 'Programación Android: Interfaz gráfica &#8211; Menús'
 
 layout: post

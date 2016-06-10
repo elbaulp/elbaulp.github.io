@@ -1,5 +1,4 @@
 ---
-id: 2022
 title: Viñetas Geek de Domingo (XIII)
 
 layout: post

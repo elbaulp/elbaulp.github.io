@@ -1,5 +1,4 @@
 ---
-id: 30
 title: Rockmelt, una navegador social basado en Chromium
 
 layout: post

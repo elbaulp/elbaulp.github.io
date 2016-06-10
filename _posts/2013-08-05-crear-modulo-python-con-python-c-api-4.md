@@ -1,5 +1,4 @@
 ---
-id: 1789
 title: 'Crear un módulo para python con la Python C API (IV) &#8211; HerramientasRed'
 
 layout: post

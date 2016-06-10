@@ -1,5 +1,4 @@
 ---
-id: 68
 title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 331
 title: MegaUpload Dangerous Secrets affect YOU, Mike Mozart JeepersMedia ACTA _ PIPA _ SOPA
 
 layout: post

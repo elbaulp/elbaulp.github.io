@@ -1,5 +1,4 @@
 ---
-id: 294
 title: Liberada la versión 1.0 de htop
 
 layout: post

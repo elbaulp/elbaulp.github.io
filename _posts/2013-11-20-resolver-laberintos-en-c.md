@@ -1,5 +1,4 @@
 ---
-id: 1955
 title: Resolver laberintos en C++
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 71
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas'
 
 layout: post

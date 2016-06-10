@@ -1,5 +1,4 @@
 ---
-id: 165
 title: Extensión de chrome para Vistas Dinámicas
 
 layout: post

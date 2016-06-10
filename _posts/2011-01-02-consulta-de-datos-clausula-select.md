@@ -1,5 +1,4 @@
 ---
-id: 77
 title: 'Consulta de Datos &#8211; Cláusula Select'
 
 layout: post

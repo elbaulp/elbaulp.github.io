@@ -1,5 +1,4 @@
 ---
-id: 1350
 title: 5 Razones para estar entusiasmados con Java en el 2013
 
 layout: post

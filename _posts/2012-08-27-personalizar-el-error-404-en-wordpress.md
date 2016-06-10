@@ -1,5 +1,4 @@
 ---
-id: 896
 title: Personalizar el Error 404 en wordpress
 
 layout: post

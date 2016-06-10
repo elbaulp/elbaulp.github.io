@@ -1,5 +1,4 @@
 ---
-id: 49
 title: Facebook infectado por un nuevo por un gusano
 
 layout: post

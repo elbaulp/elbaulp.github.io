@@ -1,5 +1,4 @@
 ---
-id: 281
 title: Ilya Zhitomirskiy, cofundador de Diaspora, muere a los 21 años
 
 layout: post

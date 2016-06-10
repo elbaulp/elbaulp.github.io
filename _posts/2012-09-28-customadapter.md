@@ -1,5 +1,4 @@
 ---
-id: 962
 title: Cómo crear un adapter personalizado en Android
 
 layout: post

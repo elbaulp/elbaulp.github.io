@@ -1,5 +1,4 @@
 ---
-id: 37
 title: Ubuntu running on the Samsung Galaxy Tab
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 293
 title: Por qué GNU/Linux no es solo para Geeks
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 64
 title: Cómo empezar a programar
 
 layout: post

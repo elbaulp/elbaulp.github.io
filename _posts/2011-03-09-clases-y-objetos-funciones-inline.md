@@ -1,5 +1,4 @@
 ---
-id: 149
 title: 'Clases y Objetos &#8211; Funciones inline'
 
 layout: post

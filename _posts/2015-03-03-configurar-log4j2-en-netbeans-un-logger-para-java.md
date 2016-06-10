@@ -1,5 +1,4 @@
 ---
-id: 2552
 title: Configurar Log4j2 en Netbeans, un logger para Java
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 78
 title: 'Consulta de Datos &#8211; Cláusula FROM'
 
 layout: post

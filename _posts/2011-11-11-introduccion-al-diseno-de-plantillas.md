@@ -1,5 +1,4 @@
 ---
-id: 274
 title: Introducción al diseño de plantillas personalizadas para móviles en Blogger
 
 layout: post

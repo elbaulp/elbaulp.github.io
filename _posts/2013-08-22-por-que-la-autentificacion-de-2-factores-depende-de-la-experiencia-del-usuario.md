@@ -1,5 +1,4 @@
 ---
-id: 1856
 title: Por qué la autentificación de 2 factores depende de la experiencia del usuario
 
 layout: post

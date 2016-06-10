@@ -1,5 +1,4 @@
 ---
-id: 148
 title: 'Clases y Objetos &#8211; Control del acceso a los miembros de la clase'
 
 layout: post

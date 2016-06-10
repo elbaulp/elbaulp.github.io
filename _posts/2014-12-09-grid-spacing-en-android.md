@@ -1,5 +1,4 @@
 ---
-id: 2473
 title: Grid Spacing en Android
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 303
 title: 'Programación Android: Usando cursores'
 
 layout: post

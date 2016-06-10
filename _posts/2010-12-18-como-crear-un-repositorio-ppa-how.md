@@ -1,5 +1,4 @@
 ---
-id: 63
 title: Como crear un PPA (Personal Package Archive)
 
 layout: post

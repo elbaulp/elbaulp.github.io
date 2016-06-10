@@ -1,5 +1,4 @@
 ---
-id: 890
 title: SelfControl, aparta las distracciones de tu pc cuando estás trabajando
 
 layout: post

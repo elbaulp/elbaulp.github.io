@@ -1,5 +1,4 @@
 ---
-id: 322
 title: Evaluando el estado de la licencia GPL
 
 layout: post

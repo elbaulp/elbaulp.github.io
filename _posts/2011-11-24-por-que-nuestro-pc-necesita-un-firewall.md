@@ -1,5 +1,4 @@
 ---
-id: 296
 title: Por qué nuestro PC necesita un firewall activado
 
 layout: post

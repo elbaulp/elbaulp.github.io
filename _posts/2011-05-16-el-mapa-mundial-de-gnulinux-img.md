@@ -1,5 +1,4 @@
 ---
-id: 191
 title: 'El mapa mundial de GNU/Linux [IMG]'
 
 layout: post

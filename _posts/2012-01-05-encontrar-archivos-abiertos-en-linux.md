@@ -1,5 +1,4 @@
 ---
-id: 324
 title: Encontrar archivos abiertos en Linux
 
 layout: post

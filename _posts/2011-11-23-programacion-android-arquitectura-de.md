@@ -1,5 +1,4 @@
 ---
-id: 295
 title: 'Programación Android: Arquitectura de los Proveedores de contenidos'
 
 layout: post

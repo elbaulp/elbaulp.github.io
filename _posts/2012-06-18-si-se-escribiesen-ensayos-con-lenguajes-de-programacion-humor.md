@@ -1,5 +1,4 @@
 ---
-id: 793
 title: 'Si se escribiesen ensayos con lenguajes de programación [HUMOR]'
 
 layout: post

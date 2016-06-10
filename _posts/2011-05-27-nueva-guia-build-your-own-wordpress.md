@@ -1,5 +1,4 @@
 ---
-id: 202
 title: 'Nueva Guía: Build Your Own WordPress Site Guide'
 
 layout: post

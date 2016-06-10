@@ -1,5 +1,4 @@
 ---
-id: 2379
 title: Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy
 
 layout: post

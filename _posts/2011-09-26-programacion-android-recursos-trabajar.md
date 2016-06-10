@@ -1,5 +1,4 @@
 ---
-id: 256
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios'
 
 layout: post

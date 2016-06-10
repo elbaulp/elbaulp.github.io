@@ -1,5 +1,4 @@
 ---
-id: 353
 title: Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar aplicaciones
 
 layout: post

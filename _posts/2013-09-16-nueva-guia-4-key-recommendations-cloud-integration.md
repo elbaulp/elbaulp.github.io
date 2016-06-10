@@ -1,5 +1,4 @@
 ---
-id: 1916
 title: 'Nueva guía: 4 Key Recommendations for Cloud Integration'
 
 layout: post

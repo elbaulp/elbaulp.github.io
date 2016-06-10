@@ -1,5 +1,4 @@
 ---
-id: 226
 title: 'Fundamentos programación Android: Intents y AndroidManifest'
 
 layout: post

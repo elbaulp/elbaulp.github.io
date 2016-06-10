@@ -1,5 +1,4 @@
 ---
-id: 70
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias'
 
 layout: post

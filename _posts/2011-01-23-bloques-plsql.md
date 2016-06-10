@@ -1,5 +1,4 @@
 ---
-id: 101
 title: Bloques PL/SQL
 
 layout: post

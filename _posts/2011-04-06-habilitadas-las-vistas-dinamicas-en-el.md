@@ -1,5 +1,4 @@
 ---
-id: 163
 title: Habilitadas las vistas dinámicas en el blog
 
 layout: post

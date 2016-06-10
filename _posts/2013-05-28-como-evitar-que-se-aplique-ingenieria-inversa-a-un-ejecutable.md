@@ -1,5 +1,4 @@
 ---
-id: 1576
 title: Cómo evitar que se aplique ingeniería inversa a un ejecutable
 
 layout: post

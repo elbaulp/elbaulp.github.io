@@ -1,5 +1,4 @@
 ---
-id: 187
 title: Android SDK Dev Guide en PDF
 
 layout: post

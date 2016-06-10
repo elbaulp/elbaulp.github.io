@@ -1,5 +1,4 @@
 ---
-id: 1071
 title: Configurar xmonad con trayer y fondo de pantalla aleatorio
 
 layout: post

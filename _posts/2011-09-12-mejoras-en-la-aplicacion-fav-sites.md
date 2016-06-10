@@ -1,5 +1,4 @@
 ---
-id: 253
 title: Mejoras en la aplicación Fav Sites
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 357
 title: Linux 3.3 se come a Android
 
 layout: post

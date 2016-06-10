@@ -1,5 +1,4 @@
 ---
-id: 2215
 title: 'Nueva Guía: How the Cloud will Change Application Release Applications'
 
 layout: post

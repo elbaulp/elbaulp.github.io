@@ -1,5 +1,4 @@
 ---
-id: 1522
 title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
 
 layout: post

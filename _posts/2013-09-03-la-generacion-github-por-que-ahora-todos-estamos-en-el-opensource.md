@@ -1,5 +1,4 @@
 ---
-id: 1854
 title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1019
 title: Logrando el anonimato con Tor (Parte 1)
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1692
 title: Ejecutar un script al modificar un fichero con inotify
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 850
 title: Algoritmos de ordenación.
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1385
 title: Algunos comandos útiles con iproute2
 
 layout: post

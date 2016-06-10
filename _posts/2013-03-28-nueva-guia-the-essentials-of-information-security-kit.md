@@ -1,5 +1,4 @@
 ---
-id: 1496
 title: 'Nueva Guía: The Essentials of Information Security Kit'
 
 layout: post

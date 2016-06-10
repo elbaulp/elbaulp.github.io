@@ -1,5 +1,4 @@
 ---
-id: 2370
 title: Instalar Atom, el editor de GitHub en Linux
 
 layout: post

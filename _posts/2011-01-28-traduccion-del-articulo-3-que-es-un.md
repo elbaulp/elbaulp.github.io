@@ -1,5 +1,4 @@
 ---
-id: 114
 title: Traducción del Artículo 3 (¿Qué es un Píxel?) disponible
 
 layout: post

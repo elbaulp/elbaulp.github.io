@@ -1,5 +1,4 @@
 ---
-id: 2534
 title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
 
 layout: post

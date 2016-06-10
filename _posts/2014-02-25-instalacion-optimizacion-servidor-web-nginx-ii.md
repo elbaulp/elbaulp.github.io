@@ -1,5 +1,4 @@
 ---
-id: 2255
 title: Instalación y optimización de un servidor web con Nginx (II)
 
 layout: post

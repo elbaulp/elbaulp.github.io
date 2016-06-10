@@ -1,5 +1,4 @@
 ---
-id: 219
 title: 'StumbleUpon: Una herramienta de navegación personalizada'
 
 layout: post

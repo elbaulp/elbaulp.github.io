@@ -1,5 +1,4 @@
 ---
-id: 172
 title: 'Desarrollo android &#8211; ¿Qué es Android? &#8211; Traducción de developer.android.com'
 
 layout: post

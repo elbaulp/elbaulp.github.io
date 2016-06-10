@@ -1,5 +1,4 @@
 ---
-id: 355
 title: Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework
 
 layout: post

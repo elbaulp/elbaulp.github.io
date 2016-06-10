@@ -1,5 +1,4 @@
 ---
-id: 1309
 title: Cómo instalar y configurar Nginx con php5-fpm
 
 layout: post

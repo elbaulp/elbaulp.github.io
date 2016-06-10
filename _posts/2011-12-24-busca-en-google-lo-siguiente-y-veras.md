@@ -1,5 +1,4 @@
 ---
-id: 316
 title: Busca en google lo siguiente y verás que pasa
 
 layout: post

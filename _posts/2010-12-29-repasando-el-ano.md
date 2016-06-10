@@ -1,5 +1,4 @@
 ---
-id: 74
 title: Repasando el Año.
 
 layout: post

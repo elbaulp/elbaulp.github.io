@@ -1,5 +1,4 @@
 ---
-id: 87
 title: 'Diaspora*, La red social libre'
 
 layout: post

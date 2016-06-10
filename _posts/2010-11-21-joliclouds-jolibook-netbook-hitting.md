@@ -1,5 +1,4 @@
 ---
-id: 33
 title: 'Jolicloud&#8217;s Jolibook Netbook Hitting Stores'
 
 layout: post

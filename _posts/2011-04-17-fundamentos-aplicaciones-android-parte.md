@@ -1,5 +1,4 @@
 ---
-id: 174
 title: 'Fundamentos aplicaciones Android &#8211; (Parte I)'
 
 layout: post

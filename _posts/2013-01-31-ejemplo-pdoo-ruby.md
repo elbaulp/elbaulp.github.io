@@ -1,5 +1,4 @@
 ---
-id: 1194
 title: Introducción rápida a Ruby
 
 layout: post

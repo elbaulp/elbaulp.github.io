@@ -1,5 +1,4 @@
 ---
-id: 346
 title: Actualizar BIOS de ASUS desde Linux
 
 layout: post

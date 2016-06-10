@@ -1,5 +1,4 @@
 ---
-id: 2421
 title: Eliminar recursos sin usar en Android
 
 layout: post

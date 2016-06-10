@@ -1,5 +1,4 @@
 ---
-id: 180
 title: Llamada a los traductores
 
 layout: post

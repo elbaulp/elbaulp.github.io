@@ -1,5 +1,4 @@
 ---
-id: 259
 title: '[Offtopic] Impresionante puesta de sol en Islandia'
 
 layout: post

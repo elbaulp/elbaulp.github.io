@@ -1,5 +1,4 @@
 ---
-id: 325
 title: 'Programación Android: Implementando un Content Provider (Parte 1)'
 
 layout: post

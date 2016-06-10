@@ -1,5 +1,4 @@
 ---
-id: 15
 title: Copiar archivos recursivamente
 
 layout: post

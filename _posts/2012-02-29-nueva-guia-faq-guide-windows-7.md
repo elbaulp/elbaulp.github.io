@@ -1,5 +1,4 @@
 ---
-id: 348
 title: 'Nueva guía: FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs'
 
 layout: post

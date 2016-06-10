@@ -1,5 +1,4 @@
 ---
-id: 83
 title: 'Programación para Juegos &#8211; Lección 2 &#8211; Imágenes Optimizadas'
 
 layout: post

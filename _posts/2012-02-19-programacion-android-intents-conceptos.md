@@ -1,5 +1,4 @@
 ---
-id: 341
 title: 'Programación Android: Intents &#8211; Conceptos básicos'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1548
 title: 'BitTorrent Sync: Tus archivos sincronizados sin intermediarios'
 
 layout: post

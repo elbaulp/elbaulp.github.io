@@ -1,5 +1,4 @@
 ---
-id: 847
 title: Detectar archivos PNG con C++
 
 layout: post

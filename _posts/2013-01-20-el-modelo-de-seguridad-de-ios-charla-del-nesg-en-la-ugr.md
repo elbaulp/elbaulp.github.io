@@ -1,5 +1,4 @@
 ---
-id: 1157
 title: El modelo de seguridad de iOS (Charla del NESG en la UGR)
 
 layout: post

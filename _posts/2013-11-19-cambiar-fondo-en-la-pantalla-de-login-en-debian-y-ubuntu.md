@@ -1,5 +1,4 @@
 ---
-id: 1947
 title: Cambiar fondo en la pantalla de login en Debian y Ubuntu
 
 layout: post

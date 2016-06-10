@@ -1,5 +1,4 @@
 ---
-id: 185
 title: Cómo apagar automáticamente el PC cuando las descargas finalicen
 
 layout: post

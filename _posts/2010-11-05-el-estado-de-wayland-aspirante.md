@@ -1,5 +1,4 @@
 ---
-id: 26
 title: El estado de Wayland, aspirante a reemplazar X.org
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 255
 title: 'Programación Android: Recursos &#8211; Plurales'
 
 layout: post

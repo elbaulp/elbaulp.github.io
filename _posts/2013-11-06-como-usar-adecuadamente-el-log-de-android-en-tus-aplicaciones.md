@@ -1,5 +1,4 @@
 ---
-id: 1665
 title: Cómo usar adecuadamente el Log de Android en tus aplicaciones
 
 layout: post

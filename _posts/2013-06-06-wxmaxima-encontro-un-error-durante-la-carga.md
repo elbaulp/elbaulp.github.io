@@ -1,5 +1,4 @@
 ---
-id: 1619
 title: 'Cómo resolver el error &#8216;wxMaxima encontró un error durante la carga&#8217;'
 
 layout: post

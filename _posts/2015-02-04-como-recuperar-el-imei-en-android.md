@@ -1,5 +1,4 @@
 ---
-id: 2540
 title: Cómo recuperar el IMEI en Android
 
 layout: post

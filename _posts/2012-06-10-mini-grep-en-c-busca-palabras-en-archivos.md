@@ -1,5 +1,4 @@
 ---
-id: 774
 title: Mini grep en C++, busca palabras en archivos
 
 layout: post

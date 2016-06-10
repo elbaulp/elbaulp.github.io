@@ -1,5 +1,4 @@
 ---
-id: 344
 title: 'Programación Android: Intents &#8211; Categorías'
 
 layout: post

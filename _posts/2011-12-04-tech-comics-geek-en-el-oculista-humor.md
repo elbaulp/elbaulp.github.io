@@ -1,5 +1,4 @@
 ---
-id: 307
 title: 'Tech Comics: &#8220;Geek en el oculista&#8221; [HUMOR]'
 
 layout: post

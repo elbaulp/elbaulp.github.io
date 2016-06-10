@@ -1,5 +1,4 @@
 ---
-id: 1922
 title: Crear formularios en Django a partir de un Modelo con ModelForm
 
 layout: post

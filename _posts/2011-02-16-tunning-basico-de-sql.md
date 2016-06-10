@@ -1,5 +1,4 @@
 ---
-id: 139
 title: Tunning básico de SQL
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 25
 title: C++ syntax highlighted script
 
 layout: post

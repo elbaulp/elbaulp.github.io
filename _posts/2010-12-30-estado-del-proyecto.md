@@ -1,5 +1,4 @@
 ---
-id: 75
 title: Estado del Proyecto
 
 layout: post

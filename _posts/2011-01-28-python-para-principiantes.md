@@ -1,5 +1,4 @@
 ---
-id: 112
 title: Python para principiantes
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 286
 title: 'Nueva guía: Mac OS X Lion: The Ultimate Guide'
 
 layout: post

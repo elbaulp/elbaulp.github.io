@@ -1,5 +1,4 @@
 ---
-id: 51
 title: Usos del botón central del ratón
 
 layout: post

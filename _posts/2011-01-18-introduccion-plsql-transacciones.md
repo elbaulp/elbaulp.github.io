@@ -1,5 +1,4 @@
 ---
-id: 96
 title: 'Introducción a PL/SQL &#8211; Transacciones'
 
 layout: post

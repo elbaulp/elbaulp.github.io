@@ -1,5 +1,4 @@
 ---
-id: 229
 title: Añade Botón compartir en Diaspora en tu blog (BLOGGER)
 
 layout: post

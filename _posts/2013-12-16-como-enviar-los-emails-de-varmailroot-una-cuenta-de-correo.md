@@ -1,5 +1,4 @@
 ---
-id: 2041
 title: Cómo enviar los emails de /var/mail/root a una cuenta de correo
 
 layout: post

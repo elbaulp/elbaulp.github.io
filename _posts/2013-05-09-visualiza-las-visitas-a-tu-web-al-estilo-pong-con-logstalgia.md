@@ -1,5 +1,4 @@
 ---
-id: 1549
 title: Visualiza las visitas a tu web al estilo Pong con Logstalgia
 
 layout: post

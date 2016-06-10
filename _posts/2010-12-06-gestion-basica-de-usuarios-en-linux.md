@@ -1,5 +1,4 @@
 ---
-id: 53
 title: Gestión básica de usuarios en linux
 
 layout: post

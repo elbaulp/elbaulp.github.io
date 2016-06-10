@@ -1,5 +1,4 @@
 ---
-id: 16
 title: Script resaltado sintaxis c++
 
 layout: post

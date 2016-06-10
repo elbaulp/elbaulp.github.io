@@ -1,5 +1,4 @@
 ---
-id: 1705
 title: 'Nueva guía: 8 Steps to Building Mobile Apps Fast in the Cloud'
 
 layout: post

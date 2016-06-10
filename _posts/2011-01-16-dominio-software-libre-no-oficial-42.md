@@ -1,5 +1,4 @@
 ---
-id: 92
 title: 'Dominio software libre -no oficial- “.42″ disponible'
 
 layout: post

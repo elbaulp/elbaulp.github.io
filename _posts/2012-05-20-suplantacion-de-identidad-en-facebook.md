@@ -1,5 +1,4 @@
 ---
-id: 744
 title: Suplantación de identidad en Facebook
 
 layout: post

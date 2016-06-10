@@ -1,5 +1,4 @@
 ---
-id: 248
 title: Programando Videojuegos en Python
 
 layout: post

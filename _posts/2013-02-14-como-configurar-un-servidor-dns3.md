@@ -1,5 +1,4 @@
 ---
-id: 1348
 title: 'Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)'
 
 layout: post

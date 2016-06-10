@@ -1,5 +1,4 @@
 ---
-id: 111
 title: 'Ifttt: Disparar tareas mediante eventos producidos en redes sociales'
 
 layout: post

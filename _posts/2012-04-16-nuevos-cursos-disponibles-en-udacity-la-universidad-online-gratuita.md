@@ -1,5 +1,4 @@
 ---
-id: 712
 title: Nuevos Cursos disponibles en Udacity, la universidad online gratuita
 
 layout: post

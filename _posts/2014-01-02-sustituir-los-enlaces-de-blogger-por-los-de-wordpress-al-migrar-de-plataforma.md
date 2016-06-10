@@ -1,5 +1,4 @@
 ---
-id: 2090
 title: Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma
 
 layout: post

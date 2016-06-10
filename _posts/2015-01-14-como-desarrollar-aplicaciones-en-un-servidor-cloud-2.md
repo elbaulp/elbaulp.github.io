@@ -1,5 +1,4 @@
 ---
-id: 2525
 title: Cómo desarrollar aplicaciones en un servidor Cloud
 
 layout: post

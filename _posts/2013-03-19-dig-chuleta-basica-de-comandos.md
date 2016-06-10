@@ -1,5 +1,4 @@
 ---
-id: 1479
 title: 'Dig &#8211; Chuleta básica de comandos'
 
 layout: post

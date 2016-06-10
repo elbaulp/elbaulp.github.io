@@ -1,5 +1,4 @@
 ---
-id: 2314
 title: 'Nueva guía: History of cryptography'
 
 layout: post

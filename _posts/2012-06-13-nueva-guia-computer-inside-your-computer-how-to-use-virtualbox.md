@@ -1,5 +1,4 @@
 ---
-id: 781
 title: 'Nueva Guía: Computer Inside Your Computer: How To Use VirtualBox'
 
 layout: post

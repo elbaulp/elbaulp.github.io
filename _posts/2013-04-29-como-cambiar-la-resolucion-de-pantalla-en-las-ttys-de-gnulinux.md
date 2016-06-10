@@ -1,5 +1,4 @@
 ---
-id: 1540
 title: Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux
 
 layout: post

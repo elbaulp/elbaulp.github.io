@@ -1,5 +1,4 @@
 ---
-id: 2096
 title: 'Nueva guía: 6 Steps to Securing Your Domains'
 
 layout: post

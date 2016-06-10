@@ -1,5 +1,4 @@
 ---
-id: 270
 title: 'Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
 
 layout: post

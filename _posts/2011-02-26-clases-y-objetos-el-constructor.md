@@ -1,5 +1,4 @@
 ---
-id: 144
 title: 'Clases y Objetos &#8211; El Constructor'
 
 layout: post

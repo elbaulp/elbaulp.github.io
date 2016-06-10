@@ -1,5 +1,4 @@
 ---
-id: 876
 title: 'Nueva guía: Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success'
 
 layout: post

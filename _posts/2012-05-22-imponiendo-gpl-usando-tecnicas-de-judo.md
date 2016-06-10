@@ -1,5 +1,4 @@
 ---
-id: 737
 title: Imponiendo GPL usando técnicas de Judo
 
 layout: post

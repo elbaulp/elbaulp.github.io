@@ -1,5 +1,4 @@
 ---
-id: 2393
 title: ¿Eres chica y te gusta la informática?, participa en el campus UGR/Google para chicas
 
 layout: post

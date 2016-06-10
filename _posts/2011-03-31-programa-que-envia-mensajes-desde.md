@@ -1,5 +1,4 @@
 ---
-id: 160
 title: Programa que envía mensajes desde Android a PC
 
 layout: post

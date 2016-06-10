@@ -1,5 +1,4 @@
 ---
-id: 260
 title: Prueba la aplicación FavSites en tu Android
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 153
 title: Tutorial de Python v2.7.0
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 261
 title: Renombrar archivos masivamente en GNU/Linux
 
 layout: post

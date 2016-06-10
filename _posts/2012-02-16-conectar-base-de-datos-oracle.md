@@ -1,5 +1,4 @@
 ---
-id: 340
 title: Conectar base de datos ORACLE a aplicación Java remotamente
 
 layout: post

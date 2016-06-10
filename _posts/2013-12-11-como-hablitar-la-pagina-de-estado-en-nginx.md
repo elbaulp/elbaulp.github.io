@@ -1,5 +1,4 @@
 ---
-id: 2040
 title: Cómo habilitar la página de estado en Nginx
 
 layout: post

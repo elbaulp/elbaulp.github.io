@@ -1,5 +1,4 @@
 ---
-id: 69
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
 
 layout: post

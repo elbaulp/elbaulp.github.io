@@ -1,5 +1,4 @@
 ---
-id: 835
 title: Cómo convertir un archivo pdf a imágenes
 
 layout: post

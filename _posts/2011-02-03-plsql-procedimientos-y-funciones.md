@@ -1,5 +1,4 @@
 ---
-id: 126
 title: 'PL/SQL &#8211; Procedimientos y Funciones'
 
 layout: post

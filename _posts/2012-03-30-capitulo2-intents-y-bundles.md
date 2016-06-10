@@ -1,5 +1,4 @@
 ---
-id: 231
 title: 'Programación Android: Trabajar con actividades y pasar parámetros entre ellas'
 
 layout: post

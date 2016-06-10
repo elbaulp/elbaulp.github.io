@@ -1,5 +1,4 @@
 ---
-id: 99
 title: NVIDIA prepara Tegra3, 4 núcleos
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1311
 title: Entendiendo los runlevel en Debian
 
 layout: post

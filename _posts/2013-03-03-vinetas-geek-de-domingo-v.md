@@ -1,5 +1,4 @@
 ---
-id: 1408
 title: Viñetas Geek de Domingo (V)
 
 layout: post

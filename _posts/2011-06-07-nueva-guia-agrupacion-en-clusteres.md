@@ -1,5 +1,4 @@
 ---
-id: 218
 title: 'Nueva guía: Agrupación En Clústeres Multisitio de Windows Server (En Español)'
 
 layout: post

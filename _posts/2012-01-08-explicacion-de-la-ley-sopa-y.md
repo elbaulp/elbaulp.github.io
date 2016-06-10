@@ -1,5 +1,4 @@
 ---
-id: 326
 title: Explicación de la ley SOPA y recopilación de enlaces de interés
 
 layout: post

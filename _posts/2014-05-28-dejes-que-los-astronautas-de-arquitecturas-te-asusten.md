@@ -1,5 +1,4 @@
 ---
-id: 2361
 title: No dejes que los Astronautas de Arquitecturas te asusten
 
 layout: post

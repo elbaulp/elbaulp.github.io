@@ -1,5 +1,4 @@
 ---
-id: 1207
 title: El uso de contraseñas en una evolución tecnológica
 
 layout: post

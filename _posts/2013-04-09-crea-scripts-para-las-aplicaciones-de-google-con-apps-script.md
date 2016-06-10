@@ -1,5 +1,4 @@
 ---
-id: 1470
 title: Crea scripts para las aplicaciones de Google con Apps Script
 
 layout: post

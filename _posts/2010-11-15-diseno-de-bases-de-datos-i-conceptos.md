@@ -1,5 +1,4 @@
 ---
-id: 27
 title: 'Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional'
 
 layout: post

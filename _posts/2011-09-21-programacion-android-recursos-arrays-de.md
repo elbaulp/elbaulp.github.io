@@ -1,5 +1,4 @@
 ---
-id: 254
 title: 'Programación Android: Recursos &#8211; Arrays de strings'
 
 layout: post

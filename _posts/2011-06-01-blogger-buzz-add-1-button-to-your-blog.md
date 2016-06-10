@@ -1,5 +1,4 @@
 ---
-id: 210
 title: 'Blogger Buzz: Add the +1 Button to Your Blog'
 
 layout: post

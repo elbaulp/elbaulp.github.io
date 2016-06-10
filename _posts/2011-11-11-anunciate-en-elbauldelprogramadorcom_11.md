@@ -1,5 +1,4 @@
 ---
-id: 275
 title: Anúnciate en elbauldelprogramador.org
 
 layout: post

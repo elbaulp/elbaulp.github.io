@@ -1,5 +1,4 @@
 ---
-id: 1425
 title: Cómo mejorar tu posicionamiento web con HitTail y Long Tail SEO
 
 layout: post

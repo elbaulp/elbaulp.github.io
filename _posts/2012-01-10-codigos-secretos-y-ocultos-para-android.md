@@ -1,5 +1,4 @@
 ---
-id: 329
 title: Códigos secretos y ocultos para Android
 
 layout: post

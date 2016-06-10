@@ -1,5 +1,4 @@
 ---
-id: 972
 title: Cómo invertir una cadena en Unix
 
 layout: post

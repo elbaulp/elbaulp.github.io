@@ -1,5 +1,4 @@
 ---
-id: 954
 title: Moborobo, herramienta de Administración Integrada para Android en el PC
 
 layout: post

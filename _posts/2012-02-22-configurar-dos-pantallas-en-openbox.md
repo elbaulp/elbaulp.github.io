@@ -1,5 +1,4 @@
 ---
-id: 343
 title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
 
 layout: post

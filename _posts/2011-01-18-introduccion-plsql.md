@@ -1,5 +1,4 @@
 ---
-id: 95
 title: Introducción a PL/SQL
 
 layout: post

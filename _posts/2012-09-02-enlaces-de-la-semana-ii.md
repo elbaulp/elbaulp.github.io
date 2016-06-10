@@ -1,5 +1,4 @@
 ---
-id: 935
 title: Enlaces de la semana ( II )
 
 description: '<!--:es-->Recopilación semanal de enlaces sobre noticias de la tecnología, informática y software libre<!--:-->'

@@ -1,5 +1,4 @@
 ---
-id: 1036
 title: 'Desafío de ingeniería inversa en C &#8211; Soluciones'
 
 layout: post

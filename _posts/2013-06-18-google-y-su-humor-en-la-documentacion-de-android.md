@@ -1,5 +1,4 @@
 ---
-id: 1597
 title: Google y su humor en la documentación de Android
 
 layout: post

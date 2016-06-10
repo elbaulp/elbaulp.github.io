@@ -1,5 +1,4 @@
 ---
-id: 314
 title: 20 ejemplos de iptables para SysAdmins novatos
 layout: post
 guid: http://elbauldelprogramador.org/20-ejemplos-de-iptables-para-sysadmins-novatos/

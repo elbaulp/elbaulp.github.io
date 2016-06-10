@@ -1,5 +1,4 @@
 ---
-id: 80
 title: 'Programación para Juegos &#8211; Lección 1 &#8211; Instalando SDL'
 
 layout: post

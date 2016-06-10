@@ -1,5 +1,4 @@
 ---
-id: 76
 title: Logo del blog
 
 layout: post

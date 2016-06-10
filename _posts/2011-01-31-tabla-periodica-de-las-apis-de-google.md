@@ -1,5 +1,4 @@
 ---
-id: 121
 title: Tabla periódica de las APIs de google
 
 layout: post

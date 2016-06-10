@@ -1,5 +1,4 @@
 ---
-id: 29
 title: RockMelt, The social web browser that lives in the clouds
 
 layout: post

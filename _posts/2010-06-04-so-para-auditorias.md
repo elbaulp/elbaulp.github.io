@@ -1,5 +1,4 @@
 ---
-id: 1119
 title: SO para auditorias
 
 layout: post

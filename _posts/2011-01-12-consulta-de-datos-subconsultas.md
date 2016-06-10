@@ -1,5 +1,4 @@
 ---
-id: 86
 title: 'Consulta de Datos &#8211; Subconsultas'
 
 layout: post

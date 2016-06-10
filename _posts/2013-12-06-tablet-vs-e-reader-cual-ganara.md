@@ -1,5 +1,4 @@
 ---
-id: 2020
 title: 'Tablet Vs e-Reader: ¿cuál ganará?'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 273
 title: Terminada la primera parte del manual Android
 
 layout: post

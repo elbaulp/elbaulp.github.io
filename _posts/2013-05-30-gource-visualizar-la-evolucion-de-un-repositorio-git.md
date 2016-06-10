@@ -1,5 +1,4 @@
 ---
-id: 1580
 title: 'Gource: Visualizar la evolución de un repositorio Git'
 
 layout: post

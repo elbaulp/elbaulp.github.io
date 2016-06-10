@@ -1,5 +1,4 @@
 ---
-id: 143
 title: Nueva API para la barra de direcciones de Chrome
 
 layout: post

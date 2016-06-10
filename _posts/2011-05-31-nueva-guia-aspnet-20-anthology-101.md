@@ -1,5 +1,4 @@
 ---
-id: 204
 title: 'Nueva guía: The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1659
 title: 'NDK-gdb &#8211; Depurar aplicaciones en el NKD de Android'
 
 layout: post

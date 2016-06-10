@@ -1,5 +1,4 @@
 ---
-id: 197
 title: Chuletas de Comandos GNU/Linux
 
 layout: post

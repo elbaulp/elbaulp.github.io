@@ -1,5 +1,4 @@
 ---
-id: 313
 title: 'Programación Android: Insertando registros'
 
 layout: post

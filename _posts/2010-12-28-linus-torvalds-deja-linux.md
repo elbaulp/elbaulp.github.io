@@ -1,5 +1,4 @@
 ---
-id: 73
 title: Linus Torvalds deja Linux
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 188
 title: Samsung Droid Charge Smartphone
 
 layout: post

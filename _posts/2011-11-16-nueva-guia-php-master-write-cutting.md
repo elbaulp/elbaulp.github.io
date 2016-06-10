@@ -1,5 +1,4 @@
 ---
-id: 283
 title: 'Nueva guía: PHP Master: Write Cutting-edge Code&#8211;Free 135 Page Preview'
 
 layout: post

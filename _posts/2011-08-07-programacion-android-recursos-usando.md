@@ -1,5 +1,4 @@
 ---
-id: 242
 title: 'Programación Android: Recursos &#8211; Usando recursos'
 
 layout: post

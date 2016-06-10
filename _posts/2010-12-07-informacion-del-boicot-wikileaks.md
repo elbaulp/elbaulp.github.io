@@ -1,5 +1,4 @@
 ---
-id: 55
 title: Recopilación de Información del Boicot a WikiLeaks
 
 layout: post

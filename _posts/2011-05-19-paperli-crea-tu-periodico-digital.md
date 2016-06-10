@@ -1,5 +1,4 @@
 ---
-id: 195
 title: 'Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook'
 
 layout: post

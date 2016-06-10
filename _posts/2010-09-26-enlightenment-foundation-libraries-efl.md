@@ -1,5 +1,4 @@
 ---
-id: 11
 title: Enlightenment Foundation Libraries (EFL)
 
 layout: post

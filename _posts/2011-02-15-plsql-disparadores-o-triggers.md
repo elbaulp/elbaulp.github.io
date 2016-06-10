@@ -1,5 +1,4 @@
 ---
-id: 137
 title: 'PL/SQL &#8211; Disparadores o Triggers'
 
 layout: post

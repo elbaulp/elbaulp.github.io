@@ -1,5 +1,4 @@
 ---
-id: 1545
 title: Cómo descargar archivos de una web por extensión con wget
 
 layout: post

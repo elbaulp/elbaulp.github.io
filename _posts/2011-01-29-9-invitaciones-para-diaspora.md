@@ -1,5 +1,4 @@
 ---
-id: 116
 title: '9 Invitaciones para Diaspora* disponibles.'
 
 layout: post

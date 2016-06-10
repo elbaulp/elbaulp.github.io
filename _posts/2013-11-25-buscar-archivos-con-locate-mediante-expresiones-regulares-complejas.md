@@ -1,5 +1,4 @@
 ---
-id: 2008
 title: Buscar archivos con locate mediante expresiones regulares
 
 layout: post

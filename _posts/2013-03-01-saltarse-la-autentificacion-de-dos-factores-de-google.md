@@ -1,5 +1,4 @@
 ---
-id: 1394
 title: Saltarse la autentificación de dos factores de Google
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 310
 title: Nueva aplicación móvil para el blog
 
 layout: post

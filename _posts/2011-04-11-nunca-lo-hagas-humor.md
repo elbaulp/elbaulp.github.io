@@ -1,5 +1,4 @@
 ---
-id: 168
 title: '¡Nunca lo hagas! [Humor]'
 
 layout: post

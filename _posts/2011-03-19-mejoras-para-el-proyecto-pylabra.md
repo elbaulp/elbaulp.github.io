@@ -1,5 +1,4 @@
 ---
-id: 155
 title: Mejoras para el proyecto PyLabra
 
 layout: post

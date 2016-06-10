@@ -1,5 +1,4 @@
 ---
-id: 186
 title: Humanstxt Creator. Somos personas, no máquinas
 
 layout: post

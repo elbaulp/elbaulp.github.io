@@ -1,5 +1,4 @@
 ---
-id: 772
 title: Google I/O Extended + Hackathon HTML5
 
 layout: post

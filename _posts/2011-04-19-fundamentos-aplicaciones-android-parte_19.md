@@ -1,5 +1,4 @@
 ---
-id: 177
 title: 'Fundamentos aplicaciones Android &#8211; (Parte III) -Activando Componentes'
 
 layout: post

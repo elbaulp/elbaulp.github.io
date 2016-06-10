@@ -1,5 +1,4 @@
 ---
-id: 182
 title: Conectar base de datos sql Server 2008 a aplicación Java remotamente
 
 layout: post

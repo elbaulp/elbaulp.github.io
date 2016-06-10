@@ -1,5 +1,4 @@
 ---
-id: 257
 title: Rootear Samsung Galaxy S GT-I9003
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 85
 title: 'Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.'
 
 layout: post

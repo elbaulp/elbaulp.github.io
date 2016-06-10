@@ -1,5 +1,4 @@
 ---
-id: 2217
 title: Cómo resolver sistemas de ecuaciones lineales con dos incógnitas en Python
 modified: 2015-04-08T00:00:00+00:00
 math: true

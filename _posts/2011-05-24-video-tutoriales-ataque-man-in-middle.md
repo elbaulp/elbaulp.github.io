@@ -1,5 +1,4 @@
 ---
-id: 199
 title: '[Vídeo tutoriales] Ataque Man in the middle'
 
 layout: post

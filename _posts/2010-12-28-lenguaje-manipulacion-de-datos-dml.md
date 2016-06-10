@@ -1,5 +1,4 @@
 ---
-id: 72
 title: Lenguaje Manipulación de Datos (DML)
 
 layout: post

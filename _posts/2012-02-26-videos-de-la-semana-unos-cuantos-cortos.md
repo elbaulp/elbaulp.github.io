@@ -1,5 +1,4 @@
 ---
-id: 347
 title: 'Vídeos de la semana: Unos cuantos cortos y un time-lapse'
 
 layout: post

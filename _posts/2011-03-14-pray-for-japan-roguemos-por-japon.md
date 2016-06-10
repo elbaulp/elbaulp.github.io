@@ -1,5 +1,4 @@
 ---
-id: 152
 title: Pray For Japan | Roguemos por Japón
 
 layout: post

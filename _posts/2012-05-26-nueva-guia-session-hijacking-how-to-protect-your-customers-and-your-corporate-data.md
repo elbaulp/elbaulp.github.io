@@ -1,5 +1,4 @@
 ---
-id: 751
 title: 'Nueva guía: Session Hijacking: How to Protect your Customers and your Corporate Data'
 
 layout: post

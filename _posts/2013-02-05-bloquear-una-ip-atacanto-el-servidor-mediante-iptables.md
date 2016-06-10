@@ -1,5 +1,4 @@
 ---
-id: 1318
 title: Bloquear una IP atacando el servidor mediante iptables
 
 layout: post

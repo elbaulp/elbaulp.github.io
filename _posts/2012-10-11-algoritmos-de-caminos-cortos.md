@@ -1,5 +1,4 @@
 ---
-id: 978
 title: Algoritmos de caminos cortos.
 
 layout: post

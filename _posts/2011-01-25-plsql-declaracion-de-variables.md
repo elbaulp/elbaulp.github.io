@@ -1,5 +1,4 @@
 ---
-id: 103
 title: 'PL/SQL &#8211; Declaración de variables'
 
 layout: post

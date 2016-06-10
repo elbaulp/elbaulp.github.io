@@ -1,5 +1,4 @@
 ---
-id: 2416
 title: Chuleta de Markdown para wordpress
 
 layout: post

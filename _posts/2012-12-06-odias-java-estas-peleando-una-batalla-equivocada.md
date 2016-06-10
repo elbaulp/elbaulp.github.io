@@ -1,5 +1,4 @@
 ---
-id: 1026
 title: ¿Odias Java? Estás peleando una batalla equivocada
 
 layout: post

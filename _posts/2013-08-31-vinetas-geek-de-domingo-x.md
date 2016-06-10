@@ -1,5 +1,4 @@
 ---
-id: 1875
 title: Viñetas Geek de Domingo (X)
 
 layout: post

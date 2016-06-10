@@ -1,5 +1,4 @@
 ---
-id: 251
 title: 'Nuevo Proyecto Android: Fav Sites'
 
 layout: post

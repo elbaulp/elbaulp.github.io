@@ -1,5 +1,4 @@
 ---
-id: 39
 title: Firefox 4.0 For Linux Finally Gets A Unified Menu
 
 layout: post

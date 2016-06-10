@@ -1,5 +1,4 @@
 ---
-id: 339
 title: 'Nueva guía: Ubuntu: An Absolute Beginner’s Guide'
 
 layout: post

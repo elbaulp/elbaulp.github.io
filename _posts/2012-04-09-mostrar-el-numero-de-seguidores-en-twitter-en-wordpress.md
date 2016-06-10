@@ -1,5 +1,4 @@
 ---
-id: 704
 title: Mostrar el número de seguidores en Twitter en WordPress
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 115
 title: Récord overclock 3DMark Vantage
 
 layout: post

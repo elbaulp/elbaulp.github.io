@@ -1,5 +1,4 @@
 ---
-id: 2382
 title: 'Nueva guía: 10 herramientas de seguridad de redes y tests que todo el mundo debería usar'
 
 layout: post

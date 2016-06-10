@@ -1,5 +1,4 @@
 ---
-id: 194
 title: 'Cómo conocer el software &#8220;no libre&#8221; instalado en nuestro equipo'
 
 layout: post

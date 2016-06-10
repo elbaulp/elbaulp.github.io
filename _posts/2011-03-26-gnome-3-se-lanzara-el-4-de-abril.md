@@ -1,5 +1,4 @@
 ---
-id: 157
 title: GNOME 3 se lanzará el 4 de abril
 
 layout: post

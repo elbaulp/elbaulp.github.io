@@ -1,5 +1,4 @@
 ---
-id: 44
 title: 3 Juegos para Linux
 
 layout: post

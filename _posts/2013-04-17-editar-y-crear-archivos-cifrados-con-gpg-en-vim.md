@@ -1,5 +1,4 @@
 ---
-id: 1452
 title: Editar y crear archivos cifrados con GPG en Vim
 
 layout: post

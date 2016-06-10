@@ -1,5 +1,4 @@
 ---
-id: 171
 title: 'Celebrando los 20 años de Linux [Video]'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 1037
 title: BotBrew basil, Compila, instala y ejecuta aplicaciones Linux en Android
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 50
 title: Algunos vídeos de Chromium OS
 
 layout: post

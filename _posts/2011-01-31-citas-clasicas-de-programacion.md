@@ -1,5 +1,4 @@
 ---
-id: 120
 title: Citas clásicas de programación
 
 layout: post

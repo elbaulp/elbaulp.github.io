@@ -1,5 +1,4 @@
 ---
-id: 352
 title: Python4Kids. Aprende a programar en python fácilmente
 
 layout: post

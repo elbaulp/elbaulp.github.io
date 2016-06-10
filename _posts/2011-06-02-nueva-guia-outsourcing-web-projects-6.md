@@ -1,5 +1,4 @@
 ---
-id: 211
 title: 'Nueva guía: Outsourcing Web Projects: 6 Steps to a Smarter Business'
 
 layout: post

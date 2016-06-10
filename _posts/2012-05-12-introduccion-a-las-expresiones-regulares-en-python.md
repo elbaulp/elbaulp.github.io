@@ -1,5 +1,4 @@
 ---
-id: 713
 title: Introducción a las expresiones regulares en python
 
 layout: post

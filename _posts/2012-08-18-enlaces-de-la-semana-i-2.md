@@ -1,5 +1,4 @@
 ---
-id: 888
 title: Enlaces de la semana (I)
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 356
 title: Ocultar/Revelar información dentro de imágenes con C++
 
 layout: post

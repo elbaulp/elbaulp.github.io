@@ -1,5 +1,4 @@
 ---
-id: 246
 title: 'Cosas que me gustan y ódio de tener un smartphone [HUMOR]'
 
 layout: post

@@ -1,5 +1,4 @@
 ---
-id: 887
 title: 10 de las Mejores Herramientas en la Línea de Comandos
 
 layout: post

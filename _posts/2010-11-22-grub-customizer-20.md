@@ -1,5 +1,4 @@
 ---
-id: 41
 title: Grub Customizer 2.0
 
 layout: post

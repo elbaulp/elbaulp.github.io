@@ -1,5 +1,4 @@
 ---
-id: 272
 title: 'Programación Android: Recursos &#8211; Recursos y cambios de configuración'
 
 layout: post
