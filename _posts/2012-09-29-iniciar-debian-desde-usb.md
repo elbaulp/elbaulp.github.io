@@ -1,6 +1,5 @@
 ---
-title: Cómo iniciar debian desde un dispositivo USB
-
+title: Cómo instalar debian desde un USB
 layout: post
 permalink: /iniciar-debian-desde-usb/
 categories:
@@ -12,7 +11,6 @@ tags:
   - install debian desde usb
   - linux instalar debian usb
   - linux para portatil
-format: aside
 main-class: "linux"
 ---
 Recientemente formateé mi pc de sobremesa y el portatil para pasar de <a href="http://crunchbanglinux.org/" target="_blank">crunchbang</a> a debian testing y buscando formas de instalarlas desde un usb encontré la solución que comparto:

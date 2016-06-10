@@ -67,11 +67,9 @@ Se pueden clasificar en tres categorías:
 -   Administrativos: El ataque se realiza por gente de dentro
     (*insiders*), como administradores de sistemas, o alguien que
     amenaza a otra persona para que le de las credenciales de acceso.
-
 -   Infraestructura no segura: El atacante fija como objetivo
     componentes vulnerables del sistema. Una vez dentro, puede modificar
     datos, robarlos etc.
-
 -   *Biometric overtness*: En este tipo de ataque se crean biometrías
     artificiales para intentar engañar al sistema y ontener acceso. La
     generación de la biometría falsa está basada en la de algún usuario
@@ -132,10 +130,8 @@ anteriores:
     expuesta en el proceso de autentificación. Es necesario transformar
     la plantilla original de tal modo que no pueda recuperarse a partir
     de la generada (Similar a las funciones de un solo sentido).
-
 -   Discriminabilidad: Aunque se transformen deben ser capaces de
     reconocer al inidividuo.
-
 -   Capacidad de cancelación: Debido a que existe riesgo de que las
     plantillas se roben, debe ser posible que puedan ser canceladas y
     ser reemplazadas (revocabilidad).
