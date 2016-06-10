@@ -5,23 +5,10 @@ title: Humanstxt Creator. Somos personas, no máquinas
 layout: post
 guid: http://elbauldelprogramador.org/humanstxt-creator-somos-personas-no-maquinas/
 permalink: /humanstxt-creator-somos-personas-no/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - internet
   - noticias
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img src="<br />
@@ -33,9 +20,9 @@ De la web de un amigo blogger ([EtnasSoft][1]), me llega la iniciativa Humanstxt
 **  
 <!--ad-->
 
-  
+
 *&#8221;  
-Una iniciativa cuyo objetivo es dar a conocer al equipo de desarrollo que se encuentra detrás de todo proyecto web.</p> 
+Una iniciativa cuyo objetivo es dar a conocer al equipo de desarrollo que se encuentra detrás de todo proyecto web.</p>
 
 La idea original parte de la organización humanstxt.org y consiste en crear un archivo de texto plano (TXT) no intrusivo que recoja todos los datos relativos a las personas que están detrás de un desarrollo.
 

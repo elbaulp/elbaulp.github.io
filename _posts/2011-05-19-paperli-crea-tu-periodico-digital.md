@@ -5,23 +5,10 @@ title: 'Paper.li: Crea tu periódico digital automáticamente con lo más releva
 layout: post
 guid: http://elbauldelprogramador.org/paper-li-crea-tu-periodico-digital-automaticamente-con-lo-mas-relevante-de-twitter-y-facebook/
 permalink: /paperli-crea-tu-periodico-digital/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - internet
   - noticias
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="iconews">
 </div>
@@ -34,7 +21,7 @@ Los pasos a seguir para crear nuestro periódico son simples.
 
 Primero entramos en [paper.li][1], nos registramos y clicamos en **Create a paper**. Ahora entramos directamente a configurar el contenido del periódico, agregamos todo lo que queramos pulsando en ellos y tendremos lo siguiente:
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
@@ -51,7 +38,7 @@ La primera, **Single Twitter user**: Publicaremos todo lo que el usuario de twit
 
 **Keywords on Twitter**, igual que las dos primeras, pero en este caso de cualquier usuario en twitter.
 
-**Keywords on Facebook**, igua que la de arriba pero en facebook.</p> 
+**Keywords on Facebook**, igua que la de arriba pero en facebook.</p>
 
 Por último os dejo una captura del periódico que cree, y la dirección, [Bashyc Paper][3]
 

@@ -5,18 +5,6 @@ title: 'Fundamentos programación Android: Conceptos básicos y componentes'
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-programacion-android-conceptos-basicos-y-componentes/
 permalink: /fundamentos-programacion-android/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /fundamentos-programacion-android/
-  - /fundamentos-programacion-android/
-  - /fundamentos-programacion-android/
 categories:
   - android
   - opensource
@@ -24,7 +12,6 @@ tags:
   - conceptos básicos y componentes Android
   - curso android pdf
   - Fundamentos programación Android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -37,7 +24,7 @@ Estos ficheros se generan con la herramienta apk (En el directorio tools del SDK
 
 Las aplicaciones en Android tienen su propio entorno seguro de ejecución:
 
-  
+
 <!--ad-->
 
   * Cada aplicación se ejecuta en su propio proceso Linux. El sistema lo crea cuando ejecutamos la aplicación y lo destruye cuando no se use pasado un rato o cuando el Sistema necesite recursos para otra aplicación

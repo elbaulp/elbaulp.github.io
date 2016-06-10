@@ -5,21 +5,11 @@ title: 'Nuevo Proyecto Android: Fav Sites'
 layout: post
 guid: http://elbauldelprogramador.org/nuevo-proyecto-android-fav-sites/
 permalink: /estoy-trabajando-en-una-aplicacion/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -28,7 +18,7 @@ Estoy trabajando en una aplicación Android que consiste en almacenar los lugare
 
 De momento la aplicación es muy básica y la interfaz muy simple. Dejo un vídeo para que os hagáis una idea de como es:
 
-  
+
 <!--ad-->
 
 <p style="text-align: center;">

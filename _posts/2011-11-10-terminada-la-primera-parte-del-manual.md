@@ -5,21 +5,11 @@ title: Terminada la primera parte del manual Android
 layout: post
 guid: http://elbauldelprogramador.org/terminada-la-primera-parte-del-manual-android/
 permalink: /terminada-la-primera-parte-del-manual/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /terminada-la-primera-parte-del-manual
-  - /terminada-la-primera-parte-del-manual
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 [<img id="logo" name="droid" class="icono" width="128px" height="128px" />][1]

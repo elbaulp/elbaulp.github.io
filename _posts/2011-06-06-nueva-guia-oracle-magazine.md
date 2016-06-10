@@ -5,31 +5,18 @@ title: 'Nueva guía: Oracle Magazine'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-oracle-magazine/
 permalink: /nueva-guia-oracle-magazine/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![Oracle Magazine][1]][2]
 
-Oracle Magazine contains technology strategy articles, sample code, tips, Oracle and partner news, how to articles for developers and DBAs, and more. Oracle (NASDAQ: ORCL) is the world&#8217;s largest enterprise software company. 
+Oracle Magazine contains technology strategy articles, sample code, tips, Oracle and partner news, how to articles for developers and DBAs, and more. Oracle (NASDAQ: ORCL) is the world&#8217;s largest enterprise software company.
 
 For more information about Oracle, please visit their Web site at http://www.oracle.com. Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.
 
-  
+
 <!--ad-->
 
 ## [![Descargar][3]][2]

@@ -5,22 +5,9 @@ title: 'Nueva guía: Run Your Own Web Server Using Linux & Apache'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-run-your-own-web-server-using-linux-apache/
 permalink: /nueva-guia-run-your-own-web-server/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![Run Your Own Web Server Using Linux & Apache - Free 191 Page Preview][1]][2]

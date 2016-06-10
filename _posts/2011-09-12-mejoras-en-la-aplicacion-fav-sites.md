@@ -5,21 +5,11 @@ title: Mejoras en la aplicación Fav Sites
 layout: post
 guid: http://elbauldelprogramador.org/mejoras-en-la-aplicacion-fav-sites/
 permalink: /mejoras-en-la-aplicacion-fav-sites/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

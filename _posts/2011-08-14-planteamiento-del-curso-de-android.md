@@ -5,21 +5,11 @@ title: Planteamiento del Curso de Android
 layout: post
 guid: http://elbauldelprogramador.org/planteamiento-del-curso-de-android/
 permalink: /planteamiento-del-curso-de-android/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -28,7 +18,7 @@ Antes de nada, quiero pedir disculpas por haber estado poco activo estos meses d
 
 Quiero plantear así por encima qué temas voy a tratar sobre la programación Android y cómo se va a estructurar el manual.
 
-  
+
 <!--ad-->
 
 Hasta ahora, todo lo que llevo escrito en la sección [Android][1], va a ser la primera parte de este manual, que es más bien una introducción. Aún no está terminado, me queda hablar de los Recursos en Android y ***StrictMode***, una nueva característica de depuración que se introdujo en Android 2.3, lo que hace el StrictMode es informarnos de violaciones de pólizas tanto en los hilos de la aplicación, como en la máquina virtual.

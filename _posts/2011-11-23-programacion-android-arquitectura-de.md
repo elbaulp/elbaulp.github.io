@@ -5,24 +5,6 @@ title: 'Programación Android: Arquitectura de los Proveedores de contenidos'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-arquitectura-de-los-proveedores-de-contenidos/
 permalink: /programacion-android-arquitectura-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551788}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551788}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - android
   - opensource
@@ -30,7 +12,6 @@ tags:
   - content provider
   - curso android pdf
   - 'Programación Android: Arquitectura de los Proveedores de contenidos'
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -52,7 +33,7 @@ En conujunto, los CV tienen un enfoque paralelo a las siguientes abstracciones:
 
 Cada CV de un dispositivo se registra a sí mismo de manera similar a como lo hace un sitio web con cadenas de texto (similar a los nombres de domínio, pero para los CV se llama *authority*). Esta cadena asenta las bases del conjunto de URIs que este CV puede ofrecer. No es diferente a como un sitio web con un dominio ofrece un conjunto de URls que muestran sus documentos o contenido en general.
 
-  
+
 <!--ad-->
 
 El registro de la authority se hace en el [androidManifest][3]. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación [FavSItes][4]):

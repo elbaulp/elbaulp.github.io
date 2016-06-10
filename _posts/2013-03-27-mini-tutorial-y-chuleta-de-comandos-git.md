@@ -91,7 +91,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 
 ## Añadir varios repositorios remotos
 
-- **git remote add bitbucket git@bitbucket.org:algui91/grado\_informatica\_tsi_practicas.git**  #  Añadir un nuevo repositorio remoto con el nombre deseado. Por ejemplo si ya tenemos uno en github y queremos añadir otro para bitbucket
+- **git remote add bitbucket git@bitbucket.org:algui91/grado_informatica_tsi_practicas.git**  #  Añadir un nuevo repositorio remoto con el nombre deseado. Por ejemplo si ya tenemos uno en github y queremos añadir otro para bitbucket
 - **git push -u bitbucket &#8211;all**  #  Subir el proyecto a bitbucket. A partir de ahora se puede seleccionar a qué repo publicar con***git push nombre\_repo\_remoto**
 
 ## TAGGING # marcan puntos importantes en la histtoria del repo ( releases )

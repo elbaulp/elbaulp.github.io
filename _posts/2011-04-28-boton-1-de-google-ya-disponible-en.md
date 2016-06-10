@@ -5,23 +5,10 @@ title: Botón +1 de google ya disponible en España
 layout: post
 guid: http://elbauldelprogramador.org/boton-1-de-google-ya-disponible-en-espana/
 permalink: /boton-1-de-google-ya-disponible-en/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
   - internet
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 <div class="iconews">
 </div>
@@ -30,7 +17,7 @@ Semanas atrás hable de como activar el botón [+1 de google][1](aquí se explic
 
 Hoy realizando búsquedas por google me he encontrado con la sorpresa de que ya está disponible, como prueba, dejo esta captura de pantalla:
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">

@@ -5,32 +5,19 @@ title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
 layout: post
 guid: http://elbauldelprogramador.org/video-proyecto-wifibar-en-la-ultima-fase-de-desarrollo/
 permalink: /video-proyecto-wifibar-en-la-ultima/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - aplicaciones
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Ya he hablado otras veces sobre este proyecto, que se trata ni más ni menos que del proyecto de fin de curso, [publiqué un vídeo hace algún tiempo][1], pero aún le quedaba mucho por mejorar, sobre todo la interfaz, visualmente parece que el programa no tiene mucho trabajo, pero si que lo tiene, ya que todo se envía y recibe de una base de datos. A continuación voy a explicar un poco su funcionamiento:
 
-  
+
 <!--ad-->
 
 La explicación es un poco extensa, pero he querido describir lo mejor posible el funcionamiento de la aplicación.

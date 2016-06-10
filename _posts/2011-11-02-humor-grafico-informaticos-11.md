@@ -5,24 +5,11 @@ title: 'Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211;
 layout: post
 guid: http://elbauldelprogramador.org/humor-grafico-informaticos-programadores-geek-9gag-com-parte-i/
 permalink: /humor-grafico-informaticos-11/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-if_slider_image:
-  - 
-  - 
 categories:
   - curiosidades
   - Humor
   - internet
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "geek"
 ---
 Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he recopilado unas cuantas imágenes más:
 

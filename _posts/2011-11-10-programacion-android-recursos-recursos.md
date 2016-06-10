@@ -5,21 +5,11 @@ title: 'Programación Android: Recursos &#8211; Recursos y cambios de configurac
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-recursos-y-cambios-de-configuracion/
 permalink: /programacion-android-recursos-recursos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img id="logo" class="icono" name="droid" width="128px" height="128px" />
@@ -28,7 +18,7 @@ Los recursos ayudan a la localización. Por ejemplo, podemos tener valores para 
 
 Android permite elegir distintas configuraciones de layout basandose en el tipo de layout. Y ambos tendrán el mismo ID de recurso. Esto se consigue usando directorios diferentes para cada configuración. Vamos a verlo con un ejemplo:
 
-  
+
 <!--ad-->
 
 ```bash

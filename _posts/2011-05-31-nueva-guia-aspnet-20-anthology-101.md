@@ -5,22 +5,9 @@ title: 'Nueva guía: The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hac
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-asp-net-2-0-anthology-101-essential-tips-tricks-hacks/
 permalink: /nueva-guia-aspnet-20-anthology-101/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks - Free 156 Page Preview][1]][2]

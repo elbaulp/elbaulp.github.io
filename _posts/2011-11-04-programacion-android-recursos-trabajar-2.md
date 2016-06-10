@@ -5,21 +5,11 @@ title: 'Programación Android: Recursos &#8211; Trabajar con recursos RAW'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-trabajar-con-recursos-raw/
 permalink: /programacion-android-recursos-trabajar-2/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img id="logo" name="droid" class="icono" width="128px" height="128px" />
@@ -28,7 +18,7 @@ Los recursos Raw se colocan bajo el directorio ***./res/raw***. Son recursos raw
 
 A diferencia de los archivos XML, colocados en ./res/xml, estos archivos no se compilan, se mueven al paquete de la aplicación tal y como son. Sin embargo, a cada fichero se le asignará un identificador en la clase R.java. Si colocamos un archivo de texto en ***./res/raw/test.txt***, podremos leerlo usando el código de abajo:
 
-  
+
 <!--ad-->
 
 ```java

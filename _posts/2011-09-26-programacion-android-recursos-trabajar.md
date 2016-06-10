@@ -5,22 +5,12 @@ title: 'Programación Android: Recursos &#8211; Trabajar con recursos XML arbitr
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-trabajar-con-recursos-xml-arbitrarios/
 permalink: /programacion-android-recursos-trabajar/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
   - recursos xml
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -29,7 +19,7 @@ Además de los recursos estructurados [que hemos ido viendo][1], Android permite
 
 Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el directorio ./res/xml. A continuación vamos a ver un ejemplo:
 
-  
+
 <!--ad-->
 
 ```xml
@@ -58,24 +48,24 @@ private String getEventsFromAnXMLFile(Context activity)
     StringBuffer sb = new StringBuffer();
     Resources res = activity.getResources();
     XmlResourceParser xpp = res.getXml(R.xml.test);
-    
+
     xpp.next();
     int eventType = xpp.getEventType();
-     while (eventType != XmlPullParser.END_DOCUMENT) 
+     while (eventType != XmlPullParser.END_DOCUMENT)
      {
-         if(eventType == XmlPullParser.START_DOCUMENT) 
+         if(eventType == XmlPullParser.START_DOCUMENT)
          {
             sb.append("******Start document");
-         } 
-         else if(eventType == XmlPullParser.START_TAG) 
+         }
+         else if(eventType == XmlPullParser.START_TAG)
          {
             sb.append("nStart tag "+xpp.getName());
-         } 
-         else if(eventType == XmlPullParser.END_TAG) 
+         }
+         else if(eventType == XmlPullParser.END_TAG)
          {
             sb.append("nEnd tag "+xpp.getName());
-         } 
-         else if(eventType == XmlPullParser.TEXT) 
+         }
+         else if(eventType == XmlPullParser.TEXT)
          {
             sb.append("nText "+xpp.getText());
          }

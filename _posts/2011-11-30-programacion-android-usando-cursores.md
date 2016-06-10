@@ -5,31 +5,12 @@ title: 'Programación Android: Usando cursores'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-usando-cursores/
 permalink: /programacion-android-usando-cursores/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551777}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551777}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
   - Cursores Android
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -48,7 +29,7 @@ Cosas a saber sobre un cursor Android:
 
 El cursor tiene unos métodos que nos permiten navegar por él. A continuación vemos como comprobar si el cursor está vacío y cómo navegar por él fila a fila en caso de no estarlo.
 
-  
+
 <!--ad-->
 
 ```java

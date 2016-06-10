@@ -5,19 +5,9 @@ title: 'Nueva guía: A Newbie&#8217;s Getting Started Guide to Linux'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-a-newbies-getting-started-guide-to-linux/
 permalink: /nueva-guia-newbies-getting-started/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - Sin Categoria
-main-class: "dev"
-main-class: "Sin Categoria"
+main-class: "misc"
 ---
 [![A Newbie's Getting Started Guide to Linux][1]][2]
 

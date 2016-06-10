@@ -5,21 +5,11 @@ title: Prueba la aplicación FavSites en tu Android
 layout: post
 guid: http://elbauldelprogramador.org/prueba-la-aplicacion-favsites-en-tu-android/
 permalink: /prueba-la-aplicacion-favsites-en-tu/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -28,7 +18,7 @@ Como sabéis hace algún tiempo terminé la aplicación [Favsites][1].
 
 Ahora me gustaría que todo aquel que quiera probarla y ver como funciona, la descargue e instale en su Android. De esta forma puedo encontrar más errores que se me hayan pasado por alto y aceptar sugerencias de mejora. Si alguno tiene un terminal con trackBall, me vendría bien que me comunicara si FavSites funciona bien en esos teléfonos.
 
-  
+
 <!--ad-->
 
 Si alguien quere participar y traducir la aplicación a un idioma distinto del Inglés y Español, le estaría agredecido y lo colocaría en el &#8220;Acerca de&#8221;.

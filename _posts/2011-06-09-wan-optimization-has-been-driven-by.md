@@ -5,22 +5,9 @@ title: 'Nueva guía: WAN Optimization for Today and Tomorrow'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-wan-optimization-for-today-and-tomorrow/
 permalink: /wan-optimization-has-been-driven-by/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![WAN Optimization for Today and Tomorrow][1]][2]

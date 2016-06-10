@@ -5,23 +5,10 @@ title: 'Pequeño &#8220;Rediseño&#8221; en el blog'
 layout: post
 guid: http://elbauldelprogramador.org/pequeno-rediseno-en-el-blog/
 permalink: /pequeno-redisenp-en-el-blog/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - internet
   - noticias
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="iconews">
 </div>

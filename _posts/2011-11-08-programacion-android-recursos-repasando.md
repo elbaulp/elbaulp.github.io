@@ -5,21 +5,11 @@ title: 'Programación Android: Recursos &#8211; Repasando la estructura del dire
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-repasando-la-estructura-del-directorio-de-recursos/
 permalink: /programacion-android-recursos-repasando/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 En resumen, en el siguiente listado muestra la estructura global del directorio de recursos:

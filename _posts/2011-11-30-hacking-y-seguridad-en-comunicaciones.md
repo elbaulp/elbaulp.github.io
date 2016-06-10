@@ -5,31 +5,12 @@ title: Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE
 layout: post
 guid: http://elbauldelprogramador.org/hacking-y-seguridad-en-comunicaciones-moviles-gsm-gprs-umts-lte/
 permalink: /hacking-y-seguridad-en-comunicaciones/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551774}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551774}'
-share_count:
-  - 0
-  - 0
 categories:
   - noticias
   - seguridad
 tags:
   - comunicaciones moviles lte
-main-class: "dev"
-main-class: "noticias"
+main-class: "misc"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-AAPPo38_9zQ/TtYml6wT_ZI/AAAAAAAAB3I/QBjz_ihLqFU/s1600/psn-hacker-540x220.jpg" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="82" width="200" src="https://3.bp.blogspot.com/-AAPPo38_9zQ/TtYml6wT_ZI/AAAAAAAAB3I/QBjz_ihLqFU/s200/psn-hacker-540x220.jpg" /></a>
@@ -39,7 +20,7 @@ Os dejo un vídeo que demuestra como se puede suplantar la identidad de una red 
 
 El vídeo es de la ***RootedCON 2011*** de este año.
 
-**</p> 
+**</p>
 
 Una de las características que se conocen desde hace mucho tiempo es la posibilidad de falsificar, es decir, suplantar, a un operador de telefonía al que se conectan los teléfonos móviles. Normalmente, todos los usuarios que cuentan con un teléfono de última generación, como un iPhone o un Smartphone, lo tienen configurado para conectarse automáticamente a las redes.
 

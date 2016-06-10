@@ -5,29 +5,16 @@ title: 'Nueva guía: Agrupación En Clústeres Multisitio de Windows Server (En 
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-agrupacion-en-clusteres-multisitio-de-windows-server-en-espanol/
 permalink: /nueva-guia-agrupacion-en-clusteres/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![Agrupación En Clústeres Multisitio de Windows Server][1]][2]
 
 Double-Take Availability de Vision Solutions se creó específicamente para proteger, ampliar y desarrollar las funciones de clústeres de conmutación de roles por falla al brindar almacenamiento redundante que elimina el punto único de falla inherente en los clústeres tradicionales, además de proporcionar funciones de conmutación de roles por falla para clústeres fuera del emplazamiento. Ahora los datos se pueden replicar en distintos dispositivos de almacenamiento en ubicaciones locales o remotas y permitir que las aplicaciones agrupadas en clústeres sigan funcionando independientemente del punto de falla.
 
-  
+
 <!--ad-->
 
 ## [![Descargar][3]][2]

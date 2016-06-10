@@ -5,29 +5,16 @@ title: Añade el botón +1 de google a tu blog
 layout: post
 guid: http://elbauldelprogramador.org/anade-el-boton-1-de-google-a-tu-blog/
 permalink: /anade-el-boton-1-de-google-tu-blog/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - internet
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
 
 Hace poco estaba disponible el [botón +1 de google][1] en los resultados de búsqueda, ahora podemos añadirlo directamente en nuestro blog, como explican en [Blogger Buzz][2], es bastante sencillo (solo para blogger), debemos ir a Diseño->Elementos de la página y editar las entradas del blog, tal como se vé en la imágen:
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">

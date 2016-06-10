@@ -5,30 +5,11 @@ title: Introducción al diseño de plantillas personalizadas para móviles en Bl
 layout: post
 guid: http://elbauldelprogramador.org/introduccion-al-diseno-de-plantillas-personalizadas-para-moviles-en-blogger/
 permalink: /introduccion-al-diseno-de-plantillas/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333549451}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333549451}'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333549451}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333549451}'
-share_count:
-  - 0
-  - 0
 categories:
   - curiosidades
   - internet
   - noticias
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 He visto en el blog de blogger que dan la posibilidad de crear una plantilla personalizada de nuestro blog para moviles.
 
@@ -44,7 +25,7 @@ Le damos al engranaje que aparece debajo de las plantillas para móviles, donde 
   <a href="https://1.bp.blogspot.com/-dyyH6l2heQI/Tp5hR4sdzdI/AAAAAAAAAPs/HkYfZ8kpAwQ/s320/mobile_template_picker_pulldown.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="287" width="320" src="https://1.bp.blogspot.com/-dyyH6l2heQI/Tp5hR4sdzdI/AAAAAAAAAPs/HkYfZ8kpAwQ/s320/mobile_template_picker_pulldown.png" /></a>
 </div>
 
-HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando la plantilla normal del blog. Por ejemplo, si tenemos gadgets en el blog, podemos elegir si se mostrarán en la versión móvil o no. Esto lo conseguimos mediante un nuevo atributo llamado *mobile*, que pertenece a la la etiqueta *<b:widget></i>, y puede tomar los valores &#8216;default&#8217; &#8216;yes&#8217;, &#8216;no&#8217; ó &#8216;only&#8217;.</p> 
+HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando la plantilla normal del blog. Por ejemplo, si tenemos gadgets en el blog, podemos elegir si se mostrarán en la versión móvil o no. Esto lo conseguimos mediante un nuevo atributo llamado *mobile*, que pertenece a la la etiqueta *<b:widget></i>, y puede tomar los valores &#8216;default&#8217; &#8216;yes&#8217;, &#8216;no&#8217; ó &#8216;only&#8217;.</p>
 
 <p>
   Vamos a ver un ejemplo con el gadget Archivo del blog:
@@ -113,34 +94,34 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 <div class="widget-content">
   <b:if cond="data:blog.isMobile">
       <!-- Show a text link in mobile view.-->
-      
-  
+
+
   <a href="http://www.blogger.com">
         Powered By Blogger
       </a>
     <b:else />
       <!-- Show an image link in desktop view.-->
-      
-  
+
+
   <a href="http://www.blogger.com">
         <img expr:src="data:fullButton" alt="Powered By Blogger" />
       </a>
     </b:if>
   </div>
-  
+
 ```
-  
-  
+
+
   <p>
     El código de arriba muestra contenidos diferentes en función de si estamos en un móvil o un pc.
   </p>
-  
-  
+
+
   <p>
     Por último, podemos crear distintas reglas CSS a una misma clase, y, dependiendo de si estamos en móvil o pc se usará una u otra. Para ello, es necesario colocar en la etiqueta <i>body</i> lo siguiente:
   </p>
-  
-  
+
+
   ```xml
 
 

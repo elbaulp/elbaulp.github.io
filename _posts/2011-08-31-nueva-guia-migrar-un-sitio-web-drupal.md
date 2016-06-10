@@ -5,19 +5,9 @@ title: 'Nueva guía: Migrar un sitio web a Drupal'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-migrar-un-sitio-web-a-drupal/
 permalink: /nueva-guia-migrar-un-sitio-web-drupal/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![Migrating a Web Site to Drupal][1]][2]

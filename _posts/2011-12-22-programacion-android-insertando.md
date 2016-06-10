@@ -5,31 +5,12 @@ title: 'Programación Android: Insertando registros'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-insertando-registros/
 permalink: /programacion-android-insertando/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551762}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551762}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
   - Insertando registros
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -46,7 +27,7 @@ Anroid utiliza una clase llamada *android.content.ContentValues* para retener lo
 
 Abajo se muestra un ejemplo de cómo rellenar una fila con un ContentValues y prepararlo para un insert:
 
-  
+
 <!--ad-->
 
 ```java

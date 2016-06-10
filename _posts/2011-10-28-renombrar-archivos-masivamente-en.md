@@ -5,22 +5,12 @@ title: Renombrar archivos masivamente en GNU/Linux
 layout: post
 guid: http://elbauldelprogramador.org/renombrar-archivos-masivamente-en-gnulinux/
 permalink: /renombrar-archivos-masivamente-en/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - linux
   - script
 tags:
   - renombrar archivos linux masivo
   - renombrar linux
-main-class: "dev"
 main-class: "linux"
 ---
 <div class="icosh">
@@ -32,7 +22,7 @@ Si queremos renombrar todos los archivos para eliminar la página web del nombre
 
 Por ejemplo, pongamos que los archivos son los siguientes:
 
-  
+
 <!--ad-->
 
 ```bash

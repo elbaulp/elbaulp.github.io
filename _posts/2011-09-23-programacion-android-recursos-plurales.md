@@ -5,34 +5,24 @@ title: 'Programación Android: Recursos &#8211; Plurales'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-plurales/
 permalink: /programacion-android-recursos-plurales/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 Los recursos Plurals son un conjunto de strings. Estos strings representan una forma de escribir cantidades numéricas, por ejemplo, cuantos huevos hay en una cesta. Vamos a ver un ejemplo:
 
-Hay 1 huevo   
+Hay 1 huevo
 Hay 2 huevos  
 Hay 10 huevos
 
 Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo, la frase para 1 huevo es diferente. Android permite representar esta variación con el recurso llamado plurals. En el siguiente ejemplo vemos como se representan estas dos variaciones.
 
-  
+
 <!--ad-->
 
 ```xml

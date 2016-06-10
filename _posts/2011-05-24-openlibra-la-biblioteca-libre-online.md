@@ -5,24 +5,11 @@ title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
 layout: post
 guid: http://elbauldelprogramador.org/openlibra-la-biblioteca-libre-online-tal-como-la-esperabas/
 permalink: /openlibra-la-biblioteca-libre-online/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - internet
   - linux
   - opensource
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" /></a>

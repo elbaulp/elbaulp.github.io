@@ -1,35 +1,13 @@
 ---
-id: 320
 title: Los vídeos más interesantes de 2011
-
 layout: post
-guid: http://elbauldelprogramador.org/los-videos-mas-interesantes-de-2011/
 permalink: /los-videos-mas-interesantes-de-2011/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551752}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551752}'
-share_count:
-  - 0
-  - 0
 categories:
   - curiosidades
   - internet
   - offtopic
   - video de la semana
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "geek"
 ---
 Aunque no tiene mucho que ver con la temática del blog, creo que debo compartir estos vídeos que me han gustado tanto para que más gente pueda disfrutar de ellos.
 

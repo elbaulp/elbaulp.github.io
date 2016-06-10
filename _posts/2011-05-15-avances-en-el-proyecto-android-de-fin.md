@@ -5,25 +5,12 @@ title: 'Avances en el proyecto Android de fin de curso [WifiBar]'
 layout: post
 guid: http://elbauldelprogramador.org/avances-en-el-proyecto-android-de-fin-de-curso-wifibar/
 permalink: /avances-en-el-proyecto-android-de-fin/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - aplicaciones
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -36,7 +23,7 @@ A continuación voy a explicar mediante capturas de pantalla algunas funcionalid
 
 Icono de la aplicación
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">

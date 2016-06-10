@@ -5,25 +5,12 @@ title: 'Programación Android: Hola Mundo'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-hola-mundo/
 permalink: /programacion-android-hola-mundo/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /programacion-android-hola-mundo/
-  - /programacion-android-hola-mundo/
-  - /programacion-android-hola-mundo/
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
   - hola mundo android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -35,7 +22,7 @@ Antes de empezar, quiero comunicar que todas las entradas relacionadas con los t
 
 En esta entrada vamos a empezar directamente con el típico Hola Mundo (Hello World):
 
-  
+
 <!--ad-->
 
 ## CREANDO EL PROYECTO
@@ -46,7 +33,7 @@ Arrancamos eclipse con todo configurado correctamente y vamos a Archivo->nuevo->
   <a href="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s1600/nuevoProyecto.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img title="crear Proyecto Android" alt="crear Proyecto Android" border="0" height="303" width="400" src="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s400/nuevoProyecto.png" /></a>
 </div>
 
-Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos introducir: 
+Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos introducir:
 
   * El nombre del proyecto. en este caso Hola Mundo
   * Donde queremos crear el proyecto (normalmente dentro del workspace).
@@ -93,7 +80,7 @@ Está dividida en subcarpetas:
 
   * ***anim:*** Ficheros XML para la definición de Animaciones.
   * ***color:*** Ficheros XML de definición de colores.
-  * ***drawable:*** Ficheros bitmap(.png, .9.png, .jpg, .gif) o XML con contenidos que se dibujarán (fondos, botones etc). 
+  * ***drawable:*** Ficheros bitmap(.png, .9.png, .jpg, .gif) o XML con contenidos que se dibujarán (fondos, botones etc).
   * ***layout:*** Ficheros XML que definen la capa de interfaz de usuario.
   * ***menu:*** Ficheros XML con la definición de los menús de la aplicación.
   * ***raw:*** Binarios que no se pueden colocar en las otras carpetas.
@@ -142,8 +129,8 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<textview android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
+<textview android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     android:text="@string/hello"
     />
 </linearlayout>

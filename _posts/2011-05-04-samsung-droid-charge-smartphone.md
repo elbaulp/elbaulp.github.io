@@ -5,25 +5,12 @@ title: Samsung Droid Charge Smartphone
 layout: post
 guid: http://elbauldelprogramador.org/samsung-droid-charge-smartphone/
 permalink: /samsung-droid-charge-smartphone/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - curiosidades
 tags:
   - curso android pdf
-main-class: "dev"
-main-class: "android"
+main-class: "articulos"
 ---
 <div class="iconews">
 </div>

@@ -5,15 +5,6 @@ title: 'Programación Android: Recursos &#8211; Strings'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-strings/
 permalink: /programacion-android-recursos-strings/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
@@ -21,7 +12,6 @@ tags:
   - curso android pdf
   - recursos android
   - strings android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -32,7 +22,7 @@ Los ejemplos de recursos más familiares son cadenas de texto, colores e imágen
 
 Existen mucho recursos en Android, que vamos a ver a lo largo de las etradas posteriores. Empezaremos por un recurso muy común, los string:
 
-  
+
 <!--ad-->
 
 ## Recursos string
@@ -57,7 +47,7 @@ package nombre.de.nuestro.paquete;
 
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
-   
+
    public static final class string {
       //.. otras entradas dependiendo de tu proyecto y aplicación
       public static final int app_name=0x7f040001;
@@ -93,7 +83,7 @@ package nombre.de.nuestro.paquete;
 
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
-   
+
    public static final class string {
       //.. otras entradas dependiendo de tu proyecto y aplicación
       public static final int app_name=0x7f040001;

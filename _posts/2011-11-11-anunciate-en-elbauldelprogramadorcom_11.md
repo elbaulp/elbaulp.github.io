@@ -5,28 +5,9 @@ title: Anúnciate en elbauldelprogramador.org
 layout: post
 guid: http://elbauldelprogramador.org/anunciate-en-elbauldelprogramador-com/
 permalink: /anunciate-en-elbauldelprogramadorcom_11/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549447}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549447}'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549447}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549447}'
-share_count:
-  - 2
-  - 2
 categories:
   - Sin Categoria
-main-class: "dev"
-main-class: "Sin Categoria"
+main-class: "articulos"
 ---
 He colocado unos banners en la parte derecha del blog, disponibles para todo aquel que se quiera anunciar y dar a conocer su página web.
 

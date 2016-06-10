@@ -5,22 +5,9 @@ title: Optimizando el tiempo de carga del blog
 layout: post
 guid: http://elbauldelprogramador.org/optimizando-el-tiempo-de-carga-del-blog/
 permalink: /optimizando-el-tiempo-de-carga-del-blog/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - internet
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
@@ -31,7 +18,7 @@ Pues bien, tengo buenas noticias, he conseguido reducir el tiempo de carga de 4.
 
 Para hacer estas pruebas he usado [tools.pingdom.com][3], que además de hacer el test, permite guardarlo.
 
-  
+
 <!--ad-->
 
 Os dejo las imágenes del resultado:

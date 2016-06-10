@@ -5,21 +5,11 @@ title: 'Programación Android: Recursos &#8211; Sintaxis de los Recursos'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-sintaxis-de-los-recursos/
 permalink: /programacion-android-recursos-sintaxis/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -28,7 +18,7 @@ Independientemente del tipo de recurso (de string y layout son los dos que hemos
 
 La sintaxis que usamos para crear un ID de recurso en un fichero XML se llama resource-reference syntax (sintaxis de referencia a recurso). La sintaxis del atributo id que vimos anteriormente (@+id/text1) tiene la siguiente estructura formal:
 
-  
+
 <!--ad-->
 
 ```java
@@ -38,35 +28,35 @@ La sintaxis que usamos para crear un ID de recurso en un fichero XML se llama re
 
 El tipo (type), corresponde a uno de los espacios de nombres de tipos de recursos disponible en R.java, que son algunos de los siguientes:
 
-  * R.drawable 
-  * R.id 
-  * R.layout 
-  * R.string 
-  * R.attr 
-  * R.plural 
-  * R.array 
+  * R.drawable
+  * R.id
+  * R.layout
+  * R.string
+  * R.attr
+  * R.plural
+  * R.array
 
 En sintaxis de referencia a recursos XML, estos tipos se nombrarían así:
 
-  * drawable 
-  * id 
-  * layout 
-  * string 
-  * attr 
-  * plurals 
-  * string-array 
+  * drawable
+  * id
+  * layout
+  * string
+  * attr
+  * plurals
+  * string-array
 
 La parte name en @[package:]type/name corresponde al nombre dado al recurso (text1 en nuestro ejemplo anterior), este nombre, también será represantado como una constante entera en R.java.
 
 Si no se especifica ningún paquete en @\[package:\] (de ahí que en la representación formal de la sintaxis aparezca entre corchetes, que quiere decir que es opcional); el par tipo/nombre será resuelto basándose en los recursos locales y en el archivo R.java local de nuestra aplicación.
 
-Si especificamos android:type/name, el id referenciado será resuelto usando el paquete android y específicamente a través del archivo android.R.java. Podemos usar cualquier nombre de paquete java en el lugar de @[package:] para localizar el archivo R.java correcto y resolver la referencia al recurso en cuestión. Ahora que conocemos la sintaxis, vamos a analizar unos ejemplos. Nótese que la parte izquierda del ID android:id no es parte de la sintaxis. “android:id” simplemente indica que vamos a crear un id para un control como lo es el TextView. 
+Si especificamos android:type/name, el id referenciado será resuelto usando el paquete android y específicamente a través del archivo android.R.java. Podemos usar cualquier nombre de paquete java en el lugar de @[package:] para localizar el archivo R.java correcto y resolver la referencia al recurso en cuestión. Ahora que conocemos la sintaxis, vamos a analizar unos ejemplos. Nótese que la parte izquierda del ID android:id no es parte de la sintaxis. “android:id” simplemente indica que vamos a crear un id para un control como lo es el TextView.
 
 ```xml
-<textview android:id=”text”> 
+<textview android:id=”text”>
 <!-- Error de compilación, como id no tomará cadenas de texto sin formato. -->
 
-</textview><textview android:id=”@text”> 
+</textview><textview android:id=”@text”>
 
 
 <!--  Sintaxis incorrecta.  No disponde de tipo y nombre-->

@@ -5,22 +5,6 @@ title: 'Fundamentos programación Android: Limpieza de Procesos'
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-programacion-android-limpieza-de-procesos/
 permalink: /fundamentos-programacion-android_18/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /fundamentos-programacion-android_18/
-  - /fundamentos-programacion-android_18/
-  - /fundamentos-programacion-android_18/
-fsb_social_twitter:
-  - 0
-fsb_social_facebook:
-  - 0
 categories:
   - android
   - opensource
@@ -28,7 +12,6 @@ tags:
   - curso android pdf
   - Fundamentos programación Android
   - procesos android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

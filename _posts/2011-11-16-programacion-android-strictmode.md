@@ -5,31 +5,12 @@ title: 'Programación Android: StrictMode'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-strictmode/
 permalink: /programacion-android-strictmode/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551805}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551805}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
   - StrictMode Android
-main-class: "dev"
 main-class: "android"
 ---
 <img id="logo" class="icono" border="0" height="128" width="128" src="" name="droid" />
@@ -38,7 +19,7 @@ main-class: "android"
 
 Actualemente hay dos tipos de políticas disponibles para usar con *StrictMode*. La primera de ellas es referente a los hilos y está destinada principalmente a ejecutarse en el hilo principal, también conocido como el hilo de UI (User Interface).
 
-  
+
 <!--ad-->
 
 No es una buena práctica hacer lecturas/escrituras a disco desde el hilo principal, como tampoco lo es realizar accesos a red. Google ha añadido al código del disco y de red *hooks* o *ganchos*, que son algoritmos abstractos que invocan a métodos abstractos. Por lo tanto, si activamos StrictMode para uno de nuestros hilos, y ese hilo realiza cualquiera de las dos acciones mencionadas anteriormente, seremos informados. Podemos elegir sobre qué aspectos de la política de hilos queremos ser informados, así como el método por el cual se nos informará. Normalmente las que usaremos serán accesos a disco y red. En cuanto al método por el que seremos informados, pordemos elegir: Escribirlo en el LogCat, mostrar un [diálogo][3], hacer un destello en la pantalla, escribir en el archivo log de DropBox o forzar el cierre de la aplicación. Normalmente se usa el LogCat o forzar el cierre. A continuación vemos un ejemplo de como configurar StrictMode para políticas de hilos:
@@ -109,7 +90,7 @@ Si el StrictMode no está disponible para nuestra aplicación, se lanzará un er
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.os.StrictMode;
- 
+
 public class StrictModeWrapper{
     public static void init(Context context){
        ApplicationInfo appInfo = context.getApplicationInfo();
@@ -118,7 +99,7 @@ public class StrictModeWrapper{
           StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectDiskReads()
                     .detectDiskWrites()
-                    .detectNetwork() 
+                    .detectNetwork()
                     .penaltyLog()
                     .build());
            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()

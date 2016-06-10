@@ -1,32 +1,11 @@
 ---
-id: 319
 title: Estadísticas del blog en 2011
-
 layout: post
 guid: http://elbauldelprogramador.org/estadisticas-del-blog-en-2011/
 permalink: /estadisticas-del-blog-en-2011/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551754}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551754}'
-share_count:
-  - 0
-  - 0
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 En esta entrada voy a dar a conocer los datos estadísticos del blog en este prácticamente acabado 2011. En líneas generales ha mejorado bastante con respecto al 2010.
 

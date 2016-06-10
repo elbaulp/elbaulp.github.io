@@ -5,27 +5,8 @@ title: 'Nueva guía &#8211; The Windows 7 Guide: From Newbies to Pros'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-windows-7-guide-from-newbies-to-pros/
 permalink: /nueva-guia-windows-7-guide-from-newbies/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333549431}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333549431}'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333549431}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333549431}'
-share_count:
-  - 1
-  - 1
 categories:
   - cursos
-main-class: "dev"
 main-class: "misc"
 ---
 [![ The Windows 7 Guide: From Newbies to Pros][1]][2]  

@@ -5,29 +5,19 @@ title: 'Programación Android: Recursos &#8211; Layout'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-layout/
 permalink: /programacion-android-recursos-layout/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /programacion-android-recursos-layout
-  - /programacion-android-recursos-layout
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
   - layout android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 En Android, cada pantalla de una aplicación habitualmente se carga desde un fichero XML que actua de recurso. Un recurso layout es un recurso clave que se usa en Android para componer la UI de nuestra aplicación. Vamos a considerar el segmenteo de código siguiente como ejemplo de una [actividad][1] en Android.
 
-  
+
 <!--ad-->
 
 ```java
@@ -52,19 +42,19 @@ La línea ***setContentView(R.layout.main);*** señala que hay una clase estáti
     android:layout_height="fill_parent"
     >
     <textview android:id="@+id/text1"
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello" />
     <button android:id="@+id/b1"
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello"/>
-    
+
 </linearlayout>
 
 ```
 
-Vamos a ver la composición de este fichero, como elemento raiz tenemos un elemento llamado <linearlayout>, que contiene un *TextView* seguido de un *Button*. Un LinearLayout coloca a sus hijos uno detrás de otro vertical u horizontalmente.</linearlayout> 
+Vamos a ver la composición de este fichero, como elemento raiz tenemos un elemento llamado <linearlayout>, que contiene un *TextView* seguido de un *Button*. Un LinearLayout coloca a sus hijos uno detrás de otro vertical u horizontalmente.</linearlayout>
 
 Para cada pantalla que queramos hacer, necesitaremos ficheros layout distintos, mejor dicho, cada layout debe estar en un fichero, como ***./res/layout/screen1.xml y ./res/layout/screen2.xml***
 

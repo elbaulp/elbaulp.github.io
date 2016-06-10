@@ -5,32 +5,13 @@ title: Lo más leido en ElbaulDelProgramador (Noviembre 2011)
 layout: post
 guid: http://elbauldelprogramador.org/lo-mas-leido-en-elbauldelprogramador-noviembre-2011/
 permalink: /lo-mas-leido-en-elbauldelprogramador/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551773}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551773}'
-share_count:
-  - 0
-  - 0
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 Con esta entrada os dejo lo más leido del més en el blog, junto con algunos datos estadísticos:
 
-  
+
 <!--ad-->
 
 ##### Entradas

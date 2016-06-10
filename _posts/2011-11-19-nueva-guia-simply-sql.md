@@ -5,29 +5,10 @@ title: 'Nueva Guía: Simply SQL'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-simply-sql/
 permalink: /nueva-guia-simply-sql/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551797}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551797}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - BaseDeDatos
   - cursos
-main-class: "dev"
-main-class: "BaseDeDatos"
+main-class: "misc"
 ---
 [![Simply SQL][1]][2]  
 

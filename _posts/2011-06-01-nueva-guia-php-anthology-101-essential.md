@@ -5,29 +5,16 @@ title: 'Nueva guía: The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd 
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-php-anthology-101-essential-tips-tricks-hacks-2nd-edition/
 permalink: /nueva-guia-php-anthology-101-essential/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition][1]][2]
 
 ### The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition
 
-La Antología PHP te ahorrará tiempo, eliminará la frustración de la realización de tareas de PHP, con una colección completa de soluciones listas para usar. Si estás construyendo aplicaciones web con PHP, este libro te facilitará las cosas. 
+La Antología PHP te ahorrará tiempo, eliminará la frustración de la realización de tareas de PHP, con una colección completa de soluciones listas para usar. Si estás construyendo aplicaciones web con PHP, este libro te facilitará las cosas.
 
 Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
 

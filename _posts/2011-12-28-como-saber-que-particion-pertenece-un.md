@@ -5,29 +5,10 @@ title: Cómo saber a qué partición pertenece un archivo en GNU/Linux
 layout: post
 guid: http://elbauldelprogramador.org/como-saber-a-que-particion-pertenece-un-archivo-en-gnulinux/
 permalink: /como-saber-que-particion-pertenece-un/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551755}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551755}'
-share_count:
-  - 0
-  - 0
 categories:
   - How To
   - linux
-main-class: "dev"
-main-class: "How To"
+main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
@@ -37,7 +18,7 @@ main-class: "How To"
 
 Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:
 
-  
+
 <!--ad-->
 
 ```bash
@@ -87,8 +68,8 @@ Es recomendable colocar la siguiente función bash en nuestro archivo *~/.bashrc
 
 ```bash
 # find partition name for a given filename
-findpart() { 
-   [ -e "$1" ] && df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found"; 
+findpart() {
+   [ -e "$1" ] && df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found";
 }
 
 ```

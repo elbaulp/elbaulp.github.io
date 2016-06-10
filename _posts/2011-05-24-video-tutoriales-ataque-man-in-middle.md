@@ -5,26 +5,13 @@ title: '[Vídeo tutoriales] Ataque Man in the middle'
 layout: post
 guid: http://elbauldelprogramador.org/video-tutoriales-ataque-man-in-the-middle/
 permalink: /video-tutoriales-ataque-man-in-middle/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - internet
   - seguridad
 tags:
   - ettercap en español
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
@@ -33,7 +20,7 @@ En la [anterior entrada][1] expliqué como hacer un ataque mitm para capturar el
 
 En casiDiablo ví 3 interesantes videotutoriales que quiero compartir con vosotros:
 
-***</p> 
+***</p>
 
 <h3 style="text-align: justify;">
   Vídeo tutoriales
@@ -57,9 +44,9 @@ En casiDiablo ví 3 interesantes videotutoriales que quiero compartir con vosotr
 
 </em></b>
 
-* * *Fuente original: 
+* * *Fuente original:
 
-[casidiablo.net][2]</p> 
+[casidiablo.net][2]</p>
 
 
 

@@ -5,24 +5,6 @@ title: 'Programación Android: Proveedores de Contenidos &#8211; Leer datos medi
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-proveedores-de-contenidos-leer-datos-mediante-uris/
 permalink: /programacion-android-proveedores-de_28/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551781}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551781}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
@@ -31,7 +13,6 @@ tags:
   - curso android pdf
   - Proveedores de Contenidos Android
   - URI
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -58,7 +39,7 @@ content://contacts/people
 
 ```
 
-  
+
 <!--ad-->
 
 El proveedor *MediaStore* define dos URIs y *Contacts* uno. Si te das cuenta, las constantes están definidas usando esquema jerárquico. Por ejemplo, la URI de los contactos se señala como *Contacts.People.CONTENT_URI.* Esto se debe a que las bases de datos de contactos pueden tener muchas tablas para representar la entidad de un contacto. *People* es una de las tablas o colecciones. Cada entidad primaria de una base de datos puede llevar su propia URI de contenido.
@@ -67,7 +48,7 @@ El proveedor *MediaStore* define dos URIs y *Contacts* uno. Si te das cuenta, la
   En <b><i>Contacts.Pople.CONTENT_URI</i></b>, Contacts es un paquete de java y People es una clase dentro de ese paquete. Hay que saber que Contacts y Contacts.People están obsoletos desde Android 2.0 y que ahora poseen nuevas URIs equivalentes que veremos más adelante. Sin embargo, para propositos educativos podemos seguir usandolos aunque estén obsoletos.
 </p>
 
-Dadas estas URIs, el código para recuperar una única fila del proveedor de contactos sería: 
+Dadas estas URIs, el código para recuperar una única fila del proveedor de contactos sería:
 
 ```java
 Uri uriBase = Contacts.People.CONTENT_URI;
@@ -96,7 +77,7 @@ String[] projection = new String[] {
 //obtenemos la URI base
 Uri mContactsUri = Contacts.People.CONTENT_URI;
 
-Cursor managedCursor = managedQuery(mContactsUri, 
+Cursor managedCursor = managedQuery(mContactsUri,
                                     projection, // Qué columnas devolverá
                                     null,       // Cláusula where
                                     Contacts.People.NAME + " ASC"); //Clausula order by

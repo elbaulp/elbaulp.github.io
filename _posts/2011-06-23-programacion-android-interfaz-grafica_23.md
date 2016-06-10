@@ -5,18 +5,6 @@ title: 'Programación Android: Interfaz gráfica &#8211; Layouts'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-interfaz-grafica-layouts/
 permalink: /programacion-android-interfaz-grafica_23/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /programacion-android-interfaz-grafica_23/
-  - /programacion-android-interfaz-grafica_23/
-  - /programacion-android-interfaz-grafica_23/
 categories:
   - android
   - opensource
@@ -30,7 +18,6 @@ tags:
   - layout android
   - layouts android
   - menu android
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

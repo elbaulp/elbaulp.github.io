@@ -5,22 +5,9 @@ title: 'Nueva guía: The JavaScript Anthology: 101 Essential Tips, Tricks & Hack
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-the-javascript-anthology-101-essential-tips-tricks-hacks/
 permalink: /nueva-guia-javascript-anthology-101/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![The JavaScript Anthology: 101 Essential Tips, Tricks & Hacks - Free 158 Page Preview][1]][2]

@@ -5,35 +5,22 @@ title: 'Cómo conocer el software &#8220;no libre&#8221; instalado en nuestro eq
 layout: post
 guid: http://elbauldelprogramador.org/como-conocer-el-software-no-libre-instalado-en-nuestro-equipo/
 permalink: /como-conocer-el-software-no-libre/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - curiosidades
   - How To
   - linux
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "linux"
 ---
 <div class="icoso">
 </div>
 
-Este programa lo ví en [ProyectosBeta][1].   
+Este programa lo ví en [ProyectosBeta][1].
 Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las cuales muchas serán **no libres**, con el programita **vrms** podemos conocerlos de forma sencilla.
 
 Los pasos a seguir son los siguientes:
 
-  
+
 <!--ad-->
 
 Instalamos el programa:
@@ -63,9 +50,9 @@ $ cowsay -f rms -W 60 `vrms`
   <a href="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s1600/stallman.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="256" width="238" src="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png" /></a>
 </div>
 
-* * *Fuente: 
+* * *Fuente:
 
-[Proyectosbeta][2]</p> 
+[Proyectosbeta][2]</p>
 
 
 

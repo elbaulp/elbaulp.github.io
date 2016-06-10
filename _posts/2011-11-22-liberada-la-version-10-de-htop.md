@@ -5,31 +5,12 @@ title: Liberada la versión 1.0 de htop
 layout: post
 guid: http://elbauldelprogramador.org/liberada-la-version-1-0-de-htop/
 permalink: /liberada-la-version-10-de-htop/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551789}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551789}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - linux
   - opensource
   - procesos
 tags:
   - htop
-main-class: "dev"
 main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -42,10 +23,10 @@ Podéis **consultar las mejoras** en la <a target="_blank" href="http://htop.sou
 
 El autor explica en la página del proyecto las mejoras de esta nueva versión:
 
-  
+
 <!--ad-->
 
-***</p> 
+***</p>
 
 I am extremely happy to announce htop 1.0!
 

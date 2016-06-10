@@ -10,7 +10,6 @@ categories:
   - internet
 image: AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
 modified: 2015-12-21T17:45:00+00:00
-main-class: "dev"
 main-class: "misc"
 ---
 

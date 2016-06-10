@@ -5,18 +5,6 @@ title: Chuletas de Comandos GNU/Linux
 layout: post
 guid: http://elbauldelprogramador.org/chuletas-de-comandos-gnulinux/
 permalink: /chuletas-de-comandos-gnulinux/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - linux
   - script

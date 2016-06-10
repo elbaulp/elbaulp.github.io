@@ -5,28 +5,9 @@ title: Ilya Zhitomirskiy, cofundador de Diaspora, muere a los 21 años
 layout: post
 guid: http://elbauldelprogramador.org/ilya-zhitomirskiy-cofundador-de-diaspora-muere-a-los-21-anos/
 permalink: /ilya-zhitomirskiy-cofundador-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549428}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549428}'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549428}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333549428}'
-share_count:
-  - 2
-  - 2
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 Me acabo de enterar que el cofundador de [diaspora][1] ha muerto a la temprana edad de 21 años&#8230;
 

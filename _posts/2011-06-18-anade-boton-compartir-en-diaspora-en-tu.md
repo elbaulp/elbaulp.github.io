@@ -5,24 +5,11 @@ title: Añade Botón compartir en Diaspora en tu blog (BLOGGER)
 layout: post
 guid: http://elbauldelprogramador.org/anade-boton-compartir-en-diaspora-en-tu-blog-blogger/
 permalink: /anade-boton-compartir-en-diaspora-en-tu/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
   - internet
   - noticias
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 <div class="icodias">
 </div>

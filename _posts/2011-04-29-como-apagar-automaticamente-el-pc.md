@@ -5,25 +5,12 @@ title: Cómo apagar automáticamente el PC cuando las descargas finalicen
 layout: post
 guid: http://elbauldelprogramador.org/como-apagar-automaticamente-el-pc-cuando-las-descargas-finalicen/
 permalink: /como-apagar-automaticamente-el-pc/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - curiosidades
   - How To
   - internet
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "linux"
 ---
 <div class="icoso">
 </div>
@@ -31,13 +18,13 @@ main-class: "aplicaciones"
 A veces queremos descargar algo y no queremos esperar a que finalice, pero sí que queremos apagar el pc. Una buena opción para el problema es instalar Sentinella. Lo instalamos así:
 
 ```bash
-sudo apt-get install sentinella 
+sudo apt-get install sentinella
 
 ```
 
 Sentinella aparecerá en el menu &#8220;Sistema&#8221; del escritorio. Si lo lanzamos veremos algo parecido a esto:
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">
@@ -46,9 +33,9 @@ Sentinella aparecerá en el menu &#8220;Sistema&#8221; del escritorio. Si lo lan
 
 Configura tu Sentinella con las mismas opciones de la imagen, pero asegurate que eliges tu interfaz de red correcta. Pulsa Start y listo!.
 
-* * *Fuente: 
+* * *Fuente:
 
-[howtoforge][1]</p> 
+[howtoforge][1]</p>
 
 
 

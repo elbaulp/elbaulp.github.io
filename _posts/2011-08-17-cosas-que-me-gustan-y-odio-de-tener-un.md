@@ -5,25 +5,15 @@ title: 'Cosas que me gustan y ódio de tener un smartphone [HUMOR]'
 layout: post
 guid: http://elbauldelprogramador.org/cosas-que-me-gustan-y-odio-de-tener-un-smartphone-humor/
 permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - curiosidades
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "geek"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-CJyM4IL1WA0/TkvvBHtN1TI/AAAAAAAAAuI/7_KZkLlzAok/s1600/1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" src="https://3.bp.blogspot.com/-CJyM4IL1WA0/TkvvBHtN1TI/AAAAAAAAAuI/7_KZkLlzAok/s1600/1.png" /></a>
 </div>
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">

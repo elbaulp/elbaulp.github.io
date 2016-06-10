@@ -5,15 +5,6 @@ title: 'Programación Android: Recursos compilados y no compilados'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-recursos-compilados-y-no-compilados/
 permalink: /programacion-android-recursos-2/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - opensource
@@ -21,7 +12,6 @@ tags:
   - curso android pdf
   - recursos compilados
   - recursos no compilados
-main-class: "dev"
 main-class: "android"
 ---
 <div class="icodroid">

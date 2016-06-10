@@ -5,24 +5,6 @@ title: Tipos de gobernadores en las CPUs
 layout: post
 guid: http://elbauldelprogramador.org/tipos-de-gobernadores-en-las-cpus/
 permalink: /tipos-de-gobernadores-en-las-cpus/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551779}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551779}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - aplicaciones
@@ -30,8 +12,7 @@ tags:
   - curso android pdf
   - que es cpu conservative
   - samsung galaxy scl gti9003
-main-class: "dev"
-main-class: "android"
+main-class: "linux"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s1600/gpu.jpg" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s200/gpu.jpg" /></a>
@@ -43,7 +24,7 @@ Lo que hacen los gobernadores es definir unas reglas de cambio de frecuencias en
 
 El gobernador define las características de energía de la CPU del sistema que a su vez afectan el rendimiento de la CPU. Cada gobernador tiene su propia conducta, propósito e idoneidad en términos de carga de trabajo.
 
-  
+
 <!--ad-->
 
 La frecuencia a la que una CPU puede operar viene limitada por su diseño. A menudo, una CPU solo puede funcionar en un número determinado de frecuencias discretas. Por ejemplo en mi Galaxy S son cuatro frecuencias (300mHz, 600mHz, 800mHz y 1000mHz). También, los valores de los parametros **scaling\_max\_freq y scaling\_min\_freq** se fijan por defecto a las frecuencias máximas y mínimas disponibles en la CPU. Para elegir bien un gobernador, tenemos que tener en cuenta la carga de trabajo a la que se va a someter a la CPU. A continuación voy a explicar por encima la función de cada gobernador:

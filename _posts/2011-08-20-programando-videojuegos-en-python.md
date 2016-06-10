@@ -5,31 +5,21 @@ title: Programando Videojuegos en Python
 layout: post
 guid: http://elbauldelprogramador.org/programando-videojuegos-en-python/
 permalink: /programando-videojuegos-en-python/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-  - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-
-  
-  
 categories:
   - juegos
   - python
-main-class: "dev"
-main-class: "juegos"
+main-class: "articulos"
 ---
 <div class="icopy">
 </div>
 
-Aunque no es la faceta más famosa de Python, Python es un lenguage con bastantes posibilidades para programar videojuegos. Por un lado convina la profundidad y recursos de usar las librerías de C/C++ y por otro la facilidad cercana a usar Flash, con un rendimiento medio entre ambas. Por lo que en muchas ocasiones en un buen lenguaje para programar cosas complejas de forma rápida, aunque obviamente sacrificando rendimiento, al ser juegos interpretados y no compilados. 
+Aunque no es la faceta más famosa de Python, Python es un lenguage con bastantes posibilidades para programar videojuegos. Por un lado convina la profundidad y recursos de usar las librerías de C/C++ y por otro la facilidad cercana a usar Flash, con un rendimiento medio entre ambas. Por lo que en muchas ocasiones en un buen lenguaje para programar cosas complejas de forma rápida, aunque obviamente sacrificando rendimiento, al ser juegos interpretados y no compilados.
 
 <div>
   A continuación haré una pequeña reseña de las librerías más útiles para desarollar videojuegos:
 </div>
 
-  
+
 <!--ad-->
 
 <div>

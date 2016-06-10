@@ -5,18 +5,6 @@ title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in th
 layout: post
 guid: http://elbauldelprogramador.org/esnifando-la-red-pruebas-de-seguridad-ettercap-y-wireshark-man-in-the-middle/
 permalink: /esnifando-la-red-pruebas-de-seguridad/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - internet
@@ -24,8 +12,7 @@ categories:
 tags:
   - ettercap en español
   - tutorial ettercap comandos
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
@@ -34,7 +21,7 @@ Recientemente he leido los problemas de seguridad que tiene [WhatsApp][1], con l
 
 Bien, vamos con los programas, he usado [ettercap][3] y [wireshark][4]. Estos programitas se usan para lo siguiente, Ettercap principalmente lo he usado para el envenenamiento ARP de la máquina objetivo (en este caso el móvil), para realizar la técnica de *Man on the Middle*, que consiste en establecer la puerta de enlace predeterminada del equipo objetivo a la dirección ip del equipo atacante. De esta manera nuestro equipo atacante estará situado entre el router y el objetivo, logrando así escuchar todo el tráfico de red que genera el objetivo. (Más adelante explicaré como hacer esto).
 
-  
+
 <!--ad-->
 
 Wireshark finalmente lo uso para *&#8220;Ver&#8221;* el tráfico que genera el objetivo.
@@ -43,7 +30,7 @@ Podemos instalar estos dos programas mediante la consola:
 
 ```bash
 hkr@hkr-pc:~$ sudo aptitude install ettercap wireshark
-```</p> 
+```</p>
 
 Una vez instalado, abrimos ettercap:
 
@@ -63,7 +50,7 @@ Una vez abierta, le damos a Sniff -> Unified sniffing, y tendremos que introduci
   <a href="https://4.bp.blogspot.com/-bJscHRVIt3U/TdlSWHzopEI/AAAAAAAAAg0/9iVj3S96Jpo/s1600/interface.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="51" width="400" src="https://4.bp.blogspot.com/-bJscHRVIt3U/TdlSWHzopEI/AAAAAAAAAg0/9iVj3S96Jpo/s400/interface.png" /></a>
 </div>
 
-El siguente paso es escanear la red en busca de host, Hosts -> Scan for hosts. Al pulsar comenzará a escanear y en el recuadro de abajo nos aparecerá cuantos host encontró, en mi caso: 
+El siguente paso es escanear la red en busca de host, Hosts -> Scan for hosts. Al pulsar comenzará a escanear y en el recuadro de abajo nos aparecerá cuantos host encontró, en mi caso:
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://2.bp.blogspot.com/-UHuz1c4HInM/TdlTPkAoLYI/AAAAAAAAAg8/gEU_PTHohgA/s1600/host.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="266" width="400" src="https://2.bp.blogspot.com/-UHuz1c4HInM/TdlTPkAoLYI/AAAAAAAAAg8/gEU_PTHohgA/s400/host.png" /></a>
@@ -83,7 +70,7 @@ Ahora hacemos Start -> Start sniffing, y despues, procedemos al envenenamiento A
 
 Si ejecutamos antes de realizar todo esto arp -a en el equipo objetivo, vemos que la puerta de enlace tiene una MAC asociada, despues de hacer en envenenamiento, esta MAC es la del equipo atacante.
 
-Ahora llega el turno de wireshark, 
+Ahora llega el turno de wireshark,
 
 ```bash
 hkr@hkr-pc:~$ sudo wireshark

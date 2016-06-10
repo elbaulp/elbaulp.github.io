@@ -5,15 +5,6 @@ title: Rootear Samsung Galaxy S GT-I9003
 layout: post
 guid: http://elbauldelprogramador.org/rootear-samsung-galaxy-s-gt-i9003/
 permalink: /rootear-samsung-galaxy-s-gt-i9003/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
 categories:
   - android
   - aplicaciones
@@ -21,15 +12,14 @@ tags:
   - curso android pdf
   - samsung galaxy scl gti9003
   - xda
-main-class: "dev"
-main-class: "android"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
 
 Hacía tiempo que quería rootear mi terminal, y hoy me he decidido a hacerlo. Hay mucha información sobre como rootear terminales Android, sin embargo voy a escribir esta entrada explicando el proceso bajo GNU/Linux. (Aunque también vale para Windows, simplemente hay que descargar SuperOneClick e ir al paso 3)
 
-  
+
 <!--ad-->
 
 Como primer paso, vamos a descargar la aplicación SuperOneClick de esta [dirección][1]. Como vamos a ejecutarla bajo Gnu/linux, necesitamos seguir los siguientes pasos para lograr ejecutarla:

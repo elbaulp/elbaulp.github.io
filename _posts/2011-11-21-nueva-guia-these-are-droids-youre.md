@@ -5,31 +5,12 @@ title: 'Nueva Guía: These Are The Droids You&#8217;re Looking For: An Android G
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-these-are-the-droids-youre-looking-for-an-android-guide/
 permalink: /nueva-guia-these-are-droids-youre/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551792}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551792}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - android
   - cursos
 tags:
   - curso android pdf
-main-class: "dev"
-main-class: "android"
+main-class: "misc"
 ---
 [<img class="alignleft" title="These Are The Droids You're Looking For: An Android Guide" alt="These Are The Droids You're Looking For: An Android Guide" src="https://lh4.googleusercontent.com/-Pn_3Sygxwqw/TsmHUU3hk3I/AAAAAAAAB1I/NzS8wVIBLtw/s291/android-guide-big-240x291.jpg"  />][1]
 
@@ -53,7 +34,7 @@ This amazing manual will teach you:
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].*** 
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 

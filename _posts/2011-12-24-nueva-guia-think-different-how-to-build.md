@@ -5,28 +5,9 @@ title: 'Nueva guía &#8211; Think Different: How to Build Your Own Hackintosh'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-think-different-how-to-build-your-own-hackintosh/
 permalink: /nueva-guia-think-different-how-to-build/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551759}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551759}'
-share_count:
-  - 0
-  - 0
 categories:
   - cursos
   - SO
-main-class: "dev"
 main-class: "misc"
 ---
 <div style="float:left; margin-right:1em;">

@@ -5,28 +5,9 @@ title: Busca en google lo siguiente y verás que pasa
 layout: post
 guid: http://elbauldelprogramador.org/busca-en-google-lo-siguiente-y-veras-que-pasa/
 permalink: /busca-en-google-lo-siguiente-y-veras/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551758}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551758}'
-share_count:
-  - 0
-  - 0
 categories:
   - curiosidades
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 sqrt(cos(x))\*cos(200 x)+sqrt(abs(x))-.07)\*(4-x*x)^0.01, sqrt(9-x^2),-sqrt(9-x^2) from -4.5 to 4.5
 

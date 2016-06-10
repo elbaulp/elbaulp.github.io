@@ -5,18 +5,6 @@ title: 'Fundamentos programación Android: Intents y AndroidManifest'
 layout: post
 guid: http://elbauldelprogramador.org/fundamentos-programacion-android-intents-y-androidmanifest/
 permalink: /fundamentos-programacion-android_16/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  - /fundamentos-programacion-android_16/
-  - /fundamentos-programacion-android_16/
-  - /fundamentos-programacion-android_16/
 categories:
   - android
   - opensource
@@ -25,7 +13,6 @@ tags:
   - curso android pdf
   - intents android
   - startactivityforresult android example
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -38,7 +25,7 @@ Las Actividades, Servicios y BroadcastReceiver se activan a través de mensajes 
 
 Hay tres métodos para activar cada uno de los componentes:
 
-  
+
 <!--ad-->
 
   * Las actividades se muestran pasando un Intent al método ***Context.startActivity()*** o ***Activity.startActivityForResult()***. Una vez lanzada la actividad, dentro de la misma podemos abrir el objeto Intent para obtener los parámetros usando el método ***getIntent()***

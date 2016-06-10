@@ -5,31 +5,12 @@ title: 'Programación Android: Usando la cláusula Where'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-usando-la-clausula-where/
 permalink: /programacion-android-usando-la-clausula/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551772}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":2,"stumble":0,"pinit":0,"count":2,"time":1333551772}'
-share_count:
-  - 0
-  - 0
 categories:
   - android
   - opensource
 tags:
   - Cláusula where android
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -47,7 +28,7 @@ En esta entrada vamos a ver ambas.
 
 Imaginemos que queremos recuperar un lugar (De la aplicación [FavSites][2]) cuyo id sea 23. Usaríamos el siguiente código:
 
-  
+
 <!--ad-->
 
 ```java

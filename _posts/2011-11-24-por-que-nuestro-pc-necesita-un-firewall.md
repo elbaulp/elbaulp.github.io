@@ -5,24 +5,6 @@ title: Por qué nuestro PC necesita un firewall activado
 layout: post
 guid: http://elbauldelprogramador.org/por-que-nuestro-pc-necesita-un-firewall-activado/
 permalink: /por-que-nuestro-pc-necesita-un-firewall/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551786}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":0,"stumble":0,"pinit":0,"count":0,"time":1333551786}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - internet
   - seguridad
@@ -32,8 +14,7 @@ tags:
   - ejemplos de firewall
   - seguridad en la red
   - seguridad firewall
-main-class: "dev"
-main-class: "internet"
+main-class: "articulos"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="so" class="icono" /></a>
@@ -57,11 +38,11 @@ O <a target="_blank" href="http://www.linuxbsdos.com/2010/07/20/pclinuxos-2010-r
 
 &#8230;
 
-*Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.*</p> 
+*Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.*</p>
 
 Lo que revelan estos comentarios es que muchos en nuestra comunidad no entienden las bases de la seguridad de red. Espero que este corto artículo pueda dejar un poco más claro este tema.
 
-  
+
 <!--ad-->
 
 Lo fundamental en esta discusión es comprender el papel general que desempeña un firewall en un ordenador o sistema de ordenadores. En términos simples, un firewall protege un ordenador de ataques de red. Y hay firewalls basados en host y en red. Un firewall basado en host es aquel que se ejecuta y protege a un solo dispositivo. Ese sería el que se ejecuta en un ordenador personal, ya sea sobre un sistema Linux, BSD o cualquier otro sistema operativo.

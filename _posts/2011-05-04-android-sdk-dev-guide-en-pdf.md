@@ -5,31 +5,18 @@ title: Android SDK Dev Guide en PDF
 layout: post
 guid: http://elbauldelprogramador.org/android-sdk-dev-guide-en-pdf/
 permalink: /android-sdk-dev-guide-en-pdf/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - cursos
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
 
 He estado buscando la dev guide de Android en PDF para no tener que leerla en el PC y poder imprimirla, la encontré en [czechxan.com][1]. A continuación dejo los enlaces:
 
-  
+
 <!--ad-->
 
 

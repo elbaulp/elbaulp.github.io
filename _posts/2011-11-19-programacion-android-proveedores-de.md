@@ -5,30 +5,11 @@ title: 'Programación Android: Proveedores de Contenido &#8211; Introducción'
 layout: post
 guid: http://elbauldelprogramador.org/programacion-android-proveedores-de-contenido-introduccion/
 permalink: /programacion-android-proveedores-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_count:
-  - 0
-  - 0
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551794}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551794}'
-share_data:
-  - '[]'
-  - '[]'
 categories:
   - android
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <div class="separator" style="clear: both; text-align: center;">
@@ -39,7 +20,7 @@ Android llama Proveedor de contenido a la abstracción de datos en Servícios. D
 
 Para recuperar datos de un cv o guardarlos en él, se necesitan usar un conjunto de Uris REST. Por ejemplo, si quisiéramos recuperar un conjunto de notas desde un cv que es una encapsulación de una base de datos de Notas, necesitaríamos usar una URI parecida a esta:
 
-  
+
 <!--ad-->
 
 ```bash

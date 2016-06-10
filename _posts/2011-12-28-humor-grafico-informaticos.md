@@ -5,29 +5,10 @@ title: 'Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211;
 layout: post
 guid: http://elbauldelprogramador.org/humor-grafico-informaticos-programadores-geek-9gag-com-parte-ii/
 permalink: /humor-grafico-informaticos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":5,"stumble":0,"pinit":0,"count":5,"time":1333551757}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":5,"stumble":0,"pinit":0,"count":5,"time":1333551757}'
-share_count:
-  - 0
-  - 0
 categories:
   - curiosidades
   - Humor
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "geek"
 ---
 Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] relacionadas con la tecnología y la informática os traigo una nueva recopilación extraida de 9gag.com:
 
@@ -35,7 +16,7 @@ Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] 
   <a href="https://4.bp.blogspot.com/-1bmgsE8XmgI/TvsBKFmmqNI/AAAAAAAAB-g/5QxN3W_m1vE/s1600/eternalwar.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="374" width="400" src="https://4.bp.blogspot.com/-1bmgsE8XmgI/TvsBKFmmqNI/AAAAAAAAB-g/5QxN3W_m1vE/s400/eternalwar.jpg" /></a>
 </div>
 
-  
+
 <!--ad-->
 
 <div class="separator" style="clear: both; text-align: center;">

@@ -5,28 +5,15 @@ title: 'MasterBranch &#8211; Crea tu perfil como Programador y muestra todos tus
 layout: post
 guid: http://elbauldelprogramador.org/masterbranch-crea-tu-perfil-como-programador-y-muestra-todos-tus-proyectos/
 permalink: /masterbranch-crea-tu-perfil-como/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - internet
   - opensource
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 MasterBranch es una web para desarrolladores y empresarios que buscan buenos programadores. Es un lugar en el que los desarrolladores pueden crear su perfil, el cual se actualiza automáticamente a través de la actividad de su actividad en proyectos de código libre o privativo, y para los empresarios es un lugar donde encontrar cadidatos para crear sus aplicaciones mirando las habilidades de los desarrolladores.
 
-  
+
 <!--ad-->
 
 Hace algún tiempo me registré en esta web que me parece muy interesante, ya que permite reunir todos los proyectos en los que participas y, basandose en ellos elabora tus habilidades en los distintos lenguajes de programación.
@@ -43,9 +30,9 @@ Os dejo mi [Perfil][1], aunque aún falta por agregar el proyecto que ando desar
   <a href="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s1600/masterbranch.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="293" width="400" src="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s400/masterbranch.png" /></a>
 </div>
 
-* * *Sitio Web: 
+* * *Sitio Web:
 
-[masterbranch.com][3]</p> 
+[masterbranch.com][3]</p>
 
 
 

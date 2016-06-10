@@ -5,30 +5,11 @@ title: Nueva aplicación móvil para el blog
 layout: post
 guid: http://elbauldelprogramador.org/nueva-aplicacion-movil-para-el-blog/
 permalink: /nueva-aplicacion-movil-para-el-blog/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-share_data:
-  - '[]'
-  - '[]'
-share_all_data:
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551766}'
-  - '{"like_count":"0","share_count":"0","twitter":0,"plusone":1,"stumble":0,"pinit":0,"count":1,"time":1333551766}'
-share_count:
-  - 0
-  - 0
 categories:
   - aplicaciones
   - internet
   - noticias
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "misc"
 ---
 He creado una aplicación para móviles a través de <a target="_blank" href="http://mobile.conduit.com/">conduit</a> para facilitar la lectura del blog en disposotívos móviles.
 
@@ -40,7 +21,7 @@ Si intentáis acceder al blog desde el móvil os preguntará si queréis ser red
   <a href="https://4.bp.blogspot.com/--YrtXhBWyyY/TuXSGW1jsVI/AAAAAAAAB6Q/qLpuyYADcxo/s1600/SC20111212-110634.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://4.bp.blogspot.com/--YrtXhBWyyY/TuXSGW1jsVI/AAAAAAAAB6Q/qLpuyYADcxo/s400/SC20111212-110634.png" /></a>
 </div>
 
-  
+
 <!--ad-->
 
 Una vez que se accede a la versión móvil, ya sea desde la aplicación o desde el navegador, en la parte inferior hay tres pestañas para ver las publicaciones en el blog, twitter y facebook respectivamente:

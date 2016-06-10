@@ -5,22 +5,9 @@ title: 'Nueva guía: Outsourcing Web Projects: 6 Steps to a Smarter Business'
 layout: post
 guid: http://elbauldelprogramador.org/nueva-guia-outsourcing-web-projects-6-steps-to-a-smarter-business/
 permalink: /nueva-guia-outsourcing-web-projects-6/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - internet
-main-class: "dev"
 main-class: "misc"
 ---
 [![Outsourcing Web Projects: 6 Steps to a Smarter Business - Free Preview!][1]][2]
