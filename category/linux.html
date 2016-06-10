@@ -1,14 +1,14 @@
 ---
-layout: default
+layout: minimal
 title: Artículos sobre Linux
 main-class: "linux"
 ---
 
 <main class="home" id="scroll" role="main" >
-    <h1 class="title-category">CSS</h1>
+    <h1 class="title-category">Linux</h1>
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
-        {% if post.main-class == 'css' %}
+        {% if post.main-class == 'linux' %}
             <article class="box-item post-{{post.main-class}}" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
