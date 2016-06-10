@@ -18,7 +18,7 @@ blogger_author:
 categories:
   - Humor
 main-class: "dev"
-main-class: "Geek"
+main-class: "geek"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TL8EHtk9VtI/AAAAAAAAADI/mNv42rNDIbI/s1600/4_sQM3DoGehEmquq96zE.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="development programming software android technology programmer" border="0" height="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TL8EHtk9VtI/AAAAAAAAADI/mNv42rNDIbI/s320/4_sQM3DoGehEmquq96zE.jpg" width="202" /></a>

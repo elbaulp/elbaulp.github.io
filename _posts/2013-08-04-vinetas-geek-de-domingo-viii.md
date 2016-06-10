@@ -12,7 +12,7 @@ tags:
   - humor geek grafico
   - humor informatico
   - viñetas humor
-main-class: "Geek"
+main-class: "geek"
 ---
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!  
 

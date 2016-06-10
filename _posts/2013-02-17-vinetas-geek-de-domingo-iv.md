@@ -10,7 +10,7 @@ tags:
   - chiste grafico de informatica
   - humor geek grafico
 format: gallery
-main-class: "Geek"
+main-class: "geek"
 ---
 
 

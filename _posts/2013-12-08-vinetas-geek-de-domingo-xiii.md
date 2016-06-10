@@ -5,7 +5,7 @@ layout: post
 permalink: /vinetas-geek-de-domingo-xiii/
 categories:
   - Geek
-main-class: "Geek"
+main-class: "geek"
 ---
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 

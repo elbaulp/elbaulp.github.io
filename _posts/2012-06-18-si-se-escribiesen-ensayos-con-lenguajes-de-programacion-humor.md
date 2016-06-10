@@ -11,7 +11,7 @@ tags:
   - ensayo lenguaje de programacion
   - ensayos
 description: "Si se escribiesen ensayos con lenguajes de programación [HUMOR]"
-main-class: "Geek"
+main-class: "geek"
 ---
 <figure>
   <img src="/assets/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp"   />
