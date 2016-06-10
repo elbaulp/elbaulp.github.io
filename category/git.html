@@ -1,13 +1,14 @@
 ---
 layout: default
-main-class: 'dev'
+title: Artículos sobre el control de versiones GIT
+main-class: "git"
 ---
 
-<main class="home" id="scroll" role="main" >
-    <h1 class="title-category">Desarrollo</h1>
+<main class="home" id="post" role="main" >
+    <h1 class="title-category">GIT</h1>
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
-        {% if post.main-class == 'dev' %}
+        {% if post.main-class == 'git' %}
             <article class="box-item post-{{post.main-class}}" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">

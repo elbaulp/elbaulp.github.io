@@ -1,15 +1,14 @@
 ---
-layout: minimal
-title: Traducciones del podcast Security now!
-description: "Lista de artículos que he ido traduciendo de episodios interesantes"
-main-class: "security-now"
+layout: default
+title: Artículos sobre Administración de sistemas y servidores
+main-class: "servidores"
 ---
 
 <main class="home" id="scroll" role="main" >
-    <h1 class="title-category">Security Now!</h1>
+    <h1 class="title-category">Administración de Servidores</h1>
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
-        {% if post.main-class == 'security-now' %}
+        {% if post.main-class == 'servidores' %}
             <article class="box-item post-{{post.main-class}}" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">

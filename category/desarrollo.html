@@ -1,17 +1,18 @@
 ---
 layout: default
-main-class: 'html'
+title: Artículos de desarrollo/programación
+main-class: "dev"
 ---
 
-<main class="home" id="post" role="main" >
-    <h1 class="title-category">HTML</h1>
+<main class="home" id="scroll" role="main" >
+    <h1 class="title-category">Desarrollo</h1>
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
-        {% if post.main-class == 'html' %}
+        {% if post.main-class == 'dev' %}
             <article class="box-item post-{{post.main-class}}" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
-                        
+
                         <time datetime="{{ post.date | date_to_xmlschema }}">
                             {{ post.date | date: "%B %d, %Y" }}
                         </time>
