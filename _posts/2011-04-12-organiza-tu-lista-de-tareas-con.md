@@ -1,35 +1,21 @@
 ---
 title: Organiza tu lista de Tareas con Remember the Milk
-
 layout: post
 permalink: /organiza-tu-lista-de-tareas-con/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
   - internet
   - noticias
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 <div class="iconews">
 </div>
 
 Si eres de los que tiene cosas y cosas pendientes que hacer y no hay forma de que te organices, [Remember The Milk][1] puede ser una alternativa a las tareas de Gmail, esta web lleva bastante tiempo en la nube, pero yo la he descubierto hace poco.  
-  
+
 <!--ad-->
 
-Personalmente me ha gustado esta web ya que permite organizar las tareas por prioridades, etiquetas, localización, repetirlas cada año, dia, semana etc. 
+Personalmente me ha gustado esta web ya que permite organizar las tareas por prioridades, etiquetas, localización, repetirlas cada año, dia, semana etc.
 
 Tambien disponen de aplicación para android: [Remember de Milk Android][2]
 

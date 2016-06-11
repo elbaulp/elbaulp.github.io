@@ -1,24 +1,10 @@
 ---
 title: Codificación
-
 layout: post
 permalink: /codificacion/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - SO
-main-class: "dev"
-main-class: "SO"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
@@ -44,7 +30,7 @@ Dado un número x, su representación en una dada base b consiste en escribirlo 
   <a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
 </div>
 
-donde el signo <var>s</var> es igual a 0 o 1 y los coeficientes a<sub>j</sub> son enteros positivos menores que *b*. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).   
+donde el signo <var>s</var> es igual a 0 o 1 y los coeficientes a<sub>j</sub> son enteros positivos menores que *b*. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).
 Los números se representan en memoria como una cadena de *bits* que pueden tomar los valores 0 ó 1. Se denomina *byte* a un grupo de 8 bits consecutivos.
 
 ## 2. Representación de números enteros
@@ -59,7 +45,7 @@ En representación binaria un número entero *n* se escribe como
 </p>
 
 donde cada coeficiente *a<sub>j</sub>* es igual a 1 ó 0. Usualmente los números enteros ocupaban 4 bytes de memoria (32 bits), aunque en las computadoras modernas se pueden usar enteros de 64 bits.  
-  
+
 Los números que pueden almacenarse en la representación de 4 bytes están en el rango:
 
 <p style="text-align:center;">
@@ -123,7 +109,7 @@ por lo que, después de eliminar la parte entera y agregando el signo y el expon
 Este sistema se caracteriza como hemos visto anteriormente por usar solo dos dígitos, 0 y 1. Es la forma más facil de operar para el ordenador.
 
 Para pasar de decimal a binario hacemos lo siguiente: Dividir el número entre 2 hasta que el cociente sea menor o igual a 1, cuando terminemos, recogemos los resultados desde el último cociente hasta el primer resto.  
-Por ejemplo, para pasar el número decimal 15 a binario: 15/2 -> resto 1, 7/2 -> resto 1, 3/2 -> resto 1, como el cociente de esta últmia división es menor o igual a 1, paramos. El número en binario sería desde el cociente de la división 3/2 (Que es 1), y todos los demas restos. Es decir, el número en binario se recoge de derecha a izquierda en los resultados de las divisiones. (15 en binario es 1111).   
+Por ejemplo, para pasar el número decimal 15 a binario: 15/2 -> resto 1, 7/2 -> resto 1, 3/2 -> resto 1, como el cociente de esta últmia división es menor o igual a 1, paramos. El número en binario sería desde el cociente de la división 3/2 (Que es 1), y todos los demas restos. Es decir, el número en binario se recoge de derecha a izquierda en los resultados de las divisiones. (15 en binario es 1111).
 Para hacer el proceso contrario, pasar de binario a decimal, se han de numerar las posiciones (de derecha a izquierda y empezando por 0), se calcula de la forma base elevado a la posición por el bit (0 ó 1). Ejemplo:
 
 <p style="text-align:center;">
@@ -215,237 +201,237 @@ De octal a binario y de binario a hexadecimal (Agrupando de 4 en 4 bits.)
     <td>
       Decimal
     </td>
-    
+
     <td>
       Exceso-3
     </td>
-    
+
     <td>
       BCD (Decimal codificando en binario)
     </td>
-    
+
     <td>
       AIKEN
     </td>
-    
+
     <td>
       GRAY
     </td>
   </tr>
-  
+
   <tr>
     <td>
     </td>
-    
+
     <td>
       0011
     </td>
-    
+
     <td align="center">
       0000
     </td>
-    
+
     <td>
       0000
     </td>
-    
+
     <td>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       1
     </td>
-    
+
     <td>
       0100
     </td>
-    
+
     <td align="center">
       0001
     </td>
-    
+
     <td>
       0001
     </td>
-    
+
     <td>
       01
     </td>
   </tr>
-  
+
   <tr>
     <td>
       2
     </td>
-    
+
     <td>
       0101
     </td>
-    
+
     <td align="center">
       0010
     </td>
-    
+
     <td>
       0010
     </td>
-    
+
     <td>
       11
     </td>
   </tr>
-  
+
   <tr>
     <td>
       3
     </td>
-    
+
     <td>
       0110
     </td>
-    
+
     <td align="center">
       0011
     </td>
-    
+
     <td>
       0011
     </td>
-    
+
     <td>
       10
     </td>
   </tr>
-  
+
   <tr>
     <td>
       4
     </td>
-    
+
     <td>
       <strong>0111</strong>
     </td>
-    
+
     <td align="center">
       0100
     </td>
-    
+
     <td>
       <strong>0100</strong>
     </td>
-    
+
     <td>
       000
     </td>
   </tr>
-  
+
   <tr>
     <td>
       5
     </td>
-    
+
     <td>
       1000
     </td>
-    
+
     <td align="center">
       0101
     </td>
-    
+
     <td>
       1011
     </td>
-    
+
     <td>
       001
     </td>
   </tr>
-  
+
   <tr>
     <td>
       6
     </td>
-    
+
     <td>
       1001
     </td>
-    
+
     <td align="center">
       0110
     </td>
-    
+
     <td>
       1100
     </td>
-    
+
     <td>
       011
     </td>
   </tr>
-  
+
   <tr>
     <td>
       7
     </td>
-    
+
     <td>
       1010
     </td>
-    
+
     <td align="center">
       0111
     </td>
-    
+
     <td>
       1101
     </td>
-    
+
     <td>
       010
     </td>
   </tr>
-  
+
   <tr>
     <td>
       8
     </td>
-    
+
     <td>
       1011
     </td>
-    
+
     <td align="center">
       1000
     </td>
-    
+
     <td>
       1110
     </td>
-    
+
     <td>
       110
     </td>
   </tr>
-  
+
   <tr>
     <td>
       9
     </td>
-    
+
     <td>
       1100
     </td>
-    
+
     <td align="center">
       1001
     </td>
-    
+
     <td>
       1111
     </td>
-    
+
     <td>
       111
     </td>
@@ -467,7 +453,7 @@ Gray es el cambio de un bit, o sea, que de un numero a otro solo cambiará un bi
 
 
 A nivel de signo, se puede considerar como Signo/magnitud, Complemento a 1 o Complemento a 2. (Uso de Codificación binaria).  
-  
+
 En signo/magnitud, el bit de más a la izquierda esta reservado para el signo, y el resto para la longitud, entonces el valor máximo a representar sera (2<sup>(n-1)</sup>)*2 Para positivos y negativos, con lo cual tenemos un 0 para positivo y otro negativo, que se controla de manera interna en la maquina. El -7 en 8bits seria el 10000111.
 
 El complemento a 1 es cambiar ceros por unos, Osea, que el 7 binario (111) en negativo es el (000), el dos en binario es el 10, para pasar a -2 en complemento a 1, seria 01 (-2)
@@ -495,7 +481,7 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
 2             3             7      +      1
 1111   0010   1111   0011   1111   0111   1100   0001 → 2371
 1111   0010   1111   0011   1111   0111   1101   0001 → -2371
-         2             3             7      -      1 
+         2             3             7      -      1
 
 ```
 
@@ -517,7 +503,7 @@ Se pone el numero y al final se añade el signo:
 
 <a name="indices"></a>  
 <sup>1</sup> En doble precisión se utilizan 64 bits (8 bytes): 1 para el signo, 11 para el exponente y 52 para la mantisa.  
-  
+
 <sup>2</sup> En la convención IEEE-754 el exponente varía en el rango [-126, 127] y se reservan los restantes valores para representar números muy pequeños y muy grandes.
 
 

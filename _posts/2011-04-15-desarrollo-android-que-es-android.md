@@ -1,27 +1,13 @@
 ---
 title: 'Desarrollo android &#8211; ¿Qué es Android? &#8211; Traducción de developer.android.com'
-
 layout: post
 permalink: /desarrollo-android-que-es-android/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - aplicaciones
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -37,15 +23,15 @@ main-class: "android"
     <p>
       Android es un conjunto de software para dispositivos móviles que incluye Sistema Operatívo, <a href="http://es.wikipedia.org/wiki/Middleware">middleware</a> y las aplicaciones principales. El <a href="http://developer.android.com/sdk/index.html">SDK de Android</a><br /> proporciona las herramientas y APIs necesarias para comenzar a desarrollar aplicaciones para la plataforma Android usando el lenguaje<br /> de programación Java.
     </p>
-    
+
     <p>
       <br /><!--ad-->
     </p>
-    
+
     <h2>
       Características
     </h2>
-    
+
     <ul>
       <li>
         <strong>Un Framework</strong> que permite la reutilización y sustitición<br /> de componentes
@@ -78,47 +64,47 @@ main-class: "android"
         <strong>Un rico entorno de desarrollo</strong> incluyendo un emulador de dispositivos,<br /> herramientas para depuración, perfiles de remdimiento y memória y plugin para el IDE Ecplipse
       </li>
     </ul>
-    
+
     <h2>
       Arquitectura Android
     </h2>
-    
+
     <p>
       El siguiente diagrama muestra los principales componentes del sistema operatívo Android.<br /> Cada sección se describe con más detalle abajo.
     </p>
-    
+
     <p>
       <img src="http://bit.ly/ebtxQx" alt="Android System Architecture"  />
     </p>
-    
+
     <h2>
       Aplicaciones
     </h2>
-    
+
     <p>
       Android viene por defecto con un conjunto de aplicaciones básicas<br /> como un cliente de correo electrónico, programa de SMS, calendario, mapas,<br /> navegador, contactos etc. Todas las aplicaciones están escritas en java.
     </p>
-    
+
     <p>
       <a name="application_framework" id="application_framework"></a>
     </p>
-    
+
     <h2>
       Framework
     </h2>
-    
+
     <p>
       Al proporcionar una plataforma de desarrollo libre,<br /> Android ofrece a los desarrolladores la posibilidad de construir<br /> aplicaciones muy solidas e innovadoras. Los desarrolladores tienen la<br /> libertad de aprovechar el hardware del dispositivo, acceder a la información<br /> de localización, ejecutar servícios en segundo plano, fijar alarmas, añadir<br /> notificaciones a la barra de estado, y mucho, mucho más.
     </p>
-    
+
     <p>
       Los desrrolladores tienen pleno acceso a las mismas APIs usadas por las apliaciones principales.<br /> La arquitectura de la aplicación está diseñada para simplificar la reutilización de los componentes;<br /> cualquier aplicación puede publicar sus capacidades y cualquier otra aplicación puede<br /> hacer uso de esas capacidades (sujeto a las restricciones de seguridad del framework).<br /> Este mismo mecanismo permite que los componentes sean reemplazados por los usuarios.
     </p>
-    
+
     <p>
       Esencialmente todas las aplicaciones son un conjunto de servicios y sistemas, incluyendo:
     </p>
-    
+
     <ul>
       <li>
         Un rico y extensible conjunto de<a href="/resources/tutorials/views/index.html"><i>Vistas</i></a><br /> que se usan para construir una aplicación, incluyendo listas, grids, cajas de texto,<br /> botones e incluso un navegador web embebido.
@@ -136,19 +122,19 @@ main-class: "android"
         Un <code><a href="/reference/android/app/Activity.html">Gestor de antividades</a></code> que gestiona<br /> el ciclo de vida de las aplicaciones y proporciona una navegación backstack común
       </li>
     </ul>
-    
+
     <p>
       Para obtener más detalles y un tutorial sobre las aplicaciones, vea el<a href="/resources/tutorials/notepad/index.html">Notepad Tutorial</a>.
     </p>
-    
+
     <h2>
       Librerías
     </h2>
-    
+
     <p>
       Android incluye un conjunto de librerías C/C++ usadas por varios componentes<br /> del sistema Android. Estas capaciddes están expuestas para los desarrolladores a<br /> través del framework android. Abajo se listan algunas de las librerías principales:
     </p>
-    
+
     <ul>
       <li>
         <strong>System C library</strong> &#8211; una implementación de la librería<br /> estandar del systema de C (libc) derivada de BSD
@@ -175,32 +161,32 @@ main-class: "android"
         <strong>SQLite</strong> &#8211; Un potente y ligero motor de base de datos relacional disponible<br /> para todas las aplicaciones
       </li>
     </ul>
-    
+
     <h2>
       Android Runtime
     </h2>
-    
+
     <p>
       Android incluye un conjunto de librerías principales que proporcionan la mayor parte<br /> de la funcionalidad disponible en la librerías de Java.
     </p>
-    
+
     <p>
       Cada aplicación android se ejecuta en su propio proceso, que es una instancia<br /> propia de la máquina virtual de Dalvik. Dalvik ha sido escrito para que un<br /> dispositivo pueda ejecutar múltiples MVs eficientemente. La máquina virtual de<br /> Dalvik ejecuta archivos en formato .dex(que son sus ejecutables). Este formato<br /> está optimizado para consumir el mínimo de memória. La MV está basada en registros,<br /> y ejecuta clases compiladas en java que posteriormente se transforman al formato<br /> .dex por la herramienta "dx"
     </p>
-    
+
     <p>
       La MV de Dalvik se basa en el kernel de Linux para obtener su funcionalidad, como<br /> hilos(Threading) y administración de memória a bajo nivel.
     </p>
-    
+
     <h2>
       El kernel Linux
     </h2>
-    
+
     <p>
       Android se basa en la versión 2.6 de linux para el sistema de servícios esenciales<br /> como seguridad, gestión de memoria, gestión de procesos, pila de red y el conductor de modelos.<br /> El kernel también actua como una capa de abstracción entre el hardware y el resto del software.
     </p></p>
   </div>
-  
+
   <p>
     <a href="#top" style="float:right">&uarr; Go to top</a>
   </p>

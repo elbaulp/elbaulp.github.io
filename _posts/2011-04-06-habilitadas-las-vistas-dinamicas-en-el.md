@@ -1,25 +1,11 @@
 ---
 title: Habilitadas las vistas dinámicas en el blog
-
 layout: post
 permalink: /habilitadas-las-vistas-dinamicas-en-el/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
   - internet
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 Hace poco blogger añadió una nueva característica para los feeds, las vistas dinámicas, las cuales acabo de activar hace poco. Estas vistas permiten ver el feed del blog con distintos estilos.
 

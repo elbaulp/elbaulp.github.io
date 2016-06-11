@@ -1,26 +1,12 @@
 ---
 title: Mejoras para el proyecto PyLabra
-
 layout: post
 permalink: /mejoras-para-el-proyecto-pylabra/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - noticias
   - opensource
 main-class: "dev"
-main-class: "aplicaciones"
 ---
 <div class="icopy">
 </div>

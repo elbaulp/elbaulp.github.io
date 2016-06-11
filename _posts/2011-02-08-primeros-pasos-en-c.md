@@ -1,29 +1,15 @@
 ---
 title: Primeros pasos en C++
-
 layout: post
 permalink: /primeros-pasos-en-c/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - C
 main-class: "dev"
-main-class: "C"
 ---
 <div class="iconcpp">
 </div>
 
-[Como dije][1] voy a empezar a escribir sobre C++, y lo que voy a hacer en esta primera entrada es dejar dos manuales en pdf para que sirvan como iniciación al que no sepa mucho de programación, y mas concretamente de C++. 
+[Como dije][1] voy a empezar a escribir sobre C++, y lo que voy a hacer en esta primera entrada es dejar dos manuales en pdf para que sirvan como iniciación al que no sepa mucho de programación, y mas concretamente de C++.
 
 Despues de esta entrada, comenzaré a escribir sobre POA (Programación orientada a Objetos) y estructuras dinámicas.
 

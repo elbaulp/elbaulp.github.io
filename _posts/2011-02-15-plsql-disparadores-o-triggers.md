@@ -1,27 +1,13 @@
 ---
 title: 'PL/SQL &#8211; Disparadores o Triggers'
-
 layout: post
 permalink: /plsql-disparadores-o-triggers/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
   - algoritmos trigger
   - como hacer un trigger
   - trigger de actualizacion
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

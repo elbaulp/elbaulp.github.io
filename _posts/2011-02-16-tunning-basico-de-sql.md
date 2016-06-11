@@ -1,32 +1,18 @@
 ---
 title: Tunning básico de SQL
-
 layout: post
 permalink: /tunning-basico-de-sql/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - que es tuning sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
 </div>
 
 Bueno, hemos llegado al fin del temario de base de datos, todo lo que he ido escribiendo a lo largo de estos meses lo encontrarás en la página de [Base de Datos][1]. El último tema de este curso va a tratar de &#8220;Tunning básico de SQL&#8221;.  
-  
+
 <!--ad-->
 
 ## Tunning básico de SQL

@@ -1,28 +1,14 @@
 ---
 title: Tutorial de Python v2.7.0
-
 layout: post
 permalink: /tutorial-de-python-v270/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - cursos
   - python
 tags:
   - curso python para principiantes
   - tutorial de python
-main-class: "dev"
-main-class: "misc"
+main-class: "articulos"
 ---
 <div class="icopy">
 </div>
@@ -30,7 +16,7 @@ main-class: "misc"
 Ya he publicado otras veces entradas dedicadas a compartir tutoriales y cursos sobre python, como [Python para principiantes][1] o este [Manual de python][2].
 
 En esta entrada voy a recomendar otro tutorial que me parece muy interesante y fácil de comprender. Pertenece a la documentacion de la comunidad de [PyAr][3] (Una Comunidad Argentina dedicada a este lenguaje de programación que me gusta mucho).  
-  
+
 <!--ad-->
 
 

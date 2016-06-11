@@ -1,23 +1,9 @@
 ---
 title: 'PL/SQL &#8211; Registros y Tablas'
-
 layout: post
 permalink: /plsql-registros-y-tablas/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -34,10 +20,10 @@ El modo de definir nuevos tipos de variables en PL/SQL es a través de la palabr
 TYPE nuevo_tipo IS tipo_original.
 ```
 
-  
+
 <!--ad-->
 
-  
+
 Una vez definido en nuevo tipo, ya se pueden definir variables de ese nuevo tipo.
 
 ## Registros

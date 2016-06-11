@@ -1,25 +1,11 @@
 ---
 title: Introducción a los Procesos
-
 layout: post
 permalink: /introduccion-los-procesos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - procesos
   - SO
-main-class: "dev"
-main-class: "procesos"
+main-class: "articulos"
 ---
 <div class="icoso">
 </div>
@@ -31,7 +17,7 @@ main-class: "procesos"
 
 
 El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.  
-  
+
 <!--ad-->
 
 <a name="compo"></a>

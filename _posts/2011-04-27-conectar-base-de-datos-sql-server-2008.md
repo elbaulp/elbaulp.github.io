@@ -1,24 +1,7 @@
 ---
 title: Conectar base de datos sql Server 2008 a aplicación Java remotamente
-
 layout: post
 permalink: /conectar-base-de-datos-sql-server-2008/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
-if_slider_image:
-  -
-  -
-  -
 categories:
   - android
   - aplicaciones
@@ -29,7 +12,6 @@ tags:
   - conectar java con oracle
   - curso android pdf
   - programar base datoss java
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

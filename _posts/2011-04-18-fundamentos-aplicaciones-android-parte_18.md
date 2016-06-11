@@ -1,27 +1,13 @@
 ---
 title: 'Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes'
-
 layout: post
 permalink: /fundamentos-aplicaciones-android-parte_18/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - android
   - aplicaciones
   - opensource
 tags:
   - curso android pdf
-main-class: "dev"
 main-class: "android"
 ---
 <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
@@ -32,12 +18,12 @@ Los componentes de las aplicaciones son esenciales para una aplicación android.
 componente es un punto diferente a través del cual el sistema puede entrar en la aplicación.  
 No todos los componentes son puntos reales de entrada para el usuarioy algunos dependen los unos  
 de los otros, pero cada uno existe como entidad propia y desempeña un papel específico en el  
-cual cada uno es un elemento único que ayuda a definir el comportamiento global de la aplicación. 
+cual cada uno es un elemento único que ayuda a definir el comportamiento global de la aplicación.
 
 Hay cuatro tipos distintos de componentes. Cada tipo es para un propósito en concreto y tiene un  
-ciclo de vida distinto, que define como se crea y destruye el componente. 
+ciclo de vida distinto, que define como se crea y destruye el componente.
 
-  
+
 <!--ad-->
 
 A continuación los cuatro tipos de componentes:
@@ -49,8 +35,8 @@ A continuación los cuatro tipos de componentes:
     trabajan juntas de forma coherente, cada una es independiente de la otra. Por lo tanto, una aplicación  
     distinta puede iniciar cualquiera de estas actividades (si la aplicación de email lo permite). Por ejemplo,  
     la aplicación de la cámara puede iniciar la actividad en la aplicación email para componer un nuevo correo,  
-    para que el usuario pueda compartir una imagen.</p> 
-    
+    para que el usuario pueda compartir una imagen.</p>
+
     Una actividad se implementa como una subclase de `<a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a>`,  
     puedes leer más acerca de esto en la [guía para desrrolladores de Actividades][1]
 
@@ -60,8 +46,8 @@ A continuación los cuatro tipos de componentes:
     una interfaz de usuario. Por ejemplo, un servicio puede reproducir música en segundo plano mientras  
     el usuario se encuentra en otra aplicación, o puede navegar por la red sin bloquear la interacción  
     del usuario con otra actividad. Otro componente, como una actividad, puede iniciar el servicio y  
-    permitir que se ejecute o dejar que interactue con ella.</p> 
-    
+    permitir que se ejecute o dejar que interactue con ella.</p>
+
     Un servicio se implementa como una subclase de `<a href="http://developer.android.com/reference/android/app/Service.html">Service</a>`,  
     puedes leer más acerca de esto en la [guía para desarrolladores de servicios][2]
 
@@ -73,11 +59,11 @@ A continuación los cuatro tipos de componentes:
     (Si el proveedor de contenido lo permite). Por ejemplo, el sistema Android proporciona un proveedor  
     de contenido que gestiona la información de los contactos del usuario. Así, cualquier aplicación con  
     los permisos adecuados podrá consultar el proveedor de contenidos (Como `<a href="http://developer.android.com/reference/android/provider/ContactsContract.Data.html">ContactsContract.Data</a>`) para leer y escribir información sobre una persona  
-    en particular. </p> 
-    
+    en particular. </p>
+
     Los proveedores de contenido son también útiles para la lectura y escritura de datos privados de la aplicación  
     y que no se comparten. Por ejemplo, el ejemplo de [Note Pad][3] usa un proveedor de contenido para guardar notas.
-    
+
     Un proveedor de contenido se implementa como una subclase de `<a href="http://developer.android.com/reference/android/content/ContentProvider.html">ContentProvider</a>`  
     y debe implementar un conjunto de estándares de APIs que permita a otras aplicaciones realizar transacciones. Para más información lee  
     [Content Providers][4].
@@ -90,8 +76,8 @@ A continuación los cuatro tipos de componentes:
     Aunque estas emisiones no muestran una interfaz al usuario, pueden [crear una notificación en la barra de  
     estado][5] para avisar al usuario. Más comúnmente, sin embargo, un receptor de emisión es solo  
     un &#8220;gateway&#8221; (puerta de enlace) a otro componente y además no conlleva mucho trabajo. Se prodría  
-    iniciar un servicio para realizar algún trabajo basado en el evento.</p> 
-    
+    iniciar un servicio para realizar algún trabajo basado en el evento.</p>
+
     Un broadcast receiver se implementa como una subclase de `<a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html">BroadcastReceiver</a>`  
     y cada emisión se entrega como un objeto `<a href="http://developer.android.com/reference/android/content/Intent.html">Intent</a>`. Para más información lee  
     `<a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html">BroadcastReceiver</a>`
@@ -102,7 +88,7 @@ que lo haga y podrás usarla en tu aplicación, en lugar de tener que desarrolla
 que pueda hacer fotografías. No se necesita enlazar el código de la aplicación que usa la cámara.  
 Simplemente se inicia la actividad de la aplicación de la cámara que captura fotos. Cuando finalize,  
 la foto se devolverá a nuestra aplicación y podremos usarla. Para el usuario parecerá que la cámara  
-es parte de la apliación. 
+es parte de la apliación.
 
 Cuando el sistema inicia un componente, inicia el proceso para esa aplicación (si  
 no está ya en ejecución) e instancia las clases necesarias para el componente. Por ejemplo,  

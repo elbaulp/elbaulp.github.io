@@ -1,38 +1,24 @@
 ---
 title: 'Clases y Objetos &#8211; Control del acceso a los miembros de la clase'
-
 layout: post
 permalink: /clases-y-objetos-control-del-acceso-los/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - C
 main-class: "dev"
-main-class: "C"
 ---
 <div class="iconcpp">
 </div>
 
 Veamos la diferencia entre las siguientes declaraciones de la [clase Punto][1]:  
-  
+
 <!--ad-->
 
-  
+
 
 
 ```bash
 class Punto{
- 
+
 public:
   int x;
   int y;

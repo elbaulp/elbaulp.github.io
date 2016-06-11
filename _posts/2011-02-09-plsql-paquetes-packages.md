@@ -1,26 +1,12 @@
 ---
 title: 'PL/SQL &#8211; Paquetes (Packages)'
-
 layout: post
 permalink: /plsql-paquetes-packages/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
   - crear paquetes en oracle
   - usuarios package en pl/sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

@@ -1,24 +1,10 @@
 ---
 title: 'Clases y Objetos &#8211; Funciones inline'
-
 layout: post
 permalink: /clases-y-objetos-funciones-inline/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - C
 main-class: "dev"
-main-class: "C"
 ---
 <div class="iconcpp">
 </div>

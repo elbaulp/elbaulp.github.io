@@ -1,24 +1,10 @@
 ---
 title: 'Clases y Objetos &#8211; El Constructor'
-
 layout: post
 permalink: /clases-y-objetos-el-constructor/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - C
 main-class: "dev"
-main-class: "C"
 ---
 <div class="iconcpp">
 </div>
@@ -26,7 +12,7 @@ main-class: "C"
 ## Constructores
 
 Una vez que [se ha definido una clase][1], para usarla se ha de definir un objeto. Se define una variable de la clase Punto, exactamente igual que se define una variable de un tipo predefinido (int, float, etc.), o definido por el usuario. Las variables de una clase se denominan objetos. Los objetos usan la misma notación que cualquier tipo de variable, y su alcance se extiende desde la línea donde se ha declarado hasta el final del bloque.  
-  
+
 <!--ad-->
 
 Un objeto perteneciente a una clase se crea llamando a una función especial  
@@ -43,7 +29,7 @@ Punto:: Punto (argumentos)
 
 
 
-Declaración del constructor: 
+Declaración del constructor:
 
 ```cpp
 class Punto{
@@ -61,7 +47,7 @@ Definición del constructor. El constructor inicializa los miembros dato:
 Punto::Punto (char ch1,int x1, int y1){
   ch=chl;
   x=xl;
-  y=yl; 
+  y=yl;
 }
 
 ```

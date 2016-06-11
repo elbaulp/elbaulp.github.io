@@ -1,24 +1,10 @@
 ---
 title: '¡Nunca lo hagas! [Humor]'
-
 layout: post
 permalink: /nunca-lo-hagas-humor/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "geek"
 ---
 <div class="separator galeria" style="padding:100px; clear: both; text-align: center;">
   <a href="http://www.muylinux.com/assets/img/2011/03/rm.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="318" width="350" src="http://www.muylinux.com/assets/img/2011/03/rm.jpg" /></a>
@@ -26,9 +12,9 @@ main-class: "curiosidades"
 
 Por supuesto no se os debe ocurrir ejecutar este comando si no quereis quedaros sin SO.
 
-* * *Fuente: 
+* * *Fuente:
 
-[MuyLinux][1]</p> 
+[MuyLinux][1]</p>
 
 
 
