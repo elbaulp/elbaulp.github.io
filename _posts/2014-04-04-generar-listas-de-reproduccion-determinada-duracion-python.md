@@ -1,6 +1,5 @@
 ---
 title: Generar listas de reproducción de una determinada duración con Python
-
 layout: post
 permalink: /generar-listas-de-reproduccion-determinada-duracion-python/
 categories:
@@ -15,14 +14,17 @@ tags:
   - python m3u
   - listas 20 minutos
   - from sys import argv
-modified: 2015-12-25T13:00
-description: "A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la técnica Pomodoro, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad."
+  - python import mp4
+  - python mp4 to mp3
+  - python mp4 parser
+  - listas de reproducción personalizadas
+modified: 2016-06-12T17:00
+description: "Seguro que tú tambén escucas música mientras programas, a mi me gusta descansar cada 30 min siguiendo la técnica pomodoro. Pero mejor hacerlo escuchando música. Este script en python te ayudará."
 image: Generar-listas-de-reproducción-de-una-determinada-duración-con-Python.png
 main-class: "dev"
 ---
-<figure>
-  <a href="/assets/img/Generar-listas-de-reproducción-de-una-determinada-duración-con-Python.png"><img src="/assets/img/Generar-listas-de-reproducción-de-una-determinada-duración-con-Python.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-</figure>
+
+{% include _toc.html %}
 
 A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la <a href="http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro" title="Técnica pomodoro" target="_blank">técnica Pomodoro</a>, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.
 
@@ -180,7 +182,6 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_29.m3u  length  
 Playlist generated, name:  ./playlists/genPlayListByLength.py20_30.m3u  length  20.7996613757 min
 Playlist generated, name:  ./playlists/genPlayListByLength.py20_31.m3u  length  21.3372033258 min
 Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  22.5926288738 min
-
 ```
 
 ### Qué queda por mejorar
@@ -188,5 +189,3 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 Ya que el script lo he hecho en media hora, se puede mejorar bastante. Ahora mismo no busca los ficheros de música recursivamente, en el futuro lo añadiré. <del datetime="2014-04-05T15:37:18+00:00">Tiene un fallo, cuando se está generando la lista, si la duración total es menor que la indicada por parámetro, y el fichero de música procesándose en ese momento es muy grande (por ejemplo 40 min), la lista de reproducción no será del tamaño correcto.</del> (Solucionado)
 
 Para aquellos que estén interesados, el código está en <a href="https://github.com/algui91/genPlaylistByName" title="Repositorio" target="_blank">GitHub</a>
-
-{% include _toc.html %}
