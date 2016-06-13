@@ -1,30 +1,16 @@
 ---
 title: NVIDIA prepara Tegra3, 4 núcleos
-
 layout: post
 permalink: /nvidia-prepara-tegra3-4-nucleos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 La compañía NVIDIA presentó oficialmente el año pasado durante CES 2010 su SoC Tegra 2 que integraba una CPU ARM de dos núcleos junto un un chip gráfico muy potente capaz de acelerar contenidos 1.080p y tener un buen rendimiento 3D. Según parece la compañía está finalizando el desarrollo de su sucesor, Tegra 3, que hará gala de un diseño interno de CPU ARM de nada menos que cuatro núcleos y una mejorada arquitectura interna que ofrece mejores resultados en consumo y de potencia gráfica.  
-  
+
 <!--ad-->
 
-  
+
 NVIDIA ya confirmó hace unos meses que esperaba que el mercado móvil evolucionara hacia modelos con procesadores más potentes y uno de los rumores más importantes en relación a ello pone en sobreaviso que NVIDIA podría presentar su siguiente generación de chips ARM Tegra 3 en la edición 2011 de Mobile World Congress que tiene lugar en Barcelona en las próximas semanas.
 
 <p style="text-align: center;">

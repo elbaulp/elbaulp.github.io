@@ -1,20 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Procedimientos y Funciones'
-
 layout: post
 permalink: /plsql-procedimientos-y-funciones/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
@@ -22,12 +9,8 @@ tags:
   - funcion parametros sql
   - funcion sql
   - sql generar procedure
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
-<div class="icosql">
-</div>
-
 ## Procedimientos
 
 Una vez que tenemos escrito un bloque de código, podemos guardarlo en un fichero .sql para su posterior uso, o bien guardarlo en base de datos para que pueda ser ejecutado por cualquier aplicación. El segundo caso se realiza mediante procedimientos almacenados (Stored Procedure).

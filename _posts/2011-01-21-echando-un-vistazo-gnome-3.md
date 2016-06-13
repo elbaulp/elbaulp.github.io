@@ -1,25 +1,11 @@
 ---
 title: Echando un vistazo a GNOME 3
-
 layout: post
 permalink: /echando-un-vistazo-gnome-3/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - linux
   - noticias
   - opensource
-main-class: "dev"
 main-class: "linux"
 ---
 Llevamos ya mucho tiempo esperando la llegada de la que probablemente sea la revisión más importante de GNOME en toda su historia, pero aún quedan unos meses para que podamos disfrutar de la versión final. En GNOME 3 llegarán cambios muy relevantes, y para conocerlos más de cerca qué mejor que acudir a quienes lo están creando.
@@ -28,10 +14,10 @@ Llevamos ya mucho tiempo esperando la llegada de la que probablemente sea la rev
   <a href="http://www.muylinux.com/assets/img/2011/01/GNOME3-1.jpg"><img  title="GNOME3-1" src="http://www.muylinux.com/assets/img/2011/01/GNOME3-1-500x282.jpg" alt=""  /></a>
 </p>
 
-  
+
 <!--ad-->
 
-  
+
 Y es que los desarrolladores de GNOME han puesto en marcha la web www.gnome3.org en la cual han preparado un recorrido visual por las principales características de un entorno de escritorio que dará un giro radical respecto a lo que teníamos disponible hasta ahora.
 
 En el diseño de esta nueva página oficial nos encontramos con una breve descripción de las posibilidades de GNOME 3: su elegante interfaz basada en GNOME Shell -un concepto que Unity también usará en muchos de sus apartados- el uso de la vista de actividades, la integración de la mensajería, o el sistema de notificaciones son algunas de las novedades.

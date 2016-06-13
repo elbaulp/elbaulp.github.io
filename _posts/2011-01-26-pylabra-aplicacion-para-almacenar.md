@@ -1,26 +1,12 @@
 ---
 title: 'Pylabra &#8211; Aplicación para almacenar vocabulario'
-
 layout: post
 permalink: /pylabra-aplicacion-para-almacenar/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - opensource
   - python
 main-class: "dev"
-main-class: "aplicaciones"
 ---
 <div class="icopy">
 </div>
@@ -33,11 +19,11 @@ Antes de nada, el programa necesita instalar algunas dependencias, entre ellas l
 sudo aptitude install libsqlite python-wxgtk2.8
 ```
 
-  
+
 <!--ad-->
 
-  
-Una vez instaladas podemos ejecutar el programa haciendo clic en el archivo llamado main.py, o bien desde consola con: 
+
+Una vez instaladas podemos ejecutar el programa haciendo clic en el archivo llamado main.py, o bien desde consola con:
 
 ```bash
 ./main.py
@@ -69,7 +55,7 @@ Ahora vemos que se ha generado una fila en la pantalla principal con la palabra 
   <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUB3Al5R7dI/AAAAAAAAASA/W1nLDdgvH6A/s1600/condatos.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="256" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUB3Al5R7dI/AAAAAAAAASA/W1nLDdgvH6A/s320/condatos.png" width="320" /></a>
 </div>
 
-Si hacemos clic con el botón derecho sobre una fila, podemos editar la palabra o borrarla, si le damos a editar nos sadrá la siguiente pantalla: 
+Si hacemos clic con el botón derecho sobre una fila, podemos editar la palabra o borrarla, si le damos a editar nos sadrá la siguiente pantalla:
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUB3BJpBsVI/AAAAAAAAASQ/_yeeBiG9AcM/s1600/EditarPalabra.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="270" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUB3BJpBsVI/AAAAAAAAASQ/_yeeBiG9AcM/s320/EditarPalabra.png" width="320" /></a>
@@ -77,7 +63,7 @@ Si hacemos clic con el botón derecho sobre una fila, podemos editar la palabra 
 
 También podemos ordenar las palabras por los distintos campos (No, palabra, genero etc), solo tenemos que hacer clic en el nombre del campo, así como también podemos buscar palabras con la caja de texto que hay en la parte superior.
 
-En la parte derecha tenemos un buscador de wordreference para buscar palabras Inglés-Español que podemos ocultar con su botón correspondiente de la parte superior. 
+En la parte derecha tenemos un buscador de wordreference para buscar palabras Inglés-Español que podemos ocultar con su botón correspondiente de la parte superior.
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUB3A77mKsI/AAAAAAAAASI/jDL9aDs2bss/s1600/diccionario.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="256" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUB3A77mKsI/AAAAAAAAASI/jDL9aDs2bss/s320/diccionario.png" width="320" /></a>

@@ -1,26 +1,12 @@
 ---
 title: 'PL/SQL &#8211; Estructuras básicas de control'
-
 layout: post
 permalink: /plsql-estructuras-basicas-de-control/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
   - comandos basicos sql
   - sentencias sql while
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

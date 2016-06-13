@@ -1,24 +1,10 @@
 ---
 title: 'La &#8220;evolución&#8221; de la información'
-
 layout: post
 permalink: /la-evolucion-de-la-informacion/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 En <a target="_blank" href="http://www.nosolounix.com/2011/01/la-evolucion-de-la-informacion.html">noSoloUnix</a> he visto ésta imagen que me ha resultado graciosa, que trata de plasmar la evuloción (o mejor dicho retroceso) de la información en la era digital.
 
@@ -28,10 +14,10 @@ En <a target="_blank" href="http://www.nosolounix.com/2011/01/la-evolucion-de-la
 
 
 
-* * *Visto en: 
+* * *Visto en:
 
 <a target="_blank" href="http://www.nosolounix.com">noSoloUnix</a>  
-Fuente Original: <a target="_blank" href="http://gespadas.com/micro-media">Gespadas</a></p> 
+Fuente Original: <a target="_blank" href="http://gespadas.com/micro-media">Gespadas</a></p>
 
 
 

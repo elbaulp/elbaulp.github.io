@@ -1,37 +1,23 @@
 ---
 title: 'Diaspora*, La red social libre'
-
 layout: post
 permalink: /diaspora-la-red-social-libre/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 <div class="icodias" style="padding:1em;">
 </div>
 
-Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red social opensource en fase de desarrollo [Diaspora*][2], más abajo os dejo su análisis, si quereis leer la entrada original podeis hacerlo [aquí.][3] 
+Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red social opensource en fase de desarrollo [Diaspora*][2], más abajo os dejo su análisis, si quereis leer la entrada original podeis hacerlo [aquí.][3]
 
-  
+
 <!--ad-->
 
 <span style="font-family: 'Droid Sans';">Al ser un proyecto en estado alfa ya podemos destacar algunas cosas muy interesantes sobre Diaspora*, su manejo de &#8220;<i>a quién quieres que llegue lo que quieras que llegue</i>&#8221; es uno de sus puntos más fuertes:</span>
 
 <span style="font-family: 'Droid Sans';"><br /> </span>  
-<span style="font-family: 'Droid Sans';"><b><i>1. Aspectos</i></b>: Al llegar a Diaspora* será lo primero que veremos, al principio tendremos tres &#8220;<i>Aspectos</i>&#8221; predeterminados <i>Familia, Trabajo y Amigos</i>, y dentro de esos &#8220;grupos&#8221; o &#8220;círculos&#8221;, estarán organizados nuestros contactos. En el caso de que queramos compartir algo, se hará de manera grupal, es decir, si eliges compartir algo con tus amigos, entonces todos ellos recibirán esa publicación, sin que tus otros contactos dentro de otros aspectos puedan acceder a ello, de igual forma puedes crear publicaciones para todos tus aspectos, y así todos tus contactos se podrán enterar de lo que estas pensando.</span><span style="font-family: 'Droid Sans';"></p> 
+<span style="font-family: 'Droid Sans';"><b><i>1. Aspectos</i></b>: Al llegar a Diaspora* será lo primero que veremos, al principio tendremos tres &#8220;<i>Aspectos</i>&#8221; predeterminados <i>Familia, Trabajo y Amigos</i>, y dentro de esos &#8220;grupos&#8221; o &#8220;círculos&#8221;, estarán organizados nuestros contactos. En el caso de que queramos compartir algo, se hará de manera grupal, es decir, si eliges compartir algo con tus amigos, entonces todos ellos recibirán esa publicación, sin que tus otros contactos dentro de otros aspectos puedan acceder a ello, de igual forma puedes crear publicaciones para todos tus aspectos, y así todos tus contactos se podrán enterar de lo que estas pensando.</span><span style="font-family: 'Droid Sans';"></p>
 
 <p>
   </span><br /> <a href="https://3.bp.blogspot.com/_MFeNDOG66h4/TSkGeCVzn5I/AAAAAAAAAVE/XBYgNTJRs0g/s1600/37.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559982328059764626" src="https://3.bp.blogspot.com/_MFeNDOG66h4/TSkGeCVzn5I/AAAAAAAAAVE/XBYgNTJRs0g/s320/37.png" style="cursor: hand; cursor: pointer; display: block; height: 218px; margin: 0px auto 10px; text-align: center; width: 320px;" /></a>
@@ -54,35 +40,35 @@ Nuestros compañeros de [Ubuntizandoel planeta][1] han analizado la nueva red so
 </p>
 
 <p>
-  <span style="font-family: 'Droid Sans';"></p> 
-  
+  <span style="font-family: 'Droid Sans';"></p>
+
   <p>
     </span>
   </p>
-  
+
   <p>
     <a href="https://4.bp.blogspot.com/_MFeNDOG66h4/TSkI4IXsmhI/AAAAAAAAAVU/oFBDnZ4zJ9g/s1600/04.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5559984975378160146" src="https://4.bp.blogspot.com/_MFeNDOG66h4/TSkI4IXsmhI/AAAAAAAAAVU/oFBDnZ4zJ9g/s320/04.png" style="cursor: hand; cursor: pointer; display: block; height: 194px; margin: 0px auto 10px; text-align: center; width: 243px;" /></a>
   </p>
-  
+
   <p>
     <span style="font-family: 'Droid Sans';">Por el momento,<b> Diaspora* es un proyecto aún muy inmaduro, pero tiene gran potencial,</b> no cuenta con muchas herramientas que quisiéramos ver, o que están presentes ya en otras redes sociales, tampoco creo que sea la intensión de los desarrolladores, el crear un clon de otros proyectos, ya que para poder coexistir en un mercado como el de las redes sociales, se debe ofrecer innovación y nuevas maneras de interactuar.</span>
   </p>
-  
+
   <p>
-    <span style="font-family: 'Droid Sans';"></p> 
-    
+    <span style="font-family: 'Droid Sans';"></p>
+
     <p>
       </span>
     </p>
-    
+
     <p>
-      <span style="font-family: 'Droid Sans';">Diaspora* funciona a la perfección en Firefox, Google Chrome, Chromium, Iron, Opera, Safari, y Midori, si usas otro navegador, puedes decirnos si funciona Diaspora*, y te animamos a que apoyes el desarrollo de este proyecto.</p> 
-      
+      <span style="font-family: 'Droid Sans';">Diaspora* funciona a la perfección en Firefox, Google Chrome, Chromium, Iron, Opera, Safari, y Midori, si usas otro navegador, puedes decirnos si funciona Diaspora*, y te animamos a que apoyes el desarrollo de este proyecto.</p>
+
       <p>
         </span>
       </p>
-      
-      
+
+
 
  [1]: http://www.ubuntizandoelplaneta.com/
  [2]: https://joindiaspora.com/

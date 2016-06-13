@@ -1,25 +1,11 @@
 ---
 title: 'PL/SQL &#8211; Declaración de variables'
-
 layout: post
 permalink: /plsql-declaracion-de-variables/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
   - declare en pl sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

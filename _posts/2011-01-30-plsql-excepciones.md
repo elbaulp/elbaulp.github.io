@@ -1,33 +1,17 @@
 ---
 title: 'PL/SQL &#8211; Excepciones'
-
 layout: post
 permalink: /plsql-excepciones/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - ejecutar excepciones en sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
-<div class="icosql">
-</div>
 
 <!--INFOLINKS_ON-->
 
-  
+
 Anteriormente dijimos que un bloque de código puede contener una sección denominada EXCEPTION. Esta sección es la encargada de recoger todas las anomalías que se puedan producir dentro del bloque de código.
 
 Una excepción es una situación especial dentro de la ejecución de un programa, que puede ser capturada para asignar un nuevo comportamiento. Una excepción puede ser un error de ejecución (una división entre 0) o cualquier otro tipo de suceso.
@@ -41,13 +25,13 @@ e_sin_alumnos EXCEPTION;
 
 ```
 
-  
+
 <!--ad-->
 
-  
+
 <!--INFOLINKS_ON-->
 
-  
+
 Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción **RAISE <excepción>.**
 
 La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
@@ -86,7 +70,7 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 Cuando se produce un error, se ejecuta el bloque EXCEPTION. Si existe un bloque de excepción apropiado para el tipo de error producido se ejecuta dicho bloque. Si este último no existe, se ejecutará el bloque de excepción WHEN OTHERS THEN ( en el caso de haberlo definido, este bloque debe ser el último manejador de excepciones ). Una vez finalizada la ejecución del bloque de EXCEPTION no se continúa ejecutando el bloque anterior.
 
 En ocasiones queremos enviar un mensaje de error personalizado al producirse una excepción PL/SQL. Para ello es necesario utilizar la instruccion **RAISE\_APPLICATION\_ERROR.**  
@@ -98,13 +82,13 @@ RAISE_APPLICATION_ERROR(<error_num>,<mensaje>);
 
 <!--INFOLINKS_ON-->
 
-  
+
 Donde:  
 **error_num** es un entero negativo comprendido entre -20001 y -20999.  
 **mensaje** es la descripción del error.
 
 Ejemplo:  
-  
+
 <!--INFOLINKS_OFF-->
 
 ```sql
@@ -121,7 +105,7 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 Dentro del bloque de excepciones conviene recordar la existencia de la excepción **OTHERS**, que simboliza cualquier condición de excepción que no ha sido declarada. Se utiliza comúnmente para controlar cualquier tipo de error que no ha sido previsto. En ese caso, es común observar la sentencia **ROLLBACK** en el grupo de sentencias de la excepción o alguna de las funciones **SQLCODE** – **SQLERRM**.
 
 **SQLCODE** devuelve el número del error de Oracle y un 0 (cero) en caso de éxito al ejecutarse una sentencia SQL.
@@ -177,7 +161,7 @@ END;
 
 <!--INFOLINKS_ON-->
 
-  
+
 Las líneas de código debajo del manejador específico se ejecutarán cuando esa excepción se produzca. Algunas excepciones se lanzarán automáticamente cuando se produzcan ciertos tipos de errores en la ejecución del bloque de código. Cada excepción automática tiene asociado un código de error ORA-XXXX el cual si se produce, hará que se lance la excepción correspondiente.  
 A continuación se muestra una lista de las excepciones automáticas predefinidas por Oracle:
 

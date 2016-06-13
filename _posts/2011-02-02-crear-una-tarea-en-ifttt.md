@@ -1,25 +1,11 @@
 ---
 title: Crear una tarea en IFTTT
-
 layout: post
 permalink: /crear-una-tarea-en-ifttt/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - internet
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 Voy a explicar como crear una nueva tarea en [IFTTT][1], es bastante simple, pero lo explicaré paso a paso con imágenes:  
 <!--ad-->

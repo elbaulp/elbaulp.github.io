@@ -1,25 +1,11 @@
 ---
 title: 'Introducción a PL/SQL &#8211; Transacciones'
-
 layout: post
 permalink: /introduccion-plsql-transacciones/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - transacciones sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

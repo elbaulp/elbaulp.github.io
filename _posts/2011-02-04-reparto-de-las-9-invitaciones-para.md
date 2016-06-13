@@ -1,25 +1,11 @@
 ---
 title: Reparto de las 9 invitaciones para Diaspora
-
 layout: post
 permalink: /reparto-de-las-9-invitaciones-para/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
   - opensource
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 <div class="icodias">
 </div>

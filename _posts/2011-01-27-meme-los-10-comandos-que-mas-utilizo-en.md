@@ -1,29 +1,15 @@
 ---
 title: '[Meme] Los 10 comandos que más utilizo en Linux'
-
 layout: post
 permalink: /meme-los-10-comandos-que-mas-utilizo-en/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - meme
-main-class: "dev"
-main-class: "meme"
+main-class: "linux"
 ---
 <div class="icosh">
 </div>
 
-En <a target="_blank" href="http://www.ubuntizandoelplaneta.com/2011/01/meme-los-10-comandos-que-mas-utilizo.html">ubuntizando el planeta</a> he leido este meme que voy a publicar, que consiste en ejecutar la orden 
+En <a target="_blank" href="http://www.ubuntizandoelplaneta.com/2011/01/meme-los-10-comandos-que-mas-utilizo.html">ubuntizando el planeta</a> he leido este meme que voy a publicar, que consiste en ejecutar la orden
 
 ```bash
 history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
@@ -32,10 +18,10 @@ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 en nuestro terminal para saber cuales son los comandos que más usamos en linux, seguro que os sorprendéis al ver vuestros resultados.
 
-  
+
 <!--ad-->
 
-  
+
 Invito a participar en el meme a:
 
 <a target="_blank" href="http://usemoslinux.blogspot.com/">Usemos Linux</a>  

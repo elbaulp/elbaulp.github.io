@@ -1,26 +1,12 @@
 ---
 title: 2 invitaciones para IFTTT disponibles
-
 layout: post
 permalink: /2-invitaciones-para-ifttt-disponibles/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - internet
   - noticias
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 Hace unos dias hablé del [servício ifttt][1], en cuanto conocí este servício solicité una invitación en la web, y hoy me ha llegado.
 
@@ -30,7 +16,7 @@ El diseño es bastante simple y sencillo:
   <a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUiMm8LHzLI/AAAAAAAAAUA/lKO4Gdal7XY/s1600/Screenshot-ifttt%2B-%2Balgui91%2B-%2BChromium.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="244" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUiMm8LHzLI/AAAAAAAAAUA/lKO4Gdal7XY/s320/Screenshot-ifttt%2B-%2Balgui91%2B-%2BChromium.png" /></a>
 </div>
 
-  
+
 <!--ad-->
 
 Para crear nuestras tareas simeplemente tenemos que hacer click en &#8220;create new task&#8221;, y seguir 7 pasos para configurarlo, en los proximos dias crearé una entrada con imágenes de como hacerlo paso a paso.

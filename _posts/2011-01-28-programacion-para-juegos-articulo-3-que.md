@@ -1,24 +1,10 @@
 ---
 title: 'Programación para Juegos &#8211; Artículo 3 &#8211; ¿Qué es un pixel?'
-
 layout: post
 permalink: /programacion-para-juegos-articulo-3-que/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - juegos
 main-class: "dev"
-main-class: "juegos"
 ---
 <div class="icosdl">
 </div>
@@ -36,14 +22,14 @@ Probablemente sepas que las imágenes están formadas por píxeles, pero, ¿Cóm
 ```
 
 Aquí tenemos una línea de código de la [Lección 5 &#8211; Colores Clave][1]. Ya sabemos que SDL_MapRGB() devuelve un pixel, pero ¿Cómo es la estructura &#8220;Uint32&#8243; un píxel?  
-  
+
 <!--ad-->
 
-  
+
 Bien, Uint32 es lo siguiente:
 
 <span class="Apple-style-span" style="color: red;"><b>U</b></span>nsigned  
-<span class="Apple-style-span" style="color: red;"><b>int</b></span>eger that is   
+<span class="Apple-style-span" style="color: red;"><b>int</b></span>eger that is
 <span class="Apple-style-span" style="color: red;"><b>32</b></span> bits in size
 
 Os preguntaréis, ¿Cómo puede ser un número un píxel?, probablemente sepas algo de HTML, y lo que hacemos en HTML para cambiar los colores de los elementos es configurar el color combinando 3 números desde el 0 al 255.
@@ -59,9 +45,9 @@ Arriba he usado el código HTML/CSS para cambiar el color del texto. Combinando 
 <span style="color: rgb(255,255,255)">Esto</span> tiene Red 255, Green 255, y Blue 255.
 <span style="color: rgb(255,0,0)">Esto</span> tiene Red 255, Green 0, y Blue 0.
 <span style="color: rgb(0,0,255)">Esto</span> tiene Red 0, Green 0, y Blue 255.
-<span style="color: rgb(0,0,0)">Esto</span> tiene Red , Green 0, y Blue 0. 
-<span style="color: rgb(192,192,0)">Esto</span> tiene Red 192, Green 192, y Blue 0. 
-<span style="color: rgb(0,255,255)">Esto</span> tiene Red 0, Green 255, y Blue 255. 
+<span style="color: rgb(0,0,0)">Esto</span> tiene Red , Green 0, y Blue 0.
+<span style="color: rgb(192,192,0)">Esto</span> tiene Red 192, Green 192, y Blue 0.
+<span style="color: rgb(0,255,255)">Esto</span> tiene Red 0, Green 255, y Blue 255.
 <span style="color: rgb(192,128,64)">Esto</span> tiene Red 192, Green 128, y Blue 64.
 <span style="color: rgb(186,3,207)">Esto</span> tiene Red 186, Green 3, y Blue 207.
 

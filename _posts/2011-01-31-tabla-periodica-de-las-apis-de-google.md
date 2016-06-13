@@ -1,25 +1,11 @@
 ---
 title: Tabla periódica de las APIs de google
-
 layout: post
 permalink: /tabla-periodica-de-las-apis-de-google/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - aplicaciones
   - curiosidades
-main-class: "dev"
-main-class: "aplicaciones"
+main-class: "articulos"
 ---
 En www.browsermedia.co.uk he visto esta curiosa tabla de todas las APIs de google, al hacer clic en la imagen iréis a la tabla periódica, donde podeis seleccionar la API que queráis.  
 <!--ad-->

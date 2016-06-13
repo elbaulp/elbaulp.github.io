@@ -1,20 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Cursores'
-
 layout: post
 permalink: /plsql-cursores/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
@@ -24,7 +11,6 @@ tags:
   - eliminar cursores en oracle
   - for oracle cursor
   - tutoriales cursores sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
