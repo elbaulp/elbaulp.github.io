@@ -3,7 +3,7 @@ layout: post
 title: "18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer"
 categories:
 description: "Tras mucho buscar, al fin he conseguido recopilar una lista de libros que todo Científico de Datos o Ingeniero de Datos debería tener en su biblioteca personal."
-tags: [libros, data Scientist, data Engineer, libros big data, hadoop spark, curso apache spark, book hadoop, hadoop for dummies]
+tags: [libros, data Scientist, data Engineer, libros big data, hadoop spark, curso apache spark, book hadoop, hadoop for dummies, libros sobre machine learning, libros sobre Aprendizaje automático]
 image: ml/Machine-Learning-for-Hackers.jpg
 date: 2015-11-01T21:30:17+01:00
 modified: 2016-04-28T11:00:00+00:00
