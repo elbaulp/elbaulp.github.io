@@ -4,7 +4,7 @@ title: El Baúl Del Programador Cumple 7 Años
 description: "Hoy el blog cumple años, 7 para ser exáctos, echamos la vista atrás y repasamos su historia"
 image: 7-cumpleanios0.png
 date: 2016-05-07T11:55:51+02:00
-main-class: 'misc'
+main-class: "misc"
 ---
 
 <figure>
@@ -30,21 +30,15 @@ Pero pronto empecé a hablar sobre más cosas, así que surgió la necesidad de 
 Al principio, el blog se alojaba en __Blogger__, conforme necesité hacer cosas más complejas, lo migré a __Wordpress__ en un servidor dedicado, de este arduo proceso surgieron los siguiente artículos:
 
 - [Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad](/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad")
-
 - [Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma](/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/ "Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma")
 
 Con la migración a un __servidor dedicado__, tuve que aprender a administrar servidores y tener sumo cuidado configurándolos para que fueran seguros, de aquí salieron muchos artículos, entre los cuales podría destacar:
 
 - [Instalación y optimización de un servidor web con Nginx (I)](/instalacion-optimizacion-servidor-web-nginx-i/ "Instalación y optimización de un servidor web con Nginx (I)")
-
 - [Bloquear una IP atacando el servidor mediante iptables](/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables")
-
 - [Cómo configurar un servidor DNS – Parte 1 (Introducción)](/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)")
-
 - [Cómo ocultar la versión de BIND (Y cómo averiguarla)](/como-ocultar-la-version-de-bind-y-como-averiguarla/ "Cómo ocultar la versión de BIND (Y cómo averiguarla)")
-
 - [Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban](/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban")
-
 - [Cómo enviar los emails de /var/mail/root a una cuenta de correo](/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/ "Cómo enviar los emails de /var/mail/root a una cuenta de correo")
 
 Estuve unos cuantos años con __Wordpress__ y un servidor dedicado, hasta versioné por completo el estado del blog con __Git__ y __Capistrano__, como mostré en [Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy](/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/ "Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy").
