@@ -113,6 +113,10 @@ Si estás buscando libros de texto, quizá te intersen estos dos artículos:
     <a href="/descargar-apache-hadoop-cookbook/"><img src="
     /assets/img/Apache-Hadoop-Cookbook2.jpg" alt="Apache Hadoop Cookbook" width="199" height="259"/></a>
   </article>
+  <article class="box-item tooltip swing animate" data-title="The Best Web Programming Languages to Learn">
+    <a href="/the-best-web-programming-languages-to-learn/"><img src="
+    /assets/img/Boosting-your-Web-Development-Career.jpg" alt="The Best Web Programming Languages to Learn" width="199" height="259"/></a>
+  </article>
 </div>
 
 [1]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
