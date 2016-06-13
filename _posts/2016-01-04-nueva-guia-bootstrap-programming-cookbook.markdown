@@ -9,7 +9,7 @@ image: hotlink-ok/Bootstrap-Programming-Cookbook1.jpg
 date: 2016-01-04T18:20:11+01:00
 description: "Kick-start your Bootstrap projects with these hot recipes!"
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 <figure>
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img src="/assets/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>

@@ -10,7 +10,7 @@ tags:
   - hola mundo ndk android
   - introducción ndk android
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 El NDK de Android es un conjunto de herramientas que permiten embeber código máquina nativo compilado en lenguajes C y/o C++, hoy veremos cómo crear un ejemplo en el NDK de Android.  
 

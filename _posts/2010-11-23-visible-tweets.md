@@ -5,7 +5,7 @@ permalink: /visible-tweets/
 categories:
   - curiosidades
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Soy un lector habitual del blog <a target="_blank" href="http://oloblogger.blogspot.com">oloblogger</a>, y leí una entrada, que aunque este un poco fuera de contexto con la tematica de este blog, me pareció interesante compartirla.
 

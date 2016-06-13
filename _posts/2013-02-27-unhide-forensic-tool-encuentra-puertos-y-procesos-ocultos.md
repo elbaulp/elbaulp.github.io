@@ -12,7 +12,7 @@ tags:
   - unhide
   - unhide forensic tool
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <figure>
 <img src="/assets/img/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool"  />

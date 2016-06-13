@@ -6,7 +6,7 @@ modified:
 description: "Se nos va otro año, estos son los 10 artículos que más os han gustado"
 image: los10articulosmasvisitados2015.png
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 {% include _toc.html %}
 

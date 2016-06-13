@@ -12,7 +12,7 @@ tags:
   - django
   - pdb
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <img src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2-1024x575.png" alt="Cómo depurar una aplicación en django" />
 

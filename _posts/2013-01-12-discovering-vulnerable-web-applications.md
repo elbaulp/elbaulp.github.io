@@ -12,7 +12,7 @@ tags:
   - Vulnerable
   - web application
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [<img class="size-medium wp-image-1108 alignleft" title="discovering vulnerable web applications" alt="discovering-vulnerable-web-applications" src="/assets/img/2013/01/discovering-vulnerable-web-applications2-197x300.png"  />][1]
 

@@ -5,7 +5,7 @@ permalink: /que-son-los-archivos-mkv-what-is-mkv/
 categories:
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Hace tiempo que quería hablar sobre el formato de video MKV (Matroska). Así que aqui va un poco de información sacada de Wikipedia.
 

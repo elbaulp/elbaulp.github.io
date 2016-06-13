@@ -22,7 +22,7 @@ tags:
   - iptables con servidor debian
   - selfcontrol
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 [<img  title="selfcontrol" src="/assets/img/2012/08/selfcontrol11.png" alt=""  />][1]
 

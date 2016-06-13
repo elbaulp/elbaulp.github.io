@@ -15,7 +15,7 @@ tags:
   - Linux
   - PowerPC
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <img alt="" src="/assets/img/2012/07/Java.png" class="alignleft"  />
 

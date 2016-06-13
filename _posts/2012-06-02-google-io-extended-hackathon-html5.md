@@ -17,7 +17,7 @@ tags:
   - html5
 format: status
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div id="sites-canvas-main" class="sites-canvas-main">
   <div id="sites-canvas-main-content">

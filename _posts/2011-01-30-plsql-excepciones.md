@@ -7,7 +7,7 @@ categories:
 tags:
   - ejecutar excepciones en sql
 main-class: "BaseDeDatos"
-color: #009688
+color: "#009688"
 ---
 
 <!--INFOLINKS_ON-->

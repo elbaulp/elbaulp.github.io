@@ -11,7 +11,7 @@ tags:
   - manuales seguridad
   - seguridad de la información
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [<img src="/assets/img/2013/03/The-Essentials-of-Information-Security-Kit-Includes-a-Free-PC-Security-Handbook-2nd-Edition-eBook.gif" alt="The Essentials of Information Security Kit: Includes a Free PC Security Handbook - 2nd Edition eBook"   />][1]
 

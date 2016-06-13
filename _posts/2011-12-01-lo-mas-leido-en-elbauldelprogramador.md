@@ -6,7 +6,7 @@ permalink: /lo-mas-leido-en-elbauldelprogramador/
 categories:
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Con esta entrada os dejo lo más leido del més en el blog, junto con algunos datos estadísticos:
 

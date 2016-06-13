@@ -8,7 +8,7 @@ tags: [python, optimización de código, list comprehensions python, crear lista
 image: python-lista-de-listas-eficiente.png
 date: 2016-04-19T10:48:34+02:00
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 
 <figure>

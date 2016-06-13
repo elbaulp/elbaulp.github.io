@@ -8,7 +8,7 @@ tags: []
 image: Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking.jpg
 date: 2015-12-08T10:00:00+00:00
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 
 <figure>

@@ -9,7 +9,7 @@ tags:
   - apuntes bases de datos
   - guia de sql basico
 main-class: "BaseDeDatos"
-color: #009688
+color: "#009688"
 ---
 <div class="icosql">
 </div>
@@ -128,8 +128,8 @@ color: #009688
   </li>
 </ol>
 
-<div style="background-color: #666666; text-align: center;">
-  <span style="background-color: #666666;">SUBESQUEMAS</span>
+<div style="background-color: "#666666"; text-align: center;">
+  <span style="background-color: "#666666";">SUBESQUEMAS</span>
 </div>
 
 
@@ -172,8 +172,8 @@ color: #009688
 
 
 
-<div style="background-color: #666666; text-align: center;">
-  <span style="background-color: #666666;">ESQUEMA CONCEPTUAL</span>
+<div style="background-color: "#666666"; text-align: center;">
+  <span style="background-color: "#666666";">ESQUEMA CONCEPTUAL</span>
 </div>
 
 
@@ -188,8 +188,8 @@ color: #009688
 
 
 
-<div style="background-color: #666666; text-align: center;">
-  <span style="background-color: #666666;">ESQUEMA INTERNO</span>
+<div style="background-color: "#666666"; text-align: center;">
+  <span style="background-color: "#666666";">ESQUEMA INTERNO</span>
 </div>
 
 
@@ -268,8 +268,8 @@ color: #009688
 
 
 
-<div style="background-color: #666666; text-align: center;">
-  <span style="background-color: #666666;">VISTAS EXTERNAS</span>
+<div style="background-color: "#666666"; text-align: center;">
+  <span style="background-color: "#666666";">VISTAS EXTERNAS</span>
 </div>
 
 
@@ -392,8 +392,8 @@ color: #009688
 
 
 
-<div style="background-color: #666666; text-align: center;">
-  <span style="background-color: #666666;">VISTA CONCEPTUAL</span>
+<div style="background-color: "#666666"; text-align: center;">
+  <span style="background-color: "#666666";">VISTA CONCEPTUAL</span>
 </div>
 
 

@@ -10,7 +10,7 @@ tags:
   - convertir a utf8 maxima
   - wxmaxima error
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <img src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga"   />  
 En la facultad solemos usar wxMaxima en las prácticas de las asignturas. Hace poco al intentar abrir un fichero wxm me encontré con el siguiente error:

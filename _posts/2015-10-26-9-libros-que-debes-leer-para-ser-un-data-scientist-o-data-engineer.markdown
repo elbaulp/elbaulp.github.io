@@ -8,7 +8,7 @@ image: ml/Machine-Learning-for-Hackers.jpg
 date: 2015-11-01T21:30:17+01:00
 modified: 2016-04-28T11:00:00+00:00
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 {% include _toc.html %}
 

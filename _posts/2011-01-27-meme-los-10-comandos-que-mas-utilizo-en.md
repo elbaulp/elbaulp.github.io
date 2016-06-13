@@ -5,7 +5,7 @@ permalink: /meme-los-10-comandos-que-mas-utilizo-en/
 categories:
   - meme
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 <div class="icosh">
 </div>

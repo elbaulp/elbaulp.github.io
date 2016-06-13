@@ -8,7 +8,7 @@ tags: []
 image: hotlink-ok/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData.jpg
 date: 2015-12-10T21:04:29+01:00
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 
 <figure>

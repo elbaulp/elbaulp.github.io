@@ -8,7 +8,7 @@ categories:
   - Humor
   - internet
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he recopilado unas cuantas imágenes más:
 

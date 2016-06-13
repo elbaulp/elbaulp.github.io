@@ -6,7 +6,7 @@ categories:
   - curiosidades
   - internet
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Hace muy poco que blogger [anunció sus vistas dinámicas][1], y ahora han lanzado una extensión para chrome:
 

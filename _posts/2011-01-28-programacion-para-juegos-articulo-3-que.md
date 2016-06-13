@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-articulo-3-que/
 categories:
   - juegos
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class="icosdl">
 </div>

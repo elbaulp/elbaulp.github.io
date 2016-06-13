@@ -5,7 +5,7 @@ permalink: /la-evolucion-de-la-informacion/
 categories:
   - curiosidades
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 En <a target="_blank" href="http://www.nosolounix.com/2011/01/la-evolucion-de-la-informacion.html">noSoloUnix</a> he visto ésta imagen que me ha resultado graciosa, que trata de plasmar la evuloción (o mejor dicho retroceso) de la información en la era digital.
 

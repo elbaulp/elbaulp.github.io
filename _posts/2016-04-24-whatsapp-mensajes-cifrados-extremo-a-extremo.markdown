@@ -10,7 +10,7 @@ description: "Seguro que muchos últimamente os preguntáis qué significa ese m
 tags: [seguridad en whatsapp, cifrado punto a punto whatsapp, cifrado extremo a extremo WhatsApp, Security Now!]
 image: WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png
 main-class: "security-now"
-color: #00BCD4
+color: "#00BCD4"
 ---
 
 <figure>

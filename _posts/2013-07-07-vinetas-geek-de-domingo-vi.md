@@ -15,7 +15,7 @@ tags:
   - viñetas humor
 format: gallery
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 Disfrutad de lo que queda de fin de semana!
 

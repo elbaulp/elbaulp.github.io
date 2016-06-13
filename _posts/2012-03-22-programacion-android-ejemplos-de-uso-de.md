@@ -14,7 +14,7 @@ tags:
   - curso android pdf
   - startactivityforresult android example
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 La idea de ACTION_PICK es lanzar una actividad que muestre una liste de objetos a seleccionar para que el usuario elija uno de ellos. Una vez elegido, la actividad devuelve la URI del elemento elegido. Así se permite reusar la interfaz gráfica.
 

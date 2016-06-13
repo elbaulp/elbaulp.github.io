@@ -6,7 +6,7 @@ categories:
   - linux
   - script
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 <p lang="en">
   I decided to create a small script that highlights the words reserved of c++.<br /> Here the code:
@@ -56,8 +56,8 @@ How Use It:
 
 It is necessary to create a css class for the blog, of this form:
 
-***.prp { color: #0a0; font-weight: bold; }  
-.cpp { color: #a40; font-weight: bold; }***
+***.prp { color: "#0a0"; font-weight: bold; }  
+.cpp { color: "#a40"; font-weight: bold; }***
 
 Once done this, we have to execute the script and introduce the code path to formatting with this style.
 

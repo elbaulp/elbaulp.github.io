@@ -18,7 +18,7 @@ tags:
   - samsung galaxy scl gti9003
   - xda
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <img  title="linux-apps-on-android" src="/assets/img/2012/12/linux-apps-on-android1.jpg" alt=""  />
 

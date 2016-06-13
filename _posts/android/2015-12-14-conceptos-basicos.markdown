@@ -8,7 +8,7 @@ description: "En este primer artículo veremos los conceptos fundamentales que c
 tags: [Curso de Android, programación Android, tutoriales Android, NPI]
 image: hotlink-ok/activityLifecycle.png
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 
 {% include _toc.html %}

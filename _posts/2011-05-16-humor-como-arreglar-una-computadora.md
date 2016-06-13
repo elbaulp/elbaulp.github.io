@@ -9,7 +9,7 @@ categories:
   - linux
   - SO
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-nZA60Hrzepo/TdErBWlgr8I/AAAAAAAAAfA/p7DoPhDerdQ/s1600/linux.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="214" src="https://1.bp.blogspot.com/-nZA60Hrzepo/TdErBWlgr8I/AAAAAAAAAfA/p7DoPhDerdQ/s400/linux.png" /></a>

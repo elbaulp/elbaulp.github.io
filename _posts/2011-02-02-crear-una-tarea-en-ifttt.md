@@ -6,7 +6,7 @@ categories:
   - aplicaciones
   - internet
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Voy a explicar como crear una nueva tarea en [IFTTT][1], es bastante simple, pero lo explicaré paso a paso con imágenes:  
 <!--ad-->

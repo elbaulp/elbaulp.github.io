@@ -6,7 +6,7 @@ permalink: /ilya-zhitomirskiy-cofundador-de/
 categories:
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Me acabo de enterar que el cofundador de [diaspora][1] ha muerto a la temprana edad de 21 años&#8230;
 

@@ -6,7 +6,7 @@ categories:
   - aplicaciones
   - curiosidades
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 En www.browsermedia.co.uk he visto esta curiosa tabla de todas las APIs de google, al hacer clic en la imagen iréis a la tabla periódica, donde podeis seleccionar la API que queráis.  
 <!--ad-->

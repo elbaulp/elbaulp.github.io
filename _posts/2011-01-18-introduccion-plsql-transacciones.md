@@ -7,7 +7,7 @@ categories:
 tags:
   - transacciones sql
 main-class: "BaseDeDatos"
-color: #009688
+color: "#009688"
 ---
 <div class="icosql">
 </div>

@@ -5,7 +5,7 @@ permalink: /nuevo-diseno-de-las-paginas-en-facebook/
 categories:
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Esta mañana me llegó un correo de facebook en el que me comunicaban que a partir del 10 de marzo todas las páginas de facebook adoptarán un nuevo diseño. Pero si queremos se puede activar ahora mismo, entre las nuevas características la que a mí más me ha gustado es la posibilidad de publicar en otras páginas y señalar que te gustan con el nombre de tu página (no como usuario).  
 <!--ad-->

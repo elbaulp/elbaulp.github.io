@@ -5,7 +5,7 @@ permalink: /codificacion/
 categories:
   - SO
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div class="icoso">
 </div>

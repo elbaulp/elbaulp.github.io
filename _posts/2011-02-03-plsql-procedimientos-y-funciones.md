@@ -10,7 +10,7 @@ tags:
   - funcion sql
   - sql generar procedure
 main-class: "BaseDeDatos"
-color: #009688
+color: "#009688"
 ---
 ## Procedimientos
 

@@ -12,7 +12,7 @@ image: 2013/11/cpp.png
 modified: 2015-12-24T17:44
 description: "En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++."
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 
 <figure>

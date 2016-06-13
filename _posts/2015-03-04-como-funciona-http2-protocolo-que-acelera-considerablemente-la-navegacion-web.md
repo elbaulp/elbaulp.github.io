@@ -12,7 +12,7 @@ tags:
   - novedades http2
   - protocolo http2
 main-class: "security-now"
-color: #00BCD4
+color: "#00BCD4"
 ---
 Hacía mucho tiempo que no traducía episodios del podcast [Security Now!][1]. Hoy os traigo la traducción del episodio [#495][2], donde *Steve* describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado *Google*. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.
 

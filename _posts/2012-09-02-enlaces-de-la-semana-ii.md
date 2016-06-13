@@ -8,7 +8,7 @@ categories:
   - Enlaces de la semana
   - offtopic
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 #### Programación
 

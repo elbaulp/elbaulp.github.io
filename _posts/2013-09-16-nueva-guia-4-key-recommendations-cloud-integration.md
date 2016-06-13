@@ -7,7 +7,7 @@ categories:
   - cursos
   - noticias
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [<img src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration"   />][1]
 

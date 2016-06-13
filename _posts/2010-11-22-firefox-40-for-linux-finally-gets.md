@@ -5,7 +5,7 @@ permalink: /firefox-40-for-linux-finally-gets/
 categories:
   - Sin Categoria
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div lang="en">
   <div style="text-align: justify;">

@@ -8,7 +8,7 @@ description: "Video de Cómo visualizar la evolución de un repositorio git con 
 tags: [git gource, gource tutorial, gource git, gource github]
 image: Gource-Evolucion-del-blog-desde-el-punto-de-vista-de-Git.png
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 <figure>

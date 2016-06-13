@@ -8,7 +8,7 @@ description: "Todos sabemos que cuando borramos algo de nuestro disco duro, en r
 tags: [autopsy, análisis forense, informática forense, recuperar fotos borradas, recuperar ficheros borrados, he borrado mi disco duro, tutorial autopsy, recuperar ficheros con autopsy, autopsy tutorial, restore deleted files with autopsy, restore deleted image with autopsy, como recuperar información de un disco duro]
 image: hotlink-ok/Como-Recuperar-Datos-Borrados-De-Un-Disco.png
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 
 <figure>

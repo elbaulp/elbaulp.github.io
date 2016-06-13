@@ -10,7 +10,7 @@ tags:
   - descargas
   - guias
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography"   />][1]
 

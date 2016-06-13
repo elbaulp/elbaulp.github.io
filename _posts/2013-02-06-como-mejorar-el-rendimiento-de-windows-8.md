@@ -25,7 +25,7 @@ tags:
   - windows 8 se bloquea
   - windows 8 se traba
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <img src="/assets/img/2013/02/Windows8problem.jpg" alt="Windows8problem"   />  
 Aunque llevo años sin usar Windows, hace poco una amiga me comentó que había comprado un portatil con Windows 8 e iba fatal, cada dos por tres se colgaba y ni siquiera se apabaga.

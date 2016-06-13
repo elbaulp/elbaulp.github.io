@@ -16,7 +16,7 @@ tags:
   - criptografia homomorfica
   - Fully Homomorphic Encryption
 main-class: "security-now"
-color: #00BCD4
+color: "#00BCD4"
 ---
 [<img  title="Homomorphic Encryption" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt=""  />][1]  
 Me he aficionado a escuchar un programa de radio llamado **Security Now!**, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.

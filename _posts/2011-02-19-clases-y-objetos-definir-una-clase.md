@@ -5,7 +5,7 @@ permalink: /clases-y-objetos-definir-una-clase/
 categories:
   - C
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class="iconcpp">
 </div>

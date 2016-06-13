@@ -34,7 +34,7 @@ tags:
   - soa correo
 image: 2013/04/dns.jpg
 main-class: "servidores"
-color: #0097A7
+color: "#0097A7"
 ---
 <figure>
   <a href="/assets/img/2013/04/dns.jpg"><img src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>

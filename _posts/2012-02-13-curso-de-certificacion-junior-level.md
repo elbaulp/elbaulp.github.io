@@ -7,7 +7,7 @@ categories:
   - cursos
   - linux
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s1600/Screenshot.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="89" width="159" src="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s400/Screenshot.png" /></a>

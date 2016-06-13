@@ -8,7 +8,7 @@ tags: [openlibra, biblioteca online, descargar libros gratis]
 image: openlibra-biblioteca-libre-online.jpg
 date: 2016-03-03T21:30:24+01:00
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 {% include _toc.html %}

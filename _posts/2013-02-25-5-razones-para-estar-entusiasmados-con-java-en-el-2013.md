@@ -12,7 +12,7 @@ tags:
   - novedades java
 author: luzila
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <img src="/assets/img/2012/12/java1-300x227.jpg" alt="java"   />
 

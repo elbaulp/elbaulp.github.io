@@ -10,7 +10,7 @@ tags:
   - personalizar 404 wordpress
 description: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
 main-class: "servidores"
-color: #0097A7
+color: "#0097A7"
 ---
 <figure>
   <img src="/assets/img/2012/08/4041.jpg" alt="" title="404"   />

@@ -11,7 +11,7 @@ tags:
   - humor geek grafico
 format: gallery
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 <p class="jetpack-slideshow-noscript robots-nocontent">
   This slideshow requires JavaScript.

@@ -13,7 +13,7 @@ tags:
   - humor informatico
   - viñetas humor
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!  
 

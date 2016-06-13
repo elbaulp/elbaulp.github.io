@@ -8,7 +8,7 @@ description: "En este artículo se verá una introducción a lo que es la biomet
 tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
 image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 <figure>

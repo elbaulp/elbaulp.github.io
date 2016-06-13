@@ -6,7 +6,7 @@ permalink: /blogger-buzz-add-1-button-to-your-blog/
 categories:
   - Sin Categoria
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 [Blogger Buzz: Add the +1 Button to Your Blog][1]
 

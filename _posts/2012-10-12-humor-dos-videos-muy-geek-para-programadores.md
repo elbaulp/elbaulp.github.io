@@ -11,7 +11,7 @@ tags:
   - write in c
 format: video
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 Navegando por la red he encontrado dos vídeos curiosos y graciosos, que comparto con vosotros este día de fiesta Nacional en España.
 

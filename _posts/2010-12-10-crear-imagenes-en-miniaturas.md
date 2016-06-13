@@ -5,7 +5,7 @@ permalink: /crear-imagenes-en-miniaturas/
 categories:
   - script
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 ### Creé una Versión mejorada de este script [aquí][1]
 

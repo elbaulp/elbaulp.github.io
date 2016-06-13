@@ -9,7 +9,7 @@ categories:
 tags:
   - VoIP Vulnerabilities
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [  
 <img class="size-full wp-image-1285 alignleft" alt="VoIP Vulnerabilities" src="/assets/img/2013/01/voip-vulnerabilities.png"  />  

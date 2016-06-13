@@ -25,7 +25,7 @@ tags:
   - tc iproute2 debian
   - UDP
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 <img src="/assets/img/2012/07/sh1.png" alt="sh"   />El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
 

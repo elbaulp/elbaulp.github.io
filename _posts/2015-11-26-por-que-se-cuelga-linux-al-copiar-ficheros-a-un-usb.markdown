@@ -8,7 +8,7 @@ image: hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png
 modified: 2015-11-27T16:25:00+00:00
 date: 2015-11-27T12:25:00+00:00
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 {% include _toc.html %}

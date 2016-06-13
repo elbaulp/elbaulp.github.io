@@ -20,7 +20,7 @@ tags:
   - manual android parcelable
   - simple adapter android ejemplo
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3].
 

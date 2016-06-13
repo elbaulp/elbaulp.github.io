@@ -10,7 +10,7 @@ tags:
   - crear formularios en django
   - formularios en django
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <img src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm"   />
 

@@ -6,7 +6,7 @@ permalink: /nueva-guia-windows-7-guide-from-newbies/
 categories:
   - cursos
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [![ The Windows 7 Guide: From Newbies to Pros][1]][2]  
 

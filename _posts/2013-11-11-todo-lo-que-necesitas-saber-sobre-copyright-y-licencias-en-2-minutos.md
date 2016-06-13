@@ -16,7 +16,7 @@ description: "A la hora de crear proyectos, suele ser una tarea difícil elegir 
 image: 2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png
 modified: 2016-03-20T09:05:38+01:00
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 author: luzila
 ---
 

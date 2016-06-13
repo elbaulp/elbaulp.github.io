@@ -10,7 +10,7 @@ tags:
   - shortcodes
   - wordpress shortcodes
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 Ya se vió cómo añadir <a href="/como-crear-shortcodes-en-wordpress-2/" target="_blank">shortcodes simples</a>, esta vez se explicará con un poco más de profundidad.
 

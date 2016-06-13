@@ -10,7 +10,7 @@ tags:
   - log android
   - logging android
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 <img src="/assets/img/2013/07/android2.png" alt="Cómo usar adecuadamente el Log de Android en tus aplicaciones"   />
 

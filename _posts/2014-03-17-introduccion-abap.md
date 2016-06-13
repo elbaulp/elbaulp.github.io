@@ -12,7 +12,7 @@ description: "El lenguaje de programación ABAP (antiguamente ABAP/4) es un leng
 modified: 2015-12-25T13:10
 image: 2014/03/SAP-Apariencia.png
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 

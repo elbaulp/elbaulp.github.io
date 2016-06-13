@@ -11,7 +11,7 @@ tags:
   - instalar atom
   - instalar atom en Ubuntu
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Hace unos días decidí instalar **Atom**, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:
 

@@ -10,7 +10,7 @@ tags:
   - correo ssh
   - seguridad ssh
 main-class: "servidores"
-color: #0097A7
+color: "#0097A7"
 ---
 Hemos visto en otros artículos varias maneras de mejorar la seguridad en un servidor, medidas tales como:
 

@@ -5,7 +5,7 @@ permalink: /nuevo-proyecto-aventura-grafica-con-sdl/
 categories:
   - opensource
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class="iconcpp">
 </div>

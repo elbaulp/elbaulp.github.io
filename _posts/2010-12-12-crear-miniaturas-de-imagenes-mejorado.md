@@ -8,7 +8,7 @@ categories:
 tags:
   - crear miniaturas de imagenes
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 He mejorado el [script que subí hace unos días][1] para crear miniaturas de imágenes, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.
 

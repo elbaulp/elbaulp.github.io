@@ -8,7 +8,7 @@ description: "En este artículo veremos cómo descargar, compilar e instalar el 
 tags: [kernel, linux kernel, compilar kernel 4.0]
 image: Compilar-e-Instalar-El-Kernel-4.2.png
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 
 <figure>

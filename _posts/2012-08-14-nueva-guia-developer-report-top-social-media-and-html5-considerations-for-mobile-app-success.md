@@ -10,7 +10,7 @@ categories:
   - cursos
   - noticias
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [<img src="/assets/img/2012/08/w_appc01c1.gif" alt="Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success" title="Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success"   />][1]
 

@@ -10,7 +10,7 @@ date: 2015-07-08T13:40:40+02:00
 author: marta
 math: true
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 {% include _toc.html %}
 

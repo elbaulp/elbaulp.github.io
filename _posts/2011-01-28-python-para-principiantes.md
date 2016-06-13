@@ -5,7 +5,7 @@ permalink: /python-para-principiantes/
 categories:
   - python
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class="icopy">
 </div>

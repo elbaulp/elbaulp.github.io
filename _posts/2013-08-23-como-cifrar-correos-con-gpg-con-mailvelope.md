@@ -16,7 +16,7 @@ image: 2013/04/GnuPG-Logo.png
 introduction: "Cómo cifrar correos electrónicos con gpg y mailvelope"
 description: "En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante GPG, **Mailvelope**."
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 <figure>

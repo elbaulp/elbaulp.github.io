@@ -5,7 +5,7 @@ description: "Cómo solucionar un ListView no capturando el foco cuando está de
 tags: [android, Scroll, ScrollView, ListView, setOnTouchListener, ]
 date: 2015-06-30T18:48:42+02:00
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 
 En [Android](/curso-programacion-android), cuando se tiene un [`ListView`](/programacion-android-interfaz-grafica_28/), dentro de un `ScrollView`, es posible que el último capture todos los eventos `onTouch`, y no sea posible utilizar el `ListView`.

@@ -7,7 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [![Oracle Magazine][1]][2]
 

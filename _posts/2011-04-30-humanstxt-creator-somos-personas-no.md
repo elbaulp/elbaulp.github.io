@@ -7,7 +7,7 @@ categories:
   - internet
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img src="<br />

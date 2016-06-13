@@ -18,7 +18,7 @@ image: SQRL-Secure-Quick-Reliable-Login-a-Fondo.png
 date: 2015-09-10T11:08:37+02:00
 math: true
 main-class: "security-now"
-color: #00BCD4
+color: "#00BCD4"
 ---
 
 {% include _toc.html %}

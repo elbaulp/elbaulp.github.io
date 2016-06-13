@@ -7,7 +7,7 @@ categories:
   - linux
   - opensource
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 En OMGUbuntu he leido esta noticia sobre el applet para gnome que nos permite acceder a nuestras suscripcciones via RSS. Personalmente me gusta la idea, ya que de esta forma no tenemos que tener el navegador abierto para ver si se publican nuevos artículos.
 

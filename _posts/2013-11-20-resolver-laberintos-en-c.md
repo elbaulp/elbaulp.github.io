@@ -12,7 +12,7 @@ modified: 2015-12-29T10:20
 description: "Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona."
 image: 2013/11/cpp.png
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <figure>
   <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

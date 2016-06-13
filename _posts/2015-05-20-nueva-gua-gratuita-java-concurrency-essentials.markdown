@@ -10,7 +10,7 @@ description: "Delve into the world of Java concurrency with this compact guide t
 tags: [java, manuales, guias, descargas]
 date: 2015-05-20T16:07:56+02:00
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 
 <figure>

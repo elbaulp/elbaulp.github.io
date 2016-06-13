@@ -7,7 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [![The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks - Free 156 Page Preview][1]][2]
 

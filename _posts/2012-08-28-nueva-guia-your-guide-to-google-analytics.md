@@ -14,7 +14,7 @@ tags:
   - guias
   - Your Guide to Google Analytics
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [<img src="/assets/img/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics"   />][1]
 

@@ -10,7 +10,7 @@ categories:
 tags:
   - curso android pdf
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 Ya me ha sucedido en varias ocasiones que he intentado conectar mi **Samsung Galaxy S** al **adb** del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:
 
@@ -78,7 +78,7 @@ List of devices attached
 ```
 
 <p class="alert">
-  Aún así, en mi caso sigue sin reconocer el dispositivo, tras buscar y buscar encontré que este problema se soluciona renombrando el archivo <span style="color: #f00;">51-android.rules</span> a <span style="color: #f00;">91-android.rules</span>
+  Aún así, en mi caso sigue sin reconocer el dispositivo, tras buscar y buscar encontré que este problema se soluciona renombrando el archivo <span style="color: "#f00";">51-android.rules</span> a <span style="color: "#f00";">91-android.rules</span>
 </p>
 
 Fuente: <a href="http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-to-do-developmenttestinginstallations-or-tethering/" target="_blank">dimitar.me</a>

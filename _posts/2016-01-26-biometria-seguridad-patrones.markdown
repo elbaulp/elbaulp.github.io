@@ -9,7 +9,7 @@ tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento
 image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 author: cristina
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 <figure>

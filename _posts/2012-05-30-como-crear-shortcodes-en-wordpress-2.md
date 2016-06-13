@@ -16,7 +16,7 @@ tags:
   - wordpress shortcodes
 format: aside
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 Es bastante simple:
 

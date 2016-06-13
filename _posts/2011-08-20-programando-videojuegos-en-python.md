@@ -7,7 +7,7 @@ categories:
   - juegos
   - python
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div class="icopy">
 </div>

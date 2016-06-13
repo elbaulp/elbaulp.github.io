@@ -5,7 +5,7 @@ permalink: /enlightenment-foundation-libraries-efl/
 categories:
   - linux
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 Esta es mi primera entrada así que intentad ser amable conmigo.
 

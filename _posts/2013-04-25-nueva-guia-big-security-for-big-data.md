@@ -11,9 +11,9 @@ tags:
   - download Big Security for Big Data
 description: "The multitude of devices, users, and generated traffic all combine to create a proliferation of data that is being created with incredible volume, velocity, and variety."
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 <figure>
   <img src="/assets/img/2013/04/BigSecurityforBigData-232x300.jpg" alt="Nueva Guía: Big Security for Big Data" title="Nueva Guía: Big Security for Big Data"   />

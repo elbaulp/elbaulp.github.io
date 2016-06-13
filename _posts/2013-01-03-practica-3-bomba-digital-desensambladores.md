@@ -12,7 +12,7 @@ tags:
   - contraseñas asm
   - Ingenieria inversa
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <img   title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" />
 

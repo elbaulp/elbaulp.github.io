@@ -8,7 +8,7 @@ categories:
 tags:
   - script gestion de usuarios linux
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 Hace un tiempo hice un script para gestionar los usuarios en linux de forma sencilla, personalmente creo que es fácil de usar. Sus características son las siguientes:
 

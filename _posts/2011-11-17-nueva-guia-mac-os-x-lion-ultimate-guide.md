@@ -6,7 +6,7 @@ permalink: /nueva-guia-mac-os-x-lion-ultimate-guide/
 categories:
   - cursos
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [![Mac OS X Lion: The Ultimate Guide][1]][2]  
 

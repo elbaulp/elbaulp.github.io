@@ -5,7 +5,7 @@ permalink: /facebook-infestado-por-un-nuevo-por-un/
 categories:
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 La **Red social** más popular de Internet vuelve a ser azotada por un nuevo **gusano **que se está extendiendo como la pólvora. Llega de manera aparentemente inocente, con un mensaje en tu perfil de algún contacto con un enlace* http://is.gd…* o bien *http://tiny.cc/…* que tras pulsarlo pasa a través de una web de **malware**, comprometiendo tu cuenta, y posteriormente redirige a un sitio web legítimo como YouTube.
 

@@ -10,7 +10,7 @@ tags:
   - esconder informacion en imagen
   - ocultar texto en imagen
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class=&#8221;separator&#8221; style=&#8221;clear: both; text-align: center;&#8221;>  
 <img border="0" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

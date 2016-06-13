@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - StrictMode Android
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 <img id="logo" class="icono" border="0" height="128" width="128" src="" name="droid" />
 

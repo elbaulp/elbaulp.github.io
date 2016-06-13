@@ -10,7 +10,7 @@ tags:
   - aplicaciones android
   - moborobo
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <p dir="ltr">
   <a href="/assets/img/2012/09/moborobo-feature-image-1204261.jpg"><img  title="moborobo-feature-image-120426" src="/assets/img/2012/09/moborobo-feature-image-1204261.jpg" alt=""  /></a>

@@ -10,7 +10,7 @@ tags:
   - asm
   - Ingenieria inversa
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba"   />
 

@@ -5,7 +5,7 @@ permalink: /clases-y-objetos-punteros-objetos/
 categories:
   - C
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class="iconcpp">
 </div>

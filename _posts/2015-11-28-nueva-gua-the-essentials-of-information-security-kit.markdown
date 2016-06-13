@@ -8,7 +8,7 @@ description: "Essentials of Information Security brings together the latest in i
 tags: [guias gratuitas, cursos, pdfs, ebooks gratuitos]
 image: /hotlink-ok/The-Essentials-of-Information-Security-Kit.jpg
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 
 <figure>

@@ -6,7 +6,7 @@ permalink: /nueva-guia-mac-manual/
 categories:
   - cursos
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [![The Mac Manual][1]][2]  
 

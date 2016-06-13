@@ -8,7 +8,7 @@ categories:
 tags:
   - distribucion linux curiosa
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 <div class="icoso">
 </div>

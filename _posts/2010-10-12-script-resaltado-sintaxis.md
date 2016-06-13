@@ -8,7 +8,7 @@ categories:
 tags:
   - sintaxis c
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">esta</a>.  
 Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje.  
@@ -65,7 +65,7 @@ sed "s/^#include..... y sed "s/^#define...
   </p>
 
   <p>
-    <b><i>.prp { color: #0a0; font-weight: bold; }<br /> .cpp { color: #a40; font-weight: bold; }</i></b>
+    <b><i>.prp { color: "#0a0"; font-weight: bold; }<br /> .cpp { color: "#a40"; font-weight: bold; }</i></b>
   </p>
 
   <p>

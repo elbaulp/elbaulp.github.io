@@ -7,7 +7,7 @@ categories:
 tags:
   - xda
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 El mundo de los tablets está cada vez más animado, y los dispositivos basados en Android **empiezan a demostrar sus prestaciones ante el claro líder actual del mercado**, el iPad de Apple. Uno de los tablets más preparados para competir con el producto de los de Cupertino es el Samsung Galaxy Tab, un modelo con pantalla de 7 pulgadas gobernado por Android 2.2.
 

@@ -12,7 +12,7 @@ tags:
   - menu oculto android
   - menu oculto tablet android
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 <figure>
   <img border="0" src="/assets/img/2013/07/iconoAndroid.png" />

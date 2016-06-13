@@ -8,7 +8,7 @@ tags: []
 image: contributorad.png
 date: 2015-11-06T16:38:37+01:00
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 
 {% include _toc.html %}

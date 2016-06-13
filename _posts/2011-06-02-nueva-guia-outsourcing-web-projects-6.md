@@ -7,7 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
-color: #61B38D
+color: "#61B38D"
 ---
 [![Outsourcing Web Projects: 6 Steps to a Smarter Business - Free Preview!][1]][2]
 

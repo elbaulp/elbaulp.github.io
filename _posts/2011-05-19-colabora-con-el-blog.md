@@ -6,7 +6,7 @@ permalink: /colabora-con-el-blog/
 categories:
   - noticias
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 <div class="iconews">
 </div>

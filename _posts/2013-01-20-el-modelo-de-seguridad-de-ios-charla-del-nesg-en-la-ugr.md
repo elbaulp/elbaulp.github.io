@@ -9,7 +9,7 @@ tags:
   - modelo de seguridad iOS
   - seguridad
 main-class: "articulos"
-color: #F57C00
+color: "#F57C00"
 ---
 Hace aproximadamente dos meses empecé a asistir a las charlas del grupo de investigación NESG de mi facultad (Network Engineering & Security Group). En una de ellas, el conferenciante era Javier Tallón. Antiguo alumno de la facultad de Informática en Granada. Habló sobre el modelo de seguridad de iOS.
 

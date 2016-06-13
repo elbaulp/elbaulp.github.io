@@ -7,7 +7,7 @@ categories:
   - noticias
   - opensource
 main-class: "linux"
-color: #2196F3
+color: "#2196F3"
 ---
 Llevamos ya mucho tiempo esperando la llegada de la que probablemente sea la revisión más importante de GNOME en toda su historia, pero aún quedan unos meses para que podamos disfrutar de la versión final. En GNOME 3 llegarán cambios muy relevantes, y para conocerlos más de cerca qué mejor que acudir a quienes lo están creando.
 

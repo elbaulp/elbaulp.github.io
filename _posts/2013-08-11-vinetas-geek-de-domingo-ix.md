@@ -13,7 +13,7 @@ tags:
   - humor informatico
   - viñetas humor
 main-class: "geek"
-color: #262626
+color: "#262626"
 ---
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 

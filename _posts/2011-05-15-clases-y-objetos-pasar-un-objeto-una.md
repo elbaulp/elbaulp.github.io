@@ -6,7 +6,7 @@ permalink: /clases-y-objetos-pasar-un-objeto-una/
 categories:
   - C
 main-class: "dev"
-color: #E64A19
+color: "#E64A19"
 ---
 <div class="icocpp">
 </div>

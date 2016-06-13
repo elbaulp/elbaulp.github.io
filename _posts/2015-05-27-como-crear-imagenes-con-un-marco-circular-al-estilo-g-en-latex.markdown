@@ -10,7 +10,7 @@ date: 2015-05-27T12:28:05+02:00
 math: true
 image: 2013/05/latex_logo.png
 main-class: "latex"
-color: #B31917
+color: "#B31917"
 ---
 
 En éste artículo vamos a ver algo curioso que aprendí hace poco. Con el paquete `tikz` de $$\LaTeX$$.

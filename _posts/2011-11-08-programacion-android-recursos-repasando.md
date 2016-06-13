@@ -9,7 +9,7 @@ categories:
 tags:
   - curso android pdf
 main-class: "android"
-color: #689F38
+color: "#689F38"
 ---
 En resumen, en el siguiente listado muestra la estructura global del directorio de recursos:
 

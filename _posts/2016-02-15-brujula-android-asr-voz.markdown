@@ -8,7 +8,7 @@ description: "Enunciado: se debe identificar mediante interfaz vocal un punto ca
 tags: [brujula android, crear brujula android, programar brujula android, reconocimiento de voz android, tutorial ASR android]
 image: hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png
 main-class: "java"
-color: #D32F2F
+color: "#D32F2F"
 ---
 
 <figure>
