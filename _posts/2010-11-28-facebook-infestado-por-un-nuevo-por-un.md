@@ -1,24 +1,10 @@
 ---
 title: Facebook infectado por un nuevo por un gusano
-
 layout: post
 permalink: /facebook-infestado-por-un-nuevo-por-un/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 La **Red social** más popular de Internet vuelve a ser azotada por un nuevo **gusano **que se está extendiendo como la pólvora. Llega de manera aparentemente inocente, con un mensaje en tu perfil de algún contacto con un enlace* http://is.gd…* o bien *http://tiny.cc/…* que tras pulsarlo pasa a través de una web de **malware**, comprometiendo tu cuenta, y posteriormente redirige a un sitio web legítimo como YouTube.
 

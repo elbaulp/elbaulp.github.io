@@ -1,24 +1,10 @@
 ---
 title: C++ syntax highlighted script
-
 layout: post
 permalink: /c-syntax-highlighted-script/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - linux
   - script
-main-class: "dev"
 main-class: "linux"
 ---
 <p lang="en">
@@ -45,7 +31,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 
   <span class="bash">sed</span> "s/^class /<span class="cpp">class</span>/g" < "$rutaCodigo" > temp
   <span class="bash">rm</span> temp
-  ;;            
+  ;;
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
@@ -56,7 +42,7 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 
 The variable * keyWords * contains the key words of c ++, fewer &#8220;class&#8221;, which later I will explain because. In this variable, the words have to be separated by a space, and all in the same line, In order that the &#8220;for&#8221; takes word to word.
 
-Both following lines 
+Both following lines
 
 ```bash
 sed "s/^#include..... and sed "s/^#define...

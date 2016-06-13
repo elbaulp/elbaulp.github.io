@@ -1,24 +1,10 @@
 ---
 title: RockMelt, The social web browser that lives in the clouds
-
 layout: post
 permalink: /rockmelt-social-web-browser-that-lives/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - Sin Categoria
-main-class: "dev"
-main-class: "Sin Categoria"
+main-class: "articulos"
 ---
 <p lang="en">
   There is a new web browser in town – the socially integrated, user focused <a href="http://www.rockmelt.com/" target="_blank">RockMelt</a>.

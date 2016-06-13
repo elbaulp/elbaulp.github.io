@@ -1,24 +1,10 @@
 ---
 title: 'Nuevo Proyecto: Aventura gráfica con SDL y C++'
-
 layout: post
 permalink: /nuevo-proyecto-aventura-grafica-con-sdl/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - opensource
 main-class: "dev"
-main-class: "opensource"
 ---
 <div class="iconcpp">
 </div>
@@ -28,10 +14,10 @@ Haitike (Coloborador del blog), y yo, hemos decidido embarcarnos en un proyecto 
 En cuanto nos pongamos en marcha crearé una página como la de [Proyecto Pylabra][2], en la que podréis seguir los avances del proyecto.
 
 Tenemos intención, conforme avance el proyecto, [crear un PPA][3], y así aprovechar para usar este [sistema de paquetes para desarrolladores][4].  
-  
+
 <!--ad-->
 
-  
+
 Como siempre, cualquiera que quiera participar es bienvenido, de esta forma avanzaremos más rápido y aprenderemos los unos de los otros.
 
 

@@ -1,24 +1,10 @@
 ---
 title: Firefox 4.0 para Linux ya dispone de menú unificado
-
 layout: post
 permalink: /firefox-40-para-linux-ya-dispone-de/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 Una de las novedades de la interfaz de Firefox 4.0 estaba disponible hasta ahora solo en la versión para Windows. **Se trataba del menú unificado**, que presentaba un menú desplegable en la aplicación del que salían todas las opciones del programa, en lugar de tener una barra de menú superior tradicional.
 

@@ -1,26 +1,12 @@
 ---
 title: Lenguaje Manipulación de Datos (DML)
-
 layout: post
 permalink: /lenguaje-manipulacion-de-datos-dml/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - que es un ddl
   - sentencias dml y ddl
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -34,7 +20,7 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
   * **DELETE**: permite eliminar registros de una tabla.
   * **UPDATE**: permite modificar registros de una tabla.
 
-  
+
 <!--ad-->
 
 ### Inserción de registros
@@ -47,7 +33,7 @@ Insert into  tabla ([<lista_campos>]) Values ([<lista de valores>])
 
 donde tabla representa la tabla a la que queremos añadir el registro y los valores que siguen a la clausula VALUES son los valores que damos a los distintos campos del registro. Si no se especifica la lista de campos, la lista de valores debe seguir el orden de todos los campos de la tabla.
 
-La lista de campos a rellenar se indica si no queremos rellenar todos los campos. Los campos no rellenados explícitamente con la orden INSERT, se rellenan con su valor por defecto (DEFAULT) o bien con NULL si no se indicó valor alguno. 
+La lista de campos a rellenar se indica si no queremos rellenar todos los campos. Los campos no rellenados explícitamente con la orden INSERT, se rellenan con su valor por defecto (DEFAULT) o bien con NULL si no se indicó valor alguno.
 
 ```sql
 Insert into tabla ([<lista_campos>])
@@ -96,7 +82,7 @@ La sentencia DELETE es de tipo DML mientras que la sentencia TRUNCATE es de tipo
   * DELETE puede borrar 0, 1 o más registros de una tabla, mientras que TRUNCATE los borra todos.
   * DELETE puede disparar un triger de tipo DELETE asociado a la tabla con la que estemos trabajando, mientras que TRUNCATE no disparará ningún triger.
 
-Una vez que se han eliminado los registros utilizando la sentencia DELETE, no puede deshacer la operación. Si desea saber qué registros se eliminarán, primero examine los resultados de una consulta de selección que utilice el mismo criterio y después ejecute la consulta de borrado. Mantenga copias de seguridad de sus datos en todo momento. Si elimina los registros equivocados podrá recuperarlos desde las copias de seguridad.   
+Una vez que se han eliminado los registros utilizando la sentencia DELETE, no puede deshacer la operación. Si desea saber qué registros se eliminarán, primero examine los resultados de una consulta de selección que utilice el mismo criterio y después ejecute la consulta de borrado. Mantenga copias de seguridad de sus datos en todo momento. Si elimina los registros equivocados podrá recuperarlos desde las copias de seguridad.
 Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.
 
 ### Modificación de registros
@@ -119,7 +105,7 @@ Este tipo de actualizaciones sólo son válidas si la Sentencia SELECT devuelve 
 
 ### Sentencia MERGE
 
-Este comando sirve para actualizar los valores de los registros de una tabla a partir de valores de registros de otra tabla o consulta. Permite pues combinar los datos de dos tablas a fin de actualizar la primera. Su sintaxis es: 
+Este comando sirve para actualizar los valores de los registros de una tabla a partir de valores de registros de otra tabla o consulta. Permite pues combinar los datos de dos tablas a fin de actualizar la primera. Su sintaxis es:
 
 ```sql
 MERGE INTO tabla alias
@@ -140,7 +126,7 @@ MERGE compara los registros de ambas tablas según la condición indicada en el 
   * **WHEN MATCHED THEN**. El UPDATE que sigue a esta parte se ejecuta cuando la condición indicada en el apartado ON sea cierta para los dos registros actuales.
   * **WHEN NOT MATCHED THEN**. El INSERT que sigue a esta parte se ejecuta para cada registro de la consulta SELECT que no pudo ser relacionado con ningún registro de la tabla.
 
-Supongamos que poseemos una tabla en la que queremos realizar una lista de localidades con su respectiva provincia. Las localidades están ya rellenadas, nos faltan las provincias. Resulta que tenemos otra tabla llamada clientes en la que tenemos datos de localidades y provincias, gracias a esta tabla podremos rellenar los datos que faltan en la otra. 
+Supongamos que poseemos una tabla en la que queremos realizar una lista de localidades con su respectiva provincia. Las localidades están ya rellenadas, nos faltan las provincias. Resulta que tenemos otra tabla llamada clientes en la que tenemos datos de localidades y provincias, gracias a esta tabla podremos rellenar los datos que faltan en la otra.
 
 ```sql
 MERGE INTO localidades l

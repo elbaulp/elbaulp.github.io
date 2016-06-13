@@ -5,9 +5,9 @@ modified:
 categories: android
 description: "Hacía mucho tiempo que tenía pendiente escribir este artículo. Años atrás tuve que crear un curso de Android básico para impartirlo en una academia. Mi idea era integrarlo con el curso de Android disponible en el blog desde hace unos años, pero como suele pasar, se va dejando y dejando... Aunque no esté publicando en el blog estos meses, sí que estoy escribiendo bastante (El curso de criptogrfía por ejemplo)."
 tags: [curso android, programación android, aprende android, tutorial android]
-image:
 image: 2014/01/iconoAndroid.png
 date: 2015-12-11T17:24:12+01:00
+main-class: "android"
 ---
 
 <figure>

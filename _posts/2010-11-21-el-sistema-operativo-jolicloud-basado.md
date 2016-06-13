@@ -1,24 +1,10 @@
 ---
 title: JoliBook ya a la venta
-
 layout: post
 permalink: /el-sistema-operativo-jolicloud-basado/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 **El sistema operativo Jolicloud, basado en GNU/Linux y enfocado a netbooks y equipos básicos con conectividad a Internet, está tomando una nueva forma gracias al nuevo netbook JoliBook que llega con Jolicloud preinstalado. El netbook en cuestión ya está a la venta y es una alternativa a netbooks tradicionales que trabajan sobre Windows, mayoritariamente. En esta ocasión, hablamos de un netbook potente con procesador Atom de doble núcleo y una autonomía muy interesante.**
 

@@ -1,23 +1,9 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula FROM'
-
 layout: post
 permalink: /consulta-de-datos-clausula-from/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

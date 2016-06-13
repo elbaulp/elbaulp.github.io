@@ -1,24 +1,10 @@
 ---
 title: 'Jolicloud&#8217;s Jolibook Netbook Hitting Stores'
-
 layout: post
 permalink: /joliclouds-jolibook-netbook-hitting/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - Sin Categoria
-main-class: "dev"
-main-class: "Sin Categoria"
+main-class: "articulos"
 ---
 <p lang="en">
   Jolicloud, the self-proclaimed &#8220;perfect OS for netbooks,&#8221; has been making headlines for a while with their consumer-focused, and frankly very cute Jolibook netbook. &nbsp;Word all around the web is that it is available today in the UK.

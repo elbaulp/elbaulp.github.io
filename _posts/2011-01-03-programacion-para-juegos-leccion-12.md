@@ -1,24 +1,10 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 1.2 &#8211; Hello World'
-
 layout: post
 permalink: /programacion-para-juegos-leccion-12/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - juegos
 main-class: "dev"
-main-class: "juegos"
 ---
 <div class="icosdl">
 </div>
@@ -31,7 +17,7 @@ Empecemos:
 
 [Pueden descargar el código fuente de esta lección.][2]
 
-  
+
 <!--ad-->
 
 ```bash
@@ -112,15 +98,15 @@ Una vez hecho esto, lo siguiente es hacer que la ventana permanezca visible dura
 
 ```
 
-Como ya no vamos a usar mas la imagen cargada en nuestro programa, tenemos que eliminarla de la memoria. No se puede usar <var>delete</var>, hay que usar SDL_FreeSurface() para eliminarla de memoria. 
+Como ya no vamos a usar mas la imagen cargada en nuestro programa, tenemos que eliminarla de la memoria. No se puede usar <var>delete</var>, hay que usar SDL_FreeSurface() para eliminarla de memoria.
 
 Sin embargo, la superficie <var>screen</var> no hay que borrarla a mano, ya que SDL_Quit() lo hace por nosotros.
 
 Enhorabuena, acabas de hacer tu primera aplicación gráfica.
 
-* * *Fuente: 
+* * *Fuente:
 
-[lazyfoo.net][4]</p> 
+[lazyfoo.net][4]</p>
 
 #### Siguiente tema: [Lección 2 &#8211; Superficies Optimizadas][5] {.referencia}
 

@@ -1,29 +1,15 @@
 ---
 title: Enlightenment Foundation Libraries (EFL)
-
 layout: post
 permalink: /enlightenment-foundation-libraries-efl/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-  - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-  - haitikehttp://www.blogger.com/profile/14278354471841809541noreply@blogger.com
-
-  
-  
-  
 categories:
   - linux
-main-class: "dev"
 main-class: "linux"
 ---
 Esta es mi primera entrada así que intentad ser amable conmigo.
 
 Aprovechando <a href="http://www.enlightenment.org/p.php?p=news/show&l=en&news_id=23" target="_blank">que salió la versión Alfa</a> de las EFL decidido hablaros de estas librerias  
-<span class="fullpost"></p> 
+<span class="fullpost"></p>
 
 <p>
   Para ello hay que empezar hablando de <a href="http://es.wikipedia.org/wiki/Enlightenment" target="_blank">Enlightenment</a>. Enlightenment es un gestor de ventanas y también un escritorio de unix que empezó a desarrollarse en el 97, en la época de los inicios de muchos escritorios como KDE y Gnome. Era un escritorio bastante simple y ligero y de aspecto arcaico que usaba las librerías básicas de las X. Su última versión fue conocida como e16.
@@ -60,28 +46,28 @@ Aprovechando <a href="http://www.enlightenment.org/p.php?p=news/show&l=en&news_i
 <div>
   <div>
   </div>
-  
+
   <p>
   </p>
-  
+
   <div>
   </div>
-  
+
   <p>
-    </div> 
-    
+    </div>
+
     <p>
       Recomiendo para probar las librerías en acción (en este caso con e17) con el siguiente live-cd:<a href="http://www.elivecd.org/Download/Stable#download" target="_blank"> http://www.elivecd.org/Download/Stable#download</a>
     </p>
-    
+
     <p>
       Imágenes extra:<br /> <a href="http://trac.enlightenment.org/e/wiki/Elementary" target="_blank">http://trac.enlightenment.org/e/wiki/Elementary</a>
     </p>
-    
+
     <p>
       Página web de Enlightenment y las EFL (en inglés): <a href="http://www.enlightenment.org/" target="_blank">http://www.enlightenment.org/</a><br /> </span>
     </p>
-    
-    
+
+
 
 {% include _toc.html %}

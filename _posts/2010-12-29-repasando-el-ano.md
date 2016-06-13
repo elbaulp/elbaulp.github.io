@@ -1,24 +1,10 @@
 ---
 title: Repasando el Año.
-
 layout: post
 permalink: /repasando-el-ano/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 <div class="icoCalen">
 </div>
@@ -28,13 +14,13 @@ Como este año llega a su fin, he repasado las estadisticas del blog, para evalu
 Realmente no se puede decir &#8220;Repaso del año&#8221;, ya que empecé a escribir entradas a finales de agosto. Estoy bastante contento con la evolución del blog, porque sinceramente, un blog orientado a programación no es algo que atraiga a muchos lectores.
 
 Para el año que entra, voy a intentar en la medida de lo posible escribir más post sobre python y C++, y tambien tengo pensado escribir una introducción a CSS (Hojas de estilo en cascada).  
-  
+
 <!--ad-->
 
-  
+
 Actualmente solo estoy escribiendo yo en el blog, de ahí que algunos dias no se publiquen entradas, como digo siempre, si alguien quiere partipar, es bienvenido.
 
-Si no os gusta la idea de escribir, pero disponeis de scripts, programas que hagais o cualquier cosa que esté relacionada con la temática del blog, contactad conmigo via e-mail, haciendome vuestra propuesta.   
+Si no os gusta la idea de escribir, pero disponeis de scripts, programas que hagais o cualquier cosa que esté relacionada con la temática del blog, contactad conmigo via e-mail, haciendome vuestra propuesta.
 Para contactar solo teneis que hacer clic en el icono [<img src="https://lh3.ggpht.com/_IlK2pNFFgGM/TROHfpoBTBI/AAAAAAAAAN4/tsRODJlIw3s/contactar.png" alt="Contactar" title="Contactar" width="32px" height="32px" />][1] de arriba a la derecha.
 
 Por último quiero agradecer, como no, a todos los seguidores del blog, que lo leen habitualmente ya que sin vosotros, escribir a diario en el blog no tendría sentido. Y tambien a mi compañero de <a target="_blank" href="http://usemoslinux.blogspot.com/">UsemosLinux</a>, que me ha ayudado mucho con el diseño del blog.

@@ -1,25 +1,11 @@
 ---
 title: 'Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.'
-
 layout: post
 permalink: /consulta-de-datos-operadores-union-all/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - MINUS pl sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -28,7 +14,7 @@ main-class: "BaseDeDatos"
 Podemos combinar múltiples consultas utilizando los operadores UNION, UNION ALL, INTERSECT y MINUS.
 
 Los correspondientes campos y/o expresiones que aparecen en la listas de los SELECT de las consultas a las que se le aplican los operadores anteriores deben coincidir en tipo y número, o al menos, tener un tipo compatible o sobre el cual se pueda aplicar un casting automático.  
-  
+
 <!--ad-->
 
 ```sql
@@ -73,8 +59,8 @@ SELECT product_id FROM order_items;
 
 
 
-  * El orden de las cláusulas en las sentencia SELECT es significativo. Se puede omitir cualquiera de las cláusulas opcionales, pero cuando se usan, deben aparecer en el orden apropiado. 
-  * Cuando se ejecuta la sentencia SELECT con las cláusula WHERE, GROUP BY, y HAVING el orden de ejecución es el siguiente: 
+  * El orden de las cláusulas en las sentencia SELECT es significativo. Se puede omitir cualquiera de las cláusulas opcionales, pero cuando se usan, deben aparecer en el orden apropiado.
+  * Cuando se ejecuta la sentencia SELECT con las cláusula WHERE, GROUP BY, y HAVING el orden de ejecución es el siguiente:
       1. El WHERE excluye las filas que no cumplen la condición.
       2. El GROUP BY colecciona las filas escogidas dentro de un grupo por cada uno de los valores de la cláusula GROUP BY.
       3. Las funciones agregado calculan los valores por cada grupo.

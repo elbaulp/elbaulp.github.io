@@ -1,26 +1,12 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula GROUP BY'
-
 layout: post
 permalink: /consulta-de-datos-clausula-group-by/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - group by
   - orden group by sql
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -38,10 +24,10 @@ GROUP BY C_CLIENTE;
 
 ```
 
-  
+
 <!--ad-->
 
-  
+
 Un error muy común cuando se construyen consultas agrupadas, es el siguiente: ORA-  
 00979: not a GROUP BY expresión. Esto es debido al modo que tiene Oracle de analizar las  
 consultas agrupadas:
@@ -113,10 +99,10 @@ Select Sum(Stock) From Articulos Where Familia = ‘CPU’;
 
 Los más utilizados son:
 
-  * AVG. Calcula la media aritmética de un conjunto de valores contenidos en un campo especificado de una consulta. Su sintaxis es Avg(expr) donde expr representa el campo que contiene los datos numéricos para los que se desea calcular la media o una expresión que realiza un cálculo utilizando los datos de dicho campo. La media calculada por Avg es la media aritmética (la suma de los valores dividido por el número de valores). La función Avg no incluye ningún campo Null en el cálculo. 
-  * COUNT. Calcula el número de registros devueltos por una consulta. Su sintaxis es Count(expr). Aunque expr puede realizar un cálculo sobre un campo, Count simplemente cuenta el número de registros sin tener en cuenta qué valores se almacenan en los registros. La función Count no cuenta los registros que tienen campos null a menos que expr sea el carácter comodín asterisco (\*). Si utiliza un asterisco, Count calcula el número total de registros, incluyendo aquellos que contienen campos null. Count(\*) es considerablemente más rápida que Count(Campo). 
-  * MAX , MIN. Devuelven el mínimo o el máximo de un conjunto de valores contenidos en un campo especifico de una consulta. Su sintaxis es: Max(expr) Min(expr) donde expr es el campo o expresión sobre el que se desea realizar el cálculo. 
-  * SUM. Devuelve la suma del conjunto de valores contenido en un campo especifico de una consulta. Su sintaxis es Sum(expr) donde expr respresenta el nombre del campo que contiene los datos que desean sumarse o una expresión que realiza un cálculo utilizando los datos de dichos campos. 
+  * AVG. Calcula la media aritmética de un conjunto de valores contenidos en un campo especificado de una consulta. Su sintaxis es Avg(expr) donde expr representa el campo que contiene los datos numéricos para los que se desea calcular la media o una expresión que realiza un cálculo utilizando los datos de dicho campo. La media calculada por Avg es la media aritmética (la suma de los valores dividido por el número de valores). La función Avg no incluye ningún campo Null en el cálculo.
+  * COUNT. Calcula el número de registros devueltos por una consulta. Su sintaxis es Count(expr). Aunque expr puede realizar un cálculo sobre un campo, Count simplemente cuenta el número de registros sin tener en cuenta qué valores se almacenan en los registros. La función Count no cuenta los registros que tienen campos null a menos que expr sea el carácter comodín asterisco (\*). Si utiliza un asterisco, Count calcula el número total de registros, incluyendo aquellos que contienen campos null. Count(\*) es considerablemente más rápida que Count(Campo).
+  * MAX , MIN. Devuelven el mínimo o el máximo de un conjunto de valores contenidos en un campo especifico de una consulta. Su sintaxis es: Max(expr) Min(expr) donde expr es el campo o expresión sobre el que se desea realizar el cálculo.
+  * SUM. Devuelve la suma del conjunto de valores contenido en un campo especifico de una consulta. Su sintaxis es Sum(expr) donde expr respresenta el nombre del campo que contiene los datos que desean sumarse o una expresión que realiza un cálculo utilizando los datos de dichos campos.
   * STDEV | STDEVP | VAR | VARP. Desviación típica y Varianza.
 
 

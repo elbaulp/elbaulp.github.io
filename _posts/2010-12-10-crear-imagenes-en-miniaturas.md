@@ -1,24 +1,10 @@
 ---
 title: Crear miniaturas de imágenes
-
 layout: post
 permalink: /crear-imagenes-en-miniaturas/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - script
 main-class: "dev"
-main-class: "script"
 ---
 ### Creé una Versión mejorada de este script [aquí][1]
 

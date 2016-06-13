@@ -1,25 +1,11 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula HAVING y ORDER BY'
-
 layout: post
 permalink: /consulta-de-datos-clausula-having-y/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - base de datos having
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -31,10 +17,10 @@ Especifica una condición de selección para un grupo. HAVING se usa normalmente
 [ HAVING <search_condition_group> ]
 ```
 
-  
+
 <!--ad-->
 
-  
+
 donde search\_condition\_group determina la condición o condiciones de selección del agregado. Normalmente la condición de selección utiliza un agregado que se compara con un valor. Por ejemplo camiones que han realizado un porte o más:
 
 ```sql

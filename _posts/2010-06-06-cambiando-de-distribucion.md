@@ -1,23 +1,9 @@
 ---
 title: Cambiando de distribución
-
 layout: post
 permalink: /cambiando-de-distribucion/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - linux
-main-class: "dev"
 main-class: "linux"
 ---
 De vez en cuando me gusta cambiar de distribuciones linux, para no acostumbrarme unicamente a una. Asi que decidi probar opensuse, cuando

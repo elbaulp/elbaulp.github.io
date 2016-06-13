@@ -1,26 +1,12 @@
 ---
 title: Ubuntu funcionando en el Samsung Galaxy Tab
-
 layout: post
 permalink: /ubuntu-funcionando-en-el-samsung-galaxy/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
 tags:
   - xda
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 El mundo de los tablets está cada vez más animado, y los dispositivos basados en Android **empiezan a demostrar sus prestaciones ante el claro líder actual del mercado**, el iPad de Apple. Uno de los tablets más preparados para competir con el producto de los de Cupertino es el Samsung Galaxy Tab, un modelo con pantalla de 7 pulgadas gobernado por Android 2.2.
 

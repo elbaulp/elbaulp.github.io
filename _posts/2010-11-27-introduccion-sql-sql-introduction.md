@@ -1,23 +1,9 @@
 ---
 title: Introducción SQL
-
 layout: post
 permalink: /introduccion-sql-sql-introduction/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -27,10 +13,10 @@ Un <acronym title="Relational Data Base Management System">RDBMS</acronym> es un
 
 Es un software que se antepone a los datos de una base de datos, es decir, cualquier acceso a los datos pasa por una petición al RDBMS que éste gestiona con el fin de realizar la operación más conveniente sobre esa petición.
 
-  
+
 <!--ad-->
 
-  
+
 Prácticamente es un Sistema Operativo que controla el acceso a los datos, para conseguirlo, posee una serie de subesquemas que gestionan cada servicio:
 
   * **Sistema de gestión de la memoria.** Decide que parte de la memoria se dedica a cada tarea del RDBMS. Debe controlar que haya suficiente memoria para que el RDBMS funcione eficazmente y dejar la suficiente para el Sistema Operativo del ordenador.
@@ -42,21 +28,21 @@ Prácticamente es un Sistema Operativo que controla el acceso a los datos, para 
 
 ### Diccionario de Datos
 
-Agrupa los metadatos de una base de datos. En este diccionario aparecen todos los objetos de la base de datos con su nombre, función, control de acceso (seguridad) y correspondencia física en los archivos de datos. 
+Agrupa los metadatos de una base de datos. En este diccionario aparecen todos los objetos de la base de datos con su nombre, función, control de acceso (seguridad) y correspondencia física en los archivos de datos.
 
-Cada vez que llega al gestor una petición de datos, el RDBMS abre el diccionario de datos para comprobar los metadatos relacionados con la petición y resolver si hay permiso de uso y donde localizar físicamente los datos requeridos. 
+Cada vez que llega al gestor una petición de datos, el RDBMS abre el diccionario de datos para comprobar los metadatos relacionados con la petición y resolver si hay permiso de uso y donde localizar físicamente los datos requeridos.
 
 Normalmente cualquier DBMS funciona como servidor (programa en ejecución esperando peticiones de conexión al sistema). En cada intento de conexión verifica qué usuario intenta conectar y si tiene permiso se produce la conexión.
 
 En la conexión el usuario puede ejecutar peticiones en un lenguaje que el DBMS sea capaz de traducir. Esto centraliza la información ya que usuario y servidor pueden estar en lugares distintos. Hay dos tipos de conexión:
 
   1. **Conexión Local**
-    
+
     Conexión en la que servidor y usuario están en la misma máquina. Limita el uso de la base de datos a la máquina en la que el servidor esta instalado.
 
   2. **Cliente / Servidor**
-    
-    Es lo más común. El servidor lanza un proceso en la máquina central. Este proceso está a la escucha de nuevos usuarios, cuando estos llegan se produce una conexión que permite que el servidor y el cliente se comuniquen. Esto permite una accesibilidad a la base de datos desde distintas máquinas. 
+
+    Es lo más común. El servidor lanza un proceso en la máquina central. Este proceso está a la escucha de nuevos usuarios, cuando estos llegan se produce una conexión que permite que el servidor y el cliente se comuniquen. Esto permite una accesibilidad a la base de datos desde distintas máquinas.
 
 ### Herramientas de los RDBMS
 
@@ -93,15 +79,15 @@ Son comandos propios de este lenguaje:
   <p>
     CREATE TABLE
   </p>
-  
+
   <p>
     CREATE INDEX
   </p>
-  
+
   <p>
     CREATE VIEW
   </p>
-  
+
   <p>
     CREATE SYNONYM
   </p>
@@ -113,19 +99,19 @@ DML (Data Manipulation Language), Manipulan los datos, con ellos podemos selecci
   <p>
     SELECT
   </p>
-  
+
   <p>
     UPDATE
   </p>
-  
+
   <p>
     INSERT
   </p>
-  
+
   <p>
     INSERT INTO
   </p>
-  
+
   <p>
     DELETE FROM
   </p>
@@ -137,11 +123,11 @@ DCL (Data Control Language) Se encarga del control de accesos y privilegios entr
   <p>
     CREATE USER
   </p>
-  
+
   <p>
     GRANT
   </p>
-  
+
   <p>
     REVOKE
   </p>

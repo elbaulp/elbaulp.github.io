@@ -1,24 +1,10 @@
 ---
 title: 'Bodhi: Ubuntu+Enlightenment, perfecto para minimalistas'
-
 layout: post
 permalink: /bodhi-ubuntuenlightenment-perfecto-para/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 Los amantes de las distribuciones minimalistas puede que quieran echarle un vistazo a [Bodhi][1], una distribución que **está basada en Ubuntu 10.04** y que además aporta otro elemento importante: la última compilación de **Enlightenment (E17)** -aún en fase de desarrollo-, lo que permite contar con un escritorio singular tanto en su diseño como en su funcionamiento.
 

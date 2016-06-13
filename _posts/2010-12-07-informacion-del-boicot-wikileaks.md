@@ -1,24 +1,10 @@
 ---
 title: Recopilación de Información del Boicot a WikiLeaks
-
 layout: post
 permalink: /informacion-del-boicot-wikileaks/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 Hasta hace poco desconocía lo que era WikiLeaks, pero empecé a leer noticias sobre esta web en <a target="_blank" href="http://www.meneame.net">menéame</a>, y sobre todo lo que estaba ocurriendo en &#8216;La red&#8217;, me quedé sorprendido con todo lo que está pasando, y me extraña que nada de esto se esté echando en lo telediarios.  
 Para el que no sepa lo que es Wikileaks:

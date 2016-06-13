@@ -1,20 +1,7 @@
 ---
 title: 'Diseño de Bases de Datos ( II ) &#8211; Restricciones'
-
 layout: post
 permalink: /diseno-de-bases-de-datos-ii/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
@@ -22,7 +9,6 @@ tags:
   - sintaxis de restricciones check
   - sintaxis de restricciones check unique default
   - unique
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -38,23 +24,23 @@ main-class: "BaseDeDatos"
   <p>
     - No existen tuplas repetidas (obligatoriedad de clave primaria). La relación se ha definido como un conjunto de tuplas, y en matemáticas los conjuntos por definición no incluyen elementos repetidos. Hay que decir, sin embargo, que muchos de los SGBD relacionales sí admiten duplicidad de tuplas.
   </p>
-  
+
   <p>
     <br /><!--ad-->
   </p>
-  
+
   <p>
     - El orden de las tuplas y el de los atributos no es relevante.
   </p>
-  
+
   <p>
     - Cada atributo de cada tupla solo puede tomar un único valor sobre el dominio sobre el que está definido.
   </p>
-  
+
   <p>
     - Ningún atributo que forme parte de la clave primaria de una relación puede tomar un valor nulo (regla de integridad de entidad)
   </p>
-  
+
   <p>
     <em>Estas restricciones son las que marcan la diferencia entre una tabla y una relación, ya que una tabla presenta las filas y las columnas en un orden, del cual carecen las relaciones. Por otro lado, una tabla podría contener filas repetidas. De todos modos, es muy común utilizar el término tabla para referirse a una relación.</em>
   </p>
@@ -66,7 +52,7 @@ main-class: "BaseDeDatos"
   <p>
     Preocupado por los productos que decían ser sistemas gestores de bases de datos relacionales (RDBMS) sin serlo, Codd publica las 12 reglas que debe cumplir todo DBMS para ser considerado relacional. Estas reglas en la práctica las cumplen pocos sistemas relaciónales. Las reglas son:
   </p>
-  
+
   <ol>
     <li>
       <strong>Información.</strong> Toda la información de la base de datos debe estar representada explícitamente en el esquema lógico. Es decir, todos los datos están en las tablas.
@@ -124,7 +110,7 @@ main-class: "BaseDeDatos"
       <strong>Restricción de Integridad Referencial o de Clave Foránea</strong> <em>(FOREIGN KEY)</em>, se utiliza para que mediante claves foráneas podamos enlazar relaciones de una base de datos. La integridad referencial nos indica que si una relación tiene una clave foránea que referencia a otra relación, cada valor de la clave foránea o ajena tiene que ser igual a un valor de la clave principal de la relación a la que referencia, o bien, ser completamente nulo. Los atributos que son clave foránea en una relación no necesitan tener los mismos nombres que los atributos de la clave primaria con la cual ellos se corresponden. <p>
         El diseñador de la base de datos deberá poder especificar qué operaciones han de rechazarse y cuáles han de aceptarse, y en este caso, qué operaciones de compensación hay que realizar para mantener la integridad de la base de datos. Para ello el diseñador debe plantearse tres preguntas por cada clave foránea:
       </p>
-      
+
       <ol>
         <li>
           <strong>¿Puede aceptar nulos esa clave foránea?</strong> Por ejemplo, (tomando como referencia las relaciones PROVEEDORES, ARTICULOS) ¿tiene sentido la existencia de un articulo cuyo proveedor se desconoce? Evidentemente, no. En algunos casos esta respuesta podría ser distinta, por ejemplo, en una base de datos con las relaciones EMPLEADOS y DEPARTAMENTOS, podría existir un empleado no asignado de momento a un departamento.
@@ -142,7 +128,7 @@ main-class: "BaseDeDatos"
             </li>
           </ul>
         </li>
-        
+
         <li>
           <strong>¿Qué deberá suceder si hay un intento de modificar la clave primaria de una tupla referenciada por una clave foránea?</strong> Por ejemplo, si se intenta modificar la clave de un proveedor del cual existe algún artículo. Se actua con las mismas tres posibilidades que en el caso anterior: <ul>
             <li>
@@ -158,7 +144,7 @@ main-class: "BaseDeDatos"
         </li>
       </ol>
     </li>
-    
+
     <li>
       <strong>Restricción de Valor por Defecto</strong> <em>(DEFAULT)</em>, permite que cuando se inserte una tupla o registro en una tabla, para aquellos atributos para los cuales no se indique un valor exacto se les asigne un valor por defecto.
     </li>

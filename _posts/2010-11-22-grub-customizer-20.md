@@ -1,21 +1,10 @@
 ---
 title: Grub Customizer 2.0
-
 layout: post
 permalink: /grub-customizer-20/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
 categories:
   - Sin Categoria
-main-class: "dev"
-main-class: "Sin Categoria"
+main-class: "linux"
 ---
 <div lang="en">
   <div style="text-align: center;">

@@ -1,24 +1,10 @@
 ---
 title: Visible Tweets
-
 layout: post
 permalink: /visible-tweets/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - curiosidades
-main-class: "dev"
-main-class: "curiosidades"
+main-class: "articulos"
 ---
 Soy un lector habitual del blog <a target="_blank" href="http://oloblogger.blogspot.com">oloblogger</a>, y leí una entrada, que aunque este un poco fuera de contexto con la tematica de este blog, me pareció interesante compartirla.
 

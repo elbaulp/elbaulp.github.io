@@ -6,8 +6,8 @@ modified:
 categories: android
 description: "En este primer artículo veremos los conceptos fundamentales que componen una aplicación Android."
 tags: [Curso de Android, programación Android, tutoriales Android, NPI]
-image:
 image: hotlink-ok/activityLifecycle.png
+main-class: "android"
 ---
 
 {% include _toc.html %}

@@ -1,28 +1,14 @@
 ---
 title: Juegos Linux, The Clockwork Man 1 y 2
-
 layout: post
 permalink: /juegos-linux-clockwork-man-1-y-2/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - juegos
-main-class: "dev"
-main-class: "juegos"
+main-class: "articulos"
 ---
 Puedes encontrar más juegos para Linux [aquí][1].
 
-Pocas veces he visto juego que de soporte para los tres sistemas operativos (GNU/Linux, Mac OS y Windows), pero no es el caso de <cite>The Clockwork Man 1</cite> y <cite>The Clockwork Man 2</cite>.   
+Pocas veces he visto juego que de soporte para los tres sistemas operativos (GNU/Linux, Mac OS y Windows), pero no es el caso de <cite>The Clockwork Man 1</cite> y <cite>The Clockwork Man 2</cite>.
 En The Clockwork Man ayudaremos a Miranda Calomy y su robot Sprocket a superar una aventura repleta de puzzles mediante un novedoso sistema de puntero y zoom, todo ello en coloridos escenarios con gráficos pintados a mano, entre los que destacan las decenas de artilugios &#8220;científicos&#8221; (hablamos de una época victoriana alternativa).  
 El precio de <cite>The Clockwork Man 1</cite> es de $15, y el de <cite>The Clockwork Man 2</cite> $20. Si no queréis comprarlo, os dejo los links de descarga de los Demos.
 

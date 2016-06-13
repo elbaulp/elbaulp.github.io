@@ -1,24 +1,10 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 1 &#8211; Instalando SDL'
-
 layout: post
 permalink: /programacion-para-juegos-leccion-1/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - juegos
 main-class: "dev"
-main-class: "juegos"
 ---
 <div class="icosdl">
 </div>
@@ -27,7 +13,7 @@ Como dije, voy a traducir el tutorial que estoy siguiendo de SDL, en <a target="
 
 Esta primera parte de la lección 1 no la voy a traducir debido a que hay un gran abanico de posibilidades según el SO que tengáis y del IDE que queráis usar, los pasos son bastante sencillos y viene explicado con imágenes.
 
-  
+
 <!--ad-->
 
 Selecciona el SO que tengas:
@@ -43,9 +29,9 @@ sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libs
 
 
 
-* * *Fuente: 
+* * *Fuente:
 
-[lazyfoo.net][4]</p> 
+[lazyfoo.net][4]</p>
 
 #### Siguiente tema: [Lección 1.2 &#8211; Hello World][5] {.referencia}
 

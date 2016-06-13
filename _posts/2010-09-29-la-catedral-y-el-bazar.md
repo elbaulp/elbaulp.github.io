@@ -1,24 +1,10 @@
 ---
 title: '&#8220;La catedral y el bazar&#8221;'
-
 layout: post
 permalink: /la-catedral-y-el-bazar/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - opensource
-main-class: "dev"
-main-class: "opensource"
+main-class: "articulos"
 ---
 En la lista de pyar, me tope con un articulo bastante bueno, se llama La catedral y el bazar, y basicamente habla sobre como encarar un proyecto de software libre, y que éste llegue a algún lado.  
 Me parecio interesante y lo publico aqui para el que quiera leerlo:

@@ -1,24 +1,10 @@
 ---
 title: Logo del blog
-
 layout: post
 permalink: /logo-del-blog/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - noticias
-main-class: "dev"
-main-class: "noticias"
+main-class: "articulos"
 ---
 He estado buscando logos para el blog, y me gustaría que votárais cual de estos dos os gusta más:
 
@@ -34,7 +20,7 @@ He estado buscando logos para el blog, y me gustaría que votárais cual de esto
   </p>
 </div>
 
-  
+
 <!--ad-->
 
 

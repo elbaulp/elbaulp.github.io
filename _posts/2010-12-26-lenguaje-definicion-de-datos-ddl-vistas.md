@@ -1,20 +1,7 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
-
 layout: post
 permalink: /lenguaje-definicion-de-datos-ddl-vistas/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-
-
-
 categories:
   - BaseDeDatos
 tags:
@@ -22,7 +9,6 @@ tags:
   - concepto de ddl
   - que es un ddl
   - sentencias dml y ddl
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">

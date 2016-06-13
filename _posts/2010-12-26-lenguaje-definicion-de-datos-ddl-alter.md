@@ -1,27 +1,13 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
-
 layout: post
 permalink: /lenguaje-definicion-de-datos-ddl-alter/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - concepto de ddl
   - que es un ddl
   - sentencias dml y ddl
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -39,10 +25,10 @@ ALTER TABLE Tabla
  [DROP CONSTRAINTS restricción]};
 ```
 
-  
+
 <!--ad-->
 
-  
+
 Añadir o modificar columnas ( nombre, tipo, valor por defecto, restricción NOT NULL)
 
 ```sql
@@ -64,7 +50,7 @@ alter table nombre_tabla ADD CONSTRAINT nombre_restricción restricción
 Eliminar una restricción.
 
 ```sql
-alter table nombre_table DROP CONSTRAINT nombre_restricción 
+alter table nombre_table DROP CONSTRAINT nombre_restricción
 ```
 
 Activación y desactivación de una restricción.
@@ -81,7 +67,7 @@ ENABLE NOVALIDATE activa la restricción para las siguientes instrucciones de ma
 
 DISABLE desactiva la restricción.
 
-Hay que tener en cuenta que si la tabla está vacía, al añadir una columna con la restricción NOT NULL no habrá ningún error, pero si tiene filas no permitirá añadir una columna con esta opción. 
+Hay que tener en cuenta que si la tabla está vacía, al añadir una columna con la restricción NOT NULL no habrá ningún error, pero si tiene filas no permitirá añadir una columna con esta opción.
 
 Ejemplos:
 
@@ -133,7 +119,7 @@ alter table nombre_table DROP COLUMN nombre_columna;
 
 
 
-* * *</p> 
+* * *</p>
 
 #### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Vistas][1] {.referencia}
 

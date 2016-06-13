@@ -1,24 +1,10 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 2 &#8211; Imágenes Optimizadas'
-
 layout: post
 permalink: /programacion-para-juegos-leccion-2/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - juegos
 main-class: "dev"
-main-class: "juegos"
 ---
 <div class="icosdl">
 </div>
@@ -26,7 +12,7 @@ main-class: "juegos"
 [Pueden descargar el código fuente de esta lección.][1]
 
 Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda parte de la lección 1][2], vamos a superponer varias imagenes de una manera más eficiente.  
-  
+
 <!--ad-->
 
 ```bash
@@ -61,11 +47,11 @@ SDL_Surface *screen = NULL;
 Estas son las tres imágenes que vamos a usar. &#8220;background&#8221; obviamente es la imagen que se verá de fondo, &#8220;message&#8221; es la imagen que dice &#8220;Hello&#8221; y &#8220;screen&#8221; es la ventana contenedora de las imágenes.
 
 ```bash
-SDL_Surface *load_image( std::string filename ) 
+SDL_Surface *load_image( std::string filename )
 {
     //Temporary storage for the image that's loaded
     SDL_Surface* loadedImage = NULL;
-    
+
     //The optimized image that will be used
     SDL_Surface* optimizedImage = NULL;
 
@@ -90,7 +76,7 @@ Pero no se debe usar inmediatamente, ya que esta imagen es de 24-bit y &#8220;sc
     {
         //Create an optimized image
         optimizedImage = SDL_DisplayFormat( loadedImage );
-        
+
         //Free the old image
         SDL_FreeSurface( loadedImage );
     }
@@ -131,7 +117,7 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination 
 {
     //Make a temporary rectangle to hold the offsets
     SDL_Rect offset;
-    
+
     //Give the offsets to the rectangle
     offset.x = x;
     offset.y = y;
@@ -163,7 +149,7 @@ int main( int argc, char* args[] )
 ```
 
 Empezamos con la función principal.  
-Cuando usamos SDL, siempre hay que usar la función main de esta manera:   
+Cuando usamos SDL, siempre hay que usar la función main de esta manera:
 int main( int argc, char* args[] )  
 o  
 int main( int argc, char** args ).
@@ -172,7 +158,7 @@ int main( int argc, char** args ).
 //Inicializar todos los subsistemas
     if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
     {
-        return 1;    
+        return 1;
     }
 
 ```
@@ -196,7 +182,7 @@ Ya conocemos que son los tres primeros argumentos, el cuarto crea la ventana en 
 //Si ocurre algún error
     if( screen == NULL )
     {
-        return 1;    
+        return 1;
     }
 
 ```
@@ -281,7 +267,7 @@ El origen de coordenadas (0,0) está en la esquina superior izquierda. Por eso h
 //Actualizando la pantalla
     if( SDL_Flip( screen ) == -1 )
     {
-        return 1;    
+        return 1;
     }
 
 ```
@@ -300,10 +286,10 @@ Llamamos a esta función para que la ventana se muestre durante 2 segundos en pa
 //Liberamos las imágenes
     SDL_FreeSurface( message );
     SDL_FreeSurface( background );
-    
+
     //Quit SDL
     SDL_Quit();
-    
+
     //Return
     return 0;
 }
@@ -312,9 +298,9 @@ Llamamos a esta función para que la ventana se muestre durante 2 segundos en pa
 
 Ya que hemos terminado nuestro programa, usamos SDL_FreeSurface() para eliminar de memoria las variables que almacenaban las imágenes. Si no liberamos la memoria, estas variables se quedarán ocupando espacio.
 
-* * *Fuente: 
+* * *Fuente:
 
-[lazyfoo.net][3]</p> 
+[lazyfoo.net][3]</p>
 
 #### Siguiente tema: [Programación para Juegos &#8211; Lección 3 Librerías de SDL][4] {.referencia}
 

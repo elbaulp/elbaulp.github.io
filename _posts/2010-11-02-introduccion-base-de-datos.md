@@ -1,27 +1,13 @@
 ---
 title: Introduccion a base de datos
-
 layout: post
 permalink: /introduccion-base-de-datos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
 tags:
   - abstraccion de datos pl/sql
   - apuntes bases de datos
   - guia de sql basico
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -43,7 +29,7 @@ main-class: "BaseDeDatos"
   <strong>Datos.-</strong> En una BD existen dos tipos de datos: <strong><em>el diccionario de datos (DD)</em></strong> que son los datos de uso interno del software que gestiona la base de datos, como son el tamaño de los campos, el tipo, los usuarios&#8230; Y por otra parte est&aacute;n <strong><em>los datos que el cliente necesita almacenar.</em></strong> La informaci&oacute;n de los datos debe estar integrada, es decir, como si se tratara de un &uacute;nico fichero. Adem&aacute;s, los datos deben ser compartidos, es decir, muchos usuarios pueden acceder a la misma informaci&oacute;n, eso s&iacute;, con acceso controlado.
 </p>
 
-  
+
 <!--ad-->
 
 <p style="margin-left: 1em">
@@ -83,9 +69,9 @@ main-class: "BaseDeDatos"
   <strong>Usuarios.-</strong> Entre los usuarios de una base de datos podemos distinguir:
 </p>
 
-  * **Finales:** son aquellos que interact&uacute;an con los datos normales del sistema de informaci&oacute;n. Un usuario final no modifica la estructura de la base de datos. Puede tener permiso para insertar, modificar o eliminar datos, siendo la operaci&oacute;n cl&aacute;sica la consulta. Este usuario no podr&aacute; modificar la estructura de una tabla. Pueden ser usuarios sin conocimientos inform&aacute;ticos, tan solo manejan un programa, tambi&eacute;n pueden saber SQL y hacer una consulta a trav&eacute;s de un interprete de SQL. 
-  * **Programador de aplicaci&oacute;n:** es un usuario con conocimientos inform&aacute;ticos con la responsabilidad de escribir c&oacute;digo para la aplicaci&oacute;n de gesti&oacute;n. Habitualmente tiene la posibilidad de crear subesquemas en la base de datos y por tanto se le permite modificar y estructurar la base de datos. Tiene permiso para crear c&oacute;digo. 
-  * **Administrador (DBA):** Es el usuario con permisos m&aacute;s alto de la base de datos y tiene la responsabilidad de mantener el funcionamiento de la base de datos, definir todos los par&aacute;metros de inicializaci&oacute;n y almacenamiento. Crea usuarios y les otorga los permisos pertinentes. Tiene que definir la forma de recuperar la base de datos y todas las pol&iacute;ticas de seguridad. 
+  * **Finales:** son aquellos que interact&uacute;an con los datos normales del sistema de informaci&oacute;n. Un usuario final no modifica la estructura de la base de datos. Puede tener permiso para insertar, modificar o eliminar datos, siendo la operaci&oacute;n cl&aacute;sica la consulta. Este usuario no podr&aacute; modificar la estructura de una tabla. Pueden ser usuarios sin conocimientos inform&aacute;ticos, tan solo manejan un programa, tambi&eacute;n pueden saber SQL y hacer una consulta a trav&eacute;s de un interprete de SQL.
+  * **Programador de aplicaci&oacute;n:** es un usuario con conocimientos inform&aacute;ticos con la responsabilidad de escribir c&oacute;digo para la aplicaci&oacute;n de gesti&oacute;n. Habitualmente tiene la posibilidad de crear subesquemas en la base de datos y por tanto se le permite modificar y estructurar la base de datos. Tiene permiso para crear c&oacute;digo.
+  * **Administrador (DBA):** Es el usuario con permisos m&aacute;s alto de la base de datos y tiene la responsabilidad de mantener el funcionamiento de la base de datos, definir todos los par&aacute;metros de inicializaci&oacute;n y almacenamiento. Crea usuarios y les otorga los permisos pertinentes. Tiene que definir la forma de recuperar la base de datos y todas las pol&iacute;ticas de seguridad.
 
 
 
@@ -101,15 +87,15 @@ main-class: "BaseDeDatos"
   Una de las <strong>arquitecturas m&aacute;s estandarizada</strong> es la especificada por la normativa <acronym title="Standard Planning and Requirements Committee of the American National Standards Institute – Comit&eacute; de Planificaci&oacute;n y Requerimientos de est&aacute;ndares del Instituto Nacional de Est&aacute;ndares de Estados Unidos, divisi&oacute;n X3">ANSI/X3/SPARC</acronym>. Seg&uacute;n esta norma la arquitectura de una base de datos debe tener tres niveles de abstracci&oacute;n: <strong>externo, conceptual e interno.</strong>
 </p>
 
-  * **F&iacute;sico o Interno:** Es el nivel que define el formato de almacenamiento f&iacute;sico de los datos. Esta visi&oacute;n contempla: la organizaci&oacute;n de los ficheros, modos de acceso, &iacute;ndices y punteros, bloqueo de registros. El nivel interno se describe por medio de un **esquema interno** o vista interna. 
-  * **Conceptual:** Es una visi&oacute;n total de los datos de la BD, de c&oacute;mo est&aacute; organizada toda la base de datos, tal y como la crea el analista conceptualmente (representaci&oacute;n de las tablas&#8230;). Es la visi&oacute;n del administrador de la BD, que es el &uacute;nico usuario que trabaja a este nivel; el resto de usuarios trabajan a nivel externo utilizando subconjuntos de la estructura conceptual. 
-  * **Externo:** es el nivel m&aacute;s alto de abstracci&oacute;n, es decir el m&aacute;s cercano al usuario, y proporciona una visi&oacute;n parcial de los datos. Es la visi&oacute;n que tiene un usuario o aplicaci&oacute;n de la base de datos. Cada usuario tiene una vista externa diferente de la base de datos. Para cada tipo de usuario hay que especificar un esquema externo, **subesquema** o vista externa, que describe un subconjunto de la BD. 
+  * **F&iacute;sico o Interno:** Es el nivel que define el formato de almacenamiento f&iacute;sico de los datos. Esta visi&oacute;n contempla: la organizaci&oacute;n de los ficheros, modos de acceso, &iacute;ndices y punteros, bloqueo de registros. El nivel interno se describe por medio de un **esquema interno** o vista interna.
+  * **Conceptual:** Es una visi&oacute;n total de los datos de la BD, de c&oacute;mo est&aacute; organizada toda la base de datos, tal y como la crea el analista conceptualmente (representaci&oacute;n de las tablas&#8230;). Es la visi&oacute;n del administrador de la BD, que es el &uacute;nico usuario que trabaja a este nivel; el resto de usuarios trabajan a nivel externo utilizando subconjuntos de la estructura conceptual.
+  * **Externo:** es el nivel m&aacute;s alto de abstracci&oacute;n, es decir el m&aacute;s cercano al usuario, y proporciona una visi&oacute;n parcial de los datos. Es la visi&oacute;n que tiene un usuario o aplicaci&oacute;n de la base de datos. Cada usuario tiene una vista externa diferente de la base de datos. Para cada tipo de usuario hay que especificar un esquema externo, **subesquema** o vista externa, que describe un subconjunto de la BD.
 
 <p style="margin-left: 1em">
   El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> debe poder garantizar la transferencia de los datos desde el nivel interno al nivel externo, a este proceso se llama transformaci&oacute;n de datos o mapeo (data mapping). Para ello existen dos niveles de correspondencia:
 </p>
 
-  * **Correspondencia conceptual/interna:** Permite el paso de la vista conceptual a la vista interna, y viceversa. Especifica c&oacute;mo se representan los registros y campos conceptuales en el nivel interno. Si se modifica la estructura interna de la base de datos, la correspondencia conceptual/interna deber&aacute; modificarse, para que no var&iacute;e el esquema conceptual. De este modo se conserva la independencia de los datos. 
+  * **Correspondencia conceptual/interna:** Permite el paso de la vista conceptual a la vista interna, y viceversa. Especifica c&oacute;mo se representan los registros y campos conceptuales en el nivel interno. Si se modifica la estructura interna de la base de datos, la correspondencia conceptual/interna deber&aacute; modificarse, para que no var&iacute;e el esquema conceptual. De este modo se conserva la independencia de los datos.
   * **Correspondencia externa/conceptual:** Permite el paso de una vista externa espec&iacute;fica a la vista conceptual, y viceversa.
 
 <p style="margin-left: 1em">
@@ -156,11 +142,11 @@ main-class: "BaseDeDatos"
     <td>
       DEPARTAMENTO
     </td>
-    
+
     <td>
       CONCEPTO
     </td>
-    
+
     <td>
       IMPORTE
     </td>
@@ -176,7 +162,7 @@ main-class: "BaseDeDatos"
     <td>
       DEPARTAMENTO
     </td>
-    
+
     <td>
       NOMBRE
     </td>
@@ -216,15 +202,15 @@ main-class: "BaseDeDatos"
     <td>
       COD_VEND string(3)
     </td>
-    
+
     <td>
       NOMBRE string(30)
     </td>
-    
+
     <td>
       DEPART string(4)
     </td>
-    
+
     <td>
       &#8230;
     </td>
@@ -236,15 +222,15 @@ main-class: "BaseDeDatos"
     <td>
       COD_VEND string(3)
     </td>
-    
+
     <td>
       COD_ART string(4)
     </td>
-    
+
     <td>
       CANTIDAD long
     </td>
-    
+
     <td>
       FECHA date
     </td>
@@ -256,15 +242,15 @@ main-class: "BaseDeDatos"
     <td>
       COD_ART string(4)
     </td>
-    
+
     <td>
       CONCEPTO string(40)
     </td>
-    
+
     <td>
       PVP float
     </td>
-    
+
     <td>
       &#8230;
     </td>
@@ -292,67 +278,67 @@ main-class: "BaseDeDatos"
     <td bgcolor="#666666">
       DEPARTAMENTO
     </td>
-    
+
     <td bgcolor="#666666">
       CONCEPTO
     </td>
-    
+
     <td bgcolor="#666666">
       IMPORTE
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Autom&oacute;vil
     </td>
-    
+
     <td>
       Antirrobo
     </td>
-    
+
     <td>
       3.450
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Autom&oacute;vil
     </td>
-    
+
     <td>
       Parasol
     </td>
-    
+
     <td>
       300
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Hogar
     </td>
-    
+
     <td>
       Juego toallas
     </td>
-    
+
     <td>
       6.500
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Hogar
     </td>
-    
+
     <td>
       S&aacute;banas estampadas
     </td>
-    
+
     <td>
       4.500
     </td>
@@ -366,37 +352,37 @@ main-class: "BaseDeDatos"
     <td bgcolor="#666666">
       DEPARTAMENTO
     </td>
-    
+
     <td bgcolor="#666666">
       NOMBRE
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Autom&oacute;vil
     </td>
-    
+
     <td>
       Jos&eacute; L&oacute;pez Garc&iacute;a
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Hogar
     </td>
-    
+
     <td>
       Ana Ruiz Ram&iacute;rez
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Hogar
     </td>
-    
+
     <td>
       Julia P&eacute;rez Ramos
     </td>
@@ -416,67 +402,67 @@ main-class: "BaseDeDatos"
     <td bgcolor="#666666">
       COD_VEND
     </td>
-    
+
     <td bgcolor="#666666">
       NOMBRE
     </td>
-    
+
     <td bgcolor="#666666">
       DEPARTAMENTO
     </td>
-    
+
     <td bgcolor="#666666">
       &#8230;
     </td>
   </tr>
-  
+
   <tr>
     <td>
       001
     </td>
-    
+
     <td>
       Jos&eacute; L&oacute;pez Garc&iacute;a
     </td>
-    
+
     <td>
       Autom&oacute;vil
     </td>
-    
+
     <td>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       002
     </td>
-    
+
     <td>
       Ana Ruiz Ram&iacute;rez
     </td>
-    
+
     <td>
       Hogar
     </td>
-    
+
     <td>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       003
     </td>
-    
+
     <td>
       Julia P&eacute;rez Ramos
     </td>
-    
+
     <td>
       Hogar
     </td>
-    
+
     <td>
     </td>
   </tr>
@@ -489,104 +475,104 @@ main-class: "BaseDeDatos"
     <td bgcolor="#666666">
       COD_VEND
     </td>
-    
+
     <td bgcolor="#666666">
       COD_ART
     </td>
-    
+
     <td bgcolor="#666666">
       CANTIDAD
     </td>
-    
+
     <td bgcolor="#666666">
       FECHA
     </td>
-    
+
     <td bgcolor="#666666">
       &#8230;
     </td>
   </tr>
-  
+
   <tr>
     <td>
       002
     </td>
-    
+
     <td>
       H22
     </td>
-    
+
     <td>
       1
     </td>
-    
+
     <td>
       01-10-98
     </td>
-    
+
     <td>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       001
     </td>
-    
+
     <td>
       A11
     </td>
-    
+
     <td>
       1
     </td>
-    
+
     <td>
       02-10-98
     </td>
-    
+
     <td>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       003
     </td>
-    
+
     <td>
       H15
     </td>
-    
+
     <td>
       1
     </td>
-    
+
     <td>
       18-10-98
     </td>
-    
+
     <td>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       001
     </td>
-    
+
     <td>
       A22
     </td>
-    
+
     <td>
       1
     </td>
-    
+
     <td>
       20-10-98
     </td>
-    
+
     <td>
     </td>
   </tr>

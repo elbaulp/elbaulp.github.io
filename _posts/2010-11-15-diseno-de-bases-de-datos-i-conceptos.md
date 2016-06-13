@@ -1,23 +1,9 @@
 ---
 title: 'Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional'
-
 layout: post
 permalink: /diseno-de-bases-de-datos-i-conceptos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - BaseDeDatos
-main-class: "dev"
 main-class: "BaseDeDatos"
 ---
 <div class="icosql">
@@ -35,7 +21,7 @@ main-class: "BaseDeDatos"
   Las bases de datos relacionales se basan en el uso de tablas (también se las llama <strong>relaciones</strong>). Las tablas se representan gráficamente como una estructura rectangular formada por filas y columnas.
 </p>
 
-  
+
 <!--ad-->
 
 <p lang="es">
@@ -64,67 +50,67 @@ main-class: "BaseDeDatos"
       <td bgcolor="#666666">
         NIF
       </td>
-      
+
       <td bgcolor="#666666">
         NOMBRE
       </td>
-      
+
       <td bgcolor="#666666">
         LOCALIDAD
       </td>
     </tr>
-    
+
     <tr>
       <td>
         111111
       </td>
-      
+
       <td>
         Manuel
       </td>
-      
+
       <td>
         Málaga
       </td>
     </tr>
-    
+
     <tr>
       <td>
         3333333
       </td>
-      
+
       <td>
         Gabriel
       </td>
-      
+
       <td>
         Granada
       </td>
     </tr>
-    
+
     <tr>
       <td>
         5555555
       </td>
-      
+
       <td>
         Marcos
       </td>
-      
+
       <td>
         Málaga
       </td>
     </tr>
-    
+
     <tr>
       <td>
         7777777
       </td>
-      
+
       <td>
         Carlos
       </td>
-      
+
       <td>
         Cádiz
       </td>
@@ -138,53 +124,53 @@ main-class: "BaseDeDatos"
       <td bgcolor="#666666">
         CODIGO
       </td>
-      
+
       <td bgcolor="#666666">
         NIF-PRO
       </td>
-      
+
       <td bgcolor="#666666">
         CONCEPTO
       </td>
     </tr>
-    
+
     <tr>
       <td>
         11
       </td>
-      
+
       <td>
         555555
       </td>
-      
+
       <td>
         Teclado
       </td>
     </tr>
-    
+
     <tr>
       <td>
         22
       </td>
-      
+
       <td>
         777777
       </td>
-      
+
       <td>
         Impresora
       </td>
     </tr>
-    
+
     <tr>
       <td>
         33
       </td>
-      
+
       <td>
         111111
       </td>
-      
+
       <td>
         Monitor
       </td>
@@ -216,7 +202,7 @@ main-class: "BaseDeDatos"
   <strong>Minimalidad:</strong> Si K es compuesto, no será posible eliminar ningún componente de K sin destruir la propiedad de unicidad.
 </p>
 
-Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de la relación PROVEEDORES, ya que podemos eliminar el atributo LOCALIDAD sin destruir la propiedad de unicidad, es decir, siguen sin existir dos tuplas con el mismo valor de NIF. 
+Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de la relación PROVEEDORES, ya que podemos eliminar el atributo LOCALIDAD sin destruir la propiedad de unicidad, es decir, siguen sin existir dos tuplas con el mismo valor de NIF.
 
 <p lang="es">
   <strong>Clave primaria.</strong> Es posible que una relación posea más de una clave candidata, en ese caso, se escoge una de ellas como <strong>clave primaria</strong> y el resto se denominan <strong>claves alternativas</strong>. En la práctica la elección de la clave primaria suele ser sencilla. Toda relación, sin excepción, tiene una clave primaria y suele representarse subrayando y/o añadiendo el carácter # al atributo (o conjunto de atributos) correspondiente.
@@ -224,7 +210,7 @@ Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de 
 
 <p lang="es" style="margin-left: 1em">
   Por ejemplo: Artículos( código#, concepto)
-</p></p> 
+</p></p>
 
 <p lang="es">
   <strong>Clave foránea, ajena o extranjera</strong> es un atributo (o conjunto de atributos) de una relación R1 que a la vez es clave primaria de otra relación R2. Se utiliza para referenciar a la tupla de R2 cuya clave primaria coincida con el valor de la clave foránea de R1. Ambas claves deben definirse sobre el mismo dominio.
@@ -234,7 +220,7 @@ Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya q
 
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s1600/m.rf2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="230" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320" /></a>
-</div></p> 
+</div></p>
 
 
 

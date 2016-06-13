@@ -1,23 +1,9 @@
 ---
 title: 'Chistes de informaticos &#8211; www.desmotivaciones.es'
-
 layout: post
 permalink: /chistes-de-informaticos/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - Humor
-main-class: "dev"
 main-class: "geek"
 ---
 <div class="separator" style="clear: both; text-align: center;">

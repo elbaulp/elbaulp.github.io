@@ -1,26 +1,12 @@
 ---
 title: 3 Juegos para Linux
-
 layout: post
 permalink: /3-juegos-para-linux/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - juegos
 tags:
   - osmos para linux
-main-class: "dev"
-main-class: "juegos"
+main-class: "articulos"
 ---
 Encontré por internet estos juegos para linux que me parecieron interesantes, el post original es <a href="http://www.linuxaria.com/recensioni/unusual-game-linux?lang=en" target="_blank">este</a>:
 

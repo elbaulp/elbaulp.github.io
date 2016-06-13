@@ -1,11 +1,9 @@
 ---
 title: Sobre el blog
-
 layout: post
 permalink: /sobre-el-blog/
 categories:
   - Articulos
-main-class: "dev"
 main-class: "articulos"
 ---
 **NOTA: ignorad este artículo, lo he importado desde blogger y por ese motivo ha llegado un correo a todos los suscriptores, lamento la molestia**

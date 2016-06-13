@@ -1,26 +1,12 @@
 ---
 title: Ubuntu running on the Samsung Galaxy Tab
-
 layout: post
 permalink: /ubuntu-running-on-samsung-galaxy-tab/
-blogger_blog:
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-  - www.elbauldelprogramador.org
-blogger_author:
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-  - Alejandro Alcaldehttps://profiles.google.com/117030001562039350135noreply@blogger.com
-
-  
-  
-  
 categories:
   - Sin Categoria
 tags:
   - xda
-main-class: "dev"
-main-class: "Sin Categoria"
+main-class: "articulos"
 ---
 <p lang="en">
   Android running on the iPhone is making great news these days. Now, someone from <a href="http://forum.xda-developers.com/showthread.php?t=836022" target="_blank">XDA-developers</a> forum has successfully installed Ubuntu on Samsung Galaxy Tab which originally runs Android. As latest Ubuntu version has touch support and Galaxy Tab’s hardware is OK for Ubuntu, the hack seems to be working well.
