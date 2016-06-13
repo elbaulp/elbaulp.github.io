@@ -203,4 +203,4 @@ Podemos ver que el nodo Tor está ubicado en Alemania, tiene la IP 31.172.30.1, 
  [4]: /assets/img/2013/04/081712_1515_AchievingAn1.png
  [5]: /assets/img/2013/05/081712_1515_AchievingAn2.png
 
-{% include _toc.html %}
+{% include toc.html %}

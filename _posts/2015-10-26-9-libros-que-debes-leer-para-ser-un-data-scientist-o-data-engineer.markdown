@@ -10,7 +10,7 @@ modified: 2016-04-28T11:00:00+00:00
 main-class: "articulos"
 color: "#F57C00"
 ---
-{% include _toc.html %}
+{% include toc.html %}
 
 Tras mucho buscar, al fin he conseguido recopilar una lista de libros que todo _Científico de Datos_ o _Ingeniero de Datos_ debería tener en su
 biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de los libros ha sido cogida de Amazon)

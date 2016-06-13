@@ -85,4 +85,4 @@ Fuente: <a href="http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-t
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

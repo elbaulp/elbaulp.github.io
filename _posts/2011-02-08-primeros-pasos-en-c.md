@@ -25,4 +25,4 @@ Desgarga: <a target="_blank" href="http://www.megaupload.com/?d=56QJI34T">PDF1</
  [1]: https://elbauldelprogramador.com/2-nuevas-secciones-en-el-blog/
  [2]: https://elbauldelprogramador.com/clases-y-objetos-introduccion/
 
-{% include _toc.html %}
+{% include toc.html %}

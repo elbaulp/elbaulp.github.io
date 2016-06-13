@@ -26,4 +26,4 @@ A partir de ahora, podrás encontrar en el menú de arriba bajo el nombre *[RSS/
 
  [1]: /rssfeed/
 
-{% include _toc.html %}
+{% include toc.html %}

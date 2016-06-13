@@ -83,4 +83,4 @@ And you will see that life is beautiful.
 
  [1]: /label/v%C3%ADdeo%20de%20la%20semana
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -259,4 +259,4 @@ Donde `com.example.dialogpreferenceexample.MyDialogPreference` es el nombre de l
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
  [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/ "Programación Android: Interfaz gráfica – Menús"
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -16,4 +16,4 @@ Para verlo, solo teneis que seguir este enlace: <http://bashyc.blogspot.com/view
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

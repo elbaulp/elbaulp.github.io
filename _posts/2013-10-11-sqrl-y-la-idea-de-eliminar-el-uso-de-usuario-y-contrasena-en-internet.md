@@ -67,4 +67,4 @@ A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de
  [4]: https://elbauldelprogramador.com/ "Artículos de Luzcila"
  [5]: https://elbauldelprogramador.com/ "Contacto"
 
-{% include _toc.html %}
+{% include toc.html %}

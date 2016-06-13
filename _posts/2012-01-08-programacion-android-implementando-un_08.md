@@ -217,4 +217,4 @@ public class SitesProvider extends ContentProvider{
  [6]: /programacion-android-implementando-un_14
  [7]: /programacion-android-implementando-un_14/
 
-{% include _toc.html %}
+{% include toc.html %}

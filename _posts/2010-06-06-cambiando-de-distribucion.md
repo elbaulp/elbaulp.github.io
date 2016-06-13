@@ -12,4 +12,4 @@ De vez en cuando me gusta cambiar de distribuciones linux, para no acostumbrarme
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

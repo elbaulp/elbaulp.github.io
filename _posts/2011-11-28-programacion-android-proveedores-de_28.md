@@ -93,4 +93,4 @@ Cursor managedCursor = managedQuery(mContactsUri,
 
  [1]: /programacion-android-usando-cursores/
 
-{% include _toc.html %}
+{% include toc.html %}

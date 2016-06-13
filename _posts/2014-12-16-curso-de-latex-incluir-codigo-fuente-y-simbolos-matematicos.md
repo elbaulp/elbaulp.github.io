@@ -225,4 +225,4 @@ En el proximo artículo veremos cómo añadir figuras, enlaces y tablas al docum
  [3]: https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Intro a Minted"
  [4]: http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html "lista"
 
-{% include _toc.html %}
+{% include toc.html %}

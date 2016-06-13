@@ -100,4 +100,4 @@ git push repo2 master:master
 
 [Automatically mirror a git repository](http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository)
 
-{% include _toc.html %}
+{% include toc.html %}

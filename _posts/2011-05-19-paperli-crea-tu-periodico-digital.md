@@ -51,4 +51,4 @@ Por último os dejo una captura del periódico que cree, y la dirección, [Bashy
  [2]: https://twitter.com/#!/bashycBlog
  [3]: http://paper.li/bashycBlog/1305713883
 
-{% include _toc.html %}
+{% include toc.html %}

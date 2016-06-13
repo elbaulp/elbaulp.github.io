@@ -517,4 +517,4 @@ Se pone el numero y al final se añade el signo:
  [6]: https://elbauldelprogramador.com/#otro
  [7]: #indices
 
-{% include _toc.html %}
+{% include toc.html %}

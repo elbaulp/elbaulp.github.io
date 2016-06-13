@@ -106,4 +106,4 @@ Os dejo una captura:
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

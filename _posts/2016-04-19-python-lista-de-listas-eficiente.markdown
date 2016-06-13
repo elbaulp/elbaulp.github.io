@@ -15,7 +15,7 @@ color: "#E64A19"
   <a href="/assets/img/python-lista-de-listas-eficiente.png"><img src="/assets/img/python-lista-de-listas-eficiente.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-{% include _toc.html %}
+{% include toc.html %}
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario <a href="http://stackoverflow.com/users/1612432/algui91" target="_blank" title="Perfil algui91">algui91</a>, que preguntaba <a href="http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python" target="_blank" title="Link a pregunta">Build a List of Lists eficiently in python</a>. La respuesta es del usuario <a href="http://stackoverflow.com/users/1219295/roland-smith" target="_blank" title="Perfil roland">Roland</a>.
 

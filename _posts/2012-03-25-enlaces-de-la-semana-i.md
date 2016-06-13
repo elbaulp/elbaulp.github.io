@@ -24,4 +24,4 @@ Aquí el primer post de esta sección:
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -41,4 +41,4 @@ String getStringFromAssetFile(Context activity)
 
  [1]: /programacion-android-recursos-repasando/
 
-{% include _toc.html %}
+{% include toc.html %}

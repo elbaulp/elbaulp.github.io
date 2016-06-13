@@ -372,4 +372,4 @@ Podéis ver como quedan todos los archivos [en el repositorio](https://github.co
 
 Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.
 
-{% include _toc.html %}
+{% include toc.html %}

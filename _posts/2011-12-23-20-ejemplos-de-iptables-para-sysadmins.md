@@ -38,7 +38,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:
 

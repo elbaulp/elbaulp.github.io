@@ -67,4 +67,4 @@ Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un 
  [3]: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
  [4]: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo"
 
-{% include _toc.html %}
+{% include toc.html %}

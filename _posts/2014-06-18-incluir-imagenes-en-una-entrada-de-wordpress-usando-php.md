@@ -55,4 +55,4 @@ El código anterior se explica por sí mismo. `wp_update_post` es una función d
 
 [1]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
 
-{% include _toc.html %}
+{% include toc.html %}

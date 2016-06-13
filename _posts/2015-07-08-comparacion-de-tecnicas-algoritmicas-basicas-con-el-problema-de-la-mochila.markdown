@@ -12,7 +12,7 @@ math: true
 main-class: "dev"
 color: "#E64A19"
 ---
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
   <img src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" />

@@ -214,4 +214,4 @@ http://www.exploit-db.com/papers/13234/
  [4]: /clases-y-objetos-el-constructor/
  [5]: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/ "Ocultar archivos dentro de una imagen"
 
-{% include _toc.html %}
+{% include toc.html %}

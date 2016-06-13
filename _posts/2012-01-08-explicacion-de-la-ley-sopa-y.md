@@ -35,4 +35,4 @@ Quizás muchos no sepan siquiera que existe esta ley, pero si se llega a aprobar
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

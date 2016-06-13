@@ -37,4 +37,4 @@ Por último dejo los enlaces para descargar las aplicaciones para <a target="_bl
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

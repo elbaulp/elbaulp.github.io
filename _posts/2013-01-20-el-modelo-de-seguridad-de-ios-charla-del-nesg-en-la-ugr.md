@@ -24,4 +24,4 @@ Personalmente me gustó mucho la charla, no conocía gran parte de los aspectos 
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

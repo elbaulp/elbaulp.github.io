@@ -201,4 +201,4 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
  [5]: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
  [6]: https://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
 
-{% include _toc.html %}
+{% include toc.html %}

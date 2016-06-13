@@ -15,7 +15,7 @@ color: "#E64A19"
   <a href="/assets/img/vectorizar-acceso-columnas-r.png"><img src="/assets/img/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-{% include _toc.html %}
+{% include toc.html %}
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario <a href="http://stackoverflow.com/users/1612432/algui91" target="_blank" title="Perfil de algui91">algui91</a>, que preguntaba <a href="http://stackoverflow.com/questions/35914984/vectorize-access-to-columns-in-r" target="_blank" title="Vectorize access to columns in R">Vectorize access to columns in R</a>. La respuesta es del usuario <a href="http://stackoverflow.com/users/3001626/david-arenburg" target="_blank" title="Perfil de David Arenburg">David Arenburg</a>.
 

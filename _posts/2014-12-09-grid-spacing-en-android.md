@@ -183,4 +183,4 @@ El framework de Android contiene unas cuantas características que pueden usarse
  [7]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/ "Programación Android: Componentes Gráficos"
  [8]: https://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/ "Optimizando la interfaz Android – Compound Drawables"
 
-{% include _toc.html %}
+{% include toc.html %}

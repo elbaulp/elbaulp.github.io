@@ -37,4 +37,4 @@ Me gustaría que el resto de la entrada lo leyérais en la fuente original: [Etn
  [1]: http://www.etnassoft.com
  [2]: http://www.etnassoft.com/2011/04/29/humanstxt-creator/
 
-{% include _toc.html %}
+{% include toc.html %}

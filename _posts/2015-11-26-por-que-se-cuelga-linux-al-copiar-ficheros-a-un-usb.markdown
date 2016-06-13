@@ -11,7 +11,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 <figure>
   <img src="/assets/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>

@@ -45,4 +45,4 @@ finish();
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
  [2]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
 
-{% include _toc.html %}
+{% include toc.html %}

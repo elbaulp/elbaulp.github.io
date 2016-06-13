@@ -74,4 +74,4 @@ Enlace al curso: <a TARGET="_BLANK" href="http://www.udacity.com/">UDACITY</a>
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

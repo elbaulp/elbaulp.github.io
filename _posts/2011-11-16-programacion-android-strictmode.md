@@ -154,4 +154,4 @@ try{
  [4]: /fundamentos-programacion-android_16/
  [5]: /programacion-android-proveedores-de/
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -40,4 +40,4 @@ Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
  [2]: /manuales-gratuitos/
 
-{% include _toc.html %}
+{% include toc.html %}

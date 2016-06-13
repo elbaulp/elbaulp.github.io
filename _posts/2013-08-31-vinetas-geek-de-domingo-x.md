@@ -95,4 +95,4 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
  [13]: /assets/img/2013/08/Strong-vs.-Weak-References2.jpg
  [14]: /assets/img/2013/08/The-one-and-only-difference-between-OS-X-and-Windows2.jpg
 
-{% include _toc.html %}
+{% include toc.html %}

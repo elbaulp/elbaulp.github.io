@@ -93,4 +93,4 @@ Un lector de correo podría disponer de un ContentProvider para acceder a la ban
  [1]: /programacion-android-hola-mundo/
  [2]: /fundamentos-programacion-android_16/
 
-{% include _toc.html %}
+{% include toc.html %}

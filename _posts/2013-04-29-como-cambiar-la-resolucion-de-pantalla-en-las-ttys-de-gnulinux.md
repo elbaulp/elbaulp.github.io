@@ -103,4 +103,4 @@ Como se aprecia, aparece el parámetro **vga**.
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

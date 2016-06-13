@@ -194,4 +194,4 @@ Para mi, minted es el mejor paquete que hay para resaltar código en <img src="/
 
  [1]: /disponible-la-primera-parte-del-curso/
 
-{% include _toc.html %}
+{% include toc.html %}

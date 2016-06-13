@@ -17,4 +17,4 @@ Saludos y disculpad el retraso en la traducción de dicho artículo.
  [2]: https://elbauldelprogramador.com/programacion-para-juegos-articulo-3-que/
  [3]: http://bashyc.blogspot.com/p/tutorial-sdl.html
 
-{% include _toc.html %}
+{% include toc.html %}

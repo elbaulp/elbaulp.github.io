@@ -566,4 +566,4 @@ int main(_, v) double *v; int _;{
  [1]: /desafio-de-ingenieria-inversa-en-c/
 
 
-{% include _toc.html %}
+{% include toc.html %}

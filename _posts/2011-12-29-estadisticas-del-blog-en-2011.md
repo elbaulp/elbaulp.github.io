@@ -77,4 +77,4 @@ En esta entrada voy a dar a conocer los datos estad√≠sticos del blog en este pr√
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

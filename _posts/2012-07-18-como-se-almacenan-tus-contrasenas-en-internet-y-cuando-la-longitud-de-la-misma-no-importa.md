@@ -19,7 +19,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
 <img src="/assets/img/2012/07/original2.jpg" alt="" title="original"   />

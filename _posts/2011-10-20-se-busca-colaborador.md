@@ -16,4 +16,4 @@ Pido disculpas a los lectores habituales por tener el blog un poco desactualizad
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

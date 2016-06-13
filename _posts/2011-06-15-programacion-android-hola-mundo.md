@@ -187,4 +187,4 @@ En este archivo se definen el paquete por defecto, datos de versión, icono (med
  [4]: /guia-de-desarrollo-android
  [5]: /fundamentos-programacion-android/
 
-{% include _toc.html %}
+{% include toc.html %}

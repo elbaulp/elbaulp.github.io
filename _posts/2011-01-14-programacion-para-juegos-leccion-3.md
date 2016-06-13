@@ -39,4 +39,4 @@ Como en el primer turorial, [Programación para Juegos &#8211; Lección 1 &#8211
  [5]: http://www.lazyfoo.net/SDL_tutorials/
  [6]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-4/
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -22,4 +22,4 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
  [2]: http://elbauldelprogramador.tradepub.com/free/w_acqu02/prgm.cgi/
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 
-{% include _toc.html %}
+{% include toc.html %}

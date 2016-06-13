@@ -11,7 +11,7 @@ main-class: "latex"
 color: "#B31917"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
   <img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" />

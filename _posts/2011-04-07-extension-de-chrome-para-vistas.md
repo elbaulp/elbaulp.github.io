@@ -37,4 +37,4 @@ Fuente: [Blogger Buzz][3]</p>
  [2]: https://chrome.google.com/extensions/detail/mmoheajlpfaigefceljflpohdehkjbli
  [3]: http://buzz.blogger.com/2011/04/dynamic-views-chrome-extension.html
 
-{% include _toc.html %}
+{% include toc.html %}

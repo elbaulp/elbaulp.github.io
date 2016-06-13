@@ -21,4 +21,4 @@ Por supuesto no se os debe ocurrir ejecutar este comando si no quereis quedaros 
 
  [1]: http://www.muylinux.com/2011/04/10/%C2%A1nunca-lo-hagais-humor/
 
-{% include _toc.html %}
+{% include toc.html %}

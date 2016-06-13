@@ -26,4 +26,4 @@ He estado buscando logos para el blog, y me gustaría que votárais cual de esto
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

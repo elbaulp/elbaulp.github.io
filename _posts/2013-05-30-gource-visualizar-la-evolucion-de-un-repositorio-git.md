@@ -75,4 +75,4 @@ A continuación os dejo un vídeo de uno de mis repositorios:
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: /assets/img/2013/05/gourceGit.png
 
-{% include _toc.html %}
+{% include toc.html %}

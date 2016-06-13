@@ -242,4 +242,4 @@ Referencias
  [2]: /logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
  [3]: /assets/img/2012/12/081012_1604_AchievingAn11.png
 
-{% include _toc.html %}
+{% include toc.html %}

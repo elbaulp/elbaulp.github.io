@@ -106,4 +106,4 @@ public final class R {
 
  [1]: /programacion-android-recursos-layout/
 
-{% include _toc.html %}
+{% include toc.html %}

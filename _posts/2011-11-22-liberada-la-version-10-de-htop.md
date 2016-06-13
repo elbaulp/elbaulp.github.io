@@ -116,4 +116,4 @@ Fuente <a target="_blank" href="http://htop.sourceforge.net/index.php?page=main"
  [1]: /label/linux
  [2]: http://htop.sourceforge.net/index.php?page=downloads#binaries
 
-{% include _toc.html %}
+{% include toc.html %}

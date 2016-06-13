@@ -11,7 +11,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
   <a href="/assets/img/openlibra-biblioteca-libre-online.jpg"><img src="/assets/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>

@@ -256,4 +256,4 @@ El diseño trata de obtener lo mejor posible a partir de un conjunto de restricc
  [19]: http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY "CONFIG_DENSITY"
  [20]: https://twitter.com/cyrilmottier "@cyrilmottier"
 
-{% include _toc.html %}
+{% include toc.html %}

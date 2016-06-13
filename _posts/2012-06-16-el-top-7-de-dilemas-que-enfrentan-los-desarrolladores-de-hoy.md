@@ -1,5 +1,5 @@
 ---
-title: El Top 7 de dilemas que enfrentan los desarrolladores de hoy
+title: 7 dilemas que enfrentan los desarrolladores de hoy
 description: "Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan los desarrolladores. Cada elección, desde la plataforma hasta el almacenamiento de datos, incluyendo a cuánto control darle a los usuarios, está cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnología móvil y la acelerada vanguardia, pareciera como si el mundo de la programación enfrentara una nueva elección - y dilema - a un ritmo creciente."
 layout: post
 permalink: /el-top-7-de-dilemas-que-enfrentan-los-desarrolladores-de-hoy/
@@ -10,10 +10,13 @@ tags:
   - cloud computing
   - desarrollo de aplicaciones
   - noSQL
-modified: 2015-12-18T14:57:00+00:00
+modified: 2016-06-13T14:57:00+00:00
 main-class: "articulos"
 color: "#F57C00"
 ---
+
+{% include toc.html %}
+
 **Plataformas, bases de datos, control de usuario &#8211; dilemas que atrapan al programador antes de la primera línea de código**
 
 Tu jefe lo quiere para ayer, pero más vale que cumpla con los standards de mañana. Los clientes quieren todas las características que se puedan imaginar, pero no te atrevas a confundirlos dándoles todos los botones que desee. Tus compañeros programadores quieren que documentes tu código, pero ellos simplemente responden &#8220;tl;dr&#8221; (Too Long; didn&#8217;t read) a cualquier cosa que escribes.
@@ -122,5 +125,3 @@ Algunas compañías están incentivando el ideal de bases de datos abiertas. Se 
 No hay respuesta a este dilema. Si le das control a los usuarios, ellos se quejarán de la interface visual y de las funcionalidades que no tienen. Si no les das, seguirán gruñéndote por ello.
 
 Fuente: <a target="_blank" href="http://www.infoworld.com/d/application-development/top-7-dilemmas-facing-todays-developers-193412">infoworld</a>
-
-{% include _toc.html %}

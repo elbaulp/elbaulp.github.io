@@ -42,4 +42,4 @@ Actualmente dispone de una Web promocional anunciando las características de la
  [2]: http://www.etnassoft.com/biblioteca/
  [3]: http://www.etnassoft.com/openlibra-promo/
 
-{% include _toc.html %}
+{% include toc.html %}

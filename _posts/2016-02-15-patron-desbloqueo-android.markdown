@@ -11,7 +11,7 @@ main-class: "java"
 color: "#D32F2F"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 >La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:
 

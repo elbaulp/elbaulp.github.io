@@ -34,4 +34,4 @@ Si estás dudando de si formar parte de **Yeeply**, tal vez te ayuden a decidirt
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

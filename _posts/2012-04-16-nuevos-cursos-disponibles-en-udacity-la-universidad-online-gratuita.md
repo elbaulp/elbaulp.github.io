@@ -430,4 +430,4 @@ Impartido por David Evans, Profesor en la Universidad de Virginia y tutor del an
  [1]: /aprende-construir-un-motor-de-busqueda/ "Aprende a construir un motor de búsqueda y un coche autónomo con Udacity"
  [2]: /python/
 
-{% include _toc.html %}
+{% include toc.html %}

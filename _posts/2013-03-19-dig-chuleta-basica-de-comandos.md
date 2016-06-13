@@ -155,4 +155,4 @@ Puedes encontrar una descripción un poco más extensa sobre el funcionamiento d
  [1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
  [2]: /como-configurar-un-servidor-dns3/
 
-{% include _toc.html %}
+{% include toc.html %}

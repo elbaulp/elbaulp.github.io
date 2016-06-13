@@ -37,4 +37,4 @@ Para otras distros Linux basta con descargar [Grub Customizer en Launchpad][3], 
  [2]: http://www.webupd8.org/2010/11/grub-customizer-20-can-change-default.html
  [3]: https://code.launchpad.net/grub-customizer
 
-{% include _toc.html %}
+{% include toc.html %}

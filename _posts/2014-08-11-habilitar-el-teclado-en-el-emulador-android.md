@@ -54,4 +54,4 @@ for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.dPad=yes' >> "$f"; done
 
 [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
 
-{% include _toc.html %}
+{% include toc.html %}

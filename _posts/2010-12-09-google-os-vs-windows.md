@@ -28,4 +28,4 @@ Os dejo un vídeo que explica un poco como es este nuevo Sistema Operativo.
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

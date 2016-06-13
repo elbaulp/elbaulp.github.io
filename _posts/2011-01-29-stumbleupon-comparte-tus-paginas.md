@@ -27,4 +27,4 @@ Dejo mi <a target="_blank" href="http://www.stumbleupon.com/stumbler/algui91/">p
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -293,4 +293,4 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
  [3]: https://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
  [4]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -22,4 +22,4 @@ Fuente: <a target="_blank" href="http://www.datamation.com/news/tech-comics-geek
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

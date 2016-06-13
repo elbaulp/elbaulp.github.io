@@ -12,4 +12,4 @@ En esta <a href="http://c.conclase.net/curso/index.php?cap=000#inicio" target="_
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

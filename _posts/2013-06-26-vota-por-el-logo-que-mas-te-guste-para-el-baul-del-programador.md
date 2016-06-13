@@ -29,4 +29,4 @@ Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 
  [1]: /assets/img/2013/06/LOGOS.png
 
-{% include _toc.html %}
+{% include toc.html %}

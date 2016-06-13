@@ -80,4 +80,4 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
  [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [2]: https://elbauldelprogramador.com/ "Categoría OpenSource"
 
-{% include _toc.html %}
+{% include toc.html %}

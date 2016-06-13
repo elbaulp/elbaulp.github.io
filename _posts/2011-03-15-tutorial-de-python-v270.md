@@ -32,4 +32,4 @@ Espero que sea útil.
  [2]: https://elbauldelprogramador.com/manual-de-python/
  [3]: http://python.org.ar/pyar/
 
-{% include _toc.html %}
+{% include toc.html %}

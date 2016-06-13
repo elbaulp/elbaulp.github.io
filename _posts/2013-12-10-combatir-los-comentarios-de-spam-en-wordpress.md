@@ -119,4 +119,4 @@ A partir de ahora, se notará un descenso drástico en los comentarios de spam. 
 [4]: https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
 [5]: https://elbauldelprogramador.com/ "Scripts del blog"
 
-{% include _toc.html %}
+{% include toc.html %}

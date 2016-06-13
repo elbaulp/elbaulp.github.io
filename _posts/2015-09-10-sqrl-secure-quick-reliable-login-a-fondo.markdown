@@ -21,7 +21,7 @@ main-class: "security-now"
 color: "#00BCD4"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
   <img src="/assets/img/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png" title="{{ page.title }}" alt="{{ page.title }}" />

@@ -36,4 +36,4 @@ Para visitar la página del blog en facebook podeis pinchar en el icono de la de
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

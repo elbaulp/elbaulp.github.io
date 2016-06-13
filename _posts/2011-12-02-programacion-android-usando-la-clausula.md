@@ -108,4 +108,4 @@ Te preguntarás qué método usar en según que situación. Por convención se s
  [2]: /prueba-la-aplicacion-favsites-en-tu
  [3]: /programacion-android-insertando/
 
-{% include _toc.html %}
+{% include toc.html %}

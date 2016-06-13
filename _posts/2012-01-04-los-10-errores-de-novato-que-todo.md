@@ -80,4 +80,4 @@ Fuente: <a target="_blank" href="http://www.developer.com/ws/android/programming
  [2]: /programacion-android-proveedores-de
  [3]: /fundamentos-programacion-android_16/
 
-{% include _toc.html %}
+{% include toc.html %}

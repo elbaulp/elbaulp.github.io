@@ -177,4 +177,4 @@ El código de ejemplo está disponible para descarga:
  [1]: /assets/img/2013/01/device-2013-01-12-1337262.png
  [2]: /assets/img/2013/01/device-2013-01-12-1352432.png
 
-{% include _toc.html %}
+{% include toc.html %}

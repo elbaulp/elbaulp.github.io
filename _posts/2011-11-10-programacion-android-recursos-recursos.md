@@ -164,4 +164,4 @@ El SDK de Android tiene algoritmos más detallados aún, sin embargo, con este e
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

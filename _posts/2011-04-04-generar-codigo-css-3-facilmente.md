@@ -29,4 +29,4 @@ Espero que sea útil para los lectores del blog. Saludos
  [3]: http://css3generator.com/
  [4]: https://elbauldelprogramador.com/probando-css3-en-el-blog/
 
-{% include _toc.html %}
+{% include toc.html %}

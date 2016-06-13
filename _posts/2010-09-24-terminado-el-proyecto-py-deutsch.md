@@ -17,4 +17,4 @@ Hola, recientemente, un compañero (Haitike), y yo,Terminamos un proyecto que co
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

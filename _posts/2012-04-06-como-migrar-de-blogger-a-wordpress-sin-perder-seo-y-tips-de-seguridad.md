@@ -519,4 +519,4 @@ RewriteRule . /index.php [L]
  [5]: #seg
  [6]: http://wordpress.org/extend/plugins/askapache-password-protect/
 
-{% include _toc.html %}
+{% include toc.html %}

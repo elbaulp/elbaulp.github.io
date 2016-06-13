@@ -145,4 +145,4 @@ Personalmente es un editor que me ha gustado mucho, muy fácil de usar y con una
  [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [2]: https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
 
-{% include _toc.html %}
+{% include toc.html %}

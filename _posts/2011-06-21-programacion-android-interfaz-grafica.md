@@ -79,4 +79,4 @@ Podemos acceder al contexto de diferentes formas en función de donde nos encont
  [3]: /programacion-android-interfaz-grafica_23/
 
 
-{% include _toc.html %}
+{% include toc.html %}

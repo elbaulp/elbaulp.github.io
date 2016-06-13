@@ -94,4 +94,4 @@ dd if=/ruta/debian.iso of=/dev/sdb bs=1M; sync
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

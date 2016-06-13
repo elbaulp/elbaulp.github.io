@@ -36,4 +36,4 @@ Como prueba dejo dos capturas de pantalla, una realizando la conexión desde el 
  [1]: https://elbauldelprogramador.com/video-tutorial-programacion-android/
  [2]: http://casidiablo.net/java-socket-chat-basico/
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -76,4 +76,4 @@ Como conclusión final, podemos decir que no hay que obsesionarse con el tema. S
 Vía | LifeHacker &#8211; <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>  
 Imagen | <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" target="_blank">Carl Berkeley</a>
 
-{% include _toc.html %}
+{% include toc.html %}

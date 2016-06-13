@@ -133,4 +133,4 @@ Espero que os sea de utilidad.
  [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
  [2]: https://elbauldelprogramador.com/
 
-{% include _toc.html %}
+{% include toc.html %}

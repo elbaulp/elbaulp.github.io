@@ -225,4 +225,4 @@ Espero que estos tres ejemplos sencillos hayan servido para comprender el funcio
 
  [1]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Dwm Status"
 
-{% include _toc.html %}
+{% include toc.html %}

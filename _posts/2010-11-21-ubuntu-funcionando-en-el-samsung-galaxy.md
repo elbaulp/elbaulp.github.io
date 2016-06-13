@@ -32,4 +32,4 @@ Parece que [no es demasiado difícil][3] conseguir este objetivo, así que si so
  [2]: http://forum.xda-developers.com/showthread.php?t=823370
  [3]: http://forum.xda-developers.com/showthread.php?t=836022
 
-{% include _toc.html %}
+{% include toc.html %}

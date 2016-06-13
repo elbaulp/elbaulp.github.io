@@ -99,4 +99,4 @@ Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnolog�
  [3]: https://elbauldelprogramador.com/ "Contacto"
  [4]: /assets/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png
 
-{% include _toc.html %}
+{% include toc.html %}

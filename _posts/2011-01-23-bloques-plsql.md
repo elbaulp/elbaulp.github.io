@@ -76,4 +76,4 @@ DBMS_OUTPUT.PUT_LINE (cadena_caracteres);
 
  [1]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
 
-{% include _toc.html %}
+{% include toc.html %}

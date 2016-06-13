@@ -221,4 +221,4 @@ Se puede descargar el proyecto de esta entrada aquí:
  [2]: /programacion-android-interfaz-grafica_18/
 
 
-{% include _toc.html %}
+{% include toc.html %}

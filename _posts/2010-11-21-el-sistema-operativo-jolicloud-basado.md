@@ -58,4 +58,4 @@ Desde **MuyComputer **ya os hemos comentado en varias ocasiones el desarrollo de
 
  [1]: http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDAFrrvfQ2JWabiGrlkHUFpS1gnex90trnHKm3zJEoU19dRM7g61p4Vo
 
-{% include _toc.html %}
+{% include toc.html %}

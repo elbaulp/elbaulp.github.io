@@ -93,4 +93,4 @@ Al final, todo esto se reduce a una cosa: **tú eres el dueño de tu dispositivo
  [3]: https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"
  [4]: https://elbauldelprogramador.com/sin-categoria/ubuntu-running-on-samsung-galaxy-tab/ "Ubuntu running on the Samsung Galaxy Tab"
 
-{% include _toc.html %}
+{% include toc.html %}

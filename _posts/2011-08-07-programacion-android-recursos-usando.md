@@ -116,4 +116,4 @@ style=&#8221;?attr/cabecera&#8221; />
  [1]: /programacion-android-recursos-strings/
 
 
-{% include _toc.html %}
+{% include toc.html %}

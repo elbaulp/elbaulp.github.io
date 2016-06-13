@@ -13,4 +13,4 @@ Bueno, he creado este blog principalmente para ir publicando todo lo que desarro
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

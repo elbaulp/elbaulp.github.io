@@ -117,4 +117,4 @@ El código usa el flujo de salida para escribir.
  [4]: /programacion-android-arquitectura-de
  [5]: /programacion-android-actualizar-y/
 
-{% include _toc.html %}
+{% include toc.html %}

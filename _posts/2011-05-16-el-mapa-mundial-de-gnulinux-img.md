@@ -22,4 +22,4 @@ color: "#2196F3"
 
  [1]: http://www.dedoimedo.com/computers/linux-world-map.html
 
-{% include _toc.html %}
+{% include toc.html %}

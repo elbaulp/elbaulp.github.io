@@ -12,4 +12,4 @@ He recibido algunas quejas de lectores diciendo que el diseño del blog les resu
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

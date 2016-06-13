@@ -198,4 +198,4 @@ El ejemplo de esta entrada esta disponible para su descarga:
  [2]: /programacion-android-interfaz-grafica-2/
 
 
-{% include _toc.html %}
+{% include toc.html %}

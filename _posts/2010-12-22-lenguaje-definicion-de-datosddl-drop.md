@@ -52,4 +52,4 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
  [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/
 
-{% include _toc.html %}
+{% include toc.html %}

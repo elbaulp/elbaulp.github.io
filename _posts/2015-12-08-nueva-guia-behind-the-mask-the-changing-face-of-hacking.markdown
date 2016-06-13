@@ -15,7 +15,7 @@ color: "#61B38D"
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><img src="/assets/img/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-{% include _toc.html %}
+{% include toc.html %}
 
 Headlines featuring large-scale cyber breaches at Target, Home Depot, Sony Pictures, and others have taught us one thing--no one is safe. But who are the hackers who are able to pull off such huge attacks against sophisticated targets, including the U.S. Government? And how do they do it?
 

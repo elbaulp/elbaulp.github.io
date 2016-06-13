@@ -32,4 +32,4 @@ The use of cloud computing for custom-built, mission-critical enterprise applica
  [2]: /manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 
-{% include _toc.html %}
+{% include toc.html %}

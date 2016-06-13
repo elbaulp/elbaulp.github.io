@@ -92,4 +92,4 @@ De nuevo nos dirigimos al *localhost* y deberíamos ver el mensaje, lo cual indi
 [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
 [3]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
 
-{% include _toc.html %}
+{% include toc.html %}

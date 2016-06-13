@@ -29,4 +29,4 @@ Aplicación de proyecto final de curso que almacena los lugares preferidos del u
 
  [1]: /guia-de-desarrollo-android
 
-{% include _toc.html %}
+{% include toc.html %}

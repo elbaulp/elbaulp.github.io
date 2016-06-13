@@ -167,4 +167,4 @@ def.ocultar();
  [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
  [2]: https://elbauldelprogramador.com/clases-y-objetos-el-destructor/
 
-{% include _toc.html %}
+{% include toc.html %}

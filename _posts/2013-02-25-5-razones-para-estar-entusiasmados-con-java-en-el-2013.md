@@ -72,4 +72,4 @@ Con plataformas en la nube convirtiendose rápidamente en la norma, es probable 
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

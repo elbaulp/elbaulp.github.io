@@ -85,4 +85,4 @@ location / {
  [9]: http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application "Estructura de directorios de una app MVC"
  [10]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/ "Instalación y optimización de un servidor web con Nginx (I)"
 
-{% include _toc.html %}
+{% include toc.html %}

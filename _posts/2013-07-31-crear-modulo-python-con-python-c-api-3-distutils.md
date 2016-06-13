@@ -135,4 +135,4 @@ En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de u
  [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
  [5]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2
 
-{% include _toc.html %}
+{% include toc.html %}

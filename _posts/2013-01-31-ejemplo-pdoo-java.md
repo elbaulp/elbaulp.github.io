@@ -72,4 +72,4 @@ color: "#E64A19"
 
  [1]: https://elbauldelprogramador.com/seccion-de-descargas/ "Sección de descargas"
 
-{% include _toc.html %}
+{% include toc.html %}

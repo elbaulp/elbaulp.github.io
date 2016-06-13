@@ -30,4 +30,4 @@ El terminal LG Optimus 2X es el primero del mercado en integrar el SoC Tegra 2 d
 
  [1]: http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDDr8n45RcN0iBq7fz1C_Q8RqPHSU9Fta6H7rbf4Fs2tgJWgIN18521s
 
-{% include _toc.html %}
+{% include toc.html %}

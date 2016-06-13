@@ -28,4 +28,4 @@ Descarga: <a target="_blank" href="http://code.google.com/p/feedindicator/downlo
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

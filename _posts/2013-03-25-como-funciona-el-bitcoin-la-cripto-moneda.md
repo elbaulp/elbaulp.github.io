@@ -102,4 +102,4 @@ Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más cl
  [4]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
  [5]: /rssfeed/
 
-{% include _toc.html %}
+{% include toc.html %}

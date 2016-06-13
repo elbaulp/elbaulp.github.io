@@ -32,4 +32,4 @@ Note: The image is Photoshopped.
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

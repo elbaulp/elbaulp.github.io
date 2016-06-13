@@ -104,4 +104,4 @@ En la sintaxis “@+id/text”, el signo + tiene un significado especial. Le dic
 
  [1]: /programacion-android-recursos-2/
 
-{% include _toc.html %}
+{% include toc.html %}

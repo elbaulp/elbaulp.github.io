@@ -41,4 +41,4 @@ This amazing manual will teach you:
  [2]: /manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -124,4 +124,4 @@ Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Prefer
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/ "Programación Android: Interfaz gráfica – Layouts"
  [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/ "Programación Android: Interfaz gráfica – Estilos y Temas"
 
-{% include _toc.html %}
+{% include toc.html %}

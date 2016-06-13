@@ -248,4 +248,4 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 [2]: https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
 [3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
 
-{% include _toc.html %}
+{% include toc.html %}

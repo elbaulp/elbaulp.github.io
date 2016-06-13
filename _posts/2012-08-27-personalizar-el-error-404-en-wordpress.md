@@ -242,4 +242,4 @@ if($query->have_posts()){
     Fuente |
     <a href="http://codex.wordpress.org/Creating_an_Error_404_Page" target="_blank">Creating an Error 404 Page</a></p>
 
-{% include _toc.html %}
+{% include toc.html %}

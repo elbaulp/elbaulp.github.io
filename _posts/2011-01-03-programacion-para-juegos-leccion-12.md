@@ -119,4 +119,4 @@ Enhorabuena, acabas de hacer tu primera aplicación gráfica.
  [4]: http://www.lazyfoo.net/
  [5]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-2/
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -67,4 +67,4 @@ Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y 
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

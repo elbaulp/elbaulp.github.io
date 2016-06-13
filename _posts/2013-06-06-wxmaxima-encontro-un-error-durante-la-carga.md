@@ -64,4 +64,4 @@ Hay que decir, sin embargo, que es posible ahorrarse todo esto si se guardaran t
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

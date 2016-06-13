@@ -376,4 +376,4 @@ Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta just
 
  [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
-{% include _toc.html %}
+{% include toc.html %}

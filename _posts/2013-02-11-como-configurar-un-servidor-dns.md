@@ -180,4 +180,4 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 [2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
 [3]: https://elbauldelprogramador.com/bases-de-datos/
 
-{% include _toc.html %}
+{% include toc.html %}

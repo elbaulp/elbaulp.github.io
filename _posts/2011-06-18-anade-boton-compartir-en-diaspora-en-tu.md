@@ -32,4 +32,4 @@ Espero que os sirva de ayuda.
 
  [1]: /diaspora-la-red-social-libre
 
-{% include _toc.html %}
+{% include toc.html %}

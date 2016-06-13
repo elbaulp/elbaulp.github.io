@@ -217,4 +217,4 @@ Como nota final, y aunque este no es un artículo patrocinado, considero que deb
 
  [1]: /tag/#nginx
 
-{% include _toc.html %}
+{% include toc.html %}

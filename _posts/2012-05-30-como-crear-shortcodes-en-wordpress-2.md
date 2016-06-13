@@ -45,4 +45,4 @@ Fuente: <a href="http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wo
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

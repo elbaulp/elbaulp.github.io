@@ -22,4 +22,4 @@ color: "#689F38"
 
  [1]: /estoy-trabajando-en-una-aplicacion
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -72,4 +72,4 @@ fi
 
  [1]: https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/
 
-{% include _toc.html %}
+{% include toc.html %}

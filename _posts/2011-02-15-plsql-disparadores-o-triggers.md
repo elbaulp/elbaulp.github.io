@@ -380,4 +380,4 @@ Si queremos conocer los valores del registro de la tabla sobre la que se ha disp
  [7]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
  [8]: https://elbauldelprogramador.com/plsql-registros-y-tablas/
 
-{% include _toc.html %}
+{% include toc.html %}

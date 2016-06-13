@@ -26,4 +26,4 @@ Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
  [4]: http://lh5.googleusercontent.com/-3xNROQvUyLw/Tez0xVWLW1I/AAAAAAAAAkc/3Gx7eUaLwxU/s288/descargar.png
 
-{% include _toc.html %}
+{% include toc.html %}

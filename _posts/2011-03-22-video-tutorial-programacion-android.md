@@ -63,4 +63,4 @@ Leyendo el blog <a target="_blank" href="http://proyectosbeta.blogspot.com/">pro
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

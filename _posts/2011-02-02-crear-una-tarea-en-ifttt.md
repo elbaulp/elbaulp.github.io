@@ -83,4 +83,4 @@ Por último, deciros que tengo dos invitaciones para IFTTT, si a alguien le inte
  [1]: https://elbauldelprogramador.com/ifttt-disparar-tareas-mediante-eventos/
  [2]: https://elbauldelprogramador.com/2-invitaciones-para-ifttt-disponibles/
 
-{% include _toc.html %}
+{% include toc.html %}

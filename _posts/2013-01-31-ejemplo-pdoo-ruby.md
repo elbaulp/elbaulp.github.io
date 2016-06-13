@@ -315,4 +315,4 @@ Como introducción al lenguaje Ruby, ya que nunca lo había usado, leí el sigui
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

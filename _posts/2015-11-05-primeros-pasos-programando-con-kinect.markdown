@@ -13,7 +13,7 @@ color: "#E64A19"
   <img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
 </figure>
 
-{% include _toc.html %}
+{% include toc.html %}
 
 >Este artículo es parte de una práctica de una asignatura de mi facultad __Nuevos Paradigmas de la Interacción__. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una __Kinect__.
 

@@ -44,4 +44,4 @@ sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libs
  [4]: http://www.lazyfoo.net/SDL_tutorials/
  [5]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-12/#more
 
-{% include _toc.html %}
+{% include toc.html %}

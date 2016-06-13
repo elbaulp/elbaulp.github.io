@@ -35,4 +35,4 @@ Hasta que encontré 000webhost que creo que merece la pena, y por eso lo compart
  [1]: https://elbauldelprogramador.com/nueva-metodologia-para-la-traduccion-de/
  [2]: http://www.000webhost.com/442716.html
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -66,4 +66,4 @@ Os dejo un vídeo del tráfico de mi modesto blog:
 *Web oficial* »» <a href="https://code.google.com/p/logstalgia/" target="_blank">Visitar sitio</a>
 
 
-{% include _toc.html %}
+{% include toc.html %}

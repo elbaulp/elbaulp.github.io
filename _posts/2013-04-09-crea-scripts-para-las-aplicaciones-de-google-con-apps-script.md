@@ -436,4 +436,4 @@ function init_() {
 
  [1]: https://elbauldelprogramador.com/futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"
 
-{% include _toc.html %}
+{% include toc.html %}

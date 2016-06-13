@@ -11,7 +11,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 Conceptos básicos Android
 =========================

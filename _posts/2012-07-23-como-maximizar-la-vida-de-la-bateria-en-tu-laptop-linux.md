@@ -200,4 +200,4 @@ Vía | <a href="http://www.howtogeek.com/55185/how-to-maximize-the-battery-life-
  [6]: /assets/img/2012/07/harddisk1.jpg
  [7]: /assets/img/2012/07/powertop1.png
 
-{% include _toc.html %}
+{% include toc.html %}

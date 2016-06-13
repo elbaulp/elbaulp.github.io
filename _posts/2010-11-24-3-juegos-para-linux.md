@@ -50,4 +50,4 @@ El juego en si consiste en que eres una pequeña particula y debes empezar a com
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

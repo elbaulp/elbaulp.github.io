@@ -44,4 +44,4 @@ A continuación se dan unas normas básicas para escribir sentencias SELECT opti
  [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/
  [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
 
-{% include _toc.html %}
+{% include toc.html %}

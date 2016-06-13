@@ -232,4 +232,4 @@ service nginx destroy && service nginx start
  [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii "Instalación y optimización de un servidor web con Nginx (III)"
  [3]: https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
 
-{% include _toc.html %}
+{% include toc.html %}

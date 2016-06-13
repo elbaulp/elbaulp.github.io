@@ -17,7 +17,7 @@ color: "#B31917"
 
 > Os traigo hoy otro artículo interesante que he encontrado en el blog de <a href="http://texblog.org" target="_blank" title="http://texblog.org">blog de Tom</a>. Veremos cómo es posible definir colores personalizados en $$\LaTeX$$ con el paquete `xcolor`.
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <!--ad-->
 

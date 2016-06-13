@@ -187,4 +187,4 @@ El resultado de estas modificaciones es el siguiente:
 [4]: https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
 [5]: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
 
-{% include _toc.html %}
+{% include toc.html %}

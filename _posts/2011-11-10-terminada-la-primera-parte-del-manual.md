@@ -62,4 +62,4 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
  [3]: /guia-de-desarrollo-android
  [4]: http://www.megaupload.com/?d=RDZ1J1MQ
 
-{% include _toc.html %}
+{% include toc.html %}

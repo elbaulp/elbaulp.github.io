@@ -21,4 +21,4 @@ Para seguir el desarrollo de la aplicación puedes visitar la página en la que 
  [1]: http://bashyc.blogspot.com/p/proyecto-pylabra.html
  [2]: https://github.com/algui91/PyLabra
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -26,4 +26,4 @@ Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
  [4]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb03/prgm.cgi
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -101,4 +101,4 @@ delete ptro_pt;   //llama al destructor
 
  [1]: https://elbauldelprogramador.com/clases-y-objetos-arrays/
 
-{% include _toc.html %}
+{% include toc.html %}

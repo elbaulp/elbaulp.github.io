@@ -70,4 +70,4 @@ Con el revuelo que ha causado el juicio de Apple contra Samsung, en <a href="/hu
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

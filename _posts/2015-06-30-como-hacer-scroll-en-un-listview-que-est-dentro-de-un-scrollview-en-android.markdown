@@ -52,4 +52,4 @@ disallowIntercept 	True if the child does not want the parent to intercept touch
 
 Es decir, le pasaremos `true` cuando la vista hija no quiera que el padre intercepte eventos `onTouch`.
 
-{% include _toc.html %}
+{% include toc.html %}

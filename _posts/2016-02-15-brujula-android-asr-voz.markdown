@@ -15,7 +15,7 @@ color: "#D32F2F"
   <a href="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><img src="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
-{% include _toc.html %}
+{% include toc.html %}
 
 >La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:
 

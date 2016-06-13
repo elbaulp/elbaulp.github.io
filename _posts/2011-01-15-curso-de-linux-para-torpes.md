@@ -21,4 +21,4 @@ He visto en muyComputer Un Curso de linux que dejo a vuestra dispocición en est
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

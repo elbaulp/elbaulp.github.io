@@ -28,4 +28,4 @@ Como siempre, cualquiera que quiera participar es bienvenido, de esta forma avan
  [3]: https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/
  [4]: https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/
 
-{% include _toc.html %}
+{% include toc.html %}

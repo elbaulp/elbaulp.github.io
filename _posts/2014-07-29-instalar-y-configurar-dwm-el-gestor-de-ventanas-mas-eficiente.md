@@ -182,4 +182,4 @@ Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explic
  [3]: https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/ "La generación GitHub: Por qué ahora todos estamos en el opensource"
  [4]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Colorear la barra de estado con Simple StatusColor en DWM 6.1"
 
-{% include _toc.html %}
+{% include toc.html %}

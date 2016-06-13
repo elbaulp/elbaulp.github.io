@@ -125,4 +125,4 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
  [5]: /xmonad/
  [6]: /openbox/
 
-{% include _toc.html %}
+{% include toc.html %}

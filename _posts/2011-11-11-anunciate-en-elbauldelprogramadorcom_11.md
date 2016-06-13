@@ -30,4 +30,4 @@ Aprovecho para decir que he creado una página en Google+ para el blog que podé
 
  [1]: http://gplus.to/elbauldelprogramador
 
-{% include _toc.html %}
+{% include toc.html %}

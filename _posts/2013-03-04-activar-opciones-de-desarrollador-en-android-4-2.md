@@ -46,4 +46,4 @@ Una vez en el modo rescate, desactivé la opción y problema resuelto.
  [1]: /android
  [2]: /xda
 
-{% include _toc.html %}
+{% include toc.html %}

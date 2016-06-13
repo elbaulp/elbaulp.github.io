@@ -34,4 +34,4 @@ Ya os contaremos cuando lo probemos, aunque veremos si este desarrollo puede ofr
  [2]: http://www.muylinux.com/assets/img/2010/11/Rockmelt.jpg
  [3]: http://www.muylinux.com/2010/06/16/flock-cambia-de-novia-antes-firefox-ahora-chromium
 
-{% include _toc.html %}
+{% include toc.html %}

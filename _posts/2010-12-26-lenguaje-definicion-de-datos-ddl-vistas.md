@@ -65,4 +65,4 @@ DROP VIEW Nombre_vista
  [1]: http://es.wikipedia.org/wiki/Lenguaje_de_Manipulaci%C3%B3n_de_Datos
  [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
 
-{% include _toc.html %}
+{% include toc.html %}

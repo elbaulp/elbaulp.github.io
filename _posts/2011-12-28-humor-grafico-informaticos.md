@@ -62,4 +62,4 @@ Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] 
 
  [1]: /label/Humor
 
-{% include _toc.html %}
+{% include toc.html %}

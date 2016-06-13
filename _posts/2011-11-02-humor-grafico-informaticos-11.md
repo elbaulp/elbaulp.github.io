@@ -79,4 +79,4 @@ Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he
  [1]: /chistes-de-informaticos
  [2]: /humor-grafico-informaticos
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -80,4 +80,4 @@ void <b>Punto::ocultar() {
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

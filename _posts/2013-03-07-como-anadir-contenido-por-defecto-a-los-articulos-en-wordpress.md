@@ -37,4 +37,4 @@ Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenid
 
  [2]: /rssfeed/
 
-{% include _toc.html %}
+{% include toc.html %}

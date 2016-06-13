@@ -99,4 +99,4 @@ El valor del atributo id, indica que la constante llamada text1 será usada para
  [1]: /fundamentos-programacion-android_17/
  [2]: /programacion-android-recursos-sintaxis/
 
-{% include _toc.html %}
+{% include toc.html %}

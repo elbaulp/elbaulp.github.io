@@ -370,4 +370,4 @@ Con esto concluyen los tres artículos sobre instalación y optimización de un 
 [2]: https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii "Instalación y optimización de un servidor web con Nginx (II)"
 [3]: https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/ "Solucionar fallo de segmentación en PHP cuando se usa APC"
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -46,4 +46,4 @@ Para descargar el demo debéis ir a la página de arriba y en la parte de la der
 
  [1]: https://elbauldelprogramador.com/3-juegos-para-linux/
 
-{% include _toc.html %}
+{% include toc.html %}

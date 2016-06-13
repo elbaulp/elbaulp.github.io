@@ -30,4 +30,4 @@ Aquí os dejo este pequeño truquito como curiosidad
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -25,7 +25,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la <a href="http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro" title="Técnica pomodoro" target="_blank">técnica Pomodoro</a>, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.
 

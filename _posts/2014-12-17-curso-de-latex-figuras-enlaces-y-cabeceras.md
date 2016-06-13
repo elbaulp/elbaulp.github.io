@@ -229,4 +229,4 @@ Marta.
  [5]: http://miktex.org/ "MikTeX"
  [6]: https://github.com/mgmacias95/CursoLaTex/ "github"
 
-{% include _toc.html %}
+{% include toc.html %}

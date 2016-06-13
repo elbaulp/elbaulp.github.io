@@ -25,4 +25,4 @@ Mi idea para el futuro es adquirir un hosting en el que alojar una web dedicada 
 
  [1]: http://www.humblebundle.com/
 
-{% include _toc.html %}
+{% include toc.html %}

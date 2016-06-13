@@ -109,4 +109,4 @@ A continuación un vídeo explicando el proceso de instalación de busybox sin p
 
  [1]: /rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
 
-{% include _toc.html %}
+{% include toc.html %}

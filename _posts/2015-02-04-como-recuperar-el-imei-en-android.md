@@ -114,4 +114,4 @@ Espero que os sirva alguno de los métodos, como me sirvieron en su día a mi.
  [5]: http://wiki.cyanogenmod.org/w/I9100_Info "Descargar radios i9100"
  [6]: http://glassechidna.com.au/heimdall/#downloads
 
-{% include _toc.html %}
+{% include toc.html %}

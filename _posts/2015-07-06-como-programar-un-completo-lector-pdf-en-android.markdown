@@ -9,7 +9,7 @@ author: jordi
 main-class: "java"
 color: "#D32F2F"
 ---
-{% include _toc.html %}
+{% include toc.html %}
 
 ¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en [Android](/curso-programacion-android "Curso android") como en iOS.
 

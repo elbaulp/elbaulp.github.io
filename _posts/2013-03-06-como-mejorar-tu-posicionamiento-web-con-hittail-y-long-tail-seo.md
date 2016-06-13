@@ -83,4 +83,4 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
  [2]: /curso-programacion-android/
  [3]: /assets/img/2013/03/long-tail-result.png
 
-{% include _toc.html %}
+{% include toc.html %}

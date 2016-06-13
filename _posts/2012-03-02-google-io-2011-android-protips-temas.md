@@ -26,4 +26,4 @@ El vídeo es extenso, pero muy recomendable, pueden habilitar los subtítulos pu
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

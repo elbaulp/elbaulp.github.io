@@ -22,4 +22,4 @@ En <a target="_blank" href="http://www.genbeta.com/a-fondo/a-fondo-ifttt-alarmas
 
  [1]: http://es.wikipedia.org/wiki/Trigger_(base_de_datos)
 
-{% include _toc.html %}
+{% include toc.html %}

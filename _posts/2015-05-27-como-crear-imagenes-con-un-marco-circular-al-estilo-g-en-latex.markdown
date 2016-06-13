@@ -56,4 +56,4 @@ Tras compilar el código, el resultado es el siguiente:
 
 [Crop jpeg into circular tikz node](http://tex.stackexchange.com/questions/193555/crop-jpeg-into-circular-tikz-node "Crop jpeg into circular tikz node")
 
-{% include _toc.html %}
+{% include toc.html %}

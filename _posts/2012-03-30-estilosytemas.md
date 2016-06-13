@@ -133,4 +133,4 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
  [2]: /programacion-android-recursos/
 
 
-{% include _toc.html %}
+{% include toc.html %}

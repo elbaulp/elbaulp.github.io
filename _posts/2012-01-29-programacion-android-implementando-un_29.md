@@ -169,4 +169,4 @@ Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los p
  [4]: /plsql-cursores
  [5]: /programacion-android-intents-conceptos/
 
-{% include _toc.html %}
+{% include toc.html %}

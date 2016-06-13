@@ -149,4 +149,4 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
  [6]: /assets/img/2014/03/Play.jpg
  [7]: /assets/img/2014/03/sbbod.jpg
 
-{% include _toc.html %}
+{% include toc.html %}

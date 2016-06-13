@@ -167,4 +167,4 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

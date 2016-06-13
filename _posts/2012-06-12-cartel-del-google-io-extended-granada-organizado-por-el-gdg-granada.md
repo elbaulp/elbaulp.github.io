@@ -23,4 +23,4 @@ Ya tenemos el cartel del Google I/O Extended, organizado por el GDG Granada (Goo
 
  [1]: /assets/img/2012/06/gdg1.jpg
 
-{% include _toc.html %}
+{% include toc.html %}

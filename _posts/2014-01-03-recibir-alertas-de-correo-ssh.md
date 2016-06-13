@@ -52,4 +52,4 @@ Listo, ahora recibiremos un correo por cada acceso al sistema.
  [2]: https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
  [3]: https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables"
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -233,4 +233,4 @@ Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de 
 [3]: https://elbauldelprogramador.com/clases-y-objetos-arrays/ "Clases y Objetos – Arrays"
 [4]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
 
-{% include _toc.html %}
+{% include toc.html %}

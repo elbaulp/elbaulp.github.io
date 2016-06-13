@@ -331,4 +331,4 @@ Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutan
  [5]: /assets/img/2013/02/instalar-nginx-en-debian2.png
  [6]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
-{% include _toc.html %}
+{% include toc.html %}

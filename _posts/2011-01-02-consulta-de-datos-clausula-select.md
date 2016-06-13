@@ -139,4 +139,4 @@ pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.
  [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/
  [4]: https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/
 
-{% include _toc.html %}
+{% include toc.html %}

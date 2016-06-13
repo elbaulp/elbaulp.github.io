@@ -276,4 +276,4 @@ public class ParametrosActivity extends Activity {
  [2]: /fundamentos-programacion-android_17/
  [3]: /programacion-android-interfaz-grafica/
 
-{% include _toc.html %}
+{% include toc.html %}

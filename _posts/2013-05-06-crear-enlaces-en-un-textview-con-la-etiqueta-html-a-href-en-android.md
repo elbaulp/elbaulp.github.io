@@ -66,4 +66,4 @@ Los dos primeros enlaces están creados con el método `setMovementMethod()`, lo
  [2]: /programacion-android-recursos-layout/
  [3]: /assets/img/2013/05/setMovementMethod-example.png
 
-{% include _toc.html %}
+{% include toc.html %}

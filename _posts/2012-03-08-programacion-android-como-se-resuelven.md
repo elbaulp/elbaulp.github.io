@@ -70,4 +70,4 @@ Si una actividad no tiene declarada la categoría por defecto, pero conocemos su
  [2]: /programacion-android-intents-conceptos
  [3]: /programacion-android-ejemplos-de-uso-de/
 
-{% include _toc.html %}
+{% include toc.html %}

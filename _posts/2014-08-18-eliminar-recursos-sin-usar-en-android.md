@@ -107,4 +107,4 @@ Tras pasar *Android Resource Remover*, *SWADroid* paso a ocupar **1,5Mb** frente
  [2]: https://github.com/Amab/SWADroid/tree/develop "Proyecto en Github"
  [3]: https://elbauldelprogramador.com/programacion-android-recursos/ "PROGRAMACIÓN ANDROID: RECURSOS – INTRODUCCIÓN"
 
-{% include _toc.html %}
+{% include toc.html %}

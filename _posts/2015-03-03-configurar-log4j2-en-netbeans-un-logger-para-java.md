@@ -211,4 +211,4 @@ public class EjemploLog4j2 {
  [2]: http://logging.apache.org/log4j/2.0/manual/layouts.html
  [3]: http://stackoverflow.com/a/18409096/1612432
 
-{% include _toc.html %}
+{% include toc.html %}

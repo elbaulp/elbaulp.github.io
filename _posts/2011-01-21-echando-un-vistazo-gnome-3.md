@@ -43,4 +43,4 @@ De momento no hay versión alpha que probar, pero ya sabéis que hace meses que 
 
  [1]: http://www.muylinux.com/2011/01/19/introduccion-a-gnome-3/
 
-{% include _toc.html %}
+{% include toc.html %}

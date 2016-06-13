@@ -31,4 +31,4 @@ Vía <a target="_blank" href="http://www.slashgear.com/linux-3-3-eats-android-19
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

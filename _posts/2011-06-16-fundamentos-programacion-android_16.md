@@ -55,4 +55,4 @@ Cada componente tiene su propia etiqueta xml:
 
  [1]: /fundamentos-programacion-android_17/
 
-{% include _toc.html %}
+{% include toc.html %}

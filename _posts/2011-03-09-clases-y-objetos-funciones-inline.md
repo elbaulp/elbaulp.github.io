@@ -40,4 +40,4 @@ de la clase, si consta de un pequeño número de sentencias.
 
  [1]: https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/
 
-{% include _toc.html %}
+{% include toc.html %}

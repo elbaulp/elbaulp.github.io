@@ -68,4 +68,4 @@ Intent Filters][2]. Más información sobre activar componentes específicos dis
  [4]: http://developer.android.com/guide/topics/fundamentals/services.html
  [5]: http://developer.android.com/guide/topics/providers/content-providers.html
 
-{% include _toc.html %}
+{% include toc.html %}

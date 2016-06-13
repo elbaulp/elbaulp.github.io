@@ -181,4 +181,4 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
  [3]: /programacion-android-interfaz-grafica_28
 
 
-{% include _toc.html %}
+{% include toc.html %}

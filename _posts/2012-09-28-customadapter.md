@@ -525,4 +525,4 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
  [8]: #SavedInstanceState
  [9]: /fundamentos-programacion-android-ciclo/
 
-{% include _toc.html %}
+{% include toc.html %}

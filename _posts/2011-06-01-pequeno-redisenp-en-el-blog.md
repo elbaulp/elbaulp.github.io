@@ -23,4 +23,4 @@ Los cambios que he realizado son los siguientes,
 
  [1]: https://elbauldelprogramador.com/video-demostracion-del-proyecto-wifibar/
 
-{% include _toc.html %}
+{% include toc.html %}

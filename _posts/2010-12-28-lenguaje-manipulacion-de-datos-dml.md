@@ -169,4 +169,4 @@ y el resultado después de ejecutar la sentencia MERGE sería:
  [6]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
  [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/
 
-{% include _toc.html %}
+{% include toc.html %}

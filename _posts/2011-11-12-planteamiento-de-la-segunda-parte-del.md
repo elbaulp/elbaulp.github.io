@@ -39,4 +39,4 @@ A continuación dejo un índice del esquema que voy a seguir en esta segunda par
  [1]: /assets/img/2013/07/iconoAndroid.png
  [2]: /disponible-la-primera-parte-del-curso/
 
-{% include _toc.html %}
+{% include toc.html %}

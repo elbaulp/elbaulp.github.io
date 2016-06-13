@@ -61,4 +61,4 @@ Casi todas las llamadas que se hacen desde *managedQuery* y *ContentResolver* se
  [3]: /programacion-android-implementando-un
  [4]: /programacion-android-implementando-un/
 
-{% include _toc.html %}
+{% include toc.html %}

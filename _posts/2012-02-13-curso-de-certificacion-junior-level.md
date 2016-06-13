@@ -73,4 +73,4 @@ En la plataforma del curso, hay una sección dedicada a dudas sobre conceptos qu
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

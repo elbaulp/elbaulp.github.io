@@ -28,4 +28,4 @@ El vídeo está en inglés, pero creo que el que no entienda el idioma más o me
 
  [1]: http://www.techdrivein.com/2011/04/celebrating-20-years-of-linuxvideo.html
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -228,4 +228,4 @@ Como siempre, se puede descargar este ejemplo:
  [2]: /programacion-android-interfaz-grafica_08/
 
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -27,4 +27,4 @@ Que no os engañe el que el nombre del tutorial sea python para niños, a lo lar
  [2]: /6-e-books-gratuitos-para-aprenter
  [3]: /python-para-principiantes
 
-{% include _toc.html %}
+{% include toc.html %}

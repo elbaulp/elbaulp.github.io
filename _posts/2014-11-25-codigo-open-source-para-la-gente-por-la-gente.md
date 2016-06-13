@@ -41,4 +41,4 @@ Los ideales del Open Source ya se han difundido en los gobiernos por todo el mun
  [8]: http://hackforchange.org/
  [9]: http://www.youtube.com/watch?v=dYB8xokkWjg#at=36
 
-{% include _toc.html %}
+{% include toc.html %}

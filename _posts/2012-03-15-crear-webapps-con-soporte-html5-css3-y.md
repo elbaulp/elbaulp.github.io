@@ -42,4 +42,4 @@ Dicho todo esto, aquí tenéis los screencast:
 
  [1]: https://twitter.com/#!/hhkaos
 
-{% include _toc.html %}
+{% include toc.html %}

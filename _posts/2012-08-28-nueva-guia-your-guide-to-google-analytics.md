@@ -45,4 +45,4 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
  [2]: http://www.topsecretwriters.com/
  [3]: /manuales-gratuitos/
 
-{% include _toc.html %}
+{% include toc.html %}

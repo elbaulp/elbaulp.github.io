@@ -115,4 +115,4 @@ php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
  [2]: /python/
  [3]: /php/
 
-{% include _toc.html %}
+{% include toc.html %}

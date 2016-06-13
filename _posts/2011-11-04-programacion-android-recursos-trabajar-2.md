@@ -60,4 +60,4 @@ private String convertStreamToString(InputStream is)
 
  [1]: /programacion-android-recursos-trabajar_04/
 
-{% include _toc.html %}
+{% include toc.html %}

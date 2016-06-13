@@ -100,4 +100,4 @@ Así, las imágenes quedarán, por ejemplo, `[1280x1024] - nombre original.jpg`.
  [1]: http://superuser.com/users/4421/flammable
  [2]: https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/ "Renombrar archivos masívamente"
 
-{% include _toc.html %}
+{% include toc.html %}

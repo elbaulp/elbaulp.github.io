@@ -13,9 +13,12 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
+
+{% include toc.html %}
+
 La Autenticación de dos factores (Two-factor autenticación) es una de <a href="http://lifehacker.com/5932501/strong-passwords-arent-enough-how-to-to-ensure-the-apple-and-amazon-exploit-never-happens-to-you" target="_blank">las mejores cosas que puedes hacer</a> para asegurarte de que tus cuentas no sean hackeadas. Aquí hay una lista de todos los servicios populares que la ofrecen, y donde deberías ir para activarlo ahora mismo.
 
-## **¿Qué es la Autenticación de Dos Factores? **
+## ¿Qué es la Autenticación de Dos Factores?
 
 Las contraseñas, desafortunadamente, <a href="http://lifehacker.com/5937303/your-clever-password-tricks-arent-protecting-you-from-todays-hackers" target="_blank">no son tan seguras como solían serlo,</a> y si alguien obtiene tu contraseña, puede acceder a tu cuenta sin problema. La Autenticación de Dos Factores soluciona ese problema.
 
@@ -42,10 +45,4 @@ Desafortunadamente, no puedes usar autenticación de dos factores en cualquier p
 
 Si utilizas cualquiera de estos servicios deberías habilitar autenticación de dos factores en este momento &#8211; es una de las mejores maneras de mantener tus datos (y, en muchos casos, tu dinero) seguros. Por supuesto, también deberías asegurarte de que utilizas una contraseña única y segura para cada una de tus cuentas, y si no lo haces, ya es b<a href="http://lifehacker.com/5932501/strong-passwords-arent-enough-how-to-to-ensure-the-apple-and-amazon-exploit-never-happens-to-you" target="_blank">uen momento para cambiarlas</a>.
 
-* * *
-
-Fuente | <a href="http://lifehacker.com/5938565/heres-everywhere-you-should-enable-two+factor-authentication-right-now" target="_blank">lifehacker</a>
-
-
-
-{% include _toc.html %}
+Fuente \| <a href="http://lifehacker.com/5938565/heres-everywhere-you-should-enable-two+factor-authentication-right-now" target="_blank">lifehacker</a>

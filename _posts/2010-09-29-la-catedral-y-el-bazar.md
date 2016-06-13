@@ -14,4 +14,4 @@ Me parecio interesante y lo publico aqui para el que quiera leerlo:
 
 
 
-{% include _toc.html %}
+{% include toc.html %}

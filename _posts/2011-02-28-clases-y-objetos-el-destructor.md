@@ -60,4 +60,4 @@ class Punto{
  [2]: https://elbauldelprogramador.com/clases-y-objetos-el-constructor/
  [3]: https://elbauldelprogramador.com/clases-y-objetos-control-del-acceso-los/
 
-{% include _toc.html %}
+{% include toc.html %}

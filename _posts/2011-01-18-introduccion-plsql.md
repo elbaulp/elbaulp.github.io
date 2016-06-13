@@ -41,4 +41,4 @@ PL/SQL soporta todos los comandos de consulta y manipulación de datos, aportand
  [3]: http://bashyc.blogspot.com/p/bases-de-datos.html
  [4]: https://elbauldelprogramador.com/introduccion-plsql-transacciones/
 
-{% include _toc.html %}
+{% include toc.html %}

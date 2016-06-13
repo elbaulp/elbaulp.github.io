@@ -24,4 +24,4 @@ En la página principal de la web han colocado la siguiente imagen:
 
  [1]: /search/?q=diaspora
 
-{% include _toc.html %}
+{% include toc.html %}

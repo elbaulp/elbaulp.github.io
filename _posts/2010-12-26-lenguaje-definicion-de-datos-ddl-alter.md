@@ -128,4 +128,4 @@ alter table nombre_table DROP COLUMN nombre_columna;
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
 
-{% include _toc.html %}
+{% include toc.html %}

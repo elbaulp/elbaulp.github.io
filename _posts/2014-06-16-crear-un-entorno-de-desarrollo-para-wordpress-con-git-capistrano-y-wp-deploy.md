@@ -25,7 +25,7 @@ main-class: "git"
 color: "#f05033"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
   <img src="/assets/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png" title="{{ page.title }}" alt="{{ page.title }}" />

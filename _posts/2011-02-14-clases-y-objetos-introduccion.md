@@ -79,4 +79,4 @@ scanf (“%d”, &i);
  [1]: https://elbauldelprogramador.com/primeros-pasos-en-c/
  [2]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
 
-{% include _toc.html %}
+{% include toc.html %}

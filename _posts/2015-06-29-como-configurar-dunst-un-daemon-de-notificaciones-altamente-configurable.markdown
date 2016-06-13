@@ -121,4 +121,4 @@ notify-send -u critical -t 0 "test" "Critical body"
 
 Eso es todo, sencillo de configurar, y minimalista.
 
-{% include _toc.html %}
+{% include toc.html %}

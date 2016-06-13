@@ -55,4 +55,4 @@ La oportunidad de resolver muchos de los problemas de seguridad con una autentif
  [2]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
  [3]: /security-now/ "Categoría Seguridad"
 
-{% include _toc.html %}
+{% include toc.html %}

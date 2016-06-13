@@ -19,4 +19,4 @@ Para ver las 15 demostraciones os dejo el <a target="_blank" href="http://www.te
 
  [1]: http://bashyc.blogspot.com/p/bases-de-datos.html
 
-{% include _toc.html %}
+{% include toc.html %}

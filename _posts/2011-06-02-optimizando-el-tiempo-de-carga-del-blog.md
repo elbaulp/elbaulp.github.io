@@ -48,4 +48,4 @@ Espero que vuestra experiencia con el blog sea ahora más fluida.
  [2]: https://elbauldelprogramador.com/pequeno-redisenp-en-el-blog/
  [3]: http://tools.pingdom.com/
 
-{% include _toc.html %}
+{% include toc.html %}

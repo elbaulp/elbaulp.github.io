@@ -95,4 +95,4 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
  [7]: http://codereimagined.wordpress.com/
  [8]: http://particlequest.com/
 
-{% include _toc.html %}
+{% include toc.html %}

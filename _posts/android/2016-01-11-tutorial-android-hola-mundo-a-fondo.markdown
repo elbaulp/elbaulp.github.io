@@ -11,7 +11,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
-{% include _toc.html %}
+{% include toc.html %}
 
 <figure>
   <a href="/assets/img/2014/01/iconoAndroid.png"><img src="/assets/img/2014/01/iconoAndroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

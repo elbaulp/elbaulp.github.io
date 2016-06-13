@@ -14,4 +14,4 @@ Hace pocos días se lanzó GNOME Shell 2.91.92, y ahora ya se sabe que la versi�
 
  [1]: http://www.muylinux.com/2011/03/25/gnome-3-estara-disponible-el-4-de-abril/
 
-{% include _toc.html %}
+{% include toc.html %}

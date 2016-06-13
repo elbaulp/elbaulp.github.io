@@ -233,4 +233,4 @@ Os dejo otras crónicas de gente que participó en este evento:
  [18]: http://www.rubencaceres.com/proyecto/espanol-free-publi-displays-en-el-3o-hackathon-de-proyectos-de-software-libre
  [19]: /mi-experiencia-en-el-3-hackathon-de-la.html
 
-{% include _toc.html %}
+{% include toc.html %}

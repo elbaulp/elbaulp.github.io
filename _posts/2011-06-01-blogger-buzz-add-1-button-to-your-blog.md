@@ -17,4 +17,4 @@ color: "#F57C00"
 
  [1]: http://buzz.blogger.com/2011/06/add-1-button-to-your-blog.html#links
 
-{% include _toc.html %}
+{% include toc.html %}

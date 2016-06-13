@@ -67,4 +67,4 @@ Para participar en el curso, simplemente realiza las acciones que aparecen abajo
  [2]: https://www.udemy.com/plugins-de-wordpress/ "Desarrollo de Plugins para principiantes"
  [3]: /como-crear-shortcodes-en-wordpress/ "Cómo crear shortcodes en WordPress que soporten parámetros"
 
-{% include _toc.html %}
+{% include toc.html %}

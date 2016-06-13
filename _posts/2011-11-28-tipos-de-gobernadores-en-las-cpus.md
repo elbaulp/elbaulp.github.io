@@ -13,9 +13,8 @@ tags:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-  <a href="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s1600/gpu.jpg" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s200/gpu.jpg" /></a>
-</div>
+
+<img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s200/gpu.jpg" />
 
 Para los que tengáis vuestro terminal [rooteado][1] voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):
 
@@ -42,4 +41,4 @@ Fuentes: <a target="_blank" href="http://publib.boulder.ibm.com/infocenter/lnxin
 
  [1]: /rootear-samsung-galaxy-s-gt-i9003
 
-{% include _toc.html %}
+{% include toc.html %}

@@ -42,4 +42,4 @@ Y la otra gran característica es la que habla de sus requisitos hardware: **bas
  [3]: http://ostatic.com/blog/just-another-ubuntu-based-distro-or-something-more
  [4]: http://sourceforge.net/projects/bodhilinux/
 
-{% include _toc.html %}
+{% include toc.html %}
