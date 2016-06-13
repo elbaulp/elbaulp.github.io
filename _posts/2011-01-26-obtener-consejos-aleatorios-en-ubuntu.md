@@ -7,6 +7,7 @@ categories:
   - curiosidades
   - noticias
 main-class: "linux"
+color: #2196F3
 ---
 En <a target="blank" href="http://www.omgubuntu.co.uk/2011/01/get-random-ubuntu-tips-on-your-desktop-app/">OMG Ubuntu</a> he visto una aplicación que nos mostrará consejos en el escritorio de nuestro ubuntu, Abajo traduzco la entrada:
 

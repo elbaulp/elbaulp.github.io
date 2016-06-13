@@ -10,6 +10,7 @@ tags:
   - sintaxis de restricciones check unique default
   - unique
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

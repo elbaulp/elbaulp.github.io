@@ -9,6 +9,7 @@ tags:
   - que es un ddl
   - sentencias dml y ddl
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

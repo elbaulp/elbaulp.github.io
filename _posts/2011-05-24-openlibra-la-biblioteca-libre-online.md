@@ -8,6 +8,7 @@ categories:
   - linux
   - opensource
 main-class: "articulos"
+color: #F57C00
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" /></a>

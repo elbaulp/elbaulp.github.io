@@ -5,6 +5,7 @@ permalink: /programacion-para-juegos-leccion-5/
 categories:
   - juegos
 main-class: "dev"
+color: #E64A19
 ---
 <div class="icosdl">
 </div>

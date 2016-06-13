@@ -6,6 +6,7 @@ categories:
   - curiosidades
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 En muy computer he leido esta notícia en la que un overclocker muy conocido ha conseguido un record, cito una parte de la entrada original:
 

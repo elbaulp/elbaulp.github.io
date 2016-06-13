@@ -8,6 +8,7 @@ categories:
   - internet
   - noticias
 main-class: "misc"
+color: #61B38D
 ---
 He creado una aplicación para móviles a través de <a target="_blank" href="http://mobile.conduit.com/">conduit</a> para facilitar la lectura del blog en disposotívos móviles.
 

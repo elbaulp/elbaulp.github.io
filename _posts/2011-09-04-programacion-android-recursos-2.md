@@ -11,6 +11,7 @@ tags:
   - recursos compilados
   - recursos no compilados
 main-class: "android"
+color: #689F38
 ---
 <div class="icodroid">
 </div>

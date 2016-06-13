@@ -5,6 +5,7 @@ permalink: /curso-de-linux-para-torpes/
 categories:
   - cursos
 main-class: "articulos"
+color: #F57C00
 ---
 He visto en muyComputer Un Curso de linux que dejo a vuestra dispocición en esta entrada. Son 476 páginas, espero que sea útil. <a target="_blank" href="http://muycomputer.com/FrontOffice/Descargas/descargasDet/_1uNIBmdIw8dr9yQoy7NTGiHuDeD7pahCf-9B3F8SxBf4m7acI1yRCSQnb5TT-5TW">La entrada original.</a>
 

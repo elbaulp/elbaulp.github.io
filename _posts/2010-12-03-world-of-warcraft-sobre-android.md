@@ -5,6 +5,7 @@ permalink: /world-of-warcraft-sobre-android/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 **La preocupación de Nintendo y Sony ante el auge del videojuego en plataformas no específicas para juegos como smartphones o Tablet PC parece plenamente justificada ante información como la que nos ocupa: El título de rol multijugador masivo en línea más importante de la historia (World of Warcraft) <a href="%20http://www.droidgamers.com/index.php/game-news/android-game-news/887-play-wow-on-your-android-phone-yes-you-will-have-no-life-soon" target="_blank">ya luce (en fase alpha)</a> en un terminal inteligente HTC Desire bajo plataforma Android como muestra el vídeo que te ofrecemos.**
 

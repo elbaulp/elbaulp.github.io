@@ -14,6 +14,7 @@ tags:
   - wordpress
 format: status
 main-class: "dev"
+color: #E64A19
 ---
   * [Importar entradas y comentários][1]
   * [Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress][2]

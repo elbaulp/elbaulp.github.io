@@ -8,6 +8,7 @@ description: "Hoy quiero hablar de algo que llevo usando desde hace ya mucho tie
 tags: [modificar el Prompt de bash, prompts con git, información de git prompts, instalar oh my git, configurar oh my git, configurar rainbow bash, instalar rainbow bash]
 image: Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg
 main-class: "dev"
+color: #E64A19
 ---
 
 <figure>

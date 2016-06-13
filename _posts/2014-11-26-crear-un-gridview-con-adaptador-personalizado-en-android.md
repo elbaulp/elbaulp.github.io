@@ -13,6 +13,7 @@ modified: 2015-12-23T9:30
 image: 2014/11/gridview-scrolling-horizontal.png
 description: "Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor permite scrolling horizontal y vertical en sus interacciones."
 main-class: "android"
+color: #689F38
 ---
 > Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.
 

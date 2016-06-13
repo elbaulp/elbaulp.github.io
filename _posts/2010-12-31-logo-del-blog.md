@@ -5,6 +5,7 @@ permalink: /logo-del-blog/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 He estado buscando logos para el blog, y me gustaría que votárais cual de estos dos os gusta más:
 

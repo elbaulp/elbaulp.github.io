@@ -8,6 +8,7 @@ description: "Learn how to determine potential online criminal activity, legally
 tags: []
 image: hotlink-ok/Computer-and-Hacking-Forensics---FREE-Video-Training-Course.jpg
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

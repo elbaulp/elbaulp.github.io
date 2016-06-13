@@ -5,6 +5,7 @@ permalink: /estadisticas-del-blog-en-2011/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 En esta entrada voy a dar a conocer los datos estadísticos del blog en este prácticamente acabado 2011. En líneas generales ha mejorado bastante con respecto al 2010.
 

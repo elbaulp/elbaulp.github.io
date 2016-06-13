@@ -16,6 +16,7 @@ tags:
   - linux runlevel
   - modificar runlevel debian
 main-class: "linux"
+color: #2196F3
 ---
 
 <figure>

@@ -11,6 +11,7 @@ tags:
   - laptop
   - optimizar energia en ubuntu
 main-class: "articulos"
+color: #F57C00
 ---
 [<img src="/assets/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c"   />][1]
 

@@ -14,6 +14,7 @@ tags:
   - php
   - programación
 main-class: "misc"
+color: #61B38D
 ---
 [<img src="/assets/img/2012/08/w_sitb33c1.gif" alt="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" title="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview"   />][1]
 

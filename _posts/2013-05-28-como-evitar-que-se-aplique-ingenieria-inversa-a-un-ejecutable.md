@@ -12,6 +12,7 @@ tags:
   - ingenieria inversa C
   - ptrace
 main-class: "dev"
+color: #E64A19
 ---
 Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. Hoy voy a explicar un método muy sencillo para evitar que se aplique ingeniería inversa a nuestros ejecutables, que evitará la depuración del mismo.
 

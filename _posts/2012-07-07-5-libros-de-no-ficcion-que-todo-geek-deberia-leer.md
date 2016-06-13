@@ -22,6 +22,7 @@ modified: 2015-12-19T22:00:00+00:00
 date: 2015-06-30T18:48:42+02:00
 image: What-If-Serious-Scientific-Answers-to-Absurd-Hypothetical-Questions.jpg
 main-class: "articulos"
+color: #F57C00
 ---
 
 Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!
@@ -132,7 +133,7 @@ The Magic of Math is the math book you wish you had in school. Using a delightfu
   <img src="/assets/img/2012/07/generationxbox1.jpg" title="Generation Xbox (La Generación Xbox), por Jamie Russell" alt="Generation Xbox (La Generación Xbox), por Jamie Russell" />
 </figure>
 
-El libro con la versión más reciente de esta lista, *Generación Xbox* se centra menos en la consola de lo que el título sugiere. Es realmente un libro sobre cómo la relación entre la industria del video-juego y Hollywood se ha involucrado a través de los años. Incluye curiosidades acerca del fracaso de la película Halo y la creación de la película de Mario Bros., que cualquier fan de los video-juegos o <a href="http://www.makeuseof.com/tag/video-games-movies-muo-gaming/" target="_blank">aficionado al cine</a> le gustará leer.
+El libro con la versión más reciente de esta lista, *Generación Xbox* se centra menos en la consola de lo que el título sugiere. Es realmente un libro sobre cómo la relación entre la industria del video-juego y Hollywood se ha involucrado a través de los años. Incluye curiosidades acerca del fracaso de la película Halo y la creación de la película de Mario Bros., que cualquier fan de los video-juegos o <a href="http://www.makeuseof.com/tag/video-games-movies-muo-gaming/" target="_blank">aficionado al cine</a> le gustar�� leer.
 
 Esta no es la única razón por la que recomiendo este libro, de todas maneras. Haciendo foco en la relación amor-odio entre los video-juegos y Hollywood, el autor Jamie Russell cuenta la historia del crecimiento del rubro de los video juegos (y su ocasional caída) y su protagonismo en la cultura popular. La forma en que estas dos poderosas industrias multimedia interactúan dice mucho sobre las fortalezas y debilidades de cada una.
 

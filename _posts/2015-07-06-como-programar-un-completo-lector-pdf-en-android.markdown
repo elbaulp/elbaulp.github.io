@@ -7,6 +7,7 @@ image: Lector PDF Android con barra de navegación.jpg
 date: 2015-07-06T19:00:00+00:00
 author: jordi
 main-class: "java"
+color: #D32F2F
 ---
 {% include _toc.html %}
 

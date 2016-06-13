@@ -6,6 +6,7 @@ permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
 categories:
   - curiosidades
 main-class: "geek"
+color: #262626
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <a href="https://3.bp.blogspot.com/-CJyM4IL1WA0/TkvvBHtN1TI/AAAAAAAAAuI/7_KZkLlzAok/s1600/1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" src="https://3.bp.blogspot.com/-CJyM4IL1WA0/TkvvBHtN1TI/AAAAAAAAAuI/7_KZkLlzAok/s1600/1.png" /></a>

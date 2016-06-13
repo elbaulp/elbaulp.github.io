@@ -5,6 +5,7 @@ permalink: /juegos-linux-clockwork-man-1-y-2/
 categories:
   - juegos
 main-class: "articulos"
+color: #F57C00
 ---
 Puedes encontrar más juegos para Linux [aquí][1].
 

@@ -6,6 +6,7 @@ description: "La visualización de datos no solo tiene como propósito el análi
 tags: [ejemplos visualización de datos, datos, imagenes de visualización]
 image: 20-ejemplos-visualizacion-datos-genoma-enfermedades.png
 main-class: "articulos"
+color: #F57C00
 ---
 
 {% include _toc.html %}

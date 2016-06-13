@@ -6,6 +6,7 @@ permalink: /enlaces-de-la-semana-i/
 categories:
   - Enlaces de la semana
 main-class: "articulos"
+color: #F57C00
 ---
 La intención de esta nueva sección va a ser recopilar los artículos que leo durante la semana y me resultan interesantes, pero no los escribo en el blog porque sería un simple Ctrl-C, Ctrl-V, y me parece más correcto enlazarlos.
 

@@ -6,6 +6,7 @@ permalink: /vinetas-geek-de-domingo-xiii/
 categories:
   - Geek
 main-class: "geek"
+color: #262626
 ---
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 

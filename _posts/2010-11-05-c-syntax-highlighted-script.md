@@ -6,6 +6,7 @@ categories:
   - linux
   - script
 main-class: "linux"
+color: #2196F3
 ---
 <p lang="en">
   I decided to create a small script that highlights the words reserved of c++.<br /> Here the code:

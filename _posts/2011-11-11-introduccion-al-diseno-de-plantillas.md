@@ -8,6 +8,7 @@ categories:
   - internet
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 He visto en el blog de blogger que dan la posibilidad de crear una plantilla personalizada de nuestro blog para moviles.
 

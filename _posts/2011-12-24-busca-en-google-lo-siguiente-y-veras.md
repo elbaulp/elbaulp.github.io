@@ -6,6 +6,7 @@ permalink: /busca-en-google-lo-siguiente-y-veras/
 categories:
   - curiosidades
 main-class: "articulos"
+color: #F57C00
 ---
 sqrt(cos(x))\*cos(200 x)+sqrt(abs(x))-.07)\*(4-x*x)^0.01, sqrt(9-x^2),-sqrt(9-x^2) from -4.5 to 4.5
 

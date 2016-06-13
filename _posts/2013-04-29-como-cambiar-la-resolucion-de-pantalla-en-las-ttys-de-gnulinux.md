@@ -12,6 +12,7 @@ tags:
   - resolución tty
   - vga=0x31b
 main-class: "linux"
+color: #2196F3
 ---
 <img src="/assets/img/2012/08/sh1.png" alt="Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux"   />
 

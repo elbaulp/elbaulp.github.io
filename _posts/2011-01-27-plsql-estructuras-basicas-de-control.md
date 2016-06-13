@@ -8,6 +8,7 @@ tags:
   - comandos basicos sql
   - sentencias sql while
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

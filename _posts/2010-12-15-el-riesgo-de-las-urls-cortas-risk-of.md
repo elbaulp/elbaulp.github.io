@@ -5,6 +5,7 @@ permalink: /el-riesgo-de-las-urls-cortas-risk-of/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 Ahora se han puesto tan de moda las direcciones cortas, del tipo *http://goo.gl/fb/VdsDn* o *http://bit.ly/gn72m2*, y dado que no se conoce la dirección real del enlace hasta que pinchamos él, se está aprovechando para difundir enlaces a sitios con contenidos maliciosos. Por eso es recomendable que antes de abrir una Url corta, nos aseguremos a donde nos redirecciona.
 

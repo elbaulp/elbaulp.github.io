@@ -22,6 +22,7 @@ modified: 2016-06-12T17:00
 description: "Seguro que tú tambén escucas música mientras programas, a mi me gusta descansar cada 30 min siguiendo la técnica pomodoro. Pero mejor hacerlo escuchando música. Este script en python te ayudará."
 image: Generar-listas-de-reproduccion-de-una-determinada-duracion-con-Python.png
 main-class: "dev"
+color: #E64A19
 ---
 
 {% include _toc.html %}

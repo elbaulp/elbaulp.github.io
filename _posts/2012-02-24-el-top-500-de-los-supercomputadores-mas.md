@@ -9,6 +9,7 @@ categories:
 tags:
   - top 500 supercomputadoras mundo
 main-class: "articulos"
+color: #F57C00
 ---
 <div style="text-align: center;">
   <img alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg"  border="0" />

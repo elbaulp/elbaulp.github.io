@@ -5,6 +5,7 @@ permalink: /rockmelt-una-navegador-social-basado-en/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 Como señalan [nuestros compañeros de MuyComputer][1], la **empresa respaldada por Marc Andreessen** – fundador de Netscape- ha presentado un nuevo navegador web enfocado a uso de redes sociales.
 

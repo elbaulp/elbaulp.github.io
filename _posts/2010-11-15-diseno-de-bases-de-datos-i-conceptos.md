@@ -5,6 +5,7 @@ permalink: /diseno-de-bases-de-datos-i-conceptos/
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

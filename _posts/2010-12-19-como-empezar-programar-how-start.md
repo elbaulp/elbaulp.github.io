@@ -5,6 +5,7 @@ permalink: /como-empezar-programar-how-start/
 categories:
   - How To
 main-class: "articulos"
+color: #F57C00
 ---
 A petición de un lector, voy a intentar resolver algunas dudas para la gente que quiere adentrarse en el mundo de la programación y no sabe por donde empezar.
 

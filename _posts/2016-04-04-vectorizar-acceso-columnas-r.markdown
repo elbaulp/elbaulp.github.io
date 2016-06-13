@@ -8,6 +8,7 @@ tags: [vectorizar en r, vectorizar codigo, mejorar codigo en r, optimizar codigo
 image: vectorizar-acceso-columnas-r.png
 date: 2016-04-04T20:56:12+02:00
 main-class: "dev"
+color: #E64A19
 ---
 
 <figure>

@@ -8,6 +8,7 @@ description: "Último artículo de la serie “Biometría Aplicada a La Segurida
 tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
 image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
 main-class: "articulos"
+color: #F57C00
 ---
 
 <figure>

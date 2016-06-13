@@ -8,6 +8,7 @@ description: "Enunciado: se facilitarán las coordenadas de una serie de puntos 
 tags: [programar navegador gps android, tutorial gps android, leer QR code en android zxing, calcular rutas gps android]
 image: npi/gqsqr_read.png
 main-class: "java"
+color: #D32F2F
 ---
 
 {% include _toc.html %}

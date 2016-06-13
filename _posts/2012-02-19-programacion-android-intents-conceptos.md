@@ -12,6 +12,7 @@ tags:
   - ejemplo intentfilter implicito
   - uso de intents android
 main-class: "android"
+color: #689F38
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />

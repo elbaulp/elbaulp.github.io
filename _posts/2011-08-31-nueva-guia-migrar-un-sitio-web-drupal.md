@@ -7,6 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
+color: #61B38D
 ---
 [![Migrating a Web Site to Drupal][1]][2]
 

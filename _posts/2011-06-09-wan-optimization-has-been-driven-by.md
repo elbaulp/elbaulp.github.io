@@ -7,6 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
+color: #61B38D
 ---
 [![WAN Optimization for Today and Tomorrow][1]][2]
 

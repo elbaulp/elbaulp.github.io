@@ -9,6 +9,7 @@ tags:
   - curso python para principiantes
   - tutorial de python
 main-class: "articulos"
+color: #F57C00
 ---
 <div class="icopy">
 </div>

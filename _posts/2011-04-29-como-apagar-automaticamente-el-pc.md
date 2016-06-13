@@ -9,6 +9,7 @@ categories:
   - How To
   - internet
 main-class: "linux"
+color: #2196F3
 ---
 <div class="icoso">
 </div>

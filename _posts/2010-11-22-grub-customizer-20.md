@@ -5,6 +5,7 @@ permalink: /grub-customizer-20/
 categories:
   - Sin Categoria
 main-class: "linux"
+color: #2196F3
 ---
 <div lang="en">
   <div style="text-align: center;">

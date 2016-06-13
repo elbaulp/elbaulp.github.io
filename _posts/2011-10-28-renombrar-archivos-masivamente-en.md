@@ -10,6 +10,7 @@ tags:
   - renombrar archivos linux masivo
   - renombrar linux
 main-class: "linux"
+color: #2196F3
 ---
 <div class="icosh">
 </div>

@@ -17,6 +17,7 @@ tags:
   - iptables con servidor debian
   - politicas con iptables firewall
 main-class: "servidores"
+color: #0097A7
 ---
 <img src="/assets/img/2013/02/Applic-Firewall-icon.png" alt="Applic-Firewall-icon"   />
 

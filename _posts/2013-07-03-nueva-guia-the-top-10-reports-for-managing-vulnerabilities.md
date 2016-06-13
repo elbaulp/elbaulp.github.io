@@ -17,6 +17,7 @@ tags:
   - vulnerabilities
   - Vulnerabilities Security Management
 main-class: "misc"
+color: #61B38D
 ---
 [<img  alt="The Top 10 Reports for Managing Vulnerabilities" src="/assets/img/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg"  />][1]
 

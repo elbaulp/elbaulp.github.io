@@ -10,6 +10,7 @@ tags:
   - internet
   - seguridad dominio
 main-class: "misc"
+color: #61B38D
 ---
 [<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains"   />][1]
 

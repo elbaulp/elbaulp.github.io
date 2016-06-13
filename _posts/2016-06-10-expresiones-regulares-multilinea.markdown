@@ -8,6 +8,7 @@ tags: [perl, regex, expresiones multilínea]
 image: Expresiones-Regulares-Multilinea.png
 date: 2016-06-10T15:59:28+02:00
 main-class: "linux"
+color: #2196F3
 ---
 Actualizando el diseño del blog he tenido que usar muchas [expresiones regulares](/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python") para ajustar los artículos existentes al _Front Matter_ del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar [Atom](/instalar-atom-el-editor-de-github-en-linux/ "Instalar Atom, el editor de GitHub en Linux"). La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración `yalm`:
 
@@ -95,7 +96,8 @@ param5: valor5
 param6: valor6
 param7: valor7
 param8: valor8
-main-class: "Articulos"
+main-class: "articulos"
+color: #F57C00
 ---
 ```
 

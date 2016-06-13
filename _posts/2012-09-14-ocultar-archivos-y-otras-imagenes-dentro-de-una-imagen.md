@@ -13,6 +13,7 @@ tags:
   - ocultar imagenes en imagenes
   - ocultar informacion en imagenes
 main-class: "dev"
+color: #E64A19
 ---
 <p style="text-align: center;">
   <a href="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif"><img class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif" alt=""  /></a>

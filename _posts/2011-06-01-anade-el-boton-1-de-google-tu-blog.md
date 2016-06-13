@@ -6,6 +6,7 @@ permalink: /anade-el-boton-1-de-google-tu-blog/
 categories:
   - internet
 main-class: "articulos"
+color: #F57C00
 ---
 <div class="icoso">
 </div>

@@ -5,6 +5,7 @@ permalink: /joliclouds-jolibook-netbook-hitting/
 categories:
   - Sin Categoria
 main-class: "articulos"
+color: #F57C00
 ---
 <p lang="en">
   Jolicloud, the self-proclaimed &#8220;perfect OS for netbooks,&#8221; has been making headlines for a while with their consumer-focused, and frankly very cute Jolibook netbook. &nbsp;Word all around the web is that it is available today in the UK.

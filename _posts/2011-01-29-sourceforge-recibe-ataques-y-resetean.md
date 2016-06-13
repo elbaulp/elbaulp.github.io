@@ -5,6 +5,7 @@ permalink: /sourceforge-recibe-ataques-y-resetean/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 He recibido un correo de SourceForge comunicandome que debo cambiar mi contraseña de usuario debido a que han recibido ataques a su infraestructura, tenéis mas infomación en su blog: <a target="_blank" href="http://sourceforge.net/blog/sourceforge-net-attack/">http://sourceforge.net/blog/sourceforge-net-attack/</a>.
 

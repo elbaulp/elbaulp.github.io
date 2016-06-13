@@ -5,6 +5,7 @@ permalink: /usos-del-boton-central-del-raton-use/
 categories:
   - curiosidades
 main-class: "articulos"
+color: #F57C00
 ---
 En pocas ocasiones usamos el botón central de nuestro ratón, pero lo cierto es que en firefox y linux se le da un uso bastante útil, llevo usandolo muchos años, y hay mucha gente que no conoce esta función del botón central del ratón:
 

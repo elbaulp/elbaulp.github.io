@@ -7,6 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
+color: #61B38D
 ---
 [![Agrupación En Clústeres Multisitio de Windows Server][1]][2]
 

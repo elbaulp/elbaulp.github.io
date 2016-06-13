@@ -13,6 +13,7 @@ tags:
   - Tor
 author: luzila
 main-class: "articulos"
+color: #F57C00
 ---
   * Logrando el anonimato con Tor (Parte 1)
   * [Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies][1]

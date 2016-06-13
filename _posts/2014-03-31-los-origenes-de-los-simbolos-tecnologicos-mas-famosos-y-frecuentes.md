@@ -14,6 +14,7 @@ description: "Contínuamente exploramos el mundo de los orígenes pero es muy ra
 modified: 2015-12-25T13:10
 image: 2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png
 main-class: "articulos"
+color: #F57C00
 ---
 
 <figure>

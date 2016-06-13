@@ -5,6 +5,7 @@ permalink: /consulta-de-datos-tablas-resumen/
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

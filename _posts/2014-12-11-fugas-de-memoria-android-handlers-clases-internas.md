@@ -13,6 +13,7 @@ tags:
 description: "Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso."
 modified: 2015-12-22T17:50
 main-class: "android"
+color: #689F38
 ---
 > Éste artículo es una traducción del blog de [Alex Lockwood][1]. Gracias por el permiso.
 

@@ -5,6 +5,7 @@ permalink: /ssd-iodrive-octal-62-gbytess/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 **La compañía Fusion-io ha mostrado en SuperComputing 2010 su último desarrollo hardware: la tarjeta SSD ioDrive Octal que ha batido todos los récords hasta la fecha en cuanto a velocidad de transferencia de datos en SSD. Hablamos de tasas de hasta 6,2 Gbytes/s, es decir, un Blu-ray se transferiría en cuestión de cuatro segundos, por ejemplo. Pero no sólo eso sino que la unidad en formato PCIe es capaz de ofrecer hasta 1 millón de IOPS siendo la más alta del mercado actualmente.**
 

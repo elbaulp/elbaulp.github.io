@@ -10,6 +10,7 @@ tags:
   - virtualbox
 description: "Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware."
 main-class: "misc"
+color: #61B38D
 ---
 <figure>
   <img style="border:none;"   src="/assets/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" />

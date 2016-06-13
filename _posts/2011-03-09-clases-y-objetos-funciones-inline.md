@@ -5,6 +5,7 @@ permalink: /clases-y-objetos-funciones-inline/
 categories:
   - C
 main-class: "dev"
+color: #E64A19
 ---
 <div class="iconcpp">
 </div>

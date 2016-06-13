@@ -9,6 +9,7 @@ categories:
   - noticias
   - opensource
 main-class: "misc"
+color: #61B38D
 ---
 [![Build Your Own WordPress Site Guide][1]][2]
 

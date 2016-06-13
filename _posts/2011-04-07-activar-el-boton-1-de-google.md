@@ -6,6 +6,7 @@ categories:
   - curiosidades
   - internet
 main-class: "articulos"
+color: #F57C00
 ---
 Días atrás leí que google está planeando lanzar un botón +1, que es algo parecido al &#8220;me gusta&#8221; de facebook, pero no igual, ya que por lo visto este botón tendrá repercusión en el posicionamiento de las webs en los resultados de búsqueda.  
 

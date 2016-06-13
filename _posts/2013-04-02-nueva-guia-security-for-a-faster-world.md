@@ -11,6 +11,7 @@ tags:
   - Security for a Faster World
   - seguridad
 main-class: "misc"
+color: #61B38D
 ---
 [<img src="/assets/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif" alt="Executive eBook: Security for a Faster World"   />][1]
 

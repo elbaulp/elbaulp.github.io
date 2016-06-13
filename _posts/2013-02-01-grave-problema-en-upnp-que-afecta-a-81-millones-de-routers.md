@@ -9,6 +9,7 @@ tags:
   - qué es upnp
   - upnp que es
 main-class: "security-now"
+color: #00BCD4
 ---
 <img src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert"   />
 

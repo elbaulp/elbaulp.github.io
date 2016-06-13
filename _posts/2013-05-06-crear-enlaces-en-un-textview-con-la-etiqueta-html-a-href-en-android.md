@@ -12,6 +12,7 @@ tags:
   - etiqueta a href string.xml
   - etiqueta a href TextView android
 main-class: "android"
+color: #689F38
 ---
 Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta *<a href=&#8221;&#8221;></a>*.
 

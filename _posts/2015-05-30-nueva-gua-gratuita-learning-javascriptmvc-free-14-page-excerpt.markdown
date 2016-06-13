@@ -6,6 +6,7 @@ tags: [ cursos, internet, noticias, JavaScript]
 image: nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg
 date: 2015-05-30T13:53:41+02:00
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

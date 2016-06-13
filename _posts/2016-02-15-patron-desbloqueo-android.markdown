@@ -8,6 +8,7 @@ description: "Reconozca un patrón de gestos sobre pantalla de vuestra elección
 tags: [tutorial patrones android, patternlock android, echar foto tras cuenta atrás android, programar patrón de bloqueo android]
 image: npi/drawingPatter.png
 main-class: "java"
+color: #D32F2F
 ---
 
 {% include _toc.html %}

@@ -6,6 +6,7 @@ description: "How IoT is set to revolutionize the commercial real estate industr
 tags: [guia Impact of Internet of Things, guia para el internet de las cosas, IoT security]
 image: The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

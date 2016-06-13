@@ -6,6 +6,7 @@ tags: [guias gratuitas de hadoop, libros gratuitos hadoop, tutoriales sobre hado
 image: Apache-Hadoop-Cookbook2.jpg
 date: 2016-05-27T12:08:44+02:00
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

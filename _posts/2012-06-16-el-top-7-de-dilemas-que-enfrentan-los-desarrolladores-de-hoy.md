@@ -12,6 +12,7 @@ tags:
   - noSQL
 modified: 2015-12-18T14:57:00+00:00
 main-class: "articulos"
+color: #F57C00
 ---
 **Plataformas, bases de datos, control de usuario &#8211; dilemas que atrapan al programador antes de la primera línea de código**
 

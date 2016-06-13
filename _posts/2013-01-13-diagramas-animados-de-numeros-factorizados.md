@@ -11,6 +11,7 @@ tags:
   - html5
 format: aside
 main-class: "dev"
+color: #E64A19
 ---
 <img src="/assets/img/2013/01/2013-01-13-105334_1256x830_scrot2-1024x676.png" alt="Factorización en html5"   />
 

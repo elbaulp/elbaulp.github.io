@@ -7,6 +7,7 @@ categories:
   - internet
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 Hace unos dias hablé del [servício ifttt][1], en cuanto conocí este servício solicité una invitación en la web, y hoy me ha llegado.
 

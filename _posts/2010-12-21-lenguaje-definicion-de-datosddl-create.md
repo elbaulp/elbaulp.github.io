@@ -13,6 +13,7 @@ tags:
   - sentencias dml y ddl
   - unique para varias columnas
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

@@ -6,6 +6,7 @@ description: "nftables  es un  nuevo  framework  que  sustituye  al antiguo  ipt
 tags: [ejemplos nftables, introduccion Netfilter, tutorial nftables, ejemplos nftables iptables, comparacion nftables iptables, diferencias nftables iptables]
 image: ejemplos-nftables.png
 main-class: "articulos"
+color: #F57C00
 ---
 
 <figure>

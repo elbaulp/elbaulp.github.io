@@ -5,6 +5,7 @@ permalink: /citas-clasicas-de-programacion/
 categories:
   - curiosidades
 main-class: "articulos"
+color: #F57C00
 ---
 En <a target="_blank" href="http://www.storm-consultancy.com/">storm-consultancy</a> he visto esta colección de citas clásicas relaciondas con la programación que quiero compartir con vosotros:
 

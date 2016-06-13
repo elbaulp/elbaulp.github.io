@@ -9,6 +9,7 @@ tags:
   - html5 ejemplos
   - html5 websocket
 main-class: "articulos"
+color: #F57C00
 ---
 Ayer os hablé de [15 webs][1] en las que se podia ver el potencial de HTML 5, y una de ellas era una presentación de sus características, he traducido algunas que me han interesado y las dejo para que las useis. Si lo preferís, podéis hacerlo directamente [en su Web][2].  
 <!--ad-->

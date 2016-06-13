@@ -8,6 +8,7 @@ tags:
   - group by
   - orden group by sql
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

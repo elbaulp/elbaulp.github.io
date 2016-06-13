@@ -15,6 +15,7 @@ tags:
   - Procesos
   - Tareas
 main-class: "android"
+color: #689F38
 ---
 <div class="icodroid">
 </div>

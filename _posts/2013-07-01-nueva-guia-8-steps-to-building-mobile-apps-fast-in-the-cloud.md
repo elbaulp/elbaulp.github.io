@@ -16,6 +16,7 @@ tags:
   - mobile computing
   - mobile design
 main-class: "misc"
+color: #61B38D
 ---
 [<img src="/assets/img/2013/07/8-Steps-to-Building-Mobile-Apps-Fast-in-the-Cloud-300x1431.png" alt="8 Steps to Building Mobile Apps Fast in the Cloud"   />][1]
 

@@ -5,6 +5,7 @@ permalink: /diaspora-la-red-social-libre/
 categories:
   - noticias
 main-class: "articulos"
+color: #F57C00
 ---
 <div class="icodias" style="padding:1em;">
 </div>

@@ -8,6 +8,7 @@ tags: [dunst, notify-send, notificaciones, dwm]
 image: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
 date: 2015-06-29T18:43:06+02:00
 main-class: "articulos"
+color: #F57C00
 ---
 <figure>
   <img src="/assets/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png" title="{{ page.title }}" alt="{{ page.title }}" />

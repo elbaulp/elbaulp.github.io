@@ -9,6 +9,7 @@ tags:
   - invertir cadena
 description: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
 main-class: "linux"
+color: #2196F3
 ---
 
 <figure>

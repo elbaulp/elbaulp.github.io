@@ -6,6 +6,7 @@ categories:
   - noticias
   - opensource
 main-class: "articulos"
+color: #F57C00
 ---
 <div class="icodias">
 </div>

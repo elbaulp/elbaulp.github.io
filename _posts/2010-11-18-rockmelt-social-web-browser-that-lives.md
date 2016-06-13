@@ -5,6 +5,7 @@ permalink: /rockmelt-social-web-browser-that-lives/
 categories:
   - Sin Categoria
 main-class: "articulos"
+color: #F57C00
 ---
 <p lang="en">
   There is a new web browser in town – the socially integrated, user focused <a href="http://www.rockmelt.com/" target="_blank">RockMelt</a>.

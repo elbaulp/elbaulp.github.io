@@ -7,6 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
+color: #61B38D
 ---
 [![The JavaScript Anthology: 101 Essential Tips, Tricks & Hacks - Free 158 Page Preview][1]][2]
 

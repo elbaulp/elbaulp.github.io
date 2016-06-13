@@ -14,6 +14,7 @@ tags:
   - curso android pdf
   - integrar oracle en android
 main-class: "android"
+color: #689F38
 ---
 <div class="separator" style="clear: both; text-align: center;">
   <img style="clear: left; float: left; margin-right: 1em; margin-bottom: 1em;" src="/assets/img/2013/07/iconoAndroid.png" alt="" border="0" />

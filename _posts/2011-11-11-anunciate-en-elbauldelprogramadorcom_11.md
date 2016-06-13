@@ -6,6 +6,7 @@ permalink: /anunciate-en-elbauldelprogramadorcom_11/
 categories:
   - Sin Categoria
 main-class: "articulos"
+color: #F57C00
 ---
 He colocado unos banners en la parte derecha del blog, disponibles para todo aquel que se quiera anunciar y dar a conocer su página web.
 

@@ -8,6 +8,7 @@ description: "Learn how to stop Windows 10 from exporting your personal data. Wi
 tags: []
 image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

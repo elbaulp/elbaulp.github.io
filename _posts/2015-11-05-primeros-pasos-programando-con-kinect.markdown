@@ -7,6 +7,7 @@ image: Primeros-Pasos-Programando-Con-Kinect.png
 date: 2015-11-05T19:30:26+01:00
 math: true
 main-class: "dev"
+color: #E64A19
 ---
 <figure>
   <img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />

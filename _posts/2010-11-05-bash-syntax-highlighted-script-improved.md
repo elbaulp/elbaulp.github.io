@@ -6,6 +6,7 @@ categories:
   - linux
   - script
 main-class: "linux"
+color: #2196F3
 ---
 <p lang="en">
   Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:

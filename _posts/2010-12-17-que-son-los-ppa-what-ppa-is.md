@@ -5,6 +5,7 @@ permalink: /que-son-los-ppa-what-ppa-is/
 categories:
   - linux
 main-class: "linux"
+color: #2196F3
 ---
 Si quereis crear un PPA, encontrareis una explicación de como hacerlo [aquí][1].
 

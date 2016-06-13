@@ -8,6 +8,7 @@ description: "Una appMovimientoSonido que reconozca un patrón de movimientos de
 tags: [tutorial acelerometro android, tutorial giroscopio android, detectar rotación giroscopio android, detectar golpe acelerometro android]
 image: npi/movementSound.png
 main-class: "java"
+color: #D32F2F
 ---
 {% include _toc.html %}
 

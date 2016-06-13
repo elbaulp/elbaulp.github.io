@@ -14,6 +14,7 @@ modified: 2015-12-28T9:51
 description: Este año estoy participando en el concurso universitario de software libre, concretamente en el proyecto SWADroid. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.
 image: 2014/01/CrearDialogoAndroid.png
 main-class: "android"
+color: #689F38
 ---
 Este año estoy participando en el <a href="http://www.concursosoftwarelibre.org/1314/" title="CUSL" target="_blank">concurso universitario de software libre</a>, concretamente en el proyecto <a href="http://swadroid.wordpress.com/" title="Blog SWADroid" target="_blank">SWADroid</a>. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.
 

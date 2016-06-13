@@ -16,6 +16,7 @@ modified: 2015-07-14T21:00:00+00:00
 date: 2015-07-14T21:00:00+00:00
 image: 2012/07/original2.jpg
 main-class: "articulos"
+color: #F57C00
 ---
 
 {% include _toc.html %}

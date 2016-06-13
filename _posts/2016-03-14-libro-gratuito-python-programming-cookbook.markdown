@@ -8,6 +8,7 @@ description: "Kick-start your Python projects with these hot recipes!"
 tags: [guias Gratuita, descargar guias python, manuales de python, curso de python, Cookbook python]
 image: Python-Programming-Cookbook.jpg
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

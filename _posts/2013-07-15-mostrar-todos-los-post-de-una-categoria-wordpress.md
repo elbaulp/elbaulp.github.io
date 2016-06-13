@@ -8,6 +8,7 @@ categories:
 tags:
   - Mostrar todos los artículos de una categoría en Wordpress
 main-class: "dev"
+color: #E64A19
 ---
 <img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress"   />  
 En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.

@@ -12,6 +12,7 @@ tags:
 description: "El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad http://www.csc.villanova.edu."
 modified: 2015-12-22T17:50
 main-class: "dev"
+color: #E64A19
 ---
 El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad [http://www.csc.villanova.edu][1].
 

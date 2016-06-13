@@ -13,6 +13,7 @@ tags:
   - Tor
 author: luzila
 main-class: "articulos"
+color: #F57C00
 ---
   * <a href="https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>
   * Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies

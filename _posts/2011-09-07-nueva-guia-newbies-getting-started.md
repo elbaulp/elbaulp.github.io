@@ -6,6 +6,7 @@ permalink: /nueva-guia-newbies-getting-started/
 categories:
   - Sin Categoria
 main-class: "misc"
+color: #61B38D
 ---
 [![A Newbie's Getting Started Guide to Linux][1]][2]
 

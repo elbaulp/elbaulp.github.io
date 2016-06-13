@@ -8,6 +8,7 @@ description: "En el artículo anterior se dieron unas nociones básicas de Andro
 tags: [Curso de Android, programación Android, tutoriales Android, hola mundo Android, fragments Android]
 image: android/layouthelloworldandroid.png
 main-class: "android"
+color: #689F38
 ---
 
 {% include _toc.html %}

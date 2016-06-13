@@ -10,6 +10,7 @@ tags:
   - How the Cloud will Change Application Release Applications
   - internet
 main-class: "misc"
+color: #61B38D
 ---
 [<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications"   />][1]
 

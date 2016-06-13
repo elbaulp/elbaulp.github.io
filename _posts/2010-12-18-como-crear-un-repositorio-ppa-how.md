@@ -7,6 +7,7 @@ categories:
   - linux
   - opensource
 main-class: "articulos"
+color: #F57C00
 ---
 Hace poco hablé de qué eran los [sistemas de paquetes PPA][1], para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.
 

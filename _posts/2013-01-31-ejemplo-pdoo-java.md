@@ -2,6 +2,7 @@
 title: C++ y Java
 layout: minimal
 main-class: "dev"
+color: #E64A19
 ---
 > Visita la [sección de descargas][1] para ver todo el material disponible.
 

@@ -7,6 +7,7 @@ categories:
   - noticias
   - opensource
 main-class: "linux"
+color: #2196F3
 ---
 <div class="iconews">
 </div>

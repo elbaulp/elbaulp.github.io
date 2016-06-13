@@ -11,6 +11,7 @@ tags:
   - crear makefile
   - tutorial makefile
 main-class: "dev"
+color: #E64A19
 ---
 Los makefile sirven para automatizar el proceso de compilación de un proyecto estableciendo unas reglas que dictan cómo y en qué orden han de crearse los ficheros objetos, librerías y binarios.
 

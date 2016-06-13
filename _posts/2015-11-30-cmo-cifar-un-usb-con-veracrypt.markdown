@@ -6,6 +6,7 @@ description: "Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila
 tags: [criptografía, usb, truecrypt, truecript, Veracrypt, cifrar usb]
 image: Veracryptlogo.png
 main-class: "articulos"
+color: #F57C00
 ---
 
 <figure>

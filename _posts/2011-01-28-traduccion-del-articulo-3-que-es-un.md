@@ -5,6 +5,7 @@ permalink: /traduccion-del-articulo-3-que-es-un/
 categories:
   - juegos
 main-class: "dev"
+color: #E64A19
 ---
 El artículo que quedó pendiente de traducción en [Programación para Juegos &#8211; Lección 5 &#8211; Colores Clave][1], ya está disponible desde la propia [lección 5][1], desde el [enlace directo al artículo][2], o bien en la página de [Tutorial SDL][3].
 

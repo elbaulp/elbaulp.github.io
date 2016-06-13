@@ -14,6 +14,7 @@ description: "Si encontraste esta página, por suerte es lo que estabas buscando
 image: 2014/04/Chuleta-de-comandos-GPG.png
 modified: 2015-12-24T19:55
 main-class: "articulos"
+color: #F57C00
 ---
 <figure>
   <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

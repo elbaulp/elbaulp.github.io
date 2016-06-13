@@ -13,6 +13,7 @@ tags:
   - manuales android studio
   - tutorial android studio
 main-class: "android"
+color: #689F38
 ---
 <img src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio"   />  
 Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en <a href="http://developer.android.com/sdk/installing/studio.html" target="_blank">developer.android.com</a>. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.

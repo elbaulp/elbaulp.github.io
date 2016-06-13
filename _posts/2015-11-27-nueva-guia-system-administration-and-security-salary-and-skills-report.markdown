@@ -8,6 +8,7 @@ tags: [guia gratuita, ebook , libros gratuitos]
 image: Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg
 date: 2015-11-27T08:55:00+00:00
 main-class: "misc"
+color: #61B38D
 ---
 <figure>
   <img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />

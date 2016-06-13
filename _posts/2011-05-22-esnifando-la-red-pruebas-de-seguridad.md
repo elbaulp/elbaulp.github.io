@@ -11,6 +11,7 @@ tags:
   - ettercap en español
   - tutorial ettercap comandos
 main-class: "articulos"
+color: #F57C00
 ---
 <div class="icoso">
 </div>

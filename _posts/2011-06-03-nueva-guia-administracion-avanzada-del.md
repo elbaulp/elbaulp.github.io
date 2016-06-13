@@ -9,6 +9,7 @@ categories:
 image: AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
 modified: 2015-12-21T17:45:00+00:00
 main-class: "misc"
+color: #61B38D
 ---
 
 <figure>

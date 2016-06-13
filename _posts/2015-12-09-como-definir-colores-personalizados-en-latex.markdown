@@ -8,6 +8,7 @@ modified: 2015-12-30T08:38:32+01:00
 math: true
 description: "En este artículo veremos cómo podemos definir colores personalizados en LateX usando el paquete xcolor."
 main-class: "latex"
+color: #B31917
 ---
 
 <figure>

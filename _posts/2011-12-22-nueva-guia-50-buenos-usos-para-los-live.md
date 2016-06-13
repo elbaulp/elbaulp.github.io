@@ -8,6 +8,7 @@ categories:
   - cursos
   - linux
 main-class: "misc"
+color: #61B38D
 ---
 <div style="float:left; margin-right:1em;">
   <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make36/prgm.cgi"><img style="border:none;"  src="https://lh3.googleusercontent.com/-2oT-J7QNkq8/TvJtfku-xJI/AAAAAAAAB8M/lVVURDfYCNY/s613/50_live_cd.jpg" title="50 Uses For Live CDs" alt="50 Uses For Live CDs" /></a>

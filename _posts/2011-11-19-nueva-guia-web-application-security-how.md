@@ -8,6 +8,7 @@ categories:
   - internet
   - seguridad
 main-class: "misc"
+color: #61B38D
 ---
 [![Web Application Security; How to Minimize Prevalent Risk of Attacks][1]][2]  
 

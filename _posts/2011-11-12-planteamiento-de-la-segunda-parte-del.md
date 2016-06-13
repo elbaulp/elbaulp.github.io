@@ -9,6 +9,7 @@ categories:
 tags:
   - curso android pdf
 main-class: "android"
+color: #689F38
 ---
 [<img src="" id="logo" name="droid" class="icono" height="128px" width="128px" />][1]
 

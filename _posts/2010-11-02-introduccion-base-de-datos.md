@@ -9,6 +9,7 @@ tags:
   - apuntes bases de datos
   - guia de sql basico
 main-class: "BaseDeDatos"
+color: #009688
 ---
 <div class="icosql">
 </div>

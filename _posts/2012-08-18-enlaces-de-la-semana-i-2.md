@@ -14,6 +14,7 @@ tags:
   - SQLite forense
 format: link
 main-class: "articulos"
+color: #F57C00
 ---
 [<img  title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt=""  />][1]
 

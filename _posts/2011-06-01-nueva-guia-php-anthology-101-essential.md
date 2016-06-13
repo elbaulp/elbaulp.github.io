@@ -7,6 +7,7 @@ categories:
   - cursos
   - internet
 main-class: "misc"
+color: #61B38D
 ---
 [![The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition][1]][2]
 

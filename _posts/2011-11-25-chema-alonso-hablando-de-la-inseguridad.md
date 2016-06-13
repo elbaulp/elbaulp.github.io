@@ -7,6 +7,7 @@ categories:
   - internet
   - seguridad
 main-class: "articulos"
+color: #F57C00
 ---
 OS dejo dos vídeos muy interesantes que recomiendo que veáis, ya que hablan de la seguiridad en la red
 

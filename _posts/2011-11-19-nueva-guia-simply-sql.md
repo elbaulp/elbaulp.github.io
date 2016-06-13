@@ -7,6 +7,7 @@ categories:
   - BaseDeDatos
   - cursos
 main-class: "misc"
+color: #61B38D
 ---
 [![Simply SQL][1]][2]  
 
