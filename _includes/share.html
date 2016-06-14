@@ -1,18 +1,18 @@
 <section class="share">
     <h3>Compartir</h3>
     <a aria-label="En Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}+{{ site.url }}{{ page.url }}+Vía @{{ site.owner.twitter }}"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="En Twitter">
+    onclick="ga('send', 'event', 'share', 'twitter'); window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="En Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
     <a aria-label="En Facebook" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption={{ page.title | url_encode }}&link={{ site.url | url_encode }}{{ page.url | url_encode }}&redirect_uri=https://developers.facebook.com/tools/explorer"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="En Facebook">
+    onclick="ga('send', 'event', 'share', 'facebook'); window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="En Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
     <a aria-label="En Google plu" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="En Google+">
+    onclick="ga('send', 'event', 'share', 'googleplus'); window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="En Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
-    <a aria-label="Suscribir al RSS" href="/feed" title="Suscribir al RSS">
+    <a onclick="ga('send', 'event', 'share', 'feed');" aria-label="Suscribir al RSS" href="/feed" title="Suscribir al RSS">
         <svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg>
     </a>
 </section>
