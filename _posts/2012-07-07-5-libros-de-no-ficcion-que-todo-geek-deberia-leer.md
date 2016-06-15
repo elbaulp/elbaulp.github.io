@@ -29,6 +29,8 @@ color: "#F57C00"
 
 Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!
 
+<!--ad-->
+
 <div class="row flex-grid">
   <article class="box-item animate">
     <h2>Thing Explainer: Complicated Stuff in Simple Words</h2>
