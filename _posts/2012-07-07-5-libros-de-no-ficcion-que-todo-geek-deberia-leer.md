@@ -27,8 +27,6 @@ color: "#F57C00"
 
 {% include toc.html %}
 
-Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!
-
 <!--ad-->
 
 <div class="row flex-grid">
