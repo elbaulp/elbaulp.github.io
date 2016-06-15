@@ -6,7 +6,7 @@ description: "Tras mucho buscar, al fin he conseguido recopilar una lista de lib
 tags: [libros, data Scientist, data Engineer, libros big data, hadoop spark, curso apache spark, book hadoop, hadoop for dummies, libros sobre machine learning, libros sobre Aprendizaje automático]
 image: ml/Machine-Learning-for-Hackers.jpg
 date: 2015-11-01T21:30:17+01:00
-modified: 2016-04-28T11:00:00+00:00
+modified: 2016-06-15T10:20:42+02:00
 main-class: "articulos"
 color: "#F57C00"
 ---
