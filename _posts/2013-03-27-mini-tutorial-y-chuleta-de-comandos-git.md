@@ -16,6 +16,13 @@ tags:
   - ramas con git
   - tutorial git
   - tutoriales sobre git
+  - tutorial git español
+  - git bash tutorial
+  - comandos bitbucket
+  - git tutorial español
+  - git manual español pdf
+  - git clone
+  - git init
 date: 2015-12-13T19:10:12+01:00
 modified: 2015-12-13T19:10:12+01:00
 description: "Un mini tutorial y lista extensa de comandos git"
