@@ -6,14 +6,16 @@ tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manua
 description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
 image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
 ---
-En esta sección iré poniendo las mejores manuales gratuítos referidos a tecnología, Internet, redes, productividad, uso de software y mucho más. El catálogo completo está disponible en [esta página.][1]
+En esta sección iré poniendo los mejores manuales gratuítos referidos a tecnología, Internet, redes, productividad, uso de software y mucho más. El catálogo completo está disponible en [esta página.][1]
 
-Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir un correo electrónico para recibir el enlace de descarga. Algunos productos son e-books, otros son papers y también hay revistas &#8220;de papel&#8221; a las se puede suscribir y recibir en casa, todo gratuito, hasta el envío.(Para ver el título del libro mantén el ratón encima de la imagen.)
+Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir un correo electrónico para recibir el enlace de descarga. Algunos productos son e-books, otros son papers y también hay revistas &#8220;de papel&#8221; a las que te puedes suscribir y recibir en casa, todo gratuito, hasta el envío.(Para ver el título del libro mantén el ratón encima de la imagen.)
 
-Si estás buscando libros de texto, quizá te intersen estos dos artículos:
+Si estás buscando libros de texto, quizá te interesen estos dos artículos:
 
 - <a onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
 - <a onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="21 Libros de No-Ficción que todo Geek debería leer">21 Libros de No-Ficción que todo Geek debería leer</a>
+
+> __NOTA__: Si quieres apoyar el trabajo que realizamos en _El Baúl del Programador_, descargar alguna de estas guías es una buena forma, por cada una que descargues es posible (Aunque no seguro) que nos den un porcentaje de comisión (Entorno $1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en <a onclick="ga('send', 'event', 'revresponseReferallink');" href="http://www.revresponse.com/join.php?refbrand=bashyc-blogspot" target="_blank" title="RevResponse">RevResponse</a> y empezar a ofrecer guías de interés a tus lectores.
 
 <div class="row flex-grid">
   <article class="box-item tooltip swing animate" data-title="6 Steps to Securing Your Domains">
