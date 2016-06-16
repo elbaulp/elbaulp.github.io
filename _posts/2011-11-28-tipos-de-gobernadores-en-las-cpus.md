@@ -1,6 +1,6 @@
 ---
 title: Tipos de gobernadores en las CPUs
-
+description: "Para los que tengáis vuestro terminal rooteado voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):"
 layout: post
 permalink: /tipos-de-gobernadores-en-las-cpus/
 categories:
@@ -10,12 +10,11 @@ tags:
   - curso android pdf
   - que es cpu conservative
   - samsung galaxy scl gti9003
+modified: 2016-06-16T19:45:21+02:00
+image: Tipos-de-gobernadores-en-las-CPUs.jpg
 main-class: "linux"
 color: "#2196F3"
 ---
-
-<img border="0" height="150" width="200" src="https://1.bp.blogspot.com/-KQUYsW_nayM/TtPuH21UIaI/AAAAAAAAB2o/KsZQh-2hjtk/s200/gpu.jpg" />
-
 Para los que tengáis vuestro terminal [rooteado][1] voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):
 
 Lo que hacen los gobernadores es definir unas reglas de cambio de frecuencias en el micro, ya sea una velocidad de reloj mayor o menor, y cuando han de cambiarse estas frecuencias.
