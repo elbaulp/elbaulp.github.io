@@ -11,6 +11,7 @@ tags:
   - noticias java
   - novedades java
 author: luzila
+description: "Un tema obvio para comenzar para la mayoría de los desarrolladores Java, es la *release* del 2013. Asumiendo que no habrá demoras, podemos esperar que Java 8 llegue en Septiembre, trayendo consigo muchas funciones lambda esperadas."
 main-class: "articulos"
 color: "#F57C00"
 ---

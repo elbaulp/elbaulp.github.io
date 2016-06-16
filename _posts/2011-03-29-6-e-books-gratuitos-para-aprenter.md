@@ -5,6 +5,7 @@ permalink: /6-e-books-gratuitos-para-aprenter/
 categories:
   - cursos
   - python
+description: "Gracias a un enlace que publicó [Yunn][1] en [Picotea][2], he descubierto estos [interesantes 6 libros][3] para la gente que quiera aprender a programar en python, que es uno de los lenguajes escogidos por la mayoria de personas que quieren iniciarse en los lenguajes de programación."
 main-class: "articulos"
 color: "#F57C00"
 ---

@@ -1,6 +1,6 @@
 ---
 title: Aprende a construir un motor de búsqueda y un coche autónomo con Udacity
-
+description: "Despues del éxito de los cursos impartidos por Stanford sobre inteligencia artificial, machine learning y bases de datos, se han propuesto seguir enseñando gratuitamente a través de la red, ésta vez serán David Evans, profesor de la ciencia de la computación en la universidad de Virginia y Sebastian Thrun, de la universidad de Stanford."
 layout: post
 permalink: /aprende-construir-un-motor-de-busqueda/
 categories:

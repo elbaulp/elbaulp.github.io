@@ -10,11 +10,6 @@ date: 2016-04-22T08:40:33+02:00
 main-class: "dev"
 color: "#E64A19"
 ---
-<figure>
-  <a href="/assets/img/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png"><img src="/assets/img/Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-</figure>
-
-
 Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.
 
 <!--ad-->

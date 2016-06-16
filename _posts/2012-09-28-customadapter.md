@@ -1,6 +1,6 @@
 ---
 title: Cómo crear un adapter personalizado en Android
-
+description: "Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3]. En esta entrada se verá cómo crear un adapter desde cero, con algunas funcionalidades más."
 layout: post
 permalink: /adapter-personalizado-en-android/
 categories:
