@@ -1,6 +1,5 @@
 ---
 title: Bloquear una IP atacando el servidor mediante iptables
-
 layout: post
 permalink: /bloquear-una-ip-atacanto-el-servidor-mediante-iptables/
 categories:

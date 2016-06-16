@@ -2,3 +2,99 @@
     <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <span class="love">❤</span> by <a href="http://willianjusten.com.br">Willian Justen</a></p>
 </footer>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "{{site.title}}",
+  "alternateName": "{{site.title}}",
+  "url": "{{ site.url }}"
+}
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Blog",
+    "name": "{{site.title}}",
+    "about": "{{site.description}}",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Developers, informáticos, programadores"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.owner.name }}",
+      "url" : "{{ site.url }}",
+      "sameAs" : [
+        "https://www.facebook.com/{{ site.owner.facebook }}",
+        "https://www.twitter.com/{{ site.owner.twitter }}",
+        "https://www.linkedin.com/in/{{ site.owner.linkedin }}",
+        "https://plus.google.com/+{{ site.owner.google.plus }}",
+        "http://stackoverflow.com/users/{{ author.stackoverflow }}"
+      ]
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "{{ site.owner.name }}",
+      "url" : "{{ site.url }}",
+      "sameAs" : [
+        "https://www.facebook.com/{{ site.owner.facebook }}",
+        "https://www.twitter.com/{{ site.owner.twitter }}",
+        "https://www.linkedin.com/in/{{ site.owner.linkedin }}",
+        "https://plus.google.com/+{{ site.owner.google.plus }}",
+        "http://stackoverflow.com/users/{{ author.stackoverflow }}"
+      ]
+    },
+    "headline": "{{site.title}}",
+    "inLanguage": "es-ES",
+    "url": "{{site.url}}",
+    "blogPost": {
+      "@type": "BlogPosting",
+      "articleBody": {{content | escape | jsonify}},
+      "wordCount": "{{content | number_of_words}}",
+      "mainEntityOfPage": "{{ canonical }}",
+      "headline": "{{ page.title }}",
+      {% if page.date %}
+      "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "dateModified": "{% if page.modified %}{{ page.modified | date_to_xmlschema}}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      {% endif %}
+      "description": "{{ page.description | strip_html }}",
+      "url": "{{ page.url | replace:'index.html','' | prepend: site.url }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{% if page.image %}{{ site.url }}/assets/img/{{ page.image }}{% else %}{{ site.url }}/assets/img/default-thumb.png{% endif %}",
+        "width": 640,
+        "height": 435
+      },
+      "author": {
+        "@type": "Person",
+        "name": "{{ author.name }}",
+        "url" : "{{ site.url }}",
+        "sameAs" : [
+          "https://www.facebook.com/{{ author.facebook }}",
+          "https://www.twitter.com/{{ author.twitter }}",
+          "https://www.linkedin.com/in/{{ author.linkedin }}",
+          "https://plus.google.com/+{{ author.google.plus }}",
+          "http://stackoverflow.com/users/{{ author.stackoverflow }}"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/assets/img/bio-photo.png",
+          "width": 150
+        },
+        "sameAs" : [
+          "https://www.facebook.com/elbauldelprogramador",
+          "https://www.twitter.com/elbaulp",
+          "https://plus.google.com/+elbauldelprogramador"
+        ]
+      }
+    }
+  }
+</script>
