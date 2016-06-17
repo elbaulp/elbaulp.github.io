@@ -1,6 +1,5 @@
 ---
 title: Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux
-
 layout: post
 permalink: /como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/
 categories:
@@ -11,11 +10,11 @@ tags:
   - resolución grub
   - resolución tty
   - vga=0x31b
+description: "Métodos para personalizar la resolución de pantalla de las terminales tty en linux"
+image: img/2012/08/sh1.png
 main-class: "linux"
 color: "#2196F3"
 ---
-<img src="/assets/img/2012/08/sh1.png" alt="Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux"   />
-
 Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el <a target="_blank" href="https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/" title="Grub Customizer 2.0, personaliza tu GRUB2">GRUB</a>. Por defecto el GRUB se muestra a una resolución de **640&#215;480**, la cual es bastante ‘fea’. Igual ocurre con las terminales **ttys**, a las cuales se puede acceder con pulsando **Ctrl + Alt + F[1-6]**. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.  
 
 <!--ad-->

@@ -1,6 +1,5 @@
 ---
 title: Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar aplicaciones
-
 layout: post
 permalink: /como-conectar-tu-dispositivo-android-en/
 categories:
@@ -9,6 +8,7 @@ categories:
   - How To
 tags:
   - curso android pdf
+description: "Ya me ha sucedido en varias ocasiones que he intentado conectar mi Samsung Galaxy S al adb del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:"
 main-class: "android"
 color: "#689F38"
 ---

@@ -4,13 +4,15 @@ layout: post
 permalink: /codificacion/
 categories:
   - SO
+description: "Bueno, esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes."
 main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="icoso">
 </div>
 
-Bueno, esta es la primera parte del temario que vamos a ver en [Sistemas Operativos][1], vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes.  
+Bueno, esta es la primera parte del temario que vamos a ver en [Sistemas Operativos][1], vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes.
+
 <!--ad-->
 
 Lo que vamos a ver en esta entrada es:

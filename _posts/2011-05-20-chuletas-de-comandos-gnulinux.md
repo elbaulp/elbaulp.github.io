@@ -1,18 +1,15 @@
 ---
 title: Chuletas de Comandos GNU/Linux
-
 layout: post
 permalink: /chuletas-de-comandos-gnulinux/
 categories:
   - linux
   - script
   - SO
+description: "En este post traigo una gran lista de comandos GNU/Linux para tener a mano siempre que no recordemos su sintaxis: (Hay como para aburrirse)"
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="icoso">
-</div>
-
 En este post traigo una gran lista de comandos GNU/Linux para tener a mano siempre que no recordemos su sintaxis: (Hay como para aburrirse)
 
 

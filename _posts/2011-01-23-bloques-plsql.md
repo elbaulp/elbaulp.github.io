@@ -4,11 +4,10 @@ layout: post
 permalink: /bloques-plsql/
 categories:
   - BaseDeDatos
+description: "Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas"
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
 
 Los bloques PL/SQL son de varios tipos:
 

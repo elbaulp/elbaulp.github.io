@@ -1,16 +1,13 @@
 ---
 title: 'Clases y Objetos &#8211; Pasar un objeto a una función'
-
 layout: post
 permalink: /clases-y-objetos-pasar-un-objeto-una/
 categories:
   - C
+description: "Vamos a estudiar cómo se pasa una variable a una función en uno de sus argumentos."
 main-class: "dev"
 color: "#E64A19"
 ---
-<div class="icocpp">
-</div>
-
 Para usar una función son necesarios tres pasos:
 
   * Declaración de la función.

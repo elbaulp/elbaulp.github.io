@@ -1,6 +1,5 @@
 ---
 title: Algunos comandos útiles con iproute2
-
 layout: post
 permalink: /comandos-ss-iproute2-linux/
 categories:
@@ -24,10 +23,12 @@ tags:
   - ss
   - tc iproute2 debian
   - UDP
+description: "El propósito de iproute2 es reemplazar el conjunto de herramientas que componen las net-tools y pasar a ser él quien se encargue de configurar las interfaces de red, la tabla de rutas y gestionar la tabla ARP."
+image: 2012/07/sh1.png
 main-class: "linux"
 color: "#2196F3"
 ---
-<img src="/assets/img/2012/07/sh1.png" alt="sh"   />El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
+El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
 
 Hace poco he [escrito sobre el comando **netstat**][1]. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto **ss**, ya que netstat se dejó de desarrollar en 2001.
 

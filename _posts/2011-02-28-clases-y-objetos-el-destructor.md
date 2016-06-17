@@ -4,6 +4,7 @@ layout: post
 permalink: /clases-y-objetos-el-destructor/
 categories:
   - C
+description: "El destructor es una función especial, que tiene el mismo nombre que la clase pero que va precedido del símbolo ~ (ASCII 126). El destructor es único y no tiene argumentos: se puede definir dentro de la clase o fuera de la misma."
 main-class: "dev"
 color: "#E64A19"
 ---

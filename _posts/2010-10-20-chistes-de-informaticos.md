@@ -4,6 +4,7 @@ layout: post
 permalink: /chistes-de-informaticos/
 categories:
   - Humor
+description: "Recopilación de chistes informáticos"
 main-class: "geek"
 color: "#262626"
 ---

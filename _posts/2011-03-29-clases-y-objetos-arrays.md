@@ -4,6 +4,9 @@ layout: post
 permalink: /clases-y-objetos-arrays/
 categories:
   - C
+description: "Un array sirve para guardar un conjunto de entidades pertenecientes a la misma  
+clase. Para reservar espacio en memoria para un array, y para liberar la memoria, se ha  
+de llamar a las funciones operator new[]() y operator delete[](), respectivamente"
 main-class: "dev"
 color: "#E64A19"
 ---
