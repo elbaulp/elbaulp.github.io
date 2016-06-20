@@ -228,7 +228,6 @@ originalImage.setImageResource(adapter.getThumbId(position));
 Ahora solo ejecuta la aplicación y prueba su funcionamiento.
 
 
-
  [1]: https://elbauldelprogramador.com/adapter-personalizado-en-android/ "Cómo crear un adapter personalizado en Android"
  [2]: https://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/ "Optimizando la interfaz Android – Compound Drawables"
  [3]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
