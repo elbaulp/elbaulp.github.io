@@ -1,6 +1,5 @@
 ---
 title: Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo
-
 layout: post
 permalink: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/
 categories:
@@ -10,6 +9,7 @@ tags:
   - autentificación de dos factores
   - contraseñas
   - google autenticator
+author: luzila
 main-class: "articulos"
 color: "#F57C00"
 ---

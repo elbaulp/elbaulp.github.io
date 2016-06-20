@@ -11,6 +11,7 @@ tags:
   - desarrollo de aplicaciones
   - noSQL
 modified: 2016-06-13T14:57:00+00:00
+author: luzila
 main-class: "articulos"
 color: "#F57C00"
 ---
