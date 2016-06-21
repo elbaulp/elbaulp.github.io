@@ -34,6 +34,7 @@ tags:
   - servidor dns debian
   - servidores dns
   - soa correo
+  - configurar zona reversa en dns linux
 image: 2013/04/dns.jpg
 description: "En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge."
 main-class: "servidores"
