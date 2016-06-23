@@ -9,7 +9,7 @@ date: 2016-06-23T19:16:56+02:00
 main-class: "articulos"
 color: "#F57C00"
 ---
-> Este artículo es un resumen de los aspectos más importantes de una nota que he leido en el blog de [Bruce Schneier](https://www.schneier.com/blog/archives/2016/06/comparing_messa.html "Comparing Messaging Apps") y del blog de [Michah Lee](https://theintercept.com/2016/06/22/battle-of-the-secure-messaging-apps-how-signal-beats-WhatsApp/ "Battle of the Secure Messaging Apps: How Signal Beats WhatsApp") en el que se comparan las distintas aplicaciones de mensajería (WhatsApp, Signal y Allo) en función de su privacidad y seguridad. Recomiendo leer el articulo original, sin embargo, he escrito un resumen con las características de cada aplicación
+> Este artículo es un resumen de los aspectos más importantes de una nota que he leido en el blog de [Bruce Schneier](https://www.schneier.com/blog/archives/2016/06/comparing_messa.html "Comparing Messaging Apps") y del blog de [Michah Lee](https://theintercept.com/2016/06/22/battle-of-the-secure-messaging-apps-how-signal-beats-whatsapp/ "Battle of the Secure Messaging Apps: How Signal Beats WhatsApp") en el que se comparan las distintas aplicaciones de mensajería (WhatsApp, Signal y Allo) en función de su privacidad y seguridad. Recomiendo leer el articulo original, sin embargo, he escrito un resumen con las características de cada aplicación
 
 {% include toc.html %}
 
@@ -25,7 +25,7 @@ Para los impacientes, este es el resumen extremo del artículo:
 
 ## Pros
 
-- [Cifra todos los mensajes](/whatsApp-mensajes-cifrados-extremo-a-extremo/ "WhatsApp: Entendiendo Su Cifrado Extremo a Extremo"), imágenes, vídeos y notas de voz.
+- [Cifra todos los mensajes](/whatsapp-mensajes-cifrados-extremo-a-extremo/ "WhatsApp: Entendiendo Su Cifrado Extremo a Extremo"), imágenes, vídeos y notas de voz.
 - Si el gobierno solicita los mensajes de un usuario, WhatsApp no puede darselos, porque no conoce la clave que los descifran.
 
 ## Contras
