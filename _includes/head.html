@@ -81,7 +81,9 @@
 
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 
-    <link rel="amphtml" href="{{ "amp/" | prepend: canonical }}">
+    {% unless page.id %}
+      <link rel="amphtml" href="{{ "amp/" | prepend: canonical }}">
+    {% endunless %}
     <link rel="canonical" href="{{ canonical }}">
 
     <!-- Feeds -->
