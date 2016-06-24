@@ -1,3 +1,19 @@
 <footer>
     <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <span class="love">❤</span> by <a href="http://willianjusten.com.br">Willian Justen</a></p>
 </footer>
+
+<amp-analytics type="googleanalytics" id="analytics-ga">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "{{ site.owner.google.analytics }}"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
