@@ -21,6 +21,8 @@ Por ello he creado varios feeds RSS en base a las categorías más importantes d
 - En __<a href="/feed-geek" target="_blank" title="Feed Geek">/feed-geek</a>__ cosas para geeks.
 - En __<a href="/feed-java" target="_blank" title="Feed Java">/feed-java</a>__ tutoriales y artículos sobre Java.
 - En __<a href="/feed-latex" target="_blank" title="Feed LaTeX">/feed-latex</a>__ artículos y tutoriales sobre LaTeX.
+- En __<a href="/feed-linux" target="_blank" title="Feed Linux">/feed-linux</a>__ artículos y tutoriales sobre Linux.
+- En __<a href="/feed-misc" target="_blank" title="Feed Misc">/feed-misc</a>__ se publican todas las [guías gratuítas](/manuales-gratuitos/).
 
 Creo que con este cambio el blog puede estar más personalizado para cada lector, permitiéndole recibir artículos únicamente de los temas que le interesan.
 
