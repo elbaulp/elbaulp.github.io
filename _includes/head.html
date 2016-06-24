@@ -82,7 +82,7 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 
     {% if page.id %}
-      <link rel="amphtml" href="/ampp{{ page.url }}">
+      <link rel="amphtml" href="{{site.url}}/ampp{{ page.url }}">
     {% else %}
       <link rel="amphtml" href="{{ "amp/" | prepend: canonical }}">
     {% endif %}
