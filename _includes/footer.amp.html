@@ -12,6 +12,15 @@
       "trackPageview": {
         "on": "visible",
         "request": "pageview"
+      },
+      "trackClickOnHeader" : {
+        "on": "click",
+        "selector": ".icon-twitter",
+        "request": "event",
+        "vars": {
+          "eventCategory": "amp-share",
+          "eventAction": "twitter"
+        }
       }
     }
   }
