@@ -5,6 +5,10 @@
 <amp-analytics type="googleanalytics" id="analytics-ga">
   <script type="application/json">
   {
+    "extraUrlParams" : {
+      "dimension5": "AMP",
+      "metric17": "10"
+    },
     "vars": {
       "account": "{{ site.owner.google.analytics }}"
     },
@@ -13,13 +17,58 @@
         "on": "visible",
         "request": "pageview"
       },
-      "trackClickOnHeader" : {
+      "tw" : {
         "on": "click",
         "selector": ".icon-twitter",
         "request": "event",
         "vars": {
           "eventCategory": "amp-share",
           "eventAction": "twitter"
+        }
+      }
+      "fb" : {
+        "on": "click",
+        "selector": ".icon-facebook",
+        "request": "event",
+        "vars": {
+          "eventCategory": "amp-share",
+          "eventAction": "facebook"
+        }
+      }
+      "gp" : {
+        "on": "click",
+        "selector": ".icon-google-plus",
+        "request": "event",
+        "vars": {
+          "eventCategory": "amp-share",
+          "eventAction": "google-plus"
+        }
+      }
+      "feed" : {
+        "on": "click",
+        "selector": ".icon-rss",
+        "request": "event",
+        "vars": {
+          "eventCategory": "amp-share",
+          "eventAction": "feed"
+        }
+      }
+      "newsletter" : {
+        "on": "click",
+        "selector": ".icon-mail",
+        "request": "event",
+        "vars": {
+          "eventCategory": "amp-share",
+          "eventAction": "newsletter"
+        }
+      }
+      "amazon" : {
+        "on": "click",
+        "selector": "#amazon-ad",
+        "request": "event",
+        "vars": {
+          "eventCategory": "amazon",
+          "eventAction": "insidepost"
         }
       }
     }
