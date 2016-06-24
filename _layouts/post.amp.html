@@ -8,34 +8,34 @@ layout: compress
         {% include svg-icons.html %}
         {% include header-post.amp.html %}
         <section class="post">
-          {% include share.html %}
+          {% include share.amp.html %}
             <article role="article" id="post" class="post-content">
               {% assign c = content | split: '<!--ad-->' %}
               {% if content contains '<!--ad-->' %}
                 {{ c | first }}
                 <hr/>
-                  {% include _adtext.html %}
+                  {% include _adtext.amp.html %}
                 <hr/>
                 {{ c | last }}
               {% else %}
                 <hr/>
-                  {% include _adtext.html %}
+                  {% include _adtext.amp.html %}
                 <hr/>
                 {{ content }}
               {% endif %}
             </article>
-            {% include share.html %}
+            {% include share.amp.html %}
             <div class="near-posts">
             {% if page.next.url %}
-              <a onClick="ga('send', 'event', 'next.url');" class="post-item" rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}">« {{ page.next.title | escape }}</a>
+              <a class="post-item" rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}">« {{ page.next.title | escape }}</a>
             {% endif %}
-            <a onClick="ga('send', 'event', 'random');" class="post-item" href="/random">¿Pruebas suerte?</a>
+            <a class="post-item" href="/random">¿Pruebas suerte?</a>
             {% if page.previous.url %}
-              <a onClick="ga('send', 'event', 'previous.url');" class="post-item" rel="prev" href="{{ page.previous.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.previous.title | escape }}">{{ page.previous.title | escape }} »</a>
+              <a class="post-item" rel="prev" href="{{ page.previous.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.previous.title | escape }}">{{ page.previous.title | escape }} »</a>
             {% endif %}
           </div>
-            {% include author.html %}
-            {% include comments.html %}
+            {% include author.amp.html %}
+            <!-- {% include comments.html %} TODO -->
             {% include footer.amp.html %}
         </section>
         {% if page.math == true %}
