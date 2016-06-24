@@ -83,7 +83,7 @@
       {% include css/main.css %}
     </style>
 
-    <link rel="canonical" href="{{ canonical }}">
+    <link rel="canonical" href="https://elbauldelprogramador.com/">
 
     <!-- Feeds -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed" | prepend: site.baseurl | prepend: site.url }}" />
@@ -146,7 +146,7 @@
           "@type": "BlogPosting",
           "articleBody": {{content | escape | jsonify}},
           "wordCount": "{{content | number_of_words}}",
-          "mainEntityOfPage": "{{ canonical }}",
+          "mainEntityOfPage": "https://elbauldelprogramador.com/",
           "headline": "{{ page.title }}",
           {% if page.date %}
           "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% endif %}",
