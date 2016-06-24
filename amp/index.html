@@ -5,7 +5,7 @@ layout: default.amp
 <main class="home" id="post" role="main">
     <div id="grid" class="row flex-grid">
     {% for post in site.posts limit:21 %}
-        <article class="box-item post-{{post.main-class}}">
+        <article class="box-item post-{{post.main-class}} shown">
                 <span class="ribbon">
                     <a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}"><span>{{post.main-class}}</span></a>
                 </span>
