@@ -15,7 +15,7 @@ sitemap: false
   <uri>{{ site.url }}/</uri>
   {% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
 </author>
-{% for post in site.posts limit:10 %}
+{% for post in site.posts %}
 {% if post.author %}
   {% assign author = site.data.authors[post.author] %}
 {% else %}
@@ -36,14 +36,11 @@ sitemap: false
   </author>
   <content type="html">
     <![CDATA[
-    <strong>Invítanos a un café usando nuestro enlace de afiliados de <a href="http://www.amazon.es?tag=bmacoc-21"><strong><em>Amazon (Si vives en España)</em></strong></a> (Sin coste adicional en compras) o a través de <a href="https://www.paypal.me/elbaul"><strong><em>paypal</em></strong></a> O con <strong><em><a href="https://elbauldelprogramador.com/google-lanza-contributor-apoya-a-tus-webs-favoritas-sin-ver-anuncios/">Google Contributor</a></em></strong></strong>
-
-    <img src="{{ site.url }}/assets/img/{{ post.image }}"/>
-
+    <p><img src="{{ site.url }}/assets/img/{{ post.image }}"/></p>
     ]]>
     {{ post.description | xml_escape }}
     <![CDATA[
-
+        <strong>Ayúdanos a seguir escribiendo, compra con nuestro enlace de <a href="http://www.amazon.es?tag=bmacoc-21">Ámazon</a> (Sin coste adicional), dona en <a href="https://www.paypal.me/elbaul">PayPal</a> o con <a href="https://elbauldelprogramador.com/google-lanza-contributor-apoya-a-tus-webs-favoritas-sin-ver-anuncios/">Google Contributor</a></strong>
     <p><a href="{{ site.url }}{{ post.url }}" target="_blank"><strong>Seguir leyendo.</strong></a></p>
     ]]>
     {% include _feed-footer.html %}
