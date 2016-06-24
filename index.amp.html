@@ -1,0 +1,31 @@
+---
+layout: default.amp
+---
+
+<main class="home" id="post" role="main">
+    <div id="grid" class="row flex-grid">
+    {% for post in site.posts limit:21 %}
+        <article class="box-item post-{{post.main-class}}">
+                <span class="ribbon">
+                    <a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}"><span>{{post.main-class}}</span></a>
+                </span>
+                <div class="box-body">
+                    <time datetime="{{ post.date }}" class="date">{{ post.date | date_to_string }}</time>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title">
+                            {{ post.title }}
+                        </h2>
+                    </a>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <p class="description">{% if post.introduction %}{{ post.introduction | truncate: 160 }}{% else %}{{ post.description | truncate: 160 }}{% endif %}</p>
+                    </a>
+                    <div class="tags">
+                        {% for tag in post.tags limit:3 %}
+                            <a href="{{site.baseurl}}/tags/#{{tag | slugify }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+        </article>
+    {% endfor %}
+    </div>
+</main>

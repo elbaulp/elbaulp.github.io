@@ -1,0 +1,16 @@
+---
+<!-- layout: compress -->
+---
+
+<!doctype html>
+<html amp lang="es" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+    {% include head.amp.html %}
+    <body>
+        {% include svg-icons.html %}
+        {% include header-default.html %}
+            <section class="content">
+                {{ content }}
+            </section>
+        {% include footer.html %}
+    </body>
+</html>
