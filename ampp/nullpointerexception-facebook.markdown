@@ -25,13 +25,6 @@ modified: 2016-04-05T08:29:58+02:00
 main-class: "java"
 color: "#D32F2F"
 ---
-
-<figure>
-  <a href="/assets/img/nullpointerexception-facebook-line-numbers.jpg">
-  <img src="/assets/img/nullpointerexception-facebook-line-numbers.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: ScienceAlert</span>
-</figure>
-
 En estos días he notado un incremento notable en las visitas a un artículo que escribí hace tiempo: [Qué es un NullPointerException y cómo solucionarlo](/que-es-un-nullpointerexception-y-como-solucionarlo/ "Qué es un NullPointerException y cómo solucionarlo"), y todas venían de búsquedas en google. No me explicaba el por qué este interés por los `NullPointerException` y su relación con Facebook hasta que leí un artículo en _Science Alert_.
 
 <!--ad-->

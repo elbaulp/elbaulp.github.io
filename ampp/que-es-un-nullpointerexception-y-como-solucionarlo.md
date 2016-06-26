@@ -24,11 +24,6 @@ description: "El siguiente artículo es una traducción de una pregunta en stack
 main-class: "java"
 color: "#D32F2F"
 ---
-
-<figure>
-  <img src="/assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="{{page.title}}" alt="{{ page.title }}" />
-</figure>
-
 Si has llegado aquí porque tienes problemas con **facebook**, tu respuesta está en este artículo: [Qué Esta Causando Un NullPointerException en Facebook E Internet](/nullpointerexception-facebook "Qué Esta Causando Un NullPointerException en Facebook E Internet")
 {: .notice-info }
 
