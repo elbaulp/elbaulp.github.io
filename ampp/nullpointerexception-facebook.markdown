@@ -33,11 +33,6 @@ Resumiendo a grosso modo, resulta que un desarrollador ha tenido un serio confli
 
 Esta decisión de _npm_ cabreó tanto a _Koçulu_ que decidió no formar parte de la comunidad _npm_ y borró todos sus paquetes del repositorio (Nada más que 273 paquetes). Lo que internet no se esperaba, es que una gran parte de aplicaciones web, como Facebook, airbnb y netflix requerían de un sencillo paquete desarrollado por _Koçulu_, de tan solo 11 líneas de código llamado _Line-Numbers_. Al borrar este paquete, todas las aplicaciones que dependían de ella comenzaron a tener errores, de ahí que se esté produciendo este _NullPointerException_.
 
-<figure>
-  <a href="/assets/img/nullpointerexception-facebook.png"><img src="/assets/img/nullpointerexception-facebook.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: arstechnica</span>
-</figure>
-
 _Koçulu_ ya se ha disculpado por la situación, aunque desconocía que borrar su módulo pudiera llevar a tal catástrofe. También vale la pena mencionar que a las pocas horas de producirse el error, la comunidad _open source_ reemplazó el módulo necesario por uno nuevo. Si aún así seguís teniendo errores, deberían desaparecer al cabo de unos días.
 
 ## Cómo solucionarlo
