@@ -2,7 +2,7 @@
 title: 'Nueva Guía: Big Security for Big Data'
 
 layout: post.amp
-permalink: /nueva-guia-big-security-for-big-data/
+
 categories:
   - cursos
   - noticias

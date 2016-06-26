@@ -2,7 +2,7 @@
 title: 'Gource: Visualizar la evolución de un repositorio Git'
 
 layout: post.amp
-permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/
+
 categories:
   - aplicaciones
   - opensource

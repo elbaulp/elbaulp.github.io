@@ -1,7 +1,7 @@
 ---
 title: Repasando el Año.
 layout: post.amp
-permalink: /repasando-el-ano/
+
 categories:
   - noticias
 main-class: "articulos"

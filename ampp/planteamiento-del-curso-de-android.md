@@ -2,7 +2,7 @@
 title: Planteamiento del Curso de Android
 
 layout: post.amp
-permalink: /planteamiento-del-curso-de-android/
+
 categories:
   - android
   - opensource

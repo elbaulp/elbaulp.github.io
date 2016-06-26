@@ -2,7 +2,7 @@
 title: Resolver laberintos en C++
 
 layout: post.amp
-permalink: /resolver-laberintos-en-c/
+
 categories:
   - C
 tags:

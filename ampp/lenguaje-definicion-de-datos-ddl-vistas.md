@@ -1,7 +1,7 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
 layout: post.amp
-permalink: /lenguaje-definicion-de-datos-ddl-vistas/
+
 categories:
   - BaseDeDatos
 tags:

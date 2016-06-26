@@ -2,7 +2,7 @@
 title: 'Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)'
 
 layout: post.amp
-permalink: /como-configurar-un-servidor-dns2/
+
 categories:
   - Administracion de Servidores
   - Articulos

@@ -2,7 +2,7 @@
 title: 'Nueva guía: 8 Steps to Building Mobile Apps Fast in the Cloud'
 
 layout: post.amp
-permalink: /nueva-guia-8-steps-to-building-mobile-apps-fast-in-the-cloud/
+
 categories:
   - cursos
   - noticias

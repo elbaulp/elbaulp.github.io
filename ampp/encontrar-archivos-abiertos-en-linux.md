@@ -2,7 +2,7 @@
 title: Encontrar archivos abiertos en Linux
 
 layout: post.amp
-permalink: /encontrar-archivos-abiertos-en-linux/
+
 categories:
   - linux
   - opensource

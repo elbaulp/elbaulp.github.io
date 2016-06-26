@@ -1,7 +1,7 @@
 ---
 title: Firefox 4.0 For Linux Finally Gets A Unified Menu
 layout: post.amp
-permalink: /firefox-40-for-linux-finally-gets/
+
 categories:
   - Sin Categoria
 main-class: "articulos"

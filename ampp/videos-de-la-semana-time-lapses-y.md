@@ -2,7 +2,7 @@
 title: 'Vídeos de la semana &#8211; Time-Lapses y cortos de animación'
 
 layout: post.amp
-permalink: /videos-de-la-semana-time-lapses-y/
+
 categories:
   - video de la semana
 main-class: "articulos"

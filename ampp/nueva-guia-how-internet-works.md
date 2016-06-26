@@ -2,7 +2,7 @@
 title: 'Nueva guía: How the internet works'
 
 layout: post.amp
-permalink: /nueva-guia-how-internet-works/
+
 categories:
   - cursos
   - internet

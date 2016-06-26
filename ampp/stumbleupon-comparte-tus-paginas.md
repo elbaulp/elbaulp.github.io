@@ -1,7 +1,7 @@
 ---
 title: 'StumbleUpon &#8211; Comparte tus páginas favoritas'
 layout: post.amp
-permalink: /stumbleupon-comparte-tus-paginas/
+
 categories:
   - internet
   - noticias

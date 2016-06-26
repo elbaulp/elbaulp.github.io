@@ -2,7 +2,7 @@
 title: 'Nueva guía: The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition'
 
 layout: post.amp
-permalink: /nueva-guia-php-anthology-101-essential/
+
 categories:
   - cursos
   - internet

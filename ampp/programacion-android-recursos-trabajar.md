@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios'
 
 layout: post.amp
-permalink: /programacion-android-recursos-trabajar/
+
 categories:
   - android
   - opensource

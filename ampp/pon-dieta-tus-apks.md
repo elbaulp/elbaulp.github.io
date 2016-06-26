@@ -1,7 +1,7 @@
 ---
 title: Pon a dieta a tus APKs
 layout: post.amp
-permalink: /pon-dieta-tus-apks/
+
 categories:
   - android
   - Articulos

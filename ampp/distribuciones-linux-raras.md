@@ -1,7 +1,7 @@
 ---
 title: Distribuciones Linux raras
 layout: post.amp
-permalink: /distribuciones-linux-raras/
+
 categories:
   - curiosidades
   - linux

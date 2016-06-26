@@ -2,7 +2,7 @@
 title: Vídeos de la semana (VII)
 
 layout: post.amp
-permalink: /videos-de-la-semana-vii/
+
 categories:
   - video de la semana
 main-class: "geek"

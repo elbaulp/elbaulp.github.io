@@ -2,7 +2,7 @@
 title: 'Nuevo Proyecto Android: Fav Sites'
 
 layout: post.amp
-permalink: /estoy-trabajando-en-una-aplicacion/
+
 categories:
   - android
   - opensource

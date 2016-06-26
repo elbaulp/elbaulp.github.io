@@ -2,7 +2,7 @@
 title: Cómo depurar una aplicación en Django
 
 layout: post.amp
-permalink: /como-depurar-una-aplicacion-en-django/
+
 categories:
   - django
 tags:

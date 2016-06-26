@@ -2,7 +2,7 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Estilos y Temas'
 
 layout: post.amp
-permalink: /programacion-android-interfaz-grafica_18/
+
 categories:
   - android
   - opensource

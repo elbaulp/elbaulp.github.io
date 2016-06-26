@@ -1,7 +1,7 @@
 ---
 title: Crear una tarea en IFTTT
 layout: post.amp
-permalink: /crear-una-tarea-en-ifttt/
+
 categories:
   - aplicaciones
   - internet

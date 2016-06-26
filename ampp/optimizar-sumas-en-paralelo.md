@@ -2,7 +2,7 @@
 title: Optimizar sumas en paralelo
 
 layout: post.amp
-permalink: /optimizar-sumas-en-paralelo/
+
 categories:
   - Algoritmos
   - Articulos

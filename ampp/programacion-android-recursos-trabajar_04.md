@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos Assets'
 
 layout: post.amp
-permalink: /programacion-android-recursos-trabajar_04/
+
 categories:
   - android
   - opensource

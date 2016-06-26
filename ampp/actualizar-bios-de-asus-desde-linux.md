@@ -2,7 +2,7 @@
 title: Actualizar BIOS de ASUS desde Linux
 
 layout: post.amp
-permalink: /actualizar-bios-de-asus-desde-linux/
+
 categories:
   - seguridad
   - SO

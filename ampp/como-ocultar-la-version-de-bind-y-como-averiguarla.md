@@ -2,7 +2,7 @@
 title: Cómo ocultar la versión de BIND (Y cómo averiguarla)
 
 layout: post.amp
-permalink: /como-ocultar-la-version-de-bind-y-como-averiguarla/
+
 categories:
   - Administracion de Servidores
   - How To

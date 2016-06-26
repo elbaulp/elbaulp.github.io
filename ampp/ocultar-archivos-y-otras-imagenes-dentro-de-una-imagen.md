@@ -2,7 +2,7 @@
 title: Ocultar archivos dentro de una imagen
 
 layout: post.amp
-permalink: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
+
 categories:
   - C
 tags:

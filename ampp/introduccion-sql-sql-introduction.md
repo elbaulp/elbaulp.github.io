@@ -1,7 +1,7 @@
 ---
 title: Introducción SQL
 layout: post.amp
-permalink: /introduccion-sql-sql-introduction/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

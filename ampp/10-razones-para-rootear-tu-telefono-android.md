@@ -2,7 +2,7 @@
 title: 10 razones para rootear tu teléfono Android
 
 layout: post.amp
-permalink: /10-razones-para-rootear-tu-telefono-android/
+
 categories:
   - Articulos
 tags:

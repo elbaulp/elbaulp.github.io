@@ -2,7 +2,7 @@
 title: Mostrar todos los post de una categoría en WordPress
 
 layout: post.amp
-permalink: /mostrar-todos-los-post-de-una-categoria-wordpress/
+
 categories:
   - php
 tags:

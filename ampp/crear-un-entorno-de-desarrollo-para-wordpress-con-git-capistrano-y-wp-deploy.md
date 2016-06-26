@@ -2,7 +2,7 @@
 title: Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy
 
 layout: post.amp
-permalink: /crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/
+
 categories:
   - How To
   - opensource

@@ -1,7 +1,7 @@
 ---
 title: Traducción del Artículo 3 (¿Qué es un Píxel?) disponible
 layout: post.amp
-permalink: /traduccion-del-articulo-3-que-es-un/
+
 categories:
   - juegos
 main-class: "dev"

@@ -3,7 +3,7 @@ title: Crear DialogFragment compatibles con versiones inferiores a Android 3.0
 
 description: Cómo crear dialogos de selección de fecha y hora en versiones inferiores a Android 3.0 con la librería de soporte.
 layout: post.amp
-permalink: /crear-dialogfragment-compatibles-con-versiones-inferiores-a-android-3-0/
+
 categories:
   - android
 tags:

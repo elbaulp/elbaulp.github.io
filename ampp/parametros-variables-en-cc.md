@@ -1,7 +1,7 @@
 ---
 title: Pasar parámetros variables en C/C++
 layout: post.amp
-permalink: /parametros-variables-en-cc/
+
 categories:
   - C
 tags:

@@ -2,7 +2,7 @@
 title: 'Nueva Guía: VoIP Vulnerabilities'
 
 layout: post.amp
-permalink: /nueva-guia-voip-vulnerabilities/
+
 categories:
   - cursos
   - noticias

@@ -2,7 +2,7 @@
 title: Chuleta de Markdown para wordpress
 
 layout: post.amp
-permalink: /chuleta-markdown-para-wordpress/
+
 categories:
   - How To
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Cursores'
 layout: post.amp
-permalink: /plsql-cursores/
+
 categories:
   - BaseDeDatos
 tags:

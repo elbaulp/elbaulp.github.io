@@ -2,7 +2,7 @@
 title: Cómo usar adecuadamente el Log de Android en tus aplicaciones
 
 layout: post.amp
-permalink: /como-usar-adecuadamente-el-log-de-android-en-tus-aplicaciones/
+
 categories:
   - android
 tags:

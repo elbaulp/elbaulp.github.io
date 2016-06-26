@@ -2,7 +2,7 @@
 title: 'Cómo resolver el error &#8216;wxMaxima encontró un error durante la carga&#8217;'
 
 layout: post.amp
-permalink: /wxmaxima-encontro-un-error-durante-la-carga/
+
 categories:
   - How To
   - linux

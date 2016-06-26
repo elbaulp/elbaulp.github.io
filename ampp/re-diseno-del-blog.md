@@ -2,7 +2,7 @@
 title: ¿Re-Diseño del blog?
 
 layout: post.amp
-permalink: /re-diseno-del-blog/
+
 categories:
   - noticias
 main-class: "articulos"

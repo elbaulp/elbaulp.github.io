@@ -1,7 +1,7 @@
 ---
 title: World of Warcraft sobre Android
 layout: post.amp
-permalink: /world-of-warcraft-sobre-android/
+
 categories:
   - noticias
 main-class: "articulos"

@@ -2,7 +2,7 @@
 title: 'Nueva guía: Ubuntu: An Absolute Beginner’s Guide'
 
 layout: post.amp
-permalink: /nueva-guia-ubuntu-absolute-beginners/
+
 categories:
   - cursos
   - linux

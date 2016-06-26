@@ -2,7 +2,7 @@
 title: Botón +1 de google ya disponible en España
 
 layout: post.amp
-permalink: /boton-1-de-google-ya-disponible-en/
+
 categories:
   - curiosidades
   - internet

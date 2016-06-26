@@ -2,7 +2,7 @@
 title: Nuevos Cursos disponibles en Udacity, la universidad online gratuita
 
 layout: post.amp
-permalink: /nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/
+
 if_slider_image:
   -
   -

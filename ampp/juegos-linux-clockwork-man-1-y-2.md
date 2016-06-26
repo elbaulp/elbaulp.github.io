@@ -1,7 +1,7 @@
 ---
 title: Juegos Linux, The Clockwork Man 1 y 2
 layout: post.amp
-permalink: /juegos-linux-clockwork-man-1-y-2/
+
 categories:
   - juegos
 main-class: "articulos"

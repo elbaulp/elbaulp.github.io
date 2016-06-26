@@ -2,7 +2,7 @@
 title: 'Programación Android: Implementando un Content Provider (Parte 4)'
 
 layout: post.amp
-permalink: /programacion-android-implementando-un_29/
+
 categories:
   - android
   - opensource

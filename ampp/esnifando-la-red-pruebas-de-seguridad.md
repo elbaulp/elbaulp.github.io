@@ -2,7 +2,7 @@
 title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in the middle)'
 
 layout: post.amp
-permalink: /esnifando-la-red-pruebas-de-seguridad/
+
 categories:
   - aplicaciones
   - internet

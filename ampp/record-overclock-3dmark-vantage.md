@@ -1,7 +1,7 @@
 ---
 title: Récord overclock 3DMark Vantage
 layout: post.amp
-permalink: /record-overclock-3dmark-vantage/
+
 categories:
   - curiosidades
   - noticias

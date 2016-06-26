@@ -1,7 +1,7 @@
 ---
 title: 'Bash syntax highlighted script [Improved]'
 layout: post.amp
-permalink: /bash-syntax-highlighted-script-improved/
+
 categories:
   - linux
   - script

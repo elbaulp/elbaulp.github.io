@@ -2,7 +2,7 @@
 title: 'Lo último en criptografía: Fully Homomorphic Encryption'
 
 layout: post.amp
-permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
+
 categories:
   - Algoritmos
   - Articulos

@@ -2,7 +2,7 @@
 title: Python4Kids. Aprende a programar en python fácilmente
 
 layout: post.amp
-permalink: /python4kids-aprende-programar-en-python/
+
 categories:
   - cursos
   - python

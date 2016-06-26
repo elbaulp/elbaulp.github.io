@@ -2,7 +2,7 @@
 title: 'Cosas que me gustan y ódio de tener un smartphone [HUMOR]'
 
 layout: post.amp
-permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
+
 categories:
   - curiosidades
 main-class: "geek"

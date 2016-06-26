@@ -1,7 +1,7 @@
 ---
 title: Qué es un NullPointerException y cómo solucionarlo
 layout: post.amp
-permalink: /que-es-un-nullpointerexception-y-como-solucionarlo/
+
 categories:
   - Java
 tags:

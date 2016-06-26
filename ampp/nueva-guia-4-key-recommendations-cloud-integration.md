@@ -2,7 +2,7 @@
 title: 'Nueva guía: 4 Key Recommendations for Cloud Integration'
 
 layout: post.amp
-permalink: /nueva-guia-4-key-recommendations-cloud-integration/
+
 categories:
   - cursos
   - noticias

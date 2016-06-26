@@ -2,7 +2,7 @@
 title: 'Programación Android: Hola Mundo'
 
 layout: post.amp
-permalink: /programacion-android-hola-mundo/
+
 categories:
   - android
   - opensource

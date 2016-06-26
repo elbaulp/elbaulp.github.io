@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos &#8211; Punteros a objetos'
 layout: post.amp
-permalink: /clases-y-objetos-punteros-objetos/
+
 categories:
   - C
 description: "Los operadores new y delete ofrecen la posibilidad de reservar y liberar de forma dinámica la porción de memoria que ocupa un objeto, de un modo similar a la de las funciones malloc y free."

@@ -1,7 +1,7 @@
 ---
 title: El riesgo de las URLs cortas
 layout: post.amp
-permalink: /el-riesgo-de-las-urls-cortas-risk-of/
+
 categories:
   - noticias
 main-class: "articulos"

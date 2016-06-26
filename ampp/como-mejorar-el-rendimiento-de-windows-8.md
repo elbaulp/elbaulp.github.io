@@ -2,7 +2,7 @@
 title: Cómo mejorar el rendimiento de Windows 8
 
 layout: post.amp
-permalink: /como-mejorar-el-rendimiento-de-windows-8/
+
 categories:
   - How To
 tags:

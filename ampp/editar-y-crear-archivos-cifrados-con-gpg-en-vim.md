@@ -2,7 +2,7 @@
 title: Editar y crear archivos cifrados con GPG en Vim
 
 layout: post.amp
-permalink: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/
+
 categories:
   - linux
   - seguridad

@@ -2,7 +2,7 @@
 title: '[Vídeo tutoriales] Ataque Man in the middle'
 
 layout: post.amp
-permalink: /video-tutoriales-ataque-man-in-middle/
+
 categories:
   - aplicaciones
   - internet

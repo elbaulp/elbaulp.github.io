@@ -1,7 +1,7 @@
 ---
 title: Crear miniaturas de imágenes
 layout: post.amp
-permalink: /crear-imagenes-en-miniaturas/
+
 categories:
   - script
 main-class: "dev"

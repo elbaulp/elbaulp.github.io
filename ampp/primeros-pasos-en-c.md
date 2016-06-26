@@ -1,7 +1,7 @@
 ---
 title: Primeros pasos en C++
 layout: post.amp
-permalink: /primeros-pasos-en-c/
+
 categories:
   - C
 main-class: "dev"

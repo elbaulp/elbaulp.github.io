@@ -2,7 +2,7 @@
 title: Cómo evitar que se aplique ingeniería inversa a un ejecutable
 
 layout: post.amp
-permalink: /como-evitar-que-se-aplique-ingenieria-inversa-a-un-ejecutable/
+
 categories:
   - C
   - How To

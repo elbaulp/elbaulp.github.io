@@ -2,7 +2,7 @@
 title: Viñetas Geek de Domingo (VI)
 
 layout: post.amp
-permalink: /vinetas-geek-de-domingo-vi/
+
 categories:
   - Humor
   - Geek

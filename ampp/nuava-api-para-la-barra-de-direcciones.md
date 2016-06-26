@@ -1,7 +1,7 @@
 ---
 title: Nueva API para la barra de direcciones de Chrome
 layout: post.amp
-permalink: /nuava-api-para-la-barra-de-direcciones/
+
 categories:
   - internet
   - noticias

@@ -2,7 +2,7 @@
 title: 'Dig &#8211; Chuleta básica de comandos'
 
 layout: post.amp
-permalink: /dig-chuleta-basica-de-comandos/
+
 categories:
   - Administracion de Servidores
   - aplicaciones

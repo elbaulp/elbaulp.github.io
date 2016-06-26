@@ -2,7 +2,7 @@
 title: 'Nueva Guía: Security for a Faster World'
 
 layout: post.amp
-permalink: /nueva-guia-security-for-a-faster-world/
+
 categories:
   - cursos
   - noticias

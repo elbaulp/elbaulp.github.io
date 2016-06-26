@@ -1,7 +1,7 @@
 ---
 title: Ubuntu funcionando en el Samsung Galaxy Tab
 layout: post.amp
-permalink: /ubuntu-funcionando-en-el-samsung-galaxy/
+
 categories:
   - noticias
 tags:

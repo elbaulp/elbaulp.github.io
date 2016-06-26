@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Plurales'
 
 layout: post.amp
-permalink: /programacion-android-recursos-plurales/
+
 categories:
   - android
   - opensource

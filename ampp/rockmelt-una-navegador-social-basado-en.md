@@ -1,7 +1,7 @@
 ---
 title: Rockmelt, una navegador social basado en Chromium
 layout: post.amp
-permalink: /rockmelt-una-navegador-social-basado-en/
+
 categories:
   - noticias
 main-class: "articulos"

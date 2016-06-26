@@ -1,7 +1,7 @@
 ---
 title: Cómo empezar a programar
 layout: post.amp
-permalink: /como-empezar-programar-how-start/
+
 categories:
   - How To
 main-class: "articulos"

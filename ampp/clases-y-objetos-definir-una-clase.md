@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos &#8211; Definir una Clase'
 layout: post.amp
-permalink: /clases-y-objetos-definir-una-clase/
+
 categories:
   - C
 main-class: "dev"

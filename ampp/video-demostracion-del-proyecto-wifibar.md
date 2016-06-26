@@ -2,7 +2,7 @@
 title: '[Vídeo] Demostración del proyecto WifiBar funcionando'
 
 layout: post.amp
-permalink: /video-demostracion-del-proyecto-wifibar/
+
 categories:
   - android
   - aplicaciones

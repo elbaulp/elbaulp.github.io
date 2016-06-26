@@ -2,7 +2,7 @@
 title: 'Programación Android: Cómo se resuelven los Intents'
 
 layout: post.amp
-permalink: /programacion-android-como-se-resuelven/
+
 categories:
   - android
   - How To

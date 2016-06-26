@@ -1,7 +1,7 @@
 ---
 title: Hosting gratuito sin publicidad con 000webhost.com
 layout: post.amp
-permalink: /hosting-gratuito-sin-publicidad-con/
+
 categories:
   - curiosidades
   - internet

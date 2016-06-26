@@ -1,7 +1,7 @@
 ---
 title: 'Chistes de informaticos &#8211; www.desmotivaciones.es'
 layout: post.amp
-permalink: /chistes-de-informaticos/
+
 categories:
   - Humor
 description: "Recopilación de chistes informáticos"

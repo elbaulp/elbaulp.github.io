@@ -1,7 +1,7 @@
 ---
 title: Python para principiantes
 layout: post.amp
-permalink: /python-para-principiantes/
+
 categories:
   - python
 main-class: "dev"

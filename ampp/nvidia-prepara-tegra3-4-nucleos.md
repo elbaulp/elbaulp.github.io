@@ -1,7 +1,7 @@
 ---
 title: NVIDIA prepara Tegra3, 4 núcleos
 layout: post.amp
-permalink: /nvidia-prepara-tegra3-4-nucleos/
+
 categories:
   - noticias
 main-class: "articulos"

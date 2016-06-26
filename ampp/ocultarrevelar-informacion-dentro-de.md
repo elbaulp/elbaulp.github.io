@@ -2,7 +2,7 @@
 title: Ocultar/Revelar información dentro de imágenes con C++
 
 layout: post.amp
-permalink: /ocultarrevelar-informacion-dentro-de/
+
 categories:
   - aplicaciones
   - C

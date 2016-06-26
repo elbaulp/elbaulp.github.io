@@ -2,7 +2,7 @@
 title: 6 formas usadas por los cibercriminales para robar o vulnerar credenciales de login
 
 layout: post.amp
-permalink: /6-formas-usadas-por-los-cibercriminales-para-robar-o-vulnerar-credenciales-de-login/
+
 categories:
   - Articulos
   - seguridad

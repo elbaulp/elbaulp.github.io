@@ -2,7 +2,7 @@
 title: 'Nueva guía: PHP & MySQL: Novice to Ninja, 5th Edition&#8211;Free 57 Page Preview'
 
 layout: post.amp
-permalink: /nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/
+
 if_slider_image:
   -
   -

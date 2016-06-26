@@ -1,7 +1,7 @@
 ---
 title: 'Bodhi: Ubuntu+Enlightenment, perfecto para minimalistas'
 layout: post.amp
-permalink: /bodhi-ubuntuenlightenment-perfecto-para/
+
 categories:
   - noticias
 main-class: "articulos"

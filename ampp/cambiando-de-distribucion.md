@@ -1,7 +1,7 @@
 ---
 title: Cambiando de distribución
 layout: post.amp
-permalink: /cambiando-de-distribucion/
+
 categories:
   - linux
 main-class: "linux"

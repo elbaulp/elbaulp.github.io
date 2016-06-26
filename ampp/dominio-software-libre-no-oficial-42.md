@@ -1,7 +1,7 @@
 ---
 title: 'Dominio software libre -no oficial- “.42″ disponible'
 layout: post.amp
-permalink: /dominio-software-libre-no-oficial-42/
+
 categories:
   - noticias
   - opensource

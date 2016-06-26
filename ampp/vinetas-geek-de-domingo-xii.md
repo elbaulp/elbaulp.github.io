@@ -2,7 +2,7 @@
 title: Viñetas Geek de Domingo (XII)
 
 layout: post.amp
-permalink: /vinetas-geek-de-domingo-xii/
+
 categories:
   - Geek
 main-class: "geek"

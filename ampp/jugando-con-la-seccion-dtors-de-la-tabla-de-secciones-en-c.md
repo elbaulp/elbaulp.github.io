@@ -2,7 +2,7 @@
 title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
 
 layout: post.amp
-permalink: /jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/
+
 categories:
   - C
 tags:

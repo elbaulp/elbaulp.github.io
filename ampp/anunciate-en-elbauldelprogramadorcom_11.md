@@ -2,7 +2,7 @@
 title: Anúnciate en elbauldelprogramador.org
 
 layout: post.amp
-permalink: /anunciate-en-elbauldelprogramadorcom_11/
+
 categories:
   - Sin Categoria
 main-class: "articulos"

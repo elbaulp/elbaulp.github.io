@@ -1,7 +1,7 @@
 ---
 title: Curso c++ completo.
 layout: post.amp
-permalink: /curso-c-completo/
+
 categories:
   - C
 main-class: "dev"

@@ -1,7 +1,7 @@
 ---
 title: Estadísticas del blog en 2011
 layout: post.amp
-permalink: /estadisticas-del-blog-en-2011/
+
 categories:
   - noticias
 main-class: "articulos"

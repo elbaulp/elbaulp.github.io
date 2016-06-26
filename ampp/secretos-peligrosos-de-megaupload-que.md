@@ -2,7 +2,7 @@
 title: MegaUpload Dangerous Secrets affect YOU, Mike Mozart JeepersMedia ACTA _ PIPA _ SOPA
 
 layout: post.amp
-permalink: /secretos-peligrosos-de-megaupload-que/
+
 categories:
   - noticias
 main-class: "articulos"

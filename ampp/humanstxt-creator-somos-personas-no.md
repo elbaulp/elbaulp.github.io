@@ -2,7 +2,7 @@
 title: Humanstxt Creator. Somos personas, no máquinas
 
 layout: post.amp
-permalink: /humanstxt-creator-somos-personas-no/
+
 categories:
   - internet
   - noticias

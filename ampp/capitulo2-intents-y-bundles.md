@@ -2,7 +2,7 @@
 title: 'Programación Android: Trabajar con actividades y pasar parámetros entre ellas'
 
 layout: post.amp
-permalink: /programacion-android-trabajar-con/
+
 categories:
   - android
   - opensource

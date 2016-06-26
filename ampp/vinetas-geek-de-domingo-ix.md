@@ -2,7 +2,7 @@
 title: Viñetas Geek de Domingo (IX)
 
 layout: post.amp
-permalink: /vinetas-geek-de-domingo-ix/
+
 categories:
   - Geek
 tags:

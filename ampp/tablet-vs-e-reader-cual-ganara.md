@@ -2,7 +2,7 @@
 title: 'Tablet Vs e-Reader: ¿cuál ganará?'
 
 layout: post.amp
-permalink: /tablet-vs-e-reader-cual-ganara/
+
 categories:
   - Articulos
 tags:

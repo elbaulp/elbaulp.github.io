@@ -2,7 +2,7 @@
 title: ¿Por qué es Linux más rápido que Windows?
 
 layout: post.amp
-permalink: /por-que-es-linux-mas-rapido-que-windows/
+
 categories:
   - Articulos
 tags:

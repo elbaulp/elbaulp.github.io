@@ -2,7 +2,7 @@
 title: ¿Cómo detectar ficheros con bloqueo/cerrojo en Linux?
 
 layout: post.amp
-permalink: /como-detectar-ficheros-con-bloqueocerrojo-en-linux/
+
 categories:
   - linux
 tags:

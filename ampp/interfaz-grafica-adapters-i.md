@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Interfaz gráfica &#8211; Adapters I'
 layout: post.amp
-permalink: /programacion-android-interfaz-grafica_28/
+
 categories:
   - android
   - opensource

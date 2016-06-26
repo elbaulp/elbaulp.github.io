@@ -2,7 +2,7 @@
 title: 'Fundamentos programación Android: Limpieza de Procesos'
 
 layout: post.amp
-permalink: /fundamentos-programacion-android_18/
+
 categories:
   - android
   - opensource

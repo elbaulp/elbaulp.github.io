@@ -2,7 +2,7 @@
 title: Algoritmos de caminos cortos.
 description: "Para hablar de este tipo de algoritmos, tengo que hacer una breve introducción a lo que es un grafo y cómo se representa en un ordenador."
 layout: post.amp
-permalink: /algoritmos-de-caminos-cortos/
+
 categories:
   - Algoritmos
   - C

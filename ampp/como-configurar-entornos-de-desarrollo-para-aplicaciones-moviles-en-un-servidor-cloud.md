@@ -2,7 +2,7 @@
 title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
 
 layout: post.amp
-permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
+
 categories:
   - JavaScript
 tags:

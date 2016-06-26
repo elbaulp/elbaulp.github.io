@@ -2,7 +2,7 @@
 title: Desafío de ingeniería inversa en C
 
 layout: post.amp
-permalink: /desafio-de-ingenieria-inversa-en-c/
+
 categories:
   - C
   - Hacking

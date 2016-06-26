@@ -2,7 +2,7 @@
 title: Por qué GNU/Linux no es solo para Geeks
 
 layout: post.amp
-permalink: /por-que-gnulinux-no-es-solo-para-geeks/
+
 categories:
   - linux
   - opensource

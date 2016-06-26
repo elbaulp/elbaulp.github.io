@@ -1,7 +1,7 @@
 ---
 title: Grub Customizer 2.0
 layout: post.amp
-permalink: /grub-customizer-20/
+
 categories:
   - Sin Categoria
 main-class: "linux"

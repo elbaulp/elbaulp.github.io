@@ -2,7 +2,7 @@
 title: '[Offtopic] Impresionante puesta de sol en Islandia'
 
 layout: post.amp
-permalink: /offtopic-impresionante-puesta-de-sol-en/
+
 categories:
   - offtopic
   - video de la semana

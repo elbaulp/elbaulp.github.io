@@ -2,7 +2,7 @@
 title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
 
 layout: post.amp
-permalink: /configurar-dos-pantallas-en-openbox/
+
 categories:
   - aplicaciones
   - curiosidades

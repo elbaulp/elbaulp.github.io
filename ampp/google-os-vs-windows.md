@@ -1,7 +1,7 @@
 ---
 title: Google Os Vs Windows
 layout: post.amp
-permalink: /google-os-vs-windows/
+
 categories:
   - noticias
 main-class: "articulos"

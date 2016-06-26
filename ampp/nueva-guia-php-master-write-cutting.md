@@ -2,7 +2,7 @@
 title: 'Nueva guía: PHP Master: Write Cutting-edge Code&#8211;Free 135 Page Preview'
 
 layout: post.amp
-permalink: /nueva-guia-php-master-write-cutting/
+
 categories:
   - cursos
 description: "PHP Master: Write Cutting-edge Code*** is tailor-made for PHP developers who are serious about refining their server-side applications. This book will help you to employ the most effective object oriented programming approaches, wrap your projects in layers of security, and ensure your code is doing its job perfectly"

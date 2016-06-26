@@ -1,7 +1,7 @@
 ---
 title: SQRL y la idea de eliminar el uso de usuario y contraseña en internet
 layout: post.amp
-permalink: /sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/
+
 categories:
   - Security Now
 tags:

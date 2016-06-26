@@ -1,7 +1,7 @@
 ---
 title: 'La &#8220;evolución&#8221; de la información'
 layout: post.amp
-permalink: /la-evolucion-de-la-informacion/
+
 categories:
   - curiosidades
 main-class: "articulos"

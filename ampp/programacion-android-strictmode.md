@@ -2,7 +2,7 @@
 title: 'Programación Android: StrictMode'
 
 layout: post.amp
-permalink: /programacion-android-strictmode/
+
 categories:
   - android
   - opensource

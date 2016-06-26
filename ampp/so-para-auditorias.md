@@ -1,7 +1,7 @@
 ---
 title: SO para auditorias
 layout: post.amp
-permalink: /so-para-auditorias/
+
 categories:
   - linux
 main-class: "linux"

@@ -2,7 +2,7 @@
 title: Buscar archivos con locate mediante expresiones regulares
 
 layout: post.amp
-permalink: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/
+
 categories:
   - script
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 3 &#8211; Librerías de SDL'
 layout: post.amp
-permalink: /programacion-para-juegos-leccion-3/
+
 categories:
   - juegos
 main-class: "dev"

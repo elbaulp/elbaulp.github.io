@@ -2,7 +2,7 @@
 title: Se busca colaborador
 
 layout: post.amp
-permalink: /se-busca-colaborador/
+
 categories:
   - Sin Categoria
 main-class: "articulos"

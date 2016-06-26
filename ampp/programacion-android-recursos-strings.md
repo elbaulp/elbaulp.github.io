@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Strings'
 
 layout: post.amp
-permalink: /programacion-android-recursos-strings/
+
 categories:
   - android
   - opensource

@@ -2,7 +2,7 @@
 title: Cambiar fondo en la pantalla de login en Debian y Ubuntu
 
 layout: post.amp
-permalink: /cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/
+
 categories:
   - linux
 tags:

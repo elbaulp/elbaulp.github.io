@@ -2,7 +2,7 @@
 author: marta
 title: 'Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras'
 layout: post.amp
-permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/
+
 categories:
   - LaTeX
 tags:

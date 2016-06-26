@@ -2,7 +2,7 @@
 title: 'Programación ABAP: Hola Mundo en Reports'
 
 layout: post.amp
-permalink: /programacion-abap-hola-mundo-en-reports/
+
 categories:
   - ABAP
 tags:

@@ -2,7 +2,7 @@
 title: Logrando el anonimato con Tor (Parte 1)
 
 layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-1/
+
 categories:
   - aplicaciones
   - Articulos

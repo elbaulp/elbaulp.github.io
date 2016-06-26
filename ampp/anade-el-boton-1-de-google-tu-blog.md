@@ -2,7 +2,7 @@
 title: Añade el botón +1 de google a tu blog
 
 layout: post.amp
-permalink: /anade-el-boton-1-de-google-tu-blog/
+
 categories:
   - internet
 main-class: "articulos"

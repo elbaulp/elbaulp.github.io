@@ -2,7 +2,7 @@
 title: 'Nueva guía: The Mac Manual'
 
 layout: post.amp
-permalink: /nueva-guia-mac-manual/
+
 categories:
   - cursos
 main-class: "misc"

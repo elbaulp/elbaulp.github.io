@@ -2,7 +2,7 @@
 title: 'Nueva guía: The ASP.NET 2.0 Anthology: 101 Essential Tips, Tricks & Hacks'
 
 layout: post.amp
-permalink: /nueva-guia-aspnet-20-anthology-101/
+
 categories:
   - cursos
   - internet

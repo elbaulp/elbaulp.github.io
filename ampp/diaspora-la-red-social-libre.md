@@ -1,7 +1,7 @@
 ---
 title: 'Diaspora*, La red social libre'
 layout: post.amp
-permalink: /diaspora-la-red-social-libre/
+
 categories:
   - noticias
 main-class: "articulos"

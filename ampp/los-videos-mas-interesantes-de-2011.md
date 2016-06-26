@@ -1,7 +1,7 @@
 ---
 title: Los vídeos más interesantes de 2011
 layout: post.amp
-permalink: /los-videos-mas-interesantes-de-2011/
+
 categories:
   - curiosidades
   - internet

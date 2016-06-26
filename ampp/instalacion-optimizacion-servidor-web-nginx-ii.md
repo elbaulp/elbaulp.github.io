@@ -2,7 +2,7 @@
 title: Instalación y optimización de un servidor web con Nginx (II)
 
 layout: post.amp
-permalink: /instalacion-optimizacion-servidor-web-nginx-ii/
+
 categories:
   - Administracion de Servidores
   - linux

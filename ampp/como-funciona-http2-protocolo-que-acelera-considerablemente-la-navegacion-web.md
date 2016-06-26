@@ -1,7 +1,7 @@
 ---
 title: Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación Web
 layout: post.amp
-permalink: /como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/
+
 categories:
   - Security Now
 tags:

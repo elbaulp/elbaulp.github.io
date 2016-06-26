@@ -2,7 +2,7 @@
 title: Mejoras en la aplicación Fav Sites
 
 layout: post.amp
-permalink: /mejoras-en-la-aplicacion-fav-sites/
+
 categories:
   - android
   - opensource

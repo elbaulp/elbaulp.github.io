@@ -2,7 +2,7 @@
 title: 'Nueva Guía: The Essentials of Information Security Kit'
 
 layout: post.amp
-permalink: /nueva-guia-the-essentials-of-information-security-kit/
+
 categories:
   - cursos
   - noticias

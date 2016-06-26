@@ -1,7 +1,7 @@
 ---
 title: Colorear la barra de estado con Simple StatusColor en DWM 6.1
 layout: post.amp
-permalink: /statuscolor-dwm-6-1/
+
 categories:
   - C
 tags:

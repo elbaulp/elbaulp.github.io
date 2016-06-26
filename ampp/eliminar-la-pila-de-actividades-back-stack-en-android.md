@@ -2,7 +2,7 @@
 title: Eliminar la pila de actividades (Back Stack) en Android
 
 layout: post.amp
-permalink: /eliminar-la-pila-de-actividades-back-stack-en-android/
+
 categories:
   - android
 tags:

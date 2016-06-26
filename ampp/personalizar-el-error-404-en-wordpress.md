@@ -2,7 +2,7 @@
 title: Personalizar el Error 404 en wordpress
 
 layout: post.amp
-permalink: /personalizar-el-error-404-en-wordpress/
+
 categories:
   - php
 tags:

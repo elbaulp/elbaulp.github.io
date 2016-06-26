@@ -1,7 +1,7 @@
 ---
 title: Firefox 4.0 para Linux ya dispone de menú unificado
 layout: post.amp
-permalink: /firefox-40-para-linux-ya-dispone-de/
+
 categories:
   - noticias
 main-class: "articulos"

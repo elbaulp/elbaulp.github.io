@@ -1,7 +1,7 @@
 ---
 title: Obtener consejos aleatorios en Ubuntu
 layout: post.amp
-permalink: /obtener-consejos-aleatorios-en-ubuntu/
+
 categories:
   - aplicaciones
   - curiosidades

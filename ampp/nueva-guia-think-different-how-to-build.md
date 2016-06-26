@@ -2,7 +2,7 @@
 title: 'Nueva guía &#8211; Think Different: How to Build Your Own Hackintosh'
 
 layout: post.amp
-permalink: /nueva-guia-think-different-how-to-build/
+
 categories:
   - cursos
   - SO

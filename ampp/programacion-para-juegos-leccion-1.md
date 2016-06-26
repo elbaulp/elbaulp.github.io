@@ -1,7 +1,7 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 1 &#8211; Instalando SDL'
 layout: post.amp
-permalink: /programacion-para-juegos-leccion-1/
+
 categories:
   - juegos
 main-class: "dev"

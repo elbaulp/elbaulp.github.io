@@ -2,7 +2,7 @@
 title: 'Fundamentos programación Android: Conceptos básicos y componentes'
 
 layout: post.amp
-permalink: /fundamentos-programacion-android/
+
 categories:
   - android
   - opensource

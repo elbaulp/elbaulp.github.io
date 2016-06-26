@@ -2,7 +2,7 @@
 title: Optimizando código y evaluando el rendimiento
 
 layout: post.amp
-permalink: /peso-hamming-y-optimizacion/
+
 categories:
   - Algoritmos
   - C

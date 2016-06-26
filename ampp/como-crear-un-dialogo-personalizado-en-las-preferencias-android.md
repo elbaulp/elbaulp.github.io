@@ -1,7 +1,7 @@
 ---
 title: Cómo crear un diálogo personalizado en las preferencias Android
 layout: post.amp
-permalink: /como-crear-un-dialogo-personalizado-en-las-preferencias-android/
+
 categories:
   - android
 tags:

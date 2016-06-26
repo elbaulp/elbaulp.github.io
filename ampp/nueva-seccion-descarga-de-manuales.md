@@ -2,7 +2,7 @@
 title: 'Nueva sección: Descarga de Manuales gratuitos'
 
 layout: post.amp
-permalink: /nueva-seccion-descarga-de-manuales/
+
 categories:
   - cursos
   - internet

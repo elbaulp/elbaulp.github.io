@@ -2,7 +2,7 @@
 title: 'El mapa mundial de GNU/Linux [IMG]'
 
 layout: post.amp
-permalink: /el-mapa-mundial-de-gnulinux-img/
+
 categories:
   - curiosidades
   - linux

@@ -2,7 +2,7 @@
 title: 'Nueva guía: 10 herramientas de seguridad de redes y tests que todo el mundo debería usar'
 
 layout: post.amp
-permalink: /10-herramientas-seguridad-redes-tests-todo-mundo-deberia-usar/
+
 categories:
   - cursos
   - seguridad

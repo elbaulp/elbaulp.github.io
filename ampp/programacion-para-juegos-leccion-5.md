@@ -1,7 +1,7 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 5 &#8211; Colores Clave'
 layout: post.amp
-permalink: /programacion-para-juegos-leccion-5/
+
 categories:
   - juegos
 main-class: "dev"

@@ -2,7 +2,7 @@
 title: Nueva aplicación móvil para el blog
 
 layout: post.amp
-permalink: /nueva-aplicacion-movil-para-el-blog/
+
 categories:
   - aplicaciones
   - internet

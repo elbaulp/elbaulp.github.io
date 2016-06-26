@@ -2,7 +2,7 @@
 title: 'Nueva guía: FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs'
 
 layout: post.amp
-permalink: /nueva-guia-faq-guide-windows-7/
+
 categories:
   - cursos
 main-class: "misc"

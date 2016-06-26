@@ -1,7 +1,7 @@
 ---
 title: Citas clásicas de programación
 layout: post.amp
-permalink: /citas-clasicas-de-programacion/
+
 categories:
   - curiosidades
 main-class: "articulos"

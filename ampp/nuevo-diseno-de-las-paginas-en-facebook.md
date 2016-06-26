@@ -1,7 +1,7 @@
 ---
 title: Nuevo diseño de las páginas en Facebook
 layout: post.amp
-permalink: /nuevo-diseno-de-las-paginas-en-facebook/
+
 categories:
   - noticias
 main-class: "articulos"

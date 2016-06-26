@@ -3,7 +3,7 @@ title: Resaltar sintaxis del código fuente en LaTeX con minted
 modified: 2015-04-08T00:00:00+00:00
 math: true
 layout: post.amp
-permalink: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/
+
 categories:
   - LaTeX
 tags:

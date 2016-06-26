@@ -1,7 +1,7 @@
 ---
 title: Facebook infectado por un nuevo por un gusano
 layout: post.amp
-permalink: /facebook-infestado-por-un-nuevo-por-un/
+
 categories:
   - noticias
 main-class: "articulos"

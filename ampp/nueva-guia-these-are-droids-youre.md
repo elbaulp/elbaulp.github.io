@@ -2,7 +2,7 @@
 title: 'Nueva Guía: These Are The Droids You&#8217;re Looking For: An Android Guide'
 
 layout: post.amp
-permalink: /nueva-guia-these-are-droids-youre/
+
 categories:
   - android
   - cursos

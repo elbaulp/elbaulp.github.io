@@ -2,7 +2,7 @@
 title: Colabora con el blog
 
 layout: post.amp
-permalink: /colabora-con-el-blog/
+
 categories:
   - noticias
 main-class: "articulos"

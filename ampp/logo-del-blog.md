@@ -1,7 +1,7 @@
 ---
 title: Logo del blog
 layout: post.amp
-permalink: /logo-del-blog/
+
 categories:
   - noticias
 main-class: "articulos"

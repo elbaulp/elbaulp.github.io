@@ -3,7 +3,7 @@ title: Instalación y optimización de un servidor web con Nginx (III)
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post.amp
-permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
+
 categories:
   - Administracion de Servidores
   - linux

@@ -2,7 +2,7 @@
 title: 'Nueva guía: Mac OS X Lion: The Ultimate Guide'
 
 layout: post.amp
-permalink: /nueva-guia-mac-os-x-lion-ultimate-guide/
+
 categories:
   - cursos
 main-class: "misc"

@@ -2,7 +2,7 @@
 title: 'Vídeos de la semana: Unos cuantos cortos y un time-lapse'
 
 layout: post.amp
-permalink: /videos-de-la-semana-unos-cuantos-cortos/
+
 categories:
   - video de la semana
 main-class: "articulos"

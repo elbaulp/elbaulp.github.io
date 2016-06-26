@@ -2,7 +2,7 @@
 title: 'Programación Android: Usando la cláusula Where'
 
 layout: post.amp
-permalink: /programacion-android-usando-la-clausula/
+
 categories:
   - android
   - opensource

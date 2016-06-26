@@ -1,7 +1,7 @@
 ---
 title: Introducción a PL/SQL
 layout: post.amp
-permalink: /introduccion-plsql/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

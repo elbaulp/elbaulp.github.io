@@ -2,7 +2,7 @@
 title: 'Nueva guía: Migrar un sitio web a Drupal'
 
 layout: post.amp
-permalink: /nueva-guia-migrar-un-sitio-web-drupal/
+
 categories:
   - cursos
   - internet

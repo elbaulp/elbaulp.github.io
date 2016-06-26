@@ -2,7 +2,7 @@
 title: Por qué nuestro PC necesita un firewall activado
 
 layout: post.amp
-permalink: /por-que-nuestro-pc-necesita-un-firewall/
+
 categories:
   - internet
   - seguridad

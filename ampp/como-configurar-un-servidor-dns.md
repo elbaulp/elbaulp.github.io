@@ -1,7 +1,7 @@
 ---
 title: 'Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)'
 layout: post.amp
-permalink: /como-configurar-un-servidor-dns/
+
 categories:
   - Administracion de Servidores
   - Articulos

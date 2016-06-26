@@ -2,7 +2,7 @@
 title: '[HUMOR] Dos Vídeos muy geek para Programadores'
 
 layout: post.amp
-permalink: /humor-dos-videos-muy-geek-para-programadores/
+
 categories:
   - Humor
   - offtopic

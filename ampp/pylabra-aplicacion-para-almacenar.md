@@ -1,7 +1,7 @@
 ---
 title: 'Pylabra &#8211; Aplicación para almacenar vocabulario'
 layout: post.amp
-permalink: /pylabra-aplicacion-para-almacenar/
+
 categories:
   - aplicaciones
   - opensource

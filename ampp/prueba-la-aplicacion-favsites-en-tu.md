@@ -2,7 +2,7 @@
 title: Prueba la aplicación FavSites en tu Android
 
 layout: post.amp
-permalink: /prueba-la-aplicacion-favsites-en-tu/
+
 categories:
   - android
   - opensource

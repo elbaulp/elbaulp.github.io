@@ -1,7 +1,7 @@
 ---
 title: 'Fundamentos aplicaciones Android &#8211; (Parte I)'
 layout: post.amp
-permalink: /fundamentos-aplicaciones-android-parte/
+
 categories:
   - android
   - aplicaciones

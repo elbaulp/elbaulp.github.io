@@ -1,7 +1,7 @@
 ---
 title: Introducción a ABAP
 layout: post.amp
-permalink: /introduccion-abap/
+
 categories:
   - ABAP
 tags:

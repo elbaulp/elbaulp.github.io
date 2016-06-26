@@ -2,7 +2,7 @@
 author: marta
 title: 'Mini Curso de LaTeX &#8211; Introducción'
 layout: post.amp
-permalink: /mini-curso-de-latex-introduccion/
+
 categories:
   - LaTeX
 tags:

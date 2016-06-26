@@ -2,7 +2,7 @@
 title: 'Nueva guía: History of cryptography'
 
 layout: post.amp
-permalink: /history-of-cryptography/
+
 categories:
   - cursos
 tags:

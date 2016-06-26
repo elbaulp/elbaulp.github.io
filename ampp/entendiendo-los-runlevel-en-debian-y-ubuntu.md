@@ -2,7 +2,7 @@
 title: Entendiendo los runlevel en Debian
 
 layout: post.amp
-permalink: /entendiendo-los-runlevel-en-debian-y-ubuntu/
+
 categories:
   - linux
   - SO

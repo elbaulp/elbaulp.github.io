@@ -2,7 +2,7 @@
 title: 'Pequeño &#8220;Rediseño&#8221; en el blog'
 
 layout: post.amp
-permalink: /pequeno-redisenp-en-el-blog/
+
 categories:
   - internet
   - noticias

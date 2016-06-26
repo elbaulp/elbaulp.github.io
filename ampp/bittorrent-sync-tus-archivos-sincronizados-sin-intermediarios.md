@@ -2,7 +2,7 @@
 title: 'BitTorrent Sync: Tus archivos sincronizados sin intermediarios'
 
 layout: post.amp
-permalink: /bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/
+
 categories:
   - internet
 tags:

@@ -2,7 +2,7 @@
 title: El modelo de seguridad de iOS (Charla del NESG en la UGR)
 
 layout: post.amp
-permalink: /el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/
+
 categories:
   - seguridad
 tags:

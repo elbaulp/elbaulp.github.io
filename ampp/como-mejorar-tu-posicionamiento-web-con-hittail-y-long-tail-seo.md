@@ -2,7 +2,7 @@
 title: Cómo mejorar tu posicionamiento web con HitTail y Long Tail SEO
 
 layout: post.amp
-permalink: /como-mejorar-tu-posicionamiento-web-con-hittail-y-long-tail-seo/
+
 categories:
   - Articulos
 tags:

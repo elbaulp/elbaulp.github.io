@@ -2,7 +2,7 @@
 title: 'Nueva Guía: The Top 10 Reports for Managing Vulnerabilities'
 
 layout: post.amp
-permalink: /nueva-guia-the-top-10-reports-for-managing-vulnerabilities/
+
 categories:
   - cursos
   - noticias

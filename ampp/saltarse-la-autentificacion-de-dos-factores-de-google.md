@@ -2,7 +2,7 @@
 title: Saltarse la autentificación de dos factores de Google
 
 layout: post.amp
-permalink: /saltarse-la-autentificacion-de-dos-factores-de-google/
+
 categories:
   - Articulos
   - Informatica

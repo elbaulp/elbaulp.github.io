@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos &#8211; El Constructor'
 layout: post.amp
-permalink: /clases-y-objetos-el-constructor/
+
 categories:
   - C
 main-class: "dev"

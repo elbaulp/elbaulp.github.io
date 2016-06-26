@@ -2,7 +2,7 @@
 title: Eliminar recursos sin usar en Android
 
 layout: post.amp
-permalink: /eliminar-recursos-sin-usar-en-android/
+
 categories:
   - android
 tags:

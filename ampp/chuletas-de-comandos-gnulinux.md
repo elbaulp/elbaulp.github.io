@@ -1,7 +1,7 @@
 ---
 title: Chuletas de Comandos GNU/Linux
 layout: post.amp
-permalink: /chuletas-de-comandos-gnulinux/
+
 categories:
   - linux
   - script

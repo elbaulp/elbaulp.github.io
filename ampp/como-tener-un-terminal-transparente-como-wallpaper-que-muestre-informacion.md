@@ -2,7 +2,7 @@
 title: Cómo tener un terminal transparente como wallpaper que muestre información
 
 layout: post.amp
-permalink: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/
+
 categories:
   - How To
   - linux

@@ -1,7 +1,7 @@
 ---
 title: Copiar archivos recursivamente
 layout: post.amp
-permalink: /copiar-archivos-recursivamente/
+
 categories:
   - linux
   - script

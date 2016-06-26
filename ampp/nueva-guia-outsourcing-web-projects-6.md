@@ -2,7 +2,7 @@
 title: 'Nueva guía: Outsourcing Web Projects: 6 Steps to a Smarter Business'
 
 layout: post.amp
-permalink: /nueva-guia-outsourcing-web-projects-6/
+
 categories:
   - cursos
   - internet

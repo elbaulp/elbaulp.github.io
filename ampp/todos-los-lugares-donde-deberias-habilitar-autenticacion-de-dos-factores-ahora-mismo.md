@@ -1,7 +1,7 @@
 ---
 title: Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo
 layout: post.amp
-permalink: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/
+
 categories:
   - Articulos
   - seguridad

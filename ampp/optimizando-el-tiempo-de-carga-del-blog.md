@@ -2,7 +2,7 @@
 title: Optimizando el tiempo de carga del blog
 
 layout: post.amp
-permalink: /optimizando-el-tiempo-de-carga-del-blog/
+
 categories:
   - internet
 main-class: "articulos"

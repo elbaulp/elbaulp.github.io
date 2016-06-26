@@ -1,7 +1,7 @@
 ---
 title: Nuevo lector RSS para el panel de GNOME
 layout: post.amp
-permalink: /nuevo-lector-rss-para-el-panel-de-gnome/
+
 categories:
   - aplicaciones
   - linux

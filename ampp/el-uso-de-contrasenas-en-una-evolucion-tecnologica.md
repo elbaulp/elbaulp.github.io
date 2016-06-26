@@ -2,7 +2,7 @@
 title: El uso de contraseñas en una evolución tecnológica
 
 layout: post.amp
-permalink: /el-uso-de-contrasenas-en-una-evolucion-tecnologica/
+
 categories:
   - Articulos
   - seguridad

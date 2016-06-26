@@ -1,7 +1,7 @@
 ---
 title: Bloquear una IP atacando el servidor mediante iptables
 layout: post.amp
-permalink: /bloquear-una-ip-atacanto-el-servidor-mediante-iptables/
+
 categories:
   - internet
   - linux

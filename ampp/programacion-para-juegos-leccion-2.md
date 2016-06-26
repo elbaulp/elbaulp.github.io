@@ -1,7 +1,7 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 2 &#8211; Imágenes Optimizadas'
 layout: post.amp
-permalink: /programacion-para-juegos-leccion-2/
+
 categories:
   - juegos
 main-class: "dev"

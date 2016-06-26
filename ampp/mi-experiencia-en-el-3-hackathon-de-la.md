@@ -2,7 +2,7 @@
 title: Mi experiencia en el 3º Hackathon de la Universidad de Granada
 
 layout: post.amp
-permalink: /mi-experiencia-en-el-3-hackathon-de-la/
+
 categories:
   - hackathon
   - noticias

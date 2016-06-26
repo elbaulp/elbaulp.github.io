@@ -2,7 +2,7 @@
 title: 'NDK-gdb &#8211; Depurar aplicaciones en el NKD de Android'
 
 layout: post.amp
-permalink: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/
+
 categories:
   - android
   - How To

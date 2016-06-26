@@ -2,7 +2,7 @@
 title: Programando Videojuegos en Python
 
 layout: post.amp
-permalink: /programando-videojuegos-en-python/
+
 categories:
   - juegos
   - python

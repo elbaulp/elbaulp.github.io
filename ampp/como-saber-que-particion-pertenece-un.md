@@ -2,7 +2,7 @@
 title: Cómo saber a qué partición pertenece un archivo en GNU/Linux
 
 layout: post.amp
-permalink: /como-saber-que-particion-pertenece-un/
+
 categories:
   - How To
   - linux

@@ -1,7 +1,7 @@
 ---
 title: Estructura y seguridad de los QR Codes
 layout: post.amp
-permalink: /estructura-y-seguridad-de-los-qr-codes/
+
 categories:
   - Articulos
   - Security Now

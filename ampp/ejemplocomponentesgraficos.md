@@ -2,7 +2,7 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Componentes gráficos y Eventos'
 
 layout: post.amp
-permalink: /programacion-android-interfaz-grafica_25/
+
 categories:
   - android
   - opensource

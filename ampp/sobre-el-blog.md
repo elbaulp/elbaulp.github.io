@@ -1,7 +1,7 @@
 ---
 title: Sobre el blog
 layout: post.amp
-permalink: /sobre-el-blog/
+
 categories:
   - Articulos
 main-class: "articulos"

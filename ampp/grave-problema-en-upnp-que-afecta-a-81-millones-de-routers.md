@@ -1,7 +1,7 @@
 ---
 title: Grave vulnerabilidad en UPnP que afecta a 81 millones de routers
 layout: post.amp
-permalink: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
+
 categories:
   - Articulos
   - Security Now

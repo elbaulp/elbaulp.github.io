@@ -2,7 +2,7 @@
 title: Cómo instalar el IDE Android Studio en Linux y pequeña guía de uso
 
 layout: post.amp
-permalink: /como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/
+
 categories:
   - android
   - How To

@@ -2,7 +2,7 @@
 title: 'Cómo eliminar tu identidad online: Guía Fundamental para el Anonimato y Seguridad en Internet'
 
 layout: post.amp
-permalink: /como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/
+
 categories:
   - Articulos
 tags:

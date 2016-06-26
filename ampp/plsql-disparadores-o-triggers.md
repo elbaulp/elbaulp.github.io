@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Disparadores o Triggers'
 layout: post.amp
-permalink: /plsql-disparadores-o-triggers/
+
 categories:
   - BaseDeDatos
 tags:

@@ -2,7 +2,7 @@
 title: 'Nueva Guía: How the Cloud will Change Application Release Applications'
 
 layout: post.amp
-permalink: /how-the-cloud-will-change-application-release-applications/
+
 categories:
   - cursos
 tags:

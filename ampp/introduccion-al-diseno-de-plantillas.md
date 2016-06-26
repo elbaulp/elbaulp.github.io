@@ -2,7 +2,7 @@
 title: Introducción al diseño de plantillas personalizadas para móviles en Blogger
 
 layout: post.amp
-permalink: /introduccion-al-diseno-de-plantillas/
+
 categories:
   - curiosidades
   - internet

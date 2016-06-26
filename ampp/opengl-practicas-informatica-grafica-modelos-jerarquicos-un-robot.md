@@ -1,7 +1,7 @@
 ---
 title: 'OpenGL &#8211; Prácticas Informática Gráfica: Modelos jerárquicos  &#8211; Un Robot'
 layout: post.amp
-permalink: /opengl-practicas-informatica-grafica-modelos-jerarquicos-un-robot/
+
 categories:
   - C
 tags:

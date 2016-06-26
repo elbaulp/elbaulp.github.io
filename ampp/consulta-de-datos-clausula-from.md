@@ -1,7 +1,7 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula FROM'
 layout: post.amp
-permalink: /consulta-de-datos-clausula-from/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

@@ -1,7 +1,7 @@
 ---
 title: Componentes del lenguaje SQL
 layout: post.amp
-permalink: /componentes-del-lenguaje-sql-sql/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

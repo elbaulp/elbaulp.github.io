@@ -1,7 +1,7 @@
 ---
 title: Conectar base de datos sql Server 2008 a aplicación Java remotamente
 layout: post.amp
-permalink: /conectar-base-de-datos-sql-server-2008/
+
 categories:
   - android
   - aplicaciones

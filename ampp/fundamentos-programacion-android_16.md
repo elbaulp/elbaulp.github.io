@@ -2,7 +2,7 @@
 title: 'Fundamentos programación Android: Intents y AndroidManifest'
 
 layout: post.amp
-permalink: /fundamentos-programacion-android_16/
+
 categories:
   - android
   - opensource

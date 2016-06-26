@@ -1,7 +1,7 @@
 ---
 title: Codificación
 layout: post.amp
-permalink: /codificacion/
+
 categories:
   - SO
 description: "Bueno, esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes."

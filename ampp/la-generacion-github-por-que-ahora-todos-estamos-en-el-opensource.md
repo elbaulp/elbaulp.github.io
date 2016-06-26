@@ -2,7 +2,7 @@
 title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
 
 layout: post.amp
-permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
+
 categories:
   - Articulos
 tags:

@@ -2,7 +2,7 @@
 title: 'Nueva guía: Building Android and iOS Apps with Dreamweaver CS5.5- Free Video Training Tutorial'
 
 layout: post.amp
-permalink: /nueva-guia-building-android-and-ios/
+
 categories:
   - android
   - cursos

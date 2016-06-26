@@ -2,7 +2,7 @@
 title: Cómo saber si tus visitantes usan Ad-Block
 description: "Hace unos días, visitando la web makeuseof me apareció un mensaje en la parte superior de la página en la que indicaba que se había detectado que estaba usando el plugin Ad-Block (Que bloquea la publicidad de las web, para quien no lo sepa). Y de una manera muy educada sugerían que se desabilitara para apoyar la web y así poder seguir ofreciendo contenido libre de costo."
 layout: post.amp
-permalink: /como-saber-si-tus-visitantes-usan-ad-block/
+
 categories:
   - How To
   - internet

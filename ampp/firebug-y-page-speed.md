@@ -1,7 +1,7 @@
 ---
 title: Firebug y page speed
 layout: post.amp
-permalink: /firebug-y-page-speed/
+
 categories:
   - noticias
 main-class: "articulos"

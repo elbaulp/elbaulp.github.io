@@ -1,7 +1,7 @@
 ---
 title: 'Sincronizar Google Drive en Linux en 4 pasos [Actualización]'
 layout: post.amp
-permalink: /sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/
+
 categories:
   - linux
 tags:

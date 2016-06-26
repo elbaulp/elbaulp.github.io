@@ -2,7 +2,7 @@
 title: Cómo instalar y configurar Nginx con php5-fpm
 
 layout: post.amp
-permalink: /como-instalar-nginx-con-php5-fpm/
+
 categories:
   - Administracion de Servidores
   - How To

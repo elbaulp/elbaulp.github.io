@@ -1,7 +1,7 @@
 ---
 title: Echando un vistazo a GNOME 3
 layout: post.amp
-permalink: /echando-un-vistazo-gnome-3/
+
 categories:
   - linux
   - noticias

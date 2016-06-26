@@ -2,7 +2,7 @@
 title: Cómo crear un Front Controller en PHP
 
 layout: post.amp
-permalink: /como-crear-un-front-controller-en-php/
+
 categories:
   - php
 tags:

@@ -2,7 +2,7 @@
 title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
 
 layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
+
 categories:
   - aplicaciones
   - Articulos

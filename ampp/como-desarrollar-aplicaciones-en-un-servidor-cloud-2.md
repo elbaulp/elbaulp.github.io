@@ -2,7 +2,7 @@
 title: Cómo desarrollar aplicaciones en un servidor Cloud
 
 layout: post.amp
-permalink: /como-desarrollar-aplicaciones-en-un-servidor-cloud-2/
+
 categories:
   - Java
 tags:

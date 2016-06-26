@@ -2,7 +2,7 @@
 title: Instalar y configurar DWM, el gestor de ventanas más eficiente
 
 layout: post.amp
-permalink: /instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/
+
 categories:
   - aplicaciones
   - C

@@ -2,7 +2,7 @@
 title: 'Crear enlaces en un TextView con la etiqueta HTML <a href en Android'
 
 layout: post.amp
-permalink: /crear-enlaces-en-un-textview-con-la-etiqueta-html-a-href-en-android/
+
 categories:
   - android
 tags:

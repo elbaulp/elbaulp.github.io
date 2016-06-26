@@ -2,7 +2,7 @@
 title: Cómo crear un pie de página en LaTeX con fancyhdr
 
 layout: post.amp
-permalink: /como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/
+
 categories:
   - How To
   - LaTeX

@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos &#8211; Funciones inline'
 layout: post.amp
-permalink: /clases-y-objetos-funciones-inline/
+
 categories:
   - C
 main-class: "dev"

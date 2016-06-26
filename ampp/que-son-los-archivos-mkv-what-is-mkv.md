@@ -1,7 +1,7 @@
 ---
 title: ¿Que son los archivos mkv?
 layout: post.amp
-permalink: /que-son-los-archivos-mkv-what-is-mkv/
+
 categories:
   - noticias
 main-class: "articulos"

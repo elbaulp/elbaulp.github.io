@@ -2,7 +2,7 @@
 title: 'Nueva guía gratuita: Cybersecurity for Dummies eBook'
 
 layout: post.amp
-permalink: /nueva-guia-gratuita-cybersecurity-dummies-ebook/
+
 categories:
   - cursos
 tags:

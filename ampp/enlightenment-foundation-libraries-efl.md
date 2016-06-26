@@ -1,7 +1,7 @@
 ---
 title: Enlightenment Foundation Libraries (EFL)
 layout: post.amp
-permalink: /enlightenment-foundation-libraries-efl/
+
 categories:
   - linux
 main-class: "linux"

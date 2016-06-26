@@ -2,7 +2,7 @@
 title: Por qué la autentificación de 2 factores depende de la experiencia del usuario
 
 layout: post.amp
-permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/
+
 categories:
   - Articulos
 tags:

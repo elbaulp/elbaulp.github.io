@@ -2,7 +2,7 @@
 title: 7 dilemas que enfrentan los desarrolladores de hoy
 description: "Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan los desarrolladores. Cada elección, desde la plataforma hasta el almacenamiento de datos, incluyendo a cuánto control darle a los usuarios, está cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnología móvil y la acelerada vanguardia, pareciera como si el mundo de la programación enfrentara una nueva elección - y dilema - a un ritmo creciente."
 layout: post.amp
-permalink: /el-top-7-de-dilemas-que-enfrentan-los-desarrolladores-de-hoy/
+
 categories:
   - aplicaciones
   - Articulos

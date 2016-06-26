@@ -1,7 +1,7 @@
 ---
 title: '¡Nunca lo hagas! [Humor]'
 layout: post.amp
-permalink: /nunca-lo-hagas-humor/
+
 categories:
   - curiosidades
 main-class: "geek"

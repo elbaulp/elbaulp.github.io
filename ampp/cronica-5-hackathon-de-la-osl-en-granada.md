@@ -2,7 +2,7 @@
 title: Crónica del 5° hackathon de la OSL en Granada
 
 layout: post.amp
-permalink: /cronica-5-hackathon-de-la-osl-en-granada/
+
 categories:
   - Articulos
   - opensource

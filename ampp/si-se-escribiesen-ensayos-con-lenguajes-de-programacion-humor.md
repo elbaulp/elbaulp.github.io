@@ -2,7 +2,7 @@
 title: 'Si se escribiesen ensayos con lenguajes de programación [HUMOR]'
 
 layout: post.amp
-permalink: /si-se-escribiesen-ensayos-con-lenguajes-de-programacion-humor/
+
 categories:
   - Humor
   - offtopic

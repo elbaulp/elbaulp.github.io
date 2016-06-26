@@ -1,7 +1,7 @@
 ---
 title: Tabla periódica de las APIs de google
 layout: post.amp
-permalink: /tabla-periodica-de-las-apis-de-google/
+
 categories:
   - aplicaciones
   - curiosidades

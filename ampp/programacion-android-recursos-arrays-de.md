@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Arrays de strings'
 
 layout: post.amp
-permalink: /programacion-android-recursos-arrays-de/
+
 categories:
   - android
   - opensource

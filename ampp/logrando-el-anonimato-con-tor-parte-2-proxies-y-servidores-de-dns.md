@@ -2,7 +2,7 @@
 title: 'Logrando el anonimato con Tor (Parte 2) : Proxies y servidores de DNS'
 
 layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
+
 categories:
   - aplicaciones
   - Articulos

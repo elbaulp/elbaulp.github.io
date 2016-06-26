@@ -1,7 +1,7 @@
 ---
 title: Manual de python
 layout: post.amp
-permalink: /manual-de-python/
+
 categories:
   - linux
   - python

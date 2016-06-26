@@ -2,7 +2,7 @@
 title: Visualiza las visitas a tu web al estilo Pong con Logstalgia
 
 layout: post.amp
-permalink: /visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/
+
 categories:
   - Administracion de Servidores
   - aplicaciones

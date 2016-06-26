@@ -2,7 +2,7 @@
 title: 'Git: Mini Tutorial y chuleta de comandos'
 
 layout: post.amp
-permalink: /mini-tutorial-y-chuleta-de-comandos-git/
+
 categories:
   - Articulos
 tags:

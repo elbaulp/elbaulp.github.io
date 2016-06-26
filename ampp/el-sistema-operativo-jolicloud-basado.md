@@ -1,7 +1,7 @@
 ---
 title: JoliBook ya a la venta
 layout: post.amp
-permalink: /el-sistema-operativo-jolicloud-basado/
+
 categories:
   - noticias
 main-class: "articulos"

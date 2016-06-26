@@ -1,7 +1,7 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula WHERE'
 layout: post.amp
-permalink: /consulta-de-datos-clausula-where/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

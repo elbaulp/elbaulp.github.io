@@ -2,7 +2,7 @@
 title: ¿Odias Java? Estás peleando una batalla equivocada
 
 layout: post.amp
-permalink: /odias-java-estas-peleando-una-batalla-equivocada/
+
 categories:
   - Articulos
 tags:

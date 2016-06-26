@@ -2,7 +2,7 @@
 title: 'Nueva Guía: Web Application Security; How to Minimize Prevalent Risk of Attacks'
 
 layout: post.amp
-permalink: /nueva-guia-web-application-security-how/
+
 categories:
   - cursos
   - internet

@@ -2,7 +2,7 @@
 title: 'Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211; 9GAG.COM Parte (II)'
 
 layout: post.amp
-permalink: /humor-grafico-informaticos/
+
 categories:
   - curiosidades
   - Humor

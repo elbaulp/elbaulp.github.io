@@ -1,7 +1,7 @@
 ---
 title: 2 invitaciones para IFTTT disponibles
 layout: post.amp
-permalink: /2-invitaciones-para-ifttt-disponibles/
+
 categories:
   - aplicaciones
   - internet

@@ -2,7 +2,7 @@
 title: Los orígenes de los símbolos tecnológicos más famosos y frecuentes
 
 layout: post.amp
-permalink: /los-origenes-de-los-simbolos-tecnologicos-mas-famosos-y-frecuentes/
+
 categories:
   - Articulos
 tags:

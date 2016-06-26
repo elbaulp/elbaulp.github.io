@@ -2,7 +2,7 @@
 title: Introducción al NDK de Android
 
 layout: post.amp
-permalink: /introduccion-al-ndk-de-android/
+
 categories:
   - android
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Curso de Linux para torpes
 layout: post.amp
-permalink: /curso-de-linux-para-torpes/
+
 categories:
   - cursos
 main-class: "articulos"

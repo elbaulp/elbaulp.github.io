@@ -2,7 +2,7 @@
 title: 'Guerra de navegadores [Humor]'
 
 layout: post.amp
-permalink: /guerra-de-navegadores-humor/
+
 categories:
   - aplicaciones
   - curiosidades

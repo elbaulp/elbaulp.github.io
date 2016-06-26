@@ -1,7 +1,7 @@
 ---
 title: Ejecutar un script al modificar un fichero con inotify
 layout: post.amp
-permalink: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/
+
 categories:
   - bash
   - linux

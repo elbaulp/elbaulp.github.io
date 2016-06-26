@@ -2,7 +2,7 @@
 title: 'Nueva guía: The JavaScript Anthology: 101 Essential Tips, Tricks & Hacks'
 
 layout: post.amp
-permalink: /nueva-guia-javascript-anthology-101/
+
 categories:
   - cursos
   - internet

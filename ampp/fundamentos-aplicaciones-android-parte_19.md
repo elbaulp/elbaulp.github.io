@@ -1,7 +1,7 @@
 ---
 title: 'Fundamentos aplicaciones Android &#8211; (Parte III) -Activando Componentes'
 layout: post.amp
-permalink: /fundamentos-aplicaciones-android-parte_19/
+
 categories:
   - android
   - aplicaciones

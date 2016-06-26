@@ -2,7 +2,7 @@
 title: Cómo recuperar el IMEI en Android
 
 layout: post.amp
-permalink: /como-recuperar-el-imei-en-android/
+
 categories:
   - Articulos
 tags:

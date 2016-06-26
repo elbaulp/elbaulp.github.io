@@ -1,7 +1,7 @@
 ---
 title: Ubuntu running on the Samsung Galaxy Tab
 layout: post.amp
-permalink: /ubuntu-running-on-samsung-galaxy-tab/
+
 categories:
   - Sin Categoria
 tags:

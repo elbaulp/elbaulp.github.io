@@ -2,7 +2,7 @@
 title: La recursividad, explicada por Homer Simpson
 
 layout: post.amp
-permalink: /la-recursividad-explicada-por-homer/
+
 categories:
   - Humor
   - internet

@@ -1,7 +1,7 @@
 ---
 title: 20 ejemplos de iptables para SysAdmins novatos
 layout: post.amp
-permalink: /20-ejemplos-de-iptables-para-sysadmins/
+
 categories:
   - aplicaciones
   - internet

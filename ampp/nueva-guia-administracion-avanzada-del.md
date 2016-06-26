@@ -2,7 +2,7 @@
 title: 'Guía gratuita: Administración Avanzada del Sistema Operativo GNU/Linux'
 
 layout: post.amp
-permalink: /nueva-guia-administracion-avanzada-del/
+
 categories:
   - cursos
   - internet

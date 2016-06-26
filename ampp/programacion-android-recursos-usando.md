@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Usando recursos'
 
 layout: post.amp
-permalink: /programacion-android-recursos-usando/
+
 categories:
   - android
   - opensource

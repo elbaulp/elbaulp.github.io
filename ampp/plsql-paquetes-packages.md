@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Paquetes (Packages)'
 layout: post.amp
-permalink: /plsql-paquetes-packages/
+
 categories:
   - BaseDeDatos
 tags:

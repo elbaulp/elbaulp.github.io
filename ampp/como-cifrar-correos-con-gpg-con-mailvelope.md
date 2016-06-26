@@ -1,7 +1,7 @@
 ---
 title: Cómo cifrar correos electrónicos con GPG usando Mailvelope
 layout: post.amp
-permalink: /como-cifrar-correos-con-gpg-con-mailvelope/
+
 categories:
   - seguridad
 tags:

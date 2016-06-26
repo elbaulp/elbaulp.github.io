@@ -2,7 +2,7 @@
 title: 'Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras'
 description: "En la esfera social de bookmark (“socialbookmarkosphere”) se habla insistentemente de las “Tablas Arcoiris“, cuál es el significado real de password security, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de Windows for Workgroups *hace 15 años."
 layout: post.amp
-permalink: /basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/
+
 if_slider_image:
   -
   -

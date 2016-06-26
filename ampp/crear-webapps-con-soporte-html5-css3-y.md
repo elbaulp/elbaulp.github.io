@@ -2,7 +2,7 @@
 title: Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework
 
 layout: post.amp
-permalink: /crear-webapps-con-soporte-html5-css3-y/
+
 categories:
   - aplicaciones
   - cursos

@@ -1,7 +1,7 @@
 ---
 title: Tunning básico de SQL
 layout: post.amp
-permalink: /tunning-basico-de-sql/
+
 categories:
   - BaseDeDatos
 tags:

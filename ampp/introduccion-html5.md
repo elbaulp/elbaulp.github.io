@@ -1,7 +1,7 @@
 ---
 title: Introducción a HTML5
 layout: post.amp
-permalink: /introduccion-html5/
+
 categories:
   - HTML5
 tags:

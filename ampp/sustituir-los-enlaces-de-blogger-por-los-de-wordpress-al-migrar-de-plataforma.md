@@ -2,7 +2,7 @@
 title: Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma
 
 layout: post.amp
-permalink: /sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/
+
 categories:
   - How To
 tags:

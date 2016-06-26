@@ -1,7 +1,7 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; DROP'
 layout: post.amp
-permalink: /lenguaje-definicion-de-datosddl-drop/
+
 categories:
   - BaseDeDatos
 tags:

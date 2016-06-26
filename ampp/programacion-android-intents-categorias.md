@@ -2,7 +2,7 @@
 title: 'Programación Android: Intents &#8211; Categorías'
 
 layout: post.amp
-permalink: /programacion-android-intents-categorias/
+
 categories:
   - android
   - opensource

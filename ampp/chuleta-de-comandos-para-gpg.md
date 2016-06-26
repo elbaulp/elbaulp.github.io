@@ -1,7 +1,7 @@
 ---
 title: Chuleta de comandos para GPG
 layout: post.amp
-permalink: /chuleta-de-comandos-para-gpg/
+
 categories:
   - Articulos
   - How To

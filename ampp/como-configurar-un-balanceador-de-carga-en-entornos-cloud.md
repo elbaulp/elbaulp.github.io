@@ -1,7 +1,7 @@
 ---
 title: Cómo configurar un balanceador de carga en entornos cloud
 layout: post.amp
-permalink: /como-configurar-un-balanceador-de-carga-en-entornos-cloud/
+
 categories:
   - Administracion de Servidores
 tags:

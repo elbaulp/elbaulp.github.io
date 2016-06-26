@@ -1,7 +1,7 @@
 ---
 title: Códigos secretos y ocultos para Android
 layout: post.amp
-permalink: /codigos-secretos-y-ocultos-para-android/
+
 categories:
   - android
   - curiosidades

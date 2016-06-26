@@ -2,7 +2,7 @@
 title: Enlaces de la semana (I)
 
 layout: post.amp
-permalink: /enlaces-de-la-semana-i-2/
+
 categories:
   - Enlaces de la semana
   - noticias

@@ -2,7 +2,7 @@
 title: 'Programación Android: Actualizar y borrar registros'
 
 layout: post.amp
-permalink: /programacion-android-actualizar-y/
+
 categories:
   - android
   - opensource

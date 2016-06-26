@@ -1,7 +1,7 @@
 ---
 title: Introduccion a base de datos
 layout: post.amp
-permalink: /introduccion-base-de-datos/
+
 categories:
   - BaseDeDatos
 tags:

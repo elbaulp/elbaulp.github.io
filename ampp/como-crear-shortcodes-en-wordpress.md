@@ -2,7 +2,7 @@
 title: Cómo crear shortcodes en WordPress que soporten parámetros
 
 layout: post.amp
-permalink: /como-crear-shortcodes-en-wordpress/
+
 categories:
   - How To
   - php

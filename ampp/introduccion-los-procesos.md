@@ -1,7 +1,7 @@
 ---
 title: Introducción a los Procesos
 layout: post.amp
-permalink: /introduccion-los-procesos/
+
 categories:
   - procesos
   - SO

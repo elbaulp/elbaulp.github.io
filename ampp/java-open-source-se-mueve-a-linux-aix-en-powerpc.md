@@ -2,7 +2,7 @@
 title: Java Open Source se mueve a Linux, AIX en PowerPC
 
 layout: post.amp
-permalink: /java-open-source-se-mueve-a-linux-aix-en-powerpc/
+
 if_slider_image:
   -
   -

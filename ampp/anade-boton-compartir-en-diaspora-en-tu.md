@@ -2,7 +2,7 @@
 title: Añade Botón compartir en Diaspora en tu blog (BLOGGER)
 
 layout: post.amp
-permalink: /anade-boton-compartir-en-diaspora-en-tu/
+
 categories:
   - curiosidades
   - internet

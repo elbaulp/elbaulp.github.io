@@ -2,7 +2,7 @@
 title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
 
 layout: post.amp
-permalink: /openlibra-la-biblioteca-libre-online/
+
 categories:
   - internet
   - linux

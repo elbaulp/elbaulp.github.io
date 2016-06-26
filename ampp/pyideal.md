@@ -1,7 +1,7 @@
 ---
 title: PyIDEAL
 layout: post.amp
-permalink: /pyideal/
+
 categories:
   - python
 main-class: "dev"

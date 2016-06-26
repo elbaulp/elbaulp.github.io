@@ -2,7 +2,7 @@
 title: 'Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)'
 
 layout: post.amp
-permalink: /como-configurar-un-servidor-dns3/
+
 categories:
   - Administracion de Servidores
   - Articulos

@@ -2,7 +2,7 @@
 title: Crear un módulo para python con la Python C API (V) – Python 3
 
 layout: post.amp
-permalink: /crear-modulo-python-con-python-c-api-5-python3/
+
 categories:
   - C
   - python

@@ -1,7 +1,7 @@
 ---
 title: Programa que envía mensajes desde Android a PC (Mejora II)
 layout: post.amp
-permalink: /programa-que-envia-mensajes-desde_10/
+
 categories:
   - android
   - aplicaciones

@@ -2,7 +2,7 @@
 title: Configurar xmonad con trayer y fondo de pantalla aleatorio
 
 layout: post.amp
-permalink: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/
+
 categories:
   - How To
   - linux

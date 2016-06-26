@@ -1,7 +1,7 @@
 ---
 title: Visible Tweets
 layout: post.amp
-permalink: /visible-tweets/
+
 categories:
   - curiosidades
 main-class: "articulos"

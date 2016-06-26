@@ -2,7 +2,7 @@
 title: 'Nueva guía: Agrupación En Clústeres Multisitio de Windows Server (En Español)'
 
 layout: post.amp
-permalink: /nueva-guia-agrupacion-en-clusteres/
+
 categories:
   - cursos
   - internet

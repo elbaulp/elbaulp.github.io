@@ -2,7 +2,7 @@
 title: '[VÍDEOS] El hombre sin pulso y Need4Speed: Insight. Dos vídeos que merece la pena ver'
 
 layout: post.amp
-permalink: /videos-el-hombre-sin-pulso-y-need4speed/
+
 categories:
   - curiosidades
   - offtopic

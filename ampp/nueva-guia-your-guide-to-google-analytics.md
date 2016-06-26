@@ -2,7 +2,7 @@
 title: 'Nueva Guía: Your Guide to Google Analytics'
 
 layout: post.amp
-permalink: /nueva-guia-your-guide-to-google-analytics/
+
 if_slider_image:
   -
   -

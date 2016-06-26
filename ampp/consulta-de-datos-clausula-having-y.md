@@ -1,7 +1,7 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula HAVING y ORDER BY'
 layout: post.amp
-permalink: /consulta-de-datos-clausula-having-y/
+
 categories:
   - BaseDeDatos
 tags:

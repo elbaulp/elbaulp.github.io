@@ -2,7 +2,7 @@
 title: Resultados examen PL/SQL base de datos
 
 layout: post.amp
-permalink: /resultados-examen-plsql-base-de-datos/
+
 categories:
   - BaseDeDatos
 tags:

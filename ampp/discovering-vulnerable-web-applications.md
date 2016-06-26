@@ -2,7 +2,7 @@
 title: 'Nueva guía: Discovering Vulnerable Web Applications'
 
 layout: post.amp
-permalink: /discovering-vulnerable-web-applications/
+
 categories:
   - cursos
   - noticias

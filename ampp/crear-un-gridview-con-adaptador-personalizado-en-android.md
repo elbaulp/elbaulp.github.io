@@ -2,7 +2,7 @@
 title: Crear un GridView con Adaptador personalizado en Android
 
 layout: post.amp
-permalink: /crear-un-gridview-con-adaptador-personalizado-en-android/
+
 categories:
   - android
 tags:

@@ -2,7 +2,7 @@
 title: 'Programación Android &#8211; Ejemplo de uso de ACTION_PICK'
 
 layout: post.amp
-permalink: /programacion-android-ejemplos-de-uso-de/
+
 categories:
   - android
   - opensource

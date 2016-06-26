@@ -1,7 +1,7 @@
 ---
 title: Lenguaje Manipulación de Datos (DML)
 layout: post.amp
-permalink: /lenguaje-manipulacion-de-datos-dml/
+
 categories:
   - BaseDeDatos
 tags:

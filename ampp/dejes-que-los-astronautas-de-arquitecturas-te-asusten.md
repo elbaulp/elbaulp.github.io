@@ -2,7 +2,7 @@
 title: No dejes que los Astronautas de Arquitecturas te asusten
 
 layout: post.amp
-permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
+
 categories:
   - Articulos
 main-class: "articulos"

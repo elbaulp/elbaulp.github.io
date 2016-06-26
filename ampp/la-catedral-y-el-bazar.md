@@ -1,7 +1,7 @@
 ---
 title: '&#8220;La catedral y el bazar&#8221;'
 layout: post.amp
-permalink: /la-catedral-y-el-bazar/
+
 categories:
   - opensource
 main-class: "articulos"

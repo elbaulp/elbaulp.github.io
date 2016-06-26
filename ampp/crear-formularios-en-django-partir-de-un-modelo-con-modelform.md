@@ -2,7 +2,7 @@
 title: Crear formularios en Django a partir de un Modelo con ModelForm
 
 layout: post.amp
-permalink: /crear-formularios-en-django-partir-de-un-modelo-con-modelform/
+
 categories:
   - django
 tags:

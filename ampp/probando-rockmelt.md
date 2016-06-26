@@ -1,7 +1,7 @@
 ---
 title: Probando RockMelt
 layout: post.amp
-permalink: /probando-rockmelt/
+
 categories:
   - noticias
 main-class: "articulos"

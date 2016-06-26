@@ -1,7 +1,7 @@
 ---
 title: Cómo cifrar archivos con openssl
 layout: post.amp
-permalink: /como-cifrar-archivos-con-openssl/
+
 categories:
   - Administracion de Servidores
   - seguridad

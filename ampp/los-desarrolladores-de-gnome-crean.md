@@ -2,7 +2,7 @@
 title: 'Los desarrolladores de GNOME crean &#8220;Boxes&#8221; para la virtualización'
 
 layout: post.amp
-permalink: /los-desarrolladores-de-gnome-crean/
+
 categories:
   - linux
   - noticias

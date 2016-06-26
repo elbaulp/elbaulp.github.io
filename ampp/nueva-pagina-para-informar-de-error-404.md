@@ -2,7 +2,7 @@
 title: Nueva página para informar de error 404 en el blog
 
 layout: post.amp
-permalink: /nueva-pagina-para-informar-de-error-404/
+
 categories:
   - Sin Categoria
 main-class: "articulos"

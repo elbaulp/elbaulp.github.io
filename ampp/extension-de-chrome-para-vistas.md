@@ -1,7 +1,7 @@
 ---
 title: Extensión de chrome para Vistas Dinámicas
 layout: post.amp
-permalink: /extension-de-chrome-para-vistas/
+
 categories:
   - curiosidades
   - internet

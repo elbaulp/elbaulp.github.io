@@ -2,7 +2,7 @@
 title: '¿Qué significa &#8216;Unknown&#8217; en las estadísticas de Whos amung?'
 
 layout: post.amp
-permalink: /que-significa-unknown-en-las-estadisticas-de-whos-amung/
+
 categories:
   - Articulos
 tags:

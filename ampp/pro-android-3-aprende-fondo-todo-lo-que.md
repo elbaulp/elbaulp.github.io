@@ -2,7 +2,7 @@
 title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 3.0'
 
 layout: post.amp
-permalink: /pro-android-3-aprende-fondo-todo-lo-que/
+
 categories:
   - android
   - aplicaciones

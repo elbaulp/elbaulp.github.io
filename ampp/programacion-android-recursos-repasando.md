@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
 
 layout: post.amp
-permalink: /programacion-android-recursos-repasando/
+
 categories:
   - android
   - opensource

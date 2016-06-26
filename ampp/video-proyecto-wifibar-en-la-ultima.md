@@ -2,7 +2,7 @@
 title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
 
 layout: post.amp
-permalink: /video-proyecto-wifibar-en-la-ultima/
+
 categories:
   - android
   - aplicaciones

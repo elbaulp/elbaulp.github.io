@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos RAW'
 
 layout: post.amp
-permalink: /programacion-android-recursos-trabajar-2/
+
 categories:
   - android
   - opensource

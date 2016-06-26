@@ -1,7 +1,7 @@
 ---
 title: Firefox 4.0 beta 9 disponible
 layout: post.amp
-permalink: /firefox-40-beta-9-disponible/
+
 categories:
   - noticias
 main-class: "articulos"

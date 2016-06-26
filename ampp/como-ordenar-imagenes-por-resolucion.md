@@ -1,7 +1,7 @@
 ---
 title: Cómo ordenar imágenes por resolución
 layout: post.amp
-permalink: /como-ordenar-imagenes-por-resolucion/
+
 categories:
   - script
 tags:

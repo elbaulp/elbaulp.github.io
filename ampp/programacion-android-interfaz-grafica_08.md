@@ -2,7 +2,7 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Menús'
 
 layout: post.amp
-permalink: /programacion-android-interfaz-grafica_08/
+
 categories:
   - android
   - opensource

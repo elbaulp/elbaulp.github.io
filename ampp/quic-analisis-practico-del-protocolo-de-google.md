@@ -3,7 +3,7 @@ title: 'QUIC: Análisis práctico del protocolo de Google'
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post.amp
-permalink: /quic-analisis-practico-del-protocolo-de-google/
+
 categories:
   - Articulos
 tags:
@@ -165,7 +165,7 @@ Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits u
 
 **Header: Packet Sequence Number**. Además de secuenciar paquetes, mirar por duplicaciones y comunicar qué paquetes faltan, éste número es una parte crítica para el cifrado. Éste número es la base de las IV que se usan para descifrar cada paquete. Como resultado, conceptualmente debe ser grande, ya que no debe repetirse durante el periodo de una conexión. Por eso el tamaño conceptual del número de secuencia debe ser grande, unos $$2^{64}$$ (Más paquetes de los que cualquier conexión enviará), sin embargo, normalmente no es necesario proporcionar los 8 bytes en cada paquete.
 
-En cualquier momento dado, solo habrá un numero finito (pequeño) depaquetes de secuencia que no hayan sido admitidos. Ésta restricción es una consecuencia natural del hecho de que el emisor debe mantener un buffer con datos para los paquetes pendientes, y la memoria del emisor es finita. Además, se ha optado por no “retransmitir” los paquetes perdidos, en su lugar, se “reempaqueta” su contenido en paquetes posteriores. Como resultado, el receptor comunicará que no ha recibido un paquete, y el emisor notificará al receptor para que “deje de esperar” al paquete, y por tanto el margen de paquetes no admitidos estará siempre acotado. Basándonos en esta restricción, un emisor puede reducir significativamente el número de bytes necesarios para expresar el número de secuencia del paquete (usando los Flags públicos).
+En cualquier momento dado, solo habrá un numero finito (pequeño) depaquetes de secuencia que no hayan sido admitidos. Ésta restricción es una consecuencia natural del hecho de que el emisor debe mantener un buffer con datos para los paquetes pendientes, y la memoria del emisor es finita. Además, se ha optado por no “retransmitir” los paquetes perdidos, en su lugar, se ���reempaqueta” su contenido en paquetes posteriores. Como resultado, el receptor comunicará que no ha recibido un paquete, y el emisor notificará al receptor para que “deje de esperar” al paquete, y por tanto el margen de paquetes no admitidos estará siempre acotado. Basándonos en esta restricción, un emisor puede reducir significativamente el número de bytes necesarios para expresar el número de secuencia del paquete (usando los Flags públicos).
 
 Por ejemplo, supongamos que los paquetes se transmiten mediante TCP con control de congestión, y el margen de congestión actual es de 20 paquetes. Si se pierde un paquete, dentro de 1 RTT, o unos 20 paquetes adicionales, el receptor será informado de que un paquete perdido ya no está pendiente. Como resultado, el emisor puede continuar enviando solo el byte de menor peso (8bits) del número de secuencia del paquete (64bits). El receptor puede deducir fácilmente basándose en esos bits, qué valor deberían tener los 56 bits restantes, y puede usarlos posteriormente para descifrar el paquete.
 

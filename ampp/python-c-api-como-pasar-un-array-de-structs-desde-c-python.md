@@ -2,7 +2,7 @@
 title: 'Python C API &#8211; Cómo pasar un array de structs desde C a Python'
 
 layout: post.amp
-permalink: /python-c-api-como-pasar-un-array-de-structs-desde-c-python/
+
 categories:
   - C
   - python

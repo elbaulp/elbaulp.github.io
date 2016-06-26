@@ -2,7 +2,7 @@
 title: Crea scripts para las aplicaciones de Google con Apps Script
 
 layout: post.amp
-permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
+
 categories:
   - internet
 tags:

@@ -2,7 +2,7 @@
 title: Samsung Droid Charge Smartphone
 
 layout: post.amp
-permalink: /samsung-droid-charge-smartphone/
+
 categories:
   - android
   - curiosidades

@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Layout'
 
 layout: post.amp
-permalink: /programacion-android-recursos-layout/
+
 categories:
   - android
   - opensource

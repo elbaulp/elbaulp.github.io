@@ -2,7 +2,7 @@
 title: 'Guía de Referencia de comandos Unix/Linux [IMG]'
 
 layout: post.amp
-permalink: /guia-de-referencia-de-comandos/
+
 categories:
   - linux
   - opensource

@@ -1,7 +1,7 @@
 ---
 title: 'Consulta de Datos &#8211; Subconsultas'
 layout: post.amp
-permalink: /consulta-de-datos-subconsultas/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

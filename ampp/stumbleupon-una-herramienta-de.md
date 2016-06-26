@@ -2,7 +2,7 @@
 title: 'StumbleUpon: Una herramienta de navegación personalizada'
 
 layout: post.amp
-permalink: /stumbleupon-una-herramienta-de/
+
 categories:
   - internet
   - noticias

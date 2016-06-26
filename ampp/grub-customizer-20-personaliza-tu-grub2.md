@@ -1,7 +1,7 @@
 ---
 title: Grub Customizer 2.0, personaliza tu GRUB2
 layout: post.amp
-permalink: /grub-customizer-20-personaliza-tu-grub2/
+
 categories:
   - noticias
 main-class: "linux"

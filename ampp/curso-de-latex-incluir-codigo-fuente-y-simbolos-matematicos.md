@@ -2,7 +2,7 @@
 author: marta
 title: 'Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos'
 layout: post.amp
-permalink: /curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/
+
 categories:
   - LaTeX
 tags:

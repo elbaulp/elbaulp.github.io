@@ -2,7 +2,7 @@
 title: 'Programación Android: Arquitectura de los Proveedores de contenidos'
 
 layout: post.amp
-permalink: /programacion-android-arquitectura-de/
+
 categories:
   - android
   - opensource

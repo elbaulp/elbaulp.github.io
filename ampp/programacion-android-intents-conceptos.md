@@ -2,7 +2,7 @@
 title: 'Programación Android: Intents &#8211; Conceptos básicos'
 
 layout: post.amp
-permalink: /programacion-android-intents-conceptos/
+
 categories:
   - android
   - opensource

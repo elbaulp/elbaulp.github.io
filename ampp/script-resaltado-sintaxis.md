@@ -1,7 +1,7 @@
 ---
 title: Script resaltado sintaxis c++
 layout: post.amp
-permalink: /script-resaltado-sintaxis/
+
 categories:
   - linux
   - script

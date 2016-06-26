@@ -1,7 +1,7 @@
 ---
 title: Announcing Bodhi Linux
 layout: post.amp
-permalink: /announcing-bodhi-linux/
+
 categories:
   - Sin Categoria
 main-class: "articulos"

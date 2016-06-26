@@ -1,7 +1,7 @@
 ---
 title: iPad 2 muestra contenido 3D sin necesidad de gafas ni hardware 3d
 layout: post.amp
-permalink: /ipad-2-muestra-contenido-3d-sin/
+
 categories:
   - aplicaciones
   - curiosidades

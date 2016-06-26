@@ -2,7 +2,7 @@
 title: Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban
 
 layout: post.amp
-permalink: /bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/
+
 categories:
   - Administracion de Servidores
 tags:

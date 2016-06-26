@@ -1,7 +1,7 @@
 ---
 title: Incluir imágenes en una entrada de WordPress usando PHP
 layout: post.amp
-permalink: /incluir-imagenes-en-una-entrada-de-wordpress-usando-php/
+
 categories:
   - php
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula Select'
 layout: post.amp
-permalink: /consulta-de-datos-clausula-select/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

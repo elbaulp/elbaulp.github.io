@@ -2,7 +2,7 @@
 title: Peter Norvig hablando sobre clases online
 
 layout: post.amp
-permalink: /peter-norvig-hablando-sobre-clases-online/
+
 if_slider_image:
   -
   -

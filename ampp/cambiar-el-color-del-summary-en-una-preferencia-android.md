@@ -2,7 +2,7 @@
 title: Cambiar el color del summary en una Preferencia Android
 
 layout: post.amp
-permalink: /cambiar-el-color-del-summary-en-una-preferencia-android/
+
 categories:
   - android
 tags:

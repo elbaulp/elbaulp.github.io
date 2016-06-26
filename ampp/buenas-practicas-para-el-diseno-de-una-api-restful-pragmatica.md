@@ -1,7 +1,7 @@
 ---
 title: Buenas prácticas para el Diseño de una API RESTful Pragmática
 layout: post.amp
-permalink: /buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/
+
 categories:
   - Articulos
 tags:

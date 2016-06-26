@@ -1,7 +1,7 @@
 ---
 title: Organiza tu lista de Tareas con Remember the Milk
 layout: post.amp
-permalink: /organiza-tu-lista-de-tareas-con/
+
 categories:
   - curiosidades
   - internet

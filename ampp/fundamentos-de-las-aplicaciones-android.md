@@ -2,7 +2,7 @@
 title: 'Fundamentos de las aplicaciones Android &#8211; Traducción completa'
 
 layout: post.amp
-permalink: /fundamentos-de-las-aplicaciones-android/
+
 categories:
   - android
   - aplicaciones

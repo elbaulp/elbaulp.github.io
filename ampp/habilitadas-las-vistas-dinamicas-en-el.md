@@ -1,7 +1,7 @@
 ---
 title: Habilitadas las vistas dinámicas en el blog
 layout: post.amp
-permalink: /habilitadas-las-vistas-dinamicas-en-el/
+
 categories:
   - curiosidades
   - internet

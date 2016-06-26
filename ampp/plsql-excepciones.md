@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Excepciones'
 layout: post.amp
-permalink: /plsql-excepciones/
+
 categories:
   - BaseDeDatos
 tags:

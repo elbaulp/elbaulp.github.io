@@ -2,7 +2,7 @@
 title: 'Nueva guía: Oracle Magazine'
 
 layout: post.amp
-permalink: /nueva-guia-oracle-magazine/
+
 categories:
   - cursos
   - internet

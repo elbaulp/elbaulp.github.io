@@ -2,7 +2,7 @@
 title: 'Programación Android: Interfaz gráfica &#8211; Conceptos básicos'
 
 layout: post.amp
-permalink: /programacion-android-interfaz-grafica/
+
 categories:
   - android
   - opensource

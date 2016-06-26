@@ -2,7 +2,7 @@
 title: 'Crear un módulo para python con la Python C API (IV) &#8211; HerramientasRed'
 
 layout: post.amp
-permalink: /crear-modulo-python-con-python-c-api-4/
+
 categories:
   - C
   - python

@@ -2,7 +2,7 @@
 title: Curso de certificación Junior Level Linux Professional
 
 layout: post.amp
-permalink: /curso-de-certificacion-junior-level/
+
 categories:
   - cursos
   - linux

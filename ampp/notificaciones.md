@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones'
 layout: post.amp
-permalink: /programacion-android-interfaz-grafica_11/
+
 categories:
   - android
   - opensource

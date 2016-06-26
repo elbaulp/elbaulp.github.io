@@ -1,7 +1,7 @@
 ---
 title: Generar listas de reproducción de una determinada duración con Python
 layout: post.amp
-permalink: /generar-listas-de-reproduccion-determinada-duracion-python/
+
 categories:
   - python
 tags:

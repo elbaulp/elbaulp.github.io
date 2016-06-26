@@ -2,7 +2,7 @@
 title: Aceptamos BitCoins como método de donación
 
 layout: post.amp
-permalink: /aceptamos-bitcoins-como-metodo-de-donacion/
+
 categories:
   - noticias
 tags:

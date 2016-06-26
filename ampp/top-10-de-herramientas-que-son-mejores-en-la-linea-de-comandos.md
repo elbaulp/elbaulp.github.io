@@ -2,7 +2,7 @@
 title: 10 de las Mejores Herramientas en la Línea de Comandos
 
 layout: post.amp
-permalink: /top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/
+
 categories:
   - Articulos
   - linux

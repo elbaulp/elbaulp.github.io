@@ -2,7 +2,7 @@
 title: Liberada la versión 1.0 de htop
 
 layout: post.amp
-permalink: /liberada-la-version-10-de-htop/
+
 categories:
   - linux
   - opensource

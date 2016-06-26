@@ -2,7 +2,7 @@
 title: Evaluando el estado de la licencia GPL
 
 layout: post.amp
-permalink: /evaluando-el-estado-de-la-licencia-gpl/
+
 categories:
   - noticias
   - opensource

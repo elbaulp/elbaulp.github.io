@@ -1,7 +1,7 @@
 ---
 title: Vídeo tutorial programación Android
 layout: post.amp
-permalink: /video-tutorial-programacion-android/
+
 categories:
   - android
   - linux

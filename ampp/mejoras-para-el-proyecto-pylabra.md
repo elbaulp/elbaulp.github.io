@@ -1,7 +1,7 @@
 ---
 title: Mejoras para el proyecto PyLabra
 layout: post.amp
-permalink: /mejoras-para-el-proyecto-pylabra/
+
 categories:
   - aplicaciones
   - noticias

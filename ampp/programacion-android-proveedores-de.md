@@ -2,7 +2,7 @@
 title: 'Programación Android: Proveedores de Contenido &#8211; Introducción'
 
 layout: post.amp
-permalink: /programacion-android-proveedores-de/
+
 categories:
   - android
   - opensource

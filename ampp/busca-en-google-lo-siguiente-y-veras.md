@@ -2,7 +2,7 @@
 title: Busca en google lo siguiente y verás que pasa
 
 layout: post.amp
-permalink: /busca-en-google-lo-siguiente-y-veras/
+
 categories:
   - curiosidades
 main-class: "articulos"

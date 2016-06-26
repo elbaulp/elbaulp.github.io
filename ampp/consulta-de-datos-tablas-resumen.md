@@ -1,7 +1,7 @@
 ---
 title: 'Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle'
 layout: post.amp
-permalink: /consulta-de-datos-tablas-resumen/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

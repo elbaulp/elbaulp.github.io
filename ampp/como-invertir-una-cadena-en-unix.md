@@ -2,7 +2,7 @@
 title: Cómo invertir una cadena en Unix
 
 layout: post.amp
-permalink: /como-invertir-una-cadena-en-unix/
+
 categories:
   - How To
 tags:

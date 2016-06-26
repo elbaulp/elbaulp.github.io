@@ -2,7 +2,7 @@
 title: Vota por el logo que más te guste para El Baúl del Programador
 
 layout: post.amp
-permalink: /vota-por-el-logo-que-mas-te-guste-para-el-baul-del-programador/
+
 categories:
   - offtopic
 main-class: "articulos"

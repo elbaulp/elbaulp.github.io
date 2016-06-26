@@ -2,7 +2,7 @@
 title: Cómo instalar Bolt, un CMS rápido y sencillo
 
 layout: post.amp
-permalink: /instalacion-y-configuracion-de-bolt-un-cms-rapido-y-sencillo/
+
 categories:
   - How To
   - opensource

@@ -2,7 +2,7 @@
 title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
 description: "Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:"
 layout: post.amp
-permalink: /cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/
+
 categories:
   - Articulos
 tags:

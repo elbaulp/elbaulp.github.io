@@ -1,7 +1,7 @@
 ---
 title: Script resaltado sintaxis bash (Mejorado)
 layout: post.amp
-permalink: /script-resaltado-sintaxis-bash-mejorado/
+
 categories:
   - linux
   - script

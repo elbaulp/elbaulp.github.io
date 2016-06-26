@@ -1,7 +1,7 @@
 ---
 title: 'SSD ioDrive Octal: 6,2 GBytes/s'
 layout: post.amp
-permalink: /ssd-iodrive-octal-62-gbytess_21/
+
 categories:
   - Sin Categoria
 main-class: "articulos"

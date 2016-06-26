@@ -2,7 +2,7 @@
 title: Cuarto Hackathon de proyectos de software libre de la UGR
 
 layout: post.amp
-permalink: /cuarto-hackathon-de-proyectos-de/
+
 categories:
   - aplicaciones
   - hackathon

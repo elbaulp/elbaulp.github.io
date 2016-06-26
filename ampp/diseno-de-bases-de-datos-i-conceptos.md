@@ -1,7 +1,7 @@
 ---
 title: 'Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional'
 layout: post.amp
-permalink: /diseno-de-bases-de-datos-i-conceptos/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

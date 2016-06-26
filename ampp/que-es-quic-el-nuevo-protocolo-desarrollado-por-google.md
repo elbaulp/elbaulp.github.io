@@ -3,7 +3,7 @@ title: Qué es QUIC, el nuevo protocolo desarrollado por Google
 math: true
 modified: 2015-04-08T00:00:00+00:00
 layout: post.amp
-permalink: /que-es-quic-el-nuevo-protocolo-desarrollado-por-google/
+
 categories:
   - Security Now
 tags:

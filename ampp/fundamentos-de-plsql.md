@@ -1,7 +1,7 @@
 ---
 title: Fundamentos de PL/SQL
 layout: post.amp
-permalink: /fundamentos-de-plsql/
+
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"

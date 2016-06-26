@@ -1,7 +1,7 @@
 ---
 title: 'Crear miniaturas de imágenes [Mejorado]'
 layout: post.amp
-permalink: /crear-miniaturas-de-imagenes-mejorado/
+
 categories:
   - linux
   - script

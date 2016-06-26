@@ -1,7 +1,7 @@
 ---
 title: Colocar los botones sociales de jetpack al principio del artículo en WordPress
 layout: post.amp
-permalink: /colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/
+
 categories:
   - opensource
   - php

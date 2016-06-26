@@ -2,7 +2,7 @@
 title: Combatir los comentarios de spam en WordPress
 
 layout: post.amp
-permalink: /combatir-los-comentarios-de-spam-en-wordpress/
+
 categories:
   - Administracion de Servidores
 tags:

@@ -2,7 +2,7 @@
 title: 'Unhide Forensic Tool: Encuentra puertos y procesos ocultos'
 
 layout: post.amp
-permalink: /unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/
+
 categories:
   - aplicaciones
   - Hacking

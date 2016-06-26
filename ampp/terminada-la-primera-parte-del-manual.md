@@ -2,7 +2,7 @@
 title: Terminada la primera parte del manual Android
 
 layout: post.amp
-permalink: /terminada-la-primera-parte-del-manual/
+
 categories:
   - android
   - opensource

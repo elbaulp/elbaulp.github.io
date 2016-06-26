@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos &#8211; Control del acceso a los miembros de la clase'
 layout: post.amp
-permalink: /clases-y-objetos-control-del-acceso-los/
+
 categories:
   - C
 main-class: "dev"

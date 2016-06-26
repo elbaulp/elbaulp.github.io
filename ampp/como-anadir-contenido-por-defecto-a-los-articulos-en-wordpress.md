@@ -2,7 +2,7 @@
 title: Cómo añadir contenido por defecto a los artículos en WordPress
 
 layout: post.amp
-permalink: /como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/
+
 categories:
   - How To
   - php

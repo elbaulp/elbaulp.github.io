@@ -2,7 +2,7 @@
 title: 'Fundamentos programación Android: Ciclo de vida de los componentes'
 
 layout: post.amp
-permalink: /fundamentos-programacion-android-ciclo/
+
 categories:
   - android
   - opensource

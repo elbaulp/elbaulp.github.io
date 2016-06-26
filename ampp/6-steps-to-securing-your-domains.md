@@ -2,7 +2,7 @@
 title: 'Nueva guía: 6 Steps to Securing Your Domains'
 
 layout: post.amp
-permalink: /6-steps-to-securing-your-domains/
+
 categories:
   - cursos
 tags:

@@ -2,7 +2,7 @@
 title: 'Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag'
 
 layout: post.amp
-permalink: /solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/
+
 categories:
   - android
 tags:

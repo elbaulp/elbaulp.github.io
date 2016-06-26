@@ -2,7 +2,7 @@
 title: Grid Spacing en Android
 
 layout: post.amp
-permalink: /grid-spacing-en-android/
+
 categories:
   - android
   - Articulos

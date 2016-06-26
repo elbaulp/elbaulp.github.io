@@ -1,7 +1,7 @@
 ---
 title: Cómo instalar debian desde un USB
 layout: post.amp
-permalink: /iniciar-debian-desde-usb/
+
 categories:
   - How To
 tags:

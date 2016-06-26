@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL &#8211; Procedimientos y Funciones'
 layout: post.amp
-permalink: /plsql-procedimientos-y-funciones/
+
 categories:
   - BaseDeDatos
 tags:

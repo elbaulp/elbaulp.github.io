@@ -1,7 +1,7 @@
 ---
 title: Linea cronológica de distribuciones GNU/Linux 1992-2011
 layout: post.amp
-permalink: /linea-cronologica-de-distribuciones/
+
 categories:
   - curiosidades
   - linux

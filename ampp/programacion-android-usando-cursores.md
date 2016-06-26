@@ -2,7 +2,7 @@
 title: 'Programación Android: Usando cursores'
 
 layout: post.amp
-permalink: /programacion-android-usando-cursores/
+
 categories:
   - android
   - opensource

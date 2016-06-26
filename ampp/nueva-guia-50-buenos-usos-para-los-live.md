@@ -2,7 +2,7 @@
 title: 'Nueva Guía: 50 buenos usos para los Live CDs'
 
 layout: post.amp
-permalink: /nueva-guia-50-buenos-usos-para-los-live/
+
 categories:
   - curiosidades
   - cursos

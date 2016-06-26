@@ -2,7 +2,7 @@
 title: 'Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook'
 
 layout: post.amp
-permalink: /paperli-crea-tu-periodico-digital/
+
 categories:
   - internet
   - noticias

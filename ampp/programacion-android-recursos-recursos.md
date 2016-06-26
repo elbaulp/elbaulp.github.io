@@ -2,7 +2,7 @@
 title: 'Programación Android: Recursos &#8211; Recursos y cambios de configuración'
 
 layout: post.amp
-permalink: /programacion-android-recursos-recursos/
+
 categories:
   - android
   - opensource

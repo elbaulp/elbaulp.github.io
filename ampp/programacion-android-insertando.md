@@ -2,7 +2,7 @@
 title: 'Programación Android: Insertando registros'
 
 layout: post.amp
-permalink: /programacion-android-insertando/
+
 categories:
   - android
   - opensource

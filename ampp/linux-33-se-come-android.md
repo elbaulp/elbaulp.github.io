@@ -2,7 +2,7 @@
 title: Linux 3.3 se come a Android
 
 layout: post.amp
-permalink: /linux-33-se-come-android/
+
 categories:
   - android
   - linux
