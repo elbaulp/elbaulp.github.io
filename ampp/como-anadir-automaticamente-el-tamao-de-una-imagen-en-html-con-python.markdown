@@ -65,5 +65,5 @@ Espero que os resulte útil, he subido el script a [github](https://gist.github.
 
 ### Referencias
 
-How to save back changes made to a HTML file using BeautifulSoup in Python? \| [stackoverflow.com](http://stackoverflow.com/a/14369600/1612432 "How to save back changes made to a HTML file using BeautifulSoup in Python?")
-Replace SRC of all IMG elements using Parser \| [stackoverflow.com](http://stackoverflow.com/a/1579733/1612432 "Replace SRC of all IMG elements using Parser")
+- How to save back changes made to a HTML file using BeautifulSoup in Python? \| [stackoverflow.com](http://stackoverflow.com/a/14369600/1612432 "How to save back changes made to a HTML file using BeautifulSoup in Python?")
+- Replace SRC of all IMG elements using Parser \| [stackoverflow.com](http://stackoverflow.com/a/1579733/1612432 "Replace SRC of all IMG elements using Parser")
