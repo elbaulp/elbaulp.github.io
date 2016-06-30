@@ -23,20 +23,20 @@ layout: compress
                 <hr/>
                 {{ content }}
               {% endif %}
-              <h2>Quizá te interesen</h2>
-              <div class="google-ads">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-9043332344373532"
-                     data-ad-slot="8206940041"
-                     data-ad-format="autorelaxed"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
             </article>
             {% include share.html %}
+            <div class="google-ads">
+              <h2>Quizá te interesen</h2>
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-client="ca-pub-9043332344373532"
+                   data-ad-slot="8206940041"
+                   data-ad-format="autorelaxed"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
             <div class="near-posts">
             {% if page.next.url %}
               <a onClick="ga('send', 'event', 'next.url');" class="post-item" rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}">« {{ page.next.title | escape }}</a>
