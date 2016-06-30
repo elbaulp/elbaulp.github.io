@@ -30,8 +30,8 @@ _Enunciado: Una appMovimientoSonido que reconozca un patrón de movimientos de v
 En esta aplicación se usa el acelerómetro y el giroscopio, para mostrar sus valores por pantalla. El giroscopio es capaz de detectar una rotación del dispositivo, al hacerlo, reproduce un sonido. Por contra, el acelerómetro detecta una sacudida del dispositivo y reproduce un sonido distinto. Debido a que no en todos los dispositivos se obtienen valores precisos para los sensores, solo se mostrarán aquellos que tengan sentido.
 
 <figure>
-  <a href="/assets/img/npi/movementSound.png"><img src="/assets/img/npi/movementSound.png" title="Aplicación Movement Sound" alt="Aplicación Movement Sound" /></a>
-  <span class="image-credit">Aplicación Movement Sound</span>
+<a href="/assets/img/npi/movementSound.png"><amp-img src="/assets/img/npi/movementSound.png" title="Aplicación Movement Sound" alt="Aplicación Movement Sound" width="338px" height="600px" /></a>
+<span class="image-credit">Aplicación Movement Sound</span>
 </figure>
 
 ### Implementación
@@ -139,8 +139,8 @@ private void detectRotation(SensorEvent event) {
 ##### Permisos requeridos para el AndroidManifest
 
 ```xml
-<uses-permission android:name="android.hardware.sensor.gyroscope"/>
-<uses-permission android:name="android.hardware.sensor.accelerometer"/>
+<uses-permission android:name="android.hardware.sensor.gyroscope">
+</uses-permission><uses-permission android:name="android.hardware.sensor.accelerometer">
 ```
 
 
@@ -148,3 +148,4 @@ private void detectRotation(SensorEvent event) {
 
 - Código de la aplicación \| [github.com/algui91/movementSound](https://github.com/algui91/grado_informatica_npi/tree/master/Android/MovementSound)
 - AndroidWearMotionSensors \| [github.com/drejkim](https://github.com/drejkim/AndroidWearMotionSensors)
+</uses-permission>

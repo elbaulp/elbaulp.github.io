@@ -14,8 +14,8 @@ color: "#00BCD4"
 ---
 
 <figure>
-  <a href="/assets/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png"><img src="/assets/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: <a href="https://whispersystems.org/blog/whatsapp­complete/ " target="_blank" title="whispersystems.org blog">whispersystems.org</a></span>
+<a href="/assets/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png"><amp-img src="/assets/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="454px" /></a>
+<span class="image-credit">Crédito de la imagen: <a href="https://whispersystems.org/blog/whatsapp­complete/ " target="_blank" title="whispersystems.org blog">whispersystems.org</a></span>
 </figure>
 
 {% include toc.html %}
@@ -101,7 +101,7 @@ Para verificar que ambos tenéis el mísmo número basta con hacer click en la f
 Aún haciendo el paso anterior, nada nos protege si en algún momento las claves se ven comprometidas, para recibir notificaciones de seguridad hay que ir a los ajustes de nuestra cuenta de __WhatsApp__ y en la sección de seguridad activar la opción “Mostrar las notificaciones de seguridad”:
 
 <figure>
-  <a href="/assets/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg"><img src="/assets/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg"><amp-img src="/assets/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="480px" height="800px" /></a>
 </figure>
 
 ## Conclusión
@@ -123,4 +123,4 @@ Para quien quiera seguir leyendo sobre el tema:
 - [Artículo sobre Seguridad asíncrona en whispersystems.org](https://whispersystems.org/blog/asynchronous-security/ "Artículo sobre Seguridad asíncrona en whispersystems.org")
 - [Artículo sobre OTR en whispersystems.org](https://whispersystems.org/blog/simplifying-otr-deniability/ "Artículo sobre OTR en whispersystems.org")
 
-<iframe  src="https://www.youtube-nocookie.com/embed/tFzAMEye9Dk?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/tFzAMEye9Dk?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

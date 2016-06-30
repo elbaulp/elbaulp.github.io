@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <img src="/assets/img/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<amp-img src="/assets/img/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" />
 </figure>
 
 {% include toc.html %}
@@ -31,7 +31,7 @@ The following kit contents will help you get the most out of your Information Se
 - Encryption as an Enterprise Strategy
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_bund20" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_bund20" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].

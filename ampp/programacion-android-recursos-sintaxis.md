@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Independientemente del tipo de recurso (de string y layout son los dos que hemos visto hasta ahora), Todos los recursos Android están identificados (o referenciados) por sus ids en código fuente Java.
 
@@ -52,42 +52,20 @@ Si no se especifica ningún paquete en @\[package:\] (de ahí que en la represen
 Si especificamos android:type/name, el id referenciado será resuelto usando el paquete android y específicamente a través del archivo android.R.java. Podemos usar cualquier nombre de paquete java en el lugar de @[package:] para localizar el archivo R.java correcto y resolver la referencia al recurso en cuestión. Ahora que conocemos la sintaxis, vamos a analizar unos ejemplos. Nótese que la parte izquierda del ID android:id no es parte de la sintaxis. “android:id” simplemente indica que vamos a crear un id para un control como lo es el TextView.
 
 ```xml
-<textview android:id=”text”>
+<textview android:id="">
 <!-- Error de compilación, como id no tomará cadenas de texto sin formato. -->
-
-</textview><textview android:id=”@text”>
-
-
+</textview><textview android:id="">
 <!--  Sintaxis incorrecta.  No disponde de tipo y nombre-->
-
-
 <!--  debería ser @id/text, @+id/text o @string/string1-->
-
-
 <!--  obtendremos el siguiente error: “No resource type specified”-->
-
-</textview><textview android:id=”@id/text”>
-
-
+</textview><textview android:id="">
 <!--  Error: No hay ningún recurso que coincida con el id “text”-->
-
-
 <!--  a no ser que lo hayamos definido nosotros mismos con anterioridad.-->
-
-</textview><textview android:id=”@android:id/text”>
-
-
+</textview><textview android:id="">
 <!--  Error: el recurso no es público-->
-
-
 <!--  lo que indica que no hay tal identificación en android.R.id-->
-
-
 <!--  Por supuesto esto será válido si el archivo android R.java definió un id con este nombre.-->
-
-</textview><textview android:id=”@+id/text”>
-
-
+</textview><textview android:id="">
 <!-- Correcto: crea un id llamado text  en el paquete R.java local.-->
 </textview>
 ```

@@ -34,7 +34,7 @@ CREATE TABLE nombre tabla
   [PRIMARY KEY]
   [UNIQUE]
   [DEFAULT valor]
-  [check <condición>]
+  [check <condici>]
   [REFERENCES Nombre_tabla_ref (colref)[ON DELETE CASCADE]],...
 
   [Restricciones de la tabla]
@@ -72,9 +72,9 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
   * **Nombre\_tabla\_ref.** Es el nombre de la tabla a la que hace referencia la restricción REFERENCES.
   * **(colref [,&#8230;n]).** Es una columna o lista de columnas de la tabla a la que hace referencia la restricción REFERENCES.
   * **ON DELETE CASCADE.** Especifica qué acción tiene lugar en una fila de la tabla creada, si esa fila tiene una relación referencial y la fila a la que hace referencia se elimina en la tabla primaria. En nuestro caso si se elimina una fila de la tabla primaria, también se elimina las filas de la tabla desde donde se hace referencia.
-    Cuando la restricción de Integridad Referencial se realiza sobre la definición de un campo en la sentencia CREATE TABLE solo se utiliza la clausula REFERENCES, no se utiliza la clausula FOREIGN KEY; esta última se utiliza cuando la restricción se crea a nivel de tabla. </li>
+    Cuando la restricción de Integridad Referencial se realiza sobre la definición de un campo en la sentencia CREATE TABLE solo se utiliza la clausula REFERENCES, no se utiliza la clausula FOREIGN KEY; esta última se utiliza cuando la restricción se crea a nivel de tabla. 
 
-      * **CHECK.** Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.</ul>
+      * **CHECK.** Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.
 
     NOTA:
 
@@ -92,7 +92,7 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
 CREATE TABLE nombre tabla
 (nombrecol1 tipocol1
   [CONSTRAINT nombre_restricción]
-  [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check <condición>]
+  [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check </condici><condici>]
   [REFERENCES Nombre_tabla_ref (colref)[ON DELETE CASCADE]],...
   [Restricciones de la tabla]
 )
@@ -159,3 +159,4 @@ DESCRIBE nombre_tabla;
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/
 
 {% include toc.html %}
+</condici>

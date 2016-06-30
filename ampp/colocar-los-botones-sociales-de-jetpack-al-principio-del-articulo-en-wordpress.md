@@ -41,7 +41,7 @@ sharing_display()
 En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama ***content-single.php***. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:
 
 ```php
-<?php agregador_bitacoras_com('mini');  echo sharing_display(); ?>
+<?php agregador_bitacoras_com('mini');  echo sharing_display(); ??>
 
 ```
 

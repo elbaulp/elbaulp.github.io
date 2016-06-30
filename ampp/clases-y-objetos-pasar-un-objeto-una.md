@@ -46,7 +46,7 @@ está fuera de ámbito y se libera la memoria que ocupaba. En este caso, se asig
 
 ```cpp
 int funcion(int* parml); // declaración
-funcion (&arg1);         // llamada
+funcion (&arg1;);         // llamada
 int funcion (int * parm) // definición
 {
   cout < < *parm << 'n';
@@ -56,8 +56,8 @@ int funcion (int * parm) // definición
 
 ```
 
-Se pasa a la función no arg, sino &arg, la dirección de arg. La dirección de arg,  
-&arg, se pasa por valor, y la función recibe una copia de ésta en parm. La función  
+Se pasa a la función no arg, sino &arg;, la dirección de arg. La dirección de arg,  
+&arg;, se pasa por valor, y la función recibe una copia de ésta en parm. La función  
 accede, por tanto, a la dirección de arg a través de la copia que recibe, y de este modo  
 puede o no modificar el valor de arg. En este caso, se asigna el valor 88 a la dirección  
 apuntada por parm, 88 es por tanto asignado a arg.

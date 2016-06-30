@@ -44,18 +44,9 @@ Empecemos con *popCount*:
 
 #if ! TEST
         #define NBITS 20
-        #define SIZE (1<<NBITS) //Tamaño suficiente para tiempo apreciable
-        unsigned lista[SIZE];
-        #define RESULT 10485760
-#else
-        #define SIZE 4
-        unsigned lista[SIZE] = {0x80000000, 0x00100000, 0x00000800, 0x00000001};
-        #define RESULT 4
-#endif
-
-#include <stdio.h>      // para printf()
+        #define SIZE (1<<nbits><stdio.h>      // para printf()
 #include <stdlib.h>     // para exit()
-#include <sys/time.h>   // para gettimeofday(), struct timeval
+#include <sys>time.h>   </sys>/ para gettimeofday(), struct timeval
 #define WSIZE 8*sizeof(int)
 int resultado = 0;
 
@@ -208,9 +199,9 @@ void crono(int (*func)(), char* msg) {
         struct timeval tv1, tv2; // gettimeofday() secs-usecs
         long tv_usecs; // y sus cuentas
 
-        gettimeofday(&tv1, NULL);
+        gettimeofday(&tv1;, NULL);
         resultado = func(lista, SIZE);
-        gettimeofday(&tv2, NULL);
+        gettimeofday(&tv2;, NULL);
 
         tv_usecs = (tv2.tv_sec - tv1.tv_sec) * 1E6 + (tv2.tv_usec - tv1.tv_usec);
 #if ! COPY_PASTE_CALC
@@ -274,15 +265,15 @@ A fin de conseguir unos resultados estadísticamente aceptables, el programa se 
 gcc -O<n> -Wall -m32 -fno-omit-frame-pointer pesoHamming_C.c -o pesoHamming_C
 ```
 
-Donde ***<n>*** es el nivel de optimización.
+Donde ***</n><n>*** es el nivel de optimización.
 
 Introdujimos los resultados de los tiempos de ejecución en una hoja de cálculo para crear una tabla comparativa con gráficos:
 
-[<img src="/assets/img/2012/12/Screenshot-from-2012-12-17-2207421-1024x677.png" alt="Screenshot from 2012-12-17 22:07:42"   />][1]{.thumbnail}
+[<amp-img src="/assets/img/2012/12/Screenshot-from-2012-12-17-2207421-1024x677.png" alt="Screenshot from 2012-12-17 22:07:42" width="1024px" height="677px" />][1]{.thumbnail}
 
 Y creamos las gráficas:
 
-[<img src="/assets/img/2012/12/Screenshot-from-2012-12-17-2308081-300x296.png" alt="Gráfica tiempo ejecución popcount"   />][2]{.thumbnail}
+[<amp-img src="/assets/img/2012/12/Screenshot-from-2012-12-17-2308081-300x296.png" alt="Gráfica tiempo ejecución popcount" width="300px" height="296px" />][2]{.thumbnail}
 
 La diferencia de resultados es notoria, se aprecia que la mejor optimización se consigue con **O1** u **O2**, siendo la versión **popcount7** la más eficiente.
 
@@ -308,19 +299,9 @@ El caso del cálculo de la paridad es similar, en esta caso simplemente proporci
 
 #if ! TEST
 #define NBITS 20
-#define SIZE (1<<NBITS) /*Tamaño suficiente para tiempo apreciable*/
-unsigned lista[SIZE];
-#define RESULT 10485760
-#else
-#define SIZE 8
-//unsigned lista[SIZE] = {0x80000000, 0x00100000, 0x00000800, 0x00000001};
-//unsigned lista[SIZE] = {0x7fffffff, 0xffefffff, 0xfffff7ff, 0xfffffffe, 0x01000024,
-//    0x00356700, 0x8900ac00, 0x00bd00ef};
-#endif
-
-#include <stdio.h>      // para printf()
+#define SIZE (1<</n></stdlib.h></stdio.h></nbits><nbits><stdio.h>      // para printf()
 #include <stdlib.h>     // para exit()
-#include <sys/time.h>   // para gettimeofday(), struct timeval
+#include <sys>time.h>   </sys>/ para gettimeofday(), struct timeval
 #define WSIZE 8*sizeof(int)
 //#define SIZE (1<<20)  // tamaño suficiente para tiempo apreciable
 //unsigned lista[SIZE]; // = { 0x01010101 }; // 0x00000003, 0x00000003};
@@ -459,9 +440,9 @@ void crono(int (*func)(), char* msg) {
     struct timeval tv1, tv2; // gettimeofday() secs-usecs
  long tv_usecs; // y sus cuentas
 
- gettimeofday(&tv1, NULL);
+ gettimeofday(&tv1;, NULL);
  resultado = func(lista, SIZE);
-    gettimeofday(&tv2, NULL);
+    gettimeofday(&tv2;, NULL);
 
    tv_usecs = (tv2.tv_sec - tv1.tv_sec) * 1E6 + (tv2.tv_usec - tv1.tv_usec);
 #if ! COPY_PASTE_CALC
@@ -494,10 +475,6 @@ int main() {
 Para todo aquel interesado, tengo permiso para distribuir el guión bajo licencia creative commons desarrollado por los profesores Francisco Javier Fernández Baldomero y Mancia Anguita López del departamento de <a href="http://atc.ugr.es/" target="_blank">Arquitectura y Tecnología de Computadores</a> de la Universidad de Granada.
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-2a-tutorial/" rel="nofollow"> Download &ldquo;Practica 2a Tutorial&rdquo; <small>Practica-2a-Tutorial.pdf &ndash; Downloaded 594 times &ndash; </small> </a>
-
-
-
-
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-2b-guion/" rel="nofollow"> Download &ldquo;Practica 2b Guion&rdquo; <small>Practica-2b-Guion.pdf &ndash; Downloaded 411 times &ndash; </small> </a>
 
 
@@ -506,3 +483,4 @@ Para todo aquel interesado, tengo permiso para distribuir el guión bajo licenci
  [2]: /assets/img/2012/12/Screenshot-from-2012-12-17-2308081.png
 
 {% include toc.html %}
+</stdlib.h></stdio.h></nbits>

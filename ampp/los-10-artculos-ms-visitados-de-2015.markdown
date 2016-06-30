@@ -11,8 +11,8 @@ color: "#F57C00"
 {% include toc.html %}
 
 <figure>
-  <a href="/assets/img/los10articulosmasvisitados2015.png"><img src="/assets/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: Buffer</span>
+<a href="/assets/img/los10articulosmasvisitados2015.png"><amp-img src="/assets/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="512px" /></a>
+<span class="image-credit">Crédito de la imagen: Buffer</span>
 </figure>
 
 Prácticamente hemos terminado este 2015. Llegadas estas fechas, me gusta acudir a las estadísticas para sacar conclusiones y ver qué artículos han gustado más. Abajo se muestra una lista con los 10 más visitados. ¿Y a tí, qué artículo del blog ha sido el que más te ha gustado?, déjanos un comentario con tu opinión.

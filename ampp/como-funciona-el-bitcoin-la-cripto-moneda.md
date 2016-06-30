@@ -88,7 +88,7 @@ Así que, el sistema está diseñado para escalar correctamente y crear una mone
 
 Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más claro cómo funciona el bitcoin. Personalmente a mi me llamó mucho la atención cómo se ha estructurado este sistema de forma que no esté sujeto al estado de ningún país, es seguro desde el punto de vista criptográfico y además, una moneda real totalmente anónima. No dudes en dirigirte a bitcoin.org para obtener más información. A continuación dejo el podcast del episodio original de [Security Now!][1]. Si estás interesado en las traducciones que hago de este programa, puedes suscribirte al feed RSS específico para Security now en la página [Feed/Rss][5].
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 #### Referencias
 

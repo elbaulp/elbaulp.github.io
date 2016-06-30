@@ -16,7 +16,7 @@ format: link
 main-class: "articulos"
 color: "#F57C00"
 ---
-[<img  title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt=""  />][1]
+[<amp-img title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.
 
@@ -32,11 +32,9 @@ El gran Alejandro Ramos está escribiendo una serie de artículos explicando té
 
 Seguimos hablando de seguridad, esta vez en el blog de Chema Alonso:  
 <!--ad-->
-
 <p style="padding-left: 30px;">
   Quien use o haya usado Blogger sabe que la url a la que se redirecciona cuando se previsualiza una entrada antes de publicarla es un tanto abstracta, ya que no puede ser predecible. ¿Será cierto?, compruébalo en <a title="Minority Report: Pre-visualizando el futuro de Blogger" href="http://www.elladodelmal.com/2012/08/minority-report-pre-visualizando-el.html" target="_blank">Minority Report: Pre-visualizando el futuro de Blogger</a>
 </p>
-
 <p style="padding-left: 30px;">
   A día de hoy somos muchos los que usamos redes sociales, sobre todo facebook, pero pocos son los que se detienen a revisar los permisos que conceden a las aplicaciones de la red social por excelencia. Chema habla en <a title="Aplicaciones de Facebook y Privacidad" href="http://www.elladodelmal.com/2012/08/aplicaciones-de-facebook-y-privacidad-2.html" target="_blank">Aplicaciones de Facebook y Privacidad</a> de los peligros que este mal hábito puede conllevar.
 </p>

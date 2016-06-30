@@ -10,7 +10,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 <figure>
-  <img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" />
+<amp-img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
 </figure>
 
 {% include toc.html %}
@@ -19,7 +19,7 @@ color: "#E64A19"
 
 Esta vez vamos a hacer las cosas al revés, en el vídeo se muestra el resultado de la aplicación. Permite realizar presentaciones, ya sean _PDFs_ o _Power Points_ mediante la detección de gestos del usuario. Por defecto el esqueleto aparece en rojo. Esto significa que el procesamiento de gestos está desactivado. Mediante un pequeño gesto, se activa y el esqueleto se vuelve verde. A partir de ahora, doblando el codo derecho, avanzaremos una transparencia, mientras que con el codo izquierdo retrocedemos.
 
-<iframe  src="https://www.youtube.com/embed/Ws7lxY2jPUE" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Ws7lxY2jPUE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 El código está en [github](https://github.com/algui91/grado_informatica_npi), y la práctica la hemos realizado Cristina H.G y Alejandro Alcalde.
 {: .notice-info }
@@ -54,29 +54,29 @@ public enum JointRelationship
 La relación por defecto usada en el ejemplo se define en el siguiente fichero _XML_
 ```xml
 
-<Gestures GestureResetTimeout="500">
-  <Gesture Description="Previous Bullet" MaxExecutionTime="1000" MappedKeyCode="PRIOR">
-    <GestureComponent FirstJoint="WristLeft" SecondJoint="HipLeft" EndingRelationship="BelowAndLeft" BeginningRelationship="AboveAndLeft" />
-  </Gesture>
-  <Gesture Description="Next Bullet" MaxExecutionTime="1000" MappedKeyCode="NEXT">
-    <GestureComponent FirstJoint="WristRight" SecondJoint="HipRight" EndingRelationship="BelowAndRight" BeginningRelationship="AboveAndRight" />
-  </Gesture>
-</Gestures>
+<gestures gestureresettimeout="500">
+<gesture description="Previous Bullet" maxexecutiontime="1000" mappedkeycode="PRIOR">
+<gesturecomponent firstjoint="WristLeft" secondjoint="HipLeft" endingrelationship="BelowAndLeft" beginningrelationship="AboveAndLeft">
+</gesturecomponent></gesture>
+<gesture description="Next Bullet" maxexecutiontime="1000" mappedkeycode="NEXT">
+<gesturecomponent firstjoint="WristRight" secondjoint="HipRight" endingrelationship="BelowAndRight" beginningrelationship="AboveAndRight">
+</gesturecomponent></gesture>
+</gestures>
 
 ```
 
-Jugando con los atributos de la etiqueta `<GestureComponent>` es posible cambiar el tipo de gesto que reconocerá el programa, tanto articulaciones como la relación entre ellas, o usar solo una única articulación.
+Jugando con los atributos de la etiqueta `<gesturecomponent>` es posible cambiar el tipo de gesto que reconocerá el programa, tanto articulaciones como la relación entre ellas, o usar solo una única articulación.
 
 Antes de comenzar una presentación en Power Point, o un PDF, hay que realizar un gesto que active el procesamiento. Para ello se ha definido un nuevo gesto consistente en desplazar la rodilla a la derecha del hombro derecho. Y su homólogo izquierdo para desactivar el procesamiento. Esto se define en el xml:
 
 ```xml
 
-<Gesture Description="Ready Position" MaxExecutionTime="1000" MappedKeyCode="ACCEPT">
-  <GestureComponent FirstJoint="KneeRight" SecondJoint="ShoulderRight" EndingRelationship="LeftOf" BeginningRelationship="RightOf" />
-</Gesture>
-<Gesture Description="Cancel Position" MaxExecutionTime="1000" MappedKeyCode="CANCEL">
-  <GestureComponent FirstJoint="KneeLeft" SecondJoint="ShoulderLeft" EndingRelationship="RightOf" BeginningRelationship="LeftOf" />
-</Gesture>
+<gesture description="Ready Position" maxexecutiontime="1000" mappedkeycode="ACCEPT">
+</gesture></gesturecomponent><gesturecomponent firstjoint="KneeRight" secondjoint="ShoulderRight" endingrelationship="LeftOf" beginningrelationship="RightOf">
+
+<gesture description="Cancel Position" maxexecutiontime="1000" mappedkeycode="CANCEL">
+</gesture></gesturecomponent><gesturecomponent firstjoint="KneeLeft" secondjoint="ShoulderLeft" endingrelationship="RightOf" beginningrelationship="LeftOf">
+
 
 ```
 
@@ -113,3 +113,4 @@ Se intentó hacer uso de la distancia Euclídea para establecer umbrales de tal 
 ### Referencias
 
 [1] - Walt Smith, Simple Gesture Processing using the Kinect for Windows | [code.msdn.microsoft.com]( https://code.msdn.microsoft.com/Simple-Gesture-Processing-097c5527)
+</gesturecomponent>

@@ -21,7 +21,7 @@ color: "#F57C00"
 ---
 
 <figure>
-  <a href="/assets/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png"><img src="/assets/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png"><amp-img src="/assets/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png" title="{{ page.title }}" alt="{{ page.title }}" width="468px" height="239px" /></a>
 </figure>
 
 **QUIC** es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña *FAQ* (Frequently Asked Questions) en *Google Drive*, al parecer dicha *FAQ* es autoría del propio grupo de desarrollo de *QUIC*, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en [Qué es QUIC, el nuevo protocolo desarrollado por Google][1].
@@ -92,7 +92,7 @@ cache-control: private, max-age=0
 content-type: text/html; charset=ISO-8859-1
 date: Thu, 30 Oct 2014 12:18:06 GMT
 expires: -1
-p3p: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."
+p3p: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer;=151657 for more info."
 server: gws
 set-cookie: PREF=ID=0a30ac3a5dbcfef5:FF=0:TM=1414671486:LM=1414671486:S=v_Z2N_ZyX1n_uoLc; expires=Sat, 29-Oct-2016 12:18:06 GMT; path=/; domain=.google.es
 x-frame-options: SAMEORIGIN
@@ -156,7 +156,7 @@ Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits u
 ##### ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"  title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><amp-img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" title="{{ page.title }}" alt="{{ page.title }}" width="370px" height="118px" /></a>
 </figure>
 
 **Header: CID**. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga $$2^{32}$$ conexiones concurrentes, habrá un 50\% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de $$2^{32}$$ en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.
@@ -165,7 +165,7 @@ Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits u
 
 **Header: Packet Sequence Number**. Además de secuenciar paquetes, mirar por duplicaciones y comunicar qué paquetes faltan, éste número es una parte crítica para el cifrado. Éste número es la base de las IV que se usan para descifrar cada paquete. Como resultado, conceptualmente debe ser grande, ya que no debe repetirse durante el periodo de una conexión. Por eso el tamaño conceptual del número de secuencia debe ser grande, unos $$2^{64}$$ (Más paquetes de los que cualquier conexión enviará), sin embargo, normalmente no es necesario proporcionar los 8 bytes en cada paquete.
 
-En cualquier momento dado, solo habrá un numero finito (pequeño) depaquetes de secuencia que no hayan sido admitidos. Ésta restricción es una consecuencia natural del hecho de que el emisor debe mantener un buffer con datos para los paquetes pendientes, y la memoria del emisor es finita. Además, se ha optado por no “retransmitir” los paquetes perdidos, en su lugar, se ���reempaqueta” su contenido en paquetes posteriores. Como resultado, el receptor comunicará que no ha recibido un paquete, y el emisor notificará al receptor para que “deje de esperar” al paquete, y por tanto el margen de paquetes no admitidos estará siempre acotado. Basándonos en esta restricción, un emisor puede reducir significativamente el número de bytes necesarios para expresar el número de secuencia del paquete (usando los Flags públicos).
+En cualquier momento dado, solo habrá un numero finito (pequeño) depaquetes de secuencia que no hayan sido admitidos. Ésta restricción es una consecuencia natural del hecho de que el emisor debe mantener un buffer con datos para los paquetes pendientes, y la memoria del emisor es finita. Además, se ha optado por no “retransmitir” los paquetes perdidos, en su lugar, se ���reempaqueta��� su contenido en paquetes posteriores. Como resultado, el receptor comunicará que no ha recibido un paquete, y el emisor notificará al receptor para que “deje de esperar” al paquete, y por tanto el margen de paquetes no admitidos estará siempre acotado. Basándonos en esta restricción, un emisor puede reducir significativamente el número de bytes necesarios para expresar el número de secuencia del paquete (usando los Flags públicos).
 
 Por ejemplo, supongamos que los paquetes se transmiten mediante TCP con control de congestión, y el margen de congestión actual es de 20 paquetes. Si se pierde un paquete, dentro de 1 RTT, o unos 20 paquetes adicionales, el receptor será informado de que un paquete perdido ya no está pendiente. Como resultado, el emisor puede continuar enviando solo el byte de menor peso (8bits) del número de secuencia del paquete (64bits). El receptor puede deducir fácilmente basándose en esos bits, qué valor deberían tener los 56 bits restantes, y puede usarlos posteriormente para descifrar el paquete.
 
@@ -291,7 +291,7 @@ Todos los frames comienzan con un byte que especifica su tipo, pero se espera po
 La captura realizada fue la siguiente:
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png"><amp-img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png" title="{{ page.title }}" alt="{{ page.title }}" width="1920px" height="1080px" /></a>
 </figure>
 
 Se procederá a mostrar algunas capturas más detalladas de la cabecera únicamente, ya que el resto del paquete está cifrado, sin embargo, a lo largo de éste documento se ha detallado cómo sería la estructura del payload una vez descifrado.
@@ -301,7 +301,7 @@ Como se mostró más arriba, la cabecera del primer paquete indica que el paquet
 ##### ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png"><amp-img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png" title="{{ page.title }}" alt="{{ page.title }}" width="370px" height="118px" /></a>
 </figure>
 
 Dicha información se encuentra aquí:
@@ -309,7 +309,7 @@ Dicha información se encuentra aquí:
 ##### Información sobre la versión a usar
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png"><amp-img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png" title="{{ page.title }}" alt="{{ page.title }}" width="594px" height="244px" /></a>
 </figure>
 
 También se puede apreciar en la captura el número de secuencia y el identificador de conexión. Si escogemos cualquier otro paquete que no sea el primero, se comprobará que el bit que especifica si existe la versión está desactivado:
@@ -317,7 +317,7 @@ También se puede apreciar en la captura el número de secuencia y el identifica
 ##### Paquetes distintos al primero
 
 <figure>
-  <a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png"><img  src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png"><amp-img src="/assets/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png" title="{{ page.title }}" alt="{{ page.title }}" width="596px" height="246px" /></a>
 </figure>
 
 Y por tanto no aparece información relevante respecto a qué versión se usa.

@@ -19,8 +19,8 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-  <a href="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg"><img src="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: pixabay.com</span>
+<a href="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg"><amp-img src="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="640px" /></a>
+<span class="image-credit">Crédito de la imagen: pixabay.com</span>
 </figure>
 
 Éste artículo tiene su origen en una pregunta a la que respondí en *serverfault*, el usuario preguntaba *How to detect exceptionally long file locks in linux?*. Aunque mi respuesta no solucionó su problema, creo que la explicación puede ser de utilidad para alguien. A continuación escribo la traducción de mi respuesta al usuario:

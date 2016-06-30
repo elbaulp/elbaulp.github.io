@@ -17,7 +17,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.
 
@@ -49,29 +49,10 @@ En este caso, vamos a crear un layout personalizado para mostrar el Toast:
 
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
-<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/toastLayout"
-  android:orientation="horizontal"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:padding="10dp"
-  android:background="#DAAA"
-  >
-
-  <imageview android:layout_width="48px"
-    android:layout_height="48px"
-    android:src="@drawable/ok"
-    android:padding="5dip"
-    android:id="@+id/ok"/>
-
-  <textview android:id="@+id/textview"
-    android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:text="Toast con layout personalizado"
-    android:textColor="#fff"
-    android:gravity="center_vertical|center_horizontal"/>
-
-</linearlayout>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/toastLayout" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10dp" android:background="#DAAA">
+<imageview android:layout_width="48px" android:layout_height="48px" android:src="@drawable/ok" android:padding="5dip" android:id="@+id/ok">
+<textview android:id="@+id/textview" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Toast con layout personalizado" android:textcolor="#fff" android:gravity="center_vertical|center_horizontal">
+</textview></imageview></linearlayout>
 
 ```
 
@@ -96,10 +77,10 @@ toast.show();
 Listo, al ejecutar la aplicación tendremos un Toast como este:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="Toast notification Android " title="Toast notification Android" border="0" height="400" width="240" src="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png" /></a>
+<a href="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img alt="Toast notification Android " title="Toast notification Android" border="0" height="400" width="240" src="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png" /></a>
 </div>
 
-Para saber más acerca de los mensajes toast puede visitar: <http://developer.android.com/guide/topics/ui/notifiers/toasts.html>
+Para saber más acerca de los mensajes toast puede visitar: <http:>
 
 ### Notificaciones en la barra de estado
 
@@ -138,10 +119,10 @@ mNotificationManager.notify(HELLO_ID, notification);
 El resultado es el siguiente:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img title="notification bar Android" alt="notification bar Android" border="0" height="400" width="240" src="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png" /></a>
+<a href="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img title="notification bar Android" alt="notification bar Android" border="0" height="400" width="240" src="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png" /></a>
 </div>
 
-Al igual que los Toast, se puede crear un layout personalizado, para más información visite: <http://developer.android.com/guide/topics/ui/notifiers/notifications.html>
+Al igual que los Toast, se puede crear un layout personalizado, para más información visite: </http:><http:>
 
 ### Diálogos
 
@@ -188,7 +169,7 @@ dialog.show();
 ```
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="alertDialog Android" title="AlertDialog android" border="0" height="400" width="240" src="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png" /></a>
+<a href="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img alt="alertDialog Android" title="AlertDialog android" border="0" height="400" width="240" src="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png" /></a>
 </div>
 
 También vamos a ver un ProgressDialog, indefinido (Que nunca termina).
@@ -206,7 +187,7 @@ ProgressDialog.show(
 Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de &#8220;atrás&#8221; del terminal.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png" /></a>
+<a href="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="400" width="240" src="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png" /></a>
 </div>
 
 Se puede descargar el proyecto de esta entrada aquí:
@@ -222,3 +203,4 @@ Se puede descargar el proyecto de esta entrada aquí:
 
 
 {% include toc.html %}
+</http:>

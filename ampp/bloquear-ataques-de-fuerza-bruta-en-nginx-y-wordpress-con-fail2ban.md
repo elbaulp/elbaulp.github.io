@@ -16,7 +16,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 <figure>
-  <a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><amp-img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="600px" /></a>
 </figure>
 
 Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada ***Fail2Ban***, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar **Fail2Ban** para bloquear el acceso a nuestra máquina a robots atacando por [fuerza bruta][1] a *WordPress* y al servidor web *[Nginx][2]*
@@ -63,7 +63,7 @@ Ahora queda añadir el filtro para esta regla, en el archivo *filter.d/nginx-wp-
 ```bash
 [Definition]
 
-failregex = <HOST>.*] "POST /wp-login.php
+failregex = <host>.*] "POST /wp-login.php
 ignoreregex =
 
 ```
@@ -141,7 +141,7 @@ Y sus correspondientes filtros en */etc/fail2ban/filter.d/* (Cada uno en un fich
 # 192.168.1.1 - - "GET http://www.something.com/
 #
 [Definition]
-failregex = ^<HOST> -.*GET http.*
+failregex = ^</host><host> -.*GET http.*
 ignoreregex =
 
 # Noscript filter /etc/fail2ban/filter.d/nginx-noscript.conf:
@@ -152,7 +152,7 @@ ignoreregex =
 # 192.168.1.1 - - "GET /something.php
 #
 [Definition]
-failregex = ^<HOST> -.*GET.*(\.php|\.asp|\.exe|\.pl|\.cgi|\scgi)
+failregex = ^</host><host> -.*GET.*(\.php|\.asp|\.exe|\.pl|\.cgi|\scgi)
 ignoreregex =
 
 #
@@ -162,9 +162,9 @@ ignoreregex =
 #
 [Definition]
 
-failregex = no user/password was provided for basic authentication.*client: <HOST>
-            user .* was not found in.*client: <HOST>
-            user .* password mismatch.*client: <HOST>
+failregex = no user/password was provided for basic authentication.*client: </host><host>
+            user .* was not found in.*client: </host><host>
+            user .* password mismatch.*client: </host><host>
 
 ignoreregex =
 
@@ -175,7 +175,7 @@ ignoreregex =
 #
 # Scan access log for HTTP 200 + POST /sessions => failed log in
 [Definition]
-failregex = ^<HOST> -.*POST /sessions HTTP/1\.." 200
+failregex = ^</host><host> -.*POST /sessions HTTP/1\.." 200
 ignoreregex =
 
 ```
@@ -203,3 +203,4 @@ mta = sendmail
  [2]: /como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
 
 {% include toc.html %}
+</host>

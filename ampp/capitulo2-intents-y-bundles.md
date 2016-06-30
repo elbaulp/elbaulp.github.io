@@ -14,7 +14,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el conocido [Hola Mundo][1], en esta entrada, vamos a ver como crear varias [actividades][2] y cómo hacer que se pasen parámetros las unas a las otras.
 
@@ -31,26 +31,11 @@ Voy a explicar un poco por encima que hace cada fichero del proyecto:
 
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
-<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
- <textview android:id="@+id/textView1"
-           android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/hello" />
-
- <button android:id="@+id/button1"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/cadena1" />
-
- <button android:id="@+id/button2"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/cadena2" />
-</linearlayout>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+<textview android:id="@+id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello">
+<button android:id="@+id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cadena1">
+</button><button android:id="@+id/button2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cadena2">
+</button></textview></linearlayout>
 
 
 ```
@@ -61,27 +46,11 @@ En este layout principal vamos a añadir dos botones que nos servirán para lanz
 
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
-<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
- android:orientation="vertical"
- android:layout_width="fill_parent"
- android:layout_height="fill_parent">
-
- <textview android:id="@+id/textView1"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/cadena1" />
-
- <textview android:id="@+id/params"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/hello" />
-
- <button android:id="@+id/boton"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/cadena1" />
-
-</linearlayout>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+<textview android:id="@+id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cadena1">
+</textview><textview android:id="@+id/params" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello">
+<button android:id="@+id/boton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cadena1">
+</button></textview></linearlayout>
 
 
 ```

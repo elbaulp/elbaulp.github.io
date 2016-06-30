@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 En Android, cada pantalla de una aplicación habitualmente se carga desde un fichero XML que actua de recurso. Un recurso layout es un recurso clave que se usa en Android para componer la UI de nuestra aplicación. Vamos a considerar el segmenteo de código siguiente como ejemplo de una [actividad][1] en Android.
 
@@ -35,21 +35,10 @@ La línea ***setContentView(R.layout.main);*** señala que hay una clase estáti
 
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
-<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <textview android:id="@+id/text1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-    <button android:id="@+id/b1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello"/>
-
-</linearlayout>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+<textview android:id="@+id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello">
+<button android:id="@+id/b1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello">
+</button></textview></linearlayout>
 
 ```
 
@@ -80,9 +69,7 @@ tv.setText("Texto para el TextView")
 En este ejemplo, hemos localizado el TextView usando el método ***findViewById()*** de la clase Activity. La constante *R.id.text1* corresponde al ID definido para el TextView en el fichero XML, que creamos de la siguiente manera:
 
 ```xml
-<textview android:id="@+id/text1"
-....
-/>
+<textview android:id="@+id/text1">
 
 ```
 
@@ -100,3 +87,4 @@ El valor del atributo id, indica que la constante llamada text1 será usada para
  [2]: /programacion-android-recursos-sintaxis/
 
 {% include toc.html %}
+</textview>

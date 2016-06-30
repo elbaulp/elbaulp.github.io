@@ -30,18 +30,14 @@ textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
 <p id="localstorage-message">
   Guardar un texto en el lado cliente.
 </p>
-
-<textarea id="ta" placeholder="Escribe tu texto aquí..."></textarea>  
+<textarea id="ta" placeholder="Escribe tu texto aquí..."></textarea>
 <button id="save-ta">Guardar</button>
-
 <p id="ta-log">
-  <p>
-  </p>
-
-  <hr />
-
-  <div>
-    <h2>
+</p><p>
+</p>
+<hr />
+<div>
+<h2>
       Web SQL Database
     </h2>
 
@@ -54,25 +50,19 @@ db.<b>transaction</b>(function(tx) {
 ```
 
     <div class="center" id="websqldb-example">
-      <input type="text" id="todoitem" /><br /> <button onclick="webSqlSample.newRecord()">Nuevo elemento</button><br /> <button onclick="webSqlSample.createTable()">Crear tabla</button><br /> <button onclick="webSqlSample.dropTable()">Borrar tabla</button> </p>
-
-      <p>
+<input type="text" id="todoitem" /><br /> <button onclick="webSqlSample.newRecord()">Nuevo elemento</button><br /> <button onclick="webSqlSample.createTable()">Crear tabla</button><br /> <button onclick="webSqlSample.dropTable()">Borrar tabla</button> 
+<p>
         Vea la base de datos generada en: Developer > Developer Tools > Storage
       </p>
-
-      <ul class="record-list" id="db-results">
-      </ul>
-
-      <div id="db-log">
-      </div></p>
-    </div>
-
-    <p>
-      </div>
-
-      <hr />
-
-      <h2>
+<ul class="record-list" id="db-results">
+</ul>
+<div id="db-log">
+</div>
+</div>
+<p>
+</p></div>
+<hr />
+<h2>
         WebSocket
       </h2>
 
@@ -89,42 +79,33 @@ socket.<b>onclose</b> = function(event) { alert('closed'); }
       <p id="websockets-message">
         Comunicación Full-duplex, bi-direccional sobre la Web:<br /> Tanto el servidor como el cliente pueden enviar datos en cualquier momento, o incluso al mismo tiempo.<br /> Sólo se envian los datos en sí, sin la sobrecarga de cabeceras HTTP, lo que reduce<br /> el consumo de ancho de banda.
       </p>
-
-      <div id="ws-left">
-        Utilice el echo de demostración a continuación para probar una conexión WebSocket en su navegador.<br /> Tanto el mensaje que se envía y la respuesta que reciba son sobre la misma conexión WebSocket.</p>
-
-        <div id="ws-config-location">
-          <h4>
+<div id="ws-left">
+        Utilice el echo de demostración a continuación para probar una conexión WebSocket en su navegador.<br /> Tanto el mensaje que se envía y la respuesta que reciba son sobre la misma conexión WebSocket.
+<div id="ws-config-location">
+<h4>
             Location:
           </h4>
-
-          <p>
-            <input type="text" id="wsUri" disabled /><br /> <br /> <br /> <input type="checkbox" id="wsSecureCb" onclick="wsToggleTls();" disabled /><br /> <label id="wsSecureCbLabel" for="wsSecureCb">Use secure WebSocket (TLS/SSL)</label><br /> <br /> <br /> <button id="wsConnectBut" disabled>Conectar</button><br /> <button id="wsDisconnectBut" disabled>Desconectar</button> </div>
-
-            <div id="ws-config-message">
-              <h4>
+<p>
+<input type="text" id="wsUri" disabled="disabled" /><br /> <br /> <br /> <input type="checkbox" id="wsSecureCb" onclick="wsToggleTls();" disabled="disabled" /><br /> <label id="wsSecureCbLabel" for="wsSecureCb">Use secure WebSocket (TLS/SSL)</label><br /> <br /> <br /> <button id="wsConnectBut" disabled="disabled">Conectar</button><br /> <button id="wsDisconnectBut" disabled="disabled">Desconectar</button> </p></div>
+<div id="ws-config-message">
+<h4>
                 Message:
               </h4>
+<p>
+<input type="text" id="wsMessage" value="Hello, WebSocket" disabled="disabled" /><br /> <button id="wsSendBut" disabled="disabled">Send</button> </p></div>
 
-              <p>
-                <input  type="text" id="wsMessage" value="Hello, WebSocket" disabled /><br /> <button id="wsSendBut" disabled>Send</button> </div>
-              </p>
-            </div>
+</div>
+<div id="ws-right">
+<div id="ws-log">
+<strong>Output:</strong> 
+<div id="wsConsoleLog">
+</div>
+<p>
+<button id="wsClearLogBut">Clear log</button> </p></div>
 
-            <div id="ws-right">
-              <div id="ws-log">
-                <strong>Output:</strong> </p>
-
-                <div id="wsConsoleLog">
-                </div>
-
-                <p>
-                  <button id="wsClearLogBut">Clear log</button> </div>
-                </p>
-              </div></section>
-
-              <p>
-              </p>
+</div>
+<p>
+</p>
 
 
 

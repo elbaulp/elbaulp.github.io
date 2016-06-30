@@ -13,8 +13,8 @@ color: "#F57C00"
 ---
 
 <figure>
-  <a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
+<a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><amp-img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="405px" /></a>
+<span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br />
 </figure>
 
 {% include toc.html %}
@@ -109,9 +109,9 @@ perfectamente separables cuando se usan las dos componentes del vector
 clases,resultando imposible separarlas.
 
 <figure>
-  <a href="/assets/img/separability.png"><img src="/assets/img/separability.png" title="Separabilidad de dos clases con vectores
+<a href="/assets/img/separability.png"><amp-img src="/assets/img/separability.png" title="Separabilidad de dos clases con vectores
   bidimensionales" alt="Separabilidad de dos clases con vectores
-  bidimensionales" /></a>
+  bidimensionales" width="320px" height="316px" /></a>
 </figure>
 
 Es fácil mostrarlo en una imágen cuando tenemos pocas clases, como es
@@ -152,9 +152,9 @@ reconocimiento mediante ADN.
 #### Referencias
 
 - [M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
-seguridad](http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8478976361&linkCode=as2&tag=bmacoc-21 "M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
+seguridad](http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&camp;=3626&creative;=24822&creativeASIN;=8478976361&linkCode;=as2&tag;=bmacoc-21 "M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
 seguridad")
-- [C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition](http://www.amazon.es/gp/product/9814656526/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=9814656526&linkCode=as2&tag=bmab-21 "C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition")
+- [C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition](http://www.amazon.es/gp/product/9814656526/ref=as_li_ss_tl?ie=UTF8&camp;=3626&creative;=24822&creativeASIN;=9814656526&linkCode;=as2&tag;=bmab-21 "C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition")
 - [Wikipedia, “Biometría, según wikipedia.”](https://es.wikipedia.org/wiki/
 Biometr%C3%ADa "Wikipedia, “Biometría, según wikipedia.”")
 - [G. Argentina, “Historia de la biometría.”](http://www.biometria.gov.ar/

@@ -45,7 +45,7 @@ color: "#0097A7"
 ---
 
 <figure>
-  <a href="/assets/img/2013/04/dns.jpg"><img src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/04/dns.jpg"><amp-img src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" /></a>
 </figure>
 
 * [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]
@@ -99,7 +99,7 @@ Eso es todo, en este punto usaremos el comando **dig** para comprobar la configu
 ```bash
 $ dig elbauldelprogramador.com
 
-; <<>> DiG 9.8.4-P1 <<>> elbauldelprogramador.com
+; <<amp-img />> DiG 9.8.4-P1 <<amp-img />> elbauldelprogramador.com
 ;; global options: +cmd
 ;; Got answer:
 ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10156
@@ -123,7 +123,7 @@ Así, estamos buscando la ip del dominio. Como se aprecia, devuelve el valor cor
 ```bash
 $ dig -x 5.39.89.44
 
-; <<>> DiG 9.8.4-P1 <<>> -x 5.39.89.44
+; <<amp-img />> DiG 9.8.4-P1 <<amp-img />> -x 5.39.89.44
 ;; global options: +cmd
 ;; Got answer:
 ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50347

@@ -29,25 +29,21 @@ En esta entrada se verá cómo crear un adapter desde cero, con algunas funciona
 Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 
 <p style="padding-left: 30px;">
-  <em>Un CheckBox</em>
+<em>Un CheckBox</em>
 </p>
-
 <p style="padding-left: 30px;">
-  <em>Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación</em>
+<em>Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación</em>
 </p>
-
 <p style="padding-left: 30px;">
-  <em>Un ImageView que mostrará un iconito de un calendario.</em>
+<em>Un ImageView que mostrará un iconito de un calendario.</em>
 </p>
-
-
 <!--ad-->
 
 
 Terminada, la aplicación de prueba debe quedar algo así:
 
 <p style="text-align: center;">
-  <a  href="/assets/img/2012/09/principal1.png"><img class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android"  /></a>
+<a href="/assets/img/2012/09/principal1.png"><amp-img class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android" width="484px" height="807px" /></a>
 </p>
 
 &nbsp;
@@ -55,57 +51,19 @@ Terminada, la aplicación de prueba debe quedar algo así:
 Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fila del ListView:
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/LinearLayout1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#999999"
-    android:padding="2dp" >
-
-    <CheckBox
-        android:id="@+id/leido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:focusable="false" />
-
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@id/leido"
-        android:text="Titulo del post"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/tvFecha_publicacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/tvTitulo"
-        android:paddingTop="10dp"
-        android:text="25/05/2012"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <ImageView
-        android:id="@+id/ivCalendar"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_alignTop="@+id/tvFecha_publicacion"
-        android:layout_marginTop="10dp"
-        android:layout_toLeftOf="@+id/tvFecha_publicacion"
-        android:contentDescription="@string/imagen_content_description"
-        android:src="@drawable/calendar" />
-
-</RelativeLayout>
+<?xml version='1.0' encoding='utf-8'?>
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/LinearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#999999" android:padding="2dp">
+<checkbox android:id="@+id/leido" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centervertical="true" android:focusable="false">
+<textview android:id="@+id/tvTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centervertical="true" android:layout_torightof="@id/leido" android:text="Titulo del post" android:textappearance="?android:attr/textAppearanceMedium">
+</textview><textview android:id="@+id/tvFecha_publicacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignparentright="true" android:layout_below="@+id/tvTitulo" android:paddingtop="10dp" android:text="25/05/2012" android:textappearance="?android:attr/textAppearanceSmall">
+<imageview android:id="@+id/ivCalendar" android:layout_width="22dp" android:layout_height="22dp" android:layout_aligntop="@+id/tvFecha_publicacion" android:layout_margintop="10dp" android:layout_toleftof="@+id/tvFecha_publicacion" android:contentdescription="@string/imagen_content_description" android:src="@drawable/calendar">
+</imageview></textview></checkbox></relativelayout>
 
 ```
 
 Creando así el aspecto deseado para cada línea del ListView:
 
-[<img  title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android"  />][5]{.thumbnail}
+[<amp-img title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px" />][5]{.thumbnail}
 
 El primer paso es crear una clase que representará los datos a almacenar:
 
@@ -170,7 +128,7 @@ public class PostData implements Parcelable {
        dest.writeInt(getChecked() ? 1 : 0);
     }
 
-   public static final Parcelable.Creator<PostData> CREATOR = new Parcelable.Creator<PostData>() {
+   public static final Parcelable.Creator<postdata> CREATOR = new Parcelable.Creator</postdata><postdata>() {
      public PostData createFromParcel(Parcel in) {
            return new PostData(in);
         }
@@ -220,10 +178,10 @@ public class PostAdapter extends BaseAdapter
    private static final String TAG = "CustomAdapter";
   private static int convertViewCounter = 0;
 
-  private ArrayList<PostData> data;
+  private ArrayList</postdata><postdata> data;
    private LayoutInflater inflater = null;
 
- public PostAdapter(Context c, ArrayList<PostData> d)
+ public PostAdapter(Context c, ArrayList</postdata><postdata> d)
     {
        Log.v(TAG, "Constructing CustomAdapter");
 
@@ -397,12 +355,7 @@ Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que h
 El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:
 
 ```xml
-<CheckBox
-        android:id="@+id/leido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:focusable="false" />
+<checkbox android:id="@+id/leido" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centervertical="true" android:focusable="false">
 
 ```
 
@@ -478,7 +431,7 @@ public void onCreate(Bundle savedInstanceState) {
    super.onCreate(savedInstanceState);
    //...
    if (savedInstanceState == null){
-      data = new ArrayList<PostData>();
+      data = new ArrayList</checkbox></postdata><postdata>();
 
       data.add(new PostData("19/09/2012", "Moborobo, herramienta de Administración Integrada para Android en el PC" , false));
       data.add(new PostData("23/09/2012", "Cómo crear shortcodes en WordPress que soporten parámetros" , false));
@@ -526,3 +479,4 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
  [9]: /fundamentos-programacion-android-ciclo/
 
 {% include toc.html %}
+</postdata>

@@ -146,9 +146,9 @@ Y el cpp:
 #include <fstream>
 #include <string>
 #include <iostream>
-#include <netinet/in.h>
+#include <netinet>in.h>
 
-#include "./imagenESP.h"
+#include ".</netinet>imagenESP.h"
 
 using namespace std;
 
@@ -169,7 +169,7 @@ TipoImagen LeerTipo(ifstream& f)
     unsigned char cas[8];
     unsigned char check[8] = {0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A};
     bool fallo = false;
-    f.read(reinterpret_cast<char*>(cas), 8);
+    f.read(reinterpret_cast<char>(cas), 8);
     for (int i = 0; i < 8 && !fallo; i++)
         if (check[i] != cas[i])
             fallo = true;
@@ -215,8 +215,8 @@ bool LeerCabecera (ifstream& f, int& filas, int& columnas, bool png = false)
  if (png){
        f.seekg(16L, ios::beg);
 
-     f.read(reinterpret_cast<char*>(&columnas), 4);
-      f.read(reinterpret_cast<char*>(&filas), 4);
+     f.read(reinterpret_cast</char><char>(&columnas;), 4);
+      f.read(reinterpret_cast</char><char>(&filas;), 4);
 
      columnas = ntohl(columnas);
      filas = ntohl(filas);
@@ -268,13 +268,13 @@ bool LeerImagenPNG (const char nombre[], int& filas, int& columnas){
  if (LeerTipo(f) == IMG_PNG)
      if (LeerCabecera(f, filas, columnas, true))
          exito = true;
-           //if (f.read(reinterpret_cast<char *>(buffer), filas * columnas))
+           //if (f.read(reinterpret_cast</char><char>(buffer), filas * columnas))
 
    return exito;
 }
 
 /* Fin Fichero: imagenES.cpp */
-       //if (f.read(reinterpret_cast<char *>(buffer), filas * columnas))
+       //if (f.read(reinterpret_cast</char><char>(buffer), filas * columnas))
 
    return exito;
 }
@@ -304,7 +304,7 @@ En lugar de usar la función *TipoImagen LeerTipoImagen(const char nombre[], int
  */
 #include "./imagenESP.h"
 
-#include <iostream>
+#include </char></iostream><iostream>
 
 using namespace std;
 
@@ -350,8 +350,9 @@ Tipo imagen: 3
 
 <a href="http://www.libpng.org/pub/png/spec/1.1/PNG-Rationale.html#R.PNG-file-signature" target="_blank">libpng</a>  
 Documentación | <a href="http://www.fileformat.info/format/png/corion.htm" target="_blank">fileformat.info</a>  
-Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-to-get-the-image-size-of-a-png-file-in-directory" target="_blank">StackOverflow</a></p>
+Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-to-get-the-image-size-of-a-png-file-in-directory" target="_blank">StackOverflow</a>
 
 
 
 {% include toc.html %}
+</iostream></string></fstream>

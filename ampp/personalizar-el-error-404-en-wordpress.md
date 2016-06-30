@@ -13,7 +13,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 <figure>
-  <img src="/assets/img/2012/08/4041.jpg" alt="" title="404"   />
+<amp-img src="/assets/img/2012/08/4041.jpg" alt="" title="404" width="256px" height="197px" />
 </figure>
 
 El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.
@@ -47,19 +47,18 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
    $failuremess .= "It wasn't their fault, so try fixing it.  
         They came from ".$_SERVER['HTTP_REFERER'];
     mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'],
-        $failuremess, "From: $websitename <noreply@$website>"); #email you about problem
+        $failuremess, "From: $websitename <noreply@$website?>"); #email you about problem
    $casemessage = "An administrator has been emailed
           about this problem, too.";#set a friendly message
     }
     echo " ".$website.$_SERVER['REQUEST_URI']; ?>
   and it doesn't exist.
 
-  <?php echo $casemessage; ?>  You can click back
+  <?php echo $casemessage; ??>  You can click back
   and try again or search for what you're looking for:
 
 
-  <?php include(TEMPLATEPATH . "/searchform.php"); ?>
-
+  <?php include(TEMPLATEPATH . "/searchform.php"); ??>
 </p>
 
 ```
@@ -70,17 +69,15 @@ Esta porción de código hay que pegarla en el archivo 404.php de la plantilla e
 <h4>
   Publicaciones recientes
 </h4>
-
-
 <ul>
-  <?php
-         $recent_posts = wp_get_recent_posts( array('post_status' => 'publish') );
+<?php
+         $recent_posts = wp_get_recent_posts( array('post_status' =?> 'publish') );
            foreach( $recent_posts as $recent ){
        echo '
 
   <li>
-    <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a>
-  </li> ';
+<a href="' . get_permalink($recent[" id="ID">' .   $recent["post_title"].'</a>
+</li> ';
            }
         ?>
 
@@ -92,7 +89,7 @@ Incluso es posible sugerir entradas relacionadas en base a la url que devolvió 
 
 ```php
 <?php
-$query_args = array( 's' => basename($_SERVER['REQUEST_URI']) );
+$query_args = array( 's' =?> basename($_SERVER['REQUEST_URI']) );
 $query = new WP_Query( $query_args );
 
 if($query->have_posts()){
@@ -113,13 +110,11 @@ if($query->have_posts()){
   <li>
     ';
     ?>
-          <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-
-
-    <?php
-      echo '</li>';
+          <a href="&lt;?php the_permalink() ?&gt;"><?php the_permalink() ??>" title="Permanent Link to <?php the_title_attribute(); ??>"><?php the_title(); ??></a>
+<?php
+      echo '</li?>';
        endwhile;
-       echo '</ul>';
+       echo '</li></ul>';
 
        // Reset Post Data
        wp_reset_postdata();
@@ -160,23 +155,20 @@ if($query->have_posts()){
       $failuremess .= "It wasn't their fault, so try fixing it.  
       They came from ".$_SERVER['HTTP_REFERER'];
       mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'],
-      $failuremess, "From: $websitename <noreply@$website>"); #email you about problem
+      $failuremess, "From: $websitename <noreply@$website?>"); #email you about problem
         $casemessage = "El administrador ha sido informado sobre este error.";#set a friendly message
      }
      echo " ".$website.$_SERVER['REQUEST_URI']; ?>
      y no existe.
 
-  <?php echo $casemessage; ?>  Puede volver atrás
+  <?php echo $casemessage; ??>  Puede volver atrás
      e intentarlo de nuevo o buscar lo que desee en el formulario:
 
 
-  <?php include(TEMPLATEPATH . "/searchform.php"); ?>
-
+  <?php include(TEMPLATEPATH . "/searchform.php"); ??>
 </p>
-
-
 <?php
-   $query_args = array( 's' => basename($_SERVER['REQUEST_URI']) );
+   $query_args = array( 's' =?> basename($_SERVER['REQUEST_URI']) );
    $query = new WP_Query( $query_args );
 
    if($query->have_posts()){
@@ -197,13 +189,11 @@ if($query->have_posts()){
   <li>
     ';
     ?>
-             <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-
-
-    <?php
-    echo '</li>';
+             <a href="&lt;?php the_permalink() ?&gt;"><?php the_permalink() ??>" title="Permanent Link to <?php the_title_attribute(); ??>"><?php the_title(); ??></a>
+<?php
+    echo '</li?>';
           endwhile;
-          echo '</ul>';
+          echo '</li></ul>';
           // Reset Post Data
           wp_reset_postdata();
     }
@@ -211,20 +201,18 @@ if($query->have_posts()){
 
 
     <br />
-    <h4>
+<h4>
       Publicaciones recientes
     </h4>
-
-
-    <ul>
-      <?php
-   $recent_posts = wp_get_recent_posts( array('post_status' => 'publish') );
+<ul>
+<?php
+   $recent_posts = wp_get_recent_posts( array('post_status' =?> 'publish') );
          foreach( $recent_posts as $recent ){
             echo '
 
       <li>
-        <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a>
-      </li> ';
+<a href="' . get_permalink($recent[" id="ID">' .   $recent["post_title"].'</a>
+</li> ';
          }
       ?>
 
@@ -236,10 +224,8 @@ if($query->have_posts()){
     <p>
       Para ver un ejemplo haz click en el siguiente enlace: <a href="/404" target="_blank">elbauldelprogramador.org/404</a>.
     </p>
-
-
-    <hr />
+<hr />
     Fuente |
-    <a href="http://codex.wordpress.org/Creating_an_Error_404_Page" target="_blank">Creating an Error 404 Page</a></p>
+    <a href="http://codex.wordpress.org/Creating_an_Error_404_Page" target="_blank">Creating an Error 404 Page</a>
 
 {% include toc.html %}

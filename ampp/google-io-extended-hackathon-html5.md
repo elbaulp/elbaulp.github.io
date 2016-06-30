@@ -50,7 +50,7 @@ color: "#F57C00"
 <div>
 <b style="line-height:20px;font-size:medium">
 <div style="margin-right:auto;margin-left:auto;text-align:center">
-<a href="http://www.wired.com/images_blogs/gadgetlab/2011/05/google_io_f.jpg" imageanchor="1"><img alt="Google I/O" border="0" height="212" src="http://www.wired.com/images_blogs/gadgetlab/2011/05/google_io_f.jpg" style="border-style:initial;border-color:initial" width="320" /></a>
+<a href="http://www.wired.com/images_blogs/gadgetlab/2011/05/google_io_f.jpg" imageanchor="1"><amp-img alt="Google I/O" border="0" height="212" src="http://www.wired.com/images_blogs/gadgetlab/2011/05/google_io_f.jpg" style="border-style:initial;border-color:initial" width="320" /></a>
 </div>
 </b><p>
 </p></div>

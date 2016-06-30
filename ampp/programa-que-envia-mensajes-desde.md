@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />  
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />  
 Hace poco tiempo empecé a seguir los [videotutoriales de Android][1], en parte porque estoy interesado en aprender a programar para android, y por otra parte porque necesito hacer un proyecto de fin de curso en el que me es imprescindible que se establezca una comunicación PC-Dispositivo Android.
 
 Así que después de mucho buscar, encotré un programita en java que me iba a ser útil, concretamente este pequeño [chat][2] que encontré en CasiDiablo.  
@@ -22,13 +22,10 @@ A este código le hice algunas modificaciones en la parte del Cliente, y, finalm
 Como prueba dejo dos capturas de pantalla, una realizando la conexión desde el emulador, y otra probandolo con mi móvil:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-NhzqkbbVSlI/TZSLKW_mJeI/AAAAAAAAAXs/fLJMMsGSYbI/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="128" width="320" src="https://2.bp.blogspot.com/-NhzqkbbVSlI/TZSLKW_mJeI/AAAAAAAAAXs/fLJMMsGSYbI/s320/Screenshot.png" /></a>
+<a href="https://2.bp.blogspot.com/-NhzqkbbVSlI/TZSLKW_mJeI/AAAAAAAAAXs/fLJMMsGSYbI/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="128" width="320" src="https://2.bp.blogspot.com/-NhzqkbbVSlI/TZSLKW_mJeI/AAAAAAAAAXs/fLJMMsGSYbI/s320/Screenshot.png" /></a>
 </div>
-
-
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-IP60xZKxqEo/TZSMSDUnHcI/AAAAAAAAAX0/eXLpj7fD5PY/s1600/31032011045.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="240" width="320" src="https://2.bp.blogspot.com/-IP60xZKxqEo/TZSMSDUnHcI/AAAAAAAAAX0/eXLpj7fD5PY/s320/31032011045.jpg" /></a>
+<a href="https://2.bp.blogspot.com/-IP60xZKxqEo/TZSMSDUnHcI/AAAAAAAAAX0/eXLpj7fD5PY/s1600/31032011045.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="240" width="320" src="https://2.bp.blogspot.com/-IP60xZKxqEo/TZSMSDUnHcI/AAAAAAAAAX0/eXLpj7fD5PY/s320/31032011045.jpg" /></a>
 </div>
 
 

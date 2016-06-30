@@ -73,12 +73,12 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
 
 ```cpp
 #include <iostream>
-     #include <sys /types.h>
-     #include </sys><sys /socket.h>
-     #include <netinet /in.h>
-     #include <netdb .h>
-     #include <stdio .h>
-     #include <string .h>
+     #include <sys>
+     #include </sys><sys>
+     #include <netinet>
+     #include <netdb>
+     #include <stdio>
+     #include <string>
      using namespace std;
      #define HELO "HELO xxxxxx@xxxx.xxxxrn"
      #define DATA "DATArn"
@@ -138,9 +138,9 @@ También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [pytho
     }
 
     /*=====Connect to port 25 on remote host=====*/
-    memcpy((char *) &server.sin_addr, (char *) hp->h_addr, hp->h_length);
+    memcpy((char *) &server.sin;_addr, (char *) hp->h_addr, hp->h_length);
     server.sin_port=htons(25); /* SMTP PORT */
-    if (connect(sock, (struct sockaddr *) &server, sizeof server)==-1)
+    if (connect(sock, (struct sockaddr *) &server;, sizeof server)==-1)
     {
      perror("connecting stream socket");
      return 1;
@@ -209,7 +209,6 @@ except Exception, exc:
 Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.
 
 ##### Fuente: <a href="http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html" target="_blank">Elladodelmal</a>
-
 </string></stdio></netdb></netinet></sys></iostream>
 
 

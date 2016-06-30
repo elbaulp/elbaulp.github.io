@@ -9,7 +9,7 @@ color: "#F57C00"
 ---
 Como señalan [nuestros compañeros de MuyComputer][1], la **empresa respaldada por Marc Andreessen** – fundador de Netscape- ha presentado un nuevo navegador web enfocado a uso de redes sociales.
 
-[<img  title="Rockmelt" src="http://www.muylinux.com/assets/img/2010/11/Rockmelt-500x391.jpg" alt="" height="391" width="500" />][2]
+[<amp-img title="Rockmelt" src="http://www.muylinux.com/assets/img/2010/11/Rockmelt-500x391.jpg" alt="" height="391" width="500" />][2]
 
 RockMelt está construido internamente en torno a Chromium, el desarrollo de código abierto en el que se basa el Chrome de Google aunque la integración con redes sociales es su verdadera novedad y objetivo. **Actualmente en fase beta cerrada** puedes probar el desarrollo desde invitaciones servidas desde Facebook.
 

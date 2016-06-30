@@ -14,7 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" /></a>
 </div>
 
 Vamos a examinar algunos de los elementos que componen los proveedores de contenidos(CV) y cómo éstos se relacionan con otras abstracciones de acceso a datos.
@@ -38,8 +38,7 @@ Cada CV de un dispositivo se registra a sí mismo de manera similar a como lo ha
 El registro de la authority se hace en el [androidManifest][3]. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación [FavSItes][4]):
 
 ```xml
-<provider android:name=".SitesProvider"
-   android:authorities="com.elbauldelprogramador.provider.FavSites" />
+<provider android:name=".SitesProvider" android:authorities="com.elbauldelprogramador.provider.FavSites">
 
 ```
 
@@ -92,3 +91,4 @@ content://contacts/people/23
  [5]: /programacion-android-proveedores-de_28/
 
 {% include toc.html %}
+</provider>

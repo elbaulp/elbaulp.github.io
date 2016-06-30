@@ -17,7 +17,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <figure>
-  <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><amp-img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" width="400px" height="175px" /></a>
 </figure>
 
 Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para [GPG][1]. Si encuentras algún error, no dudes en comentarlo.
@@ -177,7 +177,6 @@ gpg --gen-revoke
 `--gen-revoke` crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: <a href="http://www.gnupg.org/gph/en/manual/r721.html" target="_blank">http://www.gnupg.org/gph/en/manual/r721.html</a>.
 
 `--edit-key` te permite hacer una colección de operaciones con las claves. Mira: <a href="http://www.gnupg.org/gph/en/manual/r899.html" target="_blank">http://www.gnupg.org/gph/en/manual/r899.html</a>
-
 <span style="text-decoration: underline;"><strong>Compartir Claves Secretas</strong></span>  
 NOTA: los siguientes casos de uso indican porqué los comandos secret-key import/export existen, o al menos un par de ideas de qué puedes hacer con ellos. SIN EMBARGO, hay un poco de logística necesaria para compartir la clave secreta. ¿Cómo la pasamos de una computadora a otra? Creo que encriptarla y enviarla por e-mail probablemente estaría bien, pero yo no la enviaría desencriptada con e-mail, esto sería PELIGROSO.
 

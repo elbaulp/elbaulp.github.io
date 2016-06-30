@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
+title: 'Programaciรณn Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
 
 layout: post.amp
 
@@ -32,12 +32,12 @@ En resumen, en el siguiente listado muestra la estructura global del directorio 
 ```
 
 <p class="alert">
-  Debido a que no se encuentra bajo el directorio <i>/res</i>, solo el directorio<i> /assets</i> puede contener una lista arbitrária de directorios. Cualquier otro directorio solo puede contener ficheros en ese nivel, y no mas subdirectorios
+  Debido a que no se encuentra bajo el directorio <i>/res</i>, solo el directorio<i> /assets</i> puede contener una lista arbitrรกria de directorios. Cualquier otro directorio solo puede contener ficheros en ese nivel, y no mas subdirectorios
 </p>
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Recursos y cambios de configuración][1] {.referencia}
+#### Siguiente Tema: [Programaciรณn Android: Recursos &#8211; Recursos y cambios de configuraciรณn][1] {.referencia}
 
 
 

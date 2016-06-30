@@ -21,12 +21,12 @@ Personalmente me ha gustado esta web ya que permite organizar las tareas por pri
 Tambien disponen de aplicación para android: [Remember de Milk Android][2]
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-8j9hDAVSaE4/TaQV05eYOzI/AAAAAAAAAas/7uOEbPjFXBw/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="200" width="320" src="https://2.bp.blogspot.com/-8j9hDAVSaE4/TaQV05eYOzI/AAAAAAAAAas/7uOEbPjFXBw/s320/Screenshot-1.png" /></a>
+<a href="https://2.bp.blogspot.com/-8j9hDAVSaE4/TaQV05eYOzI/AAAAAAAAAas/7uOEbPjFXBw/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="200" width="320" src="https://2.bp.blogspot.com/-8j9hDAVSaE4/TaQV05eYOzI/AAAAAAAAAas/7uOEbPjFXBw/s320/Screenshot-1.png" /></a>
 </div>
 
 
 
  [1]: https://www.rememberthemilk.com
- [2]: https://market.android.com/details?id=com.rememberthemilk.MobileRTM&feature=search_result
+ [2]: https://market.android.com/details?id=com.rememberthemilk.MobileRTM&feature;=search_result
 
 {% include toc.html %}

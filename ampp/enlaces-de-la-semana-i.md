@@ -20,7 +20,7 @@ Aquí el primer post de esta sección:
   * <a target="_blank" href="http://alt1040.com/2012/03/cientificos-revolucionan-el-subtitulado-de-los-videos">Científicos revolucionan el subtitulado de los vídeos</a>
   * <a target="_blank" href="http://alt1040.com/2012/03/el-autismo-puede-deberse-a-un-crecimiento-neuronal-excesivo">El autismo puede deberse a un crecimiento neuronal excesivo</a>
   * <a target="_blank" href="http://alt1040.com/2012/03/investigacion-grabar-terabytes-en-un-segundo">Investigadores desarrollan técnica para grabar terabytes de información en un segundo</a>
-  * <a target="_blank" href="http://www.guzman6001.com.ve/posts/view/35/redes-sociales-y-su-codigo">Redes sociales y su código</a></p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p> </p></p>
+  * <a target="_blank" href="http://www.guzman6001.com.ve/posts/view/35/redes-sociales-y-su-codigo">Redes sociales y su código</a>                      
 
 
 

@@ -13,7 +13,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<img src="/assets/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png" alt="El uso de contraseñas en una evolución tecnológica"   />
+<amp-img src="/assets/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png" alt="El uso de contraseñas en una evolución tecnológica" width="350px" height="274px" />
 
 Hoy os traigo un artículo sobre la gran problemática que hay entorno a las contraseñas, y es que, por todos es conocido que usar contraseñas débiles puede comprometer cualquier sistema informático. A continuación resumo un artículo muy interesante que leí en **The Hacker News**.
 
@@ -52,34 +52,34 @@ Para finalizar, muestro el top ten de peores contraseñas según SplashData. Los
 &nbsp;
 
 <ol style="text-align: left;">
-  <li>
+<li>
     password (=)
   </li>
-  <li>
+<li>
     123456 (=)
   </li>
-  <li>
+<li>
     12345678 (=)
   </li>
-  <li>
+<li>
     abc123 (sube 1)
   </li>
-  <li>
+<li>
     qwerty (baja 1)
   </li>
-  <li>
+<li>
     monkey (=)
   </li>
-  <li>
+<li>
     letmein (sube 1)
   </li>
-  <li>
+<li>
     dragon (sube 2)
   </li>
-  <li>
+<li>
     111111 (sube 3)
   </li>
-  <li>
+<li>
     baseball (subo 1)
   </li>
 </ol>

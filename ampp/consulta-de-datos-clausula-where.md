@@ -25,75 +25,62 @@ condición de búsqueda o de selección de registros se puede conformar utilizan
 Los operadores más utilizados en las condiciones de selección son:
 
 <table class="tabla">
-  <tr>
-    <td>
+<tr>
+<td>
       Operador
     </td>
-
-    <td>
+<td>
       Definición
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      =, !=, <>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+      =, !=, </td><td>
+</td>
+<td>
       Igual a, distinto de, distinto de
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       >, >=, <, <=
     </td>
-
-    <td>
+<td>
       Mayor que, Mayor o igual que, menor que, menor o igual que
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       BETWEEN &#8230; AND &#8230;
     </td>
-
-    <td>
+<td>
       Chequea un rango incluyendo los dos valores
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       LIKE
     </td>
-
-    <td>
+<td>
       Compara una cadena de caracteres con un patrón o formato
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       IN ( ), NOT IN ( )
     </td>
-
-    <td>
+<td>
       Comprueba que un campo o expresión tenga valores o no en un<br /> conjunto de valores
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       IS NULL, IS NOT NULL
     </td>
-
-    <td>
+<td>
       Comprueba que un campo o expresión sea nula o no
     </td>
-  </tr>
+</tr>
 </table>
 
 
@@ -123,41 +110,33 @@ expresión_a_comparar [ NOT ] LIKE patrón
 Los símbolos utilizados en el patrón son:
 
 <table class="tabla">
-  <tr>
-    <td>
+<tr>
+<td>
       %
     </td>
-
-    <td>
+<td>
       Cualquier cadena de cero o más<br /> caracteres.
     </td>
-
-    <td>
+<td>
       WHERE title LIKE &#8216;%computer%&#8217; busca todos los<br /> títulos de libros que contengan la palabra &#8216;computer&#8217;<br /> en cualquier parte del título.
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       _ (subrayado)
     </td>
-
-    <td>
+<td>
       Cualquier carácter individual
     </td>
-
-    <td>
+<td>
       WHERE au_fname LIKE &#8216;_ean&#8217; busca todos los<br /> nombres de cuatro letras que finalicen con ean<br /> (Dean, Sean, etc.).
-    </td></table>
-
-    <p>
-    </p>
-
-    <h4>
+    </td></tr></table>
+<p>
+</p>
+<h4>
       Operador IN:
     </h4>
-
-    <p>
+<p>
       Se utiliza para comprobar si un valor pertenece a una lista de valores. Su sintaxis es:
     </p>
 
@@ -168,21 +147,18 @@ expresion [ NOT ] IN ( subconsulta | expresion o valor [ ,...n ])
     <p>
       La lista de valores se puede obtener a partir de una setencia select o bien indicando el<br /> conjunto de valores separados por comas
     </p>
-
-    <h4>
+<h4>
       Operador IS NULL:
     </h4>
-
-    <p>
+<p>
       En SQL el valor nulo tiene un valor diferente a 0 y a cadena vacía. Por tanto, para preguntar<br /> si un atributo contiene, o no, un valor nulo, hay que utilizar el predicado IS [NOT] NULL.
     </p>
-
-    <hr />
-
-    <h4 class="referencia">
+<hr />
+<h4 class="referencia">
       Siguiente Tema: <a href="https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/">Consulta de Datos &#8211; Cláusula GROUP BY</a>
-    </h4>
+</h4>
 
 
 
 {% include toc.html %}
+</search_condition>

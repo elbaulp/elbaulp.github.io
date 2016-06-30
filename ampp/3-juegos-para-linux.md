@@ -20,7 +20,6 @@ Disponible en http://www.playdeb.net/software/Caph para Ubuntu 9.10.
 
 <div style="text-align: center;">
 </div>
-
 <div style="text-align: center;">
 </div>
 

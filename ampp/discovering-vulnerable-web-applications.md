@@ -14,7 +14,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<img class="size-medium wp-image-1108 alignleft" title="discovering vulnerable web applications" alt="discovering-vulnerable-web-applications" src="/assets/img/2013/01/discovering-vulnerable-web-applications2-197x300.png"  />][1]
+[<amp-img class="size-medium wp-image-1108 alignleft" title="discovering vulnerable web applications" alt="discovering-vulnerable-web-applications" src="/assets/img/2013/01/discovering-vulnerable-web-applications2-197x300.png" width="197px" height="300px" />][1]
 
 Vulnerabilities in web applications are a major vector for cybercrime. In large organizations, vulnerable web applications comprised 54% of all hacking breaches and led to 39% of compromised records, according to the 2012 Data Breach Investigation Report by Verizon Business.
 
@@ -26,7 +26,7 @@ Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
 
 
- [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_qa46/prgm.cgi
+ [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_qa46/prgm.cgi
  [2]: /manuales-gratuitos/
 
 {% include toc.html %}

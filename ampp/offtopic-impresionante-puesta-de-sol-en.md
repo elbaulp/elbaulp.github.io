@@ -19,7 +19,7 @@ Quiero escribir esta entrada aunque no esté relacionada con la temática del bl
 ***Pocos lugares en el mundo ofrecen tantos recursos para un fotógrafo como Islandia. A la composición y formas únicas de su paisaje se le suman la grandiosidad de fenómenos como la aurora boreal o el sol de medianoche. El fotógrafo Scientifantastic logró captar este último fenómeno a través de un viaje que le llevó durante 17 días en solitario por los parajes más solitarios del planeta. 38.000 imágenes recopiladas en este espectacular time lapse donde el sol siempre esta visible y nunca se pone totalmente, una maravilla para el fotógrafo.***
 
 ***  
-Y es que al igual que la aurora boreal, el sol de medianoche solamente ocurre en ocasiones y lugares señalados en el planeta. El norte y sur del círculo polar ártico son el emplazamiento al que debemos acudir si queremos Sol durante las 24 horas, siempre en fechas próximas al solsticio de verano.</b>*</p>
+Y es que al igual que la aurora boreal, el sol de medianoche solamente ocurre en ocasiones y lugares señalados en el planeta. El norte y sur del círculo polar ártico son el emplazamiento al que debemos acudir si queremos Sol durante las 24 horas, siempre en fechas próximas al solsticio de verano.*
 
 [Leer el artículo completo en la fuente original][1]
 

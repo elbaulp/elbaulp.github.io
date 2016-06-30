@@ -24,7 +24,7 @@ Como ya sabréis, para descargarla, tenéis que hacer clic en &#8220;Request Now
 
 
  [1]: http://img.tradepub.com/free/w_make09/assets/img/w_make09c.gif "Build Your Own WordPress Site Guide"
- [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make09/prgm.cgi
+ [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_make09/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 
 {% include toc.html %}

@@ -12,7 +12,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm"   />
+<amp-img src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="700px" height="394px" />
 
 Como comenté cuando escribí el artículo sobre [Introducción a Django][1] he tenido que empezar a desarrollar aplicaciones web en este [framework][2] que cada día me gusta más.
 
@@ -82,8 +82,8 @@ Para ser capaces de mostrar al usuario una lista de *personas* es necesario crea
   {% extends "base.html" %}
   {% block content %}
   <h2>Personas</h2>
-  <em>Persona - DNI</em>
-  <ul>
+<em>Persona - DNI</em>
+<ul>
     {% for persona in object_list %}
       <li>{{ persona.nombre }} - {{ persona.dni }} </li>
     {% endfor %}
@@ -165,8 +165,7 @@ $ python manage.py runserver
 El primer comando se encarga de actualizar la base de datos con los modelos creados y el segundo arranca el servidor de desarrollo para que podamos acceder a la web.
 
 Si todo ha ido bien, deberíamos ver la siguiente página en <a href="http://127.0.0.1:8000/personas/list" title="localhost" target="_blank">http://127.0.0.1:8000/personas/list</a>
-
-<img src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm"   />
+<amp-img src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161px" height="153px" />
 
 ## Crear un formulario a partir de un Modelo con ModelForm
 
@@ -216,61 +215,50 @@ Hay 3 posibles flujos en esta función:
 La siguiente tabla pretende resumir los flujos posibles:
 
 <table class="docutils">
-  <colgroup> <col width="24%"> <col width="20%"> <col width="55%"> </colgroup> <tr class="row-odd">
-    <th class="head">
+<colgroup> <col width="24%" /> <col width="20%" /> <col width="55%" /> </colgroup> <tr class="row-odd">
+<th class="head">
       ¿Se está enviando el formulario?
     </th>
-
-    <th class="head">
+<th class="head">
       ¿Hay datos?
     </th>
-
-    <th class="head">
+<th class="head">
       Qué pasa
     </th>
-  </tr>
-
-  <tr class="row-even">
-    <td>
+</tr>
+<tr class="row-even">
+<td>
       Sin enviar
     </td>
-
-    <td>
+<td>
       Aún no
     </td>
-
-    <td>
+<td>
       Se proporciona a la plantilla una instancia del formulario sin relledar (Unbound).
     </td>
-  </tr>
-
-  <tr class="row-odd">
-    <td>
+</tr>
+<tr class="row-odd">
+<td>
       Enviados
     </td>
-
-    <td>
+<td>
       Datos inválidos
     </td>
-
-    <td>
+<td>
       Se pasa a la plantilla una instancia del formulario con datos
     </td>
-  </tr>
-
-  <tr class="row-even">
-    <td>
+</tr>
+<tr class="row-even">
+<td>
       Enviados
     </td>
-
-    <td>
+<td>
       Datos válidos
     </td>
-
-    <td>
+<td>
       Se procesan los datos y se guardan, se redirige a la lista de Personas.
     </td>
-  </tr>
+</tr>
 </table>
 
 ## Asociar la función con una url
@@ -301,7 +289,7 @@ Por último, la plantilla que contiene el formulario quedaría así:
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Añadir persona" />
-  </form>
+</form>
 {% endblock %}
 {% endraw %}
 
@@ -403,14 +391,13 @@ urlpatterns = patterns('',
 
 {% block content %}
   <h2>Personas</h2>
-  <em>Persona - DNI</em>
-  <ul>
+<em>Persona - DNI</em>
+<ul>
     {% for persona in object_list %}
       <li>{{ persona.nombre }} - {{ persona.dni }} </li>
     {% endfor %}
   </ul>
-
-  <h2>Añadir persona</h2>
+<h2>Añadir persona</h2>
 
   Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
 {% endblock %}
@@ -430,7 +417,7 @@ urlpatterns = patterns('',
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Añadir persona" />
-  </form>
+</form>
 {% endblock %}
 {% endraw %}
 

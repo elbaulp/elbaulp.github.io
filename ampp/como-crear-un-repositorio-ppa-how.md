@@ -52,10 +52,11 @@ $  dput my-ppa P_V_source.changes
 
     Remplazad P con el nombre del paquete y V con el número de la versión.
 
-    Podéis ver posibles errores en la subida de paquetes <a href="https://help.launchpad.net/Packaging/UploadErrors" target="_blank">aqui.</a></li> </ul> </ol>
+    Podéis ver posibles errores en la subida de paquetes <a href="https://help.launchpad.net/Packaging/UploadErrors" target="_blank">aqui.</a>  
 
 
 
  [1]: https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/
 
 {% include toc.html %}
+</ppa-name></your-launchpad-id></ppa_name></your_launchpad_id></source.changes>

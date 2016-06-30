@@ -14,7 +14,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img   title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" />
+<amp-img title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" width="532px" height="449px" />
 
 Hace unas semanas [hablé de un desafío][1] propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.
 
@@ -26,7 +26,7 @@ Todos los programas escritos por los alumnos estan basados en este:
 #include <stdio.h>    // para printf()
 #include <stdlib.h>   // para exit()
 #include <string.h> // para strncmp()/strlen()
-#include <sys/time.h>   // para gettimeofday(), struct timeval
+#include <sys>time.h>   </sys>/ para gettimeofday(), struct timeval
 
 char password[]="abracadabran";
 int  passcode  = 7777;
@@ -52,22 +52,22 @@ int main(){
 #define TLIM 5
     struct timeval tv1,tv2; // gettimeofday() secs-usecs
 
-    gettimeofday(&tv1,NULL);
+    gettimeofday(&tv1;,NULL);
 
     printf("Introduce la contraseña: ");
   fgets(pass,SIZE,stdin);
    if (strncmp(pass,password,strlen(password)))
       boom();
 
- gettimeofday(&tv2,NULL);
+ gettimeofday(&tv2;,NULL);
   if (tv2.tv_sec - tv1.tv_sec > TLIM)
        boom();
 
  printf("Introduce el código: ");
-  scanf("%i",&pasv);
+  scanf("%i",&pasv;);
     if (pasv!=passcode) boom();
 
- gettimeofday(&tv1,NULL);
+ gettimeofday(&tv1;,NULL);
   if (tv1.tv_sec - tv2.tv_sec > TLIM)
        boom();
 
@@ -225,7 +225,7 @@ Si el usuario introduce como contraseña **C4b3Z0n**, la bomba explota, ya que e
 ```asm
 movzbl (%eax),%eax
 cmp    $0x43,%al
-jne    80486a1 <cambio+0x15>
+jne    80486a1 <cambio>
 call   804860c <boomb>
 
 ```
@@ -237,7 +237,7 @@ En resumen, la función cambio comprueba que la primera letra no sea **&#8216;C&
 ```asm
 80486be: 0f b6 00                movzbl (%eax),%eax          ; Extrae la primera letra
     80486c1: 3c 63                   cmp    $0x63,%al            ; La compara con 'C'
-    80486c3:    75 06                   jne    80486cb <change+0x13>; Si no son iguales sale de la funcion
+    80486c3:    75 06                   jne    80486cb <change>; Si no son iguales sale de la funcion
     80486c5:    8b 45 08                mov    0x8(%ebp),%eax       ; si son iguales carga la contraseña entera en eax
     80486c8:    c6 00 43                movb   $0x43,(%eax)         ; y sustituye la primera letra por 'C'
 
@@ -260,7 +260,7 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
  80486f6:  83 45 08 02             addl   $0x2,0x8(%ebp)
  80486fa:    8b 45 08                mov    0x8(%ebp),%eax
  80486fd:    89 45 f0                mov    %eax,-0x10(%ebp)
- 8048700:  eb 4f                   jmp    8048751 <code+0x84>
+ 8048700:  eb 4f                   jmp    8048751 </code><code>
  8048702:   8b 4d f0                mov    -0x10(%ebp),%ecx
  8048705:  ba 67 66 66 66          mov    $0x66666667,%edx
  804870a:  89 c8                   mov    %ecx,%eax
@@ -292,11 +292,11 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
  804874a: 89 45 f0                mov    %eax,-0x10(%ebp)
  804874d:  83 45 ec 01             addl   $0x1,-0x14(%ebp)
  8048751:  83 7d ec 04             cmpl   $0x4,-0x14(%ebp)
- 8048755:  7e ab                   jle    8048702 <code+0x35>
+ 8048755:  7e ab                   jle    8048702 </code><code>
  8048757:   83 7d e8 17             cmpl   $0x17,-0x18(%ebp)
- 804875b: 74 07                   je     8048764 <code+0x97>
- 804875d:   e8 aa fe ff ff          call   804860c <boomb>
- 8048762:   eb 05                   jmp    8048769 <code+0x9c>
+ 804875b: 74 07                   je     8048764 </code><code>
+ 804875d:   e8 aa fe ff ff          call   804860c </code></change></boomb><boomb>
+ 8048762:   eb 05                   jmp    8048769 <code>
  8048764:   e8 d9 fe ff ff          call   8048642 <bomb>
  8048769:    8b 45 08                mov    0x8(%ebp),%eax
  804876c:    c9                      leave  
@@ -304,14 +304,10 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
 
 ```
 
-Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción <code>div</code> a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.</p>
-
-
+Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción </bomb></code><code>div</code> a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.
 <h4>
   El código de mi programa Bomba
 </h4>
-
-
 <p>
   Para escribir mi programa me basé en técnicas de ofuscación que encontré por internet, con un poco de imaginación se puede hacer muy dificil la lectura de un programa:
 </p>
@@ -328,10 +324,10 @@ Gran parte de este código se usa para calcular un simple módulo, la razón; gc
  ============================================================================
  */
 
-#include <stdio.h>    // para printf()
+#include </boomb></cambio></strncmp></string.h></stdlib.h></stdio.h><stdio.h>    // para printf()
 #include <stdlib.h>   // para exit()
 #include <string.h> // para strncmp()/strlen()
-#include <sys/time.h>   // para gettimeofday(), struct timeval
+#include <sys>time.h>   </sys>/ para gettimeofday(), struct timeval
 
 #define SIZE 15
 #define ESTO printf(
@@ -386,7 +382,7 @@ int main(_, v) double *v; int _;{
         break;
     case 45681:
        strcpy((char*) password, (char*)v);
-       confuse2(&passcode);
+       confuse2(&passcode;);
       main(0, v);
        break;
     default:
@@ -400,7 +396,7 @@ int main(_, v) double *v; int _;{
 
    //Pedimos datos al usuario
     char f[SIZE];
- gettimeofday(&tv1,NULL);
+ gettimeofday(&tv1;,NULL);
 
     printf("Introduce la contraseña: ");
   fgets(f,SIZE,stdin);
@@ -408,17 +404,17 @@ int main(_, v) double *v; int _;{
     if (strncmp(f,decode((char*)password),strlen(decode((char*)password))))
        boom();
 
- gettimeofday(&tv2,NULL);
+ gettimeofday(&tv2;,NULL);
   if (tv2.tv_sec - tv1.tv_sec > TLIM)
        boom();
 
  printf("Introduce el código: ");
-  scanf("%i",&pasv);
-    confuse2(&pasv);
+  scanf("%i",&pasv;);
+    confuse2(&pasv;);
   if (pasv!=passcode)
        boom();
 
- gettimeofday(&tv1,NULL);
+ gettimeofday(&tv1;,NULL);
   if (tv1.tv_sec - tv2.tv_sec > TLIM)
        boom();
 
@@ -433,13 +429,9 @@ int main(_, v) double *v; int _;{
 <p>
   Explicaré por encima su funcionamiento. En la función <code>main</code> se evalua el primer argumento, que contiene el número de parámetros pasados a la función, contanto también con el nombre del programa, como no pasamos ningún argumento el valor por defecto será 1, y como este valor no se encuentra en el <code>switch</code>, entra en el <code>default</code>, Los números tan largos que ves son la contraseña representada en formato <strong>double</strong>, en concreto esta cadena <strong>@M?eg \PoiRlLldo!�</strong>. Tras asignar la contraseña a un array de doubles, llamo recursivamente a la función <code>main</code>, pasando como argumento el número 65381 y el array con la contraseña. De modo que esta vez el <code>switch</code> entra en la segunda sentencia (<code>case 45681:</code>), en la que se copia el array con la contraseña en double a una cadena de caracteres.
 </p>
-
-
 <p>
   Por muy complicado que parezca, el código ensamblador solo tiene un punto clave para descubrir la contraseña:
 </p>
-
-
 <p>
   En cualquier optimización, ya sea <a href="/peso-hamming-y-optimizacion/">0, 1 o 2</a>, para averiguar la contraseña basta con poner un punto de ruptura en la función <code>decode</code>:
 </p>
@@ -452,14 +444,14 @@ int main(_, v) double *v; int _;{
  8048871:  83 ec 18                sub    $0x18,%esp
  8048874:    c7 04 24 0f 00 00 00    movl   $0xf,(%esp)
  804887b:   8b 5c 24 20             mov    0x20(%esp),%ebx
- 804887f:   e8 4c fc ff ff          call   80484d0 <malloc@plt>
+ 804887f:   e8 4c fc ff ff          call   80484d0 <malloc>
  8048884:  31 d2                   xor    %edx,%edx
  8048886: 66 90                   xchg   %ax,%ax
  8048888:   0f b6 4c 53 01          movzbl 0x1(%ebx,%edx,2),%ecx
  804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
  8048890: 83 c2 01                add    $0x1,%edx
  8048893: 83 fa 0a                cmp    $0xa,%edx
- 8048896: 75 f0                   jne    8048888 <decode+0x18>
+ 8048896: 75 f0                   jne    8048888 </malloc></decode><decode>
  8048898: 83 c4 18                add    $0x18,%esp
  804889b:    5b                      pop    %ebx
  804889c:  c3                      ret
@@ -479,7 +471,7 @@ int main(_, v) double *v; int _;{
  804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
  8048890: 83 c2 01                add    $0x1,%edx
  8048893: 83 fa 0a                cmp    $0xa,%edx
- 8048896: 75 f0                   jne    8048888 <decode+0x18>
+ 8048896: 75 f0                   jne    8048888 </decode><decode>
 
 ```
 
@@ -487,8 +479,6 @@ int main(_, v) double *v; int _;{
 <p>
   Con lo cual, antes de retornar de la función, si miramos el valor de EBX encontramos la contraseña a usar para desactivar la bomba.
 </p>
-
-
 <p>
   La clave está en cómo interpretar en el main, concretamente en la línea
 </p>
@@ -505,13 +495,9 @@ int main(_, v) double *v; int _;{
   el valor de EDX, pues es un double, que oculta la cadena cifrada <strong>@M?eg \PoiRlLldo!�</strong>.<br />
   Valor que veremos si examinamos en gdb con <code>x /gs $edx</code>
 </p>
-
-
 <p>
   También podemos deducir el tamaño de la contraseña mirando la pila antes de llamar a <code>strncmp</code>, pues el tercer valor de la pila <strong>0x8(%esp)</strong>, es la longitud.
 </p>
-
-
 <p>
   En cuanto al pin, la clave está en mirar este trozo de código:
 </p>
@@ -523,7 +509,7 @@ int main(_, v) double *v; int _;{
  80486b3:   83 c0 01                add    $0x1,%eax
  80486b6: 31 ca                   xor    %ecx,%edx
  80486b8: 3d 90 89 04 08          cmp    $0x8048990,%eax
- 80486bd:   75 f1                   jne    80486b0 <main+0x160>
+ 80486bd:   75 f1                   jne    80486b0 <main>
  80486bf:  81 c2 61 1e 00 00       add    $0x1e61,%edx
 
 ```
@@ -532,38 +518,30 @@ int main(_, v) double *v; int _;{
 <p>
   Que va sumando al pin el resultado de hacer un XOR de su valor con el valor de una letra almacenada en %ecx y al resultado le suma 7777.
 </p>
-
-
 <p>
   Con lo cual tenemos que conseguir un número al que al hacerle todas estas operaciones de 8305, que resulta ser 555.
 </p>
-
-
 <h4>
   Referencias
 </h4>
-
-
 <p>
-  <p>
-    <a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-3-bomba-digital-desensambladores/" rel="nofollow">
+</p><p>
+<a class="aligncenter download-button" href="https://elbauldelprogramador.com/practica-3-bomba-digital-desensambladores/" rel="nofollow">
         Download &ldquo;Práctica 3 - Bomba Digital - Desensambladores&rdquo;		<small> &ndash; Downloaded 498 times &ndash; 371 kB</small>
-      </a>
-  </p>
-
-  <br />
-  <em>Calculating modulo in assembly</em> <strong>|</strong> <a href="http://stackoverflow.com/questions/4361979/calculating-modulo-in-assembly" target="_blank">Visitar sitio</a><br />
-  <em>Obfuscation</em> <strong>|</strong> <a href="http://www.brandonparker.net/code_obf.php" target="_blank">Visitar sitio</a>
-</p>
-
-
 </a>
-      </li>
-    </ul>
-  </div>
-</div>
+</p>
+<br />
+<em>Calculating modulo in assembly</em> <strong>|</strong> <a href="http://stackoverflow.com/questions/4361979/calculating-modulo-in-assembly" target="_blank">Visitar sitio</a><br />
+<em>Obfuscation</em> <strong>|</strong> <a href="http://www.brandonparker.net/code_obf.php" target="_blank">Visitar sitio</a>
+
+
+
+
+
+
 
  [1]: /desafio-de-ingenieria-inversa-en-c/
 
 
 {% include toc.html %}
+</main></decode></string.h></stdlib.h></stdio.h>

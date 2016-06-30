@@ -41,7 +41,7 @@ gource /ruta/a/.git
 El resultado es algo como esto:
 
 <figure>
-<a href="/assets/img/2013/05/gourceGit-1024x804.png"><img src="/assets/img/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="804px" /></a>
+<a href="/assets/img/2013/05/gourceGit-1024x804.png"><amp-img src="/assets/img/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="804px" /></a>
 </figure>
 
 Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.

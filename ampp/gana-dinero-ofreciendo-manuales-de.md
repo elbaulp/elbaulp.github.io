@@ -10,7 +10,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>
+<a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img border="0" height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>
 </div>
 
 Hace bastante tiempo que uso RevResponse. Para quien no lo sepa, es un servício que ofrece manuales de todas las áreas de conocimiento, dichas áreas podéis verlas aquí en el siguiente cuadro:
@@ -29,6 +29,6 @@ Dicho todo esto, a quien le interese puede registrarse en este [ enlace][1].
 
 
 
- [1]: http://www.revresponse.com/join.php/?refbrand=bashyc-blogspot&invcode=raf&page=referral-page
+ [1]: http://www.revresponse.com/join.php/?refbrand=bashyc-blogspot&invcode;=raf&page;=referral-page
 
 {% include toc.html %}

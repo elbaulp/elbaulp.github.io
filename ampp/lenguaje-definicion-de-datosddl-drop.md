@@ -43,7 +43,7 @@ Truncate table nombre_table [{DROP | REUSE} STORAGE];
 Con DROP STORAGE se desasigna todo el espacio.  
 Con DROP REUSE mantendrá reservado el espacio para nuevas filas.
 
-* * *</p>
+* * *
 
 #### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE][2] {.referencia}
 

@@ -15,16 +15,15 @@ Hace poco estaba disponible el [botón +1 de google][1] en los resultados de bú
 
 
 <!--ad-->
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="356" width="400" src="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" /></a>
+<a href="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="356" width="400" src="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" /></a>
 </div>
 
 Por desgracia en España aún no funciona, tendremos que esperar.
 
 ## Actualización
 
-He estado investigando y he encontrado un sitio en el que nos permiten agregar nuestro botón +1 para cualquier tipo de web: <http://www.google.com/webmasters/+1/button/index.html>, como podéis ver, funciona, ya que yo lo tengo puesto  
+He estado investigando y he encontrado un sitio en el que nos permiten agregar nuestro botón +1 para cualquier tipo de web: <http:>, como podéis ver, funciona, ya que yo lo tengo puesto  
 
 
 
@@ -33,3 +32,4 @@ He estado investigando y he encontrado un sitio en el que nos permiten agregar n
  [2]: http://buzz.blogger.com/2011/06/add-1-button-to-your-blog.html
 
 {% include toc.html %}
+</http:>

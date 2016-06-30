@@ -14,7 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 En la anterior entrada de [programación Android][1], hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el [planteamiento de la base de datos.][2] En esta entrada vamos a ver cómo extender de la clase ContentProvider.
@@ -58,7 +58,7 @@ This file is part of FavSites.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with FavSites.  If not, see <http: //www.gnu.org/licenses/>.
+    along with FavSites.  If not, see <http:>.
 */
 
 package com.elbauldelprogramador.favsites;
@@ -89,9 +89,9 @@ public class SitesProvider extends ContentProvider{
 
    //Configurando el projection Map
    //El projection map es similar a "as" (alias de columna)
-   private static HashMap<string , String> sSitesProjectionMap;
+   private static HashMap<string> sSitesProjectionMap;
    static{
-      sSitesProjectionMap = new HashMap</string><string , String>();
+      sSitesProjectionMap = new HashMap</string><string>();
       sSitesProjectionMap.put(favSitesTableMEtaData._ID,
                               favSitesTableMEtaData._ID);
 
@@ -218,3 +218,4 @@ public class SitesProvider extends ContentProvider{
  [7]: /programacion-android-implementando-un_14/
 
 {% include toc.html %}
+</http:>

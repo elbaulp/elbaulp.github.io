@@ -11,7 +11,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<img class="alignleft" title="These Are The Droids You're Looking For: An Android Guide" alt="These Are The Droids You're Looking For: An Android Guide" src="https://lh4.googleusercontent.com/-Pn_3Sygxwqw/TsmHUU3hk3I/AAAAAAAAB1I/NzS8wVIBLtw/s291/android-guide-big-240x291.jpg"  />][1]
+[<amp-img class="alignleft" title="These Are The Droids You're Looking For: An Android Guide" alt="These Are The Droids You're Looking For: An Android Guide" src="https://lh4.googleusercontent.com/-Pn_3Sygxwqw/TsmHUU3hk3I/AAAAAAAAB1I/NzS8wVIBLtw/s291/android-guide-big-240x291.jpg" />][1]
 
 Learn everything you want to learn about Android, for free! “These Are The Droids You’re Looking For: An Android Guide”, by author Matt Smith, is the latest free manual from MakeUseOf.com. Outlining the ins and outs of Android, this guide covers basic everything from basic usage to rooting your phone, and is a must-have if you use Google’s smartphone OS.
 
@@ -30,14 +30,14 @@ This amazing manual will teach you:
   * Securing your Android phone
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 
 
- [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make44/prgm.cgi
+ [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_make44/prgm.cgi
  [2]: /manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 

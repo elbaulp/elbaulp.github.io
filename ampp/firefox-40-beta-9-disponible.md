@@ -20,25 +20,20 @@ La nueva versi&oacute;n **beta 9** de **Mozilla Firefox 4.0 **est&aacute; replic
 &nbsp;
 
 <p style="text-align: center;">
-  <img  src="http://muycomputer.com/files/264-1334-FOTO/firefox_logo.jpg" alt="" />
+<amp-img src="http://muycomputer.com/files/264-1334-FOTO/firefox_logo.jpg" alt="" />
 </p>
-
 <p style="text-align: center;">
-  <strong><em>Firefox 4.0 beta 9 disponible.</em></strong>
+<strong><em>Firefox 4.0 beta 9 disponible.</em></strong>
 </p>
-
 <p style="text-align: center;">
   &nbsp;
 </p>
-
 <p style="text-align: left;">
   Os dejamos un enlace a la direcci&oacute;n del <a href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/4.0b9/" target="_blank">ftp oficial de Mozilla</a> desde la cual podr&eacute;is <strong>descargarla </strong>o bien podr&eacute;is esperar a que sea lanzada <strong>oficialmente </strong>en la p&aacute;gina de <a href="http://www.mozilla.com/es-ES/firefox/beta/" target="_blank">Firefox Beta</a>.
 </p>
-
 <p style="text-align: left;">
   &nbsp;
 </p>
-
 <p style="text-align: left;">
   Hace tan s&oacute;lo dos d&iacute;as <a href="http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDAuTGbDGO9VGMaFYVz8198fvhnjoDi3v267m0betOw5f36BZymLcDOH" target="_blank">os informamos</a> sobre la fecha estimada de llegada de la <strong>versi&oacute;n final</strong>, que si todo va seg&uacute;n lo previsto ser&aacute; para <a href="http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDAuTGbDGO9VGMaFYVz8198fvhnjoDi3v267m0betOw5f36BZymLcDOH" target="_blank">antes de que finalice febrero</a>.
 </p>

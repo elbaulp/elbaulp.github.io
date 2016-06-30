@@ -8,7 +8,7 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-En este vídeo se explica lo qué puede pasarle a los usuarios que descargaron o subieron archivos con copyright usando megaupload, ya que en estos momentos todos los registros y archivos están en posesión del gobierno de Estados Unidos.</p>
+En este vídeo se explica lo qué puede pasarle a los usuarios que descargaron o subieron archivos con copyright usando megaupload, ya que en estos momentos todos los registros y archivos están en posesión del gobierno de Estados Unidos.
 
 At minute 4:38 the video&#8217;s author says he grant permissions for spread the video in the whole internet.
 
@@ -22,7 +22,7 @@ President Obama filled the USA DEpartment of Justice with RIAA Lawyers
 http://www.wired.com/threatlevel/2009/04/obama-taps-fift/  
 http://www.dailymail.co.uk/news/article-2087135/Richard-ODwyer-US-extradition-pact-misused-says-Sir-Menzies-Campbell.html?ito=feeds-newsxml  
 For Profit Prisons  
-http://www.globalresearch.ca/index.php?context=va&aid=8289  
+http://www.globalresearch.ca/index.php?context=va&aid;=8289  
 New York Times, US Prison Popular Dwarfs the rest of the World&#8217;s  
 http://www.nytimes.com/2008/04/23/world/americas/23iht-23prison.12253738.html?pagewanted=all  
 Article: For Profit Prisons a GREAT Business Opportunity  
@@ -52,7 +52,7 @@ http://www.afterdawn.com/news/article.cfm/2009/06/21/woman\_with\_no\_computer\_
 Data Shows RIAA Employees Pirated
 http://www.dslreports.com/shownews/Data-Shows-Piracy-at-DHS-RIAA-Headquarters-117549  
 RIAA Demands to Depose Dead Defendant&#8217;s Young Children  
-http://www.youtube.com/redirect?q=http%3A%2F%2Frecordingindustryvspeople.blogspot.com%2F2006%2F08%2Friaa-wants-to-depose-dead-defendants.html&session_token=BD8Yt72k-Lt7-ncyDkVMDAMl7218MTMyNzM1NjM5NkAxMzI3MjY5OTk2  
+http://www.youtube.com/redirect?q=http%3A%2F%2Frecordingindustryvspeople.blogspot.com%2F2006%2F08%2Friaa-wants-to-depose-dead-defendants.html&session;_token=BD8Yt72k-Lt7-ncyDkVMDAMl7218MTMyNzM1NjM5NkAxMzI3MjY5OTk2  
 RIAA Sues Dead Woman, has No Remorse
 
 http://www.theregister.co.uk/2005/02/05/riaa\_sues\_the_dead/

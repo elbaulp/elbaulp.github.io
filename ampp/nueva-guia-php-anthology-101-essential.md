@@ -22,7 +22,7 @@ Puedes descargarlo desde aquí o en la sección de [Manuales gratuítos][3]
 
 
  [1]: http://img.tradepub.com/free/w_sitb02/assets/img/w_sitb02c.gif "The PHP Anthology: 101 Essential Tips, Tricks & Hacks, 2nd Edition"
- [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sitb02/prgm.cgi
+ [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_sitb02/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
  [4]: http://lh5.googleusercontent.com/-3xNROQvUyLw/Tez0xVWLW1I/AAAAAAAAAkc/3Gx7eUaLwxU/s288/descargar.png
 

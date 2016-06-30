@@ -11,7 +11,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <figure>
-  <img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<amp-img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" />
 </figure>
 
 This kit will tell you what you need to know to earn more in system administration and security.
@@ -27,7 +27,7 @@ This kit also includes these valuable resources:
 - Encryption as an Enterprise Strategy
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_bund84" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_bund84" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].

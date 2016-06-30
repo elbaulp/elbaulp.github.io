@@ -11,7 +11,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd10"><img src="/assets/img/Boosting-your-Web-Development-Career2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd10"><amp-img src="/assets/img/Boosting-your-Web-Development-Career2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 The web has been around for many years now, but the real advancements and innovation from it are being seen this last decade. Everything just seems to have gotten better and more productive as both programmers and technology put efforts into creating some fundamental standards everyone would follow to work on the web.
@@ -23,7 +23,7 @@ In this guide, we inspect the most important aspect of the modern web, programmi
 _With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Web Code Geeks._
 
 <div class="button-post">
-  <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd10" target="_blank">Descárgala ahora</a>
+<a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd10" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].

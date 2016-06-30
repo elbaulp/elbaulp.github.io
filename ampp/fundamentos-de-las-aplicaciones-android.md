@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Poco a poco, todos los dias intento traducir uno o dos párrafos de la guía Android, y esto me ha llevado a completar el siguiente tema, [Application Fundamentals][1].
 
@@ -20,7 +20,7 @@ La traducción está accesible desde el blog en la pestaña del menú [Android][
 
 Creo que llevo buen ritmo por ahora, espero que sea útil y si alguien quiere participar, le recomiendo que se léa las [normas de edición][4].
 
-Y por favor, quien se una, que no séa para copiar y pegar el resultado del traductor de Google ;-). Saludos</p> </p> </p> </p></p>
+Y por favor, quien se una, que no séa para copiar y pegar el resultado del traductor de Google ;-). Saludos   
 
 
 

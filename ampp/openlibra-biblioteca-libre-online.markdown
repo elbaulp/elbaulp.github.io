@@ -14,7 +14,7 @@ color: "#F57C00"
 {% include toc.html %}
 
 <figure>
-  <a href="/assets/img/openlibra-biblioteca-libre-online.jpg"><img src="/assets/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/openlibra-biblioteca-libre-online.jpg"><amp-img src="/assets/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="84px" /></a>
 </figure>
 
 Hace unos años, concretamente 5, un compañero bloggero lanzaba [OpenLibra: La Biblioteca Libre Online tal como la esperabas](/openlibra-la-biblioteca-libre-online/ "OpenLibra: La Biblioteca Libre Online tal como la esperabas").

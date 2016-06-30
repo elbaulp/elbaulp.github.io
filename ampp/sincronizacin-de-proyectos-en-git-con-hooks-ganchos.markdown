@@ -12,7 +12,7 @@ color: "#f05033"
 ---
 
 <figure>
-  <img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" />
+<amp-img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
 </figure>
 
 ## Repositorio espejo (Mirror repo)
@@ -71,7 +71,7 @@ git push repo2 -f --mirror
 
 ## Mantener sincronizada una única rama
 
-Un problema similar podría ser mantener sincronizado en _repo2_ únicamente las ramas _master_. De forma que podamos crear tantas ramas como necesitemos en _repo1_ sin que se vean reflejadas en _repo2_. Para ello, en lugar de usar el _hook_ `post-commit`, usaremos `post-merge`. Éste _hook_ se ejecutará cada vez que se haga un `git merge <rama distinta de master>` sobre master.
+Un problema similar podría ser mantener sincronizado en _repo2_ únicamente las ramas _master_. De forma que podamos crear tantas ramas como necesitemos en _repo1_ sin que se vean reflejadas en _repo2_. Para ello, en lugar de usar el _hook_ `post-commit`, usaremos `post-merge`. Éste _hook_ se ejecutará cada vez que se haga un `git merge <rama distinta="distinta" de="de" master="master">` sobre master.
 
 Para activarlo:
 
@@ -101,3 +101,4 @@ git push repo2 master:master
 [Automatically mirror a git repository](http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository)
 
 {% include toc.html %}
+</rama></url-repo2>

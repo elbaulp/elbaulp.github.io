@@ -32,7 +32,7 @@ Un ejemplo de ejecución:
 
 ```bash
 hkr-> ./grep cout max.php grep.cpp smtp.cpp
-grep.cpp(22)     cout < < "Uso: grep <palabra a buscar> <firchero1 [<ficheros...>]>" < < endl;
+grep.cpp(22)     cout < < "Uso: grep <palabra a="a" buscar="buscar"> <firchero1><ficheros...>]>" < < endl;
 grep.cpp(56)     cout << nombre << "(" << nlinea << ") t" << remove_left_white_spaces(cadena) << endl;
 smtp.cpp(56)     cout << "socket createdn";
 smtp.cpp(75)    cout << "Connectedn";
@@ -52,7 +52,7 @@ Código:
 //============================================================================
 
 #include <iostream>
-#include <string .h>
+#include <string>
 #include <fstream>
 
 using namespace std;
@@ -64,7 +64,7 @@ int
 main(int argc, char* argv[])
 {
       if (argc < 3){
-         cout << "Uso: grep <palabra a buscar> <firchero1 [<ficheros...>]>" < < endl;
+         cout << "Uso: grep </fstream></string></iostream></ficheros...></firchero1></palabra><palabra a="a" buscar="buscar"> <firchero1><ficheros...>]>" < < endl;
          return -1;
       } else {
          for (int i = 2; i < argc; i++)
@@ -105,8 +105,9 @@ grep(const char* palabra, const char* nombre)
 
 ```
 
-</firchero1></fstream></string></iostream></firchero1>
+</ficheros...></firchero1>
 
 
 
 {% include toc.html %}
+</palabra>

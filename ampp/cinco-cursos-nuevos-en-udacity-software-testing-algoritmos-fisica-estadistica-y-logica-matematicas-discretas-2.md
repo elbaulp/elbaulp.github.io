@@ -19,7 +19,7 @@ format: status
 main-class: "misc"
 color: "#61B38D"
 ---
-<img alt="" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" class="alignleft"  />  
+<amp-img alt="" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" class="alignleft" />
 <a href="http://www.udacity.com/" target="_blank">Udacity</a> sigue mejorando,y a una semana escasa de acabar los [cinco cursos][1] que comenzaron hace siete semanas. Ayer anunciaron en su blog que iban a impartir otros cinco cursos a partir del 25 de Junio. A continuación dejo una descripción de cada uno de los cursos.
 
 
@@ -36,7 +36,7 @@ When writing software, destruction can be just as valuable as creation. Learn ho
 
 #### Índice
 
-  * ##### Unit 1: Introduction</p>
+  * ##### Unit 1: Introduction
 
     How to become a great software tester
 
@@ -64,7 +64,7 @@ When writing software, destruction can be just as valuable as creation. Learn ho
 
     Summary and tournament results
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 ### Algorithms (CS215)
 
@@ -102,7 +102,7 @@ Ever played the Kevin Bacon game? This class will show you how it works by givin
 
     Using your knowledge
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 ### Intro to Physics (PH100)
 
@@ -141,7 +141,7 @@ Study physics abroad in Europe &#8212; virtually! Learn the basics of physics on
 
     Modern physics and open questions
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 ### Introduction to Statistics (ST101)
 
@@ -180,7 +180,7 @@ Statistics is about extracting meaning from data. In this class, we will introdu
     Statistics vs machine learning; what to study next; where statistics is used
     Final exam
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 ### Logic & Discrete Mathematics (CS221)
 
@@ -218,7 +218,7 @@ Statistics is about extracting meaning from data. In this class, we will introdu
 
     An overview of the course material
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 
 

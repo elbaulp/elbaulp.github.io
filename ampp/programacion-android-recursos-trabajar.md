@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Además de los recursos estructurados [que hemos ido viendo][1], Android permite usar archivos XML arbitrarios como recursos. Esto proporciona una forma rápida de referenciar los archivos basandose en su Id de recurso así como permitirnos localizar estos archivos de una manera sencilla. Como última ventaja, nos permite compilar y almacenar estos archivos en el dispositivo eficientemente.
 
@@ -23,7 +23,7 @@ Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el direc
 
 ```xml
 <rootelem1>
-   <subelem1>
+<subelem1>
       Hello World from an xml sub element
    </subelem1>
 </rootelem1>

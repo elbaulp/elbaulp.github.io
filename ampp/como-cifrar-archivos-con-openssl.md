@@ -16,7 +16,7 @@ color: "#0097A7"
 ---  
 
 <figure>
-<img src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="Homomorphic Encryption" alt="Cómo cifrar archivos con openssl" title="Cómo cifrar archivos con openssl"/>
+<amp-img src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="Homomorphic Encryption" alt="Cómo cifrar archivos con openssl" title="Cómo cifrar archivos con openssl" width="256px" height="256px" />
 </figure>
 
 Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**.  
@@ -99,7 +99,7 @@ Como suele ser habitual, los [scripts bash][2] nos facilitan las tareas repetiti
 #/bin/bash
 
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 <Directorio a los archivos cifrados>"
+    echo "Usage: $0 <directorio a="a" los="los" archivos="archivos" cifrados="cifrados">"
     exit
 fi
 
@@ -134,3 +134,4 @@ Espero que os sea de utilidad.
  [2]: https://elbauldelprogramador.com/
 
 {% include toc.html %}
+</directorio>

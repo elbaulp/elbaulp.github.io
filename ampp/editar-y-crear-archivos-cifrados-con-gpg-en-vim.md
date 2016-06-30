@@ -18,7 +18,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-<img src="/assets/img/2013/04/GnuPG-Logo.png" alt="Editar y crear archivos cifrados con GPG en Vim" title="Editar y crear archivos cifrados con GPG en Vim"  />
+<amp-img src="/assets/img/2013/04/GnuPG-Logo.png" alt="Editar y crear archivos cifrados con GPG en Vim" title="Editar y crear archivos cifrados con GPG en Vim" width="400px" height="175px" />
 </figure>
 
 Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo **gpg** (*GNU Privacy Guard*).
@@ -44,59 +44,7 @@ Es recomendable establecer algunas variables en el fichero de configuracón de V
 
 ```bash
 $ cat ~/.vimrc
-:let g:GPGDefaultRecipients=["<tu-correo"]
-:let g:GPGPreferSign=1
-
-```
-
-Con **g:GPGDefaultRecipients** se establecen los destinatarios por defecto para los archivos cifrados. Y **g:GPGPreferSign** firma los archivos nuevos.
-
-Para usar vim con este plugin es necesario que los archivos terminen en las extensiones **.gpg, .pgp,** o **.asc**. Cuando se abre un archivo existente ya cifrado Vim solicitará el *passphrase*. En el caso de que estemos creando un archivo nuevo, preguntará qué llaves publicas usar como destinatarios.
-
-### Ejemplos de uso
-
-```bash
-$ vim test.gpg
-
-```
-
-Una vez en Vim, escribimos contenido en el archivo y guardamos con *:wq*. Tras esto, Vim pedirá que introduzcamos la *passphrase* de nuestra llave. En caso de disponer de más de una clave pública en nuestro anillo de llaves GPG, Vim nos dará a escoger con cual cifrar el archivo. Una vez seleccionada la clave el archivo estará listo:
-
-```bash
-cat test.gpg
------BEGIN PGP MESSAGE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
-
-hQMOA4/xAZRTNmlYEAwAmFx/GgNIVVgoK98SYXs1gU7zjHcOmempUzbDtvGni2Ar
-s2eYuz5X8hgYwTL185PH1bg6UyXdcXk3yckb8AOBwmF2jaOqnwnXBlqY9mcnVUAz
-YyUBABL9jwE9zxCHJrenwlyFnIryj66XC4G7NFskANhXs/KBDmDsVEit0XHwtpKl
-STIDjCyx3SvsZ0tGFGeLb01Poq35Sx+buLawpw1JDI8rN6tN9empZ6m9eDC9zhD3
-6EYscAv96bzkwKVab1tXz498gSVr86bCT497HNbXuPju9LdoMQJ8X4Ce/ViAOLAp
-TDrUfSA0Pkd1zaosMiabFUt+mGKX3tE4g0sTInImy9aQCW9ZCoOe7mr1qfKUYigQ
-AIBYp7Kjvxdx3cmJUqv+5XV4HKWtxLAaOkqx91jmqXZb6UjZqhiCQttumfu0qG18
-YfuUHLaIDNLdWGtz4fGnT5+TcTG0B9Sorbbk814PK4TobQcRjDAHXfcdQSEZKzZv
-BvxzuVuVo8rkkizN7PrbC/9U0jA94Np2pEzrzNjXTW8qyWTMOoLGyHDB/eturgW4
-k+LOtAkwGRl5upLtqsgodIWWQ5M0L+dOfUjDT2D5kemJsoeEhXa6LnfRb2W5lKLM
-wPTcN3VGw+MqRAfBpN6lPlyGhe5CfJazoSAIm53CZdK/HxJDw4Xgo5U6pHuAo9qv
-61q8wGiuqrNMG2YuOljytVj6XZA/soyNug/XxZIvVPaXU5h5+5XjVgnE049JuZVN
-g3zqEwGS724ZiVDZBtfXE9W7++T78lWTMi3zf3eqGrD1YYkkrr6diL1BsG6dvDdG
-mKqmITtdSmUsW8BDuFRO9xON91V9S5Ja5G6fZnwKQMIE/gy7mwmP8SJLwq6oe9Ki
-7f3z2e+PB5iY+qBFGgE2SCm3zGYMDdPTaEv1vRrhYLZXPUYqwonW4nRceVgIDSr5
-76vqd0tnHEPBJedXtzC0gZM0phMJTJxwdGZVoC70jg44M1sgEa8fBOdxPzgKVyHU
-/aKFYNiVUZqP42mM+bYHsIzSvwFAFUFbCo+PkbFlWfvzrbgSP+/tvU+YdNWaW3gT
-z1QnCksazNT0NejGT+bR9laTomTINAxY8NIiZXF3Bs240/bIiX86weZ9VOFgCvkL
-+89CTkWDWTf8163aiHYkJBy0f3yUYubgXZgkKO08LeBXX9bpTJkqKkVjDdr2Szsz
-NYzoIbI6ZMjgAWRkuk0Kjf4pPoowrUR5N3phzV76FlJrItCtSxCtzke/Ml6c905W
-Os82c2XLJ1jWjLGG0GbIPOUz
-=7ABi
------END PGP MESSAGE-----
-
-```
-
-Es recomendable firmar todos los archivos que cifremos con **gpg** para asegurar la vericidad del firmante, por ejemplo podemos pasarle las siguientes opciones a **gpg**:
-
-```bash
-gpg --encrypt -r <ID_PUBLICA> -u <ID_PRIVADA> --output <NOMBRE_ARCHIVO.signed.gpg> --sign <ARCHIVO_ORIGINAL>
+:let g:GPGDefaultRecipients=["<tu-correo><id_publica> -u <id_privada> --output <nombre_archivo.signed.gpg> --sign <archivo_original>
 
 ```
 
@@ -108,3 +56,4 @@ gpg --encrypt -r <ID_PUBLICA> -u <ID_PRIVADA> --output <NOMBRE_ARCHIVO.signed.gp
 
 
 {% include toc.html %}
+</archivo_original></nombre_archivo.signed.gpg></id_privada></id_publica></tu-correo>

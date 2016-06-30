@@ -16,7 +16,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 <figure>
-  <a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><amp-img src="/assets/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="600px" /></a>
 </figure>
 
 Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo [bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban][1]. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.
@@ -69,7 +69,7 @@ if [ $# = 2 ]; then
         echo $esta
     fi
 else
-    echo "$0 <ip> <Comentario>"
+    echo "$0 <ip> <comentario>"
 fi
 
 ```
@@ -77,14 +77,14 @@ fi
 Tras guardar el script con el nombre deseado, el uso es el siguiente:
 
 ```bash
-./nombre_script.sh <IP> <mensaje en el log>
+./nombre_script.sh </comentario></ip><ip> <mensaje en="en" el="el" log="log">
 
 ```
 
 Si la IP ya está bloqueada, no se añadirá otra entrada a Iptables, el segundo parámetro aparecerá en los logs del sistema, algo así:
 
 ```bash
-Dec  8 18:40:36 nombreServidor kernel: <MENSAJE EN EL LOG>=eth0 OUT= MAC=XXXXXXXXXXXXXX SRC=X.X.X.X DST=Y.Y.Y.Y LEN=X TOS=X PREC=X TTL=X ID=X DF PROTO=TCP SPT=XX DPT=XX WINDOW=XXX RES=XXX SYN URGP=X
+Dec  8 18:40:36 nombreServidor kernel: </mensaje><mensaje en="EN" el="EL" log="LOG">=eth0 OUT= MAC=XXXXXXXXXXXXXX SRC=X.X.X.X DST=Y.Y.Y.Y LEN=X TOS=X PREC=X TTL=X ID=X DF PROTO=TCP SPT=XX DPT=XX WINDOW=XXX RES=XXX SYN URGP=X
 
 ```
 
@@ -120,3 +120,4 @@ A partir de ahora, se notará un descenso drástico en los comentarios de spam. 
 [5]: https://elbauldelprogramador.com/ "Scripts del blog"
 
 {% include toc.html %}
+</mensaje></ip>

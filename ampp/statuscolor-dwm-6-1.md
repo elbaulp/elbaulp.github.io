@@ -75,7 +75,7 @@ status = smprintf("L:%s\x01 A:%s\x02 U:%s %s\x03", avgs, tmar, tmutc, tmbln);
 Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el color 3. He aquí un ejemplo de la mía:
 
 <figure>
-  <a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><amp-img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" width="702px" height="13px" /></a>
 </figure>
 
 ## Dentro del código
@@ -117,13 +117,13 @@ drw_colored_st(Drw *drw, int x, int y, unsigned int w, unsigned int h, char text
   if(!text || !drw->font)
     return;
   olen = strlen(ptext);
-  drw_font_getexts(drw->font, ptext, olen, &tex);
+  drw_font_getexts(drw->font, ptext, olen, &tex;);
   th = drw->font->ascent + drw->font->descent;
   ty = y + (h / 2) - (th / 2) + drw->font->ascent;
   tx = x + (h / 2);
   /* shorten text if necessary */
   for(len = MIN(olen, sizeof buf); len && (tex.w > w - tex.h || w < tex.h); len--)
-    drw_font_getexts(drw->font, ptext, len, &tex);
+    drw_font_getexts(drw->font, ptext, len, &tex;);
   if(!len)
     return;
   memcpy(buf, ptext, len);

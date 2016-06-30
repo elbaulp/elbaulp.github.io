@@ -28,23 +28,16 @@ Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un 
 &nbsp;
 
 ```xml
-<LinearLayout
-    <!--....--> >
+<linearlayout><!--....--> >
 
-    <ImageView
+    <imageview><!--....--> />
 
-
-<!--....--> />
-
-    <TextView
-
-
-<!--....--> />
-</LinearLayout>
+    <textview><!--....--> />
+</textview></imageview></linearlayout>
 
 ```
 
-Si el layout consta de estos dos elementos, Lint muestra el siguiente mensaje : *This tag and its children can be replaced by one <TextView> and a compound drawable*. Viene a decir que es posible simplificar el layout eliminando la imagen y usarla dentro del elemento TextView como **Compound Drawable**.
+Si el layout consta de estos dos elementos, Lint muestra el siguiente mensaje : *This tag and its children can be replaced by one <textview> and a compound drawable*. Viene a decir que es posible simplificar el layout eliminando la imagen y usarla dentro del elemento TextView como **Compound Drawable**.
 
 Como es frecuente en Android, hay dos formas de hacer esto, mediante código o mediante XML. Empecemos con el primero:
 
@@ -66,14 +59,7 @@ tv.setCompoundDrawablePadding(10);
 Es posible realizar el proceso anterior mediante XML, en lugar de java:
 
 ```xml
-<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_launcher"
-        android:drawablePadding="10dp"
-        android:gravity="center_vertical"
-        android:text="@string/text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+</textview><textview android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableleft="@drawable/ic_launcher" android:drawablepadding="10dp" android:gravity="center_vertical" android:text="@string/text" android:textappearance="?android:attr/textAppearanceSmall">
 
 ```
 
@@ -92,3 +78,4 @@ Con esta pequeña optimización estamos reduciendo el layout de dos a un View, p
  [2]: /programacion-android-interfaz-grafica/ "Programación Android: Interfaz gráfica – Conceptos básicos"
 
 {% include toc.html %}
+</textview>

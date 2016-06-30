@@ -82,7 +82,7 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination 
     offset.y = y;
 
     //Blit the surface
-    SDL_BlitSurface( source, NULL, destination, &offset );
+    SDL_BlitSurface( source, NULL, destination, &offset; );
 }
 
 ```
@@ -204,7 +204,7 @@ Comenzamos el bucle principal, el cual seguirá funcionando hasta que el usuario
 
 ```bash
 //While there's an event to handle
-        while( SDL_PollEvent( &event ) )
+        while( SDL_PollEvent( &event; ) )
         {
 
 ```
@@ -213,13 +213,13 @@ En SDL cuando ocurre un evento, se coloca en la cola de eventos. Ésta cola de e
 Por ejemplo si fuera a presionar un botón del ratón, mover el cursor y a continuación, presionar una tecla del teclado, la cola de eventos se vería así:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" height="177" width="255" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TT6ImYP7bjI/AAAAAAAAARU/QiAey3O_FW0/queue.jpg" />
+<amp-img border="0" height="177" width="255" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TT6ImYP7bjI/AAAAAAAAARU/QiAey3O_FW0/queue.jpg" />
 </div>
 
 Lo que <var>SDL_PollEvent()</var> hace es sacar un evento de la cola y guardar sus datos en nuestra estructura de tipo Evento:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" height="258" width="294" src="https://lh5.ggpht.com/_IlK2pNFFgGM/TT6ImqKAdJI/AAAAAAAAARY/JqvFGavqRHY/poll.jpg" />
+<amp-img border="0" height="258" width="294" src="https://lh5.ggpht.com/_IlK2pNFFgGM/TT6ImqKAdJI/AAAAAAAAARY/JqvFGavqRHY/poll.jpg" />
 </div>
 
 Por lo tanto este código es recoger datos de los eventos **mientras** haya en la cola.
@@ -253,7 +253,7 @@ Hay otras maneras de controlar eventos como SDL\_WaitEvent() y SDL\_PeepEvents()
 
 * * *Fuente:
 
-[lazyfoo.net][3]</p>
+[lazyfoo.net][3]
 
 #### Siguiente tema: [Lección 5 &#8211; Colores Clave][4] {.referencia}
 
@@ -265,3 +265,4 @@ Hay otras maneras de controlar eventos como SDL\_WaitEvent() y SDL\_PeepEvents()
  [4]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-5/
 
 {% include toc.html %}
+</string>

@@ -76,7 +76,7 @@ location ~ \.php$ {
 Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en */usr/local/nginx/http/* y asignarle como grupo y usuario *www-data*:
 
 ```bash
-echo '<?php echo "Probando que PHP funciona";?>' > /usr/local/nginx/html/index.php
+echo '<?php echo "Probando que PHP funciona";??>' > /usr/local/nginx/html/index.php
 chown www-data:www-data /usr/local/nginx/html/index.php
 ```
 

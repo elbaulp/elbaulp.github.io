@@ -65,3 +65,4 @@ Los valores nulos se consideran como los más pequeños posibles.
  [1]: https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/
 
 {% include toc.html %}
+</search_condition_group>

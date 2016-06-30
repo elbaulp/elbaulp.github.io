@@ -18,7 +18,7 @@ color: "#689F38"
 > Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.
 
 <figure>
-  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img  src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><amp-img src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" width="700px" height="350px" /></a>
 </figure>
 
 # Poblar un GridView con un Adaptador de ImageViews en Android
@@ -40,7 +40,7 @@ Son considerados mejor alternativa que las listas, si se desea aprovechar el esp
 El despliegue por defecto de los elementos de un GridView es vertical. El orden de los elementos va de izquierda a derecha y así mismo se definen los indices (basados en inicio 0) en nuestras estructuras de datos relacionadas.
 
 <figure>
-  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img  src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><amp-img src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" width="700px" height="350px" /></a>
 </figure>
 
 Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con el indice 0 hasta terminar el recorrido de izquierda a derecha en la parte inferior derecha con el indice 5.
@@ -50,7 +50,7 @@ Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con 
 En este caso se recorre el Grid en función de cada fila. Lo que quiere decir que accederemos a las posiciones de arriba hacia abajo.
 
 <figure>
-  <a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><img  src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/11/gridview-scrolling-horizontal.png"><amp-img src="/assets/img/2014/11/gridview-scrolling-horizontal.png" title="{{ page.title }}" alt="{{ page.title }}" width="700px" height="350px" /></a>
 </figure>
 
 La ilustración muestra el recorrido vertical de los elementos.
@@ -63,19 +63,10 @@ A la actividad basada en el `GridView` se le ha denominado `Main` y a aquella qu
 
 [Descargar Código][4]
 
-En el archivo de diseño de `Main` se escribirá un layout cuyo nodo principal sea un elemento `<GridView>`. Veamos:
+En el archivo de diseño de `Main` se escribirá un layout cuyo nodo principal sea un elemento `<gridview>`. Veamos:
 
 ```xml
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/gridview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:columnWidth="90dp"
-    android:numColumns="auto_fit"
-    android:verticalSpacing="10dp"
-    android:horizontalSpacing="10dp"
-    android:stretchMode="columnWidth"
-    android:gravity="center"/>
+</gridview><gridview xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/gridview" android:layout_width="match_parent" android:layout_height="match_parent" android:columnwidth="90dp" android:numcolumns="auto_fit" android:verticalspacing="10dp" android:horizontalspacing="10dp" android:stretchmode="columnWidth" android:gravity="center">
 
 ```
 
@@ -98,11 +89,7 @@ La distribución de nuestros elementos se ve afectada en el GridView por los sig
     Por otra parte, el layout para `Details` consta simplemente de un `ImageView` como nodo raíz:
 
 ```xml
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:contentDescription="@string/imageDesc"
-    android:id="@+id/originalImage" >
+<imageview xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:contentdescription="@string/imageDesc" android:id="@+id/originalImage">
 
 ```
 
@@ -194,7 +181,7 @@ gridview.setAdapter(new ImageAdapter(this));
 Creando una nueva escucha para los elementos del Grid
  */
 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+    public void onItemClick(AdapterView<? ?> parent, View v, int position, long id) {
         /*
         Iniciar una nueva actividad al presionar la foto
          */
@@ -234,3 +221,4 @@ Ahora solo ejecuta la aplicación y prueba su funcionamiento.
  [4]: https://www.dropbox.com/s/e56vsfojei6z2ow/Pics.rar?dl=0
 
 {% include toc.html %}
+</imageview></gridview>

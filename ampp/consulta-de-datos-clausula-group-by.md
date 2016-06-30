@@ -59,7 +59,7 @@ GROUP BY <group_by_expression>
 
 ```
 
-donde <group\_by\_expression> es la columna o columnas por la cuales se desea agrupar. No se  
+donde <group> es la columna o columnas por la cuales se desea agrupar. No se  
 puede utilizar un alias de dicha columna. Se puede agrupar mediante una expresión formada por  
 varias columnas. Es importante recordar que las columnas que aparecen en el group by deberían  
 también de aparecer tras la palabra SELECT (excepto casos especiales).  
@@ -117,3 +117,4 @@ Los más utilizados son:
  [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
 
 {% include toc.html %}
+</group></group_by_expression>

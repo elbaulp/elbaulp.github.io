@@ -22,19 +22,19 @@ En éste artículo vamos a ver cómo configurar un servidor cloud para ejecutar 
 
 En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
 
-<img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud"   />
+<amp-img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817px" height="448px" />
 
 ### Configurar la capacidad del servidor
 
 Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
 
-<img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud"   />
+<amp-img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817px" height="575px" />
 
 ### Establecer la contraseña de usuario
 
 Por último, solo resta proporcionar una contraseña al usuario **root**.
 
-<img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud"   />
+<amp-img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815px" height="581px" />
 
 ## Código del programa del lado servidor
 
@@ -341,14 +341,14 @@ iptables -A INPUT -m state --state NEW -p tcp --dport 8989 -j ACCEPT
 
 O, desde Arsys, en políticas de firewall añadir lo siguiente:
 
-<img src="/assets/img/2015/01/5.-Configuración-puerto.png" alt="5. Configuración puerto"   />
+<amp-img src="/assets/img/2015/01/5.-Configuración-puerto.png" alt="5. Configuración puerto" width="343px" height="45px" />
 
 ## Captura de pantalla del juego en marcha
 
-<img src="/assets/img/2015/01/6.-Ejempli-programa.png" alt="6. Ejemplo programa"   />
+<amp-img src="/assets/img/2015/01/6.-Ejempli-programa.png" alt="6. Ejemplo programa" width="653px" height="863px" />
 
 
 
- [1]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm_medium=baul&utm_term=desarrollarapps&utm_content=online&utm_campaign=cloud "Servidores Cloud"
+ [1]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm;_medium=baul&utm;_term=desarrollarapps&utm;_content=online&utm;_campaign=cloud "Servidores Cloud"
 
 {% include toc.html %}

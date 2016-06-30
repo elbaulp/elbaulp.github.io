@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 ## Componentes de las aplicaciones {#Components}
 
@@ -36,7 +36,7 @@ A continuación los cuatro tipos de componentes:
     trabajan juntas de forma coherente, cada una es independiente de la otra. Por lo tanto, una aplicación  
     distinta puede iniciar cualquiera de estas actividades (si la aplicación de email lo permite). Por ejemplo,  
     la aplicación de la cámara puede iniciar la actividad en la aplicación email para componer un nuevo correo,  
-    para que el usuario pueda compartir una imagen.</p>
+    para que el usuario pueda compartir una imagen.
 
     Una actividad se implementa como una subclase de `<a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a>`,  
     puedes leer más acerca de esto en la [guía para desrrolladores de Actividades][1]
@@ -47,7 +47,7 @@ A continuación los cuatro tipos de componentes:
     una interfaz de usuario. Por ejemplo, un servicio puede reproducir música en segundo plano mientras  
     el usuario se encuentra en otra aplicación, o puede navegar por la red sin bloquear la interacción  
     del usuario con otra actividad. Otro componente, como una actividad, puede iniciar el servicio y  
-    permitir que se ejecute o dejar que interactue con ella.</p>
+    permitir que se ejecute o dejar que interactue con ella.
 
     Un servicio se implementa como una subclase de `<a href="http://developer.android.com/reference/android/app/Service.html">Service</a>`,  
     puedes leer más acerca de esto en la [guía para desarrolladores de servicios][2]
@@ -60,7 +60,7 @@ A continuación los cuatro tipos de componentes:
     (Si el proveedor de contenido lo permite). Por ejemplo, el sistema Android proporciona un proveedor  
     de contenido que gestiona la información de los contactos del usuario. Así, cualquier aplicación con  
     los permisos adecuados podrá consultar el proveedor de contenidos (Como `<a href="http://developer.android.com/reference/android/provider/ContactsContract.Data.html">ContactsContract.Data</a>`) para leer y escribir información sobre una persona  
-    en particular. </p>
+    en particular. 
 
     Los proveedores de contenido son también útiles para la lectura y escritura de datos privados de la aplicación  
     y que no se comparten. Por ejemplo, el ejemplo de [Note Pad][3] usa un proveedor de contenido para guardar notas.
@@ -77,7 +77,7 @@ A continuación los cuatro tipos de componentes:
     Aunque estas emisiones no muestran una interfaz al usuario, pueden [crear una notificación en la barra de  
     estado][5] para avisar al usuario. Más comúnmente, sin embargo, un receptor de emisión es solo  
     un &#8220;gateway&#8221; (puerta de enlace) a otro componente y además no conlleva mucho trabajo. Se prodría  
-    iniciar un servicio para realizar algún trabajo basado en el evento.</p>
+    iniciar un servicio para realizar algún trabajo basado en el evento.
 
     Un broadcast receiver se implementa como una subclase de `<a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html">BroadcastReceiver</a>`  
     y cada emisión se entrega como un objeto `<a href="http://developer.android.com/reference/android/content/Intent.html">Intent</a>`. Para más información lee  

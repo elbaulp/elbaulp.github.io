@@ -15,7 +15,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 Un intent sirve para invocar componentes, en android entendemos por componentes las [activities,][1] Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y [proveedores de contenido][2], código que abstráe los datos.
@@ -43,12 +43,11 @@ public class MiActivity extends Activity {
 El layout *R.Layout.MiActivity* debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el [AndroidManifest][3], que será algo así:
 
 ```xml
-<activity android:name=".MiActivity"
-          android:label="Mi Activity">
-   <intent -filter>
-      <action android:name="nuestra.accion.nombreAccion"/>
-      <category android:name="android.intent.category.DEFAULT" />
-   </intent>
+<activity android:name=".MiActivity" android:label="Mi Activity">
+<intent>
+<action android:name="nuestra.accion.nombreAccion">
+<category android:name="android.intent.category.DEFAULT">
+</category></action></intent>
 </activity>
 
 ```
@@ -113,7 +112,7 @@ public static void call(Activity activity){
 
 public static void showMapAtLatLong(Activity activity){
    Intent intent = new Intent(Intent.ACTION_VIEW);
-   intent.setData(Uri.parse("geo:0,0?z=4&q=restaurantes"));
+   intent.setData(Uri.parse("geo:0,0?z=4&q;=restaurantes"));
    activity.startActivity(intent);
 }
 
@@ -154,12 +153,12 @@ activity.startActivity(intent);
 En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:
 
 ```xml
-<activity ...>
-   <intent -filter>
-      <action android:name="android.intent.action.VIEW"/>
-      <data android:scheme="http" />
-      <data android:scheme="https" />
-   </intent>
+<activity>
+<intent>
+<action android:name="android.intent.action.VIEW">
+<data android:scheme="http">
+</data><data android:scheme="https">
+</data></action></intent>
 </activity>
 
 ```
@@ -238,7 +237,7 @@ activity.start(intent);
 Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:
 
 ```xml
-<activity android:name=".MiActivity" android:label="Mi Activity" />
+<activity android:name=".MiActivity" android:label="Mi Activity">
 
 ```
 
@@ -259,3 +258,4 @@ Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invo
  [5]: /programacion-android-intents-categorias/
 
 {% include toc.html %}
+</activity>

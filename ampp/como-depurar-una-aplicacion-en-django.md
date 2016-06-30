@@ -14,7 +14,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2-1024x575.png" alt="Cómo depurar una aplicación en django" />
+<amp-img src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2-1024x575.png" alt="Cómo depurar una aplicación en django" width="1024px" height="575px" />
 
 Hace poco vimos una [introducción a django][1]. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del [depurador][2]. Hoy veremos cómo depurar una aplicación en Django.
 
@@ -99,7 +99,7 @@ Por ejemplo, con * p <exp>* se imprimirá por pantalla el valor de la expresión
 
 ```bash
 p Poll.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
-[<Poll: Titulo encuesta>]
+[<poll: titulo="Titulo" encuesta="encuesta">]
 
 ```
 
@@ -114,7 +114,8 @@ Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
 
 
  [1]: https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
- [2]: https://elbauldelprogramador.com/?s=gdb&submit= "Depuradores"
+ [2]: https://elbauldelprogramador.com/?s=gdb&submit;= "Depuradores"
 
 
 {% include toc.html %}
+</poll:></exp></topic>

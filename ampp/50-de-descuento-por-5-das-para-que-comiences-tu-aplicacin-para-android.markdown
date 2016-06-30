@@ -13,7 +13,7 @@ Recientemente hemos cerrado un acuerdo con __Oja.la__, plataforma de educación 
 
 <!--ad-->
 
-Para aprovechar el descuento inscríbe tus datos aquí y un asesor de Oja.la se comunicará contigo: [REGISTRARSE AQUÍ](https://oja.la/l/bauldelprogramador?utm_source=Comunidad%3AElBauldelProgramador&utm_medium=Convocatoria&utm_campaign=24%2F09%2F2015)
+Para aprovechar el descuento inscríbe tus datos aquí y un asesor de Oja.la se comunicará contigo: [REGISTRARSE AQUÍ](https://oja.la/l/bauldelprogramador?utm_source=Comunidad%3AElBauldelProgramador&utm;_medium=Convocatoria&utm;_campaign=24%2F09%2F2015)
 
 Oja.la ofrece 4 opciones de pago:
 
@@ -30,6 +30,6 @@ Oja.la ofrece más de 320 cursos sobre Android, con una librería actualizada se
 En El Baúl del Programador, creemos que este descuento te facilitará comenzar tu proyecto hoy mismo, en una plataforma de educación de calidad.
 
 
-Recuerda inscribirte en los próximos 5 días [AQUÍ](https://oja.la/l/bauldelprogramador?utm_source=Comunidad%3AElBauldelProgramador&utm_medium=Convocatoria&utm_campaign=24%2F09%2F2015)
+Recuerda inscribirte en los próximos 5 días [AQUÍ](https://oja.la/l/bauldelprogramador?utm_source=Comunidad%3AElBauldelProgramador&utm;_medium=Convocatoria&utm;_campaign=24%2F09%2F2015)
 
 Saludos!

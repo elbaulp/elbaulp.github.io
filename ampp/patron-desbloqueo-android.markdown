@@ -30,7 +30,7 @@ _Enunciado: reconozca un patrón de gestos sobre pantalla de vuestra elección. 
 
 Veamos un vídeo de la aplicación funcioando:
 
-<iframe  src="https://www.youtube-nocookie.com/embed/j3w9ai3LHyU" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/j3w9ai3LHyU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 
 Para realizar esta aplicación se ha usado una librería llamada [PatterLock](https://github.com/DreaminginCodeZH/PatternLock).
@@ -38,15 +38,15 @@ Para realizar esta aplicación se ha usado una librería llamada [PatterLock](ht
 En esta aplicación se le pide al usuario que establezca un patrón de bloqueo, puede ser tan complejo como el patrón de bloqueo usado en [Android](/curso-programacion-android/ "Curso de Android"). Una vez establecido, cuando se introduzca correctamente la aplicación tomará una foto a los 3 segundos. A continuación mostramos la pantalla principal de la aplicación.
 
 <figure>
-  <a href="/assets/img/npi/photoGesture.png"><img src="/assets/img/npi/photoGesture.png" title="Pantalla principal de photoGesture" alt="Pantalla principal de photoGesture" /></a>
-  <span class="image-credit">Pantalla principal de photoGesture</span>
+<a href="/assets/img/npi/photoGesture.png"><amp-img src="/assets/img/npi/photoGesture.png" title="Pantalla principal de photoGesture" alt="Pantalla principal de photoGesture" width="338px" height="600px" /></a>
+<span class="image-credit">Pantalla principal de photoGesture</span>
 </figure>
 
 Al pulsar _“Establecer patrón”_ veremos lo siguiente:
 
 <figure>
-  <a href="/assets/img/npi/setPattern.png"><img src="/assets/img/npi/setPattern.png" title="Establecer patrón" alt="Establecer patrón" /></a>
-  <span class="image-credit">Establecer patrón</span>
+<a href="/assets/img/npi/setPattern.png"><amp-img src="/assets/img/npi/setPattern.png" title="Establecer patrón" alt="Establecer patrón" width="338px" height="600px" /></a>
+<span class="image-credit">Establecer patrón</span>
 </figure>
 
 Es posible hacer que el patrón no sea visible cuando lo introducimos, para añadir una capa extra de seguridad.
@@ -54,15 +54,15 @@ Es posible hacer que el patrón no sea visible cuando lo introducimos, para aña
 Cuando pulsemos _Establecer patrón_ se nos pedirá que lo dibujemos dos veces, para confirmarlo:
 
 <figure>
-  <a href="/assets/img/npi/drawingPatter.png"><img src="/assets/img/npi/drawingPatter.png" title="Dibujando el patrón" alt="Dibujando el patrón" /></a>
-  <span class="image-credit">Dibujando el patrón</span>
+<a href="/assets/img/npi/drawingPatter.png"><amp-img src="/assets/img/npi/drawingPatter.png" title="Dibujando el patrón" alt="Dibujando el patrón" width="338px" height="600px" /></a>
+<span class="image-credit">Dibujando el patrón</span>
 </figure>
 
 Hecho esto, cuando volvamos a la pantalla principal, en lugar de “Establecer patrón” aparecerá “Echar foto”. Si pulsamos sobre ese botón, se nos pide el patrón establecido. Si se introduce bien, aparecerá la cámara con una cuenta atrás, al llegar a 0 se echará una foto:
 
 <figure>
-  <a href="/assets/img/npi/countdown.png"><img src="/assets/img/npi/countdown.png" title="Cuenta atrás para echar la foto" alt="Cuenta atrás para echar la foto" /></a>
-  <span class="image-credit">Cuenta atrás para echar la foto</span>
+<a href="/assets/img/npi/countdown.png"><amp-img src="/assets/img/npi/countdown.png" title="Cuenta atrás para echar la foto" alt="Cuenta atrás para echar la foto" width="338px" height="600px" /></a>
+<span class="image-credit">Cuenta atrás para echar la foto</span>
 </figure>
 
 La foto se guardará en la galería.
@@ -73,7 +73,7 @@ Se ha reutilizado el ejemplo que el autor de la librería creo para demostar su 
 
 ```java
 @Override
-protected boolean isPatternCorrect(List<PatternView.Cell> pattern) {
+protected boolean isPatternCorrect(List<patternview.cell> pattern) {
 
     boolean isCorrect = PatternLockUtils.isPatternCorrect(pattern, this);
     if (isCorrect) {
@@ -204,8 +204,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 ##### Permisos requeridos para el AndroidManifest
 
 ```xml
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission><uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
 ```
 
 ### Referencias
@@ -213,3 +213,4 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 - Código de la aplicación \| [github.com/algui91/photoGesture](https://github.com/algui91/grado_informatica_npi/tree/master/Android/PhotoGesture)
 - Página oficial de Android \| [developer.android.com/guide/topics/media/camera](http://developer.android.com/guide/topics/media/camera.html)
 - Librería PatternLock \| [github.com/DreaminginCodeZH/PatternLock](https://github.com/DreaminginCodeZH/PatternLock)
+</uses-permission></patternview.cell>

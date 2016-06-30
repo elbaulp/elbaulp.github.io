@@ -12,8 +12,8 @@ color: "#F57C00"
 ---
 
 <figure>
-  <a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br/>
+<a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><amp-img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="405px" /></a>
+<span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br />
 </figure>
 
 {% include toc.html %}
@@ -107,8 +107,8 @@ experimentos, se mostró que con 4000 iteraciones la imagen generada
 acertaba en el 99.9% de los casos.
 
 <figure>
-  <a href="/assets/img/Eigenfaces.png"><img src="/assets/img/Eigenfaces.png" title="Eigenfaces" alt="Eigenfaces" /></a>
-  <span class="image-credit">Crédito de la imagen: <a href="https://commons.wikimedia.org/wiki/File:Eigenfaces.png" target="_blank" title="">Wikipedia</a></span>
+<a href="/assets/img/Eigenfaces.png"><amp-img src="/assets/img/Eigenfaces.png" title="Eigenfaces" alt="Eigenfaces" width="357px" height="426px" /></a>
+<span class="image-credit">Crédito de la imagen: <a href="https://commons.wikimedia.org/wiki/File:Eigenfaces.png" target="_blank" title="">Wikipedia</a></span>
 </figure>
 
 Esquemas de protección de plantillas
@@ -149,9 +149,9 @@ criptosistema la seguridad.
 
 
 <figure>
-  <a href="/assets/img/two-steps-framework.png"><img src="/assets/img/two-steps-framework.png" title="Enfoque híbrido de un sistema
+<a href="/assets/img/two-steps-framework.png"><amp-img src="/assets/img/two-steps-framework.png" title="Enfoque híbrido de un sistema
   biométrico" alt="Enfoque híbrido de un sistema
-  biométrico" /></a>
+  biométrico" width="989px" height="392px" /></a>
 </figure>
 [fig:frame]
 
@@ -177,9 +177,9 @@ para la investigación.
 #### Referencias
 
 - [M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
-seguridad](http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8478976361&linkCode=as2&tag=bmacoc-21 "M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
+seguridad](http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&camp;=3626&creative;=24822&creativeASIN;=8478976361&linkCode;=as2&tag;=bmacoc-21 "M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
 seguridad")
-- [C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition](http://www.amazon.es/gp/product/9814656526/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=9814656526&linkCode=as2&tag=bmab-21 "C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition")
+- [C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition](http://www.amazon.es/gp/product/9814656526/ref=as_li_ss_tl?ie=UTF8&camp;=3626&creative;=24822&creativeASIN;=9814656526&linkCode;=as2&tag;=bmab-21 "C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition")
 - [Wikipedia, “Biometría, según wikipedia.”](https://es.wikipedia.org/wiki/
 Biometr%C3%ADa "Wikipedia, “Biometría, según wikipedia.”")
 - [G. Argentina, “Historia de la biometría.”](http://www.biometria.gov.ar/

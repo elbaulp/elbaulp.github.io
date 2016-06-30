@@ -1,20 +1,5 @@
 ---
-title: 'Crear enlaces en un TextView con la etiqueta HTML <a href en Android'
-
-layout: post.amp
-
-categories:
-  - android
-tags:
-  - a href android xml
-  - crear enlaces cadenas de texto android
-  - etiqueta a href android
-  - etiqueta a href string.xml
-  - etiqueta a href TextView android
-main-class: "android"
-color: "#689F38"
----
-Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta *<a href=&#8221;&#8221;></a>*.
+title: 'Crear enlaces en un TextView con la etiqueta HTML <a href="href" en="en" android="Android"></a><a href="””"></a>*.
 
 La cadena de texto con el enlace en cuestión reside en el archivo de recursos **[string.xml][1]**. En un principio pensé que me bastaría usar la propiedad `android:autoLink="web"` en el [layout.xml][2] de la siguiente forma:  
 
@@ -24,8 +9,7 @@ La cadena de texto con el enlace en cuestión reside en el archivo de recursos *
 ***layout***:
 
 ```xml
-<TextView
-                <!-- .... -->
+<textview><!-- .... -->
                 android:autoLink="web"
 
 
@@ -56,7 +40,7 @@ author.setMovementMethod(LinkMovementMethod.getInstance());
 ```
 
 Con el código anterior se consigue el comportamiento deseado:  
-[<img src="/assets/img/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android"   />][3]{.thumbnail}
+[<amp-img src="/assets/img/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android" width="180px" height="300px" />][3]{.thumbnail}
 
 Los dos primeros enlaces están creados con el método `setMovementMethod()`, los otros dos con `android:autoLink="web"`.
 
@@ -67,3 +51,4 @@ Los dos primeros enlaces están creados con el método `setMovementMethod()`, lo
  [3]: /assets/img/2013/05/setMovementMethod-example.png
 
 {% include toc.html %}
+</textview>

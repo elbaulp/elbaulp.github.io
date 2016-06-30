@@ -13,7 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 En esta última parte de una serie de [4 artículos][1] en los que se ha ido explicando cómo implementar un [ContentProvider][2] desde cero, se va a ver cómo registrar dicho proveedor y cómo darle uso.
@@ -23,8 +23,7 @@ En esta última parte de una serie de [4 artículos][1] en los que se ha ido exp
 Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3]
 
 ```xml
-<provider android:name=".SitesProvider"
-   android:authorities="com.elbauldelprogramador.provider.FavSites" />
+<provider android:name=".SitesProvider" android:authorities="com.elbauldelprogramador.provider.FavSites">
 
 ```
 
@@ -170,3 +169,4 @@ Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los p
  [5]: /programacion-android-intents-conceptos/
 
 {% include toc.html %}
+</provider>

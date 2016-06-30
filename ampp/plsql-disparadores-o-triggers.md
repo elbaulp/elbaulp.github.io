@@ -108,61 +108,50 @@ Tipos de disparadores.
 
 
 <table class="tabla">
-  <tr>
-    <th>
+<tr>
+<th>
       Categoria
     </th>
-
-    <th>
+<th>
       Valores
     </th>
-
-    <th>
+<th>
       Comentarios
     </th>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Orden
     </td>
-
-    <td>
+<td>
       INSERT, DELETE, UPDATE
     </td>
-
-    <td>
+<td>
       Define que tipo de operación <a href="https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a> provoca la<br /> activación del trigger
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Temporalización
     </td>
-
-    <td>
+<td>
       BEFORE o AFTER
     </td>
-
-    <td>
+<td>
       Define si el disparador se activa antes o después de<br /> que se ejecute la operación <a href="https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/">DML</a>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+</td>
+</tr>
+<tr>
+<td>
       Nivel
     </td>
-
-    <td>
+<td>
       Fila u Orden
     </td>
-
-    <td>
+<td>
       Los disparadores con nivel de fila se activan una<br /> vez por cada fila afectada por la orden que provocó<br /> el disparo. Los Triggers con nivel de orden se<br /> activan sólo una vez, antes o después de la orden.<br /> Los disparadores con nivel de fila se identifican<br /> por la cláusula FOR EACH ROW en la definición<br /> del disparador.
     </td>
-  </tr>
+</tr>
 </table>
 
 ## Orden de ejecución de los triggers
@@ -206,61 +195,50 @@ En principio tanto :old como :new son del tipo **tabla_disparo%ROWTYPE;**
 
 
 <table class="tabla">
-  <tr>
-    <th>
+<tr>
+<th>
       Orden de Disparo
     </th>
-
-    <th>
+<th>
       :old
     </th>
-
-    <th>
+<th>
       :new
     </th>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       INSERT
     </td>
-
-    <td>
+<td>
       No definido; todos los campos toman<br /> el valor NULL.
     </td>
-
-    <td>
+<td>
       Valores que serán insertados cuando<br /> se complete la orden
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       UPDATE
     </td>
-
-    <td>
+<td>
       Valores originales de la fila, antes de<br /> la actualización.
     </td>
-
-    <td>
+<td>
       Nuevos valores que serán escritos<br /> cuando se complete la orden.
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       DELETE
     </td>
-
-    <td>
+<td>
       Valores originales, antes del borrado<br /> de la fila.
     </td>
-
-    <td>
+<td>
       No definido; todos los campos toman<br /> el valor NULL.
     </td>
-  </tr>
+</tr>
 </table>
 
 
@@ -313,7 +291,7 @@ La cláusula WHEN sólo es válida para disparadores con nivel de fila. Si está
 ```sql
 CREATE TRIGGER tr1
   BEFORE INSERT OR UPDATE OF salario ON scott.emp
-  FOR EACH ROW WHEN (new.job <> 'PRESIDENT')
+  FOR EACH ROW WHEN (new.job <br /> 'PRESIDENT')
 BEGIN
   /* Cuerpo del disparador */
 END;
@@ -330,7 +308,7 @@ CREATE TRIGGER tr1
   BEFORE INSERT OR UPDATE OF salario ON scott.emp
   FOR EACH ROW
 BEGIN
-  IF :new.job <> 'PRESIDENT' THEN
+  IF :new.job <br /> 'PRESIDENT' THEN
     /* Cuerpo del disparador */
   END IF;
 END;

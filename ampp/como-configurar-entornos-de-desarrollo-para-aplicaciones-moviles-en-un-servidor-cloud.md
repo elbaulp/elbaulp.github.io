@@ -29,19 +29,19 @@ Otra ventaja viene dada a la hora de hacer pruebas, ya que se puede crear un ent
 
 En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
 
-<img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud"   />
+<amp-img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817px" height="448px" />
 
 ### Configurar la capacidad del servidor
 
 Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
 
-<img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud"   />
+<amp-img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817px" height="575px" />
 
 ### Establecer la contraseña de usuario
 
 Por último, solo resta proporcionar una contraseña al usuario **root**.
 
-<img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud"   />
+<amp-img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815px" height="581px" />
 
 ## Instalar Node.js
 
@@ -589,7 +589,7 @@ console.log('Magic happens on port ' + port);
 
 
  [1]: https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/ "Cómo desarrollar aplicaciones en un servidor Cloud"
- [2]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm_medium=baul&utm_term=appmovil&utm_content=online&utm_campaign=cloud "Arsys cloudbuilder"
+ [2]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm;_medium=baul&utm;_term=appmovil&utm;_content=online&utm;_campaign=cloud "Arsys cloudbuilder"
  [3]: http://nodejs.org/download/
 
 {% include toc.html %}

@@ -25,12 +25,11 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 
   <span class="bash">for</span> word <span class="bash">in</span> $keywords
   <span class="bash">do</span>
-    <span class="comentario">#I search in the text, every key word contained in keyWords, and add the label </span>
-    <span class="bash">sed</span> "s/b$wordb/<span class="bash">$word</span>/" < "$rutaCodigo" > temp
+<span class="comentario">#I search in the text, every key word contained in keyWords, and add the label </span>
+<span class="bash">sed</span> "s/b$wordb/<span class="bash">$word</span>/" < "$rutaCodigo" > temp
     <span class="bash">cp</span> temp "$rutaCodigo"
   <span class="bash">done</span>
-
-  <span class="bash">rm</span> temp
+<span class="bash">rm</span> temp
   ;;
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;

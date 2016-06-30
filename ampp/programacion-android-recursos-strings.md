@@ -13,7 +13,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Como ya hemos visto, los recursos juegan un papel muy importante en la arquitectura Android. Un recurso en Android es un archivo (como un fichero de música) o un valor (como el título de un Diálogo) que está ligado a una aplicación ejecutable. Estos archivos están ligados a un ejecutable de tal manera que podemos cambiarlos sin necesidad de recompilar la aplicación.
 
@@ -31,8 +31,8 @@ Android permite definir strings en uno o más archivos XML de recursos. Estos ar
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <string name="hello">Hello</string>
-   <string name="app_name">Hello app_name</string>
+<string name="hello">Hello</string>
+<string name="app_name">Hello app_name</string>
 </resources>
 
 ```
@@ -69,8 +69,8 @@ Para comprobar que se permiten varios recursos de string en el directorio values
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <string name="hello1">Hello</string>
-   <string name="app_name1">Hello app_name</string>
+<string name="hello1">Hello</string>
+<string name="app_name1">Hello app_name</string>
 </resources>
 
 ```

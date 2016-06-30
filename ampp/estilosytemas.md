@@ -16,7 +16,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Un estilo es una colección de propiedades que especifican que aspecto ha de tener un objeto View o una ventana. Con los estilos podemos definir propiedades como la altura, relleno, color del texto, fondo etc. Los estilos en Android comparten la filosofía de las hojas de estílo en cascada (CSS), permitiendo separar el diseño del contenido.
 
@@ -28,19 +28,14 @@ Como podemos comprobar con este ejemplo, el código queda mucho más límpio usa
 Sin estilos:
 
 ```xml
-<textview android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textColor="#00FF00"
-    android:typeface="monospace"
-    android:text="@string/hello" />
+<textview android:layout_width="fill_parent" android:layout_height="wrap_content" android:textcolor="#00FF00" android:typeface="monospace" android:text="@string/hello">
 
 ```
 
 Con estilos:
 
 ```xml
-<textview style="@style/CodeFont"
-    android:text="@string/hello" />
+</textview><textview style="@style/CodeFont" android:text="@string/hello">
 
 ```
 
@@ -53,7 +48,7 @@ El nodo raiz de estos archívos debe ser ***<resources></resources>***.
 Para cada estilo que queramos definir, hay que añadir un elemento ***  
 
 
-</b></i> y un atributo ***name*** para ese estílo (es obligatorio), después, añadiremos un elemento ***<item></item>*** para cada propiedad del estilo, que debe tener obligatoriamente el atributo ***name*** que declara la propiedad del estilo y su valor. Los valores para ***<item></item>*** pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:
+ y un atributo ***name*** para ese estílo (es obligatorio), después, añadiremos un elemento ***<item></item>*** para cada propiedad del estilo, que debe tener obligatoriamente el atributo ***name*** que declara la propiedad del estilo y su valor. Los valores para ***<item></item>*** pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:
 
 ```xml
 
@@ -108,19 +103,17 @@ Para aplicarlos sobre actividades, usamos:
 En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png" /></a>
+<a href="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png" /></a>
 </div>
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png" /></a>
+<a href="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png" /></a>
 </div>
 
 A continuación, dejo una captura del ejemplo que he hecho para esta entrada, que se puede descargar desde:
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;EstilosyTemas&rdquo; <small>EstilosyTemas.zip &ndash; Downloaded 1629 times &ndash; </small> </a>
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>
+<a href="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="400" width="240" src="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>
 </div>
 
 Para saber más acerca de los estilos y temas visite la página oficial: [Applying Styles and Themes][1]
@@ -134,3 +127,4 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
 
 
 {% include toc.html %}
+</textview>
