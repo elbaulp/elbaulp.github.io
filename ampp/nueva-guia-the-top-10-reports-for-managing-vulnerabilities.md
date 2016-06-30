@@ -19,7 +19,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<amp-img alt="The Top 10 Reports for Managing Vulnerabilities" src="/assets/img/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250px" height="301px" />][1]
+[<amp-img layout="responsive" alt="The Top 10 Reports for Managing Vulnerabilities" src="/assets/img/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250px" height="301px" />][1]
 
 This free guide covers the key aspects of the vulnerability management lifecycle and shows you what reports today&#8217;s best-in-class organizations are using to reduce risks on their network infrastructure.
 

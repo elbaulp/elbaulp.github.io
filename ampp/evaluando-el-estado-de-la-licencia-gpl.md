@@ -10,7 +10,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img border="0" height="128" width="128" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png" style="border:none;" /></a>
+<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img layout="responsive" border="0" height="128" width="128" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png" style="border:none;" /></a>
 </div>
 
 Hace unas semanas, tenía lugar <a target="_blank" href="https://plus.google.com/u/0/110027483887022913393/posts/Arx9N665DZf">una conversación</a> sobre el estado de la licencia GPL, con lectores y colegas discutiendo sobre cual podría ser la causa del estado actual de esta licencia.

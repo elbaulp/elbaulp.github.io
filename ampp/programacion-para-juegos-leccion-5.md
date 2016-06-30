@@ -19,7 +19,7 @@ La estructura SDL_Surface tiene un elemento llamado &#8220;color key&#8221;, que
 Bien, supongamos que queremos fusionar esta imagen llamada &#8220;foo&#8221;:
 
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img alt="foo" border="0" height="64" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TT6FKpmp0fI/AAAAAAAAAQs/oFYGZsQzBn8/foo.jpg" width="32" />
+<amp-img layout="responsive" alt="foo" border="0" height="64" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TT6FKpmp0fI/AAAAAAAAAQs/oFYGZsQzBn8/foo.jpg" width="32" />
 </div>
 <!--ad-->
 
@@ -27,13 +27,13 @@ Bien, supongamos que queremos fusionar esta imagen llamada &#8220;foo&#8221;:
 a este fondo:
 
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img alt="Imagen Fondo" border="0" height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FKroPMYI/AAAAAAAAAQo/oJFPpVHNsIg/background.jpg" />
+<amp-img layout="responsive" alt="Imagen Fondo" border="0" height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FKroPMYI/AAAAAAAAAQo/oJFPpVHNsIg/background.jpg" />
 </div>
 
 Pero no queremos que aparezca el fondo azul claro de la primera imagen:
 
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img alt="Resultado" border="0" height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FLLUBg4I/AAAAAAAAAQ0/gS1QeS8p7PA/nokey.jpg" />
+<amp-img layout="responsive" alt="Resultado" border="0" height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FLLUBg4I/AAAAAAAAAQ0/gS1QeS8p7PA/nokey.jpg" />
 </div>
 
 Para que no se muestre el fondo de la primera imagen, necesitamos fijarlo como &#8220;color key&#8221;, en este caso el valor de este color es (En hexadecimal): Red 0, Green FF, Blue FF.
@@ -117,7 +117,7 @@ Para finalizar, la función devuelve la imagen optimizada con el color clave.
 El resultado de hacer todo esto da como resultado la imagen siguiente:
 
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img alt="Imagen final" border="0" height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FK_nKIkI/AAAAAAAAAQw/rDMnHtu9ewo/key.jpg" />
+<amp-img layout="responsive" alt="Imagen final" border="0" height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FK_nKIkI/AAAAAAAAAQw/rDMnHtu9ewo/key.jpg" />
 </div>
 
 Como vemos, ahora en la imagen del hombrecillo de Palo ya no se ve el fondo azul claro.

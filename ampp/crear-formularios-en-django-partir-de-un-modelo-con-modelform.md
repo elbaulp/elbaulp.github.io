@@ -12,7 +12,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<amp-img src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="700px" height="394px" />
+<amp-img layout="responsive" src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="700px" height="394px" />
 
 Como comenté cuando escribí el artículo sobre [Introducción a Django][1] he tenido que empezar a desarrollar aplicaciones web en este [framework][2] que cada día me gusta más.
 
@@ -165,7 +165,7 @@ $ python manage.py runserver
 El primer comando se encarga de actualizar la base de datos con los modelos creados y el segundo arranca el servidor de desarrollo para que podamos acceder a la web.
 
 Si todo ha ido bien, deberíamos ver la siguiente página en <a href="http://127.0.0.1:8000/personas/list" title="localhost" target="_blank">http://127.0.0.1:8000/personas/list</a>
-<amp-img src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161px" height="153px" />
+<amp-img layout="responsive" src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161px" height="153px" />
 
 ## Crear un formulario a partir de un Modelo con ModelForm
 

@@ -14,7 +14,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java06" target="_blank"><amp-img src="/assets/img/Nueva Guía Gratuita: Java Concurrency Essentials.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="175px" height="259px" /></a>
+<a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java06" target="_blank"><amp-img layout="responsive" src="/assets/img/Nueva Guía Gratuita: Java Concurrency Essentials.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="175px" height="259px" /></a>
 </figure>
 
 Concurrency is always a challenge for developers and writing concurrent programs can be extremely hard. There is a number of things that could potentially blow up and the complexity of systems rises considerably when concurrency is introduced. However, the ability to write robust concurrent programs is a great tool in a developer’s belt and can help build sophisticated, enterprise level applications.

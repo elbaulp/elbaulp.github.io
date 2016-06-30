@@ -12,7 +12,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<amp-img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532px" height="449px" />
+<amp-img layout="responsive" src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532px" height="449px" />
 
 #### Puedes encontrar la solución a esta práctica en [Desafío de ingeniería inversa en C &#8211; Soluciones][1] {.alert}
 

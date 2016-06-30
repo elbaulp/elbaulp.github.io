@@ -112,7 +112,7 @@ Recompilamos y listo.
 
 Un programa muy útil es dmenu, permite lanzar cualquier programa abriendo una ventanita en la que podemos escribir el nombre del programa a ejecutar:
 
-<amp-img src="/assets/img/2014/07/dmenu.png" alt="Dmenu" width="478px" height="13px" />
+<amp-img layout="responsive" src="/assets/img/2014/07/dmenu.png" alt="Dmenu" width="478px" height="13px" />
 
 Para instalarlo:
 
@@ -168,7 +168,7 @@ Espero que esta pequeña introducción haya servido al lector. Desde que entré 
 Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explicaré cómo desarrollé la posibilidad de colorear la barra de estado (Ya está disponible [aquí][4]), ya que por defecto la versión 6.1 de DWM no lo permite.
 
 <figure>
-<a href="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><amp-img src="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="{{ page.title }}" alt="{{ page.title }}" width="1280px" height="768px" /></a>
+<a href="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png"><amp-img layout="responsive" src="/assets/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png" title="{{ page.title }}" alt="{{ page.title }}" width="1280px" height="768px" /></a>
 </figure>
 
 #### Referencias

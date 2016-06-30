@@ -15,7 +15,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-<a href="/assets/img/2012/07/sh.png"><amp-img src="/assets/img/2012/07/sh.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
+<a href="/assets/img/2012/07/sh.png"><amp-img layout="responsive" src="/assets/img/2012/07/sh.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
 </figure>
 
 Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en *superuser*. El usuario *[flammable][1]* preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:

@@ -13,7 +13,7 @@ color: "#F57C00"
 <strong>Fusion-io</strong> ioDrive showed in SuperComputing 2009, but this time just 8 modules integrate into a single x16 PCIe Generation 2 with a double-width slot. Octal uses ioDrive ioSphere Software Platform software solution making software / hardware and services for servers, capable of storing up to 5.7 Tbytes per card.
   </p>
 <p style="text-align: center;">
-<amp-img src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOjwkIrLpjI/AAAAAAAAAE4/wSfF8q7Yzy8/s1600/iodrive_octal.JPG" alt="iodrive_octal" />
+<amp-img layout="responsive" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOjwkIrLpjI/AAAAAAAAAE4/wSfF8q7Yzy8/s1600/iodrive_octal.JPG" alt="iodrive_octal" />
 </p>
 <p>
     In SuperComputing 2010, Los Alamos National Lab (LANL) has demonstrated the benefits of working with Fusion products. Have reported that tasks previously performed traditional hard drives are made <strong> 500 times faster </strong> with the Fusion-io technology ioDrive Octal.

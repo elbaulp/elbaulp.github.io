@@ -16,7 +16,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <figure>
-<amp-img src="/assets/img/2013/04/BigSecurityforBigData-232x300.jpg" alt="Nueva Guía: Big Security for Big Data" title="Nueva Guía: Big Security for Big Data" width="232px" height="300px" />
+<amp-img layout="responsive" src="/assets/img/2013/04/BigSecurityforBigData-232x300.jpg" alt="Nueva Guía: Big Security for Big Data" title="Nueva Guía: Big Security for Big Data" width="232px" height="300px" />
 </figure>
 
 The multitude of devices, users, and generated traffic all combine to create a proliferation of data that is being created with incredible volume, velocity, and variety. Organizations need a way to protect, utilize, and gain real-time insight from “big data.” This intelligence is not only valuable to businesses and consumers, but also to hackers. Robust information marketplaces have arisen for hackers to sell credit card information, account usernames, passwords, national secrets (WikiLeaks), as well as intellectual property. In order to meet the current security problems faced by organizations, a new paradigm shift needs to occur. Businesses need the ability to secure data, collect it, and aggregate into an intelligent format, so that real-time alerting and reporting can take place. So, how do we get started?

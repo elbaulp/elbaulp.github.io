@@ -13,7 +13,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 <figure>
-<amp-img src="/assets/img/2012/08/4041.jpg" alt="" title="404" width="256px" height="197px" />
+<amp-img layout="responsive" src="/assets/img/2012/08/4041.jpg" alt="" title="404" width="256px" height="197px" />
 </figure>
 
 El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.

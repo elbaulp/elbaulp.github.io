@@ -43,7 +43,7 @@ Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 Terminada, la aplicación de prueba debe quedar algo así:
 
 <p style="text-align: center;">
-<a href="/assets/img/2012/09/principal1.png"><amp-img class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android" width="484px" height="807px" /></a>
+<a href="/assets/img/2012/09/principal1.png"><amp-img layout="responsive" class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android" width="484px" height="807px" /></a>
 </p>
 
 &nbsp;
@@ -63,7 +63,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
 
 Creando así el aspecto deseado para cada línea del ListView:
 
-[<amp-img title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px" />][5]{.thumbnail}
+[<amp-img layout="responsive" title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px" />][5]{.thumbnail}
 
 El primer paso es crear una clase que representará los datos a almacenar:
 

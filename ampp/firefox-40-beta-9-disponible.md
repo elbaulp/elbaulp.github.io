@@ -20,7 +20,7 @@ La nueva versi&oacute;n **beta 9** de **Mozilla Firefox 4.0 **est&aacute; replic
 &nbsp;
 
 <p style="text-align: center;">
-<amp-img src="http://muycomputer.com/files/264-1334-FOTO/firefox_logo.jpg" alt="" />
+<amp-img layout="responsive" src="http://muycomputer.com/files/264-1334-FOTO/firefox_logo.jpg" alt="" />
 </p>
 <p style="text-align: center;">
 <strong><em>Firefox 4.0 beta 9 disponible.</em></strong>

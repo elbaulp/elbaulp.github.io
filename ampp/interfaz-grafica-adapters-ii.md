@@ -21,7 +21,7 @@ color: "#E64A19"
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 En [Programación Android: Interfaz gráfica &#8211; Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
 
@@ -191,7 +191,7 @@ public class Adaptadores2Activity extends ListActivity {
 Ya solo resta ejecutarlo y ver el resultado:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s1600/adaptadores2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img title="Adaptadores en Android" alt="Adaptadores en Android" border="0" height="400" width="240" src="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s400/adaptadores2.png" /></a>
+<a href="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s1600/adaptadores2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" title="Adaptadores en Android" alt="Adaptadores en Android" border="0" height="400" width="240" src="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s400/adaptadores2.png" /></a>
 </div>
 
 Como siempre, se puede descargar este ejemplo:

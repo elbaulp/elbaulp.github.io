@@ -19,7 +19,7 @@ color: "#689F38"
 ---
 
 <figure>
-<a href="/assets/img/2014/08/Pon-a-dieta-a-tus-APKs.png"><amp-img src="/assets/img/2014/08/Pon-a-dieta-a-tus-APKs.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="576px" /></a>
+<a href="/assets/img/2014/08/Pon-a-dieta-a-tus-APKs.png"><amp-img layout="responsive" src="/assets/img/2014/08/Pon-a-dieta-a-tus-APKs.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="576px" /></a>
 <span class="image-credit">Crédito de la imagen: Cyril</span>
 </figure>
 
@@ -155,7 +155,7 @@ Android trata generalmente con Java, pero en ciertas ocasiones es necesario usar
 
 También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas `ic_arrow_expand` y `ic_arrow_collapse`:
 
-<amp-img src="/assets/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png" alt="PON A DIETA A TUS APKS - Rotaciones de recursos" width="512px" height="384px" />
+<amp-img layout="responsive" src="/assets/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png" alt="PON A DIETA A TUS APKS - Rotaciones de recursos" width="512px" height="384px" />
 
 Podemos deshacernos fácilmente de `ic_arrow_collapse` creando un `RotateDrawable` basándonos en `ic_arrow_expand`. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:
 
@@ -171,7 +171,7 @@ En ciertas ocasiones renderizar gráficos directamente desde código puede conll
 
 Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el **APK** resultante pesaba más de **1.5MB**. Tras investigar en `wearable-support.aar`, descubrió que se empaquetan dos animaciones *frame-by-frame* en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).
 
-<amp-img src="/assets/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png" alt="Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support" width="1596px" height="1236px" />
+<amp-img layout="responsive" src="/assets/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png" alt="Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support" width="1596px" height="1236px" />
 
 La animación para el “éxito” se construye con un `AnimationDrawable` definido en un XML:
 

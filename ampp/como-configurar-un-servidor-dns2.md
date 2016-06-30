@@ -37,7 +37,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 <figure>
-<a href="/assets/img/2013/04/dns.jpg"><amp-img src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" /></a>
+<a href="/assets/img/2013/04/dns.jpg"><amp-img layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" /></a>
 </figure>
 
 * [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]

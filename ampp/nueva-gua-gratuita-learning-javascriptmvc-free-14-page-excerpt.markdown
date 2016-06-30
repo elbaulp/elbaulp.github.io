@@ -10,7 +10,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<amp-img src="/assets/img/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" />
+<amp-img layout="responsive" src="/assets/img/nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" />
 </figure>
 
 JavaScriptMVC is a client-side, JavaScript framework that builds maintainable, error-free, lightweight applications as quickly as possible.

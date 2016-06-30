@@ -15,13 +15,13 @@ color: "#F57C00"
 <a name="more"></a>Here is how <b>Firefox 4.0 for Windows</b> looks like:
   </p>
 <div style="text-align: center;">
-<amp-img alt="Firefox 4.0 Windows menu" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOpKfEqxsoI/AAAAAAAAAFg/HAojDM7vC20/s1600/Firefox-menuunificado-windows.jpg" />
+<amp-img layout="responsive" alt="Firefox 4.0 Windows menu" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOpKfEqxsoI/AAAAAAAAAFg/HAojDM7vC20/s1600/Firefox-menuunificado-windows.jpg" />
 </div>
 <p>
     And here is the new <b>Firefox unified menu for Linux</b> (from the latest Firefox 4.0 nightly):
   </p>
 <div style="text-align: center;">
-<amp-img alt="Firefox 4.0 menu linux" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOpKeo-73nI/AAAAAAAAAFc/LAOUt4nZY_I/s1600/Firefox-menuunificado-500x388.jpg" />
+<amp-img layout="responsive" alt="Firefox 4.0 menu linux" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOpKeo-73nI/AAAAAAAAAFc/LAOUt4nZY_I/s1600/Firefox-menuunificado-500x388.jpg" />
 </div>
 <div style="text-align: justify;">
     To <b>get the new unified menu</b>, you need the latest Firefox 4.0 nightly build which you can either install from the <a class="external" href="https://launchpad.net/%7Eubuntu-mozilla-daily/+archive/ppa">Mozilla Daily PPA</a> (I do not recommend it) or by simply downloading the latest Firefox 4.0 nightly from <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">HERE</a> (<b>to use: extract it, then double click the &#8220;firefox&#8221; file &#8211; important: not firefox-bin!</b>).

@@ -20,7 +20,7 @@ color: "#2196F3"
 ---
 
 <figure>
-<amp-img alt="sh" src="/assets/img/2012/07/sh1.png" width="128px" height="128px" />
+<amp-img layout="responsive" alt="sh" src="/assets/img/2012/07/sh1.png" width="128px" height="128px" />
 </figure>
 
 Visto de forma simple, los runlevel  determinan qué programas se ejecutan al inicio del sistema.

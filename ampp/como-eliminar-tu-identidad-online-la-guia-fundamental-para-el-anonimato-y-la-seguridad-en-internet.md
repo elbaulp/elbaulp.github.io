@@ -26,7 +26,7 @@ El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, 
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.
 
 <figure>
-<a href="/assets/img/2014/10/draft.jpg"><amp-img src="/assets/img/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="592px" height="312px" /></a>
+<a href="/assets/img/2014/10/draft.jpg"><amp-img layout="responsive" src="/assets/img/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="592px" height="312px" /></a>
 </figure>
 <!--ad-->
 
@@ -187,7 +187,7 @@ Puedes:
 No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ubicación estén desactivadas. Por defecto, sé que el iTouch guarda tu ubicación GPS en cada foto que tomas. Si ésta aparece en algún momento en internet, ya se puede examinar en hexadecimal para determinar las coordenadas.
 
 <figure>
-<a href="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><amp-img src="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="381px" height="515px" /></a>
+<a href="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><amp-img layout="responsive" src="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="381px" height="515px" /></a>
 </figure>
 
 El Explorador de Archivos de Windows (Windows File Explorer) además provee lectura de ubicación de GPS en su vista de propiedades

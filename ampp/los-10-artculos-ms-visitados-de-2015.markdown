@@ -11,7 +11,7 @@ color: "#F57C00"
 {% include toc.html %}
 
 <figure>
-<a href="/assets/img/los10articulosmasvisitados2015.png"><amp-img src="/assets/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="512px" /></a>
+<a href="/assets/img/los10articulosmasvisitados2015.png"><amp-img layout="responsive" src="/assets/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="512px" /></a>
 <span class="image-credit">Crédito de la imagen: Buffer</span>
 </figure>
 

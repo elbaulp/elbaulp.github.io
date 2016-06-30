@@ -10,7 +10,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 <figure>
-<amp-img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
+<amp-img layout="responsive" src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
 </figure>
 
 {% include toc.html %}

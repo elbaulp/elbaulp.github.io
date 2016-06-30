@@ -10,7 +10,7 @@ color: "#2196F3"
 Los desarrolladores de [Grub Customizer][1] **han lanzado la versión 2.0 de esta herramienta** para personalizar el aspecto y funcionamiento de nuestro gestor de arranque, algo que es bastante molesto desde la entrada de GRUB2 y que ahora se hace mucho más cómodo con esta solución.
 
 <p style="text-align: center;">
-<amp-img title="Grub-customizer0" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOpPJrxOdBI/AAAAAAAAAFk/RWhgQykL8wo/s1600/Grub-customizer0-500x321.jpg" alt="Grub customizer" />
+<amp-img layout="responsive" title="Grub-customizer0" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOpPJrxOdBI/AAAAAAAAAFk/RWhgQykL8wo/s1600/Grub-customizer0-500x321.jpg" alt="Grub customizer" />
 </p>
 
 Como revelan en [WebUpd8][2] y otras webs, **hay bastantes mejoras en Grub Customizer 2.0**. Entre ellas, la posibilidad de seleccionar la entrada por defecto que está seleccionada para arrancar, además de cambiar la visibilidad del menú, el tiempo límite de interacción, o el establecimiento de parámetros del núcleo.

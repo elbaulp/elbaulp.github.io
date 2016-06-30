@@ -14,7 +14,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos ***callback*** que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.
 
@@ -48,7 +48,7 @@ Tiene tres estados:
 La clase Activity dispone de métodos que se llaman cada vez que ésta cambia de estado, para permitirnos realiar tareas como guardar los datos antes de cambiar de estado, y cargar la actividad más rápido la proxima vez que se muestre. A continuación un diagrama con los distintos estados por los que pasa una actividad:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img title="ciclo de vida actividades" alt="ciclo de vida actividades" border="0" height="500" width="407" src="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png" /></a>
+<a href="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" title="ciclo de vida actividades" alt="ciclo de vida actividades" border="0" height="500" width="407" src="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png" /></a>
 </div>
 
   * ***onCreate(Bundle savedInstanceState):*** Este método se llama al crear la actividad. Siempre se sobreescribe para configurar la vista, crear adaptadores, rellenar los objetos con sus valores etc. Puede recibir como parámetro el estado anterior de la actividad para que podamos restaurarla.
@@ -70,7 +70,7 @@ Los servicios se pueden usar de dos formas, dependiendo de como lo lancemos, su 
 A continuación el diagrama con el ciclo de vida de los servicios:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img alt="Ciclo de vida servicios" title="Ciclo de vida servicios" border="0" height="500" width="432" src="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png" /></a>
+<a href="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" alt="Ciclo de vida servicios" title="Ciclo de vida servicios" border="0" height="500" width="432" src="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png" /></a>
 </div>
 
 * * *

@@ -15,7 +15,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402px" height="302px" />  
+<amp-img layout="responsive" src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402px" height="302px" />  
 Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en <a href="http://developer.android.com/sdk/installing/studio.html" target="_blank">developer.android.com</a>. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.
 
 Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos el el fichero *studio.sh*, que se encuentra en la carpeta *bin*. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:  
@@ -45,7 +45,7 @@ sudo apt-get install oracle-java7-set-default
 
 Con esto ya deberíamos tener listo el JDK, lanzamos Android Studio y veremos algo como esto:
 
-[<amp-img src="/assets/img/2013/05/AndroidStudioIDE-1024x734.png" alt="AndroidStudioIDE" width="1024px" height="734px" />][3]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/05/AndroidStudioIDE-1024x734.png" alt="AndroidStudioIDE" width="1024px" height="734px" />][3]{.thumbnail}
 
 ### Exportar proyectos de eclipse e importarlos Android Studio
 
@@ -66,17 +66,17 @@ La estructura de los proyectos ha cambiado respecto a como [estaba organizado en
 
 Algunas de las características nuevas de este IDE es la posiblidad de visualizar cómo se verá nuestra aplicación en distintos dispositivos, para ello abrimos un archivo de *layout*, abajo hay una pestaña llamada *text*, la seleccionamos y podremos editar el archivo manualmente. A la derecha hay otra pestaña llamada *Preview*, la abrimos y veremos algo como esto:
 
-[<amp-img src="/assets/img/2013/05/LayoutPreviewAndroidStudio-1024x733.png" alt="LayoutPreviewAndroidStudio" width="1024px" height="733px" />][6]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/05/LayoutPreviewAndroidStudio-1024x733.png" alt="LayoutPreviewAndroidStudio" width="1024px" height="733px" />][6]{.thumbnail}
 
 También es posible visualizar la interfaz de la aplicación para distintas APIs, la anterior era para la API 17, esta para a 10:
 
-[<amp-img src="/assets/img/2013/05/AndroidStudioPreviewAPI10-1024x735.png" alt="AndroidStudioPreviewAPI10" width="1024px" height="735px" />][7]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/05/AndroidStudioPreviewAPI10-1024x735.png" alt="AndroidStudioPreviewAPI10" width="1024px" height="735px" />][7]{.thumbnail}
 
 De igual modo, podemos seleccionar qué idioma mostrar en la interfaz para asegurarnos de que la aplicación se verá bien en todos los idiomas.
 
 Otra de las características que resulta de lo más cómoda es mostrar las cadenas de texto que escribimos en el código mediante `R.string.`, dejando el ratón encima del texto veremos el identificadorL:
 
-[<amp-img src="/assets/img/2013/05/Screenshot-from-2013-05-16-121607-1024x735.png" alt="Mostrar cadenas de Texto AndroidStudio" width="1024px" height="735px" />][8]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/05/Screenshot-from-2013-05-16-121607-1024x735.png" alt="Mostrar cadenas de Texto AndroidStudio" width="1024px" height="735px" />][8]{.thumbnail}
 
 Para terminar os dejo unas cuantas combinaciones de teclas para ahorrar tiempo al programar:
 

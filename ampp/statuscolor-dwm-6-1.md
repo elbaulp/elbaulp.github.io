@@ -75,7 +75,7 @@ status = smprintf("L:%s\x01 A:%s\x02 U:%s %s\x03", avgs, tmar, tmutc, tmbln);
 Coloreará `L:%s` con el color 1, `L:%s` con el color 2 y ` U:%s %s` con el color 3. He aquí un ejemplo de la mía:
 
 <figure>
-<a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><amp-img src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" width="702px" height="13px" /></a>
+<a href="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png"><amp-img layout="responsive" src="/assets/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png" title="{{ page.title }}" alt="{{ page.title }}" width="702px" height="13px" /></a>
 </figure>
 
 ## Dentro del código

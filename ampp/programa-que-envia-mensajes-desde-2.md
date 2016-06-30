@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />  
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />  
 Como ya comenté en una entrada hace varios días, necesito hacer una [aplicación para android que se comunique con el PC por red][1], y he seguido mejorandola ya que aún está muy limitada, le he hecho algunos cambios, estos cambios son:  
 <!--ad-->
 
@@ -27,7 +27,7 @@ Las mejoras que ahora quiero realizar son:
 
 Que el server soporte varias conexiones de varios clientes, para ello tendré que usar un thread (hilo), que sea el que encargue de la conexión con cada cliente.
 
-Al checkar o des-checkear el checkBox (valga la redundancia <amp-img src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ), se debe conectar o desconectar realmente del server.
+Al checkar o des-checkear el checkBox (valga la redundancia <amp-img layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ), se debe conectar o desconectar realmente del server.
 
 Mejorar el diseño, evidentemente la aplicación no va a ser así de simple, pero mientras programo la parte de la conexión esa me vale.
 
@@ -43,13 +43,13 @@ Parte servidor, esta parte está tal y como la [descargué de casiDiablo][2], pe
 Por ultimo algunas capturas:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s1600/cliente.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="256" width="320" src="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s320/cliente.png" /></a>
+<a href="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s1600/cliente.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="256" width="320" src="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s320/cliente.png" /></a>
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s1600/no.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="256" width="320" src="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s320/no.png" /></a>
+<a href="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s1600/no.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="256" width="320" src="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s320/no.png" /></a>
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s1600/otra.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img border="0" height="256" width="320" src="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s320/otra.png" /></a>
+<a href="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s1600/otra.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="256" width="320" src="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s320/otra.png" /></a>
 </div>
 
 

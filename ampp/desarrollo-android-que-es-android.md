@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 <div id="jd-header" class="guide-header">
 <h1>
     ¿Qué es Android?
@@ -67,7 +67,7 @@ color: "#689F38"
       El siguiente diagrama muestra los principales componentes del sistema operatívo Android.<br /> Cada sección se describe con más detalle abajo.
     </p>
 <p>
-<amp-img src="http://bit.ly/ebtxQx" alt="Android System Architecture" />
+<amp-img layout="responsive" src="http://bit.ly/ebtxQx" alt="Android System Architecture" />
 </p>
 <h2>
       Aplicaciones

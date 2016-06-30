@@ -346,7 +346,7 @@ GET /tickets?fields=id,subject,customer_name,updated_at&state;=open&sort;=-updat
       Es tiempo de dejar XML atras en las APIs. Es verborrágico, es difícil de parsear, dificil de leer, su modelo de datos es incompatible con la mayoría de los modelos de datos de los lenguajes de programación y sus ventajas son irrelevantes cuando tus necesidades primarias de respuesta son serializaciones de una representación de datos interna.<br /> No voy a poner mucho esfuerzo en explicar las razones de lo dicho arriba si se puede ver cómo otros (<a href="http://apiblog.youtube.com/2012/12/the-simpler-yet-more-powerful-new.html" target="_blank">Youtube</a>, <a href="https://dev.twitter.com/docs/api/1.1/overview#JSON_support_only" target="_blank">Twitter</a> & <a href="http://developers.blog.box.com/2012/12/14/v2_api/" target="_blank">Box</a>) ya han comenzado el éxodo XML.<br /> Simplemente te dejaré que veas las gráficas de Google Trends (<a href="http://www.google.com/trends/explore?q=xml+api#q=xml%20api%2C%20json%20api&cmpt=q" target="_blank">XML API vs JSON API</a>) para que medites:
     </p>
 <figure>
-<a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><amp-img src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" width="817px" height="237px" /></a>
+<a href="/assets/img/2014/01/201305-xml-vs-json-api.png"><amp-img layout="responsive" src="/assets/img/2014/01/201305-xml-vs-json-api.png" title="{{ page.title }}" alt="{{ page.title }}" width="817px" height="237px" /></a>
 </figure>
 <p>
       No obstante, si tu base de clientes consiste en un gran número de clientes empresariales, puedes tener que dar soporte XML de todas maneras. Si debes hacerlo, te surgirá una nueva pregunta:

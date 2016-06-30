@@ -126,7 +126,7 @@ El primer comando compila y genera el *.apk* y con el segundo lo instalamos en e
 
 Por último, la aplicación es tan simple como esto:
 
-[<amp-img src="/assets/img/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180px" height="300px" />][2]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180px" height="300px" />][2]{.thumbnail}
 
 Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con el NDK de android.
 
