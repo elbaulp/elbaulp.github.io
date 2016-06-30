@@ -1,8 +1,8 @@
 ---
 layout: post.amp
 title: Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python
-description: Pequeño script en python para añadir el tamaño a una etiqueta <img>
-introduction: Pequeño script en python para añadir el tamaño a una etiqueta <img>
+description: Pequeño script en python para añadir el tamaño a una etiqueta img
+introduction: Pequeño script en python para añadir el tamaño a una etiqueta img
 tags: [python,BeautifulSoup,parser, ejemplos BeautifulSoup, leer imagen python, leer tamaño imagen python, obtener tamaño imagen python]
 image: ComoAnadirAutomaticamenteElTamanoDeUnaImagenenHTMLConPython.png
 main-class: dev
@@ -22,43 +22,43 @@ Hace poco me encontré con el problema de añadir a todas las etiquetas de imág
 Para llevar a cabo la tarea he usado el módulo `BeautifulSoup`. A continuación se muestra el código comentado:
 
 ```python
-#!/bin/python
+        #!/bin/python
 
-from BeautifulSoup import BeautifulSoup
-from os.path import basename, splitext
-from PIL import Image
-import glob
+        from BeautifulSoup import BeautifulSoup
+        from os.path import basename, splitext
+        from PIL import Image
+        import glob
 
-# Ruta a la carpeta que contiene los ficheros, en este caso
-# cualquier fichero markdown
-path = "/ruta/ficheros/*.md"
+        # Ruta a la carpeta que contiene los ficheros, en este caso
+        # cualquier fichero markdown
+        path = "/ruta/ficheros/*.md"
 
-# Iteramos para cada fichero
-for fname in glob.glob(path):
-    # Lo abrimos
-    f = open(fname)
-    # Creamos un objeto BeautifulSoup para parsear el fichero
-    soup = BeautifulSoup(f)
-    f.close()
+        # Iteramos para cada fichero
+        for fname in glob.glob(path):
+            # Lo abrimos
+            f = open(fname)
+            # Creamos un objeto BeautifulSoup para parsear el fichero
+            soup = BeautifulSoup(f)
+            f.close()
 
-    # Para cada etiqueta de imagen que encontremos en el fichero
-    for img in soup.findAll('img'):
-        if img != None:
-            try:
-                if img['src'].startswith("/assets") == True:
-                    # Abrimos la imagen
-                    pil = Image.open("/ruta/carpeta/imagenes" + img['src'])
-                    # Obtenemos su tamaño
-                    width, height = pil.size
-                    # Modificamos la etiqueta HTML para añadirle el tamaño
-                    img['width'] = str(width) + "px"
-                    img['height'] = str(height) + "px"
-            except KeyError:
-                pass
+            # Para cada etiqueta de imagen que encontremos en el fichero
+            for img in soup.findAll('img'):
+                if img != None:
+                    try:
+                        if img['src'].startswith("/assets") == True:
+                            # Abrimos la imagen
+                            pil = Image.open("/ruta/carpeta/imagenes" + img['src'])
+                            # Obtenemos su tamaño
+                            width, height = pil.size
+                            # Modificamos la etiqueta HTML para añadirle el tamaño
+                            img['width'] = str(width) + "px"
+                            img['height'] = str(height) + "px"
+                    except KeyError:
+                        pass
 
-    # Guardamos el fichero modificado
-    with open(fname, "wb") as file:
-        file.write(str(soup))
+            # Guardamos el fichero modificado
+            with open(fname, "wb") as file:
+                file.write(str(soup))
 ```
 
 Espero que os resulte útil, he subido el script a [github](https://gist.github.com/algui91/188a7f9d24e586cb16d9ed9188aa5823 "Gist en github").

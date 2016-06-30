@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python
-description: Pequeño script en python para añadir el tamaño a una etiqueta <img>
-introduction: Pequeño script en python para añadir el tamaño a una etiqueta <img>
+description: Pequeño script en python para añadir el tamaño a una etiqueta img
+introduction: Pequeño script en python para añadir el tamaño a una etiqueta img
 tags: [python,BeautifulSoup,parser, ejemplos BeautifulSoup, leer imagen python, leer tamaño imagen python, obtener tamaño imagen python]
 image: ComoAnadirAutomaticamenteElTamanoDeUnaImagenenHTMLConPython.png
 main-class: dev
