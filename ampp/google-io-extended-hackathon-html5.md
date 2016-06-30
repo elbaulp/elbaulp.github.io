@@ -256,7 +256,7 @@ color: "#F57C00"
 </div>
 </div>
 <div>
-</div></div>      
+</div></div>
 <div id="sites-canvas-bottom-panel">
 <a xmlns="http://www.w3.org/1999/xhtml" name="page-comments"></a>
 <div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-comments" style="display:none;" class="sites-canvas-bottom-no-items">

@@ -40,7 +40,7 @@ El proceso de compatibilidad se realiza mediante varios *#define* y macros en C 
 #include <python.h>
 #include <string.h>
 #include <sys>socket.h>
-#include <netinet</sys>in.h>
+#include <netinet></netinet></sys>in.h>
 #include <arpa>inet.h>
 
 #include <netdb.h>
@@ -71,7 +71,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
     struct hostent *host_info;
   struct in_addr *address;
 
-    if (!PyArg_ParseTuple(args, "s", &domainName)){
+    if (!PyArg_ParseTuple(args, "s", &domainName;)){
         return NULL;
     }
 
@@ -93,7 +93,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
 static
 PyMethodDef herramientasRed_methods[] = {
     {"imprimeIP", herramientasRed_imprimeIP, METH_VARARGS, "Documentación del módulo ejemplo"},
-    {NULL, NULL, 0, NULL}, </arpa>* Sentinel */
+    {NULL, NULL, 0, NULL}, </netdb.h></arpa>* Sentinel */
 };
 
 #if PY_MAJOR_VERSION >= 3

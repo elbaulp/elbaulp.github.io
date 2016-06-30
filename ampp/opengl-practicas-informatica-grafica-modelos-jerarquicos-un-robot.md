@@ -51,7 +51,7 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
 
 using namespace std;
 
-</gl>* Variables to control the spped of rotation/translation/zoom */
+</time.h></unistd.h></iostream></stdlib.h></math.h></gl>* Variables to control the spped of rotation/translation/zoom */
 #define DEGREES_PER_PIXEL  0.6f
 #define UNITS_PER_PIXEL        0.1f
 #define ZOOM_FACTOR        0.04f
