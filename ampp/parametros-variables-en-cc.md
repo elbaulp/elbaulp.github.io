@@ -16,7 +16,7 @@ color: "#E64A19"
 ---
 
 <figure>
-  <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
 </figure>
 
 En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++.
@@ -52,76 +52,7 @@ void PrintFloats (int n, ...)
   printf ("Printing floats:");
   va_list vl;
   va_start(vl,n);
-  for (i=0;i<n;i++)
-  {
-    val=va_arg(vl,double);
-    printf (" [%.2f]",val);
-  }
-  va_end(vl);
-  printf ("\n");
-}
-
-int main ()
-{
-  PrintFloats (3,3.14159,2.71828,1.41421);
-  return 0;
-}
-
-```
-
-La función `PrintFloats` tiene como parámetro el número de argumentos adicionales (`n`), que son leídos y mostrados secuencialmente.
-
-## Segundo ejemplo
-
-Éste ejemplo está sacado de la función que usa [DWM Status][1] para imprimir el estado (`smprintf`):
-
-```c
-char *
-smprintf(char *fmt, ...) {
-  va_list fmtargs;
-  char *ret;
-  int len;
-
-  va_start(fmtargs, fmt);
-  len = vsnprintf(NULL, 0, fmt, fmtargs);
-  va_end(fmtargs);
-
-  ret = malloc(++len);
-  if (ret == NULL) {
-    perror("malloc");
-    exit(1);
-  }
-
-  va_start(fmtargs, fmt);
-  vsnprintf(ret, len, fmt, fmtargs);
-  va_end(fmtargs);
-
-  return ret;
-}
-
-```
-
-La función toma como primer parámetro una cadena de texto a ser formateada, al estilo de `printf`. Los argumentos adicionales son los valores correspondientes a cada cadena de formateo. Por ejemplo:
-
-```cpp
-smprintf("%dK", rx_rate);
-
-```
-
-Al igual que en el ejemplo anterior, en `fmtargs` se recibirán los parámetros adicionales. Con `vsnprintf` se calcula el tamaño de la cadena de texto formateada, es decir, con los valores substituidos. Finalmente, se vuelve a inicializar la lista de argumentos variables, para luego llamar de nuevo a `vsnprintf`, pero ésta vez almacenando el resultado de la cadena formateada en `ret`.
-
-## Tercer ejemplo
-
-Éste ejemplo es de una práctica de Inteligencia Artificial de la facultad en la que teníamos que implementar la poda **Alpha-beta** en el 4 en raya:
-
-```cpp
-int checkLine(int jug, int n, ...) {
-
-  va_list vl;
-  va_start(vl, n);
-  int vals[n];
-
-  for (int i = 0; i < n; i++) {
+  for (i=0;i<n>< n; i++) {
     vals[i] = va_arg(vl, int);
   }
 
@@ -136,7 +67,7 @@ int checkLine(int jug, int n, ...) {
 /**
   * Valorar cada jugada
  **/
-double Valoracion(const Environment &state, int jugador) {
+double Valoracion(const Environment &state;, int jugador) {
   int score = 0;
 
 // Eval horizontal
@@ -226,3 +157,4 @@ Espero que estos tres ejemplos sencillos hayan servido para comprender el funcio
  [1]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Dwm Status"
 
 {% include toc.html %}
+</n></stdarg.h></stdio.h>

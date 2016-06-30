@@ -67,7 +67,7 @@ int main(){
 
 Ya solo queda compilarlo y ejecutarlo, dejo una captura de pantalla como prueba de que funciona:
 
-<img src="/assets/img/2012/12/Screenshot_2012-12-04-17-14-141.png" alt="" title="Compilando código C/C++ en android"   />
+<img src="/assets/img/2012/12/Screenshot_2012-12-04-17-14-141.png" alt="" title="Compilando código C/C++ en android" width="800px" height="480px" />
 
 Y no solo eso, también podemos instalar python:
 
@@ -80,15 +80,16 @@ Hola Mundo desde Android!
 ```
 
 De nuevo, com prueba, una captura de pantalla:  
-<img src="/assets/img/2012/12/Screenshot_2012-12-04-17-32-141.png" alt="" title="Ejecutando programas en python desde Android"   />
+<img src="/assets/img/2012/12/Screenshot_2012-12-04-17-32-141.png" alt="" title="Ejecutando programas en python desde Android" width="800px" height="480px" />
 
 A continuación un vídeo explicando el proceso de instalación de busybox sin permisos de root:
 
 ### Referencias
 
 *Geeknizer* »» <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>  
-*XDA-Developers* »» <a href="http://forum.xda-developers.com/showpost.php?p=26261600&postcount=119" target="_blank">Visitar sitio</a>
+*XDA-Developers* »» <a href="http://forum.xda-developers.com/showpost.php?p=26261600&amp;postcount=119" target="_blank">Visitar sitio</a>
 
  [1]: /rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
 
 {% include toc.html %}
+</iostream>

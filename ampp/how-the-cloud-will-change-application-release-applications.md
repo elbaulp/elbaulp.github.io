@@ -12,7 +12,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications"   />][1]
+[<img src="/assets/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications" width="200px" height="259px" />][1]
 
 The use of cloud computing for custom-built, mission-critical enterprise applications is in its infancy, but both the technology and mind-set are starting to influence enterprise application architectures and delivery.
 
@@ -21,7 +21,7 @@ The use of cloud computing for custom-built, mission-critical enterprise applica
 #### Descargar
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/free/w_comb31" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+<a href="http://elbauldelprogramador.tradepub.com/free/w_comb31" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***

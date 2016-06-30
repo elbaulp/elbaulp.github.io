@@ -16,7 +16,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="so" class="icono" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="so" class="icono" /></a>
 </div>
 
 Hace poco os hablé de [por qué Linux no era solo para geeks][1], sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red
@@ -37,7 +37,7 @@ O <a target="_blank" href="http://www.linuxbsdos.com/2010/07/20/pclinuxos-2010-r
 
 &#8230;
 
-*Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.*</p>
+*Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.*
 
 Lo que revelan estos comentarios es que muchos en nuestra comunidad no entienden las bases de la seguridad de red. Espero que este corto artículo pueda dejar un poco más claro este tema.
 

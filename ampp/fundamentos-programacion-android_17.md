@@ -36,45 +36,38 @@ Si una pila de tareas se abandona por el usuario durante un periodo de tiempo y 
 
 
 <table>
-  <tr>
-    <td>
-      <b>Atributo</b>
-    </td>
-
-    <td>
-      <b>Función</b>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <i><b>alwaysRetainTaskState</b></i>
-    </td>
-
-    <td>
+<tr>
+<td>
+<b>Atributo</b>
+</td>
+<td>
+<b>Función</b>
+</td>
+</tr>
+<tr>
+<td>
+<i><b>alwaysRetainTaskState</b></i>
+</td>
+<td>
       Si vale true, se mantiene la pila aunque se abandone durante mucho tiempo
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <i><b>clearTaskOnLaunch</b></i>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<i><b>clearTaskOnLaunch</b></i>
+</td>
+<td>
       Si es true, se limpia la pila (excepto la actividad principal) cada vez que se lleve al segundo plano
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <b><i>finishOnTaskLaunch</i></b>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<b><i>finishOnTaskLaunch</i></b>
+</td>
+<td>
       Similar a la anterior, pero solo se aplica a la actividad con este atributo fijado a true.
     </td>
-  </tr>
+</tr>
 </table>
 
 

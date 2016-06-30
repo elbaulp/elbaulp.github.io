@@ -12,7 +12,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <div class="separator" style="float:left; margin-right:10px;">
-  <img border="0" height="128" width="128" src="https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png" />
+<img border="0" height="128" width="128" src="https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png" />
 </div>
 
 Toda esta historia viene al comprar una memória de 2Gb de Ram a mi pc, para aumentar la capacidad total a 4Gb, no parece que sea algo muy complicado, ya que supuestamente mi placa base soporta hasta 8Gb y uso un Sistema Operatívo de 64-bits (CrunchBang 64-bit Stable + backports).
@@ -78,6 +78,6 @@ Despues de actualizar la BIOS, se restauran las configuraciones por defecto, de 
 
 
  [1]: http://crunchbanglinux.org/forums/post/192843/#p192843
- [2]: http://forums.debian.net/viewtopic.php?f=7&t=76419
+ [2]: http://forums.debian.net/viewtopic.php?f=7&t;=76419
 
 {% include toc.html %}

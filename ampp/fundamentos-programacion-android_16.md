@@ -14,7 +14,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 ## Intents
 
@@ -41,7 +41,7 @@ Cada componente tiene su propia etiqueta xml:
   * <service>: Para servicios.</service>
   * <receiver>: Para receptores de mensajes de difusión.</receiver>
   * <provider>: Para proveedores de contenidos.</provider>
-  * <intent -filter>: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.</intent>
+  * <intent>: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.</intent>
 
 
 

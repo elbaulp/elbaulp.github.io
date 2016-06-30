@@ -11,7 +11,7 @@ tags:
 main-class: "security-now"
 color: "#00BCD4"
 ---
-<img src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert"   />
+<img src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert" width="300px" height="300px" />
 
 Como es habitual, hoy traigo otro episodio de [security Now!][1] que me parece interesante. Este en concreto, además de interesante es algo que afecta a millones de routers y dispositivos con el servicio UPnP activado.
 
@@ -54,7 +54,7 @@ El informe del escaner se puede encontrar en PDF en el siguiente enlace: <a href
 > between computers and network-enabled devices. This protocol is enabled by default on  
 > millions of systems, including routers, printers, media servers, IP cameras, smart TVs, home  
 > automation systems, and network storage servers. UPnP support is enabled by default on  
-> Microsoft Windows, Mac OS X, and many distributions of Linux.“</p>
+> Microsoft Windows, Mac OS X, and many distributions of Linux.“
 >
 > “The UPnP protocol suffers from a number of basic security problems, many of which have  
 > been highlighted over the last twelve years. Authentication is rarely implemented by device  
@@ -85,7 +85,7 @@ El informe del escaner se puede encontrar en PDF en el siguiente enlace: <a href
 >
 > “Rapid7 has provided a number of tools to help identify UPnP-enabled systems, including the  
 > free ScanNow for UPnP, modules for the open source Metasploit Framework, and updates to  
-> the Nexpose vulnerability management platform.”</em></blockquote>
+> the Nexpose vulnerability management platform.”
 >
 > Al principio se dan unos cuantos datos estadísticos de todos los dispositivos y sistemas que tienen UPnP habilitado por defecto así como tipos de vulnerabilildades para acaber diciendo que se desactive el servicio en cualquier dispositivo conectado a internet, ya que la industria de los dispositivos electrónicos no dará solución a los dispositivos afectados. Por último, Rapid7 recomienda una serie de herramientas para identificar si nuestro sistema es vulnerable. Como ScanNow y varios modulos para metasploit.
 >

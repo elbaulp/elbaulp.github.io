@@ -96,17 +96,17 @@ Visto cómo crear el balanceo de carga a mano, ahora pasemos a administrar y cre
 
 Para ello, en el panel de control hacemos click en *Red* » Balanceadores. Allí crearemos uno nuevo
 
-<img src="/assets/img/2015/03/Balanceadoresdecarga1.png" alt="Balanceadoresdecarga1"   />
+<img src="/assets/img/2015/03/Balanceadoresdecarga1.png" alt="Balanceadoresdecarga1" width="815px" height="531px" />
 
 Donde se especifica el nombre, puertos y direcciones a usar.
 
 El siguiente paso es elegir el tipo de Control de estado a realizar, y el método de balanceo (Round robin o least connections)
 
-<img src="/assets/img/2015/03/Balanceadoresdecarga2.png" alt="Balanceadoresdecarga2"   />
+<img src="/assets/img/2015/03/Balanceadoresdecarga2.png" alt="Balanceadoresdecarga2" width="812px" height="532px" />
 
 Por último, se especifica la aplicación que será balanceada entre todos los servidores virtuales disponibles.
 
-<img src="/assets/img/2015/03/Balanceadoresdecarga3.png" alt="Balanceadoresdecarga3"   />
+<img src="/assets/img/2015/03/Balanceadoresdecarga3.png" alt="Balanceadoresdecarga3" width="815px" height="529px" />
 
 ## Ventajas y desventajas
 
@@ -118,6 +118,6 @@ La opción de crear y configurar el balanceador a mano puede ser buena para apre
 
 
 
- [1]: http://www.arsys.es/servidores/cloud?utm_source=cooperation&utm_medium=baul&utm_term=balanceador&utm_content=online&utm_campaign=cloud
+ [1]: http://www.arsys.es/servidores/cloud?utm_source=cooperation&utm;_medium=baul&utm;_term=balanceador&utm;_content=online&utm;_campaign=cloud
 
 {% include toc.html %}

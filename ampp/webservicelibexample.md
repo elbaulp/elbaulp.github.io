@@ -41,10 +41,10 @@ task.execute(rq);
 
 `rq` es el objeto necesario para construir la petición, en este caso irá en JSON. Las siguientes instrucciones establecen el típo de método a usar y la url del WebService, respectivamente. **RestServiceTask** se encarga de crear un <a href="http://developer.android.com/reference/android/os/AsyncTask.html" target="_blank">AsyncTask</a> para realizar la petición fuera del hilo principal de la aplicación.
 
-En cada clase que se use la librería es necesario implementar la interfaz `AsyncTaskCompleteListener<RestResponse>`, Por ejemplo:
+En cada clase que se use la librería es necesario implementar la interfaz `AsyncTaskCompleteListener<restresponse>`, Por ejemplo:
 
 ```java
-public class MainActivity extends Activity implements AsyncTaskCompleteListener<RestResponse>
+public class MainActivity extends Activity implements AsyncTaskCompleteListener</restresponse><restresponse>
 
 ```
 
@@ -56,7 +56,7 @@ Además, añadir el callback `onTaskComplete()`, que será llamado una vez obten
 
 ```
 
-Para obtener la respuesta de la petición llamamos al método `getContent()` del objeto `result`, que devuelve un `HashMap<String, Object>` con los pares **clave/valor** correspondientes a la respuesta en JSON.
+Para obtener la respuesta de la petición llamamos al método `getContent()` del objeto `result`, que devuelve un `HashMap<string>` con los pares **clave/valor** correspondientes a la respuesta en JSON.
 
 Cuando hay que proporcionar parámetros a la consulta, se debe crear un objeto HashMap que contendrá las claves y valores necesarios. En el caso del segundo ejemplo, la llamada se realiza al Web Service de test que proporciona WordPress. Algunos de los parámetros que acepta, entre otros, son *pretty=true|false, default\_string=cadena, http\_envelope=true|false, url=url*
 
@@ -67,7 +67,7 @@ RestRequest apiWordpress = new JSONRestRequest();
 apiWordpress.setMethod(RestRequest.GET_METHOD);
 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
 
-HashMap<String, Object> args = new HashMap<String, Object>() {
+HashMap</string><string> args = new HashMap</string><string>() {
    {
       put("pretty", "true");
       put("default_string", "Test App WS www.elbauldelprogramador.org");
@@ -106,7 +106,7 @@ import thecocktaillab.restJsonLib.RestServiceTask;
 
 import java.util.HashMap;
 
-public class MainActivity extends Activity implements AsyncTaskCompleteListener<RestResponse> {
+public class MainActivity extends Activity implements AsyncTaskCompleteListener</string></restresponse><restresponse> {
 
     private TextView ciudadD;
     private TextView codRegD;
@@ -162,7 +162,7 @@ public class MainActivity extends Activity implements AsyncTaskCompleteListener<
                 apiWordpress.setMethod(RestRequest.GET_METHOD);
                 apiWordpress.setURL("https://public-api.wordpress.com/rest/v1/test/5");
 
-                HashMap<String, Object> args = new HashMap<String, Object>() {
+                HashMap<string> args = new HashMap</string><string>() {
                     {
                         put("pretty", "true");
                         put("default_string", "Test App WS www.elbauldelprogramador.org");
@@ -219,7 +219,7 @@ Es necesario agregar la librería al proyecto, para ello, descárgala, crea una 
 
 La aplicación de ejemplo debe quedar así:
 
-[<img src="/assets/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample"   />][1]{.thumbnail}
+[<img src="/assets/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480px" height="800px" />][1]{.thumbnail}
 
 Para finalizar, decir que la librería por ahora está muy limitada, pero es perfectamente funcional para realizar peticiones básicas. Intentaremos seguir desarrollandola cuando dispongamos de más tiempo.
 
@@ -237,3 +237,4 @@ Para finalizar, decir que la librería por ahora está muy limitada, pero es per
  [1]: /assets/img/2013/01/webservicelibexample2.png
 
 {% include toc.html %}
+</string></restresponse>

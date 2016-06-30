@@ -104,10 +104,10 @@ delete[] pObjs;
 
 Punteros y arrays están íntimamente relacionados por las reglas de la aritmética  
 de punteros. El compilador interpreta el nombre de array corno un puntero a su primer  
-elemento. Es decir, si objs es el nombre del array, objs es equivalente a &objs[01. Por  
+elemento. Es decir, si objs es el nombre del array, objs es equivalente a &objs;[01. Por  
 las reglas de la aritmética de punteros, si se añade un entero i al nombre de un array, el  
 resultado es un puntero al elemento i del array: esto es, objs+i es equivalente a  
-&objs[i). Esta equivalencia la podemos expresar mediante la regla:
+&objs;[i). Esta equivalencia la podemos expresar mediante la regla:
 
 ```bash
 <i>*(objs+i) es equivalente a objs[i]</i>

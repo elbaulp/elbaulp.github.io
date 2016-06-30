@@ -18,8 +18,7 @@ El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había
 
 Aquí dejo el código y un vídeo demostrativo, también está disponible en [Github][2].
 
-<iframe  src="https://www.youtube-nocookie.com/embed/ZBX2a1c3KCE" frameborder="0" allowfullscreen></iframe>
-
+<iframe src="https://www.youtube-nocookie.com/embed/ZBX2a1c3KCE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 <!--ad-->
 
 ## Código Fuente
@@ -38,10 +37,10 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
  */
 
 #ifdef __APPLE__
-#include <GLUT/glut.h>
+#include <glut>glut.h>
 #else
-//  #include <windows.h>
-#include <GL/glut.h>
+</glut>/  #include <windows.h>
+#include <gl>glut.h>
 #endif
 
 #include <math.h>
@@ -52,7 +51,7 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
 
 using namespace std;
 
-/* Variables to control the spped of rotation/translation/zoom */
+</gl>* Variables to control the spped of rotation/translation/zoom */
 #define DEGREES_PER_PIXEL  0.6f
 #define UNITS_PER_PIXEL        0.1f
 #define ZOOM_FACTOR        0.04f
@@ -583,7 +582,7 @@ void myInit() {
 
 int main(int argc, char **argv) {
   srand(time(NULL));
-  glutInit(&argc, argv);
+  glutInit(&argc;, argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
   glutInitWindowSize(500, 500);
   glutCreateWindow("Hierarchical Robot");
@@ -611,3 +610,4 @@ int main(int argc, char **argv) {
  [2]: https://github.com/algui91/grado_informatica_ig_practicas/tree/master/P3
 
 {% include toc.html %}
+</windows.h>
