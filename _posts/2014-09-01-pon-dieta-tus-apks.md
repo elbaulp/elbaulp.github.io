@@ -250,4 +250,3 @@ El diseño trata de obtener lo mejor posible a partir de un conjunto de restricc
  [20]: https://twitter.com/cyrilmottier "@cyrilmottier"
 
 {% include toc.html %}
-</rotate></app.apk>
