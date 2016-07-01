@@ -46,25 +46,25 @@ Desde mi experiencia, la pérdida del **imei** ocurre al instalar una ROM no com
 
 Los pasos a seguir son:
 
-1. Haz una copia de la carpeta **/efs** actual, tanto a la tarjeta del teléfono como a tu móvil. Si no tienes navegador root, puedes usar `adb`:
+- Haz una copia de la carpeta **/efs** actual, tanto a la tarjeta del teléfono como a tu móvil. Si no tienes navegador root, puedes usar `adb`:
 
 ```bash
 $ adb pull -p /efs /copia/en/pc
 ```
 
-2. Elmina la carpeta **/efs** del teléfono.
-3. Reinícia el móvil, tras el reinicio, se habrá creado una nueva carpeta **/efs**.
-4. Elimina los ficheros `nv_data.bin` y `nv_data.bin.md5` de la carpeta **/efs**.
-5. En la copia de seguridad que se hizo en 1), copia la carpeta `imei` a **/efs**, también el fichero `.nv_data` (OJO:, lleva un punto delante). Puedes hacerlo con el navegador root o `adb`:
+- Elmina la carpeta **/efs** del teléfono.
+- Reinícia el móvil, tras el reinicio, se habrá creado una nueva carpeta **/efs**.
+- Elimina los ficheros `nv_data.bin` y `nv_data.bin.md5` de la carpeta **/efs**.
+- En la copia de seguridad que se hizo en 1), copia la carpeta `imei` a **/efs**, también el fichero `.nv_data` (OJO:, lleva un punto delante). Puedes hacerlo con el navegador root o `adb`:
 
 ```bash
 $ adb push -p /copia/en/pc/imei /efs/
 $ adb push -p /copia/en/pc/.nv_data /efs/
 ```
 
-6. Haz otra copia del fichero `.nv_data` a la carpeta **/efs**.
-7. Llama a una de las copias de `.nv_data` -> `nv_data.bin` y a otra `nv_data.bin.bak`.
-8. Desde el PC, con `adb`, ejecuta lo siguiente:
+- Haz otra copia del fichero `.nv_data` a la carpeta **/efs**.
+- Llama a una de las copias de `.nv_data` -> `nv_data.bin` y a otra `nv_data.bin.bak`.
+- Desde el PC, con `adb`, ejecuta lo siguiente:
 
 ```bash
 $ adb shell
@@ -72,7 +72,7 @@ $ su
 $ chown 1001:radio /efs/nv_data.bin
 ```
 
-9. Reinicia el teléfono&#8230; si todo ha ido bien, deberías tener número IMEI. Puedes comprobarlo marcando `*#06#`.
+- Reinicia el teléfono&#8230; si todo ha ido bien, deberías tener número IMEI. Puedes comprobarlo marcando `*#06#`.
 
 *Nota*: Éste método me sirvió para recuperar el **imei** la primera vez que lo perdí. La segunda vez, no fue posible, es por ello que muestro el proceso de recuperación del **imei** con el siguiente método, que me ayudó ésta segunda vez.
 

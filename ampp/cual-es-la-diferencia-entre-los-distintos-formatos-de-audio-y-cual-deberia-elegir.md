@@ -2,7 +2,6 @@
 title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
 description: "Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:"
 layout: post.amp
-
 categories:
   - Articulos
 tags:
@@ -35,7 +34,7 @@ color: "#F57C00"
 ---
 
 <figure>
-<amp-img layout="responsive" src="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg" />
+  <amp-img layout="responsive" src="/assets/img/2012/07/original1.jpg" width="640px" height="360px" />
 </figure>
 
 Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido&#8230; echemos una vista rápida a los distintos formatos existentes:
@@ -53,7 +52,7 @@ Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="ht
 #### Formatos con pérdidas: MP3, AAC, OGG y más
 
 <figure>
-<amp-img layout="responsive" src="/assets/img/2012/07/original-11-300x195.jpg" width="300px" height="195px" />
+  <amp-img layout="responsive" src="/assets/img/2012/07/original-11-300x195.jpg" width="300px" height="195px" />
 </figure>
 
 Para el día a día, es más probable que usemos formatos con pérdidas. Ahorran bastante más espacio, y si tienen una <a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">tasa de bits suficientemente alta (bitrate)</a>, será muy dificil de distinguir la calidad de la fuente original. A continuación se muestran los formatos que más se usan:
@@ -71,9 +70,7 @@ Sin embargo, hay algo que decir para almacenar música en formátos sin pérdida
 
 Como conclusión final, podemos decir que no hay que obsesionarse con el tema. Simplemente hemos de estar seguros de escoger algo ampliamente compatible, no convertir entre dos formatos con pérdidas, y disfrutar de la música.
 
-* * *
-
-Vía | LifeHacker &#8211; <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>  
-Imagen | <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" target="_blank">Carl Berkeley</a>
+- Vía \| LifeHacker &#8211; <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>  
+- Imagen \| <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" target="_blank">Carl Berkeley</a>
 
 {% include toc.html %}

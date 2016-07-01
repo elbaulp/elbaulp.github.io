@@ -35,7 +35,7 @@ color: "#F57C00"
 ---
 
 <figure>
-<img src="https://elbauldelprogramador.com/assets/img/2012/07/original1.jpg" />
+  <img src="/assets/img/2012/07/original1.jpg" width="640px" height="360px" />
 </figure>
 
 Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido&#8230; echemos una vista rápida a los distintos formatos existentes:
@@ -71,9 +71,7 @@ Sin embargo, hay algo que decir para almacenar música en formátos sin pérdida
 
 Como conclusión final, podemos decir que no hay que obsesionarse con el tema. Simplemente hemos de estar seguros de escoger algo ampliamente compatible, no convertir entre dos formatos con pérdidas, y disfrutar de la música.
 
-* * *
-
-Vía | LifeHacker &#8211; <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>  
-Imagen | <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" target="_blank">Carl Berkeley</a>
+- Vía \| LifeHacker &#8211; <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>  
+- Imagen \| <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" target="_blank">Carl Berkeley</a>
 
 {% include toc.html %}
