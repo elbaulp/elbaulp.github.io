@@ -22,7 +22,7 @@ color: "#F57C00"
 El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura _Seguridad en Sistemas Operativos_ de la facultad de Ingeniería Informática de Granada (ETSIIT). Los componentes del grupo fueron [@MPV_Prod](http://twitter.com/MPV_Prod) , [@_musicalnote](http://twitter.com/_musicalnote) y [@ElBaulP](http://twitter.com/elbaulp). Este artículo es autoría de @_musicalnote.
 {: .notice-info }
 
-#Índice
+# Índice
 
 - [Biometría aplicada a la seguiridad - Introducción](/biometria-seguridad-introduccion "Biometría aplicada a la seguiridad - Introducción")
 - Biometría aplicada a la seguiridad - Reconocimiento de patrones
@@ -62,9 +62,8 @@ Hay varios tipos de aproximaciones, aunque se suelen combinar entre sí
 para dar lugar a sistemas híbridos. Todas ellas tienen en común dos
 fases:
 
--   Fase de train o aprendizaje
-
--   Fase de clasificación o test.
+- Fase de train o aprendizaje
+- Fase de clasificación o test.
 
 En primer lugar, para realizar un sistema de reconocimiento de patrones
 que nos permita identificar a un individuo por alguna característica
@@ -143,7 +142,7 @@ Esto está todavía mejorándose, pero ya se habla de que en un futuro se
 podrían desarrollar técnicas avanzadas de biometría, como por ejemplo,
 reconocimiento mediante ADN.
 
-#Índice
+# Índice
 
 - [Biometría aplicada a la seguiridad - Introducción](/biometria-seguridad-introduccion "Biometría aplicada a la seguiridad - Introducción")
 - Biometría aplicada a la seguiridad - Reconocimiento de patrones

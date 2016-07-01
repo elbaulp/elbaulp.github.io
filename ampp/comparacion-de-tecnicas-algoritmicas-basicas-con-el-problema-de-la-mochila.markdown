@@ -22,7 +22,9 @@ _Créditos de la imagen [Wikipedia](https://en.wikipedia.org/wiki/File:Knapsack.
 Este artículo se basa en las prácticas que he hecho para una asignatura llamada *Algorítmica*. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura.
 
 ¿En qué consiste el problema de la mochila? Tenemos una mochila con una determinada capacidad y un conjunto de objetos para meter en la mochila. Cada objeto tiene asociado un peso y un beneficio. El problema consiste en llenar la mochila de tal forma que el beneficio obtenido sea el **máximo**.
+
 <!--ad-->
+
 Las distintas técnicas algorítmicas que hemos usado para implementar este problema han sido:
 
 ### Algoritmos voraces

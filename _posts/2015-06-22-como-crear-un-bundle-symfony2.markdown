@@ -19,7 +19,7 @@ Voy a describir paso a paso como lo he creado, habrá otras formas igualmente v�
 
 Asumo que ya tenemos composer instalado, si no es así, se puede instalar [siguiendo estos pasos](https://getcomposer.org/download/).
 
-###**Instalar symfony2**
+### Instalar symfony2
 
 Lo primero es instalar symfony, en este caso voy a instalar la versión 2.3, que es la versión menor con soporte ahora mismo, ya que quiero que sea compatible con el máximo de versiones posible y para ello lo mejor es crearlo sobre la menor versión.
 Lo instalamos usando el comando siguiente:
@@ -29,7 +29,7 @@ Lo instalamos usando el comando siguiente:
 composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony 2.3.0
 ```
 
-###**Creamos la base del bundle**
+### Creamos la base del bundle
 
 Una vez instalado, creamos dentro de vendors el directorio del bundle siguiendo la estructura en la que queramos que luego se instale. En este caso voy a usar la estructura smsup\smsup-api-bundle.
 
@@ -114,7 +114,7 @@ $sender->send('entró y funciona');
 
 Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje "entró y funciona". Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto "Su mensaje es: entró funciona", lo cual nos indica que todo ha ido bien.
 
-###**Subida al repositorio**
+### Subida al repositorio
 
 Como ya sabemos que funciona correctamente nuestro bundle, aunque no haga nada útil aun, vamos a subirlo a nuestro repositorio git y a añadirlo a packagist para que pueda ser descargado usando composer. Para esto debemos añadir el archivo composer.json, en el que vamos a definir nuestro bundle. En nuestro caso quedaría así:
 
@@ -169,7 +169,7 @@ Tras esto ya tenemos nuestro bundle instalado correctamente en vendors y si ejec
 Ahora ya solo debemos incluir las funcionalidades que queramos que tenga e ir actualizando el repositorio.
 Vamos a añadir la funcionalidad y luego veremos como crear la primera versión estable.
 
-###**Añadimos parámetros obligatorios de configuración**
+### Añadimos parámetros obligatorios de configuración
 
 Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.
@@ -240,7 +240,7 @@ public function setApisecret($apiSecret)
 
 Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.
 
-###**Añadimos la funcionalidad a nuestro servicio**
+### Añadimos la funcionalidad a nuestro servicio
 
 Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería "smsuplib". Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:
@@ -358,7 +358,7 @@ class Result {
 
 Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.
 
-###**Primera versión estable**
+### Primera versión estable 
 
 Para definir una versión solo debemos añadir una etiqueta con la versión al repositorio y packagist se encarga del resto. La etiqueta debe tener el formato 'X.Y.Z' o 'vX.Y.Z' (también puede llevar un sufijo RC, beta, etc). En nuestro caso será la etiqueta "v1.0.0".
 Hecho esto, ya está disponible una versión estable de nuestro bundle que puede instalarse de la siguiente forma:
