@@ -29,7 +29,7 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
 La sentencia INSERT nos permite introducir nuevas filas en una tabla de la base de datos. Su sintaxis más simple es:
 
 ```sql
-Insert into  tabla ([<lista_campos>]) Values ([<lista de valores>])
+Insert into  tabla ([<lista_campos>]) Values ([<lista de="de" valores="valores">])
 ```
 
 donde tabla representa la tabla a la que queremos añadir el registro y los valores que siguen a la clausula VALUES son los valores que damos a los distintos campos del registro. Si no se especifica la lista de campos, la lista de valores debe seguir el orden de todos los campos de la tabla.
@@ -37,7 +37,7 @@ donde tabla representa la tabla a la que queremos añadir el registro y los valo
 La lista de campos a rellenar se indica si no queremos rellenar todos los campos. Los campos no rellenados explícitamente con la orden INSERT, se rellenan con su valor por defecto (DEFAULT) o bien con NULL si no se indicó valor alguno.
 
 ```sql
-Insert into tabla ([<lista_campos>])
+Insert into tabla ([</lista></lista_campos><lista_campos>])
 Select .....
 ```
 
@@ -75,7 +75,7 @@ SELECT * FROM MATRICULAS;
 La sentencia DELETE nos permite borrar filas de una tabla de la base de datos. Su sintaxis más simple es:
 
 ```sql
-Delete [from] tabla [Where <condición>]
+Delete [from] tabla [Where <condici>]
 ```
 
 La sentencia DELETE es de tipo DML mientras que la sentencia TRUNCATE es de tipo DDL; la diferencia está en dos aspectos:
@@ -91,7 +91,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.
 La sentencia UPDATE nos permite modificar filas de una tabla de la base de datos. Su sintaxis más simple es:
 
 ```sql
-Update tabla Set columna1= valor1 [, columna2= valor2, .....] [Where <condición>]
+Update tabla Set columna1= valor1 [, columna2= valor2, .....] [Where </condici><condici>]
 ```
 
 Se modifican las columnas indicadas en el apartado SET con los valores indicados. La cláusula WHERE permite especificar qué registros serán modificados.
@@ -99,7 +99,7 @@ Se modifican las columnas indicadas en el apartado SET con los valores indicados
 Su segundo tipo de sintaxis es:
 
 ```sql
-Update tabla Set columna1= (Sentencia SELECT) [Where <condición>]
+Update tabla Set columna1= (Sentencia SELECT) [Where </condici><condici>]
 ```
 
 Este tipo de actualizaciones sólo son válidas si la Sentencia SELECT devuelve un único valor, que además debe de ser compatible con la columna que se actualiza.
@@ -144,13 +144,13 @@ WHEN NOT MATCHED THEN
 La situación se muestra en la ilustración siguiente:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s1600/merge.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s320/merge.png" width="320" /></a>
+<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s1600/merge.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s320/merge.png" width="320" /></a>
 </div>
 
 y el resultado después de ejecutar la sentencia MERGE sería:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s1600/tablamerge.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="116" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s320/tablamerge.png" width="320" /></a>
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s1600/tablamerge.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="116" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s320/tablamerge.png" width="320" /></a>
 </div>
 
 
@@ -170,3 +170,4 @@ y el resultado después de ejecutar la sentencia MERGE sería:
  [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/
 
 {% include toc.html %}
+</condici></lista_campos>

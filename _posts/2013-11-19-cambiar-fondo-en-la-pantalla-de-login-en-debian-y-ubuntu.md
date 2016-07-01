@@ -17,7 +17,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-  <a href="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg"><img src="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg"><img src="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="3264px" height="2448px" /></a>
 </figure>
 
 Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos.
@@ -103,7 +103,7 @@ sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 ```
 
 <figure>
-  <a href="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg"><img src="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg"><img src="/assets/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="3264px" height="2448px" /></a>
 </figure>
 
 #### Referencias
@@ -114,3 +114,4 @@ sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 [1]: https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
 
 {% include toc.html %}
+</nombre_fondo>

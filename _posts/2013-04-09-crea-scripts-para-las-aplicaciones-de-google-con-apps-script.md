@@ -32,11 +32,9 @@ Todo lo necesario para comenzar a escribir código es una cuenta de google, un n
 
 Uno de los scripts que estoy usando actualmente recopila información de mi cuenta de gmail, para mandarme un correo al final de més con estadísticas y gráficos sobre quién me manda más correos electónicos, a quién respondo más etc. El informe que elabora este script es así:
 
-<img src="/assets/img/2013/04/gmailStats.png" alt="gmailStats"   />
-
-<img src="/assets/img/2013/04/chart1.png" alt="chart1"   />
-
-<img src="/assets/img/2013/04/chart2.png" alt="chart2"   />
+<img src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px" />
+<img src="/assets/img/2013/04/chart1.png" alt="chart1" width="650px" height="400px" />
+<img src="/assets/img/2013/04/chart2.png" alt="chart2" width="650px" height="400px" />
 
 Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google »  
 <a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>.
@@ -109,8 +107,7 @@ function fetchEmails_() {
         // Fetch sender of each emails
         // ////////////////////////////////
         var from = messages[j].getFrom();
-        if (from.match(/</) != null) {
-          from = from.match(/<([^>]*)/)[1];
+        if (from.match(/<([^>]*)/)[1];
         }
         var time = Utilities.formatDate(date, variables.userTimeZone, "H");
         var day = Utilities.formatDate(date, variables.userTimeZone, "d");
@@ -127,8 +124,7 @@ function fetchEmails_() {
           var to = messages[j].getTo();
           to = to.split(/,/);
           for (l = 0; l < to.length; l = l + 2) {
-            if (to[l].match(/</) != null) {
-              to[l] = to[l].match(/<([^>]*)/)[1];
+            if (to[l].match(/<([^>]*)/)[1];
             }
             for (k in variables.people) {
               if (to[l] == variables.people[k][0]) {
@@ -202,13 +198,12 @@ function fetchEmails_() {
 function sendReport_(variables) {
   variables.people.sort(sortArrayOfPeopleFrom_);
   var report =
-    "<h2 style=\"color:#cccccc; font-family:verdana,geneva,sans-serif;\">Gmail Stats - " +
+    "<h2 style="">Gmail Stats - " +
       Utilities.formatDate(
         new Date(variables.previous),
         variables.userTimeZone,
         "MMMM") +
       "</h2>
-
 <p>
   " +
         variables.nbrOfConversations +
@@ -224,7 +219,6 @@ function sendReport_(variables) {
         variables.nbrOfConversationsStarred +
         " conversations starred.
 </p>
-
 <p>
   " +
         Math.round(variables.sentDirectlyToYou * 10000 /
@@ -237,24 +231,22 @@ function sendReport_(variables) {
         100 +
         "% of them.
 </p>" +
-      "<table style=\"border-collapse: collapse;\">
-
+      "<table style="">
 <tr>
-  <td style=\"border: 0px solid white;\">" +
+<td style="">" +
         "
 
   <h3>
     Top 5 senders:
   </h3>
-
-  <ul>
+<ul>
     ";
       var r = 0;
       var s = 0;
       while (s < 5) {
         if (variables.people[r][0].search(/notification|noreply|update/) == -1) {
           report +=
-            "<li title=\"" + variables.people[r][1] + " emails\">" +
+            "<li title="">" +
               variables.people[r][0] + "</li>";
           s++;
         }
@@ -263,32 +255,21 @@ function sendReport_(variables) {
       variables.people.sort(sortArrayOfPeopleTo_);
       report +=
         "
-  </ul></td><td style=\"border: 0px solid white;\">
-
-  <h3>
+  </ul></td><td style="">
+<h3>
     Top 5 recipients:
   </h3>
-
-  <ul>
+<ul>
     ";
       for (i = 0; i < 5; i++) {
         report +=
-          "<li title=\"" + variables.people[i][2] + " emails\">" +
+          "<li title="">" +
             variables.people[i][0] + "</li>";
       }
       report += "
   </ul></td>
 </tr></table>
-
-<br /><img src=\'";
-
-  var dataTable = Charts.newDataTable();
-  dataTable.addColumn(Charts.ColumnType['STRING'], 'Time');
-  dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Received');
-  dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Sent');
-
-  var time = '';
-  for ( var i = 0; i < variables.timeOfEmailsReceived.length; i++) { // create
+<br /><img src="" />< variables.timeOfEmailsReceived.length; i++) { // create
                                                                       // the
                                                                       // rows
     switch (i) {
@@ -324,14 +305,7 @@ function sendReport_(variables) {
       650,
       400).build();
 
-  report += "cid:Averageflow\'/>" + "<img src=\'";
-
-  var dataTable = Charts.newDataTable();
-  dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Date'); // Era STRING
-  dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Received');
-  dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Sent');
-
-  for ( var i = 0; i < variables.dayOfEmailsReceived.length; i++) { // create
+  report += "cid:Averageflow\' />" + "<img src="" />< variables.dayOfEmailsReceived.length; i++) { // create
                                                                     // the rows
     dataTable.addRow([
       i + 1, variables.dayOfEmailsReceived[i], variables.dayOfEmailsSent[i]
@@ -343,7 +317,7 @@ function sendReport_(variables) {
       650,
       400).build();
 
-  report += "cid:Date\'/>";
+  report += "cid:Date\' />";
 
   var inlineImages = {};
   inlineImages['Averageflow'] = chartAverageFlow;

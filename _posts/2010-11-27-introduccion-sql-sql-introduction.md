@@ -77,19 +77,16 @@ DDL (Data Definition Language) que se encarga de la definición de bases de dato
 Son comandos propios de este lenguaje:
 
 <div style="color:#c00; line-height:2px;">
-  <p>
+<p>
     CREATE TABLE
   </p>
-
-  <p>
+<p>
     CREATE INDEX
   </p>
-
-  <p>
+<p>
     CREATE VIEW
   </p>
-
-  <p>
+<p>
     CREATE SYNONYM
   </p>
 </div>
@@ -97,23 +94,19 @@ Son comandos propios de este lenguaje:
 DML (Data Manipulation Language), Manipulan los datos, con ellos podemos seleccionar, insertar, eliminar y actualizar datos. Con estas instrucciones se construyen las consultas.
 
 <div style="color:#c00; line-height:2px;">
-  <p>
+<p>
     SELECT
   </p>
-
-  <p>
+<p>
     UPDATE
   </p>
-
-  <p>
+<p>
     INSERT
   </p>
-
-  <p>
+<p>
     INSERT INTO
   </p>
-
-  <p>
+<p>
     DELETE FROM
   </p>
 </div>
@@ -121,15 +114,13 @@ DML (Data Manipulation Language), Manipulan los datos, con ellos podemos selecci
 DCL (Data Control Language) Se encarga del control de accesos y privilegios entre los usuarios.
 
 <div style="color:#c00; line-height:2px;">
-  <p>
+<p>
     CREATE USER
   </p>
-
-  <p>
+<p>
     GRANT
   </p>
-
-  <p>
+<p>
     REVOKE
   </p>
 </div>

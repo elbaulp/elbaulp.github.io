@@ -24,7 +24,7 @@ color: "#B31917"
 ---
 
 <figure>
-  <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" /></a>
 </figure>
 
 * [Mini Curso de LaTeX &#8211; Introducción][1]
@@ -139,7 +139,7 @@ en cuenta que todos las operaciones dentro del for tienen eficiencia $O(1)$:
 
 ```
 
-Para representar la sumatoria dentro del entorno matemático utilizamos la opción `\sum`, después, utilizamos `_` y `^` para establecer los límites de la sumatoria. `\qquad\` lo usamos para dejar un pequeño espacio (podemos usar `\quad` o `\qquad\`). Así, el texto de arriba quedaría <img src="//s0.wp.com/latex.php?latex=%5Csum_%7Bi%3D0%7D%5E%7Bs.size%28%29%7D+%3D+s.size%28%29&bg=ffffff&fg=000&s=0" alt="&#92;sum_{i=0}^{s.size()} = s.size()" title="&#92;sum_{i=0}^{s.size()} = s.size()" class="latex" />
+Para representar la sumatoria dentro del entorno matemático utilizamos la opción `\sum`, después, utilizamos `_` y `^` para establecer los límites de la sumatoria. `\qquad\` lo usamos para dejar un pequeño espacio (podemos usar `\quad` o `\qquad\`). Así, el texto de arriba quedaría <img src="//s0.wp.com/latex.php?latex=%5Csum_%7Bi%3D0%7D%5E%7Bs.size%28%29%7D+%3D+s.size%28%29&bg=ffffff&fg=000&s=0" alt="\sum_{i=0}^{s.size()} = s.size()" title="\sum_{i=0}^{s.size()} = s.size()" class="latex" />
 
 Otro detalle a destacar, es que en el párrafo de introducción, cuando menciono variables matemáticas, las menciono entre signos de dólar. Esto es para que salgan en cursiva y se puedan diferenciar del resto del texto.
 

@@ -25,7 +25,7 @@ color: "#E64A19"
 * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
 <figure>
-  <a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" width="201px" height="190px" /></a>
 </figure>
 
 En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que podamos importar en nuestra aplicación *python*. Al finalizar, tendremos creado un módulo llamado **herramientasRed** con el que podremos obtener la dirección ip de un dominio, al igual que hicimos en el artículo [NDK-gdb – Depurar aplicaciones en el NKD de Android][5], para ello será necesario usar la Python C API.
@@ -63,7 +63,6 @@ Si en nuestro sistema no tenemos la cabecera *Python.h* es necesario instalarla 
 <div class="alert">
   Ya que Python puede definir algunas directivas para el <a href="https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/" title="Compilación de programas: makefile y g++">pre-procesador</a> que afectan a las cabeceras estandar, es necesario incluir <em>Python.h</em> antes que cualquier cabecera estandar.
 </div>
-
 <a name="referencecounts"></a>
 
 ### Objetos, Tipos y Reference Counts
@@ -135,3 +134,4 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
  [7]: http://docs.python.org/3/c-api/refcounting.html#Py_INCREF "Python C API Py_INCREF"
 
 {% include toc.html %}
+</stdlib.h></assert.h></limits.h></errno.h></string.h></stdio.h>

@@ -17,7 +17,7 @@ color: "#009688"
 ## Introducci&oacute;n a bases de datos
 
 <p class="nota">
-  <strong>Nota:</strong>Todo lo que voy a escribir a continuaci&oacute;n sobre base de datos, lo he sacado de los apuntes de mi profesor de Bases de Datos.<br /> Lo subo a modo de manual para todos.
+<strong>Nota:</strong>Todo lo que voy a escribir a continuaci&oacute;n sobre base de datos, lo he sacado de los apuntes de mi profesor de Bases de Datos.<br /> Lo subo a modo de manual para todos.
 </p>
 
 
@@ -27,47 +27,40 @@ color: "#009688"
 
 
 <p style="margin-left: 1em">
-  <strong>Datos.-</strong> En una BD existen dos tipos de datos: <strong><em>el diccionario de datos (DD)</em></strong> que son los datos de uso interno del software que gestiona la base de datos, como son el tamaño de los campos, el tipo, los usuarios&#8230; Y por otra parte est&aacute;n <strong><em>los datos que el cliente necesita almacenar.</em></strong> La informaci&oacute;n de los datos debe estar integrada, es decir, como si se tratara de un &uacute;nico fichero. Adem&aacute;s, los datos deben ser compartidos, es decir, muchos usuarios pueden acceder a la misma informaci&oacute;n, eso s&iacute;, con acceso controlado.
+<strong>Datos.-</strong> En una BD existen dos tipos de datos: <strong><em>el diccionario de datos (DD)</em></strong> que son los datos de uso interno del software que gestiona la base de datos, como son el tamaño de los campos, el tipo, los usuarios&#8230; Y por otra parte est&aacute;n <strong><em>los datos que el cliente necesita almacenar.</em></strong> La informaci&oacute;n de los datos debe estar integrada, es decir, como si se tratara de un &uacute;nico fichero. Adem&aacute;s, los datos deben ser compartidos, es decir, muchos usuarios pueden acceder a la misma informaci&oacute;n, eso s&iacute;, con acceso controlado.
 </p>
-
-
 <!--ad-->
-
 <p style="margin-left: 1em">
-  <strong>Hardware.-</strong> Toda la informaci&oacute;n a la que hace referencia en el punto anterior debe tener una capacidad adaptada a los requerimientos de la base de datos.
+<strong>Hardware.-</strong> Toda la informaci&oacute;n a la que hace referencia en el punto anterior debe tener una capacidad adaptada a los requerimientos de la base de datos.
 </p>
-
 <p style="margin-left: 1em">
-  <strong>Software.-</strong> El software de una base de datos se conoce como <strong><em>Sistema de Gesti&oacute;n de Base de Datos (SGBD).</em></strong> Este permite una total transparencia al usuario, que interact&uacute;a con los datos y el software pero no sabe realmente como est&aacute;n almacenados, facilit&aacute;ndole as&iacute; su uso.
+<strong>Software.-</strong> El software de una base de datos se conoce como <strong><em>Sistema de Gesti&oacute;n de Base de Datos (SGBD).</em></strong> Este permite una total transparencia al usuario, que interact&uacute;a con los datos y el software pero no sabe realmente como est&aacute;n almacenados, facilit&aacute;ndole as&iacute; su uso.
 </p>
-
 <p style="margin-left: 2em">
   El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> debe permitir:
 </p>
-
 <ul style="margin-left: 1em">
-  <li>
+<li>
     Crear y reestructurar la informaci&oacute;n.
   </li>
-  <li>
+<li>
     Almacenar, actualizar y recuperar los datos.
   </li>
-  <li>
+<li>
     Verificar que cualquier modificaci&oacute;n de los datos mantiene la integridad (desde un punto de vista racional) de los mismos.
   </li>
-  <li>
+<li>
     Acceso seguro a los datos verificando qui&eacute;n pide los datos y qu&eacute; permisos tiene.
   </li>
-  <li>
+<li>
     Gestionar el acceso concurrente de varios usuarios o aplicaciones.
   </li>
-  <li>
+<li>
     Transparencia respecto al usuario, es decir, el usuario puede interactuar con los datos y el software, pero realmente &eacute;ste no sabe como est&aacute;n almacenados
   </li>
 </ul>
-
 <p style="margin-left: 1em">
-  <strong>Usuarios.-</strong> Entre los usuarios de una base de datos podemos distinguir:
+<strong>Usuarios.-</strong> Entre los usuarios de una base de datos podemos distinguir:
 </p>
 
   * **Finales:** son aquellos que interact&uacute;an con los datos normales del sistema de informaci&oacute;n. Un usuario final no modifica la estructura de la base de datos. Puede tener permiso para insertar, modificar o eliminar datos, siendo la operaci&oacute;n cl&aacute;sica la consulta. Este usuario no podr&aacute; modificar la estructura de una tabla. Pueden ser usuarios sin conocimientos inform&aacute;ticos, tan solo manejan un programa, tambi&eacute;n pueden saber SQL y hacer una consulta a trav&eacute;s de un interprete de SQL.
@@ -83,7 +76,6 @@ color: "#009688"
 <p style="margin-left: 1em">
   Uno de los objetivos de un sistema de bases de datos es proporcionar a los usuarios una visi&oacute;n abstracta de la informaci&oacute;n, ocultando ciertos detalles acerca de c&oacute;mo se almacenan los datos, pero permitiendo una recuperaci&oacute;n eficaz de la informaci&oacute;n.
 </p>
-
 <p style="margin-left: 1em">
   Una de las <strong>arquitecturas m&aacute;s estandarizada</strong> es la especificada por la normativa <acronym title="Standard Planning and Requirements Committee of the American National Standards Institute – Comit&eacute; de Planificaci&oacute;n y Requerimientos de est&aacute;ndares del Instituto Nacional de Est&aacute;ndares de Estados Unidos, divisi&oacute;n X3">ANSI/X3/SPARC</acronym>. Seg&uacute;n esta norma la arquitectura de una base de datos debe tener tres niveles de abstracci&oacute;n: <strong>externo, conceptual e interno.</strong>
 </p>
@@ -102,7 +94,6 @@ color: "#009688"
 <p style="margin-left: 1em">
   Los subesquemas, el esquema conceptual, el esquema interno y las correspondencias conceptual/interna y externa/conceptual, las describe el <strong>administrador de la base de datos</strong> y quedan almacenados dentro del <strong>diccionario</strong> de la BD para futuras consultas del <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr>. Cuando un usuario desea acceder a la base de datos, el <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> examina el diccionario de datos para comprobar si la solicitud puede ser realizada y el modo de realizar las transformaciones pertinentes de los datos.
 </p>
-
 <p style="margin-left: 1em">
   Todo ello permitir&aacute; una mayor independencia de los datos:
 </p>
@@ -112,471 +103,354 @@ color: "#009688"
   * **Independencia de los dispositivos:** se consigue cuando la ejecuci&oacute;n de los programas es independiente del sistema de almacenamiento.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
+<a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
 </div>
-
 <p style="margin-left: 1em">
   En el siguiente ejemplo de una base de datos se puede observar que se han obtenido dos subesquemas (esquemas externos) a partir del &uacute;nico esquema conceptual formado por las entidades: VENDEDORES, VENTAS y ARTICULOS. La estructura de cada subesquema obedece a las necesidades concretas del tipo de usuario que lo va a utilizar. Por ejemplo:
 </p>
-
 <ol type="a" style="margin-left: 1em">
-  <li>
+<li>
     Uno de los subesquemas ser&aacute; utilizado por un programa que totalizar&aacute; ventas por departamento, por lo tanto la visi&oacute;n que le interesa tener de la base de datos es una relaci&oacute;n de ventas ordenadas por departamentos.
   </li>
-  <li>
+<li>
     El otro subesquema lo utilizar&aacute; un programa que listar&aacute; una relaci&oacute;n de empleados por departamento, por lo que s&oacute;lo necesita conocer los nombres de todos los empleados y el departamento al que pertenecen.
   </li>
 </ol>
-
-<div style="background-color: "#666666"; text-align: center;">
-  <span style="background-color: "#666666";">SUBESQUEMAS</span>
+<div style="background-color: ">
+<span style="background-color: ">SUBESQUEMAS</span>
 </div>
-
-
-
 <p style="margin-left: 1em">
   Esquema externo o subesquema para el programa &#8220;Ventas por departamento&#8221;
 </p>
-
 <table style="margin-left: 1em" border="1" cellspacing="0">
-  <caption>VENTAS_POR_DEPARTAMENTO</caption> <tr>
-    <td>
+<caption>VENTAS_POR_DEPARTAMENTO</caption> <tr>
+<td>
       DEPARTAMENTO
     </td>
-
-    <td>
+<td>
       CONCEPTO
     </td>
-
-    <td>
+<td>
       IMPORTE
     </td>
-  </tr>
+</tr>
 </table>
-
 <p style="margin-left: 1em">
   Esquema externo o subesquema para el programa &#8220;Relaci&oacute;n de empleados por departamento&#8221;
 </p>
-
 <table style="margin-left: 1em" border="1" cellspacing="0">
-  <caption>VENDEDORES</caption> <tr>
-    <td>
+<caption>VENDEDORES</caption> <tr>
+<td>
       DEPARTAMENTO
     </td>
-
-    <td>
+<td>
       NOMBRE
     </td>
-  </tr>
+</tr>
 </table>
-
-
-
-<div style="background-color: "#666666"; text-align: center;">
-  <span style="background-color: "#666666";">ESQUEMA CONCEPTUAL</span>
+<div style="background-color: ">
+<span style="background-color: ">ESQUEMA CONCEPTUAL</span>
 </div>
-
-
-
 <p style="margin-left: 1em">
   Esquema conceptual de toda la base de datos, formado por los siguientes registros conceptuales:
 </p>
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
+<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
 </div>
-
-
-
-<div style="background-color: "#666666"; text-align: center;">
-  <span style="background-color: "#666666";">ESQUEMA INTERNO</span>
+<div style="background-color: ">
+<span style="background-color: ">ESQUEMA INTERNO</span>
 </div>
-
-
-
 <p style="margin-left: 1em">
   Esquema interno de toda la base de datos:
 </p>
-
 <table style="margin-left: 1em" border="1" cellspacing="0">
-  <caption>VENDEDORES</caption> <tr>
-    <td>
+<caption>VENDEDORES</caption> <tr>
+<td>
       COD_VEND string(3)
     </td>
-
-    <td>
+<td>
       NOMBRE string(30)
     </td>
-
-    <td>
+<td>
       DEPART string(4)
     </td>
-
-    <td>
+<td>
       &#8230;
     </td>
-  </tr>
+</tr>
 </table>
-
 <table style="margin-left: 1em" border="1" cellspacing="0">
-  <caption>VENTAS</caption> <tr>
-    <td>
+<caption>VENTAS</caption> <tr>
+<td>
       COD_VEND string(3)
     </td>
-
-    <td>
+<td>
       COD_ART string(4)
     </td>
-
-    <td>
+<td>
       CANTIDAD long
     </td>
-
-    <td>
+<td>
       FECHA date
     </td>
-  </tr>
+</tr>
 </table>
-
 <table style="margin-left: 1em" border="1" cellspacing="0">
-  <caption>ARTICULOS</caption> <tr>
-    <td>
+<caption>ARTICULOS</caption> <tr>
+<td>
       COD_ART string(4)
     </td>
-
-    <td>
+<td>
       CONCEPTO string(40)
     </td>
-
-    <td>
+<td>
       PVP float
     </td>
-
-    <td>
+<td>
       &#8230;
     </td>
-  </tr>
+</tr>
 </table>
-
 <p style="margin-left: 1em">
   Adem&aacute;s se incluir&iacute;a el tipo de organizaci&oacute;n, la secuencia f&iacute;sica de los registros, modos de acceso, etc.
 </p>
-
 <p style="margin-left: 1em">
   A continuaci&oacute;n podemos observar algunas ocurrencias de los registros externos y conceptuales.
 </p>
-
-
-
-<div style="background-color: "#666666"; text-align: center;">
-  <span style="background-color: "#666666";">VISTAS EXTERNAS</span>
+<div style="background-color: ">
+<span style="background-color: ">VISTAS EXTERNAS</span>
 </div>
-
-
-
 <table border="1" cellspacing="0">
-  <caption>VENTAS_POR_DEPARTAMENTO </caption> <tr>
-    <td bgcolor="#666666">
+<caption>VENTAS_POR_DEPARTAMENTO </caption> <tr>
+<td bgcolor="#666666">
       DEPARTAMENTO
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       CONCEPTO
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       IMPORTE
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Autom&oacute;vil
     </td>
-
-    <td>
+<td>
       Antirrobo
     </td>
-
-    <td>
+<td>
       3.450
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Autom&oacute;vil
     </td>
-
-    <td>
+<td>
       Parasol
     </td>
-
-    <td>
+<td>
       300
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Hogar
     </td>
-
-    <td>
+<td>
       Juego toallas
     </td>
-
-    <td>
+<td>
       6.500
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Hogar
     </td>
-
-    <td>
+<td>
       S&aacute;banas estampadas
     </td>
-
-    <td>
+<td>
       4.500
     </td>
-  </tr>
+</tr>
 </table>
-
-
-
 <table cellspacing="0" border="1">
-  <caption>EMPLEADOS_POR_DEPARTAMENTO </caption> <tr>
-    <td bgcolor="#666666">
+<caption>EMPLEADOS_POR_DEPARTAMENTO </caption> <tr>
+<td bgcolor="#666666">
       DEPARTAMENTO
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       NOMBRE
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Autom&oacute;vil
     </td>
-
-    <td>
+<td>
       Jos&eacute; L&oacute;pez Garc&iacute;a
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Hogar
     </td>
-
-    <td>
+<td>
       Ana Ruiz Ram&iacute;rez
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Hogar
     </td>
-
-    <td>
+<td>
       Julia P&eacute;rez Ramos
     </td>
-  </tr>
+</tr>
 </table>
-
-
-
-<div style="background-color: "#666666"; text-align: center;">
-  <span style="background-color: "#666666";">VISTA CONCEPTUAL</span>
+<div style="background-color: ">
+<span style="background-color: ">VISTA CONCEPTUAL</span>
 </div>
-
-
-
 <table border="1" cellspacing="0">
-  <caption>VENDEDORES</caption> <tr>
-    <td bgcolor="#666666">
+<caption>VENDEDORES</caption> <tr>
+<td bgcolor="#666666">
       COD_VEND
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       NOMBRE
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       DEPARTAMENTO
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       &#8230;
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       001
     </td>
-
-    <td>
+<td>
       Jos&eacute; L&oacute;pez Garc&iacute;a
     </td>
-
-    <td>
+<td>
       Autom&oacute;vil
     </td>
-
-    <td>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
       002
     </td>
-
-    <td>
+<td>
       Ana Ruiz Ram&iacute;rez
     </td>
-
-    <td>
+<td>
       Hogar
     </td>
-
-    <td>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
       003
     </td>
-
-    <td>
+<td>
       Julia P&eacute;rez Ramos
     </td>
-
-    <td>
+<td>
       Hogar
     </td>
-
-    <td>
-    </td>
-  </tr>
+<td>
+</td>
+</tr>
 </table>
-
-
-
 <table cellspacing="0" border="1">
-  <caption>VENTAS</caption> <tr>
-    <td bgcolor="#666666">
+<caption>VENTAS</caption> <tr>
+<td bgcolor="#666666">
       COD_VEND
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       COD_ART
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       CANTIDAD
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       FECHA
     </td>
-
-    <td bgcolor="#666666">
+<td bgcolor="#666666">
       &#8230;
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       002
     </td>
-
-    <td>
+<td>
       H22
     </td>
-
-    <td>
+<td>
       1
     </td>
-
-    <td>
+<td>
       01-10-98
     </td>
-
-    <td>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
       001
     </td>
-
-    <td>
+<td>
       A11
     </td>
-
-    <td>
+<td>
       1
     </td>
-
-    <td>
+<td>
       02-10-98
     </td>
-
-    <td>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
       003
     </td>
-
-    <td>
+<td>
       H15
     </td>
-
-    <td>
+<td>
       1
     </td>
-
-    <td>
+<td>
       18-10-98
     </td>
-
-    <td>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
       001
     </td>
-
-    <td>
+<td>
       A22
     </td>
-
-    <td>
+<td>
       1
     </td>
-
-    <td>
+<td>
       20-10-98
     </td>
-
-    <td>
-    </td>
-  </tr>
+<td>
+</td>
+</tr>
 </table>
 
 
@@ -588,47 +462,41 @@ color: "#009688"
 <p style="margin-left: 1em">
   Para describir el funcionamiento de un SGBD supondremos el caso de un programa de aplicaci&oacute;n, que lee un registro de una base de datos, para ello realiza una solicitud al <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr>, esencialmente la secuencia, mostrada en el esquema de la figura 1.2, es la siguiente:
 </p>
-
-
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img title="Funcionamiento de un SGBD" border="0" height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
+<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img title="Funcionamiento de un SGBD" border="0" height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
 </div>
-
-
-
 <ol type="1" style="margin-left: 1em">
-  <li>
+<li>
     El programa de aplicaci&oacute;n A pide al <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> que lea un registro. Se proporciona la<br /> clave de acceso. El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> eval&uacute;a la capacidad del usuario para realizar la operaci&oacute;n solicitada.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> obtiene el subesquema que utiliza el programa de aplicaci&oacute;n A. Si no encuentra los datos solicitados, rechaza la solicitud.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> obtiene el esquema y determina qu&eacute; tipo de datos l&oacute;gicos necesita.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> examina el esquema interno y determina qu&eacute; registro f&iacute;sico debe leer.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> ordena al S.O. que lea el registro pedido.
   </li>
-  <li>
+<li>
     El S.O. interacciona con el dispositivo f&iacute;sico en el que se encuentran los datos.
   </li>
-  <li>
+<li>
     Los datos pedidos se env&iacute;an desde el dispositivo f&iacute;sico al buffer del sistema.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> analiza el esquema, el subesquema y las correspondencias<br /> externa/conceptual para realizar las transformaciones necesarias de los datos.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> transfiere los datos al &aacute;rea de trabajo del programa de aplicaci&oacute;n A.
   </li>
-  <li>
+<li>
     El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> informa al programa del &eacute;xito o fracaso de la operaci&oacute;n de E/S, incluyendo<br /> cualquier indicaci&oacute;n de error.
   </li>
-  <li>
+<li>
     El programa puede ahora trabajar con los datos pedidos.
   </li>
 </ol>

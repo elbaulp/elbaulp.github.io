@@ -10,7 +10,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc"><img src="/assets/img/Apache-Hadoop-Cookbook2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc"><img src="/assets/img/Apache-Hadoop-Cookbook2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 ___Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!___
@@ -22,9 +22,8 @@ In this eBook, we provide a compilation of Hadoop based examples that will help 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.
 
 <!--ad-->
-
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].

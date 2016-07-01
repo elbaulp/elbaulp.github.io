@@ -94,10 +94,10 @@ public class SampleActivity extends Activity {
   * Clase interna estática
   */
   private static class MyHandler extends Handler {
-    private final WeakReference<SampleActivity> mActivity;
+    private final WeakReference<sampleactivity> mActivity;
 
     public MyHandler(SampleActivity activity) {
-      mActivity = new WeakReference<SampleActivity>(activity);
+      mActivity = new WeakReference</sampleactivity><sampleactivity>(activity);
     }
 
     @Override
@@ -159,3 +159,4 @@ photo credit: [nyuhuhuu][10] via [photopin][11] [cc][12]
  [12]: http://creativecommons.org/licenses/by/2.0/
 
 {% include toc.html %}
+</sampleactivity>

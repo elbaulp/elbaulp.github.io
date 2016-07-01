@@ -24,7 +24,7 @@ Todo esto suena muy bien para Wayland, y hay que tener en cuenta que este servid
 
 
  [1]: http://diegocg.blogspot.com/2010/08/novedades-en-systemd.html
- [2]: http://www.phoronix.com/scan.php?page=news_item&px=ODYwMQ
+ [2]: http://www.phoronix.com/scan.php?page=news_item&px;=ODYwMQ
  [3]: http://gitorious.org/%7Ekrh/qt/qt-wayland
  [4]: http://cgit.freedesktop.org/%7Ekrh/gtk/
  [5]: http://cgit.freedesktop.org/%7Ekrh/clutter/

@@ -23,36 +23,34 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
 
 
 <!--ad-->
-
 <ul style="list-style-type: none;">
-  <li>
-    <a href="/programacion-android-recursos">Programación Android: Recursos compilados y no compilados</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-arrays-de">Programación Android:Recursos &#8211; Arrays de strings</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-plurales">Programación Android: Recursos &#8211; Plurales</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-trabajar.html">Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-trabajar">Programación Android: Recursos &#8211; Trabajar con recursos RAW</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos &#8211; Trabajar con recursos Assets</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-repasando">Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos</a>
-  </li>
-  <li>
-    <a href="/programacion-android-recursos-recursos">Programación Android: Recursos &#8211; Recursos y cambios de configuración</a>
-  </li>
+<li>
+<a href="/programacion-android-recursos">Programación Android: Recursos compilados y no compilados</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-arrays-de">Programación Android:Recursos &#8211; Arrays de strings</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-plurales">Programación Android: Recursos &#8211; Plurales</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-trabajar.html">Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-trabajar">Programación Android: Recursos &#8211; Trabajar con recursos RAW</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos &#8211; Trabajar con recursos Assets</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-repasando">Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos</a>
+</li>
+<li>
+<a href="/programacion-android-recursos-recursos">Programación Android: Recursos &#8211; Recursos y cambios de configuración</a>
+</li>
 </ul>
-
 <p class="alert">
-  <a href="/disponible-la-primera-parte-del-curso/">Pasos a seguir para obtener el curso en pdf</a>
+<a href="/disponible-la-primera-parte-del-curso/">Pasos a seguir para obtener el curso en pdf</a>
 </p>
 
 

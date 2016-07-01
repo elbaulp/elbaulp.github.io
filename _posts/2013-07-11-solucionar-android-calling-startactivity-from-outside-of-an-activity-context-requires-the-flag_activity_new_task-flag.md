@@ -10,7 +10,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img src="/assets/img/2013/07/android2.png" alt="Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag"   />  
+<img src="/assets/img/2013/07/android2.png" alt="Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag" width="132px" height="154px" />  
 En una aplicación que estoy haciendo, la cual espero poder presentar en el blog en breve, me encontré con un problema que llevó un tiempo solucionar. La aplicación terminaba inesperadamente al intentar lanzar una actividad desde un [Servicio][1], concretamente el error era:
 
 ***  

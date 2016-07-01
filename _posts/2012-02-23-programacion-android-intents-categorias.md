@@ -14,7 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 Las actividades se pueden clasificar en categorías para así poder buscarlas basándonos en el nombre de dicha categoría. Por ejemplo, mientras el sistema se está iniciando, busca en las actividades las que estén bajo la categoría *CATEGORY_LAUNCHER*.
@@ -32,10 +32,10 @@ La forma de declarar las categorías en el AndroidManifest es la siguiente:
 
 ```xml
 <activity android:name=".PrincipalActivity" android:label="@string/app_name">
-   <intent -filter>
-      <action android:name="android.intent.action.MAIN" />
-      <category android:name="android.intent.category.LAUNCHER" />
-   </intent>
+<intent>
+<action android:name="android.intent.action.MAIN">
+<category android:name="android.intent.category.LAUNCHER">
+</category></action></intent>
 </activity>
 
 ```

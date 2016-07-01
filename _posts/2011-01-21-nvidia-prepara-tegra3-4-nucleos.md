@@ -15,7 +15,7 @@ La compañía NVIDIA presentó oficialmente el año pasado durante CES 2010 su S
 NVIDIA ya confirmó hace unos meses que esperaba que el mercado móvil evolucionara hacia modelos con procesadores más potentes y uno de los rumores más importantes en relación a ello pone en sobreaviso que NVIDIA podría presentar su siguiente generación de chips ARM Tegra 3 en la edición 2011 de Mobile World Congress que tiene lugar en Barcelona en las próximas semanas.
 
 <p style="text-align: center;">
-  <img height="307" width="430" src="http://muycomputer.com/files/264-30859-FOTO/tegra3.JPG" alt="tegra3" />
+<img height="307" width="430" src="http://muycomputer.com/files/264-30859-FOTO/tegra3.JPG" alt="tegra3" />
 </p>
 
 Ello da un margen de un año aproximadamente para poder ver aplicaciones prácticas del mismo en el mercado, es decir para principios de año 2012. Pero, ¿qué ofrecerá NVIDIA con Tegra 3?. Hablamos de un SoC que presumiblemente integrará dos / cuatro núcleos ARM Cortex A15, junto con una potente GPU. En palabras de Mike Rayfield &#8211; Tegra GM de NVIDIA &#8211; &#8220;(Tegra 3) estará en producción a la misma vez que nuestros competidores estén produciendo sus primeros procesadores doble núcleo&#8221;.

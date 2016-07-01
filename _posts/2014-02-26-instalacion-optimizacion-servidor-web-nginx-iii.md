@@ -117,7 +117,7 @@ set $no_cache 0;
     }
 ```
 
-En esta porción de código hemos declarado una variable que determinará qué peticiones se cachean y cuales no. No cachearemos ninguna petición POST ni nada que tenga consultas en la URL (?arg&#8230;&arg1&#8230;). Con ayuda de esta variable podremos decidir en el bloque *location* si cacheamos la petición (directivas bypass y no_cache), aquí hacemos referencia al nombre que dimos anteriormente al espacio de caché y fijamos un periodo de validez.
+En esta porción de código hemos declarado una variable que determinará qué peticiones se cachean y cuales no. No cachearemos ninguna petición POST ni nada que tenga consultas en la URL (?arg&#8230;&arg1;&#8230;). Con ayuda de esta variable podremos decidir en el bloque *location* si cacheamos la petición (directivas bypass y no_cache), aquí hacemos referencia al nombre que dimos anteriormente al espacio de caché y fijamos un periodo de validez.
 
 ### Page Speed
 
@@ -242,7 +242,7 @@ service nginx reload
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
 
 <figure>
-  <a href="/assets/img/2014/02/pagespeed.png"><img src="/assets/img/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" /></a>
+<a href="/assets/img/2014/02/pagespeed.png"><img src="/assets/img/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" width="255px" height="135px" /></a>
 </figure>
 
 Como vemos, la cabecera de pagespeed está presente, luego está habilitado.

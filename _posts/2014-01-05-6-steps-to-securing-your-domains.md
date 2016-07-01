@@ -12,7 +12,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains"   />][1]
+[<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="199px" height="258px" />][1]
 
 Domain hijacking is now front page news. Learn how to prevent your company&#8217;s valuable domains from being next!
 
@@ -21,7 +21,7 @@ Domain hijacking is now front page news. Learn how to prevent your company&#8217
 #### Descargar 6 Steps to Securing Your Domains
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/free/w_mm47/" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+<a href="http://elbauldelprogramador.tradepub.com/free/w_mm47/" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***

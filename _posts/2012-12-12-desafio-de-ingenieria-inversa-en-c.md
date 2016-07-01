@@ -12,7 +12,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba"   />
+<img src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532px" height="449px" />
 
 #### Puedes encontrar la solución a esta práctica en [Desafío de ingeniería inversa en C &#8211; Soluciones][1] {.alert}
 
@@ -42,3 +42,4 @@ Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta direcci�
  [3]: https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador
 
 {% include toc.html %}
+</n>

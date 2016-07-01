@@ -19,7 +19,7 @@ Visita la página [Manuales gratuitos][3] para ver las guías disponibles
 
 
  [1]: http://img.tradepub.com/free/w_blue09/assets/img/w_blue09c.gif "WAN Optimization for Today and Tomorrow"
- [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_blue09/prgm.cgi
+ [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_blue09/prgm.cgi
  [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 
 {% include toc.html %}

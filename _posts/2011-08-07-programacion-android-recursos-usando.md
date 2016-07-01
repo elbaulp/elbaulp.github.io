@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 A todos los recursos que colocamos en las subcarpetas de ./res/ se puede acceder a través de la clase R de nuestro proyecto.
 
@@ -67,8 +67,8 @@ Primero lo definimos con un tag “attr”·dentro de ./res/values/attr.xml.
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
 <resources>
-     <attr name="cabecera" format="reference" />
-</resources>
+<attr name="cabecera" format="reference">
+</attr></resources>
 
 
 ```
@@ -88,23 +88,16 @@ la sintaxis mencionada:
 
 pre lang=&#8221;xml&#8221;>  
 < ?xml version=&#8221;1.0&#8243; encoding=&#8221;utf-8&#8243;?>  
-<framelayout xmlns:android="http://schemas.android.com/apk/res/android"  
-android:layout\_width="fill\_parent"  
-android:layout\_height="fill\_parent">  
-<textview android:layout\_width=&#8221;fill\_parent  
-android:layout\_height=&#8221;fill\_parent&#8221;  
-android:text=&#8221;No hay datos disponibles&#8221;  
-style=&#8221;?attr/cabecera&#8221; />  
-</framelayout>
+<framelayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout="android:layout">
+<textview android:layout="android:layout">
+</textview></framelayout>
 
 **./res/values/style.xml**
 
 ```xml
 < ?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
-</resources></p>
+</resources>
 
 
 ```

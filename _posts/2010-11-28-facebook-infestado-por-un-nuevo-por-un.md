@@ -12,7 +12,7 @@ La **Red social** más popular de Internet vuelve a ser azotada por un nuevo **g
 
 
 <p style="text-align: center;">
-  <a class="highslide" onclick="return vz.expand(this)" rel="attachment wp-att-2235" href="http://muyseguridad.net/2010/11/28/facebook-infestado-de-nuevo-por-un-gusano/images-25/"><img title="images" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TPKjIdtQyZI/AAAAAAAAAH0/9O3O8hqXKbA/s1600/images8.jpeg" alt="" height="212" width="238" /></a>
+<a class="highslide" onclick="return vz.expand(this)" rel="attachment wp-att-2235" href="http://muyseguridad.net/2010/11/28/facebook-infestado-de-nuevo-por-un-gusano/images-25/"><img title="images" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TPKjIdtQyZI/AAAAAAAAAH0/9O3O8hqXKbA/s1600/images8.jpeg" alt="" height="212" width="238" /></a>
 </p>
 
 Un gusano acaba de llegar a Facebook con diversos nombres, aleatorios, y se está extendiendo de manera masiva a través de la Red social. Ejemplos de ello son aplicaciones como **S22BZ5 **creadas por un pseudónimo aleatorio, Jackson Lasseter, tiene 300 seguidores – infectados. Otras como **B5DA8G**, **9IHJ35 **y **AU0ZVE **ya suman más de 1.000 personas infectadas, que a su vez extienden el gusano a sus contactos.

@@ -19,7 +19,7 @@ color: "#689F38"
 ---
 En un proyecto reciente he tenido que trabajar con las librerías de compatibilidad de Android, en este caso para crear diálogos que permitan elegir fecha y hora, como estos:
 
-<img src="/assets/img/2012/11/pickers1.png" alt="" title="pickers"   />
+<img src="/assets/img/2012/11/pickers1.png" alt="" title="pickers" width="400px" height="186px" />
 
 En Android recomiendan usar un `<a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html" title="DialogFrgment" target="_blank">DialogFragment</a>`, que permite mostrar éstos diálogos en distintos layouts. Si pretendes que tu aplicación soporte este tipo de diálogos para versiones inferiores a Android 3.0, debes usar el DialogFragment mencionado anteriormente, si por lo contrario tu aplicación usa un *minSdkVersion* igual o superior a 11, puedes usar este otro `<a href="http://developer.android.com/reference/android/app/DialogFragment.html" target="_blank">DialogFragment</a>`. En este artículo se va a tratar la versión para soportar versiones anteriores a la 3.0.
 
@@ -29,8 +29,7 @@ Antes de empezar, es necesario descargar **<a href="http://developer.android.com
 
 Otra forma de agregar la librería es hacer click derecho en el **proyecto » Android Tools » Add support library**.
 
-Dicho esto, comencemos con el <a href="http://developer.android.com/reference/android/app/TimePickerDialog.html" target="_blank"><code><strong>TimePickerDialog</strong></code></a>  
-
+Dicho esto, comencemos con el <a href="http://developer.android.com/reference/android/app/TimePickerDialog.html" target="_blank"><code><strong>TimePickerDialog</strong></code></a>
 <!--ad-->
 
 #### Crear un TimePickerDialog
@@ -76,11 +75,7 @@ Para cerciorarnos que se está usando la librería de compatibilidad, basta con 
 Por ahora dejaremos el método `onTimeSet` vacío; pasemos a crear la interfaz. A modo de ejemplo, crearemos un botón que muestre el dialogo cuando sea pulsado:
 
 ```xml
-<Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="mostrarDialogoDeTiempo"
-        android:text="Diálogo de tiempo" />
+<button android:layout_width="wrap_content" android:layout_height="wrap_content" android:onclick="mostrarDialogoDeTiempo" android:text="Diálogo de tiempo">
 
 ```
 
@@ -100,7 +95,7 @@ Otro aspecto importante de cara a la compatibilidad, es la llamada a `<a href="h
 
 Para comprobar que funciona, lanzamos el emulador, en este caso, con la versión 2.3 de Android:
 
-[<img src="/assets/img/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4"   />][1]{.thumbnail}
+[<img src="/assets/img/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4" width="180px" height="300px" />][1]{.thumbnail}
 
 El proceso de creación de un **DatePickerDialog** es muy similar.
 
@@ -142,11 +137,7 @@ public class DatePickerFragment extends DialogFragment
 Al igual que antes, creamos un botón que muestre el diálogo:
 
 ```xml
-<Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="mostrarDialogoDeFecha"
-        android:text="Diálogo de fecha" />
+</button><button android:layout_width="wrap_content" android:layout_height="wrap_content" android:onclick="mostrarDialogoDeFecha" android:text="Diálogo de fecha">
 
 ```
 
@@ -160,7 +151,7 @@ public void mostrarDialogoDeFecha(View v){
 
 ```
 
-[<img src="/assets/img/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android"   />][2]{.thumbnail}
+[<img src="/assets/img/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180px" height="300px" />][2]{.thumbnail}
 
 Así de simple, es similar a crear un **timePickerDialog**  
 El código de ejemplo está disponible para descarga:
@@ -178,3 +169,4 @@ El código de ejemplo está disponible para descarga:
  [2]: /assets/img/2013/01/device-2013-01-12-1352432.png
 
 {% include toc.html %}
+</button>

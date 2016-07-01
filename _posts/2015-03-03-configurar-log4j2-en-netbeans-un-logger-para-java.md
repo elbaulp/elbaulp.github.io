@@ -31,16 +31,16 @@ En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proy
 
 ```xml
 <dependencies>
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-api</artifactId>
-        <version>2.2</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-core</artifactId>
-        <version>2.2</version>
-    </dependency>
+<dependency>
+<groupid>org.apache.logging.log4j</groupid>
+<artifactid>log4j-api</artifactid>
+<version>2.2</version>
+</dependency>
+<dependency>
+<groupid>org.apache.logging.log4j</groupid>
+<artifactid>log4j-core</artifactid>
+<version>2.2</version>
+</dependency>
 </dependencies>
 
 ```
@@ -93,15 +93,14 @@ Debido a que el fichero de configuración está en `json`, hay que añadir las s
 
 ```xml
 <dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-core</artifactId>
-    <version>2.2.2</version>
+<groupid>com.fasterxml.jackson.core</groupid>
+<artifactid>jackson-core</artifactid>
+<version>2.2.2</version>
 </dependency>
-
 <dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.2.2</version>
+<groupid>com.fasterxml.jackson.core</groupid>
+<artifactid>jackson-databind</artifactid>
+<version>2.2.2</version>
 </dependency>
 
 ```
@@ -137,7 +136,7 @@ public class EjemploLog4j2 {
 Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log coloreados, como se muestra en la imagen:
 
 <figure>
-<img src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1"  />
+<img src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1" width="364px" height="89px" />
 </figure>
 
 ## Establecer un nivel de log por defecto en toda la aplicación
@@ -204,7 +203,7 @@ public class EjemploLog4j2 {
 ```
 
 <figure>
-  <img src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2"  />
+<img src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434px" height="49px" />
 </figure>
 
  [1]: https://logging.apache.org/log4j/2.x/maven-artifacts.html

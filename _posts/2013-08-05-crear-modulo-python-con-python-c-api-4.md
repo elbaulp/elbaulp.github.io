@@ -27,7 +27,7 @@ color: "#E64A19"
 
 
 <figure>
-  <a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" width="201px" height="190px" /></a>
 </figure>
 
 Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado **herramientasRed** que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en [NDK-gdb – Depurar aplicaciones en el NKD de Android.][5]
@@ -40,11 +40,11 @@ Llegó el momento de crear un módulo con la Python C API algo más complejo, co
 Mostraremos el código completo, puesto que ya se ha explicado el significado de este trozo de código no nos extenderemos mucho:
 
 ```c
-#include <Python.h>
+#include <python.h>
 #include <string.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
+#include <sys>socket.h>
+#include <netinet</sys>in.h>
+#include <arpa>inet.h>
 
 #include <netdb.h>
 
@@ -76,7 +76,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
 static
 PyMethodDef herramientasRed_methods[] = {
     {"imprimeIP", herramientasRed_imprimeIP, METH_VARARGS, "Documentación del módulo ejemplo"},
-    {NULL, NULL, 0, NULL}, /* Sentinel */
+    {NULL, NULL, 0, NULL}, </arpa>* Sentinel */
 };
 
 PyMODINIT_FUNC
@@ -166,18 +166,18 @@ Breakpoint 1 at 0x7ffff695496a: file herramientasRed.c, line 17.
 Starting program: /usr/bin/python2.7 test.py
 
 Breakpoint 1, herramientasRed_imprimeIP (self=0x0, args=0x965990) at herramientasRed.c:17
-17     if (!PyArg_ParseTuple(args, "s", &domainName)){
+17     if (!PyArg_ParseTuple(args, "s", &domainName;)){
 (gdb) display /s domainName
 1: x/s domainName  0x7ffff7f5e454:   "elbauldelprogramador.com"
 22        memset(returnValue, 0, 100);
 (gdb) p *args
 $1 = {
   ob_refcnt = 1,
-  ob_type = 0x888280 <PyTuple_Type>
+  ob_type = 0x888280 <pytuple_type>
 }
 (gdb) c
 Continuing.
-elbauldelprogramador.com tiene dirección IP <ip>
+elbauldelprogramador.com tiene dirección IP </pytuple_type></ip><ip>
 
 [Inferior 1 (process 28242) exited normally]
 
@@ -202,3 +202,4 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
  [6]: https://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
 
 {% include toc.html %}
+</ip></string.h></python.h>

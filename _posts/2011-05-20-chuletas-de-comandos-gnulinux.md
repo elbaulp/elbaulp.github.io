@@ -15,17 +15,13 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
 
 <!--ad-->
 
-[<img  title="Chuletas Linux" src="http://www.muylinux.com/assets/img/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros"  />][1]
+[<img title="Chuletas Linux" src="http://www.muylinux.com/assets/img/2009/10/Chuletas-Linux-500x335.jpg" alt="Chuletas Linux 500x335 25 chuletas para linuxeros" />][1]
 
 <a href="http://files.fosswire.com/2007/08/fwunixref.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuF8zBeSIII/AAAAAAAACBk/KHhhymZj7LY/Linux-Cheat-sheets.png" alt="Linux Cheat sheets 25 chuletas para linuxeros" /></a>
-
 <a href="http://www.digilife.be/quickreferences/QRC/The%20One%20Page%20Linux%20Manual.pdf" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh3.ggpht.com/_aVtbdMo1J34/SuF9rZXMLtI/AAAAAAAACBw/0SciY4iDaM8/Linux-cheat-sheet.png" alt="Linux cheat sheet 25 chuletas para linuxeros" /></a>
-
 <a href="http://www.rain.org/%7Emkummel/unix.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Unix Cheat Sheets" src="https://lh5.ggpht.com/_aVtbdMo1J34/SuF_Xub99yI/AAAAAAAACB4/sRCV9W6117o/Solarix-unix-cheet-sheets.png" alt="Solarix unix cheet sheets 25 chuletas para linuxeros" /></a>
-
 <a href="http://www.unixguide.net/linux/linuxshortcuts.shtml" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Shortcuts and Commands" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuF_zgFYEAI/AAAAAAAACB8/21NeK1xc0fA/Linux-essential-commands.png" alt="Linux essential commands 25 chuletas para linuxeros" /></a>
-
-<a href="http://www.tuxfiles.org/linuxhelp/linuxcommands.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuGAjso052I/AAAAAAAACCA/EzwoUoDstuE/Ultimate-linux-cheat-sheet.png" alt="Ultimate linux cheat sheet 25 chuletas para linuxeros" /></a></p>
+<a href="http://www.tuxfiles.org/linuxhelp/linuxcommands.html" target="_blank"><img class="aligncenter" style="width: 560px;" title="Linux Cheat Sheets" src="https://lh4.ggpht.com/_aVtbdMo1J34/SuGAjso052I/AAAAAAAACCA/EzwoUoDstuE/Ultimate-linux-cheat-sheet.png" alt="Ultimate linux cheat sheet 25 chuletas para linuxeros" /></a>
 
 ### Linux Command Line Cheat Sheets
 
@@ -35,7 +31,7 @@ En este post traigo una gran lista de comandos GNU/Linux para tener a mano siemp
 
 [![36 Chuletas a cascoporro][64]][65] [![37 Chuletas a cascoporro][66]][67] [![38 Chuletas a cascoporro][68]][69]
 
-Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLinux: [Chuletas a cascoporro][70]</p>
+Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLinux: [Chuletas a cascoporro][70]
 
 
 
@@ -63,7 +59,7 @@ Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLi
  [22]: http://www.scottklarr.com/media/cheatsheets/linux/11.jpg "Chuletas a cascoporro"
  [23]: http://wiki.typo3.org/index.php/Linux_cheat_sheet
  [24]: http://www.scottklarr.com/media/cheatsheets/linux/12.jpg "Chuletas a cascoporro"
- [25]: http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9030259
+ [25]: http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId;=9030259
  [26]: http://www.scottklarr.com/media/cheatsheets/linux/13.jpg "Chuletas a cascoporro"
  [27]: http://danleff.net/downloads/linux/linux_quick_ref_card.pdf
  [28]: http://www.scottklarr.com/media/cheatsheets/linux/14.jpg "Chuletas a cascoporro"
@@ -81,7 +77,7 @@ Esto son solo unos pocos :), si queréis ver la lista completa debeis ir a MuyLi
  [40]: http://www.scottklarr.com/media/cheatsheets/linux/22.jpg "Chuletas a cascoporro"
  [41]: http://www.plainblack.com/linux_cheat_sheet3
  [42]: http://www.scottklarr.com/media/cheatsheets/linux/23.jpg "Chuletas a cascoporro"
- [43]: http://mykde.net/CMS/index.php?option=com_content&task=view&id=13&Itemid=27
+ [43]: http://mykde.net/CMS/index.php?option=com_content&task;=view&id;=13&Itemid;=27
  [44]: http://www.scottklarr.com/media/cheatsheets/linux/25.jpg "Chuletas a cascoporro"
  [45]: http://www.ezlinuxadmin.com/?page_id=16
  [46]: http://www.scottklarr.com/media/cheatsheets/linux/26.jpg "Chuletas a cascoporro"

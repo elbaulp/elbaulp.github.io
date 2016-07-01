@@ -24,8 +24,8 @@ En ocasiones, al crear un emulador [Android][1], aún habiendo habilitado el sop
 Al crear un emulador, hemos de marcar las siguientes casillas:
 
 <figure>
-  <a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
+<a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><img src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="472px" height="532px" /></a>
+<span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
 </figure>
 
 Pero si ésto no funciona, debemos modificar el fichero de configuración del emulador. Normalmente éstos ficheros se encuentran en `~/.android/avd/<emulator-device-name>.avd/config.ini`. Una vez en el fichero, añadimos la línea `hw.keyboard=yes`. Guardamos y al iniciar el emulador deberemos poder escribir con el teclado.
@@ -55,3 +55,4 @@ for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.dPad=yes' >> "$f"; done
 [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Curso Programación Android"
 
 {% include toc.html %}
+</emulator-device-name>

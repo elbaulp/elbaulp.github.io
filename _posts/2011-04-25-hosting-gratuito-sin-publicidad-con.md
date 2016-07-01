@@ -27,7 +27,7 @@ Hasta que encontré 000webhost que creo que merece la pena, y por eso lo compart
                           * Free POP3 Email Box and Webmail access
                               * FTP and Web based File Manager
                                   * PHP, MySQL, Perl, CGI, Ruby.
-                                      * Sin anuncios </ul>
+                                      * Sin anuncios 
                                         Si estais interesados podéis registraros entrando en su web: [http://www.000webhost.com][2]
 
 

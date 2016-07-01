@@ -15,7 +15,7 @@ tags:
 main-class: "servidores"
 color: "#0097A7"
 ---
-<img src="/assets/img/2013/04/dns-300x240.jpg" alt="Cómo ocultar la versión de BIND (Y como averiguarla)"   />  
+<img src="/assets/img/2013/04/dns-300x240.jpg" alt="Cómo ocultar la versión de BIND (Y como averiguarla)" width="300px" height="240px" />  
 Realizando un análisis en *<a href="http://www.dnsinspect.com" target="_blank">dnsInspect</a>* me dí cuenta de que el servidor estaba mostrando la versión de [BIND][1], lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.
 
 Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos **[dig][2]** para ello:  
@@ -81,3 +81,4 @@ fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
  [2]: /dig-chuleta-basica-de-comandos/ "Dig – Chuleta básica de comandos"
 
 {% include toc.html %}
+</dominio>

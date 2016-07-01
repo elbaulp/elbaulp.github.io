@@ -22,39 +22,38 @@ En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo
 - Insertar anotaciones: subrayar o tachar texto, dibujar a mano alzada, etc.
 
 <!--ad-->
-
 <figure>
-  <img src="/assets/img/Lector PDF Android con barra de navegación.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Lector PDF Android con barra de navegación.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 1. Lector PDF Android que incluye una barra de navegación con varios controles
 
 <figure>
-  <img src="/assets/img/Bloquear la rotación.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Bloquear la rotación.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 2. Bloquear la rotación
 
 <figure>
-  <img src="/assets/img/Modo de visualización de la página.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Modo de visualización de la página.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 3. Modo de visualización
 
 <figure>
-  <img src="/assets/img/Brillo.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Brillo.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 4. Brillo
 
 <figure>
-  <img src="/assets/img/outline.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/outline.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 5. Outline
 
 <figure>
-  <img src="/assets/img/Búsqueda de texto.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Búsqueda de texto.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 6. Búsqueda de texto
 
 <figure>
-  <img src="/assets/img/Insertar anotaciones.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Insertar anotaciones.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>
 Figura 7. Insertar anotaciones: subrayar texto, tachado, dibujo a mano alzada, etc.
 
@@ -95,7 +94,7 @@ En aplicaciones Android más complejas que cuentan con varias clases, es recomen
 Ahora vamos a crear un proyecto Android nuevo que llamaremos `SimpleDocumentReader`, y justo a continuación, importaremos PlugPDF como un módulo nuevo. La estructura de la aplicación tiene que quedar como sigue.
 
 <figure>
-  <img src="/assets/img/Estructura de la aplicación.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Estructura de la aplicación.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="429px" height="562px" />
 </figure>
 
 Figura 8. Estructura de la aplicación

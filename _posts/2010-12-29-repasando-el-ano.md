@@ -29,48 +29,45 @@ Por último quiero agradecer, como no, a todos los seguidores del blog, que lo l
 Aquí teneis las estadísticas:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s1600/general.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="98" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s320/general.png" /></a>
+<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s1600/general.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="98" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s320/general.png" /></a>
 </div>
-
-
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s1600/publico.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="221" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s320/publico.png" /></a>
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s1600/publico.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="221" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s320/publico.png" /></a>
 </div>
 
 También os dejo las 10 entradas mas vistas:
 
 <ol type="1">
-  <li>
-    <a href="https://elbauldelprogramador.com/facebook-infestado-por-un-nuevo-por-un/">Facebook infectado por un nuevo por un gusano</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/chistes-de-informaticos/">Chistes de informaticos &#8211; www.desmotivaciones.es</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/probando-rockmelt/">Probando RockMelt</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/">Juegos Linux, The Clockwork Man 1 y 2</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/">Como crear un PPA (Personal Package Archive)</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/informacion-del-boicot-wikileaks/">Recopilación de Información del Boicot a WikiLeaks</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/introduccion-base-de-datos/">Introduccion a base de datos</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/world-of-warcraft-sobre-android/">World of Warcraft sobre Android</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/script-resaltado-sintaxis-bash/">Script resaltado sintaxis bash</a>
-  </li>
-  <li>
-    <a href="https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/">Gestión básica de usuarios en linux</a>
-  </li>
+<li>
+<a href="https://elbauldelprogramador.com/facebook-infestado-por-un-nuevo-por-un/">Facebook infectado por un nuevo por un gusano</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/chistes-de-informaticos/">Chistes de informaticos &#8211; www.desmotivaciones.es</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/probando-rockmelt/">Probando RockMelt</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/">Juegos Linux, The Clockwork Man 1 y 2</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/">Como crear un PPA (Personal Package Archive)</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/informacion-del-boicot-wikileaks/">Recopilación de Información del Boicot a WikiLeaks</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/introduccion-base-de-datos/">Introduccion a base de datos</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/world-of-warcraft-sobre-android/">World of Warcraft sobre Android</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/script-resaltado-sintaxis-bash/">Script resaltado sintaxis bash</a>
+</li>
+<li>
+<a href="https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/">Gestión básica de usuarios en linux</a>
+</li>
 </ol>
 
 

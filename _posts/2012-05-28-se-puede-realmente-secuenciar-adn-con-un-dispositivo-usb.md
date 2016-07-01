@@ -16,7 +16,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-[<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION"   />][1]  
+[<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION" width="660px" height="440px" />][1]  
 ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?  
 
 <!--ad-->
@@ -71,6 +71,6 @@ Fuente: [Wired][2]
 
 
  [1]: /assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg
- [2]: http://www.wired.com/wiredenterprise/2012/03/oxford-nanopore-sequencing-usb/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+wired%2Findex+%28Wired%3A+Index+3+%28Top+Stories+2%29%29 "Wired"
+ [2]: http://www.wired.com/wiredenterprise/2012/03/oxford-nanopore-sequencing-usb/?utm_source=feedburner&utm;_medium=feed&utm;_campaign=Feed%3A+wired%2Findex+%28Wired%3A+Index+3+%28Top+Stories+2%29%29 "Wired"
 
 {% include toc.html %}

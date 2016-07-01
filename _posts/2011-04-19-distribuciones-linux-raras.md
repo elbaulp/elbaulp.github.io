@@ -24,7 +24,7 @@ Y es cierto, esta distribución no trae nada bueno, es para quienes se considere
 
 Esta distro, como dicen en muyLinux, [no tiene enlace de descarga][3], se menciona la idéa en la [página oficial][4].
 
-así que supongo que para obtener este comportamiento solo seŕa necesario agregar unas cuantas lineas a algún archivo del sistema, pero no creo que lo intente :).</p> </p> </p></p>
+así que supongo que para obtener este comportamiento solo seŕa necesario agregar unas cuantas lineas a algún archivo del sistema, pero no creo que lo intente :).  
 
 
 

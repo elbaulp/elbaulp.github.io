@@ -24,7 +24,7 @@ color: "#B31917"
 ---
 
 <figure>
-  <a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" /></a>
 </figure>
 
 * [Mini Curso de LaTeX &#8211; Introducción][1]

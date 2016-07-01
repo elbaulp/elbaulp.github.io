@@ -13,7 +13,7 @@ He colocado unos banners en la parte derecha del blog, disponibles para todo aqu
 Hay varios tipos de anuncios:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://lh5.googleusercontent.com/-DLANQoy_rnk/TrGpS-lYBHI/AAAAAAAABiE/0jav51whk88/h120/banner125x125.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="120" width="120" src="https://lh5.googleusercontent.com/-DLANQoy_rnk/TrGpS-lYBHI/AAAAAAAABiE/0jav51whk88/h120/banner125x125.jpg" /></a>
+<a href="https://lh5.googleusercontent.com/-DLANQoy_rnk/TrGpS-lYBHI/AAAAAAAABiE/0jav51whk88/h120/banner125x125.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="120" width="120" src="https://lh5.googleusercontent.com/-DLANQoy_rnk/TrGpS-lYBHI/AAAAAAAABiE/0jav51whk88/h120/banner125x125.jpg" /></a>
 </div>
 
 Esta es una imagen de 125&#215;125, que actualmente enlaza al formulario de contacto. El anuncio que se coloque aquí tendrá un pago fijo por més que se negociará con el anunciante.

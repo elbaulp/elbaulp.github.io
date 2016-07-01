@@ -12,7 +12,7 @@ color: "#2196F3"
 En <a target="blank" href="http://www.omgubuntu.co.uk/2011/01/get-random-ubuntu-tips-on-your-desktop-app/">OMG Ubuntu</a> he visto una aplicación que nos mostrará consejos en el escritorio de nuestro ubuntu, Abajo traduzco la entrada:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <img src="https://lh3.ggpht.com/_IlK2pNFFgGM/TUBAt7uX2hI/AAAAAAAAARs/KNJnko25AYs/137860-1.png" alt="UbuntuTips" />
+<img src="https://lh3.ggpht.com/_IlK2pNFFgGM/TUBAt7uX2hI/AAAAAAAAARs/KNJnko25AYs/137860-1.png" alt="UbuntuTips" />
 </div>
 
 La aplicación &#8220;Ubuntu Tips&#8221; muestra consejos útiles con el paquete fortunes-Ubuntu-server usando notify.  

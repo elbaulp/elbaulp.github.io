@@ -55,8 +55,7 @@ Especifica qué columnas o expresiones han de ser devueltas por la consulta. Su 
 
 ```sql
 SELECT [ DISTINCT ] <select_list>
-
-<select_list> ::= [esquema.][table. | view. | alias. ] * | { column_name | expression }
+</select_list><select_list> ::= [esquema.][table. | view. | alias. ] * | { column_name | expression }
 [ [AS] column_alias ]} [,...n]
 
 ```
@@ -68,9 +67,8 @@ donde sus argumentos son:
 No aparecen los registros repetidos, mostrándose sólo la primera vez. Basta con que un  
 único campo tenga diferente valor para que el registro se considere diferente.
 
-#### <select_list>
-
-<select_list> indica la lista de columnas de tablas, valores y/o expresiones que va a mostrar  
+#### </select_list><select_list>
+</select_list><select_list> indica la lista de columnas de tablas, valores y/o expresiones que va a mostrar  
 la sentencia SELECT. En este punto SQL en general es bastante más potente que otros lenguajes ya  
 que nos permite mostrar junto con los campos: expresiones, algunas funciones especiales,  
 agregados o funciones estadísticas especiales y constantes.
@@ -94,10 +92,10 @@ utiliza la notación:
 nombre_Tabla.nombre_Atributo
 ```
 
-El uso de cualificados es obligatorio cuando en la <select_list> aparecen dos columnas con  
+El uso de cualificados es obligatorio cuando en la </select_list><select_list> aparecen dos columnas con  
 el mismo nombre.
 
-En Oracle no es posible mezclar en la <select_list> el * con columnas y/o expresiones.  
+En Oracle no es posible mezclar en la </select_list><select_list> el * con columnas y/o expresiones.  
 Para realizar la operación anterior hay que cualificar el operador * con la tabla de la que se  
 extraerán todos sus campos.
 
@@ -140,3 +138,4 @@ pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.
  [4]: https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/
 
 {% include toc.html %}
+</select_list>

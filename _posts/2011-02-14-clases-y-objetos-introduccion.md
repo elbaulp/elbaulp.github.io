@@ -51,13 +51,13 @@ Recordaremos que el lenguaje C++ mantiene los delimitadores de comentarios emple
 
 El archivo cabecera <var>STDIO.H</var> contiene la información relativa a las operaciones estándar de entrada/salida en el lenguaje C. Las funciones más utilizadas de esta librería son scanf y printf. Estas funciones pueden seguir siendo utilizadas en C++, pero su uso es más complicado, ya que hemos de pasar no sólo la variable, sino también el formato: ***%d*** para enteros, ***%f*** para números decimales, etc.
 
-En C++, los detalles de la entrada/salida estándar están en el archivo *IOSTREAM.H*: la entrada se efectúa mediante el stream ***cin>>*** y la salida mediante el stream ***cout< <**</b>*. En los ejemplos que siguen se compara la entrada/salida en C++ y en C.
+En C++, los detalles de la entrada/salida estándar están en el archivo *IOSTREAM.H*: la entrada se efectúa mediante el stream ***cin>>*** y la salida mediante el stream ***cout< <***. En los ejemplos que siguen se compara la entrada/salida en C++ y en C.
 
 **Salida**
 
 ```bash
 float f=3.24;
-cout < < “Numero real =”<<f<<’n’;
+cout < < “Numero real =”<<f><<’n’;
 printf (“Numero real %f=n”, f);
 
 ```
@@ -67,7 +67,7 @@ printf (“Numero real %f=n”, f);
 ```bash
 int i;
 cin&gt;&gt;i;
-scanf (“%d”, &i);
+scanf (“%d”, &i;);
 
 ```
 
@@ -81,3 +81,4 @@ scanf (“%d”, &i);
  [2]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
 
 {% include toc.html %}
+</f>

@@ -31,7 +31,7 @@ Hecho esto, ahora es posible ejecutar el script que he creado:
 
 ```bash
 function help {
-   echo "$0 <directory> <file to watch> <script to execute>"
+   echo "$0 <directory> <file to="to" watch="watch"> <script to="to" execute="execute">"
 }
 
 if [ "$#" -ne 3 ]; then
@@ -102,12 +102,13 @@ Script ejecutado tras editar
 
 
 <p>
-  <em>Repositorio inotify-tools</em> <strong>|</strong> <a href="https://github.com/rvoicilas/inotify-tools" target="_blank">Visitar sitio</a><br />
-  <em>inotify</em> <strong>|</strong> <a href="http://inotify.aiken.cz/?section=incron&page=about&lang=en" target="_blank">inotify.aiken.cz</a><br />
-  <em>How to execute a command whenever a file changes?</em> <strong>|</strong> <a href="http://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes" target="_blank">superuser.com</a><br />
+  <em>Repositorio inotify-tools</em> <strong>|</strong> <a href="https://github.com/rvoicilas/inotify-tools" target="_blank">Visitar sitio</a><br>
+  <em>inotify</em> <strong>|</strong> <a href="http://inotify.aiken.cz/?section=incron&page=about&lang=en" target="_blank">inotify.aiken.cz</a><br>
+  <em>How to execute a command whenever a file changes?</em> <strong>|</strong> <a href="http://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes" target="_blank">superuser.com</a><br>
   <em>Bash: Execute script on file save?</em> <strong>|</strong> <a href="http://stackoverflow.com/questions/3283228/bash-execute-script-on-file-save" target="_blank">stackoverflow</a>
 </p>
 
  [2]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
 
 {% include toc.html %}
+</script></file></directory>

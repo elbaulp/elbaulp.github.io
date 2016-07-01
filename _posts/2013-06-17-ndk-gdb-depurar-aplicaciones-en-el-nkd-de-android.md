@@ -43,7 +43,7 @@ private static final String TAG = "SimpleServer";
                 mButton = (Button) findViewById(R.id.button1);
                 mButton.setEnabled(false);
 
-                new AsyncTask<Void, Void, String>() {
+                new AsyncTask<void>() {
                     @Override
                     protected String doInBackground(Void... params) {
                         return startTelnetSession();
@@ -93,15 +93,15 @@ Veamos ahora el código C, que implementa el servidor:
 ```c
 #include <jni.h>
 
-#include <android/log.h>
+#include <android>log.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
+#include <sys</android>socket.h>
+#include <netinet>in.h>
+#include <arpa</netinet>inet.h>
 #include <netdb.h>
 
 #include "hacking.h"
@@ -132,7 +132,7 @@ startServer(void) {
   if ((sockfd = socket(PF_INET, SOCK_STREAM, 0)) == -1)
     __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en socket");
 
-  if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
+  if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &yes;, sizeof(int)) == -1)
     __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en setsockopt");
 
   host_addr.sin_family = AF_INET;       // host byte order
@@ -140,7 +140,7 @@ startServer(void) {
   host_addr.sin_addr.s_addr = INADDR_ANY;  // automatically fill with my IP
   memset(&(host_addr.sin_zero), '\0', 8);  // zero the rest of the struct
 
-  if (bind(sockfd, (struct sockaddr *) &host_addr, sizeof(struct sockaddr))
+  if (bind(sockfd, (struct sockaddr *) &host;_addr, sizeof(struct sockaddr))
       == -1)
     __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en bind");
 
@@ -149,7 +149,7 @@ startServer(void) {
 
   while (1) {    // Accept loop
     sin_size = sizeof(struct sockaddr_in);
-    new_sockfd = accept(sockfd, (struct sockaddr *) &client_addr, &sin_size);
+    new_sockfd = accept(sockfd, (struct sockaddr *) &client;_addr, &sin;_size);
     if (new_sockfd == -1)
       __android_log_write(ANDROID_LOG_ERROR, TAG, "Fatal en accpct");
 
@@ -159,7 +159,7 @@ startServer(void) {
                         ntohs(client_addr.sin_port));
 
     send(new_sockfd, "Bienvenido!\n", 12, 0);
-    recv_length = recv(new_sockfd, &buffer, 1024, 0);
+    recv_length = recv(new_sockfd, &buffer;, 1024, 0);
 
     while (recv_length > 0) {
       buffer[recv_length] = 0;
@@ -209,7 +209,7 @@ startServer(void) {
       __android_log_print(ANDROID_LOG_INFO, TAG,
                           "Recibidos %d bytes mensaje: %s", recv_length,
                           buffer);
-      recv_length = recv(new_sockfd, &buffer, 1024, 0);
+      recv_length = recv(new_sockfd, &buffer;, 1024, 0);
     }
     close(new_sockfd);
     close(sockfd);
@@ -438,7 +438,7 @@ Con el comando adios terminamos la sesión, y el buffer ha registrado toda la co
 
 y se muestra en la pantalla del dispositivo:
 
-[<img src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb"   />][6]{.thumbnail}
+[<img src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb" width="180px" height="300px" />][6]{.thumbnail}
 
 Con esto concluye el artículo, espero que haya sido de utilidad.
 
@@ -456,3 +456,4 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
  [6]: /assets/img/2013/06/Screenshot_2013-06-17-17-20-53.png
 
 {% include toc.html %}
+</netdb.h></jni.h></void></ip></dominio>

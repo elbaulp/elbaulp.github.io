@@ -13,7 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" /></a>
 </div>
 
 Esta es la primera entrada de un total de 4 en la que se irán describiendo los pasos a dar para crear nuestro propio proveedor de contenidos.
@@ -59,7 +59,7 @@ El siguiente planteamiento de la base de datos pertenece a la aplicación [FavSi
 //    GNU General Public License for more details.
 //
 //    You should have received a copy of the GNU General Public License
-//    along with FavSites.  If not, see <http: //www.gnu.org/licenses/>.
+//    along with FavSites.  If not, see <http:>.
 
 
 package com.elbauldelprogramador.favsites.provider;
@@ -191,3 +191,4 @@ Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la c
  [7]: /programacion-android-implementando-un_08/
 
 {% include toc.html %}
+</http:>

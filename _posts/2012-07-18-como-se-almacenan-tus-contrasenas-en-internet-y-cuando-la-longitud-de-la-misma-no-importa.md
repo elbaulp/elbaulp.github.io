@@ -23,7 +23,7 @@ color: "#F57C00"
 {% include toc.html %}
 
 <figure>
-<img src="/assets/img/2012/07/original2.jpg" alt="" title="original"   />
+<img src="/assets/img/2012/07/original2.jpg" alt="" title="original" width="640px" height="360px" />
 </figure>
 
 Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.
@@ -86,27 +86,27 @@ A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan 
 
 ### Bcrypt
 
-<iframe  src="https://www.youtube.com/embed/S66XVE68NCc" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/S66XVE68NCc" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### Rainbow Tables
 
-<iframe  src="https://www.youtube.com/embed/SOV0AeHuHaQ" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/SOV0AeHuHaQ" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### Crear Salts
 
-<iframe  src="https://www.youtube.com/embed/hcWQNwdQVx0" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/hcWQNwdQVx0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### Hashear Salts
 
-<iframe  src="https://www.youtube.com/embed/yBN3r2Fwze8" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/yBN3r2Fwze8" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### Validar Salts
 
-<iframe  src="https://www.youtube.com/embed/gDLUM38mm6c" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/gDLUM38mm6c" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ### Validar Salts (Solución)
 
-<iframe  src="https://www.youtube.com/embed/Zy6eNdzmn1w" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Zy6eNdzmn1w" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 Imagen | de <a href="http://www.shutterstock.com/pic.mhtml?id=47788978" target="_blank">palsur</a>  
 Fuente | <a href="http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter" target="_blank">LifeHacker</a>

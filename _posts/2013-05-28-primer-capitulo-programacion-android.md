@@ -25,9 +25,8 @@ Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 
 <div class="button-post">
-  <a href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar</a>
+<a href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar</a>
 </div>
-
 <del datetime="2014-02-08T09:06:51+00:00">El documento lo enviaré a todo aquel que haga una donación de <b>al menos 1.5 euros (Paypal se queda con 40 céntimos)</b></del>.
 
 El documento tiene un precio mínimo de **1.5 euros (Paypal se queda con 40 céntimos)** Espero que entendáis que el esfuerzo , tiempo y trabajo dedicado a su realización merece una donación más alta, por lo que podréis aportar cantidades mayores si lo veis oportuno.

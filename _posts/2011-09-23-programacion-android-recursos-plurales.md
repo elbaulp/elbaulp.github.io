@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Los recursos Plurals son un conjunto de strings. Estos strings representan una forma de escribir cantidades numéricas, por ejemplo, cuantos huevos hay en una cesta. Vamos a ver un ejemplo:
 
@@ -27,8 +27,8 @@ Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo,
 ```xml
 <resources>
 <plurals name="huevos_en_una_cesta">
-   <item quantity="one">Hay 1 huevo</item>
-   <item quantity="other">Hay %d huevos</item>
+<item quantity="one">Hay 1 huevo</item>
+<item quantity="other">Hay %d huevos</item>
 </plurals>
 </resources>
 

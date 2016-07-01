@@ -15,13 +15,7 @@ existir y si no existiera alguna aparecería el error: ORA-00942: table or view 
 Su sintaxis es :
 
 ```sql
-[ FROM {<table_source&gt;} [,...n] ]
-<table_source&gt; ::= table_name | view_name | derived_table | <joined_table&gt;
-
-```
-
-
-<!--ad-->
+[ FROM {<table_source></table_source><table_source><joined_table><!--ad-->
 
 
 Es posible hacer consultas que incluyan más de una tabla dentro de la cláusula FROM, es  
@@ -153,3 +147,4 @@ FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
  [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/
 
 {% include toc.html %}
+</joined_table></table_source>

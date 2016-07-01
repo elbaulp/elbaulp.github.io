@@ -16,7 +16,7 @@ He mejorado el [script que subí hace unos días][1] para crear miniaturas de im
 <!--ad-->
 
 
-También dejo el link de pastebin: <http://pastebin.com/BhKYpYJf>
+También dejo el link de pastebin: <http:>
 
 
 
@@ -73,3 +73,4 @@ fi
  [1]: https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/
 
 {% include toc.html %}
+</http:>

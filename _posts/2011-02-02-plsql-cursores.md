@@ -16,7 +16,6 @@ color: "#009688"
 ---
 <div class="icosql">
 </div>
-
 <!--INFOLINKS_ON-->
 
 
@@ -24,7 +23,7 @@ Un cursor es el nombre para un área memoria privada que contiene información p
 
 PL/SQL crea implícitamente un cursor para todas las sentencias SQL de manipulación de datos sobre un conjunto de filas, incluyendo aquellas que solo devuelven una sola fila.
 
-En PL/SQL no se pueden utilizar sentencias SELECT de sintaxis básica ( SELECT <lista> FROM <tabla(s)> ). PL/SQL utiliza cursores para gestionar las instrucciones SELECT. Un cursor es un conjunto de registros devuelto por una instrucción SQL.
+En PL/SQL no se pueden utilizar sentencias SELECT de sintaxis básica ( SELECT <lista> FROM <tabla> ). PL/SQL utiliza cursores para gestionar las instrucciones SELECT. Un cursor es un conjunto de registros devuelto por una instrucción SQL.
 
 
 <!--ad-->
@@ -123,7 +122,7 @@ FETCH nombre_cursor INTO variables;
 Podremos recuperar filas mientras la consulta SELECT tenga filas pendientes de recuperar. Para saber cuándo no hay más filas podemos consultar los siguientes atributos de un cursor:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="41" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV" /></a>
+<a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="41" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV" /></a>
 </div>
 
 Al recuperar un registro, la información recuperada se guarda en una o varias variables. Si sólo se hace referencia a una variable, ésta se puede declarar con [%ROWTYPE][2]. Si se utiliza una lista de variables, cada variable debe coincidir en tipo y orden con cada una de las columnas de la sentencia SELECT.
@@ -215,8 +214,6 @@ END;
 ```
 
 <!--INFOLINKS_ON-->
-
-
 <!--INFOLINKS_OFF-->
 
 ```sql
@@ -234,8 +231,6 @@ END;
 ```
 
 <!--INFOLINKS_ON-->
-
-
 <!--INFOLINKS_OFF-->
 
 ```sql
@@ -250,8 +245,6 @@ END;
 ```
 
 <!--INFOLINKS_ON-->
-
-
 <!--INFOLINKS_OFF-->
 
 ```sql
@@ -320,7 +313,7 @@ Para actualizar los datos del cursor hay que ejecutar una sentencia UPDATE espec
 
 ```sql
 UPDATE <nombre_tabla> SET <campo_1> = <valor_1>[,<campo_2> = <valor_2>]
-WHERE CURRENT OF <cursor_name>
+WHERE CURRENT OF </valor_2></campo_2></valor_1></campo_1></nombre_tabla></cursor_name><cursor_name>
 
 ```
 
@@ -368,3 +361,4 @@ END;
  [5]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
 
 {% include toc.html %}
+</cursor_name></tabla></lista>

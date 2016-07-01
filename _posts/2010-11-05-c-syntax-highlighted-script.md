@@ -25,12 +25,11 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 
   <span class="bash">for</span> word <span class="bash">in</span> $keyWords
   <span class="bash">do</span>
-    <span class="comentario">#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span</span>
-    <span class="bash">sed</span> "s/b$wordb/<span class="cpp">$word</span>/" < "$rutaCodigo" > temp
+<span class="comentario">#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span</span>
+<span class="bash">sed</span> "s/b$wordb/<span class="cpp">$word</span>/" < "$rutaCodigo" > temp
     <span class="bash">cp</span> temp $rutaCodigo
   <span class="bash">done</span>
-
-  <span class="bash">sed</span> "s/^class /<span class="cpp">class</span>/g" < "$rutaCodigo" > temp
+<span class="bash">sed</span> "s/^class /<span class="cpp">class</span>/g" < "$rutaCodigo" > temp
   <span class="bash">rm</span> temp
   ;;
 *)
@@ -51,7 +50,7 @@ sed "s/^#include..... and sed "s/^#define...
 
 search the pattern &#8220;#define&#8221; or &#8220;#include&#8221;, initially of every line of the text, this is indicated by * ^ *, and replaces it with his corresponding style, to format the text. Once we enter the &#8220;for&#8221;, there is applied basically the same procedure that for it &#8220;define&#8221; and &#8220;include&#8221;, but with every word of the variable keyWords.
 
-Finally, I do the same for the reserved word &#8220;class&#8221;, the motive for which I have left this one by the end, it is because the label <span class ...> contains the word, &#8220;class&#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.  
+Finally, I do the same for the reserved word &#8220;class&#8221;, the motive for which I have left this one by the end, it is because the label <span class="class"> contains the word, &#8220;class&#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.  
 How Use It:
 
 It is necessary to create a css class for the blog, of this form:
@@ -68,3 +67,4 @@ Regards, I hope that it is useful
 
 
 {% include toc.html %}
+</span>

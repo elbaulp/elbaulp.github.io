@@ -10,7 +10,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01"><img src="/assets/img/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01"><img src="/assets/img/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 How IoT is set to revolutionize the commercial real estate industry.
@@ -24,7 +24,7 @@ Gartner projects an estimated 8.4 billion connected “things” installed in th
 This paper discusses what’s driving the adoption of the Internet of Things (IoT) in building and facility management, how to create value from the IoT for your organization, and considerations for implementing an IoT strategy for your facility.
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].

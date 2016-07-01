@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img src="/assets/img/2013/07/android2.png" alt="Cómo usar adecuadamente el Log de Android en tus aplicaciones"   />
+<img src="/assets/img/2013/07/android2.png" alt="Cómo usar adecuadamente el Log de Android en tus aplicaciones" width="132px" height="154px" />
 
 Es posible que durante el desarrollo de una aplicación [Android][1], surja la duda de qué nivel de Log se debe usar, qué cosas se deben loggear y cuales no. En la documentación de Android se trata este tema, el cual traduzco para ponerlo a disposición de todos.
 
@@ -37,7 +37,7 @@ Aunque el *logging* es necesario, tiene un impacto negativo significante en el r
 
 
  [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"
- [2]: https://elbauldelprogramador.com/?s=depurar&submit=
+ [2]: https://elbauldelprogramador.com/?s=depurar&submit;=
  [3]: https://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
 
 {% include toc.html %}

@@ -45,9 +45,9 @@ Y en el widget tengo lo siguiente:
 
 ```php
 <p class="twittercount">
-  <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank">
-     <img style="vertical-align:middle;padding-right:5px" src="twitter.png" alt="Twitter" /></a>
-     <span>< ?php echo followers_count();?></span> Followers
+<a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank">
+<img style="vertical-align:middle;padding-right:5px" src="twitter.png" alt="Twitter" /></a>
+<span>< ?php echo followers_count();?></span> Followers
 
 </p>
 
@@ -75,8 +75,8 @@ Y el estilo es el siguiente:
 ```
 
 <div style="text-align:center">
-  <p class="twittercount">
-    <a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank"><img style="vertical-align:middle;padding-right:5px" src="/wp-content/themes/ifeature/assets/img/social/round/twitter.png" alt="Twitter" /></a><span>693</span> Followers
+<p class="twittercount">
+<a href="http://twitter.com/elbaulp" title="Follow on Twitter" target="_blank"><img style="vertical-align:middle;padding-right:5px" src="/wp-content/themes/ifeature/assets/img/social/round/twitter.png" alt="Twitter" /></a><span>693</span> Followers
   </p>
 </div>
 

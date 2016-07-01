@@ -12,7 +12,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography"   />][1]
+[<img src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178px" height="229px" />][1]
 
 An easy to understand history of cryptography.
 
@@ -25,7 +25,7 @@ Cryptography is one of the oldest fields of technical study we can find records 
 # Descargar
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/free/w_thaw18" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
+<a href="http://elbauldelprogramador.tradepub.com/free/w_thaw18" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***

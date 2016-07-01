@@ -31,23 +31,22 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
  keywords=$keywords`<span class="bash">ls</span> /sbin/`
 
  <span class="comentario"># Para lo comentarios, el & hace que se escriba lo que coincidio con el patron</span>
- <span class="bash">sed</span> 's/#.*/<span class="comentario">&</span>/' < "$rutaCodigo" > temp
+<span class="bash">sed</span> 's/#.*/<span class="comentario">&</span>/' < "$rutaCodigo" > temp
  <span class="bash">cp</span> temp "$rutaCodigo"
 
   <span class="bash">for</span> word in $keywords
   <span class="bash">do</span>
-    <span class="comentario">#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span</span>
-    <span class="bash">sed</span> "s/b$wordb/<span class="bash">$word</span>/" < "$rutaCodigo" > temp
+<span class="comentario">#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span</span>
+<span class="bash">sed</span> "s/b$wordb/<span class="bash">$word</span>/" < "$rutaCodigo" > temp
     <span class="bash">cp</span> temp "$rutaCodigo"
   <span class="bash">done</span>
-
-  <span class="bash">rm</span> temp
+<span class="bash">rm</span> temp
   ;;
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
 
-```</p>
+```
 
 
 

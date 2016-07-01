@@ -23,7 +23,7 @@ Entonces, ¿como consiguen el efecto?, pues como bien han explicado en muyComput
 * * *Fuente:
 
 
-[muyComputer][1]</p>
+[muyComputer][1]
 
 
 

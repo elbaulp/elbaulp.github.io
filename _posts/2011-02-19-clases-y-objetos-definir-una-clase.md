@@ -52,27 +52,17 @@ void <b>Punto::ocultar() {
 
 
 <p>
-
 </p>
-
-
 <p>
   En la pantalla de texto se pueden imprimir 80 caracteres horizontalmente y 25 caracteres verticalmente. La función gotoxy, sitúa el cursor en la posición indicada por las coordenadas x e y.
 </p>
-
-
 <p>
   - La función mostrar pone el carácter guardado en ch en la posición (x, y).
 </p>
-
-
 <p>
   - La función ocultar pone un espacio en dicha posición, borrando el carácter.
 </p>
-
-
 <hr />
-
 <h4 class="referencia">
   Siguiente tema: <a href="https://elbauldelprogramador.com/clases-y-objetos-el-constructor/">Clases y Objetos - El Constructor</a>
 </h4>
@@ -81,3 +71,4 @@ void <b>Punto::ocultar() {
 
 
 {% include toc.html %}
+</b>

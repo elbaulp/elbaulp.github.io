@@ -38,65 +38,26 @@ Creemos un *layout* simple a modo de ejemplo. Consiste en una barra horizontal d
 #### layout/activity_main.xml
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:orientation="vertical"
-  android:padding="@dimen/spacing_medium">
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/spacing_medium">
+<textview android:layout_width="match_parent" android:layout_height="128dp" android:background="@color/light_gray" android:gravity="center" android:text="@string/application_logo" android:textappearance="@android:style/TextAppearance.Material.Display1">
+</textview></linearlayout><linearlayout android:id="@+id/buttons_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+<button android:id="@+id/btn_first" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/purple" android:text="@string/button_1">
+</button><button android:id="@+id/btn_second" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/indigo" android:text="@string/button_2">
+</button><button android:id="@+id/btn_third" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/teal" android:text="@string/button_3">
+</button></linearlayout>
 
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="128dp"
-    android:background="@color/light_gray"
-    android:gravity="center"
-    android:text="@string/application_logo"
-    android:textAppearance="@android:style/TextAppearance.Material.Display1" />
-
-  <LinearLayout
-    android:id="@+id/buttons_container"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <Button
-      android:id="@+id/btn_first"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:background="@drawable/purple"
-      android:text="@string/button_1" />
-
-    <Button
-      android:id="@+id/btn_second"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:background="@drawable/indigo"
-      android:text="@string/button_2" />
-
-    <Button
-      android:id="@+id/btn_third"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:background="@drawable/teal"
-      android:text="@string/button_3" />
-
-  </LinearLayout>
-
-</LinearLayout>
 
 ```
 
 <figure>
-  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_1.png"><img  src="/assets/img/2014/12/Grid-Spacing-en-Android-take_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_1.png"><img src="/assets/img/2014/12/Grid-Spacing-en-Android-take_1.png" title="{{ page.title }}" alt="{{ page.title }}" width="1080px" height="624px" /></a>
 </figure>
 
 La interfaz mostrada en la imagen de arriba depende claramente en la idea de un Grid. Sin embargo, carece de espacio entre elementos que permitan al usuario distinguir claramente la entidades independientes de la interfaz. Corrijamos éste problema añadiendo `android:layout_marginTop="@dimen/spacing_medium"` al `LinearLayout` identificado por `@id/buttons_container` y `android:layout_marginRight="@dimen/spacing_medium"` a los botones `@id/btn_first` y `@id/btn_second`:
 
 <figure>
-  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img  src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: </span>
+<a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png"><img src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_1.png" title="{{ page.title }}" alt="{{ page.title }}" width="1080px" height="672px" /></a>
+<span class="image-credit">Crédito de la imagen: </span>
 </figure>
 
 ## El problema de la interfaz dinámica
@@ -104,7 +65,7 @@ La interfaz mostrada en la imagen de arriba depende claramente en la idea de un 
 La interfaz de arriba tiene un aspecto bastante bueno: Buena apariencia, es legible, etc. Desafortunadamente, las cosas se ponen un poco mal cuando se ocultan dinámicamente algunas `Views` en el *layout*. De hecho, imaginemos que la función que se activaría con un click en el botón `@id/btn_third` requiere de alguna característica no disponible en el dispositivo (**Google Play Services** por ejemplo). La mejor forma de no desordenar la interfaz es ocultar el tercer botón con `View.GONE`:
 
 <figure>
-  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_2.png"><img  src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_2.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_2.png"><img src="/assets/img/2014/12/Grid-Spacing-en-Android-take_2_2.png" title="{{ page.title }}" alt="{{ page.title }}" width="1080px" height="672px" /></a>
 </figure>
 
 Como es de esperar, el botón `@id/btn_third` desaparece, pero el borde derecho de `@id/btn_second` no está alineado con el borde derecho del icono de la aplicación. La razón principal de éste problema se debe a que la técnica usando el margen funciona bien siempre que se mantenga la asunción hecha al principio: cada `View` con un margen derecho/superior tiene una `View` vecina a su derecha/arriba. Ocultar algunas `Views` en la barra va en contra de esta restricción.
@@ -118,17 +79,11 @@ En realidad, `LinearLayout` gestiona la idea del espacio entre elementos. Ésta 
 #### drawable/spacer_medium.xml
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-  android:shape="rectangle">
-
-  <size
-    android:width="@dimen/spacing_medium"
-    android:height="@dimen/spacing_medium" />
-
-    <solid android:color="@android:color/transparent" />
-
-  </shape>
+<?xml version='1.0' encoding='utf-8'?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+<size android:width="@dimen/spacing_medium" android:height="@dimen/spacing_medium">
+<solid android:color="@android:color/transparent">
+</solid></size></shape>
 
 ```
 
@@ -137,33 +92,17 @@ Ahora se puede usar el `Drawable` creado como un separador entre elementos estab
 #### layout/activity_main.xml
 
 ```xml
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:divider="@drawable/spacer_medium"
-  android:orientation="vertical"
-  android:padding="@dimen/spacing_medium"
-  android:showDividers="middle">
-
-  <!-- TextView -->
-
-  <LinearLayout
-    android:id="@+id/buttons_container"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:divider="@drawable/spacer_medium"
-    android:orientation="horizontal"
-    android:showDividers="middle">
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/spacer_medium" android:orientation="vertical" android:padding="@dimen/spacing_medium" android:showdividers="middle">
+<!-- TextView -->
+</linearlayout><linearlayout android:id="@+id/buttons_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/spacer_medium" android:orientation="horizontal" android:showdividers="middle">
 <!-- Buttons -->
+</linearlayout>
 
-  </LinearLayout>
-
-</LinearLayout>
 
 ```
 
 <figure>
-  <a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_3.png"><img  src="/assets/img/2014/12/Grid-Spacing-en-Android-take_3.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/12/Grid-Spacing-en-Android-take_3.png"><img src="/assets/img/2014/12/Grid-Spacing-en-Android-take_3.png" title="{{ page.title }}" alt="{{ page.title }}" width="1080px" height="672px" /></a>
 </figure>
 
 ## Conclusión

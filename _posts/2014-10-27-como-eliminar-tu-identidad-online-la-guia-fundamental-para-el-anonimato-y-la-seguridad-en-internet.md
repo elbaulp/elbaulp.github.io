@@ -26,9 +26,8 @@ El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, 
 Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.
 
 <figure>
-  <a href="/assets/img/2014/10/draft.jpg"><img src="/assets/img/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/draft.jpg"><img src="/assets/img/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="592px" height="312px" /></a>
 </figure>
-
 <!--ad-->
 
 Incluso si los datos no son almacenados y son eliminados, deben haber sido escritos en un disco duro, lo que significa que son vulnerables a la reconstrucción de archivos por “<a href="http://en.wikipedia.org/wiki/File_carving" target="_blank">File carving</a>” y <a href="http://es.wikipedia.org/wiki/Recuperaci%C3%B3n_de_datos" target="_blank">recuperación de datos</a>. No importa lo que hagas, algo sobre tí quedará en internet. Si compras una casa, contraes matrimonio, incluso si mueres, algo relacionado contigo residirá en la red. La información está en registros públicos por todos lados y puede ser encontrada en una simple búsqueda con Google Search.
@@ -48,7 +47,7 @@ Depende. Si utilizas el mismo nombre de usuario y usas tu nombre real en un siti
   * **Redes sociales** &#8212; Éstas revelan todo tipo de información. Más comunmente, la gente muestra los cumpleaños, comparte fotos de la familia, publica información de contacto y números de teléfono, y muestra su nombre real. Esta es información sensible y es peligroso hacerla pública. Imagina simplemente las personas que no quieres que tengan acceso a esta información. Las redes sociales muestran la información públicamente, y muchos de ustedes todavía no lo saben. Esto no es la mejor información para tener visible al público.
   * **Cometer crímenes** &#8212; No solo está mal cometer crímenes, sino que también terminas siendo arrestado, y eso termina con tu nombre en los artículos de noticias. Esto hace una gran irreversible huella en internet. Serás “buscable” a través de muchas bases de datos en línea. El punto esencial es: Trata de no divulgar nada ilegal.
   * **Mantener un blog** &#8212; Si tienes un blog personal como un diario, estás publicando toda tu información privada al mundo entero para que la vea. Tal vez quieras revaluar lo que estás haciendo. ¿Es el blog realmente tan importante como para permitir que extraños sepan cosas que no deberían saber sobre tí? Abrir una ventana de exposición en tu vida personal es prácticamente invocar a un escalofriante desastre. Esto debería ser evitado a cualquier precio por el bien del Anonimato.
-  * **Postear comentarios públicos** &#8212; Tener en cuenta cuando comentas en un artículo público, que tu comentario estará visible a través de un motor de búsqueda. Muchos de ustedes publican información privada, pensando que estás a salvo porque te escondes detrás del nombre de usuario haxx0r9000, pero si usas Facebook con el nombre real, apuntada desde la URL <http://facebook.com/haxx0r9000>, eres bastante desafortunado.
+  * **Postear comentarios públicos** &#8212; Tener en cuenta cuando comentas en un artículo público, que tu comentario estará visible a través de un motor de búsqueda. Muchos de ustedes publican información privada, pensando que estás a salvo porque te escondes detrás del nombre de usuario haxx0r9000, pero si usas Facebook con el nombre real, apuntada desde la URL <http:>, eres bastante desafortunado.
   * **Registros telefónicos públicos** &#8212; Tener un número localizable mediante la búsqueda de un nombre son malas noticias. Puedes obtener un Motorola Droid en un plan prepago, entonces ¿cómo puedes quejarte?
   * **Hacer compras con tarjetas de crédito** &#8212; No puedes confiar en la seguridad de otro. Por ejemplo, digamos que compras algo en un sitio de remates y guardas la información de tu tarjeta de crédito ahí. Si alguien **hackea** la red de ellos, quién sabe si la información estaba encriptada. Toda tu información personal, números de tarjeta de crédito, e incluso el historial de compras puede estar disponible para el hacker. Es lo mismo que sucedería si un comercio no tira el papeleo con información sensible. Una alternativa sería retirar dinero de un cajero automático (ATM).
 
@@ -124,7 +123,7 @@ En la configuración de los diferentes navegadores (Chrome, Firefox, Opera, etc)
 
 Puedes también usar [Tor bundle][3] y tener un navegador standalon que pueda ser borrado de forma segura en cualquier momento. Esto además encriptará tu tráfico y enmascarará tu dirección IP (tu ID único en internet). Esto hace que tu tráfico no esté disponible para ser buscado, encontrado y husmeado, **incluso por tu ISP** . Tu IP además se vuelve segura de la gente que no quieres que la vea (o cualquiera sea la razón por la que quieres esconder tu IP).
 
-<span class='embed-youtube' style='text-align:center; display: block;'></span>
+<span class="embed-youtube" style="text-align:center; display: block;"></span>
 
 ### Asegura tu tráfico del análisis y realiza conexiones anónimas a los sitios
 
@@ -188,7 +187,7 @@ Puedes:
 No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ubicación estén desactivadas. Por defecto, sé que el iTouch guarda tu ubicación GPS en cada foto que tomas. Si ésta aparece en algún momento en internet, ya se puede examinar en hexadecimal para determinar las coordenadas.
 
 <figure>
-  <a href="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><img src="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg"><img src="/assets/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="381px" height="515px" /></a>
 </figure>
 
 El Explorador de Archivos de Windows (Windows File Explorer) además provee lectura de ubicación de GPS en su vista de propiedades
@@ -249,3 +248,4 @@ Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimat
 [3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
 
 {% include toc.html %}
+</http:>

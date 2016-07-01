@@ -89,21 +89,12 @@ El alfa controla la transparencia del píxel. El valor 255 para el alfa quiere d
 <div class="separator" style="clear: both; text-align: center;">
   En esta imagen el alfa esta a 255.<br /> <img border="0" height="240" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUK2lKrtn2I/AAAAAAAAASs/vVyJ2YkO3oY/s320/255.jpg" />
 </div>
-
-
-
 <div class="separator" style="clear: both; text-align: center;">
   En esta imagen el alfa esta a 192. Se puede ver como el fondo blanco empieza a mostrarse a través de la imagen.<br /> <img border="0" height="240" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUK2lEXQZAI/AAAAAAAAAS0/kyR_W-tWVo0/s320/192.jpg" />
 </div>
-
-
-
 <div class="separator" style="clear: both; text-align: center;">
   En esta imagen el alfa esta a 128. Aproximadamente el 50% de transparencia. <br /> <img border="0" height="240" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUK2lWOQFWI/AAAAAAAAAS8/R3cn8kuccy0/s320/128.jpg" />
 </div>
-
-
-
 <div class="separator" style="clear: both; text-align: center;">
   En esta imagen el alfa esta a 0. Completamente transparente.<br /> <img border="0" height="240" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUK2luEZy5I/AAAAAAAAATE/pa2iI4pX_Pk/s320/0.jpg" />
 </div>

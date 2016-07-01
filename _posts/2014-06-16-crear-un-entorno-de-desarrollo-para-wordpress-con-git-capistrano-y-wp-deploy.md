@@ -28,7 +28,7 @@ color: "#f05033"
 {% include toc.html %}
 
 <figure>
-  <img src="/assets/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png" title="{{ page.title }}" alt="{{ page.title }}" width="400px" height="400px" />
 </figure>
 
 Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.
@@ -271,3 +271,4 @@ Si el lector ha llegado hasta este punto, estaba interesado en conseguir un cicl
  [3]: https://elbauldelprogramador.com/introduccion-a-ruby/ "Introducción rápida a Ruby"
  [4]: https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
  [5]: http://wp-cli.org/#install
+</repo_url>

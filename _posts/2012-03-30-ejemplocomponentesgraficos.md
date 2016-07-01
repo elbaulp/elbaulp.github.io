@@ -19,7 +19,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" />
+<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 [Ya hemos visto][1] que todos los componentes visuales descienden del objeto View, que proporciona una interfaz para que podemos interactuar con ellos.
 
@@ -37,11 +37,7 @@ Por ejemplo, un listener muy común será ***setOnClickListener()***, que respon
 Botones simples, para realizar acciones al pulsar sobre ellos.
 
 ```xml
-<button android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Púlsame"
-        android:layout_centerInParent="true"
-        android:id="@+id/button1"/>
+<button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Púlsame" android:layout_centerinparent="true" android:id="@+id/button1">
 
 ```
 
@@ -66,7 +62,7 @@ Botones simples, para realizar acciones al pulsar sobre ellos.
 En este caso, hemos declarado una variable como miembro de la clase, (***public int contador = 0;***), para que cada vez que pulsemos el botón nos salga un mensaje con el número de veces que lo hemos pulsado:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s1600/botnoes.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="Evento onClick botón" title="Evento onClick botón" height="400" width="244" src="https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s400/botnoes.png" /></a>
+<a href="https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s1600/botnoes.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="Evento onClick botón" title="Evento onClick botón" height="400" width="244" src="https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s400/botnoes.png" /></a>
 </div>
 
 ### EditText
@@ -74,11 +70,7 @@ En este caso, hemos declarado una variable como miembro de la clase, (***public 
 Son campos de texto en los que el usuario puede escribir.
 
 ```xml
-<edittext android:layout_width="200dip"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/button1"
-        android:id="@+id/editText1"
-        android:layout_centerInParent="true"/>
+<edittext android:layout_width="200dip" android:layout_height="wrap_content" android:layout_above="@id/button1" android:id="@+id/editText1" android:layout_centerinparent="true">
 
 ```
 
@@ -106,7 +98,7 @@ final EditText editText1 = (EditText) findViewById(R.id.editText1);
 Lo que hemos hecho con este EditText, es fijarle un onKeyListener, que comprobará (con el if), que hemos pulsado la tecla enter, y si es cierto, mostrar el texto escrito:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s1600/onKeyListener.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="242" src="https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s400/onKeyListener.png" /></a>
+<a href="https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s1600/onKeyListener.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="242" src="https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s400/onKeyListener.png" /></a>
 </div>
 
 ### ImageView
@@ -114,10 +106,7 @@ Lo que hemos hecho con este EditText, es fijarle un onKeyListener, que comprobar
 Nos permite mostrar imágenes en la pantalla.
 
 ```xml
-<imageview android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon"/>
+<imageview android:id="@+id/imageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon">
 
 ```
 
@@ -130,7 +119,7 @@ imageView1.setImageResource(R.drawable.icon);
 El icono es el que viene por defecto al crear un proyecto. Este es el resultado:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s1600/ImageView.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="Ejemplo ImageView" title="Ejemplo ImageView" border="0" height="400" width="299" src="https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s400/ImageView.png" /></a>
+<a href="https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s1600/ImageView.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="Ejemplo ImageView" title="Ejemplo ImageView" border="0" height="400" width="299" src="https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s400/ImageView.png" /></a>
 </div>
 
 ### CheckBox
@@ -138,12 +127,7 @@ El icono es el que viene por defecto al crear un proyecto. Este es el resultado:
 Es un tipo de botón con dos estados, activo o inactivo, practicamente tiene el mismo comportamiento de un botón, una de sus características es que podemos comprobar si el botón esta activo o no:
 
 ```xml
-<checkbox android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="CheckBox"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/button1"
-        android:id="@+id/checkBox1" />
+<checkbox android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="CheckBox" android:layout_centerinparent="true" android:layout_below="@id/button1" android:id="@+id/checkBox1">
 
 ```
 
@@ -163,7 +147,7 @@ checkbox1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 En este caso, hemos usado como listener onCheckedChanged, que se ejecutará cada vez que el estado del checkbox cambie.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s1600/CheckBox.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="243" src="https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s400/CheckBox.png" /></a>
+<a href="https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s1600/CheckBox.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="243" src="https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s400/CheckBox.png" /></a>
 </div>
 
 Estos son los componentes gráficos básicos, también disponemos de RadioButton, ToggleButton (Parecidos a los checkBox, pero con una luz que se ilumina al estar activos, y con la característica de que el texto cambia dependiendo de su estado, aunque esto se puede conseguir con el checkbox facilmente.)
@@ -182,3 +166,4 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
 
 
 {% include toc.html %}
+</checkbox></imageview></edittext></button>

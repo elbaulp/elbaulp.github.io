@@ -12,7 +12,7 @@ color: "#2196F3"
 ---
 He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">esta</a>.  
 Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje.  
- <br /> Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.<br /> Aqui esta el codigo:</p>
+ <br /> Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.<br /> Aqui esta el codigo:
 
 ```bash
 #!/bin/bash
@@ -42,9 +42,8 @@ esac
 ```
 
 <p>
-  <b>Voy a explicar un poco el código:</b><br /> La variable <em>keyWords</em> contiene las palabras claves de c++, menos &#8220;class&#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..
+<b>Voy a explicar un poco el código:</b><br /> La variable <em>keyWords</em> contiene las palabras claves de c++, menos &#8220;class&#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..
 </p>
-
 <p>
   Las dos siguientes lineas
 
@@ -52,37 +51,30 @@ esac
 sed "s/^#include..... y sed "s/^#define...
 ```
 
-  <p>
+  </p><p>
     buscan el patrón #define o #include, al principio de cada linea del texto, esto se indica con <em>^</em>, y lo reemplaza con su estilo correspondiente, para formatear el texto.<br /> Una vez entramos al for, se aplica básicamente el mismo procedimiento que para define e include, pero con cada palabra de la variable keyWords.
   </p>
-
-  <p>
-    Por ultimo, hago lo mismo para la palabra, reservada class, el motivo por el que he dejado esta para el final, es porque la etiqueta <span class...> contiene la palabra, class, y entonces el código no saldria bien, ya que al encontrarse esta palabra dentro de la etiqueta span, la sustituiría tambien.<br /> Como Usarlo:
-  </p>
-
-  <p>
+<p>
+    Por ultimo, hago lo mismo para la palabra, reservada class, el motivo por el que he dejado esta para el final, es porque la etiqueta <span class...="class..."> contiene la palabra, class, y entonces el código no saldria bien, ya que al encontrarse esta palabra dentro de la etiqueta span, la sustituiría tambien.<br /> Como Usarlo:
+  </span></p>
+<p>
     Lo primero que hice fue pensar de que color resaltar las palabras clave, las puse igual que en los ejemplos de <a href="http://conclase.net/" target="_blank">conclase</a>. El siguiente paso es crear una clase en el css del blog, de esta forma:
   </p>
-
-  <p>
-    <b><i>.prp { color: "#0a0"; font-weight: bold; }<br /> .cpp { color: "#a40"; font-weight: bold; }</i></b>
-  </p>
-
-  <p>
+<p>
+<b><i>.prp { color: "#0a0"; font-weight: bold; }<br /> .cpp { color: "#a40"; font-weight: bold; }</i></b>
+</p>
+<p>
     Una vez hecho esto, solo nos resta ejecutar el script, e introducir la ruta del codigo a formatear con este estilo.
   </p>
-
-  <p>
-    <a href="http://bashyc.blogspot.com/p/curso-c.html#ejercicio111" target="_blank">Aqui</a> podeis ver el resultado.
+<p>
+<a href="http://bashyc.blogspot.com/p/curso-c.html#ejercicio111" target="_blank">Aqui</a> podeis ver el resultado.
   </p>
-
-  <p>
+<p>
     Si tenéis alguna duda, preguntad sin problema.
   </p>
-
-  <p>
+<p>
     Saludos, espero que sea útil<br />
-  </p>
+</p>
 
 
 

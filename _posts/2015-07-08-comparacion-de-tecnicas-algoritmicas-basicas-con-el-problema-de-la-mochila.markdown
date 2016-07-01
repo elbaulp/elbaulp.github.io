@@ -15,7 +15,7 @@ color: "#E64A19"
 {% include toc.html %}
 
 <figure>
-  <img src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="520px" />
 </figure>
 _Créditos de la imagen [Wikipedia](https://en.wikipedia.org/wiki/File:Knapsack.svg)_.
 
@@ -36,10 +36,10 @@ En el caso del problema de la mochila, se implementaría de la siguiente forma:
 3. Ahora tenemos dos opciones: si el siguiente objeto ya no cabe completo en la mochila podemos quedarnos con una fracción de él (obteniendo un beneficio igual a $$(pesototal - pesoactual)/pesoobjeto$$) o no meter ningún objeto más en la mochila. La primera opción se la conoce como _mochila fraccional_ y la segunda, como _mochila 0/1_.
 
 ```cpp
-list<float> Mochila (int lim_peso, list<Objeto> & objetos) {
-    list<float> sol;
+list<float> Mochila (int lim_peso, list<objeto> & objetos) {
+    list</objeto></float><float> sol;
     int peso_actual = 0;
-    list<Objeto>::iterator it;
+    list<objeto>::iterator it;
 
     for (it=objetos.begin(); it!=objetos.end() && lim_peso > peso_actual; ++it) {
         if ((peso_actual + (*it).peso) <= lim_peso) {
@@ -86,9 +86,9 @@ Con esta función rellenamos la tabla de beneficios, pero no sabemos qué objeto
 
 ```cpp
 
-vector<vector<unsigned> > Mochila(vector<Elemento> & elems, unsigned m) {
+vector<vector><unsigned> > Mochila(vector<elemento> & elems, unsigned m) {
     unsigned i = 0, j = 0;
-    vector<vector<unsigned> > V(elems.size()+1);
+    vector</elemento></unsigned></vector><vector><unsigned> > V(elems.size()+1);
     // inicializamos los casos base
     for (i=0; i<=elems.size(); i++) {
         V.at(i).resize(m+1);
@@ -121,8 +121,8 @@ Para saber qué objetos cogemos y cuáles no, usamos la siguiente función:
 
 ```cpp
 
-vector<unsigned> Solucion (vector<vector<unsigned> > & mochila, vector<Elemento> & elems) {
-    vector<unsigned> sol(elems.size());
+vector</unsigned><unsigned> Solucion (vector</unsigned></vector><vector><unsigned> > & mochila, vector<elemento> & elems) {
+    vector</elemento></unsigned><unsigned> sol(elems.size());
 
     int j = mochila.at(0).size()-1;
     for (int i=mochila.size()-1; i>0; i--) {
@@ -152,13 +152,13 @@ Así, la función para explorar el árbol sería la siguiente:
 
 ```cpp
 
-vector<bool> Mochila(list<Elemento> & elementos, unsigned m) {
+vector<bool> Mochila(list<elemento> & elementos, unsigned m) {
     Nodo inic = NodoInicial(elementos, m);
     int C = inic.CI;
-    priority_queue<Nodo> LNV;
+    priority_queue<nodo> LNV;
     LNV.push(inic);
     int s = numeric_limits<int>::min();
-    vector<bool> resultado;
+    vector</int></nodo></elemento></bool><bool> resultado;
 
     while (!LNV.empty()) {
         Nodo x = LNV.top();
@@ -190,17 +190,14 @@ Como véis, no generamos todo el árbol, sino que vamos generando nodos sobre la
 
 ```cpp
 
-Nodo Generar (Nodo & nodo_actual, bool eleccion, list<Elemento> & objs, double m) {
+Nodo Generar (Nodo & nodo_actual, bool eleccion, list<elemento> & objs, double m) {
     Nodo res = Nodo(0, 0, nodo_actual.nivel+1, 0, 0, nodo_actual.tupla);
 
     // cogemos el objeto que estamos considerando
-    list<Elemento>::iterator obj_it = objs.begin();
-    for (int k=0; k<res.nivel; k++) ++obj_it;
-
-    // generamos una lista con los objetos restantes que procesara el greedy
-    list<Elemento> aux; list<Elemento>::iterator ax = obj_it;
+    list</elemento><elemento>::iterator obj_it = objs.begin();
+    for (int k=0; k<res.nivel></res.nivel></elemento><elemento> aux; list</elemento><elemento>::iterator ax = obj_it;
     ++ax;
-    for (list<Elemento>::iterator a = ax; a != objs.end(); ++a) {
+    for (list</elemento><elemento>::iterator a = ax; a != objs.end(); ++a) {
         aux.push_back(*a);
     }
 
@@ -222,8 +219,8 @@ Nodo Generar (Nodo & nodo_actual, bool eleccion, list<Elemento> & objs, double m
 
     if (res.peso_actual > m) {
         res.CI = numeric_limits<int>::min();
-        res.CS = numeric_limits<int>::min();
-        res.valor_actual = numeric_limits<int>::min();
+        res.CS = numeric_limits</int><int>::min();
+        res.valor_actual = numeric_limits</int><int>::min();
     }
 
     return res;
@@ -323,3 +320,4 @@ Estas técnicas algorítmicas clásicas nos sirven para encontrar la solución a
 
 * La programación dinámica, al usar una matriz para guardar los valores que va calculando, está limitada por el tamaño de la memoria de nuestro ordenador
 * En Branch & Bound, si no definimos una buena estrategia de cotas y de poda, exploraremos muchísimos nodos y el tiempo de ejecución se nos subirá por las nubes.
+</int></elemento></bool></unsigned></vector></objeto></float>

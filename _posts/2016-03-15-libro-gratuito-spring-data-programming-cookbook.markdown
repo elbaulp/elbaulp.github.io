@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc"><img src="/assets/img/Spring-Data-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc"><img src="/assets/img/Spring-Data-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!
@@ -26,7 +26,7 @@ In this eBook, we provide a compilation of Spring Data examples that will help y
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java22&ch=ocsoc" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].

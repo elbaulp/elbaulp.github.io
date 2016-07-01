@@ -11,7 +11,7 @@ color: "#F57C00"
 
 {% include toc.html %}
 
-> El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura _Seguridad en Sistemas Operativos_ de la facultad de Ingeniería Informática de Granada (ETSIIT), puedes leer el otro trabajo publicado en el blog, [Biometría Aplicada a La Seguridad](/biometria-seguridad-introduccion/ "Biometría Aplicada a La Seguridad"). Este trabajo es autoría de Jose Maria Caballero Alba <caballeroalba@gmail.com> y Edlin Lastenia Morel Mateo
+> El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura _Seguridad en Sistemas Operativos_ de la facultad de Ingeniería Informática de Granada (ETSIIT), puedes leer el otro trabajo publicado en el blog, [Biometría Aplicada a La Seguridad](/biometria-seguridad-introduccion/ "Biometría Aplicada a La Seguridad"). Este trabajo es autoría de Jose Maria Caballero Alba <caballeroalba> y Edlin Lastenia Morel Mateo
 
 
 ## Qué es nftables
@@ -352,3 +352,4 @@ __nftables__ es un framework que su finalidad es eliminar o solventar problemas 
 Se pueden especificar diferentes acciones en una sola regla lo cual nos permite el ahorro de tiempo y creación de reglas engorrosas como se solía hacer con __iptables__, además soportara nuevos protocolos sin la necesidad de hacer una actualización del kernel.
 
 Como podemos analizar __nftables__ nos proporciona  numerosas ventajas y soluciones de problemas en la clasificación de paquetes sin embargo hay que tener en mente que aún esta en desarrollo.
+</caballeroalba>

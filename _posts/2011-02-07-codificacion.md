@@ -30,7 +30,7 @@ Lo que vamos a ver en esta entrada es:
 Dado un número x, su representación en una dada base b consiste en escribirlo como
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
+<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
 </div>
 
 donde el signo <var>s</var> es igual a 0 o 1 y los coeficientes a<sub>j</sub> son enteros positivos menores que *b*. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).
@@ -54,7 +54,6 @@ Los números que pueden almacenarse en la representación de 4 bytes están en e
 <p style="text-align:center;">
   n<sub>min</sub> = (00000000000000000000000000000000)<sub>2</sub> = (0)<sub>10</sub>
 </p>
-
 <p style="text-align:center;">
   n<sub>max</sub> = (11111111111111111111111111111111)<sub>2</sub> = 2<sup>32</sup> &#8211; 1 = (4294967295)<sub>10</sub>
 </p>
@@ -82,7 +81,7 @@ En esta representación, los 8 bits utilizados permiten que el exponente se encu
 Para aclarar los conceptos, veamos algunos ejemplos de números normalizados en precisión simple:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" width="600px" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png" />
+<img border="0" width="600px" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png" />
 </div>
 
 Entre paréntesis está representada la parte entera de la mantisa (que es igual a 1 siempre por convención.) Debe notarse que el número final se obtiene considerando que:
@@ -95,7 +94,7 @@ Como segundo ejemplo veamos la conversión inversa, del número (3,375)<sub>10</
 
 
 <div class="separator" style="clear: both; text-align: center;">
-  <img border="0" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png" />
+<img border="0" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png" />
 </div>
 
 por lo que, después de eliminar la parte entera y agregando el signo y el exponente, el número es:  
@@ -104,7 +103,6 @@ por lo que, después de eliminar la parte entera y agregando el signo y el expon
 <p style="text-align:center;">
   (3,375)<sub>10</sub> = (0 10000000 (1), 101100000000000000000000)<sub>2</sub>
 </p>
-
 <a name="bin"></a>
 
 # Codificación básica (binaria)
@@ -149,7 +147,6 @@ A decimal:
 <p style="text-align:center;">
   (8<sup></sup>*6) + (8<sup>1</sup>*2) = 6 + 16 = 22 (decimal)
 </p>
-
 <a name="hex"></a>
 
 # Codificación hexadecimal
@@ -200,245 +197,191 @@ De octal a binario y de binario a hexadecimal (Agrupando de 4 en 4 bits.)
 
 
 <table class="tabla" align="center">
-  <tr>
-    <td>
+<tr>
+<td>
       Decimal
     </td>
-
-    <td>
+<td>
       Exceso-3
     </td>
-
-    <td>
+<td>
       BCD (Decimal codificando en binario)
     </td>
-
-    <td>
+<td>
       AIKEN
     </td>
-
-    <td>
+<td>
       GRAY
     </td>
-  </tr>
-
-  <tr>
-    <td>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
       0011
     </td>
-
-    <td align="center">
+<td align="center">
       0000
     </td>
-
-    <td>
+<td>
       0000
     </td>
-
-    <td>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
       1
     </td>
-
-    <td>
+<td>
       0100
     </td>
-
-    <td align="center">
+<td align="center">
       0001
     </td>
-
-    <td>
+<td>
       0001
     </td>
-
-    <td>
+<td>
       01
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       2
     </td>
-
-    <td>
+<td>
       0101
     </td>
-
-    <td align="center">
+<td align="center">
       0010
     </td>
-
-    <td>
+<td>
       0010
     </td>
-
-    <td>
+<td>
       11
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       3
     </td>
-
-    <td>
+<td>
       0110
     </td>
-
-    <td align="center">
+<td align="center">
       0011
     </td>
-
-    <td>
+<td>
       0011
     </td>
-
-    <td>
+<td>
       10
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       4
     </td>
-
-    <td>
-      <strong>0111</strong>
-    </td>
-
-    <td align="center">
+<td>
+<strong>0111</strong>
+</td>
+<td align="center">
       0100
     </td>
-
-    <td>
-      <strong>0100</strong>
-    </td>
-
-    <td>
+<td>
+<strong>0100</strong>
+</td>
+<td>
       000
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       5
     </td>
-
-    <td>
+<td>
       1000
     </td>
-
-    <td align="center">
+<td align="center">
       0101
     </td>
-
-    <td>
+<td>
       1011
     </td>
-
-    <td>
+<td>
       001
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       6
     </td>
-
-    <td>
+<td>
       1001
     </td>
-
-    <td align="center">
+<td align="center">
       0110
     </td>
-
-    <td>
+<td>
       1100
     </td>
-
-    <td>
+<td>
       011
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       7
     </td>
-
-    <td>
+<td>
       1010
     </td>
-
-    <td align="center">
+<td align="center">
       0111
     </td>
-
-    <td>
+<td>
       1101
     </td>
-
-    <td>
+<td>
       010
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       8
     </td>
-
-    <td>
+<td>
       1011
     </td>
-
-    <td align="center">
+<td align="center">
       1000
     </td>
-
-    <td>
+<td>
       1110
     </td>
-
-    <td>
+<td>
       110
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       9
     </td>
-
-    <td>
+<td>
       1100
     </td>
-
-    <td align="center">
+<td align="center">
       1001
     </td>
-
-    <td>
+<td>
       1111
     </td>
-
-    <td>
+<td>
       111
     </td>
-  </tr>
+</tr>
 </table>
 
 
@@ -504,7 +447,7 @@ Se pone el numero y al final se añade el signo:
 
 * * *
 
-<a name="indices"></a>  
+<a name="indices"></a>
 <sup>1</sup> En doble precisión se utilizan 64 bits (8 bytes): 1 para el signo, 11 para el exponente y 52 para la mantisa.  
 
 <sup>2</sup> En la convención IEEE-754 el exponente varía en el rango [-126, 127] y se reservan los restantes valores para representar números muy pequeños y muy grandes.

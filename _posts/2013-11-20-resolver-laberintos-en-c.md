@@ -15,7 +15,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 <figure>
-  <a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
 </figure>
 
 Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona.
@@ -74,7 +74,7 @@ int main()
 
 ### Ejemplo de uso
 
-La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almacenando el tamaño que tiene y se construye un laberinto de dicho tamaño y cambiando la representación del laberinto, es decir `Laberinto lab('+',' ','#',FIL,COL);` crea un laberinto de tamaño *FILxCOL*, cuya representación será un *#* para el camino que conduce a la salida, </em>+</em> para las paredes y un espacio en blanco para las celdas libres. La siguiente línea imprime el laberinto sin resolver, quedando así:
+La clase *Laberinto* la veremos en breve. Básicamente, se lee el fichero, almacenando el tamaño que tiene y se construye un laberinto de dicho tamaño y cambiando la representación del laberinto, es decir `Laberinto lab('+',' ','#',FIL,COL);` crea un laberinto de tamaño *FILxCOL*, cuya representación será un *#* para el camino que conduce a la salida, + para las paredes y un espacio en blanco para las celdas libres. La siguiente línea imprime el laberinto sin resolver, quedando así:
 
 ```bash
 ./bin/laberinto < labs/lab_peque.txt
@@ -118,13 +118,13 @@ El laberinto no tiene salida
 La definición del Laberinto es la siguiente:
 
 ```cpp
-#include <vector>
+#include </vector><vector>
 
 class Laberinto{
 
 private:
-    std::vector<std::vector<int> > path;
-    std::vector<std::vector<char> > laberinto;
+    std::vector<std::vector><int> > path;
+    std::vector</int></std::vector><std::vector><char> > laberinto;
     char shapeP,
          shapeL,
          shapeC;
@@ -162,7 +162,7 @@ En `path` se almacena el camino recorrido hasta el momento. Internamente, se cre
 La implementación:
 
 ```cpp
-#include <iostream>
+#include </int></char></std::vector></vector></iostream><iostream>
 
 #include "Laberinto.h"
 
@@ -202,7 +202,7 @@ void Laberinto::printLabResuelto() const{
 
 void Laberinto::resolverLaberinto(){
 
-    vector<vector<bool> > recorrido((*this).laberinto.size(), vector<bool>((*this).laberinto[0].size(),false));
+    vector<vector><bool> > recorrido((*this).laberinto.size(), vector</bool><bool>((*this).laberinto[0].size(),false));
 
 
     (*this).path.push_back(findEnter());
@@ -253,10 +253,10 @@ void Laberinto::resolverLaberinto(){
     }
 }
 
-vector<int> Laberinto::findEnter() const{
+vector</int><int> Laberinto::findEnter() const{
     //Buscamos la entrada
     bool encontrada = false;
-    vector<int> pos;
+    vector</int><int> pos;
     for(unsigned int i=0; i < (*this).laberinto.size() && !encontrada; i++)
         for(unsigned int j=0; j < (*this).laberinto[i].size() && !encontrada; j++)
             if((*this).laberinto[i][j] == 'e'){
@@ -400,3 +400,4 @@ Asignatura fundamentos de la programación de la Universidad de Granada.
 
 
 {% include toc.html %}
+</int></bool></vector></char></iostream>

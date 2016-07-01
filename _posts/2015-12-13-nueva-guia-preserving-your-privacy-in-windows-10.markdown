@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02"><img src="/assets/img/Preserving-Your-Privacy-in-Windows-102.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02"><img src="/assets/img/Preserving-Your-Privacy-in-Windows-102.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="181px" height="259px" /></a>
 </figure>
 
 Learn how to stop Windows 10 from exporting your personal data.
@@ -32,7 +32,7 @@ You’ll also learn how to tweak them to give you as much privacy as possible.
 A quick, easy read that walks you through the different privacy settings in Windows 10, showing you how to turn them off.
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_wini02" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].

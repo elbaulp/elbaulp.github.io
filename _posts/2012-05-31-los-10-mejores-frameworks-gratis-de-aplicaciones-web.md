@@ -47,123 +47,100 @@ Ahora, exploremos los 10 frameworks en cuestión. Para cada título se ha inclui
 
 
 <!--ad-->
-
 <table class="aligncenter" border="0" cellspacing="0" cellpadding="5">
-  <tr>
-    <td rowspan="1" colspan="2">
+<tr>
+<td rowspan="1" colspan="2">
       Web Application Frameworks
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000539219/RubyonRails.html">Ruby on Rails</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000539219/RubyonRails.html">Ruby on Rails</a>
+</td>
+<td>
       Framework MVC basado en Ruby, orientado al desarrollo de aplicaciones web
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000531497/CodeIgniter.html">CodeIgniter</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000531497/CodeIgniter.html">CodeIgniter</a>
+</td>
+<td>
       Poderoso framework PHP liviano y rápido
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://kohanaframework.org/">Kohana</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://kohanaframework.org/">Kohana</a>
+</td>
+<td>
       Un fork de CodeIgniter, <em>Gracias a Samuel por mencionarlo en los comentarios.</em>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000545879/Django.html">Django</a>
-    </td>
-
-    <td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000545879/Django.html">Django</a>
+</td>
+<td>
       Framework Python que promueve el desarrollo rápido y el diseño limpio
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000252509/CakePHP.html">CakePHP</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000252509/CakePHP.html">CakePHP</a>
+</td>
+<td>
       Framework MVC para PHP de desarrollo rápido
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000536311/ZendFramework.html">Zend Framework</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000536311/ZendFramework.html">Zend Framework</a>
+</td>
+<td>
       Framework para PHP 5, simple, claro y open-source
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/2012052500054269/Yii.html">Yii</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/2012052500054269/Yii.html">Yii</a>
+</td>
+<td>
       Framework PHP de alto rendimiento basado en componentes
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/2012052500055227/Pylons.html">Pylons</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/2012052500055227/Pylons.html">Pylons</a>
+</td>
+<td>
       Framework web para Python que enfatiza la flexibilidad y el desarrollo rápido
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000602635/Catalyst.html">Catalyst</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000602635/Catalyst.html">Catalyst</a>
+</td>
+<td>
       Framework para aplicaciones web MVC elegante
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000534344/Symfony.html">Symfony</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000534344/Symfony.html">Symfony</a>
+</td>
+<td>
       Framework full-stack
     </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a href="http://www.linuxlinks.com/article/20120525000548217/TurboGears.html">TurboGears</a>
-    </td>
-
-    <td>
+</tr>
+<tr>
+<td>
+<a href="http://www.linuxlinks.com/article/20120525000548217/TurboGears.html">TurboGears</a>
+</td>
+<td>
       Próxima generación construido sobre Pylons
     </td>
-  </tr>
+</tr>
 </table>
 
 Fuente: <a href="http://www.linuxlinks.com/article/20120525000054705/ApplicationFrameworks.html" target="_blank">linuxlinks</a>

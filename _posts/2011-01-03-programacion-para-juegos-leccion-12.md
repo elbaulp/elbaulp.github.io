@@ -107,7 +107,7 @@ Enhorabuena, acabas de hacer tu primera aplicación gráfica.
 
 * * *Fuente:
 
-[lazyfoo.net][4]</p>
+[lazyfoo.net][4]
 
 #### Siguiente tema: [Lección 2 &#8211; Superficies Optimizadas][5] {.referencia}
 

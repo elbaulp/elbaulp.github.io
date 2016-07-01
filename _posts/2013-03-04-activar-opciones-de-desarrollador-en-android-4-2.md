@@ -31,7 +31,7 @@ Una vez activado, eché un vistazo a ver qué opciones nuevas había. Activé un
 
 La respuesta concretamente la encontré en el foro de [XDA][2]. Como sabía que el problema lo había causado la opción **Simular pantallas secundarias** bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de *rescate o modo seguro* que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:
 
-<img src="/assets/img/2013/03/Screenshot_2013-03-03-13-48-30.png" alt="Safe Mode in Android o Modo rescate en Android"   />
+<img src="/assets/img/2013/03/Screenshot_2013-03-03-13-48-30.png" alt="Safe Mode in Android o Modo rescate en Android" width="480px" height="800px" />
 
 Una vez en el modo rescate, desactivé la opción y problema resuelto.
 
@@ -39,7 +39,7 @@ Una vez en el modo rescate, desactivé la opción y problema resuelto.
 
 *New built-in developer options* »» <a href="http://developer.android.com/about/versions/jelly-bean.html#42-dev-options" target="_blank">developer.android.com</a>  
 *developer options disappear from settings* »» <a href="http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings" target="_blank">stackOverflow</a>  
-*&#091;Q&#93 Help! Messed with 'Simulate Secondary Display' settings!* »» <a href="http://forum.xda-developers.com/showthread.php?t=2076180" target="_blank">forum.xda-developers</a>
+*&#091;Q&#93; Help! Messed with 'Simulate Secondary Display' settings!* »» <a href="http://forum.xda-developers.com/showthread.php?t=2076180" target="_blank">forum.xda-developers</a>
 
 
 

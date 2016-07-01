@@ -10,7 +10,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress"   />  
+<img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress" width="231px" height="228px" />  
 En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.
 
 
@@ -26,7 +26,7 @@ function show_category_posts( $atts ){
         extract(shortcode_atts(array(
                 'cat'=> ''
         ), $atts));
-        query_posts('cat='.$cat.'&orderby=date&order=ASC&posts_per_page=-1');
+        query_posts('cat='.$cat.'&orderby;=date&order;=ASC&posts;_per_page=-1');
         if ( have_posts() ){
                 $content = '
 
@@ -37,8 +37,8 @@ function show_category_posts( $atts ){
                           $content .= the_title('
 
   <li>
-    <a href="'.get_permalink().'">', '</a>
-  </li>', true);
+<a href="'.get_permalink().'">', '</a>
+</li>', true);
                   }
                   $content .= '
 </ul>';

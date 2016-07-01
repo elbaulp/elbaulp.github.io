@@ -28,12 +28,10 @@ e_sin_alumnos EXCEPTION;
 
 
 <!--ad-->
-
-
 <!--INFOLINKS_ON-->
 
 
-Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción **RAISE <excepción>.**
+Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción **RAISE <excepci>.**
 
 La sintaxis del manejador de excepciones es:<!--INFOLINKS_OFF-->
 
@@ -167,9 +165,8 @@ Las líneas de código debajo del manejador específico se ejecutarán cuando es
 A continuación se muestra una lista de las excepciones automáticas predefinidas por Oracle:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
 </div>
-
 <!--INFOLINKS_OFF-->
 
 * * *
@@ -181,3 +178,4 @@ A continuación se muestra una lista de las excepciones automáticas predefinida
  [1]: https://elbauldelprogramador.com/plsql-cursores/
 
 {% include toc.html %}
+</mensaje></error_num></excepci>

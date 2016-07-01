@@ -27,10 +27,10 @@ El primer paso es declarar la dependencia en el proyecto, en éste caso usando *
 
 ```xml
 <dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.4.4</version>
-  </dependency>
+<groupid>com.fasterxml.jackson.core</groupid>
+<artifactid>jackson-databind</artifactid>
+<version>2.4.4</version>
+</dependency>
 
 ```
 
@@ -225,15 +225,15 @@ Los arrays en json:
 
 ```
 
-Con estos datos, queremos des-serializar el `json` en un `ArrayList` del tipo de clase que sea, en éste caso `ArrayList<Personas` y `ArrayList<Producto>`. La forma **NO** genérica de hacerlo sería:
+Con estos datos, queremos des-serializar el `json` en un `ArrayList` del tipo de clase que sea, en éste caso `ArrayList<personas><producto>`. La forma **NO** genérica de hacerlo sería:
 
 ```java
-ArrayList<Persona> personas = JSON_MAPPER.readValue(new File("personas.json"),
+ArrayList<persona> personas = JSON_MAPPER.readValue(new File("personas.json"),
                     JSON_MAPPER.getTypeFactory().constructCollectionType(ArrayList.class, Persona.class));
 
 // Para productos
 
-ArrayList<Producto> productos = JSON_MAPPER.readValue(new File("productos.json"),
+ArrayList</persona></producto><producto> productos = JSON_MAPPER.readValue(new File("productos.json"),
                     JSON_MAPPER.getTypeFactory().constructCollectionType(ArrayList.class, Producto.class));
 
 ```
@@ -241,13 +241,13 @@ ArrayList<Producto> productos = JSON_MAPPER.readValue(new File("productos.json")
 Ahora bien, si tenemos más modelos, a parte de `Personas` y `Productos`, y normalmente, los `json` se obtienen mediante la *API*, vamos a repetir un montón de código. Podríamos crear un método genérico para mapear `json` a objetos java, como el siguiente:
 
 ```java
-public static <T> List<T> getList(String url, Class<T> clazz) {
+public static <t> List</t><t> getList(String url, Class</t><t> clazz) {
 
    HttpClient client = HttpClientBuilder.create().build();
    HttpGet getRequest = new HttpGet(url);
    getRequest.setHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON);
 
-   List<T> data = null;
+   List</t><t> data = null;
 
    HttpResponse response;
    try {
@@ -266,9 +266,9 @@ public static <T> List<T> getList(String url, Class<T> clazz) {
 
 ```java
 // Para personas
-ArrayList<Persona> personas = getList(URL DE LA API PARA OBTENER PERSONAS, Persona.class);
+ArrayList<persona> personas = getList(URL DE LA API PARA OBTENER PERSONAS, Persona.class);
 // Para productos
-ArrayList<Producto> personas = getList(URL DE LA API PARA OBTENER PRODUCTOS, Producto.class);
+ArrayList</persona></t></producto><producto> personas = getList(URL DE LA API PARA OBTENER PRODUCTOS, Producto.class);
 
 ```
 
@@ -285,3 +285,4 @@ La librería *Jackson* de *fasterXML* ofrece muchísimas más cosas de las vista
  [1]: https://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/ "Buenas prácticas para el Diseño de una API RESTful Pragmática"
 
 {% include toc.html %}
+</producto></personas>

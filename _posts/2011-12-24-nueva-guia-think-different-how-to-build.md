@@ -10,7 +10,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <div style="float:left; margin-right:1em;">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make49/prgm.cgi"><img style="border:none;"  src="https://lh3.googleusercontent.com/-V-wgDMAGwqA/TvUPwxgCeGI/AAAAAAAAB9U/7-7AjtCe7AU/s626/hackintosh1.jpg" title="Think Different: How to Build Your Own Hackintosh" alt="Think Different: How to Build Your Own Hackintosh" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make49/prgm.cgi"><img style="border:none;" src="https://lh3.googleusercontent.com/-V-wgDMAGwqA/TvUPwxgCeGI/AAAAAAAAB9U/7-7AjtCe7AU/s626/hackintosh1.jpg" title="Think Different: How to Build Your Own Hackintosh" alt="Think Different: How to Build Your Own Hackintosh" /></a>
 </div>
 
 Want to try out the Mac operating system, but don’t want to purchase Apple hardware? Check out “Think Different: How to Build Your Own Hackintosh”, the latest guide from MakeUseOf. By author Stefan Neagu, this guide outlines what you need to do in order to build a Hackintosh. Whether you want to try using a computer you already have or buy a pre-built computer for the job, this guide shows you the way.
@@ -35,7 +35,7 @@ Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
 
 
- [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make49/prgm.cgi
+ [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_make49/prgm.cgi
  [2]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 
 {% include toc.html %}

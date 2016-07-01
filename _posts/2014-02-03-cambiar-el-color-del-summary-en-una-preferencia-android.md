@@ -25,47 +25,14 @@ En un artículo anterior vimos [cómo crear un diálogo personalizado en las pre
 Al principio, obtuve el *TextView* que representa el summary, pero cambiarle el color no tenía efecto y se quedaba de color gris. La solución final consistió en crear un propio [layout][2]. Buscando en el código fuente de Android lo encontré en *<a href="https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/layout/preference_child.xml" target="_blank">frameworks/base/core/res/res/layout/preference_child.xml</a>*. A éste recurso hay que quitarle unas cuantas cosas que no nos sirven, quedando así:
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-
-
+<?xml version='1.0' encoding='utf-8'?>
 <!-- Layout for a visually child-like Preference in a PreferenceActivity. -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:baselineAligned="false"
-    android:gravity="center_vertical"
-    android:minHeight="?android:attr/listPreferredItemHeight"
-    android:paddingEnd="?android:attr/scrollbarSize"
-    android:paddingStart="16dip" >
-
-    <RelativeLayout
-        android:layout_width="0dip"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dip"
-        android:layout_marginEnd="6dip"
-        android:layout_marginTop="6dip"
-        android:layout_weight="1" >
-
-        <TextView
-            android:id="@+android:id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+android:id/summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@android:id/title"
-            android:layout_below="@android:id/title"
-            android:maxLines="4"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorSecondary" />
-    </RelativeLayout>
-</LinearLayout>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselinealigned="false" android:gravity="center_vertical" android:minheight="?android:attr/listPreferredItemHeight" android:paddingend="?android:attr/scrollbarSize" android:paddingstart="16dip">
+<relativelayout android:layout_width="0dip" android:layout_height="wrap_content" android:layout_marginbottom="6dip" android:layout_marginend="6dip" android:layout_margintop="6dip" android:layout_weight="1">
+<textview android:id="@+android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ellipsize="marquee" android:fadingedge="horizontal" android:singleline="true" android:textappearance="?android:attr/textAppearanceMedium">
+</textview><textview android:id="@+android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignstart="@android:id/title" android:layout_below="@android:id/title" android:maxlines="4" android:textappearance="?android:attr/textAppearanceSmall" android:textcolor="?android:attr/textColorSecondary">
+</textview></relativelayout>
+</linearlayout>
 
 ```
 
@@ -88,9 +55,9 @@ La definición del c[olor se declara][3] en un archivo dentro de la carpeta *val
 ***./res/values/colors.xml***
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <color name="red">#ff0000</color>
+<color name="red">#ff0000</color>
 </resources>
 
 ```
@@ -116,7 +83,7 @@ if (newValue.toString().length() <= 8) {
 Como se vio en el anterior artículo, `mDialogoPersonalizado` es de tipo `Preference`. Cuando se introduzca una contraseña inferior a 8 caracteres, se mostrará el mensaje como aparece en la imagen:
 
 <figure>
-  <a href="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png"><img src="/assets/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="419px" height="97px" /></a>
 </figure>
 
 

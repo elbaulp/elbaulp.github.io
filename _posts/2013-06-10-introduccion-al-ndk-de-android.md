@@ -35,7 +35,7 @@ static {
 
 ```
 
-No hay que scribir el prefijo “lib” ni el sufijo “.so”.</li>
+No hay que scribir el prefijo “lib” ni el sufijo “.so”.
 
 ### Primer ejemplo en el NDK Android &#8211; Hola Mundo
 
@@ -126,7 +126,7 @@ El primer comando compila y genera el *.apk* y con el segundo lo instalamos en e
 
 Por último, la aplicación es tan simple como esto:
 
-[<img src="/assets/img/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android"   />][2]{.thumbnail}
+[<img src="/assets/img/2013/06/helloJni-NDK-de-android-180x300.png" alt="helloJni NDK de android" width="180px" height="300px" />][2]{.thumbnail}
 
 Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con el NDK de android.
 
@@ -140,3 +140,4 @@ Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con
  [2]: /assets/img/2013/06/helloJni-NDK-de-android.png
 
 {% include toc.html %}
+</jni.h></string.h></nombre>

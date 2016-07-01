@@ -15,7 +15,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio"   />  
+<img src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402px" height="302px" />  
 Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en <a href="http://developer.android.com/sdk/installing/studio.html" target="_blank">developer.android.com</a>. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.
 
 Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos el el fichero *studio.sh*, que se encuentra en la carpeta *bin*. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:  
@@ -45,7 +45,7 @@ sudo apt-get install oracle-java7-set-default
 
 Con esto ya deberíamos tener listo el JDK, lanzamos Android Studio y veremos algo como esto:
 
-[<img src="/assets/img/2013/05/AndroidStudioIDE-1024x734.png" alt="AndroidStudioIDE"   />][3]{.thumbnail}
+[<img src="/assets/img/2013/05/AndroidStudioIDE-1024x734.png" alt="AndroidStudioIDE" width="1024px" height="734px" />][3]{.thumbnail}
 
 ### Exportar proyectos de eclipse e importarlos Android Studio
 
@@ -66,172 +66,143 @@ La estructura de los proyectos ha cambiado respecto a como [estaba organizado en
 
 Algunas de las características nuevas de este IDE es la posiblidad de visualizar cómo se verá nuestra aplicación en distintos dispositivos, para ello abrimos un archivo de *layout*, abajo hay una pestaña llamada *text*, la seleccionamos y podremos editar el archivo manualmente. A la derecha hay otra pestaña llamada *Preview*, la abrimos y veremos algo como esto:
 
-[<img src="/assets/img/2013/05/LayoutPreviewAndroidStudio-1024x733.png" alt="LayoutPreviewAndroidStudio"   />][6]{.thumbnail}
+[<img src="/assets/img/2013/05/LayoutPreviewAndroidStudio-1024x733.png" alt="LayoutPreviewAndroidStudio" width="1024px" height="733px" />][6]{.thumbnail}
 
 También es posible visualizar la interfaz de la aplicación para distintas APIs, la anterior era para la API 17, esta para a 10:
 
-[<img src="/assets/img/2013/05/AndroidStudioPreviewAPI10-1024x735.png" alt="AndroidStudioPreviewAPI10"   />][7]{.thumbnail}
+[<img src="/assets/img/2013/05/AndroidStudioPreviewAPI10-1024x735.png" alt="AndroidStudioPreviewAPI10" width="1024px" height="735px" />][7]{.thumbnail}
 
 De igual modo, podemos seleccionar qué idioma mostrar en la interfaz para asegurarnos de que la aplicación se verá bien en todos los idiomas.
 
 Otra de las características que resulta de lo más cómoda es mostrar las cadenas de texto que escribimos en el código mediante `R.string.`, dejando el ratón encima del texto veremos el identificadorL:
 
-[<img src="/assets/img/2013/05/Screenshot-from-2013-05-16-121607-1024x735.png" alt="Mostrar cadenas de Texto AndroidStudio"   />][8]{.thumbnail}
+[<img src="/assets/img/2013/05/Screenshot-from-2013-05-16-121607-1024x735.png" alt="Mostrar cadenas de Texto AndroidStudio" width="1024px" height="735px" />][8]{.thumbnail}
 
 Para terminar os dejo unas cuantas combinaciones de teclas para ahorrar tiempo al programar:
 
 <table>
-  <tr>
-    <th>
+<tr>
+<th>
       Action
     </th>
-
-    <th>
+<th>
       Android Studio Key Command
     </th>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Command look-up (autocomplete command name)
     </td>
-
-    <td>
+<td>
       CTRL + SHIFT + A
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Project quick fix
     </td>
-
-    <td>
+<td>
       ALT + ENTER
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Reformat code
     </td>
-
-    <td>
+<td>
       CTRL + ALT + L (Win)<br /> OPTION + CMD + L (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Show docs for selected API
     </td>
-
-    <td>
+<td>
       CTRL + Q (Win)<br /> F1 (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Show parameters for selected method
     </td>
-
-    <td>
+<td>
       CTRL + P
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Generate method
     </td>
-
-    <td>
+<td>
       ALT + Insert (Win)<br /> CMD + N (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Jump to source
     </td>
-
-    <td>
+<td>
       F4 (Win)<br /> CMD + down-arrow (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Delete line
     </td>
-
-    <td>
+<td>
       CTRL + Y (Win)<br /> CMD + Backspace (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Search by symbol name
     </td>
-
-    <td>
+<td>
       CTRL + ALT + SHIFT + N (Win)<br /> OPTION + CMD + O (Mac)
     </td>
-  </tr>
+</tr>
 </table>
-
 <table>
-  <tr>
-    <th>
+<tr>
+<th>
       Action
     </th>
-
-    <th>
+<th>
       Android Studio Key Command
     </th>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Build
     </td>
-
-    <td>
+<td>
       CTRL + F9 (Win)<br /> CMD + F9 (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Build and run
     </td>
-
-    <td>
+<td>
       SHIFT + F10 (Win)<br /> CTRL + R (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Toggle project visibility
     </td>
-
-    <td>
+<td>
       ALT + 1 (Win)<br /> CMD + 1 (Mac)
     </td>
-  </tr>
-
-  <tr>
-    <td>
+</tr>
+<tr>
+<td>
       Navigate open tabs
     </td>
-
-    <td>
+<td>
       ALT + left-arrow; ALT + right-arrow (Win)<br /> CTRL + left-arrow; CTRL + right-arrow (Mac)
     </td>
-  </tr>
+</tr>
 </table>
 
 ### Conclusiones

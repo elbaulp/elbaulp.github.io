@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><img src="/assets/img/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><img src="/assets/img/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" /></a>
 </figure>
 
 {% include toc.html %}
@@ -28,7 +28,7 @@ This new report will help you learn more about hackers and how they work, which 
 - How HPE Security Research provides actionable security intelligence that can help make your organization safer
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].

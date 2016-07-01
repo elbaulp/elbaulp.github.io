@@ -23,7 +23,7 @@ Visita la página [Manuales gratuitos][4] para ver las guías disponibles
 
 
  [1]: http://img.tradepub.com/free/w_visi32/assets/img/w_visi32c.gif "Agrupación En Clústeres Multisitio de Windows Server"
- [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_visi32/prgm.cgi
+ [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_visi32/prgm.cgi
  [3]: http://lh5.googleusercontent.com/-3xNROQvUyLw/Tez0xVWLW1I/AAAAAAAAAkc/3Gx7eUaLwxU/s288/descargar.png
  [4]: http://bashyc.blogspot.com/p/guias-gratuitas.html
 

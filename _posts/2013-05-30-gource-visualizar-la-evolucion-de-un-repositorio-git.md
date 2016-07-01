@@ -41,7 +41,7 @@ gource /ruta/a/.git
 El resultado es algo como esto:
 
 <figure>
-  <a href="/assets/img/2013/05/gourceGit-1024x804.png"><img src="/assets/img/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/05/gourceGit-1024x804.png"><img src="/assets/img/2013/05/gourceGit-1024x804.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="804px" /></a>
 </figure>
 
 Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.
@@ -68,7 +68,7 @@ Donde:
 A continuación os dejo un vídeo de uno de mis repositorios:
 
 <figure>
-  <iframe  src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 </figure>
 
  [1]: https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"

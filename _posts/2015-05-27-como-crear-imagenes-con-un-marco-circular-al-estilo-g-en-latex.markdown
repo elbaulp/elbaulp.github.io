@@ -49,7 +49,7 @@ Donde:
 Tras compilar el código, el resultado es el siguiente:
 
 <figure>
-  <img src="/assets/img/Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg" title="{{ page.title }}" alt="{{ page.title }}" />
+<img src="/assets/img/Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="558px" height="559px" />
 </figure>
 
 ### Referencias

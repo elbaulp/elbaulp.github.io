@@ -29,17 +29,16 @@ _Enunciado: se facilitarán las coordenadas de una serie de puntos GPS (latitud/
 En esta aplicación se lee un destino mediante códigos QR, tras esto, se puede iniciar la navegación con _Google Maps_ (Usando la librería [Android-GoogleDirectionLibrary](https://github.com/akexorcist/Android-GoogleDirectionLibrary)). En la aplicación se muestran dos mapas. En el de abajo aparece el destino al que debemos llegar, además, se va dibujando un camino por el que el usuario va pasando. En el mapa de arriba se ve el mapa desde el punto de vista _StreetView_. Veamos la aplicación:
 
 <figure>
-  <a href="/assets/img/npi/gpsQr.png"><img src="/assets/img/npi/gpsQr.png" title="GPSQR" alt="GPSQR" /></a>
-  <span class="image-credit">GPSQR</span>
+<a href="/assets/img/npi/gpsQr.png"><img src="/assets/img/npi/gpsQr.png" title="GPSQR" alt="GPSQR" width="338px" height="600px" /></a>
+<span class="image-credit">GPSQR</span>
 </figure>
-
 <!--ad-->
 
 El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que usa una simplificación de la librería _Zxing_. Cuando se escanea una localización, veremos lo siguiente:
 
 <figure>
-  <a href="/assets/img/npi/gqsqr_read.png"><img src="/assets/img/npi/gqsqr_read.png" title="Codigo QR leido con el destino" alt="Codigo QR leido con el destino" /></a>
-  <span class="image-credit">Codigo QR leido con el destino</span>
+<a href="/assets/img/npi/gqsqr_read.png"><img src="/assets/img/npi/gqsqr_read.png" title="Codigo QR leido con el destino" alt="Codigo QR leido con el destino" width="360px" height="600px" /></a>
+<span class="image-credit">Codigo QR leido con el destino</span>
 </figure>
 
 Una vez leido el QR, solo resta pulsar el marcador rojo para iniciar la navegación con _Google Maps_. La ruta calculada por la _API_ de _Google_ es la azul, mientras que la ruta real tomada por el usuario aparecerá en rojo.
@@ -142,10 +141,10 @@ Por último para que el Servicio funcione debemos registrarlo en el _Manifest_ a
 
 ```xml
 <application>
-  <!--//....-->
-  <service android:name=".LocationUpdaterService"/>
-  <!--//....-->
-</application>
+<!--//....-->
+<service android:name=".LocationUpdaterService">
+<!--//....-->
+</service></application>
 ```
 
 #### Clase MapsActivity.java
@@ -242,7 +241,7 @@ GoogleDirection.withServerKey(getString(R.string.google_maps_server_key))
             public void onDirectionSuccess(Direction direction) {
                 if (direction.isOK()) {
                     Toast.makeText(getApplicationContext(), "DIRECTION KOK", Toast.LENGTH_LONG).show();
-                    ArrayList<LatLng> directionPositionList = direction.getRouteList().get(0).getLegList().get(0).getDirectionPoint();
+                    ArrayList<latlng> directionPositionList = direction.getRouteList().get(0).getLegList().get(0).getDirectionPoint();
                     PolylineOptions polylineOptions = DirectionConverter.createPolyline(getApplicationContext(), directionPositionList, 5, Color.BLUE);
                     mMap.addPolyline(polylineOptions);
                 } else {
@@ -260,7 +259,7 @@ GoogleDirection.withServerKey(getString(R.string.google_maps_server_key))
 ##### Permisos requeridos para el AndroidManifest
 
 ```xml
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
 ```
 
 ### Referencias y agradecimientos
@@ -272,3 +271,4 @@ GoogleDirection.withServerKey(getString(R.string.google_maps_server_key))
 - [gist.github.com/blackcj](https://gist.github.com/blackcj/20efe2ac885c7297a676#gistcomment-1666537)
 - [github.com/googlemaps/android-samples](https://github.com/googlemaps/android-samples "Ejemplos de google Maps de Google")
 - [Icono QR](http://www.iconarchive.com/show/windows-8-icons-by-icons8/Ecommerce-Qr-Code-icon.html)
+</uses-permission></latlng>

@@ -12,7 +12,7 @@ color: "#f05033"
 ---
 
 <figure>
-  <img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" />
+<img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
 </figure>
 
 En el anterior artículo, hablamos sobre [cómo sincronizar dos repositorios en git](/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/), también se vio algo de _hooks_.

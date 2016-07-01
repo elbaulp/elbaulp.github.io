@@ -22,7 +22,7 @@ Informalmente se define como G = (V, E), siendo los elementos de V los vértices
 Existen diferentes implementaciones del tipo grafo: con una matriz de adyacencias (forma acotada) y con listas y multilistas de adyacencia (no acotadas).  
 Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo, siendo los elementos de la matriz la relación entre los mismos, tomando los valores de 1 si existe la arista y 0 en caso contrario.
 
-[<img src="/assets/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia"   />][1]{.thumbnail}  
+[<img src="/assets/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia" width="546px" height="232px" />][1]{.thumbnail}  
 
 <!--ad-->
 
@@ -39,7 +39,7 @@ Para solucionar este problema, los tres algoritmos mas conocidos son:
 
 El **algoritmo de Dijkstra** consiste en ir explorando todos los caminos más cortos que parten del vértice origen y que llevan a todos los demás vértices; cuando se obtiene el camino más corto desde el vértice origen, al resto de vértices que componen el grafo, el algoritmo se detiene.
 
-[<img src="/assets/img/2012/10/Caminosmascortos1.jpg" alt="" title="Caminosmascortos"   />][2]{.thumbnail}
+[<img src="/assets/img/2012/10/Caminosmascortos1.jpg" alt="" title="Caminosmascortos" width="744px" height="500px" />][2]{.thumbnail}
 
 #### Algoritmo de Dijkstra
 
@@ -155,15 +155,12 @@ Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para 
 <p style="text-align: center">
   F(n)= g(n) + h(n)
 </p>
-
 <p style="text-align: left">
   Ya que la g(n) nos da el coste del camino desde el nodo inicio al nodo n, y la h(n) el coste estimado del camino más barato desde n al objetivo, tenemos:
 </p>
-
 <p style="text-align: center">
   F(n) = coste ms barato estimado de la solución a tráves de n.
 </p>
-
 <p style="text-align: left">
   Así, si tratamos de encontrar la solución mas barata, es razonable intentar primero el nodo con el valor más bajo de g(n) + h(n). Resulta que esta estrategia es más que razonable: con tal de que la función heurística h(n) satisfaga ciertas condiciones, la búsqueda A* es tanto completa como óptima.
 </p>
@@ -174,3 +171,4 @@ Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para 
  [2]: /assets/img/2012/10/Caminosmascortos1.jpg
 
 {% include toc.html %}
+</distancia></vertice></fstream></string.h>

@@ -26,7 +26,7 @@ Como en el primer turorial, [Programación para Juegos &#8211; Lección 1 &#8211
 
 * * *Fuente:
 
-[lazyfoo.net][5]</p>
+[lazyfoo.net][5]
 
 #### Siguiente tema: [Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos][6] {.referencia}
 

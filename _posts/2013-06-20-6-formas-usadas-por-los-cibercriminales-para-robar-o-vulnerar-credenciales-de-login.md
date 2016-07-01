@@ -22,7 +22,7 @@ description: "El mundo digital es un vecindario muy peligroso lleno de atacantes
 main-class: "articulos"
 color: "#F57C00"
 ---
-<img src="/assets/img/2013/06/blog_sevenways.png" alt="7 formas usadas por cibercriminales para robar o vulnerar credenciales de login"   />
+<img src="/assets/img/2013/06/blog_sevenways.png" alt="7 formas usadas por cibercriminales para robar o vulnerar credenciales de login" width="700px" height="350px" />
 
 El mundo digital es un vecindario muy peligroso lleno de atacantes listos para robar los datos más personales e importantes para los negocios. A estas alturas deberíamos saber que la ”*[seguridad][1]*” significa algo más que disponer de una contraseña única y larga. Para entender cómo proteger nuestros datos y cuentas, en *duosecurity* han hecho una recopilación de las formas más comunes que usan los atacantes para robar datos ajenos en la red.  
 

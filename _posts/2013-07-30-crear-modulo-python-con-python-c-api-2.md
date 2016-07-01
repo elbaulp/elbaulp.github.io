@@ -24,7 +24,7 @@ color: "#E64A19"
 * [Crear un módulo para python con la Python C API (V) – Python 3][4]
 
 <figure>
-  <a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" width="201px" height="190px" /></a>
 </figure>
 
 Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*.  
@@ -43,7 +43,7 @@ El módulo consistirá en una función llamada *saluda()* que recibirá una cade
 Empecemos mostrando el código e iremos explicándolo a lo largo del artículo:
 
 ```c
-#include <Python.h>
+#include <python.h>
 
 static PyObject*
 ejemplo_saluda(PyObject *self, PyObject *args)
@@ -51,7 +51,7 @@ ejemplo_saluda(PyObject *self, PyObject *args)
     char saludo[64];
     char *nombre = NULL;
 
-    if (PyArg_ParseTuple(args, "s", &nombre))
+    if (PyArg_ParseTuple(args, "s", &nombre;))
     {
         if (strlen(nombre) + 29 < 64 ){
             sprintf(saludo, "Hola %s desde la Python C API!", nombre);
@@ -101,7 +101,7 @@ Los principales valores que se pueden usar como plantilla son los siguientes (La
 Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo »», por ejemplo:
 
 ```c
-PyArg_ParseTuple(args, "|s", &nombre);
+PyArg_ParseTuple(args, "|s", &nombre;);
 
 ```
 
@@ -191,3 +191,4 @@ Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el pr
  [5]: https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/ "Compilación de programas: makefile y g++"
 
 {% include toc.html %}
+</python.h>

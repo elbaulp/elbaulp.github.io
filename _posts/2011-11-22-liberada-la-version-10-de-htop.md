@@ -13,7 +13,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="" id="logo" name="sh" class="icono" /></a>
 </div>
 
 Si monitorizáis el estado de vuestros sistemas con [Linux][1] probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.
@@ -25,7 +25,7 @@ El autor explica en la página del proyecto las mejoras de esta nueva versión:
 
 <!--ad-->
 
-***</p>
+***
 
 I am extremely happy to announce htop 1.0!
 
@@ -44,7 +44,6 @@ numbers are more symbolic than anything, but the stability of htop 0.9
 in the past year and the cool new features introduced in this release  
 compelled me to call this version 1.0. We all deserve this little  
 &#8220;achievement&#8221;. <img src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
-
 <li class="x">
   Performance improvements
 </li>
@@ -88,7 +87,6 @@ compelled me to call this version 1.0. We all deserve this little
   BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths<br /> (patch by Sebastian Pipping)
 </li>
 
-</i></b>
 
 Que traduzco a continuación:
 
@@ -104,7 +102,7 @@ sudo aptitude install htop
 Al ejecutarlo veremos algo parecido a lo siguiente:
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="linux htop" border="0" height="320" width="400" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
+<a href="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="linux htop" border="0" height="320" width="400" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
 </div>
 
 Vía <a target="_blank" href="http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/">MuyLinux</a>

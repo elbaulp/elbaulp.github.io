@@ -22,9 +22,8 @@ Primero entramos en [paper.li][1], nos registramos y clicamos en **Create a pape
 
 
 <!--ad-->
-
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s1600/paper.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="259" width="400" src="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s400/paper.png" /></a>
+<a href="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s1600/paper.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="259" width="400" src="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s400/paper.png" /></a>
 </div>
 
 Hay variar formas de agregar contenido al periódico:
@@ -37,12 +36,12 @@ La primera, **Single Twitter user**: Publicaremos todo lo que el usuario de twit
 
 **Keywords on Twitter**, igual que las dos primeras, pero en este caso de cualquier usuario en twitter.
 
-**Keywords on Facebook**, igua que la de arriba pero en facebook.</p>
+**Keywords on Facebook**, igua que la de arriba pero en facebook.
 
 Por último os dejo una captura del periódico que cree, y la dirección, [Bashyc Paper][3]
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s1600/peperbashyc.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="343" width="400" src="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s400/peperbashyc.png" /></a>
+<a href="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s1600/peperbashyc.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="343" width="400" src="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s400/peperbashyc.png" /></a>
 </div>
 
 

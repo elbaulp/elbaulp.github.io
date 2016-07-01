@@ -12,7 +12,7 @@ color: "#D32F2F"
 ---
 
 <figure>
-  <a href="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><img src="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><img src="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="336px" height="285px" /></a>
 </figure>
 
 {% include toc.html %}
@@ -32,7 +32,7 @@ _Enunciado: se debe identificar mediante interfaz vocal un punto cardinal (Norte
 
 Empecemos con un video de la aplicación funcionando:
 
-<iframe  src="https://www.youtube-nocookie.com/embed/PSAfGnKJN0M" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/PSAfGnKJN0M" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 
 Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MIUI. Se le ha añadido el reconocimiento de voz (_ASR_) y se modificó la la interfaz de la brújula para que mostrara hacia donde tiene que dirigirse el usuario en función del comando de voz. Veamos la primera pantalla:
@@ -42,24 +42,24 @@ Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MI
 ## Inicio de la aplicación
 
 <figure>
-  <a href="/assets/img/npi/inicioBrujula.png"><img src="/assets/img/npi/inicioBrujula.png" title="Primera pantalla de la aplicación brújula" alt="Primera pantalla de la aplicación brújula" /></a>
-  <span class="image-credit">Primera pantalla de la aplicación brújula</span>
+<a href="/assets/img/npi/inicioBrujula.png"><img src="/assets/img/npi/inicioBrujula.png" title="Primera pantalla de la aplicación brújula" alt="Primera pantalla de la aplicación brújula" width="338px" height="600px" /></a>
+<span class="image-credit">Primera pantalla de la aplicación brújula</span>
 </figure>
 
 
 Al mostrarse esta pantalla, el usuario debe proporcionar un comando de voz, por ejemplo _“Norte 10”_. Tras dar el comando, en la brujula se añadirá un marcador indicando dónde está el Norte + 10 grados. Además de esto, mediante una voz, se le irá indicando al usuario si debe girar a la derecha/izquierda o va en la dirección correcta:
 
 <figure>
-  <a href="/assets/img/npi/norte10.png"><img src="/assets/img/npi/norte10.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" /></a>
-  <span class="image-credit">Indicaciones en la brujula</span>
+<a href="/assets/img/npi/norte10.png"><img src="/assets/img/npi/norte10.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" width="338px" height="600px" /></a>
+<span class="image-credit">Indicaciones en la brujula</span>
 </figure>
 
 
 Como vemos en la imagen, aparece un indicador rojo situado en el norte + 10 grados. Veamos otro ejemplo, Norte 45:
 
 <figure>
-  <a href="/assets/img/npi/norte45.png"><img src="/assets/img/npi/norte45.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" /></a>
-  <span class="image-credit">Indicaciones en la brujula</span>
+<a href="/assets/img/npi/norte45.png"><img src="/assets/img/npi/norte45.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" width="338px" height="600px" /></a>
+<span class="image-credit">Indicaciones en la brujula</span>
 </figure>
 
 
@@ -210,7 +210,7 @@ Una vez que el usuario habla, se recoge el resultado en el `onActivityResult` y 
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (requestCode == REQUEST_RECOGNIZE &&
             resultCode == Activity.RESULT_OK) {
-        ArrayList<String> matches =
+        ArrayList<string> matches =
                 data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
         String[] tokens = matches.get(0).split(" ");
@@ -319,13 +319,14 @@ que se encargan de rotar la brújula cada vez que se llama al método `updateDir
 ## Permisos requeridos para el AndroidManifest
 
 ```xml
-<uses-permission android:name="android.permission.VIBRATE"/>
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission><uses-permission android:name="android.permission.INTERNET">
+</uses-permission><uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
 ```
 
 ## Referencias
 
 - Comass de MIUI \| [github.com/MiCode](https://github.com/MiCode/Compass "Código en github")
-- Pro Android 5 \| [amazon.es](http://www.amazon.es/gp/product/1430246804/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1430246804&linkCode=as2&tag=bmab-21 "Ver libro en Amazon")
+- Pro Android 5 \| [amazon.es](http://www.amazon.es/gp/product/1430246804/ref=as_li_ss_tl?ie=UTF8&camp;=3626&creative;=24822&creativeASIN;=1430246804&linkCode;=as2&tag;=bmab-21 "Ver libro en Amazon")
 - Código de la aplicación \| [github.com/algui91/BrujulaCompass](https://github.com/algui91/grado_informatica_npi/tree/master/Android/BrujulaCompass "Código en Github para BrujulaCompass")
+</uses-permission></string>

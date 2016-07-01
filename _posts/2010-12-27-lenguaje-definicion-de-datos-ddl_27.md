@@ -61,7 +61,7 @@ Ejemplos:
 ```sql
 SELECT SYSDATE "Fecha actual" FROM DUAL;
 SELECT USER FROM DUAL;
--- usando ROWNUM < 10 limitamos el número de filas devueltas a 10</span>
+-- usando ROWNUM < 10 limitamos el número de filas devueltas a 10
 SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;
 ```
 

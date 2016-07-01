@@ -25,7 +25,7 @@ color: "#E64A19"
 * Crear un módulo para python con la Python C API (V) – Python 3
 
 <figure>
-  <a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><img src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" width="201px" height="190px" /></a>
 </figure>
 
 Este es el último artículo de esta serie de 5 sobre cómo crear un módulo con la Python C API. Para terminar, veremos la forma de hacer compatible un módulo con **Python 3**. Nos basaremos en el módulo **herramientasRed** que hemos creado en la parte 3.
@@ -37,11 +37,11 @@ El proceso de compatibilidad se realiza mediante varios *#define* y macros en C 
 ### Código fuente compatible con Python 3
 
 ```c
-#include <Python.h>
+#include <python.h>
 #include <string.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
+#include <sys>socket.h>
+#include <netinet</sys>in.h>
+#include <arpa>inet.h>
 
 #include <netdb.h>
 
@@ -93,7 +93,7 @@ herramientasRed_imprimeIP(PyObject *self, PyObject *args)
 static
 PyMethodDef herramientasRed_methods[] = {
     {"imprimeIP", herramientasRed_imprimeIP, METH_VARARGS, "Documentación del módulo ejemplo"},
-    {NULL, NULL, 0, NULL}, /* Sentinel */
+    {NULL, NULL, 0, NULL}, </arpa>* Sentinel */
 };
 
 #if PY_MAJOR_VERSION >= 3
@@ -133,7 +133,7 @@ initherramientasRed(void)
 #endif
 {
 #if PY_MAJOR_VERSION >= 3
-    PyObject *module = PyModule_Create(&moduledef);
+    PyObject *module = PyModule_Create(&moduledef;);
 #else
     PyObject *module = Py_InitModule("herramientasRed", herramientasRed_methods);
 #endif
@@ -232,3 +232,4 @@ Eso es todo, espero que os hayan gustado estos cinco artículos sobre **cómo cr
  [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
 
 {% include toc.html %}
+</ip></string.h></python.h>

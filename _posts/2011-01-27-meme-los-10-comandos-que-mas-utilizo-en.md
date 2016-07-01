@@ -25,7 +25,7 @@ en nuestro terminal para saber cuales son los comandos que más usamos en linux,
 
 Invito a participar en el meme a:
 
-<a target="_blank" href="http://usemoslinux.blogspot.com/">Usemos Linux</a>  
+<a target="_blank" href="http://usemoslinux.blogspot.com/">Usemos Linux</a>
 <a target="_blank" href="http://www.nosolounix.com/">No solo Unix</a>
 
 Aqui mi salida del comando de mi PC de sobremesa:

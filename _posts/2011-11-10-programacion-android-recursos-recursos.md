@@ -64,7 +64,7 @@ Con los clasificadores mostrados arriba, podemos crear directorios de recursos c
 Para saber nuestra localización actual podemos ejecutar una aplicación que viene instalada en el emulador android. La encontramos en el menú de aplicaciones y se llama Custom Locale.
 
 <div class="separator" style="clear: both; text-align: center;">
-  <a href="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="243" src="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s400/Screenshot.png" /></a>
+<a href="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="243" src="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s400/Screenshot.png" /></a>
 </div>
 
 Dado un ID de recurso, Android usa un algoritmo para elegir el adecuado. Si deseas saber más acerca de este tema puedes visitar la siguiente dirección <a target="_blank" href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources">http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources</a>, pero voy a dar unas reglas básicas.
@@ -95,18 +95,18 @@ El siguiente código muestra las variaciones del directorio values:
 ```xml
 // values/string.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
-   <string name="teststring_all">teststring in root</string>
-   <string name="t1_enport">t1 in root</string>
-   <string name="t1_1_en_port">t1_1 in root</string>
-   <string name="t2">t2 in root</string>
-   <string name="testport_port">testport in root</string>
+<string name="teststring_all">teststring in root</string>
+<string name="t1_enport">t1 in root</string>
+<string name="t1_1_en_port">t1_1 in root</string>
+<string name="t2">t2 in root</string>
+<string name="testport_port">testport in root</string>
 </resources>
 
 // values-en/string_en.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
- <string name="teststring_all">teststring-en</string>
- <string name="t1_enport">t1_en</string>
- <string name="t1_1_en_port">t1_1_en</string>
+<string name="teststring_all">teststring-en</string>
+<string name="t1_enport">t1_en</string>
+<string name="t1_1_en_port">t1_1_en</string>
 </resources>
 
 // values-en-rUS/string_en_us.xml
@@ -116,16 +116,16 @@ El siguiente código muestra las variaciones del directorio values:
 
 // values-port/string_port.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
- <string name="teststring_all">test-en-us-port</string>
- <string name="testport_port">testport-port</string>
- <string name="t1_enport">t1_port</string>
- <string name="t1_1_en_port">t1_1_port</string>
+<string name="teststring_all">test-en-us-port</string>
+<string name="testport_port">testport-port</string>
+<string name="t1_enport">t1_port</string>
+<string name="t1_1_en_port">t1_1_port</string>
 </resources>
 
 // values/string_en_port.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
- <string name="teststring_all">test-en-port</string>
- <string name="t1_1_en_port">t1_1_en_port</string>
+<string name="teststring_all">test-en-port</string>
+<string name="t1_1_en_port">t1_1_en_port</string>
 </resources>
 
 ```

@@ -49,8 +49,8 @@ static void burbuja_lims(int T[], int inicial, int final)
 El ordenamiento por **inserción** técnicamente es la forma mas lógica de ordenar cualquier cosa para un humano, por ejemplo, una baraja de cartas. Requiere O(n²).
 
 <div>
-  <div>
-    Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.</p>
+<div>
+    Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.
 
     ```cpp
 
@@ -72,10 +72,8 @@ static void insercion_lims(int T[], int inicial, int final)
 ```
   </div>
 </div>
-
 <div>
 </div>
-
 <div>
   Por último,<strong> el ordenamiento por selección</strong>: Al igual que el algoritmo de inserción es muy trivial, puesto que recorre el vector o la lista, buscando el elemento mas pequeño y colocandolo en la posición 0 del vector, y así sucesivamente n-1 veces, tanto de grande como sea el vector. Al igual que los algoritmos anteriores, requiere O(n²) .
 </div>
@@ -103,43 +101,38 @@ static void seleccion_lims(int T[], int inicial, int final)
 
 <div>
 </div>
-
 <div>
   Ahora vamos a hablar de los rápidos que son los mas interesantes:
 </div>
-
 <div>
-  <ol>
-    <li>
+<ol>
+<li>
       Algoritmo mergesort ( ordenación por mezcla).
     </li>
-    <li>
+<li>
       Algoritmo Quicksort (ordenación rápida).
     </li>
-    <li>
+<li>
       Algoritmo Heapsort (ordenación por montículo).
     </li>
-    <li>
+<li>
       Algoritmo Shellsort.
     </li>
-  </ol>
-
-  <p>
+</ol>
+<p>
     Todos estos muy interesantes en cuanto la implementación y a la idea de organizar un vector, pero me voy a centrar en el algoritmo <strong>mergesort</strong> y en el <strong>quicksort</strong>, que se basan en la técnica divide y vencerás, para quien lo sepa, esta técnica es de las mas famosas en cuanto a multiplicación de matrices puesto que la reduce de un n^3 a un n^2,78. Se basa en coger un problema <strong>P</strong> y dividirlo en subproblemas y resolver estos sin solapamientos, y luego recursivamente unirlos para formar la solución del problema original.
   </p>
-
-  <p>
+<p>
     El algoritmo<strong> mergesort</strong> se basa en esta técnica, con lo cual si n=1, ya esta ordenado, pero si n>1, partimos el vector de elementos en dos o mas subcolecciones, ordenamos cada uno de ellaos y luego la unimos en un solo vector ordenado, es de orden O(n log n) . Pero, ¿ cómo hacemos la partición?
   </p>
-
-  <ol>
-    <li>
+<ol>
+<li>
       Método 1: Primeros n-1 elementos en un conjunto A, y último en B, ordenar A utilizando el esquema de división recursivamente, y B ya esta ordenado, combinar A y B con un método inserta().
     </li>
-    <li>
+<li>
       Método 2: Intentamos repartir los elementos de forma equitativa entre los dos conjuntos, A toma <strong>n/k </strong>y B las sobrantes , ordenamos A y B recursivamente, y por último combinamos A y B utilizando el proceso de mezcla que combina dos listas en una.
     </li>
-  </ol>
+</ol>
 
   ```cpp
 
@@ -177,17 +170,15 @@ static void mergesort_lims(int T[], int inicial, int final)
   <p>
     El algoritmo <strong>quicksort </strong>ordena un vector <strong>V</strong> eligiendo entre sus elementos un valor clave <strong>P </strong>que actúa como pivote, organiza tres secciones, izquierda-P-derecha, todos los elementos a la izquierda deberán ser menores a P, y los de la derecha mayores, los ordena sin tener que hacer ningún tipo de mezcla para combinarlos, ¿cómo elegimos el pivote?.
   </p>
-
-  <ol>
-    <li>
+<ol>
+<li>
       Método 1: Lo ideal sería que el pivote fuera la mediana del vector para que las partes izquierda y derecha tuvieran el mismo tamaño.
     </li>
-    <li>
+<li>
       Método 2: recorremos el vector con un indice <strong>i</strong> desde 0 a n-1, y otro indice <strong>j</strong> inversamente y cuando se crucen, es decir, tenga el mismo valor, ese se seleccionara como pivote.
     </li>
-  </ol>
-
-  <p>
+</ol>
+<p>
     &nbsp;
   </p>
 

@@ -12,7 +12,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <figure>
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img src="/assets/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><img src="/assets/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="175px" height="259px" /></a>
 </figure>
 
 Kick-start your Bootstrap projects with these hot recipes!
@@ -26,7 +26,7 @@ In this ebook, we provide a compilation of Bootstrap based examples that will he
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Web Code Geeks.
 
 <div class="button-post">
-  <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05" target="_blank">Descárgala ahora</a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05" target="_blank">Descárgala ahora</a>
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
