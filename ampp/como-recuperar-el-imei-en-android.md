@@ -1,23 +1,24 @@
 ---
 title: Cómo recuperar el IMEI en Android
-
 layout: post.amp
-
 categories:
   - Articulos
 tags:
   - imei android
   - imei perdido
   - perdi imei android
+  - como recuperar imei
   - recuperar imei android
+  - recuperar imei samsung
   - recuperar imei android
   - restaurar imei android
+  - perdi mi imei android
   - como recuperar el imei android
   - como restaurar el imei android
   - recuperar imei
   - como restaurar el imei de un celular
   - como recuperar el imei de mi android
-description: "Éste artículo pretende ser una guía para todo aquel que ha perdido el **imei** de su teléfono y no puede acceder a la red telefónica. Y como referencia para mí, que he perdido el **imei** dos veces. Veremos cómo recuperar el IMEI del teléfono mediante dos métodos. Antes de realizar alguno de ellos, HAZLO BAJO TU RESPONSABILIDAD."
+description: "Éste artículo pretende ser una guía para todo aquel que ha perdido el imei de su teléfono y no puede acceder a la red telefónica. Y como referencia para mí, que he perdido el imei dos veces. Veremos cómo recuperar el IMEI del teléfono mediante dos métodos. Antes de realizar alguno de ellos, HAZLO BAJO TU RESPONSABILIDAD."
 modified: 2015-12-22T10:44:00+00:00
 main-class: "articulos"
 color: "#F57C00"
@@ -25,17 +26,17 @@ color: "#F57C00"
 
 Éste artículo pretende ser una guía para todo aquel que ha perdido el **imei** de su teléfono y no puede acceder a la red telefónica. Y como referencia para mí, que he perdido el **imei** dos veces. Veremos cómo recuperar el IMEI del teléfono mediante dos métodos. Antes de realizar alguno de ellos, <span class="highlight style-1">HAZLO BAJO TU RESPONSABILIDAD</span>.
 
+<!--ad-->
+
 ## Posibles causas
 
 Desde mi experiencia, la pérdida del **imei** ocurre al instalar una ROM no compatible, kernel o recovery, que corrompe la carpeta **/efs** del sistema. Se explicarán dos posibles soluciones a éste problema. Las dos las he probado yo mismo y me han servido para conseguir hacer funcionar de nuevo el teléfono. En mi caso, un **Samsung Galaxy S2 (I9100)**.
 
 ## Requisitos
 
-  * Teléfono [rooteado][1]
-  * Un explorador Root
-  * El [SDK de Android][2]
-
-<!--ad-->
+* Teléfono [rooteado][1]
+* Un explorador Root
+* El [SDK de Android][2]
 
 # Recuperar el IMEI en Android
 
@@ -45,41 +46,33 @@ Desde mi experiencia, la pérdida del **imei** ocurre al instalar una ROM no com
 
 Los pasos a seguir son:
 
-1) Haz una copia de la carpeta **/efs** actual, tanto a la tarjeta del teléfono como a tu móvil. Si no tienes navegador root, puedes usar `adb`:
+1. Haz una copia de la carpeta **/efs** actual, tanto a la tarjeta del teléfono como a tu móvil. Si no tienes navegador root, puedes usar `adb`:
 
 ```bash
 $ adb pull -p /efs /copia/en/pc
-
 ```
 
-2) Elmina la carpeta **/efs** del teléfono.
-
-3) Reinícia el móvil, tras el reinicio, se habrá creado una nueva carpeta **/efs**.
-
-4) Elimina los ficheros `nv_data.bin` y `nv_data.bin.md5` de la carpeta **/efs**.
-
-5) En la copia de seguridad que se hizo en 1), copia la carpeta `imei` a **/efs**, también el fichero `.nv_data` (OJO:, lleva un punto delante). Puedes hacerlo con el navegador root o `adb`:
+2. Elmina la carpeta **/efs** del teléfono.
+3. Reinícia el móvil, tras el reinicio, se habrá creado una nueva carpeta **/efs**.
+4. Elimina los ficheros `nv_data.bin` y `nv_data.bin.md5` de la carpeta **/efs**.
+5. En la copia de seguridad que se hizo en 1), copia la carpeta `imei` a **/efs**, también el fichero `.nv_data` (OJO:, lleva un punto delante). Puedes hacerlo con el navegador root o `adb`:
 
 ```bash
 $ adb push -p /copia/en/pc/imei /efs/
 $ adb push -p /copia/en/pc/.nv_data /efs/
-
 ```
 
-6) Haz otra copia del fichero `.nv_data` a la carpeta **/efs**.
-
-7) Llama a una de las copias de `.nv_data` -> `nv_data.bin` y a otra `nv_data.bin.bak`.
-
-8) Desde el PC, con `adb`, ejecuta lo siguiente:
+6. Haz otra copia del fichero `.nv_data` a la carpeta **/efs**.
+7. Llama a una de las copias de `.nv_data` -> `nv_data.bin` y a otra `nv_data.bin.bak`.
+8. Desde el PC, con `adb`, ejecuta lo siguiente:
 
 ```bash
 $ adb shell
 $ su
 $ chown 1001:radio /efs/nv_data.bin
-
 ```
 
-9) Reinicia el teléfono&#8230; si todo ha ido bien, deberías tener número IMEI. Puedes comprobarlo marcando `*#06#`.
+9. Reinicia el teléfono&#8230; si todo ha ido bien, deberías tener número IMEI. Puedes comprobarlo marcando `*#06#`.
 
 *Nota*: Éste método me sirvió para recuperar el **imei** la primera vez que lo perdí. La segunda vez, no fue posible, es por ello que muestro el proceso de recuperación del **imei** con el siguiente método, que me ayudó ésta segunda vez.
 
@@ -91,21 +84,18 @@ La segunda alternativa para recuperar el **imei** consiste en flashear de nuevo 
 
 Ésta vez, necesitaremos [Heimdall][6]. Tras descargarlo e instalarlo, y tener la radio descargada:
 
-  1. Extraemos el **.zip** que contiene la radio.
-  2. Localizamos un fichero llamado **modem.bin**, y entramos en el directorio mediante la terminal.
-  3. Ponemos el *Samsung Galaxy S2 (i9100)* en modo **Download**, apagándolo, y manteniendo pulsado VOLUMEN ABAJO + BOTÓN DEL CENTRO.
-  4. Ejecutamos **heimdall** con el móvil conectado al pc mediante usb:
+1. Extraemos el **.zip** que contiene la radio.
+2. Localizamos un fichero llamado **modem.bin**, y entramos en el directorio mediante la terminal.
+3. Ponemos el *Samsung Galaxy S2 (i9100)* en modo **Download**, apagándolo, y manteniendo pulsado VOLUMEN ABAJO + BOTÓN DEL CENTRO.
+4. Ejecutamos **heimdall** con el móvil conectado al pc mediante usb:
 
 ```bash
 sudo heimdall flash --MODEM modem.bin --verbose --no-reboot
-
 ```
 
 Si todo sale bien, veremos cómo se sube e instala el fichero, y se completa una barra de progreso en el móvil. Tras ésto, reiniciamos y deberíamos volver a tener red, y por tanto **imei**.
 
 Espero que os sirva alguno de los métodos, como me sirvieron en su día a mi.
-
-
 
  [1]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
  [2]: https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/
