@@ -30,6 +30,7 @@ tags:
   - calidades de audio
   - formatos alac
 image: 2012/07/original1.jpg
+modified: 2016-07-01T18:00:00+00:00
 main-class: "articulos"
 color: "#F57C00"
 ---
@@ -53,7 +54,7 @@ Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="ht
 #### Formatos con pérdidas: MP3, AAC, OGG y más
 
 <figure>
-<img src="/assets/img/2012/07/original-11-300x195.jpg" width="300px" height="195px" />
+  <img src="/assets/img/2012/07/original-11-300x195.jpg" width="300px" height="195px" />
 </figure>
 
 Para el día a día, es más probable que usemos formatos con pérdidas. Ahorran bastante más espacio, y si tienen una <a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">tasa de bits suficientemente alta (bitrate)</a>, será muy dificil de distinguir la calidad de la fuente original. A continuación se muestran los formatos que más se usan:
