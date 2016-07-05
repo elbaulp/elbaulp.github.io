@@ -3,7 +3,6 @@ layout: post.amp
 title: "WhatsApp: Entendiendo Su Cifrado Extremo a Extremo"
 date: 2016-04-24T00:05:58+02:00
 modified:
-
 categories:
   - Security Now
 description: "Seguro que muchos últimamente os preguntáis qué significa ese mensaje que aparece en vuestras conversaciones de WhatsApp: “Las llamadas y mensajes enviados a este chat ahora están seguros con cifrado extremo a extremo”. Para los curiosos, en el podcast Security Now!, episodio 555 Steve explicó el protocolo que han implementado para mantener las conversaciones y llamadas de __WhatsApp__ seguras. He pensado que puede ser de interés para los lectores del blog, así que lo he traducido. Comencemos"

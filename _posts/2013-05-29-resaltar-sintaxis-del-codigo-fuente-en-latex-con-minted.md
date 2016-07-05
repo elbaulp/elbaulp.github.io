@@ -12,6 +12,7 @@ tags:
   - pygments
   - resaltar sintaxis codigo latex
   - latex
+  - colorear codigo fuente en latex
 image: 2013/05/latex_logo.png
 main-class: "latex"
 color: "#B31917"
