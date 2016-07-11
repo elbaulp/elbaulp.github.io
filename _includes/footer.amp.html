@@ -68,11 +68,20 @@
         }
       },
       "patreon" : {
+	"on": "click",
+	"selector": "#patreon-ad",
+	"request": "event",
+	"vars": {
+	  "eventCategory": "patreon-ad",
+	  "eventAction": "insidepost"
+	}
+      },
+      "revresponse" : {
         "on": "click",
-        "selector": "#patreon-ad",
+        "selector": "#revresponse-ad",
         "request": "event",
         "vars": {
-          "eventCategory": "patreon-ad",
+          "eventCategory": "revresponse-ad",
           "eventAction": "insidepost"
         }
       }
