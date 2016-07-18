@@ -10,7 +10,8 @@ var env         = require('minimist')(process.argv.slice(2)),
   koutoSwiss  = require('kouto-swiss'),
   prefixer    = require('autoprefixer-stylus'),
   imagemin    = require('gulp-imagemin'),
-  cp          = require('child_process');
+  cp          = require('child_process'),
+  newer       = require('gulp-newer');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -75,6 +76,7 @@ gulp.task('js', function(){
  */
 gulp.task('imagemin', function() {
   return gulp.src('src/img/**/*.{jpg,png,gif}')
+    .pipe(newer('assets/img/'))
     .pipe(plumber())
     .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
     .pipe(gulp.dest('assets/img/'));

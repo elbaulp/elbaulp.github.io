@@ -25,7 +25,7 @@ Antes de comenzar...
 
 #### Comprobar versión de gnome-shell
 
-El script es válido para **versiones de gnome &lt; 3.8**. Lo he probado en Linux Mint Debian Edition y en Ubuntu 14.04. En este último tuve que instalar gnome-shell. 
+El script es válido para **versiones de gnome < 3.8**. Lo he probado en Linux Mint Debian Edition y en Ubuntu 14.04. En este último tuve que instalar gnome-shell. 
 
 Para instalar gnome-shell:
 
@@ -53,7 +53,7 @@ Usaremos funciones de ImageMagick para convertir las imágenes, y gawk para filt
 Expliación del script
 -------------
 
-La idea del script es modificar directamente los valores de configuración de terminal que se establecen en el fichero **%gconf.xml** que se ubica en `home/user/.gconf/apps/gnome-terminal/profiles/Default/`, para versiones de shell gnome &lt; 3.8.
+La idea del script es modificar directamente los valores de configuración de terminal que se establecen en el fichero **%gconf.xml** que se ubica en `home/user/.gconf/apps/gnome-terminal/profiles/Default/`, para versiones de shell gnome < 3.8.
 
 #### Declaración de variables
 
@@ -138,23 +138,23 @@ Para ello, sacamos el hibstograma de colores de la imágen, y tomamos un tono de
 ```bash
     $CNVRT "/tmp/$FILECONV" -colors 25 -depth 6 -format '%c' histogram:info:- \
     | $SORT --general-numeric-sort \
-    | $GAWK 'match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }' &gt; "/tmp/paleta.txt" 
+    | $GAWK 'match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }' > "/tmp/paleta.txt" 
 ```
 
 Para finalizar, abrimos el fichero temporal **paleta.txt** y leemos  6 primeras líneas, es decir, los 6 primeros colores:
 
 ```bash
     #abrir fichero
-    exec 3&lt; /tmp/paleta.txt
+    exec 3< /tmp/paleta.txt
     #leer 6 lineas
-    read color1 &lt;&amp;3
-    read color2 &lt;&amp;3
-    read color3 &lt;&amp;3
-    read color4 &lt;&amp;3
-    read color5 &lt;&amp;3
-    read color6 &lt;&amp;3
+    read color1 <&3
+    read color2 <&3
+    read color3 <&3
+    read color4 <&3
+    read color5 <&3
+    read color6 <&3
     #cerrar
-    exec 3&lt;&amp;-
+    exec 3<&-
 ```
 
 y ponemos el último color leído como color de texto:
