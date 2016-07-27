@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 main-class: "articulos"
 title: Recopilación de artículos escritos
 ---
@@ -9,7 +9,7 @@ title: Recopilación de artículos escritos
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         {% if post.main-class == 'articulos' %}
-            <article class="box-item post-{{post.main-class}}" >
+            <article class="box-item post-{{post.main-class}} shown" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
 

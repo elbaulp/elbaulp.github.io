@@ -1,7 +1,7 @@
 ---
 id: 2342
 title: Tutorial Programación ABAP
-layout: minimal
+layout: minimal.amp
 guid: https://elbauldelprogramador.com/?page_id=2342
 ---
 ## Curso de Programación ABAP

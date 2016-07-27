@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 title: Cursos
 description: "Colección de cursos escritos en el blog"
 search_omit: false

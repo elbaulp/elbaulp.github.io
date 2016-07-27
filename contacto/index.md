@@ -1,7 +1,7 @@
 ---
 id: 763
 title: Contacto
-layout: minimal
+layout: minimal.amp
 guid: /?page_id=763
 if_page_sidebar:
   - 0

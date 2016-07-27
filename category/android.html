@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 title: "Artículos sobre Android"
 main-class: "android"
 ---
@@ -9,7 +9,7 @@ main-class: "android"
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         {% if post.main-class == 'android' %}
-            <article class="box-item post-{{post.main-class}}" >
+            <article class="box-item post-{{post.main-class}} shown" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
 

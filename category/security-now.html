@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 title: Traducciones del podcast Security now!
 description: "Lista de artículos que he ido traduciendo de episodios interesantes"
 main-class: "security-now"
@@ -10,7 +10,7 @@ main-class: "security-now"
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         {% if post.main-class == 'security-now' %}
-            <article class="box-item post-{{post.main-class}}" >
+            <article class="box-item post-{{post.main-class}} shown" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
 

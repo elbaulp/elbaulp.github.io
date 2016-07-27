@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 title: Artículos de desarrollo/programación
 main-class: "dev"
 ---
@@ -9,7 +9,7 @@ main-class: "dev"
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         {% if post.main-class == 'dev' %}
-            <article class="box-item post-{{post.main-class}}" >
+            <article class="box-item post-{{post.main-class}} shown" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
 

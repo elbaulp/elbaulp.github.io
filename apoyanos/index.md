@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 title: Invítanos a un café
 ---
 

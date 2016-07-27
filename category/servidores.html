@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: minimal.amp
 title: Artículos sobre Administración de sistemas y servidores
 main-class: "servidores"
 ---
@@ -9,7 +9,7 @@ main-class: "servidores"
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         {% if post.main-class == 'servidores' %}
-            <article class="box-item post-{{post.main-class}}" >
+            <article class="box-item post-{{post.main-class}} shown" >
                 <span class="ribbon"><span>{{post.main-class}}</span></span>
                     <div class="box-body">
 
