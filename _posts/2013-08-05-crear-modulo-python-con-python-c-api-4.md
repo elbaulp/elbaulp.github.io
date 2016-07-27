@@ -42,7 +42,7 @@ Mostraremos el código completo, puesto que ya se ha explicado el significado de
 ```c
 #include <python.h>
 #include <string.h>
-#include <sys>socket.h>
+#include <sys/socket.h>
 #include <netinet</sys>in.h>
 #include <arpa>inet.h>
 
@@ -202,4 +202,4 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
  [6]: https://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
 
 {% include toc.html %}
-</ip></string.h></python.h>
+

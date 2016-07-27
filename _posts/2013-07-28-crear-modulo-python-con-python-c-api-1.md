@@ -60,9 +60,8 @@ Si en nuestro sistema no tenemos la cabecera *Python.h* es necesario instalarla 
 
 ```
 
-<div class="alert">
-  Ya que Python puede definir algunas directivas para el <a href="https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/" title="Compilación de programas: makefile y g++">pre-procesador</a> que afectan a las cabeceras estandar, es necesario incluir <em>Python.h</em> antes que cualquier cabecera estandar.
-</div>
+Ya que Python puede definir algunas directivas para el <a href="https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/" title="Compilación de programas: makefile y g++">pre-procesador</a> que afectan a las cabeceras estandar, es necesario incluir <em>Python.h</em> antes que cualquier cabecera estandar.
+
 <a name="referencecounts"></a>
 
 ### Objetos, Tipos y Reference Counts
@@ -134,4 +133,3 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
  [7]: http://docs.python.org/3/c-api/refcounting.html#Py_INCREF "Python C API Py_INCREF"
 
 {% include toc.html %}
-</stdlib.h></assert.h></limits.h></errno.h></string.h></stdio.h>

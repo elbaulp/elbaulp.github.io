@@ -232,4 +232,4 @@ Eso es todo, espero que os hayan gustado estos cinco artículos sobre **cómo cr
  [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
 
 {% include toc.html %}
-</ip></string.h></python.h>
+
