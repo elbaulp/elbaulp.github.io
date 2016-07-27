@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Programación Android - Conceptos básicos
 date: 2015-12-14T08:53:53+01:00
 modified:

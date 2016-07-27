@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Programación Android: Persistencia De Datos"
 date: 2016-06-14T09:45:21+02:00
 modified:
@@ -24,7 +24,10 @@ La mayoría de apps necesitan guardar datos, ya sea para no perder la informaci�
 - Ficheros de cualquier tipo en el sistema de archivos.
 - Bases de datos en SQLite.
 
-<iframe src="https://www.youtube-nocookie.com/embed/vgKSdjQGJII?rel=0" frameborder="0" allowfullscreen></iframe>
+<amp-youtube
+    data-videoid="vgKSdjQGJII"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
 
 ## Pantalla principal
 

@@ -18,7 +18,11 @@ El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había
 
 Aquí dejo el código y un vídeo demostrativo, también está disponible en [Github][2].
 
-<iframe src="https://www.youtube-nocookie.com/embed/ZBX2a1c3KCE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<amp-youtube
+    data-videoid="ZBX2a1c3KCE"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
+
 <!--ad-->
 
 ## Código Fuente

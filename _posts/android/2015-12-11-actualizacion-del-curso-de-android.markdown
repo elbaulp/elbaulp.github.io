@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Actualización Del Curso De Android
 modified:
 categories: android

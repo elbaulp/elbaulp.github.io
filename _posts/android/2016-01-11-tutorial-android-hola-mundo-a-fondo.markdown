@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Tutorial Android - Hola Mundo a Fondo
 date: 2016-01-11T08:16:24+01:00
 modified:
@@ -19,9 +19,10 @@ color: "#689F38"
 
 En el [artículo anterior](/android/conceptos-basicos/) se dieron unas nociones básicas de Android, sus componentes principales etc. En este artículo examinaremos a fondo una aplicación muy simple. Se componone de dos pantallas, en una de ellas se pide al usuario que introduzca un texto, dicho texto se enviará a otra pantalla. He aquí el resultado:
 
-<figure>
-  <iframe  src="https://www.youtube.com/embed/WZLHJ9kuYQE" frameborder="0" allowfullscreen></iframe>
-</figure>
+<amp-youtube
+    data-videoid="WZLHJ9kuYQE"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
 
 <!--ad-->
 

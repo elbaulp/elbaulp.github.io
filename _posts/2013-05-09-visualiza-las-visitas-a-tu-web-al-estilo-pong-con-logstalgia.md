@@ -57,9 +57,10 @@ ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i output.ppm -vcodec libx264 -preset 
 
 Os dejo un vídeo del tráfico de mi modesto blog:
 
-<figure>
-<iframe src="https://www.youtube-nocookie.com/embed/5pzMBg_vvo8" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-</figure>
+<amp-youtube
+    data-videoid="5pzMBg_vvo8"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
 
 #### Referencias
 

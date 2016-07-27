@@ -30,8 +30,10 @@ _Enunciado: reconozca un patrón de gestos sobre pantalla de vuestra elección. 
 
 Veamos un vídeo de la aplicación funcioando:
 
-<iframe src="https://www.youtube-nocookie.com/embed/j3w9ai3LHyU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-
+<amp-youtube
+    data-videoid="j3w9ai3LHyU"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
 
 Para realizar esta aplicación se ha usado una librería llamada [PatterLock](https://github.com/DreaminginCodeZH/PatternLock).
 

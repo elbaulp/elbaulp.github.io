@@ -67,9 +67,10 @@ Donde:
 
 A continuación os dejo un vídeo de uno de mis repositorios:
 
-<figure>
-<iframe src="https://www.youtube-nocookie.com/embed/aSJ8lHXpW58" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-</figure>
+<amp-youtube
+    data-videoid="aSJ8lHXpW58"
+    layout="responsive"
+    width="480" height="270"></amp-youtube>
 
  [1]: https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
