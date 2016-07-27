@@ -1,7 +1,7 @@
 ---
 title: Java Open Source se mueve a Linux, AIX en PowerPC
 
-layout: post
+layout: post.amp
 permalink: /java-open-source-se-mueve-a-linux-aix-en-powerpc/
 if_slider_image:
   -
@@ -17,7 +17,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<img alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256px" height="256px" />
+<amp-img layout="responsive" alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256px" height="256px" />
 
 ** La propuesta de *SAP-steered* aporta OpenJDK a nuevas plataformas**
 

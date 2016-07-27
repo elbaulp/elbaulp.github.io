@@ -1,6 +1,6 @@
 ---
 title: Citas clásicas de programación
-layout: post
+layout: post.amp
 permalink: /citas-clasicas-de-programacion/
 categories:
   - curiosidades

@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Interfaz gráfica &#8211; Conceptos básicos'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-interfaz-grafica/
 categories:
   - android
@@ -17,14 +17,14 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Todos los componenetes de la interfaz de usuario de Android descienden de la clase ***View.*** Dichos objetos están organizados en forma de árbol y pueden contener nuevos objetos View, permitiendo crear interfaces muy completas.
 
 
 <!--ad-->
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="300" width="514" src="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png" /></a>
+<a href="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="300" width="514" src="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png" /></a>
 </div>
 
 Los objetos ***View*** se pueden definir de dos maneras:

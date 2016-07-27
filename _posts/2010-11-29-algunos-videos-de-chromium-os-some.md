@@ -1,6 +1,6 @@
 ---
 title: Algunos vídeos de Chromium OS
-layout: post
+layout: post.amp
 permalink: /algunos-videos-de-chromium-os-some/
 categories:
   - noticias

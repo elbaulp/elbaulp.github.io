@@ -1,6 +1,6 @@
 ---
 title: Gestión básica de usuarios en linux
-layout: post
+layout: post.amp
 permalink: /gestion-basica-de-usuarios-en-linux/
 categories:
   - linux

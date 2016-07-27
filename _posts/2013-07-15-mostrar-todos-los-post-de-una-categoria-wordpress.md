@@ -1,7 +1,7 @@
 ---
 title: Mostrar todos los post de una categoría en WordPress
 
-layout: post
+layout: post.amp
 permalink: /mostrar-todos-los-post-de-una-categoria-wordpress/
 categories:
   - php
@@ -10,7 +10,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress" width="231px" height="228px" />  
+<amp-img layout="responsive" src="/assets/img/2013/07/wordpress.png" alt="mostrar todos los post de una categoría wordpress" width="231px" height="228px" />  
 En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.
 
 

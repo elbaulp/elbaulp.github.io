@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Cómo modificar Una Variable Desde Dentro De Una Función en R
 modified:
 categories:

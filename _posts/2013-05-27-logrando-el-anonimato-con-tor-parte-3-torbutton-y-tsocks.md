@@ -1,7 +1,7 @@
 ---
 title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
 
-layout: post
+layout: post.amp
 permalink: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
 categories:
   - aplicaciones
@@ -39,7 +39,7 @@ Al iniciar Firefox, aparecerá la siguiente pantalla:
 
 <!--ad-->
 
-#### [<img alt="081712_1515_AchievingAn1" src="/assets/img/2013/04/081712_1515_AchievingAn1-300x114.png" width="300px" height="114px" />][4]{.thumbnail}
+#### [<amp-img layout="responsive" alt="081712_1515_AchievingAn1" src="/assets/img/2013/04/081712_1515_AchievingAn1-300x114.png" width="300px" height="114px" />][4]{.thumbnail}
 
 #### 2. Torbutton
 
@@ -180,7 +180,7 @@ En el log de acceso deberíamos observar una entrada como la siguiente:
 
 Podemos ver que pedimos el archivo image.png de la dirección IP 31.172.30.1. Para verificar incluso si la IP es parte de la red Tor, podemos clickear en &#8220;View the Network&#8221; en la GUI Vidalia, la cual nos lista todos los nodos en la red Tor. Entre todos ellos está también el nodo con la IP 31.172.30.1 como se representa en la imagen siguiente:
 
-[<img alt="081712_1515_AchievingAn2" src="/assets/img/2013/05/081712_1515_AchievingAn2-300x99.png" width="300px" height="99px" />][5]{.thumbnail}
+[<amp-img layout="responsive" alt="081712_1515_AchievingAn2" src="/assets/img/2013/05/081712_1515_AchievingAn2-300x99.png" width="300px" height="99px" />][5]{.thumbnail}
 
 &nbsp;
 

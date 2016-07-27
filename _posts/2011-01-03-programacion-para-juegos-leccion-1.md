@@ -1,6 +1,6 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 1 &#8211; Instalando SDL'
-layout: post
+layout: post.amp
 permalink: /programacion-para-juegos-leccion-1/
 categories:
   - juegos
@@ -19,9 +19,9 @@ Esta primera parte de la lección 1 no la voy a traducir debido a que hay un gra
 
 Selecciona el SO que tengas:
 
-[<img style="display:inline; position:relative; left:100px;" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TSHH106Z0VI/AAAAAAAAAPo/fimALQz89iU/linux.png" />][1]  
-[<img style="display:inline; position:relative; top:-130px; left:300px;" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TSHJkwpqk-I/AAAAAAAAAP0/wSKqQWY0x_k/windows.png" />][2]  
-[<img style="display:inline; position:relative; top:-260px; left:500px;" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TSHH2DeE3mI/AAAAAAAAAPs/KES8kBZgn9M/apple-logo.png" />][3]  
+[<amp-img layout="responsive" style="display:inline; position:relative; left:100px;" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TSHH106Z0VI/AAAAAAAAAPo/fimALQz89iU/linux.png" />][1]  
+[<amp-img layout="responsive" style="display:inline; position:relative; top:-130px; left:300px;" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TSHJkwpqk-I/AAAAAAAAAP0/wSKqQWY0x_k/windows.png" />][2]  
+[<amp-img layout="responsive" style="display:inline; position:relative; top:-260px; left:500px;" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TSHH2DeE3mI/AAAAAAAAAPs/KES8kBZgn9M/apple-logo.png" />][3]  
 Para los usuarios de GNU/Linux dejo el comando de instalación de las librerias:
 
 ```bash

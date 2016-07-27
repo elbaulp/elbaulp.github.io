@@ -1,7 +1,7 @@
 ---
 title: Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)
 description: "Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online.  pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan las contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida."
-layout: post
+layout: post.amp
 permalink: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/
 categories:
   - Articulos
@@ -23,7 +23,7 @@ color: "#F57C00"
 {% include toc.html %}
 
 <figure>
-<img src="/assets/img/2012/07/original2.jpg" alt="" title="original" width="640px" height="360px" />
+<amp-img layout="responsive" src="/assets/img/2012/07/original2.jpg" alt="" title="original" width="640px" height="360px" />
 </figure>
 
 Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.

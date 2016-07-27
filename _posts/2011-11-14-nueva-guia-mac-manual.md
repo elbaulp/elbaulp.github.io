@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: The Mac Manual'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-mac-manual/
 categories:
   - cursos

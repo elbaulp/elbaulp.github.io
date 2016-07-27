@@ -1,6 +1,6 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas'
-layout: post
+layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl_27/
 categories:
   - BaseDeDatos

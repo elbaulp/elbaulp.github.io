@@ -1,6 +1,6 @@
 ---
 title: Introducción a PL/SQL
-layout: post
+layout: post.amp
 permalink: /introduccion-plsql/
 categories:
   - BaseDeDatos

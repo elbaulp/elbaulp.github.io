@@ -1,6 +1,6 @@
 ---
 title: 'Código Open Source: Para la gente, por la gente'
-layout: post
+layout: post.amp
 permalink: /codigo-open-source-para-la-gente-por-la-gente/
 categories:
   - Articulos

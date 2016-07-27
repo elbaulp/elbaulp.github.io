@@ -1,6 +1,6 @@
 ---
 title: 'Crear miniaturas de imágenes [Mejorado]'
-layout: post
+layout: post.amp
 permalink: /crear-miniaturas-de-imagenes-mejorado/
 categories:
   - linux

@@ -1,7 +1,7 @@
 ---
 title: 'Cómo crear  simples shortcodes en WordPress'
 
-layout: post
+layout: post.amp
 permalink: /como-crear-shortcodes-en-wordpress-2/
 if_slider_image:
   -

@@ -1,6 +1,6 @@
 ---
 title: Bloques PL/SQL
-layout: post
+layout: post.amp
 permalink: /bloques-plsql/
 categories:
   - BaseDeDatos

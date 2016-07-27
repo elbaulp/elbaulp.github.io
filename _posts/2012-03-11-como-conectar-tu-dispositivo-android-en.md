@@ -1,6 +1,6 @@
 ---
 title: Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar aplicaciones
-layout: post
+layout: post.amp
 permalink: /como-conectar-tu-dispositivo-android-en/
 categories:
   - android

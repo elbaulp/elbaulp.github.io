@@ -2,7 +2,7 @@
 title: Instalación y optimización de un servidor web con Nginx (III)
 math: true
 modified: 2015-04-08T00:00:00+00:00
-layout: post
+layout: post.amp
 permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
 categories:
   - Administracion de Servidores
@@ -242,7 +242,7 @@ service nginx reload
 Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:
 
 <figure>
-<a href="/assets/img/2014/02/pagespeed.png"><img src="/assets/img/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" width="255px" height="135px" /></a>
+<a href="/assets/img/2014/02/pagespeed.png"><amp-img layout="responsive" src="/assets/img/2014/02/pagespeed.png" title="Configuración pagespeed nginx" alt="Configuración pagespeed nginx" width="255px" height="135px" /></a>
 </figure>
 
 Como vemos, la cabecera de pagespeed está presente, luego está habilitado.

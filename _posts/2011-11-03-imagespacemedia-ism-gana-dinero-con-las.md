@@ -1,7 +1,7 @@
 ---
 title: 'ImageSpaceMedia (ISM) &#8211; Gana dinero con las imágenes de tu web'
 
-layout: post
+layout: post.amp
 permalink: /imagespacemedia-ism-gana-dinero-con-las/
 categories:
   - noticias
@@ -9,7 +9,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="http://pubstop.imagespacemedia.com/users/edit/0001909308895492" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="https://2.bp.blogspot.com/-V0Bw-51hcj4/TrEQv4WjhHI/AAAAAAAABeI/IjjxG-bq0P8/s300/Screenshot-Image%2BSpace%2BMedia%2B%25E2%2580%2594%2BAdvertiser%2B-%2BGoogle%2BChrome.png" /></a>
+<a href="http://pubstop.imagespacemedia.com/users/edit/0001909308895492" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img layout="responsive" border="0" src="https://2.bp.blogspot.com/-V0Bw-51hcj4/TrEQv4WjhHI/AAAAAAAABeI/IjjxG-bq0P8/s300/Screenshot-Image%2BSpace%2BMedia%2B%25E2%2580%2594%2BAdvertiser%2B-%2BGoogle%2BChrome.png" /></a>
 </div>
 
 Image Space Media (ISM) es la forma más fácil y eficiente de obtener ingresos por las imágenes de tu blog o de tus sitios web. ISM coloca anuncios relevantes en las imágenes de tus sitios web, ya que se muestra solo si nos posicionamos dentro de la imagen. Los anuncios son similares a los que aparecen en youtube, una ventanita que emerge de la parte de abajo de la imagen, que se puede cerrar fácilmente pulsando la x.

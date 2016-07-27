@@ -1,7 +1,7 @@
 ---
 title: Tipos de gobernadores en las CPUs
 description: "Para los que tengáis vuestro terminal rooteado voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):"
-layout: post
+layout: post.amp
 permalink: /tipos-de-gobernadores-en-las-cpus/
 categories:
   - android

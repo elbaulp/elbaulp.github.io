@@ -1,7 +1,7 @@
 ---
 title: Superordenador de Barcelona ARMándose para entrar en las máquinas más rápidas del mundo
 
-layout: post
+layout: post.amp
 permalink: /superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/
 categories:
   - Articulos

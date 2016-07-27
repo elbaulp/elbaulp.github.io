@@ -1,6 +1,6 @@
 ---
 title: 'Nuevo Proyecto: Aventura gráfica con SDL y C++'
-layout: post
+layout: post.amp
 permalink: /nuevo-proyecto-aventura-grafica-con-sdl/
 categories:
   - opensource

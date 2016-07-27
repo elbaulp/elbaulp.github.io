@@ -1,7 +1,7 @@
 ---
 title: 'Lo que se viene en programación funcional de Java&#8230;'
 
-layout: post
+layout: post.amp
 permalink: /lo-que-se-viene-en-programacion-funcional-de-java/
 categories:
   - Articulos

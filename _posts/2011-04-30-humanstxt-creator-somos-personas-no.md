@@ -1,7 +1,7 @@
 ---
 title: Humanstxt Creator. Somos personas, no máquinas
 
-layout: post
+layout: post.amp
 permalink: /humanstxt-creator-somos-personas-no/
 categories:
   - internet
@@ -10,7 +10,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<img src="&lt;br  /&gt;
+<amp-img layout="responsive" src="&lt;br  /&gt;
 https://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/humanstxt-creator-logo.png" /><br />
 https://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/humanstxt-creator-logo.png" />
 </div>

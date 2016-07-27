@@ -1,7 +1,7 @@
 ---
 author: marta
 title: 'Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras'
-layout: post
+layout: post.amp
 permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/
 categories:
   - LaTeX
@@ -24,7 +24,7 @@ color: "#B31917"
 ---
 
 <figure>
-<a href="/assets/img/2013/05/latex_logo.png"><img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" /></a>
+<a href="/assets/img/2013/05/latex_logo.png"><amp-img layout="responsive" src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" /></a>
 </figure>
 
 * [Mini Curso de LaTeX &#8211; Introducción][1]

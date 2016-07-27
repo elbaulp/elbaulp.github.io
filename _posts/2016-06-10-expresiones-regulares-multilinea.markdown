@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Expresiones Regulares Multilínea
 categories:
 description: Cómo aplicar una expresión regular multilínea a ficheros

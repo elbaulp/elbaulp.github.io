@@ -1,7 +1,7 @@
 ---
 title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
 
-layout: post
+layout: post.amp
 permalink: /configurar-dos-pantallas-en-openbox/
 categories:
   - aplicaciones
@@ -18,7 +18,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png" /></a>
+<a href="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img layout="responsive" border="0" height="128" width="128" src="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png" /></a>
 </div>
 
 Llevaba tiempo queriendo instalar en mi equipo la distribución <a target="_blank" href="http://crunchbanglinux.org/">CrunchBang</a>, que es una distro muy ligera basada en debian que viene con <a target="_blank" href="http://openbox.org/">openbox</a>, este fin de semana finalmente me decidí a instalarla para probarla y la he dejado ya que me ha gustado bastante por si simpleza y capacidad de configuración.
@@ -101,7 +101,7 @@ nitrogen --restore &
 Os dejo una captura:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="160" width="400" src="https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" /></a>
+<a href="https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="160" width="400" src="https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" /></a>
 </div>
 
 

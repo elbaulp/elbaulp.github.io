@@ -1,6 +1,6 @@
 ---
 title: Sobre el blog
-layout: post
+layout: post.amp
 permalink: /sobre-el-blog/
 categories:
   - Articulos

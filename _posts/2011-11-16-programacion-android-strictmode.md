@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: StrictMode'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-strictmode/
 categories:
   - android
@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img id="logo" class="icono" border="0" height="128" width="128" src="" name="droid" />
+<amp-img layout="responsive" id="logo" class="icono" border="0" height="128" width="128" src="" name="droid" />
 
 [Android][1] 2.3 introdujo una funcionalidad de depuración llamada *StrictMode*. Según Google, usaron esta característica para hacer cientos de mejoras a sus aplicaciones Android. Lo que hace el *StrictMode* es informar de las violaciones de políticas relacionadas con los [hilos][2] y la máquina virtual. Si se detecta dicha violación, obtenemos una alerta que nos lo indica. Junto a la alerta tendremos también una traza de la pila de ejecución (Stack Trace), donde podremos comprobar el lugar en el que se produjo la violación. En ese momento, podemos forzar el cierre de la aplicación o simplemente escribirla en el log y dejar que la aplicación continue su ejecución.
 
@@ -131,13 +131,13 @@ try{
 ### Mediante el penaltyLog():
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="android development" border="0" height="260" width="400" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
+<a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" alt="android development" border="0" height="260" width="400" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
 </div>
 
 ### Mediante penaltyDialog():
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" alt="android" height="302" width="400" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
+<a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" alt="android" height="302" width="400" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
 </div>
 
 * * *

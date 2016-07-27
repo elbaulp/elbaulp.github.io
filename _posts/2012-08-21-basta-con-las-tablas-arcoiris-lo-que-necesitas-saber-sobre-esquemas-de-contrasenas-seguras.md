@@ -1,7 +1,7 @@
 ---
 title: 'Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras'
 description: "En la esfera social de bookmark (“socialbookmarkosphere”) se habla insistentemente de las “Tablas Arcoiris“, cuál es el significado real de password security, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de Windows for Workgroups *hace 15 años."
-layout: post
+layout: post.amp
 permalink: /basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/
 if_slider_image:
   -
@@ -19,7 +19,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <p style="text-align: center;">
-<a href="/assets/img/2012/08/rainbow1.png"><img class="wp-image-901 aligncenter" title="rainbow" alt="" src="/assets/img/2012/08/rainbow1.png" width="536px" height="303px" /></a>
+<a href="/assets/img/2012/08/rainbow1.png"><amp-img layout="responsive" class="wp-image-901 aligncenter" title="rainbow" alt="" src="/assets/img/2012/08/rainbow1.png" width="536px" height="303px" /></a>
 </p>
 
 En la esfera social de bookmark (&#8220;socialbookmarkosphere&#8221;) se habla [insistentemente][1] de las &#8220;<a href="http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html" target="_blank">Tablas Arcoiris</a>&#8220;, cuál es el significado real de *password security*, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de *Windows for Workgroups *hace 15 años. Esto realmente me enloquece. Si el eje soporte &#8220;avanzado&#8221; de tu modelo de amenazas es &#8220;Tablas Arcoiris&#8221;, deja de trabajar en tu aplicación *Calendario Social de Compras* ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.

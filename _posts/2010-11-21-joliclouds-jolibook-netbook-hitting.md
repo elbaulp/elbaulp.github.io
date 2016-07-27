@@ -1,6 +1,6 @@
 ---
 title: 'Jolicloud&#8217;s Jolibook Netbook Hitting Stores'
-layout: post
+layout: post.amp
 permalink: /joliclouds-jolibook-netbook-hitting/
 categories:
   - Sin Categoria

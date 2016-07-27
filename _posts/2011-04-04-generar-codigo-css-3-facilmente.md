@@ -1,6 +1,6 @@
 ---
 title: Generar código CSS 3 fácilmente
-layout: post
+layout: post.amp
 permalink: /generar-codigo-css-3-facilmente/
 categories:
   - cursos

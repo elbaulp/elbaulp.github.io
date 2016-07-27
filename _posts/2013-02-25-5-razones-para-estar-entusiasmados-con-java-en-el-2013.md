@@ -1,7 +1,7 @@
 ---
 title: 5 Razones para estar entusiasmados con Java en el 2013
 
-layout: post
+layout: post.amp
 permalink: /5-razones-para-estar-entusiasmados-con-java-en-el-2013/
 categories:
   - Articulos
@@ -15,7 +15,7 @@ description: "Un tema obvio para comenzar para la mayoría de los desarrolladore
 main-class: "articulos"
 color: "#F57C00"
 ---
-<img src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300px" height="227px" />
+<amp-img layout="responsive" src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300px" height="227px" />
 
 Habiendo terminado el 2012, es tiempo de mirar hacia los próximos 12 meses en el mundo del desarrollo. Luego de leer <a href="http://jaxenter.com/what-will-2013-bring-developers-place-their-bets-45933.html" target="_blank">este interesante artículo</a> sobre las predicciones de algunos respetados desarrolladores, presentamos cinco sencillas razones por las cuales debes entusiasmarte con lo que traerá el 2013&#8230;
 

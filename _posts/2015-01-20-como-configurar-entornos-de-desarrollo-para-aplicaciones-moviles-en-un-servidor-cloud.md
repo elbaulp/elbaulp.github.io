@@ -1,7 +1,7 @@
 ---
 title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
 
-layout: post
+layout: post.amp
 permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
 categories:
   - JavaScript
@@ -29,19 +29,19 @@ Otra ventaja viene dada a la hora de hacer pruebas, ya que se puede crear un ent
 
 En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
 
-<img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817px" height="448px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817px" height="448px" />
 
 ### Configurar la capacidad del servidor
 
 Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
 
-<img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817px" height="575px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817px" height="575px" />
 
 ### Establecer la contraseña de usuario
 
 Por último, solo resta proporcionar una contraseña al usuario **root**.
 
-<img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815px" height="581px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815px" height="581px" />
 
 ## Instalar Node.js
 

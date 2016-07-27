@@ -1,6 +1,6 @@
 ---
 title: ¿Qué son los PPA?
-layout: post
+layout: post.amp
 permalink: /que-son-los-ppa-what-ppa-is/
 categories:
   - linux

@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Trabajar con actividades y pasar parámetros entre ellas'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-trabajar-con/
 categories:
   - android
@@ -14,7 +14,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el conocido [Hola Mundo][1], en esta entrada, vamos a ver como crear varias [actividades][2] y cómo hacer que se pasen parámetros las unas a las otras.
 

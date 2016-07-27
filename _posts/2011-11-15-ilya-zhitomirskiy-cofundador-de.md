@@ -1,7 +1,7 @@
 ---
 title: Ilya Zhitomirskiy, cofundador de Diaspora, muere a los 21 años
 
-layout: post
+layout: post.amp
 permalink: /ilya-zhitomirskiy-cofundador-de/
 categories:
   - noticias
@@ -15,7 +15,7 @@ Las causas de la muerte aún se desconocen. Una verdadera pena la verdad, era de
 En la página principal de la web han colocado la siguiente imagen:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-sajOE8EYnoM/TsGXz-fKSXI/AAAAAAAABwQ/LP-g1duG__c/s1600/seed.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="326" alt="internet software" src="https://1.bp.blogspot.com/-sajOE8EYnoM/TsGXz-fKSXI/AAAAAAAABwQ/LP-g1duG__c/s400/seed.jpg" /></a>
+<a href="https://1.bp.blogspot.com/-sajOE8EYnoM/TsGXz-fKSXI/AAAAAAAABwQ/LP-g1duG__c/s1600/seed.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="400" width="326" alt="internet software" src="https://1.bp.blogspot.com/-sajOE8EYnoM/TsGXz-fKSXI/AAAAAAAABwQ/LP-g1duG__c/s400/seed.jpg" /></a>
 </div>
 <a target="_blank" href="http://www.muylinux.com/2011/11/14/ilya-zhitomirskiy-cofundador-de-diaspora-muere-a-los-21-anos/">Vía MuyLinux</a>
 

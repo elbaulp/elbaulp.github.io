@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Biometría Aplicada a La Seguridad - Introducción
 date: 2016-01-25T12:05:30+01:00
 modified:
@@ -12,7 +12,7 @@ color: "#F57C00"
 ---
 
 <figure>
-<a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><img src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="405px" /></a>
+<a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><amp-img layout="responsive" src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="405px" /></a>
 <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br />
 </figure>
 

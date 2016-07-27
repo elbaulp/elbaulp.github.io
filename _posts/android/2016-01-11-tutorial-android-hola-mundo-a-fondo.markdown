@@ -14,7 +14,7 @@ color: "#689F38"
 {% include toc.html %}
 
 <figure>
-  <a href="/assets/img/2014/01/iconoAndroid.png"><img src="/assets/img/2014/01/iconoAndroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/2014/01/iconoAndroid.png"><amp-img layout="responsive" src="/assets/img/2014/01/iconoAndroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 En el [artículo anterior](/android/conceptos-basicos/) se dieron unas nociones básicas de Android, sus componentes principales etc. En este artículo examinaremos a fondo una aplicación muy simple. Se componone de dos pantallas, en una de ellas se pide al usuario que introduzca un texto, dicho texto se enviará a otra pantalla. He aquí el resultado:
@@ -72,7 +72,7 @@ Si usamos `weight`, hay que poner un `width` de 0dip para mejorar el rendimiento
 El resultado de este `layout` es:
 
 <figure>
-  <a href="/assets/img/android/layouthelloworldandroid.png"><img src="/assets/img/android/layouthelloworldandroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+  <a href="/assets/img/android/layouthelloworldandroid.png"><amp-img layout="responsive" src="/assets/img/android/layouthelloworldandroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
 
 ## Segunda pantalla

@@ -1,6 +1,6 @@
 ---
 title: Cambiando de distribución
-layout: post
+layout: post.amp
 permalink: /cambiando-de-distribucion/
 categories:
   - linux

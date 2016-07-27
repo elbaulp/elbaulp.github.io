@@ -1,7 +1,7 @@
 ---
 title: Moborobo, herramienta de Administración Integrada para Android en el PC
 
-layout: post
+layout: post.amp
 permalink: /moborobo-herramienta-de-administracion-integrada-para-android-en-el-pc/
 categories:
   - noticias
@@ -13,7 +13,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <p dir="ltr">
-<a href="/assets/img/2012/09/moborobo-feature-image-1204261.jpg"><img title="moborobo-feature-image-120426" src="/assets/img/2012/09/moborobo-feature-image-1204261.jpg" alt="" width="600px" height="300px" /></a>
+<a href="/assets/img/2012/09/moborobo-feature-image-1204261.jpg"><amp-img layout="responsive" title="moborobo-feature-image-120426" src="/assets/img/2012/09/moborobo-feature-image-1204261.jpg" alt="" width="600px" height="300px" /></a>
 </p>
 <p dir="ltr">
   Moborobo es un pc suite que te ayuda a controlar tu terminal Android tanto vía WiFi como USB. Es una combinación de software de sincronización y tienda de recursos de Android (dispone de aplicaciones, juegos, fondos de pantalla y temas). Sólo hace falta descargar e instalar el programa en el pc y conectarlo al teléfono. Así podrás mantener tus datos importantes o personales en el ordenador.

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Guía Gratuita - Python Programming Cookbook
 date: 2016-03-14T09:38:01+01:00
 modified:
@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc2"><img src="/assets/img/Python-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd07&ch=ocsoc2"><amp-img layout="responsive" src="/assets/img/Python-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 Kick-start your Python projects with these hot recipes!

@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes'
-layout: post
+layout: post.amp
 permalink: /fundamentos-aplicaciones-android-parte_18/
 categories:
   - android
@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 ## Componentes de las aplicaciones {#Components}
 

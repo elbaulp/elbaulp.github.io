@@ -1,7 +1,7 @@
 ---
 title: Renombrar archivos masivamente en GNU/Linux
 
-layout: post
+layout: post.amp
 permalink: /renombrar-archivos-masivamente-en/
 categories:
   - linux

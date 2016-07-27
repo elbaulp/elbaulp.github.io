@@ -1,6 +1,6 @@
 ---
 title: Cómo empezar a programar
-layout: post
+layout: post.amp
 permalink: /como-empezar-programar-how-start/
 categories:
   - How To

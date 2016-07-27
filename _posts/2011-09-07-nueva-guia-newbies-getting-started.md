@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: A Newbie&#8217;s Getting Started Guide to Linux'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-newbies-getting-started/
 categories:
   - Sin Categoria

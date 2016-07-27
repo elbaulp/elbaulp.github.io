@@ -1,7 +1,7 @@
 ---
 title: 5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos
 
-layout: post
+layout: post.amp
 permalink: /futuro-ides-de-escritorio/
 categories:
   - Articulos

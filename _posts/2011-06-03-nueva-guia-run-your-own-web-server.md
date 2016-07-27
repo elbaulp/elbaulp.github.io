@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: Run Your Own Web Server Using Linux & Apache'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-run-your-own-web-server/
 categories:
   - cursos

@@ -1,6 +1,6 @@
 ---
 title: 3 Juegos para Linux
-layout: post
+layout: post.amp
 permalink: /3-juegos-para-linux/
 categories:
   - juegos

@@ -1,7 +1,7 @@
 ---
 title: 'Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos'
 
-layout: post
+layout: post.amp
 permalink: /fundamentos-programacion-android_17/
 categories:
   - android

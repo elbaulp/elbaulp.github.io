@@ -1,7 +1,7 @@
 ---
 title: Colabora con el blog
 
-layout: post
+layout: post.amp
 permalink: /colabora-con-el-blog/
 categories:
   - noticias

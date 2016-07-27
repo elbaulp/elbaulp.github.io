@@ -1,6 +1,6 @@
 ---
 title: Vídeo tutorial programación Android
-layout: post
+layout: post.amp
 permalink: /video-tutorial-programacion-android/
 categories:
   - android
@@ -10,7 +10,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />  
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />  
 Leyendo el blog <a target="_blank" href="http://proyectosbeta.blogspot.com/">proyectos beta</a> he encontrado este videotutorial para aprender a programar en android.
 
 

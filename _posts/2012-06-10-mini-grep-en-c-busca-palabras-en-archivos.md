@@ -1,7 +1,7 @@
 ---
 title: Mini grep en C++, busca palabras en archivos
 
-layout: post
+layout: post.amp
 permalink: /mini-grep-en-c-busca-palabras-en-archivos/
 categories:
   - aplicaciones

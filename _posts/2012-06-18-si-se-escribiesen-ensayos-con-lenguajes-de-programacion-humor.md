@@ -1,7 +1,7 @@
 ---
 title: 'Si se escribiesen ensayos con lenguajes de programación [HUMOR]'
 
-layout: post
+layout: post.amp
 permalink: /si-se-escribiesen-ensayos-con-lenguajes-de-programacion-humor/
 categories:
   - Humor
@@ -15,7 +15,7 @@ main-class: "geek"
 color: "#262626"
 ---
 <figure>
-<img src="/assets/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp" width="650px" height="1673px" />
+<amp-img layout="responsive" src="/assets/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp" width="650px" height="1673px" />
 </figure>
 
 > **<a href="http://www.genbetadev.com/lenguajes-y-plataformas/si-escribiesemos-ensayos-con-lenguajes-de-programacion" target="_blank">Fuente: GenbetaDev</a>**

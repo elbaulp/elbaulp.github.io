@@ -1,7 +1,7 @@
 ---
 title: Viñetas Geek de Domingo (VI)
 
-layout: post
+layout: post.amp
 permalink: /vinetas-geek-de-domingo-vi/
 categories:
   - Humor
@@ -22,7 +22,7 @@ Disfrutad de lo que queda de fin de semana!
 <div id="gallery-6" class="gallery galleryid-1734 gallery-columns-1 gallery-size-thumbnail">
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="/assets/img/2013/07/140.jpg"><img src="/assets/img/2013/07/140-150x150.jpg" class="attachment-thumbnail" alt="Simply Explained" aria-describedby="gallery-6-1735" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/140.jpg"><amp-img layout="responsive" src="/assets/img/2013/07/140-150x150.jpg" class="attachment-thumbnail" alt="Simply Explained" aria-describedby="gallery-6-1735" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1735">
       Simply Explained
@@ -31,7 +31,7 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png"><img src="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png" class="attachment-thumbnail" alt="habitable_zone - They have a telescope pointed RIGHT AT US!" aria-describedby="gallery-6-1736" width="253px" height="306px" /></a>
+<a href="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png"><amp-img layout="responsive" src="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png" class="attachment-thumbnail" alt="habitable_zone - They have a telescope pointed RIGHT AT US!" aria-describedby="gallery-6-1736" width="253px" height="306px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1736">
       habitable_zone &#8211; They have a telescope pointed RIGHT AT US!
@@ -40,13 +40,13 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/humor-desarrollo-software.jpg"><img src="/assets/img/2013/07/humor-desarrollo-software-150x150.jpg" class="attachment-thumbnail" alt="humor-desarrollo-software" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/humor-desarrollo-software.jpg"><amp-img layout="responsive" src="/assets/img/2013/07/humor-desarrollo-software-150x150.jpg" class="attachment-thumbnail" alt="humor-desarrollo-software" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/when-a-bug-mysteriously-disappears.gif"><img src="/assets/img/2013/07/when-a-bug-mysteriously-disappears-150x150.gif" class="attachment-thumbnail" alt="Cuando un bug desaparece misteriosamente" aria-describedby="gallery-6-1738" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/when-a-bug-mysteriously-disappears.gif"><amp-img layout="responsive" src="/assets/img/2013/07/when-a-bug-mysteriously-disappears-150x150.gif" class="attachment-thumbnail" alt="Cuando un bug desaparece misteriosamente" aria-describedby="gallery-6-1738" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1738">
       Cuando un bug desaparece misteriosamente
@@ -55,7 +55,7 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/tumblr_inline_moij1tHWwa1qz4rgp.gif"><img src="/assets/img/2013/07/tumblr_inline_moij1tHWwa1qz4rgp-150x150.gif" class="attachment-thumbnail" alt="When you find a stackoverflow question about your problem and there is no response" aria-describedby="gallery-6-1739" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/tumblr_inline_moij1tHWwa1qz4rgp.gif"><amp-img layout="responsive" src="/assets/img/2013/07/tumblr_inline_moij1tHWwa1qz4rgp-150x150.gif" class="attachment-thumbnail" alt="When you find a stackoverflow question about your problem and there is no response" aria-describedby="gallery-6-1739" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1739">
       When you find a stackoverflow question about your problem and there is no response
@@ -64,7 +64,7 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/LI3vaSs.gif"><img src="/assets/img/2013/07/LI3vaSs-150x150.gif" class="attachment-thumbnail" alt="Protegiendo el servidor durante un DDos" aria-describedby="gallery-6-1741" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/LI3vaSs.gif"><amp-img layout="responsive" src="/assets/img/2013/07/LI3vaSs-150x150.gif" class="attachment-thumbnail" alt="Protegiendo el servidor durante un DDos" aria-describedby="gallery-6-1741" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1741">
       Protegiendo el servidor durante un DDos
@@ -73,7 +73,7 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/Los-últimos-10-minutos-de-trabajo.gif"><img src="/assets/img/2013/07/Los-últimos-10-minutos-de-trabajo-150x150.gif" class="attachment-thumbnail" alt="Los últimos 10 minutos de trabajo" aria-describedby="gallery-6-1742" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/Los-últimos-10-minutos-de-trabajo.gif"><amp-img layout="responsive" src="/assets/img/2013/07/Los-últimos-10-minutos-de-trabajo-150x150.gif" class="attachment-thumbnail" alt="Los últimos 10 minutos de trabajo" aria-describedby="gallery-6-1742" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1742">
       Los últimos 10 minutos de trabajo
@@ -82,7 +82,7 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/when-I-start-my-third-coding-night-in-a-row.gif"><img src="/assets/img/2013/07/when-I-start-my-third-coding-night-in-a-row-150x150.gif" class="attachment-thumbnail" alt="Cuando empiezo mi tercera noche de programar seguida" aria-describedby="gallery-6-1743" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/when-I-start-my-third-coding-night-in-a-row.gif"><amp-img layout="responsive" src="/assets/img/2013/07/when-I-start-my-third-coding-night-in-a-row-150x150.gif" class="attachment-thumbnail" alt="Cuando empiezo mi tercera noche de programar seguida" aria-describedby="gallery-6-1743" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1743">
       Cuando empiezo mi tercera noche de programar seguida
@@ -91,7 +91,7 @@ Disfrutad de lo que queda de fin de semana!
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="/assets/img/2013/07/When-someone-vilifies-opensource.gif"><img src="/assets/img/2013/07/When-someone-vilifies-opensource-150x150.gif" class="attachment-thumbnail" alt="Cuando alguien maldice opensource" aria-describedby="gallery-6-1740" width="150px" height="150px" /></a>
+<a href="/assets/img/2013/07/When-someone-vilifies-opensource.gif"><amp-img layout="responsive" src="/assets/img/2013/07/When-someone-vilifies-opensource-150x150.gif" class="attachment-thumbnail" alt="Cuando alguien maldice opensource" aria-describedby="gallery-6-1740" width="150px" height="150px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1740">
       Cuando alguien maldice opensource

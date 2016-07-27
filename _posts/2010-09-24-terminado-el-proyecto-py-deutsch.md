@@ -1,6 +1,6 @@
 ---
 title: Terminado el Proyecto py-Deutsch
-layout: post
+layout: post.amp
 permalink: /terminado-el-proyecto-py-deutsch/
 categories:
   - linux

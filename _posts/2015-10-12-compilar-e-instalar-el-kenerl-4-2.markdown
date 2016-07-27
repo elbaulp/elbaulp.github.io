@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Compilar e Instalar El Kernel 4.2"
 date: 2015-10-12T17:18:41+02:00
 modified:
@@ -12,7 +12,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/Compilar-e-Instalar-El-Kernel-4.2.png"><img src="/assets/img/Compilar-e-Instalar-El-Kernel-4.2.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
+<a href="/assets/img/Compilar-e-Instalar-El-Kernel-4.2.png"><amp-img layout="responsive" src="/assets/img/Compilar-e-Instalar-El-Kernel-4.2.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
 <span class="image-credit">Crédito de la imagen: <a href="https://pixabay.com/en/linux-logo-penguin-tux-text-151619/" target="_blank" title="">pixabay</a></span><br />
 </figure>
 

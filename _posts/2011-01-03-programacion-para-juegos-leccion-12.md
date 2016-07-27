@@ -1,6 +1,6 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 1.2 &#8211; Hello World'
-layout: post
+layout: post.amp
 permalink: /programacion-para-juegos-leccion-12/
 categories:
   - juegos

@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: Oracle Magazine'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-oracle-magazine/
 categories:
   - cursos

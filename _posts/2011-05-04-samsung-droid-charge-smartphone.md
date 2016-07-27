@@ -1,7 +1,7 @@
 ---
 title: Samsung Droid Charge Smartphone
 
-layout: post
+layout: post.amp
 permalink: /samsung-droid-charge-smartphone/
 categories:
   - android
@@ -13,7 +13,7 @@ color: "#F57C00"
 ---
 <div class="iconews">
 </div>
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Dejo este vídeo que me ha parecido interesante y que describe las características de este nuevo terminal. Sus características más destacadas son:
 

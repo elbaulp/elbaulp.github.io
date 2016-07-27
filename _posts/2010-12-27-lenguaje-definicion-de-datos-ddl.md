@@ -1,6 +1,6 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias'
-layout: post
+layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl/
 categories:
   - BaseDeDatos

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Introducción Y Ejemplos De NfTables
 date: 2016-03-29T08:02:46+02:00
 description: "nftables  es un  nuevo  framework  que  sustituye  al antiguo  iptables. Este  nuevo  software aún  no está  desarrollado  al 100% de sus funciones, tenemos  la problemática de la implantación,   que aunque  se incluye desde el kernel  3.13, las personas  aún  no están acostumbradas a su uso y por tanto  siguen usando  iptables  o en su defecto la nomenclatura  de sus reglas."

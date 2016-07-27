@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Nueva Guía: System Administration & Security - Salary & Skills Report"
 modified: 2015-11-27T10:25:00+00:00
 categories:
@@ -11,7 +11,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <figure>
-<img src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" />
+<amp-img layout="responsive" src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" />
 </figure>
 
 This kit will tell you what you need to know to earn more in system administration and security.

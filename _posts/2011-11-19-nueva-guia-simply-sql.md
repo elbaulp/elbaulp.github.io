@@ -1,7 +1,7 @@
 ---
 title: 'Nueva Guía: Simply SQL'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-simply-sql/
 categories:
   - BaseDeDatos

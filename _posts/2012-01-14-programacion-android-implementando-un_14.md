@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Implementando un Content Provider (Parte 3)'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-implementando-un_14/
 categories:
   - android
@@ -13,7 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 Ya hemos visto como [plantear la base de datos][1] para un proveedor y cómo [implementar parte del proveedor de contenidos][2], en esta tercera parte vamos a implementar los métodos query, insert, update, delete y getType.

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: 3 Intervenciones Para Poner a Salvo Tu Teléfono Con Una Aplicación Para Localizar El Móvil
 modified:
 categories:

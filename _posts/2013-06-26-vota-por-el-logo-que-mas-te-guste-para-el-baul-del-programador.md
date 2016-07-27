@@ -1,7 +1,7 @@
 ---
 title: Vota por el logo que más te guste para El Baúl del Programador
 
-layout: post
+layout: post.amp
 permalink: /vota-por-el-logo-que-mas-te-guste-para-el-baul-del-programador/
 categories:
   - offtopic
@@ -18,7 +18,7 @@ Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 </noscript>
 
 
-[<img src="/assets/img/2013/06/LOGOS.png" alt="LOGOS" width="978px" height="786px" />][1]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/06/LOGOS.png" alt="LOGOS" width="978px" height="786px" />][1]{.thumbnail}
 
 
 

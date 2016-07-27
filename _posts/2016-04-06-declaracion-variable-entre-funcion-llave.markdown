@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Declaración De Variables Entre El Nombre De La Función Y La Primera Llave en C
 modified:
 categories:

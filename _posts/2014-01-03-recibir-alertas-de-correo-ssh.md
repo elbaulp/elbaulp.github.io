@@ -1,7 +1,7 @@
 ---
 title: 'Recibir alertas de correo al acceder al  sistema mediante SSH'
 
-layout: post
+layout: post.amp
 permalink: /recibir-alertas-de-correo-ssh/
 categories:
   - Administracion de Servidores

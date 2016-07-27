@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Intents &#8211; Categorías'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-intents-categorias/
 categories:
   - android
@@ -14,7 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 Las actividades se pueden clasificar en categorías para así poder buscarlas basándonos en el nombre de dicha categoría. Por ejemplo, mientras el sistema se está iniciando, busca en las actividades las que estén bajo la categoría *CATEGORY_LAUNCHER*.

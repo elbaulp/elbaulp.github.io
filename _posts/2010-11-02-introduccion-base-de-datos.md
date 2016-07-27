@@ -1,6 +1,6 @@
 ---
 title: Introduccion a base de datos
-layout: post
+layout: post.amp
 permalink: /introduccion-base-de-datos/
 categories:
   - BaseDeDatos
@@ -103,7 +103,7 @@ color: "#009688"
   * **Independencia de los dispositivos:** se consigue cuando la ejecuci&oacute;n de los programas es independiente del sistema de almacenamiento.
 
 <div class="separator" style="clear: both; text-align: center;">
-<a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
+<a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><amp-img layout="responsive" border="0" alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
 </div>
 <p style="margin-left: 1em">
   En el siguiente ejemplo de una base de datos se puede observar que se han obtenido dos subesquemas (esquemas externos) a partir del &uacute;nico esquema conceptual formado por las entidades: VENDEDORES, VENTAS y ARTICULOS. La estructura de cada subesquema obedece a las necesidades concretas del tipo de usuario que lo va a utilizar. Por ejemplo:
@@ -155,7 +155,7 @@ color: "#009688"
   Esquema conceptual de toda la base de datos, formado por los siguientes registros conceptuales:
 </p>
 <div class="separator" style="clear: both; text-align: center;">
-<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
+<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><amp-img layout="responsive" border="0" height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
 </div>
 <div style="background-color: ">
 <span style="background-color: ">ESQUEMA INTERNO</span>
@@ -463,7 +463,7 @@ color: "#009688"
   Para describir el funcionamiento de un SGBD supondremos el caso de un programa de aplicaci&oacute;n, que lee un registro de una base de datos, para ello realiza una solicitud al <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr>, esencialmente la secuencia, mostrada en el esquema de la figura 1.2, es la siguiente:
 </p>
 <div class="separator" style="clear: both; text-align: center;">
-<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img title="Funcionamiento de un SGBD" border="0" height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
+<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><amp-img layout="responsive" title="Funcionamiento de un SGBD" border="0" height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
 </div>
 <ol type="1" style="margin-left: 1em">
 <li>

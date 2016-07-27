@@ -1,7 +1,7 @@
 ---
 title: 'NDK-gdb &#8211; Depurar aplicaciones en el NKD de Android'
 
-layout: post
+layout: post.amp
 permalink: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/
 categories:
   - android
@@ -438,7 +438,7 @@ Con el comando adios terminamos la sesión, y el buffer ha registrado toda la co
 
 y se muestra en la pantalla del dispositivo:
 
-[<img src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb" width="180px" height="300px" />][6]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png" alt="tutorial ndk-gdb" width="180px" height="300px" />][6]{.thumbnail}
 
 Con esto concluye el artículo, espero que haya sido de utilidad.
 

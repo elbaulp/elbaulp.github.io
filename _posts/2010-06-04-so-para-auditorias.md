@@ -1,6 +1,6 @@
 ---
 title: SO para auditorias
-layout: post
+layout: post.amp
 permalink: /so-para-auditorias/
 categories:
   - linux

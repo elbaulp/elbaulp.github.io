@@ -1,6 +1,6 @@
 ---
 title: World of Warcraft sobre Android
-layout: post
+layout: post.amp
 permalink: /world-of-warcraft-sobre-android/
 categories:
   - noticias

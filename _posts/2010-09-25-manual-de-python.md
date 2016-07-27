@@ -1,6 +1,6 @@
 ---
 title: Manual de python
-layout: post
+layout: post.amp
 permalink: /manual-de-python/
 categories:
   - linux

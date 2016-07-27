@@ -1,7 +1,7 @@
 ---
 title: 'Nueva sección: Descarga de Manuales gratuitos'
 
-layout: post
+layout: post.amp
 permalink: /nueva-seccion-descarga-de-manuales/
 categories:
   - cursos

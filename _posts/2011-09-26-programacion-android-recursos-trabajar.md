@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-recursos-trabajar/
 categories:
   - android
@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Además de los recursos estructurados [que hemos ido viendo][1], Android permite usar archivos XML arbitrarios como recursos. Esto proporciona una forma rápida de referenciar los archivos basandose en su Id de recurso así como permitirnos localizar estos archivos de una manera sencilla. Como última ventaja, nos permite compilar y almacenar estos archivos en el dispositivo eficientemente.
 

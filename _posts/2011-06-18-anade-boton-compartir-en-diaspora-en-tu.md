@@ -1,7 +1,7 @@
 ---
 title: Añade Botón compartir en Diaspora en tu blog (BLOGGER)
 
-layout: post
+layout: post.amp
 permalink: /anade-boton-compartir-en-diaspora-en-tu/
 categories:
   - curiosidades
@@ -21,7 +21,7 @@ Es muy sencillo de agregar a nuestro sítio, simplemente colocamos este código 
 
 ```xml
 <a expr:href='"https://joindiaspora.com/bookmarklet?url=" + data:post.url + "&title=" + data:post.title' target="_blank">
-<img alt="compartir en Diaspora*" height="32px" src="http://lh3.googleusercontent.com/-BtpsAHPELfY/TfzF4u54aoI/AAAAAAAAApA/BOgUWG9-sVk/s288/diaspora.png" title="compartir en Diaspora*" width="32px" />
+<amp-img layout="responsive" alt="compartir en Diaspora*" height="32px" src="http://lh3.googleusercontent.com/-BtpsAHPELfY/TfzF4u54aoI/AAAAAAAAApA/BOgUWG9-sVk/s288/diaspora.png" title="compartir en Diaspora*" width="32px" />
 </a>
 
 ```

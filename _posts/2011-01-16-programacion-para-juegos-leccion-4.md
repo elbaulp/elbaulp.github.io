@@ -1,6 +1,6 @@
 ---
 title: 'Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos'
-layout: post
+layout: post.amp
 permalink: /programacion-para-juegos-leccion-4/
 categories:
   - juegos
@@ -213,13 +213,13 @@ En SDL cuando ocurre un evento, se coloca en la cola de eventos. Ésta cola de e
 Por ejemplo si fuera a presionar un botón del ratón, mover el cursor y a continuación, presionar una tecla del teclado, la cola de eventos se vería así:
 
 <div class="separator" style="clear: both; text-align: center;">
-<img border="0" height="177" width="255" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TT6ImYP7bjI/AAAAAAAAARU/QiAey3O_FW0/queue.jpg" />
+<amp-img layout="responsive" border="0" height="177" width="255" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TT6ImYP7bjI/AAAAAAAAARU/QiAey3O_FW0/queue.jpg" />
 </div>
 
 Lo que <var>SDL_PollEvent()</var> hace es sacar un evento de la cola y guardar sus datos en nuestra estructura de tipo Evento:
 
 <div class="separator" style="clear: both; text-align: center;">
-<img border="0" height="258" width="294" src="https://lh5.ggpht.com/_IlK2pNFFgGM/TT6ImqKAdJI/AAAAAAAAARY/JqvFGavqRHY/poll.jpg" />
+<amp-img layout="responsive" border="0" height="258" width="294" src="https://lh5.ggpht.com/_IlK2pNFFgGM/TT6ImqKAdJI/AAAAAAAAARY/JqvFGavqRHY/poll.jpg" />
 </div>
 
 Por lo tanto este código es recoger datos de los eventos **mientras** haya en la cola.

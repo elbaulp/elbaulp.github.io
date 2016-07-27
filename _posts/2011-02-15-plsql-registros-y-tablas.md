@@ -1,6 +1,6 @@
 ---
 title: 'PL/SQL &#8211; Registros y Tablas'
-layout: post
+layout: post.amp
 permalink: /plsql-registros-y-tablas/
 categories:
   - BaseDeDatos

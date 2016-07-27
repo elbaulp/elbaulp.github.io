@@ -1,7 +1,7 @@
 ---
 title: Configurar Log4j2 en Netbeans, un logger para Java
 
-layout: post
+layout: post.amp
 permalink: /configurar-log4j2-en-netbeans-un-logger-para-java/
 categories:
   - Java
@@ -136,7 +136,7 @@ public class EjemploLog4j2 {
 Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log coloreados, como se muestra en la imagen:
 
 <figure>
-<img src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1" width="364px" height="89px" />
+<amp-img layout="responsive" src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png" alt="Configurar Log4j2 en Netbeans1" width="364px" height="89px" />
 </figure>
 
 ## Establecer un nivel de log por defecto en toda la aplicación
@@ -203,7 +203,7 @@ public class EjemploLog4j2 {
 ```
 
 <figure>
-<img src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434px" height="49px" />
+<amp-img layout="responsive" src="/assets/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png" alt="Configurar Log4j2 en Netbeans2" width="434px" height="49px" />
 </figure>
 
  [1]: https://logging.apache.org/log4j/2.x/maven-artifacts.html

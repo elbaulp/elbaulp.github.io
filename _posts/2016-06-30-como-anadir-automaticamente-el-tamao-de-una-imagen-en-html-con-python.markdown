@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python
 description: Pequeño script en python para añadir el tamaño a una etiqueta img
 introduction: Pequeño script en python para añadir el tamaño a una etiqueta img

@@ -1,6 +1,6 @@
 ---
 title: 'Clases y Objetos &#8211; El Destructor'
-layout: post
+layout: post.amp
 permalink: /clases-y-objetos-el-destructor/
 categories:
   - C

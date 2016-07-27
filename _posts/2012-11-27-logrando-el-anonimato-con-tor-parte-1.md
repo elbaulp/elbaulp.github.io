@@ -1,7 +1,7 @@
 ---
 title: Logrando el anonimato con Tor (Parte 1)
 
-layout: post
+layout: post.amp
 permalink: /logrando-el-anonimato-con-tor-parte-1/
 categories:
   - aplicaciones
@@ -104,7 +104,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
   Ok, los puertos están en estado de escucha, lo que significa que todo está bien, porque pueden aceptar conexiones. el único paso que nos falta es configurar nuestro navegador para que use privoxy. Un ejemplo de configuración de Firefox se presenta en la siguiente imagen:
 </div>
 <div>
-<img class="size-medium wp-image-1027 alignnone" src="/assets/img/2012/11/081012_1601_AchievingAn12-300x298.png" alt="" width="300px" height="298px" />
+<amp-img layout="responsive" class="size-medium wp-image-1027 alignnone" src="/assets/img/2012/11/081012_1601_AchievingAn12-300x298.png" alt="" width="300px" height="298px" />
 </div>
 <div>
 </div>
@@ -119,7 +119,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
   Verifiquemos si el navegador está efectivamente usando la red Tor para navegar en internet de manera anónima. Podemos hacerlo visitando la URI <a href="http://check.torproject.org/" target="_blank">Check Torproject</a>. Si ves algo como la siguiente imagen, entonces hemos configurado Tor exitosamente y podemos navegar en Internet de forma anónima.
 </div>
 <div>
-<a href="/assets/img/2012/11/081012_1601_AchievingAn21.png"><img src="/assets/img/2012/11/081012_1601_AchievingAn21-300x86.png" alt="" width="300px" height="86px" /></a>
+<a href="/assets/img/2012/11/081012_1601_AchievingAn21.png"><amp-img layout="responsive" src="/assets/img/2012/11/081012_1601_AchievingAn21-300x86.png" alt="" width="300px" height="86px" /></a>
 </div>
 <div>
 </div>
@@ -145,7 +145,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
 <div>
 </div>
 <div>
-<a href="/assets/img/2012/11/081012_1601_AchievingAn31.png"><img src="/assets/img/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284px" height="300px" /></a>
+<a href="/assets/img/2012/11/081012_1601_AchievingAn31.png"><amp-img layout="responsive" src="/assets/img/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284px" height="300px" /></a>
 </div>
 <div>
 </div>
@@ -158,7 +158,7 @@ Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Compro
   El script tambien abrirá el navegador web Tor una vez que nos conectemos con éxito a la red Tor. Este navegador está basado en Firefox y se ve como en la siguiente imagen:
 </div>
 <div>
-<a href="/assets/img/2012/11/081012_1601_AchievingAn41.png"><img src="/assets/img/2012/11/081012_1601_AchievingAn41-300x86.png" alt="" width="300px" height="86px" /></a>
+<a href="/assets/img/2012/11/081012_1601_AchievingAn41.png"><amp-img layout="responsive" src="/assets/img/2012/11/081012_1601_AchievingAn41-300x86.png" alt="" width="300px" height="86px" /></a>
 </div>
 <div>
 </div>

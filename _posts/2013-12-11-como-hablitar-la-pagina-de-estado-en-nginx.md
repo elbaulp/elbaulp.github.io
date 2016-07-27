@@ -1,7 +1,7 @@
 ---
 title: Cómo habilitar la página de estado en Nginx
 
-layout: post
+layout: post.amp
 permalink: /como-hablitar-la-pagina-de-estado-en-nginx/
 categories:
   - Administracion de Servidores

@@ -1,6 +1,6 @@
 ---
 title: Bloquear una IP atacando el servidor mediante iptables
-layout: post
+layout: post.amp
 permalink: /bloquear-una-ip-atacanto-el-servidor-mediante-iptables/
 categories:
   - internet
@@ -19,7 +19,7 @@ description: "Ayer ojeando el archivo de log detecté que había una ip mandando
 main-class: "servidores"
 color: "#0097A7"
 ---
-<img src="/assets/img/2013/02/Applic-Firewall-icon.png" alt="Applic-Firewall-icon" width="256px" height="256px" />
+<amp-img layout="responsive" src="/assets/img/2013/02/Applic-Firewall-icon.png" alt="Applic-Firewall-icon" width="256px" height="256px" />
 
 Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.
 

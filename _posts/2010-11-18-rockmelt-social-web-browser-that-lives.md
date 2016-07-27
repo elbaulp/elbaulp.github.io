@@ -1,6 +1,6 @@
 ---
 title: RockMelt, The social web browser that lives in the clouds
-layout: post
+layout: post.amp
 permalink: /rockmelt-social-web-browser-that-lives/
 categories:
   - Sin Categoria

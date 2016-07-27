@@ -1,6 +1,6 @@
 ---
 title: Chuleta de comandos para GPG
-layout: post
+layout: post.amp
 permalink: /chuleta-de-comandos-para-gpg/
 categories:
   - Articulos
@@ -17,7 +17,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <figure>
-<a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><img src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" width="400px" height="175px" /></a>
+<a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><amp-img layout="responsive" src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" width="400px" height="175px" /></a>
 </figure>
 
 Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para [GPG][1]. Si encuentras algún error, no dudes en comentarlo.

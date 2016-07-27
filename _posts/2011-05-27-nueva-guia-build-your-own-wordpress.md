@@ -1,7 +1,7 @@
 ---
 title: 'Nueva Guía: Build Your Own WordPress Site Guide'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-build-your-own-wordpress/
 categories:
   - cursos

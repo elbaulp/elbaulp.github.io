@@ -1,6 +1,6 @@
 ---
 title: 'Consulta de Datos &#8211; Subconsultas'
-layout: post
+layout: post.amp
 permalink: /consulta-de-datos-subconsultas/
 categories:
   - BaseDeDatos

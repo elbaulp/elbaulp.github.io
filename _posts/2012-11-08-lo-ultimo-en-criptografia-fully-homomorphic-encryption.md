@@ -1,7 +1,7 @@
 ---
 title: 'Lo último en criptografía: Fully Homomorphic Encryption'
 
-layout: post
+layout: post.amp
 permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
 categories:
   - Algoritmos
@@ -18,7 +18,7 @@ tags:
 main-class: "security-now"
 color: "#00BCD4"
 ---
-[<img title="Homomorphic Encryption" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="" width="256px" height="256px" />][1]  
+[<amp-img layout="responsive" title="Homomorphic Encryption" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="" width="256px" height="256px" />][1]  
 Me he aficionado a escuchar un programa de radio llamado **Security Now!**, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.
 
 Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama **Homomorphic Encryption** (Cifrado Homomórfico) ó **Fully Homomorphic Encryption** (Cifrado totalmente homomórfico).

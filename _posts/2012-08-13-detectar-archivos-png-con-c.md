@@ -1,7 +1,7 @@
 ---
 title: Detectar archivos PNG con C++
 
-layout: post
+layout: post.amp
 permalink: /detectar-archivos-png-con-c/
 categories:
   - C

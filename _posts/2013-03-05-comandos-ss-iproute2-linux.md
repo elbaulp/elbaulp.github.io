@@ -1,6 +1,6 @@
 ---
 title: Algunos comandos útiles con iproute2
-layout: post
+layout: post.amp
 permalink: /comandos-ss-iproute2-linux/
 categories:
   - aplicaciones

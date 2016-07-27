@@ -1,7 +1,7 @@
 ---
 title: Instalación y optimización de un servidor web con Nginx (I)
 
-layout: post
+layout: post.amp
 permalink: /instalacion-optimizacion-servidor-web-nginx-i/
 categories:
   - Administracion de Servidores
@@ -144,7 +144,7 @@ service nginx start
 Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección *localhost*, donde veremos lo siguiente:
 
 <figure>
-<a href="/assets/img/2014/02/instalacionNginx.png"><img src="/assets/img/2014/02/instalacionNginx.png" title="{{ page.title }}" alt="{{ page.title }}" width="554px" height="192px" /></a>
+<a href="/assets/img/2014/02/instalacionNginx.png"><amp-img layout="responsive" src="/assets/img/2014/02/instalacionNginx.png" title="{{ page.title }}" alt="{{ page.title }}" width="554px" height="192px" /></a>
 </figure>
 
 ### Configuración

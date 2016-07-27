@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Recursos compilados y no compilados'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-recursos-2/
 categories:
   - android

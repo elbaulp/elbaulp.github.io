@@ -1,6 +1,6 @@
 ---
 title: 'Fugas de memoria en Android: Handlers & Clases Internas'
-layout: post
+layout: post.amp
 permalink: /fugas-de-memoria-android-handlers-clases-internas/
 categories:
   - android

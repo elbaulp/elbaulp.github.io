@@ -1,7 +1,7 @@
 ---
 title: Enlaces de la semana ( I )
 
-layout: post
+layout: post.amp
 permalink: /enlaces-de-la-semana-i/
 categories:
   - Enlaces de la semana

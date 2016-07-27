@@ -1,7 +1,7 @@
 ---
 title: Los 11 Mejores Frameworks gratuitos para Aplicaciones Web
 
-layout: post
+layout: post.amp
 permalink: /los-10-mejores-frameworks-gratis-de-aplicaciones-web/
 categories:
   - Articulos

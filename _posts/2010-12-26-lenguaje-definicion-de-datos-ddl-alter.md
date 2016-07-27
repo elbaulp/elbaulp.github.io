@@ -1,6 +1,6 @@
 ---
 title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
-layout: post
+layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl-alter/
 categories:
   - BaseDeDatos

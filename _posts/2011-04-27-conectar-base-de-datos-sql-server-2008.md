@@ -1,6 +1,6 @@
 ---
 title: Conectar base de datos sql Server 2008 a aplicación Java remotamente
-layout: post
+layout: post.amp
 permalink: /conectar-base-de-datos-sql-server-2008/
 categories:
   - android
@@ -15,7 +15,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 [En anteriores entradas][1] expliqué como he ido desarrollando una aplicación para Android que enviaba mensajes al pc para un proyecto de fin de curso.
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Utilizando El Acelerómetro Y Giroscopio en Android Para Detectar Movimientos
 date: 2016-02-18T09:32:53+01:00
 modified:
@@ -30,7 +30,7 @@ _Enunciado: Una appMovimientoSonido que reconozca un patrón de movimientos de v
 En esta aplicación se usa el acelerómetro y el giroscopio, para mostrar sus valores por pantalla. El giroscopio es capaz de detectar una rotación del dispositivo, al hacerlo, reproduce un sonido. Por contra, el acelerómetro detecta una sacudida del dispositivo y reproduce un sonido distinto. Debido a que no en todos los dispositivos se obtienen valores precisos para los sensores, solo se mostrarán aquellos que tengan sentido.
 
 <figure>
-<a href="/assets/img/npi/movementSound.png"><img src="/assets/img/npi/movementSound.png" title="Aplicación Movement Sound" alt="Aplicación Movement Sound" width="338px" height="600px" /></a>
+<a href="/assets/img/npi/movementSound.png"><amp-img layout="responsive" src="/assets/img/npi/movementSound.png" title="Aplicación Movement Sound" alt="Aplicación Movement Sound" width="338px" height="600px" /></a>
 <span class="image-credit">Aplicación Movement Sound</span>
 </figure>
 

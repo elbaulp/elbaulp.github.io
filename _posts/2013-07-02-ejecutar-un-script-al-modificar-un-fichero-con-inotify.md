@@ -1,6 +1,6 @@
 ---
 title: Ejecutar un script al modificar un fichero con inotify
-layout: post
+layout: post.amp
 permalink: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/
 categories:
   - bash

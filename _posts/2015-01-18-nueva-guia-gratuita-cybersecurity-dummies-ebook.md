@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía gratuita: Cybersecurity for Dummies eBook'
 
-layout: post
+layout: post.amp
 permalink: /nueva-guia-gratuita-cybersecurity-dummies-ebook/
 categories:
   - cursos
@@ -13,7 +13,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<img src="/assets/img/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="591px" height="914px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/Nueva-guía-gratuita-Cybersecurity-for-Dummies-eBook.jpg" alt="Nueva guía gratuita: Cybersecurity for Dummies eBook" width="591px" height="914px" />
 </figure>
 
 APTs (Advanced Persistent Threats) have changed the world of enterprise security and how networks and organizations are attacked. These threats, and the cyber-criminals behind them, are experts at remaining hidden from traditional security while exhibiting an intelligence, resiliency, and patience that has never been seen before.

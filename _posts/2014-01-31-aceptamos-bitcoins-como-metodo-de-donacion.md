@@ -1,7 +1,7 @@
 ---
 title: Aceptamos BitCoins como método de donación
 
-layout: post
+layout: post.amp
 permalink: /aceptamos-bitcoins-como-metodo-de-donacion/
 categories:
   - noticias
@@ -17,7 +17,7 @@ Para aquellos que quieran conocer detalles más técnicos sobre bitcoin, hace ti
 La dirección a la que hacer las donaciones es la siguiente, y estará disponible en la barra lateral:  
 <!--ad-->
 <div style="text-align:center">
-<img src="/assets/img/2014/01/Donar.png" width="178px" height="178px" /><br /><a style="color:rgb(18, 218, 218)" href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
+<amp-img layout="responsive" src="/assets/img/2014/01/Donar.png" width="178px" height="178px" /><br /><a style="color:rgb(18, 218, 218)" href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
 </div>
 
 Por último, recomiendo a los lectores escuchar el podcast:

@@ -1,7 +1,7 @@
 ---
 title: Cómo crear un pie de página en LaTeX con fancyhdr
 
-layout: post
+layout: post.amp
 permalink: /como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/
 categories:
   - How To
@@ -20,7 +20,7 @@ color: "#B31917"
 ---
 
 <figure>
-<img src="/assets/img/2013/05/latex_logo.png" alt="latex_logo" width="300px" height="114px" />
+<amp-img layout="responsive" src="/assets/img/2013/05/latex_logo.png" alt="latex_logo" width="300px" height="114px" />
 </figure>
 
 Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.  
@@ -91,7 +91,7 @@ Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambi
 ```
 
 Produciendo el siguiente resultado:  
-<img src="/assets/img/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887px" height="53px" />
+<amp-img layout="responsive" src="/assets/img/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887px" height="53px" />
 
 #### Referencias
 

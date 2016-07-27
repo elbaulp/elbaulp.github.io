@@ -1,6 +1,6 @@
 ---
 title: C++ syntax highlighted script
-layout: post
+layout: post.amp
 permalink: /c-syntax-highlighted-script/
 categories:
   - linux

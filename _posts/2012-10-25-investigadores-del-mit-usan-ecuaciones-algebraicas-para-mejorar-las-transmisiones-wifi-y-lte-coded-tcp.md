@@ -1,7 +1,7 @@
 ---
 title: Investigadores del MIT usan ecuaciones algebráicas para mejorar las transmisiones WIFI y LTE con coded TCP
 
-layout: post
+layout: post.amp
 permalink: /investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/
 categories:
   - Informatica
@@ -20,7 +20,7 @@ color: "#F57C00"
 ---
 
 <figure>
-<img class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/assets/img/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="296px" height="370px" />
+<amp-img layout="responsive" class="alignleft  wp-image-1001" style="padding-right: 10px;" title="Algebra Packets MIT" src="/assets/img/2012/10/Algebra-Packets-MIT1.jpg" alt="paquetes algebráicos MIT TCP" width="296px" height="370px" />
 </figure>
 
 Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione.

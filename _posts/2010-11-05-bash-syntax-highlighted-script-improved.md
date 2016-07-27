@@ -1,6 +1,6 @@
 ---
 title: 'Bash syntax highlighted script [Improved]'
-layout: post
+layout: post.amp
 permalink: /bash-syntax-highlighted-script-improved/
 categories:
   - linux

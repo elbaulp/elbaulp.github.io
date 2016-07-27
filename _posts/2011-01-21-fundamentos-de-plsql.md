@@ -1,6 +1,6 @@
 ---
 title: Fundamentos de PL/SQL
-layout: post
+layout: post.amp
 permalink: /fundamentos-de-plsql/
 categories:
   - BaseDeDatos

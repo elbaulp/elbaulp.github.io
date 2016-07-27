@@ -1,6 +1,6 @@
 ---
 title: Google Os Vs Windows
-layout: post
+layout: post.amp
 permalink: /google-os-vs-windows/
 categories:
   - noticias

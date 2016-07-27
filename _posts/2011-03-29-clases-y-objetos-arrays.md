@@ -1,6 +1,6 @@
 ---
 title: 'Clases y Objetos &#8211; Arrays'
-layout: post
+layout: post.amp
 permalink: /clases-y-objetos-arrays/
 categories:
   - C

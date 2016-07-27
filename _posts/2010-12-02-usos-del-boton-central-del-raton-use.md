@@ -1,6 +1,6 @@
 ---
 title: Usos del botón central del ratón
-layout: post
+layout: post.amp
 permalink: /usos-del-boton-central-del-raton-use/
 categories:
   - curiosidades

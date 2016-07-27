@@ -1,7 +1,7 @@
 ---
 title: 'Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211; 9GAG.COM Parte (III)'
 
-layout: post
+layout: post.amp
 permalink: /humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/
 if_slider_image:
   -
@@ -23,97 +23,97 @@ Otra recopilación de humor gráfico, para cerrar este domingo de verano.
 <div id="gallery-1" class="gallery galleryid-904 gallery-columns-3 gallery-size-thumbnail">
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/292419_10151030364926840_1615042369_n/"><img src="/assets/img/2012/08/292419_10151030364926840_1615042369_n1-150x150.jpg" class="attachment-thumbnail" alt="292419_10151030364926840_1615042369_n" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/292419_10151030364926840_1615042369_n/"><amp-img layout="responsive" src="/assets/img/2012/08/292419_10151030364926840_1615042369_n1-150x150.jpg" class="attachment-thumbnail" alt="292419_10151030364926840_1615042369_n" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/603552_10150954606546840_960251269_n/"><img src="/assets/img/2012/08/603552_10150954606546840_960251269_n1-150x150.jpg" class="attachment-thumbnail" alt="603552_10150954606546840_960251269_n" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/603552_10150954606546840_960251269_n/"><amp-img layout="responsive" src="/assets/img/2012/08/603552_10150954606546840_960251269_n1-150x150.jpg" class="attachment-thumbnail" alt="603552_10150954606546840_960251269_n" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4571221_700b_v1/"><img src="/assets/img/2012/08/4571221_700b_v11-150x150.jpg" class="attachment-thumbnail" alt="4571221_700b_v1" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4571221_700b_v1/"><amp-img layout="responsive" src="/assets/img/2012/08/4571221_700b_v11-150x150.jpg" class="attachment-thumbnail" alt="4571221_700b_v1" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4547129_700b/"><img src="/assets/img/2012/08/4547129_700b1-150x150.jpg" class="attachment-thumbnail" alt="4547129_700b" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4547129_700b/"><amp-img layout="responsive" src="/assets/img/2012/08/4547129_700b1-150x150.jpg" class="attachment-thumbnail" alt="4547129_700b" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/avpfizxcaaa3rxp-2/"><img src="/assets/img/2012/08/AvpFizXCAAA3RXp1-150x150.jpg" class="attachment-thumbnail" alt="AvpFizXCAAA3RXp" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/avpfizxcaaa3rxp-2/"><amp-img layout="responsive" src="/assets/img/2012/08/AvpFizXCAAA3RXp1-150x150.jpg" class="attachment-thumbnail" alt="AvpFizXCAAA3RXp" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/ensayos-2/"><img src="/assets/img/2012/08/ensayos1-150x150.jpg" class="attachment-thumbnail" alt="ensayos" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/ensayos-2/"><amp-img layout="responsive" src="/assets/img/2012/08/ensayos1-150x150.jpg" class="attachment-thumbnail" alt="ensayos" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/2696090_700b/"><img src="/assets/img/2012/08/2696090_700b1-150x150.jpg" class="attachment-thumbnail" alt="2696090_700b" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/2696090_700b/"><amp-img layout="responsive" src="/assets/img/2012/08/2696090_700b1-150x150.jpg" class="attachment-thumbnail" alt="2696090_700b" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4183958_460s_v1/"><img src="/assets/img/2012/08/4183958_460s_v11-150x150.jpg" class="attachment-thumbnail" alt="4183958_460s_v1" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4183958_460s_v1/"><amp-img layout="responsive" src="/assets/img/2012/08/4183958_460s_v11-150x150.jpg" class="attachment-thumbnail" alt="4183958_460s_v1" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4190955_460s-1/"><img src="/assets/img/2012/08/4190955_460s-11-150x150.jpg" class="attachment-thumbnail" alt="4190955_460s (1)" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4190955_460s-1/"><amp-img layout="responsive" src="/assets/img/2012/08/4190955_460s-11-150x150.jpg" class="attachment-thumbnail" alt="4190955_460s (1)" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4191750_460s/"><img src="/assets/img/2012/08/4191750_460s1-150x150.jpg" class="attachment-thumbnail" alt="4191750_460s" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4191750_460s/"><amp-img layout="responsive" src="/assets/img/2012/08/4191750_460s1-150x150.jpg" class="attachment-thumbnail" alt="4191750_460s" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/homenaje-a-teska/"><img src="/assets/img/2012/08/Homenaje-a-Teska1-150x150.jpg" class="attachment-thumbnail" alt="Homenaje a Teska" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/homenaje-a-teska/"><amp-img layout="responsive" src="/assets/img/2012/08/Homenaje-a-Teska1-150x150.jpg" class="attachment-thumbnail" alt="Homenaje a Teska" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4180523_700b/"><img src="/assets/img/2012/08/4180523_700b1-150x150.jpg" class="attachment-thumbnail" alt="4180523_700b" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4180523_700b/"><amp-img layout="responsive" src="/assets/img/2012/08/4180523_700b1-150x150.jpg" class="attachment-thumbnail" alt="4180523_700b" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/social-media-doctor/"><img src="/assets/img/2012/08/social-media-doctor1.png" class="attachment-thumbnail" alt="social-media-doctor" width="600px" height="5092px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/social-media-doctor/"><amp-img layout="responsive" src="/assets/img/2012/08/social-media-doctor1.png" class="attachment-thumbnail" alt="social-media-doctor" width="600px" height="5092px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/426565_177194745724080_154055244704697_265589_853276143_n/"><img src="/assets/img/2012/08/426565_177194745724080_154055244704697_265589_853276143_n1-150x150.jpg" class="attachment-thumbnail" alt="426565_177194745724080_154055244704697_265589_853276143_n" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/426565_177194745724080_154055244704697_265589_853276143_n/"><amp-img layout="responsive" src="/assets/img/2012/08/426565_177194745724080_154055244704697_265589_853276143_n1-150x150.jpg" class="attachment-thumbnail" alt="426565_177194745724080_154055244704697_265589_853276143_n" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/383546_222035087906712_154055244704697_367098_390563735_n/"><img src="/assets/img/2012/08/383546_222035087906712_154055244704697_367098_390563735_n1-150x150.jpg" class="attachment-thumbnail" alt="383546_222035087906712_154055244704697_367098_390563735_n" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/383546_222035087906712_154055244704697_367098_390563735_n/"><amp-img layout="responsive" src="/assets/img/2012/08/383546_222035087906712_154055244704697_367098_390563735_n1-150x150.jpg" class="attachment-thumbnail" alt="383546_222035087906712_154055244704697_367098_390563735_n" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4065307_700b_v2/"><img src="/assets/img/2012/08/4065307_700b_v21-150x150.jpg" class="attachment-thumbnail" alt="4065307_700b_v2" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/4065307_700b_v2/"><amp-img layout="responsive" src="/assets/img/2012/08/4065307_700b_v21-150x150.jpg" class="attachment-thumbnail" alt="4065307_700b_v2" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/seems-legit/"><img src="/assets/img/2012/08/Seems-legit1-150x150.jpg" class="attachment-thumbnail" alt="Seems legit" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/seems-legit/"><amp-img layout="responsive" src="/assets/img/2012/08/Seems-legit1-150x150.jpg" class="attachment-thumbnail" alt="Seems legit" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
-<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/wifi-names/"><img src="/assets/img/2012/08/Wifi-Names1-150x150.jpg" class="attachment-thumbnail" alt="Wifi Names" width="150px" height="150px" /></a>
+<a href="https://elbauldelprogramador.com/humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/wifi-names/"><amp-img layout="responsive" src="/assets/img/2012/08/Wifi-Names1-150x150.jpg" class="attachment-thumbnail" alt="Wifi Names" width="150px" height="150px" /></a>
 </dt>
 </dl>
 <br style="clear: both" />

@@ -1,7 +1,7 @@
 ---
 title: Vídeos de la semana (VII)
 
-layout: post
+layout: post.amp
 permalink: /videos-de-la-semana-vii/
 categories:
   - video de la semana
@@ -9,7 +9,7 @@ main-class: "geek"
 color: "#262626"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
+<a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img layout="responsive" border="0" height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>
 
 Aunque hace algunas semanas que no he publicado esta sección, aquí está de nuevo con 3 vídeos que espero que os gusten.

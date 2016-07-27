@@ -1,6 +1,6 @@
 ---
 title: Visible Tweets
-layout: post
+layout: post.amp
 permalink: /visible-tweets/
 categories:
   - curiosidades

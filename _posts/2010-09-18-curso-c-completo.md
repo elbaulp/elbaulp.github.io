@@ -1,6 +1,6 @@
 ---
 title: Curso c++ completo.
-layout: post
+layout: post.amp
 permalink: /curso-c-completo/
 categories:
   - C

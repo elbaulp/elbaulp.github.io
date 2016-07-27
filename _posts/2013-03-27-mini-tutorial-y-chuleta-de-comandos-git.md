@@ -1,7 +1,7 @@
 ---
 title: 'Git: Mini Tutorial y chuleta de comandos'
 
-layout: post
+layout: post.amp
 permalink: /mini-tutorial-y-chuleta-de-comandos-git/
 categories:
   - Articulos
@@ -31,7 +31,7 @@ main-class: "git"
 color: "#f05033"
 ---
 <figure>
-<img src="/assets/img/2013/03/git-logo.png" alt="Tutorial git y comandos git" title="Git: Mini Tutorial y chuleta de comandos git" alt="Git: Mini Tutorial y chuleta de comandos" width="910px" height="380px" />
+<amp-img layout="responsive" src="/assets/img/2013/03/git-logo.png" alt="Tutorial git y comandos git" title="Git: Mini Tutorial y chuleta de comandos git" alt="Git: Mini Tutorial y chuleta de comandos" width="910px" height="380px" />
 </figure>
 
 Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer <a href="http://git-scm.com/book" target="_blank">Pro Git</a>, libro que recomiendo a todo desarrollador, disponible en <a href="https://github.s3.amazonaws.com/media/progit.en.pdf" target="_blank">PDF</a>, <a href="https://github.s3.amazonaws.com/media/progit.epub" target="_blank">EPUB</a>, <a href="https://github.s3.amazonaws.com/media/pro-git.en.mobi" target="_blank">MOBI</a> y <a href="http://www.amazon.es/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1430218339&linkCode=as2&tag=elbaudelpro-21" target="_blank">versión en papel</a>. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.

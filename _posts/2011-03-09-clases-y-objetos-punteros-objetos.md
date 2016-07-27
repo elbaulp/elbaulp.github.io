@@ -1,6 +1,6 @@
 ---
 title: 'Clases y Objetos &#8211; Punteros a objetos'
-layout: post
+layout: post.amp
 permalink: /clases-y-objetos-punteros-objetos/
 categories:
   - C

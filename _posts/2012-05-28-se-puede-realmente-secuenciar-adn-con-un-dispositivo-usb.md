@@ -1,7 +1,7 @@
 ---
 title: ¿Se puede realmente secuenciar ADN con un dispositivo USB?
 description: ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?
-layout: post
+layout: post.amp
 permalink: /se-puede-realmente-secuenciar-adn-con-un-dispositivo-usb/
 categories:
   - Articulos
@@ -16,7 +16,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-[<img src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION" width="660px" height="440px" />][1]  
+[<amp-img layout="responsive" src="/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg" alt="" title="Oxford-Nanopore-MinION" width="660px" height="440px" />][1]  
 ¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?  
 
 <!--ad-->

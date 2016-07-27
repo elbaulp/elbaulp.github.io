@@ -1,6 +1,6 @@
 ---
 title: 'Lenguaje Definición de Datos(DDL) &#8211; CREATE'
-layout: post
+layout: post.amp
 permalink: /lenguaje-definicion-de-datosddl-create/
 categories:
   - BaseDeDatos

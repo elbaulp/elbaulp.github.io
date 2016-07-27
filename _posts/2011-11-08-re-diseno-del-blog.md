@@ -1,7 +1,7 @@
 ---
 title: ¿Re-Diseño del blog?
 
-layout: post
+layout: post.amp
 permalink: /re-diseno-del-blog/
 categories:
   - noticias

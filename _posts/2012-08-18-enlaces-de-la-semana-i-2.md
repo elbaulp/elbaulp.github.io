@@ -1,7 +1,7 @@
 ---
 title: Enlaces de la semana (I)
 
-layout: post
+layout: post.amp
 permalink: /enlaces-de-la-semana-i-2/
 categories:
   - Enlaces de la semana
@@ -16,7 +16,7 @@ format: link
 main-class: "articulos"
 color: "#F57C00"
 ---
-[<img title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
+[<amp-img layout="responsive" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.
 

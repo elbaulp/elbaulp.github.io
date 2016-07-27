@@ -1,7 +1,7 @@
 ---
 title: 'Blogger Buzz: Add the +1 Button to Your Blog'
 
-layout: post
+layout: post.amp
 permalink: /blogger-buzz-add-1-button-to-your-blog/
 categories:
   - Sin Categoria

@@ -1,6 +1,6 @@
 ---
 title: Pasar parámetros variables en C/C++
-layout: post
+layout: post.amp
 permalink: /parametros-variables-en-cc/
 categories:
   - C
@@ -16,7 +16,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/2013/11/cpp.png"><img src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
+<a href="/assets/img/2013/11/cpp.png"><amp-img layout="responsive" src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
 </figure>
 
 En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++.

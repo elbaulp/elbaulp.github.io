@@ -1,7 +1,7 @@
 ---
 title: Se busca colaborador
 
-layout: post
+layout: post.amp
 permalink: /se-busca-colaborador/
 categories:
   - Sin Categoria

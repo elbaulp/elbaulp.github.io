@@ -1,7 +1,7 @@
 ---
 title: Explicación de la ley SOPA y recopilación de enlaces de interés
 
-layout: post
+layout: post.amp
 permalink: /explicacion-de-la-ley-sopa-y/
 categories:
   - noticias

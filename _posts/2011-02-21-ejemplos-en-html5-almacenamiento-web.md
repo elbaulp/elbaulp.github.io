@@ -1,6 +1,6 @@
 ---
 title: 'Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket'
-layout: post
+layout: post.amp
 permalink: /ejemplos-en-html5-almacenamiento-web/
 categories:
   - internet

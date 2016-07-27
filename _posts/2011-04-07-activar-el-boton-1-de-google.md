@@ -1,6 +1,6 @@
 ---
 title: Activar el botón +1 de google
-layout: post
+layout: post.amp
 permalink: /activar-el-boton-1-de-google/
 categories:
   - curiosidades

@@ -1,7 +1,7 @@
 ---
 title: 'Netstat: Analizando la red y detectando problemas'
 
-layout: post
+layout: post.amp
 permalink: /netstat-analizando-la-red-y-detectando-problemas/
 categories:
   - Articulos

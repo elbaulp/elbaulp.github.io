@@ -1,6 +1,6 @@
 ---
 title: Qué es un NullPointerException y cómo solucionarlo
-layout: post
+layout: post.amp
 permalink: /que-es-un-nullpointerexception-y-como-solucionarlo/
 categories:
   - Java
@@ -26,7 +26,7 @@ color: "#D32F2F"
 ---
 
 <figure>
-<img src="/assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="{{page.title}}" alt="{{ page.title }}" width="250px" height="292px" />
+<amp-img layout="responsive" src="/assets/img/2014/05/Qué-es-un-NullPointerException-y-cómo-solucionarlo.png" title="{{page.title}}" alt="{{ page.title }}" width="250px" height="292px" />
 </figure>
 
 Si has llegado aquí porque tienes problemas con **facebook**, tu respuesta está en este artículo: [Qué Esta Causando Un NullPointerException en Facebook E Internet](/nullpointerexception-facebook "Qué Esta Causando Un NullPointerException en Facebook E Internet")

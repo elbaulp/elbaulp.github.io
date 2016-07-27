@@ -1,7 +1,7 @@
 ---
 title: 'Unhide Forensic Tool: Encuentra puertos y procesos ocultos'
 
-layout: post
+layout: post.amp
 permalink: /unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/
 categories:
   - aplicaciones
@@ -15,7 +15,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <figure>
-<img src="/assets/img/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200px" height="176px" />
+<amp-img layout="responsive" src="/assets/img/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200px" height="176px" />
 </figure>
 
 Unhide Forensic Tool o simplemente ***Unhide*** es una herramienta forense que permite encontrar los procesos que ocultan los <a href="https://es.wikipedia.org/wiki/Rootkit" target="_blank">RootKits</a>, por módulos del kernel Linux o por otras técnicas.  

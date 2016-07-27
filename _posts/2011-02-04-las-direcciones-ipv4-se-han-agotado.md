@@ -1,6 +1,6 @@
 ---
 title: Las direcciones IPv4 se han agotado
-layout: post
+layout: post.amp
 permalink: /las-direcciones-ipv4-se-han-agotado/
 categories:
   - internet

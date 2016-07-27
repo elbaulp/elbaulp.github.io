@@ -1,6 +1,6 @@
 ---
 title: GNOME 3 se lanzará el 4 de abril
-layout: post
+layout: post.amp
 permalink: /gnome-3-se-lanzara-el-4-de-abril/
 categories:
   - linux

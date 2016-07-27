@@ -1,6 +1,6 @@
 ---
 title: Crear miniaturas de imágenes
-layout: post
+layout: post.amp
 permalink: /crear-imagenes-en-miniaturas/
 categories:
   - script

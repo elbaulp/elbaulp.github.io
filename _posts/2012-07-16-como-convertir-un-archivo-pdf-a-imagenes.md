@@ -1,7 +1,7 @@
 ---
 title: Cómo convertir un archivo pdf a imágenes
 
-layout: post
+layout: post.amp
 permalink: /como-convertir-un-archivo-pdf-a-imagenes/
 if_slider_image:
   -
@@ -22,7 +22,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-<img title="sh" src="/assets/img/2012/07/sh1.png" alt="" width="128px" height="128px" />
+<amp-img layout="responsive" title="sh" src="/assets/img/2012/07/sh1.png" alt="" width="128px" height="128px" />
 </figure>
 
 El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.

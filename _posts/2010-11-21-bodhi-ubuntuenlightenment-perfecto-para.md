@@ -1,6 +1,6 @@
 ---
 title: 'Bodhi: Ubuntu+Enlightenment, perfecto para minimalistas'
-layout: post
+layout: post.amp
 permalink: /bodhi-ubuntuenlightenment-perfecto-para/
 categories:
   - noticias
@@ -12,7 +12,7 @@ Los amantes de las distribuciones minimalistas puede que quieran echarle un vist
 
 
 <p style="text-align: center;">
-<img align="center" title="Bodhi" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOkI5nGhCBI/AAAAAAAAAFQ/1h4Zse1FwUM/s1600/Bodhi.jpg" />
+<amp-img layout="responsive" align="center" title="Bodhi" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOkI5nGhCBI/AAAAAAAAAFQ/1h4Zse1FwUM/s1600/Bodhi.jpg" />
 </p>
 
 De hecho [el responsable de esta distribución][2] insiste en que solo Austrumi y PCLinuxOS incluyen una versión reciente de E17, pero que el **quería incluir dicho entorno de escritorio en una distribución más popular**, y eso lo que ha hecho con Bodhi.
@@ -24,7 +24,7 @@ No obstante, hay que advertir que la distribución está en fase alpha, así que
 
 
 <p style="text-align: center;">
-<img title="bodhi_0.1.0" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkI5Wj6W7I/AAAAAAAAAFM/z5rezyX4os4/s1600/bodhi_0.1.0.png" />
+<amp-img layout="responsive" title="bodhi_0.1.0" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkI5Wj6W7I/AAAAAAAAAFM/z5rezyX4os4/s1600/bodhi_0.1.0.png" />
 </p>
 
 Hay cosas interesantes en Bodhi, como el hecho de que por defecto dos de los repositorios más valorados en Ubuntu -**Medibuntu y GetDeb**- están disponibles, lo que os permitirá instalar **códecs multimedia** y drivers hardware que no están incluidos de serie en la distribución original.

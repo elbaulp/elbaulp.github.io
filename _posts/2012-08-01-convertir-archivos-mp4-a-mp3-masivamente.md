@@ -1,7 +1,7 @@
 ---
 title: Convertir archivos mp4 a mp3 masívamente
 
-layout: post
+layout: post.amp
 permalink: /convertir-archivos-mp4-a-mp3-masivamente/
 if_slider_image:
   -

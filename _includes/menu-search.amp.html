@@ -9,11 +9,11 @@
       {% for link in site.links %}
       <li>
         <a href="{{ site.url }}{{site.baseurl}}{{ link.url }}">
-          <amp-fit-text layout="responsive">{{ link.title }}</amp-fit-text>
+          <amp-fit-text width="220" height="20" max-font-size="20" layout="responsive">{{ link.title }}</amp-fit-text>
         </a>
       </li>
       {% endfor %}
-      <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed" title="Atom/RSS feed"><amp-fit-text layout="responsive">Feed</amp-fit-text></a></li>
+      <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed" title="Atom/RSS feed"><amp-fit-text  width="220" height="20" max-font-size="20" layout="responsive">Feed</amp-fit-text></a></li>
     </ul>
   </nav>
 </amp-sidebar>

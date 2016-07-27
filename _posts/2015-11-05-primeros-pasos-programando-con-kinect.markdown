@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Primeros Pasos Programando Con Kinect"
 description: "Este artículo es parte de una práctica de una asignatura de mi facultad Nuevos Paradigmas de la Interacción. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una Kinect."
 tags: [programar kinect, programación kinect, tutorial kinect, aplicaciones kinect]
@@ -10,7 +10,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 <figure>
-<img src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
+<amp-img layout="responsive" src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
 </figure>
 
 {% include toc.html %}

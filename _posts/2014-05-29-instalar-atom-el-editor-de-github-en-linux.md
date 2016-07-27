@@ -1,7 +1,7 @@
 ---
 title: Instalar Atom, el editor de GitHub en Linux
 
-layout: post
+layout: post.amp
 permalink: /instalar-atom-el-editor-de-github-en-linux/
 categories:
   - Articulos
@@ -52,7 +52,7 @@ Hecho esto, ya podemos ejecutar Atom desde la consola o desde el menú que nuest
 
 Si no se te da bien recordar atajos de teclado, basta con recordar uno solo para obtenerlos todos `ctrl-shift-P`, aparecerá algo así:
 
-<img src="/assets/img/2014/05/cmd-alt-p-atom.png" alt="cmd-alt-p atom" width="548px" height="390px" />
+<amp-img layout="responsive" src="/assets/img/2014/05/cmd-alt-p-atom.png" alt="cmd-alt-p atom" width="548px" height="390px" />
 
 #### Encontrando archivos
 
@@ -90,7 +90,7 @@ apm install git-plus
 
 Una demostración de su uso:
 
-<img src="/assets/img/2014/05/git-plus-atom.gif" alt="git-plus-atom" width="1075px" height="340px" />
+<amp-img layout="responsive" src="/assets/img/2014/05/git-plus-atom.gif" alt="git-plus-atom" width="1075px" height="340px" />
 
 Algunos comandos básicos:
 
@@ -126,7 +126,7 @@ Algunos comandos básicos:
 
 Éste paquete viene instalado por defecto, es bastante útil porque muestra el diff de forma gráfica, por ejemplo:
 
-<img src="/assets/img/2014/05/git-diff-atom.png" alt="git diff atom" width="800px" height="224px" />
+<amp-img layout="responsive" src="/assets/img/2014/05/git-diff-atom.png" alt="git diff atom" width="800px" height="224px" />
 
 Donde el símbolo + significa que se ha agregado una línea nueva, y el punto amarillo que se ha modificado una existente.
 

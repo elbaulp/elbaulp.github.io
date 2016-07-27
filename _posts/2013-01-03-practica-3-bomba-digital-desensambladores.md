@@ -1,7 +1,7 @@
 ---
 title: 'Desafío de ingeniería inversa en C &#8211; Soluciones'
 
-layout: post
+layout: post.amp
 permalink: /desafio-de-ingenieria-inversa-en-c-soluciones/
 categories:
   - C
@@ -14,7 +14,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" width="532px" height="449px" />
+<amp-img layout="responsive" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" width="532px" height="449px" />
 
 Hace unas semanas [hablé de un desafío][1] propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.
 

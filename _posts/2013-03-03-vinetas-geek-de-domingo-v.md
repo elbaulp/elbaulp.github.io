@@ -1,7 +1,7 @@
 ---
 title: Viñetas Geek de Domingo (V)
 
-layout: post
+layout: post.amp
 permalink: /vinetas-geek-de-domingo-v/
 categories:
   - Geek

@@ -1,6 +1,6 @@
 ---
 title: SourceForge recibe ataques y resetean las contraseñas de los usuarios
-layout: post
+layout: post.amp
 permalink: /sourceforge-recibe-ataques-y-resetean/
 categories:
   - noticias

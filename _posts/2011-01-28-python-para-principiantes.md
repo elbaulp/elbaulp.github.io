@@ -1,6 +1,6 @@
 ---
 title: Python para principiantes
-layout: post
+layout: post.amp
 permalink: /python-para-principiantes/
 categories:
   - python

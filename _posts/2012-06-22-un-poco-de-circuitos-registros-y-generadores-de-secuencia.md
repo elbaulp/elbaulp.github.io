@@ -1,7 +1,7 @@
 ---
 title: Un poco de circuitos, regístros y generadores de secuencia
 
-layout: post
+layout: post.amp
 permalink: /un-poco-de-circuitos-registros-y-generadores-de-secuencia/
 if_slider_image:
   -

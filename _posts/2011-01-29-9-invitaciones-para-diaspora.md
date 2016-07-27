@@ -1,6 +1,6 @@
 ---
 title: '9 Invitaciones para Diaspora* disponibles.'
-layout: post
+layout: post.amp
 permalink: /9-invitaciones-para-diaspora/
 categories:
   - noticias

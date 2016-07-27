@@ -1,6 +1,6 @@
 ---
 title: 'Introducción a PL/SQL &#8211; Transacciones'
-layout: post
+layout: post.amp
 permalink: /introduccion-plsql-transacciones/
 categories:
   - BaseDeDatos

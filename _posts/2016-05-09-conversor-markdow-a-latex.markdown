@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Un Conversor De Markdown a LaTeX Casero en Lex
 date: 2016-05-09T13:20:10+02:00
 modified:

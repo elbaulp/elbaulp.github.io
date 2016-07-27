@@ -1,6 +1,6 @@
 ---
 title: '[Meme] Los 10 comandos que más utilizo en Linux'
-layout: post
+layout: post.amp
 permalink: /meme-los-10-comandos-que-mas-utilizo-en/
 categories:
   - meme

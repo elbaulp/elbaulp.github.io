@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: 10 herramientas de seguridad de redes y tests que todo el mundo debería usar'
 
-layout: post
+layout: post.amp
 permalink: /10-herramientas-seguridad-redes-tests-todo-mundo-deberia-usar/
 categories:
   - cursos
@@ -12,7 +12,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-<a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100/prgm.cgi" target="_blank"><img src="/assets/img/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar" width="199px" height="259px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100/prgm.cgi" target="_blank"><amp-img layout="responsive" src="/assets/img/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar" width="199px" height="259px" /></a>
 
 Be the IT expert for yourself by using these tools to strengthen the security of your systems.
 

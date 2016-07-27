@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-recursos-repasando/
 categories:
   - android

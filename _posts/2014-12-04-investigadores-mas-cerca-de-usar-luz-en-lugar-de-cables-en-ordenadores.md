@@ -1,7 +1,7 @@
 ---
 title: Investigadores más cerca de usar luz en lugar de cables en ordenadores
 
-layout: post
+layout: post.amp
 permalink: /investigadores-mas-cerca-de-usar-luz-en-lugar-de-cables-en-ordenadores/
 categories:
   - Articulos

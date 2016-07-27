@@ -1,7 +1,7 @@
 ---
 title: Cómo desarrollar aplicaciones en un servidor Cloud
 
-layout: post
+layout: post.amp
 permalink: /como-desarrollar-aplicaciones-en-un-servidor-cloud-2/
 categories:
   - Java
@@ -22,19 +22,19 @@ En éste artículo vamos a ver cómo configurar un servidor cloud para ejecutar 
 
 En éste caso, elegiremos un servidor con Debian 6, y una instalación base.
 
-<img src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817px" height="448px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/1.-Creación-de-un-servidor-Cloud.png" alt="1. Creación de un servidor Cloud" width="817px" height="448px" />
 
 ### Configurar la capacidad del servidor
 
 Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.
 
-<img src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817px" height="575px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png" alt="2. Configuración capacidad servidor Cloud" width="817px" height="575px" />
 
 ### Establecer la contraseña de usuario
 
 Por último, solo resta proporcionar una contraseña al usuario **root**.
 
-<img src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815px" height="581px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png" alt="3. Finalización de la puesta en marcha del servidor cloud" width="815px" height="581px" />
 
 ## Código del programa del lado servidor
 
@@ -341,11 +341,11 @@ iptables -A INPUT -m state --state NEW -p tcp --dport 8989 -j ACCEPT
 
 O, desde Arsys, en políticas de firewall añadir lo siguiente:
 
-<img src="/assets/img/2015/01/5.-Configuración-puerto.png" alt="5. Configuración puerto" width="343px" height="45px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/5.-Configuración-puerto.png" alt="5. Configuración puerto" width="343px" height="45px" />
 
 ## Captura de pantalla del juego en marcha
 
-<img src="/assets/img/2015/01/6.-Ejempli-programa.png" alt="6. Ejemplo programa" width="653px" height="863px" />
+<amp-img layout="responsive" src="/assets/img/2015/01/6.-Ejempli-programa.png" alt="6. Ejemplo programa" width="653px" height="863px" />
 
 
 

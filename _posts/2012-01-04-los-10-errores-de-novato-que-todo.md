@@ -1,6 +1,6 @@
 ---
 title: 10 errores de novato que todo desarrollador Android debería evitar
-layout: post
+layout: post.amp
 permalink: /los-10-errores-de-novato-que-todo/
 categories:
   - android
@@ -12,7 +12,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" /></a>
 </div>
 
 Últimamente recibo muchos correos haciendome preguntas sobre cuestiones sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento) suficiente para responder a todas ellas. Por eso, aprovechando que encontré un artículo en inglés que nombraba los 10 errores comunes de los nuevos programadores en esta plataforma. Aquí los dejo traducidos, ya que son de lectura recomendable:

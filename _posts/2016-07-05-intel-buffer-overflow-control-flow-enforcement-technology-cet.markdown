@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement Technology (CET)
 date: 2016-07-05T22:09:47+02:00
 categories:

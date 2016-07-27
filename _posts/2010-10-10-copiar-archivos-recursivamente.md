@@ -1,6 +1,6 @@
 ---
 title: Copiar archivos recursivamente
-layout: post
+layout: post.amp
 permalink: /copiar-archivos-recursivamente/
 categories:
   - linux

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila"
 modified:
 categories:
@@ -15,7 +15,7 @@ color: "#E64A19"
 {% include toc.html %}
 
 <figure>
-<img src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="520px" />
+<amp-img layout="responsive" src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="520px" />
 </figure>
 _Créditos de la imagen [Wikipedia](https://en.wikipedia.org/wiki/File:Knapsack.svg)_.
 

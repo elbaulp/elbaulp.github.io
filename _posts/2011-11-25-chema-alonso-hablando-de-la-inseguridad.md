@@ -1,7 +1,7 @@
 ---
 title: Chema Alonso hablando de la inseguridad de las vías telemáticas
 
-layout: post
+layout: post.amp
 permalink: /chema-alonso-hablando-de-la-inseguridad/
 categories:
   - internet

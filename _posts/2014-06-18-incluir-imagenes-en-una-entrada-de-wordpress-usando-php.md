@@ -1,6 +1,6 @@
 ---
 title: Incluir imágenes en una entrada de WordPress usando PHP
-layout: post
+layout: post.amp
 permalink: /incluir-imagenes-en-una-entrada-de-wordpress-usando-php/
 categories:
   - php
@@ -17,7 +17,7 @@ color: "#E64A19"
 > Éste artículo es una colaboración de <a href="http://reinspirit.com/blog/" target="_blank">Pedro Mendez</a> en el que se verá cómo insertar imágenes en una entrada de WordPress. Desarrollador y diseñador de sitios web en Sevilla
 
 <figure>
-<a href="/assets/img/2013/07/wordpress.png"><img src="/assets/img/2013/07/wordpress.png" title="{{ page.title }}" alt="{{ page.title }}" width="231px" height="228px" /></a>
+<a href="/assets/img/2013/07/wordpress.png"><amp-img layout="responsive" src="/assets/img/2013/07/wordpress.png" title="{{ page.title }}" alt="{{ page.title }}" width="231px" height="228px" /></a>
 </figure>
 
 Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página &#8220;2014 Galery&#8221;, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.

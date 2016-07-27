@@ -1,7 +1,7 @@
 ---
 title: Sorteamos 10 matrículas gratuitas para cursos de desarrollo WordPress y cupones de descuento
 
-layout: post
+layout: post.amp
 permalink: /sorteo-wordpress/
 categories:
   - cursos

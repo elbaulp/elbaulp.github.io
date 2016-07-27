@@ -1,7 +1,7 @@
 ---
 title: 'Vídeos de la semana: Unos cuantos cortos y un time-lapse'
 
-layout: post
+layout: post.amp
 permalink: /videos-de-la-semana-unos-cuantos-cortos/
 categories:
   - video de la semana
@@ -9,10 +9,10 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><img border="0" height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
+<a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img layout="responsive" border="0" height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>
 
-De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <img src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
+De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <amp-img layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 <!--ad-->
 <h3 style="float:left; clear:left;">
   Like in a dream

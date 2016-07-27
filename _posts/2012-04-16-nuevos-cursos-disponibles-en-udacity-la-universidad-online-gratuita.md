@@ -1,7 +1,7 @@
 ---
 title: Nuevos Cursos disponibles en Udacity, la universidad online gratuita
 
-layout: post
+layout: post.amp
 permalink: /nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/
 if_slider_image:
   -
@@ -20,7 +20,7 @@ format: status
 main-class: "misc"
 color: "#61B38D"
 ---
-<img class="alignleft" title="Banner Udacity" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" alt="" style="float:left;" />
+<amp-img layout="responsive" class="alignleft" title="Banner Udacity" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" alt="" style="float:left;" />
 
 Hace aproximadamente 7 semanas que escribí una entrada hablando sobre Udacity y su primer curso, Construir un [motor de búsqueda][1]. Pues bien, acaba de terminar, yo estaba inscrito y la verdad es que me ha gustado bastante, ya que he aprendido un montón de cosas interesantes, aparte de aprender a mejorar la eficiencia del código y refrescar mi conocimiento sobre [python][2], el cual tenía un poco abandonado.
 

@@ -1,6 +1,6 @@
 ---
 title: Introducción SQL
-layout: post
+layout: post.amp
 permalink: /introduccion-sql-sql-introduction/
 categories:
   - BaseDeDatos

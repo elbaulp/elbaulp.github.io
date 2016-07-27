@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: WAN Optimization for Today and Tomorrow'
 
-layout: post
+layout: post.amp
 permalink: /wan-optimization-has-been-driven-by/
 categories:
   - cursos

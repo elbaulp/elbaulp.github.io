@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Crear Una Lista De Listas De Forma Eficiente en Python
 modified:
 categories:
@@ -12,7 +12,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/python-lista-de-listas-eficiente.png"><img src="/assets/img/python-lista-de-listas-eficiente.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
+<a href="/assets/img/python-lista-de-listas-eficiente.png"><amp-img layout="responsive" src="/assets/img/python-lista-de-listas-eficiente.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
 </figure>
 
 {% include toc.html %}

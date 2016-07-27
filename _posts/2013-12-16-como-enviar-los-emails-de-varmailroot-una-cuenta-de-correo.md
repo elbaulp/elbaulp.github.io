@@ -1,7 +1,7 @@
 ---
 title: Cómo enviar los emails de /var/mail/root a una cuenta de correo
 
-layout: post
+layout: post.amp
 permalink: /como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/
 categories:
   - Administracion de Servidores

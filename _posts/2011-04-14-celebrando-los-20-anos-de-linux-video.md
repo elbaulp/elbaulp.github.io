@@ -1,6 +1,6 @@
 ---
 title: 'Celebrando los 20 años de Linux [Video]'
-layout: post
+layout: post.amp
 permalink: /celebrando-los-20-anos-de-linux-video/
 categories:
   - linux

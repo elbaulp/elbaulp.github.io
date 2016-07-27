@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Vectorizar El Acceso a Columnas en R
 modified:
 categories:
@@ -12,7 +12,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/vectorizar-acceso-columnas-r.png"><img src="/assets/img/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
+<a href="/assets/img/vectorizar-acceso-columnas-r.png"><amp-img layout="responsive" src="/assets/img/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
 </figure>
 
 {% include toc.html %}

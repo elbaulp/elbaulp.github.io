@@ -1,6 +1,6 @@
 ---
 title: 'PL/SQL &#8211; Declaración de variables'
-layout: post
+layout: post.amp
 permalink: /plsql-declaracion-de-variables/
 categories:
   - BaseDeDatos

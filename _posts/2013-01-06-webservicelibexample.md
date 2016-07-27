@@ -1,7 +1,7 @@
 ---
 title: 'Restlib &#8211; Librería para realizar peticiones a Web Services en Android'
 
-layout: post
+layout: post.amp
 permalink: /restlib-libreria-para-realizar-peticiones-a-web-services-en-android/
 categories:
   - android
@@ -219,7 +219,7 @@ Es necesario agregar la librería al proyecto, para ello, descárgala, crea una 
 
 La aplicación de ejemplo debe quedar así:
 
-[<img src="/assets/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480px" height="800px" />][1]{.thumbnail}
+[<amp-img layout="responsive" src="/assets/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480px" height="800px" />][1]{.thumbnail}
 
 Para finalizar, decir que la librería por ahora está muy limitada, pero es perfectamente funcional para realizar peticiones básicas. Intentaremos seguir desarrollandola cuando dispongamos de más tiempo.
 

@@ -2,7 +2,7 @@
 title: Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad
 
 description: 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo de blogger a una en wordpress bajo un hosting propio así como la configuración necesaria para no perder a los  lectores habituales, los suscriptores al feed ni el posicionamiento en los buscadores. Por último se mencionarán algunos consejos de seguridad.'
-layout: post
+layout: post.amp
 permalink: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/
 categories:
   - How To
@@ -37,7 +37,7 @@ Hecho esto, debemos conceder permisos a blogger para que deje a wordpress accede
   En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son <em><strong>ns100.ovh.net</strong></em> y <strong><em>dns100.ovh.net. </em></strong>Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace https://www.google.com/nombredetudominio. Una vez dentro del panel de control nos dirigimos a <em>Domain settings</em><em>→Domain Names</em><em>→Avanced DNS settings. </em>Nos logeamos en la consola y editamos la sección <em>DNS Information </em>para que quede parecido a esto:
 </p>
 <p style="text-align: left;">
-<a href="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png"><img title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613px" height="98px" /></a>
+<a href="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png"><amp-img layout="responsive" title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613px" height="98px" /></a>
 </p>
 <p style="text-align: left;">
   Obviamente con los DNS correspondientes a los que os proporcione vuestro servicio de hosting.

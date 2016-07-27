@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Como Usar Los Filtros Smudge Y Clean en Git"
 date: 2015-05-21T16:50:42+02:00
 modified: 2015-05-22T14:40:42+02:00
@@ -12,7 +12,7 @@ color: "#f05033"
 ---
 
 <figure>
-<img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
+<amp-img layout="responsive" src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
 </figure>
 
 En el anterior artículo, hablamos sobre [cómo sincronizar dos repositorios en git](/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/), también se vio algo de _hooks_.

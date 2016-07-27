@@ -1,7 +1,7 @@
 ---
 title: Resultados examen PL/SQL base de datos
 
-layout: post
+layout: post.amp
 permalink: /resultados-examen-plsql-base-de-datos/
 categories:
   - BaseDeDatos

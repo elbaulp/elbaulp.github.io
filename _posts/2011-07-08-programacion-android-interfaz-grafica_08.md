@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Interfaz gráfica &#8211; Menús'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-interfaz-grafica_08/
 categories:
   - android
@@ -17,7 +17,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Los menús en las aplicaciones son algo que encontramos frecuentemente, de hecho, casi todos los terminales Android tienen un botón específico para desplegarlos.
 
@@ -149,13 +149,13 @@ registerForContextMenu(boton);
 Aquí dejo algunas capturas de pantalla de la aplicación:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-JIhItNsspfQ/ThdvxHzhiLI/AAAAAAAAArI/n5vFz4sOjvA/s1600/optionmenu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img alt="Option menu Android" title="Option Menu android" border="0" height="400" width="240" src="https://3.bp.blogspot.com/-JIhItNsspfQ/ThdvxHzhiLI/AAAAAAAAArI/n5vFz4sOjvA/s400/optionmenu.png" /></a>
+<a href="https://3.bp.blogspot.com/-JIhItNsspfQ/ThdvxHzhiLI/AAAAAAAAArI/n5vFz4sOjvA/s1600/optionmenu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" alt="Option menu Android" title="Option Menu android" border="0" height="400" width="240" src="https://3.bp.blogspot.com/-JIhItNsspfQ/ThdvxHzhiLI/AAAAAAAAArI/n5vFz4sOjvA/s400/optionmenu.png" /></a>
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-bBsrepZGNdM/ThdvxuQJ0XI/AAAAAAAAArQ/vxr-eRx3mJM/s1600/optionmenu-about.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="400" width="240" alt="Option menu Android" title="Option menu Android" src="https://1.bp.blogspot.com/-bBsrepZGNdM/ThdvxuQJ0XI/AAAAAAAAArQ/vxr-eRx3mJM/s400/optionmenu-about.png" /></a>
+<a href="https://1.bp.blogspot.com/-bBsrepZGNdM/ThdvxuQJ0XI/AAAAAAAAArQ/vxr-eRx3mJM/s1600/optionmenu-about.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="400" width="240" alt="Option menu Android" title="Option menu Android" src="https://1.bp.blogspot.com/-bBsrepZGNdM/ThdvxuQJ0XI/AAAAAAAAArQ/vxr-eRx3mJM/s400/optionmenu-about.png" /></a>
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s1600/contextMenu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" title="Context menu Android" alt="Context menu Android" height="400" width="240" src="https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s400/contextMenu.png" /></a>
+<a href="https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s1600/contextMenu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" title="Context menu Android" alt="Context menu Android" height="400" width="240" src="https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s400/contextMenu.png" /></a>
 </div>
 
 Podéis encontrar más información sobre Menús en la [página oficial de Android][1]

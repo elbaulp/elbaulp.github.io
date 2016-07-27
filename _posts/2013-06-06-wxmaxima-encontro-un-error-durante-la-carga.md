@@ -1,7 +1,7 @@
 ---
 title: 'Cómo resolver el error &#8216;wxMaxima encontró un error durante la carga&#8217;'
 
-layout: post
+layout: post.amp
 permalink: /wxmaxima-encontro-un-error-durante-la-carga/
 categories:
   - How To
@@ -12,7 +12,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<img src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga" width="271px" height="256px" />  
+<amp-img layout="responsive" src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga" width="271px" height="256px" />  
 En la facultad solemos usar wxMaxima en las prácticas de las asignturas. Hace poco al intentar abrir un fichero wxm me encontré con el siguiente error:
 
 wxMaxima encontró un error durante la carga ó Failed to convert file to Unicode.

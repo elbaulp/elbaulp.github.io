@@ -1,6 +1,6 @@
 ---
 title: 6 E-books gratuitos para aprenter a programar en Python
-layout: post
+layout: post.amp
 permalink: /6-e-books-gratuitos-para-aprenter/
 categories:
   - cursos

@@ -1,7 +1,7 @@
 ---
 title: Introducción al diseño de plantillas personalizadas para móviles en Blogger
 
-layout: post
+layout: post.amp
 permalink: /introduccion-al-diseno-de-plantillas/
 categories:
   - curiosidades
@@ -15,13 +15,13 @@ He visto en el blog de blogger que dan la posibilidad de crear una plantilla per
 Para empezar a trabajar tenemos que ir a la la sección plantilla:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-kEQMaYxebJs/Tq-eMEEQTPI/AAAAAAAAARk/OtL411nW0l8/s1600/Screen%2Bshot%2B2011-10-20%2Bat%2B11.14.31%2BAM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="248" width="429" src="https://2.bp.blogspot.com/-kEQMaYxebJs/Tq-eMEEQTPI/AAAAAAAAARk/OtL411nW0l8/s1600/Screen%2Bshot%2B2011-10-20%2Bat%2B11.14.31%2BAM.png" /></a>
+<a href="https://2.bp.blogspot.com/-kEQMaYxebJs/Tq-eMEEQTPI/AAAAAAAAARk/OtL411nW0l8/s1600/Screen%2Bshot%2B2011-10-20%2Bat%2B11.14.31%2BAM.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="248" width="429" src="https://2.bp.blogspot.com/-kEQMaYxebJs/Tq-eMEEQTPI/AAAAAAAAARk/OtL411nW0l8/s1600/Screen%2Bshot%2B2011-10-20%2Bat%2B11.14.31%2BAM.png" /></a>
 </div>
 
 Le damos al engranaje que aparece debajo de las plantillas para móviles, donde escogeremos el tipo de plantilla que queremos, nosotros le damos a personalizado:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-dyyH6l2heQI/Tp5hR4sdzdI/AAAAAAAAAPs/HkYfZ8kpAwQ/s320/mobile_template_picker_pulldown.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="287" width="320" src="https://1.bp.blogspot.com/-dyyH6l2heQI/Tp5hR4sdzdI/AAAAAAAAAPs/HkYfZ8kpAwQ/s320/mobile_template_picker_pulldown.png" /></a>
+<a href="https://1.bp.blogspot.com/-dyyH6l2heQI/Tp5hR4sdzdI/AAAAAAAAAPs/HkYfZ8kpAwQ/s320/mobile_template_picker_pulldown.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="287" width="320" src="https://1.bp.blogspot.com/-dyyH6l2heQI/Tp5hR4sdzdI/AAAAAAAAAPs/HkYfZ8kpAwQ/s320/mobile_template_picker_pulldown.png" /></a>
 </div>
 
 HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando la plantilla normal del blog. Por ejemplo, si tenemos gadgets en el blog, podemos elegir si se mostrarán en la versión móvil o no. Esto lo conseguimos mediante un nuevo atributo llamado *mobile*, que pertenece a la la etiqueta *<b:widget>, y puede tomar los valores &#8216;default&#8217; &#8216;yes&#8217;, &#8216;no&#8217; ó &#8216;only&#8217;.
@@ -96,7 +96,7 @@ HEcho esto, podemos empezar a diseñar nuestra plantilla para móviles. Editando
 <b:else>
 <!-- Show an image link in desktop view.-->
 <a href="http://www.blogger.com">
-<img expr:src="data:fullButton" alt="Powered By Blogger" />
+<amp-img layout="responsive" expr:src="data:fullButton" alt="Powered By Blogger" />
 </a>
 </b:else></b:if>
 </div>

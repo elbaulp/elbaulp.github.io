@@ -1,6 +1,6 @@
 ---
 title: 'Consulta de Datos &#8211; Cláusula GROUP BY'
-layout: post
+layout: post.amp
 permalink: /consulta-de-datos-clausula-group-by/
 categories:
   - BaseDeDatos

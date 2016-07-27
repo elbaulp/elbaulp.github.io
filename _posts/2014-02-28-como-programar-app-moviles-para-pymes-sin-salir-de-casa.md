@@ -1,7 +1,7 @@
 ---
 title: Cómo programar apps móviles para pymes sin salir de casa
 
-layout: post
+layout: post.amp
 permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/
 categories:
   - Articulos

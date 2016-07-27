@@ -1,6 +1,6 @@
 ---
 title: 'Clases y objetos &#8211; Introducción'
-layout: post
+layout: post.amp
 permalink: /clases-y-objetos-introduccion/
 categories:
   - C

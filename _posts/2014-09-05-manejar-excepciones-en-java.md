@@ -1,7 +1,7 @@
 ---
 title: Manejar excepciones en Java
 
-layout: post
+layout: post.amp
 permalink: /manejar-excepciones-en-java/
 categories:
   - Java

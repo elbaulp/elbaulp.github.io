@@ -1,7 +1,7 @@
 ---
 title: Lo más leido en ElbaulDelProgramador (Noviembre 2011)
 
-layout: post
+layout: post.amp
 permalink: /lo-mas-leido-en-elbauldelprogramador/
 categories:
   - noticias

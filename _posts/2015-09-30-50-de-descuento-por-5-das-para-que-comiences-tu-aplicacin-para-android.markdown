@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "50% De Descuento Por 5 Días Para Que Comiences Tu Aplicación Para Android"
 modified:
 categories:

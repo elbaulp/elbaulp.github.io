@@ -1,7 +1,7 @@
 ---
 title: 'Nueva guía: 6 Steps to Securing Your Domains'
 
-layout: post
+layout: post.amp
 permalink: /6-steps-to-securing-your-domains/
 categories:
   - cursos
@@ -12,7 +12,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="199px" height="258px" />][1]
+[<amp-img layout="responsive" src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="199px" height="258px" />][1]
 
 Domain hijacking is now front page news. Learn how to prevent your company&#8217;s valuable domains from being next!
 

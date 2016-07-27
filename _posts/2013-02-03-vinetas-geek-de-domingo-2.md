@@ -1,7 +1,7 @@
 ---
 title: Viñetas Geek de Domingo
 
-layout: post
+layout: post.amp
 permalink: /vinetas-geek-de-domingo-2/
 categories:
   - offtopic

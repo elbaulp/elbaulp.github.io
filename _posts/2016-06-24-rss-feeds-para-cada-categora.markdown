@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Rss Feeds Para Cada Categoría
 description: "Listado de los feeds por categorías disponibles para los lectores"
 introduction: "Listado de los feeds por categorías disponibles para los lectores"

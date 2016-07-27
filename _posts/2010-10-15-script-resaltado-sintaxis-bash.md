@@ -1,6 +1,6 @@
 ---
 title: Script resaltado sintaxis bash
-layout: post
+layout: post.amp
 permalink: /script-resaltado-sintaxis-bash/
 categories:
   - linux

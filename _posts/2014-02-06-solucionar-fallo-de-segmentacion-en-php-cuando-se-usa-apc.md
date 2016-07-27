@@ -1,7 +1,7 @@
 ---
 title: Solucionar fallo de segmentación en PHP cuando se usa APC
 
-layout: post
+layout: post.amp
 permalink: /solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/
 categories:
   - Administracion de Servidores

@@ -1,7 +1,7 @@
 ---
 title: ¿Cómo detectar ficheros con bloqueo/cerrojo en Linux?
 
-layout: post
+layout: post.amp
 permalink: /como-detectar-ficheros-con-bloqueocerrojo-en-linux/
 categories:
   - linux
@@ -19,7 +19,7 @@ main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-<a href="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg"><img src="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="640px" /></a>
+<a href="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg"><amp-img layout="responsive" src="/assets/img/como-detectar-ficheros-con-bloqueocerrojo-en-linux.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="640px" /></a>
 <span class="image-credit">Crédito de la imagen: pixabay.com</span>
 </figure>
 

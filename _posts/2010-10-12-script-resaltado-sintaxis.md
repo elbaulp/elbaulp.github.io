@@ -1,6 +1,6 @@
 ---
 title: Script resaltado sintaxis c++
-layout: post
+layout: post.amp
 permalink: /script-resaltado-sintaxis/
 categories:
   - linux

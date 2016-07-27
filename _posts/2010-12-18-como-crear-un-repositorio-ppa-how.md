@@ -1,6 +1,6 @@
 ---
 title: Como crear un PPA (Personal Package Archive)
-layout: post
+layout: post.amp
 permalink: /como-crear-un-repositorio-ppa-how/
 categories:
   - How To

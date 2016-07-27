@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos"
 modified:
 categories:
@@ -13,7 +13,7 @@ color: "#B31917"
 ---
 
 <figure>
-<img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" />
+<amp-img layout="responsive" src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" />
 </figure>
 
 Para los que estéis acostumbrados a escribir vuestros documentos en $$\LaTeX$$, sin ningún editor específico, sabréis que llega a ser un poco tedioso compilar cada vez que queremos ver el resultado. Hace poco, descubrí un comando, `latexmk`, que nos facilitará bastante la vida.

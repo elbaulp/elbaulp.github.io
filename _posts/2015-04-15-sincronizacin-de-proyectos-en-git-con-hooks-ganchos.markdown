@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Sincronización de proyectos en git con hooks (ganchos)"
 date: 2015-04-15T16:22:19+02:00
 modified:
@@ -12,7 +12,7 @@ color: "#f05033"
 ---
 
 <figure>
-<img src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
+<amp-img layout="responsive" src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
 </figure>
 
 ## Repositorio espejo (Mirror repo)

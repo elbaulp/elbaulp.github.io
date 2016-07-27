@@ -1,6 +1,6 @@
 ---
 title: Cómo funciona el Bitcoin, la cripto-moneda
-layout: post
+layout: post.amp
 permalink: /como-funciona-el-bitcoin-la-cripto-moneda/
 categories:
   - Security Now

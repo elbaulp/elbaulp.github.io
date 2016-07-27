@@ -1,7 +1,7 @@
 ---
 title: Crea scripts para las aplicaciones de Google con Apps Script
 
-layout: post
+layout: post.amp
 permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
 categories:
   - internet
@@ -32,9 +32,9 @@ Todo lo necesario para comenzar a escribir código es una cuenta de google, un n
 
 Uno de los scripts que estoy usando actualmente recopila información de mi cuenta de gmail, para mandarme un correo al final de més con estadísticas y gráficos sobre quién me manda más correos electónicos, a quién respondo más etc. El informe que elabora este script es así:
 
-<img src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px" />
-<img src="/assets/img/2013/04/chart1.png" alt="chart1" width="650px" height="400px" />
-<img src="/assets/img/2013/04/chart2.png" alt="chart2" width="650px" height="400px" />
+<amp-img layout="responsive" src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px" />
+<amp-img layout="responsive" src="/assets/img/2013/04/chart1.png" alt="chart1" width="650px" height="400px" />
+<amp-img layout="responsive" src="/assets/img/2013/04/chart2.png" alt="chart2" width="650px" height="400px" />
 
 Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google »  
 <a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>.
@@ -269,7 +269,7 @@ function sendReport_(variables) {
       report += "
   </ul></td>
 </tr></table>
-<br /><img src="" />< variables.timeOfEmailsReceived.length; i++) { // create
+<br /><amp-img layout="responsive" src="" />< variables.timeOfEmailsReceived.length; i++) { // create
                                                                       // the
                                                                       // rows
     switch (i) {
@@ -305,7 +305,7 @@ function sendReport_(variables) {
       650,
       400).build();
 
-  report += "cid:Averageflow\' />" + "<img src="" />< variables.dayOfEmailsReceived.length; i++) { // create
+  report += "cid:Averageflow\' />" + "<amp-img layout="responsive" src="" />< variables.dayOfEmailsReceived.length; i++) { // create
                                                                     // the rows
     dataTable.addRow([
       i + 1, variables.dayOfEmailsReceived[i], variables.dayOfEmailsSent[i]

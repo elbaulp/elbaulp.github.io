@@ -1,6 +1,6 @@
 ---
 title: 'Diseño de Bases de Datos ( II ) &#8211; Restricciones'
-layout: post
+layout: post.amp
 permalink: /diseno-de-bases-de-datos-ii/
 categories:
   - BaseDeDatos

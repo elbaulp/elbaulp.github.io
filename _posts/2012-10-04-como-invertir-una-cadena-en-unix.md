@@ -1,7 +1,7 @@
 ---
 title: Cómo invertir una cadena en Unix
 
-layout: post
+layout: post.amp
 permalink: /como-invertir-una-cadena-en-unix/
 categories:
   - How To
@@ -13,7 +13,7 @@ color: "#2196F3"
 ---
 
 <figure>
-<img alt="invertir cadenas en bash" src="https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png" title="Shell Bash" class="alignleft" />
+<amp-img layout="responsive" alt="invertir cadenas en bash" src="https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png" title="Shell Bash" class="alignleft" />
 </figure>
 
 Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera:

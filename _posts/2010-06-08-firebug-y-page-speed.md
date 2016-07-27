@@ -1,6 +1,6 @@
 ---
 title: Firebug y page speed
-layout: post
+layout: post.amp
 permalink: /firebug-y-page-speed/
 categories:
   - noticias

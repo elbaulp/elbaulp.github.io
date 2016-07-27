@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Cómo Definir Colores Personalizados en LaTeX"
 tags: [latex, xcolor, paquete xcolor, tutorial xcolor latex]
 image: latexxcolorbrillantes.png
@@ -12,7 +12,7 @@ color: "#B31917"
 ---
 
 <figure>
-<img src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" />
+<amp-img layout="responsive" src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" />
 </figure>
 
 > Os traigo hoy otro artículo interesante que he encontrado en el blog de <a href="http://texblog.org" target="_blank" title="http://texblog.org">blog de Tom</a>. Veremos cómo es posible definir colores personalizados en $$\LaTeX$$ con el paquete `xcolor`.
@@ -43,7 +43,7 @@ El paquete <a href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.p
 ```
 
 <figure>
-<a href="/assets/img/xcolorlatex1.png"><img src="/assets/img/xcolorlatex1.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="154px" /></a>
+<a href="/assets/img/xcolorlatex1.png"><amp-img layout="responsive" src="/assets/img/xcolorlatex1.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="154px" /></a>
 <span class="image-credit">Crédito de la imagen: texblog.org</span>
 </figure>
 
@@ -68,7 +68,7 @@ El paquete xcolor permite definir colores usando modelos de color (_gris, RGB, H
 ```
 
 <figure>
-<a href="/assets/img/xcolorlatex2.png"><img src="/assets/img/xcolorlatex2.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="142px" /></a>
+<a href="/assets/img/xcolorlatex2.png"><amp-img layout="responsive" src="/assets/img/xcolorlatex2.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="142px" /></a>
 <span class="image-credit">Crédito de la imagen: texblog.org</span>
 </figure>
 
@@ -93,7 +93,7 @@ Para terminar, el paquete xcolor también permite definir un color mediante la m
 ```
 
 <figure>
-<a href="/assets/img/xcolorlatex3.png"><img src="/assets/img/xcolorlatex3.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="156px" /></a>
+<a href="/assets/img/xcolorlatex3.png"><amp-img layout="responsive" src="/assets/img/xcolorlatex3.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="156px" /></a>
 <span class="image-credit">Crédito de la imagen: texblog.org</span>
 </figure>
 
@@ -102,7 +102,7 @@ Para terminar, el paquete xcolor también permite definir un color mediante la m
 Los colores básicos como el rojo, verde o amarillo son demasiado chillones a la vista. Para atenuar su intensidad, es posible usar el modo de definir colores de arriba y luego mezclarlos con gris. Por ejemplo, combinar el 40% del color chillón con 60% de gris atenua la intensidad del color, haciendolo más agradable a la vista, compruébalo tú mismo:
 
 <figure>
-<a href="/assets/img/latexxcolorbrillantes.png"><img src="/assets/img/latexxcolorbrillantes.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="291px" /></a>
+<a href="/assets/img/latexxcolorbrillantes.png"><amp-img layout="responsive" src="/assets/img/latexxcolorbrillantes.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="291px" /></a>
 <span class="image-credit">Crédito de la imagen: texblog.org</span>
 </figure>
 

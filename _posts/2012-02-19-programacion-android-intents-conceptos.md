@@ -1,7 +1,7 @@
 ---
 title: 'Programación Android: Intents &#8211; Conceptos básicos'
 
-layout: post
+layout: post.amp
 permalink: /programacion-android-intents-conceptos/
 categories:
   - android
@@ -15,7 +15,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<img border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 Un intent sirve para invocar componentes, en android entendemos por componentes las [activities,][1] Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y [proveedores de contenido][2], código que abstráe los datos.

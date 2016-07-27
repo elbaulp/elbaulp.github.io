@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: "Nuevo Logo Para El Blog"
 modified:
 categories:
@@ -19,5 +19,5 @@ color: "#61B38D"
 Sin más rodeos, aquí está!, espero que os guste a todos!:
 
 <figure>
-<img src="/assets/img/logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="550px" height="414px" />
+<amp-img layout="responsive" src="/assets/img/logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="550px" height="414px" />
 </figure>
