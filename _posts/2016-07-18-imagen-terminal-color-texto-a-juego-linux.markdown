@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.amp
 title: Cambia La Imágen De Fondo Del Terminal Gnome Y Pon Un Color De Texto a Juego, Automáticamente
 categories: 
 description:

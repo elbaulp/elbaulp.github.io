@@ -10,15 +10,24 @@
         margin auto
         max-width rem(800px)
         padding 0 rem(20px)
+        display flex
+        flex-flow row nowrap
+        #author-photo
+            flex 1 0 rem(150px)
+            max-width rem(150px)
+            margin rem(10px)
+        #author-details
+            flex 1 0 100%
         +below(cut)
             text-align center
-    img
+            flex-flow row wrap
+            #author-photo
+                margin 0 auto
+                
+    img,amp-img
         border-radius 50%
         display block
         margin auto
-        +above(cut)
-            float left
-            margin-right 3.125rem
     .def
         color gray
         font-size 1.125rem
