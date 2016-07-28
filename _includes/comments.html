@@ -1,25 +1,11 @@
 <section class="comments">
-    <h3>Comments</h3>
-    <div id="disqus_thread"></div>
-</section>
-<script type="text/javascript">
-    var disqus_loaded = false;
+  <h3>Comments</h3>
 
-    function load_disqus()
-    {
-        disqus_loaded = true;
-        var disqus_shortname = '{{site.disqus_username}}';
-        var disqus_title = '{{page.title.replace("'", "\\'")}}';
-        var disqus_url = '{{page.url}}';
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        var ldr = document.getElementById('disqus_loader');
-    };
-    window.onscroll = function(e) {
-        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 800)) {
-            if (disqus_loaded==false)
-                load_disqus()
-        }
-    };
-</script>
+  <amp-iframe src="http://disqus.com/embed/comments/?base=default&version=53d67f7c417e499bf96e636f36c3d6ee&f=bashyc&t_i={{ page.url | uri_scape }}&t_u={{ page.url | uri_scape }}&t_d={{page.title | uri_scape }}&t_t={{page.title | uri_scape }}&s_o=default"
+              height="360"
+              layout="fixed-height"
+              frameborder="0"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+    </amp-iframe>
+</section>
+
