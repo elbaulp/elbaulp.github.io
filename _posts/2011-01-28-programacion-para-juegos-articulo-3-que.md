@@ -87,16 +87,16 @@ Probablemente estarás pensando que hay un error. 8 bits por color * 3 colores =
 El alfa controla la transparencia del píxel. El valor 255 para el alfa quiere decir que el píxel es completamente opaco y 0 completamente transparente. A continuación hay unos ejemplos de una imagen sobre un fondo blanco. Cada imagen tiene un valor para el alfa distinto:
 
 <div class="separator" style="clear: both; text-align: center;">
-  En esta imagen el alfa esta a 255.<br /> <amp-img layout="responsive" border="0" height="240" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUK2lKrtn2I/AAAAAAAAASs/vVyJ2YkO3oY/s320/255.jpg" />
+  En esta imagen el alfa esta a 255.<br /> <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="240" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUK2lKrtn2I/AAAAAAAAASs/vVyJ2YkO3oY/s320/255.jpg" />
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-  En esta imagen el alfa esta a 192. Se puede ver como el fondo blanco empieza a mostrarse a través de la imagen.<br /> <amp-img layout="responsive" border="0" height="240" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUK2lEXQZAI/AAAAAAAAAS0/kyR_W-tWVo0/s320/192.jpg" />
+  En esta imagen el alfa esta a 192. Se puede ver como el fondo blanco empieza a mostrarse a través de la imagen.<br /> <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="240" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUK2lEXQZAI/AAAAAAAAAS0/kyR_W-tWVo0/s320/192.jpg" />
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-  En esta imagen el alfa esta a 128. Aproximadamente el 50% de transparencia. <br /> <amp-img layout="responsive" border="0" height="240" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUK2lWOQFWI/AAAAAAAAAS8/R3cn8kuccy0/s320/128.jpg" />
+  En esta imagen el alfa esta a 128. Aproximadamente el 50% de transparencia. <br /> <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="240" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUK2lWOQFWI/AAAAAAAAAS8/R3cn8kuccy0/s320/128.jpg" />
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-  En esta imagen el alfa esta a 0. Completamente transparente.<br /> <amp-img layout="responsive" border="0" height="240" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUK2luEZy5I/AAAAAAAAATE/pa2iI4pX_Pk/s320/0.jpg" />
+  En esta imagen el alfa esta a 0. Completamente transparente.<br /> <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="240" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TUK2luEZy5I/AAAAAAAAATE/pa2iI4pX_Pk/s320/0.jpg" />
 </div>
 
 Asi que así es como un píxel de 32 bit RGBA está hecho.

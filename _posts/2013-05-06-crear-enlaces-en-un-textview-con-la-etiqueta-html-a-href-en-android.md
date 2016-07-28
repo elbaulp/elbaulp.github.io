@@ -40,7 +40,7 @@ author.setMovementMethod(LinkMovementMethod.getInstance());
 ```
 
 Con el código anterior se consigue el comportamiento deseado:  
-[<amp-img layout="responsive" src="/assets/img/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android" width="180px" height="300px" />][3]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/setMovementMethod-example-180x300.png" alt="enlaces en un textview android" width="180px" height="300px" />][3]{.thumbnail}
 
 Los dos primeros enlaces están creados con el método `setMovementMethod()`, los otros dos con `android:autoLink="web"`.
 

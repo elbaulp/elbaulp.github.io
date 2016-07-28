@@ -30,7 +30,7 @@ Lo que vamos a ver en esta entrada es:
 Dado un número x, su representación en una dada base b consiste en escribirlo como
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
+<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
 </div>
 
 donde el signo <var>s</var> es igual a 0 o 1 y los coeficientes a<sub>j</sub> son enteros positivos menores que *b*. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).
@@ -81,7 +81,7 @@ En esta representación, los 8 bits utilizados permiten que el exponente se encu
 Para aclarar los conceptos, veamos algunos ejemplos de números normalizados en precisión simple:
 
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img layout="responsive" border="0" width="600px" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" width="600px" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png" />
 </div>
 
 Entre paréntesis está representada la parte entera de la mantisa (que es igual a 1 siempre por convención.) Debe notarse que el número final se obtiene considerando que:
@@ -94,7 +94,7 @@ Como segundo ejemplo veamos la conversión inversa, del número (3,375)<sub>10</
 
 
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img layout="responsive" border="0" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png" />
 </div>
 
 por lo que, después de eliminar la parte entera y agregando el signo y el exponente, el número es:  

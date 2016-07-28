@@ -11,7 +11,7 @@ tags:
 main-class: "misc"
 color: "#61B38D"
 ---
-[<amp-img layout="responsive" class="alignleft" title="These Are The Droids You're Looking For: An Android Guide" alt="These Are The Droids You're Looking For: An Android Guide" src="https://lh4.googleusercontent.com/-Pn_3Sygxwqw/TsmHUU3hk3I/AAAAAAAAB1I/NzS8wVIBLtw/s291/android-guide-big-240x291.jpg" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="alignleft" title="These Are The Droids You're Looking For: An Android Guide" alt="These Are The Droids You're Looking For: An Android Guide" src="https://lh4.googleusercontent.com/-Pn_3Sygxwqw/TsmHUU3hk3I/AAAAAAAAB1I/NzS8wVIBLtw/s291/android-guide-big-240x291.jpg" />][1]
 
 Learn everything you want to learn about Android, for free! “These Are The Droids You’re Looking For: An Android Guide”, by author Matt Smith, is the latest free manual from MakeUseOf.com. Outlining the ins and outs of Android, this guide covers basic everything from basic usage to rooting your phone, and is a must-have if you use Google’s smartphone OS.
 

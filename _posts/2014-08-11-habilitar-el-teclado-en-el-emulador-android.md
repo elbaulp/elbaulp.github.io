@@ -24,7 +24,7 @@ En ocasiones, al crear un emulador [Android][1], aún habiendo habilitado el sop
 Al crear un emulador, hemos de marcar las siguientes casillas:
 
 <figure>
-<a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><amp-img layout="responsive" src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="472px" height="532px" /></a>
+<a href="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/08/Cómo-habilitar-el-teclado-en-el-emulador-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="472px" height="532px" /></a>
 <span class="image-credit">Crédito de la imagen: <a href="http://stackoverflow.com/users/204480/james-wald" title="Perfil en StackOverflow" target="_blank">James Wald</a> en StackOverflow</span>
 </figure>
 

@@ -5,6 +5,8 @@ layout: compress
 <html amp lang="es" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.amp.html %}
     <body>
+      <amp-image-lightbox id="lightbox1"
+                          layout="nodisplay"></amp-image-lightbox>
         {% include svg-icons.html %}
         {% include header-post.amp.html %}
         <section class="post">

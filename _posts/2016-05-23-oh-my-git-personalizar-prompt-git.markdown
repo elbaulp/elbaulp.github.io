@@ -12,7 +12,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg"><amp-img layout="responsive" src="/assets/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="823px" height="518px" /></a>
+<a href="/assets/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="823px" height="518px" /></a>
 <span class="image-credit">Crédito de la imagen: <a href="https://github.com/arialdomartini/oh-my-git" target="_blank" title="Repo Oh my Git">Repo Oh my Git</a></span>
 </figure>
 
@@ -78,7 +78,7 @@ source ~/.oh-my-git/prompt.sh
 A partir de ahora, al meternos en una carpeta con un repositorio git dentro, deberíamos ver lo siguiente:
 
 <figure>
-<a href="/assets/img/ohmygitprompt.png"><amp-img layout="responsive" src="/assets/img/ohmygitprompt.png" title="{{ page.title }}" alt="{{ page.title }}" width="527px" height="39px" /></a>
+<a href="/assets/img/ohmygitprompt.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/ohmygitprompt.png" title="{{ page.title }}" alt="{{ page.title }}" width="527px" height="39px" /></a>
 </figure>
 
 ### Volver a nuestro prompt por defecto

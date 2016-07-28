@@ -19,5 +19,5 @@ color: "#61B38D"
 Sin más rodeos, aquí está!, espero que os guste a todos!:
 
 <figure>
-<amp-img layout="responsive" src="/assets/img/logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="550px" height="414px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="550px" height="414px" />
 </figure>

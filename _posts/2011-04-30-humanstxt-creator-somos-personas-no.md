@@ -10,7 +10,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img layout="responsive" src="&lt;br  /&gt;
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="&lt;br  /&gt;
 https://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/humanstxt-creator-logo.png" /><br />
 https://1.bp.blogspot.com/-Hf79ifjbtnI/TbxhsOciMPI/AAAAAAAAAdM/9YheQQKAiMc/s1600/humanstxt-creator-logo.png" />
 </div>

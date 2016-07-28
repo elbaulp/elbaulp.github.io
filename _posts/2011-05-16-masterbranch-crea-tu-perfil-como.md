@@ -26,7 +26,7 @@ MasterBranch busca nuestros proyectos automáticamente, pero si por algún motiv
 Os dejo mi [Perfil][1], aunque aún falta por agregar el proyecto que ando desarrollando ahora, [WifiBar][2]
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s1600/masterbranch.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img layout="responsive" border="0" height="293" width="400" src="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s400/masterbranch.png" /></a>
+<a href="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s1600/masterbranch.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="293" width="400" src="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s400/masterbranch.png" /></a>
 </div>
 
 * * *Sitio Web:

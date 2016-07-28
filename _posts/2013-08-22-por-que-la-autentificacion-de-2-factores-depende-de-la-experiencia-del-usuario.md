@@ -13,7 +13,7 @@ author: luzila
 main-class: "articulos"
 color: "#F57C00"
 ---
-<amp-img layout="responsive" src="/assets/img/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700px" height="349px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/2-factor-authentication1.jpg" alt="Por qué la autentificación de 2 factores depende de la experiencia del usuario" width="700px" height="349px" />
 
 Ya vimos en hace algún tiempo [todos los lugares en los que deberías habilitar la autentificación de 2 factores][1]. Hoy, en este artículo original de Duo Security analizaremos los problemas que puede ocasionar esta tecnología en el usuario final.
 

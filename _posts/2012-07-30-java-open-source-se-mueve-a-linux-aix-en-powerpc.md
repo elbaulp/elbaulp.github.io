@@ -17,7 +17,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<amp-img layout="responsive" alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256px" height="256px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256px" height="256px" />
 
 ** La propuesta de *SAP-steered* aporta OpenJDK a nuevas plataformas**
 

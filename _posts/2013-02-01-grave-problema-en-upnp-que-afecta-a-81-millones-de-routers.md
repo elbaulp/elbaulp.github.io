@@ -11,7 +11,7 @@ tags:
 main-class: "security-now"
 color: "#00BCD4"
 ---
-<amp-img layout="responsive" src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert" width="300px" height="300px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/02/alert-300x300.jpeg" alt="alert" width="300px" height="300px" />
 
 Como es habitual, hoy traigo otro episodio de [security Now!][1] que me parece interesante. Este en concreto, además de interesante es algo que afecta a millones de routers y dispositivos con el servicio UPnP activado.
 

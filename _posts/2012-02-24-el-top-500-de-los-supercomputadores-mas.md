@@ -12,7 +12,7 @@ main-class: "articulos"
 color: "#F57C00"
 ---
 <div style="text-align: center;">
-<amp-img layout="responsive" alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg" border="0" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg" border="0" />
 </div>
 
 Esta semana en clase de TOC (Tecnología y Organización de Computadores) nos enseñaron una web que se dedica a buscar por el mundo los supercomputadores y clasificarlos en un ranking de los 500 mejores, la web en cuestión es <a href="http://top500.org/" target="_blank">top500.org</a>.

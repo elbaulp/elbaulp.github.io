@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_cybr02"><amp-img layout="responsive" src="/assets/img/Computer-and-Hacking-Forensics---FREE-Video-Training-Course2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_cybr02"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Computer-and-Hacking-Forensics---FREE-Video-Training-Course2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" /></a>
 </figure>
 
 Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks.

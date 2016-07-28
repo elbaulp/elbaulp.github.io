@@ -10,7 +10,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <div style="float:left; margin-right:1em;">
-<a href="http://elbauldelprogramador.tradepub.com/free/w_make28/prgm.cgi"><amp-img layout="responsive" style="border:none;" src="https://lh5.googleusercontent.com/-fvbBeqczi8o/TwmLPVbKehI/AAAAAAAACDU/5VTDVQKFeTQ/s615/done_internet1.jpg" title="How the internet works" alt="How the internet works" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/free/w_make28/prgm.cgi"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" style="border:none;" src="https://lh5.googleusercontent.com/-fvbBeqczi8o/TwmLPVbKehI/AAAAAAAACDU/5VTDVQKFeTQ/s615/done_internet1.jpg" title="How the internet works" alt="How the internet works" /></a>
 </div>
 
 The web’s place in our daily lives is undeniable. We can now access the Internet from our home computers, office, laptops and our phones. But even with this close intimacy many people still aren’t entirely sure what the Internet is and how it really works.

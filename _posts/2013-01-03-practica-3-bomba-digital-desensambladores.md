@@ -14,7 +14,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<amp-img layout="responsive" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" width="532px" height="449px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" width="532px" height="449px" />
 
 Hace unas semanas [hablé de un desafío][1] propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.
 

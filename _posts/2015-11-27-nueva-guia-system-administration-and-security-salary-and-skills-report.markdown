@@ -11,7 +11,7 @@ main-class: "misc"
 color: "#61B38D"
 ---
 <figure>
-<amp-img layout="responsive" src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" />
 </figure>
 
 This kit will tell you what you need to know to earn more in system administration and security.

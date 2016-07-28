@@ -17,7 +17,7 @@ color: "#F57C00"
 <b><span class="Apple-style-span" style="font-size: x-large;"><a target="_blank" href="http://www.bodhilinux.com/">Bodhi Linux</a></span></b>
 </div>
 <div lang="en">
-<a href="https://4.bp.blogspot.com/_1i7EX7a2ELY/TOMlN1Ur4RI/AAAAAAAAAc8/5m77xf9DbnQ/s1600/logo.png"><amp-img layout="responsive" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOkGdJtvLGI/AAAAAAAAAFI/fvRzuxXd6jA/s1600/logo.png" alt="logo" style="display: block; margin: 0px auto 10px; text-align: center; cursor: pointer; width: 200px; height: 94px;" border="0" /></a>
+<a href="https://4.bp.blogspot.com/_1i7EX7a2ELY/TOMlN1Ur4RI/AAAAAAAAAc8/5m77xf9DbnQ/s1600/logo.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOkGdJtvLGI/AAAAAAAAAFI/fvRzuxXd6jA/s1600/logo.png" alt="logo" style="display: block; margin: 0px auto 10px; text-align: center; cursor: pointer; width: 200px; height: 94px;" border="0" /></a>
 </div>
 <div lang="en">
   Bodhi is a minimalistic, Linux distro that uses the Enlightenment desktop. By minimalistic I mean Bodhi comes as a 350~meg download and only includes the following pieces of software by default:

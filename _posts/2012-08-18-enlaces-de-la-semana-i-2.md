@@ -16,7 +16,7 @@ format: link
 main-class: "articulos"
 color: "#F57C00"
 ---
-[<amp-img layout="responsive" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.
 

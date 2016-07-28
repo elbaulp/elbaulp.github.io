@@ -15,7 +15,7 @@ description: "Un tema obvio para comenzar para la mayoría de los desarrolladore
 main-class: "articulos"
 color: "#F57C00"
 ---
-<amp-img layout="responsive" src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300px" height="227px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300px" height="227px" />
 
 Habiendo terminado el 2012, es tiempo de mirar hacia los próximos 12 meses en el mundo del desarrollo. Luego de leer <a href="http://jaxenter.com/what-will-2013-bring-developers-place-their-bets-45933.html" target="_blank">este interesante artículo</a> sobre las predicciones de algunos respetados desarrolladores, presentamos cinco sencillas razones por las cuales debes entusiasmarte con lo que traerá el 2013&#8230;
 

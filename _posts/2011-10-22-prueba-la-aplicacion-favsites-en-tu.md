@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Como sabéis hace algún tiempo terminé la aplicación [Favsites][1].
 
@@ -22,7 +22,7 @@ Ahora me gustaría que todo aquel que quiera probarla y ver como funciona, la de
 
 Si alguien quere participar y traducir la aplicación a un idioma distinto del Inglés y Español, le estaría agredecido y lo colocaría en el &#8220;Acerca de&#8221;.
 
-Por último, decir como siempre, que toda crítica es bienvenida, pero por favor no seáis demasiado duros, que es mi 2 aplicación para esta plataforma <amp-img layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
+Por último, decir como siempre, que toda crítica es bienvenida, pero por favor no seáis demasiado duros, que es mi 2 aplicación para esta plataforma <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 <p class="alert">
   Para instalar FavSites debes disponer de Android 2.2 o superior.
 </p>

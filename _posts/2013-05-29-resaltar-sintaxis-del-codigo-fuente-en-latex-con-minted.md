@@ -18,7 +18,7 @@ main-class: "latex"
 color: "#B31917"
 ---
 
-Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <amp-img layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
+Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
 
 Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.  
 
@@ -69,11 +69,11 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
 ```
 
 Este trozo de código dará como resultado lo siguiente:  
-<amp-img layout="responsive" src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px" />
 
 ### Insertar código desde un archivo de código fuente
 
-Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <amp-img layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
+Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
 
 ```latex
 \newmintedfile[myJava]{java}{
@@ -153,7 +153,7 @@ Ejemplo de \textbackslash newmintedfile:
 linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.
 
 El resultado será:  
-<amp-img layout="responsive" src="/assets/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733px" height="940px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733px" height="940px" />
 
 ### Creando un comando
 
@@ -184,7 +184,7 @@ Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el seg
 
 ### Conclusiones
 
-Para mi, minted es el mejor paquete que hay para resaltar código en <amp-img layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" />. Y recomiendo a todo el mundo que aprenda a programar en <amp-img layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" />.
+Para mi, minted es el mejor paquete que hay para resaltar código en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" />. Y recomiendo a todo el mundo que aprenda a programar en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" />.
 
 #### Referencias
 

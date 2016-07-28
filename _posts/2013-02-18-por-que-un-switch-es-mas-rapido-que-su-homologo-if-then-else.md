@@ -17,7 +17,7 @@ color: "#E64A19"
 ---
 En este artículo pretendo explicar el motivo por el cual un switch es mucho más rápido que su homólogo en secuencias if-then-else, para ello analizaremos la implementación del switch.
 
-<amp-img layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft" />
 
 El switch se basa en una implementación muy eficiente llamada en inglés **jump table** o tabla de saltos. Esta tabla es un [array][1], donde la entrada *i* es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a *i*. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción **jmp** en [ensamblador][2]).
 

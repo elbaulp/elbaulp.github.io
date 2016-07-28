@@ -11,7 +11,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<amp-img layout="responsive" class="alignleft" title="PHP Master: Write Cutting-edge Code--Free 135 Page Preview" alt="PHP Master: Write Cutting-edge Code--Free 135 Page Preview" src=" https://lh4.googleusercontent.com/-F9z9g5OjRVc/TsOOl6OFQZI/AAAAAAAABxY/-LKt6y8BuF8/s150/w_sitb30c.gif" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="alignleft" title="PHP Master: Write Cutting-edge Code--Free 135 Page Preview" alt="PHP Master: Write Cutting-edge Code--Free 135 Page Preview" src=" https://lh4.googleusercontent.com/-F9z9g5OjRVc/TsOOl6OFQZI/AAAAAAAABxY/-LKt6y8BuF8/s150/w_sitb30c.gif" />
 </figure>
 
 **Description: *****PHP Master: Write Cutting-edge Code*** is tailor-made for PHP developers who are serious about refining their server-side applications. This book will help you to employ the most effective object oriented programming approaches, wrap your projects in layers of security, and ensure your code is doing its job perfectly.
