@@ -13,11 +13,12 @@ color:
 ---
 
 <figure>
-  <a href="/assets/img/"><img src="/assets/img/" title="{{ page.title }}" alt="{{ page.title }}" /></a>
-  <span class="image-credit">Crédito de la imagen: <a href=""></a></span><br/>
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/" alt="{{ title }}" title="{{ title }}" width="px" height="px">
+  </amp-img>
+  <figcaption></figcaption>
 </figure>
 
-{% include _toc.html %}
+{% include toc.html %}
 
 ```
 ```
