@@ -1,6 +1,6 @@
 ---
 title: C++ y Java
-layout: minimal
+layout: minimal.amp
 main-class: "dev"
 color: "#E64A19"
 ---
