@@ -51,7 +51,7 @@ Las dos siguientes lineas
 sed "s/^#include..... y sed "s/^#define...
 ```
 
-  </p><p>
+<p>
     buscan el patrón #define o #include, al principio de cada linea del texto, esto se indica con <em>^</em>, y lo reemplaza con su estilo correspondiente, para formatear el texto.<br /> Una vez entramos al for, se aplica básicamente el mismo procedimiento que para define e include, pero con cada palabra de la variable keyWords.
   </p>
 <p>
