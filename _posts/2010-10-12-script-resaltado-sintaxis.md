@@ -7,12 +7,14 @@ categories:
   - script
 tags:
   - sintaxis c
+modified: 2016-07-29T20:00
 main-class: "linux"
 color: "#2196F3"
 ---
-He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">esta</a>.  
-Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje.  
- <br /> Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.<br /> Aqui esta el codigo:
+
+He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">esta</a>.
+
+Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje. Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.<br /> Aqui esta el codigo:
 
 ```bash
 #!/bin/bash
@@ -38,16 +40,14 @@ case $? in
 *)
   echo "No se seleciciono nada.";;
 esac
-
 ```
 
-<p>
-<b>Voy a explicar un poco el código:</b><br /> La variable <em>keyWords</em> contiene las palabras claves de c++, menos &#8220;class&#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..
-</p>
-<p>
-  Las dos siguientes lineas
 
-  ```bash
+<b>Voy a explicar un poco el código:</b><br /> La variable <em>keyWords</em> contiene las palabras claves de c++, menos &#8220;class&#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..
+
+Las dos siguientes lineas
+
+```bash
 sed "s/^#include..... y sed "s/^#define...
 ```
 
