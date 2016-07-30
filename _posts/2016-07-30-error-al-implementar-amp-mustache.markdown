@@ -1,6 +1,6 @@
 ---
 layout: post.amp
-title: Error Al Implementar Amp-mustache
+title: Cómo solucionar errores Al Implementar Amp-mustache
 categories: 
 description: "Cómo implementar correctamente amp-mustache y evitar errores en Jekyll"
 tags: [amp-mustache, amp-pages, error amp-mustache]
