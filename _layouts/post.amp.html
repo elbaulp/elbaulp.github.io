@@ -11,7 +11,7 @@ layout: compress
         {% include header-post.amp.html %}
         <section class="post">
           {% include share.amp.html %}
-            <article role="article" id="post" class="post-content">
+          <article role="article" id="post" class="post-content">
               {% assign c = content | split: '<!--ad-->' %}
               {% if content contains '<!--ad-->' %}
                 {{ c | first }}

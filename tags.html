@@ -4,22 +4,6 @@ title: "#Tags"
 permalink: /tags/index.html
 description: "Search for your favorite #tag."
 ---
-
-    <ul>
-      <amp-list width="800px"
-                height="250px"
-                layout="responsive"
-                src="https://raw.githubusercontent.com/algui91/algui91.github.io/master/assets/popular.json">
-        <template type="amp-mustache"
-                  id="amp-template-id">
-          <li>
-            <a href="https://elbaul.com">{{title}} OTRO</a>
-          </li>
-        </template>
-      </amp-list>
-    </ul>
-
-
 <div class="tags">
 {% assign tags_list = site.tags %}
   {% if tags_list.first[0] == null %}
