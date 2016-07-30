@@ -3,20 +3,6 @@ layout: default.amp
 ---
 
 <main class="home" id="post" role="main">
-  <!-- <amp-list width=300 -->
-  <!--     height=75 -->
-  <!--     layout=responsive -->
-  <!--     src="/popular.json"> -->
-  <!--   <template type="amp-mustache"> -->
-  <!--     <a class="card related" -->
-  <!--         href={{url}}> -->
-  <!--       <amp-img width="101" -->
-  <!--           height="75" -->
-  <!--           src="{{thumbnail}}"></amp-img> -->
-  <!--       <span>{{title}}</span> -->
-  <!--     </a> -->
-  <!--   </template> -->
-  <!-- </amp-list> -->
     <div id="grid" class="row flex-grid">
     {% for post in site.posts limit:21 %}
         <article class="box-item post-{{post.main-class}} shown">
