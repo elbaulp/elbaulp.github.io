@@ -6,14 +6,14 @@ description: "Search for your favorite #tag."
 ---
 
     <ul>
-      <amp-list width=auto
-                height=100
-                layout=fixed-height
-                src="/assets/popular.json">
+      <amp-list width="800px"
+                height="250px"
+                layout="responsive"
+                src="/assets/popular.json?ref=CANONICAL_URL">
         <template type="amp-mustache"
                   id="amp-template-id">
           <li>
-            <a href={{url}}>{{title}}</a>
+            <a href="https://elbaul.com">{{items.title}} OTRO</a>
           </li>
         </template>
       </amp-list>
