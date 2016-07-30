@@ -5,6 +5,20 @@ layout: compress
 <html amp lang="es" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.amp.html %}
     <body>
+        <ul>
+    <amp-list width=auto
+        height=100
+        layout=fixed-height
+        src="//localhost:4000/assets/popular.json">
+      <template type="amp-mustache"
+          id="amp-template-id">
+        <li>
+          <a href={{url}}>{{title}}</a>
+        </li>
+      </template>
+    </amp-list>
+  </ul>
+
       <amp-image-lightbox id="lightbox1"
                           layout="nodisplay"></amp-image-lightbox>
         {% include svg-icons.html %}
