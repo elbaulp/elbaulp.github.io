@@ -5,6 +5,21 @@ permalink: /tags/index.html
 description: "Search for your favorite #tag."
 ---
 
+    <ul>
+      <amp-list width=auto
+                height=100
+                layout=fixed-height
+                src="/assets/popular.json">
+        <template type="amp-mustache"
+                  id="amp-template-id">
+          <li>
+            <a href={{url}}>{{title}}</a>
+          </li>
+        </template>
+      </amp-list>
+    </ul>
+
+
 <div class="tags">
 {% assign tags_list = site.tags %}
   {% if tags_list.first[0] == null %}
