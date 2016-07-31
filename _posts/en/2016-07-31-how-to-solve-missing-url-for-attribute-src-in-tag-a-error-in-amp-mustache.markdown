@@ -16,7 +16,7 @@ color: "#E64A19"
 
 # What is Amp-mustache and how it works #
 
-Recently I have been implementing _Google AMP pages_ in my site. All was being perfect until I decide to implement lists with `amp-mustache`, [this component](https://www.ampproject.org/docs/reference/extended/amp-mustache.html "Docs for amp-mustache") of _AMP_ allows to populate elements from a _json_, for example one could create a list from this _json_:
+Recently I have been implementing _Google AMP pages_ in my site. Everything was going well until I decide to implement lists with `amp-mustache`. [This component](https://www.ampproject.org/docs/reference/extended/amp-mustache.html "Docs for amp-mustache") of _AMP_ allows to populate elements from a _json_, for example one could create a list from this _json_:
 
 ```json
 {
@@ -32,7 +32,7 @@ Recently I have been implementing _Google AMP pages_ in my site. All was being p
 
 <!--ad-->
 
-And then have a template like this one to generate the content:
+And then we have a template like this one to generate the content:
 
 ```html
   <ul>
