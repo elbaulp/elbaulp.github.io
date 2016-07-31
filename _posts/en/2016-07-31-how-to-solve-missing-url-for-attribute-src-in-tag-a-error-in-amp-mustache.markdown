@@ -43,7 +43,7 @@ And then have a template like this one to generate the content:
       <template type="amp-mustache"
           id="amp-template-id">
         <li>
-          <a href={{url}}>{{title}}</a>
+          <a href="{% raw %}{{url}}{% endraw %}">{% raw %}{{title}}{% endraw %}</a>
         </li>
       </template>
     </amp-list>
@@ -74,7 +74,7 @@ In my case, the error `Missing URL for attribute 'src' in tag 'a'.` came from th
   </ul>
 ```
 
-### Referencias
+### References
 
 - [ampbyexample.com](https://ampbyexample.com/components/amp-list/ "Amp reference for amp-list")
 - [My question in StackOverflow](http://stackoverflow.com/q/38672182/1612432 "Error trying to implement amp-mustache")
