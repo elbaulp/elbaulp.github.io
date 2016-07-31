@@ -10,7 +10,8 @@ tags:
   - cifrar tar con openssl
   - comandos openssl
 image: 2012/11/Apps-preferences-desktop-cryptography-icon1.png
-description: "Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**."
+description: "Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo cifrar archivos con openssl."
+modified: 2016-07-31T00:00
 main-class: "servidores"
 color: "#0097A7"
 ---  
@@ -20,6 +21,8 @@ color: "#0097A7"
 </figure>
 
 Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**.  
+
+{% include toc.html %}
 
 <!--ad-->
 
@@ -133,5 +136,4 @@ Espero que os sea de utilidad.
  [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
  [2]: https://elbauldelprogramador.com/
 
-{% include toc.html %}
-</directorio>
+

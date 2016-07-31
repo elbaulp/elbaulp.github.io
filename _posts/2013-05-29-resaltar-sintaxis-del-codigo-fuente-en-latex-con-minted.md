@@ -1,6 +1,6 @@
 ---
 title: Resaltar sintaxis del código fuente en LaTeX con minted
-modified: 2015-04-08T00:00:00+00:00
+modified: 2016-07-31T00:00:00+00:00
 math: true
 layout: post.amp
 permalink: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/
@@ -23,6 +23,8 @@ Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, prop
 Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.  
 
 <!--ad-->
+
+{% include toc.html %}
 
 ### Instalando dependencias
 
@@ -195,4 +197,3 @@ Para mi, minted es el mejor paquete que hay para resaltar código en <amp-img on
 
  [1]: /disponible-la-primera-parte-del-curso/
 
-{% include toc.html %}
