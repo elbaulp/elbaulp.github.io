@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!doctype html>
-<html amp lang="es" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+<html amp lang="{% if page.lang %}en{% else %}es{% endif %}" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.amp.html %}
     <body>
       <amp-image-lightbox id="lightbox1"
