@@ -4,7 +4,7 @@ title: Manuales gratuítos
 layout: minimal.amp
 tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
 description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
-image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
+image: Python-Web-Frameworks-full.jpg
 ---
 En esta sección iré poniendo los mejores manuales gratuítos referidos a tecnología, Internet, redes, productividad, uso de software y mucho más. El catálogo completo está disponible en [esta página.][1]
 
@@ -12,8 +12,8 @@ Todas las publicaciones son GRATUITAS, lo único que hay que hacer es introducir
 
 Si estás buscando libros de texto, quizá te interesen estos dos artículos:
 
-- <a onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
-- <a onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="21 Libros de No-Ficción que todo Geek debería leer">21 Libros de No-Ficción que todo Geek debería leer</a>
+- <a id="libros-ml" onClick="ga('send', 'event', 'libros-ml', 'guidespage');" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a>
+- <a id="libros-geek" onClick="ga('send', 'event', 'librosgeek', 'guidespage');" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="21 Libros de No-Ficción que todo Geek debería leer">21 Libros de No-Ficción que todo Geek debería leer</a>
 
 > __NOTA__: Si quieres apoyar el trabajo que realizamos en _El Baúl del Programador_, descargar alguna de estas guías es una buena forma, por cada una que descargues es posible (Aunque no seguro) que nos den un porcentaje de comisión (Entorno $1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en <a onclick="ga('send', 'event', 'revresponseReferallink');" href="http://www.revresponse.com/join.php?refbrand=bashyc-blogspot" target="_blank" title="RevResponse">RevResponse</a> y empezar a ofrecer guías de interés a tus lectores.
 
