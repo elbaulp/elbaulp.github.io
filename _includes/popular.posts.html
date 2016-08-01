@@ -1,0 +1,18 @@
+<h4 id="popular-posts-header">Los más populares</h4>
+<amp-list
+   id="popular-posts"
+   width=300
+   height=300
+   layout=responsive
+   src="/assets/popular.json">
+  <template type="amp-mustache">
+    <a class="card related"
+       id="{% raw %}{{id}}{% endraw %}"
+       href={% raw %}{{url}}{% endraw %}>
+      <amp-img width="101"
+               height="75"
+               src="{% raw %}{{thumbnail}}{% endraw %}"></amp-img>
+      <span>{% raw %}{{title}}{% endraw %}</span>
+    </a>
+  </template>
+</amp-list>
