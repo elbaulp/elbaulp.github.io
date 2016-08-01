@@ -51,7 +51,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 - **git rm &#45;&#45;cached &lt;file or regexp>**   # Git no realiza un seguimiento del archivo, pero los deja en el directorio de trabajo. Útil cuando se olvida añadir archivos al .gitignore y ya hemos agregado dichos archivos al repositorio.
 - **git rm &lt;file>**   # borrarlos con git siempre.
 - **git rm &#45;f &lt;file>**   #  si ya está modificado y en el index.
-- git mv &lt;file> &lt;renamed_file>
+- **git mv &lt;file> &lt;renamed_file>**
 - **gitk**  #  tcl/tk. Herramienta gráfica para git
 - **git commit &#45;&#45;amend**  # Modificar el mensaje del último commit
 - **git reset HEAD &lt;file>**   #  to unstage
@@ -106,8 +106,8 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 - **git tag**  #  muestra las etiquetas actuales
 - **git tag &#45;l &#8216;v1.4.2.*&#8217;**   #  acepta regex
 - Dos tipos de tag:
-- **Lightweight** : puntero a commit ( branch que no cambia )
-- **Annotated** : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con [GPG][1]. ( recomendada )
+  - **Lightweight** : puntero a commit ( branch que no cambia )
+  - **Annotated** : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con [GPG][1]. ( recomendada )
 
 - **git tag &#45;a &lt;tagname> &#45;m &#8216;mensaje&#8217;**   #  annotated tag
 - **git show &lt;tag&#45;name>**   #  muestra información asociada.
@@ -116,18 +116,18 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 - **git tag &#45;v &lt;tag&#45;name>**   #  verifica tags firmadas
 - **git tag &#45;a &lt;tag&#45;name> [commit&#45;chksum]**  #  crea tag para commit con dicho chksum
 - Por defecto no se transfieren los tags, para subirlos al servidor:
-- **git push origin [tag&#45;name]**  #  una sola
-- **git push origin &#45;&#45;tags**  #  Enviar todas
+  - **git push origin [tag&#45;name]**  #  una sola
+  - **git push origin &#45;&#45;tags**  #  Enviar todas
 
 - Para usar GPG y firmar tags, hay que subir la clave pública al repositorio:
-- **gpg &#45;&#45;list&#45;keys**  # Coges la id pública
-- **gpg &#45;a &#45;&#45;export &lt;id> &#124; git hash&#45;object &#45;w &#45;&#45;stdin**  # Copia el SHA&#45;1 devuelto
-- **git tag &#45;a maintainer&#45;gpg&#45;pub &lt;SHA&#45;1>**
-- **git push &#45;&#45;tags**  # Comparte la clave con todos los usuarios
-- **git show maintainer&#45;gpg&#45;pub &#124; gpg &#45;&#45;import**  # Cada usuario importa la clave así
-- **git show &lt;tag>**   # Devuelve más información sobre la etiqueta
-- **git tag -d nombre_tag**  #  eliminar la etiqueta
-- **git push origin :refs/tags/nombre_tag**  #  Eliminar la etiqueta del repositorio remoto.
+  - **gpg &#45;&#45;list&#45;keys**  # Coges la id pública
+  - **gpg &#45;a &#45;&#45;export &lt;id> &#124; git hash&#45;object &#45;w &#45;&#45;stdin**  # Copia el SHA&#45;1 devuelto
+  - **git tag &#45;a maintainer&#45;gpg&#45;pub &lt;SHA&#45;1>**
+  - **git push &#45;&#45;tags**  # Comparte la clave con todos los usuarios
+  - **git show maintainer&#45;gpg&#45;pub &#124; gpg &#45;&#45;import**  # Cada usuario importa la clave así
+  - **git show &lt;tag>**   # Devuelve más información sobre la etiqueta
+  - **git tag -d nombre_tag**  #  eliminar la etiqueta
+  - **git push origin :refs/tags/nombre_tag**  #  Eliminar la etiqueta del repositorio remoto.
 
 ## BRANCH
 
@@ -150,10 +150,10 @@ Las ramas simplememte son punteros a distintos snapshots
 - **git fetch origin**  #  Descarga el contenido del servidor
 - **git push &lt;remote> &lt;branch>**   # Las ramas no se suben por defecto, has de subirlas explícitamente
 - **git push &lt;remote> &lt;branch>:&lt;nuevoNombre>**   # Igual que la de arriba, pero en el servidor se llama a la rama con nuevoNombre en lugar de branch
-- **Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:**
-- **git fetch origin**  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)
-- **git checkout &#45;b rama\_nueva origin/rama\_nueva**  #  Crea una rama local a partir de la remota
-- **git merge origin/nueva_rama**  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama
+- Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:
+  - **git fetch origin**  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)
+  - **git checkout &#45;b rama\_nueva origin/rama\_nueva**  #  Crea una rama local a partir de la remota
+  - **git merge origin/nueva_rama**  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama
 
 - **git push [remotename] :[branch]**  #  elimina una rama remota
 - **git push \[remotename\] \[localbranch\]:[remotebranch]**  # La rama en el servidor tiene distinto nombre a la local
@@ -165,19 +165,19 @@ Las ramas simplememte son punteros a distintos snapshots
 
 ## REBASE
 
-**Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re&#45;merges**
+Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re&#45;merges
 
 - **git checkout &lt;una rama>**
 - **git rebase master**  #  aplica todos los cambios de &lt;una rama> a master
 - **git merge master**  # hay que hacer un merge de tipo fast forward
-- **Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:**
-- **git rebase &#45;&#45;onto master server client**  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.
-- **git checkout master***
-- **git merge client**  #  fast&#45;forward. Client y master en el mismo snapshot
-- **Si se quiere aplicar también los cambios de server, basta con:**
-- **git rebase master server***
-- **git checkout master***
-- **git merge server***
+- Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:
+  - **git rebase &#45;&#45;onto master server client**  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.
+  - **git checkout master***
+  - **git merge client**  #  fast&#45;forward. Client y master en el mismo snapshot
+- Si se quiere aplicar también los cambios de server, basta con:
+  - **git rebase master server**
+  - **git checkout master**
+  - **git merge server**
 
 - **git rebase \[basebranch\] \[topicbranch\]**  #  sintaxis de rebase
 - **git rebase &#45;i**  #  Rebase interactivo
@@ -192,9 +192,8 @@ Las ramas simplememte son punteros a distintos snapshots
 
 ## PREPARAR UNA RELEASE
 
-- **git archive master &#45;&#45; prefix=&#8221;project/&#8217; &#124; gzip > \`git describe master\`.tar.gz**
-
-- git archive master &#45;&#45; prefix=&#8221;project/&#8217; &#45;&#45;format=zip &#124; \`git describe master\`.zip
+- **git archive master --prefix="project/" &#124; gzip > \`git describe master\`.tar.gz**
+- **git archive master --prefix="project/" --format=zip &#124; \`git describe master\`.zip**
 - test/ export&#45;ignore  # Al crear el tarball no incluye el directorio test/
 
 ## GENERAR UN CHANGELOG
@@ -204,22 +203,20 @@ Las ramas simplememte son punteros a distintos snapshots
 ## RECOMENDACIONES
 
 - Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:
-- User1 clona el repo y hace cambios, realiza un commit
-- User2 clona el repo, hace cambios, hace commit y sube los cambios con push
-- User1 intenta hacer push, pero será rechazado con: &lt;u>! [rejected] master &#45;> master (non&#45;fast forward)&lt;/u>. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:
-
-
-- git fetch origin
-- git merge origin/master
-- git push origin master
+  - User1 clona el repo y hace cambios, realiza un commit
+  - User2 clona el repo, hace cambios, hace commit y sube los cambios con push
+  - User1 intenta hacer push, pero será rechazado con: &lt;u>! [rejected] master &#45;> master (non&#45;fast forward)&lt;/u>. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:
+    - git fetch origin
+    - git merge origin/master
+    - git push origin master
 
 
 - Mientras User1 hacía estas operaciones, User2 ha creado una rama &lt;u>issue54&lt;/u> y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:
-- **git fetch origin**
-- **git log &#45;&#45;no&#45;merges origin/master ^issue54**  # Observa qué cambios ha hecho User1
-- **git checkout master**
-- **git merge issue54 && git merge origin/master***
-- **git push origin master***
+  - **git fetch origin**
+  - **git log &#45;&#45;no&#45;merges origin/master ^issue54**  # Observa qué cambios ha hecho User1
+  - **git checkout master**
+  - **git merge issue54 && git merge origin/master***
+  - **git push origin master***
 
 - **git diff &#45;&#45;check**  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.
 - Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.
@@ -242,13 +239,13 @@ Las ramas simplememte son punteros a distintos snapshots
 - git push myFork featureB
 - (Contactar con el propietario del proyecto)
 - git fetch origin
-- **Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en**featureB**, resuelves conflictos, y haces push:**
-- git checkout &#45;b featureBv2 origin/master
-- git merge &#45;&#45;no&#45;commit &#45;&#45;squash featureB
-- (cambiar la implementacion)
-- git commit
-- git push myFork featureBv2
-- **&#45;&#45;squash coge todo el trabajo de la rama mezclada y la aplasta en un no&#45;merge commit encima de la rama en la que estas. &#45;&#45;no&#45;commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit**
+- Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en **featureB**, resuelves conflictos, y haces push:
+  - git checkout &#45;b featureBv2 origin/master
+  - git merge &#45;&#45;no&#45;commit &#45;&#45;squash featureB
+  - (cambiar la implementacion)
+  - git commit
+  - git push myFork featureBv2
+  - **&#45;&#45;squash coge todo el trabajo de la rama mezclada y la aplasta en un no&#45;merge commit encima de la rama en la que estas. &#45;&#45;no&#45;commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit**
 
 ## REFLOG
 
@@ -271,24 +268,24 @@ En segundo plano, git crea un log de a donde han estado referenciando HEAD y el 
 ## DEPURACIÓN
 
 - File anotation
-- **git blame &#45;L 12,22 &lt;archivo>**   #  muestra cuando y por quién se modificaron de la linea 12 a la 22
-- **git blame &#45;C &#45;L 141,153 &lt;file>**   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.
+  - **git blame &#45;L 12,22 &lt;archivo>**   #  muestra cuando y por quién se modificaron de la linea 12 a la 22
+  - **git blame &#45;C &#45;L 141,153 &lt;file>**   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.
 
 - Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.
-- **git bisect start**
-- **git bisect bad**  #  marcas el commit actual como roto
-- **git bisect good [commit bueno]**  #  último commit conocido que funcionaba
+  - **git bisect start**
+  - **git bisect bad**  #  marcas el commit actual como roto
+  - **git bisect good [commit bueno]**  #  último commit conocido que funcionaba
 - Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.
-- **git bisect reset**
+  - **git bisect reset**
 
 ## SUBMODULOS
 
 - **git submodule add &lt;url>**   #  crea un directorio que contiene el comtenido de otro proyecto.
 
 - Clonar un repo con submodulos
-- git clone url
-- git submodule init
-- git submodule update
+  - git clone url
+  - git submodule init
+  - git submodule update
 
 ## CONFIGURATION
 
@@ -300,7 +297,7 @@ En segundo plano, git crea un log de a donde han estado referenciando HEAD y el 
 - **git config &#45;&#45;global user.signingkey &lt;gpg&#45;key&#45;id>**   #  clave gpg para firmar tags
 - **git config &#45;&#45;global core.excludesfile &lt;file>**   # como gitignore
 - **git config &#45;&#45;global help.autocorrect 1**  #  autocorrige cuando se escribe un comando incorrecto. Solo en git >= 1.6.1
-- **git config &#45;&#45;global color.ui true**  #  colorea la salida de git. Valores: true|false|always
+- **git config &#45;&#45;global color.ui true**  #  colorea la salida de git. Valores: true\|false\|always
 - **git config &#45;&#45;global core.autocrlf input**  # para que usuarios linux no tengan problemas con los retornos de carro de windows
 - **git config &#45;&#45;global core.autocrlf true**  # para usuarios de windows
 - **git config &#45;&#45;global core.whitespace trailing&#45;space, space&#45;before&#45;tab, indent&#45;with&#45;non&#45;tab, cr&#45;at&#45;eol**  #  respectivamente: busca espacios al final de línea, busca espacios al inicio de tabulación, busca líneas con 8 o más espacios en lugar de tabulaciones, acepta retornos de carro
@@ -327,7 +324,7 @@ $ echo ‘*.jpeg diff=exif’ » .gitattributes
 $ git config diff.exif.textconv exiftool
 ```
 
-**Procesar archivos antes de hacer commit y antes de hacer checkout**: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman **smudge** y **clean**. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea checkeado (smudge) y commiteado (clean). Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)
+**Procesar archivos antes de hacer commit y antes de hacer checkout**: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman **smudge** y **clean**. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea [checkeado (smudge) y commiteado (clean)](/como-usar-los-filtros-smudge-y-clean-en-git/ "Como Usar Los Filtros Smudge Y Clean en Git"). Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)
 
 __*.c filter=indent__ Luego:
 
@@ -368,7 +365,7 @@ $Date: Tue Apr 21 07:26:52 2009 -0700$
 
 ## GIT HOOKS
 
-Hay dos tipos, de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.
+[Hay dos tipos](/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/ "Sincronización de proyectos en git con hooks (ganchos)"), de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.
 
 ## CONCEPTOS
 
