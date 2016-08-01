@@ -1,6 +1,5 @@
 ---
 title: 'Git: Mini Tutorial y chuleta de comandos'
-
 layout: post.amp
 permalink: /mini-tutorial-y-chuleta-de-comandos-git/
 categories:
@@ -24,17 +23,20 @@ tags:
   - git clone
   - git init
 date: 2015-12-13T19:10:12+01:00
-modified: 2015-12-13T19:10:12+01:00
+modified: 2016-08-01T18:00:12+01:00
 description: "Un mini tutorial y lista extensa de comandos git"
 image: 2013/03/git-logo.png
 main-class: "git"
 color: "#f05033"
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" alt="Tutorial git y comandos git" title="Git: Mini Tutorial y chuleta de comandos git" alt="Git: Mini Tutorial y chuleta de comandos" width="910px" height="380px" />
 </figure>
 
 Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer <a href="http://git-scm.com/book" target="_blank">Pro Git</a>, libro que recomiendo a todo desarrollador, disponible en <a href="https://github.s3.amazonaws.com/media/progit.en.pdf" target="_blank">PDF</a>, <a href="https://github.s3.amazonaws.com/media/progit.epub" target="_blank">EPUB</a>, <a href="https://github.s3.amazonaws.com/media/pro-git.en.mobi" target="_blank">MOBI</a> y <a href="http://www.amazon.es/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1430218339&linkCode=as2&tag=elbaudelpro-21" target="_blank">versión en papel</a>. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.
+
+{% include toc.html %}
 
 <!--ad-->
 
@@ -154,7 +156,7 @@ Las ramas simplememte son punteros a distintos snapshots
 - **git merge origin/nueva_rama**  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama
 
 - **git push [remotename] :[branch]**  #  elimina una rama remota
-- **git push \[remotename\] \[localbranch\]:[remotebranch] **  # La rama en el servidor tiene distinto nombre a la local
+- **git push \[remotename\] \[localbranch\]:[remotebranch]**  # La rama en el servidor tiene distinto nombre a la local
 
 ## TRACKING BRANCHES
 
@@ -252,16 +254,16 @@ Las ramas simplememte son punteros a distintos snapshots
 
 En segundo plano, git crea un log de a donde han estado referenciando HEAD y el resto de ramas en los últimos meses.
 
-- **git reflog***
-- **git show HEAD@{n} **  # Muestra información sobre el reflog número n
+- **git reflog**
+- **git show HEAD@{n}**  # Muestra información sobre el reflog número n
 - **git log &#45;g master**  # Muestra el log formateado como la salida de reflog
-- **git show master@{yesterday} **  # Muestra los commits de ayer.
+- **git show master@{yesterday}**  # Muestra los commits de ayer.
 
 ## UTILIDADES
 
 - **git show &lt;short&#45;SHA&#45;1>**   # Es posible ver un commit pasando la versión abreviada del SHA&#45;1
 - **git rev&#45;parse &lt;branch>**   # A qué SHA&#45;1 apunta una rama
-- **git show HEAD^ **  #  Muestra commit padre
+- **git show HEAD^**  #  Muestra commit padre
 - **git show HEAD^2**  # Muestra segundo padre
 - **git show HEAD~2**  #  El primer padre del primer padre
 - **git filter&#45;branch &#45;&#45;tree&#45;filter &#8216;rm &#45;f &lt;file>&#8217; HEAD**  # elimina el archivo de todos los commits
@@ -273,9 +275,9 @@ En segundo plano, git crea un log de a donde han estado referenciando HEAD y el 
 - **git blame &#45;C &#45;L 141,153 &lt;file>**   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.
 
 - Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.
-- **git bisect start***
+- **git bisect start**
 - **git bisect bad**  #  marcas el commit actual como roto
-- **git bisect good [commit bueno] **  #  último commit conocido que funcionaba
+- **git bisect good [commit bueno]**  #  último commit conocido que funcionaba
 - Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.
 - **git bisect reset**
 
@@ -291,10 +293,10 @@ En segundo plano, git crea un log de a donde han estado referenciando HEAD y el 
 ## CONFIGURATION
 
 - **git config &#45;&#45;global &lt;opcion> &lt;valor>**   # global para usuario, system todos y sin nada, especifico para el repo.
-- **git config {key} **  #  muestra el valor de key
+- **git config {key}**  #  muestra el valor de key
 - **git config &#45;&#45;global core.editor &lt;editor>**   # cambia el editor por defecto
 - **git config &#45;&#45;global commit.template $HOME/.gitmessage.txt**  # plantilla para commits
-- **git config &#45;&#45;global core.pager &#8216;more|less&#8217;**   # paginador por defecto, puedes usar cualquiera
+- **git config &#45;&#45;global core.pager &#8216;more\|less&#8217;**   # paginador por defecto, puedes usar cualquiera
 - **git config &#45;&#45;global user.signingkey &lt;gpg&#45;key&#45;id>**   #  clave gpg para firmar tags
 - **git config &#45;&#45;global core.excludesfile &lt;file>**   # como gitignore
 - **git config &#45;&#45;global help.autocorrect 1**  #  autocorrige cuando se escribe un comando incorrecto. Solo en git >= 1.6.1
@@ -318,13 +320,16 @@ En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de wo
 #tras esto hay que definir el filtro word para que git convierta archivos word a texto:  
 **git config diff.word.textconv strings**
 
-Es posible hacer lo mismo para imágenes jpeg, es necesario instalar**exiftool**para extraer los metadatos y luego hacer:  
-**echo &#8216;*.jpeg diff=exif&#8217; >> .gitattributes**  
-**git config diff.exif.textconv exiftool**
+Es posible hacer lo mismo para imágenes jpeg, es necesario instalar **exiftool** para extraer los metadatos y luego hacer: 
 
-**Procesar archivos antes de hacer commit y antes de hacer checkout**: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman**smudge**y**clean**. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea checkeado (smudge) y commiteado (clean). Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)
+```bash
+$ echo ‘*.jpeg diff=exif’ » .gitattributes
+$ git config diff.exif.textconv exiftool
+```
 
-***.c filter=indent**Luego:
+**Procesar archivos antes de hacer commit y antes de hacer checkout**: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman **smudge** y **clean**. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea checkeado (smudge) y commiteado (clean). Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)
+
+__*.c filter=indent__ Luego:
 
 **git config &#45;&#45;global filter.indent.clean indent**
 
@@ -333,15 +338,14 @@ Es posible hacer lo mismo para imágenes jpeg, es necesario instalar**exiftool**
 Otro ejemplo interesante es la expansión de la palabra clave**$Date$**. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:
 
 ```ruby
-
 #! /usr/bin/env ruby
 data = STDIN.read
 last_date = `git log &#45;&#45;pretty=format:"%ad" &#45;1`
 puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
-
 ```
 
-Puedes nombrar este script como**expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:  
+Puedes nombrar este script como **expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:
+
 **git config filter.dater.smudge expand_date**  
 **git config filter.dater.clean &#8216;perl &#45;pe &#8220;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&#8221;&#8216;**
 
@@ -372,15 +376,15 @@ Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta just
 
 ## GITIGNORE:
 
-# a comment &#45; this is ignored  
-***.a**  #  no .a files*  
-**!lib.a**  #  but do track lib.a, even though you&#8217;re ignoring .a files above*  
-**/TODO**  #  only ignore the root TODO file, not subdir/TODO*  
-**build/**  #  ignore all files in the build/ directory*  
-**doc/*.txt**  #  ignore doc/notes.txt, but not doc/server/arch.txt
-
+```bash
+*.a # no .a files
+*!lib.a # but do track lib.a, even though you’re ignoring .a files above
+/TODO # only ignore the root TODO file, not subdir/TODO*
+build/ # ignore all files in the build/ directory*
+doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+```
 
 
  [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
-{% include toc.html %}
+
