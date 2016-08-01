@@ -8,13 +8,14 @@ image:
 modified:
 introduction:
 twitter_text:
-main-class:
-color:
+main-class: "misc"
+color: #61B38D
 ---
 
-
 <figure>
-  <a href=""><img src="/assets/img/" title="{{ page.title }}" alt="{{ page.title }}" /></a>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/" alt="{{ title }}" title="{{ title }}" width="px" height="px">
+   </amp-img>
+   <figcaption></figcaption>
 </figure>
 
 <!--ad-->
@@ -24,7 +25,6 @@ color:
 </div>
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
-{: .notice-info }
 
 [1]: /manuales-gratuitos/
 [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
