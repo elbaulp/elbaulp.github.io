@@ -27,12 +27,12 @@ Aún se usa en pocos programas (e17, amsn2, xmms2, etc.) debido a encontrarse en
 
 Las EFL constan de los siguientes módulos/librerías principales:
 
-– __Evas__: Es la librería encargada de crear areas y ventanas. Esta librería usará aceleración gráfica 3D siempre que sea posible, pero igualmente correrá rápidamente en máquinas con gráficas de bajo nivel o antiguas.
-– __Edje__: Esta librería separa la interfaz de la aplicación. Permite de forma sencilla aplicar skins a las aplicaciones, permitiendo cambiar la [GUI](http://es.wikipedia.org/wiki/GUI "GUI") del programa sin tener que cambiar la aplicación en sí.
-– __Ecore__: Es una librería abstracta de eventos. Es muy modular así que las aplicaciones solo tienen que llamar a las partes mínimas que sean necesarias. A parte de eventos gráficos también recolecta eventos de redes/internet.
-– __Embryo__: Esta librería implementa un lenguage de programación propio para realizar scripts que puedan ser usados en otras partes de la EFL. El lenguage tiene una sintasis muy parecida a C.
+- __Evas__: Es la librería encargada de crear areas y ventanas. Esta librería usará aceleración gráfica 3D siempre que sea posible, pero igualmente correrá rápidamente en máquinas con gráficas de bajo nivel o antiguas.
+- __Edje__: Esta librería separa la interfaz de la aplicación. Permite de forma sencilla aplicar skins a las aplicaciones, permitiendo cambiar la [GUI](http://es.wikipedia.org/wiki/GUI "GUI") del programa sin tener que cambiar la aplicación en sí.
+- __Ecore__: Es una librería abstracta de eventos. Es muy modular así que las aplicaciones solo tienen que llamar a las partes mínimas que sean necesarias. A parte de eventos gráficos también recolecta eventos de redes/internet.
+- __Embryo__: Esta librería implementa un lenguage de programación propio para realizar scripts que puedan ser usados en otras partes de la EFL. El lenguage tiene una sintasis muy parecida a C.
 - __EET__: Es la librería encargada de cargar y guardar datos en los programas tanto desde el disco duro como desde internet. Está designado para ser rápido, y posee su propio tipo de archivo (de extensión EET) .
-– __Eina__: Es la librería básica de los tipos/clases usados por la ESL como los rectangulos, [hashes](http://es.wikipedia.org/wiki/Tabla_hash), etc. Es pequeña y se puede usar aislada.
+- __Eina__: Es la librería básica de los tipos/clases usados por la ESL como los rectangulos, [hashes](http://es.wikipedia.org/wiki/Tabla_hash), etc. Es pequeña y se puede usar aislada.
 
 EFL usa otras librerías secundarias o de ayuda como imlib2 (para imágenes), EDB (base de datos simple), exml (escritor/parser de lenguage xml), epeg (para imágenes JPEG), Epsilon (para crear thumbnails), Engrave, Esmart, Emotion (para videos), Elementary y EWL(Widgets Varios).
 
