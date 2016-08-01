@@ -18,6 +18,24 @@ Si estás buscando libros de texto, quizá te interesen estos dos artículos:
 > __NOTA__: Si quieres apoyar el trabajo que realizamos en _El Baúl del Programador_, descargar alguna de estas guías es una buena forma, por cada una que descargues es posible (Aunque no seguro) que nos den un porcentaje de comisión (Entorno $1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en <a onclick="ga('send', 'event', 'revresponseReferallink');" href="http://www.revresponse.com/join.php?refbrand=bashyc-blogspot" target="_blank" title="RevResponse">RevResponse</a> y empezar a ofrecer guías de interés a tus lectores.
 
 <div class="row flex-grid">
+    <article class="box-item tooltip swing animate" data-title="Data Science in the Cloud with Microsoft Azure Machine Learning and Python">
+        <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_oreb25/"><img src="/assets/img/Data-Science-in-the-Cloud-with-Microsoft-Azure-Machine-Learning-and-Python-full.jpg" alt="Data Science in the Cloud with Microsoft Azure Machine Learning and Python" width="200" height="262" /></a>
+    </article>
+    <article class="box-item tooltip swing animate" data-title="Machine Learning for Designers">
+        <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_oreb27/"><img src="/assets/img/Machine-Learning-for-Designers-full.jpg" alt="Machine Learning for Designers" width="200" height="262" /></a>
+    </article>
+    <article class="box-item tooltip swing animate" data-title="Modern Java EE Design Patterns">
+        <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_oreb33/"><img src="/assets/img/Modern-Java-EE-Design-Patterns-full.jpg" alt="Modern Java EE Design Patterns" width="200" height="262" /></a>
+    </article>
+    <article class="box-item tooltip swing animate" data-title="Object-Oriented vs. Functional Programming">
+        <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_oreb34/"><img src="/assets/img/Object-Oriented-vs.-Functional-Programming-full.jpg" alt="Object-Oriented vs. Functional Programming" width="200" height="262" /></a>
+    </article>
+    <article class="box-item tooltip swing animate" data-title="Python Web Frameworks">
+        <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_oreb36/"><img src="/assets/img/Python-Web-Frameworks-full.jpg" alt="Python Web Frameworks" width="200" height="262" /></a>
+    </article>
+    <article class="box-item tooltip swing animate" data-title="Getting analytics right">
+        <a href="/getting-analytics-right/"><img src="/assets/img/Getting-Analytics-Right-full.jpg" alt="Getting analytics right" width="200" height="262" /></a>
+    </article>
   <article class="box-item tooltip swing animate" data-title="6 Steps to Securing Your Domains">
     <a href="https://elbauldelprogramador.com/6-steps-to-securing-your-domains/"><img src="/assets/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="200" height="262" class=" size-full wp-image-2097" /></a>
   </article>
