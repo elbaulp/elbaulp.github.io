@@ -1,6 +1,5 @@
 ---
 title: 'Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)'
-
 layout: post.amp
 permalink: /como-configurar-un-servidor-dns2/
 categories:
@@ -33,16 +32,20 @@ tags:
   - servidores dns
   - soa correo
 image: 2013/04/dns.jpg
+modified: 2016-08-01T18:00
 main-class: "servidores"
 color: "#0097A7"
 ---
+
 <figure>
-<a href="/assets/img/2013/04/dns.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" /></a>
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" />
 </figure>
 
 * [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]
 * Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)
 * [Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)][2]
+
+{% include toc.html %}
 
 Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo **named.conf.local**, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:
 
@@ -131,7 +134,7 @@ MX 10 mail.elbauldelprogramador.com.
 MX 20 mail.otrodominio.com.
 ```
 
-Si se envia un email al dominio, el servidor de correo que envía el email intenta conectarse a *mail.elbauldelprogramador.com* ya que tiene prioridad 10, si no puede establecer conexión, lo intentará con * mail.otrodominio.com*.
+Si se envia un email al dominio, el servidor de correo que envía el email intenta conectarse a *mail.elbauldelprogramador.com* ya que tiene prioridad 10, si no puede establecer conexión, lo intentará con *mail.otrodominio.com*.
 
 El último tipo de registro que vamos a ver es el de tipo **CNAME** (*Canonical Name*). Se suele referir a ellos como registros alias del tipo **A**. Por ejemplo:
 
@@ -151,5 +154,3 @@ En el siguiente artículo se verá el archivo de zona inversa y la configuració
 
  [1]: /como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
  [2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
-
-{% include toc.html %}

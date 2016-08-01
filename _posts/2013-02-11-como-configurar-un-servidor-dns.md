@@ -37,25 +37,28 @@ tags:
   - configurar zona reversa en dns linux
 image: 2013/04/dns.jpg
 description: "En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge."
+modified: 2016-08-01T18:00
 main-class: "servidores"
 color: "#0097A7"
 ---
 
 <figure>
-<a href="/assets/img/2013/04/dns.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" /></a>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" />
 </figure>
 
 * Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)
 * [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][1]
 * [Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)][2]
 
->En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge.
+{% include toc.html %}
+
+> En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge.
 
 >Ya que los artículos están basados en distintas fuentes de información que he ido recopilando, no sé de cuantas partes estará formada esta serie, así que la lista de arriba irá cambiando hasta que estén completos todos los artículos.
 
 Debo reconocer que el tema de los DNS me ha dado muchos problemas, es algo que para mí ha sido dificil de entender. A base de leer y releer muchos artículos por internet, aprendí a configurar un servidor DNS manualmente. Hoy voy a explicar cómo.
 
-En Linux, **BIND **es el encargado de gestionar los DNS, como su página de ayuda indica (*bind &#8211; bind a name to a socket*), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de **BIND **es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:
+En Linux, **BIND** es el encargado de gestionar los DNS, como su página de ayuda indica (*bind &#8211; bind a name to a socket*), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de **BIND** es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:
 
 ```bash
 $ nslookup -type=txt -class=chaos version.bind servidor
@@ -93,16 +96,14 @@ Los servidores root son los principales de la base de datos distribuida. Poseen 
 
 ### ¿Cómo responde el servidor DNS a las peticiones?
 
-En este punto es donde **BIND** entra en acción. El primer componente que mencionamos, **named**; está presente en todos los servidores de nombres y es el encargado de responder a las peticiones de los resolvers. Lee sus datos del archivo de configuración* named.conf*. Éste fichero obtiene su información de unos ficheros a los que se les suele llamar *zone files* ó *ficheros de zona*. Existen multidud de ellos, pero un archivo de zona en particular mantiene una base de datos de registros que proporciona named con la mayoría de sus respuestas.
+En este punto es donde **BIND** entra en acción. El primer componente que mencionamos, **named**; está presente en todos los servidores de nombres y es el encargado de responder a las peticiones de los resolvers. Lee sus datos del archivo de configuración *named.conf*. Éste fichero obtiene su información de unos ficheros a los que se les suele llamar *zone files* ó *ficheros de zona*. Existen multidud de ellos, pero un archivo de zona en particular mantiene una base de datos de registros que proporciona named con la mayoría de sus respuestas.
 
 En la figura 2, *named* ha recibido una petición. Busca en su fichero de configuración *named.conf*, que busca en el archivo de zona primaria y pasa la información solicitada al resolver desde el exterior.
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Figura 2 - Respondiendo a una petición" src="/assets/img/2013/02/config.png" width="411px" height="185px" />
+<figcaption>Figura 2 &#8211; Respondiendo a una petición</figcaption>
 </figure>
-<p>
-    Figura 2 &#8211; Respondiendo a una petición
-  </p>
 
 ### Usando Named.conf
 
@@ -181,4 +182,4 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 [2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
 [3]: https://elbauldelprogramador.com/bases-de-datos/
 
-{% include toc.html %}
+
