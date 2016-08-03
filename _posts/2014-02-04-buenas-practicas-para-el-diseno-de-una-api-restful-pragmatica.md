@@ -114,7 +114,7 @@ Usa siempre SSL. Sin excepciones. Hoy, tus APIs web pueden ser accedidas desde c
 
 Otra ventaja de usar siempre SSL es que garantiza que las comunicaciones encriptadas simplifiquen los esfuerzos de autenticación – puedes salir simplemente con los tokens de acceso en vez de tener que firmar cada petición a la API.
 
-Hay que tener cuidado con los accesos no-SSL a las URLs de la API. <span style="text-decoration: underline;">_**NO**_</span> las redirecciones a sus homólogas SSL. Es recomendable que lances un error. La última cosa que quieres para tus clientes pobremente configurados es enviar peticiones a un endpoint sin encriptar, sólo para ser redireccionados silenciosamente al verdadero endpoint encriptado.
+Hay que tener cuidado con los accesos no-SSL a las URLs de la API. **NO** las redirecciones a sus homólogas SSL. Es recomendable que lances un error. La última cosa que quieres para tus clientes pobremente configurados es enviar peticiones a un endpoint sin encriptar, sólo para ser redireccionados silenciosamente al verdadero endpoint encriptado.
 
 
 
