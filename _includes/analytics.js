@@ -81,6 +81,15 @@
                     "eventAction": "insidepost"
                 }
             },
+            "revresponse2" : {
+                "on": "click",
+                "selector": "#revresponse",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "revresponse-ad",
+                    "eventAction": "revresponseReferallink"
+                }
+            },
             "pop1" : {
                 "on": "click",
                 "selector": "#pop1",
