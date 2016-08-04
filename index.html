@@ -5,6 +5,7 @@ layout: default.amp
   {% include popular.posts.html %}
   <div id="grid" class="row flex-grid">
     {% for post in site.posts limit:21 %}
+    {% if post.lang != 'en' %}
         <article class="box-item post-{{post.main-class}} shown">
                 <span class="ribbon">
                     <a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}"><span>{{post.main-class}}</span></a>
@@ -26,6 +27,7 @@ layout: default.amp
                     </div>
                 </div>
         </article>
+    {% endif %}
     {% endfor %}
     </div>
 </main>
