@@ -414,14 +414,10 @@ int main(_, v) double *v; int _;{
 ```
 
 Explicaré por encima su funcionamiento. En la función `main` se evalua el primer argumento, que contiene el número de parámetros pasados a la función, contanto también con el nombre del programa, como no pasamos ningún argumento el valor por defecto será 1, y como este valor no se encuentra en el <code>switch</code>, entra en el <code>default</code>, Los números tan largos que ves son la contraseña representada en formato <strong>double</strong>, en concreto esta cadena <strong>@M?eg \PoiRlLldo!�</strong>. Tras asignar la contraseña a un array de doubles, llamo recursivamente a la función <code>main</code>, pasando como argumento el número 65381 y el array con la contraseña. De modo que esta vez el <code>switch</code> entra en la segunda sentencia (<code>case 45681:</code>), en la que se copia el array con la contraseña en double a una cadena de caracteres.
-</p>
-<p>
-  Por muy complicado que parezca, el código ensamblador solo tiene un punto clave para descubrir la contraseña:
-</p>
-<p>
-  En cualquier optimización, ya sea <a href="/peso-hamming-y-optimizacion/">0, 1 o 2</a>, para averiguar la contraseña basta con poner un punto de ruptura en la función <code>decode</code>:
-</p>
 
+Por muy complicado que parezca, el código ensamblador solo tiene un punto clave para descubrir la contraseña:
+
+En cualquier optimización, ya sea <a href="/peso-hamming-y-optimizacion/">0, 1 o 2</a>, para averiguar la contraseña basta con poner un punto de ruptura en la función <code>decode</code>:
 
 ```asm
 08048870 <decode>:
