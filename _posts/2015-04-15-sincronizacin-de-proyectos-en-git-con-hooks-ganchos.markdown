@@ -12,8 +12,10 @@ color: "#f05033"
 ---
 
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
 </figure>
+
+{% include toc.html %}
 
 ## Repositorio espejo (Mirror repo)
 
@@ -67,7 +69,7 @@ git push repo2 -f --mirror
 ### Conclusión
 
 **Nota:** Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el _commit_ del _repo1_, sigue siendo necesario ejecutar `git push` en _repo1_
-{: .notice}
+
 
 ## Mantener sincronizada una única rama
 
@@ -99,6 +101,3 @@ git push repo2 master:master
 #### Referencias
 
 [Automatically mirror a git repository](http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository)
-
-{% include toc.html %}
-</rama></url-repo2>
