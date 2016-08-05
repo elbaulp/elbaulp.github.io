@@ -15,7 +15,7 @@ tags:
 main-class: "dev"
 color: "#E64A19"
 ---
-<p style="text-align: center;">
+<p >
 <a href="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif" alt="" width="395px" height="380px" /></a>
 </p>
 

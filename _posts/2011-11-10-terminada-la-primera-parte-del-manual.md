@@ -23,7 +23,7 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
 
 
 <!--ad-->
-<ul style="list-style-type: none;">
+<ul >
 <li>
 <a href="/programacion-android-recursos">Programación Android: Recursos compilados y no compilados</a>
 </li>

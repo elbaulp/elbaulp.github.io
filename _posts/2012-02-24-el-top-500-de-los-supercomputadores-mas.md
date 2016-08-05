@@ -11,7 +11,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div style="text-align: center;">
+<div >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg"  />
 </div>
 

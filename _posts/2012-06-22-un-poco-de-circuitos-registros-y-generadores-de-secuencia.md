@@ -23,26 +23,26 @@ El primero de ellos es un regístro que almacena 4 bits mediante biestables. El 
 
 Dependiendo del valor de las entradas Y1 e Y0 que aparecen en la izquierda, se realizan estas operaciones:
 
-<p style="padding-left: 30px;">
+<p >
   00: Rotación de los valores hacia la derecha.
 </p>
-<p style="padding-left: 30px;">
+<p >
   01: Carga los valores que aparecen arriba síncronamente y en paralelo.
 </p>
-<p style="padding-left: 30px;">
+<p >
   10: Rotación de los valores hacia la izquierda.
 </p>
-<p style="padding-left: 30px;">
+<p >
   11: No hace nada, mantiene los valores tal y como están.
 </p>
 
 Antes de nada decir que es el primer vídeo que edito y no ha salido demasiado bien, pido disculpas.
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 El otro es un generador que secuencia cíclicamente la salida 3, 6, 7.
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 
 

@@ -12,8 +12,8 @@ tags:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="/assets/img/2013/07/iconoAndroid.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="sh" class="icono" /></a>
+<div class="separator" >
+<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="sh" class="icono" /></a>
 </div>
 
 Si monitorizáis el estado de vuestros sistemas con [Linux][1] probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.
@@ -101,8 +101,8 @@ sudo aptitude install htop
 
 Al ejecutarlo veremos algo parecido a lo siguiente:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="linux htop"  height="320" width="400" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="linux htop"  height="320" width="400" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
 </div>
 
 Vía <a target="_blank" href="http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/">MuyLinux</a>

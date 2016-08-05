@@ -20,13 +20,13 @@ En la [anterior entrada][1] expliqué como hacer un ataque mitm para capturar el
 En casiDiablo ví 3 interesantes videotutoriales que quiero compartir con vosotros:
 
 ***
-<h3 style="text-align: justify;">
+<h3 >
   Vídeo tutoriales
 </h3>
-<p style="text-align: justify;">
+<p >
   Los siguientes tres video tutoriales axplican en detalle cómo funciona el ARP Spoofing; y fueron creados por <a href="http://icaix.com">Miguel Angel Calvo</a> (<strong>todos los derechos reservados</strong>):
 </p>
-<ul style="text-align: justify;">
+<ul >
 <li>
 <strong><a class="smoothbox tooltip" title="Arp Spoofing :: Conceptos básicos" href="http://casidiablo.net/videotutoriales/ARP.htm?keepThis=true&TB_iframe=true&height=635&width=800">Ver el video 1</a></strong> &#8211; Aquí se explican los conceptos básicos del ARP Spoofing (<a class="tooltip" title="Arp Spoofing :: Conceptos básicos (1MB)" href="http://casidiablo.net/descargar/ARP+Spooging+Video+Tutorial">descargar</a>)
   </li>

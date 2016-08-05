@@ -51,8 +51,8 @@ Resumiendo: &#8220;El login del sitio web presenta un código QR que contiene la
 
 A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de detalles de cómo funciona el sistema **SQRL**, y en las referencias todos los detalles técnicos. Vuelvo a comentar que toda colaboración para traducir dicha página es bienvenida.
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
+<span class="embed-youtube" ></span>
 
 #### Referencias
 

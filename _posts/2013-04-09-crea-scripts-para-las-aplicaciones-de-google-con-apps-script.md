@@ -198,7 +198,7 @@ function fetchEmails_() {
 function sendReport_(variables) {
   variables.people.sort(sortArrayOfPeopleFrom_);
   var report =
-    "<h2 style="">Gmail Stats - " +
+    "<h2 >Gmail Stats - " +
       Utilities.formatDate(
         new Date(variables.previous),
         variables.userTimeZone,
@@ -231,9 +231,9 @@ function sendReport_(variables) {
         100 +
         "% of them.
 </p>" +
-      "<table style="">
+      "<table >
 <tr>
-<td style="">" +
+<td >" +
         "
 
   <h3>
@@ -255,7 +255,7 @@ function sendReport_(variables) {
       variables.people.sort(sortArrayOfPeopleTo_);
       report +=
         "
-  </ul></td><td style="">
+  </ul></td><td >
 <h3>
     Top 5 recipients:
   </h3>

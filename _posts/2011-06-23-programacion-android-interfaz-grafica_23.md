@@ -19,7 +19,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 
 Los layout nos permiten posicionar cada objeto gráfico en el lugar que queramos de la pantalla, es decir, nos permite diseñar el aspecto gráfico que va a tener nuestra pantalla. Los layouts son de tipo ***ViewGroup***, una subclase de ***View***
 
@@ -43,8 +43,8 @@ Este tipo de Layout es el más básico, coloca a sus objetos hijos en la parte s
 
 Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se amontonan unos encima de otros.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s1600/frameLayout.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="FrameLayout Android" title="FrameLayout Android"  height="400" width="301" src="https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s400/frameLayout.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s1600/frameLayout.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="FrameLayout Android" title="FrameLayout Android"  height="400" width="301" src="https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s400/frameLayout.png" /></a>
 </div>
 
 ### LinearLayout
@@ -62,8 +62,8 @@ Este tipo de layout coloca sus hijos unos detras de otros, también comenzando p
 
 En este caso, he pueso un fondo de color a cada texto (con la propiedad ***android:background***) para diferenciarlo bien, y he usado la horientación horizontal, de haber usado la orientación vertical, los textos aparecerían uno debajo del otro:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s1600/LinearLayout.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="LinearLayout Android" title="LinearLayout Android"  height="400" width="300" src="https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s400/LinearLayout.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s1600/LinearLayout.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="LinearLayout Android" title="LinearLayout Android"  height="400" width="300" src="https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s400/LinearLayout.png" /></a>
 </div>
 
 ### RelativeLayout
@@ -83,8 +83,8 @@ Para conseguir esto, ***RelativeLayout*** proporciona propiedades como ***androi
 
 Como vemos, hemos centrado el texto1 en la pantalla con ***android:layout_centerInParent=&#8221;true&#8221;*** y hemos puesto debajo del texto1 al texto2 con ***android:layout_below=&#8221;@id/text1&#8243;***
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s1600/RelativeLayout.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="relativeLayout Android" alt="relativeLayout Android"  height="400" width="298" src="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s400/RelativeLayout.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s1600/RelativeLayout.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="relativeLayout Android" alt="relativeLayout Android"  height="400" width="298" src="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s400/RelativeLayout.png" /></a>
 </div>
 
 Para saber más acerca de todos los tipos de layouts que hay podéis visitar <http:>

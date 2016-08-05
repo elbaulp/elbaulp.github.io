@@ -26,20 +26,20 @@ color: "#009688"
 
 
 
-<p style="margin-left: 1em">
+<p >
 <strong>Datos.-</strong> En una BD existen dos tipos de datos: <strong><em>el diccionario de datos (DD)</em></strong> que son los datos de uso interno del software que gestiona la base de datos, como son el tamaño de los campos, el tipo, los usuarios&#8230; Y por otra parte est&aacute;n <strong><em>los datos que el cliente necesita almacenar.</em></strong> La informaci&oacute;n de los datos debe estar integrada, es decir, como si se tratara de un &uacute;nico fichero. Adem&aacute;s, los datos deben ser compartidos, es decir, muchos usuarios pueden acceder a la misma informaci&oacute;n, eso s&iacute;, con acceso controlado.
 </p>
 <!--ad-->
-<p style="margin-left: 1em">
+<p >
 <strong>Hardware.-</strong> Toda la informaci&oacute;n a la que hace referencia en el punto anterior debe tener una capacidad adaptada a los requerimientos de la base de datos.
 </p>
-<p style="margin-left: 1em">
+<p >
 <strong>Software.-</strong> El software de una base de datos se conoce como <strong><em>Sistema de Gesti&oacute;n de Base de Datos (SGBD).</em></strong> Este permite una total transparencia al usuario, que interact&uacute;a con los datos y el software pero no sabe realmente como est&aacute;n almacenados, facilit&aacute;ndole as&iacute; su uso.
 </p>
-<p style="margin-left: 2em">
+<p >
   El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> debe permitir:
 </p>
-<ul style="margin-left: 1em">
+<ul >
 <li>
     Crear y reestructurar la informaci&oacute;n.
   </li>
@@ -59,7 +59,7 @@ color: "#009688"
     Transparencia respecto al usuario, es decir, el usuario puede interactuar con los datos y el software, pero realmente &eacute;ste no sabe como est&aacute;n almacenados
   </li>
 </ul>
-<p style="margin-left: 1em">
+<p >
 <strong>Usuarios.-</strong> Entre los usuarios de una base de datos podemos distinguir:
 </p>
 
@@ -73,10 +73,10 @@ color: "#009688"
 
 
 
-<p style="margin-left: 1em">
+<p >
   Uno de los objetivos de un sistema de bases de datos es proporcionar a los usuarios una visi&oacute;n abstracta de la informaci&oacute;n, ocultando ciertos detalles acerca de c&oacute;mo se almacenan los datos, pero permitiendo una recuperaci&oacute;n eficaz de la informaci&oacute;n.
 </p>
-<p style="margin-left: 1em">
+<p >
   Una de las <strong>arquitecturas m&aacute;s estandarizada</strong> es la especificada por la normativa <acronym title="Standard Planning and Requirements Committee of the American National Standards Institute – Comit&eacute; de Planificaci&oacute;n y Requerimientos de est&aacute;ndares del Instituto Nacional de Est&aacute;ndares de Estados Unidos, divisi&oacute;n X3">ANSI/X3/SPARC</acronym>. Seg&uacute;n esta norma la arquitectura de una base de datos debe tener tres niveles de abstracci&oacute;n: <strong>externo, conceptual e interno.</strong>
 </p>
 
@@ -84,17 +84,17 @@ color: "#009688"
   * **Conceptual:** Es una visi&oacute;n total de los datos de la BD, de c&oacute;mo est&aacute; organizada toda la base de datos, tal y como la crea el analista conceptualmente (representaci&oacute;n de las tablas&#8230;). Es la visi&oacute;n del administrador de la BD, que es el &uacute;nico usuario que trabaja a este nivel; el resto de usuarios trabajan a nivel externo utilizando subconjuntos de la estructura conceptual.
   * **Externo:** es el nivel m&aacute;s alto de abstracci&oacute;n, es decir el m&aacute;s cercano al usuario, y proporciona una visi&oacute;n parcial de los datos. Es la visi&oacute;n que tiene un usuario o aplicaci&oacute;n de la base de datos. Cada usuario tiene una vista externa diferente de la base de datos. Para cada tipo de usuario hay que especificar un esquema externo, **subesquema** o vista externa, que describe un subconjunto de la BD.
 
-<p style="margin-left: 1em">
+<p >
   El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> debe poder garantizar la transferencia de los datos desde el nivel interno al nivel externo, a este proceso se llama transformaci&oacute;n de datos o mapeo (data mapping). Para ello existen dos niveles de correspondencia:
 </p>
 
   * **Correspondencia conceptual/interna:** Permite el paso de la vista conceptual a la vista interna, y viceversa. Especifica c&oacute;mo se representan los registros y campos conceptuales en el nivel interno. Si se modifica la estructura interna de la base de datos, la correspondencia conceptual/interna deber&aacute; modificarse, para que no var&iacute;e el esquema conceptual. De este modo se conserva la independencia de los datos.
   * **Correspondencia externa/conceptual:** Permite el paso de una vista externa espec&iacute;fica a la vista conceptual, y viceversa.
 
-<p style="margin-left: 1em">
+<p >
   Los subesquemas, el esquema conceptual, el esquema interno y las correspondencias conceptual/interna y externa/conceptual, las describe el <strong>administrador de la base de datos</strong> y quedan almacenados dentro del <strong>diccionario</strong> de la BD para futuras consultas del <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr>. Cuando un usuario desea acceder a la base de datos, el <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> examina el diccionario de datos para comprobar si la solicitud puede ser realizada y el modo de realizar las transformaciones pertinentes de los datos.
 </p>
-<p style="margin-left: 1em">
+<p >
   Todo ello permitir&aacute; una mayor independencia de los datos:
 </p>
 
@@ -102,13 +102,13 @@ color: "#009688"
   * **Independencia l&oacute;gica:** es la capacidad de modificar el esquema l&oacute;gico sin tener que modificar los programas. El SGBD puede controlar las dependencias entre las modificaciones de objetos bajo su control.
   * **Independencia de los dispositivos:** se consigue cuando la ejecuci&oacute;n de los programas es independiente del sistema de almacenamiento.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
+<div class="separator" >
+<a target="_blank" href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s1600/figura1.1.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="sistema gestor de base de datos - sgbd" title="sistema gestor de base de datos - sgbd" height="300" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg" width="320" /></a>
 </div>
-<p style="margin-left: 1em">
+<p >
   En el siguiente ejemplo de una base de datos se puede observar que se han obtenido dos subesquemas (esquemas externos) a partir del &uacute;nico esquema conceptual formado por las entidades: VENDEDORES, VENTAS y ARTICULOS. La estructura de cada subesquema obedece a las necesidades concretas del tipo de usuario que lo va a utilizar. Por ejemplo:
 </p>
-<ol type="a" style="margin-left: 1em">
+<ol type="a" >
 <li>
     Uno de los subesquemas ser&aacute; utilizado por un programa que totalizar&aacute; ventas por departamento, por lo tanto la visi&oacute;n que le interesa tener de la base de datos es una relaci&oacute;n de ventas ordenadas por departamentos.
   </li>
@@ -116,13 +116,13 @@ color: "#009688"
     El otro subesquema lo utilizar&aacute; un programa que listar&aacute; una relaci&oacute;n de empleados por departamento, por lo que s&oacute;lo necesita conocer los nombres de todos los empleados y el departamento al que pertenecen.
   </li>
 </ol>
-<div style="background-color: ">
-<span style="background-color: ">SUBESQUEMAS</span>
+<div >
+<span >SUBESQUEMAS</span>
 </div>
-<p style="margin-left: 1em">
+<p >
   Esquema externo o subesquema para el programa &#8220;Ventas por departamento&#8221;
 </p>
-<table style="margin-left: 1em"  cellspacing="0">
+<table   cellspacing="0">
 <caption>VENTAS_POR_DEPARTAMENTO</caption> <tr>
 <td>
       DEPARTAMENTO
@@ -135,10 +135,10 @@ color: "#009688"
     </td>
 </tr>
 </table>
-<p style="margin-left: 1em">
+<p >
   Esquema externo o subesquema para el programa &#8220;Relaci&oacute;n de empleados por departamento&#8221;
 </p>
-<table style="margin-left: 1em"  cellspacing="0">
+<table   cellspacing="0">
 <caption>VENDEDORES</caption> <tr>
 <td>
       DEPARTAMENTO
@@ -148,22 +148,22 @@ color: "#009688"
     </td>
 </tr>
 </table>
-<div style="background-color: ">
-<span style="background-color: ">ESQUEMA CONCEPTUAL</span>
+<div >
+<span >ESQUEMA CONCEPTUAL</span>
 </div>
-<p style="margin-left: 1em">
+<p >
   Esquema conceptual de toda la base de datos, formado por los siguientes registros conceptuales:
 </p>
-<div class="separator" style="clear: both; text-align: center;">
-<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
+<div class="separator" >
+<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s1600/tabla1.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="66" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg" width="320" /></a>
 </div>
-<div style="background-color: ">
-<span style="background-color: ">ESQUEMA INTERNO</span>
+<div >
+<span >ESQUEMA INTERNO</span>
 </div>
-<p style="margin-left: 1em">
+<p >
   Esquema interno de toda la base de datos:
 </p>
-<table style="margin-left: 1em"  cellspacing="0">
+<table   cellspacing="0">
 <caption>VENDEDORES</caption> <tr>
 <td>
       COD_VEND string(3)
@@ -179,7 +179,7 @@ color: "#009688"
     </td>
 </tr>
 </table>
-<table style="margin-left: 1em"  cellspacing="0">
+<table   cellspacing="0">
 <caption>VENTAS</caption> <tr>
 <td>
       COD_VEND string(3)
@@ -195,7 +195,7 @@ color: "#009688"
     </td>
 </tr>
 </table>
-<table style="margin-left: 1em"  cellspacing="0">
+<table   cellspacing="0">
 <caption>ARTICULOS</caption> <tr>
 <td>
       COD_ART string(4)
@@ -211,14 +211,14 @@ color: "#009688"
     </td>
 </tr>
 </table>
-<p style="margin-left: 1em">
+<p >
   Adem&aacute;s se incluir&iacute;a el tipo de organizaci&oacute;n, la secuencia f&iacute;sica de los registros, modos de acceso, etc.
 </p>
-<p style="margin-left: 1em">
+<p >
   A continuaci&oacute;n podemos observar algunas ocurrencias de los registros externos y conceptuales.
 </p>
-<div style="background-color: ">
-<span style="background-color: ">VISTAS EXTERNAS</span>
+<div >
+<span >VISTAS EXTERNAS</span>
 </div>
 <table  cellspacing="0">
 <caption>VENTAS_POR_DEPARTAMENTO </caption> <tr>
@@ -311,8 +311,8 @@ color: "#009688"
     </td>
 </tr>
 </table>
-<div style="background-color: ">
-<span style="background-color: ">VISTA CONCEPTUAL</span>
+<div >
+<span >VISTA CONCEPTUAL</span>
 </div>
 <table  cellspacing="0">
 <caption>VENDEDORES</caption> <tr>
@@ -459,13 +459,13 @@ color: "#009688"
 
 
 
-<p style="margin-left: 1em">
+<p >
   Para describir el funcionamiento de un SGBD supondremos el caso de un programa de aplicaci&oacute;n, que lee un registro de una base de datos, para ello realiza una solicitud al <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr>, esencialmente la secuencia, mostrada en el esquema de la figura 1.2, es la siguiente:
 </p>
-<div class="separator" style="clear: both; text-align: center;">
-<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Funcionamiento de un SGBD"  height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
+<div class="separator" >
+<a target="_blank" href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s1600/figura1.2.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Funcionamiento de un SGBD"  height="255" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg" width="320" /></a>
 </div>
-<ol type="1" style="margin-left: 1em">
+<ol type="1" >
 <li>
     El programa de aplicaci&oacute;n A pide al <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> que lea un registro. Se proporciona la<br /> clave de acceso. El <abbr title="Sistema Gestor de Base de Datos">SGBD</abbr> eval&uacute;a la capacidad del usuario para realizar la operaci&oacute;n solicitada.
   </li>
@@ -507,7 +507,7 @@ color: "#009688"
 
 
 
-<p style="margin-left: 1em">
+<p >
   Para comunicarnos con la base de datos necesitamos un lenguaje, este lenguaje nos<br /> permitir&aacute; realizar varios procedimientos:
 </p>
 
@@ -521,7 +521,7 @@ color: "#009688"
 
 
 
-<p style="margin-left: 1em">
+<p >
   Seg&uacute;n la estructura l&oacute;gica, a nivel conceptual o a nivel externo, los SGBD se clasifican en:
 </p>
 

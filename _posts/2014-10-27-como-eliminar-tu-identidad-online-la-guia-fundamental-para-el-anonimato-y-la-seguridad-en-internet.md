@@ -123,7 +123,7 @@ En la configuración de los diferentes navegadores (Chrome, Firefox, Opera, etc)
 
 Puedes también usar [Tor bundle][3] y tener un navegador standalon que pueda ser borrado de forma segura en cualquier momento. Esto además encriptará tu tráfico y enmascarará tu dirección IP (tu ID único en internet). Esto hace que tu tráfico no esté disponible para ser buscado, encontrado y husmeado, **incluso por tu ISP** . Tu IP además se vuelve segura de la gente que no quieres que la vea (o cualquiera sea la razón por la que quieres esconder tu IP).
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 ### Asegura tu tráfico del análisis y realiza conexiones anónimas a los sitios
 

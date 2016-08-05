@@ -12,8 +12,8 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="/assets/img/2013/07/iconoAndroid.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" /></a>
+<div class="separator" >
+<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" /></a>
 </div>
 
 En la entrada anterior hablamos de cómo [obtener regístros][1] de los proveedores de contenidos (CV) usando [URIs][2]. Ahora vamos a ver como insertar registros.

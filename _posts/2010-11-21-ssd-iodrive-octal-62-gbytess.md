@@ -11,7 +11,7 @@ color: "#F57C00"
 
 **Fusion-io** mostró **ioDrive **en SuperComputing 2009, pero en esta ocasión acaban de integrar 8 módulos en una única tarjeta** PCIe x16 de 2ª generación **con una anchura de doble ranura.** ioDrive Octal **utiliza el software ioSphere Software Platform convirtiéndola en una solución software /&nbsp;hardware y servicios para servidores, siendo capaz de almacenar** hasta 5,7 Tbytes** por tarjeta.
 
-<p style="text-align: center;">
+<p >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOjwkIrLpjI/AAAAAAAAAE4/wSfF8q7Yzy8/s1600/iodrive_octal.JPG" alt="iodrive_octal" />
 </p>
 

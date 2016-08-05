@@ -46,7 +46,7 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 >
 > <a href="http://osgiliath.org/2013/03/05/getting-started-osgiliath-eclipse/" target="_blank">Instrucciones de instalación</a> | <a href="https://sourceforge.net/projects/osgiliath/" target="_blank">Código fuente</a>
 >
-> <div style="margin-bottom:5px">
+> <div >
 >   <strong> <a href="http://www.slideshare.net/fergunet/hackathon1" title="OSGiLiath + Processing" target="_blank">OSGiLiath + Processing</a> </strong> from <strong><a href="http://www.slideshare.net/fergunet" target="_blank">Pablo García</a></strong>
 > </div>
 >

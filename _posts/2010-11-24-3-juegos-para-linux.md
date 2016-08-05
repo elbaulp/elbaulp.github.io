@@ -18,9 +18,9 @@ Está escrito en C, y puede ser compilado en cualquier distribución GNU/Linux.
 
 Disponible en http://www.playdeb.net/software/Caph para Ubuntu 9.10.
 
-<div style="text-align: center;">
+<div >
 </div>
-<div style="text-align: center;">
+<div >
 </div>
 
 
@@ -30,7 +30,7 @@ Disponible en http://www.playdeb.net/software/Caph para Ubuntu 9.10.
 Toribash es un juego basado en las artes marciales,creado por Hampus Söderström, un desarrollador de software sueco. Toribash fue finalista en 2006 como &#8220;Mejor idea de juego&#8221; en los premios Suecos de juego.  
 El juego es gratuito y está todavía en desarrollo con actualizaciones.
 
-<div style="text-align: center;">
+<div >
 </div>
 
 
@@ -40,7 +40,7 @@ El juego es gratuito y está todavía en desarrollo con actualizaciones.
 Osmos es un videojuego de puzzle desarrollado por el Hemisferio desarrollador de juegos Canadiense para diferentes sistemas como Microsoft Windows, Mac OS X, Linux, IPAD, iPhone y iPod Touch. Está disponible en línea por $10 USD o £6.99 GBP.  
 El juego en si consiste en que eres una pequeña particula y debes empezar a comer a otras particulas mas pequeñas y hacerte mas grandes y completar misiones como “sobrevivir tanto tiempo” o “comer a la mas grande”. Si chocas o te rozas con una particula mas grande seras obsorvido y si llegas a un tamaño muy pequeño pierdes.
 
-<div style="text-align: center;">
+<div >
 </div>
 
 * * *

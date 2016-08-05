@@ -18,7 +18,7 @@ La estructura SDL_Surface tiene un elemento llamado &#8220;color key&#8221;, que
 
 Bien, supongamos que queremos fusionar esta imagen llamada &#8220;foo&#8221;:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="foo"  height="64" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TT6FKpmp0fI/AAAAAAAAAQs/oFYGZsQzBn8/foo.jpg" width="32" />
 </div>
 <!--ad-->
@@ -26,13 +26,13 @@ Bien, supongamos que queremos fusionar esta imagen llamada &#8220;foo&#8221;:
 
 a este fondo:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Imagen Fondo"  height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FKroPMYI/AAAAAAAAAQo/oJFPpVHNsIg/background.jpg" />
 </div>
 
 Pero no queremos que aparezca el fondo azul claro de la primera imagen:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Resultado"  height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FLLUBg4I/AAAAAAAAAQ0/gS1QeS8p7PA/nokey.jpg" />
 </div>
 
@@ -116,7 +116,7 @@ Para finalizar, la función devuelve la imagen optimizada con el color clave.
 
 El resultado de hacer todo esto da como resultado la imagen siguiente:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Imagen final"  height="240" width="320" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TT6FK_nKIkI/AAAAAAAAAQw/rDMnHtu9ewo/key.jpg" />
 </div>
 

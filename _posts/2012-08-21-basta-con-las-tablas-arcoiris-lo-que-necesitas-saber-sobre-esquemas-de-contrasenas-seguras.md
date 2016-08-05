@@ -18,7 +18,7 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<p style="text-align: center;">
+<p >
 <a href="/assets/img/2012/08/rainbow1.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="wp-image-901 aligncenter" title="rainbow" alt="" src="/assets/img/2012/08/rainbow1.png" width="536px" height="303px" /></a>
 </p>
 

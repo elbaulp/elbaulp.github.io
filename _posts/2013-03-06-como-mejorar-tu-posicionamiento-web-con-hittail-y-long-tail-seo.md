@@ -16,7 +16,7 @@ Hace apenas dos meses que descubrí navegando por internet esta herramienta, ***
 Si como yo nunca has oido hablar de este término, no te preocupes, a continuación intentaré explicarlo lo más claro posible (Traducido literalmente sería SEO de cola larga, aunque creo que una definición más acertada sería seguimiento SEO prolongado):  
 
 <!--ad-->
-<h2 style="font-size:1.5em">
+<h2 >
   ¿Qué es el Long Tail SEO y por qué debería tenerlo en cuenta?
 </h2>
 
@@ -31,7 +31,7 @@ Desde el punto de vista del propietario de una web sin mucha popularidad en inte
 Aunque parezca que no se va a alcanzar a tantos visitantes como si te centraras en las palabras más competitivas, no es cierto. Si trazas una línea vertical en la línea verde hasta cortar el eje x, verás que el área que abarcan las Long Tail es incluso mayor que el de los términos cortos. Quizá en esta imagen quede más claro:
 
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/longtailtraffic.jpg" alt="longtailtraffic" width="520px" height="280px" />
-<h2 style="font-size:1.5em">
+<h2 >
   ¿Cual es el objetivo de HitTail
 </h2>
 
@@ -41,7 +41,7 @@ En el momento de escribir este artículo, han analizado más de 1,356,280,933 pa
 
 Los efectos de usar esta herramienta se hacen notar inmediatamente, como ejemplo, puedo deciros que antes de usar hittail el tráfico al blog procedente de motores de búsqueda estaba entorno a 500, tras dos días usando HitTail, esa cifra a aumentado a 750, y cada día va a más. **Esto es un incremento de más del 30%**. Aunque todo depende del tráfico actual que ya disponga la web. Un blog con pocas visitas tendrá un incremento mucho mayor que uno con una cantidad importante de tráfico de base.
 
-<h2 style="font-size:1.5em">
+<h2 >
   ¿Cómo instalar HitTail en Wordpres?
 </h2>
 

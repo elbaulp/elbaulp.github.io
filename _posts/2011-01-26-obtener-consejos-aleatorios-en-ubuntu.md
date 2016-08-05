@@ -11,7 +11,7 @@ color: "#2196F3"
 ---
 En <a target="blank" href="http://www.omgubuntu.co.uk/2011/01/get-random-ubuntu-tips-on-your-desktop-app/">OMG Ubuntu</a> he visto una aplicación que nos mostrará consejos en el escritorio de nuestro ubuntu, Abajo traduzco la entrada:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TUBAt7uX2hI/AAAAAAAAARs/KNJnko25AYs/137860-1.png" alt="UbuntuTips" />
 </div>
 

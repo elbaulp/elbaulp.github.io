@@ -212,13 +212,13 @@ Comenzamos el bucle principal, el cual seguirá funcionando hasta que el usuario
 En SDL cuando ocurre un evento, se coloca en la cola de eventos. Ésta cola de eventos contiene los datos de los eventos para cada evento que sucede.
 Por ejemplo si fuera a presionar un botón del ratón, mover el cursor y a continuación, presionar una tecla del teclado, la cola de eventos se vería así:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="177" width="255" src="https://lh3.ggpht.com/_IlK2pNFFgGM/TT6ImYP7bjI/AAAAAAAAARU/QiAey3O_FW0/queue.jpg" />
 </div>
 
 Lo que <var>SDL_PollEvent()</var> hace es sacar un evento de la cola y guardar sus datos en nuestra estructura de tipo Evento:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="258" width="294" src="https://lh5.ggpht.com/_IlK2pNFFgGM/TT6ImqKAdJI/AAAAAAAAARY/JqvFGavqRHY/poll.jpg" />
 </div>
 

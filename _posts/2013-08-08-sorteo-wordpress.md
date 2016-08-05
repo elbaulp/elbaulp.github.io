@@ -20,7 +20,7 @@ La plataforma WordPress es usada en más de un 30% de todos los sitios web en In
 
 ## WordPress desde cero: Nivel básico e intermedio
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>  
+<span class="embed-youtube" ></span>  
 *[Sitio del curso][1]*
 
 **En este curso aprenderás todo lo que necesitas para crear tu primer sitio web con la plataforma más popular en el mundo.**
@@ -42,7 +42,7 @@ Algunos de los temas que se verán en el Nivel Intermedio son:
 
 ## Desarrollo de plugins de WordPress para principiantes
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>  
+<span class="embed-youtube" ></span>  
 **[Sitio del curso][2]**
 
 **Si ya sabes utilizar WordPress y solo quieres agregar funcionalidades a tu blog, ¡también puedes hacerlo! con este curso aprenderás**:
@@ -57,7 +57,7 @@ Algunos de los temas que se verán en el Nivel Intermedio son:
 
 Para participar en el curso, simplemente realiza las acciones que aparecen abajo, a más puntos obtenidos, mayor posibilidad de ganar. Suerte a todos!
 
-<div style="clear:both;">
+<div >
 <a id="rc-0889541" class="rafl" href="http://www.rafflecopter.com/rafl/display/0889541/" rel="nofollow">a Rafflecopter giveaway</a><br />
 </div>
 

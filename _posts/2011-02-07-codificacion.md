@@ -29,8 +29,8 @@ Lo que vamos a ver en esta entrada es:
 
 Dado un número x, su representación en una dada base b consiste en escribirlo como
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s1600/ecu.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="86" width="214" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png" /></a>
 </div>
 
 donde el signo <var>s</var> es igual a 0 o 1 y los coeficientes a<sub>j</sub> son enteros positivos menores que *b*. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).
@@ -43,7 +43,7 @@ Los números se representan en memoria como una cadena de *bits* que pueden toma
 En representación binaria un número entero *n* se escribe como  
 
 
-<p style="text-align:center;">
+<p >
   n = a<sub></sub> 2<sup></sup> + a<sub>1</sub> 2<sup>1</sup> + a<sub>2</sub> 2<sup>2</sup> + a<sub>3</sub> 2<sup>3</sup> + &#8230;
 </p>
 
@@ -51,10 +51,10 @@ donde cada coeficiente *a<sub>j</sub>* es igual a 1 ó 0. Usualmente los número
 
 Los números que pueden almacenarse en la representación de 4 bytes están en el rango:
 
-<p style="text-align:center;">
+<p >
   n<sub>min</sub> = (00000000000000000000000000000000)<sub>2</sub> = (0)<sub>10</sub>
 </p>
-<p style="text-align:center;">
+<p >
   n<sub>max</sub> = (11111111111111111111111111111111)<sub>2</sub> = 2<sup>32</sup> &#8211; 1 = (4294967295)<sub>10</sub>
 </p>
 
@@ -67,7 +67,7 @@ para números enteros sin signo. Si se utiliza el primer bit de la izquierda com
 Las computadoras, con un número finito de bits, no pueden almacenar todos los números reales en forma exacta. Esto es similar a lo que ocurre con los números irracionales (como &pi;, &#8730;2, etc), o periódicos (1/3, 1/11,&#8230;) en el sistema decimal. La forma convencional de almacenar números reales en la memoria de una computadora es mediante el método llamado punto flotante o *floating point*. Uno de los sistemas más comunes es la representación de números reales en *simple precisión* utilizada en la convención IEEE. En dicho sistema cada número de precisión simple ocupa 4 bytes (32 bits) que se destinan a: el signo (1 bit), un exponente (8 bits) y la parte fraccionaria de la mantisa (23 bits)[<sup>1</sup>][7]. De esta manera un número está determinado por estas tres cantidades  
 
 
-<p style="text-align:center;">
+<p >
   x = (-1)<sup>s</sup> x 2<sup>exp-E</sup> x 1.mantisa
 </p>
 
@@ -80,7 +80,7 @@ En esta representación, los 8 bits utilizados permiten que el exponente se encu
 
 Para aclarar los conceptos, veamos algunos ejemplos de números normalizados en precisión simple:
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  width="600px" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png" />
 </div>
 
@@ -93,14 +93,14 @@ Entre paréntesis está representada la parte entera de la mantisa (que es igual
 Como segundo ejemplo veamos la conversión inversa, del número (3,375)<sub>10</sub> a sistema binario. El bit de signo es 0. El número puede expresarse como la fracción 27/8 y es mayor que 2 por lo que debemos sacar un exponente positivo; en este caso, factorizamos por 2<sup>1</sup> y nos queda 27/16 que puede escribirse como  
 
 
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png" />
 </div>
 
 por lo que, después de eliminar la parte entera y agregando el signo y el exponente, el número es:  
 
 
-<p style="text-align:center;">
+<p >
   (3,375)<sub>10</sub> = (0 10000000 (1), 101100000000000000000000)<sub>2</sub>
 </p>
 <a name="bin"></a>
@@ -113,13 +113,13 @@ Para pasar de decimal a binario hacemos lo siguiente: Dividir el número entre 2
 Por ejemplo, para pasar el número decimal 15 a binario: 15/2 -> resto 1, 7/2 -> resto 1, 3/2 -> resto 1, como el cociente de esta últmia división es menor o igual a 1, paramos. El número en binario sería desde el cociente de la división 3/2 (Que es 1), y todos los demas restos. Es decir, el número en binario se recoge de derecha a izquierda en los resultados de las divisiones. (15 en binario es 1111).
 Para hacer el proceso contrario, pasar de binario a decimal, se han de numerar las posiciones (de derecha a izquierda y empezando por 0), se calcula de la forma base elevado a la posición por el bit (0 ó 1). Ejemplo:
 
-<p style="text-align:center;">
+<p >
   1<sup>3</sup><sup>2</sup>1<sup>1</sup><sup></sup>
 </p>
 
 Y el resultado:
 
-<p style="text-align:center;">
+<p >
   1010 -> (2<sup></sup>*0) + (2<sup>1</sup>*1) + (2<sup>2</sup>*0) + (2<sup>3</sup>*1) = 2+8 = 10(decimal)
 </p>
 
@@ -138,13 +138,13 @@ Ejemplo: 22/8 = cociente 2, resto 6. Por lo tanto 22 en octal es 26.
 
 Para pasar de octal a decimal se sigue la misma regla, pero se multiplica por 8:
 
-<p style="text-align:center;">
+<p >
   2<sup>1</sup>6<sup></sup>
 </p>
 
 A decimal:
 
-<p style="text-align:center;">
+<p >
   (8<sup></sup>*6) + (8<sup>1</sup>*2) = 6 + 16 = 22 (decimal)
 </p>
 <a name="hex"></a>
@@ -163,13 +163,13 @@ Por lo que 162 en decimal sería el A2 en hexadecimal.
 
 El paso contrario:
 
-<p style="text-align:center;">
+<p >
   A<sup>1</sup>2<sup></sup> (Sustituimos la A por su valor A = 10)
 </p>
 
 A decimal:
 
-<p style="text-align:center;">
+<p >
   (16<sup>1</sup>*10) + (16<sup></sup>*2) = 160 + 2 = 162 (decimal)
 </p>
 

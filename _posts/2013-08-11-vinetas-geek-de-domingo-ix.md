@@ -28,7 +28,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       La madre de todos los archivos sospechosos
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-the-server-admin-unexpectedly-reboot-the-server/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-the-server-admin-unexpectedly-reboot-the-server-150x150.gif" class="attachment-thumbnail" alt="Cuando el administrador de sistemas reinicia el servidor de forma inesperada" aria-describedby="gallery-9-1832" width="150px" height="150px" /></a>
@@ -37,7 +37,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       Cuando el administrador de sistemas reinicia el servidor de forma inesperada
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-wake-up-on-monday-morning/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-I-wake-up-on-monday-morning-150x150.gif" class="attachment-thumbnail" alt="Cuando me despierto los lunes por la mañana" aria-describedby="gallery-9-1826" width="150px" height="150px" /></a>
@@ -46,7 +46,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       Cuando me despierto los lunes por la mañana
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-try-to-follow-an-example-on-stackoverflow/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-I-try-to-follow-an-example-on-stackoverflow-150x150.gif" class="attachment-thumbnail" alt="Cuando intento seguir un ejemplo en stackoverflow" aria-describedby="gallery-9-1827" width="150px" height="150px" /></a>
@@ -55,7 +55,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       Cuando intento seguir un ejemplo en stackoverflow
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-realize-after-2-hours-that-my-bug-is-caused-by-a-missing-semicolon/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-I-realize-after-2-hours-that-my-bug-is-caused-by-a-missing-semicolon-150x150.gif" class="attachment-thumbnail" alt="Cuando me doy cuenta, tras 2 horas, que el error lo estaba causando un punto y coma" aria-describedby="gallery-9-1828" width="150px" height="150px" /></a>
@@ -64,7 +64,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       Cuando me doy cuenta, tras 2 horas, que el error lo estaba causando un punto y coma
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/when-i-get-a-more-powerful-computer/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-I-get-a-more-powerful-computer-150x150.gif" class="attachment-thumbnail" alt="Cuando consigo un ordenador más potente" aria-describedby="gallery-9-1829" width="150px" height="150px" /></a>
@@ -73,7 +73,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       Cuando consigo un ordenador más potente
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="https://elbauldelprogramador.com/vinetas-geek-de-domingo-ix/trying-to-push-a-merge-conflict-fix-and-receiving-a-merge-conflict/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/Trying-to-push-a-merge-conflict-fix-and-receiving-a-merge-conflict-150x150.gif" class="attachment-thumbnail" alt="Intentar subir un conflicto de merge corregido y obtener otro" aria-describedby="gallery-9-1830" width="150px" height="150px" /></a>
@@ -82,7 +82,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
       Intentar subir un conflicto de <a href="https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/" title="Git: Mini Tutorial y chuleta de comandos">merge</a> corregido y obtener otro
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 </div>
 
 #### Referencias

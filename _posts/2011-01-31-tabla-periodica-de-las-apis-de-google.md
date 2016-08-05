@@ -13,8 +13,8 @@ En www.browsermedia.co.uk he visto esta curiosa tabla de todas las APIs de googl
 
 En un esfuerzo por ayudar a los millones de los desarrolladores de todo el mundo que utilizan las APIs de Google para crear millones de aplicaciones y servicios, Google ha creado un lugar al estilo de la tabla periódica mostrando sus APIs y productos para desarrolladores.
 
-<p style="text-align: center;">
-<a href="http://code.google.com/more/table/" target="_blank"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="google api"  src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUbWhZDLaBI/AAAAAAAAATY/UGfPN34rMEo/s1600/google-api.jpg" style="border: 0px none; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: 677px; height: 342px;" /></a>
+<p >
+<a href="http://code.google.com/more/table/" target="_blank"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="google api"  src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUbWhZDLaBI/AAAAAAAAATY/UGfPN34rMEo/s1600/google-api.jpg"  /></a>
 </p>
 
 * * *

@@ -22,7 +22,7 @@ color: "#E64A19"
 <div>
   La <b>anchura del bus</b> de un procesador es equivalente al número de cifras que puede tener la pantalla de una calculadora simple, sólo que en lugar de tratarse de dígitos decimales (del 0 al 9) son dígitos binarios (0 ó 1). El planteamiento es sencillo: supongamos que tenemos una calculadora de 12 dígitos y necesitamos <b>sumar cuatro parejas de números de tres cifras</b> &#8211;suponiendo que estamos seguros de que nunca nos vamos a pasar de 999&#8211;. Por ejemplo:
 </div>
-<p style="text-align: center;">
+<p >
   293 + 266<br /> 496 + 357<br /> 459 + 330<br /> 458 + 471
 </p>
 <div>

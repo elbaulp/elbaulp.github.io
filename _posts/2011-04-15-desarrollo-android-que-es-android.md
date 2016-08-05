@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 <div id="jd-header" class="guide-header">
 <h1>
     ¿Qué es Android?
@@ -162,7 +162,7 @@ color: "#689F38"
     </p>
 </div>
 <p>
-<a href="#top" style="float:right">&uarr; Go to top</a>
+<a href="#top" >&uarr; Go to top</a>
 </p>
 </div>
 

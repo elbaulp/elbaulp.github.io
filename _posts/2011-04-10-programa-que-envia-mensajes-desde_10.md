@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 
 Continúo con las mejoras a la aplicación que estoy desarrollando para Android, como dije en la [anterior mejora][1], necesitaba que varios clientes se puedan conectar al servidor, para ello he usado threads y la interface runnable de java.  
 En esta versión tambien he controlado las excepciones producidas al no poder conectar al servidor o al solicitar conectarse a una dirección desconocida, estas excepciones las he controlado con Alerts de android, de las cuales hay dos tipos, Toast o Dialog.  
@@ -28,14 +28,14 @@ Dejo capturas y el nuevo código:
 
 Toast:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s1600/Screenshot-1.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s320/Screenshot-1.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s1600/Screenshot-1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://1.bp.blogspot.com/-bXEZr0Mqmbg/TaH0MF2N2CI/AAAAAAAAAZ4/-Pjv7xv7RMQ/s320/Screenshot-1.png" /></a>
 </div>
 
 Servidor:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s1600/Screenshot.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s320/Screenshot.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://3.bp.blogspot.com/-WvINTsXHJ7Y/TaH0MWvyqVI/AAAAAAAAAaA/QZVNJGX9qaw/s320/Screenshot.png" /></a>
 </div>
 
 Código cliente:

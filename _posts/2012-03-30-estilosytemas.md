@@ -16,7 +16,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 
 Un estilo es una colección de propiedades que especifican que aspecto ha de tener un objeto View o una ventana. Con los estilos podemos definir propiedades como la altura, relleno, color del texto, fondo etc. Los estilos en Android comparten la filosofía de las hojas de estílo en cascada (CSS), permitiendo separar el diseño del contenido.
 
@@ -35,7 +35,7 @@ Sin estilos:
 Con estilos:
 
 ```xml
-</textview><textview style="@style/CodeFont" android:text="@string/hello">
+</textview><textview  android:text="@string/hello">
 
 ```
 
@@ -102,18 +102,18 @@ Para aplicarlos sobre actividades, usamos:
 
 En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png" /></a>
 </div>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png" /></a>
 </div>
 
 A continuación, dejo una captura del ejemplo que he hecho para esta entrada, que se puede descargar desde:
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;EstilosyTemas&rdquo; <small>EstilosyTemas.zip &ndash; Downloaded 1629 times &ndash; </small> </a>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png" /></a>
 </div>
 
 Para saber más acerca de los estilos y temas visite la página oficial: [Applying Styles and Themes][1]

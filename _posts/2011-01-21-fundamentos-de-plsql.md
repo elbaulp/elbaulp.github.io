@@ -50,7 +50,7 @@ Como introducción vamos a ver algunos elementos y conceptos básicos del lengua
   * Operadores Lógicos
   * Operadores Relaciónales
 
-  * DENTIFICADOR: Se emplean para dar nombre a los objetos PL/SQL, tales como&nbsp;variables, cursores, tipos y subprogramas. <div style="text-align: center;">
+  * DENTIFICADOR: Se emplean para dar nombre a los objetos PL/SQL, tales como&nbsp;variables, cursores, tipos y subprogramas. <div >
       Los identificadores constan de una letra, seguida por una secuencia opcional&nbsp;de caracteres, que pueden incluir letras, números, signos de dólar ($), caracteres de&nbsp;subrayado y símbolos de almohadilla (#). Los demás caracteres no pueden&nbsp;emplearse. La longitud máxima de un identificador es de 30 caracteres y todos los&nbsp;caracteres son significativos.
     </div>
 

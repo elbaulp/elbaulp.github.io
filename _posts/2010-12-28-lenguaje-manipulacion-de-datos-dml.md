@@ -143,14 +143,14 @@ WHEN NOT MATCHED THEN
 
 La situación se muestra en la ilustración siguiente:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s1600/merge.png"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="197" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s320/merge.png" width="320" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s1600/merge.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="197" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s320/merge.png" width="320" /></a>
 </div>
 
 y el resultado después de ejecutar la sentencia MERGE sería:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s1600/tablamerge.png"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="116" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s320/tablamerge.png" width="320" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s1600/tablamerge.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="116" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s320/tablamerge.png" width="320" /></a>
 </div>
 
 

@@ -14,7 +14,7 @@ La compañía NVIDIA presentó oficialmente el año pasado durante CES 2010 su S
 
 NVIDIA ya confirmó hace unos meses que esperaba que el mercado móvil evolucionara hacia modelos con procesadores más potentes y uno de los rumores más importantes en relación a ello pone en sobreaviso que NVIDIA podría presentar su siguiente generación de chips ARM Tegra 3 en la edición 2011 de Mobile World Congress que tiene lugar en Barcelona en las próximas semanas.
 
-<p style="text-align: center;">
+<p >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="307" width="430" src="http://muycomputer.com/files/264-30859-FOTO/tegra3.JPG" alt="tegra3" />
 </p>
 

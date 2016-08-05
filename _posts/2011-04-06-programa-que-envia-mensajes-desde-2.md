@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />  
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />  
 Como ya comenté en una entrada hace varios días, necesito hacer una [aplicación para android que se comunique con el PC por red][1], y he seguido mejorandola ya que aún está muy limitada, le he hecho algunos cambios, estos cambios son:  
 <!--ad-->
 
@@ -42,14 +42,14 @@ Parte servidor, esta parte está tal y como la [descargué de casiDiablo][2], pe
 
 Por ultimo algunas capturas:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s1600/cliente.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s320/cliente.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s1600/cliente.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://2.bp.blogspot.com/-fd7bF2KeVz0/TZy69gP91qI/AAAAAAAAAX8/TS2lEDPa5Hc/s320/cliente.png" /></a>
 </div>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s1600/no.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s320/no.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s1600/no.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://2.bp.blogspot.com/-fmPuUA9j_z0/TZy6-l2N5CI/AAAAAAAAAYE/XqlyacBVbbM/s320/no.png" /></a>
 </div>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s1600/otra.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s320/otra.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s1600/otra.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://1.bp.blogspot.com/-WK1A6yIyLPA/TZy6_DB-rGI/AAAAAAAAAYM/GFY0IPD7lYQ/s320/otra.png" /></a>
 </div>
 
 

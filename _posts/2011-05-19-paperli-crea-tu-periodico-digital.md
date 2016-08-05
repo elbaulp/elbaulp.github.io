@@ -22,8 +22,8 @@ Primero entramos en [paper.li][1], nos registramos y clicamos en **Create a pape
 
 
 <!--ad-->
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s1600/paper.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="259" width="400" src="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s400/paper.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s1600/paper.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="259" width="400" src="https://2.bp.blogspot.com/-qijtnO2I-UM/TdTIPXp6QJI/AAAAAAAAAgc/SRBe5Je3KRE/s400/paper.png" /></a>
 </div>
 
 Hay variar formas de agregar contenido al periódico:
@@ -40,8 +40,8 @@ La primera, **Single Twitter user**: Publicaremos todo lo que el usuario de twit
 
 Por último os dejo una captura del periódico que cree, y la dirección, [Bashyc Paper][3]
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s1600/peperbashyc.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="343" width="400" src="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s400/peperbashyc.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s1600/peperbashyc.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="343" width="400" src="https://1.bp.blogspot.com/-AmaJZNgtmN0/TdTLZ3tDNQI/AAAAAAAAAgk/QOeg7E2tbuY/s400/peperbashyc.png" /></a>
 </div>
 
 

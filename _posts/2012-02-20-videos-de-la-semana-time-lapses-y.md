@@ -8,8 +8,8 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>
 
 Como sabéis, soy bastante aficionado a Vimeo y suelo [publicar][1] de vez en cuando los vídeos que me parecen interesantes, para este inicio de semana traigo unos cuantos cortos de animación y time-lapses, he dejado muchos en el tintero, os recomiendo que os paséis por mi <a target="_blank" href="https://vimeo.com/channels/270031">canal en Vimeo</a>. Por supuesto, recomiendo ver los vídeos con el HD activado:

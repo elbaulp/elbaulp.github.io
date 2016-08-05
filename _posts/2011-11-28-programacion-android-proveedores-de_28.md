@@ -14,8 +14,8 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="/assets/img/2013/07/iconoAndroid.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" /></a>
+<div class="separator" >
+<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" /></a>
 </div>
 
 Ya que las URIs definidas por un Proveedor de contenidos (CV) son únicas para ese proveedor, es muy importante que estas URIs estén bien documentadas. Los proveedores que Android proporciona hacen esto definiendo constantes que representan las cadenas de la URI.

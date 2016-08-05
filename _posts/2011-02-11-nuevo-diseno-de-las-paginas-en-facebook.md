@@ -22,14 +22,14 @@ Dejo aqui la lista de características nuevas:
 
 Ahora la <a target="_blank" href="http://www.facebook.com/bashyc">página en facebook del blog</a> se visualiza de esta manera:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-tmdykTP1KSs/TVUuqR7i4RI/AAAAAAAAAWs/EqVFTgmlz2c/s1600/Screenshot-2.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://3.bp.blogspot.com/-tmdykTP1KSs/TVUuqR7i4RI/AAAAAAAAAWs/EqVFTgmlz2c/s320/Screenshot-2.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-tmdykTP1KSs/TVUuqR7i4RI/AAAAAAAAAWs/EqVFTgmlz2c/s1600/Screenshot-2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://3.bp.blogspot.com/-tmdykTP1KSs/TVUuqR7i4RI/AAAAAAAAAWs/EqVFTgmlz2c/s320/Screenshot-2.png" /></a>
 </div>
 
 Y las galerías fotográficas asi:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-D1Xj7ED2eMw/TVUstOscF4I/AAAAAAAAAWk/qwZPoIcdGQA/s1600/Screenshot-1.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://4.bp.blogspot.com/-D1Xj7ED2eMw/TVUstOscF4I/AAAAAAAAAWk/qwZPoIcdGQA/s320/Screenshot-1.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/-D1Xj7ED2eMw/TVUstOscF4I/AAAAAAAAAWk/qwZPoIcdGQA/s1600/Screenshot-1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="320" src="https://4.bp.blogspot.com/-D1Xj7ED2eMw/TVUstOscF4I/AAAAAAAAAWk/qwZPoIcdGQA/s320/Screenshot-1.png" /></a>
 </div>
 
 Para visitar la página del blog en facebook podeis pinchar en el icono de la derecha de vuestra pantalla.

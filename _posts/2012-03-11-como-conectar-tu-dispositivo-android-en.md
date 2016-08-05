@@ -78,7 +78,7 @@ List of devices attached
 ```
 
 <p class="alert">
-  Aún así, en mi caso sigue sin reconocer el dispositivo, tras buscar y buscar encontré que este problema se soluciona renombrando el archivo <span style="color: ">51-android.rules</span> a <span style="color: ">91-android.rules</span>
+  Aún así, en mi caso sigue sin reconocer el dispositivo, tras buscar y buscar encontré que este problema se soluciona renombrando el archivo <span >51-android.rules</span> a <span >91-android.rules</span>
 </p>
 
 Fuente: <a href="http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-to-do-developmenttestinginstallations-or-tethering/" target="_blank">dimitar.me</a>

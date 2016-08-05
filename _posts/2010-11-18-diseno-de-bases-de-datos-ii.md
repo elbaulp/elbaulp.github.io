@@ -20,7 +20,7 @@ color: "#009688"
 
 ## 1. Restricciones Inherentes del Modelo Relacional.
 
-<div style="margin-left: 1em">
+<div >
 <p>
     - No existen tuplas repetidas (obligatoriedad de clave primaria). La relación se ha definido como un conjunto de tuplas, y en matemáticas los conjuntos por definición no incluyen elementos repetidos. Hay que decir, sin embargo, que muchos de los SGBD relacionales sí admiten duplicidad de tuplas.
   </p>
@@ -43,7 +43,7 @@ color: "#009688"
 
 #### Las 12 reglas de Codd
 
-<div style="margin-left: 1em">
+<div >
 <p>
     Preocupado por los productos que decían ser sistemas gestores de bases de datos relacionales (RDBMS) sin serlo, Codd publica las 12 reglas que debe cumplir todo DBMS para ser considerado relacional. Estas reglas en la práctica las cumplen pocos sistemas relaciónales. Las reglas son:
   </p>
@@ -89,7 +89,7 @@ color: "#009688"
 
 ## 2. Restricciones Semánticas o de Usuario.
 
-<div style="margin-left: 1em;">
+<div >
 <ol type="a">
 <li>
 <strong>Restricción de Clave Primaria</strong> <em>(PRIMARY KEY)</em>, permite declarar un atributo o conjunto de atributos como la clave primaria de una relación.

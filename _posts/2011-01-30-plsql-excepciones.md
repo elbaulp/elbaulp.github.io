@@ -164,8 +164,8 @@ END;
 Las líneas de código debajo del manejador específico se ejecutarán cuando esa excepción se produzca. Algunas excepciones se lanzarán automáticamente cuando se produzcan ciertos tipos de errores en la ejecución del bloque de código. Cada excepción automática tiene asociado un código de error ORA-XXXX el cual si se produce, hará que se lance la excepción correspondiente.  
 A continuación se muestra una lista de las excepciones automáticas predefinidas por Oracle:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s1600/image.0WG9PV"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="262" width="294" alt="Tabla errores oracle" title="Tabla errores oracle" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV" /></a>
 </div>
 <!--INFOLINKS_OFF-->
 

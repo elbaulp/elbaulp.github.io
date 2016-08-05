@@ -62,7 +62,7 @@ Una notícia muy importante. Científicos de la universidad de Harvard han coseg
 
 Con el revuelo que ha causado el juicio de Apple contra Samsung, en <a href="/humor/" target="_blank">9Gag</a> encontré la siguiente imagen:
 
-<p style="text-align: center;">
+<p >
 <a href="/assets/img/2012/09/5220021_700b1.jpg" target="_blank"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Apple vs Samsung" src="/assets/img/2012/09/5220021_700b1.jpg" alt="" width="700px" height="383px" /></a>
 </p>
 

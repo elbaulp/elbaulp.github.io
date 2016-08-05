@@ -29,7 +29,7 @@ color: "#F57C00"
   RockMelt has launched into limited public beta, <a href="http://www.rockmelt.com/" target="_blank">click here</a> to try it out. For a more in depth view of RockMelt, the company has released this video demonstration for your viewing pleasure:
 </p>
 <p lang="en">
-<span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span>
+<span >&nbsp;</span><span >&nbsp;</span>
 </p>
 <p lang="en">
   Have a look and see what you think!

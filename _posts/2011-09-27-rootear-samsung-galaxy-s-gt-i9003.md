@@ -60,8 +60,8 @@ sudo mono SuperOneClick.exe
 
 Este comando ejecutará la aplicación, que será como la de la imagen:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s1600/Screenshot-SuperOneClick.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="173" width="400" src="https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s400/Screenshot-SuperOneClick.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s1600/Screenshot-SuperOneClick.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="173" width="400" src="https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s400/Screenshot-SuperOneClick.png" /></a>
 </div>
 
 2.- Ya tenemos la aplicación funcionando correctamente, vamos a preparar el terminal:
@@ -74,8 +74,8 @@ Este comando ejecutará la aplicación, que será como la de la imagen:
 
 Una vez terminado, tenemos que reiniciar el teléfono, y nos encontraremos con una aplicación como la de la imagen, que nos pedirá permiso cada vez que una aplicación necesite permisos de Root:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s640/SC20110927-211316.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="640" width="384" src="https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s640/SC20110927-211316.png" /></a>
+<div class="separator" >
+<a href="https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s640/SC20110927-211316.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="640" width="384" src="https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s640/SC20110927-211316.png" /></a>
 </div>
 
 # Solución de problemas

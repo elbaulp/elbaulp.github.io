@@ -12,8 +12,8 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<div class="separator" >
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 </div>
 
 Ya hemos visto como [plantear la base de datos][1] para un proveedor y cómo [implementar parte del proveedor de contenidos][2], en esta tercera parte vamos a implementar los métodos query, insert, update, delete y getType.

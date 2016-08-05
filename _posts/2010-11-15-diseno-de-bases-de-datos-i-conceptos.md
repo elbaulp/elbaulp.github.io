@@ -25,8 +25,8 @@ color: "#009688"
 <p lang="es">
   Cada columna almacena información sobre una propiedad determinada de la tabla (se le llama también <strong>atributo</strong>), nombre, dni, apellidos, edad,&#8230; Cuando no se conoce el valor de un atributo se le asigna el valor <strong>nulo</strong>. Los valores nulos indican contenidos de atributos que no tienen ningún valor. En claves foráneas indican que el registro actual no está relacionado con ninguno. Las bases de datos relacionales admiten utilizar ese valor en todo tipo de operaciones.
 </p>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s1600/m.rf1.png"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="57" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s320/m.rf1.png" width="320" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s1600/m.rf1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="57" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s320/m.rf1.png" width="320" /></a>
 </div>
 <h2 lang="es">
   Conceptos del Modelo Relacional.<br />
@@ -34,7 +34,7 @@ color: "#009688"
 <p lang="es">
 <strong>Relación (Tabla).</strong> Es el elemento central del modelo relacional. Son los objetos principales sobre los que debe recogerse información y generalmente denotan personas, lugares, cosas o eventos de interés. Una relación tiene un nombre, un conjunto de atributos que representan sus propiedades y está formada por un conjunto de tuplas que incluyen los valores que cada uno de los atributos toma para cada una de las tuplas de la relación. Una relación se representa mediante una tabla bidimensional (las columnas representan los atributos y las filas representan las tuplas o registros).
 </p>
-<div style="position:absolute;">
+<div >
 <table  cellspacing="0">
 <caption>TABLA PROVEEDORES</caption> <tr>
 <td bgcolor="#666666">
@@ -93,7 +93,7 @@ color: "#009688"
 </tr>
 </table>
 </div>
-<div style=" width:240px; position:relative; left:270px;">
+<div >
 <table  cellspacing="0">
 <caption>TABLA ARTICULOS</caption> <tr>
 <td bgcolor="#666666">
@@ -153,10 +153,10 @@ color: "#009688"
 <p lang="es">
 <strong>Clave candidata</strong> es un atributo K (o conjunto de atributos) de una relación R que cumple dos propiedades:
 </p>
-<p lang="es" style="margin-left: 1em">
+<p lang="es" >
 <strong>Unicidad:</strong> No existen dos tuplas en R con el mismo valor de K
 </p>
-<p lang="es" style="margin-left: 1em">
+<p lang="es" >
 <strong>Minimalidad:</strong> Si K es compuesto, no será posible eliminar ningún componente de K sin destruir la propiedad de unicidad.
 </p>
 
@@ -165,7 +165,7 @@ Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de 
 <p lang="es">
 <strong>Clave primaria.</strong> Es posible que una relación posea más de una clave candidata, en ese caso, se escoge una de ellas como <strong>clave primaria</strong> y el resto se denominan <strong>claves alternativas</strong>. En la práctica la elección de la clave primaria suele ser sencilla. Toda relación, sin excepción, tiene una clave primaria y suele representarse subrayando y/o añadiendo el carácter # al atributo (o conjunto de atributos) correspondiente.
 </p>
-<p lang="es" style="margin-left: 1em">
+<p lang="es" >
   Por ejemplo: Artículos( código#, concepto)
 </p>
 <p lang="es">
@@ -174,8 +174,8 @@ Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de 
 
 Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya que se utiliza para referenciar a una tupla de PROVEEDORES mediante la clave primaria NIF.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s1600/m.rf2.png"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="230" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s1600/m.rf2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="230" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320" /></a>
 </div>
 
 

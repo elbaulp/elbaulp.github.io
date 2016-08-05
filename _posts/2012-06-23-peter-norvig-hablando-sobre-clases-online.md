@@ -25,7 +25,7 @@ Despues de eso se creó [Udacity][1] (en la que Peter impartió un curso sobre d
 
 Este mes Peter dio una charla sobre como nació toda esta idea, está subtitulada en inglés.
 
-<div style="text-align:center">
+<div >
 </div>
 
 Enlace al vídeo: <a href="http://www.ted.com/talks/peter_norvig_the_100_000_student_classroom.html" target="_blank">Peter Norvig: The 100,000-student classroom</a>

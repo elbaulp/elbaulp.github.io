@@ -11,7 +11,7 @@ color: "#2196F3"
 ---
 Llevamos ya mucho tiempo esperando la llegada de la que probablemente sea la revisión más importante de GNOME en toda su historia, pero aún quedan unos meses para que podamos disfrutar de la versión final. En GNOME 3 llegarán cambios muy relevantes, y para conocerlos más de cerca qué mejor que acudir a quienes lo están creando.
 
-<p style="clear:both; text-align:center;">
+<p >
 <a href="http://www.muylinux.com/assets/img/2011/01/GNOME3-1.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="GNOME3-1" src="http://www.muylinux.com/assets/img/2011/01/GNOME3-1-500x282.jpg" alt="" /></a>
 </p>
 <!--ad-->
@@ -25,7 +25,7 @@ También habrá un potente sistema de atajos de teclado para acelerar el acceso 
 
 Lo cierto es que por el momento la web no da demasiada información adicional, pero sí que hablan de un gestor de ficheros mejorado (veremos qué nos depara en Nautilus), temas oscuros para ver vídeos o fotos, o un sistema de “alicatado” de ventanas para ordenarlas de forma sencilla.
 
-<p style="clear:both; text-align:center;">
+<p >
 <a href="http://www.muylinux.com/assets/img/2011/01/GNOME3-3.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="GNOME3-3" src="http://www.muylinux.com/assets/img/2011/01/GNOME3-3-500x280.jpg" alt="" /></a>
 </p>
 

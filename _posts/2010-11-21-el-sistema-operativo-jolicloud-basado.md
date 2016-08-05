@@ -11,34 +11,34 @@ color: "#F57C00"
 
 Desde **MuyComputer **ya os hemos comentado en varias ocasiones el desarrollo de <a target="_blank" href="http://www.google.es/url?sa=t&source=web&cd=1&ved=0CBYQFjAA&url=http%3A%2F%2Fmuycomputer.com%2FActualidad%2FNoticias%2FLlega-Jolicloud-1-0-para-todos%2F_wE9ERk2XxDD62VSgUAVcjevVCpREbxKbl5ZF4TTd024PJKsobX269CIqLVyGVW4s6ZrXur1v_O8&rct=j&q=jolicloud%20muycomputer&ei=pd3mTO3HF4jJhAfL5bH1DA&usg=AFQjCNETieA6N9yOm5EL6KIkXXiGNYFlRg&sig2=LIzZNwi_JA2X7k0DVnb79A&cad=rja">JoliCloud como sistema operativo</a>.&nbsp;Si eres un usuario que utiliza principalmente aplicaciones web y redes sociales, JoliCloud es tu sistema operativo. La compañía **Vye **ha ido un paso más allá y ha lanzado finalmente al mercado **Jolibook**.
 
-<p style="text-align: center;">
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" style="" alt="" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkB0Ecb0-I/AAAAAAAAAFE/_J6F9IuV9xE/s1600/jolibook.JPG" />
+<p >
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkB0Ecb0-I/AAAAAAAAAFE/_J6F9IuV9xE/s1600/jolibook.JPG" />
 </p>
-<p style="text-align: left;">
+<p >
   Se trata de un <strong>netbook </strong>que disfruta de un colorido diseño y que ofrece la versatilidad de la plataforma Atom junto con la interesante funcionalidad aportada por <a target="_blank" href="http://www.google.es/url?sa=t&source=web&cd=1&ved=0CCIQFjAA&url=http%3A%2F%2Fwww.jolicloud.com%2F&rct=j&q=jolicloud&ei=0d7mTObgDNC2hAf3_Nj4DA&usg=AFQjCNEygyM06DTffn6wLRWq8JOs5PRadQ&sig2=40von29ydcKUVCem2xm6kw&cad=rja">jolicloud</a> versión 1.1.
 </p>
-<p style="text-align: left;">
+<p >
   Entre sus <strong>características técnicas</strong> destacamos:
 </p>
-<p style="text-align: left; margin-left: 40px;">
+<p >
   - Procesador<strong> Intel Atom N550 </strong>(1,5 GHz, dual-core)
 </p>
-<p style="text-align: left; margin-left: 40px;">
+<p >
   - <strong>250 Gbytes</strong> de disco duro
 </p>
-<p style="text-align: left; margin-left: 40px;">
+<p >
   - Pantalla de <strong>10,1″</strong>
 </p>
-<p style="text-align: left; margin-left: 40px;">
+<p >
   - Memora <strong>RAM </strong>DDR3, <strong>1 Gbyte</strong>
 </p>
-<p style="text-align: left; margin-left: 40px;">
+<p >
   - Tres puertos USB 2.0
 </p>
-<p style="text-align: left; margin-left: 40px;">
+<p >
   -&nbsp;Wi-Fi, Bluetooth, ethernet, y salida VGA.
 </p>
-<p style="text-align: center;">
+<p >
 </p>
 
 * * *

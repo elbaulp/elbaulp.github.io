@@ -9,8 +9,8 @@ categories:
 main-class: "misc"
 color: "#61B38D"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>
 </div>
 
 Hace bastante tiempo que uso RevResponse. Para quien no lo sepa, es un servício que ofrece manuales de todas las áreas de conocimiento, dichas áreas podéis verlas aquí en el siguiente cuadro:

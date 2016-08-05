@@ -11,7 +11,7 @@ tags:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" style="float:left; margin-right:10px;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png" />
 </div>
 

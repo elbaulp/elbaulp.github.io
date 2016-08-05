@@ -130,14 +130,14 @@ try{
 
 ### Mediante el penaltyLog():
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="android development"  height="260" width="400" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="android development"  height="260" width="400" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
 </div>
 
 ### Mediante penaltyDialog():
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="android" height="302" width="400" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="android" height="302" width="400" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
 </div>
 
 * * *

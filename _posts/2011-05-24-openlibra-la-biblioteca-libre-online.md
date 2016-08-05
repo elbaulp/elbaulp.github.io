@@ -10,8 +10,8 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" /></a>
 </div>
 
 [EtnasSoft][1], un compañero blogger, está inmerso en un interesante proyecto que consiste en recopilar libros relacionados con la programación y software libre entre otras cosas, todos en Castellano.

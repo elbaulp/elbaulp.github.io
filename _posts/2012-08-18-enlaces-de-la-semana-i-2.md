@@ -32,10 +32,10 @@ El gran Alejandro Ramos está escribiendo una serie de artículos explicando té
 
 Seguimos hablando de seguridad, esta vez en el blog de Chema Alonso:  
 <!--ad-->
-<p style="padding-left: 30px;">
+<p >
   Quien use o haya usado Blogger sabe que la url a la que se redirecciona cuando se previsualiza una entrada antes de publicarla es un tanto abstracta, ya que no puede ser predecible. ¿Será cierto?, compruébalo en <a title="Minority Report: Pre-visualizando el futuro de Blogger" href="http://www.elladodelmal.com/2012/08/minority-report-pre-visualizando-el.html" target="_blank">Minority Report: Pre-visualizando el futuro de Blogger</a>
 </p>
-<p style="padding-left: 30px;">
+<p >
   A día de hoy somos muchos los que usamos redes sociales, sobre todo facebook, pero pocos son los que se detienen a revisar los permisos que conceden a las aplicaciones de la red social por excelencia. Chema habla en <a title="Aplicaciones de Facebook y Privacidad" href="http://www.elladodelmal.com/2012/08/aplicaciones-de-facebook-y-privacidad-2.html" target="_blank">Aplicaciones de Facebook y Privacidad</a> de los peligros que este mal hábito puede conllevar.
 </p>
 
@@ -55,7 +55,7 @@ En genbeta Dev nos cuentan cómo sería el código escrito por grandes personali
 
 Para concluir un vídeo de vimeo que muestra una de los mejores espectáculos del motor. Un recorrido urbano de 61 km donde se alcanzan velocidades de hasta 320km/h:
 
-<div class="embed-vimeo" style="text-align:center;">
+<div class="embed-vimeo" >
 </div>
 
 

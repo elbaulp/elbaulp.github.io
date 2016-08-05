@@ -17,7 +17,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 
 En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.
 
@@ -76,8 +76,8 @@ toast.show();
 
 Listo, al ejecutar la aplicación tendremos un Toast como este:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Toast notification Android " title="Toast notification Android"  height="400" width="240" src="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Toast notification Android " title="Toast notification Android"  height="400" width="240" src="https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png" /></a>
 </div>
 
 Para saber más acerca de los mensajes toast puede visitar: <http:>
@@ -118,8 +118,8 @@ mNotificationManager.notify(HELLO_ID, notification);
 
 El resultado es el siguiente:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="notification bar Android" alt="notification bar Android"  height="400" width="240" src="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="notification bar Android" alt="notification bar Android"  height="400" width="240" src="https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png" /></a>
 </div>
 
 Al igual que los Toast, se puede crear un layout personalizado, para más información visite: </http:><http:>
@@ -168,8 +168,8 @@ dialog.show();
 
 ```
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="alertDialog Android" title="AlertDialog android"  height="400" width="240" src="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="alertDialog Android" title="AlertDialog android"  height="400" width="240" src="https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png" /></a>
 </div>
 
 También vamos a ver un ProgressDialog, indefinido (Que nunca termina).
@@ -186,8 +186,8 @@ ProgressDialog.show(
 
 Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de &#8220;atrás&#8221; del terminal.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="240" src="https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png" /></a>
 </div>
 
 Se puede descargar el proyecto de esta entrada aquí:

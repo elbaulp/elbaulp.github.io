@@ -9,8 +9,8 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s1600/Screenshot.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="89" width="159" src="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s400/Screenshot.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="89" width="159" src="https://1.bp.blogspot.com/-6G3ZpXioMHc/TzkNgUqcjRI/AAAAAAAACD8/uUNSJ9drHoM/s400/Screenshot.png" /></a>
 </div>
 <a target="_blank" href="http://www.ucertify.com/">Ucertify</a> es una empresa que se decica a cursos y exámenes de certificación IT. Disponen de una herramienta llamada *PrepKit*, que es la plataforma en la que se realizan todos los cursos, exámenes y test.
 
@@ -40,8 +40,8 @@ En cuanto a los test de autoevaluación hay un total de 8, uno con 15 preguntas 
 
 Os dejo una imagen de ejemplo de una de las preguntas de un test:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-NUpGin59K7U/TzkwJHsM7WI/AAAAAAAACEM/b5OGNlYGXRo/s1600/Screenshot-2.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="313" width="400" src="https://4.bp.blogspot.com/-NUpGin59K7U/TzkwJHsM7WI/AAAAAAAACEM/b5OGNlYGXRo/s400/Screenshot-2.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/-NUpGin59K7U/TzkwJHsM7WI/AAAAAAAACEM/b5OGNlYGXRo/s1600/Screenshot-2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="313" width="400" src="https://4.bp.blogspot.com/-NUpGin59K7U/TzkwJHsM7WI/AAAAAAAACEM/b5OGNlYGXRo/s400/Screenshot-2.png" /></a>
 </div>
 
 Si en ucertify véis algún curso que os interese, hacedmelo saber.
@@ -52,20 +52,20 @@ Dejo una imagen de la tabla de contenidos completa del curso:
 
 De la primera parte del curso
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-knp0IVITSos/TzuWiytgjeI/AAAAAAAACE0/HQI4GmK-wjw/s1600/Screenshot.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="246" src="https://1.bp.blogspot.com/-knp0IVITSos/TzuWiytgjeI/AAAAAAAACE0/HQI4GmK-wjw/s400/Screenshot.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-knp0IVITSos/TzuWiytgjeI/AAAAAAAACE0/HQI4GmK-wjw/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="246" src="https://1.bp.blogspot.com/-knp0IVITSos/TzuWiytgjeI/AAAAAAAACE0/HQI4GmK-wjw/s400/Screenshot.png" /></a>
 </div>
 
 De la segunda
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-RGxpStRY1RQ/TzuZUDtYBWI/AAAAAAAACFU/eIqb3v2GTzA/s1600/Screenshot-3.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="230" src="https://2.bp.blogspot.com/-RGxpStRY1RQ/TzuZUDtYBWI/AAAAAAAACFU/eIqb3v2GTzA/s400/Screenshot-3.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/-RGxpStRY1RQ/TzuZUDtYBWI/AAAAAAAACFU/eIqb3v2GTzA/s1600/Screenshot-3.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="230" src="https://2.bp.blogspot.com/-RGxpStRY1RQ/TzuZUDtYBWI/AAAAAAAACFU/eIqb3v2GTzA/s400/Screenshot-3.png" /></a>
 </div>
 
 En la plataforma del curso, hay una sección dedicada a dudas sobre conceptos que el alumno quizá no conozca, consta de más de 60 entradas que dan una introducción básica al concepto en cuestión.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-hA42RLMDjqk/TzuX2xt0zJI/AAAAAAAACFE/eGSZrP3wbKg/s1600/Screenshot-2.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="280" src="https://1.bp.blogspot.com/-hA42RLMDjqk/TzuX2xt0zJI/AAAAAAAACFE/eGSZrP3wbKg/s400/Screenshot-2.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-hA42RLMDjqk/TzuX2xt0zJI/AAAAAAAACFE/eGSZrP3wbKg/s1600/Screenshot-2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="280" src="https://1.bp.blogspot.com/-hA42RLMDjqk/TzuX2xt0zJI/AAAAAAAACFE/eGSZrP3wbKg/s400/Screenshot-2.png" /></a>
 </div>
 
 

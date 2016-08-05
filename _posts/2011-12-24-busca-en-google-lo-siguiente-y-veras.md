@@ -14,8 +14,8 @@ Os dejo un enlace con el texto ya escrito <a target="_blank" href="https://www.g
 
 Como se puede apreciar, el resultado es una gráfica un tanto peculiar:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-FO8fLpA-3fM/TvXameIQI0I/AAAAAAAAB9k/KJSAlJz8tkc/s1600/Screenshot.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="213" width="400" src="https://1.bp.blogspot.com/-FO8fLpA-3fM/TvXameIQI0I/AAAAAAAAB9k/KJSAlJz8tkc/s400/Screenshot.png" /></a>
+<div class="separator" >
+<a href="https://1.bp.blogspot.com/-FO8fLpA-3fM/TvXameIQI0I/AAAAAAAAB9k/KJSAlJz8tkc/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="213" width="400" src="https://1.bp.blogspot.com/-FO8fLpA-3fM/TvXameIQI0I/AAAAAAAAB9k/KJSAlJz8tkc/s400/Screenshot.png" /></a>
 </div>
 
 Aprovecho esta entrada con este curioso resultado para desearos a todos los lectores unas felices fiestas y navidades. Y sobre todo que el proximo año 2012 venga cargado de buenas experiencias.

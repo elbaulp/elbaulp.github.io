@@ -10,8 +10,8 @@ categories:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="/assets/img/2013/07/iconoAndroid.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="sh" class="icono" /></a>
+<div class="separator" >
+<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="sh" class="icono" /></a>
 </div>
 
 ¿Cómo podemos saber cuantos archivos tenemos abiertos o hasta cuantos podemos permitir que están abiertos en Linux?

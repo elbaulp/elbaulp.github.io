@@ -11,8 +11,8 @@ color: "#F57C00"
 ---
 En OMGUbuntu he leido esta noticia sobre el applet para gnome que nos permite acceder a nuestras suscripcciones via RSS. Personalmente me gusta la idea, ya que de esta forma no tenemos que tener el navegador abierto para ver si se publican nuevos artículos.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="http://www.omgubuntu.co.uk/assets/img/2011/02/Selection_001_thumb2.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="290" width="338" src="http://www.omgubuntu.co.uk/assets/img/2011/02/Selection_001_thumb2.png" /></a>
+<div class="separator" >
+<a href="http://www.omgubuntu.co.uk/assets/img/2011/02/Selection_001_thumb2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="290" width="338" src="http://www.omgubuntu.co.uk/assets/img/2011/02/Selection_001_thumb2.png" /></a>
 </div>
 <!--ad-->
 

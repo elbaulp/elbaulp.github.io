@@ -28,13 +28,13 @@ En esta entrada se verá cómo crear un adapter desde cero, con algunas funciona
 
 Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 
-<p style="padding-left: 30px;">
+<p >
 <em>Un CheckBox</em>
 </p>
-<p style="padding-left: 30px;">
+<p >
 <em>Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación</em>
 </p>
-<p style="padding-left: 30px;">
+<p >
 <em>Un ImageView que mostrará un iconito de un calendario.</em>
 </p>
 <!--ad-->
@@ -42,7 +42,7 @@ Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 
 Terminada, la aplicación de prueba debe quedar algo así:
 
-<p style="text-align: center;">
+<p >
 <a href="/assets/img/2012/09/principal1.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android" width="484px" height="807px" /></a>
 </p>
 

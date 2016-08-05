@@ -43,7 +43,7 @@ Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este art
 <div>
 </div>
 <div>
-<span style="font-family: arial,helvetica,sans-serif">Luego</span> instalemos Tor y Privoxy
+<span >Luego</span> instalemos Tor y Privoxy
 </div>
 
 ```bash

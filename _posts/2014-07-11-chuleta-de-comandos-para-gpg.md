@@ -177,7 +177,7 @@ gpg --gen-revoke
 `--gen-revoke` crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: <a href="http://www.gnupg.org/gph/en/manual/r721.html" target="_blank">http://www.gnupg.org/gph/en/manual/r721.html</a>.
 
 `--edit-key` te permite hacer una colección de operaciones con las claves. Mira: <a href="http://www.gnupg.org/gph/en/manual/r899.html" target="_blank">http://www.gnupg.org/gph/en/manual/r899.html</a>
-<span style="text-decoration: underline;"><strong>Compartir Claves Secretas</strong></span>  
+<span ><strong>Compartir Claves Secretas</strong></span>  
 NOTA: los siguientes casos de uso indican porqué los comandos secret-key import/export existen, o al menos un par de ideas de qué puedes hacer con ellos. SIN EMBARGO, hay un poco de logística necesaria para compartir la clave secreta. ¿Cómo la pasamos de una computadora a otra? Creo que encriptarla y enviarla por e-mail probablemente estaría bien, pero yo no la enviaría desencriptada con e-mail, esto sería PELIGROSO.
 
   1. Caso de Uso 1: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente si quieres un par de claves para todas tus computadoras (asumiento que tienes múltiples computadoras), entonces esto te permitirá exportar ese par de claves de la computadora original e importarla en las otras computadoras.

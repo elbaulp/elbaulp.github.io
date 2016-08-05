@@ -64,7 +64,7 @@ When writing software, destruction can be just as valuable as creation. Learn ho
 
     Summary and tournament results
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 ### Algorithms (CS215)
 
@@ -102,7 +102,7 @@ Ever played the Kevin Bacon game? This class will show you how it works by givin
 
     Using your knowledge
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 ### Intro to Physics (PH100)
 
@@ -141,7 +141,7 @@ Study physics abroad in Europe &#8212; virtually! Learn the basics of physics on
 
     Modern physics and open questions
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 ### Introduction to Statistics (ST101)
 
@@ -180,7 +180,7 @@ Statistics is about extracting meaning from data. In this class, we will introdu
     Statistics vs machine learning; what to study next; where statistics is used
     Final exam
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 ### Logic & Discrete Mathematics (CS221)
 
@@ -218,7 +218,7 @@ Statistics is about extracting meaning from data. In this class, we will introdu
 
     An overview of the course material
 
-<span class="embed-youtube" style="text-align:center; display: block;"></span>
+<span class="embed-youtube" ></span>
 
 
 

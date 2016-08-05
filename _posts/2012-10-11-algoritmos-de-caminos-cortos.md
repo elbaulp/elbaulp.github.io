@@ -144,7 +144,7 @@ int main(int argc,char** argv){
 
 ```
 
-<p style="text-align: left">
+<p >
   Para probar este algoritmo necesita una entrada de datos un archivo para probarlo.
 </p>
 
@@ -152,16 +152,16 @@ El ** algoritmo de Prim ** encuentra un subconjunto de aristas que forman un ár
 
 Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para alcanzar el nodo, y h(n), el costo de ir al nodo objetivo:
 
-<p style="text-align: center">
+<p >
   F(n)= g(n) + h(n)
 </p>
-<p style="text-align: left">
+<p >
   Ya que la g(n) nos da el coste del camino desde el nodo inicio al nodo n, y la h(n) el coste estimado del camino más barato desde n al objetivo, tenemos:
 </p>
-<p style="text-align: center">
+<p >
   F(n) = coste ms barato estimado de la solución a tráves de n.
 </p>
-<p style="text-align: left">
+<p >
   Así, si tratamos de encontrar la solución mas barata, es razonable intentar primero el nodo con el valor más bajo de g(n) + h(n). Resulta que esta estrategia es más que razonable: con tal de que la función heurística h(n) satisfaga ciertas condiciones, la búsqueda A* es tanto completa como óptima.
 </p>
 

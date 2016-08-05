@@ -12,7 +12,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
 
 [Probar el 404][1]
 
-<div style="text-align:center;">
+<div >
 <p>
 <strong><a href="http://css-tricks.com/thispagedoesntexist">CssTricks</a></strong>
 </p>

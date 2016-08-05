@@ -28,7 +28,7 @@ Disfrutad de lo que queda de fin de semana!
       Simply Explained
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
 <a href="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png" class="attachment-thumbnail" alt="habitable_zone - They have a telescope pointed RIGHT AT US!" aria-describedby="gallery-6-1736" width="253px" height="306px" /></a>
@@ -37,13 +37,13 @@ Disfrutad de lo que queda de fin de semana!
       habitable_zone &#8211; They have a telescope pointed RIGHT AT US!
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/humor-desarrollo-software.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/humor-desarrollo-software-150x150.jpg" class="attachment-thumbnail" alt="humor-desarrollo-software" width="150px" height="150px" /></a>
 </dt>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/when-a-bug-mysteriously-disappears.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/when-a-bug-mysteriously-disappears-150x150.gif" class="attachment-thumbnail" alt="Cuando un bug desaparece misteriosamente" aria-describedby="gallery-6-1738" width="150px" height="150px" /></a>
@@ -52,7 +52,7 @@ Disfrutad de lo que queda de fin de semana!
       Cuando un bug desaparece misteriosamente
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/tumblr_inline_moij1tHWwa1qz4rgp.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/tumblr_inline_moij1tHWwa1qz4rgp-150x150.gif" class="attachment-thumbnail" alt="When you find a stackoverflow question about your problem and there is no response" aria-describedby="gallery-6-1739" width="150px" height="150px" /></a>
@@ -61,7 +61,7 @@ Disfrutad de lo que queda de fin de semana!
       When you find a stackoverflow question about your problem and there is no response
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/LI3vaSs.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/LI3vaSs-150x150.gif" class="attachment-thumbnail" alt="Protegiendo el servidor durante un DDos" aria-describedby="gallery-6-1741" width="150px" height="150px" /></a>
@@ -70,7 +70,7 @@ Disfrutad de lo que queda de fin de semana!
       Protegiendo el servidor durante un DDos
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/Los-últimos-10-minutos-de-trabajo.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/Los-últimos-10-minutos-de-trabajo-150x150.gif" class="attachment-thumbnail" alt="Los últimos 10 minutos de trabajo" aria-describedby="gallery-6-1742" width="150px" height="150px" /></a>
@@ -79,7 +79,7 @@ Disfrutad de lo que queda de fin de semana!
       Los últimos 10 minutos de trabajo
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/when-I-start-my-third-coding-night-in-a-row.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/when-I-start-my-third-coding-night-in-a-row-150x150.gif" class="attachment-thumbnail" alt="Cuando empiezo mi tercera noche de programar seguida" aria-describedby="gallery-6-1743" width="150px" height="150px" /></a>
@@ -88,7 +88,7 @@ Disfrutad de lo que queda de fin de semana!
       Cuando empiezo mi tercera noche de programar seguida
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/07/When-someone-vilifies-opensource.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/When-someone-vilifies-opensource-150x150.gif" class="attachment-thumbnail" alt="Cuando alguien maldice opensource" aria-describedby="gallery-6-1740" width="150px" height="150px" /></a>
@@ -97,7 +97,7 @@ Disfrutad de lo que queda de fin de semana!
       Cuando alguien maldice opensource
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 </div>
 
 #### Referencias

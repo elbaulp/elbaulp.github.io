@@ -27,7 +27,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Stop Violence
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/08/facebook_-1810787013.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/facebook_-1810787013-150x150.jpg" class="attachment-thumbnail" alt="Hello Wolrd!" aria-describedby="gallery-8-1816" width="150px" height="150px" /></a>
@@ -36,7 +36,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Hello Wolrd!
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
 <a href="/assets/img/2013/08/just-because.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/just-because-150x150.jpg" class="attachment-thumbnail" alt="Just Because" aria-describedby="gallery-8-1815" width="150px" height="150px" /></a>
@@ -45,7 +45,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Just Because
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
 <a href="/assets/img/2013/08/pale_blue_dot.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/pale_blue_dot-150x150.png" class="attachment-thumbnail" alt="Pale Blue Dot" aria-describedby="gallery-8-1812" width="150px" height="150px" /></a>
@@ -54,7 +54,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Pale Blue Dot
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
 <a href="/assets/img/2013/08/tdd.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/tdd-150x150.jpg" class="attachment-thumbnail" alt="Test" aria-describedby="gallery-8-1813" width="150px" height="150px" /></a>
@@ -63,7 +63,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Test
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/08/my-wife-when-I-want-to-code-at-home.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/my-wife-when-I-want-to-code-at-home-150x150.gif" class="attachment-thumbnail" alt="my wife when I want to code at home" aria-describedby="gallery-8-1821" width="150px" height="150px" /></a>
@@ -72,7 +72,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       my wife when I want to code at home
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/08/Dealing-with-your-6-months-old-backlog.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/Dealing-with-your-6-months-old-backlog-150x150.gif" class="attachment-thumbnail" alt="Dealing with your 6-months old backlog" aria-describedby="gallery-8-1822" width="150px" height="150px" /></a>
@@ -81,7 +81,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Dealing with your 6-months old backlog
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon portrait">
 <a href="/assets/img/2013/08/Trying-complex-code-you-see-on-websites.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/Trying-complex-code-you-see-on-websites-150x150.gif" class="attachment-thumbnail" alt="Trying complex code you see on websites" aria-describedby="gallery-8-1820" width="150px" height="150px" /></a>
@@ -90,7 +90,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       Trying complex code you see on websites
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/08/when-a-colleague-let-his-session-open.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-a-colleague-let-his-session-open-150x150.gif" class="attachment-thumbnail" alt="when a colleague let his session open" aria-describedby="gallery-8-1819" width="150px" height="150px" /></a>
@@ -99,7 +99,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       when a colleague let his session open
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/08/when-I-clean-up-my-code-for-a-client-demo.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-I-clean-up-my-code-for-a-client-demo-150x150.gif" class="attachment-thumbnail" alt="when I clean up my code for a client demo" aria-describedby="gallery-8-1818" width="150px" height="150px" /></a>
@@ -108,7 +108,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       when I clean up my code for a client demo
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">
 <a href="/assets/img/2013/08/when-I-give-a-thankless-job-to-the-new-intern.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/when-I-give-a-thankless-job-to-the-new-intern-150x144.gif" class="attachment-thumbnail" alt="when I give a thankless job to the new intern" aria-describedby="gallery-8-1817" width="150px" height="144px" /></a>
@@ -117,7 +117,7 @@ Como ya es habitual los fines de semana, os traigo otra recopilación de viñeta
       when I give a thankless job to the new intern
     </dd>
 </dl>
-<br style="clear: both" />
+<br  />
 </div>
 
 #### Referencias

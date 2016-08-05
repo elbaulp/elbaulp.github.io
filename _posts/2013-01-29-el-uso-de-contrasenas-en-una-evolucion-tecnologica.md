@@ -51,7 +51,7 @@ Para finalizar, muestro el top ten de peores contraseñas según SplashData. Los
 
 &nbsp;
 
-<ol style="text-align: left;">
+<ol >
 <li>
     password (=)
   </li>

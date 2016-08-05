@@ -28,11 +28,11 @@ Por último quiero agradecer, como no, a todos los seguidores del blog, que lo l
 
 Aquí teneis las estadísticas:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s1600/general.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="98" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s320/general.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s1600/general.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="98" width="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TRssoG7-8OI/AAAAAAAAAOo/g6juOpJipgU/s320/general.png" /></a>
 </div>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s1600/publico.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="221" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s320/publico.png" /></a>
+<div class="separator" >
+<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s1600/publico.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="221" width="320" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRssoZoT49I/AAAAAAAAAOw/5qMqm0advic/s320/publico.png" /></a>
 </div>
 
 También os dejo las 10 entradas mas vistas:

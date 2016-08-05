@@ -10,8 +10,8 @@ categories:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-t8N8LWA1odk/TdEDXESL6lI/AAAAAAAAAeo/Xiv313Plyj0/s1600/linux-world-map-large.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="223" width="400" src="https://3.bp.blogspot.com/-t8N8LWA1odk/TdEDXESL6lI/AAAAAAAAAeo/Xiv313Plyj0/s400/linux-world-map-large.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-t8N8LWA1odk/TdEDXESL6lI/AAAAAAAAAeo/Xiv313Plyj0/s1600/linux-world-map-large.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="223" width="400" src="https://3.bp.blogspot.com/-t8N8LWA1odk/TdEDXESL6lI/AAAAAAAAAeo/Xiv313Plyj0/s400/linux-world-map-large.png" /></a>
 </div>
 
 * * *Fuente:

@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 
 Como [dije][1], voy a comenzar a escribir tutoriales sobre programación Android.  
 Antes de comenzar es necesario tener configurado correctamente eclipse con el Android SDK, que se puede encontrar en este mismo blog, mediante el [primer videotutorial][2] de una entrada que publiqué hace tiempo, o simplemente buscando en [google][3].
@@ -28,8 +28,8 @@ En esta entrada vamos a empezar directamente con el típico Hola Mundo (Hello Wo
 
 Arrancamos eclipse con todo configurado correctamente y vamos a Archivo->nuevo->Proyecto Android:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s1600/nuevoProyecto.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="crear Proyecto Android" alt="crear Proyecto Android"  height="303" width="400" src="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s400/nuevoProyecto.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s1600/nuevoProyecto.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="crear Proyecto Android" alt="crear Proyecto Android"  height="303" width="400" src="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s400/nuevoProyecto.png" /></a>
 </div>
 
 Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos introducir:
@@ -43,8 +43,8 @@ Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos
   * Versión Mínima del SDK es la versión mínima necesaria del SDK para ejecutar la aplicación, a menor número, la aplicación correrá en más terminales, pero no podremos usar las últimas caracteristicas de Android.
   * Una vez rellenado todo, le damos a finalizar.
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s1600/ConfigurarPoryecto.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="configuracion proyecto Android" alt="configuracion proyecto Android"  height="400" width="320" src="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s400/ConfigurarPoryecto.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s1600/ConfigurarPoryecto.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="configuracion proyecto Android" alt="configuracion proyecto Android"  height="400" width="320" src="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s400/ConfigurarPoryecto.png" /></a>
 </div>
 
 Ya hemos creado nuestro primer proyecto Android, ahora vamos a ver de qué se compone:
@@ -53,8 +53,8 @@ Ya hemos creado nuestro primer proyecto Android, ahora vamos a ver de qué se co
 
 Los proyectos de Android siguen una estructura fija de carpetas que debemos respetar. Podemos ver esta estructura con la vista ***Package Explorer*** que proporciona eclipse:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s1600/estructuraCarpetas.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Estructura proyectos Android" alt="Estructura proyectos Android"  height="400" width="189" src="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s400/estructuraCarpetas.png" /></a>
+<div class="separator" >
+<a href="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s1600/estructuraCarpetas.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Estructura proyectos Android" alt="Estructura proyectos Android"  height="400" width="189" src="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s400/estructuraCarpetas.png" /></a>
 </div>
 
 ### Carpeta src (de fuentes)

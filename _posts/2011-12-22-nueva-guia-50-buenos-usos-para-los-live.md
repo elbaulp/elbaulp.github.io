@@ -10,8 +10,8 @@ categories:
 main-class: "misc"
 color: "#61B38D"
 ---
-<div style="float:left; margin-right:1em;">
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make36/prgm.cgi"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" style="border:none;" src="https://lh3.googleusercontent.com/-2oT-J7QNkq8/TvJtfku-xJI/AAAAAAAAB8M/lVVURDfYCNY/s613/50_live_cd.jpg" title="50 Uses For Live CDs" alt="50 Uses For Live CDs" /></a>
+<div >
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_make36/prgm.cgi"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://lh3.googleusercontent.com/-2oT-J7QNkq8/TvJtfku-xJI/AAAAAAAAB8M/lVVURDfYCNY/s613/50_live_cd.jpg" title="50 Uses For Live CDs" alt="50 Uses For Live CDs" /></a>
 </div>
 <div class="text">
 <p>
@@ -27,11 +27,11 @@ color: "#61B38D"
 
 A continuación dejo dos imágenes con el índice completo de esta guía:
 
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s1600/Screenshot.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="275" src="https://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s400/Screenshot.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="275" src="https://4.bp.blogspot.com/-71bmVCfwAo4/Tvs9RmoEo2I/AAAAAAAACAk/7AzIk80icCY/s400/Screenshot.png" /></a>
 </div>
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s1600/Screenshot-2.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="365" width="400" src="https://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s400/Screenshot-2.png" /></a>
+<div class="separator" >
+<a href="https://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s1600/Screenshot-2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="365" width="400" src="https://4.bp.blogspot.com/-ojoUiWkQ85Y/Tvs9R54XInI/AAAAAAAACAs/e0nf9bqsQNI/s400/Screenshot-2.png" /></a>
 </div>
 
 [Descárgala desde aqui][1] o  

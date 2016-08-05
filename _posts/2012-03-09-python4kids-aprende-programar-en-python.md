@@ -9,7 +9,7 @@ categories:
 main-class: "dev"
 color: "#E64A19"
 ---
-<div class="separator" style="clear: both; text-align: center;">
+<div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="py" class="icono" />
 </div>
 

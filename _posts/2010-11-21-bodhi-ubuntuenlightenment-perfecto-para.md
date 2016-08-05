@@ -11,7 +11,7 @@ Los amantes de las distribuciones minimalistas puede que quieran echarle un vist
 
 
 
-<p style="text-align: center;">
+<p >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" align="center" title="Bodhi" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TOkI5nGhCBI/AAAAAAAAAFQ/1h4Zse1FwUM/s1600/Bodhi.jpg" />
 </p>
 
@@ -23,7 +23,7 @@ No obstante, hay que advertir que la distribución está en fase alpha, así que
 
 
 
-<p style="text-align: center;">
+<p >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="bodhi_0.1.0" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkI5Wj6W7I/AAAAAAAAAFM/z5rezyX4os4/s1600/bodhi_0.1.0.png" />
 </p>
 

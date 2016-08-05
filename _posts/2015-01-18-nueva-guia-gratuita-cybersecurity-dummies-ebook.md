@@ -28,9 +28,6 @@ Controlling these threats requires multiple security disciplines working togethe
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
-<div style="clear:both">
-</div>
-
  [2]: /manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 

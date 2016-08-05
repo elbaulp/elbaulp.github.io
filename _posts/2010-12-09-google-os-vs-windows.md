@@ -19,7 +19,7 @@ Linus Upson, el vicepresidente de Google para ingeniería a cargo de Chrome, ha 
 
 Os dejo un vídeo que explica un poco como es este nuevo Sistema Operativo.
 
-<p style="text-align:center;">
+<p >
 </p>
 
 * * *

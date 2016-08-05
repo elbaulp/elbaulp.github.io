@@ -15,7 +15,7 @@ RockMelt está construido internamente en torno a Chromium, el desarrollo de có
 
 Cuando la guerra de navegadores está en todo lo alto, la&nbsp;**startup impulsada por el fundador de Netscape nos propone un desarrollo innovador **aunque algunas de sus funciones pueden conseguirse a base de plug-in en los grandes navegadores.
 
-<p style="text-align: center;">
+<p >
 </p>
 
 **Enfocado e integrado totalmente a uso con redes sociale**s, la interfaz de usuario de&nbsp;<a href="http://www.rockmelt.com/" target="_blank">RockMelt</a> cuenta con un panel izquierdo en el que se muestran nuestros amigos en la red y otro panel derecho donde se incluyen entradas de Facebook, Twitter o el nuevo contenido RSS.

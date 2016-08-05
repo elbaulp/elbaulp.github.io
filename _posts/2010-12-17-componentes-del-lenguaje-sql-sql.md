@@ -264,12 +264,12 @@ Nota: El tama&ntilde;o del campo varía en función de cada base de datos, 255 e
 
 ### Tipos de datos en ORACLE
 
-<ul style="list-style:none;">
+<ul >
 <li>
 <strong>NUMBER</strong>(Numérico): Almacena números enteros o de punto flotante, virtualmente de cualquier longitud, aunque se puede especificar la precisión y la escala. ```bash
-<span style="color:#a70d0d">-- NUMBER [(precisión, escala)]</span>
+<span >-- NUMBER [(precisión, escala)]</span>
 saldo <b>NUMBER(16,2);</b>
-<span style="color:#a70d0d">/*Indica que puede almacenar un valor numérico de 16 dígitos, 2 de ellas decimales. Es decir, 14 enteros y dos decimales o 16 enteros */</span>
+<span >/*Indica que puede almacenar un valor numérico de 16 dígitos, 2 de ellas decimales. Es decir, 14 enteros y dos decimales o 16 enteros */</span>
 
 ```
 
@@ -282,18 +282,18 @@ saldo <b>NUMBER(16,2);</b>
 </li>
 <li>
 <strong>VARCHAR2</strong> (Carácter de longitud variable): Almacena datos de tipo carácter empleando sólo la cantidad necesaria aún cuando la longitud máxima sea mayor. ```bash
-<span style="color:#a70d0d">‐‐ VARCHAR2 (longitud_maxima)</span>
+<span >‐‐ VARCHAR2 (longitud_maxima)</span>
 nombre <b>VARCHAR2(20);</b>
-<span style="color:#a70d0d">/* Indica que puede almacenar valores alfanuméricos de hasta 20 posiciones */ </span>
-<span style="color:#a70d0d">/* Cuando la longitud de los datos sea menor de 20 no se rellena con blancos */</span>
+<span >/* Indica que puede almacenar valores alfanuméricos de hasta 20 posiciones */ </span>
+<span >/* Cuando la longitud de los datos sea menor de 20 no se rellena con blancos */</span>
 
 ```
   </li>
 <li>
 <strong>CHAR</strong> (Caracter): Almacena datos de tipo carácter con una longitud máxima de 32767 y cuyo valor de longitud por defecto es 1. ```bash
-<span style="color:#a70d0d">‐‐ CHAR [(longitud_maxima)] </span>
+<span >‐‐ CHAR [(longitud_maxima)] </span>
 nombre <b>CHAR(20); </b>
-<span style="color:#a70d0d">/* Indica que puede almacenar valores alfanuméricos de 20 posiciones*/</span>
+<span >/* Indica que puede almacenar valores alfanuméricos de 20 posiciones*/</span>
 
 ```
   </li>
@@ -323,8 +323,8 @@ hay_error <b>BOOLEAN;</b>
 
           ```bash
 <b>DECLARE</b>
-<span style="color:#a70d0d">‐‐ declare record variable that represents a row fetched from the employees table </span>
-  emp_rec employees%ROWTYPE; <span style="color:#a70d0d">‐‐ declare variable with %ROWTYPE attribute </span>
+<span >‐‐ declare record variable that represents a row fetched from the employees table </span>
+  emp_rec employees%ROWTYPE; <span >‐‐ declare variable with %ROWTYPE attribute </span>
 <b>BEGIN</b>
   SELECT * INTO emp_rec FROM EMPLOYEES WHERE employee_id = 120; ‐‐ retrieve record
   DBMS_OUTPUT.PUT_LINE('Employee name: ' || emp_rec.first_name || ' ' || emp_rec.last_name);
@@ -366,10 +366,10 @@ hay_error <b>BOOLEAN;</b>
     CONTINENTE <b>VARCHAR2(20)</b>
   );
 
-<span style="color:#a70d0d">/* Declara una variable miPAIS de tipo PAIS. Esto significa que la variable miPAIS tendrá los campos ID, DESCRIPCION y CONTINENTE. */</span>
+<span >/* Declara una variable miPAIS de tipo PAIS. Esto significa que la variable miPAIS tendrá los campos ID, DESCRIPCION y CONTINENTE. */</span>
   miPAIS PAIS;
 <b>BEGIN </b>
-<span style="color:#a70d0d">/* Asignamos valores a los campos de la variable.*/ </span>
+<span >/* Asignamos valores a los campos de la variable.*/ </span>
   miPAIS.CO_PAIS := 27;
   miPAIS.DESCRIPCION := 'ITALIA';
   miPAIS.CONTINENTE := 'EUROPA';
@@ -444,7 +444,7 @@ SELECT CO_PAIS, DESCRIPCION, CONTINENTE INTO miPAIS FROM PAISES WHERE CO_PAIS = 
 <p>
                           Cuando trabajamos con tablas de PL/SQL podemos utilizar las siguientes funciones:
                         </p>
-<ol style="list-style:none;">
+<ol >
 <li>
                             a. FIRST. Devuelve el menor índice de la tabla. NULL si está vacía.
                           </li>

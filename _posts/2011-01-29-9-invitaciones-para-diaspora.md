@@ -8,7 +8,7 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="icodias" style="padding:1em;">
+<div class="icodias" >
 </div>
 
 Hace tiempo hablé de lo que era la nueva red social [Diaspora*][1], ahora en <a target="_blank" href="http://gnometips.com/">gnomeTips</a> he conseguido una invitación, por lo que ya tengo cuenta en esta red.

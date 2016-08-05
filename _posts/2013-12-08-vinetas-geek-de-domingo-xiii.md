@@ -21,7 +21,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Explicado simplemente &#8211; [Git Blame][2]
 
-<div id="attachment_2026" style="width: 425px" class="wp-caption aligncenter">
+<div id="attachment_2026"  class="wp-caption aligncenter">
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Explicado simplemente - Git Blame" src="/assets/img/2013/12/Simply-Explained-git-blame.jpg" width="415px" height="541px" />
 <p class="wp-caption-text">
     &#8211; Por favor,por favor&#8230;.Mierda!!! fui yo.
@@ -30,7 +30,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Explicado simplemente &#8211; [Expresiones regulares][3] del día anterior
 
-<div id="attachment_2027" style="width: 339px" class="wp-caption aligncenter">
+<div id="attachment_2027"  class="wp-caption aligncenter">
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Explicado simplemente - Expresiones regulares del día anterior" src="/assets/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg" width="329px" height="533px" />
 <p class="wp-caption-text">
     ¿Estaba borracho?, ¿o soy un genio?
@@ -55,7 +55,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Git commit
 
-<div id="attachment_2031" style="width: 449px" class="wp-caption aligncenter">
+<div id="attachment_2031"  class="wp-caption aligncenter">
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Merge branch 'asdfasjkfdlas / alkdjf' into sdkjfls-final" src="/assets/img/2013/12/git_commit-Merge-branch-asdfasjkfdlas-slash-alkdjf-into-sdkjfls-final.png" width="439px" height="250px" />
 <p class="wp-caption-text">
     Merge branch &#8216;asdfasjkfdlas / alkdjf&#8217; into sdkjfls-final
@@ -64,7 +64,7 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Quiero intentarlo
 
-<div id="attachment_2032" style="width: 750px" class="wp-caption aligncenter">
+<div id="attachment_2032"  class="wp-caption aligncenter">
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Espera, vuelve" src="/assets/img/2013/12/I-wanna-try.-Hang-on-be-right-back.png" width="740px" height="254px" />
 <p class="wp-caption-text">
     &#8211; Te has fijado en ese punto brillante allá en la distancia?<br />- Sí. Qué pasa?<br />- No sé, voy a echarle un vistazo<br />- Wow. No vayas por allí.
