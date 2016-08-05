@@ -10,7 +10,7 @@ main-class: "geek"
 color: "#262626"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="/assets/img/2012/04/tumblr_ld50v7q6tn1qabw68o1_4001.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="240px" src="/assets/img/2012/04/tumblr_ld50v7q6tn1qabw68o1_4001.gif" width="320px" /></a>
+<a href="/assets/img/2012/04/tumblr_ld50v7q6tn1qabw68o1_4001.gif"  style="margin-left: 1em; margin-right: 1em;"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="240px" src="/assets/img/2012/04/tumblr_ld50v7q6tn1qabw68o1_4001.gif" width="320px" /></a>
 </div>
 
 

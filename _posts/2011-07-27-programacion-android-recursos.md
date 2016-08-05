@@ -26,13 +26,13 @@ Un recurso puede usarse por defecto (Se mostrará en cualquier dispositivo, inde
 Dos dispositivos distintos, usando recursos por defecto:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s1600/resource_devices_diagram1.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="130" width="400" src="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s400/resource_devices_diagram1.png" /></a>
+<a href="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s1600/resource_devices_diagram1.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="130" width="400" src="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s400/resource_devices_diagram1.png" /></a>
 </div>
 
 Dos dispositivos distintos, usando recursos alternativos:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s1600/resource_devices_diagram2.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="130" width="400" src="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s400/resource_devices_diagram2.png" /></a>
+<a href="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s1600/resource_devices_diagram2.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="130" width="400" src="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s400/resource_devices_diagram2.png" /></a>
 </div>
 
 Por ejemplo, podemos crear iconos más pequeños para que sean mostrados en los terminales con pantallas más pequeñas o diseñar una disposición de pantalla diferente para cuando la aplicación se esté ejecutando en modo apaisado, para conseguir esto, simplemente creamos una carpeta de recursos añadiendo el sufijo que indica la situación en la que debe usarse.

@@ -11,7 +11,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s1600/LungoJS.png" imageanchor="1" style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s400/LungoJS.png" /></a>
+<a href="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s1600/LungoJS.png"  style="clear:left; float:left;margin-right:1em; margin-bottom:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s400/LungoJS.png" /></a>
 </div>
 
 El día 14 del marzo asistí a una charla que daba [Raul Jiménez][1] en mi facultad sobre tecnologias móviles. En concreto se habló de **lungojs** y **phonegap**.

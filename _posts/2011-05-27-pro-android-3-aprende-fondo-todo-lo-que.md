@@ -22,7 +22,7 @@ Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en esp
 
 <!--ad-->
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="288" width="263" src="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png" /></a>
+<a href="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="288" width="263" src="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png" /></a>
 </div>
 
   1. Introducing the Android Computing Platform

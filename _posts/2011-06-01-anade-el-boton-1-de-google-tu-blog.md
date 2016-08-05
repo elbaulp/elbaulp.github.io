@@ -16,7 +16,7 @@ Hace poco estaba disponible el [botón +1 de google][1] en los resultados de bú
 
 <!--ad-->
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="356" width="400" src="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" /></a>
+<a href="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg"  style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="356" width="400" src="https://2.bp.blogspot.com/-ZD5XWGYTb-Y/TeZyB5w_XEI/AAAAAAAAAdU/AC4o9KId85w/s400/ConfigureGadget.jpg" /></a>
 </div>
 
 Por desgracia en España aún no funciona, tendremos que esperar.
