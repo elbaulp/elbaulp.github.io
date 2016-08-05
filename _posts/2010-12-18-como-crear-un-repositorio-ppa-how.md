@@ -46,7 +46,8 @@ También es necesario:
   * Si estás subiendo el paquete a un equipo de PPA, hay que cambiar ~<your-launchpad-id> al nombre del equipo de Launchpad (Dejando la tilde (~)). Como es de esperar, debes ser miembro del equipo antes de poder subir el paquete a su PPA.
   * Fijar correctamente el <ppa-name>, por defecto es ppa, usad el nombre específico para otros PPA en el mismo contexto. No confundais el nombre del PPA con el nombre que habeis elegido para para mostrar el PPA en Launchpad.
   * A continuación, hay que abrir un terminal y escribir lo siguiente:
-    ```bash
+
+```bash
 $  dput my-ppa P_V_source.changes
 ```
 
@@ -59,4 +60,3 @@ $  dput my-ppa P_V_source.changes
  [1]: https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/
 
 {% include toc.html %}
-</ppa-name></your-launchpad-id></ppa_name></your_launchpad_id></source.changes>
