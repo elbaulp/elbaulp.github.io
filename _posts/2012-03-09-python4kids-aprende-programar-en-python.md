@@ -10,7 +10,7 @@ main-class: "dev"
 color: "#E64A19"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" src="" id="logo" name="py" class="icono" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="py" class="icono" />
 </div>
 
 En esta estrada os traigo un tutorial para la gente que quiere iniciarse en el mundo de la programación, como ya he hecho en [otras ocasiones][1]. Hace tiempo publiqué [6 eBooks gratuitos][2] en los que aprender este lenguaje, o [este otro][3] que quizás sea el más completo de los que he publicado.

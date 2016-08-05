@@ -11,7 +11,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" style="clear: both; text-align: center;">
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 </div>
 
 Hace unas semanas atrás encontré este vídeo de la Google I/O 2011 en el que se dan consejos para seamos capaces de crear las mejores aplicaciones Android y conseguir llegar al mayor número de personas debido a la calidad y eficiencia de nuestros productos.

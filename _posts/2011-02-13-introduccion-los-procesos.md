@@ -67,7 +67,7 @@ Un proceso puede encontrarse en tres estados diferentes:
 **Listo:** Un proceso está listo para ejecutar cuando puede entrar en fase de procesamiento. Dado que puede haber varios procesos en este estado, una de las tareas del sistema operativo será seleccionar aquel que debe pasar a ejecución. El módulo del SO que toma esta decisión se denomina **planificador.** En este estado el proceso reside en BCP.
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s1600/estados.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Estado Procesos" title="Estado de los procesos" border="0" height="192" width="320" src="https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s320/estados.png" /></a>
+<a href="https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s1600/estados.png" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Estado Procesos" title="Estado de los procesos"  height="192" width="320" src="https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s320/estados.png" /></a>
 </div>
 
 La **transición** entre cada uno de los tres estados puede hacerse de la siguiente manera:

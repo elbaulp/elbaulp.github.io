@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png" style="clear:left; float:left;margin-right:1em; margin-bottom:1em" width="128px" height="128px" />
 
 Pronto habrá que presentar el proyecto de fin de curso, y hay que tenerlo todo correctamente funcionando, os dejo un vídeo que he grabado mostrando la aplicación funcionando. En algunos momentos va algo lento, pero es normal, ya que estaba ejecutando: Una máquina virtual con Windows XP corriendo con SQL Server, otra máquina virtual ejecutando Android, el programa de grabación de vídeo y el Sistema operativo del portatil (ubuntu 10.04), no se le puede pedir más :-).
 

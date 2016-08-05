@@ -47,7 +47,7 @@ Ahora, exploremos los 10 frameworks en cuestión. Para cada título se ha inclui
 
 
 <!--ad-->
-<table class="aligncenter" border="0" cellspacing="0" cellpadding="5">
+<table class="aligncenter"  cellspacing="0" cellpadding="5">
 <tr>
 <td rowspan="1" colspan="2">
       Web Application Frameworks

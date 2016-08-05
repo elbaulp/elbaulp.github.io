@@ -25,19 +25,19 @@ Os dejo las imágenes del resultado:
 Tiempo de carga de la página principal:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-z4SIZR9hZzE/TedIhsn0ugI/AAAAAAAAAjk/_S5ZBpEaX74/s1600/cargaWEbCompleta.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="400" width="382" src="https://4.bp.blogspot.com/-z4SIZR9hZzE/TedIhsn0ugI/AAAAAAAAAjk/_S5ZBpEaX74/s400/cargaWEbCompleta.jpg" /></a>
+<a href="https://4.bp.blogspot.com/-z4SIZR9hZzE/TedIhsn0ugI/AAAAAAAAAjk/_S5ZBpEaX74/s1600/cargaWEbCompleta.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="382" src="https://4.bp.blogspot.com/-z4SIZR9hZzE/TedIhsn0ugI/AAAAAAAAAjk/_S5ZBpEaX74/s400/cargaWEbCompleta.jpg" /></a>
 </div>
 
 Tiempo de carga de un post:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-yZIEmBsg8-Q/TedInZQ2_RI/AAAAAAAAAjs/JGZ0h5tWRZc/s1600/cargaUnPost.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="400" width="372" src="https://1.bp.blogspot.com/-yZIEmBsg8-Q/TedInZQ2_RI/AAAAAAAAAjs/JGZ0h5tWRZc/s400/cargaUnPost.jpg" /></a>
+<a href="https://1.bp.blogspot.com/-yZIEmBsg8-Q/TedInZQ2_RI/AAAAAAAAAjs/JGZ0h5tWRZc/s1600/cargaUnPost.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="372" src="https://1.bp.blogspot.com/-yZIEmBsg8-Q/TedInZQ2_RI/AAAAAAAAAjs/JGZ0h5tWRZc/s400/cargaUnPost.jpg" /></a>
 </div>
 
 Finalmente, os dejo la evolución de los varios test que realicé hasta que encontré el de menor tiempo:
 
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://4.bp.blogspot.com/-p7tuPSNcvSo/TedI2I_aKFI/AAAAAAAAAj0/yYrwU9eCUHY/s1600/variosTest.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" border="0" height="204" width="400" src="https://4.bp.blogspot.com/-p7tuPSNcvSo/TedI2I_aKFI/AAAAAAAAAj0/yYrwU9eCUHY/s400/variosTest.jpg" /></a>
+<a href="https://4.bp.blogspot.com/-p7tuPSNcvSo/TedI2I_aKFI/AAAAAAAAAj0/yYrwU9eCUHY/s1600/variosTest.jpg" imageanchor="1" style="margin-left:1em; margin-right:1em"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="204" width="400" src="https://4.bp.blogspot.com/-p7tuPSNcvSo/TedI2I_aKFI/AAAAAAAAAj0/yYrwU9eCUHY/s400/variosTest.jpg" /></a>
 </div>
 
 Espero que vuestra experiencia con el blog sea ahora más fluida.
