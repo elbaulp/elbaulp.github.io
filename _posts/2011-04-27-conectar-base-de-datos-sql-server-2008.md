@@ -12,10 +12,10 @@ tags:
   - conectar java con oracle
   - curso android pdf
   - programar base datoss java
+modified: 2016-08-05T16:30
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
 
 [En anteriores entradas][1] expliqué como he ido desarrollando una aplicación para Android que enviaba mensajes al pc para un proyecto de fin de curso.
 
@@ -32,12 +32,9 @@ Ahora vamos al código, (que he sacado de un ejemplo de la web de [microsoft][4]
 
 Ahora vamos a crear un proyecto, yo lo he creado en ecplise, es necesario agregarle las librerías JDBC para que hagan de puente entre la aplicación y la base de datos. En ecplise se añaden en las propiedades del proyecto/JAva Build Path/Libraries, estas librerías podeis descargarlas de [aqui][5], si no lo hacéis en ecplise, en este [enlace][6] se ve como configurarlo
 
-<p class="alert">
-  También puedes ver cómo <a href="/conectar-base-de-datos-oracle.html">Conectar una base de datos ORACLE a aplicación Java remotamente</a>
-</p>
+También puedes ver cómo <a href="/conectar-base-de-datos-oracle.html">Conectar una base de datos ORACLE a aplicación Java remotamente</a>
 
 Dejo el código por aquí:
-
 
 
 Y la sálida de ejecutar la aplicación:
@@ -61,8 +58,6 @@ Dni: 12345678
 ```
 
 Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiempo, así que si algo no se entiende no dudes en preguntar e intentaré ayudarte.
-
-
 
  [1]: https://elbauldelprogramador.com/programa-que-envia-mensajes-desde_10/
  [2]: http://kbase.gfi.com/showarticle.asp?id=KBID002804
