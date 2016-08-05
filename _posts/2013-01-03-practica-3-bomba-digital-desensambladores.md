@@ -11,7 +11,7 @@ tags:
   - contraseñas asm
   - Ingenieria inversa
 image: 2012/12/logicbomb.png
-modified: 2016-08-05T13:00
+modified: 2016-08-05T15:00
 main-class: "dev"
 color: "#E64A19"
 ---
@@ -87,7 +87,7 @@ Al cual se le aplican los métodos deseados por el alumno para cifrar la contras
 
 Conseguí descifrar 2 programas en total, aunque de unos de ellos solo la contraseña alfanumérica, luego veremos la razón. Empecemos con el primer programa:
 
-#### Primera Bomba
+# Primera Bomba
 
 Puedes descargar el programa desde <a href="https://dl.dropbox.com/u/54765219/Bomba1" target="_blank">este enlace</a>:
 
@@ -186,7 +186,7 @@ Una vez descubierta la contraseña alfanumérica, pasé a la numérica, que resu
 Se suma 500 `(0x1f4)` a la contraseña original, resultando 1500, y 200 (0xc8) a la contraseña que introduzca el usuario.  
 Haciendo la comparación de 1000+500 con PASSINTRODUCIDA+200, se deduce que la contraseña que se debe introducir es 1300.
 
-#### Segunda Bomba
+# Segunda Bomba
 
 Puedes descargar el programa desde <a href="https://dl.dropbox.com/u/54765219/Bomba2" target="_blank">este enlace</a>.
 
@@ -299,7 +299,7 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
 
 Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción `div` a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.
 
-####  El código de mi programa Bomba
+#  El código de mi programa Bomba
 
 Para escribir mi programa me basé en técnicas de ofuscación que encontré por internet, con un poco de imaginación se puede hacer muy dificil la lectura de un programa:
 
@@ -436,7 +436,7 @@ Explicaré por encima su funcionamiento. En la función `main` se evalua el prim
 804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
 8048890: 83 c2 01                add    $0x1,%edx
 8048893: 83 fa 0a                cmp    $0xa,%edx
-8048896: 75 f0                   jne    8048888 </malloc></decode><decode>
+8048896: 75 f0                   jne    8048888 <decode>
 8048898: 83 c4 18                add    $0x18,%esp
 804889b: 5b                      pop    %ebx
 804889c: c3                      ret
@@ -450,7 +450,7 @@ En la que se va extrayendo de la cadena <strong>@M?eg \PoiRlLldo!�</strong> lo
  804888d: 88 0c 10                mov    %cl,(%eax,%edx,1)
  8048890: 83 c2 01                add    $0x1,%edx
  8048893: 83 fa 0a                cmp    $0xa,%edx
- 8048896: 75 f0                   jne    8048888 </decode><decode>
+ 8048896: 75 f0                   jne    8048888 <decode>
 ```
 
 Con lo cual, antes de retornar de la función, si miramos el valor de EBX encontramos la contraseña a usar para desactivar la bomba.
@@ -480,7 +480,7 @@ También podemos deducir el tamaño de la contraseña mirando la pila antes de l
 Que va sumando al pin el resultado de hacer un XOR de su valor con el valor de una letra almacenada en %ecx y al resultado le suma 7777.
 Con lo cual tenemos que conseguir un número al que al hacerle todas estas operaciones de 8305, que resulta ser 555.
 
-#### Referencias
+# Referencias
 
 - __Calculating modulo in assembly__ \| <a href="http://stackoverflow.com/questions/4361979/calculating-modulo-in-assembly" target="_blank">Visitar sitio</a>
 - __Obfuscation__ \| <a href="http://www.brandonparker.net/code_obf.php" target="_blank">Visitar sitio</a>
