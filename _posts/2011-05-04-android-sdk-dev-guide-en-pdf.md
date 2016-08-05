@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 He estado buscando la dev guide de Android en PDF para no tener que leerla en el PC y poder imprimirla, la encontré en [czechxan.com][1]. A continuación dejo los enlaces:
 

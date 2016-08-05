@@ -17,8 +17,6 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
-
 En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.
 
 Android dispone de tres tipos de notificaciones:

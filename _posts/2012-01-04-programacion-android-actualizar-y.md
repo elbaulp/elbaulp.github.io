@@ -13,7 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
 </div>
 
 Vimos cómo [insertar registros y consultarlos][1], bien, pues actualizar y borrar registros es bastante sencillo. Realizar un [update][2] (Actualizar registros) es muy similar a hacer una inserción, en la cual los valores de la columna a modificar se pasan mediante un objeto [ContentResolver][1]. Abajo se muestra una sentencia para realizar dicho update:

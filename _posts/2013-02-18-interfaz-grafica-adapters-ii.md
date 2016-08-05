@@ -21,10 +21,7 @@ color: "#E64A19"
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
-
 En [Programación Android: Interfaz gráfica &#8211; Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
-
 
 <!--ad-->
 

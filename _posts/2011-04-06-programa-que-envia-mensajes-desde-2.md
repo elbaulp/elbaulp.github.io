@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />  
+  
 Como ya comenté en una entrada hace varios días, necesito hacer una [aplicación para android que se comunique con el PC por red][1], y he seguido mejorandola ya que aún está muy limitada, le he hecho algunos cambios, estos cambios son:  
 <!--ad-->
 

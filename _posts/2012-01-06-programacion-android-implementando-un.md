@@ -13,7 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
 </div>
 
 Esta es la primera entrada de un total de 4 en la que se irán describiendo los pasos a dar para crear nuestro propio proveedor de contenidos.

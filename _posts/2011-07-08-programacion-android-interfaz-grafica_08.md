@@ -17,7 +17,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Los menús en las aplicaciones son algo que encontramos frecuentemente, de hecho, casi todos los terminales Android tienen un botón específico para desplegarlos.
 

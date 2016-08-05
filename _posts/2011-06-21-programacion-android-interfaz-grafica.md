@@ -17,7 +17,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Todos los componenetes de la interfaz de usuario de Android descienden de la clase ***View.*** Dichos objetos están organizados en forma de árbol y pueden contener nuevos objetos View, permitiendo crear interfaces muy completas.
 

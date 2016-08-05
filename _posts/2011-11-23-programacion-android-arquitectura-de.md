@@ -14,7 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" /></a>
+<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
 </div>
 
 Vamos a examinar algunos de los elementos que componen los proveedores de contenidos(CV) y cómo éstos se relacionan con otras abstracciones de acceso a datos.

@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Poco a poco, todos los dias intento traducir uno o dos párrafos de la guía Android, y esto me ha llevado a completar el siguiente tema, [Application Fundamentals][1].
 

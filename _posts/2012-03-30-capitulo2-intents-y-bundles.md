@@ -14,7 +14,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el conocido [Hola Mundo][1], en esta entrada, vamos a ver como crear varias [actividades][2] y cómo hacer que se pasen parámetros las unas a las otras.
 

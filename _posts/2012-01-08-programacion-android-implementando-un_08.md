@@ -14,7 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 <div class="separator" >
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 </div>
 
 En la anterior entrada de [programación Android][1], hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el [planteamiento de la base de datos.][2] En esta entrada vamos a ver cómo extender de la clase ContentProvider.

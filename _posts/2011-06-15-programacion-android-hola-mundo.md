@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Como [dije][1], voy a comenzar a escribir tutoriales sobre programación Android.  
 Antes de comenzar es necesario tener configurado correctamente eclipse con el Android SDK, que se puede encontrar en este mismo blog, mediante el [primer videotutorial][2] de una entrada que publiqué hace tiempo, o simplemente buscando en [google][3].

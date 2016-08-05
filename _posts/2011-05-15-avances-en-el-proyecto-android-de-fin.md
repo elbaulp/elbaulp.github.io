@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Como ya sabéis tengo que realizar un proyecto de fin de curso, el cual ya expliqué en [qué consistía][1], y escribo esta entrada para mostraros un poco los avances que voy haciendo.
 

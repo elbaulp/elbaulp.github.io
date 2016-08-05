@@ -13,7 +13,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Hace unas semanas encargué este libro en Amazon, y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).
 

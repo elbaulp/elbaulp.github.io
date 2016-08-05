@@ -14,7 +14,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos ***callback*** que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.
 

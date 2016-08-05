@@ -12,7 +12,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />
+
 
 Ya he hablado otras veces sobre este proyecto, que se trata ni más ni menos que del proyecto de fin de curso, [publiqué un vídeo hace algún tiempo][1], pero aún le quedaba mucho por mejorar, sobre todo la interfaz, visualmente parece que el programa no tiene mucho trabajo, pero si que lo tiene, ya que todo se envía y recibe de una base de datos. A continuación voy a explicar un poco su funcionamiento:
 

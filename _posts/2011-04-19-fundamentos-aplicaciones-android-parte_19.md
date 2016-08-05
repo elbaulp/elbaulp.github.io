@@ -12,7 +12,7 @@ main-class: "android"
 color: "#689F38"
 ---
 Continuando con el [tema de los componentes][1], en esta entrada vamos a ver:  
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  width="128px" height="128px" />  
+  
 
 
 ### Activando componentes {#ActivatingComponents}
