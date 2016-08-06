@@ -10,6 +10,7 @@ tags:
   - grabar video logstalgia
   - instalar logstalgia
   - tutorial logstalgia
+image: visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia.png
 modified: 2016-08-06T11:40:12+01:00
 main-class: "servidores"
 color: "#0097A7"
