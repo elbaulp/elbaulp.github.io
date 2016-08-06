@@ -171,6 +171,15 @@
                     "eventAction": "guidespage"
                 }
             },
+            "git-revresponse" : {
+                "on": "click",
+                "selector": "#revresponse-git-link",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "revresponse-git-link",
+                    "eventAction": "git-page"
+                }
+            },
             "geek" : {
                 "on": "click",
                 "selector": "#libros-geek",
