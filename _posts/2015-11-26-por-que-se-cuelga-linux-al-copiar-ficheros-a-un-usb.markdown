@@ -5,21 +5,23 @@ categories:
 description: "Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:"
 tags: [usb, linux, usb se cuelga, usb lento]
 image: hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png
-modified: 2015-11-27T16:25:00+00:00
+modified: 2016-08-06T12:00:00+00:00
 date: 2015-11-27T12:25:00+00:00
 main-class: "articulos"
 color: "#F57C00"
 ---
 
 {% include toc.html %}
+
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" />
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" />
+    <figcaption>Crédito de la imagen: <a href="https://pixabay.com/en/usb-drive-storage-plug-flash-38264/">pixabay.com</a></figcaption>
 </figure>
-<span class="image-credit">Crédito de la imagen: <a href="https://pixabay.com/en/usb-drive-storage-plug-flash-38264/">pixabay.com</a></span><br />
+
 
 Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:
 
->La respuesta la encontré en <a href="http://unix.stackexchange.com" target="_blank" title="stackexchange">unix.stackexchange</a>, en una pregunta que realizó el usuario <a href="http://unix.stackexchange.com/users/52763/mikhail-morfikov" target="_blank" title="">Mikhail Morfikov</a>. Y la respuesta la dió el usuario <a href="http://unix.stackexchange.com/users/52205/rmano" target="_blank" title="">Rmano</a>.
+> La respuesta la encontré en <a href="http://unix.stackexchange.com" target="_blank" title="stackexchange">unix.stackexchange</a>, en una pregunta que realizó el usuario <a href="http://unix.stackexchange.com/users/52763/mikhail-morfikov" target="_blank" title="">Mikhail Morfikov</a>. Y la respuesta la dió el usuario <a href="http://unix.stackexchange.com/users/52205/rmano" target="_blank" title="">Rmano</a>.
 
 <!--ad-->
 
@@ -62,4 +64,4 @@ will itself start writeback.
 
 ### Referencias
 
-Why is my PC freezing while I'm copying a file to a pendrive? | [unix.stackexchange.com](http://unix.stackexchange.com/questions/107703/why-is-my-pc-freezing-while-im-copying-a-file-to-a-pendrive "Why is my PC freezing while I'm copying a file to a pendrive?")
+Why is my PC freezing while I'm copying a file to a pendrive? \| [unix.stackexchange.com](http://unix.stackexchange.com/questions/107703/why-is-my-pc-freezing-while-im-copying-a-file-to-a-pendrive "Why is my PC freezing while I'm copying a file to a pendrive?")
