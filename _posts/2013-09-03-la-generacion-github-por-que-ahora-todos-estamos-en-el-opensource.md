@@ -10,6 +10,7 @@ tags:
   - que es github
   - ventajas de github
 modified: 2016-08-07T18:00
+image: 2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg
 main-class: "articulos"
 color: "#F57C00"
 ---
