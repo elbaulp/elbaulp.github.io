@@ -1,6 +1,5 @@
 ---
 title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
-
 layout: post.amp
 permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
 categories:
@@ -10,16 +9,21 @@ tags:
   - generacion github
   - que es github
   - ventajas de github
+modified: 2016-08-07T18:00
 main-class: "articulos"
 color: "#F57C00"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource" title="La generación GitHub: Por qué ahora todos estamos en el opensource" width="1240px" height="826px" />  
+
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource" title="La generación GitHub: Por qué ahora todos estamos en el opensource" width="1240px" height="826px" />
+
+
 [***GitHub***][1] se desarrolló con la idea de ser una plataforma colaborativa de [software libre][2], pero se ha convertido en mucho más que código. En la actualidad lo usan artistas, constructores, compañías enteras&#8230; y ciudades.
 
 <!--ad-->
 
+> Cualquiera puede ahora cambiar los datos de un mapa cuando se construyen nuevos caminos para montar en bici, cuando las carreteras estén en construcción y cuando se hagan nuevos edificios” <a href="http://digital.cityofchicago.org/index.php/chicago-on-github/" title="http://digital.cityofchicago.org/index.php/chicago-on-github/" target="_blank">anunció</a> hace poco la ciudad de Chicago, que ahora se encuentra en ***GitHub***. Ahora la gente <a href="http://www.wired.com/wiredenterprise/2013/01/this-old-house/" title="This Old (Open Source) House: Man Renovates Home on GitHub" target="_blank">administra las restauraciones de sus casas</a> en ***GitHub***. Hace poco un bufete de abogados anunció también que está publicando documentos legales para la financiación en fases iniciales en ***GitHub***. Alguien además <a href="https://github.com/bundestag/gesetze" target="_blank">publicó</a> el año pasado la totalidad de las leyes Alemanas en Github. (Quizá no sea muy sorprendente que tenga unas 17 peticiones de pull abiertas para realizar cambios). Y por supuesto, ***GitHub*** lo usan programadores y desarrolladores que <a href="http://nodecopter.com/" title="AR Drones" target="_blank">vuelan Drones AR</a> con **Node.js** o crean sitios webs con **jQuery**.
 
-“Cualquiera puede ahora cambiar los datos de un mapa cuando se construyen nuevos caminos para montar en bici, cuando las carreteras estén en construcción y cuando se hagan nuevos edificios” <a href="http://digital.cityofchicago.org/index.php/chicago-on-github/" title="http://digital.cityofchicago.org/index.php/chicago-on-github/" target="_blank">anunció</a> hace poco la ciudad de Chicago, que ahora se encuentra en ***GitHub***. Ahora la gente <a href="http://www.wired.com/wiredenterprise/2013/01/this-old-house/" title="This Old (Open Source) House: Man Renovates Home on GitHub" target="_blank">administra las restauraciones de sus casas</a> en ***GitHub***. Hace poco un bufete de abogados anunció también que está publicando documentos legales para la financiación en fases iniciales en ***GitHub***. Alguien además <a href="https://github.com/bundestag/gesetze" target="_blank">publicó</a> el año pasado la totalidad de las leyes Alemanas en Github. (Quizá no sea muy sorprendente que tenga unas 17 peticiones de pull abiertas para realizar cambios). Y por supuesto, ***GitHub*** lo usan programadores y desarrolladores que <a href="http://nodecopter.com/" title="AR Drones" target="_blank">vuelan Drones AR</a> con **Node.js** o crean sitios webs con **jQuery**.
+{% include toc.html %}
 
 ***GitHub***, según cree el autor original de artículo, está haciendo al software libre lo que internet le hizo a la industria: **Está creando un hueco cultural entre la generación anterior de grandes proyectos de software libre y una nueva, más aficionada cultura del software libre de hoy día.**
 
@@ -75,9 +79,7 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
 
 *The GitHub generation: why we're all in open source now* »» <a href="http://www.wired.co.uk/news/archive/2013-03/11/github-democracy" target="_blank">Wired.co.uk</a>
 
-
-
  [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [2]: https://elbauldelprogramador.com/ "Categoría OpenSource"
 
-{% include toc.html %}
+
