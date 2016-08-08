@@ -20,7 +20,7 @@ Si como yo nunca has oido hablar de este término, no te preocupes, a continuaci
   ¿Qué es el Long Tail SEO y por qué debería tenerlo en cuenta?
 </h2>
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/longTail2.jpg" alt="long Tail SEO" width="993px" height="741px" />][1]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/longTail2.jpg" alt="long Tail SEO" width="993px" height="741px" />][1]
 
 Para dar respuesta a la pregunta, fíjate en la gráfica. Como se aprecia en la parte izquierda, en la línea negra existe una gran competitividad para términos de búsqueda que contienen de una a tres palabras clave. Es muy dificil conseguir una posición óptima en los resultados de la búsqueda centrándose en términos de búsqueda tan cortos.
 
@@ -69,7 +69,7 @@ Sin embargo hay algunas cosas que podrían mejorar, es un poco dificil al princi
 
 Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta técnica. La imagen de abajo muestra las estadísticas de este blog, puedes observar el crecimiento progresivo existente entorno a la semana 4 del 2013 (La última columna tiene un valor menor porque al momento de escribir este artículo estamos a principios de semana):
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/long-tail-result-1024x248.png" alt="long tail result" width="1024px" height="248px" />][3]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/long-tail-result-1024x248.png" alt="long tail result" width="1024px" height="248px" />][3]
 
 #### Referencias
 

@@ -33,7 +33,7 @@ Intentando implementar la etiqueta `amp-mustache` para el blog encontré muchos 
          href={% raw %}{{url}}{% endraw %}>
         <amp-img width="101"
                  height="75"
-                 src="{% raw %}{{thumbnail}}{% endraw %}"></amp-img>
+                 src="{% raw %}}{% endraw %}"></amp-img>
         <span>{% raw %}{{title}}{% endraw %}</span>
       </a>
     </template>

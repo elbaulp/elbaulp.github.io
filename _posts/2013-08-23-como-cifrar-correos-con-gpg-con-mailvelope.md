@@ -76,7 +76,7 @@ Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, pa
 
 Como vemos en la imagen, aparece un simbolo a la derecha, tenemos que pulsarlo y escribir en mensaje ahí:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png" alt="Cómo cifrar correos con GPG usando Mailvelope" width="1255px" height="978px" />][4]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png" alt="Cómo cifrar correos con GPG usando Mailvelope" width="1255px" height="978px" />][4]
 
 Como aparece en la imagen, si es la primera vez que ambos correos se ponen en contacto, hay que enviar la clave pública para que la otra persona pueda reponder con un mensaje cifrado. Luego hacemos click en el candado y seleccionamos a clave pública con la que cifrar el mensaje, en este caso con la del correo de este blog, que hemos importado más arriba. Ya solo queda hacer click en **Transfer** y obtendremos esto:
 

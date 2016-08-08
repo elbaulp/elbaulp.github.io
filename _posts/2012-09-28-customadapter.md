@@ -63,7 +63,7 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
 
 Creando así el aspecto deseado para cada línea del ListView:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px" />][5]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px" />][5]
 
 El primer paso es crear una clase que representará los datos a almacenar:
 

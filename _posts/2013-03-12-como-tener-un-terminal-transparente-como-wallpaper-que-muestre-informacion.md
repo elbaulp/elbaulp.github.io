@@ -46,7 +46,7 @@ $ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
 
 Donde *&#8211;wrap* en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo. *&#8211;bottomup* inserta líneas al final. *&#8211;geometry* establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN\_IZQUIERDO+MARGEN\_SUPERIOR*. Puedes obtener más información consultando la ayuda del programa o su manual.
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/xroot-example-1024x817.jpg" alt="xroot example" width="1024px" height="817px" />][2]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/xroot-example-1024x817.jpg" alt="xroot example" width="1024px" height="817px" />][2]
 
 En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
 

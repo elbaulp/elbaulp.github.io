@@ -225,7 +225,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 Así luce mi escritorio con xmonad:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png" alt="xmonad Desktop" width="1024px" height="409px" />][2]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png" alt="xmonad Desktop" width="1024px" height="409px" />][2]
 
 #### Referencias
 

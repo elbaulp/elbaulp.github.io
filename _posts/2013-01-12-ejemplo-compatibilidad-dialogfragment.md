@@ -95,7 +95,7 @@ Otro aspecto importante de cara a la compatibilidad, es la llamada a `<a href="h
 
 Para comprobar que funciona, lanzamos el emulador, en este caso, con la versión 2.3 de Android:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4" width="180px" height="300px" />][1]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4" width="180px" height="300px" />][1]
 
 El proceso de creación de un **DatePickerDialog** es muy similar.
 
@@ -151,7 +151,7 @@ public void mostrarDialogoDeFecha(View v){
 
 ```
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180px" height="300px" />][2]{.thumbnail}
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180px" height="300px" />][2]
 
 Así de simple, es similar a crear un **timePickerDialog**  
 El código de ejemplo está disponible para descarga:
