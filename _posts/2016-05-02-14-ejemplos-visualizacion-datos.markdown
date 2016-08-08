@@ -1,4 +1,3 @@
-
 ---
 layout: post.amp
 title: 14 Ejemplos De Las Mejores Visualizaciones De Datos
