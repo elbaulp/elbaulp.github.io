@@ -4,37 +4,35 @@ layout: post.amp
 permalink: /diseno-de-bases-de-datos-i-conceptos/
 categories:
   - BaseDeDatos
+modified: 2016-08-08T10:46
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
-<p class="nota">
-<strong>Nota:</strong>Basado en los apuntes de clase
-</p>
-<h2 lang="es">
-  1. Introducción
-</h2>
-<p lang="es">
-  Las bases de datos relacionales se basan en el uso de tablas (también se las llama <strong>relaciones</strong>). Las tablas se representan gráficamente como una estructura rectangular formada por filas y columnas.
-</p>
+
+> Nota: Basado en los apuntes de clase
+
+{% include toc.html %}
+
+## 1. Introducción
+
+Las bases de datos relacionales se basan en el uso de tablas (también se las llama __relaciones__). Las tablas se representan gráficamente como una estructura rectangular formada por filas y columnas.
+
 <!--ad-->
-<p lang="es">
-  Cada fila posee una ocurrencia o ejemplar de la instancia o relación representada por la tabla (a las filas se las llama también <strong>tuplas o registros</strong>).
-</p>
-<p lang="es">
-  Cada columna almacena información sobre una propiedad determinada de la tabla (se le llama también <strong>atributo</strong>), nombre, dni, apellidos, edad,&#8230; Cuando no se conoce el valor de un atributo se le asigna el valor <strong>nulo</strong>. Los valores nulos indican contenidos de atributos que no tienen ningún valor. En claves foráneas indican que el registro actual no está relacionado con ninguno. Las bases de datos relacionales admiten utilizar ese valor en todo tipo de operaciones.
-</p>
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s1600/m.rf1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="57" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s320/m.rf1.png" width="320" /></a>
-</div>
-<h2 lang="es">
-  Conceptos del Modelo Relacional.<br />
-</h2>
-<p lang="es">
-<strong>Relación (Tabla).</strong> Es el elemento central del modelo relacional. Son los objetos principales sobre los que debe recogerse información y generalmente denotan personas, lugares, cosas o eventos de interés. Una relación tiene un nombre, un conjunto de atributos que representan sus propiedades y está formada por un conjunto de tuplas que incluyen los valores que cada uno de los atributos toma para cada una de las tuplas de la relación. Una relación se representa mediante una tabla bidimensional (las columnas representan los atributos y las filas representan las tuplas o registros).
-</p>
-<div >
+
+Cada fila posee una ocurrencia o ejemplar de la instancia o relación representada por la tabla (a las filas se las llama también __tuplas o registros__).
+
+
+Cada columna almacena información sobre una propiedad determinada de la tabla (se le llama también __atributo__), nombre, dni, apellidos, edad,&#8230; Cuando no se conoce el valor de un atributo se le asigna el valor __nulo__. Los valores nulos indican contenidos de atributos que no tienen ningún valor. En claves foráneas indican que el registro actual no está relacionado con ninguno. Las bases de datos relacionales admiten utilizar ese valor en todo tipo de operaciones.
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="57" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TNvmeiTTliI/AAAAAAAAAEc/oeK5KsBvCx4/s320/m.rf1.png" width="320"></amp-img>
+</figure>
+
+##  Conceptos del Modelo Relacional
+
+__Relación (Tabla).__ Es el elemento central del modelo relacional. Son los objetos principales sobre los que debe recogerse información y generalmente denotan personas, lugares, cosas o eventos de interés. Una relación tiene un nombre, un conjunto de atributos que representan sus propiedades y está formada por un conjunto de tuplas que incluyen los valores que cada uno de los atributos toma para cada una de las tuplas de la relación. Una relación se representa mediante una tabla bidimensional (las columnas representan los atributos y las filas representan las tuplas o registros).
+
+<div>
 <table  cellspacing="0">
 <caption>TABLA PROVEEDORES</caption> <tr>
 <td bgcolor="#666666">
@@ -93,7 +91,7 @@ color: "#009688"
 </tr>
 </table>
 </div>
-<div >
+<div>
 <table  cellspacing="0">
 <caption>TABLA ARTICULOS</caption> <tr>
 <td bgcolor="#666666">
@@ -141,44 +139,26 @@ color: "#009688"
 </tr>
 </table>
 </div>
-<p lang="es">
-<strong>- Tupla o registro.</strong> Corresponde a una fila de la tabla. Representa cada una de las ocurrencias de la relación (equivale a lo que conocemos como ocurrencia de un registro, en ficheros clásicos). El número de tuplas se denomina <strong>cardinalidad</strong>, la cardinalidad varía con el tiempo.
-</p>
-<p lang="es">
-<strong>Dominio.</strong> Es una colección de valores, de los cuales uno o más atributos obtienen sus valores reales. Pueden ser finitos ( dias de la semana, meses del año, letras del alfabeto, etc..) o infinitos (números reales, dias del calendario – siempre que no esten limitados por el sistema operativo o el SGBD-, etc..)
-</p>
-<p lang="es">
-<strong>Atributo.</strong> Corresponde a una columna de la tabla (equivale a un campo de un registro) y se definen sobre dominios. El número de atributos se llama grado. El grado no varía con el tiempo, si añadimos un atributo a una relación, podemos considerar que se trata de otra relación nueva.
-</p>
-<p lang="es">
-<strong>Clave candidata</strong> es un atributo K (o conjunto de atributos) de una relación R que cumple dos propiedades:
-</p>
-<p lang="es" >
-<strong>Unicidad:</strong> No existen dos tuplas en R con el mismo valor de K
-</p>
-<p lang="es" >
-<strong>Minimalidad:</strong> Si K es compuesto, no será posible eliminar ningún componente de K sin destruir la propiedad de unicidad.
-</p>
+
+- __Tupla o registro.__ Corresponde a una fila de la tabla. Representa cada una de las ocurrencias de la relación (equivale a lo que conocemos como ocurrencia de un registro, en ficheros clásicos). El número de tuplas se denomina __cardinalidad__, la cardinalidad varía con el tiempo.
+- __Dominio.__ Es una colección de valores, de los cuales uno o más atributos obtienen sus valores reales. Pueden ser finitos ( dias de la semana, meses del año, letras del alfabeto, etc..) o infinitos (números reales, dias del calendario – siempre que no esten limitados por el sistema operativo o el SGBD-, etc..)
+- __Atributo.__ Corresponde a una columna de la tabla (equivale a un campo de un registro) y se definen sobre dominios. El número de atributos se llama grado. El grado no varía con el tiempo, si añadimos un atributo a una relación, podemos considerar que se trata de otra relación nueva.
+- __Clave candidata__ es un atributo K (o conjunto de atributos) de una relación R que cumple dos propiedades:
+- __Unicidad:__ No existen dos tuplas en R con el mismo valor de K
+- __Minimalidad:__ Si K es compuesto, no será posible eliminar ningún componente de K sin destruir la propiedad de unicidad.
 
 Por ejemplo, el atributo compuesto (NIF,LOCALIDAD) no es una clave candidata de la relación PROVEEDORES, ya que podemos eliminar el atributo LOCALIDAD sin destruir la propiedad de unicidad, es decir, siguen sin existir dos tuplas con el mismo valor de NIF.
 
-<p lang="es">
-<strong>Clave primaria.</strong> Es posible que una relación posea más de una clave candidata, en ese caso, se escoge una de ellas como <strong>clave primaria</strong> y el resto se denominan <strong>claves alternativas</strong>. En la práctica la elección de la clave primaria suele ser sencilla. Toda relación, sin excepción, tiene una clave primaria y suele representarse subrayando y/o añadiendo el carácter # al atributo (o conjunto de atributos) correspondiente.
-</p>
-<p lang="es" >
-  Por ejemplo: Artículos( código#, concepto)
-</p>
-<p lang="es">
-<strong>Clave foránea, ajena o extranjera</strong> es un atributo (o conjunto de atributos) de una relación R1 que a la vez es clave primaria de otra relación R2. Se utiliza para referenciar a la tupla de R2 cuya clave primaria coincida con el valor de la clave foránea de R1. Ambas claves deben definirse sobre el mismo dominio.
-</p>
+- __Clave primaria.__ Es posible que una relación posea más de una clave candidata, en ese caso, se escoge una de ellas como __clave primaria__ y el resto se denominan __claves alternativas__. En la práctica la elección de la clave primaria suele ser sencilla. Toda relación, sin excepción, tiene una clave primaria y suele representarse subrayando y/o añadiendo el carácter # al atributo (o conjunto de atributos) correspondiente.
+
+Por ejemplo: `Artículos( código#, concepto)`
+- __Clave foránea, ajena o extranjera__ es un atributo (o conjunto de atributos) de una relación R1 que a la vez es clave primaria de otra relación R2. Se utiliza para referenciar a la tupla de R2 cuya clave primaria coincida con el valor de la clave foránea de R1. Ambas claves deben definirse sobre el mismo dominio.
 
 Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya que se utiliza para referenciar a una tupla de PROVEEDORES mediante la clave primaria NIF.
 
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s1600/m.rf2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="230" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320" /></a>
-</div>
-
-
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="230" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s320/m.rf2.png" width="320"></amp-img>
+</figure>
 
 #### Siguiente tema:[Diseño de Bases de Datos ( II ) &#8211; Restricciones][1] {.referencia}
 
@@ -186,4 +166,4 @@ Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya q
 
  [1]: https://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/
 
-{% include toc.html %}
+
