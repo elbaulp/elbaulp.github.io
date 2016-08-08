@@ -108,7 +108,7 @@ En vez de configurarlo manualmente, también podemos usar Tor Browser Bundle, el
 Este script primero inicia Vidalia, que es un QT frontend para Tor y se ve así:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284px" height="300px"><amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284px" height="300px"></amp-img>
 </figure>
 
 En esta imagen podemos ver que nos conectamos exitosamente a la red Tor (se conecta cuando se inicia Vidalia). Si clickeamos en &#8220;View the Network&#8221; (Ver la Red), obtendremos una lista de todos los nodos online que la red Tor está usando &#8211; esto puede estar más actualizado en <a href="http://torstatus.all.de/index.php?SR=Bandwidth&SO=Desc" target="_blank">Nodos Tor</a>.
