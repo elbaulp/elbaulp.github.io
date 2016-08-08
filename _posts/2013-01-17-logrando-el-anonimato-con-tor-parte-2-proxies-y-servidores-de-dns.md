@@ -85,7 +85,7 @@ Es posible intentar *torificar* la aplicación de resolución de DNS que utiliza
 
 Se pueden observar todos los pasos necesarios para empezar a enviar la información del servidor al cliente. Parece no ser mucho si no se presta atención. En el paso C, se envía el comando PORT, el cual es la raiz de los problemas para anonimizar. El comando PORT usa un formato como el siguiente:
 
-PORT x,x,x,x,y,y donde x representa la IP del cliente y la y representa el puerto elegido que puede ser usado para la transferencia de datos. Por lo tanto en este caso el cliente revela su dirección IP perdiendo así su anonimato. Casos como estos hay que tener en cuenta al momento de *torificar *una aplicación.
+PORT x,x,x,x,y,y donde x representa la IP del cliente y la y representa el puerto elegido que puede ser usado para la transferencia de datos. Por lo tanto en este caso el cliente revela su dirección IP perdiendo así su anonimato. Casos como estos hay que tener en cuenta al momento de *torificar* una aplicación.
 
 No está relacionado directamente con el esquema de resolución de DNS, pero vale la pena nombrarlo ya que está relacionado con la utilización de Tor en una aplicación.
 
@@ -208,7 +208,7 @@ Esto efectivamente loggea todos los mensajes al archivo /varlog/tor/tor.
 
 ### KeepAlivePeriod
 
-  * Especifica el tiempo que usa Tor para enviar *keepalives *para mantener la conexión abierta.
+  * Especifica el tiempo que usa Tor para enviar *keepalives* para mantener la conexión abierta.
 
 ### ControlPort
 
