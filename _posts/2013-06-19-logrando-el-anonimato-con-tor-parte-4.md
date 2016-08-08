@@ -10,6 +10,7 @@ tags:
   - navegar anonimamente
   - Tor
 modified: 2016-08-08T18:00
+image: 2013/06/081712_1525_AchievingAn4.png
 author: luzila
 main-class: "articulos"
 color: "#F57C00"
@@ -64,11 +65,11 @@ Podemos ver que hay un par de opciones que podemos configurar:
 * “Contact Info”: nuestra información de contacto si algo sale mal, por lo que los desarrolladores pueden contactarnos. En este caso se omitió la información en la imagen.
 * “Attempt to automatically configure port forwarding”: Si clickeamos en el botón Test, automáticamente testeará si tenemos los puertos abiertos en nuestro firewall que probablemente tengamos levantado en nuestro router.  Para la mayoría de los usuarios domésticos, este testeo fallará debido a que los puertos no estarán abiertos. Para lograr que no falle deben abrirse. La funcionalidad del boton Test puede además automáticamente detectar la presencia de otros puertos abiertos y usarlos para transmitir el tráfico. Pero notemos cuáles puertos deberían estar abiertos por defecto, con esta opción desactivada. Lo mínimo que necesitamos abierto es el puerto 9001 para relay, como se puede ver en la imagen anterior. Si habilitamos la reflexión de ese directorio (activando &#8220;Mirror the Relay Directory&#8221;) entonces necesitaremos también abrir el puerto 9030.
 
-### ** Bandwidth Limits:**
+### **Bandwidth Limits:**
 
 Cuánto ancho de banda queremos separar para Tor.
 
-### ** Exit Policies:**
+### **Exit Policies:**
 
 Configura los servicios que queremos que los clientes accedan a través de nuestro Tor relay. Podemos elegir de:  websites (port 80), secure websites (port 443), mail systems (ports 110, 143, 25), instant messaging, IRC y otros servicios.
 
