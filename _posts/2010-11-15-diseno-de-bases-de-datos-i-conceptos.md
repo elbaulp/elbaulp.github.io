@@ -32,7 +32,6 @@ Cada columna almacena información sobre una propiedad determinada de la tabla (
 
 __Relación (Tabla).__ Es el elemento central del modelo relacional. Son los objetos principales sobre los que debe recogerse información y generalmente denotan personas, lugares, cosas o eventos de interés. Una relación tiene un nombre, un conjunto de atributos que representan sus propiedades y está formada por un conjunto de tuplas que incluyen los valores que cada uno de los atributos toma para cada una de las tuplas de la relación. Una relación se representa mediante una tabla bidimensional (las columnas representan los atributos y las filas representan las tuplas o registros).
 
-<div>
 <table  cellspacing="0">
 <caption>TABLA PROVEEDORES</caption> <tr>
 <td bgcolor="#666666">
@@ -90,8 +89,7 @@ __Relación (Tabla).__ Es el elemento central del modelo relacional. Son los obj
       </td>
 </tr>
 </table>
-</div>
-<div>
+
 <table  cellspacing="0">
 <caption>TABLA ARTICULOS</caption> <tr>
 <td bgcolor="#666666">
@@ -138,7 +136,7 @@ __Relación (Tabla).__ Es el elemento central del modelo relacional. Son los obj
       </td>
 </tr>
 </table>
-</div>
+
 
 - __Tupla o registro.__ Corresponde a una fila de la tabla. Representa cada una de las ocurrencias de la relación (equivale a lo que conocemos como ocurrencia de un registro, en ficheros clásicos). El número de tuplas se denomina __cardinalidad__, la cardinalidad varía con el tiempo.
 - __Dominio.__ Es una colección de valores, de los cuales uno o más atributos obtienen sus valores reales. Pueden ser finitos ( dias de la semana, meses del año, letras del alfabeto, etc..) o infinitos (números reales, dias del calendario – siempre que no esten limitados por el sistema operativo o el SGBD-, etc..)
