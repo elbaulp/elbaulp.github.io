@@ -27,7 +27,7 @@ Es muy importante implementar bien los métodos de estado, para evitar perden in
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Trabajar con actividades y pasar parámetros entre ellas][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Trabajar con actividades y pasar parámetros entre ellas][1] 
 
 
 

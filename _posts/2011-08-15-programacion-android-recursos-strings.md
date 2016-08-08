@@ -98,7 +98,7 @@ public final class R {
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Layout][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Layout][1] 
 
 
 

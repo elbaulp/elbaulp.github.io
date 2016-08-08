@@ -164,7 +164,7 @@ En este archivo se definen el paquete por defecto, datos de versión, icono (med
 
 * * *
 
-#### Siguiente tema: [Fundamentos programación Android: Conceptos básicos y componentes][5] {.referencia}
+#### Siguiente tema: [Fundamentos programación Android: Conceptos básicos y componentes][5] 
 
 
 

@@ -245,7 +245,7 @@ Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invo
 
 * * *
 
-#### Siguiente Tema: [Intents &#8211; Categorías][5] {.referencia}
+#### Siguiente Tema: [Intents &#8211; Categorías][5] 
 
 
 

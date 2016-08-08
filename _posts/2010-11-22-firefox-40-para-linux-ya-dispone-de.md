@@ -25,7 +25,7 @@ Una vez lo tengamos en ejecución, **podremos ir a View->Toolbars** y podremos d
 
 * * *
 
-#### Fuente: <a href="http://www.muylinux.com/2010/11/22/firefox-4-0-para-linux-ya-dispone-de-menu-unificado" target="_blank">MuyLinux.com</a> {.referencia}
+#### Fuente: <a href="http://www.muylinux.com/2010/11/22/firefox-4-0-para-linux-ya-dispone-de-menu-unificado" target="_blank">MuyLinux.com</a> 
 
 
 

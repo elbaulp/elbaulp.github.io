@@ -98,7 +98,7 @@ Te preguntarás qué método usar en según que situación. Por convención se s
 
 * * *
 
-#### Siguiente Tema: [Insertando registros][3] {.referencia}
+#### Siguiente Tema: [Insertando registros][3] 
 
 
 

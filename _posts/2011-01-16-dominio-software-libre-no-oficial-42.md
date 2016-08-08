@@ -20,7 +20,7 @@ Los creadores de este proyecto pretenden crear un Internet abierto, orientado ha
 
 * * *
 
-#### Fuente: [MuyLinux][2] {.referencia}
+#### Fuente: [MuyLinux][2] 
 
 
 

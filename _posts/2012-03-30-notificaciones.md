@@ -194,7 +194,7 @@ Se puede descargar el proyecto de esta entrada aquí:
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Estilos y Temas][2] {.referencia}
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Estilos y Temas][2] 
 
  [1]: /guia-de-desarrollo-android
  [2]: /programacion-android-interfaz-grafica_18/

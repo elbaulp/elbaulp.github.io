@@ -125,7 +125,7 @@ DCL (Data Control Language) Se encarga del control de accesos y privilegios entr
   </p>
 </div>
 
-#### Siguiente tema: [Componentes del lenguaje SQL][1] {.referencia}
+#### Siguiente tema: [Componentes del lenguaje SQL][1] 
 
 
 

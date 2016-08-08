@@ -530,7 +530,7 @@ color: "#009688"
     programador tiene que recorrer la base de datos registro a registro, especificando esta vez la direcci&oacute;n y la relaci&oacute;n a recorrer.
   * **Relacional:** pr&aacute;cticamente es el m&aacute;s extendido en la actualidad, ser&aacute; el que seguiremos en este m&oacute;dulo, y al que dedicaremos un tema posteriormente.
 
-#### Siguiente tema: [Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional][1] {.referencia}
+#### Siguiente tema: [Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional][1] 
 
 
 

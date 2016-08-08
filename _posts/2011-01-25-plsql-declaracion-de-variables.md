@@ -67,7 +67,7 @@ Un bloque tiene acceso a los objetos identificados dentro de su esquema. Solo po
 
 * * *
 
-#### Siguiente Tema: [PL/SQL &#8211; Estructuras básicas de control][1] {.referencia}
+#### Siguiente Tema: [PL/SQL &#8211; Estructuras básicas de control][1] 
 
 
 

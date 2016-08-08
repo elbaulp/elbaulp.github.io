@@ -80,7 +80,7 @@ Lo que hacemos en el código de arriba es obtener el XmlPullParser, usarlo para 
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos RAW][2] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos RAW][2] 
 
 
 

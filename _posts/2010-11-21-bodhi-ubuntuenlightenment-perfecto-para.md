@@ -33,7 +33,7 @@ Y la otra gran característica es la que habla de sus requisitos hardware: **bas
 
 * * *
 
-#### Fuente: <a href="http://www.muylinux.com/2010/11/20/bodhi-ubuntuenlightenment-perfecto-para-minimalistas" target="_blank">MuyLinux.com</a> {.referencia}
+#### Fuente: <a href="http://www.muylinux.com/2010/11/20/bodhi-ubuntuenlightenment-perfecto-para-minimalistas" target="_blank">MuyLinux.com</a> 
 
 
 

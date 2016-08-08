@@ -37,7 +37,7 @@ En resumen, en el siguiente listado muestra la estructura global del directorio 
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Recursos y cambios de configuración][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Recursos y cambios de configuración][1] 
 
 
 

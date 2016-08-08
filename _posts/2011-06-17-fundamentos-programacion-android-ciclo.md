@@ -75,7 +75,7 @@ A continuación el diagrama con el ciclo de vida de los servicios:
 
 * * *
 
-#### Siguiente Tema: [Fundamentos programación Android: Limpieza de Procesos][1] {.referencia}
+#### Siguiente Tema: [Fundamentos programación Android: Limpieza de Procesos][1] 
 
 
 

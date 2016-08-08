@@ -34,7 +34,7 @@ sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libs
 
 [lazyfoo.net][4]
 
-#### Siguiente tema: [Lección 1.2 &#8211; Hello World][5] {.referencia}
+#### Siguiente tema: [Lección 1.2 &#8211; Hello World][5] 
 
 
 

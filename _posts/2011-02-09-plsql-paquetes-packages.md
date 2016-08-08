@@ -146,7 +146,7 @@ PL/SQL nos permite que varios procedimientos o funciones almacenadas, declaradas
 
 * * *
 
-#### Siguiente tema: [PL/SQL &#8211; Disparadores o Triggers][5] {.referencia}
+#### Siguiente tema: [PL/SQL &#8211; Disparadores o Triggers][5] 
 
 
 

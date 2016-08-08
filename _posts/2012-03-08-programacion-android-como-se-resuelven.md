@@ -60,7 +60,7 @@ Si una actividad no tiene declarada la categoría por defecto, pero conocemos su
 
 * * *
 
-#### Siguiente Tema: [Ejemplo de uso de ACTION_PICK][3] {.referencia}
+#### Siguiente Tema: [Ejemplo de uso de ACTION_PICK][3] 
 
 
 

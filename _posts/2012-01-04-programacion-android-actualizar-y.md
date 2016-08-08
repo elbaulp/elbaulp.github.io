@@ -50,7 +50,7 @@ Casi todas las llamadas que se hacen desde *managedQuery* y *ContentResolver* se
 
 * * *
 
-#### Siguiente Tema: [Implementando un Content Provider (Parte 1)][4] {.referencia}
+#### Siguiente Tema: [Implementando un Content Provider (Parte 1)][4] 
 
 
 

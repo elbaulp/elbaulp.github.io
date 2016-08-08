@@ -88,7 +88,7 @@ Si quisiéramos invocar un intent para volver a la pantalla principal, basta con
 
 * * *
 
-#### Siguiente Tema: [Cómo se resuelven los Intents][2] {.referencia}
+#### Siguiente Tema: [Cómo se resuelven los Intents][2] 
 
 
 

@@ -105,7 +105,7 @@ El código usa el flujo de salida para escribir.
 
 * * *
 
-#### Siguiente Tema: [Actualizar y borrar registros][5] {.referencia}
+#### Siguiente Tema: [Actualizar y borrar registros][5] 
 
 
 

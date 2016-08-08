@@ -44,7 +44,7 @@ for (String s: strings)
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Plurales][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Plurales][1] 
 
 
 

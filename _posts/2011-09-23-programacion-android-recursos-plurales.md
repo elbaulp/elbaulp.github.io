@@ -173,7 +173,7 @@ En la mayoria de los idiomas normalmente hay dos posibles valores, &#8220;one&#8
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios][1] 
 
 
 

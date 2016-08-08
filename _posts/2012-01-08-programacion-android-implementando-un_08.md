@@ -203,7 +203,7 @@ public class SitesProvider extends ContentProvider{
 
 * * *
 
-#### Siguiente Tema: [Implementando un Content Provider (Parte 3)][7] {.referencia}
+#### Siguiente Tema: [Implementando un Content Provider (Parte 3)][7] 
 
 
 

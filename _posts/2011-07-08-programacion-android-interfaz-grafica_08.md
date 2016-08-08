@@ -166,7 +166,7 @@ Espero que os sirva de ayuda.
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones][3] {.referencia}
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones][3] 
 
  [1]: http://developer.android.com/guide/topics/ui/menus.html
  [2]: http://devgui-android-es.netii.net/descargar.php?archivo=menus.zip&sub;=android

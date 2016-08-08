@@ -144,7 +144,7 @@ END;
 
 * * *
 
-#### Siguiente tema: [PL/SQL &#8211; Paquetes (Packages)][3] {.referencia}
+#### Siguiente tema: [PL/SQL &#8211; Paquetes (Packages)][3] 
 
 
 

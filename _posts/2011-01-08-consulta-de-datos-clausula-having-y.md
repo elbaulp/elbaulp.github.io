@@ -58,7 +58,7 @@ Los valores nulos se consideran como los más pequeños posibles.
 
 * * *
 
-#### Siguiente Tema: [Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.][1] {.referencia}
+#### Siguiente Tema: [Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.][1] 
 
 
 

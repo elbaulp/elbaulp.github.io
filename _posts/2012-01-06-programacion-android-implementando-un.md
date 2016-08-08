@@ -176,7 +176,7 @@ Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la c
 
 * * *
 
-#### Siguiente Tema: [Implementando un Content Provider (Parte 2)][7] {.referencia}
+#### Siguiente Tema: [Implementando un Content Provider (Parte 2)][7] 
 
 
 

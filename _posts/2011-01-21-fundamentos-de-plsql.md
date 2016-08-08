@@ -86,7 +86,7 @@ END;
 
 * * *
 
-#### Siguiente Tema: [Bloques PL/SQL][3] {.referencia}
+#### Siguiente Tema: [Bloques PL/SQL][3] 
 
 
 

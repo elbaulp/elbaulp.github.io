@@ -91,7 +91,7 @@ Para saber más acerca de todos los tipos de layouts que hay podéis visitar <ht
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Componentes gráficos y Eventos][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Componentes gráficos y Eventos][1] 
 
 
 

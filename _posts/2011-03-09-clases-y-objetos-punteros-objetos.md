@@ -93,7 +93,7 @@ delete ptro_pt;   //llama al destructor
 
 * * *
 
-#### Siguiente tema: [Clases y Objetos &#8211; Arrays][1] {.referencia}
+#### Siguiente tema: [Clases y Objetos &#8211; Arrays][1] 
 
 
 

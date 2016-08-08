@@ -29,7 +29,7 @@ Para otras distros Linux basta con descargar [Grub Customizer en Launchpad][3], 
 
 * * *
 
-#### Fuente: <a href="http://www.muylinux.com/2010/11/22/grub-customizer-2-0-personaliza-tu-grub2" target="_blank"> MuyLinux.com </a> {.referencia}
+#### Fuente: <a href="http://www.muylinux.com/2010/11/22/grub-customizer-2-0-personaliza-tu-grub2" target="_blank"> MuyLinux.com </a> 
 
 
 

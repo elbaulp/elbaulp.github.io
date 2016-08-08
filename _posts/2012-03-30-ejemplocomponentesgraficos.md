@@ -158,7 +158,7 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters I][3] {.referencia}
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters I][3] 
 
  [1]: /programacion-android-interfaz-grafica/
  [2]: /programacion-android-interfaz-grafica_23/

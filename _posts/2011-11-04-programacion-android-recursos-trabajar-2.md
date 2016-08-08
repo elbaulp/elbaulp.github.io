@@ -52,7 +52,7 @@ private String convertStreamToString(InputStream is)
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos Assets][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos Assets][1] 
 
 
 

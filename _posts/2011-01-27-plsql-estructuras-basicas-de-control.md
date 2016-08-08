@@ -257,7 +257,7 @@ En el caso de especificar REVERSE el bucle se recorre en sentido inverso.
 
 * * *
 
-#### Siguiente tema: [PL/SQL &#8211; Excepciones][1] {.referencia}
+#### Siguiente tema: [PL/SQL &#8211; Excepciones][1] 
 
 
 

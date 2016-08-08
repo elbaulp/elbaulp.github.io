@@ -47,7 +47,7 @@ Cada componente tiene su propia etiqueta xml:
 
 * * *
 
-#### Siguiente Tema: [Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos][1] {.referencia}
+#### Siguiente Tema: [Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos][1] 
 
 
 

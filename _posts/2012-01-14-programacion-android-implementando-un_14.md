@@ -154,7 +154,7 @@ qb.setProjectionMap(sSitesProjectionMap);
 
 * * *
 
-#### Siguiente Tema: [Implementando un Content Provider (Parte 4)][8] {.referencia}
+#### Siguiente Tema: [Implementando un Content Provider (Parte 4)][8] 
 
 
 

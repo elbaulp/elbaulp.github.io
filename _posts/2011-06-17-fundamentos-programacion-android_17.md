@@ -80,7 +80,7 @@ Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en 
 
 * * *
 
-#### Siguiente Tema: [Fundamentos programación Android: Ciclo de vida de los componentes][2] {.referencia}
+#### Siguiente Tema: [Fundamentos programación Android: Ciclo de vida de los componentes][2] 
 
 
 

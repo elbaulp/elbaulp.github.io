@@ -71,7 +71,7 @@ Podemos acceder al contexto de diferentes formas en función de donde nos encont
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Layouts][3] {.referencia}
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Layouts][3] 
 
  [1]: /programacion-android-trabajar-con/
  [2]: /fundamentos-programacion-android_16/

@@ -17,7 +17,7 @@ Escribir algo en el cuadro de búsqueda, y disfrutad de la presentación.
 
 
 
-#### Fuente: <a target="_blank" href="http://oloblogger.blogspot.com">oloblogger</a> {.referencia}
+#### Fuente: <a target="_blank" href="http://oloblogger.blogspot.com">oloblogger</a> 
 
 
 

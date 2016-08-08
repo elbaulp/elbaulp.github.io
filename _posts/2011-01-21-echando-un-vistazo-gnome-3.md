@@ -35,7 +35,7 @@ De momento no hay versión alpha que probar, pero ya sabéis que hace meses que 
 
 * * *
 
-#### Fuente: [MuyLinux][1] {.referencia}
+#### Fuente: [MuyLinux][1] 
 
 
 

@@ -104,7 +104,7 @@ pre lang=&#8221;xml&#8221;>
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Strings][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Strings][1] 
 
  [1]: /programacion-android-recursos-strings/
 

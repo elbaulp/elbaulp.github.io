@@ -47,7 +47,7 @@ Para saber más acerca de los tipos de sufijos que se pueden usar, visita [Provi
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Usando recursos][2] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Usando recursos][2] 
 
 
 

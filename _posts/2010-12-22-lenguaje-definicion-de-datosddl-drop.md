@@ -45,7 +45,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.
 
 * * *
 
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE][2] {.referencia}
+#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE][2] 
 
 
 

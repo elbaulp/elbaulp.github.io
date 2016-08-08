@@ -24,7 +24,7 @@ Os dejo un vídeo que explica un poco como es este nuevo Sistema Operativo.
 
 * * *
 
-#### Fuente: <a target="_blank" href="http://www.muylinux.com/">MuyLinux</a> {.referencia}
+#### Fuente: <a target="_blank" href="http://www.muylinux.com/">MuyLinux</a> 
 
 
 

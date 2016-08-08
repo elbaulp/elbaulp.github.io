@@ -129,7 +129,7 @@ objs--;          //retrocede a objs[1]
 
 * * *
 
-#### [Clases y Objetos &#8211; Pasar un objeto a una función][1] {.referencia}
+#### [Clases y Objetos &#8211; Pasar un objeto a una función][1] 
 
 
 

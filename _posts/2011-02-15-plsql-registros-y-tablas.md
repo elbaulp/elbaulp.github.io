@@ -85,7 +85,7 @@ DECLARE
 
 * * *
 
-#### Siguiente tema: [Tunning básico de SQL][2] {.referencia}
+#### Siguiente tema: [Tunning básico de SQL][2] 
 
 
 

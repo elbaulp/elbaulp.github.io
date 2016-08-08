@@ -78,7 +78,7 @@ content://contacts/people/23
 
 * * *
 
-#### Siguiente Tema: [Proveedores de Contenidos &#8211; Leer datos mediante URIs][5] {.referencia}
+#### Siguiente Tema: [Proveedores de Contenidos &#8211; Leer datos mediante URIs][5] 
 
 
 

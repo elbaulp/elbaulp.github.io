@@ -33,7 +33,7 @@ String getStringFromAssetFile(Context activity)
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos][1] 
 
 
 

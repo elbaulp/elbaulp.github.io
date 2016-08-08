@@ -69,7 +69,7 @@ Para mostrar el contenido de una expresión se debe utilizar la sentencia:
 DBMS_OUTPUT.PUT_LINE (cadena_caracteres);
 ```
 
-#### Siguiente Tema: [PL/SQL &#8211; Declaración de variables][1] {.referencia}
+#### Siguiente Tema: [PL/SQL &#8211; Declaración de variables][1] 
 
 
 

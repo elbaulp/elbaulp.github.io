@@ -180,7 +180,7 @@ El ejemplo de esta entrada esta disponible para su descarga:
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters II][2] {.referencia}
+#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters II][2] 
 
  [1]: /programacion-android-interfaz-grafica_25/
  [2]: /programacion-android-interfaz-grafica-2/

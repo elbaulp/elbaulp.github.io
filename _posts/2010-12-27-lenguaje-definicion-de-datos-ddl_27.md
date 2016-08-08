@@ -65,7 +65,7 @@ SELECT USER FROM DUAL;
 SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;
 ```
 
-#### Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] {.referencia}
+#### Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] 
 
 
 

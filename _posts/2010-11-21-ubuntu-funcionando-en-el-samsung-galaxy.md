@@ -24,7 +24,7 @@ Parece que [no es demasiado difícil][3] conseguir este objetivo, así que si so
 
 * * *
 
-#### Fuente: <a href="http://www.muylinux.com/2010/11/20/ubuntu-funcionando-en-el-samsung-galaxy-tab" target="_blank">MuyLinux.com</a> {.referencia}
+#### Fuente: <a href="http://www.muylinux.com/2010/11/20/ubuntu-funcionando-en-el-samsung-galaxy-tab" target="_blank">MuyLinux.com</a> 
 
 
 

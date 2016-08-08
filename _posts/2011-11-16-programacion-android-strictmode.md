@@ -142,7 +142,7 @@ try{
 
 * * *
 
-#### Siguiente Tema: [Proveedores de Contenido &#8211; Introducción][5] {.referencia}
+#### Siguiente Tema: [Proveedores de Contenido &#8211; Introducción][5] 
 
 
 

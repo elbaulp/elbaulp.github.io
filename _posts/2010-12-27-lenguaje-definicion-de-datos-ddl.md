@@ -92,7 +92,7 @@ SELECT employee_id, last_name FROM employees WHERE last_name = 'Valdivia';
 
 ```
 
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas][1] {.referencia}
+#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas][1] 
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
 

@@ -34,7 +34,7 @@ de la clase, si consta de un pequeño número de sentencias.
 
 * * *
 
-#### Siguiente tema: [Clases y Objetos &#8211; Punteros a objetos][1] {.referencia}
+#### Siguiente tema: [Clases y Objetos &#8211; Punteros a objetos][1] 
 
 
 

@@ -255,7 +255,7 @@ Hay otras maneras de controlar eventos como SDL\_WaitEvent() y SDL\_PeepEvents()
 
 [lazyfoo.net][3]
 
-#### Siguiente tema: [Lección 5 &#8211; Colores Clave][4] {.referencia}
+#### Siguiente tema: [Lección 5 &#8211; Colores Clave][4] 
 
 
 

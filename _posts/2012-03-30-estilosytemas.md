@@ -119,7 +119,7 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Introducción][2] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos &#8211; Introducción][2] 
 
  [1]: http://developer.android.com/guide/topics/ui/themes.html
  [2]: /programacion-android-recursos/

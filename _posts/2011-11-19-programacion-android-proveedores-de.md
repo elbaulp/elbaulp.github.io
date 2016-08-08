@@ -51,7 +51,7 @@ Estrictamente hablando, la responsabilidad de los CV abarcan más mecanismos de 
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Arquitectura de los Proveedore de contenidos][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Arquitectura de los Proveedore de contenidos][1] 
 
 
 

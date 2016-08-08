@@ -59,7 +59,7 @@ color: "#F57C00"
 
 * * *
 
-#### Source: <a href="http://jeffhoogland.blogspot.com/2010/11/announcing-bodhi-linux.html" target="_blank">jeffhoogland.blogspot.com</a> {.referencia}
+#### Source: <a href="http://jeffhoogland.blogspot.com/2010/11/announcing-bodhi-linux.html" target="_blank">jeffhoogland.blogspot.com</a> 
 
 
 

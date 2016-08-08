@@ -140,7 +140,7 @@ FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 
 ```
 
-#### Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] {.referencia}
+#### Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] 
 
 
 

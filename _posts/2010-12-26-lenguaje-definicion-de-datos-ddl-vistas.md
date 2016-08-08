@@ -58,7 +58,7 @@ La orden para borrar una vista es DROP VIEW. Su sintaxis es:
 DROP VIEW Nombre_vista
 ```
 
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias][2] {.referencia}
+#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias][2] 
 
 
 

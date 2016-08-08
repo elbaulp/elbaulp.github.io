@@ -84,7 +84,7 @@ Un lector de correo podría disponer de un ContentProvider para acceder a la ban
 
 * * *
 
-#### Siguiente tema: [Fundamentos programación Android: Intents y AndroidManifest][2] {.referencia}
+#### Siguiente tema: [Fundamentos programación Android: Intents y AndroidManifest][2] 
 
 
 

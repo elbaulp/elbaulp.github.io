@@ -81,7 +81,7 @@ END;
 
 * * *
 
-#### Siguiente Tema: [Fundamentos de PL/SQL][2] {.referencia}
+#### Siguiente Tema: [Fundamentos de PL/SQL][2] 
 
 
 

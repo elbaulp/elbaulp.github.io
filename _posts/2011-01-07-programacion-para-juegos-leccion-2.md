@@ -303,7 +303,7 @@ Ya que hemos terminado nuestro programa, usamos SDL_FreeSurface() para eliminar 
 
 [lazyfoo.net][3]
 
-#### Siguiente tema: [Programación para Juegos &#8211; Lección 3 Librerías de SDL][4] {.referencia}
+#### Siguiente tema: [Programación para Juegos &#8211; Lección 3 Librerías de SDL][4] 
 
 
 

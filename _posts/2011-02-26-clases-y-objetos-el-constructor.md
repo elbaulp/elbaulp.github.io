@@ -160,7 +160,7 @@ def.ocultar();
 
 * * *
 
-#### Siguiente tema: [Clases y Objetos &#8211; El Destructor][2] {.referencia}
+#### Siguiente tema: [Clases y Objetos &#8211; El Destructor][2] 
 
 
 

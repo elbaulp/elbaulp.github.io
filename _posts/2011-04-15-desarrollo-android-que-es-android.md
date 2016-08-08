@@ -168,7 +168,7 @@ color: "#689F38"
 
 * * *
 
-#### Siguiente: [Fundamentos aplicaciones Android &#8211; (Parte I)][1] {.referencia}
+#### Siguiente: [Fundamentos aplicaciones Android &#8211; (Parte I)][1] 
 
 
 

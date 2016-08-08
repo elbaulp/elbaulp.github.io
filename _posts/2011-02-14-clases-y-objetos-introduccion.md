@@ -73,7 +73,7 @@ scanf (“%d”, &i;);
 
 * * *
 
-#### Siguiente tema: [Clases y Objetos &#8211; Definir una Clase][2] {.referencia}
+#### Siguiente tema: [Clases y Objetos &#8211; Definir una Clase][2] 
 
 
 

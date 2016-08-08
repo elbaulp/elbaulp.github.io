@@ -106,7 +106,7 @@ componente en particular. El sistema activará el componente por ti.
 
 * * *
 
-#### Siguiente: [Fundamentos aplicaciones Android &#8211; (Parte III) -Activando Componentes][6] {.referencia}
+#### Siguiente: [Fundamentos aplicaciones Android &#8211; (Parte III) -Activando Componentes][6] 
 
 
 

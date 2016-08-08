@@ -110,7 +110,7 @@ Los más utilizados son:
 
 * * *
 
-#### Siguiente Tema: [Consulta de Datos &#8211; Cláusula HAVING y ORDER BY][1] {.referencia}
+#### Siguiente Tema: [Consulta de Datos &#8211; Cláusula HAVING y ORDER BY][1] 
 
 
 

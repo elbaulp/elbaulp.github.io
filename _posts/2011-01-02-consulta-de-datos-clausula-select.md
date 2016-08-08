@@ -128,7 +128,7 @@ pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.
 
 * * *
 
-#### Siguiente Tema: [Consulta de Datos &#8211; Cláusula FROM][2] {.referencia}
+#### Siguiente Tema: [Consulta de Datos &#8211; Cláusula FROM][2] 
 
 
 

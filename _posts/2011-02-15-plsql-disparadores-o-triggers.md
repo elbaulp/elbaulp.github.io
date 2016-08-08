@@ -345,7 +345,7 @@ Si queremos conocer los valores del registro de la tabla sobre la que se ha disp
 
 * * *
 
-#### Siguiente tema: [PL/SQL &#8211; Registros y Tablas][8] {.referencia}
+#### Siguiente tema: [PL/SQL &#8211; Registros y Tablas][8] 
 
 
 

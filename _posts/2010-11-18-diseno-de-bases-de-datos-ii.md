@@ -151,7 +151,7 @@ color: "#009688"
 </ol>
 </div>
 
-#### Siguiente tema: [Introducción SQL][1] {.referencia}
+#### Siguiente tema: [Introducción SQL][1] 
 
 
 

@@ -53,7 +53,7 @@ class Punto{
 
 * * *
 
-#### Siguiente tema: [Clases y Objetos - Control del acceso a los miembros de la clase][3] {.referencia}
+#### Siguiente tema: [Clases y Objetos - Control del acceso a los miembros de la clase][3] 
 
 
 

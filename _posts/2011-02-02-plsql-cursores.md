@@ -350,7 +350,7 @@ END;
 
 * * *
 
-#### Siguiente tema: [PL/SQL &#8211; Procedimientos y Funciones][5] {.referencia}
+#### Siguiente tema: [PL/SQL &#8211; Procedimientos y Funciones][5] 
 
 
 

@@ -74,7 +74,7 @@ En la sintaxis “@+id/text”, el signo + tiene un significado especial. Le dic
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos compilados y no compilados][1] {.referencia}
+#### Siguiente Tema: [Programación Android: Recursos compilados y no compilados][1] 
 
 
 

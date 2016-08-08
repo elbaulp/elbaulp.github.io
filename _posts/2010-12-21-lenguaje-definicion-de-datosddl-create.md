@@ -152,7 +152,7 @@ DESCRIBE nombre_tabla;
 
 ```
 
-    #### Siguiente Tema: [Data Definition Language(DDL) &#8211; DROP.][1] {.referencia}
+    #### Siguiente Tema: [Data Definition Language(DDL) &#8211; DROP.][1] 
 
 
 

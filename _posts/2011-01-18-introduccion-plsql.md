@@ -32,7 +32,7 @@ PL/SQL soporta todos los comandos de consulta y manipulación de datos, aportand
 
 * * *
 
-#### Siguiente Tema: [Introducción a PL/SQL &#8211; Transacciones][4] {.referencia}
+#### Siguiente Tema: [Introducción a PL/SQL &#8211; Transacciones][4] 
 
 
 

@@ -157,7 +157,7 @@ y el resultado después de ejecutar la sentencia MERGE sería:
 
 * * *
 
-#### Siguiente Tema: [Consulta de Datos &#8211; Cláusula Select][7] {.referencia}
+#### Siguiente Tema: [Consulta de Datos &#8211; Cláusula Select][7] 
 
 
 

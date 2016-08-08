@@ -71,7 +71,7 @@ SELECT product_id FROM order_items;
 
 * * *
 
-#### Siguiente Tema: [Consulta de Datos &#8211; Subconsultas.][1] {.referencia}
+#### Siguiente Tema: [Consulta de Datos &#8211; Subconsultas.][1] 
 
 
 

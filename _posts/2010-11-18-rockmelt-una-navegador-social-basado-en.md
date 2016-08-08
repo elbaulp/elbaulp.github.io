@@ -26,7 +26,7 @@ También dispone de una ventana de chat y sus responsables dicen que es en&nbsp;
 
 Ya os contaremos cuando lo probemos, aunque veremos si este desarrollo puede ofrecer características diferenciadoras frente a [Flock, un navegador social también basado en Chromium][3] que lleva estando disponible desde 2005, y que **precisamente tenía el objetivo de convertirse en el navegador social** por excelencia.
 
-#### Fuente: <a href="http://www.muylinux.com" target="_blank">www.muylinux.com</a> {.referencia}
+#### Fuente: <a href="http://www.muylinux.com" target="_blank">www.muylinux.com</a> 
 
 
 

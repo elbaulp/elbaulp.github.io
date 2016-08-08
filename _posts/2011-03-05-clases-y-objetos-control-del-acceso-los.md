@@ -121,7 +121,7 @@ cout << "nordenada del punto= "<< ptl.gety ();
 
 * * *
 
-#### Siguiente tema: [Clases y Objetos - Funciones Inline][2] {.referencia}
+#### Siguiente tema: [Clases y Objetos - Funciones Inline][2] 
 
 
 

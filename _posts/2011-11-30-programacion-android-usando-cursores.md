@@ -81,7 +81,7 @@ Por último, para obtener el número de registros que hay en el cursor, podemos 
 
 * * *
 
-#### Siguiente Tema: [Usando la cláusula Where][1] {.referencia}
+#### Siguiente Tema: [Usando la cláusula Where][1] 
 
 
 
