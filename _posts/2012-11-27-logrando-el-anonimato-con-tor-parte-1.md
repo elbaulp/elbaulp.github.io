@@ -149,7 +149,9 @@ Describamos esto un poco más. Si estamos enviando paquetes que contienen nuestr
 
 En cada conexión a través de la red Tor, necesitamos tener en cuenta que a la información:
 
-- El cliente la envía<br /> &#8211; Internet la direcciona<br /> &#8211; el servidor la recibe
+- El cliente la envía
+- Internet la direcciona
+- El servidor la recibe
 
 Con Tor, podemos asegurarnos que Internet aunque canaliza la información, no tiene idea sobre la dirección origen ni destino que usamos, lo cual es crucial para mantener el anonimato sobre Internet. Pero la información enviada de un cliente hacia un servidor son visibles en los dos extremos de la conexión. Por lo tanto, para ser verdaderamente anónimos, incluso en la máquina destino, necesitamos no encapsular ninguna información sensible en el paquete de datos del tráfico entre el cliente y el servidor.
 
