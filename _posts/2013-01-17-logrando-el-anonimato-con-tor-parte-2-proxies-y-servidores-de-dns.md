@@ -29,7 +29,7 @@ color: "#F57C00"
 Ya hemos visto en profundidad cómo configurar nuestro navegador web para usar Privoxy, el cual en turnos usa Tor para mantener el anonimato en internet. ¿Pero qué pasa si queremos interceptar peticiones con Burp? Para comprender mejor qué sucede, la imagen siguiente representa la cadena de nodos que cada petición (y respuesta) debe atravesar parapoder usar el proxy (en nuestro caso, Burp) sobre la red de Tor:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="diagrama de nodos" src="/assets/img/2012/12/081012_1604_AchievingAn11-300x128.png" width="300px" height="128px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="diagrama de nodos" src="/assets/img/2012/12/081012_1604_AchievingAn11.png" width="300px" height="128px"></amp-img>
 </figure>
 
 Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella &#8211; en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).
