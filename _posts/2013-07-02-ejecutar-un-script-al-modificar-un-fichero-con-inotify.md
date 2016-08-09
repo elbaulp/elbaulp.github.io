@@ -11,6 +11,7 @@ tags:
   - ejemplo inotify
   - ejemplo inotify-tools
 image: 2013/07/Screenshot-from-2013-07-02-164301.png
+modified: 2016-80-09T21:11
 main-class: "linux"
 color: "#2196F3"
 ---
@@ -45,17 +46,12 @@ while true; do
   change=${change#./ * }
   if [ "$change" = "$2" ]; then ./$3; fi
 done
-
 ```
 
-
-<p>
-  El script recibe 3 parámetros; El directorio donde se encuentra el fichero, el nombre del fichero y el script a ejecutar al detectar cambios. Veamos un ejemplo trivial que simplemente escribirá un texto al final del fichero:
-</p>
+El script recibe 3 parámetros; El directorio donde se encuentra el fichero, el nombre del fichero y el script a ejecutar al detectar cambios. Veamos un ejemplo trivial que simplemente escribirá un texto al final del fichero:
 
 
 ```bash
-
 $ cat ejemplo
 elbauldelprogramador.com
 $ cat script.sh
@@ -68,17 +64,11 @@ Watches established.
 ./ CLOSE_WRITE,CLOSE ejemplo
 Setting up watches.
 Watches established.
-
 ```
 
-
-<p>
-  Tras ejecutar <em>notifyChangesOnFile.sh</em> abrimos el fichero de ejemplo con cualquier editor y cuando guardemos aparece en pantalla <em>./ CLOSE_WRITE,CLOSE ejemplo</em> indicando que se ha modificado. Si volvemos a mirar el fichero de ejemplo su contenido es:
-</p>
-
+Tras ejecutar _notifyChangesOnFile.sh_ abrimos el fichero de ejemplo con cualquier editor y cuando guardemos aparece en pantalla `./ CLOSE_WRITE,CLOSE ejemplo` indicando que se ha modificado. Si volvemos a mirar el fichero de ejemplo su contenido es:
 
 ```bash
-
 $ cat ejemplo
 elbauldelprogramador.com
 
@@ -87,28 +77,16 @@ elbauldelprogramador.com
 
 escribimos algo para modificar el fichero y guardamos
 Script ejecutado tras editar
-
 ```
 
-
-<p>
-  Espero que sea de utilidad, el repositorio de <em>inotify-tools</em> está en github (Enlace en las referencias).
-</p>
+Espero que sea de utilidad, el repositorio de _inotify-tools_ está en github (Enlace en las referencias).
 
 
-<h4>
-  Referencias
-</h4>
+# Referencias
 
+- _Repositorio inotify-tools_ \| <a href="https://github.com/rvoicilas/inotify-tools" target="_blank">Visitar sitio</a><br>
+- _inotify_ \| <a href="http://inotify.aiken.cz/?section=incron&page=about&lang=en" target="_blank">inotify.aiken.cz</a><br>
+- _How to execute a command whenever a file changes?_ \| <a href="http://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes" target="_blank">superuser.com</a><br>
+- _Bash: Execute script on file save?_ \| <a href="http://stackoverflow.com/questions/3283228/bash-execute-script-on-file-save" target="_blank">stackoverflow</a>
 
-<p>
-  <em>Repositorio inotify-tools</em> <strong>|</strong> <a href="https://github.com/rvoicilas/inotify-tools" target="_blank">Visitar sitio</a><br>
-  <em>inotify</em> <strong>|</strong> <a href="http://inotify.aiken.cz/?section=incron&page=about&lang=en" target="_blank">inotify.aiken.cz</a><br>
-  <em>How to execute a command whenever a file changes?</em> <strong>|</strong> <a href="http://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes" target="_blank">superuser.com</a><br>
-  <em>Bash: Execute script on file save?</em> <strong>|</strong> <a href="http://stackoverflow.com/questions/3283228/bash-execute-script-on-file-save" target="_blank">stackoverflow</a>
-</p>
-
- [2]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
-
-{% include toc.html %}
-</script></file></directory>
+[2]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
