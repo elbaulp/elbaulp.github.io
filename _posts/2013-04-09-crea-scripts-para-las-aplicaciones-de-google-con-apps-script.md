@@ -1,6 +1,5 @@
 ---
 title: Crea scripts para las aplicaciones de Google con Apps Script
-
 layout: post.amp
 permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
 categories:
@@ -8,10 +7,14 @@ categories:
 tags:
   - Gmail Inbox Statistics Report
   - Informe estadístico mensual de GMail
+modified: 2016-08-09T09:50
 main-class: "articulos"
 color: "#F57C00"
 ---
+
 Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.
+
+{% include toc.html %}
 
 ### Qué es Google Apps Script
 
@@ -21,10 +24,10 @@ Varios ejemplos de uso son:
 
 <!--ad-->
 
-  * Construir funciones personalizadas para las hojas de Cálculo de Google.
-  * Extender ciertas aplicaciones de Google creando menús personalizados y enlazarlos a scripts.
-  * Crear y publicar aplicaciones web.
-  * Programar tareas como la creación y distribución de informes.
+* Construir funciones personalizadas para las hojas de Cálculo de Google.
+* Extender ciertas aplicaciones de Google creando menús personalizados y enlazarlos a scripts.
+* Crear y publicar aplicaciones web.
+* Programar tareas como la creación y distribución de informes.
 
 Todo lo necesario para comenzar a escribir código es una cuenta de google, un navegador y dirigirse a <a href="http://script.google.com" target="_blank">http://script.google.com</a>
 
@@ -32,12 +35,13 @@ Todo lo necesario para comenzar a escribir código es una cuenta de google, un n
 
 Uno de los scripts que estoy usando actualmente recopila información de mi cuenta de gmail, para mandarme un correo al final de més con estadísticas y gráficos sobre quién me manda más correos electónicos, a quién respondo más etc. El informe que elabora este script es así:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px" />
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/chart1.png" alt="chart1" width="650px" height="400px" />
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/chart2.png" alt="chart2" width="650px" height="400px" />
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/chart1.png" alt="chart1" width="650px" height="400px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/chart2.png" alt="chart2" width="650px" height="400px"></amp-img>
+</figure>
 
-Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google »  
-<a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>.
+Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google » <a href="https://developers.google.com/apps-script/articles/gmail-stats" target="_blank">Tutorial: Creating Gmail Inbox Statistics Report</a>.
 
 Sin embargo, encontré un pequeño error que no dejará que se ejecute el script. En la línea 244 se declara una columna para la hoja de cálculo de tipo `STRING`, pero cuando se ejecuta el script dará error. La solución que encontré fue declarar el tipo de columna como numérico:
 
@@ -46,7 +50,6 @@ var dataTable = Charts.newDataTable();
 dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Date'); // Era STRING
 dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Received');
 dataTable.addColumn(Charts.ColumnType['NUMBER'], 'Sent');
-
 ```
 
 Para mayor comodidad, proporciono el script completo para que solo tengáis que copiar y pegar:
@@ -406,8 +409,4 @@ function init_() {
 
 *Google Apps Script* »» <a href="http://www.google.com/script/start/" target="_blank">Visitar sitio</a>
 
-
-
- [1]: https://elbauldelprogramador.com/futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"
-
-{% include toc.html %}
+ [1]: /futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"
