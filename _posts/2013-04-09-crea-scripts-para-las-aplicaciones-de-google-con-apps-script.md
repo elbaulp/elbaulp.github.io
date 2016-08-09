@@ -36,7 +36,7 @@ Todo lo necesario para comenzar a escribir código es una cuenta de google, un n
 Uno de los scripts que estoy usando actualmente recopila información de mi cuenta de gmail, para mandarme un correo al final de més con estadísticas y gráficos sobre quién me manda más correos electónicos, a quién respondo más etc. El informe que elabora este script es así:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/gmailStats.png" alt="gmailStats" width="495px" height="244px"></amp-img>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/chart1.png" alt="chart1" width="650px" height="400px"></amp-img>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/chart2.png" alt="chart2" width="650px" height="400px"></amp-img>
 </figure>
