@@ -20,6 +20,7 @@ tags:
   - tilda
   - wallpaper
   - xrootconsole
+image: 2013/03/xroot-example.jpg
 modified: 2016-08-09T16:16
 main-class: "linux"
 color: "#2196F3"
@@ -54,7 +55,7 @@ Donde:
 Puedes obtener más información consultando la ayuda del programa o su manual.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/xroot-example-1024x817.jpg" alt="xroot example" width="1024px" height="817px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/xroot-example.jpg" alt="xroot example" width="1024px" height="817px"></amp-img>
 </figure>
 
 En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
