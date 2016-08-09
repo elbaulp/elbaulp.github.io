@@ -12,10 +12,6 @@ main-class: "android"
 color: "#689F38"
 ---
 
-<figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo" name="droid" class="icono" width="128px" height="128px"></amp-img>
-</figure>
-
 Los recursos Raw se colocan bajo el directorio ***./res/raw***. Son recursos raw archivos como ficheros de audio, vídeo o archivos de texto que requieran localización o ser referenciados mediante IDs de recursos.
 
 A diferencia de los archivos XML, colocados en ./res/xml, estos archivos no se compilan, se mueven al paquete de la aplicación tal y como son. Sin embargo, a cada fichero se le asignará un identificador en la clase R.java. Si colocamos un archivo de texto en ***./res/raw/test.txt***, podremos leerlo usando el código de abajo:
