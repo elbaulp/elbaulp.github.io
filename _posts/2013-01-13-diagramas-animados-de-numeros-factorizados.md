@@ -36,4 +36,5 @@ Sin más explicaciones, lo mejor es verlo en acción. A continuación proporcion
 - *Animated Diagrams* »» <a href="http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/" target="_blank">Visitar sitio</a>  
 - *Episodio de Security Now Disconnect Widget Jacking* »» <a href="http://twit.tv/show/security-now/386" target="_blank">Visitar sitio</a>
 
- [1]: /security-now/
+
+[1]: /security-now/
