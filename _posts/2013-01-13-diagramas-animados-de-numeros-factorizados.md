@@ -9,6 +9,7 @@ tags:
   - factorización
   - html5
 modified: 2016-08-09T20:45
+image: 2013/01/2013-01-13-105334_1256x830_scrot2.png
 main-class: "dev"
 color: "#E64A19"
 ---
