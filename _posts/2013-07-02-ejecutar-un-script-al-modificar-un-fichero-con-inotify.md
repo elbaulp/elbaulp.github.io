@@ -11,7 +11,7 @@ tags:
   - ejemplo inotify
   - ejemplo inotify-tools
 image: 2013/07/Screenshot-from-2013-07-02-164301.png
-modified: 2016-80-09T21:11
+modified: 2016-08-09T21:11
 main-class: "linux"
 color: "#2196F3"
 ---
