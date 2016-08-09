@@ -61,7 +61,7 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
 
 * **CONSTRAINT.** Es una palabra clave opcional que indica el principio de la definición de una restricción para la columna o tabla : PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY o CHECK. Las restricciones son propiedades especiales que exigen la integridad de los datos y pueden crear índices para la tabla y sus columnas.
 * **nombre_restricción.** Los nombres de restricción deben ser únicos en una base de datos.
-* **NULL | NOT NULL.** Son palabras clave que determinan si se permiten o no valores NULL en la columna. Si la restricción es NOT NULL significa que dicha columna no puede tener valores nulos, es decir, ha de tener un valor obligatoriamente; en caso contrario causa una excepción.
+* **NULL \| NOT NULL.** Son palabras clave que determinan si se permiten o no valores NULL en la columna. Si la restricción es NOT NULL significa que dicha columna no puede tener valores nulos, es decir, ha de tener un valor obligatoriamente; en caso contrario causa una excepción.
 * **PRIMARY KEY.** Es una restricción que indica qué columna o columnas formarán la clave primaria de la tabla. Sólo se puede crear una restricción PRIMARY KEY por cada tabla.
 * **UNIQUE.** Es una restricción que proporciona la integridad de entidad para la columna o columnas indicada a través de un índice único. Una tabla puede tener varias restricciones UNIQUE.
 * **DEFAULT.** Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante la inserción.
@@ -111,14 +111,14 @@ CREATE TABLE Emp1
 
 #### Ejemplo 2: Restricciones sobre la tabla
 
- ```sql
+
+```sql
 CREATE TABLE docindex
   ( token CHAR(20),
     doc_oid INTEGER,
     token_frequency SMALLINT,
     token_occurrence_data VARCHAR(512),
     CONSTRAINT pk_docindex PRIMARY KEY (token, doc_oid) );
-
 CREATE TABLE emp
   (empno     NUMBER(4),
    ename     VARCHAR2(10),
