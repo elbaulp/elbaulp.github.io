@@ -1,6 +1,5 @@
 ---
 title: 'Programación Android: Recursos &#8211; Trabajar con recursos RAW'
-
 layout: post.amp
 permalink: /programacion-android-recursos-trabajar-2/
 categories:
@@ -8,15 +7,18 @@ categories:
   - opensource
 tags:
   - curso android pdf
+modified: 2016-08-09T20:40
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo" name="droid" class="icono" width="128px" height="128px" />
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo" name="droid" class="icono" width="128px" height="128px"></amp-img>
+</figure>
 
 Los recursos Raw se colocan bajo el directorio ***./res/raw***. Son recursos raw archivos como ficheros de audio, vídeo o archivos de texto que requieran localización o ser referenciados mediante IDs de recursos.
 
 A diferencia de los archivos XML, colocados en ./res/xml, estos archivos no se compilan, se mueven al paquete de la aplicación tal y como son. Sin embargo, a cada fichero se le asignará un identificador en la clase R.java. Si colocamos un archivo de texto en ***./res/raw/test.txt***, podremos leerlo usando el código de abajo:
-
 
 <!--ad-->
 
@@ -43,21 +45,10 @@ private String convertStreamToString(InputStream is)
       }
       return baos.toString();
    }
-
 ```
 
-<p class="alert">
-  Los nombres de ficheros con el mismo nombre base generan un error en el plugin ADT de eclipse.
-</p>
+> Los nombres de ficheros con el mismo nombre base generan un error en el plugin ADT de eclipse.
 
-* * *
-
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos Assets][1] 
-
-
-
-
+# Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos Assets][1] 
 
  [1]: /programacion-android-recursos-trabajar_04/
-
-{% include toc.html %}
