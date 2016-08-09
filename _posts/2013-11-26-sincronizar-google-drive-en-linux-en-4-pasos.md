@@ -162,7 +162,7 @@ Con estos 4 pasos hemos conseguido mantener sincronizado nuestro Google Drive en
 El resultado de estas modificaciones es el siguiente:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png" title="{{ page.title }}" alt="{{ page.title }}" width="1366px" height="768px"</amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png" title="{{ page.title }}" alt="{{ page.title }}" width="1366px" height="768px"></amp-img>
 </figure>
 
 # Referencias
