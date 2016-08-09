@@ -52,7 +52,7 @@ También nos podemos servir de la clase ***View.MeasureSpec***, para especificar
 Un atributo imprescindible es el ***id***(de tipo entero). Que sirve para identificar únicamente a un objeto View. Cuando lo declaramos mediante xml podemos referenciarlo a través de la clase de recursos R, usando una @.
 
 * ***android:id=&#8221;@+id/nombreID&#8221;:*** Crea un nuevo atributo en la clase R llamado nombreID
-* ***android:id=&#8221;@id/nombreID&#8221;:***< Hace referencia a un id ya existente asociado a la etiqueta 'nombreID'/li>
+* ***android:id=&#8221;@id/nombreID&#8221;:*** Hace referencia a un id ya existente asociado a la etiqueta 'nombreID'
 * ***android:id=&#8221;@android:id/list&#8221;:*** Referencia a un a etiqueta definida en la clase R del sistema llamada &#8216;list&#8217;.
 
 Los objetos View pueden tener otros muchos atributos, como padding, colores, imágenes, fondos, márgentes etc
@@ -69,7 +69,7 @@ Podemos acceder al contexto de diferentes formas en función de donde nos encont
 * Las actividades implementan esta interfaz, por lo que haciendo referencia a ellas mismas, con (***this***) o NombreActivity.this, estaremos referenciando el contexto.
 * Usando otros métodos como ***getApplicationContext() o getApplication()***
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Layouts][3] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Layouts][3] 
 
  [1]: /programacion-android-trabajar-con/
  [2]: /fundamentos-programacion-android_16/
