@@ -1,6 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Conceptos básicos'
-
+title: 'Programación Android: Interfaz gráfica. Conceptos básicos'
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica/
 categories:
@@ -14,24 +13,25 @@ tags:
   - interfaz grafica en android
   - layout android
   - menu android
+modified: 2016-08-09T10:30
 main-class: "android"
 color: "#689F38"
 ---
 
-
 Todos los componenetes de la interfaz de usuario de Android descienden de la clase ***View.*** Dichos objetos están organizados en forma de árbol y pueden contener nuevos objetos View, permitiendo crear interfaces muy completas.
 
-
 <!--ad-->
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="300" width="514" src="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png" /></a>
-</div>
+
+{% include toc.html %}
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="300" width="514" src="https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png"></amp-img>
+</figure>
 
 Los objetos ***View*** se pueden definir de dos maneras:
 
-&#8211; Mediante un fichero XML colocado dentro del directorio ***res/layout***, que es el que usaremos normalmente.
-
-&#8211; En tiempo de ejecución, muy útil para crear nuestros propios componentes View
+- Mediante un fichero XML colocado dentro del directorio ***res/layout***, que es el que usaremos normalmente.
+- En tiempo de ejecución, muy útil para crear nuestros propios componentes View
 
 Para dibujar la interfaz, el sistema necesita que le pasemos el objeto View raiz, para ir descendiendo por cada uno de sus nodos y presentar al usuario toda la interfaz. El método encargado de esto es ***Activity.setContentView()***.
 
@@ -39,21 +39,21 @@ Android se encarga de dibujar los elementos llamando primero al método ***draw(
 
 Para que Android sepa dibujar correctamente los objetos, tenemos que pasarle algunos datos, como son la altura y anchura. Para eso nos servimos de la clase ***LayoutParams***, que pude tomar los siguientes valores:
 
-  * Un número
-  * La constante FILL_PARENT, que indica que la vista debe intentar ser tan grande como su padre, quitando el padding.
-  * La constante WRAP_CONTENT, para que intente ser lo suficientemente grande para mostrar su contenido, mas el padding.
+* Un número
+* La constante FILL_PARENT, que indica que la vista debe intentar ser tan grande como su padre, quitando el padding.
+* La constante WRAP_CONTENT, para que intente ser lo suficientemente grande para mostrar su contenido, mas el padding.
 
 También nos podemos servir de la clase ***View.MeasureSpec***, para especificar el tamaño y cómo deben ser posicionadas.
 
-  * AT_MOST, el padre fija un tamaño mínimo para el hijo. El hijo(y los descendientes de éste) tienen que ocupar por lo menos ese tamaño.
-  * EXACTLY, el padre impone un tamaño exacto al hijo.
-  * UNSPECIFIED, el padre fija el tamaño deseado del hijo.
+* AT_MOST, el padre fija un tamaño mínimo para el hijo. El hijo(y los descendientes de éste) tienen que ocupar por lo menos ese tamaño.
+* EXACTLY, el padre impone un tamaño exacto al hijo.
+* UNSPECIFIED, el padre fija el tamaño deseado del hijo.
 
 Un atributo imprescindible es el ***id***(de tipo entero). Que sirve para identificar únicamente a un objeto View. Cuando lo declaramos mediante xml podemos referenciarlo a través de la clase de recursos R, usando una @.
 
-  * ***android:id=&#8221;@+id/nombreID&#8221;:*** Crea un nuevo atributo en la clase R llamado nombreID
-  * ***android:id=&#8221;@id/nombreID&#8221;:***< Hace referencia a un id ya existente asociado a la etiqueta 'nombreID'/li>
-  * ***android:id=&#8221;@android:id/list&#8221;:*** Referencia a un a etiqueta definida en la clase R del sistema llamada &#8216;list&#8217;.
+* ***android:id=&#8221;@+id/nombreID&#8221;:*** Crea un nuevo atributo en la clase R llamado nombreID
+* ***android:id=&#8221;@id/nombreID&#8221;:***< Hace referencia a un id ya existente asociado a la etiqueta 'nombreID'/li>
+* ***android:id=&#8221;@android:id/list&#8221;:*** Referencia a un a etiqueta definida en la clase R del sistema llamada &#8216;list&#8217;.
 
 Los objetos View pueden tener otros muchos atributos, como padding, colores, imágenes, fondos, márgentes etc
 
@@ -65,11 +65,9 @@ Context es una interfaz para la información global de la aplicación. A través
 
 Podemos acceder al contexto de diferentes formas en función de donde nos encontremos:
 
-  * Con el método ***getContext().***
-  * Las actividades implementan esta interfaz, por lo que haciendo referencia a ellas mismas, con (***this***) o NombreActivity.this, estaremos referenciando el contexto.
-  * Usando otros métodos como ***getApplicationContext() o getApplication()***
-
-* * *
+* Con el método ***getContext().***
+* Las actividades implementan esta interfaz, por lo que haciendo referencia a ellas mismas, con (***this***) o NombreActivity.this, estaremos referenciando el contexto.
+* Usando otros métodos como ***getApplicationContext() o getApplication()***
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Layouts][3] 
 
@@ -78,4 +76,4 @@ Podemos acceder al contexto de diferentes formas en función de donde nos encont
  [3]: /programacion-android-interfaz-grafica_23/
 
 
-{% include toc.html %}
+
