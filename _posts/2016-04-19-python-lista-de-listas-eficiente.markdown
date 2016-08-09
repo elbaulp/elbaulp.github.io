@@ -7,15 +7,10 @@ description: "Hace tiempo me encontré con el problema de tener que construir un
 tags: [python, optimización de código, list comprehensions python, crear lista de listas, codigo eficiente python]
 image: python-lista-de-listas-eficiente.png
 date: 2016-04-19T10:48:34+02:00
+modified: 2016-08-09T18:30
 main-class: "dev"
 color: "#E64A19"
 ---
-
-<figure>
-<a href="/assets/img/python-lista-de-listas-eficiente.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/python-lista-de-listas-eficiente.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
-</figure>
-
-{% include toc.html %}
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario <a href="http://stackoverflow.com/users/1612432/algui91" target="_blank" title="Perfil algui91">algui91</a>, que preguntaba <a href="http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python" target="_blank" title="Link a pregunta">Build a List of Lists eficiently in python</a>. La respuesta es del usuario <a href="http://stackoverflow.com/users/1219295/roland-smith" target="_blank" title="Perfil roland">Roland</a>.
 
@@ -59,6 +54,6 @@ Out[9]: [[3, 12, 15], [6, 12, 18], [7, 12, 19], [5, 1, 6], [1, 0, 1], [4, 12, 16
 
 Espero que sirva de ayuda a alguien que busque conseguir algo similar.
 
-#### Fuente
+# Fuente
 
-Build a List of Lists eficiently in python \| <a href="http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python" title="Build a List of Lists eficiently in python" target="_blank">stackoverlow.com</a>
+- Build a List of Lists eficiently in python \| <a href="http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python" title="Build a List of Lists eficiently in python" target="_blank">stackoverlow.com</a>
