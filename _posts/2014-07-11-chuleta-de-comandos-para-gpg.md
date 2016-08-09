@@ -12,10 +12,11 @@ tags:
   - tutorial gpg
 description: "Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo."
 image: 2014/04/Chuleta-de-comandos-GPG.png
-modified: 2015-12-24T19:55
+modified: 2016-08-09T20:50
 main-class: "articulos"
 color: "#F57C00"
 ---
+
 <figure>
 <a href="/assets/img/2014/04/Chuleta-de-comandos-GPG.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/04/Chuleta-de-comandos-GPG.png" title="{{ page.title }}" alt="{{ page.title }}" width="400px" height="175px" /></a>
 </figure>
