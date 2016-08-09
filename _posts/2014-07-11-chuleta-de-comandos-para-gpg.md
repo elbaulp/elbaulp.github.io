@@ -125,7 +125,7 @@ Esto crea el archivo fingerprint con la información de la firma digital.
 # Encriptar datos
 
 ```bash
-gpg -e -u "Nombre de Usuario del Emisor" -r "Nombre de Usuario del Destinatario" <em>somefile</em>
+gpg -e -u "Nombre de Usuario del Emisor" -r "Nombre de Usuario del Destinatario" somefile
 ```
 
 Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.  
