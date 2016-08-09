@@ -11,29 +11,32 @@ tags:
 modified: 2015-12-29T10:00
 image: 2013/11/google-drive-linux3.jpg
 description: "Hace poco vimos en un artículo cómo Sincronizar Google Drive en Linux en 4 pasos. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que grive vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas."
+modified: 2016-08-09T15:20
 main-class: "linux"
 color: "#2196F3"
 ---
 <figure>
-<a href="/assets/img/2013/11/google-drive-linux3.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/11/google-drive-linux3.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="800px" height="701px" /></a>
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/11/google-drive-linux3.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="800px" height="701px"></amp-img>
 </figure>
 
 Hace poco vimos en un artículo cómo [Sincronizar Google Drive en Linux en 4 pasos][1]. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que *grive* vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas.
 
+{% include toc.html %}
+
 <!--ad-->
 
-### El problema
+# El problema
 
-Tal y como se explicó en el artículo anterior, se tiene un [script][2] encargado de detectar los cambios locales con [inotify][3] y una entrada en <a href="http://es.wikipedia.org/wiki/Cron_%28Unix%29" title="Cron wikipedia" target="_blank">cron</a> ejecutando *grive* cada X tiempo para descargar los cambios remotos. Por tanto, puede ocurrir que en un determinado instante grive se esté ejecutando más de una vez, y si está realizando alguna operación de descarga o subida *inotify* detectará que los ficheros están cambiando y volverá a lanzar *grive*.
+Tal y como se explicó en el artículo anterior, se tiene un script encargado de detectar los cambios locales con [inotify][3] y una entrada en <a href="http://es.wikipedia.org/wiki/Cron_%28Unix%29" title="Cron wikipedia" target="_blank">cron</a> ejecutando *grive* cada X tiempo para descargar los cambios remotos. Por tanto, puede ocurrir que en un determinado instante grive se esté ejecutando más de una vez, y si está realizando alguna operación de descarga o subida *inotify* detectará que los ficheros están cambiando y volverá a lanzar *grive*.
 
 Es decir, si estamos subiendo/descargando un archivo lo bastante grande para que tarde más que los periodos de pausa que hay en el script y en cron, el comportamiento de *grive* no será el correcto porque los archivos están cambiando continuamente mientras están siendo descargados.
 
-### Posible solución
+# Posible solución
 
 Tras haber hecho varias pruebas, una solución que parece ser correcta es la siguiente:
 
-  * Modificar la entrada en cron para *grive*
-  * Modificar el script para que compruebe si hay alguna instancia de *grive* en ejecución, y, en ese caso, esperar a que termine.
+* Modificar la entrada en cron para *grive*
+* Modificar el script para que compruebe si hay alguna instancia de *grive* en ejecución, y, en ese caso, esperar a que termine.
 
 El script quedaría así:
 
@@ -70,12 +73,11 @@ do
         cd $GDRIVE_PATH && $GRIVE_COMMAND_WITH_PATH
     fi
 done
-
 ```
 
 Con esta pequeña modificación logramos que no haya varias instancias de *grive* en ejecución. Además podríamos dejar la entrada en cron, ya que de esta forma si cron está ejecutando *grive*, el script no lo hará, porque detecta que ya hay una instancia en ejecución.
 
-### Script para CRON
+# Script para CRON
 
 Sería muy similar, salvo que no monitoriza el estado del directorio con inotify, de esta forma obtendremos los cambios remotos:
 
@@ -96,24 +98,17 @@ then
 else
     cd "$HOME/Drive" && grive | tee /tmp/GRIVE_LOG
 fi
-
 ```
 
 Lo guardamos como *update-grive.sh*, le damos permisos de ejecución `chmod +x update-grive.sh` y lo añadimos a crontab:
 
 ```bash
 */10 * * * *  /home/hkr/bin/update-grive.sh
-
 ```
 
-#### Referencias
+# Referencias
 
-*Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>
+- *Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>
 
-
-
-[1]: https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/ "Sincronizar Google Drive en Linux en 4 pasos"
-[2]: https://elbauldelprogramador.com/
-[3]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
-
-{% include toc.html %}
+[1]: /sincronizar-google-drive-en-linux-en-4-pasos/ "Sincronizar Google Drive en Linux en 4 pasos"
+[3]: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
