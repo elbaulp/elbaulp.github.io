@@ -30,15 +30,15 @@ En estos tiempos en los que está claro que estamos sometidos a vigilancia de lo
 
 <!--ad-->
 
-## Introducción
+# Introducción
 
 En otro artículo vimos [cómo cifrar archivos mediante GPG][1], en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.
 
-## Descargar e instalar Mailvelope en Chrome
+# Descargar e instalar Mailvelope en Chrome
 
 Los usuarios de este navegador simplemente deben instalar Mailvelope como cualquier otro plugin en la siguiente <a href="https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke?hl=en-US" title="Instalar Mailvelope en Chrome" target="_blank">dirección</a>.
 
-## Descargar e instalar Mailvelope en Firefox
+# Descargar e instalar Mailvelope en Firefox
 
 El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en [Git][2] para compilarlo e instalarlo. Los siguientes pasos se han extraído de la <a href="https://github.com/mailvelope/mailvelope" title="Compilar Mailvelope" target="_blank">documentación oficial</a>:
 
@@ -62,7 +62,7 @@ make dist-ff
 
 Tras esto, en **dist/mailvelope.xpi** se encuentra el plugin para instalarlo.
 
-### Generar llaves en Mailvelope
+# Generar llaves en Mailvelope
 
 Una vez instalado mailvelope en el navegador correspondiente, hacemos **click en el icono del plugin » opciones**. Aparecerá un formulario que rellenaremos con un nombre, el correo a usar y un **passphrase**, en las opciones avanzadas podemos elegir el algoritmo de cifrado, la longitud y la fecha de expiración:
 
@@ -70,11 +70,11 @@ Una vez instalado mailvelope en el navegador correspondiente, hacemos **click en
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope.png" alt="Cómo cifrar correos con GPG usando Mailvelope" width="610px" height="619px"></amp-img>
 </figure>
 
-## Enviar la clave pública a un servidor de llaves
+# Enviar la clave pública a un servidor de llaves
 
 El par de claves pública/privada que acabamos de generar debe aparecer en *Display keys*. La seleccionamos y hacemos click en **Export » Display public key**, copiamos la llave y la pegamos en la sección **Submission And Publication** del servidor de llaves <a href="http://keyserver.borgnet.us/" target="_blank">keyserver.borgnet.us</a>. A partir de ahora, cualquiera que tenga a su disposición la clave pública que acabamos de subir al servidor podrá enviarnos un correo cifrado.
 
-## Ejemplo
+# Ejemplo
 
 Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de [contacto][3] o en este otro <a href="http://keyserver.borgnet.us:11371/pks/lookup?op=get&search=0x083EDE12BE101B2B" target="_blank">enlace</a>. La copiamos y en la sección **Import Keys** de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.
 
