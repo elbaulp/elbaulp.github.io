@@ -13,7 +13,7 @@ main-class: "servidores"
 color: "#0097A7"
 ---
 
-En sistemas operativos como <a href="/tags/#debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario _root_ para informar del estado del sistema. Los mensajes se almacenan en el archivo _/var/mail/root_. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como __mutt__ para administrar los mensajes. Sin embargo, considero más organizado redireccionar t\odos los mensajes a una cuenta de correo típica.
+En sistemas operativos como <a href="/tags/#debian">Debian</a>, muchos de los programas y demonios envían mensajes al usuario _root_ para informar del estado del sistema. Los mensajes se almacenan en el archivo _/var/mail/root_. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como __mutt__ para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica.
 
 <!--ad-->
 
@@ -51,7 +51,7 @@ Como vemos, todo se redirecciona a la cuenta local del usuario *root*. Bastaría
 root: direccion@correo.com
 ```
 
-Para aplicar los cambios hay que ejecutar el comando <span class="highlight style-2">newaliases</span>.
+Para aplicar los cambios hay que ejecutar el comando `newaliases`.
 
 A partir de ahora, recibiremos en nuestra bandeja de entrada los mensajes del sistema, podemos crear un filtro si usamos gmail para organizarlos y quitarlos de la bandeja principal.
 
