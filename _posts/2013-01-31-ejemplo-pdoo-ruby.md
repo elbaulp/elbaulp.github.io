@@ -1,6 +1,5 @@
 ---
 title: Introducción rápida a Ruby
-
 layout: post.amp
 permalink: /introduccion-a-ruby/
 categories:
@@ -8,9 +7,11 @@ categories:
 tags:
   - ejemplos
   - ruby
+modified: 2016-08-10T13:00
 main-class: "dev"
 color: "#E64A19"
 ---
+
 En la asignatura **PDOO** (**Programación y Diseño Orientado a Objetos**) tuve que hacer un seminario sobre ruby, que consistía en traducir un proyecto escrito en Java a Ruby. El objetivo era ver las diferencias existentes en ambos lenguajes.
 
 **Ruby** fue creado por Yukihiro Matsumoto y es un lenguaje dinámico.
@@ -71,7 +72,6 @@ class Persona
 =end
 
 end
-
 ```
 
 Comentemos brevemente la sintaxis:
@@ -104,7 +104,6 @@ class Asignatura
   end
 
 end
-
 ```
 
 En este caso hay poco que comentar, ya que es más sencilla que la anterior. Únicamente decir que se está redefiniendo el método `to_s`.
@@ -183,7 +182,6 @@ class Alumno < Persona
     asignaturas.clear
   end
 end
-
 ```
 
 Varias cosas a comentar. Para indicar la herencia de una clase sobre otra, se usa el operador <, en este caso **Alumno** heredará de **Persona**.  
@@ -196,7 +194,6 @@ total = 0
       total += asignaturas[k].creditosECTS
     end
 total
-
 ```
 
 Este método itera sobre el HashMap sumando los créditos de las asignaturas. **k** corresponde a la clave del HashMap, y **v** al valor.  
@@ -268,7 +265,6 @@ if __FILE__ == $0
   puts alumno1.to_s
 
 end
-
 ```
 
 En este fragmento de código se muestra un ejemplo del tratado de excepciones, en lugar del clásico `try{...}catch(){...}` en Ruby se usa la siguiente sintaxis:
@@ -304,15 +300,10 @@ ERROR: El alumno no esta matriculado en la asignatura 1000
 
 To string de Alumno, reutilizando el de persona
 Persona [nombre=Nombre del alum1], fechaNacimiento=1980-02-08]Esta estudiando Ing. Informatica, creditos 6
-
 ```
 
 Como mencioné al principio, el código de ambos programas está disponible para descargar:
 
 Como introducción al lenguaje Ruby, ya que nunca lo había usado, leí el siguiente artículo:
 
-*Ruby in Twenty MinutesRuby in Twenty Minutes* »» <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a>
-
-
-
-{% include toc.html %}
+- *Ruby in Twenty MinutesRuby in Twenty Minutes* »» <a href="http://www.ruby-lang.org/en/documentation/quickstart/" target="_blank">Visitar sitio</a>
