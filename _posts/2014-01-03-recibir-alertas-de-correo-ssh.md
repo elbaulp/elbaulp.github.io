@@ -47,8 +47,8 @@ Listo, ahora recibiremos un correo por cada acceso al sistema.
 
 - *How to Get Root and User SSH Login Email Alerts* »» <a href="http://www.tecmint.com/get-root-ssh-login-email-alerts-in-linux" target="_blank">tecmint.com</a>
 
- [1]: https://elbauldelprogramador.com/combatir-los-comentarios-de-spam-en-wordpress/ "Combatir los comentarios de spam en WordPress"
- [2]: https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
- [3]: https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables"
+ [1]: /combatir-los-comentarios-de-spam-en-wordpress/ "Combatir los comentarios de spam en WordPress"
+ [2]: /bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
+ [3]: /bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables"
 
 
