@@ -19,51 +19,86 @@ tags:
   - listview setlistadapter español
   - manual android parcelable
   - simple adapter android ejemplo
+image: 2012/09/principal1.png
+modified: 2016-08-10T16:30
 main-class: "android"
 color: "#689F38"
 ---
+
 Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3].
 
 En esta entrada se verá cómo crear un adapter desde cero, con algunas funcionalidades más.
 
 Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 
-<p >
-<em>Un CheckBox</em>
-</p>
-<p >
-<em>Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación</em>
-</p>
-<p >
-<em>Un ImageView que mostrará un iconito de un calendario.</em>
-</p>
-<!--ad-->
+- _Un CheckBox_
+- _Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación_
+- _Un ImageView que mostrará un iconito de un calendario._
 
+<!--ad-->
 
 Terminada, la aplicación de prueba debe quedar algo así:
 
-<p >
-<a href="/assets/img/2012/09/principal1.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android" width="484px" height="807px" /></a>
-</p>
-
-&nbsp;
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-964" title="principal" src="/assets/img/2012/09/principal1.png" alt="adapter android" width="484px" height="807px"></amp-img>
+</figure>
 
 Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fila del ListView:
 
 ```xml
-<?xml version='1.0' encoding='utf-8'?>
-<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/LinearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#999999" android:padding="2dp">
-<checkbox android:id="@+id/leido" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centervertical="true" android:focusable="false">
-<textview android:id="@+id/tvTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centervertical="true" android:layout_torightof="@id/leido" android:text="Titulo del post" android:textappearance="?android:attr/textAppearanceMedium">
-</textview><textview android:id="@+id/tvFecha_publicacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignparentright="true" android:layout_below="@+id/tvTitulo" android:paddingtop="10dp" android:text="25/05/2012" android:textappearance="?android:attr/textAppearanceSmall">
-<imageview android:id="@+id/ivCalendar" android:layout_width="22dp" android:layout_height="22dp" android:layout_aligntop="@+id/tvFecha_publicacion" android:layout_margintop="10dp" android:layout_toleftof="@+id/tvFecha_publicacion" android:contentdescription="@string/imagen_content_description" android:src="@drawable/calendar">
-</imageview></textview></checkbox></relativelayout>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/LinearLayout1" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#999999"
+    android:padding="2dp">
+   
+   <checkbox 
+       android:id="@+id/leido" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content" 
+       android:layout_centervertical="true" 
+       android:focusable="false">
+      
+      <textview 
+          android:id="@+id/tvTitulo" 
+          android:layout_width="wrap_content" 
+          android:layout_height="wrap_content" 
+          android:layout_centervertical="true" 
+          android:layout_torightof="@id/leido" 
+          android:text="Titulo del post" 
+          android:textappearance="?android:attr/textAppearanceMedium" />
+      
+      <textview 
+          android:id="@+id/tvFecha_publicacion" 
+          android:layout_width="wrap_content" 
+          android:layout_height="wrap_content" 
+          android:layout_alignparentright="true" 
+          android:layout_below="@+id/tvTitulo" 
+          android:paddingtop="10dp" 
+          android:text="25/05/2012" 
+          android:textappearance="?android:attr/textAppearanceSmall">
+          
+         <imageview 
+             android:id="@+id/ivCalendar" 
+             android:layout_width="22dp" 
+             android:layout_height="22dp" 
+             android:layout_aligntop="@+id/tvFecha_publicacion" 
+             android:layout_margintop="10dp" 
+             android:layout_toleftof="@+id/tvFecha_publicacion" 
+             android:contentdescription="@string/imagen_content_description" 
+             android:src="@drawable/calendar" />
+      </textview>
+   </checkbox>
+</relativelayout>
 ```
 
 Creando así el aspecto deseado para cada línea del ListView:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px" />][5]
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="customrow" src="/assets/img/2012/09/customrow1.png" alt="adapter android" width="307px" height="50px"></amp-img>
+</figure>
 
 El primer paso es crear una clase que representará los datos a almacenar:
 
@@ -138,8 +173,6 @@ public class PostData implements Parcelable {
       }
    };
 }
-
-
 ```
 
 La razón por la que se implementa `Parcelable` se verá más adelante, el resto del código es sencillo, el constructor, y los getters y setters correspondientes a cada miembro de la clase.
@@ -324,8 +357,6 @@ public class PostAdapter extends BaseAdapter
       }
    };
 }
-
-
 ```
 
 Al instanciar el adapter, en este caso `PostAdapter`, se guarda el `LayoutInflater`, útil para mejorar el rendimiento cuando se cree un objeto `View` para devolverlo al `ListView`. Cuando los datos vienen de forma externa al adapter, hay que pasarlos al constructor (`ArrayList d `). Terminando con el constructor, es costumbre guardar el contexto de la aplicación por si hiciera falta, aunque este no es el caso.
@@ -344,19 +375,23 @@ El reciclaje de Views consiste en lo siguiente. Si `convertView` es un valor no 
 
 Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que hacen algunas funciones y cómo resolver algunos problemas típicos. Que nombro a continuación:
 
->   * [Activar checkBox al pulsar en el propio checkbox o en una fila de la lista][6]
->   * [Mantener el estado de los checkBox al desplazar la lista][7]
->   * [Mantener el estado de los checkbox al girar la pantalla][8]
+* [Activar checkBox al pulsar en el propio checkbox o en una fila de la lista][6]
+* [Mantener el estado de los checkBox al desplazar la lista][7]
+* [Mantener el estado de los checkbox al girar la pantalla][8]
 
 <a name="estadoCheckBox"></a>
 
-#### Activar checkBox al pulsar en una fila de la lista
+# Activar checkBox al pulsar en una fila de la lista
 
 El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:
 
 ```xml
-<checkbox android:id="@+id/leido" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centervertical="true" android:focusable="false">
-
+<checkbox 
+    android:id="@+id/leido" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_centervertical="true" 
+    android:focusable="false">
 ```
 
 Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al checkbox:
@@ -384,7 +419,7 @@ De esta forma se puede hacer click tanto en el checkbox como en una fila de la l
 
 <a name="desplazarLista"></a>
 
-#### Mantener el estado de los checkBox al desplazar la lista
+# Mantener el estado de los checkBox al desplazar la lista
 
 Ahora se puede activar el checkbox de las dos formas mencionadas anteriormente, pero hay otro problema, si activamos algún checkbox y desplazamos la lista arriba o abajo, ocultando la fila activada, se pierde el estado del checkbox.
 
@@ -405,7 +440,7 @@ public void setCheck(int position)
 Simplemente cambia el valor del booleano y notifica al ListView de que los datos han cambiado y debe actualizarse. `CheckAll()` es similar, activa o desactiva todos los checkBox dependiendo del parametro booleano que reciba. Y `cancelSelectedPost()` elimina del ListView los elementos con el checkbox activo.  
 <a name="SavedInstanceState"></a>
 
-#### Mantener el estado de los checkbox al girar la pantalla
+# Mantener el estado de los checkbox al girar la pantalla
 
 Por último, hay otro problema a la hora de mantener los checkbox activados al girar la pantalla. Se debe a que cada vez que cambia la orientación del teléfono, la [activity][9] se crea de nuevo (se llama al método `onCreate()`).
 
@@ -453,18 +488,14 @@ public void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si tienes alguna duda o se te ocurre alguna otra forma de hacerlo, no dudes en dejar tu comentario. El código puede descargarse abajo:
+Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si tienes alguna duda o se te ocurre alguna otra forma de hacerlo, no dudes en dejar tu comentario.
 
-<a class="aligncenter download-button" href="https://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;CustomAdapter&rdquo; <small>CustomAdapter.tar.gz &ndash; Downloaded 1020 times &ndash; </small> </a>
+# Referencias
 
-* * *
-
-### Referencias
-
-*Android: Checkable Linear Layout* »» <a href="http://tokudu.com/2010/android-checkable-linear-layout/" target="_blank">Visitar sitio</a>  
-*Android ListView and ListActivity - Tutorial* »» <a href="http://www.vogella.com/articles/AndroidListView/article.html" target="_blank">Visitar sitio</a>  
-*Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
-*AndroidBook* »» <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
+- *Android: Checkable Linear Layout* »» <a href="http://tokudu.com/2010/android-checkable-linear-layout/" target="_blank">Visitar sitio</a>  
+- *Android ListView and ListActivity - Tutorial* »» <a href="http://www.vogella.com/articles/AndroidListView/article.html" target="_blank">Visitar sitio</a>  
+- *Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
+- *AndroidBook* »» <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
 
 
 
@@ -477,6 +508,3 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
  [7]: #desplazarLista
  [8]: #SavedInstanceState
  [9]: /fundamentos-programacion-android-ciclo/
-
-{% include toc.html %}
-</postdata>
