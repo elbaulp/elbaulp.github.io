@@ -78,7 +78,7 @@ Cuando obtenemos un nuevo dispositivo Android &#8212; o lo restauramos a como vi
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Personalizar Android por completo" src="/assets/img/2013/08/ku-xlarge5.jpg" width="640px" height="360px"></amp-img>
 </figure>
 
-Si eres de los que disfrutan haciendo modificaciones a cada característica del teléfono, rootear es lo que necesitas. Ya sea para personalizar el diseño del teclado con algo como <a title="Keyboard Manager" href="http://lifehacker.com/5703147/keyboard-manager-automatically-sets-your-android-keyboard-based-on-screen-orientation" target="_blank"><strong>Keyboard Manager</strong></a>** **u obtener un desplazamiento más rápido (*scroll*), perfeccionar la administración multitarea, instalar temas con <a title="Pimp My ROM" href="http://lifehacker.com/5949000/pimp-my-rom-tweaks-your-rooted-android-phone-in-every-way-imaginable" target="_blank"><strong>Pimp My ROM,</strong></a>** . **Al rootear el teléfono tenemos la capacidad de personalizar cada rincón de nuestro dispositivo.
+Si eres de los que disfrutan haciendo modificaciones a cada característica del teléfono, rootear es lo que necesitas. Ya sea para personalizar el diseño del teclado con algo como <a title="Keyboard Manager" href="http://lifehacker.com/5703147/keyboard-manager-automatically-sets-your-android-keyboard-based-on-screen-orientation" target="_blank"><strong>Keyboard Manager</strong></a> **u obtener un desplazamiento más rápido (*scroll*), perfeccionar la administración multitarea, instalar temas con <a title="Pimp My ROM" href="http://lifehacker.com/5949000/pimp-my-rom-tweaks-your-rooted-android-phone-in-every-way-imaginable" target="_blank">Pimp My ROM,</a>**. Al rootear el teléfono tenemos la capacidad de personalizar cada rincón de nuestro dispositivo.
 
 # 3. Flashear un kernel personalizado
 
@@ -86,7 +86,7 @@ Si eres de los que disfrutan haciendo modificaciones a cada característica del 
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Flashear un Kernel personalizado" src="/assets/img/2013/08/ku-xlarge7.jpg" width="640px" height="360px"></amp-img>
 </figure>
 
-Para aplicar algunas de las mejores modificaciones a Android se necesita un kernel personalizado, el cual sólo se puede *flashear *con un teléfono rooteado. El *kernel * es el responsable de la comunicación entre las aplicaciones y el hardware, con lo cual un kernel modificado puede proporcionar mejoras en el rendimiento, duración de la batería, incluso características adicionales como el *Wifi tethering * en dispositivos que no lo soportan por defecto, una carga de batería más rápida y <a href="http://lifehacker.com/5881842/how-to-get-better-battery-life-and-performance-on-your-android-phone-with-a-new-kernel" target="_blank">mucho más</a>.
+Para aplicar algunas de las mejores modificaciones a Android se necesita un kernel personalizado, el cual sólo se puede *flashear* un teléfono rooteado. El *kernel* es el responsable de la comunicación entre las aplicaciones y el hardware, con lo cual un kernel modificado puede proporcionar mejoras en el rendimiento, duración de la batería, incluso características adicionales como el *Wifi tethering* en dispositivos que no lo soportan por defecto, una carga de batería más rápida y <a href="http://lifehacker.com/5881842/how-to-get-better-battery-life-and-performance-on-your-android-phone-with-a-new-kernel" target="_blank">mucho más</a>.
 
 # 2. Flashear una ROM personalizada
 
