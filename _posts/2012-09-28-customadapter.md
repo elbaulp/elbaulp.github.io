@@ -59,38 +59,36 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
        android:layout_width="wrap_content" 
        android:layout_height="wrap_content" 
        android:layout_centervertical="true" 
-       android:focusable="false">
+       android:focusable="false"/>
       
-      <textview 
-          android:id="@+id/tvTitulo" 
-          android:layout_width="wrap_content" 
-          android:layout_height="wrap_content" 
-          android:layout_centervertical="true" 
-          android:layout_torightof="@id/leido" 
-          android:text="Titulo del post" 
-          android:textappearance="?android:attr/textAppearanceMedium" />
+   <textview 
+       android:id="@+id/tvTitulo" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content" 
+       android:layout_centervertical="true" 
+       android:layout_torightof="@id/leido" 
+       android:text="Titulo del post" 
+       android:textappearance="?android:attr/textAppearanceMedium" />
       
-      <textview 
-          android:id="@+id/tvFecha_publicacion" 
-          android:layout_width="wrap_content" 
-          android:layout_height="wrap_content" 
-          android:layout_alignparentright="true" 
-          android:layout_below="@+id/tvTitulo" 
-          android:paddingtop="10dp" 
-          android:text="25/05/2012" 
-          android:textappearance="?android:attr/textAppearanceSmall">
+   <textview 
+       android:id="@+id/tvFecha_publicacion" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content" 
+       android:layout_alignparentright="true" 
+       android:layout_below="@+id/tvTitulo" 
+       android:paddingtop="10dp" 
+       android:text="25/05/2012" 
+       android:textappearance="?android:attr/textAppearanceSmall" />
           
-         <imageview 
-             android:id="@+id/ivCalendar" 
-             android:layout_width="22dp" 
-             android:layout_height="22dp" 
-             android:layout_aligntop="@+id/tvFecha_publicacion" 
-             android:layout_margintop="10dp" 
-             android:layout_toleftof="@+id/tvFecha_publicacion" 
-             android:contentdescription="@string/imagen_content_description" 
-             android:src="@drawable/calendar" />
-      </textview>
-   </checkbox>
+   <imageview 
+       android:id="@+id/ivCalendar" 
+       android:layout_width="22dp" 
+       android:layout_height="22dp" 
+       android:layout_aligntop="@+id/tvFecha_publicacion" 
+       android:layout_margintop="10dp" 
+       android:layout_toleftof="@+id/tvFecha_publicacion" 
+       android:contentdescription="@string/imagen_content_description" 
+       android:src="@drawable/calendar" />
 </relativelayout>
 ```
 
@@ -391,7 +389,7 @@ El principal problema que hay cuando se añade un checkBox a un ListView, es que
     android:layout_width="wrap_content" 
     android:layout_height="wrap_content" 
     android:layout_centervertical="true" 
-    android:focusable="false">
+    android:focusable="false"/>
 ```
 
 Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al checkbox:
