@@ -495,8 +495,6 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
 - *Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
 - *AndroidBook* »» <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
 
-
-
  [1]: /programacion-android-interfaz-grafica_28/
  [2]: /programacion-android-interfaz-grafica-2/
  [3]: /curso-programacion-android/
