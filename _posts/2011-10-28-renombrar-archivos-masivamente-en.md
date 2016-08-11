@@ -1,6 +1,5 @@
 ---
 title: Renombrar archivos masivamente en GNU/Linux
-
 layout: post.amp
 permalink: /renombrar-archivos-masivamente-en/
 categories:
@@ -9,11 +8,10 @@ categories:
 tags:
   - renombrar archivos linux masivo
   - renombrar linux
+modified: 2016-08-11T08:30
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="icosh">
-</div>
 
 En ocasiones, cuando bajamos archivos de internet (Normalmente música), cada archivo tiene en el nombre la dirección de la página web de donde se descargó.
 
@@ -39,14 +37,12 @@ hkr@hkr:~/Desktop/RAP/d$ ls
 11. Rafael Lechowski (Flowklorikos) - Cosquijazz - www.HHGroups.com.mp3
 12. Rafael Lechowski (Flowklorikos) - Mis ego depresiones - www.HHGroups.com.mp3
 13. Rafael Lechowski (Flowklorikos) - 13 - www.HHGroups.com.mp3
-
 ```
 
 Queremos elmininar las siguientes partes del nombre: **Rafael Lechowski (Flowklorikos)** y **www.HHGroups.com**. Para ello usamos la orden rename con la siguiente sintaxis:
 
 ```bash
 rename 's/Rafael Lechowski (Flowklorikos) - //g' *.mp3
-
 ```
 
 Lo que decimos con esa expresión regular es que reemplace lo que coincida con Rafael Lechowski (Flowklorikos) por nada, es decir, que lo elimine del nombre. Es necesario escapar con los espacios en blanco y los parentesis. El *.mp3 quiere decir que aplique el renombramiento a los archivos mp3.
@@ -68,14 +64,12 @@ hkr@hkr:~/Desktop/RAP/d$ ls -1
 11. Cosquijazz - www.HHGroups.com.mp3
 12. Mis ego depresiones - www.HHGroups.com.mp3
 13. 13 - www.HHGroups.com.mp3
-
 ```
 
 Falta eliminar la parte www.HHGroups.com, que lo conseguimos con esta orden:
 
 ```bash
 rename 's/ - www.HHGroups.com//g' *.mp3
-
 ```
 
 Y finalmente, tenemos todos nuestros archivos renombrados:
@@ -95,9 +89,4 @@ hkr@hkr:~/Desktop/RAP/d$ ls -1
 11. Cosquijazz.mp3
 12. Mis ego depresiones.mp3
 13. 13.mp3
-
 ```
-
-
-
-{% include toc.html %}
