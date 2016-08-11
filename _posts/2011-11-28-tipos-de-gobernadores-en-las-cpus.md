@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - que es cpu conservative
   - samsung galaxy scl gti9003
-modified: 2016-06-16T19:45:21+02:00
+modified: 2016-08-11T21:30
 image: Tipos-de-gobernadores-en-las-CPUs.jpg
 main-class: "linux"
 color: "#2196F3"
@@ -20,7 +20,6 @@ Para los que tengáis vuestro terminal [rooteado][1] voy a hablar en estos días
 Lo que hacen los gobernadores es definir unas reglas de cambio de frecuencias en el micro, ya sea una velocidad de reloj mayor o menor, y cuando han de cambiarse estas frecuencias.
 
 El gobernador define las características de energía de la CPU del sistema que a su vez afectan el rendimiento de la CPU. Cada gobernador tiene su propia conducta, propósito e idoneidad en términos de carga de trabajo.
-
 
 <!--ad-->
 
@@ -33,8 +32,4 @@ La frecuencia a la que una CPU puede operar viene limitada por su diseño. A men
 
 Fuentes: <a target="_blank" href="http://publib.boulder.ibm.com/infocenter/lnxinfo/v3r0m0/index.jsp?topic=%2Fliaai%2Fcpufreq%2FUnderstandingCPUFreqSubsystem.htm">publib.boulder.ibm.com</a> y <a target="_blank" href="http://docs.fedoraproject.org/es-ES/Fedora/14/html/Power_Management_Guide/cpufreq_governors.html#governor_types">docs.fedoraproject.org</a>
 
-
-
  [1]: /rootear-samsung-galaxy-s-gt-i9003
-
-{% include toc.html %}

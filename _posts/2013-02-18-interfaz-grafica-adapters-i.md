@@ -17,13 +17,14 @@ tags:
   - layout android
   - menu android
   - simple adapter android ejemplo
+modified: 2016-08-11T21:20
 main-class: "android"
 color: "#689F38"
 ---
+
 Un objeto Adaptador actúa como puente entre un AdapterView y los datos de una Vista (View). El adaptador permite el acceso a los elementos de datos, éste también es responsable de crear una vista para cada elemento en la colección de datos.
 
 Se puede decir, que los adaptadores son colecciones de datos, que asignamos a una vista para que ésta los muestre, por ejemplo, podemos crear un ArrayAdapter a partir de un array de string ya creado y con datos, y asignar este adaptador a un ListView, así, el ListView mostrará los datos del array.
-
 
 <!--ad-->
 
@@ -34,12 +35,22 @@ Para que quede más claro este concepto, vamos a verlo mediante un ejemplo:
 Primero creamos el layout, que va a contener un ListView con un Id ya definido por android, y un TextView también con un id ya definido.
 
 ```xml
-< ?xml version="1.0" encoding="utf-8"?>
-<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-<listview android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@android:id/list">
-<textview android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@android:id/empty">
-</textview></listview></linearlayout>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
+    <listview
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <textview
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></textview>
+    </listview>
+</linearlayout>
 ```
 
 Ahora, el código donde creamos el adaptador, y lo asociamos al ListView:
@@ -80,7 +91,6 @@ public class AdaptadoresActivity extends Activity {
         lv.setAdapter(adaptador);
     }
 }
-</string>
 ```
 
 Como vemos, al crear el arrayAdapter, tenemos que pasar tres parámetros, el contexto, un layout que se usará para dibujar cada item (en este caso ***simple\_list\_item_1***, que ya viene definido por android), más adelante veremos como crear los nuestros propios, y como tercer parámetro la colección de datos.
