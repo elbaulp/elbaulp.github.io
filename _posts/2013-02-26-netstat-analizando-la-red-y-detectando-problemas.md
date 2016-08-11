@@ -1,6 +1,5 @@
 ---
 title: 'Netstat: Analizando la red y detectando problemas'
-
 layout: post.amp
 permalink: /netstat-analizando-la-red-y-detectando-problemas/
 categories:
@@ -23,11 +22,12 @@ tags:
   - salida comando netstat
   - significado close_wait
   - usos netstat
+modified: 2016-08-11T10:41
 main-class: "linux"
 color: "#2196F3"
 ---
-<img src="/assets/img/2012/07/sh1.png" alt="netstat"  width="128px" height="128px" />  
-netstat es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.  
+
+`netstat` es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.  
 
 <!--ad-->
 
