@@ -28,7 +28,7 @@ En el blog de [Bruce Schneier]() he leido esta interesante noticia que os traduz
 
 <!--ad-->
 
-_Cui_, el científico que trabaja en _Reb Ballon [Security](/security-now/ "Articulos de seguridad")_ y Doctor por la Universidad de Columbia, presentó su investigación en la __Def Con__ de este año.
+_Cui_, el científico que trabaja en _Reb Ballon [Security](category/security-now/ "Articulos de seguridad")_ y Doctor por la Universidad de Columbia, presentó su investigación en la __Def Con__ de este año.
 
 El hack funciona del siguiente modo: Si el hacker consigue que pinches en un enlace malicioso, o que visites una web, puede atacar el ordenador embebido en la pantalla, más en concreto su _firmware_. Este mini ordenador es el que controla el menú de la pantalla, donde ajustamos el brillo etc.
 
