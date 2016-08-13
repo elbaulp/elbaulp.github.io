@@ -7,6 +7,7 @@ tags: [algoritmos, investigación]
 introduction: Investigadores de la UCL han desarrollado un software que analiza el texto escrito en papel de un individuo y replica de forma muy similar su letra. El programa se llama My Text in Your Handwriting.
 image: crean-un-algoritmo-que-replica-tu-letra.jpg
 date: 2016-08-13T07:07:34+02:00
+modified: 2016-08-13T10:50
 main-class: "articulos"
 color: "#F57C00"
 ---
@@ -19,7 +20,7 @@ Investigadores de la _UCL_ han desarrollado un software que analiza el texto esc
 
 # Lo que había hasta ahora
 
-Antes de que se desarrollara este software, la única forma de conseguir tipografías parecidas al texto escrito era con fuentes _Free style_. El problema de estas fuentes es que cada letra (cada _a_ por ejemplo), es igual a lo largo del texto. Lo cual no da una sensación de que sea un texto escrito a mano. Otras investigaciones generaban una fuente a partir de texto escrito por el usuario en una _Tablet_, pero como todos sabemos, no se escribe igual de bien en una table que en papel.
+Antes de que se desarrollara este software, la única forma de conseguir tipografías parecidas al texto escrito era con fuentes _Free style_. El problema de estas fuentes es que cada letra (cada _a_ por ejemplo), es igual a lo largo del texto. Lo cual no da una sensación de que sea un texto escrito a mano. Otras investigaciones generaban una fuente a partir de texto escrito por el usuario en una _Tablet_, pero como todos sabemos, no se escribe igual de bien en una tablet que en papel.
 
 # Cómo funciona el algoritmo
 
@@ -30,7 +31,7 @@ Antes de que se desarrollara este software, la única forma de conseguir tipogra
 
 ## Replicar la letra de personajes históricos
 
-Este programa se podría usar para replicar el tipo de letra que tenían personajes pasados. El equipo replicó la letra de _Arthur Conan Doyle_, _Abraham Lincoln_ y _Frida Kahio_, como podemos ver en la image:
+Este programa se podría usar para replicar el tipo de letra que tenían personajes pasados. El equipo replicó la letra de _Arthur Conan Doyle_, _Abraham Lincoln_ y _Frida Kahio_, como podemos ver en la imagen:
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/crean-un-algoritmo-que-replica-tu-letra.jpg" alt="{{ title }}" title="{{ title }}" width="755" height="701">
@@ -56,11 +57,11 @@ Las personas que tengan problemas para escribir, por haber padecido un ictus, po
 
 # Resultados
 
-Para evaluar la calidad del software, los investigadores imprimieron una serie de cartas escritas por su programa, y otras escritas a mano. Preguntaron a los participantes que decidieran si la carta mostrada estaba escrita a manoo por un ordenador. Solo acertaron el 60% de las veces.
+Para evaluar la calidad del software, los investigadores imprimieron una serie de cartas escritas por su programa, y otras escritas a mano. Preguntaron a los participantes que decidieran si la carta mostrada estaba escrita a mano o por un ordenador. Solo acertaron el 60% de las veces.
 
 # Referencias
 
-A continuación dejo un vídeo explicativo del software, junto con el enlace a la investigación y artículos relacionados.
+A continuación dejo un vídeo explicativo del software, junto con el enlace a la investigación y artículos relacionados. Puedes consultar más [artículos escritos en el blog](/category/articulos/ "Artículos del blog").
 
 <amp-youtube
     data-videoid="3mAKZaOPbBo"
