@@ -14,11 +14,12 @@ tags:
   - latex
   - colorear codigo fuente en latex
 image: 2013/05/latex_logo.png
+modified: 2016-08-13T18:20
 main-class: "latex"
 color: "#B31917"
 ---
 
-Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" /> y he reescrito el [Curso de programación Android][1] por completo.
+Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en que he reescrito el [Curso de programación Android][1] por completo.
 
 Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.  
 
@@ -32,14 +33,12 @@ Para instalarlo, es necesaria una versión de python igual o superior a la 2.6, 
 
 ```bash
 # easy_install Pygments
-
 ```
 
 Si no tienes instalado el programa *easy_install*, ejecuta:
 
 ```bash
 # aptitude install python-setuptools
-
 ```
 
 ### Instalar minted
@@ -67,15 +66,17 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
     }
 \end{minted}
 \end{document}
-
 ```
 
 Este trozo de código dará como resultado lo siguiente:  
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px" />
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px"></amp-img>
+</figure>
 
 ### Insertar código desde un archivo de código fuente
 
-Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" /> en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. *\newmintedfile[]{}*. Veamos un ejemplo:
+Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en lugar de copiar todas esas líneas. **Minted** proporciona un comando para tal fin. `\newmintedfile[]{}`. Veamos un ejemplo:
 
 ```latex
 \newmintedfile[myJava]{java}{
@@ -85,7 +86,6 @@ Normalmente, si tenemos un código fuente con muchas líneas es más cómodo inc
     frame=lines,
     framesep=2mm,
 }
-
 ```
 
 Con este comando, hemos definido una nueva función (*myJava*), que permitirá incluir el código fuente de un archivo al documento pdf. Por ejemplo. Supongamos que el contenido del fichero *miCodigo.java* es el siguiente:
@@ -126,7 +126,6 @@ public class Activity1 extends Activity {
       });
    }
 }
-
 ```
 
 Para incluirlo en el documento, haremos lo siguiente:
@@ -149,13 +148,15 @@ Para incluirlo en el documento, haremos lo siguiente:
 Ejemplo de \textbackslash newmintedfile:
 \myJava[label="miCodigo.java"]{miCodigo.java}
 \end{document}
-
 ```
 
 linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.
 
-El resultado será:  
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733px" height="940px" />
+El resultado será:
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733px" height="940px"></amp-img>
+</figure>
 
 ### Creando un comando
 
@@ -172,28 +173,24 @@ Puede resultar incómodo y pesado tener que escribir una y otra vez *\myJava[lab
 \newcommand{\myJavaCode}[2]{
     \myJava[label=#2.java]{#1.java}
 }
-
 ```
 
-Ahora en lugar de usar *myJava* para incluir ficheros fuente en el documento, usamos un comando definido por nosotros (myJavaCode). Sustituyendo la línea *\myJava[label=&#8221;miCodigo.java&#8221;]{miCodigo.java}* del ejemplo anterior por
+Ahora en lugar de usar *myJava* para incluir ficheros fuente en el documento, usamos un comando definido por nosotros (myJavaCode). Sustituyendo la línea `\myJava[label="miCodigo.java"]{miCodigo.java}` del ejemplo anterior por
 
 ```latex
 \myJavaCode{src/miCodigo}{miCodigo}
-
 ```
 
 Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el segundo la etiqueta a mostrar en el documento.
 
 ### Conclusiones
 
-Para mi, minted es el mejor paquete que hay para resaltar código en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" />. Y recomiendo a todo el mundo que aprenda a programar en <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="//s0.wp.com/latex.php?latex=%5CLaTeX&bg=ffffff&fg=000&s=0" alt="\LaTeX" title="\LaTeX" class="latex" />.
+Para mi, minted es el mejor paquete que hay para resaltar código en $$\LaTeX$$. Y recomiendo a todo el mundo que aprenda a programar en él.
 
 #### Referencias
 
-*Manual de referencia Minted* »» <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>  
-*Repositorio del paquete* »» <a href="http://code.google.com/p/minted/downloads/list" target="_blank">Visitar repositorio</a>
-
-
+- *Manual de referencia Minted* »» <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>  
+- *Repositorio del paquete* »» <a href="http://code.google.com/p/minted/downloads/list" target="_blank">Visitar repositorio</a>
 
  [1]: /disponible-la-primera-parte-del-curso/
 
