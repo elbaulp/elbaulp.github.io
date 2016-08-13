@@ -21,6 +21,7 @@ tags:
   - simple adapter android ejemplo
 image: 2012/09/principal1.png
 modified: 2016-08-10T16:30
+redirect_from: /how-to/adapter-personalizado-en-android/
 main-class: "android"
 color: "#689F38"
 ---
