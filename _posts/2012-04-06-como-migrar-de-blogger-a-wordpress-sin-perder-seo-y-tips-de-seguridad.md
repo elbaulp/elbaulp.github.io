@@ -1,6 +1,5 @@
 ---
 title: Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad
-
 description: 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo de blogger a una en wordpress bajo un hosting propio así como la configuración necesaria para no perder a los  lectores habituales, los suscriptores al feed ni el posicionamiento en los buscadores. Por último se mencionarán algunos consejos de seguridad.'
 layout: post.amp
 permalink: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/
@@ -12,58 +11,51 @@ tags:
   - migrar blogger a wordpress
   - migrar blogger wordpress
   - wordpress
-format: status
+modified: 2016-08-13T23:40
 main-class: "dev"
 color: "#E64A19"
 ---
-  * [Importar entradas y comentários][1]
-  * [Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress][2]
-  * [Redireccionar los enlaces de blogger a wordpress][3]
-  * [FeedBurner][4]
-  * [Seguridad][5]
 
-### <a name="imp"></a>Importar entradas y comentários
+{% include toc.html %}
+
+### Importar entradas y comentários
 
 Una vez tenemos wordpress instalado y funcionando, vamos a importar todos las entradas y los comentarios de nuestro blog de blogger, para ello hacemos clic en *Herramientas**→*Importar→*Blogger*
 
 Hecho esto, debemos conceder permisos a blogger para que deje a wordpress acceder a la información, le damos al botón de autorizar, una vez concedido el acceso, le damos al botón mágico (Magic Button) y se empezarán a importar las entradas y comentarios.
 
-
 <!--ad-->
 
-### <a name="camb"></a>Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress
+### Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress
 
-<p >
-  En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son <em><strong>ns100.ovh.net</strong></em> y <strong><em>dns100.ovh.net. </em></strong>Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace https://www.google.com/nombredetudominio. Una vez dentro del panel de control nos dirigimos a <em>Domain settings</em><em>→Domain Names</em><em>→Avanced DNS settings. </em>Nos logeamos en la consola y editamos la sección <em>DNS Information </em>para que quede parecido a esto:
-</p>
-<p >
-<a href="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613px" height="98px" /></a>
-</p>
-<p >
-  Obviamente con los DNS correspondientes a los que os proporcione vuestro servicio de hosting.
-</p>
+En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son <em><strong>ns100.ovh.net</strong></em> y <strong><em>dns100.ovh.net. </em></strong>Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace https://www.google.com/nombredetudominio. Una vez dentro del panel de control nos dirigimos a <em>Domain settings</em><em>→Domain Names</em><em>→Avanced DNS settings. </em>Nos logeamos en la consola y editamos la sección <em>DNS Information </em>para que quede parecido a esto:
 
-### <a name="red"></a>Redireccionar los enlaces de blogger a wordpress
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="DNS settings blogger to wordpress" src="/assets/img/2012/04/Screenshot-04042012-055625-PM1.png" alt="" width="613px" height="98px"></amp-img>
+</figure>
+
+Obviamente con los DNS correspondientes a los que os proporcione vuestro servicio de hosting.
+
+### Redireccionar los enlaces de blogger a wordpress
 
 Para no perder los enlaces que tenemos repartidos por internet, existe un plugin que se encarga de hacer la redirección de la entrada a su correspondiente en wordpress, en<a href="http://justinsomnia.org/2006/10/maintain-permalinks-moving-from-blogger-to-wordpress/" target="_blank"> este enlace</a> se explica detalladamente los pasos a seguir, yo voy a hacer un breve resumen:
 
-  * <a href="http://justinsomnia.org/files/wp-maintain-blogger-permalinks-2.0.zip" target="_blank">Descargamos el plugin</a>
-  * Subimos el plugin a `wp-content/plugins`
-  * Lo activamos
-  * Nos dirigimos a *Herramientas→Mantain Blogger Permalinks* y pulsamos el botón ***Mantain Blogger Permalinks***. Eso es todo, una vez terminado borramos el plugin, ya que es de un solo uso.
-  * Ahora toca ir a *Ajustes**→Enlaces permanentes *y seleccionar més y nombre
-  * Por último, instalamos el plugin <a href="http://wordpress.org/extend/plugins/blogger-301-redirect/" target="_blank">Blogger 301 Redirect</a> o SEO Blogger to <a href="http://wordpress.org/extend/plugins/seo-blogger-to-wordpress-301-redirector/" target="_blank">WordPress Migration using 301 Redirection</a> y seguimos sus respectivas instrucciones.
+* <a href="http://justinsomnia.org/files/wp-maintain-blogger-permalinks-2.0.zip" target="_blank">Descargamos el plugin</a>
+* Subimos el plugin a `wp-content/plugins`
+* Lo activamos
+* Nos dirigimos a *Herramientas→Mantain Blogger Permalinks* y pulsamos el botón ***Mantain Blogger Permalinks***. Eso es todo, una vez terminado borramos el plugin, ya que es de un solo uso.
+* Ahora toca ir a *Ajustes**→Enlaces permanentes *y seleccionar més y nombre
+* Por último, instalamos el plugin <a href="http://wordpress.org/extend/plugins/blogger-301-redirect/" target="_blank">Blogger 301 Redirect</a> o SEO Blogger to <a href="http://wordpress.org/extend/plugins/seo-blogger-to-wordpress-301-redirector/" target="_blank">WordPress Migration using 301 Redirection</a> y seguimos sus respectivas instrucciones.
 
-### <a name="feed"></a>FeedBurner
+### FeedBurner
 
-No podemos olvidarnos de nuestros suscriptores de RSS y correo. El primer paso es dirigirnos a la configuración de feedburner y en la url del feed sustituir la de blogger por *elbauldelprogramador.org/*feed en mi caso. Hecho esto, instalamos <a href="http://flagrantdisregard.com/feedburner/" target="_blank">FD FeedBurner</a> y en la configuración del plugin escribimos la dirección de feedburner *http://feeds.feedburner.com/elBauldelProgramador. *A partir de ahora el RSS de nuestro feed wordpress redireccionará a feedburner y mantendremos a todos nuestros suscriptores.*  
-*
+No podemos olvidarnos de nuestros suscriptores de RSS y correo. El primer paso es dirigirnos a la configuración de feedburner y en la url del feed sustituir la de blogger por *elbauldelprogramador.org/* feed en mi caso. Hecho esto, instalamos <a href="http://flagrantdisregard.com/feedburner/" target="_blank">FD FeedBurner</a> y en la configuración del plugin escribimos la dirección de feedburner *http://feeds.feedburner.com/elBauldelProgramador.* A partir de ahora el RSS de nuestro feed wordpress redireccionará a feedburner y mantendremos a todos nuestros suscriptores.
 
-## <a name="seg"></a>Seguridad
+## Seguridad
 
 Llegó el momento de configurar wordpress para hacerlo lo más seguro posible. Voy a recomendar unos cuantos plugings que nos ayudarán en esta tarea:
 
-### **AskApache Password Protect**
+### AskApache Password Protect
 
 [AskApache Password Protect][6] realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un *.htaccess*. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un *.htaccess *en la raiz de la instalación de WordPress y otro dentro de *wp-admin, *Simplemente buscamos la regla, y la eliminamos.
 
@@ -508,13 +500,4 @@ RewriteRule . /index.php [L]
 # END WordPress
 ```
 
-
-
- [1]: #imp
- [2]: #camb
- [3]: #red
- [4]: #feed
- [5]: #seg
  [6]: http://wordpress.org/extend/plugins/askapache-password-protect/
-
-{% include toc.html %}
