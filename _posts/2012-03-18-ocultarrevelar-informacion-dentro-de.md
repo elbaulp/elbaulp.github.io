@@ -30,14 +30,13 @@ El mensaje se oculta modificando el valor de cada pixel para que contenga parte 
 
 ### Imágenes PGM (Portable Grey Map file format)
 
-Para representar las imágenes en blanco y negro podemos usar un rango de valores para indicar todas las tonalidades de gris que van desde el negro hasta el blanco. En nuestro caso,  
-las imágenes almacenarán en cada píxel un valor de gris desde el 0 al 255. Por ejemplo, un píxel con valor 128 tendrá un gris intermedio entre blanco y negro.
+Para representar las imágenes en blanco y negro podemos usar un rango de valores para indicar todas las tonalidades de gris que van desde el negro hasta el blanco. En nuestro caso, las imágenes almacenarán en cada píxel un valor de gris desde el 0 al 255. Por ejemplo, un píxel con valor 128 tendrá un gris intermedio entre blanco y negro.
 
-La elección del rango [0,255] se debe a que esos valores son los que se pueden representar en un byte(8 bits). Por tanto, si queremos almacenar una imagen de niveles de gris,  
+
+La elección del rango [0,255] se debe a que esos valores son los que se pueden representar en un byte(8 bits). Por tanto, si queremos almacenar una imagen de niveles de gris, 
 necesitaremos ancho⋅alto bytes.
 
-En la siguiente figura se muestra un ejemplo de imagen 256&#215;256 de niveles de gris. Observe  
-el zoom de una región 10&#215;10 para apreciar con detalle los grises que la componen:
+En la siguiente figura se muestra un ejemplo de imagen 256&#215;256 de niveles de gris. Observe el zoom de una región 10&#215;10 para apreciar con detalle los grises que la componen:
 
 <figure>
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="215" width="400" src="https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png"></amp-img>
@@ -45,44 +44,23 @@ el zoom de una región 10&#215;10 para apreciar con detalle los grises que la co
 
 ### Imágenes PPM (Portable Pix Map file format)
 
-Para representar un color de forma numérica, no es fácil usar un único valor, sino que se  
-deben incluir tres números. Existen múltiples propuestas sobre el rango de valores y el  
-significado de cada una de esas componentes, generalmente adaptadas a diferentes objetivos  
-y necesidades.
+Para representar un color de forma numérica, no es fácil usar un único valor, sino que se deben incluir tres números. Existen múltiples propuestas sobre el rango de valores y el significado de cada una de esas componentes, generalmente adaptadas a diferentes objetivos y necesidades.
 
-En una imagen en color, el contenido de cada píxel será una tripleta de valores según un  
-determinado modelo de color. En esta práctica consideraremos el modelo RGB. Este modelo  
-es muy conocido, ya que se usa en dispositivos como los monitores, donde cada color se  
-representa como la suma de tres componentes: rojo, verde y azul.
+En una imagen en color, el contenido de cada píxel será una tripleta de valores según un determinado modelo de color. En esta práctica consideraremos el modelo RGB. Este modelo es muy conocido, ya que se usa en dispositivos como los monitores, donde cada color se representa como la suma de tres componentes: rojo, verde y azul.
 
-Podemos considerar distintas alternativas para el rango de posibles valores de cada  
-componente, aunque en la práctica, es habitual asignarle el rango de números enteros desde  
-el 0 al 255, ya que permite representar cada componente con un único byte, y la variedad de  
-posibles colores es suficientemente amplia. Por ejemplo, el ojo humano no es capaz de  
-distinguir un cambio de una unidad en cualquiera de las componentes.
+Podemos considerar distintas alternativas para el rango de posibles valores de cada componente, aunque en la práctica, es habitual asignarle el rango de números enteros desde el 0 al 255, ya que permite representar cada componente con un único byte, y la variedad de posibles colores es suficientemente amplia. Por ejemplo, el ojo humano no es capaz de distinguir un cambio de una unidad en cualquiera de las componentes.
 
 En el caso de este tipo de imágenes, en lugar de 1 byte por pixel, se usan 3, uno por cada componente de color.
 
 ### Ocultar/Revelar un mensaje
 
-Si tenemos en cuenta que los valores que se almacenan en cada píxel corresponden a un valor en  
-el rango [0,255] y que, por tanto, el contenido de una imagen no es más que una secuencia de  
-valores consecutivos en este rango. Si consideramos que el ojo humano no es capaz de  
-detectar cambios muy pequeños en dichos valores, podemos insertar el mensaje deseado  
-modificando ligeramente cada uno de ellos. Concretamente, si cambiamos el valor del bit menos significativo, habremos afectado al valor del píxel, como mucho, en una unidad de  
-entre las 255. La imagen la veremos, por tanto, prácticamente igual.
+Si tenemos en cuenta que los valores que se almacenan en cada píxel corresponden a un valor en el rango [0,255] y que, por tanto, el contenido de una imagen no es más que una secuencia de valores consecutivos en este rango. Si consideramos que el ojo humano no es capaz de detectar cambios muy pequeños en dichos valores, podemos insertar el mensaje deseado modificando ligeramente cada uno de ellos. Concretamente, si cambiamos el valor del bit menos significativo, habremos afectado al valor del píxel, como mucho, en una unidad de entre las 255. La imagen la veremos, por tanto, prácticamente igual.
 
-Ahora que disponemos del bit menos significativo para cambiarlo como deseemos, podemos  
-usar todos los bits menos significativos de la imagen para codificar el mensaje. Por otro lado, el mensaje será una cadena-C, es decir, una secuencia de valores de tipo char  
-que terminan en un cero. En este caso, igualmente, tenemos una secuencia de bytes (8 bits)  
-que queremos insertar en la imagen. Dado que podemos modificar los bits menos  
-significativos de la imagen, podemos “repartir” cada carácter del mensaje en 8 píxeles  
-consecutivos. En la siguiente figura mostramos un esquema que refleja esta idea:
+Ahora que disponemos del bit menos significativo para cambiarlo como deseemos, podemos usar todos los bits menos significativos de la imagen para codificar el mensaje. Por otro lado, el mensaje será una cadena-C, es decir, una secuencia de valores de tipo char que terminan en un cero. En este caso, igualmente, tenemos una secuencia de bytes (8 bits) que queremos insertar en la imagen. Dado que podemos modificar los bits menos significativos de la imagen, podemos “repartir” cada carácter del mensaje en 8 píxeles consecutivos. En la siguiente figura mostramos un esquema que refleja esta idea:
 
 <figure>
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="125" width="400" src="https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png"></amp-img>
 </figure>
-
 
 Donde los valores de arriba corresponden a los píxeles de la imágen y los de abajo al mensaje.
 

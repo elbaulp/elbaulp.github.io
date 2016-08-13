@@ -1,6 +1,5 @@
 ---
 title: Ocultar archivos dentro de una imagen
-
 layout: post.amp
 permalink: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
 categories:
@@ -12,12 +11,15 @@ tags:
   - ocultar fichero foto
   - ocultar imagenes en imagenes
   - ocultar informacion en imagenes
+modified: 2016-08-13T22:22
+redirect_from: /programacion/ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
 main-class: "dev"
 color: "#E64A19"
 ---
-<p >
-<a href="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif" alt="" width="395px" height="380px" /></a>
-</p>
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif" alt="" width="395px" height="380px"></amp-img>
+</figure>
 
 Hace unos meses publiqué una <a href="/ocultarrevelar-informacion-dentro-de/" target="_blank">entrada</a> en la que explicaba (Sin mostar código) una práctica que me mandaron en la asignatura metodología de la programación.
 
@@ -43,8 +45,11 @@ Empecemos explicando la estructura del directorio:
 
 La carpeta doc contiene la documentación generada con doxygen, en imágenes evidentemente las imágenes a usar, el directorio *include* contiene los archivos de cabecera **codificar.h**, (con la declaración de las funciones que ocultarán y revelarán los datos ocultos) y **imagenES.h** (Tanto este archivo como su correspondiente cpp los facilitó la facultad para poder leer y escribir en imágenes de tipo PPM y PGM). La carpeta **src **contiene 4 archivos, **ocultar.cpp **y **revelar.cpp **son los dos programas a usar cuando queramos ocultar o revelar la información de una imagen. En **codificar.cpp **se definen las operaciones mencionadas anteriormente. Por último el **Makefile **define las reglas para compilar todo.
 
-A continuación paso a describir uno a uno los archivos :  
+A continuación paso a describir uno a uno los archivos :
+
 <!--ad-->
+
+{% include toc.html %}
 
 ### *./include/codificar.h*
 
@@ -69,11 +74,10 @@ int ocultar(unsigned char[],int , char[]);
 int revelar(unsigned char[],int, char[], int);
 
 #endif /* CODIFICAR_H_ */
-
 ```
 
-`int get_file_size(std::ifstream& );` será útil para obtener el tamaño en bytes del fichero a ocultar.  
-`int ocultar(unsigned char[],int , char[]);` se encarga de ocultar el archivo en sí, el primer parámetro es el buffer de la imagen (contiene el valor de los píxeles), el segundo el tamaño de la imagen y el tercero el nombre del archivo a ocultar.
+- `int get_file_size(std::ifstream& );` será útil para obtener el tamaño en bytes del fichero a ocultar.  
+- `int ocultar(unsigned char[],int , char[]);` se encarga de ocultar el archivo en sí, el primer parámetro es el buffer de la imagen (contiene el valor de los píxeles), el segundo el tamaño de la imagen y el tercero el nombre del archivo a ocultar.
 
 ### *./src/codificar.cpp*
 
@@ -215,7 +219,6 @@ int get_file_size(ifstream& f){
 
  return size;
 }
-
 ```
 
 En este archivo se definen las funciones mencionadas en el .h, es la base del programa y por esa razón voy a detenerme más en él para explicarlo lo mejor posible.
@@ -248,7 +251,6 @@ int ocultar(unsigned char buffer[],int tamImage, char archivo[]){
    }
    return 0;
 }
-
 ```
 
 Comenzamos abriendo el nombre del archivo que se pasa como parámetro, si se lee con éxito, elimina la ruta del archivo para quedarse solo con el nombre `strcpy(archivo,basename(archivo));`.
@@ -275,7 +277,6 @@ for (int k = 7; k >= 0; k--){
    buffer[indice] &= 0xfe; //hacemos 0 último bit con máscara 11111110
    buffer[indice++] ^= c;
 }
-
 ```
 
 Esto es lo que pasa en la primera iteración en la variable c (suponiendo que letra='H'):  
@@ -336,7 +337,6 @@ int revelar(unsigned char buffer[], int tamImage, char sms[], int tamSMS){
 
    return 0;
 }
-
 ```
 
 Al estar delimitado por una cabecera el nombre del archivo, se usa un puntero para buscar en qué posición se encuentra el píxel blanco que determina el fin del nombre del fichero. Con un for se recorren los píxeles entre dicha cabecera para extraer el nombre y escribirlo con `ofstream` al disco duro. El proceso de extracción de los bits es similar a ocultar, usando máscaras.
@@ -350,7 +350,6 @@ Se va a ocultar el archivo llamado `Nombre_fichero`, cuyo contenido es:
 ```bash
 $ cat Nombre_fichero
 Contenido del fichero
-
 ```
 
 `ocultar` espera dos parámetros, la imagen de entrada y el nombre de la imagen con el archivo oculto:
@@ -362,14 +361,15 @@ Ocultando...Se ha ocultado correctamente el archivo Nombre_fichero en imagenSali
 
 $ ls
 doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fichero  obj  ocultar  README.md  revelar  src
-
 ```
 
 En la imagen de salida se pueden apreciar los dos píxeles blancos que contienen el nombre del archivo:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/09/Screenshot-from-2012-09-13-1902101.png" alt="" title="Screenshot from 2012-09-13 19:02:10" width="416px" height="469px" />][1]
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/09/Screenshot-from-2012-09-13-1902101.png" alt="" title="Screenshot from 2012-09-13 19:02:10" width="416px" height="469px"></amp-img>
+</figure>
 
-Para revelar la información, usamos el programa para tal propósito, que espera un único parámetro, la imagen con los datos ucultos:
+Para revelar la información, usamos el programa para tal propósito, que espera un único parámetro, la imagen con los datos ocultos:
 
 ```bash
 $ ./revelar imagenSalida.pgm
@@ -377,7 +377,6 @@ Descifrado el archivo: Nombre_fichero en la imagen imagenSalida.pgm
 
 $ ls
 doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fichero  obj  ocultar  README.md  revelar  src
-
 ```
 
 Como indica, ha descifrado un fichero de nombre **Nombre_fichero**, con el comando `ls` vemos efectivamente que ha creado el fichero, y su contenido es:
@@ -385,18 +384,13 @@ Como indica, ha descifrado un fichero de nombre **Nombre_fichero**, con el coman
 ```bash
 $ cat Nombre_fichero
 Contenido del fichero
-
 ```
 
 Este programa no tiene un uso útil, meramente acadámico, el proyecto es accesible en su repositorio en gitHub.
 
-* * *
+##### Referencias: 
 
-##### Referencias: <a href="https://github.com/algui91/Hide-file-in-Photo" target="_blank">Repositorio en GitHub</a> | <a href="http://stackoverflow.com/questions/12042950/substitute-an-instruction-depending-on-a-condition" target="_blank">Pregunta en StackOverflow</a>
+- <a href="https://github.com/algui91/Hide-file-in-Photo" target="_blank">Repositorio en GitHub</a>
+- <a href="http://stackoverflow.com/questions/12042950/substitute-an-instruction-depending-on-a-condition" target="_blank">Pregunta en StackOverflow</a>
 
 
-
- [1]: /assets/img/2012/09/Screenshot-from-2012-09-13-1902101.png
-
-{% include toc.html %}
-</string.h></fstream></iostream>
