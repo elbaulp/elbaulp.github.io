@@ -13,7 +13,8 @@ tags:
 description: "Si te gusta jugar con tu Android, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android."
 image: 2013/07/iconoAndroid.png
 date: 2012-01-01T00:00
-modified: 2016-07-25T20:00
+modified: 2016-08-13T23:22
+redirect_from: /programacion/android/codigos-secretos-y-ocultos-para-android/
 main-class: "android"
 color: "#689F38"
 ---
