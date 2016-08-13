@@ -27,7 +27,7 @@ En estos meses de verano he ido modificando esta práctica para cambiarle la fun
 
 La práctica original consistía en ocultar mensajes dentro de una imágen de tipo PGM o PPM, que no usan compresión, lo que permite modificar los bits menos significativos de cada pixel sin que el ojo humano perciba el cambio de color y permitiendo almacenar información en él.
 
-Despues de las modificaciones que hice, permite ocultar archivos de texto ( y cualquier archivo que esté únicamente compuesto por *char * o *unsigner char.*)
+Despues de las modificaciones que hice, permite ocultar archivos de texto ( y cualquier archivo que esté únicamente compuesto por *char* o *unsigner char.*)
 
 Empecemos explicando la estructura del directorio:
 
@@ -43,7 +43,7 @@ Empecemos explicando la estructura del directorio:
   * revelar.cpp
 * Makefile
 
-La carpeta doc contiene la documentación generada con doxygen, en imágenes evidentemente las imágenes a usar, el directorio *include* contiene los archivos de cabecera **codificar.h**, (con la declaración de las funciones que ocultarán y revelarán los datos ocultos) y **imagenES.h** (Tanto este archivo como su correspondiente cpp los facilitó la facultad para poder leer y escribir en imágenes de tipo PPM y PGM). La carpeta **src **contiene 4 archivos, **ocultar.cpp **y **revelar.cpp **son los dos programas a usar cuando queramos ocultar o revelar la información de una imagen. En **codificar.cpp **se definen las operaciones mencionadas anteriormente. Por último el **Makefile **define las reglas para compilar todo.
+La carpeta doc contiene la documentación generada con doxygen, en imágenes evidentemente las imágenes a usar, el directorio *include* contiene los archivos de cabecera **codificar.h**, (con la declaración de las funciones que ocultarán y revelarán los datos ocultos) y **imagenES.h** (Tanto este archivo como su correspondiente cpp los facilitó la facultad para poder leer y escribir en imágenes de tipo PPM y PGM). La carpeta **src** contiene 4 archivos, **ocultar.cpp** y **revelar.cpp** son los dos programas a usar cuando queramos ocultar o revelar la información de una imagen. En **codificar.cpp** se definen las operaciones mencionadas anteriormente. Por último el **Makefile** define las reglas para compilar todo.
 
 A continuación paso a describir uno a uno los archivos :
 
