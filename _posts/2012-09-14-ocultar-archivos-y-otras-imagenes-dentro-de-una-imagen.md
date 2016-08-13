@@ -31,17 +31,17 @@ Despues de las modificaciones que hice, permite ocultar archivos de texto ( y cu
 
 Empecemos explicando la estructura del directorio:
 
-  * doc
-  * imágenes
-  * include
-      * codificar.h
-      * imagenES.h
-  * src
-      * codificar.cpp
-      * imagenES.cpp
-      * ocultar.cpp
-      * revelar.cpp
-  * Makefile
+* doc
+* imágenes
+* include
+  * codificar.h
+  * imagenES.h
+* src
+  * codificar.cpp
+  * imagenES.cpp
+  * ocultar.cpp
+  * revelar.cpp
+* Makefile
 
 La carpeta doc contiene la documentación generada con doxygen, en imágenes evidentemente las imágenes a usar, el directorio *include* contiene los archivos de cabecera **codificar.h**, (con la declaración de las funciones que ocultarán y revelarán los datos ocultos) y **imagenES.h** (Tanto este archivo como su correspondiente cpp los facilitó la facultad para poder leer y escribir en imágenes de tipo PPM y PGM). La carpeta **src **contiene 4 archivos, **ocultar.cpp **y **revelar.cpp **son los dos programas a usar cuando queramos ocultar o revelar la información de una imagen. En **codificar.cpp **se definen las operaciones mencionadas anteriormente. Por último el **Makefile **define las reglas para compilar todo.
 
