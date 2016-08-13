@@ -88,13 +88,14 @@ Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambi
 ```
 
 Produciendo el siguiente resultado:  
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887px" height="53px" />
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887px" height="53px"></amp-img>
+</figure>
 
 #### Referencias
 
 - *Header/Footer in Latex with Fancyhdr* »» <a href="http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr/" target="_blank">texblog.org</a>
-
-
 
  [1]: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted"
  [2]: /disponible-la-primera-parte-del-curso/ "Disponible la primera parte del curso Android en PDF"
