@@ -3,10 +3,10 @@
     <a aria-label="En Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}+{{ site.url }}{{ page.url }}+Vía @{{ site.owner.twitter }}" title="En Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="En Facebook" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption={{ page.title | url_encode }}&link={{ site.url | url_encode }}{{ page.url | url_encode }}&redirect_uri=https://developers.facebook.com/tools/explorer" title="En Facebook">
+    <a aria-label="En Facebook" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption={{ page.title | url_encode }}&link={{ site.url | url_encode }}{{ page.url | url_encode }}&redirect_uri={{ site.url | url_encode }}{{ page.url | url_encode }}" title="En Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="En Google plu" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="En Google+">
+    <a aria-label="En Google plus" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="En Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
     <a aria-label="Suscribir al RSS" href="/rssfeed" title="Suscribir al RSS">
