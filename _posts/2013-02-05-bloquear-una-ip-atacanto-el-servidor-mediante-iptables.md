@@ -65,6 +65,6 @@ En las referencias puedes encontrar más información sobre iptables. También p
 
  [1]: https://elbauldelprogramador.com/?s=iptables
  [2]: /20-ejemplos-de-iptables-para-sysadmins/
- [3]: https://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
+ [3]: https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
 
 {% include toc.html %}

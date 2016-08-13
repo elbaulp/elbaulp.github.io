@@ -113,7 +113,7 @@ LOG        all  --  Y.Y.Y.Y        anywhere            LOG level warning prefix 
 
 A partir de ahora, se notará un descenso drástico en los comentarios de spam. Espero que haya servido de ayuda.
 
-[1]: https://elbauldelprogramador.com/administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
+[1]: https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
 [2]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de Datos"
 [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/ "Consulta de Datos – Cláusula Select"
 [4]: https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos"
