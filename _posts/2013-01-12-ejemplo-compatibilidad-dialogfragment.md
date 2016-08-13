@@ -102,7 +102,7 @@ Llegados a este punto, es importante saber qué clase hemos de importar. Ya que 
 Para comprobar que funciona, lanzamos el emulador, en este caso, con la versión 2.3 de Android:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1337262-180x300.png" alt="TimePickerFragment Suportv4" width="180px" height="300px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1337262.png" alt="TimePickerFragment Suportv4" width="480" height="800"></amp-img>
 </figure>
 
 El proceso de creación de un **DatePickerDialog** es muy similar.
@@ -161,7 +161,7 @@ public void mostrarDialogoDeFecha(View v){
 
 ```
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1352432-180x300.png" alt="DateTimePicker supportv4 Android" width="180px" height="300px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/device-2013-01-12-1352432.png" alt="DateTimePicker supportv4 Android" width="480" height="800"></amp-img>
 </figure>
 
 Así de simple, es similar a crear un **timePickerDialog**.
