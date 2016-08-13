@@ -14,9 +14,12 @@ tags:
   - xda
 description: "Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros. Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo."
 image: 2012/12/linux-apps-on-android1.jpg
+modified: 2016-08-13T23:23
+redirect_from: /programacion/android/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/
 main-class: "articulos"
 color: "#F57C00"
 ---
+
 Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.  
 Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo.
 
@@ -67,7 +70,9 @@ int main(){
 
 Ya solo queda compilarlo y ejecutarlo, dejo una captura de pantalla como prueba de que funciona:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/Screenshot_2012-12-04-17-14-141.png" alt="" title="Compilando código C/C++ en android" width="800px" height="480px" />
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/Screenshot_2012-12-04-17-14-141.png" alt="" title="Compilando código C/C++ en android" width="800px" height="480px"></figure>
+</figure>
 
 Y no solo eso, también podemos instalar python:
 
@@ -79,17 +84,18 @@ shell@android:/ # python2.7 hello.py
 Hola Mundo desde Android!
 ```
 
-De nuevo, com prueba, una captura de pantalla:  
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/Screenshot_2012-12-04-17-32-141.png" alt="" title="Ejecutando programas en python desde Android" width="800px" height="480px" />
+De nuevo, com prueba, una captura de pantalla:
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/Screenshot_2012-12-04-17-32-141.png" alt="" title="Ejecutando programas en python desde Android" width="800px" height="480px"></figure>
+</figure>
 
 A continuación un vídeo explicando el proceso de instalación de busybox sin permisos de root:
 
 ### Referencias
 
-*Geeknizer* »» <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>  
-*XDA-Developers* »» <a href="http://forum.xda-developers.com/showpost.php?p=26261600&postcount=119" target="_blank">Visitar sitio</a>
+- *Geeknizer* »» <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>  
+- *XDA-Developers* »» <a href="http://forum.xda-developers.com/showpost.php?p=26261600&postcount=119" target="_blank">Visitar sitio</a>
 
  [1]: /rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
 
-{% include toc.html %}
-</iostream>
