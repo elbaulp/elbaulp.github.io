@@ -1,6 +1,5 @@
 ---
 title: 'Programación Android &#8211; Ejemplo de uso de ACTION_PICK'
-
 layout: post.amp
 permalink: /programacion-android-ejemplos-de-uso-de/
 categories:
@@ -13,9 +12,12 @@ tags:
   - como filtrar un action_pick
   - curso android pdf
   - startactivityforresult android example
+modified: 2016-08-13T23:00
+redirect_from: /opensource/programacion-android-ejemplos-de-uso-de/
 main-class: "android"
 color: "#689F38"
 ---
+
 La idea de ACTION_PICK es lanzar una actividad que muestre una liste de objetos a seleccionar para que el usuario elija uno de ellos. Una vez elegido, la actividad devuelve la URI del elemento elegido. Así se permite reusar la interfaz gráfica.
 
 Se debe indicar usando MIME types la colección de datos que vamos a usar, el cual apuntará a un cursor parecido a este:
@@ -23,7 +25,6 @@ Se debe indicar usando MIME types la colección de datos que vamos a usar, el cu
 ```bash
 vnd.android.cursor.dir/vnd.favsites.site
 ```
-
 
 <!--ad-->
 
@@ -83,7 +84,6 @@ public static void parseResult(MainActivity activity
    outputIntent.setAction(Intent.ACTION_VIEW);
    startActivity(outputIntent);
 }
-
 ```
 
 Las constantes **RESTULT\_OK, RESULT\_CANCEL Y RESULT\_FIRST\_USER** están definidas en la clase de la Actividad y sus respectivos valores son:
@@ -92,7 +92,6 @@ Las constantes **RESTULT\_OK, RESULT\_CANCEL Y RESULT\_FIRST\_USER** están defi
 RESTULT_OK         = -1;
 RESULT_CANCEL      =  0;  
 RESULT_FIRST_USER  =  1;
-
 ```
 
 Por otro lado, en la aplicación **notePad**, debe haber un código devuelva un valor en el caso de que se haya llamado a la actividad desde un intent con ACTION_PICK como acción:
@@ -110,12 +109,7 @@ protected void onListItemClick(ListView l, View v, int position, long id){
       //Lanzamos una actividad para ver, editar la nota
       startActivity(new Intent(Intent.ACTION_EDIT, uri));
 }
-
 ```
-
-
 
  [1]: /programacion-android-implementando-un
  [2]: /programacion-android-como-se-resuelven
-
-{% include toc.html %}
