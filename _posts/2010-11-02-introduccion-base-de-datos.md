@@ -104,8 +104,8 @@ Esquema interno de toda la base de datos:
 
 #### ARTICULOS
 
-| COD_ART string(4) | CONCEPTO string(40) | PVP float | … |
-|-------------------|---------------------|-----------|---|
+| COD_ART string(4) | CONCEPTO string(40) | PVP float | ...  |
+|-------------------|---------------------|-----------|--- |
 
 Además se incluiría el tipo de organización, la secuencia física de los registros, modos de acceso, etc.
 
