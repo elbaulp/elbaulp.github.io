@@ -21,7 +21,11 @@ highlighter: rouge
 permalink: /:categories/:title/
 gems:
   - jekyll-sitemap
+  - jekyll-redirect-from
 
+whitelist:
+  - jekyll-redirect-from
+  
 # html minify
 compress_html:
   clippings: all

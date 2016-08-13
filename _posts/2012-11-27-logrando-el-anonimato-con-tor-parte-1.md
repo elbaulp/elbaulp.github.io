@@ -13,6 +13,9 @@ tags:
 author: luzila
 modified: 2016-08-08T13:00
 image: 2012/11/081012_1601_AchievingAn21-300x86.png
+redirect_from:
+  - /articulos/logrando-el-anonimato-con-tor-parte-1
+  - /opensource/logrando-el-anonimato-con-tor-parte-1
 main-class: "articulos"
 color: "#F57C00"
 ---
