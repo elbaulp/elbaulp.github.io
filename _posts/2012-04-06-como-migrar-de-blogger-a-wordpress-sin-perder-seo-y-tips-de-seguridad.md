@@ -20,7 +20,7 @@ color: "#E64A19"
 
 ### Importar entradas y comentários
 
-Una vez tenemos wordpress instalado y funcionando, vamos a importar todos las entradas y los comentarios de nuestro blog de blogger, para ello hacemos clic en *Herramientas**→*Importar→*Blogger*
+Una vez tenemos wordpress instalado y funcionando, vamos a importar todos las entradas y los comentarios de nuestro blog de blogger, para ello hacemos clic en *Herramientas→Importar→Blogger*
 
 Hecho esto, debemos conceder permisos a blogger para que deje a wordpress acceder a la información, le damos al botón de autorizar, una vez concedido el acceso, le damos al botón mágico (Magic Button) y se empezarán a importar las entradas y comentarios.
 
@@ -44,7 +44,7 @@ Para no perder los enlaces que tenemos repartidos por internet, existe un plugin
 * Subimos el plugin a `wp-content/plugins`
 * Lo activamos
 * Nos dirigimos a *Herramientas→Mantain Blogger Permalinks* y pulsamos el botón ***Mantain Blogger Permalinks***. Eso es todo, una vez terminado borramos el plugin, ya que es de un solo uso.
-* Ahora toca ir a *Ajustes**→Enlaces permanentes *y seleccionar més y nombre
+* Ahora toca ir a __Ajustes→Enlaces permanentes__ y seleccionar més y nombre
 * Por último, instalamos el plugin <a href="http://wordpress.org/extend/plugins/blogger-301-redirect/" target="_blank">Blogger 301 Redirect</a> o SEO Blogger to <a href="http://wordpress.org/extend/plugins/seo-blogger-to-wordpress-301-redirector/" target="_blank">WordPress Migration using 301 Redirection</a> y seguimos sus respectivas instrucciones.
 
 ### FeedBurner
@@ -57,7 +57,7 @@ Llegó el momento de configurar wordpress para hacerlo lo más seguro posible. V
 
 ### AskApache Password Protect
 
-[AskApache Password Protect][6] realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un *.htaccess*. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un *.htaccess *en la raiz de la instalación de WordPress y otro dentro de *wp-admin, *Simplemente buscamos la regla, y la eliminamos.
+[AskApache Password Protect][6] realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un *.htaccess*. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un *.htaccess* en la raiz de la instalación de WordPress y otro dentro de *wp-admin*. Simplemente buscamos la regla, y la eliminamos.
 
 ### Login Lock-Down
 
