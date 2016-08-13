@@ -1,11 +1,7 @@
 ---
 title: Imponiendo GPL usando técnicas de Judo
-
 layout: post.amp
 permalink: /imponiendo-gpl-usando-tecnicas-de-judo/
-if_slider_image:
-  -
-  -
 categories:
   - Articulos
   - opensource
@@ -13,10 +9,12 @@ tags:
   - gpl
   - licencias GPL
   - software libre
-format: status
+redirect_from: /opensource/imponiendo-gpl-usando-tecnicas-de-judo/
+modified: 2016-08-13T23:17
 main-class: "articulos"
 color: "#F57C00"
 ---
+
 *&#8220;En judo, el objetivo es aprovechar el impulso del atacante para defenderse, y eso es exactamente lo que hace el copyleft&#8221;*
 
 El propósito del software libre es hacer que el código que corre en las máquinas que gobiernan nuestras vidas sea transparente. En palabras de Lawrence Lessig, el software libre es &#8220;libre en el sentido de que el control del código de desarrollo sea transparente para todos, y que cualquier persona tenga el derecho de tomar ese control, y modificarlo si él o ella cree conveniente.&#8221;
@@ -27,6 +25,8 @@ La GPL promueve los derechos del usuario, pero los defensores de esos derechos s
 
 Bradley Kuhn toma una analogía de las artes marciales, y dice que &#8220;copyleft es una toma de judo sobre el copyright &#8220;. En el judo, el objetivo es aprovechar el impulso del atacante para defenderse, y eso es exactamente lo que hace copyleft. Mientras la ley de copyright se vuelve cada vez más y más amplia, el copyleft se sirve de ese impulso y lo devuelve con la misma fuerza. Por lo tanto el copyleft es siempre tan fuerte como el copyright. &#8221;
 
+{% include toc.html %}
+
 ## Los infractores
 
 El software libre permite el acceso al trabajo de miles de programadores, es relativamente libre de costo, y elimina la necesidad de reinventar la rueda una y otra vez. Compartir el código es útil para todos, al menos en teoría.
@@ -34,7 +34,6 @@ El software libre permite el acceso al trabajo de miles de programadores, es rel
 Sin embargo, la aplicación del copyleft depende de la voluntad de los proveedores de software GPL para cumplir con los términos de la licencia, y/o la voluntad de los titulares del copyright para actuar en defensa de la GPL. Y por diversas razones los términos de la GPL son a menudo ignorados por los distribuidores de software libre y los titulares del copyright no siempre están dispuestos a involucrarse.  
 
 <!--ad-->
-
 
 El único requisito de la GPL es que el código fuente sea accesible a los usuarios finales, pero este requisito se olvida con frecuencia, especialmente cuando el código se reutiliza en el firmware y dispositivos embebidos.
 
@@ -55,9 +54,6 @@ Aplicar la GPL puede ser una experiencia desagradable para los vendedores de chi
 La mayoría de las infracciones no son deliberadas, y probablemente pueden ser atribuidas a una mezcla de apatía, incomprensión, ignorancia y confusión. Según Kuhn, &#8220;99,999 por ciento de violaciones se resuelven sin ecesidad de juicio. Nunca nadie ha oído hablar de la mayoría de las empresas que sancionadas al respecto, y han llegado a conformidad sin mucha fanfarria.&#8221;
 
 Harald Welte tiene su propia perspectiva sobre este tema. &#8220;Creo que todavía hay demasiadas violaciones a la GPL, y necesitamos ver más casos positivos con el fin de obtener mayoría de involucrados en el cumplimiento en las respectivas líneas de negocio. Pero lidiar con los dispositivos embebidos en el 2012 y seguir obteniendo el cumplimiento totalmente mal aplicado en realidad significa que no ha habido la más mínima atención en este tema. Y sin refuerzos, nunca va a cambiar. Las personas que no están realmente interesadas deben utilizar simplemente licencias del estilo del MIT. &#8221;  
-
-
-##
 
 ## Los implementadores
 
@@ -90,9 +86,7 @@ La cuestión clave es la causa y efecto de aplicar la GPL en los vendedores de c
 
 Mientras que The Conservancy no requiere de una visión general de&#8221;productos relacionados&#8221;, SFC pide que el fabricante entre en cumplimiento de todos los módulos de la GPL en un dispositivo que no haya cumplido con la licencia de BusyBox. &#8220;No se puede decir &#8216;vamos a cumplir con BusyBox pero ignorar Linux, glibc o cualquier cosa que pueda ser GPL o LGPL'&#8221;, dice Kuhn.
 
-<div>
-  Welte concuerda con las líneas generales de este enfoque, y señala que gpl-violations.org ha pedido rutinariamente &#8220;el código fuente correspondiente a todo el software con licencia GPL en nuestra comunicación con las empresas infractoras. Esta solicitud fue tipicamente honrada por todos, sin la necesidad de aplicar cualquier presión sobre él. &#8220;
-</div>
+Welte concuerda con las líneas generales de este enfoque, y señala que gpl-violations.org ha pedido rutinariamente &#8220;el código fuente correspondiente a todo el software con licencia GPL en nuestra comunicación con las empresas infractoras. Esta solicitud fue tipicamente honrada por todos, sin la necesidad de aplicar cualquier presión sobre él. &#8220;
 
 El punto de vista de Kuhn es que &#8220;hay que cumplir con todo si se desea utilizar BusyBox. El artículo 4 de la GPLv2 dice que tan pronto como se viola la licencia los derechos de copiar, modificar y distribuir el software desaparecen. Así que una vez que se viola el copyright de Busybox se pierde el derecho a distribuir el código GPL. &#8221;
 
@@ -137,5 +131,3 @@ Detrás de las principales historias de litigios subyace una realidad más tranq
 ## Fuente: <a href="http://www.h-online.com/open/features/Enforcing-the-GPL-with-Judo-moves-1471698.html" target="_blank">h-online</a>
 
 
-
-{% include toc.html %}
