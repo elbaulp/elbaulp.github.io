@@ -16,11 +16,12 @@ tags:
   - layout android
   - menu android
   - simple adapter android ejemplo
-main-class: "dev"
-color: "#E64A19"
+image: https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png
+modified: 2016-08-14T11:40
 main-class: "android"
 color: "#689F38"
 ---
+
 En [Programación Android: Interfaz gráfica &#8211; Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
 
 <!--ad-->
@@ -57,7 +58,6 @@ public class VersionesUbuntu {
    public int getLogotipo() { return logotipo; }
 
 }
-
 ```
 
 A continuación vamos a crear el adaptador desde cero, siendo necesario extender de la clase BaseAdapter.
@@ -80,7 +80,7 @@ public class VersionesUbuntuAdapter extends BaseAdapter{
    private ArrayList<versionesubuntu> listadoVersiones;
    private LayoutInflater lInflater;
 
-   public VersionesUbuntuAdapter(Context context, ArrayList</versionesubuntu><versionesubuntu> versiones) {
+   public VersionesUbuntuAdapter(Context context, ArrayList<versionesubuntu> versiones) {
       this.lInflater = LayoutInflater.from(context);
       this.listadoVersiones = versiones;
    }
@@ -124,7 +124,6 @@ public class VersionesUbuntuAdapter extends BaseAdapter{
       ImageView logoVersion;
    }
 }
-</versionesubuntu>
 ```
 
 Lo que hace esta clase es lo siguente, en su constructor, carga un objeto LayoutInflater, que infla los objetos XML del layout para que podamos usarlos, convirtiéndolos en un objeto java.
@@ -136,13 +135,32 @@ El método ***getView()*** se invoca cada vez que hay que dibujar la lista.
 En este caso, para la lista, hemos usado un layout personalizado, que es el siguiente:
 
 ```xml
-< ?xml version="1.0" encoding="utf-8"?>
-<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
-<imageview android:id="@+id/logo" android:src="@drawable/ocelot" android:layout_alignparentleft="true" android:padding="5px" android:layout_width="128px" android:layout_height="128px">
-<textview android:id="@+id/nomVersion" android:layout_torightof="@id/logo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingtop="15dip" android:text="VersionNom">
-</textview><textview android:id="@+id/numVersion" android:layout_below="@id/nomVersion" android:layout_torightof="@id/logo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="VersionNum">
-</textview></imageview></relativelayout>
+<?xml version="1.0" encoding="utf-8"?>
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent">
+        
+    <imageview android:id="@+id/logo" 
+         android:src="@drawable/ocelot" 
+         android:layout_alignparentleft="true" 
+         android:padding="5px" 
+         android:layout_width="128px" 
+         android:layout_height="128px"/>
 
+    <textview android:id="@+id/nomVersion" 
+        android:layout_torightof="@id/logo" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:paddingtop="15dip" 
+        android:text="VersionNom"/>
+
+    <textview android:id="@+id/numVersion" 
+        android:layout_below="@id/nomVersion" 
+        android:layout_torightof="@id/logo" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="VersionNum"/>
+</relativelayout>
 ```
 
 Por último, tan solo queda usar el adaptador que hemos creado en los pasos anteriores en nuesta Actividad principal, en este caso, una ListActivity:
@@ -163,7 +181,7 @@ public class Adaptadores2Activity extends ListActivity {
         setContentView(R.layout.main);
 
         ArrayList<versionesubuntu> versiones =
-           new ArrayList</versionesubuntu><versionesubuntu>();
+           new ArrayList<versionesubuntu>();
 
         versiones.add(
               new VersionesUbuntu("Lucid Lynx", "10.4 LTS", R.drawable.lucid));
@@ -182,25 +200,15 @@ public class Adaptadores2Activity extends ListActivity {
         setListAdapter(adaptador);
     }
 }
-</versionesubuntu>
 ```
 
 Ya solo resta ejecutarlo y ver el resultado:
 
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s1600/adaptadores2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Adaptadores en Android" alt="Adaptadores en Android"  height="400" width="240" src="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s400/adaptadores2.png" /></a>
-</div>
-
-Como siempre, se puede descargar este ejemplo:
-
-<a class="aligncenter download-button" href="https://elbauldelprogramador.com/interfaz-grafica-adapters-ii/" rel="nofollow"> Download &ldquo;Interfaz gráfica – Adapters II&rdquo; <small>Adaptadores2.zip &ndash; Downloaded 1190 times &ndash; </small> </a>
-
-* * *
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Adaptadores en Android" alt="Adaptadores en Android"  height="800" width="420" src="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png"></amp-img>
+</figure>
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Menús][2]
 
  [1]: /programacion-android-interfaz-grafica_28
  [2]: /programacion-android-interfaz-grafica_08/
-
-
-{% include toc.html %}
