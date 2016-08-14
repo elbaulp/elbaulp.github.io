@@ -175,13 +175,13 @@ public class AdaptadoresActivity extends ListActivity {
 El resultado de este código es el siguiente, para una adaptador con datos:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="Adaptadores Android" title="Adaptadores Android" height="400" width="240" src="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s400/Adaptadores.png"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="Adaptadores Android" title="Adaptadores Android" height="800" width="480" src="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s800/Adaptadores.png"></amp-img>
 </figure>
 
 Y para un adaptador sin datos:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="400" width="240" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s400/listaVacia.png"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="800" width="480" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s800/listaVacia.png"></amp-img>
 </figure>
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters II][2] 
