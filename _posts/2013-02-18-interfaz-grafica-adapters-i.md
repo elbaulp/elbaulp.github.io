@@ -17,7 +17,7 @@ tags:
   - layout android
   - menu android
   - simple adapter android ejemplo
-modified: 2016-08-11T21:20
+modified: 2016-08-14T08:50
 main-class: "android"
 color: "#689F38"
 ---
@@ -174,26 +174,18 @@ public class AdaptadoresActivity extends ListActivity {
 
 El resultado de este código es el siguiente, para una adaptador con datos:
 
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s1600/Adaptadores.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="Adaptadores Android" title="Adaptadores Android" height="400" width="240" src="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s400/Adaptadores.png" /></a>
-</div>
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="Adaptadores Android" title="Adaptadores Android" height="400" width="240" src="https://2.bp.blogspot.com/-p_QGLZLQNbY/TgojF5KyZKI/AAAAAAAAAqg/zUY-4oCbZhE/s400/Adaptadores.png"></amp-img>
+</figure>
 
 Y para un adaptador sin datos:
 
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s1600/listaVacia.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="400" width="240" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s400/listaVacia.png" /></a>
-</div>
-
-El ejemplo de esta entrada esta disponible para su descarga:
-
-<a class="aligncenter download-button" href="https://elbauldelprogramador.com/interfaz-grafica-adapters-i/" rel="nofollow"> Download &ldquo;Interfaz gráfica – Adapters I&rdquo; <small>Adaptadores.zip &ndash; Downloaded 986 times &ndash; </small> </a>
-
-* * *
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="400" width="240" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s400/listaVacia.png"></amp-img>
+</figure>
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters II][2] 
 
  [1]: /programacion-android-interfaz-grafica_25/
  [2]: /programacion-android-interfaz-grafica-2/
 
-
-{% include toc.html %}
