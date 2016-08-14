@@ -1,6 +1,5 @@
 ---
-title: Los 11 Mejores Frameworks gratuitos para Aplicaciones Web
-
+title: Los 15 Mejores Frameworks gratuitos para Aplicaciones Web/Móvil [Actualizado]
 layout: post.amp
 permalink: /los-10-mejores-frameworks-gratis-de-aplicaciones-web/
 categories:
@@ -31,7 +30,7 @@ tags:
   - ejemplos de framework
   - tipos de frameworks
   - framework para desarrollo web
-format: aside
+modified: 2016-08-14T08:30
 main-class: "articulos"
 color: "#F57C00"
 ---
@@ -43,108 +42,26 @@ El más conocido patrón de diseño de aplicaciones web es la arquitectura Model
 
 Hay una amplia gama de frameworks para aplicaciones web disponibles para Linux que son distribuidos bajo licencia Open Source. Para proporcionar una visión en el software que actualmente está disponible, hemos compilado una lista de 10 frameworks de alta calidad. Los que hemos seleccionado cubren un número de lenguajes de programación incluyendo Ruby, PHP y Python.
 
-Ahora, exploremos los 10 frameworks en cuestión. Para cada título se ha incluido un hipervínculo hacia el propio portal, una descripción completa con un análisis en profundidad de sus características, junto con enlaces a recursos y revisiones relevantes.
-
+A continuación se muestran 15 de los _Frameworks_ más populares, tanto para webs como para móviles:
 
 <!--ad-->
-<table class="aligncenter"  cellspacing="0" cellpadding="5">
-<tr>
-<td rowspan="1" colspan="2">
-      Web Application Frameworks
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000539219/RubyonRails.html">Ruby on Rails</a>
-</td>
-<td>
-      Framework MVC basado en Ruby, orientado al desarrollo de aplicaciones web
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000531497/CodeIgniter.html">CodeIgniter</a>
-</td>
-<td>
-      Poderoso framework PHP liviano y rápido
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://kohanaframework.org/">Kohana</a>
-</td>
-<td>
-      Un fork de CodeIgniter, <em>Gracias a Samuel por mencionarlo en los comentarios.</em>
-</td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000545879/Django.html">Django</a>
-</td>
-<td>
-      Framework Python que promueve el desarrollo rápido y el diseño limpio
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000252509/CakePHP.html">CakePHP</a>
-</td>
-<td>
-      Framework MVC para PHP de desarrollo rápido
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000536311/ZendFramework.html">Zend Framework</a>
-</td>
-<td>
-      Framework para PHP 5, simple, claro y open-source
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/2012052500054269/Yii.html">Yii</a>
-</td>
-<td>
-      Framework PHP de alto rendimiento basado en componentes
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/2012052500055227/Pylons.html">Pylons</a>
-</td>
-<td>
-      Framework web para Python que enfatiza la flexibilidad y el desarrollo rápido
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000602635/Catalyst.html">Catalyst</a>
-</td>
-<td>
-      Framework para aplicaciones web MVC elegante
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000534344/Symfony.html">Symfony</a>
-</td>
-<td>
-      Framework full-stack
-    </td>
-</tr>
-<tr>
-<td>
-<a href="http://www.linuxlinks.com/article/20120525000548217/TurboGears.html">TurboGears</a>
-</td>
-<td>
-      Próxima generación construido sobre Pylons
-    </td>
-</tr>
-</table>
+
+| Frameworks Web y móviles                                                                      | Descripción                                                      |
+| --------------------------------------------------------------------------------------------  | ----------------------------------------------------------------
+| [Angular.js](https://angularjs.org/)                                                          | Un framework basado en _JavaScript_ |
+| [react](https://facebook.github.io/react/)                                                    | Liberado por Facebook, en _JavaScript_, permite desarrollar aplicaciones móviles para IOS y Android|
+| [ionic](http://ionicframework.com/)                                                           | Para móviles, usando HTML, Js, Sass y Angular |
+| [Meteor](https://www.meteor.com/)                                                             | En _JavaScript_, para web y móviles |
+| [Ruby on Rails](http://www.linuxlinks.com/article/20120525000539219/RubyonRails.html)         | Framework MVC basado en Ruby, orientado al desarrollo de aplicaciones web |
+| [CodeIgniter](http://www.linuxlinks.com/article/20120525000531497/CodeIgniter.html)           | Poderoso framework PHP liviano y rápido |
+| [Kohana](http://kohanaframework.org/)                                                         | Un fork de CodeIgniter, _Gracias a Samuel por mencionarlo en los comentarios._ |
+| [Django](http://www.linuxlinks.com/article/20120525000545879/Django.html)                     | Framework Python que promueve el desarrollo rápido y el diseño limpio |
+| [CakePHP](http://www.linuxlinks.com/article/20120525000252509/CakePHP.html)                   | Framework MVC para PHP de desarrollo rápido |
+| [Zend Framework](http://www.linuxlinks.com/article/20120525000536311/ZendFramework.html)      | Framework para PHP 5, simple, claro y open-source |
+| [Yii](http://www.linuxlinks.com/article/2012052500054269/Yii.html)                            | Framework PHP de alto rendimiento basado en componentes |
+| [Pylons](http://www.linuxlinks.com/article/2012052500055227/Pylons.html)                      | Framework web para Python que enfatiza la flexibilidad y el desarrollo rápido |
+| [Catalyst](http://www.linuxlinks.com/article/20120525000602635/Catalyst.html)                 | Framework para aplicaciones web MVC elegante |
+| [Symfony](http://www.linuxlinks.com/article/20120525000534344/Symfony.html)                   | Framework full-stack |
+| [TurboGears](http://www.linuxlinks.com/article/20120525000548217/TurboGears.html)             | Próxima generación construido sobre Pylons |
 
 Fuente: <a href="http://www.linuxlinks.com/article/20120525000054705/ApplicationFrameworks.html" target="_blank">linuxlinks</a>
-
-
-
-{% include toc.html %}
