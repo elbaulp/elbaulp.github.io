@@ -11,42 +11,37 @@ tags:
   - eliminar cursores en oracle
   - for oracle cursor
   - tutoriales cursores sql
+modified: 2016-08-15T11:40
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
-<!--INFOLINKS_ON-->
-
 
 Un cursor es el nombre para un área memoria privada que contiene información procedente de la ejecución de una sentencia SELECT. Cada cursor tiene unos atributos que nos devuelven información útil sobre el estado del cursor en la ejecución de la sentencia SQL. Cuando un cursor está abierto y los datos referenciados por la consulta SELECT cambian, estos cambios no son recogidos por el cursor.
 
 PL/SQL crea implícitamente un cursor para todas las sentencias SQL de manipulación de datos sobre un conjunto de filas, incluyendo aquellas que solo devuelven una sola fila.
 
-En PL/SQL no se pueden utilizar sentencias SELECT de sintaxis básica ( SELECT <lista> FROM <tabla> ). PL/SQL utiliza cursores para gestionar las instrucciones SELECT. Un cursor es un conjunto de registros devuelto por una instrucción SQL.
-
+En PL/SQL no se pueden utilizar sentencias SELECT de sintaxis básica ( `SELECT <lista> FROM <tabla>` ). PL/SQL utiliza cursores para gestionar las instrucciones SELECT. Un cursor es un conjunto de registros devuelto por una instrucción SQL.
 
 <!--ad-->
 
+{% include toc.html %}
 
 Podemos distinguir dos tipos de cursores:
 
-  * **Cursores implícitos**. Este tipo de cursores se utiliza para operaciones **SELECT INTO**. Se usan cuando la consulta devuelve un único registro.
-  * **Cursores explícitos.** Son los cursores que son declarados y controlados por el programador. Se utilizan cuando la consulta devuelve un conjunto de registros. Ocasionalmente también se utilizan en consultas que devuelven un único registro por razones de eficiencia. Son más rápidos.
+* **Cursores implícitos**. Este tipo de cursores se utiliza para operaciones **SELECT INTO**. Se usan cuando la consulta devuelve un único registro.
+* **Cursores explícitos.** Son los cursores que son declarados y controlados por el programador. Se utilizan cuando la consulta devuelve un conjunto de registros. Ocasionalmente también se utilizan en consultas que devuelven un único registro por razones de eficiencia. Son más rápidos.
 
 Un cursor se define como cualquier otra variable de PL/SQL y debe nombrarse de acuerdo a los mismos convenios que cualquier otra variable.
 
 Los cursores implícitos se utilizan para realizar consultas SELECT que devuelven un único registro. Deben tenerse en cuenta los siguientes puntos cuando se utilizan cursores implícitos:
 
-  * Los cursores implícitos no deben ser declarados
-  * Con cada cursor implícito debe existir la palabra clave **INTO**.
-  * Las variables que reciben los datos devueltos por el cursor tienen que contener el mismo tipo de dato que las columnas de la tabla.
-  * Los cursores implícitos solo pueden devolver una única fila. En caso de que se devuelva más de una fila (o ninguna fila) se producirá una [excepción][1]. Las más comunes son:
+* Los cursores implícitos no deben ser declarados
+* Con cada cursor implícito debe existir la palabra clave **INTO**.
+* Las variables que reciben los datos devueltos por el cursor tienen que contener el mismo tipo de dato que las columnas de la tabla.
+* Los cursores implícitos solo pueden devolver una única fila. En caso de que se devuelva más de una fila (o ninguna fila) se producirá una [excepción][1]. Las más comunes son:
 
 **NO\_DATA\_FOUND**: Se produce cuando una sentencia SELECT intenta recuperar datos pero ninguna fila satisface sus condiciones. Es decir, cuando &#8220;no hay datos&#8221;  
 **TOO\_MANY\_ROWS** Dado que cada cursor implícito sólo es capaz de recuperar una fila, esta [excepción][1] detecta la existencia de más de una fila.
-
-<!--INFOLINKS_OFF-->
 
 ```sql
 SET SERVEROUTPUT ON;
@@ -59,30 +54,23 @@ end;
 
 ```
 
-<!--INFOLINKS_ON-->
-
 Para procesar instrucciones SELECT que devuelvan más de una fila, son necesarios cursores **explícitos** combinados con una estructura de bloque. A partir de ahora, cuando hagamos referencia a **cursores** nos referiremos a cursores explícitos.
 
 Para trabajar con un cursor hay que realizar los siguientes pasos:
 
-  1. Declarar el cursor
-  2. Abrir el cursor en el servidor
-  3. Recuperar cada una de sus filas (bucle)
-  4. Cerrar el cursor
+1. Declarar el cursor
+2. Abrir el cursor en el servidor
+3. Recuperar cada una de sus filas (bucle)
+4. Cerrar el cursor
 
 ## 1. Declarar el cursor
 
 Al igual que cualquier otra variable, el cursor se declara en la sección DECLARE. Se define el nombre que tendrá el cursor y qué consulta SELECT ejecutará. No es más que una declaración. La sintaxis básica es:
 
-<!--INFOLINKS_OFF-->
-
 ```sql
 CURSOR nombre_cursor IS instrucción_SELECT
 CURSOR nombre_cursor(param1 tipo1, ..., paramN tipoN) IS instrucción_SELECT
-
 ```
-
-<!--INFOLINKS_ON-->
 
 Una vez que el cursor está declarado ya podrá ser utilizado dentro del bloque de código.
 
@@ -94,15 +82,10 @@ Al abrir el cursor se ejecuta la sentencia SELECT asociada y cuyo resultado se g
 
 La sintaxis de apertura de un cursor es:
 
-<!--INFOLINKS_OFF-->
-
 ```sql
 OPEN nombre_cursor;
 OPEN nombre_cursor(valor1, valor2, ..., valorN);
-
 ```
-
-<!--INFOLINKS_ON-->
 
 Una vez que el cursor está abierto, se podrá empezar a pedir los resultados al servidor.
 
@@ -110,26 +93,20 @@ Una vez que el cursor está abierto, se podrá empezar a pedir los resultados al
 
 Una vez que el cursor está abierto en el servidor se podrá hacer la petición de recuperación de fila. En cada recuperación solo se accederá a una **única** fila. La sintaxis de recuperación de fila de un cursor es:
 
-<!--INFOLINKS_OFF-->
-
 ```sql
 FETCH nombre_cursor INTO variables;
 
 ```
 
-<!--INFOLINKS_ON-->
-
 Podremos recuperar filas mientras la consulta SELECT tenga filas pendientes de recuperar. Para saber cuándo no hay más filas podemos consultar los siguientes atributos de un cursor:
 
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="41" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV" /></a>
-</div>
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="41" width="320" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV"></amp-img>
+</figure>
 
 Al recuperar un registro, la información recuperada se guarda en una o varias variables. Si sólo se hace referencia a una variable, ésta se puede declarar con [%ROWTYPE][2]. Si se utiliza una lista de variables, cada variable debe coincidir en tipo y orden con cada una de las columnas de la sentencia SELECT.
 
 Así lo acción más típica es recuperar filas mientras queden alguna por recuperar en el servidor. Esto lo podremos hacer a través de los siguientes bloques:
-
-<!--INFOLINKS_OFF-->
 
 ```sql
 OPEN nombre_cursor;
@@ -150,37 +127,23 @@ CLOSE nombre_cursor;
 FOR variable IN nombre_cursor LOOP
   /* Procesamiento de los registros recuperados */
 END LOOP;
-
 ```
-
-<!--INFOLINKS_ON-->
-
-
-
 
 ## 4. Cerrar el cursor
 
 Una vez que se han recuperado todas las filas del cursor, hay que cerrarlo para que se liberen de la memoria del servidor los objetos temporales creados. Si no cerrásemos el cursor, la tabla  
 temporal quedaría en el servidor almacenada con el nombre dado al cursor y la siguiente vez ejecutásemos ese bloque de código, nos daría la excepción CURSOR\_ALREADY\_OPEN (cursor ya abierto) cuando intentásemos abrir el cursor. Para cerrar el cursor se utiliza la siguiente sintaxis:  
 
-<!--INFOLINKS_OFF-->
-
 ```sql
 CLOSE numbre_cursor;
 ```
 
-<!--INFOLINKS_ON-->
-
-
-
 Cuando trabajamos con cursores debemos considerar:
 
-  * Cuando un cursor está cerrado, no se puede leer.
-  * Cuando leemos un cursor debemos comprobar el resultado de la lectura utilizando los atributos de los cursores.
-  * Cuando se cierra el cursor, es ilegal tratar de usarlo.
-  * El nombre del cursor es un identificador, no una variable. Se utiliza para identificar la consulta, por eso no se puede utilizar en expresiones.
-
-
+* Cuando un cursor está cerrado, no se puede leer.
+* Cuando leemos un cursor debemos comprobar el resultado de la lectura utilizando los atributos de los cursores.
+* Cuando se cierra el cursor, es ilegal tratar de usarlo.
+* El nombre del cursor es un identificador, no una variable. Se utiliza para identificar la consulta, por eso no se puede utilizar en expresiones.
 
 ## Atributos en cursores implícitos
 
@@ -188,14 +151,12 @@ Los cursores implícitos no se pueden manipular por el usuario, pero Oracle sí 
 
 En este caso, se debe anteponer al nombre del atributo el prefijo SQL, en lugar del nombre del cursor.
 
-  * **SQL%NOTFOUND** devuelve TRUE cuando la última sentencia SELECT no recuperó ninguna fila, o cuando INSERT, DELETE o UPDATE no afectan a ninguna fila
-  * **SQL%FOUND** devuelve TRUE cuando la última sentencia SELECT devuelve alguna fila, o cuando INSERT, DELETE o UPDATE afectan a alguna fila
-  * **SQL%ROWCOUNT** devuelve el número de filas afectadas por INSERT, DELETE o UPDATE o las filas devueltas por una sentencia SELECT
-  * **SQL%ISOPEN** siempre devuelve FALSE, porque Oracle cierra automáticamente el cursor implícito cuando termina la ejecución de la sentencia SELECT
+* **SQL%NOTFOUND** devuelve TRUE cuando la última sentencia SELECT no recuperó ninguna fila, o cuando INSERT, DELETE o UPDATE no afectan a ninguna fila
+* **SQL%FOUND** devuelve TRUE cuando la última sentencia SELECT devuelve alguna fila, o cuando INSERT, DELETE o UPDATE afectan a alguna fila
+* **SQL%ROWCOUNT** devuelve el número de filas afectadas por INSERT, DELETE o UPDATE o las filas devueltas por una sentencia SELECT
+* **SQL%ISOPEN** siempre devuelve FALSE, porque Oracle cierra automáticamente el cursor implícito cuando termina la ejecución de la sentencia SELECT
 
 Ejemplos:
-
-<!--INFOLINKS_OFF-->
 
 ```sql
 DECLARE
@@ -213,9 +174,6 @@ END;
 
 ```
 
-<!--INFOLINKS_ON-->
-<!--INFOLINKS_OFF-->
-
 ```sql
 DECLARE
   CURSOR cpaises IS
@@ -230,9 +188,6 @@ END;
 
 ```
 
-<!--INFOLINKS_ON-->
-<!--INFOLINKS_OFF-->
-
 ```sql
 DECLARE
   r ARTICULOS%ROWTYPE;
@@ -243,9 +198,6 @@ BEGIN
 END;
 
 ```
-
-<!--INFOLINKS_ON-->
-<!--INFOLINKS_OFF-->
 
 ```sql
 BEGIN
@@ -258,17 +210,10 @@ END;
 
 ```
 
-<!--INFOLINKS_ON-->
-
-
-
-
 ## Cursores Parametrizados
 
-Los cursores son aquellos que permiten utilizar la orden OPEN para pasarle al cursor el valor de  
-uno o varios de sus parámetros.  
+Los cursores son aquellos que permiten utilizar la orden OPEN para pasarle al cursor el valor de uno o varios de sus parámetros.  
 
-<!--INFOLINKS_OFF-->
 
 ```sql
 DECLARE
@@ -285,45 +230,23 @@ BEGIN
   END LOOP;
   CLOSE cArt;
 END;
-
 ```
-
-<!--INFOLINKS_ON-->
-
-
-
-
 ## Cursores de actualización
 
 Los cursores de actualización se declaran igual que los cursores explícitos, añadiendo FOR UPDATE al final de la sentencia SELECT.  
-
-<!--INFOLINKS_OFF-->
 
 ```sql
 CURSOR nombre_cursor IS instrucción_SELECT FOR UPDATE
 ```
 
-<!--INFOLINKS_ON-->
-
-
-
 Para actualizar los datos del cursor hay que ejecutar una sentencia UPDATE especificando la cláusula WHERE CURRENT OF <cursor_name>.  
-
-<!--INFOLINKS_OFF-->
 
 ```sql
 UPDATE <nombre_tabla> SET <campo_1> = <valor_1>[,<campo_2> = <valor_2>]
 WHERE CURRENT OF </valor_2></campo_2></valor_1></campo_1></nombre_tabla></cursor_name><cursor_name>
-
 ```
 
-<!--INFOLINKS_ON-->
-
-
-
 Cuando trabajamos con cursores de actualización debemos tener en cuenta que la sentencia UPDATE genera bloqueos en la base de datos ( [transacciones][4], disparadores,etc).  
-
-<!--INFOLINKS_OFF-->
 
 ```sql
 DECLARE
@@ -345,20 +268,12 @@ BEGIN
   CLOSE cpaises;
   COMMIT;
 END;
-
 ```
-
-* * *
 
 #### Siguiente tema: [PL/SQL &#8211; Procedimientos y Funciones][5] 
 
-
-
- [1]: https://elbauldelprogramador.com/plsql-excepciones/
- [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
- [3]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
- [4]: https://elbauldelprogramador.com/introduccion-plsql-transacciones/
- [5]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
-
-{% include toc.html %}
-</cursor_name></tabla></lista>
+ [1]: /plsql-excepciones/
+ [2]: /plsql-declaracion-de-variables/
+ [3]: /lenguaje-manipulacion-de-datos-dml/
+ [4]: /introduccion-plsql-transacciones/
+ [5]: /plsql-procedimientos-y-funciones/
