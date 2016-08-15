@@ -10,7 +10,7 @@ color: "#2196F3"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Grub Customizer 2.0" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/s400/grub-customizer-2.0.png"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Grub Customizer 2.0" width="800" height="508" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/s800/grub-customizer-2.0.png"></amp-img>
 </figure>
 
 __With the release of version 2.0, Grub Customizer becomes the most complete GRUB 2 graphical configuration tool__
@@ -26,7 +26,7 @@ Grub Customizer &#8211; a new graphical GRUB 2 and BURG settings manager -, 2.0 
 Besides the above new features, <b>Grub Customizer 2.0</b> also brings some GRUB 2 only specific settings (they don&#8217;t work for BURG) like changing the menu colors or background image. Please note that these appearance options worked for me in Ubuntu 10.04 but did not work in Ubuntu 10.10 &#8211; however this might happen because I&#8217;ve messed a lot with the GRUB 2 configuration (including running the <a href="http://www.webupd8.org/2010/10/script-to-fix-ubuntu-plymouth-for.html" title="Script To Fix The Ubuntu Plymouth For Proprietary Nvidia And ATI Graphics Drivers">script for fixing the Plymouth</a>).
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Grub 2 - colors" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmWY9zu60I/AAAAAAAACUw/T1I8twGbj9g/s288/grub2-colors.png"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Grub 2 - colors" width="633" height="476" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmWY9zu60I/AAAAAAAACUw/T1I8twGbj9g/s800/grub2-colors.png"></amp-img>
     <figcaption>(GRUB 2 with new colors)</figcaption>
 </figure>
 
