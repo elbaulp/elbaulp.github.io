@@ -2,21 +2,19 @@
 title: Introducción SQL
 layout: post.amp
 permalink: /introduccion-sql-sql-introduction/
+modified: 2016-08-15T15:40
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
-
 Un <acronym title="Relational Data Base Management System">RDBMS</acronym> es un software capaz de producir, manipular y gestionar bases de datos de tipo relacional.
 
 Es un software que se antepone a los datos de una base de datos, es decir, cualquier acceso a los datos pasa por una petición al RDBMS que éste gestiona con el fin de realizar la operación más conveniente sobre esa petición.
 
-
 <!--ad-->
 
+{% include toc.html %}
 
 Prácticamente es un Sistema Operativo que controla el acceso a los datos, para conseguirlo, posee una serie de subesquemas que gestionan cada servicio:
 
@@ -76,59 +74,31 @@ DDL (Data Definition Language) que se encarga de la definición de bases de dato
 
 Son comandos propios de este lenguaje:
 
-<div >
-<p>
-    CREATE TABLE
-  </p>
-<p>
-    CREATE INDEX
-  </p>
-<p>
-    CREATE VIEW
-  </p>
-<p>
-    CREATE SYNONYM
-  </p>
-</div>
+```sql
+CREATE TABLE
+CREATE INDEX
+CREATE VIEW
+CREATE SYNONYM
+```
 
 DML (Data Manipulation Language), Manipulan los datos, con ellos podemos seleccionar, insertar, eliminar y actualizar datos. Con estas instrucciones se construyen las consultas.
 
-<div >
-<p>
-    SELECT
-  </p>
-<p>
-    UPDATE
-  </p>
-<p>
-    INSERT
-  </p>
-<p>
-    INSERT INTO
-  </p>
-<p>
-    DELETE FROM
-  </p>
-</div>
+```sql
+SELECT
+UPDATE
+INSERT
+INSERT INTO
+DELETE FROM
+```
 
 DCL (Data Control Language) Se encarga del control de accesos y privilegios entre los usuarios.
 
-<div >
-<p>
-    CREATE USER
-  </p>
-<p>
-    GRANT
-  </p>
-<p>
-    REVOKE
-  </p>
-</div>
+```sql
+CREATE USER
+GRANT
+REVOKE
+```
 
-#### Siguiente tema: [Componentes del lenguaje SQL][1] 
+## Siguiente tema: [Componentes del lenguaje SQL][1] 
 
-
-
- [1]: https://elbauldelprogramador.com/componentes-del-lenguaje-sql-sql/
-
-{% include toc.html %}
+ [1]: /componentes-del-lenguaje-sql-sql/

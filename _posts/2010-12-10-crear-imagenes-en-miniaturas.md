@@ -8,6 +8,7 @@ modified: 2016-07-31T00:00
 main-class: "dev"
 color: "#E64A19"
 ---
+
 ### Creé una Versión mejorada de este script [aquí][1]
 
 Este script es muy simple, pero resulta muy útil cuando tenemos muchas imágenes y queremos hacer miniaturas, por ejemplo, para subirlas a nuestra web.
@@ -42,4 +43,4 @@ $ ./NombreDelScript *
 
 El * significa que convertirá todas las imagenes del directorio
 
- [1]: https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/
+ [1]: /crear-miniaturas-de-imagenes-mejorado/

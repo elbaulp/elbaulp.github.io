@@ -5,12 +5,14 @@ permalink: /bash-syntax-highlighted-script/
 categories:
   - linux
   - script
+lang: en
+modified: 2016-08-15T13:40
 main-class: "linux"
 color: "#2196F3"
 ---
-<p lang="en">
-  As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.<br /> Here the code:
-</p>
+
+As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.<br /> Here the code:
+
 
 ```bash
 <span class="path">#!/bin/bash</span>
@@ -34,7 +36,6 @@ rutaCodigo=`zenity --file-selection --title="Select a File"`
 *)
   <span class="bash">echo</span> "No se seleciciono nada.";;
 <span class="bash">esac</span>
-
 ```
 
 I am going to explain a bit the code:
@@ -48,7 +49,3 @@ This line is the one that takes charge highlighting the comments. We look for on
 There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).
 
 I hope that it is useful
-
-
-
-{% include toc.html %}

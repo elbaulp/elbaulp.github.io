@@ -4,9 +4,11 @@ layout: post.amp
 permalink: /el-estado-de-wayland-aspirante/
 categories:
   - noticias
+modified: 2016-08-15T13:40
 main-class: "articulos"
 color: "#F57C00"
 ---
+
 Hace poco que sigo el blog <a target="_blank" href="http://diegocg.blogspot.com/">D&#8217;Oh!</a>, y la verdad es que todos los temas sobre los que se escriben en él son bastante interesantes. Leí una entrada que me gusto mucho, y la voy a escribir a continuación. Recomiendo este blog para la gente de Linux sobre todo, ya que el autor, escribe regularmente las caracteristicas mas relevantes de las actualizaciones del kernel.
 
 La última vez que se [mencionó en este blog al servidor gráfico Wayland][1], fue con la descripción de &#8220;revolucionario y raquítico a la vez&#8221;. No era una apreciación del todo errónea; tengo la manía de clonar los repositorios de proyectos interesantes para ojear de vez en cuando su actividad, y como proyecto con la no precisamente leve vocación de ser alternativa a X.org, la evolución de Wayland&nbsp; no era muy esperanzadora (13 commits en 8 meses, todos menos dos de su creador). Me equivocaba, fue escribir esa entrada y aumentar el número de commits y buenas noticias.
@@ -32,5 +34,3 @@ Todo esto suena muy bien para Wayland, y hay que tener en cuenta que este servid
  [7]: http://hoegsberg.blogspot.com/2008/12/two-x-servers-and-microphone.html
  [8]: http://wayland.freedesktop.org/architecture.html
  [9]: http://www.markshuttleworth.com/archives/551
-
-{% include toc.html %}

@@ -2,15 +2,16 @@
 title: ¿Que son los archivos mkv?
 layout: post.amp
 permalink: /que-son-los-archivos-mkv-what-is-mkv/
+modified: 2016-08-15T16:10
 categories:
   - noticias
 main-class: "articulos"
 color: "#F57C00"
 ---
+
 Hace tiempo que quería hablar sobre el formato de video MKV (Matroska). Así que aqui va un poco de información sacada de Wikipedia.
 
 Matroska es un formato contenedor estándar abierto, un archivo informático que puede contener un número ilimitado de vídeo, audio, imagen o pistas de subtítulos dentro de un solo archivo. Su intención es la de servir como un formato universal para el almacenamiento de contenidos audiovisuales comunes, como películas o programas de televisión. Matroska es similar, en concepto, a otros contenedores, como AVI, MP4 o ASF, pero es totalmente abierto. La mayoría de sus implementaciones consisten en software libre. Los archivos de tipo Matroska son .MKV para vídeo (con subtítulos y audio), .MKA para archivos solamente de audio y .MKS sólo para subtítulos.
-
 
 <!--ad-->
 
@@ -26,8 +27,4 @@ El formato ha sido diseñado desde cero para ser extendido y duradero (a diferen
 
 Más información en [Wkikipedia][1]
 
-
-
  [1]: http://es.wikipedia.org/wiki/Mkv
-
-{% include toc.html %}

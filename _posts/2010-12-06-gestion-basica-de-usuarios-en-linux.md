@@ -2,6 +2,7 @@
 title: Gestión básica de usuarios en linux
 layout: post.amp
 permalink: /gestion-basica-de-usuarios-en-linux/
+modified: 2016-08-15T15:50
 categories:
   - linux
   - script
@@ -10,6 +11,7 @@ tags:
 main-class: "linux"
 color: "#2196F3"
 ---
+
 Hace un tiempo hice un script para gestionar los usuarios en linux de forma sencilla, personalmente creo que es fácil de usar. Sus características son las siguientes:
 
   1. Crear usuarios.
@@ -18,7 +20,6 @@ Hace un tiempo hice un script para gestionar los usuarios en linux de forma senc
   4. Eliminar usuarios o grupos.
   5. Eliminar un usuario de un grupo.
   6. Listar usuarios de un grupo
-
 
 <!--ad-->
 
@@ -39,7 +40,7 @@ echo "* `date +%d-%m-%Y`   -   `date +%H:%M:%S`                                 
 echo "*                                                                           *"
 echo "* Puedes modificarlo y/o distribuirlo bajo los términos de la licencia GPL  *"
 echo "*                                                                           *"
-echo "* Autor: Alejandro Alcalde (algui91) - Mar. '10                      *"
+echo "* Autor: Alejandro Alcalde (algui91) - Mar. '10                             *"
 echo "*                                                                           *"
 echo "*****************************************************************************"
 sleep 1
@@ -241,10 +242,5 @@ main
 
 Si no visualizáis bien el código, haced clic [aquí.][1]
 
-
-
-
-
  [1]: http://pastebin.com/2UbqU3Yk
 
-{% include toc.html %}

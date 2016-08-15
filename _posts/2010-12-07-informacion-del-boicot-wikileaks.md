@@ -2,12 +2,15 @@
 title: Recopilación de Información del Boicot a WikiLeaks
 layout: post.amp
 permalink: /informacion-del-boicot-wikileaks/
+modified: 2016-08-15T16:00
 categories:
   - noticias
 main-class: "articulos"
 color: "#F57C00"
 ---
-Hasta hace poco desconocía lo que era WikiLeaks, pero empecé a leer noticias sobre esta web en <a target="_blank" href="http://www.meneame.net">menéame</a>, y sobre todo lo que estaba ocurriendo en &#8216;La red&#8217;, me quedé sorprendido con todo lo que está pasando, y me extraña que nada de esto se esté echando en lo telediarios.  
+
+Hasta hace poco desconocía lo que era WikiLeaks, pero empecé a leer noticias sobre esta web en <a target="_blank" href="http://www.meneame.net">menéame</a>, y sobre todo lo que estaba ocurriendo en &#8216;La red&#8217;, me quedé sorprendido con todo lo que está pasando, y me extraña que nada de esto se esté echando en lo telediarios.
+
 Para el que no sepa lo que es Wikileaks:
 
 > WikiLeaks (WikiFiltraciones o WikiFugas en español) es una organización mediática internacional sin ánimo de lucro que publica a través de su sitio web informes anónimos y documentos filtrados con contenido sensible en materia de interés público, preservando el anonimato de sus fuentes. El lanzamiento del sitio se realizó en diciembre de 2006, su actividad comenzó en julio de 2007 y desde entonces su base de datos ha crecido constantemente hasta acumular 1,2 millones de documentos. Está gestionado por The Sunshine Press.
@@ -74,9 +77,6 @@ Como se ha hablado mucho acerca de este tema, voy a recopilar alguna informació
   * <a target="_blank" href="http://alt1040.com/2010/12/de-time-zuckerberg-assange-la-persona-del-ano-y-la-perdida-de-independencia-de-los-mass-media">De TIME, Zuckerberg, Assange, la persona del año y la pérdida de independencia de los mass media</a>
   * <a target="_blank" href="http://alt1040.com/2010/12/anonymous-cambia-tactica-empapelar-ciudades-en-favor-wikileaks">Anonymous cambia la táctica y convoca a empapelar las ciudades en favor de Wikileaks</a>
 
-
-
  [1]: http://alt1040.com/2010/12/wikileaks-no-te-embriagues-de-poder
  [2]: http://alt1040.com/2010/12/twitter-no-estamos-censurando-a-wikileaks-en-los-trending-topics
 
-{% include toc.html %}

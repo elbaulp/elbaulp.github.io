@@ -2,6 +2,7 @@
 title: Probando RockMelt
 layout: post.amp
 permalink: /probando-rockmelt/
+modified: 2016-08-15T15:40
 categories:
   - noticias
 main-class: "articulos"
@@ -15,67 +16,60 @@ Si sueles usuar mucho Twitter o Facebook este es tu navegador. Aunque aun queden
 
 Aquí dejo algunas capturas y explico un poco el funcionamiento del navegador, aunque no es demasiado difícil.
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5UHD6wzlI/AAAAAAAAAGY/NXFDcbJRQ5s/s1600/principal.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5UHD6wzlI/AAAAAAAAAGY/NXFDcbJRQ5s/s320/principal.png" /></a>
-</div>
-<span >1. </span>En esta barra lateral izquierda veremos a nuestros amigos conectados en facebook. Haciendo clic en alguno de ellos podremos chatear.
 
-<span >2. </span>Con este botón podemos invitar, por defecto, a 3 amigos de facebook para que prueben RockMelt. Por cada invitación aceptada, recibiremos 2 más.
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5UHD6wzlI/AAAAAAAAAGY/NXFDcbJRQ5s/s320/principal.png"></amp-img>
+</figure>
 
-<span >3. </span>En esta sección, se mostraran los sitios a los que estemos suscritos por RSS, así como Los botones de Facebook y twitter para acceder a nuestras cuentas.
-
-<span >4. </span>Cuando estamos en una página que dispone de RSS, este boton se pone de color verde, y si clicamos en él, nos podremos suscribir.
-
-<span >5. </span>Haciendo Clic en él, compartiremos en facebook la página que estemos viendo en ese momento.
-
-
+1. En esta barra lateral izquierda veremos a nuestros amigos conectados en facebook. Haciendo clic en alguno de ellos podremos chatear.
+2. Con este botón podemos invitar, por defecto, a 3 amigos de facebook para que prueben RockMelt. Por cada invitación aceptada, recibiremos 2 más.
+3. En esta sección, se mostraran los sitios a los que estemos suscritos por RSS, así como Los botones de Facebook y twitter para acceder a nuestras cuentas.
+4. Cuando estamos en una página que dispone de RSS, este boton se pone de color verde, y si clicamos en él, nos podremos suscribir.
+5. Haciendo Clic en él, compartiremos en facebook la página que estemos viendo en ese momento.
 
 Si hacemos clic en un contacto de la barra lateral izquierda, se nos abre una ventana independiente (Que podemos minimizar, maximizar o cerrar) en la que podemos chatear.
 
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Pcw4ksuI/AAAAAAAAAGI/BVm4HImHcF8/s1600/chat1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Pcw4ksuI/AAAAAAAAAGI/BVm4HImHcF8/s320/chat1.png" /></a>
-</div>
-<span >1. </span>Si pinchamos en este botón, podremos enviar un mensaje privado a ese contacto, o escribir algo en su muro.
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Pcw4ksuI/AAAAAAAAAGI/BVm4HImHcF8/s320/chat1.png"></amp-img>
+</figure>
 
-<span >2. </span> Aquí veremos sus últimas actualizaciones de estado, y últimas publicaciones en el muro.
+1. Si pinchamos en este botón, podremos enviar un mensaje privado a ese contacto, o escribir algo en su muro.
+2.  Aquí veremos sus últimas actualizaciones de estado, y últimas publicaciones en el muro.
+3. Con este botón añadimos al contacto a nuestros contactos favoritos.
+4. Este botón me gustó bastante, si lo pulsamos, enviamos un enlace de la página en la que estemos en ese momento.
 
-<span >3. </span>Con este botón añadimos al contacto a nuestros contactos favoritos.
-
-<span >4. </span>Este botón me gustó bastante, si lo pulsamos, enviamos un enlace de la página en la que estemos en ese momento.
-
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5SLPsoFbI/AAAAAAAAAGM/Eh4W0XfMpAY/s1600/profileclic.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5SLPsoFbI/AAAAAAAAAGM/Eh4W0XfMpAY/s320/profileclic.png" /></a>
-</div>
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5SLPsoFbI/AAAAAAAAAGM/Eh4W0XfMpAY/s320/profileclic.png"></amp-img>
+</figure>
 
 Éste es el botón de nuestro perfil, desde aqui podemos actualizar nuestro estado, y, si no queremos estar conectados a nuestra cuenta de facebook mientras usamos el navegador, podemos salir pulsando el boton &#8220;Log Out&#8221;.
-
-
 
 Esto es todo, a mi personalmente me ha gustado este navegador, podeis pedir un enlace de descarga <a target="_blank" href="http://www.rockmelt.com/">aqui</a>
 
 Os dejo unas capturas de pantalla:
 
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XTwlUxaI/AAAAAAAAAGc/_L7evpOeTco/s1600/feed.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XTwlUxaI/AAAAAAAAAGc/_L7evpOeTco/s320/feed.png" width="320" /></a>
-</div>
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XWqHhpOI/AAAAAAAAAGg/302VsQxGXC8/s1600/friends.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XWqHhpOI/AAAAAAAAAGg/302VsQxGXC8/s320/friends.png" width="320" /></a>
-</div>
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XZec8rhI/AAAAAAAAAGk/1lMmLufkYOU/s1600/perfil.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XZec8rhI/AAAAAAAAAGk/1lMmLufkYOU/s320/perfil.png" width="320" /></a>
-</div>
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5XcVcrKjI/AAAAAAAAAGo/E1fNJEq8Ws0/s1600/profile.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5XcVcrKjI/AAAAAAAAAGo/E1fNJEq8Ws0/s320/profile.png" width="320" /></a>
-</div>
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Xffgh1JI/AAAAAAAAAGs/YIJH3F8p-7E/s1600/twitter.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Xffgh1JI/AAAAAAAAAGs/YIJH3F8p-7E/s320/twitter.png" width="320" /></a>
-</div>
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XlHWcKsI/AAAAAAAAAGw/keQi7p95OTM/s1600/updatesver.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XlHWcKsI/AAAAAAAAAGw/keQi7p95OTM/s320/updatesver.png" width="320" /></a>
-</div>
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XTwlUxaI/AAAAAAAAAGc/_L7evpOeTco/s320/feed.png" width="320"></amp-img>
+</figure>
 
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XWqHhpOI/AAAAAAAAAGg/302VsQxGXC8/s320/friends.png" width="320"></amp-img>
+</figure>
 
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XZec8rhI/AAAAAAAAAGk/1lMmLufkYOU/s320/perfil.png" width="320"></amp-img>
+</figure>
 
- [1]: https://elbauldelprogramador.com/rockmelt-una-navegador-social-basado-en/
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5XcVcrKjI/AAAAAAAAAGo/E1fNJEq8Ws0/s320/profile.png" width="320"></amp-img>
+</figure>
 
-{% include toc.html %}
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Xffgh1JI/AAAAAAAAAGs/YIJH3F8p-7E/s320/twitter.png" width="320"></amp-img>
+</figure>
+
+<figure>
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="179" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XlHWcKsI/AAAAAAAAAGw/keQi7p95OTM/s320/updatesver.png" width="320"></amp-img>
+</figure>
+
+ [1]: /rockmelt-una-navegador-social-basado-en/
