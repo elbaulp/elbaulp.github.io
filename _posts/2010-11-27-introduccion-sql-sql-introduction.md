@@ -37,11 +37,11 @@ En la conexión el usuario puede ejecutar peticiones en un lenguaje que el DBMS 
 
   1. **Conexión Local**
 
-    Conexión en la que servidor y usuario están en la misma máquina. Limita el uso de la base de datos a la máquina en la que el servidor esta instalado.
+Conexión en la que servidor y usuario están en la misma máquina. Limita el uso de la base de datos a la máquina en la que el servidor esta instalado.
 
   2. **Cliente / Servidor**
 
-    Es lo más común. El servidor lanza un proceso en la máquina central. Este proceso está a la escucha de nuevos usuarios, cuando estos llegan se produce una conexión que permite que el servidor y el cliente se comuniquen. Esto permite una accesibilidad a la base de datos desde distintas máquinas.
+Es lo más común. El servidor lanza un proceso en la máquina central. Este proceso está a la escucha de nuevos usuarios, cuando estos llegan se produce una conexión que permite que el servidor y el cliente se comuniquen. Esto permite una accesibilidad a la base de datos desde distintas máquinas.
 
 ### Herramientas de los RDBMS
 
