@@ -38,8 +38,8 @@ O en la siguiente imagen:
 
 <figure>
     <a href="https://www.google.com/contributor/welcome/?utm_source=publisher&utm_medium=banner&utm_campaign=ca-pub-9043332344373532">
-        <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/contributorad.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="250px"><amp-img>
-</a>
+        <amp-img layout="responsive" src="/assets/img/contributorad.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="250px"></amp-img>
+    </a>
 </figure>
 
 <!--ad-->
