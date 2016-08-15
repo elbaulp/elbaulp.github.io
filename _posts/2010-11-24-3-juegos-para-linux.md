@@ -15,7 +15,7 @@ color: "#F57C00"
 
 Encontré por internet estos juegos para linux que me parecieron interesantes:
 
-### <a href="http://sourceforge.net/projects/caphgame/" target="_blnak">Caph</a>
+### <a href="http://sourceforge.net/projects/caphgame/" target="_blank">Caph</a>
 
 Caph es un juego de recinto de seguridad, basado en la física. El objetivo del juego es hacer contactar el objeto de color rojo con el de color verde. Se pueden utilizar distintos objetos, alambres sólidos, (cuerdas) y objetos flexibles. La gravedad ayudará  
 
