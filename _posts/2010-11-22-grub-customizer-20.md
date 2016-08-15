@@ -13,13 +13,13 @@ color: "#2196F3"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Grub Customizer 2.0" src="https://lh3.ggpht.com/_1QSDkzYY2vc/TOmPPw_WKsI/AAAAAAAACUo/3JHDf60vuSc/s400/grub-customizer-2.0.png"></amp-img>
 </figure>
 
-___With the release of version 2.0, Grub Customizer becomes the most complete GRUB 2 graphical configuration tool___
+__With the release of version 2.0, Grub Customizer becomes the most complete GRUB 2 graphical configuration tool__
 
 
-Grub Customizer</a> &#8211; a new graphical GRUB 2 and BURG settings manager -, 2.0 has been released today with a lot of enhancements: <b>you can now select the default boot entry</b>, change the menu visibility and timeout, set kernel parameters, disable recovery entries and change screen resolution (GFX_MODE) &#8211; all by using Grub Customizer.
+Grub Customizer &#8211; a new graphical GRUB 2 and BURG settings manager -, 2.0 has been released today with a lot of enhancements: <b>you can now select the default boot entry</b>, change the menu visibility and timeout, set kernel parameters, disable recovery entries and change screen resolution (GFX_MODE) &#8211; all by using Grub Customizer.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Grub Customizer appearance" src="https://lh4.ggpht.com/_1QSDkzYY2vc/TOmPgMD2l4I/AAAAAAAACUs/O4iov5Q5lMY/s400/grub-customizer-appearence.png"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" width="695" height="465" alt="Grub Customizer appearance" src="https://lh4.ggpht.com/_1QSDkzYY2vc/TOmPgMD2l4I/AAAAAAAACUs/O4iov5Q5lMY/s800/grub-customizer-appearence.png"></amp-img>
     <figcaption>(Grub Customizer 2.0 &#8211; Appearance preferences)</figcaption>
 </figure>
 
