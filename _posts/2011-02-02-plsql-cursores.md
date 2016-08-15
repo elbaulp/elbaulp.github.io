@@ -243,7 +243,7 @@ Para actualizar los datos del cursor hay que ejecutar una sentencia UPDATE espec
 
 ```sql
 UPDATE <nombre_tabla> SET <campo_1> = <valor_1>[,<campo_2> = <valor_2>]
-WHERE CURRENT OF </valor_2></campo_2></valor_1></campo_1></nombre_tabla></cursor_name><cursor_name>
+WHERE CURRENT OF <cursor_name>
 ```
 
 Cuando trabajamos con cursores de actualización debemos tener en cuenta que la sentencia UPDATE genera bloqueos en la base de datos ( [transacciones][4], disparadores,etc).  
