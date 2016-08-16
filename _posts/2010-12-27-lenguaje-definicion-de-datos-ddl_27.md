@@ -2,6 +2,7 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl_27/
+modified: 2016-08-16T11:00
 categories:
   - BaseDeDatos
 tags:
@@ -12,15 +13,18 @@ tags:
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
 
-### Sinónimos
+{% include toc.html %}
+
+## Sinónimos
 
 Un sinónimo es un nuevo nombre que se puede asignar a una tabla o a una vista y con ellos podemos darle nombres diferentes a un mismo objeto.
 
 Cuando tenemos acceso a las tablas, vistas etc, de otros esquemas y deseamos consultarlas, hay que anteponer al nombre del objeto que queremos consultar el nombre del esquema y separarlos por un punto.  
-<!--ad--> Por ejemplo para consultar una tabla de otro esquema la sintaxis sería:
+
+<!--ad-->
+
+Por ejemplo para consultar una tabla de otro esquema la sintaxis sería:
 
 ```sql
 Nombre_Esquema.Nombre_Tabla
@@ -50,7 +54,7 @@ Solamente el administrador de la BD y usuarios con privilegios adecuados pueden 
 
 NOTA: Para ver los sinónimos que son propiedad del usuario se utiliza la vista **USER_SYNONYM**.
 
-### Pseudocolumnas
+## Pseudocolumnas
 
 Las pesudocolumnas son similares a los campos de una tabla, pero no lo son, aunque si pueden ser utilizados en instrucciones DML (Select, Insert…).
 
@@ -65,10 +69,8 @@ SELECT USER FROM DUAL;
 SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;
 ```
 
-#### Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] 
+## Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] 
+
+ [1]: /lenguaje-manipulacion-de-datos-dml/
 
 
-
- [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
-
-{% include toc.html %}

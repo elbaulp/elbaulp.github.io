@@ -2,6 +2,7 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl-vistas/
+modified: 2016-08-16T11:00
 categories:
   - BaseDeDatos
 tags:
@@ -12,12 +13,12 @@ tags:
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
 
 Las vistas son tablas virtuales ‘que contienen’ el resultado de una consulta SELECT, tienen la misma estructura que una tabla cualquiera, es decir, están organizadas por filas y columnas. Una de las principales ventajas de utilizar vistas procede del hecho de que la vista no almacena los datos, sino que hace referencia a una o varias tablas de origen mediante una consulta SELECT, consulta que se ejecuta cada vez que se hace referencia a la vista. De esta forma, cualquier modificación que se realice sobre los datos de las tablas de origen es inmediatamente visible en la vista, cuando ésta vuelva a ejecutarse. Su sintaxis es:  
 
 <!--ad-->
+
+{% include toc.html %}
 
 ```sql
 CREATE [OR REPLACE] VIEW Nombre_vista
@@ -36,7 +37,9 @@ SELECT d.department_id, d.department_name,
   JOIN departments d ON d.manager_id = e.employee_id;
 ```
 
-**Vistas interactivas.** Son vistas que se definen sin utilizar el comando CREATE VIEW, sino directamente sobre el comando SELECT. Por ejemplo:
+## Vistas interactivas.
+
+Son vistas que se definen sin utilizar el comando CREATE VIEW, sino directamente sobre el comando SELECT. Por ejemplo:
 
 ```sql
 SELECT cCodCli, cNomCli, Importe
@@ -50,7 +53,7 @@ SELECT cCodCli, cNomCli, Importe
 
 En el caso anterior, LP actúa como una vista interactiva.
 
-#### Borrado de una vista.
+## Borrado de una vista.
 
 La orden para borrar una vista es DROP VIEW. Su sintaxis es:
 
@@ -58,11 +61,7 @@ La orden para borrar una vista es DROP VIEW. Su sintaxis es:
 DROP VIEW Nombre_vista
 ```
 
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias][2] 
-
-
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias][2] 
 
  [1]: http://es.wikipedia.org/wiki/Lenguaje_de_Manipulaci%C3%B3n_de_Datos
- [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
-
-{% include toc.html %}
+ [2]: /lenguaje-definicion-de-datos-ddl/

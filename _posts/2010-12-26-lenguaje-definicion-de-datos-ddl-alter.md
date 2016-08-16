@@ -2,6 +2,7 @@
 title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl-alter/
+modified: 2016-08-16T11:00
 categories:
   - BaseDeDatos
 tags:
@@ -11,10 +12,8 @@ tags:
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
 
-#### Modificar la estrutura de una tabla
+## Modificar la estrutura de una tabla
 
 Para modificar la estructura de una tabla se utiliza el comando ALTER TABLE.
 
@@ -26,9 +25,7 @@ ALTER TABLE Tabla
  [DROP CONSTRAINTS restricción]};
 ```
 
-
 <!--ad-->
-
 
 Añadir o modificar columnas ( nombre, tipo, valor por defecto, restricción NOT NULL)
 
@@ -62,11 +59,9 @@ alter table nombre_table [ENABLE VALIDATE|ENABLE NOVALIDATE|DISABLE] nombre_rest
 
 Donde:
 
-ENABLE VALIDATE activa la restricción si el conjunto de filas ya presentes en la tabla cumple dicha restricción.
-
-ENABLE NOVALIDATE activa la restricción para las siguientes instrucciones de manipulación de datos.
-
-DISABLE desactiva la restricción.
+- `ENABLE VALIDATE` activa la restricción si el conjunto de filas ya presentes en la tabla cumple dicha restricción.
+- `ENABLE NOVALIDATE` activa la restricción para las siguientes instrucciones de manipulación de datos.
+- `DISABLE` desactiva la restricción.
 
 Hay que tener en cuenta que si la tabla está vacía, al añadir una columna con la restricción NOT NULL no habrá ningún error, pero si tiene filas no permitirá añadir una columna con esta opción.
 
@@ -76,56 +71,36 @@ Ejemplos:
 alter table CabFacturas ADD dFecPago DATE;
 ```
 
-
-
 ```sql
 alter table CabFacturas MODIFY dFecPago DEFAULT SYSDATE;
 ```
-
-
 
 ```sql
 alter table CabFacturas DROP COLUMN dFecAux;
 ```
 
-
-
 ```sql
 alter table CabFacturas ADD CONSTRAINT CK_CabFacturas CHECK ( dFecPago >= dFecFac);
 ```
-
-
 
 ```sql
 alter table LinFacturas ADD CONSTRAINT CK1_LinFact CHECK ( Precio > 0);
 ```
 
-
-
 ```sql
 alter table LinFacturas DROP CONSTRAINT CK1_LinFact;
 ```
-
-
 
 ```sql
 alter table CabFacturas DISABLE CK_CabFacturas;
 ```
 
-
-
 ```sql
 alter table nombre_table DROP COLUMN nombre_columna;
 ```
 
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Vistas][1] 
+
+ [1]: /lenguaje-definicion-de-datos-ddl-vistas/
 
 
-* * *
-
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Vistas][1] 
-
-
-
- [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
-
-{% include toc.html %}

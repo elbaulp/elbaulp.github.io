@@ -2,55 +2,39 @@
 title: 'Consulta de Datos &#8211; Cláusula FROM'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-from/
+modified: 2016-08-16T11:00
 categories:
   - BaseDeDatos
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
 
-En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. Las tablas deben  
-existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  
-Su sintaxis es :
+En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. Las tablas deben existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  Su sintaxis es :
 
 ```sql
-[ FROM {<table_source></table_source><table_source><joined_table><!--ad-->
+[ FROM {<table_source>} [,...n] ]
+<table_source> ::= TABLE_NAME | view_name | derived_table | <joined_table>;
+```
 
+<!--ad-->
 
-Es posible hacer consultas que incluyan más de una tabla dentro de la cláusula FROM, es  
-los que llamamos **JOIN o yunción**. Esto se realiza cuando necesitamos acceder a datos que se  
-encuentran en más de una tabla.
+Es posible hacer consultas que incluyan más de una tabla dentro de la cláusula FROM, es los que llamamos **JOIN o yunción**. Esto se realiza cuando necesitamos acceder a datos que se encuentran en más de una tabla.
 
-Pero en estas consultas hay que tener en cuenta ciertos factores: los registros que a nosotros  
-nos interesan no son el resultado del producto cartesiano de las tablas sino aquellos que componen la relación igualados; además, esta relación de igualdad puede ser natural, a la izquierda, a la derecha o total. Son los llamados **JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN y FULL OUTER JOIN.**
+Pero en estas consultas hay que tener en cuenta ciertos factores: los registros que a nosotros nos interesan no son el resultado del producto cartesiano de las tablas sino aquellos que componen la relación igualados; además, esta relación de igualdad puede ser natural, a la izquierda, a la derecha o total. Son los llamados **JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN y FULL OUTER JOIN.**
 
-**JOIN**  
-Devuelve aquellos pares de registro que existen en ambas tablas. Se trata de una unión  
-natural del álgebra relacional. Es decir cada albarán con su cliente correspondiente. No aparecen los albaranes sin clientes ni los clientes sin albaranes.
+- **JOIN**: Devuelve aquellos pares de registro que existen en ambas tablas. Se trata de una unión natural del álgebra relacional. Es decir cada albarán con su cliente correspondiente. No aparecen los albaranes sin clientes ni los clientes sin albaranes.
+- **LEFT OUTER JOIN**: Además de los datos devueltos con JOIN cuando se utiliza LEFT OUTER aparecen los datos de la tabla de la izquierda que no tienen concordancia con los de la tabla de la derecha. Los datos de la tabla de la derecha aparecen a NULL.
+- **RIGHT OUTER JOIN**: Además de los datos devueltos con JOIN cuando se utiliza RIGHT OUTER aparecen los datos de la tabla de la derecha que no tienen concordancia con los de la tabla de la izquierda. Los datos de la tabla de la izquierda se muestran a NULL.
+- **FULL OUTER JOIN**: Equivale a un RIGHT y a un LEFT OUTER a la vez.
 
-**LEFT OUTER JOIN **  
-Además de los datos devueltos con JOIN cuando se utiliza LEFT OUTER aparecen los  
-datos de la tabla de la izquierda que no tienen concordancia con los de la tabla de la derecha. Los datos de la tabla de la derecha aparecen a NULL.
+En ORACLE para realizar un JOIN se hace a través de la clausula de selección de registros (WHERE) del producto cartesiano de varias tablas. En este caso, cuando se unen dos tabla A y B:
 
-**RIGHT OUTER JOIN **  
-Además de los datos devueltos con JOIN cuando se utiliza RIGHT OUTER aparecen los  
-datos de la tabla de la derecha que no tienen concordancia con los de la tabla de la izquierda. Los datos de la tabla de la izquierda se muestran a NULL.
+* Para hacer un JOIN la condición del WHERE es una condición de igualdad.
+* Para hacer un LEFT OUTER JOIN se aplica el operador (+) a todas las columnas de la tabla B de la yunción dentro de la cláusula WHERE.
+* Para hacer un RIGHT OUTER JOIN se aplica el operador (+) a todas las columnas de la tabla A de la yunción dentro de la cláusula WHERE.
 
-**FULL OUTER JOIN**  
-Equivale a un RIGHT y a un LEFT OUTER a la vez.
-
-En ORACLE para realizar un JOIN se hace a través de la clausula de selección de registros  
-(WHERE) del producto cartesiano de varias tablas. En este caso, cuando se unen dos tabla A y B:
-
-  * Para hacer un JOIN la condición del WHERE es una condición de igualdad.
-  * Para hacer un LEFT OUTER JOIN se aplica el operador (+) a todas las columnas de  
-    la tabla B de la yunción dentro de la cláusula WHERE.
-  * Para hacer un RIGHT OUTER JOIN se aplica el operador (+) a todas las columnas de  
-    la tabla A de la yunción dentro de la cláusula WHERE.
-
-En Oracle 9i, 10g y posteriores se puede realizar un JOIN natural mediante la sintaxis  
-JOIN ... USING; en este caso, las columnas por las que se hace la yunción deben tener el mismo  
+En Oracle 9i, 10g y posteriores se puede realizar un JOIN natural mediante la sintaxis
+JOIN ... USING; en este caso, las columnas por las que se hace la yunción deben tener el mismo
 nombre.
 
 ```sql
@@ -91,7 +75,6 @@ SELECT e.employee_id,e.last_name, d.department_id, d.department_name
 FROM employees e
 FULL OUTER JOIN departments d
 ON (e.department_id = d.department_id);
-
 ```
 
 Otro ejemplo:
@@ -136,15 +119,8 @@ SELECT * FROM CLIENTES c
 RIGHT OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 SELECT * FROM CLIENTES c
 FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
-
-
 ```
 
-#### Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] 
+## Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] 
 
-
-
- [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/
-
-{% include toc.html %}
-</joined_table></table_source>
+ [1]: /consulta-de-datos-clausula-where/

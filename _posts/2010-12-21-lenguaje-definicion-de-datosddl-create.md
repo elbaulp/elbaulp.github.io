@@ -12,7 +12,7 @@ tags:
   - sentencia create
   - sentencias dml y ddl
   - unique para varias columnas
-modified: 2016-08-09T12:00
+modified: 2016-08-16T11:00
 main-class: "BaseDeDatos"
 color: "#009688"
 ---

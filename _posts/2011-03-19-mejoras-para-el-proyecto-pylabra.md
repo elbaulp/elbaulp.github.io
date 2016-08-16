@@ -18,7 +18,7 @@ Para seguir el desarrollo de la aplicación puedes visitar la página en la que 
 
 
 
- [1]: http://bashyc.blogspot.com/p/proyecto-pylabra.html
+ [1]: /pylabra-aplicacion-para-almacenar/
  [2]: https://github.com/algui91/PyLabra
 
 {% include toc.html %}

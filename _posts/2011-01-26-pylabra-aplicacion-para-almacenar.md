@@ -88,6 +88,6 @@ Os lo dejo a vuestra disposición y ojalá que os sea útil.
 
 
 
- [1]: http://bashyc.blogspot.com/p/proyecto-pylabra.html
+ [1]: /pylabra-aplicacion-para-almacenar/
 
 {% include toc.html %}
