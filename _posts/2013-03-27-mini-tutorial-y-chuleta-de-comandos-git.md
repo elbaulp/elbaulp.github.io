@@ -22,6 +22,7 @@ tags:
   - git manual español pdf
   - git clone
   - git init
+redirect_from: /articulos/mini-tutorial-y-chuleta-de-comandos-git/
 date: 2015-12-13T19:10:12+01:00
 modified: 2016-08-06T18:00:12+01:00
 description: "Un mini tutorial y lista extensa de comandos git"
