@@ -3,6 +3,7 @@ title: Lenguaje Manipulación de Datos (DML)
 layout: post.amp
 permalink: /lenguaje-manipulacion-de-datos-dml/
 modified: 2016-08-16T11:00
+redirect_from: /programacion/basededatos/lenguaje-manipulacion-de-datos-dml/
 categories:
   - BaseDeDatos
 tags:
