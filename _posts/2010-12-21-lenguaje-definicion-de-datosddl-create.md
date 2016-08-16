@@ -84,7 +84,7 @@ Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este cas
 CREATE TABLE nombre tabla
 (nombrecol1 tipocol1
   [CONSTRAINT nombre_restricción]
-  [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check </condici><condici>]
+  [not NULL] [PRIMARY KEY][UNIQUE][DEFAULT valor][check <condici>]
   [REFERENCES Nombre_tabla_ref (colref)[ON DELETE CASCADE]],...
   [Restricciones de la tabla]
 )

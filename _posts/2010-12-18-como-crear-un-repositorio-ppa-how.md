@@ -44,8 +44,8 @@ allow_unsigned_uploads = 0
 También es necesario:
 
 * Cambiar la primera línea al nombre que desea utilizar para referirse al PPA, manteniendo los corchetes. No se puede usar el nombre ppa, ya que puede haber conflictos con una linea en /etc/dput.cf y causar fallos como (&#8216;Could not find person or team named&#8217;.)
-* Si estás subiendo el paquete a un equipo de PPA, hay que cambiar ~<your-launchpad-id> al nombre del equipo de Launchpad (Dejando la tilde (~)). Como es de esperar, debes ser miembro del equipo antes de poder subir el paquete a su PPA.
-* Fijar correctamente el <ppa-name>, por defecto es ppa, usad el nombre específico para otros PPA en el mismo contexto. No confundais el nombre del PPA con el nombre que habeis elegido para para mostrar el PPA en Launchpad.
+* Si estás subiendo el paquete a un equipo de PPA, hay que cambiar `<your-launchpad-id>` al nombre del equipo de Launchpad (Dejando la tilde (~)). Como es de esperar, debes ser miembro del equipo antes de poder subir el paquete a su PPA.
+* Fijar correctamente el `<ppa-name>`, por defecto es ppa, usad el nombre específico para otros PPA en el mismo contexto. No confundais el nombre del PPA con el nombre que habeis elegido para para mostrar el PPA en Launchpad.
 * A continuación, hay que abrir un terminal y escribir lo siguiente:
 
 ```bash
