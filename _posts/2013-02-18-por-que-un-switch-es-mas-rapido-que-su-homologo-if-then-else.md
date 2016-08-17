@@ -23,13 +23,17 @@ En este artículo pretendo explicar el motivo por el cual un switch es mucho má
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft"></amp-img>
 </figure>
 
+{% include toc.html %}
+
+## Introducción
+
 El switch se basa en una implementación muy eficiente llamada en inglés **jump table** o tabla de saltos. Esta tabla es un array, donde la entrada *i* es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a *i*. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción **jmp** en [ensamblador][2]).
+
+<!--ad-->
 
 Esa es la clave que explica el mayor rendimiento de un switch frente a una larga secuencia de **if-then-else**. Ya que el tiempo necesario para realizar el switch es independiente del número de casos (sentencia case:) que éste tiene.
 
 [GCC][3] selecciona qué metodo de traducción aplica al switch dependiendo del número de casos y valores. Las tablas de saltos se usan cuando hay un número determinado de casos (cuatro por ejemplo) y abarcan un número pequeño de valores. Por ejemplo:
-
-<!--ad-->
 
 ## Sentencia switch
 
