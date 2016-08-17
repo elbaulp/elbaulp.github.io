@@ -12,7 +12,6 @@ tags:
   - jump table
   - switch
   - tabla de salto
-image: https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png
 main-class: "dev"
 color: "#E64A19"
 ---
