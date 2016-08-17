@@ -20,7 +20,7 @@ color: "#E64A19"
 En este artículo pretendo explicar el motivo por el cual un switch es mucho más rápido que su homólogo en secuencias if-then-else, para ello analizaremos la implementación del switch.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" width="128" height="128" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png"></amp-img>
 </figure>
 
 {% include toc.html %}
