@@ -1,6 +1,6 @@
 ---
 layout: post.amp
-title: How to Change Portage Folders to Other Location
+title: How to Change Portage Folders to Other Location in Gentoo
 categories: en
 description: How to change portage folders and temp folder to other directory
 tags: [gentoo, portage]
