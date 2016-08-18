@@ -22,7 +22,7 @@ Selecciona aquellas filas que cumplen la condición especificada por esta orden.
 Los operadores más utilizados en las condiciones de selección son:
 
 | Operador             	| Definición                                                  	|
-|----------------------	|-------------------------------------------------------------	|
+|-----------------------|---------------------------------------------------------------|
 | =, !=, <>            	| Igual a, distinto de, distinto de                           	|
 | >, >=, <, <=         	| Mayor que, Mayor o igual que, menor que, menor o igual que  	|
 | BETWEEN … AND …      	| Chequea un rango incluyendo los dos valores                 	|
@@ -52,9 +52,9 @@ expresión_a_comparar [ NOT ] LIKE patrón
 
 Los símbolos utilizados en el patrón son:
 
-| %             	| Cualquier cadena de cero o más caracteres. 	| `WHERE title LIKE ‘%computer%’` busca todos los títulos de libros que contengan la palabra ‘computer’ en cualquier parte del título. 	|
-|---------------	|--------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------	|
-| _ (subrayado) 	| Cualquier carácter individual              	| `WHERE au_fname LIKE ‘_ean’` busca todos los nombres de cuatro letras que finalicen con ean (Dean, Sean, etc.).                      	|
+| %             | Cualquier cadena de cero o más caracteres. | WHERE title LIKE ‘%computer%’ busca todos los títulos de libros que contengan la palabra ‘computer’ en cualquier parte del título. |
+|---------------|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| _ (subrayado) | Cualquier carácter individual              | WHERE au_fname LIKE ‘_ean’ busca todos los nombres de cuatro letras que finalicen con ean (Dean, Sean, etc.).                      |
 
 ## Operador IN:
 
