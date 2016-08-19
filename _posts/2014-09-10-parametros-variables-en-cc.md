@@ -2,6 +2,7 @@
 title: Pasar parámetros variables en C/C++
 layout: post.amp
 permalink: /parametros-variables-en-cc/
+modified: 2016-08-19T10:30
 categories:
   - C
 tags:
@@ -15,30 +16,24 @@ main-class: "dev"
 color: "#E64A19"
 ---
 
-<figure>
-<a href="/assets/img/2013/11/cpp.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
-</figure>
+En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en [C/C++](/tags/#cpp).
 
-En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++.
-
-<!--ad-->
+{% include toc.html %}
 
 Para ello, usaremos la macro `va_start`, encargada de inicializar una lista de argumentos variables. Su prototipo es:
 
 ```cpp
 void va_start (va_list ap, paramN);
-
 ```
 
 Inicializa `ap` para recuperar argumentos adicionales después del parámetro `paramN`. Una función que invoque a `va_start` debe invocar también a `va_end` antes de finalizar. Pasemos a dar una descripción más detallada de los parámetros:
 
-`ap`
-:   Objeto sin inicializar del tipo `va_list`. Después de la llamada, almacena la información necesaria para recuperar argumentos adicionales usando `va_arg`. Si `ap` ya ha sido pasado como primer argumento a una llamada previa a `va_start` o `va_copy`, debe ser pasado a `va_end` antes de llamar a la función.
-
-`paramN`
-:   Nombre del último parámetro con nombre en la definición de la función. Los argumentos extraídos por las llamadas posteriores a `va_arg` son aquellos tras `paramN`.
+- `ap`: Objeto sin inicializar del tipo `va_list`. Después de la llamada, almacena la información necesaria para recuperar argumentos adicionales usando `va_arg`. Si `ap` ya ha sido pasado como primer argumento a una llamada previa a `va_start` o `va_copy`, debe ser pasado a `va_end` antes de llamar a la función.
+- `paramN`: Nombre del último parámetro con nombre en la definición de la función. Los argumentos extraídos por las llamadas posteriores a `va_arg` son aquellos tras `paramN`.
 
 ## Primer ejemplo de parámetros variables
+
+<!--ad-->
 
 ```cpp
 /* va_start example */
@@ -60,7 +55,6 @@ void PrintFloats (int n, ...)
   // Calcular puntuación de la jugada.
   return score;
 }
-
 ```
 
 ```cpp
@@ -141,20 +135,13 @@ double Valoracion(const Environment &state;, int jugador) {
 
   return score;
 }
-
 ```
 
 En éste caso, queremos llamar a `checkLine` con un número indeterminado de parámetros. Como se puede apreciar en la función `Valoracion`, la cual llama a `checkLine` con el jugador actual, el número de casillas a comprobar y, a continuación, las casillas a comprobar.
 
 Espero que estos tres ejemplos sencillos hayan servido para comprender el funcionamiento del uso de parámetros variables en C/C++.
 
-#### Referencias
+## Referencias
 
-*Documentación va_start* »» <a href="http://www.cplusplus.com/reference/cstdarg/va_start/" target="_blank">cplusplus.com</a>
+- *Documentación va_start* »» <a href="http://www.cplusplus.com/reference/cstdarg/va_start/" target="_blank">cplusplus.com</a>
 
-
-
- [1]: https://elbauldelprogramador.com/statuscolor-dwm-6-1/ "Dwm Status"
-
-{% include toc.html %}
-</n></stdarg.h></stdio.h>
