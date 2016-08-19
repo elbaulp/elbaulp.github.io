@@ -11,7 +11,7 @@ main-class: "BaseDeDatos"
 color: "#009688"
 ---
 
-Especifica una condición de selección para un grupo. HAVING se usa normalmente con el GROUP BY. Cuando no está con el GROUP BY, HAVING se comporta como la cláusula WHERE, aunque esto es erróneo utilizarlo, puesto que ralentiza el sistema. Su sintaxis es:
+Especifica una condición de selección para un grupo. `HAVING` se usa normalmente con el `GROUP BY`. Cuando no está con el `GROUP BY`, `HAVING` se comporta como la cláusula `WHERE`, aunque esto es erróneo utilizarlo, puesto que ralentiza el sistema. Su sintaxis es:
 
 ```sql
 [ HAVING <search_condition_group> ]
@@ -38,9 +38,9 @@ Nos devuelve las filas ordenadas por una serie de columnas. Su sintaxis es:
 
 donde order\_by\_expression determina la columna o columnas por la cual deseamos obtener los resultados ordenados. Se puede especificar una columna, una columna renombrada, una columna cualificada por su tabla, una expresión, o un número entero positivo (mayor a cero) que determina la posición de la columna en el select list.
 
-Se pueden especificar múltiples columnas de ordenación. La secuencia de ordenación viene determinada por el orden de aparición de las columnas en la cláusula ORDER BY.
+Se pueden especificar múltiples columnas de ordenación. La secuencia de ordenación viene determinada por el orden de aparición de las columnas en la cláusula `ORDER BY`.
 
-La cláusula ORDER BY puede incluir columnas que no aparecen en la select list; sin embargo, si se especifica SELECT DISTINCT, las columnas por las que se ordena deben aparecer en la select list.
+La cláusula `ORDER BY` puede incluir columnas que no aparecen en la select list; sin embargo, si se especifica `SELECT DISTINCT`, las columnas por las que se ordena deben aparecer en la select list.
 
 - **ASC**: Es el valor que se toma por defecto, especifica que los registros se ordenaran en orden ascendente. 
 - **DESC**: Especifica que los registros se ordenan en orden descendente.
