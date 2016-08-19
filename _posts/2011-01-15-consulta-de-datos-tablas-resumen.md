@@ -4,16 +4,22 @@ layout: post.amp
 permalink: /consulta-de-datos-tablas-resumen/
 categories:
   - BaseDeDatos
-modified: 2016-07-31T00:00+00:00
+modified: 2016-08-19T17:30
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
 
 Ya hemos acabado el tema de [consulta de datos][1] en sql, lo siguiente que veremos ya será [PL/SQL][2].
 
-#### Siguiente Tema: [Introducción a PL/SQL][2]
+Dejo un Pdf con un resumen y algunos ejemplos de funciones en ORACLE que podéis descargar clicando en el botón.
+
+<div class="button-post">
+  <a href="/assets/pdfs/SOLOTABLAS.pdf" target="_blank">Descargar Resumen de Tablas SQL</a>
+</div>
+
+## Siguiente Tema: [Introducción a PL/SQL][2]
 
 
- [1]: http://bashyc.blogspot.com/p/bases-de-datos.html
- [2]: https://elbauldelprogramador.com/introduccion-plsql/
+ [1]: /bases-de-datos/
+ [2]: /introduccion-plsql/
 
