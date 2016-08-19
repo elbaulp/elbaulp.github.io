@@ -76,7 +76,7 @@ Los más utilizados son:
 * COUNT. Calcula el número de registros devueltos por una consulta. Su sintaxis es Count(expr). Aunque expr puede realizar un cálculo sobre un campo, Count simplemente cuenta el número de registros sin tener en cuenta qué valores se almacenan en los registros. La función Count no cuenta los registros que tienen campos null a menos que expr sea el carácter comodín asterisco (\*). Si utiliza un asterisco, Count calcula el número total de registros, incluyendo aquellos que contienen campos null. Count(\*) es considerablemente más rápida que Count(Campo).
 * MAX , MIN. Devuelven el mínimo o el máximo de un conjunto de valores contenidos en un campo especifico de una consulta. Su sintaxis es: Max(expr) Min(expr) donde expr es el campo o expresión sobre el que se desea realizar el cálculo.
 * SUM. Devuelve la suma del conjunto de valores contenido en un campo especifico de una consulta. Su sintaxis es Sum(expr) donde expr respresenta el nombre del campo que contiene los datos que desean sumarse o una expresión que realiza un cálculo utilizando los datos de dichos campos.
-* STDEV | STDEVP | VAR | VARP. Desviación típica y Varianza.
+* STDEV \| STDEVP \| VAR \| VARP. Desviación típica y Varianza.
 
 ## Siguiente Tema: [Consulta de Datos &#8211; Cláusula HAVING y ORDER BY][1] 
 
