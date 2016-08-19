@@ -2,13 +2,12 @@
 title: 'Programación para Juegos &#8211; Lección 1.2 &#8211; Hello World'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-12/
+modified: 2016-08-19T09:30
 categories:
   - juegos
 main-class: "dev"
 color: "#E64A19"
 ---
-<div class="icosdl">
-</div>
 
 En esta lección vamos a aprender a hacer un Hola Mundo al estilo SDL.
 
@@ -17,7 +16,6 @@ Ahora que ya [instalaste SDL][1], vamos a cargar una imagen en la pantalla.
 Empecemos:
 
 [Pueden descargar el código fuente de esta lección.][2]
-
 
 <!--ad-->
 
@@ -42,7 +40,6 @@ int main( int argc, char* args[] )
     //The images
     SDL_Surface* hello = NULL;
     SDL_Surface* screen = NULL;
-
 ```
 
 Al principio de la función main(), declaramos dos punteros a SDL\_Surface. El tipo de dato SDL\_Surface es una imagen, en esta aplicación vamos a tratar con dos imágenes. La superfície(Surface) &#8220;hello&#8221; es la imagen que vamos a cargar y mostrar. &#8220;Screen&#8221; es lo que es visible en la pantalla.
@@ -60,7 +57,6 @@ Cuando usemos SDL, la función main() debe estar declarada como la de arriba. No
 
     //Load image
     hello = SDL_LoadBMP( "hello.bmp" );
-
 ```
 
 La primera función a la que llamamos dentro de main() es SDL_Init(). Esta función inicializa todos los subsistemas de SDL para que podamos empezar a usar las funciones gráficas de SDL.
@@ -78,7 +74,6 @@ Después de establecer la ventana, cargamos nuestra imagen con SDL_LoadBMP(). Es
 
     //Pause
     SDL_Delay( 2000 );
-
 ```
 
 Ahora que tenemos nuestra ventana y nuestra imagen cargada, vamos a aplicar la imagen a la pantalla. Haremos esto con SDL\_BlitSurface(). El primer argumento de SDL\_BlitSurface() es la superficie fuente. El tercero la superficie destino. Esta función une la superficie fuente a la superficie destino. En este caso, vamos a aplicar nuestra imagen cargada a la pantalla. Encontrarás lo que hacen los otros argumentos en tutoriales posteriores.
@@ -96,7 +91,6 @@ Una vez hecho esto, lo siguiente es hacer que la ventana permanezca visible dura
 
     return 0;
 }
-
 ```
 
 Como ya no vamos a usar mas la imagen cargada en nuestro programa, tenemos que eliminarla de la memoria. No se puede usar <var>delete</var>, hay que usar SDL_FreeSurface() para eliminarla de memoria.
@@ -105,18 +99,15 @@ Sin embargo, la superficie <var>screen</var> no hay que borrarla a mano, ya que 
 
 Enhorabuena, acabas de hacer tu primera aplicación gráfica.
 
-* * *Fuente:
+Fuente:
 
 [lazyfoo.net][4]
 
-#### Siguiente tema: [Lección 2 &#8211; Superficies Optimizadas][5] 
+## Siguiente tema: [Lección 2 - Superficies Optimizadas][5] 
 
 
-
- [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
+ [1]: /programacion-para-juegos-leccion-1/
  [2]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson01
- [3]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-4/
+ [3]: /programacion-para-juegos-leccion-4/
  [4]: http://www.lazyfoo.net/
- [5]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-2/
-
-{% include toc.html %}
+ [5]: /programacion-para-juegos-leccion-2/
