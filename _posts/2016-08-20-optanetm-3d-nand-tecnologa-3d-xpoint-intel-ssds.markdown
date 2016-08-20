@@ -9,6 +9,7 @@ tags: [intel, optane, 3D XPoint, ssd]
 image: IntelAnunciaSusNuevosDiscosDuros1000VecesMasRapidosQueLosSSDs.png
 introduction: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnología 3D XPoint De Intel Reemplazarán a Los SSDs"
 date: 2016-08-20T07:06:16+02:00
+redirect_from: /security now/optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/
 main-class: "security-now"
 color: "#00BCD4"
 ---
