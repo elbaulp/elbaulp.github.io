@@ -39,11 +39,11 @@ Este proceso crea una fatiga en las propiedades físicas del aislante. Esta es l
 
 ## Static RAM (SRAM) o RAM estática
 
-La memoria RAM estática o _SRAM_ es como los [registros del procesador](/introduccion-los-procesos/), las _SRAM_ son inversores de acoplamiento cruzado. El problema que tiene este tipo de memoria es que requiere de muchos transictores, y éstos requieren de espacio físico y energía. También producen calor. Sin embargo son bastante rápidas. Como desventaja es que son volátiles, en cuanto no se les suministra energía los datos que almacenan se pierden.
+La memoria RAM estática o _SRAM_ es como los [registros del procesador](/introduccion-los-procesos/), las _SRAM_ son inversores de acoplamiento cruzado. El problema que tiene este tipo de memoria es que requiere de muchos transistores, y éstos requieren de espacio físico y energía. También producen calor. Sin embargo son bastante rápidas. Como desventaja es que son volátiles, en cuanto no se les suministra energía los datos que almacenan se pierden.
 
 ## Dynamic RAM (DRAM) o RAM dinámica
 
-Como mejora a la _SRAM_ se creó la _DRAM_, que reducía la complejidad de la _SRAM_ a un solo transictor y un condensador. _DRAM_ almacena la información en el condensador. El problema de estos condensadores es que tienen que ser diminutos para poder colocarlos en un espacio pequeño. La desventaja de _DRAM_ es que hay que refrescar los condensadores periódicamente para que no pierdan la información almacenada, y hay que hacerlo con la suficiente frecuencia para no darle tiempo al condensador a que se descargue. También es volátil.
+Como mejora a la _SRAM_ se creó la _DRAM_, que reducía la complejidad de la _SRAM_ a un solo transistor y un condensador. _DRAM_ almacena la información en el condensador. El problema de estos condensadores es que tienen que ser diminutos para poder colocarlos en un espacio pequeño. La desventaja de _DRAM_ es que hay que refrescar los condensadores periódicamente para que no pierdan la información almacenada, y hay que hacerlo con la suficiente frecuencia para no darle tiempo al condensador a que se descargue. También es volátil.
 
 ## Memorias 3D XPoint 
 
