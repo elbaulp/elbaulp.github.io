@@ -3,6 +3,7 @@ layout: post.amp
 title: Intel Anuncia Sus Nuevos Discos Duros, 1000 Veces Más Rápidos Que Los SSDs
 categories:
   - Security Now
+permalink: /optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/
 description: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnología 3D XPoint De Intel Reemplazarán a Los SSDs"
 tags: [intel, optane, 3D XPoint, ssd]
 image: IntelAnunciaSusNuevosDiscosDuros1000VecesMasRapidosQueLosSSDs.png
