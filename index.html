@@ -14,6 +14,7 @@ redirect_from:
   - /firefox-40-beta-9-disponible/
   - /diaspora-la-red-social-libre/
   - /curso-de-linux-para-torpes/
+  - /echando-un-vistazo-gnome-3/
 ---
 <main class="home" id="post" role="main">
   {% include popular.posts.html %}
@@ -27,9 +28,7 @@ redirect_from:
                 <div class="box-body">
                     <time datetime="{{ post.date }}" class="date">{{ post.date | date_to_string }}</time>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <h2 class="post-title">
-                            {{ post.title }}
-                        </h2>
+                        <h2 class="post-title">{{ post.title }}</h2>
                     </a>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                         <p class="description">{% if post.introduction %}{{ post.introduction | truncate: 160 }}{% else %}{{ post.description | truncate: 160 }}{% endif %}</p>
