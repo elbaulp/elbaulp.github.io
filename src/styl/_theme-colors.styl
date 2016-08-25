@@ -35,6 +35,8 @@ themes = {
 
 for theme, category-color in themes
     .{theme}
+        .share section#sharing
+            border-right rem(2px) solid category-color
         .title-category
             color category-color
         .post-content
