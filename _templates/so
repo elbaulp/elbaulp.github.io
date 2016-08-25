@@ -1,16 +1,16 @@
 ---
-layout: {{ layout }}
+layout: {{ layout }}.amp
 title: {{ title }}
-modified:
 categories: {{ dir }}
 description:
 tags: []
 image:
-  feature:
-  thumb:
-  credit:
-  creditlink:
+modified:
+introduction:
+main-class: "dev"
+color: "#E64A19"
 ---
+
 <figure>
   <a href="/assets/img/"><img src="/assets/img/" title="{{ page.title }}" alt="{{ page.title }}" /></a>
 </figure>
@@ -19,6 +19,6 @@ image:
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario USUARIO, que preguntaba <a href="" target="_blank" title=""></a>. La respuesta es del usuario USUARIO
 
-#### Fuente
+## Fuente
 
 PREGUNTA \| <a href="" title="" target="_blank">stackoverlow.com</a>
