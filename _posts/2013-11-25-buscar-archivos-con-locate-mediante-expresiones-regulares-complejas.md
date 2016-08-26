@@ -46,7 +46,7 @@ Siempre que necesito crear una expresión regular uso una herramienta llamada **
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png" title="{{ page.title }}" alt="{{ page.title }}" width="627px" height="285px"></amp-img>
-    <figcaption>Crédito:<a href="https://www.iconfinder.com/icons/33644/terminal_icon" target="_blank">inconfinder</a></figcaption>
+    <figcaption>Créditos: <a href="https://www.iconfinder.com/icons/33644/terminal_icon" target="_blank">inconfinder</a></figcaption>
 </figure>
 
 ### Script completo
