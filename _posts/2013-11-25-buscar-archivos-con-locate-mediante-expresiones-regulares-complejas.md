@@ -73,6 +73,23 @@ IFS=' '
 
 `IFS` se establece al salto de línea para que el `for` tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de `IFS`). De esta forma, si una línea del fichero contiene **Nombre canción**, en el `for` el contenido de `$i` valdrá **Nombre canción** y no **Nombre** y en la siguiente iteración **canción**. `> /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u` borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la tubería con `tee` permite escribir tanto a la salida estándar como a la lista.
 
+Otra opción, sugerida en Twitter por [@ingenieríainv](https://twitter.com/ingenieriainv/status/769135025216483328), es usar un `while read $i`:
+
+```bash
+#!/bin/bash
+
+nombres=`cat ARCHIVO_CON_LISTA_DE_NOMBRES`
+
+> /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
+
+cat $nombres | while read i
+do
+    echo "locate --regex -i \"$i.*(\.mp4|\.mp3)\""
+    locate --regex -i "$i.*(\.mp4|\.mp3)" | tee -a /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
+done
+```
+
+
 ### Referencias
 
 - *RegEx Tester* »» <a href="http://regexpal.com/" target="_blank">regexpal.com</a>  
