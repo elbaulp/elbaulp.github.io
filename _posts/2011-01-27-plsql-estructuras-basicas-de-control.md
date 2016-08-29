@@ -1,7 +1,8 @@
 ---
-title: 'PL/SQL &#8211; Estructuras básicas de control'
+title: 'PL/SQL. Estructuras básicas de control'
 layout: post.amp
 permalink: /plsql-estructuras-basicas-de-control/
+modified: 2016-08-29T10:00
 categories:
   - BaseDeDatos
 tags:
@@ -10,14 +11,14 @@ tags:
 main-class: "BaseDeDatos"
 color: "#009688"
 ---
-<div class="icosql">
-</div>
 
 Como PL/SQL es un lenguaje 3GL, cuenta con las estructuras típicas de control de flujo: bifurcaciones condicionales y bucles:
 
+{% include toc.html %}
+
 ## Bifurcaciones condicionales:
 
-&nbsp;
+<!--ad-->
 
 ### IF
 
@@ -35,12 +36,9 @@ END IF;
 ```
 
 
-<!--ad-->
-
-
 Como en cualquier lenguaje de programación, &#8220;condición&#8221; es cualquier expresión que de cómo resultado un valor booleano. Hay que saber que las estructuras IF se pueden anidar unas dentro de otras.
 
-#### IF &#8211; THEN
+#### IF - THEN
 
 Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa o nula**, NO se realiza NINGUNA acción.
 
@@ -60,9 +58,9 @@ IF fecha_nac < ‘1-01-1970’ THEN
 END IF;
 ```
 
-#### IF &#8211; THEN &#8211; ELSE
+#### IF - THEN - ELSE
 
-Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa**, se ejecutan las instrucciones que siguen a la instrucción ELSE. Sólo se permite una instrucción ELSE en cada instrucción IF.
+Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte **falsa**, se ejecutan las instrucciones que siguen a la instrucción `ELSE`. Sólo se permite una instrucción `ELSE` en cada instrucción IF.
 
 ```sql
 IF fecha_nac <’1-01-1970’ THEN
@@ -72,9 +70,9 @@ ELSE
 END IF;
 ```
 
-#### IF &#8211; THEN &#8211; ELSIF
+#### IF - THEN - ELSIF
 
-Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte ser **falsa**, se evalúa la condición especificada en el ELSIF.
+Se evalúa la condición y si resulta **verdadera**, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte ser **falsa**, se evalúa la condición especificada en el `ELSIF`.
 
 ```sql
 IF condicion THEN
@@ -104,7 +102,7 @@ END IF;                        --Sólo se necesita un único END IF
 
 #### CASE
 
-La instrucción CASE puede evaluar múltiples expresiones y devolver para cada una de ellas un valor/bloque de instrucciones. El resultado de cada WHEN puede ser un valor o una sentencia, en el primer caso el resultado de una sentencia CASE se puede guardar en una variable.
+La instrucción `CASE` puede evaluar múltiples expresiones y devolver para cada una de ellas un valor/bloque de instrucciones. El resultado de cada `WHEN` puede ser un valor o una sentencia, en el primer caso el resultado de una sentencia `CASE` se puede guardar en una variable.
 
 Su sintaxis:
 
@@ -156,7 +154,7 @@ CASE
 END
 ```
 
-En esta sintaxis después del CASE no aparece ninguna variable y cada WHEN tiene su propia condición a evaluar.
+En esta sintaxis después del `CASE` no aparece ninguna variable y cada `WHEN` tiene su propia condición a evaluar.
 
 #### BUCLES
 
@@ -166,7 +164,7 @@ LOOP
 END LOOP;
 ```
 
-Las sentencias de dentro del bucle se ejecutarán durante un número indefinido de vueltas, hasta que aparezca la instrucción EXIT; que finalizará el bucle. Este tipo de bucle se denomina bucle  
+Las sentencias de dentro del bucle se ejecutarán durante un número indefinido de vueltas, hasta que aparezca la instrucción `EXIT`; que finalizará el bucle. Este tipo de bucle se denomina bucle  
 incondicional.
 
 ```sql
@@ -179,7 +177,7 @@ LOOP
 END LOOP;
 ```
 
-Otra opción es incluir la estructura EXIT WHEN condición, se terminará el bucle cuando la condición se cumpla:
+Otra opción es incluir la estructura `EXIT WHEN` condición, se terminará el bucle cuando la condición se cumpla:
 
 ```sql
 LOOP
@@ -230,7 +228,7 @@ BEGIN
 END;
 ```
 
-En los bucles WHILE también se pueden utilizar las órdenes EXIT o EXIT WHEN para salirnos sin esperar a que la condición devuelva un valor falso.
+En los bucles `WHILE` también se pueden utilizar las órdenes `EXIT` o `EXIT WHEN` para salirnos sin esperar a que la condición devuelva un valor falso.
 
 Y por último el bucle FOR:
 
@@ -240,9 +238,9 @@ FOR contador IN [REVERSE] limite_inferior..limite_superior LOOP
 END LOOP;
 ```
 
-Contador deberá ser una variable de tipo numérico que sea capaz de contener los valores comprendidos entre limite\_inferior y limite\_superior, los cuales deberán ser expresiones numéricas, ya sean constantes (1,10&#8230;) o funciones (ROUND(max,0), ASCII(‘A’)&#8230;) .
+Contador deberá ser una variable de tipo numérico que sea capaz de contener los valores comprendidos entre limite\_inferior y limite\_superior, los cuales deberán ser expresiones numéricas, ya sean constantes (1,10&#8230;) o funciones (`ROUND`(max,0), `ASCII`(‘A’)&#8230;) .
 
-Si la variable contador no está definida, PL/SQL definirá una variable de tipo INTEGER al iniciar el bucle, y la liberará al finalizar el bucle.
+Si la variable contador no está definida, PL/SQL definirá una variable de tipo `INTEGER` al iniciar el bucle, y la liberará al finalizar el bucle.
 
 ```sql
 SET SERVEROUTPUT ON;
@@ -253,14 +251,11 @@ BEGIN
 END;
 ```
 
-En el caso de especificar REVERSE el bucle se recorre en sentido inverso.
-
-* * *
-
-#### Siguiente tema: [PL/SQL &#8211; Excepciones][1] 
+En el caso de especificar `REVERSE` el bucle se recorre en sentido inverso.
 
 
+### Siguiente tema: [PL/SQL - Excepciones][1] 
 
- [1]: https://elbauldelprogramador.com/plsql-excepciones/
+ [1]: /plsql-excepciones/
 
-{% include toc.html %}
+
