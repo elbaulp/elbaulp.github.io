@@ -22,13 +22,13 @@ Probablemente sepas que las imágenes están formadas por píxeles, pero, ¿Cóm
 Uint32 colorkey = SDL_MapRGB( optimizedImage-&gt;format, 0, 0xFF, 0xFF );
 ```
 
-Aquí tenemos una línea de código de la [Lección 5 - Colores Clave][1]. Ya sabemos que `SDL_MapRGB()` devuelve un pixel, pero ¿Cómo es la estructura `Uint32` un píxel?  
+Aquí tenemos una línea de código de la [Lección 5 - Colores Clave][1]. Ya sabemos que `SDL_MapRGB()` devuelve un pixel, pero ¿Cómo es la estructura `Uint32` un píxel?
 
 <!--ad-->
 
 Bien, Uint32 es lo siguiente:
 
-_U_nsigned _int_eger, lo que son _32_ bits de tamaño.
+<strong>U</strong>nsigned <strong>int</strong>eger, lo que son <strong>32</strong> bits de tamaño.
 
 Os preguntaréis, ¿Cómo puede ser un número un píxel?, probablemente sepas algo de `HTML`, y lo que hacemos en `HTML` para cambiar los colores de los elementos es configurar el color combinando 3 números desde el 0 al 255.
 
