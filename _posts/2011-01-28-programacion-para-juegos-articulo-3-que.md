@@ -28,7 +28,7 @@ Aquí tenemos una línea de código de la [Lección 5 - Colores Clave][1]. Ya sa
 
 Bien, Uint32 es lo siguiente:
 
-__U__nsigned__int__eger, lo que son __32__ bits de tamaño.
+_U_nsigned _int_eger, lo que son _32_ bits de tamaño.
 
 Os preguntaréis, ¿Cómo puede ser un número un píxel?, probablemente sepas algo de `HTML`, y lo que hacemos en `HTML` para cambiar los colores de los elementos es configurar el color combinando 3 números desde el 0 al 255.
 
