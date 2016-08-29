@@ -11,7 +11,7 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo" name="droid" class="icono" width="128px" height="128px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo"  class="icono" width="128px" height="128px" />][1]
 
 Con la última publicación de programación Android, [Recursos y cambios de configuración][2]. He terminado la primera parte de este manual. He pensado poner a vuestra disposición todo el contenido de esta primera parte que se encuentra en la página [Android][3] en PDF, ya que muchas veces resulta más cómodo leer documentos en papel.
 
