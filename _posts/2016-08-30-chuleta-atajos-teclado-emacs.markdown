@@ -143,7 +143,7 @@ Lorem ipsum dolor sit amet
 
 __Fuente:__ [How to replace a character with a newline in Emacs?](http://stackoverflow.com/a/613029/1612432 "How to replace a character with a newline in Emacs?")
 
-### Elminiar los espacios en blanco sobrantes al final de una línea
+### Eliminiar los espacios en blanco sobrantes al final de una línea
 
 Basta ejecutar `M-x delete-trailing-whitespace`.
 
