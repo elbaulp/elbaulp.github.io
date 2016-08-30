@@ -8,6 +8,7 @@ categories:
   - aplicaciones
   - opensource
 tags:
+  - chuleta
   - administracion DNS
   - chuleta comandos dig
   - chuleta dig

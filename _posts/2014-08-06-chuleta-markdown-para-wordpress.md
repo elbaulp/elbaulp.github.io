@@ -6,6 +6,7 @@ permalink: /chuleta-markdown-para-wordpress/
 categories:
   - How To
 tags:
+  - chuleta
   - guía markdown
   - markdown
   - markdown jetpack

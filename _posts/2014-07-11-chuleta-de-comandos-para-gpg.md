@@ -6,6 +6,7 @@ categories:
   - Articulos
   - How To
 tags:
+  - chuleta
   - chuleta de comandos gpg
   - gpg
   - manual gpg
