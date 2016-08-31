@@ -24,7 +24,7 @@ DECLARE
 e_sin_alumnos EXCEPTION;
 ```
 
-Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción **RAISE <excepci>.**
+Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción **`RAISE <excepcion>`.**
 
 La sintaxis del manejador de excepciones es:
 
