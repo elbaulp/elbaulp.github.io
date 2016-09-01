@@ -6,6 +6,7 @@ description: "Emacs: Recopilación de comandos y acciones útiles"
 tags: [emacs, chuleta]
 image: chuleta-atajos-teclado-emacs.png
 introduction: "Emacs: Recopilación de comandos y acciones útiles"
+modified: 2016-09-01T09:30
 main-class: "misc"
 color: "#61B38D"
 ---
@@ -199,6 +200,11 @@ __Fuente:__ [Execute a particular command on multiple emacs buffers](http://stac
 ### Alinear verticalmente código en base al signo =
 
 - `M-x align-regex =`
+
+### Convertir texto a mayúscula/minúscula
+
+- `C-x C-u`: Convertir a mayúsculas.
+- `C-x C-l`: Convertir a minúsculas.
 
 # Tu Turno
 
