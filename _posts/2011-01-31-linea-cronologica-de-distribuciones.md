@@ -1,5 +1,5 @@
 ---
-title: Evolución de las distros GNU/Linux, de 1992 a 2016
+title: Evolución de las distribuciones GNU/Linux, de 1992 a 2016
 layout: post.amp
 permalink: /linea-cronologica-de-distribuciones/
 image: linea-cronologica-de-distribuciones.png
