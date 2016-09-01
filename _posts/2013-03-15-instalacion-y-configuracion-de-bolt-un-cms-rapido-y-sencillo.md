@@ -128,7 +128,7 @@ Algo que me ha llamado mucho la atención es la facilidad que se le da al desarr
 
 Desde ahí se puede acceder a estadísticas de carga, uso de memoria, entradas del log, consultas a la base de datos etc.
 
-Incluso cuando estés desarrollando una extensión puedes obtener información de cualquier objeto o variable, en las plantillas hay que escribir *{{ print(variable) }}* y en código *\util::var_dump($variable);*
+Incluso cuando estés desarrollando una extensión puedes obtener información de cualquier objeto o variable, en las plantillas hay que escribir *{% raw %}{{ print(variable) }}{% endraw %}* y en código *\util::var_dump($variable);*
 
 ### Conclusión
 
