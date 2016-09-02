@@ -265,7 +265,7 @@ BEGIN
 END;
 ```
 
-### Siguiente tema: [PL/SQL &#8211; Procedimientos y Funciones][5]
+## Siguiente tema: [PL/SQL &#8211; Procedimientos y Funciones][5]
 
  [1]: /plsql-excepciones/
  [2]: /plsql-declaracion-de-variables/
