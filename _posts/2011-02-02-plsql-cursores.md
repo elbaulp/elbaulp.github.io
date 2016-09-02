@@ -234,7 +234,7 @@ Los cursores de actualización se declaran igual que los cursores explícitos, a
 CURSOR nombre_cursor IS instrucción_SELECT FOR UPDATE
 ```
 
-Para actualizar los datos del cursor hay que ejecutar una sentencia `UPDATE` especificando la cláusula `WHERE CURRENT` OF <cursor_name>.
+Para actualizar los datos del cursor hay que ejecutar una sentencia `UPDATE` especificando la cláusula `WHERE CURRENT OF <cursor_name>`.
 
 ```sql
 UPDATE <nombre_tabla> SET <campo_1> = <valor_1>[,<campo_2> = <valor_2>]
