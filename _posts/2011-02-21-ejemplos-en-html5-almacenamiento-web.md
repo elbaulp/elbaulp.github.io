@@ -1,6 +1,7 @@
 ---
 title: 'Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket'
 layout: post.amp
+modified: 2016-09-03T22:50
 permalink: /ejemplos-en-html5-almacenamiento-web/
 categories:
   - internet
@@ -11,20 +12,46 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-Ayer os hablé de [15 webs][1] en las que se podia ver el potencial de HTML 5, y una de ellas era una presentación de sus características, he traducido algunas que me han interesado y las dejo para que las useis. Si lo preferís, podéis hacerlo directamente [en su Web][2].  
+
+<script type="text/javascript>
+// Usar localStorage Para almacenamiento permanente
+// Usar sessionStorage para almacenamiento por pestañas
+saveButton.addEventListener('click', function () {
+  window.localStorage.setItem('value', area.value);
+  window.localStorage.setItem('timestamp', (new Date()).getTime());
+}, false);
+textarea.value = window.localStorage.getItem('value');
+
+var db = window.openDatabase("DBName", "1.0", "description", 5*1024*1024); //5MB
+db.transaction(function(tx) {
+  tx.executeSql("SELECT * FROM test", [], successCallback, errorCallback);
+  
+var socket = new WebSocket('ws://html5rocks.websocket.org/echo');
+socket.onopen = function(event) {
+  socket.send('Hello, WebSocket');
+};
+socket.onmessage = function(event) { alert(event.data); }
+socket.onclose = function(event) { alert('closed'); } 
+</script>
+
+{% include toc.html %}
+
+## Introducción
+
+Ayer os hablé de [15 webs][1] en las que se podia ver el potencial de HTML 5, y una de ellas era una presentación de sus características, he traducido algunas que me han interesado y las dejo para que las useis. Si lo preferís, podéis hacerlo directamente [en su Web][2].
+
 <!--ad-->
 
 ## Alacenamiento Web
 
-```bash
+```javascript
 // Usar localStorage Para almacenamiento permanente
 // Usar sessionStorage para almacenamiento por pestañas
 saveButton.addEventListener('click', function () {
-  window.<b>localStorage</b>.<b>setItem</b>('value', area.value);
-  window.<b>localStorage</b>.<b>setItem</b>('timestamp', (new Date()).getTime());
+  window.localStorage.setItem('value', area.value);
+  window.localStorage.setItem('timestamp', (new Date()).getTime());
 }, false);
-textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
-
+textarea.value = window.localStorage.getItem('value');
 ```
 
 <p id="localstorage-message">
@@ -37,23 +64,21 @@ textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
 </p>
 <hr />
 <div>
-<h2>
-      Web SQL Database
-    </h2>
 
-    ```bash
-var db = window.<b>openDatabase</b>("DBName", "1.0", "description", 5*1024*1024); //5MB
-db.<b>transaction</b>(function(tx) {
-  tx.<b>executeSql</b>(<em>"SELECT * FROM test"</em>, [], successCallback, errorCallback);
+## Web SQL Database
+
+```javascript
+var db = window.openDatabase("DBName", "1.0", "description", 5*1024*1024); //5MB
+db.transaction(function(tx) {
+  tx.executeSql("SELECT * FROM test", [], successCallback, errorCallback);
 });
-
 ```
 
-    <div class="center" id="websqldb-example">
-<input type="text" id="todoitem" /><br /> <button onclick="webSqlSample.newRecord()">Nuevo elemento</button><br /> <button onclick="webSqlSample.createTable()">Crear tabla</button><br /> <button onclick="webSqlSample.dropTable()">Borrar tabla</button> 
+<div class="center" id="websqldb-example">
+<input type="text" id="todoitem" /><br /> <button onclick="webSqlSample.newRecord()">Nuevo elemento</button><br /> <button onclick="webSqlSample.createTable()">Crear tabla</button><br /> <button onclick="webSqlSample.dropTable()">Borrar tabla</button>
 <p>
-        Vea la base de datos generada en: Developer > Developer Tools > Storage
-      </p>
+Vea la base de datos generada en: Developer > Developer Tools > Storage
+</p>
 <ul class="record-list" id="db-results">
 </ul>
 <div id="db-log">
@@ -62,21 +87,19 @@ db.<b>transaction</b>(function(tx) {
 <p>
 </p></div>
 <hr />
-<h2>
-        WebSocket
-      </h2>
 
-      ```bash
-var socket = new <b>WebSocket</b>('ws://html5rocks.websocket.org/echo');
-socket.<b>onopen</b> = function(event) {
-  socket.<b>send</b>('Hello, WebSocket');
+## WebSocket
+
+```javascript
+var socket = new WebSocket('ws://html5rocks.websocket.org/echo');
+socket.onopen = function(event) {
+  socket.send('Hello, WebSocket');
 };
-socket.<b>onmessage</b> = function(event) { alert(event.data); }
-socket.<b>onclose</b> = function(event) { alert('closed'); }
-
+socket.onmessage = function(event) { alert(event.data); }
+socket.onclose = function(event) { alert('closed'); }
 ```
 
-      <p id="websockets-message">
+<p id="websockets-message">
         Comunicación Full-duplex, bi-direccional sobre la Web:<br /> Tanto el servidor como el cliente pueden enviar datos en cualquier momento, o incluso al mismo tiempo.<br /> Sólo se envian los datos en sí, sin la sobrecarga de cabeceras HTTP, lo que reduce<br /> el consumo de ancho de banda.
       </p>
 <div id="ws-left">
@@ -88,28 +111,24 @@ socket.<b>onclose</b> = function(event) { alert('closed'); }
 <p>
 <input type="text" id="wsUri" disabled="disabled" /><br /> <br /> <br /> <input type="checkbox" id="wsSecureCb" onclick="wsToggleTls();" disabled="disabled" /><br /> <label id="wsSecureCbLabel" for="wsSecureCb">Use secure WebSocket (TLS/SSL)</label><br /> <br /> <br /> <button id="wsConnectBut" disabled="disabled">Conectar</button><br /> <button id="wsDisconnectBut" disabled="disabled">Desconectar</button> </p></div>
 <div id="ws-config-message">
-<h4>
-                Message:
-              </h4>
+
+<h4>Message:</h4>
 <p>
 <input type="text" id="wsMessage" value="Hello, WebSocket" disabled="disabled" /><br /> <button id="wsSendBut" disabled="disabled">Send</button> </p></div>
 
 </div>
 <div id="ws-right">
 <div id="ws-log">
-<strong>Output:</strong> 
+<strong>Output:</strong>
 <div id="wsConsoleLog">
 </div>
 <p>
 <button id="wsClearLogBut">Clear log</button> </p></div>
-
 </div>
 <p>
 </p>
 
-
-
- [1]: https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/
+ [1]: /15-demostraciones-del-potencial-de/
  [2]: http://slides.html5rocks.com/#landing-slide
 
-{% include toc.html %}
+
