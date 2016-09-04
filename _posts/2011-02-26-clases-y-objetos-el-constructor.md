@@ -1,34 +1,27 @@
 ---
-title: 'Clases y Objetos &#8211; El Constructor'
+title: 'Clases y Objetos. El Constructor'
 layout: post.amp
+modified: 2016-09-04T12:00
 permalink: /clases-y-objetos-el-constructor/
 categories:
   - C
 main-class: "dev"
 color: "#E64A19"
 ---
-<div class="iconcpp">
-</div>
+
+{% include toc.html %}
 
 ## Constructores
 
-Una vez que [se ha definido una clase][1], para usarla se ha de definir un objeto. Se define una variable de la clase Punto, exactamente igual que se define una variable de un tipo predefinido (int, float, etc.), o definido por el usuario. Las variables de una clase se denominan objetos. Los objetos usan la misma notación que cualquier tipo de variable, y su alcance se extiende desde la línea donde se ha declarado hasta el final del bloque.  
+Una vez que [se ha definido una clase][1], para usarla se ha de definir un objeto. Se define una variable de la clase Punto, exactamente igual que se define una variable de un tipo predefinido (int, float, etc.), o definido por el usuario. Las variables de una clase se denominan objetos. Los objetos usan la misma notación que cualquier tipo de variable, y su alcance se extiende desde la línea donde se ha declarado hasta el final del bloque.
 
 <!--ad-->
 
-Un objeto perteneciente a una clase se crea llamando a una función especial  
-denominada constructor de la clase. El constructor se llama de forma automática cuando  
-se crea un objeto, para situarlo en memoria e inicializar los miembros dato declarados  
-en la clase. El constructor tiene el mismo nombre que la clase. Lo específico del  
-constructor es que no tiene tipo de retorno, por lo que su sintaxis es más simple:
-
-
+Un objeto perteneciente a una clase se crea llamando a una función especial denominada constructor de la clase. El constructor se llama de forma automática cuando se crea un objeto, para situarlo en memoria e inicializar los miembros dato declarados en la clase. El constructor tiene el mismo nombre que la clase. Lo específico del constructor es que no tiene tipo de retorno, por lo que su sintaxis es más simple:
 
 ```cpp
 Punto:: Punto (argumentos)
 ```
-
-
 
 Declaración del constructor:
 
@@ -39,7 +32,6 @@ class Punto{
     Punto (char chl, int x1, int yl);
     //...
 };
-
 ```
 
 Definición del constructor. El constructor inicializa los miembros dato:
@@ -53,26 +45,22 @@ Punto::Punto (char ch1,int x1, int y1){
 
 ```
 
-Llamada al constructor. Para crear un objeto pt1 de la clase Punto, basta una única  
-sentencia
+Llamada al constructor. Para crear un objeto pt1 de la clase Punto, basta una única sentencia
 
-```bash
+```cpp
 Punto ptl(‘*’, 40, 13);
 ```
 
-En dicho objeto, el miembro dato ch guardará el carácter *, el miembro dato x,  
-el número entero 40, y el miembro y, el entero 13.
+En dicho objeto, el miembro dato ch guardará el carácter *, el miembro dato x, el número entero 40, y el miembro y, el entero 13.
 
-Se llama a las funciones miembro desde el objeto pt1
+Se llama a las funciones miembro desde el objeto `pt1`
 
 ```cpp
 pt1.mostrar();
 ptl.ocultar();
-
 ```
 
-Podemos tener más de un constructor, por ejemplo uno que fije el carácter pero  
-que permita cambiar las coordenadas del punto.
+Podemos tener más de un constructor, por ejemplo uno que fije el carácter pero que permita cambiar las coordenadas del punto.
 
 Declaración del constructor
 
@@ -83,7 +71,6 @@ class Punto{
     Punto (int xl, int yl);
     //...
 };
-
 ```
 
 Definición del constructor: se fija el carácter, y se le pasan las coordenadas del punto.
@@ -94,7 +81,6 @@ Punto::Punto(int xl, int yl){
   y=y1;
   ch=’*’;
 }
-
 ```
 
 Se llama al constructor para crear un objeto pt2
@@ -103,19 +89,16 @@ Se llama al constructor para crear un objeto pt2
 Punto pt2(40, 13);
 ```
 
-En dicho objeto, el miembro dato ch guardará el carácter *, el miembro dato x,  
-el número entero 40, y el miembro y, el entero 13.
+En dicho objeto, el miembro dato ch guardará el carácter *, el miembro dato x, el número entero 40, y el miembro y, el entero 13.
 
 Se llama a las funciones miembro desde el objeto pt2
 
 ```cpp
 pt2.mostrar();
 pt2.ocultar();
-
 ```
 
-Una clase, como hemos visto, puede tener más de un constructor. Cuando un  
-constructor no tiene argumentos, se dice que es el constructor por defecto.
+Una clase, como hemos visto, puede tener más de un constructor. Cuando un constructor no tiene argumentos, se dice que es el constructor por defecto.
 
 Declaración del constructor por defecto de la clase
 
@@ -126,11 +109,9 @@ class Punto{
     Punto();
     //...
 };
-
 ```
 
-Definición del constructor por defecto: los miembros dato se inicializan en el bloque  
-de dicho constructor
+Definición del constructor por defecto: los miembros dato se inicializan en el bloque de dicho constructor
 
 ```cpp
 Punto::Punto(){
@@ -138,12 +119,11 @@ Punto::Punto(){
   x=40;
   y=13;
 }
-
 ```
 
 Para llamar al constructor por defecto, basta escribir:
 
-```bash
+```cpp
 Punto def;
 ```
 
@@ -155,16 +135,10 @@ Punto def();
 //Se llama a las funciones miembro desde el objeto def
 def.mostrar();
 def.ocultar();
-
 ```
 
-* * *
 
-#### Siguiente tema: [Clases y Objetos &#8211; El Destructor][2] 
+## Siguiente tema: [Clases y Objetos &#8211; El Destructor][2]
 
-
-
- [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
- [2]: https://elbauldelprogramador.com/clases-y-objetos-el-destructor/
-
-{% include toc.html %}
+ [1]: /clases-y-objetos-definir-una-clase/
+ [2]: /clases-y-objetos-el-destructor/
