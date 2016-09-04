@@ -2,7 +2,8 @@
 id: 391
 title: Android
 layout: minimal.amp
-modified: 2016-08-11T21:00
+modified: 2016-09-04T22:00
+redirect_from: /video-tutorial-programacion-android/
 ---
 
 {% include toc.html %}
