@@ -189,6 +189,15 @@
                     "eventAction": "guidespage"
                 }
             }
+            "author" : {
+                "on": "click",
+                "selector": "#author-name",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "author-name",
+                    "eventAction": "author-name-click"
+                }
+            }
         }
     }
   </script>

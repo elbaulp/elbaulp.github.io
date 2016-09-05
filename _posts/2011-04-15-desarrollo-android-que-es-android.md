@@ -1,5 +1,5 @@
 ---
-title: 'Desarrollo android &#8211; ¿Qué es Android? &#8211; Traducción de developer.android.com'
+title: 'Desarrollo android. ¿Qué es Android? &#8211; Traducción de developer.android.com'
 layout: post.amp
 permalink: /desarrollo-android-que-es-android/
 categories:
