@@ -188,7 +188,7 @@
                     "eventCategory": "libros-geek",
                     "eventAction": "guidespage"
                 }
-            }
+            },
             "author" : {
                 "on": "click",
                 "selector": "#author-name",
