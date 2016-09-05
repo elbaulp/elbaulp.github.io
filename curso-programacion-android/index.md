@@ -3,7 +3,10 @@ id: 391
 title: Android
 layout: minimal.amp
 modified: 2016-09-04T22:00
-redirect_from: /video-tutorial-programacion-android/
+redirect_from: 
+   - /video-tutorial-programacion-android/
+   - /programa-que-envia-mensajes-desde-2/
+   - /programa-que-envia-mensajes-desde_10/
 ---
 
 {% include toc.html %}
