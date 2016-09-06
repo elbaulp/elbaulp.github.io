@@ -17,7 +17,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
-[En anteriores entradas][1] expliqué como he ido desarrollando una aplicación para [Android](/curso-programacion-android/ "Curso de programación en Android") que enviaba mensajes al pc para un proyecto de fin de curso.
+En anteriores entradas expliqué como he ido desarrollando una aplicación para [Android](/curso-programacion-android/ "Curso de programación en Android") que enviaba mensajes al pc para un proyecto de fin de curso.
 
 Bien, ahora voy a explicar en que consiste la aplicación exactamente, que aún no lo he hecho.Se trara de desarrollar un programa para bares, en la cual cada camarero tendrá una PDA, o dispositivo Android, desde la cual anotará los pedidos de los clientes. La PDA enviará estos pedidos al servidor que contiene una Base de datos, y este imprimirá los tickets.
 
@@ -151,7 +151,6 @@ Dni: 12345678
 
 Espero que os sirva de ayuda, he escrito esta entrada rápido por falta de tiempo, así que si algo no se entiende no dudes en preguntar e intentaré ayudarte.
 
- [1]: https://elbauldelprogramador.com/programa-que-envia-mensajes-desde_10/
  [2]: http://kbase.gfi.com/showarticle.asp?id=KBID002804
  [3]: http://www.blogdemegastar.com/2010/09/pasos-para-configurar-sql-server-2008.html
  [4]: http://support.microsoft.com/kb/313100
