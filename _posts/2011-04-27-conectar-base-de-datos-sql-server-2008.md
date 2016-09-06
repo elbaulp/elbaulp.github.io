@@ -31,7 +31,7 @@ Ahora vamos al código, (que he sacado de un ejemplo de la web de [microsoft][4]
 
 Ahora vamos a crear un proyecto, yo lo he creado en ecplise, es necesario agregarle las librerías JDBC para que hagan de puente entre la aplicación y la base de datos. En ecplise se añaden en las propiedades del proyecto/JAva Build Path/Libraries, estas librerías podeis descargarlas de [aqui][5], si no lo hacéis en ecplise, en este [enlace][6] se ve como configurarlo
 
-También puedes ver cómo <a href="/conectar-base-de-datos-oracle.html">Conectar una base de datos ORACLE a aplicación Java remotamente</a>
+También puedes ver cómo <a href="/conectar-base-de-datos-oracle/">Conectar una base de datos ORACLE a aplicación Java remotamente</a>
 
 Dejo el código por aquí:
 
@@ -39,97 +39,92 @@ Dejo el código por aquí:
 import java.sql.Statement;
 
 public class Test {
-	private java.sql.Connection connection = null;
-	private final String url = "jdbc:microsoft:sqlserver://";
-	private final String serverName = "192.168.1.38";
-	private final String portNumber = "1433";
-	private final String databaseName = "db_WifiBar";
-	private final String userName = "algui91";
-	private final String password = "1234";
-	private final String statement = "select * from prueba;";
-	// Informs the driver to use server a side-cursor,
-	// which permits more than one active statement
-	// on a connection.
-	private final String selectMethod = "Direct";
+ private java.sql.Connection connection = null;
+ private final String url = "jdbc:microsoft:sqlserver://";
+ private final String serverName = "192.168.1.38";
+ private final String portNumber = "1433";
+ private final String databaseName = "db_WifiBar";
+ private final String userName = "algui91";
+ private final String password = "1234";
+ private final String statement = "select * from prueba;";
+ // Informs the driver to use server a side-cursor,
+ // which permits more than one active statement
+ // on a connection.
+ private final String selectMethod = "Direct";
 
-	// Constructor
-	public Test() {
-	}
+ // Constructor
+ public Test() {}
 
-	private String getConnectionUrl() {
-		return url + serverName + ":" + portNumber + ";databaseName="
-				+ databaseName + ";selectMethod=" + selectMethod + ";";
-	}
+ private String getConnectionUrl() {
+  return url + serverName + ":" + portNumber + ";databaseName=" + databaseName + ";selectMethod=" + selectMethod + ";";
+ }
 
-	private java.sql.Connection getConnection() {
-		try {
-			Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-			connection = java.sql.DriverManager.getConnection(getConnectionUrl(),
-					userName, password);
-			if (connection != null)
-				System.out.println("Connection Successful!");
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Error Trace in getConnection() : "
-					+ e.getMessage());
-		}
-		return connection;
-	}
+ private java.sql.Connection getConnection() {
+  try {
+   Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+   connection = java.sql.DriverManager.getConnection(getConnectionUrl(),
+    userName, password);
+   if (connection != null)
+    System.out.println("Connection Successful!");
+  } catch (Exception e) {
+   e.printStackTrace();
+   System.out.println("Error Trace in getConnection() : " + e.getMessage());
+  }
+  return connection;
+ }
 
-	/*
-	 * Display the driver properties, database details
-	 */
+ /*
+  * Display the driver properties, database details
+  */
 
-	public void displayDbProperties() {
-		java.sql.DatabaseMetaData dm = null;
-		java.sql.ResultSet result = null;
-		try {
-			connection = this.getConnection();
-			if (connection != null) {
-				dm = connection.getMetaData();
-				System.out.println("Driver Information");
-				System.out.println("\tDriver Name: " + dm.getDriverName());
-				System.out
-						.println("\tDriver Version: " + dm.getDriverVersion());
-				System.out.println("\nDatabase Information ");
-				System.out.println("\tDatabase Name: "
-						+ dm.getDatabaseProductName());
-				System.out.println("\tDatabase Version: "
-						+ dm.getDatabaseProductVersion());
-				
-				Statement select = connection.createStatement();
-				result = select.executeQuery(statement);
-				
-				while (result.next()) {
-					System.out.println("Nombre: " + result.getString(1) + "\n");
-					System.out.println("Apellido: " + result.getString(2) + "\n");
-					System.out.println("Dni: " + result.getString(3) + "\n");
-				}
-				result.close();
-				result = null;
-				closeConnection();
-			} else
-				System.out.println("Error: No active Connection");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		dm = null;
-	}
+ public void displayDbProperties() {
+  java.sql.DatabaseMetaData dm = null;
+  java.sql.ResultSet result = null;
+  try {
+   connection = this.getConnection();
+   if (connection != null) {
+    dm = connection.getMetaData();
+    System.out.println("Driver Information");
+    System.out.println("\tDriver Name: " + dm.getDriverName());
+    System.out
+     .println("\tDriver Version: " + dm.getDriverVersion());
+    System.out.println("\nDatabase Information ");
+    System.out.println("\tDatabase Name: " + dm.getDatabaseProductName());
+    System.out.println("\tDatabase Version: " + dm.getDatabaseProductVersion());
 
-	private void closeConnection() {
-		try {
-			if (connection != null)
-				connection.close();
-			connection = null;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+    Statement select = connection.createStatement();
+    result = select.executeQuery(statement);
 
-	public static void main(String[] args) throws Exception {
-		Test myDbTest = new Test();
-		myDbTest.displayDbProperties();
-	}
+    while (result.next()) {
+     System.out.println("Nombre: " + result.getString(1) + "\n");
+     System.out.println("Apellido: " + result.getString(2) + "\n");
+     System.out.println("Dni: " + result.getString(3) + "\n");
+    }
+    result.close();
+    result = null;
+    closeConnection();
+   } else
+    System.out.println("Error: No active Connection");
+  } catch (Exception e) {
+   e.printStackTrace();
+  }
+  dm = null;
+ }
+
+ private void closeConnection() {
+  try {
+   if (connection != null)
+    connection.close();
+   connection = null;
+  } catch (Exception e) {
+   e.printStackTrace();
+  }
+ }
+
+ public static void main(String[] args) throws Exception {
+  Test myDbTest = new Test();
+  myDbTest.displayDbProperties();
+ }
 }
 ```
 
