@@ -7,6 +7,7 @@ redirect_from:
    - /video-tutorial-programacion-android/
    - /programa-que-envia-mensajes-desde-2/
    - /programa-que-envia-mensajes-desde_10/
+   - /fundamentos-de-las-aplicaciones-android/
 ---
 
 {% include toc.html %}
