@@ -29,13 +29,13 @@ A continuación los cuatro tipos de componentes:
 
 Una *Actividad* representa una pantalla con una interfaz de usuario. Por ejemplo, una aplicación de email puede tener una actividad que muestre una lista con los nuevos mails, otra actividad para redactar un correo y otra para leer nuestro correo. Aunque las actividades trabajan juntas de forma coherente, cada una es independiente de la otra. Por lo tanto, una aplicación distinta puede iniciar cualquiera de estas actividades (si la aplicación de email lo permite). Por ejemplo, la aplicación de la cámara puede iniciar la actividad en la aplicación email para componer un nuevo correo, para que el usuario pueda compartir una imagen.
 
-Una actividad se implementa como una subclase de `<a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a>`, puedes leer más acerca de esto en la [guía para desrrolladores de Actividades][1]
+Una actividad se implementa como una subclase de <a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a>, puedes leer más acerca de esto en la [guía para desrrolladores de Actividades][1]
 
 ### **Servicios**
 
 Un *servicio* es un componente que se ejecuta en segundo plano para llevar a cabo operaciones de larga duración o para realizar trabajos de procesos remotos. Un servicio no proporciona una interfaz de usuario. Por ejemplo, un servicio puede reproducir música en segundo plano mientras el usuario se encuentra en otra aplicación, o puede navegar por la red sin bloquear la interacción del usuario con otra actividad. Otro componente, como una actividad, puede iniciar el servicio y permitir que se ejecute o dejar que interactue con ella.
 
-Un servicio se implementa como una subclase de `<a href="http://developer.android.com/reference/android/app/Service.html">Service</a>`, puedes leer más acerca de esto en la [guía para desarrolladores de servicios][2]
+Un servicio se implementa como una subclase de <a href="http://developer.android.com/reference/android/app/Service.html">Service</a>, puedes leer más acerca de esto en la [guía para desarrolladores de servicios][2]
 
 ### **Proveedores de contenido**
 
