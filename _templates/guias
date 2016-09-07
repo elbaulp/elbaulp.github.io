@@ -1,6 +1,6 @@
 ---
 layout: {{ layout }}.amp
-title: {{ title }}
+title: "{{ title }}"
 categories: {{ dir }}
 description:
 tags: []
@@ -12,14 +12,14 @@ color: #61B38D
 ---
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/" alt="{{ title }}" title="{{ title }}" width="px" height="px">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/" alt="{{ title }}" title="{{ title }}" width="px" height="px">
    </amp-img>
    <figcaption></figcaption>
 </figure>
 
-<!--ad-->
-
 {% include guide_note.html %}
+
+<!--ad-->
 
 <div class="button-post">
   <a href="" target="_blank">Descárgala ahora</a>
