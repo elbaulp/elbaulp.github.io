@@ -209,13 +209,13 @@ public class SitesProvider extends ContentProvider{
 
 
 
- [1]: /guia-de-desarrollo-android
- [2]: /programacion-android-implementando-un
- [3]: /prueba-la-aplicacion-favsites-en-tu
- [4]: /consulta-de-datos-clausula-select
- [5]: /programacion-android-proveedores-de_28
- [6]: /programacion-android-implementando-un_14
- [7]: /programacion-android-implementando-un_14/
+ [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
+ [2]: https://elbauldelprogramador.com/programacion-android-implementando-un
+ [3]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu
+ [4]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select
+ [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de_28
+ [6]: https://elbauldelprogramador.com/programacion-android-implementando-un_14
+ [7]: https://elbauldelprogramador.com/programacion-android-implementando-un_14/
 
 {% include toc.html %}
 </http:>

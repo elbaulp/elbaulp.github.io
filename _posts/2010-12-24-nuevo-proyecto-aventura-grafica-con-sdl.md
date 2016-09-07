@@ -20,6 +20,6 @@ Tenemos intención, conforme avance el proyecto, [crear un PPA][3], y así aprov
 Como siempre, cualquiera que quiera participar es bienvenido, de esta forma avanzaremos más rápido y aprenderemos los unos de los otros.
 
  [1]: http://es.wikipedia.org/wiki/Simple_DirectMedia_Layer
- [2]: /pylabra-aplicacion-para-almacenar/
- [3]: /como-crear-un-repositorio-ppa-how/
- [4]: /que-son-los-ppa-what-ppa-is/
+ [2]: https://elbauldelprogramador.com/pylabra-aplicacion-para-almacenar/
+ [3]: https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/
+ [4]: https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/

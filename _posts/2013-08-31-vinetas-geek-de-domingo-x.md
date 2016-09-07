@@ -81,18 +81,18 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
  [1]: https://elbauldelprogramador.com/ "Viñetas Geek de Domingo"
- [2]: /assets/img/2013/08/questions.png
- [3]: /assets/img/2013/08/when-I-quickly-solve-a-colleagues-bug.gif
- [4]: /assets/img/2013/08/Typical-bug-fixing.gif
- [5]: /assets/img/2013/08/Using-Linuxs-bcache+ssd-on-top-of-rotational-disks.gif
- [6]: /assets/img/2013/08/when-I-touch-the-legacy-code.gif
- [7]: /assets/img/2013/08/when-I-watch-my-collegue-coding-for-the-first-time-on-emacs.gif
- [8]: /assets/img/2013/08/when-marketing-uses-technical-terms-and-asks-if-I-understood.gif
- [9]: /assets/img/2013/08/when-the-coffee-machine-is-repaired.gif
- [10]: /assets/img/2013/08/when-the-intern-tries-to-fix-a-bug.gif
- [11]: /assets/img/2013/08/Naming-is-key.jpg
- [12]: /assets/img/2013/08/Strong-vs.-Weak-References1.jpg
- [13]: /assets/img/2013/08/Strong-vs.-Weak-References2.jpg
- [14]: /assets/img/2013/08/The-one-and-only-difference-between-OS-X-and-Windows2.jpg
+ [2]: https://elbauldelprogramador.com/assets/img/2013/08/questions.png
+ [3]: https://elbauldelprogramador.com/assets/img/2013/08/when-I-quickly-solve-a-colleagues-bug.gif
+ [4]: https://elbauldelprogramador.com/assets/img/2013/08/Typical-bug-fixing.gif
+ [5]: https://elbauldelprogramador.com/assets/img/2013/08/Using-Linuxs-bcache+ssd-on-top-of-rotational-disks.gif
+ [6]: https://elbauldelprogramador.com/assets/img/2013/08/when-I-touch-the-legacy-code.gif
+ [7]: https://elbauldelprogramador.com/assets/img/2013/08/when-I-watch-my-collegue-coding-for-the-first-time-on-emacs.gif
+ [8]: https://elbauldelprogramador.com/assets/img/2013/08/when-marketing-uses-technical-terms-and-asks-if-I-understood.gif
+ [9]: https://elbauldelprogramador.com/assets/img/2013/08/when-the-coffee-machine-is-repaired.gif
+ [10]: https://elbauldelprogramador.com/assets/img/2013/08/when-the-intern-tries-to-fix-a-bug.gif
+ [11]: https://elbauldelprogramador.com/assets/img/2013/08/Naming-is-key.jpg
+ [12]: https://elbauldelprogramador.com/assets/img/2013/08/Strong-vs.-Weak-References1.jpg
+ [13]: https://elbauldelprogramador.com/assets/img/2013/08/Strong-vs.-Weak-References2.jpg
+ [14]: https://elbauldelprogramador.com/assets/img/2013/08/The-one-and-only-difference-between-OS-X-and-Windows2.jpg
 
 {% include toc.html %}

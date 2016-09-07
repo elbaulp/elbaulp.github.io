@@ -142,8 +142,8 @@ END;
 
 ## Siguiente tema: [PL/SQL &#8211; Paquetes (Packages)][3]
 
- [1]: /bloques-plsql/
- [2]: /plsql-declaracion-de-variables/
- [3]: /plsql-paquetes-packages/
+ [1]: https://elbauldelprogramador.com/bloques-plsql/
+ [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [3]: https://elbauldelprogramador.com/plsql-paquetes-packages/
 
 

@@ -84,11 +84,11 @@ content://contacts/people/23
 
 
 
- [1]: /programacion-android-proveedores-de/
- [2]: /plsql-procedimientos-y-funciones/
- [3]: /fundamentos-programacion-android_16/
- [4]: /search/?q=favsites
- [5]: /programacion-android-proveedores-de_28/
+ [1]: https://elbauldelprogramador.com/programacion-android-proveedores-de/
+ [2]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+ [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
+ [4]: https://elbauldelprogramador.com/search/?q=favsites
+ [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de_28/
 
 {% include toc.html %}
 </provider>

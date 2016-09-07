@@ -69,6 +69,6 @@ DBMS_OUTPUT.PUT_LINE (cadena_caracteres);
 
 ## Siguiente Tema: [PL/SQL &#8211; Declaración de variables][1] 
 
- [1]: /plsql-declaracion-de-variables/
+ [1]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
 
 

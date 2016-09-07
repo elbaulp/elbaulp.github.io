@@ -409,4 +409,4 @@ function init_() {
 
 *Google Apps Script* »» <a href="http://www.google.com/script/start/" target="_blank">Visitar sitio</a>
 
- [1]: /futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"
+ [1]: https://elbauldelprogramador.com/futuro-ides-de-escritorio/ "5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos"

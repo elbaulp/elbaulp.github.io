@@ -32,4 +32,4 @@ La frecuencia a la que una CPU puede operar viene limitada por su diseño. A men
 
 Fuentes: <a target="_blank" href="http://publib.boulder.ibm.com/infocenter/lnxinfo/v3r0m0/index.jsp?topic=%2Fliaai%2Fcpufreq%2FUnderstandingCPUFreqSubsystem.htm">publib.boulder.ibm.com</a> y <a target="_blank" href="http://docs.fedoraproject.org/es-ES/Fedora/14/html/Power_Management_Guide/cpufreq_governors.html#governor_types">docs.fedoraproject.org</a>
 
- [1]: /rootear-samsung-galaxy-s-gt-i9003
+ [1]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003

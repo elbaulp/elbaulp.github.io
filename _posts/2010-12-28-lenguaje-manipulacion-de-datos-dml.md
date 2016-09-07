@@ -153,12 +153,12 @@ y el resultado después de ejecutar la sentencia MERGE sería:
 
 ## Siguiente Tema: [Consulta de Datos &#8211; Cláusula Select][7] 
 
- [1]: /lenguaje-definicion-de-datosddl-create/
- [2]: /lenguaje-definicion-de-datosddl-drop/
- [3]: /lenguaje-definicion-de-datos-ddl-alter/
- [4]: /lenguaje-definicion-de-datos-ddl-vistas/
- [5]: /lenguaje-definicion-de-datos-ddl/
- [6]: /lenguaje-definicion-de-datos-ddl_27/
- [7]: /consulta-de-datos-clausula-select/
+ [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
+ [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/
+ [3]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/
+ [4]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
+ [5]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/
+ [6]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
+ [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-select/
 
 

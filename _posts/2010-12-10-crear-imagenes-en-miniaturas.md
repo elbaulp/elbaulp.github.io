@@ -43,4 +43,4 @@ $ ./NombreDelScript *
 
 El * significa que convertirá todas las imagenes del directorio
 
- [1]: /crear-miniaturas-de-imagenes-mejorado/
+ [1]: https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/

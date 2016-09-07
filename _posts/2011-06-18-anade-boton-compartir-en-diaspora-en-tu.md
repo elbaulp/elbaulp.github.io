@@ -30,6 +30,6 @@ Espero que os sirva de ayuda.
 
 
 
- [1]: /diaspora-la-red-social-libre
+ [1]: https://elbauldelprogramador.com/diaspora-la-red-social-libre
 
 {% include toc.html %}

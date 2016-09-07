@@ -481,4 +481,4 @@ Con lo cual tenemos que conseguir un número al que al hacerle todas estas opera
 - __Calculating modulo in assembly__ \| <a href="http://stackoverflow.com/questions/4361979/calculating-modulo-in-assembly" target="_blank">Visitar sitio</a>
 - __Obfuscation__ \| <a href="http://www.brandonparker.net/code_obf.php" target="_blank">Visitar sitio</a>
 
-[1]: /desafio-de-ingenieria-inversa-en-c/
+[1]: https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/

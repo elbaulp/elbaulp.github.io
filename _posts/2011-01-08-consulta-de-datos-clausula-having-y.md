@@ -49,4 +49,4 @@ Los valores nulos se consideran como los más pequeños posibles.
 
 ## Siguiente Tema: [Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.][1] 
 
- [1]: /consulta-de-datos-operadores-union-all/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/

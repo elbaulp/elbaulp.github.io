@@ -90,4 +90,4 @@ Android se basa en la versión 2.6 de linux para el sistema de servícios esenci
 
 ## Siguiente: [Fundamentos aplicaciones Android – (Parte I)][1]
 
- [1]: /fundamentos-aplicaciones-android-parte/
+ [1]: https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte/

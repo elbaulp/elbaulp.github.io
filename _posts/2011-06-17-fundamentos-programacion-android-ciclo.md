@@ -79,6 +79,6 @@ A continuación el diagrama con el ciclo de vida de los servicios:
 
 
 
- [1]: /fundamentos-programacion-android_18/
+ [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_18/
 
 {% include toc.html %}

@@ -23,5 +23,5 @@ En este enlace puede leerse una <a target="_blank" href="http://docs.python.org.
 
 Espero que sea útil.
 
- [1]: /python-para-principiantes/
+ [1]: https://elbauldelprogramador.com/python-para-principiantes/
  [3]: http://python.org.ar/pyar/

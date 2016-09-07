@@ -20,5 +20,5 @@ Si decidís aprender C++, recomiendo <a target="_blank" href="http://c.conclase.
 
 Espero que os sea útil esta información, y que os animéis a programar.
 
- [1]: /manual-de-python/
+ [1]: https://elbauldelprogramador.com/manual-de-python/
 

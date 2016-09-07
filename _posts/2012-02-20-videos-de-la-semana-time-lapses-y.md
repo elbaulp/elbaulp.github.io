@@ -81,6 +81,6 @@ And you will see that life is beautiful.
 
 
 
- [1]: /label/v%C3%ADdeo%20de%20la%20semana
+ [1]: https://elbauldelprogramador.com/label/v%C3%ADdeo%20de%20la%20semana
 
 {% include toc.html %}

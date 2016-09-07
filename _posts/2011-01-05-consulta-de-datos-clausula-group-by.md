@@ -80,5 +80,5 @@ Los más utilizados son:
 
 ## Siguiente Tema: [Consulta de Datos &#8211; Cláusula HAVING y ORDER BY][1] 
 
- [1]: /consulta-de-datos-clausula-having-y/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
 

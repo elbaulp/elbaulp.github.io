@@ -39,6 +39,6 @@ String getStringFromAssetFile(Context activity)
 
 
 
- [1]: /programacion-android-recursos-repasando/
+ [1]: https://elbauldelprogramador.com/programacion-android-recursos-repasando/
 
 {% include toc.html %}

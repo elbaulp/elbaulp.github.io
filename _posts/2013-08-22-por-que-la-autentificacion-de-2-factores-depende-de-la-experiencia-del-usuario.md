@@ -54,6 +54,6 @@ La oportunidad de resolver muchos de los problemas de seguridad con una autentif
 
 - *Duo Security* »» <a href="https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/" target="_blank">Why 2 Factor Authentication Hinges on the User Experience</a>
 
- [1]: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo"
- [2]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
- [3]: /security-now/ "Categoría Seguridad"
+ [1]: https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo"
+ [2]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [3]: https://elbauldelprogramador.com/security-now/ "Categoría Seguridad"

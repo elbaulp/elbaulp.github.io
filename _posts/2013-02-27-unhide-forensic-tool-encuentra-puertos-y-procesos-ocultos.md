@@ -129,6 +129,6 @@ Test_list :
 *Unhide Forensic Tool, Find hidden processes and ports* »» <a href="http://toolsyard.thehackernews.com/2013/02/unhide-forensic-tool-find-hidden.html" target="_blank">toolsyard.thehackernews.com</a>
 
 
-[1]: /netstat-analizando-la-red-y-detectando-problemas/
+[1]: https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/
 
 {% include toc.html %}

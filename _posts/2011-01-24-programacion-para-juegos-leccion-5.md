@@ -119,6 +119,6 @@ Para aquellos que uséis imágenes PNGs con transparencia, `IMG_Load()` la manej
 
 
  [1]: http://lazyfoo.net/downloads/index.php?file=SDLTut_lesson05
- [2]: /programacion-para-juegos-articulo-3-que/
+ [2]: https://elbauldelprogramador.com/programacion-para-juegos-articulo-3-que/
 
 

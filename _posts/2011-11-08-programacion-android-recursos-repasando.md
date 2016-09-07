@@ -43,6 +43,6 @@ En resumen, en el siguiente listado muestra la estructura global del directorio 
 
 
 
- [1]: /programacion-android-recursos-recursos/
+ [1]: https://elbauldelprogramador.com/programacion-android-recursos-recursos/
 
 {% include toc.html %}

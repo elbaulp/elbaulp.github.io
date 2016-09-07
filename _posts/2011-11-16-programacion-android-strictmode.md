@@ -148,10 +148,10 @@ try{
 
 
 
- [1]: /label/android
- [2]: /fundamentos-programacion-android_17/
- [3]: /programacion-android-interfaz-grafica_11/
- [4]: /fundamentos-programacion-android_16/
- [5]: /programacion-android-proveedores-de/
+ [1]: https://elbauldelprogramador.com/label/android
+ [2]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
+ [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/
+ [4]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
+ [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de/
 
 {% include toc.html %}

@@ -215,11 +215,11 @@ Si queremos conocer los valores del registro de la tabla sobre la que se ha disp
 
 ## Siguiente tema: [PL/SQL &#8211; Registros y Tablas][8]
 
- [1]: /bloques-plsql/
- [2]: /lenguaje-manipulacion-de-datos-dml/
- [3]: /lenguaje-definicion-de-datosddl-create/
- [4]: /diseno-de-bases-de-datos-i-conceptos/
- [5]: /introduccion-plsql-transacciones/
- [6]: /plsql-procedimientos-y-funciones/
- [7]: /plsql-declaracion-de-variables/
- [8]: /plsql-registros-y-tablas/
+ [1]: https://elbauldelprogramador.com/bloques-plsql/
+ [2]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [3]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
+ [4]: https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/
+ [5]: https://elbauldelprogramador.com/introduccion-plsql-transacciones/
+ [6]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+ [7]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [8]: https://elbauldelprogramador.com/plsql-registros-y-tablas/

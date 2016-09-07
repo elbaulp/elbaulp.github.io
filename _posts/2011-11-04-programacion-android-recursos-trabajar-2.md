@@ -47,4 +47,4 @@ private String convertStreamToString(InputStream is)
 
 # Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos Assets][1] 
 
- [1]: /programacion-android-recursos-trabajar_04/
+ [1]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/

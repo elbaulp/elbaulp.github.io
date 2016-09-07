@@ -38,6 +38,6 @@ This free guide will teach you how to:
 [Descárgala desde aqui][1] o  
 Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
- [2]: /manuales-gratuitos/
+ [2]: https://elbauldelprogramador.com/manuales-gratuitos/
 
 {% include toc.html %}

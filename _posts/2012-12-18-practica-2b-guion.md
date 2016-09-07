@@ -479,8 +479,8 @@ Para todo aquel interesado, tengo permiso para distribuir el guión bajo licenci
 
 
 
- [1]: /assets/img/2012/12/Screenshot-from-2012-12-17-2207421.png
- [2]: /assets/img/2012/12/Screenshot-from-2012-12-17-2308081.png
+ [1]: https://elbauldelprogramador.com/assets/img/2012/12/Screenshot-from-2012-12-17-2207421.png
+ [2]: https://elbauldelprogramador.com/assets/img/2012/12/Screenshot-from-2012-12-17-2308081.png
 
 {% include toc.html %}
 </stdlib.h></stdio.h></nbits>

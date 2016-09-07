@@ -111,10 +111,10 @@ El código usa el flujo de salida para escribir.
 
 
 
- [1]: /programacion-android-usando-la-clausula
- [2]: /programacion-android-proveedores-de
- [3]: /bases-de-datos
- [4]: /programacion-android-arquitectura-de
- [5]: /programacion-android-actualizar-y/
+ [1]: https://elbauldelprogramador.com/programacion-android-usando-la-clausula
+ [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
+ [3]: https://elbauldelprogramador.com/bases-de-datos
+ [4]: https://elbauldelprogramador.com/programacion-android-arquitectura-de
+ [5]: https://elbauldelprogramador.com/programacion-android-actualizar-y/
 
 {% include toc.html %}

@@ -94,7 +94,7 @@ Si quisiéramos invocar un intent para volver a la pantalla principal, basta con
 
 
 
- [1]: /programacion-android-intents-conceptos
- [2]: /programacion-android-como-se-resuelven/
+ [1]: https://elbauldelprogramador.com/programacion-android-intents-conceptos
+ [2]: https://elbauldelprogramador.com/programacion-android-como-se-resuelven/
 
 {% include toc.html %}

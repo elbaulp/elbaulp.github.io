@@ -31,7 +31,7 @@ Aprenderemos cómo proporcionar desde GNU/Linux los servicios necesariosa difere
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
 {: .notice-info }
 
-[1]: /manuales-gratuitos/
+[1]: https://elbauldelprogramador.com/manuales-gratuitos/
 [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 
 {% include toc.html %}

@@ -79,7 +79,7 @@ fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
 
 *Cybercity* »» <a href="http://www.cyberciti.biz/faq/hide-bind9-dns-sever-version/" target="_blank">Visitar sitio</a>
 
- [1]: /como-configurar-un-servidor-dns/
- [2]: /dig-chuleta-basica-de-comandos/ "Dig – Chuleta básica de comandos"
+ [1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns/
+ [2]: https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/ "Dig – Chuleta básica de comandos"
 
 

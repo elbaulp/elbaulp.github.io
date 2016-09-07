@@ -448,12 +448,12 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
 
 
 
- [1]: /introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
- [2]: /android/
- [3]: /lenguaje-c/
- [4]: /programacion-android-interfaz-grafica_25/
- [5]: /fundamentos-programacion-android_17/
- [6]: /assets/img/2013/06/Screenshot_2013-06-17-17-20-53.png
+ [1]: https://elbauldelprogramador.com/introduccion-al-ndk-de-android/ "Introducción al NDK de Android"
+ [2]: https://elbauldelprogramador.com/android/
+ [3]: https://elbauldelprogramador.com/lenguaje-c/
+ [4]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/
+ [5]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
+ [6]: https://elbauldelprogramador.com/assets/img/2013/06/Screenshot_2013-06-17-17-20-53.png
 
 {% include toc.html %}
 </netdb.h></jni.h></void></ip></dominio>

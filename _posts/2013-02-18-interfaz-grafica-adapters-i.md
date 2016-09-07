@@ -186,6 +186,6 @@ Y para un adaptador sin datos:
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters II][2] 
 
- [1]: /programacion-android-interfaz-grafica_25/
- [2]: /programacion-android-interfaz-grafica-2/
+ [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/
+ [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/
 

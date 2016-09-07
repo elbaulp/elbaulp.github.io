@@ -37,7 +37,7 @@ Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta direcci√
 
 
 
- [1]: /desafio-de-ingenieria-inversa-en-c-soluciones/
+ [1]: https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/
  [3]: https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador
 
 {% include toc.html %}

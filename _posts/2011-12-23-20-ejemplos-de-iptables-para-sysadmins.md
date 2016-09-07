@@ -705,4 +705,4 @@ E incluimos al final:
 kern.warning /var/log/iptables.log
 ```
 
- [1]: /esnifando-la-red-pruebas-de-seguridad
+ [1]: https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad

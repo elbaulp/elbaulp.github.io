@@ -128,7 +128,7 @@ Con esto terminamos con la primera parte, en la segunda veremos cómo crear un m
  [2]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-3-distutils/ "Crear un módulo para python con la Python C API (III)"
  [3]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/ "Crear un módulo para python con la Python C API (IV)"
  [4]: https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/ "Crear un módulo para python con la Python C API (V)"
- [5]: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
+ [5]: https://elbauldelprogramador.com/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/ "NDK-gdb – Depurar aplicaciones en el NKD de Android"
  [6]: https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/ "Clases y Objetos – Punteros a objetos"
  [7]: http://docs.python.org/3/c-api/refcounting.html#Py_INCREF "Python C API Py_INCREF"
 

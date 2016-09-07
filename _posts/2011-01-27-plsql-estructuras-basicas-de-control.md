@@ -256,6 +256,6 @@ En el caso de especificar `REVERSE` el bucle se recorre en sentido inverso.
 
 ### Siguiente tema: [PL/SQL - Excepciones][1] 
 
- [1]: /plsql-excepciones/
+ [1]: https://elbauldelprogramador.com/plsql-excepciones/
 
 

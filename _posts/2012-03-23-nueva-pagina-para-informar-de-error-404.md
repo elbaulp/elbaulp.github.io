@@ -82,7 +82,7 @@ Fuentes: [hongkiat.com][2] y [hongkiat.com (II)][3]
 
 
 
- [1]: /404
+ [1]: https://elbauldelprogramador.com/404
  [2]: http://www.hongkiat.com/blog/60-really-cool-and-creative-error-404-pages/
  [3]: http://www.hongkiat.com/blog/49-nice-and-creative-error-404-pages/
 

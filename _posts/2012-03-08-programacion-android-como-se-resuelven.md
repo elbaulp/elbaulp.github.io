@@ -66,8 +66,8 @@ Si una actividad no tiene declarada la categoría por defecto, pero conocemos su
 
 
 
- [1]: /programacion-android-intents-categorias
- [2]: /programacion-android-intents-conceptos
- [3]: /programacion-android-ejemplos-de-uso-de/
+ [1]: https://elbauldelprogramador.com/programacion-android-intents-categorias
+ [2]: https://elbauldelprogramador.com/programacion-android-intents-conceptos
+ [3]: https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/
 
 {% include toc.html %}

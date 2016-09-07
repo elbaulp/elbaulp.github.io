@@ -197,6 +197,6 @@ gpg --gen-revoke
 - *Quick'n easy gpg cheatsheet* »» <a href="http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html" target="_blank">Visitar sitio</a>
 - [Más artículos sobre GPG](/tags/#gpg)
 
- [1]: /como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+ [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
 
 

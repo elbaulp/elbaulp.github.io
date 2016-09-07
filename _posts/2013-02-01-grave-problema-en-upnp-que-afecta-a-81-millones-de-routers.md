@@ -102,6 +102,6 @@ El informe del escaner se puede encontrar en PDF en el siguiente enlace: <a href
 >
 >
 
- [1]: /security-now/
+ [1]: https://elbauldelprogramador.com/security-now/
 
 {% include toc.html %}

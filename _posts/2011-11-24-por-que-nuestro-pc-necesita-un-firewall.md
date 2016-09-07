@@ -62,6 +62,6 @@ Tracucción de : <a target="_blank" href="http://www.linuxbsdos.com/2011/11/21/w
 
 
 
- [1]: /por-que-gnulinux-no-es-solo-para-geeks
+ [1]: https://elbauldelprogramador.com/por-que-gnulinux-no-es-solo-para-geeks
 
 {% include toc.html %}

@@ -75,6 +75,6 @@ END;
 
 #### Siguiente Tema: [Bloques PL/SQL][3] 
 
- [1]: /plsql-procedimientos-y-funciones/
- [2]: /plsql-disparadores-o-triggers/
- [3]: /bloques-plsql/
+ [1]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
+ [2]: https://elbauldelprogramador.com/plsql-disparadores-o-triggers/
+ [3]: https://elbauldelprogramador.com/bloques-plsql/

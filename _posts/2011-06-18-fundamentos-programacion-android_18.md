@@ -33,6 +33,6 @@ Es muy importante implementar bien los métodos de estado, para evitar perden in
 
 
 
- [1]: /programacion-android-trabajar-con/
+ [1]: https://elbauldelprogramador.com/programacion-android-trabajar-con/
 
 {% include toc.html %}

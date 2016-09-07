@@ -233,7 +233,7 @@ Así luce mi escritorio con xmonad:
 
 
 
- [1]: /configurar-dos-pantallas-en-openbox/
- [2]: /assets/img/2013/01/Screenshot-from-2013-01-02-1852312.png
+ [1]: https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/
+ [2]: https://elbauldelprogramador.com/assets/img/2013/01/Screenshot-from-2013-01-02-1852312.png
 
 {% include toc.html %}

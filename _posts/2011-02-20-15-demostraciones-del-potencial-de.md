@@ -19,5 +19,5 @@ En tech Drive-In he visto esta entrada que enlaza con 15 demos en HTML5 que pret
 
 Para ver las 15 demostraciones os dejo el <a target="_blank" href="http://www.techdrivein.com/2010/08/15-html5-demos-showcasing-prowess-of.html">enlace original en Tech Drive-In</a>.
 
- [1]: /bases-de-datos/
+ [1]: https://elbauldelprogramador.com/bases-de-datos/
 

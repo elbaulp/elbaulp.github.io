@@ -69,7 +69,7 @@ DECLARE
 
 ## Siguiente tema: [Tunning básico de SQL][2]
 
- [1]: /plsql-declaracion-de-variables/
- [2]: /tunning-basico-de-sql/
+ [1]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [2]: https://elbauldelprogramador.com/tunning-basico-de-sql/
 
 

@@ -21,6 +21,6 @@ En la página principal de la web han colocado la siguiente imagen:
 
 
 
- [1]: /search/?q=diaspora
+ [1]: https://elbauldelprogramador.com/search/?q=diaspora
 
 {% include toc.html %}

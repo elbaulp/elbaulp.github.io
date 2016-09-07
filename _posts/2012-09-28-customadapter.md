@@ -496,12 +496,12 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
 - *Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
 - *AndroidBook* »» <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
 
- [1]: /programacion-android-interfaz-grafica_28/
- [2]: /programacion-android-interfaz-grafica-2/
- [3]: /curso-programacion-android/
- [4]: /programacion-android-recursos-layout/
- [5]: /assets/img/2012/09/customrow1.png
+ [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/
+ [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/
+ [3]: https://elbauldelprogramador.com/curso-programacion-android/
+ [4]: https://elbauldelprogramador.com/programacion-android-recursos-layout/
+ [5]: https://elbauldelprogramador.com/assets/img/2012/09/customrow1.png
  [6]: #estadoCheckBox
  [7]: #desplazarLista
  [8]: #SavedInstanceState
- [9]: /fundamentos-programacion-android-ciclo/
+ [9]: https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/

@@ -162,11 +162,11 @@ Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los p
 
 
 
- [1]: /guia-de-desarrollo-android
- [2]: /programacion-android-proveedores-de
- [3]: /fundamentos-programacion-android_16/
- [4]: /plsql-cursores
- [5]: /programacion-android-intents-conceptos/
+ [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
+ [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
+ [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
+ [4]: https://elbauldelprogramador.com/plsql-cursores
+ [5]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/
 
 {% include toc.html %}
 </provider>

@@ -90,4 +90,4 @@ Espero que sea de utilidad, el repositorio de _inotify-tools_ está en github (E
 - _Bash: Execute script on file save?_ \| <a href="http://stackoverflow.com/questions/3283228/bash-execute-script-on-file-save" target="_blank">stackoverflow</a>
 
 
-[2]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+[2]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"

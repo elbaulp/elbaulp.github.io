@@ -31,5 +31,5 @@ Packt Enterprise books can be summed up through the tagline "Professional Expert
 
 Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].
 
-[2]: /manuales-gratuitos/
+[2]: https://elbauldelprogramador.com/manuales-gratuitos/
 [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "

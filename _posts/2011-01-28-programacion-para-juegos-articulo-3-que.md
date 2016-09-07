@@ -115,4 +115,4 @@ Como reflexión, ya que todos los píxeles RGB son combinaciones de 3 números, 
 
 Eso estaria bien, ¿no? =)
 
- [1]: /programacion-para-juegos-leccion-5/
+ [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-5/

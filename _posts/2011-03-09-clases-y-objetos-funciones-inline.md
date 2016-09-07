@@ -27,4 +27,4 @@ Para que una función definida fuera de la clase sea inline es necesario especif
 
 ## Siguiente tema: [Clases y Objetos &#8211; Punteros a objetos][1]
 
- [1]: /clases-y-objetos-punteros-objetos/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/

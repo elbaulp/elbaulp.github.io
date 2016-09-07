@@ -25,4 +25,4 @@ La capacidad con la que cuentan los desarrolladores de PPA es de 1 Gb, solo para
 
 ## Fuente: <a target="_blank" href="http://www.linuxzone.es/">linuxzone.es</a> 
 
- [1]: /como-crear-un-repositorio-ppa-how/
+ [1]: https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/

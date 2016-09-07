@@ -30,7 +30,7 @@ Fuente original [En inglés]: <a target="_blank" href="http://www.articlesbase.c
 
 
 
- [1]: /label/linux
- [2]: /label/opensource
+ [1]: https://elbauldelprogramador.com/label/linux
+ [2]: https://elbauldelprogramador.com/label/opensource
 
 {% include toc.html %}

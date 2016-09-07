@@ -62,7 +62,7 @@ Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he
 
 
 
- [1]: /chistes-de-informaticos
- [2]: /humor-grafico-informaticos
+ [1]: https://elbauldelprogramador.com/chistes-de-informaticos
+ [2]: https://elbauldelprogramador.com/humor-grafico-informaticos
 
 {% include toc.html %}

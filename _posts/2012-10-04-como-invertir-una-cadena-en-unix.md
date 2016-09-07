@@ -112,7 +112,7 @@ php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
 
 *NixCraft* »» <a href="http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/" target="_blank">Visitar sitio</a>
 
- [2]: /python/
- [3]: /php/
+ [2]: https://elbauldelprogramador.com/python/
+ [3]: https://elbauldelprogramador.com/php/
 
 {% include toc.html %}

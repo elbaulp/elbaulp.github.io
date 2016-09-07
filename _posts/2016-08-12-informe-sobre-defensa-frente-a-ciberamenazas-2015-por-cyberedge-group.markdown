@@ -31,5 +31,5 @@ El segundo informe anual sobre defensa frente a ciberamenazas de CyberEdge Group
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
 
-[1]: /manuales-gratuitos/
+[1]: https://elbauldelprogramador.com/manuales-gratuitos/
 [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "

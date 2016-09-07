@@ -244,8 +244,8 @@ Si el lector ha llegado hasta este punto, estaba interesado en conseguir un cicl
 - *Wp-Deploy* »» <a href="https://github.com/Mixd/wp-deploy" target="_blank">github.com</a>  
 - *Capistrano* »» <a href="http://capistranorb.com/" target="_blank">capistranorb.com</a>
 
- [1]: /mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [2]: /como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
- [3]: /introduccion-a-ruby/ "Introducción rápida a Ruby"
- [4]: /recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
+ [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [2]: https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
+ [3]: https://elbauldelprogramador.com/introduccion-a-ruby/ "Introducción rápida a Ruby"
+ [4]: https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/ "Recibir alertas de correo al acceder al  sistema mediante SSH"
  [5]: http://wp-cli.org/#install

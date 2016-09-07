@@ -160,7 +160,7 @@ El *markdown* convierte texto a HTML.
 *Artículo de Jetpack sobre el Markdown* »» <a href="http://jetpack.me/support/markdown/" target="_blank">jetpack.me</a>
 
 [1]: http://jetpack.me/support/markdown/ "Artículo de Jetpack sobre el Markdown"
-[2]: / "Texto alternativo"
-[3]: /assets/img/2013/12/favicon.ico "Título"
-[4]: /assets/img/2013/12/favicon.ico
-[5]: / "Imágenes enlazadas"
+[2]: https://elbauldelprogramador.com/ "Texto alternativo"
+[3]: https://elbauldelprogramador.com/assets/img/2013/12/favicon.ico "Título"
+[4]: https://elbauldelprogramador.com/assets/img/2013/12/favicon.ico
+[5]: https://elbauldelprogramador.com/ "Imágenes enlazadas"

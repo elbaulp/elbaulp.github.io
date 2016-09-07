@@ -22,6 +22,6 @@ Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 
 
 
- [1]: /assets/img/2013/06/LOGOS.png
+ [1]: https://elbauldelprogramador.com/assets/img/2013/06/LOGOS.png
 
 {% include toc.html %}

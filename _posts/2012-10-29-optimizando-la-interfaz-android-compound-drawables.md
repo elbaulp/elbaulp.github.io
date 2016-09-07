@@ -74,8 +74,8 @@ Con esta pequeña optimización estamos reduciendo el layout de dos a un View, p
 
 
 
- [1]: /adapter-personalizado-en-android/ "Cómo crear un adapter personalizado en Android"
- [2]: /programacion-android-interfaz-grafica/ "Programación Android: Interfaz gráfica – Conceptos básicos"
+ [1]: https://elbauldelprogramador.com/adapter-personalizado-en-android/ "Cómo crear un adapter personalizado en Android"
+ [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica/ "Programación Android: Interfaz gráfica – Conceptos básicos"
 
 {% include toc.html %}
 </textview>

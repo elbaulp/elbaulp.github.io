@@ -84,6 +84,6 @@ Para terminar la entrada quiero decir que es un programa bastante simple, pero n
 Os lo dejo a vuestra disposición y ojalá que os sea útil.
 
 
- [1]: /pylabra-aplicacion-para-almacenar/
+ [1]: https://elbauldelprogramador.com/pylabra-aplicacion-para-almacenar/
 
 

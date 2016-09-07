@@ -101,6 +101,6 @@ alter table nombre_table DROP COLUMN nombre_columna;
 
 ## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Vistas][1] 
 
- [1]: /lenguaje-definicion-de-datos-ddl-vistas/
+ [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
 
 

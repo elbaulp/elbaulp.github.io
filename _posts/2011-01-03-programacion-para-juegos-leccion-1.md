@@ -35,4 +35,4 @@ Fuente: [lazyfoo.net][4]
  [2]: http://www.lazyfoo.net/SDL_tutorials/lesson01/windows/index.php
  [3]: http://www.lazyfoo.net/SDL_tutorials/lesson01/mac/index.php
  [4]: http://www.lazyfoo.net/SDL_tutorials/
- [5]: /programacion-para-juegos-leccion-12/#more
+ [5]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-12/#more

@@ -192,5 +192,5 @@ Para mi, minted es el mejor paquete que hay para resaltar código en $$\LaTeX$$.
 - *Manual de referencia Minted* »» <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>  
 - *Repositorio del paquete* »» <a href="http://code.google.com/p/minted/downloads/list" target="_blank">Visitar repositorio</a>
 
- [1]: /disponible-la-primera-parte-del-curso/
+ [1]: https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/
 

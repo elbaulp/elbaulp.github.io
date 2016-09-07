@@ -213,7 +213,7 @@ Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a pr
 
 
 
- [1]: /c/
- [2]: /python
+ [1]: https://elbauldelprogramador.com/c/
+ [2]: https://elbauldelprogramador.com/python
 
 {% include toc.html %}

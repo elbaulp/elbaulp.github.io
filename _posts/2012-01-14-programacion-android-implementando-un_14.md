@@ -160,13 +160,13 @@ qb.setProjectionMap(sSitesProjectionMap);
 
 
 
- [1]: /programacion-android-implementando-un
- [2]: /programacion-android-implementando-un_08
- [3]: /prueba-la-aplicacion-favsites-en-tu
- [4]: /consulta-de-datos-clausula-where
- [5]: /plsql-cursores
+ [1]: https://elbauldelprogramador.com/programacion-android-implementando-un
+ [2]: https://elbauldelprogramador.com/programacion-android-implementando-un_08
+ [3]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu
+ [4]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where
+ [5]: https://elbauldelprogramador.com/plsql-cursores
  [6]: http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html
- [7]: /consulta-de-datos-clausula-from
- [8]: /programacion-android-implementando-un_29/
+ [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from
+ [8]: https://elbauldelprogramador.com/programacion-android-implementando-un_29/
 
 {% include toc.html %}

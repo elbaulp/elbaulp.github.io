@@ -30,8 +30,8 @@ A continuación se dan unas normas básicas para escribir sentencias `SELECT` op
 - Colocar la tabla que devuelve menor número de registros en el último lugar del [FROM][2].
 - Una consulta cualificada con la cláusula `DISTINTC` debe ser ordenada por el servidor aunque no se incluya la cláusula [`ORDER BY`][3].
 
- [1]: /bases-de-datos/
- [2]: /consulta-de-datos-clausula-from/
- [3]: /consulta-de-datos-clausula-having-y/
+ [1]: https://elbauldelprogramador.com/bases-de-datos/
+ [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/
+ [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
 
 

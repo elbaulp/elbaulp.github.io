@@ -123,4 +123,4 @@ FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 
 ## Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] 
 
- [1]: /consulta-de-datos-clausula-where/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/

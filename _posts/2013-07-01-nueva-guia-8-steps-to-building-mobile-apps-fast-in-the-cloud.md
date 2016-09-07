@@ -40,7 +40,7 @@ Start turning your ideas into mobile apps with the 8 Steps to Building Mobile Ap
 
 
  [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_sale38/prgm.cgi/
- [2]: /manuales-gratuitos/
+ [2]: https://elbauldelprogramador.com/manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 
 {% include toc.html %}

@@ -68,5 +68,5 @@ Preocupado por los productos que decían ser sistemas gestores de bases de datos
 
 ## Siguiente tema: [Introducción SQL][1] 
 
-  [1]: /introduccion-sql-sql-introduction/
+  [1]: https://elbauldelprogramador.com/introduccion-sql-sql-introduction/
 

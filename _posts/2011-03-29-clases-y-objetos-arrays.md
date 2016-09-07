@@ -97,4 +97,4 @@ objs--;          //retrocede a objs[1]
 
 ## [Clases y Objetos. Pasar un objeto a una función][1]
 
- [1]: /clases-y-objetos-pasar-un-objeto-una/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-pasar-un-objeto-una/

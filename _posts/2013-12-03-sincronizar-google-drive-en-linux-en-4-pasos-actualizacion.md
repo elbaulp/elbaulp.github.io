@@ -110,5 +110,5 @@ Lo guardamos como *update-grive.sh*, le damos permisos de ejecución `chmod +x u
 
 - *Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>
 
-[1]: /sincronizar-google-drive-en-linux-en-4-pasos/ "Sincronizar Google Drive en Linux en 4 pasos"
-[3]: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
+[1]: https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/ "Sincronizar Google Drive en Linux en 4 pasos"
+[3]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"

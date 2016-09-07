@@ -106,8 +106,8 @@ Fuente:
 ## Siguiente tema: [Lección 2 - Superficies Optimizadas][5] 
 
 
- [1]: /programacion-para-juegos-leccion-1/
+ [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
  [2]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson01
- [3]: /programacion-para-juegos-leccion-4/
+ [3]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-4/
  [4]: http://www.lazyfoo.net/
- [5]: /programacion-para-juegos-leccion-2/
+ [5]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-2/

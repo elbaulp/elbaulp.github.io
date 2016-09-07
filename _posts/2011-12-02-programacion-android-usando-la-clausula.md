@@ -104,8 +104,8 @@ Te preguntarás qué método usar en según que situación. Por convención se s
 
 
 
- [1]: /consulta-de-datos-clausula-where
- [2]: /prueba-la-aplicacion-favsites-en-tu
- [3]: /programacion-android-insertando/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where
+ [2]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu
+ [3]: https://elbauldelprogramador.com/programacion-android-insertando/
 
 {% include toc.html %}

@@ -35,6 +35,6 @@ Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
 
  [1]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_sitb33/prgm.cgi
- [2]: /manuales-gratuitos/
+ [2]: https://elbauldelprogramador.com/manuales-gratuitos/
 
 {% include toc.html %}

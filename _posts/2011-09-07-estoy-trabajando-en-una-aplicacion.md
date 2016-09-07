@@ -26,6 +26,6 @@ Aplicación de proyecto final de curso que almacena los lugares preferidos del u
 
 
 
- [1]: /guia-de-desarrollo-android
+ [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
 
 {% include toc.html %}

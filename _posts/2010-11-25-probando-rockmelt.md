@@ -72,4 +72,4 @@ Os dejo unas capturas de pantalla:
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"   width="800" height="450" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XlHWcKsI/AAAAAAAAAGw/keQi7p95OTM/s800/updatesver.png"></amp-img>
 </figure>
 
- [1]: /rockmelt-una-navegador-social-basado-en/
+ [1]: https://elbauldelprogramador.com/rockmelt-una-navegador-social-basado-en/

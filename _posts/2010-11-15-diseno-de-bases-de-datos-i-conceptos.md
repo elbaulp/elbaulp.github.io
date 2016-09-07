@@ -160,6 +160,6 @@ Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya q
 
 #### Siguiente tema:[Diseño de Bases de Datos ( II ) &#8211; Restricciones][1]
 
- [1]: /diseno-de-bases-de-datos-ii/
+ [1]: https://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/
 
 

@@ -92,6 +92,6 @@ Queda así abierto un nuevo campo en la investigación criptográfica. De aquí 
 
 
 
- [1]: /assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png
+ [1]: https://elbauldelprogramador.com/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png
 
 {% include toc.html %}

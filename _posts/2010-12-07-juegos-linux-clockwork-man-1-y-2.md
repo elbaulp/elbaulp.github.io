@@ -62,5 +62,5 @@ Para descargar el demo debéis ir a la página de arriba y en la parte de la der
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="600" src="https://3.bp.blogspot.com/_IlK2pNFFgGM/TP5mA4RM-dI/AAAAAAAAAIs/SLdx8rneHzY/s800/The_Clockwork_Man_2_The_Hidden_World_Stream_by_the_Bridge_1_nu_16F6F4DD.jpg" width="800"></amp-img>
 </figure>
 
- [1]: /3-juegos-para-linux/
+ [1]: https://elbauldelprogramador.com/3-juegos-para-linux/
 

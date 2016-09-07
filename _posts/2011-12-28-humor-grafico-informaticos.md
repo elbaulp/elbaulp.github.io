@@ -48,6 +48,6 @@ Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] 
 
 
 
- [1]: /label/Humor
+ [1]: https://elbauldelprogramador.com/label/Humor
 
 {% include toc.html %}

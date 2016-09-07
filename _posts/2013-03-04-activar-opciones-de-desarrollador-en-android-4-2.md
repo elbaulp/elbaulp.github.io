@@ -43,7 +43,7 @@ Una vez en el modo rescate, desactivé la opción y problema resuelto.
 
 
 
- [1]: /android
- [2]: /xda
+ [1]: https://elbauldelprogramador.com/android
+ [2]: https://elbauldelprogramador.com/xda
 
 {% include toc.html %}

@@ -40,7 +40,7 @@ Debido al éxito y la [gran y satisfactoria experiencia][1] que me causó el 3er
 
 
 
- [1]: /mi-experiencia-en-el-3-hackathon-de-la
+ [1]: https://elbauldelprogramador.com/mi-experiencia-en-el-3-hackathon-de-la
  [2]: http://osl.ugr.es/2012/03/06/3o-hackathon-lecciones-aprendidas/
  [3]: http://www.concursosoftwarelibre.org/1112/fase-final
  [4]: http://osl.ugr.es/concurso-universitario-de-software-libre-granadino/3o-hackathon-de-proyectos-de-software-libre-de-la-ugr/

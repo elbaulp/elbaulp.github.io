@@ -136,4 +136,4 @@ DESCRIBE nombre_tabla;
 ### Siguiente Tema: [Data Definition Language(DDL) &#8211; DROP.][1] 
 
 
- [1]: /lenguaje-definicion-de-datosddl-drop/
+ [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/

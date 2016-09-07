@@ -160,9 +160,9 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters I][3] 
 
- [1]: /programacion-android-interfaz-grafica/
- [2]: /programacion-android-interfaz-grafica_23/
- [3]: /programacion-android-interfaz-grafica_28
+ [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica/
+ [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/
+ [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28
 
 
 {% include toc.html %}

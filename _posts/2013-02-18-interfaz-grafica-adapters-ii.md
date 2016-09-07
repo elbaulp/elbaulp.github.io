@@ -210,5 +210,5 @@ Ya solo resta ejecutarlo y ver el resultado:
 
 #### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Menús][2]
 
- [1]: /programacion-android-interfaz-grafica_28
- [2]: /programacion-android-interfaz-grafica_08/
+ [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28
+ [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/

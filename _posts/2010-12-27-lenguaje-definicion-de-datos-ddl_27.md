@@ -71,6 +71,6 @@ SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;
 
 ## Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] 
 
- [1]: /lenguaje-manipulacion-de-datos-dml/
+ [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
 
 

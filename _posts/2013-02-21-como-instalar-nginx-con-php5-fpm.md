@@ -312,5 +312,5 @@ Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutan
 - *HOWTO install php5-fpm on Debian Squeeze* »» <a href="http://fak3r.com/2011/09/27/howto-install-php5-fpm-on-debian-squeeze/" target="_blank">fak3r.com</a>.
 
 
-[3]: /entendiendo-los-runlevel-en-debian-y-ubuntu/
-[6]: /como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
+[3]: https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/
+[6]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"

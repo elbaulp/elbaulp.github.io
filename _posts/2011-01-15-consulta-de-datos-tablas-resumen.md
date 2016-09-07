@@ -20,6 +20,6 @@ Dejo un Pdf con un resumen y algunos ejemplos de funciones en ORACLE que podéis
 ## Siguiente Tema: [Introducción a PL/SQL][2]
 
 
- [1]: /bases-de-datos/
- [2]: /introduccion-plsql/
+ [1]: https://elbauldelprogramador.com/bases-de-datos/
+ [2]: https://elbauldelprogramador.com/introduccion-plsql/
 

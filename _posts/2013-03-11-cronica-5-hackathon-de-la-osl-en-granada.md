@@ -86,8 +86,8 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 >
 >
 
- [1]: /mi-experiencia-en-el-3-hackathon-de-la/
- [2]: /cuarto-hackathon-de-proyectos-de/
+ [1]: https://elbauldelprogramador.com/mi-experiencia-en-el-3-hackathon-de-la/
+ [2]: https://elbauldelprogramador.com/cuarto-hackathon-de-proyectos-de/
  [3]: http://trucocusl.wordpress.com/
  [4]: http://osgiliath.org/ "Osgiliath de Pablo García"
  [5]: http://dafcollage.wordpress.com/

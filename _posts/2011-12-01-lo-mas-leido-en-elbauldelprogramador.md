@@ -40,15 +40,15 @@ Claramente gana Windows con un 68%, seguido de Linux (17%), MAC (4%) y Android (
 
 
 
- [1]: /humor-grafico-informaticos
- [2]: /chistes-de-informaticos
- [3]: /rootear-samsung-galaxy-s-gt-i9003
- [4]: /conectar-base-de-datos-sql-server-2008
- [5]: /por-que-nuestro-pc-necesita-un-firewall
- [6]: /guerra-de-navegadores-humor
- [7]: /programacion-android-hola-mundo/
- [8]: /los-desarrolladores-de-gnome-crean
- [9]: /programacion-android-interfaz-grafica_23/
- [10]: /programacion-android-interfaz-grafica_11
+ [1]: https://elbauldelprogramador.com/humor-grafico-informaticos
+ [2]: https://elbauldelprogramador.com/chistes-de-informaticos
+ [3]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003
+ [4]: https://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008
+ [5]: https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall
+ [6]: https://elbauldelprogramador.com/guerra-de-navegadores-humor
+ [7]: https://elbauldelprogramador.com/programacion-android-hola-mundo/
+ [8]: https://elbauldelprogramador.com/los-desarrolladores-de-gnome-crean
+ [9]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/
+ [10]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11
 
 {% include toc.html %}

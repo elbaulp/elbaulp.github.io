@@ -24,6 +24,6 @@ A partir de ahora, podrás encontrar en el menú de arriba bajo el nombre *[RSS/
 
 
 
- [1]: /rssfeed/
+ [1]: https://elbauldelprogramador.com/rssfeed/
 
 {% include toc.html %}

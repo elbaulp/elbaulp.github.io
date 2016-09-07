@@ -75,4 +75,4 @@ Cursor managedCursor = managedQuery(mContactsUri,
 
 #### Siguiente Tema: [Usando cursores][1]
 
- [1]: /programacion-android-usando-cursores/
+ [1]: https://elbauldelprogramador.com/programacion-android-usando-cursores/

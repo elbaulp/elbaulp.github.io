@@ -111,7 +111,7 @@ El renombrado de columnas y/o expresiones puede ser usado en la cláusula ORDER 
 
 ## Siguiente Tema: [Consulta de Datos &#8211; Cláusula FROM][2] 
 
- [1]: /lenguaje-manipulacion-de-datos-dml/
- [2]: /consulta-de-datos-clausula-from/
- [3]: /consulta-de-datos-clausula-where/
- [4]: /consulta-de-datos-clausula-group-by/
+ [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/
+ [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/
+ [4]: https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/

@@ -87,6 +87,6 @@ Por último, para obtener el número de registros que hay en el cursor, podemos 
 
 
 
- [1]: /programacion-android-usando-la-clausula/
+ [1]: https://elbauldelprogramador.com/programacion-android-usando-la-clausula/
 
 {% include toc.html %}

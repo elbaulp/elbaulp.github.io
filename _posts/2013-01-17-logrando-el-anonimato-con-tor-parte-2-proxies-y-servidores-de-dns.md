@@ -242,7 +242,7 @@ Queda pendiente analizar Torbutton y tsocks para ver cómo anonimizarnos en Inte
 
 *InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-2/" target="_blank">Visitar sitio</a>
 
- [1]: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/ "Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks"
- [2]: /logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
+ [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/ "Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks"
+ [2]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
 
 

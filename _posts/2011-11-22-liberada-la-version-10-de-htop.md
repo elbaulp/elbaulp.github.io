@@ -111,7 +111,7 @@ Fuente <a target="_blank" href="http://htop.sourceforge.net/index.php?page=main"
 
 
 
- [1]: /label/linux
+ [1]: https://elbauldelprogramador.com/label/linux
  [2]: http://htop.sourceforge.net/index.php?page=downloads#binaries
 
 {% include toc.html %}

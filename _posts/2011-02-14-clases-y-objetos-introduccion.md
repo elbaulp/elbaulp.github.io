@@ -59,5 +59,5 @@ scanf ("%d", &i);
 ## Siguiente tema: [Clases y Objetos &#8211; Definir una Clase][2]
 
 
- [1]: /primeros-pasos-en-c/
- [2]: /clases-y-objetos-definir-una-clase/
+ [1]: https://elbauldelprogramador.com/primeros-pasos-en-c/
+ [2]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/

@@ -47,5 +47,5 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.
 
 ## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE][2] 
 
- [1]: /lenguaje-definicion-de-datosddl-create/
- [2]: /lenguaje-definicion-de-datos-ddl-alter/
+ [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
+ [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/

@@ -97,7 +97,7 @@ Para saber más acerca de todos los tipos de layouts que hay podéis visitar <ht
 
 
 
- [1]: /programacion-android-interfaz-grafica_25/
+ [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/
 
 
 {% include toc.html %}

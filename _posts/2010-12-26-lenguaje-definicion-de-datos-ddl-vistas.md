@@ -64,4 +64,4 @@ DROP VIEW Nombre_vista
 ## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias][2] 
 
  [1]: http://es.wikipedia.org/wiki/Lenguaje_de_Manipulaci%C3%B3n_de_Datos
- [2]: /lenguaje-definicion-de-datos-ddl/
+ [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/

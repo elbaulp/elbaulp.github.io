@@ -73,4 +73,4 @@ delete ptro_pt;   //llama al destructor
 
 ## Siguiente tema: [Clases y Objetos &#8211; Arrays][1]
 
- [1]: /clases-y-objetos-arrays/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-arrays/

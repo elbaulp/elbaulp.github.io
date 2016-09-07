@@ -38,7 +38,7 @@ class Punto{
 
 ## Siguiente tema: [Clases y Objetos - Control del acceso a los miembros de la clase][3]
 
- [1]: /clases-y-objetos-definir-una-clase/
- [2]: /clases-y-objetos-el-constructor/
- [3]: /clases-y-objetos-control-del-acceso-los/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
+ [2]: https://elbauldelprogramador.com/clases-y-objetos-el-constructor/
+ [3]: https://elbauldelprogramador.com/clases-y-objetos-control-del-acceso-los/
 

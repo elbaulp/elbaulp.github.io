@@ -124,12 +124,12 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
 
 
 
- [1]: /assets/img/2014/03/at.jpg
- [2]: /assets/img/2014/03/pause.jpg
- [3]: /assets/img/2014/03/Firewire.jpg
- [4]: /assets/img/2014/03/Sleep.jpg
- [5]: /assets/img/2014/03/usb.jpg
- [6]: /assets/img/2014/03/Play.jpg
- [7]: /assets/img/2014/03/sbbod.jpg
+ [1]: https://elbauldelprogramador.com/assets/img/2014/03/at.jpg
+ [2]: https://elbauldelprogramador.com/assets/img/2014/03/pause.jpg
+ [3]: https://elbauldelprogramador.com/assets/img/2014/03/Firewire.jpg
+ [4]: https://elbauldelprogramador.com/assets/img/2014/03/Sleep.jpg
+ [5]: https://elbauldelprogramador.com/assets/img/2014/03/usb.jpg
+ [6]: https://elbauldelprogramador.com/assets/img/2014/03/Play.jpg
+ [7]: https://elbauldelprogramador.com/assets/img/2014/03/sbbod.jpg
 
 {% include toc.html %}

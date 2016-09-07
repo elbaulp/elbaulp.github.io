@@ -32,6 +32,6 @@ Enlace al vídeo: <a href="http://www.ted.com/talks/peter_norvig_the_100_000_stu
 
 
 
- [1]: /?s=udacity
+ [1]: https://elbauldelprogramador.com/?s=udacity
 
 {% include toc.html %}

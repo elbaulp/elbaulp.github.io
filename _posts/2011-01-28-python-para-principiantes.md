@@ -18,6 +18,6 @@ En cuanto pueda iré traduciendolo si veis que os interesa pero no sabeis sufici
 
 El tutorial en cuestión lo podeis encontrar en <a target="_blank" href="http://temporaryland.wordpress.com/2011/01/26/python-for-newbies/">temporaryland</a>.
 
- [1]: /categorias/#juegos
+ [1]: https://elbauldelprogramador.com/categorias/#juegos
 
 

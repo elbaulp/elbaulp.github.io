@@ -41,4 +41,4 @@ for (String s: strings)
 
 #### Siguiente Tema: [Programación Android: Recursos &#8211; Plurales][1] 
 
- [1]: /programacion-android-recursos-plurales/
+ [1]: https://elbauldelprogramador.com/programacion-android-recursos-plurales/

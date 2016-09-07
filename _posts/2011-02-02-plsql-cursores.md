@@ -267,8 +267,8 @@ END;
 
 ## Siguiente tema: [PL/SQL &#8211; Procedimientos y Funciones][5]
 
- [1]: /plsql-excepciones/
- [2]: /plsql-declaracion-de-variables/
- [3]: /lenguaje-manipulacion-de-datos-dml/
- [4]: /introduccion-plsql-transacciones/
- [5]: /plsql-procedimientos-y-funciones/
+ [1]: https://elbauldelprogramador.com/plsql-excepciones/
+ [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
+ [3]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
+ [4]: https://elbauldelprogramador.com/introduccion-plsql-transacciones/
+ [5]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/

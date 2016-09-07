@@ -170,9 +170,9 @@ El resultado de estas modificaciones es el siguiente:
 - *Howto: Auto-sync Google Drive to a local folder with Grive. Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>  
 - *Créditos de la imagen* »» <a href="https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR" target="_blank">plus.google.com</a>
 
-[1]: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
-[3]: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
-[4]: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
-[5]: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
+[1]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
+[3]: https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
+[4]: https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
+[5]: https://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
 
 

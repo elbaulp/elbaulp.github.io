@@ -56,9 +56,9 @@ Casi todas las llamadas que se hacen desde *managedQuery* y *ContentResolver* se
 
 
 
- [1]: /programacion-android-insertando
- [2]: /lenguaje-manipulacion-de-datos-dml
- [3]: /programacion-android-implementando-un
- [4]: /programacion-android-implementando-un/
+ [1]: https://elbauldelprogramador.com/programacion-android-insertando
+ [2]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml
+ [3]: https://elbauldelprogramador.com/programacion-android-implementando-un
+ [4]: https://elbauldelprogramador.com/programacion-android-implementando-un/
 
 {% include toc.html %}

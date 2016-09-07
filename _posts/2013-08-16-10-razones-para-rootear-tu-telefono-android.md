@@ -109,6 +109,6 @@ Al final, todo esto se reduce a una cosa: **tú eres el dueño de tu dispositivo
 - *Top 10 Reasons to Root Your Android Phone* »» <a href="http://lifehacker.com/top-10-reasons-to-root-your-android-phone-1079161983" target="_blank">LifeHacker</a>  
 - *Fotos por* »» <a href="http://www.flickr.com/photos/a_mason/4255426890/" target="_blank">Andrew Mason</a>
 
- [1]: /curso-programacion-android/ "Android"
- [2]: /rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
- [3]: /tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"
+ [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"
+ [2]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
+ [3]: https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/ "Tipos de gobernadores en las CPUs"

@@ -62,9 +62,9 @@ Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un 
 
 
 
- [1]: /seguridad/
- [2]: /introduccion-sql-sql-introduction/
- [3]: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
- [4]: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo"
+ [1]: https://elbauldelprogramador.com/seguridad/
+ [2]: https://elbauldelprogramador.com/introduccion-sql-sql-introduction/
+ [3]: https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
+ [4]: https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/ "Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo"
 
 {% include toc.html %}

@@ -96,10 +96,10 @@ Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más cl
 
 
 
- [1]: /security-now//
- [2]: /opensource/
- [3]: /?s=criptografia
- [4]: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
- [5]: /rssfeed/
+ [1]: https://elbauldelprogramador.com/security-now//
+ [2]: https://elbauldelprogramador.com/opensource/
+ [3]: https://elbauldelprogramador.com/?s=criptografia
+ [4]: https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/
+ [5]: https://elbauldelprogramador.com/rssfeed/
 
 {% include toc.html %}

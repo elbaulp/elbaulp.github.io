@@ -97,7 +97,7 @@ Produciendo el siguiente resultado:
 
 - *Header/Footer in Latex with Fancyhdr* »» <a href="http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr/" target="_blank">texblog.org</a>
 
- [1]: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted"
- [2]: /disponible-la-primera-parte-del-curso/ "Disponible la primera parte del curso Android en PDF"
+ [1]: https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted"
+ [2]: https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/ "Disponible la primera parte del curso Android en PDF"
 
 

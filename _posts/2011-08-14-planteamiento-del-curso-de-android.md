@@ -55,7 +55,7 @@ Un saludo
 
 
 
- [1]: /guia-de-desarrollo-android
- [2]: /pro-android-3-aprende-fondo-todo-lo-que
+ [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
+ [2]: https://elbauldelprogramador.com/pro-android-3-aprende-fondo-todo-lo-que
 
 {% include toc.html %}

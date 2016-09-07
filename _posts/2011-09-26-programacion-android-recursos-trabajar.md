@@ -86,7 +86,7 @@ Lo que hacemos en el código de arriba es obtener el XmlPullParser, usarlo para 
 
 
 
- [1]: /guia-de-desarrollo-android
- [2]: /programacion-android-recursos-trabajar-2/
+ [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
+ [2]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar-2/
 
 {% include toc.html %}

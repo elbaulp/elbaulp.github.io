@@ -241,8 +241,8 @@ public class ParametrosActivity extends Activity {
 
 
 
- [1]: /programacion-android-hola-mundo/
- [2]: /fundamentos-programacion-android_17/
- [3]: /programacion-android-interfaz-grafica/
+ [1]: https://elbauldelprogramador.com/programacion-android-hola-mundo/
+ [2]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
+ [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica/
 
 {% include toc.html %}

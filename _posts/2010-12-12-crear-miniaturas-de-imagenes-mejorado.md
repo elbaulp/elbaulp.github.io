@@ -62,4 +62,4 @@ else
 fi
 ```
 
- [1]: /crear-imagenes-en-miniaturas/
+ [1]: https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/

@@ -35,6 +35,6 @@ Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenid
 
 
 
- [2]: /rssfeed/
+ [2]: https://elbauldelprogramador.com/rssfeed/
 
 {% include toc.html %}

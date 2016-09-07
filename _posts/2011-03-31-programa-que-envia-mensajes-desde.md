@@ -31,5 +31,5 @@ Como prueba dejo dos capturas de pantalla, una realizando la conexión desde el 
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="450" width="600" src="https://2.bp.blogspot.com/-IP60xZKxqEo/TZSMSDUnHcI/AAAAAAAAAX0/eXLpj7fD5PY/s320/31032011045.jpg"></amp-img>
 </figure>
 
- [1]: /video-tutorial-programacion-android/
+ [1]: https://elbauldelprogramador.com/video-tutorial-programacion-android/
  [2]: http://casidiablo.net/java-socket-chat-basico/

@@ -251,11 +251,11 @@ Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invo
 
 
 
- [1]: /programacion-android-trabajar-con/
- [2]: /programacion-android-proveedores-de
- [3]: /fundamentos-programacion-android_16/
+ [1]: https://elbauldelprogramador.com/programacion-android-trabajar-con/
+ [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
+ [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
  [4]: http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT
- [5]: /programacion-android-intents-categorias/
+ [5]: https://elbauldelprogramador.com/programacion-android-intents-categorias/
 
 {% include toc.html %}
 </activity>

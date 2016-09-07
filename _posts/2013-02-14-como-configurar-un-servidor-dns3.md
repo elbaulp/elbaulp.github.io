@@ -182,7 +182,7 @@ Para finalizar, reiterar que todos los artículos están basados en un How to de
 
 
 
- [1]: /como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
- [2]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
+ [1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns/ "Cómo configurar un servidor DNS – Parte 1 (Introducción)"
+ [2]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
 
 {% include toc.html %}

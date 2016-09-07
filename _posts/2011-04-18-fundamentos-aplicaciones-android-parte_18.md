@@ -64,4 +64,4 @@ Debido a que el sistema ejecuta cada aplicación en procesos separados y con per
  [3]: http://developer.android.com/resources/samples/NotePad/index.html
  [4]: http://developer.android.com/guide/topics/providers/content-providers.html
  [5]: http://developer.android.com/guide/topics/ui/notifiers/notifications.html
- [6]: /fundamentos-aplicaciones-android-parte_19/
+ [6]: https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_19/

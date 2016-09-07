@@ -71,5 +71,5 @@ END;
 
 ### Siguiente Tema: [Fundamentos de PL/SQL][2] 
 
- [1]: /plsql-disparadores-o-triggers/
- [2]: /fundamentos-de-plsql/
+ [1]: https://elbauldelprogramador.com/plsql-disparadores-o-triggers/
+ [2]: https://elbauldelprogramador.com/fundamentos-de-plsql/

@@ -53,6 +53,6 @@ Cada componente tiene su propia etiqueta xml:
 
 
 
- [1]: /fundamentos-programacion-android_17/
+ [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
 
 {% include toc.html %}

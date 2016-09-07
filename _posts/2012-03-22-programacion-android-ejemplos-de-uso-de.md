@@ -111,5 +111,5 @@ protected void onListItemClick(ListView l, View v, int position, long id){
 }
 ```
 
- [1]: /programacion-android-implementando-un
- [2]: /programacion-android-como-se-resuelven
+ [1]: https://elbauldelprogramador.com/programacion-android-implementando-un
+ [2]: https://elbauldelprogramador.com/programacion-android-como-se-resuelven

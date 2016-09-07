@@ -101,4 +101,4 @@ REVOKE
 
 ## Siguiente tema: [Componentes del lenguaje SQL][1] 
 
- [1]: /componentes-del-lenguaje-sql-sql/
+ [1]: https://elbauldelprogramador.com/componentes-del-lenguaje-sql-sql/

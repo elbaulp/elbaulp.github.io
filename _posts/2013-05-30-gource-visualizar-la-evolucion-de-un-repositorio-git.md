@@ -74,6 +74,6 @@ A continuación os dejo un vídeo de uno de mis repositorios:
 
  [1]: https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/ "Visualiza las visitas a tu web al estilo Pong con Logstalgia"
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: /assets/img/2013/05/gourceGit.png
+ [3]: https://elbauldelprogramador.com/assets/img/2013/05/gourceGit.png
 
 {% include toc.html %}

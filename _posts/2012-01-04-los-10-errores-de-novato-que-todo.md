@@ -76,8 +76,8 @@ Fuente: <a target="_blank" href="http://www.developer.com/ws/android/programming
 
 
 
- [1]: /programacion-android-hola-mundo/
- [2]: /programacion-android-proveedores-de
- [3]: /fundamentos-programacion-android_16/
+ [1]: https://elbauldelprogramador.com/programacion-android-hola-mundo/
+ [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
+ [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
 
 {% include toc.html %}

@@ -87,5 +87,5 @@ El valor del atributo id, indica que la constante llamada text1 será usada para
 
 #### Siguiente Tema: [Programación Android: Recursos &#8211; Sintaxis de los Recursos][2]
 
- [1]: /fundamentos-programacion-android_17/
- [2]: /programacion-android-recursos-sintaxis/
+ [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
+ [2]: https://elbauldelprogramador.com/programacion-android-recursos-sintaxis/

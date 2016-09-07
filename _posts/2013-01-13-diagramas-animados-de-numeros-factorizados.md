@@ -38,4 +38,4 @@ Sin más explicaciones, lo mejor es verlo en acción. A continuación proporcion
 - *Episodio de Security Now Disconnect Widget Jacking* »» <a href="http://twit.tv/show/security-now/386" target="_blank">Visitar sitio</a>
 
 
-[1]: /security-now/
+[1]: https://elbauldelprogramador.com/security-now/

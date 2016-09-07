@@ -178,8 +178,8 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 
 *Traditional DNS Howto* »» <a href="http://www.howtoforge.com/traditional_dns_howto" target="_blank">Visitar sitio</a>
 
-[1]: /como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
-[2]: /como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
+[1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
+[2]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
 [3]: https://elbauldelprogramador.com/bases-de-datos/
 
 

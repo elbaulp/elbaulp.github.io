@@ -192,12 +192,12 @@ Vía | <a href="http://www.howtogeek.com/55185/how-to-maximize-the-battery-life-
 
 
 
- [1]: /assets/img/2012/07/sshot4cb822438c27c1.jpg
- [2]: /assets/img/2012/07/linux_wallpaper1.jpg
- [3]: /assets/img/2012/07/battery_power1.png
- [4]: /assets/img/2012/07/wifi1.jpg
- [5]: /assets/img/2012/07/4503427549_5ee84b6ea51.jpg
- [6]: /assets/img/2012/07/harddisk1.jpg
- [7]: /assets/img/2012/07/powertop1.png
+ [1]: https://elbauldelprogramador.com/assets/img/2012/07/sshot4cb822438c27c1.jpg
+ [2]: https://elbauldelprogramador.com/assets/img/2012/07/linux_wallpaper1.jpg
+ [3]: https://elbauldelprogramador.com/assets/img/2012/07/battery_power1.png
+ [4]: https://elbauldelprogramador.com/assets/img/2012/07/wifi1.jpg
+ [5]: https://elbauldelprogramador.com/assets/img/2012/07/4503427549_5ee84b6ea51.jpg
+ [6]: https://elbauldelprogramador.com/assets/img/2012/07/harddisk1.jpg
+ [7]: https://elbauldelprogramador.com/assets/img/2012/07/powertop1.png
 
 {% include toc.html %}

@@ -114,6 +114,6 @@ Sí, <proto-quic> | <a href="https://groups.google.com/a/chromium.org/d/forum/pr
 
 *QUIC FAQ for Geeks* »» <a href="https://docs.google.com/document/d/1lmL9EF6qKrk7gbazY8bIdvq3Pno2Xj_l_YShP40GLQE/edit#heading=h.h3jsxme7rovm" target="_blank">Visitar Documento en Drive</a>
 
- [1]: /security-now/
+ [1]: https://elbauldelprogramador.com/security-now/
  [16]: https://elbauldelprogramador.com/seguridad
  [17]: https://elbauldelprogramador.com/

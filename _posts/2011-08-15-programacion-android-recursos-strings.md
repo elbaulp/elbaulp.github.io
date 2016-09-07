@@ -104,6 +104,6 @@ public final class R {
 
 
 
- [1]: /programacion-android-recursos-layout/
+ [1]: https://elbauldelprogramador.com/programacion-android-recursos-layout/
 
 {% include toc.html %}

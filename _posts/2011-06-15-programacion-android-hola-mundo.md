@@ -168,10 +168,10 @@ En este archivo se definen el paquete por defecto, datos de versión, icono (med
 
 
 
- [1]: /resultados-de-la-encuesta-que-tematica
+ [1]: https://elbauldelprogramador.com/resultados-de-la-encuesta-que-tematica
  [2]: video-tutorial-programacion-android
  [3]: http://lmgtfy.com/?q=instalar+y+configurar+android+sdk+eclipse
- [4]: /guia-de-desarrollo-android
- [5]: /fundamentos-programacion-android/
+ [4]: https://elbauldelprogramador.com/guia-de-desarrollo-android
+ [5]: https://elbauldelprogramador.com/fundamentos-programacion-android/
 
 {% include toc.html %}

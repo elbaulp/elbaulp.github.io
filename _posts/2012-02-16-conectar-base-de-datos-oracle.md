@@ -126,7 +126,7 @@ Tenéis el código disponible en [PasteBin][3] también.
 
 
 
- [1]: /conectar-base-de-datos-sql-server-2008
+ [1]: https://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008
  [2]: https://twitter.com/muymuynica
  [3]: http://pastebin.com/embed_js.php?i=zU4sfhzv
 

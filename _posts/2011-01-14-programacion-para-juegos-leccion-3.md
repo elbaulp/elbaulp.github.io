@@ -29,6 +29,6 @@ Fuente:
 
 #### Siguiente tema: [Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos][6] 
 
- [1]: /programacion-para-juegos-leccion-1/
+ [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
  [5]: http://www.lazyfoo.net/SDL_tutorials/
- [6]: /programacion-para-juegos-leccion-4/
+ [6]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-4/

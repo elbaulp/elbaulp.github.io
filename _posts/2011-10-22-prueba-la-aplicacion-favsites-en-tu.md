@@ -40,7 +40,7 @@ Por último, decir como siempre, que toda crítica es bienvenida, pero por favor
 
 
 
- [1]: /mejoras-en-la-aplicacion-fav-sites
+ [1]: https://elbauldelprogramador.com/mejoras-en-la-aplicacion-fav-sites
  [2]: http://qrcode.kaywa.com/img.php?s=6&d;=http%3A%2F%2Fwww.megaupload.com%2F%3Fd%3DJ8Q7TH0M
 
 {% include toc.html %}

@@ -109,7 +109,7 @@ El cursor adaptará la forma de una llave, hacemos click, introducimos nuestro *
 
 Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología.
 
- [1]: /editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
- [2]: /mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
- [3]: /contacto "Contacto"
+ [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
+ [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
+ [3]: https://elbauldelprogramador.com/contacto "Contacto"
 

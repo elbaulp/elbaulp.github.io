@@ -141,15 +141,15 @@ Creo que este CMS promete mucho, personalmente me ha gustado y en un futuro no d
 
 
 
- [1]: /opensource/
- [2]: /?s=html5
- [3]: /php/
- [4]: /basededatos/
- [5]: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
- [6]: /como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
- [7]: /programacion-bash-metacaracteres_12/
- [8]: /assets/img/2013/03/Login-to-bolt-CMS.png
- [9]: /assets/img/2013/03/Bolt-Home-PAge-CMS.png
- [10]: /assets/img/2013/03/bolt-debug.png
+ [1]: https://elbauldelprogramador.com/opensource/
+ [2]: https://elbauldelprogramador.com/?s=html5
+ [3]: https://elbauldelprogramador.com/php/
+ [4]: https://elbauldelprogramador.com/basededatos/
+ [5]: https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
+ [6]: https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
+ [7]: https://elbauldelprogramador.com/programacion-bash-metacaracteres_12/
+ [8]: https://elbauldelprogramador.com/assets/img/2013/03/Login-to-bolt-CMS.png
+ [9]: https://elbauldelprogramador.com/assets/img/2013/03/Bolt-Home-PAge-CMS.png
+ [10]: https://elbauldelprogramador.com/assets/img/2013/03/bolt-debug.png
 
 {% include toc.html %}

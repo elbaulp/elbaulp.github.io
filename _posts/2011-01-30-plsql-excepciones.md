@@ -141,4 +141,4 @@ A continuación se muestra una lista de las excepciones automáticas predefinida
 ## Siguiente tema: [PL/SQL - Cursores][1]
 
 
- [1]: /plsql-cursores/
+ [1]: https://elbauldelprogramador.com/plsql-cursores/

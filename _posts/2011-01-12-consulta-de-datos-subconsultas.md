@@ -43,5 +43,5 @@ El predicado `EXISTS` se utiliza en comparaciones de verdad/falso para determina
 
 ## Siguiente Tema: [Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle][1] 
 
- [1]: /consulta-de-datos-tablas-resumen/
+ [1]: https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/
 

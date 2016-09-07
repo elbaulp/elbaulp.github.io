@@ -197,6 +197,6 @@ Hemos visto suficiente información para poder decidir si queremos ayudar a la c
 - *InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-4/" target="_blank">Achieving Anonymity with Tor Part 4</a>
 - <a href="https://blog.torproject.org/" target="_blank">Tor Project</a>
 
- [1]: /logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
- [2]: /logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
- [3]: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
+ [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
+ [2]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
+ [3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/

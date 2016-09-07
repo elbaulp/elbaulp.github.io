@@ -81,5 +81,5 @@ cout << "nordenada del punto= "<< ptl.gety ();
 
 ## Siguiente tema: [Clases y Objetos - Funciones Inline][2]
 
- [1]: /clases-y-objetos-definir-una-clase/
- [2]: /clases-y-objetos-funciones-inline/
+ [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
+ [2]: https://elbauldelprogramador.com/clases-y-objetos-funciones-inline/

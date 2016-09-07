@@ -29,7 +29,7 @@ Domain hijacking is now front page news. Learn how to prevent your company&#8217
 
 
  [1]: http://elbauldelprogramador.tradepub.com/free/w_mm47/prgm.cgi
- [2]: /manuales-gratuitos/
+ [2]: https://elbauldelprogramador.com/manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
 
 {% include toc.html %}
