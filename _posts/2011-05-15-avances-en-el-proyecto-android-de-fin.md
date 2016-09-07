@@ -46,10 +46,11 @@ Si ninguno de los mensajes de arriba se muestra, entramos en la primera Activity
 
 Una vez pulsado el botón, pasamos a la siguiente actividad, en la que se debe seleccionar una mesa para abrirla, cerrarla o realizar pedidos sobre ella. Al igual que en la actividad de camareros, se solicita la información de las mesas a la base de datos.
 
-<div >
+<figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="500" width="306" src="https://4.bp.blogspot.com/-BZjhH4BNz0k/TdAT8kH3-PI/AAAAAAAAAeQ/zCUx8mF0G3c/s500/selecci%25C3%25B3nMesa.png"></amp-img>
 </figure>
-<div >
+
+<figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="500" width="306" src="https://4.bp.blogspot.com/-j67USPZqytc/TdAT8mhHWMI/AAAAAAAAAeI/HMMy-r8hBhU/s500/mesa.png"></amp-img>
 </figure>
 
