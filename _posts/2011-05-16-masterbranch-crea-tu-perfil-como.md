@@ -1,8 +1,8 @@
 ---
-title: 'MasterBranch &#8211; Crea tu perfil como Programador y muestra todos tus proyectos'
-
+title: 'MasterBranch - Crea tu perfil como Programador y muestra todos tus proyectos'
 layout: post.amp
 permalink: /masterbranch-crea-tu-perfil-como/
+modified: 2016-09-09T08:50
 categories:
   - aplicaciones
   - internet
@@ -10,8 +10,8 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-MasterBranch es una web para desarrolladores y empresarios que buscan buenos programadores. Es un lugar en el que los desarrolladores pueden crear su perfil, el cual se actualiza automáticamente a través de la actividad de su actividad en proyectos de código libre o privativo, y para los empresarios es un lugar donde encontrar cadidatos para crear sus aplicaciones mirando las habilidades de los desarrolladores.
 
+MasterBranch es una web para desarrolladores y empresarios que buscan buenos programadores. Es un lugar en el que los desarrolladores pueden crear su perfil, el cual se actualiza automáticamente a través de la actividad de su actividad en proyectos de código libre o privativo, y para los empresarios es un lugar donde encontrar cadidatos para crear sus aplicaciones mirando las habilidades de los desarrolladores.
 
 <!--ad-->
 
@@ -25,18 +25,14 @@ MasterBranch busca nuestros proyectos automáticamente, pero si por algún motiv
 
 Os dejo mi [Perfil][1], aunque aún falta por agregar el proyecto que ando desarrollando ahora, [WifiBar][2]
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s1600/masterbranch.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="293" width="400" src="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s400/masterbranch.png" /></a>
-</div>
 
-* * *Sitio Web:
-
-[masterbranch.com][3]
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="293" width="400" src="https://4.bp.blogspot.com/-9km3TPlNXMU/TdF7XXobO2I/AAAAAAAAAfI/wMH4SrHwKpA/s400/masterbranch.png"></amp-img>
+</figure>
 
 
+Sitio Web: [masterbranch.com][3]
 
  [1]: https://www.masterbranch.com/developer/alejandro.alcalde
  [2]: https://github.com/algui91/WifiBar
  [3]: http://www.masterbranch.com
-
-{% include toc.html %}

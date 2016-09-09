@@ -1,8 +1,8 @@
 ---
-title: 'Cómo conocer el software &#8220;no libre&#8221; instalado en nuestro equipo'
-
+title: 'Cómo conocer el software “no libre” instalado en nuestro equipo'
 layout: post.amp
 permalink: /como-conocer-el-software-no-libre/
+modified: 2016-09-09T09:00
 categories:
   - aplicaciones
   - curiosidades
@@ -11,14 +11,12 @@ categories:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="icoso">
-</div>
 
 Este programa lo ví en [ProyectosBeta][1].
+
 Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las cuales muchas serán **no libres**, con el programita **vrms** podemos conocerlos de forma sencilla.
 
 Los pasos a seguir son los siguientes:
-
 
 <!--ad-->
 
@@ -32,9 +30,9 @@ Y lo ejecutamos con `vrms`
 
 El resultado es el siguiente:
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s1600/vrms.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="225" width="400" src="https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s400/vrms.png" /></a>
-</div>
+<figure>
+    <a href="https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s1600/vrms.png"><amp-img layout="responsive"  height="450" width="800" src="https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s800/vrms.png"></amp-img></a>
+</figure>
 
 Para que nos salga la el dibujito de **Stallman** hay que seguir los siguientes pasos.
 
@@ -42,20 +40,13 @@ Para que nos salga la el dibujito de **Stallman** hay que seguir los siguientes 
 $ sudo aptitude install vrms cowsay
 $ sudo mv rms.cow /usr/share/cowsay/cows/rms.cow
 $ cowsay -f rms -W 60 `vrms`
-
 ```
 
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s1600/stallman.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="238" src="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="256" width="238" src="https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png"></amp-img>
+</figure>
 
-* * *Fuente:
-
-[Proyectosbeta][2]
-
-
+Fuente: [Proyectosbeta][2]
 
  [1]: http://proyectosbeta.blogspot.com
  [2]: http://proyectosbeta.blogspot.com/2011/05/crear-la-cara-de-richard-stallmann-con.html
-
-{% include toc.html %}
