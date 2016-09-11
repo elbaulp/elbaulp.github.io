@@ -18,7 +18,7 @@ color: "#F57C00"
 
 ## Introducción
 
-Recientemente he leido los problemas de seguridad que tiene [WhatsApp][1], con lo que me entró curiosidad por hacer algunas pruebas yo mismo y esnifar el tráfico de red de mi móvil, pero en este caso para la aplicación que estoy desarrollando, [WifiBar][2]. Antes de nada voy a explicar las técnicas y programas que he usado.
+Recientemente he leido los problemas de [seguridad](/categorias/#seguridad "Artículos sobre seguridad") que tiene [WhatsApp][1], con lo que me entró curiosidad por hacer algunas pruebas yo mismo y esnifar el tráfico de red de mi móvil, pero en este caso para la aplicación que estoy desarrollando, [WifiBar][2]. Antes de nada voy a explicar las técnicas y programas que he usado.
 
 <!--ad-->
 
@@ -46,31 +46,31 @@ Y nos abrirá una pantalla como esta:
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="449" width="669" src="https://2.bp.blogspot.com/-6aC4HXLtK7k/TdlRoid4i2I/AAAAAAAAAgs/XHR8h0qNXss/s800/ettercap1.png"></amp-img>
 </figure>
 
-Una vez abierta, le damos a Sniff -> Unified sniffing, y tendremos que introducir la interfaz que queramos esnifar, en mi caso wlan0 (Ya que el móvil se conecta por wifi).
+Una vez abierta, le damos a `Sniff -> Unified sniffing`, y tendremos que introducir la interfaz que queramos esnifar, en mi caso wlan0 (Ya que el móvil se conecta por wifi).
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="79" width="616" src="https://4.bp.blogspot.com/-bJscHRVIt3U/TdlSWHzopEI/AAAAAAAAAg0/9iVj3S96Jpo/s800/interface.png"></amp-img>
 </figure>
 
-El siguente paso es escanear la red en busca de host, Hosts -> Scan for hosts. Al pulsar comenzará a escanear y en el recuadro de abajo nos aparecerá cuantos host encontró, en mi caso:
+El siguente paso es escanear la red en busca de host, `Hosts -> Scan for hosts`. Al pulsar comenzará a escanear y en el recuadro de abajo nos aparecerá cuantos host encontró, en mi caso:
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="444" width="667" src="https://2.bp.blogspot.com/-UHuz1c4HInM/TdlTPkAoLYI/AAAAAAAAAg8/gEU_PTHohgA/s800/host.png"></amp-img>
 </figure>
 
-Para ver las ips de los hosts encontrados vamos a Hosts -> hosts list, nos quedamos con la ip de nuestro objetivo y pasamos al siguiente paso, Targets -> Select TARGET(s), aquí debemos poner como target1 nuestra puerta de enlace predeterminada, y como target 2 el objetivo:
+Para ver las ips de los hosts encontrados vamos a `Hosts -> hosts list`, nos quedamos con la ip de nuestro objetivo y pasamos al siguiente paso, `Targets -> Select TARGET(s)`, aquí debemos poner como `target1` nuestra puerta de enlace predeterminada, y como target 2 el objetivo:
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="93" width="541" src="https://3.bp.blogspot.com/-lFH6pB11PTA/TdlUjkVJPJI/AAAAAAAAAhE/m_W8MFwPLfA/s800/target.png"></amp-img>
 </figure>
 
-Ahora hacemos Start -> Start sniffing, y despues, procedemos al envenenamiento ARP. Mitm -> Arp poisoning. lo que nos pedirá unos parámetros, yo he puesto oneway, que fuerza a envenenar solo desde Target1 a Target2, útil para envenenar solo el objetivo y no el router:
+Ahora hacemos `Start -> Start sniffing`, y despues, procedemos al envenenamiento ARP. `Mitm -> Arp poisoning`. lo que nos pedirá unos parámetros, yo he puesto oneway, que fuerza a envenenar solo desde Target1 a Target2, útil para envenenar solo el objetivo y no el router:
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="78" width="530" src="https://4.bp.blogspot.com/-KMyx2G5WS_0/TdlWJa5riyI/AAAAAAAAAhM/fyZXGORdX7A/s800/arp.png"></amp-img>
 </figure>
 
-Si ejecutamos antes de realizar todo esto arp -a en el equipo objetivo, vemos que la puerta de enlace tiene una MAC asociada, despues de hacer en envenenamiento, esta MAC es la del equipo atacante.
+Si ejecutamos antes de realizar todo esto `arp -a` en el equipo objetivo, vemos que la puerta de enlace tiene una MAC asociada, despues de hacer en envenenamiento, esta MAC es la del equipo atacante.
 
 Ahora llega el turno de wireshark,
 
