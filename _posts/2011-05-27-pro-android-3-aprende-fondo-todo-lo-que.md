@@ -1,6 +1,6 @@
 ---
-title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 3.0'
-
+title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 4.0'
+modified: 2016-09-12T09:00
 layout: post.amp
 permalink: /pro-android-3-aprende-fondo-todo-lo-que/
 categories:
@@ -14,16 +14,15 @@ main-class: "android"
 color: "#689F38"
 ---
 
+Hace unas semanas encargué este libro en Amazon ([Pro Android 3](http://amzn.to/2cxpfZV ), aunque quizá tenga más sentido en estos momentos comprar [Pro Android 4](http://amzn.to/2cxqUO8 ), y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).
 
-Hace unas semanas encargué este libro en Amazon, y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).
-
-Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
-
+Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
 
 <!--ad-->
-<div class="separator" >
-<a href="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="288" width="263" src="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png" /></a>
-</div>
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="500" width="456" src="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png"></amp-img>
+</figure>
 
   1. Introducing the Android Computing Platform
   2. Setting up your Development Environment
@@ -56,7 +55,3 @@ Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en esp
  29. Fragments
  30. Action Bar
  31. Selected Topics in Android 3.0
-
-
-
-{% include toc.html %}

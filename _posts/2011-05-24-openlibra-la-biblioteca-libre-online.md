@@ -1,6 +1,6 @@
 ---
 title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
-
+modified: 2016-09-12T08:45
 layout: post.amp
 permalink: /openlibra-la-biblioteca-libre-online/
 categories:
@@ -10,15 +10,17 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg" /></a>
-</div>
+
+
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg"></amp-img>
+</figure>
 
 [EtnasSoft][1], un compañero blogger, está inmerso en un interesante proyecto que consiste en recopilar libros relacionados con la programación y software libre entre otras cosas, todos en Castellano.
 
 La biblioteca la podéis encontrar en *[Biblioteca Creative Commons][2]*, pero debido al gran exito que ha tenido esta iniciativa, quiere hacer mejoras y necesita de nuestra ayuda, entre otras cosas, le gustaría alojar la web en un hosting independiente, ya que actualmente está ligado a su blog:
 
->Si se quiere hacer crecer el proyecto, un paso necesario a tomar en el futuro será desligarlo del dominio en el que actualmente se encuentra y convertirlo en un sitio independiente.
+> Si se quiere hacer crecer el proyecto, un paso necesario a tomar en el futuro será desligarlo del dominio en el que actualmente se encuentra y convertirlo en un sitio independiente.
 
 Os dejo con un poquito de historia sobre esta iniciativa:
 
@@ -36,10 +38,6 @@ Muchos de sus desde entonces habituales, comenzaron a sugerir nuevos libros y a 
 
 Actualmente dispone de una Web promocional anunciando las características de la Versión 2 de este proyecto, y lo que llegará con la versión 3. [OpenLibra Promo][3]
 
-
-
  [1]: http://www.etnassoft.com/
  [2]: http://www.etnassoft.com/biblioteca/
  [3]: http://www.etnassoft.com/openlibra-promo/
-
-{% include toc.html %}

@@ -1,6 +1,6 @@
 ---
 title: 'Nueva Guía: Build Your Own WordPress Site Guide'
-
+modified: 2016-09-12T09:00
 layout: post.amp
 permalink: /nueva-guia-build-your-own-wordpress/
 categories:
@@ -11,7 +11,10 @@ categories:
 main-class: "misc"
 color: "#61B38D"
 ---
-[![Build Your Own WordPress Site Guide][1]][2]
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://img.tradepub.com/free/w_make09/images/w_make09c8w.jpg" alt="{{ title }}" title="{{ title }}" width="1200" height="630"></amp-img>
+</figure>
 
 ### **Build Your Own WordPress Site Guide**
 
@@ -22,9 +25,7 @@ Os traigo una guía interesante para ayudaros a crear vuestro sitio WordPress de
 Como ya sabréis, para descargarla, tenéis que hacer clic en &#8220;Request Now&#8221; y rellenar los datos que piden. Espero que os sea útil.
 
 
-
- [1]: http://img.tradepub.com/free/w_make09/assets/img/w_make09c.gif "Build Your Own WordPress Site Guide"
- [2]: http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc;=w_make09/prgm.cgi
- [3]: http://bashyc.blogspot.com/p/guias-gratuitas.html
+ [2]: http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_make09
+ [3]: https://elbauldelprogramador.com/manuales-gratuitos/
 
 {% include toc.html %}
