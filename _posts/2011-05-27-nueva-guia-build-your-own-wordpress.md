@@ -18,8 +18,6 @@ color: "#61B38D"
 
 ### **Build Your Own WordPress Site Guide**
 
-### ** (Cosntruye tu propio sitio WordPress)**
-
 Os traigo una guía interesante para ayudaros a crear vuestro sitio WordPress desde cero. Podeis descargarla desde [aquí][2], o en la página [Manuales Gratuitos][3]
 
 Como ya sabréis, para descargarla, tenéis que hacer clic en &#8220;Request Now&#8221; y rellenar los datos que piden. Espero que os sea útil.
@@ -27,5 +25,3 @@ Como ya sabréis, para descargarla, tenéis que hacer clic en &#8220;Request Now
 
  [2]: http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_make09
  [3]: https://elbauldelprogramador.com/manuales-gratuitos/
-
-{% include toc.html %}
