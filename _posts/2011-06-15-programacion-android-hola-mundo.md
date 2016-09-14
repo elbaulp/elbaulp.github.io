@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Hola Mundo'
-
+modified: 2016-09-14T11:30
 layout: post.amp
 permalink: /programacion-android-hola-mundo/
 categories:
@@ -13,14 +13,15 @@ main-class: "android"
 color: "#689F38"
 ---
 
+> Hay una versión más actualizada, visita [Tutorial Android - Hola Mundo a Fondo](https://elbauldelprogramador.com/android/tutorial-android-hola-mundo-a-fondo/ "Tutorial Android - Hola Mundo a Fondo").
 
-Como [dije][1], voy a comenzar a escribir tutoriales sobre programación Android.  
+Como [dije][1], voy a comenzar a escribir tutoriales sobre programación Android.
+
 Antes de comenzar es necesario tener configurado correctamente eclipse con el Android SDK, que se puede encontrar en este mismo blog, mediante el [primer videotutorial][2] de una entrada que publiqué hace tiempo, o simplemente buscando en [google][3].
 
 Antes de empezar, quiero comunicar que todas las entradas relacionadas con los tutoriales de Android los colocaré en la página [Android.][4]
 
 En esta entrada vamos a empezar directamente con el típico Hola Mundo (Hello World):
-
 
 <!--ad-->
 
@@ -28,9 +29,9 @@ En esta entrada vamos a empezar directamente con el típico Hola Mundo (Hello Wo
 
 Arrancamos eclipse con todo configurado correctamente y vamos a Archivo->nuevo->Proyecto Android:
 
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s1600/nuevoProyecto.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="crear Proyecto Android" alt="crear Proyecto Android"  height="303" width="400" src="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s400/nuevoProyecto.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="crear Proyecto Android" alt="crear Proyecto Android"  height="605" width="800" src="https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s800/nuevoProyecto.png"></amp-img>
+</figure>
 
 Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos introducir:
 
@@ -43,9 +44,9 @@ Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos
   * Versión Mínima del SDK es la versión mínima necesaria del SDK para ejecutar la aplicación, a menor número, la aplicación correrá en más terminales, pero no podremos usar las últimas caracteristicas de Android.
   * Una vez rellenado todo, le damos a finalizar.
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s1600/ConfigurarPoryecto.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="configuracion proyecto Android" alt="configuracion proyecto Android"  height="400" width="320" src="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s400/ConfigurarPoryecto.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="configuracion proyecto Android" alt="configuracion proyecto Android"  height="625" width="782" src="https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s800/ConfigurarPoryecto.png"></amp-img>
+</figure>
 
 Ya hemos creado nuestro primer proyecto Android, ahora vamos a ver de qué se compone:
 
@@ -53,9 +54,9 @@ Ya hemos creado nuestro primer proyecto Android, ahora vamos a ver de qué se co
 
 Los proyectos de Android siguen una estructura fija de carpetas que debemos respetar. Podemos ver esta estructura con la vista ***Package Explorer*** que proporciona eclipse:
 
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s1600/estructuraCarpetas.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Estructura proyectos Android" alt="Estructura proyectos Android"  height="400" width="189" src="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s400/estructuraCarpetas.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Estructura proyectos Android" alt="Estructura proyectos Android"  height="507" width="239" src="https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s800/estructuraCarpetas.png"></amp-img>
+</figure>
 
 ### Carpeta src (de fuentes)
 
@@ -110,7 +111,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
     }
 }
-
 ```
 
 Al crear el proyecto dimos nombre a una Actividad (MainActivity), estas clases son las encargadas de mostrar las interfaz gráfica al usuario, deben extender de la clase ***Activity***.
@@ -122,11 +122,16 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
 ### Archivo ./res/layout/main.xml
 
 ```xml
-< ?xml version="1.0" encoding="utf-8"?>
-<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-<textview android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello">
-</textview></linearlayout>
-
+<?xml version="1.0" encoding="utf-8"?>
+    <linearlayout xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:orientation="vertical" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+    <textview 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/hello" />
+</linearlayout>
 ```
 
 En este archivo se define una pantalla en la que los elementos se agruparán de forma lineal (LinearLayout) y con un componente de texto (TextView). Al componente de texto le fijamos el texto a mostrar con la referencia ***@string/hello*** (valor del item en ./res/values/strings.xml)
@@ -134,44 +139,37 @@ En este archivo se define una pantalla en la que los elementos se agruparán de 
 ### Archivo ./res/values/strings.xml
 
 ```xml
-< ?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="hello">Hello World, MainActivity!</string>
-<string name="app_name">Hola Mundo</string>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">Hola Mundo</string>
 </resources>
-
 ```
 
 Para que la aplicación funcione es necesario crear el AndroidManifest:
 
 ```xml
-< ?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="app.tutorial.holaMundo" android:versioncode="1" android:versionname="1.0">
 <uses>
-<application android:icon="@drawable/icon" android:label="@string/app_name">
-<activity android:name=".MainActivity" android:label="@string/app_name">
-<intent>
-<action android:name="android.intent.action.MAIN">
-<category android:name="android.intent.category.LAUNCHER">
-</category></action></intent>
-</activity>
-</application>
-</uses></manifest>
-
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity" android:label="@string/app_name">
+            <intent>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent>
+        </activity>
+    </application>
+</uses>
+</manifest>
 ```
 
 En este archivo se definen el paquete por defecto, datos de versión, icono (mediante una referencia). El nombre de la aplicación (otra referencia al fichero strings.xml). Despues se define el comportamiento de la aplicación. Se añaden dos filtros para que la actividad que definimos anteriormente sea usada como principal (***android.intent.action.MAIN***) y para que sea incluida en el menú de aplicaciones (***android.intent.category.LAUNCHER***)
 
-* * *
-
-#### Siguiente tema: [Fundamentos programación Android: Conceptos básicos y componentes][5] 
-
-
+## Siguiente tema: [Fundamentos programación Android: Conceptos básicos y componentes][5]
 
  [1]: https://elbauldelprogramador.com/resultados-de-la-encuesta-que-tematica
  [2]: video-tutorial-programacion-android
  [3]: http://lmgtfy.com/?q=instalar+y+configurar+android+sdk+eclipse
  [4]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [5]: https://elbauldelprogramador.com/fundamentos-programacion-android/
-
-{% include toc.html %}

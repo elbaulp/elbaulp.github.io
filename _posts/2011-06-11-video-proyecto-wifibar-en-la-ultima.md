@@ -1,6 +1,6 @@
 ---
 title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
-
+modified: 2016-09-14T09:52
 layout: post.amp
 permalink: /video-proyecto-wifibar-en-la-ultima/
 categories:
@@ -13,9 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
-
 Ya he hablado otras veces sobre este proyecto, que se trata ni más ni menos que del proyecto de fin de curso, [publiqué un vídeo hace algún tiempo][1], pero aún le quedaba mucho por mejorar, sobre todo la interfaz, visualmente parece que el programa no tiene mucho trabajo, pero si que lo tiene, ya que todo se envía y recibe de una base de datos. A continuación voy a explicar un poco su funcionamiento:
-
 
 <!--ad-->
 
@@ -39,10 +37,4 @@ Básicamente este es el funcionamiento de la aplicación, en este vídeo no he f
 
 Bueno, eso es todo, aún falta hacer una pequeña modificación, que al cerrar una mesa en vez de mostrar el total a pagar, se abra otra ventana en la que se muestre el dinero a pagar, se introduzca el efectivo, y muestre el cambio.
 
-
-
-
-
  [1]: https://elbauldelprogramador.com/video-demostracion-del-proyecto-wifibar/
-
-{% include toc.html %}
