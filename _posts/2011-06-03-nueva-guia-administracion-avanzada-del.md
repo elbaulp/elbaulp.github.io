@@ -19,7 +19,7 @@ El objetivo principal de este libro es introducirnos en el mundo de la administr
 
 Los sistemas GNU/Linux han llegado a un grado de madurez importante, que los hacen válidos para integrarlos en cualquier ambiente de trabajo, ya sea desde el escritorio del PC personal, hasta el servidor de una gran empresa.
 
-{% include guide_note %}
+{% include guide_note.html %}
 
 <!--ad-->
 
