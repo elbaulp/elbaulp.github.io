@@ -21,6 +21,6 @@ tags: [cursos de programador, cursos de programación]
 [Android]: /curso-programacion-android/
 [Android2]: /android/
 [git]: /git/
-[latex1]: /latex/
+[latex1]: /category/latex/
 [dig]: /dig-chuleta-basica-de-comandos/
 [bd]: /bases-de-datos/
