@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos programación Android: Conceptos básicos y componentes'
-
+modified: 2016-09-16T09:12
 layout: post.amp
 permalink: /fundamentos-programacion-android/
 categories:
@@ -14,6 +14,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
+{% include toc.html %}
 
 ## Conceptos básicos
 
@@ -22,7 +23,6 @@ color: "#689F38"
 Estos ficheros se generan con la herramienta apk (En el directorio tools del SDK) al terminar de compilar.
 
 Las aplicaciones en Android tienen su propio entorno seguro de ejecución:
-
 
 <!--ad-->
 
@@ -82,15 +82,8 @@ Con esta clase se permite acceder al sistema de ficheros, bases de datos SQLite 
 
 Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.
 
-* * *
-
-#### Siguiente tema: [Fundamentos programación Android: Intents y AndroidManifest][2] 
-
-
-
+### Siguiente tema: [Fundamentos programación Android: Intents y AndroidManifest][2] 
 
 
  [1]: https://elbauldelprogramador.com/programacion-android-hola-mundo/
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
-
-{% include toc.html %}

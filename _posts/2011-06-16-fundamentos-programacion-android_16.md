@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos programación Android: Intents y AndroidManifest'
-
+modified: 2016-09-15T13:50
 layout: post.amp
 permalink: /fundamentos-programacion-android_16/
 categories:
@@ -15,6 +15,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
+{% include toc.html %}
 
 ## Intents
 
@@ -23,7 +24,6 @@ Las Actividades, Servicios y BroadcastReceiver se activan a través de mensajes 
 ***Un intent es un objeto que contiene todos los datos del mensaje.***
 
 Hay tres métodos para activar cada uno de los componentes:
-
 
 <!--ad-->
 
@@ -37,22 +37,12 @@ Para poder usar un componente, además de crearlo extendiendo de su clase corres
 
 Cada componente tiene su propia etiqueta xml:
 
-  * <activity>: Para actividades.</activity>
-  * <service>: Para servicios.</service>
-  * <receiver>: Para receptores de mensajes de difusión.</receiver>
-  * <provider>: Para proveedores de contenidos.</provider>
-  * <intent>: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.</intent>
+  * `<activity>`: Para actividades.
+  * `<service>`: Para servicios.
+  * `<receiver>`: Para receptores de mensajes de difusión.
+  * `<provider>`: Para proveedores de contenidos.
+  * `<intent>`: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.
 
-
-
-* * *
-
-#### Siguiente Tema: [Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos][1] 
-
-
-
-
+## Siguiente Tema: [Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos][1] 
 
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
-
-{% include toc.html %}
