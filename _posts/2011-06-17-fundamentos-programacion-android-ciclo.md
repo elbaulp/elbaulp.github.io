@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos programación Android: Ciclo de vida de los componentes'
-
+modified: 2016-09-17T09:15
 layout: post.amp
 permalink: /fundamentos-programacion-android-ciclo/
 categories:
@@ -15,13 +15,11 @@ main-class: "android"
 color: "#689F38"
 ---
 
-
 Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos ***callback*** que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.
 
 ### Ciclo de vida de los Receiver
 
 Tienen un ciclo de vida muy corto, ya que se activan al producirse un mensaje de difusión, que capturan con el método callback:
-
 
 <!--ad-->
 
@@ -47,9 +45,9 @@ Tiene tres estados:
 
 La clase Activity dispone de métodos que se llaman cada vez que ésta cambia de estado, para permitirnos realiar tareas como guardar los datos antes de cambiar de estado, y cargar la actividad más rápido la proxima vez que se muestre. A continuación un diagrama con los distintos estados por los que pasa una actividad:
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="ciclo de vida actividades" alt="ciclo de vida actividades"  height="500" width="407" src="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="ciclo de vida actividades" alt="ciclo de vida actividades"  height="711" width="545 " src="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png"></amp-img>
+</figure>
 
   * ***onCreate(Bundle savedInstanceState):*** Este método se llama al crear la actividad. Siempre se sobreescribe para configurar la vista, crear adaptadores, rellenar los objetos con sus valores etc. Puede recibir como parámetro el estado anterior de la actividad para que podamos restaurarla.
   * ***onPause():*** Es llamado justo antes de que se traiga a primer plano otra actividad. Aquí es donde debemos guardar los datos para no perder la información de la actividad si esta es sacada de la pila. Dentro de este método también se suele parar las tareas pesadas que consuman CPU.
@@ -69,16 +67,13 @@ Los servicios se pueden usar de dos formas, dependiendo de como lo lancemos, su 
 
 A continuación el diagrama con el ciclo de vida de los servicios:
 
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Ciclo de vida servicios" title="Ciclo de vida servicios"  height="500" width="432" src="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png" /></a>
-</div>
-
-* * *
-
-#### Siguiente Tema: [Fundamentos programación Android: Limpieza de Procesos][1] 
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Ciclo de vida servicios" title="Ciclo de vida servicios"  height="521" width="432" src="https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png"></amp-img>
+</figure>
 
 
+### Siguiente Tema: [Fundamentos programación Android: Limpieza de Procesos][1] 
 
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_18/
 
-{% include toc.html %}
+
