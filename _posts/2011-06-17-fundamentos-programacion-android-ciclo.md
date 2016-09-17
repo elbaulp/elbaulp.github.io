@@ -46,7 +46,7 @@ Tiene tres estados:
 La clase Activity dispone de métodos que se llaman cada vez que ésta cambia de estado, para permitirnos realiar tareas como guardar los datos antes de cambiar de estado, y cargar la actividad más rápido la proxima vez que se muestre. A continuación un diagrama con los distintos estados por los que pasa una actividad:
 
 <figure>
-	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="ciclo de vida actividades" alt="ciclo de vida actividades"  height="711" width="545 " src="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png"></amp-img>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="ciclo de vida actividades" alt="ciclo de vida actividades"  height="711" width="545" src="https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png"></amp-img>
 </figure>
 
   * ***onCreate(Bundle savedInstanceState):*** Este método se llama al crear la actividad. Siempre se sobreescribe para configurar la vista, crear adaptadores, rellenar los objetos con sus valores etc. Puede recibir como parámetro el estado anterior de la actividad para que podamos restaurarla.
