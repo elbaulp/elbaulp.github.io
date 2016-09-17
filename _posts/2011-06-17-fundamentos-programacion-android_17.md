@@ -33,7 +33,7 @@ Podemos modificar este comportamiento con ***flags*** que pasamos al objeto Inte
 Si una pila de tareas se abandona por el usuario durante un periodo de tiempo y el sistema necesita más recursos, se limpia la pila de actividades (excepto la actividad principal), este comportamiento se puede modificar en el manifiesto:
 
 | Atributo              	| Función                                                                                               	|
-|-----------------------	|-------------------------------------------------------------------------------------------------------	|
+|---------------------------|-----------------------------------------------------------------------------------------------------------|
 | `alwaysRetainTaskState` 	| Si vale true, se mantiene la pila aunque se abandone durante mucho tiempo                             	|
 | `clearTaskOnLaunch`     	| Si es true, se limpia la pila (excepto la actividad principal) cada vez que se lleve al segundo plano 	|
 | `finishOnTaskLaunch`    	| Similar a la anterior, pero solo se aplica a la actividad con este atributo fijado a true.            	|
