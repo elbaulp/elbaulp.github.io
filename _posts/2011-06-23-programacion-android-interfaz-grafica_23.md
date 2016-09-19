@@ -57,7 +57,7 @@ Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se a
 
 ### LinearLayout
 
-Este tipo de layout coloca sus hijos unos detras de otros, también comenzando por la esquina superior izquierda de la pantalla. Podemos colocarlos alineados horizontalmente o verticalmente mediante su propiedad ***android:orientation=&#8221;horizontal | vertical&#8221;***
+Este tipo de layout coloca sus hijos unos detras de otros, también comenzando por la esquina superior izquierda de la pantalla. Podemos colocarlos alineados horizontalmente o verticalmente mediante su propiedad ***android:orientation=&#8221;horizontal \| vertical&#8221;***
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -125,8 +125,6 @@ Como vemos, hemos centrado el texto1 en la pantalla con ***android:layout_center
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="relativeLayout Android" alt="relativeLayout Android"  height="437" width="326" src="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png"></amp-img>
 </figure>
-
-Para saber más acerca de todos los tipos de layouts que hay podéis visitar <http:>
 
 ### Siguiente Tema: [Programación Android: Interfaz gráfica - Componentes gráficos y Eventos][1] 
 
