@@ -22,31 +22,28 @@ Hasta ahora, todo lo que llevo escrito en la sección [Android][1], va a ser la 
 
 A continuación voy a escribir lo que queda por ver en esta primera parte del manual:
 
-  * Recursos Android
-
-  * Comprendiendo los Recursos
-
-  * Recursos String
-  * Recursos de layout
-  * Sintaxis de referencia a recursos
-  * Definiendo nuestros propios IDs de recursos
-  * Recursos Android compilados y no compilados
-
-  * Enumerando recursos clave en Android
-  * Trabajando con archivos de recursos XML
-  * Trabajando con recursos Raw
-  * Trabajando con Assets
-  * Repasando la estructura del directorio de Recursos
-  * Cambios en los recursos y configuraciones
-  * StricMode
+* Recursos Android
+* Comprendiendo los Recursos
+* Recursos String
+* Recursos de layout
+* Sintaxis de referencia a recursos
+* Definiendo nuestros propios IDs de recursos
+* Recursos Android compilados y no compilados
+* Enumerando recursos clave en Android
+* Trabajando con archivos de recursos XML
+* Trabajando con recursos Raw
+* Trabajando con Assets
+* Repasando la estructura del directorio de Recursos
+* Cambios en los recursos y configuraciones
+* StricMode
 
 Aún no tengo claro donde acabará el siguiente manual, pero como mínimo se verán a fondo:
 
-  * Proveedores de contenidos
-  * Intents
-  * Construyendo interfaces y usando controles
-  * Menús
-  * Diálogos
+* Proveedores de contenidos
+* Intents
+* Construyendo interfaces y usando controles
+* Menús
+* Diálogos
 
 Quiero mencionar, que todo este temario lo escribo en base a lo que voy aprendiendo del libro [Pro Android 3][2]. Espero plasmar bien en el blog mis conocimientos y que os sean de utilidad.
 
