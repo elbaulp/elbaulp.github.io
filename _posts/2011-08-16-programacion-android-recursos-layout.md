@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Layout'
+title: 'Programación Android: Recursos - Layout'
 layout: post.amp
 permalink: /programacion-android-recursos-layout/
 categories:
@@ -8,10 +8,14 @@ categories:
 tags:
   - curso android pdf
   - layout android
-modified: 2016-08-05T17:29
+modified: 2016-09-20T18:00
 main-class: "android"
 color: "#689F38"
 ---
+
+{% include toc.html %}
+
+## Introducción
 
 En Android, cada pantalla de una aplicación habitualmente se carga desde un fichero XML que actua de recurso. Un recurso layout es un recurso clave que se usa en Android para componer la UI de nuestra aplicación. Vamos a considerar el segmenteo de código siguiente como ejemplo de una [actividad][1] en Android.
 
@@ -31,29 +35,27 @@ public class PrincipalActivity extends Activity {
 La línea ***setContentView(R.layout.main);*** señala que hay una clase estática llamada *R.layout* y, que dentro de esa clase hay una constante entera llamada *main* que apunta a una vista definida por un fichero de recursos layout xML. El nombre del fichero XML es main.xml, el cual debe estar en el directorio *./res/layout*. El contenido de este fichero es el siguiente:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<linearlayout 
-    xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:orientation="vertical" 
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent">
-    
-    <textview 
+<?xml version="1.0" encoding="utf­8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView  
         android:id="@+id/text1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello">
-        
-      <button 
-          android:id="@+id/b1"
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:text="@string/hello" />
-   </textview>
-</linearlayout>
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/hello" />
+    <Button 
+        android:id="@+id/b1"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/hello"/>
+    
+</LinearLayout>
 ```
 
-Vamos a ver la composición de este fichero, como elemento raiz tenemos un elemento llamado `&lt;linearlayout>`, que contiene un *TextView* seguido de un *Button*. Un LinearLayout coloca a sus hijos uno detrás de otro vertical u horizontalmente.
+Vamos a ver la composición de este fichero, como elemento raiz tenemos un elemento llamado `<linearlayout>`, que contiene un *TextView* seguido de un *Button*. Un LinearLayout coloca a sus hijos uno detrás de otro vertical u horizontalmente.
 
 Para cada pantalla que queramos hacer, necesitaremos ficheros layout distintos, mejor dicho, cada layout debe estar en un fichero, como ***./res/layout/screen1.xml y ./res/layout/screen2.xml***
 
@@ -78,14 +80,15 @@ tv.setText("Texto para el TextView")
 En este ejemplo, hemos localizado el TextView usando el método ***findViewById()*** de la clase Activity. La constante *R.id.text1* corresponde al ID definido para el TextView en el fichero XML, que creamos de la siguiente manera:
 
 ```xml
-<textview android:id="@+id/text1">
+<TextView
+        android:id="@+id/text1"
+....
+/>
 ```
 
 El valor del atributo id, indica que la constante llamada text1 será usada para identificar únicamente a esa vista. El signo + de ***+id/text1*** significa que el ID text1 será creado si no existe. En la siguiente entrada se tratará la sintaxis de los recursos.
 
-* * *
-
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Sintaxis de los Recursos][2]
+## Siguiente Tema: [Programación Android: Recursos &#8211; Sintaxis de los Recursos][2]
 
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
  [2]: https://elbauldelprogramador.com/programacion-android-recursos-sintaxis/

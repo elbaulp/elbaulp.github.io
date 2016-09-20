@@ -1,6 +1,5 @@
 ---
 title: Planteamiento del Curso de Android
-
 layout: post.amp
 permalink: /planteamiento-del-curso-de-android/
 categories:
@@ -8,15 +7,14 @@ categories:
   - opensource
 tags:
   - curso android pdf
+modified: 2016-09-20T17:55
 main-class: "android"
 color: "#689F38"
 ---
 
-
 Antes de nada, quiero pedir disculpas por haber estado poco activo estos meses de verano en el blog, a partir de ahora voy a intentar ser más regular con respecto a la publicación de entradas.
 
 Quiero plantear así por encima qué temas voy a tratar sobre la programación Android y cómo se va a estructurar el manual.
-
 
 <!--ad-->
 
@@ -41,6 +39,7 @@ A continuación voy a escribir lo que queda por ver en esta primera parte del ma
   * Repasando la estructura del directorio de Recursos
   * Cambios en los recursos y configuraciones
   * StricMode
+
 Aún no tengo claro donde acabará el siguiente manual, pero como mínimo se verán a fondo:
 
   * Proveedores de contenidos
@@ -53,9 +52,5 @@ Quiero mencionar, que todo este temario lo escribo en base a lo que voy aprendie
 
 Un saludo
 
-
-
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/pro-android-3-aprende-fondo-todo-lo-que
-
-{% include toc.html %}

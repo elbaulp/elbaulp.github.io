@@ -1,6 +1,6 @@
 ---
-title: 'Programación Android: Recursos &#8211; Introducción'
-
+title: 'Programación Android: Recursos - Introducción'
+modified: 2016-09-20T17:00
 layout: post.amp
 permalink: /programacion-android-recursos/
 categories:
@@ -13,9 +13,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
-
 Ya hemos visto que Android separa los recursos (imágenes, sonidos etc) del código colocándolos organizados dentro del directorio ***./res***. Esto nos facilita su mantenimiento, además de permitirnos usar diferentes recursos dependiendo de la configuración del terminal.
-
 
 <!--ad-->
 
@@ -25,15 +23,15 @@ Un recurso puede usarse por defecto (Se mostrará en cualquier dispositivo, inde
 
 Dos dispositivos distintos, usando recursos por defecto:
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s1600/resource_devices_diagram1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="130" width="400" src="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s400/resource_devices_diagram1.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="137" width="421" src="https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s800/resource_devices_diagram1.png"></amp-img>
+</figure>
 
 Dos dispositivos distintos, usando recursos alternativos:
 
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s1600/resource_devices_diagram2.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="130" width="400" src="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s400/resource_devices_diagram2.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Recursos en Android" alt="Recursos en Android"  height="137" width="421" src="https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s800/resource_devices_diagram2.png"></amp-img>
+</figure>
 
 Por ejemplo, podemos crear iconos más pequeños para que sean mostrados en los terminales con pantallas más pequeñas o diseñar una disposición de pantalla diferente para cuando la aplicación se esté ejecutando en modo apaisado, para conseguir esto, simplemente creamos una carpeta de recursos añadiendo el sufijo que indica la situación en la que debe usarse.
 
@@ -41,19 +39,10 @@ Para el caso del idioma, crearíamos un archivo xml con las cadenas traducidas a
 
 Para el caso del layout personalizado cuando la pantalla esté en modo apaisado, meteríamos nuestro layout dentro de ***res/layout-land/***
 
-.
-
 Para saber más acerca de los tipos de sufijos que se pueden usar, visita [Providing Resources en la página oficial de Android.][1]
 
-* * *
-
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Usando recursos][2] 
-
-
-
+## Siguiente Tema: [Programación Android: Recursos &#8211; Usando recursos][2] 
 
 
  [1]: http://developer.android.com/guide/topics/resources/providing-resources.html
  [2]: https://elbauldelprogramador.com/programacion-android-recursos-usando/
-
-{% include toc.html %}
