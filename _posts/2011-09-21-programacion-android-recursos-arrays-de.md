@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Arrays de strings'
+title: 'Programación Android: Recursos - Arrays de strings'
 layout: post.amp
 permalink: /programacion-android-recursos-arrays-de/
 categories:
@@ -39,6 +39,6 @@ for (String s: strings)
    Log.d("ejemplo", s);
 ```
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Plurales][1] 
+#### Siguiente Tema: [Programación Android: Recursos - Plurales][1] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-plurales/

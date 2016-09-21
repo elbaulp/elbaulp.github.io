@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Estilos y Temas'
+title: 'Programación Android: Interfaz gráfica - Estilos y Temas'
 
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica_18/
@@ -119,7 +119,7 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Introducción][2] 
+#### Siguiente Tema: [Programación Android: Recursos - Introducción][2] 
 
  [1]: http://developer.android.com/guide/topics/ui/themes.html
  [2]: https://elbauldelprogramador.com/programacion-android-recursos/

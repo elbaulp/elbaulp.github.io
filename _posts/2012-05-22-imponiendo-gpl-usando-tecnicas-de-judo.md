@@ -106,7 +106,7 @@ No se puede copiar, modificar, sublicenciar, o distribuir el Programa excepto co
 
 La diferencia entre el enfoque de Harald Welte y la SFC está en que la SFC utiliza el restablecimiento de la licencia de BusyBox como &#8220;una palanca para obtener el código fuente para otros programas como el kernel de Linux&#8221;, y en la experiencia de Welte esto no ha sido necesario. &#8220;No todo lo que es jurídicamente posible es éticamente correcto. Pero entonces, la ética y las costumbres legales difieren ampliamente en las comunidades FOSS , como lo hacen en la sociedad en general. Algunos países y comunidades creen en la pena de muerte, otras no. Algunos países permiten el aborto, otros no. Algunos permiten la prostitución, otros no. Así que la hora de juzgar si esta &#8216;palanca de restablecimiento&#8221; es aceptable o no, tenemos que aceptar que puede haber diferentes líneas de pensamiento.&#8221;
 
-Su conclusión es que &#8220;el mejor método, sin lugar a dudas, es tener un propietario de los derechos de los otros programas a fin de que cualquier demanda de código fuente (en oposición a una mera solicitud sin amenaza legal implícita o explícita)&#8221; &#8211; un punto de vista que es compartido por la SFC.
+Su conclusión es que &#8220;el mejor método, sin lugar a dudas, es tener un propietario de los derechos de los otros programas a fin de que cualquier demanda de código fuente (en oposición a una mera solicitud sin amenaza legal implícita o explícita)&#8221; - un punto de vista que es compartido por la SFC.
 
 Desde ambos puntos de vista, el objetivo es el cumplimiento, no el litigio, eliminación de los productos o castigo de los errores. Hay una gran brecha entre la percepción de maniobras legales y su aplicación en el mundo real.
 

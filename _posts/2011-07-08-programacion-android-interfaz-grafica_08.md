@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Menús'
+title: 'Programación Android: Interfaz gráfica - Menús'
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica_08/
 categories:
@@ -158,7 +158,7 @@ Podéis encontrar más información sobre Menús en la [página oficial de Andro
 
 Espero que os sirva de ayuda.
 
-### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones][3] 
+### Siguiente Tema: [Programación Android: Interfaz gráfica - Diálogos y notificaciones][3] 
 
  [1]: http://developer.android.com/guide/topics/ui/menus.html
  [2]: http://devgui-android-es.netii.net/descargar.php?archivo=menus.zip&sub;=android

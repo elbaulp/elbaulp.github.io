@@ -12,7 +12,7 @@ color: "#61B38D"
 [![Simply SQL][1]][2]  
 
 
-**Description: **Teach Yourself SQL &#8211; The Easy Way! You&#8217;ll learn how to make the most of your data using best-practice SQL code. Rather than bore you with theory, it focuses on the practical use of SQL with common databases and uses plenty of diagrams, easy-to-read text, and examples to help make learning SQL easy and fun.
+**Description: **Teach Yourself SQL - The Easy Way! You&#8217;ll learn how to make the most of your data using best-practice SQL code. Rather than bore you with theory, it focuses on the practical use of SQL with common databases and uses plenty of diagrams, easy-to-read text, and examples to help make learning SQL easy and fun.
 
 [Descárgala desde aqui][2] o  
 Visita la página [Manuales gratuitos][3] para ver las guías disponibles.

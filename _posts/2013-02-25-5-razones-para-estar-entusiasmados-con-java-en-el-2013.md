@@ -48,7 +48,7 @@ El nuevo set del motor JavaScript a incluir en Java 8 integrará <a href="http:/
 
 Iniciado en secreto, Nashorn fue liberado en Noviembre y apareció en el repositorio OpenJDK<a href="https://blogs.oracle.com/nashorn/entry/open_for_business" target="_blank"> cuatro días antes de Navidad</a>. Otro gran punto extra para Nashorn es la inclusión crucial del extendidamente popular node.js dentro de lo pactado, marcando el comienzo de un futuro políglota. Con muchos más detalles prometidos, estaremos monitoreando, esta vez, con ojos de águila.
 
-**4. Sacando más partido de tu inversión &#8211; Aprovechando la GPU **
+**4. Sacando más partido de tu inversión - Aprovechando la GPU **
 
 Otro proyecto en OpenJDK que tiene un gran potencial es <a href="http://openjdk.java.net/projects/sumatra/" target="_blank">Sumatra</a>, con el objetivo de potenciar un mayor rendimiento de Java utilizando la GPU. Las investigaciones iniciales están focalizadas en la JVM Hotspot para asentar las bases, antes de &#8216;apuntalar&#8217; las librerías de Java 8 y las características propias del lenjuaje como *lambdas *para testear las técnicas que utilizan las últimas vanguardias de Java.
 

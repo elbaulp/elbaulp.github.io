@@ -32,7 +32,7 @@ Ya hemos visto en profundidad cómo configurar nuestro navegador web para usar P
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="diagrama de nodos" src="/assets/img/2012/12/081012_1604_AchievingAn11.png" width="300px" height="128px"></amp-img>
 </figure>
 
-Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella &#8211; en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).
+Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella - en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).
 
 Esa es una visión general de cómo deberían trabajar todos en conjunto, pero todavía falta configurar todos los componentes para que funcionen juntos correctamente. Primero se debe instalar Burp Suite (No se considera necesario detallar los pasos para ello). Cuando Burp está inicializado, se debe ver el puerto 8080 abierto y en estado LISTEN:
 
@@ -142,7 +142,7 @@ dig @localhost -p 53 3g2upl4pq6kufc4m.onion
 
 Ambos comandos reportan la dirección IP 127.192.0.10. Podemos observar que esa dirección IP pertenerce al localhost, dado que todas las direcciones IP 127.0.0.0/24 son asignadas al localhost, de hecho 127.0.0.1 es la más comunmente usada. Esto efectivamente logra anonimizar los servidores web en la red Tor, ergo, no se pueden rastrear.
 
-Pero hay más que contar en esta historia que sólo la resolución de los dominios .onion, pero no entraremos en detalle por el momento &#8211; queda pendiente para futuros artículos.
+Pero hay más que contar en esta historia que sólo la resolución de los dominios .onion, pero no entraremos en detalle por el momento - queda pendiente para futuros artículos.
 
 ## 5. Opciones de log en Tor
 

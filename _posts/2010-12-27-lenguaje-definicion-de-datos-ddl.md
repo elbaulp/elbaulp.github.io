@@ -1,5 +1,5 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias'
+title: 'Lenguaje Definición de Datos (DDL) - Índices y secuencias'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl/
 modified: 2016-08-16T11:00
@@ -84,7 +84,7 @@ INSERT INTO employees VALUES
 SELECT employee_id, last_name FROM employees WHERE last_name = 'Valdivia';
 ```
 
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Sinónimos y Pseudocolumnas][1] 
+#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas][1] 
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
 

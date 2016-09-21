@@ -1,5 +1,5 @@
 ---
-title: 'Fundamentos aplicaciones Android &#8211; (Parte II) &#8211; Componentes'
+title: 'Fundamentos aplicaciones Android - (Parte II) - Componentes'
 layout: post.amp
 permalink: /fundamentos-aplicaciones-android-parte_18/
 modified: 2016-09-06T10:00

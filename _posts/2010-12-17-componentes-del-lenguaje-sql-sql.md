@@ -545,5 +545,5 @@ Condiciones que se indican en clausula WHERE de una consulta SQL. La siguiente t
 
 ### Bibliografia: www.devjoker.com
     
-Siguiente tema: <a href="https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/">Lenguaje Definición de Datos(DDL) &#8211; CREATE.</a>
+Siguiente tema: <a href="https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/">Lenguaje Definición de Datos(DDL) - CREATE.</a>
 

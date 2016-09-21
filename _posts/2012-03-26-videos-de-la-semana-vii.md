@@ -14,7 +14,7 @@ color: "#262626"
 
 Aunque hace algunas semanas que no he publicado esta sección, aquí está de nuevo con 3 vídeos que espero que os gusten.
 
-### Ed&#8217;s story &#8211; It ain&#8217;t over
+### Ed&#8217;s story - It ain&#8217;t over
 
 Un vídeo realmente profundo, sobre un pastor al que le diagnosticaron ALS (amyotrophic lateral sclerosis), y en este vídeo nos explica cómo se tomó la notícia, y tras un tiempo, cómo decidió vivir su vida. El vídeo de vimeo no está subtitulado, pero podéis encontrarlo con subtítuos en la web de <a target="_blank" href="http://edsstory.com/films/it-aint-over.php">edsstory</a> (Seleccionar el idoma en el botón CC de arriba a la derecha), donde encontraréis más vídeos sobre este hombre. A mi personalmente me han marcado sus palabras. También es interesante <a target="_blank" href="http://vimeo.com/30567615">Ask Forgiveness</a>.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Intents &#8211; Conceptos básicos'
+title: 'Programación Android: Intents - Conceptos básicos'
 
 layout: post.amp
 permalink: /programacion-android-intents-conceptos/
@@ -245,7 +245,7 @@ Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invo
 
 * * *
 
-#### Siguiente Tema: [Intents &#8211; Categorías][5] 
+#### Siguiente Tema: [Intents - Categorías][5] 
 
 
 

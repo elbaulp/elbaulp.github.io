@@ -1,5 +1,5 @@
 ---
-title: 'Consulta de Datos &#8211; Cláusula HAVING y ORDER BY'
+title: 'Consulta de Datos - Cláusula HAVING y ORDER BY'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-having-y/
 modified: 2016-08-19T11:20
@@ -47,6 +47,6 @@ La cláusula `ORDER BY` puede incluir columnas que no aparecen en la select list
 
 Los valores nulos se consideran como los más pequeños posibles.
 
-## Siguiente Tema: [Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.][1] 
+## Siguiente Tema: [Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.][1] 
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/

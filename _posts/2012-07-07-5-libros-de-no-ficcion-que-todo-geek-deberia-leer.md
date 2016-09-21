@@ -185,7 +185,7 @@ A continuación una lista de libros que han recomendado los lectores del blog en
 </div></article>
 
 <article class="box-item animate">
-<h2>Underground &#8211; Julian Assange</h2>
+<h2>Underground - Julian Assange</h2>
 <p>Un libro necesario sobre la fascinante contracultura que mezcla las reivindicaciones políticas, el candor anarquista y la demostración de la genialidad. Ésta es la asombrosa historia real de cómo Julian Assange, bajo el pseudónimo de Mendax, y sus compañeros en el reino del underground se infiltran en los sitios de la Nasa, el Ejército Americano o Citibank. Descubren la ciberguerra, escuchan al FBI escucharlos, buscan un refugio a su infelicidad. Tienen entre 15 y 18 años y se sienten exploradores, pero la policía los busca como a criminales. Lleno de suspense como la mejor novela de detectives, Underground es el gran libro sobre esta revolucionara forma de activismo político que está cambiando nuestro mundo.</p>
 <div class="tags">
 <a href="http://www.amazon.es/gp/product/B006GFT56S/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B006GFT56S&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>
@@ -212,7 +212,7 @@ A continuación una lista de libros que han recomendado los lectores del blog en
 </div></article>
 
 <article class="box-item animate">
-<h2>Hackers: Heroes of the Computer Revolution &#8211; 25th Anniversary Edition</h2>
+<h2>Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition</h2>
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/Hackers-Heroes-of-the-Computer-Revolution-25th-Anniversary-Edition.jpg" title="Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition" alt="Hackers: Heroes of the Computer Revolution - 25th Anniversary Edition" width="331px" height="500px" />
 </figure>
@@ -236,7 +236,7 @@ A continuación una lista de libros que han recomendado los lectores del blog en
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/Hackers-Painters-Big-Ideas-from-the-Computer-Age.jpg" title="Hackers & Painters: Big Ideas from the Computer Age" alt="Hackers & Painters: Big Ideas from the Computer Age" width="325px" height="500px" />
 </figure>
-<p>&#8220;The computer world is like an intellectual Wild West, in which you can shoot anyone you wish with your ideas, if you&#8217;re willing to risk the consequences. &#8221; &#8211;from Hackers & Painters: Big Ideas from the Computer Age, by Paul Graham</p>
+<p>&#8220;The computer world is like an intellectual Wild West, in which you can shoot anyone you wish with your ideas, if you&#8217;re willing to risk the consequences. &#8221; -from Hackers & Painters: Big Ideas from the Computer Age, by Paul Graham</p>
 <p>We are living in the computer age, in a world increasingly designed and engineered by computer programmers and software designers, by people who call themselves hackers. Who are these people, what motivates them, and why should you care?</p>
 <div class="tags">
 <a href="http://www.amazon.es/gp/product/1449389554/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1449389554&linkCode=as2&tag=libros-geek-21" target="_blank">Ver en Amazon</a>

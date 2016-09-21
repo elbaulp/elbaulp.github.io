@@ -151,7 +151,7 @@ y el resultado después de ejecutar la sentencia MERGE sería:
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="136" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s800/tablamerge.png" width="374"></amp-img>
 </figure>
 
-## Siguiente Tema: [Consulta de Datos &#8211; Cláusula Select][7] 
+## Siguiente Tema: [Consulta de Datos - Cláusula Select][7] 
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
  [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/

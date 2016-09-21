@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones'
+title: 'Programación Android: Interfaz gráfica - Diálogos y notificaciones'
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica_11/
 categories:
@@ -194,7 +194,7 @@ Se puede descargar el proyecto de esta entrada aquí:
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Estilos y Temas][2] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Estilos y Temas][2] 
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/

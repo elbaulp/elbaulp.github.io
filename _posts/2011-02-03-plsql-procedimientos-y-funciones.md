@@ -140,7 +140,7 @@ END;
 ```
 
 
-## Siguiente tema: [PL/SQL &#8211; Paquetes (Packages)][3]
+## Siguiente tema: [PL/SQL - Paquetes (Packages)][3]
 
  [1]: https://elbauldelprogramador.com/bloques-plsql/
  [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/

@@ -62,7 +62,7 @@ En este caso para acceder a cada campo que tuviera el tabla employee mediante la
 Un bloque tiene acceso a los objetos identificados dentro de su esquema. Solo podremos acceder a los objetos del usuario donde estemos conectados y a los que ese usuario pueda acceder porque le hayan otorgado permisos.
 
 
-## Siguiente Tema: [PL/SQL &#8211; Estructuras básicas de control][1] 
+## Siguiente Tema: [PL/SQL - Estructuras básicas de control][1] 
 
  [1]: https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/
 

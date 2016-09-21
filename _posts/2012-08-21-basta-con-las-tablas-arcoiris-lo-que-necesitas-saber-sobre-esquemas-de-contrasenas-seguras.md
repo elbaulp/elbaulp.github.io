@@ -29,13 +29,13 @@ En la esfera social de bookmark (&#8220;socialbookmarkosphere&#8221;) se habla [
 Ahora re-expliquemos las Tablas Arcoiris:  
 <!--ad-->
 
-1. Toma un &#8220;diccionario&#8221; &#8211; por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.
+1. Toma un &#8220;diccionario&#8221; - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.
 
 2. Encríptalas a todas.
 
 3. Graba los resultados en un DVD.
 
-Ahora tienes cientos de billones de valores hash que pueden revertirse al valor original &#8211; una &#8220;tabla arcoiris&#8221;. Para usarla,
+Ahora tienes cientos de billones de valores hash que pueden revertirse al valor original - una &#8220;tabla arcoiris&#8221;. Para usarla,
 
 1. Toma tu tabla de hashes robada
 
@@ -49,7 +49,7 @@ Si está allí, lo resolviste.
 
 Las Tablas Arcoiris son de fácil acierto. Para cada clave, genera un número aleatorio (un &#8216;*nonce&#8217;*). Genera el hash de la contraseña con el nonce, y almacena ambos valores. El servidor dispone de información suficiente para verificar contraseñas (el nonce se guarda descubierto). Pero incluso con un pequeño valor aleatorio, digamos, 16 bits, las tablas arcoiris son inviables: en la actualidad hay 65.536 &#8220;variantes&#8221; de cada hash, y en vez de 300 billones de entradas en la tabla arcoiris, necesitas cuatrillones. El nonce en este esquema se llama &#8220;salt&#8221; (sal).
 
-Genial, ¿no? Sí, y la <a href="http://en.wikipedia.org/wiki/Crypt_%28Unix%29" target="_blank">criptografía Unix</a> &#8211; casi el *mínimo común denominador* en sistemas de seguridad &#8211; ha tenido esta característica <a href="http://static.usenix.org/events/usenix99/provos/provos_html/node9.html" target="_blank">desde 1976</a>. Si esto son novedades para tí, no deberías estar diseñando sistemas de contraseñas. Usa alguna buena de otro.
+Genial, ¿no? Sí, y la <a href="http://en.wikipedia.org/wiki/Crypt_%28Unix%29" target="_blank">criptografía Unix</a> - casi el *mínimo común denominador* en sistemas de seguridad - ha tenido esta característica <a href="http://static.usenix.org/events/usenix99/provos/provos_html/node9.html" target="_blank">desde 1976</a>. Si esto son novedades para tí, no deberías estar diseñando sistemas de contraseñas. Usa alguna buena de otro.
 
 **No, en serio. <a href="http://www.openwall.com/john/interviews/SF-20060222-p3" target="_blank">Usa algún sistema de contraseñas de otro</a>. No construyas uno propio.**
 

@@ -26,9 +26,9 @@ A partir de esta semana voy a tomarme en serio esta sección y publicaré semana
 
 El gran Alejandro Ramos está escribiendo una serie de artículos explicando técnicas forenses para bases de datos SQLite, sin duda no tiene desperdicio echarle un vistazo. Aprenderás cómo se estructura la cabecera de estas bases de datos y a sacar información valiosa de ella:
 
-  * <a title="Forense de SQLite I - Recursos" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-i-recursos.html" target="_blank">Forense de SQLite I &#8211; Recursos</a>
-  * <a title="Forense de SQLite II - Cabecera" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-ii-cabecera.html" target="_blank">Forense de SQLite II &#8211; Cabecera</a>
-  * <a title="Forense de SQLite III - Páginas Libres" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-iii-paginas-libres.html" target="_blank">Forense de SQLite III &#8211; Páginas Libres</a>
+  * <a title="Forense de SQLite I - Recursos" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-i-recursos.html" target="_blank">Forense de SQLite I - Recursos</a>
+  * <a title="Forense de SQLite II - Cabecera" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-ii-cabecera.html" target="_blank">Forense de SQLite II - Cabecera</a>
+  * <a title="Forense de SQLite III - Páginas Libres" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-iii-paginas-libres.html" target="_blank">Forense de SQLite III - Páginas Libres</a>
 
 Seguimos hablando de seguridad, esta vez en el blog de Chema Alonso:  
 <!--ad-->

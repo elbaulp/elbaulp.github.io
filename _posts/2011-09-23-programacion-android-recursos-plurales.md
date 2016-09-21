@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Plurales'
+title: 'Programación Android: Recursos - Plurales'
 
 layout: post.amp
 permalink: /programacion-android-recursos-plurales/
@@ -173,7 +173,7 @@ En la mayoria de los idiomas normalmente hay dos posibles valores, &#8220;one&#8
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios][1] 
+#### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos XML arbitrarios][1] 
 
 
 

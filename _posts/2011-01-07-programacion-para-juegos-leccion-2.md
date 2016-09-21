@@ -1,5 +1,5 @@
 ---
-title: 'Programación para Juegos &#8211; Lección 2 &#8211; Imágenes Optimizadas'
+title: 'Programación para Juegos - Lección 2 - Imágenes Optimizadas'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-2/
 modified: 2016-08-19T09:30
@@ -289,7 +289,7 @@ Fuente:
 
 [lazyfoo.net][3]
 
-## Siguiente tema: [Programación para Juegos &#8211; Lección 3 Librerías de SDL][4] 
+## Siguiente tema: [Programación para Juegos - Lección 3 Librerías de SDL][4] 
 
  [1]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson02
  [2]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-12/

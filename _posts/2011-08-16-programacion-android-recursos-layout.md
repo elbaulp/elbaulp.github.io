@@ -88,7 +88,7 @@ En este ejemplo, hemos localizado el TextView usando el método ***findViewById(
 
 El valor del atributo id, indica que la constante llamada text1 será usada para identificar únicamente a esa vista. El signo + de ***+id/text1*** significa que el ID text1 será creado si no existe. En la siguiente entrada se tratará la sintaxis de los recursos.
 
-## Siguiente Tema: [Programación Android: Recursos &#8211; Sintaxis de los Recursos][2]
+## Siguiente Tema: [Programación Android: Recursos - Sintaxis de los Recursos][2]
 
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
  [2]: https://elbauldelprogramador.com/programacion-android-recursos-sintaxis/

@@ -61,11 +61,11 @@ Por último añadimos la función como un *[shortcode][3]* y ya está lista para
 
 Para usar el shortcode debemos conocer el **id** de la categoría a mostrar, o reemplazar el parámetro ***cat=*** por cualquiera de los siguientes:
 
-* **<tt>cat</tt>** (*int*) &#8211; El usado por este código, requiere el ID.
-* **<tt>category_name</tt>** (*string*) &#8211; Usar el slug de la categoría.
-* **<tt>category__and</tt>** (*array*) &#8211; Usa el ID.
-* **<tt>category__in</tt>** (*array*) &#8211; Usa el ID.
-* **<tt>category__not_in</tt>** (*array*) &#8211; Usa el ID.
+* **<tt>cat</tt>** (*int*) - El usado por este código, requiere el ID.
+* **<tt>category_name</tt>** (*string*) - Usar el slug de la categoría.
+* **<tt>category__and</tt>** (*array*) - Usa el ID.
+* **<tt>category__in</tt>** (*array*) - Usa el ID.
+* **<tt>category__not_in</tt>** (*array*) - Usa el ID.
 
 ### Ejemplo de uso
 

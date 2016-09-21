@@ -28,25 +28,25 @@ Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadi
 <a href="/programacion-android-recursos">Programación Android: Recursos compilados y no compilados</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-arrays-de">Programación Android:Recursos &#8211; Arrays de strings</a>
+<a href="/programacion-android-recursos-arrays-de">Programación Android:Recursos - Arrays de strings</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-plurales">Programación Android: Recursos &#8211; Plurales</a>
+<a href="/programacion-android-recursos-plurales">Programación Android: Recursos - Plurales</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-trabajar.html">Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios</a>
+<a href="/programacion-android-recursos-trabajar.html">Programación Android: Recursos - Trabajar con recursos XML arbitrarios</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-trabajar">Programación Android: Recursos &#8211; Trabajar con recursos RAW</a>
+<a href="/programacion-android-recursos-trabajar">Programación Android: Recursos - Trabajar con recursos RAW</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos &#8211; Trabajar con recursos Assets</a>
+<a href="/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos - Trabajar con recursos Assets</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-repasando">Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos</a>
+<a href="/programacion-android-recursos-repasando">Programación Android: Recursos - Repasando la estructura del directorio de recursos</a>
 </li>
 <li>
-<a href="/programacion-android-recursos-recursos">Programación Android: Recursos &#8211; Recursos y cambios de configuración</a>
+<a href="/programacion-android-recursos-recursos">Programación Android: Recursos - Recursos y cambios de configuración</a>
 </li>
 </ul>
 <p class="alert">

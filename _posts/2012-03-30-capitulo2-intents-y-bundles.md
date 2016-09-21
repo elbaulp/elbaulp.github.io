@@ -235,7 +235,7 @@ public class ParametrosActivity extends Activity {
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Conceptos básicos][3] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Conceptos básicos][3] 
 
 
 

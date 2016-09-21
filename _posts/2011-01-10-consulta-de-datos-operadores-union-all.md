@@ -1,5 +1,5 @@
 ---
-title: 'Consulta de Datos &#8211; Operadores UNION [ALL], INTERSECT, MINUS.'
+title: 'Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.'
 layout: post.amp
 permalink: /consulta-de-datos-operadores-union-all/
 modified: 2016-08-19T12:50
@@ -58,6 +58,6 @@ SELECT product_id FROM order_items;
     3. Las funciones agregado calculan los valores por cada grupo.
     4. La cláusula `HAVING` por último excluye las filas que no cumplen la condición de búsqueda.
 
-## Siguiente Tema: [Consulta de Datos &#8211; Subconsultas.][1] 
+## Siguiente Tema: [Consulta de Datos - Subconsultas.][1] 
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-subconsultas/

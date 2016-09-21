@@ -23,7 +23,7 @@ En este artículo veremos un poco sobre el manejo de excepciones en java, esto e
 
 <!--ad-->
 
-### Instrucción Try &#8211; Catch
+### Instrucción Try - Catch
 
 Cuando sabemos que un código podría lanzar un error, como por ejemplo una división entre cero, debemos encerrarla entre un bloque `try-catch`. Veamos un ejemplo:
 

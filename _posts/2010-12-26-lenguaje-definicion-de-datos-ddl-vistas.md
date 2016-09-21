@@ -1,5 +1,5 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) &#8211; Vistas'
+title: 'Lenguaje Definición de Datos (DDL) - Vistas'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl-vistas/
 modified: 2016-08-16T11:00
@@ -61,7 +61,7 @@ La orden para borrar una vista es DROP VIEW. Su sintaxis es:
 DROP VIEW Nombre_vista
 ```
 
-## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Índices y secuencias][2] 
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Índices y secuencias][2] 
 
  [1]: http://es.wikipedia.org/wiki/Lenguaje_de_Manipulaci%C3%B3n_de_Datos
  [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/

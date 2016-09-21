@@ -1,5 +1,5 @@
 ---
-title: 'Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)'
+title: 'Cómo configurar un servidor DNS - Parte 1 (Introducción)'
 layout: post.amp
 permalink: /como-configurar-un-servidor-dns/
 categories:
@@ -46,9 +46,9 @@ color: "#0097A7"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" />
 </figure>
 
-* Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)
-* [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][1]
-* [Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)][2]
+* Cómo configurar un servidor DNS - Parte 1 (Introducción)
+* [Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)][1]
+* [Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)][2]
 
 {% include toc.html %}
 
@@ -58,7 +58,7 @@ color: "#0097A7"
 
 Debo reconocer que el tema de los DNS me ha dado muchos problemas, es algo que para mí ha sido dificil de entender. A base de leer y releer muchos artículos por internet, aprendí a configurar un servidor DNS manualmente. Hoy voy a explicar cómo.
 
-En Linux, **BIND** es el encargado de gestionar los DNS, como su página de ayuda indica (*bind &#8211; bind a name to a socket*), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de **BIND** es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:
+En Linux, **BIND** es el encargado de gestionar los DNS, como su página de ayuda indica (*bind - bind a name to a socket*), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de **BIND** es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:
 
 ```bash
 $ nslookup -type=txt -class=chaos version.bind servidor
@@ -102,7 +102,7 @@ En la figura 2, *named* ha recibido una petición. Busca en su fichero de config
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="Figura 2 - Respondiendo a una petición" src="/assets/img/2013/02/config.png" width="411px" height="185px" />
-<figcaption>Figura 2 &#8211; Respondiendo a una petición</figcaption>
+<figcaption>Figura 2 - Respondiendo a una petición</figcaption>
 </figure>
 
 ### Usando Named.conf

@@ -138,7 +138,7 @@ Como se mencionó arriba, todos los paquetes comienzan con una cabecera común:
 
 La cabecera para cada paquete consiste en:
 
-  * Flags públicas &#8211; 1B, detallando la estructura del resto de la cabecera.
+  * Flags públicas - 1B, detallando la estructura del resto de la cabecera.
   * CID (**Connection ID**).
   * Versión de QUIC.
   * El número de secuencia del paquete.
@@ -175,7 +175,7 @@ Después de la cabecera, siempre hay un bloque payload de texto cifrado autentif
 
 Tras el descifrado, se obtiene el texto plano del bloque de payload que consiste en:
 
-  * Flags privadas &#8211; 1 Byte. (Private Flags &#8211; 1 byte)
+  * Flags privadas - 1 Byte. (Private Flags - 1 byte)
   * Número de grupo del FEC. (FEC Group number)
   * Serie de frames de auto-identificación. (Series of self-identifying Frames)
 

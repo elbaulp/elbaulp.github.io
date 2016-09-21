@@ -1,5 +1,5 @@
 ---
-title: 'Crear un módulo para python con la Python C API (IV) &#8211; HerramientasRed'
+title: 'Crear un módulo para python con la Python C API (IV) - HerramientasRed'
 
 layout: post.amp
 permalink: /crear-modulo-python-con-python-c-api-4/

@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Adapters I'
+title: 'Programación Android: Interfaz gráfica - Adapters I'
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica_28/
 categories:
@@ -184,7 +184,7 @@ Y para un adaptador sin datos:
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="800" width="480" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s800/listaVacia.png"></amp-img>
 </figure>
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters II][2] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Adapters II][2] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/

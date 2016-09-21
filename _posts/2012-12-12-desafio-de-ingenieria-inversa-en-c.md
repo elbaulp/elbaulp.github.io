@@ -15,7 +15,7 @@ color: "#E64A19"
 
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532px" height="449px" />
 
-#### Puedes encontrar la solución a esta práctica en [Desafío de ingeniería inversa en C &#8211; Soluciones][1] {.alert}
+#### Puedes encontrar la solución a esta práctica en [Desafío de ingeniería inversa en C - Soluciones][1] {.alert}
 
 En la asignatura Estructura de Computadores de mi facultad, estamos haciendo una práctica que consiste en coger un ejecutable que haya compilado otro alumno, el cual pide una contraseña alfanumérica y otra numérica. Dicho ejecutable está compilado sin opción de depuración, es decir:
 

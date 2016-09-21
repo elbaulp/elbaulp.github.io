@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Recursos y cambios de configuración'
+title: 'Programación Android: Recursos - Recursos y cambios de configuración'
 
 layout: post.amp
 permalink: /programacion-android-recursos-recursos/

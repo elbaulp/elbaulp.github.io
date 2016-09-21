@@ -15,16 +15,16 @@ Con esta entrada os dejo lo más leido del més en el blog, junto con algunos da
 
 ##### Entradas
 
-  * [Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211; 9GAG.COM][1]
-  * [Chistes de informaticos &#8211; www.desmotivaciones.es][2]
+  * [Humor gráfico - Informáticos, Programadores, geek&#8230; - 9GAG.COM][1]
+  * [Chistes de informaticos - www.desmotivaciones.es][2]
   * [Rootear Samsung Galaxy S GT-I9003][3]
   * [Conectar base de datos sql Server 2008 a aplicación Java remotamente][4]
   * [Por qué nuestro PC necesita un firewall activado][5]
   * [Guerra de navegadores [Humor]][6]
   * [Programación Android: Hola Mundo][7]
   * [Los desarrolladores de GNOME crean &#8220;Boxes&#8221; para la virtualización][8]
-  * [Programación Android: Interfaz gráfica &#8211; Layouts][9]
-  * [Programación Android: Interfaz gráfica &#8211; Diálogos y notificaciones][10]
+  * [Programación Android: Interfaz gráfica - Layouts][9]
+  * [Programación Android: Interfaz gráfica - Diálogos y notificaciones][10]
 
 ##### Usuarios
 

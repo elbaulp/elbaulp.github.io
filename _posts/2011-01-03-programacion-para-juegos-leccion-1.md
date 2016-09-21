@@ -1,5 +1,5 @@
 ---
-title: 'Programación para Juegos &#8211; Lección 1 &#8211; Instalando SDL'
+title: 'Programación para Juegos - Lección 1 - Instalando SDL'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-1/
 modified: 2016-08-19T09:30
@@ -29,7 +29,7 @@ sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libs
 
 Fuente: [lazyfoo.net][4]
 
-## Siguiente tema: [Lección 1.2 &#8211; Hello World][5] 
+## Siguiente tema: [Lección 1.2 - Hello World][5] 
 
  [1]: http://www.lazyfoo.net/SDL_tutorials/lesson01/linux/index.php
  [2]: http://www.lazyfoo.net/SDL_tutorials/lesson01/windows/index.php

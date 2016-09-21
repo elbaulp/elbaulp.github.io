@@ -49,12 +49,12 @@ En <a target="_blank" href="http://www.storm-consultancy.com/">storm-consultancy
 
 > Two things are infinite: the universe and human stupidity; and I&#8217;m not sure about the universe. -- Albert Einstein
 
-> Perl &#8211; The only language that looks the same before and after RSA encryption. -- Keith Bostic
+> Perl - The only language that looks the same before and after RSA encryption. -- Keith Bostic
 
 > I love deadlines. I like the whooshing sound they make as they fly by. -- Douglas Adams
 
 > Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders -- Unknown
 
-> XML is like violence &#8211; if it doesn&#8217;t solve your problems, you are not using enough of it. -- Unknown
+> XML is like violence - if it doesn&#8217;t solve your problems, you are not using enough of it. -- Unknown
 
 > Einstein argued that there must be simplified explanations of nature, because God is not capricious or arbitrary. No such faith comforts the software engineer. -- Fred Brooks

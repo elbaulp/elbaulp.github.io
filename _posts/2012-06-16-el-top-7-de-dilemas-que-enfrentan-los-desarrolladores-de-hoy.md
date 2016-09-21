@@ -18,13 +18,13 @@ color: "#F57C00"
 
 {% include toc.html %}
 
-**Plataformas, bases de datos, control de usuario &#8211; dilemas que atrapan al programador antes de la primera línea de código**
+**Plataformas, bases de datos, control de usuario - dilemas que atrapan al programador antes de la primera línea de código**
 
 Tu jefe lo quiere para ayer, pero más vale que cumpla con los standards de mañana. Los clientes quieren todas las características que se puedan imaginar, pero no te atrevas a confundirlos dándoles todos los botones que desee. Tus compañeros programadores quieren que documentes tu código, pero ellos simplemente responden &#8220;tl;dr&#8221; (Too Long; didn&#8217;t read) a cualquier cosa que escribes.
 
-Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan los desarrolladores. Cada elección, desde la plataforma hasta el almacenamiento de datos, incluyendo a cuánto control darle a los usuarios, está cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnología móvil y la acelerada vanguardia, pareciera como si el mundo de la programación enfrentara una nueva elección &#8211; y dilema &#8211; a un ritmo creciente.
+Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan los desarrolladores. Cada elección, desde la plataforma hasta el almacenamiento de datos, incluyendo a cuánto control darle a los usuarios, está cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnología móvil y la acelerada vanguardia, pareciera como si el mundo de la programación enfrentara una nueva elección - y dilema - a un ritmo creciente.
 
-Empaquetar tus problemas y darles un nombre puede ayudarte a gestionar y tal vez incluso encontrar soluciones, o al menos eso dicen. Con ese fin, aquí presentamos una lista de los dilemas más importantes que enfrentan los programadores de hoy en día. No significa que esté completa &#8211; dicho nuevamente, qué proyecto relacionado con el desarrollo de aplicaciones lo está alguna vez?
+Empaquetar tus problemas y darles un nombre puede ayudarte a gestionar y tal vez incluso encontrar soluciones, o al menos eso dicen. Con ese fin, aquí presentamos una lista de los dilemas más importantes que enfrentan los programadores de hoy en día. No significa que esté completa - dicho nuevamente, qué proyecto relacionado con el desarrollo de aplicaciones lo está alguna vez?
 
 ¿Tienes otro dilema? Agrégalo a los comentarios.  
 
@@ -37,7 +37,7 @@ Si tuviéramos un dólar por cada requisito que nuestros clientes quieren, todav
 
 Este es el dilema: Todos quieren un código rico en características, pero nadie quiere pagar el costo de la gestión de todo eso. Cualquiera que haya tratado de construir algo tan simple como una aplicación de control remoto de cuatro botones sabe cuántos millones y millones de años de diseño se necesitan para crear algo así de simple. Hacer algo elegante exige el sudor que todo lo empapa.
 
-Los clientes, el departamento de marketing, representantes de ventas en el campo &#8211; no importa quién hace la solicitud. Darles el botón que quieren en realidad puede ser lo peor que puedes hacer por ellos. De repente puede haber demasiados botones y demasiada confusión acerca de lo que hace cada uno. Lo ideal es hacer algo lo suficientemente fácil de comprender intuitivamente, pero por desgracia, la creación de algo intuitivo para aquellos que son propensos a pedir demasiado para su software es casi imposible.
+Los clientes, el departamento de marketing, representantes de ventas en el campo - no importa quién hace la solicitud. Darles el botón que quieren en realidad puede ser lo peor que puedes hacer por ellos. De repente puede haber demasiados botones y demasiada confusión acerca de lo que hace cada uno. Lo ideal es hacer algo lo suficientemente fácil de comprender intuitivamente, pero por desgracia, la creación de algo intuitivo para aquellos que son propensos a pedir demasiado para su software es casi imposible.
 
 Ya has intentado citando la vieja &#8220;Regla de las 10.000&#8243; a tu jefe, la cual sostiene que cualquier cosa que valga la pena requiere de al menos 10.000 horas de trabajo para que llegue a ser competente. Eso no hace más que causar gracia, ya que el encargado del area comercial va a dedicar más tiempo a la redacción de un patético reporte o e-mail que a tratar de entender las características que has incluido en tu aplicación, incluso si son las funcionalidades que los usuarios dijeron que deseaban.
 

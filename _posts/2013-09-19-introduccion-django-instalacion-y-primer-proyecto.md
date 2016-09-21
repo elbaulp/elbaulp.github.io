@@ -1,5 +1,5 @@
 ---
-title: 'Introducción a Django &#8211; Instalación y primer proyecto'
+title: 'Introducción a Django - Instalación y primer proyecto'
 
 layout: post.amp
 permalink: /introduccion-django-instalacion-y-primer-proyecto/

@@ -1,5 +1,5 @@
 ---
-title: 'Dig &#8211; Chuleta básica de comandos'
+title: 'Dig - Chuleta básica de comandos'
 
 layout: post.amp
 permalink: /dig-chuleta-basica-de-comandos/

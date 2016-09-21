@@ -1,5 +1,5 @@
 ---
-title: 'ImageSpaceMedia (ISM) &#8211; Gana dinero con las imágenes de tu web'
+title: 'ImageSpaceMedia (ISM) - Gana dinero con las imágenes de tu web'
 
 layout: post.amp
 permalink: /imagespacemedia-ism-gana-dinero-con-las/

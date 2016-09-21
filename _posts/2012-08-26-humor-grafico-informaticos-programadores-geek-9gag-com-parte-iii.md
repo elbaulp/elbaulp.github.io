@@ -1,5 +1,5 @@
 ---
-title: 'Humor gráfico &#8211; Informáticos, Programadores, geek&#8230; &#8211; 9GAG.COM Parte (III)'
+title: 'Humor gráfico - Informáticos, Programadores, geek&#8230; - 9GAG.COM Parte (III)'
 
 layout: post.amp
 permalink: /humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/

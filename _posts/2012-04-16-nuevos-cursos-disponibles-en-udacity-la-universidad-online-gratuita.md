@@ -193,7 +193,7 @@ Impartido por Wetley Weimer, profesos en la Univerdidad de Virginia
 <div id="tab-syllabus" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
 <hr />
 <p >
-<strong>Description</strong>: This class will give you an introduction to fundamentals<br /> of programming languages. In seven weeks, you will build your own simple web browser<br /> complete with the ability to parse and understand HTML and JavaScript. You will learn<br /> key concepts such as how to specify and process valid strings, sentences and program<br /> structures. Then, you will design and build an interpreter &#8211; a program that simulates<br /> other programs.
+<strong>Description</strong>: This class will give you an introduction to fundamentals<br /> of programming languages. In seven weeks, you will build your own simple web browser<br /> complete with the ability to parse and understand HTML and JavaScript. You will learn<br /> key concepts such as how to specify and process valid strings, sentences and program<br /> structures. Then, you will design and build an interpreter - a program that simulates<br /> other programs.
   </p>
 <p class="syllabus-week" >
     WEEK 1:

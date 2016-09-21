@@ -17,23 +17,23 @@ Una de las más interesantes tendencias que se ven ultimamente es la impopularid
 
 Java ha sido ampliamente exitoso por varias razones:
 
-&#8211; Es extensamente aceptado en las compañías establecidas
+- Es extensamente aceptado en las compañías establecidas
 
-&#8211; Es uno de los lenguajes más rápidos
+- Es uno de los lenguajes más rápidos
 
-&#8211; Es uno de los más seguros
+- Es uno de los más seguros
 
-&#8211; Las primitivas de sincronización están incorporadas en el lenguaje
+- Las primitivas de sincronización están incorporadas en el lenguaje
 
-&#8211; Es independiente a la plataforma
+- Es independiente a la plataforma
 
-&#8211; Hotspot es open source
+- Hotspot es open source
 
-&#8211; Existen miles de vendedores para una gran cantidad de productos Java
+- Existen miles de vendedores para una gran cantidad de productos Java
 
-&#8211; Existen miles de librerías open source para Java
+- Existen miles de librerías open source para Java
 
-&#8211; Tiene un gobierno comunitario vía JCP (pre-Oracle)
+- Tiene un gobierno comunitario vía JCP (pre-Oracle)
 
 Estos son aspectos importantes en cualquier lenguaje, y se nota, ya que Java ha disfrutado de una larga racha de ser uno de los lenguajes más populares. Entonces, ¿por qué entre el 2010 y 2011, Java se volvió repentinamente el demonio más odiado?  
 

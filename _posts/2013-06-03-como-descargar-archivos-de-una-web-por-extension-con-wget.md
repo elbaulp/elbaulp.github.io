@@ -26,8 +26,8 @@ wget -r -A.tar.gz <url>
 
 Donde:
 
-  * **-A ó &#8211;accept** es una lista separada por comas de los sufijos o patrones de los ficheros que queremos descargar.
-  * **-r ó &#8211;recursive** actúa recursívamente sobre la web indicada.
+  * **-A ó -accept** es una lista separada por comas de los sufijos o patrones de los ficheros que queremos descargar.
+  * **-r ó -recursive** actúa recursívamente sobre la web indicada.
 
 Este comando no siempre funciona, ya que algunos servidores pueden haber bloqueado el acceso a *wget*.
 

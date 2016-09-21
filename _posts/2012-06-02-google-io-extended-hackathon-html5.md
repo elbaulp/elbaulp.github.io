@@ -270,7 +270,7 @@ color: "#F57C00"
 <div jotid="comments" class="sites-comments">
 <div id="_wuid_" jotid="template" class="sites-comment" >
 <div>
-<strong>_displayNameOrEmail_</strong> &#8211; _time_ &#8211; <a href="javascript:;" onclick="JOT_postEvent('removeComment', this, {wuid:'_wuid_'});">Eliminar</a>
+<strong>_displayNameOrEmail_</strong> - _time_ - <a href="javascript:;" onclick="JOT_postEvent('removeComment', this, {wuid:'_wuid_'});">Eliminar</a>
 </div>
 <p dir="_dir_">
                                                         _text_

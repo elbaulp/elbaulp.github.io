@@ -1,5 +1,5 @@
 ---
-title: 'Consulta de Datos &#8211; Cláusula WHERE'
+title: 'Consulta de Datos - Cláusula WHERE'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-where/
 modified: 2016-08-18T11:50

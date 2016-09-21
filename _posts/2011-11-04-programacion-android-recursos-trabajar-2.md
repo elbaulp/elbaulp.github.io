@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Trabajar con recursos RAW'
+title: 'Programación Android: Recursos - Trabajar con recursos RAW'
 layout: post.amp
 permalink: /programacion-android-recursos-trabajar-2/
 categories:
@@ -45,6 +45,6 @@ private String convertStreamToString(InputStream is)
 
 > Los nombres de ficheros con el mismo nombre base generan un error en el plugin ADT de eclipse.
 
-# Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos Assets][1] 
+# Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos Assets][1] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/

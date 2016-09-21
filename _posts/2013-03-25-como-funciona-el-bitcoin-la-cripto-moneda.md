@@ -16,7 +16,7 @@ tags:
 main-class: "security-now"
 color: "#00BCD4"
 ---
-Hace mucho tiempo que se empezó a hablar sobre el bitcoin y su futuro como moneda digital. Si como yo te has preguntado cómo funciona y quieres saber más acerca de todo el sistema que rodea al bitcoin, en este artículo traduciré el episodio *287 &#8211; BitCoin CryptoCurrency* del programa [Security Now!][1]
+Hace mucho tiempo que se empezó a hablar sobre el bitcoin y su futuro como moneda digital. Si como yo te has preguntado cómo funciona y quieres saber más acerca de todo el sistema que rodea al bitcoin, en este artículo traduciré el episodio *287 - BitCoin CryptoCurrency* del programa [Security Now!][1]
 
 Bicoint fue creado por el criptógrafo Japonés Satoshi Nakamoto y es [open source][2].
 

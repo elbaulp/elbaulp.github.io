@@ -36,7 +36,7 @@ $ sudo apt-get install fail2ban
 
 ### Antes de empezar
 
-Antes de modificar el archivo */etc/fail2ban/jail.conf*, es recomendable &#8211;y de hecho lo menciona el propio archivo en su cabecera &#8212; realizar una copia y trabajar sobre ella:
+Antes de modificar el archivo */etc/fail2ban/jail.conf*, es recomendable -y de hecho lo menciona el propio archivo en su cabecera &#8212; realizar una copia y trabajar sobre ella:
 
 ```bash
 cd /etc/fail2ban && cp jail.conf jail.local

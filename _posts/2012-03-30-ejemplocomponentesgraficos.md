@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Componentes gráficos y Eventos'
+title: 'Programación Android: Interfaz gráfica - Componentes gráficos y Eventos'
 
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica_25/
@@ -158,7 +158,7 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Adapters I][3] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Adapters I][3] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica/
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/

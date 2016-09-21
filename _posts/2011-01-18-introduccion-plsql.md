@@ -25,7 +25,7 @@ El uso del lenguaje PL/SQL es también imprescindible para construir disparadore
 
 PL/SQL soporta todos los comandos de consulta y manipulación de datos, aportando sobre SQL las estructuras de control y otros elementos propios de los lenguajes procedimentales de tercera generación. Su unidad de trabajo es el bloque, formado por un conjunto de declaraciones, instrucciones y mecanismos de gestión de errores y excepciones.
 
-### Siguiente Tema: [Introducción a PL/SQL &#8211; Transacciones][4] 
+### Siguiente Tema: [Introducción a PL/SQL - Transacciones][4] 
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Trabajar con recursos Assets'
+title: 'Programación Android: Recursos - Trabajar con recursos Assets'
 
 layout: post.amp
 permalink: /programacion-android-recursos-trabajar_04/
@@ -33,7 +33,7 @@ String getStringFromAssetFile(Context activity)
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos][1] 
+#### Siguiente Tema: [Programación Android: Recursos - Repasando la estructura del directorio de recursos][1] 
 
 
 

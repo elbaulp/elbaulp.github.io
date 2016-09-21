@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Interfaz gráfica &#8211; Adapters II'
+title: 'Programación Android: Interfaz gráfica - Adapters II'
 layout: post.amp
 permalink: /programacion-android-interfaz-grafica-2/
 categories:
@@ -22,7 +22,7 @@ main-class: "android"
 color: "#689F38"
 ---
 
-En [Programación Android: Interfaz gráfica &#8211; Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
+En [Programación Android: Interfaz gráfica - Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
 
 <!--ad-->
 
@@ -208,7 +208,7 @@ Ya solo resta ejecutarlo y ver el resultado:
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Adaptadores en Android" alt="Adaptadores en Android"  height="800" width="420" src="https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png"></amp-img>
 </figure>
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica &#8211; Menús][2]
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Menús][2]
 
  [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/

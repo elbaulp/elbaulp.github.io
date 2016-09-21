@@ -21,7 +21,7 @@ color: "#F57C00"
 
 ** La propuesta de *SAP-steered* aporta OpenJDK a nuevas plataformas**
 
-SAN FRANCISCO &#8211; Java Open Source (Código Abierto) será llevado a la arquitectura PowerPC para Linux y al SO AIX de IBM bajo una propuesta que se dio a conocer la semana pasada, que eventualmente podría beneficiar a los diferentes distribuidores de Linux.
+SAN FRANCISCO - Java Open Source (Código Abierto) será llevado a la arquitectura PowerPC para Linux y al SO AIX de IBM bajo una propuesta que se dio a conocer la semana pasada, que eventualmente podría beneficiar a los diferentes distribuidores de Linux.
 
 El proyecto proporcionará una versión completa de OpenJDK para las dos plataformas. OpenJDK es la implementación open source de Java estándar. Los puertos de Java para PowerPC ya existen, pero podrían ser extendidos al reino Open Source. &#8220;El propósito de este proyecto es agrupar los recursos para desarrollo de Oracle, de IBM, y de SAP para proporcionar una implementación de referencia Java libre y de última generación en Linux y AIX en PowerPC&#8221;, dijo Volker Simonis, un Java VM hacker y evangelista OpenJDK de SAP, que encabeza el proyecto.  
 
@@ -34,7 +34,7 @@ En la actualidad, ni las distribuciones Linux ni Power vienen sin Java en absolu
 
 En su propuesta, que surgió en un grupo de discusión OpenJDK online, Volker dijo que tener OpenJDK en PowerPC añadiría la primera arquitectura de memoria débil para OpenJDK, dando lugar a correcciones. &#8220;Como ya sabemos de la experiencia pasada, este dará a conocer todos los tipos de problemas complejos de ordenamiento de memoria. Además, agregar AIX como un nuevo sabor de Unix al conjunto de sistemas operativos compatibles descubrirá numerosas suposiciones implícitas y los accesos directos a la base del código, que es sólo cierto para Linux y Solaris. Creemos firmemente que arreglando estos problemas aumentará considerablemente la robustez y extenderá portabilidad de OpenJDK &#8220;.
 
-El proyecto será manejado inicialmente por IBM y SAP, dijo Volker. Los planes para el proyecto incluirían: la provisión de una versión *interpreter-only* (intérprete-único) de la máquina virtual HotSpot, herramientas y bibliotecas de clases para AIX y Linux en 32 &#8211; y PowerPC de 64 bits; JDK 7 certificable en Linux y AIX para PowerPC; una implementación del compilador del servidor C2 en Linux y AIX en PowerPC; la integración de nuevos puertos en las principales ramas JDK8 y 9.
+El proyecto será manejado inicialmente por IBM y SAP, dijo Volker. Los planes para el proyecto incluirían: la provisión de una versión *interpreter-only* (intérprete-único) de la máquina virtual HotSpot, herramientas y bibliotecas de clases para AIX y Linux en 32 - y PowerPC de 64 bits; JDK 7 certificable en Linux y AIX para PowerPC; una implementación del compilador del servidor C2 en Linux y AIX en PowerPC; la integración de nuevos puertos en las principales ramas JDK8 y 9.
 
 Oracle no quiso hacer comentarios sobre la propuesta PowerPC-OpenJDK. SAP se unió al proyecto OpenJDK el año pasado en un esfuerzo por trabajar con los desarrolladores de Oracle, IBM, Apple, Red Hat, y otras innovaciones en Java como parte del estándar JDK Open Source.
 

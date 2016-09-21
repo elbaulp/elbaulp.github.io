@@ -1,5 +1,5 @@
 ---
-title: 'Consulta de Datos &#8211; Cláusula Select'
+title: 'Consulta de Datos - Cláusula Select'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-select/
 modified: 2016-08-18T11:50
@@ -13,7 +13,7 @@ A lo largo de varios post(enlazados entre ellos), vamos a ir viendo las distinta
 
 {% include toc.html %}
 
-# Consulta de Datos &#8211; Cláusula Select
+# Consulta de Datos - Cláusula Select
 
 La instrucción [DML][1] más utilizada es la de consulta de datos SELECT. Su función  
 principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia es capaz de realizar las siguientes funciones:  
@@ -109,7 +109,7 @@ SELECT Cantidad*Precio AS Subtotal FROM LinFacturas
 El renombrado de columnas y/o expresiones puede ser usado en la cláusula ORDER BY; pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.
 
 
-## Siguiente Tema: [Consulta de Datos &#8211; Cláusula FROM][2] 
+## Siguiente Tema: [Consulta de Datos - Cláusula FROM][2] 
 
  [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
  [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/

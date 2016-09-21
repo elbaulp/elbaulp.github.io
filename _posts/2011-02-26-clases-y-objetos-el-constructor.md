@@ -138,7 +138,7 @@ def.ocultar();
 ```
 
 
-## Siguiente tema: [Clases y Objetos &#8211; El Destructor][2]
+## Siguiente tema: [Clases y Objetos - El Destructor][2]
 
  [1]: https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/
  [2]: https://elbauldelprogramador.com/clases-y-objetos-el-destructor/

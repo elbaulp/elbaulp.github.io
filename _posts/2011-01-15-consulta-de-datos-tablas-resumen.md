@@ -1,5 +1,5 @@
 ---
-title: 'Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle'
+title: 'Consulta de Datos - Tablas Resumen operadores y Funciones Oracle'
 layout: post.amp
 permalink: /consulta-de-datos-tablas-resumen/
 categories:

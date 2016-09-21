@@ -92,6 +92,6 @@ public final class R {
 }
 ```
 
-## Siguiente Tema: [Programación Android: Recursos &#8211; Layout][1] 
+## Siguiente Tema: [Programación Android: Recursos - Layout][1] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-layout/

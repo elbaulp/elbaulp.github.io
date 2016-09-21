@@ -213,7 +213,7 @@ Cuando se realiza un trigger sobre una tabla, dicha tabla se dice que está en *
 
 Si queremos conocer los valores del registro de la tabla sobre la que se ha disparado el trigger, este último debe estar declarado de forma `FOR EACH ROW` y acceder a sus valores mediante las pseudocolumnas :NEW y :OLD.
 
-## Siguiente tema: [PL/SQL &#8211; Registros y Tablas][8]
+## Siguiente tema: [PL/SQL - Registros y Tablas][8]
 
  [1]: https://elbauldelprogramador.com/bloques-plsql/
  [2]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/

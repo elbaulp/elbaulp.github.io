@@ -104,6 +104,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 </resources>
 ```
 
-### Siguiente Tema: [Programación Android: Recursos &#8211; Strings][1]
+### Siguiente Tema: [Programación Android: Recursos - Strings][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-strings/

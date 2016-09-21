@@ -67,7 +67,7 @@ Este comando ejecutará la aplicación, que será como la de la imagen:
 2.- Ya tenemos la aplicación funcionando correctamente, vamos a preparar el terminal:
 
 <p class="alert">
-  &#8211; Es necesario configurar nuestro terminal en modo depuración:<br /> <br />Settings -> Application -> Development -> USB debugging<br /> <br />- Tenemos que asegurarnos que no tenemos montada la tarjeta SD:<br /> <br />Settings -> SD card and phone storage -> Unmount SD card
+  - Es necesario configurar nuestro terminal en modo depuración:<br /> <br />Settings -> Application -> Development -> USB debugging<br /> <br />- Tenemos que asegurarnos que no tenemos montada la tarjeta SD:<br /> <br />Settings -> SD card and phone storage -> Unmount SD card
 </p>
 
 3.- Ya está todo listo, conectamos el terminal al pc, hacemos click en el botón Root de SuperOneClick y esperamos a que termine.

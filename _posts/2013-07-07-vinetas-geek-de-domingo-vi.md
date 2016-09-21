@@ -34,7 +34,7 @@ Disfrutad de lo que queda de fin de semana!
 <a href="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/habitable_zone-They-have-a-telescope-pointed-RIGHT-AT-US.png" class="attachment-thumbnail" alt="habitable_zone - They have a telescope pointed RIGHT AT US!" aria-describedby="gallery-6-1736" width="253px" height="306px" /></a>
 </dt>
 <dd class="wp-caption-text gallery-caption" id="gallery-6-1736">
-      habitable_zone &#8211; They have a telescope pointed RIGHT AT US!
+      habitable_zone - They have a telescope pointed RIGHT AT US!
     </dd>
 </dl>
 <br  />

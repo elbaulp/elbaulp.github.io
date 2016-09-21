@@ -23,7 +23,7 @@ The Essentials of Information Security brings together the latest in information
 
 *
 
-  * PC Security Handbook &#8211; 2nd Edition
+  * PC Security Handbook - 2nd Edition
   * Research Report: How the Major Mobility Platforms Compare in TCO and Security
   * Virtualization Maturity and Experience Breed Success
   * Choosing a Cloud Hosting Provider with Confidence: Symantec SSL Certificates Provide a Secure Bridge to Trusted Cloud Hosting Providers

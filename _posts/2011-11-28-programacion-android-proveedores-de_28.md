@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Proveedores de Contenidos &#8211; Leer datos mediante URIs'
+title: 'Programación Android: Proveedores de Contenidos - Leer datos mediante URIs'
 layout: post.amp
 permalink: /programacion-android-proveedores-de_28/
 categories:

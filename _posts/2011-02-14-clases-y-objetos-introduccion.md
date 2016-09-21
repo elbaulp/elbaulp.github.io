@@ -56,7 +56,7 @@ cin >> i;
 scanf ("%d", &i);
 ```
 
-## Siguiente tema: [Clases y Objetos &#8211; Definir una Clase][2]
+## Siguiente tema: [Clases y Objetos - Definir una Clase][2]
 
 
  [1]: https://elbauldelprogramador.com/primeros-pasos-en-c/

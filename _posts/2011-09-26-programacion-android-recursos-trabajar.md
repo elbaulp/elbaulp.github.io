@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Trabajar con recursos XML arbitrarios'
+title: 'Programación Android: Recursos - Trabajar con recursos XML arbitrarios'
 
 layout: post.amp
 permalink: /programacion-android-recursos-trabajar/
@@ -80,7 +80,7 @@ Lo que hacemos en el código de arriba es obtener el XmlPullParser, usarlo para 
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Trabajar con recursos RAW][2] 
+#### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos RAW][2] 
 
 
 

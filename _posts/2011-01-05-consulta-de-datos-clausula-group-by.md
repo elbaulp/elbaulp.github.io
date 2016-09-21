@@ -1,5 +1,5 @@
 ---
-title: 'Consulta de Datos &#8211; Cláusula GROUP BY'
+title: 'Consulta de Datos - Cláusula GROUP BY'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-group-by/
 modified: 2016-08-19T09:30
@@ -78,7 +78,7 @@ Los más utilizados son:
 * SUM. Devuelve la suma del conjunto de valores contenido en un campo especifico de una consulta. Su sintaxis es Sum(expr) donde expr respresenta el nombre del campo que contiene los datos que desean sumarse o una expresión que realiza un cálculo utilizando los datos de dichos campos.
 * STDEV \| STDEVP \| VAR \| VARP. Desviación típica y Varianza.
 
-## Siguiente Tema: [Consulta de Datos &#8211; Cláusula HAVING y ORDER BY][1] 
+## Siguiente Tema: [Consulta de Datos - Cláusula HAVING y ORDER BY][1] 
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
 

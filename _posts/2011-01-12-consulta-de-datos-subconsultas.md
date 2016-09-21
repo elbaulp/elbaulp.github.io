@@ -41,7 +41,7 @@ El predicado ALL se utiliza para recuperar únicamente aquellos registros de la 
 
 El predicado `EXISTS` se utiliza en comparaciones de verdad/falso para determinar si la subconsulta devuelve algún registro.
 
-## Siguiente Tema: [Consulta de Datos &#8211; Tablas Resumen operadores y Funciones Oracle][1] 
+## Siguiente Tema: [Consulta de Datos - Tablas Resumen operadores y Funciones Oracle][1] 
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/
 

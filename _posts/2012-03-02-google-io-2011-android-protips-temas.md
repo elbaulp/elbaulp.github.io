@@ -1,5 +1,5 @@
 ---
-title: 'Google I/O 2011: Android Protips &#8211; Temas avanzados para desarrolladores expertos'
+title: 'Google I/O 2011: Android Protips - Temas avanzados para desarrolladores expertos'
 
 layout: post.amp
 permalink: /google-io-2011-android-protips-temas/

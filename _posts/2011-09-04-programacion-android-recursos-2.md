@@ -37,7 +37,7 @@ Como vimos, los recursos se almacenan en varios subdirectorios según su tipo, a
 
 El compilador de recursos AAPT (Android Asset Packaging Tool), compila todos los recursos excepto los raw y lo coloca en el fichero .apk (Android package) final. Este fichero es el que contiene el código de las aplicaciones Android y los recursos, similar a los .jar de Java. Estos ficheros son los que usamos para instalar aplicaciones en Android.
 
-#### Siguiente Tema: [Programación Android:Recursos &#8211; Arrays de strings][3]
+#### Siguiente Tema: [Programación Android:Recursos - Arrays de strings][3]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-strings
  [2]: https://elbauldelprogramador.com/programacion-android-recursos-layout

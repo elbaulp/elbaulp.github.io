@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Sintaxis de los Recursos'
+title: 'Programación Android: Recursos - Sintaxis de los Recursos'
 
 layout: post.amp
 permalink: /programacion-android-recursos-sintaxis/

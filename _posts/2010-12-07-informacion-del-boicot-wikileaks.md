@@ -37,7 +37,7 @@ Como se ha hablado mucho acerca de este tema, voy a recopilar alguna informació
   * <a target="_blank" href="http://alt1040.com/2010/12/como-crear-un-espejo-de-wikileaks-en-tu-servidor">Cómo crear un espejo de WikiLeaks en tu servidor</a>
   * <a target="_blank" href="http://alt1040.com/2010/12/wikileaks-ayuda-recursos">Ayudemos a WikiLeaks: recursos para hacerlo</a>
   * <a target="_blank" href="http://alt1040.com/2010/12/se-convoca-a-un-boycot-a-paypal-y-amazon-por-negar-el-servicio-a-wikileaks">Se convoca a un boicot a PayPal y Amazon por negar el servicio a WikiLeaks</a>
-  * <a target="_blank" href="http://www.cuatro.com/videos/boicot-wikileaks/20101206ctoultpro_2/"><span >Vídeo:</span> Boicot a Wikileaks en Noticias &#8211; Cuatro.com</a>
+  * <a target="_blank" href="http://www.cuatro.com/videos/boicot-wikileaks/20101206ctoultpro_2/"><span >Vídeo:</span> Boicot a Wikileaks en Noticias - Cuatro.com</a>
   * <a target="_blank" href="http://alt1040.com/2010/12/por-que-julian-assange-fue-detenido-en-que-consisten-los-cargos-que-se-le-imputan">¿Por qué Julian Assange fue detenido? en qué consisten los cargos que se le imputan</a>
   * <a target="_blank" href="http://alt1040.com/2010/12/la-persecucion-a-wikileaks">La persecución a WikiLeaks</a>
   * <a target="_blank" href="http://alt1040.com/2010/12/la-ciberprotesta-por-la-detencion-de-assange-en-un-punado-de-tweets">La ciberprotesta por la detención de Assange en un puñado de tweets</a>

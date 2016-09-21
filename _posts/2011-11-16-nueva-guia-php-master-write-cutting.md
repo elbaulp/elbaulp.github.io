@@ -1,5 +1,5 @@
 ---
-title: 'Nueva guía: PHP Master: Write Cutting-edge Code&#8211;Free 135 Page Preview'
+title: 'Nueva guía: PHP Master: Write Cutting-edge Code-Free 135 Page Preview'
 
 layout: post.amp
 permalink: /nueva-guia-php-master-write-cutting/

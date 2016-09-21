@@ -1,5 +1,5 @@
 ---
-title: 'Chistes de informaticos &#8211; www.desmotivaciones.es'
+title: 'Chistes de informaticos - www.desmotivaciones.es'
 layout: post.amp
 permalink: /chistes-de-informaticos/
 categories:

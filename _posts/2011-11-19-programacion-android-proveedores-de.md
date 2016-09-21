@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Proveedores de Contenido &#8211; Introducción'
+title: 'Programación Android: Proveedores de Contenido - Introducción'
 
 layout: post.amp
 permalink: /programacion-android-proveedores-de/

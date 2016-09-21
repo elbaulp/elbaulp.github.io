@@ -92,7 +92,7 @@ Como hemos aprendido con SPDY y otros protocolos, si no ciframos el tráfico, en
 
 ### ¿Cuanto reducen las técnicas de QUIC la latencia?
 
-Esta es exáctamente la pregunta que estamos investigando en este momento, estamos experimentando con varias características y técnicas en Chromium. Aún es demasiado pronto para compartir resultados preliminares &#8211; Estad atentos.
+Esta es exáctamente la pregunta que estamos investigando en este momento, estamos experimentando con varias características y técnicas en Chromium. Aún es demasiado pronto para compartir resultados preliminares - Estad atentos.
 
 
 

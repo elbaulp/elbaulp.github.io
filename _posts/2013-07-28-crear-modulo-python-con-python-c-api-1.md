@@ -1,5 +1,5 @@
 ---
-title: 'Crear un módulo para python con la Python C API (I) &#8211; Introducción'
+title: 'Crear un módulo para python con la Python C API (I) - Introducción'
 
 layout: post.amp
 permalink: /crear-modulo-python-con-python-c-api-1/

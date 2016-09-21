@@ -1,6 +1,6 @@
 ---
 author: marta
-title: 'Mini Curso de LaTeX &#8211; Introducción'
+title: 'Mini Curso de LaTeX - Introducción'
 layout: post.amp
 permalink: /mini-curso-de-latex-introduccion/
 categories:
@@ -26,9 +26,9 @@ color: "#B31917"
 <a href="/assets/img/2013/05/latex_logo.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" /></a>
 </figure>
 
-* Mini Curso de LaTeX &#8211; Introducción
-* [Mini Curso de LaTeX &#8211; Incluir código fuente y símbolos matemáticos][1]
-* [Mini Curso de LaTeX &#8211; Figuras, Enlaces y cabeceras][2]
+* Mini Curso de LaTeX - Introducción
+* [Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos][1]
+* [Mini Curso de LaTeX - Figuras, Enlaces y cabeceras][2]
 
 ## Mini curso de Latex
 

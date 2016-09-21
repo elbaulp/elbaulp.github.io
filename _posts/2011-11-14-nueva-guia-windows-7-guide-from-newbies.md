@@ -1,5 +1,5 @@
 ---
-title: 'Nueva guía &#8211; The Windows 7 Guide: From Newbies to Pros'
+title: 'Nueva guía - The Windows 7 Guide: From Newbies to Pros'
 
 layout: post.amp
 permalink: /nueva-guia-windows-7-guide-from-newbies/

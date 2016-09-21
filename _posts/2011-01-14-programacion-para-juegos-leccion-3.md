@@ -1,5 +1,5 @@
 ---
-title: 'Programación para Juegos &#8211; Lección 3 &#8211; Librerías de SDL'
+title: 'Programación para Juegos - Lección 3 - Librerías de SDL'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-3/
 modified: 2016-08-19T16:40
@@ -15,7 +15,7 @@ Las librerías adicionales de SDL permiten usar funciones que SDL no soporta nat
 
 <!--ad-->
 
-Como en el primer turorial, [Programación para Juegos &#8211; Lección 1 &#8211; Instalando SDL][1], configurar las librerías adicionales de SDL depende de tu Sistema operativo y del IDE que uses. Así que dejo los enlaces para que sigáis unos pasos muy simples. Seleccionar vuestro Sistema Operatívo y depués el IDE que usáis.
+Como en el primer turorial, [Programación para Juegos - Lección 1 - Instalando SDL][1], configurar las librerías adicionales de SDL depende de tu Sistema operativo y del IDE que uses. Así que dejo los enlaces para que sigáis unos pasos muy simples. Seleccionar vuestro Sistema Operatívo y depués el IDE que usáis.
 
 <figure>
     <a href="http://www.lazyfoo.net/SDL_tutorials/lesson03/linux/index.php" target="_blank"><amp-img layout="responsive" width="128" height="128" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TSHH106Z0VI/AAAAAAAAAPo/fimALQz89iU/linux.png"></amp-img></a>
@@ -27,7 +27,7 @@ Fuente:
 
 [lazyfoo.net][5]
 
-#### Siguiente tema: [Programación para Juegos &#8211; Lección 4 &#8211; Programación orientada a eventos][6] 
+#### Siguiente tema: [Programación para Juegos - Lección 4 - Programación orientada a eventos][6] 
 
  [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
  [5]: http://www.lazyfoo.net/SDL_tutorials/

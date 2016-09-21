@@ -33,7 +33,7 @@ Primero instalemos Tor y empecemos a usarlo para desasirnos de algunas cosas. Ha
 
 ## 1. Instalación
 
-Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos [1] cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 &#8211; las mismas versiones que Backtrack 5 R2 usa &#8211; ejecuta los siguientes comandos:
+Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos [1] cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:
 
 ```bash
  lang="bash"># echo "deb http://deb.torproject.org/torproject.org lucid main" >> /etc/apt/sources.list
@@ -114,7 +114,7 @@ Este script primero inicia Vidalia, que es un QT frontend para Tor y se ve así:
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/11/081012_1601_AchievingAn31-284x300.png" alt="" width="284px" height="300px"></amp-img>
 </figure>
 
-En esta imagen podemos ver que nos conectamos exitosamente a la red Tor (se conecta cuando se inicia Vidalia). Si clickeamos en &#8220;View the Network&#8221; (Ver la Red), obtendremos una lista de todos los nodos online que la red Tor está usando &#8211; esto puede estar más actualizado en <a href="http://torstatus.all.de/index.php?SR=Bandwidth&SO=Desc" target="_blank">Nodos Tor</a>.
+En esta imagen podemos ver que nos conectamos exitosamente a la red Tor (se conecta cuando se inicia Vidalia). Si clickeamos en &#8220;View the Network&#8221; (Ver la Red), obtendremos una lista de todos los nodos online que la red Tor está usando - esto puede estar más actualizado en <a href="http://torstatus.all.de/index.php?SR=Bandwidth&SO=Desc" target="_blank">Nodos Tor</a>.
 
 El script tambien abrirá el navegador web Tor una vez que nos conectemos con éxito a la red Tor. Este navegador está basado en Firefox y se ve como en la siguiente imagen:
 
@@ -127,7 +127,7 @@ Podemos ver que nuestro navegador está usando efectivamente la red Tor y podemo
 ## 2. Cómo funciona Tor
 
 
-Antes de describir cómo funciona Tor, debemos saber cómo funciona la internet moderna. Cuando visitamos un sitio web como <a href="http://www.google.com" target="_blank">Google</a> estamos enviando una petición a uno de los servidores web de Google. Pero esto no sucede directamente de nuestra computadora al servidor de Google. Lo que ocurre es que nosotros enviamos la petición primero a nuestro router, seguido por el ISP (Internet Service Provider), el cual la reenvía a uno de los NIRs (National Internet Registries), que se encarga de reenviarla a uno de los LIRs (Local Internet Registries), que a su vez la reenvía a uno de los RIRs (Regional Internet Registries), etc, hasta que eventualmente el proceso es revertido una vez que la petición alcanzó el destino &#8211; el servidor de Google. Puede observarse esto usando el programa Traceroute que envía paquetes con un valor específico de TTL (Time to Live), que expira en cada salto (TTL es aumentado en 1 cada vez que el paquete es enviado para asegurar que expira) entre nuestro cliente y el servidor, revelando la identidad de cada nodo. Para encontrar todos los nodos que el paquete tiene que visitar cuando viaja a traves de Internet al servidor web de Google, podemos ejecutar el comando siguiente:
+Antes de describir cómo funciona Tor, debemos saber cómo funciona la internet moderna. Cuando visitamos un sitio web como <a href="http://www.google.com" target="_blank">Google</a> estamos enviando una petición a uno de los servidores web de Google. Pero esto no sucede directamente de nuestra computadora al servidor de Google. Lo que ocurre es que nosotros enviamos la petición primero a nuestro router, seguido por el ISP (Internet Service Provider), el cual la reenvía a uno de los NIRs (National Internet Registries), que se encarga de reenviarla a uno de los LIRs (Local Internet Registries), que a su vez la reenvía a uno de los RIRs (Regional Internet Registries), etc, hasta que eventualmente el proceso es revertido una vez que la petición alcanzó el destino - el servidor de Google. Puede observarse esto usando el programa Traceroute que envía paquetes con un valor específico de TTL (Time to Live), que expira en cada salto (TTL es aumentado en 1 cada vez que el paquete es enviado para asegurar que expira) entre nuestro cliente y el servidor, revelando la identidad de cada nodo. Para encontrar todos los nodos que el paquete tiene que visitar cuando viaja a traves de Internet al servidor web de Google, podemos ejecutar el comando siguiente:
 
 
 ```bash
@@ -189,7 +189,7 @@ WarnUnsafeSocks 1
 ```
 
 - **TestSocks:** Cuando está activada esta opción, Tor genera una entrada en el log notice-level por cada conexión al puerto Socks indicando si la petición usó un protocolo de socks seguro o uno inseguro (mira lo comentado en SafeSocks). esto ayuda a determinar si una aplicación que usa Tor está posiblemente filtrando las peticiones DNS. (Default: 0)
-- **SafeSocks**: Cuando está activada esta opción, Tor rechazará conexiones a aplicaciones que usan variantes no seguras de protocolo de socks &#8211; una que solo provea una dirección IP, significa que la aplicación está resolviendo el DNS primero. Más específicamente, estos son socks4 y socks5 cuando no lo hace el servidor DNS remoto. (Defaults: 0)
+- **SafeSocks**: Cuando está activada esta opción, Tor rechazará conexiones a aplicaciones que usan variantes no seguras de protocolo de socks - una que solo provea una dirección IP, significa que la aplicación está resolviendo el DNS primero. Más específicamente, estos son socks4 y socks5 cuando no lo hace el servidor DNS remoto. (Defaults: 0)
 - **WarnUnsafeSocks**: Cuando está activada esta opción, Tor alertará cuando una petición recibida sólo contiene una dirección IP en lugar de un hostname. Permitirle a aplicaciones que resuelvan sus DNS es usualmente una mala idea y puede proveer tu ubicación a atacantes. (Default: 1)
 
 En el próximo artículo describiremos cómo configurar el mecanismo de resolución de DNS para evitar cualquier posible robo de información.

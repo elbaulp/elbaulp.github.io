@@ -1,5 +1,5 @@
 ---
-title: 'Diseño de Bases de Datos ( II ) &#8211; Restricciones'
+title: 'Diseño de Bases de Datos ( II ) - Restricciones'
 layout: post.amp
 permalink: /diseno-de-bases-de-datos-ii/
 categories:

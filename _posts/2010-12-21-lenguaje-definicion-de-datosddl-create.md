@@ -1,5 +1,5 @@
 ---
-title: 'Lenguaje Definición de Datos(DDL) &#8211; CREATE'
+title: 'Lenguaje Definición de Datos(DDL) - CREATE'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datosddl-create/
 categories:
@@ -133,7 +133,7 @@ CREATE TABLE emp
 DESCRIBE nombre_tabla;
 ```
 
-### Siguiente Tema: [Data Definition Language(DDL) &#8211; DROP.][1] 
+### Siguiente Tema: [Data Definition Language(DDL) - DROP.][1] 
 
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/

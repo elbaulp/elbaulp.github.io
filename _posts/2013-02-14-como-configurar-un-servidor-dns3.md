@@ -1,5 +1,5 @@
 ---
-title: 'Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)'
+title: 'Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)'
 
 layout: post.amp
 permalink: /como-configurar-un-servidor-dns3/
@@ -48,9 +48,9 @@ color: "#0097A7"
 <a href="/assets/img/2013/04/dns.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/04/dns.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="450px" height="361px" /></a>
 </figure>
 
-* [Cómo configurar un servidor DNS &#8211; Parte 1 (Introducción)][1]
-* [Cómo configurar un servidor DNS &#8211; Parte 2 (La Zona Primaria)][2]
-* Cómo configurar un servidor DNS &#8211; Parte 3 (Zona Inversa y DNS secundario)
+* [Cómo configurar un servidor DNS - Parte 1 (Introducción)][1]
+* [Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)][2]
+* Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)
 
 Ya se ha visto que existe una base de datos centralizada que asocia nombres de dominios a direccines IP, también se mencionó el caso inverso, una copia inversa de dicha base de datos, que asocia IP&#8217;s a nombres de dominios. Ésta búsqueda inversa es usada por muchos programas, que rechazarán establecer una conexión si la búsqueda inversa y la búsqueda directa (*Dominio»IP*) no coinciden. Muchos proveedores de correo usan la búsqueda inversa para clasificar correos como spam.
 

@@ -38,11 +38,11 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 > Its main features are:
 >
 > - Well defined interfaces.  
-> &#8211; Asynchronous data sending/receiving.  
-> &#8211; Service oriented programming.  
-> &#8211; Server/client or distributed model.  
-> &#8211; Paradigm independent.  
-> &#8211; Remote event handling.
+> - Asynchronous data sending/receiving.  
+> - Service oriented programming.  
+> - Server/client or distributed model.  
+> - Paradigm independent.  
+> - Remote event handling.
 >
 > <a href="http://osgiliath.org/2013/03/05/getting-started-osgiliath-eclipse/" target="_blank">Instrucciones de instalación</a> | <a href="https://sourceforge.net/projects/osgiliath/" target="_blank">Código fuente</a>
 >

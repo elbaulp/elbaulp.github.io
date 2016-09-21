@@ -57,25 +57,25 @@ Dentro de SAP, el lenguaje ABAP posee su propio entorno de desarrollo denominado
 
 Algunas de las transacciones más importantes dentro del *ABAP Workbench* son:
 
-### SE11 &#8211; Diccionario de datos
+### SE11 - Diccionario de datos
 
 Bajo la transacción SE11 se agrupan las herramientas necesarias para la creación, mantenimiento y ampliación de objetos de la base de datos. Tablas, estructuras, elementos de datos, dominios, etc. Se generan a través del diccionario de datos. Pero también nos permite visualizar el contenido de las diferentes tablas del sistema tanto aquellas creados por nosotros como los que son propiedad de SAP.
 
-### SE38 &#8211; Editor ABAP
+### SE38 - Editor ABAP
 
 Es la herramienta básica de programación. Permite la programación de informes y del código asociado a pantallas de diálogo. También nos permite realizar ampliaciones de contenido sobre el código propietario de SAP.
 
-### SE51 &#8211; Screen painter
+### SE51 - Screen painter
 
 Es la herramienta utilizada en la creación y desarrollo de pantallas de diálogo en SAP. Sin embargo, la programación ABAP de la estructura de pantallas se realiza conjuntamente con el editor ABAP.
 
-### SE80 &#8211; Object Navigator
+### SE80 - Object Navigator
 
 Agrupa todas o casi todas las transacciones de desarrollo ABAP en una sola transacción. Nos permite trabajar a la vez con diferentes herramientas de programación bajo un área común.
 
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/03/SAP-SE80-Object-Navigator.png" alt="SAP-SE80-Object-Navigator" width="983px" height="604px" />
 
-### SE09/STMS &#8211; Sistema gestor de transportes
+### SE09/STMS - Sistema gestor de transportes
 
 El desarrollo en ABAP se realiza sobre un entorno de desarrollo al cual sólo tienen acceso los programadores y consultores. Éste se encuentra separado del entorno productivo en el cual trabajan los usuarios del ERP. Así pues, todo nuevo desarrollo o ampliación se debe mover al entorno productivo a través de un sistema que comunique todos los entornos. Éste sistema es el gestor de transportes y las transacciones SE09 y STMS son sus transacciones más conocidas.
 

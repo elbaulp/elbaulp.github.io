@@ -37,7 +37,7 @@ static {
 
 No hay que scribir el prefijo “lib” ni el sufijo “.so”.
 
-### Primer ejemplo en el NDK Android &#8211; Hola Mundo
+### Primer ejemplo en el NDK Android - Hola Mundo
 
 En el *ndk* existe un directorio que contiene varios ejemplos, importamos a eclipse el *HelloJni*. Veamos la estructura del proyecto:
 

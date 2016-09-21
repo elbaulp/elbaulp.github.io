@@ -84,11 +84,11 @@ Si un atacante puede obtener una cookie de un usuario autenticado, puede, por su
 
 ### Creación de contenido arbitrario en Caché
 
-Un navegador web puede almacenar un montón de información en su caché para acceder más rápidamente al recurso cuando es requerido de nuevo &#8211; de los cuales algunos son identificadores únicos. Dado que la caché no tiene la misma política origen, estas entradas pueden ser leidas por cualquier dominio, y por ende revelar información sensible al atacante.
+Un navegador web puede almacenar un montón de información en su caché para acceder más rápidamente al recurso cuando es requerido de nuevo - de los cuales algunos son identificadores únicos. Dado que la caché no tiene la misma política origen, estas entradas pueden ser leidas por cualquier dominio, y por ende revelar información sensible al atacante.
 
 ### Usuarios con *Fingerprint (*Huella digital) basada en atributos del navegador
 
-Si un atacante puede tomar la huella digital del navegador web del usuario, puede obtener una gran cantidad de información de las propiedades del navegador, las cuales pueden identificar unívocamente al usuario. Si el sitio web recuerda esas configuraciones puede revelar la identidad del usuario cuando visita el sitio web destino normalmente a través de Tor. Esto es posible por todas las formas que un usuario puede configurar su navegador web para hacerlo único &#8211; la más común es personalizando el navegador utilizando un set de plugins.
+Si un atacante puede tomar la huella digital del navegador web del usuario, puede obtener una gran cantidad de información de las propiedades del navegador, las cuales pueden identificar unívocamente al usuario. Si el sitio web recuerda esas configuraciones puede revelar la identidad del usuario cuando visita el sitio web destino normalmente a través de Tor. Esto es posible por todas las formas que un usuario puede configurar su navegador web para hacerlo único - la más común es personalizando el navegador utilizando un set de plugins.
 
 ### Aprovechar un navegador o Sistema Operativo de forma local o remota
 

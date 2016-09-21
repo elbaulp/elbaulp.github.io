@@ -41,7 +41,7 @@ donde cada coeficiente *a<sub>j</sub>* es igual a 1 ó 0. Usualmente los número
 Los números que pueden almacenarse en la representación de 4 bytes están en el rango:
 
 - n<sub>min</sub> = (00000000000000000000000000000000)<sub>2</sub> = (0)<sub>10</sub>
-- n<sub>max</sub> = (11111111111111111111111111111111)<sub>2</sub> = 2<sup>32</sup> &#8211; 1 = (4294967295)<sub>10</sub>
+- n<sub>max</sub> = (11111111111111111111111111111111)<sub>2</sub> = 2<sup>32</sup> - 1 = (4294967295)<sub>10</sub>
 
 para números enteros sin signo. Si se utiliza el primer bit de la izquierda como signo (0, positivo; 1, negativo) el rango se reduce a *n<sub>min</sub>* = −2147483648 y *n<sub>max</sub> = 2147483647* para enteros con signo.
 
@@ -64,7 +64,7 @@ Para aclarar los conceptos, veamos algunos ejemplos de números normalizados en 
 Entre paréntesis está representada la parte entera de la mantisa (que es igual a 1 siempre por convención.) Debe notarse que el número final se obtiene considerando que:
 
   * El signo es positivo (bit de signo igual a 0)
-  * El exponente se obtiene como 131 &#8211; 127 = 4, que en sistema decimal da 2<sup>4</sup> = 16.
+  * El exponente se obtiene como 131 - 127 = 4, que en sistema decimal da 2<sup>4</sup> = 16.
   * La mantisa 1 + 241/1024 = 1,2353515625 se obtiene sumando: 1 (implícito), 1/8, 1/16, 1/32, 1/64 y 1/1024.
 
 Como segundo ejemplo veamos la conversión inversa, del número (3,375)<sub>10</sub> a sistema binario. El bit de signo es 0. El número puede expresarse como la fracción 27/8 y es mayor que 2 por lo que debemos sacar un exponente positivo; en este caso, factorizamos por 2<sup>1</sup> y nos queda 27/16 que puede escribirse como

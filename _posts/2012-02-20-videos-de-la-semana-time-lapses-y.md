@@ -1,5 +1,5 @@
 ---
-title: 'Vídeos de la semana &#8211; Time-Lapses y cortos de animación'
+title: 'Vídeos de la semana - Time-Lapses y cortos de animación'
 
 layout: post.amp
 permalink: /videos-de-la-semana-time-lapses-y/
@@ -17,13 +17,13 @@ Como sabéis, soy bastante aficionado a Vimeo y suelo [publicar][1] de vez en cu
 
 <!--ad-->
 
-#### The Wild Heart &#8211; A Journey through the Southwest Wilderness
+#### The Wild Heart - A Journey through the Southwest Wilderness
 
-Un vídeo que nos llevará a realizar un viaje por el desierto en el suroeste de Estados Unidos &#8211; Sierras del este, el Gran Cañón, los acantilados de Vermillion, el parque nacional Yosemite y el eclipse lunar del 2011.
+Un vídeo que nos llevará a realizar un viaje por el desierto en el suroeste de Estados Unidos - Sierras del este, el Gran Cañón, los acantilados de Vermillion, el parque nacional Yosemite y el eclipse lunar del 2011.
 
 
 
-#### Sea of clouds &#8211; Tenerife
+#### Sea of clouds - Tenerife
 
 Un increible time-lapse que viene desde Tenerife
 

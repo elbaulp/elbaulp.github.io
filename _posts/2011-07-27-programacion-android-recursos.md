@@ -41,7 +41,7 @@ Para el caso del layout personalizado cuando la pantalla esté en modo apaisado,
 
 Para saber más acerca de los tipos de sufijos que se pueden usar, visita [Providing Resources en la página oficial de Android.][1]
 
-## Siguiente Tema: [Programación Android: Recursos &#8211; Usando recursos][2] 
+## Siguiente Tema: [Programación Android: Recursos - Usando recursos][2] 
 
 
  [1]: http://developer.android.com/guide/topics/resources/providing-resources.html

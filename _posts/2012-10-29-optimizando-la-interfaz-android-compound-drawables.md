@@ -1,5 +1,5 @@
 ---
-title: 'Optimizando la interfaz Android &#8211; Compound Drawables'
+title: 'Optimizando la interfaz Android - Compound Drawables'
 
 layout: post.amp
 permalink: /optimizando-la-interfaz-android-compound-drawables/

@@ -244,7 +244,7 @@ Fuente:
 
 [lazyfoo.net][3]
 
-#### Siguiente tema: [Lección 5 &#8211; Colores Clave][4] 
+#### Siguiente tema: [Lección 5 - Colores Clave][4] 
 
  [1]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson04
  [2]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-2/

@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Intents &#8211; Categorías'
+title: 'Programación Android: Intents - Categorías'
 
 layout: post.amp
 permalink: /programacion-android-intents-categorias/

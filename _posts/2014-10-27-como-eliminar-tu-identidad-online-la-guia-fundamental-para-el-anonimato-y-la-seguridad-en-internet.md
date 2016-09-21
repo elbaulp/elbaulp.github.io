@@ -34,7 +34,7 @@ Incluso si los datos no son almacenados y son eliminados, deben haber sido escri
 
 ### ¿Para quién y qué es esta Guía?
 
-Esta guía es para todos &#8211; usuarios web diarios y quienes odian a los <a href="http://es.wikipedia.org/wiki/Hacker_(seguridad_inform%C3%A1tica)#Sombrero_negro" target="_blank"> _hackers de sombrero negro_</a>(“<a href="http://es.wikipedia.org/wiki/Cracker" target="_blank">crackers</a>”). Intenta educar sobre la importancia de practicar el anonimato y utilizar seguridad en internet.
+Esta guía es para todos - usuarios web diarios y quienes odian a los <a href="http://es.wikipedia.org/wiki/Hacker_(seguridad_inform%C3%A1tica)#Sombrero_negro" target="_blank"> _hackers de sombrero negro_</a>(“<a href="http://es.wikipedia.org/wiki/Cracker" target="_blank">crackers</a>”). Intenta educar sobre la importancia de practicar el anonimato y utilizar seguridad en internet.
 
 Enfrentémoslo, los trolls existen en la web y es seguro que haremos enojar a uno de ellos. Este puede ser el error más grande que puedas cometer. Si tienes un nombre de usuario que puede ser googleado y tu perfil de Facebook aparece, alguien puede descubrir tu nombre real. Esto puede demostrar que es un gran problema para tí. Un troll puede tener a todos sus amigos y seguidores para atacarte con <a href="http://en.wikipedia.org/wiki/Denial-of-service_attack" target="_blank">DDoS </a>de alguna forma. Llenándote de spam tu casa con llamadas telefónicas, cartas desagradables, y atacando directamente tu red doméstica puede ser un resultado de ésto. Tu información personal podría estar en cualquier lado, causando una gran carga en tu vida. Esto es conocido en internet como *d0x*.
 
@@ -83,7 +83,7 @@ Si los precios de los SSD son muy altos para tu presupuesto, y estás forzado a 
 
 #### Cifrado de Datos y Unidades
 
-Para protegerte de forma local incluso antes de entrar en una red, el cifrado de unidades es una buena idea. Al encriptar, se ofuscan los datos de forma tal que se vuelven ilegibles &#8211; excepto que una clave de acceso sea provista y se corresponda con el hash encontrado en el encabezado de los datos encriptados. Cuando la clave es ingresada, los datos son desencriptados y se pueden leer. Para aprender a cifrar tu disco rígido, revisa <a href="http://null-byte.wonderhowto.com/secure-your-computer-part-3-encrypt-your-hdd-ssd-prevent-data-theft-0131211/" target="_blank">Null Byte</a>.
+Para protegerte de forma local incluso antes de entrar en una red, el cifrado de unidades es una buena idea. Al encriptar, se ofuscan los datos de forma tal que se vuelven ilegibles - excepto que una clave de acceso sea provista y se corresponda con el hash encontrado en el encabezado de los datos encriptados. Cuando la clave es ingresada, los datos son desencriptados y se pueden leer. Para aprender a cifrar tu disco rígido, revisa <a href="http://null-byte.wonderhowto.com/secure-your-computer-part-3-encrypt-your-hdd-ssd-prevent-data-theft-0131211/" target="_blank">Null Byte</a>.
 
 ### Crear y administrar emails
 
@@ -113,7 +113,7 @@ Esto es una regla obligada para la seguridad en internet. [Una buena contraseña
 
 ### Haz que tu navegador no revele nada sobre tí
 
-Configura tu navegador de forma tal que no tenga que usar un agente de usuario. Los agentes de usuario le informan tu navegador y sistema operativo a un sitio web via JavaScript &#8211; algo que puede revelar quién sos. Por lo tanto, deberías <a href="http://null-byte.wonderhowto.com/hack-your-firefox-user-agent-spoof-your-os-and-browser-0131294/" target="_blank">falsificar esta información</a>. Además, deberías tener un plugin como <a href="http://noscript.net/" target="_blank">NoScript</a>. Otra alternativa es desactivar JavaScript y Flash. Éstos pueden dejar cookies en tu computadora que podrían ser rastreadas desde los sitios web que visitas.
+Configura tu navegador de forma tal que no tenga que usar un agente de usuario. Los agentes de usuario le informan tu navegador y sistema operativo a un sitio web via JavaScript - algo que puede revelar quién sos. Por lo tanto, deberías <a href="http://null-byte.wonderhowto.com/hack-your-firefox-user-agent-spoof-your-os-and-browser-0131294/" target="_blank">falsificar esta información</a>. Además, deberías tener un plugin como <a href="http://noscript.net/" target="_blank">NoScript</a>. Otra alternativa es desactivar JavaScript y Flash. Éstos pueden dejar cookies en tu computadora que podrían ser rastreadas desde los sitios web que visitas.
 
 #### Desactiva JavaScript y configura Flash con activación manual en tu navegador
 
@@ -159,7 +159,7 @@ Si te encuentras en una circunstancia donde absolutamente **necesitas** usar sit
 
 Hay una cantidad de servicios gratis que existen en internet para que uses a tu disposición para ayudarte a obtener información personal de tí mismo, u otros. Incluso cuando tienes muy poco para empezar, puedes obtener una gran cantidad de d0x de alguien.
 
-  * <a href="http://www.pipl.com/" target="_blank">Pipl </a>es un motor de búsqueda que busca páginas web no indexadas, indexadas, nombres de usuario comunes, direcciones de email, números de teléfono &#8211; incluso nombre y ubicación. Esta es una herramienta inmensamente util. Puedes buscar una persona vía email, nombre, número u otra información.
+  * <a href="http://www.pipl.com/" target="_blank">Pipl </a>es un motor de búsqueda que busca páginas web no indexadas, indexadas, nombres de usuario comunes, direcciones de email, números de teléfono - incluso nombre y ubicación. Esta es una herramienta inmensamente util. Puedes buscar una persona vía email, nombre, número u otra información.
   * <a href="http://www.tineye.com/" target="_blank">Tineye </a>es una herramienta avanzada de búsqueda de imágenes, con la cual puedes tomar una imagen de internet, luego buscar sitios que tengan la misma imagen. Una herramienta útil, si no estás yendo a ningún lado con un d0x. Si la persona utiliza nombres de usuario diferentes, tiene un nombre falso en su perfil de facebook, y lo configuró privado, puedes tomar su foto por defecto, y encontrar otros sitios que tengan esa imagen. Dado que la gente comunmente usa la misma imagen por defecto como perfil, probablemente termines en otra red social, que tal vez revele más información.
   * <a href="http://www.archives.com/" target="_blank">Archives </a>(Advertencia: Este probablemente desaprobarías). Esta pequeña joya de sitio que encontré tiene una pequeña e interesante falla. Tienen registros reales de empleadores de personas, números de teléfonos, residencias previas, árboles genealógicos (incluyendo niños), registros de arresto, artículos de diarios en los que la persona haya sido mencionada, y más. Este es un servicio PAGO. Pero no te alarmes, he dicho que tiene un defecto.
 

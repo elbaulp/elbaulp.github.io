@@ -1,5 +1,5 @@
 ---
-title: 'Programación Android: Recursos &#8211; Repasando la estructura del directorio de recursos'
+title: 'Programación Android: Recursos - Repasando la estructura del directorio de recursos'
 
 layout: post.amp
 permalink: /programacion-android-recursos-repasando/
@@ -37,7 +37,7 @@ En resumen, en el siguiente listado muestra la estructura global del directorio 
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos &#8211; Recursos y cambios de configuración][1] 
+#### Siguiente Tema: [Programación Android: Recursos - Recursos y cambios de configuración][1] 
 
 
 

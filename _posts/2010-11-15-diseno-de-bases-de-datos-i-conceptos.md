@@ -1,5 +1,5 @@
 ---
-title: 'Diseño de Bases de Datos ( I ) &#8211; Conceptos del Modelo Relacional'
+title: 'Diseño de Bases de Datos ( I ) - Conceptos del Modelo Relacional'
 layout: post.amp
 permalink: /diseno-de-bases-de-datos-i-conceptos/
 categories:
@@ -158,7 +158,7 @@ Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya q
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="577" src="https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s800/m.rf2.png" width="800"></amp-img>
 </figure>
 
-#### Siguiente tema:[Diseño de Bases de Datos ( II ) &#8211; Restricciones][1]
+#### Siguiente tema:[Diseño de Bases de Datos ( II ) - Restricciones][1]
 
  [1]: https://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/
 

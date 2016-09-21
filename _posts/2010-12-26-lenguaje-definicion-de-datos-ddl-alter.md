@@ -1,5 +1,5 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE'
+title: 'Lenguaje Definición de Datos (DDL) - ALTER TABLE'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datos-ddl-alter/
 modified: 2016-08-16T11:00
@@ -99,7 +99,7 @@ alter table CabFacturas DISABLE CK_CabFacturas;
 alter table nombre_table DROP COLUMN nombre_columna;
 ```
 
-## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; Vistas][1] 
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Vistas][1] 
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
 

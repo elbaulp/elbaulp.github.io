@@ -41,9 +41,9 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 De estas líneas nos interesa la que está en negrita, donde vamos a usar el verdor ID, que es 04e8 para el caso de mi Samsung. A continuación seguimos los siguientes pasos:
 
-&#8211; Es necesario que tengamos habilitado las fuentes desconocidas en el teléfono (Ajustes->Aplicaciones y marcamos la casilla), Así como permitir el USB debugging (Ajustes->Aplicaiones->Desarrollo).
+- Es necesario que tengamos habilitado las fuentes desconocidas en el teléfono (Ajustes->Aplicaciones y marcamos la casilla), Así como permitir el USB debugging (Ajustes->Aplicaiones->Desarrollo).
 
-&#8211; El siguiente paso es crear un archivo llamado *51-android.rules* bajo el directorio */etc/udev/rules.d/*, y añadimos
+- El siguiente paso es crear un archivo llamado *51-android.rules* bajo el directorio */etc/udev/rules.d/*, y añadimos
 
 ```bash
 SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", SYMLINK+="android_adb", MODE="0666", OWNER="nombre-de-usuario"

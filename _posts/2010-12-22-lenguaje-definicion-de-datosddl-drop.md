@@ -1,5 +1,5 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) &#8211; DROP'
+title: 'Lenguaje Definición de Datos (DDL) - DROP'
 layout: post.amp
 permalink: /lenguaje-definicion-de-datosddl-drop/
 modified: 2016-08-16T11:00
@@ -45,7 +45,7 @@ Truncate table nombre_table [{DROP | REUSE} STORAGE];
 Con DROP STORAGE se desasigna todo el espacio.  
 Con DROP REUSE mantendrá reservado el espacio para nuevas filas.
 
-## Siguiente Tema: [Lenguaje Definición de Datos (DDL) &#8211; ALTER TABLE][2] 
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - ALTER TABLE][2] 
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/
  [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/

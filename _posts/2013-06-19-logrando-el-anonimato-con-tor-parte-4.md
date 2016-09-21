@@ -1,5 +1,5 @@
 ---
-title: 'Logrando el anonimato con Tor (Parte 4) &#8211; Tor para relés'
+title: 'Logrando el anonimato con Tor (Parte 4) - Tor para relés'
 layout: post.amp
 permalink: /logrando-el-anonimato-con-tor-parte-4/
 categories:
@@ -91,7 +91,7 @@ Nickname Unnamed
 RelayBandwidthBurst 10485760
 ```
 
-Describamos las variables de configuración &#8211; resumidas de  [2]:
+Describamos las variables de configuración - resumidas de  [2]:
 
 ### DirPort
 

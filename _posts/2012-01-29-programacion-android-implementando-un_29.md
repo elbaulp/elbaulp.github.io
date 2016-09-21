@@ -156,7 +156,7 @@ Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los p
 
 * * *
 
-#### Siguiente Tema: [Intents &#8211; Conceptos básicos][5] 
+#### Siguiente Tema: [Intents - Conceptos básicos][5] 
 
 
 

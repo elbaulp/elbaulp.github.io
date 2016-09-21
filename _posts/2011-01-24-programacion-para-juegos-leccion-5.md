@@ -1,5 +1,5 @@
 ---
-title: 'Programación para Juegos &#8211; Lección 5 &#8211; Colores Clave'
+title: 'Programación para Juegos - Lección 5 - Colores Clave'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-5/
 modified: 2016-08-25T11:58

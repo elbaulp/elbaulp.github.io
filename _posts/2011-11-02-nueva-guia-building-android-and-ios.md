@@ -18,7 +18,7 @@ color: "#61B38D"
   * Applying page transitions
   * Incorporating a slider control
 
-Along with the free video training tutorials you will also receive monthly offers, tips, and insider information you won&#8217;t hear elsewhere&#8211;including special discounts extended to newsletter subscribers.
+Along with the free video training tutorials you will also receive monthly offers, tips, and insider information you won&#8217;t hear elsewhere-including special discounts extended to newsletter subscribers.
 
 <a target="_blank" href="http://elbauldelprogramador.tradepub.com/free/w_lynd34/prgm.cgi/">Descárgala desde aqui</a> o  
 [][2]{.descargar}  
