@@ -14,7 +14,7 @@ color: "#F57C00"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Olympic-Feathers-Detail-7.png" alt="{{ title }}" title="{{ title }}" width="750" height="750"></amp-img>
 </figure>
 
-Hace unos meses publicamos [14 Ejemplos De Las Mejores Visualizaciones De Datos](https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/ "14 Ejemplos De Las Mejores Visualizaciones De Datos"), hoy os traemos otra visualización muy interesante de [_Nadieh Bremer_](http://www.visualcinnamon.com "Sitio web de Nadieh Bremer"), en la cual muestra __todas las medallas de oro en los Juegos Olímpicos desde 1896__, en forma de plumas.
+Hace unos meses publicamos [15 Ejemplos De Las Mejores Visualizaciones De Datos](https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/ "15 Ejemplos De Las Mejores Visualizaciones De Datos"), hoy os traemos otra visualización muy interesante de [_Nadieh Bremer_](http://www.visualcinnamon.com "Sitio web de Nadieh Bremer"), en la cual muestra __todas las medallas de oro en los Juegos Olímpicos desde 1896__, en forma de plumas.
 
 __Olympic Feathers__, es una _visualización de datos_ interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.
 
