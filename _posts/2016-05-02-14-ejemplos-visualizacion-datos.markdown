@@ -1,19 +1,20 @@
 ---
 layout: post.amp
-title: 14 Ejemplos De Las Mejores Visualizaciones De Datos
+title: 15 Ejemplos De Las Mejores Visualizaciones De Datos
 date: 2016-05-02T19:41:09+02:00
 description: "La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet."
-tags: [ejemplos visualización de datos, datos, imagenes de visualización]
-modified: 2016-08-08T09:50
+tags: [visualizacion datos, d3js, datos, imagenes de visualización]
+modified: 2016-09-23T15:40
 image: 20-ejemplos-visualizacion-datos-genoma-enfermedades.png
 main-class: "articulos"
 color: "#F57C00"
 ---
 
+> __NOTA__: Este artículo se actualizó el 23/09/2016 para añadir _Olympic Feathers_.
+
 {% include toc.html %}
 
 El siguiente artículo es una traducción del blog <a href="http://www.data-visualization.org" target="_blank" title="http://www.data-visualization.org">data-visualization.org</a>. Gracias a su propietario por concederme el permiso de traducción. He traducido únicamente las 14 de las 20 visualizaciones que más me han gustado.
-{: .notice-info }
 
 La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet.
 
@@ -129,6 +130,14 @@ De nuevo otro proyecto de Visual Complexity con este ejemplo de visualización d
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/20-ejemplos-visualizacion-datos-cartografia-llamadas.png" title="{{ page.title }}" alt="{{ page.title }}" width="823px" height="519px" ></amp-img>
+</figure>
+
+## 15. Olympic Feathers
+
+Olympic Feathers es una visualización de datos interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Para más información, visita el artículo [Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016](https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/ "Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016") 
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Olympic-Feathers-Detail-7.png" alt="{{ title }}" title="{{ title }}" width="750" height="750"></amp-img>
 </figure>
 
 ### Referencias
