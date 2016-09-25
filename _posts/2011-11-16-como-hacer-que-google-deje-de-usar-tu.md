@@ -18,4 +18,4 @@ Debido a ciertas polémicas con respecto a este tema, google ha dado una soluci�
 
 La solución consiste en añadir al nombre de nuestra red la cadena ***_nomap*** al final. De este modo el coche al pasar detectará esta cadena y la omitirá
 
-Vía <a target='_blank"' href="http://www.genbeta.com/seguridad/quieres-que-google-deje-de-usar-tu-wifi-para-obtener-datos-de-geolocalizacion-solo-hay-que-cambiarle-el-nombre">GenBeta</a>
+Vía <a target='_blank' href="http://www.genbeta.com/seguridad/quieres-que-google-deje-de-usar-tu-wifi-para-obtener-datos-de-geolocalizacion-solo-hay-que-cambiarle-el-nombre">GenBeta</a>
