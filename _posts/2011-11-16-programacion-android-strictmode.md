@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: StrictMode'
-
+modified: 2016-09-25T16:20
 layout: post.amp
 permalink: /programacion-android-strictmode/
 categories:
@@ -12,12 +12,10 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo" class="icono"  height="128" width="128" src=""  />
 
 [Android][1] 2.3 introdujo una funcionalidad de depuración llamada *StrictMode*. Según Google, usaron esta característica para hacer cientos de mejoras a sus aplicaciones Android. Lo que hace el *StrictMode* es informar de las violaciones de políticas relacionadas con los [hilos][2] y la máquina virtual. Si se detecta dicha violación, obtenemos una alerta que nos lo indica. Junto a la alerta tendremos también una traza de la pila de ejecución (Stack Trace), donde podremos comprobar el lugar en el que se produjo la violación. En ese momento, podemos forzar el cierre de la aplicación o simplemente escribirla en el log y dejar que la aplicación continue su ejecución.
 
-Actualemente hay dos tipos de políticas disponibles para usar con *StrictMode*. La primera de ellas es referente a los hilos y está destinada principalmente a ejecutarse en el hilo principal, también conocido como el hilo de UI (User Interface).
-
+Actualmente hay dos tipos de políticas disponibles para usar con *StrictMode*. La primera de ellas es referente a los hilos y está destinada principalmente a ejecutarse en el hilo principal, también conocido como el hilo de UI (User Interface).
 
 <!--ad-->
 
@@ -30,7 +28,6 @@ StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
           .detectNetwork()   // or .detectAll() for all detectable problems
           .penaltyLog()
           .build());
-
 ```
 
 Podemos ver que la calse Builder hace que configurar StrictMode sea bastante fácil. Todos los métos que definen las políticas devuelven una referencia al objeto Builder. El último, *build()*, devuelve un objeto *ThreadPolicy*, que es el argumento que *setThreadPolicy()* espera recibir. *setThreadPolicy()* es un método estático, por ello no es necesario instanciar un objeto de tipo *StrictMode*. En el ejemplo anterior, se ha configurado la política para que avise de lecturas-escrituras a disco, acceso a red y vamos a ser informados a través del logCat. Podemos usar *detectAll()* para ahorrarnos escribir los otros métodos de detección. También podemos usar el método *penaltyDeath() para forzar el cierre de la aplicación una vez escrita la alerta StrictMode al LogCat.*
@@ -45,7 +42,6 @@ StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
           .penaltyLog()
           .penaltyDeath()
           .build());
-
 ```
 
 Ya que la configuración ocurre en un hilo, quizás nos sorprenda que el código se está ejecutando en el hilo principal, pero la traza de la pila (Stack Trace) está ahí para ayudarnos a averiguar en qué punto se produjo la violación. Una vez detectada la violación, podemos resolverla moviendo el código que la produce a un hilo en segundo plano propio. O por otra parte podemos decidir que el código está bien en esa parte y no moverlo.
@@ -61,7 +57,6 @@ int appFlags = appInfo.flags;
 if ((appFlags & ApplicationInfo.FLAG_DEBUGGABLE) != 0){
    //Aquí configuraríamos el StrictMode
 }
-
 ```
 
 Si usamos eclipse como IDE, el plugin ADT configura el atributo debuggable automáticamente. Es decir, cuando usamos el emulador o un dispositivo real, eclipse fija el atributo debuggable a verdadero, lo que nos permite usar StrictMode y depurar nuestra aplicación. Cuando exportamos la aplicación para crear una versión de producción, eclipse lo fija a falso. Hay que tener cuidado con esto, ya que si nosotros añadimos el atributo a mano, eclipse no lo cambiará.
@@ -78,7 +73,6 @@ try{
    //Este dipositivo no soporta StrictMode
    Log.v("StrictMode", "no soportado, ignorando...");
 }
-
 ```
 
 El código de arriba determina si la clase StrictMode existe, y si existe, llama a *enableDefaults()*. En caso de no existir la aplicación no finalizará, puesto que hemos tratado la excepción y el bloque catch se invocará con una excepción del tipo *ClassNotFoundException*.
@@ -106,10 +100,9 @@ public class StrictModeWrapper{
                      .penaltyLog()
                      .penaltyDeath()
                      .build());
-       }  
+       }
     }
 }
-
 ```
 
 Como se puede apreciar, simplemente hemos metido todos los ejemplos que vimos anteriormente en una clase. Ahora para configurar StrictMode tenemos que hacer lo siguiete:
@@ -130,28 +123,21 @@ try{
 
 ### Mediante el penaltyLog():
 
-<div class="separator" >
-<a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="android development"  height="260" width="400" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s400/Screenshot-1.png" /></a>
-</div>
+<figure>
+    <a href="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png"><amp-img layout="responsive" alt="android development"  height="774" width="1189" src="https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png"></amp-img></a>
+</figure>
 
 ### Mediante penaltyDialog():
 
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  alt="android" height="302" width="400" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s400/Screenshot.png" /></a>
-</div>
-
-* * *
-
-#### Siguiente Tema: [Proveedores de Contenido - Introducción][5] 
+<figure>
+    <a href="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png"  ><amp-img layout="responsive"  alt="android" height="337" width="447" src="https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png"></amp-img></a>
+</figure>
 
 
+### Siguiente Tema: [Proveedores de Contenido - Introducción][5] 
 
-
-
- [1]: https://elbauldelprogramador.com/label/android
+ [1]: https://elbauldelprogramador.com/tags/#android
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
  [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/
  [4]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
  [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de/
-
-{% include toc.html %}

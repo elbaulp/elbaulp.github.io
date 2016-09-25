@@ -1,6 +1,6 @@
 ---
 title: Terminada la primera parte del manual Android
-
+modified: 2016-09-25T16:00
 layout: post.amp
 permalink: /terminada-la-primera-parte-del-manual/
 categories:
@@ -11,7 +11,6 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo"  class="icono" width="128px" height="128px" />][1]
 
 Con la última publicación de programación Android, [Recursos y cambios de configuración][2]. He terminado la primera parte de este manual. He pensado poner a vuestra disposición todo el contenido de esta primera parte que se encuentra en la página [Android][3] en PDF, ya que muchas veces resulta más cómodo leer documentos en papel.
 
@@ -21,43 +20,20 @@ La donación se haría mediante paypal, pulsando en el botón negro de la derech
 
 Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadir los siguientes temas.
 
-
 <!--ad-->
-<ul >
-<li>
-<a href="/programacion-android-recursos">Programación Android: Recursos compilados y no compilados</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-arrays-de">Programación Android:Recursos - Arrays de strings</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-plurales">Programación Android: Recursos - Plurales</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-trabajar.html">Programación Android: Recursos - Trabajar con recursos XML arbitrarios</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-trabajar">Programación Android: Recursos - Trabajar con recursos RAW</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-trabajar_04.html">Programación Android: Recursos - Trabajar con recursos Assets</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-repasando">Programación Android: Recursos - Repasando la estructura del directorio de recursos</a>
-</li>
-<li>
-<a href="/programacion-android-recursos-recursos">Programación Android: Recursos - Recursos y cambios de configuración</a>
-</li>
-</ul>
-<p class="alert">
-<a href="/disponible-la-primera-parte-del-curso/">Pasos a seguir para obtener el curso en pdf</a>
-</p>
 
+* [Programación Android: Recursos compilados y no compilados](https://elbauldelprogramador.com/programacion-android-recursos)
+* [Programación Android:Recursos - Arrays de strings](https://elbauldelprogramador.com/programacion-android-recursos-arrays-de)
+* [Programación Android: Recursos - Plurales](https://elbauldelprogramador.com/programacion-android-recursos-plurales)
+* [Programación Android: Recursos - Trabajar con recursos XML arbitrarios](https://elbauldelprogramador.com/programacion-android-recursos-trabajar.html)
+* [Programación Android: Recursos - Trabajar con recursos RAW](https://elbauldelprogramador.com/programacion-android-recursos-trabajar)
+* [Programación Android: Recursos - Trabajar con recursos Assets](https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04.html)
+* [Programación Android: Recursos - Repasando la estructura del directorio de recursos](https://elbauldelprogramador.com/programacion-android-recursos-repasando)
+* [Programación Android: Recursos - Recursos y cambios de configuración](https://elbauldelprogramador.com/programacion-android-recursos-recursos)
 
+> [Pasos a seguir para obtener el curso en pdf](https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/)
 
  [1]: https://elbauldelprogramador.com/terminada-la-primera-parte-del-manual
  [2]: https://elbauldelprogramador.com/programacion-android-recursos-recursos
  [3]: https://elbauldelprogramador.com/guia-de-desarrollo-android
- [4]: http://www.megaupload.com/?d=RDZ1J1MQ
-
-{% include toc.html %}
+ [4]: /assets/pdfs/ProgramacionAndroidSample1.pdf
