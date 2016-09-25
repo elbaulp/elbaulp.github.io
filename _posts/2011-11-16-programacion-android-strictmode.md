@@ -48,7 +48,7 @@ Ya que la configuración ocurre en un hilo, quizás nos sorprenda que el código
 
 Algo importante que debemos hacer a la hora de distribuir nuestra aplicación es apagar el StrictMode. Hay varias formas de conseguir esto. La más sencilla es eliminar las llamadas a los métodos, pero hacer esto dificulta seguir desarrollando la aplicación. Podemos declarar un booleano al nivel de la aplicación y comprobar su valor antes de llamar a StrictMode. De este modo, al enviar la aplicación a producción, simplemente daríamos a esta variable el valor false y de se llamará nunca a StrictMode.
 
-Un método más elegante para resolver este problema, es usar el atributo *debuggable* en nuestro [AndroidManifest][4]. Este atributo se coloca en el tag *<application></application>* de la forma *android:debuggable*. Una vez activado este atributo, puede fijarse como verdadero o falso dependiendo de si queremos depurar la aplicación o no. Podemos comprobar el estado de este atributo como se muestra más abajo. De modo que cuando esté activado, tendremos StrictMode activo, y cuando no lo esté, no.
+Un método más elegante para resolver este problema, es usar el atributo *debuggable* en nuestro [AndroidManifest][4]. Este atributo se coloca en el tag `<application>` de la forma *android:debuggable*. Una vez activado este atributo, puede fijarse como verdadero o falso dependiendo de si queremos depurar la aplicación o no. Podemos comprobar el estado de este atributo como se muestra más abajo. De modo que cuando esté activado, tendremos StrictMode activo, y cuando no lo esté, no.
 
 ```java
 //Devuelve si la aplicación está en modo debug o no
