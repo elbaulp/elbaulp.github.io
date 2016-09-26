@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Plurales'
-
+modified: 2016-09-26T13:45
 layout: post.amp
 permalink: /programacion-android-recursos-plurales/
 categories:
@@ -12,26 +12,27 @@ main-class: "android"
 color: "#689F38"
 ---
 
+{% include toc.html %}
+
+### Introducción
 
 Los recursos Plurals son un conjunto de strings. Estos strings representan una forma de escribir cantidades numéricas, por ejemplo, cuantos huevos hay en una cesta. Vamos a ver un ejemplo:
 
-Hay 1 huevo
-Hay 2 huevos  
-Hay 10 huevos
+- Hay 1 huevo
+- Hay 2 huevos
+- Hay 10 huevos
 
 Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo, la frase para 1 huevo es diferente. Android permite representar esta variación con el recurso llamado plurals. En el siguiente ejemplo vemos como se representan estas dos variaciones.
-
 
 <!--ad-->
 
 ```xml
 <resources>
 <plurals name="huevos_en_una_cesta">
-<item quantity="one">Hay 1 huevo</item>
-<item quantity="other">Hay %d huevos</item>
+   <item quantity="one">Hay 1 huevo</item>
+   <item quantity="other">Hay %d huevos</item>
 </plurals>
 </resources>
-
 ```
 
 Las dos variaciones se representan como dos cadenas de texto diferentes bajo el mismo plural. Ahora, podemos usarlo desde el código Java para mostrar correctamente la cadena correspondiente a la cantidad de huevos. El primer parámetro de ***getQuantityString()*** es el ID del plural. El segundo selecciona la cadena a usar. Cuando el valor de la cantidad es 1, usamos la cadena tal como es. Cuando el valor es distinto a 1, debemos pasar un tercer parámetro que será el valor a colocar en el lugar de %d. Siempre deberá haber al menos 3 parámetros si usamos cadenas formateadas en los plurales.
@@ -42,7 +43,6 @@ String s1 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 0, 0);
 String s2 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 1, 1);
 String s3 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 2, 2);
 String s4 = res.getQuantityString(R.plurals.huevos_en_una_cesta, 10, 10);
-
 ```
 
 Con este código, cada cantidad se mostrará con su correcta cadena de texto.
@@ -137,7 +137,6 @@ abstract class PluralRules {
         }
     }
 }
-
 ```
 
 ### Resources.java
@@ -169,16 +168,8 @@ public CharSequence getQuantityText(int id, int quantity) throws NotFoundExcepti
 
 ```
 
-En la mayoria de los idiomas normalmente hay dos posibles valores, &#8220;one&#8221; y &#8220;other&#8221;, pero para el Checo, los valores son &#8220;one&#8221; para 1, &#8220;few&#8221; del 2 al 4 y &#8220;other&#8221; para el resto.
+En la mayoria de los idiomas normalmente hay dos posibles valores, _one_ y _other_, pero para el Checo, los valores son _one_ para 1, _few_ del 2 al 4 y _other_ para el resto.
 
-* * *
-
-#### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos XML arbitrarios][1] 
-
-
-
-
+### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos XML arbitrarios][1] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar/
-
-{% include toc.html %}
