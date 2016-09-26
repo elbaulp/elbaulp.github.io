@@ -76,6 +76,6 @@ Lo que hacemos en el código de arriba es obtener el XmlPullParser, usarlo para 
 
 ### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos RAW][2] 
 
- [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
+ [1]: https://elbauldelprogramador.com/curso-programacion-android/
  [2]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar-2/
 
