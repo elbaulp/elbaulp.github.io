@@ -14,7 +14,7 @@ color: "#262626"
 Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he recopilado unas cuantas imágenes más:
 
 <figure>
-    <a href="https://2.bp.blogspot.com/-rUWLl5omr1g/TrEbswj71BI/AAAAAAAABeY/iWHUgrNEWu4/s1600/Postcard.jpg"  ><amp-img layout="responsive" alt="development programming software android technology programmer" width="500" height=394"" src="https://2.bp.blogspot.com/-rUWLl5omr1g/TrEbswj71BI/AAAAAAAABeY/iWHUgrNEWu4/s800/Postcard.jpg"></amp-img></a>
+    <a href="https://2.bp.blogspot.com/-rUWLl5omr1g/TrEbswj71BI/AAAAAAAABeY/iWHUgrNEWu4/s1600/Postcard.jpg"  ><amp-img layout="responsive" alt="development programming software android technology programmer" width="500" height=394" src="https://2.bp.blogspot.com/-rUWLl5omr1g/TrEbswj71BI/AAAAAAAABeY/iWHUgrNEWu4/s800/Postcard.jpg"></amp-img></a>
 </figure>
 
 <!--ad-->
