@@ -55,6 +55,7 @@ gulp.task('stylus', function(){
       use:[koutoSwiss(), prefixer(), jeet(), rupture()],
       compress: true
     }))
+    .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
     .pipe(gulp.dest('_site/assets/css/'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('assets/css'))
@@ -97,9 +98,9 @@ gulp.task('watch', function () {
 /**
  * Clean Css task
  */
-gulp.task('css', function() {
+gulp.task('unused-css', function() {
   return gulp.src('_includes/css/main.css')
-    .pipe(purify(['_site/**/*.js', '_site/**/*.html']))
+        .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
     .pipe(gulp.dest('_includes/css/main.clean.css'));
 });
 
