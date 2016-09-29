@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Repasando la estructura del directorio de recursos'
-
+modified: 2016-09-29T20:36
 layout: post.amp
 permalink: /programacion-android-recursos-repasando/
 categories:
@@ -20,29 +20,18 @@ En resumen, en el siguiente listado muestra la estructura global del directorio 
                 /attrs.xml
                 /styles.xml
      /drawable/*.png
-                   /*.jpg
-                   /*.gif
-                   /*.9.png
+              /*.jpg
+              /*.gif
+              /*.9.png
      /anim/*.xml
      /layout/*.xml
      /raw/*.*
      /xml/*.xml
 /assets/*.*/*.*
-
 ```
 
-<p class="alert">
-  Debido a que no se encuentra bajo el directorio <i>/res</i>, solo el directorio<i> /assets</i> puede contener una lista arbitrária de directorios. Cualquier otro directorio solo puede contener ficheros en ese nivel, y no mas subdirectorios
-</p>
+> Debido a que no se encuentra bajo el directorio <i>/res</i>, solo el directorio<i> /assets</i> puede contener una lista arbitrária de directorios. Cualquier otro directorio solo puede contener ficheros en ese nivel, y no mas subdirectorios
 
-* * *
-
-#### Siguiente Tema: [Programación Android: Recursos - Recursos y cambios de configuración][1] 
-
-
-
-
+## Siguiente Tema: [Programación Android: Recursos - Recursos y cambios de configuración][1] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-recursos/
-
-{% include toc.html %}

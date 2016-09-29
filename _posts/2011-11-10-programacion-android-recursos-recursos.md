@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Recursos y cambios de configuración'
-
+modified: 2016-09-29T20:38
 layout: post.amp
 permalink: /programacion-android-recursos-recursos/
 categories:
@@ -11,7 +11,6 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" id="logo" class="icono"  width="128px" height="128px" />
 
 Los recursos ayudan a la localización. Por ejemplo, podemos tener valores para strings que cambien en función del idioma configurado en el terminal. Los recursos Android generalizan esta idea para cualquier configuración del dispositivo, el idioma es tan solo otra configuración más. Otro ejemplo de cambios de configuración se dá cuando el dispositivo cambia de posición (de vertical a horizontal o viceversa). El modo vertical se suela llamar portrait y el horizontal landscape.
 
@@ -24,7 +23,6 @@ Android permite elegir distintas configuraciones de layout basandose en el tipo 
 /res/layout/main_layout.xml
 /res/layout-port/main_layout.xml
 /res/layout-land/main_layout.xml
-
 ```
 
 Aunque hay tres archivos layout separados, solo se generará un único ID para ellos en R.java. Este ID será de la forma ***R.layout.main_layout***
@@ -58,14 +56,13 @@ Con los clasificadores mostrados arriba, podemos crear directorios de recursos c
 /res/layout-ldpi
 /res/layout-hdpi
 /res/layout-car
-
 ```
 
 Para saber nuestra localización actual podemos ejecutar una aplicación que viene instalada en el emulador android. La encontramos en el menú de aplicaciones y se llama Custom Locale.
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="243" src="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s400/Screenshot.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" width="485" height="800" src="https://4.bp.blogspot.com/-Q3bB0guwyaU/TrufmiBkv0I/AAAAAAAABjA/kQypC8CXIbU/s800/Screenshot.png"></amp-img>
+</figure>
 
 Dado un ID de recurso, Android usa un algoritmo para elegir el adecuado. Si deseas saber más acerca de este tema puedes visitar la siguiente dirección <a target="_blank" href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources">http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources</a>, pero voy a dar unas reglas básicas.
 
@@ -75,7 +72,6 @@ La primera regla es que los clasificadores mostrados arriba están en orden de p
 /res/layout/main_layout.xml
 /res/layout-port/main_layout.xml
 /res/layout-en/main_layout.xml
-
 ```
 
 En este listado, el archivo *main_layout.xml* está disponible para dos variaciones posibles. Una variación para el idioma y otra para la orientación. Veamos que layout se selecciona si tenemos el dispositivo en vertical.
@@ -95,39 +91,38 @@ El siguiente código muestra las variaciones del directorio values:
 ```xml
 // values/string.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
-<string name="teststring_all">teststring in root</string>
-<string name="t1_enport">t1 in root</string>
-<string name="t1_1_en_port">t1_1 in root</string>
-<string name="t2">t2 in root</string>
-<string name="testport_port">testport in root</string>
+   <string name="teststring_all">teststring in root</string>
+   <string name="t1_enport">t1 in root</string>
+   <string name="t1_1_en_port">t1_1 in root</string>
+   <string name="t2">t2 in root</string>
+   <string name="testport_port">testport in root</string>
 </resources>
-
-// values-en/string_en.xml
+ 
+// values­en/string_en.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
-<string name="teststring_all">teststring-en</string>
-<string name="t1_enport">t1_en</string>
-<string name="t1_1_en_port">t1_1_en</string>
+ <string name="teststring_all">teststring­en</string>
+ <string name="t1_enport">t1_en</string>
+ <string name="t1_1_en_port">t1_1_en</string>
 </resources>
-
-// values-en-rUS/string_en_us.xml
+ 
+// values­en­rUS/string_en_us.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
-<string name="teststring_all">test-en-us</string>
+<string name="teststring_all">test­en­us</string>
 </resources>
-
-// values-port/string_port.xml
+ 
+// values­port/string_port.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
-<string name="teststring_all">test-en-us-port</string>
-<string name="testport_port">testport-port</string>
-<string name="t1_enport">t1_port</string>
-<string name="t1_1_en_port">t1_1_port</string>
+ <string name="teststring_all">test­en­us­port</string>
+ <string name="testport_port">testport­port</string>
+ <string name="t1_enport">t1_port</string>
+ <string name="t1_1_en_port">t1_1_port</string>
 </resources>
-
+ 
 // values/string_en_port.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
-<string name="teststring_all">test-en-port</string>
-<string name="t1_1_en_port">t1_1_en_port</string>
+ <string name="teststring_all">test­en­port</string>
+ <string name="t1_1_en_port">t1_1_en_port</string>
 </resources>
-
 ```
 
 El listado siguiente muestra el archivo R.java para estos recursos:
@@ -139,8 +134,7 @@ public static final class string {
         public static final int t2=0x7f070005;
         public static final int testport_port=0x7f070006;
         public static final int teststring_all=0x7f070002;
-    }
-
+}
 ```
 
 Como se aprecia, aunque hemos definido muchos strings, solo se han generado cinco IDs. A continuación se describe el comportamiento para cada string, que se ha probado con en_US y el modo portrait:
@@ -161,7 +155,3 @@ El SDK de Android tiene algoritmos más detallados aún, sin embargo, con este e
   * <a target="_blank" href="http://developer.android.com/reference/android/R.html">Recursos definidos en el nucleo de la plataforma Android</a>
   * <a target="_blank" href="http://androidbook.com/item/3542">Understanding Android Resource Arrays, Plurals, Configuration qualifiers</a>
   * <a target="_blank" href="http://androidbook.com/akc/filestorage/satya/documentfiles/3540/ProAndroid3_Ch04_TestProvider.zip">Descargar proyecto de ejemplo para testear los recursos</a>
-
-
-
-{% include toc.html %}
