@@ -1,17 +1,18 @@
 var env         = require('minimist')(process.argv.slice(2)),
-  gulp        = require('gulp'),
-  plumber     = require('gulp-plumber'),
-  browserSync = require('browser-sync'),
-  stylus      = require('gulp-stylus'),
-  uglify      = require('gulp-uglify'),
-  concat      = require('gulp-concat'),
-  jeet        = require('jeet'),
-  rupture     = require('rupture'),
-  koutoSwiss  = require('kouto-swiss'),
-  prefixer    = require('autoprefixer-stylus'),
-  imagemin    = require('gulp-imagemin'),
-  cp          = require('child_process'),
-  newer       = require('gulp-newer');
+    gulp        = require('gulp'),
+    plumber     = require('gulp-plumber'),
+    browserSync = require('browser-sync'),
+    stylus      = require('gulp-stylus'),
+    uglify      = require('gulp-uglify'),
+    concat      = require('gulp-concat'),
+    jeet        = require('jeet'),
+    rupture     = require('rupture'),
+    koutoSwiss  = require('kouto-swiss'),
+    prefixer    = require('autoprefixer-stylus'),
+    imagemin    = require('gulp-imagemin'),
+    cp          = require('child_process'),
+    newer       = require('gulp-newer'),
+    purify      = require('gulp-purifycss');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -91,6 +92,15 @@ gulp.task('watch', function () {
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
   gulp.watch(['**/*.html','index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+});
+
+/**
+ * Clean Css task
+ */
+gulp.task('css', function() {
+  return gulp.src('_includes/css/main.css')
+    .pipe(purify(['_site/**/*.js', '_site/**/*.html']))
+    .pipe(gulp.dest('_includes/css/main.clean.css'));
 });
 
 /**
