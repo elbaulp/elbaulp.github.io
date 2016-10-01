@@ -73,5 +73,3 @@ content://contacts/people/23
  [4]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu/
  [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de_28/
 
-{% include toc.html %}
-</provider>
