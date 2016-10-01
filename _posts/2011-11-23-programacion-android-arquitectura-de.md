@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Arquitectura de los Proveedores de contenidos'
-
+modified: 2016-10-01T13:15
 layout: post.amp
 permalink: /programacion-android-arquitectura-de/
 categories:
@@ -13,15 +13,8 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
-</div>
 
 Vamos a examinar algunos de los elementos que componen los proveedores de contenidos(CV) y cómo éstos se relacionan con otras abstracciones de acceso a datos.
-
-```bash
-
-```
 
 En conujunto, los CV tienen un enfoque paralelo a las siguientes abstracciones:
 
@@ -32,14 +25,13 @@ En conujunto, los CV tienen un enfoque paralelo a las siguientes abstracciones:
 
 Cada CV de un dispositivo se registra a sí mismo de manera similar a como lo hace un sitio web con cadenas de texto (similar a los nombres de domínio, pero para los CV se llama *authority*). Esta cadena asenta las bases del conjunto de URIs que este CV puede ofrecer. No es diferente a como un sitio web con un dominio ofrece un conjunto de URls que muestran sus documentos o contenido en general.
 
-
 <!--ad-->
 
 El registro de la authority se hace en el [androidManifest][3]. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación [FavSItes][4]):
 
 ```xml
-<provider android:name=".SitesProvider" android:authorities="com.elbauldelprogramador.provider.FavSites">
-
+<provider android:name=".SitesProvider"
+android:authorities="com.elbauldelprogramador.provider.FavSites" />
 ```
 
 Un authoroty es como un nombre de dominio para ese CV. Con el authority anterior, las urls de nuestro proveedor comenzarán con ese prefijo:
@@ -69,25 +61,16 @@ content://media/internal/images
 content://media/external/images
 content://contacts/people
 content://contacts/people/23
-
 ```
 
-<p class="alert">
-  Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.
-</p>
+> Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.
 
-* * *
+## Siguiente Tema: [Proveedores de Contenidos - Leer datos mediante URIs][5] 
 
-#### Siguiente Tema: [Proveedores de Contenidos - Leer datos mediante URIs][5] 
-
-
-
-
-
- [1]: https://elbauldelprogramador.com/programacion-android-proveedores-de/
+ [1]: https://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/
  [2]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
  [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
- [4]: https://elbauldelprogramador.com/search/?q=favsites
+ [4]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu/
  [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de_28/
 
 {% include toc.html %}

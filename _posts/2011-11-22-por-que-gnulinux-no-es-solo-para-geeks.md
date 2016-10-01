@@ -1,6 +1,6 @@
 ---
 title: Por qué GNU/Linux no es solo para Geeks
-
+modified: 2016-10-01T13:20
 layout: post.amp
 permalink: /por-que-gnulinux-no-es-solo-para-geeks/
 categories:
@@ -9,14 +9,10 @@ categories:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="so" class="icono" /></a>
-</div>
 
 Si alguna vez has tenido un ordernador con Windows posiblemente en algún momento ha estado infectado con algún virus. La solución a este problema no es comprar un antivirus. La solución es abandonar windows como Sistema operativo principal, sin embargo para algunos parece que es algo imposible de hacer.Los ordenadores de Apple son bastante caros y si bien puede ejecutar Windows como sistema operativo secundario, la mayoría de la gente preferiría ser capaz de ejecutar aplicaciones de Windows en su sistema operativo principal, sin una perdida de eficiencia notable.
 
 En este punto es donde entra GNU/Linux. Es cierto que existen virus para [linux][1], pero hay muy muy pocos. Y debido a la cantidad de distintas versiones hace que sea aún más dificil desarrollar virus para esta plataforma. Aún así Linux no es perfecto y tiene implementadas funciones de seguridad para protegerte de las pocas amenazas presentes o de las que puedan darse en el futuro. Mientras que Windows Vista vino pre-configurado con un sistema de seguridad muy molesto y redundante, Linux permite a al usuario llevar a cabo las tareas diarias sin interrupciones. La mayor preocupación con Linux son los virus multiplataforma que puden ejecutarse en cualquier ordenador a través de Java o cualquier otro entorno en tiempo de ejecución instalado.
-
 
 <!--ad-->
 
@@ -28,9 +24,5 @@ No todo el mundo usa Linux como servidor, aunque para aquellos que aún siguen s
 
 Fuente original [En inglés]: <a target="_blank" href="http://www.articlesbase.com/software-articles/why-linux-isnt-only-for-geeks-5387056.html">articlesbase.com</a>
 
-
-
- [1]: https://elbauldelprogramador.com/label/linux
- [2]: https://elbauldelprogramador.com/label/opensource
-
-{% include toc.html %}
+ [1]: https://elbauldelprogramador.com/tags/#linux
+ [2]: https://elbauldelprogramador.com/tags/#opensource

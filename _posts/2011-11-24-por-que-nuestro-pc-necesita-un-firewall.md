@@ -1,6 +1,6 @@
 ---
 title: Por qué nuestro PC necesita un firewall activado
-
+modified: 2016-10-01T13:20
 layout: post.amp
 permalink: /por-que-nuestro-pc-necesita-un-firewall/
 categories:
@@ -15,9 +15,6 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="so" class="icono" /></a>
-</div>
 
 Hace poco os hablé de [por qué Linux no era solo para geeks][1], sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red
 
@@ -25,22 +22,21 @@ Hace poco os hablé de [por qué Linux no era solo para geeks][1], sacando el te
 
 Podemos tomar como ejemplo el <a target="_blank" href="http://chakra-project.org/bbs/viewtopic.php?id=5185">foro Chakra</a>:
 
-***También estoy en contra del uso del firewall (¿cuanta gente navega con un módem usb en linux, o desactiva el firewall del router?)****, ¿Qué tipo de web porno o qué tipo de script hay que visitar/ejecutar para infectarte de malware en Linux? y puesto que tal vez 3 de cada mil personas por lo general descargan y ejecutan un script sin leerlo, ¿debo tener mi ordenador llenas de este software? En serio: ¿cuantas veces ejecutaste amarok o VLC y encontraste un exploit que hizo colgarse al pc?*
+> ***También estoy en contra del uso del firewall (¿cuanta gente navega con un módem usb en linux, o desactiva el firewall del router?)****, ¿Qué tipo de web porno o qué tipo de script hay que visitar/ejecutar para infectarte de malware en Linux? y puesto que tal vez 3 de cada mil personas por lo general descargan y ejecutan un script sin leerlo, ¿debo tener mi ordenador llenas de este software? En serio: ¿cuantas veces ejecutaste amarok o VLC y encontraste un exploit que hizo colgarse al pc?*
 
 O <a target="_blank" href="http://www.linuxbsdos.com/2010/07/20/pclinuxos-2010-review/comment-page-2/#comments">este</a> otro de los fans de PCLinuxOS:
 
-*Casi todas las distros incluyen un firewall, pero está desactivado por defecto. No creo en la teoría de &#8220;una única configuración del firewall arregla todo&#8221;. Mis necesidades son diferentes a las vuestras. Incluyan el firewall, coloquen un icono en un lugar fácil de encontrar y dejen que nosotros hagamos el resto.*
+> *Casi todas las distros incluyen un firewall, pero está desactivado por defecto. No creo en la teoría de &#8220;una única configuración del firewall arregla todo&#8221;. Mis necesidades son diferentes a las vuestras. Incluyan el firewall, coloquen un icono en un lugar fácil de encontrar y dejen que nosotros hagamos el resto.*
 
 &#8230;
 
-*Al principio el firewall venía habilitado, pero la mayoría de los usuarios se quejaban por ello y los desarrolladores lo desabilitaron. PErsonalmente cada usuario deberia elegir si quiere activarlo o no.*
+> *Al principio el firewall venía habilitado, pero la mayoría de los usuarios se quejaban por ello y los desarrolladores lo desabilitaron. PErsonalmente cada usuario deberia elegir si quiere activarlo o no.*
 
 &#8230;
 
-*Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.*
+> *Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.*
 
 Lo que revelan estos comentarios es que muchos en nuestra comunidad no entienden las bases de la seguridad de red. Espero que este corto artículo pueda dejar un poco más claro este tema.
-
 
 <!--ad-->
 
@@ -60,8 +56,4 @@ Algunas de las mejores distros linux, como Fedora, tienen un firewall habilitado
 
 Tracucción de : <a target="_blank" href="http://www.linuxbsdos.com/2011/11/21/why-your-computer-needs-a-firewall-enabled/">linuxbsdos.com</a>
 
-
-
  [1]: https://elbauldelprogramador.com/por-que-gnulinux-no-es-solo-para-geeks
-
-{% include toc.html %}

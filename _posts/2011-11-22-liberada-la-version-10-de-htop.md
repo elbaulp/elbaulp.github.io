@@ -1,6 +1,6 @@
 ---
 title: Liberada la versión 1.0 de htop
-
+modified: 2016-10-01T13:10
 layout: post.amp
 permalink: /liberada-la-version-10-de-htop/
 categories:
@@ -12,9 +12,6 @@ tags:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="sh" class="icono" /></a>
-</div>
 
 Si monitorizáis el estado de vuestros sistemas con [Linux][1] probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.
 
@@ -22,71 +19,40 @@ Podéis **consultar las mejoras** en la <a target="_blank" href="http://htop.sou
 
 El autor explica en la página del proyecto las mejoras de esta nueva versión:
 
-
 <!--ad-->
-
-***
 
 I am extremely happy to announce htop 1.0!
 
-Time flies, I can&#8217;t believe it&#8217;s been eight years of development  
-already. It seems like yesterday that I&#8217;ve decided to stop writing PID  
-numbers every time I wanted to kill a process and started this  
-project. I am very happy to see this little project grow into a  
-reality, see it being included in repositories for many distributions,  
-reading nice reviews arond the web, receiving many contributions from  
-coders from all over the world who helped making htop better and  
-better over the years, and getting short &#8220;thank you!&#8221; emails that  
-always make my day. Thanks to all distro packagers, reviewers, code  
-contributors, users. The free software community is amazing; if it  
-wasn&#8217;t for all of you, htop wouldn&#8217;t be what it is now. Version  
-numbers are more symbolic than anything, but the stability of htop 0.9  
-in the past year and the cool new features introduced in this release  
-compelled me to call this version 1.0. We all deserve this little  
-&#8220;achievement&#8221;. <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
-<li class="x">
-  Performance improvements
-</li>
-<li class="x">
-  Support for splitting CPU meters into two or four columns<br /> (thanks to Wim Heirman)
-</li>
-<li class="x">
-  Switch from PLPA, which is now deprecated, to HWLOC.
-</li>
-<li class="x">
-  Bring back support for native Linux sched_setaffinity,<br /> so we don&#8217;t have to use HWLOC where we don&#8217;t need to.
-</li>
-<li class="x">
-  Support for typing in user names and column fields in selection panels.
-</li>
-<li class="x">
-  Support for UTF-8 tree drawing<br /> (thanks to Bin Guo)
-</li>
-<li class="x">
-  Option for counting CPUs from zero<br /> (thanks to Sean Noonan)
-</li>
-<li class="x">
-  Meters update in every screen (no longer halting while on Setup, etc.)
-</li>
-<li class="x">
-  Stricter checks for command-line options<br /> (thanks to Sebastian Pipping)
-</li>
-<li class="x">
-  Incremental filtering<br /> (thanks to Seth Heeren for the idea and initial implementation)
-</li>
-<li class="x">
-  Try harder to find the ncurses header<br /> (thanks to Moritz Barsnick)
-</li>
-<li class="x">
-  Man page updates<br /> (thanks to Vincent Launchbury)
-</li>
-<li class="x">
-  BUGFIX: Support larger numbers for process times.<br /> (thanks to Tristan Nakagawa for the report.)
-</li>
-<li class="x">
-  BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths<br /> (patch by Sebastian Pipping)
-</li>
+Time flies, I can&#8217;t believe it&#8217;s been eight years of development
+already. It seems like yesterday that I&#8217;ve decided to stop writing PID
+numbers every time I wanted to kill a process and started this
+project. I am very happy to see this little project grow into a
+reality, see it being included in repositories for many distributions,
+reading nice reviews arond the web, receiving many contributions from
+coders from all over the world who helped making htop better and
+better over the years, and getting short &#8220;thank you!&#8221; emails that
+always make my day. Thanks to all distro packagers, reviewers, code
+contributors, users. The free software community is amazing; if it
+wasn&#8217;t for all of you, htop wouldn&#8217;t be what it is now. Version
+numbers are more symbolic than anything, but the stability of htop 0.9
+in the past year and the cool new features introduced in this release
+compelled me to call this version 1.0. We all deserve this little
+&#8220;achievement&#8221;.
 
+*   Performance improvements
+*   Support for splitting CPU meters into two or four columns (thanks to Wim Heirman)
+*   Switch from PLPA, which is now deprecated, to HWLOC.
+*   Bring back support for native Linux sched_setaffinity, so we don’t have to use HWLOC where we don’t need to.
+*   Support for typing in user names and column fields in selection panels.
+*   Support for UTF-8 tree drawing (thanks to Bin Guo)
+*   Option for counting CPUs from zero (thanks to Sean Noonan)
+*   Meters update in every screen (no longer halting while on Setup, etc.)
+*   Stricter checks for command-line options (thanks to Sebastian Pipping)
+*   Incremental filtering (thanks to Seth Heeren for the idea and initial implementation)
+*   Try harder to find the ncurses header (thanks to Moritz Barsnick)
+*   Man page updates (thanks to Vincent Launchbury)
+*   BUGFIX: Support larger numbers for process times.  (thanks to Tristan Nakagawa for the report.)
+*   BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths (patch by Sebastian Pipping)
 
 Que traduzco a continuación:
 
@@ -96,22 +62,17 @@ Para instalarlo tan solo debéis escribir en el terminal:
 
 ```bash
 sudo aptitude install htop
-
 ```
 
 Al ejecutarlo veremos algo parecido a lo siguiente:
 
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s1600/Screenshot-Terminal.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="linux htop"  height="320" width="400" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s400/Screenshot-Terminal.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="linux htop" width="800" height="640" src="https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s800/Screenshot-Terminal.png"></amp-img>
+</figure>
 
 Vía <a target="_blank" href="http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/">MuyLinux</a>
 
 Fuente <a target="_blank" href="http://htop.sourceforge.net/index.php?page=main">htop.sourceforge.net</a>
 
-
-
- [1]: https://elbauldelprogramador.com/label/linux
+ [1]: https://elbauldelprogramador.com/tags/#linux
  [2]: http://htop.sourceforge.net/index.php?page=downloads#binaries
-
-{% include toc.html %}
