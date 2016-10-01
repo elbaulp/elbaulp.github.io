@@ -1,0 +1,24 @@
+---
+layout: minimal.amp
+title: "Buscar"
+description: "Busca contenido en el blog"
+sitemap: false
+---
+
+
+<div class="post-content">
+  <h1>Introduce tu búsqueda aquí</h1>
+    <script>
+      (function() {
+      var cx = '017944990515954375932:j4xhnxcoyio';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <p><gcse:search></gcse:search></p>
+</div>
