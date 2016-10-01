@@ -197,6 +197,15 @@
                     "eventCategory": "author-name",
                     "eventAction": "author-name-click"
                 }
+            },
+            "search" : {
+                "on": "click",
+                "selector": "#search",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "icon-search",
+                    "eventAction": "icon-search-click"
+                }
             }
         }
     }
