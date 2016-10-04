@@ -73,6 +73,6 @@ Cursor managedCursor = managedQuery(mContactsUri,
                                     Contacts.People.NAME + " ASC"); //Clausula order by
 ```
 
-#### Siguiente Tema: [Usando cursores][1]
+## Siguiente Tema: [Usando cursores][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-usando-cursores/
