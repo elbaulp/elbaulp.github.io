@@ -16,6 +16,8 @@ color: "#262626"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/geek-eye-doctor.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="452"></amp-img>
 </figure>
 
+<!--ad-->
+
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/ultrabook.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="588"></amp-img>
 </figure>
