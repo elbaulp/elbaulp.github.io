@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Usando cursores'
-
+modified: 2016-10-08T11:00
 layout: post.amp
 permalink: /programacion-android-usando-cursores/
 categories:
@@ -12,10 +12,6 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
-</div>
-
 Cosas a saber sobre un cursor Android:
 
   * Un cursor es una colección de filas.
@@ -59,7 +55,6 @@ Para ayudarnos a saber donde se encuentra el cursor, Android proporciona los sig
 isBeforeFirst()
 isAfterLast()
 isClosed()
-
 ```
 
 Haciendo uso de estos métodos podemos recorrer el cursor con un *for* en lugar de con un *while:*
@@ -74,19 +69,11 @@ for(cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext()){
    String name = cur.getString(nameColumn);
    String phoneNumber = cur.getString(phoneColumn);
 }
-
 ```
 
 Por último, para obtener el número de registros que hay en el cursor, podemos usar el método ***getCount().***
 
-* * *
-
-#### Siguiente Tema: [Usando la cláusula Where][1] 
-
-
-
-
+## Siguiente Tema: [Usando la cláusula Where][1] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-usando-la-clausula/
 
-{% include toc.html %}

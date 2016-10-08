@@ -1,8 +1,9 @@
 ---
-title: 'Tech Comics: &#8220;Geek en el oculista&#8221; [HUMOR]'
-
+title: 'Tech Comics: “Geek en el oculista” [HUMOR]'
+modified: 2016-10-08T11:05
 layout: post.amp
 permalink: /tech-comics-geek-en-el-oculista-humor/
+image: geek-eye-doctor.jpg
 categories:
   - curiosidades
   - Humor
@@ -10,15 +11,14 @@ categories:
 main-class: "geek"
 color: "#262626"
 ---
-<div class="separator" >
-<a href="https://2.bp.blogspot.com/-416se6qXRuw/Ttud2uYW22I/AAAAAAAAB5k/H23TdwAkINE/s1600/geek-eye-doctor.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="354" src="https://2.bp.blogspot.com/-416se6qXRuw/Ttud2uYW22I/AAAAAAAAB5k/H23TdwAkINE/s400/geek-eye-doctor.jpg" /></a>
-</div>
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-aDZAPDuoBKU/Ttud2ouw0lI/AAAAAAAAB50/GfCp8cbiZSU/s1600/ultrabook.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="400" width="272" src="https://4.bp.blogspot.com/-aDZAPDuoBKU/Ttud2ouw0lI/AAAAAAAAB50/GfCp8cbiZSU/s400/ultrabook.jpg" /></a>
-</div>
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/geek-eye-doctor.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="452"></amp-img>
+</figure>
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/ultrabook.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="588"></amp-img>
+</figure>
 
 Fuente: <a target="_blank" href="http://www.datamation.com/news/tech-comics-geek-at-the-eye-doctor-1.html">datamation</a>
 
-
-
-{% include toc.html %}

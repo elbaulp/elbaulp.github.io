@@ -1,8 +1,9 @@
 ---
 title: 'Guerra de navegadores [Humor]'
-
+modified: 2016-10-08T10:57
 layout: post.amp
 permalink: /guerra-de-navegadores-humor/
+image: guerra-de-navegadores-humor.jpg
 categories:
   - aplicaciones
   - curiosidades
@@ -10,10 +11,9 @@ categories:
 main-class: "geek"
 color: "#262626"
 ---
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/-wZ_f7F4Pu0U/TtQVMHdSYfI/AAAAAAAAB24/ULWxHKOWEro/s1600/iechromefirefox.jpg"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="chrome firefox internet explorer"  height="309" width="400" src="https://1.bp.blogspot.com/-wZ_f7F4Pu0U/TtQVMHdSYfI/AAAAAAAAB24/ULWxHKOWEro/s400/iechromefirefox.jpg" /></a>
-</div>
 
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guerra-de-navegadores-humor.jpg" alt="{{ title }}" title="{{ title }}" width="674" height="521"></amp-img>
+</figure>
 
-
-{% include toc.html %}
+<!--ad-->
