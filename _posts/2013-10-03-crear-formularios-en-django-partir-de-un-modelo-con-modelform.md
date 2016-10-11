@@ -1,6 +1,6 @@
 ---
 title: Crear formularios en Django a partir de un Modelo con ModelForm
-
+modified: 2016-10-11T12:12
 layout: post.amp
 permalink: /crear-formularios-en-django-partir-de-un-modelo-con-modelform/
 categories:
@@ -9,10 +9,10 @@ tags:
   - crear formularios a partir del modelo django
   - crear formularios en django
   - formularios en django
+image: 2013/10/django.png
 main-class: "dev"
 color: "#E64A19"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/10/django.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="700px" height="394px" />
 
 Como comenté cuando escribí el artículo sobre [Introducción a Django][1] he tenido que empezar a desarrollar aplicaciones web en este [framework][2] que cada día me gusta más.
 
@@ -26,7 +26,6 @@ Vamos a crear una aplicación trivial a modo de ejemplo, la llamaremos **pruebaf
 
 ```bash
 $ python manage.py startapp pruebaformularios
-
 ```
 
 La aplicación hemos de crearla dentro de un proyecto existente.
@@ -50,7 +49,6 @@ class Persona(models.Model):
 
     def __unicode__(self):
         return self.dni
-
 ```
 
 ## Crear la Vista
@@ -77,7 +75,6 @@ Como vemos, de una forma tan sencilla como esta estamos creando una vista que pe
 Para ser capaces de mostrar al usuario una lista de *personas* es necesario crear una plantilla. Nos basaremos en una plantilla base llamada *base.html* que se puede encontrar en *django/contrib/databrowse/templates/databrowse/base.html*
 
 ```html
-
 {% raw %}
   {% extends "base.html" %}
   {% block content %}
@@ -90,7 +87,6 @@ Para ser capaces de mostrar al usuario una lista de *personas* es necesario crea
   </ul>
   {% endblock %}
 {% endraw %}
-
 ```
 
 De esta forma nuestra plantilla hereda todo el contenido de *base.html* y le añadimos contenido en el bloque *content*. Es importante que guardemos ambas plantillas dentro de nuestra aplicación *pruebaformularios* en el directorio *./templates/pruebaformularios/*.
@@ -103,14 +99,12 @@ Con la plantilla creada, el siguiente paso es configurar el proyecto para que se
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH,'pruebaformularios/templates/pruebaformularios'),
 )
-
 ```
 
 Donde PROJECT_PATH es:
 
 ```python
 PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
-
 ```
 
 De esta manera django encontrará nuestras plantillas y podremos usarlas.
@@ -129,7 +123,6 @@ from . import views
 urlpatterns = patterns('',
     url(r'list/$', views.PersonaList.as_view(), name='plist'),
 )
-
 ```
 
 Con esto estamos diciendo a *Django* que cuando encuentre el patrón url list/ (No es exáctamente así, pero lo aclararemos a continuación) muestre la vista *PersonaList*, también le hemos dado un nombre a este patrón para poder referenciarlo más tarde tanto en código como en plantillas, y así no escribir directamente las URLs, lo cual es bastante útil, ya que podemos cambiar la estructura de las direcciones URLs de nuestra aplicación sin necesidad de modificar nada del código, únicamente el archivo *urls.py*
@@ -149,7 +142,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^personas/', include('pruebaformularios.urls', namespace="upersonas")),
 )
-
 ```
 
 Con esto, estamos añadiendo bajo la ruta */personas/* todas las urls del proyecto *pruebaformularios*. Es como si fuera un #include de C/C++. Luego la lista de personas que pretendemos mostrar estará en la ruta */personas/list/*. El *namespace* lo usaremos en las plantillas y en el código.
@@ -159,7 +151,6 @@ Ya debería estar todo, para probar el ejemplo ejecutamos:
 ```bash
 $ python manage.py syncdb
 $ python manage.py runserver
-
 ```
 
 El primer comando se encarga de actualizar la base de datos con los modelos creados y el segundo arranca el servidor de desarrollo para que podamos acceder a la web.
@@ -203,7 +194,6 @@ def add_persona(request):
         form = PersonaForm() # Unbound form
 
     return render(request, 'pruebaformularios/persona_form.html', {'form': form})
-
 ```
 
 Hay 3 posibles flujos en esta función:
@@ -214,52 +204,12 @@ Hay 3 posibles flujos en esta función:
 
 La siguiente tabla pretende resumir los flujos posibles:
 
-<table class="docutils">
-<colgroup> <col width="24%" /> <col width="20%" /> <col width="55%" /> </colgroup> <tr class="row-odd">
-<th class="head">
-      ¿Se está enviando el formulario?
-    </th>
-<th class="head">
-      ¿Hay datos?
-    </th>
-<th class="head">
-      Qué pasa
-    </th>
-</tr>
-<tr class="row-even">
-<td>
-      Sin enviar
-    </td>
-<td>
-      Aún no
-    </td>
-<td>
-      Se proporciona a la plantilla una instancia del formulario sin relledar (Unbound).
-    </td>
-</tr>
-<tr class="row-odd">
-<td>
-      Enviados
-    </td>
-<td>
-      Datos inválidos
-    </td>
-<td>
-      Se pasa a la plantilla una instancia del formulario con datos
-    </td>
-</tr>
-<tr class="row-even">
-<td>
-      Enviados
-    </td>
-<td>
-      Datos válidos
-    </td>
-<td>
-      Se procesan los datos y se guardan, se redirige a la lista de Personas.
-    </td>
-</tr>
-</table>
+| ¿Se está enviando el formulario? | ¿Hay datos?     | Qué pasa                                                                           |
+|----------------------------------|-----------------|------------------------------------------------------------------------------------|
+| Sin enviar                       | Aún no          | Se proporciona a la plantilla una instancia del formulario sin relledar (Unbound). |
+| Enviados                         | Datos inválidos | Se pasa a la plantilla una instancia del formulario con datos                      |
+| Enviados                         | Datos válidos   | Se procesan los datos y se guardan, se redirige a la lista de Personas.            |
+
 
 ## Asociar la función con una url
 
@@ -270,7 +220,6 @@ urlpatterns = patterns('',
     url(r'^list/$', views.PersonaList.as_view(), name='plist'),
     url(r'^add/$', views.add_persona, name='padd'),
 )
-
 ```
 
 El nombre será usado después en la plantilla.
@@ -335,8 +284,6 @@ class PersonaForm(ModelForm):
 
     class Meta:
         model = Persona
-
-
 ```
 
 ```python
@@ -379,7 +326,6 @@ urlpatterns = patterns('',
     url(r'^list/$', views.PersonaList.as_view(), name='plist'),
     url(r'^add/$', views.add_persona, name='padd'),
 )
-
 ```
 
 
@@ -402,7 +348,6 @@ urlpatterns = patterns('',
   Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
 {% endblock %}
 {% endraw %}
-
 ```
 
 ```html
@@ -451,6 +396,3 @@ Espero que os haya servido de ayuda.
 
  [1]: https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
  [2]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
-
-
-{% include toc.html %}

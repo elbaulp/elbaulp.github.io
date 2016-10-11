@@ -1,6 +1,6 @@
 ---
 title: 'Introducción a Django - Instalación y primer proyecto'
-
+modified: 2016-10-11T12:04
 layout: post.amp
 permalink: /introduccion-django-instalacion-y-primer-proyecto/
 categories:
@@ -8,29 +8,33 @@ categories:
 tags:
   - ejemplos django
   - instalar django
+image: 2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png
 main-class: "dev"
 color: "#E64A19"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png" alt="Introducción a Django – Instalación y primer proyecto" width="1921px" height="1080px" />
+
+<figure>
+    <amp-imgon="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png" alt="Introducción a Django – Instalación y primer proyecto" width="1921px" height="1080px" />
+</figure>
 
 Hacía tiempo que el [framework][1] web ***Django*** estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de ***Django***.
 
-<!--ad-->
+{% include toc.html %}
 
 ### Instalar django bajo un entorno virtual con virtualenv
 
 Vamos a instalar virtualenv, lo cual nos permitirá crear un entorno virtual en el que trabajar con python e instalar fácilmente aplicaciones mediante **easy_install**. Para ello ejecutamos:
 
+<!--ad-->
+
 ```bash
 $ sudo aptitude install python-setuptools
-
 ```
 
 Tras esto, ahora podemos instalar virtualenv:
 
 ```bash
 sudo easy_install virtualenv
-
 ```
 
 #### Inicializar el entorno virtual
@@ -39,7 +43,6 @@ Con virtualenv instalado ahora creamos un directorio en el que instalar todo lo 
 
 ```bash
 $ virtualenv python-env
-
 ```
 
 Al ejecutar este comando tendremos una carpeta llamada python-env, entramos y activamos el entorno virtual:
@@ -47,7 +50,6 @@ Al ejecutar este comando tendremos una carpeta llamada python-env, entramos y ac
 ```bash
 $ cd python-env
 $ . bin/activate
-
 ```
 
 #### Instalar Django
@@ -56,7 +58,6 @@ Por último, instalamos ***Django***:
 
 ```bash
 $ easy_install django
-
 ```
 
 ### Configurando Django
@@ -66,7 +67,6 @@ Asumiremos que la versión instalada es la 1.5:
 ```bash
 $ python -c "import django; print(django.get_version())"
 1.5.2
-
 ```
 
 #### Crear un proyecto
@@ -75,7 +75,6 @@ Para inicializar un proyecto debemos ejecutar el siguiente comando:
 
 ```bash
 $ django-admin.py startproject mysite
-
 ```
 
 El cual creará un directorio llamado *mysite*, la estructura del proyecto es la siguiente:
@@ -88,7 +87,6 @@ mysite/
         settings.py
         urls.py
         wsgi.py
-
 ```
 
   * El directorio *mysite* más exterior es simplemente un contenedor para el proyecto, su nombre no influye en **Django** y puede ser renombrado si así lo queremos.
@@ -105,7 +103,6 @@ mysite/
 
 ```bash
 $ python manage.py runserver
-
 ```
 
 #### El fichero de configuración settings.py
@@ -126,7 +123,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default.
     }
 }
-
 ```
 
 ##### Aplicaciones instaladas
@@ -146,7 +142,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
-
 ```
 
 La aplicación de ejemplo que creemos deberá referenciarse aquí para poder usarla.
@@ -157,7 +152,6 @@ Para crear una nueva aplicación basta con ejecutar el comando:
 
 ```bash
 $ python manage.py startapp polls
-
 ```
 
 Lo cual creará un directorio llamado *polls*, cuyo contenido será:
@@ -168,7 +162,6 @@ polls/
     models.py
     tests.py
     views.py
-
 ```
 
 En **models.py** se define los modelos que se usarán para crear la base de datos mediante [clases][3] en Python. En este caso necesitamos una tabla *Poll* (Encuesta) y *Choice* (Opción elegida). La encuesta tendrá dos campos, *question* y *pub_date*. Mientras que la opción elegida tendrá que hacer referencia a qué encuesta pertenece mediante una [foreignKey][4], un texto que describa la opción y el número de votos. Dicho esto, el fichero *models.py* contendrá:
@@ -184,7 +177,6 @@ class Choice(models.Model):
     poll = models.ForeignKey(Poll)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
-
 ```
 
 Tras escribir los modelos que necesitamos, ejecutamos *python manage.py syncdb* para crear las tablas en la base de datos.
@@ -197,7 +189,6 @@ INSTALLED_APPS = (
 'polls',
 # ...
 )
-
 ```
 
 #### Activar el panel de administración
@@ -214,12 +205,13 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
-
 ```
 
 Ejecutamos el servidor con *python manage.py runserver* y entramos a <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a>. Deberíamos ver:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/admin01.png" alt="Introducción a Django – Instalación y primer proyecto" width="336px" height="192px" />
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/img/2013/09/admin01.png" alt="{{ title }}" title="{{ title }}" width="336px" height="192px"></amp-img>
+</figure>
 
 Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado *admin.py* en el directorio *polls*:
 
@@ -228,12 +220,13 @@ from django.contrib import admin
 from polls.models import Poll
 
 admin.site.register(Poll)
-
 ```
 
 Debemos reiniciar el servidor para que los cambios se apliquen, ahora sí vemos la aplicación polls:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/admin03t.png" alt="Introducción a Django – Instalación y primer proyecto" width="400px" height="134px" />
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/admin03t.png" alt="Introducción a Django – Instalación y primer proyecto" width="400px" height="134px" />
+</figure>
 
 #### Escribir la primera vista
 
@@ -244,7 +237,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Hello, world. You're at the poll index.")
-
 ```
 
 Sin embargo, para conseguir que funcione, debemos crear un archivo *urls.py* que asocie la función **index** a una dirección URL. En *polls/urls.py* escribe:
@@ -257,7 +249,6 @@ from polls import views
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index')
 )
-
 ```
 
 Y ahora debemos decir a *mysite/urls.py* que use también *polls/urls.py* cuando busque qué funciones asociar a qué urls:
@@ -272,7 +263,6 @@ urlpatterns = patterns('',
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
-
 ```
 
 Tras modificar estos ficheros, veremos el mensaje **Hello, world. You&#8217;re at the poll index.** en <a href="http://127.0.0.1:8000/polls" target="_blank">http://127.0.0.1:8000/polls</a>.
@@ -286,11 +276,7 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
 *Documentación Oficial* »» <a href="https://docs.djangoproject.com/en/1.5/intro/tutorial01/" target="_blank">djangoproject.com</a>  
 *Imagen de aruseni* »» <a href="http://aruseni.deviantart.com/art/Django-white-and-green-318200642" target="_blank">deviantart</a>
 
-
-
  [1]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
  [2]: https://elbauldelprogramador.com/bases-de-datos/ "Bases de datos"
  [3]: https://elbauldelprogramador.com/clases-y-objetos-introduccion/ "Clases y objetos – Introducción"
  [4]: https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/ "Lenguaje Definición de Datos(DDL) – CREATE"
-
-{% include toc.html %}

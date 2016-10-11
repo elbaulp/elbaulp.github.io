@@ -1,6 +1,6 @@
 ---
 title: Cómo depurar una aplicación en Django
-
+modified: 2016-10-11T12:20
 layout: post.amp
 permalink: /como-depurar-una-aplicacion-en-django/
 categories:
@@ -11,10 +11,10 @@ tags:
   - depurar django
   - django
   - pdb
+image: 2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2-1024x575.png
 main-class: "dev"
 color: "#E64A19"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2-1024x575.png" alt="Cómo depurar una aplicación en django" width="1024px" height="575px" />
 
 Hace poco vimos una [introducción a django][1]. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del [depurador][2]. Hoy veremos cómo depurar una aplicación en Django.
 
@@ -111,11 +111,5 @@ Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
 
 *How to debug in django* »» <a href="http://stackoverflow.com/questions/1118183/how-to-debug-in-django-the-good-way" target="_blank">stackoverflow</a>
 
-
-
  [1]: https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"
  [2]: https://elbauldelprogramador.com/?s=gdb&submit;= "Depuradores"
-
-
-{% include toc.html %}
-</poll:></exp></topic>
