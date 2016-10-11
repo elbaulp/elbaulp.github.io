@@ -216,7 +216,7 @@ La siguiente tabla pretende resumir los flujos posibles:
 
 ## Asociar la función con una url
 
-Lo siguiente que hacemos es mapear la funci��n anterior con una URL, de modo que al acceder a */personas/add* se nos presente el formulario:
+Lo siguiente que hacemos es mapear la función anterior con una URL, de modo que al acceder a */personas/add* se nos presente el formulario:
 
 ```python
 urlpatterns = patterns('',
