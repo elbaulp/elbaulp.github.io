@@ -8,7 +8,7 @@ categories:
 tags:
   - ejemplos django
   - instalar django
-image: 2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2.png
+image: 2013/10/django.png
 main-class: "dev"
 color: "#E64A19"
 ---

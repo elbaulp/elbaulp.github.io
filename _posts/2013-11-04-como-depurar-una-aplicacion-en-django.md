@@ -11,7 +11,7 @@ tags:
   - depurar django
   - django
   - pdb
-image: 2013/09/Introducción-a-Django-–-Instalación-y-primer-proyecto2-1024x575.png
+image: 2013/10/django.png
 main-class: "dev"
 color: "#E64A19"
 ---
