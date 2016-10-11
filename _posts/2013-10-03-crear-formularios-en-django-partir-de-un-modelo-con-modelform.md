@@ -156,7 +156,10 @@ $ python manage.py runserver
 El primer comando se encarga de actualizar la base de datos con los modelos creados y el segundo arranca el servidor de desarrollo para que podamos acceder a la web.
 
 Si todo ha ido bien, deberíamos ver la siguiente página en <a href="http://127.0.0.1:8000/personas/list" title="localhost" target="_blank">http://127.0.0.1:8000/personas/list</a>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161px" height="153px" />
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png" alt="Crear formularios en Django a partir de un Modelo con ModelForm" width="161px" height="153px" />
+</figure>
 
 ## Crear un formulario a partir de un Modelo con ModelForm
 
