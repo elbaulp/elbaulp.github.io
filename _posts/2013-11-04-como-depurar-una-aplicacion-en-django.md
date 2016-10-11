@@ -95,12 +95,11 @@ retval  rv
 
 ```
 
-Por ejemplo, con * p <exp>* se imprimirá por pantalla el valor de la expresión:
+Por ejemplo, con `p <exp>` se imprimirá por pantalla el valor de la expresión:
 
 ```bash
 p Poll.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
 [<poll: titulo="Titulo" encuesta="encuesta">]
-
 ```
 
 Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.
