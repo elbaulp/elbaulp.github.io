@@ -1,6 +1,6 @@
 ---
 title: 'Introducción a Django - Instalación y primer proyecto'
-modified: 2016-10-11T12:04
+modified: 2016-10-12T17:42
 layout: post.amp
 permalink: /introduccion-django-instalacion-y-primer-proyecto/
 categories:
@@ -19,33 +19,50 @@ Hacía tiempo que el [framework][1] web ***Django*** estaba en mi lista de cosas
 
 ### Instalar django bajo un entorno virtual con virtualenv
 
-Vamos a instalar virtualenv, lo cual nos permitirá crear un entorno virtual en el que trabajar con python e instalar fácilmente aplicaciones mediante **easy_install**. Para ello ejecutamos:
+Django desde la version 1.8 (LTS) solo soporta python 2.7 o 3.x (recomendado). En este tutorial se usará la version estable 1.10.2.
+
+#### Usando python 2.7
+
+Vamos a instalar virtualenv, lo cual nos permitirá crear un entorno virtual en el que trabajar con python e instalar fácilmente aplicaciones mediante **pip**, que ya viene incluido en python 2.7.9, en caso de tener otra version anterior, deberemos instalarlo.
 
 <!--ad-->
 
 ```bash
-$ sudo aptitude install python-setuptools
+$ sudo apt-get install python-pip python-dev build-essential
 ```
 
-Tras esto, ahora podemos instalar virtualenv:
+Tras esto, ahora podremos instalar virtualenv:
 
 ```bash
-sudo easy_install virtualenv
+$ sudo pip install --upgrade virtualenv
+```
+
+#### Usando python 3.x
+
+En caso de usar la version 3.4 o superior, ya tendremos disponible pip por lo que no será necesario su instalación. En otro caso, procederemos a instalar pip.
+
+```bash
+$ sudo apt-get install python3-pip python3-dev build-essential
+```
+
+Ahora podremos instalar virtualenv:
+
+```bash
+$ sudo pip3 install --upgrade virtualenv
 ```
 
 #### Inicializar el entorno virtual
 
-Con virtualenv instalado ahora creamos un directorio en el que instalar todo lo relacionado con ***Django*** y sus dependencias:
+Con virtualenv instalado ahora creamos un entorno virtual (lo llamaremos python-env) en el que instalar todo lo relacionado con ***Django*** y sus dependencias:
 
 ```bash
 $ virtualenv python-env
 ```
 
-Al ejecutar este comando tendremos una carpeta llamada python-env, entramos y activamos el entorno virtual:
+Al ejecutar este comando tendremos una carpeta llamada python-env, ahora activaremos el entorno virtual:
 
 ```bash
-$ cd python-env
-$ . bin/activate
+$ source python-env/bin/activate
 ```
 
 #### Instalar Django
@@ -53,16 +70,16 @@ $ . bin/activate
 Por último, instalamos ***Django***:
 
 ```bash
-$ easy_install django
+$ pip install --upgrade django
 ```
 
 ### Configurando Django
 
-Asumiremos que la versión instalada es la 1.5:
+Asumiremos que la versión instalada es la 1.10:
 
 ```bash
-$ python -c "import django; print(django.get_version())"
-1.5.2
+$ python -m django --version
+1.10.2
 ```
 
 #### Crear un proyecto
@@ -111,7 +128,7 @@ Para modificar la configuración de la [base de datos][2] editamos el fichero *m
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/ruta/a/la/base/de/datos/mysitedb.sqlite',                      # Or path to database file if using sqlite3.
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -127,20 +144,22 @@ En *INSTALLED_APPS* se definen las aplicaciones instaladas en nuestro proyecto, 
 
 ```python
 INSTALLED_APPS = (
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 ```
 
 La aplicación de ejemplo que creemos deberá referenciarse aquí para poder usarla.
+
+Una vez tengamos configurado esto, procedemos a iniciar la base de datos:
+
+```python
+$ python manage.py migrate
+```
 
 ### Crear una aplicación
 
@@ -155,9 +174,36 @@ Lo cual creará un directorio llamado *polls*, cuyo contenido será:
 ```bash
 polls/
     __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
     models.py
     tests.py
+    urls.py
     views.py
+```
+
+  * admin.py es donde se definen los controladores para el panel de administración generado por django
+  * apps.py para configuración especifica de la aplicación, hooks de inicialización, etc.
+  * migrations/ migraciones a realizar en la BD a medida que evolucione models.py.
+  * models.py archivo donde definiremos los modelos de datos de esta aplicación.
+  * tests.py archivo para los tests automáticos.
+  * urls.py donde definiremos las URLs de la aplicación.
+  * views.py para las vistas.
+
+Primero necesitaremos modificar **settings.py** para añadir la nueva aplicación a la lista de *INSTALLED_APPS* y que django la inicie en cada arranque:
+
+```python
+INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
 ```
 
 En **models.py** se define los modelos que se usarán para crear la base de datos mediante [clases][3] en Python. En este caso necesitamos una tabla *Poll* (Encuesta) y *Choice* (Opción elegida). La encuesta tendrá dos campos, *question* y *pub_date*. Mientras que la opción elegida tendrá que hacer referencia a qué encuesta pertenece mediante una [foreignKey][4], un texto que describa la opción y el número de votos. Dicho esto, el fichero *models.py* contendrá:
@@ -175,32 +221,30 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
-Tras escribir los modelos que necesitamos, ejecutamos *python manage.py syncdb* para crear las tablas en la base de datos.
-
-**views.py** se encarga de mostrar la página al usuario. Antes de comenzar, debemos activar la aplicación agregándola *INSTALLED_APPS*:
+Tras escribir los modelos que necesitamos, deberemos crear la migración correspondiente para posteriormente crear las nuevas tablas:
 
 ```python
-INSTALLED_APPS = (
-# ...
-'polls',
-# ...
-)
+$ python manage.py makemigrations pools
+$ python manage.py migrate
 ```
 
 #### Activar el panel de administración
 
-Para poder acceder a las tablas que hemos creado en el paso anterior, es necesario activar el panel de administración, para ello modificamos el archivo *mysite/urls.py* para que quede así:
+Primero deberemos crear un usuario con permiso de administración, esto es posible directamente con un comando de manage.py en el que solo debemos seguir los pasos:
 
-```bash
-from django.conf.urls import patterns, include, url
+```python
+$ python manage.py createsuperuser
+```
 
-# Uncomment the next two lines to enable the admin:
+Para poder acceder al panel de administración, debe estar añadido en la lista de urls, para ello comprobamos que *mysite/urls.py* define este *urlpatterns*
+
+```python
+from django.conf.urls import url
 from django.contrib import admin
-admin.autodiscover()
 
-urlpatterns = patterns('',
-    url(r'^admin/', include(admin.site.urls)),
-)
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+]
 ```
 
 Ejecutamos el servidor con *python manage.py runserver* y entramos a <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a>. Deberíamos ver:
@@ -213,7 +257,7 @@ Para poder hacer accesibles los modelos que acabamos de crear desde el panel de 
 
 ```python
 from django.contrib import admin
-from polls.models import Poll
+from .models import Poll
 
 admin.site.register(Poll)
 ```
@@ -238,28 +282,27 @@ def index(request):
 Sin embargo, para conseguir que funcione, debemos crear un archivo *urls.py* que asocie la función **index** a una dirección URL. En *polls/urls.py* escribe:
 
 ```python
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
-from polls import views
+from . import views
 
-urlpatterns = patterns('',
-    url(r'^$', views.index, name='index')
-)
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
 ```
 
 Y ahora debemos decir a *mysite/urls.py* que use también *polls/urls.py* cuando busque qué funciones asociar a qué urls:
 
 ```python
-from django.conf.urls import patterns, include, url
-
+from django.conf.urls import url, include
 from django.contrib import admin
-admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^polls/', include('polls.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-)
+    url(r'^admin/', admin.site.urls),
+]
 ```
+
 
 Tras modificar estos ficheros, veremos el mensaje **Hello, world. You&#8217;re at the poll index.** en <a href="http://127.0.0.1:8000/polls" target="_blank">http://127.0.0.1:8000/polls</a>.
 
@@ -269,7 +312,7 @@ Para no alargar mucho este artículo, he intentado dar unas nociones básicas de
 
 #### Referencias
 
-*Documentación Oficial* »» <a href="https://docs.djangoproject.com/en/1.5/intro/tutorial01/" target="_blank">djangoproject.com</a>  
+*Documentación Oficial* »» <a href="https://docs.djangoproject.com/en/1.10/intro/tutorial01/" target="_blank">djangoproject.com</a>
 *Imagen de aruseni* »» <a href="http://aruseni.deviantart.com/art/Django-white-and-green-318200642" target="_blank">deviantart</a>
 
  [1]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
