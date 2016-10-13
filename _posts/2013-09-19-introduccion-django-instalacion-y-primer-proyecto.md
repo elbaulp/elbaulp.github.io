@@ -13,6 +13,8 @@ main-class: "dev"
 color: "#E64A19"
 ---
 
+> Gracias a [@Jneight](https://github.com/jneight "Perfil en Github de @jneight") por actualizar este artículo!
+
 Hacía tiempo que el [framework][1] web ***Django*** estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de ***Django***.
 
 {% include toc.html %}
