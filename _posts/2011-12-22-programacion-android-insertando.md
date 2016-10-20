@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Insertando registros'
-
+modified: 2016-10-20T13:45
 layout: post.amp
 permalink: /programacion-android-insertando/
 categories:
@@ -12,20 +12,20 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
-</div>
 
 En la entrada anterior hablamos de cómo [obtener regístros][1] de los proveedores de contenidos (CV) usando [URIs][2]. Ahora vamos a ver como insertar registros.
 
+{% include toc.html %}
+
+## Introducción
+
 Anroid utiliza una clase llamada *android.content.ContentValues* para retener los valores de un solo registro, que será el que se insertará. Los *ContentValues* son un dicionario de pares clave/valor, al igual que los nombres de columnas y valores de las [bases de datos][3]. La forma de insertar un registro es rellenando el ContentValues primero y despues decir a *android.content.ContentResolver* que lo inserte usando una URI.
 
-<p class="alert">
-  Necesitamos usar ContentResolver porque a este nivel de abstracción, no le estamos pidiendo a una base de datos que inserte un registro, estamos pidiendo insertar un registro en un CV identificado por una URI. El contentResolver es el responsable de resolver la referencia a la URI al proveedor correcto.
-</p>
+<!--ad-->
+
+> Necesitamos usar ContentResolver porque a este nivel de abstracción, no le estamos pidiendo a una base de datos que inserte un registro, estamos pidiendo insertar un registro en un CV identificado por una URI. El contentResolver es el responsable de resolver la referencia a la URI al proveedor correcto.
 
 Abajo se muestra un ejemplo de cómo rellenar una fila con un ContentValues y prepararlo para un insert:
-
 
 <!--ad-->
 
@@ -35,14 +35,12 @@ cv.put("NombreColumna1", "valor1");
 cv.put("NombreColumna2", "valor2");
 
 //Ahora el objeto cv está preparado para insertarse en la BD
-
 ```
 
 Podemos obtener una referencia al ContentResolver mediante un método de la clase Activity:
 
 ```java
 ContentResolver cr = miActivity.getContentResolver();
-
 ```
 
 Todo lo que necesitamos en este punto es una URI para decirle al ContentResolver que inserte la fila. [En entradas anteriores][4] vimos que nuestra URI era:
@@ -55,7 +53,6 @@ Con esta URI y nuestro ContentValues podemos ahora hacer una llamada para insert
 
 ```java
 Uri uri = cr.insert(FavSitesProviderMetaData.CONTENT_URI, cv);
-
 ```
 
 La línea anterior devuelve una uri apuntando al nuevo registro añadido, la URI devuelta se parecerá a esto:
@@ -68,7 +65,6 @@ Con esta Uri, podemos por ejemplo mostrar en el log del sistema qué registro he
 
 ```java
 Log.d("Nuevo registro añadido","Uri:" + insertedUri);
-
 ```
 
 ## Añadir archivos a un Content Provider
@@ -87,7 +83,6 @@ cv.put("NombreColumna2", "valor2");
 //Usamos el content resolver para insertar un registro
 ContentResolver cr = miActivity.getContentResolver();
 Uri nuevaUri = cr.insert(FavSitesProviderMetaData.CONTENT_URI, cv);
-
 ```
 
 Una vez tenemos la uri del registro, pedimos a ContentResolver que obtenga una referencia al output stream del archivo:
@@ -98,23 +93,14 @@ Una vez tenemos la uri del registro, pedimos a ContentResolver que obtenga una r
 OutputStream outStream = miActivity.getContentResolver().openOutputStream(nuevaUri);
 algunArchivoDeImagen.compress(Bitmap.CompressFormat.JPEG, 50, outStream);
 outStream.close;
-
 ```
 
 El código usa el flujo de salida para escribir.
 
-* * *
-
-#### Siguiente Tema: [Actualizar y borrar registros][5] 
-
-
-
-
+## Siguiente Tema: [Actualizar y borrar registros][5] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-usando-la-clausula
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
  [3]: https://elbauldelprogramador.com/bases-de-datos
  [4]: https://elbauldelprogramador.com/programacion-android-arquitectura-de
  [5]: https://elbauldelprogramador.com/programacion-android-actualizar-y/
-
-{% include toc.html %}
