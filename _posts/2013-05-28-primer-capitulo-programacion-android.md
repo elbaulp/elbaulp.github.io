@@ -2,6 +2,7 @@
 title: Disponible la primera parte del curso Android en PDF
 layout: post.amp
 permalink: /disponible-la-primera-parte-del-curso/
+modified: 2016-10-22T07:50
 categories:
   - android
   - opensource
@@ -25,18 +26,18 @@ Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 
 <div class="button-post">
-<a href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar</a>
+    <a id="androidCourseIndex" href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar Índice</a>
 </div>
+
+<!--ad-->
+
 <del datetime="2014-02-08T09:06:51+00:00">El documento lo enviaré a todo aquel que haga una donación de <b>al menos 1.5 euros (Paypal se queda con 40 céntimos)</b></del>.
 
-El documento tiene un precio mínimo de **1.5 euros (Paypal se queda con 40 céntimos)** Espero que entendáis que el esfuerzo , tiempo y trabajo dedicado a su realización merece una donación más alta, por lo que podréis aportar cantidades mayores si lo veis oportuno.
+<del datetime="2016-10-22T07:50">"El documento tiene un precio mínimo de **1.5 euros (Paypal se queda con 40 céntimos)** Espero que entendáis que el esfuerzo , tiempo y trabajo dedicado a su realización merece una donación más alta, por lo que podréis aportar cantidades mayores si lo veis oportuno.</del>
 
-En el momento de realizar la donación es imprescindible que me indiquéis una dirección de correo eletrónico donde enviaros en manual.
+> He decidido liberar el curso, ya que está algo antiguo, podéis descargarlo en: <a href="http://elbauldelprogramador.com/assets/pdfs/PaqueteProgramacionAndroid.zip" id="androidCourse">Curso de Programación Android Gratuíto</a>
 
-La donación se hará por Paypal usando [este enlace](https://www.paypal.me/elbaul)
+De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro [enlace de Paypal](https://www.paypal.me/elbaul)
 
-  <p>
-    Por último, quiero daros las gracias a todos los lectore del blog. Un saludo
-  </p>
+Por último, quiero daros las gracias a todos los lectore del blog. Un saludo
 
-{% include toc.html %}

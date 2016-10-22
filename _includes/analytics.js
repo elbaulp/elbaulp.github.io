@@ -206,6 +206,24 @@
                     "eventCategory": "icon-search",
                     "eventAction": "icon-search-click"
                 }
+            },
+            "andIn" : {
+                "on": "click",
+                "selector": "#androidCourseIndex",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "androidCourse",
+                    "eventAction": "IndexDownload"
+                }
+            },
+            "andZip" : {
+                "on": "click",
+                "selector": "#androidCourse",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "androidCourse",
+                    "eventAction": "ZipDownload"
+                }
             }
         }
     }
