@@ -1,6 +1,6 @@
 ---
 title: Cómo saber a qué partición pertenece un archivo en GNU/Linux
-
+modified: 2016-10-22T12:00
 layout: post.amp
 permalink: /como-saber-que-particion-pertenece-un/
 categories:
@@ -9,14 +9,10 @@ categories:
 main-class: "linux"
 color: "#2196F3"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="sh" class="icono" /></a>
-</div>
 
 ¿Cómo podemos saber que el archivo */home/hkr/Desktop/combinaciones.cpp* pertenece a una partición específica?¿O cómo podemos saber en qué partición existe un archivo?
 
 Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:
-
 
 <!--ad-->
 
@@ -24,14 +20,12 @@ Para eso podemos usar el comando df, que informa del uso del espacio en disco de
 df
 df /ruta/a un/directorio
 df /ruta/a un/archivo
-
 ```
 
 En el siguiente ejemplo se busca el nombre de la partición donde se encuentra el fichero llamado */home/hkr/Desktop/combinaciones.cpp*
 
 ```bash
 df -T /home/hkr/Desktop/combinaciones.cpp
-
 ```
 
 Que tiene como salida:
@@ -39,28 +33,24 @@ Que tiene como salida:
 ```bash
 Filesystem    Type   1K-blocks      Used Available Use% Mounted on
 /dev/sda6     ext4   186362292 140452228  36443368  80% /home
-
 ```
 
 Como vemos, el resultado es que el archivo *combinaciones.cpp* pertenece a la partición */dev/sda6*. Con el siguiente comando mostramos solo el nombre de la partición:
 
 ```bash
 df /home/hkr/Desktop/combinaciones.cpp | awk '/^/dev/ {print $1}'
-
 ```
 
 O con este otro:
 
 ```bash
 awk '/^/dev/ {print $1}' <<<"$(df /home/hkr/Desktop/combinaciones.cpp)"
-
 ```
 
 La salida para los dos comandos anteriores es la misma:
 
 ```bash
 /dev/sda6
-
 ```
 
 Es recomendable colocar la siguiente función bash en nuestro archivo *~/.bashrc*
@@ -70,7 +60,6 @@ Es recomendable colocar la siguiente función bash en nuestro archivo *~/.bashrc
 findpart() {
    [ -e "$1" ] && df -P "$1"  | awk '/^/dev/ {print $1}' || echo "$1 not found";
 }
-
 ```
 
 Ejemplos de uso:
@@ -79,15 +68,10 @@ Ejemplos de uso:
 findpart /foo/bar
 findpart /etc
 findpart /home/vivek/test.txt
-
 ```
 
-<div class="separator" >
-<a href="https://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="68" width="400" src="https://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s400/Screenshot.png" /></a>
-</div>
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  width="640" height="108"  src="https://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s400/Screenshot.png"></amp-img>
+</figure>
 
 Vía <a target="_blank" href="http://www.cyberciti.biz/faq/linux-unix-command-findout-on-which-partition-file-directory-exits/">cyberciti</a>
-
-
-
-{% include toc.html %}
