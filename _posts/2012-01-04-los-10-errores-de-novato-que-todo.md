@@ -1,5 +1,6 @@
 ---
 title: 10 errores de novato que todo desarrollador Android debería evitar
+modified: 2016-10-26T16:56
 layout: post.amp
 permalink: /los-10-errores-de-novato-que-todo/
 categories:
@@ -11,18 +12,16 @@ description: "Últimamente recibo muchos correos haciendome preguntas sobre cues
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
-</div>
 
 Últimamente recibo muchos correos haciendome preguntas sobre cuestiones sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento) suficiente para responder a todas ellas. Por eso, aprovechando que encontré un artículo en inglés que nombraba los 10 errores comunes de los nuevos programadores en esta plataforma. Aquí los dejo traducidos, ya que son de lectura recomendable:
+
+{% include toc.html %}
 
 ### 1. No leer la documentación de Android
 
 La web de <a target="_blank" href="http://developer.android.com/index.html">Android para desarrolladores</a> está ahí para ayudarte. Mucha de la información se puede descargar con las SDK tools y también está disponible online (esta última es la mejor opción ya que está en continua actualización). La documentación es mucho más que una referencia de la API Javadoc. Incluye muchas guías, tutoriales, vídeos y mucho otro material que puede ayudarnos a crear aplicaciones Android.
 
 Recientemente se ha incluido <a target="_blank" href="http://developer.android.com/training/index.html">Android Training</a>, que organiza tutoriales dentro de clases y lecciones para guiarnos a resolver problemas o implementar características particulares.
-
 
 <!--ad-->
 
@@ -74,10 +73,6 @@ La mejor manera de evitar errores es ser consciente del peligro de cometerlos en
 
 Fuente: <a target="_blank" href="http://www.developer.com/ws/android/programming/5-common-android-newbie-mistakes.html">developer.com</a>
 
-
-
  [1]: https://elbauldelprogramador.com/programacion-android-hola-mundo/
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
  [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
-
-{% include toc.html %}

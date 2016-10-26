@@ -1,6 +1,6 @@
 ---
 title: Evaluando el estado de la licencia GPL
-
+modified: 2016-10-26T16:55
 layout: post.amp
 permalink: /evaluando-el-estado-de-la-licencia-gpl/
 categories:
@@ -9,9 +9,10 @@ categories:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" >
-<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png"  /></a>
-</div>
+
+<figure>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/License_icon-gpl-2.svg/256px-License_icon-gpl-2.svg.png"></amp-img>
+</figure>
 
 Hace unas semanas, tenía lugar <a target="_blank" href="https://plus.google.com/u/0/110027483887022913393/posts/Arx9N665DZf">una conversación</a> sobre el estado de la licencia GPL, con lectores y colegas discutiendo sobre cual podría ser la causa del estado actual de esta licencia.
 
@@ -20,7 +21,6 @@ Parece que hay algunos temas recurrentes en las conversaciones que merecen la pe
 Aslett notó que el descenso de las licencia GPL y licencias restrictivas comenzó alrededor de 2007, lo que coincidía con el lanzamiento de GPLv3. ¿Es pues, GPLv3 la causa del decline de GPL?. Hubo un poco de discusión sobre esto en las conversaciones, y pienso que ZDNet&#8217;s Jason Brooks resumió este tema bastante bien:
 
 > No sé si GPLv3 ha sido un factor importante en el cambio, pero no tener una licencia actualizada para funcionar como GPLv2 no resulta de gran ayuda.
-
 
 <!--ad-->
 
@@ -38,16 +38,10 @@ En twitter, otro miembro de Red Hat, Richard Fontana, <a target="_blank" href="h
 
 > Speculating but personally, I started 2007 assuming MySQL AB biz model was legit, and I ended 2007 severely troubled by it.
 
-<p class="alert">
-  El autor original de la entrada dice que debe ser agradable a la gente de Red Hat, ya que muchos de ellos leen sus entradas.
-</p>
+> El autor original de la entrada dice que debe ser agradable a la gente de Red Hat, ya que muchos de ellos leen sus entradas.
 
 Aún hay áreas que merecen ser tratadas&#8230; porque creo que entender por qué este descenso del uso de la licencia está ocurriendo puede ayudar a la comunidad libre a revitalizar el uso del software libre.
 
 Naturalmente, esto es aún suponiendo que la comunidad de software libre esté interesada en cambiar las cosas. Hay un trasfondo distinto en las conversaciones privadas que he tenido en este tema que la comunidad del software libre ha cosechado lo que ha sembrado, y ahora tiene que pagar por su forma de actuar.
 
 <a target="_blank" href="http://www.itworld.com/it-managementstrategy/234223/evaluating-state-gpl">Fuente original (En inglés)</a>
-
-
-
-{% include toc.html %}
