@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Implementando un Content Provider (Parte 2)'
-
+modified: 2016-10-28T16:30
 layout: post.amp
 permalink: /programacion-android-implementando-un_08/
 categories:
@@ -13,14 +13,10 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-
-</div>
 
 En la anterior entrada de [programación Android][1], hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el [planteamiento de la base de datos.][2] En esta entrada vamos a ver cómo extender de la clase ContentProvider.
 
 Para implementar el content provider de la aplicación [FavSites][3] hemos de extender de la clase ContentProvider y sobreescribir *onCreate()* para crear la base de datos y después implementar los métodos query, insert, update, delete y getType. En esta segunda parte de cuatro en la que se explica cómo implementar un content provider desde cero, vamos a ver cómo configurar inicialmente en conten provider, en la siguente entrada se verá como implementar los métodos query, insert, update, delete y getType.
-
 
 <!--ad-->
 
@@ -31,7 +27,6 @@ La mayoría de los métodos que se van a implementar reciben como parámetro una
 ```bash
 content://com.elbauldelprogramador.provider.FavSites/sites
 content://com.elbauldelprogramador.provider.FavSites/sites/64
-
 ```
 
 Dadas estas dos URIs, el proveedor de FavSites necesita distinguir cada una de ellas. Si, por ejemplo, nuestro proveedor usara más objetos a parte de lugares, entonces habría más URIs que identificaran cada objeto.
@@ -91,7 +86,7 @@ public class SitesProvider extends ContentProvider{
    //El projection map es similar a "as" (alias de columna)
    private static HashMap<string> sSitesProjectionMap;
    static{
-      sSitesProjectionMap = new HashMap</string><string>();
+      sSitesProjectionMap = new HashMap<string>();
       sSitesProjectionMap.put(favSitesTableMEtaData._ID,
                               favSitesTableMEtaData._ID);
 
@@ -198,16 +193,9 @@ public class SitesProvider extends ContentProvider{
    }
 
 }
-</string>
 ```
 
-* * *
-
-#### Siguiente Tema: [Implementando un Content Provider (Parte 3)][7] 
-
-
-
-
+## Siguiente Tema: [Implementando un Content Provider (Parte 3)][7] 
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/programacion-android-implementando-un
@@ -216,6 +204,3 @@ public class SitesProvider extends ContentProvider{
  [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de_28
  [6]: https://elbauldelprogramador.com/programacion-android-implementando-un_14
  [7]: https://elbauldelprogramador.com/programacion-android-implementando-un_14/
-
-{% include toc.html %}
-</http:>

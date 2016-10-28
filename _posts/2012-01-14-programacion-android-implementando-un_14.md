@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Implementando un Content Provider (Parte 3)'
-
+modified: 2016-10-28T16:30
 layout: post.amp
 permalink: /programacion-android-implementando-un_14/
 categories:
@@ -12,18 +12,16 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-
-</div>
 
 Ya hemos visto como [plantear la base de datos][1] para un proveedor y cómo [implementar parte del proveedor de contenidos][2], en esta tercera parte vamos a implementar los métodos query, insert, update, delete y getType.
 
 En el código que vimos en la anterior entrada, se implementa el método *getType()*, que devuelve los tipos MIME para una URI dada. Este método, al igual que muchos de los métodos del content provider, está sobrecargado con respecto a la URI entrante. La función de este método consiste en distinguir el tipo de URI. Para saber si es una colección de lugares (en el caso de la aplicación [FavSites][3]), o un único lugar.
 
-
 <!--ad-->
 
 Como ya se vió en la [entrada anterior][2], se usa UriMatcher para descifrar el tipo de URI. En función de esta, la clase *favSitesTableMEtaData* tiene definida las constantes de los tipos MIME a devolver para cada URI.
+
+{% include toc.html %}
 
 #### Implementación del método Query
 
@@ -31,7 +29,7 @@ El método *query* es el responsable de devolver una colección de filas en func
 
 Al igual que los otros métodos, usa UriMatcher para identificar el tipo de URI. Si el tipo de URI es un único elemento, el método devolverá el ID del lugar de la siguiente manera:
 
-  * Extrae los segmentos del path usando *getPathSegments()*.
+* Extrae los segmentos del path usando *getPathSegments()*.
 
 El método query usa las proyecciones (projecttions) que creamos para identificar las columnas devueltas. Básicamente, query devuelve un [cursor][5]. Durante la llamada al método query, se usa el objeto *<a target="_blank" href="http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html">SQLiteQueryBuilder</a>* para formular y ejecutar la consulta.
 
@@ -77,7 +75,6 @@ static {
    sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#",
                       INCOMING_SINGLE_SITE_URI_INDICATOR);
 }
-
 ```
 
 Conciendo esta implementación, ahora es más fácil saber cómo usan los otros métodos el UriMatcher, por ejemplo, el método query:
@@ -95,7 +92,6 @@ switch (sUriMatcher.match(uri)) {
       default:
          throw new IllegalArgumentException("Unknow URI " + uri);
       }
-
 ```
 
 Como se aprecia en el código de arriba, el método *match* devuelve el mísmo número que hemos registrado en el paso anterior.El constructor de UriMatcher toma un entero que se usará para la raiz de la URI, se devolverá dicho número si en la URL no existen segmentos en el path o authorities. También devolverá la constante NO\_MATCH cuando los patrones no coincidan. Es posible crear un UriMatcher sin un identificador para la raiz de la URI, en tal caso, Android inicializará UriMatcher a NO\_MATCH internamente. Por lo tanto, el código que se muestra a continuación es equivalente al anterior:
@@ -108,7 +104,6 @@ static {
    sUriMatcher.addURI(FavSitesProviderMetaData.AUTHORITY, "sites/#",
                       INCOMING_SINGLE_SITE_URI_INDICATOR);
 }
-
 ```
 
 #### Usando los mapas de proyecciones (Projection Maps)
@@ -124,7 +119,7 @@ En nuestro ejemplo, así es como se a configurado el projection map:
 ```java
 private static HashMap<string> sSitesProjectionMap;
 static{
-   sSitesProjectionMap = new HashMap</string><string>();
+   sSitesProjectionMap = new HashMap<string>();
    sSitesProjectionMap.put(favSitesTableMEtaData._ID,
                            favSitesTableMEtaData._ID);
 
@@ -140,7 +135,6 @@ static{
    sSitesProjectionMap.put(favSitesTableMEtaData.FOTO,
                            favSitesTableMEtaData.FOTO);
 }
-</string>
 ```
 
 El queryBuilder usa la variable *sSitesProjectionMap* así:
@@ -149,16 +143,9 @@ El queryBuilder usa la variable *sSitesProjectionMap* así:
 SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 qb.setTables(favSitesTableMEtaData.TABLE_NAME);
 qb.setProjectionMap(sSitesProjectionMap);
-
 ```
 
-* * *
-
-#### Siguiente Tema: [Implementando un Content Provider (Parte 4)][8] 
-
-
-
-
+### Siguiente Tema: [Implementando un Content Provider (Parte 4)][8] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-implementando-un
  [2]: https://elbauldelprogramador.com/programacion-android-implementando-un_08
@@ -169,4 +156,4 @@ qb.setProjectionMap(sSitesProjectionMap);
  [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from
  [8]: https://elbauldelprogramador.com/programacion-android-implementando-un_29/
 
-{% include toc.html %}
+

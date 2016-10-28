@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Implementando un Content Provider (Parte 1)'
-
+modified: 2016-10-28T16:30
 layout: post.amp
 permalink: /programacion-android-implementando-un/
 categories:
@@ -12,14 +12,10 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-<a href="/assets/img/2013/07/iconoAndroid.png"  ></a>
-</div>
 
 Esta es la primera entrada de un total de 4 en la que se irán describiendo los pasos a dar para crear nuestro propio proveedor de contenidos.
 
 Ya hemos visto cómo [interactuar con un Content provider][1], pero no hemos visto aún cómo escribir nuestro propio Content Provider. Para hacerlo, es necesario extender de *android.content.ContentProvider* e implementar los siguientes métodos:
-
 
 <!--ad-->
 
@@ -30,8 +26,6 @@ Ya hemos visto cómo [interactuar con un Content provider][1], pero no hemos vis
   * getType
 
 También necesitamos configurar unas cuantas cosas antes de implementarlo. Los paso a seguir para implementarlo son los siguientes:
-
-
 
   1. Plantear nuestra [base de datos][2], [URIs][3], nombres de columnas y crear clases de metadatos que definirán constantes para todos estos elementos de metadatos.
   2. [Extender la clase abstracta ContentProvider][4].
@@ -146,8 +140,6 @@ public class FavSitesProviderMetaData {
    }
 
 }
-
-
 ```
 
 Esta clase *FavSitesProviderMetaData* comienza definiendo que su authority será *com.elbauldelprogramador.provider.FavSites*. Usaremos esta cadena de texto para registrar el proveedor en el Android Manifest. Esta cadena forma la parte principal de la URI de este proveedor.
@@ -168,19 +160,11 @@ La clase *favSitesTableMEtaData* define los MIME types para una colección de si
 
 *favSitesTableMEtaData* también declara un conjunto de columnas: nombre, descripción, latitud, longitud y foto.
 
-<p class="alert">
-  Es aconsejable describir los tipos de datos que poseen las columnas mediante comentarios.
-</p>
+> Es aconsejable describir los tipos de datos que poseen las columnas mediante comentarios.
 
 Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la cual proporciona el campo estandar *_ID*, que representa el identificador de la fila. Con todas estas definiciones de metadatos, estamos listos para continuar con la implementación de nuestro proveedor.
 
-* * *
-
-#### Siguiente Tema: [Implementando un Content Provider (Parte 2)][7] 
-
-
-
-
+## Siguiente Tema: [Implementando un Content Provider (Parte 2)][7] 
 
  [1]: https://elbauldelprogramador.com/programacion-android-actualizar-y
  [2]: https://elbauldelprogramador.com/bases-de-datos
@@ -189,6 +173,3 @@ Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la c
  [5]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu
  [6]: https://elbauldelprogramador.com/evaluando-el-estado-de-la-licencia-gpl
  [7]: https://elbauldelprogramador.com/programacion-android-implementando-un_08/
-
-{% include toc.html %}
-</http:>
