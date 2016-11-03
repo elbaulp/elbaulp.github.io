@@ -69,4 +69,4 @@ Como prerequisito se asumen sólidos conocimientos de programación, todo lo que
 
 Tengo muchas ganas de empezar este curso y poder compaginarlo con mis estudios, ya que el primero curso de AI no lo pude acabar.
 
-Enlace al curso: <a target="_BLANK" href="http://www.udacity.com/">UDACITY</a>
+Enlace al curso: <a target="_blank" href="http://www.udacity.com/">UDACITY</a>
