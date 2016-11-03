@@ -2,6 +2,7 @@
 title: Aprende a construir un motor de búsqueda y un coche autónomo con Udacity
 description: "Despues del éxito de los cursos impartidos por Stanford sobre inteligencia artificial, machine learning y bases de datos, se han propuesto seguir enseñando gratuitamente a través de la red, ésta vez serán David Evans, profesor de la ciencia de la computación en la universidad de Virginia y Sebastian Thrun, de la universidad de Stanford."
 layout: post.amp
+modified: 2016-10-03T16:45
 permalink: /aprende-construir-un-motor-de-busqueda/
 categories:
   - cursos
@@ -12,20 +13,20 @@ tags:
 main-class: "articulos"
 color: "#F57C00"
 ---
-<div class="separator" >
-<a href="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="98" width="228" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s400/Screenshot.png" /></a>
-</div>
+
+{% include toc.html %}
+
+<figure>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="98" width="228" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s400/Screenshot.png"></amp-img>
+</figure>
 
 Despues del éxito de los cursos impartidos por Stanford sobre inteligencia artificial, machine learning y bases de datos, se han propuesto seguir enseñando gratuitamente a través de la red, ésta vez serán David Evans, profesor de la ciencia de la computación en la universidad de Virginia y Sebastian Thrun, de la universidad de Stanford.
 
 Las clases comenzarán el día 20 de febrero y aquí os dejo los detalles de estos dos cursos, a los que ya me he apuntado:
 
-
 <!--ad-->
 
 #### Building a Search Engine
-
-
 
 Con esta clase tendrás una introducción a la programación. En siete semanas, construirás tu propio motor de búsqueda con un crawler y una sitemas de rankigs de las páginas. Comprenderás algunos de los conceptos claves en la ciencia de la computación, y aprenderás a construir tus propios programas. No son necesarios conocimientos previos de programación.
 
@@ -45,8 +46,6 @@ Con esta clase tendrás una introducción a la programación. En siete semanas, 
     Examen para evaluar lo aprendido.
 
 #### Programming a Robotic Car
-
-
 
 Esta clase, impartida por uno de los más expertos en AI (Inteligencia Artificial), te enseñará los métodos básicos en inteligencia Artificial, incluyendo inferencias probabilística, visión por ordenador, aprendizaje de automático y planificación, todo ello con un enfoque hacia la robótica. Tendrás la oportunidad de visitar, mediante un vídeo, los principales laboratorios de investigación de este campo y conocer a los científicos e ingenieros que construyen los coches que se conducen solos en Stanford y Google.
 
@@ -71,7 +70,3 @@ Como prerequisito se asumen sólidos conocimientos de programación, todo lo que
 Tengo muchas ganas de empezar este curso y poder compaginarlo con mis estudios, ya que el primero curso de AI no lo pude acabar.
 
 Enlace al curso: <a target="_BLANK" href="http://www.udacity.com/">UDACITY</a>
-
-
-
-{% include toc.html %}

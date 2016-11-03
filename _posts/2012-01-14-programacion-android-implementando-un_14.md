@@ -110,7 +110,7 @@ static {
 
 El proveedor de contenido actúa de intermediario entre un conjunto abstracto de columnas y un conjunto real de columnas en una base de datos, sin embargo los conjuntos de columnas pueden ser distintos. Mientras construimos consultas (queries), es necesario hacer un mapeo entre las columnas de la cláusula where y las columnas reales de la base de datos. Para configurar este *projection map* necesitamos la ayuda de la clase *[SQLiteQueryBuilder.][6]*
 
-Si leemos la documentación del método <a href='"http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html#setProjectionMap(java.util.Map'><java.lang.string>)&#8221;>setProjectionMap</java.lang.string></a> en la documentación del SDK de Android vemos que sirve para lo siguiente:
+Si leemos la documentación del método <a href="http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html#setProjectionMap">setProjectionMap</a> en la documentación del SDK de Android vemos que sirve para lo siguiente:
 
 > Establece el mapa de proyección de la consulta. El mapa de proyección mapea los nombres de las columnas que la persona que llama pasa a la consulta a los nombres de columna de la base de datos. Esto es útil para renombrar las columnas, así como evitar ambigüedades en los nombres de las columnas al hacer [joins][7]. Por ejemplo, podría asignar &#8220;nombre&#8221; a &#8220;people.name&#8221;. Si un mapa de proyección se configura para que deba contener todos los nombres de las columnas que el usuario pueda solicitar, aunque la clave y el valor sean los mismos.
 

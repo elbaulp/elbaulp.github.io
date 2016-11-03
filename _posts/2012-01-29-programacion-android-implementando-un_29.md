@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Implementando un Content Provider (Parte 4)'
-
+modified: 2016-11-03T16:40
 layout: post.amp
 permalink: /programacion-android-implementando-un_29/
 categories:
@@ -12,21 +12,19 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-
-</div>
 
 En esta última parte de una serie de [4 artículos][1] en los que se ha ido explicando cómo implementar un [ContentProvider][2] desde cero, se va a ver cómo registrar dicho proveedor y cómo darle uso.
+
+{% include toc.html %}
 
 #### Registrar el proveedor
 
 Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3]
 
 ```xml
-<provider android:name=".SitesProvider" android:authorities="com.elbauldelprogramador.provider.FavSites">
-
+<provider android:name=".SitesProvider"
+android:authorities="com.elbauldelprogramador.provider.FavSites" />
 ```
-
 
 <!--ad-->
 
@@ -53,7 +51,6 @@ Uri uri = FavSitesProviderMetaData.favSitesTableMEtaData.CONTENT_URI;
 Log.d(tag,"site insert uri:" + uri);
 Uri insertedUri = cr.insert(uri, cv);
 Log.d(tag,"inserted uri:" + insertedUri);
-
 ```
 
 #### Eliminar registros
@@ -66,7 +63,6 @@ Log.d("Deleting site...","site delete uri:" + uri);
    cr.delete(uri,
          "_ID=?",
          new String[]{"5"});
-
 ```
 
 #### Obtener el número de registros
@@ -82,7 +78,6 @@ Cursor cur = managedQuery(uri,
                          null);// sort order
 int numeroRegistros = cur.getCount();
 cur.close();
-
 ```
 
 #### Mostrar la lista de sítios
@@ -90,7 +85,7 @@ cur.close();
 Muestra todo el contenido de la tabla sites de la base de datos.
 
 ```java
-/**
+   /**
     * Función que imprime los resultados por el Log.
     */
    public void logOutput(Context context){
@@ -149,24 +144,14 @@ Muestra todo el contenido de la tabla sites de la base de datos.
       //cerrar el cursor
       c.close();
    }
-
 ```
 
 Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los próximos artículos veremos en profundidad los intents.
 
-* * *
-
 #### Siguiente Tema: [Intents - Conceptos básicos][5] 
-
-
-
-
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
  [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
  [4]: https://elbauldelprogramador.com/plsql-cursores
  [5]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/
-
-{% include toc.html %}
-</provider>

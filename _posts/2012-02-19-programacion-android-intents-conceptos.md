@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Intents - Conceptos básicos'
-
+modified: 2016-11-03T16:50
 layout: post.amp
 permalink: /programacion-android-intents-conceptos/
 categories:
@@ -14,16 +14,14 @@ tags:
 main-class: "android"
 color: "#689F38"
 ---
-<div class="separator" >
-
-</div>
 
 Un intent sirve para invocar componentes, en android entendemos por componentes las [activities,][1] Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y [proveedores de contenido][2], código que abstráe los datos.
 
-
-<!--ad-->
+{% include toc.html %}
 
 ### Introducción a los Intents
+
+<!--ad-->
 
 Como mecanismo para invocar componentes, los intents son bastante fáciles de comprender. Básicamente nos permiten llamar a aplicaciones externas a la nuestra, lanzar eventos a los que otras aplicaciones puedan responder, lanzar alarmas etc.
 
@@ -37,19 +35,19 @@ public class MiActivity extends Activity {
         setContentView(R.layout.MiActivity);
     }
 }
-
 ```
 
 El layout *R.Layout.MiActivity* debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el [AndroidManifest][3], que será algo así:
 
 ```xml
-<activity android:name=".MiActivity" android:label="Mi Activity">
-<intent>
-<action android:name="nuestra.accion.nombreAccion">
-<category android:name="android.intent.category.DEFAULT">
-</category></action></intent>
+<activity
+    android:name=".MiActivity"
+    android:label="Mi Activity">
+    <intent-filter>
+        <action android:name="nuestra.accion.nombreAccion"/>
+        <category android:name="android.intent.category.DEFAULT" />
+    </intent>
 </activity>
-
 ```
 
 Al registrar la activity en el AndroidManifest, registramos también una acción que podremos usar para invocar a dicha actividad. El diseñador de la actividad puede asignar el nombre que crea conveniente a la acción. Ahora que ya está todo listo, podemos lanzar un intent para llamar a esta actividad:
@@ -60,12 +58,9 @@ public static void invokeMiActivity(Activity activity){
    Intent intent = new Intent(actionName);
    activity.startActivity(intent);
 }
-
 ```
 
-<p class="alert">
-  La convención que se usa para nombrar una acción suele ser <nombredenuestropaquete>.intent.action.NOMBRE_ACCION</nombredenuestropaquete>
-</p>
+> La convención que se usa para nombrar una acción suele ser <nombredenuestropaquete>.intent.action.NOMBRE_ACCION</nombredenuestropaquete>
 
 Una vez que se invoca a la actividad, ésta tiene la posibilidad de recuperar el intent que la llamó. Y podemos recuperarlo del siguiente modo:
 
@@ -75,7 +70,6 @@ Intent intent = this.getIntent();
 if (intent == null){
    Log.d("Tag", "La actividad no se ha llamado mediante un intent.")
 }
-
 ```
 
 ### Intents disponibles en Android
@@ -115,16 +109,13 @@ public static void showMapAtLatLong(Activity activity){
    intent.setData(Uri.parse("geo:0,0?z=4&q;=restaurantes"));
    activity.startActivity(intent);
 }
-
 ```
 
 ### Composición de los intents
 
 Un intent está formado por una acción, datos (que se representan mediante URIs), datos extra en pares clave/valor y un nombre de clase explícito, llamado nombre del componente.
 
-<p class="alert">
-  Es necesario aclarar algo, cuando un intent trae consigo un nombre de componente, se le llama intent explícito. Cuando no lo lleva y depende de la acción y los datos se llama intent implícito.
-</p>
+> Es necesario aclarar algo, cuando un intent trae consigo un nombre de componente, se le llama intent explícito. Cuando no lo lleva y depende de la acción y los datos se llama intent implícito.
 
 ### Intents y Data URIs
 
@@ -132,7 +123,6 @@ Como vimos un poco más arriba los URIs para las acciones ACTION\_DIAL y ACTION\
 
 ```java
 intent.setData(Uri.parse("tel:555-555-555"));
-
 ```
 
 El nombre de las acciones normalmente suele ser un String o un String constante con el nombre del paquete como prefijo.
@@ -147,20 +137,18 @@ Vamos a volver a ver el código que invoca al navegador web para analizarlo más
 Intent intent = new Intent(Intent.ACTION_VIEW);
 intent.setData(Uri.parse("http://www.google.com"));
 activity.startActivity(intent);
-
 ```
 
 En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:
 
 ```xml
-<activity>
-<intent>
-<action android:name="android.intent.action.VIEW">
-<data android:scheme="http">
-</data><data android:scheme="https">
-</data></action></intent>
+<activity ...>
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+    </intent>
 </activity>
-
 ```
 
 SE puede obtener más informacion del elemento *data* en <a target="_blank" href="http://developer.android.com/guide/topics/manifest/data-element.html">developer.android.com/guide/topics/manifest/data-element.html</a>
@@ -194,7 +182,6 @@ putExtra(String name, Intent otroIntent);
 
 //Añadir el bundle al intent
 intent.putExtras(b2)
-
 ```
 
 getExtras devuelve el bundle que contenga el intent. Si el intent ya tiene un bundle, putExtras transfiere los pares clave/valor adicionales del bundle nuevo al que ya existía. Si no existe ningun bundle asociado, putExtras creará uno y copiará todos los valores.
@@ -210,7 +197,6 @@ setComponent(ComponentName name);
 SeClassName(String packName, String className);
 setClassName(Context context, String ClassName);
 setClass(Context context, Class classObject);
-
 ```
 
 Se puede usar el nombre de una clase directamente sin necesidad de construir un ComponentName. Por ejemplo, si tenemos la siguiente actividad:
@@ -223,7 +209,6 @@ public class MiActivity extends Activity {
         setContentView(R.layout.MiActivity);
     }
 }
-
 ```
 
 Podemos usar el siguiente código para llamarla:
@@ -231,31 +216,20 @@ Podemos usar el siguiente código para llamarla:
 ```java
 Intent intent = new Intent(activity, MiActivity.class);
 activity.start(intent);
-
 ```
 
 Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:
 
 ```xml
-<activity android:name=".MiActivity" android:label="Mi Activity">
-
+<activity android:name=".MiActivity" android:label="Mi Activity" />
 ```
 
 Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.
 
-* * *
-
 #### Siguiente Tema: [Intents - Categorías][5] 
-
-
-
-
 
  [1]: https://elbauldelprogramador.com/programacion-android-trabajar-con/
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de
  [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
  [4]: http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT
  [5]: https://elbauldelprogramador.com/programacion-android-intents-categorias/
-
-{% include toc.html %}
-</activity>
