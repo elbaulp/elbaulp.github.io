@@ -60,7 +60,7 @@ public static void invokeMiActivity(Activity activity){
 }
 ```
 
-> La convención que se usa para nombrar una acción suele ser <nombredenuestropaquete>.intent.action.NOMBRE_ACCION</nombredenuestropaquete>
+> La convención que se usa para nombrar una acción suele ser `<nombredenuestropaquete>.intent.action.NOMBRE_ACCION</nombredenuestropaquete>`
 
 Una vez que se invoca a la actividad, ésta tiene la posibilidad de recuperar el intent que la llamó. Y podemos recuperarlo del siguiente modo:
 
