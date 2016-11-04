@@ -1,11 +1,10 @@
 ---
 layout: post.amp
 title: "Cómo Pasé De Usar Excel a Usar R Y Python"
-categories: 
-description:
+description: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
 tags: [r, python, análisis de datos]
-image:
-introduction:
+image: chrp1.png
+introduction: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
 author: marta
 main-class: "dev"
 color: "#E64A19"
@@ -13,6 +12,8 @@ date: 2016-11-04T16:23:40+01:00
 ---
 
 Cómo pasé de analizar resultados con Excel a analizarlos con R+Python
+
+{% include toc.html %}
 
 ## Cómo empezó todo...
 
@@ -22,6 +23,8 @@ Todo empezó cuando me mandaron hacer una práctica para la universidad en la qu
 * Ejecutarlos en 20 casos diferentes, desde tamaño ___n = 20___ hasta tamaño ___n = 256___.
 * Hacer una documentación explicando el problema a resolver, cada algoritmo desarrollado e incluyendo un pseudocódigo de los mismos.
 * Incluir en dicha documentación un estudio estadístico de los resultados, valorando cada algoritmo en función de cómo había trabajado con casos grandes (___n___ grande) o casos pequeños (___n___ pequeño) y sobre la eficacia del algoritmo en comparación con el mejor resultado conocido y con los resultados obtenidos por el resto de algoritmos. Además, incluir gráficas que apoyaran tus conclusiones estaba "muy bien visto" (codo, codo, guiño guiño).
+
+<!--ad-->
 
 y todo esto en unas tres semanas aproximadamente.
 
