@@ -288,11 +288,11 @@ representa_convergencia <- function(resultados, nombres, file) {
 }
 ```
 
-### Referencias
+## Referencias
 
 El código de la práctica está disponible en el GitHub de Marta: [github.com/mgmacias95/Analisis-Resultados-R-Python](https://github.com/mgmacias95/Analisis-Resultados-R-Python "Enlace al Repo") 
 
-### Más sobre R y Python
+## Más sobre R y Python
 
 Puedes consultar los siguientes atrículos sobre R y python:
 
