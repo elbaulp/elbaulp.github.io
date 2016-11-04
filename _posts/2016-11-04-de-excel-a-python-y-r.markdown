@@ -2,7 +2,7 @@
 layout: post.amp
 title: "Cómo Pasé De Usar Excel a Usar R Y Python"
 description: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
-tags: [r, python, análisis de datos]
+tags: [R, python, análisis de datos]
 image: chrp1.png
 introduction: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
 author: marta
