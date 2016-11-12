@@ -5,7 +5,7 @@ date: 2016-05-23T14:40:25+02:00
 modified: 2016-05-24T10:00:00+00:00
 categories:
 description: "Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de Prompts para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un repositorio git. Ésto es lo realmente interesante, ya que el prompt nos mostrará información del estado del repositorio, lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “Rainbow bash”"
-tags: [modificar el Prompt de bash, prompts con git, información de git prompts, instalar oh my git, configurar oh my git, configurar rainbow bash, instalar rainbow bash]
+tags: [modificar el Prompt de bash, prompts con git, información de git prompts, instalar oh my git, configurar oh my git, configurar rainbow bash, instalar rainbow bash, git]
 image: Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg
 main-class: "dev"
 color: "#E64A19"
