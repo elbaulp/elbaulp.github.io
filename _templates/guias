@@ -12,9 +12,8 @@ color: #61B38D
 ---
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/" alt="{{ title }}" title="{{ title }}" width="px" height="px">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>
-   <figcaption></figcaption>
 </figure>
 
 {% include guide_note.html %}
