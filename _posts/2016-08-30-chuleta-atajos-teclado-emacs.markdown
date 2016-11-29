@@ -6,7 +6,7 @@ description: "Emacs: Recopilación de comandos y acciones útiles"
 tags: [emacs, chuleta]
 image: chuleta-atajos-teclado-emacs.png
 introduction: "Emacs: Recopilación de comandos y acciones útiles"
-modified: 2016-09-01T09:30
+modified: 2016-11-29T16:30
 main-class: "misc"
 color: "#61B38D"
 ---
@@ -203,8 +203,11 @@ __Fuente:__ [Execute a particular command on multiple emacs buffers](http://stac
 
 ### Convertir texto a mayúscula/minúscula
 
-- `C-x C-u`: Convertir a mayúsculas.
-- `C-x C-l`: Convertir a minúsculas.
+- `C-x C-u`: Convertir la región seleccionada a mayúsculas.
+- `C-x C-l`: Convertir la región seleccionada a minúsculas.
+- `M-l`: Convertir la siguiente palabra a minúscula.
+- `M-u`: Convertir la siguiente palabra a mayúscula.
+- `M-c`: Convertir a mayúscula la primera letra de la palabra -- Capitalizar --.
 
 # Tu Turno
 
