@@ -35,9 +35,11 @@ sitemap: false
     {% if author.email %}<email>{{ author.email }}</email>{% endif %}
   </author>
   <content type="html">
-    <![CDATA[
-    <p><img src="{{ site.url }}/assets/img/{{ post.image }}"/></p><p>
-    ]]>
+    {% if post.image %}
+       <![CDATA[
+             <p><img src="{{ site.url }}/assets/img/{{ post.image }}"/></p><p>
+       ]]>
+    {% endif %}
     {{ post.content | xml_escape }}
     <![CDATA[
 
