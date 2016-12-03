@@ -38,7 +38,7 @@ sitemap: false
     <![CDATA[
     <p><img src="{{ site.url }}/assets/img/{{ post.image }}"/></p><p>
     ]]>
-    {{ post.description | xml_escape }}
+    {{ post.content | xml_escape }}
     <![CDATA[
 
     </p><p><strong>Ayúdanos a seguir escribiendo:</strong></p>
