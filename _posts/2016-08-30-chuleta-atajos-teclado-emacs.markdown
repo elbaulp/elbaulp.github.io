@@ -6,7 +6,7 @@ description: "Emacs: Recopilación de comandos y acciones útiles"
 tags: [emacs, chuleta]
 image: chuleta-atajos-teclado-emacs.png
 introduction: "Emacs: Recopilación de comandos y acciones útiles"
-modified: 2016-11-29T16:30
+modified: 2016-12-06T11:00
 main-class: "misc"
 color: "#61B38D"
 ---
@@ -208,6 +208,13 @@ __Fuente:__ [Execute a particular command on multiple emacs buffers](http://stac
 - `M-l`: Convertir la siguiente palabra a minúscula.
 - `M-u`: Convertir la siguiente palabra a mayúscula.
 - `M-c`: Convertir a mayúscula la primera letra de la palabra -- Capitalizar --.
+
+### Reemplazar tabulador por espacios y viveversa
+
+- `M-x tabify`: Sustituye en la región seleccionada espacios por tabuladores.
+- `M-x untabify`: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.
+
+Fuente: [mdk.fr](https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html "Emacs: replace tabs with spaces")
 
 # Tu Turno
 
