@@ -209,7 +209,7 @@ __Fuente:__ [Execute a particular command on multiple emacs buffers](http://stac
 - `M-u`: Convertir la siguiente palabra a mayúscula.
 - `M-c`: Convertir a mayúscula la primera letra de la palabra -- Capitalizar --.
 
-### Reemplazar tabulador por espacios y viveversa
+### Reemplazar tabulador por espacios y viceversa
 
 - `M-x tabify`: Sustituye en la región seleccionada espacios por tabuladores.
 - `M-x untabify`: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.
