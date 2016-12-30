@@ -1,111 +1,87 @@
-var env         = require('minimist')(process.argv.slice(2)),
-    gulp        = require('gulp'),
-    plumber     = require('gulp-plumber'),
-    browserSync = require('browser-sync'),
-    stylus      = require('gulp-stylus'),
-    uglify      = require('gulp-uglify'),
-    concat      = require('gulp-concat'),
-    jeet        = require('jeet'),
-    rupture     = require('rupture'),
-    koutoSwiss  = require('kouto-swiss'),
-    prefixer    = require('autoprefixer-stylus'),
-    imagemin    = require('gulp-imagemin'),
-    cp          = require('child_process'),
-    newer       = require('gulp-newer'),
-    purify      = require('gulp-purifycss');
+/* Refrences:
+1. http://notes.iissnan.com/2016/publishing-github-pages-with-travis-ci
+2. https://github.com/chrisjlee/hexo-theme-zurb-foundation/blob/e82f45a82bbaaee063bcb1298cd9793575afb142/gulpfile.js
+3. https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
+4. https://hexo.io/api/
+5. https://github.com/iissnan/theme-next-docs/blob/master/.travis.yml
+*/
 
-var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+var gulp = require('gulp');
+var minifycss = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
+var htmlclean = require('gulp-htmlclean');
+var imagemin = require('gulp-imagemin');
+var del = require('del');
+var runSequence = require('run-sequence');
+var koutoSwiss  = require('kouto-swiss');
+var Hexo = require('hexo');
+var stylus = require('gulp-stylus');
+var prefixer    = require('autoprefixer-stylus');
+var jeet        = require('jeet');
 
-/**
- * Build the Jekyll Site
- */
-gulp.task('jekyll-build', function (done) {
-  browserSync.notify(messages.jekyllBuild);
-  return cp.spawn('jekyll', ['build'], ['--incremental'], {stdio: 'inherit'})
-    .on('close', done);
+gulp.task('clean', function() {
+    return del(['public/**/*']);
 });
 
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-  browserSync.reload();
+// generate html with 'hexo generate'
+var hexo = new Hexo(process.cwd(), {});
+gulp.task('generate', function(cb) {
+    hexo.init().then(function() {
+        return hexo.call('generate', {
+            watch: false
+        });
+    }).then(function() {
+        return hexo.exit();
+    }).then(function() {
+        return cb()
+    }).catch(function(err) {
+        console.log(err);
+        hexo.exit(err);
+        return cb(err);
+    })
 });
 
-/**
- * Wait for jekyll-build, then launch the Server
- */
-gulp.task('browser-sync', ['jekyll-build'], function() {
-  browserSync({
-    server: {
-      baseDir: '_site'
-    }
-  });
+gulp.task('minify-css', function() {
+    return gulp.src('./public/**/*.css')
+        .pipe(minifycss({
+            compatibility: 'ie8'
+        }))
+        .pipe(gulp.dest('./public'));
 });
 
-/**
- * Stylus task
- */
-gulp.task('stylus', function(){
-    gulp.src('src/styl/main.styl')
-    .pipe(plumber())
-    .pipe(stylus({
-      use:[koutoSwiss(), prefixer(), jeet(), rupture()],
-      compress: true
-    }))
-    .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
-    .pipe(gulp.dest('_site/assets/css/'))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('assets/css'))
-    .pipe(gulp.dest('_includes/css'));
+gulp.task('minify-html', function() {
+    return gulp.src('./public/**/*.html')
+        .pipe(htmlclean())
+        .pipe(htmlmin({
+            removeComments: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLs: true,
+        }))
+        .pipe(gulp.dest('./public'))
 });
 
-/**
- * Javascript Task
- */
-gulp.task('js', function(){
-  return gulp.src((env.p) ? 'src/js/**/*.js' : ['src/js/**/*.js', '!src/js/analytics.js'])
-    .pipe(plumber())
-    .pipe(concat('main.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/js/'));
+gulp.task('minify-js', function() {
+    return gulp.src('./public/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./public'));
 });
 
-/**
- * Imagemin Task
- */
-gulp.task('imagemin', function() {
-  return gulp.src('src/img/**/*.{jpg,png,gif}')
-    .pipe(newer('assets/img/'))
-    .pipe(plumber())
-    .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('assets/img/'));
+gulp.task('minify-img', function() {
+    return gulp.src('./public/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./public/images'))
+})
+
+gulp.task('compress', function(cb) {
+    runSequence(['minify-html', 'minify-css', 'minify-js', 'minify-img'], cb);
 });
 
-/**
- * Watch stylus files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-  gulp.watch('src/styl/**/*.styl', ['stylus']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-  gulp.watch(['**/*.html','index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+
+//gulp.task('build', ['clean', 'generate', 'compress']);
+gulp.task('build', function(cb) {
+    runSequence('clean', 'generate', 'compress', cb)
 });
 
-/**
- * Clean Css task
- */
-gulp.task('unused-css', function() {
-  return gulp.src('_includes/css/main.css')
-        .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
-    .pipe(gulp.dest('_includes/css/main.clean.css'));
-});
-
-/**
- * Default task, running just `gulp` will compile the stylus,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
-gulp.task('default', ['js', 'stylus', 'browser-sync', 'watch']);
+gulp.task('default', [])
