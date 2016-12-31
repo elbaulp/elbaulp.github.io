@@ -3,14 +3,12 @@
   <!-- Html Head Tag-->
   <%- partial('_partial/html-head') %>
   <body>
-
+    <!--{% include header-default.amp.html %}-->
     <section class="content">
       <%- body %>
     </section>
-    
-    <%- partial('_partial/footer') %>
-
-    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/svg-icons') -%>
+    <%- partial('_partial/footer') -%>
+    <%- partial('_partial/after-footer') -%>
   </body>
 </html>
-

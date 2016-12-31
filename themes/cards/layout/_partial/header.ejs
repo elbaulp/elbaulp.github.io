@@ -27,10 +27,12 @@
 
 <header class="bar-header">
     <h1 class="logo">
-        <a href="{{site.baseurl}}/"></a>
+        <a href="<%- config.url %>/"></a>
     </h1>
 </header>
+<%- partial('_partial/search') %>
 
+<!--
 <header class="<%= headerClass %>" style="<%= headerStyle %>">
   <div class="container">
     <div class="row">
@@ -58,4 +60,4 @@
     </div>
   </div>
 </header>
-
+-->
