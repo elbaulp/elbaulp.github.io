@@ -1,3 +1,13 @@
+<%
+var mitag = '';
+var canonical = url_for(page.path).replace('index.html','');
+
+if (page.tags) {
+   page.tags.forEach(function(tag){
+        mitag += tag.name + " ";
+   })
+}
+-%>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,13 +16,39 @@
   <meta name="MobileOptimized" content="320">
   <meta name="description" content="<%= page.description || '' %>">
   <meta name="author" content="<%= config.author || '' %>">
+  <!--<meta name="keywords" content="<%= mitag -%>">-->
+    
+  <link rel="canonical" href="<%= canonical %>">
 
   <!-- Open Graph Data -->
-  <meta property="og:title" content="<%= page.title || config.title || '' %>"/>
-  <meta property="og:description" content="<%= page.description || config.description || '' %>" />
-  <meta property="og:site_name" content="<%= config.title || '' %>"/>
-  <meta property="og:type" content="<%= page.title ? 'article' : 'website' %>" />
-  <meta property="og:image" content="<%= config.url %><%= config.cover %>"/>
+  
+  <%- open_graph({
+      type: page.title ? 'article' : 'website',
+      title: page.title ? page.title : config.title,
+      url: canonical,
+      image: page.image ? page.image : 'default',
+      twitter_card: 'summary_large_image',
+      twitter_site: '@elbaulp', <!--TODO-->
+      twitter_id: '@elbaulp',
+      google_plus: 'https://plus.google.com/+Elbauldelprogramador'
+  }) -%>
+
+  <meta property="fb:pages" content="139660486080346" />
+  <meta property="article:publisher" content="http://facebook.com/elbauldelprogramador" />
+  <meta property="article:author" content="http://facebook.com/elbauldelprogramador" />
+  <!-- Android Lolipop Theme Color -->
+  <meta name="theme-color" content="<%= page.color -%>">
+    
+  <!-- Feeds -->
+  <%- feed_tag('/feed',             {title:config.title + ' Feed'}) %>
+  <%- feed_tag('/feed-android',     {title:config.title + ' Feed | Android'}) %>
+  <%- feed_tag('/feed-articulos',   {title:config.title + ' Feed | Artículos'}) %>
+  <%- feed_tag('/feed-dev',         {title:config.title + ' Feed | Desarrollo'}) %>
+  <%- feed_tag('/feed-geek',        {title:config.title + ' Feed | Geek'}) %>
+  <%- feed_tag('/feed-java',        {title:config.title + ' Feed | Java'}) %>
+  <%- feed_tag('/feed-latex',       {title:config.title + ' Feed | LaTeX'}) %>
+  <%- feed_tag('/feed-security-now',{title:config.title + ' Feed | Security Now!'}) %>
+
   <% if (theme.rss) { %>
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
@@ -30,26 +66,9 @@
   <!--<%- css(targetStyle) %>-->
 
   <!-- Google Analytics -->
-  <%- partial('google-analytics') %>
-
-
-
-    <!--AMP-->
-    <style amp-boilerplate>
-      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
-    </style>
-
-    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
-    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <%- partial('google-analytics') -%>
+  <!-- Google AMP -->
+  <%- partial('google-amp') -%>
+  <!-- Schema -->
+  <%- partial('schema', {canonical: canonical}) -%>
 </head>

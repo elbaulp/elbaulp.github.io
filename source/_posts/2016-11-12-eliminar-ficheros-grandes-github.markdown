@@ -2,11 +2,11 @@
 layout: post.amp
 category: git
 permalink: /eliminar-ficheros-grandes-github/
-title: "Cómo Eliminar Ficheros Demasiado Grandes Para GitHub"
-description: "Cómo eliminar por completo un fichero demasiado grande para GitHub"
+title: "AAACómo Eliminar Ficheros Demasiado Grandes Para GitHub"
+description: "BCómo eliminar por completo un fichero demasiado grande para GitHub"
 tags: [git, github]
 image: 2013/03/git-logo.png
-introduction: "Cómo eliminar por completo un fichero demasiado grande para GitHub"
+introduction: "ACómo eliminar por completo un fichero demasiado grande para GitHub"
 mainclass: "git"
 color: "#f05033"
 date: 2016-11-12T09:12:16+01:00
@@ -23,7 +23,7 @@ Para ello basta ejecutar el siguiente comando:
 $ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
 ```
 
-<!--ad-->
+<!-- more -->
 
 Y reemplazar `<file/dir>` con la ruta de nuestro fichero.
 

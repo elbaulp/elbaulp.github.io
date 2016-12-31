@@ -29,7 +29,7 @@ var hexo = new Hexo(process.cwd(), {});
 gulp.task('generate', function(cb) {
     hexo.init().then(function() {
         return hexo.call('generate', {
-            watch: false
+            watch: true
         });
     }).then(function() {
         return hexo.exit();
