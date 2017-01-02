@@ -1,37 +1,70 @@
 <%- partial('_partial/header', {
-  headerType: 'post',
-  post: post
-}) %>
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          <% if (config.author) { %>
-            <!-- Author -->
-            <span class="author info">By <%- config.author %></span>
-          <% } %>
-          <!-- Date -->
-          <span class="date-time info">OOOO
-            <span class="date"><%- date(post.date) %></span>
-            <span class="time"><%- time(post.time) %></span>
-          </span>
-          <% if (post.categories && post.categories.length){ %>
-          <!--  Categories  -->
-            <span class="categories info">Under <%- partial('categories', {categories: post.categories}) %></span>
-          <% } %>
-        </div>
-        <!-- Tags -->
-        <% if (post.tags && post.tags.length) { %>
-          <div class="post-tags text-muted">
-            Tags: <%- partial('tags', {tags: post.tags, tagHash: true}) %>
+    headerType: 'post',
+    post: post
+    }) %>
+
+<amp-image-lightbox id="lightbox1"
+                    layout="nodisplay"></amp-image-lightbox>
+<!--{% include header-post.amp.html %}-->
+<section class="post">
+  <!--  {% include share.amp.html %} -->
+  <div class="near-posts">
+    <!--
+        <a class="post-item" id="link-next" rel="next" href="{{ page.next.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.next.title | escape }}"><h3>«  site.next </h3></a>
+        <a class="post-item" id="link-random" href="/random"><h3>¿Pruebas suerte?</h3></a>
+        <a class="post-item" id="link-prev" rel="prev" href="{{ page.previous.url | prepend: seo_url | replace:'/index.html','/' }}" title="{{ page.previous.title | escape }}"><h3> post.prev »</h3></a>
+        -->
+  </div>
+  <article role="article" id="post" class="post-content">
+    <!--{% include _adtext.amp.html %}-->
+    </hr>
+    <%- post.content %>
+  </article>
+  <!--
+      {% include share.amp.html %}
+      {% include popular.posts.html %}
+      {% include author.amp.html %}
+      {% include comments.html %}
+      {% include footer.amp.html %}
+    -->
+</section>
+<% if (page.math == true) { -%>
+<script type="text/javascript"
+        src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<% } -%>
+<!--
+    <article>
+      <div class="container typo">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-info text-muted">
+              <% if (config.author) { %>
+
+              <span class="author info">By <%- config.author %></span>
+              <% } %>
+
+              <span class="date-time info">
+                <span class="date"><%- date(post.date) %></span>
+                <span class="time"><%- time(post.time) %></span>
+              </span>
+              <% if (post.categories && post.categories.length){ %>
+
+              <span class="categories info">Under <%- partial('categories', {categories: post.categories}) %></span>
+              <% } %>
+            </div>
+
+            <% if (post.tags && post.tags.length) { %>
+            <div class="post-tags text-muted">
+              Tags: <%- partial('tags', {tags: post.tags, tagHash: true}) %>
+            </div>
+            <% } %>
+
+            <div class="post-content">
+              <%- post.content %>
+            </div>
           </div>
-        <% } %>
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <%- post.content %>
         </div>
       </div>
-    </div>
-  </div>
-</article>
+    </article>
+    -->
