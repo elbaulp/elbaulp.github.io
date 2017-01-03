@@ -23,7 +23,7 @@ Para ello basta ejecutar el siguiente comando:
 $ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
 ```
 
-<!-- more -->
+<!-- ad -->
 
 Y reemplazar `<file/dir>` con la ruta de nuestro fichero.
 
@@ -57,5 +57,5 @@ Y habremos solucionado el problema.
 
 ## Fuentes
 
-- [How to remove/delete a large file from commit history in Git repository?](http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository "How to remove/delete a large file from commit history in Git repository?") 
-- [Can't push to GitHub because of large file which I already deleted](http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted "Can't push to GitHub because of large file which I already deleted") 
+- [How to remove/delete a large file from commit history in Git repository?](http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository "How to remove/delete a large file from commit history in Git repository?")
+- [Can't push to GitHub because of large file which I already deleted](http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted "Can't push to GitHub because of large file which I already deleted")

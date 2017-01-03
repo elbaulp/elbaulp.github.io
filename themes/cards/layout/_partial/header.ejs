@@ -6,7 +6,7 @@
   var pageTitle = '';
   var pageSubtitle = '';
   var siteMenuClass = 'site-menu';
-  var postDate = post.updated ? post.updated : post.date;
+
 
   if (theme.use_header_cover) {
     headerClass += ' header-background';
@@ -21,6 +21,8 @@
   } else if (headerType === 'post') {
     if (post && post.cover) headerStyle = 'background-image: url(' + post.cover + ')';
     pageTitle = post.title || __('untitled_post');
+    postDate = post.updated ? post.updated : post.date;
+    postDesc = post.description;
   } else if (headerType === 'archive') {
     pageTitle = __('archive_title');
   }
@@ -33,10 +35,12 @@
 </header>
 <%- partial('_partial/search') %>
 
+<% if (headerType === 'post') { -%>
 <header class="header-post" role="banner">
   <div class="content">
     <time datetime="<%- date_xml(postDate) %>" class="date"><%- date(postDate, 'D MMMM YYYY') %></time>
-    <h1 class="post-title"><%= post.title %></h1>
-    <p class="subtitle"><%= post.description %></p>
+    <h1 class="post-title"><%= pageTitle %></h1>
+    <p class="subtitle"><%= postDesc %></p>
   </div>
 </header>
+<% } -%>
