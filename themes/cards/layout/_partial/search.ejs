@@ -6,14 +6,13 @@
   <nav id="navigation">
     <h2>MENU</h2>
     <ul>
-      {% for link in site.links %}
+      <% for (var i in theme.menu) { %>
       <li>
-        <a href="{{ site.url }}{{site.baseurl}}{{ link.url }}">
-          <amp-fit-text width="220" height="20" max-font-size="20" layout="responsive">{{ link.title }}</amp-fit-text>
+        <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
+          <amp-fit-text width="220" height="20" max-font-size="20" layout="responsive"><%= theme.menu[i].title %></amp-fit-text>
         </a>
       </li>
-      {% endfor %}
-      <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed" title="Atom/RSS feed"><amp-fit-text  width="220" height="20" max-font-size="20" layout="responsive">Feed</amp-fit-text></a></li>
+      <% } %>
     </ul>
   </nav>
 </amp-sidebar>

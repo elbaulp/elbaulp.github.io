@@ -1,10 +1,29 @@
 # Header Menu
+# menu:
+#   Home: /
+#   Archives: /archives
+#   # change github and email values to your own addresses
+#   Github: https://github.com/levblanc
+#   Email: mailto:levblanc@163.com
 menu:
-  Home: /
-  Archives: /archives
-  # change github and email values to your own addresses
-  Github: https://github.com/levblanc
-  Email: mailto:levblanc@163.com
+  - title: Categorías
+    url: /categorias/
+  - title: Tags
+    url: /tags/
+  - title: Cursos
+    url: /cursos/
+  - title: Manuales
+    url: /manuales-gratuitos/
+  - title: Security Now!
+    url: /category/security-now/
+  - title: Apoyanos
+    url: /apoyanos/
+  - title: Colabora
+    url: /colabora/
+  - title: Contacto
+    url: /contacto/
+  - title: Feed
+    url: /feed/
 rss: /atom.xml
 
 # Set to false to disable banner
@@ -39,4 +58,3 @@ favicon: /favicon.png
 
 # Google Analytics Tracking ID
 google_analytics:
-
