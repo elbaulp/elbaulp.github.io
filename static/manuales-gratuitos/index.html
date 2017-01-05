@@ -1,0 +1,57 @@
+---
+id: 449
+title: Manuales gratuítos
+layout: minimal.amp
+tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
+description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
+image: Python-Web-Frameworks-full.jpg
+redirect_from:
+  - /nueva-guia-aspnet-20-anthology-101/
+  - /nueva-guia-javascript-anthology-101/
+  - /nueva-guia-php-anthology-101-essential/
+  - /nueva-guia-outsourcing-web-projects-6/
+  - /nueva-guia-run-your-own-web-server/
+  - /nueva-guia-oracle-magazine/
+  - /nueva-guia-agrupacion-en-clusteres/
+  - /wan-optimization-has-been-driven-by/
+  - /nueva-guia-migrar-un-sitio-web-drupal/
+  - /nueva-guia-mac-manual/
+  - /nueva-guia-windows-7-guide-from-newbies/
+  - /nueva-guia-php-master-write-cutting/
+  - /nueva-guia-building-android-and-ios/
+  - /nueva-guia-simply-sql/
+  - /nueva-guia-web-application-security-how/
+  - /nueva-guia-these-are-droids-youre/
+  - /nueva-guia-50-buenos-usos-para-los-live/
+  - /nueva-guia-think-different-how-to-build/
+  - /nueva-guia-ubuntu-absolute-beginners/
+---
+
+<div class="post-content">
+  <p>Si estás buscando libros de texto, quizá te interesen estos dos artículos:</p>
+  <ul>
+    <li><a id="libros-ml" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a></li>
+    <li><a id="libros-geek" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="21 Libros de No-Ficción que todo Geek debería leer">21 Libros de No-Ficción que todo Geek debería leer</a></li>
+  </ul>
+-  <blockquote>
+    <p><strong>NOTA</strong>: Si quieres apoyar el trabajo que realizamos en <em>El Baúl del Programador</em>, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga <strong> debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión</strong> ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en <a id="revresponse" href="http://www.revresponse.com/join.php?refbrand=bashyc-blogspot" target="_blank" title="RevResponse">RevResponse</a> y empezar a ofrecer guías de interés a tus lectores. Visita el <a href="http://elbauldelprogramador.tradepub.com/category/information-technology/1207/" target="_blank" title="Catálogo completo de Guías gratuítas">catálogo completo de guías.</a></p>
+  </blockquote>
+  <section id="guides-container">
+    <amp-list
+       width="800"
+       height="800"
+       layout="responsive"
+       src="/assets/guides.json">
+      <template type="amp-mustache">
+        <article class="box-item shown">
+          <a href="{% raw %}{{url}}{% endraw %}">
+            <figure>
+              <amp-img src="{% raw %}{{thumbnail}}{% endraw %}" alt="{% raw %}{{title}}{% endraw %}" width="{% raw %}{{width}}{% endraw %}" height="{% raw %}{{height}}{% endraw %}">
+              </amp-img>
+            </figure>
+          </a>
+        </article>
+      </template>
+    </amp-list>
+  </section>
+</div>
