@@ -5,7 +5,7 @@ description: Tras escuchar a varios lectores, ahora es posible leer los artícul
   completos desde los lectores RSS
 introduction: Tras escuchar a varios lectores, ahora es posible leer los artículos
   completos desde los lectores RSS
-main-class: articulos
+mainclass: articulos
 title: Los RSS Del Blog Ahora Muestran El Contenido Completo
 ---
 
