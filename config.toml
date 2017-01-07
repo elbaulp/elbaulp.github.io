@@ -17,11 +17,38 @@ PpygmentsUseClasses=         true
   category = "categories"
   series = "series"
 
+menu = "main"
+
+[[menu.main]]
+   name =  "Categorías"
+   url  = "/categorias/"
+[[menu.main]]    
+   name =  "Tags"
+   url  =  "/tags/"
+[[menu.main]]
+   name =  "Cursos"
+   url  =  "/cursos/"
+[[menu.main]]
+   name =  "Manuales"
+   url  =  "/manuales-gratuitos/"
+[[menu.main]]
+   name =  "Security Now!"
+   url  =  "/category/security-now/"
+[[menu.main]]
+   name =  "Apoyanos"
+   url  =  "/apoyanos/"
+[[menu.main]]
+   name =  "Colabora"
+   url  =  "/colabora/"
+[[menu.main]]
+   name =  "Contacto"
+   url  =  "/contacto/"
+
 [params]
     amp = true # enables amp features
 
     # define which amp-elements you are using globally, these elements will be included in every page
-    ampElements = ["amp-accordion","amp-ad","amp-analytics","amp-carousel","amp-iframe","amp-app-banner","amp-dynamic-css-classes","amp-form","amp-fx-flying-carpet","amp-image-lightbox","amp-lightbox","amp-sidebar","amp-social-share","amp-sticky-ad","amp-user-notification"]
+    ampElements = ["amp-fit-text","amp-accordion","amp-ad","amp-analytics","amp-carousel","amp-iframe","amp-app-banner","amp-dynamic-css-classes","amp-form","amp-fx-flying-carpet","amp-image-lightbox","amp-image","amp-lightbox","amp-sidebar","amp-social-share","amp-sticky-ad","amp-user-notification"]
 
     themeColor = "#112233" # define a theme color (this will colorize the android address-bar)
 
