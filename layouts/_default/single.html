@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ partial "structure/postheader" . }}
+  <section class="post">
+    <article role="article" id="post" class="post-content">
+      {{ .Content }}
+    </article>
+  </section>
+  {{ with .Params.math }}
+  <script type="text/javascript"
+          src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  {{ end }}
+{{ end }}
