@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ partial "structure/postheader" . }}
   <section class="post">
+    {{ partial "structure/share" . }}
     <article role="article" id="post" class="post-content">
       {{ .Content }}
     </article>

@@ -48,14 +48,12 @@ menu = "main"
     amp = true # enables amp features
 
     # define which amp-elements you are using globally, these elements will be included in every page
-    ampElements = ["amp-fit-text","amp-accordion","amp-ad","amp-analytics","amp-carousel","amp-iframe","amp-app-banner","amp-dynamic-css-classes","amp-form","amp-fx-flying-carpet","amp-image-lightbox","amp-image","amp-lightbox","amp-sidebar","amp-social-share","amp-sticky-ad","amp-user-notification"]
+    ampElements = ["amp-fit-text","amp-accordion","amp-ad","amp-analytics","amp-carousel","amp-iframe","amp-app-banner","amp-dynamic-css-classes","amp-form","amp-fx-flying-carpet","amp-image-lightbox","amp-image","amp-lightbox","amp-sidebar","amp-user-notification"]
 
     themeColor = "#112233" # define a theme color (this will colorize the android address-bar)
 
     adsensePublisher = "ca-pub-123456789" # required if you want to include google adsense
     googleAnalytics = "UA-123456-78" # required if you want to use google analytics
-    appleItunesApp = "app-id=123456789, app-argument=app-name://link/to/app-content" # required if you want to add an app banner with iOS app
-    ampManifest = "/amp-manifest.json" # required if you want to add the app-banner feature
 
     alternatePageName = "HUGO AMP" # alternative name for website structured data
     organisationLogo = "https://gohugohq.com/logo.png" # set organisation logo for structured data
