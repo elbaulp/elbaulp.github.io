@@ -1,15 +1,17 @@
 {{ define "main" }}
-  {{ partial "structure/postheader" . }}
-  <section class="post">
-    {{ partial "structure/share" . }}
-    <article role="article" id="post" class="post-content">
-      {{ $ad := partial "structure/ad" }}
-      {{ replace .Content "<!--ad-->" $ad | safeHTML }}
-    </article>
-  </section>
-  {{ with .Params.math }}
-  <script type="text/javascript"
-          src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
-  {{ end }}
+{{ partial "structure/postheader" . }}
+<section class="post">
+  {{ partial "structure/share" . }}
+  <article role="article" id="post" class="post-content">
+    {{ $ad := partial "structure/ad" }}
+    {{ replace .Content "<!--ad-->" $ad | safeHTML }}
+  </article>
+  {{ partial "structure/share" . }}
+  {{ partial "structure/popular.posts" }}
+</section>
+{{ with .Params.math }}
+<script type="text/javascript"
+        src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{{ end }}
 {{ end }}
