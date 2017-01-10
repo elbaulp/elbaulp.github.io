@@ -8,6 +8,14 @@
   </article>
   {{ partial "structure/share" . }}
   {{ partial "structure/popular.posts" }}
+  {{ if isset .Params "author" }}
+     {{ $author := index $.Site.Data.authors .Params.author }}
+     {{ partial "structure/author"  $author }}
+  {{ else }}
+     {{ $author := index $.Site.Data.authors "alex" }}
+     {{ partial "structure/author" $author }}
+  {{ end}}
+
 </section>
 {{ with .Params.math }}
 <script type="text/javascript"
