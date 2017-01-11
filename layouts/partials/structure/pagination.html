@@ -1,11 +1,11 @@
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-<div class="content-inner">
-  <nav class="clearfix p-paginator">
+<div class="paginator-container">
+  <nav class="paginator">
     {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL }}" rel="prev" class="prev">«</a>
+    <a href="{{ .Paginator.Prev.URL }}" rel="prev" alt="Página anterior">«</a>
     {{ end }}
     {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}" rel="next" class="next">»</a>
+    <a href="{{ .Paginator.Next.URL }}" rel="next" alt="Página siguiente">»</a>
     {{ end }}
   </nav>
 </div>

@@ -11,6 +11,7 @@ var env         = require('minimist')(process.argv.slice(2)),
     imagemin    = require('gulp-imagemin'),
     cp          = require('child_process'),
     newer       = require('gulp-newer'),
+    rename      = require('gulp-rename'),
     purify      = require('gulp-purifycss');
 
 /**
@@ -23,7 +24,9 @@ gulp.task('stylus', function(){
       use:[koutoSwiss(), prefixer(), jeet(), rupture()],
       compress: true
     }))
-    .pipe(gulp.dest('layouts/stylesheet.html'));
+    //    .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
+    .pipe(rename('stylesheet.html'))
+    .pipe(gulp.dest('layouts/partials/'));
 });
 
 /**
@@ -50,4 +53,4 @@ gulp.task('unused-css', function() {
  * Default task, running just `gulp` will compile the stylus,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', [stylus']);
+gulp.task('default', ['stylus']);
