@@ -15,7 +15,7 @@
      {{ $author := index $.Site.Data.authors "alex" }}
      {{ partial "structure/author" $author }}
   {{ end}}
-
+  {{ partial "structure/comments" . }}
 </section>
 {{ with .Params.math }}
 <script type="text/javascript"
