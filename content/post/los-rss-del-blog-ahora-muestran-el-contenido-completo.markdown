@@ -8,7 +8,6 @@ title: Los RSS Del Blog Ahora Muestran El Contenido Completo
 type: post
 tags: [una, dos, tres]
 math: true
-
 ---
 
 Últimamente he recibo varios consejos de lectores a los que les gustaría poder leer los artículos por completo desde sus aplicaciones _RSS_. Es por ello que he decidido habilitarlos.
