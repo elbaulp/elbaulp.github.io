@@ -17,7 +17,7 @@ date: 2016-09-07T15:10:02+02:00
 
 __Delve into the world of Apache Maven with this compact cookbook that introduces common recipes for the Maven tool!__
 
-{% include guide_note.html %}
+{{< importPartial "structure/guidenote.html" >}}
 
 Maven is a build automation tool used primarily for Java projects. Maven addresses two aspects of building software: first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like Apache Ant, it uses conventions for the build procedure, and only exceptions need to be written down.
 

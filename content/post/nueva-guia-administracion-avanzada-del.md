@@ -19,7 +19,7 @@ El objetivo principal de este libro es introducirnos en el mundo de la administr
 
 Los sistemas GNU/Linux han llegado a un grado de madurez importante, que los hacen válidos para integrarlos en cualquier ambiente de trabajo, ya sea desde el escritorio del PC personal, hasta el servidor de una gran empresa.
 
-{% include guide_note.html %}
+{{< importPartial "structure/guidenote.html" >}}
 
 <!--ad-->
 
@@ -33,4 +33,3 @@ Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
 
 [1]: https://elbauldelprogramador.com/manuales-gratuitos/
 [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
-

@@ -17,7 +17,7 @@ date: 2016-09-07T15:01:09+02:00
 
 __Delve into the world of Linux BASH Programming with this compact cookbook that introduces common recipes for the BASH command line!__
 
-{% include guide_note.html %}
+{{< importPartial "structure/guidenote.html" >}}
 
 Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been distributed widely as it is a default shell on the major Linux distributions and OS X.
 

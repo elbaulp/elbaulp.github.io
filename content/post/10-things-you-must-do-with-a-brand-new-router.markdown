@@ -19,7 +19,7 @@ There are many good reasons to upgrade your router (or buy one if you don’t ha
 But to get the best out of it you also need to set it up properly. It’s not difficult — adjust the hardware, tweak a few settings — but the results are well worth it. Here’s what you need to do every time you get a brand new router.
 Copyright
 
-{% include guide_note.html %}
+{{< importPartial "structure/guidenote.html" >}}
 
 <div class="button-post">
   <h2><a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_make298" target="_blank">Descárgala ahora</a></h2>
