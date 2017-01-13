@@ -2,7 +2,7 @@
 title: 'Dominio software libre -no oficial- “.42″ disponible'
 layout: post.amp
 permalink: /dominio-software-libre-no-oficial-42/
-modified: 2016-08-19T18:20
+lastmod: 2016-08-19
 categories:
   - noticias
   - opensource

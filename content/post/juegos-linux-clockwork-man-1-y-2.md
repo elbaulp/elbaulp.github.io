@@ -2,7 +2,7 @@
 title: Juegos Linux, The Clockwork Man 1 y 2
 layout: post.amp
 permalink: /juegos-linux-clockwork-man-1-y-2/
-modified: 2016-08-15T16:00
+lastmod: 2016-08-15
 categories:
   - juegos
 mainclass: "articulos"

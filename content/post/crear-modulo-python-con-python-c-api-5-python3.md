@@ -13,7 +13,7 @@ tags:
   - tutorial python c api
 image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "Este es el último artículo de esta serie de 5 sobre cómo crear un módulo con la Python C API. Para terminar, veremos la forma de hacer compatible un módulo con **Python 3**. Nos basaremos en el módulo **herramientasRed** que hemos creado en la parte 3."
-modified: 2015-12-22T10:44:00+00:00
+lastmod: 2015-12-22
 mainclass: "dev"
 color: "#E64A19"
 ---

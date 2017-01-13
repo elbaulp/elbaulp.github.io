@@ -7,7 +7,7 @@ categories:
 tags:
   - Gmail Inbox Statistics Report
   - Informe estadístico mensual de GMail
-modified: 2016-08-09T09:50
+lastmod: 2016-08-09
 mainclass: "articulos"
 color: "#F57C00"
 ---

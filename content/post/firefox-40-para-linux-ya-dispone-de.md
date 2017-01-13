@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /firefox-40-para-linux-ya-dispone-de/
 categories:
   - noticias
-modified: 2016-08-15T15:30
+lastmod: 2016-08-15
 mainclass: "articulos"
 color: "#F57C00"
 ---

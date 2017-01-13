@@ -1,7 +1,7 @@
 ---
 title: 15 Demostraciones del potencial de HTML5
 layout: post.amp
-modified: 2016-09-03T23:00
+lastmod: 2016-09-03
 permalink: /15-demostraciones-del-potencial-de/
 categories:
   - curiosidades

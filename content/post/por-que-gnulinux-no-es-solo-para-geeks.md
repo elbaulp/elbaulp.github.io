@@ -1,6 +1,6 @@
 ---
 title: Por qué GNU/Linux no es solo para Geeks
-modified: 2016-10-01T13:20
+lastmod: 2016-10-01T13:20
 layout: post.amp
 permalink: /por-que-gnulinux-no-es-solo-para-geeks/
 categories:

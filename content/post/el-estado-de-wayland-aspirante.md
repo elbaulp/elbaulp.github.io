@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /el-estado-de-wayland-aspirante/
 categories:
   - noticias
-modified: 2016-08-15T13:40
+lastmod: 2016-08-15
 mainclass: "articulos"
 color: "#F57C00"
 ---

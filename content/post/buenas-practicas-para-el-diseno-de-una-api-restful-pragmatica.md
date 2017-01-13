@@ -12,7 +12,7 @@ tags:
   - api rest ejemplo
   - que es una api rest
 author: luzila
-modified: 2016-08-01T16:40
+lastmod: 2016-08-01
 image: 2014/01/201305-xml-vs-json-api.png
 description: "Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó."
 mainclass: "articulos"

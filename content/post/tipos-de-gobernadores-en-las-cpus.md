@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - que es cpu conservative
   - samsung galaxy scl gti9003
-modified: 2016-08-11T21:30
+lastmod: 2016-08-11T21:30
 image: Tipos-de-gobernadores-en-las-CPUs.jpg
 mainclass: "linux"
 color: "#2196F3"

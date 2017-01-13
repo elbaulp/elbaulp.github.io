@@ -2,7 +2,7 @@
 title: 'PL/SQL. Cursores'
 layout: post.amp
 permalink: /plsql-cursores/
-modified: 2016-09-02T09:50
+lastmod: 2016-09-02T09:50
 categories:
   - BaseDeDatos
 tags:

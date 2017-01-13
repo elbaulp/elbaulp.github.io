@@ -7,7 +7,7 @@ categories:
   - script
 tags:
   - crear miniaturas de imagenes
-modified: 2016-07-31T00:00
+lastmod: 2016-07-31
 mainclass: "linux"
 color: "#2196F3"
 ---

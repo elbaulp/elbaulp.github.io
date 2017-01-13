@@ -12,7 +12,7 @@ tags:
   - seguridad en bind
   - usar fpdns
 image: 2013/04/dns-300x240.jpg
-modified: 2016-08-05T10:45
+lastmod: 2016-08-05
 mainclass: "servidores"
 color: "#0097A7"
 ---

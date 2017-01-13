@@ -13,7 +13,7 @@ tags:
   - metodos de cifrado
   - seguridad
   - cómo funciona un salt
-modified: 2015-07-14T21:00:00+00:00
+lastmod: 2015-07-14
 date: 2015-07-14T21:00:00+00:00
 image: 2012/07/original2.jpg
 mainclass: "articulos"

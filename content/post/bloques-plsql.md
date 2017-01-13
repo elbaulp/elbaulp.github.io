@@ -2,7 +2,7 @@
 title: Bloques PL/SQL
 layout: post.amp
 permalink: /bloques-plsql/
-modified: 2016-08-24T16:00
+lastmod: 2016-08-24
 categories:
   - BaseDeDatos
 description: "Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas"

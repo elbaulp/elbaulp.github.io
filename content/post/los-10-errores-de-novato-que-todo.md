@@ -1,6 +1,6 @@
 ---
 title: 10 errores de novato que todo desarrollador Android debería evitar
-modified: 2016-10-26T16:56
+lastmod: 2016-10-26
 layout: post.amp
 permalink: /los-10-errores-de-novato-que-todo/
 categories:

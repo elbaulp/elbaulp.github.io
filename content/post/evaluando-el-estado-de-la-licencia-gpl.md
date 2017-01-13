@@ -1,6 +1,6 @@
 ---
 title: Evaluando el estado de la licencia GPL
-modified: 2016-10-26T16:55
+lastmod: 2016-10-26
 layout: post.amp
 permalink: /evaluando-el-estado-de-la-licencia-gpl/
 categories:

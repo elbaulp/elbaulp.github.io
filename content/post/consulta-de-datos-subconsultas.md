@@ -2,7 +2,7 @@
 title: 'Consulta de Datos. Subconsultas'
 layout: post.amp
 permalink: /consulta-de-datos-subconsultas/
-modified: 2016-08-19T15:30
+lastmod: 2016-08-19
 categories:
   - BaseDeDatos
 mainclass: "BaseDeDatos"

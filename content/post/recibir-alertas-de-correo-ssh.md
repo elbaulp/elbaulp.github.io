@@ -8,7 +8,7 @@ tags:
   - alertar ssh
   - correo ssh
   - seguridad ssh
-modified: 2016-08-10T13:28
+lastmod: 2016-08-10T13:28
 mainclass: "servidores"
 color: "#0097A7"
 ---

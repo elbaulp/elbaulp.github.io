@@ -2,7 +2,7 @@
 title: 'Descubre cuales son los 10 comandos que más usas en Linux con esta línea'
 layout: post.amp
 permalink: /meme-los-10-comandos-que-mas-utilizo-en/
-modified: 2016-08-30T10:30
+lastmod: 2016-08-30
 categories:
   - meme
 mainclass: "linux"

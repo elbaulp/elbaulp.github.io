@@ -11,7 +11,7 @@ tags:
   - contraseñas asm
   - Ingenieria inversa
 image: 2012/12/logicbomb.png
-modified: 2016-08-05T15:00
+lastmod: 2016-08-05T15:00
 mainclass: "dev"
 color: "#E64A19"
 ---

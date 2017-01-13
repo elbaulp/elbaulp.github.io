@@ -2,7 +2,7 @@
 title: Cómo mapear json a objetos Java con Jackson ObjectMapper
 layout: post.amp
 permalink: /como-mapear-json-a-objetos-java-con-jackson-objectmapper/
-modified: 2015-03-30T00:00:00+00:00
+lastmod: 2015-03-30
 categories:
   - Java
 tags:

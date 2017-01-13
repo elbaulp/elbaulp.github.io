@@ -2,7 +2,7 @@
 title: Disponible la primera parte del curso Android en PDF
 layout: post.amp
 permalink: /disponible-la-primera-parte-del-curso/
-modified: 2016-10-22T07:50
+lastmod: 2016-10-22T07:50
 categories:
   - android
   - opensource

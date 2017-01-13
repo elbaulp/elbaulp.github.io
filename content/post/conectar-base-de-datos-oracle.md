@@ -1,6 +1,6 @@
 ---
 title: Conectar base de datos ORACLE a aplicación Java remotamente
-modified: 2016-11-03T16:45
+lastmod: 2016-11-03
 layout: post.amp
 permalink: /conectar-base-de-datos-oracle/
 categories:

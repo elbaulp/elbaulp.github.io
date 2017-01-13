@@ -1,6 +1,6 @@
 ---
 title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 4.0'
-modified: 2016-09-12T09:00
+lastmod: 2016-09-12T09:00
 layout: post.amp
 permalink: /pro-android-3-aprende-fondo-todo-lo-que/
 categories:

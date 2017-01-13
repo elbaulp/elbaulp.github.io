@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos. Definir una Clase'
 layout: post.amp
-modified: 2016-09-03T22:00
+lastmod: 2016-09-03
 permalink: /clases-y-objetos-definir-una-clase/
 categories:
   - C

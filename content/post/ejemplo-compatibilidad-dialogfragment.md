@@ -13,7 +13,7 @@ tags:
   - DialogFragment
   - supportv4
   - TimeoPickerDialog
-modified: 2016-08-14T00:00
+lastmod: 2016-08-14
 mainclass: "android"
 color: "#689F38"
 ---

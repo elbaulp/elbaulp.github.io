@@ -17,7 +17,7 @@ tags:
   - layout android
   - menu android
   - simple adapter android ejemplo
-modified: 2016-08-14T08:50
+lastmod: 2016-08-14
 mainclass: "android"
 color: "#689F38"
 ---

@@ -2,7 +2,7 @@
 title: Cómo empezar a programar
 layout: post.amp
 permalink: /como-empezar-programar-how-start/
-modified: 2016-08-16T11:00
+lastmod: 2016-08-16
 categories:
   - How To
 mainclass: "articulos"

@@ -13,7 +13,7 @@ tags:
   - markdown worpress
   - tutorial markdown
 description: "En su última actualización, el plugin JetPack introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato."
-modified: 2015-12-24T17:50
+lastmod: 2015-12-24
 mainclass: "articulos"
 color: "#F57C00"
 ---

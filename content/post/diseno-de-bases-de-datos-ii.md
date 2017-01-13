@@ -9,7 +9,7 @@ tags:
   - sintaxis de restricciones check
   - sintaxis de restricciones check unique default
   - unique
-modified: 2016-08-15T15:20
+lastmod: 2016-08-15
 mainclass: "BaseDeDatos"
 color: "#009688"
 ---

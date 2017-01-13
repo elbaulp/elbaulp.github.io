@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL. Procedimientos y Funciones'
 layout: post.amp
-modified: 2016-09-02T10:20
+lastmod: 2016-09-02T10:20
 permalink: /plsql-procedimientos-y-funciones/
 categories:
   - BaseDeDatos

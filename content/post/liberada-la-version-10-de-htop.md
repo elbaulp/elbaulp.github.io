@@ -1,6 +1,6 @@
 ---
 title: Liberada la versión 1.0 de htop
-modified: 2016-10-01T13:10
+lastmod: 2016-10-01
 layout: post.amp
 permalink: /liberada-la-version-10-de-htop/
 categories:

@@ -8,7 +8,7 @@ tags:
   - abstraccion de datos pl/sql
   - apuntes bases de datos
   - guia de sql basico
-modified: 2016-08-13T13:00
+lastmod: 2016-08-13
 mainclass: "BaseDeDatos"
 color: "#009688"
 ---

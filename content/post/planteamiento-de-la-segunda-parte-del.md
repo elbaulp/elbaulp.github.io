@@ -1,6 +1,6 @@
 ---
 title: Planteamiento de la segunda parte del curso de Android
-modified: 2016-09-25T16:00
+lastmod: 2016-09-25T16:00
 layout: post.amp
 permalink: /planteamiento-de-la-segunda-parte-del/
 categories:

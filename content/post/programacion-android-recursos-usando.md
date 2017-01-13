@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Usando recursos'
-modified: 2016-09-20T17:55
+lastmod: 2016-09-20T17:55
 layout: post.amp
 permalink: /programacion-android-recursos-usando/
 categories:

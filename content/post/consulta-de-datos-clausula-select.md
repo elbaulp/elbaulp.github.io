@@ -2,7 +2,7 @@
 title: 'Consulta de Datos - Cláusula Select'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-select/
-modified: 2016-08-18T11:50
+lastmod: 2016-08-18
 categories:
   - BaseDeDatos
 mainclass: "BaseDeDatos"

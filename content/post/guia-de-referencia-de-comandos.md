@@ -1,6 +1,6 @@
 ---
 title: 'Guía de Referencia de comandos Unix/Linux [IMG]'
-modified: 2016-10-11T13:50
+lastmod: 2016-10-11
 layout: post.amp
 permalink: /guia-de-referencia-de-comandos/
 categories:

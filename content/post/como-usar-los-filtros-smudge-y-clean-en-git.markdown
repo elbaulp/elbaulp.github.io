@@ -2,7 +2,7 @@
 layout: post.amp
 title: "Como Usar Los Filtros Smudge Y Clean en Git"
 date: 2015-05-21T16:50:42+02:00
-modified: 2015-05-22T14:40:42+02:00
+lastmod: 2015-05-22
 categories:
 description: Cómo crear filtros en git, smudge y clean
 tags: [git, smudge, git smudge, git clean, git hooks]

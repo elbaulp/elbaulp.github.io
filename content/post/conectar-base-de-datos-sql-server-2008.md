@@ -12,7 +12,7 @@ tags:
   - conectar java con oracle
   - curso android pdf
   - programar base datoss java
-modified: 2016-09-06T13:30
+lastmod: 2016-09-06
 mainclass: "android"
 color: "#689F38"
 ---

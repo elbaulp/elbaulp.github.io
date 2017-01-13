@@ -2,7 +2,7 @@
 title: Grub Customizer 2.0, personaliza tu GRUB2
 layout: post.amp
 permalink: /grub-customizer-20-personaliza-tu-grub2/
-modified: 2016-08-15T15:30
+lastmod: 2016-08-15
 categories:
   - noticias
 mainclass: "linux"

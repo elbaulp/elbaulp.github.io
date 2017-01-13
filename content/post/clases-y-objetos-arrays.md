@@ -2,7 +2,7 @@
 title: 'Clases y Objetos. Arrays'
 layout: post.amp
 permalink: /clases-y-objetos-arrays/
-modified: 2016-09-04T22:30
+lastmod: 2016-09-04
 categories:
   - C
 description: "Un array sirve para guardar un conjunto de entidades pertenecientes a la misma

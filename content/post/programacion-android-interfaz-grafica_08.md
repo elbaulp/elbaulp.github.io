@@ -13,7 +13,7 @@ tags:
   - interfaz grafica en android
   - layout android
   - menu android
-modified: 2016-09-20T09:45
+lastmod: 2016-09-20T09:45
 mainclass: "android"
 color: "#689F38"
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Usando la cláusula Where'
-modified: 2016-10-08T11:00
+lastmod: 2016-10-08T11:00
 layout: post.amp
 permalink: /programacion-android-usando-la-clausula/
 categories:

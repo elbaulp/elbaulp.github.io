@@ -1,7 +1,7 @@
 ---
 title: Estadísticas del blog en 2011
 layout: post.amp
-modified: 2016-10-26T16:50
+lastmod: 2016-10-26
 permalink: /estadisticas-del-blog-en-2011/
 categories:
   - noticias

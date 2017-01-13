@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /consulta-de-datos-tablas-resumen/
 categories:
   - BaseDeDatos
-modified: 2016-08-19T17:30
+lastmod: 2016-08-19
 mainclass: "BaseDeDatos"
 color: "#009688"
 ---

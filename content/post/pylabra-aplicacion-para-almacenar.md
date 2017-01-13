@@ -1,7 +1,7 @@
 ---
 title: 'Pylabra. Aplicación para almacenar vocabulario'
 layout: post.amp
-modified: 2016-08-27T11:30
+lastmod: 2016-08-27T11:30
 permalink: /pylabra-aplicacion-para-almacenar/
 categories:
   - aplicaciones

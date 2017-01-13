@@ -11,7 +11,7 @@ tags:
   - migrar blogger a wordpress
   - migrar blogger wordpress
   - wordpress
-modified: 2016-08-13T23:40
+lastmod: 2016-08-13
 mainclass: "dev"
 color: "#E64A19"
 ---

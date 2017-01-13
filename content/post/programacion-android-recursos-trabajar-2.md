@@ -7,7 +7,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-modified: 2016-08-09T20:40
+lastmod: 2016-08-09T20:40
 mainclass: "android"
 color: "#689F38"
 ---

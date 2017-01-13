@@ -1,7 +1,7 @@
 ---
 title: 'Fundamentos aplicaciones Android. (Parte I)'
 layout: post.amp
-modified: 2016-09-06T10:00
+lastmod: 2016-09-06
 permalink: /fundamentos-aplicaciones-android-parte/
 categories:
   - android

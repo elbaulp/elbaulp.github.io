@@ -2,7 +2,7 @@
 title: 'Desarrollo android. ¿Qué es Android?. Traducción de developer.android.com'
 layout: post.amp
 permalink: /desarrollo-android-que-es-android/
-modified: 2016-09-06T09:30
+lastmod: 2016-09-06
 categories:
   - android
   - aplicaciones

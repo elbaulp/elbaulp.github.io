@@ -2,7 +2,7 @@
 title: 'Avances en el proyecto Android de fin de curso [WifiBar]'
 description: "Como ya sabéis tengo que realizar un proyecto de fin de curso, el cual ya expliqué en [qué consistía][1], y escribo esta entrada para mostraros un poco los avances que voy haciendo."
 layout: post.amp
-modified: 2016-09-07T09:00
+lastmod: 2016-09-07
 permalink: /avances-en-el-proyecto-android-de-fin/
 categories:
   - android

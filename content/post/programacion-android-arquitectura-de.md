@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Arquitectura de los Proveedores de contenidos'
-modified: 2016-10-01T13:15
+lastmod: 2016-10-01T13:15
 layout: post.amp
 permalink: /programacion-android-arquitectura-de/
 categories:

@@ -12,7 +12,7 @@ tags:
   - como filtrar un action_pick
   - curso android pdf
   - startactivityforresult android example
-modified: 2016-08-13T23:00
+lastmod: 2016-08-13T23:00
 redirect_from: /opensource/programacion-android-ejemplos-de-uso-de/
 mainclass: "android"
 color: "#689F38"

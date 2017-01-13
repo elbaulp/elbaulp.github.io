@@ -2,7 +2,7 @@
 title: Introducción a PL/SQL
 layout: post.amp
 permalink: /introduccion-plsql/
-modified: 2016-08-19T19:30
+lastmod: 2016-08-19
 categories:
   - BaseDeDatos
 mainclass: "BaseDeDatos"

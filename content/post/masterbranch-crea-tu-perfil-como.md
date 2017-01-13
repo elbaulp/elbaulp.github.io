@@ -2,7 +2,7 @@
 title: 'MasterBranch - Crea tu perfil como Programador y muestra todos tus proyectos'
 layout: post.amp
 permalink: /masterbranch-crea-tu-perfil-como/
-modified: 2016-09-09T08:50
+lastmod: 2016-09-09
 categories:
   - aplicaciones
   - internet

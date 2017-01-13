@@ -1,7 +1,7 @@
 ---
 title: Mejoras para el proyecto PyLabra
 layout: post.amp
-modified: 2016-09-04T22:00
+lastmod: 2016-09-04
 permalink: /mejoras-para-el-proyecto-pylabra/
 categories:
   - aplicaciones

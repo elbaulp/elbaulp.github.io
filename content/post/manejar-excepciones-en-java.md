@@ -11,7 +11,7 @@ tags:
   - finally java
   - try catch java
 description: "En este artículo veremos un poco sobre el manejo de excepciones en java, esto es esencial para toda programación básica en java, una excepción es un indicador que tenemos de que algo ha ido mal en nuestro código. Con lo cual podremos controlarlas y capturarlas para poder tratar con ellas e indicar lo que se tiene que hacer."
-modified: 2015-12-24T17:45
+lastmod: 2015-12-24
 mainclass: "java"
 color: "#D32F2F"
 ---

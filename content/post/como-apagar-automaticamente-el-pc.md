@@ -2,7 +2,7 @@
 title: Cómo apagar automáticamente el PC cuando las descargas finalicen
 layout: post.amp
 permalink: /como-apagar-automaticamente-el-pc/
-modified: 2016-09-06T13:40
+lastmod: 2016-09-06
 categories:
   - aplicaciones
   - curiosidades

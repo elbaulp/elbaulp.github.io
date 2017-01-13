@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos. El Constructor'
 layout: post.amp
-modified: 2016-09-04T12:00
+lastmod: 2016-09-04
 permalink: /clases-y-objetos-el-constructor/
 categories:
   - C

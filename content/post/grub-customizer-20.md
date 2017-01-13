@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /grub-customizer-20/
 categories:
   - Sin Categoria
-modified: 2016-08-15T15:30
+lastmod: 2016-08-15
 mainclass: "linux"
 color: "#2196F3"
 ---

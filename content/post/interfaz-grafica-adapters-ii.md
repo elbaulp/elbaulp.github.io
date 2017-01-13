@@ -17,7 +17,7 @@ tags:
   - menu android
   - simple adapter android ejemplo
 image: https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png
-modified: 2016-08-14T11:40
+lastmod: 2016-08-14
 mainclass: "android"
 color: "#689F38"
 ---

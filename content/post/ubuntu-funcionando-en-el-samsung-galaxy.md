@@ -6,7 +6,7 @@ categories:
   - noticias
 tags:
   - xda
-modified: 2016-08-15T15:25
+lastmod: 2016-08-15T15:25
 mainclass: "articulos"
 color: "#F57C00"
 ---

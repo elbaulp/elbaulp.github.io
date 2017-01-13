@@ -8,7 +8,7 @@ categories:
 tags:
   - curso android pdf
   - layout android
-modified: 2016-09-20T18:00
+lastmod: 2016-09-20T18:00
 mainclass: "android"
 color: "#689F38"
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Tech Comics: “Geek en el oculista” [HUMOR]'
-modified: 2016-10-08T11:05
+lastmod: 2016-10-08T11:05
 layout: post.amp
 permalink: /tech-comics-geek-en-el-oculista-humor/
 image: geek-eye-doctor.jpg

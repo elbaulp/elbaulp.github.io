@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL. Registros y Tablas'
 layout: post.amp
-modified: 2016-09-03T16:00
+lastmod: 2016-09-03T16:00
 permalink: /plsql-registros-y-tablas/
 categories:
   - BaseDeDatos

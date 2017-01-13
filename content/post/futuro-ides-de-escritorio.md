@@ -9,7 +9,7 @@ tags:
   - IDES en la nube
   - IDES para internet
 author: luzila
-modified: 2016-08-09T10:00
+lastmod: 2016-08-09
 mainclass: "articulos"
 color: "#F57C00"
 ---

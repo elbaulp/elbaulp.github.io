@@ -1,6 +1,6 @@
 ---
 title: Cómo depurar una aplicación en Django
-modified: 2016-10-11T12:20
+lastmod: 2016-10-11
 layout: post.amp
 permalink: /como-depurar-una-aplicacion-en-django/
 categories:

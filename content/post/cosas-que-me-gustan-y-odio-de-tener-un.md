@@ -1,6 +1,6 @@
 ---
 title: 'Cosas que me gustan y odio de tener un smartphone [HUMOR]'
-modified: 2016-09-20T18:00
+lastmod: 2016-09-20
 layout: post.amp
 permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
 categories:

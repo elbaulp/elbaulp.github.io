@@ -1,6 +1,6 @@
 ---
 title: 'Nueva guía: A Newbies Getting Started Guide to Linux'
-modified: 2016-09-21T16:00
+lastmod: 2016-09-21T16:00
 layout: post.amp
 permalink: /nueva-guia-newbies-getting-started/
 categories:

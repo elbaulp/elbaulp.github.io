@@ -2,7 +2,7 @@
 title: Introducción SQL
 layout: post.amp
 permalink: /introduccion-sql-sql-introduction/
-modified: 2016-08-15T15:40
+lastmod: 2016-08-15
 categories:
   - BaseDeDatos
 mainclass: "BaseDeDatos"

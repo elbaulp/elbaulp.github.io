@@ -1,6 +1,6 @@
 ---
 title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
-modified: 2016-09-14T09:52
+lastmod: 2016-09-14T09:52
 layout: post.amp
 permalink: /video-proyecto-wifibar-en-la-ultima/
 categories:

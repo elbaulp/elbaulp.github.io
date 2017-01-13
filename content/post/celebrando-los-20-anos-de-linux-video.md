@@ -2,7 +2,7 @@
 title: 'Celebrando los 20 años de Linux [Video]'
 layout: post.amp
 permalink: /celebrando-los-20-anos-de-linux-video/
-modified: 2016-09-05T14:00
+lastmod: 2016-09-05
 categories:
   - linux
   - noticias

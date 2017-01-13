@@ -1,7 +1,7 @@
 ---
 title: 'Programación en C++. Clases y objetos - Introducción'
 layout: post.amp
-modified: 2016-09-02T23:00
+lastmod: 2016-09-02
 permalink: /clases-y-objetos-introduccion/
 categories:
   - C

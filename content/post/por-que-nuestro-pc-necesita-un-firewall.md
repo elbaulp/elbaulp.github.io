@@ -1,6 +1,6 @@
 ---
 title: Por qué nuestro PC necesita un firewall activado
-modified: 2016-10-01T13:20
+lastmod: 2016-10-01T13:20
 layout: post.amp
 permalink: /por-que-nuestro-pc-necesita-un-firewall/
 categories:

@@ -2,7 +2,7 @@
 title: '¡Nunca lo hagas! [Humor]'
 layout: post.amp
 permalink: /nunca-lo-hagas-humor/
-modified: 2016-09-05T11:11
+lastmod: 2016-09-05T11:11
 image: nunca-lo-hagas-sudo-rm-rf.jpg
 categories:
   - curiosidades

@@ -8,7 +8,7 @@ categories:
 tags:
   - renombrar archivos linux masivo
   - renombrar linux
-modified: 2016-08-11T08:30
+lastmod: 2016-08-11T08:30
 mainclass: "linux"
 color: "#2196F3"
 ---

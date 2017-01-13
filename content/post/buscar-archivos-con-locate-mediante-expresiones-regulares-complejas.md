@@ -10,7 +10,7 @@ tags:
   - expresiones regulares linux
   - locate
   - regex
-modified: 2016-08-26T13:00
+lastmod: 2016-08-26
 image: 2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png
 description: "En linux, existe un comando llamado locate que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su man es:"
 mainclass: "linux"

@@ -1,6 +1,6 @@
 ---
 title: 'Guerra de navegadores [Humor]'
-modified: 2016-10-08T10:57
+lastmod: 2016-10-08
 layout: post.amp
 permalink: /guerra-de-navegadores-humor/
 image: guerra-de-navegadores-humor.jpg

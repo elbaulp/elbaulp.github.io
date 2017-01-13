@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Actualizar y borrar registros'
-modified: 2016-10-26T16:57
+lastmod: 2016-10-26T16:57
 layout: post.amp
 permalink: /programacion-android-actualizar-y/
 categories:

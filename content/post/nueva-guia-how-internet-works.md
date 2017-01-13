@@ -1,6 +1,6 @@
 ---
 title: 'Nueva guía: How the internet works'
-modified: 2016-10-28T16:30
+lastmod: 2016-10-28T16:30
 layout: post.amp
 permalink: /nueva-guia-how-internet-works/
 categories:

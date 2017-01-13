@@ -17,9 +17,9 @@ tags:
   - libros para geeks
   - libros de no ficcion recomendados
   - didier newman wikipedia
-modified: 2015-12-19T22:00:00+00:00
+lastmod: 2015-12-19
 date: 2015-06-30T18:48:42+02:00
-modified: 2016-06-15T10:20:42+02:00
+lastmod: 2016-06-15
 image: Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg
 mainclass: "articulos"
 color: "#F57C00"

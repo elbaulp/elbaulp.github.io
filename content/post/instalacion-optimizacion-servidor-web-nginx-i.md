@@ -10,7 +10,7 @@ tags:
   - configuracion nginx
   - instalar nginx linux
   - montar un servidor web
-modified: 2015-12-25T13:25
+lastmod: 2015-12-25
 description: "A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web."
 image: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
 mainclass: "servidores"

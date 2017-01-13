@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Sintaxis de los Recursos'
-modified: 2016-09-21T15:50
+lastmod: 2016-09-21T15:50
 layout: post.amp
 permalink: /programacion-android-recursos-sintaxis/
 categories:

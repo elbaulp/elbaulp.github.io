@@ -2,7 +2,7 @@
 title: Gestión básica de usuarios en linux
 layout: post.amp
 permalink: /gestion-basica-de-usuarios-en-linux/
-modified: 2016-08-15T15:50
+lastmod: 2016-08-15
 categories:
   - linux
   - script

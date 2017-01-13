@@ -4,7 +4,7 @@ title: "Cómo Definir Colores Personalizados en LaTeX"
 tags: [latex, xcolor, paquete xcolor, tutorial xcolor latex]
 image: latexxcolorbrillantes.png
 date: 2015-12-09T16:55:32+01:00
-modified: 2015-12-30T08:38:32+01:00
+lastmod: 2015-12-30
 math: true
 description: "En este artículo veremos cómo podemos definir colores personalizados en LateX usando el paquete xcolor."
 mainclass: "latex"

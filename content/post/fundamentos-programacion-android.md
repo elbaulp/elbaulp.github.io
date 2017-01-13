@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos programación Android: Conceptos básicos y componentes'
-modified: 2016-09-16T09:12
+lastmod: 2016-09-16
 layout: post.amp
 permalink: /fundamentos-programacion-android/
 categories:

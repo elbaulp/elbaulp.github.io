@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /bodhi-ubuntuenlightenment-perfecto-para/
 categories:
   - noticias
-modified: 2016-08-15T15:20
+lastmod: 2016-08-15
 mainclass: "articulos"
 color: "#F57C00"
 ---

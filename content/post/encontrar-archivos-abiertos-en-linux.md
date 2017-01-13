@@ -6,7 +6,7 @@ categories:
   - linux
   - opensource
   - SO
-modified: 2016-10-26T16:59
+lastmod: 2016-10-26
 mainclass: "linux"
 color: "#2196F3"
 ---

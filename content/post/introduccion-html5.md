@@ -8,7 +8,7 @@ tags:
   - curso html5
   - etiquetas html5
 image: 2013/11/Introducción-a-HTML51.png
-modified: 2015-12-30T11:00
+lastmod: 2015-12-30
 description: "Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es Roberto. Si ya sabes algo puedes echar un vistazo al artículo Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket."
 mainclass: "dev"
 color: "#E64A19"

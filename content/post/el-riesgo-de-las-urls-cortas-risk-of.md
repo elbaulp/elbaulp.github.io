@@ -2,7 +2,7 @@
 title: El riesgo de las URLs cortas
 layout: post.amp
 permalink: /el-riesgo-de-las-urls-cortas-risk-of/
-modified: 2016-08-15T16:11
+lastmod: 2016-08-15
 categories:
   - noticias
 mainclass: "articulos"

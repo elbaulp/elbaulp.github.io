@@ -11,7 +11,7 @@ tags:
   - navegacion anonima
   - Tor
 author: luzila
-modified: 2016-08-08T13:00
+lastmod: 2016-08-08
 image: 2012/11/081012_1601_AchievingAn21-300x86.png
 redirect_from:
   - /articulos/logrando-el-anonimato-con-tor-parte-1

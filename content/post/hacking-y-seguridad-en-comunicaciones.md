@@ -1,6 +1,6 @@
 ---
 title: Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE
-modified: 2016-10-08T11:00
+lastmod: 2016-10-08
 layout: post.amp
 permalink: /hacking-y-seguridad-en-comunicaciones/
 image: hacking-y-seguridad-en-comunicaciones.jpg

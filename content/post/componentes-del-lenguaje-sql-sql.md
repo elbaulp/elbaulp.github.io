@@ -2,7 +2,7 @@
 title: Componentes del lenguaje SQL
 layout: post.amp
 permalink: /componentes-del-lenguaje-sql-sql/
-modified: 2016-08-15T16:30
+lastmod: 2016-08-15
 categories:
   - BaseDeDatos
 mainclass: "BaseDeDatos"

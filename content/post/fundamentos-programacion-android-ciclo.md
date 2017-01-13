@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos programación Android: Ciclo de vida de los componentes'
-modified: 2016-09-17T09:15
+lastmod: 2016-09-17
 layout: post.amp
 permalink: /fundamentos-programacion-android-ciclo/
 categories:

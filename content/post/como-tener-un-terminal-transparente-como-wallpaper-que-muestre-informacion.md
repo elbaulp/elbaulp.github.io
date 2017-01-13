@@ -21,7 +21,7 @@ tags:
   - wallpaper
   - xrootconsole
 image: 2013/03/xroot-example.jpg
-modified: 2016-08-09T16:16
+lastmod: 2016-08-09
 mainclass: "linux"
 color: "#2196F3"
 ---

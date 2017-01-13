@@ -1,6 +1,6 @@
 ---
 title: 'Introducción a Django - Instalación y primer proyecto'
-modified: 2016-10-12T17:42
+lastmod: 2016-10-12
 layout: post.amp
 permalink: /introduccion-django-instalacion-y-primer-proyecto/
 categories:

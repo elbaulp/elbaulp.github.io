@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/
 categories:
   - Articulos
-modified: 2015-12-25T13:10
+lastmod: 2015-12-25
 mainclass: "articulos"
 color: "#F57C00"
 ---

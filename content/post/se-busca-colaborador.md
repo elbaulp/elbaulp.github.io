@@ -1,6 +1,6 @@
 ---
 title: Se busca colaborador
-modified: 2016-09-27T15:45
+lastmod: 2016-09-27T15:45
 layout: post.amp
 permalink: /se-busca-colaborador/
 categories:

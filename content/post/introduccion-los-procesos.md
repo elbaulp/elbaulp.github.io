@@ -2,7 +2,7 @@
 title: Introducción a los Procesos
 layout: post.amp
 permalink: /introduccion-los-procesos/
-modified: 2016-09-02T20:40
+lastmod: 2016-09-02
 categories:
   - procesos
   - SO

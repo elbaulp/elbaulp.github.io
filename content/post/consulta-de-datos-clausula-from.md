@@ -2,7 +2,7 @@
 title: 'Consulta de Datos - Cláusula FROM'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-from/
-modified: 2016-08-16T11:00
+lastmod: 2016-08-16
 categories:
   - BaseDeDatos
 mainclass: "BaseDeDatos"

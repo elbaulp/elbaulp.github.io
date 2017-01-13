@@ -11,7 +11,7 @@ tags:
   - ocultar fichero foto
   - ocultar imagenes en imagenes
   - ocultar informacion en imagenes
-modified: 2016-08-13T22:22
+lastmod: 2016-08-13T22:22
 redirect_from: /programacion/ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
 mainclass: "dev"
 color: "#E64A19"

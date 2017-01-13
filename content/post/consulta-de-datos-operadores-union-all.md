@@ -2,7 +2,7 @@
 title: 'Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.'
 layout: post.amp
 permalink: /consulta-de-datos-operadores-union-all/
-modified: 2016-08-19T12:50
+lastmod: 2016-08-19
 categories:
   - BaseDeDatos
 tags:

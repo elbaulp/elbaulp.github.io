@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos. Control del acceso a los miembros de la clase'
 layout: post.amp
-modified: 2016-09-04T12:00
+lastmod: 2016-09-04
 permalink: /clases-y-objetos-control-del-acceso-los/
 categories:
   - C

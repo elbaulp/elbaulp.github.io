@@ -24,7 +24,7 @@ tags:
   - windows 8 se bloquea
   - windows 8 se traba
 image: 2013/02/Windows8problem.jpg
-modified: 2016-08-10T21:20
+lastmod: 2016-08-10
 mainclass: "articulos"
 color: "#F57C00"
 ---

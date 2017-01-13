@@ -1,7 +1,7 @@
 ---
 title: 'PL/SQL. Declaración de variables'
 layout: post.amp
-modified: 2016-08-27T11:30
+lastmod: 2016-08-27T11:30
 permalink: /plsql-declaracion-de-variables/
 categories:
   - BaseDeDatos

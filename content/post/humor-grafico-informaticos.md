@@ -1,6 +1,6 @@
 ---
 title: 'Humor gráfico - Informáticos, Programadores, geeks - 9GAG.COM Parte (II)'
-modified: 2016-10-22T12:15
+lastmod: 2016-10-22
 layout: post.amp
 permalink: /humor-grafico-informaticos/
 categories:

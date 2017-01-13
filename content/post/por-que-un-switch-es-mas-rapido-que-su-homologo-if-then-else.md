@@ -2,7 +2,7 @@
 title: Por qué un switch es más rápido que su homólogo if-then-else
 layout: post.amp
 permalink: /por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/
-modified: 2016-08-17T20:30
+lastmod: 2016-08-17T20:30
 categories:
   - C
 tags:

@@ -23,7 +23,7 @@ tags:
   - salida comando netstat
   - significado close_wait
   - usos netstat
-modified: 2016-08-11T21:00
+lastmod: 2016-08-11T21:00
 mainclass: "linux"
 color: "#2196F3"
 ---

@@ -30,7 +30,7 @@ tags:
   - ejemplos de framework
   - tipos de frameworks
   - framework para desarrollo web
-modified: 2016-08-14T08:30
+lastmod: 2016-08-14
 mainclass: "articulos"
 color: "#F57C00"
 ---

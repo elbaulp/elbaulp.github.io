@@ -32,7 +32,7 @@ tags:
   - servidores dns
   - soa correo
 image: 2013/04/dns.jpg
-modified: 2016-08-01T18:00
+lastmod: 2016-08-01
 mainclass: "servidores"
 color: "#0097A7"
 ---

@@ -6,7 +6,7 @@ categories:
   - Humor
 description: "Recopilación de chistes informáticos"
 mainclass: "geek"
-modified: 2016-08-13T11:50
+lastmod: 2016-08-13
 color: "#262626"
 ---
 

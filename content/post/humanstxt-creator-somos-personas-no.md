@@ -2,7 +2,7 @@
 title: Humanstxt Creator. Somos personas, no máquinas
 layout: post.amp
 permalink: /humanstxt-creator-somos-personas-no/
-modified: 2016-09-07T08:50
+lastmod: 2016-09-07
 image: HumanstxtCreatorsomospersonasnomaquinas.png
 categories:
   - internet

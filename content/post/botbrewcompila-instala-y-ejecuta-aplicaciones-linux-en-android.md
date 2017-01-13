@@ -14,7 +14,7 @@ tags:
   - xda
 description: "Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros. Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo."
 image: 2012/12/linux-apps-on-android1.jpg
-modified: 2016-08-13T23:23
+lastmod: 2016-08-13
 redirect_from: /programacion/android/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/
 mainclass: "articulos"
 color: "#F57C00"

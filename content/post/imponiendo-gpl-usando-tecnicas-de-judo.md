@@ -10,7 +10,7 @@ tags:
   - licencias GPL
   - software libre
 redirect_from: /opensource/imponiendo-gpl-usando-tecnicas-de-judo/
-modified: 2016-08-13T23:17
+lastmod: 2016-08-13
 mainclass: "articulos"
 color: "#F57C00"
 ---

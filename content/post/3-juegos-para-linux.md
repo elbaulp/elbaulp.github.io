@@ -2,7 +2,7 @@
 title: 3 Juegos para Linux
 layout: post.amp
 permalink: /3-juegos-para-linux/
-modified: 2016-08-15T15:35
+lastmod: 2016-08-15
 categories:
   - juegos
 tags:

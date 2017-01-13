@@ -9,7 +9,7 @@ tags:
   - añadir imagenes wordpress
   - imagenes en entradas wordpress
 description: "Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página “2014 Galery”, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página."
-modified: 2015-12-24T19:55
+lastmod: 2015-12-24
 image: 2013/07/wordpress.png
 mainclass: "dev"
 color: "#E64A19"

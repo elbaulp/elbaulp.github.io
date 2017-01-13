@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: StrictMode'
-modified: 2016-09-25T16:20
+lastmod: 2016-09-25T16:20
 layout: post.amp
 permalink: /programacion-android-strictmode/
 categories:

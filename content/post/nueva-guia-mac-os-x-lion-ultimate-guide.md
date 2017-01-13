@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /nueva-guia-mac-os-x-lion-ultimate-guide/
 categories:
   - cursos
-modified: 2016-09-29T20:40
+lastmod: 2016-09-29T20:40
 image: Mac-OS-X-LionThe-Ultimate-Guide.jpg
 mainclass: "misc"
 color: "#61B38D"

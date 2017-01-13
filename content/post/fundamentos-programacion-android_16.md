@@ -1,6 +1,6 @@
 ---
 title: 'Fundamentos programación Android: Intents y AndroidManifest'
-modified: 2016-09-15T13:50
+lastmod: 2016-09-15
 layout: post.amp
 permalink: /fundamentos-programacion-android_16/
 categories:

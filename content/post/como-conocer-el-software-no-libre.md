@@ -2,7 +2,7 @@
 title: 'Cómo conocer el software “no libre” instalado en nuestro equipo'
 layout: post.amp
 permalink: /como-conocer-el-software-no-libre/
-modified: 2016-09-09T09:00
+lastmod: 2016-09-09
 categories:
   - aplicaciones
   - curiosidades

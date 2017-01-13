@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /diseno-de-bases-de-datos-i-conceptos/
 categories:
   - BaseDeDatos
-modified: 2016-08-08T10:46
+lastmod: 2016-08-08
 mainclass: "BaseDeDatos"
 color: "#009688"
 ---

@@ -7,7 +7,7 @@ categories:
 tags:
   - ejemplos
   - ruby
-modified: 2016-08-10T13:00
+lastmod: 2016-08-10
 mainclass: "dev"
 color: "#E64A19"
 ---

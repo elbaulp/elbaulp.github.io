@@ -10,7 +10,7 @@ tags:
   - adblock
   - anuncios
   - javascript
-modified: 2016-02-07T09:33:22+01:00
+lastmod: 2016-02-07
 mainclass: "articulos"
 color: "#F57C00"
 ---

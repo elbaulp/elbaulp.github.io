@@ -2,7 +2,7 @@
 title: 'PL/SQL. Paquetes (Packages)'
 layout: post.amp
 permalink: /plsql-paquetes-packages/
-modified: 2016-09-02T20:45
+lastmod: 2016-09-02T20:45
 categories:
   - BaseDeDatos
 tags:

@@ -2,7 +2,7 @@
 title: 'Introducción a PL/SQL. Transacciones'
 layout: post.amp
 permalink: /introduccion-plsql-transacciones/
-modified: 2016-08-23T10:40
+lastmod: 2016-08-23
 categories:
   - BaseDeDatos
 tags:

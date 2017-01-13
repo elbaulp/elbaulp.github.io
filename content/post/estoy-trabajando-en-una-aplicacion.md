@@ -1,6 +1,6 @@
 ---
 title: 'Nuevo Proyecto Android: Fav Sites'
-modified: 2016-09-21T15:57
+lastmod: 2016-09-21
 layout: post.amp
 permalink: /estoy-trabajando-en-una-aplicacion/
 categories:

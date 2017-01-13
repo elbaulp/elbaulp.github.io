@@ -10,7 +10,7 @@ tags:
   - CUSL
   - preferencias android
   - summary android
-modified: 2015-12-28T9:50
+lastmod: 2015-12-28
 image: 2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png
 description: "En un artículo anterior vimos cómo crear un diálogo personalizado en las preferencias para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el summary que aparece debajo del título de una preferencia."
 mainclass: "android"

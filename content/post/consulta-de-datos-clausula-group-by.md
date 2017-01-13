@@ -2,7 +2,7 @@
 title: 'Consulta de Datos - Cláusula GROUP BY'
 layout: post.amp
 permalink: /consulta-de-datos-clausula-group-by/
-modified: 2016-08-19T09:30
+lastmod: 2016-08-19
 categories:
   - BaseDeDatos
 tags:

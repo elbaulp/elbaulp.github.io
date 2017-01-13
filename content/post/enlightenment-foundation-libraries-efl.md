@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /enlightenment-foundation-libraries-efl/
 categories:
   - linux
-modified: 2016-08-01T20:00
+lastmod: 2016-08-01
 mainclass: "linux"
 color: "#2196F3"
 ---

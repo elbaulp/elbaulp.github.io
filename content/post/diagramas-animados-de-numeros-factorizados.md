@@ -8,7 +8,7 @@ tags:
   - animated diagrams
   - factorización
   - html5
-modified: 2016-08-09T20:45
+lastmod: 2016-08-09
 image: 2013/01/2013-01-13-105334_1256x830_scrot2.png
 mainclass: "dev"
 color: "#E64A19"

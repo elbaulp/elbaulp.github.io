@@ -4,7 +4,7 @@ layout: post.amp
 permalink: /rockmelt-una-navegador-social-basado-en/
 categories:
   - noticias
-modified: 2016-08-15T15:20
+lastmod: 2016-08-15T15:20
 mainclass: "articulos"
 color: "#F57C00"
 ---

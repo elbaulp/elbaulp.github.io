@@ -2,7 +2,7 @@
 title: Recopilación de Información del Boicot a WikiLeaks
 layout: post.amp
 permalink: /informacion-del-boicot-wikileaks/
-modified: 2016-08-15T16:00
+lastmod: 2016-08-15
 categories:
   - noticias
 mainclass: "articulos"

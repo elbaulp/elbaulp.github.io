@@ -14,7 +14,7 @@ tags:
   - fancy hdr
   - latex nota al pie
 image: 2013/05/latex_logo.png
-modified: 2016-08-13T17:50
+lastmod: 2016-08-13
 mainclass: "latex"
 color: "#B31917"
 ---

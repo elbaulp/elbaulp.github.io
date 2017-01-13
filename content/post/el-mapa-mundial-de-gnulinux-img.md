@@ -2,7 +2,7 @@
 title: 'El gran Mapa mundial de GNU/Linux'
 layout: post.amp
 permalink: /el-mapa-mundial-de-gnulinux-img/
-modified: 2016-09-08T10:00
+lastmod: 2016-09-08
 date: 2016-09-08T10:00
 image: el-mapa-mundial-de-gnulinux-2.jpg
 categories:

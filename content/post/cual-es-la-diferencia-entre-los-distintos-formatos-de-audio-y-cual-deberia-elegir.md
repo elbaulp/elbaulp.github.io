@@ -30,7 +30,7 @@ tags:
   - calidades de audio
   - formatos alac
 image: 2012/07/original1.jpg
-modified: 2016-08-10T11:45
+lastmod: 2016-08-10
 mainclass: "articulos"
 color: "#F57C00"
 ---

@@ -1,6 +1,6 @@
 ---
 title: Cómo hacer que google deje de usar tu Wifi para obtener datos de geolocalización
-modified: 2016-09-25T16:00
+lastmod: 2016-09-25
 layout: post.amp
 permalink: /como-hacer-que-google-deje-de-usar-tu/
 categories:

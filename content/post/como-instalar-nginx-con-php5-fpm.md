@@ -13,7 +13,7 @@ tags:
   - php-fpm
   - servidor web
 image: 2013/02/nginx-logo.png
-modified: 2016-08-05T16:30
+lastmod: 2016-08-05
 mainclass: "servidores"
 color: "#0097A7"
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Intents - Conceptos básicos'
-modified: 2016-11-03T16:50
+lastmod: 2016-11-03T16:50
 layout: post.amp
 permalink: /programacion-android-intents-conceptos/
 categories:

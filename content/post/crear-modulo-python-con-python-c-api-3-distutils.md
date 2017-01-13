@@ -13,7 +13,7 @@ tags:
   - tutorial python c api
 image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "Como dijimos en la entrada anterior, vamos a hablar de *DistUtils*, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API."
-modified: 2015-12-22T10:44:00+00:00
+lastmod: 2015-12-22
 mainclass: "dev"
 color: "#E64A19"
 ---

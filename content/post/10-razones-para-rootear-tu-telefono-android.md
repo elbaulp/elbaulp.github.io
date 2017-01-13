@@ -11,7 +11,7 @@ tags:
   - rootear android
 image: 2013/08/ku-bigpic.jpg
 description: "Android es uno de los sistemas operativos más abiertos, versátil y personalizable del mercado. Quizá pienses que no es necesario rootearlo, pero te sorprenderías de la cantidad de cosas que se pueden hacer con un teléfono Android rooteado. A continuación se listan 10 razones por las que merece la pena (Traducidas de LifeHacker)."
-modified: 2016-08-10T12:25
+lastmod: 2016-08-10
 mainclass: "articulos"
 color: "#F57C00"
 ---

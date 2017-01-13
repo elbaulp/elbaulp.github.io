@@ -1,7 +1,7 @@
 ---
 title: Python para principiantes
 layout: post.amp
-modified: 2016-08-31T11:00
+lastmod: 2016-08-31T11:00
 permalink: /python-para-principiantes/
 categories:
   - python

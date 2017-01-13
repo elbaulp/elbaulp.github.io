@@ -1,6 +1,6 @@
 ---
 title: Busca en google lo siguiente y verás que pasa
-modified: 2016-10-20T13:50
+lastmod: 2016-10-20
 layout: post.amp
 permalink: /busca-en-google-lo-siguiente-y-veras/
 categories:

@@ -1,6 +1,6 @@
 ---
 title: 'Los desarrolladores de GNOME crean “Boxes” para la virtualización'
-modified: 2016-10-04T16:30
+lastmod: 2016-10-04
 layout: post.amp
 permalink: /los-desarrolladores-de-gnome-crean/
 categories:

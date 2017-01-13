@@ -2,7 +2,7 @@
 title: '[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)'
 layout: post.amp
 permalink: /humor-como-arreglar-una-computadora/
-modified: 2016-09-08T10:00
+lastmod: 2016-09-08
 categories:
   - curiosidades
   - How To

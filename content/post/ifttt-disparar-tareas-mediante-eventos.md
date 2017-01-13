@@ -1,7 +1,7 @@
 ---
 title: 'Ifttt: Disparar tareas mediante eventos producidos en redes sociales'
 layout: post.amp
-modified: 2016-08-29T10:00
+lastmod: 2016-08-29
 permalink: /ifttt-disparar-tareas-mediante-eventos/
 categories:
   - aplicaciones

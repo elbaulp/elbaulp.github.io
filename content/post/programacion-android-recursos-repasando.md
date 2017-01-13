@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Repasando la estructura del directorio de recursos'
-modified: 2016-09-29T20:36
+lastmod: 2016-09-29T20:36
 layout: post.amp
 permalink: /programacion-android-recursos-repasando/
 categories:

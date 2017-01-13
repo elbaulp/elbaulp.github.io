@@ -6,7 +6,7 @@ tags: [seguridad]
 introduction: Un grupo de investigadores ha conseguido acceder y moficar los píxeles de una pantalla
 twitter_text:
 date: 2016-08-12T09:06:02+02:00
-modified: 2016-08-15T11:00
+lastmod: 2016-08-15
 image: Hackeando-Tu-Monitor-De-Pantalla.jpg
 mainclass: "articulos"
 color: "#F57C00"

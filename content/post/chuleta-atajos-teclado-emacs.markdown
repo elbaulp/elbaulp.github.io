@@ -6,7 +6,7 @@ description: "Emacs: Recopilación de comandos y acciones útiles"
 tags: [emacs, chuleta]
 image: chuleta-atajos-teclado-emacs.png
 introduction: "Emacs: Recopilación de comandos y acciones útiles"
-modified: 2016-12-06T11:00
+lastmod: 2016-12-06
 mainclass: "misc"
 color: "#61B38D"
 ---
@@ -38,13 +38,13 @@ Una de las plantillas que tengo para escribir en el blog es:
 # name: Modified
 # key: mod
 # --
-modified: 2016-$1-$2T$3:$4$0
+lastmod: 2016-$1-$2
 ```
 
 En los comentarios se especifica el nombre del _snippet_, la palabra que lo lanzará (_mod_) en este caso. Así, al escribir `mod` y pulsar el tabulador se insertará en el editor:
 
 ```bash
-modified: 2016-$1-$2T$3:$4$0
+lastmod: 2016-$1-$2
 ```
 
 Y con el tabulador me podré ir moviendo a los distintos _$n_ que ahí se ven. Otro ejemplo:

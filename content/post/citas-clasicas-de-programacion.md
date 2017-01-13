@@ -1,6 +1,6 @@
 ---
 title: 22 Citas clásicas de programación
-modified: 2016-08-31T11:00
+lastmod: 2016-08-31
 layout: post.amp
 permalink: /citas-clasicas-de-programacion/
 categories:

@@ -11,7 +11,7 @@ tags:
   - fugas de memoria runnable
   - memory leaks
 description: "Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso."
-modified: 2015-12-22T17:50
+lastmod: 2015-12-22
 mainclass: "android"
 color: "#689F38"
 ---

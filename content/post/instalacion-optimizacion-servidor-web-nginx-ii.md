@@ -10,7 +10,7 @@ tags:
   - configuración php
   - instalar php-fpm
   - nginx y php
-modified: 2015-12-28T9:34
+lastmod: 2015-12-28
 description: "A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web."
 image: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
 mainclass: "servidores"

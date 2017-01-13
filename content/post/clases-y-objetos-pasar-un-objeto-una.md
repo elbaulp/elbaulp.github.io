@@ -1,7 +1,7 @@
 ---
 title: 'Clases y Objetos - Pasar un objeto a una función'
 layout: post.amp
-modified: 2016-09-08T09:30
+lastmod: 2016-09-08
 permalink: /clases-y-objetos-pasar-un-objeto-una/
 categories:
   - C
