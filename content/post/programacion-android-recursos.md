@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Introducción'
-lastmod: 2016-09-20T17:00
+lastmod: 2016-09-20
 layout: post.amp
 permalink: /programacion-android-recursos/
 categories:

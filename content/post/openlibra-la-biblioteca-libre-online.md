@@ -1,6 +1,6 @@
 ---
 title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
-lastmod: 2016-09-12T08:45
+lastmod: 2016-09-12
 layout: post.amp
 permalink: /openlibra-la-biblioteca-libre-online/
 categories:

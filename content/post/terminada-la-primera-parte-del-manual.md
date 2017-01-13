@@ -1,6 +1,6 @@
 ---
 title: Terminada la primera parte del manual Android
-lastmod: 2016-09-25T16:00
+lastmod: 2016-09-25
 layout: post.amp
 permalink: /terminada-la-primera-parte-del-manual/
 categories:

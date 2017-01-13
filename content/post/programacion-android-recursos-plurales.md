@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Plurales'
-lastmod: 2016-09-26T13:45
+lastmod: 2016-09-26
 layout: post.amp
 permalink: /programacion-android-recursos-plurales/
 categories:

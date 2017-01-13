@@ -12,7 +12,7 @@ tags:
   - tamaño del APK
 image: hotlink-ok/Pon-a-dieta-a-tus-APKs.png
 date: 2015-12-11T10:47:00+00:00
-lastmod: 2015-12-11T10:47:00+00:00
+lastmod: 2015-12-11
 description: "En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android eliminando recursos sin usar. En el blog de Cyril Mottier encontré un artículo muy interesante con varios consejos para reducir el tamaño del APK y optimizar el código en producción. A continuación pasamos a traducir las partes importantes."
 mainclass: "android"
 color: "#689F38"

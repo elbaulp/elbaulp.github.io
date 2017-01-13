@@ -8,10 +8,10 @@ tags:
   - cliente google drive linux
   - grive
   - tutorial grive
-lastmod: 2015-12-29T10:00
+lastmod: 2015-12-29
 image: 2013/11/google-drive-linux3.jpg
 description: "Hace poco vimos en un artículo cómo Sincronizar Google Drive en Linux en 4 pasos. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que grive vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas."
-lastmod: 2016-08-09T15:20
+lastmod: 2016-08-09
 mainclass: "linux"
 color: "#2196F3"
 ---

@@ -2,7 +2,7 @@
 title: 'Programación para Juegos. Lección 4 . Programación orientada a eventos'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-4/
-lastmod: 2016-08-19T19:00
+lastmod: 2016-08-19
 categories:
   - juegos
 mainclass: "dev"

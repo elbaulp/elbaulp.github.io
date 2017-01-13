@@ -1,6 +1,6 @@
 ---
 title: 'Nueva sección: Descarga de Manuales gratuitos'
-lastmod: 2016-09-12T09:00
+lastmod: 2016-09-12
 layout: post.amp
 permalink: /nueva-seccion-descarga-de-manuales/
 categories:

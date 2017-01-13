@@ -7,7 +7,7 @@ description: "Hace tiempo me encontré con el problema de tener que construir un
 tags: [python, optimización de código, list comprehensions python, crear lista de listas, codigo eficiente python]
 image: python-lista-de-listas-eficiente.png
 date: 2016-04-19T10:48:34+02:00
-lastmod: 2016-08-09T18:30
+lastmod: 2016-08-09
 mainclass: "dev"
 color: "#E64A19"
 ---

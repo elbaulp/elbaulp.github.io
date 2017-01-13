@@ -10,7 +10,7 @@ tags:
   - practicas informática Gráfica
   - practicas opengl
 description: "El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad http://www.csc.villanova.edu."
-lastmod: 2015-12-22T17:50
+lastmod: 2015-12-22
 mainclass: "dev"
 color: "#E64A19"
 ---

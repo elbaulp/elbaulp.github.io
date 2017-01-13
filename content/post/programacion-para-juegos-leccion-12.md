@@ -2,7 +2,7 @@
 title: 'Programación para Juegos - Lección 1.2 - Hello World'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-12/
-lastmod: 2016-08-19T09:30
+lastmod: 2016-08-19
 categories:
   - juegos
 mainclass: "dev"

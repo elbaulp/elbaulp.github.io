@@ -5,7 +5,7 @@ permalink: /programando-videojuegos-en-python/
 categories:
   - juegos
   - python
-lastmod: 2016-08-06T13:00
+lastmod: 2016-08-06
 mainclass: "articulos"
 color: "#F57C00"
 ---

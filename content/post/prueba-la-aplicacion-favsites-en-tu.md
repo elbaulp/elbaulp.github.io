@@ -1,6 +1,6 @@
 ---
 title: Prueba la aplicación FavSites en tu Android
-lastmod: 2016-09-27T16:00
+lastmod: 2016-09-27
 layout: post.amp
 permalink: /prueba-la-aplicacion-favsites-en-tu/
 categories:

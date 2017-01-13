@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Trabajar con recursos Assets'
-lastmod: 2016-09-29T20:30
+lastmod: 2016-09-29
 layout: post.amp
 permalink: /programacion-android-recursos-trabajar_04/
 categories:

@@ -14,7 +14,7 @@ tags:
   - licencias libres
 description: "A la hora de crear proyectos, suele ser una tarea difícil elegir bajo qué licencia liberar el código, al menos para mi. Con este artículo que traduzco de outercurve.org espero facilitar la tarea de selección de una licencia."
 image: 2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png
-lastmod: 2016-03-20T09:05:38+01:00
+lastmod: 2016-03-20
 mainclass: "articulos"
 color: "#F57C00"
 author: luzila

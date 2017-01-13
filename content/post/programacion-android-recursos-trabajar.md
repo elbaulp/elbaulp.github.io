@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Trabajar con recursos XML arbitrarios'
-lastmod: 2016-09-26T13:50
+lastmod: 2016-09-26
 layout: post.amp
 permalink: /programacion-android-recursos-trabajar/
 categories:

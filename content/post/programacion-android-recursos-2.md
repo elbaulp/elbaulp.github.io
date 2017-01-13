@@ -9,7 +9,7 @@ tags:
   - curso android pdf
   - recursos compilados
   - recursos no compilados
-lastmod: 2016-09-21T16:00
+lastmod: 2016-09-21
 mainclass: "android"
 color: "#689F38"
 ---

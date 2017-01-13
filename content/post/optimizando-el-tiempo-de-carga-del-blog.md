@@ -1,7 +1,7 @@
 ---
 title: Optimizando el tiempo de carga del blog
 layout: post.amp
-lastmod: 2016-09-13T13:11
+lastmod: 2016-09-13
 permalink: /optimizando-el-tiempo-de-carga-del-blog/
 image: optimizando-el-tiempo-de-carga-del-blog.png
 categories:

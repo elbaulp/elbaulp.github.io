@@ -2,7 +2,7 @@
 title: 'PL/SQL. Disparadores o Triggers'
 layout: post.amp
 permalink: /plsql-disparadores-o-triggers/
-lastmod: 2016-09-03T10:50
+lastmod: 2016-09-03
 categories:
   - BaseDeDatos
 tags:

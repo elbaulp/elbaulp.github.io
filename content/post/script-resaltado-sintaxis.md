@@ -7,7 +7,7 @@ categories:
   - script
 tags:
   - sintaxis c
-lastmod: 2016-07-29T20:00
+lastmod: 2016-07-29
 mainclass: "linux"
 color: "#2196F3"
 ---

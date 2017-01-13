@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Implementando un Content Provider (Parte 3)'
-lastmod: 2016-10-28T16:30
+lastmod: 2016-10-28
 layout: post.amp
 permalink: /programacion-android-implementando-un_14/
 categories:

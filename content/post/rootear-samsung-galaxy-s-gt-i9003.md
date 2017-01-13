@@ -1,6 +1,6 @@
 ---
 title: Rootear Samsung Galaxy S GT-I9003
-lastmod: 2016-09-27T15:50
+lastmod: 2016-09-27
 layout: post.amp
 permalink: /rootear-samsung-galaxy-s-gt-i9003/
 categories:

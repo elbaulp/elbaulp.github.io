@@ -2,7 +2,7 @@
 title: 'Programación para Juegos - Lección 2 - Imágenes Optimizadas'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-2/
-lastmod: 2016-08-19T09:30
+lastmod: 2016-08-19
 categories:
   - juegos
 mainclass: "dev"

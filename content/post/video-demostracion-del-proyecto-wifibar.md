@@ -1,6 +1,6 @@
 ---
 title: '[Vídeo] Demostración del proyecto WifiBar funcionando'
-lastmod: 2016-09-12T09:00
+lastmod: 2016-09-12
 layout: post.amp
 permalink: /video-demostracion-del-proyecto-wifibar/
 categories:

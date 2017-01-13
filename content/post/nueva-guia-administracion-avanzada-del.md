@@ -1,6 +1,6 @@
 ---
 title: 'Guía gratuita: Administración Avanzada del Sistema Operativo GNU/Linux'
-lastmod: 2016-09-13T19:50
+lastmod: 2016-09-13
 layout: post.amp
 permalink: /nueva-guia-administracion-avanzada-del/
 categories:

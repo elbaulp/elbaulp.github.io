@@ -1,6 +1,6 @@
 ---
 title: Resaltar sintaxis del código fuente en LaTeX con minted
-lastmod: 2016-07-31T00:00:00+00:00
+lastmod: 2016-07-31
 math: true
 layout: post.amp
 permalink: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/
@@ -14,7 +14,7 @@ tags:
   - latex
   - colorear codigo fuente en latex
 image: 2013/05/latex_logo.png
-lastmod: 2016-08-13T18:20
+lastmod: 2016-08-13
 mainclass: "latex"
 color: "#B31917"
 ---

@@ -2,7 +2,7 @@
 title: 'Programación para Juegos. Artículo 3. ¿Qué es un pixel?'
 layout: post.amp
 permalink: /programacion-para-juegos-articulo-3-que/
-lastmod: 2016-08-29T10:40
+lastmod: 2016-08-29
 categories:
   - juegos
 mainclass: "dev"

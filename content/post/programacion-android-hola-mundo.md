@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Hola Mundo'
-lastmod: 2016-09-14T11:30
+lastmod: 2016-09-14
 layout: post.amp
 permalink: /programacion-android-hola-mundo/
 categories:

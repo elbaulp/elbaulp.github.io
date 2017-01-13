@@ -2,7 +2,7 @@
 title: 'PL/SQL. Excepciones'
 layout: post.amp
 permalink: /plsql-excepciones/
-lastmod: 2016-08-31T11:00
+lastmod: 2016-08-31
 categories:
   - BaseDeDatos
 tags:

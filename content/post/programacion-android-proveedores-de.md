@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Proveedores de Contenido - Introducción'
-lastmod: 2016-10-01T13:00
+lastmod: 2016-10-01
 layout: post.amp
 permalink: /programacion-android-proveedores-de/
 categories:

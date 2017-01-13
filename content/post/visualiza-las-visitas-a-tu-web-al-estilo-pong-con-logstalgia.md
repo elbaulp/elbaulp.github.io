@@ -11,7 +11,7 @@ tags:
   - instalar logstalgia
   - tutorial logstalgia
 image: visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia.png
-lastmod: 2016-08-06T11:40:12+01:00
+lastmod: 2016-08-06
 mainclass: "servidores"
 color: "#0097A7"
 ---

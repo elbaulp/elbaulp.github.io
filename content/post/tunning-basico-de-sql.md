@@ -2,7 +2,7 @@
 title: Tunning básico de SQL
 layout: post.amp
 permalink: /tunning-basico-de-sql/
-lastmod: 2016-09-03T16:00
+lastmod: 2016-09-03
 categories:
   - BaseDeDatos
 tags:

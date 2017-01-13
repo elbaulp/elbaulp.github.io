@@ -8,7 +8,7 @@ categories:
 tags:
   - linux mas rapido que windows
   - windows vs linux
-lastmod: 2015-12-28T9:40
+lastmod: 2015-12-28
 mainclass: "articulos"
 color: "#F57C00"
 ---

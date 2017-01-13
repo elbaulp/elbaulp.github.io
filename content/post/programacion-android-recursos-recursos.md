@@ -1,6 +1,6 @@
 ---
 title: 'Programación Android: Recursos - Recursos y cambios de configuración'
-lastmod: 2016-09-29T20:38
+lastmod: 2016-09-29
 layout: post.amp
 permalink: /programacion-android-recursos-recursos/
 categories:

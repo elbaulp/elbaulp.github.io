@@ -2,7 +2,7 @@
 title: 'PL/SQL. Estructuras básicas de control'
 layout: post.amp
 permalink: /plsql-estructuras-basicas-de-control/
-lastmod: 2016-08-29T10:00
+lastmod: 2016-08-29
 categories:
   - BaseDeDatos
 tags:

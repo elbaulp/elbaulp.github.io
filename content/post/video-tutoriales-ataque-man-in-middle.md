@@ -1,7 +1,7 @@
 ---
 title: '[Vídeo tutoriales] Ataque Man in the middle'
 layout: post.amp
-lastmod: 2016-09-12T09:00
+lastmod: 2016-09-12
 permalink: /video-tutoriales-ataque-man-in-middle/
 categories:
   - aplicaciones

@@ -13,7 +13,7 @@ tags:
   - reddit
   - udacity
 format: status
-lastmod: 2016-08-05T12:00
+lastmod: 2016-08-05
 mainclass: "misc"
 color: "#61B38D"
 ---

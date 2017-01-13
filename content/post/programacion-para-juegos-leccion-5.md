@@ -2,7 +2,7 @@
 title: 'Programación para Juegos - Lección 5 - Colores Clave'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-5/
-lastmod: 2016-08-25T11:58
+lastmod: 2016-08-25
 categories:
   - juegos
 mainclass: "dev"

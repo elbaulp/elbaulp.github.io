@@ -1,7 +1,7 @@
 ---
 title: 'QUIC: Análisis práctico del protocolo de Google'
 math: true
-lastmod: 2015-04-08T00:00:00+00:00
+lastmod: 2015-04-08
 layout: post.amp
 permalink: /quic-analisis-practico-del-protocolo-de-google/
 categories:
@@ -15,7 +15,7 @@ tags:
   - wireshark
 image: 2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
 description: "QUIC es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña FAQ (Frequently Asked Questions) en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de QUIC, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en Qué es QUIC, el nuevo protocolo desarrollado por Google."
-lastmod: 2015-12-23T10:44
+lastmod: 2015-12-23
 mainclass: "articulos"
 color: "#F57C00"
 ---

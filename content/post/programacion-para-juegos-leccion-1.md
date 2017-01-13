@@ -2,7 +2,7 @@
 title: 'Programación para Juegos - Lección 1 - Instalando SDL'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-1/
-lastmod: 2016-08-19T09:30
+lastmod: 2016-08-19
 categories:
   - juegos
 mainclass: "dev"

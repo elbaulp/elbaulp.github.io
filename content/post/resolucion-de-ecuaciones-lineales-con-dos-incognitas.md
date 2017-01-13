@@ -1,6 +1,6 @@
 ---
 title: Cómo resolver sistemas de ecuaciones lineales con dos incógnitas en Python
-lastmod: 2015-04-08T00:00:00+00:00
+lastmod: 2015-04-08
 math: true
 layout: post.amp
 permalink: /como-resolver-sistemas-de-ecuaciones-lineales-con-dos-incognitas/
@@ -10,7 +10,7 @@ categories:
 tags:
   - ecuaciones lineales
   - resolver ecuaciones python
-lastmod: 2015-12-28T9:55
+lastmod: 2015-12-28
 description: "Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:"
 mainclass: "dev"
 color: "#E64A19"

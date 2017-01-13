@@ -10,7 +10,7 @@ tags:
   - hola mundo abap
   - programación ABAP
 description: "Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje."
-lastmod: 2015-12-25T12:55
+lastmod: 2015-12-25
 image: 2014/04/hola-mundo-salida.png
 mainclass: "dev"
 color: "#E64A19"

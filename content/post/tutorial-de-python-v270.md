@@ -2,7 +2,7 @@
 title: Tutorial de Python v2.7.0
 layout: post.amp
 permalink: /tutorial-de-python-v270/
-lastmod: 2016-09-04T12:10
+lastmod: 2016-09-04
 categories:
   - cursos
   - python

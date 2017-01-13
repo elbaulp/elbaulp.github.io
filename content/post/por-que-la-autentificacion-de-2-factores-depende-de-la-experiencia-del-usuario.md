@@ -9,7 +9,7 @@ tags:
   - que es autentificación de 2 factores
   - usuarios autentificación de 2 factores
 author: luzila
-lastmod: 2016-08-15T13:10
+lastmod: 2016-08-15
 mainclass: "articulos"
 color: "#F57C00"
 ---

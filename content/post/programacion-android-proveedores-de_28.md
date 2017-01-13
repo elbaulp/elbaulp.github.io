@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - Proveedores de Contenidos Android
   - URI
-lastmod: 2016-08-08T12:00
+lastmod: 2016-08-08
 mainclass: "android"
 color: "#689F38"
 ---

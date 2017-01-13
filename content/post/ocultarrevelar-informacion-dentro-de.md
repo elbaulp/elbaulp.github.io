@@ -8,7 +8,7 @@ categories:
 tags:
   - esconder informacion en imagen
   - ocultar texto en imagen
-lastmod: 2016-08-13T22:20
+lastmod: 2016-08-13
 redirect_from: /programacion/ocultarrevelar-informacion-dentro-de/
 mainclass: "dev"
 color: "#E64A19"

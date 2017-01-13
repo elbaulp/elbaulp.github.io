@@ -2,7 +2,7 @@
 title: ¿Qué son los PPA?
 layout: post.amp
 permalink: /que-son-los-ppa-what-ppa-is/
-lastmod: 2016-08-16T10:40
+lastmod: 2016-08-16
 categories:
   - linux
 mainclass: "linux"

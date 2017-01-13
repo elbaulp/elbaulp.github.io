@@ -2,7 +2,7 @@
 title: 'Programación para Juegos - Lección 3 - Librerías de SDL'
 layout: post.amp
 permalink: /programacion-para-juegos-leccion-3/
-lastmod: 2016-08-19T16:40
+lastmod: 2016-08-19
 categories:
   - juegos
 mainclass: "dev"

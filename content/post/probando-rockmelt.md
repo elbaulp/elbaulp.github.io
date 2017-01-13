@@ -2,7 +2,7 @@
 title: Probando RockMelt
 layout: post.amp
 permalink: /probando-rockmelt/
-lastmod: 2016-08-15T15:40
+lastmod: 2016-08-15
 categories:
   - noticias
 mainclass: "articulos"

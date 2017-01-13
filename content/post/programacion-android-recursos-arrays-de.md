@@ -7,7 +7,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-lastmod: 2016-08-09T09:50
+lastmod: 2016-08-09
 redirect_from: /opensource/programacion-android-recursos-arrays-de/
 mainclass: "android"
 color: "#689F38"
