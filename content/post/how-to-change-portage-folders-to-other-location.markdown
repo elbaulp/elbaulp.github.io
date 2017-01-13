@@ -18,7 +18,7 @@ There is NOT at least 10 GiB disk space at "/var/tmp/portage
 
 Así que la primera solución que se me ocurrió fue hacer que `portage` trabaje en otro directorio, concretamente en otro disco duro auxiliar en el que dispongo de más espacio. Veamos cómo conseguirlo:
 
-{% include toc.html %}
+
 
 # Cambiar el fichero /etc/portage/make.conf
 

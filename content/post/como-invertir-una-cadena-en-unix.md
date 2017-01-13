@@ -114,5 +114,3 @@ php -r 'print strrev(trim(fgets(STDIN)));' <<< foo
 
  [2]: https://elbauldelprogramador.com/python/
  [3]: https://elbauldelprogramador.com/php/
-
-{% include toc.html %}

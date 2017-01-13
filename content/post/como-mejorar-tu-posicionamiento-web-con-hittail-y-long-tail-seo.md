@@ -80,5 +80,3 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
  [1]: https://elbauldelprogramador.com/assets/img/2013/03/longTail2.jpg
  [2]: https://elbauldelprogramador.com/curso-programacion-android/
  [3]: https://elbauldelprogramador.com/assets/img/2013/03/long-tail-result.png
-
-{% include toc.html %}

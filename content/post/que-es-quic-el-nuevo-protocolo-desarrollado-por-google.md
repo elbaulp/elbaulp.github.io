@@ -23,7 +23,7 @@ color: "#00BCD4"
 
 Escuchando el podcast <a href="http://twit.tv/show/security-now/411" target="_blank">#411</a> de [security now!][1] Steve habló del protocolo *QUIC*, que está desarrollando Google y pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña **FAQ (Frequently Asked Questions)** en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de *QUIC*, el nombre original del documento es **QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that)**, aquí dejo la tabla de contenidos:
 
-{% include toc.html %}
+
 
 
 <!--ad-->

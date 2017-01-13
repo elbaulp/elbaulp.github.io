@@ -29,7 +29,7 @@ color: "#F57C00"
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## Posibles causas
 
@@ -106,5 +106,3 @@ Espero que os sirva alguno de los métodos, como me sirvieron en su día a mi.
  [4]: http://forum.cyanogenmod.org/topic/76511-updating-the-basebandradiomodem/#entry405203 "Updating The Baseband/radio/modem"
  [5]: http://wiki.cyanogenmod.org/w/I9100_Info "Descargar radios i9100"
  [6]: http://glassechidna.com.au/heimdall/#downloads
-
-{% include toc.html %}

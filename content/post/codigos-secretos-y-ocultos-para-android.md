@@ -59,5 +59,3 @@ Con este código entramos en el modo servício. Podemos cambiar configuraciones 
 Veremos un monitor del servicio Gtalk.
 
 Fuente: <a target="_blank" href="http://www.googez.com/2012/01/secret-and-hidden-codes-for-android/">googez.com</a>
-
-{% include toc.html %}

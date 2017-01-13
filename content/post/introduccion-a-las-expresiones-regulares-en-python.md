@@ -128,5 +128,3 @@ print re.findall(regexp,'"esc " ape"')
 
 
  [1]: https://elbauldelprogramador.com/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/ "Nuevos Cursos disponibles en Udacity, la universidad online gratuita"
-
-{% include toc.html %}

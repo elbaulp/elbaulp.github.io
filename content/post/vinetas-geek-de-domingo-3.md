@@ -22,7 +22,3 @@ color: "#262626"
 #### Fuentes
 
 *xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
-
-
-
-{% include toc.html %}

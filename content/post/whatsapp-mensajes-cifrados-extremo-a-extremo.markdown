@@ -18,7 +18,7 @@ color: "#00BCD4"
 <span class="image-credit">Crédito de la imagen: <a href="https://whispersystems.org/blog/whatsapp­complete/ " target="_blank" title="whispersystems.org blog">whispersystems.org</a></span>
 </figure>
 
-{% include toc.html %}
+
 
 Seguro que muchos últimamente os preguntáis qué significa ese mensaje que aparece en vuestras conversaciones de WhatsApp:
 

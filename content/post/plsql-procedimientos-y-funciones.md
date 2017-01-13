@@ -14,7 +14,7 @@ mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
-{% include toc.html %}
+
 
 ## Procedimientos
 

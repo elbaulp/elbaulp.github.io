@@ -18,7 +18,7 @@ color: "#00BCD4"
 
 A continuación se proporciona un resumen:
 
-{% include toc.html %}
+
 
 ## Características de la nueva memoria 3D XPoint™
 

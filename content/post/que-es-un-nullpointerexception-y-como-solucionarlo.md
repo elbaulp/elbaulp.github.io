@@ -88,7 +88,3 @@ public void doSomething(Integer num){
 #### Referencias
 
 *What is a Null Pointer Exception, and how do I fix it?* »» <a href="http://stackoverflow.com/a/218510/1612432" target="_blank">stackoverflow</a>
-
-
-
-{% include toc.html %}

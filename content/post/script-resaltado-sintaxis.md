@@ -75,7 +75,3 @@ sed "s/^#include..... y sed "s/^#define...
 <p>
     Saludos, espero que sea útil<br />
 </p>
-
-
-
-{% include toc.html %}

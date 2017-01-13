@@ -19,7 +19,7 @@ color: "#2196F3"
 
 
 
-{% include toc.html %}
+
 
 Hace unos meses me decidí a instalar _Gentoo_ en mi portátil por probar cómo iba, y la verdad es que me está gustando bastante. La capacidad de personalización que tiene es tremenda.
 

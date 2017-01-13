@@ -12,7 +12,7 @@ mainclass: "dev"
 color: "#E64A19"
 ---
 
-{% include toc.html %}
+
 
 # What is Amp-mustache and how it works #
 

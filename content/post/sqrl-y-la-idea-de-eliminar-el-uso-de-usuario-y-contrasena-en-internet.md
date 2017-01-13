@@ -65,5 +65,3 @@ A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de
  [3]: http://www.w3.org/ "W3 org"
  [4]: https://elbauldelprogramador.com/ "Artículos de Luzcila"
  [5]: https://elbauldelprogramador.com/ "Contacto"
-
-{% include toc.html %}

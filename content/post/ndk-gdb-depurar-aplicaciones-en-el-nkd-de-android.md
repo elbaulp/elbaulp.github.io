@@ -455,5 +455,5 @@ Con esto concluye el artículo, espero que haya sido de utilidad.
  [5]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/
  [6]: https://elbauldelprogramador.com/assets/img/2013/06/Screenshot_2013-06-17-17-20-53.png
 
-{% include toc.html %}
+
 </netdb.h></jni.h></void></ip></dominio>

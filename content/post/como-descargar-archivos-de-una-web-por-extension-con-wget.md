@@ -33,5 +33,5 @@ Este comando no siempre funciona, ya que algunos servidores pueden haber bloquea
 
 
 
-{% include toc.html %}
+
 </url>

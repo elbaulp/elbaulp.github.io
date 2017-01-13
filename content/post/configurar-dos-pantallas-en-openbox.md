@@ -103,7 +103,3 @@ Os dejo una captura:
 <div class="separator" >
 <a href="https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="160" width="400" src="https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png" /></a>
 </div>
-
-
-
-{% include toc.html %}

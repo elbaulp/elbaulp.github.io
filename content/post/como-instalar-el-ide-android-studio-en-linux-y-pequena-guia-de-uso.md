@@ -223,5 +223,3 @@ Aunque Android Studio está todavía en desarrollo, promete mucho y voy a empeza
  [6]: https://elbauldelprogramador.com/assets/img/2013/05/LayoutPreviewAndroidStudio.png
  [7]: https://elbauldelprogramador.com/assets/img/2013/05/AndroidStudioPreviewAPI10.png
  [8]: https://elbauldelprogramador.com/assets/img/2013/05/Screenshot-from-2013-05-16-121607.png
-
-{% include toc.html %}

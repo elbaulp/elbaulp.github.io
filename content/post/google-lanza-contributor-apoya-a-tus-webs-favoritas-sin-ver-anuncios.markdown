@@ -12,7 +12,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 Como seguramente sabreis, estos últimos años se ha incrementado la batalla entre compañías de publicidad y los _Ads blockers_. Personalmente me afecta, ya que le dedico bastante tiempo al blog, y creo que los dos anuncios que hay no son intrusivos, y un gran porcentaje de lectores usa este tipo de software para bloquear anuncios.
 

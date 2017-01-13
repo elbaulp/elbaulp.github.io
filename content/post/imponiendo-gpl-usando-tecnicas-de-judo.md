@@ -25,7 +25,7 @@ La GPL promueve los derechos del usuario, pero los defensores de esos derechos s
 
 Bradley Kuhn toma una analogía de las artes marciales, y dice que &#8220;copyleft es una toma de judo sobre el copyright &#8220;. En el judo, el objetivo es aprovechar el impulso del atacante para defenderse, y eso es exactamente lo que hace copyleft. Mientras la ley de copyright se vuelve cada vez más y más amplia, el copyleft se sirve de ese impulso y lo devuelve con la misma fuerza. Por lo tanto el copyleft es siempre tan fuerte como el copyright. &#8221;
 
-{% include toc.html %}
+
 
 ## Los infractores
 

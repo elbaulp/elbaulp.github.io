@@ -15,7 +15,7 @@ color: "#61B38D"
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" />
 </figure>
 
-{% include toc.html %}
+
 
 Download this kit to learn everything you need to know about Information Security.
 

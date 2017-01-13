@@ -50,7 +50,7 @@ color: "#0097A7"
 * [Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)][1]
 * [Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)][2]
 
-{% include toc.html %}
+
 
 > En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge.
 

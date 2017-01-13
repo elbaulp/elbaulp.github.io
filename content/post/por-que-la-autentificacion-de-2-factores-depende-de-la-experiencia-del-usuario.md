@@ -22,7 +22,7 @@ Ya vimos en hace algún tiempo [todos los lugares en los que deberías habilitar
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 Con el reciente paso de Twitter a la criptografía de clave pública con &#8220;*push*&#8220;, nosotros y muchos otros nos alegramos de verlos abandonar el sistema de autenticación de 2 factores SMS-only. No solo agregaron mejor seguridad, sino que también brindaron a sus usuarios una experiencia más atractiva. Como las distintas alternativas de *2 factores* entre proveedores de servicios y plataformas continúan creciendo y cambiando, es importante que la industria se mantenga enfocada en los objetivos correctos para adoptar el sistema *2 Factores*. Sin un enfoque diferenciado en cómo los usuarios experimentan la autenticación de 2 factores, la industria podría forzarse a una batalla innecesaria entre riesgo y conveniencia que podría terminar en un futuro negativo para esta tecnología - no por razones técnicas como por estéticas.
 

@@ -281,7 +281,3 @@ color: "#F57C00"
 </div>
 </div>
 </div>
-
-
-
-{% include toc.html %}

@@ -23,7 +23,7 @@ Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacke
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 # Cómo funciona OAuth
 

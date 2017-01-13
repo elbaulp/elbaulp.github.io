@@ -591,5 +591,3 @@ console.log('Magic happens on port ' + port);
  [1]: https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/ "Cómo desarrollar aplicaciones en un servidor Cloud"
  [2]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm;_medium=baul&utm;_term=appmovil&utm;_content=online&utm;_campaign=cloud "Arsys cloudbuilder"
  [3]: http://nodejs.org/download/
-
-{% include toc.html %}

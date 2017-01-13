@@ -130,5 +130,3 @@ Test_list :
 
 
 [1]: https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/
-
-{% include toc.html %}

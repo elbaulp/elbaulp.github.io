@@ -24,5 +24,3 @@ Otro caso en el que aparecerá este estado desconocido para un visitante es cuan
 
 
  [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/
-
-{% include toc.html %}

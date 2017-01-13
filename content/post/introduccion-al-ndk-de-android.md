@@ -139,5 +139,5 @@ Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con
  [1]: https://elbauldelprogramador.com/programacion-android-hola-mundo/
  [2]: https://elbauldelprogramador.com/assets/img/2013/06/helloJni-NDK-de-android.png
 
-{% include toc.html %}
+
 </jni.h></string.h></nombre>

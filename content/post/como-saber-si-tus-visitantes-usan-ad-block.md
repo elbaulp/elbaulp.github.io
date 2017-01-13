@@ -74,5 +74,3 @@ Vía | <a href="http://adblockdetector.com/" target="_blank">Adblockdetector</a>
 
 
  [1]: https://elbauldelprogramador.com/assets/img/2012/07/adblock-plus-logo11.png
-
-{% include toc.html %}

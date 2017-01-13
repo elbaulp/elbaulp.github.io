@@ -11,7 +11,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" />

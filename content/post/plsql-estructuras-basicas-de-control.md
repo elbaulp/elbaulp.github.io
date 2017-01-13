@@ -14,7 +14,7 @@ color: "#009688"
 
 Como PL/SQL es un lenguaje 3GL, cuenta con las estructuras típicas de control de flujo: bifurcaciones condicionales y bucles:
 
-{% include toc.html %}
+
 
 ## Bifurcaciones condicionales:
 

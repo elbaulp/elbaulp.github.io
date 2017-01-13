@@ -198,7 +198,3 @@ static void quicksort_lims(int T[], int inicial, int final)
 
 ```
 </div>
-
-
-
-{% include toc.html %}

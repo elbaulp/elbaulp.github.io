@@ -18,7 +18,7 @@ Hace unos meses publicamos [15 Ejemplos De Las Mejores Visualizaciones De Datos]
 
 __Olympic Feathers__, es una _visualización de datos_ interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.
 
-{% include toc.html %}
+
 
 ## Cómo surgió la idea
 

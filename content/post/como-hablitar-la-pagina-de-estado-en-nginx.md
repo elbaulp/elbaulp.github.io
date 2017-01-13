@@ -76,5 +76,3 @@ Reading: 6 Writing: 179 Waiting: 106
 
 
  [1]: https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
-
-{% include toc.html %}

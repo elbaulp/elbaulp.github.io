@@ -20,7 +20,7 @@ Los proveedores de conteido ofrecen dos formas de pasar una cláusula *[where][1
 
 En esta entrada vamos a ver ambas.
 
-{% include toc.html %}
+
 
 ### Cláusula Where mediante la URI
 

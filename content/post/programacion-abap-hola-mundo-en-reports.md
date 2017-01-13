@@ -117,5 +117,5 @@ Si queremos avanzar un poco más en nuestro “Hola mundo” podemos incluir nue
 
 Ya está. Ahora utilizando la transacción Z\_HOLA se ejecutará el resultado del programa Z\_HOLA_MUNDO.
 
-{% include toc.html %}
+
 </tipo></nombre_variable>

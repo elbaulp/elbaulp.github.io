@@ -83,7 +83,3 @@ Probablemente la semana próxima alguien invente un nuevo DSL que haga Twitter m
 ### Referencias
 
 *The Code Mechanic* »» <a href="http://thecodemechanic.wordpress.com/2011/05/30/hate-java/" target="_blank">Visitar sitio</a>
-
-
-
-{% include toc.html %}

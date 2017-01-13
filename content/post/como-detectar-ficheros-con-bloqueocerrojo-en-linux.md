@@ -58,5 +58,3 @@ Donde las columnas significan:
 *How to detect exceptionally long file locks in linux?* »» <a href="http://serverfault.com/a/593873/181098" target="_blank">serverfault.com</a>
 
  [1]: https://elbauldelprogramador.com/introduccion-los-procesos/ "Intro a los procesos"
-
-{% include toc.html %}

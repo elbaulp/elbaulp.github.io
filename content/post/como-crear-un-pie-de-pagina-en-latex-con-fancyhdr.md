@@ -27,7 +27,7 @@ Como he mencionado en algún [artículo anterior][1], he aprendido bastante a pr
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## Fancyhdr
 

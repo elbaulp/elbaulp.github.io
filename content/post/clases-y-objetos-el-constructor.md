@@ -9,7 +9,7 @@ mainclass: "dev"
 color: "#E64A19"
 ---
 
-{% include toc.html %}
+
 
 ## Constructores
 

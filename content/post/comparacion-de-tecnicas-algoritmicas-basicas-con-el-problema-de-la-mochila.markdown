@@ -12,7 +12,7 @@ math: true
 mainclass: "dev"
 color: "#E64A19"
 ---
-{% include toc.html %}
+
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="520px" />

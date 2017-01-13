@@ -229,5 +229,3 @@ Donde `com.example.dialogpreferenceexample.MyDialogPreference` es el nombre de l
  [1]: https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ "Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)"
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android/ "Fundamentos programación Android: Conceptos básicos y componentes"
  [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/ "Programación Android: Interfaz gráfica – Menús"
-
-{% include toc.html %}

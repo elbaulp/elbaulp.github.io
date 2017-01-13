@@ -14,7 +14,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 ## Introducción
 

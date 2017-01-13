@@ -61,7 +61,3 @@ Hay que decir, sin embargo, que es posible ahorrarse todo esto si se guardaran t
 #### Referencias
 
 *ubuntudriver* »» <a href="http://ubuntudriver.blogspot.com.es/2011/06/cambiar-codificacion-de-un-archivo.html" target="_blank">Cómo Cambiar la Codificación de un Fichero en Linux y Mac OS X</a>
-
-
-
-{% include toc.html %}

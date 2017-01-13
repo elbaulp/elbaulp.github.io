@@ -28,7 +28,3 @@ En las notas de la liberación de Android 3.3 se dice:
 Con esto se tiene la posibilidad de dispositivos Android más baratos con una audiencia más ámplia de desarrolladores para construir aplicaciones. Algunos de los cambios que incluye esta versión 3.3 es una recuperación más rápida en RAID, mejoras en las redes y cambios en la seguridad.
 
 Vía <a target="_blank" href="http://www.slashgear.com/linux-3-3-eats-android-19218970/">slashgear.com</a> Vía <a target="_blank" href="http://kernelnewbies.org/Linux_3.3#head-b733d694037e0b34ad47e1b5d38ebc4d1bd1d89f">kernelnewbies.org</a>
-
-
-
-{% include toc.html %}

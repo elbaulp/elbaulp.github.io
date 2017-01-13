@@ -13,7 +13,7 @@ color: "#E64A19"
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
 </figure>
 
-{% include toc.html %}
+
 
 >Este artículo es parte de una práctica de una asignatura de mi facultad __Nuevos Paradigmas de la Interacción__. El trabajo consiste en programar por primera vez una aplicación haciendo uso de una __Kinect__.
 

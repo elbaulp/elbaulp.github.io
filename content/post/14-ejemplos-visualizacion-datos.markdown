@@ -12,7 +12,7 @@ color: "#F57C00"
 
 > __NOTA__: Este artículo se actualizó el 23/09/2016 para añadir _Olympic Feathers_.
 
-{% include toc.html %}
+
 
 El siguiente artículo es una traducción del blog <a href="http://www.data-visualization.org" target="_blank" title="http://www.data-visualization.org">data-visualization.org</a>. Gracias a su propietario por concederme el permiso de traducción. He traducido únicamente las 14 de las 20 visualizaciones que más me han gustado.
 

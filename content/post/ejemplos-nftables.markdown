@@ -9,7 +9,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 > El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura _Seguridad en Sistemas Operativos_ de la facultad de Ingeniería Informática de Granada (ETSIIT), puedes leer el otro trabajo publicado en el blog, [Biometría Aplicada a La Seguridad](/biometria-seguridad-introduccion/ "Biometría Aplicada a La Seguridad"). Este trabajo es autoría de Jose Maria Caballero Alba <caballeroalba> y Edlin Lastenia Morel Mateo
 

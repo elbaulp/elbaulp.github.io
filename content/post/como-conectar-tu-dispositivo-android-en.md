@@ -82,7 +82,3 @@ List of devices attached
 </p>
 
 Fuente: <a href="http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-to-do-developmenttestinginstallations-or-tethering/" target="_blank">dimitar.me</a>
-
-
-
-{% include toc.html %}

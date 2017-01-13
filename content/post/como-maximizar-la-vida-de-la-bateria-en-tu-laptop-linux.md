@@ -199,5 +199,3 @@ Vía | <a href="http://www.howtogeek.com/55185/how-to-maximize-the-battery-life-
  [5]: https://elbauldelprogramador.com/assets/img/2012/07/4503427549_5ee84b6ea51.jpg
  [6]: https://elbauldelprogramador.com/assets/img/2012/07/harddisk1.jpg
  [7]: https://elbauldelprogramador.com/assets/img/2012/07/powertop1.png
-
-{% include toc.html %}

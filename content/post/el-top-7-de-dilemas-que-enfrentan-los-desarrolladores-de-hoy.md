@@ -16,7 +16,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 **Plataformas, bases de datos, control de usuario - dilemas que atrapan al programador antes de la primera línea de código**
 

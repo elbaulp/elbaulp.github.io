@@ -26,7 +26,7 @@ El mensaje se oculta modificando el valor de cada pixel para que contenga parte 
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ### Imágenes PGM (Portable Grey Map file format)
 

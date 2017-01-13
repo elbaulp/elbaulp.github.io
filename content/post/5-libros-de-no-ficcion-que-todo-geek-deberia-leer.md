@@ -25,7 +25,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 <!--ad-->
 <div class="row flex-grid">

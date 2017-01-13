@@ -23,7 +23,7 @@ Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive 
 
 > Hay una modificación para este método en <a href="/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/" title="Sincronizar Google Drive en Linux en 4 pasos [Actualización]">Sincronizar Google Drive en Linux en 4 pasos [Actualización]</a>
 
-{% include toc.html %}
+
 
 <!--ad-->
 

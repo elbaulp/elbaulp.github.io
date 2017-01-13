@@ -26,7 +26,7 @@ color: "#2196F3"
 
 Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo **[gpg](/tags/#gpg)** (*GNU Privacy Guard*).
 
-{% include toc.html %}
+
 
 # ¿Qué es **gpg**?
 

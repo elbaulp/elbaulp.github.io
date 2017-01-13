@@ -26,5 +26,3 @@ Que no os engañe el que el nombre del tutorial sea python para niños, a lo lar
  [1]: https://elbauldelprogramador.com/label/python
  [2]: https://elbauldelprogramador.com/6-e-books-gratuitos-para-aprenter
  [3]: https://elbauldelprogramador.com/python-para-principiantes
-
-{% include toc.html %}

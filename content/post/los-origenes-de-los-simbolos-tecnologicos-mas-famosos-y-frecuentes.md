@@ -131,5 +131,3 @@ Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este
  [5]: https://elbauldelprogramador.com/assets/img/2014/03/usb.jpg
  [6]: https://elbauldelprogramador.com/assets/img/2014/03/Play.jpg
  [7]: https://elbauldelprogramador.com/assets/img/2014/03/sbbod.jpg
-
-{% include toc.html %}

@@ -24,7 +24,7 @@ color: "#F57C00"
 
 Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para [GPG][1]. Si encuentras algún error, no dudes en comentarlo.
 
-{% include toc.html %}
+
 
 He usado el “**Nombre de Usuario**” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es *Charles Lockhart*, pero puedo referenciarlo simplemente poniendo Lockhart.
 

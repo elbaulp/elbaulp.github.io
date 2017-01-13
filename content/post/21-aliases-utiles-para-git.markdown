@@ -14,7 +14,7 @@ color: "#f05033"
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="910px" height="380px" />
 </figure>
 
-{% include toc.html %}
+
 
 Todo aquel que use [git](/mini-tutorial-y-chuleta-de-comandos-git/ "Tutorial de Git") sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los _alias_, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos _alias_ útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos.
 

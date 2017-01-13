@@ -165,5 +165,3 @@ Fuente | <a href="http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-r
 
 
  [1]: http://kestas.kuliukas.com/RainbowTables/
-
-{% include toc.html %}

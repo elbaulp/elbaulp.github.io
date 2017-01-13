@@ -15,7 +15,7 @@ color: "#f05033"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" title="Sincronización de proyectos en git con hooks (ganchos)" alt="Sincronización de proyectos en git con hooks (ganchos)" width="910px" height="380px" />
 </figure>
 
-{% include toc.html %}
+
 
 ## Repositorio espejo (Mirror repo)
 

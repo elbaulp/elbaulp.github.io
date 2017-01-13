@@ -12,7 +12,7 @@ mainclass: "java"
 color: "#D32F2F"
 ---
 
-{% include toc.html %}
+
 
 Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña.
 

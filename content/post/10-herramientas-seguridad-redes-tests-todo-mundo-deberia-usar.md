@@ -30,5 +30,3 @@ Whether you are operating a home system, overseeing a small startup, or performi
 
  [1]: https://elbauldelprogramador.com/manuales-gratuitos/
  [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
-
-{% include toc.html %}

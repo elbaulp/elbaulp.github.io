@@ -38,5 +38,3 @@ Dicho todo esto, aquí tenéis los screencast:
 
 
  [1]: https://twitter.com/#!/hhkaos
-
-{% include toc.html %}

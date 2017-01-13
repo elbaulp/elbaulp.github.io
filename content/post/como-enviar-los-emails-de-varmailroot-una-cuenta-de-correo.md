@@ -17,7 +17,7 @@ En sistemas operativos como <a href="/tags/#debian">Debian</a>, muchos de los pr
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## Requisitos
 

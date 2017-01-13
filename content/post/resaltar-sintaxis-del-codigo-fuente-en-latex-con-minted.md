@@ -25,7 +25,7 @@ Sin embargo, una de las cosas que más me ha costado conseguir es encontrar algu
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ### Instalando dependencias
 

@@ -15,7 +15,7 @@ color: "#689F38"
 
 Continuando con el [tema de los componentes][1], en esta entrada vamos a ver:
 
-{% include toc.html %}
+
 
 ## Activando componentes {#ActivatingComponents}
 

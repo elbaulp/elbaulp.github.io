@@ -31,7 +31,3 @@ Kandan tiene licencia AGPLv3 y puede utilizar MongoDB, MySQL o PostgreSQL como c
 ### Fuente
 
 *The H Open* »» <a href="http://www.h-online.com/open/news/item/Open-source-pioneers-next-generation-chat-and-forums-1801023.html" target="_blank">Visitar sitio</a>
-
-
-
-{% include toc.html %}

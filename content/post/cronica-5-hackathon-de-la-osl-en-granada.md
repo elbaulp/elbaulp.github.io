@@ -94,5 +94,3 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
  [6]: http://web.deantares.es/zomblind/
  [7]: http://codereimagined.wordpress.com/
  [8]: http://particlequest.com/
-
-{% include toc.html %}

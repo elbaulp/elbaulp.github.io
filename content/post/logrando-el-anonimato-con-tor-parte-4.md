@@ -21,7 +21,7 @@ color: "#F57C00"
 * [Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks][3]
 * Logrando el anonimato con Tor (Parte 4): Tor para relés
 
-{% include toc.html %}
+
 
 ## 1. Introducción
 

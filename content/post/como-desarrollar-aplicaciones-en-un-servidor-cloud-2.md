@@ -350,5 +350,3 @@ O, desde Arsys, en políticas de firewall añadir lo siguiente:
 
 
  [1]: http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&utm;_medium=baul&utm;_term=desarrollarapps&utm;_content=online&utm;_campaign=cloud "Servidores Cloud"
-
-{% include toc.html %}

@@ -27,7 +27,3 @@ Otro domingo más, otra entrada de la sección Viñetas Geek de Domingo. Disfrut
 #### Referencias
 
 *thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>
-
-
-
-{% include toc.html %}

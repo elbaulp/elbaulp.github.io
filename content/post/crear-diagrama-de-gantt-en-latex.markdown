@@ -18,7 +18,7 @@ date: 2016-09-16T15:48:53+02:00
 
 > Consulta el resto de [artículos sobre LaTeX escritos en el blog](/category/latex "Artículos sobre LaTeX")
 
-{% include toc.html %}
+
 
 ## Qué es un Diagrama de Gantt
 

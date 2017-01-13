@@ -118,5 +118,5 @@ externos y metadatos
  [1]: https://elbauldelprogramador.com/ejemplos-en-html5-almacenamiento-web/ "Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket"
  [2]: https://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/ "Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework"
 
-{% include toc.html %}
+
 </body>

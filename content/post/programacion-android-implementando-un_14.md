@@ -21,7 +21,7 @@ En el código que vimos en la anterior entrada, se implementa el método *getTyp
 
 Como ya se vió en la [entrada anterior][2], se usa UriMatcher para descifrar el tipo de URI. En función de esta, la clase *favSitesTableMEtaData* tiene definida las constantes de los tipos MIME a devolver para cada URI.
 
-{% include toc.html %}
+
 
 #### Implementación del método Query
 

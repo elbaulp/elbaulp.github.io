@@ -18,7 +18,7 @@ color: "#D32F2F"
 ---
 *Log4j2* es un *Logger* para Java que descubrí hace poco y me gustó bastante. En éste artículo veremos cómo instalar y configurar Log4j2 en Netbeans. Aunque el proceso es similar para cualquier IDE.
 
-{% include toc.html %}
+
 
 ## Requisitos
 

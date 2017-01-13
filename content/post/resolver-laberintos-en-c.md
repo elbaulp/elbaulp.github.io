@@ -399,5 +399,5 @@ Asignatura fundamentos de la programación de la Universidad de Granada.
 
 
 
-{% include toc.html %}
+
 </int></bool></vector></char></iostream>

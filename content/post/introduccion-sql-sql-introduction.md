@@ -14,7 +14,7 @@ Es un software que se antepone a los datos de una base de datos, es decir, cualq
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 Prácticamente es un Sistema Operativo que controla el acceso a los datos, para conseguirlo, posee una serie de subesquemas que gestionan cada servicio:
 

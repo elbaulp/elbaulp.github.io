@@ -16,7 +16,3 @@ color: "#262626"
 
 
 #### <a href="https://plus.google.com/118038952320880179394/posts/6DB9jgDZU4Q" target="_blank">Fuente</a>
-
-
-
-{% include toc.html %}

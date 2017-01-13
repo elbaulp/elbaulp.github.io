@@ -74,5 +74,3 @@ Para terminar dejo el podcast del episodio de security now!
 
  [2]: https://elbauldelprogramador.com/security-now//
  [3]: https://elbauldelprogramador.com/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
-
-{% include toc.html %}

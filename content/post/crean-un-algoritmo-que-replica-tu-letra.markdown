@@ -16,7 +16,7 @@ Investigadores de la _UCL_ han desarrollado un software que analiza el texto esc
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 # Lo que había hasta ahora
 

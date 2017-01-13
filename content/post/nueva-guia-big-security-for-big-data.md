@@ -31,5 +31,3 @@ The multitude of devices, users, and generated traffic all combine to create a p
 
  [2]: https://elbauldelprogramador.com/manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "
-
-{% include toc.html %}

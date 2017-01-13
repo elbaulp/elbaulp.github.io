@@ -17,7 +17,7 @@ mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
-{% include toc.html %}
+
 
 En esta entrada vamos a ver la orden CREATE
 

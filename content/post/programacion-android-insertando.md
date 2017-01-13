@@ -15,7 +15,7 @@ color: "#689F38"
 
 En la entrada anterior hablamos de cómo [obtener regístros][1] de los proveedores de contenidos (CV) usando [URIs][2]. Ahora vamos a ver como insertar registros.
 
-{% include toc.html %}
+
 
 ## Introducción
 

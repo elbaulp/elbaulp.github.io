@@ -22,7 +22,7 @@ color: "#F57C00"
 * [Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks][1]
 * [Logrando el anonimato con Tor (Parte 4): Tor para relés][2]
 
-{% include toc.html %}
+
 
 ## 1. Usando Burp con Tor
 

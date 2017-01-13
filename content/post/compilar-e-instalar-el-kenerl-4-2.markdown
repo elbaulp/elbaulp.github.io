@@ -16,7 +16,7 @@ color: "#E64A19"
 <span class="image-credit">Crédito de la imagen: <a href="https://pixabay.com/en/linux-logo-penguin-tux-text-151619/" target="_blank" title="">pixabay</a></span><br />
 </figure>
 
-{% include toc.html %}
+
 
 Vamos a explicar hoy cómo compilar e instalar la versión 4.2 del __kernel__.
 

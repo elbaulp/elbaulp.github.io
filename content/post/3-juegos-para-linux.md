@@ -11,7 +11,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 Encontré por internet estos juegos para linux que me parecieron interesantes:
 

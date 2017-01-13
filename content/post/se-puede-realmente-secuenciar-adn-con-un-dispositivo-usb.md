@@ -72,5 +72,3 @@ Fuente: [Wired][2]
 
  [1]: https://elbauldelprogramador.com/assets/img/2012/05/Oxford-Nanopore-MinION1.jpeg
  [2]: http://www.wired.com/wiredenterprise/2012/03/oxford-nanopore-sequencing-usb/?utm_source=feedburner&utm;_medium=feed&utm;_campaign=Feed%3A+wired%2Findex+%28Wired%3A+Index+3+%28Top+Stories+2%29%29 "Wired"
-
-{% include toc.html %}

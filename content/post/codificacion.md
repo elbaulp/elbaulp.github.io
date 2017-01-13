@@ -16,7 +16,7 @@ Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vam
 
 Lo que vamos a ver en esta entrada es:
 
-{% include toc.html %}
+
 
 # 1. Representación numérica en una base
 

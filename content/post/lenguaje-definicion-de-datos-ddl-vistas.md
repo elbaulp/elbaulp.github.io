@@ -18,7 +18,7 @@ Las vistas son tablas virtuales ‘que contienen’ el resultado de una consulta
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ```sql
 CREATE [OR REPLACE] VIEW Nombre_vista

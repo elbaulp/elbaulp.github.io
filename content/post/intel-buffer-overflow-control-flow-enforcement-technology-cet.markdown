@@ -13,7 +13,7 @@ introduction: Hace tiempo que hablamos aquí sobre lo que es un Buffer Overflow 
 mainclass: "security-now"
 color: "#00BCD4"
 ---
-{% include toc.html %}
+
 
 Hace tiempo que hablamos aquí sobre lo que es un [Buffer Overflow](/explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits") y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores.
 

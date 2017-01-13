@@ -11,7 +11,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 <figure>
 <a href="/assets/img/openlibra-biblioteca-libre-online.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="84px" /></a>

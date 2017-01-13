@@ -101,5 +101,3 @@ Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más cl
  [3]: https://elbauldelprogramador.com/?s=criptografia
  [4]: https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/
  [5]: https://elbauldelprogramador.com/rssfeed/
-
-{% include toc.html %}

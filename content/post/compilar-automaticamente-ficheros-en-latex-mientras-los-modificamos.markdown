@@ -71,6 +71,3 @@ $ mlatexmk # Para compilar con pdflatex
 $ mlatexmkx # Para compilar con xelatex
 
 ```
-
-
-{% include toc.html %}

@@ -220,5 +220,5 @@ Ahora solo ejecuta la aplicación y prueba su funcionamiento.
  [3]: https://elbauldelprogramador.com/programacion-android-intents-conceptos/ "Programación Android: Intents – Conceptos básicos"
  [4]: https://www.dropbox.com/s/e56vsfojei6z2ow/Pics.rar?dl=0
 
-{% include toc.html %}
+
 </imageview></gridview>

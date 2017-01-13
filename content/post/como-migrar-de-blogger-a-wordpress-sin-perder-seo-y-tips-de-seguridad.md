@@ -16,7 +16,7 @@ mainclass: "dev"
 color: "#E64A19"
 ---
 
-{% include toc.html %}
+
 
 ### Importar entradas y comentários
 

@@ -316,5 +316,3 @@ Aunque este artículo ha sido una remezcla de comandos, espero que haya quedado 
 
 
  [1]: https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/ "Netstat: Analizando la red y detectando problemas"
-
-{% include toc.html %}

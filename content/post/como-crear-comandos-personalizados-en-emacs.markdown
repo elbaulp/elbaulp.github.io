@@ -10,7 +10,7 @@ mainclass: "dev"
 color: "#E64A19"
 ---
 
-{% include toc.html %}
+
 
 Hace unos meses que comencé a usar _emacs_ como editor predeterminado, y la verdad es que una vez me acostumbré a él es bastante cómodo. Sin embargo, editando artículos del blog, me encontraba ejecutando una y otra vez el mismo comando, o comandos similares. Así que busqué la forma de asociarlos a una función para no tener que andar escribiendolos cada dos por trés. Veamos cómo crear estas funciones.
 

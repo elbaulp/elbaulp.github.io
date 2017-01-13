@@ -43,7 +43,3 @@ Antes de nada decir que es el primer vídeo que edito y no ha salido demasiado b
 El otro es un generador que secuencia cíclicamente la salida 3, 6, 7.
 
 <span class="embed-youtube" ></span>
-
-
-
-{% include toc.html %}

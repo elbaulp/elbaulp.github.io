@@ -75,5 +75,3 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
  [1]: https://elbauldelprogramador.com/ "Viñetas Geek de Domingo"
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/ "Los 10 Mejores Frameworks gratuitos para Aplicaciones Web"
-
-{% include toc.html %}

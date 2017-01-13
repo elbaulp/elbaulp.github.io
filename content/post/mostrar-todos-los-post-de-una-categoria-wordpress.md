@@ -84,5 +84,3 @@ Para usar el shortcode debemos conocer el **id** de la categoría a mostrar, o r
  [1]: https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/
  [2]: http://codex.wordpress.org/Class_Reference/WP_Query#Parameters
  [3]: https://elbauldelprogramador.com/?s=shortcode
-
-{% include toc.html %}

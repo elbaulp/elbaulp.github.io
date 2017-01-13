@@ -13,7 +13,7 @@ color: "#F57C00"
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Veracryptlogo.png" title="{{ page.title }}" alt="{{ page.title }}" width="249px" height="197px" />
 </figure>
 
-{% include toc.html %}
+
 
 Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila etc, y en ocasiones pueden contener información sensible que no debería poder leer cualquiera. Por ello es buena idea llevarlo encriptado, ya sea por si se pierde o nos lo roban. Hoy veremos cómo podemos cifrar/encriptar nuestro usb con _Veracrypt_.
 

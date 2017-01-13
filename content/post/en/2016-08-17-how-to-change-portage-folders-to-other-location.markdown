@@ -20,7 +20,7 @@ There is NOT at least 10 GiB disk space at "/var/tmp/portage
 
 So first I decided to change all the `portage` files to my secondary hard disk drive, here is how to change `portage` folders to a new location.
 
-{% include toc.html %}
+
 
 # Changing /etc/portage/make.conf file
 

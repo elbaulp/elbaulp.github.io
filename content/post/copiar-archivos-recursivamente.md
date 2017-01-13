@@ -65,5 +65,3 @@ IFS=' '
 Podéis hacer todas las preguntas que querais si no entendeis algo, y no repareis en criticarlo, si creeis que algo esta mal, o podria mejorarse.
 
 Saludos, y espero que os sirva de algo.
-
-{% include toc.html %}

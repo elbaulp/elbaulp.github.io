@@ -23,7 +23,7 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## Inserción de registros
 

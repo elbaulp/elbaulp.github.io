@@ -14,7 +14,7 @@ color: "#009688"
 
 Además de brindarnos múltiples elementos que nos permiten desarrollar una aplicación robusta, Oracle nos ofrece la posibilidad de programar en forma modular, clara y eficiente. En este apartado veremos cómo embeber [procedimientos, funciones][1], definiciones de tipos de datos y [declaraciones de variables][2] en una misma estructura que los agrupe y relacione lógicamente. Esta estructura se denomina Package (Paquete) y su uso nos permite no sólo mejorar la calidad de diseño de nuestras aplicaciones sino también optimizar el desempeño de las mismas.
 
-{% include toc.html %}
+
 
 ## Definición
 

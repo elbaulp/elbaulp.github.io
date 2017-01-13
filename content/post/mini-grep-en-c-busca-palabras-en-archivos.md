@@ -109,5 +109,5 @@ grep(const char* palabra, const char* nombre)
 
 
 
-{% include toc.html %}
+
 </palabra>

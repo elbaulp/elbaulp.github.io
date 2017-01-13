@@ -45,7 +45,7 @@ color: "#0097A7"
 * Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)
 * [Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)][2]
 
-{% include toc.html %}
+
 
 Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo **named.conf.local**, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:
 

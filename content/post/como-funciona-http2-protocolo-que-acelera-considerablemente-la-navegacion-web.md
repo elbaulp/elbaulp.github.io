@@ -162,5 +162,3 @@ El cacheo de recursos en el cliente lo previene de tener que preguntar por más 
 
  [1]: https://elbauldelprogramador.com/security-now/
  [2]: http://twit.tv/show/security-now/495
-
-{% include toc.html %}

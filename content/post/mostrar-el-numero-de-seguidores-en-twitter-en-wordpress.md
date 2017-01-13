@@ -81,7 +81,3 @@ Y el estilo es el siguiente:
 </div>
 
 Eso es todo.
-
-
-
-{% include toc.html %}

@@ -65,5 +65,3 @@ Lo cual sustituirá la URL antigua por lo que coincidión en la expresión *((?:
 
  [1]: https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
  [2]: https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python"
-
-{% include toc.html %}

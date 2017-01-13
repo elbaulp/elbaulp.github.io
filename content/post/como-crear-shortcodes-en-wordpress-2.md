@@ -42,7 +42,3 @@ A partir de ahora, podemos agregar todo el código que hemos escrito dentro de l
 Así de sencillo es crear shortcodes en WordPress.
 
 Fuente: <a href="http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/" target="_blank"><em>wpyag</em></a>
-
-
-
-{% include toc.html %}

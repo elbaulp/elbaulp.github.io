@@ -22,7 +22,3 @@ El vídeo es extenso, pero muy recomendable, pueden habilitar los subtítulos pu
 <!--ad-->
 <p >
 </p>
-
-
-
-{% include toc.html %}

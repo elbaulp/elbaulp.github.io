@@ -354,5 +354,5 @@ Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-
 
 
 
-{% include toc.html %}
+
 </iostream></string></fstream>

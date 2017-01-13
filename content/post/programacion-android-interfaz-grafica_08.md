@@ -28,7 +28,7 @@ Se dispone de distintos tipo de menús:
 * ***Context Menu:*** Menús contextuales desplegados al realizar una pulsación larga en una View.
 * ***Submenús:*** Menús desplegados al pulsar sobre un elemento de otro menú.
 
-{% include toc.html %}
+
 
 ### Options Menu
 

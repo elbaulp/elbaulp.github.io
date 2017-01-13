@@ -47,5 +47,3 @@ Una chica en medio de la nada tiene que encontrar el camino de vuelta. El tiempo
 
 
  [1]: https://elbauldelprogramador.com/label/v%C3%ADdeo%20de%20la%20semana
-
-{% include toc.html %}

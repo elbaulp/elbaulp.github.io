@@ -149,5 +149,3 @@ EXAMPLES
 
  [1]: https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/ "Grub Customizer 2.0, personaliza tu GRUB2"
  [2]: https://elbauldelprogramador.com/
-
-{% include toc.html %}

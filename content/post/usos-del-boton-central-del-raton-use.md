@@ -13,7 +13,7 @@ En pocas ocasiones usamos el botón central de nuestro ratón, pero lo cierto es
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## En firefox
 

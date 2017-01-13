@@ -12,7 +12,7 @@ mainclass: "android"
 color: "#689F38"
 ---
 
-{% include toc.html %}
+
 
 En el anterior artículo dimos un repaso a [fondo del típico Hola Mundo](/android/tutorial-android-hola-mundo-a-fondo/ "Programación Android: Hola Mundo a Fondo"), hoy vamos a ver cómo trabajar con persistencia de datos en Android.
 

@@ -30,7 +30,7 @@ Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xr
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 # xrootconsole
 

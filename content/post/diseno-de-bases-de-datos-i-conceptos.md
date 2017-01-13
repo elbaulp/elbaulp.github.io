@@ -11,7 +11,7 @@ color: "#009688"
 
 > Nota: Basado en los apuntes de clase
 
-{% include toc.html %}
+
 
 ## 1. Introducción
 

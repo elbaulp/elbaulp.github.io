@@ -54,5 +54,3 @@ Espero que os sea útil, y si quieren modificarlo, háganlo, me lo envian, y yo 
 Saludos.
 
 [1]: https://elbauldelprogramador.com/script-resaltado-sintaxis/
-
-{% include toc.html %}

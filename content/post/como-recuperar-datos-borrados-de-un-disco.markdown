@@ -15,7 +15,7 @@ color: "#61B38D"
 <a href="/assets/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png" title="{{ page.title }}" alt="{{ page.title }}" width="556px" height="65px" /></a>
 </figure>
 
-{% include toc.html %}
+
 
 Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad no lo estamos borrando físicamente. Realmente se libera el espacio que tenía ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado. Hoy veremos cómo es posible recuperar datos borrados de un disco duro.
 

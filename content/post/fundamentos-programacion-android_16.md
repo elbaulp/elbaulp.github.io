@@ -15,7 +15,7 @@ mainclass: "android"
 color: "#689F38"
 ---
 
-{% include toc.html %}
+
 
 ## Intents
 

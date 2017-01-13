@@ -30,5 +30,3 @@ Dicho todo esto, a quien le interese puede registrarse en este [ enlace][1].
 
 
  [1]: http://www.revresponse.com/join.php/?refbrand=bashyc-blogspot&invcode;=raf&page;=referral-page
-
-{% include toc.html %}

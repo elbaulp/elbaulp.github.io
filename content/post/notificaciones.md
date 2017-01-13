@@ -200,5 +200,5 @@ Se puede descargar el proyecto de esta entrada aquí:
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/
 
 
-{% include toc.html %}
+
 </http:>

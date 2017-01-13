@@ -14,7 +14,7 @@ color: "#F57C00"
 
 Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.
 
-{% include toc.html %}
+
 
 ### Qué es Google Apps Script
 

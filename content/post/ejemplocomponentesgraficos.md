@@ -165,5 +165,5 @@ En general con echar un vistazo a los métodos y listeners de cada componente, y
  [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28
 
 
-{% include toc.html %}
+
 </checkbox></imageview></edittext></button>

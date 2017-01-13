@@ -67,7 +67,3 @@ Con el revuelo que ha causado el juicio de Apple contra Samsung, en <a href="/hu
 </p>
 
 > ¿Te gusta el iPhone? Cómprate un Samsung. Apple dice que los productos samsung son sustancialmente iguales que los suyos&#8230; con pantallas más grandes, mejor rendimiento, más características, más aplicaciones gratuitas, menor precio&#8230; Galaxy S3: el iPhone más sorprendente
-
-
-
-{% include toc.html %}

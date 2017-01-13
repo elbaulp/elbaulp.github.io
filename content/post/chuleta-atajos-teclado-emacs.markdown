@@ -23,7 +23,7 @@ La de hoy va sobre _Emacs_. La idea es que esta chuleta la creemos entre todos. 
 
 A lo largo del poco tiempo que llevo usando [emacs](/tags/#emacs "Artículos sobre emacs"), ya he ido descubriendo los atajos que me resultan más útiles para mi día a día, empecemos:
 
-{% include toc.html %}
+
 
 ## Paquetes útiles
 

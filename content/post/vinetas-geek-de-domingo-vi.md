@@ -110,7 +110,3 @@ Disfrutad de lo que queda de fin de semana!
 *6* »» <a href="http://devopsreactions.tumblr.com/post/54585027874/protecting-your-servers-during-a-ddos" target="_blank">Visitar sitio</a>
 *7* »» <a href="http://thecodinglove.com/post/54685719434" target="_blank">Visitar sitio</a>
 *8* »» <a href="http://thecodinglove.com/post/54609919840" target="_blank">Visitar sitio</a>
-
-
-
-{% include toc.html %}

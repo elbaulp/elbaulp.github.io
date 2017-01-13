@@ -18,7 +18,7 @@ Sí, no es broma. En 5 años, todos los desarrolladores codificarán en la nube.
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 # ** Mayor productividad y fácil integración**
 

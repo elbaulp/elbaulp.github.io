@@ -248,5 +248,3 @@ El diseño trata de obtener lo mejor posible a partir de un conjunto de restricc
  [18]: https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary
  [19]: http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY "CONFIG_DENSITY"
  [20]: https://twitter.com/cyrilmottier "@cyrilmottier"
-
-{% include toc.html %}

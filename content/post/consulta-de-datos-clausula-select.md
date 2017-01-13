@@ -11,7 +11,7 @@ color: "#009688"
 
 A lo largo de varios post(enlazados entre ellos), vamos a ir viendo las distintas partes de las que se compone la sentencia SELECT, el motivo de hacer esto es que no salgan post demasiado largos para leer.
 
-{% include toc.html %}
+
 
 # Consulta de Datos - Cláusula Select
 

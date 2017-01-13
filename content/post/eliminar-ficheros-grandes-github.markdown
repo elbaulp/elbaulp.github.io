@@ -14,7 +14,7 @@ date: 2016-11-12T09:12:16+01:00
 
 Trabajando en un repositorio [git](https://elbauldelprogramador.com/git/ "Artículos sobre Git"), cometí el error de hacer un [commit](https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos") de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:
 
-{% include toc.html %}
+
 
 ## 1. Eliminar el fichero del historial de git
 

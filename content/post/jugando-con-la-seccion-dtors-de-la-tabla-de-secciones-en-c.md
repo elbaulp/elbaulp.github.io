@@ -214,5 +214,5 @@ http://www.exploit-db.com/papers/13234/
  [4]: https://elbauldelprogramador.com/clases-y-objetos-el-constructor/
  [5]: https://elbauldelprogramador.com/ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/ "Ocultar archivos dentro de una imagen"
 
-{% include toc.html %}
+
 </stdlib.h></stdio.h>

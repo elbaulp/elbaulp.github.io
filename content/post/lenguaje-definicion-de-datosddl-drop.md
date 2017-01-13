@@ -19,7 +19,7 @@ En el anterior post vimos la orden [CREATE.][1]
 
 En este post explicaré el funcionamiento de la orden DROP.
 
-{% include toc.html %}
+
 
 ## Borrado de una tabla (estructura y datos)
 

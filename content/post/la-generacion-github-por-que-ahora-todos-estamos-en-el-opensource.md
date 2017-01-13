@@ -26,7 +26,7 @@ color: "#F57C00"
 
 > Cualquiera puede ahora cambiar los datos de un mapa cuando se construyen nuevos caminos para montar en bici, cuando las carreteras estén en construcción y cuando se hagan nuevos edificios” <a href="http://digital.cityofchicago.org/index.php/chicago-on-github/" title="http://digital.cityofchicago.org/index.php/chicago-on-github/" target="_blank">anunció</a> hace poco la ciudad de Chicago, que ahora se encuentra en ***GitHub***. Ahora la gente <a href="http://www.wired.com/wiredenterprise/2013/01/this-old-house/" title="This Old (Open Source) House: Man Renovates Home on GitHub" target="_blank">administra las restauraciones de sus casas</a> en ***GitHub***. Hace poco un bufete de abogados anunció también que está publicando documentos legales para la financiación en fases iniciales en ***GitHub***. Alguien además <a href="https://github.com/bundestag/gesetze" target="_blank">publicó</a> el año pasado la totalidad de las leyes Alemanas en Github. (Quizá no sea muy sorprendente que tenga unas 17 peticiones de pull abiertas para realizar cambios). Y por supuesto, ***GitHub*** lo usan programadores y desarrolladores que <a href="http://nodecopter.com/" title="AR Drones" target="_blank">vuelan Drones AR</a> con **Node.js** o crean sitios webs con **jQuery**.
 
-{% include toc.html %}
+
 
 ***GitHub***, según cree el autor original de artículo, está haciendo al software libre lo que internet le hizo a la industria: **Está creando un hueco cultural entre la generación anterior de grandes proyectos de software libre y una nueva, más aficionada cultura del software libre de hoy día.**
 

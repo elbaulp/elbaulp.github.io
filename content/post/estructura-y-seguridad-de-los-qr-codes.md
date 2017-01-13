@@ -100,5 +100,3 @@ Otro buen intérprete es **<a href="https://play.google.com/store/apps/details?i
  [1]: https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/
  [2]: https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/ "Lo último en criptografía: Fully Homomorphic Encryption"
  [3]: https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits (Parte I)"
-
-{% include toc.html %}

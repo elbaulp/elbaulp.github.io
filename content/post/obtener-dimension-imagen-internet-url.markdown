@@ -10,7 +10,7 @@ color: "#2196F3"
 date: 2016-10-01T18:32:13+02:00
 ---
 
-{% include toc.html %}
+
 
 ## Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)
 

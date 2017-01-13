@@ -57,5 +57,3 @@ Los archivos de salida se almacenan en una carpeta llamada **mp3f**, y uso **\`b
 Por último, fijamos IFS a su valor predeterminado.
 
 Otra opción es usar el programa _SoundConverter_.
-
-{% include toc.html %}

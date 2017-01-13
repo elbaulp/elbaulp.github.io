@@ -13,7 +13,7 @@ date: 2016-11-04T16:23:40+01:00
 
 Cómo pasé de analizar resultados con Excel a analizarlos con R+Python
 
-{% include toc.html %}
+
 
 ## Cómo empezó todo...
 

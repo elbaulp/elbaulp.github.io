@@ -13,7 +13,7 @@ mainclass: "android"
 color: "#689F38"
 ---
 
-{% include toc.html %}
+
 
 # ¿Qué es Android?
 

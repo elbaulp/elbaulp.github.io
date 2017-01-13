@@ -16,7 +16,7 @@ En The Clockwork Man ayudaremos a Miranda Calomy y su robot Sprocket a superar u
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 El precio de <cite>The Clockwork Man 1</cite> es de $15, y el de <cite>The Clockwork Man 2</cite> $20. Si no queréis comprarlo, os dejo los links de descarga de los Demos.
 

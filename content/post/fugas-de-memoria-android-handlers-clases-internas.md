@@ -158,5 +158,5 @@ photo credit: [nyuhuhuu][10] via [photopin][11] [cc][12]
  [11]: http://photopin.com
  [12]: http://creativecommons.org/licenses/by/2.0/
 
-{% include toc.html %}
+
 </sampleactivity>

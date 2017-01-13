@@ -119,5 +119,3 @@ La opción de crear y configurar el balanceador a mano puede ser buena para apre
 
 
  [1]: http://www.arsys.es/servidores/cloud?utm_source=cooperation&utm;_medium=baul&utm;_term=balanceador&utm;_content=online&utm;_campaign=cloud
-
-{% include toc.html %}

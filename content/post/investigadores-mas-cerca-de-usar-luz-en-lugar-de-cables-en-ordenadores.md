@@ -48,5 +48,3 @@ Además de los rayos de luz en forma de T generados por el enlace en éste estud
  [1]: http://news.stanford.edu/news/2014/december/optical-silicon-algorithm-120214.html "Stanford engineers take big step toward using light instead of wires inside computers"
  [2]: http://news.stanford.edu/news/2014/december/optical-silicon-algorithm-120214.html "Nanophotonic computational design"
  [3]: http://www.researchgate.net/post/What_is_the_difference_between_convex_and_non-convex_optimization_problems "What is the difference between convex and non-convex optimization problems?"
-
-{% include toc.html %}

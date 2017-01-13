@@ -21,7 +21,7 @@ Lo subo a modo de manual para todos.
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## Elementos relacionados con un sistema de base de datos:
 

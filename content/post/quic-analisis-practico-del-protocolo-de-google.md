@@ -337,5 +337,3 @@ Los siguientes datos del paquete correspondientes al payload no se pueden analiz
 
 
  [1]: https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/ "Qué es QUIC, el nuevo protocolo desarrollado por Google"
-
-{% include toc.html %}

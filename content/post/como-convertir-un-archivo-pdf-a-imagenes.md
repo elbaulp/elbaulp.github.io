@@ -52,5 +52,3 @@ Espero que os sea útil si alguna vez lo necesitáis.
 &nbsp;
 
 Vía | <a href="http://www.cyberciti.biz/faq/howto-convert-a-pdf-file-to-an-image/" target="_blank">cyberciti</a> | <a href="http://www.imagemagick.org/discourse-server/viewtopic.php?f=10&t=13371" target="_blank">imagemagick.org</a>
-
-{% include toc.html %}

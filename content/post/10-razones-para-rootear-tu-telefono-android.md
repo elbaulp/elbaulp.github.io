@@ -22,7 +22,7 @@ color: "#F57C00"
 
 [Android][1] es uno de los sistemas operativos más abiertos, versátil y personalizable del mercado. Quizá pienses que no es necesario [rootearlo][2], pero te sorprenderías de la cantidad de cosas que se pueden hacer con un teléfono Android rooteado. A continuación se listan 10 razones por las que merece la pena (Traducidas de *LifeHacker*):
 
-{% include toc.html %}
+
 
 # 10. Desbloquear características ocultas e instalar aplicaciones “incompatibles”
 

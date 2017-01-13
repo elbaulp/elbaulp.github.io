@@ -113,5 +113,5 @@ sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 
 [1]: https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/ "Cómo cifrar archivos con openssl"
 
-{% include toc.html %}
+
 </nombre_fondo>

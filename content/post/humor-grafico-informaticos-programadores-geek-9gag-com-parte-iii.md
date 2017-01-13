@@ -118,7 +118,3 @@ Otra recopilación de humor gráfico, para cerrar este domingo de verano.
 </dl>
 <br  />
 </div>
-
-
-
-{% include toc.html %}

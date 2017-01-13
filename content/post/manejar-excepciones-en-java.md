@@ -124,5 +124,3 @@ Como vimos el manejo de las excepciones en java no es algo difícil de implement
 
  [1]: http://jonathanmelgoza.com/blog/ "Blog del colaborador"
  [2]: http://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html "Finally Oracle"
-
-{% include toc.html %}

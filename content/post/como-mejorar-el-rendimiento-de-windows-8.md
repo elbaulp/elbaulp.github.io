@@ -43,7 +43,7 @@ Tras aplicarle una serie de cambios, he conseguido que vaya fluido y sin ningún
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 # Windows 8 no se apaga
 

@@ -170,5 +170,5 @@ Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para 
  [1]: https://elbauldelprogramador.com/assets/img/2012/10/Matriz_de_adyacencia1.jpg
  [2]: https://elbauldelprogramador.com/assets/img/2012/10/Caminosmascortos1.jpg
 
-{% include toc.html %}
+
 </distancia></vertice></fstream></string.h>

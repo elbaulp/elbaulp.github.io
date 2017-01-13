@@ -14,7 +14,7 @@ mainclass: "articulos"
 color: "#F57C00"
 ---
 
-{% include toc.html %}
+
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="98" width="228" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s400/Screenshot.png"></amp-img>

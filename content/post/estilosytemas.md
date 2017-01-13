@@ -125,5 +125,5 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
  [2]: https://elbauldelprogramador.com/programacion-android-recursos/
 
 
-{% include toc.html %}
+
 </textview>

@@ -26,7 +26,7 @@ En un proyecto reciente he tenido que trabajar con las librerías de compatibili
 
 En Android recomiendan usar un <a href="http://developer.android.com/reference/android/support/v4/app/DialogFragment.html" title="DialogFrgment" target="_blank">`DialogFragment`</a>, que permite mostrar éstos diálogos en distintos layouts. Si pretendes que tu aplicación soporte este tipo de diálogos para versiones inferiores a Android 3.0, debes usar el DialogFragment mencionado anteriormente, si por lo contrario tu aplicación usa un *minSdkVersion* igual o superior a 11, puedes usar este otro <a href="http://developer.android.com/reference/android/app/DialogFragment.html" target="_blank">`DialogFragment`</a>. En este artículo se va a tratar la versión para soportar versiones anteriores a la 3.0.
 
-{% include toc.html %}
+
 
 ## Requisitos previos
 

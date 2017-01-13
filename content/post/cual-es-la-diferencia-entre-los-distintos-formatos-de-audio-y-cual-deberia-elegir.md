@@ -41,7 +41,7 @@ color: "#F57C00"
 
 Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido&#8230; echemos una vista rápida a los distintos formatos existentes:
 
-{% include toc.html %}
+
 
 ## Formatos sin pérdidas: WAV, AIFF, FLAC, Apple Lossless y otros
 

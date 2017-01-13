@@ -53,5 +53,3 @@ Sandra Cámara, Community Manager No Solo Una Idea:
 
 
  [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"
-
-{% include toc.html %}

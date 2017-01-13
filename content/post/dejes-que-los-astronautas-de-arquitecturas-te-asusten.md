@@ -61,5 +61,3 @@ Es bueno que podamos utilizar XML ahora para los formatos por cable. Estupendo. 
 
 
  [1]: https://elbauldelprogramador.com/bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/ "BitTorrent Sync: Tus archivos sincronizados sin intermediarios"
-
-{% include toc.html %}

@@ -19,5 +19,3 @@ color: "#262626"
 </figure>
 
 > **<a href="http://www.genbetadev.com/lenguajes-y-plataformas/si-escribiesemos-ensayos-con-lenguajes-de-programacion" target="_blank">Fuente: GenbetaDev</a>**
-
-{% include toc.html %}

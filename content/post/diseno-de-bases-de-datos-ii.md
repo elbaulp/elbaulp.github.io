@@ -16,7 +16,7 @@ color: "#009688"
 
 > __Nota:__ Basado en los apuntes de clase
 
-{% include toc.html %}
+
 
 ## 1. Restricciones Inherentes del Modelo Relacional.
 

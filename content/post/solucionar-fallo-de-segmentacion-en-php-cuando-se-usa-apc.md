@@ -86,7 +86,3 @@ cat /proc/sys/kernel/shmmax
 *Créditos de la imagen* »» <a href="http://icons8.com/" target="_blank">icons8</a>
 *APC causes PHP fast-cgi to segfault* »» <a href="https://bugs.php.net/bug.php?id=56894" target="_blank">bugs.php.net</a>
 *Documentación Sysctl* »» <a href="https://www.kernel.org/doc/Documentation/sysctl/kernel.txt" target="_blank">kernel.org</a>
-
-
-
-{% include toc.html %}

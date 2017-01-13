@@ -44,5 +44,3 @@ case $? in
 esac
 
 ```
-
-{% include toc.html %}

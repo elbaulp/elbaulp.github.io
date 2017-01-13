@@ -49,7 +49,7 @@ A continuación paso a describir uno a uno los archivos :
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ### *./include/codificar.h*
 

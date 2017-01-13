@@ -22,7 +22,7 @@ En linux, existe un comando llamado **locate** que busca archivos en nuestro sis
 
 El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis <a href="http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh" title="Lista de reproducción EPIC3" target="_blank">canciones preferidas</a>. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un [script][2] que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.
 
-{% include toc.html %}
+
 
 ### Expresiones regulares en Locate
 

@@ -8,7 +8,7 @@ image: los10articulosmasvisitados2015.png
 mainclass: "articulos"
 color: "#F57C00"
 ---
-{% include toc.html %}
+
 
 <figure>
 <a href="/assets/img/los10articulosmasvisitados2015.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="512px" /></a>

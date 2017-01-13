@@ -108,5 +108,3 @@ else :
 ### Conclusion
 
 ¿Por qué tantas matemáticas y poco código? Creo que todos lo sabemos: la idea que soporta el código es lo interesante y no solo lo interesante *es* lo importante. No todo programador es matemático (no es necesario serlo) pero es una gran ventaja tener esa &#8220;intuición&#8221; que nos dan las matemáticas.
-
-{% include toc.html %}

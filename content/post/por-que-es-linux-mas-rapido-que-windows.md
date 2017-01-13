@@ -31,7 +31,3 @@ La pregunta anterior genera mucho debate. Algunos dicen que es un mito pero la m
 #### Referencias
 
 *Why is Linux faster than Windows?* »» <a href="http://www.techdrivein.com/2014/02/why-is-linux-faster-than-windows.html" target="_blank">techdrivein.com</a>
-
-
-
-{% include toc.html %}

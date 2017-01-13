@@ -79,5 +79,3 @@ Despues de actualizar la BIOS, se restauran las configuraciones por defecto, de 
 
  [1]: http://crunchbanglinux.org/forums/post/192843/#p192843
  [2]: http://forums.debian.net/viewtopic.php?f=7&t;=76419
-
-{% include toc.html %}

@@ -24,7 +24,7 @@ En PL/SQL no se pueden utilizar sentencias `SELECT` de sintaxis básica ( `SELEC
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 Podemos distinguir dos tipos de cursores:
 

@@ -15,7 +15,7 @@ color: "#2196F3"
 
 > Hace unos años que publiqué este artículo, pero he decidido actualizarlo, ya que han aparecido versiones del mapa más actuales. Espero que os guste.
 
-{% include toc.html %}
+
 
 ## Mapa mundial de GNU/Linux 1
 

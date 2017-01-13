@@ -88,5 +88,3 @@ Si te has cansado de la interfaz gráfica de usuario, checkea nuestra <a href="h
 * * *
 
 Fuente | <a href="http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line" target="_blank">lifehacker</a>
-
-{% include toc.html %}

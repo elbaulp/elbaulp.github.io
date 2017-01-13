@@ -32,7 +32,7 @@ color: "#2196F3"
 
 <!--ad-->
 
-{% include toc.html %}
+
 
 ## Netstat es un paquete de herramienas de red
 

@@ -11,7 +11,7 @@ mainclass: "android"
 color: "#689F38"
 ---
 
-{% include toc.html %}
+
 
 <figure>
   <a href="/assets/img/2014/01/iconoAndroid.png"><amp-img layout="responsive" src="/assets/img/2014/01/iconoAndroid.png" title="{{ page.title }}" alt="{{ page.title }}" /></a>

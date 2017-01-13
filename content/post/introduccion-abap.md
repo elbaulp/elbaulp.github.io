@@ -80,7 +80,3 @@ Agrupa todas o casi todas las transacciones de desarrollo ABAP en una sola trans
 El desarrollo en ABAP se realiza sobre un entorno de desarrollo al cual sólo tienen acceso los programadores y consultores. Éste se encuentra separado del entorno productivo en el cual trabajan los usuarios del ERP. Así pues, todo nuevo desarrollo o ampliación se debe mover al entorno productivo a través de un sistema que comunique todos los entornos. Éste sistema es el gestor de transportes y las transacciones SE09 y STMS son sus transacciones más conocidas.
 
 Finalmente, hay que decir que el *ABAP workbench* es propio de SAP pero últimamente SAP también permite programar ABAP mediante herramientas no propietarias de SAP, sobre todo con *Eclipse*. Sin embargo, con estas plataformas se pierde mucha de la funcionalidad propia del *ABAP Workbench*.
-
-
-
-{% include toc.html %}

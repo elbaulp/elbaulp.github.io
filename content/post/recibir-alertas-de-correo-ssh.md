@@ -23,7 +23,7 @@ Hoy veremos cómo recibir alertas de correo SSH cada vez que un usuario logre ac
 
 En linux, cada vez que un usuario accede al sistema, el archivo *.bashrc* se ejecuta. De modo que si añadimos a dicho archivo una sentencia que nos envíe un correo, lograremos monitorizar los accesos al sistema. Antes hay que instalar un cliente de correo, aunque al ser un servidor, es probable que ya exista uno instalado.
 
-{% include toc.html %}
+
 
 # Instalar MailX
 

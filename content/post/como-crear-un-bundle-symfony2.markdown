@@ -371,5 +371,3 @@ composer require smsup/smsup-api-bundle
 Podéis ver como quedan todos los archivos [en el repositorio](https://github.com/smsup/SmsupapiBundle).
 
 Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.
-
-{% include toc.html %}

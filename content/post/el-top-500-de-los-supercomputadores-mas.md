@@ -28,7 +28,3 @@ Sin embargo, exíste otro ranking que clasifica los 500 supercomputadoras en fun
 En este ranking tenemos en primer lugar a un IBM que es capaz de realizar **2026.48 MFLOPS/W**. Sin embargo, al buscar el supercomputador Japonés en esta lista lo encontramos en la posición 380, con tan solo **108.43 MFLOPS/W**
 
 Y nuestro Supercomputador situado en Barcelona asciende de la posición 114 a la 7 en el ranking verde con **1266.23 MFLOPS/W**
-
-
-
-{% include toc.html %}

@@ -27,7 +27,7 @@ Tu modelo de datos ha empezado a estabilizarse y es el momento de crear una API 
 
 Diseñando una API para [SupportFu](http://www.supportfu.com/) (una alternativa para [Zendesk](http://www.supportfu.com/zendesk-alternative)), intenté encontrar respuestas pragmáticas a estas preguntas. Mi objetivo para la [API de SupportFu](http://dev.supportfu.com/api/v1) es que sea fácil de usar, facil de adoptar y lo suficientemente flexible para implementarla en nuestras propias interfaces de usuario.
 
-{% include toc.html %}
+
 
 ## TL,DR
 
