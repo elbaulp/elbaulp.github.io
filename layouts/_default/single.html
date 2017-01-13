@@ -8,13 +8,9 @@
   </article>
   {{ partial "structure/share" . }}
   {{ partial "structure/popular.posts" }}
-  {{ if isset .Params "author" }}
-     {{ $author := index $.Site.Data.authors .Params.author }}
-     {{ partial "structure/author"  $author }}
-  {{ else }}
-     {{ $author := index $.Site.Data.authors "alex" }}
-     {{ partial "structure/author" $author }}
-  {{ end}}
+  {{ $au := or .Params.author "alex" }}
+  {{ $author := index .Site.Data.authors $au }}
+  {{ partial "structure/author" $author }}
   {{ partial "structure/comments" . }}
 </section>
 {{ with .Params.math }}
