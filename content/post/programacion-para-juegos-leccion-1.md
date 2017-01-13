@@ -13,7 +13,7 @@ Como dije, voy a traducir el tutorial que estoy siguiendo de SDL, en <a target="
 
 Esta primera parte de la lección 1 no la voy a traducir debido a que hay un gran abanico de posibilidades según el SO que tengáis y del IDE que queráis usar, los pasos son bastante sencillos y viene explicado con imágenes.
 
-<!--ad-->
+<!--more-->
 
 Selecciona el SO que tengas:
 

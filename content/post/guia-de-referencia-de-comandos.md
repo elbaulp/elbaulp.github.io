@@ -15,4 +15,4 @@ color: "#2196F3"
     <a href="/assets/img/chuletacomandoslinux.png"><amp-img layout="responsive" width="1131" height="1600" src="/assets/img/chuletacomandoslinux.png"></amp-img></a>
 </figure>
 
-<!--ad-->
+<!--more-->

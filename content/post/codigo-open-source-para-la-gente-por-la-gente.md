@@ -15,7 +15,7 @@ Piensa sobre cuánto le insistimos al gobierno antes de tener el sitio [We The P
 
 Ahora, todo tipo de información abierta del gobierno disponible a través del proyecto [Data.gov][3] hace posible a cualquier programador, en cualquier parte, poder crear una aplicación cívica. Estas aplicaciones nos han hecho ver nuestras ciudades y pueblos con una luz diferente.
 
-<!--ad-->
+<!--more-->
 
 [Open City][4] es un ejemplo de un grupo de voluntarios locales que crean aplicaciones open source usando información del gobierno. Aunque el grupo está ubicado en Chicago, la idea es que cualquier ciudad pueda guardar el código de Open City y crear la propia.
 

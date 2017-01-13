@@ -28,7 +28,7 @@ Por desgracia no he podido obtener el certificado del curso ya que a partir de l
 
 Para todo aquel que esté interesado el curso (Lo cual recomiendo totalmente,) se va a volver a repetir, y hoy día 16 comienzan otros cuatro cursos igual de interesantes en los que me he inscrito, a continuación os dejo información sobre ellos:
 
-<!--ad-->
+<!--more-->
 
 ## The Design of Computer Programs
 

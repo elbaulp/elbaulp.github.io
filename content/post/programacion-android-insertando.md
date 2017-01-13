@@ -21,13 +21,13 @@ En la entrada anterior hablamos de cómo [obtener regístros][1] de los proveedo
 
 Anroid utiliza una clase llamada *android.content.ContentValues* para retener los valores de un solo registro, que será el que se insertará. Los *ContentValues* son un dicionario de pares clave/valor, al igual que los nombres de columnas y valores de las [bases de datos][3]. La forma de insertar un registro es rellenando el ContentValues primero y despues decir a *android.content.ContentResolver* que lo inserte usando una URI.
 
-<!--ad-->
+<!--more-->
 
 > Necesitamos usar ContentResolver porque a este nivel de abstracción, no le estamos pidiendo a una base de datos que inserte un registro, estamos pidiendo insertar un registro en un CV identificado por una URI. El contentResolver es el responsable de resolver la referencia a la URI al proveedor correcto.
 
 Abajo se muestra un ejemplo de cómo rellenar una fila con un ContentValues y prepararlo para un insert:
 
-<!--ad-->
+<!--more-->
 
 ```java
 ContentValues cv = new ContentValues();

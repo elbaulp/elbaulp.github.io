@@ -26,7 +26,7 @@ color: "#F57C00"
 
 # 10. Desbloquear características ocultas e instalar aplicaciones “incompatibles”
 
-<!--ad-->
+<!--more-->
 
 <figure>
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="10 razones para rootear tu teléfono Android" src="/assets/img/2013/08/ku-xlarge.jpg" width="640px" height="360px"></amp-img>

@@ -14,7 +14,7 @@ color: "#E64A19"
 En otros artículos mostré cómo [crear shortcodes][1] en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.
 
 
-<!--ad-->
+<!--more-->
 
 ### Crear el shortcode
 

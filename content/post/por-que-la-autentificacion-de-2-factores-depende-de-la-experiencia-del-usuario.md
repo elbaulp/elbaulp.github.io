@@ -20,7 +20,7 @@ color: "#F57C00"
 
 Ya vimos en hace algún tiempo [todos los lugares en los que deberías habilitar la autentificación de 2 factores][1]. Hoy, en este artículo original de Duo Security analizaremos los problemas que puede ocasionar esta tecnología en el usuario final.
 
-<!--ad-->
+<!--more-->
 
 
 

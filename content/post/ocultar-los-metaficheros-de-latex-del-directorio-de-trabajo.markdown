@@ -16,7 +16,7 @@ Si trabajas habitualmente con [LaTeX](https://elbauldelprogramador.com/category/
 
 ## Estructura del directorio
 
-<!--ad-->
+<!--more-->
 
 La idea sería tener el directorio de trabajo organizado del siguiente modo:
 

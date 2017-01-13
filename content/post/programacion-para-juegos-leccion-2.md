@@ -13,7 +13,7 @@ color: "#E64A19"
 
 Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda parte de la lección 1][2], vamos a superponer varias imagenes de una manera más eficiente.
 
-<!--ad-->
+<!--more-->
 
 ```bash
 //Cabeceras

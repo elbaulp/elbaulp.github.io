@@ -18,7 +18,7 @@ color: "#262626"
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
-<!--ad-->
+<!--more-->
 
 ### Las preguntas más buscadas en Google
 

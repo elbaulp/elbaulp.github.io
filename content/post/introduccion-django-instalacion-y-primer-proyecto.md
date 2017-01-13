@@ -27,7 +27,7 @@ Django desde la version 1.8 (LTS) solo soporta python 2.7 o 3.x (recomendado). E
 
 Vamos a instalar virtualenv, lo cual nos permitirá crear un entorno virtual en el que trabajar con python e instalar fácilmente aplicaciones mediante **pip**, que ya viene incluido en python 2.7.9, en caso de tener otra version anterior, deberemos instalarlo.
 
-<!--ad-->
+<!--more-->
 
 ```bash
 $ sudo apt-get install python-pip python-dev build-essential

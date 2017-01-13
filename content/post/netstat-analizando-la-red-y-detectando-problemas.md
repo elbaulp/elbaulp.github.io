@@ -30,7 +30,7 @@ color: "#2196F3"
 
 `netstat` es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.
 
-<!--ad-->
+<!--more-->
 
 
 

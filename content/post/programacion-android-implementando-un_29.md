@@ -26,7 +26,7 @@ Para poder usar el proveedor es necesario registrarlo en el [AndroidManifest:][3
 android:authorities="com.elbauldelprogramador.provider.FavSites" />
 ```
 
-<!--ad-->
+<!--more-->
 
 #### Añadir registros
 

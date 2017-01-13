@@ -23,7 +23,7 @@ color: "#2196F3"
     <a href="/assets/img/el-mapa-mundial-de-gnulinux-full.png"><amp-img layout="responsive" src="/assets/img/el-mapa-mundial-de-gnulinux-1.jpg" alt="{{ title }}" title="{{ title }}" width="680" height="383"></amp-img></a>
 </figure>
 
-<!--ad-->
+<!--more-->
 
 ## Mapa Mundial de GNU/Linux 2
 

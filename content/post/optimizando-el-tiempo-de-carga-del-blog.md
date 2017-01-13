@@ -20,7 +20,7 @@ Pues bien, tengo buenas noticias, he conseguido reducir el tiempo de carga a __2
 
 Para hacer estas pruebas he usado [tools.pingdom.com][3], que además de hacer el test, permite guardarlo.
 
-<!--ad-->
+<!--more-->
 
 Os dejo las imágenes del resultado:
 

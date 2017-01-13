@@ -20,7 +20,7 @@ color: "#E64A19"
 
 Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:
 
-<!--ad-->
+<!--more-->
 
 $$x+y=3\\2x+3y=3$$
 

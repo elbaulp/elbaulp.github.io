@@ -27,7 +27,7 @@ color: "#F57C00"
 
 
 
-<!--ad-->
+<!--more-->
 <div class="row flex-grid">
 <article class="box-item animate">
 <h2>Thing Explainer: Complicated Stuff in Simple Words</h2>

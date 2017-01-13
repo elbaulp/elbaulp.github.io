@@ -27,7 +27,7 @@ color: "#2196F3"
 
 Creo que lo que buscas es el fichero `/proc/locks`. Éste fichero muestra los archivos bloqueados actualmente en el sistema. Sin embargo, no muestra **Cuanto tiempo ha estado bloqueado un fichero**, pero sí que muestra **qué proceso lo está bloqueando**. Quizá sea posible detectar cuando se produce el bloqueo en éste fichero y medir el tiempo transcurrido. Un ejemplo de `/proc/locks` es el siguiente:
 
-<!--ad-->
+<!--more-->
 
 ```bash
 $ cat /proc/locks

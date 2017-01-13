@@ -22,7 +22,7 @@ Desarrollando una página en [PHP](/como-crear-shortcodes-en-wordpress/ "Crear S
 highlight_string("<?php\n\$data =\n" . var_export(get_defined_vars(), true) . ";\n??>");
 ```
 
-<!--ad-->
+<!--more-->
 
 Podemos crear una función para reutilizar este comando con la variable que queramos, por ejemplo:
 

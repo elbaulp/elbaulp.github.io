@@ -20,7 +20,7 @@ color: "#2196F3"
 
 Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en *superuser*. El usuario *[flammable][1]* preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:
 
-<!--ad-->
+<!--more-->
 
 ## El script
 

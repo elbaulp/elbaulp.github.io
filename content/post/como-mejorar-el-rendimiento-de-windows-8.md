@@ -41,7 +41,7 @@ Una vez con el portatil en mi posesión confirmé el mal rendimiento que tenía.
 
 Tras aplicarle una serie de cambios, he conseguido que vaya fluido y sin ningún problema. Si tienes problemas similares con tu windows 8, puedes probar a realizar lo siguientes cambios:
 
-<!--ad-->
+<!--more-->
 
 
 

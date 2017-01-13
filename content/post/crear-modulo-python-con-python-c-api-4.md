@@ -33,7 +33,7 @@ color: "#E64A19"
 Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado **herramientasRed** que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en [NDK-gdb – Depurar aplicaciones en el NKD de Android.][5]
 
 
-<!--ad-->
+<!--more-->
 
 ### Creación del módulo
 

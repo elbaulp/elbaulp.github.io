@@ -42,7 +42,7 @@ Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a l
 
 
 
-<!--ad-->
+<!--more-->
 
 # Chuleta de comandos git
 

@@ -36,7 +36,7 @@ Para este ejemplo, se necesita mostrar en un listview los siguientes datos:
 - _Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación_
 - _Un ImageView que mostrará un iconito de un calendario._
 
-<!--ad-->
+<!--more-->
 
 Terminada, la aplicación de prueba debe quedar algo así:
 

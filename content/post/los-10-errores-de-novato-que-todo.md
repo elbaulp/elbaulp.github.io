@@ -23,7 +23,7 @@ La web de <a target="_blank" href="http://developer.android.com/index.html">Andr
 
 Recientemente se ha incluido <a target="_blank" href="http://developer.android.com/training/index.html">Android Training</a>, que organiza tutoriales dentro de clases y lecciones para guiarnos a resolver problemas o implementar características particulares.
 
-<!--ad-->
+<!--more-->
 
 ### 2. No familiarizarse con la herramientas de Android
 

@@ -33,7 +33,7 @@ content://media/external/images
 content://contacts/people
 ```
 
-<!--ad-->
+<!--more-->
 
 El proveedor *MediaStore* define dos URIs y *Contacts* uno. Si te das cuenta, las constantes están definidas usando esquema jerárquico. Por ejemplo, la URI de los contactos se señala como *Contacts.People.CONTENT_URI.* Esto se debe a que las bases de datos de contactos pueden tener muchas tablas para representar la entidad de un contacto. *People* es una de las tablas o colecciones. Cada entidad primaria de una base de datos puede llevar su propia URI de contenido.
 

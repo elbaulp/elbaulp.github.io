@@ -17,7 +17,7 @@ color: "#689F38"
 
 ## Vista rápida
 
-<!--ad-->
+<!--more-->
 
 * Las aplicaciones android están compuestas por uno o más componentes de aplicación ( Actividades, servícios, proveedores de contenido y emisores de notificaciones)
 * Cada componente realiza una función diferente en el comportamiento de la aplicación general y cada uno se puede activar individualmente (incluso por otras aplicaciones)

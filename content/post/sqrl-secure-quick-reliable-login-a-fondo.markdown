@@ -25,7 +25,7 @@ color: "#00BCD4"
 
 Hace unos años, hablé aquí sobre la idea de Steve Gibson, __SQRL__, sistema con el que pretende eliminar [el uso de usuarios y contraseñas en internet](/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/). Unos dos años más tarde, con el proyecto bastante maduro, en [Security Now!](/security-now/ "Todos los artículos traducidos") Steve ha vuelto a dar detalles del funcionamiento de __SQRL__, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio [\#424](https://twit.tv/shows/security-now/episodes/424) del podcast.
 
-<!--ad-->
+<!--more-->
 
 ## Resumen
 

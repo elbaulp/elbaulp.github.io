@@ -17,7 +17,7 @@ Ya hemos visto como [plantear la base de datos][1] para un proveedor y cómo [im
 
 En el código que vimos en la anterior entrada, se implementa el método *getType()*, que devuelve los tipos MIME para una URI dada. Este método, al igual que muchos de los métodos del content provider, está sobrecargado con respecto a la URI entrante. La función de este método consiste en distinguir el tipo de URI. Para saber si es una colección de lugares (en el caso de la aplicación [FavSites][3]), o un único lugar.
 
-<!--ad-->
+<!--more-->
 
 Como ya se vió en la [entrada anterior][2], se usa UriMatcher para descifrar el tipo de URI. En función de esta, la clase *favSitesTableMEtaData* tiene definida las constantes de los tipos MIME a devolver para cada URI.
 

@@ -16,7 +16,7 @@ color: "#61B38D"
 
 **Description: **Deliberate or not, calling this version of OS X the king of the big cats brings along some big connotations. This is it. This is the pinnacle of OS. What could possibly come after Lion?
 
-<!--ad-->
+<!--more-->
 
 So what does this ultimate version of Mac OS X bring to the table? What makes it worth using? What makes this operating system the king of cats? Download now to find out. Also with this free guide you will also receive daily updates on new cool websites and programs in your email for free courtesy of MakeUseOf.
 

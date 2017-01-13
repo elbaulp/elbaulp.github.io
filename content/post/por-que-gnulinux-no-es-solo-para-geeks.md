@@ -14,7 +14,7 @@ Si alguna vez has tenido un ordernador con Windows posiblemente en algún moment
 
 En este punto es donde entra GNU/Linux. Es cierto que existen virus para [linux][1], pero hay muy muy pocos. Y debido a la cantidad de distintas versiones hace que sea aún más dificil desarrollar virus para esta plataforma. Aún así Linux no es perfecto y tiene implementadas funciones de seguridad para protegerte de las pocas amenazas presentes o de las que puedan darse en el futuro. Mientras que Windows Vista vino pre-configurado con un sistema de seguridad muy molesto y redundante, Linux permite a al usuario llevar a cabo las tareas diarias sin interrupciones. La mayor preocupación con Linux son los virus multiplataforma que puden ejecutarse en cualquier ordenador a través de Java o cualquier otro entorno en tiempo de ejecución instalado.
 
-<!--ad-->
+<!--more-->
 
 Incluso si se insiste en un programa antivirus, ya sea porque buscamos usar linux como una plataforma de servidor o simplemente porque queremos tener nuestros datos seguros, hay varios programas de entre los que podemos elegir. Estos programas van desde los que son de código abierto como ClarnAV hasta los de código cerrado de Trend Micro. No importa cuál de estos programas se elijan, lo más probable es que solo se usen si ha descargado un virus para windows, el cual no va a dañar nuestro pc de todas formas. Cuando tenemos funcionando un servidor estos programas son muy valiosos ya que probablemente hagan que nuestro servidor no se convierta en un caldo de cultivo para los virus.
 

@@ -17,7 +17,7 @@ Hace poco me encontré con el problema de añadir a todas las etiquetas de imág
 - Leer la imagen y extraer su tamaño.
 - Escribir el tamaño de la imagen en los atributos `width` y `height` de la imagen.
 
-<!--ad-->
+<!--more-->
 
 Para llevar a cabo la tarea he usado el módulo `BeautifulSoup`. A continuación se muestra el código comentado:
 

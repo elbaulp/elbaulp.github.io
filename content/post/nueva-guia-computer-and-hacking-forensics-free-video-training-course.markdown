@@ -17,7 +17,7 @@ color: "#61B38D"
 
 Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks.
 
-<!--ad-->
+<!--more-->
 
 Digital crime is more prevalent than ever, and the attacks are getting highly complex. Security software can't pinpoint it—the eyes and expertise of a trained computer forensics professional is necessary. Our Computer and Hacking Forensics training course teaches you how to become that professional. You'll learn how to; determine potential online criminal activity at its inception, legally gather evidence, search and investigate wireless attacks. Additional topics include unlocking passwords, the establishment and maintenance of a physical “chain of custody” and recovering lost and deleted data. At the conclusion, you will have been taught the concepts included in the computer forensics industry leading EC-Council CHFI certification exam.
 

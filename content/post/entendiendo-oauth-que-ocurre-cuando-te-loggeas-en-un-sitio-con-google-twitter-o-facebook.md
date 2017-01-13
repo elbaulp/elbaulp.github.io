@@ -21,7 +21,7 @@ Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es 
 
 Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps" target="_blank"> una aplicación de Twitter llamada Tweetgif fue hackeada</a>, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.
 
-<!--ad-->
+<!--more-->
 
 
 

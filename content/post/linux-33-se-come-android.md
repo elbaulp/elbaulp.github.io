@@ -21,7 +21,7 @@ Android se ha mezclado en el recién estrenado kernel linux 3.3, poniendo fin a 
 En las notas de la liberación de Android 3.3 se dice:
 
 
-<!--ad-->
+<!--more-->
 
 > Durante mucho tiempo, el código del proyecto Android no se ha incluido de nuevo a los repositorios de Linux debido a un desacuerdo entre los desarrolladores de ambos proyectos. Afortunadamente, tras varios años las diferencias están subsanadas. Varios subsistemas de Android y características ya han sido fusionadas, y se añadirán más en el futuro. Esto hará las cosas más fáciles para todos, incluyendo a la comunidad mod de Android y a las distribuciones que quieran dar soporte a programas Android.
 

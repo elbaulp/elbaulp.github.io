@@ -17,7 +17,7 @@ Especifica una condición de selección para un grupo. `HAVING` se usa normalmen
 [ HAVING <search_condition_group> ]
 ```
 
-<!--ad-->
+<!--more-->
 
 donde search\_condition\_group determina la condición o condiciones de selección del agregado. Normalmente la condición de selección utiliza un agregado que se compara con un valor. Por ejemplo camiones que han realizado un porte o más:
 

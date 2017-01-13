@@ -15,7 +15,7 @@ En cuanto nos pongamos en marcha crearé una página como la de [Proyecto Pylabr
 
 Tenemos intención, conforme avance el proyecto, [crear un PPA][3], y así aprovechar para usar este [sistema de paquetes para desarrolladores][4].
 
-<!--ad-->
+<!--more-->
 
 Como siempre, cualquiera que quiera participar es bienvenido, de esta forma avanzaremos más rápido y aprenderemos los unos de los otros.
 

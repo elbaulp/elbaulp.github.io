@@ -13,7 +13,7 @@ color: "#F57C00"
 
 Hace poco hablé de qué eran los [sistemas de paquetes PPA][1], para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.
 
-<!--ad-->
+<!--more-->
 
 1. Antes de nada, debemos crear una cuenta en <a href="https://login.launchpad.net/+new_account" target="_blank">Launchpad</a>
 2. Una vez creada, nos dirigimos al panel principal de nuestra cuenta, que será https://launchpad.net/~NOMBRE_USUARIO.

@@ -20,6 +20,6 @@ OS dejo dos vídeos muy interesantes que recomiendo que veáis, ya que hablan de
     </amp-youtube>
 </figure>
 
-<!--ad-->
+<!--more-->
 
 Vía <a target="_blank" href="http://www.genbetadev.com/seguridad-informatica/chema-alonso-un-crack-hablando-de-la-inseguridad-de-las-vias-telematicas">Genbeta</a>

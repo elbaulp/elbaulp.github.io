@@ -24,7 +24,7 @@ Para ello basta ejecutar el siguiente comando:
 $ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
 ```
 
-<!--ad-->
+<!--more-->
 
 Y reemplazar `<file/dir>` con la ruta de nuestro fichero.
 

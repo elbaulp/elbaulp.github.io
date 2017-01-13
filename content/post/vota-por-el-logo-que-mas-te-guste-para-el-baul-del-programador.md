@@ -12,7 +12,7 @@ Estos días he estado liado aprendiendo a usar *inkscape* para rediseñar el log
 
 Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 
-<!--ad-->
+<!--more-->
 <noscript>
 <a href="http://polldaddy.com/poll/7207708/">Qué diseño para el logo te gusta más</a>
 </noscript>

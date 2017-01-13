@@ -23,7 +23,7 @@ Hace poco vimos en un artículo cómo [Sincronizar Google Drive en Linux en 4 pa
 
 
 
-<!--ad-->
+<!--more-->
 
 # El problema
 

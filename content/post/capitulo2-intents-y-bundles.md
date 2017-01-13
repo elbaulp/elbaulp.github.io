@@ -25,7 +25,7 @@ El proyecto con este ejemplo está disponible para su descarga (Comentado paso a
 Voy a explicar un poco por encima que hace cada fichero del proyecto:
 
 
-<!--ad-->
+<!--more-->
 
 ### ./res/layout/main.xml
 

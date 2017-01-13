@@ -22,7 +22,7 @@ color: "#2196F3"
 
 Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos.
 
-<!--ad-->
+<!--more-->
 
 ### En Debian
 

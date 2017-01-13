@@ -29,7 +29,7 @@ param8: valor8
 ---
 ```
 
-<!--ad-->
+<!--more-->
 
 Necesitaba dejarla tal cual, pero añadir un último parámetro llamado `mainclass: Artículos`, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso _Artículos_. Para ello decidí usar `perl`:
 

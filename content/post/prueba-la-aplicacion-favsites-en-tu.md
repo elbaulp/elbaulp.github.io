@@ -16,7 +16,7 @@ Como sabéis hace algún tiempo terminé la aplicación [Favsites][1].
 
 Ahora me gustaría que todo aquel que quiera probarla y ver como funciona, la descargue e instale en su Android. De esta forma puedo encontrar más errores que se me hayan pasado por alto y aceptar sugerencias de mejora. Si alguno tiene un terminal con trackBall, me vendría bien que me comunicara si FavSites funciona bien en esos teléfonos.
 
-<!--ad-->
+<!--more-->
 
 Si alguien quere participar y traducir la aplicación a un idioma distinto del Inglés y Español, le estaría agredecido y lo colocaría en el &#8220;Acerca de&#8221;.
 

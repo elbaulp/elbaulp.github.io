@@ -16,7 +16,7 @@ color: "#F57C00"
 
 El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.
 
-<!--ad-->
+<!--more-->
 
 ## 1.2 . Composición y estructura
 

@@ -32,7 +32,7 @@ En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que pod
 
 Pero antes, debemos introducir algunos conceptos:
 
-<!--ad-->
+<!--more-->
 
 ### ¿Qué es la Python C API?
 

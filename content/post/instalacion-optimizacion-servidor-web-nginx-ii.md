@@ -24,7 +24,7 @@ color: "#0097A7"
 
 Continuando con el artículo anterior, ahora procedemos a instalar PHP-FPM.
 
-<!--ad-->
+<!--more-->
 
 ## Instalar PHP-FPM
 

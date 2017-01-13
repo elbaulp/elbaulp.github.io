@@ -21,7 +21,7 @@ color: "#0097A7"
 
 Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo [bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban][1]. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.
 
-<!--ad-->
+<!--more-->
 
 Existe un plugin llamado <a href="http://akismet.com/" title="Plugins Askimet" target="_blank">Askimet</a> que facilita muchísimo la tarea de detectar comentarios de spam y enviarlos a su correspondiente sección en WordPress. Quizá por eso me ha resultado tan sencillo contruir esta solución para bloquear el acceso a todos los bots que continuamente publican comentarios de este tipo.
 

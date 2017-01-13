@@ -15,7 +15,7 @@ color: "#E64A19"
 
 Consideremos una clase denominada Punto, con tres miembros dato: dos variables enteras x e y que se usan para guardar las coordenadas de un punto de la pantalla, y una variable del tipo char, ch, que se usa para visualizar el punto en una pantalla de texto. Vamos a declarar y definir dos funciones miembro que permitan mostrar u ocultar el punto. De este modo, la clase Punto no solamente sirve para guardar datos, sino también para usar dichos datos. Los pasos para definir la clase, crear un objeto perteneciente a dicha clase y llamar desde dicho objeto a las funciones miembro o métodos de la clase se exponen a continuación.
 
-<!--ad-->
+<!--more-->
 
 ## Definir la clase
 

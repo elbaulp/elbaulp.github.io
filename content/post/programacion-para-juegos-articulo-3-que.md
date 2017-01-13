@@ -11,7 +11,7 @@ color: "#E64A19"
 
 Este artículo hace referéncia a la [Lección 5 - Colores Clave][1].
 
-<!--ad-->
+<!--more-->
 
 # ¿Qué es un pixel?
 
@@ -24,7 +24,7 @@ Uint32 colorkey = SDL_MapRGB( optimizedImage-&gt;format, 0, 0xFF, 0xFF );
 
 Aquí tenemos una línea de código de la [Lección 5 - Colores Clave][1]. Ya sabemos que `SDL_MapRGB()` devuelve un pixel, pero ¿Cómo es la estructura `Uint32` un píxel?
 
-<!--ad-->
+<!--more-->
 
 Bien, Uint32 es lo siguiente:
 

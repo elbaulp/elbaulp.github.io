@@ -23,7 +23,7 @@ Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, prop
 
 Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.
 
-<!--ad-->
+<!--more-->
 
 
 

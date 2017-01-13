@@ -18,7 +18,7 @@ color: "#E64A19"
 
 Intentando implementar la etiqueta `amp-mustache` para el blog encontré muchos problemas, la idea era usar una plantilla para que fuera rellenada desde un [json](/como-mapear-json-a-objetos-java-con-jackson-objectmapper/ "Cómo mapear json a objetos Java con jackson ObjectMapper"). El código era bastante simple:
 
-<!--ad-->
+<!--more-->
 
 ```html
   <amp-list

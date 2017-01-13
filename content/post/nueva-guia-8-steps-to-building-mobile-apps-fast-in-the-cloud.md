@@ -35,7 +35,7 @@ Start turning your ideas into mobile apps with the 8 Steps to Building Mobile Ap
 
 ***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
-<!--ad-->
+<!--more-->
 
 
 

@@ -18,7 +18,7 @@ A lo largo de los años he probado varios gestores de ventanas, como fluxbox, [o
 La <a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration" target="_blank">instalación</a> es muy sencilla. En este artículo voy a profundizar más en los dos aspectos que más problemas me han causado, configurar apropiadamente trayer y establecer fondos de pantalla aleatoriamente.
 
 
-<!--ad-->
+<!--more-->
 
 #### Configurar trayer
 

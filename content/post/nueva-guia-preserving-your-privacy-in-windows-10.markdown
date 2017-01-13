@@ -19,7 +19,7 @@ Learn how to stop Windows 10 from exporting your personal data.
 
 Windows 10 is the fastest, most efficient and powerful Operating System Microsoft has ever created. Fast and responsive, this software is being continually being refined via your user feedback and telemetry.
 
-<!--ad-->
+<!--more-->
 
 This feedback comes directly from your PC.
 

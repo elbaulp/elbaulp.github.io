@@ -14,7 +14,7 @@ Hace tiempo, para la asignatura “Modelos de Computación” desarrollé un con
 
 Por supuesto, más tarde descubrí __pandoc__, y es el programa que uso para todo tipo de conversiones entre formatos :-).
 
-<!--ad-->
+<!--more-->
 
 ## Compilación
 

@@ -25,7 +25,7 @@ Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive 
 
 
 
-<!--ad-->
+<!--more-->
 
 # 1. Preparar el entorno
 

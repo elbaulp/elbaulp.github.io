@@ -17,7 +17,7 @@ color: "#F57C00"
 
 Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila etc, y en ocasiones pueden contener información sensible que no debería poder leer cualquiera. Por ello es buena idea llevarlo encriptado, ya sea por si se pierde o nos lo roban. Hoy veremos cómo podemos cifrar/encriptar nuestro usb con _Veracrypt_.
 
-<!--ad-->
+<!--more-->
 
 ## Descargar e instalar Veracrypt
 

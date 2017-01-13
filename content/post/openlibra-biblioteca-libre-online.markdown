@@ -21,7 +21,7 @@ Hace unos años, concretamente 5, un compañero bloggero lanzaba [OpenLibra: La 
 
 Por aquellos entonces, con tan solo un mes de vida, y unas pocas visitas al día, su catálogo se limitaba a unos 50 títulos online, casi todos manuales universitarios. A día de hoy, el proyecto ha continuado creciendo y ya cuenta con casi 3500 libros clasificados en más de 30 categorías. Todos bajo licencias libres y en descarga directa.
 
-<!--ad-->
+<!--more-->
 
 Yo contribuí a esta biblioteca solicitando a unos profesores de mi facultad que subieran sus apuntes de Fundamentos del Software. Accedieron y, desde entonces ese material está [disponible para aquel](https://openlibra.com/es/book/practicas-de-fundamentos-de-software) que tenga ganas de aprender y no pertenezca necesariamente a la facultad.
 

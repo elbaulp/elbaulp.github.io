@@ -18,7 +18,7 @@ color: "#f05033"
 
 Todo aquel que use [git](/mini-tutorial-y-chuleta-de-comandos-git/ "Tutorial de Git") sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los _alias_, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos _alias_ útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos.
 
-<!--ad-->
+<!--more-->
 
 ## git ec
 

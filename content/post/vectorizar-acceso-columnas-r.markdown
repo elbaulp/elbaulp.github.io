@@ -21,7 +21,7 @@ color: "#E64A19"
 
 En unas prácticas de [Aprendizaje automático](/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/ "Libros sobre Aprendizaje Automático") para la facultad en las que usamos R. Me surgió un problema intentando vectorizar el acceso a un _Data set_ por columnas, así que pregunté en _StackOVerflow_.
 
-<!--ad-->
+<!--more-->
 
 El objetivo era dado un _data set_ relleno de 1 y -1, cambiar el valor de un 10% de unos a -1, y de un 10% de -1 a 1. Los datos eran algo así:
 

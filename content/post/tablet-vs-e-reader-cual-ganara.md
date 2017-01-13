@@ -15,7 +15,7 @@ color: "#F57C00"
 > Antes de comenzar con su artículo, y ya que está relacionado con el tema, me gustaría recomendar a los lectores un artículo que leí hace poco en **Scientific American** sobre un estudio que ha revelado que nuestro cerebro recuerda mejor los textos leídos en papel que los leídos en versión digital. El artículo en cuestión es <a title="The Reading Brain in the Digital Age: The Science of Paper versus Screens" href="http://www.scientificamerican.com/article.cfm?id=reading-paper-screens&page=2" target="_blank">The Reading Brain in the Digital Age: The Science of Paper versus Screens</a>. A continuación, el artículo de Gloria.
 
 Hoy en día, las tablets y los e-Readers son prácticamente idénticos en cuanto a apariencia exterior. Pero, siendo tan iguales, ¿cuál de los dos sobrevivirá al avance de la tecnología? Veamos las principales diferencias:
-<!--ad-->
+<!--more-->
 
 ### Software
 

@@ -30,7 +30,7 @@ He usado el “**Nombre de Usuario**” como el nombre asociado a la clave. Perd
 
 Empecemos:
 
-<!--ad-->
+<!--more-->
 
 # Crear una clave
 

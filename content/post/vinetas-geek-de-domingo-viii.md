@@ -17,7 +17,7 @@ color: "#262626"
 ---
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!
 
-<!--ad-->
+<!--more-->
 <div id="gallery-8" class="gallery galleryid-1811 gallery-columns-1 gallery-size-thumbnail">
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">

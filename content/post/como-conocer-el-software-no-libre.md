@@ -18,7 +18,7 @@ Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las
 
 Los pasos a seguir son los siguientes:
 
-<!--ad-->
+<!--more-->
 
 Instalamos el programa:
 

@@ -18,7 +18,7 @@ color: "#262626"
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
-<!--ad-->
+<!--more-->
 <div id="gallery-9" class="gallery galleryid-1825 gallery-columns-1 gallery-size-thumbnail">
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">

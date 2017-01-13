@@ -19,7 +19,7 @@ wxMaxima encontró un error durante la carga ó Failed to convert file to Unicod
 
 Que indica que wxmaxima ha encontrado un error intentando convertir el fichero a Unicode (utf-8). Para solucionar el problema deberemos convertir manualmente el fichero a utf-8. Basta con seguir los siguientes pasos:
 
-<!--ad-->
+<!--more-->
 
 ### Resolver el error &#8216;wxMaxima encontró un error durante la carga&#8217;
 

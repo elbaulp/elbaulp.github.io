@@ -20,7 +20,7 @@ color: "#F57C00"
 
 > Quizá te interese el artículo [20 ejemplos de __iptables__ para SysAdmins novatos,](/20-ejemplos-de-iptables-para-sysadmins/ "20 ejemplos de iptables para SysAdmins novatos") u otro de los múltiples artículos sobre [iptables disponibles](/tag/#iptables "Artículos etiquetados con iptables").
 
-<!--ad-->
+<!--more-->
 
 En pocas palabras:
 

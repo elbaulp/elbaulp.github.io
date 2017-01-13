@@ -27,7 +27,7 @@ Por la frecuencia con las que se realizaban las peticiones debía ser un ataque 
 
 Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:
 
-<!--ad-->
+<!--more-->
 
 ```bash
 iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix "IP DROP SPOOF A:"

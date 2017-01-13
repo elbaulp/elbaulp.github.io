@@ -21,7 +21,7 @@ Los componentes de las aplicaciones son esenciales para una aplicación android.
 
 Hay cuatro tipos distintos de componentes. Cada tipo es para un propósito en concreto y tiene un ciclo de vida distinto, que define como se crea y destruye el componente.
 
-<!--ad-->
+<!--more-->
 
 A continuación los cuatro tipos de componentes:
 

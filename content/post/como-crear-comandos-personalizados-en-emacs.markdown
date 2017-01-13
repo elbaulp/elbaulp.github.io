@@ -19,7 +19,7 @@ Hace unos meses que comencé a usar _emacs_ como editor predeterminado, y la ver
 
 Una función que uso mucho en _emacs_ es `(query-replace-regexp)`, la cual permite buscar y reemplazar un texto en base a una [expresión regular](/tags/#regex "Posts etiquetados con regex").
 
-<!--ad-->
+<!--more-->
 
 > En este blog ya hemos tratado este tema en varias ocasiones (_Véase [Expresiones regulares multilínea](/expresiones-regulares-multilinea/ "Crear expresiones regulares multilínea") o [una introducción a las expresiones regulares en Python](/introduccion-a-las-expresiones-regulares-en-python/ "Expresiones regulares en python")_).
 

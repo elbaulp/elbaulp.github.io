@@ -17,7 +17,7 @@ En <a target="_blank" href="http://www.storm-consultancy.com/">storm-consultancy
 
 > Walking on water and developing software from a specification are easy if both are frozen -- Edward V Berard
 
-<!--ad-->
+<!--more-->
 
 > It always takes longer than you expect, even when you take into account Hofstadter's Law. -- Hofstadter's Law
 

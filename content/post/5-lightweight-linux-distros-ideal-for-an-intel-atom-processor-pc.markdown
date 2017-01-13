@@ -27,7 +27,7 @@ Here are the top five lean distros to breathe new life into your Atom-powered de
 
 Visita la página [Manuales gratuitos][1] o consulta el [catálogo completo][2].
 
-<!--ad-->
+<!--more-->
 
 [1]: https://elbauldelprogramador.com/manuales-gratuitos/
 [2]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "

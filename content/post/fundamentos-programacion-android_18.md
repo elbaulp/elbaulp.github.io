@@ -22,7 +22,7 @@ Android va destruyendo componentes inactivos para liberar memória, pero los elm
   * Si aún necesita más memoria, elimina los procesos pausados.
   * Si con esto sigue necesitando, finalmente elimina el proceso en primer plano.
 
-<!--ad-->
+<!--more-->
 
 Es muy importante implementar bien los métodos de estado, para evitar perden información.
 

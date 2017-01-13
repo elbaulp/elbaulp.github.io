@@ -20,7 +20,7 @@ La donación se haría mediante paypal, pulsando en el botón negro de la derech
 
 Como adelando, os dejo el [índice del pdf][4], al que aún le faltan por añadir los siguientes temas.
 
-<!--ad-->
+<!--more-->
 
 * [Programación Android: Recursos compilados y no compilados](https://elbauldelprogramador.com/programacion-android-recursos)
 * [Programación Android:Recursos - Arrays de strings](https://elbauldelprogramador.com/programacion-android-recursos-arrays-de)

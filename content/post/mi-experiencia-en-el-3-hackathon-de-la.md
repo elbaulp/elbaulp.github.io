@@ -19,7 +19,7 @@ Estos últimos cuatro días, (Viernes, Sábado, Domingo y Lunes) he participado 
 El viernes se presentaron los proyectos, de los cuales lo participantes debían elegir uno con el que colaborar a lo largo del Hackathon. Paso a nombrarlos a continuación:
 
 
-<!--ad-->
+<!--more-->
 
   1. <a target="_blank" href="http://blog.georemindme.com/es/">GeoRemindMe</a>, de Rubén Dugo y Raúl Ortega
   2. <a target="_blank" href="http://dafcollage.wordpress.com/">DAF-Collage</a>, Javier Rodríguez y Simeón Ruiz.

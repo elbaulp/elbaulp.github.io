@@ -58,7 +58,7 @@ Y justo al inicio de la sección Salida del programa esto otro:
 
 Este sería el resultado final:
 
-<!--ad-->
+<!--more-->
 
 ```latex
 \newpage

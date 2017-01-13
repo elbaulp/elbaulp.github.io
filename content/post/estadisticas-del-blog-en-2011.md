@@ -17,7 +17,7 @@ En esta entrada voy a dar a conocer los datos estadísticos del blog en este pr�
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="281" width="400" src="https://4.bp.blogspot.com/-EMdVRpJjx2w/TvuRkE82FhI/AAAAAAAACBA/tYkT8PSbBmo/s400/Screenshot.png"></amp-img>
 </figure>
 
-<!--ad-->
+<!--more-->
 
 ### Por país
 

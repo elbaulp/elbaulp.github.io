@@ -15,7 +15,7 @@ color: "#009688"
 
 SQL admite una variada gama de tipos de datos para la información almacenada en las tablas, los tipos de datos pueden ser numéricos, alfanuméricos, de fecha o booleanos. Segun el gestor de base de datos que usemos, los tipos de datos varían. En la actualidad casi todos los gestores soportan un nuevo tipo de dato. BLOB, usado para almacenar archivos, imagenes etc.
 
-<!--ad-->
+<!--more-->
 
 En la siguiente tabla se muestran los tipos de datos.
 

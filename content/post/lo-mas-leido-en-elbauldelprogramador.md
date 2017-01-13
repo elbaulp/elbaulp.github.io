@@ -14,7 +14,7 @@ Con esta entrada os dejo lo más leido del més en el blog, junto con algunos da
 
 ##### Entradas
 
-<!--ad-->
+<!--more-->
 
   * [Humor gráfico - Informáticos, Programadores, geek&#8230; - 9GAG.COM][1]
   * [Chistes de informaticos - www.desmotivaciones.es][2]

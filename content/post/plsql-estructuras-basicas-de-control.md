@@ -18,7 +18,7 @@ Como PL/SQL es un lenguaje 3GL, cuenta con las estructuras típicas de control d
 
 ## Bifurcaciones condicionales:
 
-<!--ad-->
+<!--more-->
 
 ### IF
 

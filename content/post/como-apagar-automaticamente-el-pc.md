@@ -20,7 +20,7 @@ sudo apt-get install sentinella
 
 Sentinella aparecerá en el menu “Sistema” del escritorio. Si lo lanzamos veremos algo parecido a esto:
 
-<!--ad-->
+<!--more-->
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="457" width="655" src="https://1.bp.blogspot.com/-Ti5_cz6URsM/TbqiIheW6YI/AAAAAAAAAcw/mDH3EbaI50E/s800/R1vvF.png"></amp-img>

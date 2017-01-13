@@ -15,7 +15,7 @@ Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" width="460" height="430" src="https://4.bp.blogspot.com/-1bmgsE8XmgI/TvsBKFmmqNI/AAAAAAAAB-g/5QxN3W_m1vE/s1600/eternalwar.jpg"></amp-img>
 </figure>
-<!--ad-->
+<!--more-->
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" width="460" height="539" src="https://2.bp.blogspot.com/-uBOjIVp-O7g/TvsBJJ7ID0I/AAAAAAAAB90/813_kDaOaYk/s1600/892124_460s.jpg"></amp-img>
 </figure>

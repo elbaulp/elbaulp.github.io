@@ -18,7 +18,7 @@ A lo largo de varios post(enlazados entre ellos), vamos a ir viendo las distinta
 La instrucción [DML][1] más utilizada es la de consulta de datos SELECT. Su función
 principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia es capaz de realizar las siguientes funciones:
 
-<!--ad-->
+<!--more-->
 
 * Obtener datos para la creación de una tabla.
 * Realizar operaciones estadísticas.

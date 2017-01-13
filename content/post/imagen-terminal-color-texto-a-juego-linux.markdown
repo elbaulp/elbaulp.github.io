@@ -16,7 +16,7 @@ color: "#2196F3"
 
 Seguramente seas una de esas personas que pasan mucho tiempo delante del ordenador con una o varias shells abiertas. De hecho, seguramente tengas más que visto el fondo negro con letras blancas, o el estilo de terminal que pusiste hace tiempo,  porque cambiarlo todos los días no es el hobbie de nadie. Pero ¿y si se cambiara sólo?¿ y si pudieras poner tus imágenes favoritas de fondo del terminal, con un color de texto que no desentone con tu imágen  y tú no tuvieras que hacer nada?
 
-<!--ad-->
+<!--more-->
 
 Aquí os quiero contar como se me ocurrió hacerlo a mí, con un script en bash  y así escapar de la rutina de estilo de las shells.
 

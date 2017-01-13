@@ -25,7 +25,7 @@ color: "#0097A7"
 
 En éste último artículo se verá cómo realizar optimizaciones al servidor web nginx, PHP y se cubrirá la instalación del sistema de caches APC y el módulo Page Speed de Google.
 
-<!--ad-->
+<!--more-->
 
 ## Optimizando
 

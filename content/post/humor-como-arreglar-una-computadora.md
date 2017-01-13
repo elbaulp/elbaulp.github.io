@@ -16,7 +16,7 @@ color: "#262626"
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="800" width="428" src="https://1.bp.blogspot.com/-nZA60Hrzepo/TdErBWlgr8I/AAAAAAAAAfA/p7DoPhDerdQ/s800/linux.png"></amp-img>
 </figure>
 
-<!--ad-->
+<!--more-->
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="589" width="399" src="https://3.bp.blogspot.com/-HckHsExHyL8/TdErA2OYrfI/AAAAAAAAAew/W3RLpuvwUUE/s800/windows.png"></amp-img>

@@ -17,7 +17,7 @@ color: "#689F38"
 
 Hacía mucho tiempo que tenía pendiente escribir este artículo. Años atrás tuve que crear un curso de Android básico para impartirlo en una academia. Mi idea era integrarlo con el [curso de Android](/curso-programacion-android/ "Curso de Android") disponible en el blog desde hace unos años, pero como suele pasar, se va dejando y dejando... Aunque no esté publicando en el blog estos meses, sí que estoy escribiendo bastante (El curso de criptografía por ejemplo).
 
-<!--ad-->
+<!--more-->
 
 Aprovechando que curso este año una asignatura llamada _NPI_ (Nuevos Paradigmas de la Interacción)  y el último trabajo trata sobre Android, he pensado en reutilizar este curso que escribí para la academia y así de paso ponerlo a disposición de mis compañeros, por si les puediera resultar de utilidad.
 

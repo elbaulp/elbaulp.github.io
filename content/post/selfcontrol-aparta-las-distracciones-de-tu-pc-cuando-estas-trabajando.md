@@ -49,7 +49,7 @@ sudo dpkg --install selfcontrol_0.9-1_all.deb
 
 Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:
 
-<!--ad-->
+<!--more-->
 
 
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Selfcontro1" src="/assets/img/2012/08/Selfcontro11.png" alt="" width="415px" height="378px" />][2]

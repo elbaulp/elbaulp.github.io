@@ -26,7 +26,7 @@ color: "#689F38"
 Para que nuestras aplicaciones sean funcionales, necesitamos responder a los eventos que el usuario dispare al interactuar con nuestro programa, en Android, esto se consigue mediante los ***Listeners***, que serán llamados cada vez que se produzca un evento.
 
 
-<!--ad-->
+<!--more-->
 
 Por ejemplo, un listener muy común será ***setOnClickListener()***, que responderá cada vez que se pulse sobre la vista a la que se lo aplicamos, como un botón, o una imágen. Hay muchos tipos de listener, ***setOnKeyListener()*** (Para eventos de teclado), ***setOnItemClicklistener()*** (Para eventos al seleccionar un elemento de una lista) etc etc.
 

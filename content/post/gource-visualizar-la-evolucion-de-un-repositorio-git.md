@@ -20,7 +20,7 @@ color: "#F57C00"
 ---
 Hace unas semanas hablé de [logstalgia][1], que visualiza las visitas a una web en forma del juego Pong. Hoy hablo de *Gource*, herramienta similar que visualiza la evolución de un repositorio en [git][2].
 
-<!--ad-->
+<!--more-->
 
 # Instalación de Gource
 

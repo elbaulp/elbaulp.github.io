@@ -69,7 +69,7 @@ color: "#F57C00"
 <div>
 </div>
 <div>
-                              Todo es totalmente <b>GRATUITO</b>, el horario será:<br /><!--ad-->
+                              Todo es totalmente <b>GRATUITO</b>, el horario será:<br /><!--more-->
 </div>
 <div>
 </div>

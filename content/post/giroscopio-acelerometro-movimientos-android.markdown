@@ -18,7 +18,7 @@ color: "#D32F2F"
 - [GPS QR](/programar-navegador-gps-android)
 - [Photo Gesture](/patron-desbloqueo-android)
 
-<!--ad-->
+<!--more-->
 
 Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, [Android1](/curso-programacion-android/ "Curso de Android"), [Android2](/android/ "Curso nuevo de Android")
 {: .notice-info }

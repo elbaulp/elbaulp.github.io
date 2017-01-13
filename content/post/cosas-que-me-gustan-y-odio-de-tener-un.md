@@ -13,7 +13,7 @@ color: "#262626"
     <a href="https://3.bp.blogspot.com/-CJyM4IL1WA0/TkvvBHtN1TI/AAAAAAAAAuI/7_KZkLlzAok/s1600/1.png"><amp-img width="581" height="494" layout="responsive"  src="https://3.bp.blogspot.com/-CJyM4IL1WA0/TkvvBHtN1TI/AAAAAAAAAuI/7_KZkLlzAok/s1600/1.png"></amp-img></a>
 </figure>
 
-<!--ad-->
+<!--more-->
 
 <figure>
     <a href="https://2.bp.blogspot.com/-aPJ-XUYzKx8/TkvvBRxT-jI/AAAAAAAAAuQ/rrEYvG2Lttc/s1600/3.png"><amp-img width="588" height="767" layout="responsive"  src="https://2.bp.blogspot.com/-aPJ-XUYzKx8/TkvvBRxT-jI/AAAAAAAAAuQ/rrEYvG2Lttc/s1600/3.png"></amp-img></a>

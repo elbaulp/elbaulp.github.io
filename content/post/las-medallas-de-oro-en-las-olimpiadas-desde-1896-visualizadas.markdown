@@ -24,7 +24,7 @@ __Olympic Feathers__, es una _visualización de datos_ interactiva que muestra l
 
 Inicialmente Nadieh tenía pensado visualizar cada una de las 56 disciplinas como una “pluma” y usar el interior de la pluma para colocar todas las medallas en función de la edición de los juegos y género del ganador. Al final la idea del diseño usando forma de pluma no cuajó, pero lo mantuvo en el nombre del proyecto (_“Olympic feathers”_ o Plumas Olímpicas).
 
-<!--ad-->
+<!--more-->
 
 ## Qué herramientas usó
 

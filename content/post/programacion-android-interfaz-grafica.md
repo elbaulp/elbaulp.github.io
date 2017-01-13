@@ -20,7 +20,7 @@ color: "#689F38"
 
 Todos los componenetes de la interfaz de usuario de Android descienden de la clase ***View.*** Dichos objetos están organizados en forma de árbol y pueden contener nuevos objetos View, permitiendo crear interfaces muy completas.
 
-<!--ad-->
+<!--more-->
 
 
 

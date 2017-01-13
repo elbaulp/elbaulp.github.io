@@ -11,7 +11,7 @@ color: "#F57C00"
 ---
 Recientemente hemos cerrado un acuerdo con __Oja.la__, plataforma de educación digital, con mentores personales y más de __320 cursos__ sobre desarrollo en Android, para ofrecerte, por ser lector de El Baúl del Programador, un __descuento del 50%__ durante los próximos __5 días__ para cualquier curso elegido.
 
-<!--ad-->
+<!--more-->
 
 Para aprovechar el descuento inscríbe tus datos aquí y un asesor de Oja.la se comunicará contigo: [REGISTRARSE AQUÍ](https://oja.la/l/bauldelprogramador?utm_source=Comunidad%3AElBauldelProgramador&utm;_medium=Convocatoria&utm;_campaign=24%2F09%2F2015)
 

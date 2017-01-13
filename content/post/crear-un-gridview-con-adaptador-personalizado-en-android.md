@@ -27,7 +27,7 @@ Un `GridView` es una `AdapterView` capaz de organizar datos en forma de cuadricu
 
 Si sigues leyendo este artículo aprenderás a crear un `GridView` cuyos elementos sean imágenes en miniatura. Al ser seleccionadas el usuario visualizará la imagen en tamaño real. Este ejemplo comprende la creación un layout efectivo para un GridView, la implementación de un [adaptador personalizado][1] con elementos [ImageView][2] y la comunicación con [Intents][3] para acceder a los detalles completos de cada imagen.
 
-<!--ad-->
+<!--more-->
 
 ## Diseño de un GridView en Android
 

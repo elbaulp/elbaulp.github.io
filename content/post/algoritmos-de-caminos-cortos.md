@@ -24,7 +24,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia" width="546px" height="232px" />][1]
 
-<!--ad-->
+<!--more-->
 
 
 &nbsp;

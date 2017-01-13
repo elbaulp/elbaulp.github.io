@@ -34,7 +34,7 @@ color: "#D32F2F"
 
 En estos días he notado un incremento notable en las visitas a un artículo que escribí hace tiempo: [Qué es un NullPointerException y cómo solucionarlo](/que-es-un-nullpointerexception-y-como-solucionarlo/ "Qué es un NullPointerException y cómo solucionarlo"), y todas venían de búsquedas en google. No me explicaba el por qué este interés por los `NullPointerException` y su relación con Facebook hasta que leí un artículo en _Science Alert_.
 
-<!--ad-->
+<!--more-->
 
 Resumiendo a grosso modo, resulta que un desarrollador ha tenido un serio conflicto con una empresa llamada _kik_ al publicar un paquete en _npm_ bajo el mismo nombre, lo cual impedía a la empresa registar sus propios paquetes usando su nombre de empresa. Tras varios correos entre la empresa y el autor (_Koçulu_) sin llegar a un acuerdo, _npm_ tuvo que intervenir y actuar en favor de la empresa, obligando por tanto a _Koçulu_ a cambiar el nombre de su paquete.
 

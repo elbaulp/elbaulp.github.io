@@ -16,4 +16,4 @@ color: "#262626"
 
 Por supuesto no se os debe ocurrir ejecutar este comando si no quereis quedaros sin SO.
 
-<!--ad-->
+<!--more-->

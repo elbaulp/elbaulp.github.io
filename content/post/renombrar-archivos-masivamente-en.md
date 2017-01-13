@@ -20,7 +20,7 @@ Si queremos renombrar todos los archivos para eliminar la página web del nombre
 Por ejemplo, pongamos que los archivos son los siguientes:
 
 
-<!--ad-->
+<!--more-->
 
 ```bash
 hkr@hkr:~/Desktop/RAP/d$ ls

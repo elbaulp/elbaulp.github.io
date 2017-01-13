@@ -12,7 +12,7 @@ color: "#E64A19"
 
 Recientemente necesité ejecutar el comando `diff` sobre la salida de otros dos comandos. Es decir, `diff` recibe como parámetros los ficheros sobre los que se quiere mostrar las diferencias, pero yo buscaba hacer un `diff` a la salida de dos comandos, no dos ficheros. Un ejemplo:
 
-<!--ad-->
+<!--more-->
 
 ```bash
 

@@ -17,7 +17,7 @@ color: "#F57C00"
 
 Prácticamente hemos terminado este 2015. Llegadas estas fechas, me gusta acudir a las estadísticas para sacar conclusiones y ver qué artículos han gustado más. Abajo se muestra una lista con los 10 más visitados. ¿Y a tí, qué artículo del blog ha sido el que más te ha gustado?, déjanos un comentario con tu opinión.
 
-<!--ad-->
+<!--more-->
 
 # #1 Códigos secretos y ocultos para Android
 

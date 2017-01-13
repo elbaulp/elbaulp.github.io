@@ -20,7 +20,7 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
 <a href="http://css-tricks.com/thispagedoesntexist"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://media02.hongkiat.com/error_404_01/csstricks.jpg" title="60 Really Cool and Creative Error 404 Pages" alt="csstricks 60 Really Cool and Creative Error 404 Pages" /></a>
 </p>
 <p>
-<br /><!--ad-->
+<br /><!--more-->
 </p>
 <p>
 <strong><a href="http://www.tinsanity.net/404.shtml">Tinsanity</a></strong>

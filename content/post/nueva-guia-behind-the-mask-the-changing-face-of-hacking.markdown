@@ -21,7 +21,7 @@ Headlines featuring large-scale cyber breaches at Target, Home Depot, Sony Pictu
 
 This new report will help you learn more about hackers and how they work, which can help you better plan and deploy your own defenses. Read it to understand:
 
-<!--ad-->
+<!--more-->
 
 - The attack methods hackers use
 - Why simple approaches like phishing still work

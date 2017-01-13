@@ -15,7 +15,7 @@ color: "#689F38"
 
 Ya he hablado otras veces sobre este proyecto, que se trata ni más ni menos que del proyecto de fin de curso, [publiqué un vídeo hace algún tiempo][1], pero aún le quedaba mucho por mejorar, sobre todo la interfaz, visualmente parece que el programa no tiene mucho trabajo, pero si que lo tiene, ya que todo se envía y recibe de una base de datos. A continuación voy a explicar un poco su funcionamiento:
 
-<!--ad-->
+<!--more-->
 
 La explicación es un poco extensa, pero he querido describir lo mejor posible el funcionamiento de la aplicación.
 

@@ -29,7 +29,7 @@ El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo má
     <a id="androidCourseIndex" href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar Índice</a>
 </div>
 
-<!--ad-->
+<!--more-->
 
 <del datetime="2014-02-08T09:06:51+00:00">El documento lo enviaré a todo aquel que haga una donación de <b>al menos 1.5 euros (Paypal se queda con 40 céntimos)</b></del>.
 

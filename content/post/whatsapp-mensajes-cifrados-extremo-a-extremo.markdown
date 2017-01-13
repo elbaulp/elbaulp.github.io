@@ -26,7 +26,7 @@ Seguro que muchos últimamente os preguntáis qué significa ese mensaje que apa
 
 Para los curiosos, en el podcast _[Security Now!](/security-now/)_, episodio 555 Steve explicó el protocolo que han implementado para mantener las conversaciones y llamadas de __WhatsApp__ seguras. He pensado que puede ser de interés para los lectores del blog, así que lo he traducido. Comencemos:
 
-<!--ad-->
+<!--more-->
 
 ## Resumen
 

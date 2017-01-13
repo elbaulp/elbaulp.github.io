@@ -24,7 +24,7 @@ color: "#689F38"
 
 En [Programación Android: Interfaz gráfica - Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.
 
-<!--ad-->
+<!--more-->
 
 Para explicar el funcionamiento nos vamos a basar en un ejemplo que listará las distintas versiones de Ubuntu.
 

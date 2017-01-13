@@ -20,7 +20,7 @@ color: "#00BCD4"
 
 Los lectores habituales sabrán que suelo escuchar el programa de radio *[Security Now!][1]*, la semana pasada, **Steve Gibson**, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención **SQRL** (*Secure [QR][2] Login*) y ha tenido bastante éxito en la comunidad, tanto que hasta el [W3][3] se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.
 
-<!--ad-->
+<!--more-->
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/10/sqrl-login-sample.png" alt="SQRL y la idea de elminar el uso de usuario y contraseña en internet" width="400px" height="199px" />
 
 El sistema **SQRL** es bastante simple, cuando se desea identificarse en un sitio web mediante **SQRL**, aparecerá un código, entonces:

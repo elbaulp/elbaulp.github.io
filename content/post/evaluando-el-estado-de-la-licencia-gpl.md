@@ -22,7 +22,7 @@ Aslett notó que el descenso de las licencia GPL y licencias restrictivas comenz
 
 > No sé si GPLv3 ha sido un factor importante en el cambio, pero no tener una licencia actualizada para funcionar como GPLv2 no resulta de gran ayuda.
 
-<!--ad-->
+<!--more-->
 
 Otro hilo de la discusión fue sobre la &#8220;applification&#8221; del software en los markets. Red Hat&#8217;s Jan Wildeboer inició así la conversación sobre este tema:
 

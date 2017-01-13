@@ -13,7 +13,7 @@ color: "#F57C00"
 
 MasterBranch es una web para desarrolladores y empresarios que buscan buenos programadores. Es un lugar en el que los desarrolladores pueden crear su perfil, el cual se actualiza automáticamente a través de la actividad de su actividad en proyectos de código libre o privativo, y para los empresarios es un lugar donde encontrar cadidatos para crear sus aplicaciones mirando las habilidades de los desarrolladores.
 
-<!--ad-->
+<!--more-->
 
 Hace algún tiempo me registré en esta web que me parece muy interesante, ya que permite reunir todos los proyectos en los que participas y, basandose en ellos elabora tus habilidades en los distintos lenguajes de programación.
 

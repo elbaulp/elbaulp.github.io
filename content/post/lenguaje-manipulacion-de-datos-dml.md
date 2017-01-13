@@ -21,7 +21,7 @@ Las instrucciones de actualización son aquellas que no devuelven ningún regist
 * **DELETE**: permite eliminar registros de una tabla.
 * **UPDATE**: permite modificar registros de una tabla.
 
-<!--ad-->
+<!--more-->
 
 
 

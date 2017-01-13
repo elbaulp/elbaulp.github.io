@@ -22,7 +22,7 @@ Así que la primera solución que se me ocurrió fue hacer que `portage` trabaje
 
 # Cambiar el fichero /etc/portage/make.conf
 
-<!--ad-->
+<!--more-->
 
 Para ello necesitamos decirle a `portage` que queremos cambiar el directorio por defecto, para ello editamos el fichero `/etc/portage/make.conf` y añadimos las variables `PORTDIR, DISTDIR` y `PKGDIR` apuntando al directorio deseado, en mi caso `/home/hkr/ssd2/portage`:
 

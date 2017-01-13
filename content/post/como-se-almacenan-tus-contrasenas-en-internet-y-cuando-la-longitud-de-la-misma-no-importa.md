@@ -30,7 +30,7 @@ Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo la
 
 Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.
 
-<!--ad-->
+<!--more-->
 
 ### Método uno: Contraseñas en texto plano
 

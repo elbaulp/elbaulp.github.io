@@ -46,7 +46,7 @@ HTTP2 se compone principalmente de (A lo largo del artículo se profundizará en
 
 Empecemos a profundizar en cada uno de éstos puntos:
 
-<!--ad-->
+<!--more-->
 
 ## Situación actual
 

@@ -17,7 +17,7 @@ Hace mucho tiempo publiqué una entrada con [chistes informáticos][1], ahora he
     <a href="https://2.bp.blogspot.com/-rUWLl5omr1g/TrEbswj71BI/AAAAAAAABeY/iWHUgrNEWu4/s1600/Postcard.jpg"  ><amp-img layout="responsive" alt="development programming software android technology programmer" width="500" height="394" src="https://2.bp.blogspot.com/-rUWLl5omr1g/TrEbswj71BI/AAAAAAAABeY/iWHUgrNEWu4/s800/Postcard.jpg"></amp-img></a>
 </figure>
 
-<!--ad-->
+<!--more-->
 
 <figure>
     <a href="https://1.bp.blogspot.com/-e0hOeWF-G3M/TrEbtNEBm-I/AAAAAAAABek/r-j9yei102s/s1600/When%2BLife%2BSucks.jpg"  ><amp-img layout="responsive" alt="development programming software android technology programmer" width="700" height="565" src="https://1.bp.blogspot.com/-e0hOeWF-G3M/TrEbtNEBm-I/AAAAAAAABek/r-j9yei102s/s800/When%2BLife%2BSucks.jpg"></amp-img></a>

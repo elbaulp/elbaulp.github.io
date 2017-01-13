@@ -21,7 +21,7 @@ Python is a widely used high-level, general-purpose, interpreted, dynamic progra
 
 In this eBook, we provide a compilation of Python examples that will help you kick-start your own projects. We cover a wide range of topics, from multi-threaded programming to web development with Django. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.
 
-<!--ad-->
+<!--more-->
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Web Code Geeks.
 

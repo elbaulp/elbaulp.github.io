@@ -15,7 +15,7 @@ Independientemente del tipo de recurso (de string y layout son los dos que hemos
 
 La sintaxis que usamos para crear un ID de recurso en un fichero XML se llama resource-reference syntax (sintaxis de referencia a recurso). La sintaxis del atributo id que vimos anteriormente (`@+id/text1`) tiene la siguiente estructura formal:
 
-<!--ad-->
+<!--more-->
 
 ```java
 @[package:]type/name

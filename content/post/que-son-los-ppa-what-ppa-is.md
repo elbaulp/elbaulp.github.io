@@ -15,7 +15,7 @@ Para los usuarios de Ubuntu que no sepan aún lo que son los PPA, a continuació
 
 Fue Canonical el que lanzó este nuevo sistema de paquetes para desarrolladores de software libre. Que permite desarrollar los paquetes mediante grupos de programadores, pero también permite a desarrolladores individuales publicar sus propios proyectos open source.
 
-<!--ad-->
+<!--more-->
 
 Otras de las virtudes de los PPAs, es la enorme libertad de crear los paquetes y poder publicarlos sin necesidad de pedir permiso ni tampoco de estar inscrito en algún proyecto.
 

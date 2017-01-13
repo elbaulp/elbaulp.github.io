@@ -17,7 +17,7 @@ Hemos llegado al fin del temario de base de datos, todo lo que he ido escribiend
 
 Una de las tareas más importantes de las propias de un desarrollador de bases de datos es la de puesta a punto o tuning. Hay que tener en cuenta que las sentencias SQL pueden llegar a ser muy complejas y conforme el esquema de base de datos va creciendo las sentencias son más complejas y confusas. Por es difícil escribir la sentencia correcta a la primera.
 
-<!--ad-->
+<!--more-->
 
 Por todo ello después de tener cada uno de los procesos escrito, hay que pasar por una etapa de tuning en la que se revisan todas las sentencias SQL para poder optimizarlas conforme a la experiencia adquirida.
 

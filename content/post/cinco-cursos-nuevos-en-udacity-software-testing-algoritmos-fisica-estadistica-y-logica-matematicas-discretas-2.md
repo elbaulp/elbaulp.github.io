@@ -23,7 +23,7 @@ color: "#61B38D"
 <a href="http://www.udacity.com/" target="_blank">Udacity</a> sigue mejorando,y a una semana escasa de acabar los [cinco cursos][1] que comenzaron hace siete semanas. Ayer anunciaron en su blog que iban a impartir otros cinco cursos a partir del 25 de Junio. A continuación dejo una descripción de cada uno de los cursos.
 
 
-<!--ad-->
+<!--more-->
 
 
 

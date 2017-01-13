@@ -44,7 +44,7 @@ Hay una amplia gama de frameworks para aplicaciones web disponibles para Linux q
 
 A continuación se muestran 15 de los _Frameworks_ más populares, tanto para webs como para móviles:
 
-<!--ad-->
+<!--more-->
 
 | Frameworks Web y móviles                                                                      | Descripción                                                      |
 | --------------------------------------------------------------------------------------------  | ----------------------------------------------------------------

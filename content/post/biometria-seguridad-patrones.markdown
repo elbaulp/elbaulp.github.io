@@ -28,7 +28,7 @@ El siguiente artículo forma parte de un trabajo en grupo realizado para la asig
 - Biometría aplicada a la seguiridad - Reconocimiento de patrones
 - [Biometría aplicada a la seguiridad - Sistemas biométricos](/sistemas-biometricos "Biometría aplicada a la seguiridad - Sistemas biométricos")
 
-<!--ad-->
+<!--more-->
 
 Reconocimiento de patrones
 --------------------------

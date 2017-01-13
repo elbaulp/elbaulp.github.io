@@ -19,7 +19,7 @@ color: "#009688"
 
 Lo subo a modo de manual para todos.
 
-<!--ad-->
+<!--more-->
 
 
 

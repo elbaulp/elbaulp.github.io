@@ -18,7 +18,7 @@ color: "#E64A19"
 
 Hace poco vimos una [introducción a django][1]. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del [depurador][2]. Hoy veremos cómo depurar una aplicación en Django.
 
-<!--ad-->
+<!--more-->
 
 Vamos a trabajar con la aplicación de ejemplo de la <a href="https://docs.djangoproject.com/en/1.5/intro/tutorial01/" title="Ejemplo aplicación Django" target="_blank">documentación de <strong>Django</strong></a>. La aplicación consiste un sistema de encuestas en las que se puede votar, se puede descargar desde <a href="https://github.com/algui91/djangoTutorialv1.5/" title="Ejemplo Polls Django" target="_blank">este repositorio</a>.
 

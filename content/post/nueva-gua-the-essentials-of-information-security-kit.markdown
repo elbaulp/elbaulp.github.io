@@ -23,7 +23,7 @@ The Essentials of Information Security brings together the latest in information
 
 The following kit contents will help you get the most out of your Information Security research:
 
-<!--ad-->
+<!--more-->
 
 - PC Security Handbook - 2nd Edition
 - Navigating the Threat Landscape: A Practical Guide

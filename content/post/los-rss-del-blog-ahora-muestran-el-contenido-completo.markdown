@@ -24,4 +24,4 @@ Si aún no lo sabías, es posible suscribirse a cada una de las categorías de b
 - En __<a href="/feed-misc" target="_blank" title="Feed Misc">/feed-misc</a>__ se publican todas las [guías gratuítas](/manuales-gratuitos/).
 
 
-<!--ad-->
+<!--more-->

@@ -17,7 +17,7 @@ color: "#F57C00"
 
 De la web de un amigo blogger ([EtnasSoft][1]), me llega la iniciativa Humanstxt Creator. Que trata de:
 
-<!--ad-->
+<!--more-->
 
 > Una iniciativa cuyo objetivo es dar a conocer al equipo de desarrollo que se encuentra detrás de todo proyecto web.
 

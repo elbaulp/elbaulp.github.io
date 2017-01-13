@@ -21,7 +21,7 @@ El código solo detecta si la imagen es PNG, no implementé la lectura de la ima
 
 Veamos primero el .h:
 
-<!--ad-->
+<!--more-->
 
 ```cpp
 /**

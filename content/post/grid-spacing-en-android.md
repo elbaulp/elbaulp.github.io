@@ -29,7 +29,7 @@ La mayoría de interfaces de usuario (en móviles o web) se basan en el concepto
 
 Usar el principio Grid, requiere generalmente que el desarrollador añada algún margen/paddin/espacio extra entre elementos. En efecto, añadir espacio entre elementos ayuda a mantener una separación clara entre bloques mientras se conserva un gran nivel del legibilidad en la interfaz. Todos los desarrolladores [Android][4] están familiarizados con éstos conceptos, y en la mayoría de los casos se solucionan usando características del [framework][5] como *padding* y/o *margin* en las *Views*. Para aislar claramente la lógica del programa de la interfaz, generalmente ésto se hace en los [ficheros XML que definen la interfaz][6]. Si bien éste método funciona cuando la interfaz es estática, puede se complicado para interfaces dinámicas en las cuales hay elementos que se muestran o desaparecen según sea necesario. Éste artículo pretende dar algunos consejos para manejar correctamente interfaces dinámicas basadas en **Grids**.
 
-<!--ad-->
+<!--more-->
 
 ## Ejemplo
 

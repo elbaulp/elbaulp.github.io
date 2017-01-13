@@ -23,7 +23,7 @@ Aquí dejo el código y un vídeo demostrativo, también está disponible en [Gi
     layout="responsive"
     width="480" height="270"></amp-youtube>
 
-<!--ad-->
+<!--more-->
 
 ## Código Fuente
 

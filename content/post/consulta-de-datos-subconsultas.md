@@ -15,7 +15,7 @@ Una subconsulta se puede utilizar en cualquier parte en la que se permita una ex
 
 Una subconsulta puede anidarse dentro de la cláusula `WHERE` o `HAVING` de una instrucción `SELECT`, `INSERT`, `UPDATE` o `DELETE`.
 
-<!--ad-->
+<!--more-->
 
 Se puede disponer de hasta 32 niveles de anidamiento, aunque el límite varía dependiendo de la memoria disponible y de la complejidad del resto de las expresiones de la consulta.
 

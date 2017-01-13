@@ -19,7 +19,7 @@ color: "#009688"
 
 Los disparadores (o triggers) son [bloques de código PL/SQL][1] asociados a una tabla y que se ejecutan automáticamente como reacción a una [operación DML][2] específica (`INSERT`, `UPDATE` o `DELETE`) sobre dicha tabla.
 
-<!--ad-->
+<!--more-->
 
 En definitiva, los disparadores son eventos a nivel de tabla que se ejecutan automáticamente cuando se realizan ciertas operaciones sobre la tabla.
 

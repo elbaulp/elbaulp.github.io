@@ -20,7 +20,7 @@ color: #61B38D
 
 Delve into the world of Git version source control with this compact guide that discusses the features of this popular control system!
 
-<!--ad-->
+<!--more-->
 
 Git is, without any doubt, the most popular version control system. Ironically, there are other version control systems easier to learn and to use, but, despite that, Git is the favorite option for developers, which is quite clarifying about the powerfulness of Git.
 

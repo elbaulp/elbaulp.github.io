@@ -14,7 +14,7 @@ Para quien no lo supiera, el coche de Google que va haciendo fotos a las calles 
 
 Debido a ciertas polémicas con respecto a este tema, google ha dado una solución para que el coche no recoja los datos de geolocalización.
 
-<!--ad-->
+<!--more-->
 
 La solución consiste en añadir al nombre de nuestra red la cadena ***_nomap*** al final. De este modo el coche al pasar detectará esta cadena y la omitirá
 

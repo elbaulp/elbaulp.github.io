@@ -22,7 +22,7 @@ Es un lenguaje de programación JavaScript en la nube que nos permite extender l
 
 Varios ejemplos de uso son:
 
-<!--ad-->
+<!--more-->
 
 * Construir funciones personalizadas para las hojas de Cálculo de Google.
 * Extender ciertas aplicaciones de Google creando menús personalizados y enlazarlos a scripts.

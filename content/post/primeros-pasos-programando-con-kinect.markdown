@@ -52,7 +52,7 @@ public enum JointRelationship
 
 ```
 
-<!--ad-->
+<!--more-->
 
 La relación por defecto usada en el ejemplo se define en el siguiente fichero _XML_
 ```xml

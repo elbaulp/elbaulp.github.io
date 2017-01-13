@@ -39,7 +39,7 @@ Tras buscar un poco el motivo descubrí que se debía a que me estaba saltando a
 
 En resumen, todo el proceso queda como sigue:
 
-<!--ad-->
+<!--more-->
 
 ```bash
 telnet smtpin.mx.facebook.com smtp

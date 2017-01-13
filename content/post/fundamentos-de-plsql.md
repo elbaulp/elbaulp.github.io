@@ -15,7 +15,7 @@ PL/SQL (Procedural Language/Structured Query Language) apareció por primera vez
 
 Cuando se desea realizar una aplicación completa para el manejo de una base de datos relacional, resulta necesario utilizar alguna herramienta que soporte la capacidad de consulta del SQL y la versatilidad de los lenguajes de programación tradicionales. PL/SQL es el lenguaje de programación que proporciona Oracle para extender el SQL estándar con otro tipo de instrucciones.
 
-<!--ad-->
+<!--more-->
 
 
 Para poder trabajar necesitaremos tener los siguientes elementos:

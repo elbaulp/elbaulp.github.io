@@ -28,7 +28,7 @@ Empaquetar tus problemas y darles un nombre puede ayudarte a gestionar y tal vez
 
 ¿Tienes otro dilema? Agrégalo a los comentarios.
 
-<!--ad-->
+<!--more-->
 
 
 # Dilema n° 1: Cuándo decir sí a nuevos requerimientos

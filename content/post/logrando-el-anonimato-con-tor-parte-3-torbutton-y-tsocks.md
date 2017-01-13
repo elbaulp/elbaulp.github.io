@@ -41,7 +41,7 @@ Podemos además descargar el código fuente de Tor Browser Bundle de <a href="ht
 
 Al iniciar Firefox, aparecerá la siguiente pantalla:
 
-<!--ad-->
+<!--more-->
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="081712_1515_AchievingAn1" src="/assets/img/2013/04/081712_1515_AchievingAn1.png" width="300px" height="114px"></amp-img>

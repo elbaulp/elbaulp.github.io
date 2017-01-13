@@ -25,7 +25,7 @@ A la hora de guardar un bloque de código hay que tener en cuenta ciertas normas
 - La palabra reservada `DECLARE` desaparece.
 - Podremos crear procedimientos y funciones. Los procedimientos no podrán retornar ningún valor sobre su nombre, mientras que las funciones deben retornar un valor de un tipo de dato básico.
 
-<!--ad-->
+<!--more-->
 
 Un procedimiento `[almacenado]` es un subprograma que ejecuta una acción específica y que no devuelve ningún valor por si mismo, como sucede con las funciones. Un procedimiento tiene un nombre, un conjunto de parámetros (opcional) y un bloque de código. Para crear un procedimiento (stored procedure: procedimiento almacenado) usaremos la siguiente sintaxis:
 

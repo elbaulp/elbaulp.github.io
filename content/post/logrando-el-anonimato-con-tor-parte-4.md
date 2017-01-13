@@ -29,7 +29,7 @@ Hemos visto que la red Tor está constituida de nodos Tor, a través de los cual
 
 Pero cuando intentamos configurar un Tor Relay, entonces el proyecto Tor se pone realmente interesante y no podemos prescindir de la terminología. Aquí están las expresiones más frecuentemente utilizadas (manenemos la expresión en inglés por su normal utilización, y su traducción al español):
 
-<!--ad-->
+<!--more-->
 
 ### **Tor Node**:
 

@@ -15,7 +15,7 @@ Anteriormente dijimos que un bloque de código puede contener una sección denom
 
 Una excepción es una situación especial dentro de la ejecución de un programa, que puede ser capturada para asignar un nuevo comportamiento. Una excepción puede ser un error de ejecución (una división entre 0) o cualquier otro tipo de suceso.
 
-<!--ad-->
+<!--more-->
 
 Las excepciones deben ser declaradas dentro de la sección `DECLARE`, como si de una variable se tratase:
 

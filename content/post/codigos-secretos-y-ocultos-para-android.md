@@ -24,7 +24,7 @@ Si te gusta jugar con tu <a href="/curso-programacion-android/" title="Curso And
 He probado estos códigos yo mismo, no asumo ninguna responsabilidad si algún código causa algún problema. Este artículo es solo para usuarios avanzados.
 {: .notice }
 
-<!--ad-->
+<!--more-->
 
 - **\*#\*#4636#\*#\***
 

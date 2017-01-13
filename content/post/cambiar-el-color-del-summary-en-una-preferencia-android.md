@@ -18,7 +18,7 @@ color: "#689F38"
 ---
 En un artículo anterior vimos [cómo crear un diálogo personalizado en las preferencias][1] para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el *summary* que aparece debajo del título de una preferencia.
 
-<!--ad-->
+<!--more-->
 
 ### Obteniendo el Layout por defecto
 

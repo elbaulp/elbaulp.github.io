@@ -41,7 +41,7 @@ CREATE TABLE nombre tabla
 [tablespace nombre-tablespace];
 ```
 
-<!--ad-->
+<!--more-->
 
 Donde:
 

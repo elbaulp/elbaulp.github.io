@@ -19,7 +19,7 @@ Para los impacientes, este es el resumen extremo del artículo:
 - Se diferencian en la información que cifran, _metadatos_ que almacenan y qué es lo que almacenan en sus bases de datos. Es esto último lo que en teoría el gobierno puede fisgonear.
 - Para quien busque la total privacidad y seguridad, no hay más opción que _Signal_.
 
-<!--ad-->
+<!--more-->
 
 # WhatsApp
 

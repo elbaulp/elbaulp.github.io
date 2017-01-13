@@ -20,7 +20,7 @@ color: "#2196F3"
 ---
 Ya mostré cómo <a href="/renombrar-archivos-masivamente-en/" target="_blank">Renombrar archivos masivamente en GNU/Linux</a>. Hoy voy a enseñar un pequeño script que he tenido que crear para pasarme unos cuantos archivos en mp4 a mp3.
 
-<!--ad-->
+<!--more-->
 
 Es bastante sencillo a la vez que útil:
 

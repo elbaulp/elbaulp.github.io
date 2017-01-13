@@ -22,7 +22,7 @@ En ocasiones hay que mostrar mensajes al usuario para informarle del estado de l
 Android dispone de tres tipos de notificaciones:
 
 
-<!--ad-->
+<!--more-->
 
   * Notificaciones Toast.
   * Notificaciones en la barra de estado.

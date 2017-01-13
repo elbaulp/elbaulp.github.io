@@ -32,7 +32,7 @@ En esta aplicación se lee un destino mediante códigos QR, tras esto, se puede 
 <a href="/assets/img/npi/gpsQr.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/npi/gpsQr.png" title="GPSQR" alt="GPSQR" width="338px" height="600px" /></a>
 <span class="image-credit">GPSQR</span>
 </figure>
-<!--ad-->
+<!--more-->
 
 El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que usa una simplificación de la librería _Zxing_. Cuando se escanea una localización, veremos lo siguiente:
 

@@ -11,7 +11,7 @@ color: "#E64A19"
 
 Veamos la diferencia entre las siguientes declaraciones de la [clase Punto][1]:
 
-<!--ad-->
+<!--more-->
 
 ```cpp
 class Punto{

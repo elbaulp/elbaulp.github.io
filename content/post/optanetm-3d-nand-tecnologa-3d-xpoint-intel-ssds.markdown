@@ -22,7 +22,7 @@ A continuación se proporciona un resumen:
 
 ## Características de la nueva memoria 3D XPoint™
 
-<!--ad-->
+<!--more-->
 
 - __1000__ veces __más rápida__ que las NANDs. La latencia de las NANDs se mide en decenas de __microsegundos__, 3D Point en decenas de __nanosegundos__.
 - __1000 veces más resistencia__ que las NANDs.

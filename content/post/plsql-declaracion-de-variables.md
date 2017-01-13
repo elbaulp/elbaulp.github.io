@@ -17,7 +17,7 @@ Las variables deben declararse dentro de la sección `DECLARE` y deben seguir la
 Nombre_variable [CONSTANT] TIPO [NOT NULL] [:= inicialización];
 ```
 
-<!--ad-->
+<!--more-->
 
 Cualquier variable que se declare y no se inicialice tiene por defecto el valor `NULL`. Los tipos posibles son todos aquellos válidos para SQL añadiendo algunos propios de PL/SQL. Para más información sobre los tipos propios de PL/SQL consultar el PL/SQL User’s Guide and Referente. Podemos hacer que una variable nunca tome valores nulos utilizando la cláusula `NOT NULL`, en este caso, hay que inicializar la variable.
 

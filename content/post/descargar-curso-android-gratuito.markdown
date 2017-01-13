@@ -15,4 +15,4 @@ Espero que os resulte útil.
 
 
 
-<!--ad-->
+<!--more-->

@@ -21,7 +21,7 @@ __Delve into the world of Apache Maven with this compact cookbook that introduce
 
 Maven is a build automation tool used primarily for Java projects. Maven addresses two aspects of building software: first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like Apache Ant, it uses conventions for the build procedure, and only exceptions need to be written down.
 
-<!--ad-->
+<!--more-->
 
 In this ebook, we provide a compilation of Maven examples that will help you kick-start your own projects. We cover a wide range of topics, from project structure and configuration, to dependency management and plug-ins. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.
 

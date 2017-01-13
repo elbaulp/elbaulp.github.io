@@ -29,7 +29,7 @@ En estos tiempos en los que está claro que estamos sometidos a vigilancia de lo
 
 
 
-<!--ad-->
+<!--more-->
 
 # Introducción
 

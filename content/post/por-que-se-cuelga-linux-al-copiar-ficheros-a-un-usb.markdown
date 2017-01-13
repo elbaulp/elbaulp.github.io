@@ -23,7 +23,7 @@ Es posible que a vosotros también os haya ocurrido. Al realizar una operación 
 
 > La respuesta la encontré en <a href="http://unix.stackexchange.com" target="_blank" title="stackexchange">unix.stackexchange</a>, en una pregunta que realizó el usuario <a href="http://unix.stackexchange.com/users/52763/mikhail-morfikov" target="_blank" title="">Mikhail Morfikov</a>. Y la respuesta la dió el usuario <a href="http://unix.stackexchange.com/users/52205/rmano" target="_blank" title="">Rmano</a>.
 
-<!--ad-->
+<!--more-->
 
 ## Descripción del problema
 

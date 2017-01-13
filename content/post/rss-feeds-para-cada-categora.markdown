@@ -9,7 +9,7 @@ date: 2016-06-24T08:06:58+02:00
 ---
 Puede que solo te interesen algunas publicaciones del blog y no desees recibir todos y cada uno de los artículos que se escriben.
 
-<!--ad-->
+<!--more-->
 
 Por ello he creado varios feeds RSS en base a las categorías más importantes del blog, para que cada uno se susbscriba a la que más le interese:
 

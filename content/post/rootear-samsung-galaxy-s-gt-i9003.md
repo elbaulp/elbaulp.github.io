@@ -16,7 +16,7 @@ color: "#F57C00"
 
 Hacía tiempo que quería rootear mi terminal, y hoy me he decidido a hacerlo. Hay mucha información sobre como rootear terminales Android, sin embargo voy a escribir esta entrada explicando el proceso bajo GNU/Linux. (Aunque también vale para Windows, simplemente hay que descargar SuperOneClick e ir al paso 3)
 
-<!--ad-->
+<!--more-->
 
 Como primer paso, vamos a descargar la aplicación SuperOneClick de esta [dirección][1]. Como vamos a ejecutarla bajo Gnu/linux, necesitamos seguir los siguientes pasos para lograr ejecutarla:
 

@@ -14,7 +14,7 @@ color: "#2196F3"
 
 Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:
 
-<!--ad-->
+<!--more-->
 
 ```bash
 df

@@ -32,7 +32,7 @@ Inicializa `ap` para recuperar argumentos adicionales después del parámetro `p
 
 ## Primer ejemplo de parámetros variables
 
-<!--ad-->
+<!--more-->
 
 ```cpp
 /* va_start example */

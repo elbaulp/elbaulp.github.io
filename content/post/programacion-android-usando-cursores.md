@@ -25,7 +25,7 @@ Cosas a saber sobre un cursor Android:
 El cursor tiene unos métodos que nos permiten navegar por él. A continuación vemos como comprobar si el cursor está vacío y cómo navegar por él fila a fila en caso de no estarlo.
 
 
-<!--ad-->
+<!--more-->
 
 ```java
 if (cur.moveToFirst() == false){

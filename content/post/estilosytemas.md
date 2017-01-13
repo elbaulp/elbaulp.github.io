@@ -22,7 +22,7 @@ Un estilo es una colección de propiedades que especifican que aspecto ha de ten
 Como podemos comprobar con este ejemplo, el código queda mucho más límpio usando estilos:
 
 
-<!--ad-->
+<!--more-->
 
 Sin estilos:
 

@@ -47,7 +47,7 @@ La carpeta doc contiene la documentación generada con doxygen, en imágenes evi
 
 A continuación paso a describir uno a uno los archivos :
 
-<!--ad-->
+<!--more-->
 
 
 

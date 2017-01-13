@@ -28,7 +28,7 @@ android.intent.category.LAUNCHER
 La forma de declarar las categorías en el AndroidManifest es la siguiente:
 
 
-<!--ad-->
+<!--more-->
 
 ```xml
 <activity android:name=".PrincipalActivity" android:label="@string/app_name">

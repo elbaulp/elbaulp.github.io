@@ -17,7 +17,7 @@ color: "#009688"
 
 Las bases de datos relacionales se basan en el uso de tablas (también se las llama __relaciones__). Las tablas se representan gráficamente como una estructura rectangular formada por filas y columnas.
 
-<!--ad-->
+<!--more-->
 
 Cada fila posee una ocurrencia o ejemplar de la instancia o relación representada por la tabla (a las filas se las llama también __tuplas o registros__).
 

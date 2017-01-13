@@ -16,7 +16,7 @@ date: 2016-10-01T18:32:13+02:00
 
 Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido ([Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python](https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/ "Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python").
 
-<!--ad-->
+<!--more-->
 
 ## Solución: el comando Identify de ImageMagick
 

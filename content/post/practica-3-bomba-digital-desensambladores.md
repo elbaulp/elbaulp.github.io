@@ -81,7 +81,7 @@ int main(){
 }
 ```
 
-<!--ad-->
+<!--more-->
 
 Al cual se le aplican los métodos deseados por el alumno para cifrar la contraseña que elija.
 

@@ -19,7 +19,7 @@ Podéis **consultar las mejoras** en la <a target="_blank" href="http://htop.sou
 
 El autor explica en la página del proyecto las mejoras de esta nueva versión:
 
-<!--ad-->
+<!--more-->
 
 I am extremely happy to announce htop 1.0!
 

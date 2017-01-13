@@ -24,7 +24,7 @@ Todo empezó cuando me mandaron hacer una práctica para la universidad en la qu
 * Hacer una documentación explicando el problema a resolver, cada algoritmo desarrollado e incluyendo un pseudocódigo de los mismos.
 * Incluir en dicha documentación un estudio estadístico de los resultados, valorando cada algoritmo en función de cómo había trabajado con casos grandes (___n___ grande) o casos pequeños (___n___ pequeño) y sobre la eficacia del algoritmo en comparación con el mejor resultado conocido y con los resultados obtenidos por el resto de algoritmos. Además, incluir gráficas que apoyaran tus conclusiones estaba "muy bien visto" (codo, codo, guiño guiño).
 
-<!--ad-->
+<!--more-->
 
 y todo esto en unas tres semanas aproximadamente.
 

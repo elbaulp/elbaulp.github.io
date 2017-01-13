@@ -13,7 +13,7 @@ color: "#F57C00"
 </div>
 
 De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
-<!--ad-->
+<!--more-->
 <h3 >
   Like in a dream
 </h3>

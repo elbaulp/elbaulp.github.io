@@ -21,7 +21,7 @@ Spring Data’s mission is to provide a familiar and consistent, Spring-based pr
 
 In this eBook, we provide a compilation of Spring Data examples that will help you kick-start your own projects. We cover a wide range of topics, from setting up the environment and creating a basic project, to handling the various modules (e.g. JPA, MongoDB, Redis etc.). With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.
 
-<!--ad-->
+<!--more-->
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.
 
