@@ -8,7 +8,7 @@ tags: []
 image: hotlink-ok/Bootstrap-Programming-Cookbook1.jpg
 date: 2016-01-04T18:20:11+01:00
 description: "Kick-start your Bootstrap projects with these hot recipes!"
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <figure>

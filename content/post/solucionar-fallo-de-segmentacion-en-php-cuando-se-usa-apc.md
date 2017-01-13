@@ -12,7 +12,7 @@ tags:
   - parámetros kernel
   - shmmax
   - sysctl
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro `apc.shm_size` junto con el parámetro del kernel `kernel.shmmax`. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.
@@ -25,9 +25,9 @@ Según la documentación del kernel:
 
 > shmmax:
 >
-> This value can be used to query and set the run time limit  
-> on the maximum shared memory segment size that can be created.  
-> Shared memory segments up to 1Gb are now supported in the  
+> This value can be used to query and set the run time limit
+> on the maximum shared memory segment size that can be created.
+> Shared memory segments up to 1Gb are now supported in the
 > kernel. This value defaults to SHMMAX.
 
 Traducido:
@@ -48,7 +48,7 @@ Sabiendo para qué sirve cada parámetro, en un foro encontré la respuesta a la
 >
 > Wrongly set SHM size in kernel and/or APC settings. With standard apc.shm_size = 30, i get segfault (11) every time i try to spawn php-cgi processes. But once i do the following:
 >
-> echo &#8220;512000000&#8221; > /proc/sys/kernel/shmmax  
+> echo &#8220;512000000&#8221; > /proc/sys/kernel/shmmax
 > set apc.shm_size = 64M
 >
 > Then the problem completely disappears. PHP with APC becomes ROCK-solid, and NEVER segfaults running 24/7.
@@ -83,8 +83,8 @@ cat /proc/sys/kernel/shmmax
 
 #### Referencias
 
-*Créditos de la imagen* »» <a href="http://icons8.com/" target="_blank">icons8</a>  
-*APC causes PHP fast-cgi to segfault* »» <a href="https://bugs.php.net/bug.php?id=56894" target="_blank">bugs.php.net</a>  
+*Créditos de la imagen* »» <a href="http://icons8.com/" target="_blank">icons8</a>
+*APC causes PHP fast-cgi to segfault* »» <a href="https://bugs.php.net/bug.php?id=56894" target="_blank">bugs.php.net</a>
 *Documentación Sysctl* »» <a href="https://www.kernel.org/doc/Documentation/sysctl/kernel.txt" target="_blank">kernel.org</a>
 
 

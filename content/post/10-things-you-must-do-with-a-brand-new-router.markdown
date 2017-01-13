@@ -5,7 +5,7 @@ description: "There are many good reasons to upgrade your router (or buy one if 
 tags: [manuales, libros, router]
 image: guides/10-Things-You-Must-Do-With-a-Brand-New-Router-full-thumb.jpg
 introduction: "There are many good reasons to upgrade your router (or buy one if you don’t have one). You can get faster speeds, improved range, and new features. It’ll also ensure maximum compatibility with your latest gadgets."
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 date: 2016-10-04T08:57:02+02:00
 ---

@@ -12,7 +12,7 @@ tags:
 image: 2013/08/ku-bigpic.jpg
 description: "Android es uno de los sistemas operativos más abiertos, versátil y personalizable del mercado. Quizá pienses que no es necesario rootearlo, pero te sorprenderías de la cantidad de cosas que se pueden hacer con un teléfono Android rooteado. A continuación se listan 10 razones por las que merece la pena (Traducidas de LifeHacker)."
 modified: 2016-08-10T12:25
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -106,7 +106,7 @@ Al final, todo esto se reduce a una cosa: **tú eres el dueño de tu dispositivo
 
 # Referencias
 
-- *Top 10 Reasons to Root Your Android Phone* »» <a href="http://lifehacker.com/top-10-reasons-to-root-your-android-phone-1079161983" target="_blank">LifeHacker</a>  
+- *Top 10 Reasons to Root Your Android Phone* »» <a href="http://lifehacker.com/top-10-reasons-to-root-your-android-phone-1079161983" target="_blank">LifeHacker</a>
 - *Fotos por* »» <a href="http://www.flickr.com/photos/a_mason/4255426890/" target="_blank">Andrew Mason</a>
 
  [1]: https://elbauldelprogramador.com/curso-programacion-android/ "Android"

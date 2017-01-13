@@ -9,7 +9,7 @@ image: "Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg"
 date: 2015-05-27T12:28:05+02:00
 math: true
 image: 2013/05/latex_logo.png
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 

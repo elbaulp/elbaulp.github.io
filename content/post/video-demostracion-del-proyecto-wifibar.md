@@ -9,7 +9,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -26,5 +26,3 @@ La interfaz aún es un poco fría y no muy amigable, pero de momento nos estamos
 Demostración del funcionamiento de la aplicación Android de fin de curso, WifiBar. Para más información entre en http://bashyc.blogspot.com/ e introduzca en el formulario de busqueda de abajo a la izquierda &#8220;WifiBar&#8221;
 
  [1]: https://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/
-
-

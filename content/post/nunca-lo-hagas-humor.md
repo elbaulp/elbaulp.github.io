@@ -6,7 +6,7 @@ modified: 2016-09-05T11:11
 image: nunca-lo-hagas-sudo-rm-rf.jpg
 categories:
   - curiosidades
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 
@@ -17,5 +17,3 @@ color: "#262626"
 Por supuesto no se os debe ocurrir ejecutar este comando si no quereis quedaros sin SO.
 
 <!--ad-->
-
-

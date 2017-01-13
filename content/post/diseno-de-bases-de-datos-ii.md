@@ -10,7 +10,7 @@ tags:
   - sintaxis de restricciones check unique default
   - unique
 modified: 2016-08-15T15:20
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -32,7 +32,7 @@ _Estas restricciones son las que marcan la diferencia entre una tabla y una rela
 ### Las 12 reglas de Codd
 
 Preocupado por los productos que decían ser sistemas gestores de bases de datos relacionales (RDBMS) sin serlo, Codd publica las 12 reglas que debe cumplir todo DBMS para ser considerado relacional. Estas reglas en la práctica las cumplen pocos sistemas relaciónales. Las reglas son:
-  
+
 1. **Información.** Toda la información de la base de datos debe estar representada explícitamente en el esquema lógico. Es decir, todos los datos están en las tablas.
 2. **Acceso garantizado.** Todo dato es accesible sabiendo el valor de su clave y el nombre de la columna o atributo que contiene el dato
 3. **Tratamiento sistemático de los valores nulos.** El DBMS debe permitir el tratamiento adecuado de estos valores.
@@ -66,7 +66,6 @@ Preocupado por los productos que decían ser sistemas gestores de bases de datos
 7.  **Aserciones** _(ASSERTION)_: Esta restricción generaliza a la anterior, lo forman las aserciones en las que la condición se establece sobre elementos de distintas relaciones (por ello debe tener un nombre que la identifique).
 8.  **Disparadores** _(TRIGGERS)_, a veces puede interesar espeficar una acción distinta del rechazo cuando no se cumple una determinada restricción semántica. En este caso, se recurre al uso de disparadores o triggers que nos permiten además de indicar una condición, especificar la acción que queremos que se lleve a cabo si la condición se hace verdadera. Los disparadores pueden interpretarse como reglas del tipo evento-condición-acción (ECA) que pueden interpretarse como reglas que especifican que cuando se produce un evento, si se cumple una condición, entonces se realiza una determinada acción.
 
-## Siguiente tema: [Introducción SQL][1] 
+## Siguiente tema: [Introducción SQL][1]
 
   [1]: https://elbauldelprogramador.com/introduccion-sql-sql-introduction/
-

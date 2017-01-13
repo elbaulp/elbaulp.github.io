@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-articulo-3-que/
 modified: 2016-08-29T10:40
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -42,9 +42,9 @@ Arriba he usado el código `HTML`/CSS para cambiar el color del texto. Combinand
 <span style="color: rgb(255,255,255)">Esto</span> tiene Red 255, Green 255, y Blue 255.
 <span style="color: rgb(255,0,0)">Esto</span> tiene Red 255, Green 0, y Blue 0.
 <span style="color: rgb(0,0,255)">Esto</span> tiene Red 0, Green 0, y Blue 255.
-<span style="color: rgb(0,0,0)">Esto</span> tiene Red , Green 0, y Blue 0. 
-<span style="color: rgb(192,192,0)">Esto</span> tiene Red 192, Green 192, y Blue 0. 
-<span style="color: rgb(0,255,255)">Esto</span> tiene Red 0, Green 255, y Blue 255. 
+<span style="color: rgb(0,0,0)">Esto</span> tiene Red , Green 0, y Blue 0.
+<span style="color: rgb(192,192,0)">Esto</span> tiene Red 192, Green 192, y Blue 0.
+<span style="color: rgb(0,255,255)">Esto</span> tiene Red 0, Green 255, y Blue 255.
 <span style="color: rgb(192,128,64)">Esto</span> tiene Red 192, Green 128, y Blue 64.
 <span style="color: rgb(186,3,207)">Esto</span> tiene Red 186, Green 3, y Blue 207.
 ```

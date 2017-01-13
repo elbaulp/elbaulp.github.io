@@ -15,10 +15,10 @@ tags:
   - problema Simulate secondary displays
   - Simulate secondary displays
   - xda
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
-Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en [Android][1] 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.  
+Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en [Android][1] 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.
 
 <!--ad-->
 
@@ -37,8 +37,8 @@ Una vez en el modo rescate, desactivé la opción y problema resuelto.
 
 #### Referencias
 
-*New built-in developer options* »» <a href="http://developer.android.com/about/versions/jelly-bean.html#42-dev-options" target="_blank">developer.android.com</a>  
-*developer options disappear from settings* »» <a href="http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings" target="_blank">stackOverflow</a>  
+*New built-in developer options* »» <a href="http://developer.android.com/about/versions/jelly-bean.html#42-dev-options" target="_blank">developer.android.com</a>
+*developer options disappear from settings* »» <a href="http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings" target="_blank">stackOverflow</a>
 *&#091;Q&#93; Help! Messed with 'Simulate Secondary Display' settings!* »» <a href="http://forum.xda-developers.com/showthread.php?t=2076180" target="_blank">forum.xda-developers</a>
 
 

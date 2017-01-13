@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -170,6 +170,6 @@ public CharSequence getQuantityText(int id, int quantity) throws NotFoundExcepti
 
 En la mayoria de los idiomas normalmente hay dos posibles valores, _one_ y _other_, pero para el Checo, los valores son _one_ para 1, _few_ del 2 al 4 y _other_ para el resto.
 
-### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos XML arbitrarios][1] 
+### Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos XML arbitrarios][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar/

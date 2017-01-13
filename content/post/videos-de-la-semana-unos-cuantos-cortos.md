@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /videos-de-la-semana-unos-cuantos-cortos/
 categories:
   - video de la semana
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" >

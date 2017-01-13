@@ -7,7 +7,7 @@ description: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me 
 tags: [dunst, notify-send, notificaciones, dwm]
 image: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
 date: 2015-06-29T18:43:06+02:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <figure>

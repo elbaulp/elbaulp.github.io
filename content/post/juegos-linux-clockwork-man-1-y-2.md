@@ -5,7 +5,7 @@ permalink: /juegos-linux-clockwork-man-1-y-2/
 modified: 2016-08-15T16:00
 categories:
   - juegos
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -63,4 +63,3 @@ Para descargar el demo debéis ir a la página de arriba y en la parte de la der
 </figure>
 
  [1]: https://elbauldelprogramador.com/3-juegos-para-linux/
-

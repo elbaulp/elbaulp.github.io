@@ -9,7 +9,7 @@ categories:
 tags:
   - descargas
   - herramientas de red
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <a href="http://elbauldelprogramador.tradepub.com/free/w_gloc100/prgm.cgi" target="_blank"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/06/10-herramientas-de-seguridad-de-redes-y-tests-que-todo-el-mundo-debería-usar.gif" alt="10 herramientas de seguridad de redes y tests que todo el mundo debería usar" width="199px" height="259px" /></a>

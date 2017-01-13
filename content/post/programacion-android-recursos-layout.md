@@ -9,7 +9,7 @@ tags:
   - curso android pdf
   - layout android
 modified: 2016-09-20T18:00
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -41,17 +41,17 @@ La línea ***setContentView(R.layout.main);*** señala que hay una clase estáti
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    <TextView  
+    <TextView
         android:id="@+id/text1"
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello" />
-    <Button 
+    <Button
         android:id="@+id/b1"
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello"/>
-    
+
 </LinearLayout>
 ```
 

@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /nueva-guia-faq-guide-windows-7/
 categories:
   - cursos
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <div >
@@ -14,7 +14,7 @@ color: "#61B38D"
 
 This FAQ Guide for enterprise IT management explains why Windows 7 migrations are prompting organizations to re-assess their approach to securing and managing desktops. Users who are &#8220;Administrators&#8221; on their endpoints do not need admin rights to accomplish daily tasks - and having free reign on software installation and endpoint based operations often leads to malware and data breaches that are costly to your company&#8217;s reputation and bottom line.
 
-[Descárgala desde aqui][1] o  
+[Descárgala desde aqui][1] o
 Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
 

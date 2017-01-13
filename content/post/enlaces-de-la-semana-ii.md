@@ -7,7 +7,7 @@ permalink: /enlaces-de-la-semana-ii/
 categories:
   - Enlaces de la semana
   - offtopic
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 #### Programación

@@ -8,7 +8,7 @@ categories:
 tags:
   - invertir cadena
 description: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -20,7 +20,7 @@ Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripci�
 
 > Copia los archivos especificados a la salida estandar, invirtiendo el orden de los caracteres de cada línea. Si no se especifican ficheros, rev lee de la entrada estandar (el teclado).
 
-Algunos ejemplos:  
+Algunos ejemplos:
 
 <!--ad-->
 

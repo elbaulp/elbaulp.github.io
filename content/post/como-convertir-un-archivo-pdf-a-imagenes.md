@@ -18,7 +18,7 @@ tags:
   - pdf a imagenes
   - pdf to imagen
 description: "El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros."
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 <figure>

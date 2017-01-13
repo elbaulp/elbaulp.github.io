@@ -6,7 +6,7 @@ tags: [visualizacion datos, d3js]
 image: Olympic-Feathers-Detail-7.png
 introduction: "Olympic Feathers es una visualización de datos interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy"
 date: 2016-09-23T15:01:18+02:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -63,8 +63,4 @@ Las medallas se colorean en función del continente, como se muestra en la sigui
 - Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio [Olympic Feathers en GitHub](https://github.com/nbremer/olympicfeathers/tree/gh-pages/data "Olympic Feathers en GitHub").
 - La página del [proyecto Olympic Feathers](https://nbremer.github.io/olympicfeathers/ "proyecto Olympic Feathers")
 - Página personal de [Nadieh Bremer](http://www.visualcinnamon.com/portfolio/olympic-feathers "Página Oficial de Nadieh Bremer")
-- Para escuchar Nadieh hablar de su proyecto en el podcast __Data Stories__, visita el episodio [83 \| Olympic Feathers with Nadieh Bremer](http://datastori.es/83-olympic-feathers-with-nadieh-bremer/ "83 \| Olympic Feathers with Nadieh Bremer") 
-
-
-
-
+- Para escuchar Nadieh hablar de su proyecto en el podcast __Data Stories__, visita el episodio [83 \| Olympic Feathers with Nadieh Bremer](http://datastori.es/83-olympic-feathers-with-nadieh-bremer/ "83 \| Olympic Feathers with Nadieh Bremer")

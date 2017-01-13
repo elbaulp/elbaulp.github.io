@@ -28,7 +28,7 @@ date: 2015-12-13T19:10:12+01:00
 modified: 2016-08-06T18:00:12+01:00
 description: "Un mini tutorial y lista extensa de comandos git"
 image: 2013/03/git-logo.png
-main-class: "git"
+mainclass: "git"
 color: "#f05033"
 ---
 
@@ -36,7 +36,7 @@ color: "#f05033"
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" alt="Tutorial git y comandos git" title="Git: Mini Tutorial y chuleta de comandos git" alt="Git: Mini Tutorial y chuleta de comandos" width="910px" height="380px"></amp-img>
 </figure>
 
-> **NOTA:** Puede que te interese descargar este <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java24&ch=ocsoc" id="revresponse-git-link" title="Manual de git" target="_blank">manual para git</a>. _Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)_ 
+> **NOTA:** Puede que te interese descargar este <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java24&ch=ocsoc" id="revresponse-git-link" title="Manual de git" target="_blank">manual para git</a>. _Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)_
 
 Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer <a href="http://git-scm.com/book" target="_blank">Pro Git</a>, libro que recomiendo a todo desarrollador, disponible en <a href="https://github.s3.amazonaws.com/media/progit.en.pdf" target="_blank">PDF</a>, <a href="https://github.s3.amazonaws.com/media/progit.epub" target="_blank">EPUB</a>, <a href="https://github.s3.amazonaws.com/media/pro-git.en.mobi" target="_blank">MOBI</a> y <a href="http://www.amazon.es/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=1430218339&linkCode=as2&tag=elbaudelpro-21" target="_blank">versión en papel</a>. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.
 
@@ -311,17 +311,17 @@ En segundo plano, git crea un log de a donde han estado referenciando HEAD y el 
 
 Archivo en .gitattributes en el directorio de trabajo o en .git/info/attributes para no committearlo
 
-**Identificando archivos binarios**  
-Muchos archivos son para uso local y no aportan información al repositorio. Para decirle a git qué archivos son binarios hacer añadir al archivo atributes:  
+**Identificando archivos binarios**
+Muchos archivos son para uso local y no aportan información al repositorio. Para decirle a git qué archivos son binarios hacer añadir al archivo atributes:
 **&lt;nombre archivo o regexp> &#45;crlf &#45;diff**  #  git no intentará corregir problemas de crlf ni mostrará los cambios con diff. En versiones >= 1.6 se pueden sustituir estos dos valores por la macro binary
 
-**Diffing binary files**  
-En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de word:  
-***.doc diff=word**  
-#tras esto hay que definir el filtro word para que git convierta archivos word a texto:  
+**Diffing binary files**
+En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de word:
+***.doc diff=word**
+#tras esto hay que definir el filtro word para que git convierta archivos word a texto:
 **git config diff.word.textconv strings**
 
-Es posible hacer lo mismo para imágenes jpeg, es necesario instalar **exiftool** para extraer los metadatos y luego hacer: 
+Es posible hacer lo mismo para imágenes jpeg, es necesario instalar **exiftool** para extraer los metadatos y luego hacer:
 
 ```bash
 $ echo ‘*.jpeg diff=exif’ » .gitattributes
@@ -347,7 +347,7 @@ puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
 
 Puedes nombrar este script como **expand_date**. Crea un filtro en git, llamado dater y dile que use el script anterior:
 
-**git config filter.dater.smudge expand_date**  
+**git config filter.dater.smudge expand_date**
 **git config filter.dater.clean &#8216;perl &#45;pe &#8220;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&#8221;&#8216;**
 
 Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:
@@ -387,5 +387,3 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
 
  [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
-
-

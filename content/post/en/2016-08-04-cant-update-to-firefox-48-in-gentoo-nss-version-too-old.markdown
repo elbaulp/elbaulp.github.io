@@ -8,7 +8,7 @@ image:
 modified:
 introduction:
 date: 2016-08-04T11:05:17+02:00
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 lang: en
 ---
@@ -25,8 +25,8 @@ configure: error: you don't have NSS installed or your version is too old
 I tried to enable the `NSS` _USE_ flag, but did not work, so I went to the [Gentoo forums](https://forums.gentoo.org/viewtopic-p-7951120.html#7951120 "Can't update to firefox 48") and asked there. After a few minutes they answered me, it is a current [bug](https://bugs.gentoo.org/show_bug.cgi?id=590424) that need to be solved. But fortunately there is a workaround until the bug is fixed:
 
 ```bash
-echo "=dev-libs/nss-3.24 ~amd64" >> /etc/portage/package.accept_keywords 
-emerge -u nss 
+echo "=dev-libs/nss-3.24 ~amd64" >> /etc/portage/package.accept_keywords
+emerge -u nss
 emerge =www-client/firefox-48.0
 ```
 
@@ -35,7 +35,3 @@ Executing the above in a terminal as root will force portage to install the vers
 Once firefox 48 is installed, we can enjoy the [new multiprocessing feature](http://arstechnica.com/information-technology/2016/08/firefox-48-ships-bringing-rust-mainstream-and-multiprocess-for-some/ "Firefox 48 ships, bringing Rust mainstream and multiprocess for some").
 
 Thanks to _fedeliallalinea_ for solving me the problem in the forums!
-
-
-
-

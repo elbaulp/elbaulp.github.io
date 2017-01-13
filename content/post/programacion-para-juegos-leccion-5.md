@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-leccion-5/
 modified: 2016-08-25T11:58
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -70,7 +70,7 @@ En primer lugar, cargamos la imagen optimizada, como hacíamos hasta ahora.
             Uint32 colorkey = SDL_MapRGB( optimizedImage->format, 0, 0xFF, 0xFF );
 ```
 
-Comprobamos que la imagen fue optimizada.  
+Comprobamos que la imagen fue optimizada.
 Si todo va bien, necesitamos mapear el color que queremos ocultar. Llamamos a `SDL_MapRGB()` para tomar los valores de rojo, verde y azul. Esta función nos devuelve el valor del pixel en el mismo formato que el de la imagen. Puedes leer más acerca de los pixeles en el [artículo 3][2].
 
 ```cpp
@@ -79,7 +79,7 @@ Si todo va bien, necesitamos mapear el color que queremos ocultar. Llamamos a `S
         }
 ```
 
-Ahora vamos a configurar el _color Key_, lo que vamos a hacer es fijar todos los pixeles de color `00ffff` a transparentes.  
+Ahora vamos a configurar el _color Key_, lo que vamos a hacer es fijar todos los pixeles de color `00ffff` a transparentes.
 El primer argumento de esta función es la imagen para la cual queremos aplicar el _color key_.
 
 El segundo es para los flags que desee aplicar, en este caso, el flag `SDL_SRCCOLORKEY` asegura que estamos usando _color Key_ cuando fusionemos una imagen en otra.
@@ -120,5 +120,3 @@ Para aquellos que uséis imágenes PNGs con transparencia, `IMG_Load()` la manej
 
  [1]: http://lazyfoo.net/downloads/index.php?file=SDLTut_lesson05
  [2]: https://elbauldelprogramador.com/programacion-para-juegos-articulo-3-que/
-
-

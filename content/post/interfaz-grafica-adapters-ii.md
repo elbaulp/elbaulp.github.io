@@ -18,7 +18,7 @@ tags:
   - simple adapter android ejemplo
 image: https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png
 modified: 2016-08-14T11:40
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -136,29 +136,29 @@ En este caso, para la lista, hemos usado un layout personalizado, que es el sigu
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:layout_width="fill_parent" 
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-        
-    <imageview android:id="@+id/logo" 
-         android:src="@drawable/ocelot" 
-         android:layout_alignparentleft="true" 
-         android:padding="5px" 
-         android:layout_width="128px" 
+
+    <imageview android:id="@+id/logo"
+         android:src="@drawable/ocelot"
+         android:layout_alignparentleft="true"
+         android:padding="5px"
+         android:layout_width="128px"
          android:layout_height="128px"/>
 
-    <textview android:id="@+id/nomVersion" 
-        android:layout_torightof="@id/logo" 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:paddingtop="15dip" 
+    <textview android:id="@+id/nomVersion"
+        android:layout_torightof="@id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingtop="15dip"
         android:text="VersionNom"/>
 
-    <textview android:id="@+id/numVersion" 
-        android:layout_below="@id/nomVersion" 
-        android:layout_torightof="@id/logo" 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
+    <textview android:id="@+id/numVersion"
+        android:layout_below="@id/nomVersion"
+        android:layout_torightof="@id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="VersionNum"/>
 </relativelayout>
 ```

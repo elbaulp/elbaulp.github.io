@@ -7,7 +7,7 @@ introduction: Cómo aplicar una expresión regular multilínea a ficheros
 tags: [perl, regex, expresiones multilínea]
 image: Expresiones-Regulares-Multilinea.png
 date: 2016-06-10T15:59:28+02:00
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 Actualizando el diseño del blog he tenido que usar muchas [expresiones regulares](/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python") para ajustar los artículos existentes al _Front Matter_ del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar [Atom](/instalar-atom-el-editor-de-github-en-linux/ "Instalar Atom, el editor de GitHub en Linux"). La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración `yalm`:
@@ -31,10 +31,10 @@ param8: valor8
 
 <!--ad-->
 
-Necesitaba dejarla tal cual, pero añadir un último parámetro llamado `main-class: Artículos`, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso _Artículos_. Para ello decidí usar `perl`:
+Necesitaba dejarla tal cual, pero añadir un último parámetro llamado `mainclass: Artículos`, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso _Artículos_. Para ello decidí usar `perl`:
 
 ```perl
-perl -i -p0e 's/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4main-class: "$2"\n---/s'
+perl -i -p0e 's/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4mainclass: "$2"\n---/s'
 ```
 
 - `-0` especifica que el separador de línea sea nulo.
@@ -80,7 +80,7 @@ param8: valor8
 ---
 ```
 
-Ahora queda reescribirla, de eso se ocupa la segunda parte, `$1$2$3$4main-class: "$2"\n---`. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con `$1`. De este modo, `$1$2$3$4main-class: "$2"\n---` nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:
+Ahora queda reescribirla, de eso se ocupa la segunda parte, `$1$2$3$4mainclass: "$2"\n---`. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con `$1`. De este modo, `$1$2$3$4mainclass: "$2"\n---` nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:
 
 ```
 ---
@@ -96,7 +96,7 @@ param5: valor5
 param6: valor6
 param7: valor7
 param8: valor8
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 ```

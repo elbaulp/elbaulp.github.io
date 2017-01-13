@@ -8,7 +8,7 @@ tags: [latex, latexmk, pdflatex, xelatex, compilar latex, minted]
 image: 2013/05/latex_logo.png
 date: 2015-06-25T18:50:48+02:00
 math: true
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 

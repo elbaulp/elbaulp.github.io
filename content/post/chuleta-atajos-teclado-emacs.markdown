@@ -7,7 +7,7 @@ tags: [emacs, chuleta]
 image: chuleta-atajos-teclado-emacs.png
 introduction: "Emacs: Recopilación de comandos y acciones útiles"
 modified: 2016-12-06T11:00
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 No es la primera vez que se publica en el blog una [chuleta](/tags/#chuleta "Artículos sobre chuletas") de algo:
@@ -154,7 +154,7 @@ Este tema se trató en más profundidad en el artículo [_Cómo crear comandos p
 
 ### Administar las copias de seguridad de emacs
 
-__Problema:__ 
+__Problema:__
 
 _Emacs_ por defecto guarda una copia de seguridad del fichero en un fichero del mismo nombre pero acabado en `~`, aunque es bastánte útil, a veces molesta tener ficheros desperdigados a lo largo de las carpetas acabando en `~`. Es posible almacenarlos todos en una carpeta. Veamos.
 
@@ -187,7 +187,7 @@ Para sustituir el modo _buffer_, por _ibuffer_ debemos añadir a nuestra configu
 
 ```elisp
 ;; make ibuffer the default
-(global-set-key "\C-x\C-b" 'ibuffer) 
+(global-set-key "\C-x\C-b" 'ibuffer)
 ```
 
 A partir de ahora, cada vez que visitemos la pestaña del _buffer_, se abrirá _ibuffer_. Para seleccionar todos los ficheros abiertos y guardarlos:
@@ -195,7 +195,7 @@ A partir de ahora, cada vez que visitemos la pestaña del _buffer_, se abrirá _
 1. Pulsar `t`, para seleccionar todos los ficheros.
 2. Pulsar `S`, para guardar los ficheros seleccionados
 
-__Fuente:__ [Execute a particular command on multiple emacs buffers](http://stackoverflow.com/a/14293998/1612432 "Execute a particular command on multiple emacs buffers") 
+__Fuente:__ [Execute a particular command on multiple emacs buffers](http://stackoverflow.com/a/14293998/1612432 "Execute a particular command on multiple emacs buffers")
 
 ### Alinear verticalmente código en base al signo =
 
@@ -218,6 +218,6 @@ Fuente: [mdk.fr](https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html "Emacs:
 
 # Tu Turno
 
-El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad _Pull Requests_ al siguiente _gist_: [Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md](https://gist.github.com/algui91/9be4d82ba09f18562d1cfda2eb325eed "Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md") 
+El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad _Pull Requests_ al siguiente _gist_: [Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md](https://gist.github.com/algui91/9be4d82ba09f18562d1cfda2eb325eed "Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md")
 
 Esperamos vuestras colaboraciones!

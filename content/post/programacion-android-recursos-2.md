@@ -10,7 +10,7 @@ tags:
   - recursos compilados
   - recursos no compilados
 modified: 2016-09-21T16:00
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

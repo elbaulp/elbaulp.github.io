@@ -5,7 +5,7 @@ modified: 2016-09-03T22:00
 permalink: /clases-y-objetos-definir-una-clase/
 categories:
   - C
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

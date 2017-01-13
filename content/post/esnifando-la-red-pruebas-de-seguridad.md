@@ -10,7 +10,7 @@ categories:
 tags:
   - ettercap en español
   - tutorial ettercap comandos
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

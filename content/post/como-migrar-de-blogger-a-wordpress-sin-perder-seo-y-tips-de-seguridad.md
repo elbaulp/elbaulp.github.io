@@ -12,7 +12,7 @@ tags:
   - migrar blogger wordpress
   - wordpress
 modified: 2016-08-13T23:40
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

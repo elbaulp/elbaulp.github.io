@@ -8,7 +8,7 @@ categories:
   - script
 tags:
   - script gestion de usuarios linux
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -243,4 +243,3 @@ main
 Si no visualizáis bien el código, haced clic [aquí.][1]
 
  [1]: http://pastebin.com/2UbqU3Yk
-

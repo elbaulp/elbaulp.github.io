@@ -25,7 +25,7 @@ tags:
   - UDP
 description: "El propósito de iproute2 es reemplazar el conjunto de herramientas que componen las net-tools y pasar a ser él quien se encargue de configurar las interfaces de red, la tabla de rutas y gestionar la tabla ARP."
 image: 2012/07/sh1.png
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
@@ -36,7 +36,7 @@ Para situarnos en contexto, **netstat** forma parte de las comúnmente llamadas 
 
 A día de hoy la mayoría de distribuciones traen **iproute** instalado por defecto.
 
-Veamos algunos de los comandos más útiles que nos ofrece este relativamente “*nuevo*” conjunto de comandos:  
+Veamos algunos de los comandos más útiles que nos ofrece este relativamente “*nuevo*” conjunto de comandos:
 
 <!--ad-->
 
@@ -308,9 +308,9 @@ Aunque este artículo ha sido una remezcla de comandos, espero que haya quedado 
 
 #### Referencias
 
-*Socket Statistics on Linux* »» <a href="http://linuxaria.com/pills/ss-iproute2-linux" target="_blank">linuxaria</a>  
-*Some useful command with iproute2* »» <a href="http://linuxaria.com/howto/useful-command-of-iproute2" target="_blank">linuxaria</a>  
-*ss: Display Linux TCP / UDP Network and Socket Information* »» <a href="http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html" target="_blank">cyberciti.biz</a>  
+*Socket Statistics on Linux* »» <a href="http://linuxaria.com/pills/ss-iproute2-linux" target="_blank">linuxaria</a>
+*Some useful command with iproute2* »» <a href="http://linuxaria.com/howto/useful-command-of-iproute2" target="_blank">linuxaria</a>
+*ss: Display Linux TCP / UDP Network and Socket Information* »» <a href="http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html" target="_blank">cyberciti.biz</a>
 *SS Utility: Quick Intro* »» <a href="http://www.cyberciti.biz/files/ss.html" target="_blank">cyberciti.biz</a>
 
 

@@ -7,13 +7,13 @@ categories:
   - BaseDeDatos
 tags:
   - MINUS pl sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
 Podemos combinar múltiples consultas utilizando los operadores `UNION, UNION ALL, INTERSECT y MINUS`.
 
-Los correspondientes campos y/o expresiones que aparecen en la listas de los `SELECT` de las consultas a las que se le aplican los operadores anteriores deben coincidir en tipo y número, o al menos, tener un tipo compatible o sobre el cual se pueda aplicar un casting automático.  
+Los correspondientes campos y/o expresiones que aparecen en la listas de los `SELECT` de las consultas a las que se le aplican los operadores anteriores deben coincidir en tipo y número, o al menos, tener un tipo compatible o sobre el cual se pueda aplicar un casting automático.
 
 <!--ad-->
 
@@ -58,6 +58,6 @@ SELECT product_id FROM order_items;
     3. Las funciones agregado calculan los valores por cada grupo.
     4. La cláusula `HAVING` por último excluye las filas que no cumplen la condición de búsqueda.
 
-## Siguiente Tema: [Consulta de Datos - Subconsultas.][1] 
+## Siguiente Tema: [Consulta de Datos - Subconsultas.][1]
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-subconsultas/

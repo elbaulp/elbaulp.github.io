@@ -1,7 +1,7 @@
 ---
 layout: post.amp
 title: Informe Sobre Defensa Frente a Ciberamenazas 2015. Por CyberEdge Group
-categories: 
+categories:
 description: Descubra cómo impactan las aplicaciones web y los dispositivos móviles sobre la capacidad de TI para defenderse con éxito contra las amenazas cibernéticas, y averigüe por qué SDN puede ser la solución.
 tags: [guias]
 image:
@@ -9,7 +9,7 @@ modified:
 introduction: Descubra cómo impactan las aplicaciones web y los dispositivos móviles sobre la capacidad de TI para defenderse con éxito contra las amenazas cibernéticas, y averigüe por qué SDN puede ser la solución.
 date: 2016-08-12T13:24:05+02:00
 image: guides/informe-sobre-defensa-frente-a-ciberamenazas-2015-por-cyberedge-group-full.jpg
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 ---
 

@@ -6,7 +6,7 @@ permalink: /nueva-guia-how-internet-works/
 categories:
   - cursos
   - internet
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 
@@ -29,9 +29,8 @@ You’ll learn about everything from the history of the Internet to the organiza
 
 *Also with this free guide you will also receive daily updates on new cool websites and programs in your email for free courtesy of MakeUseOf.*
 
-[Descárgala desde aqui][1] o  
+[Descárgala desde aqui][1] o
 Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
  [1]: http://elbauldelprogramador.tradepub.com/free/w_make28/prgm.cgi
  [2]: https://elbauldelprogramador.com/manuales-gratuitos/
-

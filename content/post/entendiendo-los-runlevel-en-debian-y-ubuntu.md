@@ -15,7 +15,7 @@ tags:
   - init 3 debian
   - linux runlevel
   - modificar runlevel debian
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -33,7 +33,7 @@ Existen 7 runlevel, numerados del 0 al 6 , aunque es posible crear más. Cada ru
 - 3-5  » Igual que runlevel 2
 - 6    » Reinicio del sistema
 
-Pasemos a describir cada runlevel:  
+Pasemos a describir cada runlevel:
 
 <!--ad-->
 

@@ -5,7 +5,7 @@ permalink: /nuevo-proyecto-aventura-grafica-con-sdl/
 modified: 2016-08-16T11:00
 categories:
   - opensource
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -13,7 +13,7 @@ Haitike (Coloborador del blog), y yo, hemos decidido embarcarnos en un proyecto 
 
 En cuanto nos pongamos en marcha crearé una página como la de [Proyecto Pylabra][2], en la que podréis seguir los avances del proyecto.
 
-Tenemos intención, conforme avance el proyecto, [crear un PPA][3], y así aprovechar para usar este [sistema de paquetes para desarrolladores][4].  
+Tenemos intención, conforme avance el proyecto, [crear un PPA][3], y así aprovechar para usar este [sistema de paquetes para desarrolladores][4].
 
 <!--ad-->
 

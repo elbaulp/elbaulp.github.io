@@ -12,7 +12,7 @@ tags:
   - ejemplos de firewall
   - seguridad en la red
   - seguridad firewall
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

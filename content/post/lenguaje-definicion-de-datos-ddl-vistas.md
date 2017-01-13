@@ -10,11 +10,11 @@ tags:
   - concepto de ddl
   - que es un ddl
   - sentencias dml y ddl
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
-Las vistas son tablas virtuales ‘que contienen’ el resultado de una consulta SELECT, tienen la misma estructura que una tabla cualquiera, es decir, están organizadas por filas y columnas. Una de las principales ventajas de utilizar vistas procede del hecho de que la vista no almacena los datos, sino que hace referencia a una o varias tablas de origen mediante una consulta SELECT, consulta que se ejecuta cada vez que se hace referencia a la vista. De esta forma, cualquier modificación que se realice sobre los datos de las tablas de origen es inmediatamente visible en la vista, cuando ésta vuelva a ejecutarse. Su sintaxis es:  
+Las vistas son tablas virtuales ‘que contienen’ el resultado de una consulta SELECT, tienen la misma estructura que una tabla cualquiera, es decir, están organizadas por filas y columnas. Una de las principales ventajas de utilizar vistas procede del hecho de que la vista no almacena los datos, sino que hace referencia a una o varias tablas de origen mediante una consulta SELECT, consulta que se ejecuta cada vez que se hace referencia a la vista. De esta forma, cualquier modificación que se realice sobre los datos de las tablas de origen es inmediatamente visible en la vista, cuando ésta vuelva a ejecutarse. Su sintaxis es:
 
 <!--ad-->
 
@@ -61,7 +61,7 @@ La orden para borrar una vista es DROP VIEW. Su sintaxis es:
 DROP VIEW Nombre_vista
 ```
 
-## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Índices y secuencias][2] 
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Índices y secuencias][2]
 
  [1]: http://es.wikipedia.org/wiki/Lenguaje_de_Manipulaci%C3%B3n_de_Datos
  [2]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/

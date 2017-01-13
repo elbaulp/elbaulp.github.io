@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /citas-clasicas-de-programacion/
 categories:
   - curiosidades
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

@@ -13,7 +13,7 @@ tags:
   - ocultar informacion en imagenes
 modified: 2016-08-13T22:22
 redirect_from: /programacion/ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -76,7 +76,7 @@ int revelar(unsigned char[],int, char[], int);
 #endif /* CODIFICAR_H_ */
 ```
 
-- `int get_file_size(std::ifstream& );` será útil para obtener el tamaño en bytes del fichero a ocultar.  
+- `int get_file_size(std::ifstream& );` será útil para obtener el tamaño en bytes del fichero a ocultar.
 - `int ocultar(unsigned char[],int , char[]);` se encarga de ocultar el archivo en sí, el primer parámetro es el buffer de la imagen (contiene el valor de los píxeles), el segundo el tamaño de la imagen y el tercero el nombre del archivo a ocultar.
 
 ### *./src/codificar.cpp*
@@ -279,7 +279,7 @@ for (int k = 7; k >= 0; k--){
 }
 ```
 
-Esto es lo que pasa en la primera iteración en la variable c (suponiendo que letra='H'):  
+Esto es lo que pasa en la primera iteración en la variable c (suponiendo que letra='H'):
 `char c = (01001000 & 10000000) >> 7`. La operación lógica entre paréntesis extrae el bit más significativo (el primero), en este caso 0, y se desplaza 7 posiciones a la derecha (en este caso no tiene sentido), finalmente se almacena en `c` un cero.
 
 Pero veamos otra iteración más: `char c = (01001000 & 01000000) >> 6`. En cada iteración la máscara se desplaza un bit para obtener el siguiente valor de la letra, en este caso el segundo bit. La operación entre paréntesis es `01000000`, y se desplaza 6 posiciones para terminar almacenando en `c` el correspondiente valor del bit, 1 en este caso.
@@ -388,9 +388,7 @@ Contenido del fichero
 
 Este programa no tiene un uso útil, meramente acadámico, el proyecto es accesible en su repositorio en gitHub.
 
-##### Referencias: 
+##### Referencias:
 
 - <a href="https://github.com/algui91/Hide-file-in-Photo" target="_blank">Repositorio en GitHub</a>
 - <a href="http://stackoverflow.com/questions/12042950/substitute-an-instruction-depending-on-a-condition" target="_blank">Pregunta en StackOverflow</a>
-
-

@@ -8,7 +8,7 @@ categories:
   - internet
   - noticias
   - opensource
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 

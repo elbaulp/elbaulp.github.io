@@ -9,7 +9,7 @@ categories:
   - curiosidades
   - linux
   - opensource
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -34,7 +34,6 @@ color: "#2196F3"
 ## Referencias
 
 - [The Great Linux World Map 2.0!][1]
-- [Linux World Map](https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/ "Just Linux Things in Reddit") 
+- [Linux World Map](https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/ "Just Linux Things in Reddit")
 
  [1]: http://www.dedoimedo.com/computers/linux-world-map-reloaded.html
-

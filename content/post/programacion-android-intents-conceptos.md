@@ -11,7 +11,7 @@ tags:
   - curso android pdf
   - ejemplo intentfilter implicito
   - uso de intents android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -226,7 +226,7 @@ Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos regi
 
 Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.
 
-#### Siguiente Tema: [Intents - Categorías][5] 
+#### Siguiente Tema: [Intents - Categorías][5]
 
  [1]: https://elbauldelprogramador.com/programacion-android-trabajar-con/
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de

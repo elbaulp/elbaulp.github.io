@@ -10,7 +10,7 @@ tags:
   - luz por cables
   - transmitir datos por luz
   - Vuckovic Lab
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 La luz es mucho más eficiente a la hora de transmitir datos que la electricidad a través de cables, pero conseguir que funcione correctamente en un ordenador es algo problemático. Un equipo de ingenieros anunció recientemente un nuevo dispositivo *“enlace óptico”* hecho de silicio que es capaz de doblar la luz en ángulos rectos, lo cual es un gran avance de cara a reemplazar los cables eléctricos en ordenadores. La investigación fue dirigida por **Jelena Vuckovic**, de la universidad de Stanford. El paper se publicó en el *journal Scientific Reports*.
@@ -39,8 +39,8 @@ Además de los rayos de luz en forma de T generados por el enlace en éste estud
 
 #### Referencias
 
-**Créditos de la imagen: Vuckovic Lab**  
-*Artículo original* »» <a href="http://www.iflscience.com/physics/researchers-closer-using-optics-instead-wires-computers" target="_blank">iflscience.com</a>  
+**Créditos de la imagen: Vuckovic Lab**
+*Artículo original* »» <a href="http://www.iflscience.com/physics/researchers-closer-using-optics-instead-wires-computers" target="_blank">iflscience.com</a>
 *Paper de la investigación* »» <a href="" target="_blank">nature.com</a>
 
 

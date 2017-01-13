@@ -5,7 +5,7 @@ modified: 2016-09-03T16:00
 permalink: /plsql-registros-y-tablas/
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -71,5 +71,3 @@ DECLARE
 
  [1]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
  [2]: https://elbauldelprogramador.com/tunning-basico-de-sql/
-
-

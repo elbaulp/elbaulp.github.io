@@ -16,7 +16,7 @@ tags:
   - software testing
   - udacity
 format: status
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" class="alignleft" />
@@ -112,7 +112,7 @@ Study physics abroad in Europe &#8212; virtually! Learn the basics of physics on
 
 #### Índice
 
-  * ##### Unit 1: How can we measure the circumference  
+  * ##### Unit 1: How can we measure the circumference
     of the Earth?
 
     Basics of geometry and trigonometry

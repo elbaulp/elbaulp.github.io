@@ -10,7 +10,7 @@ tags:
   - deloitte
   - la evolucion de las contraseñas tecnologicas
   - the hacker news
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png" alt="El uso de contraseñas en una evolución tecnológica" width="350px" height="274px" />

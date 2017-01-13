@@ -12,7 +12,7 @@ tags:
   - jump table
   - switch
   - tabla de salto
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -35,30 +35,30 @@ Esa es la clave que explica el mayor rendimiento de un switch frente a una larga
 ```c
 int switch_eg(int x, int n){
    int result = x;
- 
+
    switch (n) {
- 
+
       case 100:
          result *= 13;
          break;
- 
+
       case 102:
          result += 10;
          /*Fall through*/
- 
+
       case 103:
          result += 11;
          break;
- 
+
       case 104:
       case 106:
          result *= result;
          break;
- 
+
       default:
          result = 0;
    }
- 
+
    return result;
 }
 ```
@@ -86,27 +86,27 @@ int switch_eg_impl(int x, int n) {
    loc_def:   /*Default case*/
       result = 0;
       goto done;
-   
+
    loc_C:     /*Case 103*/
       result = x;
       goto rest;
-   
+
    loc_A:     /*Case 100*/
       result = x * 13;
       goto done;
-   
+
    loc_B:     /*Case 102*/
       result = x + 10;
       /*Fall through*/
-   
+
    rest:      /*Finalizar case 103*/
       result += 11;
       goto done;
-   
+
    loc_D:     /*Case 104, 106*/
       result = x * x;
       /*Fall through*/
-   
+
    done:
       return result;
    }
@@ -182,7 +182,7 @@ switch_eg:
     .cfi_endproc
 ```
 
-Una vez que disponemos del ejemplo representado de 3 formas distintas, profundicemos en el funcionamiento.  
+Una vez que disponemos del ejemplo representado de 3 formas distintas, profundicemos en el funcionamiento.
 
 En la versión extendida de C se define el array **jt** que contiene siete entradas, cada una es la dirección de un bloque de código. Dichos bloques de código se definen con etiquetas en el código (*loc\_A, loc\_def etc*) e identificadas en el array **jt** por *punteros a código*. Para conseguir un puntero a un trozo de código hay que anteponer *&&* a la etiqueta. El operador *&* crea un puntero para el valor de un dato. Cuando se creó esta extensión de C, los autores crearon el operador *&&* para hacer referencia a la dirección de una porción de código.
 
@@ -252,7 +252,7 @@ En el caso *index = 5* o *index = 1* (No existe case para 105 o 101), se saltar�
 .text
 ```
 
-Estas declaraciones dicen que dentro de la sección llamada **.rodata** *(Read-Only Data)* debería haber una secuencia de siete palabras **long** (4-byte) cuyo valor se dá por la dirección de la instrucción asociada a la etiqueta (.L3 etc). La etiqueta **.L7** marca el inicio de la asignación de la tabla de saltos. La dirección asociada a esta etiqueta sirve como la base para el salto indirecto en la línea 21.  
+Estas declaraciones dicen que dentro de la sección llamada **.rodata** *(Read-Only Data)* debería haber una secuencia de siete palabras **long** (4-byte) cuyo valor se dá por la dirección de la instrucción asociada a la etiqueta (.L3 etc). La etiqueta **.L7** marca el inicio de la asignación de la tabla de saltos. La dirección asociada a esta etiqueta sirve como la base para el salto indirecto en la línea 21.
 Tanto en la versión extendida de C, como en ensamblador, el código asociado a las etiquetas (loc_\* para extended C y .L\* para ensamblador) implementan las distintas ramas del switch. La mayoría calculan un valor para devolver en la variable *result* (o el registro *%eax*) y saltan al final de la función (en el código ensamblador se salta a la etiqueta **.L8**).
 
 El patrón seguido para calcular un resultado no se da para los cases 102 y 103 en el código C. La lógica del programa para estos dos casos en las versiones ensamblador y C extendido es tener dos destinos ditintos para ambos casos (*loc\_C, loc\_B y .L5, .L4 *). Los dos bloques de código convergen en el código que incrementa *result* en 11 (etiquetado como *rest* en C extendido y .L5 en ensamblador)

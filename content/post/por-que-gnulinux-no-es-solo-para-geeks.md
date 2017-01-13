@@ -6,7 +6,7 @@ permalink: /por-que-gnulinux-no-es-solo-para-geeks/
 categories:
   - linux
   - opensource
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

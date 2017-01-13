@@ -8,7 +8,7 @@ categories:
 tags:
   - comandos basicos sql
   - sentencias sql while
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -164,7 +164,7 @@ LOOP
 END LOOP;
 ```
 
-Las sentencias de dentro del bucle se ejecutarán durante un número indefinido de vueltas, hasta que aparezca la instrucción `EXIT`; que finalizará el bucle. Este tipo de bucle se denomina bucle  
+Las sentencias de dentro del bucle se ejecutarán durante un número indefinido de vueltas, hasta que aparezca la instrucción `EXIT`; que finalizará el bucle. Este tipo de bucle se denomina bucle
 incondicional.
 
 ```sql
@@ -254,8 +254,6 @@ END;
 En el caso de especificar `REVERSE` el bucle se recorre en sentido inverso.
 
 
-### Siguiente tema: [PL/SQL - Excepciones][1] 
+### Siguiente tema: [PL/SQL - Excepciones][1]
 
  [1]: https://elbauldelprogramador.com/plsql-excepciones/
-
-

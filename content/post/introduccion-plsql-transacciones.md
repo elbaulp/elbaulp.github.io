@@ -7,7 +7,7 @@ categories:
   - BaseDeDatos
 tags:
   - transacciones sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -15,7 +15,7 @@ color: "#009688"
 
 Oracle es un sistema de base de datos puramente transaccional, de tal forma, que la instrucción `BEGIN TRANSACTION` no existe.
 
-Una transacción es un conjunto de sentencias SQL que se ejecutan en una base de datos como una única operación, confirmándose o deshaciéndose todo el conjunto de sentencias SQL. La transacción puede quedar finalizada (con las sentencias apropiadas) o implícitamente (terminando la sesión).  
+Una transacción es un conjunto de sentencias SQL que se ejecutan en una base de datos como una única operación, confirmándose o deshaciéndose todo el conjunto de sentencias SQL. La transacción puede quedar finalizada (con las sentencias apropiadas) o implícitamente (terminando la sesión).
 
 <!--ad-->
 
@@ -69,7 +69,7 @@ EXCEPTION
 END;
 ```
 
-### Siguiente Tema: [Fundamentos de PL/SQL][2] 
+### Siguiente Tema: [Fundamentos de PL/SQL][2]
 
  [1]: https://elbauldelprogramador.com/plsql-disparadores-o-triggers/
  [2]: https://elbauldelprogramador.com/fundamentos-de-plsql/

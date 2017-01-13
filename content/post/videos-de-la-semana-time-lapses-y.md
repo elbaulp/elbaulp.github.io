@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /videos-de-la-semana-time-lapses-y/
 categories:
   - video de la semana
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" >
@@ -77,7 +77,7 @@ And you will see that life is beautiful.
 
 #### End of a Scarer
 
-                 
+
 
 
 

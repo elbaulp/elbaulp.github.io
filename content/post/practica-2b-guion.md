@@ -11,19 +11,19 @@ tags:
   - paridad
   - peso hamming
   - popcount
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 Hace un més aproximadamente terminó el plazo de entrega de la práctica que voy a hablar hoy, lo que me permite hablaros de la misma.
 
 En concreto, el ejercício consiste en realizar varias versiones de un algoritmo, para ver cómo varía la eficiencia del mismo en función de cómo se plantee el problema, obteniendo resultados sorprendentes en cuanto a tiempo de ejecución.
 
-Se plantean dos ejercicios.  
+Se plantean dos ejercicios.
 El cálculo del número de bits a 1 que tiene un número (<a href="http://es.wikipedia.org/wiki/C%C3%B3digo_Hamming" target="_blank">PopCount o Peso Hamming</a>) usado para detectar y corregir errores.
 
 El cálculo de la <a href="http://es.wikipedia.org/wiki/Bit_de_paridad" target="_blank">paridad impar</a> de un número.
 
-Empecemos con *popCount*:  
+Empecemos con *popCount*:
 
 <!--ad-->
 

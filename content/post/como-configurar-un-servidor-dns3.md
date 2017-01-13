@@ -40,7 +40,7 @@ tags:
   - soa correo
   - zona dns inversa
 image: 2013/04/dns.jpg
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -68,7 +68,7 @@ Los números son la dirección ip del servidor escritos en orden inverso. Es dec
 
 Es necesario crear el archivo de zone inversa también, *pri.89.39.5.in-addr.arpa*. Este archivo es necesario crearlo en el mismo directorio en el que se encuentra el archivo de zona primario (*pri.elbauldelprogramador.com*).
 
-El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador.com*:  
+El principio de este archivo es exáctamente igual que *pri.elbauldelprogramador.com*:
 
 <!--ad-->
 

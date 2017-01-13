@@ -9,14 +9,14 @@ categories:
   - seguridad
 tags:
   - comunicaciones moviles lte
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 Os dejo un vídeo que demuestra como se puede suplantar la identidad de una red GSM / GPRS / UMTS / LTE.
 
 El vídeo es de la ***RootedCON 2011*** de este año.
 
-Visitar el vídeo en Vimeo: [David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)](https://vimeo.com/27258284 "David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)") 
+Visitar el vídeo en Vimeo: [David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)](https://vimeo.com/27258284 "David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)")
 
 Una de las características que se conocen desde hace mucho tiempo es la posibilidad de falsificar, es decir, suplantar, a un operador de telefonía al que se conectan los teléfonos móviles. Normalmente, todos los usuarios que cuentan con un teléfono de última generación, como un iPhone o un Smartphone, lo tienen configurado para conectarse automáticamente a las redes.
 

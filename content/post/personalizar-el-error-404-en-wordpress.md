@@ -9,7 +9,7 @@ tags:
   - error 404
   - personalizar 404 wordpress
 description: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 <figure>
@@ -20,7 +20,7 @@ El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario 
 
 Es una buena práctica sugerir enlaces que puedan estar relacionados con lo que estaba buscando, poner un enlace a la página principal o al mapa de la web.
 
-Con todo esto en mente busqué cómo crear **errores 404 personalizados** y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:  
+Con todo esto en mente busqué cómo crear **errores 404 personalizados** y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:
 
 <!--ad-->
 
@@ -44,7 +44,7 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
         #setup a message to be sent to me
    $failuremess = "A user tried to go to $website"
         .$_SERVER['REQUEST_URI']." and received a 404 (page not found) error. ";
-   $failuremess .= "It wasn't their fault, so try fixing it.  
+   $failuremess .= "It wasn't their fault, so try fixing it.
         They came from ".$_SERVER['HTTP_REFERER'];
     mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'],
         $failuremess, "From: $websitename <noreply@$website?>"); #email you about problem
@@ -152,7 +152,7 @@ if($query->have_posts()){
       #setup a message to be sent to me
       $failuremess = "A user tried to go to $website"
       .$_SERVER['REQUEST_URI']." and received a 404 (page not found) error. ";
-      $failuremess .= "It wasn't their fault, so try fixing it.  
+      $failuremess .= "It wasn't their fault, so try fixing it.
       They came from ".$_SERVER['HTTP_REFERER'];
       mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'],
       $failuremess, "From: $websitename <noreply@$website?>"); #email you about problem

@@ -7,7 +7,7 @@ categories:
   - aplicaciones
   - noticias
   - opensource
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -17,4 +17,3 @@ Para seguir el desarrollo de la aplicación puedes visitar la página en la que 
 
  [1]: https://elbauldelprogramador.com/pylabra-aplicacion-para-almacenar/
  [2]: https://github.com/algui91/PyLabra
-

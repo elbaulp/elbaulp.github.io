@@ -8,7 +8,7 @@ categories:
   - How To
   - linux
   - SO
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 

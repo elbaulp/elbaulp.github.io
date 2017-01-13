@@ -10,7 +10,7 @@ tags:
   - contraseñas
   - google autenticator
 author: luzila
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -26,7 +26,7 @@ Las contraseñas, desafortunadamente, <a href="http://lifehacker.com/5937303/you
 <span class="embed-youtube" ></span>
 </div>
 
-El gurú del spam de Google, Matt Cutts, <a href="http://lifehacker.com/5932700/please-turn-on-two+factor-authentication" target="_blank">lo expresa mejor</a>: la Autenticación de dos factores es una simple característica que te pide más que solo tu contraseña. Requiere tanto &#8220;algo que sabes&#8221; (por ejemplo, una contraseña) como &#8220;algo que tienes&#8221; (por ejemplo, tu teléfono). Luego de ingresar tu contraseña, tendrás un segundo código enviado a tu teléfono, y solo después de ingresarlo podrás ingresar a tu cuenta. Piensa en esto como ingresar un numero de PIN, luego hacer un escaneo de retina, como ves en todas las películas de espías que existen. Es mucho mas seguro que una contraseña que puedes hackear, y mantiene a los fisgones no deseados alejados de tus cuentas online.  
+El gurú del spam de Google, Matt Cutts, <a href="http://lifehacker.com/5932700/please-turn-on-two+factor-authentication" target="_blank">lo expresa mejor</a>: la Autenticación de dos factores es una simple característica que te pide más que solo tu contraseña. Requiere tanto &#8220;algo que sabes&#8221; (por ejemplo, una contraseña) como &#8220;algo que tienes&#8221; (por ejemplo, tu teléfono). Luego de ingresar tu contraseña, tendrás un segundo código enviado a tu teléfono, y solo después de ingresarlo podrás ingresar a tu cuenta. Piensa en esto como ingresar un numero de PIN, luego hacer un escaneo de retina, como ves en todas las películas de espías que existen. Es mucho mas seguro que una contraseña que puedes hackear, y mantiene a los fisgones no deseados alejados de tus cuentas online.
 <!--ad-->
 
 ## ¿Dónde puedo usarla?

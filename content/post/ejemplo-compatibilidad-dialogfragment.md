@@ -14,7 +14,7 @@ tags:
   - supportv4
   - TimeoPickerDialog
 modified: 2016-08-14T00:00
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -80,10 +80,10 @@ Para cerciorarnos que se está usando la librería de compatibilidad, basta con 
 Por ahora dejaremos el método `onTimeSet` vacío; pasemos a crear la interfaz. A modo de ejemplo, crearemos un botón que muestre el dialogo cuando sea pulsado:
 
 ```xml
-<button 
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:onclick="mostrarDialogoDeTiempo" 
+<button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onclick="mostrarDialogoDeTiempo"
     android:text="Diálogo de tiempo"/>
 ```
 
@@ -144,10 +144,10 @@ public class DatePickerFragment extends DialogFragment
 Al igual que antes, creamos un botón que muestre el diálogo:
 
 ```xml
-<button 
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:onclick="mostrarDialogoDeFecha" 
+<button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onclick="mostrarDialogoDeFecha"
     android:text="Diálogo de fecha"/>
 ```
 

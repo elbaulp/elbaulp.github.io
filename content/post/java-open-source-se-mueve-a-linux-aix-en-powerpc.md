@@ -14,7 +14,7 @@ tags:
   - Java Open Source
   - Linux
   - PowerPC
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="/assets/img/2012/07/Java.png" class="alignleft" width="256px" height="256px" />
@@ -23,7 +23,7 @@ color: "#F57C00"
 
 SAN FRANCISCO - Java Open Source (Código Abierto) será llevado a la arquitectura PowerPC para Linux y al SO AIX de IBM bajo una propuesta que se dio a conocer la semana pasada, que eventualmente podría beneficiar a los diferentes distribuidores de Linux.
 
-El proyecto proporcionará una versión completa de OpenJDK para las dos plataformas. OpenJDK es la implementación open source de Java estándar. Los puertos de Java para PowerPC ya existen, pero podrían ser extendidos al reino Open Source. &#8220;El propósito de este proyecto es agrupar los recursos para desarrollo de Oracle, de IBM, y de SAP para proporcionar una implementación de referencia Java libre y de última generación en Linux y AIX en PowerPC&#8221;, dijo Volker Simonis, un Java VM hacker y evangelista OpenJDK de SAP, que encabeza el proyecto.  
+El proyecto proporcionará una versión completa de OpenJDK para las dos plataformas. OpenJDK es la implementación open source de Java estándar. Los puertos de Java para PowerPC ya existen, pero podrían ser extendidos al reino Open Source. &#8220;El propósito de este proyecto es agrupar los recursos para desarrollo de Oracle, de IBM, y de SAP para proporcionar una implementación de referencia Java libre y de última generación en Linux y AIX en PowerPC&#8221;, dijo Volker Simonis, un Java VM hacker y evangelista OpenJDK de SAP, que encabeza el proyecto.
 
 <!--ad-->
 

@@ -7,7 +7,7 @@ categories:
   - cursos
   - internet
 image: AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 

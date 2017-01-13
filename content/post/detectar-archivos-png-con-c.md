@@ -10,7 +10,7 @@ tags:
   - leer formato archivos png
   - leer imagen png c++
   - ocultar imagenes en imagenes
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 Hace un tiempo trasteando con una librería que nos proporcionaron en la facultad (desarrollada por J.Baena y A. Garrido para las asignaturas de introducción a la programación en la ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación en Granada] de la UGR, Universidad de Granada.) para leer imágenes PGM y PPM, me propuse añadirle la capacidad de leer, o al menos detectar imágenes PNG, teniendo el permiso de ambos autores para publicar parte de la librería.
@@ -19,7 +19,7 @@ Por supuesto existen librerías que ya hacen este trabajo, como <a href="http://
 
 El código solo detecta si la imagen es PNG, no implementé la lectura de la imagen en sí ya que hay que tener muchos factores en cuenta (transparencia, color de fondo, corrección Gamma, histograma etc).
 
-Veamos primero el .h:  
+Veamos primero el .h:
 
 <!--ad-->
 
@@ -348,8 +348,8 @@ Tipo imagen: 3
 
 * * *Información PNG |
 
-<a href="http://www.libpng.org/pub/png/spec/1.1/PNG-Rationale.html#R.PNG-file-signature" target="_blank">libpng</a>  
-Documentación | <a href="http://www.fileformat.info/format/png/corion.htm" target="_blank">fileformat.info</a>  
+<a href="http://www.libpng.org/pub/png/spec/1.1/PNG-Rationale.html#R.PNG-file-signature" target="_blank">libpng</a>
+Documentación | <a href="http://www.fileformat.info/format/png/corion.htm" target="_blank">fileformat.info</a>
 Leer tamaño imagen | <a href="http://stackoverflow.com/questions/5354459/c-how-to-get-the-image-size-of-a-png-file-in-directory" target="_blank">StackOverflow</a>
 
 

@@ -9,7 +9,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -25,7 +25,7 @@ Hay cuatro tipos distintos de componentes. Cada tipo es para un propósito en co
 
 A continuación los cuatro tipos de componentes:
 
-### **Actividades** 
+### **Actividades**
 
 Una *Actividad* representa una pantalla con una interfaz de usuario. Por ejemplo, una aplicación de email puede tener una actividad que muestre una lista con los nuevos mails, otra actividad para redactar un correo y otra para leer nuestro correo. Aunque las actividades trabajan juntas de forma coherente, cada una es independiente de la otra. Por lo tanto, una aplicación distinta puede iniciar cualquiera de estas actividades (si la aplicación de email lo permite). Por ejemplo, la aplicación de la cámara puede iniciar la actividad en la aplicación email para componer un nuevo correo, para que el usuario pueda compartir una imagen.
 

@@ -16,7 +16,7 @@ image: 2013/04/GnuPG-Logo.png
 description: "Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo gpg (GNU Privacy Guard)."
 modified: 2016-08-10T09:35
 redirect_from: /opensource/seguridad/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -53,5 +53,5 @@ $ cat ~/.vimrc
 
 # Referencias
 
-- *Plugin para Vim* »» <a href="http://www.vim.org/scripts/script.php?script_id=3645" target="_blank">Visitar sitio</a>  
+- *Plugin para Vim* »» <a href="http://www.vim.org/scripts/script.php?script_id=3645" target="_blank">Visitar sitio</a>
 - *Introducción a <strong>gpg</strong>* »» <a href="http://www.genbetadev.com/seguridad-informatica/manual-de-gpg-cifra-y-envia-datos-de-forma-segura" target="_blank">genbeta::dev</a>

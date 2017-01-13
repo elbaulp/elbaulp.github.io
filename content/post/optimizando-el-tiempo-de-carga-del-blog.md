@@ -6,7 +6,7 @@ permalink: /optimizando-el-tiempo-de-carga-del-blog/
 image: optimizando-el-tiempo-de-carga-del-blog.png
 categories:
   - internet
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

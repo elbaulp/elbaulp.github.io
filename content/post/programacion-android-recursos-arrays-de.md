@@ -9,7 +9,7 @@ tags:
   - curso android pdf
 modified: 2016-08-09T09:50
 redirect_from: /opensource/programacion-android-recursos-arrays-de/
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -39,6 +39,6 @@ for (String s: strings)
    Log.d("ejemplo", s);
 ```
 
-#### Siguiente Tema: [Programación Android: Recursos - Plurales][1] 
+#### Siguiente Tema: [Programación Android: Recursos - Plurales][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-plurales/

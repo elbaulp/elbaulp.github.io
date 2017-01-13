@@ -7,7 +7,7 @@ categories:
   - BaseDeDatos
 tags:
   - que es tuning sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -33,5 +33,3 @@ A continuación se dan unas normas básicas para escribir sentencias `SELECT` op
  [1]: https://elbauldelprogramador.com/bases-de-datos/
  [2]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from/
  [3]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
-
-

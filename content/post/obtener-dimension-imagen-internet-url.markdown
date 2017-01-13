@@ -5,7 +5,7 @@ description: "Cómo obtener el ancho y alto de una imagen que está en internet 
 tags: [imagenes, imagemagick, bash]
 image: obtener-dimension-imagen-internet-url.png
 introduction: "Cómo obtener el ancho y alto de una imagen que está en internet desde línea de comandos"
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 date: 2016-10-01T18:32:13+02:00
 ---

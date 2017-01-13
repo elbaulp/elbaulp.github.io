@@ -7,7 +7,7 @@ description: "Haciendo una práctica de Aprendizaje Automático, en concreto imp
 tags: [R, tutorial R, variables globales R, acceder variable en funcion R, Aprendizaje automático, etsiit R]
 image: Como-Acceder-a-Una-Variable-Desde-Dentro-De-Una-Funcion-en-R.png
 date: 2016-04-22T08:40:33+02:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.

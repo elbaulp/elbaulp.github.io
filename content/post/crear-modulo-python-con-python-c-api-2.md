@@ -14,7 +14,7 @@ tags:
 image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*. El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:"
 modified: 2015-12-22T10:44:00+00:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 * [Crear un módulo para python con la Python C API (I) – Introducción][1]
@@ -27,7 +27,7 @@ color: "#E64A19"
 <a href="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png" title="{{ page.title }}" alt="{{ page.title }}" width="201px" height="190px" /></a>
 </figure>
 
-Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*.  
+Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*.
 
 El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:
 
@@ -179,7 +179,7 @@ Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el pr
 
 #### Referencias
 
-*Extending Python with C or C++* »» <a href="http://docs.python.org/2/extending/extending.html" target="_blank">docs.python.org</a>  
+*Extending Python with C or C++* »» <a href="http://docs.python.org/2/extending/extending.html" target="_blank">docs.python.org</a>
 *Bindings python* »» <a href="http://www.menudoproblema.es/blog/entries/2012/03/26/bindings-python-para-bibliotecas-c-parte-2/" target="_blank">menudoproblema.es</a>
 
 
@@ -191,4 +191,3 @@ Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el pr
  [5]: https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/ "Compilación de programas: makefile y g++"
 
 {% include toc.html %}
-

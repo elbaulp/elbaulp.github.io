@@ -10,7 +10,7 @@ tags:
   - html5
 modified: 2016-08-09T20:45
 image: 2013/01/2013-01-13-105334_1256x830_scrot2.png
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -34,7 +34,7 @@ Sin más explicaciones, lo mejor es verlo en acción. A continuación proporcion
 
 # Referencias
 
-- *Animated Diagrams* »» <a href="http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/" target="_blank">Visitar sitio</a>  
+- *Animated Diagrams* »» <a href="http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/" target="_blank">Visitar sitio</a>
 - *Episodio de Security Now Disconnect Widget Jacking* »» <a href="http://twit.tv/show/security-now/386" target="_blank">Visitar sitio</a>
 
 

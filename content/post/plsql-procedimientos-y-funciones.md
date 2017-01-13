@@ -10,7 +10,7 @@ tags:
   - funcion parametros sql
   - funcion sql
   - sql generar procedure
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -145,5 +145,3 @@ END;
  [1]: https://elbauldelprogramador.com/bloques-plsql/
  [2]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
  [3]: https://elbauldelprogramador.com/plsql-paquetes-packages/
-
-

@@ -7,7 +7,7 @@ categories:
 tags:
   - xda
 modified: 2016-08-15T15:25
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -21,7 +21,7 @@ Ahora un usuario de [XDA Developers][1] llamado dviera88 &nbsp;ha logrado **inst
 
 Parece que [no es demasiado difícil][3] conseguir este objetivo, así que si sois los afortunados poseedores de uno de estos dispositivos, **podéis probar a instalar Ubuntu** para ver qué tal funciona esta distribución Linux en dichos tablets.
 
-## Fuente: <a href="http://www.muylinux.com/2010/11/20/ubuntu-funcionando-en-el-samsung-galaxy-tab" target="_blank">MuyLinux.com</a> 
+## Fuente: <a href="http://www.muylinux.com/2010/11/20/ubuntu-funcionando-en-el-samsung-galaxy-tab" target="_blank">MuyLinux.com</a>
 
  [1]: http://www.xda-developers.com/android/ubuntu-running-on-galaxy-tab/
  [2]: http://forum.xda-developers.com/showthread.php?t=823370

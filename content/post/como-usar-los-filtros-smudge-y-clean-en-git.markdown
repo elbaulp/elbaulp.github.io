@@ -7,7 +7,7 @@ categories:
 description: Cómo crear filtros en git, smudge y clean
 tags: [git, smudge, git smudge, git clean, git hooks]
 image: 2013/03/git-logo.png
-main-class: "git"
+mainclass: "git"
 color: "#f05033"
 ---
 

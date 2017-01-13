@@ -16,7 +16,7 @@ tags:
   - iptables con servidor debian
   - politicas con iptables firewall
 description: "Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco."
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/02/Applic-Firewall-icon.png" alt="Applic-Firewall-icon" width="256px" height="256px" />
@@ -25,7 +25,7 @@ Ayer ojeando el archivo de log detecté que había una ip mandando peticiones PO
 
 Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante [iptables][1].
 
-Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:  
+Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:
 
 <!--ad-->
 

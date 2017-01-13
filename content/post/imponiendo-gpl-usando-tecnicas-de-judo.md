@@ -11,7 +11,7 @@ tags:
   - software libre
 redirect_from: /opensource/imponiendo-gpl-usando-tecnicas-de-judo/
 modified: 2016-08-13T23:17
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -31,7 +31,7 @@ Bradley Kuhn toma una analogía de las artes marciales, y dice que &#8220;copyle
 
 El software libre permite el acceso al trabajo de miles de programadores, es relativamente libre de costo, y elimina la necesidad de reinventar la rueda una y otra vez. Compartir el código es útil para todos, al menos en teoría.
 
-Sin embargo, la aplicación del copyleft depende de la voluntad de los proveedores de software GPL para cumplir con los términos de la licencia, y/o la voluntad de los titulares del copyright para actuar en defensa de la GPL. Y por diversas razones los términos de la GPL son a menudo ignorados por los distribuidores de software libre y los titulares del copyright no siempre están dispuestos a involucrarse.  
+Sin embargo, la aplicación del copyleft depende de la voluntad de los proveedores de software GPL para cumplir con los términos de la licencia, y/o la voluntad de los titulares del copyright para actuar en defensa de la GPL. Y por diversas razones los términos de la GPL son a menudo ignorados por los distribuidores de software libre y los titulares del copyright no siempre están dispuestos a involucrarse.
 
 <!--ad-->
 
@@ -53,7 +53,7 @@ Aplicar la GPL puede ser una experiencia desagradable para los vendedores de chi
 
 La mayoría de las infracciones no son deliberadas, y probablemente pueden ser atribuidas a una mezcla de apatía, incomprensión, ignorancia y confusión. Según Kuhn, &#8220;99,999 por ciento de violaciones se resuelven sin ecesidad de juicio. Nunca nadie ha oído hablar de la mayoría de las empresas que sancionadas al respecto, y han llegado a conformidad sin mucha fanfarria.&#8221;
 
-Harald Welte tiene su propia perspectiva sobre este tema. &#8220;Creo que todavía hay demasiadas violaciones a la GPL, y necesitamos ver más casos positivos con el fin de obtener mayoría de involucrados en el cumplimiento en las respectivas líneas de negocio. Pero lidiar con los dispositivos embebidos en el 2012 y seguir obteniendo el cumplimiento totalmente mal aplicado en realidad significa que no ha habido la más mínima atención en este tema. Y sin refuerzos, nunca va a cambiar. Las personas que no están realmente interesadas deben utilizar simplemente licencias del estilo del MIT. &#8221;  
+Harald Welte tiene su propia perspectiva sobre este tema. &#8220;Creo que todavía hay demasiadas violaciones a la GPL, y necesitamos ver más casos positivos con el fin de obtener mayoría de involucrados en el cumplimiento en las respectivas líneas de negocio. Pero lidiar con los dispositivos embebidos en el 2012 y seguir obteniendo el cumplimiento totalmente mal aplicado en realidad significa que no ha habido la más mínima atención en este tema. Y sin refuerzos, nunca va a cambiar. Las personas que no están realmente interesadas deben utilizar simplemente licencias del estilo del MIT. &#8221;
 
 ## Los implementadores
 
@@ -73,7 +73,7 @@ Cuando le preguntamos a Allison porqué Samba es menos propenso a violar la lice
 
 ## Las razones y porqués
 
-Recientemente BusyBox y la Software Freedom Conservancy han sido objeto de prolongados debates en Linux Weekly News (LWN) que surgieron de un artículo de Matthew Garrett instando a los propietarios del copyright del kernel de Linux a participar en la aplicación de la GPL.  
+Recientemente BusyBox y la Software Freedom Conservancy han sido objeto de prolongados debates en Linux Weekly News (LWN) que surgieron de un artículo de Matthew Garrett instando a los propietarios del copyright del kernel de Linux a participar en la aplicación de la GPL.
 La discusión partió de una publicación en eLinux de un ingeniero de Sony, Tim Bird, proponiendo un proyecto de sustitución de BusyBox, y un artículo posterior en LWN, que referenciaba al proyecto toybox, un proyecto revivido por Rob Landley para replicar (y mejorar) la funcionalidad de BusyBox, usando una licencia open source más liberal.
 
 La razón fundamental de este proyecto es que BusyBox es &#8220;la pieza más controvertida de software GPL en el mundo&#8221;, y que &#8220;los litigantes han solicitado en ocasiones recursos fuera del alcance de BusyBox, como una autoridad de revisión de productos no relacionados, o derecho de rechazar los módulos no-Busybox. Esto genera preocupación entre los vendedores y proveedores de chips. &#8221;
@@ -129,5 +129,3 @@ La mayoría de las empresas felizmente cumplen, y no se sabe nada de ellas porqu
 Detrás de las principales historias de litigios subyace una realidad más tranquila, donde la gran mayoría de las empresas que están notificadas por la SFC o gpl-violations.org están felices de cumplir sin molestias, ya que el software funciona para ellos, y les da una reducción en el costo, velocidad al mercado, oportunidades colaborativas y acceso a código de alta calidad. Como bien señaló un colaborador de las discusiones LWN: &#8220;no fue sino hasta que el SFC comenzó una campaña agresiva, utilizando Busybox como un arma (alrededor del 2006/2007), que como consumidor comencé a ver los dispositivos promocionados con pequeños volantes GPL y el código fuente disponible para su descarga. &#8221;
 
 ## Fuente: <a href="http://www.h-online.com/open/features/Enforcing-the-GPL-with-Judo-moves-1471698.html" target="_blank">h-online</a>
-
-

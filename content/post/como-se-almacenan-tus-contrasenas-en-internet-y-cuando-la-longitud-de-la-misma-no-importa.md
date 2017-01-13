@@ -16,7 +16,7 @@ tags:
 modified: 2015-07-14T21:00:00+00:00
 date: 2015-07-14T21:00:00+00:00
 image: 2012/07/original2.jpg
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -28,7 +28,7 @@ color: "#F57C00"
 
 Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.
 
-Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.  
+Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.
 
 <!--ad-->
 
@@ -126,5 +126,5 @@ A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan 
     layout="responsive"
     width="480" height="270"></amp-youtube>
 
-Imagen | de <a href="http://www.shutterstock.com/pic.mhtml?id=47788978" target="_blank">palsur</a>  
+Imagen | de <a href="http://www.shutterstock.com/pic.mhtml?id=47788978" target="_blank">palsur</a>
 Fuente | <a href="http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter" target="_blank">LifeHacker</a>

@@ -38,7 +38,7 @@ redirect_from:
   - /internet/20-ejemplos-de-iptables-para-sysadmins/
   - /2011/12/20-ejemplos-de-iptables-para-sysadmins.html
   - /internet/20-ejemplos-de-iptables-para-sysadmins
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 

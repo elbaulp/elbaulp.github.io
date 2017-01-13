@@ -7,7 +7,7 @@ categories:
   - aplicaciones
   - internet
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -20,5 +20,3 @@ Es bastante útil si usamos varias redes sociales (twitter, facebook, delicious 
 En <a target="_blank" href="http://www.genbeta.com/a-fondo/a-fondo-ifttt-alarmas-activadas-mediante-eventos-de-las-redes-sociales">GenBeta</a> han escrito una entrada detallada sobre Ifttt.
 
  [1]: http://es.wikipedia.org/wiki/Trigger_(base_de_datos)
-
-

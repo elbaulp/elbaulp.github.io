@@ -9,7 +9,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 Android se ha mezclado en el recién estrenado kernel linux 3.3, poniendo fin a años de controversia sobre cómo debería llevarse a cabo la tarea de combinar software libre, resultando así más sencillo para los desarrolladores crear aplicaciones multiplataforma. Aunque Android y la rama principal de Linux comparten una gran cantidad de código, el kernel básico se había separado; Con esta nueva versión los fabricantes podrán simplemente lanzar sus drivers para el hardware específico en un apartado basado en Linux y tener un dispositivo Android funcional.

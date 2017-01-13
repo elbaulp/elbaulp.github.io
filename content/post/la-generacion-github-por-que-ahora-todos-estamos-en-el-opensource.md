@@ -11,7 +11,7 @@ tags:
   - ventajas de github
 modified: 2016-08-07T18:00
 image: 2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -84,5 +84,3 @@ Pero esto ha cambiado con los aficionados, una vez que el problema está resuelt
 
  [1]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [2]: https://elbauldelprogramador.com/ "Categoría OpenSource"
-
-

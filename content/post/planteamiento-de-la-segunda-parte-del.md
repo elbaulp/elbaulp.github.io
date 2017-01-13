@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -34,4 +34,3 @@ A continuación dejo un índice del esquema que voy a seguir en esta segunda par
 
  [1]: https://elbauldelprogramador.com/assets/img/2013/07/iconoAndroid.png
  [2]: https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/
-

@@ -12,13 +12,13 @@ tags:
   - instalar android studio
   - manuales android studio
   - tutorial android studio
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402px" height="302px" />  
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402px" height="302px" />
 Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en <a href="http://developer.android.com/sdk/installing/studio.html" target="_blank">developer.android.com</a>. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.
 
-Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos el el fichero *studio.sh*, que se encuentra en la carpeta *bin*. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:  
+Descargamos el IDE ([Linux][1]) | ([Windows][2]). Lo descomprimimos y ejecutamos el el fichero *studio.sh*, que se encuentra en la carpeta *bin*. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:
 
 <!--ad-->
 
@@ -52,7 +52,7 @@ Con esto ya deberíamos tener listo el JDK, lanzamos Android Studio y veremos al
 Una vez hecho esto, lo más probable es que queramos importar los proyectos que teníamos en eclipse a Android Studio, para ello es necesario actualizar el plugin ADT en eclipse, y luego seguir estos pasos:
 
   1. Seleccionar **File » Export**.
-  2. En la ventana que aparece, abrir **Android** y seleccionar **Generate Gradle  
+  2. En la ventana que aparece, abrir **Android** y seleccionar **Generate Gradle
     build files**.
   3. Seleccionar los proyectos a exportar y hacer click en **Finish**.
 

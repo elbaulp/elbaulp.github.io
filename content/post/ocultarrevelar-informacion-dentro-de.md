@@ -10,7 +10,7 @@ tags:
   - ocultar texto en imagen
 modified: 2016-08-13T22:20
 redirect_from: /programacion/ocultarrevelar-informacion-dentro-de/
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -33,7 +33,7 @@ El mensaje se oculta modificando el valor de cada pixel para que contenga parte 
 Para representar las imágenes en blanco y negro podemos usar un rango de valores para indicar todas las tonalidades de gris que van desde el negro hasta el blanco. En nuestro caso, las imágenes almacenarán en cada píxel un valor de gris desde el 0 al 255. Por ejemplo, un píxel con valor 128 tendrá un gris intermedio entre blanco y negro.
 
 
-La elección del rango [0,255] se debe a que esos valores son los que se pueden representar en un byte(8 bits). Por tanto, si queremos almacenar una imagen de niveles de gris, 
+La elección del rango [0,255] se debe a que esos valores son los que se pueden representar en un byte(8 bits). Por tanto, si queremos almacenar una imagen de niveles de gris,
 necesitaremos ancho⋅alto bytes.
 
 En la siguiente figura se muestra un ejemplo de imagen 256&#215;256 de niveles de gris. Observe el zoom de una región 10&#215;10 para apreciar con detalle los grises que la componen:
@@ -116,7 +116,3 @@ buffer[i] < <=1;
 </figure>
 
 Eso es todo, Saludos!
-
-
-
-

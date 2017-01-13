@@ -13,7 +13,7 @@ tags:
   - interfaces de usuario android
   - interfaz grafica en android
   - layout android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -44,7 +44,7 @@ Los estilos se definen en un fichero de recursos distinto al layout, colocado en
 
 El nodo raiz de estos archívos debe ser ***<resources></resources>***.
 
-Para cada estilo que queramos definir, hay que añadir un elemento ***  
+Para cada estilo que queramos definir, hay que añadir un elemento ***
 
 
  y un atributo ***name*** para ese estílo (es obligatorio), después, añadiremos un elemento ***<item></item>*** para cada propiedad del estilo, que debe tener obligatoriamente el atributo ***name*** que declara la propiedad del estilo y su valor. Los valores para ***<item></item>*** pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:
@@ -119,7 +119,7 @@ Para saber más acerca de los estilos y temas visite la página oficial: [Applyi
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Recursos - Introducción][2] 
+#### Siguiente Tema: [Programación Android: Recursos - Introducción][2]
 
  [1]: http://developer.android.com/guide/topics/ui/themes.html
  [2]: https://elbauldelprogramador.com/programacion-android-recursos/

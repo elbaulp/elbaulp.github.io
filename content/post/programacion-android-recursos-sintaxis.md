@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 Independientemente del tipo de recurso (de string y layout son los dos que hemos visto hasta ahora), Todos los recursos Android están identificados (o referenciados) por sus ids en código fuente Java.
@@ -48,9 +48,9 @@ Si no se especifica ningún paquete en `@[package:]` (_de ahí que en la represe
 Si especificamos `android:type/name`, el id referenciado será resuelto usando el paquete android y específicamente a través del archivo `android.R.java`. Podemos usar cualquier nombre de paquete java en el lugar de `@[package:]` para localizar el archivo R.java correcto y resolver la referencia al recurso en cuestión. Ahora que conocemos la sintaxis, vamos a analizar unos ejemplos. Nótese que la parte izquierda del ID `android:id` no es parte de la sintaxis. `“android:id”` simplemente indica que vamos a crear un id para un control como lo es el `TextView`.
 
 ```xml
-<TextView android:id=”text”> 
+<TextView android:id=”text”>
 <!­­ Error de compilación, como id no tomará cadenas de texto sin formato. ­­>
-<TextView android:id=”@text”> 
+<TextView android:id=”@text”>
 <!­­  Sintaxis incorrecta.  No disponde de tipo y nombre­­>
 <!­­  debería ser @id/text, @+id/text o @string/string1­­>
 <!­­  obtendremos el siguiente error: “No resource type specified”­­>
@@ -60,7 +60,7 @@ Si especificamos `android:type/name`, el id referenciado será resuelto usando e
 <TextView android:id=”@android:id/text”>
 <!­­  Error: el recurso no es público­­>
 <!­­  lo que indica que no hay tal identificación en android.R.id­­>
-<!­­  Por supuesto esto será válido si el archivo android R.java definió un id con 
+<!­­  Por supuesto esto será válido si el archivo android R.java definió un id con
 este nombre.­­>
 <TextView android:id=”@+id/text”>
 <!­­ Correcto: crea un id llamado text  en el paquete R.java local.­­>
@@ -69,6 +69,6 @@ este nombre.­­>
 En la sintaxis “`@+id/text`”, el signo + tiene un significado especial. Le dice a Android que el ID puede no existir aún y, que en ese caso, cree uno nuevo y lo llame text.
 
 
-## Siguiente Tema: [Programación Android: Recursos compilados y no compilados][1] 
+## Siguiente Tema: [Programación Android: Recursos compilados y no compilados][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-2/

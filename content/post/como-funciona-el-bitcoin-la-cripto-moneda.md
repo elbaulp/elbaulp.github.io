@@ -13,15 +13,15 @@ tags:
   - red bitcoin
   - sistema bitcoin
   - webs aceptan bitcoin
-main-class: "security-now"
+mainclass: "security-now"
 color: "#00BCD4"
 ---
 Hace mucho tiempo que se empezó a hablar sobre el bitcoin y su futuro como moneda digital. Si como yo te has preguntado cómo funciona y quieres saber más acerca de todo el sistema que rodea al bitcoin, en este artículo traduciré el episodio *287 - BitCoin CryptoCurrency* del programa [Security Now!][1]
 
 Bicoint fue creado por el criptógrafo Japonés Satoshi Nakamoto y es [open source][2].
 
-La idea del bitcoin es ofrecer una moneda basada en internet, con fuerza industrial, en la que se haga uso del peer-to-peer donde se pueda intercambiar dinero entre dos partes sin necesidad de un intermediario. Esto último es uno de los mayores problemas porque, *¿de donde viene la moneda?*  
-, *¿Qué crea la moneda?*, *¿Cuanta cantidad fluye a través del sistema?*, *¿Cómo la monitorizas y la regulas?*, *¿Cómo se previene que se produzca inflación?*, *¿Cómo previenes que la gente cree la moneda de forma fraudulenta?*, *¿Cómo evitas que alguien, en caso de disponer de monedas, reutilice la misma moneda?*. Todas estas preguntas se han resuelto en el sistema de una manera muy inteligente e innovadora.  
+La idea del bitcoin es ofrecer una moneda basada en internet, con fuerza industrial, en la que se haga uso del peer-to-peer donde se pueda intercambiar dinero entre dos partes sin necesidad de un intermediario. Esto último es uno de los mayores problemas porque, *¿de donde viene la moneda?*
+, *¿Qué crea la moneda?*, *¿Cuanta cantidad fluye a través del sistema?*, *¿Cómo la monitorizas y la regulas?*, *¿Cómo se previene que se produzca inflación?*, *¿Cómo previenes que la gente cree la moneda de forma fraudulenta?*, *¿Cómo evitas que alguien, en caso de disponer de monedas, reutilice la misma moneda?*. Todas estas preguntas se han resuelto en el sistema de una manera muy inteligente e innovadora.
 
 <!--ad-->
 

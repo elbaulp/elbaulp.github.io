@@ -8,7 +8,7 @@ tags:
   - Gmail Inbox Statistics Report
   - Informe estadístico mensual de GMail
 modified: 2016-08-09T09:50
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -20,7 +20,7 @@ Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo hab�
 
 Es un lenguaje de programación JavaScript en la nube que nos permite extender la funcionalidad de las aplicacoines de Google, así como crear las nuestras propias. Se desarrolla en un [editor desde el navegador web][1] y el código se guarda y ejecuta en los servidores de Google.
 
-Varios ejemplos de uso son:  
+Varios ejemplos de uso son:
 
 <!--ad-->
 

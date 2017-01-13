@@ -5,7 +5,7 @@ permalink: /consulta-de-datos-clausula-where/
 modified: 2016-08-18T11:50
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 

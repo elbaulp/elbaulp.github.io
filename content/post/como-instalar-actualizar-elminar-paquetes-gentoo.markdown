@@ -2,12 +2,12 @@
 layout: post.amp
 title: Cómo Instalar/actualizar/eliminar Paquetes en Gentoo
 date: 2016-07-29T12:20:01+02:00
-categories: 
+categories:
 description: "Chuleta de comandos para administrar gentoo, instalar, actualizar y borrar paquetes"
 tags: [gentoo, portage, emerge, eclean, emaint]
 image: como-instalar-actualizar-elminar-paquetes-gentoo.png
 introduction: "Chuleta de comandos para administrar gentoo, instalar, actualizar y borrar paquetes"
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -21,7 +21,7 @@ color: "#2196F3"
 
 {% include toc.html %}
 
-Hace unos meses me decidí a instalar _Gentoo_ en mi portátil por probar cómo iba, y la verdad es que me está gustando bastante. La capacidad de personalización que tiene es tremenda. 
+Hace unos meses me decidí a instalar _Gentoo_ en mi portátil por probar cómo iba, y la verdad es que me está gustando bastante. La capacidad de personalización que tiene es tremenda.
 
 Una de las cosas que más me gusta es su gestor de paquetes, _emerge_ y sus programas auxiliares para administrar el sistema (_equery, eclean, euse y similares_) es por ello que escribo este artículo, para recopilar una lista de las tareas más habituales en el día a día de usar _Gentoo_. Cómo buscar paquetes a instalar, eliminar paquetes instalados, consultar qué paquetes queremos instalar, limpiar espacio en el sistema, actualizarlo etc. Empecemos:
 
@@ -93,7 +93,7 @@ Hay varias formas, se puede buscar:
 ## Usando expresiones regulares ##
 
 ```bash
-$ emerge -s "%^python$" 
+$ emerge -s "%^python$"
 ```
 
 Esto buscará paquetes que se llamen exáctamente _python_, y por tanto solo hay uno:
@@ -229,15 +229,15 @@ Tras instalar _Gentoo_ descubrí el paquete `pydf`, similar a `df` pero visualme
 
 ```bash
 $ pydf  -h
-Filesystem Size  Used Avail Use%                                                                                       Mounted on    
-/dev/sda4   19G 8043M   10G 41.1 [##################################.................................................] /             
-/dev/sda2  128M   15M  112M 12.0 [##########.........................................................................] /boot         
-/dev/sda5   87G   38G   45G 43.4 [####################################...............................................] /home         
+Filesystem Size  Used Avail Use%                                                                                       Mounted on
+/dev/sda4   19G 8043M   10G 41.1 [##################################.................................................] /
+/dev/sda2  128M   15M  112M 12.0 [##########.........................................................................] /boot
+/dev/sda5   87G   38G   45G 43.4 [####################################...............................................] /home
 /dev/sdb1  110G   11G   94G  9.8 [########...........................................................................] /home/hkr/ssd2
 ```
 
 ### Referencias
 
-- [Gentoo Cheat Sheet](https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet "CheatSheet de Gentoo" ) 
-- [Equery](https://wiki.gentoo.org/wiki/Equery "Página de Equery" ) 
-- [Eclean](https://wiki.gentoo.org/wiki/Eclean "Página de Eclean" ) 
+- [Gentoo Cheat Sheet](https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet "CheatSheet de Gentoo" )
+- [Equery](https://wiki.gentoo.org/wiki/Equery "Página de Equery" )
+- [Eclean](https://wiki.gentoo.org/wiki/Eclean "Página de Eclean" )

@@ -5,7 +5,7 @@ description: "Delve into the world of Apache Maven with this compact cookbook th
 tags: [manuales, libros]
 image: guides/Apache-Maven-Cookbook-full.jpg
 introduction: "Delve into the world of Apache Maven with this compact cookbook that introduces common recipes for the Maven tool!"
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 date: 2016-09-07T15:10:02+02:00
 ---

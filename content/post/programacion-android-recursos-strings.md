@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - recursos android
   - strings android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -46,7 +46,7 @@ Para el fichero strings.xml que acabamos de crear, tendremos lo siguiente en la 
 package nombre.de.nuestro.paquete;
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
-   
+
    public static final class string {
       //.. otras entradas dependiendo de tu proyecto y aplicación
       public static final int app_name=0x7f040001;
@@ -79,7 +79,7 @@ Ahora, el plugin ADT de eclipse se encargará de actualizar el fichero R.java, q
 package nombre.de.nuestro.paquete;
 public final class R {
    //.. otras entradas dependiendo de tu proyecto y aplicación
-   
+
    public static final class string {
       //.. otras entradas dependiendo de tu proyecto y aplicación
       public static final int app_name=0x7f040001;
@@ -92,6 +92,6 @@ public final class R {
 }
 ```
 
-## Siguiente Tema: [Programación Android: Recursos - Layout][1] 
+## Siguiente Tema: [Programación Android: Recursos - Layout][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-layout/

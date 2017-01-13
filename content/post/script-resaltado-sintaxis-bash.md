@@ -5,7 +5,7 @@ permalink: /script-resaltado-sintaxis-bash/
 categories:
   - linux
   - script
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 Como os dije, he hecho el script para el resaltado de bash, me ha costado un poco mas, porque queria intentar resaltar mas cosas, pero al final desistí, y lo hice un poco más simple. Hay que tener en cuenta, que habrá muchas palabras que no se resalten, ya que en la terminal de gnu/Linux existen muchísimos comandos, y obviamente, no puedo ponerlos todos, cuando querais que un determinado comando se resalte (como ls, telnet, ftp&#8230;) o cualquiera que useis, simplemente añadirlo a la variable keyWords.
@@ -50,7 +50,7 @@ Esta línea es la que se encarga de resaltar los comentarios. Simplemente buscam
 
 Hay un pequeño problema, y es que no conseguí formar la expresión regular 100% correcta para los comentarios, de modo que en cualquier lugar en el que exista una #, se la tratará como comentario, esto sucede por ejemplo al principio del script (#!/bin/bash).
 
-Espero que os sea útil, y si quieren modificarlo, háganlo, me lo envian, y yo lo subo al blog sin problemas.  
+Espero que os sea útil, y si quieren modificarlo, háganlo, me lo envian, y yo lo subo al blog sin problemas.
 Saludos.
 
 [1]: https://elbauldelprogramador.com/script-resaltado-sintaxis/

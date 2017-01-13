@@ -12,7 +12,7 @@ tags:
   - eliminar cursores en oracle
   - for oracle cursor
   - tutoriales cursores sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 

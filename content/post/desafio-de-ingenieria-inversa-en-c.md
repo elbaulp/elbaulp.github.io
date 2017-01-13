@@ -9,7 +9,7 @@ categories:
 tags:
   - asm
   - Ingenieria inversa
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

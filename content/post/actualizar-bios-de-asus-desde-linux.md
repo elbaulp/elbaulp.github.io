@@ -8,7 +8,7 @@ categories:
   - SO
 tags:
   - como actualizar bios asus p5b
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 <div class="separator" >

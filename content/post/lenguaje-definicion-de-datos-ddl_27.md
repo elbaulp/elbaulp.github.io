@@ -10,7 +10,7 @@ tags:
   - concepto de ddl
   - que es un ddl
   - sentencias dml y ddl
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -20,7 +20,7 @@ color: "#009688"
 
 Un sinónimo es un nuevo nombre que se puede asignar a una tabla o a una vista y con ellos podemos darle nombres diferentes a un mismo objeto.
 
-Cuando tenemos acceso a las tablas, vistas etc, de otros esquemas y deseamos consultarlas, hay que anteponer al nombre del objeto que queremos consultar el nombre del esquema y separarlos por un punto.  
+Cuando tenemos acceso a las tablas, vistas etc, de otros esquemas y deseamos consultarlas, hay que anteponer al nombre del objeto que queremos consultar el nombre del esquema y separarlos por un punto.
 
 <!--ad-->
 
@@ -69,8 +69,6 @@ SELECT USER FROM DUAL;
 SELECT employee_id, hire_date, SYSDATE FROM employees WHERE ROWNUM < 10;
 ```
 
-## Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1] 
+## Siguiente Tema: [Lenguaje Manipulación de Datos (DML)][1]
 
  [1]: https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/
-
-

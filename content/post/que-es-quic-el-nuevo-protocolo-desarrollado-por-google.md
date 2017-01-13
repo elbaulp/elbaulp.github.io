@@ -13,7 +13,7 @@ tags:
 modified: 2016-08-06T13:30
 image: 2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
 introduction: "Introducción al nuevo protocolo de Google"
-main-class: "security-now"
+mainclass: "security-now"
 color: "#00BCD4"
 ---
 

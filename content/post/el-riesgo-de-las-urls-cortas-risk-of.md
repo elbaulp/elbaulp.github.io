@@ -5,7 +5,7 @@ permalink: /el-riesgo-de-las-urls-cortas-risk-of/
 modified: 2016-08-15T16:11
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

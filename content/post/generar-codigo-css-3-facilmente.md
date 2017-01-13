@@ -6,7 +6,7 @@ permalink: /generar-codigo-css-3-facilmente/
 categories:
   - cursos
   - internet
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -21,4 +21,3 @@ Espero que sea útil para los lectores del blog. Saludos
 
  [2]: http://www.css3maker.com/
  [3]: http://css3generator.com/
-

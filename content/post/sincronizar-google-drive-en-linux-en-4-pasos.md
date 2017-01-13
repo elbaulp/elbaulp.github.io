@@ -11,7 +11,7 @@ tags:
 modified: 2016-08-09T13:40
 image: 2013/11/google-drive-linux3.jpg
 description: "Llevaba tiempo buscando la manera de sincronizar los archivos de Google Drive en Linux con carpetas locales del mismo modo que Dropbox. Pensé en usar el programa inotify, pero no sabía muy bien por donde empezar. Hace unos días encontré la respuesta en openlinuxforums y al parecer no iba mal encaminado, es una solución bastante sencilla usando inotify y nos permitirá mantener sincronizados los archivos y carpetas de Google Drive en todos los ordenadores que queramos."
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -167,12 +167,10 @@ El resultado de estas modificaciones es el siguiente:
 
 # Referencias
 
-- *Howto: Auto-sync Google Drive to a local folder with Grive. Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>  
+- *Howto: Auto-sync Google Drive to a local folder with Grive. Ubuntu & Debian* »» <a href="https://openlinuxforums.org/index.php?topic=3144.0" target="_blank">openlinuxforums.org</a>
 - *Créditos de la imagen* »» <a href="https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR" target="_blank">plus.google.com</a>
 
 [1]: https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/ "Ejecutar un script al modificar un fichero con inotify"
 [3]: https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/ "Configurar xmonad con trayer y fondo de pantalla aleatorio"
 [4]: https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/ "Buscar archivos con locate mediante expresiones regulares"
 [5]: https://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/ "Cómo tener un terminal transparente como wallpaper que muestre información"
-
-

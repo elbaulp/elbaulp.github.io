@@ -19,7 +19,7 @@ tags:
 image: 2013/05/latex_logo.png
 description: "En este tutorial, curso o como queráis llamarlo os voy a enseñar lo básico que debéis saber para hacer vuestros documentos en <strong>LaTeX</strong>! Como estamos en un blog sobre informática vamos a orientarlo un poco hacia la informática."
 modified: 2015-12-22T17:36
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 <figure>
@@ -50,17 +50,17 @@ Lo primero que debemos hacer en un documento de LaTeX es poner una cabecera, est
 \documentclass[opciones]{clase}
 ```
 
-La parte de clase podemos rellenarla con varias opciones, dependiendo del tipo de archivo que queramos hacer. Los más populares son:  
-1. `article`: para documentos cortos tales como artículos, presentaciones&#8230;  
-2. `report`: ideal para documentos más largos que contengan varios capítulos, libros pequeños, etc  
+La parte de clase podemos rellenarla con varias opciones, dependiendo del tipo de archivo que queramos hacer. Los más populares son:
+1. `article`: para documentos cortos tales como artículos, presentaciones&#8230;
+2. `report`: ideal para documentos más largos que contengan varios capítulos, libros pequeños, etc
 3. `book`: para libros
 
-Y la parte de opciones, con algunas opciones que queramos añadirle a nuestro documento tales como:  
-1. **El tamaño de la letra**: 10pt, 11pt y 12pt. El tamaño por defecto es 10pt  
-2. **El tamaño del papel**: `a4paper`, `letterpaper`, `a5paper`, `b5paper`, `executivepaper`, `legalpaper`. El tamaño por defecto es `letterpaper`.  
-3. **Página de titulo**: `titlepage`, `notitlepage`. Por defecto, el artículo no tiene página de título mientras que el `book` y el `report` sí.  
-4. **El número de columnas del documento**: `twoside`, `oneside`. Las clases artículo y report son de una columna por defecto mientras que la clase libro es de dos columnas por defecto.  
-5. **Apaisar documento**: con la opción `landscape`.  
+Y la parte de opciones, con algunas opciones que queramos añadirle a nuestro documento tales como:
+1. **El tamaño de la letra**: 10pt, 11pt y 12pt. El tamaño por defecto es 10pt
+2. **El tamaño del papel**: `a4paper`, `letterpaper`, `a5paper`, `b5paper`, `executivepaper`, `legalpaper`. El tamaño por defecto es `letterpaper`.
+3. **Página de titulo**: `titlepage`, `notitlepage`. Por defecto, el artículo no tiene página de título mientras que el `book` y el `report` sí.
+4. **El número de columnas del documento**: `twoside`, `oneside`. Las clases artículo y report son de una columna por defecto mientras que la clase libro es de dos columnas por defecto.
+5. **Apaisar documento**: con la opción `landscape`.
 6. **Establecer donde empieza el nuevo capítulo**: con `openright` empezaría en las páginas alineadas a la derecha (por defecto en `book`) y con openany en la siguiente página disponible (por defecto en `report`).
 
 Sabiendo esto ya podemos poner la primera línea de nuestro documento, que en nuestro caso será:
@@ -207,11 +207,11 @@ $5 + ((1 + 2) * 4) - 3$ &  $5$ $1$ $2 + 4 * + 3 -$ \\
 
 ```
 
-Hay varios puntos a tener en cuenta:  
-1. Entre las llaves que hay después del `tabular` podemos poner c, l, r para especificar la alineación del texto, esto mejor hacerlo si no tenemos mucho texto en la celda ya que no pone saltos de línea. Y una p con una medida entre llaves que especifica el ancho de la celda y pone saltos de línea al texto de dentro.  
-2. El comando `\hline` se usa para poner una línea horizontal que actúa a modo de separador.  
-3. Cuando tenemos varias columnas, las separamos con el &  
-4. Cuando queremos indicar que hemos terminado una fila ponemos &#92;\ al final de dicha fila  
+Hay varios puntos a tener en cuenta:
+1. Entre las llaves que hay después del `tabular` podemos poner c, l, r para especificar la alineación del texto, esto mejor hacerlo si no tenemos mucho texto en la celda ya que no pone saltos de línea. Y una p con una medida entre llaves que especifica el ancho de la celda y pone saltos de línea al texto de dentro.
+2. El comando `\hline` se usa para poner una línea horizontal que actúa a modo de separador.
+3. Cuando tenemos varias columnas, las separamos con el &
+4. Cuando queremos indicar que hemos terminado una fila ponemos &#92;\ al final de dicha fila
 5. Los $ que pongo se usan en LaTeX para representar signos u operaciones matemáticas &#8220;inline&#8221;. El entorno matemático no respeta espacios en blanco, por eso he tenido que poner varios dólares en la segunda columna para obtener 1 espacio 2 en vez de 12 o 5 1 2 en vez de 512.
 
 Si queremos hacer un listado, podemos hacerlo con la orden `enumerate` (si escribimos `enum` en Sublime Text y le damos a tabulador nos autocompleta la sintaxis) o la orden `itemize` (y lo mismo si escribimos `item`) o, incluso, combinando las dos haciendo listas con sublistas:

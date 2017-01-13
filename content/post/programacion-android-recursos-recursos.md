@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -97,19 +97,19 @@ El siguiente código muestra las variaciones del directorio values:
    <string name="t2">t2 in root</string>
    <string name="testport_port">testport in root</string>
 </resources>
- 
+
 // values­en/string_en.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
  <string name="teststring_all">teststring­en</string>
  <string name="t1_enport">t1_en</string>
  <string name="t1_1_en_port">t1_1_en</string>
 </resources>
- 
+
 // values­en­rUS/string_en_us.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
 <string name="teststring_all">test­en­us</string>
 </resources>
- 
+
 // values­port/string_port.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
  <string name="teststring_all">test­en­us­port</string>
@@ -117,7 +117,7 @@ El siguiente código muestra las variaciones del directorio values:
  <string name="t1_enport">t1_port</string>
  <string name="t1_1_en_port">t1_1_port</string>
 </resources>
- 
+
 // values/string_en_port.xml
 <resources xmlns="http://schemas.android.com/apk/res/android">
  <string name="teststring_all">test­en­port</string>

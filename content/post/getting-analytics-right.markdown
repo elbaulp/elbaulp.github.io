@@ -1,14 +1,14 @@
 ---
 layout: post.amp
 title: "Libro Gratuito: Getting Analytics Right"
-categories: 
+categories:
 description: Answering business questions with more data in less time.
 tags: []
 image: Getting-Analytics-Right-centered.jpg
 modified:
 introduction: Answering business questions with more data in less time.
 date: 2016-08-01T11:42:49+02:00
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 ---
 
@@ -26,7 +26,7 @@ Authors from Tamr, Inc. share insights into why analytics projects often fail, a
 
 Find out how their question-first, data-second approach—fueled by vastly improved data preparation platforms and cataloging software—can help you create human-machine analytics solutions designed specifically to produce better answers, faster.
 
-By downloading this free report, you agree to receive regular updates on events, video, books, and learning opportunities from O'Reilly Media. 
+By downloading this free report, you agree to receive regular updates on events, video, books, and learning opportunities from O'Reilly Media.
 
 <div class="button-post">
   <a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_oreb26" target="_blank">Descárgala ahora</a>

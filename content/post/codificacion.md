@@ -6,7 +6,7 @@ modified: 2016-09-02T11:00
 categories:
   - SO
 description: "Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes."
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

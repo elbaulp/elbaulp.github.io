@@ -11,7 +11,7 @@ tags:
   - pasar paramestros
 image: 2013/11/cpp.png
 description: "En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en C/C++."
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -143,4 +143,3 @@ Espero que estos tres ejemplos sencillos hayan servido para comprender el funcio
 ## Referencias
 
 - *Documentación va_start* »» <a href="http://www.cplusplus.com/reference/cstdarg/va_start/" target="_blank">cplusplus.com</a>
-

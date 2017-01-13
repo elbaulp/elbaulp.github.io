@@ -8,7 +8,7 @@ categories:
   - aplicaciones
   - curiosidades
   - internet
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 

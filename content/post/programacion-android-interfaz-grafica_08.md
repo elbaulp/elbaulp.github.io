@@ -14,7 +14,7 @@ tags:
   - layout android
   - menu android
 modified: 2016-09-20T09:45
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -40,19 +40,19 @@ Lo más simple y sencillo es definir los menús en XML, colocado en ./res/menu, 
 <?xml version="1.0" encoding="utf­8"?>
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item 
-        android:id="@+id/about" 
+    <item
+        android:id="@+id/about"
         android:icon="@drawable/about"
         android:title="About App">
         <menu xmlns:android="http://schemas.android.com/apk/res/android">
-            <item 
-                android:id="@+id/submenu" 
+            <item
+                android:id="@+id/submenu"
                 android:title="Submenú de &quot;About App&quot;"/>
         </menu>
     </item>
-    <item 
+    <item
         android:id="@+id/quit"
-        android:title="Quit App" 
+        android:title="Quit App"
         android:icon="@drawable/quit"/>
 </menu>
 
@@ -86,11 +86,11 @@ public boolean onOptionsItemSelected(MenuItem item) {
            ,Toast.LENGTH_LONG)
            .show();
       return true;
-   
+
    case R.id.quit:
       finish();
       return true;
-      
+
    default:
       return super.onOptionsItemSelected(item);
    }
@@ -124,11 +124,11 @@ public boolean onContextItemSelected(MenuItem item) {
            ,Toast.LENGTH_LONG)
            .show();
       return true;
-      
+
    case R.id.quit:
       finish();
       return true;
-      
+
    default:
       return super.onOptionsItemSelected(item);
    }
@@ -158,7 +158,7 @@ Podéis encontrar más información sobre Menús en la [página oficial de Andro
 
 Espero que os sirva de ayuda.
 
-### Siguiente Tema: [Programación Android: Interfaz gráfica - Diálogos y notificaciones][3] 
+### Siguiente Tema: [Programación Android: Interfaz gráfica - Diálogos y notificaciones][3]
 
  [1]: http://developer.android.com/guide/topics/ui/menus.html
  [2]: http://devgui-android-es.netii.net/descargar.php?archivo=menus.zip&sub;=android

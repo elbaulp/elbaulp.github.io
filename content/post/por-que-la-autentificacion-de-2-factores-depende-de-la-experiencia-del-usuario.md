@@ -10,7 +10,7 @@ tags:
   - usuarios autentificación de 2 factores
 author: luzila
 modified: 2016-08-15T13:10
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

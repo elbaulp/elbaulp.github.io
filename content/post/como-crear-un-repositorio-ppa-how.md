@@ -7,7 +7,7 @@ categories:
   - How To
   - linux
   - opensource
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -54,6 +54,6 @@ $  dput my-ppa P_V_source.changes
 
 Remplazad P con el nombre del paquete y V con el número de la versión.
 
-Podéis ver posibles errores en la subida de paquetes <a href="https://help.launchpad.net/Packaging/UploadErrors" target="_blank">aqui.</a>  
+Podéis ver posibles errores en la subida de paquetes <a href="https://help.launchpad.net/Packaging/UploadErrors" target="_blank">aqui.</a>
 
  [1]: https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/

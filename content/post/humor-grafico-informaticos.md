@@ -6,7 +6,7 @@ permalink: /humor-grafico-informaticos/
 categories:
   - curiosidades
   - Humor
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 

@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-leccion-3/
 modified: 2016-08-19T16:40
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -27,7 +27,7 @@ Fuente:
 
 [lazyfoo.net][5]
 
-#### Siguiente tema: [Programación para Juegos - Lección 4 - Programación orientada a eventos][6] 
+#### Siguiente tema: [Programación para Juegos - Lección 4 - Programación orientada a eventos][6]
 
  [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/
  [5]: http://www.lazyfoo.net/SDL_tutorials/

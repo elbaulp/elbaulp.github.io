@@ -13,14 +13,14 @@ tags:
   - lint warning
   - optimizacion de listas android
   - optimizar layout
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 Hace poco, mientras escribía un [CustomAdapter][1] para una aplicación en la que estoy trabajando, descubrí una nueva característica gracias a la herramienta Lint del sdk, los compound drawables.
 
 #### Compound Drawables
 
-Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un TextView. Suele ser frecuente encontrarse en una lista de elementos una imagen junto a un texto. Algo así:  
+Consiste en simplificar un [layout][2] cuando éste conste de un ImageView y un TextView. Suele ser frecuente encontrarse en una lista de elementos una imagen junto a un texto. Algo así:
 
 <!--ad-->
 
@@ -69,7 +69,7 @@ Con esta pequeña optimización estamos reduciendo el layout de dos a un View, p
 
 ### Referencias
 
-*setCompoundDrawablesWithIntrinsicBounds() Android Reference* »» <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablesWithIntrinsicBounds%28int,%20int,%20int,%20int%29" target="_blank">Visitar sitio</a>  
+*setCompoundDrawablesWithIntrinsicBounds() Android Reference* »» <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablesWithIntrinsicBounds%28int,%20int,%20int,%20int%29" target="_blank">Visitar sitio</a>
 *setCompoundDrawablePadding() Android Reference* »» <a href="http://developer.android.com/reference/android/widget/TextView.html#setCompoundDrawablePadding%28int%29" target="_blank">Visitar sitio</a>
 
 

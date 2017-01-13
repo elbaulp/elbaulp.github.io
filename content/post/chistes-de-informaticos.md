@@ -5,7 +5,7 @@ permalink: /chistes-de-informaticos/
 categories:
   - Humor
 description: "Recopilación de chistes informáticos"
-main-class: "geek"
+mainclass: "geek"
 modified: 2016-08-13T11:50
 color: "#262626"
 ---

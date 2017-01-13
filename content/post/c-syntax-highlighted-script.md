@@ -7,7 +7,7 @@ categories:
   - script
 lang: en
 modified: 2016-08-15T13:40
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -50,7 +50,7 @@ sed "s/^#include..... and sed "s/^#define...
 
 search the pattern &#8220;#define&#8221; or &#8220;#include&#8221;, initially of every line of the text, this is indicated by * ^ *, and replaces it with his corresponding style, to format the text. Once we enter the &#8220;for&#8221;, there is applied basically the same procedure that for it &#8220;define&#8221; and &#8220;include&#8221;, but with every word of the variable keyWords.
 
-Finally, I do the same for the reserved word &#8220;class&#8221;, the motive for which I have left this one by the end, it is because the label <span class="class"> contains the word, &#8220;class&#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.  
+Finally, I do the same for the reserved word &#8220;class&#8221;, the motive for which I have left this one by the end, it is because the label <span class="class"> contains the word, &#8220;class&#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.
 
 How Use It:
 
@@ -66,4 +66,3 @@ Once done this, we have to execute the script and introduce the code path to for
 <a href="http://bashyc.blogspot.com/p/curso-c.html#ejercicio111" target="_blank">Here</a> you can see the result.
 
 Regards, I hope that it is useful
-

@@ -6,7 +6,7 @@ description: "Desarrollando una página en PHP para una asignatura de la faculta
 tags: [depurar en php, mostrar variables depurando php, mostrar variables legibles en php, mostrar variables legibles para humanos php depurar, var_dump en php, print_r php no bonito]
 date: 2016-06-02T16:52:24+02:00
 image: como-mostrar-variables-php-depurar-print_r-var_dump.png
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

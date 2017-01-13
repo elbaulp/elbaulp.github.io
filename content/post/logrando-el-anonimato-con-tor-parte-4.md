@@ -12,7 +12,7 @@ tags:
 modified: 2016-08-08T18:00
 image: 2013/06/081712_1525_AchievingAn4.png
 author: luzila
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -27,7 +27,7 @@ color: "#F57C00"
 
 Hemos visto que la red Tor está constituida de nodos Tor, a través de los cuales enviamos nuestro tráfico para mantenernos anónimos. No hemos profundizado mucho en terminología, porque no era tan importante; todo lo que queríamos era lograr el anonimato, y así fue.
 
-Pero cuando intentamos configurar un Tor Relay, entonces el proyecto Tor se pone realmente interesante y no podemos prescindir de la terminología. Aquí están las expresiones más frecuentemente utilizadas (manenemos la expresión en inglés por su normal utilización, y su traducción al español):  
+Pero cuando intentamos configurar un Tor Relay, entonces el proyecto Tor se pone realmente interesante y no podemos prescindir de la terminología. Aquí están las expresiones más frecuentemente utilizadas (manenemos la expresión en inglés por su normal utilización, y su traducción al español):
 
 <!--ad-->
 
@@ -80,7 +80,7 @@ Pero debemos discutir lo más importante de configurar Tor relay: ¿Debemos conf
   3. Registra un nombre de DNS inverso como tor-proxy.tudominio.com, donde deberías también poner alguna información sobre Tor, de forma tal que otras personas puedan saber qué es.
   4. Configura reglas para una política de exit. Deberías bolquear el tráfico de BitTorrent, el cual realmente no debería ser utilizado sobre Tor, por su alto requerimiento de ancho de banda.
 
-Está bastante claro que a menos que sepamos qué estamos haciendo, deberíamos ejecutar un nodo non-exit en lugar de un exit. Hemos configurado un relay Tor con el uso de la GUI Vidalia, pero si quisiéramos hacerlo manualmente, podemos editar el archivo `/etc/tor/torrc` y agregar las siguientes variables de configuración:  
+Está bastante claro que a menos que sepamos qué estamos haciendo, deberíamos ejecutar un nodo non-exit en lugar de un exit. Hemos configurado un relay Tor con el uso de la GUI Vidalia, pero si quisiéramos hacerlo manualmente, podemos editar el archivo `/etc/tor/torrc` y agregar las siguientes variables de configuración:
 
 ```bash
 DataDirectory /home/user/tor/Data/Tor
@@ -159,7 +159,7 @@ Cuando reiniciemos Tor, deberíamos notar que toma un poquito más de tiempo por
 [Notice] Self-testing indicates your DirPort is reachable from the outside. Excellent.
 ```
 
-Las últimas líneas indican que Tor está verificando si los puertos ORPort y DirPort son accesibles desde afuera, y al mostrar &#8220;Excellent&#8221; significa que sí. Si esta verificación falla entonces necesitamos revisar nuestros firewalls y abrir los puertos 9001 y 9020. Podemos además ver que Tor publicó el *server descriptor* en el directorio del servidor para permitir a los clientes saber que está abierto y pueden conectarse a través de él. El descriptor del servidor contiene información como por ejemplo la dirección, los puertos, las claves, etc.  
+Las últimas líneas indican que Tor está verificando si los puertos ORPort y DirPort son accesibles desde afuera, y al mostrar &#8220;Excellent&#8221; significa que sí. Si esta verificación falla entonces necesitamos revisar nuestros firewalls y abrir los puertos 9001 y 9020. Podemos además ver que Tor publicó el *server descriptor* en el directorio del servidor para permitir a los clientes saber que está abierto y pueden conectarse a través de él. El descriptor del servidor contiene información como por ejemplo la dirección, los puertos, las claves, etc.
 En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay están corriendo bien, lo aumenta nuestra seguridad de que todo está funcionando correctamente.
 
 <figure>

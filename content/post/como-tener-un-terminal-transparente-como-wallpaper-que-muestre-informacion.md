@@ -22,11 +22,11 @@ tags:
   - xrootconsole
 image: 2013/03/xroot-example.jpg
 modified: 2016-08-09T16:16
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
-Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:  
+Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:
 
 <!--ad-->
 
@@ -49,7 +49,7 @@ xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &
 Donde:
 
 - `--wrap` en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo.
-- `--bottomup` inserta líneas al final. 
+- `--bottomup` inserta líneas al final.
 - `--geometry` establece el tamaño y posición de la ventana, el formato es *ANCHOxALTO+MARGEN_IZQUIERDO+MARGEN_SUPERIOR*.
 
 Puedes obtener más información consultando la ayuda del programa o su manual.
@@ -122,7 +122,7 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
 
 # Referencias
 
-- *Terminal as a Transparent Wallpaper* »» <a href="https://wiki.archlinux.org/index.php/Terminal_as_a_Transparent_Wallpaper" target="_blank">wiki.archlinux.org</a>  
+- *Terminal as a Transparent Wallpaper* »» <a href="https://wiki.archlinux.org/index.php/Terminal_as_a_Transparent_Wallpaper" target="_blank">wiki.archlinux.org</a>
 - *How to have a transparent terminal as wallpaper that displays information* »» <a href="http://linuxaria.com/pills/how-to-have-a-transparent-terminal-as-wallpaper-that-displays-information" target="_blank">linuxaria.com</a>
 
  [1]: https://elbauldelprogramador.com/tags/#htop "htop"

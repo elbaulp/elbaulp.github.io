@@ -7,7 +7,7 @@ categories:
   - aplicaciones
   - hackathon
   - opensource
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" >
@@ -29,13 +29,13 @@ Debido al éxito y la [gran y satisfactoria experiencia][1] que me causó el 3er
 >   * [FreePubliDisplays][8]
 >   * [Workespeis FKP][9]
 >
-> [  
+> [
 > ][9]
 >
-> [  
+> [
 > ][9]
 >
-> [Cada proyecto estará en un espacio diferente de la ][9][ETSIIT][10], que comunicaremos oportunamente. Se solicitarán créditos en las carreras de la ETSIIT, pero para poder convalidarlos tendrás que [inscribirte][11].  
+> [Cada proyecto estará en un espacio diferente de la ][9][ETSIIT][10], que comunicaremos oportunamente. Se solicitarán créditos en las carreras de la ETSIIT, pero para poder convalidarlos tendrás que [inscribirte][11].
 > El hackathon tendrá lugar durante la mañana y la tarde del día 13 de abril en los diferentes espacios de la ETSIIT, durante el fin de semana cada proyecto por separado, y durante la mañana del 16 de abril en la que los diferentes proyectos integrarán los cambios hechos durante el fin de semana y harán una presentación de los resultados obtenidos.
 
 

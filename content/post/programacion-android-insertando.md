@@ -9,7 +9,7 @@ categories:
 tags:
   - curso android pdf
   - Insertando registros
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -97,7 +97,7 @@ outStream.close;
 
 El código usa el flujo de salida para escribir.
 
-## Siguiente Tema: [Actualizar y borrar registros][5] 
+## Siguiente Tema: [Actualizar y borrar registros][5]
 
  [1]: https://elbauldelprogramador.com/programacion-android-usando-la-clausula
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de

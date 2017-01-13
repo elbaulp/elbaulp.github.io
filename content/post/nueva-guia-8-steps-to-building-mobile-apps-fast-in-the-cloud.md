@@ -15,7 +15,7 @@ tags:
   - mobile applications
   - mobile computing
   - mobile design
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/8-Steps-to-Building-Mobile-Apps-Fast-in-the-Cloud-300x1431.png" alt="8 Steps to Building Mobile Apps Fast in the Cloud" width="300px" height="143px" />][1]
@@ -33,7 +33,7 @@ Start turning your ideas into mobile apps with the 8 Steps to Building Mobile Ap
 <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_sale38" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***  
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
 <!--ad-->
 

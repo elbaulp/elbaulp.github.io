@@ -8,7 +8,7 @@ tags:
   - ejemplos
   - ruby
 modified: 2016-08-10T13:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -18,7 +18,7 @@ En la asignatura **PDOO** (**Programación y Diseño Orientado a Objetos**) tuve
 
 En este artículo voy a escribir únicamente el código Ruby, al final pondré disponible para descarga ambos proyectos, tanto en Java como en Ruby.
 
-La estructura del programa consta de tres clases, *Persona*, *Alumno* y *Asignatura*. Heredando Alumno de Persona. Empecemos viendo la clase Persona:  
+La estructura del programa consta de tres clases, *Persona*, *Alumno* y *Asignatura*. Heredando Alumno de Persona. Empecemos viendo la clase Persona:
 
 <!--ad-->
 
@@ -184,8 +184,8 @@ class Alumno < Persona
 end
 ```
 
-Varias cosas a comentar. Para indicar la herencia de una clase sobre otra, se usa el operador <, en este caso **Alumno** heredará de **Persona**.  
-Las variables estáticas se definen anteponiendo dos @@ al nombre de la variable. (`@@NUM_MAX_CRED = 60`).  
+Varias cosas a comentar. Para indicar la herencia de una clase sobre otra, se usa el operador <, en este caso **Alumno** heredará de **Persona**.
+Las variables estáticas se definen anteponiendo dos @@ al nombre de la variable. (`@@NUM_MAX_CRED = 60`).
 `asignaturas` es un objeto HashMap sobre el que podemos iterar, un ejemplo es el método `getNumCreditos`:
 
 ```ruby
@@ -196,7 +196,7 @@ total = 0
 total
 ```
 
-Este método itera sobre el HashMap sumando los créditos de las asignaturas. **k** corresponde a la clave del HashMap, y **v** al valor.  
+Este método itera sobre el HashMap sumando los créditos de las asignaturas. **k** corresponde a la clave del HashMap, y **v** al valor.
 Cabe destacar la asuencia de la sentencia `return` en todos los métodos.
 
 Por último, el manejo de excepciones. En esta clase, se lanzan varias. Por ejemplo, el método `matricularAsignatura` lanzará una excepción si el alumno ya está matriculado o supera el número máximo de créditos.

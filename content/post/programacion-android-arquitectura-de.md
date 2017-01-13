@@ -10,7 +10,7 @@ tags:
   - content provider
   - curso android pdf
   - 'Programación Android: Arquitectura de los Proveedores de contenidos'
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -65,11 +65,10 @@ content://contacts/people/23
 
 > Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.
 
-## Siguiente Tema: [Proveedores de Contenidos - Leer datos mediante URIs][5] 
+## Siguiente Tema: [Proveedores de Contenidos - Leer datos mediante URIs][5]
 
  [1]: https://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/
  [2]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
  [3]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
  [4]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu/
  [5]: https://elbauldelprogramador.com/programacion-android-proveedores-de_28/
-

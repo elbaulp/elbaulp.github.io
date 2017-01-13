@@ -11,7 +11,7 @@ categories:
   - curiosidades
   - linux
   - opensource
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -25,14 +25,10 @@ De <a target="_blank" href="http://futurist.se/gldt/">futurist.se</a> he sacado 
 
 <!--ad-->
 
-A partir de estas 3, se abre un abanico inmenso de distribuciones, y seguro que de la gran mayoría ni las conozcáis. Ya que la imagen pesa demasiado, proporciono el enlace a Wikipedia para su visualización: 
+A partir de estas 3, se abre un abanico inmenso de distribuciones, y seguro que de la gran mayoría ni las conozcáis. Ya que la imagen pesa demasiado, proporciono el enlace a Wikipedia para su visualización:
 
-- [https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg "Evolución de las distros GNU/Linux, de 1992 a 2016") 
+- [https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg "Evolución de las distros GNU/Linux, de 1992 a 2016")
 
 ## Referencias
 
 - [linuxtimeline](https://github.com/konimex/linuxtimeline "Repositorio en Github de LinuxTimeline")
-
-
-
-

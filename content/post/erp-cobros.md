@@ -9,7 +9,7 @@ tags:
   - examenes resueltos bases de datos
   - examenes resueltos bases de datos pl/sql
   - examenes sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 <div class="icosql">

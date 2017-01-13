@@ -9,7 +9,7 @@ tags:
   - concepto de ddl
   - que es un ddl
   - sentencias dml y ddl
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -99,8 +99,6 @@ alter table CabFacturas DISABLE CK_CabFacturas;
 alter table nombre_table DROP COLUMN nombre_columna;
 ```
 
-## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Vistas][1] 
+## Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Vistas][1]
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/
-
-

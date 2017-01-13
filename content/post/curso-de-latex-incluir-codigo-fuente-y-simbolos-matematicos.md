@@ -19,7 +19,7 @@ tags:
 image: 2013/05/latex_logo.png
 description: "Continuando por donde lo dejamos en el último artículo, hoy veremos cómo incluir código fuente en el documento."
 modified: 2015-12-22T17:36
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 

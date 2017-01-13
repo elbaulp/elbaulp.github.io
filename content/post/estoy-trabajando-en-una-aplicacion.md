@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -19,7 +19,7 @@ Estoy trabajando en una aplicación Android que consiste en almacenar los lugare
 De momento la aplicación es muy básica y la interfaz muy simple. Dejo un vídeo para que os hagáis una idea de como es:
 
 
-[Fav Sites App Android [Interfaz mejorada] en Vimeo](https://vimeo.com/28887963 "Fav Sites App Android [Interfaz mejorada]") 
+[Fav Sites App Android [Interfaz mejorada] en Vimeo](https://vimeo.com/28887963 "Fav Sites App Android [Interfaz mejorada]")
 
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android

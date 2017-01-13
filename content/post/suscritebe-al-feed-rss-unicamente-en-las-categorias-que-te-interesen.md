@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /suscritebe-al-feed-rss-unicamente-en-las-categorias-que-te-interesen/
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 Puede que solo te interesen algunas publicaciones del blog y no desees recibir todos y cada uno de los artículos que se escriben.

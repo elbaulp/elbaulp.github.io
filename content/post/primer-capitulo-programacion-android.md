@@ -17,7 +17,7 @@ tags:
   - programacion aplicaciones android pdf
   - programacion en android
   - programar en android pdf
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -40,4 +40,3 @@ El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo má
 De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro [enlace de Paypal](https://www.paypal.me/elbaul)
 
 Por último, quiero daros las gracias a todos los lectore del blog. Un saludo
-

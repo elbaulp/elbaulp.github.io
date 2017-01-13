@@ -12,7 +12,7 @@ tags:
   - noSQL
 modified: 2016-06-13T14:57:00+00:00
 author: luzila
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -26,7 +26,7 @@ Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan
 
 Empaquetar tus problemas y darles un nombre puede ayudarte a gestionar y tal vez incluso encontrar soluciones, o al menos eso dicen. Con ese fin, aquí presentamos una lista de los dilemas más importantes que enfrentan los programadores de hoy en día. No significa que esté completa - dicho nuevamente, qué proyecto relacionado con el desarrollo de aplicaciones lo está alguna vez?
 
-¿Tienes otro dilema? Agrégalo a los comentarios.  
+¿Tienes otro dilema? Agrégalo a los comentarios.
 
 <!--ad-->
 

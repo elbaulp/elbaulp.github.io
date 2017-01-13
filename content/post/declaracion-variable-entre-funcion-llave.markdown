@@ -7,7 +7,7 @@ description: "Declaración De Variables Entre El Nombre De La Función Y La Prim
 tags: [pre ansi C stilo, declarar variables antes de funcion C, sintaxis extraña C]
 date: 2016-04-06T21:24:34+02:00
 modified: 2016-08-09T10:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

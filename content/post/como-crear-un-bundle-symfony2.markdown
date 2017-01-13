@@ -5,7 +5,7 @@ title: "Cómo Crear Un Bundle Symfony2"
 date: 2015-06-22T09:00:00+00:00
 description: "En este articulo vamos a ver los pasos que he seguido para crear un bundle de symfony 2 de forma que sea redistribuible mediante composer. Este bundle servirá para facilitar la interacción con la api de smsup, desde symfony2 y poder enviar sms masivos. Es un bundle simple, pero tiene varias cosas interesantes (requiere otra librería, utiliza parámetros de configuración, etc.), y puede ser una buena introducción."
 tags: [bundle, php, Symfony2]
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -358,7 +358,7 @@ class Result {
 
 Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.
 
-### Primera versión estable 
+### Primera versión estable
 
 Para definir una versión solo debemos añadir una etiqueta con la versión al repositorio y packagist se encarga del resto. La etiqueta debe tener el formato 'X.Y.Z' o 'vX.Y.Z' (también puede llevar un sufijo RC, beta, etc). En nuestro caso será la etiqueta "v1.0.0".
 Hecho esto, ya está disponible una versión estable de nuestro bundle que puede instalarse de la siguiente forma:

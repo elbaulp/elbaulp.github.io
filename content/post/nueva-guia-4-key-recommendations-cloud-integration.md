@@ -6,7 +6,7 @@ permalink: /nueva-guia-4-key-recommendations-cloud-integration/
 categories:
   - cursos
   - noticias
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/09/WhitePaper_Cloudinte.jpg" alt=" 4 Key Recommendations for Cloud Integration" width="125px" height="160px" />][1]

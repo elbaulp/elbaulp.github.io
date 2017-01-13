@@ -15,7 +15,7 @@ image: 2013/07/iconoAndroid.png
 date: 2012-01-01T00:00
 modified: 2016-08-13T23:22
 redirect_from: /programacion/android/codigos-secretos-y-ocultos-para-android/
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

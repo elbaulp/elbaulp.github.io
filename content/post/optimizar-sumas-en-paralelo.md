@@ -11,7 +11,7 @@ tags:
   - concurrencia
   - paralelo
   - ps3
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 <div>

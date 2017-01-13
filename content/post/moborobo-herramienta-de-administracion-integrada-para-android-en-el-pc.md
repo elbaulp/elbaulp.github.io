@@ -9,7 +9,7 @@ categories:
 tags:
   - aplicaciones android
   - moborobo
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <p dir="ltr">

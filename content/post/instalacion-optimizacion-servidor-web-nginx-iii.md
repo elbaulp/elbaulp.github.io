@@ -14,7 +14,7 @@ tags:
 modified: 2015-12-28T9:34
 description: "A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web."
 image: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 # Tabla de contenidos
@@ -31,7 +31,7 @@ En éste último artículo se verá cómo realizar optimizaciones al servidor we
 
 ### Pools en PHP
 
-La configuración por defecto de PHP no suele ser la óptima, dependiendo de nuestras necesidades y hardware deberemos ajustar algunos parámetros. En esta sección nos centraremos en el número de procesos y recursos que se dedicarán a una aplicación web. Estos parámetros se encuentran en el directorio */etc/php/fpm/pools.d*, se debe tener una archivo por cada aplicación, en nuestro caso será *www.conf*.  
+La configuración por defecto de PHP no suele ser la óptima, dependiendo de nuestras necesidades y hardware deberemos ajustar algunos parámetros. En esta sección nos centraremos en el número de procesos y recursos que se dedicarán a una aplicación web. Estos parámetros se encuentran en el directorio */etc/php/fpm/pools.d*, se debe tener una archivo por cada aplicación, en nuestro caso será *www.conf*.
 Los parámetros a ajustar son:
 
 * **pm**: Decide cómo el controlador de procesos administra los procesos hijos, es recomendable establecerlo a dinámico.

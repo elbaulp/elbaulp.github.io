@@ -6,7 +6,7 @@ permalink: /evaluando-el-estado-de-la-licencia-gpl/
 categories:
   - noticias
   - opensource
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

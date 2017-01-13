@@ -7,7 +7,7 @@ categories:
   - aplicaciones
   - opensource
   - python
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -85,5 +85,3 @@ Os lo dejo a vuestra disposición y ojalá que os sea útil.
 
 
  [1]: https://elbauldelprogramador.com/pylabra-aplicacion-para-almacenar/
-
-

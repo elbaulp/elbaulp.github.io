@@ -10,7 +10,7 @@ tags:
   - conceptos básicos y componentes Android
   - curso android pdf
   - Fundamentos programación Android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -82,7 +82,7 @@ Con esta clase se permite acceder al sistema de ficheros, bases de datos SQLite 
 
 Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.
 
-### Siguiente tema: [Fundamentos programación Android: Intents y AndroidManifest][2] 
+### Siguiente tema: [Fundamentos programación Android: Intents y AndroidManifest][2]
 
 
  [1]: https://elbauldelprogramador.com/programacion-android-hola-mundo/

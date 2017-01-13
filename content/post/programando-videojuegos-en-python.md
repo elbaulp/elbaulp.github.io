@@ -6,7 +6,7 @@ categories:
   - juegos
   - python
 modified: 2016-08-06T13:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

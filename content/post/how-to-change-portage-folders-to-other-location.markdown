@@ -6,7 +6,7 @@ tags: [gentoo, portage]
 image: como-instalar-actualizar-elminar-paquetes-gentoo.png
 introduction: Cómo cambiar el directorio de portage y directorio temporal a otro directorio
 date: 2016-08-17T10:30:50+02:00
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -66,4 +66,3 @@ Sincronizamos y listo.
 
 - [`/var/tmp/portage: not enough space`](https://forums.gentoo.org/viewtopic-t-774539.html "/var/tmp/portage: not enough space")
 - [`moving portage folders`](https://forums.gentoo.org/viewtopic.php?t=120770 "moving portage folders [SOLVED]")
-

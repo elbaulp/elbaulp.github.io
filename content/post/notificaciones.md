@@ -14,7 +14,7 @@ tags:
   - interfaz grafica en android
   - layout android
   - menu android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.
@@ -194,7 +194,7 @@ Se puede descargar el proyecto de esta entrada aquí:
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica - Estilos y Temas][2] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Estilos y Temas][2]
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/

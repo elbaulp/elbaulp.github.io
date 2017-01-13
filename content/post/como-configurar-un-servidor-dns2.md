@@ -33,7 +33,7 @@ tags:
   - soa correo
 image: 2013/04/dns.jpg
 modified: 2016-08-01T18:00
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -79,7 +79,7 @@ www 3600 A        5.39.89.44
 
 **SOA** es el acrónimo para *“Start Authority”*. Si recuerdas la figura 1 del artículo anterior, recordarás que DNS es una base de datos distrubuida. Comenzando en los root servers, las peticiones se van desplazando hasta llegar a su destino, en este caso, hasta llegar al servidor DNS que estamos configurando. Por esa razón, en el fichero de zona es necesario indicar dónde comienza su autoridad(*authority*). Ésta autoridad comienza precisamente en el fichero de zona. Los servidores **TLD** (*Top Level Domain ó Dominios de primer nivel*) esperan del servidor DNS que realice su parte del trabajo.
 
-El registro **SOA** consta de varios campos. Es necesario proporcionar datos a esos campos para que otros servidores en internet puedan llevar a cabo sus peticiones. Los campos son:  
+El registro **SOA** consta de varios campos. Es necesario proporcionar datos a esos campos para que otros servidores en internet puedan llevar a cabo sus peticiones. Los campos son:
 
 <!--ad-->
 

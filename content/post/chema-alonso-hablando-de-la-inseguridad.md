@@ -6,7 +6,7 @@ permalink: /chema-alonso-hablando-de-la-inseguridad/
 categories:
   - internet
   - seguridad
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

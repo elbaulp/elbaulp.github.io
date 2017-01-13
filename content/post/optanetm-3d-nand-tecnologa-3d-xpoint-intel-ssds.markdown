@@ -10,7 +10,7 @@ image: IntelAnunciaSusNuevosDiscosDuros1000VecesMasRapidosQueLosSSDs.png
 introduction: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnología 3D XPoint De Intel Reemplazarán a Los SSDs"
 date: 2016-08-20T07:06:16+02:00
 redirect_from: /security now/optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/
-main-class: "security-now"
+mainclass: "security-now"
 color: "#00BCD4"
 ---
 
@@ -24,14 +24,14 @@ A continuación se proporciona un resumen:
 
 <!--ad-->
 
-- __1000__ veces __más rápida__ que las NANDs. La latencia de las NANDs se mide en decenas de __microsegundos__, 3D Point en decenas de __nanosegundos__. 
+- __1000__ veces __más rápida__ que las NANDs. La latencia de las NANDs se mide en decenas de __microsegundos__, 3D Point en decenas de __nanosegundos__.
 - __1000 veces más resistencia__ que las NANDs.
 - __10 veces más densa__ que las memorias convencionales.
 - __No volátil__, Memoria no volátil (_NVM_) es la nueva era de las memorias en los ordenadores, manteniendo los datos incluso después de que el ordenador se apague. Ejemplos de memorias no volátiles: 3D NAND, SSDs, y la tecnología 3D XPoint™.
 
 ## 3D XPoint solventa la poca durabilidad de los SSDs
 
-Con esta tecnología, que Intel pretende sacar al mercado __en 2016__, se acaba con un gran problema que tienen los SSDs, su poca durabilidad. Los 3D XPoint acabarán por reemplazar a los SSDs en poco tiempo. 
+Con esta tecnología, que Intel pretende sacar al mercado __en 2016__, se acaba con un gran problema que tienen los SSDs, su poca durabilidad. Los 3D XPoint acabarán por reemplazar a los SSDs en poco tiempo.
 
 El problema con los SSDs (Que son memoria NAND), es que se van varando electrones en una pequeña isla que está flotando con el aislante debajo. La forma de escribir en un SSD es crear un campo electroestático lo suficientemente potenten como para superar al aislante y que los electrones fluyan a través de él.
 
@@ -45,7 +45,7 @@ La memoria RAM estática o _SRAM_ es como los [registros del procesador](/introd
 
 Como mejora a la _SRAM_ se creó la _DRAM_, que reducía la complejidad de la _SRAM_ a un solo transistor y un condensador. _DRAM_ almacena la información en el condensador. El problema de estos condensadores es que tienen que ser diminutos para poder colocarlos en un espacio pequeño. La desventaja de _DRAM_ es que hay que refrescar los condensadores periódicamente para que no pierdan la información almacenada, y hay que hacerlo con la suficiente frecuencia para no darle tiempo al condensador a que se descargue. También es volátil.
 
-## Memorias 3D XPoint 
+## Memorias 3D XPoint
 
 Estas nuevas memorias usan una tecnología de cambio de fase. Imaginemos un conjunto de conductores dispuestos horizontalmente, colocamos pequeños puntos de cosas en dichos conductores horizontalmente. Después, en la parte superior colocamos una rejilla de conductores verticalmente de forma que intersequen con los conductores horizontales en el punto X, de ahí el nombre __XPoint__. La siguiente imagen ayuda a visualizarlo:
 
@@ -72,7 +72,7 @@ Hasta ahora, los dispositivos de almacenamiento a los que estamos acostumbrados 
 
 ## Propiedades de 3D XPoint
 
-Lo más impresionante de esta nueva tecnología es que es de __acceso aleatorio__, de __alta densidad__ y __no volátil__. Lo cual significa que tendremos velocidades similares a __DRAM__ pero sin perder la información al apagar el PC. 
+Lo más impresionante de esta nueva tecnología es que es de __acceso aleatorio__, de __alta densidad__ y __no volátil__. Lo cual significa que tendremos velocidades similares a __DRAM__ pero sin perder la información al apagar el PC.
 
 ## Conclusión
 
@@ -101,5 +101,4 @@ De aquí a unos 5/10 años, seguramente los SSDs __Optane__ de Intel hayan reemp
 </figure>
 
 - 3D XPoint™ Unveiled—The Next Breakthrough in Memory Technology. [intel.com](http://www.intel.com/content/www/us/en/architecture-and-technology/3d-xpoint-unveiled-video.html "3D XPoint™ Unveiled—The Next Breakthrough in Memory Technology")
-- Introducing Breakthrough Memory Technology. [intel.com](http://www.intel.com/content/www/us/en/architecture-and-technology/non-volatile-memory.html "Introducing Breakthrough Memory Technology") 
-
+- Introducing Breakthrough Memory Technology. [intel.com](http://www.intel.com/content/www/us/en/architecture-and-technology/non-volatile-memory.html "Introducing Breakthrough Memory Technology")

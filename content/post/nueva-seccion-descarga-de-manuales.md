@@ -9,7 +9,7 @@ categories:
   - linux
   - noticias
   - opensource
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

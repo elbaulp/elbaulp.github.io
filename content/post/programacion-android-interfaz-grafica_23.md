@@ -16,7 +16,7 @@ tags:
   - layout android
   - layouts android
   - menu android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -126,6 +126,6 @@ Como vemos, hemos centrado el texto1 en la pantalla con ***android:layout_center
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="relativeLayout Android" alt="relativeLayout Android"  height="437" width="326" src="https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png"></amp-img>
 </figure>
 
-### Siguiente Tema: [Programación Android: Interfaz gráfica - Componentes gráficos y Eventos][1] 
+### Siguiente Tema: [Programación Android: Interfaz gráfica - Componentes gráficos y Eventos][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/

@@ -13,7 +13,7 @@ tags:
   - usar fpdns
 image: 2013/04/dns-300x240.jpg
 modified: 2016-08-05T10:45
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -25,7 +25,7 @@ color: "#0097A7"
 
 Realizando un análisis en *<a href="http://www.dnsinspect.com" target="_blank">dnsInspect</a>* me dí cuenta de que el servidor estaba mostrando la versión de [BIND][1], lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.
 
-Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos **[dig][2]** para ello:  
+Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos **[dig][2]** para ello:
 
 <!--ad-->
 
@@ -71,8 +71,8 @@ $ fpdns -D <dominio>
 La salida será algo de este estilo:
 
 ```bash
-fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version  
-fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version  
+fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
+fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
 ```
 
 #### Referencias
@@ -81,5 +81,3 @@ fingerprint (elbauldelprogramador.com, ip): ISC BIND version -- version
 
  [1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns/
  [2]: https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/ "Dig – Chuleta básica de comandos"
-
-

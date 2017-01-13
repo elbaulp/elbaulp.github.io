@@ -6,7 +6,7 @@ permalink: /como-saber-que-particion-pertenece-un/
 categories:
   - How To
   - linux
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

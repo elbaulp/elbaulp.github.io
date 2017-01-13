@@ -10,7 +10,7 @@ categories:
   - opensource
 tags:
   - programar motor de busqueda
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

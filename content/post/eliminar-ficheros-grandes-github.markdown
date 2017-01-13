@@ -7,7 +7,7 @@ description: "Cómo eliminar por completo un fichero demasiado grande para GitHu
 tags: [git, github]
 image: 2013/03/git-logo.png
 introduction: "Cómo eliminar por completo un fichero demasiado grande para GitHub"
-main-class: "git"
+mainclass: "git"
 color: "#f05033"
 date: 2016-11-12T09:12:16+01:00
 ---
@@ -58,5 +58,5 @@ Y habremos solucionado el problema.
 
 ## Fuentes
 
-- [How to remove/delete a large file from commit history in Git repository?](http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository "How to remove/delete a large file from commit history in Git repository?") 
-- [Can't push to GitHub because of large file which I already deleted](http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted "Can't push to GitHub because of large file which I already deleted") 
+- [How to remove/delete a large file from commit history in Git repository?](http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository "How to remove/delete a large file from commit history in Git repository?")
+- [Can't push to GitHub because of large file which I already deleted](http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted "Can't push to GitHub because of large file which I already deleted")

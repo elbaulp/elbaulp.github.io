@@ -15,7 +15,7 @@ tags:
 author: luzila
 image: 2013/04/081712_1515_AchievingAn1-300x114.png
 modified: 2016-08-08T16:40
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -39,7 +39,7 @@ Con Tor Browser Bundle, podemos facilmente comenzar a usar Tor sin instalar ni c
 
 Podemos además descargar el código fuente de Tor Browser Bundle de <a href="https://www.torproject.org/projects/torbrowser-details.html" target="_blank">aquí</a> y construirlo nosotros mismos.
 
-Al iniciar Firefox, aparecerá la siguiente pantalla:  
+Al iniciar Firefox, aparecerá la siguiente pantalla:
 
 <!--ad-->
 
@@ -118,15 +118,15 @@ El navegador web no debería escribir ninguna información relacionada con Tor e
 
 ### Neutralidad de la ubicación
 
-El navegador web debería prevenir que se flitre cualquier información sobre la zona horaria a través de la red Tor.  
-Set de preservación del anonimato  
+El navegador web debería prevenir que se flitre cualquier información sobre la zona horaria a través de la red Tor.
+Set de preservación del anonimato
 El navegador web debería prevenir que se flitre cualquier información que pueda ser tomada como huella digital para el sitio web destino ( plugins instalados, user agent, etc). Debería prevenir que el sitio web destino pueda rastrear usuarios con la información tomada como huella digital, la cual puede ser utilizada para descubrir el cliente actual conectado a un sitio web incluso cuando Tor está activado.
 
 ### Actualización segura
 
 El navegador web debería bloquear cualquier actualización sin autenticar vía Tor, dado que atacantes pueden inyectar un programa de actualización malicioso al navegador.
 
-Presentamos algunas razones de porqué los usuarios deberían utilizar Torbutton e inmediatamente integrar Tor Browser Bundle dentro del navegador web Firefox. Este provee algunas modificaciones que pueden hacer a nuestra navegación web más segura y anónima. Si usamos Torbutton fuera de Tor Browser Bundle, existe un gran riesgo de que el navegador haga algo inesperado, que pueda comprometer a nuestro anonimato.  
+Presentamos algunas razones de porqué los usuarios deberían utilizar Torbutton e inmediatamente integrar Tor Browser Bundle dentro del navegador web Firefox. Este provee algunas modificaciones que pueden hacer a nuestra navegación web más segura y anónima. Si usamos Torbutton fuera de Tor Browser Bundle, existe un gran riesgo de que el navegador haga algo inesperado, que pueda comprometer a nuestro anonimato.
 Debemos mencionar también que Torbutton está integrado dentro de Firefox solamente, dado que es open source. Torbutton no tiene soporte disponible para otros navegadores como IE, Opera, Safari, etc. ni nunca tendrá.
 
 ## 3. Tsocks
@@ -161,7 +161,7 @@ La sintaxis del comando de tordns es muy sencilla y se puede obtener en la pági
 
 ```bash
 tsocks [aplicacion [argumentos para la aplicacion]]
-# o 
+# o
 tsocks [on|off]
 # o
 tsocks
@@ -195,11 +195,9 @@ Podemos ver que el nodo Tor está ubicado en Alemania, tiene la IP 31.172.30.1, 
 
 ## Referencias
 
-- *InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-3/" target="_blank">Achieving Anonymity with Tor Part 3</a>  
+- *InfoSec Institute Resources* »» <a href="http://resources.infosecinstitute.com/tor-part-3/" target="_blank">Achieving Anonymity with Tor Part 3</a>
 - *(1) Tor Project* »» <a href="https://www.torproject.org/torbutton/en/design/" target="_blank">Torbutton Design Documentation</a>
 
  [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/ "Logrando el anonimato con Tor (Parte 1)"
  [2]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
  [3]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
-
-

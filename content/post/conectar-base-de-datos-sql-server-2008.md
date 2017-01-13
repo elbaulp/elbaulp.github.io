@@ -13,7 +13,7 @@ tags:
   - curso android pdf
   - programar base datoss java
 modified: 2016-09-06T13:30
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

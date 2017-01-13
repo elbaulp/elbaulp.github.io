@@ -8,7 +8,7 @@ twitter_text:
 date: 2016-08-12T09:06:02+02:00
 modified: 2016-08-15T11:00
 image: Hackeando-Tu-Monitor-De-Pantalla.jpg
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

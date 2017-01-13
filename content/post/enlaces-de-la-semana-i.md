@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /enlaces-de-la-semana-i/
 categories:
   - Enlaces de la semana
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 La intención de esta nueva sección va a ser recopilar los artículos que leo durante la semana y me resultan interesantes, pero no los escribo en el blog porque sería un simple Ctrl-C, Ctrl-V, y me parece más correcto enlazarlos.
@@ -20,7 +20,7 @@ Aquí el primer post de esta sección:
   * <a target="_blank" href="http://alt1040.com/2012/03/cientificos-revolucionan-el-subtitulado-de-los-videos">Científicos revolucionan el subtitulado de los vídeos</a>
   * <a target="_blank" href="http://alt1040.com/2012/03/el-autismo-puede-deberse-a-un-crecimiento-neuronal-excesivo">El autismo puede deberse a un crecimiento neuronal excesivo</a>
   * <a target="_blank" href="http://alt1040.com/2012/03/investigacion-grabar-terabytes-en-un-segundo">Investigadores desarrollan técnica para grabar terabytes de información en un segundo</a>
-  * <a target="_blank" href="http://www.guzman6001.com.ve/posts/view/35/redes-sociales-y-su-codigo">Redes sociales y su código</a>                      
+  * <a target="_blank" href="http://www.guzman6001.com.ve/posts/view/35/redes-sociales-y-su-codigo">Redes sociales y su código</a>
 
 
 

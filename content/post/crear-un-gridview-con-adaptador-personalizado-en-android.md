@@ -12,7 +12,7 @@ tags:
 modified: 2015-12-23T9:30
 image: 2014/11/gridview-scrolling-horizontal.png
 description: "Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor permite scrolling horizontal y vertical en sus interacciones."
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 > Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.
@@ -85,7 +85,7 @@ La distribución de nuestros elementos se ve afectada en el GridView por los sig
 | `columnWidth`         | El espacio se reparte equitativamente                |
 | `spacingWidthUniform` | Se reparte el espacio uniformemente                  |
 
-  * `android:gravity`: Define la ubicación del contenido dentro de cada celda. Existen muchos valores que puedes utilizar, entre ellos: `top`, `rigth`, `left`, `bottom` y `center`.  
+  * `android:gravity`: Define la ubicación del contenido dentro de cada celda. Existen muchos valores que puedes utilizar, entre ellos: `top`, `rigth`, `left`, `bottom` y `center`.
     Por otra parte, el layout para `Details` consta simplemente de un `ImageView` como nodo raíz:
 
 ```xml
@@ -167,7 +167,7 @@ Luego de ello solo seteas el contenido con el método `setImageResource(),` apun
 
 ## Visualizar la imagen original en otra Actividad
 
-Para que `Details` se entere de que imagen debemos expandir, es necesario enviar la posición del recurso drawable desde `Main`. La forma de averiguar la posición es mediante la sobrescritura del método `onItemClick()` de la interfaz `OnItemClickListener`.  
+Para que `Details` se entere de que imagen debemos expandir, es necesario enviar la posición del recurso drawable desde `Main`. La forma de averiguar la posición es mediante la sobrescritura del método `onItemClick()` de la interfaz `OnItemClickListener`.
 Recuerda que este método recibe como parámetro la posición del item presionado. Así que obtendremos la instancia del `GridView` y la relacionaremos con una nueva escucha en el método `onCreate()`:
 
 ```java

@@ -15,13 +15,13 @@ tags:
   - colorear codigo fuente en latex
 image: 2013/05/latex_logo.png
 modified: 2016-08-13T18:20
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 
 Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en que he reescrito el [Curso de programación Android][1] por completo.
 
-Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.  
+Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama **minted**.
 
 <!--ad-->
 
@@ -68,7 +68,7 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
 \end{document}
 ```
 
-Este trozo de código dará como resultado lo siguiente:  
+Este trozo de código dará como resultado lo siguiente:
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px"></amp-img>
@@ -189,8 +189,7 @@ Para mi, minted es el mejor paquete que hay para resaltar código en $$\LaTeX$$.
 
 #### Referencias
 
-- *Manual de referencia Minted* »» <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>  
+- *Manual de referencia Minted* »» <a href="http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf" target="_blank">Descargar</a>
 - *Repositorio del paquete* »» <a href="http://code.google.com/p/minted/downloads/list" target="_blank">Visitar repositorio</a>
 
  [1]: https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/
-

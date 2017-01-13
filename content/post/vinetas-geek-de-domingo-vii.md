@@ -12,10 +12,10 @@ tags:
   - humor geek grafico
   - humor informatico
   - viñetas humor
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
-Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!  
+Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 <!--ad-->
 <div id="gallery-7" class="gallery galleryid-1792 gallery-columns-1 gallery-size-thumbnail">
@@ -95,9 +95,9 @@ Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Referencias
 
-*devopsreactions* »» <a href="http://devopsreactions.tumblr.com/" target="_blank">Visitar sitio</a>  
-*geek-and-poke* »» <a href="http://geek-and-poke.com/" target="_blank">Visitar sitio</a>  
-*thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>  
+*devopsreactions* »» <a href="http://devopsreactions.tumblr.com/" target="_blank">Visitar sitio</a>
+*geek-and-poke* »» <a href="http://geek-and-poke.com/" target="_blank">Visitar sitio</a>
+*thecodinglove* »» <a href="http://thecodinglove.com" target="_blank">Visitar sitio</a>
 *xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
 
 

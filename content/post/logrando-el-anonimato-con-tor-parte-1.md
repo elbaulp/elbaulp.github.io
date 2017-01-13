@@ -16,7 +16,7 @@ image: 2012/11/081012_1601_AchievingAn21-300x86.png
 redirect_from:
   - /articulos/logrando-el-anonimato-con-tor-parte-1
   - /opensource/logrando-el-anonimato-con-tor-parte-1
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -58,7 +58,7 @@ Agrega la siguiente línea al archivo `/etc/privoxy/config`:
 # echo "forward-socks4a / <a href="http://127.0.0.1:9050" target="_blank">127.0.0.1:9050</a> ." >> /etc/privoxy/config
 ```
 
-Además debes agregar las siguientes línas al archivo `/etc/tor/torrc`:  
+Además debes agregar las siguientes línas al archivo `/etc/tor/torrc`:
 
 <!--ad-->
 
@@ -161,7 +161,7 @@ Con Tor, podemos asegurarnos que Internet aunque canaliza la información, no ti
 Con motivo de esconder la información del nivel de aplicación que pueda comprometer nuestro anonimato, podemos usar <a href="https://www.torproject.org/torbutton/" target="_blank">Torbutton</a>, una extensión de Firefox que inhabilita muchos posibles filtrados de información que nos puedan comprometer. O lo que es mejor, podemos usar<a href="https://www.torproject.org/projects/torbrowser.html.en" target="_blank"> Tor browser bundle</a>, el cual usa Vidalia para configurar e iniciar Tor. Éste además abre el navegador Web Tor con Torbutton integrado, el que podemos usar para buscar anónimamente en internet.
 
 ## 3. Variables de configuración de Tor
-  
+
 Presentemos lo que el manual dice sobre las variables de configuración que usamos en este artículo:
 
 - __AvoidDiskWrites__: Si es distinto de cero, intenta escribir en el disco con menos frecuencia. Esto es útil cuando usamos memoria flash u otro dispositivo que soporta solo un limitado número de escrituras. (Default: 0)
@@ -201,7 +201,7 @@ Podemos ver que si somos cuidadosos podemos ser totalmente anónimos en Internet
 
 ### Referencias:
 
-- Manual de Tor, <a href="https://www.torproject.org/docs/tor-manual.html.en" target="_blank">https://www.torproject.org/docs/tor-manual.html.en</a>. 
+- Manual de Tor, <a href="https://www.torproject.org/docs/tor-manual.html.en" target="_blank">https://www.torproject.org/docs/tor-manual.html.en</a>.
 - *Infosec* »» <a href="http://resources.infosecinstitute.com/tor-part-1/" target="_blank">Visitar sitio</a>
 
 

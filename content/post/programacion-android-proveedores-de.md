@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -41,6 +41,6 @@ Estrictamente hablando, la responsabilidad de los CV abarcan más mecanismos de 
 
 > A pesar de los numerosos mecanismos de acceso a datos permitidos en Android, en este <a href="/planteamiento-de-la-segunda-parte-del.html">segundo tomo del Curso de programación Android</a>, me voy a centrar en SQlite y la abstracción del CV, ya que los CV componen la base del intercambio de datos, el cual es mucho más común en Android que en cualquier otro Framework.
 
-### Siguiente Tema: [Programación Android: Arquitectura de los Proveedore de contenidos][1] 
+### Siguiente Tema: [Programación Android: Arquitectura de los Proveedore de contenidos][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-arquitectura-de/

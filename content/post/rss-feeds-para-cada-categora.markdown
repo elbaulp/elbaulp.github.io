@@ -3,7 +3,7 @@ layout: post.amp
 title: Rss Feeds Para Cada Categoría
 description: "Listado de los feeds por categorías disponibles para los lectores"
 introduction: "Listado de los feeds por categorías disponibles para los lectores"
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 date: 2016-06-24T08:06:58+02:00
 ---

@@ -12,7 +12,7 @@ tags:
   - samsung galaxy scl gti9003
 modified: 2016-08-11T21:30
 image: Tipos-de-gobernadores-en-las-CPUs.jpg
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 Para los que tengáis vuestro terminal [rooteado][1] voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):

@@ -10,7 +10,7 @@ tags: [security now, Intel, seguridad, CET intel, shadow stack intel, que shadow
 image: ComoIntelVaaAcabarConLosBuffersOverflowsConControl-FlowEnforcementTechnologyCET.png
 modified:
 introduction: Hace tiempo que hablamos aquí sobre lo que es un Buffer Overflow y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores
-main-class: "security-now"
+mainclass: "security-now"
 color: "#00BCD4"
 ---
 {% include toc.html %}

@@ -12,7 +12,7 @@ tags:
   - botones sociales wordpress
 description: "A día de hoy, el famoso plugin para wordpress jetpack no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación."
 image: 2013/06/jetpack-300x222.png
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 A día de hoy, el famoso plugin para wordpress ***jetpack*** no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación.

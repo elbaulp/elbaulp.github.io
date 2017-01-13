@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
 categories:
   - Articulos
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 > Encontrar las confusas líneas divisorias entre lo **ideal**, lo **viable** y lo **inaceptable** es un dilema siempre vigente en el diseño y desarrollo de sistemas.
@@ -28,7 +28,7 @@ Todo lo que dicen es peer-to-peer esto, lo otro, y el resto. De repente tienes c
 
 Los Astronautas de Arquitectura dirán cosas como “*¿Podrías imaginar un programa como Napster donde puedas descargar cualquier cosa, no solo canciones?*”. Entonces construirán aplicaciones como Groove, que piensan que son más general que Napster, pero las cuales parecen haber descuidado (o incluso olvidado) aquella pequeña característica que te permite tipear el nombre de una canción y luego escucharla &#8212; la característica que queríamos en primer lugar. Hablando de perder el punto… Si Napster no fuera P2P pero SI te permitiese tipear el nombre de una canción y luego escucharla, hubiese sido igual de popular.
 
-Otra cosa que les suele gustar hacer a los Astronautas de arquitectura es inventar una nueva arquitectura y decir que soluciona algo. Java, XML, Soap, XmlRpc, Hailstorm, .NET, Jini… oh dios, no lo puedo soportar. ¡Y eso sólo en los últimos 12 meses!  
+Otra cosa que les suele gustar hacer a los Astronautas de arquitectura es inventar una nueva arquitectura y decir que soluciona algo. Java, XML, Soap, XmlRpc, Hailstorm, .NET, Jini… oh dios, no lo puedo soportar. ¡Y eso sólo en los últimos 12 meses!
 No estoy diciendo nada malo de esas arquitecturas… Son definitivamente buenas arquitecturas. Lo que me molesta es la estupenda cantidad de espectativas milenarias que las rodean. ¿Recuerdas el white paper de Microsoft Dot Net?
 
 > *La próxima generación de la plataforma de escritorio Windows, Windows.NET provee productividad, creatividad, administración, entretenimiento y mucho más, y está diseñada para que los usuarios tomen control de sus vidas digitales.*
@@ -47,7 +47,7 @@ Y no me recuerdes de lo que el fertilizador George Gilder difundió sobre Java:
 
 > *Un quiebre fundamental en la historia de la tecnología…*
 
-Hay una advertencia segura sobre el hecho de que estés siendo víctima de un Astronauta de Arquitectura: la increíble cantidad de rimbombancia; la heroica y utópica grandilocuencia; la fanfarronería; la completa falta de realidad. ¡Y la gente lo compra! ¡El periodismo económico se expande!  
+Hay una advertencia segura sobre el hecho de que estés siendo víctima de un Astronauta de Arquitectura: la increíble cantidad de rimbombancia; la heroica y utópica grandilocuencia; la fanfarronería; la completa falta de realidad. ¡Y la gente lo compra! ¡El periodismo económico se expande!
 ¿Por qué carajo la gente se sorprende tanto con arquitecturas aburridas que generalmente son un montón de nada más que un nuevo formato derivado del RPC, o una nueva máquina virtual? Estas cosas que podrían ser buenas arquitecturas, seguramente benefician a los desarrolladores que las usan, pero NO son, repito NO son un buen sustituto para que el mesías lleve su blanco trasero a Jerusalem, o la paz mundial. No, Microsoft, las computadoras no van a empezar a leer nuestras mentes de repente y hacer lo que nosotros queramos automáticamente sólo porque todos en el mundo tienen una cuenta Passport. No, Sun, no vamos a tener la posibilidad de analizar nuestros datos de ventas corporativas de forma “tan simple como poner un DVD dentro del sistema de home theatre”.
 
 Recuerda que los arquitectos resuelven problemas que ellos piensan que pueden resolver, no problemas que son útiles de resolver. Soap + WDSL pueden ser un Hot New Thing, pero no te permite realmente hacer cualquier cosa que no hayas podido antes usando otras tecnologías &#8212; si hubieses tenido una razón. Todos los Servicios Distribuidos Nirvana con que los arquitectos astronautas se enriedan nos fueron prometidos en el pasado, si usábamos DCOM, o JavaBeans, o OSF DCE, o CORBA.

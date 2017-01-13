@@ -5,7 +5,7 @@ permalink: /nvidia-prepara-tegra3-4-nucleos/
 modified: 2016-08-24T16:00
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -19,7 +19,6 @@ Ello da un margen de un año aproximadamente para poder ver aplicaciones prácti
 
 El terminal LG Optimus 2X es el primero del mercado en integrar el SoC Tegra 2 de NVIDIA y la tendencia hacia el doble núcleo parece que seguirá en los terminales móviles, que, para más inri, incluso tienen un consumo energético menor.
 
-## Fuente: [MuyComputer][1] 
+## Fuente: [MuyComputer][1]
 
  [1]: http://muycomputer.com/FrontOffice/ZonaPractica/Especiales/especialDet/_wE9ERk2XxDDr8n45RcN0iBq7fz1C_Q8RqPHSU9Fta6H7rbf4Fs2tgJWgIN18521s
-

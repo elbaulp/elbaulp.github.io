@@ -31,7 +31,7 @@ tags:
   - formatos alac
 image: 2012/07/original1.jpg
 modified: 2016-08-10T11:45
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -45,7 +45,7 @@ Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir 
 
 ## Formatos sin pérdidas: WAV, AIFF, FLAC, Apple Lossless y otros
 
-Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">Does Bitrate Really Make a Difference In My Music?</a>*. En resumen, hay dos tipos de calidad de sonido: sin pérdida y con pérdida. La música si pérdida conserva la calidad de sonido de la fuente original &#8212; en la mayoría de los casos, CD &#8212; intacta, por otra parte, la música con pérdidas comprime el archivo para ahorrar espacio (a cambio de disminuir la calidad). En los formatos sin pérdidas se incluyen los siguientes formatos:  
+Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">Does Bitrate Really Make a Difference In My Music?</a>*. En resumen, hay dos tipos de calidad de sonido: sin pérdida y con pérdida. La música si pérdida conserva la calidad de sonido de la fuente original &#8212; en la mayoría de los casos, CD &#8212; intacta, por otra parte, la música con pérdidas comprime el archivo para ahorrar espacio (a cambio de disminuir la calidad). En los formatos sin pérdidas se incluyen los siguientes formatos:
 
 <!--ad-->
 
@@ -77,5 +77,5 @@ Como conclusión final, podemos decir que no hay que obsesionarse con el tema. S
 
 ## Referencias
 
-- Vía \| LifeHacker - <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>  
+- Vía \| LifeHacker - <a href="http://lifehacker.com/5927052/whats-the-difference-between-all-these-audio-formats-and-which-one-should-i-use" target="_blank">What’s the Difference Between All These Audio Formats, and Which One Should I Use?</a>
 - Imagen \| <a href="http://www.flickr.com/photos/mac_users_guide/3680451148/" target="_blank">Carl Berkeley</a>

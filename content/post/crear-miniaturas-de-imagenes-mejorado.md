@@ -8,7 +8,7 @@ categories:
 tags:
   - crear miniaturas de imagenes
 modified: 2016-07-31T00:00
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

@@ -16,7 +16,7 @@ tags:
   - virus
   - vulnerabilities
   - Vulnerabilities Security Management
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="The Top 10 Reports for Managing Vulnerabilities" src="/assets/img/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250px" height="301px" />][1]

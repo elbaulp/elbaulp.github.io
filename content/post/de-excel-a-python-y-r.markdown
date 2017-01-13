@@ -6,7 +6,7 @@ tags: [R, python, análisis de datos]
 image: chrp1.png
 introduction: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
 author: marta
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 date: 2016-11-04T16:23:40+01:00
 ---
@@ -32,15 +32,15 @@ y todo esto en unas tres semanas aproximadamente.
 
 ### Dormida en los laureles
 
-Empecé con bastante tranquilidad pensando que en dos semanas tendría todo el trabajo hecho y me quedaría otra semana extra para documentar. A la hora de realizar los algoritmos me encontré con algunos fallos y varios quebraderos de cabeza, pero pude tenerlos todos terminados en esas dos semanas. Empecé a hacer mi documentación explicando con todo detalle todo lo que había hecho, centrándome en obtener tanto una buena presentación como una buena redacción y, finalmente, me quedaron dos días para hacer lo más importante: el análisis de los resultados. 
+Empecé con bastante tranquilidad pensando que en dos semanas tendría todo el trabajo hecho y me quedaría otra semana extra para documentar. A la hora de realizar los algoritmos me encontré con algunos fallos y varios quebraderos de cabeza, pero pude tenerlos todos terminados en esas dos semanas. Empecé a hacer mi documentación explicando con todo detalle todo lo que había hecho, centrándome en obtener tanto una buena presentación como una buena redacción y, finalmente, me quedaron dos días para hacer lo más importante: el análisis de los resultados.
 
-Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo _plantilla_ con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en _Calc_ tienes que introducir los decimales con una coma y _Python_ los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más. 
+Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo _plantilla_ con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en _Calc_ tienes que introducir los decimales con una coma y _Python_ los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más.
 
 Cuando ya calculé con _Calc_ todo lo que había que calcular vino __el problema__: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis `tabular` de [LaTeX](https://elbauldelprogramador.com/category/latex/ "Artículos sobre LaTeX") pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con _Calc_ conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado __todo el día__ preparando.
 
 ### Último día. Kernel panic.
 
-Llegó el último día que, como tenía clase por la tarde, era en realidad _la última mañana_. Decidí que sería una buena idea poner gráficas en mi documentación, pues con las tablas no me había dado como para escribir _todo lo que me hubiese gustado_ y además, le darían a mi documento un extra de "profesionalidad". 
+Llegó el último día que, como tenía clase por la tarde, era en realidad _la última mañana_. Decidí que sería una buena idea poner gráficas en mi documentación, pues con las tablas no me había dado como para escribir _todo lo que me hubiese gustado_ y además, le darían a mi documento un extra de "profesionalidad".
 
 Así que me dispuse a intentar generar un gráfico en la hoja de cálculo que tenía. Intenté todas las combinaciones posibles de datos, tipos de gráficos, colores, leyendas y demás herramientas que proporciona _Calc_ para hacer gráficos y con ninguna obtenía un buen gráfico que realmente reflejase lo que quería. De hecho, lo más decente que pude obtener fueron dos gráficos que no decían absolutamente nada sobre los datos y que no supe ni siquiera etiquetar... supongo que por los nervios de que la entrega se aproximaba y mi análisis daba pena.
 
@@ -60,15 +60,15 @@ Estos son los gráficos que finalmente incluí en la que iba a ser la chachi doc
 
 ## Cuello de botella
 
-Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que __gasté__ metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script. 
+Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que __gasté__ metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script.
 
-Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero _exportable_ a LaTeX y sin tener que usar _Calc_. Fue entonces cuando encontré el maravillo paquete de _Python_ llamado `tabulate`. Este paquete, te permite generar a partir de una _lista de listas_ una preciosa tabla en varios formatos (podéis consultarlos en su [documentación](https://pypi.python.org/pypi/tabulate)) entre los que se encontraba `tabular` de LaTeX. 
+Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero _exportable_ a LaTeX y sin tener que usar _Calc_. Fue entonces cuando encontré el maravillo paquete de _Python_ llamado `tabulate`. Este paquete, te permite generar a partir de una _lista de listas_ una preciosa tabla en varios formatos (podéis consultarlos en su [documentación](https://pypi.python.org/pypi/tabulate)) entre los que se encontraba `tabular` de LaTeX.
 
-Tuve la suerte de haber hecho mi práctica en _python_, por lo que añadirle el script que voy a describir a continuación fue pan comido. 
+Tuve la suerte de haber hecho mi práctica en _python_, por lo que añadirle el script que voy a describir a continuación fue pan comido.
 
 ## Mi script con `tabulate`
 
-Si habéis leído la documentación de `tabulate` habréis visto que es bastante sencillo de usar: sólo hay que hacer una lista de listas, donde cada lista de la lista representa una fila de la tabla. En mi caso, la información que tenía que almacenar para cada algoritmo era: 
+Si habéis leído la documentación de `tabulate` habréis visto que es bastante sencillo de usar: sólo hay que hacer una lista de listas, donde cada lista de la lista representa una fila de la tabla. En mi caso, la información que tenía que almacenar para cada algoritmo era:
 
 | Caso | Coste obtenido | Tiempo de ejecución | Desviación |
 |------|----------------|---------------------|------------|
@@ -82,18 +82,18 @@ Mi script consistió en ejecutar todos los casos del algoritmo y guardar dos med
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/zzpvyzc.png" alt="{{ title }}" title="{{ title }}" width="197" height="36"></amp-img>
 </figure>
 
-Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado. 
+Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado.
 
 ```python
 def imprime(self):
     # Calculamos la desviación de cada solución con respecto a la mejor
     self.calcula_desv()
     # Generamos cada fila de la tabla accediendo a los datos guardados en cada
-    # una de las listas 
-    table = [[self.ficheros[i], self.valores[i], self.tiempos[i], 
+    # una de las listas
+    table = [[self.ficheros[i], self.valores[i], self.tiempos[i],
         self.desviaciones[i]] for i in range(len(self.ficheros))]
     # Añadimos a la tabla una cabecera para cada columna
-    print(tabulate(table, headers=["Fichero", "Coste", "Tiempo", "Desviación"], 
+    print(tabulate(table, headers=["Fichero", "Coste", "Tiempo", "Desviación"],
         tablefmt="latex"))
     # Además, calculamos la desviación media y el tiempo medio de ejecución
     print("Desviación = ",self.desv())
@@ -102,7 +102,7 @@ def imprime(self):
 
 ## Y los gráficos, ¿qué?
 
-Una vez tuve mi script "hoja de cálculo" hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una [charla](http://jj.github.io/data-vis/#/) sobre _Visualización de datos con R_ en la que describía el paquete `ggplot2`. El funcionamiento de `ggplot2` es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un _Data frame_. 
+Una vez tuve mi script "hoja de cálculo" hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una [charla](http://jj.github.io/data-vis/#/) sobre _Visualización de datos con R_ en la que describía el paquete `ggplot2`. El funcionamiento de `ggplot2` es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un _Data frame_.
 
 Antes de describir el script en [R](https://elbauldelprogramador.com/tags/#r "Artículos sobre R") que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con _Calc_.
 
@@ -131,14 +131,14 @@ Este último gráfico lo hice con los datos de la práctica 2, en vez de con los
 
 `ggplot2` era ideal, pero tenía un problema: ¿cómo paso mis datos de python a R? La respuesta no fue muy difícil de encontrar. Lo que hice fue añadir una función más a mi script en python que guardaba los datos de la "hoja de cálculo" en un fichero `csv`. Con el fichero `csv` de cada algoritmo, creaba un _Data frame_ en R con los datos que me interesaban para mi gráfica.
 
-```python 
+```python
 def csv(self):
     with open("Resultados/"+self.nombre_csv, 'w') as csvfile:
         fieldnames = ["Coste","Tiempo","Desviacion"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for i in range(len(self.ficheros)):
-            writer.writerow({'Coste':str(self.valores[i]), 
+            writer.writerow({'Coste':str(self.valores[i]),
                 'Tiempo':str(self.tiempos[i]), 'Desviacion':str(self.desviaciones[i])})
     csvfile.close()
 ```
@@ -151,7 +151,7 @@ def mejor_csv(self):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for i in range(len(self.ficheros)):
-            writer.writerow({'Caso':self.ficheros[i].split("/",1)[1], 
+            writer.writerow({'Caso':self.ficheros[i].split("/",1)[1],
                 'Coste':str(self.mejores_sol[i])})
     csvfile.close()
 ```
@@ -179,7 +179,7 @@ construye_datos <- function(resultados, nombres) {
     d
 }
 ```
-Una vez tenía un _Data frame_ con los datos que quería representar en la gráfica, pasaba a realizar la gráfica con otra función. Debido a que quería representar tres medidas diferentes en la gráfica (__coste__ obtenido por cada __algoritmo__ en algunos de los __casos__), tuve que hacer un tratamiento previo al _Data frame_ para conseguirlo. 
+Una vez tenía un _Data frame_ con los datos que quería representar en la gráfica, pasaba a realizar la gráfica con otra función. Debido a que quería representar tres medidas diferentes en la gráfica (__coste__ obtenido por cada __algoritmo__ en algunos de los __casos__), tuve que hacer un tratamiento previo al _Data frame_ para conseguirlo.
 
 La función `construye_datos` aplicada sobre dos algoritmos _"Ejemplo 1"_ y _"Ejemplo 2"_ nos devuelve un _Data frame_ con la siguiente forma:
 
@@ -221,7 +221,7 @@ Una vez explicado paso a paso el tratamiento que hice a los datos, paso a enseñ
 ```r
 # Parámetros de la función:
 #   datos: Data frame que devuelve la función constuye_datos
-#   cols: columnas del data frame que vamos a representar en la gráfica 
+#   cols: columnas del data frame que vamos a representar en la gráfica
 #         (en nuestro caso, el coste obtenido por cada algoritmo para cada caso)
 #   nombres: nombres de cada columna del data frame que aparecerán en la gráfica
 #   file: nombre del archivo en el que guardaremos las gráficas finalmente
@@ -269,7 +269,7 @@ representa_convergencia <- function(resultados, nombres, file) {
     # con la segunda columna.
     c <- lapply(X=convergencias, FUN=function(conv) conv[[2]])
     # hacemos un nuevo data frame con la siguiente estructura:
-    #   Iteraciones    ConvergenciaAlgoritmo 1 ..... ConvergenciaAlgoritmo n  
+    #   Iteraciones    ConvergenciaAlgoritmo 1 ..... ConvergenciaAlgoritmo n
     d_c <- data.frame(convergencias[[1]][,1],c)
     names(d_c) <- nombres
     d_c
@@ -279,7 +279,7 @@ representa_convergencia <- function(resultados, nombres, file) {
     # lo representamos con ggplot. Hago la distinción de si los datos se han
     # obtenido por número de llamadas a la función de evaluación o por número de
     # iteraciones.
-    if (nombres[1] == "Evaluaciones") 
+    if (nombres[1] == "Evaluaciones")
         ggplot(d_cm, aes(Evaluaciones,Coste)) + geom_line(aes(color=Algoritmo))
     else
         ggplot(d_cm, aes(Iteraciones,Coste)) + geom_line(aes(color=Algoritmo))
@@ -290,7 +290,7 @@ representa_convergencia <- function(resultados, nombres, file) {
 
 ## Referencias
 
-El código de la práctica está disponible en el GitHub de Marta: [github.com/mgmacias95/Analisis-Resultados-R-Python](https://github.com/mgmacias95/Analisis-Resultados-R-Python "Enlace al Repo") 
+El código de la práctica está disponible en el GitHub de Marta: [github.com/mgmacias95/Analisis-Resultados-R-Python](https://github.com/mgmacias95/Analisis-Resultados-R-Python "Enlace al Repo")
 
 ## Más sobre R y Python
 
@@ -302,6 +302,4 @@ Puedes consultar los siguientes atrículos sobre R y python:
 - [Generar listas de reproducción de una determinada duración con Python](https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/ "Generar listas de reproducción de una determinada duración con Python")
 - [Crear Una Lista De Listas De Forma Eficiente en Python](https://elbauldelprogramador.com/python-lista-de-listas-eficiente/ "Crear Una Lista De Listas De Forma Eficiente en Python")
 - [Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python](https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/ "Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python")
-- Los artículos etiquetados con estos temas se encuentran en [/tags/#r](/tags/#r ) y [/tags/#python](/tags/#python ) 
-
-
+- Los artículos etiquetados con estos temas se encuentran en [/tags/#r](/tags/#r ) y [/tags/#python](/tags/#python )

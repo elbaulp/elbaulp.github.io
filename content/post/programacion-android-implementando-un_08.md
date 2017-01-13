@@ -10,7 +10,7 @@ tags:
   - Content Provider Android
   - curso android pdf
   - fundamentos sqlite android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -195,7 +195,7 @@ public class SitesProvider extends ContentProvider{
 }
 ```
 
-## Siguiente Tema: [Implementando un Content Provider (Parte 3)][7] 
+## Siguiente Tema: [Implementando un Content Provider (Parte 3)][7]
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/programacion-android-implementando-un

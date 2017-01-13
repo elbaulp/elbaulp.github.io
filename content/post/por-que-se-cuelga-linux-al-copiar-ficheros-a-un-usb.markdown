@@ -7,7 +7,7 @@ tags: [usb, linux, usb se cuelga, usb lento]
 image: hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png
 modified: 2016-08-06T12:00:00+00:00
 date: 2015-11-27T12:25:00+00:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

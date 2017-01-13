@@ -14,7 +14,7 @@ tags:
   - servidor web
 image: 2013/02/nginx-logo.png
 modified: 2016-08-05T16:30
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 

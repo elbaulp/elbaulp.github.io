@@ -5,10 +5,10 @@ layout: post.amp
 permalink: /sorteo-wordpress/
 categories:
   - cursos
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
-Me alegra comunicaros que me han ofrecido realizar este sorteo en el que los lectores podrán participar en el sorteo de **5 matriculaciones gratuitas para un curso sobre WordPress, 5 matriculaciones gratuitas para un curso de desarrollo de plugins para WordPress y 10 cupones de descuento para los dos cursos**. Participa!.  
+Me alegra comunicaros que me han ofrecido realizar este sorteo en el que los lectores podrán participar en el sorteo de **5 matriculaciones gratuitas para un curso sobre WordPress, 5 matriculaciones gratuitas para un curso de desarrollo de plugins para WordPress y 10 cupones de descuento para los dos cursos**. Participa!.
 
 <!--ad-->
 
@@ -20,7 +20,7 @@ La plataforma WordPress es usada en más de un 30% de todos los sitios web en In
 
 ## WordPress desde cero: Nivel básico e intermedio
 
-<span class="embed-youtube" ></span>  
+<span class="embed-youtube" ></span>
 *[Sitio del curso][1]*
 
 **En este curso aprenderás todo lo que necesitas para crear tu primer sitio web con la plataforma más popular en el mundo.**
@@ -42,7 +42,7 @@ Algunos de los temas que se verán en el Nivel Intermedio son:
 
 ## Desarrollo de plugins de WordPress para principiantes
 
-<span class="embed-youtube" ></span>  
+<span class="embed-youtube" ></span>
 **[Sitio del curso][2]**
 
 **Si ya sabes utilizar WordPress y solo quieres agregar funcionalidades a tu blog, ¡también puedes hacerlo! con este curso aprenderás**:

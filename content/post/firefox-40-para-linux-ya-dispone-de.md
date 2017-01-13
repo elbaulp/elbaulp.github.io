@@ -5,7 +5,7 @@ permalink: /firefox-40-para-linux-ya-dispone-de/
 categories:
   - noticias
 modified: 2016-08-15T15:30
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 Una de las novedades de la interfaz de Firefox 4.0 estaba disponible hasta ahora solo en la versión para Windows. **Se trataba del menú unificado**, que presentaba un menú desplegable en la aplicación del que salían todas las opciones del programa, en lugar de tener una barra de menú superior tradicional.
@@ -27,7 +27,7 @@ Como indican en [WebUpd8][1], para lograr contar con esta versión podemos acced
 
 Una vez lo tengamos en ejecución, **podremos ir a View->Toolbars** y podremos deshabilitar “Barra de menú”, lo que nos dará acceso a la nueva interfaz.
 
-## Fuente: <a href="http://www.muylinux.com/2010/11/22/firefox-4-0-para-linux-ya-dispone-de-menu-unificado" target="_blank">MuyLinux.com</a> 
+## Fuente: <a href="http://www.muylinux.com/2010/11/22/firefox-4-0-para-linux-ya-dispone-de-menu-unificado" target="_blank">MuyLinux.com</a>
 
  [1]: http://www.webupd8.org/2010/11/firefox-40-for-linux-finally-gets.html
  [2]: http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/

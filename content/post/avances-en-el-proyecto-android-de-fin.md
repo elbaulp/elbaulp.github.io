@@ -10,7 +10,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -68,4 +68,3 @@ Estoy bastante contento con este proyecto, ya que me ha permitido iniciarme en l
  [2]: https://elbauldelprogramador.com/bases-de-datos/
  [3]: http://www.gnu.org/licenses/
  [4]: https://github.com/algui91/WifiBar
-

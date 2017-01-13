@@ -15,7 +15,7 @@ modified: 2015-12-22T10:44:00+00:00
 image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
 description: "Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado **herramientasRed** que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en NDK-gdb – Depurar aplicaciones en el NKD de Android."
 modified: 2015-12-22T10:44:00+00:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -202,4 +202,3 @@ Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer comp
  [6]: https://elbauldelprogramador.com/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento"
 
 {% include toc.html %}
-

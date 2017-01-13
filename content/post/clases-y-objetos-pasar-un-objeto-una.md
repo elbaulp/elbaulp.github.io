@@ -6,7 +6,7 @@ permalink: /clases-y-objetos-pasar-un-objeto-una/
 categories:
   - C
 description: "Vamos a estudiar cómo se pasa una variable a una función en uno de sus argumentos."
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

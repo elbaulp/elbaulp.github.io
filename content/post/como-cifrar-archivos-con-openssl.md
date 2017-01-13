@@ -12,15 +12,15 @@ tags:
 image: 2012/11/Apps-preferences-desktop-cryptography-icon1.png
 description: "Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo cifrar archivos con openssl."
 modified: 2016-07-31T00:00
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
----  
+---
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="Homomorphic Encryption" alt="Cómo cifrar archivos con openssl" title="Cómo cifrar archivos con openssl" width="256px" height="256px" />
 </figure>
 
-Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**.  
+Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo **cifrar archivos con openssl**.
 
 {% include toc.html %}
 
@@ -127,13 +127,11 @@ Espero que os sea de utilidad.
 
 #### Referencias
 
-*Encrypt tar.gz file on create* »» <a href="http://askubuntu.com/questions/95920/encrypt-tar-gz-file-on-create/96182#96182" target="_blank">askubuntu.com</a>  
-*how to encrypt a large file in openssl using public key* »» <a href="http://stackoverflow.com/questions/7143514/how-to-encrypt-a-large-file-in-openssl-using-public-key" target="_blank">stackoverflow.com</a>  
+*Encrypt tar.gz file on create* »» <a href="http://askubuntu.com/questions/95920/encrypt-tar-gz-file-on-create/96182#96182" target="_blank">askubuntu.com</a>
+*how to encrypt a large file in openssl using public key* »» <a href="http://stackoverflow.com/questions/7143514/how-to-encrypt-a-large-file-in-openssl-using-public-key" target="_blank">stackoverflow.com</a>
 *Documentación oficial de openssl* »» <a href="http://www.openssl.org/docs/apps/openssl.html" target="_blank">Visitar sitio</a>
 
 
 
  [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/
  [2]: https://elbauldelprogramador.com/
-
-

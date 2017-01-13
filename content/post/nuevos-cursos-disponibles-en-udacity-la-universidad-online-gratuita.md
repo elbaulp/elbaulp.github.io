@@ -14,7 +14,7 @@ tags:
   - udacity
 format: status
 modified: 2016-08-05T12:00
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 
@@ -26,7 +26,7 @@ Hace aproximadamente 7 semanas que escribí una entrada hablando sobre Udacity y
 
 Por desgracia no he podido obtener el certificado del curso ya que a partir de la unidad 6 por falta de tiempo fui dejando de seguir el curso. Sin embargo sí que terminé de ver todo el contenido aunque no hiciera el examen final.
 
-Para todo aquel que esté interesado el curso (Lo cual recomiendo totalmente,) se va a volver a repetir, y hoy día 16 comienzan otros cuatro cursos igual de interesantes en los que me he inscrito, a continuación os dejo información sobre ellos:  
+Para todo aquel que esté interesado el curso (Lo cual recomiendo totalmente,) se va a volver a repetir, y hoy día 16 comienzan otros cuatro cursos igual de interesantes en los que me he inscrito, a continuación os dejo información sobre ellos:
 
 <!--ad-->
 
@@ -34,7 +34,7 @@ Para todo aquel que esté interesado el curso (Lo cual recomiendo totalmente,) s
 
 Impartido por Peter Norvig, Director de investigación en Google
 
-<span class="embed-youtube" ></span>  
+<span class="embed-youtube" ></span>
 El contenido del curso es el siguiente:
 
 <div >

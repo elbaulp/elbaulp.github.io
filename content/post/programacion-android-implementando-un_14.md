@@ -9,7 +9,7 @@ categories:
 tags:
   - Content Provider Android
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -145,7 +145,7 @@ qb.setTables(favSitesTableMEtaData.TABLE_NAME);
 qb.setProjectionMap(sSitesProjectionMap);
 ```
 
-### Siguiente Tema: [Implementando un Content Provider (Parte 4)][8] 
+### Siguiente Tema: [Implementando un Content Provider (Parte 4)][8]
 
  [1]: https://elbauldelprogramador.com/programacion-android-implementando-un
  [2]: https://elbauldelprogramador.com/programacion-android-implementando-un_08
@@ -155,5 +155,3 @@ qb.setProjectionMap(sSitesProjectionMap);
  [6]: http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html
  [7]: https://elbauldelprogramador.com/consulta-de-datos-clausula-from
  [8]: https://elbauldelprogramador.com/programacion-android-implementando-un_29/
-
-

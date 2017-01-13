@@ -15,7 +15,7 @@ tags:
   - latex nota al pie
 image: 2013/05/latex_logo.png
 modified: 2016-08-13T17:50
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 
@@ -23,7 +23,7 @@ color: "#B31917"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/latex_logo.png" alt="latex_logo" width="300px" height="114px"></amp-img>
 </figure>
 
-Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.  
+Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.
 
 <!--ad-->
 
@@ -87,7 +87,7 @@ Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambi
 \setFooterR{\href{https://elbauldelprogramador.com}{elbauldelprogramador.com}}
 ```
 
-Produciendo el siguiente resultado:  
+Produciendo el siguiente resultado:
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/footerFancyHdrLatex.png" alt="Cómo crear un pie de página en LaTeX con fancyhdr" title="Cómo crear un pie de página en LaTeX con fancyhdr" width="887px" height="53px"></amp-img>
@@ -99,5 +99,3 @@ Produciendo el siguiente resultado:
 
  [1]: https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/ "Resaltar sintaxis del código fuente en LaTeX con minted"
  [2]: https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/ "Disponible la primera parte del curso Android en PDF"
-
-

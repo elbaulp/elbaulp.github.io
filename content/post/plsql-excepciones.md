@@ -7,7 +7,7 @@ categories:
   - BaseDeDatos
 tags:
   - ejecutar excepciones en sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 

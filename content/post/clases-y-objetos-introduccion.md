@@ -6,7 +6,7 @@ permalink: /clases-y-objetos-introduccion/
 categories:
   - C
 description: "Hace poco puse a vuestra disposición unos tutoriales básicos de C++, y ahora voy a comenzar a explicar las clases y los objetos en C++."
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

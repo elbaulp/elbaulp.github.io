@@ -13,13 +13,13 @@ tags:
 modified: 2016-08-10T15:30
 redirect_from: /opensource/seguridad/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/
 author: luzila
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
 Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.
 
-Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps" target="_blank"> una aplicación de Twitter llamada Tweetgif fue hackeada</a>, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.  
+Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps" target="_blank"> una aplicación de Twitter llamada Tweetgif fue hackeada</a>, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.
 
 <!--ad-->
 
@@ -33,7 +33,7 @@ Hace poco, <a href="http://lifehacker.com/5917895/twitter-service-tweetgif-hacke
 
 Digamos que quieres usar una aplicación como Tweetgif para postear divertidas imágenes GIF animadas en tu cuenta de Twitter. Para lograrlo, es necesario darle a Tweetgif acceso a tu cuenta de Twitter, para poder obtener tu info y postear tweets en tu nombre. En los viejos tiempos, tenías que darle a una aplicación como Tweetgif tu nombre de usuario y contraseña de Twitter, para que pueda loggearse y acceder a los servicios. No solo tenías que confiar que usen esas credenciales sabiamente, sino que también debías mantenerlas protegidas de los hackers - lo que era un verdadero gran salto de fe. Es como darle las llaves de tu casa a un extraño y confiar que no hará copias para todos sus amigos y luego robar todas tus cosas.
 
-OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:  
+OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:
 
 1. Para convertirse en una aplicación de Twitter, Tweetgif adquirió dos tokens del servicio de Twitter: una "Consumer Key" (Clave de Consumidor) y una "Consumer Secret" (Secreto de Consumidor). Estos son los elementos que crean una conexión entre el consumidor (en este caso, Tweetgif) y el proovedor del servicio (en este caso, Twitter).
 2. Cuando quieres accedef a Twitter a traves de Tweetgif, éste te redirecciona a la portada de Twitter. Si no estás loggeado, te loggeas en ese momento (recuerda que le estás dando tu usuario y contraseña a Twitter, no a Tweetgif).

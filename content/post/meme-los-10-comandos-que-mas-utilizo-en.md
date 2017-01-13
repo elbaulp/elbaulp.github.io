@@ -5,7 +5,7 @@ permalink: /meme-los-10-comandos-que-mas-utilizo-en/
 modified: 2016-08-30T10:30
 categories:
   - meme
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

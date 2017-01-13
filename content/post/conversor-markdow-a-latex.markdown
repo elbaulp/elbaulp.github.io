@@ -6,7 +6,7 @@ modified:
 categories:
 description: "Hace tiempo, para la asignatura “Modelos de Computación” desarrollé un conversor de MarkDown a LaTeX usando flex. Básicamente con flex se van reconociendo partes del documento MarkDown mediante expresiones regulares y se traduce a su comando homólogo en LaTeX."
 tags: [MarkDown, conversor latex markdown, lex, tutorial lex]
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

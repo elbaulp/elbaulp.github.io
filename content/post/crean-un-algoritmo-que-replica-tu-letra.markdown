@@ -1,14 +1,14 @@
 ---
 layout: post.amp
 title: Crean Un Algoritmo Que Replica Tu Letra
-categories: 
+categories:
 description: Investigadores de la UCL han desarrollado un software que analiza el texto escrito en papel de un individuo y replica de forma muy similar su letra. El programa se llama My Text in Your Handwriting.
 tags: [algoritmos, investigación]
 introduction: Investigadores de la UCL han desarrollado un software que analiza el texto escrito en papel de un individuo y replica de forma muy similar su letra. El programa se llama My Text in Your Handwriting.
 image: crean-un-algoritmo-que-replica-tu-letra.jpg
 date: 2016-08-13T07:07:34+02:00
 modified: 2016-08-13T10:50
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -25,7 +25,7 @@ Antes de que se desarrollara este software, la única forma de conseguir tipogra
 # Cómo funciona el algoritmo
 
 - El usuario comienza seleccionando un texto escrito a mano que quiera replicar.
-- Luego el algoritmo selecciona y combina los distintos _glyphs_ (los símbolos que forma una letra) y produce una tipografía basada en dicho tipo de letra. 
+- Luego el algoritmo selecciona y combina los distintos _glyphs_ (los símbolos que forma una letra) y produce una tipografía basada en dicho tipo de letra.
 
 # Posibles usos
 
@@ -70,4 +70,3 @@ A continuación dejo un vídeo explicativo del software, junto con el enlace a l
 
 - New computer programme replicates handwriting \| [phys.org](http://phys.org/news/2016-08-programme-replicates.html)
 - My Text in Your Handwriting \| [visual.cs.ucl.ac.uk](http://visual.cs.ucl.ac.uk/pubs/handwriting/)
-    

@@ -16,16 +16,16 @@ description: "Leyendo noticias en mi lector RSS he encontrado un artículo inter
 image: 2012/12/linux-apps-on-android1.jpg
 modified: 2016-08-13T23:23
 redirect_from: /programacion/android/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
-Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.  
+Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.
 Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo.
 
 - **Paso 1:** Instalar busybox (Herramienta que provee de varias utilidades estándares de Unix) desde la play Store, (Requiere [root][1]) En caso de que el teléfono no esté rooteado, puedes seguir los pasos indicados en el vídeo de más abajo.
 - **Paso 2:** Para conseguir que tu dispositivo sea aún más poderoso, instala <a href="https://play.google.com/store/apps/details?id=com.botbrew.basil">BostBrew Basil</a>, esta aplicación inicializa el sistema base y permite manejar la instalación de paquetes mediante Dpkg y Apt en lugar de Opkg. Permitiendo instalar algunos paquetes linux.
-- **Paso 3:** Instalar los paquetes necesarios  
+- **Paso 3:** Instalar los paquetes necesarios
 
 <!--ad-->
 
@@ -94,8 +94,7 @@ A continuación un vídeo explicando el proceso de instalación de busybox sin p
 
 ### Referencias
 
-- *Geeknizer* »» <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>  
+- *Geeknizer* »» <a href="http://geeknizer.com/install-run-linux-applications-on-android/" target="_blank">Visitar sitio</a>
 - *XDA-Developers* »» <a href="http://forum.xda-developers.com/showpost.php?p=26261600&postcount=119" target="_blank">Visitar sitio</a>
 
  [1]: https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/ "Rootear Samsung Galaxy S GT-I9003"
-

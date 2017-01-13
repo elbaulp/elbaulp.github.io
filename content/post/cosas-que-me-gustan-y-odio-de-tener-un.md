@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
 categories:
   - curiosidades
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 
@@ -39,4 +39,4 @@ color: "#262626"
     <a href="https://4.bp.blogspot.com/-77SLqwtT_78/TkvvK_Y3YhI/AAAAAAAAAu4/rvO-e1b8_g4/s1600/11.png"  ><amp-img width="524" height="601" layout="responsive"  src="https://4.bp.blogspot.com/-77SLqwtT_78/TkvvK_Y3YhI/AAAAAAAAAu4/rvO-e1b8_g4/s1600/11.png"></amp-img></a>
 </figure>
 
-Fuente: [http://theoatmeal.com/](http://theoatmeal.com/ http://theoatmeal.com/) 
+Fuente: [http://theoatmeal.com/](http://theoatmeal.com/ http://theoatmeal.com/)

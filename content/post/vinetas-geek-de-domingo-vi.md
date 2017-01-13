@@ -14,7 +14,7 @@ tags:
   - humor informatico
   - viñetas humor
 format: gallery
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 Disfrutad de lo que queda de fin de semana!
@@ -102,13 +102,13 @@ Disfrutad de lo que queda de fin de semana!
 
 #### Referencias
 
-*1* »» <a href="http://geek-and-poke.com/geekandpoke/2013/6/25/simply-explained" target="_blank">Visitar sitio</a>  
-*2* »» <a href="http://xkcd.com/1231/" target="_blank">Visitar sitio</a>  
-*3* »» <a href="http://devopsreactions.tumblr.com/post/54331815989" target="_blank">Visitar sitio</a>  
-*4* »» <a href="http://thecodinglove.com/post/54511701951/when-a-bug-mysteriously-disappears" target="_blank">Visitar sitio</a>  
-*5* »» <a href="http://devopsreactions.tumblr.com/post/54819531048" target="_blank">Visitar sitio</a>  
-*6* »» <a href="http://devopsreactions.tumblr.com/post/54585027874/protecting-your-servers-during-a-ddos" target="_blank">Visitar sitio</a>  
-*7* »» <a href="http://thecodinglove.com/post/54685719434" target="_blank">Visitar sitio</a>  
+*1* »» <a href="http://geek-and-poke.com/geekandpoke/2013/6/25/simply-explained" target="_blank">Visitar sitio</a>
+*2* »» <a href="http://xkcd.com/1231/" target="_blank">Visitar sitio</a>
+*3* »» <a href="http://devopsreactions.tumblr.com/post/54331815989" target="_blank">Visitar sitio</a>
+*4* »» <a href="http://thecodinglove.com/post/54511701951/when-a-bug-mysteriously-disappears" target="_blank">Visitar sitio</a>
+*5* »» <a href="http://devopsreactions.tumblr.com/post/54819531048" target="_blank">Visitar sitio</a>
+*6* »» <a href="http://devopsreactions.tumblr.com/post/54585027874/protecting-your-servers-during-a-ddos" target="_blank">Visitar sitio</a>
+*7* »» <a href="http://thecodinglove.com/post/54685719434" target="_blank">Visitar sitio</a>
 *8* »» <a href="http://thecodinglove.com/post/54609919840" target="_blank">Visitar sitio</a>
 
 

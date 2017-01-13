@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-leccion-12/
 modified: 2016-08-19T09:30
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -103,7 +103,7 @@ Fuente:
 
 [lazyfoo.net][4]
 
-## Siguiente tema: [Lección 2 - Superficies Optimizadas][5] 
+## Siguiente tema: [Lección 2 - Superficies Optimizadas][5]
 
 
  [1]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-1/

@@ -9,7 +9,7 @@ categories:
 tags:
   - curso android pdf
   - StrictMode Android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -134,7 +134,7 @@ try{
 </figure>
 
 
-### Siguiente Tema: [Proveedores de Contenido - Introducción][5] 
+### Siguiente Tema: [Proveedores de Contenido - Introducción][5]
 
  [1]: https://elbauldelprogramador.com/tags/#android
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/

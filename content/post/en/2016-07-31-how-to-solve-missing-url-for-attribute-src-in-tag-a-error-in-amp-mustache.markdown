@@ -8,7 +8,7 @@ image: how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache
 introduction: "Solving amp-mustache error: Missing URL for Attribute"
 date: 2016-07-31T07:37:13+02:00
 lang: en
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -54,7 +54,7 @@ This code would be populated from the _json_ by replacing each `{% raw %}{{tag}}
 
 # How to make amp-mustache work in jekyll #
 
-In _Jekyll_ there are liquid tags, and they have the same syntax `amp-mustache` templates have, so when _jekyll_ is building the site, it will interpret each `{% raw %}{{tag}}{% endraw %}` in the example above as _liquid_ variables. However, since this variables do not exists they will be left blank, and so the template would not be populated. 
+In _Jekyll_ there are liquid tags, and they have the same syntax `amp-mustache` templates have, so when _jekyll_ is building the site, it will interpret each `{% raw %}{{tag}}{% endraw %}` in the example above as _liquid_ variables. However, since this variables do not exists they will be left blank, and so the template would not be populated.
 
 In my case, the error `Missing URL for attribute 'src' in tag 'a'.` came from this piece of code `<a href={% raw %}{{url}}{% endraw %}>`, because _jekyll_ do not find any variable which name was `url` and in consequence leave it blank. To solve this problem we need to tell _jekyll_ that those tags are not liquid tags. This is easily done with: `{% raw %}{% raw %}{{ tag }}{% endraw %}{{ "{% endraw " }}%}`. Knowing this, the code for generate a list with `amp-mustache` would be as follow:
 

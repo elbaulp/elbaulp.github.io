@@ -14,7 +14,7 @@ tags:
   - debian openbox distro
   - openbox
   - wallpaper para openbox
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 <div class="separator" >

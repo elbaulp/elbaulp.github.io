@@ -9,7 +9,7 @@ categories:
 tags:
   - curso android pdf
   - hola mundo android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -123,13 +123,13 @@ Por lo tanto, ***R.layout.main*** referencia a un archivo xml situado en la carp
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-    <linearlayout xmlns:android="http://schemas.android.com/apk/res/android" 
-        android:orientation="vertical" 
-        android:layout_width="fill_parent" 
+    <linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-    <textview 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
+    <textview
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello" />
 </linearlayout>
 ```

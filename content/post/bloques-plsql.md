@@ -6,7 +6,7 @@ modified: 2016-08-24T16:00
 categories:
   - BaseDeDatos
 description: "Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas"
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -27,7 +27,7 @@ Los bloques PL/SQL presentan una estructura específica compuesta de tres partes
 * La **sección de ejecución** que incluye las instrucciones a ejecutar en el bloque PL/SQL. Estas instrucciones pueden ser tanto de tipo DML como DDL, así como ordenes procedimentales. Esta es la única sección que es obligatoria.
 * La **sección de excepciones** en donde se definen los manejadores de errores que soportará el bloque PL/SQL. Esta sección es opcional y no se ejecutará a menos que aparezca un error.
 
-Cada una de las partes anteriores se delimita por una palabra reservada, de modo que un bloque  
+Cada una de las partes anteriores se delimita por una palabra reservada, de modo que un bloque
 PL/SQL se puede representar como sigue:
 
 ```sql
@@ -67,8 +67,6 @@ Para mostrar el contenido de una expresión se debe utilizar la sentencia:
 DBMS_OUTPUT.PUT_LINE (cadena_caracteres);
 ```
 
-## Siguiente Tema: [PL/SQL - Declaración de variables][1] 
+## Siguiente Tema: [PL/SQL - Declaración de variables][1]
 
  [1]: https://elbauldelprogramador.com/plsql-declaracion-de-variables/
-
-

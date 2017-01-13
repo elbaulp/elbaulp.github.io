@@ -14,10 +14,10 @@ tags:
   - LIKE_TRANSACTION android
   - Log.wtf android
   - TWEET_TRANSACTION android
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/06/monkey-phone-300x269.jpg" alt="isUserAMonkey Android" width="300px" height="269px" />][1]  
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/06/monkey-phone-300x269.jpg" alt="isUserAMonkey Android" width="300px" height="269px" />][1]
 Todos sabemos el humor que gastan chicos de Google, y a raiz de una pregunta en *<a href="http://stackoverflow.com/questions/13375357/proper-use-cases-for-android-usermanager-isuseragoat" target="_blank">stackoverflow</a>* descubrí que la documentación de Android tiene unos cuantos toques de humor de los de Mountain View. Así que decidí buscarlos y crear la siguiente recopilación:
 
 ### isUserAGoat()
@@ -34,7 +34,7 @@ La documentación oficial está en <a href="http://developer.android.com/referen
 >
 > Used to determine whether the user making this call is subject to teleportations.
 >
-> **Returns**  
+> **Returns**
 > whether the user making this call is a goat.
 
 ### Log.wtf()
@@ -45,8 +45,8 @@ Podría pensarse que esta abreviatura viene de ***What The Fuck?***, pero en rea
 >
 > What a Terrible Failure: Report a condition that should never happen. The error will always be logged at level ASSERT with the call stack. Depending on system configuration, a report may be added to the DropBoxManager and/or the process may be terminated immediately with an error dialog.
 >
-> **Parameters**  
-> tag Used to identify the source of a log message.  
+> **Parameters**
+> tag Used to identify the source of a log message.
 > msg The message you would like logged.
 
 <a href="http://developer.android.com/reference/android/util/Log.html#wtf%28java.lang.String,%20java.lang.String%29" target="_blank">/android/util/Log.html#wtf(java.lang.String, java.lang.String)</a>
@@ -79,7 +79,7 @@ La segunda (LIKE_TRANSACTION) le dice a la aplicación (asíncronamente) que al 
 >
 > ***There is no response returned and nothing about the system will be functionally affected by it, but it will improve the app&#8217;s self-esteem. ***
 
-<a href="http://developer.android.com/reference/android/os/IBinder.html#TWEET_TRANSACTION" target="_blank">/android/os/IBinder.html#TWEET_TRANSACTION</a>.  
+<a href="http://developer.android.com/reference/android/os/IBinder.html#TWEET_TRANSACTION" target="_blank">/android/os/IBinder.html#TWEET_TRANSACTION</a>.
 <a href="http://developer.android.com/reference/android/os/IBinder.html#LIKE_TRANSACTION" target="_blank">/android/os/IBinder.html#LIKE_TRANSACTION</a>
 
 Eso es todo lo que he podido encontrar, un poquito de humor nunca viene mal. ¿Conocéis más métodos curiosos en la documentación?

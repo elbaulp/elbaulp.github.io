@@ -15,7 +15,7 @@ tags:
   - unusedResources Android
 description: "Trabajando en el proyecto SWADroid 	(Fuente en Github), y tras pasar la herramienta Lint, me encontré con cientos de recursos sin usar, que debía eliminar a mano. Pensé que debía existir alguna herramienta que permitiera automatizar el proceso, y de hecho, exíste, Android Resource Remover. Hoy veremos cómo usar ésta herramienta para eliminar recursos sin usar en Android."
 modified: 2015-12-24T17:47
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 Trabajando en el proyecto [SWADroid][1] \| [(Fuente en Github)][2], y tras pasar la herramienta `Lint`, me encontré con cientos de recursos sin usar, que debía eliminar a mano. Pensé que debía existir alguna herramienta que permitiera automatizar el proceso, y de hecho, exíste, *Android Resource Remover*. Hoy veremos cómo usar ésta herramienta para eliminar recursos sin usar en Android.
@@ -98,7 +98,7 @@ Tras pasar *Android Resource Remover*, *SWADroid* paso a ocupar **1,5Mb** frente
 
 #### Referencias
 
-*Proyecto en Github* »» <a href="https://github.com/KeepSafe/android-resource-remover" target="_blank">github.com/KeepSafe/android-resource-remover</a>  
+*Proyecto en Github* »» <a href="https://github.com/KeepSafe/android-resource-remover" target="_blank">github.com/KeepSafe/android-resource-remover</a>
 *Remove unused Android resources to reduce APK size* »» <a href="http://keepsafe-engineering.tumblr.com/post/85828806276/remove-unused-android-resources" target="_blank">keepsafe-engineering.com</a>
 
 

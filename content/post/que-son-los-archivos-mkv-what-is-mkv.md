@@ -5,7 +5,7 @@ permalink: /que-son-los-archivos-mkv-what-is-mkv/
 modified: 2016-08-15T16:10
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

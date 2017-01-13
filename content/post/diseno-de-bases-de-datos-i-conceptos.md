@@ -5,7 +5,7 @@ permalink: /diseno-de-bases-de-datos-i-conceptos/
 categories:
   - BaseDeDatos
 modified: 2016-08-08T10:46
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -161,5 +161,3 @@ Por ejemplo, el atributo NIF-PROV de la relación PRECIOS es clave foránea ya q
 #### Siguiente tema:[Diseño de Bases de Datos ( II ) - Restricciones][1]
 
  [1]: https://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/
-
-

@@ -13,7 +13,7 @@ image: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ba
 description: "Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada Fail2Ban, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar Fail2Ban para bloquear el acceso a nuestra máquina a robots atacando por fuerza bruta a WordPress y al servidor web Nginx"
 modified: 2015-12-30T11:00
 redirect_from: /administracion-de-servidores/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -196,7 +196,7 @@ mta = sendmail
 
 #### Referencias
 
-*Fail2Ban para wordpress* »» <a href="http://codepoets.co.uk/2013/fail2ban-filter-for-wordpress/" target="_blank">codepoets.co.uk</a>  
+*Fail2Ban para wordpress* »» <a href="http://codepoets.co.uk/2013/fail2ban-filter-for-wordpress/" target="_blank">codepoets.co.uk</a>
 *Fail2Ban para Nginx* »» <a href="http://snippets.aktagon.com/snippets/554-how-to-secure-an-nginx-server-with-fail2ban" target="_blank">snippets.aktagon.com</a>
 
 

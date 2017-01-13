@@ -8,7 +8,7 @@ tags: []
 image: contributorad.png
 date: 2015-11-06T16:38:37+01:00
 modified: 2016-08-15T13:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

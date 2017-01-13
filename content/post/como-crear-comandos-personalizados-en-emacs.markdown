@@ -6,7 +6,7 @@ tags: [emacs, regex]
 image: como-crear-comandos-personalizados-en-emacs.png
 introduction: Si usas mucho un comando en emacs, descubre como asociarlo a una función para usarlo más rápido
 date: 2016-08-25T17:01:15+02:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -17,11 +17,11 @@ Hace unos meses que comencé a usar _emacs_ como editor predeterminado, y la ver
 
 ## La función (query-replace-regexp)
 
-Una función que uso mucho en _emacs_ es `(query-replace-regexp)`, la cual permite buscar y reemplazar un texto en base a una [expresión regular](/tags/#regex "Posts etiquetados con regex"). 
+Una función que uso mucho en _emacs_ es `(query-replace-regexp)`, la cual permite buscar y reemplazar un texto en base a una [expresión regular](/tags/#regex "Posts etiquetados con regex").
 
 <!--ad-->
 
-> En este blog ya hemos tratado este tema en varias ocasiones (_Véase [Expresiones regulares multilínea](/expresiones-regulares-multilinea/ "Crear expresiones regulares multilínea") o [una introducción a las expresiones regulares en Python](/introduccion-a-las-expresiones-regulares-en-python/ "Expresiones regulares en python")_). 
+> En este blog ya hemos tratado este tema en varias ocasiones (_Véase [Expresiones regulares multilínea](/expresiones-regulares-multilinea/ "Crear expresiones regulares multilínea") o [una introducción a las expresiones regulares en Python](/introduccion-a-las-expresiones-regulares-en-python/ "Expresiones regulares en python")_).
 
 Si como yo, te encuentras repitiendo este comando una y otra vez, con los mismos argumentos, es posible guardarlo en una función y simplemente ejecutarla escribiendo su nombre.
 
@@ -49,7 +49,7 @@ A partir de ahora, para ejecutar `(query-replace-regexp)` con esos parámetros, 
 Esta función es similar a la de arriba, pero más simple. No acepta _expresiones regulares_. Concretamente, para lo que más uso esta función es para eliminar el dominio del blog (`http://elbauldelprogramador.com/`) de los enlaces en los artículos, de forma que un enlace:
 
 ```markdown
-[Enlace](http://elbauldelprogramador.com/algun-post/ ) 
+[Enlace](http://elbauldelprogramador.com/algun-post/ )
 ```
 
 pase a ser

@@ -12,7 +12,7 @@ tags:
   - django
   - pdb
 image: 2013/10/django.png
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

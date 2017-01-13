@@ -7,7 +7,7 @@ tags: [libros, data Scientist, data Engineer, libros big data, hadoop spark, cur
 image: ml/Machine-Learning-for-Hackers.jpg
 date: 2015-11-01T21:30:17+01:00
 modified: 2016-06-15T10:20:42+02:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 {% include toc.html %}

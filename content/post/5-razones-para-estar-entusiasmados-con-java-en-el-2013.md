@@ -12,7 +12,7 @@ tags:
   - novedades java
 author: luzila
 description: "Un tema obvio para comenzar para la mayoría de los desarrolladores Java, es la *release* del 2013. Asumiendo que no habrá demoras, podemos esperar que Java 8 llegue en Septiembre, trayendo consigo muchas funciones lambda esperadas."
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/java1-300x227.jpg" alt="java" width="300px" height="227px" />
@@ -23,7 +23,7 @@ Habiendo terminado el 2012, es tiempo de mirar hacia los próximos 12 meses en e
 
 Un tema obvio para comenzar para la mayoría de los desarrolladores Java, es la *release* del 2013. Asumiendo que no habrá demoras, podemos esperar que Java 8 llegue en Septiembre, trayendo consigo muchas funciones lambda esperadas.
 
-Es bastante probable que en el período inmediatamente siguiente a la salida de Java 8, veamos publicaciones en blogs tanto sobre quejas por la complejidad de las nuevas características como porque estas mismas no son lo suficientemente importantes como para justificar su interés.  
+Es bastante probable que en el período inmediatamente siguiente a la salida de Java 8, veamos publicaciones en blogs tanto sobre quejas por la complejidad de las nuevas características como porque estas mismas no son lo suficientemente importantes como para justificar su interés.
 
 <!--ad-->
 
@@ -58,7 +58,7 @@ El proyecto, liderado por un especialista AMD en GPU, espera encontrar algunos o
 
 Con docenas de opciones para IaaS y PaaS que inundan el mercado, desde indies como Jelastic y gigantes de la industria como Oracle y AWS, los desarrolladores estan repletos de opciones. Java, al parecer, ha realizado con éxito el salto al nuevo mundo de &#8220;la nube&#8221;.
 
-El mayor problema del momento, como resalta Martijn Verburg en el blog J<a href="http://www.javaadvent.com/2012/12/java-2012-review-and-future-predictions.html" target="_blank">ava Advent Calendar</a>, es la falta de estandarización y optimización. Con las características de la nube propias de Java, <a href="http://jaxenter.com/oracle-pushes-cloud-features-back-to-java-ee-8-44301.html" target="_blank">diferidas en Java EE 8</a>, es ahora cuestión de los proveedores el hecho de facilitar estándares como <a href="http://jaxenter.com/round-the-campfire-talking-paas-standards-with-oracle-cloudsoft-and-cloudbees-44571.html" target="_blank">CAMP</a> o, en su defecto, a la comunidad para que brinden nuevos frameworks universales como <a href="http://www.jclouds.org/" target="_blank">jclouds</a>. Mientras tanto, otros se niegan a esperar pacientemente que Oracle provea características como capacidad multiusuario y recolección de basura (*garbage collection*) eficiente, como Waratek.*  
+El mayor problema del momento, como resalta Martijn Verburg en el blog J<a href="http://www.javaadvent.com/2012/12/java-2012-review-and-future-predictions.html" target="_blank">ava Advent Calendar</a>, es la falta de estandarización y optimización. Con las características de la nube propias de Java, <a href="http://jaxenter.com/oracle-pushes-cloud-features-back-to-java-ee-8-44301.html" target="_blank">diferidas en Java EE 8</a>, es ahora cuestión de los proveedores el hecho de facilitar estándares como <a href="http://jaxenter.com/round-the-campfire-talking-paas-standards-with-oracle-cloudsoft-and-cloudbees-44571.html" target="_blank">CAMP</a> o, en su defecto, a la comunidad para que brinden nuevos frameworks universales como <a href="http://www.jclouds.org/" target="_blank">jclouds</a>. Mientras tanto, otros se niegan a esperar pacientemente que Oracle provea características como capacidad multiusuario y recolección de basura (*garbage collection*) eficiente, como Waratek.*
 *
 
 Con plataformas en la nube convirtiendose rápidamente en la norma, es probable que veamos el lanzamiento de aún más soluciones tercerizadas para soporte de Java en la nube: con Java EE 8 próximamente entre nosotros  (posiblemente 2014), tal vez ni siquiera lo necesitemos. (Elliot Bentley)

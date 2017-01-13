@@ -7,7 +7,7 @@ description: "This kit will tell you what you need to know to earn more in syste
 tags: [guia gratuita, ebook , libros gratuitos]
 image: Nueva-Guía:-System-Administration-&-Security-Salary-&-Skills-Report.jpg
 date: 2015-11-27T08:55:00+00:00
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <figure>

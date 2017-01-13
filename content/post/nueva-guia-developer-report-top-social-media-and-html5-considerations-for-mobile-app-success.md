@@ -9,7 +9,7 @@ if_slider_image:
 categories:
   - cursos
   - noticias
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/08/w_appc01c1.gif" alt="Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success" title="Developer Report: Top Social Media and HTML5 Considerations for Mobile App Success" width="114px" height="150px" />][1]
@@ -23,7 +23,7 @@ Download the report and learn:
   * Which cloud-based technologies could be most effective and most frequently added to new apps
   * Which phase of the mobile development strategy lifecycle most developers feel they&#8217;re in-and what this means for the app marketplace
 
-[Descárgala desde aquí][1] o  
+[Descárgala desde aquí][1] o
 Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
 

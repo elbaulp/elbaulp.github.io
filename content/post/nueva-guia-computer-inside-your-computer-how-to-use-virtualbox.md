@@ -9,7 +9,7 @@ categories:
 tags:
   - virtualbox
 description: "Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware."
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <figure>
@@ -35,7 +35,7 @@ This free guide will teach you how to:
   * Install Guest Additions in VirtualBox
   * Access files on your host machine in a Virtual Machine
 
-[Descárgala desde aqui][1] o  
+[Descárgala desde aqui][1] o
 Visita la página [Manuales gratuitos][2] para ver las guías disponibles.
 
  [2]: https://elbauldelprogramador.com/manuales-gratuitos/

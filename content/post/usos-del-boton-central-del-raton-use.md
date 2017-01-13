@@ -5,7 +5,7 @@ permalink: /usos-del-boton-central-del-raton-use/
 modified: 2016-08-15T15:45
 categories:
   - curiosidades
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

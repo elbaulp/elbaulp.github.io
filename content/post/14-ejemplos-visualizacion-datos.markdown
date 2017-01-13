@@ -6,7 +6,7 @@ description: "La visualización de datos no solo tiene como propósito el análi
 tags: [visualizacion datos, d3js, datos, imagenes de visualización]
 modified: 2016-09-23T15:40
 image: 20-ejemplos-visualizacion-datos-genoma-enfermedades.png
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -134,7 +134,7 @@ De nuevo otro proyecto de Visual Complexity con este ejemplo de visualización d
 
 ## 15. Olympic Feathers
 
-Olympic Feathers es una visualización de datos interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Para más información, visita el artículo [Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016](https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/ "Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016") 
+Olympic Feathers es una visualización de datos interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Para más información, visita el artículo [Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016](https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/ "Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016")
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Olympic-Feathers-Detail-7.png" alt="{{ title }}" title="{{ title }}" width="750" height="750"></amp-img>

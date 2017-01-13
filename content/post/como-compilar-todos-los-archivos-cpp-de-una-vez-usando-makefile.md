@@ -10,7 +10,7 @@ tags:
   - compilar ficheros cpp makefile
   - crear makefile
   - tutorial makefile
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 Los makefile sirven para automatizar el proceso de compilación de un proyecto estableciendo unas reglas que dictan cómo y en qué orden han de crearse los ficheros objetos, librerías y binarios.
@@ -98,7 +98,7 @@ La parte de limpieza simplemente elimina los ficheros generados automáticamente
 
 #### Referencias
 
-*Compile all CPP files using makefile under MinGW* »» <a href="http://stackoverflow.com/a/13109884/1612432" target="_blank">stackoverflow.com</a>  
+*Compile all CPP files using makefile under MinGW* »» <a href="http://stackoverflow.com/a/13109884/1612432" target="_blank">stackoverflow.com</a>
 *Manual GNU Make* »» <a href="https://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html" target="_blank">gnu.org</a>
 
 

@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-leccion-1/
 modified: 2016-08-19T09:30
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -29,7 +29,7 @@ sudo aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libs
 
 Fuente: [lazyfoo.net][4]
 
-## Siguiente tema: [Lección 1.2 - Hello World][5] 
+## Siguiente tema: [Lección 1.2 - Hello World][5]
 
  [1]: http://www.lazyfoo.net/SDL_tutorials/lesson01/linux/index.php
  [2]: http://www.lazyfoo.net/SDL_tutorials/lesson01/windows/index.php

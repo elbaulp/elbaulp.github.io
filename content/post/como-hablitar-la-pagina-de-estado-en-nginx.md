@@ -9,7 +9,7 @@ tags:
   - estadisticas nginx
   - estado nginx
   - estado servidor web nginx
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.
@@ -70,7 +70,7 @@ Reading: 6 Writing: 179 Waiting: 106
 
 #### Referencias
 
-*Enable and see current status page* »» <a href="http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page" target="_blank">cyberciti</a>  
+*Enable and see current status page* »» <a href="http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page" target="_blank">cyberciti</a>
 *HttpStubStatusModule* »» <a href="http://wiki.nginx.org/HttpStubStatusModule" target="_blank">wiki.nginx.org</a>
 
 

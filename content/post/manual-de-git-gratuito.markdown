@@ -1,13 +1,13 @@
 ---
 layout: post.amp
 title: Manual De Git Gratuito
-categories: 
+categories:
 description: "Descarga un manual de git completo de forma gratuita"
 tags: [git, manuales, tutorial]
 image: git-tutorial-centered.jpg
 twitter_text:
 date: 2016-08-06T18:15:22+02:00
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 ---
 

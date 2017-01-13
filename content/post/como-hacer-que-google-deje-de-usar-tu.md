@@ -6,7 +6,7 @@ permalink: /como-hacer-que-google-deje-de-usar-tu/
 categories:
   - How To
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

@@ -6,7 +6,7 @@ description: "Si trabajas habitualmente con LaTeX, estás acostumbrado a ver mú
 tags: [latex, latexmk, metafiles latex, metaficheros latex]
 image: 2013/05/latex_logo.png
 date: 2015-11-19T09:20:00+00:00
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 

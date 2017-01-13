@@ -21,7 +21,7 @@ tags:
   - iptables
   - iptables con servidor debian
   - selfcontrol
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="selfcontrol" src="/assets/img/2012/08/selfcontrol11.png" alt="" width="192px" height="192px" />][1]
@@ -47,7 +47,7 @@ wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
 sudo dpkg --install selfcontrol_0.9-1_all.deb
 ```
 
-Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:  
+Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:
 
 <!--ad-->
 
@@ -95,7 +95,7 @@ Chain INPUT (policy ACCEPT)
 
 * * *
 
-Sítio Oficial | <a href="http://svn.jklmnop.net/projects/SelfControl.html" target="_blank">SelfControl </a>  
+Sítio Oficial | <a href="http://svn.jklmnop.net/projects/SelfControl.html" target="_blank">SelfControl </a>
 Fuente | <a href="http://www.datamation.com/open-source/15-must-have-linux-applications-1.html" target="_blank">15 Must Have Linux Applications</a>
 
 

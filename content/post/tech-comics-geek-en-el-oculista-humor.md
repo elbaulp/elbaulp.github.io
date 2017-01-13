@@ -8,7 +8,7 @@ categories:
   - curiosidades
   - Humor
   - meme
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 
@@ -23,4 +23,3 @@ color: "#262626"
 </figure>
 
 Fuente: <a target="_blank" href="http://www.datamation.com/news/tech-comics-geek-at-the-eye-doctor-1.html">datamation</a>
-

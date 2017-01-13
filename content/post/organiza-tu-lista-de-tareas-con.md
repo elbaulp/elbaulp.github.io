@@ -7,7 +7,7 @@ categories:
   - curiosidades
   - internet
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

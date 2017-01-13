@@ -15,7 +15,7 @@ author: luzila
 modified: 2016-08-01T16:40
 image: 2014/01/201305-xml-vs-json-api.png
 description: "Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó."
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -96,8 +96,8 @@ La grandeza de REST es que estas impulsando métodos HTTP existentes a implement
 - _PATCH /tickets/12/messages/5 -_ Actualiza parcialmente el mensaje #5 para el ticket #12
 - _DELETE /tickets/12/messages/5_ - Borra el mensaje #5 para el ticket #12
 
-Alternativamente, si una relación puede existir independientemente del recurso, tiene sentido incluir sólo un identificador en la representación de la salida del recurso. El consumidor de la API debería entonces tener que acertar al endpoint de la relación. Sin embargo, si la relación es comunmente requerida junto con el recurso, la API podría ofrecer funcionalidad para automáticamente incluir la representación de la relación y evitar el segundo impacto en la API.  
-**¿Qué ocurre con las acciones que no corresponden a las operaciones CRUD?**  
+Alternativamente, si una relación puede existir independientemente del recurso, tiene sentido incluir sólo un identificador en la representación de la salida del recurso. El consumidor de la API debería entonces tener que acertar al endpoint de la relación. Sin embargo, si la relación es comunmente requerida junto con el recurso, la API podría ofrecer funcionalidad para automáticamente incluir la representación de la relación y evitar el segundo impacto en la API.
+**¿Qué ocurre con las acciones que no corresponden a las operaciones CRUD?**
 Aquí es donde las cosas pueden confundirse. Hay un número de enfoques:
 
 1.  Reestructura la acción para que aparezca como un campo de un recurso. Esto funciona si la acción no toma parámetros. Por ejemplo, un acción “activate” puede ser asignada a un campo booleano _activated_ y actualizado vía PATCH al recurso.
@@ -151,7 +151,7 @@ Lo mejor es mantener la URL base de recursos tan simple como sea posible. Filtro
 - _GET /tickets?sort=-priority_ – Devuelve una lista de tickets en orden de prioridad descendiente
 - _GET /tickets?sort=-priority,created_at_- Devuelve una lista de tickets en orden de prioridad descendiente. Con una prioridad específica, los tickets más viejos son ordenados primero.
 
-**Búsqueda:** A veces los filtros básicos no son suficientes y se necesita la posibilidad de realizar una búsqueda completa sobre el texto. Tal vez ya estés usando [ElasticSearch](http://www.elasticsearch.org/) u otra búsqueda basada en la tecnología [Lucene](http://lucene.apache.org/). Cuando una búsqueda completa sobre el texto es usada como un mecanismo de devolución de instancias de recurso para un tipo de recurso específico, puede ser expuesto en la API como un parámetro de consulta al endpoint del recurso. Digamos _q_. Las consultas de búsqueda deberían ser pasadas directamente al motor de búsqueda y la salida de la API deberían estar en el mismo formato que un lista de resultado normal.  
+**Búsqueda:** A veces los filtros básicos no son suficientes y se necesita la posibilidad de realizar una búsqueda completa sobre el texto. Tal vez ya estés usando [ElasticSearch](http://www.elasticsearch.org/) u otra búsqueda basada en la tecnología [Lucene](http://lucene.apache.org/). Cuando una búsqueda completa sobre el texto es usada como un mecanismo de devolución de instancias de recurso para un tipo de recurso específico, puede ser expuesto en la API como un parámetro de consulta al endpoint del recurso. Digamos _q_. Las consultas de búsqueda deberían ser pasadas directamente al motor de búsqueda y la salida de la API deberían estar en el mismo formato que un lista de resultado normal.
 Combinando todo esto, podemos construir consultas como:
 
 - _GET /tickets?sort=-updated_at_ – Devuelve los tickets recientemente actualizados
@@ -160,12 +160,12 @@ Combinando todo esto, podemos construir consultas como:
 
 **Alias para las consultas comunes**
 
-Para hacer que la experiencia con la API sea más agradable para el consumidor promedio, considera empaquetar sets de condiciones dentro de una ruta REST facilmente accesible. Por ejemplo, la consulta de tickets cerrados recientemente puede ser empaquetada como _GET /tickets/recently_closed._  
+Para hacer que la experiencia con la API sea más agradable para el consumidor promedio, considera empaquetar sets de condiciones dentro de una ruta REST facilmente accesible. Por ejemplo, la consulta de tickets cerrados recientemente puede ser empaquetada como _GET /tickets/recently_closed._
 
 
 ## 7\. Limitando los campos que son devueltos por la API
 
-El consumidor de la API no siempre necesita la representación completa de un recurso. La habilidad de seleccionar y elegir los campos devueltos permite el doble beneficio de dejar que el consumidor de la API minimice el tráfico de red y acelere su propio uso de la API.  
+El consumidor de la API no siempre necesita la representación completa de un recurso. La habilidad de seleccionar y elegir los campos devueltos permite el doble beneficio de dejar que el consumidor de la API minimice el tráfico de red y acelere su propio uso de la API.
 Usa el parámetro de consulta _fields_ que tome una lista de campos separados con coma. Por ejemplo, la siguiente petición debería traer sólo la información suficiente para mostrar una lista ordenada de tickets abiertos:
 
 ```bash GET /tickets?fields=id,subject,customer_name,updated_at&state;=open&sort;=-updated_at ```
@@ -174,22 +174,22 @@ Usa el parámetro de consulta _fields_ que tome una lista de campos separados co
 
 ## 8\. Update & Creation deberían devolver una representación de un recurso
 
-Una llamada PUT, POST o PATCH puede hacer modificaciones a los campos del recurso subyacente que no fueron parte de los parámetros provistos (por ejemplo: los campos timestamp created_at o updated_at ). Para evitarle al consumidor de la API tener que consultar nuevamente a la API por un recurso actualizado, agrega el retorno de la actualización (o creación) como parte de la respuesta.  
-En el caso de un POST que sea un resultado de una creación, usa el [código de status HTTP 201](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) e incluye un encabezado [Location](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30) que apunte a la URL del nuevo recurso.  
+Una llamada PUT, POST o PATCH puede hacer modificaciones a los campos del recurso subyacente que no fueron parte de los parámetros provistos (por ejemplo: los campos timestamp created_at o updated_at ). Para evitarle al consumidor de la API tener que consultar nuevamente a la API por un recurso actualizado, agrega el retorno de la actualización (o creación) como parte de la respuesta.
+En el caso de un POST que sea un resultado de una creación, usa el [código de status HTTP 201](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) e incluye un encabezado [Location](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30) que apunte a la URL del nuevo recurso.
 
 
 ## 9\. ¿Deberías HATEOAS?
 
-Hay muchas opiniones variadas sobre si el consumidor de la API debería crear hipervínculos o si los hipervínculos deberían ser provistos por la API. Los principios de diseño RESTful especifican [HATEOAS](https://blog.apigee.com/detail/hateoas_101_introduction_to_a_rest_api_style_video_slides), el cual aproximadamente declara que esa interacción con un _endpoit_ debería definirse en la metadata que viene con la respuesta, y no basada en información que va por fuera de la banda (_out-of-band_).  
-A pesar de que la web generalmente trabaja con los principios HATEOAS (ej, cuando vamos a una portada y seguimos hipervínculos basados en lo que vemos en la página), no creo que estemos listos para HATEOAS en la API todavía. Cuando navegamos en un sitio, las decisiones sobre qué hipervínculos van a ser clickeados se hacen durante la ejecución. Sin embargo, con una API, las decisiones como qué peticiones van a ser enviadas son tomadas cuando el código de integración de la API es escrito, no en tiempo de ejecución. ¿Podrían las decisiones ser aplazadas al tiempo de ejecución? Seguro, de todas maneras, no hay mucho que ganar bajando esa ruta al código ya que el código no estaría disponible para manejar cambios significantes en la API sin romperse. Esto significa que HATEOAS es prometedor pero no está listo para ser protagonista todavía. Algún esfuerzo más tiene que ser realizado para definir los estándars y herramientas al rededor de estos principios para que su potencial sea completamente aprovechado.  
-Por ahora es mejor asumir que el usuario tiene acceso a la documentación e incluir los identificadores de recursos en la respuesta, la cual el consumidor de la API usará cuando crea hipervínculos. Hay un par de ventajas en utilizar los identificadores – los datos que viajan sobre la red son minimizados y los datos almacenados por los consumidores de la API también son minimizados (ya que son guardados los identificadores cortos, en vez de las URLs que contienen los identificadores).  
-Además, dado que este post es partidario de incluir los números de versión en la URL, tiene más sentido a largo plazo para el consumidor de la API almacenar los identificadores y no las URLs. Después de todo, el identificador es estable versión por versión pero la URL que representa no lo es!  
+Hay muchas opiniones variadas sobre si el consumidor de la API debería crear hipervínculos o si los hipervínculos deberían ser provistos por la API. Los principios de diseño RESTful especifican [HATEOAS](https://blog.apigee.com/detail/hateoas_101_introduction_to_a_rest_api_style_video_slides), el cual aproximadamente declara que esa interacción con un _endpoit_ debería definirse en la metadata que viene con la respuesta, y no basada en información que va por fuera de la banda (_out-of-band_).
+A pesar de que la web generalmente trabaja con los principios HATEOAS (ej, cuando vamos a una portada y seguimos hipervínculos basados en lo que vemos en la página), no creo que estemos listos para HATEOAS en la API todavía. Cuando navegamos en un sitio, las decisiones sobre qué hipervínculos van a ser clickeados se hacen durante la ejecución. Sin embargo, con una API, las decisiones como qué peticiones van a ser enviadas son tomadas cuando el código de integración de la API es escrito, no en tiempo de ejecución. ¿Podrían las decisiones ser aplazadas al tiempo de ejecución? Seguro, de todas maneras, no hay mucho que ganar bajando esa ruta al código ya que el código no estaría disponible para manejar cambios significantes en la API sin romperse. Esto significa que HATEOAS es prometedor pero no está listo para ser protagonista todavía. Algún esfuerzo más tiene que ser realizado para definir los estándars y herramientas al rededor de estos principios para que su potencial sea completamente aprovechado.
+Por ahora es mejor asumir que el usuario tiene acceso a la documentación e incluir los identificadores de recursos en la respuesta, la cual el consumidor de la API usará cuando crea hipervínculos. Hay un par de ventajas en utilizar los identificadores – los datos que viajan sobre la red son minimizados y los datos almacenados por los consumidores de la API también son minimizados (ya que son guardados los identificadores cortos, en vez de las URLs que contienen los identificadores).
+Además, dado que este post es partidario de incluir los números de versión en la URL, tiene más sentido a largo plazo para el consumidor de la API almacenar los identificadores y no las URLs. Después de todo, el identificador es estable versión por versión pero la URL que representa no lo es!
 
 
 ## 10\. Sólo respuestas JSON
 
-Es tiempo de dejar XML atras en las APIs. Es verborrágico, es difícil de parsear, dificil de leer, su modelo de datos es incompatible con la mayoría de los modelos de datos de los lenguajes de programación y sus ventajas son irrelevantes cuando tus necesidades primarias de respuesta son serializaciones de una representación de datos interna.  
-No voy a poner mucho esfuerzo en explicar las razones de lo dicho arriba si se puede ver cómo otros ([Youtube](http://apiblog.youtube.com/2012/12/the-simpler-yet-more-powerful-new.html), [Twitter](https://dev.twitter.com/docs/api/1.1/overview#JSON_support_only) & [Box](http://developers.blog.box.com/2012/12/14/v2_api/)) ya han comenzado el éxodo XML.  
+Es tiempo de dejar XML atras en las APIs. Es verborrágico, es difícil de parsear, dificil de leer, su modelo de datos es incompatible con la mayoría de los modelos de datos de los lenguajes de programación y sus ventajas son irrelevantes cuando tus necesidades primarias de respuesta son serializaciones de una representación de datos interna.
+No voy a poner mucho esfuerzo en explicar las razones de lo dicho arriba si se puede ver cómo otros ([Youtube](http://apiblog.youtube.com/2012/12/the-simpler-yet-more-powerful-new.html), [Twitter](https://dev.twitter.com/docs/api/1.1/overview#JSON_support_only) & [Box](http://developers.blog.box.com/2012/12/14/v2_api/)) ya han comenzado el éxodo XML.
 Simplemente te dejaré que veas las gráficas de Google Trends ([XML API vs JSON API](http://www.google.com/trends/explore?q=xml+api#q=xml%20api%2C%20json%20api&cmpt=q)) para que medites:
 
 <figure>
@@ -204,8 +204,8 @@ No obstante, si tu base de clientes consiste en un gran número de clientes empr
 
 Si estás usando JSON (JavaScript Object Notation) como tu principal formato de representación, la forma “correcta” de hacer las cosas es seguir la convención de nombres de JavaScript – y esto sinifica camelCase para el nombre de los campos! Si entonces optas por el camino de construir librerias cliente en varios lenguajes, lo mejor es usar la convención de nombres correspondiente al idioma – camelCase para C# y Java, snake_case para python y ruby.
 
-Para pensar: Siempre sentí que [snake_case](http://en.wikipedia.org/wiki/Snake_case) es más fácil para leer que la convención [camelCase](http://en.wikipedia.org/wiki/CamelCase) de JavaScript. Pero no tenía ninguna evidencia para respaldar esta “sensación”, hasta ahora. Basado en un [estudio visual sobre camelCase y snake_case](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=5521745) ([PDF](http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf)) del 2010, **snake_case es un 20% más facil de leer que camelCase**! Este impacto en legibilidad puede afectar la explorabilidad de la API y los ejemplos de la documentación.  
-Muchas JSON APIs populares usan snake_case. Sospecho que esto se debe a la serialización de librerías que siguen las convenciones de nombres de los lenguajes subyacentes que utilizan. Tal vez necesitamos tener librerías de serialización JSON que manejen las transformaciones de convenciones de nombres.  
+Para pensar: Siempre sentí que [snake_case](http://en.wikipedia.org/wiki/Snake_case) es más fácil para leer que la convención [camelCase](http://en.wikipedia.org/wiki/CamelCase) de JavaScript. Pero no tenía ninguna evidencia para respaldar esta “sensación”, hasta ahora. Basado en un [estudio visual sobre camelCase y snake_case](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=5521745) ([PDF](http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf)) del 2010, **snake_case es un 20% más facil de leer que camelCase**! Este impacto en legibilidad puede afectar la explorabilidad de la API y los ejemplos de la documentación.
+Muchas JSON APIs populares usan snake_case. Sospecho que esto se debe a la serialización de librerías que siguen las convenciones de nombres de los lenguajes subyacentes que utilizan. Tal vez necesitamos tener librerías de serialización JSON que manejen las transformaciones de convenciones de nombres.
 
 
 ## 12\. Pretty print por default y asegura que gzip sea soportado
@@ -214,7 +214,7 @@ Una API que provee salida con compresión de espacios en blanco no es muy divert
 
 Considera algunos casos de uso: ¿Qué pasa si un consumidor de la API está debuggeando y en su código imprime los datos recibidos de la API? – Serán legibles por default. O si el consumidor graba en la URL el código que fue generando y lo interpreta directamente desde el navegador – Será legible por default. Éstos son pequeños detalles. Pequeños detalles que hacen a una API agradable de usar!
 
-**Pero, ¿qué pasa con toda la transferencia extra de datos?**  
+**Pero, ¿qué pasa con toda la transferencia extra de datos?**
 Veamos esto con un ejemplo del mundo real. He bajado un poco de datos de la [API de GitHub](https://api.github.com/users/veesahni), la cual usa pretty print por default. También estuve haciendo algunas comparaciones con gzip:
 
 ```bash
@@ -233,7 +233,7 @@ Los archivos de salida tienen los siguientes tamaños:
 
 En este ejemplo, el caracter en blanco incrementó el tamaño de la salida en un 8.5% cuando gzip no entró en juego y un 2.6% cuando utilizamos gzip. Por otro lado, el acto de comprimir con **gzip en sí mismo provee un 60% de ahorro de ancho de banda**. Debido a que el costo del pretty print es relativamente pequeño, es mejor utilizar pretty print por default y asegurar que la compresión con gzip esté soportada.
 
-Para enfatizar este punto, Twitter descubrió que hay un [80% de ahorro (en algunos casos)](https://dev.twitter.com/blog/announcing-gzip-compression-streaming-apis) cuando habilita la compresión gzip en su API Streaming. Stack Exchange fue más lejos, nunca devuelve una respuesta que no esté comprimida!  
+Para enfatizar este punto, Twitter descubrió que hay un [80% de ahorro (en algunos casos)](https://dev.twitter.com/blog/announcing-gzip-compression-streaming-apis) cuando habilita la compresión gzip en su API Streaming. Stack Exchange fue más lejos, nunca devuelve una respuesta que no esté comprimida!
 
 
 ## 13\. No uses un envoltorio por default, pero posibilitalo cuando sea necesario
@@ -249,10 +249,10 @@ Muchas APIs empaquetan sus respuestas en envoltorios como este:
 }
 ```
 
-Hay un par de justificaciones para hacer esto – facilita incluir metadata adicional o información de paginación, algunos clientes REST no permiten fácil acceso a los encabezados HTTP y las peticiones [JSONP](http://en.wikipedia.org/wiki/JSONP) no tienen acceso a sus encabezados. Sin embargo con standards que están siendo rápidamente adoptados como [CORS](http://www.w3.org/TR/cors/) y [Link header from RFC5988](http://tools.ietf.org/html/rfc5988#page-6), empaquetar se está volviendo innecesario.  
-Podemos profundizar a futuro la API manteniéndola sin empaquetamiento por default y empaquetando sólo en casos excepcionales.  
-**¿Cómo debería usarse un envoltorio en casos excepcionales?**  
-Hay 2 situaciones donde un envoltorio es realmente necesario – si la API necesita soportar peticiones cross domain sobre JSONP o si el cliente es incapaz de trabajar con encabezados HTTP.  
+Hay un par de justificaciones para hacer esto – facilita incluir metadata adicional o información de paginación, algunos clientes REST no permiten fácil acceso a los encabezados HTTP y las peticiones [JSONP](http://en.wikipedia.org/wiki/JSONP) no tienen acceso a sus encabezados. Sin embargo con standards que están siendo rápidamente adoptados como [CORS](http://www.w3.org/TR/cors/) y [Link header from RFC5988](http://tools.ietf.org/html/rfc5988#page-6), empaquetar se está volviendo innecesario.
+Podemos profundizar a futuro la API manteniéndola sin empaquetamiento por default y empaquetando sólo en casos excepcionales.
+**¿Cómo debería usarse un envoltorio en casos excepcionales?**
+Hay 2 situaciones donde un envoltorio es realmente necesario – si la API necesita soportar peticiones cross domain sobre JSONP o si el cliente es incapaz de trabajar con encabezados HTTP.
 Las peticiones JSONP vienen con un parámetro adicional de consulta (usualmente llamado _callback_ o _jsonp_) representando el nombre de la función callback. Si este parámetro está presente, la API debería cambiarse a un modo completo de empaquetamiento donde siempre responda con un código de status HTTP 200 y pase el código de status real dentro de la respuesta JSON. Cualquier encabezado HTTP adicional que debería pasar a través de la respuesta debería ser mapeado a los campos JSON, como se ve a continuación:
 
 ```javascript
@@ -260,7 +260,7 @@ callback_function({
   status_code: 200,
   next_page: "https://..",
   response: {
-    ... actual JSON response body ... 
+    ... actual JSON response body ...
   }
 })
 ```
@@ -269,12 +269,12 @@ De forma similar, para soportar clientes con HTTP limitado, habilita un parámet
 
 ## 14\. Cuerpos HTML POST, PUT & PATCH codificados en JSON
 
-Si estás siguiendo el objetivo de este artículo, entonces has adoptado JSON para todas las salidas de la API. Ahora consideremos JSON para la entrada de la API.  
+Si estás siguiendo el objetivo de este artículo, entonces has adoptado JSON para todas las salidas de la API. Ahora consideremos JSON para la entrada de la API.
 Muchas APIs usan URL cifradas en sus cuerpos de las peticiones de la API. El cifrado de URL es exactamente lo que suena – los cuerpos de la petición donde los pares clave-valor están cifrados usando las mismas convenciones que uno usaría para cifrar datos en los parámetros de consulta de URL. Esto es simple, ampliamente soportado y deja el trabajo hecho.
 
-Sin embargo, el cifrado de URL tiene algunos inconvenientes que lo hacen problemático. No tiene el concepto de tipos de dato. Esto obliga a la API a interpretar cadenas de caracteres y transformarlas en tipos numéricos (por ej integer) o booleanos. Además, no tiene un concepto real de estructura jerárquica.  
-Aunque hay algunas convenciones que pueden construir estructuras que no siguen el par clave-valor (como agregar [] a una clave para representar un arreglo), esto no tiene comparación con la estructura nativa jerárquica de JSON.  
-Si la API es simple, cifrar la URL puede ser suficiente. Sin embargo, APIs complejas deberían apegarse a JSON para sus entradas a la API. De cualquier manera, elige una y se consistente en toda la API.  
+Sin embargo, el cifrado de URL tiene algunos inconvenientes que lo hacen problemático. No tiene el concepto de tipos de dato. Esto obliga a la API a interpretar cadenas de caracteres y transformarlas en tipos numéricos (por ej integer) o booleanos. Además, no tiene un concepto real de estructura jerárquica.
+Aunque hay algunas convenciones que pueden construir estructuras que no siguen el par clave-valor (como agregar [] a una clave para representar un arreglo), esto no tiene comparación con la estructura nativa jerárquica de JSON.
+Si la API es simple, cifrar la URL puede ser suficiente. Sin embargo, APIs complejas deberían apegarse a JSON para sus entradas a la API. De cualquier manera, elige una y se consistente en toda la API.
 Una API que acepta peticiones POST, PUT y PATCH con cifrado JSON debería también requerir en el encabezado _Content-Type_ seteado con _application/json_ o lanzar un código de status HTTP: 415 Unsopported Media Type.
 
 
@@ -289,7 +289,7 @@ Una API que usa el encabezado Link puede devolver un set de hipervínculos listo
 Link: <https://api.github.com/user/repos?page=3&per_page=100>; rel="next", <https://api.github.com/user/repos?page=50&per_page=100>; rel="last"
 ```
 
-Pero esto no es una solución completa para muchas APIs que quieren devolver información adicional de paginación, por ejemplo el conteo del total de resultados disponibles. Una API que requiere enviar un contador puede usar un encabezado HTTP personalizado como _X-Total-Count_.  
+Pero esto no es una solución completa para muchas APIs que quieren devolver información adicional de paginación, por ejemplo el conteo del total de resultados disponibles. Una API que requiere enviar un contador puede usar un encabezado HTTP personalizado como _X-Total-Count_.
 
 ## **16\. Representaciones de recursos relacionados a los datos solicitados mediante carga automática**
 
@@ -328,12 +328,12 @@ Algunos clientes HTTP pueden trabajar solo con peticiones simples GET y POST. Pa
 
 Aunque no hay ningún estandard fuerte aquí, la convención popular es aceptar un encabezado de petición _X-HTTP-Method-Override_ con un valor de cadena que contenga PUT, PATCH o DELETE.
 
-Nota que sobreescribir el encabezado debería ser aceptado en peticiones POST. Las peticiones GET nunca deberían [cambiar datos en el servidor](http://programmers.stackexchange.com/questions/188860/why-shouldnt-a-get-request-change-data-on-the-server)!  
+Nota que sobreescribir el encabezado debería ser aceptado en peticiones POST. Las peticiones GET nunca deberían [cambiar datos en el servidor](http://programmers.stackexchange.com/questions/188860/why-shouldnt-a-get-request-change-data-on-the-server)!
 
 ## 18\. Limitación de tráfico por ratio (Rate limiting)
 
-Para prevenir abusos, una práctica estandard es agregar algún tipo de límite de tráfico a la API. [RFC 6585](http://tools.ietf.org/html/rfc6585) introduce el código de status HTTP [429 Too Many Requests](http://tools.ietf.org/html/rfc6585#section-4) para controlar esto.  
-Sin embargo, puede ser muy útil notificar al consumidor de sus límites antes de que se encuentre con ellos. Este es un área en la que actualmente faltan los standards pero existe una cantidad de [convenciones populares usando encabezados de respuesta HTTP.](http://stackoverflow.com/questions/16022624/examples-of-http-api-rate-limiting-http-response-headers)  
+Para prevenir abusos, una práctica estandard es agregar algún tipo de límite de tráfico a la API. [RFC 6585](http://tools.ietf.org/html/rfc6585) introduce el código de status HTTP [429 Too Many Requests](http://tools.ietf.org/html/rfc6585#section-4) para controlar esto.
+Sin embargo, puede ser muy útil notificar al consumidor de sus límites antes de que se encuentre con ellos. Este es un área en la que actualmente faltan los standards pero existe una cantidad de [convenciones populares usando encabezados de respuesta HTTP.](http://stackoverflow.com/questions/16022624/examples-of-http-api-rate-limiting-http-response-headers)
 Minimamente, incluye los siguientes encabezados (usando las [convenciones de nombres](https://dev.twitter.com/docs/rate-limiting/1.1) de Twitter ya que los encabezados tipicamente no tienen capitalizacion de las palabras del medio):
 
 - _X-Rate-Limit-Limit_ – El numero de peticiones permitidas en el período actual
@@ -348,32 +348,32 @@ Algunas APIs usan un timestamp de UNIX (segundos desde la fecha standard 1/1/197
 
 **¿Por qué es una mala práctica usar el timestamp UNIX para X-Rate-Limit-Reset?**
 
-La [spec de HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616.txt) ya [especifica](http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3) el uso del [formato de fecha RFC 1123](http://www.ietf.org/rfc/rfc1123.txt) (actualmente usado en los encabezados HTTP [Date](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.18), [If-Modified-Since](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25) y [Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29)). Si fuéramos a especificar un nuevo encabezado HTTP que tome un timestamp de algún tipo, debería seguir las convenciones RFC 1123 en vez de usar timestamps UNIX.  
+La [spec de HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616.txt) ya [especifica](http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3) el uso del [formato de fecha RFC 1123](http://www.ietf.org/rfc/rfc1123.txt) (actualmente usado en los encabezados HTTP [Date](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.18), [If-Modified-Since](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25) y [Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29)). Si fuéramos a especificar un nuevo encabezado HTTP que tome un timestamp de algún tipo, debería seguir las convenciones RFC 1123 en vez de usar timestamps UNIX.
 
 
 ## 19\. Autenticación
 
 Una API RESTful debería ser stateless (sin estado). Esto significa que la petición de autenticación no debería depender de cookies o sesiones. En lugar de ello, cada petición debería venir con algún tipo de credencial de autorización.
 
-Siempre que se use SSL, las credenciales de autenticación pueden ser simplificadas a un token de acceso generado de forma aleatoria, que es entregado en el campo de nombre de usuario de HTTP Basic Auth.  
+Siempre que se use SSL, las credenciales de autenticación pueden ser simplificadas a un token de acceso generado de forma aleatoria, que es entregado en el campo de nombre de usuario de HTTP Basic Auth.
 Lo grandioso de esto es que es completamente navegable con un explorador – éste simplemente abriría un popup pidiéndote que ingreses las credenciales si recibe un código de status _401 Unauthorized_ desde el servidor.
 
 De todos modos, este método de autenticación token-over-basic-auth (token sobre autenticación basica) es sólo aceptable en los casos en que sea práctico tener la posibilidad de que el usuario copie un token de una interface de administración del entorno del consumidor de la API.
 
 En los casos donde no sea posible, [OAuth 2](http://oauth.net/2/) debería ser usado para facilitar la transferencia del token seguro a terceros. OAuth 2 usa [tokens Bearer](http://tools.ietf.org/html/rfc6750) y además depende de SSL para su encriptación de transporte subyacente.
 
-Una API que necesita soporte JSONP necesitará un tercer método de autenticación, ya que las peticiones JSONP no pueden enviar credenciales HTTP Basic Auth ni Bearer tokens. En este caso, puede utilizarse un parámetro especial de consulta “access_token”. Nota: hay un problema de seguridad inherente si se usa un parametro de consulta para el token ya que la mayoría de los servidores web almacenan los parámetros de consulta en sus logs.  
-Para lo que nos interesa, los tres métodos de arriba son sólo formas de transportar el token a través de la frontera de la API. El verdadero token subyacente mismo podría ser idéntico.  
+Una API que necesita soporte JSONP necesitará un tercer método de autenticación, ya que las peticiones JSONP no pueden enviar credenciales HTTP Basic Auth ni Bearer tokens. En este caso, puede utilizarse un parámetro especial de consulta “access_token”. Nota: hay un problema de seguridad inherente si se usa un parametro de consulta para el token ya que la mayoría de los servidores web almacenan los parámetros de consulta en sus logs.
+Para lo que nos interesa, los tres métodos de arriba son sólo formas de transportar el token a través de la frontera de la API. El verdadero token subyacente mismo podría ser idéntico.
 
 
 ## 20\. Cacheo
 
 HTTP provee un framework de cacheo incluido! Todo lo que tienes que hacer es incluir algunos encabezados adicionales en la respuesta de salida y hacer una pequeña validación cuando recibes algún encabezado de petición de entrada.
 
-Hay 2 alcances: [ETag](http://en.wikipedia.org/wiki/HTTP_ETag) y [Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29)  
+Hay 2 alcances: [ETag](http://en.wikipedia.org/wiki/HTTP_ETag) y [Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29)
 **ETag**: Cuando generas una petición, incluye un encabezado HTTP ETag conteniendo un hash o checksum de la representación. Este valor debería cambiar cada vez que la salida cambia. Ahora, si una petición de entrada HTTP contiene un encabezado _If-None-Match_ con un valor ETag, la API debería devolver un código de status _304 Not Modified_ en lugar de la salida del recurso.
 
-**Last-Modified** (Último modificado): Básicamente funciona como ETag, excepto en que usa timestamps. El encabezado de respuesta _Last-Modified_ contiene un timestamp en formato [RFC 1123](http://www.ietf.org/rfc/rfc1123.txt) el cual es validado contra _If-Modified-Since._ Nótese que la especificación de HTTP ha tenido [3 formatos de fecha diferentes aceptables](http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3) y el servidor debería estar preparado para aceptar cualquiera de ellos.  
+**Last-Modified** (Último modificado): Básicamente funciona como ETag, excepto en que usa timestamps. El encabezado de respuesta _Last-Modified_ contiene un timestamp en formato [RFC 1123](http://www.ietf.org/rfc/rfc1123.txt) el cual es validado contra _If-Modified-Since._ Nótese que la especificación de HTTP ha tenido [3 formatos de fecha diferentes aceptables](http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3) y el servidor debería estar preparado para aceptar cualquiera de ellos.
 
 
 ## 21\. Errores

@@ -13,7 +13,7 @@ tags:
   - google analytics
   - guias
   - Your Guide to Google Analytics
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="199px" height="243px" />][1]
@@ -36,7 +36,7 @@ You will learn how to access to all of the following details about your website:
   * The most popular pages on your site
   * The many different ways people are reaching your site through search engines
 
-[Descárgala desde aquí][1] o  
+[Descárgala desde aquí][1] o
 Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
 
 

@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - Fundamentos programación Android
   - procesos android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -26,6 +26,6 @@ Android va destruyendo componentes inactivos para liberar memória, pero los elm
 
 Es muy importante implementar bien los métodos de estado, para evitar perden información.
 
-## Siguiente Tema: [Programación Android: Trabajar con actividades y pasar parámetros entre ellas][1] 
+## Siguiente Tema: [Programación Android: Trabajar con actividades y pasar parámetros entre ellas][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-trabajar-con/

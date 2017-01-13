@@ -6,7 +6,7 @@ categories:
 description: "El robo de smartphones se ha disparado recientemente. Aumenta un 30% cada año, y aparentemente incluso el gobierno ha comenzado a notarlo porque quieren que las compañías de teléfonos diseñen dispositivos con una seguridad mejorada que ayuden a localizar el móvil en caso de pérdida."
 tags: [aplicaiones localización movil, localizar movil]
 date: 2016-02-04T09:33:22+01:00
-main-class: "java"
+mainclass: "java"
 color: "#D32F2F"
 ---
 

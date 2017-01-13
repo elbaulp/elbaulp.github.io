@@ -7,7 +7,7 @@ categories:
   - script
 lang: en
 modified: 2016-08-15T13:40
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

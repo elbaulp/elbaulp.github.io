@@ -10,9 +10,9 @@ tags:
   - descargar Big Security for Big Data
   - download Big Security for Big Data
 description: "The multitude of devices, users, and generated traffic all combine to create a proliferation of data that is being created with incredible volume, velocity, and variety."
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <figure>
@@ -27,7 +27,7 @@ The multitude of devices, users, and generated traffic all combine to create a p
 <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_hp353" target="_blank" class="wi-button style-3">Descárgala<i class="icon-download icon-2x"></i></a>
 </div>
 
-***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***  
+***Visita la página [Manuales gratuitos][2] o consulta el [catálogo completo][3].***
 
  [2]: https://elbauldelprogramador.com/manuales-gratuitos/
  [3]: http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas "

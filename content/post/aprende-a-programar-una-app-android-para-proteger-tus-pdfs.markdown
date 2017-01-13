@@ -8,7 +8,7 @@ tags: [android, pdf, plugpdf, lector pdf android]
 image: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
 date: 2015-07-07T17:38:30+02:00
 author: jordi
-main-class: "java"
+mainclass: "java"
 color: "#D32F2F"
 ---
 

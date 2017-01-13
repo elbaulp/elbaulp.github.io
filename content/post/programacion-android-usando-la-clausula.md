@@ -9,7 +9,7 @@ categories:
 tags:
   - Cláusula where android
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -90,7 +90,7 @@ managedQuery("content://com.elbauldelprogramador.provider.FavSites/sites"
 
 Te preguntarás qué método usar en según que situación. Por convención se suele usar el método mediate URI cuando sea posible aplicarlo, y el explícito en casos especiales (Como en el ejemplo de arriba.)
 
-### Siguiente Tema: [Insertando registros][3] 
+### Siguiente Tema: [Insertando registros][3]
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where
  [2]: https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu

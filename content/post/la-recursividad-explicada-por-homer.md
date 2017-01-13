@@ -6,7 +6,7 @@ permalink: /la-recursividad-explicada-por-homer/
 categories:
   - Humor
   - internet
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 <div class="separator" >

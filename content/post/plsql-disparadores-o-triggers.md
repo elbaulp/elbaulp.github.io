@@ -9,7 +9,7 @@ tags:
   - algoritmos trigger
   - como hacer un trigger
   - trigger de actualizacion
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 

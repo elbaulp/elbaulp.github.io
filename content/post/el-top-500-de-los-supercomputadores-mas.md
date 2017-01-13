@@ -8,7 +8,7 @@ categories:
   - internet
 tags:
   - top 500 supercomputadoras mundo
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <div >

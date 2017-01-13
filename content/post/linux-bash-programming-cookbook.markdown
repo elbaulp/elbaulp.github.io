@@ -5,7 +5,7 @@ description: "Delve into the world of Linux BASH Programming with this compact c
 tags: [manuales, libros, linux]
 image: guides/Linux-BASH-Programming-Cookbook-full.jpg
 introduction: "Delve into the world of Linux BASH Programming with this compact cookbook that introduces common recipes for the BASH command line!"
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 date: 2016-09-07T15:01:09+02:00
 ---

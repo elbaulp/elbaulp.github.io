@@ -10,7 +10,7 @@ tags:
   - kernel
   - laptop
   - optimizar energia en ubuntu
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c" width="650px" height="306px" />][1]
@@ -21,14 +21,14 @@ Ahorro de energía es el tema hot para los usuarios de laptop que necesitan tene
 
 Según<a href="http://www.lesswatts.org/tips/" target="_blank"> Less Watts.org</a>, la principal fuente de consejos sobre ahorro de energía en Linux, los siguientes componentes de nuestra computadora consumen la mayor parte de la vida de la batería y podemos alargarla ajustándolos:
 
-1. Controlador de Red Ethernet  
-2. WiFi/Wireless  
-3. Tarjeta gráfica y Pantalla  
-4. Procesador  
-5. Discos y Sistema de archivos  
+1. Controlador de Red Ethernet
+2. WiFi/Wireless
+3. Tarjeta gráfica y Pantalla
+4. Procesador
+5. Discos y Sistema de archivos
 6. Software
 
-Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.  
+Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.
 
 <!--ad-->
 
@@ -39,7 +39,7 @@ Te mostraremos algunos consejos básicos de ahorro de energía de la batería y 
 
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/linux_wallpaper1.jpg" alt="" title="linux_wallpaper" width="500px" height="375px" />][2]
 
-***<a href="http://www.flickr.com/photos/acercanto/314496099/sizes/m/" target="_blank">Foto por acercanto</a>  
+***<a href="http://www.flickr.com/photos/acercanto/314496099/sizes/m/" target="_blank">Foto por acercanto</a>
 ***
 
 Ubuntu viene con un módulo de manejo de energía que nos da un control básico para preservar la vida útil de la batería, abriendo &#8216;System&#8217; > &#8216;Preferences&#8217; > &#8216;Power Management&#8217;.
@@ -50,17 +50,17 @@ Podemos extender la vida de la batería seleccionando estas opciones de la panta
 
 1. Putting our computer to sleep when it is inactive.
 
-2. Setting our computer to hibernate mode when battery power is low.  
-3. Slowing down the hard disk spin.  
-4. Putting display to sleep when it is inactive.  
-5. Reducing the back light brightness.  
+2. Setting our computer to hibernate mode when battery power is low.
+3. Slowing down the hard disk spin.
+4. Putting display to sleep when it is inactive.
+5. Reducing the back light brightness.
 6. Dimming display when the computer is idle.
 
 **Wifi/Wireless**
 
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/wifi1.jpg" alt="" title="wifi" width="500px" height="375px" />][4]
 
-***<a href="http://www.flickr.com/photos/juicelog/363018869/sizes/m/" target="_blank">Foto por Juicelog</a>  
+***<a href="http://www.flickr.com/photos/juicelog/363018869/sizes/m/" target="_blank">Foto por Juicelog</a>
 ***
 
 Nuestro radio Wifi/Wireless consume energía cuando recibe y envía data sobre la red y deberíamos apagarlo cuando no lo usamos. Esto podemos hacerlo si nuestra placa de red soporta el mecanismo de activado y desactivado del control de energía usando el comando &#8216;iwconfig&#8217; que podemos ejecutar en una consola de Ubuntu:

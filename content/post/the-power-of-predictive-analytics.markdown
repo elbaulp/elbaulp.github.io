@@ -5,7 +5,7 @@ description: "Predictive analytics provide companies the ability to systematical
 tags: [manuales, libros, analytics]
 image: guides/The-Power-of-Predictive-Analytics-centered.jpg
 introduction: "Predictive analytics provide companies the ability to systematically leverage data from across the value chain to peer into the future and identify the most likely outcomes."
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 date: 2016-11-27T10:54:40+01:00
 ---

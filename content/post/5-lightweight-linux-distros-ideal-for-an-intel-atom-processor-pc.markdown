@@ -5,7 +5,7 @@ description: "Bring your Atom-powered device back to life with a lightweight dis
 tags: [manuales, libros, linux]
 image: guides/5-Lightweight-Linux-Distros-Ideal-for-an-Intel-Atom-Processor-PC-centered.jpg
 introduction: "Bring your Atom-powered device back to life with a lightweight distribution!"
-main-class: "misc"
+mainclass: "misc"
 color: #61B38D
 date: 2016-11-27T11:18:24+01:00
 ---

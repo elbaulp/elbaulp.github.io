@@ -1,14 +1,14 @@
 ---
 layout: post.amp
 title: Cómo solucionar errores Al Implementar Amp-mustache
-categories: 
+categories:
 description: "Cómo implementar correctamente amp-mustache y evitar errores en Jekyll"
 tags: [amp-mustache, amp-pages, error amp-mustache]
 image: error-al-implementar-amp-mustache.png
 modified:
 introduction:
 date: 2016-07-30T18:27:54+02:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

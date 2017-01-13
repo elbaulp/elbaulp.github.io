@@ -9,7 +9,7 @@ categories:
 tags:
   - Content Provider Android
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -164,7 +164,7 @@ La clase *favSitesTableMEtaData* define los MIME types para una colección de si
 
 Además, la clase *favSitesTableMEtaData* hereda de la clase *BaseColumns*, la cual proporciona el campo estandar *_ID*, que representa el identificador de la fila. Con todas estas definiciones de metadatos, estamos listos para continuar con la implementación de nuestro proveedor.
 
-## Siguiente Tema: [Implementando un Content Provider (Parte 2)][7] 
+## Siguiente Tema: [Implementando un Content Provider (Parte 2)][7]
 
  [1]: https://elbauldelprogramador.com/programacion-android-actualizar-y
  [2]: https://elbauldelprogramador.com/bases-de-datos

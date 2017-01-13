@@ -14,7 +14,7 @@ tags:
   - startactivityforresult android example
 modified: 2016-08-13T23:00
 redirect_from: /opensource/programacion-android-ejemplos-de-uso-de/
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -90,7 +90,7 @@ Las constantes **RESTULT\_OK, RESULT\_CANCEL Y RESULT\_FIRST\_USER** están defi
 
 ```java
 RESTULT_OK         = -1;
-RESULT_CANCEL      =  0;  
+RESULT_CANCEL      =  0;
 RESULT_FIRST_USER  =  1;
 ```
 

@@ -9,15 +9,15 @@ categories:
 tags:
   - convertir a utf8 maxima
   - wxmaxima error
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga" width="271px" height="256px" />  
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/06/Maxima.png" alt="wxMaxima encontró un error durante la carga" width="271px" height="256px" />
 En la facultad solemos usar wxMaxima en las prácticas de las asignturas. Hace poco al intentar abrir un fichero wxm me encontré con el siguiente error:
 
 wxMaxima encontró un error durante la carga ó Failed to convert file to Unicode.
 
-Que indica que wxmaxima ha encontrado un error intentando convertir el fichero a Unicode (utf-8). Para solucionar el problema deberemos convertir manualmente el fichero a utf-8. Basta con seguir los siguientes pasos:  
+Que indica que wxmaxima ha encontrado un error intentando convertir el fichero a Unicode (utf-8). Para solucionar el problema deberemos convertir manualmente el fichero a utf-8. Basta con seguir los siguientes pasos:
 
 <!--ad-->
 

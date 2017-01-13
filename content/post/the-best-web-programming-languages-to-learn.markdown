@@ -6,7 +6,7 @@ image: Boosting-your-Web-Development-Career2.jpg
 date: 2016-06-13T18:35:07+02:00
 description: "Boosting your Web Development Career!"
 introduction: "Boosting your Web Development Career!"
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 

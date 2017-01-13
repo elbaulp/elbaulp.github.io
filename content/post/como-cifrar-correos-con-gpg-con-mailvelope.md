@@ -17,7 +17,7 @@ image: 2013/04/GnuPG-Logo.png
 introduction: "Cómo cifrar correos electrónicos con gpg y mailvelope"
 description: "En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante GPG, Mailvelope."
 modified: 2016-08-10T09:20
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -112,4 +112,3 @@ Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnolog�
  [1]: https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/ "Editar y crear archivos cifrados con GPG en Vim"
  [2]: https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Git: Mini Tutorial y chuleta de comandos"
  [3]: https://elbauldelprogramador.com/contacto "Contacto"
-

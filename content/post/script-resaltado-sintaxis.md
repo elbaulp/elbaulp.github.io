@@ -8,7 +8,7 @@ categories:
 tags:
   - sintaxis c
 modified: 2016-07-29T20:00
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

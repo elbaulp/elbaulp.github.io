@@ -6,7 +6,7 @@ permalink: /gana-dinero-ofreciendo-manuales-de/
 categories:
   - cursos
   - internet
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 <div class="separator" >

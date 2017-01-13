@@ -11,7 +11,7 @@ tags:
   - android view setonclicklistener example
   - curso android pdf
   - startactivityforresult android example
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -235,7 +235,7 @@ public class ParametrosActivity extends Activity {
 
 * * *
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica - Conceptos básicos][3] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Conceptos básicos][3]
 
 
 

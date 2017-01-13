@@ -5,7 +5,7 @@ permalink: /componentes-del-lenguaje-sql-sql/
 modified: 2016-08-15T16:30
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -193,7 +193,7 @@ Nota: El tama&ntilde;o del campo varía en función de cada base de datos, 255 e
 
 ### Tipos de datos en ORACLE
 
-- <strong>NUMBER</strong>(Numérico): Almacena números enteros o de punto flotante, virtualmente de cualquier longitud, aunque se puede especificar la precisión y la escala. 
+- <strong>NUMBER</strong>(Numérico): Almacena números enteros o de punto flotante, virtualmente de cualquier longitud, aunque se puede especificar la precisión y la escala.
 
 ```sql
 -- NUMBER [(precisión, escala)]
@@ -217,7 +217,7 @@ nombre VARCHAR2(20);
 - <strong>CHAR</strong> (Caracter): Almacena datos de tipo carácter con una longitud máxima de 32767 y cuyo valor de longitud por defecto es 1.
 
 ```sql
-‐‐ CHAR [(longitud_maxima)] 
+‐‐ CHAR [(longitud_maxima)]
 nombre CHAR(20);
 /* Indica que puede almacenar valores alfanuméricos de 20 posiciones*/
 ```
@@ -235,12 +235,12 @@ hay_error BOOLEAN;
 
 ```sql
 DECLARE
-‐‐ declare record variable that represents a row fetched from the employees table 
-  emp_rec employees%ROWTYPE; ‐‐ declare variable with %ROWTYPE attribute 
+‐‐ declare record variable that represents a row fetched from the employees table
+  emp_rec employees%ROWTYPE; ‐‐ declare variable with %ROWTYPE attribute
 BEGIN
   SELECT * INTO emp_rec FROM EMPLOYEES WHERE employee_id = 120; ‐‐ retrieve record
   DBMS_OUTPUT.PUT_LINE('Employee name: ' || emp_rec.first_name || ' ' || emp_rec.last_name);
-END; 
+END;
 
 ```
 
@@ -257,7 +257,7 @@ TYPE <nombre> IS RECORD
 Los registros son un tipo de datos, se pueden declarar variables de dicho tipo de datos. (Son como los struct en C++)
 
 ```sql
-DECLARE 
+DECLARE
 TYPE PAIS IS RECORD
   (
     CO_PAIS NUMBER,
@@ -267,12 +267,12 @@ TYPE PAIS IS RECORD
 
 /* Declara una variable miPAIS de tipo PAIS. Esto significa que la variable miPAIS tendrá los campos ID, DESCRIPCION y CONTINENTE. */
   miPAIS PAIS;
-BEGIN 
-/* Asignamos valores a los campos de la variable.*/ 
+BEGIN
+/* Asignamos valores a los campos de la variable.*/
   miPAIS.CO_PAIS := 27;
   miPAIS.DESCRIPCION := 'ITALIA';
   miPAIS.CONTINENTE := 'EUROPA';
-END; 
+END;
 ```
 
 Los registros pueden estar anidados. Es decir, un campo de un registro puede ser de un tipo de dato de otro registro. Pueden asignarse todos los campos de un registro utilizando una sentencia SELECT.
@@ -331,7 +331,7 @@ Cuando trabajamos con tablas de PL/SQL podemos utilizar las siguientes funciones
 DECLARE
 TYPE ARR_CIUDADES IS TABLE OF VARCHAR2(50) INDEX BY BINARY_INTEGER;
 misCiudades ARR_CIUDADES;
-BEGIN 
+BEGIN
 misCiudades(1) := 'MADRID';
 misCiudades(2) := 'BILBAO';
 misCiudades(3) := 'MALAGA';
@@ -544,6 +544,5 @@ Condiciones que se indican en clausula WHERE de una consulta SQL. La siguiente t
 
 
 ### Bibliografia: www.devjoker.com
-    
-Siguiente tema: <a href="https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/">Lenguaje Definición de Datos(DDL) - CREATE.</a>
 
+Siguiente tema: <a href="https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/">Lenguaje Definición de Datos(DDL) - CREATE.</a>

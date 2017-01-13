@@ -5,7 +5,7 @@ modified: 2016-09-04T12:00
 permalink: /clases-y-objetos-funciones-inline/
 categories:
   - C
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

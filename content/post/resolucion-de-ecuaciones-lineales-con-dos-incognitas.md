@@ -12,7 +12,7 @@ tags:
   - resolver ecuaciones python
 modified: 2015-12-28T9:55
 description: "Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:"
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

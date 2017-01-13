@@ -5,7 +5,7 @@ permalink: /grub-customizer-20/
 categories:
   - Sin Categoria
 modified: 2016-08-15T15:30
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 

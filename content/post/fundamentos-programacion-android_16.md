@@ -11,7 +11,7 @@ tags:
   - curso android pdf
   - intents android
   - startactivityforresult android example
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -43,6 +43,6 @@ Cada componente tiene su propia etiqueta xml:
   * `<provider>`: Para proveedores de contenidos.
   * `<intent>`: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.
 
-## Siguiente Tema: [Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos][1] 
+## Siguiente Tema: [Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos][1]
 
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_17/

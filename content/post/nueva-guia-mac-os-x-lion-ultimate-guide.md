@@ -6,7 +6,7 @@ categories:
   - cursos
 modified: 2016-09-29T20:40
 image: Mac-OS-X-LionThe-Ultimate-Guide.jpg
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 
@@ -20,7 +20,7 @@ color: "#61B38D"
 
 So what does this ultimate version of Mac OS X bring to the table? What makes it worth using? What makes this operating system the king of cats? Download now to find out. Also with this free guide you will also receive daily updates on new cool websites and programs in your email for free courtesy of MakeUseOf.
 
-[Descárgala desde aqui][2] o  
+[Descárgala desde aqui][2] o
 Visita la página [Manuales gratuitos][3] para ver las guías disponibles.
 
  [2]: http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_make45

@@ -9,7 +9,7 @@ categories:
 tags:
   - Content Provider Android
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -148,7 +148,7 @@ Muestra todo el contenido de la tabla sites de la base de datos.
 
 Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los próximos artículos veremos en profundidad los intents.
 
-#### Siguiente Tema: [Intents - Conceptos básicos][5] 
+#### Siguiente Tema: [Intents - Conceptos básicos][5]
 
  [1]: https://elbauldelprogramador.com/guia-de-desarrollo-android
  [2]: https://elbauldelprogramador.com/programacion-android-proveedores-de

@@ -5,7 +5,7 @@ description: Pequeño script en python para añadir el tamaño a una etiqueta im
 introduction: Pequeño script en python para añadir el tamaño a una etiqueta img
 tags: [python,BeautifulSoup,parser, ejemplos BeautifulSoup, leer imagen python, leer tamaño imagen python, obtener tamaño imagen python]
 image: ComoAnadirAutomaticamenteElTamanoDeUnaImagenenHTMLConPython.png
-main-class: dev
+mainclass: dev
 color: "#E64A19"
 date: 2016-06-30T12:59:47+02:00
 ---

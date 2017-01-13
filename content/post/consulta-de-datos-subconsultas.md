@@ -5,7 +5,7 @@ permalink: /consulta-de-datos-subconsultas/
 modified: 2016-08-19T15:30
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -13,7 +13,7 @@ Una subconsulta es una consulta `SELECT` que está anidada en una instrucción `
 
 Una subconsulta se puede utilizar en cualquier parte en la que se permita una expresión. La consulta `SELECT` de una subconsulta se incluye siempre entre paréntesis.
 
-Una subconsulta puede anidarse dentro de la cláusula `WHERE` o `HAVING` de una instrucción `SELECT`, `INSERT`, `UPDATE` o `DELETE`.  
+Una subconsulta puede anidarse dentro de la cláusula `WHERE` o `HAVING` de una instrucción `SELECT`, `INSERT`, `UPDATE` o `DELETE`.
 
 <!--ad-->
 
@@ -41,7 +41,6 @@ El predicado ALL se utiliza para recuperar únicamente aquellos registros de la 
 
 El predicado `EXISTS` se utiliza en comparaciones de verdad/falso para determinar si la subconsulta devuelve algún registro.
 
-## Siguiente Tema: [Consulta de Datos - Tablas Resumen operadores y Funciones Oracle][1] 
+## Siguiente Tema: [Consulta de Datos - Tablas Resumen operadores y Funciones Oracle][1]
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/
-

@@ -8,7 +8,7 @@ categories:
 tags:
   - curso android pdf
 modified: 2016-08-09T20:40
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -45,6 +45,6 @@ private String convertStreamToString(InputStream is)
 
 > Los nombres de ficheros con el mismo nombre base generan un error en el plugin ADT de eclipse.
 
-# Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos Assets][1] 
+# Siguiente Tema: [Programación Android: Recursos - Trabajar con recursos Assets][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/

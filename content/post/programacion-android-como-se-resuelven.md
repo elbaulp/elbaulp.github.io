@@ -12,7 +12,7 @@ tags:
   - curso android pdf
   - ejemplo intentfilter implicito
   - resolver uri en android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2013/07/iconoAndroid.png"  id="logo"  class="icono" width="128px" height="128px" />
@@ -60,7 +60,7 @@ Si una actividad no tiene declarada la categoría por defecto, pero conocemos su
 
 * * *
 
-#### Siguiente Tema: [Ejemplo de uso de ACTION_PICK][3] 
+#### Siguiente Tema: [Ejemplo de uso de ACTION_PICK][3]
 
 
 

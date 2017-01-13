@@ -14,7 +14,7 @@ tags:
   - layout android
   - menu android
 modified: 2016-09-17T09:16
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -69,11 +69,8 @@ Podemos acceder al contexto de diferentes formas en función de donde nos encont
 * Las actividades implementan esta interfaz, por lo que haciendo referencia a ellas mismas, con (***this***) o NombreActivity.this, estaremos referenciando el contexto.
 * Usando otros métodos como ***getApplicationContext() o getApplication()***
 
-### Siguiente Tema: [Programación Android: Interfaz gráfica - Layouts][3] 
+### Siguiente Tema: [Programación Android: Interfaz gráfica - Layouts][3]
 
  [1]: https://elbauldelprogramador.com/programacion-android-trabajar-con/
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android_16/
  [3]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/
-
-
-

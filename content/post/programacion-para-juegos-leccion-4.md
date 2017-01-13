@@ -5,7 +5,7 @@ permalink: /programacion-para-juegos-leccion-4/
 modified: 2016-08-19T19:00
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -244,10 +244,9 @@ Fuente:
 
 [lazyfoo.net][3]
 
-#### Siguiente tema: [Lección 5 - Colores Clave][4] 
+#### Siguiente tema: [Lección 5 - Colores Clave][4]
 
  [1]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson04
  [2]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-2/
  [3]: http://www.lazyfoo.net/SDL_tutorials/
  [4]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-5/
-

@@ -8,7 +8,7 @@ image: como-instalar-actualizar-elminar-paquetes-gentoo.png
 introduction: How to change portage folders and temp folder to other directory
 date: 2016-08-17T10:06:32+02:00
 lang: en
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -46,7 +46,7 @@ emerge --sync
 
 After that, `portage` now knows about the new location, but there is one more thing to do.
 
-# Symlinking make.profile to the new location 
+# Symlinking make.profile to the new location
 
 After syncing `portage`, one last thing to do is symlinking `make.profile` to the new location, previously it was a symlink to `/usr/portage/profiles/default/linux/amd64/13.0/desktop/`, but we need to update it to the new location. Here is how:
 

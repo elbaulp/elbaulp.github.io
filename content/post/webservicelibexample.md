@@ -12,7 +12,7 @@ tags:
   - restlib
   - web services android
   - web services programacion
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 Trabajando con un compañero en una aplicación que hacía uso de web services, nos planteamos la posibilidad de crear un librería que nos facilitara el desarrollo en aplicaciones similares. Aunque hay muchas disponibles en la red decidimos crear la nuestra propia. Gran parte de la librería está desarrollada por mi compañero <a href="http://menudoproblema.es/" target="_blank">Vicente</a>, yo crontibuí poco.
@@ -25,7 +25,7 @@ En la aplicación de ejemplo he trabajado con dos Web Services, el de **freegeoi
 
 Usando estos dos web services he querido proporcionar dos ejemplos, ambos son peticiones **GET**, la diferencia reside en que uno es con parámetros y el otro no.
 
-Empezaré con **freegeoip**, al ser la más simple. El código para armar la petición es el siguiente:  
+Empezaré con **freegeoip**, al ser la más simple. El código para armar la petición es el siguiente:
 
 <!--ad-->
 
@@ -227,9 +227,9 @@ Para finalizar, decir que la librería por ahora está muy limitada, pero es per
 
 <a class="aligncenter download-button" href="https://elbauldelprogramador.com/" rel="nofollow"> Download &ldquo;WebserviceLibExample&rdquo; <small>WebserviceLibExample.zip &ndash; Downloaded 811 times &ndash; </small> </a>
 
-*FreeGeoIp* »» <a href="http://freegeoip.net/static/index.html" target="_blank">Visitar sitio</a>  
-*developer.wordpress.com* »» <a href="http://developer.wordpress.com/docs/api/1/get/test/%24ID/" target="_blank">Visitar sitio</a>  
-*Descargar librería* »» <a href="https://github.com/Cocktails/Restlib/blob/master/restlib.jar" target="_blank">Visitar sitio</a>  
+*FreeGeoIp* »» <a href="http://freegeoip.net/static/index.html" target="_blank">Visitar sitio</a>
+*developer.wordpress.com* »» <a href="http://developer.wordpress.com/docs/api/1/get/test/%24ID/" target="_blank">Visitar sitio</a>
+*Descargar librería* »» <a href="https://github.com/Cocktails/Restlib/blob/master/restlib.jar" target="_blank">Visitar sitio</a>
 *GitHub del proyecto* »» <a href="https://github.com/Cocktails/Restlib" target="_blank">Visitar sitio</a>
 
 

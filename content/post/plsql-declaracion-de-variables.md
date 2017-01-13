@@ -7,7 +7,7 @@ categories:
   - BaseDeDatos
 tags:
   - declare en pl sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -19,7 +19,7 @@ Nombre_variable [CONSTANT] TIPO [NOT NULL] [:= inicialización];
 
 <!--ad-->
 
-Cualquier variable que se declare y no se inicialice tiene por defecto el valor `NULL`. Los tipos posibles son todos aquellos válidos para SQL añadiendo algunos propios de PL/SQL. Para más información sobre los tipos propios de PL/SQL consultar el PL/SQL User’s Guide and Referente. Podemos hacer que una variable nunca tome valores nulos utilizando la cláusula `NOT NULL`, en este caso, hay que inicializar la variable.  
+Cualquier variable que se declare y no se inicialice tiene por defecto el valor `NULL`. Los tipos posibles son todos aquellos válidos para SQL añadiendo algunos propios de PL/SQL. Para más información sobre los tipos propios de PL/SQL consultar el PL/SQL User’s Guide and Referente. Podemos hacer que una variable nunca tome valores nulos utilizando la cláusula `NOT NULL`, en este caso, hay que inicializar la variable.
 
 
 La declaración de una constante es similar a la declaración de una variable, añadiendo la palabra `CONSTANT` y asignándole a continuación un valor a la constante.
@@ -62,8 +62,6 @@ En este caso para acceder a cada campo que tuviera el tabla employee mediante la
 Un bloque tiene acceso a los objetos identificados dentro de su esquema. Solo podremos acceder a los objetos del usuario donde estemos conectados y a los que ese usuario pueda acceder porque le hayan otorgado permisos.
 
 
-## Siguiente Tema: [PL/SQL - Estructuras básicas de control][1] 
+## Siguiente Tema: [PL/SQL - Estructuras básicas de control][1]
 
  [1]: https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/
-
-

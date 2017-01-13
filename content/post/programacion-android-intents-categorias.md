@@ -10,7 +10,7 @@ tags:
   - android ejemplo intent filter
   - curso android pdf
   - ejemplo intentfilter implicito
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 <div class="separator" >
@@ -88,7 +88,7 @@ Si quisiéramos invocar un intent para volver a la pantalla principal, basta con
 
 * * *
 
-#### Siguiente Tema: [Cómo se resuelven los Intents][2] 
+#### Siguiente Tema: [Cómo se resuelven los Intents][2]
 
 
 

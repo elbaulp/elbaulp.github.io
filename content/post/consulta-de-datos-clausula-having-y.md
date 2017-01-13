@@ -7,7 +7,7 @@ categories:
   - BaseDeDatos
 tags:
   - base de datos having
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -42,11 +42,11 @@ Se pueden especificar múltiples columnas de ordenación. La secuencia de ordena
 
 La cláusula `ORDER BY` puede incluir columnas que no aparecen en la select list; sin embargo, si se especifica `SELECT DISTINCT`, las columnas por las que se ordena deben aparecer en la select list.
 
-- **ASC**: Es el valor que se toma por defecto, especifica que los registros se ordenaran en orden ascendente. 
+- **ASC**: Es el valor que se toma por defecto, especifica que los registros se ordenaran en orden ascendente.
 - **DESC**: Especifica que los registros se ordenan en orden descendente.
 
 Los valores nulos se consideran como los más pequeños posibles.
 
-## Siguiente Tema: [Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.][1] 
+## Siguiente Tema: [Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.][1]
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/

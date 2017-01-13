@@ -5,7 +5,7 @@ permalink: /como-empezar-programar-how-start/
 modified: 2016-08-16T11:00
 categories:
   - How To
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 A petición de un lector, voy a intentar resolver algunas dudas para la gente que quiere adentrarse en el mundo de la programación y no sabe por donde empezar.
@@ -21,4 +21,3 @@ Si decidís aprender C++, recomiendo <a target="_blank" href="http://c.conclase.
 Espero que os sea útil esta información, y que os animéis a programar.
 
  [1]: https://elbauldelprogramador.com/manual-de-python/
-

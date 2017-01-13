@@ -11,7 +11,7 @@ tags:
   - componentes android
   - curso android pdf
   - Fundamentos programación Android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -72,8 +72,6 @@ A continuación el diagrama con el ciclo de vida de los servicios:
 </figure>
 
 
-### Siguiente Tema: [Fundamentos programación Android: Limpieza de Procesos][1] 
+### Siguiente Tema: [Fundamentos programación Android: Limpieza de Procesos][1]
 
  [1]: https://elbauldelprogramador.com/fundamentos-programacion-android_18/
-
-

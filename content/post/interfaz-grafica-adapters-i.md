@@ -18,7 +18,7 @@ tags:
   - menu android
   - simple adapter android ejemplo
 modified: 2016-08-14T08:50
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -184,8 +184,7 @@ Y para un adaptador sin datos:
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" height="800" width="480" src="https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s800/listaVacia.png"></amp-img>
 </figure>
 
-#### Siguiente Tema: [Programación Android: Interfaz gráfica - Adapters II][2] 
+#### Siguiente Tema: [Programación Android: Interfaz gráfica - Adapters II][2]
 
  [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/
  [2]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/
-

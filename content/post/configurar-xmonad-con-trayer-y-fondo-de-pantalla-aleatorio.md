@@ -10,7 +10,7 @@ tags:
   - feh
   - trayer
   - xmonad
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 A lo largo de los años he probado varios gestores de ventanas, como fluxbox, [openbox][1] y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.
@@ -94,81 +94,81 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 Pero no dió resultado, así que como última opción, asigne una combinación de teclas al script en el archivo de configuración de xmonad (**xmonad.hs**):
 
 ```bash
-import XMonad  
-import XMonad.Config.Azerty  
-import XMonad.Hooks.DynamicLog  
-import XMonad.Hooks.ManageDocks  
-import XMonad.Util.Run(spawnPipe)  
-import XMonad.Util.EZConfig  
-import Graphics.X11.ExtraTypes.XF86  
-import XMonad.Layout.Spacing  
-import XMonad.Layout.NoBorders(smartBorders)  
-import XMonad.Layout.PerWorkspace  
-import XMonad.Layout.IM  
-import XMonad.Layout.Grid  
---import XMonad.Actions.GridSelect  
-import Data.Ratio ((%))  
-import XMonad.Actions.CycleWS  
-import qualified XMonad.StackSet as W  
+import XMonad
+import XMonad.Config.Azerty
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig
+import Graphics.X11.ExtraTypes.XF86
+import XMonad.Layout.Spacing
+import XMonad.Layout.NoBorders(smartBorders)
+import XMonad.Layout.PerWorkspace
+import XMonad.Layout.IM
+import XMonad.Layout.Grid
+--import XMonad.Actions.GridSelect
+import Data.Ratio ((%))
+import XMonad.Actions.CycleWS
+import qualified XMonad.StackSet as W
 import System.IO
 
-myWorkspaces  = ["1","2","3","4","5","6", "7"]  
-myLayout = onWorkspace "4" pidginLayout $ onWorkspaces ["2", "7"] nobordersLayout $ tiled1 ||| Mirror tiled1 ||| nobordersLayout  
- where  
-  tiled1 = spacing 5 $ Tall nmaster1 delta ratio  
-  --tiled2 = spacing 5 $ Tall nmaster2 delta ratio  
-  nmaster1 = 1  
-  nmaster2 = 2  
-  ratio = 2/3  
-  delta = 3/100  
-  nobordersLayout = smartBorders $ Full  
+myWorkspaces  = ["1","2","3","4","5","6", "7"]
+myLayout = onWorkspace "4" pidginLayout $ onWorkspaces ["2", "7"] nobordersLayout $ tiled1 ||| Mirror tiled1 ||| nobordersLayout
+ where
+  tiled1 = spacing 5 $ Tall nmaster1 delta ratio
+  --tiled2 = spacing 5 $ Tall nmaster2 delta ratio
+  nmaster1 = 1
+  nmaster2 = 2
+  ratio = 2/3
+  delta = 3/100
+  nobordersLayout = smartBorders $ Full
   gridLayout = spacing 8 $ Grid
-  --gimpLayout = withIM (0.20) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.20) (Role "gimp-dock") Full  
-  pidginLayout = withIM (18/100) (Role "buddy_list") gridLayout  
+  --gimpLayout = withIM (0.20) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.20) (Role "gimp-dock") Full
+  pidginLayout = withIM (18/100) (Role "buddy_list") gridLayout
 myManageHook = composeAll
-     [ className =? "File Operation Progress"   --> doFloat  
-     , resource =? "desktop_window" --> doIgnore  
-     , className =? "xfce4-notifyd" --> doIgnore  
-     --, className =? "Iron" --> doShift "1:main"  
+     [ className =? "File Operation Progress"   --> doFloat
+     , resource =? "desktop_window" --> doIgnore
+     , className =? "xfce4-notifyd" --> doIgnore
+     --, className =? "Iron" --> doShift "1:main"
      , className =? "Firefox" --> doShift "2"
      , className =? "Gimp" --> doFloat
-     , className =? "Vlc" --> doShift "7"  
-     ]  
+     , className =? "Vlc" --> doShift "7"
+     ]
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
                         <+> manageHook defaultConfig
         , layoutHook = avoidStruts $ myLayout
-        , logHook = dynamicLogWithPP xmobarPP  
-            { ppOutput = hPutStrLn xmproc  
-               , ppTitle = xmobarColor "#2CE3FF" "" . shorten 50  
-            }  
+        , logHook = dynamicLogWithPP xmobarPP
+            { ppOutput = hPutStrLn xmproc
+               , ppTitle = xmobarColor "#2CE3FF" "" . shorten 50
+            }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
-        , workspaces     = myWorkspaces  
-        , normalBorderColor = "#60A1AD"  
+        , workspaces     = myWorkspaces
+        , normalBorderColor = "#60A1AD"
         , focusedBorderColor = "#68e862"
-        , borderWidth    = 2  
+        , borderWidth    = 2
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((mod4Mask, xK_KP_Enter), spawn "exe=`dmenu_run -b -nb black -nf yellow -sf yellow` && eval "exec $exe"") -- spawn dmenu
         , ((mod4Mask, xK_Return), spawn "terminator") -- spawn terminator terminal
         , ((mod4Mask, xK_w), spawn "/usr/bin/firefox")
-        , ((mod4Mask, xK_f), spawn "nautilus --no-desktop")  
+        , ((mod4Mask, xK_f), spawn "nautilus --no-desktop")
         , ((mod4Mask, xK_s), spawn "~/Pictures/wall_aleatorio.sh")
-        , ((0, xF86XK_HomePage), spawn "gedit ~/.xmonad/xmonad.hs") -- hit a button to open the xmonad.hs file  
-        , ((mod4Mask, xK_m), spawn "vlc") -- hit a button to run mpd with ncmpcpp  
-        , ((mod4Mask .|. shiftMask, xK_F4), spawn "sudo shutdown -h now") -- to shutdown  
-        , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 3%-") -- decrease volume  
-        , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 3%+") -- increase volume  
-        , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle") -- mute volume  
-        --, ((controlMask .|. shiftMask, xK_Right), spawn "ncmpcpp next") -- play next song in mpd  
-        --, ((controlMask .|. shiftMask, xK_Left), spawn "ncmpcpp prev") -- play previous song  
-        , ((mod4Mask, xK_Up ), windows W.swapUp) -- swap up window  
+        , ((0, xF86XK_HomePage), spawn "gedit ~/.xmonad/xmonad.hs") -- hit a button to open the xmonad.hs file
+        , ((mod4Mask, xK_m), spawn "vlc") -- hit a button to run mpd with ncmpcpp
+        , ((mod4Mask .|. shiftMask, xK_F4), spawn "sudo shutdown -h now") -- to shutdown
+        , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 3%-") -- decrease volume
+        , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 3%+") -- increase volume
+        , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle") -- mute volume
+        --, ((controlMask .|. shiftMask, xK_Right), spawn "ncmpcpp next") -- play next song in mpd
+        --, ((controlMask .|. shiftMask, xK_Left), spawn "ncmpcpp prev") -- play previous song
+        , ((mod4Mask, xK_Up ), windows W.swapUp) -- swap up window
         , ((mod4Mask, xK_Down ), windows W.swapDown) -- swap down window
-        , ((mod4Mask, xK_KP_Add ), sendMessage (IncMasterN 1)) -- increase the number of window on master pane  
+        , ((mod4Mask, xK_KP_Add ), sendMessage (IncMasterN 1)) -- increase the number of window on master pane
         , ((mod4Mask, xK_KP_Subtract ), sendMessage (IncMasterN (-1))) -- decrease the number of window
-        , ((controlMask,        xK_Right   ), sendMessage Expand) -- expand master pane  
+        , ((controlMask,        xK_Right   ), sendMessage Expand) -- expand master pane
         , ((controlMask,        xK_Left   ), sendMessage Shrink) -- shrink master pane
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "gnome-screenshot -i")

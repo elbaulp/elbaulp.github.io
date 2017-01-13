@@ -9,10 +9,10 @@ tags:
   - ejemplos ndk android
   - hola mundo ndk android
   - introducción ndk android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
-El NDK de Android es un conjunto de herramientas que permiten embeber código máquina nativo compilado en lenguajes C y/o C++, hoy veremos cómo crear un ejemplo en el NDK de Android.  
+El NDK de Android es un conjunto de herramientas que permiten embeber código máquina nativo compilado en lenguajes C y/o C++, hoy veremos cómo crear un ejemplo en el NDK de Android.
 
 <!--ad-->
 
@@ -113,7 +113,7 @@ Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
 
 ```
 
-Con esto hemos compilado el código nativo de la aplicación.  
+Con esto hemos compilado el código nativo de la aplicación.
 El siguiente paso es construir e instalar la aplicación como se hace normalmente en eclipse, o mediante línea de comandos:
 
 ```bash

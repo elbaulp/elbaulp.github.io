@@ -7,7 +7,7 @@ categories:
   - curiosidades
   - Humor
   - internet
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 

@@ -24,11 +24,11 @@ tags:
   - significado close_wait
   - usos netstat
 modified: 2016-08-11T21:00
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
-`netstat` es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.  
+`netstat` es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.
 
 <!--ad-->
 
@@ -49,7 +49,7 @@ $ sudo netstat -apA inet
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 *:sunrpc                *:*                     LISTEN      1775/rpcbind
-tcp        0      0 *:38768                 *:*                     LISTEN      1808/rpc.statd  
+tcp        0      0 *:38768                 *:*                     LISTEN      1808/rpc.statd
 tcp        0      0 localhost:smtp          *:*                     LISTEN      2861/exim4
 tcp        0      0 *:17500                 *:*                     LISTEN      2477/dropbox
 tcp        0      0 hkr-pc.local:48985      wordpress.com:https     ESTABLISHED 3451/firefox.real
@@ -87,12 +87,12 @@ tcp        0      0 hkr-pc.local:43600      72.21.91.121:http       TIME_WAIT   
 udp        0      0 *:bootpc                *:*                                 2405/dhclient
 udp        0      0 *:sunrpc                *:*                                 1775/rpcbind
 udp        0      0 *:678                   *:*                                 1775/rpcbind
-udp        0      0 localhost:712           *:*                                 1808/rpc.statd  
+udp        0      0 localhost:712           *:*                                 1808/rpc.statd
 udp        0      0 *:17500                 *:*                                 2477/dropbox
 udp        0      0 *:mdns                  *:*                                 2298/avahi-daemon:
-udp        0      0 *:44290                 *:*                                 1808/rpc.statd  
+udp        0      0 *:44290                 *:*                                 1808/rpc.statd
 udp        0      0 *:53066                 *:*                                 2405/dhclient
-udp        0      0 *:1900                  *:*                                 2905/minissdpd  
+udp        0      0 *:1900                  *:*                                 2905/minissdpd
 udp        0      0 *:45008                 *:*                                 2298/avahi-daemon:
 ```
 
@@ -130,7 +130,7 @@ tcp        0      0 hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.
 
 Con el comando de arriba estoy mostrando únicamente las conexiones *https* establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección <a href=" http://ec2-176-34-135-167.eu-west-1.compute.amazonaws.com" target="_blank">ec2-176-34-135-167.eu-west-1.compute.amazonaws.com</a> podrás comprobar que dicha dirección pertenece al buscador **duckduckgo**. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.
 
-Veamos ahora la razón de que existan dos conexiones con datos pendientes en la cola de entrada y salida.  
+Veamos ahora la razón de que existan dos conexiones con datos pendientes en la cola de entrada y salida.
 
 Ambas conexiones son de **dropbox**, una de ellas tiene el estado TCP en *ESTABLISHED*, así que de esa no hay que preocuparse, ya que está transmitiendo datos. La otra sin embargo tiene datos pendientes en la cola de entrada y estado TCP *CLOSE WAIT*, es decir, la máquina conectada a la nuestra ha cerrado la conexión, pero nuestro proceso local de dropbox no lo ha hecho. Lo cual quiere decir que aunque haya finalizado la tarea que se estaba llevando a cabo, no se han liberando los recursos que el socket había reservado. Estos escenários no deberían producirse, pero mientras no haya demasiados casos como este no debes preocuparte.
 
@@ -195,7 +195,7 @@ Como nota final, y aunque este no es un artículo patrocinado, considero que deb
 
 ## Referencias
 
-- *Netstat: network analysis and troubleshooting, explained* »» <a href="http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/" target="_blank">pinehead.tv</a>  
+- *Netstat: network analysis and troubleshooting, explained* »» <a href="http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/" target="_blank">pinehead.tv</a>
 - *Lista posibles estados TCP* »» <a href="http://www.tcpipguide.com/free/t_TCPOperationalOverviewandtheTCPFiniteStateMachineF-2.htm" target="_blank">tcpipguide.com</a>
 
 

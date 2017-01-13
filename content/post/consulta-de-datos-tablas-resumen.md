@@ -5,7 +5,7 @@ permalink: /consulta-de-datos-tablas-resumen/
 categories:
   - BaseDeDatos
 modified: 2016-08-19T17:30
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -22,4 +22,3 @@ Dejo un Pdf con un resumen y algunos ejemplos de funciones en ORACLE que podéis
 
  [1]: https://elbauldelprogramador.com/bases-de-datos/
  [2]: https://elbauldelprogramador.com/introduccion-plsql/
-

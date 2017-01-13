@@ -22,7 +22,7 @@ tags:
 image: 2012/09/principal1.png
 modified: 2016-08-10T16:30
 redirect_from: /how-to/adapter-personalizado-en-android/
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -48,47 +48,47 @@ Antes de nada, hay que crear un [layout][4] que define cómo ha de verse cada fi
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:id="@+id/LinearLayout1" 
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#999999"
     android:padding="2dp">
-   
-   <checkbox 
-       android:id="@+id/leido" 
-       android:layout_width="wrap_content" 
-       android:layout_height="wrap_content" 
-       android:layout_centervertical="true" 
+
+   <checkbox
+       android:id="@+id/leido"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centervertical="true"
        android:focusable="false"/>
-      
-   <textview 
-       android:id="@+id/tvTitulo" 
-       android:layout_width="wrap_content" 
-       android:layout_height="wrap_content" 
-       android:layout_centervertical="true" 
-       android:layout_torightof="@id/leido" 
-       android:text="Titulo del post" 
+
+   <textview
+       android:id="@+id/tvTitulo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centervertical="true"
+       android:layout_torightof="@id/leido"
+       android:text="Titulo del post"
        android:textappearance="?android:attr/textAppearanceMedium" />
-      
-   <textview 
-       android:id="@+id/tvFecha_publicacion" 
-       android:layout_width="wrap_content" 
-       android:layout_height="wrap_content" 
-       android:layout_alignparentright="true" 
-       android:layout_below="@+id/tvTitulo" 
-       android:paddingtop="10dp" 
-       android:text="25/05/2012" 
+
+   <textview
+       android:id="@+id/tvFecha_publicacion"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignparentright="true"
+       android:layout_below="@+id/tvTitulo"
+       android:paddingtop="10dp"
+       android:text="25/05/2012"
        android:textappearance="?android:attr/textAppearanceSmall" />
-          
-   <imageview 
-       android:id="@+id/ivCalendar" 
-       android:layout_width="22dp" 
-       android:layout_height="22dp" 
-       android:layout_aligntop="@+id/tvFecha_publicacion" 
-       android:layout_margintop="10dp" 
-       android:layout_toleftof="@+id/tvFecha_publicacion" 
-       android:contentdescription="@string/imagen_content_description" 
+
+   <imageview
+       android:id="@+id/ivCalendar"
+       android:layout_width="22dp"
+       android:layout_height="22dp"
+       android:layout_aligntop="@+id/tvFecha_publicacion"
+       android:layout_margintop="10dp"
+       android:layout_toleftof="@+id/tvFecha_publicacion"
+       android:contentdescription="@string/imagen_content_description"
        android:src="@drawable/calendar" />
 </relativelayout>
 ```
@@ -385,11 +385,11 @@ Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que h
 El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:
 
 ```xml
-<checkbox 
-    android:id="@+id/leido" 
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:layout_centervertical="true" 
+<checkbox
+    android:id="@+id/leido"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centervertical="true"
     android:focusable="false"/>
 ```
 
@@ -436,7 +436,7 @@ public void setCheck(int position)
 }
 ```
 
-Simplemente cambia el valor del booleano y notifica al ListView de que los datos han cambiado y debe actualizarse. `CheckAll()` es similar, activa o desactiva todos los checkBox dependiendo del parametro booleano que reciba. Y `cancelSelectedPost()` elimina del ListView los elementos con el checkbox activo.  
+Simplemente cambia el valor del booleano y notifica al ListView de que los datos han cambiado y debe actualizarse. `CheckAll()` es similar, activa o desactiva todos los checkBox dependiendo del parametro booleano que reciba. Y `cancelSelectedPost()` elimina del ListView los elementos con el checkbox activo.
 <a name="SavedInstanceState"></a>
 
 # Mantener el estado de los checkbox al girar la pantalla
@@ -491,9 +491,9 @@ Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si 
 
 # Referencias
 
-- *Android: Checkable Linear Layout* »» <a href="http://tokudu.com/2010/android-checkable-linear-layout/" target="_blank">Visitar sitio</a>  
-- *Android ListView and ListActivity - Tutorial* »» <a href="http://www.vogella.com/articles/AndroidListView/article.html" target="_blank">Visitar sitio</a>  
-- *Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>  
+- *Android: Checkable Linear Layout* »» <a href="http://tokudu.com/2010/android-checkable-linear-layout/" target="_blank">Visitar sitio</a>
+- *Android ListView and ListActivity - Tutorial* »» <a href="http://www.vogella.com/articles/AndroidListView/article.html" target="_blank">Visitar sitio</a>
+- *Saving state of ArrayList of custom objects* »» <a href="http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects" target="_blank">Visitar sitio</a>
 - *AndroidBook* »» <a href="http://www.androidbook.com" target="_blank">Visitar sitio</a>
 
  [1]: https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/

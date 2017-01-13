@@ -11,14 +11,14 @@ tags:
   - herramientas forenses
   - unhide
   - unhide forensic tool
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200px" height="176px" />
 </figure>
 
-Unhide Forensic Tool o simplemente ***Unhide*** es una herramienta forense que permite encontrar los procesos que ocultan los <a href="https://es.wikipedia.org/wiki/Rootkit" target="_blank">RootKits</a>, por módulos del kernel Linux o por otras técnicas.  
+Unhide Forensic Tool o simplemente ***Unhide*** es una herramienta forense que permite encontrar los procesos que ocultan los <a href="https://es.wikipedia.org/wiki/Rootkit" target="_blank">RootKits</a>, por módulos del kernel Linux o por otras técnicas.
 
 <ul>
 <li>Compara las salidas /proc frente a /bin/ps</li>
@@ -29,7 +29,7 @@ Unhide Forensic Tool o simplemente ***Unhide*** es una herramienta forense que p
 
 Está disponible tanto para <a href="http://sourceforge.net/projects/unhide/files/latest/download?source=files" target="_blank">Windows</a> como para <a href="http://sourceforge.net/projects/unhide/files/" target="_blank">Linux</a>.
 
-Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:  
+Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:
 
 <!--ad-->
 

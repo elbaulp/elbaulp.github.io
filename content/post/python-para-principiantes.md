@@ -5,7 +5,7 @@ modified: 2016-08-31T11:00
 permalink: /python-para-principiantes/
 categories:
   - python
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 He encontrado un tutorial de python para Newbies (Principiantes) muy completo y que me parece muy interesante. La única pega es que está en inglés. Pero creo que todos los que nos dedicamos a la programación y la informática en general, tenemos asumido que los mejores manuales, tutoriales y practimente todo, son los que están escritos en inglés, hasta que alguien los traduce.
@@ -19,5 +19,3 @@ En cuanto pueda iré traduciendolo si veis que os interesa pero no sabeis sufici
 El tutorial en cuestión lo podeis encontrar en <a target="_blank" href="http://temporaryland.wordpress.com/2011/01/26/python-for-newbies/">temporaryland</a>.
 
  [1]: https://elbauldelprogramador.com/categorias/#juegos
-
-

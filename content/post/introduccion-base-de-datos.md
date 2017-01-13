@@ -9,7 +9,7 @@ tags:
   - apuntes bases de datos
   - guia de sql basico
 modified: 2016-08-13T13:00
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 

@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /videos-de-la-semana-vii/
 categories:
   - video de la semana
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 <div class="separator" >

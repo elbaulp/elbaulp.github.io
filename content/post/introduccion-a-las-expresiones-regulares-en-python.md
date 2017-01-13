@@ -20,7 +20,7 @@ tags:
   - probar expresiones regulares
   - python
   - regexp
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).
@@ -29,7 +29,7 @@ Son recopilaciones que he hecho durante el curso de *Programming languages *[en 
 
 Lo primero que hay que hacer para usar expresiones regulares es importar el módulo **re **de python con ***import re***
 
-Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:  
+Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:
 <!--ad-->
 
 ```python
@@ -88,7 +88,7 @@ regexp = r'"(?:[^\]|(?:\.))*"'
 
 ```
 
-En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (*r&#8217;""&#8217;*), lo que encontremos, lo vamos a encontrar cero o más veces (*r'&#8221;(?:)*&#8221;&#8216;*), **(?:)** coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que **no** sea un , y nótese que debemos escaparlo (*r'&#8221;(?:[^\])*&#8221;&#8216;*) **ó (*|*)** un seguido de cualquier caracter  
+En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (*r&#8217;""&#8217;*), lo que encontremos, lo vamos a encontrar cero o más veces (*r'&#8221;(?:)*&#8221;&#8216;*), **(?:)** coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que **no** sea un , y nótese que debemos escaparlo (*r'&#8221;(?:[^\])*&#8221;&#8216;*) **ó (*|*)** un seguido de cualquier caracter
 (*r'&#8221;(?:[^\]|(?:\.))*&#8221;&#8216;*)
 
 Ejemplos:

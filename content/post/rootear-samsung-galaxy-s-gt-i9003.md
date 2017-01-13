@@ -10,7 +10,7 @@ tags:
   - curso android pdf
   - samsung galaxy scl gti9003
   - xda
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

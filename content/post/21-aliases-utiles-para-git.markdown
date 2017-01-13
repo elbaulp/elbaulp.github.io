@@ -7,7 +7,7 @@ categories:
 description: "Todo aquel que use git sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los alias, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos alias útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos."
 tags: [git, github, alias git, configurar git, configuraciones git]
 image: 2013/03/git-logo.png
-main-class: "git"
+mainclass: "git"
 color: "#f05033"
 ---
 <figure>

@@ -14,15 +14,15 @@ tags:
   - smtp
   - spoofing facebook
 format: aside
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 Leyendo el blog de <a href="http://www.elladodelmal.com/" target="_blank">Chema Alonso</a> me he encontrado con una entrada interesante que, aunque no he logrado realizarla al 100% quiero compartirla con vosotros para que lo intente quien quiera.
 
 El método consiste en conseguir 3 cosas:
 
-*La dirección de correo de la persona a suplantar.*  
-*Dirección de correo de facebook de la persona a quién se va a engañar.*  
+*La dirección de correo de la persona a suplantar.*
+*Dirección de correo de facebook de la persona a quién se va a engañar.*
 *Un sistema para enviar correos SMTP*
 
 Los pasos a seguir podéis leerlos en la entrada de <a href="http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html" target="_blank">Chema: Suplantación de identidad en Facebook</a>
@@ -37,7 +37,7 @@ Al principio al establecer comunicación mediante telnet por el puerto 25 (el de
 
 Tras buscar un poco el motivo descubrí que se debía a que me estaba saltando algunas cabeceras del protocolo, concretamente *From, To * y *Date.*
 
-En resumen, todo el proceso queda como sigue:  
+En resumen, todo el proceso queda como sigue:
 
 <!--ad-->
 
@@ -66,7 +66,7 @@ This is an example
 Connection closed by foreign host.
 ```
 
-Pero sigo recibiendo un error (*450 4.3.2 INT-T14 http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int Server busy, try again later  
+Pero sigo recibiendo un error (*450 4.3.2 INT-T14 http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int Server busy, try again later
 Connection closed by foreign host*)
 
 También probé con dos programas (sin éxito), uno en[ C++][1] y otro en [python][2] que encontré en stackoverflow:

@@ -19,7 +19,7 @@ tags:
 image: 2013/05/latex_logo.png
 description: "Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas..."
 modified: 2015-12-22T17:36
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 ---
 
@@ -38,8 +38,8 @@ Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos 
   1. Los **enlaces**: con esta herramienta podemos referenciar cualquier parte de nuestro documento con un sólo click, es decir, como si fuera un enlace en una página web. Lo vamos a usar para referenciar a nuestro código.
   2. La orden **figure**: para insertar nuestra imagen.
 
-Para colocar un enlace en nuestro documento, debemos hacer dos cosas:  
-1. Poner una **etiqueta** en el lugar que queramos referenciar.  
+Para colocar un enlace en nuestro documento, debemos hacer dos cosas:
+1. Poner una **etiqueta** en el lugar que queramos referenciar.
 2. Poner un **enlace** a esa etiqueta donde queramos referenciarla.
 
 ## Enlaces
@@ -89,17 +89,17 @@ Para usar includegraphics debemos incluir el siguiente paquete en la cabecera:
 \usepackage{graphicx} % para incluir imágenes en nuestro código
 ```
 
-Respecto a las opciones de tamaño, son las siguientes:  
-* **width** : para escalar las imágenes un determinado ancho  
-* **height** : para escalar las imágenes un determinado alto  
-* **angle** : para rotar las imagenes según las agujas del reloj  
+Respecto a las opciones de tamaño, son las siguientes:
+* **width** : para escalar las imágenes un determinado ancho
+* **height** : para escalar las imágenes un determinado alto
+* **angle** : para rotar las imagenes según las agujas del reloj
 * **scale** : para escalar imágenes
 
-Respecto a las opciones sobre donde insertar la imagen, pueedn ser las siguientes:  
-* **h**: Insertar la imagen justo aquí (*here*)  
-* **b**: Insertar la imagen al final de la página (*bottom*)  
-* **t**: Insertar la imagen al principio de la página (*top*)  
-* **p**: Insertar la imagen en una página especial que contenga otras figuras o imágenes (*p*)  
+Respecto a las opciones sobre donde insertar la imagen, pueedn ser las siguientes:
+* **h**: Insertar la imagen justo aquí (*here*)
+* **b**: Insertar la imagen al final de la página (*bottom*)
+* **t**: Insertar la imagen al principio de la página (*top*)
+* **p**: Insertar la imagen en una página especial que contenga otras figuras o imágenes (*p*)
 * **!**: Insertar la imagen sin considerar las opciones de LaTeX (como por ejemplo, el número máximo de figuras por página) que podrían hacer que no se insertara la imagen donde queremos.
 
 Estos parámetros también nos valen para las tablas. También podemos combinarlos o establecer una jerarquía. Por ejemplo:
@@ -165,8 +165,8 @@ En nuestro código, vamos a hacer lo siguiente:
 
 ```
 
-Un último detale: si os habéis dado cuenta, los links tal y como tenemos el documento actualmente quedan muy feos, ¿verdad?. Para cambiar eso, debemos modificar algunas opciones del paquete `hyperref` que incluímos antes, en concreto estas dos:  
-1. **colorlinks=true**: con esta opción establecemos que queremos cambiar el color de los links, al activarla, por defecto nuestros links se quedan de color rojo.  
+Un último detale: si os habéis dado cuenta, los links tal y como tenemos el documento actualmente quedan muy feos, ¿verdad?. Para cambiar eso, debemos modificar algunas opciones del paquete `hyperref` que incluímos antes, en concreto estas dos:
+1. **colorlinks=true**: con esta opción establecemos que queremos cambiar el color de los links, al activarla, por defecto nuestros links se quedan de color rojo.
 2. **linkcolor**: y con esta, establecemos el color. Podemos ponerle valores como red, blue, green&#8230;
 
 Así, nuestro paquete `hyperref` quedaría de la siguiente forma:
@@ -191,8 +191,8 @@ pdflatex -shell-escape nombrefichero.tex
 
 ## Editores de Texto
 
-También tienes la opción de configurar tu editor de texto favorito con un plugin para compilar LaTeX directamente desde ahí. Para hacerlo en Sublime Text tienes que seguir los siguientes pasos:  
-1. Ve a Tools > build system > new build system  
+También tienes la opción de configurar tu editor de texto favorito con un plugin para compilar LaTeX directamente desde ahí. Para hacerlo en Sublime Text tienes que seguir los siguientes pasos:
+1. Ve a Tools > build system > new build system
 2. Pega el siguiente código y guarda el archivo con el nombre que quieras:
 
 ```latex
@@ -217,7 +217,7 @@ Espero que os haya gustado este curso y os haya servido como base para aprender 
 
 Quiero despedirme no sin antes dedicar todo esto a mi profesor, Francisco Miguel García, ya que sin su ayuda seguramente aún seguiría haciendo mis documentos con el Microsoft Word y a mi amigo, Alejandro Alcalde, por dejarme publicarlo en su blog y llegar así a más gente.
 
-¡Nos vemos en próximas entradas!  
+¡Nos vemos en próximas entradas!
 Marta.
 
 

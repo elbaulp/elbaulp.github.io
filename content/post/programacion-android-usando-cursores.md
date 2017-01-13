@@ -9,7 +9,7 @@ categories:
 tags:
   - curso android pdf
   - Cursores Android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 Cosas a saber sobre un cursor Android:
@@ -73,7 +73,6 @@ for(cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext()){
 
 Por último, para obtener el número de registros que hay en el cursor, podemos usar el método ***getCount().***
 
-## Siguiente Tema: [Usando la cláusula Where][1] 
+## Siguiente Tema: [Usando la cláusula Where][1]
 
  [1]: https://elbauldelprogramador.com/programacion-android-usando-la-clausula/
-

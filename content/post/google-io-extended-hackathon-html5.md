@@ -16,7 +16,7 @@ tags:
   - hackathon
   - html5
 format: status
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <div id="sites-canvas-main" class="sites-canvas-main">
@@ -214,7 +214,7 @@ color: "#F57C00"
 </li>
 <li>
 <b>Hackathon</b> <div>
-                                        El resto del evento lo conformará el Hackaton HTML5 donde <b>los participantes podrán presentar ideas</b> de proyectos y entre los que se formarán equipos para colaborar y aprender desarrollando estas ideas. <u>La única condición para presentar una idea es que ésta sea liberada en un repositorio público bajo una licencia libre</u>. 
+                                        El resto del evento lo conformará el Hackaton HTML5 donde <b>los participantes podrán presentar ideas</b> de proyectos y entre los que se formarán equipos para colaborar y aprender desarrollando estas ideas. <u>La única condición para presentar una idea es que ésta sea liberada en un repositorio público bajo una licencia libre</u>.
 <p>
 <font size="3" ><span >Plazo para presentar ideas:</span><b>&nbsp;</b>hasta el Miércoles 6 de Junio</font></p></div>
 <div>
@@ -256,7 +256,7 @@ color: "#F57C00"
 </div>
 </div>
 <div>
-</div></div>      
+</div></div>
 <div id="sites-canvas-bottom-panel">
 <a xmlns="http://www.w3.org/1999/xhtml" name="page-comments"></a>
 <div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-comments"  class="sites-canvas-bottom-no-items">

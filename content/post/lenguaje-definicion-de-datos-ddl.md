@@ -10,7 +10,7 @@ tags:
   - concepto de ddl
   - que es un ddl
   - sentencias dml y ddl
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -20,7 +20,7 @@ color: "#009688"
 
 Los índices sirven para mejorar el rendimiento de las consultas. El optimizador de Oracle los utiliza implícitamente y se actualizan de forma automática al actualizar las filas.
 
-En general, los índices se crean sobre todas las claves externas y sobre los criterios de búsqueda actuales.  
+En general, los índices se crean sobre todas las claves externas y sobre los criterios de búsqueda actuales.
 
 <!--ad-->
 
@@ -84,7 +84,6 @@ INSERT INTO employees VALUES
 SELECT employee_id, last_name FROM employees WHERE last_name = 'Valdivia';
 ```
 
-#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas][1] 
+#### Siguiente Tema: [Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas][1]
 
  [1]: https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/
-

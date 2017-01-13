@@ -9,7 +9,7 @@ tags:
   - correo ssh
   - seguridad ssh
 modified: 2016-08-10T13:28
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -50,5 +50,3 @@ Listo, ahora recibiremos un correo por cada acceso al sistema.
  [1]: https://elbauldelprogramador.com/combatir-los-comentarios-de-spam-en-wordpress/ "Combatir los comentarios de spam en WordPress"
  [2]: https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/ "Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban"
  [3]: https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/ "Bloquear una IP atacando el servidor mediante iptables"
-
-

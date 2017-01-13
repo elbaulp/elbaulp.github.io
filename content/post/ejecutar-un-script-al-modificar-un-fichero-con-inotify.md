@@ -12,11 +12,11 @@ tags:
   - ejemplo inotify-tools
 image: 2013/07/Screenshot-from-2013-07-02-164301.png
 modified: 2016-08-09T21:11
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
-La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo [editar y crear archivos cifrados con GPG en Vim][2]. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.  
+La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo [editar y crear archivos cifrados con GPG en Vim][2]. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.
 
 <!--ad-->
 

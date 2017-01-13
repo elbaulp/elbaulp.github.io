@@ -5,7 +5,7 @@ permalink: /probando-rockmelt/
 modified: 2016-08-15T15:40
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 Si queires saber más sobre RockMelt, haz clic [aqui][1]

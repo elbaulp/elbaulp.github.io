@@ -7,7 +7,7 @@ description: "Hacía mucho tiempo que tenía pendiente escribir este artículo. 
 tags: [curso android, programación android, aprende android, tutorial android]
 image: 2014/01/iconoAndroid.png
 date: 2015-12-11T17:24:12+01:00
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

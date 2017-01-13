@@ -5,7 +5,7 @@ permalink: /world-of-warcraft-sobre-android/
 modified: 2016-08-15T15:40
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -15,5 +15,4 @@ Gracias a la tecnología para **juego remoto de GameStrings** en el futuro podre
 
 La tecnología de GameStrings permite **transmitir los juegos desde la nube a cualquier equipo** de escritorio, portátiles, tabletas o smartphones. Cada dispositivo podrá disponer además de su propia interfaz con el mismo núcleo de juego corriendo desde los servidores.
 
-## Fuente: <a href="http://muycomputer.com" target="_blank">MuyComputer.com</a> 
-
+## Fuente: <a href="http://muycomputer.com" target="_blank">MuyComputer.com</a>

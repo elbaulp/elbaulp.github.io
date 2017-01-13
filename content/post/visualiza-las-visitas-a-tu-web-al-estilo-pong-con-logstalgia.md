@@ -12,7 +12,7 @@ tags:
   - tutorial logstalgia
 image: visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia.png
 modified: 2016-08-06T11:40:12+01:00
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -24,7 +24,7 @@ Hace poco he descubierto un programa muy curioso, **Logstalgia**, que a partir d
 # aptitude install logstalgia
 ```
 
-Para usarlo localmente, basta con ejecutar el siguiente comando:  
+Para usarlo localmente, basta con ejecutar el siguiente comando:
 
 ```bash
 tail -f /var/www/mySitio/log/access.log | logstalgia -1280x720 --sync

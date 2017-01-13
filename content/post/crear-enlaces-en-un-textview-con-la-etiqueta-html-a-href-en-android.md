@@ -8,7 +8,7 @@ tags: [a href android xml, crear enlaces cadenas de texto android, etiqueta a hr
 description: 'Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta &lt;a href=””&gt;&lt;/a&gt;.'
 modified: 2016-08-05T17:00
 image: 2013/05/setMovementMethod-example.png
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

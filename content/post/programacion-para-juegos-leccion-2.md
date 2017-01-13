@@ -5,13 +5,13 @@ permalink: /programacion-para-juegos-leccion-2/
 modified: 2016-08-19T09:30
 categories:
   - juegos
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
 [Pueden descargar el código fuente de esta lección.][1]
 
-Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda parte de la lección 1][2], vamos a superponer varias imagenes de una manera más eficiente.  
+Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda parte de la lección 1][2], vamos a superponer varias imagenes de una manera más eficiente.
 
 <!--ad-->
 
@@ -118,9 +118,9 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination 
     offset.y = y;
 ```
 
-Aquí tenemos nuestra función para fusionar las imágenes.  
-Como argumentos tiene las coordenadas donde queremos fusionar la imagen y las dos imágenes.  
-Primero creamos un objeto de tipo SDL\_Rect. Hacemos esto porque SDL\_BlitSurface() solo acepta este tipo de dato.  
+Aquí tenemos nuestra función para fusionar las imágenes.
+Como argumentos tiene las coordenadas donde queremos fusionar la imagen y las dos imágenes.
+Primero creamos un objeto de tipo SDL\_Rect. Hacemos esto porque SDL\_BlitSurface() solo acepta este tipo de dato.
 SDL_Rect es un tipo de dato que representa un rectángulo. Tiene cuatro miembros representando los valores X e Y de un rectángulo (Ancho y alto).
 
 ```bash
@@ -131,9 +131,9 @@ SDL_Rect es un tipo de dato que representa un rectángulo. Tiene cuatro miembros
 
 Con esto vamos a fusionar las imágenes.
 
-- El primer argumento es la imagen que estamos usando.  
-- No os preocupéis por el segundo argumento, por ahora vamos a fijarlo a NULL.  
-- El tercer argumento es la imagen que vamos a fusionar.  
+- El primer argumento es la imagen que estamos usando.
+- No os preocupéis por el segundo argumento, por ahora vamos a fijarlo a NULL.
+- El tercer argumento es la imagen que vamos a fusionar.
 - El cuarto argumento contiene la posición en la que se colocará la imagen una vez fusionada.
 
 ```bash
@@ -146,7 +146,7 @@ Empezamos con la función principal.
 Cuando usamos SDL, siempre hay que usar la función main de esta manera:
 
 ```c
-int main( int argc, char* args[] )  
+int main( int argc, char* args[] )
 // o
 int main( int argc, char** args ).
 ```
@@ -159,7 +159,7 @@ int main( int argc, char** args ).
     }
 ```
 
-Usando SDL\_Init() iniciamos SDL. A SDL\_Init() le pasamos SDL\_INIT\_EVERYTHING, para que inicie cualquier subsistema de SDL. Los subsistemas SDL son cosas como video, audio, Temporizadores etc, que son componentes individuales usados para hacer juegos.  
+Usando SDL\_Init() iniciamos SDL. A SDL\_Init() le pasamos SDL\_INIT\_EVERYTHING, para que inicie cualquier subsistema de SDL. Los subsistemas SDL son cosas como video, audio, Temporizadores etc, que son componentes individuales usados para hacer juegos.
 
 No vamos a usar todos subsistemas, pero no pasa nada si los inicializamos.
 
@@ -289,7 +289,7 @@ Fuente:
 
 [lazyfoo.net][3]
 
-## Siguiente tema: [Programación para Juegos - Lección 3 Librerías de SDL][4] 
+## Siguiente tema: [Programación para Juegos - Lección 3 Librerías de SDL][4]
 
  [1]: http://www.lazyfoo.net/downloads/index.php?file=SDLTut_lesson02
  [2]: https://elbauldelprogramador.com/programacion-para-juegos-leccion-12/

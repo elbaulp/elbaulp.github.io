@@ -10,7 +10,7 @@ tags:
   - chiste grafico de informatica
   - humor geek grafico
 format: gallery
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 
@@ -71,7 +71,7 @@ color: "#262626"
 
 #### Fuentes
 
-*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>  
+*xkcd* »» <a href="http://xkcd.com" target="_blank">Visitar sitio</a>
 *CoderFacts* »» <a href="http://coderfacts.com/" target="_blank">Visitar sitio</a>
 
 

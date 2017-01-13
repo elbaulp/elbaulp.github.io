@@ -12,7 +12,7 @@ tags:
   - Ingenieria inversa
 image: 2012/12/logicbomb.png
 modified: 2016-08-05T15:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -183,7 +183,7 @@ Una vez descubierta la contraseña alfanumérica, pasé a la numérica, que resu
 804878d: 05 c8 00 00 00          add    $0xc8,%eax
 ```
 
-Se suma 500 `(0x1f4)` a la contraseña original, resultando 1500, y 200 (0xc8) a la contraseña que introduzca el usuario.  
+Se suma 500 `(0x1f4)` a la contraseña original, resultando 1500, y 200 (0xc8) a la contraseña que introduzca el usuario.
 Haciendo la comparación de 1000+500 con PASSINTRODUCIDA+200, se deduce que la contraseña que se debe introducir es 1300.
 
 # Segunda Bomba
@@ -214,7 +214,7 @@ display /wx 0x804a034
 
 Llegué a la siguiente conclusión:
 
-La contraseña codificada es **C4b3Z0n**, pero únicamente se comprueba la primera letra.  
+La contraseña codificada es **C4b3Z0n**, pero únicamente se comprueba la primera letra.
 Si el usuario introduce como contraseña **C4b3Z0n**, la bomba explota, ya que en la función `cambio`, se comprueba que la primera letra de la contraseña no sea igual a **C**, de ser igual, se llama a la bomba:
 
 ```asm
@@ -225,8 +225,8 @@ call   804860c <boomb>
 
 ```
 
-Llegados a este punto, si no ha explotado, se compara la primera letra con "Q", si la primera letra de la contraseña introducida es **"Q"** también, se cambia por **"c"**.  
-Todo lo mencionado anteriormente se hace dentro de la función cambio.  
+Llegados a este punto, si no ha explotado, se compara la primera letra con "Q", si la primera letra de la contraseña introducida es **"Q"** también, se cambia por **"c"**.
+Todo lo mencionado anteriormente se hace dentro de la función cambio.
 En resumen, la función cambio comprueba que la primera letra no sea **"C"**, si no es **"C"**, compara con **"Q"**, de ser **"Q"**, la cambia por una **"c"**, dicha **"c"**, la cambiará la función `change` por una **"C"**, concretamente aquí:
 
 ```asm
@@ -293,8 +293,8 @@ En este ejecutable no conseguí descubrir la contraseña numérica por la siguie
 8048762: eb 05                   jmp    8048769 <code>
 8048764: e8 d9 fe ff ff          call   8048642 <bomb>
 8048769: 8b 45 08                mov    0x8(%ebp),%eax
-804876c: c9                      leave  
-804876d: c3                      ret  
+804876c: c9                      leave
+804876d: c3                      ret
 ```
 
 Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción `div` a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.

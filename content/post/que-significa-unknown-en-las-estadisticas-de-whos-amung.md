@@ -8,7 +8,7 @@ categories:
 tags:
   - estadisticas
   - whos amung
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 Si usas Whos amung como herramienta de monitorización de los usuarios actuales en tu web, seguro que alguna vez has visto unos cuantos visitantes que aparecen como **Unknown**.

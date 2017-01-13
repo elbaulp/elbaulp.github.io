@@ -5,7 +5,7 @@ permalink: /consulta-de-datos-clausula-from/
 modified: 2016-08-16T11:00
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -121,6 +121,6 @@ SELECT * FROM CLIENTES c
 FULL OUTER JOIN FACTURAS f ON c.cCodCli = f.cCodCli;
 ```
 
-## Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1] 
+## Siguiente Tema: [Consulta de Datos - Cláusula WHERE][1]
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-where/

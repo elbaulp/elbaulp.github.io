@@ -8,7 +8,7 @@ introduction: "Ejemplo de cómo guardar datos de usuario en Android"
 categories: android
 tags: [Bases de Datos Android, Persistencia de datos Android, Curso de Android, programación Android, tutoriales Android, fragments Android]
 image: hotlink-ok/ProgramacionAndroid-Persistencia-de-Datoscard.png
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

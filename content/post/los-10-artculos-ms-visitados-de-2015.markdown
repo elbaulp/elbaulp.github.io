@@ -5,7 +5,7 @@ date: 2015-12-15T08:17:53+01:00
 modified:
 description: "Se nos va otro año, estos son los 10 artículos que más os han gustado"
 image: los10articulosmasvisitados2015.png
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 {% include toc.html %}
@@ -63,7 +63,7 @@ Este artículo es parte de una serie de 3 artículos en los que se describe cóm
 
 # #8 20 Ejemplos de iptables para SysAdmins
 
-Un artículo que recopila 20 ejemplos de uso del comando _iptables_. A lo largo de los años he escrito bastante sobre este comando, puedes ver todos los artículos en la [sección de iptables](/tag/#iptables).  
+Un artículo que recopila 20 ejemplos de uso del comando _iptables_. A lo largo de los años he escrito bastante sobre este comando, puedes ver todos los artículos en la [sección de iptables](/tag/#iptables).
 
 <a target="_blank" class="btn button-post" href="/20-ejemplos-de-iptables-para-sysadmins/">Enlace al artículo</a>
 

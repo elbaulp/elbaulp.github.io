@@ -7,7 +7,7 @@ categories:
   - android
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 <div class="separator" >

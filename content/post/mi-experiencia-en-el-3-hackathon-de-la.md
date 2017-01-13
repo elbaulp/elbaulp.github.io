@@ -7,7 +7,7 @@ categories:
   - hackathon
   - noticias
   - opensource
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 <div class="separator" >
@@ -98,7 +98,7 @@ Para que conozcáis a las personas que han colaborado en el proyecto, copio un e
 >
 > [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="http://blog.georemindme.com/assets/img/2012/03/Fatima_mini-206x300.png" title="Fatima_mini"  class="alignleft  wp-image-1672" />][9]
 >
-> ¡Hola! Soy estudiante de último curso de Traducción e Interpretación en Granada intentando descubrir lo que quiero hacer en el futuro. Me apunté al Hackathon porque quería entrar en un mundo totalmente desconocido para mí, aunque en el que estaba muy interesada, ya que la localización me parece una de las ramas de la traducción más interesante. Debo decir que me ha encantado la experiencia, y que después de esto no me extrañaría seguir ligada a la localización en un futuro. Si en la actualidad el futuro para los traductores está bastante negro, por lo menos voy a hacer algo que realmente me gusta, y qué mejor que dedicarte a un sector en el que he descubrido que hay tan buen rollo (al menos lo relacionado con los pollos).  
+> ¡Hola! Soy estudiante de último curso de Traducción e Interpretación en Granada intentando descubrir lo que quiero hacer en el futuro. Me apunté al Hackathon porque quería entrar en un mundo totalmente desconocido para mí, aunque en el que estaba muy interesada, ya que la localización me parece una de las ramas de la traducción más interesante. Debo decir que me ha encantado la experiencia, y que después de esto no me extrañaría seguir ligada a la localización en un futuro. Si en la actualidad el futuro para los traductores está bastante negro, por lo menos voy a hacer algo que realmente me gusta, y qué mejor que dedicarte a un sector en el que he descubrido que hay tan buen rollo (al menos lo relacionado con los pollos).
 > Los artículos que he traducido son:
 >
 >   * GeoRemindMe’s (private) beta is already here

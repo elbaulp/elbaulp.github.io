@@ -9,7 +9,7 @@ categories:
   - seguridad
 tags:
   - ettercap en español
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

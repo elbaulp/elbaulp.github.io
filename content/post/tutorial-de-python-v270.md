@@ -9,7 +9,7 @@ categories:
 tags:
   - curso python para principiantes
   - tutorial de python
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

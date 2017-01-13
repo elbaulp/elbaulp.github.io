@@ -7,7 +7,7 @@ categories:
   - aplicaciones
   - internet
   - opensource
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

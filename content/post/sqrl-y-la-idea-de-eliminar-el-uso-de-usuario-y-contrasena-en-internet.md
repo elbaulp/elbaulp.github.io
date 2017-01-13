@@ -11,7 +11,7 @@ tags:
   - SQRL
   - SQRL steve gibson
   - uso de usuario y contraseña
-main-class: "security-now"
+mainclass: "security-now"
 color: "#00BCD4"
 ---
 

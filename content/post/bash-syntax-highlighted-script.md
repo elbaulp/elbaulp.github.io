@@ -7,7 +7,7 @@ categories:
   - script
 lang: en
 modified: 2016-08-15T13:40
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -27,7 +27,7 @@ case $? in
 
   for word in $keywords
   do
-#I search in the text, every key word contained in keyWords, and add the label 
+#I search in the text, every key word contained in keyWords, and add the label
 sed "s/b$wordb/$word/" < "$rutaCodigo" > temp
     cp temp "$rutaCodigo"
   done

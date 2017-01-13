@@ -11,11 +11,11 @@ tags:
   - java 8
   - programacion funcional java
 author: luzila
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
-Elliott Rusty Harold <a href="http://cafe.elharo.com/programming/java-programming/why-functional-programming-in-java-is-dangerous/" target="_blank">está anunciando en su blog</a> que la programación funcional en Java es peligrosa. Está equivocado, y ya perdió su turno &#8212; Está viniendo con Java le guste o no.  
-Un resumen de las razones que menciona en su artículo son:  
+Elliott Rusty Harold <a href="http://cafe.elharo.com/programming/java-programming/why-functional-programming-in-java-is-dangerous/" target="_blank">está anunciando en su blog</a> que la programación funcional en Java es peligrosa. Está equivocado, y ya perdió su turno &#8212; Está viniendo con Java le guste o no.
+Un resumen de las razones que menciona en su artículo son:
 
 <!--ad-->
 
@@ -32,7 +32,7 @@ Esos puntos son básicamente un resumen del artículo.
 
 Mira, como Elliott señala, Java no es Haskell. Ni Lisp. Es su propio lenguaje, basado en una historia imperativa y orientada a objetos, pero no por ello menos apta a incorporar características funcionales dentro de su desarrollo que la aptitud de Lisp para incorporar características de programación orientada a objetos. Sin embargo, si haces sandeces, como intentar regenerar una lista infinita (implícitamente de evaluación perezosa) en Clojure mediante la creación de una lista actualizada que se extiende hasta el infinito&#8230; vas a reventar la JVM. Uh. Ni siquiera el supercomputador en USS Enterprise de dentro de 500 años tendrá la posibilidad de construir esa lista.
 
-Migrar código de un lenguaje a otro no es un ejercicio trivial. Si intentas migrar línea-a-línea y expresión-por-expresión, puedes esperar que tu código traducido no sea idiomáticamente correcto. (Ya lo se, [habiendo hecho la prueba.][1]) La raiz del problema en el código traducido es doble. Por un lado, (el más necio y poco elegante) simula de muy mala forma cómo debería verse una lista infinita en Java &#8212; un comentador hizo un mejor trabajo mostrando cómo un **Iterator** puede crearse para realizar la misma tarea que Haskell, de hecho, ya hace produciendo el valor siguiente bajo demanda, en lugar de intentar crear una lista de **Integers** extendiéndose hasta el infinito. Para alguien que profesa tener experiencia y amor por Haskell, es impactante que Elliott cometa este tipo de error, lo cual genera la impresión de que está intentando crear <a href="http://es.wikipedia.org/wiki/Falacia_del_hombre_de_paja" target="_blank"><em>una falacia del hombre de paja</em></a>. Además asume que cualquiera que programe en Java funcionalmente tendrá que crear todas sus herramientas funcionales a mano, y honestamente, usando Guava o FJ en este caso haría este código ejemplo MUCHO más facil de digerir. El hecho de que ignore ambas en su falacia nuevamente reafirma la idea de que está deliberadamente tergiversando ideas para mostrar su punto.*  
+Migrar código de un lenguaje a otro no es un ejercicio trivial. Si intentas migrar línea-a-línea y expresión-por-expresión, puedes esperar que tu código traducido no sea idiomáticamente correcto. (Ya lo se, [habiendo hecho la prueba.][1]) La raiz del problema en el código traducido es doble. Por un lado, (el más necio y poco elegante) simula de muy mala forma cómo debería verse una lista infinita en Java &#8212; un comentador hizo un mejor trabajo mostrando cómo un **Iterator** puede crearse para realizar la misma tarea que Haskell, de hecho, ya hace produciendo el valor siguiente bajo demanda, en lugar de intentar crear una lista de **Integers** extendiéndose hasta el infinito. Para alguien que profesa tener experiencia y amor por Haskell, es impactante que Elliott cometa este tipo de error, lo cual genera la impresión de que está intentando crear <a href="http://es.wikipedia.org/wiki/Falacia_del_hombre_de_paja" target="_blank"><em>una falacia del hombre de paja</em></a>. Además asume que cualquiera que programe en Java funcionalmente tendrá que crear todas sus herramientas funcionales a mano, y honestamente, usando Guava o FJ en este caso haría este código ejemplo MUCHO más facil de digerir. El hecho de que ignore ambas en su falacia nuevamente reafirma la idea de que está deliberadamente tergiversando ideas para mostrar su punto.*
 *
 
 Su cuestión subyacente parece ser simple: &#8220;Trabajo con malos programadores, que no parecen entender cómo escribir código funcional en Java sin enredar todo.&#8221; Hermano, estás en la peor&#8230; &#8220;Los malos programadores removerán cielo y tierra para hacerlo mal.&#8221; -Glenn Vanderburg.

@@ -7,7 +7,7 @@ description: "En unas prácticas de Aprendizaje automático para la facultad en 
 tags: [R, vectorizar en r, vectorizar codigo, mejorar codigo en r, optimizar codigo en R, vectorizar data set R, vectorizar columnas en R]
 image: vectorizar-acceso-columnas-r.png
 date: 2016-04-04T20:56:12+02:00
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 

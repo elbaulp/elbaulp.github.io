@@ -16,7 +16,7 @@ tags:
 image: 2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png
 description: "QUIC es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña FAQ (Frequently Asked Questions) en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de QUIC, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en Qué es QUIC, el nuevo protocolo desarrollado por Google."
 modified: 2015-12-23T10:44
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -326,12 +326,12 @@ Los siguientes datos del paquete correspondientes al payload no se pueden analiz
 
 #### Referencias
 
-*(1) Chromium. Código de la parte cliente* »» <a href="http://j.mp/1p8j7I2" target="_blank">Visitar sitio</a>  
-*(2) Chromium. Código de la parte servidor* »» <a href="http://j.mp/1p8iUF1" target="_blank">Visitar sitio</a>  
-*(3) Chromium. Obtener el código fuente* »» <a href="http://www.chromium.org/developers/how-tos/get-the-code" target="_blank">Visitar sitio</a>  
-*(4) Chromium. Playing with QUIC* »» <a href="http://www.chromium.org/quic/playing-with-quic" target="_blank">Visitar sitio</a>  
-*(5) Google. QUIC Crypto* »» <a href="https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g" target="_blank">Visitar sitio</a>  
-*(6) Google. QUIC: Design Document and Specification Rationale* »» <a href="https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34" target="_blank">Visitar sitio</a>  
+*(1) Chromium. Código de la parte cliente* »» <a href="http://j.mp/1p8j7I2" target="_blank">Visitar sitio</a>
+*(2) Chromium. Código de la parte servidor* »» <a href="http://j.mp/1p8iUF1" target="_blank">Visitar sitio</a>
+*(3) Chromium. Obtener el código fuente* »» <a href="http://www.chromium.org/developers/how-tos/get-the-code" target="_blank">Visitar sitio</a>
+*(4) Chromium. Playing with QUIC* »» <a href="http://www.chromium.org/quic/playing-with-quic" target="_blank">Visitar sitio</a>
+*(5) Google. QUIC Crypto* »» <a href="https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g" target="_blank">Visitar sitio</a>
+*(6) Google. QUIC: Design Document and Specification Rationale* »» <a href="https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34" target="_blank">Visitar sitio</a>
 *(7) Google. QUIC Wire Layout Specification* »» <a href="https://docs.google.com/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U" target="_blank">Visitar sitio</a>
 
 

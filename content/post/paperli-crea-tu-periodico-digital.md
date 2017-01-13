@@ -6,7 +6,7 @@ permalink: /paperli-crea-tu-periodico-digital/
 categories:
   - internet
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

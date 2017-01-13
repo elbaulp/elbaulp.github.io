@@ -14,7 +14,7 @@ tags:
 description: "Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo."
 image: 2014/04/Chuleta-de-comandos-GPG.png
 modified: 2016-08-10T09:20
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -74,7 +74,7 @@ Es muy parecido a exportar una clave pública, pero tienes que pisar algunas pro
 gpg --import public.key
 ```
 
-Si encontraste esta página, por suerte es lo que estabas buscando  
+Si encontraste esta página, por suerte es lo que estabas buscando
 Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de claves públicas.
 
 # Importar una clave privada
@@ -129,16 +129,16 @@ Esto crea el archivo fingerprint con la información de la firma digital.
 gpg -e -u "Nombre de Usuario del Emisor" -r "Nombre de Usuario del Destinatario" somefile
 ```
 
-Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.  
+Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
 Como por ejemplo:
 
 ```bash
 gpg -e -u "Manuel Ginobili" -r “Un amigo" mydata.tar
 ```
 
-Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)  
+Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)
 
-> NOTA: *mydata.tar* no se elimina, terminas teniendo dos archivos, por lo tanto si quieres tener sólo el archivo encriptado, deberás eliminar *mydata.tar* tú mismo.  
+> NOTA: *mydata.tar* no se elimina, terminas teniendo dos archivos, por lo tanto si quieres tener sólo el archivo encriptado, deberás eliminar *mydata.tar* tú mismo.
 
 Un interesante comentario al margen, encripté el patch preventivo del kernel, un archivo de 55,247 bytes, y terminé con un archivo encriptado de 15,276 bytes.
 
@@ -148,7 +148,7 @@ Un interesante comentario al margen, encripté el patch preventivo del kernel, u
 gpg -d mydata.tar.gpg
 ```
 
-Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, *mydata.tar.gpg*.  
+Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, *mydata.tar.gpg*.
 
 > NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “`gpg -d mydata.tar.gpg`” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar
 
@@ -168,7 +168,7 @@ Otra alternativa es ejecutar algo como
 gpg -d mydata.tar.gpg > mydata.tar
 ```
 
-y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.  
+y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.
 
 Ok, entonces si eres un paranoico y quieres encriptar alguno de tus propios archivos, para que nadie pueda entrar en tu computadora y obtenerlos, simplemente encríptalos usandote a tí mismo como el contenedor.
 
@@ -198,5 +198,3 @@ gpg --gen-revoke
 - [Más artículos sobre GPG](/tags/#gpg)
 
  [1]: https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/ "Cómo cifrar correos con GPG usando Mailvelope"
-
-

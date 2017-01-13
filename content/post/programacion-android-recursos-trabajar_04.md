@@ -8,7 +8,7 @@ categories:
   - opensource
 tags:
   - curso android pdf
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -28,7 +28,7 @@ String getStringFromAssetFile(Context activity)
    }
 ```
 
-## Siguiente Tema: [Programación Android: Recursos - Repasando la estructura del directorio de recursos][1] 
+## Siguiente Tema: [Programación Android: Recursos - Repasando la estructura del directorio de recursos][1]
 
 
  [1]: https://elbauldelprogramador.com/programacion-android-recursos-repasando/

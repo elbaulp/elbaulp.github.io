@@ -8,7 +8,7 @@ categories:
 tags:
   - crear paquetes en oracle
   - usuarios package en pl/sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 

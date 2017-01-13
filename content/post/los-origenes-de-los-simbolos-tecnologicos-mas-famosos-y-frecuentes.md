@@ -13,7 +13,7 @@ author: luzila
 description: "Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto."
 modified: 2015-12-25T13:10
 image: 2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -25,8 +25,8 @@ Contínuamente exploramos el mundo de los orígenes pero es muy raro que discuta
 
 <!--ad-->
 
-Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este infograma en ese tamaño, lo hemos desarmado:  
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="size-full wp-image-2297 aligncenter" alt="@" src="/assets/img/2014/03/at.jpg" width="160px" height="160px" />][1]  
+Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este infograma en ese tamaño, lo hemos desarmado:
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="size-full wp-image-2297 aligncenter" alt="@" src="/assets/img/2014/03/at.jpg" width="160px" height="160px" />][1]
 <span >Ah @, el único símbolo en la lista para ganar un lugar en el la colección de arquitectura y diseño del MoMa. ¿Cómo este símbolo fetichista se ha vuelto tan potente con los años? Probablemente tenga algo que ver con los profundos y misteriosos orígenes de la runa de las redes. Fue conocida con muchos nombres: el caracol (en Francia e Italia), el pequeño ratón (en China), la cola del mono (Alemania). En 1971, Raymond Tomlinson, un programador de Bolt, Beranek & Newman, decidió insertar el símbolo entre las direcciones de red del ordenador para separar al usuario de la terminal. Previamente al uso de Tomlinsons, el símbolo @ también embellecía el teclado de American Underwood en 1885 como un símbolo taquigráfico de contabilidad que significa “con una tasa de”. Vuelve aún más atrás y las cosas comenzarán a ponerse turbias. Algunos sugieren que @ tiene sus orígenes en el siglo VI, cuando los monjes lo adoptaron como una forma mejor para escribir la palabra latina para “en” (at) o “al rededor de” (toward) - lo que no debe confundirse con A.D., la abreviación para Anno Domini, o los años después de la muerte de Cristo.</span>
 <p dir="ltr">
   -

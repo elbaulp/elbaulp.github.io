@@ -8,7 +8,7 @@ categories:
 tags:
   - group by
   - orden group by sql
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -78,7 +78,6 @@ Los más utilizados son:
 * SUM. Devuelve la suma del conjunto de valores contenido en un campo especifico de una consulta. Su sintaxis es Sum(expr) donde expr respresenta el nombre del campo que contiene los datos que desean sumarse o una expresión que realiza un cálculo utilizando los datos de dichos campos.
 * STDEV \| STDEVP \| VAR \| VARP. Desviación típica y Varianza.
 
-## Siguiente Tema: [Consulta de Datos - Cláusula HAVING y ORDER BY][1] 
+## Siguiente Tema: [Consulta de Datos - Cláusula HAVING y ORDER BY][1]
 
  [1]: https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/
-

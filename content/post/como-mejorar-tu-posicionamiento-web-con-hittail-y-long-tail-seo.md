@@ -8,12 +8,12 @@ categories:
 tags:
   - definicion long tail seo
   - que es long tail seo
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 Hace apenas dos meses que descubrí navegando por internet esta herramienta, ***<a href="http://www.hittail.com" target="_blank">HitTail</a>*.** Permite incrementar significativamente tu posición en los motores de búsqueda tales como Google, Bing, DuckDuckGo, Yahoo etc usando una técnica llamada ***Long Tail SEO***.
 
-Si como yo nunca has oido hablar de este término, no te preocupes, a continuación intentaré explicarlo lo más claro posible (Traducido literalmente sería SEO de cola larga, aunque creo que una definición más acertada sería seguimiento SEO prolongado):  
+Si como yo nunca has oido hablar de este término, no te preocupes, a continuación intentaré explicarlo lo más claro posible (Traducido literalmente sería SEO de cola larga, aunque creo que una definición más acertada sería seguimiento SEO prolongado):
 
 <!--ad-->
 <h2 >

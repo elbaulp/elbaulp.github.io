@@ -7,7 +7,7 @@ categories:
   - linux
   - opensource
 image: chuletacomandoslinux.png
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -16,4 +16,3 @@ color: "#2196F3"
 </figure>
 
 <!--ad-->
-

@@ -4,7 +4,7 @@ title: "Cómo Hacer Scroll en Un ListView Que Está Dentro De Un ScrollView en A
 description: "Cómo solucionar un ListView no capturando el foco cuando está dentro de un ScrollView"
 tags: [android, Scroll, ScrollView, ListView, setOnTouchListener, ]
 date: 2015-06-30T18:48:42+02:00
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

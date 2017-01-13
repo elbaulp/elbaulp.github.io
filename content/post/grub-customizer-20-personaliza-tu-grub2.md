@@ -5,7 +5,7 @@ permalink: /grub-customizer-20-personaliza-tu-grub2/
 modified: 2016-08-15T15:30
 categories:
   - noticias
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -29,9 +29,8 @@ Y a partir de ahí podréis lanzar la aplicación desde terminal o con el menú 
 
 Para otras distros Linux basta con descargar [Grub Customizer en Launchpad][3], algo para lo que, cuidado, **necesitaréis tener instalado BZR**.
 
-## Fuente: <a href="http://www.muylinux.com/2010/11/22/grub-customizer-2-0-personaliza-tu-grub2" target="_blank"> MuyLinux.com </a> 
+## Fuente: <a href="http://www.muylinux.com/2010/11/22/grub-customizer-2-0-personaliza-tu-grub2" target="_blank"> MuyLinux.com </a>
 
  [1]: https://launchpad.net/grub-customizer
  [2]: http://www.webupd8.org/2010/11/grub-customizer-20-can-change-default.html
  [3]: https://code.launchpad.net/grub-customizer
-

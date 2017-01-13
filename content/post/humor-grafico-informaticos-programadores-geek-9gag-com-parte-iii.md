@@ -10,7 +10,7 @@ categories:
   - Humor
   - offtopic
 format: gallery
-main-class: "geek"
+mainclass: "geek"
 color: "#262626"
 ---
 Otra recopilación de humor gráfico, para cerrar este domingo de verano.

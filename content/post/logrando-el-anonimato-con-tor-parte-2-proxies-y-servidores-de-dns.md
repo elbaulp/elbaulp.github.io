@@ -13,7 +13,7 @@ tags:
 modified: 2016-08-08T15:45
 image: 2012/12/081012_1604_AchievingAn11-300x128.png
 author: luzila
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -244,5 +244,3 @@ Queda pendiente analizar Torbutton y tsocks para ver cómo anonimizarnos en Inte
 
  [1]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/ "Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks"
  [2]: https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/ "Logrando el anonimato con Tor (Parte 4) – Tor para relés"
-
-

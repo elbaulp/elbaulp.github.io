@@ -9,7 +9,7 @@ categories:
 tags:
   - curso android pdf
   - recursos android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 

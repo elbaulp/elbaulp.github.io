@@ -10,7 +10,7 @@ tags:
   - crear formularios en django
   - formularios en django
 image: 2013/10/django.png
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 
@@ -393,8 +393,8 @@ Espero que os haya servido de ayuda.
 
 #### Referencias
 
-*(1) Documentación ModelForm* »» <a href="https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/#modelform" target="_blank">docs.django.org</a>  
-*(2) Vistas genéricas* »» <a href="https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/" target="_blank">docs.django.org</a>  
+*(1) Documentación ModelForm* »» <a href="https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/#modelform" target="_blank">docs.django.org</a>
+*(2) Vistas genéricas* »» <a href="https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/" target="_blank">docs.django.org</a>
 *(3) ModelForm* »» <a href="https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/" target="_blank">docs.django.org</a>
 
  [1]: https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/ "Introducción a Django – Instalación y primer proyecto"

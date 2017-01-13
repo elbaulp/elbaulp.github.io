@@ -11,11 +11,11 @@ tags:
   - anuncios
   - javascript
 modified: 2016-02-07T09:33:22+01:00
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="adblock-plus-logo" src="/assets/img/2012/07/adblock-plus-logo11.png" alt="" width="128px" height="128px" />][1]  
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="adblock-plus-logo" src="/assets/img/2012/07/adblock-plus-logo11.png" alt="" width="128px" height="128px" />][1]
 Hace unos días, visitando la web <a href="http://www.makeuseof.com/" target="_blank">makeuseof</a> me apareció un mensaje en la parte superior de la página en la que indicaba que se había detectado que estaba usando el plugin Ad-Block (Que bloquea la publicidad de las web, para quien no lo sepa). Y de una manera muy educada sugerían que se desabilitara para apoyar la web y así poder seguir ofreciendo contenido libre de costo.
 
 Últimamente existe una obsesión muy grande por la privacidad en internet, cosa que apoyo, aunque creo que no hay que ser extremista.
@@ -24,7 +24,7 @@ Yo uso ad-block desde hace mucho tiempo, aunque no para todas las webs, makeuseo
 
 Personalmente pienso que en los blogs y páginas que leemos habitualmente es recomendable desabilitar este tipo de plugins, ya que es una forma de apoyar al propietario, que tanto tiempo y esfuerzo dedica a escribir y mantener la web y de paso, puede que nos resulte útil algún anuncio que se nos muestre y de paso le ayudamos a pagar el hosting del sitio. Por supuesto esto queda bajo el criterio de cada persona.
 
-Es por eso que hoy voy a explicar cómo es posible detectar si nuestros visitantes tienen activado ad-block para nuestro sitio y así sugerirle de manera educada y sin molestarle demasiado si desea desactivarlo.  
+Es por eso que hoy voy a explicar cómo es posible detectar si nuestros visitantes tienen activado ad-block para nuestro sitio y así sugerirle de manera educada y sin molestarle demasiado si desea desactivarlo.
 
 <!--ad-->
 

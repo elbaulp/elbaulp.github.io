@@ -38,7 +38,7 @@ tags:
 image: 2013/04/dns.jpg
 description: "En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge."
 modified: 2016-08-01T18:00
-main-class: "servidores"
+mainclass: "servidores"
 color: "#0097A7"
 ---
 
@@ -72,7 +72,7 @@ version.bind   text = "VERSION"
 
 El segundo componente es llamado *resolver library* o biblioteca de resolución, encargada de realizar peticiones a servidores DNS para intentar traducir un nombre a una dirección IP. El archivo de configuración para este componente es **resolv.conf**.
 
-El tercer y último componente de **BIND** proporciona herramientas para probar el servidor DNS. Entre estas herramientas se encuentran comandos como **dig**, que se verá más adelante.  
+El tercer y último componente de **BIND** proporciona herramientas para probar el servidor DNS. Entre estas herramientas se encuentran comandos como **dig**, que se verá más adelante.
 
 <!--ad-->
 
@@ -181,5 +181,3 @@ En el siguiente artículo ser verá en detalle la estructura del archivo **named
 [1]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/ "Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)"
 [2]: https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/ "Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)"
 [3]: https://elbauldelprogramador.com/bases-de-datos/
-
-

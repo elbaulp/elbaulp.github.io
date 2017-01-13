@@ -6,7 +6,7 @@ description: "Cuando NetworkManager se connecta a una red, cambia el nombre de h
 tags: [linux, NetworkManager, error]
 image: cant-open-display-0-0-wifi-net.png
 introduction: "Cuando NetworkManager se connecta a una red, cambia el nombre de host (Hostname), y las aplicaciones gráficas dejan de funcionar"
-main-class: "linux"
+mainclass: "linux"
 color: "#2196F3"
 ---
 
@@ -57,5 +57,5 @@ NombreDeseado
 
 ## Referencias
 
-- [Arch Linux forums](https://bbs.archlinux.org/viewtopic.php?id=59575 "Can't open display: :0.0") 
+- [Arch Linux forums](https://bbs.archlinux.org/viewtopic.php?id=59575 "Can't open display: :0.0")
 - [System Settings gnome](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings "System settings gnome")

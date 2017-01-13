@@ -14,7 +14,7 @@ tags:
   - duo security
   - google
   - saltar autentificacion de dos factores
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 ***Dou Security*** encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la [autentificación de dos factores de Google][1] y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.
@@ -31,7 +31,7 @@ El auto-login permite a los usuarios que han enlazado sus dispositivos móviles 
 
 Duo Security dijo en <a href="https://blog.duosecurity.com/2013/02/bypassing-googles-two-factor-authentication/" target="_blank">su blog</a>:
 
-> *  
+> *
 > “Normalmente, una vez activada la autentificación en dos factores, Google te pide que crees contraseñas específicas para cada aplicación que uses. Lo cual quiere decir que dichas aplicaciones no soportan el login usando la autentificación en dos pasos.”*
 >
 > *“Luego, se usa un ASP en lugar de tu contraseña real. En términos más concretos, Se crean ASPs para la mayoría de aplicaciones cliente que no usan un login basado en Web: clientes email que usen IMAP y SMTP (Mail de Apple, Thunderbird etc); clientes de chat con comunicaciones mediante XMPP (Adium, pidgin etc) y aplicaciones de calendarios que se sincronizan usando CaIDAV (iCal, etc)”*

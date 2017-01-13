@@ -9,7 +9,7 @@ tags:
   - como usar log android
   - log android
   - logging android
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/07/android2.png" alt="Cómo usar adecuadamente el Log de Android en tus aplicaciones" width="132px" height="154px" />

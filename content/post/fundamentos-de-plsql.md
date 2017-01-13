@@ -5,7 +5,7 @@ modified: 2016-08-24T10:00
 permalink: /fundamentos-de-plsql/
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 
@@ -48,7 +48,7 @@ Para programar en PL/SQL es necesario conocer sus fundamentos.  Como introducci�
     * Operadores Relaciónales
   * `DENTIFICADOR`: Se emplean para dar nombre a los objetos PL/SQL, tales como&nbsp;variables, cursores, tipos y subprogramas.  Los identificadores constan de una letra, seguida por una secuencia opcional&nbsp;de caracteres, que pueden incluir letras, números, signos de dólar ($), caracteres de&nbsp;subrayado y símbolos de almohadilla (#). Los demás caracteres no pueden&nbsp;emplearse. La longitud máxima de un identificador es de 30 caracteres y todos los&nbsp;caracteres son significativos.
   * `LITERAL`: Es un valor de tipo numérico, carácter, cadena o lógico no representado&nbsp;por un identificador (es un valor explícito).
-  * `COMENTARIO`: Es una aclaración que el programador incluye en el código. Son&nbsp;soportados 2 estilos de comentarios, el de línea simple y de multilínea, para lo cual&nbsp;son empleados ciertos caracters especiales como son:     
+  * `COMENTARIO`: Es una aclaración que el programador incluye en el código. Son&nbsp;soportados 2 estilos de comentarios, el de línea simple y de multilínea, para lo cual&nbsp;son empleados ciertos caracters especiales como son:
 
 ```sql
 -- Linea simple
@@ -73,7 +73,7 @@ BEGIN
 END;
 ```
 
-#### Siguiente Tema: [Bloques PL/SQL][3] 
+#### Siguiente Tema: [Bloques PL/SQL][3]
 
  [1]: https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/
  [2]: https://elbauldelprogramador.com/plsql-disparadores-o-triggers/

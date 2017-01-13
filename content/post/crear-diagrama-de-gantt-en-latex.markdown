@@ -7,7 +7,7 @@ description: "Breve introducción al paquete PgfGantt de LaTeX, para crear diagr
 tags: [latex, gantt]
 image: crear-diagrama-de-gantt-en-latex.png
 introduction: "Breve introducción al paquete PgfGantt de LaTeX, para crear diagramas de Gantt"
-main-class: "latex"
+mainclass: "latex"
 color: "#B31917"
 date: 2016-09-16T15:48:53+02:00
 ---
@@ -24,7 +24,7 @@ date: 2016-09-16T15:48:53+02:00
 
 La definición de WikiPedia:
 
-> El diagrama de Gantt es una útil herramienta gráfica cuyo objetivo es exponer el tiempo de dedicación previsto para diferentes tareas o actividades a lo largo de un tiempo total determinado. 
+> El diagrama de Gantt es una útil herramienta gráfica cuyo objetivo es exponer el tiempo de dedicación previsto para diferentes tareas o actividades a lo largo de un tiempo total determinado.
 
 <!--ad-->
 
@@ -66,7 +66,7 @@ Para crear estos diagramas en LaTeX, existe un paquete llamado [Pgfgantt](http:/
   ]{1}{24}
   \gantttitle{Título del diagrama}{24} \\[grid]
   \gantttitle{Septiembre}{4}
-  \gantttitle{Octubre}{4} 
+  \gantttitle{Octubre}{4}
   \gantttitle{Noviembre}{4}
   \gantttitle{Diciembre}{4}
   \gantttitle{Enero}{4}
@@ -95,7 +95,7 @@ Para crear estos diagramas en LaTeX, existe un paquete llamado [Pgfgantt](http:/
   \ganttbar[
     progress=100,
     name=bar5
-  ]{\textbf{Actividad 5}}{5}{7} \\    
+  ]{\textbf{Actividad 5}}{5}{7} \\
   \ganttbar[
     progress=80,
   ]{\textbf{Actividad 6}}{8}{8} \\
@@ -103,17 +103,17 @@ Para crear estos diagramas en LaTeX, existe un paquete llamado [Pgfgantt](http:/
     progress=49,
   ]{\textbf{Actividad 7}}{9}{11} \\
   \ganttmilestone{Hito 1}{11}{11}  \\
-  \ganttmilestone{Hito 2}{12}{12} \\  
+  \ganttmilestone{Hito 2}{12}{12} \\
   \ganttbar[
     progress=35,
-  ]{\textbf{Actividad 8}}{12}{22} \\  
+  ]{\textbf{Actividad 8}}{12}{22} \\
   \ganttbar[
     progress=0,
-  ]{\textbf{Actividad 9}}{23}{24} \\  
+  ]{\textbf{Actividad 9}}{23}{24} \\
 
-  \ganttmilestone{Q6 report}{24}{24} \\  
-  \ganttmilestone{M2: Project finished}{24}{24}  
-  
+  \ganttmilestone{Q6 report}{24}{24} \\
+  \ganttmilestone{M2: Project finished}{24}{24}
+
   \ganttlink[link type=f-s]{bar1}{bar2}
   \ganttlink[link type=f-s]{bar4}{bar5}
 \end{ganttchart}
@@ -131,6 +131,4 @@ Veamos algunos de los comandos más útiles:
 
 ## Conclusión
 
-Eso es todo, para crear un simple diagrama de Gantt no es necesario saber mucho más sobre este paquete. Recomiendo echar un vistazo a la documentación del paquete para cosas más específicas. 
-
-
+Eso es todo, para crear un simple diagrama de Gantt no es necesario saber mucho más sobre este paquete. Recomiendo echar un vistazo a la documentación del paquete para cosas más específicas.

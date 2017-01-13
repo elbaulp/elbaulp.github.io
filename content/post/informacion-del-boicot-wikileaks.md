@@ -5,7 +5,7 @@ permalink: /informacion-del-boicot-wikileaks/
 modified: 2016-08-15T16:00
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
@@ -79,4 +79,3 @@ Como se ha hablado mucho acerca de este tema, voy a recopilar alguna informació
 
  [1]: http://alt1040.com/2010/12/wikileaks-no-te-embriagues-de-poder
  [2]: http://alt1040.com/2010/12/twitter-no-estamos-censurando-a-wikileaks-en-los-trending-topics
-

@@ -5,7 +5,7 @@ permalink: /introduccion-sql-sql-introduction/
 modified: 2016-08-15T15:40
 categories:
   - BaseDeDatos
-main-class: "BaseDeDatos"
+mainclass: "BaseDeDatos"
 color: "#009688"
 ---
 Un <acronym title="Relational Data Base Management System">RDBMS</acronym> es un software capaz de producir, manipular y gestionar bases de datos de tipo relacional.
@@ -45,7 +45,7 @@ Es lo más común. El servidor lanza un proceso en la máquina central. Este pro
 
 ### Herramientas de los RDBMS
 
-Para el uso de las bases de datos, los RDBMS proporcionan diversas herramientas, que  
+Para el uso de las bases de datos, los RDBMS proporcionan diversas herramientas, que
 además tienen finalidades distintas en función de qué tipo de usuario las utiliza:
 
   * Herramientas de instalación: Instaladores para facilitar la tarea de realizar la siempre difícil instalación del producto de base de datos.
@@ -99,6 +99,6 @@ GRANT
 REVOKE
 ```
 
-## Siguiente tema: [Componentes del lenguaje SQL][1] 
+## Siguiente tema: [Componentes del lenguaje SQL][1]
 
  [1]: https://elbauldelprogramador.com/componentes-del-lenguaje-sql-sql/

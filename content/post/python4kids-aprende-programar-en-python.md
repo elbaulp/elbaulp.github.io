@@ -6,7 +6,7 @@ permalink: /python4kids-aprende-programar-en-python/
 categories:
   - cursos
   - python
-main-class: "dev"
+mainclass: "dev"
 color: "#E64A19"
 ---
 <div class="separator" >

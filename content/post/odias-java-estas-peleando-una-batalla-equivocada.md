@@ -9,10 +9,10 @@ tags:
   - cobol
   - java
   - mainframes
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/java1.jpg" alt="" title="java" width="460px" height="349px" />  
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/12/java1.jpg" alt="" title="java" width="460px" height="349px" />
 Una de las más interesantes tendencias que se ven ultimamente es la impopularidad de Java en los blogs, foros y otros. Pareciera que la gente está ofendida hasta incluso a nivel personal, cuando se sugiere a Java como el lenguaje superior en la web 2.0.
 
 Java ha sido ampliamente exitoso por varias razones:
@@ -35,7 +35,7 @@ Java ha sido ampliamente exitoso por varias razones:
 
 - Tiene un gobierno comunitario vía JCP (pre-Oracle)
 
-Estos son aspectos importantes en cualquier lenguaje, y se nota, ya que Java ha disfrutado de una larga racha de ser uno de los lenguajes más populares. Entonces, ¿por qué entre el 2010 y 2011, Java se volvió repentinamente el demonio más odiado?  
+Estos son aspectos importantes en cualquier lenguaje, y se nota, ya que Java ha disfrutado de una larga racha de ser uno de los lenguajes más populares. Entonces, ¿por qué entre el 2010 y 2011, Java se volvió repentinamente el demonio más odiado?
 
 <!--ad-->
 
@@ -65,7 +65,7 @@ Sigamos.
   * Transferir dinero entre bancos.
   * Llenar una receta médica
 
-Todas las industrias mencionadas son jugadores de miles de millones de dólares en nuestra economía.  
+Todas las industrias mencionadas son jugadores de miles de millones de dólares en nuestra economía.
 A día de hoy, muchas de estas industrias siguen escribiendo sus programas en COBOL, FoxPro y ensamblador para mainframes.
 
 Por alguna razón, COBOL, inventado en 1959, sigue usándose para crear aplicaciones hoy día. ¡En serio! No estamos hablando de mantener unas pocas líneas de código aquí o allá, hablamos de miles de **nuevas **líneas, cada día, para implementar nuevas funcionalidades y nuevos requerimientos. Estas industrias son esenciales; forman los ladrillos de nuestra economía. A pesar de ello, no innovan y por ello acarrean gastos masivos a raíz de las nuevas tendencias tecnológicas. Los costos de poner en marcha negocios son enormes, y un buen porcentaje de ellos corresponde a IT.

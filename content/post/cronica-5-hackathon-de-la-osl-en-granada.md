@@ -10,10 +10,10 @@ tags:
   - hackathon granada
   - oficina software libre
   - osl
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
-El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficina de Software Libre de la facultad de Informática en Granada. Este año he participado en el 5°, y por supuesto la experiencia ha sido buena, al igual que en los anteriores. Los proyectos participantes este año eran los siquientes:  
+El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficina de Software Libre de la facultad de Informática en Granada. Este año he participado en el 5°, y por supuesto la experiencia ha sido buena, al igual que en los anteriores. Los proyectos participantes este año eran los siquientes:
 
 <!--ad-->
 
@@ -26,7 +26,7 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 
 #### Truco
 
-> **Trazador de RUtas de la COmpra**.  
+> **Trazador de RUtas de la COmpra**.
 > Truco es un proyecto de Software Libre inscrito en el Concurso Universitario de Software Libre del año 2011-2012, y retomado para el concurso 2012-2013. Está siendo desarrollado por Antonio Castillo Lora (@kamuisaeba) y Alejandro Martín Medina(@alexvisio).
 >
 > <a href="https://github.com/alexvisio/Truco" target="_blank">Código fuente</a> | <a href="http://trucocusl.wordpress.com/" target="_blank">Web</a>
@@ -37,11 +37,11 @@ El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficin
 >
 > Its main features are:
 >
-> - Well defined interfaces.  
-> - Asynchronous data sending/receiving.  
-> - Service oriented programming.  
-> - Server/client or distributed model.  
-> - Paradigm independent.  
+> - Well defined interfaces.
+> - Asynchronous data sending/receiving.
+> - Service oriented programming.
+> - Server/client or distributed model.
+> - Paradigm independent.
 > - Remote event handling.
 >
 > <a href="http://osgiliath.org/2013/03/05/getting-started-osgiliath-eclipse/" target="_blank">Instrucciones de instalación</a> | <a href="https://sourceforge.net/projects/osgiliath/" target="_blank">Código fuente</a>

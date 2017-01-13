@@ -14,7 +14,7 @@ tags:
   - Hilos
   - Procesos
   - Tareas
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 ---
 
@@ -45,7 +45,7 @@ Como cada aplicación se ejecuta en un proceso Linux distinto, todos los compone
 
 Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto ***Thread*** de java, aunque Android proporciona otros objetos para facilitar el trabajo, como ***Handler, AsyncTask o Looper.*** (entre otros).
 
-## Siguiente Tema: [Fundamentos programación Android: Ciclo de vida de los componentes][2] 
+## Siguiente Tema: [Fundamentos programación Android: Ciclo de vida de los componentes][2]
 
  [1]: http://developer.android.com/guide/topics/manifest/manifest-intro.html
  [2]: https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/

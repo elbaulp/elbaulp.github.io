@@ -5,7 +5,7 @@ layout: post.amp
 permalink: /busca-en-google-lo-siguiente-y-veras/
 categories:
   - curiosidades
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 

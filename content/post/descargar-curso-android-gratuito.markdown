@@ -1,10 +1,10 @@
 ---
 layout: post.amp
 title: "Liberado El Curso De Android"
-categories: 
+categories:
 description: "El curso de Android del blog, ahora para descargar de forma gratuíta"
 introduction: "El curso de Android del blog, ahora para descargar de forma gratuíta"
-main-class: "android"
+mainclass: "android"
 color: "#689F38"
 date: 2016-10-22T08:03:57+02:00
 ---

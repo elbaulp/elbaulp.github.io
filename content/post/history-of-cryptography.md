@@ -9,7 +9,7 @@ tags:
   - criptografía
   - descargas
   - guias
-main-class: "misc"
+mainclass: "misc"
 color: "#61B38D"
 ---
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178px" height="229px" />][1]

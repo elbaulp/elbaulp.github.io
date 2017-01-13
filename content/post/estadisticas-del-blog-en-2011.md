@@ -5,7 +5,7 @@ modified: 2016-10-26T16:50
 permalink: /estadisticas-del-blog-en-2011/
 categories:
   - noticias
-main-class: "articulos"
+mainclass: "articulos"
 color: "#F57C00"
 ---
 
