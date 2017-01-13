@@ -4,7 +4,8 @@
   {{ partial "structure/share" . }}
   <article role="article" id="post" class="post-content">
     <div id="toc">
-    {{ .TableOfContents }}
+      <h1>Índice</h1>
+      {{ .TableOfContents }}
     </div>
     {{ $ad := partial "structure/ad" }}
     {{ replace .Content "<!--ad-->" $ad | safeHTML }}
