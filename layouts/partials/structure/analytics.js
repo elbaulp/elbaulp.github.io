@@ -1,5 +1,5 @@
 <amp-analytics type="googleanalytics" id="analytics-ga">
-  <script type="application/json">
+    <script type="application/json">
     {
         "vars": {
             "account": "{{ $.Site.Params.googleanalytics }}"
@@ -64,13 +64,13 @@
                 }
             },
             "patreon" : {
-	        "on": "click",
-	        "selector": "#patreon-ad",
-	        "request": "event",
-	        "vars": {
-	            "eventCategory": "patreon-ad",
-	            "eventAction": "insidepost"
-	        }
+                "on": "click",
+                "selector": "#patreon-ad",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "patreon-ad",
+                    "eventAction": "insidepost"
+                }
             },
             "revresponse" : {
                 "on": "click",
@@ -227,5 +227,5 @@
             }
         }
     }
-  </script>
+</script>
 </amp-analytics>
