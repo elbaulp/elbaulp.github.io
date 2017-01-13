@@ -7,7 +7,7 @@ mainclass: articulos
 title: Los RSS Del Blog Ahora Muestran El Contenido Completo
 type: post
 tags: [una, dos, tres]
-math: true
+math: false
 
 ---
 
