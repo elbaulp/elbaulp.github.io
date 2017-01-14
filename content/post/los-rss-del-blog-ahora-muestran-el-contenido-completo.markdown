@@ -5,7 +5,6 @@ introduction: "Tras escuchar a varios lectores, ahora es posible leer los artíc
 mainclass: "articulos"
 color: "#F57C00"
 date: 2016-12-03T11:40:33+01:00
-
 ---
 
 Últimamente he recibo varios consejos de lectores a los que les gustaría poder leer los artículos por completo desde sus aplicaciones _RSS_. Es por ello que he decidido habilitarlos.
