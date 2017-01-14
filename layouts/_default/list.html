@@ -1,5 +1,6 @@
 {{ define "main" }}
 <main class="home" id="post" role="main">
+  {{ if not .IsHome }}<h1 id="taxo-item">{{ .Title }}</h1>{{ end }}
   <div id="grid" class="row flex-grid">
     {{ range .Paginator.Pages }}
     <article class="box-item post-{{ .Params.mainclass }} shown">
