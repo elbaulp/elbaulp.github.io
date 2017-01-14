@@ -1,9 +1,4 @@
----
-layout: minimal.amp
-title: Invítanos a un café
----
-
-Escribir y mantener un blog requiere de mucho tiempo y esfuerzo. Por ese motivo he puesto a disposición de los lectores varias alternativas mediante las cuales pueden mostrar su apoyo invitándonos a un café, por ejemplo :-). Las formas de hacerlo son las siguientes: 
+Escribir y mantener un blog requiere de mucho tiempo y esfuerzo. Por ese motivo he puesto a disposición de los lectores varias alternativas mediante las cuales pueden mostrar su apoyo invitándonos a un café, por ejemplo :-). Las formas de hacerlo son las siguientes:
 
 <ul>
 	<li><em>Compra con nuestro <a onclick="ga('send', 'event', 'amazon', 'insidepost');" href="https://www.amazon.es/?&tag=bmab-21&camp=4586&creative=670922&linkCode=ur1&adid=01FEFB5JJ9GNJJX2T2CR&">enlace de Ámazon</a> (Sin coste adicional)</em></li>
