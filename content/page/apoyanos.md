@@ -1,3 +1,8 @@
++++
+type = "page"
+title = "Apóyanos"
++++
+
 Escribir y mantener un blog requiere de mucho tiempo y esfuerzo. Por ese motivo he puesto a disposición de los lectores varias alternativas mediante las cuales pueden mostrar su apoyo invitándonos a un café, por ejemplo :-). Las formas de hacerlo son las siguientes:
 
 <ul>

@@ -1,21 +1,26 @@
 {{ define "main" }}
-{{ partial "structure/postheader" . }}
+{{ if eq .Type "post" }}{{ partial "structure/postheader" . }}{{ end }}
 <section class="post">
   {{ partial "structure/share" . }}
   <article role="article" id="post" class="post-content">
-    <div id="toc">
-      <h1>Índice</h1>
-      {{ .TableOfContents }}
-    </div>
+    {{ if eq .Type "page"}}<h1>{{.Title}}</h1>{{ end }}
+    {{ with .TableOfContents }}
+        <div id="toc">
+          <h1>Índice</h1>
+          {{ . }}
+        </div>
+    {{ end }}
     {{ $ad := partial "structure/ad" }}
     {{ replace .Content "<!--ad-->" $ad | safeHTML }}
   </article>
   {{ partial "structure/share" . }}
-  {{ partial "structure/popular.posts" }}
-  {{ $au := or .Params.author "alex" }}
-  {{ $author := index .Site.Data.authors $au }}
-  {{ partial "structure/author" $author }}
-  {{ partial "structure/comments" . }}
+  {{ if eq .Type "post" }}
+     {{ partial "structure/popular.posts" }}
+     {{ $au := or .Params.author "alex" }}
+     {{ $author := index .Site.Data.authors $au }}
+     {{ partial "structure/author" $author }}
+     {{ partial "structure/comments" . }}
+  {{ end }}
 </section>
 {{ with .Params.math }}
 <script type="text/javascript"
