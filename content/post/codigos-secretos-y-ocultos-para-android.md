@@ -12,7 +12,7 @@ tags:
   - menu oculto tablet android
 description: "Si te gusta jugar con tu Android, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android."
 image: 2013/07/iconoAndroid.png
-date: 2012-01-01T00:00
+date: 2012-01-01
 lastmod: 2016-08-13
 redirect_from: /programacion/android/codigos-secretos-y-ocultos-para-android/
 mainclass: "android"

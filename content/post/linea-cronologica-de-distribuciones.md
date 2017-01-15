@@ -6,7 +6,7 @@ image: linea-cronologica-de-distribuciones.png
 introduction: "Visualización de la evolución de las distribuciones GNU/Linux"
 description: "Visualización de la evolución de las distribuciones GNU/Linux"
 lastmod: 2016-09-01
-date: 2016-09-01T10:30
+date: 2016-09-01
 categories:
   - curiosidades
   - linux
