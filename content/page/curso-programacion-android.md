@@ -1,16 +1,13 @@
 ---
 title: Android
-layout: minimal.amp
-modified: 2016-09-25T16:00
-redirect_from:
+lastmod: 2016-09-25
+aliases:
    - /video-tutorial-programacion-android/
    - /programa-que-envia-mensajes-desde-2/
    - /programa-que-envia-mensajes-desde_10/
    - /fundamentos-de-las-aplicaciones-android/
    - /android-sdk-dev-guide-en-pdf/
 ---
-
-
 
 # Nuevo curso de Programación en Android
 

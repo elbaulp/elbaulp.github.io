@@ -1,7 +1,5 @@
 ---
-id: 1714
 title: Colabora
-layout: minimal.amp
 ---
 
 De ahora en adelante voy a publicar artículos de otros blogueros que estén interesados en dar a conocer su blog a través de **El Baúl del Programador** o que estén interesados en hablar de temas distintos de los que hablan en su blog.

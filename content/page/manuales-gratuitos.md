@@ -1,11 +1,9 @@
 ---
-id: 449
 title: Manuales gratuítos
-layout: minimal.amp
 tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
 description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
 image: Python-Web-Frameworks-full.jpg
-redirect_from:
+aliases:
   - /nueva-guia-aspnet-20-anthology-101/
   - /nueva-guia-javascript-anthology-101/
   - /nueva-guia-php-anthology-101-essential/
@@ -36,22 +34,5 @@ redirect_from:
 -  <blockquote>
     <p><strong>NOTA</strong>: Si quieres apoyar el trabajo que realizamos en <em>El Baúl del Programador</em>, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga <strong> debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión</strong> ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en <a id="revresponse" href="http://www.revresponse.com/join.php?refbrand=bashyc-blogspot" target="_blank" title="RevResponse">RevResponse</a> y empezar a ofrecer guías de interés a tus lectores. Visita el <a href="http://elbauldelprogramador.tradepub.com/category/information-technology/1207/" target="_blank" title="Catálogo completo de Guías gratuítas">catálogo completo de guías.</a></p>
   </blockquote>
-  <section id="guides-container">
-    <amp-list
-       width="800"
-       height="800"
-       layout="responsive"
-       src="/assets/guides.json">
-      <template type="amp-mustache">
-        <article class="box-item shown">
-          <a href="{% raw %}{{url}}{% endraw %}">
-            <figure>
-              <amp-img src="{% raw %}{{thumbnail}}{% endraw %}" alt="{% raw %}{{title}}{% endraw %}" width="{% raw %}{{width}}{% endraw %}" height="{% raw %}{{height}}{% endraw %}">
-              </amp-img>
-            </figure>
-          </a>
-        </article>
-      </template>
-    </amp-list>
-  </section>
-</div>
+
+{{< importPartial "structure/guides.html" >}}

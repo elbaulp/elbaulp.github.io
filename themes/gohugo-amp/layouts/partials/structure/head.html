@@ -11,10 +11,15 @@
 
     {{ partial "amp/header" . }}
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+
     {{ if eq .Type "post"}}
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {{ end }}
+    {{ if eq .URL "/manuales-gratuitos/" }}
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    {{ end }}
+
     <link rel="canonical" href="{{ .Permalink }}">
 
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
