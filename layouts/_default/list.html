@@ -3,25 +3,7 @@
   {{ if not .IsHome }}<h1 id="taxo-item">{{ .Title }}</h1>{{ end }}
   <div id="grid" class="row flex-grid">
     {{ range .Paginator.Pages }}
-    <article class="box-item post-{{ .Params.mainclass }} shown">
-      <span class="ribbon">
-        <a href="{{ $.Site.BaseURL }}categories/{{ .Params.mainclass }}"><span>{{ .Params.mainclass }}</span></a>
-      </span>
-      <div class="box-body">
-        <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}" class="date">{{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time>
-        <a class="post-link" href="{{ .Permalink }}">
-          <h2 class="post-title">{{ .Title }}</h2>
-        </a>
-        <a class="post-link" href="{{ .Title }}">
-          <p class="description">{{ if .Params.description }}{{.Params.description}}{{else}}{{.Summary}}{{end}}</p>
-        </a>
-        <div class="tags">
-          {{ range .Params.tags }}
-          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-          {{ end }}
-        </div>
-      </div>
-    </article>
+      {{ .Render "li" }}
     {{ end }}
     {{ partial "structure/pagination.html" . }}
   </div>
