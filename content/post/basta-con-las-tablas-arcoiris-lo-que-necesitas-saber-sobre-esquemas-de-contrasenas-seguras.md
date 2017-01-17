@@ -1,23 +1,29 @@
 ---
-title: 'Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras'
-description: "En la esfera social de bookmark (“socialbookmarkosphere”) se habla insistentemente de las “Tablas Arcoiris“, cuál es el significado real de password security, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de Windows for Workgroups *hace 15 años."
-layout: post.amp
-permalink: /basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - Articulos
-  - Hacking
-  - seguridad
+- Articulos
+- Hacking
+- seguridad
+color: '#F57C00'
+description: "En la esfera social de bookmark (\u201Csocialbookmarkosphere\u201D)
+  se habla insistentemente de las \u201CTablas Arcoiris\u201C, cu\xE1l es el significado
+  real de password security, y por qu\xE9 demuestran que Microsoft hizo un trabajo
+  de mala calidad en la seguridad de Windows for Workgroups *hace 15 a\xF1os."
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: articulos
+permalink: /basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/
 tags:
-  - cracking password
-  - rainbow tables
-  - rainbow tables como funciona
-  - srp protocolo
-mainclass: "articulos"
-color: "#F57C00"
+- cracking password
+- rainbow tables
+- rainbow tables como funciona
+- srp protocolo
+title: "Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contrase\xF1as
+  seguras"
 ---
+
 <p >
 <a href="/img/2012/08/rainbow1.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="wp-image-901 aligncenter" title="rainbow" alt="" src="/img/2012/08/rainbow1.png" width="536px" height="303px" /></a>
 </p>

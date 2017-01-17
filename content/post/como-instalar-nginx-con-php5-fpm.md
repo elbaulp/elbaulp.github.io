@@ -1,21 +1,22 @@
 ---
-title: Cómo instalar y configurar Nginx con php5-fpm
-layout: post.amp
-permalink: /como-instalar-nginx-con-php5-fpm/
+author: alex
 categories:
-  - Administracion de Servidores
-  - How To
-tags:
-  - configurar nginx
-  - configurar servidor nginx debian
-  - instalar nginx
-  - nginx
-  - php-fpm
-  - servidor web
+- Administracion de Servidores
+- How To
+color: '#0097A7'
 image: 2013/02/nginx-logo.png
 lastmod: 2016-08-05
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /como-instalar-nginx-con-php5-fpm/
+tags:
+- configurar nginx
+- configurar servidor nginx debian
+- instalar nginx
+- nginx
+- php-fpm
+- servidor web
+title: "C\xF3mo instalar y configurar Nginx con php5-fpm"
 ---
 
 <figure>

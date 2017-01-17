@@ -1,13 +1,14 @@
 ---
-title: Chema Alonso hablando de la inseguridad de las vías telemáticas
+author: alex
+categories:
+- internet
+- seguridad
+color: '#F57C00'
 lastmod: 2016-10-04
 layout: post.amp
+mainclass: articulos
 permalink: /chema-alonso-hablando-de-la-inseguridad/
-categories:
-  - internet
-  - seguridad
-mainclass: "articulos"
-color: "#F57C00"
+title: "Chema Alonso hablando de la inseguridad de las v\xEDas telem\xE1ticas"
 ---
 
 OS dejo dos vídeos muy interesantes que recomiendo que veáis, ya que hablan de la seguridad en la red:

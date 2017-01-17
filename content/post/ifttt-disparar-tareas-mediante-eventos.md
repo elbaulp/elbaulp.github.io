@@ -1,14 +1,15 @@
 ---
-title: 'Ifttt: Disparar tareas mediante eventos producidos en redes sociales'
-layout: post.amp
-lastmod: 2016-08-29
-permalink: /ifttt-disparar-tareas-mediante-eventos/
+author: alex
 categories:
-  - aplicaciones
-  - internet
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- aplicaciones
+- internet
+- noticias
+color: '#F57C00'
+lastmod: 2016-08-29
+layout: post.amp
+mainclass: articulos
+permalink: /ifttt-disparar-tareas-mediante-eventos/
+title: 'Ifttt: Disparar tareas mediante eventos producidos en redes sociales'
 ---
 
 <a target="_blank" href="http://ifttt.com/">Ifttt</a> es la abreviatura de un nuevo servicio web ( _If This Then That_ ), que podría traducirse como *Si esto, entonces eso*, básicamente lo que esta aplicación hace es generar unos [triggers][1] o disparadores para que se ejecuten al producirse un evento en cualquiera de la red social que queramos.

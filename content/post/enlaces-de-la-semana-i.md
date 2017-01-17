@@ -1,13 +1,14 @@
 ---
-title: Enlaces de la semana ( I )
-
-layout: post.amp
-permalink: /enlaces-de-la-semana-i/
+author: alex
 categories:
-  - Enlaces de la semana
-mainclass: "articulos"
-color: "#F57C00"
+- Enlaces de la semana
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /enlaces-de-la-semana-i/
+title: Enlaces de la semana ( I )
 ---
+
 La intención de esta nueva sección va a ser recopilar los artículos que leo durante la semana y me resultan interesantes, pero no los escribo en el blog porque sería un simple Ctrl-C, Ctrl-V, y me parece más correcto enlazarlos.
 
 Aquí el primer post de esta sección:

@@ -1,12 +1,13 @@
 ---
-title: 'Descubre cuales son los 10 comandos que más usas en Linux con esta línea'
-layout: post.amp
-permalink: /meme-los-10-comandos-que-mas-utilizo-en/
-lastmod: 2016-08-30
+author: alex
 categories:
-  - meme
-mainclass: "linux"
-color: "#2196F3"
+- meme
+color: '#2196F3'
+lastmod: 2016-08-30
+layout: post.amp
+mainclass: linux
+permalink: /meme-los-10-comandos-que-mas-utilizo-en/
+title: "Descubre cuales son los 10 comandos que m\xE1s usas en Linux con esta l\xEDnea"
 ---
 
 En <a target="_blank" href="http://www.ubuntizandoelplaneta.com/2011/01/meme-los-10-comandos-que-mas-utilizo.html">ubuntizando el planeta</a> he leido este meme que voy a publicar, que consiste en ejecutar la orden

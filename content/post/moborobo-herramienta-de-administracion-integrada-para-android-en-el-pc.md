@@ -1,17 +1,18 @@
 ---
-title: Moborobo, herramienta de Administración Integrada para Android en el PC
-
-layout: post.amp
-permalink: /moborobo-herramienta-de-administracion-integrada-para-android-en-el-pc/
+author: alex
 categories:
-  - noticias
-  - Tecnología
+- noticias
+- "Tecnolog\xEDa"
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /moborobo-herramienta-de-administracion-integrada-para-android-en-el-pc/
 tags:
-  - aplicaciones android
-  - moborobo
-mainclass: "articulos"
-color: "#F57C00"
+- aplicaciones android
+- moborobo
+title: "Moborobo, herramienta de Administraci\xF3n Integrada para Android en el PC"
 ---
+
 <p dir="ltr">
 <a href="/img/2012/09/moborobo-feature-image-1204261.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="moborobo-feature-image-120426" src="/img/2012/09/moborobo-feature-image-1204261.jpg" alt="" width="600px" height="300px" /></a>
 </p>

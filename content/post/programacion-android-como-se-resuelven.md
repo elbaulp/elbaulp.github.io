@@ -1,20 +1,21 @@
 ---
-title: 'Programación Android: Cómo se resuelven los Intents'
-
-layout: post.amp
-permalink: /programacion-android-como-se-resuelven/
+author: alex
 categories:
-  - android
-  - How To
-  - opensource
+- android
+- How To
+- opensource
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-como-se-resuelven/
 tags:
-  - android ejemplo intent filter
-  - curso android pdf
-  - ejemplo intentfilter implicito
-  - resolver uri en android
-mainclass: "android"
-color: "#689F38"
+- android ejemplo intent filter
+- curso android pdf
+- ejemplo intentfilter implicito
+- resolver uri en android
+title: "Programaci\xF3n Android: C\xF3mo se resuelven los Intents"
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/img/2013/07/iconoAndroid.png"  id="logo"  class="icono" width="128px" height="128px" />
 
 Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.

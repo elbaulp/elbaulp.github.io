@@ -1,12 +1,13 @@
 ---
-title: 'Clases y Objetos. Control del acceso a los miembros de la clase'
-layout: post.amp
-lastmod: 2016-09-04
-permalink: /clases-y-objetos-control-del-acceso-los/
+author: alex
 categories:
-  - C
-mainclass: "dev"
-color: "#E64A19"
+- C
+color: '#E64A19'
+lastmod: 2016-09-04
+layout: post.amp
+mainclass: dev
+permalink: /clases-y-objetos-control-del-acceso-los/
+title: Clases y Objetos. Control del acceso a los miembros de la clase
 ---
 
 Veamos la diferencia entre las siguientes declaraciones de la [clase Punto][1]:

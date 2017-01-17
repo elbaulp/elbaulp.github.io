@@ -1,16 +1,17 @@
 ---
-title: 'Recibir alertas de correo al acceder al  sistema mediante SSH'
-layout: post.amp
-permalink: /recibir-alertas-de-correo-ssh/
+author: alex
 categories:
-  - Administracion de Servidores
-tags:
-  - alertar ssh
-  - correo ssh
-  - seguridad ssh
+- Administracion de Servidores
+color: '#0097A7'
 lastmod: 2016-08-10
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /recibir-alertas-de-correo-ssh/
+tags:
+- alertar ssh
+- correo ssh
+- seguridad ssh
+title: Recibir alertas de correo al acceder al  sistema mediante SSH
 ---
 
 Hemos visto en otros artículos varias maneras de mejorar la seguridad en un servidor, medidas tales como:

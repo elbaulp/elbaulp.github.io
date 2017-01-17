@@ -1,38 +1,42 @@
 ---
-title: ¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?
-description: "Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista rápida a los distintos formatos existentes:"
-layout: post.amp
-permalink: /cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/
+author: alex
 categories:
-  - Articulos
-tags:
-  - codec
-  - cual es el mejor formato de audio
-  - distintos tipos de mp3
-  - formato audio no comprimido
-  - formato de audio de mejor calidad
-  - formato flac que es
-  - formatos de audio
-  - formatos de audio comparacion
-  - mejor formato para musica
-  - que es formato AAC
-  - que es formato AIFF
-  - que es formato APE
-  - que es formato apple lossless
-  - que es formato FLAC
-  - que es formato mp3
-  - que es formato Ogg Vorbis
-  - que es formato wav
-  - que es formato WMA
-  - mejor formato de audio
-  - cual es el mejor codec de audio
-  - calidad lossless
-  - calidades de audio
-  - formatos alac
+- Articulos
+color: '#F57C00'
+description: "Hay tantos formatos de sonido que podemos hacernos un l\xEDo a la hora
+  de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista r\xE1pida
+  a los distintos formatos existentes:"
 image: 2012/07/original1.jpg
 lastmod: 2016-08-10
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/
+tags:
+- codec
+- cual es el mejor formato de audio
+- distintos tipos de mp3
+- formato audio no comprimido
+- formato de audio de mejor calidad
+- formato flac que es
+- formatos de audio
+- formatos de audio comparacion
+- mejor formato para musica
+- que es formato AAC
+- que es formato AIFF
+- que es formato APE
+- que es formato apple lossless
+- que es formato FLAC
+- que es formato mp3
+- que es formato Ogg Vorbis
+- que es formato wav
+- que es formato WMA
+- mejor formato de audio
+- cual es el mejor codec de audio
+- calidad lossless
+- calidades de audio
+- formatos alac
+title: "\xBFCual es la diferencia entre los distintos formatos de audio, y cual deber\xEDa
+  elegir?"
 ---
 
 <figure>

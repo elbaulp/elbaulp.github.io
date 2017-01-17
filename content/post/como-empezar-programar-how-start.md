@@ -1,13 +1,15 @@
 ---
-title: Cómo empezar a programar
-layout: post.amp
-permalink: /como-empezar-programar-how-start/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - How To
-mainclass: "articulos"
-color: "#F57C00"
+- How To
+color: '#F57C00'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: articulos
+permalink: /como-empezar-programar-how-start/
+title: "C\xF3mo empezar a programar"
 ---
+
 A petición de un lector, voy a intentar resolver algunas dudas para la gente que quiere adentrarse en el mundo de la programación y no sabe por donde empezar.
 
 Busqué algo de información que, aunque es un poco antigua, puede servir de referencia para guiaros un poco, la encontré en foro.elhacker.net y se titula <a target="_blank" href="http://foro.elhacker.net/programacion_general/como_empezar_en_programacion-t32008.0.html">Como empezar en programación</a>.

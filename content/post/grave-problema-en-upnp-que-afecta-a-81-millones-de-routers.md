@@ -1,16 +1,18 @@
 ---
-title: Grave vulnerabilidad en UPnP que afecta a 81 millones de routers
-layout: post.amp
-permalink: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
+author: alex
 categories:
-  - Articulos
-  - Security Now
+- Articulos
+- Security Now
+color: '#00BCD4'
+layout: post.amp
+mainclass: security-now
+permalink: /grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/
 tags:
-  - qué es upnp
-  - upnp que es
-mainclass: "security-now"
-color: "#00BCD4"
+- "qu\xE9 es upnp"
+- upnp que es
+title: Grave vulnerabilidad en UPnP que afecta a 81 millones de routers
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/02/alert-300x300.jpeg" alt="alert" width="300px" height="300px" />
 
 Como es habitual, hoy traigo otro episodio de [security Now!][1] que me parece interesante. Este en concreto, además de interesante es algo que afecta a millones de routers y dispositivos con el servicio UPnP activado.

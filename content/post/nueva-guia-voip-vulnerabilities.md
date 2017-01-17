@@ -1,16 +1,17 @@
 ---
-title: 'Nueva Guía: VoIP Vulnerabilities'
-
-layout: post.amp
-permalink: /nueva-guia-voip-vulnerabilities/
+author: alex
 categories:
-  - cursos
-  - noticias
+- cursos
+- noticias
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-voip-vulnerabilities/
 tags:
-  - VoIP Vulnerabilities
-mainclass: "misc"
-color: "#61B38D"
+- VoIP Vulnerabilities
+title: "Nueva Gu\xEDa: VoIP Vulnerabilities"
 ---
+
 [
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="size-full wp-image-1285 alignleft" alt="VoIP Vulnerabilities" src="/img/2013/01/voip-vulnerabilities.png" width="285px" height="362px" />
 ][1]

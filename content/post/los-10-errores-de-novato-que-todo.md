@@ -1,16 +1,22 @@
 ---
-title: 10 errores de novato que todo desarrollador Android debería evitar
+author: alex
+categories:
+- android
+- aplicaciones
+color: '#689F38'
+description: "\xDAltimamente recibo muchos correos haciendome preguntas sobre cuestiones
+  sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa
+  por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento)
+  suficiente para responder a todas ellas. Por eso, aprovechando que encontr\xE9 un
+  art\xEDculo en ingl\xE9s que nombraba los 10 errores comunes de los nuevos programadores
+  en esta plataforma. Aqu\xED los dejo traducidos, ya que son de lectura recomendable:"
 lastmod: 2016-10-26
 layout: post.amp
+mainclass: android
 permalink: /los-10-errores-de-novato-que-todo/
-categories:
-  - android
-  - aplicaciones
 tags:
-  - curso android pdf
-description: "Últimamente recibo muchos correos haciendome preguntas sobre cuestiones sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento) suficiente para responder a todas ellas. Por eso, aprovechando que encontré un artículo en inglés que nombraba los 10 errores comunes de los nuevos programadores en esta plataforma. Aquí los dejo traducidos, ya que son de lectura recomendable:"
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "10 errores de novato que todo desarrollador Android deber\xEDa evitar"
 ---
 
 Últimamente recibo muchos correos haciendome preguntas sobre cuestiones sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento) suficiente para responder a todas ellas. Por eso, aprovechando que encontré un artículo en inglés que nombraba los 10 errores comunes de los nuevos programadores en esta plataforma. Aquí los dejo traducidos, ya que son de lectura recomendable:

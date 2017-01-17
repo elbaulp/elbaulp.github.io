@@ -1,16 +1,17 @@
 ---
-title: Actualizar BIOS de ASUS desde Linux
-
-layout: post.amp
-permalink: /actualizar-bios-de-asus-desde-linux/
+author: alex
 categories:
-  - seguridad
-  - SO
+- seguridad
+- SO
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /actualizar-bios-de-asus-desde-linux/
 tags:
-  - como actualizar bios asus p5b
-mainclass: "linux"
-color: "#2196F3"
+- como actualizar bios asus p5b
+title: Actualizar BIOS de ASUS desde Linux
 ---
+
 <div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png" />
 </div>

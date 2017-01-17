@@ -1,16 +1,17 @@
 ---
-title: Tutorial de Python v2.7.0
-layout: post.amp
-permalink: /tutorial-de-python-v270/
-lastmod: 2016-09-04
+author: alex
 categories:
-  - cursos
-  - python
+- cursos
+- python
+color: '#F57C00'
+lastmod: 2016-09-04
+layout: post.amp
+mainclass: articulos
+permalink: /tutorial-de-python-v270/
 tags:
-  - curso python para principiantes
-  - tutorial de python
-mainclass: "articulos"
-color: "#F57C00"
+- curso python para principiantes
+- tutorial de python
+title: Tutorial de Python v2.7.0
 ---
 
 Ya he publicado otras veces entradas dedicadas a compartir tutoriales y cursos sobre python, como [Python para principiantes][1].

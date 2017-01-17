@@ -1,24 +1,25 @@
 ---
-title: Disponible la primera parte del curso Android en PDF
-layout: post.amp
-permalink: /disponible-la-primera-parte-del-curso/
-lastmod: 2016-10-22
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#F57C00'
+lastmod: 2016-10-22
+layout: post.amp
+mainclass: articulos
+permalink: /disponible-la-primera-parte-del-curso/
 tags:
-  - "pdf"
-  - "programacion"
-  - android
-  - curso android desarrollo pdf
-  - curso android pdf
-  - manual desarrollo aplicaciones android
-  - programacion android pdf español
-  - programacion aplicaciones android pdf
-  - programacion en android
-  - programar en android pdf
-mainclass: "articulos"
-color: "#F57C00"
+- pdf
+- programacion
+- android
+- curso android desarrollo pdf
+- curso android pdf
+- manual desarrollo aplicaciones android
+- "programacion android pdf espa\xF1ol"
+- programacion aplicaciones android pdf
+- programacion en android
+- programar en android pdf
+title: Disponible la primera parte del curso Android en PDF
 ---
 
 Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte-del-manual">hace unos días</a>, ya está terminado el pdf con todo el contenido del <a target="_blank" href="https://elbauldelprogramador.com/curso-programacion-android/">curso</a>.

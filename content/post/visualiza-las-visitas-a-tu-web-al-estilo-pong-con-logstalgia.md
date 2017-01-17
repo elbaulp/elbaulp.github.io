@@ -1,19 +1,20 @@
 ---
-title: Visualiza las visitas a tu web al estilo Pong con Logstalgia
-layout: post.amp
-permalink: /visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/
+author: alex
 categories:
-  - Administracion de Servidores
-  - aplicaciones
-  - opensource
-tags:
-  - grabar video logstalgia
-  - instalar logstalgia
-  - tutorial logstalgia
+- Administracion de Servidores
+- aplicaciones
+- opensource
+color: '#0097A7'
 image: visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia.png
 lastmod: 2016-08-06
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/
+tags:
+- grabar video logstalgia
+- instalar logstalgia
+- tutorial logstalgia
+title: Visualiza las visitas a tu web al estilo Pong con Logstalgia
 ---
 
 Hace poco he descubierto un programa muy curioso, **Logstalgia**, que a partir del fichero de log de acceso a una web crea una pantalla del juego Pong en la que cada línea del log representa una bola en el juego. Es una buena representación gráfica de lo que está pasando en el servidor web. Y su uso es bastante simple. Empecemos instalándolo:

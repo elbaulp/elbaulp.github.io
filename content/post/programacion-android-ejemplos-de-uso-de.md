@@ -1,21 +1,22 @@
 ---
-title: 'Programación Android - Ejemplo de uso de ACTION_PICK'
-layout: post.amp
-permalink: /programacion-android-ejemplos-de-uso-de/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - action_pick activity ejemplo
-  - action_pick activity example
-  - android listview example
-  - como filtrar un action_pick
-  - curso android pdf
-  - startactivityforresult android example
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-08-13
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-ejemplos-de-uso-de/
 redirect_from: /opensource/programacion-android-ejemplos-de-uso-de/
-mainclass: "android"
-color: "#689F38"
+tags:
+- action_pick activity ejemplo
+- action_pick activity example
+- android listview example
+- como filtrar un action_pick
+- curso android pdf
+- startactivityforresult android example
+title: "Programaci\xF3n Android - Ejemplo de uso de ACTION_PICK"
 ---
 
 La idea de ACTION_PICK es lanzar una actividad que muestre una liste de objetos a seleccionar para que el usuario elija uno de ellos. Una vez elegido, la actividad devuelve la URI del elemento elegido. Así se permite reusar la interfaz gráfica.

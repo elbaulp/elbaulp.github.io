@@ -1,18 +1,19 @@
 ---
-title: Investigadores más cerca de usar luz en lugar de cables en ordenadores
-
-layout: post.amp
-permalink: /investigadores-mas-cerca-de-usar-luz-en-lugar-de-cables-en-ordenadores/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /investigadores-mas-cerca-de-usar-luz-en-lugar-de-cables-en-ordenadores/
 tags:
-  - física
-  - luz por cables
-  - transmitir datos por luz
-  - Vuckovic Lab
-mainclass: "articulos"
-color: "#F57C00"
+- "f\xEDsica"
+- luz por cables
+- transmitir datos por luz
+- Vuckovic Lab
+title: "Investigadores m\xE1s cerca de usar luz en lugar de cables en ordenadores"
 ---
+
 La luz es mucho más eficiente a la hora de transmitir datos que la electricidad a través de cables, pero conseguir que funcione correctamente en un ordenador es algo problemático. Un equipo de ingenieros anunció recientemente un nuevo dispositivo *“enlace óptico”* hecho de silicio que es capaz de doblar la luz en ángulos rectos, lo cual es un gran avance de cara a reemplazar los cables eléctricos en ordenadores. La investigación fue dirigida por **Jelena Vuckovic**, de la universidad de Stanford. El paper se publicó en el *journal Scientific Reports*.
 
 Vuckovic dijo en una [rueda de prensa][1]:

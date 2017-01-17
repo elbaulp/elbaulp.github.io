@@ -1,17 +1,18 @@
 ---
-title: Cómo usar adecuadamente el Log de Android en tus aplicaciones
-
-layout: post.amp
-permalink: /como-usar-adecuadamente-el-log-de-android-en-tus-aplicaciones/
+author: alex
 categories:
-  - android
+- android
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /como-usar-adecuadamente-el-log-de-android-en-tus-aplicaciones/
 tags:
-  - como usar log android
-  - log android
-  - logging android
-mainclass: "android"
-color: "#689F38"
+- como usar log android
+- log android
+- logging android
+title: "C\xF3mo usar adecuadamente el Log de Android en tus aplicaciones"
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/07/android2.png" alt="Cómo usar adecuadamente el Log de Android en tus aplicaciones" width="132px" height="154px" />
 
 Es posible que durante el desarrollo de una aplicación [Android][1], surja la duda de qué nivel de Log se debe usar, qué cosas se deben loggear y cuales no. En la documentación de Android se trata este tema, el cual traduzco para ponerlo a disposición de todos.

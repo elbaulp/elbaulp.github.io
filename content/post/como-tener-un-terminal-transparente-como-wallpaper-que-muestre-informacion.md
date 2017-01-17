@@ -1,29 +1,30 @@
 ---
-title: Cómo tener un terminal transparente como wallpaper que muestre información
-layout: post.amp
-permalink: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/
+author: alex
 categories:
-  - How To
-  - linux
-tags:
-  - comando xrootconsole
-  - eterm
-  - fluxbox
-  - gnome
-  - htop
-  - log
-  - openbox
-  - system logs
-  - terminal
-  - terminal transparente
-  - terminal window
-  - tilda
-  - wallpaper
-  - xrootconsole
+- How To
+- linux
+color: '#2196F3'
 image: 2013/03/xroot-example.jpg
 lastmod: 2016-08-09
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/
+tags:
+- comando xrootconsole
+- eterm
+- fluxbox
+- gnome
+- htop
+- log
+- openbox
+- system logs
+- terminal
+- terminal transparente
+- terminal window
+- tilda
+- wallpaper
+- xrootconsole
+title: "C\xF3mo tener un terminal transparente como wallpaper que muestre informaci\xF3n"
 ---
 
 Hoy traigo tres programas que me han resultado muy interesantes. Se trata de *xrootconsole*, *tilda* y *eterm*. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, [htop][1] dmesg etc. Empecemos con xrootconsole:

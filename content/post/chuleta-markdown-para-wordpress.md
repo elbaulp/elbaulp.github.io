@@ -1,22 +1,26 @@
 ---
-title: Chuleta de Markdown para wordpress
-
-layout: post.amp
-permalink: /chuleta-markdown-para-wordpress/
+author: alex
 categories:
-  - How To
-tags:
-  - chuleta
-  - guía markdown
-  - markdown
-  - markdown jetpack
-  - markdown worpress
-  - tutorial markdown
-description: "En su última actualización, el plugin JetPack introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato."
+- How To
+color: '#F57C00'
+description: "En su \xFAltima actualizaci\xF3n, el plugin JetPack introdujo la notaci\xF3n
+  Markdown para formatear art\xEDculos y comentarios. La siguiente chuleta pretende
+  servir de referencia tanto a los lectores como a mi, aprovechando as\xED la ocasi\xF3n
+  para practicar y memorizar el formato."
 lastmod: 2015-12-24
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /chuleta-markdown-para-wordpress/
+tags:
+- chuleta
+- "gu\xEDa markdown"
+- markdown
+- markdown jetpack
+- markdown worpress
+- tutorial markdown
+title: Chuleta de Markdown para wordpress
 ---
+
 En su última actualización, el plugin [JetPack][1] introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.
 
 <!--more-->

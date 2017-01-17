@@ -1,17 +1,18 @@
 ---
-title: 'Nueva guía: 6 Steps to Securing Your Domains'
-
-layout: post.amp
-permalink: /6-steps-to-securing-your-domains/
+author: alex
 categories:
-  - cursos
+- cursos
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /6-steps-to-securing-your-domains/
 tags:
-  - dominios
-  - internet
-  - seguridad dominio
-mainclass: "misc"
-color: "#61B38D"
+- dominios
+- internet
+- seguridad dominio
+title: "Nueva gu\xEDa: 6 Steps to Securing Your Domains"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/01/six-steps-to-securing-your-domains-2.png" alt="6 Steps to Securing Your Domains" width="199px" height="258px" />][1]
 
 Domain hijacking is now front page news. Learn how to prevent your company&#8217;s valuable domains from being next!

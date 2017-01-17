@@ -1,15 +1,16 @@
 ---
-title: 'Programación Android: Recursos - Trabajar con recursos Assets'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-29
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-trabajar_04/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "Programaci\xF3n Android: Recursos - Trabajar con recursos Assets"
 ---
 
 Android ofrece más de un directorio en el que guardar ficheros que se incluirán en el paquete.: ***/assets***. Está en el mismo nivel que el directorio ***/res***, lo que significa que no es parte de los subdirectorios del mismo. A los archivos colocados en en el directorio ***/assets*** no se les generan IDs en R.java. Somos nosotros los que debemos especificar la ruta para leerlo. La ruta al fichero es una ruta relativa que comienza con ***/assets***. Debemos usar la calse ***AssetManager*** para acceder a estos ficheros, como se muestra en el código de abajo:

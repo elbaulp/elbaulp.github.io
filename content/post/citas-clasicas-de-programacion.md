@@ -1,12 +1,13 @@
 ---
-title: 22 Citas clásicas de programación
+author: alex
+categories:
+- curiosidades
+color: '#F57C00'
 lastmod: 2016-08-31
 layout: post.amp
+mainclass: articulos
 permalink: /citas-clasicas-de-programacion/
-categories:
-  - curiosidades
-mainclass: "articulos"
-color: "#F57C00"
+title: "22 Citas cl\xE1sicas de programaci\xF3n"
 ---
 
 En <a target="_blank" href="http://www.storm-consultancy.com/">storm-consultancy</a> he visto esta colección de citas clásicas relaciondas con la programación que quiero compartir con vosotros:

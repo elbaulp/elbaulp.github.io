@@ -1,12 +1,13 @@
 ---
-title: 'Programación para Juegos - Lección 3 - Librerías de SDL'
-layout: post.amp
-permalink: /programacion-para-juegos-leccion-3/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - juegos
-mainclass: "dev"
-color: "#E64A19"
+- juegos
+color: '#E64A19'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: dev
+permalink: /programacion-para-juegos-leccion-3/
+title: "Programaci\xF3n para Juegos - Lecci\xF3n 3 - Librer\xEDas de SDL"
 ---
 
 SDL nativamente solo soporta imágenes BMP, pero usando la libreria SDL_image, podremos cargar imagenes con extensión BMP, PNM, XPM, LBM, PCX, GIF, JPEG, TGA y PNG.

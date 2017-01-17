@@ -1,17 +1,18 @@
 ---
-title: Resultados examen PL/SQL base de datos
-
-layout: post.amp
-permalink: /resultados-examen-plsql-base-de-datos/
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /resultados-examen-plsql-base-de-datos/
 tags:
-  - examenes resueltos bases de datos
-  - examenes resueltos bases de datos pl/sql
-  - examenes sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- examenes resueltos bases de datos
+- examenes resueltos bases de datos pl/sql
+- examenes sql
+title: Resultados examen PL/SQL base de datos
 ---
+
 <div class="icosql">
 </div>
 

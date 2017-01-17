@@ -1,14 +1,15 @@
 ---
-title: 'PL/SQL. Declaración de variables'
-layout: post.amp
-lastmod: 2016-08-27
-permalink: /plsql-declaracion-de-variables/
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-27
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-declaracion-de-variables/
 tags:
-  - declare en pl sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- declare en pl sql
+title: "PL/SQL. Declaraci\xF3n de variables"
 ---
 
 Las variables deben declararse dentro de la sección `DECLARE` y deben seguir la siguiente sintaxis:

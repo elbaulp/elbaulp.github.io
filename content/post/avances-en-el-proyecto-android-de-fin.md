@@ -1,17 +1,20 @@
 ---
-title: 'Avances en el proyecto Android de fin de curso [WifiBar]'
-description: "Como ya sabéis tengo que realizar un proyecto de fin de curso, el cual ya expliqué en [qué consistía][1], y escribo esta entrada para mostraros un poco los avances que voy haciendo."
-layout: post.amp
-lastmod: 2016-09-07
-permalink: /avances-en-el-proyecto-android-de-fin/
+author: alex
 categories:
-  - android
-  - aplicaciones
-  - opensource
+- android
+- aplicaciones
+- opensource
+color: '#689F38'
+description: "Como ya sab\xE9is tengo que realizar un proyecto de fin de curso, el
+  cual ya expliqu\xE9 en [qu\xE9 consist\xEDa][1], y escribo esta entrada para mostraros
+  un poco los avances que voy haciendo."
+lastmod: 2016-09-07
+layout: post.amp
+mainclass: android
+permalink: /avances-en-el-proyecto-android-de-fin/
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: Avances en el proyecto Android de fin de curso [WifiBar]
 ---
 
 Como ya sabéis tengo que realizar un proyecto de fin de curso, el cual ya expliqué en [qué consistía][1], y escribo esta entrada para mostraros un poco los avances que voy haciendo.

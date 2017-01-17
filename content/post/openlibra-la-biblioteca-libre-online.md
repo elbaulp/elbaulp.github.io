@@ -1,16 +1,16 @@
 ---
-title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
+author: alex
+categories:
+- internet
+- linux
+- opensource
+color: '#F57C00'
 lastmod: 2016-09-12
 layout: post.amp
+mainclass: articulos
 permalink: /openlibra-la-biblioteca-libre-online/
-categories:
-  - internet
-  - linux
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+title: 'OpenLibra: La Biblioteca Libre Online tal como la esperabas'
 ---
-
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="217" width="640" src="https://3.bp.blogspot.com/-uqafMWqPUPw/TedAknb7jBI/AAAAAAAAAjM/ej6mgwZbUJM/s1600/openlibra.jpg"></amp-img>

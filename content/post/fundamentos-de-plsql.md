@@ -1,12 +1,13 @@
 ---
-title: Fundamentos de PL/SQL
-layout: post.amp
-lastmod: 2016-08-24
-permalink: /fundamentos-de-plsql/
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-24
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /fundamentos-de-plsql/
+title: Fundamentos de PL/SQL
 ---
 
 SQL es un lenguaje de consulta para los sistemas de bases de datos relaciónales, pero que no posee la potencia de los lenguajes de programación.

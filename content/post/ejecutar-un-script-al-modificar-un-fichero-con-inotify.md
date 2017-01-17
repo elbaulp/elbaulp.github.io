@@ -1,19 +1,20 @@
 ---
-title: Ejecutar un script al modificar un fichero con inotify
-layout: post.amp
-permalink: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/
+author: alex
 categories:
-  - bash
-  - linux
-  - script
-tags:
-  - Ejecutar un script al modificar un fichero
-  - ejemplo inotify
-  - ejemplo inotify-tools
+- bash
+- linux
+- script
+color: '#2196F3'
 image: 2013/07/Screenshot-from-2013-07-02-164301.png
 lastmod: 2016-08-09
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /ejecutar-un-script-al-modificar-un-fichero-con-inotify/
+tags:
+- Ejecutar un script al modificar un fichero
+- ejemplo inotify
+- ejemplo inotify-tools
+title: Ejecutar un script al modificar un fichero con inotify
 ---
 
 La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo [editar y crear archivos cifrados con GPG en Vim][2]. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.

@@ -1,18 +1,20 @@
 ---
-title: 'Humor gráfico - Informáticos, Programadores, geek&#8230; - 9GAG.COM Parte (III)'
-
-layout: post.amp
-permalink: /humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - Humor
-  - offtopic
+- Humor
+- offtopic
+color: '#262626'
 format: gallery
-mainclass: "geek"
-color: "#262626"
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: geek
+permalink: /humor-grafico-informaticos-programadores-geek-9gag-com-parte-iii/
+title: "Humor gr\xE1fico - Inform\xE1ticos, Programadores, geek&#8230; - 9GAG.COM
+  Parte (III)"
 ---
+
 Otra recopilación de humor gráfico, para cerrar este domingo de verano.
 
 <a href="//humor-grafico-informaticos-11/" title="Humor gráfico – Informáticos, Programadores, geek… – 9GAG.COM Parte (I)" target="_blank">Humor gráfico – Informáticos, Programadores, geek… – 9GAG.COM Parte (I)</a>

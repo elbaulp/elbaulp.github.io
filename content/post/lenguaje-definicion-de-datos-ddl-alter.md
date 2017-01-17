@@ -1,16 +1,17 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) - ALTER TABLE'
-layout: post.amp
-permalink: /lenguaje-definicion-de-datos-ddl-alter/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /lenguaje-definicion-de-datos-ddl-alter/
 tags:
-  - concepto de ddl
-  - que es un ddl
-  - sentencias dml y ddl
-mainclass: "BaseDeDatos"
-color: "#009688"
+- concepto de ddl
+- que es un ddl
+- sentencias dml y ddl
+title: "Lenguaje Definici\xF3n de Datos (DDL) - ALTER TABLE"
 ---
 
 ## Modificar la estrutura de una tabla

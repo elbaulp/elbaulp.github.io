@@ -1,17 +1,18 @@
 ---
-title: Crear formularios en Django a partir de un Modelo con ModelForm
+author: alex
+categories:
+- django
+color: '#E64A19'
+image: 2013/10/django.png
 lastmod: 2016-10-11
 layout: post.amp
+mainclass: dev
 permalink: /crear-formularios-en-django-partir-de-un-modelo-con-modelform/
-categories:
-  - django
 tags:
-  - crear formularios a partir del modelo django
-  - crear formularios en django
-  - formularios en django
-image: 2013/10/django.png
-mainclass: "dev"
-color: "#E64A19"
+- crear formularios a partir del modelo django
+- crear formularios en django
+- formularios en django
+title: Crear formularios en Django a partir de un Modelo con ModelForm
 ---
 
 Como comenté cuando escribí el artículo sobre [Introducción a Django][1] he tenido que empezar a desarrollar aplicaciones web en este [framework][2] que cada día me gusta más.

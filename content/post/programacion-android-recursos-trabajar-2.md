@@ -1,15 +1,16 @@
 ---
-title: 'Programación Android: Recursos - Trabajar con recursos RAW'
-layout: post.amp
-permalink: /programacion-android-recursos-trabajar-2/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - curso android pdf
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-08-09
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-recursos-trabajar-2/
+tags:
+- curso android pdf
+title: "Programaci\xF3n Android: Recursos - Trabajar con recursos RAW"
 ---
 
 Los recursos Raw se colocan bajo el directorio ***./res/raw***. Son recursos raw archivos como ficheros de audio, vídeo o archivos de texto que requieran localización o ser referenciados mediante IDs de recursos.

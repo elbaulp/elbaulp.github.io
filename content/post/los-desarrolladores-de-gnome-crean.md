@@ -1,14 +1,15 @@
 ---
-title: 'Los desarrolladores de GNOME crean “Boxes” para la virtualización'
+author: alex
+categories:
+- linux
+- noticias
+- opensource
+color: '#2196F3'
 lastmod: 2016-10-04
 layout: post.amp
+mainclass: linux
 permalink: /los-desarrolladores-de-gnome-crean/
-categories:
-  - linux
-  - noticias
-  - opensource
-mainclass: "linux"
-color: "#2196F3"
+title: "Los desarrolladores de GNOME crean \u201CBoxes\u201D para la virtualizaci\xF3n"
 ---
 
 <figure>

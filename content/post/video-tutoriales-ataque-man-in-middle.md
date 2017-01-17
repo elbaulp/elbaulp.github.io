@@ -1,16 +1,17 @@
 ---
-title: '[Vídeo tutoriales] Ataque Man in the middle'
-layout: post.amp
-lastmod: 2016-09-12
-permalink: /video-tutoriales-ataque-man-in-middle/
+author: alex
 categories:
-  - aplicaciones
-  - internet
-  - seguridad
+- aplicaciones
+- internet
+- seguridad
+color: '#F57C00'
+lastmod: 2016-09-12
+layout: post.amp
+mainclass: articulos
+permalink: /video-tutoriales-ataque-man-in-middle/
 tags:
-  - ettercap en español
-mainclass: "articulos"
-color: "#F57C00"
+- "ettercap en espa\xF1ol"
+title: "[V\xEDdeo tutoriales] Ataque Man in the middle"
 ---
 
 En la [anterior entrada][1] expliqué como hacer un ataque mitm para capturar el tráfico de red de un equipo.

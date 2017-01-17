@@ -1,14 +1,15 @@
 ---
-title: 'Bash syntax highlighted script [Improved]'
-layout: post.amp
-permalink: /bash-syntax-highlighted-script-improved/
+author: alex
 categories:
-  - linux
-  - script
+- linux
+- script
+color: '#2196F3'
 lang: en
 lastmod: 2016-08-15
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /bash-syntax-highlighted-script-improved/
+title: Bash syntax highlighted script [Improved]
 ---
 
 Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:

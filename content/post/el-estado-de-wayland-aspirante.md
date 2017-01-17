@@ -1,12 +1,13 @@
 ---
-title: El estado de Wayland, aspirante a reemplazar X.org
-layout: post.amp
-permalink: /el-estado-de-wayland-aspirante/
+author: alex
 categories:
-  - noticias
+- noticias
+color: '#F57C00'
 lastmod: 2016-08-15
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /el-estado-de-wayland-aspirante/
+title: El estado de Wayland, aspirante a reemplazar X.org
 ---
 
 Hace poco que sigo el blog <a target="_blank" href="http://diegocg.blogspot.com/">D&#8217;Oh!</a>, y la verdad es que todos los temas sobre los que se escriben en él son bastante interesantes. Leí una entrada que me gusto mucho, y la voy a escribir a continuación. Recomiendo este blog para la gente de Linux sobre todo, ya que el autor, escribe regularmente las caracteristicas mas relevantes de las actualizaciones del kernel.

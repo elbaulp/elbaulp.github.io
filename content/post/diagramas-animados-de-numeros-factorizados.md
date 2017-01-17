@@ -1,17 +1,18 @@
 ---
-title: Diagramas animados de números factorizados en HTML5
-layout: post.amp
-permalink: /diagramas-animados-de-numeros-factorizados/
+author: alex
 categories:
-  - curiosidades
-tags:
-  - animated diagrams
-  - factorización
-  - html5
-lastmod: 2016-08-09
+- curiosidades
+color: '#E64A19'
 image: 2013/01/2013-01-13-105334_1256x830_scrot2.png
-mainclass: "dev"
-color: "#E64A19"
+lastmod: 2016-08-09
+layout: post.amp
+mainclass: dev
+permalink: /diagramas-animados-de-numeros-factorizados/
+tags:
+- animated diagrams
+- "factorizaci\xF3n"
+- html5
+title: "Diagramas animados de n\xFAmeros factorizados en HTML5"
 ---
 
 <figure>

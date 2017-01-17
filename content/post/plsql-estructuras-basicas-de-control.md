@@ -1,15 +1,16 @@
 ---
-title: 'PL/SQL. Estructuras básicas de control'
-layout: post.amp
-permalink: /plsql-estructuras-basicas-de-control/
-lastmod: 2016-08-29
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-29
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-estructuras-basicas-de-control/
 tags:
-  - comandos basicos sql
-  - sentencias sql while
-mainclass: "BaseDeDatos"
-color: "#009688"
+- comandos basicos sql
+- sentencias sql while
+title: "PL/SQL. Estructuras b\xE1sicas de control"
 ---
 
 Como PL/SQL es un lenguaje 3GL, cuenta con las estructuras típicas de control de flujo: bifurcaciones condicionales y bucles:

@@ -1,13 +1,14 @@
 ---
-title: Vídeos de la semana (VII)
-
-layout: post.amp
-permalink: /videos-de-la-semana-vii/
+author: alex
 categories:
-  - video de la semana
-mainclass: "geek"
-color: "#262626"
+- video de la semana
+color: '#262626'
+layout: post.amp
+mainclass: geek
+permalink: /videos-de-la-semana-vii/
+title: "V\xEDdeos de la semana (VII)"
 ---
+
 <div class="separator" >
 <a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>

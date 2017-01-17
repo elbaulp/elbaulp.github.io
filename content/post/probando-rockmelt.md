@@ -1,13 +1,15 @@
 ---
-title: Probando RockMelt
-layout: post.amp
-permalink: /probando-rockmelt/
-lastmod: 2016-08-15
+author: alex
 categories:
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- noticias
+color: '#F57C00'
+lastmod: 2016-08-15
+layout: post.amp
+mainclass: articulos
+permalink: /probando-rockmelt/
+title: Probando RockMelt
 ---
+
 Si queires saber más sobre RockMelt, haz clic [aqui][1]
 
 He estado probando el navegador RockMelt, y mis primeras impresiones han sido bastante buenas, me parece bastante sencillo.

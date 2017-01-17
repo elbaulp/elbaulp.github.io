@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Recursos - Arrays de strings'
-layout: post.amp
-permalink: /programacion-android-recursos-arrays-de/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - curso android pdf
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-08-09
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-recursos-arrays-de/
 redirect_from: /opensource/programacion-android-recursos-arrays-de/
-mainclass: "android"
-color: "#689F38"
+tags:
+- curso android pdf
+title: "Programaci\xF3n Android: Recursos - Arrays de strings"
 ---
 
 Se pueden definir arrays de strings como recursos en cualquier archivo bajo el subdirectorio ./res/values. Para definirlos, usaremos un nodo XML llamado *string-array*. Este nodo es un hijo de *resources*, al igual que el nodo *string*. A continuación, vamos a ver como crear un array de strings:

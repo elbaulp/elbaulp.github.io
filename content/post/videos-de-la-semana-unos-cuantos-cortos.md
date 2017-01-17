@@ -1,13 +1,14 @@
 ---
-title: 'Vídeos de la semana: Unos cuantos cortos y un time-lapse'
-
-layout: post.amp
-permalink: /videos-de-la-semana-unos-cuantos-cortos/
+author: alex
 categories:
-  - video de la semana
-mainclass: "articulos"
-color: "#F57C00"
+- video de la semana
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /videos-de-la-semana-unos-cuantos-cortos/
+title: "V\xEDdeos de la semana: Unos cuantos cortos y un time-lapse"
 ---
+
 <div class="separator" >
 <a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>

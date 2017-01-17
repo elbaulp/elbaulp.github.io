@@ -1,18 +1,19 @@
 ---
-title: Cómo añadir contenido por defecto a los artículos en WordPress
-
-layout: post.amp
-permalink: /como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/
+author: alex
 categories:
-  - How To
-  - php
+- How To
+- php
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/
 tags:
-  - Articulos wordpress
-  - contenido por defecto
-  - contenido por defecto en post wordpress
-mainclass: "dev"
-color: "#E64A19"
+- Articulos wordpress
+- contenido por defecto
+- contenido por defecto en post wordpress
+title: "C\xF3mo a\xF1adir contenido por defecto a los art\xEDculos en WordPress"
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/05/Screenshot-05302012-111511-AM1.png" alt="Wordpress" width="123px" height="116px" />
 Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al [feed del blog][2], que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.
 

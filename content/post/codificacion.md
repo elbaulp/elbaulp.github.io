@@ -1,13 +1,17 @@
 ---
-title: Codificación
-layout: post.amp
-permalink: /codificacion/
-lastmod: 2016-09-02
+author: alex
 categories:
-  - SO
-description: "Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes."
-mainclass: "articulos"
-color: "#F57C00"
+- SO
+color: '#F57C00'
+description: "Esta es la primera parte del temario que vamos a ver en Sistemas Operativos,
+  vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante
+  comprenderla, ya que es el lenguaje de los ordenadores, y nos servir\xE1 tambien
+  para el tema de redes."
+lastmod: 2016-09-02
+layout: post.amp
+mainclass: articulos
+permalink: /codificacion/
+title: "Codificaci\xF3n"
 ---
 
 Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes.

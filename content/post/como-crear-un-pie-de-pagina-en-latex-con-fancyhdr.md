@@ -1,22 +1,23 @@
 ---
-title: Cómo crear un pie de página en LaTeX con fancyhdr
-layout: post.amp
-permalink: /como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/
+author: alex
 categories:
-  - How To
-  - LaTeX
-tags:
-  - crear un pie de página en LaTeX
-  - fancyhdr
-  - personalizar pie de página latex
-  - pie de pagina latex
-  - latex
-  - fancy hdr
-  - latex nota al pie
+- How To
+- LaTeX
+color: '#B31917'
 image: 2013/05/latex_logo.png
 lastmod: 2016-08-13
-mainclass: "latex"
-color: "#B31917"
+layout: post.amp
+mainclass: latex
+permalink: /como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/
+tags:
+- "crear un pie de p\xE1gina en LaTeX"
+- fancyhdr
+- "personalizar pie de p\xE1gina latex"
+- pie de pagina latex
+- latex
+- fancy hdr
+- latex nota al pie
+title: "C\xF3mo crear un pie de p\xE1gina en LaTeX con fancyhdr"
 ---
 
 <figure>

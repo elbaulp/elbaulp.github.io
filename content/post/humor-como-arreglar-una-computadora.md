@@ -1,15 +1,16 @@
 ---
-title: '[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)'
-layout: post.amp
-permalink: /humor-como-arreglar-una-computadora/
-lastmod: 2016-09-08
+author: alex
 categories:
-  - curiosidades
-  - How To
-  - linux
-  - SO
-mainclass: "geek"
-color: "#262626"
+- curiosidades
+- How To
+- linux
+- SO
+color: '#262626'
+lastmod: 2016-09-08
+layout: post.amp
+mainclass: geek
+permalink: /humor-como-arreglar-una-computadora/
+title: '[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)'
 ---
 
 <figure>

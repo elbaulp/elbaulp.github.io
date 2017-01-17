@@ -1,14 +1,15 @@
 ---
-title: Humanstxt Creator. Somos personas, no máquinas
-layout: post.amp
-permalink: /humanstxt-creator-somos-personas-no/
-lastmod: 2016-09-07
-image: HumanstxtCreatorsomospersonasnomaquinas.png
+author: alex
 categories:
-  - internet
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- internet
+- noticias
+color: '#F57C00'
+image: HumanstxtCreatorsomospersonasnomaquinas.png
+lastmod: 2016-09-07
+layout: post.amp
+mainclass: articulos
+permalink: /humanstxt-creator-somos-personas-no/
+title: "Humanstxt Creator. Somos personas, no m\xE1quinas"
 ---
 
 <figure>

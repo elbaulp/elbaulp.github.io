@@ -1,22 +1,23 @@
 ---
-title: Viñetas Geek de Domingo (VI)
-
-layout: post.amp
-permalink: /vinetas-geek-de-domingo-vi/
+author: alex
 categories:
-  - Humor
-  - Geek
-tags:
-  - chiste grafico de informatica
-  - geek
-  - humor
-  - humor geek grafico
-  - humor informatico
-  - viñetas humor
+- Humor
+- Geek
+color: '#262626'
 format: gallery
-mainclass: "geek"
-color: "#262626"
+layout: post.amp
+mainclass: geek
+permalink: /vinetas-geek-de-domingo-vi/
+tags:
+- chiste grafico de informatica
+- geek
+- humor
+- humor geek grafico
+- humor informatico
+- "vi\xF1etas humor"
+title: "Vi\xF1etas Geek de Domingo (VI)"
 ---
+
 Disfrutad de lo que queda de fin de semana!
 
 <div id="gallery-6" class="gallery galleryid-1734 gallery-columns-1 gallery-size-thumbnail">

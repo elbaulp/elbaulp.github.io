@@ -1,24 +1,23 @@
 ---
-title: 'Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos'
-layout: post.amp
-permalink: /fundamentos-programacion-android_17/
-lastmod: 2016-09-17
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#689F38'
+lastmod: 2016-09-17
+layout: post.amp
+mainclass: android
+permalink: /fundamentos-programacion-android_17/
 tags:
-  - Actividades
-  - android
-  - curso android pdf
-  - Fundamentos programación Android
-  - Hilos
-  - Procesos
-  - Tareas
-mainclass: "android"
-color: "#689F38"
+- Actividades
+- android
+- curso android pdf
+- "Fundamentos programaci\xF3n Android"
+- Hilos
+- Procesos
+- Tareas
+title: "Fundamentos programaci\xF3n Android: Actividades, Tareas, Procesos e Hilos"
 ---
-
-
 
 ## Actividades y tareas
 

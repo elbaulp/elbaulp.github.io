@@ -1,21 +1,22 @@
 ---
-title: Enlaces de la semana (I)
-
-layout: post.amp
-permalink: /enlaces-de-la-semana-i-2/
+author: alex
 categories:
-  - Enlaces de la semana
-  - noticias
-tags:
-  - api twitter
-  - blogger
-  - DARPA
-  - privacidad facebook
-  - SQLite forense
+- Enlaces de la semana
+- noticias
+color: '#F57C00'
 format: link
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /enlaces-de-la-semana-i-2/
+tags:
+- api twitter
+- blogger
+- DARPA
+- privacidad facebook
+- SQLite forense
+title: Enlaces de la semana (I)
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Chain Links" src="/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.

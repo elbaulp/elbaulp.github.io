@@ -1,17 +1,19 @@
 ---
-title: 'Programación Android: Usando cursores'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-10-08
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-usando-cursores/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - Cursores Android
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- Cursores Android
+title: "Programaci\xF3n Android: Usando cursores"
 ---
+
 Cosas a saber sobre un cursor Android:
 
   * Un cursor es una colección de filas.

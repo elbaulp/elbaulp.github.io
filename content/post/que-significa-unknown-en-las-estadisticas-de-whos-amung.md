@@ -1,16 +1,18 @@
 ---
-title: '¿Qué significa &#8216;Unknown&#8217; en las estadísticas de Whos amung?'
-
-layout: post.amp
-permalink: /que-significa-unknown-en-las-estadisticas-de-whos-amung/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /que-significa-unknown-en-las-estadisticas-de-whos-amung/
 tags:
-  - estadisticas
-  - whos amung
-mainclass: "articulos"
-color: "#F57C00"
+- estadisticas
+- whos amung
+title: "\xBFQu\xE9 significa &#8216;Unknown&#8217; en las estad\xEDsticas de Whos
+  amung?"
 ---
+
 Si usas Whos amung como herramienta de monitorización de los usuarios actuales en tu web, seguro que alguna vez has visto unos cuantos visitantes que aparecen como **Unknown**.
 
 Al principio supuse que whos amung listaba a los bots accediendo a la página web como desconocidos, pero investigando un poco he descubierto que no solo lista a estos como tales.

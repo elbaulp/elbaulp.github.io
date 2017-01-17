@@ -1,15 +1,16 @@
 ---
-title: Cómo invertir una cadena en Unix
-
-layout: post.amp
-permalink: /como-invertir-una-cadena-en-unix/
+author: alex
 categories:
-  - How To
+- How To
+color: '#2196F3'
+description: "Existe un comando que realiza esta operaci\xF3n, `rev`. De acuerdo a
+  la descripci\xF3n que proporciona la documentaci\xF3n funciona de la siguiente manera"
+layout: post.amp
+mainclass: linux
+permalink: /como-invertir-una-cadena-en-unix/
 tags:
-  - invertir cadena
-description: "Existe un comando que realiza esta operación, `rev`. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera"
-mainclass: "linux"
-color: "#2196F3"
+- invertir cadena
+title: "C\xF3mo invertir una cadena en Unix"
 ---
 
 <figure>

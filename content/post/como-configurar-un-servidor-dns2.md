@@ -1,40 +1,41 @@
 ---
-title: 'Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)'
-layout: post.amp
-permalink: /como-configurar-un-servidor-dns2/
+author: alex
 categories:
-  - Administracion de Servidores
-  - Articulos
-  - internet
-tags:
-  - A records
-  - bind
-  - bind tutorial dns
-  - CNAME
-  - como crear dns localhost
-  - crear servidor dns
-  - como montar servidor dns
-  - como crear una zona primaria en dns
-  - configura un servidor dns
-  - configuración de servidores
-  - configuracion dns servidor dedicado
-  - configuracion refresco zona dns
-  - configuracion servidor dns
-  - configurar dns
-  - configurar servidor dns
-  - debian
-  - implementar servidor dns en debian
-  - MX records
-  - named.conf
-  - servidor debian
-  - servidor dns
-  - servidor dns debian
-  - servidores dns
-  - soa correo
+- Administracion de Servidores
+- Articulos
+- internet
+color: '#0097A7'
 image: 2013/04/dns.jpg
 lastmod: 2016-08-01
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /como-configurar-un-servidor-dns2/
+tags:
+- A records
+- bind
+- bind tutorial dns
+- CNAME
+- como crear dns localhost
+- crear servidor dns
+- como montar servidor dns
+- como crear una zona primaria en dns
+- configura un servidor dns
+- "configuraci\xF3n de servidores"
+- configuracion dns servidor dedicado
+- configuracion refresco zona dns
+- configuracion servidor dns
+- configurar dns
+- configurar servidor dns
+- debian
+- implementar servidor dns en debian
+- MX records
+- named.conf
+- servidor debian
+- servidor dns
+- servidor dns debian
+- servidores dns
+- soa correo
+title: "C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)"
 ---
 
 <figure>

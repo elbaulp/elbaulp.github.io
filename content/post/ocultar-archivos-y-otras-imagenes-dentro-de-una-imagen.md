@@ -1,20 +1,21 @@
 ---
-title: Ocultar archivos dentro de una imagen
-layout: post.amp
-permalink: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
+author: alex
 categories:
-  - C
-tags:
-  - estenografía
-  - ocultar archivos
-  - ocultar archivos en imagenes
-  - ocultar fichero foto
-  - ocultar imagenes en imagenes
-  - ocultar informacion en imagenes
+- C
+color: '#E64A19'
 lastmod: 2016-08-13
+layout: post.amp
+mainclass: dev
+permalink: /ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
 redirect_from: /programacion/ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/
-mainclass: "dev"
-color: "#E64A19"
+tags:
+- "estenograf\xEDa"
+- ocultar archivos
+- ocultar archivos en imagenes
+- ocultar fichero foto
+- ocultar imagenes en imagenes
+- ocultar informacion en imagenes
+title: Ocultar archivos dentro de una imagen
 ---
 
 <figure>

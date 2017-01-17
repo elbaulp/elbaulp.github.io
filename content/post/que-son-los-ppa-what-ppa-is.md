@@ -1,12 +1,13 @@
 ---
-title: ¿Qué son los PPA?
-layout: post.amp
-permalink: /que-son-los-ppa-what-ppa-is/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - linux
-mainclass: "linux"
-color: "#2196F3"
+- linux
+color: '#2196F3'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: linux
+permalink: /que-son-los-ppa-what-ppa-is/
+title: "\xBFQu\xE9 son los PPA?"
 ---
 
 Si quereis crear un PPA, encontrareis una explicación de como hacerlo [aquí][1].

@@ -1,14 +1,15 @@
 ---
-title: C++ syntax highlighted script
-layout: post.amp
-permalink: /c-syntax-highlighted-script/
+author: alex
 categories:
-  - linux
-  - script
+- linux
+- script
+color: '#2196F3'
 lang: en
 lastmod: 2016-08-15
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /c-syntax-highlighted-script/
+title: C++ syntax highlighted script
 ---
 
 I decided to create a small script that highlights the words reserved of c++.<br /> Here the code:

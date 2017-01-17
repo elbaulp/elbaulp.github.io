@@ -1,13 +1,14 @@
 ---
-title: 'Nueva guía: How the internet works'
+author: alex
+categories:
+- cursos
+- internet
+color: '#61B38D'
 lastmod: 2016-10-28
 layout: post.amp
+mainclass: misc
 permalink: /nueva-guia-how-internet-works/
-categories:
-  - cursos
-  - internet
-mainclass: "misc"
-color: "#61B38D"
+title: "Nueva gu\xEDa: How the internet works"
 ---
 
 <figure>

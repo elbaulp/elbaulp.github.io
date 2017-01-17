@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Insertando registros'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-10-20
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-insertando/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - Insertando registros
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- Insertando registros
+title: "Programaci\xF3n Android: Insertando registros"
 ---
 
 En la entrada anterior hablamos de cómo [obtener regístros][1] de los proveedores de contenidos (CV) usando [URIs][2]. Ahora vamos a ver como insertar registros.

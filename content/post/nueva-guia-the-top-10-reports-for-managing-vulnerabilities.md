@@ -1,24 +1,25 @@
 ---
-title: 'Nueva Guía: The Top 10 Reports for Managing Vulnerabilities'
-
-layout: post.amp
-permalink: /nueva-guia-the-top-10-reports-for-managing-vulnerabilities/
+author: alex
 categories:
-  - cursos
-  - noticias
+- cursos
+- noticias
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-the-top-10-reports-for-managing-vulnerabilities/
 tags:
-  - anti spam
-  - anti spyware
-  - internet
-  - security
-  - solutions
-  - technology
-  - virus
-  - vulnerabilities
-  - Vulnerabilities Security Management
-mainclass: "misc"
-color: "#61B38D"
+- anti spam
+- anti spyware
+- internet
+- security
+- solutions
+- technology
+- virus
+- vulnerabilities
+- Vulnerabilities Security Management
+title: "Nueva Gu\xEDa: The Top 10 Reports for Managing Vulnerabilities"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="The Top 10 Reports for Managing Vulnerabilities" src="/img/2013/07/The-Top-10-Reports-for-Managing-Vulnerabilities.jpg" width="250px" height="301px" />][1]
 
 This free guide covers the key aspects of the vulnerability management lifecycle and shows you what reports today&#8217;s best-in-class organizations are using to reduce risks on their network infrastructure.

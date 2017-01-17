@@ -1,12 +1,13 @@
 ---
-title: 'Programación para Juegos. Lección 4 . Programación orientada a eventos'
-layout: post.amp
-permalink: /programacion-para-juegos-leccion-4/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - juegos
-mainclass: "dev"
-color: "#E64A19"
+- juegos
+color: '#E64A19'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: dev
+permalink: /programacion-para-juegos-leccion-4/
+title: "Programaci\xF3n para Juegos. Lecci\xF3n 4 . Programaci\xF3n orientada a eventos"
 ---
 
 [Pueden descargar el código fuente de esta lección.][1]

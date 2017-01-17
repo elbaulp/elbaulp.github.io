@@ -1,21 +1,25 @@
 ---
-title: Configurar Log4j2 en Netbeans, un logger para Java
-layout: post.amp
-permalink: /configurar-log4j2-en-netbeans-un-logger-para-java/
+author: alex
 categories:
-  - Java
-tags:
-  - configurar log4j2
-  - instalar log4j2
-  - logger para java
-  - loggers
-  - loggers en aplicaciones
-description: "Log4j2 es un Logger para Java que descubrí hace poco y me gustó bastante. En éste artículo veremos cómo instalar y configurar Log4j2 en Netbeans. Aunque el proceso es similar para cualquier IDE."
+- Java
+color: '#D32F2F'
+description: "Log4j2 es un Logger para Java que descubr\xED hace poco y me gust\xF3
+  bastante. En \xE9ste art\xEDculo veremos c\xF3mo instalar y configurar Log4j2 en
+  Netbeans. Aunque el proceso es similar para cualquier IDE."
 image: 2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png
 lastmod: 2016-08-01
-mainclass: "java"
-color: "#D32F2F"
+layout: post.amp
+mainclass: java
+permalink: /configurar-log4j2-en-netbeans-un-logger-para-java/
+tags:
+- configurar log4j2
+- instalar log4j2
+- logger para java
+- loggers
+- loggers en aplicaciones
+title: Configurar Log4j2 en Netbeans, un logger para Java
 ---
+
 *Log4j2* es un *Logger* para Java que descubrí hace poco y me gustó bastante. En éste artículo veremos cómo instalar y configurar Log4j2 en Netbeans. Aunque el proceso es similar para cualquier IDE.
 
 

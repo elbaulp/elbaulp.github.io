@@ -1,24 +1,28 @@
 ---
-title: Cómo cifrar correos electrónicos con GPG usando Mailvelope
-layout: post.amp
-permalink: /como-cifrar-correos-con-gpg-con-mailvelope/
+author: alex
 categories:
-  - seguridad
-tags:
-  - correos gpg
-  - enviar correos cifrados
-  - instalar mailvelope en chrome
-  - instalar mailvelope en firefox
-  - tutorial mailvelope
-  - user gpg en correo
-  - como cifrar correos electrónicos
-  - gpg
+- seguridad
+color: '#F57C00'
+description: "En estos tiempos en los que est\xE1 claro que estamos sometidos a vigilancia
+  de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos
+  por la red. Hoy voy a explicar c\xF3mo configurar un plugin para Firefox y Chrome
+  que nos permitir\xE1 enviar correos de forma segura mediante GPG, Mailvelope."
 image: 2013/04/GnuPG-Logo.png
-introduction: "Cómo cifrar correos electrónicos con gpg y mailvelope"
-description: "En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante GPG, Mailvelope."
+introduction: "C\xF3mo cifrar correos electr\xF3nicos con gpg y mailvelope"
 lastmod: 2016-08-10
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /como-cifrar-correos-con-gpg-con-mailvelope/
+tags:
+- correos gpg
+- enviar correos cifrados
+- instalar mailvelope en chrome
+- instalar mailvelope en firefox
+- tutorial mailvelope
+- user gpg en correo
+- "como cifrar correos electr\xF3nicos"
+- gpg
+title: "C\xF3mo cifrar correos electr\xF3nicos con GPG usando Mailvelope"
 ---
 
 <figure>

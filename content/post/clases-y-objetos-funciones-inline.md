@@ -1,12 +1,13 @@
 ---
-title: 'Clases y Objetos - Funciones inline'
-layout: post.amp
-lastmod: 2016-09-04
-permalink: /clases-y-objetos-funciones-inline/
+author: alex
 categories:
-  - C
-mainclass: "dev"
-color: "#E64A19"
+- C
+color: '#E64A19'
+lastmod: 2016-09-04
+layout: post.amp
+mainclass: dev
+permalink: /clases-y-objetos-funciones-inline/
+title: Clases y Objetos - Funciones inline
 ---
 
 Podemos declarar y definir funciones dentro de la clase, para no tener que definirla a parte en su respectivo archivo .cpp: a estas funciones se las denomina inline.

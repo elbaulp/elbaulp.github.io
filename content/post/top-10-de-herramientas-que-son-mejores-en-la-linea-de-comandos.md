@@ -1,19 +1,24 @@
 ---
-title: 10 de las Mejores Herramientas en la Línea de Comandos
-
-layout: post.amp
-permalink: /top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/
+author: alex
 categories:
-  - Articulos
-  - linux
+- Articulos
+- linux
+color: '#F57C00'
+description: "Escribir commandos en una terminal puede parecer tedioso, pero con las
+  herramientas correctas, la l\xEDnea de comandos puede ser incre\xEDblemente poderosa.
+  Aqu\xED est\xE1n nuestras herramientas de l\xEDnea de comandos favoritas que hacen
+  impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gr\xE1fica
+  de Usuario)."
+layout: post.amp
+mainclass: articulos
+permalink: /top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/
 tags:
-  - comandos
-  - herramientas
-  - htop
-description: "Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario)."
-mainclass: "articulos"
-color: "#F57C00"
+- comandos
+- herramientas
+- htop
+title: "10 de las Mejores Herramientas en la L\xEDnea de Comandos"
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class=" wp-image-938 alignleft" title="Top 10 de las Mejores Herramientas en la Línea de Comandos" src="/img/2012/08/original1.jpg" alt="Comandos" width="640px" height="360px" />
 </figure>

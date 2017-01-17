@@ -1,19 +1,18 @@
 ---
-title: 'Fundamentos aplicaciones Android. (Parte I)'
-layout: post.amp
-lastmod: 2016-09-06
-permalink: /fundamentos-aplicaciones-android-parte/
+author: alex
 categories:
-  - android
-  - aplicaciones
-  - opensource
+- android
+- aplicaciones
+- opensource
+color: '#689F38'
+lastmod: 2016-09-06
+layout: post.amp
+mainclass: android
+permalink: /fundamentos-aplicaciones-android-parte/
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: Fundamentos aplicaciones Android. (Parte I)
 ---
-
-
 
 ## Vista rápida
 

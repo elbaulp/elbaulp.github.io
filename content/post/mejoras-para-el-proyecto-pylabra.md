@@ -1,14 +1,15 @@
 ---
-title: Mejoras para el proyecto PyLabra
-layout: post.amp
-lastmod: 2016-09-04
-permalink: /mejoras-para-el-proyecto-pylabra/
+author: alex
 categories:
-  - aplicaciones
-  - noticias
-  - opensource
-mainclass: "dev"
-color: "#E64A19"
+- aplicaciones
+- noticias
+- opensource
+color: '#E64A19'
+lastmod: 2016-09-04
+layout: post.amp
+mainclass: dev
+permalink: /mejoras-para-el-proyecto-pylabra/
+title: Mejoras para el proyecto PyLabra
 ---
 
 Ahora que tengo algo de tiempo, mi compañero y yo hemos decidido continuar con [PyLabra][1], al que queremos hacer algunas mejoras, como por ejemplo, la posibilidad de crear tantos vocabularios para idiomas como queramos, o poder realizar exámenes en los que la aplicación nos pregunte el significado de las palabras que tenemos almacenadas.

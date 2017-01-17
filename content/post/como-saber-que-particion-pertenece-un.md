@@ -1,13 +1,14 @@
 ---
-title: Cómo saber a qué partición pertenece un archivo en GNU/Linux
+author: alex
+categories:
+- How To
+- linux
+color: '#2196F3'
 lastmod: 2016-10-22
 layout: post.amp
+mainclass: linux
 permalink: /como-saber-que-particion-pertenece-un/
-categories:
-  - How To
-  - linux
-mainclass: "linux"
-color: "#2196F3"
+title: "C\xF3mo saber a qu\xE9 partici\xF3n pertenece un archivo en GNU/Linux"
 ---
 
 ¿Cómo podemos saber que el archivo */home/hkr/Desktop/combinaciones.cpp* pertenece a una partición específica?¿O cómo podemos saber en qué partición existe un archivo?

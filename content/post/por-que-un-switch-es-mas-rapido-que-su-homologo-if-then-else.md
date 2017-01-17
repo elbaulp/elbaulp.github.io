@@ -1,19 +1,20 @@
 ---
-title: Por qué un switch es más rápido que su homólogo if-then-else
-layout: post.amp
-permalink: /por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/
-lastmod: 2016-08-17
+author: alex
 categories:
-  - C
+- C
+color: '#E64A19'
+lastmod: 2016-08-17
+layout: post.amp
+mainclass: dev
+permalink: /por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/
 tags:
-  - asm
-  - ejemplo switch
-  - implementacion switch
-  - jump table
-  - switch
-  - tabla de salto
-mainclass: "dev"
-color: "#E64A19"
+- asm
+- ejemplo switch
+- implementacion switch
+- jump table
+- switch
+- tabla de salto
+title: "Por qu\xE9 un switch es m\xE1s r\xE1pido que su hom\xF3logo if-then-else"
 ---
 
 En este artículo pretendo explicar el motivo por el cual un switch es mucho más rápido que su homólogo en secuencias if-then-else, para ello analizaremos la implementación del switch.

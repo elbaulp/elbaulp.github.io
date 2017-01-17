@@ -1,20 +1,23 @@
 ---
-title: Crear un GridView con Adaptador personalizado en Android
-
-layout: post.amp
-permalink: /crear-un-gridview-con-adaptador-personalizado-en-android/
+author: alex
 categories:
-  - android
-tags:
-  - adaptador gridview
-  - crear gridview
-  - gridview android
-lastmod: 2015-12-23
+- android
+color: '#689F38'
+description: Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula
+  para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor
+  permite scrolling horizontal y vertical en sus interacciones.
 image: 2014/11/gridview-scrolling-horizontal.png
-description: "Un GridView es una AdapterView capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un ListView, este contenedor permite scrolling horizontal y vertical en sus interacciones."
-mainclass: "android"
-color: "#689F38"
+lastmod: 2015-12-23
+layout: post.amp
+mainclass: android
+permalink: /crear-un-gridview-con-adaptador-personalizado-en-android/
+tags:
+- adaptador gridview
+- crear gridview
+- gridview android
+title: Crear un GridView con Adaptador personalizado en Android
 ---
+
 > Éste artículo es una colaboración de **James Revelo Urrea**. Su blog es <a href="http://www.hermosaprogramacion.com" title="Blog del colaborador" target="_blank">www.hermosaprogramacion.com</a>. Muchas gracias.
 
 <figure>

@@ -1,22 +1,27 @@
 ---
-title: 'Crear un módulo para python con la Python C API (II) - Primer ejemplo'
-
-layout: post.amp
-permalink: /crear-modulo-python-con-python-c-api-2/
+author: alex
 categories:
-  - C
-  - python
-tags:
-  - embebiendo python en c++
-  - reference count python
-  - tutorial crear modulos python
-  - tutorial python c api
-image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
-description: "Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como *Hola **nombre,** desde la python C API!*. El módulo consistirá en una función llamada *saluda()* que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:"
+- C
+- python
+color: '#E64A19'
+description: "Continuando con nuestro art\xEDculo sobre la Python C API, esta vez
+  vamos a ver un ejemplo sencillo en el que crearemos un m\xF3dulo que imprima por
+  pantalla un mensaje, como *Hola **nombre,** desde la python C API!*. El m\xF3dulo
+  consistir\xE1 en una funci\xF3n llamada *saluda()* que recibir\xE1 una cadena de
+  texto usada como nombre para saludar. Una vez terminado podr\xE1 usarse as\xED:"
+image: "2013/03/Crear-un-m\xF3dulo-para-python-con-la-Python-C-API-Parte-I.png"
 lastmod: 2015-12-22
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /crear-modulo-python-con-python-c-api-2/
+tags:
+- embebiendo python en c++
+- reference count python
+- tutorial crear modulos python
+- tutorial python c api
+title: "Crear un m\xF3dulo para python con la Python C API (II) - Primer ejemplo"
 ---
+
 * [Crear un módulo para python con la Python C API (I) – Introducción][1]
 * Crear un módulo para python con la Python C API (II) – Primer ejemplo
 * [Crear un módulo para python con la Python C API (III) – DistUtils][2]

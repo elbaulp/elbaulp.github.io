@@ -1,22 +1,24 @@
 ---
-title: Chat y Foros de Próxima Generación, de pioneros del Código Abierto
-
-layout: post.amp
-permalink: /chat-y-foros-de-proxima-generacion-de-pioneros-del-codigo-abierto/
+author: alex
 categories:
-  - aplicaciones
-  - Articulos
-  - noticias
-  - opensource
-tags:
-  - chat
-  - Discourse
-  - Jeff Atwood
-  - stack Exchange
-description: "Insatisfecho con la experiencia en los actuales paquetes de software para foros, el co-fundador de Stack Exchange, Jeff Atwood, fundó el Civilized Discourse Construction kit"
+- aplicaciones
+- Articulos
+- noticias
+- opensource
+color: '#F57C00'
+description: "Insatisfecho con la experiencia en los actuales paquetes de software
+  para foros, el co-fundador de Stack Exchange, Jeff Atwood, fund\xF3 el Civilized
+  Discourse Construction kit"
 image: 2013/02/discourse-bcc00733a70b7ad2.png
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /chat-y-foros-de-proxima-generacion-de-pioneros-del-codigo-abierto/
+tags:
+- chat
+- Discourse
+- Jeff Atwood
+- stack Exchange
+title: "Chat y Foros de Pr\xF3xima Generaci\xF3n, de pioneros del C\xF3digo Abierto"
 ---
 
 Insatisfecho con la experiencia en los actuales paquetes de software para foros, el co-fundador de Stack Exchange, Jeff Atwood, fundó el *Civilized Discourse Construction <a href="http://www.codinghorror.com/blog/2013/02/civilized-discourse-construction-kit.html" target="_blank">Kit</a> Inc* para proponer un nuevo paquete que los reemplace. Este software, <a href="http://www.discourse.org/" target="_blank">Discourse</a>, de código abierto está construido con JavaScript, Ruby on Rails y PostgreSQL y, <a href="http://www.discourse.org/faq/" target="_blank">acorde</a> a los desarrolladores, puede ser usada en cualquier ocasión que se necesite una lista de mails o foro. Según dice el equipo: &#8220;Discourse es un reinicio desde cero, un intento de reimaginar cómo debería ser una plataforma de discusión moderna, sustentable y completamente open-source.&#8221;

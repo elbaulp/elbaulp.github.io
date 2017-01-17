@@ -1,18 +1,17 @@
 ---
-title: 'Consulta de Datos - Cláusula GROUP BY'
-layout: post.amp
-permalink: /consulta-de-datos-clausula-group-by/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-clausula-group-by/
 tags:
-  - group by
-  - orden group by sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- group by
+- orden group by sql
+title: "Consulta de Datos - Cl\xE1usula GROUP BY"
 ---
-
-
 
 ## Consultas agrupadas
 

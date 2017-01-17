@@ -1,14 +1,15 @@
 ---
-title: 'PL/SQL. Excepciones'
-layout: post.amp
-permalink: /plsql-excepciones/
-lastmod: 2016-08-31
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-31
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-excepciones/
 tags:
-  - ejecutar excepciones en sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- ejecutar excepciones en sql
+title: PL/SQL. Excepciones
 ---
 
 Anteriormente dijimos que un bloque de código puede contener una sección denominada `EXCEPTION`. Esta sección es la encargada de recoger todas las anomalías que se puedan producir dentro del bloque de código.

@@ -1,17 +1,19 @@
 ---
-title: Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE
+author: alex
+categories:
+- noticias
+- seguridad
+color: '#61B38D'
+image: hacking-y-seguridad-en-comunicaciones.jpg
 lastmod: 2016-10-08
 layout: post.amp
+mainclass: misc
 permalink: /hacking-y-seguridad-en-comunicaciones/
-image: hacking-y-seguridad-en-comunicaciones.jpg
-categories:
-  - noticias
-  - seguridad
 tags:
-  - comunicaciones moviles lte
-mainclass: "misc"
-color: "#61B38D"
+- comunicaciones moviles lte
+title: "Hacking y Seguridad en Comunicaciones M\xF3viles GSM / GPRS / UMTS / LTE"
 ---
+
 Os dejo un vídeo que demuestra como se puede suplantar la identidad de una red GSM / GPRS / UMTS / LTE.
 
 El vídeo es de la ***RootedCON 2011*** de este año.

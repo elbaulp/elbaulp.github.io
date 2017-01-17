@@ -1,19 +1,22 @@
 ---
-title: Algoritmos de caminos cortos.
-description: "Para hablar de este tipo de algoritmos, tengo que hacer una breve introducción a lo que es un grafo y cómo se representa en un ordenador."
-layout: post.amp
-permalink: /algoritmos-de-caminos-cortos/
+author: alex
 categories:
-  - Algoritmos
-  - C
-  - Inteligencia Artificial
+- Algoritmos
+- C
+- Inteligencia Artificial
+color: '#E64A19'
+description: "Para hablar de este tipo de algoritmos, tengo que hacer una breve introducci\xF3n
+  a lo que es un grafo y c\xF3mo se representa en un ordenador."
+layout: post.amp
+mainclass: dev
+permalink: /algoritmos-de-caminos-cortos/
 tags:
-  - algoritmo de dijkstra en c
-  - Algoritmo Dijkstra
-  - prim java algoritmo
-mainclass: "dev"
-color: "#E64A19"
+- algoritmo de dijkstra en c
+- Algoritmo Dijkstra
+- prim java algoritmo
+title: Algoritmos de caminos cortos.
 ---
+
 Para hablar de este tipo de algoritmos, tengo que hacer una breve introducción a lo que es un grafo y cómo se representa en un ordenador.
 
 Un grafo en el ámbito de las ciencias de la computación es una estructura de datos, en concreto un tipo abstracto de datos (TDA), que consiste en un conjunto de nodos (también llamados vértices) y un conjunto de arcos (aristas) que establecen relaciones entre los nodos. El concepto de grafo TDA desciende directamente del concepto matemático de grafo.

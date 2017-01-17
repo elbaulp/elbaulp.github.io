@@ -1,12 +1,13 @@
 ---
-title: Enlightenment Foundation Libraries (EFL)
-layout: post.amp
-permalink: /enlightenment-foundation-libraries-efl/
+author: alex
 categories:
-  - linux
+- linux
+color: '#2196F3'
 lastmod: 2016-08-01
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /enlightenment-foundation-libraries-efl/
+title: Enlightenment Foundation Libraries (EFL)
 ---
 
 Esta es mi primera entrada así que intentad ser amable conmigo.

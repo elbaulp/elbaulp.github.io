@@ -1,18 +1,17 @@
 ---
-title: 'Programación Android: Recursos - Plurales'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-26
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-plurales/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "Programaci\xF3n Android: Recursos - Plurales"
 ---
-
-
 
 ### Introducción
 

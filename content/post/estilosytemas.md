@@ -1,20 +1,20 @@
 ---
-title: 'Programación Android: Interfaz gráfica - Estilos y Temas'
-
-layout: post.amp
-permalink: /programacion-android-interfaz-grafica_18/
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-interfaz-grafica_18/
 tags:
-  - android diseñar gui
-  - como hacer interfaces graficas en android
-  - curso android pdf
-  - interfaces de usuario android
-  - interfaz grafica en android
-  - layout android
-mainclass: "android"
-color: "#689F38"
+- "android dise\xF1ar gui"
+- como hacer interfaces graficas en android
+- curso android pdf
+- interfaces de usuario android
+- interfaz grafica en android
+- layout android
+title: "Programaci\xF3n Android: Interfaz gr\xE1fica - Estilos y Temas"
 ---
 
 Un estilo es una colección de propiedades que especifican que aspecto ha de tener un objeto View o una ventana. Con los estilos podemos definir propiedades como la altura, relleno, color del texto, fondo etc. Los estilos en Android comparten la filosofía de las hojas de estílo en cascada (CSS), permitiendo separar el diseño del contenido.

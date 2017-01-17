@@ -1,21 +1,22 @@
 ---
-title: Nuevos Cursos disponibles en Udacity, la universidad online gratuita
-layout: post.amp
-permalink: /nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/
+author: alex
 categories:
-  - cursos
-  - internet
-  - noticias
-tags:
-  - criptografía
-  - cursos online
-  - programación
-  - reddit
-  - udacity
+- cursos
+- internet
+- noticias
+color: '#61B38D'
 format: status
 lastmod: 2016-08-05
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+permalink: /nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/
+tags:
+- "criptograf\xEDa"
+- cursos online
+- "programaci\xF3n"
+- reddit
+- udacity
+title: Nuevos Cursos disponibles en Udacity, la universidad online gratuita
 ---
 
 <figure>

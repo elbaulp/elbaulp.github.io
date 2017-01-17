@@ -1,13 +1,14 @@
 ---
-title: No dejes que los Astronautas de Arquitecturas te asusten
-
-layout: post.amp
-permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
+author: alex
 categories:
-  - Articulos
-mainclass: "articulos"
-color: "#F57C00"
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /dejes-que-los-astronautas-de-arquitecturas-te-asusten/
+title: No dejes que los Astronautas de Arquitecturas te asusten
 ---
+
 > Encontrar las confusas líneas divisorias entre lo **ideal**, lo **viable** y lo **inaceptable** es un dilema siempre vigente en el diseño y desarrollo de sistemas.
 >
 > Este texto me hizo reflexionar mucho sobre el tema, más que nada porque en general yo disiento con el autor, por lo tanto me replanteé y revalué mis razones y argumentos. Considero de todas formas que son **necesarios** los distintos puntos de vista a la hora de tomar decisiones, y que en el momento de poner en marcha un proyecto es bueno tener premeditadas estas cuestiones ya que influirán en las diferentes etapas del desarrollo.

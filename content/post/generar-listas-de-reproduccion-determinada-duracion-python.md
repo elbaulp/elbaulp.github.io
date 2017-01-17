@@ -1,31 +1,32 @@
 ---
-title: Generar listas de reproducción de una determinada duración con Python
-layout: post.amp
-permalink: /generar-listas-de-reproduccion-determinada-duracion-python/
+author: alex
 categories:
-  - python
-tags:
-  - listas de reproducción de duración fija
-  - música
-  - python
-  - script python
-  - python m3u parser
-  - playlist m3u
-  - python m3u
-  - listas 20 minutos
-  - from sys import argv
-  - python import mp4
-  - python mp4 to mp3
-  - python mp4 parser
-  - listas de reproducción personalizadas
-lastmod: 2016-06-12
-description: "Seguro que tú tambén escucas música mientras programas, a mi me gusta descansar cada 30 min siguiendo la técnica pomodoro. Pero mejor hacerlo escuchando música. Este script en python te ayudará."
+- python
+color: '#E64A19'
+description: "Seguro que t\xFA tamb\xE9n escucas m\xFAsica mientras programas, a mi
+  me gusta descansar cada 30 min siguiendo la t\xE9cnica pomodoro. Pero mejor hacerlo
+  escuchando m\xFAsica. Este script en python te ayudar\xE1."
 image: Generar-listas-de-reproduccion-de-una-determinada-duracion-con-Python.png
-mainclass: "dev"
-color: "#E64A19"
+lastmod: 2016-06-12
+layout: post.amp
+mainclass: dev
+permalink: /generar-listas-de-reproduccion-determinada-duracion-python/
+tags:
+- "listas de reproducci\xF3n de duraci\xF3n fija"
+- "m\xFAsica"
+- python
+- script python
+- python m3u parser
+- playlist m3u
+- python m3u
+- listas 20 minutos
+- from sys import argv
+- python import mp4
+- python mp4 to mp3
+- python mp4 parser
+- "listas de reproducci\xF3n personalizadas"
+title: "Generar listas de reproducci\xF3n de una determinada duraci\xF3n con Python"
 ---
-
-
 
 A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la <a href="http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro" title="Técnica pomodoro" target="_blank">técnica Pomodoro</a>, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.
 

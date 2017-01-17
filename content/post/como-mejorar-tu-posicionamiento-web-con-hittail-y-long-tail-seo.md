@@ -1,16 +1,17 @@
 ---
-title: Cómo mejorar tu posicionamiento web con HitTail y Long Tail SEO
-
-layout: post.amp
-permalink: /como-mejorar-tu-posicionamiento-web-con-hittail-y-long-tail-seo/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /como-mejorar-tu-posicionamiento-web-con-hittail-y-long-tail-seo/
 tags:
-  - definicion long tail seo
-  - que es long tail seo
-mainclass: "articulos"
-color: "#F57C00"
+- definicion long tail seo
+- que es long tail seo
+title: "C\xF3mo mejorar tu posicionamiento web con HitTail y Long Tail SEO"
 ---
+
 Hace apenas dos meses que descubrí navegando por internet esta herramienta, ***<a href="http://www.hittail.com" target="_blank">HitTail</a>*.** Permite incrementar significativamente tu posición en los motores de búsqueda tales como Google, Bing, DuckDuckGo, Yahoo etc usando una técnica llamada ***Long Tail SEO***.
 
 Si como yo nunca has oido hablar de este término, no te preocupes, a continuación intentaré explicarlo lo más claro posible (Traducido literalmente sería SEO de cola larga, aunque creo que una definición más acertada sería seguimiento SEO prolongado):

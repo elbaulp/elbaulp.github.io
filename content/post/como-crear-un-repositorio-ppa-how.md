@@ -1,14 +1,15 @@
 ---
-title: Como crear un PPA (Personal Package Archive)
-layout: post.amp
-permalink: /como-crear-un-repositorio-ppa-how/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - How To
-  - linux
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+- How To
+- linux
+- opensource
+color: '#F57C00'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: articulos
+permalink: /como-crear-un-repositorio-ppa-how/
+title: Como crear un PPA (Personal Package Archive)
 ---
 
 Hace poco hablé de qué eran los [sistemas de paquetes PPA][1], para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.

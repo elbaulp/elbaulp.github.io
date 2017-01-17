@@ -1,22 +1,23 @@
 ---
-title: Google y su humor en la documentación de Android
-
-layout: post.amp
-permalink: /google-y-su-humor-en-la-documentacion-de-android/
+author: alex
 categories:
-  - android
-  - Humor
+- android
+- Humor
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /google-y-su-humor-en-la-documentacion-de-android/
 tags:
-  - Humor Android
-  - humor desarrolladores android
-  - isUserAGoat android
-  - isUserAMonkey android
-  - LIKE_TRANSACTION android
-  - Log.wtf android
-  - TWEET_TRANSACTION android
-mainclass: "articulos"
-color: "#F57C00"
+- Humor Android
+- humor desarrolladores android
+- isUserAGoat android
+- isUserAMonkey android
+- LIKE_TRANSACTION android
+- Log.wtf android
+- TWEET_TRANSACTION android
+title: "Google y su humor en la documentaci\xF3n de Android"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/06/monkey-phone-300x269.jpg" alt="isUserAMonkey Android" width="300px" height="269px" />][1]
 Todos sabemos el humor que gastan chicos de Google, y a raiz de una pregunta en *<a href="http://stackoverflow.com/questions/13375357/proper-use-cases-for-android-usermanager-isuseragoat" target="_blank">stackoverflow</a>* descubrí que la documentación de Android tiene unos cuantos toques de humor de los de Mountain View. Así que decidí buscarlos y crear la siguiente recopilación:
 

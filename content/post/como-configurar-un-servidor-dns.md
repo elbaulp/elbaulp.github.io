@@ -1,45 +1,49 @@
 ---
-title: 'Cómo configurar un servidor DNS - Parte 1 (Introducción)'
-layout: post.amp
-permalink: /como-configurar-un-servidor-dns/
+author: alex
 categories:
-  - Administracion de Servidores
-  - Articulos
-  - internet
-tags:
-  - A records
-  - bind
-  - bind tutorial dns
-  - CNAME
-  - como configurar un servidor dns
-  - como montar servidor dns
-  - como crear dns localhost
-  - crear servidor dns
-  - como crear una zona primaria en dns
-  - configura un servidor dns
-  - configuracion de namedconf
-  - configuración de servidores
-  - configuracion dns servidor dedicado
-  - configuracion refresco zona dns
-  - configuracion servidor dns
-  - configurar bind9
-  - configurar dns
-  - configurar servidor dns
-  - debian
-  - implementar servidor dns en debian
-  - MX records
-  - named.conf
-  - servidor debian
-  - servidor dns
-  - servidor dns debian
-  - servidores dns
-  - soa correo
-  - configurar zona reversa en dns linux
+- Administracion de Servidores
+- Articulos
+- internet
+color: '#0097A7'
+description: "En esta serie de art\xEDculos, intentar\xE9 explicar lo mejor posible
+  el funcionamiento de los servidores DNS, y c\xF3mo configurar el tuyo propio. Habr\xE1
+  una parte m\xE1s te\xF3rica sobre el funcionamiento del sistema, que es una traducci\xF3n
+  de un art\xEDculo en howtoforge."
 image: 2013/04/dns.jpg
-description: "En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge."
 lastmod: 2016-08-01
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /como-configurar-un-servidor-dns/
+tags:
+- A records
+- bind
+- bind tutorial dns
+- CNAME
+- como configurar un servidor dns
+- como montar servidor dns
+- como crear dns localhost
+- crear servidor dns
+- como crear una zona primaria en dns
+- configura un servidor dns
+- configuracion de namedconf
+- "configuraci\xF3n de servidores"
+- configuracion dns servidor dedicado
+- configuracion refresco zona dns
+- configuracion servidor dns
+- configurar bind9
+- configurar dns
+- configurar servidor dns
+- debian
+- implementar servidor dns en debian
+- MX records
+- named.conf
+- servidor debian
+- servidor dns
+- servidor dns debian
+- servidores dns
+- soa correo
+- configurar zona reversa en dns linux
+title: "C\xF3mo configurar un servidor DNS - Parte 1 (Introducci\xF3n)"
 ---
 
 <figure>

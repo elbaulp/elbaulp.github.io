@@ -1,12 +1,13 @@
 ---
-title: Estadísticas del blog en 2011
-layout: post.amp
-lastmod: 2016-10-26
-permalink: /estadisticas-del-blog-en-2011/
+author: alex
 categories:
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- noticias
+color: '#F57C00'
+lastmod: 2016-10-26
+layout: post.amp
+mainclass: articulos
+permalink: /estadisticas-del-blog-en-2011/
+title: "Estad\xEDsticas del blog en 2011"
 ---
 
 En esta entrada voy a dar a conocer los datos estadísticos del blog en este prácticamente acabado 2011. En líneas generales ha mejorado bastante con respecto al 2010.

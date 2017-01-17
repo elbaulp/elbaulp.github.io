@@ -1,15 +1,16 @@
 ---
-title: 'Nuevo Proyecto Android: Fav Sites'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-21
 layout: post.amp
+mainclass: android
 permalink: /estoy-trabajando-en-una-aplicacion/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: 'Nuevo Proyecto Android: Fav Sites'
 ---
 
 Estoy trabajando en una aplicación Android que consiste en almacenar los lugares favoritos del usuario en un mapa, debido al tiempo que dedico a la misma, estos días no he podido seguir publicando entradas sobre [Programación Android][1], en breve seguiré con el ritmo de publicación.

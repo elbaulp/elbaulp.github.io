@@ -1,48 +1,50 @@
 ---
-title: 20 ejemplos de iptables para SysAdmins novatos
-layout: post.amp
-permalink: /20-ejemplos-de-iptables-para-sysadmins/
+author: alex
 categories:
-  - aplicaciones
-  - internet
-  - linux
-  - seguridad
-tags:
-  - agregar regla de iptables
-  - bloquear acceso a ssh mediante iptables
-  - bloquear direccion iptables
-  - comando iptables
-  - comando iptables linux
-  - configurando iptables debian wheezy
-  - configurar iptables
-  - configurar iptables en debian
-  - ejemplos de firewall
-  - ejemplos iptables
-  - filtrar dominios com iptables
-  - iptables
-  - iptables con servidor debian
-  - iptables eliminar regla
-  - iptables fedora 16 como
-  - iptables mangle
-  - iptables tutorial
-  - politicas con iptables firewall
-  - reglas iptable
-  - ver reglas iptable
-  - iptables ejemlos
-  - comandos iptables
-  - iptables bloquear ping
-  - iptables listar reglas
-description: "netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red."
+- aplicaciones
+- internet
+- linux
+- seguridad
+color: '#0097A7'
+description: "netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux
+  que permiten a los m\xF3dulos del kernel registrar funciones callbacks con la pila
+  de red. Una funci\xF3n callback registrada se llama entonces para cada paquete que
+  atraviesa el hook correspondiente dentro de la pila de red."
 image: 20-ejemplos-de-iptables-para-sysadmins.png
+layout: post.amp
+mainclass: servidores
+permalink: /20-ejemplos-de-iptables-para-sysadmins/
 redirect_from:
-  - /internet/20-ejemplos-de-iptables-para-sysadmins/
-  - /2011/12/20-ejemplos-de-iptables-para-sysadmins.html
-  - /internet/20-ejemplos-de-iptables-para-sysadmins
-mainclass: "servidores"
-color: "#0097A7"
+- /internet/20-ejemplos-de-iptables-para-sysadmins/
+- /2011/12/20-ejemplos-de-iptables-para-sysadmins.html
+- /internet/20-ejemplos-de-iptables-para-sysadmins
+tags:
+- agregar regla de iptables
+- bloquear acceso a ssh mediante iptables
+- bloquear direccion iptables
+- comando iptables
+- comando iptables linux
+- configurando iptables debian wheezy
+- configurar iptables
+- configurar iptables en debian
+- ejemplos de firewall
+- ejemplos iptables
+- filtrar dominios com iptables
+- iptables
+- iptables con servidor debian
+- iptables eliminar regla
+- iptables fedora 16 como
+- iptables mangle
+- iptables tutorial
+- politicas con iptables firewall
+- reglas iptable
+- ver reglas iptable
+- iptables ejemlos
+- comandos iptables
+- iptables bloquear ping
+- iptables listar reglas
+title: 20 ejemplos de iptables para SysAdmins novatos
 ---
-
-
 
 Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:
 

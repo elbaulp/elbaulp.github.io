@@ -1,12 +1,13 @@
 ---
-title: 'Consulta de Datos - Cláusula FROM'
-layout: post.amp
-permalink: /consulta-de-datos-clausula-from/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-clausula-from/
+title: "Consulta de Datos - Cl\xE1usula FROM"
 ---
 
 En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. Las tablas deben existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  Su sintaxis es :

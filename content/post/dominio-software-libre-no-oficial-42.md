@@ -1,13 +1,14 @@
 ---
-title: 'Dominio software libre -no oficial- “.42″ disponible'
-layout: post.amp
-permalink: /dominio-software-libre-no-oficial-42/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - noticias
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+- noticias
+- opensource
+color: '#F57C00'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: articulos
+permalink: /dominio-software-libre-no-oficial-42/
+title: "Dominio software libre -no oficial- \u201C.42\u2033 disponible"
 ---
 
 Para poder hacer frente a la ICANN, organización de Estados Unidos que gestiona los DNS raíz de Internet, y para fomentar la neutralidad en la Red ha nacido .42, un dominio, por el momento no oficial, de primer nivel que surge con la premisa de crear un Internet abierto y orientado al software libre.

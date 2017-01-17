@@ -1,15 +1,16 @@
 ---
-title: 'Tech Comics: “Geek en el oculista” [HUMOR]'
+author: alex
+categories:
+- curiosidades
+- Humor
+- meme
+color: '#262626'
+image: geek-eye-doctor.jpg
 lastmod: 2016-10-08
 layout: post.amp
+mainclass: geek
 permalink: /tech-comics-geek-en-el-oculista-humor/
-image: geek-eye-doctor.jpg
-categories:
-  - curiosidades
-  - Humor
-  - meme
-mainclass: "geek"
-color: "#262626"
+title: "Tech Comics: \u201CGeek en el oculista\u201D [HUMOR]"
 ---
 
 <figure>

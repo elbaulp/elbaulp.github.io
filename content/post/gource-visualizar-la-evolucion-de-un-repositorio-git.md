@@ -1,23 +1,24 @@
 ---
-title: 'Gource: Visualizar la evolución de un repositorio Git'
-
-layout: post.amp
-permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/
+author: alex
 categories:
-  - aplicaciones
-  - opensource
-tags:
-  - como instalar gource
-  - gource git
-  - grabar video con gource
-  - tutorial gource
-  - gource tutorial
+- aplicaciones
+- opensource
+color: '#F57C00'
+description: Tutorial de gource y ejemplo de uso
 image: 2013/05/gourceGit-1024x804.png
-description: "Tutorial de gource y ejemplo de uso"
 lastmod: 2015-12-13
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /gource-visualizar-la-evolucion-de-un-repositorio-git/
+tags:
+- como instalar gource
+- gource git
+- grabar video con gource
+- tutorial gource
+- gource tutorial
+title: "Gource: Visualizar la evoluci\xF3n de un repositorio Git"
 ---
+
 Hace unas semanas hablé de [logstalgia][1], que visualiza las visitas a una web en forma del juego Pong. Hoy hablo de *Gource*, herramienta similar que visualiza la evolución de un repositorio en [git][2].
 
 <!--more-->

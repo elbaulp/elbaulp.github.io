@@ -1,18 +1,19 @@
 ---
-title: Evolución de las distribuciones GNU/Linux, de 1992 a 2016
-layout: post.amp
-permalink: /linea-cronologica-de-distribuciones/
-image: linea-cronologica-de-distribuciones.png
-introduction: "Visualización de la evolución de las distribuciones GNU/Linux"
-description: "Visualización de la evolución de las distribuciones GNU/Linux"
-lastmod: 2016-09-01
-date: 2016-09-01
+author: alex
 categories:
-  - curiosidades
-  - linux
-  - opensource
-mainclass: "linux"
-color: "#2196F3"
+- curiosidades
+- linux
+- opensource
+color: '#2196F3'
+date: 2016-09-01
+description: "Visualizaci\xF3n de la evoluci\xF3n de las distribuciones GNU/Linux"
+image: linea-cronologica-de-distribuciones.png
+introduction: "Visualizaci\xF3n de la evoluci\xF3n de las distribuciones GNU/Linux"
+lastmod: 2016-09-01
+layout: post.amp
+mainclass: linux
+permalink: /linea-cronologica-de-distribuciones/
+title: "Evoluci\xF3n de las distribuciones GNU/Linux, de 1992 a 2016"
 ---
 
 <figure>

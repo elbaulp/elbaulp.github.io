@@ -1,21 +1,23 @@
 ---
-title: 'Crear un módulo para python con la Python C API (III) - DistUtils'
-
-layout: post.amp
-permalink: /crear-modulo-python-con-python-c-api-3-distutils/
+author: alex
 categories:
-  - C
-  - python
-tags:
-  - embebiendo python en c++
-  - reference count python
-  - tutorial crear modulos python
-  - tutorial python c api
-image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
-description: "Como dijimos en la entrada anterior, vamos a hablar de *DistUtils*, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API."
+- C
+- python
+color: '#E64A19'
+description: "Como dijimos en la entrada anterior, vamos a hablar de *DistUtils*,
+  una herramienta con la que seremos capaces de automatizar el proceso de compilaci\xF3n
+  e instalaci\xF3n de nuestro m\xF3dulo creado con la Python C API."
+image: "2013/03/Crear-un-m\xF3dulo-para-python-con-la-Python-C-API-Parte-I.png"
 lastmod: 2015-12-22
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /crear-modulo-python-con-python-c-api-3-distutils/
+tags:
+- embebiendo python en c++
+- reference count python
+- tutorial crear modulos python
+- tutorial python c api
+title: "Crear un m\xF3dulo para python con la Python C API (III) - DistUtils"
 ---
 
 * [Crear un módulo para python con la Python C API (I) – Introducción][1]

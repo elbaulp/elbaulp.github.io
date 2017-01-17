@@ -1,19 +1,18 @@
 ---
-title: 'Programación Android: Recursos - Layout'
-layout: post.amp
-permalink: /programacion-android-recursos-layout/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - curso android pdf
-  - layout android
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-20
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-recursos-layout/
+tags:
+- curso android pdf
+- layout android
+title: "Programaci\xF3n Android: Recursos - Layout"
 ---
-
-
 
 ## Introducción
 

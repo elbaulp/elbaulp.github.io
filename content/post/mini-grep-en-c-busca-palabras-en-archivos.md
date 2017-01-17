@@ -1,20 +1,21 @@
 ---
-title: Mini grep en C++, busca palabras en archivos
-
-layout: post.amp
-permalink: /mini-grep-en-c-busca-palabras-en-archivos/
+author: alex
 categories:
-  - aplicaciones
-  - C
-  - opensource
+- aplicaciones
+- C
+- opensource
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /mini-grep-en-c-busca-palabras-en-archivos/
 tags:
-  - buscar palabra fichero c
-  - comandos
-  - cpp
-  - grep
-mainclass: "dev"
-color: "#E64A19"
+- buscar palabra fichero c
+- comandos
+- cpp
+- grep
+title: Mini grep en C++, busca palabras en archivos
 ---
+
 Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:
 Para buscar una palabra:
 

@@ -1,20 +1,21 @@
 ---
-title: Cómo instalar el IDE Android Studio en Linux y pequeña guía de uso
-
-layout: post.amp
-permalink: /como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/
+author: alex
 categories:
-  - android
-  - How To
+- android
+- How To
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/
 tags:
-  - caracteristicas android Studio
-  - guia android studio
-  - instalar android studio
-  - manuales android studio
-  - tutorial android studio
-mainclass: "android"
-color: "#689F38"
+- caracteristicas android Studio
+- guia android studio
+- instalar android studio
+- manuales android studio
+- tutorial android studio
+title: "C\xF3mo instalar el IDE Android Studio en Linux y peque\xF1a gu\xEDa de uso"
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/05/AndroidStudio.png" alt="AndroidStudio" width="402px" height="302px" />
 Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en <a href="http://developer.android.com/sdk/installing/studio.html" target="_blank">developer.android.com</a>. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.
 

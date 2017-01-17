@@ -1,22 +1,24 @@
 ---
-title: 'Crear un módulo para python con la Python C API (IV) - HerramientasRed'
-
-layout: post.amp
-permalink: /crear-modulo-python-con-python-c-api-4/
+author: alex
 categories:
-  - C
-  - python
+- C
+- python
+color: '#E64A19'
+description: "Lleg\xF3 el momento de crear un m\xF3dulo con la Python C API algo m\xE1s
+  complejo, como dijimos en la primera parte, crearemos un m\xF3dulo llamado **herramientasRed**
+  que permita obtener la direcci\xF3n IP de un dominio, algo parecido a lo que hicimos
+  en NDK-gdb \u2013 Depurar aplicaciones en el NKD de Android."
+image: "2013/03/Crear-un-m\xF3dulo-para-python-con-la-Python-C-API-Parte-I.png"
+lastmod: 2015-12-22
+layout: post.amp
+mainclass: dev
+permalink: /crear-modulo-python-con-python-c-api-4/
 tags:
-  - embebiendo python en c++
-  - reference count python
-  - tutorial crear modulos python
-  - tutorial python c api
-lastmod: 2015-12-22
-image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
-description: "Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado **herramientasRed** que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en NDK-gdb – Depurar aplicaciones en el NKD de Android."
-lastmod: 2015-12-22
-mainclass: "dev"
-color: "#E64A19"
+- embebiendo python en c++
+- reference count python
+- tutorial crear modulos python
+- tutorial python c api
+title: "Crear un m\xF3dulo para python con la Python C API (IV) - HerramientasRed"
 ---
 
 * [Crear un módulo para python con la Python C API (I) – Introducción][1]

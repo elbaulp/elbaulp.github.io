@@ -1,18 +1,19 @@
 ---
-title: Detectar archivos PNG con C++
-
-layout: post.amp
-permalink: /detectar-archivos-png-con-c/
+author: alex
 categories:
-  - C
+- C
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /detectar-archivos-png-con-c/
 tags:
-  - imgen png
-  - leer formato archivos png
-  - leer imagen png c++
-  - ocultar imagenes en imagenes
-mainclass: "dev"
-color: "#E64A19"
+- imgen png
+- leer formato archivos png
+- leer imagen png c++
+- ocultar imagenes en imagenes
+title: Detectar archivos PNG con C++
 ---
+
 Hace un tiempo trasteando con una librería que nos proporcionaron en la facultad (desarrollada por J.Baena y A. Garrido para las asignaturas de introducción a la programación en la ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación en Granada] de la UGR, Universidad de Granada.) para leer imágenes PGM y PPM, me propuse añadirle la capacidad de leer, o al menos detectar imágenes PNG, teniendo el permiso de ambos autores para publicar parte de la librería.
 
 Por supuesto existen librerías que ya hacen este trabajo, como <a href="http://www.libpng.org/pub/png/libpng.html" target="_blank">libpng</a>, pero quise intentarlo con fines didácticos. Y lo comparto con vosotros.

@@ -1,13 +1,15 @@
 ---
-title: 'Humor gráfico - Informáticos, Programadores, geeks - 9GAG.COM Parte (II)'
+author: alex
+categories:
+- curiosidades
+- Humor
+color: '#262626'
 lastmod: 2016-10-22
 layout: post.amp
+mainclass: geek
 permalink: /humor-grafico-informaticos/
-categories:
-  - curiosidades
-  - Humor
-mainclass: "geek"
-color: "#262626"
+title: "Humor gr\xE1fico - Inform\xE1ticos, Programadores, geeks - 9GAG.COM Parte
+  (II)"
 ---
 
 Siguiendo con la costumbre de publicar de vez en cuando [imágenes de humor][1] relacionadas con la tecnología y la informática os traigo una nueva recopilación extraida de 9gag.com:

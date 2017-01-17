@@ -1,20 +1,23 @@
 ---
-title: 'Fugas de memoria en Android: Handlers & Clases Internas'
-layout: post.amp
-permalink: /fugas-de-memoria-android-handlers-clases-internas/
+author: alex
 categories:
-  - android
-tags:
-  - fugas de memoria en Android
-  - fugas de memoria handlers
-  - fugas de memoria Java
-  - fugas de memoria runnable
-  - memory leaks
-description: "Éste artículo es una traducción del blog de Alex Lockwood. Gracias por el permiso."
+- android
+color: '#689F38'
+description: "\xC9ste art\xEDculo es una traducci\xF3n del blog de Alex Lockwood.
+  Gracias por el permiso."
 lastmod: 2015-12-22
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /fugas-de-memoria-android-handlers-clases-internas/
+tags:
+- fugas de memoria en Android
+- fugas de memoria handlers
+- fugas de memoria Java
+- fugas de memoria runnable
+- memory leaks
+title: 'Fugas de memoria en Android: Handlers & Clases Internas'
 ---
+
 > Éste artículo es una traducción del blog de [Alex Lockwood][1]. Gracias por el permiso.
 
 Seamos directos, consideremos el siguiente código:

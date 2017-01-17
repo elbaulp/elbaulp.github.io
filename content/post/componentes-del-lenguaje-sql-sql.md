@@ -1,15 +1,14 @@
 ---
-title: Componentes del lenguaje SQL
-layout: post.amp
-permalink: /componentes-del-lenguaje-sql-sql/
-lastmod: 2016-08-15
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-15
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /componentes-del-lenguaje-sql-sql/
+title: Componentes del lenguaje SQL
 ---
-
-
 
 ### Tipos de Datos
 

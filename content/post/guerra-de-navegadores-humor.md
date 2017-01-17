@@ -1,15 +1,16 @@
 ---
-title: 'Guerra de navegadores [Humor]'
+author: alex
+categories:
+- aplicaciones
+- curiosidades
+- internet
+color: '#262626'
+image: guerra-de-navegadores-humor.jpg
 lastmod: 2016-10-08
 layout: post.amp
+mainclass: geek
 permalink: /guerra-de-navegadores-humor/
-image: guerra-de-navegadores-humor.jpg
-categories:
-  - aplicaciones
-  - curiosidades
-  - internet
-mainclass: "geek"
-color: "#262626"
+title: Guerra de navegadores [Humor]
 ---
 
 <figure>

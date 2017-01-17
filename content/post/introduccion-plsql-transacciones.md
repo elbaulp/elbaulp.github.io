@@ -1,14 +1,15 @@
 ---
-title: 'Introducción a PL/SQL. Transacciones'
-layout: post.amp
-permalink: /introduccion-plsql-transacciones/
-lastmod: 2016-08-23
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-23
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /introduccion-plsql-transacciones/
 tags:
-  - transacciones sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- transacciones sql
+title: "Introducci\xF3n a PL/SQL. Transacciones"
 ---
 
 ### Transacciones

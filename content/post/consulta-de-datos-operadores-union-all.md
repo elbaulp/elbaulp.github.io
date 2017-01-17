@@ -1,14 +1,15 @@
 ---
-title: 'Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.'
-layout: post.amp
-permalink: /consulta-de-datos-operadores-union-all/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-operadores-union-all/
 tags:
-  - MINUS pl sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- MINUS pl sql
+title: Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.
 ---
 
 Podemos combinar múltiples consultas utilizando los operadores `UNION, UNION ALL, INTERSECT y MINUS`.

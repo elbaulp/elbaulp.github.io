@@ -1,19 +1,19 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) - DROP'
-layout: post.amp
-permalink: /lenguaje-definicion-de-datosddl-drop/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /lenguaje-definicion-de-datosddl-drop/
 tags:
-  - clausulas del ddl
-  - concepto de ddl
-  - que es un ddl
-  - sentencias dml y ddl
-mainclass: "BaseDeDatos"
-color: "#009688"
+- clausulas del ddl
+- concepto de ddl
+- que es un ddl
+- sentencias dml y ddl
+title: "Lenguaje Definici\xF3n de Datos (DDL) - DROP"
 ---
-
 
 En el anterior post vimos la orden [CREATE.][1]
 

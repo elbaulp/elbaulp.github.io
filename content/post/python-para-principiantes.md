@@ -1,13 +1,15 @@
 ---
-title: Python para principiantes
-layout: post.amp
-lastmod: 2016-08-31
-permalink: /python-para-principiantes/
+author: alex
 categories:
-  - python
-mainclass: "dev"
-color: "#E64A19"
+- python
+color: '#E64A19'
+lastmod: 2016-08-31
+layout: post.amp
+mainclass: dev
+permalink: /python-para-principiantes/
+title: Python para principiantes
 ---
+
 He encontrado un tutorial de python para Newbies (Principiantes) muy completo y que me parece muy interesante. La única pega es que está en inglés. Pero creo que todos los que nos dedicamos a la programación y la informática en general, tenemos asumido que los mejores manuales, tutoriales y practimente todo, son los que están escritos en inglés, hasta que alguien los traduce.
 
 <!--more-->

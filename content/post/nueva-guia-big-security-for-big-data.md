@@ -1,20 +1,21 @@
 ---
-title: 'Nueva Guía: Big Security for Big Data'
-
-layout: post.amp
-permalink: /nueva-guia-big-security-for-big-data/
+author: alex
 categories:
-  - cursos
-  - noticias
+- cursos
+- noticias
+color: '#61B38D'
+description: The multitude of devices, users, and generated traffic all combine to
+  create a proliferation of data that is being created with incredible volume, velocity,
+  and variety.
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-big-security-for-big-data/
 tags:
-  - descargar Big Security for Big Data
-  - download Big Security for Big Data
-description: "The multitude of devices, users, and generated traffic all combine to create a proliferation of data that is being created with incredible volume, velocity, and variety."
-mainclass: "dev"
-color: "#E64A19"
-mainclass: "misc"
-color: "#61B38D"
+- descargar Big Security for Big Data
+- download Big Security for Big Data
+title: "Nueva Gu\xEDa: Big Security for Big Data"
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/04/BigSecurityforBigData-232x300.jpg" alt="Nueva Guía: Big Security for Big Data" title="Nueva Guía: Big Security for Big Data" width="232px" height="300px" />
 </figure>

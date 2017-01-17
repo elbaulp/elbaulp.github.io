@@ -1,16 +1,17 @@
 ---
-title: El top 500 de los supercomputadores más potentes del mundo
-
-layout: post.amp
-permalink: /el-top-500-de-los-supercomputadores-mas/
+author: alex
 categories:
-  - curiosidades
-  - internet
+- curiosidades
+- internet
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /el-top-500-de-los-supercomputadores-mas/
 tags:
-  - top 500 supercomputadoras mundo
-mainclass: "articulos"
-color: "#F57C00"
+- top 500 supercomputadoras mundo
+title: "El top 500 de los supercomputadores m\xE1s potentes del mundo"
 ---
+
 <div >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg"  />
 </div>

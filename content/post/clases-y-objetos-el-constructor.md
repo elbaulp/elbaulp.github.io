@@ -1,15 +1,14 @@
 ---
-title: 'Clases y Objetos. El Constructor'
-layout: post.amp
-lastmod: 2016-09-04
-permalink: /clases-y-objetos-el-constructor/
+author: alex
 categories:
-  - C
-mainclass: "dev"
-color: "#E64A19"
+- C
+color: '#E64A19'
+lastmod: 2016-09-04
+layout: post.amp
+mainclass: dev
+permalink: /clases-y-objetos-el-constructor/
+title: Clases y Objetos. El Constructor
 ---
-
-
 
 ## Constructores
 

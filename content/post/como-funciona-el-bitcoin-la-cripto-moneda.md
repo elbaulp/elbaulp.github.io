@@ -1,21 +1,23 @@
 ---
-title: Cómo funciona el Bitcoin, la cripto-moneda
-layout: post.amp
-permalink: /como-funciona-el-bitcoin-la-cripto-moneda/
+author: alex
 categories:
-  - Security Now
+- Security Now
+color: '#00BCD4'
+layout: post.amp
+mainclass: security-now
+permalink: /como-funciona-el-bitcoin-la-cripto-moneda/
 tags:
-  - bitcoin es
-  - como funciona bitcoin
-  - cómo funciona el bitcoin
-  - explicación bitcoin
-  - qué es el bitcoin
-  - red bitcoin
-  - sistema bitcoin
-  - webs aceptan bitcoin
-mainclass: "security-now"
-color: "#00BCD4"
+- bitcoin es
+- como funciona bitcoin
+- "c\xF3mo funciona el bitcoin"
+- "explicaci\xF3n bitcoin"
+- "qu\xE9 es el bitcoin"
+- red bitcoin
+- sistema bitcoin
+- webs aceptan bitcoin
+title: "C\xF3mo funciona el Bitcoin, la cripto-moneda"
 ---
+
 Hace mucho tiempo que se empezó a hablar sobre el bitcoin y su futuro como moneda digital. Si como yo te has preguntado cómo funciona y quieres saber más acerca de todo el sistema que rodea al bitcoin, en este artículo traduciré el episodio *287 - BitCoin CryptoCurrency* del programa [Security Now!][1]
 
 Bicoint fue creado por el criptógrafo Japonés Satoshi Nakamoto y es [open source][2].

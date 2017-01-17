@@ -1,20 +1,19 @@
 ---
-title: 'Fundamentos programación Android: Conceptos básicos y componentes'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-16
 layout: post.amp
+mainclass: android
 permalink: /fundamentos-programacion-android/
-categories:
-  - android
-  - opensource
 tags:
-  - conceptos básicos y componentes Android
-  - curso android pdf
-  - Fundamentos programación Android
-mainclass: "android"
-color: "#689F38"
+- "conceptos b\xE1sicos y componentes Android"
+- curso android pdf
+- "Fundamentos programaci\xF3n Android"
+title: "Fundamentos programaci\xF3n Android: Conceptos b\xE1sicos y componentes"
 ---
-
-
 
 ## Conceptos básicos
 

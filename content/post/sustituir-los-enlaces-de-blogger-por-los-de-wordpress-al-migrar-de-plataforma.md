@@ -1,20 +1,27 @@
 ---
-title: Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma
-
-layout: post.amp
-permalink: /sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/
+author: alex
 categories:
-  - How To
-tags:
-  - cambiar enlaces de blogger a wordpress
-  - migrar blogger wordpress
-  - url de blogger a wordpress
-lastmod: 2015-12-28
-description: "Hace tiempo, cuando migramos de blogger a WordPress escribimos un artículo sobre cómo realizar la migración sin perder el posicionamiento web. Una parte fundamental para mantener ese posicionamiento es conseguir que los enlaces sigan funcionando. Para ello existe un plugin que he estado usando hasta ahora. Sin embargo he decicido dejar de usarlo y sustituir todos los enlaces antiguos por los nuevos usando expresiones regulares. En éste artículo veremos cómo aplicar este cambio."
+- How To
+color: '#F57C00'
+description: "Hace tiempo, cuando migramos de blogger a WordPress escribimos un art\xEDculo
+  sobre c\xF3mo realizar la migraci\xF3n sin perder el posicionamiento web. Una parte
+  fundamental para mantener ese posicionamiento es conseguir que los enlaces sigan
+  funcionando. Para ello existe un plugin que he estado usando hasta ahora. Sin embargo
+  he decicido dejar de usarlo y sustituir todos los enlaces antiguos por los nuevos
+  usando expresiones regulares. En \xE9ste art\xEDculo veremos c\xF3mo aplicar este
+  cambio."
 image: 2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png
-mainclass: "articulos"
-color: "#F57C00"
+lastmod: 2015-12-28
+layout: post.amp
+mainclass: articulos
+permalink: /sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/
+tags:
+- cambiar enlaces de blogger a wordpress
+- migrar blogger wordpress
+- url de blogger a wordpress
+title: Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma
 ---
+
 Hace tiempo, cuando migramos de blogger a WordPress escribimos un [artículo][1] sobre cómo realizar la migración sin perder el posicionamiento web. Una parte fundamental para mantener ese posicionamiento es conseguir que los enlaces sigan funcionando. Para ello existe un plugin que he estado usando hasta ahora. Sin embargo he decicido dejar de usarlo y sustituir todos los enlaces antiguos por los nuevos usando [expresiones regulares][2]. En éste artículo veremos cómo aplicar este cambio.
 
 <!--more-->

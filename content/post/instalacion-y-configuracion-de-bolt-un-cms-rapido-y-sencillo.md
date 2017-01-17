@@ -1,18 +1,19 @@
 ---
-title: Cómo instalar Bolt, un CMS rápido y sencillo
-
-layout: post.amp
-permalink: /instalacion-y-configuracion-de-bolt-un-cms-rapido-y-sencillo/
+author: alex
 categories:
-  - How To
-  - opensource
+- How To
+- opensource
+color: '#0097A7'
+layout: post.amp
+mainclass: servidores
+permalink: /instalacion-y-configuracion-de-bolt-un-cms-rapido-y-sencillo/
 tags:
-  - bolt vs wordpress
-  - CMS rápido
-  - instalar bolt
-mainclass: "servidores"
-color: "#0097A7"
+- bolt vs wordpress
+- "CMS r\xE1pido"
+- instalar bolt
+title: "C\xF3mo instalar Bolt, un CMS r\xE1pido y sencillo"
 ---
+
 Leyendo notícias en mi lector RSS, encontré en Genbeta Dev un artículo hablando de **Bolt**, un CMS muy ligero y rápido. Tras ojear un poco la página oficial del proyecto decidí probarlo y la verdad es que ma ha causado muy buenas sensaciones. En esta entrada explicaré cómo instalar Bolt y cómo manejar este sencillo CMS.
 
 <!--more-->

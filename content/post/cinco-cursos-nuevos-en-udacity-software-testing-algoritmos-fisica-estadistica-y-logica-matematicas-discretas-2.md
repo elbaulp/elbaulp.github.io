@@ -1,24 +1,26 @@
 ---
-title: 'Cinco cursos nuevos en Udacity: Software Testing, Algoritmos, Física, Estadística y Lógica & matemáticas discretas'
-
-layout: post.amp
-permalink: /cinco-cursos-nuevos-en-udacity-software-testing-algoritmos-fisica-estadistica-y-logica-matematicas-discretas-2/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - cursos
-  - noticias
-tags:
-  - algoritmos
-  - cursos online
-  - programación
-  - software testing
-  - udacity
+- cursos
+- noticias
+color: '#61B38D'
 format: status
-mainclass: "misc"
-color: "#61B38D"
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: misc
+permalink: /cinco-cursos-nuevos-en-udacity-software-testing-algoritmos-fisica-estadistica-y-logica-matematicas-discretas-2/
+tags:
+- algoritmos
+- cursos online
+- "programaci\xF3n"
+- software testing
+- udacity
+title: "Cinco cursos nuevos en Udacity: Software Testing, Algoritmos, F\xEDsica, Estad\xEDstica
+  y L\xF3gica & matem\xE1ticas discretas"
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="" src="https://4.bp.blogspot.com/-4_orLVxvsaA/Ty6o0VKqt3I/AAAAAAAACDs/3Xxk1Zqo5Ug/s1600/Screenshot.png" class="alignleft" />
 <a href="http://www.udacity.com/" target="_blank">Udacity</a> sigue mejorando,y a una semana escasa de acabar los [cinco cursos][1] que comenzaron hace siete semanas. Ayer anunciaron en su blog que iban a impartir otros cinco cursos a partir del 25 de Junio. A continuación dejo una descripción de cada uno de los cursos.
 

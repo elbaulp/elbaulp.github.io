@@ -1,22 +1,24 @@
 ---
-title: 'Programación Android: Interfaz gráfica - Diálogos y notificaciones'
-layout: post.amp
-permalink: /programacion-android-interfaz-grafica_11/
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-interfaz-grafica_11/
 tags:
-  - android diseñar gui
-  - android programar ProgressDialog
-  - como hacer interfaces graficas en android
-  - curso android pdf
-  - interfaces de usuario android
-  - interfaz grafica en android
-  - layout android
-  - menu android
-mainclass: "android"
-color: "#689F38"
+- "android dise\xF1ar gui"
+- android programar ProgressDialog
+- como hacer interfaces graficas en android
+- curso android pdf
+- interfaces de usuario android
+- interfaz grafica en android
+- layout android
+- menu android
+title: "Programaci\xF3n Android: Interfaz gr\xE1fica - Di\xE1logos y notificaciones"
 ---
+
 En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.
 
 Android dispone de tres tipos de notificaciones:

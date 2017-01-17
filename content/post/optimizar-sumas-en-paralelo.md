@@ -1,19 +1,20 @@
 ---
-title: Optimizar sumas en paralelo
-
-layout: post.amp
-permalink: /optimizar-sumas-en-paralelo/
+author: alex
 categories:
-  - Algoritmos
-  - Articulos
-  - C
+- Algoritmos
+- Articulos
+- C
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /optimizar-sumas-en-paralelo/
 tags:
-  - concurrencia
-  - paralelo
-  - ps3
-mainclass: "dev"
-color: "#E64A19"
+- concurrencia
+- paralelo
+- ps3
+title: Optimizar sumas en paralelo
 ---
+
 <div>
   Hace unos días leí acerca del procesador de la consola PS3 y su capacidad para realizar <b>varias operaciones aritméticas en una sola instrucción</b>. Es decir, dado que tiene un bus de 128 bits, podría sumar 4 valores de 32 bits en una operación. Me sirvió para darle vueltas a la cabeza e intentar hacer lo mismo en mi ordenador.
 </div>

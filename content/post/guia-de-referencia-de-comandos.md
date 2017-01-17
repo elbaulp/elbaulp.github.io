@@ -1,14 +1,15 @@
 ---
-title: 'Guía de Referencia de comandos Unix/Linux [IMG]'
+author: alex
+categories:
+- linux
+- opensource
+color: '#2196F3'
+image: chuletacomandoslinux.png
 lastmod: 2016-10-11
 layout: post.amp
+mainclass: linux
 permalink: /guia-de-referencia-de-comandos/
-categories:
-  - linux
-  - opensource
-image: chuletacomandoslinux.png
-mainclass: "linux"
-color: "#2196F3"
+title: "Gu\xEDa de Referencia de comandos Unix/Linux [IMG]"
 ---
 
 <figure>

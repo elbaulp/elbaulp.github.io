@@ -1,13 +1,14 @@
 ---
-title: Evaluando el estado de la licencia GPL
+author: alex
+categories:
+- noticias
+- opensource
+color: '#F57C00'
 lastmod: 2016-10-26
 layout: post.amp
+mainclass: articulos
 permalink: /evaluando-el-estado-de-la-licencia-gpl/
-categories:
-  - noticias
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+title: Evaluando el estado de la licencia GPL
 ---
 
 <figure>

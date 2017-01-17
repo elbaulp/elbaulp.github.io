@@ -1,13 +1,15 @@
 ---
-title: Script resaltado sintaxis bash
-layout: post.amp
-permalink: /script-resaltado-sintaxis-bash/
+author: alex
 categories:
-  - linux
-  - script
-mainclass: "linux"
-color: "#2196F3"
+- linux
+- script
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /script-resaltado-sintaxis-bash/
+title: Script resaltado sintaxis bash
 ---
+
 Como os dije, he hecho el script para el resaltado de bash, me ha costado un poco mas, porque queria intentar resaltar mas cosas, pero al final desistí, y lo hice un poco más simple. Hay que tener en cuenta, que habrá muchas palabras que no se resalten, ya que en la terminal de gnu/Linux existen muchísimos comandos, y obviamente, no puedo ponerlos todos, cuando querais que un determinado comando se resalte (como ls, telnet, ftp&#8230;) o cualquiera que useis, simplemente añadirlo a la variable keyWords.
 
 Aquí el código:

@@ -1,13 +1,14 @@
 ---
-title: 'Vídeos de la semana - Time-Lapses y cortos de animación'
-
-layout: post.amp
-permalink: /videos-de-la-semana-time-lapses-y/
+author: alex
 categories:
-  - video de la semana
-mainclass: "articulos"
-color: "#F57C00"
+- video de la semana
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /videos-de-la-semana-time-lapses-y/
+title: "V\xEDdeos de la semana - Time-Lapses y cortos de animaci\xF3n"
 ---
+
 <div class="separator" >
 <a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>

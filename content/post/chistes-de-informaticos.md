@@ -1,15 +1,15 @@
 ---
-title: 'Chistes de informaticos - www.desmotivaciones.es'
-layout: post.amp
-permalink: /chistes-de-informaticos/
+author: alex
 categories:
-  - Humor
-description: "Recopilación de chistes informáticos"
-mainclass: "geek"
+- Humor
+color: '#262626'
+description: "Recopilaci\xF3n de chistes inform\xE1ticos"
 lastmod: 2016-08-13
-color: "#262626"
+layout: post.amp
+mainclass: geek
+permalink: /chistes-de-informaticos/
+title: Chistes de informaticos - www.desmotivaciones.es
 ---
-
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="development programming software android technology programmer"  height="320" src="https://4.bp.blogspot.com/_IlK2pNFFgGM/TL8EHtk9VtI/AAAAAAAAADI/mNv42rNDIbI/s320/4_sQM3DoGehEmquq96zE.jpg" width="202"></amp-img>

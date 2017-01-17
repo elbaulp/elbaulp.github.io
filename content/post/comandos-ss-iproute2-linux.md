@@ -1,33 +1,37 @@
 ---
-title: Algunos comandos útiles con iproute2
-layout: post.amp
-permalink: /comandos-ss-iproute2-linux/
+author: alex
 categories:
-  - aplicaciones
-  - linux
-tags:
-  - comando ip route linux
-  - comando ss
-  - conmando ifconfig
-  - herramientas de red
-  - ifconfig
-  - ip addr
-  - ip link
-  - ip route
-  - iproute2
-  - mostrar informacion TCP
-  - net-tools
-  - netstat
-  - notas iproute2
-  - sockets
-  - ss
-  - tc iproute2 debian
-  - UDP
-description: "El propósito de iproute2 es reemplazar el conjunto de herramientas que componen las net-tools y pasar a ser él quien se encargue de configurar las interfaces de red, la tabla de rutas y gestionar la tabla ARP."
+- aplicaciones
+- linux
+color: '#2196F3'
+description: "El prop\xF3sito de iproute2 es reemplazar el conjunto de herramientas
+  que componen las net-tools y pasar a ser \xE9l quien se encargue de configurar las
+  interfaces de red, la tabla de rutas y gestionar la tabla ARP."
 image: 2012/07/sh1.png
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /comandos-ss-iproute2-linux/
+tags:
+- comando ip route linux
+- comando ss
+- conmando ifconfig
+- herramientas de red
+- ifconfig
+- ip addr
+- ip link
+- ip route
+- iproute2
+- mostrar informacion TCP
+- net-tools
+- netstat
+- notas iproute2
+- sockets
+- ss
+- tc iproute2 debian
+- UDP
+title: "Algunos comandos \xFAtiles con iproute2"
 ---
+
 El propósito de **iproute2** es reemplazar el conjunto de herramientas que componen las *net-tools* y pasar a ser él quien se encargue de configurar las interfaces de red, la [tabla de rutas][1] y gestionar la tabla ARP.
 
 Hace poco he [escrito sobre el comando **netstat**][1]. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto **ss**, ya que netstat se dejó de desarrollar en 2001.

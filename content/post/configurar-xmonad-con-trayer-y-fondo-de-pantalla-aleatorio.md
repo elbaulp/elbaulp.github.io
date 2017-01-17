@@ -1,18 +1,19 @@
 ---
-title: Configurar xmonad con trayer y fondo de pantalla aleatorio
-
-layout: post.amp
-permalink: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/
+author: alex
 categories:
-  - How To
-  - linux
+- How To
+- linux
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/
 tags:
-  - feh
-  - trayer
-  - xmonad
-mainclass: "linux"
-color: "#2196F3"
+- feh
+- trayer
+- xmonad
+title: Configurar xmonad con trayer y fondo de pantalla aleatorio
 ---
+
 A lo largo de los años he probado varios gestores de ventanas, como fluxbox, [openbox][1] y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.
 
 La <a href="http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration" target="_blank">instalación</a> es muy sencilla. En este artículo voy a profundizar más en los dos aspectos que más problemas me han causado, configurar apropiadamente trayer y establecer fondos de pantalla aleatoriamente.

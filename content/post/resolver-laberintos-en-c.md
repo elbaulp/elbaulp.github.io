@@ -1,19 +1,23 @@
 ---
-title: Resolver laberintos en C++
-
-layout: post.amp
-permalink: /resolver-laberintos-en-c/
+author: alex
 categories:
-  - C
-tags:
-  - practica laberintos fp
-  - resolver laberinto fp
-lastmod: 2015-12-29
-description: "Cuando estaba en el primer curso de la facultad, hicimos una práctica en la asignatura Fundamentos de la Programación que consistía en resolver un laberinto almacenado en un fichero. Me gustó bastante hacer ese programa y lo comparto en el blog para los curiosos que quieran ver cómo funciona."
+- C
+color: '#E64A19'
+description: "Cuando estaba en el primer curso de la facultad, hicimos una pr\xE1ctica
+  en la asignatura Fundamentos de la Programaci\xF3n que consist\xEDa en resolver
+  un laberinto almacenado en un fichero. Me gust\xF3 bastante hacer ese programa y
+  lo comparto en el blog para los curiosos que quieran ver c\xF3mo funciona."
 image: 2013/11/cpp.png
-mainclass: "dev"
-color: "#E64A19"
+lastmod: 2015-12-29
+layout: post.amp
+mainclass: dev
+permalink: /resolver-laberintos-en-c/
+tags:
+- practica laberintos fp
+- resolver laberinto fp
+title: Resolver laberintos en C++
 ---
+
 <figure>
 <a href="/img/2013/11/cpp.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/11/cpp.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
 </figure>

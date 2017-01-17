@@ -1,14 +1,15 @@
 ---
-title: Cómo programar apps móviles para pymes sin salir de casa
-
-layout: post.amp
-permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
 lastmod: 2015-12-25
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /como-programar-app-moviles-para-pymes-sin-salir-de-casa/
+title: "C\xF3mo programar apps m\xF3viles para pymes sin salir de casa"
 ---
+
 Hace unos días se publicó un estudio (<a href="http://geekytheory.com/los-ingenieros-necesitan-ser-mas-empaticos/" target="_blank">Referencia 1</a> \| <a href="http://news.rice.edu/2013/11/20/engineering-education-may-diminish-concern-for-public-welfare-issues-sociologist-says/" title="Engineering education may diminish concern for public welfare issues, sociologist says" target="_blank">Referencia 2</a>) en el que se afirmaba que los ingenieros, las personas con una formación técnica, finalizaban sus estudios universitarios y adoptaban con ellos una personalidad menos empática que cuando los comenzaron años atrás.
 
 Junto a esta falta de empatía va unida cierta introversión que puede dificultar el encontrar una salida laboral. ¿Cuántos controláis a la perfección los aspectos técnicos pero sentís que necesitáis mejorar en el aspecto comercial?

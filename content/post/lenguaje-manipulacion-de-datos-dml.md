@@ -1,16 +1,17 @@
 ---
-title: Lenguaje Manipulación de Datos (DML)
-layout: post.amp
-permalink: /lenguaje-manipulacion-de-datos-dml/
-lastmod: 2016-08-16
-redirect_from: /programacion/basededatos/lenguaje-manipulacion-de-datos-dml/
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /lenguaje-manipulacion-de-datos-dml/
+redirect_from: /programacion/basededatos/lenguaje-manipulacion-de-datos-dml/
 tags:
-  - que es un ddl
-  - sentencias dml y ddl
-mainclass: "BaseDeDatos"
-color: "#009688"
+- que es un ddl
+- sentencias dml y ddl
+title: "Lenguaje Manipulaci\xF3n de Datos (DML)"
 ---
 
 En los anteriores post hemos visto órdenes del *Lenguaje de Definición de Datos (DDL)*, [Create][1], [Drop][2], [Alter Table][3], [Vístas][4], [Índices y secuencias][5], y por último [Sinónimos y pseudoColumnas][6]

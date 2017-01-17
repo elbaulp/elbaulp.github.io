@@ -1,13 +1,14 @@
 ---
-title: Viñetas Geek de Domingo (XII)
-
-layout: post.amp
-permalink: /vinetas-geek-de-domingo-xii/
+author: alex
 categories:
-  - Geek
-mainclass: "geek"
-color: "#262626"
+- Geek
+color: '#262626'
+layout: post.amp
+mainclass: geek
+permalink: /vinetas-geek-de-domingo-xii/
+title: "Vi\xF1etas Geek de Domingo (XII)"
 ---
+
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Cuando encuentro un bug estúpido en la web de una gran compañía que me dá acceso backend

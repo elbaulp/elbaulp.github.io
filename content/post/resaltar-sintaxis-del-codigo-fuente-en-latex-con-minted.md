@@ -1,22 +1,22 @@
 ---
-title: Resaltar sintaxis del código fuente en LaTeX con minted
-lastmod: 2016-07-31
-math: true
-layout: post.amp
-permalink: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/
+author: alex
 categories:
-  - LaTeX
-tags:
-  - ejemplos minted
-  - instalar minted
-  - pygments
-  - resaltar sintaxis codigo latex
-  - latex
-  - colorear codigo fuente en latex
+- LaTeX
+color: '#B31917'
 image: 2013/05/latex_logo.png
 lastmod: 2016-08-13
-mainclass: "latex"
-color: "#B31917"
+layout: post.amp
+mainclass: latex
+math: true
+permalink: /resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/
+tags:
+- ejemplos minted
+- instalar minted
+- pygments
+- resaltar sintaxis codigo latex
+- latex
+- colorear codigo fuente en latex
+title: "Resaltar sintaxis del c\xF3digo fuente en LaTeX con minted"
 ---
 
 Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en que he reescrito el [Curso de programación Android][1] por completo.

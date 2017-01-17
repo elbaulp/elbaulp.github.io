@@ -1,9 +1,11 @@
 ---
-title: C++ y Java
+author: alex
+color: '#E64A19'
 layout: minimal.amp
-mainclass: "dev"
-color: "#E64A19"
+mainclass: dev
+title: C++ y Java
 ---
+
 > Visita la [sección de descargas][1] para ver todo el material disponible.
 
 ### Manuales en PDF sobre C++

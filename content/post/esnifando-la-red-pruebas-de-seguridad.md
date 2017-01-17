@@ -1,20 +1,20 @@
 ---
-title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in the middle)'
-layout: post.amp
-permalink: /esnifando-la-red-pruebas-de-seguridad/
-lastmod: 2016-09-11
+author: alex
 categories:
-  - aplicaciones
-  - internet
-  - seguridad
+- aplicaciones
+- internet
+- seguridad
+color: '#F57C00'
+lastmod: 2016-09-11
+layout: post.amp
+mainclass: articulos
+permalink: /esnifando-la-red-pruebas-de-seguridad/
 tags:
-  - ettercap en español
-  - tutorial ettercap comandos
-mainclass: "articulos"
-color: "#F57C00"
+- "ettercap en espa\xF1ol"
+- tutorial ettercap comandos
+title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in the
+  middle)'
 ---
-
-
 
 ## Introducción
 

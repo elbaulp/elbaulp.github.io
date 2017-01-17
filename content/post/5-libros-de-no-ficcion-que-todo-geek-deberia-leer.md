@@ -1,31 +1,30 @@
 ---
-title: 21 Libros de No-Ficción que todo Geek debería leer
-description: "Esta lista de libros geeks se mantiene en constante actualización, si deseas que se añada alguno, no dudes en dejarnos un comentario!"
-layout: post.amp
-permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/
+author: alex
 categories:
-  - Articulos
-  - Tecnología
-tags:
-  - mejores libros no ficcion
-  - libros de tecnologia
-  - libros sobre la tecnologia
-  - geek
-  - libros
-  - libros geek
-  - didier newman
-  - libros para geeks
-  - libros de no ficcion recomendados
-  - didier newman wikipedia
-lastmod: 2015-12-19
-date: 2015-06-30T18:48:42+02:00
-lastmod: 2016-06-15
+- Articulos
+- "Tecnolog\xEDa"
+color: '#F57C00'
+date: 2015-06-30 16:48:42
+description: "Esta lista de libros geeks se mantiene en constante actualizaci\xF3n,
+  si deseas que se a\xF1ada alguno, no dudes en dejarnos un comentario!"
 image: Thing-Explainer-Complicated-Stuff-in-Simple-Words.jpg
-mainclass: "articulos"
-color: "#F57C00"
+lastmod: 2016-06-15
+layout: post.amp
+mainclass: articulos
+permalink: /5-libros-de-no-ficcion-que-todo-geek-deberia-leer/
+tags:
+- mejores libros no ficcion
+- libros de tecnologia
+- libros sobre la tecnologia
+- geek
+- libros
+- libros geek
+- didier newman
+- libros para geeks
+- libros de no ficcion recomendados
+- didier newman wikipedia
+title: "21 Libros de No-Ficci\xF3n que todo Geek deber\xEDa leer"
 ---
-
-
 
 <!--more-->
 <div class="row flex-grid">

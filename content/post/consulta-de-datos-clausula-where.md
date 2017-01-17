@@ -1,12 +1,13 @@
 ---
-title: 'Consulta de Datos - Cláusula WHERE'
-layout: post.amp
-permalink: /consulta-de-datos-clausula-where/
-lastmod: 2016-08-18
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-18
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-clausula-where/
+title: "Consulta de Datos - Cl\xE1usula WHERE"
 ---
 
 La cláusula WHERE se utiliza para seleccionar aquellos registros que cumplen una o más condiciones. Su sintaxis es:

@@ -1,24 +1,25 @@
 ---
-title: Google I/O Extended + Hackathon HTML5
-
-layout: post.amp
-permalink: /google-io-extended-hackathon-html5/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - hackathon
-  - noticias
-  - Tecnología
-tags:
-  - google developers group
-  - Google I/O
-  - hackathon
-  - html5
+- hackathon
+- noticias
+- "Tecnolog\xEDa"
+color: '#F57C00'
 format: status
-mainclass: "articulos"
-color: "#F57C00"
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: articulos
+permalink: /google-io-extended-hackathon-html5/
+tags:
+- google developers group
+- Google I/O
+- hackathon
+- html5
+title: Google I/O Extended + Hackathon HTML5
 ---
+
 <div id="sites-canvas-main" class="sites-canvas-main">
 <div id="sites-canvas-main-content">
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox">

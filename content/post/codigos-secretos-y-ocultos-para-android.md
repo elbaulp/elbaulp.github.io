@@ -1,22 +1,25 @@
 ---
-title: Códigos secretos y ocultos para Android
-layout: post.amp
-permalink: /codigos-secretos-y-ocultos-para-android/
+author: alex
 categories:
-  - android
-  - curiosidades
-tags:
-  - codigos de android
-  - curso android pdf
-  - menu oculto android
-  - menu oculto tablet android
-description: "Si te gusta jugar con tu Android, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android."
-image: 2013/07/iconoAndroid.png
+- android
+- curiosidades
+color: '#689F38'
 date: 2012-01-01
+description: "Si te gusta jugar con tu Android, estos C\xF3digos secretos y ocultos
+  para Android son para t\xED. Con ellos tendr\xE1s mejor control de tu dispositivo
+  Android."
+image: 2013/07/iconoAndroid.png
 lastmod: 2016-08-13
+layout: post.amp
+mainclass: android
+permalink: /codigos-secretos-y-ocultos-para-android/
 redirect_from: /programacion/android/codigos-secretos-y-ocultos-para-android/
-mainclass: "android"
-color: "#689F38"
+tags:
+- codigos de android
+- curso android pdf
+- menu oculto android
+- menu oculto tablet android
+title: "C\xF3digos secretos y ocultos para Android"
 ---
 
 Si te gusta jugar con tu <a href="/curso-programacion-android/" title="Curso Android" target="_blank">Android</a>, estos Códigos secretos y ocultos para Android son para tí. Con ellos tendrás mejor control de tu dispositivo Android.

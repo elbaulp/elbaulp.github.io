@@ -1,17 +1,18 @@
 ---
-title: Ocultar/Revelar información dentro de imágenes con C++
-layout: post.amp
-permalink: /ocultarrevelar-informacion-dentro-de/
+author: alex
 categories:
-  - aplicaciones
-  - C
-tags:
-  - esconder informacion en imagen
-  - ocultar texto en imagen
+- aplicaciones
+- C
+color: '#E64A19'
 lastmod: 2016-08-13
+layout: post.amp
+mainclass: dev
+permalink: /ocultarrevelar-informacion-dentro-de/
 redirect_from: /programacion/ocultarrevelar-informacion-dentro-de/
-mainclass: "dev"
-color: "#E64A19"
+tags:
+- esconder informacion en imagen
+- ocultar texto en imagen
+title: "Ocultar/Revelar informaci\xF3n dentro de im\xE1genes con C++"
 ---
 
 <figure>

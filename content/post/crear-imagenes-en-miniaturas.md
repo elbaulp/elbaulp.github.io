@@ -1,12 +1,13 @@
 ---
-title: Crear miniaturas de imágenes
-layout: post.amp
-permalink: /crear-imagenes-en-miniaturas/
+author: alex
 categories:
-  - script
+- script
+color: '#E64A19'
 lastmod: 2016-07-31
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /crear-imagenes-en-miniaturas/
+title: "Crear miniaturas de im\xE1genes"
 ---
 
 ### Creé una Versión mejorada de este script [aquí][1]

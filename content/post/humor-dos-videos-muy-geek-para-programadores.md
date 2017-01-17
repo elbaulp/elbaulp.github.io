@@ -1,18 +1,19 @@
 ---
-title: '[HUMOR] Dos Vídeos muy geek para Programadores'
-
-layout: post.amp
-permalink: /humor-dos-videos-muy-geek-para-programadores/
+author: alex
 categories:
-  - Humor
-  - offtopic
-tags:
-  - what is your programming language
-  - write in c
+- Humor
+- offtopic
+color: '#262626'
 format: video
-mainclass: "geek"
-color: "#262626"
+layout: post.amp
+mainclass: geek
+permalink: /humor-dos-videos-muy-geek-para-programadores/
+tags:
+- what is your programming language
+- write in c
+title: "[HUMOR] Dos V\xEDdeos muy geek para Programadores"
 ---
+
 Navegando por la red he encontrado dos vídeos curiosos y graciosos, que comparto con vosotros este día de fiesta Nacional en España.
 
 <span class="embed-youtube" ></span> <span class="embed-youtube" ></span>

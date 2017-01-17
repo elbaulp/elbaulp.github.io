@@ -1,28 +1,29 @@
 ---
-title: Introducción a las expresiones regulares en python
-
+author: alex
+categories:
+- python
+color: '#E64A19'
+if_seo_keywords:
+- re python, regexp python, expresiones regulares python
+- re python, regexp python, expresiones regulares python
+if_slider_image:
+- null
+- null
 layout: post.amp
+mainclass: dev
 permalink: /introduccion-a-las-expresiones-regulares-en-python/
 sif_eo_description:
-  - Tutorial sobre expresiones regulares en python
-  - Tutorial sobre expresiones regulares en python
-if_seo_keywords:
-  - re python, regexp python, expresiones regulares python
-  - re python, regexp python, expresiones regulares python
-if_slider_image:
-  -
-  -
-categories:
-  - python
+- Tutorial sobre expresiones regulares en python
+- Tutorial sobre expresiones regulares en python
 tags:
-  - ejemplos de expresiones regulares
-  - expresiones regulares
-  - probar expresiones regulares
-  - python
-  - regexp
-mainclass: "dev"
-color: "#E64A19"
+- ejemplos de expresiones regulares
+- expresiones regulares
+- probar expresiones regulares
+- python
+- regexp
+title: "Introducci\xF3n a las expresiones regulares en python"
 ---
+
 En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).
 
 Son recopilaciones que he hecho durante el curso de *Programming languages *[en udacity][1] y voy a intentar explicarlos lo más claramente posible.

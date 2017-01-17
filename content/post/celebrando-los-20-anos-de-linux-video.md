@@ -1,14 +1,15 @@
 ---
-title: 'Celebrando los 20 años de Linux [Video]'
-layout: post.amp
-permalink: /celebrando-los-20-anos-de-linux-video/
-lastmod: 2016-09-05
+author: alex
 categories:
-  - linux
-  - noticias
-  - opensource
-mainclass: "linux"
-color: "#2196F3"
+- linux
+- noticias
+- opensource
+color: '#2196F3'
+lastmod: 2016-09-05
+layout: post.amp
+mainclass: linux
+permalink: /celebrando-los-20-anos-de-linux-video/
+title: "Celebrando los 20 a\xF1os de Linux [Video]"
 ---
 
 Traducción parcial del artículo original en [techdrivein][1].

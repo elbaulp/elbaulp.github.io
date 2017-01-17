@@ -1,16 +1,16 @@
 ---
-title: 'Clases y Objetos - Pasar un objeto a una función'
-layout: post.amp
-lastmod: 2016-09-08
-permalink: /clases-y-objetos-pasar-un-objeto-una/
+author: alex
 categories:
-  - C
-description: "Vamos a estudiar cómo se pasa una variable a una función en uno de sus argumentos."
-mainclass: "dev"
-color: "#E64A19"
+- C
+color: '#E64A19'
+description: "Vamos a estudiar c\xF3mo se pasa una variable a una funci\xF3n en uno
+  de sus argumentos."
+lastmod: 2016-09-08
+layout: post.amp
+mainclass: dev
+permalink: /clases-y-objetos-pasar-un-objeto-una/
+title: "Clases y Objetos - Pasar un objeto a una funci\xF3n"
 ---
-
-
 
 ### Introducción
 

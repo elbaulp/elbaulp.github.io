@@ -1,20 +1,21 @@
 ---
-title: Cómo descargar archivos de una web por extensión con wget
-
-layout: post.amp
-permalink: /como-descargar-archivos-de-una-web-por-extension-con-wget/
+author: alex
 categories:
-  - aplicaciones
-  - How To
-  - internet
+- aplicaciones
+- How To
+- internet
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /como-descargar-archivos-de-una-web-por-extension-con-wget/
 tags:
-  - android studio español guia
-  - android studio tutorial
-  - descargar por extension wget
-  - wget
-mainclass: "linux"
-color: "#2196F3"
+- "android studio espa\xF1ol guia"
+- android studio tutorial
+- descargar por extension wget
+- wget
+title: "C\xF3mo descargar archivos de una web por extensi\xF3n con wget"
 ---
+
 Seguramente alguna vez hayas encontrado alguna web con montones de ficheros que te interesa descargarte, pero resulta un tanto arduo descargar los ficheros uno a uno. Si eres usuario Linux seguramente conozcas el comando *wget*. Este comando permite descargar todo el contenido de una web por extensión, de modo que si queremos descargar todos los ficheros con extensión *tar.gz* basta con ejecutar el siguiente comando:
 
 <!--more-->

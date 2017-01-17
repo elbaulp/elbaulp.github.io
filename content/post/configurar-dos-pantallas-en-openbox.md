@@ -1,22 +1,23 @@
 ---
-title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
-
-layout: post.amp
-permalink: /configurar-dos-pantallas-en-openbox/
+author: alex
 categories:
-  - aplicaciones
-  - curiosidades
-  - opensource
-  - script
+- aplicaciones
+- curiosidades
+- opensource
+- script
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /configurar-dos-pantallas-en-openbox/
 tags:
-  - configuracion openbox
-  - crunchbang cambiar wallpaper
-  - debian openbox distro
-  - openbox
-  - wallpaper para openbox
-mainclass: "linux"
-color: "#2196F3"
+- configuracion openbox
+- crunchbang cambiar wallpaper
+- debian openbox distro
+- openbox
+- wallpaper para openbox
+title: Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio
 ---
+
 <div class="separator" >
 <a href="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png" /></a>
 </div>

@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Recursos - Usando recursos'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-20
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-usando/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - recursos android
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- recursos android
+title: "Programaci\xF3n Android: Recursos - Usando recursos"
 ---
 
 A todos los recursos que colocamos en las subcarpetas de ./res/ se puede acceder a través de la clase R de nuestro proyecto.

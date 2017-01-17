@@ -1,16 +1,17 @@
 ---
-title: '[Vídeo] Proyecto WifiBar, en la última fase de desarrollo'
+author: alex
+categories:
+- android
+- aplicaciones
+- opensource
+color: '#689F38'
 lastmod: 2016-09-14
 layout: post.amp
+mainclass: android
 permalink: /video-proyecto-wifibar-en-la-ultima/
-categories:
-  - android
-  - aplicaciones
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "[V\xEDdeo] Proyecto WifiBar, en la \xFAltima fase de desarrollo"
 ---
 
 Ya he hablado otras veces sobre este proyecto, que se trata ni más ni menos que del proyecto de fin de curso, [publiqué un vídeo hace algún tiempo][1], pero aún le quedaba mucho por mejorar, sobre todo la interfaz, visualmente parece que el programa no tiene mucho trabajo, pero si que lo tiene, ya que todo se envía y recibe de una base de datos. A continuación voy a explicar un poco su funcionamiento:

@@ -1,15 +1,16 @@
 ---
-title: Prueba la aplicación FavSites en tu Android
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-27
 layout: post.amp
+mainclass: android
 permalink: /prueba-la-aplicacion-favsites-en-tu/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "Prueba la aplicaci\xF3n FavSites en tu Android"
 ---
 
 Como sabéis hace algún tiempo terminé la aplicación [Favsites][1].

@@ -1,20 +1,21 @@
 ---
-title: Cómo ocultar la versión de BIND (Y cómo averiguarla)
-layout: post.amp
-permalink: /como-ocultar-la-version-de-bind-y-como-averiguarla/
+author: alex
 categories:
-  - Administracion de Servidores
-  - How To
-tags:
-  - extract bind version
-  - fingerprinting bind version
-  - ocultar version de bind
-  - seguridad en bind
-  - usar fpdns
+- Administracion de Servidores
+- How To
+color: '#0097A7'
 image: 2013/04/dns-300x240.jpg
 lastmod: 2016-08-05
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /como-ocultar-la-version-de-bind-y-como-averiguarla/
+tags:
+- extract bind version
+- fingerprinting bind version
+- ocultar version de bind
+- seguridad en bind
+- usar fpdns
+title: "C\xF3mo ocultar la versi\xF3n de BIND (Y c\xF3mo averiguarla)"
 ---
 
 <figure>

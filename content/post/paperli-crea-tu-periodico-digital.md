@@ -1,13 +1,15 @@
 ---
-title: 'Paper.li: Crea tu periódico digital automáticamente con lo más relevante de Twitter y Facebook'
-layout: post.amp
-lastmod: 2016-09-09
-permalink: /paperli-crea-tu-periodico-digital/
+author: alex
 categories:
-  - internet
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- internet
+- noticias
+color: '#F57C00'
+lastmod: 2016-09-09
+layout: post.amp
+mainclass: articulos
+permalink: /paperli-crea-tu-periodico-digital/
+title: "Paper.li: Crea tu peri\xF3dico digital autom\xE1ticamente con lo m\xE1s relevante
+  de Twitter y Facebook"
 ---
 
 Gracias a un usuario de Twitter (@joanballester), he descubierto esta web que permite generar un periódico a tu gusto.

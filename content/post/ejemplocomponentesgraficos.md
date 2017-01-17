@@ -1,25 +1,24 @@
 ---
-title: 'Programación Android: Interfaz gráfica - Componentes gráficos y Eventos'
-
-layout: post.amp
-permalink: /programacion-android-interfaz-grafica_25/
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-interfaz-grafica_25/
 tags:
-  - adapter android
-  - android diseñar gui
-  - como hacer interfaces graficas en android
-  - curso android pdf
-  - definicion del metodo setonitemclicklistener
-  - interfaces de usuario android
-  - interfaz grafica en android
-  - layout android
-  - menu android
-mainclass: "android"
-color: "#689F38"
+- adapter android
+- "android dise\xF1ar gui"
+- como hacer interfaces graficas en android
+- curso android pdf
+- definicion del metodo setonitemclicklistener
+- interfaces de usuario android
+- interfaz grafica en android
+- layout android
+- menu android
+title: "Programaci\xF3n Android: Interfaz gr\xE1fica - Componentes gr\xE1ficos y Eventos"
 ---
-
 
 [Ya hemos visto][1] que todos los componentes visuales descienden del objeto View, que proporciona una interfaz para que podemos interactuar con ellos.
 

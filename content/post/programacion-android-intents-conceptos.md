@@ -1,18 +1,19 @@
 ---
-title: 'Programación Android: Intents - Conceptos básicos'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-11-03
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-intents-conceptos/
-categories:
-  - android
-  - opensource
 tags:
-  - android ejemplo intent filter
-  - curso android pdf
-  - ejemplo intentfilter implicito
-  - uso de intents android
-mainclass: "android"
-color: "#689F38"
+- android ejemplo intent filter
+- curso android pdf
+- ejemplo intentfilter implicito
+- uso de intents android
+title: "Programaci\xF3n Android: Intents - Conceptos b\xE1sicos"
 ---
 
 Un intent sirve para invocar componentes, en android entendemos por componentes las [activities,][1] Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y [proveedores de contenido][2], código que abstráe los datos.

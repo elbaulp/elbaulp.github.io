@@ -1,12 +1,13 @@
 ---
-title: Grub Customizer 2.0, personaliza tu GRUB2
-layout: post.amp
-permalink: /grub-customizer-20-personaliza-tu-grub2/
-lastmod: 2016-08-15
+author: alex
 categories:
-  - noticias
-mainclass: "linux"
-color: "#2196F3"
+- noticias
+color: '#2196F3'
+lastmod: 2016-08-15
+layout: post.amp
+mainclass: linux
+permalink: /grub-customizer-20-personaliza-tu-grub2/
+title: Grub Customizer 2.0, personaliza tu GRUB2
 ---
 
 Los desarrolladores de [Grub Customizer][1] **han lanzado la versión 2.0 de esta herramienta** para personalizar el aspecto y funcionamiento de nuestro gestor de arranque, algo que es bastante molesto desde la entrada de GRUB2 y que ahora se hace mucho más cómodo con esta solución.

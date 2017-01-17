@@ -1,13 +1,14 @@
 ---
-title: 'Nueva guía: Mac OS X Lion: The Ultimate Guide'
-layout: post.amp
-permalink: /nueva-guia-mac-os-x-lion-ultimate-guide/
+author: alex
 categories:
-  - cursos
-lastmod: 2016-09-29
+- cursos
+color: '#61B38D'
 image: Mac-OS-X-LionThe-Ultimate-Guide.jpg
-mainclass: "misc"
-color: "#61B38D"
+lastmod: 2016-09-29
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-mac-os-x-lion-ultimate-guide/
+title: "Nueva gu\xEDa: Mac OS X Lion: The Ultimate Guide"
 ---
 
 <figure>

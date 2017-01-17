@@ -1,22 +1,23 @@
 ---
-title: Peter Norvig hablando sobre clases online
-
-layout: post.amp
-permalink: /peter-norvig-hablando-sobre-clases-online/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - cursos
-  - noticias
-tags:
-  - peter norvig
-  - Sebastian Thrun
-  - udacity
+- cursos
+- noticias
+color: '#F57C00'
 format: aside
-mainclass: "articulos"
-color: "#F57C00"
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: articulos
+permalink: /peter-norvig-hablando-sobre-clases-online/
+tags:
+- peter norvig
+- Sebastian Thrun
+- udacity
+title: Peter Norvig hablando sobre clases online
 ---
+
 Junto Sebastian Thrun, Peter Norvig se planteó la idea de enseñar clase de otra forma para poder llegar a una mayor cantidad de alumnos.
 
 Así fue como nacieron las primeras plataformas online dedicadas a dar clase sobre Inteligencia Artificial, impartidas por estos dos genios.

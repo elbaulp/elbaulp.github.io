@@ -1,12 +1,13 @@
 ---
-title: 'Cosas que me gustan y odio de tener un smartphone [HUMOR]'
+author: alex
+categories:
+- curiosidades
+color: '#262626'
 lastmod: 2016-09-20
 layout: post.amp
+mainclass: geek
 permalink: /cosas-que-me-gustan-y-odio-de-tener-un/
-categories:
-  - curiosidades
-mainclass: "geek"
-color: "#262626"
+title: Cosas que me gustan y odio de tener un smartphone [HUMOR]
 ---
 
 <figure>

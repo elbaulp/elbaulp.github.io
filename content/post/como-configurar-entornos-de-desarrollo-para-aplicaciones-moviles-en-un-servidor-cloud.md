@@ -1,18 +1,20 @@
 ---
-title: Cómo configurar entornos de desarrollo para aplicaciones móviles en un servidor cloud
-
-layout: post.amp
-permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
+author: alex
 categories:
-  - JavaScript
+- JavaScript
+color: '#0097A7'
+layout: post.amp
+mainclass: servidores
+permalink: /como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/
 tags:
-  - api restfull nodejs
-  - crear api con nodejs
-  - crear base de datos mongodb
-  - tutorial express
-mainclass: "servidores"
-color: "#0097A7"
+- api restfull nodejs
+- crear api con nodejs
+- crear base de datos mongodb
+- tutorial express
+title: "C\xF3mo configurar entornos de desarrollo para aplicaciones m\xF3viles en
+  un servidor cloud"
 ---
+
 En un [artículo anterior][1] se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.
 
 Para conseguir nuestro objetivo necesitaremos **Node.js**, **Express** y **mongodb**. Usaremos el servicio [cloudbuilder de Arsys][2].

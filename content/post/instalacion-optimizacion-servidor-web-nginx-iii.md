@@ -1,22 +1,26 @@
 ---
-title: Instalación y optimización de un servidor web con Nginx (III)
-math: true
-lastmod: 2015-04-08
-layout: post.amp
-permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
+author: alex
 categories:
-  - Administracion de Servidores
-  - linux
-tags:
-  - instalar apc
-  - instalar pagespeed nginx
-  - optimizacion nginx
+- Administracion de Servidores
+- linux
+color: '#0097A7'
+description: "A lo largo de esta gu\xEDa se pretende mostrar c\xF3mo instalar desde
+  cero un servidor web con Nginx, realizando las operaciones necesarias para lograr
+  el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC,
+  y el m\xF3dulo pagespeed de Google para optimizar los recursos web."
+image: "Instalaci\xF3n-y-optimizaci\xF3n-de-un-servidor-web-con-Nginx1.png"
 lastmod: 2015-12-28
-description: "A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web."
-image: Instalación-y-optimización-de-un-servidor-web-con-Nginx1.png
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+math: true
+permalink: /instalacion-optimizacion-servidor-web-nginx-iii/
+tags:
+- instalar apc
+- instalar pagespeed nginx
+- optimizacion nginx
+title: "Instalaci\xF3n y optimizaci\xF3n de un servidor web con Nginx (III)"
 ---
+
 # Tabla de contenidos
 
 * [Instalación y optimización de un servidor web con Nginx (I)][1]

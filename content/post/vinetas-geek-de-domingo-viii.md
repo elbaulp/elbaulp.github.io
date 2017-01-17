@@ -1,20 +1,21 @@
 ---
-title: Viñetas Geek de Domingo (VIII)
-
-layout: post.amp
-permalink: /vinetas-geek-de-domingo-viii/
+author: alex
 categories:
-  - Geek
+- Geek
+color: '#262626'
+layout: post.amp
+mainclass: geek
+permalink: /vinetas-geek-de-domingo-viii/
 tags:
-  - chiste grafico de informatica
-  - geek
-  - humor
-  - humor geek grafico
-  - humor informatico
-  - viñetas humor
-mainclass: "geek"
-color: "#262626"
+- chiste grafico de informatica
+- geek
+- humor
+- humor geek grafico
+- humor informatico
+- "vi\xF1etas humor"
+title: "Vi\xF1etas Geek de Domingo (VIII)"
 ---
+
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!
 
 <!--more-->

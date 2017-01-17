@@ -1,20 +1,24 @@
 ---
-title: 'Programación ABAP: Hola Mundo en Reports'
-
-layout: post.amp
-permalink: /programacion-abap-hola-mundo-en-reports/
+author: alex
 categories:
-  - ABAP
-tags:
-  - curso ABAP
-  - hola mundo abap
-  - programación ABAP
-description: "Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje."
-lastmod: 2015-12-25
+- ABAP
+color: '#E64A19'
+description: "Para iniciarnos en la programaci\xF3n ABAP nada mejor que el cl\xE1sico
+  \u201CHola mundo\u201D. Con este tutorial podremos crear nuestro primer programa
+  ABAP y, a su vez, ir viendo paso a paso algunos fundamentos b\xE1sicos de programaci\xF3n
+  de este lenguaje."
 image: 2014/04/hola-mundo-salida.png
-mainclass: "dev"
-color: "#E64A19"
+lastmod: 2015-12-25
+layout: post.amp
+mainclass: dev
+permalink: /programacion-abap-hola-mundo-en-reports/
+tags:
+- curso ABAP
+- hola mundo abap
+- "programaci\xF3n ABAP"
+title: "Programaci\xF3n ABAP: Hola Mundo en Reports"
 ---
+
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 
 Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje.

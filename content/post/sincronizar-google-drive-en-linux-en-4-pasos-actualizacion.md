@@ -1,20 +1,27 @@
 ---
-title: 'Sincronizar Google Drive en Linux en 4 pasos [Actualización]'
-layout: post.amp
-permalink: /sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/
+author: alex
 categories:
-  - linux
-tags:
-  - cliente google drive linux
-  - grive
-  - tutorial grive
-lastmod: 2015-12-29
+- linux
+color: '#2196F3'
+description: "Hace poco vimos en un art\xEDculo c\xF3mo Sincronizar Google Drive en
+  Linux en 4 pasos. Llevo usando ese m\xE9todo unas semanas y hasta ahora todo funcionaba
+  correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy
+  grandes puede haber problemas, ya que grive vuelve a ejecutarse varias veces mientras
+  est\xE1 subiendo archivos, con lo cual acaban pasando cosas extra\xF1as, como quedarse
+  subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes
+  cambios parece que soluciona los problemas."
 image: 2013/11/google-drive-linux3.jpg
-description: "Hace poco vimos en un artículo cómo Sincronizar Google Drive en Linux en 4 pasos. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que grive vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas."
 lastmod: 2016-08-09
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/
+tags:
+- cliente google drive linux
+- grive
+- tutorial grive
+title: "Sincronizar Google Drive en Linux en 4 pasos [Actualizaci\xF3n]"
 ---
+
 <figure>
   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/11/google-drive-linux3.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="800px" height="701px"></amp-img>
 </figure>

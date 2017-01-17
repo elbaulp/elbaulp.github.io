@@ -1,21 +1,22 @@
 ---
-title: 'Nueva Guía: Your Guide to Google Analytics'
-
-layout: post.amp
-permalink: /nueva-guia-your-guide-to-google-analytics/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - cursos
-  - noticias
+- cursos
+- noticias
+color: '#61B38D'
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-your-guide-to-google-analytics/
 tags:
-  - google analytics
-  - guias
-  - Your Guide to Google Analytics
-mainclass: "misc"
-color: "#61B38D"
+- google analytics
+- guias
+- Your Guide to Google Analytics
+title: "Nueva Gu\xEDa: Your Guide to Google Analytics"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/08/googleanalytics-5001-246x300.jpg" alt="Your Guide To Google Analytics" title="Your Guide To Google Analytics" width="199px" height="243px" />][1]
 
 Do you own a website or a blog? If so, do you have any idea how many visitors you get each day? And even if you’ve installed a counter and you’ve figured out how to gauge your traffic, do you have any idea where your visitors are coming from, what browsers most of them use, what search engines they use, or which of your pages is the most popular?

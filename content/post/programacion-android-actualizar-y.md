@@ -1,17 +1,19 @@
 ---
-title: 'Programación Android: Actualizar y borrar registros'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-10-26
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-actualizar-y/
-categories:
-  - android
-  - opensource
 tags:
-  - Actualizar y borrar registros
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- Actualizar y borrar registros
+- curso android pdf
+title: "Programaci\xF3n Android: Actualizar y borrar registros"
 ---
+
 Vimos cómo [insertar registros y consultarlos][1], bien, pues actualizar y borrar registros es bastante sencillo. Realizar un [update][2] (Actualizar registros) es muy similar a hacer una inserción, en la cual los valores de la columna a modificar se pasan mediante un objeto [ContentResolver][1]. Abajo se muestra una sentencia para realizar dicho update:
 
 <!--more-->

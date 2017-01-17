@@ -1,13 +1,14 @@
 ---
-title: Copiar archivos recursivamente
-layout: post.amp
-permalink: /copiar-archivos-recursivamente/
+author: alex
 categories:
-  - linux
-  - script
+- linux
+- script
+color: '#2196F3'
 lastmod: 2016-07-29
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /copiar-archivos-recursivamente/
+title: Copiar archivos recursivamente
 ---
 
 Hice un pequeño script que consiste simplemente en dar dos rutas, una origen y otra destino, para copiar todos los archivos mp3 de la ruta origen (con una profundidad máxima de una carpeta), es decir, que si tenemos una carpeta con archivos mp3, y en esa misa carpeta tenemos otra carpeta con archivos mp3, el script tambien copiara los mp3 de la segunda carpeta.

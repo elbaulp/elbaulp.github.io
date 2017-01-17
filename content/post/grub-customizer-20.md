@@ -1,12 +1,13 @@
 ---
-title: Grub Customizer 2.0
-layout: post.amp
-permalink: /grub-customizer-20/
+author: alex
 categories:
-  - Sin Categoria
+- Sin Categoria
+color: '#2196F3'
 lastmod: 2016-08-15
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /grub-customizer-20/
+title: Grub Customizer 2.0
 ---
 
 <figure>

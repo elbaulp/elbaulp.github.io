@@ -1,20 +1,20 @@
 ---
-title: 'Programación Android: Trabajar con actividades y pasar parámetros entre ellas'
-
-layout: post.amp
-permalink: /programacion-android-trabajar-con/
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-trabajar-con/
 tags:
-  - android usar boton para ir a otra actividad
-  - android view setonclicklistener example
-  - curso android pdf
-  - startactivityforresult android example
-mainclass: "android"
-color: "#689F38"
+- android usar boton para ir a otra actividad
+- android view setonclicklistener example
+- curso android pdf
+- startactivityforresult android example
+title: "Programaci\xF3n Android: Trabajar con actividades y pasar par\xE1metros entre
+  ellas"
 ---
-
 
 En el primer capítulo, vimos como crear nuestro primer proyecto en Android, el conocido [Hola Mundo][1], en esta entrada, vamos a ver como crear varias [actividades][2] y cómo hacer que se pasen parámetros las unas a las otras.
 

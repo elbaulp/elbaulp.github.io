@@ -1,17 +1,18 @@
 ---
-title: ¿Odias Java? Estás peleando una batalla equivocada
-
-layout: post.amp
-permalink: /odias-java-estas-peleando-una-batalla-equivocada/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /odias-java-estas-peleando-una-batalla-equivocada/
 tags:
-  - cobol
-  - java
-  - mainframes
-mainclass: "articulos"
-color: "#F57C00"
+- cobol
+- java
+- mainframes
+title: "\xBFOdias Java? Est\xE1s peleando una batalla equivocada"
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/12/java1.jpg" alt="" title="java" width="460px" height="349px" />
 Una de las más interesantes tendencias que se ven ultimamente es la impopularidad de Java en los blogs, foros y otros. Pareciera que la gente está ofendida hasta incluso a nivel personal, cuando se sugiere a Java como el lenguaje superior en la web 2.0.
 

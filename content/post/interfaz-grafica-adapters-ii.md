@@ -1,25 +1,26 @@
 ---
-title: 'Programación Android: Interfaz gráfica - Adapters II'
-layout: post.amp
-permalink: /programacion-android-interfaz-grafica-2/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - adapter android
-  - adapter getview android
-  - android diseñar gui
-  - como hacer interfaces graficas en android
-  - curso android pdf
-  - interfaces de usuario android
-  - interfaz grafica en android
-  - layout android
-  - menu android
-  - simple adapter android ejemplo
+- android
+- opensource
+color: '#689F38'
 image: https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png
 lastmod: 2016-08-14
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-interfaz-grafica-2/
+tags:
+- adapter android
+- adapter getview android
+- "android dise\xF1ar gui"
+- como hacer interfaces graficas en android
+- curso android pdf
+- interfaces de usuario android
+- interfaz grafica en android
+- layout android
+- menu android
+- simple adapter android ejemplo
+title: "Programaci\xF3n Android: Interfaz gr\xE1fica - Adapters II"
 ---
 
 En [Programación Android: Interfaz gráfica - Adapters I][1], se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.

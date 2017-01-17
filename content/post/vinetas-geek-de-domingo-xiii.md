@@ -1,13 +1,14 @@
 ---
-title: Viñetas Geek de Domingo (XIII)
-
-layout: post.amp
-permalink: /vinetas-geek-de-domingo-xiii/
+author: alex
 categories:
-  - Geek
-mainclass: "geek"
-color: "#262626"
+- Geek
+color: '#262626'
+layout: post.amp
+mainclass: geek
+permalink: /vinetas-geek-de-domingo-xiii/
+title: "Vi\xF1etas Geek de Domingo (XIII)"
 ---
+
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 #### Cuando consigo un ordenador nuevo y mis colegas quieren verlo

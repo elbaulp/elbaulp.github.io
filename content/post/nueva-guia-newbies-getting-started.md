@@ -1,13 +1,14 @@
 ---
-title: 'Nueva guía: A Newbies Getting Started Guide to Linux'
+author: alex
+categories:
+- Sin Categoria
+color: '#61B38D'
+image: A-Newbies-Getting-Started-Guide-to-Linux.png
 lastmod: 2016-09-21
 layout: post.amp
+mainclass: misc
 permalink: /nueva-guia-newbies-getting-started/
-categories:
-  - Sin Categoria
-image: A-Newbies-Getting-Started-Guide-to-Linux.png
-mainclass: "misc"
-color: "#61B38D"
+title: "Nueva gu\xEDa: A Newbies Getting Started Guide to Linux"
 ---
 
 <figure>

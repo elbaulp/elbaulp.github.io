@@ -1,12 +1,13 @@
 ---
-title: ¿Que son los archivos mkv?
-layout: post.amp
-permalink: /que-son-los-archivos-mkv-what-is-mkv/
-lastmod: 2016-08-15
+author: alex
 categories:
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- noticias
+color: '#F57C00'
+lastmod: 2016-08-15
+layout: post.amp
+mainclass: articulos
+permalink: /que-son-los-archivos-mkv-what-is-mkv/
+title: "\xBFQue son los archivos mkv?"
 ---
 
 Hace tiempo que quería hablar sobre el formato de video MKV (Matroska). Así que aqui va un poco de información sacada de Wikipedia.

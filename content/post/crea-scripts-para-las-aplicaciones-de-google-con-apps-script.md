@@ -1,15 +1,16 @@
 ---
-title: Crea scripts para las aplicaciones de Google con Apps Script
-layout: post.amp
-permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
+author: alex
 categories:
-  - internet
-tags:
-  - Gmail Inbox Statistics Report
-  - Informe estadístico mensual de GMail
+- internet
+color: '#F57C00'
 lastmod: 2016-08-09
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /crea-scripts-para-las-aplicaciones-de-google-con-apps-script/
+tags:
+- Gmail Inbox Statistics Report
+- "Informe estad\xEDstico mensual de GMail"
+title: Crea scripts para las aplicaciones de Google con Apps Script
 ---
 
 Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.

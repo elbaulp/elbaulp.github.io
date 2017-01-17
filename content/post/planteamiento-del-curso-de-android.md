@@ -1,15 +1,16 @@
 ---
-title: Planteamiento del Curso de Android
-layout: post.amp
-permalink: /planteamiento-del-curso-de-android/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - curso android pdf
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-20
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /planteamiento-del-curso-de-android/
+tags:
+- curso android pdf
+title: Planteamiento del Curso de Android
 ---
 
 Antes de nada, quiero pedir disculpas por haber estado poco activo estos meses de verano en el blog, a partir de ahora voy a intentar ser más regular con respecto a la publicación de entradas.

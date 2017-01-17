@@ -1,14 +1,15 @@
 ---
-title: Python4Kids. Aprende a programar en python fácilmente
-
-layout: post.amp
-permalink: /python4kids-aprende-programar-en-python/
+author: alex
 categories:
-  - cursos
-  - python
-mainclass: "dev"
-color: "#E64A19"
+- cursos
+- python
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /python4kids-aprende-programar-en-python/
+title: "Python4Kids. Aprende a programar en python f\xE1cilmente"
 ---
+
 <div class="separator" >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="" id="logo" name="py" class="icono" />
 </div>

@@ -1,14 +1,15 @@
 ---
-title: 'MasterBranch - Crea tu perfil como Programador y muestra todos tus proyectos'
-layout: post.amp
-permalink: /masterbranch-crea-tu-perfil-como/
-lastmod: 2016-09-09
+author: alex
 categories:
-  - aplicaciones
-  - internet
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+- aplicaciones
+- internet
+- opensource
+color: '#F57C00'
+lastmod: 2016-09-09
+layout: post.amp
+mainclass: articulos
+permalink: /masterbranch-crea-tu-perfil-como/
+title: MasterBranch - Crea tu perfil como Programador y muestra todos tus proyectos
 ---
 
 MasterBranch es una web para desarrolladores y empresarios que buscan buenos programadores. Es un lugar en el que los desarrolladores pueden crear su perfil, el cual se actualiza automáticamente a través de la actividad de su actividad en proyectos de código libre o privativo, y para los empresarios es un lugar donde encontrar cadidatos para crear sus aplicaciones mirando las habilidades de los desarrolladores.

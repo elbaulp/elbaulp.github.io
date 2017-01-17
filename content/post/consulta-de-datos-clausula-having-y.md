@@ -1,14 +1,15 @@
 ---
-title: 'Consulta de Datos - Cláusula HAVING y ORDER BY'
-layout: post.amp
-permalink: /consulta-de-datos-clausula-having-y/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-clausula-having-y/
 tags:
-  - base de datos having
-mainclass: "BaseDeDatos"
-color: "#009688"
+- base de datos having
+title: "Consulta de Datos - Cl\xE1usula HAVING y ORDER BY"
 ---
 
 Especifica una condición de selección para un grupo. `HAVING` se usa normalmente con el `GROUP BY`. Cuando no está con el `GROUP BY`, `HAVING` se comporta como la cláusula `WHERE`, aunque esto es erróneo utilizarlo, puesto que ralentiza el sistema. Su sintaxis es:

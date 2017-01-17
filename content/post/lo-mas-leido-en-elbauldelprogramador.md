@@ -1,13 +1,15 @@
 ---
-title: Lo más leido en ElbaulDelProgramador (Noviembre 2011)
+author: alex
+categories:
+- noticias
+color: '#F57C00'
 lastmod: 2016-10-08
 layout: post.amp
+mainclass: articulos
 permalink: /lo-mas-leido-en-elbauldelprogramador/
-categories:
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+title: "Lo m\xE1s leido en ElbaulDelProgramador (Noviembre 2011)"
 ---
+
 Con esta entrada os dejo lo más leido del més en el blog, junto con algunos datos estadísticos:
 
 

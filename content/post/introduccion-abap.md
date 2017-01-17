@@ -1,19 +1,27 @@
 ---
-title: Introducción a ABAP
-layout: post.amp
-permalink: /introduccion-abap/
+author: alex
 categories:
-  - ABAP
-tags:
-  - curso ABAP
-  - programación ABAP
-  - que es ABAP
-description: "El lenguaje de programación ABAP (antiguamente ABAP/4) es un lenguaje propio del ERP SAP y su uso sólo se puede entender a través de este software empresarial. En un principio, SAP era sinónimo de ERP. Sin embargo, en la actualidad SAP comprende un paquete mucho más amplio de herramientas. Por supuesto, el ERP sigue siendo el núcleo del negocio de SAP, pero su cartera se ido ampliando con otros productos como CRM (customer relationship management), SCM (Supply Chain Management) y SRM (Supplier Relationship Management) entre otros."
-lastmod: 2015-12-25
+- ABAP
+color: '#E64A19'
+description: "El lenguaje de programaci\xF3n ABAP (antiguamente ABAP/4) es un lenguaje
+  propio del ERP SAP y su uso s\xF3lo se puede entender a trav\xE9s de este software
+  empresarial. En un principio, SAP era sin\xF3nimo de ERP. Sin embargo, en la actualidad
+  SAP comprende un paquete mucho m\xE1s amplio de herramientas. Por supuesto, el ERP
+  sigue siendo el n\xFAcleo del negocio de SAP, pero su cartera se ido ampliando con
+  otros productos como CRM (customer relationship management), SCM (Supply Chain Management)
+  y SRM (Supplier Relationship Management) entre otros."
 image: 2014/03/SAP-Apariencia.png
-mainclass: "dev"
-color: "#E64A19"
+lastmod: 2015-12-25
+layout: post.amp
+mainclass: dev
+permalink: /introduccion-abap/
+tags:
+- curso ABAP
+- "programaci\xF3n ABAP"
+- que es ABAP
+title: "Introducci\xF3n a ABAP"
 ---
+
 *Éste artículo es una colaboración de <a href="http://www.blogdesap.com/" title="Blog de SAP" target="_blank">Óscar Arranz</a>*
 
 ## Qué es ABAP

@@ -1,19 +1,25 @@
 ---
-title: Cómo ordenar imágenes por resolución
-layout: post.amp
-permalink: /como-ordenar-imagenes-por-resolucion/
+author: alex
 categories:
-  - script
-tags:
-  - identify
-  - imagenes por resolucion
-  - ordenar por resolución
+- script
+color: '#2196F3'
+description: "Hace poco me encontr\xE9 queriendo ordenar una carpeta de fondos de
+  pantalla por resoluci\xF3n, en lugar de otros m\xE9todos de ordenaci\xF3n m\xE1s
+  t\xEDpicos como por nombre o tama\xF1o. As\xED que buscando un poco encontr\xE9
+  la respuesta en *superuser*. El usuario flammable preguntaba c\xF3mo ordenar im\xE1genes
+  por resoluci\xF3n. La respuesta es la siguiente:"
 image: 2012/07/sh.png
-description: "Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en *superuser*. El usuario flammable preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:"
 lastmod: 2015-12-24
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /como-ordenar-imagenes-por-resolucion/
+tags:
+- identify
+- imagenes por resolucion
+- "ordenar por resoluci\xF3n"
+title: "C\xF3mo ordenar im\xE1genes por resoluci\xF3n"
 ---
+
 <figure>
 <a href="/img/2012/07/sh.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/07/sh.png" title="{{ page.title }}" alt="{{ page.title }}" width="128px" height="128px" /></a>
 </figure>

@@ -1,47 +1,47 @@
 ---
-title: 'Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)'
-
-layout: post.amp
-permalink: /como-configurar-un-servidor-dns3/
+author: alex
 categories:
-  - Administracion de Servidores
-  - Articulos
-  - internet
-tags:
-  - A records
-  - bind
-  - bind tutorial dns
-  - CNAME
-  - como crear dns localhost
-  - crear servidor dns
-  - como montar servidor dns
-  - como crear una zona primaria en dns
-  - configura un servidor dns
-  - configuración de servidores
-  - configuracion dns servidor dedicado
-  - configuracion refresco zona dns
-  - configuracion servidor dns
-  - configuracion zona dns dominio
-  - configurar dns
-  - configurar servidor dns
-  - debian
-  - dns dedicado ovh
-  - implementar servidor dns en debian
-  - in-addr.arpa
-  - MX records
-  - named.conf
-  - ovh
-  - servidor debian
-  - servidor dedicado ovh
-  - servidor dns
-  - servidor dns debian
-  - servidor dns secundario ovh
-  - servidores dns
-  - soa correo
-  - zona dns inversa
+- Administracion de Servidores
+- Articulos
+- internet
+color: '#0097A7'
 image: 2013/04/dns.jpg
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /como-configurar-un-servidor-dns3/
+tags:
+- A records
+- bind
+- bind tutorial dns
+- CNAME
+- como crear dns localhost
+- crear servidor dns
+- como montar servidor dns
+- como crear una zona primaria en dns
+- configura un servidor dns
+- "configuraci\xF3n de servidores"
+- configuracion dns servidor dedicado
+- configuracion refresco zona dns
+- configuracion servidor dns
+- configuracion zona dns dominio
+- configurar dns
+- configurar servidor dns
+- debian
+- dns dedicado ovh
+- implementar servidor dns en debian
+- in-addr.arpa
+- MX records
+- named.conf
+- ovh
+- servidor debian
+- servidor dedicado ovh
+- servidor dns
+- servidor dns debian
+- servidor dns secundario ovh
+- servidores dns
+- soa correo
+- zona dns inversa
+title: "C\xF3mo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)"
 ---
 
 <figure>

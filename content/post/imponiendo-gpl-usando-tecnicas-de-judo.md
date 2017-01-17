@@ -1,18 +1,19 @@
 ---
-title: Imponiendo GPL usando técnicas de Judo
-layout: post.amp
-permalink: /imponiendo-gpl-usando-tecnicas-de-judo/
+author: alex
 categories:
-  - Articulos
-  - opensource
-tags:
-  - gpl
-  - licencias GPL
-  - software libre
-redirect_from: /opensource/imponiendo-gpl-usando-tecnicas-de-judo/
+- Articulos
+- opensource
+color: '#F57C00'
 lastmod: 2016-08-13
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /imponiendo-gpl-usando-tecnicas-de-judo/
+redirect_from: /opensource/imponiendo-gpl-usando-tecnicas-de-judo/
+tags:
+- gpl
+- licencias GPL
+- software libre
+title: "Imponiendo GPL usando t\xE9cnicas de Judo"
 ---
 
 *&#8220;En judo, el objetivo es aprovechar el impulso del atacante para defenderse, y eso es exactamente lo que hace el copyleft&#8221;*

@@ -1,19 +1,20 @@
 ---
-title: Cómo evitar que se aplique ingeniería inversa a un ejecutable
-
-layout: post.amp
-permalink: /como-evitar-que-se-aplique-ingenieria-inversa-a-un-ejecutable/
+author: alex
 categories:
-  - C
-  - How To
+- C
+- How To
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /como-evitar-que-se-aplique-ingenieria-inversa-a-un-ejecutable/
 tags:
-  - evitar ingenieria inversa
-  - funcion ptrace C
-  - ingenieria inversa C
-  - ptrace
-mainclass: "dev"
-color: "#E64A19"
+- evitar ingenieria inversa
+- funcion ptrace C
+- ingenieria inversa C
+- ptrace
+title: "C\xF3mo evitar que se aplique ingenier\xEDa inversa a un ejecutable"
 ---
+
 Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. Hoy voy a explicar un método muy sencillo para evitar que se aplique ingeniería inversa a nuestros ejecutables, que evitará la depuración del mismo.
 
 

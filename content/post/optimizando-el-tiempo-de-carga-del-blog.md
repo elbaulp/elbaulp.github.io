@@ -1,16 +1,15 @@
 ---
-title: Optimizando el tiempo de carga del blog
-layout: post.amp
-lastmod: 2016-09-13
-permalink: /optimizando-el-tiempo-de-carga-del-blog/
-image: optimizando-el-tiempo-de-carga-del-blog.png
+author: alex
 categories:
-  - internet
-mainclass: "articulos"
-color: "#F57C00"
+- internet
+color: '#F57C00'
+image: optimizando-el-tiempo-de-carga-del-blog.png
+lastmod: 2016-09-13
+layout: post.amp
+mainclass: articulos
+permalink: /optimizando-el-tiempo-de-carga-del-blog/
+title: Optimizando el tiempo de carga del blog
 ---
-
-
 
 ### Introducción
 

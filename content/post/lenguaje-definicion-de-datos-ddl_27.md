@@ -1,20 +1,19 @@
 ---
-title: 'Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas'
-layout: post.amp
-permalink: /lenguaje-definicion-de-datos-ddl_27/
-lastmod: 2016-08-16
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-16
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /lenguaje-definicion-de-datos-ddl_27/
 tags:
-  - clausulas del ddl
-  - concepto de ddl
-  - que es un ddl
-  - sentencias dml y ddl
-mainclass: "BaseDeDatos"
-color: "#009688"
+- clausulas del ddl
+- concepto de ddl
+- que es un ddl
+- sentencias dml y ddl
+title: "Lenguaje Definici\xF3n de Datos (DDL) - Sin\xF3nimos y Pseudocolumnas"
 ---
-
-
 
 ## Sinónimos
 

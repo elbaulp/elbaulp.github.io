@@ -1,16 +1,17 @@
 ---
-title: '[Vídeo] Demostración del proyecto WifiBar funcionando'
+author: alex
+categories:
+- android
+- aplicaciones
+- opensource
+color: '#689F38'
 lastmod: 2016-09-12
 layout: post.amp
+mainclass: android
 permalink: /video-demostracion-del-proyecto-wifibar/
-categories:
-  - android
-  - aplicaciones
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "[V\xEDdeo] Demostraci\xF3n del proyecto WifiBar funcionando"
 ---
 
 Pronto habrá que presentar el proyecto de fin de curso, y hay que tenerlo todo correctamente funcionando, os dejo un vídeo que he grabado mostrando la aplicación funcionando. En algunos momentos va algo lento, pero es normal, ya que estaba ejecutando: Una máquina virtual con Windows XP corriendo con SQL Server, otra máquina virtual ejecutando Android, el programa de grabación de vídeo y el Sistema operativo del portatil (ubuntu 10.04), no se le puede pedir más :-).

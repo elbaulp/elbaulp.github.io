@@ -1,20 +1,22 @@
 ---
-title: Estructura y seguridad de los QR Codes
-layout: post.amp
-permalink: /estructura-y-seguridad-de-los-qr-codes/
+author: alex
 categories:
-  - Articulos
-  - Security Now
-  - seguridad
-tags:
-  - como funciona qr
-  - Cómo funcionan los códigod QR
-  - qr code
-  - security now
+- Articulos
+- Security Now
+- seguridad
+color: '#00BCD4'
 image: 2012/12/qrbaulinnercorners2.png
-mainclass: "security-now"
-color: "#00BCD4"
+layout: post.amp
+mainclass: security-now
+permalink: /estructura-y-seguridad-de-los-qr-codes/
+tags:
+- como funciona qr
+- "C\xF3mo funcionan los c\xF3digod QR"
+- qr code
+- security now
+title: Estructura y seguridad de los QR Codes
 ---
+
 > Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.
 >
 > El anterior espisodio traducido fué [Lo último en criptografía: Fully Homomorphic Encryption][1]

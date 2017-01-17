@@ -1,17 +1,18 @@
 ---
-title: 'Nueva guía: History of cryptography'
-
-layout: post.amp
-permalink: /history-of-cryptography/
+author: alex
 categories:
-  - cursos
+- cursos
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /history-of-cryptography/
 tags:
-  - criptografía
-  - descargas
-  - guias
-mainclass: "misc"
-color: "#61B38D"
+- "criptograf\xEDa"
+- descargas
+- guias
+title: "Nueva gu\xEDa: History of cryptography"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178px" height="229px" />][1]
 
 An easy to understand history of cryptography.

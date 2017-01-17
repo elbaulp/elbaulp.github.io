@@ -1,20 +1,19 @@
 ---
-title: 'PL/SQL. Procedimientos y Funciones'
-layout: post.amp
-lastmod: 2016-09-02
-permalink: /plsql-procedimientos-y-funciones/
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-09-02
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-procedimientos-y-funciones/
 tags:
-  - ejemplos create procedure sql
-  - funcion parametros sql
-  - funcion sql
-  - sql generar procedure
-mainclass: "BaseDeDatos"
-color: "#009688"
+- ejemplos create procedure sql
+- funcion parametros sql
+- funcion sql
+- sql generar procedure
+title: PL/SQL. Procedimientos y Funciones
 ---
-
-
 
 ## Procedimientos
 

@@ -1,26 +1,30 @@
 ---
-title: Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)
-description: "Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online.  pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan las contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida."
-layout: post.amp
-permalink: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/
+author: alex
 categories:
-  - Articulos
-  - How To
-  - internet
-  - seguridad
-tags:
-  - algoritmos de cifrado
-  - metodos de cifrado
-  - seguridad
-  - cómo funciona un salt
-lastmod: 2015-07-14
-date: 2015-07-14T21:00:00+00:00
+- Articulos
+- How To
+- internet
+- seguridad
+color: '#F57C00'
+date: 2015-07-14 21:00:00
+description: "Cuando alg\xFAn sitio web que usamos frecuentemente es hackeado, comprometiendo
+  las contrase\xF1as de los usuarios, probablemente pensemos en la seguridad online.
+  \ pero, \xBFQu\xE9 quiere decir realmente cuando un sitio es hackeado?, \xBFy c\xF3mo
+  podemos protegernos? A continuaci\xF3n se explica c\xF3mo se almacenan las contrase\xF1as
+  en internet, y c\xF3mo te afecta cuando la web que usas se ve comprometida."
 image: 2012/07/original2.jpg
-mainclass: "articulos"
-color: "#F57C00"
+lastmod: 2015-07-14
+layout: post.amp
+mainclass: articulos
+permalink: /como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/
+tags:
+- algoritmos de cifrado
+- metodos de cifrado
+- seguridad
+- "c\xF3mo funciona un salt"
+title: "C\xF3mo se almacenan tus contrase\xF1as en internet (y cuando la longitud
+  de la misma no importa)"
 ---
-
-
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/07/original2.jpg" alt="" title="original" width="640px" height="360px" />

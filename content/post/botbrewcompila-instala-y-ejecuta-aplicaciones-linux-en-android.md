@@ -1,23 +1,26 @@
 ---
-title: BotBrew basil, Compila, instala y ejecuta aplicaciones Linux en Android
-layout: post.amp
-permalink: /botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/
+author: alex
 categories:
-  - android
-  - Articulos
-tags:
-  - botbrew basil
-  - como instalar aplicaciones de linux a android
-  - curso android pdf
-  - debian en android
-  - samsung galaxy scl gti9003
-  - xda
-description: "Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros. Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo."
+- android
+- Articulos
+color: '#F57C00'
+description: "Leyendo noticias en mi lector RSS he encontrado un art\xEDculo interesante
+  que comparto con vosotros. Se trata de un programa que permitir\xE1 tener un sistema
+  debian b\xE1sico en el dispostivo."
 image: 2012/12/linux-apps-on-android1.jpg
 lastmod: 2016-08-13
+layout: post.amp
+mainclass: articulos
+permalink: /botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/
 redirect_from: /programacion/android/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/
-mainclass: "articulos"
-color: "#F57C00"
+tags:
+- botbrew basil
+- como instalar aplicaciones de linux a android
+- curso android pdf
+- debian en android
+- samsung galaxy scl gti9003
+- xda
+title: BotBrew basil, Compila, instala y ejecuta aplicaciones Linux en Android
 ---
 
 Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.

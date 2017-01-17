@@ -1,17 +1,18 @@
 ---
-title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 4.0'
+author: alex
+categories:
+- android
+- aplicaciones
+- cursos
+- opensource
+color: '#689F38'
 lastmod: 2016-09-12
 layout: post.amp
+mainclass: android
 permalink: /pro-android-3-aprende-fondo-todo-lo-que/
-categories:
-  - android
-  - aplicaciones
-  - cursos
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: 'Pro Android 3: Aprende a fondo todo lo que ofrece el SDK Android 4.0'
 ---
 
 Hace unas semanas encargué este libro en Amazon ([Pro Android 3](http://amzn.to/2cxpfZV ), aunque quizá tenga más sentido en estos momentos comprar [Pro Android 4](http://amzn.to/2cxqUO8 ), y me llego ayer. Con este libro pretendo aprender a fondo todo lo que ofrece este nuevo SDK, y compartirlo con vosotros. (Me llevará tiempo, son 1200 páginas y está en inglés).

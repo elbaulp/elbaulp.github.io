@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Recursos - Introducción'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-20
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - recursos android
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- recursos android
+title: "Programaci\xF3n Android: Recursos - Introducci\xF3n"
 ---
 
 Ya hemos visto que Android separa los recursos (imágenes, sonidos etc) del código colocándolos organizados dentro del directorio ***./res***. Esto nos facilita su mantenimiento, además de permitirnos usar diferentes recursos dependiendo de la configuración del terminal.

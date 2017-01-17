@@ -1,15 +1,18 @@
 ---
-title: 'Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag'
-
-layout: post.amp
-permalink: /solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/
+author: alex
 categories:
-  - android
+- android
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/
 tags:
-  - error Calling startActivity from outside of an Activity context requires the FLAG_ACTIVITY_NEW_TASK flag android
-mainclass: "android"
-color: "#689F38"
+- error Calling startActivity from outside of an Activity context requires the FLAG_ACTIVITY_NEW_TASK
+  flag android
+title: Solucionar el error en Android Calling startActivity from outside of an Activity  context
+  requires the FLAG_ACTIVITY_NEW_TASK flag
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/07/android2.png" alt="Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag" width="132px" height="154px" />
 En una aplicación que estoy haciendo, la cual espero poder presentar en el blog en breve, me encontré con un problema que llevó un tiempo solucionar. La aplicación terminaba inesperadamente al intentar lanzar una actividad desde un [Servicio][1], concretamente el error era:
 

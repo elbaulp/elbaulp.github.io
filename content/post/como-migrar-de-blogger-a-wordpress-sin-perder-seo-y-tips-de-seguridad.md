@@ -1,22 +1,25 @@
 ---
-title: Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad
-description: 'En esta entrada  se verá cómo migrar desde la plataforma de blogeo de blogger a una en wordpress bajo un hosting propio así como la configuración necesaria para no perder a los  lectores habituales, los suscriptores al feed ni el posicionamiento en los buscadores. Por último se mencionarán algunos consejos de seguridad.'
-layout: post.amp
-permalink: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/
+author: alex
 categories:
-  - How To
-  - internet
-tags:
-  - blogger
-  - migrar blogger a wordpress
-  - migrar blogger wordpress
-  - wordpress
+- How To
+- internet
+color: '#E64A19'
+description: "En esta entrada  se ver\xE1 c\xF3mo migrar desde la plataforma de blogeo
+  de blogger a una en wordpress bajo un hosting propio as\xED como la configuraci\xF3n
+  necesaria para no perder a los  lectores habituales, los suscriptores al feed ni
+  el posicionamiento en los buscadores. Por \xFAltimo se mencionar\xE1n algunos consejos
+  de seguridad."
 lastmod: 2016-08-13
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/
+tags:
+- blogger
+- migrar blogger a wordpress
+- migrar blogger wordpress
+- wordpress
+title: "C\xF3mo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
 ---
-
-
 
 ### Importar entradas y comentários
 

@@ -1,21 +1,25 @@
 ---
-title: Cambiar el color del summary en una Preferencia Android
-
-layout: post.amp
-permalink: /cambiar-el-color-del-summary-en-una-preferencia-android/
+author: alex
 categories:
-  - android
-tags:
-  - color summary android preferencias
-  - CUSL
-  - preferencias android
-  - summary android
-lastmod: 2015-12-28
+- android
+color: '#689F38'
+description: "En un art\xEDculo anterior vimos c\xF3mo crear un di\xE1logo personalizado
+  en las preferencias para android. Continuaremos con esa aplicaci\xF3n trivial a
+  modo de ejemplo para ver c\xF3mo personalizar el summary que aparece debajo del
+  t\xEDtulo de una preferencia."
 image: 2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png
-description: "En un artículo anterior vimos cómo crear un diálogo personalizado en las preferencias para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el summary que aparece debajo del título de una preferencia."
-mainclass: "android"
-color: "#689F38"
+lastmod: 2015-12-28
+layout: post.amp
+mainclass: android
+permalink: /cambiar-el-color-del-summary-en-una-preferencia-android/
+tags:
+- color summary android preferencias
+- CUSL
+- preferencias android
+- summary android
+title: Cambiar el color del summary en una Preferencia Android
 ---
+
 En un artículo anterior vimos [cómo crear un diálogo personalizado en las preferencias][1] para android. Continuaremos con esa aplicación trivial a modo de ejemplo para ver cómo personalizar el *summary* que aparece debajo del título de una preferencia.
 
 <!--more-->

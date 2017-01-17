@@ -1,19 +1,20 @@
 ---
-title: 'NDK-gdb - Depurar aplicaciones en el NKD de Android'
-
-layout: post.amp
-permalink: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/
+author: alex
 categories:
-  - android
-  - How To
+- android
+- How To
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/
 tags:
-  - como depurar jni android
-  - depurar aplicaciones con ndk-gdb
-  - depurar codigo nativo android ndk-gdb
-  - tutorial ndk-gdb
-mainclass: "android"
-color: "#689F38"
+- como depurar jni android
+- depurar aplicaciones con ndk-gdb
+- depurar codigo nativo android ndk-gdb
+- tutorial ndk-gdb
+title: NDK-gdb - Depurar aplicaciones en el NKD de Android
 ---
+
 En el artículo [Introducción al NDK de Android][1] se explicaron las nociones básicas del NDK, hoy vamos a ver un ejemplo un poco más complejo en el que aprenderemos a depurar código nativo en aplicaciones [Android][2]. La aplicación de ejemplo actuará como servidor esperando conexiones mediante *telnet*. Cuando un cliente se conecte al dispositivo a través *telnet*, será posible enviar y recibir mensajes. Así como ejecutar dos comandos, *ip_de <dominio>*, que devolverá la *IP* de dicho dominio, y *adios*, que finalizará la conexión.
 
 

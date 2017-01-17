@@ -1,31 +1,32 @@
 ---
-title: 'Netstat: Analizando la red y detectando problemas'
+author: alex
+categories:
+- Articulos
+- linux
+color: '#2196F3'
+lastmod: 2016-08-11
 layout: post.amp
+mainclass: linux
 permalink: /netstat-analizando-la-red-y-detectando-problemas/
 redirect_from: /articulos/netstat-analizando-la-red-y-detectando-problemas/
-categories:
-  - Articulos
-  - linux
 tags:
-  - comando netstat
-  - comandos linux
-  - como interpretar netstat an
-  - como leer una tabla de ruta con netstat
-  - ejemplos netstat
-  - herramientas red
-  - manual practico de netstat
-  - netstat
-  - netstat comando windows
-  - netstat mac
-  - netstat para que sirve
-  - netstat ver puertos
-  - netstat windows
-  - salida comando netstat
-  - significado close_wait
-  - usos netstat
-lastmod: 2016-08-11
-mainclass: "linux"
-color: "#2196F3"
+- comando netstat
+- comandos linux
+- como interpretar netstat an
+- como leer una tabla de ruta con netstat
+- ejemplos netstat
+- herramientas red
+- manual practico de netstat
+- netstat
+- netstat comando windows
+- netstat mac
+- netstat para que sirve
+- netstat ver puertos
+- netstat windows
+- salida comando netstat
+- significado close_wait
+- usos netstat
+title: 'Netstat: Analizando la red y detectando problemas'
 ---
 
 `netstat` es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.

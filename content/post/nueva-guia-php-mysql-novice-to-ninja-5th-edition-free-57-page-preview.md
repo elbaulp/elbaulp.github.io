@@ -1,21 +1,22 @@
 ---
-title: 'Nueva guía: PHP & MySQL: Novice to Ninja, 5th Edition-Free 57 Page Preview'
-
-layout: post.amp
-permalink: /nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - cursos
-  - noticias
+- cursos
+- noticias
+color: '#61B38D'
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/
 tags:
-  - mysql
-  - php
-  - programación
-mainclass: "misc"
-color: "#61B38D"
+- mysql
+- php
+- "programaci\xF3n"
+title: "Nueva gu\xEDa: PHP & MySQL: Novice to Ninja, 5th Edition-Free 57 Page Preview"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/08/w_sitb33c1.gif" alt="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" title="PHP & MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview" width="197px" height="259px" />][1]
 
 PHP & MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you&#8217;ll learn how to use PHP (used on 20 million sites worldwide) to build your own working content management system using entirely free software. The book also teaches you best practices in database design using MySQL, and covers all the latest technologies.

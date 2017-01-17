@@ -1,16 +1,17 @@
 ---
-title: Introduccion a base de datos
-layout: post.amp
-permalink: /introduccion-base-de-datos/
+author: alex
 categories:
-  - BaseDeDatos
-tags:
-  - abstraccion de datos pl/sql
-  - apuntes bases de datos
-  - guia de sql basico
+- BaseDeDatos
+color: '#009688'
 lastmod: 2016-08-13
-mainclass: "BaseDeDatos"
-color: "#009688"
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /introduccion-base-de-datos/
+tags:
+- abstraccion de datos pl/sql
+- apuntes bases de datos
+- guia de sql basico
+title: Introduccion a base de datos
 ---
 
 ## Introducción a bases de datos

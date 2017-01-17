@@ -1,12 +1,13 @@
 ---
-title: Rockmelt, una navegador social basado en Chromium
-layout: post.amp
-permalink: /rockmelt-una-navegador-social-basado-en/
+author: alex
 categories:
-  - noticias
+- noticias
+color: '#F57C00'
 lastmod: 2016-08-15
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /rockmelt-una-navegador-social-basado-en/
+title: Rockmelt, una navegador social basado en Chromium
 ---
 
 Como señalan [nuestros compañeros de MuyComputer][1], la **empresa respaldada por Marc Andreessen** – fundador de Netscape- ha presentado un nuevo navegador web enfocado a uso de redes sociales.

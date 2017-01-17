@@ -1,15 +1,16 @@
 ---
-title: 'Nueva Guía: Build Your Own WordPress Site Guide'
+author: alex
+categories:
+- cursos
+- internet
+- noticias
+- opensource
+color: '#61B38D'
 lastmod: 2016-09-12
 layout: post.amp
+mainclass: misc
 permalink: /nueva-guia-build-your-own-wordpress/
-categories:
-  - cursos
-  - internet
-  - noticias
-  - opensource
-mainclass: "misc"
-color: "#61B38D"
+title: "Nueva Gu\xEDa: Build Your Own WordPress Site Guide"
 ---
 
 <figure>

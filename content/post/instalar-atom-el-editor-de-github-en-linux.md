@@ -1,18 +1,19 @@
 ---
-title: Instalar Atom, el editor de GitHub en Linux
-
-layout: post.amp
-permalink: /instalar-atom-el-editor-de-github-en-linux/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /instalar-atom-el-editor-de-github-en-linux/
 tags:
-  - atom
-  - editor atom github
-  - instalar atom
-  - instalar atom en Ubuntu
-mainclass: "articulos"
-color: "#F57C00"
+- atom
+- editor atom github
+- instalar atom
+- instalar atom en Ubuntu
+title: Instalar Atom, el editor de GitHub en Linux
 ---
+
 Hace unos días decidí instalar **Atom**, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:
 
 > At GitHub, we&#8217;re building the text editor we&#8217;ve always wanted. A tool you can customize to do anything, but also use productively on the first day without ever touching a config file. Atom is modern, approachable, and hackable to the core. We can&#8217;t wait to see what you build with it.

@@ -1,19 +1,20 @@
 ---
-title: 'Unhide Forensic Tool: Encuentra puertos y procesos ocultos'
-
-layout: post.amp
-permalink: /unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/
+author: alex
 categories:
-  - aplicaciones
-  - Hacking
-  - seguridad
+- aplicaciones
+- Hacking
+- seguridad
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/
 tags:
-  - herramientas forenses
-  - unhide
-  - unhide forensic tool
-mainclass: "articulos"
-color: "#F57C00"
+- herramientas forenses
+- unhide
+- unhide forensic tool
+title: 'Unhide Forensic Tool: Encuentra puertos y procesos ocultos'
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/02/ghostbuster.jpg" alt="Unhide Forensic Tool" width="200px" height="176px" />
 </figure>

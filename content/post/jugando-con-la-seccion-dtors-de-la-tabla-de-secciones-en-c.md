@@ -1,18 +1,19 @@
 ---
-title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
-
-layout: post.amp
-permalink: /jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/
+author: alex
 categories:
-  - C
+- C
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/
 tags:
-  - .ctors y .dtors
-  - .init_array .fini_array
-  - ELF
-  - secciones C
-mainclass: "dev"
-color: "#E64A19"
+- .ctors y .dtors
+- .init_array .fini_array
+- ELF
+- secciones C
+title: Jugando con las secciones .dtors y .ctors de la tabla de secciones en C
 ---
+
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft" />
 Los que me leéis habitualmente probablemente hayais visto los artículos que escribí sobre [ingeniería inversa en C][1], o [explotación de buffers overflows][2]. Son temas que me llaman la atención, hoy quiero hablaros de dos secciones de la tabla de secciones en C llamadas *.dtors* y *.ctors*, creada por los binarios compilados con el compilador de GNU.
 

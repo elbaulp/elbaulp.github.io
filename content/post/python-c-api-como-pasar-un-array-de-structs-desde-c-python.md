@@ -1,20 +1,25 @@
 ---
-title: 'Python C API - Cómo pasar un array de structs desde C a Python'
-
-layout: post.amp
-permalink: /python-c-api-como-pasar-un-array-de-structs-desde-c-python/
+author: alex
 categories:
-  - C
-  - python
-tags:
-  - modulos python
-  - python C API
-  - structs c
-image: 2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png
-description: "Hace algún tiempo estaba desarrollando un módulo para python, con el cual aprendí bastante y sirvió para crear una serie de artículos sobre el tema (Crear un módulo para python con la Python C API). Uno de los problemas encontrados fue cómo conseguir pasar un array de structs desde C a Python, para resolver la duda pregunté, cómo no, en stackoverflow. Al final terminé respondiéndome a mí mismo, pero aprendí bastante, veamos cómo hacerlo."
+- C
+- python
+color: '#E64A19'
+description: "Hace alg\xFAn tiempo estaba desarrollando un m\xF3dulo para python,
+  con el cual aprend\xED bastante y sirvi\xF3 para crear una serie de art\xEDculos
+  sobre el tema (Crear un m\xF3dulo para python con la Python C API). Uno de los problemas
+  encontrados fue c\xF3mo conseguir pasar un array de structs desde C a Python, para
+  resolver la duda pregunt\xE9, c\xF3mo no, en stackoverflow. Al final termin\xE9
+  respondi\xE9ndome a m\xED mismo, pero aprend\xED bastante, veamos c\xF3mo hacerlo."
+image: "2013/03/Crear-un-m\xF3dulo-para-python-con-la-Python-C-API-Parte-I.png"
 lastmod: 2015-12-22
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /python-c-api-como-pasar-un-array-de-structs-desde-c-python/
+tags:
+- modulos python
+- python C API
+- structs c
+title: "Python C API - C\xF3mo pasar un array de structs desde C a Python"
 ---
 
 <figure>

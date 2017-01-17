@@ -1,19 +1,20 @@
 ---
-title: Optimizando código y evaluando el rendimiento
-
-layout: post.amp
-permalink: /peso-hamming-y-optimizacion/
+author: alex
 categories:
-  - Algoritmos
-  - C
+- Algoritmos
+- C
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /peso-hamming-y-optimizacion/
 tags:
-  - optimizacion
-  - paridad
-  - peso hamming
-  - popcount
-mainclass: "dev"
-color: "#E64A19"
+- optimizacion
+- paridad
+- peso hamming
+- popcount
+title: "Optimizando c\xF3digo y evaluando el rendimiento"
 ---
+
 Hace un més aproximadamente terminó el plazo de entrega de la práctica que voy a hablar hoy, lo que me permite hablaros de la misma.
 
 En concreto, el ejercício consiste en realizar varias versiones de un algoritmo, para ver cómo varía la eficiencia del mismo en función de cómo se plantee el problema, obteniendo resultados sorprendentes en cuanto a tiempo de ejecución.

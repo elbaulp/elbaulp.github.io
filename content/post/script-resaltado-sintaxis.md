@@ -1,15 +1,16 @@
 ---
-title: Script resaltado sintaxis c++
-layout: post.amp
-permalink: /script-resaltado-sintaxis/
+author: alex
 categories:
-  - linux
-  - script
-tags:
-  - sintaxis c
+- linux
+- script
+color: '#2196F3'
 lastmod: 2016-07-29
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /script-resaltado-sintaxis/
+tags:
+- sintaxis c
+title: Script resaltado sintaxis c++
 ---
 
 He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es <a href="http://alexgorbatchev.com/SyntaxHighlighter/" target="_blank">esta</a>.

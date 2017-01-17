@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Hola Mundo'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-14
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-hola-mundo/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - hola mundo android
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- hola mundo android
+title: "Programaci\xF3n Android: Hola Mundo"
 ---
 
 > Hay una versión más actualizada, visita [Tutorial Android - Hola Mundo a Fondo](https://elbauldelprogramador.com/android/tutorial-android-hola-mundo-a-fondo/ "Tutorial Android - Hola Mundo a Fondo").

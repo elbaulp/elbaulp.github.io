@@ -1,13 +1,14 @@
 ---
-title: 'Nueva guía: FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs'
-
-layout: post.amp
-permalink: /nueva-guia-faq-guide-windows-7/
+author: alex
 categories:
-  - cursos
-mainclass: "misc"
-color: "#61B38D"
+- cursos
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-faq-guide-windows-7/
+title: "Nueva gu\xEDa: FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs"
 ---
+
 <div >
 <a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&pc=w_view10/prgm.cgi"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="http://img.tradepub.com/free/w_view10/img/w_view10c.gif" title="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" alt="FAQ Guide: Windows 7 Migrations Are the Time to Lockdown PCs" /></a>
 </div>

@@ -1,22 +1,22 @@
 ---
-title: Entendiendo los runlevel en Debian
-
-layout: post.amp
-permalink: /entendiendo-los-runlevel-en-debian-y-ubuntu/
+author: alex
 categories:
-  - linux
-  - SO
+- linux
+- SO
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /entendiendo-los-runlevel-en-debian-y-ubuntu/
 tags:
-  - autoejecutar servicios linux
-  - iniciar servicio linux
-  - runlevel
-  - runlevel Debian
-  - runlevel linux
-  - init 3 debian
-  - linux runlevel
-  - modificar runlevel debian
-mainclass: "linux"
-color: "#2196F3"
+- autoejecutar servicios linux
+- iniciar servicio linux
+- runlevel
+- runlevel Debian
+- runlevel linux
+- init 3 debian
+- linux runlevel
+- modificar runlevel debian
+title: Entendiendo los runlevel en Debian
 ---
 
 <figure>

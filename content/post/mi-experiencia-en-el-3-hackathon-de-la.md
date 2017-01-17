@@ -1,15 +1,16 @@
 ---
-title: Mi experiencia en el 3º Hackathon de la Universidad de Granada
-
-layout: post.amp
-permalink: /mi-experiencia-en-el-3-hackathon-de-la/
+author: alex
 categories:
-  - hackathon
-  - noticias
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+- hackathon
+- noticias
+- opensource
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /mi-experiencia-en-el-3-hackathon-de-la/
+title: "Mi experiencia en el 3\xBA Hackathon de la Universidad de Granada"
 ---
+
 <div class="separator" >
 <a href="http://planeta-irislibre.rediris.es/img/oslugr.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="87" width="200" src="http://planeta-irislibre.rediris.es/img/oslugr.png" /></a>
 </div>

@@ -1,35 +1,36 @@
 ---
-title: 'Git: Mini Tutorial y chuleta de comandos'
-layout: post.amp
-permalink: /mini-tutorial-y-chuleta-de-comandos-git/
+author: alex
 categories:
-  - Articulos
-tags:
-  - chuleta
-  - git
-  - chuleta comandos git
-  - chuleta git
-  - comandos git
-  - git cheatsheet
-  - git tutorial
-  - introduccion git
-  - ramas con git
-  - tutorial git
-  - tutoriales sobre git
-  - tutorial git español
-  - git bash tutorial
-  - comandos bitbucket
-  - git tutorial español
-  - git manual español pdf
-  - git clone
-  - git init
-redirect_from: /articulos/mini-tutorial-y-chuleta-de-comandos-git/
-date: 2015-12-13T19:10:12+01:00
-lastmod: 2016-08-06
-description: "Un mini tutorial y lista extensa de comandos git"
+- Articulos
+color: '#f05033'
+date: 2015-12-13 18:10:12
+description: Un mini tutorial y lista extensa de comandos git
 image: 2013/03/git-logo.png
-mainclass: "git"
-color: "#f05033"
+lastmod: 2016-08-06
+layout: post.amp
+mainclass: git
+permalink: /mini-tutorial-y-chuleta-de-comandos-git/
+redirect_from: /articulos/mini-tutorial-y-chuleta-de-comandos-git/
+tags:
+- chuleta
+- git
+- chuleta comandos git
+- chuleta git
+- comandos git
+- git cheatsheet
+- git tutorial
+- introduccion git
+- ramas con git
+- tutorial git
+- tutoriales sobre git
+- "tutorial git espa\xF1ol"
+- git bash tutorial
+- comandos bitbucket
+- "git tutorial espa\xF1ol"
+- "git manual espa\xF1ol pdf"
+- git clone
+- git init
+title: 'Git: Mini Tutorial y chuleta de comandos'
 ---
 
 <figure>

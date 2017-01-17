@@ -1,18 +1,19 @@
 ---
-title: 'Programación Android: Intents - Categorías'
-
-layout: post.amp
-permalink: /programacion-android-intents-categorias/
+author: alex
 categories:
-  - android
-  - opensource
+- android
+- opensource
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-intents-categorias/
 tags:
-  - android ejemplo intent filter
-  - curso android pdf
-  - ejemplo intentfilter implicito
-mainclass: "android"
-color: "#689F38"
+- android ejemplo intent filter
+- curso android pdf
+- ejemplo intentfilter implicito
+title: "Programaci\xF3n Android: Intents - Categor\xEDas"
 ---
+
 <div class="separator" >
 
 </div>

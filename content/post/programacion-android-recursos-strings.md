@@ -1,20 +1,19 @@
 ---
-title: 'Programación Android: Recursos - Strings'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-20
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-strings/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - recursos android
-  - strings android
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- recursos android
+- strings android
+title: "Programaci\xF3n Android: Recursos - Strings"
 ---
-
-
 
 ## Introducción
 

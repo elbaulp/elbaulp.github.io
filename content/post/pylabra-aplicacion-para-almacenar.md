@@ -1,14 +1,15 @@
 ---
-title: 'Pylabra. Aplicación para almacenar vocabulario'
-layout: post.amp
-lastmod: 2016-08-27
-permalink: /pylabra-aplicacion-para-almacenar/
+author: alex
 categories:
-  - aplicaciones
-  - opensource
-  - python
-mainclass: "dev"
-color: "#E64A19"
+- aplicaciones
+- opensource
+- python
+color: '#E64A19'
+lastmod: 2016-08-27
+layout: post.amp
+mainclass: dev
+permalink: /pylabra-aplicacion-para-almacenar/
+title: "Pylabra. Aplicaci\xF3n para almacenar vocabulario"
 ---
 
 Hace bastante tiempo que Haitike y yo dejamos de desarrollar [Pylabra][1], y nunca creé una entrada hablando de la aplicación en sí, asi que me he decidido a escribirla.

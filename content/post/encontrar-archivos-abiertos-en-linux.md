@@ -1,15 +1,17 @@
 ---
-title: "Encontrar archivos abiertos en Linux"
-layout: post.amp
-permalink: /encontrar-archivos-abiertos-en-linux/
+author: alex
 categories:
-  - linux
-  - opensource
-  - SO
+- linux
+- opensource
+- SO
+color: '#2196F3'
 lastmod: 2016-10-26
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /encontrar-archivos-abiertos-en-linux/
+title: Encontrar archivos abiertos en Linux
 ---
+
 ¿Cómo podemos saber cuantos archivos tenemos abiertos o hasta cuantos podemos permitir que están abiertos en Linux?
 
 Por defecto el kernel de Linux establece un límite (para propósitos de seguridad) de hasta cuantos descriptores de archivos abiertos están permitidos en los sitemas linux servidor o escritorio.

@@ -1,17 +1,18 @@
 ---
-title: Cómo crear shortcodes en WordPress que soporten parámetros
-
-layout: post.amp
-permalink: /como-crear-shortcodes-en-wordpress/
+author: alex
 categories:
-  - How To
-  - php
+- How To
+- php
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /como-crear-shortcodes-en-wordpress/
 tags:
-  - shortcodes
-  - wordpress shortcodes
-mainclass: "dev"
-color: "#E64A19"
+- shortcodes
+- wordpress shortcodes
+title: "C\xF3mo crear shortcodes en WordPress que soporten par\xE1metros"
 ---
+
 Ya se vió cómo añadir <a href="/como-crear-shortcodes-en-wordpress-2/" target="_blank">shortcodes simples</a>, esta vez se explicará con un poco más de profundidad.
 
 Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo&nbsp;**functions.php .&nbsp;** Como primer ejemplo sencillo, se creará un shortcode llamado *[foo]&nbsp;*que añadirá al artículo el texto&nbsp;**&#8220;Esto es una prueba&#8221;.**

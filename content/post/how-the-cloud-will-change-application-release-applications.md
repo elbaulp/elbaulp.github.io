@@ -1,17 +1,18 @@
 ---
-title: 'Nueva Guía: How the Cloud will Change Application Release Applications'
-
-layout: post.amp
-permalink: /how-the-cloud-will-change-application-release-applications/
+author: alex
 categories:
-  - cursos
+- cursos
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /how-the-cloud-will-change-application-release-applications/
 tags:
-  - cloud
-  - How the Cloud will Change Application Release Applications
-  - internet
-mainclass: "misc"
-color: "#61B38D"
+- cloud
+- How the Cloud will Change Application Release Applications
+- internet
+title: "Nueva Gu\xEDa: How the Cloud will Change Application Release Applications"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/01/How-the-Cloud-will-Change-Application-Release-Applications.png" alt="How the Cloud will Change Application Release Applications" width="200px" height="259px" />][1]
 
 The use of cloud computing for custom-built, mission-critical enterprise applications is in its infancy, but both the technology and mind-set are starting to influence enterprise application architectures and delivery.

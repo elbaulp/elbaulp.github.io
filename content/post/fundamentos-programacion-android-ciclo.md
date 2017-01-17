@@ -1,18 +1,19 @@
 ---
-title: 'Fundamentos programación Android: Ciclo de vida de los componentes'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-17
 layout: post.amp
+mainclass: android
 permalink: /fundamentos-programacion-android-ciclo/
-categories:
-  - android
-  - opensource
 tags:
-  - ciclo de vida
-  - componentes android
-  - curso android pdf
-  - Fundamentos programación Android
-mainclass: "android"
-color: "#689F38"
+- ciclo de vida
+- componentes android
+- curso android pdf
+- "Fundamentos programaci\xF3n Android"
+title: "Fundamentos programaci\xF3n Android: Ciclo de vida de los componentes"
 ---
 
 Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos ***callback*** que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.

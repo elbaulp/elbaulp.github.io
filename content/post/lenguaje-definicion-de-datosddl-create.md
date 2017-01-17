@@ -1,23 +1,22 @@
 ---
-title: 'Lenguaje Definición de Datos(DDL) - CREATE'
-layout: post.amp
-permalink: /lenguaje-definicion-de-datosddl-create/
+author: alex
 categories:
-  - BaseDeDatos
-tags:
-  - alter table posibles valores
-  - clausulas del ddl
-  - concepto de ddl
-  - que es un ddl
-  - sentencia create
-  - sentencias dml y ddl
-  - unique para varias columnas
+- BaseDeDatos
+color: '#009688'
 lastmod: 2016-08-16
-mainclass: "BaseDeDatos"
-color: "#009688"
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /lenguaje-definicion-de-datosddl-create/
+tags:
+- alter table posibles valores
+- clausulas del ddl
+- concepto de ddl
+- que es un ddl
+- sentencia create
+- sentencias dml y ddl
+- unique para varias columnas
+title: "Lenguaje Definici\xF3n de Datos(DDL) - CREATE"
 ---
-
-
 
 En esta entrada vamos a ver la orden CREATE
 

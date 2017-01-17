@@ -1,21 +1,22 @@
 ---
-title: 'Optimizando la interfaz Android - Compound Drawables'
-
-layout: post.amp
-permalink: /optimizando-la-interfaz-android-compound-drawables/
+author: alex
 categories:
-  - android
+- android
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /optimizando-la-interfaz-android-compound-drawables/
 tags:
-  - android listview con imagenes
-  - android listview example
-  - compound drawables
-  - curso android pdf
-  - lint warning
-  - optimizacion de listas android
-  - optimizar layout
-mainclass: "android"
-color: "#689F38"
+- android listview con imagenes
+- android listview example
+- compound drawables
+- curso android pdf
+- lint warning
+- optimizacion de listas android
+- optimizar layout
+title: Optimizando la interfaz Android - Compound Drawables
 ---
+
 Hace poco, mientras escribía un [CustomAdapter][1] para una aplicación en la que estoy trabajando, descubrí una nueva característica gracias a la herramienta Lint del sdk, los compound drawables.
 
 #### Compound Drawables

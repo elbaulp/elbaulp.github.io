@@ -1,13 +1,15 @@
 ---
-title: Sorteamos 10 matrículas gratuitas para cursos de desarrollo WordPress y cupones de descuento
-
-layout: post.amp
-permalink: /sorteo-wordpress/
+author: alex
 categories:
-  - cursos
-mainclass: "articulos"
-color: "#F57C00"
+- cursos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /sorteo-wordpress/
+title: "Sorteamos 10 matr\xEDculas gratuitas para cursos de desarrollo WordPress y
+  cupones de descuento"
 ---
+
 Me alegra comunicaros que me han ofrecido realizar este sorteo en el que los lectores podrán participar en el sorteo de **5 matriculaciones gratuitas para un curso sobre WordPress, 5 matriculaciones gratuitas para un curso de desarrollo de plugins para WordPress y 10 cupones de descuento para los dos cursos**. Participa!.
 
 <!--more-->

@@ -1,17 +1,18 @@
 ---
-title: 'Diseño de Bases de Datos ( II ) - Restricciones'
-layout: post.amp
-permalink: /diseno-de-bases-de-datos-ii/
+author: alex
 categories:
-  - BaseDeDatos
-tags:
-  - default
-  - sintaxis de restricciones check
-  - sintaxis de restricciones check unique default
-  - unique
+- BaseDeDatos
+color: '#009688'
 lastmod: 2016-08-15
-mainclass: "BaseDeDatos"
-color: "#009688"
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /diseno-de-bases-de-datos-ii/
+tags:
+- default
+- sintaxis de restricciones check
+- sintaxis de restricciones check unique default
+- unique
+title: "Dise\xF1o de Bases de Datos ( II ) - Restricciones"
 ---
 
 > __Nota:__ Basado en los apuntes de clase

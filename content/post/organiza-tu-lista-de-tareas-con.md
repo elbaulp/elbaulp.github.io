@@ -1,14 +1,15 @@
 ---
-title: Organiza tu lista de Tareas con Remember the Milk
-layout: post.amp
-permalink: /organiza-tu-lista-de-tareas-con/
-lastmod: 2016-09-05
+author: alex
 categories:
-  - curiosidades
-  - internet
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- curiosidades
+- internet
+- noticias
+color: '#F57C00'
+lastmod: 2016-09-05
+layout: post.amp
+mainclass: articulos
+permalink: /organiza-tu-lista-de-tareas-con/
+title: Organiza tu lista de Tareas con Remember the Milk
 ---
 
 Si eres de los que tiene cosas y cosas pendientes que hacer y no hay forma de que te organices, [Remember The Milk][1] puede ser una alternativa a las tareas de Gmail, esta web lleva bastante tiempo en la nube, pero yo la he descubierto hace poco.

@@ -1,14 +1,15 @@
 ---
-title: Bash syntax highlighted script
-layout: post.amp
-permalink: /bash-syntax-highlighted-script/
+author: alex
 categories:
-  - linux
-  - script
+- linux
+- script
+color: '#2196F3'
 lang: en
 lastmod: 2016-08-15
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /bash-syntax-highlighted-script/
+title: Bash syntax highlighted script
 ---
 
 As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.<br /> Here the code:

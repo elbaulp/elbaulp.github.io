@@ -1,20 +1,25 @@
 ---
-title: Combatir los comentarios de spam en WordPress
-
-layout: post.amp
-permalink: /combatir-los-comentarios-de-spam-en-wordpress/
+author: alex
 categories:
-  - Administracion de Servidores
-tags:
-  - bloquear spam wodpress
-  - eliminar spam wordpress
-  - iptables wordpress comentarios
-lastmod: 2015-12-29
-description: "Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios."
+- Administracion de Servidores
+color: '#0097A7'
+description: "Los comentarios de spam son algo frecuente en internet, y WordPress
+  no es una excepci\xF3n. Hace poco vimos c\xF3mo bloquear ataques de fuerza bruta
+  en Nginx y WordPress con Fail2Ban. Hoy veremos c\xF3mo evitar que se nos inunde
+  la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios
+  diarios."
 image: 2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png
-mainclass: "servidores"
-color: "#0097A7"
+lastmod: 2015-12-29
+layout: post.amp
+mainclass: servidores
+permalink: /combatir-los-comentarios-de-spam-en-wordpress/
+tags:
+- bloquear spam wodpress
+- eliminar spam wordpress
+- iptables wordpress comentarios
+title: Combatir los comentarios de spam en WordPress
 ---
+
 <figure>
 <a href="/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="600px" /></a>
 </figure>

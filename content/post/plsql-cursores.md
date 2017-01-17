@@ -1,19 +1,20 @@
 ---
-title: 'PL/SQL. Cursores'
-layout: post.amp
-permalink: /plsql-cursores/
-lastmod: 2016-09-02
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-09-02
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-cursores/
 tags:
-  - cursores en sql
-  - cursores explicitos en sql server
-  - ejemplo cursores sql
-  - eliminar cursores en oracle
-  - for oracle cursor
-  - tutoriales cursores sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- cursores en sql
+- cursores explicitos en sql server
+- ejemplo cursores sql
+- eliminar cursores en oracle
+- for oracle cursor
+- tutoriales cursores sql
+title: PL/SQL. Cursores
 ---
 
 Un cursor es el nombre para un área memoria privada que contiene información procedente de la ejecución de una sentencia `SELECT`. Cada cursor tiene unos atributos que nos devuelven información útil sobre el estado del cursor en la ejecución de la sentencia SQL. Cuando un cursor está abierto y los datos referenciados por la consulta `SELECT` cambian, estos cambios no son recogidos por el cursor.

@@ -1,22 +1,23 @@
 ---
-title: Saltarse la autentificación de dos factores de Google
-
-layout: post.amp
-permalink: /saltarse-la-autentificacion-de-dos-factores-de-google/
+author: alex
 categories:
-  - Articulos
-  - Informatica
-  - noticias
+- Articulos
+- Informatica
+- noticias
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /saltarse-la-autentificacion-de-dos-factores-de-google/
 tags:
-  - android
-  - autenficacion de dos pasos
-  - autentificación de dos factores
-  - duo security
-  - google
-  - saltar autentificacion de dos factores
-mainclass: "articulos"
-color: "#F57C00"
+- android
+- autenficacion de dos pasos
+- "autentificaci\xF3n de dos factores"
+- duo security
+- google
+- saltar autentificacion de dos factores
+title: "Saltarse la autentificaci\xF3n de dos factores de Google"
 ---
+
 ***Dou Security*** encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la [autentificación de dos factores de Google][1] y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.
 
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/Bypassing-Google-Two-Factor-Authentication.jpg" alt="Bypassing Google Two Factor Authentication" width="460px" height="349px" />

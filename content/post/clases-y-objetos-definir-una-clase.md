@@ -1,15 +1,14 @@
 ---
-title: 'Clases y Objetos. Definir una Clase'
-layout: post.amp
-lastmod: 2016-09-03
-permalink: /clases-y-objetos-definir-una-clase/
+author: alex
 categories:
-  - C
-mainclass: "dev"
-color: "#E64A19"
+- C
+color: '#E64A19'
+lastmod: 2016-09-03
+layout: post.amp
+mainclass: dev
+permalink: /clases-y-objetos-definir-una-clase/
+title: Clases y Objetos. Definir una Clase
 ---
-
-
 
 ## Introducción
 

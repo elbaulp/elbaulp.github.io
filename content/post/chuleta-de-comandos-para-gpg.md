@@ -1,21 +1,24 @@
 ---
-title: Chuleta de comandos para GPG
-layout: post.amp
-permalink: /chuleta-de-comandos-para-gpg/
+author: alex
 categories:
-  - Articulos
-  - How To
-tags:
-  - chuleta
-  - chuleta de comandos gpg
-  - gpg
-  - manual gpg
-  - tutorial gpg
-description: "Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para GPG. Si encuentras algún error, no dudes en comentarlo."
+- Articulos
+- How To
+color: '#F57C00'
+description: "Si encontraste esta p\xE1gina, por suerte es lo que estabas buscando,
+  una peque\xF1a chuleta de comandos para GPG. Si encuentras alg\xFAn error, no dudes
+  en comentarlo."
 image: 2014/04/Chuleta-de-comandos-GPG.png
 lastmod: 2016-08-10
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /chuleta-de-comandos-para-gpg/
+tags:
+- chuleta
+- chuleta de comandos gpg
+- gpg
+- manual gpg
+- tutorial gpg
+title: Chuleta de comandos para GPG
 ---
 
 <figure>

@@ -1,17 +1,18 @@
 ---
-title: ¿Por qué es Linux más rápido que Windows?
-
-layout: post.amp
-permalink: /por-que-es-linux-mas-rapido-que-windows/
+author: alex
 categories:
-  - Articulos
-tags:
-  - linux mas rapido que windows
-  - windows vs linux
+- Articulos
+color: '#F57C00'
 lastmod: 2015-12-28
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /por-que-es-linux-mas-rapido-que-windows/
+tags:
+- linux mas rapido que windows
+- windows vs linux
+title: "\xBFPor qu\xE9 es Linux m\xE1s r\xE1pido que Windows?"
 ---
+
 En el blog <a href="http://www.techdrivein.com" title="Tech Drive In" target="_blank">techdrivein</a> escribieron un artículo hace poco a mi parecer interesante, **¿Por qué es Linux más rápido que Windows?**, veamos algunos de los motivos:
 
 > La pregunta y su consecuente respuesta, aparecieron en un <a href="http://www.reddit.com/r/Ubuntu/comments/1w8z3g/holy_crap_i_can_browse_this_fast/cezulh4" target="_blank">hilo de Reddit</a> en el que un usuario que acababa de instalar Ubuntu en su máquina afirmaba que nunca había visto ninguna web cargar tan rápido como Reddit en su recién instalado Ubuntu.

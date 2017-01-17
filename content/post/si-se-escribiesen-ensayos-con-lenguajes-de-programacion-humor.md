@@ -1,19 +1,20 @@
 ---
-title: 'Si se escribiesen ensayos con lenguajes de programación [HUMOR]'
-
-layout: post.amp
-permalink: /si-se-escribiesen-ensayos-con-lenguajes-de-programacion-humor/
+author: alex
 categories:
-  - Humor
-  - offtopic
+- Humor
+- offtopic
+color: '#262626'
+description: "Si se escribiesen ensayos con lenguajes de programaci\xF3n [HUMOR]"
+layout: post.amp
+mainclass: geek
+permalink: /si-se-escribiesen-ensayos-con-lenguajes-de-programacion-humor/
 tags:
-  - comics
-  - ensayo lenguaje de programacion
-  - ensayos
-description: "Si se escribiesen ensayos con lenguajes de programación [HUMOR]"
-mainclass: "geek"
-color: "#262626"
+- comics
+- ensayo lenguaje de programacion
+- ensayos
+title: "Si se escribiesen ensayos con lenguajes de programaci\xF3n [HUMOR]"
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/06/AvpFizXCAAA3RXp1.jpg" alt="" title="AvpFizXCAAA3RXp" width="650px" height="1673px" />
 </figure>

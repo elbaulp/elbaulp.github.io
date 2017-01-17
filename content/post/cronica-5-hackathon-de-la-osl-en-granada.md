@@ -1,18 +1,19 @@
 ---
-title: Crónica del 5° hackathon de la OSL en Granada
-
-layout: post.amp
-permalink: /cronica-5-hackathon-de-la-osl-en-granada/
+author: alex
 categories:
-  - Articulos
-  - opensource
+- Articulos
+- opensource
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /cronica-5-hackathon-de-la-osl-en-granada/
 tags:
-  - hackathon granada
-  - oficina software libre
-  - osl
-mainclass: "articulos"
-color: "#F57C00"
+- hackathon granada
+- oficina software libre
+- osl
+title: "Cr\xF3nica del 5\xB0 hackathon de la OSL en Granada"
 ---
+
 El año pasado hablé del [3°][1] y [4°][2] Hackathón que organizó la Oficina de Software Libre de la facultad de Informática en Granada. Este año he participado en el 5°, y por supuesto la experiencia ha sido buena, al igual que en los anteriores. Los proyectos participantes este año eran los siquientes:
 
 <!--more-->

@@ -1,19 +1,20 @@
 ---
-title: 'Desafío de ingeniería inversa en C. Soluciones'
-layout: post.amp
-permalink: /desafio-de-ingenieria-inversa-en-c-soluciones/
+author: alex
 categories:
-  - C
-  - Hacking
-tags:
-  - asm
-  - bomba logica
-  - contraseñas asm
-  - Ingenieria inversa
+- C
+- Hacking
+color: '#E64A19'
 image: 2012/12/logicbomb.png
 lastmod: 2016-08-05
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /desafio-de-ingenieria-inversa-en-c-soluciones/
+tags:
+- asm
+- bomba logica
+- "contrase\xF1as asm"
+- Ingenieria inversa
+title: "Desaf\xEDo de ingenier\xEDa inversa en C. Soluciones"
 ---
 
 <figure>

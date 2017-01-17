@@ -1,17 +1,18 @@
 ---
-title: 'Fundamentos programación Android: Limpieza de Procesos'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-17
 layout: post.amp
+mainclass: android
 permalink: /fundamentos-programacion-android_18/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - Fundamentos programación Android
-  - procesos android
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- "Fundamentos programaci\xF3n Android"
+- procesos android
+title: "Fundamentos programaci\xF3n Android: Limpieza de Procesos"
 ---
 
 Android va destruyendo componentes inactivos para liberar memória, pero los elminia teniendo en cuenta cual es el de menor importancia:

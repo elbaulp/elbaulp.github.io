@@ -1,18 +1,19 @@
 ---
-title: 'Programación Android: Proveedores de Contenidos - Leer datos mediante URIs'
-layout: post.amp
-permalink: /programacion-android-proveedores-de_28/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - content provider
-  - curso android pdf
-  - Proveedores de Contenidos Android
-  - URI
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-08-08
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-proveedores-de_28/
+tags:
+- content provider
+- curso android pdf
+- Proveedores de Contenidos Android
+- URI
+title: "Programaci\xF3n Android: Proveedores de Contenidos - Leer datos mediante URIs"
 ---
 
 Ya que las URIs definidas por un Proveedor de contenidos (CV) son únicas para ese proveedor, es muy importante que estas URIs estén bien documentadas. Los proveedores que Android proporciona hacen esto definiendo constantes que representan las cadenas de la URI.

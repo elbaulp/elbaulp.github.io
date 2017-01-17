@@ -1,23 +1,24 @@
 ---
-title: 'Lo último en criptografía: Fully Homomorphic Encryption'
-
-layout: post.amp
-permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
+author: alex
 categories:
-  - Algoritmos
-  - Articulos
-  - Security Now
-  - seguridad
+- Algoritmos
+- Articulos
+- Security Now
+- seguridad
+color: '#00BCD4'
+layout: post.amp
+mainclass: security-now
+permalink: /lo-ultimo-en-criptografia-fully-homomorphic-encryption/
 tags:
-  - cifrado determinista
-  - cifrado homomórfico
-  - cifrado probabilistico
-  - criptografía
-  - criptografia homomorfica
-  - Fully Homomorphic Encryption
-mainclass: "security-now"
-color: "#00BCD4"
+- cifrado determinista
+- "cifrado homom\xF3rfico"
+- cifrado probabilistico
+- "criptograf\xEDa"
+- criptografia homomorfica
+- Fully Homomorphic Encryption
+title: "Lo \xFAltimo en criptograf\xEDa: Fully Homomorphic Encryption"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Homomorphic Encryption" src="/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png" alt="" width="256px" height="256px" />][1]
 Me he aficionado a escuchar un programa de radio llamado **Security Now!**, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.
 

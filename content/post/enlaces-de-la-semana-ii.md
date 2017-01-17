@@ -1,15 +1,17 @@
 ---
-title: Enlaces de la semana ( II )
-
-description: '<!--:es-->Recopilación semanal de enlaces sobre noticias de la tecnología, informática y software libre<!--:-->'
-layout: post.amp
-permalink: /enlaces-de-la-semana-ii/
+author: alex
 categories:
-  - Enlaces de la semana
-  - offtopic
-mainclass: "articulos"
-color: "#F57C00"
+- Enlaces de la semana
+- offtopic
+color: '#F57C00'
+description: "<!--:es-->Recopilaci\xF3n semanal de enlaces sobre noticias de la tecnolog\xEDa,
+  inform\xE1tica y software libre<!--:-->"
+layout: post.amp
+mainclass: articulos
+permalink: /enlaces-de-la-semana-ii/
+title: Enlaces de la semana ( II )
 ---
+
 #### Programación
 
 &nbsp;

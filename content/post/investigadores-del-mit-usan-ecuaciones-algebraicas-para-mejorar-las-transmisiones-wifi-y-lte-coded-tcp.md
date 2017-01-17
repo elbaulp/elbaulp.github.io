@@ -1,22 +1,29 @@
 ---
-title: Investigadores del MIT usan ecuaciones algebráicas para mejorar las transmisiones WIFI y LTE con coded TCP
-
-layout: post.amp
-permalink: /investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/
+author: alex
 categories:
-  - Informatica
-  - noticias
-  - Tecnología
+- Informatica
+- noticias
+- "Tecnolog\xEDa"
+color: '#F57C00'
+description: "Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades
+  Europeas, han ideado una forma de potenciar el rendimiento en redes inal\xE1mbricas
+  &#8212; sin aumentar la potencia de transmisi\xF3n o a\xF1\xE1dir m\xE1s estaciones
+  base. La creaci\xF3n de los investigadores, ***coded TCP,***, en lugar de enviar
+  paquetes simples, crea una ecuaci\xF3n que describe una serie de paquetes. Es una
+  forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la
+  latencia o re-env\xEDen datos, ya que son la causa de que la red se congestione."
+layout: post.amp
+mainclass: articulos
+permalink: /investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/
 tags:
-  - algebra
-  - ancho de banda
-  - LTE
-  - packets
-  - paquetes
-  - WiFi
-description: "Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, ***coded TCP,***, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione."
-mainclass: "articulos"
-color: "#F57C00"
+- algebra
+- ancho de banda
+- LTE
+- packets
+- paquetes
+- WiFi
+title: "Investigadores del MIT usan ecuaciones algebr\xE1icas para mejorar las transmisiones
+  WIFI y LTE con coded TCP"
 ---
 
 <figure>

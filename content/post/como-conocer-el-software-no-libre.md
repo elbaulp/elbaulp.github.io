@@ -1,15 +1,16 @@
 ---
-title: 'Cómo conocer el software “no libre” instalado en nuestro equipo'
-layout: post.amp
-permalink: /como-conocer-el-software-no-libre/
-lastmod: 2016-09-09
+author: alex
 categories:
-  - aplicaciones
-  - curiosidades
-  - How To
-  - linux
-mainclass: "linux"
-color: "#2196F3"
+- aplicaciones
+- curiosidades
+- How To
+- linux
+color: '#2196F3'
+lastmod: 2016-09-09
+layout: post.amp
+mainclass: linux
+permalink: /como-conocer-el-software-no-libre/
+title: "C\xF3mo conocer el software \u201Cno libre\u201D instalado en nuestro equipo"
 ---
 
 Este programa lo ví en [ProyectosBeta][1].

@@ -1,18 +1,23 @@
 ---
-title: Introducción a HTML5
-layout: post.amp
-permalink: /introduccion-html5/
+author: alex
 categories:
-  - HTML5
-tags:
-  - curso html5
-  - etiquetas html5
-image: 2013/11/Introducción-a-HTML51.png
+- HTML5
+color: '#E64A19'
+description: "Con este primer art\xEDculo de introducci\xF3n a HTML5, presentamos
+  una serie de art\xEDculos a modo de curso cuyo autor, al que agradezco su inter\xE9s
+  por colaborar en el blog, es Roberto. Si ya sabes algo puedes echar un vistazo al
+  art\xEDculo Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket."
+image: "2013/11/Introducci\xF3n-a-HTML51.png"
 lastmod: 2015-12-30
-description: "Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es Roberto. Si ya sabes algo puedes echar un vistazo al artículo Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket."
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+permalink: /introduccion-html5/
+tags:
+- curso html5
+- etiquetas html5
+title: "Introducci\xF3n a HTML5"
 ---
+
 <figure>
 <a href="/img/2013/11/Introducción-a-HTML51.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/11/Introducción-a-HTML51.png" title="{{ page.title }}" alt="{{ page.title }}" width="512px" height="512px" /></a>
 </figure>

@@ -1,12 +1,13 @@
 ---
-title: Busca en google lo siguiente y verás que pasa
+author: alex
+categories:
+- curiosidades
+color: '#F57C00'
 lastmod: 2016-10-20
 layout: post.amp
+mainclass: articulos
 permalink: /busca-en-google-lo-siguiente-y-veras/
-categories:
-  - curiosidades
-mainclass: "articulos"
-color: "#F57C00"
+title: "Busca en google lo siguiente y ver\xE1s que pasa"
 ---
 
 sqrt(cos(x))\*cos(200 x)+sqrt(abs(x))-.07)\*(4-x*x)^0.01, sqrt(9-x^2),-sqrt(9-x^2) from -4.5 to 4.5

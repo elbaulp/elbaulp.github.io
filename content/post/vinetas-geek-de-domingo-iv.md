@@ -1,19 +1,18 @@
 ---
-title: Viñetas Geek de Domingo (IV)
-
-layout: post.amp
-permalink: /vinetas-geek-de-domingo-iv/
+author: alex
 categories:
-  - offtopic
-  - Geek
-tags:
-  - chiste grafico de informatica
-  - humor geek grafico
+- offtopic
+- Geek
+color: '#262626'
 format: gallery
-mainclass: "geek"
-color: "#262626"
+layout: post.amp
+mainclass: geek
+permalink: /vinetas-geek-de-domingo-iv/
+tags:
+- chiste grafico de informatica
+- humor geek grafico
+title: "Vi\xF1etas Geek de Domingo (IV)"
 ---
-
 
 <div id="gallery-4" class="gallery galleryid-1363 gallery-columns-1 gallery-size-thumbnail">
 <dl class="gallery-item">

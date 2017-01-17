@@ -1,13 +1,14 @@
 ---
-title: Nueva página para informar de error 404 en el blog
-
-layout: post.amp
-permalink: /nueva-pagina-para-informar-de-error-404/
+author: alex
 categories:
-  - Sin Categoria
-mainclass: "articulos"
-color: "#F57C00"
+- Sin Categoria
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /nueva-pagina-para-informar-de-error-404/
+title: "Nueva p\xE1gina para informar de error 404 en el blog"
 ---
+
 Ahora que blogger permite que creemos nuestra propia página para un error 404, he estado buscando y me decanté por este, que creo que es el más apropiado, sin embargo os dejo algunos que me gustaron. ¿Cual os gusta más?. Más de uno se llevaría un susto al ver algún de los 404 de esta lista:
 
 [Probar el 404][1]

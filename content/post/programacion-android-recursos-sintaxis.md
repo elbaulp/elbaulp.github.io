@@ -1,16 +1,18 @@
 ---
-title: 'Programación Android: Recursos - Sintaxis de los Recursos'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-21
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-sintaxis/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "Programaci\xF3n Android: Recursos - Sintaxis de los Recursos"
 ---
+
 Independientemente del tipo de recurso (de string y layout son los dos que hemos visto hasta ahora), Todos los recursos Android están identificados (o referenciados) por sus ids en código fuente Java.
 
 La sintaxis que usamos para crear un ID de recurso en un fichero XML se llama resource-reference syntax (sintaxis de referencia a recurso). La sintaxis del atributo id que vimos anteriormente (`@+id/text1`) tiene la siguiente estructura formal:

@@ -1,20 +1,25 @@
 ---
-title: Manejar excepciones en Java
-
-layout: post.amp
-permalink: /manejar-excepciones-en-java/
+author: alex
 categories:
-  - Java
-tags:
-  - errores java
-  - excepciones java
-  - finally java
-  - try catch java
-description: "En este artículo veremos un poco sobre el manejo de excepciones en java, esto es esencial para toda programación básica en java, una excepción es un indicador que tenemos de que algo ha ido mal en nuestro código. Con lo cual podremos controlarlas y capturarlas para poder tratar con ellas e indicar lo que se tiene que hacer."
+- Java
+color: '#D32F2F'
+description: "En este art\xEDculo veremos un poco sobre el manejo de excepciones en
+  java, esto es esencial para toda programaci\xF3n b\xE1sica en java, una excepci\xF3n
+  es un indicador que tenemos de que algo ha ido mal en nuestro c\xF3digo. Con lo
+  cual podremos controlarlas y capturarlas para poder tratar con ellas e indicar lo
+  que se tiene que hacer."
 lastmod: 2015-12-24
-mainclass: "java"
-color: "#D32F2F"
+layout: post.amp
+mainclass: java
+permalink: /manejar-excepciones-en-java/
+tags:
+- errores java
+- excepciones java
+- finally java
+- try catch java
+title: Manejar excepciones en Java
 ---
+
 > Éste artículo es una colaboración de [Jonathan Melgoza.][1]
 
 ## Introducción

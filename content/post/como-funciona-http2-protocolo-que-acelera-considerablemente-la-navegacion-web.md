@@ -1,19 +1,22 @@
 ---
-title: Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación Web
-layout: post.amp
-permalink: /como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/
+author: alex
 categories:
-  - Security Now
+- Security Now
+color: '#00BCD4'
+layout: post.amp
+mainclass: security-now
+permalink: /como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/
 tags:
-  - como funciona http2
-  - detalles tecnicos http2
-  - http2 y spdy
-  - implementación http2
-  - novedades http2
-  - protocolo http2
-mainclass: "security-now"
-color: "#00BCD4"
+- como funciona http2
+- detalles tecnicos http2
+- http2 y spdy
+- "implementaci\xF3n http2"
+- novedades http2
+- protocolo http2
+title: "C\xF3mo funciona HTTP/2, protocolo que aceler\xE1 considerablemente la navegaci\xF3n
+  Web"
 ---
+
 Hacía mucho tiempo que no traducía episodios del podcast [Security Now!][1]. Hoy os traigo la traducción del episodio [#495][2], donde *Steve* describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado *Google*. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.
 
 ## ¿Qué hay mal en el protocolo actual?

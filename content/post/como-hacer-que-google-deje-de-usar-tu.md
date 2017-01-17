@@ -1,13 +1,14 @@
 ---
-title: Cómo hacer que google deje de usar tu Wifi para obtener datos de geolocalización
+author: alex
+categories:
+- How To
+- noticias
+color: '#F57C00'
 lastmod: 2016-09-25
 layout: post.amp
+mainclass: articulos
 permalink: /como-hacer-que-google-deje-de-usar-tu/
-categories:
-  - How To
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+title: "C\xF3mo hacer que google deje de usar tu Wifi para obtener datos de geolocalizaci\xF3n"
 ---
 
 Para quien no lo supiera, el coche de Google que va haciendo fotos a las calles para el streetView, recoge datos que deberían ser privados. Como por ejemplo datos de geolocalización mediante nuestra red wifi.

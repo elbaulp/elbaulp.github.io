@@ -1,13 +1,15 @@
 ---
-title: Bloques PL/SQL
-layout: post.amp
-permalink: /bloques-plsql/
-lastmod: 2016-08-24
+author: alex
 categories:
-  - BaseDeDatos
-description: "Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas"
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+description: "Los bloques PL/SQL presentan una estructura espec\xEDfica compuesta
+  de tres partes bien diferenciadas"
+lastmod: 2016-08-24
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /bloques-plsql/
+title: Bloques PL/SQL
 ---
 
 Los bloques PL/SQL son de varios tipos:

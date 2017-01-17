@@ -1,14 +1,16 @@
 ---
-title: Gana dinero ofreciendo manuales de todas las áreas de conocimiento a tus lectores con RevResponse
-
-layout: post.amp
-permalink: /gana-dinero-ofreciendo-manuales-de/
+author: alex
 categories:
-  - cursos
-  - internet
-mainclass: "misc"
-color: "#61B38D"
+- cursos
+- internet
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /gana-dinero-ofreciendo-manuales-de/
+title: "Gana dinero ofreciendo manuales de todas las \xE1reas de conocimiento a tus
+  lectores con RevResponse"
 ---
+
 <div class="separator" >
 <a href="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s1600/refer_badge.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="226" width="300" src="https://1.bp.blogspot.com/-uMNh-u1Idaw/T13_vPpxViI/AAAAAAAACNs/7qxqEujKX6U/s400/refer_badge.png" /></a>
 </div>

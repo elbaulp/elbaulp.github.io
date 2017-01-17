@@ -1,12 +1,13 @@
 ---
-title: 'Programación para Juegos - Lección 1.2 - Hello World'
-layout: post.amp
-permalink: /programacion-para-juegos-leccion-12/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - juegos
-mainclass: "dev"
-color: "#E64A19"
+- juegos
+color: '#E64A19'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: dev
+permalink: /programacion-para-juegos-leccion-12/
+title: "Programaci\xF3n para Juegos - Lecci\xF3n 1.2 - Hello World"
 ---
 
 En esta lección vamos a aprender a hacer un Hola Mundo al estilo SDL.

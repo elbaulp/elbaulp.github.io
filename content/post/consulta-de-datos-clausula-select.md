@@ -1,12 +1,13 @@
 ---
-title: 'Consulta de Datos - Cláusula Select'
-layout: post.amp
-permalink: /consulta-de-datos-clausula-select/
-lastmod: 2016-08-18
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-18
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-clausula-select/
+title: "Consulta de Datos - Cl\xE1usula Select"
 ---
 
 A lo largo de varios post(enlazados entre ellos), vamos a ir viendo las distintas partes de las que se compone la sentencia SELECT, el motivo de hacer esto es que no salgan post demasiado largos para leer.

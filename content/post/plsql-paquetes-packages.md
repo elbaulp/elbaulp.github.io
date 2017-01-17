@@ -1,15 +1,16 @@
 ---
-title: 'PL/SQL. Paquetes (Packages)'
-layout: post.amp
-permalink: /plsql-paquetes-packages/
-lastmod: 2016-09-02
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-09-02
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-paquetes-packages/
 tags:
-  - crear paquetes en oracle
-  - usuarios package en pl/sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- crear paquetes en oracle
+- usuarios package en pl/sql
+title: PL/SQL. Paquetes (Packages)
 ---
 
 Además de brindarnos múltiples elementos que nos permiten desarrollar una aplicación robusta, Oracle nos ofrece la posibilidad de programar en forma modular, clara y eficiente. En este apartado veremos cómo embeber [procedimientos, funciones][1], definiciones de tipos de datos y [declaraciones de variables][2] en una misma estructura que los agrupe y relacione lógicamente. Esta estructura se denomina Package (Paquete) y su uso nos permite no sólo mejorar la calidad de diseño de nuestras aplicaciones sino también optimizar el desempeño de las mismas.

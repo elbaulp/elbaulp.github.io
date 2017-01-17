@@ -1,21 +1,23 @@
 ---
-title: Crear DialogFragment compatibles con versiones inferiores a Android 3.0
-description: Cómo crear dialogos de selección de fecha y hora en versiones inferiores a Android 3.0 con la librería de soporte.
-layout: post.amp
-permalink: /crear-dialogfragment-compatibles-con-versiones-inferiores-a-android-3-0/
+author: alex
 categories:
-  - android
-tags:
-  - android librería de compatibilidad
-  - android timepickerdialog dialogfragment example
-  - curso android pdf
-  - DataPickerDialog
-  - DialogFragment
-  - supportv4
-  - TimeoPickerDialog
+- android
+color: '#689F38'
+description: "C\xF3mo crear dialogos de selecci\xF3n de fecha y hora en versiones
+  inferiores a Android 3.0 con la librer\xEDa de soporte."
 lastmod: 2016-08-14
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /crear-dialogfragment-compatibles-con-versiones-inferiores-a-android-3-0/
+tags:
+- "android librer\xEDa de compatibilidad"
+- android timepickerdialog dialogfragment example
+- curso android pdf
+- DataPickerDialog
+- DialogFragment
+- supportv4
+- TimeoPickerDialog
+title: Crear DialogFragment compatibles con versiones inferiores a Android 3.0
 ---
 
 En un proyecto reciente he tenido que trabajar con las librerías de compatibilidad de Android, en este caso para crear diálogos que permitan elegir fecha y hora, como estos:

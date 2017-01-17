@@ -1,16 +1,17 @@
 ---
-title: Renombrar archivos masivamente en GNU/Linux
-layout: post.amp
-permalink: /renombrar-archivos-masivamente-en/
+author: alex
 categories:
-  - linux
-  - script
-tags:
-  - renombrar archivos linux masivo
-  - renombrar linux
+- linux
+- script
+color: '#2196F3'
 lastmod: 2016-08-11
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+permalink: /renombrar-archivos-masivamente-en/
+tags:
+- renombrar archivos linux masivo
+- renombrar linux
+title: Renombrar archivos masivamente en GNU/Linux
 ---
 
 En ocasiones, cuando bajamos archivos de internet (Normalmente música), cada archivo tiene en el nombre la dirección de la página web de donde se descargó.

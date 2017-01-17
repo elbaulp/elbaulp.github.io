@@ -1,18 +1,23 @@
 ---
-title: Cómo maximizar la Vida de la Batería en tu Laptop Linux
-description: "Ahorro de energía es el tema hot para los usuarios de laptop que necesitan tener las cosas hechas cuando están en movimiento y corriendo con el límite de energía de la batería. Aquí hay una lista de ingeniosos trucos Linux para ahorrar la energía de tu batería."
+author: alex
+color: '#F57C00'
+description: "Ahorro de energ\xEDa es el tema hot para los usuarios de laptop que
+  necesitan tener las cosas hechas cuando est\xE1n en movimiento y corriendo con el
+  l\xEDmite de energ\xEDa de la bater\xEDa. Aqu\xED hay una lista de ingeniosos trucos
+  Linux para ahorrar la energ\xEDa de tu bater\xEDa."
 layout: post.amp
+mainclass: articulos
 permalink: /como-maximizar-la-vida-de-la-bateria-en-tu-laptop-linux/
 tags:
-  - ahorro energia
-  - baterias notebook linux
-  - como usar powertop linux
-  - kernel
-  - laptop
-  - optimizar energia en ubuntu
-mainclass: "articulos"
-color: "#F57C00"
+- ahorro energia
+- baterias notebook linux
+- como usar powertop linux
+- kernel
+- laptop
+- optimizar energia en ubuntu
+title: "C\xF3mo maximizar la Vida de la Bater\xEDa en tu Laptop Linux"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/07/sshot4cb822438c27c1.jpg" alt="" title="sshot4cb822438c27c" width="650px" height="306px" />][1]
 
 ***<a href="http://www.flickr.com/photos/wolfhound/3167885873/sizes/m/in/photostream/" target="_blank">Foto por Sighthound</a>***

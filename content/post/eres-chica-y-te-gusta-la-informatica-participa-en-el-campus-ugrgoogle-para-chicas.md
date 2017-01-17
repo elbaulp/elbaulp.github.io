@@ -1,18 +1,20 @@
 ---
-title: ¿Eres chica y te gusta la informática?, participa en el campus UGR/Google para chicas
-
-layout: post.amp
-permalink: /eres-chica-y-te-gusta-la-informatica-participa-en-el-campus-ugrgoogle-para-chicas/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /eres-chica-y-te-gusta-la-informatica-participa-en-el-campus-ugrgoogle-para-chicas/
 tags:
-  - campus ugr google
-  - etsiit
-  - ingeniería para chicas
-  - ugr
-mainclass: "articulos"
-color: "#F57C00"
+- campus ugr google
+- etsiit
+- "ingenier\xEDa para chicas"
+- ugr
+title: "\xBFEres chica y te gusta la inform\xE1tica?, participa en el campus UGR/Google
+  para chicas"
 ---
+
 La facultad de informática de Granada (ETSIIT), en la cual estudio, está llevando a cabo una campaña junto a Google para que más chicas se animen a cursar carreras tecnológicas como Informática o Telecomunicaciones.
 
 El campus comienza el día 7 de Julio y acabará el 18 de ese mismo mes. A continuación se describe de qué trata dicho campus. Espero que todas las chicas Granadinas que lean esto se animen a participar y disfruten de la experiencia.

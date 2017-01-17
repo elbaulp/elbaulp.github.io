@@ -1,21 +1,20 @@
 ---
-title: 'Fundamentos programación Android: Intents y AndroidManifest'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-15
 layout: post.amp
+mainclass: android
 permalink: /fundamentos-programacion-android_16/
-categories:
-  - android
-  - opensource
 tags:
-  - androidmanifest android
-  - curso android pdf
-  - intents android
-  - startactivityforresult android example
-mainclass: "android"
-color: "#689F38"
+- androidmanifest android
+- curso android pdf
+- intents android
+- startactivityforresult android example
+title: "Fundamentos programaci\xF3n Android: Intents y AndroidManifest"
 ---
-
-
 
 ## Intents
 

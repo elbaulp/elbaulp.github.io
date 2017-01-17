@@ -1,16 +1,17 @@
 ---
-title: 'Fundamentos aplicaciones Android. (Parte III) -Activando Componentes'
-layout: post.amp
-lastmod: 2016-09-06
-permalink: /fundamentos-aplicaciones-android-parte_19/
+author: alex
 categories:
-  - android
-  - aplicaciones
-  - opensource
+- android
+- aplicaciones
+- opensource
+color: '#689F38'
+lastmod: 2016-09-06
+layout: post.amp
+mainclass: android
+permalink: /fundamentos-aplicaciones-android-parte_19/
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: Fundamentos aplicaciones Android. (Parte III) -Activando Componentes
 ---
 
 Continuando con el [tema de los componentes][1], en esta entrada vamos a ver:

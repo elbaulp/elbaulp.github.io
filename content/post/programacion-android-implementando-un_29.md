@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Implementando un Content Provider (Parte 4)'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-11-03
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-implementando-un_29/
-categories:
-  - android
-  - opensource
 tags:
-  - Content Provider Android
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- Content Provider Android
+- curso android pdf
+title: "Programaci\xF3n Android: Implementando un Content Provider (Parte 4)"
 ---
 
 En esta última parte de una serie de [4 artículos][1] en los que se ha ido explicando cómo implementar un [ContentProvider][2] desde cero, se va a ver cómo registrar dicho proveedor y cómo darle uso.

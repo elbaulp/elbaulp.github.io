@@ -1,14 +1,21 @@
 ---
-title: 'Código Open Source: Para la gente, por la gente'
-layout: post.amp
-permalink: /codigo-open-source-para-la-gente-por-la-gente/
+author: alex
 categories:
-  - Articulos
+- Articulos
+color: '#F57C00'
+description: "Muchas organizaciones eligen Open Source por razones como flexibilidad
+  y agilidad. Todos necesitamos hacer m\xE1s con menos. Pero en el gobierno, Open
+  Source maneja simult\xE1neamente el compromiso c\xEDvico junto con la participaci\xF3n
+  del gobierno, como nunca antes. Gracias a la digitalizaci\xF3n, el mundo se siente
+  mucho m\xE1s peque\xF1o y m\xE1s conectado. Y Open Source le da a la gente la oportunidad
+  de unirse a la causa, sin importar d\xF3nde viven."
 lastmod: 2015-12-23
-description: "Muchas organizaciones eligen Open Source por razones como flexibilidad y agilidad. Todos necesitamos hacer más con menos. Pero en el gobierno, Open Source maneja simultáneamente el compromiso cívico junto con la participación del gobierno, como nunca antes. Gracias a la digitalización, el mundo se siente mucho más pequeño y más conectado. Y Open Source le da a la gente la oportunidad de unirse a la causa, sin importar dónde viven."
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /codigo-open-source-para-la-gente-por-la-gente/
+title: "C\xF3digo Open Source: Para la gente, por la gente"
 ---
+
 Muchas organizaciones eligen Open Source por razones como flexibilidad y agilidad. Todos necesitamos hacer más con menos. Pero en el gobierno, Open Source maneja simultáneamente el compromiso cívico junto con la participación del gobierno, como nunca antes. Gracias a la digitalización, el mundo se siente mucho más pequeño y más conectado. Y Open Source le da a la gente la oportunidad de unirse a la causa, sin importar dónde viven.
 
 Piensa sobre cuánto le insistimos al gobierno antes de tener el sitio [We The People][1]. Apuesto a que tienes que pensar mucho sobre cómo fue hecho (¡yo sí!). Ahora, el sitio ha traído a la vida a la Primera Enmienda a la Constitución de los Estados Unidos. Millones de voces de la gente son escuchadas. La gente empujó conjuntamente basados en sus intereses comunes. La Casa Blanca construyó We The People utilizando Drupal y [compartió el código en GitHub][2], generando la oportunidad a otros gobiernos para que fácilmente puedan crear su propio sistema de pedidos online.

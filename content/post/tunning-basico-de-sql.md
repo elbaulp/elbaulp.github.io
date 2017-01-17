@@ -1,14 +1,15 @@
 ---
-title: Tunning básico de SQL
-layout: post.amp
-permalink: /tunning-basico-de-sql/
-lastmod: 2016-09-03
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-09-03
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /tunning-basico-de-sql/
 tags:
-  - que es tuning sql
-mainclass: "BaseDeDatos"
-color: "#009688"
+- que es tuning sql
+title: "Tunning b\xE1sico de SQL"
 ---
 
 Hemos llegado al fin del temario de base de datos, todo lo que he ido escribiendo a lo largo de estos meses lo encontrarás en la página de [Base de Datos][1]. El último tema de este curso va a tratar de __Tunning básico de SQL__.

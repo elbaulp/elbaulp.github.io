@@ -1,19 +1,23 @@
 ---
-title: 'BitTorrent Sync: Tus archivos sincronizados sin intermediarios'
-
-layout: post.amp
-permalink: /bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/
+author: alex
 categories:
-  - internet
+- internet
+color: '#F57C00'
+description: "Escuchando el programa de radio security now! he descubierto una herramienta
+  incre\xEDble. Se trata de **BitTorrrent Sync** y permite tener archivos sincronizados
+  en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube,
+  como es el caso de dropbox por ejemplo. En este art\xEDculo voy a explicar c\xF3mo
+  usarlo."
+layout: post.amp
+mainclass: articulos
+permalink: /bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/
 tags:
-  - BitTorrent Sync en linux
-  - instalar BitTorrent Sync
-  - que es BitTorrent Sync
-
-description: "Escuchando el programa de radio security now! he descubierto una herramienta increíble. Se trata de **BitTorrrent Sync** y permite tener archivos sincronizados en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube, como es el caso de dropbox por ejemplo. En este artículo voy a explicar cómo usarlo."
-mainclass: "articulos"
-color: "#F57C00"
+- BitTorrent Sync en linux
+- instalar BitTorrent Sync
+- que es BitTorrent Sync
+title: 'BitTorrent Sync: Tus archivos sincronizados sin intermediarios'
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/05/BiTTorrentSYnc-300x260.png" alt="BiTTorrentSYnc" width="300px" height="260px" />
 </figure>

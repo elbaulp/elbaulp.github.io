@@ -1,18 +1,19 @@
 ---
-title: 'La generación GitHub: Por qué ahora todos estamos en el opensource'
-layout: post.amp
-permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
+author: alex
 categories:
-  - Articulos
-tags:
-  - cambios github
-  - generacion github
-  - que es github
-  - ventajas de github
+- Articulos
+color: '#F57C00'
+image: "2013/08/La-generaci\xF3n-GitHub-Por-qu\xE9-ahora-todos-estamos-en-el-opensource.jpg"
 lastmod: 2016-08-07
-image: 2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/
+tags:
+- cambios github
+- generacion github
+- que es github
+- ventajas de github
+title: "La generaci\xF3n GitHub: Por qu\xE9 ahora todos estamos en el opensource"
 ---
 
 <figure>

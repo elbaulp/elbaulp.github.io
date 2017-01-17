@@ -1,12 +1,13 @@
 ---
-title: Introducción a PL/SQL
-layout: post.amp
-permalink: /introduccion-plsql/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /introduccion-plsql/
+title: "Introducci\xF3n a PL/SQL"
 ---
 
 Ahora que el [temario de SQL][1] está terminado, voy a empezar a escribir sobre [PL/SQL][2]. Empezaré con una introducción.

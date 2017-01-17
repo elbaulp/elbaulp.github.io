@@ -1,15 +1,16 @@
 ---
-title: 'Google I/O 2011: Android Protips - Temas avanzados para desarrolladores expertos'
-
-layout: post.amp
-permalink: /google-io-2011-android-protips-temas/
+author: alex
 categories:
-  - android
+- android
+color: '#689F38'
+layout: post.amp
+mainclass: android
+permalink: /google-io-2011-android-protips-temas/
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: 'Google I/O 2011: Android Protips - Temas avanzados para desarrolladores expertos'
 ---
+
 <div class="separator" >
 
 </div>

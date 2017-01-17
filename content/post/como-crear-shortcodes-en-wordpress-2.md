@@ -1,23 +1,24 @@
 ---
-title: 'Cómo crear  simples shortcodes en WordPress'
-
-layout: post.amp
-permalink: /como-crear-shortcodes-en-wordpress-2/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - How To
-  - php
-tags:
-  - atajos wordpress
-  - php
-  - shortcodes
-  - wordpress shortcodes
+- How To
+- php
+color: '#E64A19'
 format: aside
-mainclass: "dev"
-color: "#E64A19"
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: dev
+permalink: /como-crear-shortcodes-en-wordpress-2/
+tags:
+- atajos wordpress
+- php
+- shortcodes
+- wordpress shortcodes
+title: "C\xF3mo crear  simples shortcodes en WordPress"
 ---
+
 Es bastante simple:
 
 Buscamos el archivo ***function.php*** de nuestro tema instalado y pegamos el siguiente código php.

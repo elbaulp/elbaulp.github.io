@@ -1,16 +1,16 @@
 ---
-title: Desafío de ingeniería inversa en C
-
-layout: post.amp
-permalink: /desafio-de-ingenieria-inversa-en-c/
+author: alex
 categories:
-  - C
-  - Hacking
+- C
+- Hacking
+color: '#E64A19'
+layout: post.amp
+mainclass: dev
+permalink: /desafio-de-ingenieria-inversa-en-c/
 tags:
-  - asm
-  - Ingenieria inversa
-mainclass: "dev"
-color: "#E64A19"
+- asm
+- Ingenieria inversa
+title: "Desaf\xEDo de ingenier\xEDa inversa en C"
 ---
 
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/12/logicbomb1.png" alt="" title="Bomba" width="532px" height="449px" />

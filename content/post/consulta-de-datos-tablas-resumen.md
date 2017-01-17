@@ -1,12 +1,13 @@
 ---
-title: 'Consulta de Datos - Tablas Resumen operadores y Funciones Oracle'
-layout: post.amp
-permalink: /consulta-de-datos-tablas-resumen/
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
 lastmod: 2016-08-19
-mainclass: "BaseDeDatos"
-color: "#009688"
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-tablas-resumen/
+title: Consulta de Datos - Tablas Resumen operadores y Funciones Oracle
 ---
 
 Ya hemos acabado el tema de [consulta de datos][1] en sql, lo siguiente que veremos ya será [PL/SQL][2].

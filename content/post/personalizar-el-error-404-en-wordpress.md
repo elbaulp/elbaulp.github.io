@@ -1,17 +1,19 @@
 ---
-title: Personalizar el Error 404 en wordpress
-
-layout: post.amp
-permalink: /personalizar-el-error-404-en-wordpress/
+author: alex
 categories:
-  - php
+- php
+color: '#0097A7'
+description: El error 404 debe tratarse adecuadamente en las webs para no asustar
+  al usuario y provocar que salga de nuestro sitio.
+layout: post.amp
+mainclass: servidores
+permalink: /personalizar-el-error-404-en-wordpress/
 tags:
-  - error 404
-  - personalizar 404 wordpress
-description: "El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio."
-mainclass: "servidores"
-color: "#0097A7"
+- error 404
+- personalizar 404 wordpress
+title: Personalizar el Error 404 en wordpress
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/08/4041.jpg" alt="" title="404" width="256px" height="197px" />
 </figure>

@@ -1,13 +1,14 @@
 ---
-title: '¡Nunca lo hagas! [Humor]'
-layout: post.amp
-permalink: /nunca-lo-hagas-humor/
-lastmod: 2016-09-05
-image: nunca-lo-hagas-sudo-rm-rf.jpg
+author: alex
 categories:
-  - curiosidades
-mainclass: "geek"
-color: "#262626"
+- curiosidades
+color: '#262626'
+image: nunca-lo-hagas-sudo-rm-rf.jpg
+lastmod: 2016-09-05
+layout: post.amp
+mainclass: geek
+permalink: /nunca-lo-hagas-humor/
+title: "\xA1Nunca lo hagas! [Humor]"
 ---
 
 <figure>

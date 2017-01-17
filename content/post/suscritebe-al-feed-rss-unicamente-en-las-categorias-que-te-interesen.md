@@ -1,13 +1,14 @@
 ---
-title: Suscríbete al feed RSS únicamente en las categorías que te interesen
-
-layout: post.amp
-permalink: /suscritebe-al-feed-rss-unicamente-en-las-categorias-que-te-interesen/
+author: alex
 categories:
-  - noticias
-mainclass: "articulos"
-color: "#F57C00"
+- noticias
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /suscritebe-al-feed-rss-unicamente-en-las-categorias-que-te-interesen/
+title: "Suscr\xEDbete al feed RSS \xFAnicamente en las categor\xEDas que te interesen"
 ---
+
 Puede que solo te interesen algunas publicaciones del blog y no desees recibir todos y cada uno de los artículos que se escriben.
 
 WordPress proporciona un mecanismo de suscripción por categorías, de modo que puedas recibir actualizaciones cuando se publiquen artículos bajo una categoría determinada. A continuación describo el contenido que se suele publicar en cada una.

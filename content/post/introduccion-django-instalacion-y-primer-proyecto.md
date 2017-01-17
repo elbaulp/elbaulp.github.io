@@ -1,16 +1,17 @@
 ---
-title: 'Introducción a Django - Instalación y primer proyecto'
+author: alex
+categories:
+- django
+color: '#E64A19'
+image: 2013/10/django.png
 lastmod: 2016-10-12
 layout: post.amp
+mainclass: dev
 permalink: /introduccion-django-instalacion-y-primer-proyecto/
-categories:
-  - django
 tags:
-  - ejemplos django
-  - instalar django
-image: 2013/10/django.png
-mainclass: "dev"
-color: "#E64A19"
+- ejemplos django
+- instalar django
+title: "Introducci\xF3n a Django - Instalaci\xF3n y primer proyecto"
 ---
 
 > Gracias a [@Jneight](https://github.com/jneight "Perfil en Github de @jneight") por actualizar este artículo!

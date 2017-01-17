@@ -1,12 +1,13 @@
 ---
-title: 'Consulta de Datos. Subconsultas'
-layout: post.amp
-permalink: /consulta-de-datos-subconsultas/
-lastmod: 2016-08-19
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-08-19
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /consulta-de-datos-subconsultas/
+title: Consulta de Datos. Subconsultas
 ---
 
 Una subconsulta es una consulta `SELECT` que está anidada en una instrucción `SELECT`, `INSERT`, `UPDATE` o `DELETE`, o dentro de otra subconsulta. En una subconsulta, la instrucción `SELECT` nos para proporciona un conjunto de uno o más valores que se utilizan para evaluar una expresión.

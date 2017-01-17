@@ -1,29 +1,32 @@
 ---
-title: Cómo crear un adapter personalizado en Android
-description: "Hace tiempo que hablé de cómo crear un adapter simple, y otro un poco más personalizado en Android. En esta entrada se verá cómo crear un adapter desde cero, con algunas funcionalidades más."
-layout: post.amp
-permalink: /adapter-personalizado-en-android/
+author: alex
 categories:
-  - android
-  - How To
-tags:
-  - adapter android
-  - adapter getview android
-  - android checkbox style
-  - android lista con checkbox
-  - android listview con imagenes
-  - android listview example
-  - curso android pdf
-  - custom adapter
-  - list adapter
-  - listview setlistadapter español
-  - manual android parcelable
-  - simple adapter android ejemplo
+- android
+- How To
+color: '#689F38'
+description: "Hace tiempo que habl\xE9 de c\xF3mo crear un adapter simple, y otro
+  un poco m\xE1s personalizado en Android. En esta entrada se ver\xE1 c\xF3mo crear
+  un adapter desde cero, con algunas funcionalidades m\xE1s."
 image: 2012/09/principal1.png
 lastmod: 2016-08-10
+layout: post.amp
+mainclass: android
+permalink: /adapter-personalizado-en-android/
 redirect_from: /how-to/adapter-personalizado-en-android/
-mainclass: "android"
-color: "#689F38"
+tags:
+- adapter android
+- adapter getview android
+- android checkbox style
+- android lista con checkbox
+- android listview con imagenes
+- android listview example
+- curso android pdf
+- custom adapter
+- list adapter
+- "listview setlistadapter espa\xF1ol"
+- manual android parcelable
+- simple adapter android ejemplo
+title: "C\xF3mo crear un adapter personalizado en Android"
 ---
 
 Hace tiempo que hablé de cómo crear un [adapter simple][1], y [otro][2] un poco más personalizado en [Android][3].

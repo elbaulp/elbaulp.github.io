@@ -1,18 +1,19 @@
 ---
-title: 'Nueva Guía: Security for a Faster World'
-
-layout: post.amp
-permalink: /nueva-guia-security-for-a-faster-world/
+author: alex
 categories:
-  - cursos
-  - noticias
+- cursos
+- noticias
+color: '#61B38D'
+layout: post.amp
+mainclass: misc
+permalink: /nueva-guia-security-for-a-faster-world/
 tags:
-  - security ebook
-  - Security for a Faster World
-  - seguridad
-mainclass: "misc"
-color: "#61B38D"
+- security ebook
+- Security for a Faster World
+- seguridad
+title: "Nueva Gu\xEDa: Security for a Faster World"
 ---
+
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif" alt="Executive eBook: Security for a Faster World" width="200px" height="259px" />][1]
 
 With Security for a Faster World, You&#8217;ll learn best practices for protecting your corporate data, keeping intruders and malware out of your network, and protecting against disgruntled employees who may attempt to use their access privileges to compromise your systems.

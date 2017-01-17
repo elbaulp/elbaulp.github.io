@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Implementando un Content Provider (Parte 1)'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-10-28
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-implementando-un/
-categories:
-  - android
-  - opensource
 tags:
-  - Content Provider Android
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- Content Provider Android
+- curso android pdf
+title: "Programaci\xF3n Android: Implementando un Content Provider (Parte 1)"
 ---
 
 Esta es la primera entrada de un total de 4 en la que se irán describiendo los pasos a dar para crear nuestro propio proveedor de contenidos.

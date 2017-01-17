@@ -1,17 +1,16 @@
 ---
-title: 3 Juegos para Linux
-layout: post.amp
-permalink: /3-juegos-para-linux/
-lastmod: 2016-08-15
+author: alex
 categories:
-  - juegos
+- juegos
+color: '#F57C00'
+lastmod: 2016-08-15
+layout: post.amp
+mainclass: articulos
+permalink: /3-juegos-para-linux/
 tags:
-  - osmos para linux
-mainclass: "articulos"
-color: "#F57C00"
+- osmos para linux
+title: 3 Juegos para Linux
 ---
-
-
 
 Encontré por internet estos juegos para linux que me parecieron interesantes:
 

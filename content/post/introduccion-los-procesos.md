@@ -1,16 +1,15 @@
 ---
-title: Introducción a los Procesos
-layout: post.amp
-permalink: /introduccion-los-procesos/
-lastmod: 2016-09-02
+author: alex
 categories:
-  - procesos
-  - SO
-mainclass: "articulos"
-color: "#F57C00"
+- procesos
+- SO
+color: '#F57C00'
+lastmod: 2016-09-02
+layout: post.amp
+mainclass: articulos
+permalink: /introduccion-los-procesos/
+title: "Introducci\xF3n a los Procesos"
 ---
-
-
 
 ## 1 . Concepto
 

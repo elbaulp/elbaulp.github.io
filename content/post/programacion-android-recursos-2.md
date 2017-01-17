@@ -1,17 +1,18 @@
 ---
-title: 'Programación Android: Recursos compilados y no compilados'
-layout: post.amp
-permalink: /programacion-android-recursos-2/
+author: alex
 categories:
-  - android
-  - opensource
-tags:
-  - curso android pdf
-  - recursos compilados
-  - recursos no compilados
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-21
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+permalink: /programacion-android-recursos-2/
+tags:
+- curso android pdf
+- recursos compilados
+- recursos no compilados
+title: "Programaci\xF3n Android: Recursos compilados y no compilados"
 ---
 
 Android soporta principalmente dos tipos de recursos: archivos XML y archivos raw (como imágenes, audio y vídeo). Incluso dentro de los archivos XML, has podido ver que en algunos casos los recursos están definidos como valores dentro del archivo XML (las cadenas de texto, por ejemplo). En otras ocasiones, un archivo XML es un recurso por sí mismo, como los Layout.

@@ -1,22 +1,23 @@
 ---
-title: Suplantación de identidad en Facebook
-
-layout: post.amp
-permalink: /suplantacion-de-identidad-en-facebook/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - seguridad
-tags:
-  - email spoofing
-  - seguridad
-  - smtp
-  - spoofing facebook
+- seguridad
+color: '#F57C00'
 format: aside
-mainclass: "articulos"
-color: "#F57C00"
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: articulos
+permalink: /suplantacion-de-identidad-en-facebook/
+tags:
+- email spoofing
+- seguridad
+- smtp
+- spoofing facebook
+title: "Suplantaci\xF3n de identidad en Facebook"
 ---
+
 Leyendo el blog de <a href="http://www.elladodelmal.com/" target="_blank">Chema Alonso</a> me he encontrado con una entrada interesante que, aunque no he logrado realizarla al 100% quiero compartirla con vosotros para que lo intente quien quiera.
 
 El método consiste en conseguir 3 cosas:

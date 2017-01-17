@@ -1,17 +1,18 @@
 ---
-title: Cómo habilitar la página de estado en Nginx
-
-layout: post.amp
-permalink: /como-hablitar-la-pagina-de-estado-en-nginx/
+author: alex
 categories:
-  - Administracion de Servidores
+- Administracion de Servidores
+color: '#0097A7'
+layout: post.amp
+mainclass: servidores
+permalink: /como-hablitar-la-pagina-de-estado-en-nginx/
 tags:
-  - estadisticas nginx
-  - estado nginx
-  - estado servidor web nginx
-mainclass: "servidores"
-color: "#0097A7"
+- estadisticas nginx
+- estado nginx
+- estado servidor web nginx
+title: "C\xF3mo habilitar la p\xE1gina de estado en Nginx"
 ---
+
 Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.
 
 <!--more-->

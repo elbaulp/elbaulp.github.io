@@ -1,12 +1,13 @@
 ---
-title: 'Diseño de Bases de Datos ( I ) - Conceptos del Modelo Relacional'
-layout: post.amp
-permalink: /diseno-de-bases-de-datos-i-conceptos/
+author: alex
 categories:
-  - BaseDeDatos
+- BaseDeDatos
+color: '#009688'
 lastmod: 2016-08-08
-mainclass: "BaseDeDatos"
-color: "#009688"
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /diseno-de-bases-de-datos-i-conceptos/
+title: "Dise\xF1o de Bases de Datos ( I ) - Conceptos del Modelo Relacional"
 ---
 
 > Nota: Basado en los apuntes de clase

@@ -1,19 +1,24 @@
 ---
-title: Cómo cifrar archivos con openssl
-layout: post.amp
-permalink: /como-cifrar-archivos-con-openssl/
+author: alex
 categories:
-  - Administracion de Servidores
-  - seguridad
-tags:
-  - cifrar copias de seguridad con openssl
-  - cifrar tar con openssl
-  - comandos openssl
+- Administracion de Servidores
+- seguridad
+color: '#0097A7'
+description: "Las copias de seguridad son algo que debemos tener a buen resguardo
+  por si alg\xFAn dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto,
+  de igual modo hemos de tener bien protegidas \xE9stas copias de seguridad para que
+  no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos c\xF3mo
+  cifrar archivos con openssl."
 image: 2012/11/Apps-preferences-desktop-cryptography-icon1.png
-description: "Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo cifrar archivos con openssl."
 lastmod: 2016-07-31
-mainclass: "servidores"
-color: "#0097A7"
+layout: post.amp
+mainclass: servidores
+permalink: /como-cifrar-archivos-con-openssl/
+tags:
+- cifrar copias de seguridad con openssl
+- cifrar tar con openssl
+- comandos openssl
+title: "C\xF3mo cifrar archivos con openssl"
 ---
 
 <figure>

@@ -1,24 +1,31 @@
 ---
-title: Algoritmos de ordenación.
-description: "Bueno, como dice el título de la entrada, voy a hablar sobre los algoritmos de ordenación, vamos a distinguir entre lentos y rápidos. La diferencia mas grande es la eficiencia, es decir, como se comportan al ordenar una gran entrada de datos, los lentos se comportan en un orden cuadrático, es decir, O(n²), mientras que los algoritmos rápidos se comportan, en un caso promedio en un orden logarítmico, osea, O (n log n)."
-layout: post.amp
-permalink: /algoritmos-de-ordenacion/
-if_slider_image:
-  -
-  -
+author: alex
 categories:
-  - Algoritmos
+- Algoritmos
+color: '#F57C00'
+description: "Bueno, como dice el t\xEDtulo de la entrada, voy a hablar sobre los
+  algoritmos de ordenaci\xF3n, vamos a distinguir entre lentos y r\xE1pidos. La diferencia
+  mas grande es la eficiencia, es decir, como se comportan al ordenar una gran entrada
+  de datos, los lentos se comportan en un orden cuadr\xE1tico, es decir, O(n\xB2),
+  mientras que los algoritmos r\xE1pidos se comportan, en un caso promedio en un orden
+  logar\xEDtmico, osea, O (n log n)."
+if_slider_image:
+- null
+- null
+layout: post.amp
+mainclass: articulos
+permalink: /algoritmos-de-ordenacion/
 tags:
-  - algoritmo de ordenacion
-  - algoritmos de ordenamiento quicksort
-  - algoritmos ordenacion
-  - eficiencia
-  - metodo ordenamiento burbuja
-  - pseudocodigo ordenamiento burbuja
-  - pseudocodigo ordenamiento por seleccion
-mainclass: "articulos"
-color: "#F57C00"
+- algoritmo de ordenacion
+- algoritmos de ordenamiento quicksort
+- algoritmos ordenacion
+- eficiencia
+- metodo ordenamiento burbuja
+- pseudocodigo ordenamiento burbuja
+- pseudocodigo ordenamiento por seleccion
+title: "Algoritmos de ordenaci\xF3n."
 ---
+
 Bueno, como dice el título de la entrada, voy a hablar sobre los algoritmos de ordenación, vamos a distinguir entre lentos y rápidos. La diferencia mas grande es la eficiencia, es decir, como se comportan al ordenar una gran entrada de datos, los lentos se comportan en un orden cuadrático, es decir, O(n²), mientras que los algoritmos rápidos se comportan, en un caso promedio en un orden logarítmico, osea, O (n log n).
 
 Siempre que nos enseñan a ordenar un vector, o una lista, nos enseñan los algoritmos mas triviales y lógicos que cualquiera podría implementar. Estos algoritmos son:

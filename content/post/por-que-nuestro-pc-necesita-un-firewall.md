@@ -1,19 +1,20 @@
 ---
-title: Por qué nuestro PC necesita un firewall activado
+author: alex
+categories:
+- internet
+- seguridad
+- SO
+color: '#F57C00'
 lastmod: 2016-10-01
 layout: post.amp
+mainclass: articulos
 permalink: /por-que-nuestro-pc-necesita-un-firewall/
-categories:
-  - internet
-  - seguridad
-  - SO
 tags:
-  - cortafuegos
-  - ejemplos de firewall
-  - seguridad en la red
-  - seguridad firewall
-mainclass: "articulos"
-color: "#F57C00"
+- cortafuegos
+- ejemplos de firewall
+- seguridad en la red
+- seguridad firewall
+title: "Por qu\xE9 nuestro PC necesita un firewall activado"
 ---
 
 Hace poco os hablé de [por qué Linux no era solo para geeks][1], sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red

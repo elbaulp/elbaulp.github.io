@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Recursos - Trabajar con recursos XML arbitrarios'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-26
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-trabajar/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-  - recursos xml
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+- recursos xml
+title: "Programaci\xF3n Android: Recursos - Trabajar con recursos XML arbitrarios"
 ---
 
 Además de los recursos estructurados [que hemos ido viendo][1], Android permite usar archivos XML arbitrarios como recursos. Esto proporciona una forma rápida de referenciar los archivos basandose en su Id de recurso así como permitirnos localizar estos archivos de una manera sencilla. Como última ventaja, nos permite compilar y almacenar estos archivos en el dispositivo eficientemente.

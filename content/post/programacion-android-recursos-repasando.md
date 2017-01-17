@@ -1,16 +1,19 @@
 ---
-title: 'Programación Android: Recursos - Repasando la estructura del directorio de recursos'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-09-29
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-recursos-repasando/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "Programaci\xF3n Android: Recursos - Repasando la estructura del directorio
+  de recursos"
 ---
+
 En resumen, en el siguiente listado muestra la estructura global del directorio de recursos:
 
 ```bash

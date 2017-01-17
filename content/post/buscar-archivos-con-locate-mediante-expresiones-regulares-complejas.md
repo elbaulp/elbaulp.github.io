@@ -1,21 +1,25 @@
 ---
-title: Buscar archivos con locate mediante expresiones regulares
-layout: post.amp
-permalink: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/
+author: alex
 categories:
-  - script
-tags:
-  - crear lista de reproducción
-  - ejemplos locate
-  - expresiones regulares linux
-  - locate
-  - regex
-lastmod: 2016-08-26
+- script
+color: '#2196F3'
+description: "En linux, existe un comando llamado locate que busca archivos en nuestro
+  sistema de ficheros haciendo consultas a una base de datos, la descripci\xF3n seg\xFAn
+  su man es:"
 image: 2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png
-description: "En linux, existe un comando llamado locate que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su man es:"
-mainclass: "linux"
-color: "#2196F3"
+lastmod: 2016-08-26
+layout: post.amp
+mainclass: linux
+permalink: /buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/
+tags:
+- "crear lista de reproducci\xF3n"
+- ejemplos locate
+- expresiones regulares linux
+- locate
+- regex
+title: Buscar archivos con locate mediante expresiones regulares
 ---
+
 En linux, existe un comando llamado **locate** que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su *man* es:
 
 > Locate lee una o más [bases de datos][1] preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.

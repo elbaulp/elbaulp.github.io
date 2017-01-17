@@ -1,15 +1,14 @@
 ---
-title: 'PL/SQL. Registros y Tablas'
-layout: post.amp
-lastmod: 2016-09-03
-permalink: /plsql-registros-y-tablas/
+author: alex
 categories:
-  - BaseDeDatos
-mainclass: "BaseDeDatos"
-color: "#009688"
+- BaseDeDatos
+color: '#009688'
+lastmod: 2016-09-03
+layout: post.amp
+mainclass: BaseDeDatos
+permalink: /plsql-registros-y-tablas/
+title: PL/SQL. Registros y Tablas
 ---
-
-
 
 ## Conceptos
 

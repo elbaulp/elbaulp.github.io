@@ -1,15 +1,16 @@
 ---
-title: 'Programación Android: Proveedores de Contenido - Introducción'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-10-01
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-proveedores-de/
-categories:
-  - android
-  - opensource
 tags:
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- curso android pdf
+title: "Programaci\xF3n Android: Proveedores de Contenido - Introducci\xF3n"
 ---
 
 Android llama Proveedor de contenido a la abstracción de datos en Servícios. Digamos que un proveedor de contenido (CV a partir de ahora [de Content Provider]) es como un envoltorio para los datos. Una base de datos SQLite en un dispositivo Android es un ejemplo de fuente de datos (data source) que se encapsula en un CV.

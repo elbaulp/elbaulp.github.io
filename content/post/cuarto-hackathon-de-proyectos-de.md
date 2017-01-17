@@ -1,15 +1,16 @@
 ---
-title: Cuarto Hackathon de proyectos de software libre de la UGR
-
-layout: post.amp
-permalink: /cuarto-hackathon-de-proyectos-de/
+author: alex
 categories:
-  - aplicaciones
-  - hackathon
-  - opensource
-mainclass: "articulos"
-color: "#F57C00"
+- aplicaciones
+- hackathon
+- opensource
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /cuarto-hackathon-de-proyectos-de/
+title: Cuarto Hackathon de proyectos de software libre de la UGR
 ---
+
 <div class="separator" >
 <a  href="/img/2012/04/oslugr1.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/04/oslugr1.png" alt=""  width="200px" height="87px" /></a>
 </div>

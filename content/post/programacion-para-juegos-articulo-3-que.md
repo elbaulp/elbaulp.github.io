@@ -1,12 +1,13 @@
 ---
-title: 'Programación para Juegos. Artículo 3. ¿Qué es un pixel?'
-layout: post.amp
-permalink: /programacion-para-juegos-articulo-3-que/
-lastmod: 2016-08-29
+author: alex
 categories:
-  - juegos
-mainclass: "dev"
-color: "#E64A19"
+- juegos
+color: '#E64A19'
+lastmod: 2016-08-29
+layout: post.amp
+mainclass: dev
+permalink: /programacion-para-juegos-articulo-3-que/
+title: "Programaci\xF3n para Juegos. Art\xEDculo 3. \xBFQu\xE9 es un pixel?"
 ---
 
 Este artículo hace referéncia a la [Lección 5 - Colores Clave][1].

@@ -1,14 +1,15 @@
 ---
-title: 'Guía gratuita: Administración Avanzada del Sistema Operativo GNU/Linux'
+author: alex
+categories:
+- cursos
+- internet
+color: '#61B38D'
+image: AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
 lastmod: 2016-09-13
 layout: post.amp
+mainclass: misc
 permalink: /nueva-guia-administracion-avanzada-del/
-categories:
-  - cursos
-  - internet
-image: AdministracionAvanzadadelSistemaOperativoGNULinux.jpg
-mainclass: "misc"
-color: "#61B38D"
+title: "Gu\xEDa gratuita: Administraci\xF3n Avanzada del Sistema Operativo GNU/Linux"
 ---
 
 <figure>

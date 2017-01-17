@@ -1,16 +1,17 @@
 ---
-title: 'Programación Android: Usando la cláusula Where'
+author: alex
+categories:
+- android
+- opensource
+color: '#689F38'
 lastmod: 2016-10-08
 layout: post.amp
+mainclass: android
 permalink: /programacion-android-usando-la-clausula/
-categories:
-  - android
-  - opensource
 tags:
-  - Cláusula where android
-  - curso android pdf
-mainclass: "android"
-color: "#689F38"
+- "Cl\xE1usula where android"
+- curso android pdf
+title: "Programaci\xF3n Android: Usando la cl\xE1usula Where"
 ---
 
 Los proveedores de conteido ofrecen dos formas de pasar una cláusula *[where][1]:*

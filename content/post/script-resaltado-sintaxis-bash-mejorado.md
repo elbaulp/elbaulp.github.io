@@ -1,13 +1,15 @@
 ---
-title: Script resaltado sintaxis bash (Mejorado)
-layout: post.amp
-permalink: /script-resaltado-sintaxis-bash-mejorado/
+author: alex
 categories:
-  - linux
-  - script
-mainclass: "linux"
-color: "#2196F3"
+- linux
+- script
+color: '#2196F3'
+layout: post.amp
+mainclass: linux
+permalink: /script-resaltado-sintaxis-bash-mejorado/
+title: Script resaltado sintaxis bash (Mejorado)
 ---
+
 Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:
 
 ```bash

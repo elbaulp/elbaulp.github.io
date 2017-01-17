@@ -1,19 +1,21 @@
 ---
-title: Superordenador de Barcelona ARMándose para entrar en las máquinas más rápidas del mundo
-
-layout: post.amp
-permalink: /superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/
+author: alex
 categories:
-  - Articulos
-  - noticias
-  - Tecnología
+- Articulos
+- noticias
+- "Tecnolog\xEDa"
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/
 tags:
-  - green500
-  - supercomputadores
-  - top500
-mainclass: "articulos"
-color: "#F57C00"
+- green500
+- supercomputadores
+- top500
+title: "Superordenador de Barcelona ARM\xE1ndose para entrar en las m\xE1quinas m\xE1s
+  r\xE1pidas del mundo"
 ---
+
 **Hace unos meses os hablé del [El top 500 de los supercomputadores más potentes del mundo][1], y hoy os traigo una entrada traducida por mi compañero Haitike sobre este tema:**
 
 El centro de Superordenadores de Barcelona está construyendo uno de los <a href="http://www.wired.com/wiredenterprise/2011/11/spain-builds-supercomputer-with-cellphone-chips/" target="_blank">ordenadores de alto rendimiento más verdes</a> del planeta, pero si Alex Ramirez consigue su objetivo, podría ser también uno de los más potentes.
