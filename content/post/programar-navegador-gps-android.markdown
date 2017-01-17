@@ -1,17 +1,24 @@
 ---
-layout: post.amp
-title: Crear Un Navegador GPS Que Dibuje El Camino Seguido en Android
-date: 2016-02-16T21:05:38+01:00
-modified:
-categories:
-description: "Enunciado: se facilitarán las coordenadas de una serie de puntos GPS (latitud/longitud) mediante códigos QR a la appGPSQR que iniciará automáticamente la navegación GPS hacia dicho punto, debe guardar el recorrido realizado y mostrarlo en un mapa al finalizar el mismo. En el anexo I tenéis ejemplos de los códigos QR que se deben detectar, en la defensa serán distintos."
-tags: [programar navegador gps android, tutorial gps android, leer QR code en android zxing, calcular rutas gps android]
+author: alex
+categories: null
+color: '#D32F2F'
+date: 2016-02-16 20:05:38
+description: "Enunciado: se facilitar\xE1n las coordenadas de una serie de puntos
+  GPS (latitud/longitud) mediante c\xF3digos QR a la appGPSQR que iniciar\xE1 autom\xE1ticamente
+  la navegaci\xF3n GPS hacia dicho punto, debe guardar el recorrido realizado y mostrarlo
+  en un mapa al finalizar el mismo. En el anexo I ten\xE9is ejemplos de los c\xF3digos
+  QR que se deben detectar, en la defensa ser\xE1n distintos."
 image: npi/gqsqr_read.png
-mainclass: "java"
-color: "#D32F2F"
+layout: post.amp
+mainclass: java
+modified: null
+tags:
+- programar navegador gps android
+- tutorial gps android
+- leer QR code en android zxing
+- calcular rutas gps android
+title: Crear Un Navegador GPS Que Dibuje El Camino Seguido en Android
 ---
-
-
 
 >La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:
 

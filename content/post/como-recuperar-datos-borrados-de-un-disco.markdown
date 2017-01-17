@@ -1,14 +1,31 @@
 ---
-layout: post.amp
-title: Cómo Recuperar Datos Borrados De Un Disco
-date: 2016-01-21T23:26:14+01:00
-modified:
-categories:
-description: "Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad no lo estamos borrando físicamente. Realmente se libera el espacio que tenía ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado. Hoy veremos cómo es posible recuperar datos borrados de un disco duro."
-tags: [autopsy, análisis forense, informática forense, recuperar fotos borradas, recuperar ficheros borrados, he borrado mi disco duro, tutorial autopsy, recuperar ficheros con autopsy, autopsy tutorial, restore deleted files with autopsy, restore deleted image with autopsy, como recuperar información de un disco duro]
+author: alex
+categories: null
+color: '#61B38D'
+date: 2016-01-21 22:26:14
+description: "Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad
+  no lo estamos borrando f\xEDsicamente. Realmente se libera el espacio que ten\xEDa
+  ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde
+  otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado.
+  Hoy veremos c\xF3mo es posible recuperar datos borrados de un disco duro."
 image: hotlink-ok/Como-Recuperar-Datos-Borrados-De-Un-Disco.png
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags:
+- autopsy
+- "an\xE1lisis forense"
+- "inform\xE1tica forense"
+- recuperar fotos borradas
+- recuperar ficheros borrados
+- he borrado mi disco duro
+- tutorial autopsy
+- recuperar ficheros con autopsy
+- autopsy tutorial
+- restore deleted files with autopsy
+- restore deleted image with autopsy
+- "como recuperar informaci\xF3n de un disco duro"
+title: "C\xF3mo Recuperar Datos Borrados De Un Disco"
 ---
 
 <figure>

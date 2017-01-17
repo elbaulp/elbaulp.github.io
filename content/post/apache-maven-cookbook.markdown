@@ -1,13 +1,18 @@
 ---
-layout: post.amp
-title: "Libro Gratuito: Apache Maven Cookbook"
-description: "Delve into the world of Apache Maven with this compact cookbook that introduces common recipes for the Maven tool!"
-tags: [manuales, libros]
+author: alex
+color: null
+date: 2016-09-07 13:10:02
+description: Delve into the world of Apache Maven with this compact cookbook that
+  introduces common recipes for the Maven tool!
 image: guides/Apache-Maven-Cookbook-full.jpg
-introduction: "Delve into the world of Apache Maven with this compact cookbook that introduces common recipes for the Maven tool!"
-mainclass: "misc"
-color: #61B38D
-date: 2016-09-07T15:10:02+02:00
+introduction: Delve into the world of Apache Maven with this compact cookbook that
+  introduces common recipes for the Maven tool!
+layout: post.amp
+mainclass: misc
+tags:
+- manuales
+- libros
+title: 'Libro Gratuito: Apache Maven Cookbook'
 ---
 
 <figure>

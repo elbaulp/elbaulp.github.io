@@ -1,14 +1,26 @@
 ---
-layout: post.amp
-title: Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python
-description: Pequeño script en python para añadir el tamaño a una etiqueta img
-introduction: Pequeño script en python para añadir el tamaño a una etiqueta img
-tags: [python,BeautifulSoup,parser, ejemplos BeautifulSoup, leer imagen python, leer tamaño imagen python, obtener tamaño imagen python]
+author: alex
+color: '#E64A19'
+date: 2016-06-30 10:59:47
+description: "Peque\xF1o script en python para a\xF1adir el tama\xF1o a una etiqueta
+  img"
 image: ComoAnadirAutomaticamenteElTamanoDeUnaImagenenHTMLConPython.png
+introduction: "Peque\xF1o script en python para a\xF1adir el tama\xF1o a una etiqueta
+  img"
+layout: post.amp
 mainclass: dev
-color: "#E64A19"
-date: 2016-06-30T12:59:47+02:00
+tags:
+- python
+- BeautifulSoup
+- parser
+- ejemplos BeautifulSoup
+- leer imagen python
+- "leer tama\xF1o imagen python"
+- "obtener tama\xF1o imagen python"
+title: "C\xF3mo A\xF1adir Autom\xE1ticamente El Tama\xF1o De Una Imagen en HTML Con
+  Python"
 ---
+
 Hace poco me encontré con el problema de añadir a todas las etiquetas de imágenes del blog los atributos de tamaño (Altura y anchura). Hacerlo a mano era inviable debido a la cantidad de artículos. Así que pensé que una buena forma sería hacerlo con python. El razonamiento es el siguiente:
 
 - Iterar sobre todos los artículos del blog.

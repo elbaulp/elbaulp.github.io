@@ -1,17 +1,20 @@
 ---
-layout: post.amp
-title: OpenLibra Cumple 5 Años Y Estrena Versión 2.0
-modified:
-categories:
-description: "Hace unos años, concretamente 5, un compañero bloggero lanzaba OpenLibra: La Biblioteca Libre Online tal como la esperabas"
-tags: [openlibra, biblioteca online, descargar libros gratis]
+author: alex
+categories: null
+color: '#F57C00'
+date: 2016-03-03 20:30:24
+description: "Hace unos a\xF1os, concretamente 5, un compa\xF1ero bloggero lanzaba
+  OpenLibra: La Biblioteca Libre Online tal como la esperabas"
 image: openlibra-biblioteca-libre-online.jpg
-date: 2016-03-03T21:30:24+01:00
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+modified: null
+tags:
+- openlibra
+- biblioteca online
+- descargar libros gratis
+title: "OpenLibra Cumple 5 A\xF1os Y Estrena Versi\xF3n 2.0"
 ---
-
-
 
 <figure>
 <a href="/img/openlibra-biblioteca-libre-online.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="84px" /></a>

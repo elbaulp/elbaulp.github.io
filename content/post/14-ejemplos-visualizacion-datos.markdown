@@ -1,13 +1,20 @@
 ---
-layout: post.amp
-title: 15 Ejemplos De Las Mejores Visualizaciones De Datos
-date: 2016-05-02T19:41:09+02:00
-description: "La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet."
-tags: [visualizacion datos, d3js, datos, imagenes de visualización]
-lastmod: 2016-09-23
+author: alex
+color: '#F57C00'
+date: 2016-05-02 17:41:09
+description: "La visualizaci\xF3n de datos no solo tiene como prop\xF3sito el an\xE1lisis
+  de dichos datos, a menudo combina elementos est\xE9ticos. A continuaci\xF3n se muestran
+  14 ejemplos de las mejores visualizaciones de datos encontrados en internet."
 image: 20-ejemplos-visualizacion-datos-genoma-enfermedades.png
-mainclass: "articulos"
-color: "#F57C00"
+lastmod: 2016-09-23
+layout: post.amp
+mainclass: articulos
+tags:
+- visualizacion datos
+- d3js
+- datos
+- "imagenes de visualizaci\xF3n"
+title: 15 Ejemplos De Las Mejores Visualizaciones De Datos
 ---
 
 > __NOTA__: Este artículo se actualizó el 23/09/2016 para añadir _Olympic Feathers_.

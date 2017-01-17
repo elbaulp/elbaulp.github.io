@@ -1,12 +1,18 @@
 ---
-layout: post.amp
-title: "Nueva Guía Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt"
-description: "JavaScriptMVC is a client-side, JavaScript framework that builds maintainable, error-free, lightweight applications as quickly as possible."
-tags: [ cursos, internet, noticias, JavaScript]
+author: alex
+color: '#61B38D'
+date: 2015-05-30 11:53:41
+description: JavaScriptMVC is a client-side, JavaScript framework that builds maintainable,
+  error-free, lightweight applications as quickly as possible.
 image: nueva-gua-gratuita-learning-javascriptmvc-free-14-page-excerpt.jpg
-date: 2015-05-30T13:53:41+02:00
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+tags:
+- cursos
+- internet
+- noticias
+- JavaScript
+title: "Nueva Gu\xEDa Gratuita: Learning JavaScriptMVC -- Free 14 Page Excerpt"
 ---
 
 <figure>

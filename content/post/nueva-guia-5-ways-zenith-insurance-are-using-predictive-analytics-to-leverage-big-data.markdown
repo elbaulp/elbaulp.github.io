@@ -1,14 +1,17 @@
 ---
-layout: post.amp
-title: "Nueva Guía: 5 Ways Zenith Insurance Are Using Predictive Analytics to Leverage Big Data"
-modified:
-categories:
-description: "This exclusive interview looks at the ways in which predictive analytics will affect five key areas of the insurance industry."
-tags: []
+author: alex
+categories: null
+color: '#61B38D'
+date: 2015-12-10 20:04:29
+description: This exclusive interview looks at the ways in which predictive analytics
+  will affect five key areas of the insurance industry.
 image: hotlink-ok/5-Ways-Zenith-Insurance-Are-Using-Predictive-Analytics-to-Leverage-BigData.jpg
-date: 2015-12-10T21:04:29+01:00
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags: []
+title: "Nueva Gu\xEDa: 5 Ways Zenith Insurance Are Using Predictive Analytics to Leverage
+  Big Data"
 ---
 
 <figure>

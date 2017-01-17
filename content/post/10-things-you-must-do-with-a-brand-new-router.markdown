@@ -1,14 +1,23 @@
 ---
-layout: post.amp
-title: "Ebook Gratuito: 10 Things You Must Do With a Brand New Router"
-description: "There are many good reasons to upgrade your router (or buy one if you don’t have one). You can get faster speeds, improved range, and new features. It’ll also ensure maximum compatibility with your latest gadgets."
-tags: [manuales, libros, router]
+author: alex
+color: null
+date: 2016-10-04 06:57:02
+description: "There are many good reasons to upgrade your router (or buy one if you
+  don\u2019t have one). You can get faster speeds, improved range, and new features.
+  It\u2019ll also ensure maximum compatibility with your latest gadgets."
 image: guides/10-Things-You-Must-Do-With-a-Brand-New-Router-full-thumb.jpg
-introduction: "There are many good reasons to upgrade your router (or buy one if you don’t have one). You can get faster speeds, improved range, and new features. It’ll also ensure maximum compatibility with your latest gadgets."
-mainclass: "misc"
-color: #61B38D
-date: 2016-10-04T08:57:02+02:00
+introduction: "There are many good reasons to upgrade your router (or buy one if you
+  don\u2019t have one). You can get faster speeds, improved range, and new features.
+  It\u2019ll also ensure maximum compatibility with your latest gadgets."
+layout: post.amp
+mainclass: misc
+tags:
+- manuales
+- libros
+- router
+title: 'Ebook Gratuito: 10 Things You Must Do With a Brand New Router'
 ---
+
 <figure>
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guides/10-Things-You-Must-Do-With-a-Brand-New-Router-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>

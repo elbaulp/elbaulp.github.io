@@ -1,13 +1,19 @@
 ---
-layout: post.amp
-title: "Libro Gratuito: Linux BASH Programming Cookbook"
-description: "Delve into the world of Linux BASH Programming with this compact cookbook that introduces common recipes for the BASH command line!"
-tags: [manuales, libros, linux]
+author: alex
+color: null
+date: 2016-09-07 13:01:09
+description: Delve into the world of Linux BASH Programming with this compact cookbook
+  that introduces common recipes for the BASH command line!
 image: guides/Linux-BASH-Programming-Cookbook-full.jpg
-introduction: "Delve into the world of Linux BASH Programming with this compact cookbook that introduces common recipes for the BASH command line!"
-mainclass: "misc"
-color: #61B38D
-date: 2016-09-07T15:01:09+02:00
+introduction: Delve into the world of Linux BASH Programming with this compact cookbook
+  that introduces common recipes for the BASH command line!
+layout: post.amp
+mainclass: misc
+tags:
+- manuales
+- libros
+- linux
+title: 'Libro Gratuito: Linux BASH Programming Cookbook'
 ---
 
 <figure>

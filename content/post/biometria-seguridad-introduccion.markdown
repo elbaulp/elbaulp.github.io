@@ -1,14 +1,22 @@
 ---
-layout: post.amp
-title: Biometría Aplicada a La Seguridad - Introducción
-date: 2016-01-25T12:05:30+01:00
-modified:
-categories:
-description: "En este artículo se verá una introducción a lo que es la biometría, y cómo se puede aplicar a los sistemas informáticos para proporcionar seguridad. También se hará un repaso a los distintos tipos de biometría."
-tags: [seguridad biométrica, biometría aplicada a la seguridad, reconocimiento de patrones biométricos, sistemas biométricos, biometría de la mano]
+author: alex
+categories: null
+color: '#F57C00'
+date: 2016-01-25 11:05:30
+description: "En este art\xEDculo se ver\xE1 una introducci\xF3n a lo que es la biometr\xEDa,
+  y c\xF3mo se puede aplicar a los sistemas inform\xE1ticos para proporcionar seguridad.
+  Tambi\xE9n se har\xE1 un repaso a los distintos tipos de biometr\xEDa."
 image: hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+modified: null
+tags:
+- "seguridad biom\xE9trica"
+- "biometr\xEDa aplicada a la seguridad"
+- "reconocimiento de patrones biom\xE9tricos"
+- "sistemas biom\xE9tricos"
+- "biometr\xEDa de la mano"
+title: "Biometr\xEDa Aplicada a La Seguridad - Introducci\xF3n"
 ---
 
 <figure>

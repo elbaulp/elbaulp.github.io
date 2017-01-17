@@ -1,15 +1,22 @@
 ---
-layout: post.amp
-title: "Cómo Configurar Dunst, Un Daemon De Notificaciones Altamente Configurable"
-modified:
-categories:
-description: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con DWM."
-tags: [dunst, notify-send, notificaciones, dwm]
+author: alex
+categories: null
+color: '#F57C00'
+date: 2015-06-29 16:43:06
+description: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me instal\xE9
+  hace poco, y que se integra muy bien con DWM."
 image: Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png
-date: 2015-06-29T18:43:06+02:00
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+modified: null
+tags:
+- dunst
+- notify-send
+- notificaciones
+- dwm
+title: "C\xF3mo Configurar Dunst, Un Daemon De Notificaciones Altamente Configurable"
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png" title="{{ page.title }}" alt="{{ page.title }}" width="329px" height="212px" />
 </figure>

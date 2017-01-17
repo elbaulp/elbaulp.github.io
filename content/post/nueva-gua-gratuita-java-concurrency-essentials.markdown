@@ -1,16 +1,22 @@
 ---
-layout: post.amp
-title: "Nueva Guía Gratuita: Java Concurrency Essentials"
+author: alex
 categories:
-  - cursos
-  - internet
-  - noticias
-  - opensource
-description: "Delve into the world of Java concurrency with this compact guide that discusses everything around concurrency and synchronization!"
-tags: [java, manuales, guias, descargas]
-date: 2015-05-20T16:07:56+02:00
-mainclass: "misc"
-color: "#61B38D"
+- cursos
+- internet
+- noticias
+- opensource
+color: '#61B38D'
+date: 2015-05-20 14:07:56
+description: Delve into the world of Java concurrency with this compact guide that
+  discusses everything around concurrency and synchronization!
+layout: post.amp
+mainclass: misc
+tags:
+- java
+- manuales
+- guias
+- descargas
+title: "Nueva Gu\xEDa Gratuita: Java Concurrency Essentials"
 ---
 
 <figure>

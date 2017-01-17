@@ -1,15 +1,18 @@
 ---
-layout: post.amp
-title: How to Change Portage Folders to Other Location in Gentoo
+author: alex
 categories: en
+color: '#2196F3'
+date: 2016-08-17 08:06:32
 description: How to change portage folders and temp folder to other directory
-tags: [gentoo, portage]
 image: como-instalar-actualizar-elminar-paquetes-gentoo.png
 introduction: How to change portage folders and temp folder to other directory
-date: 2016-08-17T10:06:32+02:00
 lang: en
-mainclass: "linux"
-color: "#2196F3"
+layout: post.amp
+mainclass: linux
+tags:
+- gentoo
+- portage
+title: How to Change Portage Folders to Other Location in Gentoo
 ---
 
 Recently I had a problem with `portage` and its `tmp` directory in `/var/tmp/portage` in [Gentoo](/tags/#gentoo). I had no space left in the disk, the error message was:

@@ -1,18 +1,17 @@
 ---
-layout: post.amp
-title: "Google Lanza Contributor, Apoya a Tus Webs Favoritas Sin Ver Anuncios"
-modified:
-categories:
-description:
-tags: []
+author: alex
+categories: null
+color: '#F57C00'
+date: 2015-11-06 15:38:37
+description: null
 image: contributorad.png
-date: 2015-11-06T16:38:37+01:00
 lastmod: 2016-08-15
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+modified: null
+tags: []
+title: Google Lanza Contributor, Apoya a Tus Webs Favoritas Sin Ver Anuncios
 ---
-
-
 
 Como seguramente sabreis, estos últimos años se ha incrementado la batalla entre compañías de publicidad y los _Ads blockers_. Personalmente me afecta, ya que le dedico bastante tiempo al blog, y creo que los dos anuncios que hay no son intrusivos, y un gran porcentaje de lectores usa este tipo de software para bloquear anuncios.
 

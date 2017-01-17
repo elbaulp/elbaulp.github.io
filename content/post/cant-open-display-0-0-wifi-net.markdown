@@ -1,16 +1,21 @@
 ---
-layout: post.amp
-title: "Cómo Resolver El Error “Can't Open Display: :0.0” Al Conectarse a Una Red Wi-Fi"
-date: 2016-10-03T16:15:35+02:00
-description: "Cuando NetworkManager se connecta a una red, cambia el nombre de host (Hostname), y las aplicaciones gráficas dejan de funcionar"
-tags: [linux, NetworkManager, error]
+author: alex
+color: '#2196F3'
+date: 2016-10-03 14:15:35
+description: "Cuando NetworkManager se connecta a una red, cambia el nombre de host
+  (Hostname), y las aplicaciones gr\xE1ficas dejan de funcionar"
 image: cant-open-display-0-0-wifi-net.png
-introduction: "Cuando NetworkManager se connecta a una red, cambia el nombre de host (Hostname), y las aplicaciones gráficas dejan de funcionar"
-mainclass: "linux"
-color: "#2196F3"
+introduction: "Cuando NetworkManager se connecta a una red, cambia el nombre de host
+  (Hostname), y las aplicaciones gr\xE1ficas dejan de funcionar"
+layout: post.amp
+mainclass: linux
+tags:
+- linux
+- NetworkManager
+- error
+title: "C\xF3mo Resolver El Error \u201CCan't Open Display: :0.0\u201D Al Conectarse
+  a Una Red Wi-Fi"
 ---
-
-
 
 ## Problema: Can't Open Display: :0.0
 

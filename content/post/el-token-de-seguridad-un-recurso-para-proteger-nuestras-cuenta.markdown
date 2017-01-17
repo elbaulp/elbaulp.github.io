@@ -1,14 +1,22 @@
 ---
+author: alex
+categories: null
+color: '#F57C00'
+date: 2015-03-30 14:51:38
+description: "A medida que han ido siendo m\xE1s habituales todo tipo de transaccione
+  online, tanto los servicios que las ofrecen como los usuarios que la utilizan muestran
+  una mayor preocupaci\xF3n por reforzar la seguridad a acometer este tipo de operaciones.
+  Buena prueba de ello es como la banc ha trabajado sin descanso por evitar el fraude
+  que se comete a trav\xE9s d la suplantaci\xF3n de identidad con f\xF3rmulas como
+  el sistema de pag [Vini](https://be.ceca.es/2000/vini/index.html), con tarjetas
+  virtuale y diversos m\xE9todos"
 layout: post.amp
-title: "El Token De Seguridad, Un Recurso Para Proteger Nuestras Cuenta"
-modified:
-categories:
-description: "A medida que han ido siendo más habituales todo tipo de transaccione online, tanto los servicios que las ofrecen como los usuarios que la utilizan muestran una mayor preocupación por reforzar la seguridad a acometer este tipo de operaciones. Buena prueba de ello es como la banc ha trabajado sin descanso por evitar el fraude que se comete a través d la suplantación de identidad con fórmulas como el sistema de pag [Vini](https://be.ceca.es/2000/vini/index.html), con tarjetas virtuale y diversos métodos"
+mainclass: articulos
+modified: null
 tags: []
-date: 2015-03-30T16:51:38+02:00
-mainclass: "articulos"
-color: "#F57C00"
+title: El Token De Seguridad, Un Recurso Para Proteger Nuestras Cuenta
 ---
+
 A medida que han ido siendo más habituales todo tipo de transaccione online, tanto los servicios que las ofrecen como los usuarios que la utilizan muestran una mayor preocupación por reforzar la seguridad a acometer este tipo de operaciones. Buena prueba de ello es como la banc ha trabajado sin descanso por evitar el fraude que se comete a través d la suplantación de identidad con fórmulas como el sistema de pag [Vini](https://be.ceca.es/2000/vini/index.html), con tarjetas virtuale y diversos métodos
 
 Aunque la obsesión por la seguridad no es exclusiva de las entidade bancarias ya que hay miles de sites que dependen en gran medida de l confianza que ofrecen a sus usuarios. Por ello un servicio de token d seguridad puede ser un respaldo más que interesante para las persona que manejan passwords que protegen su información personal y su actividades

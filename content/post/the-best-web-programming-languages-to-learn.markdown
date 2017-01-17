@@ -1,13 +1,17 @@
 ---
-layout: post.amp
-title: "Guia Gratuíta: The Best Web Programming Languages to Learn"
-tags: [aprender desarrollo web, manuales programacion web, cursos programacion web]
+author: alex
+color: '#61B38D'
+date: 2016-06-13 16:35:07
+description: Boosting your Web Development Career!
 image: Boosting-your-Web-Development-Career2.jpg
-date: 2016-06-13T18:35:07+02:00
-description: "Boosting your Web Development Career!"
-introduction: "Boosting your Web Development Career!"
-mainclass: "misc"
-color: "#61B38D"
+introduction: Boosting your Web Development Career!
+layout: post.amp
+mainclass: misc
+tags:
+- aprender desarrollo web
+- manuales programacion web
+- cursos programacion web
+title: "Guia Gratu\xEDta: The Best Web Programming Languages to Learn"
 ---
 
 <figure>

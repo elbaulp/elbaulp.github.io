@@ -1,14 +1,18 @@
 ---
-layout: post.amp
-title: "Nueva Guía: Preserving Your Privacy in Windows 10"
-date: 2015-12-13T12:38:27+01:00
-modified:
-categories:
-description: "Learn how to stop Windows 10 from exporting your personal data. Windows 10 is the fastest, most efficient and powerful Operating System Microsoft has ever created. Fast and responsive, this software is being continually being refined via your user feedback and telemetry."
-tags: []
+author: alex
+categories: null
+color: '#61B38D'
+date: 2015-12-13 11:38:27
+description: Learn how to stop Windows 10 from exporting your personal data. Windows
+  10 is the fastest, most efficient and powerful Operating System Microsoft has ever
+  created. Fast and responsive, this software is being continually being refined via
+  your user feedback and telemetry.
 image: hotlink-ok/Preserving-Your-Privacy-in-Windows-10.jpg
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags: []
+title: "Nueva Gu\xEDa: Preserving Your Privacy in Windows 10"
 ---
 
 <figure>

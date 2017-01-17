@@ -1,14 +1,18 @@
 ---
-layout: post.amp
-title: Manual De Git Gratuito
-categories:
-description: "Descarga un manual de git completo de forma gratuita"
-tags: [git, manuales, tutorial]
+author: alex
+categories: null
+color: null
+date: 2016-08-06 16:15:22
+description: Descarga un manual de git completo de forma gratuita
 image: git-tutorial-centered.jpg
-twitter_text:
-date: 2016-08-06T18:15:22+02:00
-mainclass: "misc"
-color: #61B38D
+layout: post.amp
+mainclass: misc
+tags:
+- git
+- manuales
+- tutorial
+title: Manual De Git Gratuito
+twitter_text: null
 ---
 
 <figure>

@@ -1,17 +1,17 @@
 ---
-layout: post.amp
-title: "Libro Gratuito: Getting Analytics Right"
-categories:
+author: alex
+categories: null
+color: null
+date: 2016-08-01 09:42:49
 description: Answering business questions with more data in less time.
-tags: []
 image: Getting-Analytics-Right-centered.jpg
-modified:
 introduction: Answering business questions with more data in less time.
-date: 2016-08-01T11:42:49+02:00
-mainclass: "misc"
-color: #61B38D
+layout: post.amp
+mainclass: misc
+modified: null
+tags: []
+title: 'Libro Gratuito: Getting Analytics Right'
 ---
-
 
 <figure>
    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Getting-Analytics-Right-centered.jpg" alt="{{ title }}" title="{{ title }}" width="640px" height="336px">

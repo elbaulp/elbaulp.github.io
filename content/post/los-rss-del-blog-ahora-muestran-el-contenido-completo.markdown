@@ -1,10 +1,13 @@
 ---
-title: "Los RSS Del Blog Ahora Muestran El Contenido Completo"
-description: "Tras escuchar a varios lectores, ahora es posible leer los artículos completos desde los lectores RSS"
-introduction: "Tras escuchar a varios lectores, ahora es posible leer los artículos completos desde los lectores RSS"
-mainclass: "articulos"
-color: "#F57C00"
-date: 2016-12-03T11:40:33+01:00
+author: alex
+color: '#F57C00'
+date: 2016-12-03 10:40:33
+description: "Tras escuchar a varios lectores, ahora es posible leer los art\xEDculos
+  completos desde los lectores RSS"
+introduction: "Tras escuchar a varios lectores, ahora es posible leer los art\xEDculos
+  completos desde los lectores RSS"
+mainclass: articulos
+title: Los RSS Del Blog Ahora Muestran El Contenido Completo
 ---
 
 Últimamente he recibo varios consejos de lectores a los que les gustaría poder leer los artículos por completo desde sus aplicaciones _RSS_. Es por ello que he decidido habilitarlos.

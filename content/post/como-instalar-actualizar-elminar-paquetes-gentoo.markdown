@@ -1,14 +1,22 @@
 ---
-layout: post.amp
-title: Cómo Instalar/actualizar/eliminar Paquetes en Gentoo
-date: 2016-07-29T12:20:01+02:00
-categories:
-description: "Chuleta de comandos para administrar gentoo, instalar, actualizar y borrar paquetes"
-tags: [gentoo, portage, emerge, eclean, emaint]
+author: alex
+categories: null
+color: '#2196F3'
+date: 2016-07-29 10:20:01
+description: Chuleta de comandos para administrar gentoo, instalar, actualizar y borrar
+  paquetes
 image: como-instalar-actualizar-elminar-paquetes-gentoo.png
-introduction: "Chuleta de comandos para administrar gentoo, instalar, actualizar y borrar paquetes"
-mainclass: "linux"
-color: "#2196F3"
+introduction: Chuleta de comandos para administrar gentoo, instalar, actualizar y
+  borrar paquetes
+layout: post.amp
+mainclass: linux
+tags:
+- gentoo
+- portage
+- emerge
+- eclean
+- emaint
+title: "C\xF3mo Instalar/actualizar/eliminar Paquetes en Gentoo"
 ---
 
 <figure>

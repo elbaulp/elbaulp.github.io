@@ -1,15 +1,19 @@
 ---
-layout: post.amp
-title: "Chuleta De Comandos/Atajos De Teclado/Paquetes más útiles para Emacs"
-date: 2016-08-30T16:10:30+02:00
-description: "Emacs: Recopilación de comandos y acciones útiles"
-tags: [emacs, chuleta]
+author: alex
+color: '#61B38D'
+date: 2016-08-30 14:10:30
+description: "Emacs: Recopilaci\xF3n de comandos y acciones \xFAtiles"
 image: chuleta-atajos-teclado-emacs.png
-introduction: "Emacs: Recopilación de comandos y acciones útiles"
+introduction: "Emacs: Recopilaci\xF3n de comandos y acciones \xFAtiles"
 lastmod: 2016-12-06
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+tags:
+- emacs
+- chuleta
+title: "Chuleta De Comandos/Atajos De Teclado/Paquetes m\xE1s \xFAtiles para Emacs"
 ---
+
 No es la primera vez que se publica en el blog una [chuleta](/tags/#chuleta "Artículos sobre chuletas") de algo:
 
 - [Chuleta de comandos para dig](/dig-chuleta-basica-de-comandos/ "Chuleta básica de comandos Dig")

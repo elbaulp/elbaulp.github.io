@@ -1,14 +1,24 @@
 ---
-layout: post.amp
-title: Vectorizar El Acceso a Columnas en R
-modified:
-categories:
-description: "En unas prácticas de Aprendizaje automático para la facultad en las que usamos R. Me surgió un problema intentando vectorizar el acceso a un Data set por columnas, así que pregunté en StackOVerflow."
-tags: [R, vectorizar en r, vectorizar codigo, mejorar codigo en r, optimizar codigo en R, vectorizar data set R, vectorizar columnas en R]
+author: alex
+categories: null
+color: '#E64A19'
+date: 2016-04-04 18:56:12
+description: "En unas pr\xE1cticas de Aprendizaje autom\xE1tico para la facultad en
+  las que usamos R. Me surgi\xF3 un problema intentando vectorizar el acceso a un
+  Data set por columnas, as\xED que pregunt\xE9 en StackOVerflow."
 image: vectorizar-acceso-columnas-r.png
-date: 2016-04-04T20:56:12+02:00
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+modified: null
+tags:
+- R
+- vectorizar en r
+- vectorizar codigo
+- mejorar codigo en r
+- optimizar codigo en R
+- vectorizar data set R
+- vectorizar columnas en R
+title: Vectorizar El Acceso a Columnas en R
 ---
 
 <figure>

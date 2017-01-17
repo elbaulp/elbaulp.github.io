@@ -1,15 +1,24 @@
 ---
-layout: post.amp
-title: Crear Una Lista De Listas De Forma Eficiente en Python
-modified:
-categories:
-description: "Hace tiempo me encontré con el problema de tener que construir una lista de la forma más eficiente posible, sin usar bucles for, ya que era el código de una MetaHeurística y debía evaluarse miles de veces. el código original era el siguiente"
-tags: [python, optimización de código, list comprehensions python, crear lista de listas, codigo eficiente python]
+author: alex
+categories: null
+color: '#E64A19'
+date: 2016-04-19 08:48:34
+description: "Hace tiempo me encontr\xE9 con el problema de tener que construir una
+  lista de la forma m\xE1s eficiente posible, sin usar bucles for, ya que era el c\xF3digo
+  de una MetaHeur\xEDstica y deb\xEDa evaluarse miles de veces. el c\xF3digo original
+  era el siguiente"
 image: python-lista-de-listas-eficiente.png
-date: 2016-04-19T10:48:34+02:00
 lastmod: 2016-08-09
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+modified: null
+tags:
+- python
+- "optimizaci\xF3n de c\xF3digo"
+- list comprehensions python
+- crear lista de listas
+- codigo eficiente python
+title: Crear Una Lista De Listas De Forma Eficiente en Python
 ---
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario <a href="http://stackoverflow.com/users/1612432/algui91" target="_blank" title="Perfil algui91">algui91</a>, que preguntaba <a href="http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python" target="_blank" title="Link a pregunta">Build a List of Lists eficiently in python</a>. La respuesta es del usuario <a href="http://stackoverflow.com/users/1219295/roland-smith" target="_blank" title="Perfil roland">Roland</a>.

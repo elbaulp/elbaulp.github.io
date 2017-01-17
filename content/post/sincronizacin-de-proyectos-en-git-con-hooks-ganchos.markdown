@@ -1,14 +1,28 @@
 ---
-layout: post.amp
-title: "Sincronización de proyectos en git con hooks (ganchos)"
-date: 2015-04-15T16:22:19+02:00
-lastmod: 2016-08-05
-categories:
-description: "Cómo sincronizar dos repositorios en git de forma que uno sea el espejo del otro, y cómo mantener sincronizada únicamente una rama."
-tags: [git, github, ganchos en git, ejemplos ganchos git, hooks en git, ejemplos hooks en git, post-commit, pre-commit, post-merge, sincronizar repositorios en git, repositorios espejo git, mirror repos]
+author: alex
+categories: null
+color: '#f05033'
+date: 2015-04-15 14:22:19
+description: "C\xF3mo sincronizar dos repositorios en git de forma que uno sea el
+  espejo del otro, y c\xF3mo mantener sincronizada \xFAnicamente una rama."
 image: 2013/03/git-logo.png
-mainclass: "git"
-color: "#f05033"
+lastmod: 2016-08-05
+layout: post.amp
+mainclass: git
+tags:
+- git
+- github
+- ganchos en git
+- ejemplos ganchos git
+- hooks en git
+- ejemplos hooks en git
+- post-commit
+- pre-commit
+- post-merge
+- sincronizar repositorios en git
+- repositorios espejo git
+- mirror repos
+title: "Sincronizaci\xF3n de proyectos en git con hooks (ganchos)"
 ---
 
 <figure>

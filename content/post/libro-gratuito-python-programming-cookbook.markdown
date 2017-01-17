@@ -1,14 +1,20 @@
 ---
-layout: post.amp
-title: Guía Gratuita - Python Programming Cookbook
-date: 2016-03-14T09:38:01+01:00
-modified:
-categories:
-description: "Kick-start your Python projects with these hot recipes!"
-tags: [guias Gratuita, descargar guias python, manuales de python, curso de python, Cookbook python]
+author: alex
+categories: null
+color: '#61B38D'
+date: 2016-03-14 08:38:01
+description: Kick-start your Python projects with these hot recipes!
 image: Python-Programming-Cookbook.jpg
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags:
+- guias Gratuita
+- descargar guias python
+- manuales de python
+- curso de python
+- Cookbook python
+title: "Gu\xEDa Gratuita - Python Programming Cookbook"
 ---
 
 <figure>

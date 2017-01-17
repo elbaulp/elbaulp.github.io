@@ -1,18 +1,20 @@
 ---
-layout: post.amp
-title: Cómo solucionar errores Al Implementar Amp-mustache
-categories:
-description: "Cómo implementar correctamente amp-mustache y evitar errores en Jekyll"
-tags: [amp-mustache, amp-pages, error amp-mustache]
+author: alex
+categories: null
+color: '#E64A19'
+date: 2016-07-30 16:27:54
+description: "C\xF3mo implementar correctamente amp-mustache y evitar errores en Jekyll"
 image: error-al-implementar-amp-mustache.png
-modified:
-introduction:
-date: 2016-07-30T18:27:54+02:00
-mainclass: "dev"
-color: "#E64A19"
+introduction: null
+layout: post.amp
+mainclass: dev
+modified: null
+tags:
+- amp-mustache
+- amp-pages
+- error amp-mustache
+title: "C\xF3mo solucionar errores Al Implementar Amp-mustache"
 ---
-
-
 
 # Amp-mustache da error al sustituir las etiquetas #
 

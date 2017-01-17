@@ -1,13 +1,18 @@
 ---
-layout: post.amp
-title: "Guía Gratuita: 5 Lightweight Linux Distros Ideal for an Intel Atom Processor PC"
-description: "Bring your Atom-powered device back to life with a lightweight distribution!"
-tags: [manuales, libros, linux]
+author: alex
+color: null
+date: 2016-11-27 10:18:24
+description: Bring your Atom-powered device back to life with a lightweight distribution!
 image: guides/5-Lightweight-Linux-Distros-Ideal-for-an-Intel-Atom-Processor-PC-centered.jpg
-introduction: "Bring your Atom-powered device back to life with a lightweight distribution!"
-mainclass: "misc"
-color: #61B38D
-date: 2016-11-27T11:18:24+01:00
+introduction: Bring your Atom-powered device back to life with a lightweight distribution!
+layout: post.amp
+mainclass: misc
+tags:
+- manuales
+- libros
+- linux
+title: "Gu\xEDa Gratuita: 5 Lightweight Linux Distros Ideal for an Intel Atom Processor
+  PC"
 ---
 
 <figure>

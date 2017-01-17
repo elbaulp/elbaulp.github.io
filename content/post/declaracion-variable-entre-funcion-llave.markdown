@@ -1,14 +1,20 @@
 ---
-layout: post.amp
-title: Declaración De Variables Entre El Nombre De La Función Y La Primera Llave en C
-modified:
-categories:
-description: "Declaración De Variables Entre El Nombre De La Función Y La Primera Llave en C"
-tags: [pre ansi C stilo, declarar variables antes de funcion C, sintaxis extraña C]
-date: 2016-04-06T21:24:34+02:00
+author: alex
+categories: null
+color: '#E64A19'
+date: 2016-04-06 19:24:34
+description: "Declaraci\xF3n De Variables Entre El Nombre De La Funci\xF3n Y La Primera
+  Llave en C"
 lastmod: 2016-08-09
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+modified: null
+tags:
+- pre ansi C stilo
+- declarar variables antes de funcion C
+- "sintaxis extra\xF1a C"
+title: "Declaraci\xF3n De Variables Entre El Nombre De La Funci\xF3n Y La Primera
+  Llave en C"
 ---
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario <a href="http://stackoverflow.com/users/1612432/algui91" target="_blank" title="algui91 perfil">algui91</a> , que preguntaba <a href="http://stackoverflow.com/questions/13789450/variable-declaration-between-function-name-and-first-curly-brace" target="_blank" title="Variable declaration between function name and first curly brace">_Variable declaration between function name and first curly brace_</a>. La respuesta es del usuario <a href="http://stackoverflow.com/users/270060/omkant" target="_blank" title="Omkant Perfil">omkant</a>.

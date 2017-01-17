@@ -1,13 +1,18 @@
 ---
-layout: post.amp
-title: Cómo Cambiar El Directorio De Portage a Otro Directorio en Gentoo
-description: Cómo cambiar el directorio de portage y directorio temporal a otro directorio
-tags: [gentoo, portage]
+author: alex
+color: '#2196F3'
+date: 2016-08-17 08:30:50
+description: "C\xF3mo cambiar el directorio de portage y directorio temporal a otro
+  directorio"
 image: como-instalar-actualizar-elminar-paquetes-gentoo.png
-introduction: Cómo cambiar el directorio de portage y directorio temporal a otro directorio
-date: 2016-08-17T10:30:50+02:00
-mainclass: "linux"
-color: "#2196F3"
+introduction: "C\xF3mo cambiar el directorio de portage y directorio temporal a otro
+  directorio"
+layout: post.amp
+mainclass: linux
+tags:
+- gentoo
+- portage
+title: "C\xF3mo Cambiar El Directorio De Portage a Otro Directorio en Gentoo"
 ---
 
 Hace poco tuve problemas con [portage](/como-instalar-actualizar-elminar-paquetes-gentoo/ "Cómo Instalar/actualizar/eliminar Paquetes en Gentoo") y su directorio de trabajo temporal en `/var/tmp/portage` en [Gentoo](/tags/#gentoo) porque me quedé sin las 10GB mínimas que necesita:

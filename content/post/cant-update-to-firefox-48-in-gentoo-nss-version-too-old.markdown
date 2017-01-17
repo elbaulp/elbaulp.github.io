@@ -1,14 +1,19 @@
 ---
+author: alex
+categories: null
+color: '#2196F3'
+date: 2016-08-04 08:55:12
+description: 'Resolver configure: error you don''t have NSS installed or your version
+  is too old al actualizar Firefox 48'
+image: null
+introduction: null
 layout: post.amp
+mainclass: linux
+tags:
+- gentoo
+- emerge
+- firefox
 title: Error NSS Al Actualizar Firefox 48 en Gentoo
-categories:
-description: "Resolver configure: error you don't have NSS installed or your version is too old al actualizar Firefox 48"
-tags: [gentoo, emerge, firefox]
-image:
-introduction:
-date: 2016-08-04T10:55:12+02:00
-mainclass: "linux"
-color: "#2196F3"
 ---
 
 Hoy ha salido la versión 48 de Firefox para [Gentoo](/como-instalar-actualizar-elminar-paquetes-gentoo/ "Instalar y actualizar Gentoo"), pero cuando realicé la actualización obtenía el siguiente error:

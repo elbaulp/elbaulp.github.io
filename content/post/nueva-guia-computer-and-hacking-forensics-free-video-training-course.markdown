@@ -1,14 +1,16 @@
 ---
-layout: post.amp
-title: "Nueva Guía: Computer and Hacking Forensics - FREE Video Training Course"
-date: 2015-12-12T13:48:51+01:00
-modified:
-categories:
-description: "Learn how to determine potential online criminal activity, legally gather evidence, search and investigate wireless attacks."
-tags: []
+author: alex
+categories: null
+color: '#61B38D'
+date: 2015-12-12 12:48:51
+description: Learn how to determine potential online criminal activity, legally gather
+  evidence, search and investigate wireless attacks.
 image: hotlink-ok/Computer-and-Hacking-Forensics---FREE-Video-Training-Course.jpg
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags: []
+title: "Nueva Gu\xEDa: Computer and Hacking Forensics - FREE Video Training Course"
 ---
 
 <figure>

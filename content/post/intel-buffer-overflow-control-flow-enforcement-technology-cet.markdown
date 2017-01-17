@@ -1,19 +1,33 @@
 ---
-layout: post.amp
-title: Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement Technology (CET)
-date: 2016-07-05T22:09:47+02:00
+author: alex
 categories:
-  - Security Now
-permalink: /intel-buffer-overflow-control-flow-enforcement-technology-cet/
-description: Hace tiempo que hablamos aquí sobre lo que es un Buffer Overflow y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores
-tags: [security now, Intel, seguridad, CET intel, shadow stack intel, que shadow stack intel, endbranch intel, instruccion ENDBRANCH, que es un buffer overflow,]
+- Security Now
+color: '#00BCD4'
+date: 2016-07-05 20:09:47
+description: "Hace tiempo que hablamos aqu\xED sobre lo que es un Buffer Overflow
+  y c\xF3mo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel
+  se propone acabar con este tipo tan com\xFAn de vulnerabilidad en sus nuevos procesadores"
 image: ComoIntelVaaAcabarConLosBuffersOverflowsConControl-FlowEnforcementTechnologyCET.png
-modified:
-introduction: Hace tiempo que hablamos aquí sobre lo que es un Buffer Overflow y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores
-mainclass: "security-now"
-color: "#00BCD4"
+introduction: "Hace tiempo que hablamos aqu\xED sobre lo que es un Buffer Overflow
+  y c\xF3mo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel
+  se propone acabar con este tipo tan com\xFAn de vulnerabilidad en sus nuevos procesadores"
+layout: post.amp
+mainclass: security-now
+modified: null
+permalink: /intel-buffer-overflow-control-flow-enforcement-technology-cet/
+tags:
+- security now
+- Intel
+- seguridad
+- CET intel
+- shadow stack intel
+- que shadow stack intel
+- endbranch intel
+- instruccion ENDBRANCH
+- que es un buffer overflow
+title: "C\xF3mo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement
+  Technology (CET)"
 ---
-
 
 Hace tiempo que hablamos aquí sobre lo que es un [Buffer Overflow](/explotacion-buffers-overflows-y-exploits-parte-i/ "Explotación – Buffers OverFlows y exploits") y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores.
 

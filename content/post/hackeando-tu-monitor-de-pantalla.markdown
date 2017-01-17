@@ -1,15 +1,19 @@
 ---
-layout: post.amp
-title: Hackeando Tu Monitor De Pantalla
-description: Un grupo de investigadores ha conseguido acceder y moficar los píxeles de una pantalla
-tags: [seguridad]
-introduction: Un grupo de investigadores ha conseguido acceder y moficar los píxeles de una pantalla
-twitter_text:
-date: 2016-08-12T09:06:02+02:00
-lastmod: 2016-08-15
+author: alex
+color: '#F57C00'
+date: 2016-08-12 07:06:02
+description: "Un grupo de investigadores ha conseguido acceder y moficar los p\xEDxeles
+  de una pantalla"
 image: Hackeando-Tu-Monitor-De-Pantalla.jpg
-mainclass: "articulos"
-color: "#F57C00"
+introduction: "Un grupo de investigadores ha conseguido acceder y moficar los p\xEDxeles
+  de una pantalla"
+lastmod: 2016-08-15
+layout: post.amp
+mainclass: articulos
+tags:
+- seguridad
+title: Hackeando Tu Monitor De Pantalla
+twitter_text: null
 ---
 
 <figure>

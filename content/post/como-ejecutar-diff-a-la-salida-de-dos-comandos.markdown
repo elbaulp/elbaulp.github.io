@@ -1,13 +1,25 @@
 ---
-layout: post.amp
-title: Cómo Ejecutar Diff a La Salida De Dos Comandos
-date: 2016-01-07T12:54:12+01:00
-tags: [comando diff, ejemplos diff, diff sin ficheros, diff con parametros, diff salida dos comandos, diff tuberías, diff pipes]
+author: alex
+color: '#E64A19'
+date: 2016-01-07 11:54:12
+description: "Recientemente necesit\xE9 ejecutar el comando `diff` sobre la salida
+  de otros dos comandos. Es decir, `diff` recibe como par\xE1metros los ficheros sobre
+  los que se quiere mostrar las diferencias, pero yo buscaba hacer un `diff` a la
+  salida de dos comandos, no dos ficheros."
 image: Como-Ejecutar-Diff-a-La-Salida-De-Dos-Comandos.png
-description: "Recientemente necesité ejecutar el comando `diff` sobre la salida de otros dos comandos. Es decir, `diff` recibe como parámetros los ficheros sobre los que se quiere mostrar las diferencias, pero yo buscaba hacer un `diff` a la salida de dos comandos, no dos ficheros."
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+tags:
+- comando diff
+- ejemplos diff
+- diff sin ficheros
+- diff con parametros
+- diff salida dos comandos
+- "diff tuber\xEDas"
+- diff pipes
+title: "C\xF3mo Ejecutar Diff a La Salida De Dos Comandos"
 ---
+
 # Problema
 
 Recientemente necesité ejecutar el comando `diff` sobre la salida de otros dos comandos. Es decir, `diff` recibe como parámetros los ficheros sobre los que se quiere mostrar las diferencias, pero yo buscaba hacer un `diff` a la salida de dos comandos, no dos ficheros. Un ejemplo:

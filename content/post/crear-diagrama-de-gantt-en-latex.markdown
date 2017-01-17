@@ -1,15 +1,20 @@
 ---
-layout: post.amp
-title: "Cómo Crear Diagramas De Gantt en LaTeX"
-permalink: /crear-diagrama-de-gantt-en-latex/
+author: alex
 categories: LaTeX
-description: "Breve introducción al paquete PgfGantt de LaTeX, para crear diagramas de Gantt"
-tags: [latex, gantt]
+color: '#B31917'
+date: 2016-09-16 13:48:53
+description: "Breve introducci\xF3n al paquete PgfGantt de LaTeX, para crear diagramas
+  de Gantt"
 image: crear-diagrama-de-gantt-en-latex.png
-introduction: "Breve introducción al paquete PgfGantt de LaTeX, para crear diagramas de Gantt"
-mainclass: "latex"
-color: "#B31917"
-date: 2016-09-16T15:48:53+02:00
+introduction: "Breve introducci\xF3n al paquete PgfGantt de LaTeX, para crear diagramas
+  de Gantt"
+layout: post.amp
+mainclass: latex
+permalink: /crear-diagrama-de-gantt-en-latex/
+tags:
+- latex
+- gantt
+title: "C\xF3mo Crear Diagramas De Gantt en LaTeX"
 ---
 
 <figure>

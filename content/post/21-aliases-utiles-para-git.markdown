@@ -1,15 +1,26 @@
 ---
-layout: post.amp
-title: "21 alias útiles para git"
-date: 2015-12-01T11:56:26+01:00
-modified:
-categories:
-description: "Todo aquel que use git sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los alias, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos alias útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos."
-tags: [git, github, alias git, configurar git, configuraciones git]
+author: alex
+categories: null
+color: '#f05033'
+date: 2015-12-01 10:56:26
+description: "Todo aquel que use git sabr\xE1 que en ocasiones es un poco tedioso
+  escribir los comandos a ejecutar. Para ello existen los alias, que nos permiten
+  crearnos atajos a la hora de ejecutar un comando. En este art\xEDculo se recopilar\xE1n
+  unos cuantos alias \xFAtiles para el d\xEDa a d\xEDa. Os animo a que coment\xE9is
+  vuestros preferidos para ir aumentando la lista!. Comencemos."
 image: 2013/03/git-logo.png
-mainclass: "git"
-color: "#f05033"
+layout: post.amp
+mainclass: git
+modified: null
+tags:
+- git
+- github
+- alias git
+- configurar git
+- configuraciones git
+title: "21 alias \xFAtiles para git"
 ---
+
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/git-logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="910px" height="380px" />
 </figure>

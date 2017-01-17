@@ -1,14 +1,18 @@
 ---
+author: alex
+categories: null
+color: '#61B38D'
+date: 2015-12-08 10:00:00
+description: Headlines featuring large-scale cyber breaches at Target, Home Depot,
+  Sony Pictures, and others have taught us one thing--no one is safe. But who are
+  the hackers who are able to pull off such huge attacks against sophisticated targets,
+  including the U.S. Government? And how do they do it?
+image: "Nueva-Gu\xEDa-Behind-the-Mask-the-Changing-Face-of-Hacking.jpg"
 layout: post.amp
-title: "Nueva Guía: Behind the Mask, the Changing Face of Hacking"
-modified:
-categories:
-description: "Headlines featuring large-scale cyber breaches at Target, Home Depot, Sony Pictures, and others have taught us one thing--no one is safe. But who are the hackers who are able to pull off such huge attacks against sophisticated targets, including the U.S. Government? And how do they do it?"
+mainclass: misc
+modified: null
 tags: []
-image: Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking.jpg
-date: 2015-12-08T10:00:00+00:00
-mainclass: "misc"
-color: "#61B38D"
+title: "Nueva Gu\xEDa: Behind the Mask, the Changing Face of Hacking"
 ---
 
 <figure>

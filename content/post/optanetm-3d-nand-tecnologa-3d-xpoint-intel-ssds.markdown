@@ -1,17 +1,25 @@
 ---
-layout: post.amp
-title: Intel Anuncia Sus Nuevos Discos Duros, 1000 Veces Más Rápidos Que Los SSDs
+author: alex
 categories:
-  - Security Now
-permalink: /optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/
-description: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnología 3D XPoint De Intel Reemplazarán a Los SSDs"
-tags: [Intel, optane, 3D XPoint, ssd]
+- Security Now
+color: '#00BCD4'
+date: 2016-08-20 05:06:16
+description: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnolog\xEDa 3D XPoint De
+  Intel Reemplazar\xE1n a Los SSDs"
 image: IntelAnunciaSusNuevosDiscosDuros1000VecesMasRapidosQueLosSSDs.png
-introduction: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnología 3D XPoint De Intel Reemplazarán a Los SSDs"
-date: 2016-08-20T07:06:16+02:00
+introduction: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnolog\xEDa 3D XPoint De
+  Intel Reemplazar\xE1n a Los SSDs"
+layout: post.amp
+mainclass: security-now
+permalink: /optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/
 redirect_from: /security now/optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/
-mainclass: "security-now"
-color: "#00BCD4"
+tags:
+- Intel
+- optane
+- 3D XPoint
+- ssd
+title: "Intel Anuncia Sus Nuevos Discos Duros, 1000 Veces M\xE1s R\xE1pidos Que Los
+  SSDs"
 ---
 
 > En un artículo anterior hablamos de [Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement](/intel-buffer-overflow-control-flow-enforcement-technology-cet/ "Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement"). Hoy Intel vuelve a ser noticia, hace unos días en el episodio #573 de [Security now!](/category/security-now/ "Todos los artículos de Security Now!") Steve habló de una nueva tecnología que ha creado Intel junto con Micron. Se llama __3D XPoint__ y con ella han creado dos tipos de discos duros 1000 veces más rápidos que los SSDs.

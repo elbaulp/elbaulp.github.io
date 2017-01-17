@@ -1,14 +1,20 @@
 ---
-layout: post.amp
-title: Guía Gratuita - Spring Data Programming Cookbook
-date: 2016-03-15T08:39:18+01:00
-modified:
-categories:
-description: "Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!"
-tags: [manual de spring data, cookbook spring, manuales gratuitos programacion, tutorial spring data]
+author: alex
+categories: null
+color: '#61B38D'
+date: 2016-03-15 07:39:18
+description: Delve into the world of Spring Data Programming with this compact cookbook
+  that introduces common recipes for the Spring Data framework!
 image: Spring-Data-Programming-Cookbook.jpg
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags:
+- manual de spring data
+- cookbook spring
+- manuales gratuitos programacion
+- tutorial spring data
+title: "Gu\xEDa Gratuita - Spring Data Programming Cookbook"
 ---
 
 <figure>

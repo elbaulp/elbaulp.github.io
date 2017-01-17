@@ -1,14 +1,15 @@
 ---
-layout: post.amp
-title: Los 10 Artículos Más Visitados De 2015
-date: 2015-12-15T08:17:53+01:00
-modified:
-description: "Se nos va otro año, estos son los 10 artículos que más os han gustado"
+author: alex
+color: '#F57C00'
+date: 2015-12-15 07:17:53
+description: "Se nos va otro a\xF1o, estos son los 10 art\xEDculos que m\xE1s os han
+  gustado"
 image: los10articulosmasvisitados2015.png
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+modified: null
+title: "Los 10 Art\xEDculos M\xE1s Visitados De 2015"
 ---
-
 
 <figure>
 <a href="/img/los10articulosmasvisitados2015.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/los10articulosmasvisitados2015.png" title="{{ page.title }}" alt="{{ page.title }}" width="1024px" height="512px" /></a>

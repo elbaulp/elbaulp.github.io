@@ -1,16 +1,21 @@
 ---
-layout: post.amp
-title: "Cómo Crear Imagenes Con Un Marco Circular Al Estilo G+ en LaTeX"
-modified:
-categories:
-description: "Cómo crear una imagen desde latex, usando el paquete tikz, para insertar una foto en un marco circular, al estilo de la red social de Google, G+."
-tags: [latex, tikz, tikzpicture, imagenes marco Circular]
-image: "Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg"
-date: 2015-05-27T12:28:05+02:00
-math: true
+author: alex
+categories: null
+color: '#B31917'
+date: 2015-05-27 10:28:05
+description: "C\xF3mo crear una imagen desde latex, usando el paquete tikz, para insertar
+  una foto en un marco circular, al estilo de la red social de Google, G+."
 image: 2013/05/latex_logo.png
-mainclass: "latex"
-color: "#B31917"
+layout: post.amp
+mainclass: latex
+math: true
+modified: null
+tags:
+- latex
+- tikz
+- tikzpicture
+- imagenes marco Circular
+title: "C\xF3mo Crear Imagenes Con Un Marco Circular Al Estilo G+ en LaTeX"
 ---
 
 En éste artículo vamos a ver algo curioso que aprendí hace poco. Con el paquete `tikz` de $$\LaTeX$$.

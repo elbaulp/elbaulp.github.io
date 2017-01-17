@@ -1,15 +1,21 @@
 ---
-layout: post.amp
-title: "Cómo Definir Colores Personalizados en LaTeX"
-tags: [latex, xcolor, paquete xcolor, tutorial xcolor latex]
+author: alex
 categories: LaTeX
+color: '#B31917'
+date: 2015-12-09 15:55:32
+description: "En este art\xEDculo veremos c\xF3mo podemos definir colores personalizados
+  en LateX usando el paquete xcolor."
 image: latexxcolorbrillantes.png
-date: 2015-12-09T16:55:32+01:00
 lastmod: 2015-12-30
+layout: post.amp
+mainclass: latex
 math: true
-description: "En este artículo veremos cómo podemos definir colores personalizados en LateX usando el paquete xcolor."
-mainclass: "latex"
-color: "#B31917"
+tags:
+- latex
+- xcolor
+- paquete xcolor
+- tutorial xcolor latex
+title: "C\xF3mo Definir Colores Personalizados en LaTeX"
 ---
 
 <figure>

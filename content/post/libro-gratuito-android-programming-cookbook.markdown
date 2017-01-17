@@ -1,14 +1,19 @@
 ---
-layout: post.amp
-title: Libro Gratuito. Android Programming Cookbook
-categories:
-description: Delve into the world of Android Programming with this compact cookbook that introduces common recipes for the Android platform!
-tags: [manuales, libros]
+author: alex
+categories: null
+color: null
+date: 2016-08-24 08:22:59
+description: Delve into the world of Android Programming with this compact cookbook
+  that introduces common recipes for the Android platform!
 image: guides/Android-Programming-Cookbook-centered.jpg
-introduction: Delve into the world of Android Programming with this compact cookbook that introduces common recipes for the Android platform!
-mainclass: "misc"
-color: #61B38D
-date: 2016-08-24T10:22:59+02:00
+introduction: Delve into the world of Android Programming with this compact cookbook
+  that introduces common recipes for the Android platform!
+layout: post.amp
+mainclass: misc
+tags:
+- manuales
+- libros
+title: Libro Gratuito. Android Programming Cookbook
 ---
 
 <figure>

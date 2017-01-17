@@ -1,14 +1,21 @@
 ---
-layout: post.amp
-title: "Nueva Guía: The Essentials of Information Security Kit"
-date: 2015-11-28T09:14:31+01:00
-modified:
-categories:
-description: "Essentials of Information Security brings together the latest in information, coverage of important developments, and expert commentary to help with your Information Security related decisions."
-tags: [guias gratuitas, cursos, pdfs, ebooks gratuitos]
+author: alex
+categories: null
+color: '#61B38D'
+date: 2015-11-28 08:14:31
+description: Essentials of Information Security brings together the latest in information,
+  coverage of important developments, and expert commentary to help with your Information
+  Security related decisions.
 image: /hotlink-ok/The-Essentials-of-Information-Security-Kit.jpg
-mainclass: "misc"
-color: "#61B38D"
+layout: post.amp
+mainclass: misc
+modified: null
+tags:
+- guias gratuitas
+- cursos
+- pdfs
+- ebooks gratuitos
+title: "Nueva Gu\xEDa: The Essentials of Information Security Kit"
 ---
 
 <figure>

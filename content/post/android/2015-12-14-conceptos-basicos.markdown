@@ -1,17 +1,21 @@
 ---
-layout: post.amp
-title: Programación Android - Conceptos básicos
-date: 2015-12-14T08:53:53+01:00
-modified:
+author: alex
 categories: android
-description: "En este primer artículo veremos los conceptos fundamentales que componen una aplicación Android."
-tags: [Curso de Android, programación Android, tutoriales Android, NPI]
+color: '#689F38'
+date: 2015-12-14 07:53:53
+description: "En este primer art\xEDculo veremos los conceptos fundamentales que componen
+  una aplicaci\xF3n Android."
 image: hotlink-ok/activityLifecycle.png
-mainclass: "android"
-color: "#689F38"
+layout: post.amp
+mainclass: android
+modified: null
+tags:
+- Curso de Android
+- "programaci\xF3n Android"
+- tutoriales Android
+- NPI
+title: "Programaci\xF3n Android - Conceptos b\xE1sicos"
 ---
-
-
 
 Conceptos básicos Android
 =========================

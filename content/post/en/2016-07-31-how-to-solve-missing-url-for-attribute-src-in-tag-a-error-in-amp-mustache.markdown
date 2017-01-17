@@ -1,18 +1,20 @@
 ---
-layout: post.amp
-title: How to Solve 'Missing URL for Attribute 'Src' in Tag 'a'' Error in Amp-mustache
+author: alex
 categories: en
-description: "Solving amp-mustache error: Missing URL for Attribute"
-tags: [amp-mustache, amp-pages, jekyll ecape tags]
+color: '#E64A19'
+date: 2016-07-31 05:37:13
+description: 'Solving amp-mustache error: Missing URL for Attribute'
 image: how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache.png
-introduction: "Solving amp-mustache error: Missing URL for Attribute"
-date: 2016-07-31T07:37:13+02:00
+introduction: 'Solving amp-mustache error: Missing URL for Attribute'
 lang: en
-mainclass: "dev"
-color: "#E64A19"
+layout: post.amp
+mainclass: dev
+tags:
+- amp-mustache
+- amp-pages
+- jekyll ecape tags
+title: How to Solve 'Missing URL for Attribute 'Src' in Tag 'a'' Error in Amp-mustache
 ---
-
-
 
 # What is Amp-mustache and how it works #
 
