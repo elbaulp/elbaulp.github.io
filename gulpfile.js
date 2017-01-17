@@ -34,10 +34,10 @@ gulp.task('stylus', function(){
  */
 gulp.task('imagemin', function() {
   return gulp.src('src/img/**/*.{jpg,png,gif}')
-    .pipe(newer('assets/img/'))
+    .pipe(newer('img/'))
     .pipe(plumber())
     .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('assets/img/'));
+    .pipe(gulp.dest('img/'));
 });
 
 /**

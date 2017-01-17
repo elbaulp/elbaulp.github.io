@@ -54,11 +54,11 @@ La razón de establecer los permisos a [777][7] es porque en la mayoría de serv
 
 Eso es todo, así de fácil es instalar Bolt. La primera vez que visites la web deberás registrar un usuario para administar la web:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/Login-to-bolt-CMS-1024x819.png" alt="crear usuario en bolt" width="1024px" height="819px" />][8]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/Login-to-bolt-CMS-1024x819.png" alt="crear usuario en bolt" width="1024px" height="819px" />][8]
 
 Ya en el panel de administración, puedes agregar contenido de muestra dirigiendote a *Settings » Check Database* y hacer click en **Add some sample Records with Loripsum text**. Tras hacer click tendremos contenido que mostrar en la web:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/Bolt-Home-PAge-CMS-1024x819.png" alt="Bolt Home PAge CMS" width="1024px" height="819px" />][9]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/Bolt-Home-PAge-CMS-1024x819.png" alt="Bolt Home PAge CMS" width="1024px" height="819px" />][9]
 
 Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo:
 
@@ -124,7 +124,7 @@ php composer.phar update
 
 Algo que me ha llamado mucho la atención es la facilidad que se le da al desarrollador para depurar el entorno. Si estás logeado y con el modo depuración activado (*debug:true* en el archivo *config.yml*) verás una barra de depuración abajo a la derecha:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/bolt-debug.png" alt="bolt debug" width="748px" height="55px" />][10]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/bolt-debug.png" alt="bolt debug" width="748px" height="55px" />][10]
 
 Desde ahí se puede acceder a estadísticas de carga, uso de memoria, entradas del log, consultas a la base de datos etc.
 
@@ -148,6 +148,6 @@ Creo que este CMS promete mucho, personalmente me ha gustado y en un futuro no d
  [5]: https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/ "Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad"
  [6]: https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/ "Cómo instalar y configurar Nginx con php5-fpm"
  [7]: https://elbauldelprogramador.com/programacion-bash-metacaracteres_12/
- [8]: https://elbauldelprogramador.com/assets/img/2013/03/Login-to-bolt-CMS.png
- [9]: https://elbauldelprogramador.com/assets/img/2013/03/Bolt-Home-PAge-CMS.png
- [10]: https://elbauldelprogramador.com/assets/img/2013/03/bolt-debug.png
+ [8]: https://elbauldelprogramador.com/img/2013/03/Login-to-bolt-CMS.png
+ [9]: https://elbauldelprogramador.com/img/2013/03/Bolt-Home-PAge-CMS.png
+ [10]: https://elbauldelprogramador.com/img/2013/03/bolt-debug.png

@@ -12,7 +12,7 @@ color: "#D32F2F"
 ---
 
 <figure>
-<a href="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="336px" height="285px" /></a>
+<a href="/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/hotlink-ok/Crear-Una-Brujula-Con-Reconocimiento-De-Voz-en-Android.png" title="{{ page.title }}" alt="{{ page.title }}" width="336px" height="285px" /></a>
 </figure>
 
 
@@ -44,7 +44,7 @@ Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MI
 ## Inicio de la aplicación
 
 <figure>
-<a href="/assets/img/npi/inicioBrujula.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/npi/inicioBrujula.png" title="Primera pantalla de la aplicación brújula" alt="Primera pantalla de la aplicación brújula" width="338px" height="600px" /></a>
+<a href="/img/npi/inicioBrujula.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/npi/inicioBrujula.png" title="Primera pantalla de la aplicación brújula" alt="Primera pantalla de la aplicación brújula" width="338px" height="600px" /></a>
 <span class="image-credit">Primera pantalla de la aplicación brújula</span>
 </figure>
 
@@ -52,7 +52,7 @@ Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MI
 Al mostrarse esta pantalla, el usuario debe proporcionar un comando de voz, por ejemplo _“Norte 10”_. Tras dar el comando, en la brujula se añadirá un marcador indicando dónde está el Norte + 10 grados. Además de esto, mediante una voz, se le irá indicando al usuario si debe girar a la derecha/izquierda o va en la dirección correcta:
 
 <figure>
-<a href="/assets/img/npi/norte10.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/npi/norte10.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" width="338px" height="600px" /></a>
+<a href="/img/npi/norte10.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/npi/norte10.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" width="338px" height="600px" /></a>
 <span class="image-credit">Indicaciones en la brujula</span>
 </figure>
 
@@ -60,7 +60,7 @@ Al mostrarse esta pantalla, el usuario debe proporcionar un comando de voz, por 
 Como vemos en la imagen, aparece un indicador rojo situado en el norte + 10 grados. Veamos otro ejemplo, Norte 45:
 
 <figure>
-<a href="/assets/img/npi/norte45.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/npi/norte45.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" width="338px" height="600px" /></a>
+<a href="/img/npi/norte45.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/npi/norte45.png" title="Indicaciones en la brujula" alt="Indicaciones en la brujula" width="338px" height="600px" /></a>
 <span class="image-credit">Indicaciones en la brujula</span>
 </figure>
 

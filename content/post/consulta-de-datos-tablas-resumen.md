@@ -14,7 +14,7 @@ Ya hemos acabado el tema de [consulta de datos][1] en sql, lo siguiente que vere
 Dejo un Pdf con un resumen y algunos ejemplos de funciones en ORACLE que podéis descargar clicando en el botón.
 
 <div class="button-post">
-  <a href="/assets/pdfs/SOLOTABLAS.pdf" target="_blank">Descargar Resumen de Tablas SQL</a>
+  <a href="/pdfs/SOLOTABLAS.pdf" target="_blank">Descargar Resumen de Tablas SQL</a>
 </div>
 
 ## Siguiente Tema: [Introducción a PL/SQL][2]

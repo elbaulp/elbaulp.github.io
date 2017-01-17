@@ -47,12 +47,12 @@ Así que me dispuse a intentar generar un gráfico en la hoja de cálculo que te
 Estos son los gráficos que finalmente incluí en la que iba a ser la chachi documentación extra profesional a 5 minutos de que la entrega se cerrase.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/calc1.png" alt="{{ title }}" title="{{ title }}" width="605" height="340"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/calc1.png" alt="{{ title }}" title="{{ title }}" width="605" height="340"></amp-img>
     <figcaption>Primer gráfico horrible</figcaption>
 </figure>
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/calc2.png" alt="{{ title }}" title="{{ title }}" width="605" height="340"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/calc2.png" alt="{{ title }}" title="{{ title }}" width="605" height="340"></amp-img>
     <figcaption>Segundo gráfico horrible</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ La última columna era una forma de reflejar la diferencia del coste obtenido po
 Mi script consistió en ejecutar todos los casos del algoritmo y guardar dos medidas, en dos listas separadas: tiempo de ejecución y coste de la solución obtenida. De antemano tenía guardados los distintos casos que tenía que ejecutar y las mejores soluciones conocidas de cada algoritmo, que usé para calcular la desviación de cada solución con la siguiente fórmula:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/zzpvyzc.png" alt="{{ title }}" title="{{ title }}" width="197" height="36"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/zzpvyzc.png" alt="{{ title }}" title="{{ title }}" width="197" height="36"></amp-img>
 </figure>
 
 Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado.
@@ -107,19 +107,19 @@ Una vez tuve mi script "hoja de cálculo" hecho, pasé a pensar cómo podría au
 Antes de describir el script en [R](https://elbauldelprogramador.com/tags/#r "Artículos sobre R") que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con _Calc_.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/chrp1.png" alt="Gráfico que muestra el rendimiento en un caso pequeño" title="Gráfico que muestra el rendimiento en un caso pequeño" width="800" height="800"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/chrp1.png" alt="Gráfico que muestra el rendimiento en un caso pequeño" title="Gráfico que muestra el rendimiento en un caso pequeño" width="800" height="800"></amp-img>
     <figcaption>Gráfico que muestra el rendimiento en un caso pequeño</figcaption>
 </figure>
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/taip1.png" alt="Gráfico que muestra el rendimiento en un caso grande" title="Gráfico que muestra el rendimiento en un caso grande" width="800" height="800"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/taip1.png" alt="Gráfico que muestra el rendimiento en un caso grande" title="Gráfico que muestra el rendimiento en un caso grande" width="800" height="800"></amp-img>
     <figcaption>Gráfico que muestra el rendimiento en un caso grande</figcaption>
 </figure>
 
 ¿Qué algoritmo funciona mejor en casos pequeños? ¿Y en casos grandes?
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/converp2.png" alt="Gráfico de convergencia" title="Gráfico de convergencia" width="800" height="800"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/converp2.png" alt="Gráfico de convergencia" title="Gráfico de convergencia" width="800" height="800"></amp-img>
     <figcaption>Gráfico de convergencia</figcaption>
 </figure>
 

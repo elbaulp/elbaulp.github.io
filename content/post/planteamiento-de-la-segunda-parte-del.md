@@ -32,5 +32,5 @@ A continuación dejo un índice del esquema que voy a seguir en esta segunda par
 
 > Esta vez, voy a intentar escribir más regularmente, para que no se haga tan larga como la primera parte. Espero que os esté sirviendo de ayuda el contenido de este curso, y de todo el blog en general.
 
- [1]: https://elbauldelprogramador.com/assets/img/2013/07/iconoAndroid.png
+ [1]: https://elbauldelprogramador.com/img/2013/07/iconoAndroid.png
  [2]: https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/

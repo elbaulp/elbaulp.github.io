@@ -20,7 +20,7 @@ Si como yo nunca has oido hablar de este término, no te preocupes, a continuaci
   ¿Qué es el Long Tail SEO y por qué debería tenerlo en cuenta?
 </h2>
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/longTail2.jpg" alt="long Tail SEO" width="993px" height="741px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/longTail2.jpg" alt="long Tail SEO" width="993px" height="741px" />][1]
 
 Para dar respuesta a la pregunta, fíjate en la gráfica. Como se aprecia en la parte izquierda, en la línea negra existe una gran competitividad para términos de búsqueda que contienen de una a tres palabras clave. Es muy dificil conseguir una posición óptima en los resultados de la búsqueda centrándose en términos de búsqueda tan cortos.
 
@@ -30,7 +30,7 @@ Desde el punto de vista del propietario de una web sin mucha popularidad en inte
 
 Aunque parezca que no se va a alcanzar a tantos visitantes como si te centraras en las palabras más competitivas, no es cierto. Si trazas una línea vertical en la línea verde hasta cortar el eje x, verás que el área que abarcan las Long Tail es incluso mayor que el de los términos cortos. Quizá en esta imagen quede más claro:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/longtailtraffic.jpg" alt="longtailtraffic" width="520px" height="280px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/longtailtraffic.jpg" alt="longtailtraffic" width="520px" height="280px" />
 <h2 >
   ¿Cual es el objetivo de HitTail
 </h2>
@@ -51,13 +51,13 @@ Una vez registrado, ya sea para el periodo de prueba o de pago, la opción mas s
 
 El código necesario para el plugin lo encontarás en **Account** » **View** en el sitio que hayas dado de alta:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/Screenshot-from-2013-03-08-001738.jpg" alt="Screenshot from 2013-03-08 00:17:38" width="432px" height="347px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/Screenshot-from-2013-03-08-001738.jpg" alt="Screenshot from 2013-03-08 00:17:38" width="432px" height="347px" />
 
 Una vez instalado, deberán visitar tu sítio unas 25-125 (Aproximadamente) personas para que empieces a ver sugerencias de palabras.
 
 La sección más importante de HitTail es **Suggestions**, en ella aparecen las palabras clave Long Tail:
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/Screenshot-from-2013-03-08-002231.jpg" alt="Screenshot from 2013-03-08 00:22:31" width="571px" height="304px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/Screenshot-from-2013-03-08-002231.jpg" alt="Screenshot from 2013-03-08 00:22:31" width="571px" height="304px" />
 
 Usa estas palabras para escribir artículos relacionados con lo que los lectores están buscando para llegar a tu web, o modifica artículos existentes relacionados con esas palabras y añáde dichas palabras como etiquetas de artículo. Aunque creas que has establecido las etiquetas correctamente para un artículo, te sorprenderás cuando veas las sugerencias de HitTail.
 
@@ -69,7 +69,7 @@ Sin embargo hay algunas cosas que podrían mejorar, es un poco dificil al princi
 
 Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta técnica. La imagen de abajo muestra las estadísticas de este blog, puedes observar el crecimiento progresivo existente entorno a la semana 4 del 2013 (La última columna tiene un valor menor porque al momento de escribir este artículo estamos a principios de semana):
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/long-tail-result-1024x248.png" alt="long tail result" width="1024px" height="248px" />][3]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/long-tail-result-1024x248.png" alt="long tail result" width="1024px" height="248px" />][3]
 
 #### Referencias
 
@@ -77,6 +77,6 @@ Para concluir, dejo una prueba del rendimiento que estoy obteniendo usando esta 
 
 
 
- [1]: https://elbauldelprogramador.com/assets/img/2013/03/longTail2.jpg
+ [1]: https://elbauldelprogramador.com/img/2013/03/longTail2.jpg
  [2]: https://elbauldelprogramador.com/curso-programacion-android/
- [3]: https://elbauldelprogramador.com/assets/img/2013/03/long-tail-result.png
+ [3]: https://elbauldelprogramador.com/img/2013/03/long-tail-result.png

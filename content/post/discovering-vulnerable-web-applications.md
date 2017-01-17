@@ -14,7 +14,7 @@ tags:
 mainclass: "misc"
 color: "#61B38D"
 ---
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="size-medium wp-image-1108 alignleft" title="discovering vulnerable web applications" alt="discovering-vulnerable-web-applications" src="/assets/img/2013/01/discovering-vulnerable-web-applications2-197x300.png" width="197px" height="300px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="size-medium wp-image-1108 alignleft" title="discovering vulnerable web applications" alt="discovering-vulnerable-web-applications" src="/img/2013/01/discovering-vulnerable-web-applications2-197x300.png" width="197px" height="300px" />][1]
 
 Vulnerabilities in web applications are a major vector for cybercrime. In large organizations, vulnerable web applications comprised 54% of all hacking breaches and led to 39% of compromised records, according to the 2012 Data Breach Investigation Report by Verizon Business.
 

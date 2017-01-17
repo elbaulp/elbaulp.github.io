@@ -26,5 +26,5 @@ Ya os contaremos cuando lo probemos, aunque veremos si este desarrollo puede ofr
 ## Fuente: <a href="http://www.muylinux.com" target="_blank">www.muylinux.com</a>
 
  [1]: http://www.muycomputer.com/Actualidad/Noticias/RockMelt-el-navegador-social/_wE9ERk2XxDC0g_DH3CC9QUuuHsX3wKj1cQZyau99m55NwZa46YIwMNsMxvxMpWok
- [2]: http://www.muylinux.com/assets/img/2010/11/Rockmelt.jpg
+ [2]: http://www.muylinux.com/img/2010/11/Rockmelt.jpg
  [3]: http://www.muylinux.com/2010/06/16/flock-cambia-de-novia-antes-firefox-ahora-chromium

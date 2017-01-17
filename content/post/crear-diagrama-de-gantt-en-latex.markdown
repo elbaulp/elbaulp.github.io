@@ -13,7 +13,7 @@ date: 2016-09-16T15:48:53+02:00
 ---
 
 <figure>
-  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/crear-diagrama-de-gantt-en-latex.png" alt="{{ title }}" title="{{ title }}" width="800" height="335"></amp-img>
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/crear-diagrama-de-gantt-en-latex.png" alt="{{ title }}" title="{{ title }}" width="800" height="335"></amp-img>
 </figure>
 
 > Consulta el resto de [artículos sobre LaTeX escritos en el blog](/category/latex "Artículos sobre LaTeX")

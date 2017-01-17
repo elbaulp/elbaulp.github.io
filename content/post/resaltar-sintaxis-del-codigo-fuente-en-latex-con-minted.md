@@ -71,7 +71,7 @@ Ya está todo listo para usar, empecemos con un ejemplo básico extraido del man
 Este trozo de código dará como resultado lo siguiente:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/05/mintedEjemploC.png" alt="Ejemplo minted C" width="599px" height="246px"></amp-img>
 </figure>
 
 ### Insertar código desde un archivo de código fuente
@@ -155,7 +155,7 @@ linenos muestra el número de línea, numbersep es la separación entre el códi
 El resultado será:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733px" height="940px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/05/newmintedfileEjemplo.png" alt="newmintedfileEjemplo" width="733px" height="940px"></amp-img>
 </figure>
 
 ### Creando un comando

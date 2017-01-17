@@ -47,25 +47,25 @@ El problema era que por alguna razón las etiquetas `{% raw %}{{url}}, {{title}}
     "items": [
         {
             "title": "QuÃ© es un NullPointerException y cÃ³mo solucionarlo",
-            "thumbnail": "/assets/img/2014/05/Qu%C3%A9-es-un-NullPointerException-y-c%C3%B3mo-solucionarlo.png",
+            "thumbnail": "/img/2014/05/Qu%C3%A9-es-un-NullPointerException-y-c%C3%B3mo-solucionarlo.png",
             "id": "pop1",
             "url": "/que-es-un-nullpointerexception-y-como-solucionarlo/"
         },
         {
             "title": "Mini tutorial y chuleta de comandos para Git",
-            "thumbnail": "/assets/img/2013/03/git-logo.png",
+            "thumbnail": "/img/2013/03/git-logo.png",
             "id": "pop2",
             "url": "/mini-tutorial-y-chuleta-de-comandos-git/"
         },
         {
             "title": "Buenas prÃ¡cticas para el DiseÃ±o de una API RESTful PragmÃ¡tica",
-            "thumbnail":"/assets/img/2014/01/201305-xml-vs-json-api.png",
+            "thumbnail":"/img/2014/01/201305-xml-vs-json-api.png",
             "id": "pop3",
             "url": "/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/"
         },
         {
             "title": "Â¿Cual es la diferencia entre los distintos formatos de audio, y cual deberÃ­a elegir?",
-            "thumbnail": "/assets/img/2012/07/original1.jpg",
+            "thumbnail": "/img/2012/07/original1.jpg",
             "id": "pop4",
             "url": "/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/"
         }

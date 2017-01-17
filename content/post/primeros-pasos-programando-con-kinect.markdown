@@ -10,7 +10,7 @@ mainclass: "dev"
 color: "#E64A19"
 ---
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Primeros-Pasos-Programando-Con-Kinect.png" title="{{ page.title }}" alt="{{ page.title }}" width="866px" height="163px" />
 </figure>
 
 

@@ -18,8 +18,8 @@ Gracias de antemano y espero que os guste la nueva mascota del blog! Un saludo.
 </noscript>
 
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/06/LOGOS.png" alt="LOGOS" width="978px" height="786px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/06/LOGOS.png" alt="LOGOS" width="978px" height="786px" />][1]
 
 
 
- [1]: https://elbauldelprogramador.com/assets/img/2013/06/LOGOS.png
+ [1]: https://elbauldelprogramador.com/img/2013/06/LOGOS.png

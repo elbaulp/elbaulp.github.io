@@ -27,14 +27,14 @@ Os dejo las imágenes del resultado:
 ### Tiempo de carga de la página principal:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/optimizando-el-tiempo-de-carga-del-blog.png" alt="{{ title }}" title="{{ title }}" width="628" height="262"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/optimizando-el-tiempo-de-carga-del-blog.png" alt="{{ title }}" title="{{ title }}" width="628" height="262"></amp-img>
     <figcaption><a href="https://tools.pingdom.com/#!/cl3wzb/https://elbauldelprogramador.com/">Enlace al informe de pingdom</a></figcaption>
 </figure>
 
 ### Tiempo de carga de un post:
 
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/optimizando-el-tiempo-de-carga-del-blog2.png" alt="{{ title }}" title="{{ title }}" width="631" height="262"></amp-img>
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/optimizando-el-tiempo-de-carga-del-blog2.png" alt="{{ title }}" title="{{ title }}" width="631" height="262"></amp-img>
 <figcaption><a href="https://tools.pingdom.com/#!/c6QWJL/https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/">Enlace al informe de pingdom</a></figcaption>
 </figure>
 

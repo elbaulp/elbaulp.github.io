@@ -19,7 +19,7 @@ aliases:
 
 # Primera parte
 
-> He decidido liberar el curso, ya que está algo antiguo, podéis descargarlo en: <a href="http://elbauldelprogramador.com/assets/pdfs/PaqueteProgramacionAndroid.zip" id="androidCourse">Curso de Programación Android Gratuíto</a>. De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro [enlace de Paypal](https://www.paypal.me/elbaul)
+> He decidido liberar el curso, ya que está algo antiguo, podéis descargarlo en: <a href="http://elbauldelprogramador.com/pdfs/PaqueteProgramacionAndroid.zip" id="androidCourse">Curso de Programación Android Gratuíto</a>. De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro [enlace de Paypal](https://www.paypal.me/elbaul)
 
 > <del datetime="2016-10-22T08:00">Descubre cómo adquirir esta primera parte del curso [en pdf](https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/)</del>
 

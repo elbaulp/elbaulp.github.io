@@ -10,7 +10,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_senc01"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/The-Impact-of-Internet-of-Things-IoT-on-Facilities-Management.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 How IoT is set to revolutionize the commercial real estate industry.

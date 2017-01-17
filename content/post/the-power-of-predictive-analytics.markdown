@@ -12,7 +12,7 @@ date: 2016-11-27T10:54:40+01:00
 
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/The-Power-of-Predictive-Analytics-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guides/The-Power-of-Predictive-Analytics-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>
 </figure>
 

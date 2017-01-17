@@ -12,7 +12,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/vectorizar-acceso-columnas-r.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
+<a href="/img/vectorizar-acceso-columnas-r.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/vectorizar-acceso-columnas-r.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="320px" /></a>
 </figure>
 
 

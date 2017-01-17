@@ -17,8 +17,8 @@ color: "#F57C00"
 ---
 Ya tenemos el cartel del Google I/O Extended, organizado por el GDG Granada (Google Developers Group Granada) gracias a Sergio Almécija, ¿nos ayudáis a moverlo?
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/06/gdg1.jpg" alt="" title="gdg" width="1440px" height="900px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/06/gdg1.jpg" alt="" title="gdg" width="1440px" height="900px" />][1]
 
 
 
- [1]: https://elbauldelprogramador.com/assets/img/2012/06/gdg1.jpg
+ [1]: https://elbauldelprogramador.com/img/2012/06/gdg1.jpg

@@ -11,7 +11,7 @@ color: "#262626"
 ---
 
 <figure>
-	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="318" width="350" src="/assets/img/nunca-lo-hagas-sudo-rm-rf.jpg"></amp-img>
+	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="318" width="350" src="/img/nunca-lo-hagas-sudo-rm-rf.jpg"></amp-img>
 </figure>
 
 Por supuesto no se os debe ocurrir ejecutar este comando si no quereis quedaros sin SO.

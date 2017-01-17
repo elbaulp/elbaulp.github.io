@@ -12,7 +12,7 @@ color: "#F57C00"
 <a href="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s1600/1329646861_video-file.png"  ><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="128" width="128" src="https://1.bp.blogspot.com/-6oHsJJbLCtc/T0DNH9OnxrI/AAAAAAAACGQ/uIuix5iiJhM/s400/1329646861_video-file.png" /></a>
 </div>
 
-De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://elbauldelprogramador.com/wp-includes/assets/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
+De nuevo os traigo una recopilación de los [vídeos que he visto durante esta seman][1]a y que me han gustado lo suficiente como para compartirlos con todos vosotros. Espero que los disfrutéis al igual que yo. No todo va a ser programar, ¿no? <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://elbauldelprogramador.com/wp-includes/img/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" />
 <!--more-->
 <h3 >
   Like in a dream

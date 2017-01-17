@@ -36,7 +36,7 @@ color: "#F57C00"
 ---
 
 <figure>
-  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/original1.jpg" width="640px" height="360px"></amp-img>
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/07/original1.jpg" width="640px" height="360px"></amp-img>
 </figure>
 
 Hay tantos formatos de sonido que podemos hacernos un lío a la hora de decidir cual usar, cual aporta mayor calidad al sonido&#8230; echemos una vista rápida a los distintos formatos existentes:
@@ -57,7 +57,7 @@ Para conocer la diferencia entre formatos con y sin pérdida visita *<a href="ht
 ## Formatos con pérdidas: MP3, AAC, OGG y más
 
 <figure>
-  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/07/original-11-300x195.jpg" width="300px" height="195px"></amp-img>
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/07/original-11-300x195.jpg" width="300px" height="195px"></amp-img>
 </figure>
 
 Para el día a día, es más probable que usemos formatos con pérdidas. Ahorran bastante más espacio, y si tienen una <a href="http://lifehacker.com/5810575/does-bitrate-really-make-a-difference-in-my-music" target="_blank">tasa de bits suficientemente alta (bitrate)</a>, será muy dificil de distinguir la calidad de la fuente original. A continuación se muestran los formatos que más se usan:

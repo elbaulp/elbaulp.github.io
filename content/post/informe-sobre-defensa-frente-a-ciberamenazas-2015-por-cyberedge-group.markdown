@@ -14,7 +14,7 @@ color: #61B38D
 ---
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/informe-sobre-defensa-frente-a-ciberamenazas-2015-por-cyberedge-group-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guides/informe-sobre-defensa-frente-a-ciberamenazas-2015-por-cyberedge-group-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>
 </figure>
 

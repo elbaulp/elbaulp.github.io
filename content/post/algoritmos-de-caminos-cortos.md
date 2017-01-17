@@ -22,7 +22,7 @@ Informalmente se define como G = (V, E), siendo los elementos de V los vértices
 Existen diferentes implementaciones del tipo grafo: con una matriz de adyacencias (forma acotada) y con listas y multilistas de adyacencia (no acotadas).
 Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo, siendo los elementos de la matriz la relación entre los mismos, tomando los valores de 1 si existe la arista y 0 en caso contrario.
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia" width="546px" height="232px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/10/Matriz_de_adyacencia1.jpg" alt="" title="Matriz_de_adyacencia" width="546px" height="232px" />][1]
 
 <!--more-->
 
@@ -39,7 +39,7 @@ Para solucionar este problema, los tres algoritmos mas conocidos son:
 
 El **algoritmo de Dijkstra** consiste en ir explorando todos los caminos más cortos que parten del vértice origen y que llevan a todos los demás vértices; cuando se obtiene el camino más corto desde el vértice origen, al resto de vértices que componen el grafo, el algoritmo se detiene.
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/10/Caminosmascortos1.jpg" alt="" title="Caminosmascortos" width="744px" height="500px" />][2]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/10/Caminosmascortos1.jpg" alt="" title="Caminosmascortos" width="744px" height="500px" />][2]
 
 #### Algoritmo de Dijkstra
 
@@ -167,8 +167,8 @@ Por último el **algoritmo A***evalúa los nodos combinando g(n), el coste para 
 
 
 
- [1]: https://elbauldelprogramador.com/assets/img/2012/10/Matriz_de_adyacencia1.jpg
- [2]: https://elbauldelprogramador.com/assets/img/2012/10/Caminosmascortos1.jpg
+ [1]: https://elbauldelprogramador.com/img/2012/10/Matriz_de_adyacencia1.jpg
+ [2]: https://elbauldelprogramador.com/img/2012/10/Caminosmascortos1.jpg
 
 
 </distancia></vertice></fstream></string.h>

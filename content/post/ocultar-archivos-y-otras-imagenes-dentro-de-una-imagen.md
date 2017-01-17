@@ -18,7 +18,7 @@ color: "#E64A19"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/assets/img/2012/09/winzip_xp_encrypt_icon11.gif" alt="" width="395px" height="380px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="aligncenter  wp-image-942" title="winzip_xp_encrypt_icon" src="/img/2012/09/winzip_xp_encrypt_icon11.gif" alt="" width="395px" height="380px"></amp-img>
 </figure>
 
 Hace unos meses publiqué una <a href="/ocultarrevelar-informacion-dentro-de/" target="_blank">entrada</a> en la que explicaba (Sin mostar código) una práctica que me mandaron en la asignatura metodología de la programación.
@@ -366,7 +366,7 @@ doc  imagenEntrada.pgm  imagenes  imagenSalida.pgm  include  Makefile  Nombre_fi
 En la imagen de salida se pueden apreciar los dos píxeles blancos que contienen el nombre del archivo:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2012/09/Screenshot-from-2012-09-13-1902101.png" alt="" title="Screenshot from 2012-09-13 19:02:10" width="416px" height="469px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/09/Screenshot-from-2012-09-13-1902101.png" alt="" title="Screenshot from 2012-09-13 19:02:10" width="416px" height="469px"></amp-img>
 </figure>
 
 Para revelar la información, usamos el programa para tal propósito, que espera un único parámetro, la imagen con los datos ocultos:

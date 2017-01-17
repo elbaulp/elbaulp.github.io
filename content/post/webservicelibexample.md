@@ -219,7 +219,7 @@ Es necesario agregar la librería al proyecto, para ello, descárgala, crea una 
 
 La aplicación de ejemplo debe quedar así:
 
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480px" height="800px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/01/webservicelibexample2.png" alt="WebserviceLibExample" width="480px" height="800px" />][1]
 
 Para finalizar, decir que la librería por ahora está muy limitada, pero es perfectamente funcional para realizar peticiones básicas. Intentaremos seguir desarrollandola cuando dispongamos de más tiempo.
 
@@ -234,7 +234,7 @@ Para finalizar, decir que la librería por ahora está muy limitada, pero es per
 
 
 
- [1]: https://elbauldelprogramador.com/assets/img/2013/01/webservicelibexample2.png
+ [1]: https://elbauldelprogramador.com/img/2013/01/webservicelibexample2.png
 
 
 </string></restresponse>

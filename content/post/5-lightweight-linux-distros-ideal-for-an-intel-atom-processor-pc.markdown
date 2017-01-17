@@ -11,7 +11,7 @@ date: 2016-11-27T11:18:24+01:00
 ---
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/5-Lightweight-Linux-Distros-Ideal-for-an-Intel-Atom-Processor-PC-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guides/5-Lightweight-Linux-Distros-Ideal-for-an-Intel-Atom-Processor-PC-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>
 </figure>
 

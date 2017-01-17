@@ -13,7 +13,7 @@ color: "#262626"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guerra-de-navegadores-humor.jpg" alt="{{ title }}" title="{{ title }}" width="674" height="521"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guerra-de-navegadores-humor.jpg" alt="{{ title }}" title="{{ title }}" width="674" height="521"></amp-img>
 </figure>
 
 <!--more-->

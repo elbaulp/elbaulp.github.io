@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/hotlink-ok/The-Essentials-of-Information-Security-Kit2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" />
 </figure>
 
 

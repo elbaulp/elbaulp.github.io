@@ -12,7 +12,7 @@ tags:
 mainclass: "misc"
 color: "#61B38D"
 ---
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178px" height="229px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/04/History-of-Cryptograpy.jpg" alt="History of Cryptography" width="178px" height="229px" />][1]
 
 An easy to understand history of cryptography.
 

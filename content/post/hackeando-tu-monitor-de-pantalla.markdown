@@ -13,7 +13,7 @@ color: "#F57C00"
 ---
 
 <figure>
-  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Hackeando-Tu-Monitor-De-Pantalla.jpg" alt="{{ title }}" title="{{ title }}" width="800px" height="400px">
+  <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Hackeando-Tu-Monitor-De-Pantalla.jpg" alt="{{ title }}" title="{{ title }}" width="800px" height="400px">
   </amp-img>
   <figcaption>Imagen: Lorenzo Franceschi-Bicchierai/Motherboard</figcaption>
 </figure>

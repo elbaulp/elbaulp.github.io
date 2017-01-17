@@ -17,7 +17,7 @@ Para aquellos que quieran conocer detalles más técnicos sobre bitcoin, hace ti
 La dirección a la que hacer las donaciones es la siguiente, y estará disponible en la barra lateral:
 <!--more-->
 <div >
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/01/Donar.png" width="178px" height="178px" /><br /><a  href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/01/Donar.png" width="178px" height="178px" /><br /><a  href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
 </div>
 
 Por último, recomiendo a los lectores escuchar el podcast:

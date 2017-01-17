@@ -17,7 +17,7 @@ color: "#E64A19"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Bomba" alt="" src="/assets/img/2012/12/logicbomb.png" width="532px" height="449px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Bomba" alt="" src="/img/2012/12/logicbomb.png" width="532px" height="449px"></amp-img>
 </figure>
 
 

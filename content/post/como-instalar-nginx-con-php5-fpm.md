@@ -19,7 +19,7 @@ color: "#0097A7"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/02/nginx-logo.png" alt="instalar y configurar nginx" width="350px" height="90px" />
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/02/nginx-logo.png" alt="instalar y configurar nginx" width="350px" height="90px" />
 </figure>
 
 Nginx (Pronunciado engine-x) es un servidor [HTTP](/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/) de alto rendimiento, gratuito, software libre y <a href="https://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso" target="_blank">proxy inverso</a>, así como un servidor proxy <a href="https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol" target="_blank">IMAP</a>/<a href="https://es.wikipedia.org/wiki/Post_Office_Protocol" target="_blank">POP3</a>. Desarrollado por Igor Sysoev. Acualmente el <a href="http://news.netcraft.com/archives/2012/01/03/january-2012-web-server-survey.html" target="_blank">12.18%</a> de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.
@@ -103,13 +103,13 @@ Ahora estamos en condiciones de ejecutar nginx:
 Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones **localhost**. Si todo ha ido bien deberíamos ver esta pantalla:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/02/instalar-nginx-en-debian-1024x818.png" alt="instalar nginx en debian" width="1024px" height="818px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/02/instalar-nginx-en-debian-1024x818.png" alt="instalar nginx en debian" width="1024px" height="818px"></amp-img>
 </figure>
 
 Usando firebug se puede comprobar que efectivamente se está corriendo un servidor nginx:
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/02/instalar-nginx-en-debian2.png" alt="instalar nginx en debian2" width="641px" height="150px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/02/instalar-nginx-en-debian2.png" alt="instalar nginx en debian2" width="641px" height="150px"></amp-img>
 </figure>
 
 ### Modificando la configuración por defecto

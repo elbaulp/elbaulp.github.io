@@ -13,7 +13,7 @@ mainclass: "misc"
 color: "#61B38D"
 ---
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/assets/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" width="500px" height="608px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  src="/img/2012/06/virtual-box-big1.jpg" title="Computer Inside Your Computer: How To Use VirtualBox" alt="Computer Inside Your Computer: How To Use VirtualBox" width="500px" height="608px" />
 </figure>
 
 Learn to use VirtualBox. Get virtual computers up and running inside your computer, without having to buy any new hardware.

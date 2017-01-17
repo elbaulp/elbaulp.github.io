@@ -11,7 +11,7 @@ color: "#E64A19"
 ---
 
 <figure>
-<a href="/assets/img/como-mostrar-variables-php-depurar-print_r-var_dump.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/como-mostrar-variables-php-depurar-print_r-var_dump.png" title="{{ page.title }}" alt="{{ page.title }}" width="702px" height="355px" /></a>
+<a href="/img/como-mostrar-variables-php-depurar-print_r-var_dump.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/como-mostrar-variables-php-depurar-print_r-var_dump.png" title="{{ page.title }}" alt="{{ page.title }}" width="702px" height="355px" /></a>
 </figure>
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario Plummer, que preguntaba <a href="http://stackoverflow.com/questions/19816438/make-var-dump-look-pretty" target="_blank" title="Make var_dump look pretty">Make var_dump look pretty</a>. La respuesta es del usuario AbraCadaver

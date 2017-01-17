@@ -12,7 +12,7 @@ mainclass: "misc"
 color: "#61B38D"
 ---
 <figure>
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="175px" height="259px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd05"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Bootstrap-Programming-Cookbook.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="175px" height="259px" /></a>
 </figure>
 
 Kick-start your Bootstrap projects with these hot recipes!

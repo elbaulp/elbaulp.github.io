@@ -11,7 +11,7 @@ date: 2016-09-07T15:10:02+02:00
 ---
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/Apache-Maven-Cookbook-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guides/Apache-Maven-Cookbook-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>
 </figure>
 

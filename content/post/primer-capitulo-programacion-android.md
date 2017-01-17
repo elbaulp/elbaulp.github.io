@@ -26,7 +26,7 @@ Como vengo anunciando desde <a target="_blank" href="/terminada-la-primera-parte
 El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.
 
 <div class="button-post">
-    <a id="androidCourseIndex" href="/assets/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar Índice</a>
+    <a id="androidCourseIndex" href="/pdfs/ProgramacionAndroidSample1.pdf" target="_blank">Descargar Índice</a>
 </div>
 
 <!--more-->
@@ -35,7 +35,7 @@ El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo má
 
 <del datetime="2016-10-22T07:50">"El documento tiene un precio mínimo de **1.5 euros (Paypal se queda con 40 céntimos)** Espero que entendáis que el esfuerzo , tiempo y trabajo dedicado a su realización merece una donación más alta, por lo que podréis aportar cantidades mayores si lo veis oportuno.</del>
 
-> He decidido liberar el curso, ya que está algo antiguo, podéis descargarlo en: <a href="http://elbauldelprogramador.com/assets/pdfs/PaqueteProgramacionAndroid.zip" id="androidCourse">Curso de Programación Android Gratuíto</a>
+> He decidido liberar el curso, ya que está algo antiguo, podéis descargarlo en: <a href="http://elbauldelprogramador.com/pdfs/PaqueteProgramacionAndroid.zip" id="androidCourse">Curso de Programación Android Gratuíto</a>
 
 De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro [enlace de Paypal](https://www.paypal.me/elbaul)
 

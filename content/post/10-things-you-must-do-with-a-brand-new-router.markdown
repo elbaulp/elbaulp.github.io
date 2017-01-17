@@ -10,7 +10,7 @@ color: #61B38D
 date: 2016-10-04T08:57:02+02:00
 ---
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/guides/10-Things-You-Must-Do-With-a-Brand-New-Router-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guides/10-Things-You-Must-Do-With-a-Brand-New-Router-centered.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="420">
    </amp-img>
 </figure>
 

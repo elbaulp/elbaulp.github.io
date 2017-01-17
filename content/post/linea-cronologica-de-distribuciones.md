@@ -16,7 +16,7 @@ color: "#2196F3"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/linea-cronologica-de-distribuciones.png" alt="{{ title }}" title="{{ title }}" width="800" height="400"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/linea-cronologica-de-distribuciones.png" alt="{{ title }}" title="{{ title }}" width="800" height="400"></amp-img>
 </figure>
 
 Hoy os traigo la línea cronológica de las [distribuciones GNU/Linux](/category/linux/ "Artículos sobre linux") desde el año 1992 al 2016, es increíble la cantidad de distribuciones que hay.

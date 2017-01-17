@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_hp467"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Nueva-Guía-Behind-the-Mask-the-Changing-Face-of-Hacking2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="199px" height="258px" /></a>
 </figure>
 
 

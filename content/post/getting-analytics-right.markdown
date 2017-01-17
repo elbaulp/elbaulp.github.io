@@ -14,7 +14,7 @@ color: #61B38D
 
 
 <figure>
-   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Getting-Analytics-Right-centered.jpg" alt="{{ title }}" title="{{ title }}" width="640px" height="336px">
+   <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Getting-Analytics-Right-centered.jpg" alt="{{ title }}" title="{{ title }}" width="640px" height="336px">
    </amp-img>
 </figure>
 

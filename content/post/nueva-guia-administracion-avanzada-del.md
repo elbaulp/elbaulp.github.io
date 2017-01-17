@@ -12,7 +12,7 @@ color: "#61B38D"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="800" height="420"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/AdministracionAvanzadadelSistemaOperativoGNULinux.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="800" height="420"></amp-img>
 </figure>
 
 El objetivo principal de este libro es introducirnos en el mundo de la administración de los sistemas GNU/Linux.

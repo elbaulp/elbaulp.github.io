@@ -55,7 +55,7 @@ Donde:
 Puedes obtener más información consultando la ayuda del programa o su manual.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/xroot-example.jpg" alt="xroot example" width="1024px" height="817px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/xroot-example.jpg" alt="xroot example" width="1024px" height="817px"></amp-img>
 </figure>
 
 En este caso estoy mostrando salidas del comando [ss][3] usando un [script][4] que he creado:
@@ -117,7 +117,7 @@ Una breve explicación de los argumentos:
 Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmente, es posible tener tantas terminales como se quiera.
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/5809765.png" alt="Eterm" width="640px" height="375px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/5809765.png" alt="Eterm" width="640px" height="375px"></amp-img>
 </figure>
 
 # Referencias
@@ -126,7 +126,7 @@ Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmen
 - *How to have a transparent terminal as wallpaper that displays information* »» <a href="http://linuxaria.com/pills/how-to-have-a-transparent-terminal-as-wallpaper-that-displays-information" target="_blank">linuxaria.com</a>
 
  [1]: https://elbauldelprogramador.com/tags/#htop "htop"
- [2]: https://elbauldelprogramador.com/assets/img/2013/03/xroot-example.jpg
+ [2]: https://elbauldelprogramador.com/img/2013/03/xroot-example.jpg
  [3]: https://elbauldelprogramador.com/comandos-ss-iproute2-linux/ "Algunos comandos útiles con iproute2"
  [4]: https://elbauldelprogramador.com/tags/#script
  [5]: https://elbauldelprogramador.com/tags/#xmonad

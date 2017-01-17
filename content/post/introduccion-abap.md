@@ -23,7 +23,7 @@ El lenguaje de programación ABAP (antiguamente ABAP/4) es un lenguaje propio de
 Como lenguaje de programación propietario de SAP, ABAP se ha utilizado y se utiliza como elemento de programación específico para la mayor parte de sus productos. Literalmente las siglas ABAP significan *Advanced Business Application Programming* y tiene muchos elementos en común con el lenguaje C. Originalmente fue definido como un lenguaje estructurado de cuarta generación (de ahí el antiguo nombre de ABAP/4), posteriormente ha incorporado elementos propios de lenguajes orientados a objetos.
 
 <!--more-->
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/03/SAP-Apariencia.png" alt="SAP-Apariencia" width="979px" height="602px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/03/SAP-Apariencia.png" alt="SAP-Apariencia" width="979px" height="602px" />
 
 ## Características del lenguaje ABAP
 
@@ -73,7 +73,7 @@ Es la herramienta utilizada en la creación y desarrollo de pantallas de diálog
 
 Agrupa todas o casi todas las transacciones de desarrollo ABAP en una sola transacción. Nos permite trabajar a la vez con diferentes herramientas de programación bajo un área común.
 
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2014/03/SAP-SE80-Object-Navigator.png" alt="SAP-SE80-Object-Navigator" width="983px" height="604px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/03/SAP-SE80-Object-Navigator.png" alt="SAP-SE80-Object-Navigator" width="983px" height="604px" />
 
 ### SE09/STMS - Sistema gestor de transportes
 

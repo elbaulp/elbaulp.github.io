@@ -16,7 +16,7 @@ color: "#F57C00"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource" title="La generación GitHub: Por qué ahora todos estamos en el opensource" width="1240px" height="826px"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/08/La-generación-GitHub-Por-qué-ahora-todos-estamos-en-el-opensource.jpg" alt="La generación GitHub: Por qué ahora todos estamos en el opensource" title="La generación GitHub: Por qué ahora todos estamos en el opensource" width="1240px" height="826px"></amp-img>
 </figure>
 
 

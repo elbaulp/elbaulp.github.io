@@ -16,7 +16,7 @@ format: link
 mainclass: "articulos"
 color: "#F57C00"
 ---
-[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Chain Links" src="/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
+[<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" title="Chain Links" src="/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg" alt="" width="300px" height="225px" />][1]
 
 A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.
 
@@ -60,4 +60,4 @@ Para concluir un vídeo de vimeo que muestra una de los mejores espectáculos de
 
 
 
- [1]: https://elbauldelprogramador.com/assets/img/2012/08/contruyendo-links-de-afiliados-fuertes1.jpg
+ [1]: https://elbauldelprogramador.com/img/2012/08/contruyendo-links-de-afiliados-fuertes1.jpg

@@ -20,7 +20,7 @@ color: "#2196F3"
 ## Mapa mundial de GNU/Linux 1
 
 <figure>
-    <a href="/assets/img/el-mapa-mundial-de-gnulinux-full.png"><amp-img layout="responsive" src="/assets/img/el-mapa-mundial-de-gnulinux-1.jpg" alt="{{ title }}" title="{{ title }}" width="680" height="383"></amp-img></a>
+    <a href="/img/el-mapa-mundial-de-gnulinux-full.png"><amp-img layout="responsive" src="/img/el-mapa-mundial-de-gnulinux-1.jpg" alt="{{ title }}" title="{{ title }}" width="680" height="383"></amp-img></a>
 </figure>
 
 <!--more-->
@@ -28,7 +28,7 @@ color: "#2196F3"
 ## Mapa Mundial de GNU/Linux 2
 
 <figure>
-    <a href="/assets/img/el-mapa-mundial-de-gnulinux-2-full.jpg"><amp-img layout="responsive" src="/assets/img/el-mapa-mundial-de-gnulinux-2.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="477"></amp-img></a>
+    <a href="/img/el-mapa-mundial-de-gnulinux-2-full.jpg"><amp-img layout="responsive" src="/img/el-mapa-mundial-de-gnulinux-2.jpg" alt="{{ title }}" title="{{ title }}" width="800" height="477"></amp-img></a>
 </figure>
 
 ## Referencias

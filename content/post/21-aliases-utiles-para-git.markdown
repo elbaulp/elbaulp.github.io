@@ -11,7 +11,7 @@ mainclass: "git"
 color: "#f05033"
 ---
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/2013/03/git-logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="910px" height="380px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/03/git-logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="910px" height="380px" />
 </figure>
 
 
@@ -116,7 +116,7 @@ Veamos ahora una serie de _alias_ para mostrar los logs de los commits de distin
 ## Mostrar commits de forma compacta y colores, git ls
 
 <figure>
-<a href="/assets/img/gitls.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/gitls.png" title="{{ page.title }}" alt="{{ page.title }}" width="666px" height="504px" /></a>
+<a href="/img/gitls.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/gitls.png" title="{{ page.title }}" alt="{{ page.title }}" width="666px" height="504px" /></a>
 </figure>
 
 El _alias_ es el siguiente:
@@ -130,7 +130,7 @@ ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decor
 ## Listar commits y ficheros modificados, git ll
 
 <figure>
-<a href="/assets/img/gitll.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/gitll.png" title="{{ page.title }}" alt="{{ page.title }}" width="603px" height="498px" /></a>
+<a href="/img/gitll.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/gitll.png" title="{{ page.title }}" alt="{{ page.title }}" width="603px" height="498px" /></a>
 </figure>
 
 El _alias_ es el siguiente:
@@ -144,7 +144,7 @@ ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decor
 ## Mostar commits de forma compacta y con fechas, git lds
 
 <figure>
-<a href="/assets/img/gitlds.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/gitlds.png" title="{{ page.title }}" alt="{{ page.title }}" width="766px" height="502px" /></a>
+<a href="/img/gitlds.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/gitlds.png" title="{{ page.title }}" alt="{{ page.title }}" width="766px" height="502px" /></a>
 </figure>
 
 ```bash
@@ -156,7 +156,7 @@ lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" 
 Si lo preferimos con fechas relativas, usaremos el _alias_ `git ld`:
 
 <figure>
-<a href="/assets/img/gitld.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/gitld.png" title="{{ page.title }}" alt="{{ page.title }}" width="785px" height="498px" /></a>
+<a href="/img/gitld.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/gitld.png" title="{{ page.title }}" alt="{{ page.title }}" width="785px" height="498px" /></a>
 </figure>
 
 ```bash

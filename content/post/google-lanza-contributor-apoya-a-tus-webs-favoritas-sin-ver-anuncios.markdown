@@ -24,7 +24,7 @@ Los usuarios que se den de alta en _Contributor_ pueden elegir entre 3 niveles d
 
 <figure>
     <a href="https://www.google.com/contributor/welcome/?utm_source=publisher&utm_medium=banner&utm_campaign=ca-pub-9043332344373532">
-        <amp-img layout="responsive" src="/assets/img/contributions.png" title="{{ page.title }}" alt="{{ page.title }}" width="406px" height="361px"></amp-img>
+        <amp-img layout="responsive" src="/img/contributions.png" title="{{ page.title }}" alt="{{ page.title }}" width="406px" height="361px"></amp-img>
     </a>
 </figure>
 
@@ -38,7 +38,7 @@ O en la siguiente imagen:
 
 <figure>
     <a href="https://www.google.com/contributor/welcome/?utm_source=publisher&utm_medium=banner&utm_campaign=ca-pub-9043332344373532">
-        <amp-img layout="responsive" src="/assets/img/contributorad.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="250px"></amp-img>
+        <amp-img layout="responsive" src="/img/contributorad.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="250px"></amp-img>
     </a>
 </figure>
 

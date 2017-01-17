@@ -11,7 +11,7 @@ color: "#61B38D"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/A-Newbies-Getting-Started-Guide-to-Linux.png" alt="{{ title }}" title="{{ title }}" width="229" height="300"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/A-Newbies-Getting-Started-Guide-to-Linux.png" alt="{{ title }}" title="{{ title }}" width="229" height="300"></amp-img>
 </figure>
 
 

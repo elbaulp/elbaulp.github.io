@@ -14,7 +14,7 @@ color: "#F57C00"
 
 
 <figure>
-<a href="/assets/img/openlibra-biblioteca-libre-online.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="84px" /></a>
+<a href="/img/openlibra-biblioteca-libre-online.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/openlibra-biblioteca-libre-online.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="84px" /></a>
 </figure>
 
 Hace unos años, concretamente 5, un compañero bloggero lanzaba [OpenLibra: La Biblioteca Libre Online tal como la esperabas](/openlibra-la-biblioteca-libre-online/ "OpenLibra: La Biblioteca Libre Online tal como la esperabas").

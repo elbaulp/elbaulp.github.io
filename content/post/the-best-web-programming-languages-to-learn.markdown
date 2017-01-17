@@ -11,7 +11,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd10"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Boosting-your-Web-Development-Career2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
+<a href="http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_webd10"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Boosting-your-Web-Development-Career2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 The web has been around for many years now, but the real advancements and innovation from it are being seen this last decade. Everything just seems to have gotten better and more productive as both programmers and technology put efforts into creating some fundamental standards everyone would follow to work on the web.

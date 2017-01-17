@@ -13,7 +13,7 @@ color: "#F57C00"
 ---
 
 <figure>
-<a href="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="405px" /></a>
+<a href="/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png" title="{{ page.title }}" alt="{{ page.title }}" width="640px" height="405px" /></a>
 <span class="image-credit">Crédito de la imagen: pixabay<a href="https://pixabay.com/en/biometrics-eye-security-154660/"></a></span><br />
 </figure>
 
@@ -108,7 +108,7 @@ perfectamente separables cuando se usan las dos componentes del vector
 clases,resultando imposible separarlas.
 
 <figure>
-<a href="/assets/img/separability.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/separability.png" title="Separabilidad de dos clases con vectores
+<a href="/img/separability.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/separability.png" title="Separabilidad de dos clases con vectores
   bidimensionales" alt="Separabilidad de dos clases con vectores
   bidimensionales" width="320px" height="316px" /></a>
 </figure>

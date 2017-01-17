@@ -10,7 +10,7 @@ color: "#61B38D"
 ---
 
 <figure>
-<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Apache-Hadoop-Cookbook2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
+<a href="http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&_t=oc:&qf=w_java23&ch=ocsoc"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Apache-Hadoop-Cookbook2.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="1200px" height="630px" /></a>
 </figure>
 
 ___Delve into the world of Spring Data Programming with this compact cookbook that introduces common recipes for the Spring Data framework!___

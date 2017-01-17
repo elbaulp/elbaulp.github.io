@@ -71,10 +71,10 @@ Ahora que blogger permite que creemos nuestra propia página para un error 404, 
 <a href="http://www.acme.com/missing.html"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://media02.hongkiat.com/error_404_01/acme.jpg" title="60 Really Cool and Creative Error 404 Pages" alt="acme 60 Really Cool and Creative Error 404 Pages" /></a>
 </p>
 <p>
-<a href="http://codesense.com.au/404"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://hongki.at/assets/img/error_404_01/http-www.codesense.com.au404.jpg" title="49 Nice And Creative Error 404 Pages" alt="http www.codesense.com.au404 49 Nice And Creative Error 404 Pages" /></a>
+<a href="http://codesense.com.au/404"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://hongki.at/img/error_404_01/http-www.codesense.com.au404.jpg" title="49 Nice And Creative Error 404 Pages" alt="http www.codesense.com.au404 49 Nice And Creative Error 404 Pages" /></a>
 </p>
 <p>
-<a href="http://www.project-euh.com/404/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://hongki.at/assets/img/error_404_01/www.project-euh.com404.jpg" title="49 Nice And Creative Error 404 Pages" alt="www.project euh.com404 49 Nice And Creative Error 404 Pages" /></a>
+<a href="http://www.project-euh.com/404/"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="http://hongki.at/img/error_404_01/www.project-euh.com404.jpg" title="49 Nice And Creative Error 404 Pages" alt="www.project euh.com404 49 Nice And Creative Error 404 Pages" /></a>
 </p>
 </div>
 

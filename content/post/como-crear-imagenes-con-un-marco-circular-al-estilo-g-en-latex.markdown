@@ -49,7 +49,7 @@ Donde:
 Tras compilar el código, el resultado es el siguiente:
 
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="558px" height="559px" />
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="558px" height="559px" />
 </figure>
 
 ### Referencias

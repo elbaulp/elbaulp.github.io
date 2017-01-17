@@ -12,7 +12,7 @@ color: "#2196F3"
 ---
 
 <figure>
-<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/como-instalar-actualizar-elminar-paquetes-gentoo.png" alt="{{ title }}" title="{{ title }}" width="526px" height="256px">
+<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/como-instalar-actualizar-elminar-paquetes-gentoo.png" alt="{{ title }}" title="{{ title }}" width="526px" height="256px">
 </amp-img>
 <figcaption>Imagen tomada con <em>screenfetch</em></figcaption>
 </figure>

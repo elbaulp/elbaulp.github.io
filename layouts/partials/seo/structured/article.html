@@ -54,7 +54,7 @@
         "url": "{{ .Permalink }}",
         "image": {
             "@type": "ImageObject",
-            "url": "{{ .Site.BaseURL }}{{ if .Params.image }}/assets/img/{{ .Params.image }}{{ else }}/assets/img/default-thumb.png{{ end }}",
+            "url": "{{ .Site.BaseURL }}{{ if .Params.image }}/img/{{ .Params.image }}{{ else }}/img/default-thumb.png{{ end }}",
             "width": 640,
             "height": 435
         },
@@ -76,7 +76,7 @@
             "url": "{{ .Site.BaseURL }}",
             "logo": {
                 "@type": "ImageObject",
-                "url": "{{ .Site.BaseURL }}/assets/img/bio-photo.png",
+                "url": "{{ .Site.BaseURL }}/img/bio-photo.png",
                 "width": 150
             }
             {{ with .Site.Params.socialProfiles }}, "sameAs": {{ . }}{{ end }}

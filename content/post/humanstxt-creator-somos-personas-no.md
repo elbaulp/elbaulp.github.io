@@ -12,7 +12,7 @@ color: "#F57C00"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/HumanstxtCreatorsomospersonasnomaquinas.png" alt="{{ title }}" title="{{ title }}" width="351" height="101"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/HumanstxtCreatorsomospersonasnomaquinas.png" alt="{{ title }}" title="{{ title }}" width="351" height="101"></amp-img>
 </figure>
 
 De la web de un amigo blogger ([EtnasSoft][1]), me llega la iniciativa Humanstxt Creator. Que trata de:

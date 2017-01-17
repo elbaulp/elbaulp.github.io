@@ -13,13 +13,13 @@ color: "#262626"
 ---
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/geek-eye-doctor.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="452"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/geek-eye-doctor.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="452"></amp-img>
 </figure>
 
 <!--more-->
 
 <figure>
-    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/assets/img/ultrabook.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="588"></amp-img>
+    <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/ultrabook.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="588"></amp-img>
 </figure>
 
 Fuente: <a target="_blank" href="http://www.datamation.com/news/tech-comics-geek-at-the-eye-doctor-1.html">datamation</a>
