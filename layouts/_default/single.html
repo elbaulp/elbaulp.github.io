@@ -4,11 +4,13 @@
   {{ partial "structure/share" . }}
   <article role="article" id="post" class="post-content">
     {{ if eq .Type "page"}}<h1>{{.Title}}</h1>{{ end }}
-    {{ with .TableOfContents }}
-        <div id="toc">
-          <h1>Índice</h1>
-          {{ . }}
-        </div>
+    {{ if not .Params.notoc }}
+        {{ with .TableOfContents }}
+           <div id="toc">
+             <h1>Índice</h1>
+             {{ . }}
+           </div>
+        {{ end }}
     {{ end }}
     {{ $ad := partial "structure/ad" }}
     {{ replace .Content "<!--ad-->" $ad | safeHTML }}
