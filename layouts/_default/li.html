@@ -11,8 +11,10 @@
       <p class="description">{{ if .Params.description }}{{.Params.description}}{{else}}{{.Summary}}{{end}}</p>
     </a>
     <div class="tags">
-      {{ range first 3 (sort .Params.tags) }}
-      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+      {{ with .Params.tags }}
+         {{ range first 3 (sort .) }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+         {{ end }}
       {{ end }}
     </div>
   </div>
