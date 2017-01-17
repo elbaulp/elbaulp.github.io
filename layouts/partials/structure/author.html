@@ -1,35 +1,36 @@
+{{ $author := index .Site.Data.authors .Params.author }}
 <section class="author">
   <div class="details">
     <div id="author-photo">
-      <amp-img layout="responsive" width="150px" height="150px" class="img-rounded" src="/img/{{ .avatar }}" alt="{{ $.Config.Title }}"></amp-img>
+      <amp-img layout="responsive" width="150px" height="150px" class="img-rounded" src="/img/{{ $author.avatar }}"></amp-img>
     </div>
     <div>
     <p class="def">Autor</p>
     <h3 class="name">
-      <a title="Ver todos los artículos de {{ .name }}" id="author-name" href="/autor/{{ .slug }}">{{ .name }}</a>
+      <a title="Ver todos los artículos de {{ $author.name }}" id="author-name" href="/author/{{ .Params.author }}">{{ $author.name }}</a>
     </h3>
-    <p class="desc">{{.bio}}</p>
+    <p class="desc">{{$author.bio}}</p>
     <div class="share">
-      {{ if .email }}
-      <a href="mailto:{{ .email }}" ><svg class="social icon-mail"><use xlink:href="#icon-inbox"></use></svg></a>
+      {{ if $author.email }}
+      <a href="mailto:{{ $author.email }}" ><svg class="social icon-mail"><use xlink:href="#icon-inbox"></use></svg></a>
       {{ end }}
-      {{ if .twitter }}
-      <a href="http://twitter.com/{{ .twitter }}" target="_blank"><svg class="social icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+      {{ if $author.twitter }}
+      <a href="http://twitter.com/{{ $author.twitter }}" target="_blank"><svg class="social icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
       {{ end }}
-      {{ if .facebook }}
-      <a href="http://facebook.com/{{ .facebook }}"  target="_blank"><svg class="social icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+      {{ if $author.facebook }}
+      <a href="http://facebook.com/{{ $author.facebook }}"  target="_blank"><svg class="social icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
       {{ end }}
-      {{ if .google.plus }}
-      <a href="http://plus.google.com/+{{ .google.plus }}"  target="_blank"><svg class="social icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg></a>
+      {{ if $author.google.plus }}
+      <a href="http://plus.google.com/+{{ $author.google.plus }}"  target="_blank"><svg class="social icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg></a>
       {{ end }}
-      {{ if .github }}
-      <a href="http://github.com/{{ .github }}"  target="_blank"><svg class="social icon-github"><use xlink:href="#icon-github"></use></svg></a>
+      {{ if $author.github }}
+      <a href="http://github.com/{{ $author.github }}"  target="_blank"><svg class="social icon-github"><use xlink:href="#icon-github"></use></svg></a>
       {{ end }}
-      {{ if .stackoverflow }}
-      <a href="http://stackoverflow.com/users/{{ .stackoverflow }}"  target="_blank"><svg class="socia icon-stack-overflow"><use xlink:href="#icon-stack"></use></svg></a>
+      {{ if $author.stackoverflow }}
+      <a href="http://stackoverflow.com/users/{{ $author.stackoverflow }}"  target="_blank"><svg class="socia icon-stack-overflow"><use xlink:href="#icon-stack"></use></svg></a>
       {{ end }}
-      {{ if .linkedin }}
-      <a href="https://www.linkedin.com/in/{{ .linkedin }}"  target="_blank"><svg class="social icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
+      {{ if $author.linkedin }}
+      <a href="https://www.linkedin.com/in/{{ $author.linkedin }}"  target="_blank"><svg class="social icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
       {{ end }}
       <a href="https://telegram.me/elbauldelprogramador"  target="_blank"><svg class="social icon-telegram"><use xlink:href="#icon-telegram"></use></svg></a>
     </div>

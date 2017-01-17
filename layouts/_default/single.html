@@ -18,9 +18,7 @@
   {{ partial "structure/share" . }}
   {{ if eq .Type "post" }}
      {{ partial "structure/popular.posts" }}
-     {{ $au := or .Params.author "alex" }}
-     {{ $author := index .Site.Data.authors $au }}
-     {{ partial "structure/author" $author }}
+     {{ partial "structure/author" . }}
      {{ partial "structure/comments" . }}
   {{ end }}
 </section>
