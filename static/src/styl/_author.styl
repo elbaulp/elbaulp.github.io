@@ -2,10 +2,10 @@
     background lightGray
     display table
     width 100%
-    padding rem(40px) 0
-    margin rem(40px) 0
+    padding rem(20px) 0
+    margin rem(20px) 0
     +above(cut)
-        padding rem(50px) 0
+        padding rem(30px) 0
     .details
         margin auto
         max-width rem(800px)
@@ -13,8 +13,8 @@
         display flex
         flex-flow row nowrap
         #author-photo
-            flex 1 0 rem(150px)
-            max-width rem(150px)
+            flex 1 0 rem(90px)
+            max-width rem(90px)
             margin rem(10px)
         +below(cut)
             text-align center
@@ -33,7 +33,6 @@
         margin rem(10px)
         +above(cut)
             margin 0
-            padding-top rem(25px)
     .name
         margin 0
         a
@@ -43,17 +42,12 @@
             font-size rem(30px)
             &:hover
                 color main
-            +above(cut)
-                font-size rem(45px)
     .desc
         mainFont(300)
         margin rem(10px)
         font-size rem(16px)
-        +above(cut)
-            font-size rem(20px)
     .email
         text-decoration none
         color main
     .social
-        width: 32px;
-        height: 32px;
+        size(32,32)

@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{ if eq .Type "post" }}{{ partial "structure/postheader" . }}{{ end }}
 <section class="post">
-  {{ partial "structure/share" . }}
   <article role="article" id="post" class="post-content">
     {{ if eq .Type "page"}}<h1>{{.Title}}</h1>{{ end }}
     {{ if not .Params.notoc }}
