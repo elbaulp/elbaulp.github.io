@@ -1,7 +1,6 @@
 ---
 author: alex
 categories:
-- en
 - linux
 color: '#2196F3'
 date: 2016-08-04 09:05:17

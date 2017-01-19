@@ -1,5 +1,19 @@
 {{ define "main" }}
 {{ if eq .Type "post" }}{{ partial "structure/postheader" . }}{{ end }}
+
+
+{{ if .IsTranslated }}
+<h4>{{ i18n "translations" }}</h4>
+<ul>
+    {{ range .Translations }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
+    </li>
+    {{ end}}
+</ul>
+{{ end }}
+
+
 <section class="post">
   <article role="article" id="post" class="post-content">
     {{ if eq .Type "page"}}<h1>{{.Title}}</h1>{{ end }}

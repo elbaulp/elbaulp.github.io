@@ -1,7 +1,6 @@
 ---
 author: alex
 categories:
-- en
 - dev
 color: '#E64A19'
 date: 2016-07-31 05:37:13

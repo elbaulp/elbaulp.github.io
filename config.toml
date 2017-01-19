@@ -1,23 +1,21 @@
+## Languages
+
 baseURL = "https://elbauldelprogramador.com"
-disablePathToLower = false
-languageCode = "en-us"
-title = "El Baúl del programador"
+languageCode = "es-ES"
+
 paginate = 12
 
 #PygmentsCodeFencesGuessSyntax = true
-PygmentsCodeFences = true
+# PygmentsCodeFences = true
 # color-codes for highlighting derived from this style
 #PygmentsStyle =              "monokai"
-pygmentsUseClasses = true
+#pygmentsUseClasses = false
 
-[permalinks]
-post = "/:filename/"
-page = "/:filename/"
+defaultContentLanguage="es"
 
-[taxonomies]
-tag = "tags"
-category = "categories"
-author = "author"
+# Renders the default content language in subdir, e.g. /en/. The root directory / will redirect to /en/
+defaultContentLanguageInSubdir = false
+EnableMissingTranslationPlaceholders = true
 
 [[menu.main]]
    name =  "Categorías"
@@ -43,6 +41,50 @@ author = "author"
 [[menu.main]]
    name =  "Contacto"
    url  =  "/contacto/"
+
+[Languages]
+[Languages.en]
+title = "The Programmer's Chest"
+
+[[Languages.en.menu.main]]
+   name =  "Categories"
+   url  = "/categories/"
+[[Languages.en.menu.main]]    
+   name =  "Tags"
+   url  =  "/tags/"
+[[Languages.en.menu.main]]
+   name =  "Courses"
+   url  =  "/cursos/"
+[[Languages.en.menu.main]]
+   name =  "Tutorials"
+   url  =  "/manuales-gratuitos/"
+[[Languages.en.menu.main]]
+   name =  "Security Now!"
+   url  =  "/categories/security-now/"
+[[Languages.en.menu.main]]
+   name =  "Support us"
+   url  =  "/apoyanos/"
+[[Languages.en.menu.main]]
+   name =  "Guests Posts"
+   url  =  "/colabora/"
+[[Languages.en.menu.main]]
+   name =  "Contact"
+   url  =  "/contacto/"
+
+[Languages.es]
+title = "El Baúl del programador"
+
+[permalinks]
+post = "/:filename/"
+page = "/:filename/"
+
+
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+author = "author"
+
 
 [params]
     verify = "FBg0GK1_H_PyCw6AD2iaBOclPbEC3LOV8hHXje5276w"
