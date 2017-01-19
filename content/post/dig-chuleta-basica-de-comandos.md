@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
+- administracion de servidores
 - aplicaciones
 - opensource
 color: '#0097A7'

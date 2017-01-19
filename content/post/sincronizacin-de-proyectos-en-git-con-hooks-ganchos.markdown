@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- git
 color: '#f05033'
 date: 2015-04-15 14:22:19
 description: "C\xF3mo sincronizar dos repositorios en git de forma que uno sea el

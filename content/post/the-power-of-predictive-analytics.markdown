@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: null
 date: 2016-11-27 09:54:40
 description: Predictive analytics provide companies the ability to systematically

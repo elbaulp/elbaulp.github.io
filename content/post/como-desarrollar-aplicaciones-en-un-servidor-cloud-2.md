@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Java
+- java
 color: '#0097A7'
 layout: post.amp
 mainclass: servidores

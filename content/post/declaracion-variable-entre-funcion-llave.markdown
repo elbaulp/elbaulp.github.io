@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-04-06 19:24:34
 description: "Declaraci\xF3n De Variables Entre El Nombre De La Funci\xF3n Y La Primera

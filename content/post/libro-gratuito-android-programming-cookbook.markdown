@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: null
 date: 2016-08-24 08:22:59
 description: Delve into the world of Android Programming with this compact cookbook

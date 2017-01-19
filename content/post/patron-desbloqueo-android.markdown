@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- java
 color: '#D32F2F'
 date: 2016-02-17 06:25:54
 description: "Reconozca un patr\xF3n de gestos sobre pantalla de vuestra elecci\xF3n.

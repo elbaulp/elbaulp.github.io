@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - noticias
 color: '#F57C00'
 lastmod: 2016-09-25

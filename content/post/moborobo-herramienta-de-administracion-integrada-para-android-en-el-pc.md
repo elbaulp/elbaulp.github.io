@@ -2,7 +2,7 @@
 author: alex
 categories:
 - noticias
-- "Tecnolog\xEDa"
+- "tecnolog\xEDa"
 color: '#F57C00'
 layout: post.amp
 mainclass: articulos

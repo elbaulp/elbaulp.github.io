@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: null
 date: 2016-09-07 13:01:09
 description: Delve into the world of Linux BASH Programming with this compact cookbook

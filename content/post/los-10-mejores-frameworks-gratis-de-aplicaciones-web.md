@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - internet
 color: '#F57C00'
 lastmod: 2016-08-14

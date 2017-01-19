@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2015-10-12 15:18:41
 description: "En este art\xEDculo veremos c\xF3mo descargar, compilar e instalar el

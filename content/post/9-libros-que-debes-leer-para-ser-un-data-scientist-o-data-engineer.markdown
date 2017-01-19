@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-11-01 20:30:17
 description: "Tras mucho buscar, al fin he conseguido recopilar una lista de libros

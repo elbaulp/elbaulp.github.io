@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Security Now
+- security now
 color: '#00BCD4'
 date: 2015-09-10 09:08:37
 description: "Hace unos a\xF1os, habl\xE9 aqu\xED sobre la idea de Steve Gibson, SQRL,

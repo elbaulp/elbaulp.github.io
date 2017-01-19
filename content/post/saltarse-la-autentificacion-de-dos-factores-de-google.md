@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- Informatica
+- articulos
+- informatica
 - noticias
 color: '#F57C00'
 layout: post.amp

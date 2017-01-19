@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Java
+- java
 color: '#D32F2F'
 date: 2016-04-06 19:24:34
 description: "El siguiente art\xEDculo es una traducci\xF3n de una pregunta en stackOverflow

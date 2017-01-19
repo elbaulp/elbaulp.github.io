@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Algoritmos
-- C
+- algoritmos
+- c
 color: '#E64A19'
 layout: post.amp
 mainclass: dev

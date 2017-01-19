@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-09-30 14:38:44
 description: "Reccientemente hemos cerrado un acuerdo con Oja.la, plataforma de educaci\xF3n

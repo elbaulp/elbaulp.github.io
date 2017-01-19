@@ -2,7 +2,7 @@
 author: alex
 categories:
 - aplicaciones
-- Articulos
+- articulos
 - noticias
 - opensource
 color: '#F57C00'

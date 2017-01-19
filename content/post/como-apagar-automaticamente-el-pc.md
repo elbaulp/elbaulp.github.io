@@ -3,7 +3,7 @@ author: alex
 categories:
 - aplicaciones
 - curiosidades
-- How To
+- how to
 - internet
 color: '#2196F3'
 lastmod: 2016-09-06

@@ -1,27 +1,31 @@
 ---
 author: marta
-title: 'Mini Curso de LaTeX - Introducción'
-layout: post.amp
-permalink: /mini-curso-de-latex-introduccion/
 categories:
-  - LaTeX
-tags:
-  - codigo latex
-  - curso latex
-  - curso latex español
-  - enlaces latex
-  - figuras latex
-  - imagenes latex
-  - incluir codigo latex
-  - programación Latex
-  - simbolos latex
-  - latex
+- latex
+color: '#B31917'
+description: "En este tutorial, curso o como quer\xE1is llamarlo os voy a ense\xF1ar
+  lo b\xE1sico que deb\xE9is saber para hacer vuestros documentos en <strong>LaTeX</strong>!
+  Como estamos en un blog sobre inform\xE1tica vamos a orientarlo un poco hacia la
+  inform\xE1tica."
 image: 2013/05/latex_logo.png
-description: "En este tutorial, curso o como queráis llamarlo os voy a enseñar lo básico que debéis saber para hacer vuestros documentos en <strong>LaTeX</strong>! Como estamos en un blog sobre informática vamos a orientarlo un poco hacia la informática."
 lastmod: 2015-12-22
-mainclass: "latex"
-color: "#B31917"
+layout: post.amp
+mainclass: latex
+permalink: /mini-curso-de-latex-introduccion/
+tags:
+- codigo latex
+- curso latex
+- "curso latex espa\xF1ol"
+- enlaces latex
+- figuras latex
+- imagenes latex
+- incluir codigo latex
+- "programaci\xF3n Latex"
+- simbolos latex
+- latex
+title: "Mini Curso de LaTeX - Introducci\xF3n"
 ---
+
 <figure>
 <a href="/img/2013/05/latex_logo.png"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/05/latex_logo.png" title="{{ page.title }}" alt="{{ page.title }}" width="300px" height="114px" /></a>
 </figure>

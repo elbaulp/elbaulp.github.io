@@ -1,18 +1,23 @@
 ---
-layout: post.amp
-title: "Aprende a Programar Una App Android Para Proteger Tus PDFs"
-modified:
-categories:
-description: "Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña."
-tags: [android, pdf, plugpdf, lector pdf android]
-image: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
-date: 2015-07-07T17:38:30+02:00
 author: jordi
-mainclass: "java"
-color: "#D32F2F"
+categories:
+- java
+color: '#D32F2F'
+date: 2015-07-07 15:38:30
+description: "Hoy vamos a guiarte en el desarrollo de una aplicaci\xF3n Android que
+  sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de
+  una contrase\xF1a."
+image: Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg
+layout: post.amp
+mainclass: java
+modified: null
+tags:
+- android
+- pdf
+- plugpdf
+- lector pdf android
+title: Aprende a Programar Una App Android Para Proteger Tus PDFs
 ---
-
-
 
 Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña.
 

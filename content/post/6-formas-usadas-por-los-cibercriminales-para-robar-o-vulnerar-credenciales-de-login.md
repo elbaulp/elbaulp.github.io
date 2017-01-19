@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - seguridad
 color: '#F57C00'
 description: "El mundo digital es un vecindario muy peligroso lleno de atacantes listos

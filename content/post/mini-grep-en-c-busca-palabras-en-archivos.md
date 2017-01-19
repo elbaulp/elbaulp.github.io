@@ -2,7 +2,7 @@
 author: alex
 categories:
 - aplicaciones
-- C
+- c
 - opensource
 color: '#E64A19'
 layout: post.amp

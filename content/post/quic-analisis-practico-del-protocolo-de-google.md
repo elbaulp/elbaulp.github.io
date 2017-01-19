@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#F57C00'
 description: "QUIC es un protocolo que est\xE1 desarrollando Google y que pretende
   ser m\xE1s seguro y r\xE1pido. Investigando un poco para conocer m\xE1s acerca de

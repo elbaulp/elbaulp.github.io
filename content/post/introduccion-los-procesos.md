@@ -2,7 +2,7 @@
 author: alex
 categories:
 - procesos
-- SO
+- so
 color: '#F57C00'
 lastmod: 2016-09-02
 layout: post.amp

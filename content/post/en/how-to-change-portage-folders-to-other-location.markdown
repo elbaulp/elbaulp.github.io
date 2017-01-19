@@ -1,6 +1,8 @@
 ---
 author: alex
-categories: en
+categories:
+- en
+- linux
 color: '#2196F3'
 date: 2016-08-17 08:06:32
 description: How to change portage folders and temp folder to other directory

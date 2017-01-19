@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- dev
 color: '#E64A19'
 date: 2016-08-25 15:01:15
 description: "En este art\xEDculo veremos c\xF3mo crear comandos que usemos habitualmente

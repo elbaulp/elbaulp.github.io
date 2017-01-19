@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
-- Articulos
+- administracion de servidores
+- articulos
 - internet
 color: '#0097A7'
 image: 2013/04/dns.jpg

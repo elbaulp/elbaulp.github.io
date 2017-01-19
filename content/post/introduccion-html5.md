@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- HTML5
+- html5
 color: '#E64A19'
 description: "Con este primer art\xEDculo de introducci\xF3n a HTML5, presentamos
   una serie de art\xEDculos a modo de curso cuyo autor, al que agradezco su inter\xE9s

@@ -1,20 +1,20 @@
 ---
-title: 'Logrando el anonimato con Tor (Parte 2) : Proxies y servidores de DNS'
-layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
-categories:
-  - aplicaciones
-  - Articulos
-  - opensource
-  - seguridad
-tags:
-  - navegacion anonima
-  - Tor
-lastmod: 2016-08-08
-image: 2012/12/081012_1604_AchievingAn11-300x128.png
 author: luzila
-mainclass: "articulos"
-color: "#F57C00"
+categories:
+- aplicaciones
+- articulos
+- opensource
+- seguridad
+color: '#F57C00'
+image: 2012/12/081012_1604_AchievingAn11-300x128.png
+lastmod: 2016-08-08
+layout: post.amp
+mainclass: articulos
+permalink: /logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/
+tags:
+- navegacion anonima
+- Tor
+title: 'Logrando el anonimato con Tor (Parte 2) : Proxies y servidores de DNS'
 ---
 
 * <a href="https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/" target="_blank">Logrando el anonimato con Tor (Parte 1)</a>

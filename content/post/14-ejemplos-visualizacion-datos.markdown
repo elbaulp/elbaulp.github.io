@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-05-02 17:41:09
 description: "La visualizaci\xF3n de datos no solo tiene como prop\xF3sito el an\xE1lisis

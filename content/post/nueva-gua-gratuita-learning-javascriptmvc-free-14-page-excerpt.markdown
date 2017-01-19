@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: '#61B38D'
 date: 2015-05-30 11:53:41
 description: JavaScriptMVC is a client-side, JavaScript framework that builds maintainable,

@@ -1,18 +1,30 @@
 ---
-layout: post.amp
-title: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila"
-modified:
-categories:
-description: "Este artículo se basa en las prácticas que he hecho para una asignatura llamada *Algorítmica*. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura."
-tags: [mochila, algorítmica, técnicas algorítmicas, problema de la mochila, greedy, voraces, Branch and bound, programación dinámica]
-image: "Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png"
-date: 2015-07-08T13:40:40+02:00
 author: marta
+categories:
+- dev
+color: '#E64A19'
+date: 2015-07-08 11:40:40
+description: "Este art\xEDculo se basa en las pr\xE1cticas que he hecho para una asignatura
+  llamada *Algor\xEDtmica*. Dichas pr\xE1cticas consist\xEDan en realizar el problema
+  de la Mochila usando las t\xE9cnicas algor\xEDtmicas que ve\xEDamos en la asignatura."
+image: "Comparaci\xF3n de t\xE9cnicas algor\xEDtmicas b\xE1sicas con el problema de
+  la Mochila.png"
+layout: post.amp
+mainclass: dev
 math: true
-mainclass: "dev"
-color: "#E64A19"
+modified: null
+tags:
+- mochila
+- "algor\xEDtmica"
+- "t\xE9cnicas algor\xEDtmicas"
+- problema de la mochila
+- greedy
+- voraces
+- Branch and bound
+- "programaci\xF3n din\xE1mica"
+title: "Comparaci\xF3n de t\xE9cnicas algor\xEDtmicas b\xE1sicas con el problema de
+  la Mochila"
 ---
-
 
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png" title="{{ page.title }}" alt="{{ page.title }}" width="600px" height="520px" />

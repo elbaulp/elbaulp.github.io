@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "El curso pasado hice unas pr\xE1cticas Inform\xE1tica Gr\xE1fica (IG)
   en la que hab\xEDa que implementar alg\xFAn objeto con modelos jer\xE1rquicos. La

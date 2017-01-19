@@ -1,19 +1,19 @@
 ---
-title: 'Logrando el anonimato con Tor (Parte 4) - Tor para relés'
-layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-4/
-categories:
-  - Articulos
-tags:
-  - configurar tor
-  - instalar tor
-  - navegar anonimamente
-  - Tor
-lastmod: 2016-08-08
-image: 2013/06/081712_1525_AchievingAn4.png
 author: luzila
-mainclass: "articulos"
-color: "#F57C00"
+categories:
+- articulos
+color: '#F57C00'
+image: 2013/06/081712_1525_AchievingAn4.png
+lastmod: 2016-08-08
+layout: post.amp
+mainclass: articulos
+permalink: /logrando-el-anonimato-con-tor-parte-4/
+tags:
+- configurar tor
+- instalar tor
+- navegar anonimamente
+- Tor
+title: "Logrando el anonimato con Tor (Parte 4) - Tor para rel\xE9s"
 ---
 
 * [Logrando el anonimato con Tor (Parte 1)][1]

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
+- administracion de servidores
 - linux
 color: '#0097A7'
 description: "A lo largo de esta gu\xEDa se pretende mostrar c\xF3mo instalar desde

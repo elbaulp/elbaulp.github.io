@@ -3,7 +3,7 @@ author: alex
 categories:
 - hackathon
 - noticias
-- "Tecnolog\xEDa"
+- "tecnolog\xEDa"
 color: '#F57C00'
 format: status
 if_slider_image:

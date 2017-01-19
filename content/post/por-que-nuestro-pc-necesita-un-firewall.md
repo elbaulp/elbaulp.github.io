@@ -3,7 +3,7 @@ author: alex
 categories:
 - internet
 - seguridad
-- SO
+- so
 color: '#F57C00'
 lastmod: 2016-10-01
 layout: post.amp

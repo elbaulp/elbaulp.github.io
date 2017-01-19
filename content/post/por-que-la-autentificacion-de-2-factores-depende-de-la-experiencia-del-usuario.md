@@ -1,17 +1,18 @@
 ---
-title: Por qué la autentificación de 2 factores depende de la experiencia del usuario
-layout: post.amp
-permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/
-categories:
-  - Articulos
-tags:
-  - problemas autentificación de 2 factores
-  - que es autentificación de 2 factores
-  - usuarios autentificación de 2 factores
 author: luzila
+categories:
+- articulos
+color: '#F57C00'
 lastmod: 2016-08-15
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/
+tags:
+- "problemas autentificaci\xF3n de 2 factores"
+- "que es autentificaci\xF3n de 2 factores"
+- "usuarios autentificaci\xF3n de 2 factores"
+title: "Por qu\xE9 la autentificaci\xF3n de 2 factores depende de la experiencia del
+  usuario"
 ---
 
 <figure>

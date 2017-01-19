@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Security Now
+- security now
 color: '#00BCD4'
 date: 2016-08-20 05:06:16
 description: "Los Nuevos Discos OptaneTM y 3D NAND Con Tecnolog\xEDa 3D XPoint De

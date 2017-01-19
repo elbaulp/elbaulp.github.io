@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Sin Categoria
+- sin categoria
 color: '#F57C00'
 lastmod: 2016-09-27
 layout: post.amp

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 - python
 color: '#E64A19'
 description: "Continuando con nuestro art\xEDculo sobre la Python C API, esta vez

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Security Now
+- security now
 color: '#00BCD4'
 date: 2016-04-23 22:05:58
 description: "Seguro que muchos \xFAltimamente os pregunt\xE1is qu\xE9 significa ese

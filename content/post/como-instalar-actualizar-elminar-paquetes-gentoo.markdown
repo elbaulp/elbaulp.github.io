@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- linux
 color: '#2196F3'
 date: 2016-07-29 10:20:01
 description: Chuleta de comandos para administrar gentoo, instalar, actualizar y borrar

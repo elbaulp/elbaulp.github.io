@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2016-01-04 17:20:11
 description: Kick-start your Bootstrap projects with these hot recipes!

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
+- administracion de servidores
 color: '#0097A7'
 lastmod: 2016-08-10
 layout: post.amp

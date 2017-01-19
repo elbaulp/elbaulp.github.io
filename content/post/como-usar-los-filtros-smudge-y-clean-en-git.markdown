@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- git
 color: '#f05033'
 date: 2015-05-21 14:50:42
 description: "C\xF3mo crear filtros en git, smudge y clean"

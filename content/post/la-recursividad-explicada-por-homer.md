@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Humor
+- humor
 - internet
 color: '#262626'
 layout: post.amp

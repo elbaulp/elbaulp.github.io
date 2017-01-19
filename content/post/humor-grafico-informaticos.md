@@ -2,7 +2,7 @@
 author: alex
 categories:
 - curiosidades
-- Humor
+- humor
 color: '#262626'
 lastmod: 2016-10-22
 layout: post.amp

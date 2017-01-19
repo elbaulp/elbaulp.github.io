@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-01-27 07:05:02
 description: "\xDAltimo art\xEDculo de la serie \u201CBiometr\xEDa Aplicada a La Seguridad\u201D,

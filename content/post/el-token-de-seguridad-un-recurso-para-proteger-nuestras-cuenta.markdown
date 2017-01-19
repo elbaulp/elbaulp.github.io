@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-03-30 14:51:38
 description: "A medida que han ido siendo m\xE1s habituales todo tipo de transaccione

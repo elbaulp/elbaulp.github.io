@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- dev
 color: '#E64A19'
 layout: minimal.amp
 mainclass: dev

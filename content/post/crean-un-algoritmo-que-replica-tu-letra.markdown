@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-08-13 05:07:34
 description: Investigadores de la UCL han desarrollado un software que analiza el

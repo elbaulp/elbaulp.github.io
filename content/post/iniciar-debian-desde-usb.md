@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 color: '#2196F3'
 layout: post.amp
 mainclass: linux

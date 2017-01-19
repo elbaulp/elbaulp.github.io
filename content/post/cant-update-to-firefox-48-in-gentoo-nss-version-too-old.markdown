@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- linux
 color: '#2196F3'
 date: 2016-08-04 08:55:12
 description: 'Resolver configure: error you don''t have NSS installed or your version

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2015-12-10 20:04:29
 description: This exclusive interview looks at the ways in which predictive analytics

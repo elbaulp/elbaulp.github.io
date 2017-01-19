@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2016-01-21 22:26:14
 description: "Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad

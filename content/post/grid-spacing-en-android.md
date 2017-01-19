@@ -2,7 +2,7 @@
 author: alex
 categories:
 - android
-- Articulos
+- articulos
 color: '#689F38'
 description: "La mayor\xEDa de interfaces de usuario (en m\xF3viles o web) se basan
   en el concepto de [rejillas][3] (**Grids** a partir de ahora). Los **Grids** consisten

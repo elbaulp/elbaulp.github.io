@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 color: '#F57C00'
 description: "Hace tiempo, cuando migramos de blogger a WordPress escribimos un art\xEDculo
   sobre c\xF3mo realizar la migraci\xF3n sin perder el posicionamiento web. Una parte

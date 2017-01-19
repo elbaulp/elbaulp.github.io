@@ -1,14 +1,21 @@
 ---
-layout: post.amp
-title: "Cómo Pasé De Usar Excel a Usar R Y Python"
-description: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
-tags: [R, python, análisis de datos]
-image: chrp1.png
-introduction: "Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que..."
 author: marta
-mainclass: "dev"
-color: "#E64A19"
-date: 2016-11-04T16:23:40+01:00
+categories:
+- dev
+color: '#E64A19'
+date: 2016-11-04 15:23:40
+description: "Todo empez\xF3 cuando me mandaron hacer una pr\xE1ctica para la universidad
+  en la que ten\xEDa que..."
+image: chrp1.png
+introduction: "Todo empez\xF3 cuando me mandaron hacer una pr\xE1ctica para la universidad
+  en la que ten\xEDa que..."
+layout: post.amp
+mainclass: dev
+tags:
+- R
+- python
+- "an\xE1lisis de datos"
+title: "C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python"
 ---
 
 Cómo pasé de analizar resultados con Excel a analizarlos con R+Python

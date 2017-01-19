@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: Un array sirve para guardar un conjunto de entidades pertenecientes a
   la misma clase. Para reservar espacio en memoria para un array, y para liberar la

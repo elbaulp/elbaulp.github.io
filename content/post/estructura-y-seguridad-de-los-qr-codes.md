@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- Security Now
+- articulos
+- security now
 - seguridad
 color: '#00BCD4'
 image: 2012/12/qrbaulinnercorners2.png

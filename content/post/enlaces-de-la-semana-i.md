@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Enlaces de la semana
+- enlaces de la semana
 color: '#F57C00'
 layout: post.amp
 mainclass: articulos

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - seguridad
 color: '#F57C00'
 layout: post.amp

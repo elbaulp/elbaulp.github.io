@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - opensource
 color: '#F57C00'
 if_slider_image:

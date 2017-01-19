@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 color: '#F57C00'
 image: 2013/02/Windows8problem.jpg
 lastmod: 2016-08-10

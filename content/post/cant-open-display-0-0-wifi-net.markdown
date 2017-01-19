@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- linux
 color: '#2196F3'
 date: 2016-10-03 14:15:35
 description: "Cuando NetworkManager se connecta a una red, cambia el nombre de host

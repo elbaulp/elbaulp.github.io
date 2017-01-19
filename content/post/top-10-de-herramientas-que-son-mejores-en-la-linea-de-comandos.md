@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - linux
 color: '#F57C00'
 description: "Escribir commandos en una terminal puede parecer tedioso, pero con las

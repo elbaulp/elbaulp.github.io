@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-05-23 12:40:25
 description: "Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo

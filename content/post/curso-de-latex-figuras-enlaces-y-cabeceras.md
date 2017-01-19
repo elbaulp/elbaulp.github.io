@@ -1,26 +1,28 @@
 ---
 author: marta
-title: 'Mini Curso de LaTeX - Figuras, Enlaces y cabeceras'
-layout: post.amp
-permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/
 categories:
-  - LaTeX
-tags:
-  - codigo latex
-  - curso latex
-  - curso latex español
-  - enlaces latex
-  - figuras latex
-  - imagenes latex
-  - incluir codigo latex
-  - programación Latex
-  - simbolos latex
-  - latex
+- latex
+color: '#B31917'
+description: "Tras haber terminado nuestra secci\xF3n del an\xE1lisis de la eficiencia,
+  ahora nos piden que pongamos un pantallazo con la salida del programa en terminal.
+  Para ello, vamos a usar dos herramientas..."
 image: 2013/05/latex_logo.png
-description: "Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas..."
 lastmod: 2015-12-22
-mainclass: "latex"
-color: "#B31917"
+layout: post.amp
+mainclass: latex
+permalink: /curso-de-latex-figuras-enlaces-y-cabeceras/
+tags:
+- codigo latex
+- curso latex
+- "curso latex espa\xF1ol"
+- enlaces latex
+- figuras latex
+- imagenes latex
+- incluir codigo latex
+- "programaci\xF3n Latex"
+- simbolos latex
+- latex
+title: Mini Curso de LaTeX - Figuras, Enlaces y cabeceras
 ---
 
 <figure>

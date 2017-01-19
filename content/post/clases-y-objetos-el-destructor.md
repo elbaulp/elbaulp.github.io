@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "El destructor es una funci\xF3n especial, que tiene el mismo nombre
   que la clase pero que va precedido del s\xEDmbolo ~ (ASCII 126). El destructor es

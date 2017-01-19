@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- "Tecnolog\xEDa"
+- articulos
+- "tecnolog\xEDa"
 color: '#F57C00'
 date: 2015-06-30 16:48:42
 description: "Esta lista de libros geeks se mantiene en constante actualizaci\xF3n,

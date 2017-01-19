@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Humor
-- Geek
+- humor
+- geek
 color: '#262626'
 format: gallery
 layout: post.amp

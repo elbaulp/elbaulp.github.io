@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: null
 date: 2016-11-27 10:18:24
 description: Bring your Atom-powered device back to life with a lightweight distribution!

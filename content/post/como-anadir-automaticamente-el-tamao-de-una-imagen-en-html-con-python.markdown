@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- dev
 color: '#E64A19'
 date: 2016-06-30 10:59:47
 description: "Peque\xF1o script en python para a\xF1adir el tama\xF1o a una etiqueta

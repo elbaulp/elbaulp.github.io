@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "Los operadores new y delete ofrecen la posibilidad de reservar y liberar
   de forma din\xE1mica la porci\xF3n de memoria que ocupa un objeto, de un modo similar

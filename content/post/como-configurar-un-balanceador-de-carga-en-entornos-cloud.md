@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
+- administracion de servidores
 color: '#0097A7'
 description: "Hoy vamos a hablar de c\xF3mo configurar un Balanceador de carga para
   un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno

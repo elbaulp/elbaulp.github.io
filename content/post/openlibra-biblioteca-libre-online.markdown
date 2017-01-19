@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-03-03 20:30:24
 description: "Hace unos a\xF1os, concretamente 5, un compa\xF1ero bloggero lanzaba

@@ -2,7 +2,7 @@
 author: alex
 categories:
 - curiosidades
-- Humor
+- humor
 - meme
 color: '#262626'
 image: geek-eye-doctor.jpg

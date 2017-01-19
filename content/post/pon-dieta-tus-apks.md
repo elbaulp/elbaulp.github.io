@@ -2,7 +2,7 @@
 author: alex
 categories:
 - android
-- Articulos
+- articulos
 color: '#689F38'
 date: 2015-12-11 10:47:00
 description: "En el anterior art\xEDculo hablamos de c\xF3mo reducir el tama\xF1o

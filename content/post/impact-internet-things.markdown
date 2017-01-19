@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: '#61B38D'
 date: 2016-03-16 10:02:52
 description: How IoT is set to revolutionize the commercial real estate industry.

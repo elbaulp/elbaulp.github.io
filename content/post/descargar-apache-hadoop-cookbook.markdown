@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: '#61B38D'
 date: 2016-05-27 10:08:44
 description: Delve into the world of Spring Data Programming with this compact cookbook

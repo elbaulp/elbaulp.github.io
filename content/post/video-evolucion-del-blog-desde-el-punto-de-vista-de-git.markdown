@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-12-16 14:51:46
 description: "Video de C\xF3mo visualizar la evoluci\xF3n de un repositorio git con

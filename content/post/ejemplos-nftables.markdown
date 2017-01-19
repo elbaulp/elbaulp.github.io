@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-03-29 06:02:46
 description: "nftables  es un  nuevo  framework  que  sustituye  al antiguo  iptables.

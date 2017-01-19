@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Geek
+- geek
 color: '#262626'
 layout: post.amp
 mainclass: geek

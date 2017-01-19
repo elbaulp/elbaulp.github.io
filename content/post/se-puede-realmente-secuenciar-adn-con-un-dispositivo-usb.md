@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- "Tecnolog\xEDa"
+- articulos
+- "tecnolog\xEDa"
 color: '#F57C00'
 description: "\xBFQu\xE9 pasar\xEDa si pudieras poner algunas c\xE9lulas bacterianas
   en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa

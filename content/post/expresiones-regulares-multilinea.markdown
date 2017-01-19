@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- linux
 color: '#2196F3'
 date: 2016-06-10 13:59:28
 description: "C\xF3mo aplicar una expresi\xF3n regular multil\xEDnea a ficheros"

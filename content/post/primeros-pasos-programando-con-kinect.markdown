@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- dev
 color: '#E64A19'
 date: 2015-11-05 18:30:26
 description: "Este art\xEDculo es parte de una pr\xE1ctica de una asignatura de mi

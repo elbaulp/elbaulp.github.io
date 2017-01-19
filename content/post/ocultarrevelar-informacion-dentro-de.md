@@ -2,7 +2,7 @@
 author: alex
 categories:
 - aplicaciones
-- C
+- c
 color: '#E64A19'
 lastmod: 2016-08-13
 layout: post.amp

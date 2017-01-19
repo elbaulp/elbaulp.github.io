@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- BaseDeDatos
+- basededatos
 color: '#009688'
 description: "Los bloques PL/SQL presentan una estructura espec\xEDfica compuesta
   de tres partes bien diferenciadas"

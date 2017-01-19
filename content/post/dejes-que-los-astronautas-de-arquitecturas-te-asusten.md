@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#F57C00'
 layout: post.amp
 mainclass: articulos

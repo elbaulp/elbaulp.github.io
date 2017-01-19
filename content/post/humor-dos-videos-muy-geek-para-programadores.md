@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Humor
+- humor
 - offtopic
 color: '#262626'
 format: video

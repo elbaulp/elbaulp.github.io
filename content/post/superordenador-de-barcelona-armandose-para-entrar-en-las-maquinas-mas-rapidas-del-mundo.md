@@ -1,9 +1,9 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - noticias
-- "Tecnolog\xEDa"
+- "tecnolog\xEDa"
 color: '#F57C00'
 layout: post.amp
 mainclass: articulos

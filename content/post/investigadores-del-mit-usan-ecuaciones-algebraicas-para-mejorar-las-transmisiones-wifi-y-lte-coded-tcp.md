@@ -1,9 +1,9 @@
 ---
 author: alex
 categories:
-- Informatica
+- informatica
 - noticias
-- "Tecnolog\xEDa"
+- "tecnolog\xEDa"
 color: '#F57C00'
 description: "Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades
   Europeas, han ideado una forma de potenciar el rendimiento en redes inal\xE1mbricas

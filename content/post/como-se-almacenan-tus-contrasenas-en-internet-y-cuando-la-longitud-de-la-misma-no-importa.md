@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- How To
+- articulos
+- how to
 - internet
 - seguridad
 color: '#F57C00'

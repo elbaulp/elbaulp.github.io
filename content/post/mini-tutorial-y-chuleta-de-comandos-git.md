@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#f05033'
 date: 2015-12-13 18:10:12
 description: Un mini tutorial y lista extensa de comandos git

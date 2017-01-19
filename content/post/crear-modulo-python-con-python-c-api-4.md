@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 - python
 color: '#E64A19'
 description: "Lleg\xF3 el momento de crear un m\xF3dulo con la Python C API algo m\xE1s

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#F57C00'
 image: "2013/08/La-generaci\xF3n-GitHub-Por-qu\xE9-ahora-todos-estamos-en-el-opensource.jpg"
 lastmod: 2016-08-07

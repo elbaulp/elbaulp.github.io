@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-04-04 18:56:12
 description: "En unas pr\xE1cticas de Aprendizaje autom\xE1tico para la facultad en

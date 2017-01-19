@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Enlaces de la semana
+- enlaces de la semana
 - noticias
 color: '#F57C00'
 format: link

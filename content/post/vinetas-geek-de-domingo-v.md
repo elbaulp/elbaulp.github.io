@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Geek
+- geek
 color: '#262626'
 format: gallery
 layout: post.amp

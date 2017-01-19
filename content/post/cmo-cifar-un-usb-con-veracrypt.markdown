@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-11-30 18:15:43
 description: "Los USBs suelen llevarse siempre a mano, en los bolsillos, mochila etc,

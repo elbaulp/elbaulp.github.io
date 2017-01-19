@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 - python
 color: '#E64A19'
 description: "Hace alg\xFAn tiempo estaba desarrollando un m\xF3dulo para python,

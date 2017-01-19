@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#F57C00'
 description: "Hay tantos formatos de sonido que podemos hacernos un l\xEDo a la hora
   de decidir cual usar, cual aporta mayor calidad al sonido... echemos una vista r\xE1pida

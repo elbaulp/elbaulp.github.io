@@ -2,7 +2,7 @@
 author: alex
 categories:
 - bash
-- How To
+- how to
 - linux
 color: '#2196F3'
 description: "El otro d\xEDa me hac\xEDa falta convertir cada una de las p\xE1ginas

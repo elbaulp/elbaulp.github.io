@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Algoritmos
+- algoritmos
 - python
 color: '#E64A19'
 description: "Una ecuaci\xF3n no es m\xE1s que una igualdad en la que hay cantidades

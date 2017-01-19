@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - linux
 color: '#E64A19'
 layout: post.amp

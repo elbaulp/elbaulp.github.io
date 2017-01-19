@@ -2,7 +2,7 @@
 author: alex
 categories:
 - android
-- How To
+- how to
 - opensource
 color: '#689F38'
 layout: post.amp

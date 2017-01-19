@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: '#61B38D'
 date: 2016-06-24 06:06:58
 description: "Listado de los feeds por categor\xEDas disponibles para los lectores"

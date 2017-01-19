@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 layout: post.amp
 mainclass: dev

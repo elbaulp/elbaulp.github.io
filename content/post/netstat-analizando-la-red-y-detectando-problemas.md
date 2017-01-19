@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 - linux
 color: '#2196F3'
 lastmod: 2016-08-11

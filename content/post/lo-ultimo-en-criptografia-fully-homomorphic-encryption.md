@@ -1,9 +1,9 @@
 ---
 author: alex
 categories:
-- Algoritmos
-- Articulos
-- Security Now
+- algoritmos
+- articulos
+- security now
 - seguridad
 color: '#00BCD4'
 layout: post.amp

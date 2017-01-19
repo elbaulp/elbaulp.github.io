@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - internet
 color: '#F57C00'
 description: "Hace unos d\xEDas, visitando la web makeuseof me apareci\xF3 un mensaje

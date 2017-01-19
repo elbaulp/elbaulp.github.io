@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-04-19 08:48:34
 description: "Hace tiempo me encontr\xE9 con el problema de tener que construir una

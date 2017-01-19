@@ -1,22 +1,24 @@
 ---
-title: Buenas prácticas para el Diseño de una API RESTful Pragmática
-layout: post.amp
-permalink: /buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/
-categories:
-  - Articulos
-tags:
-  - api restfull
-  - apis
-  - buenas practicas apis
-  - como hacer una api rest
-  - api rest ejemplo
-  - que es una api rest
 author: luzila
-lastmod: 2016-08-01
+categories:
+- articulos
+color: '#F57C00'
+description: "Esta es una traducci\xF3n lo m\xE1s literal posible del art\xEDculo
+  original, ya que quer\xEDa preservar la opini\xF3n personal del autor as\xED como
+  tambi\xE9n el destacable trabajo de investigaci\xF3n y an\xE1lisis que realiz\xF3."
 image: 2014/01/201305-xml-vs-json-api.png
-description: "Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó."
-mainclass: "articulos"
-color: "#F57C00"
+lastmod: 2016-08-01
+layout: post.amp
+mainclass: articulos
+permalink: /buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/
+tags:
+- api restfull
+- apis
+- buenas practicas apis
+- como hacer una api rest
+- api rest ejemplo
+- que es una api rest
+title: "Buenas pr\xE1cticas para el Dise\xF1o de una API RESTful Pragm\xE1tica"
 ---
 
 > Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.

@@ -2,7 +2,7 @@
 author: alex
 categories:
 - android
-- Articulos
+- articulos
 color: '#F57C00'
 description: "Leyendo noticias en mi lector RSS he encontrado un art\xEDculo interesante
   que comparto con vosotros. Se trata de un programa que permitir\xE1 tener un sistema

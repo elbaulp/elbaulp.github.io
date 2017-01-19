@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- SO
+- so
 color: '#F57C00'
 description: "Esta es la primera parte del temario que vamos a ver en Sistemas Operativos,
   vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante

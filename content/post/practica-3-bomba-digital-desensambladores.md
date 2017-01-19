@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- C
-- Hacking
+- c
+- hacking
 color: '#E64A19'
 image: 2012/12/logicbomb.png
 lastmod: 2016-08-05

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2015-12-13 11:38:27
 description: Learn how to stop Windows 10 from exporting your personal data. Windows

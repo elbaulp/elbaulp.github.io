@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- latex
 color: '#B31917'
 date: 2015-05-27 10:28:05
 description: "C\xF3mo crear una imagen desde latex, usando el paquete tikz, para insertar

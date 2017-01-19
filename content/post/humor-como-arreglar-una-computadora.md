@@ -2,9 +2,9 @@
 author: alex
 categories:
 - curiosidades
-- How To
+- how to
 - linux
-- SO
+- so
 color: '#262626'
 lastmod: 2016-09-08
 layout: post.amp

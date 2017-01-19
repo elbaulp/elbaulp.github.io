@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - opensource
 color: '#0097A7'
 layout: post.amp

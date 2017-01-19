@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- dev
 color: '#E64A19'
 date: 2016-01-07 11:54:12
 description: "Recientemente necesit\xE9 ejecutar el comando `diff` sobre la salida

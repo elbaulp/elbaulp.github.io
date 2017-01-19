@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- java
 color: '#D32F2F'
 date: 2016-03-30 06:29:58
 description: "Explicaci\xF3n de por qu\xE9 muchos usuarios de internet est\xE1n obteniendo

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "D\xEDas atr\xE1s hablamos sobre DWM y qued\xF3 pendiente explicar c\xF3mo
   colorear la barra de estado. En el art\xEDculo de hoy veremos c\xF3mo aplicar el

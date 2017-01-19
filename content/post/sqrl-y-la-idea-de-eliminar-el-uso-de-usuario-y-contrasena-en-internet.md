@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Security Now
+- security now
 color: '#00BCD4'
 layout: post.amp
 mainclass: security-now

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-11-27 12:25:00
 description: "Es posible que a vosotros tambi\xE9n os haya ocurrido. Al realizar una

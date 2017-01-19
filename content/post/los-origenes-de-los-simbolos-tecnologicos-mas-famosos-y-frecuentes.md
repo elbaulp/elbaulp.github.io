@@ -1,20 +1,29 @@
 ---
-title: Los orígenes de los símbolos tecnológicos más famosos y frecuentes
-
-layout: post.amp
-permalink: /los-origenes-de-los-simbolos-tecnologicos-mas-famosos-y-frecuentes/
-categories:
-  - Articulos
-tags:
-  - origen simbolo @
-  - origen simbolo usb
-  - origen símbolos tecnológicos
 author: luzila
-description: "Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto."
+categories:
+- articulos
+color: '#F57C00'
+description: "Cont\xEDnuamente exploramos el mundo de los or\xEDgenes pero es muy
+  raro que discutamos sobre d\xF3nde provienen los s\xEDmbolos m\xE1s comunes de tecnolog\xEDa.
+  Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos
+  s\xEDmbolos. Afortunadamente, Visual.ly ha creado un gr\xE1fico que puede decirte
+  casi todo lo que necesitas saber, desde d\xF3nde se origin\xF3 el s\xEDmbolo de
+  Blouetooth hasta porqu\xE9 \u2018@\u2019 es tan comunmente usado. Cada s\xEDmbolo
+  viene con su propia historia de origen, la mayor\xEDa de las cuales son mucho m\xE1s
+  interesantes de lo que piensas. Por ejemplo, \xBFsab\xEDas que la tecla de comando
+  Apple est\xE1 inspirada en un s\xEDmbolo sueco que indica una atracci\xF3n destacable
+  en un camping? Debe haber algunos s\xEDmbolos incluidos en este gr\xE1fico que posiblemente
+  nunca has o\xEDdo o visto."
+image: "2014/03/LOS-OR\xCDGENES-DE-LOS-S\xCDMBOLOS-TECNOL\xD3GICOS-M\xC1S-FAMOSOS-Y-FRECUENTES.png"
 lastmod: 2015-12-25
-image: 2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /los-origenes-de-los-simbolos-tecnologicos-mas-famosos-y-frecuentes/
+tags:
+- origen simbolo @
+- origen simbolo usb
+- "origen s\xEDmbolos tecnol\xF3gicos"
+title: "Los or\xEDgenes de los s\xEDmbolos tecnol\xF3gicos m\xE1s famosos y frecuentes"
 ---
 
 <figure>

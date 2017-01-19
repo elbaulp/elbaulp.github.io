@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 description: "Ahorro de energ\xEDa es el tema hot para los usuarios de laptop que
   necesitan tener las cosas hechas cuando est\xE1n en movimiento y corriendo con el

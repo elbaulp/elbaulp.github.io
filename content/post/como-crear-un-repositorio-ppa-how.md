@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - linux
 - opensource
 color: '#F57C00'

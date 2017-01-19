@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "Hace poco puse a vuestra disposici\xF3n unos tutoriales b\xE1sicos de
   C++, y ahora voy a comenzar a explicar las clases y los objetos en C++."

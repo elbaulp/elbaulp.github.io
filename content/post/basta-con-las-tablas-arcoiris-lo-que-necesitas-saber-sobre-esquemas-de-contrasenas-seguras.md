@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- Hacking
+- articulos
+- hacking
 - seguridad
 color: '#F57C00'
 description: "En la esfera social de bookmark (\u201Csocialbookmarkosphere\u201D)

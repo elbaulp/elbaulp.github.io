@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 - python
 color: '#E64A19'
 description: "Este es el \xFAltimo art\xEDculo de esta serie de 5 sobre c\xF3mo crear

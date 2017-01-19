@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-06-23 17:16:56
 description: "En este art\xEDculo se comparan WhatsApp, Signal y Allo en t\xE9rminos

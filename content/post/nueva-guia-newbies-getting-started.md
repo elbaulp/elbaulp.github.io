@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Sin Categoria
+- sin categoria
 color: '#61B38D'
 image: A-Newbies-Getting-Started-Guide-to-Linux.png
 lastmod: 2016-09-21

@@ -1,22 +1,22 @@
 ---
-title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
-layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
-categories:
-  - aplicaciones
-  - Articulos
-  - opensource
-  - seguridad
-tags:
-  - configurar tor
-  - instalar tor
-  - navegar anonimamente
-  - Tor
 author: luzila
+categories:
+- aplicaciones
+- articulos
+- opensource
+- seguridad
+color: '#F57C00'
 image: 2013/04/081712_1515_AchievingAn1-300x114.png
 lastmod: 2016-08-08
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/
+tags:
+- configurar tor
+- instalar tor
+- navegar anonimamente
+- Tor
+title: 'Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks'
 ---
 
 * [Logrando el anonimato con Tor (Parte 1)][1]

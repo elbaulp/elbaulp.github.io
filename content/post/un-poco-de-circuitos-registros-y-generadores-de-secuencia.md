@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Informatica
+- informatica
 color: '#F57C00'
 format: video
 if_slider_image:

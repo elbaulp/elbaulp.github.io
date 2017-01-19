@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- git
 category: git
 color: '#f05033'
 date: 2016-11-12 08:12:16

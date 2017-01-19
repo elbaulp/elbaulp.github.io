@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#F57C00'
 description: "\xC9ste art\xEDculo pretende ser una gu\xEDa para todo aquel que ha
   perdido el imei de su tel\xE9fono y no puede acceder a la red telef\xF3nica. Y como

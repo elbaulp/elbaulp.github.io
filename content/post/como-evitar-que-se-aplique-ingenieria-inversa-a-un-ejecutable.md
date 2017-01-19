@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- C
-- How To
+- c
+- how to
 color: '#E64A19'
 layout: post.amp
 mainclass: dev

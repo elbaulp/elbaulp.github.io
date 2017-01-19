@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
+- administracion de servidores
 - seguridad
 color: '#0097A7'
 description: "Las copias de seguridad son algo que debemos tener a buen resguardo

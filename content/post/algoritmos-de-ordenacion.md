@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Algoritmos
+- algoritmos
 color: '#F57C00'
 description: "Bueno, como dice el t\xEDtulo de la entrada, voy a hablar sobre los
   algoritmos de ordenaci\xF3n, vamos a distinguir entre lentos y r\xE1pidos. La diferencia

@@ -2,7 +2,7 @@
 author: alex
 categories:
 - android
-- Humor
+- humor
 color: '#F57C00'
 layout: post.amp
 mainclass: articulos

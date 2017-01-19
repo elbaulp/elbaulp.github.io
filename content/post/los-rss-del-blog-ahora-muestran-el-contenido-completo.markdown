@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-12-03 10:40:33
 description: "Tras escuchar a varios lectores, ahora es posible leer los art\xEDculos

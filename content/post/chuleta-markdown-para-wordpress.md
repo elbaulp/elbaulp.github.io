@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 color: '#F57C00'
 description: "En su \xFAltima actualizaci\xF3n, el plugin JetPack introdujo la notaci\xF3n
   Markdown para formatear art\xEDculos y comentarios. La siguiente chuleta pretende

@@ -3,7 +3,7 @@ author: alex
 categories:
 - android
 - aplicaciones
-- BaseDeDatos
+- basededatos
 color: '#689F38'
 lastmod: 2016-09-06
 layout: post.amp

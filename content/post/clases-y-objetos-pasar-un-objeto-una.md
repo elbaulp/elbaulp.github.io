@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "Vamos a estudiar c\xF3mo se pasa una variable a una funci\xF3n en uno
   de sus argumentos."

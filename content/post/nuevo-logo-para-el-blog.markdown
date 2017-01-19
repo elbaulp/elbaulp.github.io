@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2015-07-21 18:36:47
 description: "El 25 de Junio de 2013, publiqu\xE9 un art\xEDculo para anunciando el

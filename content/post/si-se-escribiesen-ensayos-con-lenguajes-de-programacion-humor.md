@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Humor
+- humor
 - offtopic
 color: '#262626'
 description: "Si se escribiesen ensayos con lenguajes de programaci\xF3n [HUMOR]"

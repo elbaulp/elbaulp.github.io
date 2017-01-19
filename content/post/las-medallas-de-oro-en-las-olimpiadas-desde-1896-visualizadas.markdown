@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-09-23 13:01:18
 description: "Olympic Feathers es una visualizaci\xF3n de datos interactiva que muestra

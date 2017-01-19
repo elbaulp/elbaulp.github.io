@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-06-29 16:43:06
 description: "Hoy quiero hablaros de dunst, un demonio de notificaciones que me instal\xE9

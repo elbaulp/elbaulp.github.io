@@ -1,22 +1,25 @@
 ---
-title: 7 dilemas que enfrentan los desarrolladores de hoy
-description: "Así como la tecnología evoluciona, también lo hacen los dilemas que enfrentan los desarrolladores. Cada elección, desde la plataforma hasta el almacenamiento de datos, incluyendo a cuánto control darle a los usuarios, está cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnología móvil y la acelerada vanguardia, pareciera como si el mundo de la programación enfrentara una nueva elección - y dilema - a un ritmo creciente."
-layout: post.amp
-permalink: /el-top-7-de-dilemas-que-enfrentan-los-desarrolladores-de-hoy/
-categories:
-  - aplicaciones
-  - Articulos
-tags:
-  - cloud computing
-  - desarrollo de aplicaciones
-  - noSQL
-lastmod: 2016-06-13
 author: luzila
-mainclass: "articulos"
-color: "#F57C00"
+categories:
+- aplicaciones
+- articulos
+color: '#F57C00'
+description: "As\xED como la tecnolog\xEDa evoluciona, tambi\xE9n lo hacen los dilemas
+  que enfrentan los desarrolladores. Cada elecci\xF3n, desde la plataforma hasta el
+  almacenamiento de datos, incluyendo a cu\xE1nto control darle a los usuarios, est\xE1
+  cargada de preguntas. Y gracias a la nube, el crecimiento de la tecnolog\xEDa m\xF3vil
+  y la acelerada vanguardia, pareciera como si el mundo de la programaci\xF3n enfrentara
+  una nueva elecci\xF3n - y dilema - a un ritmo creciente."
+lastmod: 2016-06-13
+layout: post.amp
+mainclass: articulos
+permalink: /el-top-7-de-dilemas-que-enfrentan-los-desarrolladores-de-hoy/
+tags:
+- cloud computing
+- desarrollo de aplicaciones
+- noSQL
+title: 7 dilemas que enfrentan los desarrolladores de hoy
 ---
-
-
 
 **Plataformas, bases de datos, control de usuario - dilemas que atrapan al programador antes de la primera línea de código**
 

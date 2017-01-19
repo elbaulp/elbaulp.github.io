@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2016-03-14 08:38:01
 description: Kick-start your Python projects with these hot recipes!

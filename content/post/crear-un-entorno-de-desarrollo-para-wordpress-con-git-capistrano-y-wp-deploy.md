@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - opensource
 color: '#f05033'
 date: 2015-11-27 16:17:00

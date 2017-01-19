@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: null
 date: 2016-09-07 13:10:02
 description: Delve into the world of Apache Maven with this compact cookbook that

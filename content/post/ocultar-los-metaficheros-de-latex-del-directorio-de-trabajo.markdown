@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- latex
 color: '#B31917'
 date: 2015-11-19 09:20:00
 description: "Si trabajas habitualmente con LaTeX, est\xE1s acostumbrado a ver m\xFAltiples

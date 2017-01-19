@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2015-11-28 08:14:31
 description: Essentials of Information Security brings together the latest in information,

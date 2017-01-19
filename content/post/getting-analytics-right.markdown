@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: null
 date: 2016-08-01 09:42:49
 description: Answering business questions with more data in less time.

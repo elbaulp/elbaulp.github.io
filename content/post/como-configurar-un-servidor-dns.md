@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
-- Articulos
+- administracion de servidores
+- articulos
 - internet
 color: '#0097A7'
 description: "En esta serie de art\xEDculos, intentar\xE9 explicar lo mejor posible

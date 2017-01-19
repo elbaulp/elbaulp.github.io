@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- LaTeX
+- latex
 color: '#B31917'
 image: 2013/05/latex_logo.png
 lastmod: 2016-08-13

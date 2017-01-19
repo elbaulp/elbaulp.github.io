@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 color: '#F57C00'
 description: "Hace poco actualic\xE9 mi Samsung Galaxy S II (GT-I9100) a CyanogenMod
   10.1 y me d\xED cuenta que las opciones de desarrollador en [Android][1] 4.2 no

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- BaseDeDatos
+- basededatos
 color: '#009688'
 lastmod: 2016-09-02
 layout: post.amp

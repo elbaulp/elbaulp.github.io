@@ -3,7 +3,7 @@ author: alex
 categories:
 - aplicaciones
 - curiosidades
-- How To
+- how to
 - linux
 color: '#2196F3'
 lastmod: 2016-09-09

@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- How To
+- articulos
+- how to
 color: '#F57C00'
 description: "Si encontraste esta p\xE1gina, por suerte es lo que estabas buscando,
   una peque\xF1a chuleta de comandos para GPG. Si encuentras alg\xFAn error, no dudes

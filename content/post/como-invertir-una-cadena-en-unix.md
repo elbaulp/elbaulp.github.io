@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 color: '#2196F3'
 description: "Existe un comando que realiza esta operaci\xF3n, `rev`. De acuerdo a
   la descripci\xF3n que proporciona la documentaci\xF3n funciona de la siguiente manera"

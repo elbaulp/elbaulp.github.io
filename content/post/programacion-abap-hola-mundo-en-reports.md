@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- ABAP
+- abap
 color: '#E64A19'
 description: "Para iniciarnos en la programaci\xF3n ABAP nada mejor que el cl\xE1sico
   \u201CHola mundo\u201D. Con este tutorial podremos crear nuestro primer programa

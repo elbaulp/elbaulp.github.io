@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "Cuando estaba en el primer curso de la facultad, hicimos una pr\xE1ctica
   en la asignatura Fundamentos de la Programaci\xF3n que consist\xEDa en resolver

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: null
 date: 2016-08-06 16:15:22
 description: Descarga un manual de git completo de forma gratuita

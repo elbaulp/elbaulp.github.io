@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 - python
 color: '#E64A19'
 description: "En esta serie de 5 art\xEDculos, veremos c\xF3mo crear desde cero un

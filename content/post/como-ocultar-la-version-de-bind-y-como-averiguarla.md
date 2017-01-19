@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
-- How To
+- administracion de servidores
+- how to
 color: '#0097A7'
 image: 2013/04/dns-300x240.jpg
 lastmod: 2016-08-05

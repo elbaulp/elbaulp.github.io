@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2015-12-08 10:00:00
 description: Headlines featuring large-scale cyber breaches at Target, Home Depot,

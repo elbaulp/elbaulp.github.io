@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- C
-- Hacking
+- c
+- hacking
 color: '#E64A19'
 layout: post.amp
 mainclass: dev

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Java
+- java
 color: '#D32F2F'
 lastmod: 2015-03-30
 layout: post.amp

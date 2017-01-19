@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Java
+- java
 color: '#D32F2F'
 description: "En este art\xEDculo veremos un poco sobre el manejo de excepciones en
   java, esto es esencial para toda programaci\xF3n b\xE1sica en java, una excepci\xF3n

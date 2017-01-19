@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- java
 color: '#D32F2F'
 date: 2016-02-15 19:36:34
 description: "Enunciado: se debe identificar mediante interfaz vocal un punto cardinal

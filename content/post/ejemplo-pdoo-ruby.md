@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Articulos
+- articulos
 color: '#E64A19'
 lastmod: 2016-08-10
 layout: post.amp

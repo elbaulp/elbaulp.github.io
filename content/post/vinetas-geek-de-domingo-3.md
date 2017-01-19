@@ -2,7 +2,7 @@
 author: alex
 categories:
 - offtopic
-- Geek
+- geek
 color: '#262626'
 format: gallery
 layout: post.amp

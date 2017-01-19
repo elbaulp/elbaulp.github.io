@@ -1,20 +1,19 @@
 ---
-title: Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo
-layout: post.amp
-permalink: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/
-categories:
-  - Articulos
-  - seguridad
-tags:
-  - autentificación de dos factores
-  - contraseñas
-  - google autenticator
 author: luzila
-mainclass: "articulos"
-color: "#F57C00"
+categories:
+- articulos
+- seguridad
+color: '#F57C00'
+layout: post.amp
+mainclass: articulos
+permalink: /todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/
+tags:
+- "autentificaci\xF3n de dos factores"
+- "contrase\xF1as"
+- google autenticator
+title: "Todos los lugares donde deber\xEDas habilitar la Autenticaci\xF3n de Dos Factores
+  ahora mismo"
 ---
-
-
 
 La Autenticación de dos factores (Two-factor autenticación) es una de <a href="http://lifehacker.com/5932501/strong-passwords-arent-enough-how-to-to-ensure-the-apple-and-amazon-exploit-never-happens-to-you" target="_blank">las mejores cosas que puedes hacer</a> para asegurarte de que tus cuentas no sean hackeadas. Aquí hay una lista de todos los servicios populares que la ofrecen, y donde deberías ir para activarlo ahora mismo.
 

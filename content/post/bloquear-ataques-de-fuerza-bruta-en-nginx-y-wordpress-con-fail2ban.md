@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Administracion de Servidores
+- administracion de servidores
 color: '#0097A7'
 description: "Cuando se administra un servidor, te das cuenta de la cantidad de m\xE1quinas
   automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor.

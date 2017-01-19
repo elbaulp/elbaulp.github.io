@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: '#61B38D'
 date: 2016-08-30 14:10:30
 description: "Emacs: Recopilaci\xF3n de comandos y acciones \xFAtiles"

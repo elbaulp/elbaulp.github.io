@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: null
 date: 2016-08-12 11:24:05
 description: "Descubra c\xF3mo impactan las aplicaciones web y los dispositivos m\xF3viles

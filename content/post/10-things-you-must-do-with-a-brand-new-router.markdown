@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: null
 date: 2016-10-04 06:57:02
 description: "There are many good reasons to upgrade your router (or buy one if you

@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 color: '#E64A19'
 description: "En ocasiones, es necesario tener una funci\xF3n a la que podamos pasar
   un n\xFAmero de par\xE1metros variables. En el art\xEDculo de hoy veremos c\xF3mo

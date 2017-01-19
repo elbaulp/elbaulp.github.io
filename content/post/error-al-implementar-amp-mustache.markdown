@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-07-30 16:27:54
 description: "C\xF3mo implementar correctamente amp-mustache y evitar errores en Jekyll"

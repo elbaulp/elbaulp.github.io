@@ -1,23 +1,25 @@
 ---
-title: Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos
-
-layout: post.amp
-permalink: /todo-lo-que-necesitas-saber-sobre-copyright-y-licencias-en-2-minutos/
+author: luzila
 categories:
-  - Articulos
-  - opensource
-tags:
-  - gpl
-  - licencia apache
-  - licencia BSD
-  - licencia MIT
-  - licencias libres
-description: "A la hora de crear proyectos, suele ser una tarea difícil elegir bajo qué licencia liberar el código, al menos para mi. Con este artículo que traduzco de outercurve.org espero facilitar la tarea de selección de una licencia."
+- articulos
+- opensource
+color: '#F57C00'
+description: "A la hora de crear proyectos, suele ser una tarea dif\xEDcil elegir
+  bajo qu\xE9 licencia liberar el c\xF3digo, al menos para mi. Con este art\xEDculo
+  que traduzco de outercurve.org espero facilitar la tarea de selecci\xF3n de una
+  licencia."
 image: 2013/11/Todo-lo-que-necesitas-saber-sobre-Copyright-y-licencias-en-2-minutos.png
 lastmod: 2016-03-20
-mainclass: "articulos"
-color: "#F57C00"
-author: luzila
+layout: post.amp
+mainclass: articulos
+permalink: /todo-lo-que-necesitas-saber-sobre-copyright-y-licencias-en-2-minutos/
+tags:
+- gpl
+- licencia apache
+- licencia BSD
+- licencia MIT
+- licencias libres
+title: Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos
 ---
 
 <figure>

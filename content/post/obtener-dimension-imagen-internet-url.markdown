@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- linux
 color: '#2196F3'
 date: 2016-10-01 16:32:13
 description: "C\xF3mo obtener el ancho y alto de una imagen que est\xE1 en internet

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- java
 color: '#D32F2F'
 date: 2016-02-04 08:33:22
 description: "El robo de smartphones se ha disparado recientemente. Aumenta un 30%

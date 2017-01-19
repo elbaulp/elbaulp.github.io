@@ -2,7 +2,7 @@
 author: alex
 categories:
 - aplicaciones
-- Hacking
+- hacking
 - seguridad
 color: '#F57C00'
 layout: post.amp

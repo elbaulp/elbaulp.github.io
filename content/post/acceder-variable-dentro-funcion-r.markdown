@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-04-22 06:40:33
 description: "Haciendo una pr\xE1ctica de Aprendizaje Autom\xE1tico, en concreto implementando

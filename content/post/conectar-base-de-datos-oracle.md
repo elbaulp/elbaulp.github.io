@@ -3,7 +3,7 @@ author: alex
 categories:
 - android
 - aplicaciones
-- BaseDeDatos
+- basededatos
 - opensource
 color: '#689F38'
 lastmod: 2016-11-03

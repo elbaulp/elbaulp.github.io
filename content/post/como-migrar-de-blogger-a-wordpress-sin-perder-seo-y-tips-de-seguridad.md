@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- How To
+- how to
 - internet
 color: '#E64A19'
 description: "En esta entrada  se ver\xE1 c\xF3mo migrar desde la plataforma de blogeo

@@ -1,8 +1,8 @@
 ---
 author: alex
 categories:
-- Articulos
-- Security Now
+- articulos
+- security now
 color: '#00BCD4'
 layout: post.amp
 mainclass: security-now

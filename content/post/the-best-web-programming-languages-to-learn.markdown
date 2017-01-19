@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- misc
 color: '#61B38D'
 date: 2016-06-13 16:35:07
 description: Boosting your Web Development Career!

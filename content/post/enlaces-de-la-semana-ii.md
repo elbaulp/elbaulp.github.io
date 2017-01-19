@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- Enlaces de la semana
+- enlaces de la semana
 - offtopic
 color: '#F57C00'
 description: "<!--:es-->Recopilaci\xF3n semanal de enlaces sobre noticias de la tecnolog\xEDa,

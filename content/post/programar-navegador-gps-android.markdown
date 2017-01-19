@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- java
 color: '#D32F2F'
 date: 2016-02-16 20:05:38
 description: "Enunciado: se facilitar\xE1n las coordenadas de una serie de puntos

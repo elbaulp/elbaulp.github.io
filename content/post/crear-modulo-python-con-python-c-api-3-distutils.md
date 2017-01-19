@@ -1,7 +1,7 @@
 ---
 author: alex
 categories:
-- C
+- c
 - python
 color: '#E64A19'
 description: "Como dijimos en la entrada anterior, vamos a hablar de *DistUtils*,

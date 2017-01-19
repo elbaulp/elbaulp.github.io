@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- latex
 color: '#B31917'
 date: 2015-06-25 16:50:48
 description: "Para los que est\xE9is acostumbrados a escribir vuestros documentos

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-05-09 11:20:10
 description: "Hace tiempo, para la asignatura \u201CModelos de Computaci\xF3n\u201D

@@ -1,25 +1,28 @@
 ---
-title: 'Cómo eliminar tu identidad online: Guía Fundamental para el Anonimato y Seguridad en Internet'
-
-layout: post.amp
-permalink: /como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/
-categories:
-  - Articulos
-tags:
-  - anonimato en la red
-  - anonimato internet
-  - redes sociales
-  - seguridad
-  - tracking
 author: luzila
-
+categories:
+- articulos
+color: '#F57C00'
+description: "El anonimato es algo que no existe hoy en d\xEDa. Todo lo que haces
+  es trackeado, desde las compras que haces para navegar en internet, hasta las fotos
+  que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todav\xEDa
+  est\xE1 all\xED, en alg\xFAn lado. Esto es llamado *caching*. Por ejemplo, cuando
+  un sitio est\xE1 caido, puedes ver su p\xE1gina cacheada en Google."
 image: 2014/10/draft.jpg
 lastmod: 2015-12-24
-description: "El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.
-Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google."
-mainclass: "articulos"
-color: "#F57C00"
+layout: post.amp
+mainclass: articulos
+permalink: /como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/
+tags:
+- anonimato en la red
+- anonimato internet
+- redes sociales
+- seguridad
+- tracking
+title: "C\xF3mo eliminar tu identidad online: Gu\xEDa Fundamental para el Anonimato
+  y Seguridad en Internet"
 ---
+
 > Esta es la traducción de un artículo que me pareció muy interesante para tener en cuenta si queremos ir implementando al menos algunas costumbres y buenas prácticas para navegar anónimamente en internet. Hay algunos tips que propone que no pueden aplicarse en todos los países, pero sin embargo vale la pena conocer las formas para que cada uno pueda pensar de qué forma puede lograrlo. *Luzcila*
 
 El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado *caching*.

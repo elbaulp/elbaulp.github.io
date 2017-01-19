@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- dev
 color: '#E64A19'
 date: 2016-06-02 14:52:24
 description: "Desarrollando una p\xE1gina en PHP para una asignatura de la facultad

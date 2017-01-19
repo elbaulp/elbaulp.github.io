@@ -2,7 +2,7 @@
 author: alex
 categories:
 - aplicaciones
-- C
+- c
 - linux
 color: '#E64A19'
 description: "Hace tiempo que habl\xE9 de Xmonad, y hasta hace poco ha sido mi gestor

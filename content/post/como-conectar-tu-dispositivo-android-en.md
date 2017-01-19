@@ -3,7 +3,7 @@ author: alex
 categories:
 - android
 - aplicaciones
-- How To
+- how to
 color: '#689F38'
 description: 'Ya me ha sucedido en varias ocasiones que he intentado conectar mi Samsung
   Galaxy S al adb del SDK de Android y he tenido que buscar durante un rato en internet

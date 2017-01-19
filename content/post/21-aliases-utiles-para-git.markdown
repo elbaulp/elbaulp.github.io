@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- git
 color: '#f05033'
 date: 2015-12-01 10:56:26
 description: "Todo aquel que use git sabr\xE1 que en ocasiones es un poco tedioso

@@ -1,5 +1,7 @@
 ---
 author: alex
+categories:
+- articulos
 color: '#F57C00'
 date: 2015-12-15 07:17:53
 description: "Se nos va otro a\xF1o, estos son los 10 art\xEDculos que m\xE1s os han

@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- articulos
 color: '#F57C00'
 date: 2016-01-25 11:05:30
 description: "En este art\xEDculo se ver\xE1 una introducci\xF3n a lo que es la biometr\xEDa,

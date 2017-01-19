@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- java
 color: '#D32F2F'
 date: 2016-02-18 08:32:53
 description: "Una appMovimientoSonido que reconozca un patr\xF3n de movimientos de

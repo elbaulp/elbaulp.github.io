@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- misc
 color: '#61B38D'
 date: 2015-11-27 08:55:00
 description: This kit will tell you what you need to know to earn more in system administration

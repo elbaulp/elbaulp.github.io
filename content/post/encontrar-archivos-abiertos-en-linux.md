@@ -3,7 +3,7 @@ author: alex
 categories:
 - linux
 - opensource
-- SO
+- so
 color: '#2196F3'
 lastmod: 2016-10-26
 layout: post.amp

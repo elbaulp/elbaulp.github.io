@@ -1,26 +1,26 @@
 ---
-title: Logrando el anonimato con Tor (Parte 1)
-layout: post.amp
-permalink: /logrando-el-anonimato-con-tor-parte-1/
-categories:
-  - aplicaciones
-  - Articulos
-  - opensource
-  - seguridad
-tags:
-  - navegacion anonima
-  - Tor
 author: luzila
-lastmod: 2016-08-08
+categories:
+- aplicaciones
+- articulos
+- opensource
+- seguridad
+color: '#F57C00'
 image: 2012/11/081012_1601_AchievingAn21-300x86.png
+lastmod: 2016-08-08
+layout: post.amp
+mainclass: articulos
+permalink: /logrando-el-anonimato-con-tor-parte-1/
 redirect_from:
-  - /articulos/logrando-el-anonimato-con-tor-parte-1
-  - /opensource/logrando-el-anonimato-con-tor-parte-1
-mainclass: "articulos"
-color: "#F57C00"
+- /articulos/logrando-el-anonimato-con-tor-parte-1
+- /opensource/logrando-el-anonimato-con-tor-parte-1
+tags:
+- navegacion anonima
+- Tor
+title: Logrando el anonimato con Tor (Parte 1)
 ---
 
-  * Logrando el anonimato con Tor (Parte 1)
+* Logrando el anonimato con Tor (Parte 1)
   * [Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies][1]
   * [Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks][2]
   * [Logrando el anonimato con Tor (Parte 4): Tor para relés][3]

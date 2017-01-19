@@ -1,6 +1,7 @@
 ---
 author: alex
-categories: null
+categories:
+- android
 color: '#689F38'
 date: 2016-10-22 06:03:57
 description: "El curso de Android del blog, ahora para descargar de forma gratu\xEDta"
