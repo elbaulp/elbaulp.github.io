@@ -18,7 +18,7 @@ title: "Expresiones Regulares Multil\xEDnea"
 
 Actualizando el diseño del blog he tenido que usar muchas [expresiones regulares](/introduccion-a-las-expresiones-regulares-en-python/ "Introducción a las expresiones regulares en python") para ajustar los artículos existentes al _Front Matter_ del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar [Atom](/instalar-atom-el-editor-de-github-en-linux/ "Instalar Atom, el editor de GitHub en Linux"). La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración `yalm`:
 
-```yalm
+```yaml
 ---
 param1: valor1
 param2: valor2

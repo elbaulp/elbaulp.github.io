@@ -4,15 +4,15 @@ languageCode = "en-us"
 title = "El Baúl del programador"
 paginate = 12
 
+#PygmentsCodeFencesGuessSyntax = true
+PygmentsCodeFences = true
+# color-codes for highlighting derived from this style
+#PygmentsStyle =              "monokai"
+pygmentsUseClasses = true
+
 [permalinks]
 post = "/:filename/"
 page = "/:filename/"
-
-PygmentsCodeFencesGuessSyntax = true
-PygmentsCodeFences = true
-# color-codes for highlighting derived from this style
-PygmentsStyle =              "monokai"
-PpygmentsUseClasses=         true
 
 [taxonomies]
 tag = "tags"

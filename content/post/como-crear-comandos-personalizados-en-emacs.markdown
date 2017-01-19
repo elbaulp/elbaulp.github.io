@@ -53,13 +53,13 @@ A partir de ahora, para ejecutar `(query-replace-regexp)` con esos parámetros, 
 
 Esta función es similar a la de arriba, pero más simple. No acepta _expresiones regulares_. Concretamente, para lo que más uso esta función es para eliminar el dominio del blog (`http://elbauldelprogramador.com/`) de los enlaces en los artículos, de forma que un enlace:
 
-```markdown
+```
 [Enlace](http://elbauldelprogramador.com/algun-post/ )
 ```
 
 pase a ser
 
-```markdown
+```
 [Enlace](/algun-post/ )
 ```
 
