@@ -17,7 +17,7 @@ En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. La
 <table_source> ::= TABLE_NAME | view_name | derived_table | <joined_table>;
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 Es posible hacer consultas que incluyan más de una tabla dentro de la cláusula FROM, es los que llamamos **JOIN o yunción**. Esto se realiza cuando necesitamos acceder a datos que se encuentran en más de una tabla.
 

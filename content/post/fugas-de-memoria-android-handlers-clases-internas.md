@@ -37,7 +37,7 @@ public class SampleActivity extends Activity {
 
 Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (*memory leak*).
 
-<!--more-->
+<!--more--><!--ad-->
 
 [*Android Lint*][2] mostrará la siguiente advertencia:
 

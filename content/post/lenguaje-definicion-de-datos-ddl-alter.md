@@ -26,7 +26,7 @@ ALTER TABLE Tabla
  [DROP CONSTRAINTS restricción]};
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 Añadir o modificar columnas ( nombre, tipo, valor por defecto, restricción NOT NULL)
 

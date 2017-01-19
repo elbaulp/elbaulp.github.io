@@ -33,7 +33,7 @@ En la esfera social de bookmark (&#8220;socialbookmarkosphere&#8221;) se habla [
 **Para comenzar, almacenamiento de contraseñas 101**: Los servidores <a title="Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)" href="/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/" target="_blank">no suelen almacenar las contraseñas reales</a>. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.
 
 Ahora re-expliquemos las Tablas Arcoiris:
-<!--more-->
+<!--more--><!--ad-->
 
 1. Toma un &#8220;diccionario&#8221; - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.
 

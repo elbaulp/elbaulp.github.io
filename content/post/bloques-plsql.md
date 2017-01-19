@@ -20,7 +20,7 @@ Los bloques PL/SQL son de varios tipos:
 * Disparadores(Triggers). Son bloques con nombre que también se almacenan en la BD. Tampoco suelen cambiar después de su construcción y se ejecutan varias veces. Se ejecutan de forma automática ante algún suceso de disparo, que será una orden del lenguaje de manipulación de datos (`INSERT`, `UPDATE` o `DELETE`) que se ejecuta sobre una tabla de la BD.
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 Los bloques PL/SQL presentan una estructura específica compuesta de tres partes bien diferenciadas:

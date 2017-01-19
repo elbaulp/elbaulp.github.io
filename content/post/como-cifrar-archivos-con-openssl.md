@@ -29,7 +29,7 @@ Las copias de seguridad son algo que debemos tener a buen resguardo por si algú
 
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Generar las claves públicas y privadas
 

@@ -17,7 +17,7 @@ title: "Tech Comics: \u201CGeek en el oculista\u201D [HUMOR]"
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/geek-eye-doctor.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="452"></amp-img>
 </figure>
 
-<!--more-->
+<!--more--><!--ad-->
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/ultrabook.jpg" alt="{{ title }}" title="{{ title }}" width="400" height="588"></amp-img>

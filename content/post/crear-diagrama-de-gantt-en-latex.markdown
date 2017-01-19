@@ -31,7 +31,7 @@ La definición de WikiPedia:
 
 > El diagrama de Gantt es una útil herramienta gráfica cuyo objetivo es exponer el tiempo de dedicación previsto para diferentes tareas o actividades a lo largo de un tiempo total determinado.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Diagramas de Gantt en Latex
 

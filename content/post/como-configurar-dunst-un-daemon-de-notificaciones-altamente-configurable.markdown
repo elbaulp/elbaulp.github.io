@@ -26,7 +26,7 @@ Si eres lector habitual del blog, sabrás que me gustan los entornos minimalista
 
 Hoy quiero hablaros de _dunst_, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con _DWM_.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Instalar dunst
 

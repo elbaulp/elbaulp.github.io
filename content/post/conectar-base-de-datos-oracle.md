@@ -20,7 +20,7 @@ title: "Conectar base de datos ORACLE a aplicaci\xF3n Java remotamente"
 
 Hace bastante tiempo, publiqué una entrada sobre cómo [Conectar base de datos sql Server 2008 a aplicación Java remotamente][1], aunque tiene mucho tiempo, sigue siendo la entrada más visitada y más comentada del blog. Debido a ello, hace poco un lector contactó conmigo comunicándome que disponía de una implementación del código de conexión, pero en lugar de ser sobre sql server 2008, era para ORACLE. Desde ya darle las gracias a Edwin por colaborar (Al que podéis seguir en <a href="https://plus.google.com/u/0/b/108003822606696308728/110549682438236698342/posts" target="_blank">G+</a> y [twitter][2]) y a continuación os dejo la implementación junto con la explicación de cómo hacerlo:
 
-<!--more-->
+<!--more--><!--ad-->
 
 > Esta colaboración la hago porque me he sumado al esfuerzo y apoyo de Alejandro Alcalde, ya que él implementó la conexión de android con SQLSERVER 2008. En vista de que en internet casi no hay información de que alguien lo ha realizado, y para empeorar las cosas hay muchas afirmaciones de que no se puede conectar android a ninguna base de datos, solamente con un webservice (y no se recomienda otra forma que no sea esta).  Yo encontré nada más el post de Alejandro Alcalde, a partir de ahí pude realizar la conexión y me di a la tarea de implementarlo para oracle y mysql también y compartirlo con quien lo necesite.
 

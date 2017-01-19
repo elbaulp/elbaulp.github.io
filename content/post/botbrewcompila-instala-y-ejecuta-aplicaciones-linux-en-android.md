@@ -30,7 +30,7 @@ Se trata de un programa que permitirá tener un sistema debian básico en el dis
 - **Paso 2:** Para conseguir que tu dispositivo sea aún más poderoso, instala <a href="https://play.google.com/store/apps/details?id=com.botbrew.basil">BostBrew Basil</a>, esta aplicación inicializa el sistema base y permite manejar la instalación de paquetes mediante Dpkg y Apt en lugar de Opkg. Permitiendo instalar algunos paquetes linux.
 - **Paso 3:** Instalar los paquetes necesarios
 
-<!--more-->
+<!--more--><!--ad-->
 
 Conectamos el teléfono al pc mediante adb con `./adb shell` y ejecutamos los comandos de **botbrew** así:
 

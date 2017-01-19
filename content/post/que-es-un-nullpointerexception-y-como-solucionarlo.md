@@ -39,7 +39,7 @@ Si has llegado aquí porque tienes problemas con **facebook**, tu respuesta est�
 
 Cuando se declara una variable referencia (Un objeto), realmente se está creando un puntero a un objeto. Consideremos el siguiente código que declara un entero con el tipo de dato primitivo:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```java
 int x;

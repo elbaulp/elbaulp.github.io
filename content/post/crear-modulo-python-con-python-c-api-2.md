@@ -43,7 +43,7 @@ El módulo consistirá en una función llamada *saluda()* que recibirá una cade
 
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 Empecemos mostrando el código e iremos explicándolo a lo largo del artículo:
 

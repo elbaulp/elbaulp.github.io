@@ -19,7 +19,7 @@ title: Visualiza las visitas a tu web al estilo Pong con Logstalgia
 
 Hace poco he descubierto un programa muy curioso, **Logstalgia**, que a partir del fichero de log de acceso a una web crea una pantalla del juego Pong en la que cada línea del log representa una bola en el juego. Es una buena representación gráfica de lo que está pasando en el servidor web. Y su uso es bastante simple. Empecemos instalándolo:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```bash
 # aptitude install logstalgia

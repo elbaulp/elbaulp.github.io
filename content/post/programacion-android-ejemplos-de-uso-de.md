@@ -27,7 +27,7 @@ Se debe indicar usando MIME types la colección de datos que vamos a usar, el cu
 vnd.android.cursor.dir/vnd.favsites.site
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 LA actividad es la encargada de recuperar los datos desde el [CV][1] basandose en la URI.
 

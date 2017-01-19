@@ -36,7 +36,7 @@ title: "C\xF3mo mostrar informaci\xF3n de un repositorio Git en el prompt de tu 
 
 Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de _Prompts_ para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un [repositorio git](/git "Tutoriales sobre Git"). Ésto es lo realmente interesante, ya que el _prompt_ nos mostrará [información del estado del repositorio](https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/ "Chuleta de comandos Git")  , lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “_Rainbow bash_”:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Rainbow Bash
 

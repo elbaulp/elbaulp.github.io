@@ -19,7 +19,7 @@ title: "Moborobo, herramienta de Administraci\xF3n Integrada para Android en el 
 <p dir="ltr">
   Moborobo es un pc suite que te ayuda a controlar tu terminal Android tanto vía WiFi como USB. Es una combinación de software de sincronización y tienda de recursos de Android (dispone de aplicaciones, juegos, fondos de pantalla y temas). Sólo hace falta descargar e instalar el programa en el pc y conectarlo al teléfono. Así podrás mantener tus datos importantes o personales en el ordenador.
 </p>
-<!--more-->
+<!--more--><!--ad-->
 <p dir="ltr">
   A continuación un listado de las funcionalidades disponibles:
 </p>

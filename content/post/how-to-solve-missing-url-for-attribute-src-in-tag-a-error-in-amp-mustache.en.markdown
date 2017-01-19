@@ -33,7 +33,7 @@ Recently I have been implementing _Google AMP pages_ in my site. Everything was 
 }
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 And then we have a template like this one to generate the content:
 

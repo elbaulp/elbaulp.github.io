@@ -32,7 +32,7 @@ El gran Alejandro Ramos está escribiendo una serie de artículos explicando té
   * <a title="Forense de SQLite III - Páginas Libres" href="http://www.securitybydefault.com/2012/08/forense-de-sqlite-iii-paginas-libres.html" target="_blank">Forense de SQLite III - Páginas Libres</a>
 
 Seguimos hablando de seguridad, esta vez en el blog de Chema Alonso:
-<!--more-->
+<!--more--><!--ad-->
 <p >
   Quien use o haya usado Blogger sabe que la url a la que se redirecciona cuando se previsualiza una entrada antes de publicarla es un tanto abstracta, ya que no puede ser predecible. ¿Será cierto?, compruébalo en <a title="Minority Report: Pre-visualizando el futuro de Blogger" href="http://www.elladodelmal.com/2012/08/minority-report-pre-visualizando-el.html" target="_blank">Minority Report: Pre-visualizando el futuro de Blogger</a>
 </p>

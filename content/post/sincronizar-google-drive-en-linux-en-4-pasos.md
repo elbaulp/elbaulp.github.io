@@ -32,7 +32,7 @@ Llevaba tiempo buscando la manera de sincronizar los archivos de **Google Drive 
 
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 # 1. Preparar el entorno
 

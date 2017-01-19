@@ -33,7 +33,7 @@ Se dispone de distintos tipo de menús:
 
 ### Options Menu
 
-<!--more-->
+<!--more--><!--ad-->
 
 Lo más simple y sencillo es definir los menús en XML, colocado en ./res/menu, para este ejemplo he definido el siguiente menu, que contiene dos elementos, un About y un Quit:
 

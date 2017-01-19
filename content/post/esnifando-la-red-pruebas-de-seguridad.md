@@ -20,7 +20,7 @@ title: 'Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in th
 
 Recientemente he leido los problemas de [seguridad](/categorias/#seguridad "Artículos sobre seguridad") que tiene [WhatsApp][1], con lo que me entró curiosidad por hacer algunas pruebas yo mismo y esnifar el tráfico de red de mi móvil, pero en este caso para la aplicación que estoy desarrollando, [WifiBar][2]. Antes de nada voy a explicar las técnicas y programas que he usado.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Ettercap y Wireshark
 

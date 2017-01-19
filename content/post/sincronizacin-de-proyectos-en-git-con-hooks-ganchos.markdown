@@ -38,7 +38,7 @@ title: "Sincronizaci\xF3n de proyectos en git con hooks (ganchos)"
 
 Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en [git](/mini-tutorial-y-chuleta-de-comandos-git/ "Chuleta de comandos en git"), y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (_mirror repos_)
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Repositorios a sincronizar
 

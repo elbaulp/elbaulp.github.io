@@ -31,7 +31,7 @@ Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Goog
 <figure>
 <a href="/img/2014/10/draft.jpg"><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/10/draft.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="592px" height="312px" /></a>
 </figure>
-<!--more-->
+<!--more--><!--ad-->
 
 Incluso si los datos no son almacenados y son eliminados, deben haber sido escritos en un disco duro, lo que significa que son vulnerables a la reconstrucción de archivos por “<a href="http://en.wikipedia.org/wiki/File_carving" target="_blank">File carving</a>” y <a href="http://es.wikipedia.org/wiki/Recuperaci%C3%B3n_de_datos" target="_blank">recuperación de datos</a>. No importa lo que hagas, algo sobre tí quedará en internet. Si compras una casa, contraes matrimonio, incluso si mueres, algo relacionado contigo residirá en la red. La información está en registros públicos por todos lados y puede ser encontrada en una simple búsqueda con Google Search.
 

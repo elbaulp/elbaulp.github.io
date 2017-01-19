@@ -21,7 +21,7 @@ Los índices sirven para mejorar el rendimiento de las consultas. El optimizador
 
 En general, los índices se crean sobre todas las claves externas y sobre los criterios de búsqueda actuales.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```sql
 CREATE [unique] INDEX nombre_indice

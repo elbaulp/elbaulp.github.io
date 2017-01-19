@@ -23,7 +23,7 @@ title: "Programaci\xF3n ABAP: Hola Mundo en Reports"
 
 Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### CREAR NUESTRO PROGRAMA ABAP
 

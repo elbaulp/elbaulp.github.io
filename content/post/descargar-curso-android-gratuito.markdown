@@ -17,4 +17,4 @@ Espero que os resulte útil.
 
 
 
-<!--more-->
+<!--more--><!--ad-->

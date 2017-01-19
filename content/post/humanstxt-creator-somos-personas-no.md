@@ -18,7 +18,7 @@ title: "Humanstxt Creator. Somos personas, no m\xE1quinas"
 
 De la web de un amigo blogger ([EtnasSoft][1]), me llega la iniciativa Humanstxt Creator. Que trata de:
 
-<!--more-->
+<!--more--><!--ad-->
 
 > Una iniciativa cuyo objetivo es dar a conocer al equipo de desarrollo que se encuentra detrás de todo proyecto web.
 

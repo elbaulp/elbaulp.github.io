@@ -18,7 +18,7 @@ title: Clases y Objetos. Arrays
 
 Un array sirve para guardar un conjunto de entidades pertenecientes a la misma clase. Para reservar espacio en memoria para un array, y para liberar la memoria, se ha de llamar a las funciones `operator new[]()` y `operator delete[]()`, respectivamente. En este caso, **new** no acepta inicializadores. Por ejemplo, en la siguiente porción de código se reserva espacio en memoria para un array de 3 enteros. Se inicializan, se usan, y por último, se libera dicho espacio en memoria reservado cuando ya no se precisa más el array.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```cpp
 //se reserva espacio en memoria para un array de 3 elementos

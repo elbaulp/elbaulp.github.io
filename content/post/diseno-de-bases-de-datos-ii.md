@@ -21,7 +21,7 @@ title: "Dise\xF1o de Bases de Datos ( II ) - Restricciones"
 
 ## 1. Restricciones Inherentes del Modelo Relacional.
 
-<!--more-->
+<!--more--><!--ad-->
 
 - No existen tuplas repetidas (obligatoriedad de clave primaria). La relación se ha definido como un conjunto de tuplas, y en matemáticas los conjuntos por definición no incluyen elementos repetidos. Hay que decir, sin embargo, que muchos de los SGBD relacionales sí admiten duplicidad de tuplas.
 - El orden de las tuplas y el de los atributos no es relevante.

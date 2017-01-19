@@ -19,7 +19,7 @@ title: "Gu\xEDa gratuita - Bootstrap Programming Cookbook"
 
 Kick-start your Bootstrap projects with these hot recipes!
 
-<!--more-->
+<!--more--><!--ad-->
 
 Bootstrap is a free and open-source collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. It aims to ease the development of dynamic websites and web applications.
 

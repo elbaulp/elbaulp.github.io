@@ -27,7 +27,7 @@ El siguiente artículo es una traducción del blog <a href="http://www.data-visu
 
 La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## 1. Flight Patterns (Patrones de vuelo)
 

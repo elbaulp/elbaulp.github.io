@@ -18,7 +18,7 @@ Esta es la primera entrada de un total de 4 en la que se irán describiendo los 
 
 Ya hemos visto cómo [interactuar con un Content provider][1], pero no hemos visto aún cómo escribir nuestro propio Content Provider. Para hacerlo, es necesario extender de *android.content.ContentProvider* e implementar los siguientes métodos:
 
-<!--more-->
+<!--more--><!--ad-->
 
   * query
   * insert

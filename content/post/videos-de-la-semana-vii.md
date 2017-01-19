@@ -23,7 +23,7 @@ Un vídeo realmente profundo, sobre un pastor al que le diagnosticaron ALS (amyo
 
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Arctic Motion
 

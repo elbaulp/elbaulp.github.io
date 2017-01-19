@@ -23,7 +23,7 @@ Hoy ha salido la versión 48 de Firefox para [Gentoo](/como-instalar-actualizar-
 configure: error: you don't have NSS installed or your version is too old
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 Así que pregunté en los foros de [Gentoo](https://forums.gentoo.org/viewtopic-p-7951120.html#7951120 "Can't update to firefox 48") y parece que se trata de un [bug](https://bugs.gentoo.org/show_bug.cgi?id=590424) pendiente de resolver.
 

@@ -13,7 +13,7 @@ title: "Rss Feeds Para Cada Categor\xEDa"
 
 Puede que solo te interesen algunas publicaciones del blog y no desees recibir todos y cada uno de los artículos que se escriben.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Por ello he creado varios feeds RSS en base a las categorías más importantes del blog, para que cada uno se susbscriba a la que más le interese:
 

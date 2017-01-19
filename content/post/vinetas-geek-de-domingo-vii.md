@@ -18,7 +18,7 @@ title: "Vi\xF1etas Geek de Domingo (VII)"
 
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
-<!--more-->
+<!--more--><!--ad-->
 <div id="gallery-7" class="gallery galleryid-1792 gallery-columns-1 gallery-size-thumbnail">
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">

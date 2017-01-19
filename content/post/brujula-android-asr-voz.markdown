@@ -50,7 +50,7 @@ Empecemos con un video de la aplicación funcionando:
 
 Para realizar esta aplicación se ha tomado como base la brújula de la _ROM_ MIUI. Se le ha añadido el reconocimiento de voz (_ASR_) y se modificó la la interfaz de la brújula para que mostrara hacia donde tiene que dirigirse el usuario en función del comando de voz. Veamos la primera pantalla:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Inicio de la aplicación
 

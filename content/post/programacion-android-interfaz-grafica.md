@@ -21,7 +21,7 @@ title: "Programaci\xF3n Android: Interfaz gr\xE1fica. Conceptos b\xE1sicos"
 
 Todos los componenetes de la interfaz de usuario de Android descienden de la clase ***View.*** Dichos objetos están organizados en forma de árbol y pueden contener nuevos objetos View, permitiendo crear interfaces muy completas.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

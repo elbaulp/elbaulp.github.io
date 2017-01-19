@@ -25,7 +25,7 @@ El mensaje se oculta modificando el valor de cada pixel para que contenga parte 
 
 >Toda la parte explicativa está extraida del enunciado del problema.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

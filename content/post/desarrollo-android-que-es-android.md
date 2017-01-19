@@ -18,7 +18,7 @@ title: "Desarrollo android. \xBFQu\xE9 es Android?. Traducci\xF3n de developer.a
 
 Android es un conjunto de software para dispositivos móviles que incluye Sistema Operatívo, [middleware](http://es.wikipedia.org/wiki/Middleware) y las aplicaciones principales. El [SDK de Android](http://developer.android.com/sdk/index.html) proporciona las herramientas y APIs necesarias para comenzar a desarrollar aplicaciones para la plataforma Android usando el lenguaje de programación Java.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Características
 

@@ -27,7 +27,7 @@ Llevaba tiempo queriendo instalar en mi equipo la distribución <a target="_blan
 Encontré un pequeño problema al instalarla, y era que al tener dos pantallas conectadas al pc, por defecto las clonaba, es decir, que aparecía lo mismo en las dos pantallas. Cuando cambiaba la configuración para mostrarlas como dos pantallas independientes todo iba bien, pero al reiniciar volvía a clonarlas.
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 Después de un poco de búsqueda por la red encontré solución al problema, usando el comando xrandr de la siguiente manera:
 

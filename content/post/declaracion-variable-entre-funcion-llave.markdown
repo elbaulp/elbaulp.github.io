@@ -26,7 +26,7 @@ Hace bastante tiempo me encontré un un código como este:
 int main(c,v) char *v; int c;{...}
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 Nunca lo había visto, declarar variables entre el nombre de una función y la primera llave, resulta que esta sintaxis corresponde con la definición de funcionas a la vieja usanza de C (pre-ANSI C):
 

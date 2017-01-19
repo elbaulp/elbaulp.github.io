@@ -23,7 +23,7 @@ He de decir que el proyecto no lo estoy haciendo solo, lo formamos un equipo de 
 
 A continuación voy a explicar mediante capturas de pantalla algunas funcionalidades que tiene el programa.
 
-<!--more-->
+<!--more--><!--ad-->
 
 <figure>
 	<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="500" width="305" src="https://1.bp.blogspot.com/-7UI6P-RRixQ/TdAVCyzDQ6I/AAAAAAAAAeY/SZHOWPXVFcg/s500/icono.png"></amp-img>

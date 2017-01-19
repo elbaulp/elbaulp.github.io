@@ -26,7 +26,7 @@ También quiero aprovechar para hablaros de <a target="_blank" href="http://www.
 Dicho todo esto, aquí tenéis los screencast:
 
 
-<!--more-->
+<!--more--><!--ad-->
 <div >
 <p>
 </p>

@@ -23,7 +23,7 @@ Los recursos Plurals son un conjunto de strings. Estos strings representan una f
 
 Como puedes notar, las frases son iguales para los números 2 y 10. Sin embargo, la frase para 1 huevo es diferente. Android permite representar esta variación con el recurso llamado plurals. En el siguiente ejemplo vemos como se representan estas dos variaciones.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```xml
 <resources>

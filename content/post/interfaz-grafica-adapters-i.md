@@ -27,7 +27,7 @@ Un objeto Adaptador actúa como puente entre un AdapterView y los datos de una V
 
 Se puede decir, que los adaptadores son colecciones de datos, que asignamos a una vista para que ésta los muestre, por ejemplo, podemos crear un ArrayAdapter a partir de un array de string ya creado y con datos, y asignar este adaptador a un ListView, así, el ListView mostrará los datos del array.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Mediante el uso de ***Adapters*** definimos una forma común de acceder a colecciones de datos.
 

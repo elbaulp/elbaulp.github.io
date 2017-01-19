@@ -25,7 +25,7 @@ The Internet of Things is more than a catchy marketing term; it’s coming.
 
 Gartner projects an estimated 8.4 billion connected “things” installed in the business category by 2020. So what does this mean for the building and facility management space? It enables an entirely new generation of devices with a “digital voice” to create and communicate information on their status and surrounding environment generating an unparalleled amount of data to be captured, analyzed, and acted upon.
 
-<!--more-->
+<!--more--><!--ad-->
 
 This paper discusses what’s driving the adoption of the Internet of Things (IoT) in building and facility management, how to create value from the IoT for your organization, and considerations for implementing an IoT strategy for your facility.
 

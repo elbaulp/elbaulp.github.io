@@ -25,7 +25,7 @@ Today, when I check for updates in my _Gentoo_ machine, the new Firefox 48 was r
 configure: error: you don't have NSS installed or your version is too old
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 I tried to enable the `NSS` _USE_ flag, but did not work, so I went to the [Gentoo forums](https://forums.gentoo.org/viewtopic-p-7951120.html#7951120 "Can't update to firefox 48") and asked there. After a few minutes they answered me, it is a current [bug](https://bugs.gentoo.org/show_bug.cgi?id=590424) that need to be solved. But fortunately there is a workaround until the bug is fixed:
 

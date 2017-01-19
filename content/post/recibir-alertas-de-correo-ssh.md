@@ -28,7 +28,7 @@ En linux, cada vez que un usuario accede al sistema, el archivo *.bashrc* se eje
 
 # Instalar MailX
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```bash
 apt-get install mailx

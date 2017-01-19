@@ -28,7 +28,7 @@ Usando estos dos web services he querido proporcionar dos ejemplos, ambos son pe
 
 Empezaré con **freegeoip**, al ser la más simple. El código para armar la petición es el siguiente:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```java
 RestRequest rq = new JSONRestRequest();

@@ -27,7 +27,7 @@ Nginx (Pronunciado engine-x) es un servidor [HTTP](/como-funciona-http2-protocol
 
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Instalando dependencias
 

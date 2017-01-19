@@ -30,7 +30,7 @@ Balancear cargas a lo largo de múltiples instancias de aplicaciones es una téc
 
 Nginx puede configurarse para hacer las veces de un balanceador de carga Http para distribuir el tráfico a varios servidores de aplicaciones.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Métodos de balanceo en nginx
 

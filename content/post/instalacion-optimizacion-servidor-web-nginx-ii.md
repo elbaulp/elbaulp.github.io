@@ -28,7 +28,7 @@ title: "Instalaci\xF3n y optimizaci\xF3n de un servidor web con Nginx (II)"
 
 Continuando con el artículo anterior, ahora procedemos a instalar PHP-FPM.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Instalar PHP-FPM
 

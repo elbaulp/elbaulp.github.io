@@ -28,7 +28,7 @@ title: 18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer
 Tras mucho buscar, al fin he conseguido recopilar una lista de libros que todo _Científico de Datos_ o _Ingeniero de Datos_ debería tener en su
 biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de los libros ha sido cogida de Amazon)
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 # Para Data Scientist

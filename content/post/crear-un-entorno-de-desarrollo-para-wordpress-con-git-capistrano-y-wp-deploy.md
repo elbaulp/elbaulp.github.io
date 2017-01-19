@@ -46,7 +46,7 @@ Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de 
 
 Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por **nginx**, en éste blog ya vimos [cómo instalar y configurar Nginx con php5-fpm][2].
 
-<!--more-->
+<!--more--><!--ad-->
 
 # Instalar y configurar Capistrano y Wp-Deploy
 

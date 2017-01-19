@@ -23,7 +23,7 @@ Los ejemplos de recursos más familiares son cadenas de texto, colores e imágen
 
 Existen mucho recursos en Android, que vamos a ver a lo largo de las etradas posteriores. Empezaremos por un recurso muy común, los string:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Recursos string
 

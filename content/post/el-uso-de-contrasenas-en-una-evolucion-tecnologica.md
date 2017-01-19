@@ -29,7 +29,7 @@ El informe se centra en la necesidad de reconsiderar la forma de gestionar contr
 > *”Las contraseñas con al menos ocho caracteres, un número, mezcla de mayúsculas y minúsculas y símbolos no alfanuméricos parecieran ser robustas hace algún tiempo. Pero pueden ser fácilmente crackeadas con la aparición de software y hardware avanzado.”*
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 ”*Lo ideal sería usar contraseñas largas y verdaderamente aleatorias, pero la gente no las usaría”, *dijo Stewart.

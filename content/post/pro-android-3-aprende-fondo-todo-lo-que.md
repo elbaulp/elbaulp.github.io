@@ -19,7 +19,7 @@ Hace unas semanas encargué este libro en Amazon ([Pro Android 3](http://amzn.to
 
 Conforme vaya leyendo iré escribiendo entradas explicando lo aprendido, (en español, por supuesto ). Lo empezaré mas o menos a mediados de Junio, que estaré más libre. De momento os dejo el contenido de este gran libro:
 
-<!--more-->
+<!--more--><!--ad-->
 
 <figure>
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"  height="500" width="456" src="https://lh3.googleusercontent.com/-kOeV7g_zZ7M/Td-CkTyKI1I/AAAAAAAAAiU/3KErtvRJIAw/s288/proAndroid3.png"></amp-img>

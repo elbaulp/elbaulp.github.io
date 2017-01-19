@@ -20,7 +20,7 @@ title: Introduccion a base de datos
 
 Lo subo a modo de manual para todos.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

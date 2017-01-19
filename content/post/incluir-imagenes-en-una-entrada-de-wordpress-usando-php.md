@@ -29,7 +29,7 @@ title: "Incluir im\xE1genes en una entrada de WordPress usando PHP"
 
 Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página &#8220;2014 Galery&#8221;, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Antes de pasar al fragmento de código, tenemos que asumir algunas cosas. El `ID` de la entrada de imagen sin adjuntar es `$att_id`. El `ID` de la entrada de nuestra página es `$page_id`. He mencionado `ID` de la entrada, tanto para la imagen y la página porque WordPress almacena las entradas, páginas y archivos en una misma tabla `wp_posts` en la [base de datos][1]. Así que todas las entradas tendrán un `ID`.
 

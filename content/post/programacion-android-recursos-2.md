@@ -19,7 +19,7 @@ Android soporta principalmente dos tipos de recursos: archivos XML y archivos ra
 
 Podemos encontrar dos tipos de archivos XML: uno se compilará a un formato binario y el otro se copiará tal como es al dispositivo. Como ejemplo podemos poner los ficheros XML de recursos[ string ][1]y los ficheros de [layout][2], ambos se compilarán a un formato binario antes de formar parte del paquete de instalación. Estos ficheros XML tienen formatos predefinidos en los que los nodos XML se traducen a IDs.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Por supuesto, también se pueden elegir archivos XML para guardarlos con su formato propio, estos archivos no serán interpretados y se les asignará un ID de recurso para poder identificarlos. Sin embargo, podemos querer que estos ficheros también se compilen a un formato binario. Para lograrlo, hay que colocarlos bajo el directorio ***./res/xml***. En tal caso, deberemos usar los lectores XMl que proporciona Android para acceder a los nodos del fichero.
 

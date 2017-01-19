@@ -60,7 +60,7 @@ Agrega la siguiente línea al archivo `/etc/privoxy/config`:
 
 Además debes agregar las siguientes línas al archivo `/etc/tor/torrc`:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```bash
 AvoidDiskWrites 1

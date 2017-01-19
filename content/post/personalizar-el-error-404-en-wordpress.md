@@ -24,7 +24,7 @@ Es una buena práctica sugerir enlaces que puedan estar relacionados con lo que 
 
 Con todo esto en mente busqué cómo crear **errores 404 personalizados** y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```php
 <p>

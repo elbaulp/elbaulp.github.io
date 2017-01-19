@@ -21,7 +21,7 @@ title: "C\xF3mo solucionar errores Al Implementar Amp-mustache"
 
 Intentando implementar la etiqueta `amp-mustache` para el blog encontré muchos problemas, la idea era usar una plantilla para que fuera rellenada desde un [json](/como-mapear-json-a-objetos-java-con-jackson-objectmapper/ "Cómo mapear json a objetos Java con jackson ObjectMapper"). El código era bastante simple:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```html
   <amp-list

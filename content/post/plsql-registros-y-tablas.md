@@ -16,7 +16,7 @@ title: PL/SQL. Registros y Tablas
 - Los dos tipos deben ser definidos como un nuevo tipo antes de [declarar variables][1] de ese nuevo tipo.
 - El modo de definir nuevos tipos de variables en PL/SQL es a través de la palabra reservada `TYPE`:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```sql
 TYPE nuevo_tipo IS tipo_original.

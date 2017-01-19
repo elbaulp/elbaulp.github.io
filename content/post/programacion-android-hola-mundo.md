@@ -24,7 +24,7 @@ Antes de empezar, quiero comunicar que todas las entradas relacionadas con los t
 
 En esta entrada vamos a empezar directamente con el típico Hola Mundo (Hello World):
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## CREANDO EL PROYECTO
 

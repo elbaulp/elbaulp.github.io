@@ -33,7 +33,7 @@ title: 6 formas usadas por los cibercriminales para robar o vulnerar credenciale
 
 El mundo digital es un vecindario muy peligroso lleno de atacantes listos para robar los datos más personales e importantes para los negocios. A estas alturas deberíamos saber que la ”*[seguridad][1]*” significa algo más que disponer de una contraseña única y larga. Para entender cómo proteger nuestros datos y cuentas, en *duosecurity* han hecho una recopilación de las formas más comunes que usan los atacantes para robar datos ajenos en la red.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### 1: Malware
 

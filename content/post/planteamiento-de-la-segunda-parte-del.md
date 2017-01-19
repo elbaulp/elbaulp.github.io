@@ -15,7 +15,7 @@ title: Planteamiento de la segunda parte del curso de Android
 
 Como <a target="_blank" href="/terminada-la-primera-parte-del-manual">dije hace unos días</a>, la primera parte de Programación <a target="_blank" href="https://elbauldelprogramador.com/curso-programacion-android/">Android</a> está terminada. [Ya está disponible para descargar][2]. En la segunda parte voy a explicar en detalle el funcionamiento de los proveedores de contenidos. Y también hablaré del <a target="_blank" href="http://developer.android.com/reference/android/os/StrictMode.html">StrictMode</a>, que básicamente es una herramienta para desarrolladores que nos avisa de cosas que puede que estemos haciendo sin darnos cuenta, como por ejemplo acceso a disco o red en el hilo principal de la aplicación.
 
-<!--more-->
+<!--more--><!--ad-->
 
 A continuación dejo un índice del esquema que voy a seguir en esta segunda parte:
 

@@ -20,7 +20,7 @@ title: Colorear la barra de estado con Simple StatusColor en DWM 6.1
 
 Días atrás hablamos [sobre DWM][1] y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Para aquel que quiera simplemente aplicar el parche y empezar a usarlo, debe leer únicamente la siguiente sección. Aquellos que estén interesados en los detalles técnicos pueden leer el artículo completo.
 

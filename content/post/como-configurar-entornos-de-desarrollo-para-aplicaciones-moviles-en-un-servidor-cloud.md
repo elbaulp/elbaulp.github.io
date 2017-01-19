@@ -23,7 +23,7 @@ La razón de usar un servicio cloud es muy sencilla, éstos entornos ofrecen la 
 
 Otra ventaja viene dada a la hora de hacer pruebas, ya que se puede crear un entorno de prueba en minutos, sin necesidad de afectar al entorno estable.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Crear el servidor
 

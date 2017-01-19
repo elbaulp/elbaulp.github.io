@@ -25,7 +25,7 @@ title: "Buenas pr\xE1cticas para el Dise\xF1o de una API RESTful Pragm\xE1tica"
 
 Tu modelo de datos ha empezado a estabilizarse y es el momento de crear una API pública para tu aplicación web. Te das cuenta de que es difícil hacer cambios significativos a tu API una vez que fue liberada, quieres lo mejor y lo antes posible. Ahora, en internet no escasean opiniones sobre diseño de APIs. Pero, debido a que no hay un standard adoptado popularmente que funcione en todos los casos, te quedas con un manojo de opciones: ¿Qué formatos deberías aceptar? ¿Cómo deberías autenticar? ¿Debería tu API ser versionada?
 
-<!--more-->
+<!--more--><!--ad-->
 
 Diseñando una API para [SupportFu](http://www.supportfu.com/) (una alternativa para [Zendesk](http://www.supportfu.com/zendesk-alternative)), intenté encontrar respuestas pragmáticas a estas preguntas. Mi objetivo para la [API de SupportFu](http://dev.supportfu.com/api/v1) es que sea fácil de usar, facil de adoptar y lo suficientemente flexible para implementarla en nuestras propias interfaces de usuario.
 

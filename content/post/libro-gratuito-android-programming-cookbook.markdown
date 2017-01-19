@@ -29,7 +29,7 @@ In this ebook, we provide a compilation of Android programming examples that wil
 
 With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.
 
-<!--more-->
+<!--more--><!--ad-->
 
 > **NOTA**: Si quieres apoyar el trabajo que realizamos en _El Baúl del Programador_, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga **debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión** ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en [RevResponse](http://www.revresponse.com/join.php?refbrand=bashyc-blogspot "RevResponse") y empezar a ofrecer guías de interés a tus lectores. Visita el [catálogo completo de guías.](http://elbauldelprogramador.tradepub.com/category/information-technology/1207/ "Catálogo completo de Guías gratuítas")
 

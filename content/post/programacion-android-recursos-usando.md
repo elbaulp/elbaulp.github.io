@@ -20,7 +20,7 @@ Esta clase R la genera el comando aapt en una pasada anterior a la compilación 
 
 Al igual que la carpeta “res”, la clase R se organiza en subclases, así por ejemplo el icono que colocamos en ./res/drawable/icon tiene su correspondencia en R.drawable.icon (que es un identificador estático de tipo int y sirve para acceder al recurso).
 
-<!--more-->
+<!--more--><!--ad-->
 
 Así pues los ID de recurso están compuestos de:
 

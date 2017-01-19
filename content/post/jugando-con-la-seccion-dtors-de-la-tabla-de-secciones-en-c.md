@@ -21,7 +21,7 @@ Estas secciones se crean para los [destructores][3] y [constructores][4], respec
 
 Veamos un ejemplo para aclarar su funcionamiento:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```c
 #include <stdio.h>

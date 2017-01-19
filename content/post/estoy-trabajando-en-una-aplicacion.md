@@ -15,7 +15,7 @@ title: 'Nuevo Proyecto Android: Fav Sites'
 
 Estoy trabajando en una aplicación Android que consiste en almacenar los lugares favoritos del usuario en un mapa, debido al tiempo que dedico a la misma, estos días no he podido seguir publicando entradas sobre [Programación Android][1], en breve seguiré con el ritmo de publicación.
 
-<!--more-->
+<!--more--><!--ad-->
 
 De momento la aplicación es muy básica y la interfaz muy simple. Dejo un vídeo para que os hagáis una idea de como es:
 

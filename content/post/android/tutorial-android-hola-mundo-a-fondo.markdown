@@ -31,7 +31,7 @@ En el [artículo anterior](/android/conceptos-basicos/) se dieron unas nociones 
     layout="responsive"
     width="480" height="270"></amp-youtube>
 
-<!--more-->
+<!--more--><!--ad-->
 
 # Creación de las pantallas en Android
 

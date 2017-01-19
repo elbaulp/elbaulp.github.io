@@ -28,7 +28,7 @@ title: Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos
 
 A la hora de crear proyectos, suele ser una tarea difícil elegir bajo qué licencia liberar el código, al menos para mi. Con este artículo que traduzco de *<a title="Outercurve" href="http://www.outercurve.org" target="_blank">outercurve.org</a>* espero facilitar la tarea de selección de una licencia.
 
-<!--more-->
+<!--more--><!--ad-->
 
   * El software está protegido mediante copyright por las leyes de muchos paises. Por defecto, si no se especifica ninguna licencia, el código pertenece a su autor original.
   * Ya que el copyright pertenece a la persona que escribe el software, dicha persona puede establecer cómo se usa. **No decir cómo se puede usar no elimina la responsabilidad del autor como propietario.**

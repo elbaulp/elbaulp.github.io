@@ -12,7 +12,7 @@ title: "Programaci\xF3n para Juegos. Art\xEDculo 3. \xBFQu\xE9 es un pixel?"
 
 Este artículo hace referéncia a la [Lección 5 - Colores Clave][1].
 
-<!--more-->
+<!--more--><!--ad-->
 
 # ¿Qué es un pixel?
 
@@ -25,7 +25,7 @@ Uint32 colorkey = SDL_MapRGB( optimizedImage-&gt;format, 0, 0xFF, 0xFF );
 
 Aquí tenemos una línea de código de la [Lección 5 - Colores Clave][1]. Ya sabemos que `SDL_MapRGB()` devuelve un pixel, pero ¿Cómo es la estructura `Uint32` un píxel?
 
-<!--more-->
+<!--more--><!--ad-->
 
 Bien, Uint32 es lo siguiente:
 

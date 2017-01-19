@@ -42,4 +42,4 @@ O en la siguiente imagen:
     </a>
 </figure>
 
-<!--more-->
+<!--more--><!--ad-->

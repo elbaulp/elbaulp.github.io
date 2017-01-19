@@ -27,7 +27,7 @@ La primera tarea que se me asignó fue lograr que el diálogo para introducir la
 
 Para explicar cómo conseguir este comportamiento escribiremos una aplicación trivial, enfocada únicamente a explicar todo el proceso.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Actividad Principal
 

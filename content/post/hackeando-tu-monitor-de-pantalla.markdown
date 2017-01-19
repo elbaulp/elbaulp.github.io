@@ -30,7 +30,7 @@ En el blog de [Bruce Schneier]() he leido esta interesante noticia que os traduz
 
 > Un grupo de investigadores ha encontrado la forma de hackear directamente el pequeño ordenador que controla el monitor de la pantalla sin acceder directamente al ordenador en sí (Lo que entendemos por la torre, el portatil etc). Tanto el mini ordenador de la pantalla como el ordenador, ven los píxeles que se muestran por pantalla -- por tanto es posible espiar lo que el usuario hace -- así como manipular los píxeles y mostrar imágenes diferentes.
 
-<!--more-->
+<!--more--><!--ad-->
 
 _Cui_, el científico que trabaja en _Reb Ballon [Security](/category/security-now/ "Articulos de seguridad")_ y Doctor por la Universidad de Columbia, presentó su investigación en la __Def Con__ de este año.
 

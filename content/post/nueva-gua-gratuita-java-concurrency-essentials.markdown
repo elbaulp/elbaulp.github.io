@@ -25,7 +25,7 @@ title: "Nueva Gu\xEDa Gratuita: Java Concurrency Essentials"
 
 Concurrency is always a challenge for developers and writing concurrent programs can be extremely hard. There is a number of things that could potentially blow up and the complexity of systems rises considerably when concurrency is introduced. However, the ability to write robust concurrent programs is a great tool in a developer’s belt and can help build sophisticated, enterprise level applications.
 
-<!--more-->
+<!--more--><!--ad-->
 
 In this course, you will dive into the magic of concurrency. You will be introduced to the fundamentals of concurrency and concurrent code and you will learn about concepts like atomicity, synchronization and thread safety. As you advance, the following lessons will deal with the tools you can leverage, such as the Fork/Join framework, the java.util.concurrent JDK package. To sum those up, you will learn about testing concurrent applications.
 

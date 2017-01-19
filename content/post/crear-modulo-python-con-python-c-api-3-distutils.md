@@ -32,7 +32,7 @@ title: "Crear un m\xF3dulo para python con la Python C API (III) - DistUtils"
 
 Como dijimos en la entrada[ anterior][5], vamos a hablar de *DistUtils*, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Compilar el módulo
 

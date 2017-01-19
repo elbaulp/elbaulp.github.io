@@ -17,7 +17,7 @@ title: "Lo que se viene en programaci\xF3n funcional de Java&#8230;"
 Elliott Rusty Harold <a href="http://cafe.elharo.com/programming/java-programming/why-functional-programming-in-java-is-dangerous/" target="_blank">está anunciando en su blog</a> que la programación funcional en Java es peligrosa. Está equivocado, y ya perdió su turno &#8212; Está viniendo con Java le guste o no.
 Un resumen de las razones que menciona en su artículo son:
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 1. Java no es un lenguaje de <a href="http://en.wikipedia.org/wiki/Lazy_evaluation" target="_blank">evaluación perezosa</a>. En Java, los programadores pueden enredarse y terminar generando errores con heap y stack.

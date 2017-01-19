@@ -16,7 +16,7 @@ Hace algún tiempo hubo colocada en la barra lateral una dirección de Bitcoin p
 Para aquellos que quieran conocer detalles más técnicos sobre bitcoin, hace tiempo se habló sobre el tema en [cómo funciona el bitcoin][1].
 
 La dirección a la que hacer las donaciones es la siguiente, y estará disponible en la barra lateral:
-<!--more-->
+<!--more--><!--ad-->
 <div >
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2014/01/Donar.png" width="178px" height="178px" /><br /><a  href="bitcoin:1DP3t19aiM1HgtaJbviB4bFvi5jrT5ccqA?label=El%20Baul%20del%20programador">¿Te gusta el Blog? Apóyanos mediante Bitcoins</a>
 </div>

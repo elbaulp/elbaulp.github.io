@@ -18,7 +18,7 @@ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 en nuestro terminal para saber cuales son los comandos que más usamos en linux, seguro que os sorprendéis al ver vuestros resultados.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Invito a participar en el meme a:
 

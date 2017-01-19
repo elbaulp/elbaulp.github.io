@@ -22,7 +22,7 @@ Y tras probarlo, puedo decir que es configurable a más no poder, fácil de usar
 
 En éste artículo veremos cómo instalarlo y qué paquetes de los que no vienen por defecto merece la pena instalar.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Requisitos
 

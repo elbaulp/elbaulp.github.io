@@ -14,7 +14,7 @@ title: Clases y Objetos. El Constructor
 
 Una vez que [se ha definido una clase][1], para usarla se ha de definir un objeto. Se define una variable de la clase Punto, exactamente igual que se define una variable de un tipo predefinido (int, float, etc.), o definido por el usuario. Las variables de una clase se denominan objetos. Los objetos usan la misma notación que cualquier tipo de variable, y su alcance se extiende desde la línea donde se ha declarado hasta el final del bloque.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Un objeto perteneciente a una clase se crea llamando a una función especial denominada constructor de la clase. El constructor se llama de forma automática cuando se crea un objeto, para situarlo en memoria e inicializar los miembros dato declarados en la clase. El constructor tiene el mismo nombre que la clase. Lo específico del constructor es que no tiene tipo de retorno, por lo que su sintaxis es más simple:
 

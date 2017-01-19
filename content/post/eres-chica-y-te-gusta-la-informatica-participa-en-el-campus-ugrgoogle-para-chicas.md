@@ -19,7 +19,7 @@ La facultad de informática de Granada (ETSIIT), en la cual estudio, está lleva
 
 El campus comienza el día 7 de Julio y acabará el 18 de ese mismo mes. A continuación se describe de qué trata dicho campus. Espero que todas las chicas Granadinas que lean esto se animen a participar y disfruten de la experiencia.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Hasta 32 chicas de 14 a 18 años y 3 profesoras de IES aprenderán a **crear aplicaciones y videojuegos** en un curso diseñado para impulsar las carreras de ingeniería entre las mujeres
 

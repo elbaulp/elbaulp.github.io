@@ -31,7 +31,7 @@ Personalmente pienso que en los blogs y páginas que leemos habitualmente es rec
 
 Es por eso que hoy voy a explicar cómo es posible detectar si nuestros visitantes tienen activado ad-block para nuestro sitio y así sugerirle de manera educada y sin molestarle demasiado si desea desactivarlo.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 Buscando cómo hacer esto me encontré con plugins para wordpress que bloquean al visitante que esté usandolo, lo cual no me parece correcto. Así que continué buscando y encontré un script que hace exáctamente lo que andaba buscando, *Adblock detector*.

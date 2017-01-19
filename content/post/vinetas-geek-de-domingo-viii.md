@@ -18,7 +18,7 @@ title: "Vi\xF1etas Geek de Domingo (VIII)"
 
 Como ya es habitual los fines de semana, os traigo otra recopilación de viñetas Geek, Buen domingo!
 
-<!--more-->
+<!--more--><!--ad-->
 <div id="gallery-8" class="gallery galleryid-1811 gallery-columns-1 gallery-size-thumbnail">
 <dl class="gallery-item">
 <dt class="gallery-icon landscape">

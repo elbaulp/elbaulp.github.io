@@ -22,7 +22,7 @@ Cada componente tiene un ciclo de vida distinto. Las superclases de estos compon
 
 Tienen un ciclo de vida muy corto, ya que se activan al producirse un mensaje de difusión, que capturan con el método callback:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```java
 void onReceive(Context curContext, Intent broadcastMsg)

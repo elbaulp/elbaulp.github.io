@@ -17,7 +17,7 @@ title: "El Ba\xFAl Del Programador Cumple 7 A\xF1os"
 
 Hoy este humilde blog cumple nada más y nada menos que 7 años. Todo empezó con la recomendación de un profesor cuando cursaba un Módulo superior en Desarrollo de Aplicaciones Informáticas, y hasta estas fechas hemos llegado. La verdad es que nunca esperé que llegara a mantener tanto tiempo el blog.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Un poquito de Historia
 

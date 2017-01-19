@@ -26,7 +26,7 @@ title: Eliminar la pila de actividades (Back Stack) en Android
 
 El concurso universitario de software libre sigue en marcha, como dije participo en <a href="https://play.google.com/store/apps/details?id=es.ugr.swad.swadroid" title="Swadroid Play Store" target="_blank">SWADROID</a>. La última implementación que se hizo era añadir una opción para cerrar sesión. Pero nos dimos cuenta que si el usuario cerraba sesión desde alguna [activity][1] distinta de la princial, no se mostraba la pantalla de login, si no la activity en la que estuviera en el momento de cerrar sesión. Por supuesto, esto no es el comportamiento deseado, lo ideal sería que al cerrar sesión se muestre la pantalla de login independientemente de dónde se encuentre el usuario. Hoy veremos cómo eliminar la pila de actividades de una aplicación Android para obtener este comportamiento.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Como es habitual, en stackoverflow se encontraba la respuesta, es tan sencillo como crear un [intent][2] con dos **flags**, *<a href="http://developer.android.com/reference/android/content/Intent.html#FLAG_ACTIVITY_SINGLE_TOP" title="Referencia" target="_blank">FLAG_ACTIVITY_SINGLE_TOP</a>* para no lanzar un activity si ya se está ejecutando encima de la pila y *<a href="http://developer.android.com/reference/android/content/Intent.html#FLAG_ACTIVITY_CLEAR_TOP" title="Referencia" target="_blank">FLAG_ACTIVITY_CLEAR_TOP</a>*, que tal y como indica la documentación:
 

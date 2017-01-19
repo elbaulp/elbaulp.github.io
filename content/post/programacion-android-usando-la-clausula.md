@@ -27,7 +27,7 @@ En esta entrada vamos a ver ambas.
 
 Imaginemos que queremos recuperar un lugar (De la aplicación [FavSites][2]) cuyo id sea 23. Usaríamos el siguiente código:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```java
 Activity activity;

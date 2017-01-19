@@ -16,7 +16,7 @@ En este tutorial veremos como capturar y manejar eventos.
 
 Un evento es simplemete algo que pasa. Como presionar una tecla, mover el ratón, redimensionar la ventana o cuando el usuario quiere cerrar la ventana.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```cpp
 //The headers

@@ -26,7 +26,7 @@ title: "C\xF3mo Definir Colores Personalizados en LaTeX"
 
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 Hay distintas formas de definir un color específico en $$\LaTeX$$. Normalmente lo más fácil es elegir un color predefinido del paquete `xcolor` o definirlo a mano usando el modelo RGB. Otra notación existente es `red!40!blue`. Esta notación crea un morado con 40% rojo y 60% azul. Veamos en este artículo los distintos métodos disponibles para la especificación de colores.
 

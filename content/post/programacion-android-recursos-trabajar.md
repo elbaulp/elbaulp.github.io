@@ -18,7 +18,7 @@ Además de los recursos estructurados [que hemos ido viendo][1], Android permite
 
 Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el directorio `./res/xml`. A continuación vamos a ver un ejemplo:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```xml
 <rootelem1>

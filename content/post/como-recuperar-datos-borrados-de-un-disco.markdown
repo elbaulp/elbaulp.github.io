@@ -37,7 +37,7 @@ title: "C\xF3mo Recuperar Datos Borrados De Un Disco"
 
 Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad no lo estamos borrando físicamente. Realmente se libera el espacio que tenía ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado. Hoy veremos cómo es posible recuperar datos borrados de un disco duro.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Esta técnica puede ser usada en el análisis forense de un sistema informático. No ya con el objetivo de recuperar un fichero, si no de demostrar que alguna vez existió cierto fichero con un contenido ilegal, amenazador etc. Para probar éste método vamos a simular una carta de amenaza que posteriormente borraremos del disco. Tras borrarlo, intentaremos buscar en dicho disco la evidencia de la amenaza, válida como prueba judicial. Más adelante mostraremos cómo recuperar una imagen borrada con autopsy.
 

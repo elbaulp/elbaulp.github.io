@@ -22,7 +22,7 @@ Continuando con el [tema de los componentes][1], en esta entrada vamos a ver:
 
 3 de los 4 tipos de componentes, actividades, servicios y emisor de notificaciones se activan mediante un mensaje asíncrono llamado *intent(intento)*. Los intents enlazan componentes individuales el uno al otro en tiempo de ejecución (se puede pensar que son los mensajeros que solicitan una acción de otro componente), si el componente pertenece a tu aplicación o a otra.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Un intent se crea con un objeto <a href="http://developer.android.com/reference/android/content/Intent.html">`Intent`</a>, el cual define un mensaje a activar, un componente específico o un *tipo* específico de componente; un intent puede ser explicito o implícito, respectivamente.
 

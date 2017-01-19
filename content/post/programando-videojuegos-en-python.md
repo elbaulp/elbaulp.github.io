@@ -15,7 +15,7 @@ Aunque no es la faceta más famosa de Python, Python es un lenguage con bastante
 
 A continuación haré una pequeña reseña de las librerías más útiles para desarollar videojuegos:
 
-<!--more-->
+<!--more--><!--ad-->
 
 - <a href="http://www.pygame.org/">Pygame</a>: Sin duda la librería más famosa de Python. Pygame lleva en desarrollo desde el 2001 por lo que tiene un gran comunidad, publicándose en su propia página web gran cantidad de juegos y demos con más de 1.000 proyecto registrados. Es multiplataforma a la perfección y la librería que menos problemas da al portar entre Linux/Windows/Mac, y es famosa por su facilidad de programación. Utiliza una librería de C llamada SDL, librería en la que están escritos los juegos 2d más famosos en Linux como Battle for Wesnoth, SuperTux o StepMania.
 - <a href="http://pyopengl.sourceforge.net/">PyOpenGL</a>: Hablando de Pygame, esta tiene un fallo, y es que no soporta Aceleración gráfica al basarse en SDL. Aquí entra en juego PyOpenGL, un binding de OpenGL que se puede combinar con Pygame para añadir las funciones que a este le faltan. Eso sí, requiere un nivel de conocimiento de programación de videojuegos más alto, al ser una capa de abstracción máyor. Para quien no conozca OpenGL, es la competencia de DirectX en el mundo del software Libre, y todos los juegos 3d libres y muchos cerrados corren sobre ella incluidos juegos de Blizzard y Valve.

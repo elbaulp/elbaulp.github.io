@@ -21,7 +21,7 @@ Además de brindarnos múltiples elementos que nos permiten desarrollar una apli
 
 Un Paquete es un objeto PL/Sql que agrupa lógicamente otros objetos PL/Sql relacionados entre sí, encapsulándolos y convirtiéndolos en una unidad dentro de la base de datos.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Los Paquetes están divididos en 2 partes: especificación (obligatoria) y cuerpo (no obligatoria). La especificación o encabezado es la interfaz entre el Paquete y las aplicaciones que lo utilizan y es allí donde se declaran los tipos, variables, constantes, [excepciones][3], [cursores][4], procedimientos y funciones que podrán ser invocados desde fuera del paquete.
 

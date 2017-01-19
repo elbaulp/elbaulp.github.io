@@ -22,7 +22,7 @@ title: Crean Un Algoritmo Que Replica Tu Letra
 
 Investigadores de la _UCL_ han desarrollado un software que analiza el texto escrito en papel de un individuo y replica de forma muy similar su letra. El programa se llama _My Text in Your Handwriting_ (Mi texto en tu letra).
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

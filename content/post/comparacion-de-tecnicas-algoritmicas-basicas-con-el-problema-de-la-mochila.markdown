@@ -35,7 +35,7 @@ Este artículo se basa en las prácticas que he hecho para una asignatura llamad
 
 ¿En qué consiste el problema de la mochila? Tenemos una mochila con una determinada capacidad y un conjunto de objetos para meter en la mochila. Cada objeto tiene asociado un peso y un beneficio. El problema consiste en llenar la mochila de tal forma que el beneficio obtenido sea el **máximo**.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Las distintas técnicas algorítmicas que hemos usado para implementar este problema han sido:
 

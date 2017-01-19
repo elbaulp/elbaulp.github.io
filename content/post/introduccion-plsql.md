@@ -16,7 +16,7 @@ Ahora que el [temario de SQL][1] está terminado, voy a empezar a escribir sobre
 
 El trabajo realizado [hasta ahora][3] con la base de datos se ha hecho de forma interactiva: el usuario introducía una orden (en SQL) y Oracle proporcionaba una respuesta. Esta forma de trabajar no resulta operativa en un entorno de producción, porque todos los usuarios no conocen ni utilizan SQL, y además suelen producirse frecuentes errores.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Para superar estas limitaciones, Oracle incorpora un gestor PL/SQL en el servidor de la BD y en algunas de sus herramientas (Forms, Reports, Graphics, etc.). Este lenguaje incorpora todas las características propias de los lenguajes de tercera generación: manejo de variables, estructura modular (procedimientos y funciones), estructuras de control (bifurcaciones, bucles y demás estructuras), control de excepciones, y una total integración en el entorno Oracle.
 

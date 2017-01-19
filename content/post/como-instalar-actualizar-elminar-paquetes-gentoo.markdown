@@ -34,7 +34,7 @@ Hace unos meses me decidí a instalar _Gentoo_ en mi portátil por probar cómo 
 
 Una de las cosas que más me gusta es su gestor de paquetes, _emerge_ y sus programas auxiliares para administrar el sistema (_equery, eclean, euse y similares_) es por ello que escribo este artículo, para recopilar una lista de las tareas más habituales en el día a día de usar _Gentoo_. Cómo buscar paquetes a instalar, eliminar paquetes instalados, consultar qué paquetes queremos instalar, limpiar espacio en el sistema, actualizarlo etc. Empecemos:
 
-<!--more-->
+<!--more--><!--ad-->
 
 # Comprobar si hay actualizaciones para el sistema #
 

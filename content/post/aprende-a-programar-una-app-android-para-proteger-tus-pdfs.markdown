@@ -27,7 +27,7 @@ Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para p
 
 ¿Por qué puede interesarte? Bien, esto es útil en varios escenarios, por ejemplo cuando quieres subir tus documentos sensibles a la nube, en formato PDF, y necesitas añadir una capa de seguridad encriptando el documento con un password.
 
-<!--more-->
+<!--more--><!--ad-->
 
 De hecho, como norma general, los usuarios de smartphones y tablets deberíamos preocuparnos por la seguridad de nuestros documentos sensibles, puesto que podemos terminar instalando decenas y decenas de apps que pueden acceder a nuestros recursos: tarjeta SD, cámara, contactos, localización, etc.
 

@@ -22,7 +22,7 @@ Un intent sirve para invocar componentes, en android entendemos por componentes 
 
 ### Introducción a los Intents
 
-<!--more-->
+<!--more--><!--ad-->
 
 Como mecanismo para invocar componentes, los intents son bastante fáciles de comprender. Básicamente nos permiten llamar a aplicaciones externas a la nuestra, lanzar eventos a los que otras aplicaciones puedan responder, lanzar alarmas etc.
 

@@ -20,7 +20,7 @@ Para usar una función son necesarios tres pasos:
 * Definición de la función, de la tarea a realizar.
 * Llamada de la función y realización de la tarea.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Vamos a estudiar cómo se pasa una variable a una función en uno de sus argumentos.
 

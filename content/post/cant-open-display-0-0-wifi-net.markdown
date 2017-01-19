@@ -27,7 +27,7 @@ _NetworkManager_ tiene la costumbre de cambiar el nombre del host (_hostname_) a
 Can't Open Display: :0.0
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Solución: Establecer de forma permanente un hostname
 

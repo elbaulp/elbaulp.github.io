@@ -37,7 +37,7 @@ Me permito extraer el la definición de genbeta::Dev. Para una explicación más
 
 > *Antes de empezar con lo interesante tenemos que saber que es **gpg** (GNU Privacy Guard), que es un derivado libre de **PGP** y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (<a href="http://www.gnupg.org/download/index.en.html" target="_blank">podéis descargarlo desde la página oficial</a>) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).*
 
-<!--more-->
+<!--more--><!--ad-->
 
 # Instalar el plugin para Vim
 

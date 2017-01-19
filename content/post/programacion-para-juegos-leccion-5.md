@@ -20,7 +20,7 @@ Bien, supongamos que queremos fusionar esta imagen llamada _foo_:
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" alt="foo"  height="64" src="https://lh6.ggpht.com/_IlK2pNFFgGM/TT6FKpmp0fI/AAAAAAAAAQs/oFYGZsQzBn8/foo.jpg" width="32"></amp-img>
 </figure>
 
-<!--more-->
+<!--more--><!--ad-->
 
 a este fondo:
 

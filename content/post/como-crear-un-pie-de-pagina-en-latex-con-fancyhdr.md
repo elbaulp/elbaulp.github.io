@@ -26,7 +26,7 @@ title: "C\xF3mo crear un pie de p\xE1gina en LaTeX con fancyhdr"
 
 Como he mencionado en algún [artículo anterior][1], he aprendido bastante a programar en LaTeX reescribiendo el [curso de Android][2]. Hoy vamos a ver cómo crear un pie de página en LaTeX.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

@@ -27,7 +27,7 @@ title: Informe Sobre Defensa Frente a Ciberamenazas 2015. Por CyberEdge Group
 
 Descubra cómo impactan las aplicaciones web y los dispositivos móviles sobre la capacidad de TI para defenderse con éxito contra las amenazas cibernéticas, y averigüe por qué SDN puede ser la solución.
 
-<!--more-->
+<!--more--><!--ad-->
 
 El segundo informe anual sobre defensa frente a ciberamenazas de CyberEdge Group proporciona una visión detallada de cómo los profesionales de seguridad informática perciben las amenazas y planean defenderse de ellas. El informe, que se basa en una encuesta realizada en diciembre de 2014 a más de 800 profesionales y responsables de la toma de decisiones de seguridad informática, aporta innumerables datos relevantes de los que los equipos de seguridad informática se pueden valer para descubrir mejor en qué se diferencian sus percepciones, prioridades y estado de seguridad de los de sus homólogos.
 

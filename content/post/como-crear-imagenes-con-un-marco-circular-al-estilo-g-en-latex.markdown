@@ -25,7 +25,7 @@ Los que uséis G+ sabréis que las fotos de perfil aparecen encuadradas en un c�
 
 Por supuesto, podría haber creado la imagen directamente con forma circular, pero ya que estoy usando una plantilla $$\LaTeX$$ para el Curriculum, me propuse buscar la manera de implementarlo.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Resulta que es bastante sencillo, el siguiente código conseguirá el efecto deseado:
 

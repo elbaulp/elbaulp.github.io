@@ -28,7 +28,7 @@ So first I decided to change all the `portage` files to my secondary hard disk d
 
 # Changing /etc/portage/make.conf file
 
-<!--more-->
+<!--more--><!--ad-->
 
 Suppose the new directory is `/home/hkr/ssd2/portage`.
 

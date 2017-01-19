@@ -33,7 +33,7 @@ Hace tiempo que hablamos aquí sobre lo que es un [Buffer Overflow](/explotacion
 
 > Este artículo está basado en el episodio #565 de Security Now!, _Control-Flow Enforcement Technology (CET)_, puedes ver todos los artículos traducidos en la página [security now!](/security-now/ "Página de episodios traducidos").
 
-<!--more-->
+<!--more--><!--ad-->
 
 # Cómo pretende Intel acabar con los buffers overflows
 

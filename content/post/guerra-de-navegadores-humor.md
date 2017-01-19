@@ -17,4 +17,4 @@ title: Guerra de navegadores [Humor]
     <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/guerra-de-navegadores-humor.jpg" alt="{{ title }}" title="{{ title }}" width="674" height="521"></amp-img>
 </figure>
 
-<!--more-->
+<!--more--><!--ad-->

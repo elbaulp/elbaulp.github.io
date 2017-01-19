@@ -33,7 +33,7 @@ Todos son cuadrados y siempre tienen una zona llamada *zona tranquila* ó **quie
 
 La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:
 
-<!--more-->
+<!--more--><!--ad-->
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2012/12/qrbaultargetdownright2.png" alt="qrbaultargetdownright" width="280px" height="280px" />
 </figure>

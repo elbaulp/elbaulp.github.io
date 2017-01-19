@@ -18,7 +18,7 @@ title: Cuarto Hackathon de proyectos de software libre de la UGR
 Debido al éxito y la [gran y satisfactoria experiencia][1] que me causó el 3er Hackathón de la <a href="http://osl.ugr.es/" target="_blank">OSL</a>, aprovecho para comunicar que se ha organizado un cuarto hackathón de los días 13 de abril al 16, y, por supuesto allí estaré para participar. Os dejo la información para todo aquel que desee participar (Siempre y cuando estéis viviendo en Granada).
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 > Tras la experiencia positiva del [tercer hackathon][2], y con vistas al [final del concurso nacional y local][3], celebraremos de los días 13 al 16 de abril un nuevo hackathon de proyectos de SL. La principal diferencia con el [anterior][4] será que, en este caso, se empezará a trabajar desde el principio con el proyecto que se elija de entre los participantes en el mismo. Por lo pronto, han confirmado:
 >

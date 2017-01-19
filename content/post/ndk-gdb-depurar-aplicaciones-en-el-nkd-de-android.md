@@ -18,7 +18,7 @@ title: NDK-gdb - Depurar aplicaciones en el NKD de Android
 En el artículo [Introducción al NDK de Android][1] se explicaron las nociones básicas del NDK, hoy vamos a ver un ejemplo un poco más complejo en el que aprenderemos a depurar código nativo en aplicaciones [Android][2]. La aplicación de ejemplo actuará como servidor esperando conexiones mediante *telnet*. Cuando un cliente se conecte al dispositivo a través *telnet*, será posible enviar y recibir mensajes. Así como ejecutar dos comandos, *ip_de <dominio>*, que devolverá la *IP* de dicho dominio, y *adios*, que finalizará la conexión.
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 El proyecto está disponible para descargar en <a href="https://github.com/algui91/androidSimpleServerNDKExample" target="_blank">GitHub</a>. He de decir que el código [C][3] usado en el ejemplo es una adaptación de un trozo de código del libro *<a href="http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&tag=elbaudelpro-21&linkCode=as2&camp=3626&creative=24822&creativeASIN=1593271441" target="_blank">Hacking: The Art of Exploitation</a>*, concretamente el ejemplo *simple_server.c* de la sección *0x425 A simple Server Example*.
 

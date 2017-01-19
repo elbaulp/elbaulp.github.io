@@ -15,7 +15,7 @@ title: "Consulta de Datos - Cl\xE1usula GROUP BY"
 
 ## Consultas agrupadas
 
-<!--more-->
+<!--more--><!--ad-->
 
 Una consulta agrupada se utiliza para considerar los registros cuyos ciertos campos tienen el mismo valor, y procesarlos de la misma manera, para contarlos, sumarlos, hacer la media etc.
 

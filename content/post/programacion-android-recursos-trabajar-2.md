@@ -17,7 +17,7 @@ Los recursos Raw se colocan bajo el directorio ***./res/raw***. Son recursos raw
 
 A diferencia de los archivos XML, colocados en ./res/xml, estos archivos no se compilan, se mueven al paquete de la aplicación tal y como son. Sin embargo, a cada fichero se le asignará un identificador en la clase R.java. Si colocamos un archivo de texto en ***./res/raw/test.txt***, podremos leerlo usando el código de abajo:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```java
 private String getStringFromRawFile(Context activity)

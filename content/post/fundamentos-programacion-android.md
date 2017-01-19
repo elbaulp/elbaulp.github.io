@@ -23,7 +23,7 @@ Estos ficheros se generan con la herramienta apk (En el directorio tools del SDK
 
 Las aplicaciones en Android tienen su propio entorno seguro de ejecución:
 
-<!--more-->
+<!--more--><!--ad-->
 
   * Cada aplicación se ejecuta en su propio proceso Linux. El sistema lo crea cuando ejecutamos la aplicación y lo destruye cuando no se use pasado un rato o cuando el Sistema necesite recursos para otra aplicación
   * Cada proceso se ejecuta en su propia máquina virtual, de esta manera está aislada del resto. De esta forma ante cualquier fallo en la aplicación solo afecta a su máquina virtual, no al resto.

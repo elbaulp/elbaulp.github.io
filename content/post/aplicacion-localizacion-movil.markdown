@@ -20,7 +20,7 @@ title: "3 Intervenciones Para Poner a Salvo Tu Tel\xE9fono Con Una Aplicaci\xF3n
 
 El robo de smartphones se ha disparado recientemente. Aumenta un 30% cada año, y aparentemente incluso el gobierno ha comenzado a notarlo porque quieren que las compañías de teléfonos diseñen dispositivos con una seguridad mejorada que ayuden a localizar el móvil en caso de pérdida. Pero mientras que las compañías aún no tienen una solución, existe una herramienta que puede ayudarnos. Dicha herramienta es una [aplicación para localizar móviles](http://xnspy.com/es/cell-phone-tracker.html). La mayoría viene con su sistema básico de localización por GPS, pero esta aplicación permite cuidar de su teléfono desde lejos. XNSPY es útil para tener el teléfono a salvo, veamos como funciona en esta breve guía.
 
-<!--more-->
+<!--more--><!--ad-->
 
 *Hack*de Seguridad 1: Seguimiento en Tiempo Real
 ------------------------------------------------

@@ -20,7 +20,7 @@ Antes de nada, el programa necesita instalar algunas dependencias, entre ellas l
 sudo aptitude install libsqlite python-wxgtk2.8
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 Una vez instaladas podemos ejecutar el programa haciendo clic en el archivo llamado main.py, o bien desde consola con:
 

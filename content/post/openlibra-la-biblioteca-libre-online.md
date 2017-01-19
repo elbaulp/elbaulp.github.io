@@ -24,7 +24,7 @@ La biblioteca la podéis encontrar en *[Biblioteca Creative Commons][2]*, pero d
 
 Os dejo con un poquito de historia sobre esta iniciativa:
 
-<!--more-->
+<!--more--><!--ad-->
 
 La *Biblioteca Creative Commons* se inici&oacute; hace apenas un par de meses como un simple repositorio en el que ir&iacute;a colgando de vez en cuando aquellos libros t&eacute;cnicos bajo licencias libres que pudieran resultar interesantes para la comunidad de desarrolladores.
 

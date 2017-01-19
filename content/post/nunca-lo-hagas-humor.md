@@ -17,4 +17,4 @@ title: "\xA1Nunca lo hagas! [Humor]"
 
 Por supuesto no se os debe ocurrir ejecutar este comando si no quereis quedaros sin SO.
 
-<!--more-->
+<!--more--><!--ad-->

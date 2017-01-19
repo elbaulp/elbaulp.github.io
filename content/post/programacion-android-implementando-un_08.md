@@ -19,7 +19,7 @@ En la anterior entrada de [programación Android][1], hablamos de cómo empezar 
 
 Para implementar el content provider de la aplicación [FavSites][3] hemos de extender de la clase ContentProvider y sobreescribir *onCreate()* para crear la base de datos y después implementar los métodos query, insert, update, delete y getType. En esta segunda parte de cuatro en la que se explica cómo implementar un content provider desde cero, vamos a ver cómo configurar inicialmente en conten provider, en la siguente entrada se verá como implementar los métodos query, insert, update, delete y getType.
 
-<!--more-->
+<!--more--><!--ad-->
 
 El método query requiere el conjunto de columnas que tiene devolver. Es similar a una cláusula [select][4], que necesita los nombres de las columnas junto con sus homólogos, a veces llamados también sinónimos. Android usa un objeto *map* al que llama *projection map* para representar los nombres de columnas y sus sinónimos. Es necesario crear este objeto para poder usarlo posteriormente en la implementación del método query.
 

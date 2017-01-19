@@ -22,7 +22,7 @@ En [Android](/curso-programacion-android), cuando se tiene un [`ListView`](/prog
 
 Para solucionar el problema, bastaría con deshabilitar la captura del evento `onTouch` para el `ScrollView`, si lo que estamos pulsando es el `ListView`, es decir:
 
-<!--more-->
+<!--more--><!--ad-->
 
 Al `ScrollView`, le añadimos un evento `onTouch`. Dentro, recuperaremos el `ListView`, para deshabilitar en su padre la intercepción de eventos `onTouch`. En éste caso, el padre del `ListView` es el `ScrollView`.
 

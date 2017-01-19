@@ -21,7 +21,7 @@ title: "C\xF3mo habilitar el teclado en el emulador Android"
 
 En ocasiones, al crear un emulador [Android][1], aún habiendo habilitado el soporte para teclado éste no funciona. Hoy veremos cómo habilitar el teclado en el emulador Android y, además, cómo habilitar la navegación mediante los cursores del teclado.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Habilitar el teclado en el emulador Android
 

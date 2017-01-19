@@ -23,7 +23,7 @@ No es la primera vez que se publica en el blog una [chuleta](/tags/#chuleta "Art
 - [Chuleta de comandos GPG](/chuleta-de-comandos-para-gpg/ "Chuleta de comandos para GPG")
 - [Chuleta de comandos MarkDown](/chuleta-markdown-para-wordpress/ "Chuleta de comandos de Markdown")
 
-<!--more-->
+<!--more--><!--ad-->
 
 La de hoy va sobre _Emacs_. La idea es que esta chuleta la creemos entre todos. Que cada uno aporte su granito de arena para crear la __chuleta de atajos de teclado/comandos/paquetes para emacs definitiva__.
 

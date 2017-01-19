@@ -15,7 +15,7 @@ title: "C\xF3mo saber a qu\xE9 partici\xF3n pertenece un archivo en GNU/Linux"
 
 Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```bash
 df

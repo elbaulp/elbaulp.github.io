@@ -22,7 +22,7 @@ title: "Programaci\xF3n Android: Persistencia De Datos"
 
 En el anterior artículo dimos un repaso a [fondo del típico Hola Mundo](/android/tutorial-android-hola-mundo-a-fondo/ "Programación Android: Hola Mundo a Fondo"), hoy vamos a ver cómo trabajar con persistencia de datos en Android.
 
-<!--more-->
+<!--more--><!--ad-->
 
 La mayoría de apps necesitan guardar datos, ya sea para no perder la información cuando se ejecuta el método `onPause()`, información de preferencias o cantidades mayores de información en [bases de datos](/bases-de-datos "Curso de base de datos"). Los distintos métodos de almacenamiento disponibles son:
 

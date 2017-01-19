@@ -19,7 +19,7 @@ Como comenté cuando escribí el artículo sobre [Introducción a Django][1] he 
 
 Hoy quiero hablar sobre cómo podemos crear formularios de una forma muy sencilla y directa basándonos en los campos de nuestros modelos mediante la clase *ModelForm*.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Crear la aplicación
 

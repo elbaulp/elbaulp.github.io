@@ -35,7 +35,7 @@ Existen 7 runlevel, numerados del 0 al 6 , aunque es posible crear más. Cada ru
 
 Pasemos a describir cada runlevel:
 
-<!--more-->
+<!--more--><!--ad-->
 
 El runlevel 0 es la condición de apagado del sistema. La mayoría de ordenadores actuales se apagarán al llegar a este nivel.
 

@@ -24,7 +24,7 @@ title: "V\xEDdeo - Evoluci\xF3n Del Blog Desde El Punto De Vista De Git"
 
 Hace algún tiempo que hablé del programa _Gource_, una herramienta que permite visualizar la evolución y contribuciones de un proyecto git. En su día expliqué en un breve [tutorial cómo usar gource](/gource-visualizar-la-evolucion-de-un-repositorio-git/ "Ejemplo de Gource"). Hoy se me ocurrió ejecutar este programa sobre el repositorio que almacena este blog. El resultado me pareció curioso y quise grabarlo en vídeo para enseñároslo.
 
-<!--more-->
+<!--more--><!--ad-->
 
 La plantilla de este blog es obra de <a href="http://mademistakes.com/minimal-mistakes/" target="_blank" title="Minimal Mistakes">Minimal Mistakes</a>, yo simplemente adapté dicha plantilla a mi blog.
 

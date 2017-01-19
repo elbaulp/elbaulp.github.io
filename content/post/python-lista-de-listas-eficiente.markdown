@@ -24,7 +24,7 @@ title: Crear Una Lista De Listas De Forma Eficiente en Python
 
 > El siguiente artículo es una traducción de una pregunta en **StackOverflow** del usuario <a href="http://stackoverflow.com/users/1612432/algui91" target="_blank" title="Perfil algui91">algui91</a>, que preguntaba <a href="http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python" target="_blank" title="Link a pregunta">Build a List of Lists eficiently in python</a>. La respuesta es del usuario <a href="http://stackoverflow.com/users/1219295/roland-smith" target="_blank" title="Perfil roland">Roland</a>.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Hace tiempo me encontré con el problema de tener que construir una lista de la forma más [eficiente](/peso-hamming-y-optimizacion/ "Optimizando código y evaluando el rendimiento") posible, sin usar bucles for, ya que era el código de una _MetaHeurística_ y debía evaluarse miles de veces. el código original era el siguiente:
 

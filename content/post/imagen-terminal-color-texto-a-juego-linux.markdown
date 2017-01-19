@@ -20,7 +20,7 @@ title: "Cambia La Im\xE1gen De Fondo Del Terminal Gnome Y Pon Un Color De Texto 
 
 Seguramente seas una de esas personas que pasan mucho tiempo delante del ordenador con una o varias shells abiertas. De hecho, seguramente tengas más que visto el fondo negro con letras blancas, o el estilo de terminal que pusiste hace tiempo,  porque cambiarlo todos los días no es el hobbie de nadie. Pero ¿y si se cambiara sólo?¿ y si pudieras poner tus imágenes favoritas de fondo del terminal, con un color de texto que no desentone con tu imágen  y tú no tuvieras que hacer nada?
 
-<!--more-->
+<!--more--><!--ad-->
 
 Aquí os quiero contar como se me ocurrió hacerlo a mí, con un script en bash  y así escapar de la rutina de estilo de las shells.
 

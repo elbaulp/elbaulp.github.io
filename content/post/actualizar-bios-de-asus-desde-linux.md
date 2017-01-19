@@ -23,7 +23,7 @@ Bueno, inserto la RAM en la placa base todo contento ya que ahora iba a tener 4G
 Tras una respuesta en uno de los foros miro a ver si la BIOS reconoce las 4Gb y el resultado es que solo reconoce 3Gb. Investigo el motivo por el cual solo reconoce 3Gb y llego a una página que dice que es un problema de la versión de la BIOS que se soluciona actualizando a la última versión. Así que voy a explicar el proceso de actualización de la BIOS, en mi caso para la placa base ASUS P5B Deluxe Wifi edition:
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 Lo primero que hay que hacer es bajarse el archivo de la página de ASUS, lo descomprimimos y tenemos un archivo con el modelo de la placa y de extensión .rom.
 

@@ -15,7 +15,7 @@ title: "Introducci\xF3n al NDK de Android"
 
 El NDK de Android es un conjunto de herramientas que permiten embeber código máquina nativo compilado en lenguajes C y/o C++, hoy veremos cómo crear un ejemplo en el NDK de Android.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Conceptos básicos del NDK
 

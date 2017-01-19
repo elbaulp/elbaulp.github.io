@@ -35,7 +35,7 @@ $ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils
 
 ```
 
-<!--more-->
+<!--more--><!--ad-->
 
 y además este:
 

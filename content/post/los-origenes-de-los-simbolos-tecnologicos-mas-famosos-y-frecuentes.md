@@ -32,7 +32,7 @@ title: "Los or\xEDgenes de los s\xEDmbolos tecnol\xF3gicos m\xE1s famosos y frec
 
 Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este infograma en ese tamaño, lo hemos desarmado:
 [<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" class="size-full wp-image-2297 aligncenter" alt="@" src="/img/2014/03/at.jpg" width="160px" height="160px" />][1]

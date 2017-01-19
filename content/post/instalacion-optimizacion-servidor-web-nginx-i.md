@@ -32,7 +32,7 @@ _A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servi
 
 Hace tiempo se vío en este blog [cómo instalar y configurar Nginx con php5-fpm][3], en los próximos artículos se intentará explicar de forma más detallada cómo llevar a cabo éste proceso junto con algunas mejoras adicionales en términos de optimización. Es necesario informar al lector que todas las recomendaciones aquí explicadas se basan únicamente en la experiencias del autor.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Compilar e instalar Nginx
 

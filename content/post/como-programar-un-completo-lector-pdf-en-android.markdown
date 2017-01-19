@@ -27,7 +27,7 @@ En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo
 - Búsqueda de texto
 - Insertar anotaciones: subrayar o tachar texto, dibujar a mano alzada, etc.
 
-<!--more-->
+<!--more--><!--ad-->
 <figure>
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/Lector PDF Android con barra de navegación.jpg" title="{{ page.title }}" alt="{{ page.title }}" width="960px" height="560px" />
 </figure>

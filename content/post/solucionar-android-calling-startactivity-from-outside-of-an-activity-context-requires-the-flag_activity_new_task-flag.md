@@ -22,7 +22,7 @@ Calling startActivity from outside of an Activity context requires the FLAG\_ACT
 
 Así que como es habitual busqué en stackoverflow y encontré la solución, el código que generaba el problema era el siguiente:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```java
 Intent sendIntent = new Intent();

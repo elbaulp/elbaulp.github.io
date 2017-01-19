@@ -23,7 +23,7 @@ Are your big data and analytics capabilities up to par? Nearly half of the globa
 
 Authors from Tamr, Inc. share insights into why analytics projects often fail, and offer solutions based on their combined experience in engineering, architecture, product strategizing, and marketing. You’ll learn how projects often start from the wrong place, take too long, and don’t go far enough—missteps that lead to incomplete, late, or useless answers to critical business questions.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Find out how their question-first, data-second approach—fueled by vastly improved data preparation platforms and cataloging software—can help you create human-machine analytics solutions designed specifically to produce better answers, faster.
 

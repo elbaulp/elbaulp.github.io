@@ -18,7 +18,7 @@ Empecemos:
 
 [Pueden descargar el código fuente de esta lección.][2]
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```bash
 //Include SDL functions and datatypes

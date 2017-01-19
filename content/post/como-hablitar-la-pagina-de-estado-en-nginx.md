@@ -15,7 +15,7 @@ title: "C\xF3mo habilitar la p\xE1gina de estado en Nginx"
 
 Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Habilitar el módulo HttpStubStatusModule
 

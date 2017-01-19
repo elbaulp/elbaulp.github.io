@@ -37,7 +37,7 @@ Según<a href="http://www.lesswatts.org/tips/" target="_blank"> Less Watts.org</
 
 Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 &nbsp;

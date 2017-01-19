@@ -26,7 +26,7 @@ SAN FRANCISCO - Java Open Source (Código Abierto) será llevado a la arquitectu
 
 El proyecto proporcionará una versión completa de OpenJDK para las dos plataformas. OpenJDK es la implementación open source de Java estándar. Los puertos de Java para PowerPC ya existen, pero podrían ser extendidos al reino Open Source. &#8220;El propósito de este proyecto es agrupar los recursos para desarrollo de Oracle, de IBM, y de SAP para proporcionar una implementación de referencia Java libre y de última generación en Linux y AIX en PowerPC&#8221;, dijo Volker Simonis, un Java VM hacker y evangelista OpenJDK de SAP, que encabeza el proyecto.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 &#8220;Esta implementación de referencia puede luego ser utilizada por IBM y SAP para ofrecer sus productos de Java con licencia comercial en la misma forma en que Oracle ofrece sus productos de Oracle JDK basado en OpenJDK&#8221;, dijo Simonis. &#8220;La gran ventaja para la comunidad de código abierto es que todo el mundo (por ej., distribuidores de Linux como Debian, Red Hat o Ubuntu) será capaz de construir y ofrecer versiones de Java gratuitas y de vanguardia basadas en los nuevos puertos de la plataforma OpenJDK. Y por supuesto que todos serán muy bienvenidos a participar en el proyecto. &#8221;

@@ -29,7 +29,7 @@ title: "Instalaci\xF3n y optimizaci\xF3n de un servidor web con Nginx (III)"
 
 En éste último artículo se verá cómo realizar optimizaciones al servidor web nginx, PHP y se cubrirá la instalación del sistema de caches APC y el módulo Page Speed de Google.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Optimizando
 

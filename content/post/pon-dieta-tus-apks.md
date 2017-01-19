@@ -30,7 +30,7 @@ title: Pon a dieta a tus APKs
 
 En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android [eliminando recursos sin usar][1]. En el blog de **[Cyril Mottier][2]** encontré un artículo muy interesante con varios consejos para reducir el tamaño del *APK* y optimizar el código en [producción][3]. A continuación pasamos a traducir las partes importantes:
 
-<!--more-->
+<!--more--><!--ad-->
 
 No es ningún secreto que las aplicaciones cada vez ocupan más espacio. Las primeras aplicaciones solían ocupar unas **2MB** en las versiones iniciales de [Android][4]. Ahora es bastante común ver aplicaciones que pesan entre 10 y 20MB. Éste incremento en el tamaño es una consecuencia directa tanto de las expectativas del usuario como de la adquisición de experiencia por parte de los desarrolladores. Las principales razones del aumento en el tamaño de los **APKs** son:
 

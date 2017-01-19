@@ -14,7 +14,7 @@ Un <acronym title="Relational Data Base Management System">RDBMS</acronym> es un
 
 Es un software que se antepone a los datos de una base de datos, es decir, cualquier acceso a los datos pasa por una petición al RDBMS que éste gestiona con el fin de realizar la operación más conveniente sobre esa petición.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

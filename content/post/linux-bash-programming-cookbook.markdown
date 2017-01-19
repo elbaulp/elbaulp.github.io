@@ -29,7 +29,7 @@ __Delve into the world of Linux BASH Programming with this compact cookbook that
 
 Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been distributed widely as it is a default shell on the major Linux distributions and OS X.
 
-<!--more-->
+<!--more--><!--ad-->
 
 In this ebook, we provide a compilation of BASH programming examples that will help you kick-start your own projects. We cover a wide range of topics, from user management and permissions setting, to specific commands like sed, tar, etc. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.
 

@@ -22,7 +22,7 @@ title: Crear enlaces en un TextView con la etiqueta HTML
 
 Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta _&lt;a href=””&gt;&lt;/a&gt;_.
 
-<!--more-->
+<!--more--><!--ad-->
 
 La cadena de texto con el enlace en cuestión reside en el archivo de recursos **[string.xml](/programacion-android-recursos-strings/)**. En un principio pensé que me bastaría usar la propiedad `android:autoLink="web"` en el [layout.xml](/programacion-android-recursos-layout/) de la siguiente forma:
 

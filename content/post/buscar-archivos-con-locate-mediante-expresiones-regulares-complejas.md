@@ -30,7 +30,7 @@ El motivo de este artículo viene dado por un problema que me planteé hace unos
 
 ### Expresiones regulares en Locate
 
-<!--more-->
+<!--more--><!--ad-->
 
 **Locate** acepta [expresiones regulares][3] complejas, para ello hay que llamarlo con la opción `-regex`.
 

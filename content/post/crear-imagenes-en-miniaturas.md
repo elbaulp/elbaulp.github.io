@@ -14,7 +14,7 @@ title: "Crear miniaturas de im\xE1genes"
 
 Este script es muy simple, pero resulta muy útil cuando tenemos muchas imágenes y queremos hacer miniaturas, por ejemplo, para subirlas a nuestra web.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Nota: Si tenéis una web, os aconsejo que creeis miniaturas para las imágenes que son enlaces por ejemplo, [no useis las propiedades](/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/ "Añadir automáticamente el tamaño de una imagen con python") *height* y *width* de la etiqueta *img* para redimensionar una imagen grande, porque vuestra página tardará más en cargar, y además esa miniatura pesará lo mismo que la original.
 

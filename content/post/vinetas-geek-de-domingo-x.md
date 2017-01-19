@@ -19,7 +19,7 @@ title: "Vi\xF1etas Geek de Domingo (X)"
 Otro Domingo, [otra recopilación][1] de viñetas Geek, Hasta el Lunes!
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### Las preguntas más buscadas en Google
 

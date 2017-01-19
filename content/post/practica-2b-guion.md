@@ -26,7 +26,7 @@ El cálculo de la <a href="http://es.wikipedia.org/wiki/Bit_de_paridad" target="
 
 Empecemos con *popCount*:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```c
 /*

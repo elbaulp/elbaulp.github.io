@@ -14,7 +14,7 @@ title: "Programaci\xF3n para Juegos - Lecci\xF3n 2 - Im\xE1genes Optimizadas"
 
 Ahora que ya hemos conseguido mostrar una imagen en pantalla en la [segunda parte de la lección 1][2], vamos a superponer varias imagenes de una manera más eficiente.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```bash
 //Cabeceras

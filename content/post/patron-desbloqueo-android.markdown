@@ -27,7 +27,7 @@ title: "Crear Un Patr\xF3n De Desbloqueo Android"
 - [GPS QR](/programar-navegador-gps-android)
 - [Movement Sound](/giroscopio-acelerometro-movimientos-android)
 
-<!--more-->
+<!--more--><!--ad-->
 
 Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, [Android1](/curso-programacion-android/ "Curso de Android"), [Android2](/android/ "Curso nuevo de Android")
 {: .notice-info }

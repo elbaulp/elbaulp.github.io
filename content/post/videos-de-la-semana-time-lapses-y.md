@@ -16,7 +16,7 @@ title: "V\xEDdeos de la semana - Time-Lapses y cortos de animaci\xF3n"
 Como sabéis, soy bastante aficionado a Vimeo y suelo [publicar][1] de vez en cuando los vídeos que me parecen interesantes, para este inicio de semana traigo unos cuantos cortos de animación y time-lapses, he dejado muchos en el tintero, os recomiendo que os paséis por mi <a target="_blank" href="https://vimeo.com/channels/270031">canal en Vimeo</a>. Por supuesto, recomiendo ver los vídeos con el HD activado:
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 #### The Wild Heart - A Journey through the Southwest Wilderness
 

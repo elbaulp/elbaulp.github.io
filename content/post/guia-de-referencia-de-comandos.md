@@ -16,4 +16,4 @@ title: "Gu\xEDa de Referencia de comandos Unix/Linux [IMG]"
     <a href="/img/chuletacomandoslinux.png"><amp-img layout="responsive" width="1131" height="1600" src="/img/chuletacomandoslinux.png"></amp-img></a>
 </figure>
 
-<!--more-->
+<!--more--><!--ad-->

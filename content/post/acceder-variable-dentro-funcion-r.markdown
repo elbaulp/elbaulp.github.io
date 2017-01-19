@@ -25,7 +25,7 @@ title: "C\xF3mo modificar Una Variable Desde Dentro De Una Funci\xF3n en R"
 
 Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Haciendo una práctica de Aprendizaje Automático, en concreto implementando _Gradiente Descendente Estocástico_ (__Stochastic Gradient Descent__) o _SGD_ para _Regresión Logística_ e intentando hacer el código lo más eficiente posible (Y eso en R significa evitar el uso de for a toda costa) me encontré con la siguiente situación:
 

@@ -24,7 +24,7 @@ Las Actividades, Servicios y BroadcastReceiver se activan a través de mensajes 
 
 Hay tres métodos para activar cada uno de los componentes:
 
-<!--more-->
+<!--more--><!--ad-->
 
   * Las actividades se muestran pasando un Intent al método ***Context.startActivity()*** o ***Activity.startActivityForResult()***. Una vez lanzada la actividad, dentro de la misma podemos abrir el objeto Intent para obtener los parámetros usando el método ***getIntent()***
   * Para lanzar servicios o interactuar con ellos pasaremos el intent al método ***Context.startService()***. Para analizar el Intent dentro del proceso usaremos ***onBind().***

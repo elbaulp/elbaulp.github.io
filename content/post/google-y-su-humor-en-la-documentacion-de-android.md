@@ -26,7 +26,7 @@ Todos sabemos el humor que gastan chicos de Google, y a raiz de una pregunta en 
 Abriremos la recopilación con la pregunta en stackoverflow, la cual tuvo bastante éxito como se puede apreciar en los votos:
 
 <amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="/img/2013/06/UserManager.isuseragoat.png" alt="UserManager.isuseragoat" width="741px" height="253px" />
-<!--more-->
+<!--more--><!--ad-->
 
 
 La documentación oficial está en <a href="http://developer.android.com/reference/android/os/UserManager.html#isUserAGoat%28%29" target="_blank">/android/os/UserManager.isUserAGoat</a>, que viene a ser algo como *¿Es el usuario una cabra?*:

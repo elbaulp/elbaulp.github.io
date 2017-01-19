@@ -82,7 +82,7 @@ www 3600 A        5.39.89.44
 
 El registro **SOA** consta de varios campos. Es necesario proporcionar datos a esos campos para que otros servidores en internet puedan llevar a cabo sus peticiones. Los campos son:
 
-<!--more-->
+<!--more--><!--ad-->
 
 #### Nombre
 

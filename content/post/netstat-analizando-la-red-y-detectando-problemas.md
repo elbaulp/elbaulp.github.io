@@ -31,7 +31,7 @@ title: 'Netstat: Analizando la red y detectando problemas'
 
 `netstat` es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.
 
-<!--more-->
+<!--more--><!--ad-->
 
 
 

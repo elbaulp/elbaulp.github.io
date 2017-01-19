@@ -42,7 +42,7 @@ Conceptos básicos Android
     También permite iniciar otras Activities o lanzar otras
     aplicaciones.
 
-<!--more-->
+<!--more--><!--ad-->
 
 Hola Mundo
 ==========

@@ -26,7 +26,7 @@ tags:
 title: "21 Libros de No-Ficci\xF3n que todo Geek deber\xEDa leer"
 ---
 
-<!--more-->
+<!--more--><!--ad-->
 <div class="row flex-grid">
 <article class="box-item animate">
 <h2>Thing Explainer: Complicated Stuff in Simple Words</h2>

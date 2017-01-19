@@ -18,7 +18,7 @@ title: "C\xF3mo evitar que se aplique ingenier\xEDa inversa a un ejecutable"
 Hace unos días explicaba en qué consisten las secciones [.ctors y .dtors][1]. Hoy voy a explicar un método muy sencillo para evitar que se aplique ingeniería inversa a nuestros ejecutables, que evitará la depuración del mismo.
 
 
-<!--more-->
+<!--more--><!--ad-->
 
 Para ello hay que hacer uso de la función `ptrace()`:
 

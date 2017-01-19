@@ -24,7 +24,7 @@ title: Cambiar fondo en la pantalla de login en Debian y Ubuntu
 
 Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ### En Debian
 

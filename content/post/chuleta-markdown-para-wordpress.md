@@ -23,7 +23,7 @@ title: Chuleta de Markdown para wordpress
 
 En su última actualización, el plugin [JetPack][1] introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Guía de Markdown para wordpress
 

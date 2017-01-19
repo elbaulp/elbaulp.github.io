@@ -17,7 +17,7 @@ title: "C\xF3mo usar adecuadamente el Log de Android en tus aplicaciones"
 
 Es posible que durante el desarrollo de una aplicación [Android][1], surja la duda de qué nivel de Log se debe usar, qué cosas se deben loggear y cuales no. En la documentación de Android se trata este tema, el cual traduzco para ponerlo a disposición de todos.
 
-<!--more-->
+<!--more--><!--ad-->
 
 ## Usa el log económicamente
 

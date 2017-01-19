@@ -70,7 +70,7 @@ title: Google I/O Extended + Hackathon HTML5
 <div>
 </div>
 <div>
-                              Todo es totalmente <b>GRATUITO</b>, el horario será:<br /><!--more-->
+                              Todo es totalmente <b>GRATUITO</b>, el horario será:<br /><!--more--><!--ad-->
 </div>
 <div>
 </div>

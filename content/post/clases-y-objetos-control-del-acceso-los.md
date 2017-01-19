@@ -12,7 +12,7 @@ title: Clases y Objetos. Control del acceso a los miembros de la clase
 
 Veamos la diferencia entre las siguientes declaraciones de la [clase Punto][1]:
 
-<!--more-->
+<!--more--><!--ad-->
 
 ```cpp
 class Punto{

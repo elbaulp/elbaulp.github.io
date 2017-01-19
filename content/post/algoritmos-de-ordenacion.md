@@ -35,7 +35,7 @@ Siempre que nos enseñan a ordenar un vector, o una lista, nos enseñan los algo
   3. Ordenamiento por inserción.
 
 El ordenamiento por **burbuja** es el algoritmo más sencillo probablemente. Ideal para empezar. Consiste en ciclar repetidamente a través de la lista, comparando elementos adyacentes de dos en dos. Si un elemento es mayor que el que está en la siguiente posición se intercambian. Es un algoritmo estable. El inconveniente es que es muy lento.
-<!--more-->
+<!--more--><!--ad-->
 
 ```cpp
 static void burbuja_lims(int T[], int inicial, int final)
