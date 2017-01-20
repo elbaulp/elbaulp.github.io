@@ -31,8 +31,6 @@ aliases:
     <li><a id="libros-ml" href="/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/" target="_blank" title="18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer">18 Libros Que Debes Leer Para Ser Un Data Scientist O Data Engineer</a></li>
     <li><a id="libros-geek" href="/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/" target="_blank" title="21 Libros de No-Ficción que todo Geek debería leer">21 Libros de No-Ficción que todo Geek debería leer</a></li>
   </ul>
--  <blockquote>
-    <p><strong>NOTA</strong>: Si quieres apoyar el trabajo que realizamos en <em>El Baúl del Programador</em>, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga <strong> debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión</strong> ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en <a id="revresponse" href="http://www.revresponse.com/join.php?refbrand=bashyc-blogspot" target="_blank" title="RevResponse">RevResponse</a> y empezar a ofrecer guías de interés a tus lectores. Visita el <a href="http://elbauldelprogramador.tradepub.com/category/information-technology/1207/" target="_blank" title="Catálogo completo de Guías gratuítas">catálogo completo de guías.</a></p>
-  </blockquote>
+  {{< importPartial "structure/guidenote.html" >}}
 
 {{< importPartial "structure/guides.html" >}}
