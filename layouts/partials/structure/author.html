@@ -5,9 +5,9 @@
       <amp-img layout="responsive" width="150px" height="150px" class="img-rounded" src="/img/{{ $author.avatar }}"></amp-img>
     </div>
     <div>
-    <p class="def">Autor</p>
+    <p class="def">{{ T "author" }}</p>
     <h3 class="name">
-      <a title="Ver todos los artículos de {{ $author.name }}" id="author-name" href="/author/{{ .Params.author }}">{{ $author.name }}</a>
+      <a title="{{ T "author_title" $author.name }}" id="author-name" href="{{ "/author/" | relLangURL}}{{.Params.author}}/">{{ $author.name }}</a>
     </h3>
     <p class="desc">{{$author.bio}}</p>
     <div class="share">
