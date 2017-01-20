@@ -51,14 +51,8 @@ title = "The Programmer's Chest"
    name =  "Tags"
    url  =  "/tags/"
 [[Languages.en.menu.main]]
-   name =  "Courses"
-   url  =  "/cursos/"
-[[Languages.en.menu.main]]
    name =  "Tutorials"
    url  =  "/manuales-gratuitos/"
-[[Languages.en.menu.main]]
-   name =  "Security Now!"
-   url  =  "/categories/security-now/"
 [[Languages.en.menu.main]]
    name =  "Support us"
    url  =  "/apoyanos/"
@@ -76,13 +70,10 @@ title = "El Baúl del programador"
 post = "/:filename/"
 page = "/:filename/"
 
-
-
 [taxonomies]
 tag = "tags"
 category = "categories"
 author = "author"
-
 
 [params]
     verify = "FBg0GK1_H_PyCw6AD2iaBOclPbEC3LOV8hHXje5276w"
@@ -92,14 +83,14 @@ author = "author"
     # define which amp-elements you are using globally, these elements will be included in every page
     ampElements = ["amp-fit-text","amp-ad","amp-analytics","amp-image","amp-sidebar","amp-mustache"]
 
-    themeColor = "#112233" # define a theme color (this will colorize the android address-bar)
+    themeColor = "#002f4c" # define a theme color (this will colorize the android address-bar)
 
     adsensePublisher = "ca-pub-9043332344373532" # required if you want to include google adsense
     adSlot = "2633319248"
     googleAnalytics = "UA-19017085-2" # required if you want to use google analytics
 
     alternatePageName = "El Baúl" # alternative name for website structured data
-    organisationLogo = "https://gohugohq.com/logo.png" # set organisation logo for structured data
+    organisationLogo = "http://elbauldelprogramador.com/img/logo.png" # set organisation logo for structured data
     organizationName = "El Baúl del Programador" # set organisation name
     organisationAddress = "Some Street 123, 12345 City" # set organisation address
 
@@ -108,8 +99,8 @@ author = "author"
                       "https://twitter.com/elbaulp",
                       "https://telegram.me/elbauldelprogramador"]  # for sameAs in organisation's structured data
 
-    publisherName = "gohugohq.com" # publisher used in article schema
-    publisherLogo = "https://gohugo-amp.gohugohq.com/logo-publisher.png" # https://developers.google.com/search/docs/data-types/articles#logo-guidelines
+    publisherName = "Alejandro Alcalde" # publisher used in article schema
+    publisherLogo = "http://elbauldelprogramador.com/img/logo.png" # https://developers.google.com/search/docs/data-types/articles#logo-guidelines
     publisherLogoWidth = 600 # logo width
     publisherLogoHeight = 60 # logo height
 

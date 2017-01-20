@@ -1,8 +1,9 @@
 ---
-title: Manuales gratuítos
-tags: [manuales, cursos, descargar manuales, manuales programacion, guias, manuales gratuitos, manual del programador]
-description: "Sección en la que encontrarás todo tipo de manuales relacionados con la tecnología e informática"
+title: Free Ebooks
+tags: [tutorials, courses]
+description: "Download any kind of technology tutorials/ebooks informática"
 image: Python-Web-Frameworks-full.jpg
+type: page
 aliases:
   - /nueva-guia-aspnet-20-anthology-101/
   - /nueva-guia-javascript-anthology-101/
@@ -34,4 +35,5 @@ aliases:
   {{< importPartial "structure/guidenote.html" >}}
 
 {{< importPartial "structure/guides.html" >}}
+
 </div>

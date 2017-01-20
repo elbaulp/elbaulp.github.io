@@ -2,7 +2,7 @@
 {
   "@context": "http://schema.org",
   "@type": "Organization",
-  "name": "{{ .Site.Params.organizationName }}",
+  "name": "{{ .Site.Params.organizationName}}",
   "url": "{{ .Site.BaseURL }}"
   {{ with .Site.Params.socialProfiles }}, "sameAs": {{ . }}{{ end }}
   {{ with .Site.Params.organizationLogo }}, "logo": "{{ . }}"{{ end }}

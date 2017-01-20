@@ -16,7 +16,7 @@
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {{ end }}
-    {{ if eq .URL "/manuales-gratuitos/" }}
+    {{ if findRE "/manuales-gratuitos/" .URL 1 }}
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     {{ end }}
 
@@ -25,11 +25,6 @@
     <link rel="icon" href="/favicon.png" type="image/png" sizes="144x144">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
-    {{ if .RSSlink }}
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
 
     <meta name="theme-color" content="{{ $.Site.Params.themeColor }}" />
 

@@ -1,6 +1,10 @@
 {{ define "main" }}
 <main class="home" id="post" role="main">
-  {{ if not .IsHome }}<h1 id="taxo-item">{{ if hasPrefix .URL "/author/" }} Artículos escritos por {{ end }} {{ .Title }}</h1>{{ end }}
+  {{ if not .IsHome }}
+     <h1 id="taxo-item">
+        {{ if findRE "author" .URL 1 }} {{ T "list_post_by" }} {{ end }} {{ .Title }}
+     </h1>
+  {{ end }}
   <div id="grid" class="row flex-grid">
     {{ range .Paginator.Pages }}
       {{ .Render "li" }}
