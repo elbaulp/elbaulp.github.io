@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oauth on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/oauth/index.xml</link>
+    <description>Recent content in Oauth on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Entendiendo OAuth: Qué ocurre cuando te loggeas en un sitio con Google, Twitter o Facebook</title>
+      <link>https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/</guid>
+      <description>&lt;p&gt;Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.&lt;/p&gt;
+
+&lt;p&gt;Hace poco, &lt;a href=&#34;http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps&#34; target=&#34;_blank&#34;&gt; una aplicación de Twitter llamada Tweetgif fue hackeada&lt;/a&gt;, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;cómo-funciona-oauth&#34;&gt;Cómo funciona OAuth&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/06/medium1.jpg&#34; alt=&#34;&#34; title=&#34;medium&#34; width=&#34;300px&#34; height=&#34;166px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Digamos que quieres usar una aplicación como Tweetgif para postear divertidas imágenes GIF animadas en tu cuenta de Twitter. Para lograrlo, es necesario darle a Tweetgif acceso a tu cuenta de Twitter, para poder obtener tu info y postear tweets en tu nombre. En los viejos tiempos, tenías que darle a una aplicación como Tweetgif tu nombre de usuario y contraseña de Twitter, para que pueda loggearse y acceder a los servicios. No solo tenías que confiar que usen esas credenciales sabiamente, sino que también debías mantenerlas protegidas de los hackers - lo que era un verdadero gran salto de fe. Es como darle las llaves de tu casa a un extraño y confiar que no hará copias para todos sus amigos y luego robar todas tus cosas.&lt;/p&gt;
+
+&lt;p&gt;OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Para convertirse en una aplicación de Twitter, Tweetgif adquirió dos tokens del servicio de Twitter: una &amp;ldquo;Consumer Key&amp;rdquo; (Clave de Consumidor) y una &amp;ldquo;Consumer Secret&amp;rdquo; (Secreto de Consumidor). Estos son los elementos que crean una conexión entre el consumidor (en este caso, Tweetgif) y el proovedor del servicio (en este caso, Twitter).&lt;/li&gt;
+&lt;li&gt;Cuando quieres accedef a Twitter a traves de Tweetgif, éste te redirecciona a la portada de Twitter. Si no estás loggeado, te loggeas en ese momento (recuerda que le estás dando tu usuario y contraseña a Twitter, no a Tweetgif).&lt;/li&gt;
+&lt;li&gt;Twitter luego te pregunta si quieres autorizar esta aplicación, y te aclara qué permisos se le dará a la misma. Quizás pueda ver tu timeline, o tal vez pueda no sólo ver el timeline sino también postear en tu nombre. En algunos casos, puedes sólamente estar dándole acceso solamente a tu nombre de usuario y avatar para usar en sitios como Lifehacker - es simplemente una forma más fácil y segura de comentar sin tener que crear una cuenta. Cuando presionas el botón &amp;ldquo;Autorizar&amp;rdquo;, se crea un &amp;ldquo;Access Token&amp;rdquo; (Vale para acceso) y un &amp;ldquo;Access Token Secret&amp;rdquo; (Vale para acceso secreto). Son como contraseñas, pero sólo permiten que Tweetgif acceda a tu cuenta y haga las cosas que le permitiste.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Por lo tanto, en lugar de darles la llave de toda tu casa, les estás dando una llave especial que sólo abre la única habitación que quieres que entren. Pero, para usar esta llave, tienen que pedírsela al guardia, y él puede negárselas cuando quiera.&lt;/p&gt;
+
+&lt;h1 id=&#34;entonces-deberías-usar-oauth&#34;&gt;¿Entonces deberías usar OAuth?&lt;/h1&gt;
+
+&lt;p&gt;¿Por qué es mejor que simplemente ingresar las credenciales de Twitter? Obviamente, esto evita que las aplicaciones de terceros hagan cosas poco claras que no quieres que hagan, pero lo más importante es que esto significa que incluso si ellos son hackeados - como pasó con Tweetgif ayer - tu contraseña de Twitter está todavía a salvo. Los hackers tendrán la posibilidad de postear en tu nombre, seguir personas, o hacer cualquier cosa que le hayas permitido a Tweetgif, pero todo lo que necesitas hacer es ir a tu configuración de Twitter y quitarle el acceso a dicha aplicación. De este modo, tus tokens se vuelven inútiles y tu cuenta está bajo control nuevamente, sin siquiera tener que cambiar la contraseña.&lt;/p&gt;
+
+&lt;p&gt;La gran desventaja de esta innovación es que algunos sitios podrían dejar loggear usando Facebook o Twitter e intentarán postear en tu perfil, incluso si no es realmente &lt;em&gt;necesario&lt;/em&gt;. Algunos sitios, como el reproductor de música &lt;a href=&#34;http://turntable.fm/&#34; target=&#34;_blank&#34;&gt;Turntable.fm&lt;/a&gt;, no te permiten crear una cuenta - debes loggearte con Facebook o Twitter. Es conveniente, dado que no tienes que crear una cuenta, pero luego éste intenta postear en tu perfil sobre qué estás haciendo en su sitio. De manera similar, &lt;a href=&#34;http://waxy.org/2012/02/the_perpetual_invisible_window_into_your_gmail_inbox/&#34; target=&#34;_blank&#34;&gt;Google no te dice realmente qué permisos otorgas&lt;/a&gt; cuando usas OAuth. Para evitar problemas, asegúrate de leer la política de privacidad de cada aplicación a la que te conectas, y si puedes, presta atención a los permisos que cada aplicación obtiene. Si detectas algo que no quieres que la aplicación haga, simplemente no la uses. O, como alternativa, fíjate si hay una opción para desactivar esta &amp;ldquo;característica&amp;rdquo; en la configuración de la aplicación (Turntable, por ejemplo, te permite desactivar los posteos en el muro de Facebook en su configuración luego de loggearte). Y, como siempre, asegúrate de regularmente reducir tus aplicaciones autorizadas así no te metes en problemas - si no has usado alguna por un tiempo, probablemente es mejor quitarla por completo.&lt;/p&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://lifehacker.com/5918086/understanding-oauth-what-happens-when-you-log-into-a-site-with-google-twitter-or-facebook&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

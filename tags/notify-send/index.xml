@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notify Send on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/notify-send/index.xml</link>
+    <description>Recent content in Notify Send on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/notify-send/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo Configurar Dunst, Un Daemon De Notificaciones Altamente Configurable</title>
+      <link>https://elbauldelprogramador.com/como-configurar-dunst-un-daemon-de-notificaciones-altamente-configurable/</link>
+      <pubDate>Mon, 29 Jun 2015 16:43:06 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-configurar-dunst-un-daemon-de-notificaciones-altamente-configurable/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;329px&#34; height=&#34;212px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Si eres lector habitual del blog, sabrás que me gustan los entornos minimalistas y configurables, como puede comprobarse en los artículos &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM&#34;&gt;instalar y configurar dwm&lt;/a&gt;, y el patch para colorear la &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34;&gt;barra de estado&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hoy quiero hablaros de &lt;em&gt;dunst&lt;/em&gt;, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con &lt;em&gt;DWM&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-dunst&#34;&gt;Instalar dunst&lt;/h2&gt;
+
+&lt;p&gt;Tan simple como ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install dunst
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;configurar-dunst&#34;&gt;Configurar dunst&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Dunst&lt;/em&gt; es áltamente configurable, mediante su fichero de configuración, situado en &lt;code&gt;~/.config/dunst/dunstrc&lt;/code&gt;, podemos cambiar su aspecto por completo. Aquí dejo un ejemplo de mi configuración actual:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;global&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Configuración global&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Ubuntu Light 12&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Permitir etiquetas html&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;allow_markup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
+    &lt;span class=&#34;c1&#34;&gt;# El formato de las notificaciones,&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# %s - sumario&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# %p - progreso&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# %b - cuerpo del mensaje&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;b&amp;gt;%s %p&amp;lt;/b&amp;gt;\n%b&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Ordenar mensajes por prioridad&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;sort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
+    &lt;span class=&#34;c1&#34;&gt;# Mostrar cuantas not. hay ocultas&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;indicate_hidden&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;idle_threshold&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0
+    &lt;span class=&#34;c1&#34;&gt;# Tamaño de  la notificación&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;geometry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;300x5-20+20&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;alignment&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; center
+    &lt;span class=&#34;nv&#34;&gt;show_age_threshold&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 60
+    &lt;span class=&#34;nv&#34;&gt;sticky_history&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
+    &lt;span class=&#34;nv&#34;&gt;follow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; mouse
+    &lt;span class=&#34;nv&#34;&gt;word_wrap&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
+    &lt;span class=&#34;nv&#34;&gt;separator_height&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2
+    &lt;span class=&#34;nv&#34;&gt;padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 10
+    &lt;span class=&#34;nv&#34;&gt;horizontal_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 10
+    &lt;span class=&#34;nv&#34;&gt;separator_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; frame
+    &lt;span class=&#34;nv&#34;&gt;startup_notification&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Diseño del borde de la notificación&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;frame&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 3
+    &lt;span class=&#34;nv&#34;&gt;color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#6092BE&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Atajos de teclado&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;shortcuts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;close&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+space
+    &lt;span class=&#34;nv&#34;&gt;close_all&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+shift+space
+    &lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+grave
+    &lt;span class=&#34;nv&#34;&gt;context&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+shift+period
+
+&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de baja prioridad&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_low&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;foreground&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 5
+
+&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de prioridad normal&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_normal&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#94DBFF&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;foreground&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 10
+
+&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de alta prioridad&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_critical&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#ff9999&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;foreground&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0
+
+&lt;span class=&#34;c1&#34;&gt;# Se pueden personalizar notificciones en función de su texto&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;test&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;summary&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;*test*&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;#22dd22&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Y también se personalizan por aplicación&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;signed_on&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;appname&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; Pidgin
+    &lt;span class=&#34;nv&#34;&gt;summary&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;*signed on*&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;urgency&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; low
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;probar-la-configuración&#34;&gt;Probar la configuración&lt;/h2&gt;
+
+&lt;p&gt;Para probar cómo queda nuestra configuración, podemos usar el comando &lt;code&gt;notify-send&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;notify-send -u low -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Low sumary&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Low body&amp;quot;&lt;/span&gt;
+notify-send -u normal -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Normal sumary&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Normal body&amp;quot;&lt;/span&gt;
+notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Critical sumary&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Critical body&amp;quot;&lt;/span&gt;
+notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Critical body&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Eso es todo, sencillo de configurar, y minimalista.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wxmaxima Error on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/wxmaxima-error/index.xml</link>
+    <description>Recent content in Wxmaxima Error on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/wxmaxima-error/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo resolver el error &amp;#8216;wxMaxima encontró un error durante la carga&amp;#8217;</title>
+      <link>https://elbauldelprogramador.com/wxmaxima-encontro-un-error-durante-la-carga/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/wxmaxima-encontro-un-error-durante-la-carga/</guid>
+      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/Maxima.png&#34; alt=&#34;wxMaxima encontró un error durante la carga&#34; width=&#34;271px&#34; height=&#34;256px&#34; /&gt;
+En la facultad solemos usar wxMaxima en las prácticas de las asignturas. Hace poco al intentar abrir un fichero wxm me encontré con el siguiente error:&lt;/p&gt;
+
+&lt;p&gt;wxMaxima encontró un error durante la carga ó Failed to convert file to Unicode.&lt;/p&gt;
+
+&lt;p&gt;Que indica que wxmaxima ha encontrado un error intentando convertir el fichero a Unicode (utf-8). Para solucionar el problema deberemos convertir manualmente el fichero a utf-8. Basta con seguir los siguientes pasos:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;resolver-el-error-8216-wxmaxima-encontró-un-error-durante-la-carga-8217&#34;&gt;Resolver el error &amp;#8216;wxMaxima encontró un error durante la carga&amp;#8217;&lt;/h3&gt;
+
+&lt;p&gt;Usaremos el programa &lt;em&gt;file&lt;/em&gt; para determinar el tipo de fichero:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ file -i Pr06&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;-&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Grafos.wxm
+Pr06 - Grafos.wxm: text/x-pascal&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;iso-8859-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así hemos obtenido la codificación actual del archivo, la cual nos hará falta para el siguiente paso.&lt;/p&gt;
+
+&lt;p&gt;Ahora necesitamos hacer una conversión de formato usando el comando &lt;em&gt;iconv&lt;/em&gt; de la siguiente forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iconv -f ISO_8859-1 -t UTF-8 -o ficheroSalida ficheroEntrada
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esto ya tendremos el fichero codificado en utf-8 y wxmaxmima lo abrirá sin problemas.&lt;/p&gt;
+
+&lt;p&gt;Para terminar os dejo un script que hice para convertir todos los archivos &lt;em&gt;.wxm&lt;/em&gt; de una sola vez. El resultado será un fichero con el mismo nombre que el original pero de extensión &lt;em&gt;utf8.wxm&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls *.wxm&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;iconv -f ISO_8859-1 -t UTF-8 -o \&amp;quot;`basename &amp;quot;&lt;/span&gt;$i&lt;span class=&#34;s2&#34;&gt;&amp;quot; .wxm`.utf8.wxm\&amp;quot; \&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i\&amp;quot;&amp;quot;&lt;/span&gt;
+        iconv -f ISO_8859-1 -t UTF-8 -o &lt;span class=&#34;s2&#34;&gt;&amp;quot;`basename &amp;quot;&lt;/span&gt;$i&lt;span class=&#34;s2&#34;&gt;&amp;quot; .wxm`.utf8.wxm&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hay que decir, sin embargo, que es posible ahorrarse todo esto si se guardaran todos los ficheros de wxmaxima con la extensión &lt;em&gt;.wxmx&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;ubuntudriver&lt;/em&gt; »» &lt;a href=&#34;http://ubuntudriver.blogspot.com.es/2011/06/cambiar-codificacion-de-un-archivo.html&#34; target=&#34;_blank&#34;&gt;Cómo Cambiar la Codificación de un Fichero en Linux y Mac OS X&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduccion Git on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/introduccion-git/index.xml</link>
+    <description>Recent content in Introduccion Git on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/introduccion-git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git: Mini Tutorial y chuleta de comandos</title>
+      <link>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</link>
+      <pubDate>Sun, 13 Dec 2015 18:10:12 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; alt=&#34;Tutorial git y comandos git&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos git&#34; alt=&#34;Git: Mini Tutorial y chuleta de comandos&#34; width=&#34;910px&#34; height=&#34;380px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Puede que te interese descargar este &lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java24&amp;ch=ocsoc&#34; id=&#34;revresponse-git-link&#34; title=&#34;Manual de git&#34; target=&#34;_blank&#34;&gt;manual para git&lt;/a&gt;. &lt;em&gt;Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer &lt;a href=&#34;http://git-scm.com/book&#34; target=&#34;_blank&#34;&gt;Pro Git&lt;/a&gt;, libro que recomiendo a todo desarrollador, disponible en &lt;a href=&#34;https://github.s3.amazonaws.com/media/progit.en.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.s3.amazonaws.com/media/progit.epub&#34; target=&#34;_blank&#34;&gt;EPUB&lt;/a&gt;, &lt;a href=&#34;https://github.s3.amazonaws.com/media/pro-git.en.mobi&#34; target=&#34;_blank&#34;&gt;MOBI&lt;/a&gt; y &lt;a href=&#34;http://www.amazon.es/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&amp;camp=3626&amp;creative=24822&amp;creativeASIN=1430218339&amp;linkCode=as2&amp;tag=elbaudelpro-21&#34; target=&#34;_blank&#34;&gt;versión en papel&lt;/a&gt;. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;chuleta-de-comandos-git&#34;&gt;Chuleta de comandos git&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git help &amp;lt;command&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git clone &amp;lt;uri&amp;gt; namedir&lt;/strong&gt; # clona usando como nombre de directorio namedir.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git add &amp;lt;dir&amp;gt;&lt;/strong&gt; # añade recursivamente todos los archivos del dir.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git diff &amp;#45;&amp;#45;staged&lt;/strong&gt;  # compares staged changes with last commit&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git commit &amp;#45;v&lt;/strong&gt; # muestra el diff en el editor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git commit &amp;#45;a &amp;#45;m &amp;#8221;&lt;/strong&gt;  # automatically stage tracked files. No hace falta git add&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git rm &amp;#45;&amp;#45;cached &amp;lt;file or regexp&amp;gt;&lt;/strong&gt;   # Git no realiza un seguimiento del archivo, pero los deja en el directorio de trabajo. Útil cuando se olvida añadir archivos al .gitignore y ya hemos agregado dichos archivos al repositorio.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git rm &amp;lt;file&amp;gt;&lt;/strong&gt;   # borrarlos con git siempre.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git rm &amp;#45;f &amp;lt;file&amp;gt;&lt;/strong&gt;   #  si ya está modificado y en el index.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git mv &amp;lt;file&amp;gt; &amp;lt;renamed_file&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gitk&lt;/strong&gt;  #  tcl/tk. Herramienta gráfica para git&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git commit &amp;#45;&amp;#45;amend&lt;/strong&gt;  # Modificar el mensaje del último commit&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/strong&gt;   #  to unstage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout &amp;#45;&amp;#45; &amp;lt;file&amp;gt;&lt;/strong&gt;   #  Descartar cambios en el directorio de trabajo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;añadir-archivos&#34;&gt;AÑADIR ARCHIVOS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git add &amp;#45;i&lt;/strong&gt;  # interactive staggin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git add &amp;#45;p&lt;/strong&gt;  # crea patch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;stash&#34;&gt;STASH&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git stash&lt;/strong&gt;  # guarda el estado en una pila y limpia el directorio para poder cambiar de rama&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git stash list&lt;/strong&gt;  # muestra la pila&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git stash apply&lt;/strong&gt;  #  vuelve al estado original del dir. Stash{n} especifica uno concreto Y &amp;#45;&amp;#45;index reaplica los cambios stagged&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git stash pop&lt;/strong&gt;  #  elimina el primero en la pila. O drop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;logs&#34;&gt;LOGS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;p &amp;#45;2&lt;/strong&gt;  #  Muestra 2 últimos commits con diff&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;stat&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;pretty &amp;lt;short&amp;#124;full&amp;#124;fuller&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;pretty=format:&amp;#8221;%h &amp;#45; %an, %ar : %s&amp;#8221;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;pretty=format;&amp;#8221;%h %s&amp;#8221; &amp;#45;&amp;#45;graph&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;since=2.weeks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;lt;branch&amp;gt; &amp;#45;&amp;#45;not master&lt;/strong&gt;  # Muestra commit de &amp;lt;branch&amp;gt; sin incluir los de master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;abbrev&amp;#45;commit &amp;#45;&amp;#45;pretty=oneline&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git diff master&amp;#8230;contrib&lt;/strong&gt;  # Muestra solo el trabajo que la rama contrib actual ha introducido desde su antecesor común con master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;lt;branch1&amp;gt;..&amp;lt;branch2&amp;gt;&lt;/strong&gt;   # Commits de branch2 que no están en branch1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log origin/master..master&lt;/strong&gt;  # Muestra qué commits se van a enviar al servidor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log origin/master..&lt;/strong&gt;  # Igual que el anterior. Se asume master o HEAD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log refA refB &amp;#45;&amp;#45;not refC&lt;/strong&gt;  #  commits en refA y refB que no están en refC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log master&amp;#8230;experiment&lt;/strong&gt;  # commits de master o experiment, pero sin ser comunes. Con &amp;#45;&amp;#45;left&amp;#45;right indica a qué rama pertenece cada uno&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;remotes-repos-en-internet&#34;&gt;REMOTES # repos en internet&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git remote &amp;#45;v&lt;/strong&gt;  #  lista los repos remotos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git remote add [shortname] [url]&lt;/strong&gt;  #  crea nuevo remote, es posible descargar el contenido de ese repo con git fetch [shortname]. Master branch en [shortcode]/master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git fetch &amp;lt;remote&amp;gt;&lt;/strong&gt;   #  descarga trabajo nuevo a máquina local, no sobreescribe nada tuyo. ( git pull sí hace merge automaticamente si se esta realizando un seguimiento de esa branch)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push [remote&amp;#45;name] [branch&amp;#45;name]&lt;/strong&gt;  #  sii nadie ha hecho push antes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git remote show [remote&amp;#45;name]&lt;/strong&gt;  #  inspecciona remote.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git remote rename &amp;lt;old&amp;#45;name&amp;gt; &amp;lt;new&amp;#45;name&amp;gt;&lt;/strong&gt;   #  también renombra branches: quedaría &amp;lt;new&amp;#45;name&amp;gt;/master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git remote rm &amp;lt;remote&amp;#45;name&amp;gt;&lt;/strong&gt;   #  p.e si el contribuidor ya no contribuye más&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;añadir-varios-repositorios-remotos&#34;&gt;Añadir varios repositorios remotos&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git remote add bitbucket &amp;lt;url repositorio&amp;gt;&lt;/strong&gt;  #  Añadir un nuevo repositorio remoto con el nombre deseado. Por ejemplo si ya tenemos uno en github y queremos añadir otro para bitbucket&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push -u bitbucket -all&lt;/strong&gt;  #  Subir el proyecto a bitbucket. A partir de ahora se puede seleccionar a qué repo publicar con*&lt;strong&gt;git push nombre_repo_remoto&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tagging-marcan-puntos-importantes-en-la-histtoria-del-repo-releases&#34;&gt;TAGGING # marcan puntos importantes en la histtoria del repo ( releases )&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git tag&lt;/strong&gt;  #  muestra las etiquetas actuales&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git tag &amp;#45;l &amp;#8216;v1.4.2.*&amp;#8217;&lt;/strong&gt;   #  acepta regex&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Dos tipos de tag:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; : puntero a commit ( branch que no cambia )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;#45;a &amp;lt;tagname&amp;gt; &amp;#45;m &amp;#8216;mensaje&amp;#8217;&lt;/strong&gt;   #  annotated tag&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git show &amp;lt;tag&amp;#45;name&amp;gt;&lt;/strong&gt;   #  muestra información asociada.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;#45;s &amp;lt;tag&amp;#45;name&amp;gt; &amp;#45;m &amp;#8216;message&amp;#8217;&lt;/strong&gt;   #  la firma con gpg&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;lt;tag&amp;#45;name&amp;gt;&lt;/strong&gt;   #  lightweight tag&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;#45;v &amp;lt;tag&amp;#45;name&amp;gt;&lt;/strong&gt;   #  verifica tags firmadas&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;#45;a &amp;lt;tag&amp;#45;name&amp;gt; [commit&amp;#45;chksum]&lt;/strong&gt;  #  crea tag para commit con dicho chksum&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Por defecto no se transfieren los tags, para subirlos al servidor:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git push origin [tag&amp;#45;name]&lt;/strong&gt;  #  una sola&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push origin &amp;#45;&amp;#45;tags&lt;/strong&gt;  #  Enviar todas&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Para usar GPG y firmar tags, hay que subir la clave pública al repositorio:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;gpg &amp;#45;&amp;#45;list&amp;#45;keys&lt;/strong&gt;  # Coges la id pública&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gpg &amp;#45;a &amp;#45;&amp;#45;export &amp;lt;id&amp;gt; &amp;#124; git hash&amp;#45;object &amp;#45;w &amp;#45;&amp;#45;stdin&lt;/strong&gt;  # Copia el SHA&amp;#45;1 devuelto&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git tag &amp;#45;a maintainer&amp;#45;gpg&amp;#45;pub &amp;lt;SHA&amp;#45;1&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push &amp;#45;&amp;#45;tags&lt;/strong&gt;  # Comparte la clave con todos los usuarios&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show maintainer&amp;#45;gpg&amp;#45;pub &amp;#124; gpg &amp;#45;&amp;#45;import&lt;/strong&gt;  # Cada usuario importa la clave así&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show &amp;lt;tag&amp;gt;&lt;/strong&gt;   # Devuelve más información sobre la etiqueta&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git tag -d nombre_tag&lt;/strong&gt;  #  eliminar la etiqueta&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push origin :refs/tags/nombre_tag&lt;/strong&gt;  #  Eliminar la etiqueta del repositorio remoto.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;branch&#34;&gt;BRANCH&lt;/h2&gt;
+
+&lt;p&gt;Las ramas simplememte son punteros a distintos snapshots&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git branch &amp;lt;nombre&amp;#45;rama&amp;gt;&lt;/strong&gt;   # crea rama. Puntero al commit actual&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout &amp;lt;nombre&amp;#45;rama&amp;gt;&lt;/strong&gt;   # cambiar a la rama especificada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout &amp;#45;b &amp;lt;nombre&amp;#45;rama&amp;gt;&lt;/strong&gt;   # crea y cambia de rama&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git merge &amp;lt;rama&amp;gt;&lt;/strong&gt;   #  Mezcla la rama actual con &amp;lt;rama&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git branch &amp;#45;d &amp;lt;rama&amp;gt;&lt;/strong&gt;   # elimina la rama&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push origin &amp;#45;&amp;#45;delete &amp;lt;branchName&amp;gt;&lt;/strong&gt;   #  Elimina una rama del servidor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git mergetool&lt;/strong&gt;  # Herramienta gráfica para resolver conflictos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git branch&lt;/strong&gt;  #  lista ramas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git branch &amp;#45;v&lt;/strong&gt;  #  lista ramas mostrando último commit&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git branch &amp;#45;&amp;#45;merged&lt;/strong&gt;  # lista ramas que han sido mezcladas con la actual. Si no tienen un *, pueden borrarse, ya que significa que se han incorporado los cambios en la rama actual.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git branch &amp;#45;&amp;#45;no&amp;#45;merged&lt;/strong&gt;  # lista ramas que no han sido incorporadas a la actual.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;remote-branches&#34;&gt;REMOTE BRANCHES&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git fetch origin&lt;/strong&gt;  #  Descarga el contenido del servidor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/strong&gt;   # Las ramas no se suben por defecto, has de subirlas explícitamente&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;:&amp;lt;nuevoNombre&amp;gt;&lt;/strong&gt;   # Igual que la de arriba, pero en el servidor se llama a la rama con nuevoNombre en lugar de branch&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git fetch origin&lt;/strong&gt;  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout &amp;#45;b rama_nueva origin/rama_nueva&lt;/strong&gt;  #  Crea una rama local a partir de la remota&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git merge origin/nueva_rama&lt;/strong&gt;  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git push [remotename] :[branch]&lt;/strong&gt;  #  elimina una rama remota&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git push [remotename] [localbranch]:[remotebranch]&lt;/strong&gt;  # La rama en el servidor tiene distinto nombre a la local&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tracking-branches&#34;&gt;TRACKING BRANCHES&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git checkout &amp;#45;&amp;#45;track origin/rama&lt;/strong&gt;  # Equivalente a &amp;#45;b rama_nueva origin/rama_nueva&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git chekout &amp;#45;b &amp;lt;nuevo_nombre&amp;gt; origin/&amp;lt;rama&amp;gt;&lt;/strong&gt;   #  Establece un nombre distinto para la rama local&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rebase&#34;&gt;REBASE&lt;/h2&gt;
+
+&lt;p&gt;Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re&amp;#45;merges&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git rebase master&lt;/strong&gt;  #  aplica todos los cambios de &amp;lt;una rama&amp;gt; a master&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git merge master&lt;/strong&gt;  # hay que hacer un merge de tipo fast forward&lt;/li&gt;
+&lt;li&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git rebase &amp;#45;&amp;#45;onto master server client&lt;/strong&gt;  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout master&lt;/strong&gt;*&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git merge client&lt;/strong&gt;  #  fast&amp;#45;forward. Client y master en el mismo snapshot&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Si se quiere aplicar también los cambios de server, basta con:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git rebase master server&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout master&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git merge server&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git rebase [basebranch] [topicbranch]&lt;/strong&gt;  #  sintaxis de rebase&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git rebase &amp;#45;i&lt;/strong&gt;  #  Rebase interactivo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;servidor&#34;&gt;SERVIDOR&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git instawew&lt;/strong&gt;  #  Muestra una interfaz web con los commits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;generar-un-número-de-compilación-build-number&#34;&gt;GENERAR UN NÚMERO DE COMPILACIÓN (BUILD NUMBER)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git describe master&lt;/strong&gt;  # Solo funciona para tags creadas con &amp;#45;s ó &amp;#45;a&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;preparar-una-release&#34;&gt;PREPARAR UNA RELEASE&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git archive master &amp;ndash;prefix=&amp;ldquo;project/&amp;rdquo; &amp;#124; gzip &amp;gt; `git describe master`.tar.gz&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git archive master &amp;ndash;prefix=&amp;ldquo;project/&amp;rdquo; &amp;ndash;format=zip &amp;#124; `git describe master`.zip&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;test/ export&amp;#45;ignore  # Al crear el tarball no incluye el directorio test/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;generar-un-changelog&#34;&gt;GENERAR UN CHANGELOG&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git shortlog &amp;#45;&amp;#45;no&amp;#45;merges master &amp;#45;&amp;#45;not &amp;lt;tag&amp;gt;&lt;/strong&gt;   # Recopila todos los commits desde &amp;lt;tag&amp;gt; y los agrupa por autor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;recomendaciones&#34;&gt;RECOMENDACIONES&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;User1 clona el repo y hace cambios, realiza un commit&lt;/li&gt;
+&lt;li&gt;User2 clona el repo, hace cambios, hace commit y sube los cambios con push&lt;/li&gt;
+&lt;li&gt;User1 intenta hacer push, pero será rechazado con: &amp;lt;u&amp;gt;! [rejected] master &amp;#45;&amp;gt; master (non&amp;#45;fast forward)&amp;lt;/u&amp;gt;. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:&lt;/li&gt;
+&lt;li&gt;git fetch origin&lt;/li&gt;
+&lt;li&gt;git merge origin/master&lt;/li&gt;
+&lt;li&gt;git push origin master&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mientras User1 hacía estas operaciones, User2 ha creado una rama &amp;lt;u&amp;gt;issue54&amp;lt;/u&amp;gt; y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git fetch origin&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;&amp;#45;no&amp;#45;merges origin/master ^issue54&lt;/strong&gt;  # Observa qué cambios ha hecho User1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git checkout master&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git merge issue54 &amp;amp;&amp;amp; git merge origin/master&lt;/strong&gt;*&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git push origin master&lt;/strong&gt;*&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git diff &amp;#45;&amp;#45;check&lt;/strong&gt;  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git add &amp;#45;&amp;#45;patch&lt;/strong&gt;  # En caso de hacer varios cambios en el mismo archivo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;El mensaje del commit debe tener la estructura siguiente: Una linea de no más de 50 caracteres, seguida de otra línea en blanco seguida de una descripción completa del commit.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;pasos-a-seguir-para-contribuir-a-proyecyos-ajenos-mediante-fork&#34;&gt;PASOS A SEGUIR PARA CONTRIBUIR A PROYECYOS AJENOS, MEDIANTE FORK&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;git clone &amp;lt;url&amp;gt;&lt;/li&gt;
+&lt;li&gt;git checkout &amp;#45;b featureA&lt;/li&gt;
+&lt;li&gt;git commit&lt;/li&gt;
+&lt;li&gt;git remote add myFork &amp;lt;url&amp;gt;&lt;/li&gt;
+&lt;li&gt;git push myFork featureA&lt;/li&gt;
+&lt;li&gt;git request&amp;#45;pull origin/master myFork  # enviar la salida por mail al propietario del proyecto, o hacer click en pull request.&lt;/li&gt;
+&lt;li&gt;Buena practica tener siempre una rama master que apunte a origin/master, para estar siempre actualizado con los ultimos cambios en el proyecto original.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Separar cada trabajo realizado en topic branch, que trackeen a origin/master&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;git checkout &amp;#45;b featureB origin/master&lt;/li&gt;
+&lt;li&gt;(Hacer cambios)&lt;/li&gt;
+&lt;li&gt;git commit&lt;/li&gt;
+&lt;li&gt;git push myFork featureB&lt;/li&gt;
+&lt;li&gt;(Contactar con el propietario del proyecto)&lt;/li&gt;
+&lt;li&gt;git fetch origin&lt;/li&gt;
+&lt;li&gt;Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en &lt;strong&gt;featureB&lt;/strong&gt;, resuelves conflictos, y haces push:
+
+&lt;ul&gt;
+&lt;li&gt;git checkout &amp;#45;b featureBv2 origin/master&lt;/li&gt;
+&lt;li&gt;git merge &amp;#45;&amp;#45;no&amp;#45;commit &amp;#45;&amp;#45;squash featureB&lt;/li&gt;
+&lt;li&gt;(cambiar la implementacion)&lt;/li&gt;
+&lt;li&gt;git commit&lt;/li&gt;
+&lt;li&gt;git push myFork featureBv2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;#45;&amp;#45;squash coge todo el trabajo de la rama mezclada y la aplasta en un no&amp;#45;merge commit encima de la rama en la que estas. &amp;#45;&amp;#45;no&amp;#45;commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;reflog&#34;&gt;REFLOG&lt;/h2&gt;
+
+&lt;p&gt;En segundo plano, git crea un log de a donde han estado referenciando HEAD y el resto de ramas en los últimos meses.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git reflog&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show HEAD@{n}&lt;/strong&gt;  # Muestra información sobre el reflog número n&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git log &amp;#45;g master&lt;/strong&gt;  # Muestra el log formateado como la salida de reflog&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show master@{yesterday}&lt;/strong&gt;  # Muestra los commits de ayer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;utilidades&#34;&gt;UTILIDADES&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git show &amp;lt;short&amp;#45;SHA&amp;#45;1&amp;gt;&lt;/strong&gt;   # Es posible ver un commit pasando la versión abreviada del SHA&amp;#45;1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git rev&amp;#45;parse &amp;lt;branch&amp;gt;&lt;/strong&gt;   # A qué SHA&amp;#45;1 apunta una rama&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show HEAD^&lt;/strong&gt;  #  Muestra commit padre&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show HEAD^2&lt;/strong&gt;  # Muestra segundo padre&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git show HEAD~2&lt;/strong&gt;  #  El primer padre del primer padre&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git filter&amp;#45;branch &amp;#45;&amp;#45;tree&amp;#45;filter &amp;#8216;rm &amp;#45;f &amp;lt;file&amp;gt;&amp;#8217; HEAD&lt;/strong&gt;  # elimina el archivo de todos los commits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;depuración&#34;&gt;DEPURACIÓN&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;File anotation&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git blame &amp;#45;L 12,22 &amp;lt;archivo&amp;gt;&lt;/strong&gt;   #  muestra cuando y por quién se modificaron de la linea 12 a la 22&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git blame &amp;#45;C &amp;#45;L 141,153 &amp;lt;file&amp;gt;&lt;/strong&gt;   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git bisect start&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git bisect bad&lt;/strong&gt;  #  marcas el commit actual como roto&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git bisect good [commit bueno]&lt;/strong&gt;  #  último commit conocido que funcionaba&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git bisect reset&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;submodulos&#34;&gt;SUBMODULOS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;git submodule add &amp;lt;url&amp;gt;&lt;/strong&gt;   #  crea un directorio que contiene el comtenido de otro proyecto.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clonar un repo con submodulos&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;git clone url&lt;/li&gt;
+&lt;li&gt;git submodule init&lt;/li&gt;
+&lt;li&gt;git submodule update&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;CONFIGURATION&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global &amp;lt;opcion&amp;gt; &amp;lt;valor&amp;gt;&lt;/strong&gt;   # global para usuario, system todos y sin nada, especifico para el repo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config {key}&lt;/strong&gt;  #  muestra el valor de key&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global core.editor &amp;lt;editor&amp;gt;&lt;/strong&gt;   # cambia el editor por defecto&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global commit.template $HOME/.gitmessage.txt&lt;/strong&gt;  # plantilla para commits&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global core.pager &amp;#8216;more|less&amp;#8217;&lt;/strong&gt;   # paginador por defecto, puedes usar cualquiera&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global user.signingkey &amp;lt;gpg&amp;#45;key&amp;#45;id&amp;gt;&lt;/strong&gt;   #  clave gpg para firmar tags&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global core.excludesfile &amp;lt;file&amp;gt;&lt;/strong&gt;   # como gitignore&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global help.autocorrect 1&lt;/strong&gt;  #  autocorrige cuando se escribe un comando incorrecto. Solo en git &amp;gt;= 1.6.1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global color.ui true&lt;/strong&gt;  #  colorea la salida de git. Valores: true|false|always&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global core.autocrlf input&lt;/strong&gt;  # para que usuarios linux no tengan problemas con los retornos de carro de windows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global core.autocrlf true&lt;/strong&gt;  # para usuarios de windows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global core.whitespace trailing&amp;#45;space, space&amp;#45;before&amp;#45;tab, indent&amp;#45;with&amp;#45;non&amp;#45;tab, cr&amp;#45;at&amp;#45;eol&lt;/strong&gt;  #  respectivamente: busca espacios al final de línea, busca espacios al inicio de tabulación, busca líneas con 8 o más espacios en lugar de tabulaciones, acepta retornos de carro&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git apply &amp;#45;&amp;#45;whitespace=warn &amp;lt;patch&amp;gt;&lt;/strong&gt;   #  advierte de errores de espacios antes de aplicar el patch. Con &amp;#45;&amp;#45;whitespace=fix intenta arreglarlos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;git-attributes&#34;&gt;GIT ATTRIBUTES&lt;/h2&gt;
+
+&lt;p&gt;Archivo en .gitattributes en el directorio de trabajo o en .git/info/attributes para no committearlo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Identificando archivos binarios&lt;/strong&gt;
+Muchos archivos son para uso local y no aportan información al repositorio. Para decirle a git qué archivos son binarios hacer añadir al archivo atributes:
+&lt;strong&gt;&amp;lt;nombre archivo o regexp&amp;gt; &amp;#45;crlf &amp;#45;diff&lt;/strong&gt;  #  git no intentará corregir problemas de crlf ni mostrará los cambios con diff. En versiones &amp;gt;= 1.6 se pueden sustituir estos dos valores por la macro binary&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diffing binary files&lt;/strong&gt;
+En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de word:
+*&lt;strong&gt;.doc diff=word&lt;/strong&gt;
+#tras esto hay que definir el filtro word para que git convierta archivos word a texto:
+&lt;strong&gt;git config diff.word.textconv strings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Es posible hacer lo mismo para imágenes jpeg, es necesario instalar &lt;strong&gt;exiftool&lt;/strong&gt; para extraer los metadatos y luego hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; ‘*.jpeg &lt;span class=&#34;nv&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exif’ » .gitattributes
+$ git config diff.exif.textconv exiftool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;strong&gt;smudge&lt;/strong&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;*.c filter=indent&lt;/strong&gt; Luego:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global filter.indent.clean indent&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;git config &amp;#45;&amp;#45;global filter.indent.smudge cat&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Otro ejemplo interesante es la expansión de la palabra clave&lt;strong&gt;$Date$&lt;/strong&gt;. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`git log --pretty=format:&amp;quot;%ad&amp;quot; -1`&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;git config filter.dater.smudge expand_date&lt;/strong&gt;
+&lt;strong&gt;git config filter.dater.clean &amp;#8216;perl &amp;#45;pe &amp;#8220;s/\\$Date[^\\$]*\\$/\\$Date\\$/&amp;#8221;&amp;#8216;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt; » .gitattributes
+
+git add date_test.txt .gitattributes
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;quot;Testing date expansion in Git&amp;quot;&lt;/span&gt;
+rm date_test.txt
+git checkout date_test.txt
+cat date_test.txt
+&lt;span class=&#34;nv&#34;&gt;$Da&lt;/span&gt;te: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 07:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/ &amp;quot;Sincronización de proyectos en git con hooks (ganchos&#34;&gt;Hay dos tipos&lt;/a&gt;&amp;rdquo;), de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
+
+&lt;h2 id=&#34;conceptos&#34;&gt;CONCEPTOS&lt;/h2&gt;
+
+&lt;p&gt;Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.&lt;/p&gt;
+
+&lt;h2 id=&#34;gitignore&#34;&gt;GITIGNORE:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files&lt;/span&gt;
+*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above&lt;/span&gt;
+/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*&lt;/span&gt;
+build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
+doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

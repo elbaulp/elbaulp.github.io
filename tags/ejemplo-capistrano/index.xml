@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ejemplo Capistrano on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/ejemplo-capistrano/index.xml</link>
+    <description>Recent content in Ejemplo Capistrano on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/ejemplo-capistrano/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy</title>
+      <link>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</link>
+      <pubDate>Fri, 27 Nov 2015 16:17:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;400px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
+
+&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
+
+&lt;p&gt;Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno &lt;strong&gt;local&lt;/strong&gt;, para realizar modificaciones, otro de &lt;strong&gt;desarrollo&lt;/strong&gt;, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de &lt;strong&gt;producción&lt;/strong&gt;, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;configurar-el-entorno-local&#34;&gt;Configurar el entorno local&lt;/h1&gt;
+
+&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;instalar-y-configurar-capistrano-y-wp-deploy&#34;&gt;Instalar y configurar Capistrano y Wp-Deploy&lt;/h1&gt;
+
+&lt;p&gt;Una vez tengamos la copia de la web en local, empezamos instalando y configurando &lt;strong&gt;Wp-Deploy&lt;/strong&gt;. Ya que éste framework hace uso de Capistrano, se explicará directamente la instalación y uso de &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;qué-es-capistrano&#34;&gt;¿Qué es Capistrano?&lt;/h2&gt;
+
+&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;requerimientos&#34;&gt;Requerimientos&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bunder&lt;/strong&gt;: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar &lt;a href=&#34;http://bundler.io/&#34; target=&#34;_blank&#34;&gt;Bundler&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
+
+&lt;p&gt;En primer lugar, hay que clonar el repositorio. Para ello:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /directorio/desado
+$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bash config/prepare.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Solo resta añadir nuestro repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y, por último, instalar las dependencias de ruby con &lt;strong&gt;Bundler&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.&lt;/p&gt;
+
+&lt;h3 id=&#34;configurar-wp-deploy&#34;&gt;Configurar WP-Deploy&lt;/h3&gt;
+
+&lt;p&gt;Primero, es necesario establecer las preferencias globales de WordPress en el fichero &lt;code&gt;config/deploy.rb&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;usuario&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;aaaa@aaaa.com&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El Baúl del Programador&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El título del sitio WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Luego definimos los parámetros para el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/tags/#git&#34;&gt;git&lt;/a&gt;, en el mismo archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;nombreDelRepo&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;git@github.com:TuUsuario/nombreDelRepo.git&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Wp-Deploy usa por defecto dos entornos, &lt;strong&gt;staging&lt;/strong&gt; y &lt;strong&gt;production&lt;/strong&gt;. En este artículo configuraremos tres.&lt;/p&gt;
+
+&lt;h3 id=&#34;definiendo-y-configurando-entornos-de-desarrollo&#34;&gt;Definiendo y configurando entornos de desarrollo&lt;/h3&gt;
+
+&lt;p&gt;Dichos entornos se declaran en el directorio &lt;code&gt;./config/deploy/&lt;/code&gt;, por defecto existen &lt;code&gt;staging.rb&lt;/code&gt; y &lt;code&gt;production.rb&lt;/code&gt;. El primero para el desarrollo local y el segundo para aplicar los cambios a producción.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo para &lt;code&gt;production.rb&lt;/code&gt; sería:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://www.miweb.com&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para &lt;code&gt;staging.rb&lt;/code&gt; tendríamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web/en/local&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama &lt;strong&gt;development&lt;/strong&gt; y se prueban en local. Una vez probados, traspasamos los cambios a la rama &lt;strong&gt;master&lt;/strong&gt; y los subimos al servidor en producción.&lt;/p&gt;
+
+&lt;p&gt;Además, crearemos otro entorno llamado &lt;code&gt;desarrollo.rb&lt;/code&gt;, que usaremos para probar los cambios de la rama &lt;strong&gt;development&lt;/strong&gt; en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero &lt;code&gt;desarrollo.rb&lt;/code&gt; en &lt;code&gt;./config/deploy/&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://desarrollo.miweb.com&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/el/subdominio/de/la/web/&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos, también se usa la rama &lt;strong&gt;development&lt;/strong&gt;, ya que es donde probaremos los cambios aplicados al código.&lt;/p&gt;
+
+&lt;h3 id=&#34;configurando-el-acceso-a-la-base-de-datos&#34;&gt;Configurando el acceso a la base de datos&lt;/h3&gt;
+
+&lt;p&gt;En el directorio &lt;code&gt;./config&lt;/code&gt; renombramos el fichero &lt;code&gt;database.example.yml&lt;/code&gt; a &lt;code&gt;database.yml&lt;/code&gt; y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hecho esto, todo debería estar listo para usar.&lt;/p&gt;
+
+&lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
+
+&lt;p&gt;El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:setup:remote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero &lt;code&gt;wp-config.php&lt;/code&gt; (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un &lt;code&gt;wp-config.php&lt;/code&gt; para producción en &lt;strong&gt;remote&lt;/strong&gt; (El servidor).&lt;/p&gt;
+
+&lt;h3 id=&#34;deploying&#34;&gt;Deploying&lt;/h3&gt;
+
+&lt;p&gt;Para volcar los cambios aplicados al servidor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de &lt;code&gt;production&lt;/code&gt;, &lt;code&gt;desarrollo&lt;/code&gt; ó &lt;code&gt;staging&lt;/code&gt; para aplicar los cambios al entorno correspondiente.&lt;/p&gt;
+
+&lt;h3 id=&#34;migraciones-de-bases-de-datos&#34;&gt;Migraciones de bases de datos&lt;/h3&gt;
+
+&lt;p&gt;Un comando muy útil, aunque hay que usarlo con precaución, ya que: &lt;strong&gt;&lt;em&gt;puede deshacerse&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Al migrar la base de datos, se reemplazarán automáticamente las urls necesarias del entorno de producción al de desarrollo y vice versa.&lt;/p&gt;
+
+&lt;h4 id=&#34;enviar-la-base-de-datos-al-entorno-de-producción&#34;&gt;Enviar la base de datos al entorno de producción&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;de-producción-a-desarrollo&#34;&gt;De producción a desarrollo&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:pull
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;realizar-una-copia-de-seguridad-del-a-bd-de-producción&#34;&gt;Realizar una copia de seguridad del a BD de producción&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:backup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;sincronizando-la-carpeta-uploads&#34;&gt;Sincronizando la carpeta Uploads&lt;/h3&gt;
+
+&lt;p&gt;La carpeta &lt;strong&gt;Uploads&lt;/strong&gt; de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production uploads:sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;actualizar-el-núcleo-de-wordpress&#34;&gt;Actualizar el núcleo de WordPress&lt;/h3&gt;
+
+&lt;p&gt;A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:core:update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Si el lector ha llegado hasta este punto, estaba interesado en conseguir un ciclo de desarrollo adecuado para su sitio y, seguramente esto cumpla con sus necesidades. Una de las principales ventajas de éste modelo de desarrollo es el control absoluto del estado del sitio web, y un mayor control sobre los posibles errores, ya que se pueden probar en dos fases de desarrollo antes de liberarlos al público.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Wp-Deploy&lt;/em&gt; »» &lt;a href=&#34;https://github.com/Mixd/wp-deploy&#34; target=&#34;_blank&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Capistrano&lt;/em&gt; »» &lt;a href=&#34;http://capistranorb.com/&#34; target=&#34;_blank&#34;&gt;capistranorb.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

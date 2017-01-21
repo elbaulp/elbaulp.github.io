@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/categories/git/index.xml</link>
+    <description>Recent content in Git on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo Eliminar Ficheros Demasiado Grandes Para GitHub</title>
+      <link>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</link>
+      <pubDate>Sat, 12 Nov 2016 08:12:16 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
+      <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
+
+&lt;h2 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h2&gt;
+
+&lt;p&gt;Para ello basta ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git filter-branch --index-filter &lt;span class=&#34;s1&#34;&gt;&amp;#39;git rm -r --cached --ignore-unmatch &amp;lt;file/dir&amp;gt;&amp;#39;&lt;/span&gt; HEAD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Y reemplazar &lt;code&gt;&amp;lt;file/dir&amp;gt;&lt;/code&gt; con la ruta de nuestro fichero.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-eliminar-por-completo-el-rastro-del-fichero&#34;&gt;2. Eliminar por completo el rastro del fichero&lt;/h2&gt;
+
+&lt;p&gt;El comando anterior crea una copia de seguridad en caso de que hayamos cometido un error, si ejecutamos&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git lola --name-status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Veremos un commit parecido a este (&lt;code&gt;* SHA1 (refs/original/refs/heads/master) mensaje del commit&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;En este commit aún está el fichero problemático, para borrarlo definitivamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git update-ref -d refs/original/refs/heads/master
+$ git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --all
+$ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;3-enviar-los-cambios&#34;&gt;3. Enviar los cambios&lt;/h2&gt;
+
+&lt;p&gt;Una vez hecho esto, solo resta enviar los cambios a Github:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y habremos solucionado el problema.&lt;/p&gt;
+
+&lt;h2 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>21 alias útiles para git</title>
+      <link>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</link>
+      <pubDate>Tue, 01 Dec 2015 10:56:26 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Todo aquel que use &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Tutorial de Git&#34;&gt;git&lt;/a&gt; sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los &lt;em&gt;alias&lt;/em&gt;, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos &lt;em&gt;alias&lt;/em&gt; útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;git-ec&#34;&gt;git ec&lt;/h2&gt;
+
+&lt;p&gt;Como no, el primer alias tenía que ser uno que nos permita editar la configuración de git rápidamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git config --global alias.ec &lt;span class=&#34;s2&#34;&gt;&amp;quot;config --global -e&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A partir de ahora, podremos abrir la configuración de git con nuestro editor por defecto con &lt;code&gt;git ec&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;El resto del artículo asumirá que se tiene la configuración abierta con un editor, los aliases se escribirán directamente en la sección &lt;code&gt;[alias]&lt;/code&gt; de dicho fichero.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-co-br-cm-st&#34;&gt;git co, br, cm, st&lt;/h2&gt;
+
+&lt;p&gt;Estos &lt;em&gt;aliases&lt;/em&gt; pretenden más que facilitar la escritura de &lt;code&gt;checkout&lt;/code&gt;, &lt;code&gt;branch&lt;/code&gt;, &lt;code&gt;commit -am&lt;/code&gt; y &lt;code&gt;status&lt;/code&gt;. Básicamente los comandos que más uso.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;co&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; checkout
+&lt;span class=&#34;nv&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; branch
+&lt;span class=&#34;nv&#34;&gt;cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am
+&lt;span class=&#34;nv&#34;&gt;st&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Veamos ahora una serie de aliases que he extraido de &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; target=&#34;_blank&#34; title=&#34;github Flow&#34;&gt;haacked&lt;/a&gt;:&lt;/p&gt;
+
+&lt;h2 id=&#34;actualizar-el-directorio-de-trabajo&#34;&gt;Actualizar el directorio de trabajo&lt;/h2&gt;
+
+&lt;p&gt;Para simplificar estos dos comandos&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git pull --rebase --prune
+git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;en los que el primero obtiene los cambios desde el servidor, si se tienen commits locales, se ponen al principio de los descargados (&lt;code&gt;rebase&lt;/code&gt;), y con &lt;code&gt;prune&lt;/code&gt; se eliminan ramas que ya no existan en el servidor. El segundo simplemente actualiza recursivamente submódulos. El  &lt;em&gt;alias&lt;/em&gt; quedará:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git pull --rebase --prune &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este &lt;em&gt;alias&lt;/em&gt; es algo distinto, la exclamación indica que se va a ejecutar un comando en la &lt;em&gt;shell&lt;/em&gt;, es decir, podemos ejecutar cualquier comando, no solo de git. En este caso, se están ejecutando dos comandos git.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-save-git-wip-git-undo-git-amend&#34;&gt;git save, git wip, git undo, git amend&lt;/h2&gt;
+
+&lt;p&gt;Estos dos &lt;em&gt;alias&lt;/em&gt; están destinados a cuando simplemente queremos guardar nuestros cambios, ya sea porque tenemos que irnos a hacer otras cosas, o simplemente no hemos acabado el trabajo y aún no tenemos un nombre para el commit adecuado. Con ellos, se guardan los cambios con un mensaje de commit &lt;code&gt;SAVEPOINT&lt;/code&gt; o &lt;code&gt;WIP&lt;/code&gt;, en función del alias que os guste más:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;wip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am &lt;span class=&#34;s2&#34;&gt;&amp;quot;WIP&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez volvamos a trabajar, simplemente ejecutamos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;undo&lt;/code&gt;, que elimina el último commit, pero deja intactos los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;undo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; reset HEAD~1 --mixed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;O si simplemente queremos modificar el mensaje del commit, usamos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;amend&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;amend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -a --amend
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;resetear-el-directorio-de-trabajo-adecuadamente-git-wipe&#34;&gt;Resetear el directorio de trabajo adecuadamente, git wipe&lt;/h2&gt;
+
+&lt;p&gt;Cuantas veces hemos comenzado a trabajar o intentar añadir algo al código y al final lo único que hicimos fue ensuciar todo el directorio, montones de líneas de código sin ordenar etc. Lo mejor en estos casos es descartar todo y volver a empezar. Para ello es posible usar &lt;code&gt;git reset HEAD --hard&lt;/code&gt;, pero esto borrará todo, sin que quede constancia de lo que hicimos. Para descartar el código, pero que quede constancia de lo que hicimios, por si alguna vez nos hace falta, crearemos el &lt;em&gt;alias&lt;/em&gt; &lt;em&gt;wipe&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;wipe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -qm &lt;span class=&#34;s1&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset HEAD~1 --hard
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hace un commit de todo lo que hay en el directorio de trabajo para luego hacer un &lt;em&gt;hard reset&lt;/em&gt; y eliminar dicho commit. A pesar de ello, el commit seguirá ahí, en la historia del repositorio, aunque inalcanzable. Estos commits son un poco complejos de recuperar, pero al menos seguimos teniendo aquel trabajo del que no quedamos del todo convencidos. Quizá algún día recuerdes que necesitabas una línea de código que escribiste. Para recuperarlo hay que ejecutar &lt;code&gt;git reflog&lt;/code&gt; y buscar el SHA del commit que tenga como mensaje “WIPE SAVEPOINT”.&lt;/p&gt;
+
+&lt;h1 id=&#34;alias-para-logs&#34;&gt;Alias para logs&lt;/h1&gt;
+
+&lt;p&gt;Veamos ahora una serie de &lt;em&gt;alias&lt;/em&gt; para mostrar los logs de los commits de distintos modos.&lt;/p&gt;
+
+&lt;h2 id=&#34;mostrar-commits-de-forma-compacta-y-colores-git-ls&#34;&gt;Mostrar commits de forma compacta y colores, git ls&lt;/h2&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitls.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitls.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;666px&#34; height=&#34;504px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;listar-commits-y-ficheros-modificados-git-ll&#34;&gt;Listar commits y ficheros modificados, git ll&lt;/h2&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitll.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitll.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;603px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --numstat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;mostar-commits-de-forma-compacta-y-con-fechas-git-lds&#34;&gt;Mostar commits de forma compacta y con fechas, git lds&lt;/h2&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;766px&#34; height=&#34;502px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si lo preferimos con fechas relativas, usaremos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;git ld&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitld.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitld.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;785px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;buscar-ficheros-y-contenido-dentro-de-ficheros-grep&#34;&gt;Buscar ficheros y contenido dentro de ficheros (grep)&lt;/h2&gt;
+
+&lt;p&gt;Para buscar ficheros con conteniendo el nombre indicado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git ls-files | grep -i&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git f one
+
+P3/oneway/Utils.py
+P3/oneway/__init__.py
+P3/oneway/ej1.py
+P3/oneway/ej2.py
+P3/oneway/ej3.py
+P3/oneway/ej4.py
+P3/oneway/ej5.py
+P3/oneway/ej6.py
+P3/oneway/ej7.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para buscar contenido dentro de todo el repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+&lt;span class=&#34;nv&#34;&gt;gr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git grep Rabin
+
+P1/modularArith/ej4.py:def MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
+P1/modularArith/ej4.py:    print MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;90221078753392184154149622269679731705920869572364323146777389106744249167893287091491005751893264013854756094230384816436985035887367570198390830836626929620930395458607390051335962764852769424941031051670131521265969408350800112779692655340042253991970492761524977413231930703094065023050574077317620529581736775256036443993928340221545607375549860405933153255776836414051570996984167934585339322850189347872718439350738428272565094611168867981011370318335242028953808721309056435214502065537377043&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para buscar desde el directorio raíz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;gra&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-parse --show-toplevel&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; | xargs -I{} echo &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;listar-todos-los-aliases-git-la&#34;&gt;Listar todos los aliases, git la&lt;/h2&gt;
+
+&lt;p&gt;Ahora que ya llevamos unos cuantos &lt;em&gt;aliases&lt;/em&gt;, quizá sean dificil de recordar hasta que nos acostumbremos, por ello, podemos crear un &lt;em&gt;alias&lt;/em&gt; que liste todos los nuestros &lt;em&gt;aliases&lt;/em&gt; :-):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git config -l | grep alias | cut -c 7-&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;listar-la-última-etiqueta-git-lt&#34;&gt;Listar la última etiqueta, git lt&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lasttag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
+&lt;span class=&#34;nv&#34;&gt;lt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;alias-para-hacer-merges-git-ours-git-theirs&#34;&gt;Alias para hacer merges, git ours, git theirs&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Eso es todo, comentad vuestras &lt;em&gt;alias&lt;/em&gt; para completar este artículo!&lt;/p&gt;
+
+&lt;h2 id=&#34;recopilación&#34;&gt;Recopilación&lt;/h2&gt;
+
+&lt;p&gt;Aquí se muestran todos los &lt;em&gt;alias&lt;/em&gt; vistos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;alias&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;ec&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; config --global -e
+  &lt;span class=&#34;nv&#34;&gt;co&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; checkout
+  &lt;span class=&#34;nv&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; branch
+  &lt;span class=&#34;nv&#34;&gt;cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am
+  &lt;span class=&#34;nv&#34;&gt;st&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; status
+  &lt;span class=&#34;nv&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git pull --rebase --prune &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git submodule update --init --recursive
+  &lt;span class=&#34;nv&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;wip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am &lt;span class=&#34;s2&#34;&gt;&amp;quot;WIP&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;undo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; reset HEAD~1 --mixed
+  &lt;span class=&#34;nv&#34;&gt;amend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -a --amend
+  &lt;span class=&#34;nv&#34;&gt;wipe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -qm &lt;span class=&#34;s1&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset HEAD~1 --hard
+  &lt;span class=&#34;nv&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate
+  &lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --numstat
+  &lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
+  &lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
+  &lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git ls-files | grep -i&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+  &lt;span class=&#34;nv&#34;&gt;gr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+  &lt;span class=&#34;nv&#34;&gt;gra&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-parse --show-toplevel&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; | xargs -I{}   echo &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git config -l | grep alias | cut -c 7-&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;lasttag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
+  &lt;span class=&#34;nv&#34;&gt;lt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
+  &lt;span class=&#34;nv&#34;&gt;ours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;p&gt;Github Flow Aliases | &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; title=&#34;Github Flow Aliases&#34;&gt;haacked.com&lt;/a&gt;
+Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/&#34; title=&#34;Must Have Git Aliases: Advanced Examples&#34;&gt;durdn.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Como Usar Los Filtros Smudge Y Clean en Git</title>
+      <link>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</link>
+      <pubDate>Thu, 21 May 2015 14:50:42 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En el anterior artículo, hablamos sobre &lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34;&gt;cómo sincronizar dos repositorios en git&lt;/a&gt;, también se vio algo de &lt;em&gt;hooks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hoy vamos a ver cómo usar filtros en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34;&gt;git&lt;/a&gt; para cambiar automáticamente la &lt;code&gt;url&lt;/code&gt; de una web hecha con &lt;em&gt;jekyll&lt;/em&gt; en función de si estamos en local o en el servidor. Es decir, cuando estemos desarrollando o escribiendo un artículo, querremos ir viendo los resultados en local, para ello la &lt;code&gt;url&lt;/code&gt; del fichero &lt;code&gt;_config.yml&lt;/code&gt; debe estar vacía, cuando esté en el servidor deberá ser el nombre del dominio.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;creando-el-script-para-smudge&#34;&gt;Creando el script para smudge&lt;/h2&gt;
+
+&lt;p&gt;Bastará con crear un &lt;em&gt;script&lt;/em&gt; que contenga:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;quot;url: &amp;quot;)&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo llamaremos &lt;code&gt;siteurl.smudge&lt;/code&gt;, y le daremos permisos de ejecución.&lt;/p&gt;
+
+&lt;h2 id=&#34;creando-el-script-para-clean&#34;&gt;Creando el script para clean&lt;/h2&gt;
+
+&lt;p&gt;Similar al anterior:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;quot;url: http:\/\/elbauldelprogramador\.com&amp;quot;)&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;añadir-los-scripts-a-los-filtros&#34;&gt;Añadir los scripts a los filtros&lt;/h2&gt;
+
+&lt;p&gt;Solo resta añadir los filtros a la configuración de git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git config filter.siteurl.smudge siteurl.smudge
+$ git config filter.siteurl.clean siteurl.clean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Los &lt;em&gt;scripts&lt;/em&gt; tienen que estar en el &lt;em&gt;PATH&lt;/em&gt; del sistema, y tener permisos de ejecucion.
+{: .notice}&lt;/p&gt;
+
+&lt;h2 id=&#34;el-gitattributes&#34;&gt;El Gitattributes&lt;/h2&gt;
+
+&lt;p&gt;Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero &lt;code&gt;.gitattributes&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;_config.yml &lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;siteurl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Gracias Julián.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Ejecutados todos los pasos, ahora tendremos la url en local cuando estemos desarrollando, y se sustituirá automáticamente por el dominio cuando se publique en &lt;em&gt;github&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gilesbowkett/git-smudge-and-clean&#34; title=&#34;Git smudge and Clean&#34;&gt;github.com/gilesbowkett&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes&#34; title=&#34;Git SCM&#34;&gt;Git scm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sincronización de proyectos en git con hooks (ganchos)</title>
+      <link>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</link>
+      <pubDate>Wed, 15 Apr 2015 14:22:19 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;repositorio-espejo-mirror-repo&#34;&gt;Repositorio espejo (Mirror repo)&lt;/h2&gt;
+
+&lt;h3 id=&#34;problema&#34;&gt;Problema&lt;/h3&gt;
+
+&lt;p&gt;Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos en git&#34;&gt;git&lt;/a&gt;, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (&lt;em&gt;mirror repos&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;repositorios-a-sincronizar&#34;&gt;Repositorios a sincronizar&lt;/h3&gt;
+
+&lt;p&gt;Supongamos que los repositorios se llaman &lt;em&gt;repo1&lt;/em&gt; y &lt;em&gt;repo2&lt;/em&gt;. Pretendemos que &lt;em&gt;repo2&lt;/em&gt; esté sincronizado (sea un espejo) del &lt;em&gt;repo1&lt;/em&gt;. Ésto significa que no tendremos que clonar en ningún momento el &lt;em&gt;repo2&lt;/em&gt;. En local únicamente tendremos el &lt;em&gt;repo1&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;solución&#34;&gt;Solución&lt;/h3&gt;
+
+&lt;p&gt;La respuesta, como es habitual, la encontré tras buscar un poco en &lt;em&gt;stackoverflow&lt;/em&gt;. Gracias a &lt;a href=&#34;http://stackoverflow.com/users/140185/manoj-govindan&#34; title=&#34;Perfil en stackoverflow&#34;&gt;Manoj Govindan&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;añadir-repo2-como-remote&#34;&gt;Añadir repo2 como remote&lt;/h4&gt;
+
+&lt;p&gt;Dentro de &lt;em&gt;repo1&lt;/em&gt; añadiremos un nuevo &lt;em&gt;remote&lt;/em&gt; que sea el &lt;em&gt;repo2&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git remote add repo2 &amp;lt;url-repo2&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;configurar-el-hook-gancho-post-commit&#34;&gt;Configurar el hook (gancho) post-commit&lt;/h4&gt;
+
+&lt;p&gt;Dentro del repositorio, crearemos un nuevo &lt;em&gt;hook&lt;/em&gt; que se ejecute cada vez que hagamos un &lt;em&gt;commit&lt;/em&gt; en &lt;em&gt;repo1&lt;/em&gt;. Por cada &lt;em&gt;commit&lt;/em&gt;, ejecutaremos un &lt;em&gt;git push repo2&lt;/em&gt;, lo cual enviará los cambios al &lt;em&gt;repo2&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
+mv .git/hooks/pre-commit.sample .git/hooks/post-commit
+&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;quot;&lt;/span&gt; &amp;gt; .git/hooks/post-commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En contenido del &lt;em&gt;hook&lt;/em&gt;, para que se vea más claro es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+git push repo2 -f --mirror
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el &lt;em&gt;commit&lt;/em&gt; del &lt;em&gt;repo1&lt;/em&gt;, sigue siendo necesario ejecutar &lt;code&gt;git push&lt;/code&gt; en &lt;em&gt;repo1&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mantener-sincronizada-una-única-rama&#34;&gt;Mantener sincronizada una única rama&lt;/h2&gt;
+
+&lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta=&amp;quot;distinta&amp;quot; de=&amp;quot;de&amp;quot; master=&amp;quot;master&amp;quot;&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
+
+&lt;p&gt;Para activarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
+mv .git/hooks/pre-commit.sample .git/hooks/post-merge
+&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;#!/bin/bash\n\ngit push repo2 master:master&amp;quot;&lt;/span&gt; &amp;gt; .git/hooks/post-merge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El contenido del &lt;em&gt;hook&lt;/em&gt; es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+git push repo2 master:master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;git push repo2 master:master&lt;/code&gt; podría leerse como: &lt;em&gt;Publica en el repo2 en la rama master, el contenido de la rama master del repo actual&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository&#34;&gt;Automatically mirror a git repository&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

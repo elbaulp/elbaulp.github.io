@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>/Var/Mail/Root A Gmail on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/var/mail/root-a-gmail/index.xml</link>
+    <description>Recent content in /Var/Mail/Root A Gmail on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/var/mail/root-a-gmail/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo enviar los emails de /var/mail/root a una cuenta de correo</title>
+      <link>https://elbauldelprogramador.com/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/</guid>
+      <description>&lt;p&gt;En sistemas operativos como &lt;a href=&#34;https://elbauldelprogramador.com/tags/#debian&#34;&gt;Debian&lt;/a&gt;, muchos de los programas y demonios envían mensajes al usuario &lt;em&gt;root&lt;/em&gt; para informar del estado del sistema. Los mensajes se almacenan en el archivo &lt;em&gt;/var/mail/root&lt;/em&gt;. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como &lt;strong&gt;mutt&lt;/strong&gt; para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h2&gt;
+
+&lt;p&gt;Es necesario que el sistema tenga instalado el programa &lt;strong&gt;sendmail&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;configurar-el-reenvío&#34;&gt;Configurar el reenvío&lt;/h2&gt;
+
+&lt;p&gt;Normalmente, la configuración del reenvío de correo se realiza en el archivo &lt;strong&gt;/etc/aliases&lt;/strong&gt;, un ejemplo del contenido de este archivo es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/aliases&lt;/span&gt;
+mailer-daemon: postmaster
+postmaster: root
+nobody: root
+hostmaster: root
+usenet: root
+news: root
+webmaster: root
+www: root
+ftp: root
+abuse: root
+noc: root
+security: root
+clamav: root
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos, todo se redirecciona a la cuenta local del usuario &lt;em&gt;root&lt;/em&gt;. Bastaría con redireccionar la cuenta &lt;em&gt;root&lt;/em&gt; a una dirección de correo para obtener todos los mensajes del sistema en nuestra bandeja de entrada, y tener así nuestro servidor un poco más controlado. Para ello añadimos en el archivo anterior la siguiente línea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Redireccionar todo el correo de root a mi cuenta&lt;/span&gt;
+root: direccion@correo.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para aplicar los cambios hay que ejecutar el comando &lt;code&gt;newaliases&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A partir de ahora, recibiremos en nuestra bandeja de entrada los mensajes del sistema, podemos crear un filtro si usamos gmail para organizarlos y quitarlos de la bandeja principal.&lt;/p&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;How to send emails stored in /var/spool/mail/root to a gmail inbox&lt;/em&gt; »» &lt;a href=&#34;http://serverfault.com/questions/554922/how-to-send-emails-stored-in-var-spool-mail-root-to-a-gmail-inboxbr/&#34; target=&#34;_blank&#34;&gt;serverfault.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

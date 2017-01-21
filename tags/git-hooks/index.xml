@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Hooks on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/git-hooks/index.xml</link>
+    <description>Recent content in Git Hooks on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/git-hooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Como Usar Los Filtros Smudge Y Clean en Git</title>
+      <link>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</link>
+      <pubDate>Thu, 21 May 2015 14:50:42 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En el anterior artículo, hablamos sobre &lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34;&gt;cómo sincronizar dos repositorios en git&lt;/a&gt;, también se vio algo de &lt;em&gt;hooks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hoy vamos a ver cómo usar filtros en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34;&gt;git&lt;/a&gt; para cambiar automáticamente la &lt;code&gt;url&lt;/code&gt; de una web hecha con &lt;em&gt;jekyll&lt;/em&gt; en función de si estamos en local o en el servidor. Es decir, cuando estemos desarrollando o escribiendo un artículo, querremos ir viendo los resultados en local, para ello la &lt;code&gt;url&lt;/code&gt; del fichero &lt;code&gt;_config.yml&lt;/code&gt; debe estar vacía, cuando esté en el servidor deberá ser el nombre del dominio.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;creando-el-script-para-smudge&#34;&gt;Creando el script para smudge&lt;/h2&gt;
+
+&lt;p&gt;Bastará con crear un &lt;em&gt;script&lt;/em&gt; que contenga:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;quot;url: &amp;quot;)&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo llamaremos &lt;code&gt;siteurl.smudge&lt;/code&gt;, y le daremos permisos de ejecución.&lt;/p&gt;
+
+&lt;h2 id=&#34;creando-el-script-para-clean&#34;&gt;Creando el script para clean&lt;/h2&gt;
+
+&lt;p&gt;Similar al anterior:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;quot;url: http:\/\/elbauldelprogramador\.com&amp;quot;)&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;añadir-los-scripts-a-los-filtros&#34;&gt;Añadir los scripts a los filtros&lt;/h2&gt;
+
+&lt;p&gt;Solo resta añadir los filtros a la configuración de git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git config filter.siteurl.smudge siteurl.smudge
+$ git config filter.siteurl.clean siteurl.clean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Los &lt;em&gt;scripts&lt;/em&gt; tienen que estar en el &lt;em&gt;PATH&lt;/em&gt; del sistema, y tener permisos de ejecucion.
+{: .notice}&lt;/p&gt;
+
+&lt;h2 id=&#34;el-gitattributes&#34;&gt;El Gitattributes&lt;/h2&gt;
+
+&lt;p&gt;Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero &lt;code&gt;.gitattributes&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;_config.yml &lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;siteurl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Gracias Julián.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Ejecutados todos los pasos, ahora tendremos la url en local cuando estemos desarrollando, y se sustituirá automáticamente por el dominio cuando se publique en &lt;em&gt;github&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gilesbowkett/git-smudge-and-clean&#34; title=&#34;Git smudge and Clean&#34;&gt;github.com/gilesbowkett&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes&#34; title=&#34;Git SCM&#34;&gt;Git scm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

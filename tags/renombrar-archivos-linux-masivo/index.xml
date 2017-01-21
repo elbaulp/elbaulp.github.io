@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Renombrar Archivos Linux Masivo on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/renombrar-archivos-linux-masivo/index.xml</link>
+    <description>Recent content in Renombrar Archivos Linux Masivo on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/renombrar-archivos-linux-masivo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Renombrar archivos masivamente en GNU/Linux</title>
+      <link>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</guid>
+      <description>&lt;p&gt;En ocasiones, cuando bajamos archivos de internet (Normalmente música), cada archivo tiene en el nombre la dirección de la página web de donde se descargó.&lt;/p&gt;
+
+&lt;p&gt;Si queremos renombrar todos los archivos para eliminar la página web del nombre del archivo, no es necesario ir uno por uno renombrando, usando el comando rename de GNU/linux lo conseguimos fácilmente.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, pongamos que los archivos son los siguientes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr:~/Desktop/RAP/d$ ls
+01. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Uno - www.HHGroups.com.mp3
+02. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Lluvia y fuego - www.HHGroups.com.mp3
+03. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Donde duele inspira - www.HHGroups.com.mp3
+04. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+05. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Soy loco por ti - www.HHGroups.com.mp3
+06. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+07. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+08. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - In-extremis - www.HHGroups.com.mp3
+09. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+10. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Artesano del arte insano - www.HHGroups.com.mp3
+11. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Cosquijazz - www.HHGroups.com.mp3
+12. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Mis ego depresiones - www.HHGroups.com.mp3
+13. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Queremos elmininar las siguientes partes del nombre: &lt;strong&gt;Rafael Lechowski (Flowklorikos)&lt;/strong&gt; y &lt;strong&gt;www.HHGroups.com&lt;/strong&gt;. Para ello usamos la orden rename con la siguiente sintaxis:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/Rafael Lechowski (Flowklorikos) - //g&amp;#39;&lt;/span&gt; *.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo que decimos con esa expresión regular es que reemplace lo que coincida con Rafael Lechowski (Flowklorikos) por nada, es decir, que lo elimine del nombre. Es necesario escapar con los espacios en blanco y los parentesis. El *.mp3 quiere decir que aplique el renombramiento a los archivos mp3.&lt;/p&gt;
+
+&lt;p&gt;Como resultado, ahora los ficheros tienen el siguiente nombre:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+01. Uno - www.HHGroups.com.mp3
+02. Lluvia y fuego - www.HHGroups.com.mp3
+03. Donde duele inspira - www.HHGroups.com.mp3
+04. Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+05. Soy loco por ti - www.HHGroups.com.mp3
+06. Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+07. Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+08. In-extremis - www.HHGroups.com.mp3
+09. Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+10. Artesano del arte insano - www.HHGroups.com.mp3
+11. Cosquijazz - www.HHGroups.com.mp3
+12. Mis ego depresiones - www.HHGroups.com.mp3
+13. &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Falta eliminar la parte www.HHGroups.com, que lo conseguimos con esta orden:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/ - www.HHGroups.com//g&amp;#39;&lt;/span&gt; *.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y finalmente, tenemos todos nuestros archivos renombrados:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+01. Uno.mp3
+02. Lluvia y fuego.mp3
+03. Donde duele inspira.mp3
+04. Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+05. Soy loco por ti.mp3
+06. Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+07. Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+08. In-extremis.mp3
+09. Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+10. Artesano del arte insano.mp3
+11. Cosquijazz.mp3
+12. Mis ego depresiones.mp3
+13. 13.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instalar Logstalgia on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/instalar-logstalgia/index.xml</link>
+    <description>Recent content in Instalar Logstalgia on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/instalar-logstalgia/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Visualiza las visitas a tu web al estilo Pong con Logstalgia</title>
+      <link>https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/</guid>
+      <description>&lt;p&gt;Hace poco he descubierto un programa muy curioso, &lt;strong&gt;Logstalgia&lt;/strong&gt;, que a partir del fichero de log de acceso a una web crea una pantalla del juego Pong en la que cada línea del log representa una bola en el juego. Es una buena representación gráfica de lo que está pasando en el servidor web. Y su uso es bastante simple. Empecemos instalándolo:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install logstalgia&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para usarlo localmente, basta con ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;tail -f /var/www/mySitio/log/access.log &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; logstalgia -1280x720 --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Por contra, si el servidor no es local, nos conectamos mediante ssh:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ssh usuario@dominio.com tail -f /var/www/mySitio/log/access.log &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; logstalgia -1280x720 --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Es posible guardar el un fichero la pantalla de logstalgia pasándole los siguientes parámetros:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;logstalgia -1280x720 --output-ppm-stream output.ppm --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y luego lo convertimos al formato de vídeo mp4:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ffmpeg -y -r &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; -f image2pipe -vcodec ppm -i output.ppm -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -threads &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; -bf &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; server.log.mp4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Os dejo un vídeo del tráfico de mi modesto blog:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;5pzMBg_vvo8&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Web oficial&lt;/em&gt; »» &lt;a href=&#34;https://code.google.com/p/logstalgia/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

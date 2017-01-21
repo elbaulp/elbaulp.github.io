@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minus Pl Sql on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/minus-pl-sql/index.xml</link>
+    <description>Recent content in Minus Pl Sql on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/minus-pl-sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.</title>
+      <link>https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/</guid>
+      <description>&lt;p&gt;Podemos combinar múltiples consultas utilizando los operadores &lt;code&gt;UNION, UNION ALL, INTERSECT y MINUS&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Los correspondientes campos y/o expresiones que aparecen en la listas de los &lt;code&gt;SELECT&lt;/code&gt; de las consultas a las que se le aplican los operadores anteriores deben coincidir en tipo y número, o al menos, tener un tipo compatible o sobre el cual se pueda aplicar un casting automático.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;location_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;department_name&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;quot;Department&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TO_CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;quot;Warehouse&amp;quot;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;departments&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;UNION&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;location_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TO_CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;quot;Department&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;warehouse&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;warehouses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando se aplica el operador &lt;code&gt;UNION&lt;/code&gt; sobre dos consultas, el resultado serán los registros de la primera consulta más los registros de la segunda consulta, eliminando los registros duplicados.&lt;/p&gt;
+
+&lt;p&gt;Cuando se aplica el operador &lt;code&gt;UNION ALL&lt;/code&gt; sobre dos consultas, el resultado serán los registros de la primera consulta más los registros de la segunda consulta.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inventories&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;UNION&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ALL&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;order_items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando se aplica el operador &lt;code&gt;INTERSECT&lt;/code&gt; sobre dos consultas, el resultado serán los registros duplicados o coincidentes en la primera y segunda consulta.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inventories&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;INTERSECT&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;order_items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando se aplica el operador &lt;code&gt;MINUS&lt;/code&gt; sobre dos consultas, el resultado serán los registros que están en la primera consulta pero que no aparecen en la segunda consulta.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inventories&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;MINUS&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;order_items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;indicaciones&#34;&gt;Indicaciones&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El orden de las cláusulas en las sentencia &lt;code&gt;SELECT&lt;/code&gt; es significativo. Se puede omitir cualquiera de las cláusulas opcionales, pero cuando se usan, deben aparecer en el orden apropiado.&lt;/li&gt;
+&lt;li&gt;Cuando se ejecuta la sentencia &lt;code&gt;SELECT&lt;/code&gt; con las cláusula &lt;code&gt;WHERE&lt;/code&gt;, &lt;code&gt;GROUP BY&lt;/code&gt;, y &lt;code&gt;HAVING&lt;/code&gt; el orden de ejecución es el siguiente:
+
+&lt;ol&gt;
+&lt;li&gt;El &lt;code&gt;WHERE&lt;/code&gt; excluye las filas que no cumplen la condición.&lt;/li&gt;
+&lt;li&gt;El &lt;code&gt;GROUP BY&lt;/code&gt; colecciona las filas escogidas dentro de un grupo por cada uno de los valores de la cláusula &lt;code&gt;GROUP BY&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Las funciones agregado calculan los valores por cada grupo.&lt;/li&gt;
+&lt;li&gt;La cláusula &lt;code&gt;HAVING&lt;/code&gt; por último excluye las filas que no cumplen la condición de búsqueda.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-subconsultas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-subconsultas/&#34;&gt;Consulta de Datos - Subconsultas.&lt;/a&gt;&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

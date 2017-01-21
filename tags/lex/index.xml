@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lex on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/lex/index.xml</link>
+    <description>Recent content in Lex on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/lex/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Un Conversor De Markdown a LaTeX Casero en Lex</title>
+      <link>https://elbauldelprogramador.com/conversor-markdow-a-latex/</link>
+      <pubDate>Mon, 09 May 2016 11:20:10 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/conversor-markdow-a-latex/</guid>
+      <description>&lt;p&gt;Hace tiempo, para la asignatura “Modelos de Computación” desarrollé un conversor de &lt;strong&gt;MarkDown&lt;/strong&gt;  a &lt;strong&gt;LaTeX&lt;/strong&gt; usando &lt;strong&gt;flex&lt;/strong&gt;, muy sencillo, pensado para facilitarme un poco la vida a la hora de escribir en el blog y pasar a LaTeX. Básicamente con &lt;strong&gt;flex&lt;/strong&gt; se van reconociendo partes del documento &lt;strong&gt;MarkDown&lt;/strong&gt; mediante expresiones regulares y se traduce a su comando homólogo en &lt;strong&gt;LaTeX&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por supuesto, más tarde descubrí &lt;strong&gt;pandoc&lt;/strong&gt;, y es el programa que uso para todo tipo de conversiones entre formatos :-).&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;compilación&#34;&gt;Compilación&lt;/h2&gt;
+
+&lt;p&gt;Para compilar el fichero simplemente es necesario el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;lex markdown2Latex.l &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gcc -Wall lex.yy.c -o markdown2Latex -ll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;uso&#34;&gt;Uso&lt;/h2&gt;
+
+&lt;p&gt;y para ejecutarlo basta con&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./markdown2Latex fichero.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;código&#34;&gt;Código&lt;/h2&gt;
+
+&lt;p&gt;El código está bastante bien comentado, podéis ir leyendo y comprendiendo el funcionamiento.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/algui91/c285d73fc0fb113d3ea83dae29fd45a3.js&#34;&gt;&lt;/script&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;Repositorio en GitHub | &lt;a href=&#34;https://github.com/algui91/Markdown2LatexConversor&#34; title=&#34;Markdown2LatexConversor&#34;&gt;Markdown2LatexConversor&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

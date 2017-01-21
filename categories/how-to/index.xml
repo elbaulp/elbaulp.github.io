@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How To on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/categories/how-to/index.xml</link>
+    <description>Recent content in How To on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/categories/how-to/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy</title>
+      <link>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</link>
+      <pubDate>Fri, 27 Nov 2015 16:17:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;400px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
+
+&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
+
+&lt;p&gt;Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno &lt;strong&gt;local&lt;/strong&gt;, para realizar modificaciones, otro de &lt;strong&gt;desarrollo&lt;/strong&gt;, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de &lt;strong&gt;producción&lt;/strong&gt;, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;configurar-el-entorno-local&#34;&gt;Configurar el entorno local&lt;/h1&gt;
+
+&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;instalar-y-configurar-capistrano-y-wp-deploy&#34;&gt;Instalar y configurar Capistrano y Wp-Deploy&lt;/h1&gt;
+
+&lt;p&gt;Una vez tengamos la copia de la web en local, empezamos instalando y configurando &lt;strong&gt;Wp-Deploy&lt;/strong&gt;. Ya que éste framework hace uso de Capistrano, se explicará directamente la instalación y uso de &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;qué-es-capistrano&#34;&gt;¿Qué es Capistrano?&lt;/h2&gt;
+
+&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;requerimientos&#34;&gt;Requerimientos&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bunder&lt;/strong&gt;: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar &lt;a href=&#34;http://bundler.io/&#34; target=&#34;_blank&#34;&gt;Bundler&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
+
+&lt;p&gt;En primer lugar, hay que clonar el repositorio. Para ello:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /directorio/desado
+$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bash config/prepare.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Solo resta añadir nuestro repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y, por último, instalar las dependencias de ruby con &lt;strong&gt;Bundler&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.&lt;/p&gt;
+
+&lt;h3 id=&#34;configurar-wp-deploy&#34;&gt;Configurar WP-Deploy&lt;/h3&gt;
+
+&lt;p&gt;Primero, es necesario establecer las preferencias globales de WordPress en el fichero &lt;code&gt;config/deploy.rb&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;usuario&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;aaaa@aaaa.com&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El Baúl del Programador&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El título del sitio WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Luego definimos los parámetros para el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/tags/#git&#34;&gt;git&lt;/a&gt;, en el mismo archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;nombreDelRepo&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;git@github.com:TuUsuario/nombreDelRepo.git&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Wp-Deploy usa por defecto dos entornos, &lt;strong&gt;staging&lt;/strong&gt; y &lt;strong&gt;production&lt;/strong&gt;. En este artículo configuraremos tres.&lt;/p&gt;
+
+&lt;h3 id=&#34;definiendo-y-configurando-entornos-de-desarrollo&#34;&gt;Definiendo y configurando entornos de desarrollo&lt;/h3&gt;
+
+&lt;p&gt;Dichos entornos se declaran en el directorio &lt;code&gt;./config/deploy/&lt;/code&gt;, por defecto existen &lt;code&gt;staging.rb&lt;/code&gt; y &lt;code&gt;production.rb&lt;/code&gt;. El primero para el desarrollo local y el segundo para aplicar los cambios a producción.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo para &lt;code&gt;production.rb&lt;/code&gt; sería:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://www.miweb.com&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para &lt;code&gt;staging.rb&lt;/code&gt; tendríamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web/en/local&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama &lt;strong&gt;development&lt;/strong&gt; y se prueban en local. Una vez probados, traspasamos los cambios a la rama &lt;strong&gt;master&lt;/strong&gt; y los subimos al servidor en producción.&lt;/p&gt;
+
+&lt;p&gt;Además, crearemos otro entorno llamado &lt;code&gt;desarrollo.rb&lt;/code&gt;, que usaremos para probar los cambios de la rama &lt;strong&gt;development&lt;/strong&gt; en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero &lt;code&gt;desarrollo.rb&lt;/code&gt; en &lt;code&gt;./config/deploy/&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://desarrollo.miweb.com&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/el/subdominio/de/la/web/&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos, también se usa la rama &lt;strong&gt;development&lt;/strong&gt;, ya que es donde probaremos los cambios aplicados al código.&lt;/p&gt;
+
+&lt;h3 id=&#34;configurando-el-acceso-a-la-base-de-datos&#34;&gt;Configurando el acceso a la base de datos&lt;/h3&gt;
+
+&lt;p&gt;En el directorio &lt;code&gt;./config&lt;/code&gt; renombramos el fichero &lt;code&gt;database.example.yml&lt;/code&gt; a &lt;code&gt;database.yml&lt;/code&gt; y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
+  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hecho esto, todo debería estar listo para usar.&lt;/p&gt;
+
+&lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
+
+&lt;p&gt;El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:setup:remote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero &lt;code&gt;wp-config.php&lt;/code&gt; (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un &lt;code&gt;wp-config.php&lt;/code&gt; para producción en &lt;strong&gt;remote&lt;/strong&gt; (El servidor).&lt;/p&gt;
+
+&lt;h3 id=&#34;deploying&#34;&gt;Deploying&lt;/h3&gt;
+
+&lt;p&gt;Para volcar los cambios aplicados al servidor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de &lt;code&gt;production&lt;/code&gt;, &lt;code&gt;desarrollo&lt;/code&gt; ó &lt;code&gt;staging&lt;/code&gt; para aplicar los cambios al entorno correspondiente.&lt;/p&gt;
+
+&lt;h3 id=&#34;migraciones-de-bases-de-datos&#34;&gt;Migraciones de bases de datos&lt;/h3&gt;
+
+&lt;p&gt;Un comando muy útil, aunque hay que usarlo con precaución, ya que: &lt;strong&gt;&lt;em&gt;puede deshacerse&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Al migrar la base de datos, se reemplazarán automáticamente las urls necesarias del entorno de producción al de desarrollo y vice versa.&lt;/p&gt;
+
+&lt;h4 id=&#34;enviar-la-base-de-datos-al-entorno-de-producción&#34;&gt;Enviar la base de datos al entorno de producción&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;de-producción-a-desarrollo&#34;&gt;De producción a desarrollo&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:pull
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;realizar-una-copia-de-seguridad-del-a-bd-de-producción&#34;&gt;Realizar una copia de seguridad del a BD de producción&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:backup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;sincronizando-la-carpeta-uploads&#34;&gt;Sincronizando la carpeta Uploads&lt;/h3&gt;
+
+&lt;p&gt;La carpeta &lt;strong&gt;Uploads&lt;/strong&gt; de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production uploads:sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;actualizar-el-núcleo-de-wordpress&#34;&gt;Actualizar el núcleo de WordPress&lt;/h3&gt;
+
+&lt;p&gt;A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:core:update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Si el lector ha llegado hasta este punto, estaba interesado en conseguir un ciclo de desarrollo adecuado para su sitio y, seguramente esto cumpla con sus necesidades. Una de las principales ventajas de éste modelo de desarrollo es el control absoluto del estado del sitio web, y un mayor control sobre los posibles errores, ya que se pueden probar en dos fases de desarrollo antes de liberarlos al público.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Wp-Deploy&lt;/em&gt; »» &lt;a href=&#34;https://github.com/Mixd/wp-deploy&#34; target=&#34;_blank&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Capistrano&lt;/em&gt; »» &lt;a href=&#34;http://capistranorb.com/&#34; target=&#34;_blank&#34;&gt;capistranorb.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)</title>
+      <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
+      <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/original2.jpg&#34; alt=&#34;&#34; title=&#34;original&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
+
+&lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Éste es claramente el peor método de todos, en términos de &lt;a href=&#34;https://elbauldelprogramador.com/category/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;. La gran mayoría de sitios con reputación no usan este método. Si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De ninguna manera. No importa cual sea la longitud de tu contraseña o cómo de segura sea, si está almacenada en texto plano y el sitio es comprometido, tu contraseña será accesible por todo el mundo, sin ningún trabajo. Aún así, sí que importa en términos de ocultar la contraseña de amigos y conocidos, que pueden intentar adivinarla, pero no hay nada que hacer en el caso de que el sítio se vea comprometido.&lt;/p&gt;
+
+&lt;h3 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Para añadir más protección a la contraseña de la que proporciona el texto plano, la mayoría de los sítios cifran la contraseña antes de almacenarla en sus servidores. El cifrado, para aquellos que no lo sepan, usa una clave especial para convertir la contraseña a una cadena de texto aleatoria. Alguien que disponga estas cadenas aleatorias de texto, no será capaz de loggearse en tu cuenta a no ser que sepa la clave, la cual podría usar para descifrar la contraseña.&lt;/p&gt;
+
+&lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sítio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
+
+&lt;h3 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: Si se dispone del hash, no es posible ejecutar el algoritmo invertidamente para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
+
+&lt;p&gt;Aún así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; &amp;#8212; que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas. &amp;#8212; Se puede mirar fácilmente en el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;a href=&#34;http://es.wikipedia.org/wiki/Secure_Hash_Algorithm&#34; target=&#34;_blank&#34;&gt;SHA-1&lt;/a&gt; para &amp;#8216;password1&amp;#8242;. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Jeff Atwood&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles se crackean rápidamente. Su mayor debilidad, sin embargo, no es la complejidad, si no la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;a href=&#34;http://xkcd.com/936/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt; llamado &amp;#8220;correct horse battery staple&amp;#8221;) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
+
+&lt;h3 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria &amp;#8212; llamada &amp;#8220;salt&amp;#8221; &amp;#8212; al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes &amp;#8220;salteados&amp;#8221; en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;a href=&#34;http://lifehacker.com/5916177/65-million-linkedin-accounts-may-be-compromised-change-your-passwords-now&#34; target=&#34;_blank&#34;&gt;hackearon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente, sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo &amp;#8212; más que usar rainbow tables &amp;#8212; pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
+
+&lt;h3 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;a href=&#34;http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html&#34; target=&#34;_blank&#34;&gt;están apostando por los hashes lentos&lt;/a&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos &amp;#8212; como el algoritmo &lt;a href=&#34;http://en.wikipedia.org/wiki/Bcrypt&#34; target=&#34;_blank&#34;&gt;bcrypt&lt;/a&gt; &amp;#8212; los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que importa. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
+
+&lt;h3 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h3&gt;
+
+&lt;p&gt;Entonces, ¿Qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;No usar servícios con mala seguridad:&lt;/strong&gt; Aunque no podemos controloar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servícios darnos de alta. Nunca deberíamos darnos de alta con servícios que usan texto plano o cifrado para almacenar las contraseña, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;a href=&#34;http://blog.cloudflare.com/keeping-passwords-safe-by-staying-up-to-date&#34; target=&#34;_blank&#34;&gt;servicio web CloudFlare&lt;/a&gt;, es hacer click en el enlace &amp;#8220;no recuerdo mi contraseña&amp;#8221;. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada &amp;#8212; y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos demostrado más arriba, una contraseña más segura, es menos probable de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable &amp;#8212; solo significa que llevará más tiempo. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta que filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos, entonces esas cuentas estarán a salvo incluso si alguna de nuestras cuentas se compromete. Si usamos la misma contraseña para cada sitio, una vulnerabilidad en algún sitio puede significar un mundo de problemas para ti.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar OAuth si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Ya &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/&#34; target=&#34;_blank&#34;&gt;hablamos sobre OAuth antes&lt;/a&gt;, un protocolo que permite logearnos usando la cuenta de Google, Facebook o twitter. Si no sabemos cómo de seguro es un sitio, y ofrece la opción de usar OAuth, úsalo &amp;#8212; Es probable que Google, Facebook y twitter tengan mejor seguridad, y si el sitio es vulnerado, simplemente le denegamos acceso a nuestra cuenta de Google, Facebook o Twitter.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
+
+&lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;a href=&#34;https://elbauldelprogramador.com/noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; target=&#34;_blank&#34;&gt;desarrollo de aplicaciones web&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/?s=udacity&#34; target=&#34;_blank&#34;&gt;udacity&lt;/a&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
+
+&lt;p&gt;A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan muchos de estos métodos, sobre todo el hash con salt usando SHA-256. También se habla de bcrypt, que básicamente es igual que el anterior, pero recibe como parámetro un número, que será el tiempo que la función de cifrado estará sin hacer nada, para conseguir así el objetivo de que no sea posible descifrar las contraseñas tan rápido. Os dejo unos vídeos sobre el tema y recomiendo que hagáis el curso.&lt;/p&gt;
+
+&lt;h3 id=&#34;bcrypt&#34;&gt;Bcrypt&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;S66XVE68NCc&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;rainbow-tables&#34;&gt;Rainbow Tables&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;SOV0AeHuHaQ&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;crear-salts&#34;&gt;Crear Salts&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;hcWQNwdQVx0&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;hashear-salts&#34;&gt;Hashear Salts&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;yBN3r2Fwze8&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;validar-salts&#34;&gt;Validar Salts&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;gDLUM38mm6c&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;validar-salts-solución&#34;&gt;Validar Salts (Solución)&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;Zy6eNdzmn1w&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagen | de &lt;a href=&#34;http://www.shutterstock.com/pic.mhtml?id=47788978&#34; target=&#34;_blank&#34;&gt;palsur&lt;/a&gt;
+Fuente | &lt;a href=&#34;http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter&#34; target=&#34;_blank&#34;&gt;LifeHacker&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chuleta de Markdown para wordpress</title>
+      <link>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</guid>
+      <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;guía-de-markdown-para-wordpress&#34;&gt;Guía de Markdown para wordpress&lt;/h2&gt;
+
+&lt;h4 id=&#34;negrita-o-cursiva&#34;&gt;&lt;strong&gt;Negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; :&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;negrita&lt;/strong&gt;, &lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;cursiva&lt;/em&gt;,&lt;em&gt;cursiva&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;__negrita__, **negrita**, *cursiva*,_cursiva_
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;enlaces-en-línea-2&#34;&gt;Enlaces en &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Texto alternativo&#34;&gt;línea&lt;/a&gt;:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;Un [enlace](/ &amp;quot;Texto alternativo&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;enlaces-referenciados-1&#34;&gt;Enlaces &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;referenciados&lt;/a&gt;:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;[referenciados][1], en cualquier parte del texto debe haber [1]: http://enlace. &amp;quot;titulo&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;imágenes-en-línea-alt-3&#34;&gt;Imágenes en línea: &lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Alt&#34; title=&#34;Título&#34; /&gt;:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt](/img/2013/12/favicon.ico &amp;quot;Título&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;imágenes-referenciadas-alt-3&#34;&gt;Imágenes referenciadas: &lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Alt&#34; title=&#34;Título&#34; /&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt][2] Al igual que en los enlaces referenciados, en algún lugar del texto debe aparecer [2]: Ruta/a/la/imagen &amp;quot;Titulo&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;imágenes-enlazadas-texto-alternativo-4-5&#34;&gt;Imágenes enlazadas: &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Imágenes enlazadas&#34;&gt;&lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Texto Alternativo&#34; /&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;[![Texto Alternativo](/img/2013/12/favicon.ico)](/ &amp;quot;Imágenes enlazadas&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;notas-al-pie-sup-id-fnref-2416-1-a-href-fn-2416-1-rel-footnote-1-a-sup&#34;&gt;Notas al pie&lt;sup id=&#34;fnref-2416-1&#34;&gt;&lt;a href=&#34;#fn-2416-1&#34; rel=&#34;footnote&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;[^1] y donde esté la nota al pie: [^1]: Notal al pie.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;listas-sin-numerar&#34;&gt;Listas sin numerar:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Elemento 1&lt;/li&gt;
+&lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;li&gt;Elemento 3&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Elemento 4&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Elemento 1
+* Elemento 2
+- Elemento 3
+- Elemento 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;listas-numeradas&#34;&gt;Listas numeradas:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Elemento 1&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Elemento 2&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. Elemento 1
+2. Elemento 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;citas&#34;&gt;Citas&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Texto citado&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Cita anidada&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; Texto citado
+&amp;gt;&amp;gt; Cita anidada
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;preformato&#34;&gt;Preformato&lt;/h4&gt;
+
+&lt;p&gt;Si se empieza cada línea con dos o más espacios el texto no se formateará.&lt;/p&gt;
+
+&lt;h4 id=&#34;código-en-línea&#34;&gt;Código en línea&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;`cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;bloques-de-código&#34;&gt;Bloques de código&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
+
+
+```
+cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ó&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~~~
+cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
+~~~
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;cabeceras&#34;&gt;Cabeceras&lt;/h4&gt;
+
+&lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
+
+&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
+
+&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
+
+&lt;h4 id=&#34;header-4&#34;&gt;Header 4&lt;/h4&gt;
+
+&lt;h5 id=&#34;header-5&#34;&gt;Header 5&lt;/h5&gt;
+
+&lt;h6 id=&#34;header-6&#34;&gt;Header 6&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;listas-de-definiciones&#34;&gt;Listas de definiciones&lt;/h4&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;El Baúl del programador&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Blog de programación (c++, python, sql, pl/sql, script bash, android etc)&lt;/p&gt;
+
+&lt;p&gt;El Baúl del programador&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dd&gt;Blog de programación (c++, python, sql, pl/sql, script bash, android etc)&lt;/dd&gt;
+&lt;/dl&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h4 id=&#34;abreviaturas&#34;&gt;Abreviaturas&lt;/h4&gt;
+
+&lt;p&gt;El &lt;em&gt;markdown&lt;/em&gt; convierte texto a HTML.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Artículo de Jetpack sobre el Markdown&lt;/em&gt; »» &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; target=&#34;_blank&#34;&gt;jetpack.me&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chuleta de comandos para GPG</title>
+      <link>https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/Chuleta-de-comandos-GPG.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
+
+&lt;p&gt;He usado el “&lt;strong&gt;Nombre de Usuario&lt;/strong&gt;” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es &lt;em&gt;Charles Lockhart&lt;/em&gt;, pero puedo referenciarlo simplemente poniendo Lockhart.&lt;/p&gt;
+
+&lt;p&gt;Empecemos:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;crear-una-clave&#34;&gt;Crear una clave&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Generalmente puedes seleccionar las que vienen por defecto.&lt;/p&gt;
+
+&lt;h1 id=&#34;exportar-una-clave-pública-dentro-del-archivo-public-key&#34;&gt;Exportar una clave pública dentro del archivo &lt;em&gt;public.key&lt;/em&gt;&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --export -a &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nombre de Usuario&amp;quot;&lt;/span&gt; &amp;gt; public.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;public.key&lt;/em&gt; con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --export
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --export -a “Nombre de Usuario&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --export-secret-key -a &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nombre de Usuario&amp;quot;&lt;/span&gt; &amp;gt; private.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;private.key&lt;/em&gt; con la representación ascii de la clave privada para ‘Nombre de Usuario’.&lt;/p&gt;
+
+&lt;p&gt;Es muy parecido a exportar una clave pública, pero tienes que pisar algunas protecciones que vienen por default. Hay una nota (*) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
+
+&lt;h1 id=&#34;importar-una-clave-pública&#34;&gt;Importar una clave pública&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --import public.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando
+Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de claves públicas.&lt;/p&gt;
+
+&lt;h1 id=&#34;importar-una-clave-privada&#34;&gt;Importar una clave privada&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --allow-secret-key-import --import private.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto agrega una clave privada en el archivo “*private.key&lt;em&gt;” a tu anillo de claves privadas. Hay una nota (&lt;/em&gt;) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
+
+&lt;h1 id=&#34;eliminar-una-clave-pública-de-tu-anillo-de-claves-públicas&#34;&gt;Eliminar una clave pública (de tu anillo de claves públicas):&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --delete-key &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nombre de Usuario&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto elimina la clave pública de tu anillo de claves públicas.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;¡ATENCIÓN! Si hay una clave privada en tu anillo de claves privadas asociada con esta clave pública, ¡tendrás un error! Debes primero eliminar tu clave privada para este par de claves de tu anillo de claves privadas.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;eliminar-una-clave-secreta-una-clave-de-tu-anillo-de-claves-secreta&#34;&gt;Eliminar una clave secreta (una clave de tu anillo de claves secreta)&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --delete-secret-key &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nombre de Usuario&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto elimina la clave secreta de tu anillo de claves secretas.&lt;/p&gt;
+
+&lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-públicas&#34;&gt;Listar las claves de tu anillo de claves públicas&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-secretas&#34;&gt;Listar las claves de tu anillo de claves secretas&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --list-secret-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;generar-una-lista-corta-de-números-que-puedes-usar-a-través-de-un-método-alternativo-para-verificar-la-clave-pública&#34;&gt;Generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --fingerprint &amp;gt; fingerprint
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto crea el archivo fingerprint con la información de la firma digital.&lt;/p&gt;
+
+&lt;h1 id=&#34;encriptar-datos&#34;&gt;Encriptar datos&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nombre de Usuario del Emisor&amp;quot;&lt;/span&gt; -r &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nombre de Usuario del Destinatario&amp;quot;&lt;/span&gt; somefile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
+Como por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;quot;Manuel Ginobili&amp;quot;&lt;/span&gt; -r “Un amigo&lt;span class=&#34;s2&#34;&gt;&amp;quot; mydata.tar&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTA: &lt;em&gt;mydata.tar&lt;/em&gt; no se elimina, terminas teniendo dos archivos, por lo tanto si quieres tener sólo el archivo encriptado, deberás eliminar &lt;em&gt;mydata.tar&lt;/em&gt; tú mismo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Un interesante comentario al margen, encripté el patch preventivo del kernel, un archivo de 55,247 bytes, y terminé con un archivo encriptado de 15,276 bytes.&lt;/p&gt;
+
+&lt;h1 id=&#34;desencriptar-datos&#34;&gt;Desencriptar datos&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg -d mydata.tar.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, &lt;em&gt;mydata.tar.gpg&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “&lt;code&gt;gpg -d mydata.tar.gpg&lt;/code&gt;” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --o archivodesalida -d archivoencriptado.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;, o utilizar &lt;em&gt;mydata.tar.gpg&lt;/em&gt; como por ejemplo,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg -o mydata.tar -d mydata.tar.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Otra alternativa es ejecutar algo como&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.&lt;/p&gt;
+
+&lt;p&gt;Ok, entonces si eres un paranoico y quieres encriptar alguno de tus propios archivos, para que nadie pueda entrar en tu computadora y obtenerlos, simplemente encríptalos usandote a tí mismo como el contenedor.&lt;/p&gt;
+
+&lt;p&gt;No he utilizado estos comandos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --edit-key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gpg --gen-revoke
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;compartir-claves-secretas&#34;&gt;Compartir Claves Secretas&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTA: los siguientes casos de uso indican porqué los comandos &lt;code&gt;secret-key import/export&lt;/code&gt; existen, o al menos un par de ideas de qué puedes hacer con ellos. SIN EMBARGO, hay un poco de logística necesaria para compartir la clave secreta. ¿Cómo la pasamos de una computadora a otra? Creo que encriptarla y enviarla por e-mail probablemente estaría bien, pero yo no la enviaría desencriptada con e-mail, esto sería PELIGROSO.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Caso de Uso 1: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente si quieres un par de claves para todas tus computadoras (asumiento que tienes múltiples computadoras), entonces esto te permitirá exportar ese par de claves de la computadora original e importarla en las otras computadoras.&lt;/li&gt;
+&lt;li&gt;Caso de Uso 2: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente, si perteneces a un grupo, y quisieras crear un par de clave simple para ese grupo, una persona debería crear el par de claves, luego exportar las claves pública y privada, darselas a los otros miembros del grupo y ellos deberían importar ese par. Luego un miembro del grupo o alguien afuera podría utilizar la clave pública del grupo, encriptando el mensaje y/o los datos, y enviándolo a los miembros del grupo, y todos ellos deberían poder tener acceso al mensaje y/o los datos. Basicamente, podrías crear un sistema simplificado donde sólo una clave pública es requerida para enviar cosas encriptadas a múltiples destinatarios.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Quick&amp;rsquo;n easy gpg cheatsheet&lt;/em&gt; »» &lt;a href=&#34;http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/#gpg&#34;&gt;Más artículos sobre GPG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Como crear un PPA (Personal Package Archive)</title>
+      <link>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</guid>
+      <description>&lt;p&gt;Hace poco hablé de qué eran los &lt;a href=&#34;https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/&#34;&gt;sistemas de paquetes PPA&lt;/a&gt;, para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Antes de nada, debemos crear una cuenta en &lt;a href=&#34;https://login.launchpad.net/+new_account&#34; target=&#34;_blank&#34;&gt;Launchpad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Una vez creada, nos dirigimos al panel principal de nuestra cuenta, que será &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Ya en el panel de control, hay que hacer clic en &amp;#8220;Create a new PPA&amp;#8221;, que nos lleva a &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&lt;/a&gt;, en esta página rellenamos los datos de nuestro PPA y lo activamos.&lt;/li&gt;
+&lt;li&gt;Tras activar el PPA, es necesario subir paquetes al sistema, hay &lt;a target=&#34;_blank&#34; href=&#34;https://help.launchpad.net/Packaging/PPA/Uploading&#34;&gt;varias formas de hacerlo&lt;/a&gt;, pero la más sencilla es la siguiente:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;ftp-en-ubuntu-9-10-y-posteriores&#34;&gt;FTP en Ubuntu 9.10 y posteriores:&lt;/h3&gt;
+
+&lt;p&gt;Visita la página de información general de tu PPA, y encontrarás algo similar a:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;dput ppa: your-lp-id/ppa&amp;lt;source.changes&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;El archivo source.changes suele ser generado por debuild. Si no estás seguro de lo que esto significa, puedes familiarizarte con la creacion de paquetes para ubuntu &lt;a target=&#34;_blank&#34; href=&#34;https://wiki.ubuntu.com/PackagingGuide&#34;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Si no estais en ubuntu se puede subir por FTP:&lt;/p&gt;
+
+&lt;p&gt;En primer lugar, hay que decirle a dput dónde enviar su paquete y por qué método. Para ello, editamos el archivo &lt;em&gt;~/dput.cf&lt;/em&gt; para que quede así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;my-ppa&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;fqdn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ppa.launchpad.net
+&lt;span class=&#34;nv&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ftp
+&lt;span class=&#34;nv&#34;&gt;incoming&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ~&amp;lt;your_launchpad_id&amp;gt;/&amp;lt;ppa_name&amp;gt;/ubuntu/
+&lt;span class=&#34;nv&#34;&gt;login&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; anonymous
+&lt;span class=&#34;nv&#34;&gt;allow_unsigned_uploads&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;También es necesario:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cambiar la primera línea al nombre que desea utilizar para referirse al PPA, manteniendo los corchetes. No se puede usar el nombre ppa, ya que puede haber conflictos con una linea en /etc/dput.cf y causar fallos como (&amp;#8216;Could not find person or team named&amp;#8217;.)&lt;/li&gt;
+&lt;li&gt;Si estás subiendo el paquete a un equipo de PPA, hay que cambiar &lt;code&gt;&amp;lt;your-launchpad-id&amp;gt;&lt;/code&gt; al nombre del equipo de Launchpad (Dejando la tilde (~)). Como es de esperar, debes ser miembro del equipo antes de poder subir el paquete a su PPA.&lt;/li&gt;
+&lt;li&gt;Fijar correctamente el &lt;code&gt;&amp;lt;ppa-name&amp;gt;&lt;/code&gt;, por defecto es ppa, usad el nombre específico para otros PPA en el mismo contexto. No confundais el nombre del PPA con el nombre que habeis elegido para para mostrar el PPA en Launchpad.&lt;/li&gt;
+&lt;li&gt;A continuación, hay que abrir un terminal y escribir lo siguiente:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$  dput my-ppa P_V_source.changes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Remplazad P con el nombre del paquete y V con el número de la versión.&lt;/p&gt;
+
+&lt;p&gt;Podéis ver posibles errores en la subida de paquetes &lt;a href=&#34;https://help.launchpad.net/Packaging/UploadErrors&#34; target=&#34;_blank&#34;&gt;aqui.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configurar xmonad con trayer y fondo de pantalla aleatorio</title>
+      <link>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</guid>
+      <description>&lt;p&gt;A lo largo de los años he probado varios gestores de ventanas, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/&#34;&gt;openbox&lt;/a&gt; y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.&lt;/p&gt;
+
+&lt;p&gt;La &lt;a href=&#34;http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration&#34; target=&#34;_blank&#34;&gt;instalación&lt;/a&gt; es muy sencilla. En este artículo voy a profundizar más en los dos aspectos que más problemas me han causado, configurar apropiadamente trayer y establecer fondos de pantalla aleatoriamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;configurar-trayer&#34;&gt;Configurar trayer&lt;/h4&gt;
+
+&lt;p&gt;La documentación oficial de xmonad configura &lt;strong&gt;trayer&lt;/strong&gt; de forma se ejecute al iniciar sesión modificando el archivo &lt;strong&gt;~/.xsession&lt;/strong&gt; tal que así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Load resources&lt;/span&gt;
+
+xrdb -merge .Xresources
+
+&lt;span class=&#34;c1&#34;&gt;# Set up an icon tray&lt;/span&gt;
+
+trayer --edge top --align right --SetDockType &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --SetPartialStrut &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+ --expand &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --width &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; --transparent &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --tint 0x191970 --height &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set the background color&amp;lt;&lt;/span&gt;
+
+xsetroot -solid midnightblue
+
+&lt;span class=&#34;c1&#34;&gt;# Fire up apps&lt;/span&gt;
+
+gajim &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+xscreensaver -no-splash &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/nm-applet &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   nm-applet --sm-disable &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/gnome-power-manager &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   sleep 3
+   gnome-power-manager &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; xmonad
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este xsession no me lanzaba trayer, así que lo saqué fuera a un script aparte:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+trayer --edge top --align right --SetDockType &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --SetPartialStrut &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --expand &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --width &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; --height &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --transparent &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --tint 0x000000 --monitor &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/nm-applet &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   nm-applet --sm-disable &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/gnome-power-manager &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   sleep 1
+   gnome-power-manager &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p class=&#34;alert&#34;&gt;
+  NOTA: En el portatil tuve problemas con gnome-power-manager y decidí instalar xfce4-power-manager, que funcionó correctamente
+&lt;/p&gt;
+
+&lt;p&gt;Finalmente, añadí el script al crontab con la opción @reboot, que en teoría debe ejecutarse en cada inicio del pc (ejecutando &lt;strong&gt;crontab -e&lt;/strong&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SHELL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/bin/bash
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+@reboot /home/hkr/bin/trayerxmonad.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pero no dió resultado, así que como última opción, asigne una combinación de teclas al script en el archivo de configuración de xmonad (&lt;strong&gt;xmonad.hs&lt;/strong&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;import XMonad
+import XMonad.Config.Azerty
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;spawnPipe&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+import XMonad.Util.EZConfig
+import Graphics.X11.ExtraTypes.XF86
+import XMonad.Layout.Spacing
+import XMonad.Layout.NoBorders&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;smartBorders&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+import XMonad.Layout.PerWorkspace
+import XMonad.Layout.IM
+import XMonad.Layout.Grid
+--import XMonad.Actions.GridSelect
+import Data.Ratio &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;%&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+import XMonad.Actions.CycleWS
+import qualified XMonad.StackSet as W
+import System.IO
+
+&lt;span class=&#34;nv&#34;&gt;myWorkspaces&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;3&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;5&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;6&amp;quot;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;quot;7&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;myLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; onWorkspace &lt;span class=&#34;s2&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt; pidginLayout $ onWorkspaces &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;quot;7&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; nobordersLayout $ tiled1 &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Mirror tiled1 &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; nobordersLayout
+ where
+  &lt;span class=&#34;nv&#34;&gt;tiled1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; spacing &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; $ Tall nmaster1 delta ratio
+  --tiled2 &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; spacing &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; $ Tall nmaster2 delta ratio
+  &lt;span class=&#34;nv&#34;&gt;nmaster1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 1
+  &lt;span class=&#34;nv&#34;&gt;nmaster2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2
+  &lt;span class=&#34;nv&#34;&gt;ratio&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2/3
+  &lt;span class=&#34;nv&#34;&gt;delta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 3/100
+  &lt;span class=&#34;nv&#34;&gt;nobordersLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; smartBorders $ Full
+  &lt;span class=&#34;nv&#34;&gt;gridLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; spacing &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; $ Grid
+  --gimpLayout &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; withIM &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0.20&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Role &lt;span class=&#34;s2&#34;&gt;&amp;quot;gimp-toolbox&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; $ reflectHoriz $ withIM &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0.20&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Role &lt;span class=&#34;s2&#34;&gt;&amp;quot;gimp-dock&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; Full
+  &lt;span class=&#34;nv&#34;&gt;pidginLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; withIM &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18/100&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Role &lt;span class=&#34;s2&#34;&gt;&amp;quot;buddy_list&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; gridLayout
+&lt;span class=&#34;nv&#34;&gt;myManageHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; composeAll
+     &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;File Operation Progress&amp;quot;&lt;/span&gt;   --&amp;gt; doFloat
+     , &lt;span class=&#34;nv&#34;&gt;resource&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;desktop_window&amp;quot;&lt;/span&gt; --&amp;gt; doIgnore
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;xfce4-notifyd&amp;quot;&lt;/span&gt; --&amp;gt; doIgnore
+     --, &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Iron&amp;quot;&lt;/span&gt; --&amp;gt; doShift &lt;span class=&#34;s2&#34;&gt;&amp;quot;1:main&amp;quot;&lt;/span&gt;
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Firefox&amp;quot;&lt;/span&gt; --&amp;gt; doShift &lt;span class=&#34;s2&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Gimp&amp;quot;&lt;/span&gt; --&amp;gt; doFloat
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Vlc&amp;quot;&lt;/span&gt; --&amp;gt; doShift &lt;span class=&#34;s2&#34;&gt;&amp;quot;7&amp;quot;&lt;/span&gt;
+     &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    xmproc &amp;lt;- spawnPipe &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/xmobar ~/.xmobarrc&amp;quot;&lt;/span&gt;
+    xmonad $ defaultConfig
+        &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;manageHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; manageDocks &amp;lt;+&amp;gt; myManageHook -- make sure to include myManageHook definition from above
+                        &amp;lt;+&amp;gt; manageHook defaultConfig
+        , &lt;span class=&#34;nv&#34;&gt;layoutHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; avoidStruts $ myLayout
+        , &lt;span class=&#34;nv&#34;&gt;logHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; dynamicLogWithPP xmobarPP
+            &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ppOutput&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; hPutStrLn xmproc
+               , &lt;span class=&#34;nv&#34;&gt;ppTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; xmobarColor &lt;span class=&#34;s2&#34;&gt;&amp;quot;#2CE3FF&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt; . shorten 50
+            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        , &lt;span class=&#34;nv&#34;&gt;modMask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; mod4Mask     -- Rebind Mod to the Windows key
+        , &lt;span class=&#34;nv&#34;&gt;workspaces&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; myWorkspaces
+        , &lt;span class=&#34;nv&#34;&gt;normalBorderColor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#60A1AD&amp;quot;&lt;/span&gt;
+        , &lt;span class=&#34;nv&#34;&gt;focusedBorderColor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#68e862&amp;quot;&lt;/span&gt;
+        , &lt;span class=&#34;nv&#34;&gt;borderWidth&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;additionalKeys&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_z&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;xscreensaver-command -lock&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_KP_Enter&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;exe=`dmenu_run -b -nb black -nf yellow -sf yellow` &amp;amp;&amp;amp; eval &amp;quot;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$e&lt;/span&gt;xe&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- spawn dmenu
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_Return&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;terminator&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- spawn terminator terminal
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/firefox&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_f&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;nautilus --no-desktop&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/Pictures/wall_aleatorio.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_HomePage&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;gedit ~/.xmonad/xmonad.hs&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- hit a button to open the xmonad.hs file
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_m&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;vlc&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- hit a button to run mpd with ncmpcpp
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_F4&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;sudo shutdown -h now&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- to shutdown
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_AudioLowerVolume&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;amixer set Master 3%-&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- decrease volume
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_AudioRaiseVolume&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;amixer set Master 3%+&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- increase volume
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_AudioMute&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;amixer set Master toggle&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- mute volume
+        --, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_Right&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;ncmpcpp next&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- play next song in mpd
+        --, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_Left&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;ncmpcpp prev&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- play previous song
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_Up &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, windows W.swapUp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- swap up window
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_Down &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, windows W.swapDown&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- swap down window
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_KP_Add &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;IncMasterN 1&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; -- increase the number of window on master pane
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_KP_Subtract &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;IncMasterN &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-1&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt; -- decrease the number of window
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask,        xK_Right   &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage Expand&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- expand master pane
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask,        xK_Left   &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage Shrink&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- shrink master pane
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask, xK_Print&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;sleep 0.2; scrot -s&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xK_Print&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;gnome-screenshot -i&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_Calculator&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/bin/trayerxmonad.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_e&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/Desktop/eclipse/eclipse&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- eclipse
+        &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Concretamente la tecla con el iconito de la calculadora:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_Calculator&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/bin/trayerxmonad.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;configurar-fondos-de-pantalla-aleatorios&#34;&gt;Configurar fondos de pantalla aleatorios&lt;/h4&gt;
+
+&lt;p&gt;Antes de continuar, es necesario instalar &lt;strong&gt;feh&lt;/strong&gt; para establecer fondos de pantalla:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install feh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para conseguir que cada x tiempo el fondo de pantalla cambie, creé un script, que selecciona aleatoriamente una imagen de una carpeta:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:0.0
+
+&lt;span class=&#34;nv&#34;&gt;picsfolder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/Pictures/HD/&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; $picsfolder
+
+&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;*.jpg&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;randomfile1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;$&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+
+feh --bg-fill $picsfolder$randomfile1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Seguidamente, configuré crontab para que ejecutara dicho script cada 5 minutos por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ hkr-&amp;gt; crontab -l
+&lt;span class=&#34;nv&#34;&gt;SHELL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/bin/bash
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/5 * * * * /home/hkr/Pictures/wall_aleatorio.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así luce mi escritorio con xmonad:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34; alt=&#34;xmonad Desktop&#34; width=&#34;1024px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Askubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo activar opciones de desarrollador en Android 4.2</title>
+      <link>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</guid>
+      <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/android&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Si quieres activarla has de ir a &lt;strong&gt;Configuración » Acerca del teléfono » Número de compilación&lt;/strong&gt; (&lt;em&gt;Settings » About phone » Build number&lt;/em&gt;) y pulsarlo siete veces.&lt;/p&gt;
+
+&lt;p&gt;Una vez activado, eché un vistazo a ver qué opciones nuevas había. Activé una llamada &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; (&lt;em&gt;Simulate secondary displays&lt;/em&gt;) y el teléfono se quedó bloqueado. Reinicié y el teléfono había quedado en un bucle infinito en el proceso de inicio. Lo primero que pensé fue en volver a flashear la ROM. Pero una vez más buscando un poco por internet encontré una respuesta más adecuada, que no requería flashear.&lt;/p&gt;
+
+&lt;h4 id=&#34;desactivar-la-opción-simulate-secondary-displays-simular-pantallas-secundarias&#34;&gt;Desactivar la opción Simulate secondary displays (Simular pantallas secundarias)&lt;/h4&gt;
+
+&lt;p&gt;La respuesta concretamente la encontré en el foro de &lt;a href=&#34;https://elbauldelprogramador.com/xda&#34;&gt;XDA&lt;/a&gt;. Como sabía que el problema lo había causado la opción &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de &lt;em&gt;rescate o modo seguro&lt;/em&gt; que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Screenshot_2013-03-03-13-48-30.png&#34; alt=&#34;Safe Mode in Android o Modo rescate en Android&#34; width=&#34;480px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez en el modo rescate, desactivé la opción y problema resuelto.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;New built-in developer options&lt;/em&gt; »» &lt;a href=&#34;http://developer.android.com/about/versions/jelly-bean.html#42-dev-options&#34; target=&#34;_blank&#34;&gt;developer.android.com&lt;/a&gt;
+&lt;em&gt;developer options disappear from settings&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings&#34; target=&#34;_blank&#34;&gt;stackOverflow&lt;/a&gt;
+&lt;em&gt;&amp;#091;Q&amp;#93; Help! Messed with &amp;lsquo;Simulate Secondary Display&amp;rsquo; settings!&lt;/em&gt; »» &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=2076180&#34; target=&#34;_blank&#34;&gt;forum.xda-developers&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo apagar automáticamente el PC cuando las descargas finalicen</title>
+      <link>https://elbauldelprogramador.com/como-apagar-automaticamente-el-pc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-apagar-automaticamente-el-pc/</guid>
+      <description>&lt;p&gt;A veces queremos descargar algo y no queremos esperar a que finalice, pero sí que queremos apagar el pc. Una buena opción para el problema es instalar Sentinella. Lo instalamos así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install sentinella
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Sentinella aparecerá en el menu “Sistema” del escritorio. Si lo lanzamos veremos algo parecido a esto:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;457&#34; width=&#34;655&#34; src=&#34;https://1.bp.blogspot.com/-Ti5_cz6URsM/TbqiIheW6YI/AAAAAAAAAcw/mDH3EbaI50E/s800/R1vvF.png&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Configura tu Sentinella con las mismas opciones de la imagen, pero asegurate que eliges tu interfaz de red correcta. Pulsa Start y listo!.&lt;/p&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://www.howtoforge.com/how-to-automatically-shut-down-your-computer-after-a-download-finishes&#34;&gt;howtoforge&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo añadir contenido por defecto a los artículos en WordPress</title>
+      <link>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</guid>
+      <description>
+
+&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/05/Screenshot-05302012-111511-AM1.png&#34; alt=&#34;Wordpress&#34; width=&#34;123px&#34; height=&#34;116px&#34; /&gt;
+Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
+
+&lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;function my_default_content( $content ) {&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;   $content = &amp;quot;AQUI TU CONTENIDO POR DEFECTO&amp;quot;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt; return $content;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
+
+&lt;h4 id=&#34;fuente&#34;&gt;Fuente&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;How to Add Default Content in Your WordPress Post Editor&lt;/em&gt; »» &lt;a href=&#34;http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/&#34; target=&#34;_blank&#34;&gt;wpbeginner&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux</title>
+      <link>https://elbauldelprogramador.com/como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/</guid>
+      <description>&lt;p&gt;Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/&#34; title=&#34;Grub Customizer 2.0, personaliza tu GRUB2&#34;&gt;GRUB&lt;/a&gt;. Por defecto el GRUB se muestra a una resolución de &lt;strong&gt;640&amp;#215;480&lt;/strong&gt;, la cual es bastante ‘fea’. Igual ocurre con las terminales &lt;strong&gt;ttys&lt;/strong&gt;, a las cuales se puede acceder con pulsando &lt;strong&gt;Ctrl + Alt + F[1-6]&lt;/strong&gt;. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;cambiar-resolución-de-pantalla-del-grub&#34;&gt;Cambiar resolución de pantalla del GRUB&lt;/h3&gt;
+
+&lt;p&gt;La forma más fácil es editar el fichero &lt;strong&gt;&lt;em&gt;/etc/defaults/grub&lt;/em&gt;&lt;/strong&gt; y cambiar la resolución de la variable &lt;em&gt;GRUB_GFXMODEGRUB_GFXMODE&lt;/em&gt; por la resolución deseada, en mi caso 1280&amp;#215;1024.&lt;/p&gt;
+
+&lt;h3 id=&#34;cambiar-la-resolución-de-pantalla-de-la-tty&#34;&gt;Cambiar la resolución de pantalla de la tty&lt;/h3&gt;
+
+&lt;p&gt;Voy a explicar dos formas, la primera que apliqué y una segunda que es el método más recomendado y fácil, pero que descubrí posteriormente ojeando los archivos de configuración. La configuración del GRUB se encuentra dividida en ficheros en el directorio &lt;strong&gt;&lt;em&gt;/etc/grub.d/&lt;/em&gt;&lt;/strong&gt;. El fichero &lt;strong&gt;10_linux&lt;/strong&gt; se encarga de generar las entradas del GRUB para sistemas operativos linux, aquí se establecen los parámetros para iniciar el sistema, y nosotros le pasaremos un parámetro adicional, &lt;strong&gt;vga&lt;/strong&gt;, que establecerá el tipo de resolución deseada. Dicho tipo hay que elegirlo de entre los valores de la siguiente tabla:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
+--------+-----------------------------------------------------
+ &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                  0x302
+ &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  0x300   0x301   0x303    0x305    0x307     0x31C
+&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x310   0x313    0x316    0x319     0x31D
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x311   0x314    0x317    0x31A     0x31E
+&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x312   0x315    0x318    0x31B     0x31F
+&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para mi caso concreto eligiré &lt;strong&gt;0x31B&lt;/strong&gt;. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de &lt;strong&gt;10_linux&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;quot;Loading Linux %s ...&amp;quot;&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+    cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; EOF&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;         echo    &amp;#39;$message&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;         linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;initrd&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;quot;Loading initial ramdisk ...&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este trozo del script es el encargado de pasar los parámetros a la secuencia de inicio.&lt;/p&gt;
+
+&lt;p&gt;La segunda forma es mucho más cómoda, al igual que en el apartado anterior con la variable &lt;strong&gt;GRUB_GFXMODE&lt;/strong&gt;, hay otra llamada &lt;strong&gt;GRUB_CMDLINE_LINUX&lt;/strong&gt;. Es a esta variable a la que le asignamos el parámetro anterior, quedando &lt;strong&gt;GRUB_CMDLINE_LINUX=&amp;ldquo;vga=0x31B&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;aplicar-los-cambios&#34;&gt;Aplicar los cambios&lt;/h3&gt;
+
+&lt;p&gt;Para aplicar los cambios es necesario regenerar el archivo &lt;strong&gt;/boot/grub/grub.cfg&lt;/strong&gt; con el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# update-grub2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez terminado, el apartado de sistemas operativos Linux disponibles quedará así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;### BEGIN /etc/grub.d/10_linux ###&lt;/span&gt;
+menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64&amp;#39;&lt;/span&gt; --class debian --class gnu-linux --class gnu --class os &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+ load_video
+  insmod gzio
+ insmod part_msdos
+   insmod ext2
+ &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(hd0,msdos1)&amp;#39;&lt;/span&gt;
+   search --no-floppy --fs-uuid --set&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root ae9e059a-75a2-4f19-9631-206fc1fd65fa
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading Linux 3.2.0-4-amd64 ...&amp;#39;&lt;/span&gt;
+ linux   /boot/vmlinuz-3.2.0-4-amd64 &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ae9e059a-75a2-4f19-9631-206fc1fd65fa ro &lt;span class=&#34;nv&#34;&gt;vga&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x31B quiet
+   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;
+ initrd  /boot/initrd.img-3.2.0-4-amd64
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64 (recovery mode)&amp;#39;&lt;/span&gt; --class debian --class gnu-linux --class gnu --class os &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   load_video
+  insmod gzio
+ insmod part_msdos
+   insmod ext2
+ &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(hd0,msdos1)&amp;#39;&lt;/span&gt;
+   search --no-floppy --fs-uuid --set&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root ae9e059a-75a2-4f19-9631-206fc1fd65fa
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading Linux 3.2.0-4-amd64 ...&amp;#39;&lt;/span&gt;
+ linux   /boot/vmlinuz-3.2.0-4-amd64 &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ae9e059a-75a2-4f19-9631-206fc1fd65fa ro single &lt;span class=&#34;nv&#34;&gt;vga&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x31B
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;
+ initrd  /boot/initrd.img-3.2.0-4-amd64
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;### END /etc/grub.d/10_linux ###&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como se aprecia, aparece el parámetro &lt;strong&gt;vga&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo compilar todos los archivos CPP de una vez usando MakeFile</title>
+      <link>https://elbauldelprogramador.com/como-compilar-todos-los-archivos-cpp-de-una-vez-usando-makefile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-compilar-todos-los-archivos-cpp-de-una-vez-usando-makefile/</guid>
+      <description>&lt;p&gt;Los makefile sirven para automatizar el proceso de compilación de un proyecto estableciendo unas reglas que dictan cómo y en qué orden han de crearse los ficheros objetos, librerías y binarios.&lt;/p&gt;
+
+&lt;p&gt;La creación de un fichero MakeFile puede llegar a ser compleja conforme va incrementando el tamaño del proyecto. En este artículo vamos a ver cómo se pueden compilar con una sola regla todos los archivos cpp del proyecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Se irá mostrando línea a línea el fichero MakeFile para ir explicándolo y luego se mostrará todo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-make&#34; data-lang=&#34;make&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BIN&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; bin
+&lt;span class=&#34;nv&#34;&gt;SRC&lt;/span&gt; 	  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; src
+&lt;span class=&#34;nv&#34;&gt;OBJ&lt;/span&gt; 	  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; obj
+&lt;span class=&#34;nv&#34;&gt;CXX&lt;/span&gt; 	  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; g++
+&lt;span class=&#34;nv&#34;&gt;CPPFLAGS&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; -Wall -g -ansi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esto se establecen los nombres de los directorios correspondientes en la carpeta del proyecto. Nota: los directorios deben estar creados previamente.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-make&#34; data-lang=&#34;make&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SOURCES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wildcard &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;SRC&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/*.cpp&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;OBJS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;addprefix &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;OBJ&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/, &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;notdir &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;SOURCES:.cpp&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.o&lt;span class=&#34;k&#34;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esto almacenamos en la variable &lt;code&gt;SOURCES&lt;/code&gt; todos los ficheros cpp que residan en el directorio &lt;em&gt;src&lt;/em&gt;. En la variable &lt;code&gt;OBJS&lt;/code&gt; se hacen varias cosas, &lt;code&gt;$(SOURCES:.cpp=.o)&lt;/code&gt; reemplaza la extensión de los ficheros &lt;code&gt;.cpp&lt;/code&gt; por &lt;code&gt;.o&lt;/code&gt;, &lt;code&gt;$(notdir $(SOURCES:.cpp=.o))&lt;/code&gt; elimina cualquier ruta que existiera para dejar únicamente el nombre del fichero, por ejemplo &lt;em&gt;/src/fichero.cpp&lt;/em&gt; pasaría a ser &lt;em&gt;fichero.cpp&lt;/em&gt;. Con &lt;code&gt;$(addprefix $(OBJ)/&lt;/code&gt; añadimos el prefijo indicado, en este caso &lt;em&gt;obj&lt;/em&gt; al nombre del fichero, siguiendo con el ejemplo anterior, de &lt;em&gt;fichero.o&lt;/em&gt; obtendríamos &lt;em&gt;obj/fichero.o&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-make&#34; data-lang=&#34;make&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; programa
+&lt;span class=&#34;nf&#34;&gt;all&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BIN&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;nf&#34;&gt;$(BIN)/$(target)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;OBJS&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+  @echo Creando &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;... con $^
+  &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CXX&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CPPFLAGS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;OBJS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -o &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ésta regla define cómo compilar el programa final, para generar dicho programa dependemos de los ficheros objeto guardados en la variable &lt;code&gt;$(OBJS)&lt;/code&gt;, &lt;em&gt;$@&lt;/em&gt; contiene el nombre del destino (target), en este caso &lt;em&gt;bin/programa&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-make&#34; data-lang=&#34;make&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;$(OBJ)/%.o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; %.&lt;span class=&#34;n&#34;&gt;cpp&lt;/span&gt;
+  @echo Creando &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;... con $^
+  &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CXX&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CPPFLAGS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -c $&amp;lt; -o &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esta regla se crean los ficheros objeto necesarios para la regla anterior. La regla crea objetos a partir de sus correspondientes cpps, de ahí &lt;code&gt;%.o : %.cpp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;El makefile completo es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-make&#34; data-lang=&#34;make&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BIN&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; bin
+&lt;span class=&#34;nv&#34;&gt;SRC&lt;/span&gt; 	  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; src
+&lt;span class=&#34;nv&#34;&gt;OBJ&lt;/span&gt; 	  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; obj
+&lt;span class=&#34;nv&#34;&gt;CXX&lt;/span&gt; 	  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; g++
+&lt;span class=&#34;nv&#34;&gt;CPPFLAGS&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; -Wall -g -ansi
+&lt;span class=&#34;nv&#34;&gt;CFLAGS&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; -Wall -O3 -c
+&lt;span class=&#34;nv&#34;&gt;SOURCES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wildcard *.cpp&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;OBJS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;addprefix &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;OBJ&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/, &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;notdir &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;SOURCES:.cpp&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.o&lt;span class=&#34;k&#34;&gt;)))&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; programa
+
+&lt;span class=&#34;nf&#34;&gt;all&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BIN&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;nf&#34;&gt;$(BIN)/$(target)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;OBJS&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+  @echo Creando &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;... con $^
+  &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CXX&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CPPFLAGS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;OBJS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -o &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;
+
+&lt;span class=&#34;nf&#34;&gt;$(OBJ)/%.o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; %.&lt;span class=&#34;n&#34;&gt;cpp&lt;/span&gt;
+  @echo Creando &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;... con $^
+  &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CXX&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;CPPFLAGS&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -c $&amp;lt; -o &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;
+
+&lt;span class=&#34;c&#34;&gt;# ************ Limpieza ************&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;.PHONY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;clean&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;clean &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+  @echo Limpiando archivos intermedios...
+  rm &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;OBJ&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/*
+  rm &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;SRC&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/*.*~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La parte de limpieza simplemente elimina los ficheros generados automáticamente en el proceso de compilación.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Compile all CPP files using makefile under MinGW&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/a/13109884/1612432&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;
+&lt;em&gt;Manual GNU Make&lt;/em&gt; »» &lt;a href=&#34;https://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html&#34; target=&#34;_blank&#34;&gt;gnu.org&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar aplicaciones</title>
+      <link>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</guid>
+      <description>&lt;p&gt;Ya me ha sucedido en varias ocasiones que he intentado conectar mi &lt;strong&gt;Samsung Galaxy S&lt;/strong&gt; al &lt;strong&gt;adb&lt;/strong&gt; del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ adb devices
+List of devices attached
+???????????? no permissions
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así que a modo de recordatorio para mi, y para que a otras personas con el mismo problema puedan solucionarlo, escribo esta entrada.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&#34;more&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Para empezar ejecutamos el comando &lt;strong&gt;lsusb&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Bus &lt;span class=&#34;m&#34;&gt;007&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus &lt;span class=&#34;m&#34;&gt;006&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus &lt;span class=&#34;m&#34;&gt;005&lt;/span&gt; Device 002: ID 046d:c03e Logitech, Inc. Premium Optical Wheel Mouse &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;M-BT58&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+Bus &lt;span class=&#34;m&#34;&gt;005&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus &lt;span class=&#34;m&#34;&gt;004&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus &lt;span class=&#34;m&#34;&gt;003&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+&amp;lt;strong&amp;gt;Bus &lt;span class=&#34;m&#34;&gt;002&lt;/span&gt; Device 006: ID 04e8:681c Samsung Electronics Co., Ltd Galaxy Portal/Spica/S&amp;lt;/strong&amp;gt;
+Bus &lt;span class=&#34;m&#34;&gt;002&lt;/span&gt; Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus &lt;span class=&#34;m&#34;&gt;001&lt;/span&gt; Device 002: ID 0bda:8187 Realtek Semiconductor Corp. RTL8187 Wireless Adapter
+Bus &lt;span class=&#34;m&#34;&gt;001&lt;/span&gt; Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De estas líneas nos interesa la que está en negrita, donde vamos a usar el verdor ID, que es 04e8 para el caso de mi Samsung. A continuación seguimos los siguientes pasos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Es necesario que tengamos habilitado las fuentes desconocidas en el teléfono (Ajustes-&amp;gt;Aplicaciones y marcamos la casilla), Así como permitir el USB debugging (Ajustes-&amp;gt;Aplicaiones-&amp;gt;Desarrollo).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;El siguiente paso es crear un archivo llamado &lt;em&gt;51-android.rules&lt;/em&gt; bajo el directorio &lt;em&gt;/etc/udev/rules.d/&lt;/em&gt;, y añadimos&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SUBSYSTEM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;usb&amp;quot;&lt;/span&gt;, ATTRS&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;idVendor&lt;span class=&#34;o&#34;&gt;}==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;04e8&amp;quot;&lt;/span&gt;, SYMLINK+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;android_adb&amp;quot;&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;MODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;0666&amp;quot;&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;OWNER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;nombre-de-usuario&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde tendremos que poner en idVendor el número que nos daba como resultado el comando lsusb, y en el propietario nuestro nombre de usuario.&lt;/p&gt;
+
+&lt;p&gt;Guardamos el fichero y reiniciamos el servicio udev&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo restart udev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ó&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo /etc/init.d/udev restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tambíen tenemos que finalizar el adb&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./adb kill-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Desconectamos el teléfono del usb y lo volvemos a enchufar, Ahora el resultado de &lt;em&gt;adb devices&lt;/em&gt; debería ser algo así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./adb devices
+List of devices attached
+900339eb5012 device
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p class=&#34;alert&#34;&gt;
+  Aún así, en mi caso sigue sin reconocer el dispositivo, tras buscar y buscar encontré que este problema se soluciona renombrando el archivo &lt;span &gt;51-android.rules&lt;/span&gt; a &lt;span &gt;91-android.rules&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-to-do-developmenttestinginstallations-or-tethering/&#34; target=&#34;_blank&#34;&gt;dimitar.me&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cómo conocer el software “no libre” instalado en nuestro equipo</title>
+      <link>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</guid>
+      <description>&lt;p&gt;Este programa lo ví en &lt;a href=&#34;http://proyectosbeta.blogspot.com&#34;&gt;ProyectosBeta&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las cuales muchas serán &lt;strong&gt;no libres&lt;/strong&gt;, con el programita &lt;strong&gt;vrms&lt;/strong&gt; podemos conocerlos de forma sencilla.&lt;/p&gt;
+
+&lt;p&gt;Los pasos a seguir son los siguientes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Instalamos el programa:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install vrms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y lo ejecutamos con &lt;code&gt;vrms&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;El resultado es el siguiente:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s1600/vrms.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34;  height=&#34;450&#34; width=&#34;800&#34; src=&#34;https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s800/vrms.png&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para que nos salga la el dibujito de &lt;strong&gt;Stallman&lt;/strong&gt; hay que seguir los siguientes pasos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo aptitude install vrms cowsay
+$ sudo mv rms.cow /usr/share/cowsay/cows/rms.cow
+$ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;vrms&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;256&#34; width=&#34;238&#34; src=&#34;https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://proyectosbeta.blogspot.com/2011/05/crear-la-cara-de-richard-stallmann-con.html&#34;&gt;Proyectosbeta&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo convertir un archivo pdf a imágenes</title>
+      <link>https://elbauldelprogramador.com/como-convertir-un-archivo-pdf-a-imagenes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-convertir-un-archivo-pdf-a-imagenes/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;sh&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh1.png&#34; alt=&#34;&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.&lt;/p&gt;
+
+&lt;p&gt;Es necesario tener instalado el paquete imagemagick, si no lo tenemos instalado ejecutamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install imagemagick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras instalarlo basta con ejecutar el comando siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;convert foo.pdf foo.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La extensión de la imagen podemos cambiarla a jpg por ejemplo.&lt;/p&gt;
+
+&lt;p&gt;Si las imágenes resultan con poca calidad, podemos ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;convert -density &lt;span class=&#34;m&#34;&gt;400&lt;/span&gt; foo.pdf -resize 25% foo.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Espero que os sea útil si alguna vez lo necesitáis.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Vía | &lt;a href=&#34;http://www.cyberciti.biz/faq/howto-convert-a-pdf-file-to-an-image/&#34; target=&#34;_blank&#34;&gt;cyberciti&lt;/a&gt; | &lt;a href=&#34;http://www.imagemagick.org/discourse-server/viewtopic.php?f=10&amp;t=13371&#34; target=&#34;_blank&#34;&gt;imagemagick.org&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cómo crear  simples shortcodes en WordPress</title>
+      <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
+      <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
+
+&lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt; ?php&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;// Short code&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;function Nombre_de_nuestro_shortcode( $atts, $content = null ) {&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;   return &amp;#39;Código de nuestro shortcode&amp;#39;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;nombre_de_nuestro_shortcode&amp;#39;, &amp;#39;Nombre_de_nuestro_shortcode&amp;#39;);&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

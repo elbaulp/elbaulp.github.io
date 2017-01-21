@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eliminar Actividades De La Pila Android on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/eliminar-actividades-de-la-pila-android/index.xml</link>
+    <description>Recent content in Eliminar Actividades De La Pila Android on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/eliminar-actividades-de-la-pila-android/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Eliminar la pila de actividades (Back Stack) en Android</title>
+      <link>https://elbauldelprogramador.com/eliminar-la-pila-de-actividades-back-stack-en-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/eliminar-la-pila-de-actividades-back-stack-en-android/</guid>
+      <description>&lt;p&gt;El concurso universitario de software libre sigue en marcha, como dije participo en &lt;a href=&#34;https://play.google.com/store/apps/details?id=es.ugr.swad.swadroid&#34; title=&#34;Swadroid Play Store&#34; target=&#34;_blank&#34;&gt;SWADROID&lt;/a&gt;. La última implementación que se hizo era añadir una opción para cerrar sesión. Pero nos dimos cuenta que si el usuario cerraba sesión desde alguna &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34; title=&#34;Fundamentos programación Android: Conceptos básicos y componentes&#34;&gt;activity&lt;/a&gt; distinta de la princial, no se mostraba la pantalla de login, si no la activity en la que estuviera en el momento de cerrar sesión. Por supuesto, esto no es el comportamiento deseado, lo ideal sería que al cerrar sesión se muestre la pantalla de login independientemente de dónde se encuentre el usuario. Hoy veremos cómo eliminar la pila de actividades de una aplicación Android para obtener este comportamiento.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Como es habitual, en stackoverflow se encontraba la respuesta, es tan sencillo como crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34; title=&#34;Programación Android: Intents – Conceptos básicos&#34;&gt;intent&lt;/a&gt; con dos &lt;strong&gt;flags&lt;/strong&gt;, &lt;em&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#FLAG_ACTIVITY_SINGLE_TOP&#34; title=&#34;Referencia&#34; target=&#34;_blank&#34;&gt;FLAG_ACTIVITY_SINGLE_TOP&lt;/a&gt;&lt;/em&gt; para no lanzar un activity si ya se está ejecutando encima de la pila y &lt;em&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#FLAG_ACTIVITY_CLEAR_TOP&#34; title=&#34;Referencia&#34; target=&#34;_blank&#34;&gt;FLAG_ACTIVITY_CLEAR_TOP&lt;/a&gt;&lt;/em&gt;, que tal y como indica la documentación:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If set, and the activity being launched is already running in the current task, then instead of launching a new instance of that activity, all of the other activities on top of it will be closed and this Intent will be delivered to the (now on top) old activity as a new Intent.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Es decir, si la actividad que se lanza con el intent ya está en la pila de actividades, en lugar de lanzar una nueva instancia de dicha actividad, el resto de activities en la pila serán cerradas y se resolverá el intent por la actividad a la que se llamó.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, si la pila contiene las activities A, B, C, D. Si D llama a &lt;code&gt;startActivity()&lt;/code&gt; con un intent para B, entonces C y D serán finalizadas y B recibe el intent, teniendo ahora en la pila A,B. En nuestro caso tampoco nos interesa que A esté en la pila, por lo que la finalizaremos manualmente.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo sería el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getBaseContext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SWADMain&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+                        &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addFlags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FLAG_ACTIVITY_CLEAR_TOP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FLAG_ACTIVITY_SINGLE_TOP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;finish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Finish all previous activities&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/6330260/finish-all-previous-activities&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

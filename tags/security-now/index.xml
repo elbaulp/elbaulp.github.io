@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security Now on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/security-now/index.xml</link>
+    <description>Recent content in Security Now on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/security-now/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement Technology (CET)</title>
+      <link>https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/</link>
+      <pubDate>Tue, 05 Jul 2016 20:09:47 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/</guid>
+      <description>&lt;p&gt;Hace tiempo que hablamos aquí sobre lo que es un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits&#34;&gt;Buffer Overflow&lt;/a&gt; y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo está basado en el episodio #565 de Security Now!, &lt;em&gt;Control-Flow Enforcement Technology (CET)&lt;/em&gt;, puedes ver todos los artículos traducidos en la página &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Página de episodios traducidos&#34;&gt;security now!&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;cómo-pretende-intel-acabar-con-los-buffers-overflows&#34;&gt;Cómo pretende Intel acabar con los buffers overflows&lt;/h1&gt;
+
+&lt;p&gt;Básicamente Intel añadirá una nueva instrucción a sus procesadores, llamada &lt;strong&gt;ENDBRANCH&lt;/strong&gt; y una nueva funcionalidad llamada &lt;strong&gt;Shadow stack&lt;/strong&gt;, que podría traducirse como pila oculta. Antes de meternos de lleno a describir ambas novedades, analicemos el problema.&lt;/p&gt;
+
+&lt;h1 id=&#34;un-poco-de-historia&#34;&gt;Un poco de historia&lt;/h1&gt;
+
+&lt;p&gt;El problema con la programación orientada al retorno (&lt;em&gt;return oriented-programming&lt;/em&gt;) es que la gente inteligente ideó una forma de conseguir ejecutar código que ya tenía privilegios de ejecución. A lo largo de los años se ha producido una batalla entre gente intentando explotar programas y las compañías intentando idear métodos que lo impidieran.&lt;/p&gt;
+
+&lt;p&gt;La primera medida de prevención fue el bit &lt;strong&gt;NX&lt;/strong&gt; (&lt;em&gt;No-eXecute bit&lt;/em&gt;), este bit se añadió a los sistemas para evitar los problemas mencionados en el párrafo anterior, que consistía en proporcionar datos al sistema y conseguir que esos datos se ejecutaran. Es decir, en estos sistemas no se diferenciaba lo que era código para ejecutar y lo que eran los datos, por lo que si conseguías que el procesador ejecutara unos datos cuidadosamente proporcionados&amp;hellip; te hacías con el sistema. En la arquitectura Von Neuman clásica, los datos e instrucciones comparten el mismo espacio.&lt;/p&gt;
+
+&lt;h2 id=&#34;instrucción-nx&#34;&gt;Instrucción NX&lt;/h2&gt;
+
+&lt;p&gt;Como hemos mencionado, esta compartición de espacio entre datos e instrucciones tenía el siguiente problema: Si consigues que el procesador ejecute una instrucción de salto (&lt;em&gt;jump&lt;/em&gt; ) a esa zona de datos que contiene intencionadamente instrucciones, el procesador las ejecutará. En orden de prevenir este tipo de ataques se creó la el bit &lt;strong&gt;NX&lt;/strong&gt;, una bandera o flag que se añadió al hardware que especifica qué región de memoria no puede ejecutarse. De esta forma, si alguien introduce datos y mediante una instrucción &lt;em&gt;jmp&lt;/em&gt; salta a ellos, el procesador no ejecutará las intrucciones en esos datos porque están marcados con el flag &lt;strong&gt;NX&lt;/strong&gt;. Pero como siempre, la gente es muy lista.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-saltarse-la-protección-del-bit-nx&#34;&gt;Cómo saltarse la protección del bit NX&lt;/h2&gt;
+
+&lt;p&gt;Ya que esta protección estaba activada, los hackers idearon otra forma de saltarsela, intentar desactivar el bit saltando a alguna región de memoria que sea de ejecución y tenga la llamada al sistema que desactiva el bit &lt;strong&gt;NX&lt;/strong&gt;, normalmente saltaban a una subrutina del kernel, y sobre-escribían la dirección de retorno para saltar a la parte donde reside el código que ellos quieren ejecutar. De este modo ya volvían a poder ejecutar lo que quisieran en la región de datos. ¿Cual fue la contramedida de Intel en ese entonces?  &lt;em&gt;ASLR&lt;/em&gt; (&lt;em&gt;Address Space Layout Randomization&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;qué-es-aslr-address-space-layout-randomization&#34;&gt;Qué es ASLR (Address Space Layout Randomization)&lt;/h2&gt;
+
+&lt;p&gt;Para prevenir los ataques del tipo anterior, Intel ideo otra solución, aleatorizar la distribución del espacio en el que se reparte el código ejecutable del sistema operativo. Sin embargo, debido al diseño de la arquitectura, no tenían mucho espacio de donde aleatorizar, normalmente disponían solo de 8 bits, es decir 256 posibles localizaciones en memoria. 256 opciones no son muchas, así que los malos podían simplemente probar suerte, fallarían 255 de cada 256 veces, pero acertarían 1 de cada 256, una baja probabilidad de acierto, pero mejor que 0.&lt;/p&gt;
+
+&lt;h3 id=&#34;mi-ordenador-se-ha-quedado-colgado-por-alguna-misteriosa-razón&#34;&gt;Mi ordenador se ha quedado colgado por alguna misteriosa razón&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Seguro que alguna vez os ha pasado, el ordenador se queda colgado, os aparece una pantallazo azul&amp;hellip; y simplemente habéis reiniciado y todo parece estar correcto, pues bien, esto fruto de alguien probando suerte en vuestro sistema, y fallando una de esas 255 veces que puede equivocarse “probando suerte” intentando hacerse con vuestro PC.&lt;/p&gt;
+
+&lt;h1 id=&#34;la-nueva-instrucción-endbranch-de-intel&#34;&gt;La nueva instrucción ENDBRANCH de Intel&lt;/h1&gt;
+
+&lt;p&gt;Despues de este pequeño repaso por la historia de las vulnerabilidades, vamos a describir la nueva instrucción que Intel ha creado para acabar con los &lt;em&gt;Buffers Overflows&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
+
+&lt;p&gt;Con esta simple mejora, se acaba el problema de sobre-escribir la dirección de retorno de una función para permitir al atacante saltar a una porción de codigo que él controla. Al obligar a que la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt; sea la primera instrucción de todas las subrutinas, define un único punto de entrada válido. Cualquier intento de saltar a la mitad o al final de una función es imposible, ya que el proceso se abortará.&lt;/p&gt;
+
+&lt;h1 id=&#34;la-pila-stack-y-la-nueva-funcionalidad-de-intel-shadow-stack&#34;&gt;La pila (Stack) y la nueva funcionalidad de Intel, Shadow Stack&lt;/h1&gt;
+
+&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
+
+&lt;p&gt;Para resolver este problema Intel ha diseñado la llamada &lt;em&gt;Shadow Stack&lt;/em&gt; o pila oculta. Es una pila a la que el desarrollador no tiene acceso, y mantiene una copia de los parámetros de la pila normal, como dirección de retorno etc, pero nada de datos. Cuando el programador modifica la pila, lo hace en la normal, a la que tiene acceso. Y aquí reside la fortaleza del &lt;em&gt;Shadow Stack&lt;/em&gt;, al no tener acceso, cuando el sistema mira la dirección de retorno, si esta dirección no coincide en ambas pilas, alguien ha modificado la dirección de retorno en la pila normal y el proceso se aborta. Y así, Intel ha puesto fin a años de vulnerabilidades debidas al simple hecho de no comprobar que el tamaño de los datos que intentamos guardar en una variable, no cabe en el espacio que tienen reservado. Una obra maestra.&lt;/p&gt;
+
+&lt;p&gt;Además, no implica ningun decremento en el rendimiento del sistema, ya que está implementado en hardware, es problema de Intel añadir los transictores necesarios a sus procesadores para que esto funcione.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Me ha parecido un tema muy interesante y quería compartirlo con vosotros, espero que también os haya gustado. Dejanos un comentario para hacernos llegar tu opinión!&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security Now 565 Control-Flow Enforcement Technology (CET) | &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/565 &amp;quot;Security Now 565
+Control-Flow Enforcement Technology (CET&#34;&gt;twit.tv&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Episodio en Youtube | &lt;a href=&#34;https://www.youtube.com/watch?v=W3AdFoJ8lCs &amp;quot;Security Now 565
+Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>WhatsApp: Entendiendo Su Cifrado Extremo a Extremo</title>
+      <link>https://elbauldelprogramador.com/whatsapp-mensajes-cifrados-extremo-a-extremo/</link>
+      <pubDate>Sat, 23 Apr 2016 22:05:58 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/whatsapp-mensajes-cifrados-extremo-a-extremo/</guid>
+      <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/WhatsApp-Entendiendo-Su-Cifrado-Extremo-a-Extremo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;454px&#34; /&gt;&lt;/a&gt;
+&lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;a href=&#34;https://whispersystems.org/blog/whatsapp­complete/ &#34; target=&#34;_blank&#34; title=&#34;whispersystems.org blog&#34;&gt;whispersystems.org&lt;/a&gt;&lt;/span&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Seguro que muchos últimamente os preguntáis qué significa ese mensaje que aparece en vuestras conversaciones de WhatsApp:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Las llamadas y mensajes enviados a este chat ahora están seguros con cifrado extremo a extremo. Toca para más información.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para los curiosos, en el podcast &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, episodio 555 Steve explicó el protocolo que han implementado para mantener las conversaciones y llamadas de &lt;strong&gt;WhatsApp&lt;/strong&gt; seguras. He pensado que puede ser de interés para los lectores del blog, así que lo he traducido. Comencemos:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;resumen&#34;&gt;Resumen&lt;/h2&gt;
+
+&lt;p&gt;Para el que no quiera entrar en detalles aquí los aspectos básicos son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt; ha incorporado a su aplicación la el protocolo &lt;em&gt;Signal&lt;/em&gt; (Desarrolado por whispersystems).&lt;/li&gt;
+&lt;li&gt;El protocolo &lt;em&gt;Signal&lt;/em&gt; proporciona a la seguridad de &lt;strong&gt;WhatsApp&lt;/strong&gt; las siguientes características:
+
+&lt;ul&gt;
+&lt;li&gt;Confidencialidad - Mensajes cifrados.&lt;/li&gt;
+&lt;li&gt;Integridad - Cualquier alteración de un mensaje será detectada y no se enviará el mensaje.&lt;/li&gt;
+&lt;li&gt;Autentificación - Es posible confirmar la identidad de la otra persona.&lt;/li&gt;
+&lt;li&gt;Consistencia de los participantes - Por defecto está desactivado.&lt;/li&gt;
+&lt;li&gt;Validación del destinatario - Relacionado con las dos anteriores.&lt;/li&gt;
+&lt;li&gt;Confidencialidad directa (Forward secrecy)  - Si se compromenten las claves privadas en el futuro, no se podrán descifrar mensajes antiguos.&lt;/li&gt;
+&lt;li&gt;Confidencialidad futura (Future secrecy) - Ocurre lo mismo para claves que fueron comprometidas, con ellas no se podrán descifrar mensajes.&lt;/li&gt;
+&lt;li&gt;Imposibilidad de vinculación de mensajes (Message unlinkability) - Los mensajes son asíncronos, independientes, pueden perderse.&lt;/li&gt;
+&lt;li&gt;Repudiación de mensajes - El destinatario puede recrear un mensaje válido del emisor.&lt;/li&gt;
+&lt;li&gt;Asincronía - Los mensajes pueden encolarse en el servidor hasta que el destinatario esté conectado para recibirlos.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lo que no proporciona este protocolo es:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Preservación del anonimato - No es posible enviar mensajes de forma anónima.&lt;/li&gt;
+&lt;li&gt;Requiere que el servidor almacene las claves públicas para poder mandar los mensajes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Veamos ahora el tema con más detalle:&lt;/p&gt;
+
+&lt;h2 id=&#34;de-donde-viene-signal&#34;&gt;De donde viene Signal&lt;/h2&gt;
+
+&lt;p&gt;Signal es un protocolo que ha desarrollado &lt;em&gt;Open Whisper Systems&lt;/em&gt; a lo largo de los años como parte de su aplicación de mensajería SMS &lt;em&gt;TextSecure&lt;/em&gt;. Durante todo este tiempo ha ido evolucionando hasta convertirse en el brillante protocolo que es hoy día, como pondremos de manifiesto en este artículo.&lt;/p&gt;
+
+&lt;p&gt;El objetivo principal del protocolo es porder enviar un mensaje de forma segura, aunque el destinatario no esté conectado en ese momento. El problema de esto, es que el mensaje necesita almacenarse temporalmente en un servidor, con los problemas de seguridad que esto conlleva. Es aquí donde los chicos de &lt;em&gt;Open Whisper Systems&lt;/em&gt; fueron refinando su protocolo con el paso de los años hasta conseguirlo. Cabe destacar que el protocolo es de &lt;a href=&#34;https://github.com/whispersystems/&#34; target=&#34;_blank&#34; title=&#34;Repositorio en Github&#34;&gt;código libre&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;qué-ofrece-el-protocolo-signal-propiedades&#34;&gt;Qué ofrece el protocolo signal - Propiedades&lt;/h2&gt;
+
+&lt;p&gt;La integración de &lt;em&gt;Signal&lt;/em&gt; con &lt;strong&gt;WhatsApp&lt;/strong&gt; ofrece a sus usuarios &lt;strong&gt;confidencialidad&lt;/strong&gt;, lo cual se traduce en que las comunicaciones están cifradas. &lt;strong&gt;Integridad&lt;/strong&gt;, que significa que cualquier alteración en un mensaje será detectada y no se producirá la transacción. Esto último implica que exite un código de autentificación de mensaje (una MAC). Por último, &lt;strong&gt;autenticación&lt;/strong&gt;, aunque esto hay que activarlo, ya que está apagado por defecto (Veremos cómo activarlo más adelante). La &lt;strong&gt;Autenticación&lt;/strong&gt; significa que podemos verificar la identidad de la otra persona. Otra propiedad del protocolo es &lt;strong&gt;validación del destino (Destination validation)&lt;/strong&gt;, esto significa que si alguna vez en el futuro, se compromete la clave privada no será posible descifrar mensajes antiguos (&lt;strong&gt;Foward secrecy&lt;/strong&gt;). Del mismo modo disponen de &lt;strong&gt;backward secrecy&lt;/strong&gt;, siendo lo contrario del anterior, si una clave privada antigua se ve comprometida, no será posible descifrar mensajes futuros. Estas dos últimas propiedades se consiguen con lo que se denominan &lt;em&gt;Ephemeral Keys&lt;/em&gt; o claves efímeras, este tipo de claves están en constante cambio y renegociándose continuamente, de modo que alguien que consiga una clave no podrá usarla. Por último, &lt;strong&gt;Message unlinkability&lt;/strong&gt; (Asincronía), los mensajes son asíncronos e independientes, pueden llegar en distinto orden, pueden perderse, y aún así el sistema seguirá siendo consistente.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-funciona-el-asincronismo&#34;&gt;Cómo funciona el asincronismo&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Para lograr el asincronismo, los mensajes se deben encolar en un servidor a la espera de que el destinatario se conecte. Este proceso es realmente complicado y el traductor no tiene el conocimiento para hacerlo, pero en las referencias se proporcionan enlaces para los interesados que deseen profundizar en el tema.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sí que se explicará por ecima el proceso. Llegado un punto ambas partes producen una curva elíptica, en concreto la curva 25519, el cual es el algoritmo de curva elíptica de &lt;strong&gt;Bernstein&lt;/strong&gt;. Esta es la misma curva que usa Steve en su protocolo &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34; title=&#34;SQRL y la idea de eliminar el uso de usuario y contraseña en internet&#34;&gt;SQLR&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez creadas ambas claves Diffie-Hellman privadas y públicas, que son estáticas, crean un conjunto de claves efímeras. En el siguiente paso utilizan el acuerdo de llaves (Key agreement) de Diffie-Hellman tres veces: El primero es coger la clave privada y la clave efímera de la otra persona, el segundo Key Agreement es el mismo que el anterior pero lo hace el otro usuario, es decir, se coge la clave privada y la efímera del otro participante en la conversación. Por último, el tercer key agreement consiste en intercambiar las claves efímeras de ambos y usarlas con Diffie-Hellman. Se concatenan las tres y se obtiene una clave de sesión maestra.&lt;/p&gt;
+
+&lt;p&gt;Como se comentaba anteriormente, la complejidad del proceso es bastante alta.&lt;/p&gt;
+
+&lt;h2 id=&#34;el-concepto-de-ratchet&#34;&gt;El concepto de Ratchet&lt;/h2&gt;
+
+&lt;p&gt;En un protocolo interactivo, un &lt;em&gt;ratchet&lt;/em&gt; o trinquete es el termino usado cuando se quiere evolucionar una clave sobre la que ya se ha establecido una negociación. Conforme se van enviando mensajes, se avanza el trinquete. Para sincronizarlos, el usuario &lt;strong&gt;A&lt;/strong&gt; envía la primera mitad de su acuerdo con clave Diffie-Hellman sobre el usuario &lt;strong&gt;B&lt;/strong&gt;. Hasta que no reciba la mitad restante del usuario &lt;strong&gt;B&lt;/strong&gt; no puede hacer nada. En el momento en el que el usuario &lt;strong&gt;B&lt;/strong&gt; envia su mitad de la clave, &lt;strong&gt;A&lt;/strong&gt; envia la parte que faltaba con un acuse de recibo afirmando que recibió la primera mitad de la clave de &lt;strong&gt;B&lt;/strong&gt;. Ahora ambos tienen una clave pública Diffie-Hellman efímera intercambiada. Con esto ambos pueden realizar un &lt;em&gt;Key agreement&lt;/em&gt; Diffie-Hellman y obtener la siguiente clave ratchet.&lt;/p&gt;
+
+&lt;h2 id=&#34;sigal-hace-offline-ratchet&#34;&gt;Sigal hace Offline Ratchet&lt;/h2&gt;
+
+&lt;p&gt;El problema con el mecanismo anterior es que funciona solamente en tiempo real. En este caso es necesario poder enviar un mensaje aunque el destinatario no esté en línea. Para ello crearon el denominado &lt;strong&gt;Offline Ratchet&lt;/strong&gt;. Si el emisor está enviando varios mensajes, a cada uno de ellos se le aplica un hash, para que ningún mensaje enviado comparta la misma clave. En el momento en que el receptor se conecta, ambas partes resincronizan sus Offline Ratchets.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-se-envía-el-primer-mensaje-de-forma-segura&#34;&gt;¿Cómo se envía el primer mensaje de forma segura?&lt;/h2&gt;
+
+&lt;p&gt;En un protocolo en tiempo real, se puede crear una clave compartida en tiempo real. Pero este sistema pretende que sea posible enviar un mensaje seguro a alguien con quien nunca has hablado. ¿Cómo se logra esto?&lt;/p&gt;
+
+&lt;p&gt;Los chicos de Whisper Systems lo solucionaron de una forma muy elegante. Al registrarte en tu aplicación &lt;strong&gt;WhatsApp&lt;/strong&gt; o Signal, se le envían al servidor 100 claves públicas efímeras con un identificador asociado. Esto permite a alguien que quiera enviarte un mensaje, y que nunca lo ha hecho hasta ahora, coger una de esas claves para poder mandarte el mensaje de forma segura. La ventaja de las claves efímeras es que solo se pueden usar una vez, y al estar identificadas en cuanto se usan el servidor las borra, es imposible que la misma clave se utilize dos veces. Digamos que pueden verse como una caché de claves de un solo uso, de usar y tirar.&lt;/p&gt;
+
+&lt;h2 id=&#34;autentificación&#34;&gt;Autentificación&lt;/h2&gt;
+
+&lt;p&gt;Hasta ahora todo lo que han desarrollado en Whisper Systems ha sido un éxito, una obra maestra. Sin embargo, en este tipo de protocolos siempre hay un punto que flaquea, y ese punto es la autentificación. Autentificación significa que tienes la certeza de que con quien hablas es quien tú crees que es. En threema por ejemplo, lo resolvieron con el sistema de tres puntos y colores. Un punto rojo significa que simplemente esa persona está en tu lista de contactos, dos puntos y amarillo que ambos os tenéis en la lista de contactos. Por último, tres puntos y verde significa que ambos os habéis encontrado en persona y habéis leido el código &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; asociado a cada usuario, lo cual certifica que la persona &lt;strong&gt;A&lt;/strong&gt; dice ser quién es y &lt;strong&gt;B&lt;/strong&gt; lo sabe y al contrario.&lt;/p&gt;
+
+&lt;p&gt;En &lt;strong&gt;WhatsApp&lt;/strong&gt; y Signal, han hecho algo parecido, la imagen del inicio del artículo muestra un código QR en la pantalla, esa es la parte de autentificación de WhatsApp. En Whisper Systems entienden que este cabo es el único que no han atado, no hay forma de resolver el problema de la autenficación, en esta parte el usuario debe ser proactivo. Por este motivo se proporciona el código QR, junto con un número con 60 dígitos (Codificado en el QR). Este código QR es único para cada conversación, y ambos participantes deben tener exáctamente los mismos 60 dígitos. Una vez generado el código no debe cambiar nunca, si cambia es que hay alguien en medio escuchando la conversación o haciéndose pasar por la otra persona (Man in The Middle).&lt;/p&gt;
+
+&lt;h3 id=&#34;cómo-verificar-la-identidad-de-un-contacto&#34;&gt;Cómo verificar la identidad de un contacto&lt;/h3&gt;
+
+&lt;p&gt;Para verificar que ambos tenéis el mísmo número basta con hacer click en la foto del contacto y pinchar en el icono de “Información”, allí encontraréis un apartado llamado “Cifrado/Encriptación”. Al pulsarlo aparecerá el código QR y un botón para escanear el de vuestro contacto. Debido a que ambos comartís el mismo código, este paso basta con que lo haga uno de los dos participantes, ya que lo único que se comprueba es que el número coincide.&lt;/p&gt;
+
+&lt;h3 id=&#34;recibir-notificaciones-de-ataques-man-in-the-middle&#34;&gt;Recibir notificaciones de ataques Man In The Middle&lt;/h3&gt;
+
+&lt;p&gt;Aún haciendo el paso anterior, nada nos protege si en algún momento las claves se ven comprometidas, para recibir notificaciones de seguridad hay que ir a los ajustes de nuestra cuenta de &lt;strong&gt;WhatsApp&lt;/strong&gt; y en la sección de seguridad activar la opción “Mostrar las notificaciones de seguridad”:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/whatsapp-mensajes-cifrados-extremo-a-extremo-mostrar-notificaciones-de-seguridad.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;480px&#34; height=&#34;800px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Citando a Steve:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt; es una obra maestra, me quito el sombrero. Con Signal tenemos una solución perfecta, libre, multiplataforma, con librerías para varios lenguajes. No hay excusa para no usarla.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Espero que os haya gustado el artículo, el resto de artículos traducidos están en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;/security-now/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;p&gt;Para quien quiera seguir leyendo sobre el tema:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twit.tv/shows/security-now/episodes/555&#34; title=&#34;Enlace al podcast&#34;&gt;Enlace al podcast en twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/whatsapp-complete/&#34; title=&#34;Artículo sobre __WhatsApp__ en whispersystems.org&#34;&gt;Artículo sobre &lt;strong&gt;WhatsApp&lt;/strong&gt; en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/advanced-ratcheting/&#34; title=&#34;Artículo sobre Ratchets en whispersystems.org&#34;&gt;Artículo sobre Ratchets en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.whatsapp.com/security/&#34; title=&#34;Página de __WhatsApp__ hablando sobre su seguridad&#34;&gt;Página de &lt;strong&gt;WhatsApp&lt;/strong&gt; hablando sobre su seguridad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/asynchronous-security/&#34; title=&#34;Artículo sobre Seguridad asíncrona en whispersystems.org&#34;&gt;Artículo sobre Seguridad asíncrona en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/simplifying-otr-deniability/&#34; title=&#34;Artículo sobre OTR en whispersystems.org&#34;&gt;Artículo sobre OTR en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;tFzAMEye9Dk&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SQRL -Secure Quick Reliable Login a Fondo</title>
+      <link>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</link>
+      <pubDate>Thu, 10 Sep 2015 09:08:37 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png&#34; title=&#34;{{ .Title }}&#34; alt=&#34;{{ .Title }}&#34; width=&#34;450px&#34; height=&#34;450px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt; Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;resumen&#34;&gt;Resumen&lt;/h2&gt;
+
+&lt;p&gt;Antes de empezar con los detalles, a continuación se muestra un resumen del sistema de autentificación:&lt;/p&gt;
+
+&lt;h3 id=&#34;el-concepto-principal&#34;&gt;El concepto principal&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Una &lt;strong&gt;HMAC&lt;/strong&gt; cuya clave es un número grande generado aleatóriamente.
+
+&lt;ul&gt;
+&lt;li&gt;Un código de autentificación basado en Hashes.&lt;/li&gt;
+&lt;li&gt;Similar a cuando se usa una clave en otros sistemas para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrar/descifrar&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Una forma de crear un “_keyed hash_” (Un hash, de alguna manera, que venga dado por una clave).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Cada usuario obtiene su propia función hash.&lt;/li&gt;
+&lt;li&gt;A cada &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Configurar un servidor DNS&#34;&gt;dominio&lt;/a&gt; de un sitio web se le aplica un hash para producir una clave privada personal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;la-jerarquía-de-claves-de-sqrl&#34;&gt;La jerarquía de claves de SQRL&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Código de recuperación de 24 dígitos, como una carta para “Salir de la cárcel”.&lt;/li&gt;
+&lt;li&gt;Es posible que nunca se necesite éste código.&lt;/li&gt;
+&lt;li&gt;La &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/ &amp;quot;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa&#34;&gt;contraseña&lt;/a&gt;&amp;rdquo; ) del usuario&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;qué-ocurre-si-queremos-otra-identidad-para-el-mismo-sitio&#34;&gt;¿Qué ocurre si queremos otra identidad para el mismo sitio?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si mi mujer y yo queremos entrar a facebook con el mismo pc, se crean IDs alternativos para cada uno.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;qué-pasa-si-me-me-roban-mi-identidad-sqlr-o-si-creo-que-me-la-robaron&#34;&gt;¿Qué pasa si me me roban mi identidad SQLR?, ¿O si creo que me la robaron?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Boqueo de identidad.&lt;/li&gt;
+&lt;li&gt;Se puede bloquear/desbloquear una identidad fácilmente&lt;/li&gt;
+&lt;li&gt;Regenerar las claves para una identidad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;qué-pasa-si-quiero-dejar-de-usar-sqrl&#34;&gt;¿Qué pasa si quiero dejar de usar SQRL?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Eliminar/reemplazar las identidades.&lt;/li&gt;
+&lt;li&gt;Las identidades poseen un ciclo de vida completo que puede administrarse.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;y-si-un-sito-fraudulento-muestra-un-id-de-sqrl-de-otro-sitio-web&#34;&gt;¿Y si un sito fraudulento muestra un ID de &lt;strong&gt;SQRL&lt;/strong&gt; de otro sitio web?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El problema del spoofing, se hablará a lo largo del artículo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;sqrl-revised&#34;&gt;&lt;strong&gt;SQRL&lt;/strong&gt; Revised&lt;/h1&gt;
+
+&lt;p&gt;Antes de comenzar, expliquemos los dos conceptos más importantes en los que se basa SQRL. El primero es el aspecto &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptográfico&lt;/a&gt;, es decir, cómo tener una &lt;a href=&#34;https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/&#34; title=&#34;Chuleta de comandos para GPG&#34;&gt;clave secreta&lt;/a&gt; para un cifrador, para uno como &lt;strong&gt;AES&lt;/strong&gt;, o &lt;strong&gt;Blowfish&lt;/strong&gt;. Es decir, a un cifrador se le pasa un texto plano, y devuelve un texto cifrado, usando la clave secreta. A eso se le llama un cifrador con llaves (&lt;em&gt;keyed cipher&lt;/em&gt;).
+El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, SHA-1&lt;/em&gt; etc, de 256 bits y 160, respectivamente. A éstos algoritmos se les introduce algo, de cualquier longitud, y devuelven un mensaje de longitud fija, dependiendo del algoritmo, 256 bits, 160 etc. No importa cómo de largo sea el mensaje a resumir.&lt;/p&gt;
+
+&lt;p&gt;Resulta que también se pueden tener funciones &lt;em&gt;hash&lt;/em&gt; con claves (&lt;em&gt;keyed hash&lt;/em&gt;), actuando de forma similar a los cifradores. A éstas funciones &lt;em&gt;hash&lt;/em&gt; se las llama &lt;em&gt;HMAC&lt;/em&gt; (&lt;em&gt;Hash Messgage Authentication Code&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;La diferencia pues, es que una función &lt;em&gt;hash&lt;/em&gt; es simplemente una función, &lt;em&gt;SHA-256&lt;/em&gt; es el mismo &lt;em&gt;SHA-256&lt;/em&gt; para todo el mundo, ésta funcionalidad es útil para algunos casos, por ejemplo para comprobar que un fichero descargado no ha sido modificado por nadie. El que sube el fichero, publica el resultado de aplicarle la función &lt;em&gt;hash&lt;/em&gt;, y cuando tú lo descargas, vuelves a pasárselo, si el resultado es el mismo, el fichero no ha sido alterado.&lt;/p&gt;
+
+&lt;p&gt;Si embargo, un &lt;em&gt;Keyed hash&lt;/em&gt; es distinto, la salida de la función viene determinada por la clave secreta. Por tanto, se tendrán tantas funciones &lt;em&gt;hash&lt;/em&gt; como posibles claves se puedan generar a partir de la longitud de la clave. Si la longitud de la clave es 256 bits, se pueden generar $$2^{256}$$ distintas claves, y por tanto $$2^{256}$$ distitas funciones &lt;em&gt;hash&lt;/em&gt;. &lt;strong&gt;SQRL&lt;/strong&gt; usa un &lt;em&gt;keyed hash&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-usa-sqrl-la-hmac&#34;&gt;Cómo usa &lt;strong&gt;SQRL&lt;/strong&gt; la HMAC&lt;/h2&gt;
+
+&lt;p&gt;Veamos un ejemplo. Cuando vas a un sitio web, el dominio del sitio, por ejemplo amazon.com, o Twit.tv, el que sea. A ese dominio se le aplica un &lt;em&gt;hash&lt;/em&gt; usando &lt;em&gt;HMAC&lt;/em&gt;, lo que devuelve un resumen de una longitud fija, pero usando como clave tu identidad de SQRL. Ésta identidad, se creará al momento de instalar SQRL, y cada usuario tendrá su propia función &lt;em&gt;hash&lt;/em&gt;, completamente distinta de los demás. El resultado de la función &lt;em&gt;hash&lt;/em&gt; para el sitio visitado, por ejemplo amazon, será la clave privada para esa web.&lt;/p&gt;
+
+&lt;p&gt;SQRL genera una clave privada única para cada sitio web distinto que visitas, si dos usuarios de &lt;strong&gt;SQRL&lt;/strong&gt; visitan el mismo sitio web, la función &lt;em&gt;hash&lt;/em&gt; personal de cada uno dará un resultado distinto, ya que se está usando &lt;em&gt;HMAC&lt;/em&gt;. Por tanto, usando una identidad maestra junto con la función &lt;em&gt;HMAC&lt;/em&gt;, &lt;strong&gt;SQRL&lt;/strong&gt; crea una galaxia de claves privadas de tal modo que cada usuario tenga una clave distinta cuando visitan sitios distintos. Como dijimos antes, con $$2^{256}$$ hay claves de sobra. Tantas que no hay que preocuprarse por posibles colisiones.&lt;/p&gt;
+
+&lt;p&gt;Resumiendo lo visto hasta ahora, &lt;em&gt;SQRL&lt;/em&gt; consiste en un usuario con una identidad maestra, para el cual el sistema crea automáticamente una clave privada para cada sitio que visita. Eso sí, cuando se visita la misma web, se obtiene la misma clave privada.&lt;/p&gt;
+
+&lt;h3 id=&#34;uso-de-la-clave-privada&#34;&gt;Uso de la clave privada&lt;/h3&gt;
+
+&lt;p&gt;¿Qué se hace con la clave privada?, es una clave privada de basada en una curva elíptica, en concreto la de Dan Bernstein, por ser determinista, es decir, permite especificar la clave privada.&lt;/p&gt;
+
+&lt;p&gt;Ésto significa que la clave no se elige aleatoriamente, porque tendría que almacenarse, memorizarla. Y de ser así, se tendrían que guardar para cada uno de los sitios visitados, bastante molesto. De este modo, pueden crearse sobre la marcha usando la identidad maestra y el nombre de dominio.&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es usar una función de la curva elíptica que obtiene la clave pública a partir de la privada, pero no funciona al contrario. A partir de la pública es imposible obtener la privada. Además, la clave pública será la identidad del usuario para esa web, y el servidor de la web la almacenará para identificarte.&lt;/p&gt;
+
+&lt;p&gt;Por último, cuando el usuario se identifica en un sitio web, la web dice “_vale, dices que este eres tú, demuéstralo._” Para ello la web envía un trozo de datos aleatorio (único para cada usuario), el usuario los firma con su clave privada y lo devuelve a la web. De éste modo, sin exponer la clave privada, acabas de demostrar que la posees. Ésto es &lt;em&gt;SQRL&lt;/em&gt; en esencia, proporcionar la clave pública a una web para identificarte. Cuando quieras volver a identificarte en ella, en lugar de usar el típico e inseguro usuario/contraseña, usando SQRL, la web envía un trozo de datos aleatorios, el usiario entonces le devolverá los datos firmados con la clave privada y la clave pública. Al haber usado la web anteriormente, ya conocía tu clave pública, verifica la firma y corrobora que tú eres quien dices ser y listo, identificado.&lt;/p&gt;
+
+&lt;h2 id=&#34;y-si-alguien-se-hace-pasar-por-mi&#34;&gt;¿Y si alguien se hace pasar por mi?&lt;/h2&gt;
+
+&lt;p&gt;Una identidad &lt;strong&gt;SQRL&lt;/strong&gt; es un sistema de dos personas (Tú y todas las webs del mundo), el usuario es pseudoanónimo para todas las webs. Ya que cada sitio web ve al usuario como un token aleatorio (La clave pública). De éste modo el usuario no puede ser rastreado, es decir, no hay forma de asociar tu identidad entre sitios webs. Además, la cláve pública que proporcionas al sitio web solo es útil para dicho sitio, para ninguno más, a diferencia del usuario/contraseña. En esencia, con &lt;strong&gt;SQRL&lt;/strong&gt; no estás dándole a la web un secreto que guardar (La contraseña), no necesitan mantener segura la base de datos. Cualquiera podría descargarla y le sería inútil, a cualquiera salvo al sitio web.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-recuperar-tu-identidad&#34;&gt;Cómo recuperar tu identidad&lt;/h2&gt;
+
+&lt;p&gt;¿Cómo permitimos a los usuarios que sean responsables de su propia identidad, pero al mismo tiempo darles la opción de recuperarla si la perdieran, o se la robaran?&lt;/p&gt;
+
+&lt;p&gt;Lo primero a tener en cuenta es que &lt;strong&gt;SQRL&lt;/strong&gt; no usa tu identidad más secreta para funcionar, esa es la que guardaremos como último recurso. Lo primero que &lt;strong&gt;SQRL&lt;/strong&gt; hace es generar un “código de rescate”. Un número de 24 dígitos decimales. Este código es el que debe guardarse como el mayor de los secretos. Es tan secreto que no se guarda en ningún cliente SQRL. Cuando se configura &lt;strong&gt;SQRL&lt;/strong&gt; por primera vez, lo imprime por pantalla, y debes anotarlo, o imprimirlo como dígito o como &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR codes&#34;&gt;código QR&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esta es la carta “Salir de la cárcel” de la que hablábamos al principio. Te sacará de cualquier problema. Y por ser tan poderoso, no se almacena. El único requisito es anotarlo o imprimirlo, y ponerlo en un lugar seguro. El código no puede regenerarse, ya que es completamente aleatorio. Es tu identidad maestra.&lt;/p&gt;
+
+&lt;p&gt;Una vez anotado o imprimido, &lt;strong&gt;SQRL&lt;/strong&gt; comienza el proceso de hash, aplicando múltiples hash, haciendo operaciones XOR. Tras aplicar iterativamente funciones hash al código, se obtiene lo que será la clave para la función hash del usuario, recuerda, una &lt;em&gt;keyed hash&lt;/em&gt; (&lt;em&gt;HMAC&lt;/em&gt;). Ahora, la clave de la función hash se cifra con una contraseña usando la función &lt;a href=&#34;https://en.wikipedia.org/wiki/Scrypt&#34;&gt;Scrypt&lt;/a&gt;, la cual hace totalmente inviable averiguar  la contraseña.&lt;/p&gt;
+
+&lt;h2 id=&#34;y-si-me-roban-mi-identidad&#34;&gt;¿Y si me roban mi identidad?&lt;/h2&gt;
+
+&lt;p&gt;Para ello se creó el &lt;em&gt;Identity Lock&lt;/em&gt; (Bloqueador de identidad). Un protocolo consistente en una serie de ecuaciones. Conforme se les va proporcionando la clave pública a las webs, se les proporciona también información sobre el &lt;em&gt;identity lock&lt;/em&gt;. Esta información se genera aleatoriamente por el cliente, y el protocolo permite al cliente generar dicha información para asegurar tu identidad, pero no probrarla. Por tanto, esto difiere de la capacidad anterior de &lt;strong&gt;SQRL&lt;/strong&gt; para probar tu identidad firmando puñado de datos que envía la web.&lt;/p&gt;
+
+&lt;p&gt;El objetivo del &lt;em&gt;identity lock&lt;/em&gt; es hacer deliberadamente que los clientes no sean capaces de probar algo en el futuro que ya aseguraron probar antes. Así, si el cliente queda fuera del control del usuario. No podría usarse para cambiar tu identidad en ninguna web en la que ya la hubieses establecido. De este modo, un ladrón en posesión de tu identidad, de tu código, contraseña&amp;hellip; todo, no podrían eliminar tu identidad.&lt;/p&gt;
+
+&lt;p&gt;La segunda cosa que proporciona el código de recuperación (La carta para salir de la cárcel), al insertarlo en el cliente SQRL, permite cambiar tu identidad y re-habilitar la autenticación de haber sido deshabilitada, ya que es posible deshabilitar la autentificación para las webs, pero solo es posible rehabilitarlas con el código de recuperación.&lt;/p&gt;
+
+&lt;h2 id=&#34;deshabilitar-la-autentificación&#34;&gt;Deshabilitar la autentificación&lt;/h2&gt;
+
+&lt;p&gt;La posibilidad de deshabilitar la autentificación es útil cuando por ejemplo, pierdes tu móvil, te lo confiscan etc. En esos casos, tu identidad queda expuesta, en ese caso, con cualquier otro cliente SQRL, puedes cargar tu identidad y deshabilitar la autentificación para tu identidad. Ningún intrudo podrá cambiar tu identidad, tú puedes deshabilitarla, pero para re activarla necesitarás el código de recuperación. Si alguna vez pasa algo así, al reactivarla con el código, es posible regenerar la identidad (&lt;em&gt;rekeyed&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Esto en esencia es SQRL, bastante prometedor. A continuación dejo el episodio del podcast y la documentación de SQRL.&lt;/p&gt;
+
+&lt;h3 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h3&gt;
+
+&lt;p&gt;Documentación oficial SQRL | &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34;&gt;gcr.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;hsotcaizGjM&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Estructura y seguridad de los QR Codes</title>
+      <link>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
+
+&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/linkentrada2-300x300.png&#34; alt=&#34;QR Code&#34; width=&#34;300px&#34; height=&#34;300px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo esta tecnología se inventó hace 18 años para rastrear rápidamente piezas coches durante su ensamblaje en Japón, y se diseñaron muy bien.&lt;/p&gt;
+
+&lt;p&gt;Todos son cuadrados y siempre tienen una zona llamada &lt;em&gt;zona tranquila&lt;/em&gt; ó &lt;strong&gt;quiet zone&lt;/strong&gt;. Una de las mejores características de estos códigos es que son neutrales respecto a la orientación, es decir, no es necesario estar exactamente enfrente a ellos o alineados verticalmente para escanearlos. La imagen en sí proporciona toda la información necesaria para permitir al software girarla, orientarla y aplanarla, incluso si se fotografía el código con ángulo.&lt;/p&gt;
+
+&lt;p&gt;La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaultargetdownright2.png&#34; alt=&#34;qrbaultargetdownright&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un &lt;a href=&#34;http://es.wikipedia.org/wiki/Ciclo_de_trabajo&#34; target=&#34;_blank&#34;&gt;ciclo de trabajo del 50%&lt;/a&gt;. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaulinnercorners2.png&#34; alt=&#34;qrbaulinnercorners&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.&lt;/p&gt;
+
+&lt;p&gt;La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres.&lt;/p&gt;
+
+&lt;p&gt;A la hora de codificar los caracteres los creadores no usaron 1 Byte como es habitual, sino un conjunto de caracteres de 45 elementos. Por lo que solo exiten mayúsculas y algunos caracteres especiales. Lo cual es suficiente para codificar URLs. Aún así, existe un modo binario que permite almacenar caracteres de 8 bits.&lt;/p&gt;
+
+&lt;p&gt;La codificación del contenido comienza en la esquina inferior derecha y se almacena en bloques de 2&amp;#215;4, la razón del tamaño es para que sean lo más cuadrados posibles, de esta forma los bits en un byte ocupan la menor área posible.&lt;/p&gt;
+
+&lt;p&gt;Los diseñadores prestaron mucha atención a la corrección de errores, y desarrollaron tres niveles &lt;strong&gt;bajo, medio, cuartil y alto&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/Custom_QR_code_Wikipedia2.png&#34; alt=&#34;Custom_QR_code_Wikipedia&#34; width=&#34;564px&#34; height=&#34;396px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.&lt;/p&gt;
+
+&lt;p&gt;Este tipo de corrección es similar al estilo de corrección de errores &lt;strong&gt;Reed-Solomon&lt;/strong&gt; (Información en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction&#34; target=&#34;_blank&#34;&gt;inglés&lt;/a&gt;, inf. en &lt;a href=&#34;http://es.wikipedia.org/wiki/Reed-Solomon&#34; target=&#34;_blank&#34;&gt;Español&lt;/a&gt;) que usan los discos duros. Al igual que en los QR Codes, en los discos duros puede haber un pequeño defecto en la superficie que cause la pérdida de una región física. Esta tecnología permite una recuperación robusta de los datos.&lt;/p&gt;
+
+&lt;p&gt;Esencialmente hay un mosaico de 2&amp;#215;4 que se extiende a lo largo de un borde y luego da la vuelta. Pero no como un &lt;a href=&#34;http://en.wikipedia.org/wiki/Raster_scan&#34; target=&#34;_blank&#34;&gt;raster scan&lt;/a&gt;, que salta de nuevo hacia donde empezó. En lugar de eso, se da la vuelta y regresa al punto de origen, dos bits más hayá. Luego vuelve a girar y regresar.&lt;/p&gt;
+
+&lt;p&gt;Uno de los problemas que se encontraron los diseñadores fue a la hora de que los datos emularan las características de reparación del QR Code. Habría un problema de señalización en banda, que es el término usado en teoría de la información para referirse al problema de intentar tener datos de formato, que deben estar separados del contenido, el problema es que el código se imprime con tinta. ¿Cómo se diferencia qué es datos y qué es formato?&lt;/p&gt;
+
+&lt;p&gt;Se plantearon organizar la información, pero ¿que pasa si la información ordenada se parece a uno de los cuadrados principales?, ¿y si aparecen demasiados espacios en blanco consecutivos?. Eso sería un problema. De nuevo el QR Code actua de forma similar a los discos duros usando una tecnología llamada Self-Clocking (Autosincronizable). En lugar de malgastar espacio con una señal de reloj o una traza de reloj además de los datos, organizaron los datos de forma que fueran autosincronizables, para que proporcionen su propia información de sinconización.&lt;/p&gt;
+
+&lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
+
+&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
+
+&lt;p&gt;Estos patrones de 8&amp;#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
+
+&lt;p&gt;Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación.&lt;/p&gt;
+
+&lt;p&gt;Finalmente para decodificar el contenido, se empieza por la esquina inferior derecha, donde se encuentra el tipo de codificación (de 4 bits de tamaño), luego la longitud (8 bits) seguido de los datos almacenados. Despues de los datos puede haber otra codificación y otra longitud para seguir obteniendo datos. Por consiguiente, es posible disponer de múltiples formatos en un solo QR code. Incluso densidad y correncción de errores variable. Hay que tener una concepto claro, la corrección de errores significa redundancia, a más corrección de errores, mayor porcentaje del área no serán datos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pasemos a ver los aspectos de seguridad.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
+
+&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
+
+&lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.symantec.norton.snap&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Norton Snap&lt;/a&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
+
+&lt;p&gt;Otro buen intérprete es &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ..&#34; target=&#34;_blank&#34;&gt;Barcode Scanner&lt;/a&gt;&lt;/strong&gt;, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.&lt;/p&gt;
+
+&lt;p class=&#34;alert&#34;&gt;
+&lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 382 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio
+&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
+&lt;em&gt;Episode 382: QR Codes&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/382&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Regin - Arquitectura del Malware de primer nivel que permite una vigilancia sigilosa</title>
+      <link>https://elbauldelprogramador.com/regin-arquitectura-malware-de-primer-nivel-vigilancia-sigilosa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/regin-arquitectura-malware-de-primer-nivel-vigilancia-sigilosa/</guid>
+      <description>&lt;p&gt;En éstos días se ha escuchado hablar mucho sobre &lt;strong&gt;Regin&lt;/strong&gt;, un malware de una calidad superior, como pocos vistos hasta ahora. En éste artículo se pretende profundizar en el funcionamiento de éste malware, el cual es una obra de excelente calidad. Me basaré principalmente en lo comentado por Steve en el episodio #483 del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Más artículos de Security Now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;“&lt;strong&gt;Regin&lt;/strong&gt;” viene de &lt;em&gt;“Registry”&lt;/em&gt; - &lt;em&gt;Install&lt;/em&gt;, descubierto por Symantec en 2008. A continuación se cita el análisis que hicieron sobre éste malware:&lt;/p&gt;
+
+&lt;p&gt;*En el mundo de las amenazas de malware, sólo unos pocos ejemplos pueden considerarse inigualables y sin igual. &lt;strong&gt;Regin&lt;/strong&gt; es ese tipo de malware.*&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Regin&lt;/strong&gt; es un software extremadamente complejo que puede personalizarse con un amplio rango de capacidades que pueden desplegarse dependiendo del objetivo a atacar. Está construido sobre un framework diseñado para mantener operaciones de recolección de datos a largo plazo quedando al margen de todos los radares ( Entiéndanse, antivirus). Lleva a cabo medidas extraordinarias para ocultarse a sí mismo y sus actividades en la máquina afectada. Su sigilo combina técnicas de las más avanzadas que se han visto en uso.*&lt;/p&gt;
+
+&lt;p&gt;*El principal propósito de &lt;strong&gt;Regin&lt;/strong&gt; es la recopilación de información y se ha visto implicado en operaciones de colección de datos contra organizaciones gubernamentales, empresas, organizaciones docentes y particulares. La complejidad y nivel de sofisticación de &lt;strong&gt;Regin&lt;/strong&gt; hacen pensar que el desarrollo de ésta amenaza ha llevado meses, e incluso años.*&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;Regin&lt;/strong&gt; es una amenaza multi etapa y modular, lo que significa que tiene un número de compoenentes, cada uno dependiente de otros, para realizar las operaciones de ataque. Éste enfoque modular proporciona la flexibilidad necesaria a los ataques, ya que es posible cargar características personalizadas hechas a medida para cada objetivo individual cuando sea necesario. Algunos “&lt;a href=&#34;https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/&#34; title=&#34;Análisis del protocolo QUIC de Google&#34;&gt;payloads&lt;/a&gt;” personalizados son muy avanzados y muestran una gran experiencia en sectores especializados. El diseño modular dificulta el análisis de la amenaza, ya que todos los componentes deben estar disponibles para poder entender completamente cómo funciona el malware.*&lt;/p&gt;
+
+&lt;h2 id=&#34;período-activo-y-versiones-de-regin&#34;&gt;Período activo y versiones de Regin&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Regin&lt;/strong&gt; estuvo activo durante 2008 y 2011, donde se detuvo, desinstalándose de todos los sistemas infectados. En 2013 se volvió a detectar una nueva versión, bastante mejorada de éste malware.&lt;/p&gt;
+
+&lt;p&gt;La versión activa entre 2008 y 2011 fue la 1.0. En 2013, o posíblemente antes, se lanzó la versión 2.0. Todas las versiones 2.0 se han encontrado compiladas para 64-bit.&lt;/p&gt;
+
+&lt;h2 id=&#34;principales-objetivos&#34;&gt;Principales objetivos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Regin&lt;/strong&gt; se ha detectado en las principales compañias de telefonía, los módulos del malware desplegados en dichas instalaciones están diseñados para obtener acceso a las llamadas que son redirigidas por la infraestructura telefónica.&lt;/p&gt;
+
+&lt;h2 id=&#34;arquitectura-de-regin&#34;&gt;Arquitectura de Regin&lt;/h2&gt;
+
+&lt;p&gt;Se compone de las 6 etapas resumidas en la siguiente tabla:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Etapas&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Componentes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;“Dropper”. Instala Regin en el objetivo&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Carga Drivers&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Carga Drivers&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Carga compresión, cifrado, networking, y los componentes necesarios para gestionar un sistema de archivos cifrado (EVFS)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Utiliza el EFVS y carga drivers adicionales para su kernel, incluyendo payloads&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Payloads principales y ficheros de datos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Las etapas más interesantes son las que almacenan los ejecutables y ficheros de datos en las etapas 4 y 5. La etapa inicial 1 es la única que contiene código visible. El resto de etapas se almacenan como bloques de datos &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrados&lt;/a&gt;, ya sea en forma de ficheros o dentro de algún área de almacenamiento de ficheros no tradicional, como el registro, atributos extendidos, o sectores al final del disco duro.&lt;/p&gt;
+
+&lt;p&gt;A continuación se muetra un gráfico que describe el proceso de infección:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Arquitectura-de-Regin.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Arquitectura-de-Regin.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;591px&#34; height=&#34;630px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;etapa-0&#34;&gt;Etapa 0&lt;/h3&gt;
+
+&lt;p&gt;Una vez que el &lt;em&gt;dropper&lt;/em&gt; se ejecuta en el objetivo, se instalará y ejecuta la etapa 1. Es probable que ésta etapa se encargue de configurar varios atributos y claves en el registro que mantengan codificadas versiones de las etapas 2, 3, y posiblemente etapas de la 4 en adelante.&lt;/p&gt;
+
+&lt;h3 id=&#34;etapa-1&#34;&gt;Etapa 1&lt;/h3&gt;
+
+&lt;p&gt;Es el punto inicial para cargar la amenaza. Se conocen dos ficheroes de esta etapa:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;usbclass.sys (versión 1.0)&lt;/li&gt;
+&lt;li&gt;adpu160.sys (version 2.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Son drivers del kernel que cargan y ejecutan la etapa 2. Es posible que se registren como un servicio del sistema que se ejecute al iniciar el ordenador.&lt;/p&gt;
+
+&lt;p&gt;La etapa 1 simplemente lee y ejecuta la etapa 2 desde un conjunto de atributos extendidos de NTFS, si no se encuentran dichos atributos extendidos, la etapa 2 se ejecuta desde un conjunto de claves del registro.&lt;/p&gt;
+
+&lt;h3 id=&#34;etapa-2&#34;&gt;Etapa 2&lt;/h3&gt;
+
+&lt;p&gt;Es un driver del kernel que extrae, instala y ejecuta la etapa 3. Ésta etapa no está almacenada en un sistema de ficheros tradicional, sino que se encuentra cifrada en un atributo extendido o en el registro.&lt;/p&gt;
+
+&lt;p&gt;Puede encontrarse cifrada en :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Atributos extendidos&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;%Windir%&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\fonts&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\cursors&lt;/em&gt; (possibly only in version 2.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Sub claves del registro&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class&amp;#123;4F20E605-9452-4787-B793-
+D0204917CA58}&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\RestoreList\VideoBase&lt;/em&gt; (possibly only in version
+2.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ésta etapa puede ocultar instancias en ejecución de la etapa 1. Una vez hecho, no hay partes visibles del malware. De forma similar a etapas previas, la etapa 2 localiza y carga una versión cifrada de la etapa 3 desde atributos extendidos de NTFS o el registro.&lt;/p&gt;
+
+&lt;p&gt;La etapa 2 también puede monitorizar el estado de la amenaza. Ésta etapa crea el fichero &lt;em&gt;msrdc64.dat&lt;/em&gt;, el cual parece tener siempre un tamaño de 512B. Sólo se usan los dos primeros bytes, el resto están a cero. El segundo byte indica cuantas instancias se permite ejecutar de forma exclusiva, su valor es 2. Lo cual significa que no más de una instancia debería ejecutarse al mismo tiempo. El primero, cuantas instancias se intentaron ejecutar. Por tanto, hay tres combinaciones.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;00 02&lt;/code&gt; (No se está ejecutando)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;01 02&lt;/code&gt; (Ejecutándo)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;02 02&lt;/code&gt; (Se estaba ejecutando y se ha iniciado una segunda instancia)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;etapa-3&#34;&gt;Etapa 3&lt;/h3&gt;
+
+&lt;p&gt;Es una DDL de modo kernel, cifrada dentro de un atributo extendido o en el registro.&lt;/p&gt;
+
+&lt;p&gt;Se puede encontrar en:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Atributos extendidos&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\system32&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\system32\drivers&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Sub claves del registro&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class&amp;#123;4F20E605-9452-4787-B793-
+D0204917CA5A}&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El fichero es de 6 a 7 veces mayor que el driver de la etapa 2. Además de cargar la etapa 4, ofrece un &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; para etapas de mayor nivel.&lt;/p&gt;
+
+&lt;p&gt;A partir de esta etapa, todas estan basadas en un framework modular de módulos de código. Éstos módulos ofrecen funciones mediante una interfaz privada y personalizada. Cada fichero en la etapa 3 y superior pude exportar funcionalidad a otras partes de Regin.&lt;/p&gt;
+
+&lt;p&gt;Las primitivas disponibles para la etapa 3 son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El orquestador, que parsea ficheros personalizados encontrados en los datos adjuntos a los ficheros ejecutables de las etapas 3 en adelante. Éstos ficheros contienen una lista de las funcionalidades de Regin a ser ejecutadas.&lt;/li&gt;
+&lt;li&gt;Rutinas de compresión y descompresión.&lt;/li&gt;
+&lt;li&gt;Rutinas de cifrado y descifrado.&lt;/li&gt;
+&lt;li&gt;Rutinas para obtener localizaciones de almacenamiento de componentes de mayor nivel (Etapa 4).&lt;/li&gt;
+&lt;li&gt;Rutinas para gestionar el sistema de ficheros virtual cifrado usado por la etapa 4.&lt;/li&gt;
+&lt;li&gt;Primitivas de red.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;etapa-4&#34;&gt;Etapa 4&lt;/h3&gt;
+
+&lt;p&gt;Los ficheros para la etapa 4, cargados por la etapa 3, consisten en un modo usuario del orquestador y múltiples módulos payload del kernel. Se almacenan en dos contenedores EVFS como ficheros:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SystemAudit.Evt&lt;/strong&gt;: Contiene los drivers del kernel para la etapa 4&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SecurityAudit.Evt&lt;/strong&gt;: Versión usuario de la etapa 3. Los ficheros se inyectan en &lt;code&gt;services.exe&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;etapa-5&#34;&gt;Etapa 5&lt;/h3&gt;
+
+&lt;p&gt;Consiste en la la funcionalidad principal de Regin para los payloads. Los ficheros para ésta etapa son los inyectados en &lt;code&gt;services.exe&lt;/code&gt; por la etapa 4. También almacenados en el EVFS.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SystemLog.evt&lt;/strong&gt;: Contiene DLLs que constituyen el payload de Regin.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SecurityLog.evt&lt;/strong&gt;: Ficheros de datos, usados por los componentes de las etapas 4 y 5 para almacenar varios elementos de datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\ApplicationLog.evt&lt;/strong&gt;: Otro contenedor para logs de la etapa 5, referenciados por ficheros de datos de la misma etapa.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%Windir%\ime\imesc5\dicts\pintlgbp.imd&lt;/strong&gt; (versión 2.0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%Windir%\ime\imesc5\dicts\pintlgbs.imd&lt;/strong&gt; (versión 2.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El payload de Regin implica las DDLs contenidas en el contenedor EVFS &lt;code&gt;SystemLog.evt&lt;/code&gt;.
+La funcionalidad del payload es distinta en función del ordenador objetivo del ataque. Para cada entorno específico, se preparan payloads personalizados. Algunos ejemplos de funcionalidades detectadas hasta ahora son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Esnifar tráfico de red de bajo nivel.&lt;/li&gt;
+&lt;li&gt;Robar datos mediante varios canales (TCP, UDP, ICMP, HTTP).&lt;/li&gt;
+&lt;li&gt;Obtener información del ordenador.&lt;/li&gt;
+&lt;li&gt;Robar contraseñas.&lt;/li&gt;
+&lt;li&gt;Obtener información de procesos y memoria.&lt;/li&gt;
+&lt;li&gt;Escanear el sistema de ficheros.&lt;/li&gt;
+&lt;li&gt;Capacidades forenses de bajo nivel (Por ejemplo, recuperar ficheros borrados).&lt;/li&gt;
+&lt;li&gt;Manipulación del entorno gráfico (Control remoto del ratón, capturar la pantalla etc).&lt;/li&gt;
+&lt;li&gt;Detectar servidores web IIS y robar los logs.&lt;/li&gt;
+&lt;li&gt;Esnifar tráfico de red GSM BSC.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para más información, podéis echar un vistazo a los siguientes enlaces, entre ellos el análisis original de Symantec, y el vídeo del podcast de &lt;strong&gt;Security Now!&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Regin: Top-tier espionage tool enables stealthy surveillance, y créditos de las imágenes&lt;/em&gt; »» &lt;a href=&#34;http://www.symantec.com/connect/blogs/regin-top-tier-espionage-tool-enables-stealthy-surveillance&#34; target=&#34;_blank&#34;&gt;symantec.com&lt;/a&gt;
+&lt;em&gt;Análisis de Symantec sobre Regin&lt;/em&gt; »» &lt;a href=&#34;http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/regin-analysis.pdf&#34; target=&#34;_blank&#34;&gt;Fichero PDF&lt;/a&gt;
+&lt;span class=&#34;embed-youtube&#34; &gt;&lt;/span&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

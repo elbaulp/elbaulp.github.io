@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curso Html5 on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/curso-html5/index.xml</link>
+    <description>Recent content in Curso Html5 on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/curso-html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducción a HTML5</title>
+      <link>https://elbauldelprogramador.com/introduccion-html5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/introduccion-html5/</guid>
+      <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML51.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML51.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;512px&#34; height=&#34;512px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es &lt;a href=&#34;http://www.rogamainformatica.es/&#34; title=&#34;Roberto&#34; target=&#34;_blank&#34;&gt;Roberto&lt;/a&gt;. Si ya sabes algo puedes echar un vistazo al artículo &lt;a href=&#34;https://elbauldelprogramador.com/ejemplos-en-html5-almacenamiento-web/&#34; title=&#34;Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket&#34;&gt;Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;un-poco-de-historia&#34;&gt;Un poco de historia&lt;/h3&gt;
+
+&lt;p&gt;Como bien indica su propio nombre es la 5 versión del estándar de WWW (&lt;em&gt;World Wide Web&lt;/em&gt;), el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;World Wide Web&#34; target=&#34;_blank&#34;&gt;W3C&lt;/a&gt; a estado años trabajando en este nuevo estándar despuesdespués del XHTML, el cual se puede denominar como uno de sus fracasos, al tener un lenguaje muy estricto, y no ser compatible con la mayoría de las webs publicadas en el momento del lanzamiento, esta nueva versión sí es compatible con todas las anteriores, ademas de incorporar nuevas mejoras, algunas de las novedades que mas ruido han hecho ha sido la desaparición del &lt;em&gt;case sensitive&lt;/em&gt;, con lo que podemos escribir por ejemplo la etiqueta ID de un div en mayúsculas o minúsculas y que los navegadores lo reconozcan sin producir error, aun así se recomienda seguir unos estándares, como son el de escribir todos los elementos en minúsculas, y sus valores entre comillas dobles &lt;em&gt;&amp;#8220;&amp;#8221;&lt;/em&gt;, aunque en esta versión sean validas las comillas simples &amp;#8221;; también se recomienda cerrar todas las etiquetas, aunque no sea obligatorio como en XHTML; así mismo también incluye nuevas funciones como la reproducción de vídeo y sonido, y algunas etiquetas nuevas, para ello hicieron un estudio sobre el nombrado de etiquetas de las webs mas famosas, y casi todas tenían una barra lateral, llamada &lt;strong&gt;aside&lt;/strong&gt;,un encabezado llamado &lt;strong&gt;header&lt;/strong&gt;, y un pie llamado &lt;strong&gt;footer&lt;/strong&gt;, así como las barras de navegación &lt;strong&gt;nav&lt;/strong&gt;; y un largo etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;por-dónde-empezar&#34;&gt;¿Por dónde empezar?&lt;/h3&gt;
+
+&lt;p&gt;Lo primero que debemos saber es que HTML sea cual sea su versión &lt;strong&gt;no es un lenguaje de programación&lt;/strong&gt;, tan solo es un lenguaje de marcas, se usan una serie de etiquetas estandarizadas, HTML se usa para crear la estructura de una web, y se ha puesto de moda para las aplicaciones móviles, gracias a &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34; target=&#34;_blank&#34;&gt;Frameworks&lt;/a&gt; como PhoneGap a esta moda se a sumado Mozilla, con su S.O. Firefox OS; así que como podemos comprobar es casi obligatorio como mínimo conocerlo sea cual sea la plataforma a la que queramos desarrollar; como he dicho nos sirve para dar la estructura a una web (el esqueleto) después podremos darle colores, formas y organizarlo con las hojas de estilo en cascada (CSS) y se recomienda usar su ultima versión &lt;a href=&#34;https://elbauldelprogramador.com/generar-codigo-css-3-facilmente/&#34; title=&#34;Generar código CSS 3 fácilmente&#34; target=&#34;_blank&#34;&gt;CSS3&lt;/a&gt;, aunque esta es otra batalla de la que hablaremos en otra ocasión; ahora que sabemos que es, y para que sirve, es el momento de conocer la etiqueta que debe aparecer en cualquier documento HTML5.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esta etiqueta decimos que el documento es una pagina web HTML5; como vemos es muy sencilla, incluso nos la podemos aprender a diferencia de su antecesor HTML4.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;ó
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;según fuera tradicional o estricto, no vamos a entrar en las diferencias ya que esto hoy en día a pasado a la historia.&lt;/p&gt;
+
+&lt;p&gt;Todo el que empieza en esto esta deseando ir al código escribir su primera pagina web y verla funcionando. Esto se puede lograr con una estructura básica como la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;    El contenido de la pagina
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A esta estructura le podemos dar “vida” simplemente abriendo nuestro blog de notas, y pegándolo, dándole el nombre que deseemos y la extensión html. Después de eso si la abrimos con cualquier navegador podemos verla funcionando.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML5.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML5.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;481px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Ahora os explicare qué es cada etiqueta, la primera: el &lt;strong&gt;Doctipe&lt;/strong&gt;, ya la conocemos, seguidamente tenemos una etiqueta &lt;strong&gt;&lt;html&gt;&lt;/strong&gt;; que cierra al final del documento &lt;strong&gt;&lt;/html&gt;&lt;/strong&gt; podemos intuir que hay que incluir dentro todo el contenido html y justamente es así como funciona debemos escribir dentro todo el contenido de nuestra página, la siguiente etiqueta es el &lt;strong&gt;&lt;head&gt;&lt;/strong&gt; allí debemos incluir los enlaces a nuestras hojas de estilo, etiquetas de metadatos (mas adelante veremos que son y para que sirven), el titulo de la página, este se incluye dentro de las etiquetas &lt;strong&gt;&lt;title&gt;&lt;/strong&gt; &lt;strong&gt;&lt;/title&gt;&lt;/strong&gt; y como vemos en la imagen superior lo que escribamos aquí va a aparecer en la pestaña de nuestra pagina; se debe cerrar con &lt;strong&gt;&lt;/head&gt;&lt;/strong&gt;; seguidamente nos encontramos con &lt;strong&gt;&lt;body&gt;&lt;/strong&gt; aquí es donde escribiremos todo el cuerpo de nuestra web.&lt;/p&gt;
+
+&lt;p&gt;Estas son las etiquetas básicas, el body podemos complicarlo todo lo que queramos o necesitemos añadiendo tantas etiquetas &lt;div&gt; &lt;/div&gt; conocidas como divisiones, o capas, y dentro de cada una meteremos el contenido que deseemos, imágenes, texto, vídeo&amp;#8230;&lt;/p&gt;
+
+&lt;h3 id=&#34;etiquetas-de-html5&#34;&gt;Etiquetas de HTML5&lt;/h3&gt;
+
+&lt;p&gt;Las etiquetas mas usadas son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;html&amp;gt;: ya la conocemos; es la raíz de cualquier pagina, y todos los demás elementos deben
+descender de él.&lt;/li&gt;
+&lt;li&gt;&amp;lt;head&amp;gt;. Es la cabecera de la pagina, en ella incluiremos todos los enlaces a documentos
+externos y metadatos&lt;/li&gt;
+&lt;li&gt;&amp;lt;title&amp;gt;: es el titulo de la pagina.&lt;/li&gt;
+&lt;li&gt;&amp;lt;link&amp;gt; la usaremos para enlazar a documentos JS(&lt;a href=&#34;https://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/&#34; title=&#34;Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework&#34;&gt;Java Script&lt;/a&gt;) y CSS.&lt;/li&gt;
+&lt;li&gt;&amp;lt;meta&amp;gt;: define algún metadato, como las palabras clave, descripción de la pagina, etc&lt;/li&gt;
+&lt;li&gt;&amp;lt;body&amp;gt; Dentro de él tendremos el contenido de la página&lt;/li&gt;
+&lt;li&gt;&amp;lt;section&amp;gt; Nueva etiqueta solo disponible en paginas HTML5 y define una sección de la página&lt;/li&gt;
+&lt;li&gt;&amp;lt;nav&amp;gt; también es nueva en HTML5 se utiliza para contener los enlaces de navegación&lt;/li&gt;
+&lt;li&gt;&amp;lt;article&amp;gt; es otra de las novedades de la ultima versión del HTML aquí escribiremos los artículos, lo cual viene siendo algo que no tiene necesariamente que ver con el resto de la web.&lt;/li&gt;
+&lt;li&gt;&amp;lt;hx&amp;gt; sustituiremos la X por un numero desde el 1 al 6 se usa para definir encabezados, cuanto mas bajo sea el numero mas importante sera el encabezado, por lo que &amp;lt;h1&amp;gt; es mas importante que &amp;lt;h2&amp;gt; predefinido por nuestros navegadores disminuye la fuente de cada &amp;lt;hx&amp;gt; según aumente el numero por lo que &amp;lt;h2&amp;gt; tendrá una fuente (tamaño de letra) mayor que un &amp;lt;h3&amp;gt;, lo suyo es mantener esta concordancia aunque podemos editarlo desde nuestras hojas de estilos.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;lt;header&amp;gt; nuevo elemento del HTML5 aquí escribiremos la cabecera de la pagina, normalmente es el lugar donde se coloca el logo, titulo de la web, y menú de navegación&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;footer&amp;gt; también hemos hablado de el antes, es otro de los nuevos elementos del HTML5 y como su nombre indica es el pie, generalmente de la pagina en la que este declarado, pero también es correcto usarlo para escribir cualquier otro pie que pueda aparecer en la pagina, por ejemplo el pie de un articulo, en donde podríamos colocar el nombre del autor que lo escribió&lt;/li&gt;
+&lt;li&gt;&amp;lt;p&amp;gt; lo que pongamos en su interior se mostrara como un párrafo&lt;/li&gt;
+&lt;li&gt;&amp;lt;hr&amp;gt; indica una separación entre secciones, artículos, o algún contenido, visualmente lo veremos como una linea horizontal&lt;/li&gt;
+&lt;li&gt;&amp;lt;ol&amp;gt; define una lista ordenada normalmente se visualizaran con un numero delante de cada elemento&lt;/li&gt;
+&lt;li&gt;&amp;lt;ul&amp;gt; define una lista sin orden&lt;/li&gt;
+&lt;li&gt;&amp;lt;li&amp;gt; se incluye dentro de cualquiera de los 2 elementos anteriores, son los elementos de la lista.&lt;/li&gt;
+&lt;li&gt;&amp;lt;figure&amp;gt; Nuevo elemento en HTML5 cada vez mas usado, se utiliza para incluir una imagen en su interior&lt;/li&gt;
+&lt;li&gt;&amp;lt;img&amp;gt; aquí declararemos la imagen que queremos mostrar&lt;/li&gt;
+&lt;li&gt;&amp;lt;div&amp;gt; la etiqueta mas usada, podemos sustituir casi cualquiera de las anteriores por esta, hasta la aparición del HTML5 se solían incluir todas las divisiones de la web con esta etiqueta y se le daban distintos estilos, según se fuera a usar, aun así, se recomienda no usarla si existe otra etiqueta mas moderna que haga lo que queremos hacer.
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;a&amp;gt; una de las etiquetas mas utilizadas, se utiliza para definir enlaces, ya sean interiores(dentro de las misma web) o exteriores (hacia otras webs)&lt;/li&gt;
+&lt;li&gt;&amp;lt;mark&amp;gt; cada vez mas utilizada es otra de las novedades HTML5 se utiliza para resaltar una parte de la pagina.&lt;/li&gt;
+&lt;li&gt;&amp;lt;span&amp;gt; muy usado para dar un estilo distinto a alguna parte de un párrafo&lt;/li&gt;
+&lt;li&gt;&amp;lt;iframe&amp;gt; se utiliza para insertar un contenido dentro de la pagina, ya sea un vídeo (si quisiéramos insertar un vídeo de YouTube esta seria la etiqueta) u otra pagina, así como cualquier otro contenido externo a nuestra pagina y que necesitemos se visualice en ella.&lt;/li&gt;
+&lt;li&gt;&amp;lt;embed&amp;gt; muy similar al anterior, pero con algunas mejoras, es otra de las novedades del HTML5&lt;/li&gt;
+&lt;li&gt;&amp;lt;vídeo&amp;gt; es la etiqueta que usaremos para visualizar un vídeo en nuestra web&lt;/li&gt;
+&lt;li&gt;&amp;lt;audio&amp;gt; exactamente lo mismo que la anterior, pero para audio, ambas son novedades del HTML5.&lt;/li&gt;
+&lt;li&gt;&amp;lt;canvas&amp;gt; es una capa especial para imágenes,(bitmaps) es utilizada para dibujar, especial para juegos e imágenes en movimiento&lt;/li&gt;
+&lt;li&gt;&amp;lt;table&amp;gt; como su nombre indica se usa para incluir tablas en la pagina, no se aconseja usarla&lt;/li&gt;
+&lt;li&gt;&amp;lt;tr&amp;gt; representa una fila de la tabla&lt;/li&gt;
+&lt;li&gt;&amp;lt;td&amp;gt; representa una celda de la tabla&lt;/li&gt;
+&lt;li&gt;&amp;lt;form&amp;gt; se usa para crear formularios, desde los cuales introduciremos datos, y ejecutaremos ciertas funciones.&lt;/li&gt;
+&lt;li&gt;&amp;lt;label&amp;gt; dentro de los formularios suele usarse para sacar un texto estático, el típico que aparece encima de la ya estándar caja de texto blanca que dice teclee su nombre.&lt;/li&gt;
+&lt;li&gt;&amp;lt;input&amp;gt; tenemos gran variedad de campos en artículos posteriores hablaremos de ellos, pero todos ellos sirven para interactuar con el usuario, ya sean un checkbox (la cajita blanca que marcaremos con un check); campos de texto para introducir nuestro nombre, teléfono, etc&amp;#8230;&lt;/li&gt;
+&lt;li&gt;&amp;lt;select&amp;gt; es el desplegable con distintas opciones que todos hemos visto para seleccionar nuestro país por ejemplo.&lt;/li&gt;
+&lt;li&gt;&amp;lt;option&amp;gt; cada una de las opciones del &amp;lt;select&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;textarea&amp;gt; es un campo de texto con varias lineas para escribir un texto extenso.
+Estas son las mas usadas, y estandarizadas, podemos ver todas desde multitud de webs, una buena de referencia es la de Mozilla.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Referencia etiquetas HTML5&lt;/em&gt; »» &lt;a href=&#34;https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos&#34; target=&#34;_blank&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

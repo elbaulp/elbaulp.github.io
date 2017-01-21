@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concurrencia on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/concurrencia/index.xml</link>
+    <description>Recent content in Concurrencia on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/concurrencia/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Optimizar sumas en paralelo</title>
+      <link>https://elbauldelprogramador.com/optimizar-sumas-en-paralelo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/optimizar-sumas-en-paralelo/</guid>
+      <description>&lt;div&gt;
+  Hace unos días leí acerca del procesador de la consola PS3 y su capacidad para realizar &lt;b&gt;varias operaciones aritméticas en una sola instrucción&lt;/b&gt;. Es decir, dado que tiene un bus de 128 bits, podría sumar 4 valores de 32 bits en una operación. Me sirvió para darle vueltas a la cabeza e intentar hacer lo mismo en mi ordenador.
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  La &lt;b&gt;anchura del bus&lt;/b&gt; de un procesador es equivalente al número de cifras que puede tener la pantalla de una calculadora simple, sólo que en lugar de tratarse de dígitos decimales (del 0 al 9) son dígitos binarios (0 ó 1). El planteamiento es sencillo: supongamos que tenemos una calculadora de 12 dígitos y necesitamos &lt;b&gt;sumar cuatro parejas de números de tres cifras&lt;/b&gt; -suponiendo que estamos seguros de que nunca nos vamos a pasar de 999-. Por ejemplo:
+&lt;/div&gt;
+&lt;p &gt;
+  293 + 266&lt;br /&gt; 496 + 357&lt;br /&gt; 459 + 330&lt;br /&gt; 458 + 471
+&lt;/p&gt;
+&lt;div&gt;
+  En lugar de realizar cuatro operaciones y dejar nueve ceros a la izquierda, podemos &lt;b&gt;agrupar los números&lt;/b&gt; y &amp;#8220;pegarlos&amp;#8221; en dos sumandos:
+&lt;/div&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;div&gt;
+  293.496.459.458 + 266.357.330.471
+&lt;/div&gt;
+&lt;div&gt;
+  Que da como resultado:
+&lt;/div&gt;
+&lt;div&gt;
+  559.853.789.929
+&lt;/div&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;div&gt;
+  O sea, 559, 853, 789 y 929, el resultado de &lt;b&gt;cada una de las operaciones por separado&lt;/b&gt;. Esto mismo lo hemos hecho sumando cuatro enteros de 16 bits guardándolos en estructuras de 64 bits. Basta con crear una estructura en C que almacene cuatro enteros unsigned short int y dos instancias de ésta -cada una será un sumando-.
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  Les damos valores y, utilizando sus punteros, hacemos &lt;b&gt;casting &lt;/b&gt;a entero de 64 bits (unsigned long long int) y los sumamos. El resultado se puede interpretar como una estructura del mismo tipo, conteniendo los cuatro resultados.
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  Al procesador no le importa sumar números de 64 bits, pero sí le &lt;b&gt;ahorra bastante tiempo (aproximadamente el 60%)&lt;/b&gt; disminuir la cantidad de operaciones que tiene que realizar. Aquí incluyo un pequeño programa en C que demuestra el ahorro de tiempo. Recordad que es necesario compilarlo en un sistema de 64 bits.
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  Gracias por el código a Victor Manuel Fernández Castro. Estudiante de la ETSIIT (Granada).
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

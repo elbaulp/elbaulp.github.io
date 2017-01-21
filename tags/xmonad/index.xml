@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xmonad on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/xmonad/index.xml</link>
+    <description>Recent content in Xmonad on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/xmonad/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Configurar xmonad con trayer y fondo de pantalla aleatorio</title>
+      <link>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</guid>
+      <description>&lt;p&gt;A lo largo de los años he probado varios gestores de ventanas, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/&#34;&gt;openbox&lt;/a&gt; y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.&lt;/p&gt;
+
+&lt;p&gt;La &lt;a href=&#34;http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration&#34; target=&#34;_blank&#34;&gt;instalación&lt;/a&gt; es muy sencilla. En este artículo voy a profundizar más en los dos aspectos que más problemas me han causado, configurar apropiadamente trayer y establecer fondos de pantalla aleatoriamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;configurar-trayer&#34;&gt;Configurar trayer&lt;/h4&gt;
+
+&lt;p&gt;La documentación oficial de xmonad configura &lt;strong&gt;trayer&lt;/strong&gt; de forma se ejecute al iniciar sesión modificando el archivo &lt;strong&gt;~/.xsession&lt;/strong&gt; tal que así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Load resources&lt;/span&gt;
+
+xrdb -merge .Xresources
+
+&lt;span class=&#34;c1&#34;&gt;# Set up an icon tray&lt;/span&gt;
+
+trayer --edge top --align right --SetDockType &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --SetPartialStrut &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+ --expand &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --width &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; --transparent &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --tint 0x191970 --height &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set the background color&amp;lt;&lt;/span&gt;
+
+xsetroot -solid midnightblue
+
+&lt;span class=&#34;c1&#34;&gt;# Fire up apps&lt;/span&gt;
+
+gajim &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+xscreensaver -no-splash &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/nm-applet &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   nm-applet --sm-disable &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/gnome-power-manager &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   sleep 3
+   gnome-power-manager &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; xmonad
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este xsession no me lanzaba trayer, así que lo saqué fuera a un script aparte:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+trayer --edge top --align right --SetDockType &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --SetPartialStrut &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --expand &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --width &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; --height &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --transparent &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --tint 0x000000 --monitor &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/nm-applet &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   nm-applet --sm-disable &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -x /usr/bin/gnome-power-manager &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+   sleep 1
+   gnome-power-manager &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p class=&#34;alert&#34;&gt;
+  NOTA: En el portatil tuve problemas con gnome-power-manager y decidí instalar xfce4-power-manager, que funcionó correctamente
+&lt;/p&gt;
+
+&lt;p&gt;Finalmente, añadí el script al crontab con la opción @reboot, que en teoría debe ejecutarse en cada inicio del pc (ejecutando &lt;strong&gt;crontab -e&lt;/strong&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SHELL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/bin/bash
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+@reboot /home/hkr/bin/trayerxmonad.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pero no dió resultado, así que como última opción, asigne una combinación de teclas al script en el archivo de configuración de xmonad (&lt;strong&gt;xmonad.hs&lt;/strong&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;import XMonad
+import XMonad.Config.Azerty
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;spawnPipe&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+import XMonad.Util.EZConfig
+import Graphics.X11.ExtraTypes.XF86
+import XMonad.Layout.Spacing
+import XMonad.Layout.NoBorders&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;smartBorders&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+import XMonad.Layout.PerWorkspace
+import XMonad.Layout.IM
+import XMonad.Layout.Grid
+--import XMonad.Actions.GridSelect
+import Data.Ratio &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;%&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+import XMonad.Actions.CycleWS
+import qualified XMonad.StackSet as W
+import System.IO
+
+&lt;span class=&#34;nv&#34;&gt;myWorkspaces&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;3&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;5&amp;quot;&lt;/span&gt;,&lt;span class=&#34;s2&#34;&gt;&amp;quot;6&amp;quot;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;quot;7&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;myLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; onWorkspace &lt;span class=&#34;s2&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt; pidginLayout $ onWorkspaces &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;quot;7&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; nobordersLayout $ tiled1 &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Mirror tiled1 &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; nobordersLayout
+ where
+  &lt;span class=&#34;nv&#34;&gt;tiled1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; spacing &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; $ Tall nmaster1 delta ratio
+  --tiled2 &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; spacing &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; $ Tall nmaster2 delta ratio
+  &lt;span class=&#34;nv&#34;&gt;nmaster1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 1
+  &lt;span class=&#34;nv&#34;&gt;nmaster2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2
+  &lt;span class=&#34;nv&#34;&gt;ratio&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2/3
+  &lt;span class=&#34;nv&#34;&gt;delta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 3/100
+  &lt;span class=&#34;nv&#34;&gt;nobordersLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; smartBorders $ Full
+  &lt;span class=&#34;nv&#34;&gt;gridLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; spacing &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; $ Grid
+  --gimpLayout &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; withIM &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0.20&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Role &lt;span class=&#34;s2&#34;&gt;&amp;quot;gimp-toolbox&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; $ reflectHoriz $ withIM &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0.20&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Role &lt;span class=&#34;s2&#34;&gt;&amp;quot;gimp-dock&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; Full
+  &lt;span class=&#34;nv&#34;&gt;pidginLayout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; withIM &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18/100&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Role &lt;span class=&#34;s2&#34;&gt;&amp;quot;buddy_list&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; gridLayout
+&lt;span class=&#34;nv&#34;&gt;myManageHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; composeAll
+     &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;File Operation Progress&amp;quot;&lt;/span&gt;   --&amp;gt; doFloat
+     , &lt;span class=&#34;nv&#34;&gt;resource&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;desktop_window&amp;quot;&lt;/span&gt; --&amp;gt; doIgnore
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;xfce4-notifyd&amp;quot;&lt;/span&gt; --&amp;gt; doIgnore
+     --, &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Iron&amp;quot;&lt;/span&gt; --&amp;gt; doShift &lt;span class=&#34;s2&#34;&gt;&amp;quot;1:main&amp;quot;&lt;/span&gt;
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Firefox&amp;quot;&lt;/span&gt; --&amp;gt; doShift &lt;span class=&#34;s2&#34;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Gimp&amp;quot;&lt;/span&gt; --&amp;gt; doFloat
+     , &lt;span class=&#34;nv&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;? &lt;span class=&#34;s2&#34;&gt;&amp;quot;Vlc&amp;quot;&lt;/span&gt; --&amp;gt; doShift &lt;span class=&#34;s2&#34;&gt;&amp;quot;7&amp;quot;&lt;/span&gt;
+     &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    xmproc &amp;lt;- spawnPipe &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/xmobar ~/.xmobarrc&amp;quot;&lt;/span&gt;
+    xmonad $ defaultConfig
+        &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;manageHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; manageDocks &amp;lt;+&amp;gt; myManageHook -- make sure to include myManageHook definition from above
+                        &amp;lt;+&amp;gt; manageHook defaultConfig
+        , &lt;span class=&#34;nv&#34;&gt;layoutHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; avoidStruts $ myLayout
+        , &lt;span class=&#34;nv&#34;&gt;logHook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; dynamicLogWithPP xmobarPP
+            &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ppOutput&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; hPutStrLn xmproc
+               , &lt;span class=&#34;nv&#34;&gt;ppTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; xmobarColor &lt;span class=&#34;s2&#34;&gt;&amp;quot;#2CE3FF&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt; . shorten 50
+            &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        , &lt;span class=&#34;nv&#34;&gt;modMask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; mod4Mask     -- Rebind Mod to the Windows key
+        , &lt;span class=&#34;nv&#34;&gt;workspaces&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; myWorkspaces
+        , &lt;span class=&#34;nv&#34;&gt;normalBorderColor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#60A1AD&amp;quot;&lt;/span&gt;
+        , &lt;span class=&#34;nv&#34;&gt;focusedBorderColor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#68e862&amp;quot;&lt;/span&gt;
+        , &lt;span class=&#34;nv&#34;&gt;borderWidth&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;additionalKeys&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_z&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;xscreensaver-command -lock&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_KP_Enter&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;exe=`dmenu_run -b -nb black -nf yellow -sf yellow` &amp;amp;&amp;amp; eval &amp;quot;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$e&lt;/span&gt;xe&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- spawn dmenu
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_Return&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;terminator&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- spawn terminator terminal
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/firefox&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_f&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;nautilus --no-desktop&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/Pictures/wall_aleatorio.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_HomePage&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;gedit ~/.xmonad/xmonad.hs&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- hit a button to open the xmonad.hs file
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_m&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;vlc&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- hit a button to run mpd with ncmpcpp
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_F4&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;sudo shutdown -h now&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- to shutdown
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_AudioLowerVolume&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;amixer set Master 3%-&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- decrease volume
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_AudioRaiseVolume&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;amixer set Master 3%+&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- increase volume
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_AudioMute&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;amixer set Master toggle&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- mute volume
+        --, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_Right&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;ncmpcpp next&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- play next song in mpd
+        --, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_Left&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;ncmpcpp prev&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- play previous song
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_Up &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, windows W.swapUp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- swap up window
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_Down &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, windows W.swapDown&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- swap down window
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_KP_Add &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;IncMasterN 1&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; -- increase the number of window on master pane
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask, xK_KP_Subtract &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;IncMasterN &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-1&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt; -- decrease the number of window
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask,        xK_Right   &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage Expand&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- expand master pane
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask,        xK_Left   &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, sendMessage Shrink&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- shrink master pane
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;controlMask, xK_Print&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;sleep 0.2; scrot -s&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xK_Print&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;gnome-screenshot -i&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_Calculator&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/bin/trayerxmonad.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        , &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;mod4Mask .&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;. shiftMask, xK_e&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/Desktop/eclipse/eclipse&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -- eclipse
+        &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Concretamente la tecla con el iconito de la calculadora:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_Calculator&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/bin/trayerxmonad.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;configurar-fondos-de-pantalla-aleatorios&#34;&gt;Configurar fondos de pantalla aleatorios&lt;/h4&gt;
+
+&lt;p&gt;Antes de continuar, es necesario instalar &lt;strong&gt;feh&lt;/strong&gt; para establecer fondos de pantalla:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install feh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para conseguir que cada x tiempo el fondo de pantalla cambie, creé un script, que selecciona aleatoriamente una imagen de una carpeta:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:0.0
+
+&lt;span class=&#34;nv&#34;&gt;picsfolder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/Pictures/HD/&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; $picsfolder
+
+&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;*.jpg&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;randomfile1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;$&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+
+feh --bg-fill $picsfolder$randomfile1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Seguidamente, configuré crontab para que ejecutara dicho script cada 5 minutos por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ hkr-&amp;gt; crontab -l
+&lt;span class=&#34;nv&#34;&gt;SHELL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/bin/bash
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/5 * * * * /home/hkr/Pictures/wall_aleatorio.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así luce mi escritorio con xmonad:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34; alt=&#34;xmonad Desktop&#34; width=&#34;1024px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Askubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

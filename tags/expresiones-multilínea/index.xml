@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Expresiones Multilínea on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/expresiones-multil%C3%ADnea/index.xml</link>
+    <description>Recent content in Expresiones Multilínea on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/expresiones-multil%C3%ADnea/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Expresiones Regulares Multilínea</title>
+      <link>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</link>
+      <pubDate>Fri, 10 Jun 2016 13:59:28 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</guid>
+      <description>&lt;p&gt;Actualizando el diseño del blog he tenido que usar muchas &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt; para ajustar los artículos existentes al &lt;em&gt;Front Matter&lt;/em&gt; del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar Atom, el editor de GitHub en Linux&#34;&gt;Atom&lt;/a&gt;. La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración &lt;code&gt;yalm&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param1&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor1&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param2&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor2&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param3&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor3&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param4&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor4&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;p p-Indicator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;Articulos&lt;/span&gt;
+  &lt;span class=&#34;p p-Indicator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;Android&lt;/span&gt;
+  &lt;span class=&#34;p p-Indicator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;Java&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param5&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor5&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param6&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor6&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param7&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor7&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param8&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor8&lt;/span&gt;
+&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Necesitaba dejarla tal cual, pero añadir un último parámetro llamado &lt;code&gt;mainclass: Artículos&lt;/code&gt;, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso &lt;em&gt;Artículos&lt;/em&gt;. Para ello decidí usar &lt;code&gt;perl&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;perl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p0e&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;s/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---/s&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-0&lt;/code&gt; especifica que el separador de línea sea nulo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; Que se aplique la expresión especificada por &lt;code&gt;-e&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s/&lt;/code&gt; cambia el comportamiento de &lt;code&gt;.&lt;/code&gt; para que acepte cualquier caracter, incluso saltos de línea, por tanto se trata el fichero como si se tratara de una única línea.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La expresión regular en sí se define:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(categories:\s+-\s+)&lt;/code&gt;: Capturamos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;([a-zA-Z ]+)&lt;/code&gt;: nos captura la primera categoría especificada, junto a la expresión anterior, tenemos:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(\s+-[a-zA-Z ]*)?&lt;/code&gt; captura el resto de categorías restantes, por lo que ahora tenemos:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+  - Android
+  - Java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(.*?)-{3}&lt;/code&gt; por último capturamos el resto de texto que queda hasta encontrar el fin del &lt;em&gt;Front Matter&lt;/em&gt;, los &lt;code&gt;---&lt;/code&gt;. Así que esta expresión nos ha capturado lo siguiente:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+  - Android
+  - Java
+param5: valor5
+param6: valor6
+param7: valor7
+param8: valor8
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ahora queda reescribirla, de eso se ocupa la segunda parte, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt;. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con &lt;code&gt;$1&lt;/code&gt;. De este modo, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt; nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+param1: valor1
+param2: valor2
+param3: valor3
+param4: valor4
+categories:
+  - Articulos
+  - Android
+  - Java
+param5: valor5
+param6: valor6
+param7: valor7
+param8: valor8
+mainclass: &amp;quot;articulos&amp;quot;
+color: &amp;quot;#F57C00&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;p&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace &amp;quot;How do I replace multiple lines with single word in file(inplace replace&#34;&gt;askubuntu.com&lt;/a&gt;?&amp;ldquo;)&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

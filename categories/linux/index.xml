@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/categories/linux/index.xml</link>
+    <description>Recent content in Linux on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo Resolver El Error “Can&#39;t Open Display: :0.0” Al Conectarse a Una Red Wi-Fi</title>
+      <link>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</link>
+      <pubDate>Mon, 03 Oct 2016 14:15:35 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</guid>
+      <description>&lt;h2 id=&#34;problema-can-t-open-display-0-0&#34;&gt;Problema: Can&amp;rsquo;t Open Display: :0.0&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;NetworkManager&lt;/em&gt; tiene la costumbre de cambiar el nombre del host (&lt;em&gt;hostname&lt;/em&gt;) al conectarse a una red, y esto a veces provoca que las aplicaciones con interfaz gráfica no puedan lanzarse. El típico error que se obtiene cuando esto ocurre es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t Open Display: :0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solución-establecer-de-forma-permanente-un-hostname&#34;&gt;Solución: Establecer de forma permanente un hostname&lt;/h2&gt;
+
+&lt;p&gt;Tras mucho investigar, descubrí que el problema estaba en &lt;em&gt;NetworkManager&lt;/em&gt;, y para solucionarlo basta con hacer permanente el &lt;em&gt;hostname&lt;/em&gt;. Para ello en el fichero &lt;code&gt;/etc/hosts&lt;/code&gt; debemos añadir un alias a &lt;code&gt;localhost&lt;/code&gt; con el nombre que queramos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;127.0.0.1	localhost NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Luego, en el fichero de configuración de &lt;em&gt;NetworkManager&lt;/em&gt; (&lt;code&gt;/etc/NetworkManager/NetworkManager.conf&lt;/code&gt;) escribimos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;main&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;keyfile
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;keyfile&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esto bastará.&lt;/p&gt;
+
+&lt;h3 id=&#34;cuando-la-solución-no-funciona&#34;&gt;Cuando la solución no funciona&lt;/h3&gt;
+
+&lt;p&gt;Recientemente se actualizó &lt;em&gt;NetworkManager&lt;/em&gt; y la solución de arriba dejó de funcionar. Esto se debe a que &lt;em&gt;NetworkManager&lt;/em&gt; ya no mira el nombre del host en el fichero de configuración, como mencionan en el &lt;em&gt;man&lt;/em&gt; de &lt;code&gt;NetworkManager.conf&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;hostname: This key is deprecated and has no effect since the hostname is now stored in /etc/hostname or other system configuration files according to build options.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por tanto la solución ahora es más sencilla, basta con añadir el nombre para el host en &lt;code&gt;/etc/hostname&lt;/code&gt;, por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat /etc/hostname
+NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo Obtener La Dimensión De Una Imagen en Internet</title>
+      <link>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</link>
+      <pubDate>Sat, 01 Oct 2016 16:32:13 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
+      <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
+
+&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solución-el-comando-identify-de-imagemagick&#34;&gt;Solución: el comando Identify de ImageMagick&lt;/h2&gt;
+
+&lt;p&gt;El comando &lt;code&gt;identify&lt;/code&gt; es un programa perteneciente a la suite &lt;em&gt;ImageMagick&lt;/em&gt;, citamos su página &lt;code&gt;man&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
+//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
+750x750+0+0 8-bit sRGB 149KB 0.000u 0:00.000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify -format &lt;span class=&#34;s2&#34;&gt;&amp;quot;width=\&amp;quot;%[fx:w]\&amp;quot; height=\&amp;quot;%[fx:h]\&amp;quot;\n&amp;quot;&lt;/span&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;750&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;750&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;identify -format &amp;quot;width=\&amp;quot;%[fx:w]\&amp;quot; height=\&amp;quot;%[fx:h]\&amp;quot;\n&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>El gran Mapa mundial de GNU/Linux</title>
+      <link>https://elbauldelprogramador.com/el-mapa-mundial-de-gnulinux-img/</link>
+      <pubDate>Thu, 08 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/el-mapa-mundial-de-gnulinux-img/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Hace unos años que publiqué este artículo, pero he decidido actualizarlo, ya que han aparecido versiones del mapa más actuales. Espero que os guste.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;mapa-mundial-de-gnu-linux-1&#34;&gt;Mapa mundial de GNU/Linux 1&lt;/h2&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-full.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-1.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;680&#34; height=&#34;383&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mapa-mundial-de-gnu-linux-2&#34;&gt;Mapa Mundial de GNU/Linux 2&lt;/h2&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-2-full.jpg&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-2.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;477&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dedoimedo.com/computers/linux-world-map-reloaded.html&#34;&gt;The Great Linux World Map 2.0!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/&#34; title=&#34;Just Linux Things in Reddit&#34;&gt;Linux World Map&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Evolución de las distribuciones GNU/Linux, de 1992 a 2016</title>
+      <link>https://elbauldelprogramador.com/linea-cronologica-de-distribuciones/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/linea-cronologica-de-distribuciones/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/linea-cronologica-de-distribuciones.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;400&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hoy os traigo la línea cronológica de las &lt;a href=&#34;https://elbauldelprogramador.com/category/linux/&#34; title=&#34;Artículos sobre linux&#34;&gt;distribuciones GNU/Linux&lt;/a&gt; desde el año 1992 al 2016, es increíble la cantidad de distribuciones que hay.&lt;/p&gt;
+
+&lt;p&gt;De &lt;a target=&#34;_blank&#34; href=&#34;http://futurist.se/gldt/&#34;&gt;futurist.se&lt;/a&gt; he sacado esta imagen que representa la evolución de las distribuciones GNU/Linux, partiendo de las 3 principales, debian, slackware y Red Hat, aunque hay algunas independientes de las anteriores.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;A partir de estas 3, se abre un abanico inmenso de distribuciones, y seguro que de la gran mayoría ni las conozcáis. Ya que la imagen pesa demasiado, proporciono el enlace a Wikipedia para su visualización:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&#34; title=&#34;Evolución de las distros GNU/Linux, de 1992 a 2016&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/konimex/linuxtimeline&#34; title=&#34;Repositorio en Github de LinuxTimeline&#34;&gt;linuxtimeline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo Cambiar El Directorio De Portage a Otro Directorio en Gentoo</title>
+      <link>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</link>
+      <pubDate>Wed, 17 Aug 2016 08:30:50 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</guid>
+      <description>&lt;p&gt;Hace poco tuve problemas con &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;portage&lt;/a&gt; y su directorio de trabajo temporal en &lt;code&gt;/var/tmp/portage&lt;/code&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/#gentoo&#34;&gt;Gentoo&lt;/a&gt; porque me quedé sin las 10GB mínimas que necesita:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así que la primera solución que se me ocurrió fue hacer que &lt;code&gt;portage&lt;/code&gt; trabaje en otro directorio, concretamente en otro disco duro auxiliar en el que dispongo de más espacio. Veamos cómo conseguirlo:&lt;/p&gt;
+
+&lt;h1 id=&#34;cambiar-el-fichero-etc-portage-make-conf&#34;&gt;Cambiar el fichero /etc/portage/make.conf&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Para ello necesitamos decirle a &lt;code&gt;portage&lt;/code&gt; que queremos cambiar el directorio por defecto, para ello editamos el fichero &lt;code&gt;/etc/portage/make.conf&lt;/code&gt; y añadimos las variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; y &lt;code&gt;PKGDIR&lt;/code&gt; apuntando al directorio deseado, en mi caso &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/portage&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/distfiles&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;sincronizar-el-árbol-de-portage&#34;&gt;Sincronizar el árbol de portage&lt;/h1&gt;
+
+&lt;p&gt;El siguiente paso es sincronizar &lt;code&gt;portage&lt;/code&gt; para que se de cuenta del cambio, para ello:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;emerge --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras esto, &lt;code&gt;portage&lt;/code&gt; ya conocerá la nueva localización de directorios, pero resta una cosa más por hacer.&lt;/p&gt;
+
+&lt;h1 id=&#34;crear-enlace-simbólico-para-make-profile&#34;&gt;Crear enlace simbólico para make.profile&lt;/h1&gt;
+
+&lt;p&gt;Ahora mismo &lt;code&gt;make.conf&lt;/code&gt; es un enlace a &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, el directorio antiguo, debemos enlazarlo con el directorio nuevo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras esto, tendremos &lt;code&gt;portage&lt;/code&gt; en un nuevo directorio.&lt;/p&gt;
+
+&lt;h1 id=&#34;cambiar-solo-el-directorio-temporal-var-tmp-portage&#34;&gt;Cambiar solo el directorio temporal /var/tmp/portage&lt;/h1&gt;
+
+&lt;p&gt;Mi problema orignal era no tener espacio en &lt;code&gt;/var/tmp/portage&lt;/code&gt;, resulta que este directorio también se puede cambiar, sin necesidad de mover de sitio lo ficheros de &lt;code&gt;portage&lt;/code&gt;, para ello basta con añadir al &lt;code&gt;make.conf&lt;/code&gt; la siguiente variable:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Sincronizamos y listo.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Error NSS Al Actualizar Firefox 48 en Gentoo</title>
+      <link>https://elbauldelprogramador.com/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</link>
+      <pubDate>Thu, 04 Aug 2016 08:55:12 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
+      <description>&lt;p&gt;Hoy ha salido la versión 48 de Firefox para &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Instalar y actualizar Gentoo&#34;&gt;Gentoo&lt;/a&gt;, pero cuando realicé la actualización obtenía el siguiente error:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Así que pregunté en los foros de &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo&lt;/a&gt; y parece que se trata de un &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
+
+&lt;p&gt;Para salir del paso, en el foro me comentaron que existe un &lt;em&gt;Workaround&lt;/em&gt;, se trata de obligar a instalar una versión concreta de &lt;em&gt;NSS&lt;/em&gt;, en concreto la 3.24. Para ello basta con ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;=dev-libs/nss-3.24 ~amd64&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
+emerge -u nss
+&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Gracias a &lt;em&gt;fedeliallalinea&lt;/em&gt; por la respuesta en el foro.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo Instalar/actualizar/eliminar Paquetes en Gentoo</title>
+      <link>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</link>
+      <pubDate>Fri, 29 Jul 2016 10:20:01 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/como-instalar-actualizar-elminar-paquetes-gentoo.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;526px&#34; height=&#34;256px&#34;&gt;
+&lt;/amp-img&gt;
+&lt;figcaption&gt;Imagen tomada con &lt;em&gt;screenfetch&lt;/em&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hace unos meses me decidí a instalar &lt;em&gt;Gentoo&lt;/em&gt; en mi portátil por probar cómo iba, y la verdad es que me está gustando bastante. La capacidad de personalización que tiene es tremenda.&lt;/p&gt;
+
+&lt;p&gt;Una de las cosas que más me gusta es su gestor de paquetes, &lt;em&gt;emerge&lt;/em&gt; y sus programas auxiliares para administrar el sistema (&lt;em&gt;equery, eclean, euse y similares&lt;/em&gt;) es por ello que escribo este artículo, para recopilar una lista de las tareas más habituales en el día a día de usar &lt;em&gt;Gentoo&lt;/em&gt;. Cómo buscar paquetes a instalar, eliminar paquetes instalados, consultar qué paquetes queremos instalar, limpiar espacio en el sistema, actualizarlo etc. Empecemos:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;comprobar-si-hay-actualizaciones-para-el-sistema&#34;&gt;Comprobar si hay actualizaciones para el sistema&lt;/h1&gt;
+
+&lt;p&gt;Una de las primeras cosas que hago cuando enciendo el PC es comprobar si hay actualizaciones del sistema, en &lt;em&gt;Gentoo&lt;/em&gt; esto podemos hacerlo con el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge-webrsync
+$ emerge --sync
+$ emaint -A sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los tres comandos llevan a cabo la misma tarea, pero difieren en varios aspectos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;emerge --sync&lt;/code&gt;: Solo existe para propósito de compatibilidad, ya que los otros dos comandos son más modernos&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;emaint -A sync&lt;/code&gt;: &lt;code&gt;emaint&lt;/code&gt; es una herramienta para realizar tareas de mantenimiento en el sistema relacionadas con los paquetes, también realiza comprobaciones de “salud”. Entre sus subcomandos está la opción &lt;code&gt;sync&lt;/code&gt;, que comprueba si hay actualizaciones para los paquetes instalados. La opción &lt;code&gt;-A&lt;/code&gt; es para que sincronice todos los repositorios.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;emerge-webrsync&lt;/code&gt;: Este es similar al anterior, pero descarga los datos en un &lt;em&gt;tarball&lt;/em&gt;, lo cual lo hará mucho más rápido que los dos anteriores, este es el comando que suelo usar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;actualizar-el-sistema&#34;&gt;Actualizar el sistema&lt;/h1&gt;
+
+&lt;p&gt;Sincronizados con el servidor, deberemos realizar la actualización en sí, en caso de existir. Para esta tarea yo suelo usar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge --update --deep --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Desglosemos cada parámetro:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--update&lt;/code&gt;: Actualiza el paquete a la mejor versión disponible.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--deep:&lt;/code&gt;: Obliga a que se consideren todas las dependencias de un paquete, en lugar de únicamente las dependencias directas. De este modo se actulizan librerías que no están listadas directamente en las dependencias de un paquete.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--newuse&lt;/code&gt;: En el caso de que se haya modificado la variable &lt;code&gt;USE&lt;/code&gt;, no es necesaria de lo contrario, pero yo suelo ponerla.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;/code&gt; (&lt;code&gt;--ask&lt;/code&gt;): Pide confirmación antes de realizar la operación.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-t&lt;/code&gt; (&lt;code&gt;--tree&lt;/code&gt;): Muestra los paquetes a actualizar e instalar en forma de árbol.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-v&lt;/code&gt; (&lt;code&gt;--verbose&lt;/code&gt;): Muestra más información.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;eliminar-un-paquete-con-todas-sus-dependencias&#34;&gt;Eliminar un paquete con todas sus dependencias&lt;/h1&gt;
+
+&lt;p&gt;Para eliminar por completo un paquete, con todas las dependencias:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge -atv --depclean paquete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras eliminar el paquete podemos ejecutar de nuevo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge -atv --depclean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;para eliminar las dependencias que tuviera el paquete desistalado, pero &lt;code&gt;depclean&lt;/code&gt; no eliminará ningún paquete a no ser que todas las dependencias requeridas hayan sido resueltas, por tanto es necesario ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge --update --newuse --deep @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el caso de no haber actualizado la variable &lt;code&gt;USE&lt;/code&gt; en nuestro sistema, podemos ahorrar tiempo con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge --update --changed-use --deep @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;buscar-paquetes-a-instalar&#34;&gt;Buscar paquetes a instalar&lt;/h1&gt;
+
+&lt;p&gt;Hay varias formas, se puede buscar:&lt;/p&gt;
+
+&lt;h2 id=&#34;usando-expresiones-regulares&#34;&gt;Usando expresiones regulares&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge -s &lt;span class=&#34;s2&#34;&gt;&amp;quot;%^python&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto buscará paquetes que se llamen exáctamente &lt;em&gt;python&lt;/em&gt;, y por tanto solo hay uno:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Results &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; search key : %^python$ &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+Searching...
+
+*  dev-lang/python
+      Latest version available: 3.4.3-r1
+      Latest version installed: 3.4.3-r1
+      Size of files: 14,096 KiB
+      Homepage:      http://www.python.org/
+      Description:   An interpreted, interactive, object-oriented programming language
+      License:       PSF-2
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Applications found : &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;buscar-paquetes-que-contengan-la-palabra-x&#34;&gt;Buscar paquetes que contengan la palabra x&lt;/h2&gt;
+
+&lt;p&gt;Para buscar todos los paquetes que contengan la palabra &lt;em&gt;python&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge -s python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras ejecutar este comando, en mi caso aparecen 200 paquetes.&lt;/p&gt;
+
+&lt;h2 id=&#34;buscar-paquetes-basándonos-en-su-descripción&#34;&gt;Buscar paquetes basándonos en su descripción&lt;/h2&gt;
+
+&lt;p&gt;En lugar de buscar por el nombre del paquete, podemos buscar en su descripción:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge --searchdesc python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;También se pueden usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalar-paquetes&#34;&gt;Instalar paquetes&lt;/h2&gt;
+
+&lt;p&gt;Una vez encontrado el paquete que deaseamos instalar, prodecemos del siguiente modo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge -atv paquete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;equery&#34;&gt;Equery&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es parte del paquete &lt;code&gt;gentoolkit&lt;/code&gt;, el cual instala una serie de aplicaciones destinadas a la administración de &lt;em&gt;Gentoo&lt;/em&gt;, para instalarlo basta con ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ emerge --ask app-portage/gentoolkit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es una aplicación creada con el propósito de hacer tareas comunes en &lt;em&gt;Portage&lt;/em&gt; más sencillas, veamos una lista de lo que puede hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Gentoo package query tool
+Usage: equery &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;global-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; module-name &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;module-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+global options
+ ....
+
+modules &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;short name&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;b&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;elongs               list what package FILES belong to
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;hanges               list changelog entries &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; ATOM
+ chec&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;k&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                 verify checksums and timestamps &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;d&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;epends               list all packages directly depending on ATOM
+ dep&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;g&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;raph              display a tree of all dependencies &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;iles                 list all files installed by PKG
+ h&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;s                   list all packages &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; matching ENVIRONMENT data stored in /var/db/pkg
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;h&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;asuse                list all packages that have USE flag
+ ke&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;y&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;words              display keywords &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; specified PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;l&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ist                  list package matching PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;m&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;eta                  display metadata about PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ize                  display total size of all files owned by PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;u&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ses                  display USE flags &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;hich                 print full path to ebuild &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si quisieramos ver el árbol de dependencias de firefox:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ equery g firefox
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;eclean&#34;&gt;Eclean&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;eclean&lt;/em&gt; es otra herramienta parte del paquete &lt;em&gt;Gentoolkit&lt;/em&gt;, diseñada para limpiar el sistema del código fuente usado para compilar los paquetes y binarios creados durante el proceso de compilación.&lt;/p&gt;
+
+&lt;h2 id=&#34;limpiar-el-código-fuente-de-los-paquetes&#34;&gt;Limpiar el código fuente de los paquetes&lt;/h2&gt;
+
+&lt;p&gt;Tras instalar paquetes, el código fuente queda guardado junto con los objetos generados por si es necesario recompilar, si no los queremos mantener, es posible eliminarlos con estos comandos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ eclean --deep distfiles
+$ eclean-dist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;eclean-dist&lt;/code&gt; es un alias de &lt;code&gt;eclean distfiles&lt;/code&gt;, la opción &lt;code&gt;--deep&lt;/code&gt; deja únicamente el código fuente necesario para una reinstalación.&lt;/p&gt;
+
+&lt;h2 id=&#34;limpiar-paquetes-binarios&#34;&gt;Limpiar paquetes binarios&lt;/h2&gt;
+
+&lt;p&gt;Los paquetes binarios son aquellos que no proporcionan código fuente, como por ejemplo el software privativo, o paquetes precompilados, para borrarlos basta ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ eclean --deep packages
+$ eclean-pkg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;apps-recomendadas&#34;&gt;Apps Recomendadas&lt;/h1&gt;
+
+&lt;p&gt;Antes de usar &lt;em&gt;Gentoo&lt;/em&gt;, utilizaba el comando &lt;code&gt;df&lt;/code&gt; para ver el estado de los discos duros, un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda4        20G  7.9G   11G  44% /
+tmpfs           1.2G  952K  1.2G   1% /run
+dev              10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   0% /dev
+shm             5.9G   91M  5.8G   2% /dev/shm
+cgroup_root      10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   0% /sys/fs/cgroup
+/dev/sda2       128M   16M  113M  12% /boot
+/dev/sda5        87G   38G   45G  46% /home
+/dev/sdb1       110G   11G   94G  11% /home/hkr/ssd2
+none            5.9G     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  5.9G   0% /run/user/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras instalar &lt;em&gt;Gentoo&lt;/em&gt; descubrí el paquete &lt;code&gt;pydf&lt;/code&gt;, similar a &lt;code&gt;df&lt;/code&gt; pero visualmente más atractivo, colorea el resultado y muestra una representación gráfica del porcentaje ocupado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ pydf  -h
+Filesystem Size  Used Avail Use%                                                                                       Mounted on
+/dev/sda4   19G 8043M   10G 41.1 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##################################.................................................] /&lt;/span&gt;
+/dev/sda2  128M   15M  112M 12.0 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########.........................................................................] /boot&lt;/span&gt;
+/dev/sda5   87G   38G   45G 43.4 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;####################################...............................................] /home&lt;/span&gt;
+/dev/sdb1  110G   11G   94G  9.8 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;########...........................................................................] /home/hkr/ssd2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet&#34; title=&#34;CheatSheet de Gentoo&#34;&gt;Gentoo Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Equery&#34; title=&#34;Página de Equery&#34;&gt;Equery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Eclean&#34; title=&#34;Página de Eclean&#34;&gt;Eclean&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cambia La Imágen De Fondo Del Terminal Gnome Y Pon Un Color De Texto a Juego, Automáticamente</title>
+      <link>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</link>
+      <pubDate>Mon, 18 Jul 2016 16:08:56 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</guid>
+      <description>&lt;p&gt;Seguramente seas una de esas personas que pasan mucho tiempo delante del ordenador con una o varias shells abiertas. De hecho, seguramente tengas más que visto el fondo negro con letras blancas, o el estilo de terminal que pusiste hace tiempo,  porque cambiarlo todos los días no es el hobbie de nadie. Pero ¿y si se cambiara sólo?¿ y si pudieras poner tus imágenes favoritas de fondo del terminal, con un color de texto que no desentone con tu imágen  y tú no tuvieras que hacer nada?&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí os quiero contar como se me ocurrió hacerlo a mí, con un script en bash  y así escapar de la rutina de estilo de las shells.&lt;/p&gt;
+
+&lt;h2 id=&#34;antes-de-comenzar&#34;&gt;Antes de comenzar&amp;hellip;&lt;/h2&gt;
+
+&lt;h4 id=&#34;comprobar-versión-de-gnome-shell&#34;&gt;Comprobar versión de gnome-shell&lt;/h4&gt;
+
+&lt;p&gt;El script es válido para &lt;strong&gt;versiones de gnome &amp;lt; 3.8&lt;/strong&gt;. Lo he probado en Linux Mint Debian Edition y en Ubuntu 14.04. En este último tuve que instalar gnome-shell.&lt;/p&gt;
+
+&lt;p&gt;Para instalar gnome-shell:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ sudo apt-get install gnome-shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para comprobar la versión de gnome:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ gnome-shell --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;instalar-imagemagick-y-gawk&#34;&gt;instalar ImageMagick y gawk&lt;/h4&gt;
+
+&lt;p&gt;Usaremos funciones de ImageMagick para convertir las imágenes, y gawk para filtrar por expresiones. Para instalarlos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ sudo apt-get install gawk
+    cris@cris ~ $ sudo apt-get install imagemagick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;expliación-del-script&#34;&gt;Expliación del script&lt;/h2&gt;
+
+&lt;p&gt;La idea del script es modificar directamente los valores de configuración de terminal que se establecen en el fichero &lt;strong&gt;%gconf.xml&lt;/strong&gt; que se ubica en &lt;code&gt;home/user/.gconf/apps/gnome-terminal/profiles/Default/&lt;/code&gt;, para versiones de shell gnome &amp;lt; 3.8.&lt;/p&gt;
+
+&lt;h4 id=&#34;declaración-de-variables&#34;&gt;Declaración de variables&lt;/h4&gt;
+
+&lt;p&gt;Inicialmente declaramos las variables con la ruta de los comandos que vamos a tilizar frecuentemente. No es obligatorio, pero es recomendable. La variable &lt;strong&gt;ROUTE&lt;/strong&gt; contiene la ruta del directorio donde guardamos las imágenes que queremos poner de fondo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/gconftool-2&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/sort&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/gawk&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;CNVRT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/convert&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/miRuta/*&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;gconftool-2&lt;/strong&gt; : herramienta de configuración gnome. La usaremos con la opción set para modificar el archivo de configuración.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt; : comando que ordena líneas de texto.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gawk&lt;/strong&gt; : escaneador de patrones. Lo usaremo para filtrar patrón hexadecimal.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;convert&lt;/strong&gt; : lo usaremos para redimensionar la imágen y convertirla en hibstograma.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;tomar-imágenes&#34;&gt;Tomar imágenes&lt;/h4&gt;
+
+&lt;p&gt;tomamos aleatoriamente una imágen de &lt;strong&gt;miRuta&lt;/strong&gt; para la terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e $ROUTE&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Limpiamos la ruta, quedándonos solo con el nombre de la imágen:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILE&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Redimensionamos la imágen (sólo si es necesario, por ejemplo, si las imágenes que queremos usar son tamaño fondo de escritorio). Para no modificar la imágen original ni guardar muchas copias innecesarias, la guardamos en /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    convert &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILE&amp;quot;&lt;/span&gt; -resize %50 &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILECONV&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como mis imágenes son tamaño fondo de escritorio, las redimensiono a la mitad de su tamaño para que se aprecien mejor en el terminal.&lt;/p&gt;
+
+&lt;p&gt;Opcional: tomamos otra imágen aleatoriamente de la carpeta para fondo de escritorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e $ROUTE&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;ponemos-la-imágen-de-fondo-en-el-terminal&#34;&gt;Ponemos la imágen de fondo en el terminal&lt;/h4&gt;
+
+&lt;p&gt;modificamos algunas configuraciones que vienen por defecto antes de aplicar los cambios, para que tengan efecto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;image&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#solido por defecto&lt;/span&gt;
+
+    $GCONFT --set /apps/gnome-terminal/profiles/Default/use_custom_command --type bool &lt;span class=&#34;s2&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+
+    $GCONFT --set /apps/gnome-terminal/profiles/Default/use_theme_colors --type bool &lt;span class=&#34;s2&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+
+    $GCONFT --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;span class=&#34;s2&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora, ya podemos tomar la imágen redimensionada y ponerla como imágen de fondo del terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILECONV&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Por último, ponemos un color oscuro de fondo del terminal y un nivel de opacidad alto, para que se vea mejor el texto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;#181824243131&amp;quot;&lt;/span&gt;
+
+    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;span class=&#34;s2&#34;&gt;&amp;quot;0.78&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;ponemos-color-del-texto-a-juego&#34;&gt;Ponemos color del texto a juego&lt;/h4&gt;
+
+&lt;p&gt;Para ello, sacamos el hibstograma de colores de la imágen, y tomamos un tono de esos colores. Con &lt;strong&gt;convert&lt;/strong&gt; podemos indicar el número de colores que deseamos sacar y la profundidad. Luego los ordenamos segun su orden numérico y filtramos solo el  código hexadecimal de los colores con &lt;strong&gt;gawk&lt;/strong&gt;. Lo guardamos en un fichero de texto llamado paleta.txt que se creara en /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$C&lt;/span&gt;NVRT &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILECONV&amp;quot;&lt;/span&gt; -colors &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; -depth &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; -format &lt;span class=&#34;s1&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt; histogram:info:- &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; $SORT --general-numeric-sort &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; $GAWK &lt;span class=&#34;s1&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/paleta.txt&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para finalizar, abrimos el fichero temporal &lt;strong&gt;paleta.txt&lt;/strong&gt; y leemos  6 primeras líneas, es decir, los 6 primeros colores:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;#abrir fichero&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt; /tmp/paleta.txt
+    &lt;span class=&#34;c1&#34;&gt;#leer 6 lineas&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color1 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color2 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color3 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color4 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color5 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color6 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
+    &lt;span class=&#34;c1&#34;&gt;#cerrar&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;y ponemos el último color leído como color de texto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;olor6&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo de tomar el 6º color es porque como están ordenados de más claro a más oscuro, los colores claros &amp;ldquo; centrales&amp;rdquo; son los que mejor resultados dan. No obstante, puedes modificarlo dependiendo de tus fotos. El script no es infalible, la carpeta que yo uso tiene 700 imagenes y siempre hay  imágenes con las que falla eligiendo el color de texto más adecuado para su lectura, sobre todo en las  imágenes muy oscuras  donde no hay ningún color claro. Si se te ocurre alguna mejora, ¡comentala!&lt;/p&gt;
+
+&lt;p&gt;Opcional: si tambien quieres cambiar la imágen del escritorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.gnome.desktop.background picture-uri &lt;span class=&#34;s2&#34;&gt;&amp;quot;file:///&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILED&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;disfruta-y-luce-tus-terminales&#34;&gt;Disfruta y luce tus terminales&lt;/h4&gt;
+
+&lt;h4 id=&#34;planifica-la-ejecución&#34;&gt;Planifica la ejecución&lt;/h4&gt;
+
+&lt;p&gt;Para no tener que andar lanzando el script, puedes planificarlo con &lt;strong&gt;crontab&lt;/strong&gt; para que se ejecute, por ejemplo cada vez que inicias el sistema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ crontab -e &lt;span class=&#34;c1&#34;&gt;#para abrir contab&lt;/span&gt;
+    @reboot /miRuta_al_script/CambiaTerminales.sh &lt;span class=&#34;c1&#34;&gt;# añadir tarea&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h4&gt;
+
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux2.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;386px&#34; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux3.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;650px&#34; height=&#34;386px&#34; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux4.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;385px&#34; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux5.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;1003px&#34; height=&#34;581px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&#34;enlace-al-código&#34;&gt;Enlace al código&lt;/h4&gt;
+
+&lt;p&gt;Puedes bajarte el script en &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;Repositorio My Terminals Background Setter&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Expresiones Regulares Multilínea</title>
+      <link>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</link>
+      <pubDate>Fri, 10 Jun 2016 13:59:28 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</guid>
+      <description>&lt;p&gt;Actualizando el diseño del blog he tenido que usar muchas &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt; para ajustar los artículos existentes al &lt;em&gt;Front Matter&lt;/em&gt; del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar Atom, el editor de GitHub en Linux&#34;&gt;Atom&lt;/a&gt;. La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración &lt;code&gt;yalm&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param1&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor1&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param2&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor2&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param3&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor3&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param4&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor4&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;p p-Indicator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;Articulos&lt;/span&gt;
+  &lt;span class=&#34;p p-Indicator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;Android&lt;/span&gt;
+  &lt;span class=&#34;p p-Indicator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;Java&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param5&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor5&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param6&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor6&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param7&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor7&lt;/span&gt;
+&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param8&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor8&lt;/span&gt;
+&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Necesitaba dejarla tal cual, pero añadir un último parámetro llamado &lt;code&gt;mainclass: Artículos&lt;/code&gt;, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso &lt;em&gt;Artículos&lt;/em&gt;. Para ello decidí usar &lt;code&gt;perl&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;perl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p0e&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;s/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---/s&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-0&lt;/code&gt; especifica que el separador de línea sea nulo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; Que se aplique la expresión especificada por &lt;code&gt;-e&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s/&lt;/code&gt; cambia el comportamiento de &lt;code&gt;.&lt;/code&gt; para que acepte cualquier caracter, incluso saltos de línea, por tanto se trata el fichero como si se tratara de una única línea.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La expresión regular en sí se define:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(categories:\s+-\s+)&lt;/code&gt;: Capturamos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;([a-zA-Z ]+)&lt;/code&gt;: nos captura la primera categoría especificada, junto a la expresión anterior, tenemos:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(\s+-[a-zA-Z ]*)?&lt;/code&gt; captura el resto de categorías restantes, por lo que ahora tenemos:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+  - Android
+  - Java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(.*?)-{3}&lt;/code&gt; por último capturamos el resto de texto que queda hasta encontrar el fin del &lt;em&gt;Front Matter&lt;/em&gt;, los &lt;code&gt;---&lt;/code&gt;. Así que esta expresión nos ha capturado lo siguiente:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+  - Android
+  - Java
+param5: valor5
+param6: valor6
+param7: valor7
+param8: valor8
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ahora queda reescribirla, de eso se ocupa la segunda parte, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt;. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con &lt;code&gt;$1&lt;/code&gt;. De este modo, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt; nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+param1: valor1
+param2: valor2
+param3: valor3
+param4: valor4
+categories:
+  - Articulos
+  - Android
+  - Java
+param5: valor5
+param6: valor6
+param7: valor7
+param8: valor8
+mainclass: &amp;quot;articulos&amp;quot;
+color: &amp;quot;#F57C00&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;p&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace &amp;quot;How do I replace multiple lines with single word in file(inplace replace&#34;&gt;askubuntu.com&lt;/a&gt;?&amp;ldquo;)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
+      <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
+
+&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
+&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;10-top&#34;&gt;10. Top&lt;/h2&gt;
+
+&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo *top *en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
+
+&lt;h2 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h2&gt;
+
+&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
+
+&lt;h2 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h2&gt;
+
+&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
+
+&lt;h2 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h2&gt;
+
+&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
+
+&lt;h2 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h2&gt;
+
+&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h2&gt;
+
+&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h2&gt;
+
+&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo:* ifconfig &amp;gt; myip.txt.* Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-find&#34;&gt;2. Find&lt;/h2&gt;
+
+&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h2&gt;
+
+&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
+
+&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>20 ejemplos de iptables para SysAdmins novatos</title>
+      <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
+      <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Este firewall lo controla un programa llamado iptables que gestiona el filtrado para IPv4, y ip6tables para IPv6.&lt;/p&gt;
+
+&lt;h2 id=&#34;ejemplos-de-reglas-iptables&#34;&gt;Ejemplos de reglas IPTABLES&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Muchas de las acciones que se listan abajo requieren ejecutarse como usuario root.&lt;/li&gt;
+&lt;li&gt;Los siguientes comandos deberían funcionar en cualquier distro linux moderna.&lt;/li&gt;
+&lt;li&gt;Esto NO es un tutorial de como configurar iptables. Puedes ver un tutorial &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/faq/rhel-fedorta-linux-iptables-firewall-configuration-tutorial/&#34;&gt;aquí&lt;/a&gt;. Es más bien una referencia rápida de los comandos más comunes de iptables.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-mostrando-el-estado-de-nuestro-firewall&#34;&gt;#1: Mostrando el estado de nuestro firewall&lt;/h1&gt;
+
+&lt;p&gt;Teclea el siguiente comando como root:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L -n -v
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ejemplos de salidas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El resultado de arriba indica que el firewall no está activo. La siguiente salida es la del firewall activado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0           state INVALID
+  &lt;span class=&#34;m&#34;&gt;394&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;43586&lt;/span&gt; ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
+   &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;17292&lt;/span&gt; ACCEPT     all  --  br0    *       0.0.0.0/0            0.0.0.0/0
+    &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;142&lt;/span&gt; ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
+Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ACCEPT     all  --  br0    br0     0.0.0.0/0            0.0.0.0/0
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0           state INVALID
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; TCPMSS     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0           tcp flags:0x06/0x02 TCPMSS clamp to PMTU
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; wanin      all  --  vlan2  *       0.0.0.0/0            0.0.0.0/0
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; wanout     all  --  *      vlan2   0.0.0.0/0            0.0.0.0/0
+    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ACCEPT     all  --  br0    *       0.0.0.0/0            0.0.0.0/0
+Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;425&lt;/span&gt; packets, 113K bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+Chain wanin &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+Chain wanout &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-L&lt;/strong&gt; : Muestra las reglas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-v&lt;/strong&gt; : Muestra información detallada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-n&lt;/strong&gt; : Muestra la dirección ip y puerto en formato numérico. No usa DNS para resolver nombres. Esto acelera la lista.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;1-1-para-inspeccionar-el-firewall-con-número-de-lineas&#34;&gt;#1.1:Para Inspeccionar el firewall con número de lineas:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -n -L -v --line-numbers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Salida:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    DROP       all  --  0.0.0.0/0            0.0.0.0/0           state INVALID
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    DROP       all  --  0.0.0.0/0            0.0.0.0/0           state INVALID
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    TCPMSS     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp flags:0x06/0x02 TCPMSS clamp to PMTU
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
+&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;    wanin      all  --  0.0.0.0/0            0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;    wanout     all  --  0.0.0.0/0            0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+Chain wanin &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+Chain wanout &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Podemos usar los números de línea para borrar o añadir nuevas reglas al firewall.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-2-mostrar-las-reglas-de-cadena-de-entrada-y-salida&#34;&gt;#1.2: Mostrar las reglas de cadena de entrada y salida:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n -v
+iptables -L OUTPUT -n -v --line-numbers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;2-parar-iniciar-reiniciar-el-firewall&#34;&gt;#2: Parar / Iniciar / Reiniciar el firewall&lt;/h1&gt;
+
+&lt;p&gt;Si usas CentOS / RHEL / Fedora linux:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service iptables stop
+service iptables start
+service iptables restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;También se puede usar propio comando iptables para detenerlo y borrar todas las reglas.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -F
+iptables -X
+iptables -t nat -F
+iptables -t nat -X
+iptables -t mangle -F
+iptables -t mangle -X
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-F&lt;/strong&gt; : Borra todas las reglas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-X&lt;/strong&gt; : Borra cadenas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-t table_name&lt;/strong&gt; : Selecciona una tabla y elimina reglas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-P&lt;/strong&gt; : Establece la política por defecto (como DROP, REJECT o ACCEPT)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;3-borrar-reglas-del-firewall&#34;&gt;#3: Borrar reglas del firewall&lt;/h1&gt;
+
+&lt;p&gt;Para mostrar los números de línea junto a otra información para reglas existentes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n --line-numbers
+iptables -L OUTPUT -n --line-numbers
+iptables -L OUTPUT -n --line-numbers &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+iptables -L OUTPUT -n --line-numbers &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep 202.54.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Obtendrendremos la lista de IPs. Miramos el número de la izquierda y lo usamos para borrarla. Por ejemplo para borrar la línea 4:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D INPUT 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;O para encontrar una ip de origen y borrarla de la regla&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D INPUT -s 202.54.1.1 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-D&lt;/strong&gt; : Elimina una o más reglas de la cadena seleccionada.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;4-insertar-reglas&#34;&gt;#4: Insertar reglas:&lt;/h1&gt;
+
+&lt;p&gt;Para insertar una o más reglas en la cadena seleccionada como el número de cadena dada usamos la siguiente sintaxis. Primero encontramos el número de línea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n --line-numbers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Salida:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    DROP       all  --  202.54.1.1           0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state NEW,ESTABLISHED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para insertar una regla entre 1 y 2;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I INPUT &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; -s 202.54.1.2 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para ver las reglas actualizadas&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n --line-numbers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Salida:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    DROP       all  --  202.54.1.1           0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    DROP       all  --  202.54.1.2           0.0.0.0/0
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state NEW,ESTABLISHED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;5-guardar-reglas&#34;&gt;#5: Guardar reglas&lt;/h1&gt;
+
+&lt;p&gt;Para guardar reglas en CentOS / RHEL / Fedora Linux:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service iptables save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, eliminamos una ip y guardamos las reglas del firewall:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 202.5.4.1 -j DROP
+service iptables save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para todas las dem��s distros usamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables-save &amp;gt; /root/my.active.firewall.rules
+cat /root/my.active.firewall.rules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;6-restaurar-reglas&#34;&gt;#6: Restaurar reglas&lt;/h1&gt;
+
+&lt;p&gt;Para restaurar reglas desde un archivo llamado /root/my.active.firewall.rules:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables-restore &amp;lt; /root/my.active.firewall.rules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bajo CentOS / RHEL / Fedora Linux:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service iptables restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;7-estableces-políticas-de-firewall-por-defecto&#34;&gt;#7: Estableces políticas de firewall por defecto&lt;/h1&gt;
+
+&lt;p&gt;Para borrar todo el tráfico:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+iptables -L -v -n
+&lt;span class=&#34;c1&#34;&gt;## you will not able to connect anywhere as all traffic is dropped ###&lt;/span&gt;
+ping cyberciti.biz
+wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;7-1-solo-tráfico-entrante-bloqueado&#34;&gt;#7.1: Solo tráfico entrante bloqueado&lt;/h4&gt;
+
+&lt;p&gt;Para borrar todos los paquetes entrantes / enviados pero permitir el tráfico saliente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+iptables -A INPUT -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -L -v -n
+&lt;span class=&#34;c1&#34;&gt;# *** now ping and wget should work *** ###&lt;/span&gt;
+ping cyberciti.biz
+wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;8-borrar-direcciones-de-red-privadas-en-la-interfaz-pública&#34;&gt;#8: Borrar direcciones de red privadas en la interfaz pública&lt;/h1&gt;
+
+&lt;p&gt;IP Spoofing es nada más que para detener los siguientes rangos de direcciones IPv4 para redes privadas en sus interfaces públicas. Los paquetes con direcciones de origen no enrutables deben rechazarse mediante la siguiente sintaxis:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -i eth1 -s 192.168.0.0/24 -j DROP
+iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;9-bloqueando-una-direción-ip-block-ip&#34;&gt;#9: Bloqueando una direción IP (BLOCK IP)&lt;/h1&gt;
+
+&lt;p&gt;PAra bloquear una ip atacante llamada 1.2.3.4:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 1.2.3.4 -j DROP
+iptables -A INPUT -s 192.168.0.0/24 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;10-bloquear-peticiones-entrantes-de-un-puerto-block-port&#34;&gt;#10: Bloquear peticiones entrantes de un puerto (BLOCK PORT)&lt;/h1&gt;
+
+&lt;p&gt;Para bloquear todas las solicitudes de servicio en el puerto 80:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p tcp --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
+iptables -A INPUT -i eth1 -p tcp --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para bloquear el puerto 80 para una ip:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p tcp -s 1.2.3.4 --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
+iptables -A INPUT -i eth1 -p tcp -s 192.168.1.0/24 --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;11-bloquear-ips-de-salida&#34;&gt;#11: Bloquear ips de salida&lt;/h1&gt;
+
+&lt;p&gt;Para bloquear el tráfico saliente a un host o dominio en concreto como por ejemplo cyberciti.biz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;host -t a cyberciti.biz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Salida:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cyberciti.biz has address 75.126.153.206
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez conocida la dirección ip, bloqueamos todo el tráfico saliente para dicha ip así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d 75.126.153.206 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se puede usar una subred como la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d 192.168.1.0/24 -j DROP
+iptables -A OUTPUT -o eth1 -d 192.168.1.0/24 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;11-1-ejemplo-bloquear-el-dominio-facebook-com&#34;&gt;#11.1: Ejemplo - Bloquear el dominio facebook.com&lt;/h4&gt;
+
+&lt;p&gt;Primero, encontrar la dirección ip de facebook.com&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;host -t a www.facebook.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Salida:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;www.facebook.com has address 69.171.228.40
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Buscar el CIDR para 69.171.228.40:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;whois 69.171.228.40 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep CIDR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Salida:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;CIDR:           69.171.224.0/19
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para prevenir el acceso externo a facebook.com:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p tcp -d 69.171.224.0/19 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Podemos usar también nombres de dominio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p tcp -d www.facebook.com -j DROP
+iptables -A OUTPUT -p tcp -d facebook.com -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De la página del man de iptables:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip; specifying any name to be resolved with a remote query such as DNS (e.g., facebook.com is a really bad idea), a network IP address (with /mask), or a plain IP address &amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;12-log-y-borrar-paquetes&#34;&gt;#12: Log y borrar paquetes&lt;/h1&gt;
+
+&lt;p&gt;Escribe lo siguiente para añadir al log y bloquear IP spoofing en una interfaz pública llamada eth1&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP_SPOOF A: &amp;quot;&lt;/span&gt;
+iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Por defecto el log está en el archivo /var/log/messages&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;tail -f /var/log/messages
+grep --color &lt;span class=&#34;s1&#34;&gt;&amp;#39;IP SPOOF&amp;#39;&lt;/span&gt; /var/log/messages
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;13-log-y-borrar-paquetes-con-un-número-limitado-de-entradas-al-log&#34;&gt;#13: Log y borrar paquetes con un número limitado de entradas al log&lt;/h1&gt;
+
+&lt;p&gt;El módulo -m limit puede limitar el número de entradas al log creadas por tiempo. Se usa para prevenir que el archivo de log se inunde. Para añadir al log y elminar spoofing cada 5 minutos, en ráfagas de 7 entradas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -i eth1 -s 10.0.0.0/8 -m limit --limit 5/m --limit-burst &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP_SPOOF A: &amp;quot;&lt;/span&gt;
+iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;14-aceptar-o-denegar-tráfico-desde-dirección-mac&#34;&gt;#14: Aceptar o denegar tráfico desde dirección MAC&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -m mac --mac-source 00:0F:EA:91:04:08 -j DROP
+&lt;span class=&#34;c1&#34;&gt;## *only accept traffic for TCP port # 8080 from mac 00:0F:EA:91:04:07 * ##&lt;/span&gt;
+iptables -A INPUT -p tcp --destination-port &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -m mac --mac-source 00:0F:EA:91:04:07 -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;15-bloquear-o-permitir-peticiones-ping-icmp&#34;&gt;#15: Bloquear o permitir peticiones ping ICMP&lt;/h1&gt;
+
+&lt;p&gt;Para bloquear peticiones ping ICMP&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+iptables -A INPUT -i eth1 -p icmp --icmp-type echo-request -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Las respuestas al ping también se puede limitar a ciertas redes o hosts.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 192.168.1.0/24 -p icmp --icmp-type echo-request -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo siguiente solo acepta limitados tipos de peticiones ICMP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;### ** assumed that default INPUT policy set to DROP ** #############&lt;/span&gt;
+iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+iptables -A INPUT -p icmp --icmp-type destination-unreachable -j ACCEPT
+iptables -A INPUT -p icmp --icmp-type time-exceeded -j ACCEPT
+&lt;span class=&#34;c1&#34;&gt;## ** all our server to respond to pings ** ##&lt;/span&gt;
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;16-abrir-un-rango-de-puertos&#34;&gt;#16: Abrir un rango de puertos&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 7000:7010 -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;17-abrir-un-rango-de-direcciones-ip&#34;&gt;#17: Abrir un rango de direcciones ip&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## only accept connection to tcp port 80 (Apache) if ip is between 192.168.1.100 and 192.168.1.200 ##&lt;/span&gt;
+iptables -A INPUT -p tcp --destination-port &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -m iprange --src-range 192.168.1.100-192.168.1.200 -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## nat example ##&lt;/span&gt;
+iptables -t nat -A POSTROUTING -j SNAT --to-source 192.168.1.20-192.168.1.25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;19-bloquear-o-abrir-puertos-comunes&#34;&gt;#19: Bloquear o abrir puertos comunes&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Replace ACCEPT with DROP to block port:
+
+&lt;span class=&#34;c1&#34;&gt;## open port ssh tcp port 22 ##&lt;/span&gt;
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open cups (printing service) udp/tcp port 631 for LAN users ##&lt;/span&gt;
+iptables -A INPUT -s 192.168.1.0/24 -p udp -m udp --dport &lt;span class=&#34;m&#34;&gt;631&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -p tcp -m tcp --dport &lt;span class=&#34;m&#34;&gt;631&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## allow time sync via NTP for lan users (open udp port 123) ##&lt;/span&gt;
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p udp --dport &lt;span class=&#34;m&#34;&gt;123&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open tcp port 25 (smtp) for all ##&lt;/span&gt;
+iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;# open dns server ports for all ##&lt;/span&gt;
+iptables -A INPUT -m state --state NEW -p udp --dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open http/https (Apache) server port to all ##&lt;/span&gt;
+iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open tcp port 110 (pop3) for all ##&lt;/span&gt;
+iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;110&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open tcp port 143 (imap) for all ##&lt;/span&gt;
+iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;143&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open access to Samba file server for lan users only ##&lt;/span&gt;
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;137&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;138&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;139&lt;/span&gt; -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;445&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open access to proxy server for lan users only ##&lt;/span&gt;
+iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;3128&lt;/span&gt; -j ACCEPT
+
+&lt;span class=&#34;c1&#34;&gt;## open access to mysql server for lan users only ##&lt;/span&gt;
+iptables -I INPUT -p tcp --dport &lt;span class=&#34;m&#34;&gt;3306&lt;/span&gt; -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;20-restringir-el-número-de-conexiones-paralelas-a-un-servidor-por-direccion-ip-del-cliente&#34;&gt;#20: Restringir el número de conexiones paralelas a un servidor por direccion Ip del cliente.&lt;/h1&gt;
+
+&lt;p&gt;Se puede usar connlimit para crear algunas restricciones. Para permitir 3 conexiones ssh por cliente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p tcp --syn --dport &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -m connlimit --connlimit-above &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; -j REJECT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Establecer las peticiones HTTP a 20:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -p tcp --syn --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -m connlimit --connlimit-above &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --connlimit-mask &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;donde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ndash;connlimit-above 3&lt;/strong&gt; : Coincide si el número de conexiones existentes está por encima de 3.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;ndash;connlimit-mask 24&lt;/strong&gt; : Grupos de hosts usando el prefijo de longitud. Para IPv4, debe ser un número entre 0 y 32 (incluyéndolos.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;21-howto-use-iptables-like-a-pro&#34;&gt;#21: HowTO: Use iptables Like a Pro&lt;/h1&gt;
+
+&lt;p&gt;Para más información sobre iptables, échale un vistazo al manual:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;man iptables
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para ver la ayuda en general o de un comando específico:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -h
+iptables -j DROP -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;21-1-probando-nuestro-firewall&#34;&gt;#21.1: Probando nuestro firewall&lt;/h4&gt;
+
+&lt;p&gt;Conocer si hay puertos abiertos o no:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Esta entrada solo lista las reglas básicas para los usuarios nuevos en linux. Se pueden crear reglas más complejas. Requiere una buena comprensión de TCP/IP, tunning del kernel linux via sysctl.conf y un buen conocimiento de nuestra configuración.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fuente original: &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/tips/linux-iptables-examples.html&#34;&gt;cyberciti&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;más-reglas-cortesía-de-jker&#34;&gt;Más reglas cortesía de Jker&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reestablece las reglas por defecto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo su
+iptables -F
+iptables -t nat -F
+iptables -t mangle -F
+iptables -X
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
+
+&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
+iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
+iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;como-google-tiene-muchas-ips-puede-que-tengamos-un-problema-para-ello-realizamos-lo-siguiente-antes-de-la-regla-exigente&#34;&gt;Como google tiene muchas IPs puede que tengamos un problema para ello realizamos lo siguiente antes de la regla EXIGENTE:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -d 212.106.221.0/24 -j ACCEPT
+iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -d 173.194.0.0/16 -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;mostrar-las-reglas-que-llevamos-hasta-el-momento&#34;&gt;Mostrar las reglas que llevamos hasta el momento:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -nL –line-numbers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;si-queremos-borrar-reglas&#34;&gt;Si queremos borrar reglas:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D OUTPUT 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;cierra-todos-los-puertos-bien-conocidos-menos-los-necesarios-para-acceder-a-estas-dos-webs&#34;&gt;Cierra todos los puertos bien conocidos menos los necesarios para acceder a estas dos webs.&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p TCP –dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
+iptables -A OUTPUT -p UDP –dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
+iptables -A OUTPUT -p TCP –dport 1:1024 -j DROP
+iptables -A OUTPUT -p UDP –dport 1:1024 -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;investiga-de-qué-forma-podrías-hacer-que-las-peticiones-entrantes-a-tu-máquina-virtual-al-puerto-81-por-http-vayan-mediante-nat-al-puerto-80-de-la-máquina-local-arranca-wamp-para-comprobar-que-funciona&#34;&gt;Investiga de qué forma podrías hacer que las peticiones entrantes a tu máquina virtual al puerto 81 por http vayan mediante NAT al puerto 80 de la máquina local (arranca WAMP para comprobar que funciona).&lt;/h4&gt;
+
+&lt;p&gt;Arrancamos wamp en la maquina fisica y comprobamos que accedemos a wamp desde localhost.Comprobamos que podemos acceder desde la maquina virtual y se encuentra cortado&lt;/p&gt;
+
+&lt;p&gt;Miramos la IP de la maquina virtual. Ahora desde la maquina fisica intentamos acceder desde el puerto 81 con la IP esa.&lt;/p&gt;
+
+&lt;p&gt;Habilitamos el enrutamiento entre tarjetas de red de nuestro equipo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /proc/sys/net/ipv4/ip_forward
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ejecutamos las siguientes reglas&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -t nat -A PREROUTING -p tcp –dport &lt;span class=&#34;m&#34;&gt;81&lt;/span&gt; -j DNAT –to- destination 192.168.203.200:80
+
+iptables -t nat -A POSTROUTING -s 192.168.203.0/24 -j MASQUERADE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;para-ver-las-reglas-introducidas&#34;&gt;Para ver las reglas introducidas:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -t nat -nL –line-numbers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;permite-sólo-los-mensajes-entrantes-desde-la-ip-del-compañero-de-tu-máquina-física-prueba-desde-otro-sitio-para-ver-si-funciona&#34;&gt;Permite sólo los mensajes entrantes desde la IP del compañero de tu máquina física (prueba desde otro sitio para ver si funciona).&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 192.168.203.200 -j ACCEPT
+iptables -A INPUT -j DROP
+
+iptables -A FORWARD -s 192.168.203.200 -j ACCEPT
+iptables -A FORWARD -s -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;activa-el-log-sobre-todas-las-reglas-y-verifica-que-se-anotan-los-mensajes&#34;&gt;Activa el log sobre todas las reglas y verifica que se anotan los mensajes.&lt;/h4&gt;
+
+&lt;p&gt;Insertamos en IPTABLEs las reglas para activar el log:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I FORWARD &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESFORWARD: ‘
+iptables -I INPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESINPUT: ‘
+
+iptables -t nat -I PREROUTING &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESPREROUTING: ‘
+iptables -t nat -I POSTROUTING &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESPREROUTING: ‘
+
+iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESOUTPUT: ‘
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;NOTA: hay que ponerlas las primeras para que haga log antes de rechazarlo.&lt;/p&gt;
+
+&lt;p&gt;Ahora editamos el archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gedit /etc/rsyslog.d/50-default.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;E incluimos al final:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;kern.warning /var/log/iptables.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Algunos comandos útiles con iproute2</title>
+      <link>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
+      <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
+
+&lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
+
+&lt;p&gt;Para situarnos en contexto, &lt;strong&gt;netstat&lt;/strong&gt; forma parte de las comúnmente llamadas &lt;em&gt;net-tools&lt;/em&gt; o herramientas de red. Este conjunto de herramientas lo forman los comandos &lt;em&gt;ifconfig&lt;/em&gt;, &lt;em&gt;netstat&lt;/em&gt; y &lt;em&gt;route&lt;/em&gt;. Dichas herramientas han quedado obsoletas en favor de &lt;strong&gt;iproute2&lt;/strong&gt; desde hace algunos años.&lt;/p&gt;
+
+&lt;p&gt;A día de hoy la mayoría de distribuciones traen &lt;strong&gt;iproute&lt;/strong&gt; instalado por defecto.&lt;/p&gt;
+
+&lt;p&gt;Veamos algunos de los comandos más útiles que nos ofrece este relativamente “*nuevo*” conjunto de comandos:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;obtener-información-sobre-tcp-udp-y-sockets&#34;&gt;Obtener información sobre TCP/UDP y Sockets&lt;/h3&gt;
+
+&lt;p&gt;Aquí entra en acción el comando &lt;strong&gt;ss&lt;/strong&gt;, sustituto de &lt;strong&gt;netstat&lt;/strong&gt;. Este comando está incluido en el paquete &lt;strong&gt;iproute2&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;La función de &lt;strong&gt;ss&lt;/strong&gt; es mostrar estadísticas de los sockets, mostrar información similar a netstat. Además, revela más información sobre TCP que otras herramientas. Las opciones más usadas son:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;-n, --numeric
+              Do now try to resolve service names.
+
+       -r, --resolve
+              Try to resolve numeric address/ports.
+
+       -a, --all
+              Display all sockets.
+
+       -l, --listening
+              Display listening sockets.
+
+       -o, --options
+              Show timer information.
+
+       -e, --extended
+              Show detailed socket information
+
+       -m, --memory
+              Show socket memory usage.
+
+       -p, --processes
+              Show process using socket.
+
+       -i, --info
+              Show internal TCP information.
+
+       -s, --summary
+              Print  summary  statistics.  This  option  does not parse socket
+              lists obtaining summary from various sources. It is useful  when
+              amount  of  sockets  is  so  huge  that parsing /proc/net/tcp is
+              painful.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para ver la lista completa de opciones escribe &lt;code&gt;ss --help&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Algunos ejemplos prácticos:&lt;/p&gt;
+
+&lt;h3 id=&#34;mostrar-todos-los-sockects-a-la-escucha&#34;&gt;Mostrar todos los sockects a la escucha&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ ss -l
+State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::sunrpc                                                         :::*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:sunrpc                                                          *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                           ::1:smtp                                                           :::*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                     127.0.0.1:smtp                                                            *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:17500                                                           *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:43076                                                           *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::50925                                                          :::*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;&lt;/span&gt;
+Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
+&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;                                                       192.168.1.36:60240                                                  207.97.227.239:ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El parámetro &lt;strong&gt;-o&lt;/strong&gt; permite establecer qué opciones mostrar, varios ejemplos son:&lt;/p&gt;
+
+&lt;h3 id=&#34;mostrar-conexiones-smtp-establecidas&#34;&gt;Mostrar conexiones SMTP establecidas&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state established &amp;#39;( dport = :smtp or sport = :smtp )&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;mostrar-conexiones-http-establecidas&#34;&gt;Mostrar conexiones HTTP establecidas&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state established &amp;#39;( dport = :http or sport = :http )&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En los casos anteriores se ha filtrado únicamente los paquetes TCP con estado &lt;em&gt;established&lt;/em&gt;. Para mostrar otros estados puedes escribir:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -4 state NOMBRE-DEL-FILTRO&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde &lt;strong&gt;-4&lt;/strong&gt; indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguientes valores:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;established&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;syn-sent&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;syn-recv&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;fin-wait-1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;**fin-wait-2 **&lt;/li&gt;
+&lt;li&gt;**time-wait **&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;closed&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;close-wait&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;last-ack&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;listen&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;closing&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;all&lt;/strong&gt; : Todos los estados de arriba&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;connected&lt;/strong&gt; : Todos los estados salvo listen y closed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;synchronized&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bucket&lt;/strong&gt; : Mostrar estados mantenidos como minisockets, como time-wait and syn-recv.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;big&lt;/strong&gt; : Lo contrario al estado bucket.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -4 state time-wait&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;encontrar-procesos-locales-conectados-al-servidor-x-servidor-gráfico&#34;&gt;Encontrar procesos locales conectados al servidor X (Servidor Gráfico)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -x src /tmp/.X11-unix/*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;hacer-coincidir-direcciones-remotas-y-puertos&#34;&gt;Hacer coincidir direcciones remotas y puertos&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss dst ADDRESS_PATTERN
+
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##&lt;/span&gt;
+ss dst 192.168.1.5
+
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5:http##&lt;/span&gt;
+ss dst 192.168.1.5:http
+ss dst 192.168.1.5:smtp
+ss dst 192.168.1.5:443
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Mostrar conexiones realizadas por una ip en el puerto http hacia nuestra máquina&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss dst 123.1.2.100:http
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Es posible mostrar todas las conexiones realizadas por cualquier máquina, por el puerto http por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss dst *:http&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;hacer-coincidir-direcciones-locales-y-puertos&#34;&gt;Hacer coincidir direcciones locales y puertos&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss src ADDRESS_PATTERN
+&lt;span class=&#34;c1&#34;&gt;### Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##&lt;/span&gt;
+ss src 5.39.89.44
+
+&lt;span class=&#34;c1&#34;&gt;## http (80) port only ##&lt;/span&gt;
+ss src 5.39.89.44:http
+ss src 5.39.89.44:80
+
+&lt;span class=&#34;c1&#34;&gt;## smtp (25) port only ##&lt;/span&gt;
+ss src 5.39.89.44:smtp
+ss src 5.39.89.44:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;mostrar-el-número-y-el-tipo-de-conexiones-activas&#34;&gt;Mostrar el número y el tipo de conexiones activas&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss -ant &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;mostrar-un-resumen-del-estado-de-los-sockets&#34;&gt;Mostrar un resumen del estado de los sockets&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;listar-todos-los-puertos-a-la-escucha-junto-con-el-pid-del-programa&#34;&gt;Listar todos los puertos a la escucha junto con el PID del programa&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss -tlnp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;configuración-de-la-interfaz-de-red&#34;&gt;Configuración de la interfaz de red&lt;/h3&gt;
+
+&lt;p&gt;Antiguamente se usaba el comando ifconfig:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 up&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 192.168.1.1 netmask 255.255.255.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En &lt;strong&gt;iproute2&lt;/strong&gt; la configuración de interfaces de red se lleva a cabo con el subcomando &lt;strong&gt;link&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h3 id=&#34;activar-interfaz&#34;&gt;Activar interfaz&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip link set eth0 up&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde eth0 debe ser la interfaz de red a activar.&lt;/p&gt;
+
+&lt;h3 id=&#34;establecer-dirección-ip-a-la-interfaz&#34;&gt;Establecer dirección ip a la interfaz&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr add 192.168.1.33/24 dev eth0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para comprobar la correcta configuración de la interfaz, muestra la información de dicha interfaz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr ls&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ip addr show&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ip addr ls eth0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;enrutamiento&#34;&gt;Enrutamiento&lt;/h3&gt;
+
+&lt;p&gt;La versión moderna del comando &lt;code&gt;route -n&lt;/code&gt; o &lt;code&gt;netstat -r&lt;/code&gt; es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para añádir o eliminar reglas de enrutamiento se usa &lt;code&gt;ip ro add|del destino via gateway&lt;/code&gt;. Para añadir una nueva ruta a 10.0.0.0/16:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro add 10.0.0.0/16 via 192.168.0.1&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ip ro del 10.0.0.0/16 via 192.168.0.1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;encontrar-la-ruta-hacia-una-dirección-ip&#34;&gt;Encontrar la ruta hacia una dirección IP&lt;/h3&gt;
+
+&lt;p&gt;Para averiguar qué interfaz está usando tu pc, puedes usar el comando &lt;em&gt;ip route get IP&lt;/em&gt;. Así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip route get 5.39.89.44&lt;/span&gt;
+5.39.89.44 via 10.61.29.89 dev eth1  src 192.168.1.36
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;está usando la interfaz eth1, gateway 10.61.29.89 y la interfaz tiene la ip privada 192.168.1.36&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
+
+&lt;p&gt;Aunque este artículo ha sido una remezcla de comandos, espero que haya quedado claro para qué sirve cada uno, y a partir de ahora podrás sacarle partido.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Socket Statistics on Linux&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/ss-iproute2-linux&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;
+&lt;em&gt;Some useful command with iproute2&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/howto/useful-command-of-iproute2&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;
+&lt;em&gt;ss: Display Linux TCP / UDP Network and Socket Information&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;
+&lt;em&gt;SS Utility: Quick Intro&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/files/ss.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bash syntax highlighted script</title>
+      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
+      <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;quot;&lt;/span&gt;
+
+ sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# &amp;amp; print the coincidence with the pattern&lt;/span&gt;
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#I search in the text, every key word contained in keyWords, and add the label&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I am going to explain a bit the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This line is the one that takes charge highlighting the comments. We look for one &amp;#8220;*&amp;#8221;, that are the comments in bash, and any character after &amp;#8221; (. *) &amp;#8220;. &amp;#8220;&amp;amp;&amp;#8221;, it is in order that in this place, it prints everything what coincided with the pattern &amp;#8221; (. *) &amp;#8220;, that is to say, the comment.&lt;/p&gt;
+
+&lt;p&gt;There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).&lt;/p&gt;
+
+&lt;p&gt;I hope that it is useful&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bash syntax highlighted script [Improved]</title>
+      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
+      <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;Commands directory&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if jobs let local logout popd pushd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while&amp;quot;&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;#Agrego mas palabras clave de los directorios sbin y bine, que contienen comandos.&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /bin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /sbin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
+sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bloquear una IP atacando el servidor mediante iptables</title>
+      <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
+      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
+
+&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP DROP SPOOF A:&amp;quot;&lt;/span&gt;
+iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Estas directivas bloquean el tráfico entrante hacia la interfaz &lt;em&gt;ethX&lt;/em&gt; a la dirección especificada tras el parámetro &lt;em&gt;-s&lt;/em&gt;, además, en las entradas del log aparecerá como &lt;strong&gt;IP DROP SPOOF A:&lt;/strong&gt; cada vez que el firewall bloquee el intento de conexión.&lt;/p&gt;
+
+&lt;p&gt;El primer comando es el que define cómo se registrará en el log, el segundo es el que bloquea la dirección.&lt;/p&gt;
+
+&lt;p&gt;Para comprobar que efectivamente se está bloqueando al atacante, basta con mirar al log:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Feb  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; 02:15:30 NOMBRESERVIDOR kernel: IP DROP SPOOF A:IN&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ethX &lt;span class=&#34;nv&#34;&gt;OUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MAC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX &lt;span class=&#34;nv&#34;&gt;SRC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IPBLOQUEADA &lt;span class=&#34;nv&#34;&gt;DST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IPSERVIDOR &lt;span class=&#34;nv&#34;&gt;LEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LONGITUDPAQUETE &lt;span class=&#34;nv&#34;&gt;TOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 &lt;span class=&#34;nv&#34;&gt;PREC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 &lt;span class=&#34;nv&#34;&gt;TTL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;117&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15234&lt;/span&gt; DF &lt;span class=&#34;nv&#34;&gt;PROTO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TCP &lt;span class=&#34;nv&#34;&gt;SPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17652&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;PUERTODESTINO &lt;span class=&#34;nv&#34;&gt;WINDOW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;65535&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;RES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 SYN &lt;span class=&#34;nv&#34;&gt;URGP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Decidí investigar desde cuando se estaba produciendo el ataque, y, para mi sorpresa, se estaba intentando acceder por fuerza bruta al blog desde hacía 8 días. Concretamente, hubo &lt;strong&gt;18209&lt;/strong&gt; intentos de conexión. Este número puede sacarse fácilmente contando las líneas del log en las que estaba involucrada la ip atacante:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cat /ruta/log/acceso.log &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep xx.xx.xx.xx &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; wc -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde &lt;strong&gt;xx.xx.xx.xx&lt;/strong&gt; debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.&lt;/p&gt;
+
+&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Iptables Drop IP Address&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-iptables-drop/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

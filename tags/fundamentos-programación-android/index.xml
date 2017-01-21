@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fundamentos Programación Android on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/fundamentos-programaci%C3%B3n-android/index.xml</link>
+    <description>Recent content in Fundamentos Programación Android on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/fundamentos-programaci%C3%B3n-android/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos</title>
+      <link>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
+      <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
+
+&lt;p&gt;Las actividades conforme se van ejecutando van apilandose en una pila. Cuando finalizamos una actividad, con el método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o con la tecla atrás del teléfono, la actividad se extrae de la pila, quedando encima de la pila la actividad que se abrió anteriormente.&lt;/p&gt;
+
+&lt;p&gt;Si ejecutamos una actividad varias veces sin cerrarla, ésta aparecerá en la pila tantas veces como la hayamos ejecutado. La pila de actividades se envía al segundo plano cuando la aplicación pierde el foco, y vuelve al primer plano cuando la aplicación vuelve a tomar el control.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos modificar este comportamiento con &lt;strong&gt;&lt;em&gt;flags&lt;/em&gt;&lt;/strong&gt; que pasamos al objeto Intent a partir de las propiedades de la activity descritas en el &lt;a href=&#34;http://developer.android.com/guide/topics/manifest/manifest-intro.html&#34;&gt;AndroidManifest&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Si una pila de tareas se abandona por el usuario durante un periodo de tiempo y el sistema necesita más recursos, se limpia la pila de actividades (excepto la actividad principal), este comportamiento se puede modificar en el manifiesto:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Atributo&lt;/th&gt;
+&lt;th&gt;Función&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;alwaysRetainTaskState&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Si vale true, se mantiene la pila aunque se abandone durante mucho tiempo&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;clearTaskOnLaunch&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Si es true, se limpia la pila (excepto la actividad principal) cada vez que se lleve al segundo plano&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;finishOnTaskLaunch&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Similar a la anterior, pero solo se aplica a la actividad con este atributo fijado a true.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h2&gt;
+
+&lt;p&gt;Como cada aplicación se ejecuta en un proceso Linux distinto, todos los componentes y procesos de dicha aplicación corren en el mismo hilo. Esto se puede modificar con el atributo &lt;strong&gt;&lt;em&gt;process&lt;/em&gt;&lt;/strong&gt; de cada componente (activity, provider, receiver y service). En la etiqueta &lt;strong&gt;&lt;em&gt;application&lt;/em&gt;&lt;/strong&gt; del manifest podemos poner este atributo para que sea aplicado a todos sus elementos.&lt;/p&gt;
+
+&lt;p&gt;Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto &lt;strong&gt;&lt;em&gt;Thread&lt;/em&gt;&lt;/strong&gt; de java, aunque Android proporciona otros objetos para facilitar el trabajo, como &lt;strong&gt;&lt;em&gt;Handler, AsyncTask o Looper.&lt;/em&gt;&lt;/strong&gt; (entre otros).&lt;/p&gt;
+
+&lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fundamentos programación Android: Ciclo de vida de los componentes</title>
+      <link>https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/</guid>
+      <description>&lt;p&gt;Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos &lt;strong&gt;&lt;em&gt;callback&lt;/em&gt;&lt;/strong&gt; que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.&lt;/p&gt;
+
+&lt;h3 id=&#34;ciclo-de-vida-de-los-receiver&#34;&gt;Ciclo de vida de los Receiver&lt;/h3&gt;
+
+&lt;p&gt;Tienen un ciclo de vida muy corto, ya que se activan al producirse un mensaje de difusión, que capturan con el método callback:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onReceive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;curContext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;broadcastMsg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si este método se está ejecutando, se considera el Receiver activo. Esto supone un problema si la tarea a ejecutar es pesada y la lanzamos a un hilo aparte. Cuando termine el método, Android considera que el receiver está inactivo, pero el hilo sigue ejecutándose y puede ser eliminado de la pila, interrumpiendo la tarea.&lt;/p&gt;
+
+&lt;p&gt;Se soluciona lanzando un servicio desde este método que se encarga de hacer las tareas pesadas, así, al tener el servicio su propio ciclo de vida, seguirá ejecutandose, aunque el receiver se considere inactivo.&lt;/p&gt;
+
+&lt;h3 id=&#34;ciclo-de-vida-de-los-contentprovider&#34;&gt;Ciclo de vida de los ContentProvider&lt;/h3&gt;
+
+&lt;p&gt;Su ciclo es muy corto, permanecen activos mientras sean referenciados por un ContentResolver.&lt;/p&gt;
+
+&lt;h3 id=&#34;ciclo-de-vida-de-las-actividades&#34;&gt;Ciclo de vida de las Actividades&lt;/h3&gt;
+
+&lt;p&gt;Tiene tres estados:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Activo:&lt;/em&gt;&lt;/strong&gt; La actividad se encuentra en primer plano (Encima de la pila de tareas) e interactuando con el usuario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Pausado:&lt;/em&gt;&lt;/strong&gt; La actividad sigue siendo visible para el usuario, pero ha perdido el foco. Por ejemplo que se haya mostrado un cuadro de dialogo delante de nuestra actividad. Debemos guardar el estado de la interfaz y los datos de esta actividad antes de entrar en este estado, ya que podríamos perderlos si el sistema necesita más recursos de memoria.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Parado:&lt;/em&gt;&lt;/strong&gt; La actividad no es visible para el usuario, queda a disposición del sistema para borrarla de la pila en caso de necesitar memoria.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La clase Activity dispone de métodos que se llaman cada vez que ésta cambia de estado, para permitirnos realiar tareas como guardar los datos antes de cambiar de estado, y cargar la actividad más rápido la proxima vez que se muestre. A continuación un diagrama con los distintos estados por los que pasa una actividad:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;ciclo de vida actividades&#34; alt=&#34;ciclo de vida actividades&#34;  height=&#34;711&#34; width=&#34;545&#34; src=&#34;https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;onCreate(Bundle savedInstanceState):&lt;/em&gt;&lt;/strong&gt; Este método se llama al crear la actividad. Siempre se sobreescribe para configurar la vista, crear adaptadores, rellenar los objetos con sus valores etc. Puede recibir como parámetro el estado anterior de la actividad para que podamos restaurarla.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;onPause():&lt;/em&gt;&lt;/strong&gt; Es llamado justo antes de que se traiga a primer plano otra actividad. Aquí es donde debemos guardar los datos para no perder la información de la actividad si esta es sacada de la pila. Dentro de este método también se suele parar las tareas pesadas que consuman CPU.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;onStop():&lt;/em&gt;&lt;/strong&gt; Es llamado cuando la actividad se va a ocultar durante un largo periodo de tiempo. Si el sistema necesita recursos, puede que este método no sea llamado, por lo que es recomendable guardar los datos en el método &lt;strong&gt;&lt;em&gt;onPause().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;onDestroy:&lt;/em&gt;&lt;/strong&gt; Último en llamarse antes de destruir la actividad. Puede llamarse a través del método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o llamarlo el sistema para conseguir más memoria. Para saber quién lo llamó, podemos usar &lt;strong&gt;&lt;em&gt;isFinishing().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Un ejemplo de uso de estos métodos puede ser cuando tenemos una aplicación que carga datos de internet, deberíamos cargar los datos al inicio de la actividad, una vez descargados, guardaríamos el estado de la actividad para que si es destruida, no sea necesario volver a descargar los datos.&lt;/p&gt;
+
+&lt;p&gt;Para realizar esta operación usaríamos el método &lt;strong&gt;&lt;em&gt;onSavedInstanceState()&lt;/em&gt;&lt;/strong&gt;, que crearía un &lt;strong&gt;&lt;em&gt;Bundle&lt;/em&gt;&lt;/strong&gt; con los datos necesarios que pasaríamos al método &lt;strong&gt;&lt;em&gt;onCreate()&lt;/em&gt;&lt;/strong&gt; la segunda vez que cargaramos la actividad, sin necesidad de volver a descargar los datos.&lt;/p&gt;
+
+&lt;h3 id=&#34;ciclo-de-vida-de-service&#34;&gt;Ciclo de vida de Service&lt;/h3&gt;
+
+&lt;p&gt;Los servicios se pueden usar de dos formas, dependiendo de como lo lancemos, su ciclo será uno u otro.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si lo lanzamos con &lt;strong&gt;&lt;em&gt;startService()&lt;/em&gt;&lt;/strong&gt; se ejecurará hasta que termine. Los servicios se configurar en el método &lt;strong&gt;&lt;em&gt;onCreate()&lt;/em&gt;&lt;/strong&gt; y se liberan en el &lt;strong&gt;&lt;em&gt;onDestroy()&lt;/em&gt;&lt;/strong&gt;. Podemos terminar un servicio externamente con &lt;strong&gt;&lt;em&gt;Context.stopService()&lt;/em&gt;&lt;/strong&gt; o dentro del mismo servicio con &lt;strong&gt;&lt;em&gt;Service.stopSelf() o Service.stopSelfResult().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Si lo lanzamos con &lt;strong&gt;&lt;em&gt;Context.bindService()&lt;/em&gt;&lt;/strong&gt; podremos interactuar con él mediante una interfaz que el servicio debe exportar. Terminaremos el servicio con &lt;strong&gt;&lt;em&gt;Context.unbindService().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A continuación el diagrama con el ciclo de vida de los servicios:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ciclo de vida servicios&#34; title=&#34;Ciclo de vida servicios&#34;  height=&#34;521&#34; width=&#34;432&#34; src=&#34;https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-limpieza-de-procesos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_18/&#34;&gt;Fundamentos programación Android: Limpieza de Procesos&lt;/a&gt;&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fundamentos programación Android: Conceptos básicos y componentes</title>
+      <link>https://elbauldelprogramador.com/fundamentos-programacion-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/fundamentos-programacion-android/</guid>
+      <description>&lt;h2 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;Hemos visto&lt;/a&gt; que un proyecto Android está formado por varias carpetas estructuradas, pero lo que se instala en los dispositivos es un fichero con extensión &lt;strong&gt;&lt;em&gt;.apk (application package)&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Estos ficheros se generan con la herramienta apk (En el directorio tools del SDK) al terminar de compilar.&lt;/p&gt;
+
+&lt;p&gt;Las aplicaciones en Android tienen su propio entorno seguro de ejecución:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cada aplicación se ejecuta en su propio proceso Linux. El sistema lo crea cuando ejecutamos la aplicación y lo destruye cuando no se use pasado un rato o cuando el Sistema necesite recursos para otra aplicación&lt;/li&gt;
+&lt;li&gt;Cada proceso se ejecuta en su propia máquina virtual, de esta manera está aislada del resto. De esta forma ante cualquier fallo en la aplicación solo afecta a su máquina virtual, no al resto.&lt;/li&gt;
+&lt;li&gt;A cada aplicación se le asigna un identificador de usuario &lt;strong&gt;&lt;em&gt;(uid)&lt;/em&gt;&lt;/strong&gt; distinto. Los permisos de los archivos que refieren a la aplicación (caché, datos etc) son solo accesibles por dicho usuario. Es posible asignar un mismo &lt;strong&gt;&lt;em&gt;uid&lt;/em&gt;&lt;/strong&gt; a dos aplicaciones para que compartan una misma máquina virtual y recursos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h2&gt;
+
+&lt;p&gt;La característica principal de Android es la reutilización de componentes de una aplicación por otra.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, imaginemos que estamos desarrollando una aplicación que almacena datos de libros junto con una fotografía de su portada. En lugar de tener que escribir el código para capturar o seleccionar la imagen de la portada, podemos pasar el control a la aplicación de la cámara del teléfono, o a la galería, así una vez tomemos una foto o seleccionemos una imagen de la galería se nos devuelve el control a nuestra aplicación con la imagen seleccionada.&lt;/p&gt;
+
+&lt;p&gt;Para poder realizar estas operaciones, estamos obligados a dividir nuestras aplicaciones en módulos independientes que solo realicen una tarea concreta.&lt;/p&gt;
+
+&lt;p&gt;Veamos ahora otro ejemplo, muchos terminales tienen la opción de compartir algo en las redes sociales, por ejemplo Twitter, un módulo claramente definido de esta aplicación es por ejemplo la opción de &lt;strong&gt;&lt;em&gt;&amp;#8220;enviar un mensaje o tweet&amp;#8221;&lt;/em&gt;&lt;/strong&gt;, si seguimos la filosofía de dividir nuestras aplicaciones en módulos, la función de enviar un mensaje sería una actividad independiente que recibe como parámetro el mensaje a enviar, si no recibe parámetro se mostrará el formulario para escribirlo. Dicha actividad usará la API de Twitter para enviar el mensaje y finalmente cerrará la actividad devolviendo el control a la aplicación que la llamó. De esta forma, y con los filtros adecuados en el &lt;strong&gt;&lt;em&gt;AndroidManifest.xml&lt;/em&gt;&lt;/strong&gt;, cada aplicación que quiera compartir algo en twitter llamará a esta actividad pasandole como parámetro el mensaje.&lt;/p&gt;
+
+&lt;p&gt;Con esto llegamos a la conclusión de que las aplicaciones Android no tienen un punto de entrada y otro de salida, podemos definir todos los que necesitemos.&lt;/p&gt;
+
+&lt;p&gt;Para realizar todas estas operaciones, Android proporciona cuatro tipos de &lt;strong&gt;&lt;em&gt;componentes básicos&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h3 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h3&gt;
+
+&lt;p&gt;Son las encargadas de mostrar la interfaz de usuario e interactuar con él. Responden a los eventos generados por el usuario (pulsar botones etc). Heredan de la clase &lt;strong&gt;&lt;em&gt;Activity&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El aspecto de la actividad se aplica pasando un objeto View(Encargado de dibujar una parte rectangular en la pantalla, pueden contener más objetos View, además todos los componentes de la interfaz (botones, imagenes etc) heredan de View) al método &lt;strong&gt;&lt;em&gt;Activity.setContentView()&lt;/em&gt;&lt;/strong&gt;, que es el método encargado de dibujar la pantalla. Normalmente las vistas ocupan toda la pantalla, pero se pueden configurar para que se muestren como flotantes. Las actividades también pueden llamar a componentes que se mostrarán sobre su View (como dialogos o menús).&lt;/p&gt;
+
+&lt;p&gt;Por cada pantalla distinta hay una actividad distinta, normalmente las aplicaciones tienen una actividad fijada como punto de entrada. Por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;Una aplicación que lee el correo tendrá las siguientes actividades:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RecibidosActivity: muestra el listado de mensajes recibidos.&lt;/li&gt;
+&lt;li&gt;LeerMensajeActivity: Muestra el contenido de un mensaje.&lt;/li&gt;
+&lt;li&gt;CrearMensajeActivity: recibe como parámetro los datos necesarios, si no hay, muestra el formulario para rellenarlos y envia el mensaje.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para esta aplicación definimos como punto de entrada &lt;strong&gt;&lt;em&gt;recibidosActivity&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;CrearMensajeActivity&lt;/em&gt;&lt;/strong&gt;, para que otras aplicaciones puedan reutilizarlas.&lt;/p&gt;
+
+&lt;h3 id=&#34;servicios&#34;&gt;Servicios&lt;/h3&gt;
+
+&lt;p&gt;No tienen interfaz visual y se ejecutan en segundo plano, se encargan de realizar tareas que deben continuar ejecutandose cuando nuestra aplicación no está en primer plano. Todos los servicios extienden de la clase &lt;strong&gt;&lt;em&gt;Service&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Continuando con el ejemplo anterior, la aplicación de correo tendrá un servicio que comprobará y descargará nuevos correos. Es posible lanzar o conectar con un servicio en ejecución con la interfaz que proporciona la clase &lt;strong&gt;&lt;em&gt;Service.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Los servicios disponen de un mecanismo para ejecutar tareas pesadas sin bloquear la aplicación ya que se ejecutan en un hilo distinto.&lt;/p&gt;
+
+&lt;h3 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h3&gt;
+
+&lt;p&gt;Simplemente reciben un mensaje y reaccionan ante él, extienden de la clase &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt;, no tienen interfaz de usuario, pero pueden lanzar Actividades como respuesta a un evento o usar &lt;strong&gt;&lt;em&gt;NotificationManager&lt;/em&gt;&lt;/strong&gt; para informar al usuario.&lt;/p&gt;
+
+&lt;p&gt;Android habitualmente lanza muchas notificaciones de sistema (llamadas entrantes, nuevos correos, nuevos sms etc). Si ponemos como ejemplo la aplicación del correo mencionada anteriormente, esta tendría un &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; escuchando el mensaje &lt;strong&gt;&lt;em&gt;nuevo_correo&lt;/em&gt;&lt;/strong&gt;, que lanzaría el servicio cada vez que detectara uno. Cuando esto sucediera, se mandaría un aviso a la barra del sistema para alertar al usuario.&lt;/p&gt;
+
+&lt;h3 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h3&gt;
+
+&lt;p&gt;Ponen un grupo de datos a disposición de distintas aplicaciones, extienden de la clase &lt;strong&gt;&lt;em&gt;ContentProvider&lt;/em&gt;&lt;/strong&gt; para implementar los métodos de la interfaz, pero para acceder a esta interfaz se ha de usar una clase llamada &lt;strong&gt;&lt;em&gt;ContentResolver&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Con esta clase se permite acceder al sistema de ficheros, bases de datos SQLite o cualquier otra fuente de datos unificada.&lt;/p&gt;
+
+&lt;p&gt;Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.&lt;/p&gt;
+
+&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fundamentos programación Android: Limpieza de Procesos</title>
+      <link>https://elbauldelprogramador.com/fundamentos-programacion-android_18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_18/</guid>
+      <description>&lt;p&gt;Android va destruyendo componentes inactivos para liberar memória, pero los elminia teniendo en cuenta cual es el de menor importancia:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Los primeros en ser elmininados son los procesos vacíos (Son aplicaciones cerradas que se mantienen en memoria para cargar rápidamente la aplicación la proxima vez que se abra.)&lt;/li&gt;
+&lt;li&gt;Procesos en segundo plano, estos son las aplicaciones que ya han ejecutado su método &lt;strong&gt;onStop()&lt;/strong&gt;, Android confecciona una lista con los procesos en este estado y elimina en primer lugar el más antiguo.&lt;/li&gt;
+&lt;li&gt;Despues elminina los procesos de servicio. (si sigue necesitando más memoria.)&lt;/li&gt;
+&lt;li&gt;Si aún necesita más memoria, elimina los procesos pausados.&lt;/li&gt;
+&lt;li&gt;Si con esto sigue necesitando, finalmente elimina el proceso en primer plano.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Es muy importante implementar bien los métodos de estado, para evitar perden información.&lt;/p&gt;
+
+&lt;h2 id=&#34;siguiente-tema-programación-android-trabajar-con-actividades-y-pasar-parámetros-entre-ellas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;Programación Android: Trabajar con actividades y pasar parámetros entre ellas&lt;/a&gt;&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

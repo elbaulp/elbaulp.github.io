@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crear Miniaturas De Imagenes on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/crear-miniaturas-de-imagenes/index.xml</link>
+    <description>Recent content in Crear Miniaturas De Imagenes on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/crear-miniaturas-de-imagenes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crear miniaturas de imágenes [Mejorado]</title>
+      <link>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</guid>
+      <description>&lt;p&gt;He mejorado el &lt;a href=&#34;https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/&#34;&gt;script que subí hace unos días&lt;/a&gt; para crear miniaturas de &lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Añadir automáticamente el tamaño de una imagen con python&#34;&gt;imágenes&lt;/a&gt;, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -e /usr/bin/convert &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#Compruebo que el programa imagemagick esta insatado&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --directory --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Selecciona el directorio de las imágenes&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+     0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+       &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;quot;¿Quiere hacer miniaturas de todas las imágenes del directorio? s/n: &amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; respuesta
+       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; $&lt;span class=&#34;nv&#34;&gt;respuesta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;S&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; $&lt;span class=&#34;nv&#34;&gt;respuesta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;s&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Compruebo la respuesta del usuario&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;imagenes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;ls &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# almaceno todos los archivos de la carpeta seleccionada&lt;/span&gt;
+        mkdir &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/miniaturas
+      &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in $imagenes
+     &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/$i &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+       &lt;span class=&#34;nv&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+       &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Procesando imagen &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i ...&amp;quot;&lt;/span&gt;
+       /usr/bin/convert -thumbnail 180x128 &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/$i &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/miniaturas/$i
+      &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Miniaturas creadas.&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+     &lt;span class=&#34;nv&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --filename&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/ --file-selection --multiple --separator&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt; --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Selecciona la imagenes&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+      0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+       mkdir &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/miniaturas
+       &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in $img
+       &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+         &lt;span class=&#34;nv&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Procesando imagen &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i ...&amp;quot;&lt;/span&gt;
+        /usr/bin/convert -thumbnail 180x128 &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/$i &lt;span class=&#34;nv&#34;&gt;$d&lt;/span&gt;ir/miniaturas/$i
+       &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+       &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Miniaturas creadas.&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+       &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+      1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No seleccionó nada&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+     -1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Ocurrió un error&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Imagemagick no esta instalado, puede instalarlo haciendo &amp;#39;sudo aptitude install imagemagick&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

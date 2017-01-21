@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seguridad on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/seguridad/index.xml</link>
+    <description>Recent content in Seguridad on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/seguridad/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hackeando Tu Monitor De Pantalla</title>
+      <link>https://elbauldelprogramador.com/hackeando-tu-monitor-de-pantalla/</link>
+      <pubDate>Fri, 12 Aug 2016 07:06:02 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/hackeando-tu-monitor-de-pantalla/</guid>
+      <description>&lt;figure&gt;
+  &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Hackeando-Tu-Monitor-De-Pantalla.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800px&#34; height=&#34;400px&#34;&gt;
+  &lt;/amp-img&gt;
+  &lt;figcaption&gt;Imagen: Lorenzo Franceschi-Bicchierai/Motherboard&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;En el blog de [Bruce Schneier]() he leido esta interesante noticia que os traduzco:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Un grupo de investigadores ha encontrado la forma de hackear directamente el pequeño ordenador que controla el monitor de la pantalla sin acceder directamente al ordenador en sí (Lo que entendemos por la torre, el portatil etc). Tanto el mini ordenador de la pantalla como el ordenador, ven los píxeles que se muestran por pantalla &amp;ndash; por tanto es posible espiar lo que el usuario hace &amp;ndash; así como manipular los píxeles y mostrar imágenes diferentes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Cui&lt;/em&gt;, el científico que trabaja en &lt;em&gt;Reb Ballon &lt;a href=&#34;https://elbauldelprogramador.com/category/security-now/&#34; title=&#34;Articulos de seguridad&#34;&gt;Security&lt;/a&gt;&lt;/em&gt; y Doctor por la Universidad de Columbia, presentó su investigación en la &lt;strong&gt;Def Con&lt;/strong&gt; de este año.&lt;/p&gt;
+
+&lt;p&gt;El hack funciona del siguiente modo: Si el hacker consigue que pinches en un enlace malicioso, o que visites una web, puede atacar el ordenador embebido en la pantalla, más en concreto su &lt;em&gt;firmware&lt;/em&gt;. Este mini ordenador es el que controla el menú de la pantalla, donde ajustamos el brillo etc.&lt;/p&gt;
+
+&lt;p&gt;Para hacerlo funcionar, es necesario subir un pequeño programa al monitor para que espere a recibir instrucciones. Una vez que el programa está instalado, la forma de comunicarse con él es a través de un píxel. Es decir, el programa esperará recibir instrucciones de un pixel que parpadee. Dicho pixel puede estar incluido en cualquier video o imagen. En esencia, el píxel está subiendo código al monitor.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Cui&lt;/em&gt; dice que esto podría servir para espiar, pero también para mostrar en la pantalla cosas que no deberían estar. Por ejemplo, en un monitor que controla una planta nuclear, podría mostrarse una imagen falsa que indique que hay una emergencia falsa.&lt;/p&gt;
+
+&lt;p&gt;Los investigadores alertan de que esta vulnerabilidad puede afectar a más de mil millones de monitores.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, el ataque tiene un problema, es excesivamente lento. Quizá no sea práctico para atacar ordenadores domésticos, pero sí monitores de control industrial, en los cuales las pantallas suelen ser estáticas.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://motherboard.vice.com/read/hackers-could-break-into-your-monitor-to-spy-on-you-and-manipulate-your-pixels&#34; title=&#34;Hackers Could Break Into Your Monitor To Spy on You and Manipulate Your Pixels&#34;&gt;motherboard.vice.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2016/08/hacking_your_co.html&#34; title=&#34;Hacking Your Computer Monitor&#34;&gt;schneier.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Imagen via Lorenzo Franceschi-Bicchierai/Motherboard&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement Technology (CET)</title>
+      <link>https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/</link>
+      <pubDate>Tue, 05 Jul 2016 20:09:47 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/</guid>
+      <description>&lt;p&gt;Hace tiempo que hablamos aquí sobre lo que es un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits&#34;&gt;Buffer Overflow&lt;/a&gt; y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo está basado en el episodio #565 de Security Now!, &lt;em&gt;Control-Flow Enforcement Technology (CET)&lt;/em&gt;, puedes ver todos los artículos traducidos en la página &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Página de episodios traducidos&#34;&gt;security now!&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;cómo-pretende-intel-acabar-con-los-buffers-overflows&#34;&gt;Cómo pretende Intel acabar con los buffers overflows&lt;/h1&gt;
+
+&lt;p&gt;Básicamente Intel añadirá una nueva instrucción a sus procesadores, llamada &lt;strong&gt;ENDBRANCH&lt;/strong&gt; y una nueva funcionalidad llamada &lt;strong&gt;Shadow stack&lt;/strong&gt;, que podría traducirse como pila oculta. Antes de meternos de lleno a describir ambas novedades, analicemos el problema.&lt;/p&gt;
+
+&lt;h1 id=&#34;un-poco-de-historia&#34;&gt;Un poco de historia&lt;/h1&gt;
+
+&lt;p&gt;El problema con la programación orientada al retorno (&lt;em&gt;return oriented-programming&lt;/em&gt;) es que la gente inteligente ideó una forma de conseguir ejecutar código que ya tenía privilegios de ejecución. A lo largo de los años se ha producido una batalla entre gente intentando explotar programas y las compañías intentando idear métodos que lo impidieran.&lt;/p&gt;
+
+&lt;p&gt;La primera medida de prevención fue el bit &lt;strong&gt;NX&lt;/strong&gt; (&lt;em&gt;No-eXecute bit&lt;/em&gt;), este bit se añadió a los sistemas para evitar los problemas mencionados en el párrafo anterior, que consistía en proporcionar datos al sistema y conseguir que esos datos se ejecutaran. Es decir, en estos sistemas no se diferenciaba lo que era código para ejecutar y lo que eran los datos, por lo que si conseguías que el procesador ejecutara unos datos cuidadosamente proporcionados&amp;hellip; te hacías con el sistema. En la arquitectura Von Neuman clásica, los datos e instrucciones comparten el mismo espacio.&lt;/p&gt;
+
+&lt;h2 id=&#34;instrucción-nx&#34;&gt;Instrucción NX&lt;/h2&gt;
+
+&lt;p&gt;Como hemos mencionado, esta compartición de espacio entre datos e instrucciones tenía el siguiente problema: Si consigues que el procesador ejecute una instrucción de salto (&lt;em&gt;jump&lt;/em&gt; ) a esa zona de datos que contiene intencionadamente instrucciones, el procesador las ejecutará. En orden de prevenir este tipo de ataques se creó la el bit &lt;strong&gt;NX&lt;/strong&gt;, una bandera o flag que se añadió al hardware que especifica qué región de memoria no puede ejecutarse. De esta forma, si alguien introduce datos y mediante una instrucción &lt;em&gt;jmp&lt;/em&gt; salta a ellos, el procesador no ejecutará las intrucciones en esos datos porque están marcados con el flag &lt;strong&gt;NX&lt;/strong&gt;. Pero como siempre, la gente es muy lista.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-saltarse-la-protección-del-bit-nx&#34;&gt;Cómo saltarse la protección del bit NX&lt;/h2&gt;
+
+&lt;p&gt;Ya que esta protección estaba activada, los hackers idearon otra forma de saltarsela, intentar desactivar el bit saltando a alguna región de memoria que sea de ejecución y tenga la llamada al sistema que desactiva el bit &lt;strong&gt;NX&lt;/strong&gt;, normalmente saltaban a una subrutina del kernel, y sobre-escribían la dirección de retorno para saltar a la parte donde reside el código que ellos quieren ejecutar. De este modo ya volvían a poder ejecutar lo que quisieran en la región de datos. ¿Cual fue la contramedida de Intel en ese entonces?  &lt;em&gt;ASLR&lt;/em&gt; (&lt;em&gt;Address Space Layout Randomization&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;qué-es-aslr-address-space-layout-randomization&#34;&gt;Qué es ASLR (Address Space Layout Randomization)&lt;/h2&gt;
+
+&lt;p&gt;Para prevenir los ataques del tipo anterior, Intel ideo otra solución, aleatorizar la distribución del espacio en el que se reparte el código ejecutable del sistema operativo. Sin embargo, debido al diseño de la arquitectura, no tenían mucho espacio de donde aleatorizar, normalmente disponían solo de 8 bits, es decir 256 posibles localizaciones en memoria. 256 opciones no son muchas, así que los malos podían simplemente probar suerte, fallarían 255 de cada 256 veces, pero acertarían 1 de cada 256, una baja probabilidad de acierto, pero mejor que 0.&lt;/p&gt;
+
+&lt;h3 id=&#34;mi-ordenador-se-ha-quedado-colgado-por-alguna-misteriosa-razón&#34;&gt;Mi ordenador se ha quedado colgado por alguna misteriosa razón&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;Seguro que alguna vez os ha pasado, el ordenador se queda colgado, os aparece una pantallazo azul&amp;hellip; y simplemente habéis reiniciado y todo parece estar correcto, pues bien, esto fruto de alguien probando suerte en vuestro sistema, y fallando una de esas 255 veces que puede equivocarse “probando suerte” intentando hacerse con vuestro PC.&lt;/p&gt;
+
+&lt;h1 id=&#34;la-nueva-instrucción-endbranch-de-intel&#34;&gt;La nueva instrucción ENDBRANCH de Intel&lt;/h1&gt;
+
+&lt;p&gt;Despues de este pequeño repaso por la historia de las vulnerabilidades, vamos a describir la nueva instrucción que Intel ha creado para acabar con los &lt;em&gt;Buffers Overflows&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
+
+&lt;p&gt;Con esta simple mejora, se acaba el problema de sobre-escribir la dirección de retorno de una función para permitir al atacante saltar a una porción de codigo que él controla. Al obligar a que la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt; sea la primera instrucción de todas las subrutinas, define un único punto de entrada válido. Cualquier intento de saltar a la mitad o al final de una función es imposible, ya que el proceso se abortará.&lt;/p&gt;
+
+&lt;h1 id=&#34;la-pila-stack-y-la-nueva-funcionalidad-de-intel-shadow-stack&#34;&gt;La pila (Stack) y la nueva funcionalidad de Intel, Shadow Stack&lt;/h1&gt;
+
+&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
+
+&lt;p&gt;Para resolver este problema Intel ha diseñado la llamada &lt;em&gt;Shadow Stack&lt;/em&gt; o pila oculta. Es una pila a la que el desarrollador no tiene acceso, y mantiene una copia de los parámetros de la pila normal, como dirección de retorno etc, pero nada de datos. Cuando el programador modifica la pila, lo hace en la normal, a la que tiene acceso. Y aquí reside la fortaleza del &lt;em&gt;Shadow Stack&lt;/em&gt;, al no tener acceso, cuando el sistema mira la dirección de retorno, si esta dirección no coincide en ambas pilas, alguien ha modificado la dirección de retorno en la pila normal y el proceso se aborta. Y así, Intel ha puesto fin a años de vulnerabilidades debidas al simple hecho de no comprobar que el tamaño de los datos que intentamos guardar en una variable, no cabe en el espacio que tienen reservado. Una obra maestra.&lt;/p&gt;
+
+&lt;p&gt;Además, no implica ningun decremento en el rendimiento del sistema, ya que está implementado en hardware, es problema de Intel añadir los transictores necesarios a sus procesadores para que esto funcione.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Me ha parecido un tema muy interesante y quería compartirlo con vosotros, espero que también os haya gustado. Dejanos un comentario para hacernos llegar tu opinión!&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security Now 565 Control-Flow Enforcement Technology (CET) | &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/565 &amp;quot;Security Now 565
+Control-Flow Enforcement Technology (CET&#34;&gt;twit.tv&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Episodio en Youtube | &lt;a href=&#34;https://www.youtube.com/watch?v=W3AdFoJ8lCs &amp;quot;Security Now 565
+Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)</title>
+      <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
+      <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</guid>
+      <description>&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/original2.jpg&#34; alt=&#34;&#34; title=&#34;original&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
+
+&lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Éste es claramente el peor método de todos, en términos de &lt;a href=&#34;https://elbauldelprogramador.com/category/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;. La gran mayoría de sitios con reputación no usan este método. Si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De ninguna manera. No importa cual sea la longitud de tu contraseña o cómo de segura sea, si está almacenada en texto plano y el sitio es comprometido, tu contraseña será accesible por todo el mundo, sin ningún trabajo. Aún así, sí que importa en términos de ocultar la contraseña de amigos y conocidos, que pueden intentar adivinarla, pero no hay nada que hacer en el caso de que el sítio se vea comprometido.&lt;/p&gt;
+
+&lt;h3 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Para añadir más protección a la contraseña de la que proporciona el texto plano, la mayoría de los sítios cifran la contraseña antes de almacenarla en sus servidores. El cifrado, para aquellos que no lo sepan, usa una clave especial para convertir la contraseña a una cadena de texto aleatoria. Alguien que disponga estas cadenas aleatorias de texto, no será capaz de loggearse en tu cuenta a no ser que sepa la clave, la cual podría usar para descifrar la contraseña.&lt;/p&gt;
+
+&lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sítio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
+
+&lt;h3 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: Si se dispone del hash, no es posible ejecutar el algoritmo invertidamente para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
+
+&lt;p&gt;Aún así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; &amp;#8212; que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas. &amp;#8212; Se puede mirar fácilmente en el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;a href=&#34;http://es.wikipedia.org/wiki/Secure_Hash_Algorithm&#34; target=&#34;_blank&#34;&gt;SHA-1&lt;/a&gt; para &amp;#8216;password1&amp;#8242;. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Jeff Atwood&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles se crackean rápidamente. Su mayor debilidad, sin embargo, no es la complejidad, si no la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;a href=&#34;http://xkcd.com/936/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt; llamado &amp;#8220;correct horse battery staple&amp;#8221;) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
+
+&lt;h3 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria &amp;#8212; llamada &amp;#8220;salt&amp;#8221; &amp;#8212; al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes &amp;#8220;salteados&amp;#8221; en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;a href=&#34;http://lifehacker.com/5916177/65-million-linkedin-accounts-may-be-compromised-change-your-passwords-now&#34; target=&#34;_blank&#34;&gt;hackearon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente, sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo &amp;#8212; más que usar rainbow tables &amp;#8212; pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
+
+&lt;h3 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;a href=&#34;http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html&#34; target=&#34;_blank&#34;&gt;están apostando por los hashes lentos&lt;/a&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos &amp;#8212; como el algoritmo &lt;a href=&#34;http://en.wikipedia.org/wiki/Bcrypt&#34; target=&#34;_blank&#34;&gt;bcrypt&lt;/a&gt; &amp;#8212; los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que importa. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
+
+&lt;h3 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h3&gt;
+
+&lt;p&gt;Entonces, ¿Qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;No usar servícios con mala seguridad:&lt;/strong&gt; Aunque no podemos controloar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servícios darnos de alta. Nunca deberíamos darnos de alta con servícios que usan texto plano o cifrado para almacenar las contraseña, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;a href=&#34;http://blog.cloudflare.com/keeping-passwords-safe-by-staying-up-to-date&#34; target=&#34;_blank&#34;&gt;servicio web CloudFlare&lt;/a&gt;, es hacer click en el enlace &amp;#8220;no recuerdo mi contraseña&amp;#8221;. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada &amp;#8212; y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos demostrado más arriba, una contraseña más segura, es menos probable de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable &amp;#8212; solo significa que llevará más tiempo. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta que filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos, entonces esas cuentas estarán a salvo incluso si alguna de nuestras cuentas se compromete. Si usamos la misma contraseña para cada sitio, una vulnerabilidad en algún sitio puede significar un mundo de problemas para ti.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar OAuth si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Ya &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/&#34; target=&#34;_blank&#34;&gt;hablamos sobre OAuth antes&lt;/a&gt;, un protocolo que permite logearnos usando la cuenta de Google, Facebook o twitter. Si no sabemos cómo de seguro es un sitio, y ofrece la opción de usar OAuth, úsalo &amp;#8212; Es probable que Google, Facebook y twitter tengan mejor seguridad, y si el sitio es vulnerado, simplemente le denegamos acceso a nuestra cuenta de Google, Facebook o Twitter.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
+
+&lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;a href=&#34;https://elbauldelprogramador.com/noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; target=&#34;_blank&#34;&gt;desarrollo de aplicaciones web&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/?s=udacity&#34; target=&#34;_blank&#34;&gt;udacity&lt;/a&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
+
+&lt;p&gt;A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan muchos de estos métodos, sobre todo el hash con salt usando SHA-256. También se habla de bcrypt, que básicamente es igual que el anterior, pero recibe como parámetro un número, que será el tiempo que la función de cifrado estará sin hacer nada, para conseguir así el objetivo de que no sea posible descifrar las contraseñas tan rápido. Os dejo unos vídeos sobre el tema y recomiendo que hagáis el curso.&lt;/p&gt;
+
+&lt;h3 id=&#34;bcrypt&#34;&gt;Bcrypt&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;S66XVE68NCc&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;rainbow-tables&#34;&gt;Rainbow Tables&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;SOV0AeHuHaQ&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;crear-salts&#34;&gt;Crear Salts&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;hcWQNwdQVx0&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;hashear-salts&#34;&gt;Hashear Salts&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;yBN3r2Fwze8&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;validar-salts&#34;&gt;Validar Salts&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;gDLUM38mm6c&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;validar-salts-solución&#34;&gt;Validar Salts (Solución)&lt;/h3&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;Zy6eNdzmn1w&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagen | de &lt;a href=&#34;http://www.shutterstock.com/pic.mhtml?id=47788978&#34; target=&#34;_blank&#34;&gt;palsur&lt;/a&gt;
+Fuente | &lt;a href=&#34;http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter&#34; target=&#34;_blank&#34;&gt;LifeHacker&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo eliminar tu identidad online: Guía Fundamental para el Anonimato y Seguridad en Internet</title>
+      <link>https://elbauldelprogramador.com/como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Esta es la traducción de un artículo que me pareció muy interesante para tener en cuenta si queremos ir implementando al menos algunas costumbres y buenas prácticas para navegar anónimamente en internet. Hay algunos tips que propone que no pueden aplicarse en todos los países, pero sin embargo vale la pena conocer las formas para que cada uno pueda pensar de qué forma puede lograrlo. &lt;em&gt;Luzcila&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El anonimato es algo que no existe hoy en día. Todo lo que haces es trackeado, desde las compras que haces para navegar en internet, hasta las fotos que tomas con tu iPhone. Todo lo que alguna vez dijiste e hiciste en internet todavía está allí, en algún lado. Esto es llamado &lt;em&gt;caching&lt;/em&gt;.
+Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Google.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/draft.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/draft.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;592px&#34; height=&#34;312px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;!--ad--&gt;
+
+Incluso si los datos no son almacenados y son eliminados, deben haber sido escritos en un disco duro, lo que significa que son vulnerables a la reconstrucción de archivos por “&lt;a href=&#34;http://en.wikipedia.org/wiki/File_carving&#34; target=&#34;_blank&#34;&gt;File carving&lt;/a&gt;” y &lt;a href=&#34;http://es.wikipedia.org/wiki/Recuperaci%C3%B3n_de_datos&#34; target=&#34;_blank&#34;&gt;recuperación de datos&lt;/a&gt;. No importa lo que hagas, algo sobre tí quedará en internet. Si compras una casa, contraes matrimonio, incluso si mueres, algo relacionado contigo residirá en la red. La información está en registros públicos por todos lados y puede ser encontrada en una simple búsqueda con Google Search.
+
+### ¿Para quién y qué es esta Guía?
+
+Esta guía es para todos - usuarios web diarios y quienes odian a los &lt;a href=&#34;http://es.wikipedia.org/wiki/Hacker_(seguridad_inform%C3%A1tica)#Sombrero_negro&#34; target=&#34;_blank&#34;&gt; _hackers de sombrero negro_&lt;/a&gt;(“&lt;a href=&#34;http://es.wikipedia.org/wiki/Cracker&#34; target=&#34;_blank&#34;&gt;crackers&lt;/a&gt;”). Intenta educar sobre la importancia de practicar el anonimato y utilizar seguridad en internet.
+
+Enfrentémoslo, los trolls existen en la web y es seguro que haremos enojar a uno de ellos. Este puede ser el error más grande que puedas cometer. Si tienes un nombre de usuario que puede ser googleado y tu perfil de Facebook aparece, alguien puede descubrir tu nombre real. Esto puede demostrar que es un gran problema para tí. Un troll puede tener a todos sus amigos y seguidores para atacarte con &lt;a href=&#34;http://en.wikipedia.org/wiki/Denial-of-service_attack&#34; target=&#34;_blank&#34;&gt;DDoS &lt;/a&gt;de alguna forma. Llenándote de spam tu casa con llamadas telefónicas, cartas desagradables, y atacando directamente tu red doméstica puede ser un resultado de ésto. Tu información personal podría estar en cualquier lado, causando una gran carga en tu vida. Esto es conocido en internet como *d0x*.
+
+Cualquiera es un potencial objetivo. Pero no te preocupes, hay maneras para poder mitigar tal probabilidad, o incluso eliminarlas completamente, dependiendo de cuánto daño te hayas causado. Esta guía está aquí para enseñarte cómo vivir una vida normal en la internet y operar normalmente, pero mantenerte seguro y mantener tu información y negocios a salvo de ojos entrometidos. Hay un millón de razones para querer que tus apuestas en internet estén separadas de las de tu vida real. Tienes derecho al anonimato.
+
+### ¿Cómo puedo quedar expuesto?
+
+Depende. Si utilizas el mismo nombre de usuario y usas tu nombre real en un sitio web cualquiera, puedes ser fácilmente interceptado. Aquí presento algunos hábitos y actividades que son **malas ideas** cuando se pretende el anonimato:
+
+  * **Redes sociales** &amp;#8212; Éstas revelan todo tipo de información. Más comunmente, la gente muestra los cumpleaños, comparte fotos de la familia, publica información de contacto y números de teléfono, y muestra su nombre real. Esta es información sensible y es peligroso hacerla pública. Imagina simplemente las personas que no quieres que tengan acceso a esta información. Las redes sociales muestran la información públicamente, y muchos de ustedes todavía no lo saben. Esto no es la mejor información para tener visible al público.
+  * **Cometer crímenes** &amp;#8212; No solo está mal cometer crímenes, sino que también terminas siendo arrestado, y eso termina con tu nombre en los artículos de noticias. Esto hace una gran irreversible huella en internet. Serás “buscable” a través de muchas bases de datos en línea. El punto esencial es: Trata de no divulgar nada ilegal.
+  * **Mantener un blog** &amp;#8212; Si tienes un blog personal como un diario, estás publicando toda tu información privada al mundo entero para que la vea. Tal vez quieras revaluar lo que estás haciendo. ¿Es el blog realmente tan importante como para permitir que extraños sepan cosas que no deberían saber sobre tí? Abrir una ventana de exposición en tu vida personal es prácticamente invocar a un escalofriante desastre. Esto debería ser evitado a cualquier precio por el bien del Anonimato.
+  * **Postear comentarios públicos** &amp;#8212; Tener en cuenta cuando comentas en un artículo público, que tu comentario estará visible a través de un motor de búsqueda. Muchos de ustedes publican información privada, pensando que estás a salvo porque te escondes detrás del nombre de usuario haxx0r9000, pero si usas Facebook con el nombre real, apuntada desde la URL &lt;http:&gt;, eres bastante desafortunado.
+  * **Registros telefónicos públicos** &amp;#8212; Tener un número localizable mediante la búsqueda de un nombre son malas noticias. Puedes obtener un Motorola Droid en un plan prepago, entonces ¿cómo puedes quejarte?
+  * **Hacer compras con tarjetas de crédito** &amp;#8212; No puedes confiar en la seguridad de otro. Por ejemplo, digamos que compras algo en un sitio de remates y guardas la información de tu tarjeta de crédito ahí. Si alguien **hackea** la red de ellos, quién sabe si la información estaba encriptada. Toda tu información personal, números de tarjeta de crédito, e incluso el historial de compras puede estar disponible para el hacker. Es lo mismo que sucedería si un comercio no tira el papeleo con información sensible. Una alternativa sería retirar dinero de un cajero automático (ATM).
+
+### Anonimato Perfecto desde el Inicio
+
+Para un anonimato perfecto, probablemente necesites empezar desde cero. Necesitaremos ocuparnos de nuestras viejas cuentas. Prioriza hacer esto, y saturalas de información errónea. Esto asegurará que si la información alguna vez es recuperada, será realmente difícil determinar qué datos son correctos y cuáles no.
+
+#### Métodos de Inundación y Eliminación Segura
+
+  * Llena tu casilla de correo con mailbombers (mails masivos). Esto inundará las cachés y te asegurará que la información sensible se sobreescribe. Bombardea tu propia casilla utilizando uno de los tantos &lt;a href=&#34;https://encrypted.google.com/url?q=http://www.softpedia.com/get/Internet/E-mail/Mailinglist/Mail-Bomber.shtml&amp;sa=U&amp;ei=rvLRTviNN8eqsQK97MjbDg&amp;ved=0CCcQFjAE&amp;usg=AFQjCNGVoWuUmnaY9AhMqLNmUxNQ9Z7KSA&#34; target=&#34;_blank&#34;&gt;email bombers&lt;/a&gt; que hay dando vueltas por internet. Son fáciles de usar.
+  * Sube fotos aleatoreas de otras personas encontradas en Google. Esto hará que sea difícil determinar a quién pertenece la cuenta.
+  * Cambia la información de tus cuentas de forma tal que no tengan sentido. Esto también ayudará a desvincularlas de tu vida real.
+
+#### Elimina todos los sitios y cuentas de redes sociales anteriores
+
+&lt;a href=&#34;http://deleteyouraccount.com/&#34; target=&#34;_blank&#34;&gt;Delete Your Account &lt;/a&gt;es un buen sitio para ayudarte a eliminar cualquier cuenta de mayor (o menor) escala que puedas tener en internet. Puedes buscar alfabéticamente sitios como Facebook, Reddit, Monster, Hotmail, Google, etc.
+
+Desgraciadamente, si crees que debes mantener tus cuentas, depende de tí eliminar fotos, videos, comentarios en otros perfiles, etc. para lograr cierto grado de anonimato. Yo no le recomendaría nunca esto a nadie que quiera el anonimato completo.
+
+Si tienes información residual olvidada en la caché de Google, como hemos mencionado anteriormente, puedes deshacerte de ella eliminándola con &lt;a href=&#34;http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=1091779&amp;lr=all&#34; target=&#34;_blank&#34;&gt;sus formularios de pedidos&lt;/a&gt;. Esto es muy importante para tu anonimato. Una vez que te asegures que tu presencia online ha sido eliminada, estás listo para comenzar desde cero. Procedamos.
+
+### Proteger tus datos y almacenamiento
+
+#### Consigue un disco de estado sólido
+
+Desecha tu disco rígido. Si estamos hablando de anonimato perfecto, es la única forma de garantizarlo. Una solución ideal sería utilizar un Disco de Estado Sólido (SSD). A diferencia de los Díscos Rígidos (HDD), los SSD son inmunes a ‘*file carving’* y recuperación de datos, porque los SSD utilizan memoria flash. En otras palabras, los bits de datos no son conservados después de eliminarlos del SSD, los datos se pierden en su totalidad.
+
+#### Si tienes que usar un HDD, utiliza una Máquina Virtual
+
+Por otro lado, los discos rígidos regulares usan un brazo mecánico dentro del disco rígido para polarizar el plato con una carga magnética (positiva o negativa). Ésto se traduce a los ceros y unos binarios que definen nuestras computadoras. En un disco rígido estandard, fragmentos de archivos descartados pueden ser fácilmente recuperados a sus estados previos.
+
+Si los precios de los SSD son muy altos para tu presupuesto, y estás forzado a utilizar un disco rígido normal, un truco para evitar que tu sistema operativo almacene cualquier información sensible es tener una computadora host, y luego crear &lt;a href=&#34;http://null-byte.wonderhowto.com/run-virtual-computer-within-your-host-os-with-virtualbox-0131369/&#34; target=&#34;_blank&#34;&gt;una máquina virtual &lt;/a&gt;en ella. Utilízala como la computadora efectiva, y si necesitas asegurarte que la información de tu computadora no puede ser recuperada, &lt;a href=&#34;http://null-byte.wonderhowto.com/permanently-delete-files-protect-privacy-and-passwords-0131078/&#34; target=&#34;_blank&#34;&gt;elimina de forma segura &lt;/a&gt;los archivos y así nunca serán recuperados. Esto ocurre porque los datos son escritos múltiples veces para dañar la habilidad de leer y recuperarlos.
+
+#### Cifrado de Datos y Unidades
+
+Para protegerte de forma local incluso antes de entrar en una red, el cifrado de unidades es una buena idea. Al encriptar, se ofuscan los datos de forma tal que se vuelven ilegibles - excepto que una clave de acceso sea provista y se corresponda con el hash encontrado en el encabezado de los datos encriptados. Cuando la clave es ingresada, los datos son desencriptados y se pueden leer. Para aprender a cifrar tu disco rígido, revisa &lt;a href=&#34;http://null-byte.wonderhowto.com/secure-your-computer-part-3-encrypt-your-hdd-ssd-prevent-data-theft-0131211/&#34; target=&#34;_blank&#34;&gt;Null Byte&lt;/a&gt;.
+
+### Crear y administrar emails
+
+Necesitas crear un nuevo email que no tenga nada asociado contigo en la vida real, y ninguna relación con tu anterior administrador de internet, que podría derivar en que tu información sea rastreada con tu nueva identidad. Nombrarla “jparker1983” dice mucho sobre quién sos.
+
+#### ¿Qué pasa si el Servicio de Email requiere un número de teléfono para activación?
+
+Si la dirección de correo que creas requiere un número de teléfono, como suele ocurrir, configura un número de redirección gratis (free forwarding phone) en &lt;a href=&#34;http://inumbr.com/&#34; target=&#34;_blank&#34;&gt;iNumbr&lt;/a&gt;. Esto te permite básicamente esconder tu número de teléfono. Luego de configurar una cuenta, iNumbr llama a tu teléfono y al número destino. Esto puentea las dos llamadas, enmascarando efectivamente tu número de teléfono.
+
+Acostúmbrate a crear un nuevo email para todo lo que usas, para mejorar el anonimato y la seguridad. Esto:
+
+  * Evita que un email individual sea robado (si por casualidad ocurre), lo que en ese caso causaría la pérdida de acceso a todas tus cuentas por ello.
+  * Mantiene los contactos personales, empresariales y los que son sólo de internet separados. Esto separa a la gente que conoces de la vida real de la gente de la que probablemente no confíes lo suficiente como para mezclarla con tus amigos personales o asociados.
+  * Mantiene tus cosas organizadas.
+  * Te permite usar una cuenta de email de prueba para sitios que pueden llenarte de spam, pero requieren una dirección de correo.
+
+#### Crear y administrar contraseñas seguras
+
+Esto es una regla obligada para la seguridad en internet. [Una buena contraseña][2] no significa crear una cadena de texto que algún otro no podrá adivinar. Hay muchas cosas a tener en cuenta para crear una buena contraseña. Sin embargo, no solo crear una contraseña algorítmicamente fuerte es lo que importa, también cómo las administras cuenta. Null Byte creó una &lt;a href=&#34;http://power-byte.wonderhowto.com/blog/mastering-security-part-1-manage-and-create-strong-passwords-0130257/&#34; target=&#34;_blank&#34;&gt;guía &lt;/a&gt;sobre cómo hacerlo:
+
+#### Buenos requerimientos para crear una contraseña fuerte
+
+  * Más de 20 caracteres
+  * Uso completo de los caracteres ASCII
+  * Nunca utilices la misma contraseña dos veces.
+  * Nunca respondas las preguntas de seguridad con exactitud, éstas sólo permiten otra forma de que un atacante entre en la cuenta.
+
+### Haz que tu navegador no revele nada sobre tí
+
+Configura tu navegador de forma tal que no tenga que usar un agente de usuario. Los agentes de usuario le informan tu navegador y sistema operativo a un sitio web via JavaScript - algo que puede revelar quién sos. Por lo tanto, deberías &lt;a href=&#34;http://null-byte.wonderhowto.com/hack-your-firefox-user-agent-spoof-your-os-and-browser-0131294/&#34; target=&#34;_blank&#34;&gt;falsificar esta información&lt;/a&gt;. Además, deberías tener un plugin como &lt;a href=&#34;http://noscript.net/&#34; target=&#34;_blank&#34;&gt;NoScript&lt;/a&gt;. Otra alternativa es desactivar JavaScript y Flash. Éstos pueden dejar cookies en tu computadora que podrían ser rastreadas desde los sitios web que visitas.
+
+#### Desactiva JavaScript y configura Flash con activación manual en tu navegador
+
+En la configuración de los diferentes navegadores (Chrome, Firefox, Opera, etc) puedes encontrar fácilmente la opción para &amp;#8220;desactivar Javascript&amp;#8221;. Por ejemplo en Chrome (v.37) está en Menú -&gt; Configiuración -&gt; Privacidad -&gt; Configuración de Contenido -&gt; Javascript: &amp;#8220;No permitir que los sitios ejecuten JavaScript&amp;#8221;.
+
+#### Utiliza Tor para enmascarar tu dirección IP y encriptar tu tráfico
+
+Puedes también usar [Tor bundle][3] y tener un navegador standalon que pueda ser borrado de forma segura en cualquier momento. Esto además encriptará tu tráfico y enmascarará tu dirección IP (tu ID único en internet). Esto hace que tu tráfico no esté disponible para ser buscado, encontrado y husmeado, **incluso por tu ISP** . Tu IP además se vuelve segura de la gente que no quieres que la vea (o cualquiera sea la razón por la que quieres esconder tu IP).
+
+&lt;span class=&#34;embed-youtube&#34; &gt;&lt;/span&gt;
+
+### Asegura tu tráfico del análisis y realiza conexiones anónimas a los sitios
+
+Tenemos algunas soluciones a mano. Encriptar el tráfico y falsificar nuestra IP protege nuestra identidad en los sitios web. Además nos protege de la gente que husmea nuestro tráfico mientras navegamos fuera de casa.
+
+#### Falsifica tu dirección MAC para hacerte anónimo en tu red
+
+Primero y principal, necesitas falsificar tu dirección MAC si estás usando una conexión fuera de tu casa. Esto hará que las direcciones de tus computadoras se falsifique con una que vos especifiques. Con esta práctica, estarás protegido de otros usuarios en la red y el router. Esto además te asegura que tu dirección MAC no puede ser rastreada hasta tu persona (porque si fue comprada con cualquier otra cosa que no sea efectivo o prepago, ellos saben exactamente quién sos). Si alguien ve tu dirección MAC, los usuarios de Windows pueden usar &lt;a href=&#34;https://encrypted.google.com/url?q=http://www.klcconsulting.net/Change_MAC_w2k.htm&amp;sa=U&amp;ei=WhvSTvqaCq7jsQKjn6H9Dg&amp;ved=0CCIQFjAC&amp;usg=AFQjCNHMPDy30kh_Gn0DdmNz7mYs_LrmHA&#34; target=&#34;_blank&#34;&gt;esta&lt;/a&gt; guía. Si eres usuario de Linux, ingresa el siguiente comando en la terminal:
+
+```bash
+sudo ifconfig wlan0 down &amp;&amp; sudo ifconfig hw ether 00:11:22:33:44:55 &amp;&amp; sudo ifconfig wlan0 up
+```
+
+#### Encripta tu tráfico con un tunel SSH o una VPN
+
+Necesitas que tu tráfico esté a salvo de los &lt;a href=&#34;http://null-byte.wonderhowto.com/use-wireshark-steal-your-own-local-passwords-0131503/&#34; target=&#34;_blank&#34;&gt;analizadores de tráfico&lt;/a&gt; cuando uses una Wi-Fi fuera de tu casa. La solución más simple es configurar un &lt;a href=&#34;http://null-byte.wonderhowto.com/blog/create-ssh-tunnel-server-and-client-linux-0130302/&#34; target=&#34;_blank&#34;&gt;tunel SSH&lt;/a&gt; local. Éste encriptará y luego reenviará el tráfico de vuelta a tu computadora antes de enviarlo al destino, y de esta forma queda protegido. Una solución alternativa que puede cubrir todos los puertos y todas las plataformas es usar una &lt;a href=&#34;http://null-byte.wonderhowto.com/blog/chain-vpns-for-complete-anonymity-0131368/&#34; target=&#34;_blank&#34;&gt;VPN&lt;/a&gt;. Estas soluciones además pueden protegerte en tu casa cuando quieres accedar a un sitio web ya que estás enmascarando quién eres y de dónde eres. Recomiendo que intenten obtener Eastern block VPNs de paises de Asia, por ejemplo. Estados Unidos no tiene jurisdicción allí, entonces, los logs no pueden ser obtenidos.
+
+#### Usa los sitios de redes sociales adecuadamente para mantener el anonimato
+
+Si te encuentras en una circunstancia donde absolutamente **necesitas** usar sitios de redes sociales, hay un número de cosas que pueden terminar mal, por lo tanto necesitarás ser cuidadoso. Cualquier sitio de red social que tengas debe tener información falsa para que sigas siendo anónimo.
+
+#### Los NO para tener en una red social
+
+  * NO uses información real de ningún tipo. Ni nombres, ni dirección, ni nada.
+  * NO subas imágenes reales de tí mismo (o haz lo que yo hago, usa una foto ofuscada de tí. De todos modos, no incluyas tu nariz y ojos juntos, ese área triangular de tu cara es lo que hace identificar tu rostro fácilmente).
+  * NO hables con extraños. Sólo habla con tu familia y amigos personales que te conozcan a tí y tu alias. Un extraño en quien confíes puede ventilar tu información.
+  * NO comentes en publicaciones públicas.
+  * NO muestres tu número de teléfono.
+  * NO muestres tu dirección de correo electrónico.
+  * NO dejes que Twitter o cualquier otro exponga tu ubicación. Hazte el hábito de controlar que la configuración de las aplicaciones no tienen activado el permiso de publicar alguna información sin tu permiso expícito.
+
+### ¿Cómo puedo probar mi anonimato?
+
+Hay una cantidad de servicios gratis que existen en internet para que uses a tu disposición para ayudarte a obtener información personal de tí mismo, u otros. Incluso cuando tienes muy poco para empezar, puedes obtener una gran cantidad de d0x de alguien.
+
+  * &lt;a href=&#34;http://www.pipl.com/&#34; target=&#34;_blank&#34;&gt;Pipl &lt;/a&gt;es un motor de búsqueda que busca páginas web no indexadas, indexadas, nombres de usuario comunes, direcciones de email, números de teléfono - incluso nombre y ubicación. Esta es una herramienta inmensamente util. Puedes buscar una persona vía email, nombre, número u otra información.
+  * &lt;a href=&#34;http://www.tineye.com/&#34; target=&#34;_blank&#34;&gt;Tineye &lt;/a&gt;es una herramienta avanzada de búsqueda de imágenes, con la cual puedes tomar una imagen de internet, luego buscar sitios que tengan la misma imagen. Una herramienta útil, si no estás yendo a ningún lado con un d0x. Si la persona utiliza nombres de usuario diferentes, tiene un nombre falso en su perfil de facebook, y lo configuró privado, puedes tomar su foto por defecto, y encontrar otros sitios que tengan esa imagen. Dado que la gente comunmente usa la misma imagen por defecto como perfil, probablemente termines en otra red social, que tal vez revele más información.
+  * &lt;a href=&#34;http://www.archives.com/&#34; target=&#34;_blank&#34;&gt;Archives &lt;/a&gt;(Advertencia: Este probablemente desaprobarías). Esta pequeña joya de sitio que encontré tiene una pequeña e interesante falla. Tienen registros reales de empleadores de personas, números de teléfonos, residencias previas, árboles genealógicos (incluyendo niños), registros de arresto, artículos de diarios en los que la persona haya sido mencionada, y más. Este es un servicio PAGO. Pero no te alarmes, he dicho que tiene un defecto.
+
+#### Explotar los Servicios Pagos de Archives
+
+  * Ve a una estación de servicio o shopping, compra una tarjeta de débito prepaga, y gasta el dinero o compra algo que realmente quieras.
+  * Crea una cuenta en Archives (usa un nuevo correo para spam, ellos envían una gran cantidad de cosas). Busca el usuario y compra registros que elijas. Incluso si no tienes dinero en la tarjeta, la transacción se realiza y ellos te dan los registros. El sitio tiene un mecanismo que retiene el número de tarjeta si falla la transacción, y le da 30 minutos. Entonces puedes enloquecer un ratito y “comprar” lo que necesites. Es un gran pequeño defecto, pero luego ellos prohiben ese número de tarjeta en el sitio (esto fue personalmente encontrado y probado).
+
+### Antes de ingresar un número de teléfono online
+
+Si necesitas usar tu número de teléfono online para negocios o &lt;a href=&#34;https://encrypted.google.com/url?q=http://www.craigslist.com/&amp;sa=U&amp;ei=QBHSTtqpCcrhsQLNsNCzCQ&amp;ved=0CBkQFjAA&amp;usg=AFQjCNGfbuZXrUTSf6Lo2LfaH6nPgZBcfg&#34; target=&#34;_blank&#34;&gt;bolsas de trabajo &lt;/a&gt;y esas cosas, tienes un par de buenas opciones disponibles. Mi favorita es usar Google Voice. Con &lt;a href=&#34;http://www.google.com/voice&#34; target=&#34;_blank&#34;&gt;Google Voice&lt;/a&gt; puedes operar incluso mejor que antes.
+
+#### Beneficios de la aplicación Google Voice:
+
+Puedes:
+
+  * Redireccionar llamadas al teléfono de tu casa
+  * Hacer que las llamadas con ell teléfono de tu casa parezcan venir de tu número de Google Voice
+  * Archivar logs.
+  * Mandar mensajes de texto
+  * Cambiar tu número de teléfono infinitas veces
+
+### Asegúrate de que tu Smartphone no te delata
+
+No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ubicación estén desactivadas. Por defecto, sé que el iTouch guarda tu ubicación GPS en cada foto que tomas. Si ésta aparece en algún momento en internet, ya se puede examinar en hexadecimal para determinar las coordenadas.
+
+&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet.w654.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;381px&#34; height=&#34;515px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El Explorador de Archivos de Windows (Windows File Explorer) además provee lectura de ubicación de GPS en su vista de propiedades&lt;/p&gt;
+
+&lt;p&gt;Si no quieres que nadie lea los datos que pasan a través de tu teléfono, tal vez quieras deshacerte de tu teléfono por completo. iOS y Droid han demostrado que almacenan todo lo que haces. Ellos incluso pueden exponer tus datos cuando utilizas una conexión HTTPS.&lt;/p&gt;
+
+&lt;!--YouTube Error: bad URL entered--&gt;
+
+&lt;h3 id=&#34;cómo-gastar-tu-dinero-de-forma-anónima&#34;&gt;Cómo gastar tu dinero de forma anónima&lt;/h3&gt;
+
+&lt;p&gt;¡Esto también puede hacerse! Gastar dinero anónimamente no es tan dificil como piensas. Para hacerlo online, primero debemos comprar una tarjeta de débito prepaga y activarla. Se puede conseguir en cualquier estación de servicio o supermercado.&lt;/p&gt;
+
+&lt;p&gt;Ten en cuenta:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Durante la activación &lt;strong&gt;NO&lt;/strong&gt; ingreses tus datos de identificación personal.&lt;/li&gt;
+&lt;li&gt;Paga con dinero en efectivo.&lt;/li&gt;
+&lt;li&gt;No registres la tarjeta con información real, como tu nombre o dirección.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para agregar anonimato, tal vez quieras utilizar &lt;a href=&#34;http://null-byte.wonderhowto.com/become-anonymous-internet-using-tor-0130391/&#34; target=&#34;_blank&#34;&gt;Tor &lt;/a&gt;para que TODO el tráfico de tus cuentas naveguen de forma anónima, no solo el usuario que está gastando el dinero.&lt;/p&gt;
+
+&lt;h4 id=&#34;gastar-dinero-en-internet&#34;&gt;Gastar dinero en internet&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Abre una cuenta en PayPal con información falsa (nombre, dirección, etc.) Esta información falsa debe corresponderse con la información ingresada cuando registraste la tarjeta de débito.&lt;/li&gt;
+&lt;li&gt;Crea una cuenta eBay con la misma información. Ésta será tu cuenta para gastar y recibir pagos.&lt;/li&gt;
+&lt;li&gt;Compra algo en eBay con tu nueva cuenta PayPal, y envíalo a la casa de un amigo bajo tu nombre falso (para evitar la pregunta inminente, los paquetes son entregados según la dirección, no el nombre).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;recibir-dinero-en-internet&#34;&gt;Recibir dinero en internet&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vende algo en tu cuenta de PayPal falsa.&lt;/li&gt;
+&lt;li&gt;Luego de recibir el pago y enviar el producto, ve a tu cuentas reales de eBay y PayPal y publica un aviso por un pedazo de papel.&lt;/li&gt;
+&lt;li&gt;Vende el papel por la misma cantidad de dinero por la que tu producto fue vendido en tu cuenta falsa. Esto te habilita para una aparentemente natural y buena transferencia. Anónima.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;protegiéndote-a-tí-mismo-de-la-ingeniería-social&#34;&gt;Protegiéndote a tí mismo de la ingeniería social&lt;/h3&gt;
+
+&lt;p&gt;Eventualmente, alguien querrá encontrar más información sobre tí. Significa que un&lt;a href=&#34;http://null-byte.wonderhowto.com/search/social-engineering/&#34; target=&#34;_blank&#34;&gt; ingeniero social &lt;/a&gt;podría darle información sobre tí a este “alguien”. Una persona podría contactarte directamente o a través de tus amigos. La siguiente lista de reglas debería protegerte a tí y tu preciada vida.&lt;/p&gt;
+
+&lt;h4 id=&#34;trata-de-no-hablar-con-extraños&#34;&gt;Trata de no hablar con extraños&lt;/h4&gt;
+
+&lt;p&gt;Lo primero que debes considerar en internet es no hacer amigos. Tener amigos online es un riesgo de seguridad que no recomiendo que tomen. Además, ¿cómo sabes que puedes confiar en ellos? Sólo hazlo si es una obligación. Recuerda, ¡es tu propia culpa si no cubres tus espaldas!&lt;/p&gt;
+
+&lt;h4 id=&#34;no-divulgues-tu-información-personal&#34;&gt;No divulgues tu información personal&lt;/h4&gt;
+
+&lt;p&gt;No des ninguna información real como ubicación, fecha de nacimiento, nombres, etc. Da información que suene legítima. Mantiene tu nueva historia de vida y evitarás que la gente busque información precisa de tí. Capacitados d0xers (Buscadores de d0x) e ingenieros sociales como yo podemos encontrar quién eres tan fácilmente como si pegaras tu nombre e identificación (DNI, SSN, etc) en la puerta de tu casa. Esta es una gran técnica no-no. **** ****&lt;/p&gt;
+
+&lt;h4 id=&#34;cambia-tus-patrones-de-discurso&#34;&gt;Cambia tus patrones de discurso&lt;/h4&gt;
+
+&lt;p&gt;He obtenido d0x de personas muchas veces simplemente analizando patrones de discurso y frases que son comunmente utilizadas por ellos. No sobreestimes el poder de la psicología o habilidades de razonamiento deductivo. Mucha gente las tiene, por lo tanto es seguro nunca asumir que tienes demasiada suerte como para caer víctima de ellos.&lt;/p&gt;
+
+&lt;h3 id=&#34;para-finalizar-8230&#34;&gt;Para finalizar&amp;#8230;&lt;/h3&gt;
+
+&lt;p&gt;Sigue esta guía minuciosamente y no deberías preocuparte nunca por tu anonimato en internet. Te conviertes en un fantasma, libre para hacer lo que quieras, sin que nadie te diga qué no hacer. Si encuentras esta guía útil, por favor, envíasela a tus amigos para ayudarlos a ser anónimos.&lt;/p&gt;
+
+&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Crédito de la imágen&lt;/em&gt; »» &lt;a href=&#34;http://www.occupy.com/article/learn-safeguard-internet-privacy-youre-007&#34; target=&#34;_blank&#34;&gt;occupy.com&lt;/a&gt; &lt;em&gt;WonderHowTo&lt;/em&gt; »» &lt;a href=&#34;http://null-byte.wonderhowto.com/how-to/remove-your-online-identity-ultimate-guide-anonymity-and-security-internet-0131741/i&#34; target=&#34;_blank&#34;&gt;How to Remove Your Online Identity: The Ultimate Guide to Anonymity and Security on the Internet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/http:&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>El modelo de seguridad de iOS (Charla del NESG en la UGR)</title>
+      <link>https://elbauldelprogramador.com/el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/</guid>
+      <description>
+
+&lt;p&gt;Hace aproximadamente dos meses empecé a asistir a las charlas del grupo de investigación NESG de mi facultad (Network Engineering &amp;amp; Security Group). En una de ellas, el conferenciante era Javier Tallón. Antiguo alumno de la facultad de Informática en Granada. Habló sobre el modelo de seguridad de iOS.&lt;/p&gt;
+
+&lt;p&gt;Recientemente me comunicó que había puesto a disposición pública las transparencias que usó. Las comparto hoy con vosotros.&lt;/p&gt;
+
+&lt;p&gt;Personalmente me gustó mucho la charla, no conocía gran parte de los aspectos de seguridad en iOS. Espero poder seguir acudiendo a este tipo de charlas por mucho tiempo.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Grupo investigación NESG&lt;/em&gt; »» &lt;a href=&#34;http://nesg.ugr.es/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
+&lt;em&gt;Javier Tallón&lt;/em&gt; »» &lt;a href=&#34;http://jtsec.es/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Entendiendo OAuth: Qué ocurre cuando te loggeas en un sitio con Google, Twitter o Facebook</title>
+      <link>https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/</guid>
+      <description>&lt;p&gt;Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.&lt;/p&gt;
+
+&lt;p&gt;Hace poco, &lt;a href=&#34;http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps&#34; target=&#34;_blank&#34;&gt; una aplicación de Twitter llamada Tweetgif fue hackeada&lt;/a&gt;, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;cómo-funciona-oauth&#34;&gt;Cómo funciona OAuth&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/06/medium1.jpg&#34; alt=&#34;&#34; title=&#34;medium&#34; width=&#34;300px&#34; height=&#34;166px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Digamos que quieres usar una aplicación como Tweetgif para postear divertidas imágenes GIF animadas en tu cuenta de Twitter. Para lograrlo, es necesario darle a Tweetgif acceso a tu cuenta de Twitter, para poder obtener tu info y postear tweets en tu nombre. En los viejos tiempos, tenías que darle a una aplicación como Tweetgif tu nombre de usuario y contraseña de Twitter, para que pueda loggearse y acceder a los servicios. No solo tenías que confiar que usen esas credenciales sabiamente, sino que también debías mantenerlas protegidas de los hackers - lo que era un verdadero gran salto de fe. Es como darle las llaves de tu casa a un extraño y confiar que no hará copias para todos sus amigos y luego robar todas tus cosas.&lt;/p&gt;
+
+&lt;p&gt;OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Para convertirse en una aplicación de Twitter, Tweetgif adquirió dos tokens del servicio de Twitter: una &amp;ldquo;Consumer Key&amp;rdquo; (Clave de Consumidor) y una &amp;ldquo;Consumer Secret&amp;rdquo; (Secreto de Consumidor). Estos son los elementos que crean una conexión entre el consumidor (en este caso, Tweetgif) y el proovedor del servicio (en este caso, Twitter).&lt;/li&gt;
+&lt;li&gt;Cuando quieres accedef a Twitter a traves de Tweetgif, éste te redirecciona a la portada de Twitter. Si no estás loggeado, te loggeas en ese momento (recuerda que le estás dando tu usuario y contraseña a Twitter, no a Tweetgif).&lt;/li&gt;
+&lt;li&gt;Twitter luego te pregunta si quieres autorizar esta aplicación, y te aclara qué permisos se le dará a la misma. Quizás pueda ver tu timeline, o tal vez pueda no sólo ver el timeline sino también postear en tu nombre. En algunos casos, puedes sólamente estar dándole acceso solamente a tu nombre de usuario y avatar para usar en sitios como Lifehacker - es simplemente una forma más fácil y segura de comentar sin tener que crear una cuenta. Cuando presionas el botón &amp;ldquo;Autorizar&amp;rdquo;, se crea un &amp;ldquo;Access Token&amp;rdquo; (Vale para acceso) y un &amp;ldquo;Access Token Secret&amp;rdquo; (Vale para acceso secreto). Son como contraseñas, pero sólo permiten que Tweetgif acceda a tu cuenta y haga las cosas que le permitiste.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Por lo tanto, en lugar de darles la llave de toda tu casa, les estás dando una llave especial que sólo abre la única habitación que quieres que entren. Pero, para usar esta llave, tienen que pedírsela al guardia, y él puede negárselas cuando quiera.&lt;/p&gt;
+
+&lt;h1 id=&#34;entonces-deberías-usar-oauth&#34;&gt;¿Entonces deberías usar OAuth?&lt;/h1&gt;
+
+&lt;p&gt;¿Por qué es mejor que simplemente ingresar las credenciales de Twitter? Obviamente, esto evita que las aplicaciones de terceros hagan cosas poco claras que no quieres que hagan, pero lo más importante es que esto significa que incluso si ellos son hackeados - como pasó con Tweetgif ayer - tu contraseña de Twitter está todavía a salvo. Los hackers tendrán la posibilidad de postear en tu nombre, seguir personas, o hacer cualquier cosa que le hayas permitido a Tweetgif, pero todo lo que necesitas hacer es ir a tu configuración de Twitter y quitarle el acceso a dicha aplicación. De este modo, tus tokens se vuelven inútiles y tu cuenta está bajo control nuevamente, sin siquiera tener que cambiar la contraseña.&lt;/p&gt;
+
+&lt;p&gt;La gran desventaja de esta innovación es que algunos sitios podrían dejar loggear usando Facebook o Twitter e intentarán postear en tu perfil, incluso si no es realmente &lt;em&gt;necesario&lt;/em&gt;. Algunos sitios, como el reproductor de música &lt;a href=&#34;http://turntable.fm/&#34; target=&#34;_blank&#34;&gt;Turntable.fm&lt;/a&gt;, no te permiten crear una cuenta - debes loggearte con Facebook o Twitter. Es conveniente, dado que no tienes que crear una cuenta, pero luego éste intenta postear en tu perfil sobre qué estás haciendo en su sitio. De manera similar, &lt;a href=&#34;http://waxy.org/2012/02/the_perpetual_invisible_window_into_your_gmail_inbox/&#34; target=&#34;_blank&#34;&gt;Google no te dice realmente qué permisos otorgas&lt;/a&gt; cuando usas OAuth. Para evitar problemas, asegúrate de leer la política de privacidad de cada aplicación a la que te conectas, y si puedes, presta atención a los permisos que cada aplicación obtiene. Si detectas algo que no quieres que la aplicación haga, simplemente no la uses. O, como alternativa, fíjate si hay una opción para desactivar esta &amp;ldquo;característica&amp;rdquo; en la configuración de la aplicación (Turntable, por ejemplo, te permite desactivar los posteos en el muro de Facebook en su configuración luego de loggearte). Y, como siempre, asegúrate de regularmente reducir tus aplicaciones autorizadas así no te metes en problemas - si no has usado alguna por un tiempo, probablemente es mejor quitarla por completo.&lt;/p&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://lifehacker.com/5918086/understanding-oauth-what-happens-when-you-log-into-a-site-with-google-twitter-or-facebook&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nueva Guía: Security for a Faster World</title>
+      <link>https://elbauldelprogramador.com/nueva-guia-security-for-a-faster-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/nueva-guia-security-for-a-faster-world/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_hp357/prgm.cgi&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif&#34; alt=&#34;Executive eBook: Security for a Faster World&#34; width=&#34;200px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With Security for a Faster World, You&amp;#8217;ll learn best practices for protecting your corporate data, keeping intruders and malware out of your network, and protecting against disgruntled employees who may attempt to use their access privileges to compromise your systems.&lt;/p&gt;
+
+&lt;p&gt;A security breach can be a major catastrophe for any organization, but large enterprises are especially at risk. Enterprise data breaches get press attention, affect thousands of customers or former customers and often have a trickle-down effect on other businesses or partners. When it comes to security, the bigger they are, the harder they fall. In sheer financial terms the cost of a single security breach is usually very significant: in 2011 the average per-incident cost for U.S. companies was $5.5 million according to research carried out by Ponemon Institute. Download this eBook to learn more.&lt;/p&gt;
+
+&lt;div class=&#34;button-post&#34;&gt;
+&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;pc=w_hp357&#34; target=&#34;_blank&#34; class=&#34;wi-button style-3&#34;&gt;Descárgala&lt;i class=&#34;icon-download icon-2x&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Suplantación de identidad en Facebook</title>
+      <link>https://elbauldelprogramador.com/suplantacion-de-identidad-en-facebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/suplantacion-de-identidad-en-facebook/</guid>
+      <description>&lt;p&gt;Leyendo el blog de &lt;a href=&#34;http://www.elladodelmal.com/&#34; target=&#34;_blank&#34;&gt;Chema Alonso&lt;/a&gt; me he encontrado con una entrada interesante que, aunque no he logrado realizarla al 100% quiero compartirla con vosotros para que lo intente quien quiera.&lt;/p&gt;
+
+&lt;p&gt;El método consiste en conseguir 3 cosas:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;La dirección de correo de la persona a suplantar.&lt;/em&gt;
+&lt;em&gt;Dirección de correo de facebook de la persona a quién se va a engañar.&lt;/em&gt;
+&lt;em&gt;Un sistema para enviar correos SMTP&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Los pasos a seguir podéis leerlos en la entrada de &lt;a href=&#34;http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html&#34; target=&#34;_blank&#34;&gt;Chema: Suplantación de identidad en Facebook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Voy a explicar lo que yo he hecho:&lt;/p&gt;
+
+&lt;p&gt;Al principio al establecer comunicación mediante telnet por el puerto 25 (el de SMTP) y escribrir los comandos siempre recibía el siguiente error:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;strong&amp;gt;550 5.6.0 Invalid header found &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;see RFC2822 section 3.6&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&amp;lt;/strong&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras buscar un poco el motivo descubrí que se debía a que me estaba saltando algunas cabeceras del protocolo, concretamente *From, To * y &lt;em&gt;Date.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;En resumen, todo el proceso queda como sigue:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;telnet smtpin.mx.facebook.com smtp
+Trying 69.171.244.11...
+Connected to smtpin.mx.facebook.com.
+Escape character is &lt;span class=&#34;s1&#34;&gt;&amp;#39;^]&amp;#39;&lt;/span&gt;.
+&lt;span class=&#34;m&#34;&gt;220&lt;/span&gt; smtpin.mx.facebook.com ESMTP
+HELO client.facebook.com
+&lt;span class=&#34;m&#34;&gt;250&lt;/span&gt; smtpin.mx.facebook.com says HELO to xx.xxx.xxx.xx:xxxxx
+MAIL from:
+&lt;span class=&#34;m&#34;&gt;250&lt;/span&gt; MAIL FROM accepted
+RCPT to:
+&lt;span class=&#34;m&#34;&gt;250&lt;/span&gt; RCPT TO accepted
+DATA
+&lt;span class=&#34;m&#34;&gt;354&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;.  finished with &lt;span class=&#34;s2&#34;&gt;&amp;quot;rn.rn&amp;quot;&lt;/span&gt;
+From: xxxxx@xxxxx.xxx
+To: xxxxxx@facebook.com
+Subject: Test
+Date: xxx, xx xxx xxxx xx:xx:xx -xxxx
+
+This is an example
+.
+&lt;span class=&#34;m&#34;&gt;450&lt;/span&gt; 4.3.2 INT-T14 http://postmaster.facebook.com/response_codes?ip&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;xx.xxx.xx.x#int Server busy, try again later
+Connection closed by foreign host.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pero sigo recibiendo un error (&lt;em&gt;450 4.3.2 INT-T14 &lt;a href=&#34;http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int&#34;&gt;http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int&lt;/a&gt; Server busy, try again later
+Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;También probé con dos programas (sin éxito), uno en&lt;a href=&#34;https://elbauldelprogramador.com/c/&#34;&gt; C++&lt;/a&gt; y otro en &lt;a href=&#34;https://elbauldelprogramador.com/python&#34;&gt;python&lt;/a&gt; que encontré en stackoverflow:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;/sys&amp;gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netinet&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netdb&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#define HELO &amp;quot;HELO xxxxxx@xxxx.xxxxrn&amp;quot;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#define DATA &amp;quot;DATArn&amp;quot;&lt;/span&gt;
+     &lt;span class=&#34;cp&#34;&gt;#define QUIT &amp;quot;QUITrn&amp;quot;&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;//#define h_addr h_addr_list[0]&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;//FILE *fin;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sockaddr_in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gethostbyname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BUFSIZ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;69.171.244.12&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;********&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;*******&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;testmailrn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wkstr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;hello how r urn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;cm&#34;&gt;/*=====Send a string to the socket=====*/&lt;/span&gt;
+
+    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;//printf(&amp;quot;Client:%sn&amp;quot;,s);&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;//=====Read a string from the socket=====*/&lt;/span&gt;
+
+    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BUFSIZ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;//printf(&amp;quot;Server:%sn&amp;quot;,buf);&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;cm&#34;&gt;/*=====MAIN=====*/&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+
+    &lt;span class=&#34;cm&#34;&gt;/*=====Create Socket=====*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AF_INET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;perror&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;opening stream socket&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;socket createdn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;cm&#34;&gt;/*=====Verify host=====*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_family&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AF_INET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;hp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gethostbyname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;fprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stderr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;%s: unknown hostn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;host_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;cm&#34;&gt;/*=====Connect to port 25 on remote host=====*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;memcpy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h_length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;htons&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* SMTP PORT */&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;connect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sockaddr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;perror&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;connecting stream socket&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Connectedn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;cm&#34;&gt;/*=====Write some data then read some =====*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* SMTP Server logon string */&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HELO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* introduce ourselves */&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/*Read reply */&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;MAIL FROM: &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;rn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* Sender OK */&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;VRFY &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;rn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Sender OK */&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;RCPT TO: &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/*Mail to*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;rn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Recipient OK*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// body to follow*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Subject: &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Recipient OK*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wkstr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.rn&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QUIT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* quit */&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// log off */&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;//=====Close socket and finish=====*/&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La versión en python:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/python&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;smtplib&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;sender&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;xxxxx@xxxxx.com&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;receivers&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;xxxxx@facebook.com&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&amp;quot;From: From Person&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;To: To Person&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;Subject: SMTP e-mail test&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;This is a test e-mail message.&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;smtpObj&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;smtplib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SMTP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;69.171.244.12&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;smtpObj&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sendmail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sender&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;receivers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Successfully sent email&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;Exception&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;exc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;mail failed; &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%s&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# give a error message&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.&lt;/p&gt;
+
+&lt;h5 id=&#34;fuente-a-href-http-www-elladodelmal-com-2012-05-suplantacion-de-identidad-en-facebook-html-target-blank-elladodelmal-a&#34;&gt;Fuente: &lt;a href=&#34;http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html&#34; target=&#34;_blank&#34;&gt;Elladodelmal&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;/string&gt;&lt;/stdio&gt;&lt;/netdb&gt;&lt;/netinet&gt;&lt;/sys&gt;&lt;/iostream&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

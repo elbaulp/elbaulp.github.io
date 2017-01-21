@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Como Actualizar Bios Asus P5b on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/como-actualizar-bios-asus-p5b/index.xml</link>
+    <description>Recent content in Como Actualizar Bios Asus P5b on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/como-actualizar-bios-asus-p5b/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Actualizar BIOS de ASUS desde Linux</title>
+      <link>https://elbauldelprogramador.com/actualizar-bios-de-asus-desde-linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/actualizar-bios-de-asus-desde-linux/</guid>
+      <description>&lt;div class=&#34;separator&#34; &gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://3.bp.blogspot.com/-wblX_BLWbE0/T0gHYglK1UI/AAAAAAAACI4/qtp0VmYrmqA/s400/b5018_firmwareupdateiconx_36031_640.png&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Toda esta historia viene al comprar una memória de 2Gb de Ram a mi pc, para aumentar la capacidad total a 4Gb, no parece que sea algo muy complicado, ya que supuestamente mi placa base soporta hasta 8Gb y uso un Sistema Operatívo de 64-bits (CrunchBang 64-bit Stable + backports).&lt;/p&gt;
+
+&lt;p&gt;Bueno, inserto la RAM en la placa base todo contento ya que ahora iba a tener 4Gb (2x1Gb y 1x2Gb) y no se mi iba a quedar colgado el pc mientras escucho música con el Eclipse abierto más el emulador Android y el Chrome&amp;#8230; (Que se come la RAM que da gusto), y resulta que solo reconoce 3Gb&amp;#8230; Tras una tarde de buscar por foros y no encontrar nada me decido a publicar mi problema en los foros de &lt;a href=&#34;http://crunchbanglinux.org/forums/post/192843/#p192843&#34;&gt;cruchbang&lt;/a&gt; y &lt;a href=&#34;http://forums.debian.net/viewtopic.php?f=7&amp;amp;t;=76419&#34;&gt;debian&lt;/a&gt;. Al principio pensaba que era un problema de que no estaba colocando las memórias en los canales correctos para que hiciera el dual channel. Pero ese no era el problema.&lt;/p&gt;
+
+&lt;p&gt;Tras una respuesta en uno de los foros miro a ver si la BIOS reconoce las 4Gb y el resultado es que solo reconoce 3Gb. Investigo el motivo por el cual solo reconoce 3Gb y llego a una página que dice que es un problema de la versión de la BIOS que se soluciona actualizando a la última versión. Así que voy a explicar el proceso de actualización de la BIOS, en mi caso para la placa base ASUS P5B Deluxe Wifi edition:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo primero que hay que hacer es bajarse el archivo de la página de ASUS, lo descomprimimos y tenemos un archivo con el modelo de la placa y de extensión .rom.&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es insertar un usb que formatearemos para realizar la actualización. Una vez insertado lo desmontamos y ejecutamos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;fdisk -cu /dev/sdb
+
+Command &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;m &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: p
+
+Disk /dev/sdb: &lt;span class=&#34;m&#34;&gt;1002&lt;/span&gt; MB, &lt;span class=&#34;m&#34;&gt;1002438656&lt;/span&gt; bytes
+&lt;span class=&#34;m&#34;&gt;31&lt;/span&gt; heads, &lt;span class=&#34;m&#34;&gt;62&lt;/span&gt; sectors/track, &lt;span class=&#34;m&#34;&gt;1018&lt;/span&gt; cylinders, total &lt;span class=&#34;m&#34;&gt;1957888&lt;/span&gt; sectors
+&lt;span class=&#34;nv&#34;&gt;Units&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; sectors of &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; * &lt;span class=&#34;nv&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes
+Sector size &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;logical/physical&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes / &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes
+I/O size &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;minimum/optimal&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes / &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes
+Disk identifier: 0x00025eb4
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1   *          &lt;span class=&#34;m&#34;&gt;62&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1956595&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;978267&lt;/span&gt;    c  W95 FAT32 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;LBA&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El siguiete paso es formatearlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;mkfs.msdos -F &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; /dev/sdb1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Despues de esto, retiramos el usb y lo volvemos a introducir en el puerto. Si se monta automáticamente, lo desmontamos. Una vez desmontado, lo montamos con el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;mount /dev/sdb1 /mnt/temp/ -o rw,flush,uid&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1000,utf8,shortname&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;win95
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Copiamos el archivo ROM de la bios dentro del USB (Asegúrate de que el nombre del archivo está en mayúsculas.)&lt;/p&gt;
+
+&lt;p&gt;Desmontamos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;umount /dev/sdb1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora reiniciamos con el usb insertado y tan pronto como veamos la pantalla de la BIOS pulsamos Alt+F2 para empezar el proceso de actualización. Seleccionamos el archivo ROM y esperamos a que finalize el proceso.&lt;/p&gt;
+
+&lt;p&gt;Despues de actualizar la BIOS, se restauran las configuraciones por defecto, de modo que es necesario volver a configurar la BIOS con los parámetros que deseemos.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;http://www.blakeanthonyjohnson.com/?p=170&#34;&gt;Fuente original&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

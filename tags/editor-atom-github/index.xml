@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Editor Atom Github on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/editor-atom-github/index.xml</link>
+    <description>Recent content in Editor Atom Github on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/editor-atom-github/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Instalar Atom, el editor de GitHub en Linux</title>
+      <link>https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/</guid>
+      <description>&lt;p&gt;Hace unos días decidí instalar &lt;strong&gt;Atom&lt;/strong&gt;, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;At GitHub, we&amp;#8217;re building the text editor we&amp;#8217;ve always wanted. A tool you can customize to do anything, but also use productively on the first day without ever touching a config file. Atom is modern, approachable, and hackable to the core. We can&amp;#8217;t wait to see what you build with it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Y tras probarlo, puedo decir que es configurable a más no poder, fácil de usar y con una interfaz impecable.&lt;/p&gt;
+
+&lt;p&gt;En éste artículo veremos cómo instalarlo y qué paquetes de los que no vienen por defecto merece la pena instalar.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Un Sistema Operativo de 64-bits&lt;/li&gt;
+&lt;li&gt;&lt;a target=&#34;_blank&#34; href=&#34;http://nodejs.org/download/&#34;&gt;node.js&lt;/a&gt; v0.10.x&lt;/li&gt;
+&lt;li&gt;&lt;a target=&#34;_blank&#34; href=&#34;http://www.npmjs.org/&#34;&gt;npm&lt;/a&gt; v1.4.x&lt;/li&gt;
+&lt;li&gt;libgnome-keyring-dev &lt;code&gt;sudo apt-get install libgnome-keyring-dev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm config set python /usr/bin/python2 -g&lt;/code&gt; Para asegurarnos que gyp usa Python2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;compilar-e-instalar-atom&#34;&gt;Compilar e instalar Atom&lt;/h3&gt;
+
+&lt;p&gt;Una vez instalados los requisitos, comenzamos a instalar &lt;strong&gt;Atom&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/atom/atom
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; atom
+script/build &lt;span class=&#34;c1&#34;&gt;# Crea la aplicación en $TMPDIR/atom-build/Atom&lt;/span&gt;
+sudo script/grunt install &lt;span class=&#34;c1&#34;&gt;# Instala los binarios a /usr/local/bin/atom&lt;/span&gt;
+script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $TMPDIR/atom-build&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez terminado, podemos instalar el fichero .deb que reside en el directorio &lt;code&gt;$TMPDIR/atom-build&lt;/code&gt;, normalmente el directorio &lt;code&gt;$TMPDIR&lt;/code&gt; es &lt;code&gt;/tmp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hecho esto, ya podemos ejecutar Atom desde la consola o desde el menú que nuestro Sistema Operativo haya creado como enlace a la aplicación.&lt;/p&gt;
+
+&lt;h3 id=&#34;mini-tutorial&#34;&gt;Mini tutorial&lt;/h3&gt;
+
+&lt;p&gt;Si no se te da bien recordar atajos de teclado, basta con recordar uno solo para obtenerlos todos &lt;code&gt;ctrl-shift-P&lt;/code&gt;, aparecerá algo así:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/cmd-alt-p-atom.png&#34; alt=&#34;cmd-alt-p atom&#34; width=&#34;548px&#34; height=&#34;390px&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;encontrando-archivos&#34;&gt;Encontrando archivos&lt;/h4&gt;
+
+&lt;p&gt;La forma más rápida de encontrar algún archivo es pulsar &lt;code&gt;Ctrl-T&lt;/code&gt; y escribir el nombre del archivo a buscar. Para buscar en archivos ya abiertos es mejor usar &lt;code&gt;Ctrl-b&lt;/code&gt;. Si estamos usando &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt; &lt;code&gt;Ctrl-shift-b&lt;/code&gt; para buscar la lista de ficheros modificados y no agregados en el repositorio.&lt;/p&gt;
+
+&lt;h4 id=&#34;panel-de-control&#34;&gt;Panel de control&lt;/h4&gt;
+
+&lt;p&gt;La forma rápida de abrir las preferencias es pulsar &lt;code&gt;Ctrl-,&lt;/code&gt;. Aquí podremos personalizar entre otras cosas, la apariencia del editor.&lt;/p&gt;
+
+&lt;h3 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h3&gt;
+
+&lt;p&gt;Hasta ahora, he encontrado dos paquetes que resultan bastánte útiles, la lista entera se puede encontrar en la &lt;a href=&#34;https://atom.io/packages&#34; target=&#34;_blank&#34;&gt;página oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;build&#34;&gt;Build&lt;/h4&gt;
+
+&lt;p&gt;Uno de ellos es &lt;em&gt;build&lt;/em&gt;, que permite compilar el projecto abierto directamente desde &lt;strong&gt;Atom&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para instalarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apm install build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez instalado, basta con situarnos en el proyecto y pulsar &lt;code&gt;alt-Ctrl-b&lt;/code&gt;. Si necesitamos añadir opciones adicionales a make, podemos hacerlo en la preferencias del paquete.&lt;/p&gt;
+
+&lt;h4 id=&#34;git-plus&#34;&gt;Git plus&lt;/h4&gt;
+
+&lt;p&gt;Otro paquete interesante es &lt;strong&gt;&lt;a href=&#34;https://atom.io/packages/git-plus&#34; title=&#34;Git Plus&#34; target=&#34;_blank&#34;&gt;git-plus&lt;/a&gt;&lt;/strong&gt;, que permite hacer cosas en git sin necesidad de la línea de comandos, para instalarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apm install git-plus
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una demostración de su uso:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/git-plus-atom.gif&#34; alt=&#34;git-plus-atom&#34; width=&#34;1075px&#34; height=&#34;340px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Algunos comandos básicos:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git add [all]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Git add añadirá el fichero actual y &lt;em&gt;&amp;#8216;add all&amp;#8217;&lt;/em&gt; añadirá todos los modificados: &lt;code&gt;Ctrl-Shift-A&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git commit&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Abrirá una ventana para escribir el mensaje de commit, se aplicará al guardar éste fichero: &lt;code&gt;Ctrl-Shift-C&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git [checkout]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cambiar de rama&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git new branch&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Crear rama&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git [push|pull]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Subir los cambios al repositorio.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git Add and Commit&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Aplica &lt;code&gt;Git add&lt;/code&gt; y &lt;code&gt;Git commit&lt;/code&gt; sucesivamente: &lt;code&gt;Ctrl-Shift-A c&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Git Add All and Commit&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Aplica &lt;code&gt;Git add all&lt;/code&gt; y &lt;code&gt;Git commit&lt;/code&gt; sucesivamente: &lt;code&gt;Ctrl-Shift-A a&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;git-diff&#34;&gt;Git diff&lt;/h4&gt;
+
+&lt;p&gt;Éste paquete viene instalado por defecto, es bastante útil porque muestra el diff de forma gráfica, por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/git-diff-atom.png&#34; alt=&#34;git diff atom&#34; width=&#34;800px&#34; height=&#34;224px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde el símbolo + significa que se ha agregado una línea nueva, y el punto amarillo que se ha modificado una existente.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
+
+&lt;p&gt;Personalmente es un editor que me ha gustado mucho, muy fácil de usar y con una capacidad de configuración tremenda. Dispone de una cantidad de extensiones enorme, y eso que aún está en sus fases iniciales. Vale la pena probarlo, no os decepcionará. Además, es &lt;a href=&#34;https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/&#34; title=&#34;La generación GitHub: Por qué ahora todos estamos en el opensource&#34;&gt;opensource&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;¿Y tú?, ¿lo has probado?, ¿Hay algún paquete que hayas probado que te resulte interesante? ¡Déjanos un comentario!&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Readme.MD linux&lt;/em&gt; »» &lt;a href=&#34;https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md&#34; target=&#34;_blank&#34;&gt;github.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Administracion Dns on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/administracion-dns/index.xml</link>
+    <description>Recent content in Administracion Dns on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/administracion-dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dig - Chuleta básica de comandos</title>
+      <link>https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &amp;#8212; entre otras cosas &amp;#8212; para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;actualización&#34;&gt;[Actualización]&lt;/h4&gt;
+
+&lt;p&gt;En un comentario hecho en la página de &lt;a href=&#34;https://plus.google.com/b/108003822606696308728/108003822606696308728/posts/idbcxhy5vzG&#34; target=&#34;_blank&#34;&gt;Google+ del blog&lt;/a&gt; un usuario indicó que es posible obtener una salida simplificada de todos los comandos de abajo con la opción &lt;em&gt;+short&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;El ejemplo más básico es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig ejemplo.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;obtener-distintos-tipos-de-registros-dns&#34;&gt;Obtener distintos tipos de registros DNS&lt;/h4&gt;
+
+&lt;p&gt;La sintaxis es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @servidor-dns ejemplo.com tipo-de-registro
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ejemplo de uso:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com A
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.          IN  A
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+google.com.      &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.231
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.226
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.230
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.228
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.238
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.229
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.227
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.225
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.232
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.224
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.233
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;obtener-los-servidores-de-nombres&#34;&gt;Obtener los servidores de nombres&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com NS
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.            IN  NS
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+google.com.     &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns2.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns1.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns3.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns4.google.com.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;obtener-registros-mx-de-correo&#34;&gt;Obtener registros MX (De correo)&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com MX
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.            IN  MX
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+google.com.     &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; alt1.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; aspmx.l.google.com.
+google.com.       &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt; alt3.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;50&lt;/span&gt; alt4.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; alt2.aspmx.l.google.com.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;obtener-registros-txt&#34;&gt;Obtener registros TXT&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com TXT
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.          IN  TXT
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+google.com.        &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;    IN  TXT &lt;span class=&#34;s2&#34;&gt;&amp;quot;v=spf1 include:_spf.google.com ip4:216.73.93.70/31 ip4:216.73.93.72/31 ~all&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;obtener-todos-los-tipos-de-registros-en-una-misma-consulta&#34;&gt;Obtener todos los tipos de registros en una misma consulta&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig any google.com
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.           IN  ANY
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+google.com.        &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt; alt3.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; alt2.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; alt1.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; aspmx.l.google.com.
+google.com.       &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;50&lt;/span&gt; alt4.aspmx.l.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns2.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns1.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns3.google.com.
+google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.google.com.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;realizar-una-consulta-inversa&#34;&gt;Realizar una consulta inversa&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig -x 173.194.34.233
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;233.34.194.173.in-addr.arpa.  IN  PTR
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+233.34.194.173.in-addr.arpa. &lt;span class=&#34;m&#34;&gt;83265&lt;/span&gt; IN  PTR mad01s09-in-f9.1e100.net.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;dig – Linux DNS Lookup utility cheat sheet&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

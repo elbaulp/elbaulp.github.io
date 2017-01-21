@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Procesos on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/categories/procesos/index.xml</link>
+    <description>Recent content in Procesos on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/categories/procesos/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducción a los Procesos</title>
+      <link>https://elbauldelprogramador.com/introduccion-los-procesos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
+      <description>&lt;h2 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h2&gt;
+
+&lt;p&gt;El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-2-composición-y-estructura&#34;&gt;1.2 . Composición y estructura&lt;/h2&gt;
+
+&lt;p&gt;El sistema operativo mantiene una tabla de procesos, dentro de la que se alamacena un &lt;strong&gt;bloque de control de proceso (BCP)&lt;/strong&gt; por cada proceso. Por razones de eficiencia, la tabla de procesos se contruye normalmente como una estructura estática que tiene un determinado número de BCP, todos ellos del mismo tamaño.&lt;/p&gt;
+
+&lt;p&gt;El BCP contiene la información básica del proceso:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Información de indentificación:&lt;/strong&gt; Esta información indentifica al usuario y al proceso. Como ejemplo, se incluyen los siguientes datos:
+
+&lt;ul&gt;
+&lt;li&gt;Identificador del proceso.&lt;/li&gt;
+&lt;li&gt;Identificador del proceso padre en caso de existir relaciones padre-hijo como es el caso de UNIX.&lt;/li&gt;
+&lt;li&gt;Información sobre el usuario (identificador del usuario, identificador del grupo).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Estado del procesador:&lt;/strong&gt; Contiene los valores iniciales del estado del procesador o su valor en el instante en que fue interrumpido el proceso.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Información de control del proceso:&lt;/strong&gt; En esta sección se incluye diversa información que permite gestionar el proceso. Destacaremos los siguientes datos:
+
+&lt;ul&gt;
+&lt;li&gt;Información de planificación y estado:&lt;/li&gt;
+&lt;li&gt;Estado del proceso.&lt;/li&gt;
+&lt;li&gt;Evento por el que espera el proceso cuando está bloqueado.&lt;/li&gt;
+&lt;li&gt;Prioridad del proceso.&lt;/li&gt;
+&lt;li&gt;Información de planificación.&lt;/li&gt;
+&lt;li&gt;Descripción de los segmentos de memoria asignados al proceso.&lt;/li&gt;
+&lt;li&gt;Recursos asignados, tales como:&lt;/li&gt;
+&lt;li&gt;Archivos abiertos (tablas de descriptores o manejadores de archivo).&lt;/li&gt;
+&lt;li&gt;Puertos de comunicación asignados&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Punteros&lt;/strong&gt; para estructurar los procesos en colas o anillos: Por ejemplo, los procesos que están en estado de listo pueden estar organizados en una cola, de forma que se facilite la labor del planificador.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comunicación entre procesos:&lt;/strong&gt; El BCP puede contener espacio para almacenar las señales y para algún mensaje enviado al proceso.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-3-estados-y-transiciones&#34;&gt;1.3 . Estados y transiciones&lt;/h2&gt;
+
+&lt;p&gt;Un proceso puede encontrarse en tres estados diferentes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;En ejecución:&lt;/strong&gt; En este estado se encuentra el proceso que está siendo ejecutado por el procesador. El estado del procesador residirá en los registros del procesador.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bloqueado:&lt;/strong&gt; Un proceso bloqueado está esperando a que ocurra un evento y no puede seguir ejecutandose hasta que termine el eventol. Una situación típica de proceso bloqueado se produce cuando el proceso solicita una operación E/S (Entrada / Salida). Hasta que no termina esta operación, el proceso queda bloqueado. En este estado el proceso reside en BCP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listo:&lt;/strong&gt; Un proceso está listo para ejecutar cuando puede entrar en fase de procesamiento. Dado que puede haber varios procesos en este estado, una de las tareas del sistema operativo será seleccionar aquel que debe pasar a ejecución. El módulo del SO que toma esta decisión se denomina &lt;strong&gt;planificador.&lt;/strong&gt; En este estado el proceso reside en BCP.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;La &lt;strong&gt;transición&lt;/strong&gt; entre cada uno de los tres estados puede hacerse de la siguiente manera:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Transición 1.&lt;/strong&gt; Ocurre cuando el programa que está en ejecución necesita algún elemento, señal, datos etc, para poder continuar ejecutandose.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transición 2.&lt;/strong&gt; Cuando un programa o proceso ha utilizado el tiempo asignado por la CPU (procesador) para su ejecución y tiene que dejar paso al siguiente proceso.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transición 3.&lt;/strong&gt; Cuando el proceso que está listo pasa al estado de ejecución; es decir, cuando al proceso le llega una nueva disposición del tiempo de la CPU para poder ejecutarse.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transición 4.&lt;/strong&gt; Cuando el proceso pasa de estar bloqueado a estar listo, es decir, cuando el proceso recibe una orden o señal que estaba esperando para pasar al estado de listo y posteriormente, tras la transición 3, pasar a ejecución.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;características&#34;&gt;Características&lt;/h2&gt;
+
+&lt;p&gt;Las características principales de los procesos son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Una característica fundamental de los procesos concurrentes es la competencia que se establece entre ellos cuando han de compartir recursos.&lt;/li&gt;
+&lt;li&gt;Cooperación, cuando dos o más procesos se están llevando a cabo de manera que uno depende del otro es necesario que exista una cooperación entre ambos.&lt;/li&gt;
+&lt;li&gt;Se pueden formar familias de procesos según sean o no interdependientes.&lt;/li&gt;
+&lt;li&gt;Una operación que sufren los procesos usualmente es el &lt;strong&gt;cambio de contexto&lt;/strong&gt;, que consiste en retirar el control de la CPU del proceso actual, y asignarla a otro proceso.&lt;/li&gt;
+&lt;li&gt;Los sistemas operativos deben proporcionar alguna forma de crear y destruir los procesos. Cada proceso tiene un padre y cero o más hijos. Así, existe una jerarquía de procesos que se puede representar en forma de árbol.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Liberada la versión 1.0 de htop</title>
+      <link>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</guid>
+      <description>&lt;p&gt;Si monitorizáis el estado de vuestros sistemas con &lt;a href=&#34;https://elbauldelprogramador.com/tags/#linux&#34;&gt;Linux&lt;/a&gt; probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.&lt;/p&gt;
+
+&lt;p&gt;Podéis &lt;strong&gt;consultar las mejoras&lt;/strong&gt; en la &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads&#34;&gt;página oficial del proyecto en SourceForge&lt;/a&gt;, y por supuesto tenéis a vuestra disposición tanto el &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads#sources&#34;&gt;código fuente&lt;/a&gt; como &lt;a href=&#34;http://htop.sourceforge.net/index.php?page=downloads#binaries&#34;&gt;binarios&lt;/a&gt; preparados para diversas distribuciones. Quien quiera agradecer al autor su trabajo, puede &lt;a target=&#34;_blank&#34; href=&#34;http://sourceforge.net/donate/index.php?group_id=108839&#34;&gt;invitarle a una cervecita.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El autor explica en la página del proyecto las mejoras de esta nueva versión:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;I am extremely happy to announce htop 1.0!&lt;/p&gt;
+
+&lt;p&gt;Time flies, I can&amp;#8217;t believe it&amp;#8217;s been eight years of development
+already. It seems like yesterday that I&amp;#8217;ve decided to stop writing PID
+numbers every time I wanted to kill a process and started this
+project. I am very happy to see this little project grow into a
+reality, see it being included in repositories for many distributions,
+reading nice reviews arond the web, receiving many contributions from
+coders from all over the world who helped making htop better and
+better over the years, and getting short &amp;#8220;thank you!&amp;#8221; emails that
+always make my day. Thanks to all distro packagers, reviewers, code
+contributors, users. The free software community is amazing; if it
+wasn&amp;#8217;t for all of you, htop wouldn&amp;#8217;t be what it is now. Version
+numbers are more symbolic than anything, but the stability of htop 0.9
+in the past year and the cool new features introduced in this release
+compelled me to call this version 1.0. We all deserve this little
+&amp;#8220;achievement&amp;#8221;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Performance improvements&lt;/li&gt;
+&lt;li&gt;Support for splitting CPU meters into two or four columns (thanks to Wim Heirman)&lt;/li&gt;
+&lt;li&gt;Switch from PLPA, which is now deprecated, to HWLOC.&lt;/li&gt;
+&lt;li&gt;Bring back support for native Linux sched_setaffinity, so we don’t have to use HWLOC where we don’t need to.&lt;/li&gt;
+&lt;li&gt;Support for typing in user names and column fields in selection panels.&lt;/li&gt;
+&lt;li&gt;Support for UTF-8 tree drawing (thanks to Bin Guo)&lt;/li&gt;
+&lt;li&gt;Option for counting CPUs from zero (thanks to Sean Noonan)&lt;/li&gt;
+&lt;li&gt;Meters update in every screen (no longer halting while on Setup, etc.)&lt;/li&gt;
+&lt;li&gt;Stricter checks for command-line options (thanks to Sebastian Pipping)&lt;/li&gt;
+&lt;li&gt;Incremental filtering (thanks to Seth Heeren for the idea and initial implementation)&lt;/li&gt;
+&lt;li&gt;Try harder to find the ncurses header (thanks to Moritz Barsnick)&lt;/li&gt;
+&lt;li&gt;Man page updates (thanks to Vincent Launchbury)&lt;/li&gt;
+&lt;li&gt;BUGFIX: Support larger numbers for process times.  (thanks to Tristan Nakagawa for the report.)&lt;/li&gt;
+&lt;li&gt;BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths (patch by Sebastian Pipping)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Que traduzco a continuación:&lt;/p&gt;
+
+&lt;p&gt;El tiempo vuela, no puedo creer que hayan pasado ya 8 años de desarrollo. Parece que fue ayer cuando decidí dejar de escribir números de PID cada vez que quería matar un proceso y empecé este proyecto. Estoy muy contento de ver este proyecto crecer hasta llegar a ser una realida, verlo incluido en los repositorios de muchas distribuciones, leer agradables revisiones por toda la web, recibir correos de muchos contribuidores de todo el mundo que han ayudado a htop a mejorar con los años, y recibir emails cortos que simplemente decían &amp;#8220;gracias!&amp;#8221; y me alegraban el día. Gracias a todos los empaquetadores de distros, revisores, contribuidores de código, usuarios. La comunidad del software libre es increible; si no fuera por todos ellos, htop no sería lo que es hoy. Los números de las versiones son méramente simbólicos, pero la estabilidad de htop 0.9 el los años pasados y las nuevas características introducidas en esta &amp;#8220;release&amp;#8221;, me obliga a llamar a esta versión la 1.0. Todos merecemos este pequeño logro.&lt;/p&gt;
+
+&lt;p&gt;Para instalarlo tan solo debéis escribir en el terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Al ejecutarlo veremos algo parecido a lo siguiente:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;linux htop&#34; width=&#34;800&#34; height=&#34;640&#34; src=&#34;https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s800/Screenshot-Terminal.png&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Vía &lt;a target=&#34;_blank&#34; href=&#34;http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/&#34;&gt;MuyLinux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fuente &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=main&#34;&gt;htop.sourceforge.net&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

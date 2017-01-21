@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on The Programmer&#39;s Chest</title>
+    <link>https://elbauldelprogramador.com/en/post/index.xml</link>
+    <description>Recent content in Posts on The Programmer&#39;s Chest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Wed, 17 Aug 2016 08:06:32 +0000</lastBuildDate>
+    <atom:link href="https://elbauldelprogramador.com/en/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Change Portage Folders to Other Location in Gentoo</title>
+      <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
+      <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
+      <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/#gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So first I decided to change all the &lt;code&gt;portage&lt;/code&gt; files to my secondary hard disk drive, here is how to change &lt;code&gt;portage&lt;/code&gt; folders to a new location.&lt;/p&gt;
+
+&lt;h1 id=&#34;changing-etc-portage-make-conf-file&#34;&gt;Changing /etc/portage/make.conf file&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose the new directory is &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first thing to to is update the environment variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; and &lt;code&gt;PKGDIR&lt;/code&gt; to point to the new location, so in the file &lt;code&gt;make.conf&lt;/code&gt; we need to write:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/portage&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/distfiles&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;syncing-portage-tree&#34;&gt;Syncing portage tree&lt;/h1&gt;
+
+&lt;p&gt;Now that we had updated the variables, we need to &lt;code&gt;sync&lt;/code&gt; portage:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;emerge --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that, &lt;code&gt;portage&lt;/code&gt; now knows about the new location, but there is one more thing to do.&lt;/p&gt;
+
+&lt;h1 id=&#34;symlinking-make-profile-to-the-new-location&#34;&gt;Symlinking make.profile to the new location&lt;/h1&gt;
+
+&lt;p&gt;After syncing &lt;code&gt;portage&lt;/code&gt;, one last thing to do is symlinking &lt;code&gt;make.profile&lt;/code&gt; to the new location, previously it was a symlink to &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, but we need to update it to the new location. Here is how:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now everything is right and we have changed the &lt;code&gt;portage&lt;/code&gt; location and get rid of the space problems.&lt;/p&gt;
+
+&lt;h1 id=&#34;changing-only-the-tmp-directory-var-tmp-portage&#34;&gt;Changing only the tmp directory (/var/tmp/portage)&lt;/h1&gt;
+
+&lt;p&gt;After doing the previous steps, I realized that it would be a better option to only change the location of the &lt;code&gt;tmp&lt;/code&gt; portage directory (by default &lt;code&gt;/var/tmp/portage&lt;/code&gt;), that was the original problem, because I did not had enough space left there. So a better option would be leave &lt;code&gt;make.conf&lt;/code&gt; as we had it previously, and only add a new variable:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hope it helps!.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Can&#39;t Update to Firefox 48 in Gentoo, NSS Version Too Old</title>
+      <link>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</link>
+      <pubDate>Thu, 04 Aug 2016 09:05:17 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
+      <description>&lt;p&gt;Today, when I check for updates in my &lt;em&gt;Gentoo&lt;/em&gt; machine, the new Firefox 48 was released. But when I tried to update I kept getting this error:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;I tried to enable the &lt;code&gt;NSS&lt;/code&gt; &lt;em&gt;USE&lt;/em&gt; flag, but did not work, so I went to the &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo forums&lt;/a&gt; and asked there. After a few minutes they answered me, it is a current &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; that need to be solved. But fortunately there is a workaround until the bug is fixed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;=dev-libs/nss-3.24 ~amd64&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
+emerge -u nss
+&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Executing the above in a terminal as root will force portage to install the version 3.24 of &lt;em&gt;NSS&lt;/em&gt;, and then firefox will not complain about the old version.&lt;/p&gt;
+
+&lt;p&gt;Once firefox 48 is installed, we can enjoy the &lt;a href=&#34;http://arstechnica.com/information-technology/2016/08/firefox-48-ships-bringing-rust-mainstream-and-multiprocess-for-some/&#34; title=&#34;Firefox 48 ships, bringing Rust mainstream and multiprocess for some&#34;&gt;new multiprocessing feature&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;em&gt;fedeliallalinea&lt;/em&gt; for solving me the problem in the forums!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Solve &#39;Missing URL for Attribute &#39;Src&#39; in Tag &#39;a&#39;&#39; Error in Amp-mustache</title>
+      <link>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</link>
+      <pubDate>Sun, 31 Jul 2016 05:37:13 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</guid>
+      <description>&lt;h1 id=&#34;what-is-amp-mustache-and-how-it-works&#34;&gt;What is Amp-mustache and how it works&lt;/h1&gt;
+
+&lt;p&gt;Recently I have been implementing &lt;em&gt;Google AMP pages&lt;/em&gt; in my site. Everything was going well until I decide to implement lists with &lt;code&gt;amp-mustache&lt;/code&gt;. &lt;a href=&#34;https://www.ampproject.org/docs/reference/extended/amp-mustache.html&#34; title=&#34;Docs for amp-mustache&#34;&gt;This component&lt;/a&gt; of &lt;em&gt;AMP&lt;/em&gt; allows to populate elements from a &lt;em&gt;json&lt;/em&gt;, for example one could create a list from this &lt;em&gt;json&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;quot;items&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;amp-carousel&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;https://ampbyexample.com/components/amp-carousel&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;And then we have a template like this one to generate the content:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;auto&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;100&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;fixed-height&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;https://ampbyexample.com/json/examples.json&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-mustache&amp;quot;&lt;/span&gt;
+          &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-template-id&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{{url}}{% endraw %}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{% raw %}{{title}}{% endraw %}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This code would be populated from the &lt;em&gt;json&lt;/em&gt; by replacing each &lt;code&gt;{% raw %}{{tag}}{% endraw %}&lt;/code&gt; with its corresponding value in the &lt;em&gt;json&lt;/em&gt;. Up until here all seems to be pretty easy, but when you are using &lt;em&gt;Jekyll&lt;/em&gt; on your site things change a little. Lets see why.&lt;/p&gt;
+
+&lt;h1 id=&#34;how-to-make-amp-mustache-work-in-jekyll&#34;&gt;How to make amp-mustache work in jekyll&lt;/h1&gt;
+
+&lt;p&gt;In &lt;em&gt;Jekyll&lt;/em&gt; there are liquid tags, and they have the same syntax &lt;code&gt;amp-mustache&lt;/code&gt; templates have, so when &lt;em&gt;jekyll&lt;/em&gt; is building the site, it will interpret each &lt;code&gt;{% raw %}{{tag}}{% endraw %}&lt;/code&gt; in the example above as &lt;em&gt;liquid&lt;/em&gt; variables. However, since this variables do not exists they will be left blank, and so the template would not be populated.&lt;/p&gt;
+
+&lt;p&gt;In my case, the error &lt;code&gt;Missing URL for attribute &#39;src&#39; in tag &#39;a&#39;.&lt;/code&gt; came from this piece of code &lt;code&gt;&amp;lt;a href={% raw %}{{url}}{% endraw %}&amp;gt;&lt;/code&gt;, because &lt;em&gt;jekyll&lt;/em&gt; do not find any variable which name was &lt;code&gt;url&lt;/code&gt; and in consequence leave it blank. To solve this problem we need to tell &lt;em&gt;jekyll&lt;/em&gt; that those tags are not liquid tags. This is easily done with: &lt;code&gt;{% raw %}{% raw %}{{ tag }}{% endraw %}{{ &amp;quot;{% endraw &amp;quot; }}%}&lt;/code&gt;. Knowing this, the code for generate a list with &lt;code&gt;amp-mustache&lt;/code&gt; would be as follow:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;auto&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;100&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;fixed-height&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;https://ampbyexample.com/json/examples.json&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-mustache&amp;quot;&lt;/span&gt;
+          &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-template-id&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{% raw %}{{url}}{% endraw %}{{ &amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}}%}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{% raw %}{% raw %}{{title}}{% endraw %}{{ &amp;quot;{% endraw &amp;quot; }}%}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ampbyexample.com/components/amp-list/&#34; title=&#34;Amp reference for amp-list&#34;&gt;ampbyexample.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/38672182/1612432&#34; title=&#34;Error trying to implement amp-mustache&#34;&gt;My question in StackOverflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

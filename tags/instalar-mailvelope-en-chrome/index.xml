@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instalar Mailvelope En Chrome on El Baúl del programador</title>
+    <link>https://elbauldelprogramador.com/tags/instalar-mailvelope-en-chrome/index.xml</link>
+    <description>Recent content in Instalar Mailvelope En Chrome on El Baúl del programador</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/tags/instalar-mailvelope-en-chrome/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo cifrar correos electrónicos con GPG usando Mailvelope</title>
+      <link>https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/GnuPG-Logo.png&#34; alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante &lt;a href=&#34;https://elbauldelprogramador.com/tags/#gpg&#34;&gt;GPG&lt;/a&gt;, &lt;strong&gt;Mailvelope&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
+
+&lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-chrome&#34;&gt;Descargar e instalar Mailvelope en Chrome&lt;/h1&gt;
+
+&lt;p&gt;Los usuarios de este navegador simplemente deben instalar Mailvelope como cualquier otro plugin en la siguiente &lt;a href=&#34;https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke?hl=en-US&#34; title=&#34;Instalar Mailvelope en Chrome&#34; target=&#34;_blank&#34;&gt;dirección&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-firefox&#34;&gt;Descargar e instalar Mailvelope en Firefox&lt;/h1&gt;
+
+&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;a href=&#34;https://github.com/mailvelope/mailvelope&#34; title=&#34;Compilar Mailvelope&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone git://github.com/mozilla/addon-sdk.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; addon-sdk
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; bin/activate
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+git clone git://github.com/toberndo/mailvelope.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mailvelope
+git checkout -t origin/firefox
+git submodule init
+git submodule update
+make build
+make dist-ff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
+
+&lt;h1 id=&#34;generar-llaves-en-mailvelope&#34;&gt;Generar llaves en Mailvelope&lt;/h1&gt;
+
+&lt;p&gt;Una vez instalado mailvelope en el navegador correspondiente, hacemos &lt;strong&gt;click en el icono del plugin » opciones&lt;/strong&gt;. Aparecerá un formulario que rellenaremos con un nombre, el correo a usar y un &lt;strong&gt;passphrase&lt;/strong&gt;, en las opciones avanzadas podemos elegir el algoritmo de cifrado, la longitud y la fecha de expiración:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope.png&#34; alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; width=&#34;610px&#34; height=&#34;619px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;enviar-la-clave-pública-a-un-servidor-de-llaves&#34;&gt;Enviar la clave pública a un servidor de llaves&lt;/h1&gt;
+
+&lt;p&gt;El par de claves pública/privada que acabamos de generar debe aparecer en &lt;em&gt;Display keys&lt;/em&gt;. La seleccionamos y hacemos click en &lt;strong&gt;Export » Display public key&lt;/strong&gt;, copiamos la llave y la pegamos en la sección &lt;strong&gt;Submission And Publication&lt;/strong&gt; del servidor de llaves &lt;a href=&#34;http://keyserver.borgnet.us/&#34; target=&#34;_blank&#34;&gt;keyserver.borgnet.us&lt;/a&gt;. A partir de ahora, cualquiera que tenga a su disposición la clave pública que acabamos de subir al servidor podrá enviarnos un correo cifrado.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+
+&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;a href=&#34;http://keyserver.borgnet.us:11371/pks/lookup?op=get&amp;search=0x083EDE12BE101B2B&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
+
+&lt;p&gt;Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope1.png&#34; alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; width=&#34;597px&#34; height=&#34;592px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Como vemos en la imagen, aparece un simbolo a la derecha, tenemos que pulsarlo y escribir en mensaje ahí:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png&#34; alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; width=&#34;1255px&#34; height=&#34;978px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Como aparece en la imagen, si es la primera vez que ambos correos se ponen en contacto, hay que enviar la clave pública para que la otra persona pueda reponder con un mensaje cifrado. Luego hacemos click en el candado y seleccionamos a clave pública con la que cifrar el mensaje, en este caso con la del correo de este blog, que hemos importado más arriba. Ya solo queda hacer click en &lt;strong&gt;Transfer&lt;/strong&gt; y obtendremos esto:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope3.png&#34; alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; width=&#34;590px&#34; height=&#34;587px&#34; &gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Pulsamos enviar y listo.&lt;/p&gt;
+
+&lt;p&gt;El proceso contrario, es decir, cuando nos envíen un email cifrado es bastante intuitivo, abrimos el correo y nos encontramos con esto:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope4.png&#34; alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; width=&#34;795px&#34; height=&#34;380px&#34; &gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El cursor adaptará la forma de una llave, hacemos click, introducimos nuestro &lt;strong&gt;passphrase&lt;/strong&gt; y descifraremos el mensaje.&lt;/p&gt;
+
+&lt;p&gt;Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
