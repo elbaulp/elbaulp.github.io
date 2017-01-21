@@ -402,7 +402,7 @@ Los operadores se pueden definir como combinaciones de caracteres que se utiliza
                               Relacionales
                             </td>
 <td>
-                              <
+                              &lt;
                             </td>
 <td>
                               Menor que
@@ -410,7 +410,7 @@ Los operadores se pueden definir como combinaciones de caracteres que se utiliza
 </tr>
 <tr>
 <td>
-                              <=
+                              &lt;=
                             </td>
 <td>
                               Menor o igual que
@@ -442,7 +442,7 @@ Los operadores se pueden definir como combinaciones de caracteres que se utiliza
 </tr>
 <tr>
 <td>
-                              !<
+                              !&lt;
                             </td>
 <td>
                               No menor que

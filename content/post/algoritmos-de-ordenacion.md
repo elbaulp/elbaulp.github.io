@@ -50,17 +50,13 @@ static void burbuja_lims(int T[], int inicial, int final)
       T[j-1] = aux;
  }
 }
-
 ```
 
 El ordenamiento por **inserción** técnicamente es la forma mas lógica de ordenar cualquier cosa para un humano, por ejemplo, una baraja de cartas. Requiere O(n²).
 
-<div>
-<div>
-    Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.
+Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay <em><strong>k</strong> </em>elementos ordenados de menor a mayor, se toma el elemento <strong><em>k+1</em></strong> y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se <em>inserta</em> el elemento <em>k+1</em> debiendo desplazarse los demás elementos.
 
-    ```cpp
-
+```cpp
 static void insercion_lims(int T[], int inicial, int final)
 {
   int i, j;
@@ -75,15 +71,9 @@ static void insercion_lims(int T[], int inicial, int final)
     };
   };
 }
-
 ```
-  </div>
-</div>
-<div>
-</div>
-<div>
-  Por último,<strong> el ordenamiento por selección</strong>: Al igual que el algoritmo de inserción es muy trivial, puesto que recorre el vector o la lista, buscando el elemento mas pequeño y colocandolo en la posición 0 del vector, y así sucesivamente n-1 veces, tanto de grande como sea el vector. Al igual que los algoritmos anteriores, requiere O(n²) .
-</div>
+Por último,<strong> el ordenamiento por selección</strong>: Al igual que el algoritmo de inserción es muy trivial, puesto que recorre el vector o la lista, buscando el elemento mas pequeño y colocandolo en la posición 0 del vector, y así sucesivamente n-1 veces, tanto de grande como sea el vector. Al igual que los algoritmos anteriores, requiere O(n²) .
+
 
 ```cpp
 static void seleccion_lims(int T[], int inicial, int final)
@@ -103,15 +93,10 @@ static void seleccion_lims(int T[], int inicial, int final)
     T[indice_menor] = aux;
   };
 }
-
 ```
 
-<div>
-</div>
-<div>
-  Ahora vamos a hablar de los rápidos que son los mas interesantes:
-</div>
-<div>
+Ahora vamos a hablar de los rápidos que son los mas interesantes:
+
 <ol>
 <li>
       Algoritmo mergesort ( ordenación por mezcla).
@@ -141,8 +126,7 @@ static void seleccion_lims(int T[], int inicial, int final)
     </li>
 </ol>
 
-  ```cpp
-
+```cpp
 static void mergesort_lims(int T[], int inicial, int final)
 {
   if (final - inicial < UMBRAL_MS)
@@ -189,8 +173,7 @@ static void mergesort_lims(int T[], int inicial, int final)
     &nbsp;
   </p>
 
-  ```cpp
-
+```cpp
 static void quicksort_lims(int T[], int inicial, int final)
 {
   int k;
@@ -202,6 +185,4 @@ static void quicksort_lims(int T[], int inicial, int final)
     quicksort_lims(T, k + 1, final);
   };
 }
-
 ```
-</div>

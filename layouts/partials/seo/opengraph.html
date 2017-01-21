@@ -14,7 +14,7 @@
 <meta name="twitter:creator" content="@{{ $author.twitter }}">
 <meta name="twitter:title" content="{{$title}}">
 {{with .Params.description}}<meta name="twitter:description" content="{{ . }}">{{end}}
-<meta property="twitter:image:src" content="{{ .Site.BaseURL }}img/{{ if .Params.image}}{{.Params.image}}{{else}}default-thumb.png{{end}}">
+<meta property="twitter:image:src" content="{{ .Site.BaseURL }}/img/{{ if .Params.image}}{{.Params.image}}{{else}}default-thumb.png{{end}}">
 
 <!-- Social: Facebook / Open Graph -->
 <meta property="og:locale" content="{{ .Site.LanguageCode }}">
@@ -24,7 +24,7 @@
 
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:title" content="{{ $title }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}img/{{ if .Params.image}}{{.Params.image}}{{else}}default-thumb.png{{end}}">
+<meta property="og:image" content="{{ .Site.BaseURL }}/img/{{ if .Params.image}}{{.Params.image}}{{else}}default-thumb.png{{end}}">
 
 {{with .Params.description}}<meta property="og:description" content="{{ . }}">{{ end }}
 <meta property="og:site_name" content="{{ $title }}">
