@@ -12,6 +12,7 @@ var env         = require('minimist')(process.argv.slice(2)),
     cp          = require('child_process'),
     newer       = require('gulp-newer'),
     rename      = require('gulp-rename'),
+    htmlmin     = require('gulp-htmlmin')
     purify      = require('gulp-purifycss');
 
 /**
@@ -24,10 +25,25 @@ gulp.task('stylus', function(){
       use:[koutoSwiss(), prefixer(), jeet(), rupture()],
       compress: true
     }))
-    //    .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
+    .pipe(purify(['_site/**/*.js', '_site/**/*.html'], options = {info:true, rejected:true, minify:true}))
     .pipe(rename('stylesheet.html'))
     .pipe(gulp.dest('layouts/partials/'));
 });
+
+/**
+ * HTML minify
+ */
+gulp.task('minify-html', () => {
+    return gulp.src('public/**/*.html')
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            minifyCSS: true,
+            minifyJS: true,
+            removeComments: true,
+            useShortDoctype: true,
+        }))
+        .pipe(gulp.dest('./public'))
+})
 
 /**
  * Imagemin Task
