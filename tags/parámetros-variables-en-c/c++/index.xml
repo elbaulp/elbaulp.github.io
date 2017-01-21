@@ -14,7 +14,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/parametros-variables-en-cc/</guid>
-      <description>&lt;p&gt;En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en &lt;a href=&#34;https://elbauldelprogramador.com/tags/#cpp&#34;&gt;C/C++&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;En ocasiones, es necesario tener una función a la que podamos pasar un número de parámetros variables. En el artículo de hoy veremos cómo hacerlo en &lt;a href=&#34;https://elbauldelprogramador.com/tags/cpp&#34;&gt;C/C++&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Para ello, usaremos la macro &lt;code&gt;va_start&lt;/code&gt;, encargada de inicializar una lista de argumentos variables. Su prototipo es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;va_start&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;va_list&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paramN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;

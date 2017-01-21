@@ -101,13 +101,13 @@ rm temp
 &lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/#bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
+&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
 
 &lt;h3 id=&#34;expresiones-regulares-en-locate&#34;&gt;Expresiones regulares en Locate&lt;/h3&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; acepta &lt;a href=&#34;https://elbauldelprogramador.com/tags/#regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresiones regulares&lt;/a&gt; complejas, para ello hay que llamarlo con la opción &lt;code&gt;-regex&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; acepta &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresiones regulares&lt;/a&gt; complejas, para ello hay que llamarlo con la opción &lt;code&gt;-regex&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;El problema básicamente es el siguiente. A partir de un texto con los nombres &lt;em&gt;parciales&lt;/em&gt; de un fichero obtener la ruta completa a dicho archivo. Lo de parciales quiere decir que si el nombre es &lt;strong&gt;Autor - Nombre Canción&lt;/strong&gt;, en el texto solo se guarda &lt;strong&gt;Nombre Canción&lt;/strong&gt;.&lt;/p&gt;
 

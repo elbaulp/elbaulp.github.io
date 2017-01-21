@@ -482,7 +482,7 @@ Con lo cual tenemos que conseguir un número al que al hacerle todas estas opera
 
 &lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
-&lt;p&gt;El switch se basa en una implementación muy eficiente llamada en inglés &lt;strong&gt;jump table&lt;/strong&gt; o tabla de saltos. Esta tabla es un array, donde la entrada &lt;em&gt;i&lt;/em&gt; es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a &lt;em&gt;i&lt;/em&gt;. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción &lt;strong&gt;jmp&lt;/strong&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/#asm&#34;&gt;ensamblador&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;El switch se basa en una implementación muy eficiente llamada en inglés &lt;strong&gt;jump table&lt;/strong&gt; o tabla de saltos. Esta tabla es un array, donde la entrada &lt;em&gt;i&lt;/em&gt; es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a &lt;em&gt;i&lt;/em&gt;. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción &lt;strong&gt;jmp&lt;/strong&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/asm&#34;&gt;ensamblador&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
