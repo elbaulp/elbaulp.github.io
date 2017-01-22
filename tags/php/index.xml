@@ -9,6 +9,60 @@
     <atom:link href="https://elbauldelprogramador.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cómo crear  simples shortcodes en WordPress</title>
+      <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
+      <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
+
+&lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt; ?php&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;// Short code&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;function Nombre_de_nuestro_shortcode( $atts, $content = null ) {&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;   return &amp;#39;Código de nuestro shortcode&amp;#39;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;nombre_de_nuestro_shortcode&amp;#39;, &amp;#39;Nombre_de_nuestro_shortcode&amp;#39;);&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
+
+&lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nueva guía: PHP &amp; MySQL: Novice to Ninja, 5th Edition-Free 57 Page Preview</title>
+      <link>https://elbauldelprogramador.com/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_sitb33/prgm.cgi&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/w_sitb33c1.gif&#34; alt=&#34;PHP &amp; MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview&#34; title=&#34;PHP &amp; MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview&#34; width=&#34;197px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PHP &amp;amp; MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you&amp;#8217;ll learn how to use PHP (used on 20 million sites worldwide) to build your own working content management system using entirely free software. The book also teaches you best practices in database design using MySQL, and covers all the latest technologies.&lt;/p&gt;
+
+&lt;p&gt;You&amp;#8217;ll learn all about:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In-depth Tutorials&lt;/li&gt;
+&lt;li&gt;Hassle-free Setup Instructions&lt;/li&gt;
+&lt;li&gt;Object Oriented Programming (OOP)&lt;/li&gt;
+&lt;li&gt;Best-practice PHP Coding&lt;/li&gt;
+&lt;li&gt;Fun Example Project&lt;/li&gt;
+&lt;li&gt;Add a Shopping Cart&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_sitb33/prgm.cgi&#34;&gt;Descárgala desde aquí&lt;/a&gt; o
+Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; para ver las guías disponibles.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cómo Crear Un Bundle Symfony2</title>
       <link>https://elbauldelprogramador.com/como-crear-un-bundle-symfony2/</link>
       <pubDate>Mon, 22 Jun 2015 09:00:00 +0000</pubDate>
@@ -325,60 +379,6 @@ Hecho esto, ya está disponible una versión estable de nuestro bundle que puede
 &lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo crear  simples shortcodes en WordPress</title>
-      <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
-      <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
-
-&lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt; ?php&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;// Short code&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;function Nombre_de_nuestro_shortcode( $atts, $content = null ) {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   return &amp;#39;Código de nuestro shortcode&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;nombre_de_nuestro_shortcode&amp;#39;, &amp;#39;Nombre_de_nuestro_shortcode&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
-
-&lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Nueva guía: PHP &amp; MySQL: Novice to Ninja, 5th Edition-Free 57 Page Preview</title>
-      <link>https://elbauldelprogramador.com/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_sitb33/prgm.cgi&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/w_sitb33c1.gif&#34; alt=&#34;PHP &amp; MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview&#34; title=&#34;PHP &amp; MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview&#34; width=&#34;197px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;PHP &amp;amp; MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you&amp;#8217;ll learn how to use PHP (used on 20 million sites worldwide) to build your own working content management system using entirely free software. The book also teaches you best practices in database design using MySQL, and covers all the latest technologies.&lt;/p&gt;
-
-&lt;p&gt;You&amp;#8217;ll learn all about:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In-depth Tutorials&lt;/li&gt;
-&lt;li&gt;Hassle-free Setup Instructions&lt;/li&gt;
-&lt;li&gt;Object Oriented Programming (OOP)&lt;/li&gt;
-&lt;li&gt;Best-practice PHP Coding&lt;/li&gt;
-&lt;li&gt;Fun Example Project&lt;/li&gt;
-&lt;li&gt;Add a Shopping Cart&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_sitb33/prgm.cgi&#34;&gt;Descárgala desde aquí&lt;/a&gt; o
-Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; para ver las guías disponibles.&lt;/p&gt;
-</description>
     </item>
     
   </channel>

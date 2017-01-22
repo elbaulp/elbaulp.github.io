@@ -9,319 +9,9 @@
     <atom:link href="https://elbauldelprogramador.com/categories/how-to/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy</title>
-      <link>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</link>
-      <pubDate>Fri, 27 Nov 2015 16:17:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</guid>
-      <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;400px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
-
-&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
-
-&lt;p&gt;Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno &lt;strong&gt;local&lt;/strong&gt;, para realizar modificaciones, otro de &lt;strong&gt;desarrollo&lt;/strong&gt;, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de &lt;strong&gt;producción&lt;/strong&gt;, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;configurar-el-entorno-local&#34;&gt;Configurar el entorno local&lt;/h1&gt;
-
-&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;instalar-y-configurar-capistrano-y-wp-deploy&#34;&gt;Instalar y configurar Capistrano y Wp-Deploy&lt;/h1&gt;
-
-&lt;p&gt;Una vez tengamos la copia de la web en local, empezamos instalando y configurando &lt;strong&gt;Wp-Deploy&lt;/strong&gt;. Ya que éste framework hace uso de Capistrano, se explicará directamente la instalación y uso de &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;qué-es-capistrano&#34;&gt;¿Qué es Capistrano?&lt;/h2&gt;
-
-&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;requerimientos&#34;&gt;Requerimientos&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Bunder&lt;/strong&gt;: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar &lt;a href=&#34;http://bundler.io/&#34; target=&#34;_blank&#34;&gt;Bundler&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
-
-&lt;p&gt;En primer lugar, hay que clonar el repositorio. Para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /directorio/desado
-$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.&lt;/p&gt;
-
-&lt;p&gt;El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bash config/prepare.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Solo resta añadir nuestro repositorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Y, por último, instalar las dependencias de ruby con &lt;strong&gt;Bundler&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.&lt;/p&gt;
-
-&lt;h3 id=&#34;configurar-wp-deploy&#34;&gt;Configurar WP-Deploy&lt;/h3&gt;
-
-&lt;p&gt;Primero, es necesario establecer las preferencias globales de WordPress en el fichero &lt;code&gt;config/deploy.rb&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;usuario&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;aaaa@aaaa.com&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El Baúl del Programador&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El título del sitio WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Luego definimos los parámetros para el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/tags/git&#34;&gt;git&lt;/a&gt;, en el mismo archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;nombreDelRepo&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;git@github.com:TuUsuario/nombreDelRepo.git&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Wp-Deploy usa por defecto dos entornos, &lt;strong&gt;staging&lt;/strong&gt; y &lt;strong&gt;production&lt;/strong&gt;. En este artículo configuraremos tres.&lt;/p&gt;
-
-&lt;h3 id=&#34;definiendo-y-configurando-entornos-de-desarrollo&#34;&gt;Definiendo y configurando entornos de desarrollo&lt;/h3&gt;
-
-&lt;p&gt;Dichos entornos se declaran en el directorio &lt;code&gt;./config/deploy/&lt;/code&gt;, por defecto existen &lt;code&gt;staging.rb&lt;/code&gt; y &lt;code&gt;production.rb&lt;/code&gt;. El primero para el desarrollo local y el segundo para aplicar los cambios a producción.&lt;/p&gt;
-
-&lt;p&gt;Un ejemplo para &lt;code&gt;production.rb&lt;/code&gt; sería:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://www.miweb.com&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para &lt;code&gt;staging.rb&lt;/code&gt; tendríamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web/en/local&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama &lt;strong&gt;development&lt;/strong&gt; y se prueban en local. Una vez probados, traspasamos los cambios a la rama &lt;strong&gt;master&lt;/strong&gt; y los subimos al servidor en producción.&lt;/p&gt;
-
-&lt;p&gt;Además, crearemos otro entorno llamado &lt;code&gt;desarrollo.rb&lt;/code&gt;, que usaremos para probar los cambios de la rama &lt;strong&gt;development&lt;/strong&gt; en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero &lt;code&gt;desarrollo.rb&lt;/code&gt; en &lt;code&gt;./config/deploy/&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://desarrollo.miweb.com&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/el/subdominio/de/la/web/&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Como vemos, también se usa la rama &lt;strong&gt;development&lt;/strong&gt;, ya que es donde probaremos los cambios aplicados al código.&lt;/p&gt;
-
-&lt;h3 id=&#34;configurando-el-acceso-a-la-base-de-datos&#34;&gt;Configurando el acceso a la base de datos&lt;/h3&gt;
-
-&lt;p&gt;En el directorio &lt;code&gt;./config&lt;/code&gt; renombramos el fichero &lt;code&gt;database.example.yml&lt;/code&gt; a &lt;code&gt;database.yml&lt;/code&gt; y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hecho esto, todo debería estar listo para usar.&lt;/p&gt;
-
-&lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
-
-&lt;p&gt;El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:setup:remote
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero &lt;code&gt;wp-config.php&lt;/code&gt; (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un &lt;code&gt;wp-config.php&lt;/code&gt; para producción en &lt;strong&gt;remote&lt;/strong&gt; (El servidor).&lt;/p&gt;
-
-&lt;h3 id=&#34;deploying&#34;&gt;Deploying&lt;/h3&gt;
-
-&lt;p&gt;Para volcar los cambios aplicados al servidor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de &lt;code&gt;production&lt;/code&gt;, &lt;code&gt;desarrollo&lt;/code&gt; ó &lt;code&gt;staging&lt;/code&gt; para aplicar los cambios al entorno correspondiente.&lt;/p&gt;
-
-&lt;h3 id=&#34;migraciones-de-bases-de-datos&#34;&gt;Migraciones de bases de datos&lt;/h3&gt;
-
-&lt;p&gt;Un comando muy útil, aunque hay que usarlo con precaución, ya que: &lt;strong&gt;&lt;em&gt;puede deshacerse&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Al migrar la base de datos, se reemplazarán automáticamente las urls necesarias del entorno de producción al de desarrollo y vice versa.&lt;/p&gt;
-
-&lt;h4 id=&#34;enviar-la-base-de-datos-al-entorno-de-producción&#34;&gt;Enviar la base de datos al entorno de producción&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:push
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;de-producción-a-desarrollo&#34;&gt;De producción a desarrollo&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:pull
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;realizar-una-copia-de-seguridad-del-a-bd-de-producción&#34;&gt;Realizar una copia de seguridad del a BD de producción&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:backup
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&#34;sincronizando-la-carpeta-uploads&#34;&gt;Sincronizando la carpeta Uploads&lt;/h3&gt;
-
-&lt;p&gt;La carpeta &lt;strong&gt;Uploads&lt;/strong&gt; de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production uploads:sync
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&#34;actualizar-el-núcleo-de-wordpress&#34;&gt;Actualizar el núcleo de WordPress&lt;/h3&gt;
-
-&lt;p&gt;A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:core:update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.&lt;/p&gt;
-
-&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
-
-&lt;p&gt;Si el lector ha llegado hasta este punto, estaba interesado en conseguir un ciclo de desarrollo adecuado para su sitio y, seguramente esto cumpla con sus necesidades. Una de las principales ventajas de éste modelo de desarrollo es el control absoluto del estado del sitio web, y un mayor control sobre los posibles errores, ya que se pueden probar en dos fases de desarrollo antes de liberarlos al público.&lt;/p&gt;
-
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Wp-Deploy&lt;/em&gt; »» &lt;a href=&#34;https://github.com/Mixd/wp-deploy&#34; target=&#34;_blank&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Capistrano&lt;/em&gt; »» &lt;a href=&#34;http://capistranorb.com/&#34; target=&#34;_blank&#34;&gt;capistranorb.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)</title>
-      <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
-      <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/original2.jpg&#34; alt=&#34;&#34; title=&#34;original&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
-
-&lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Éste es claramente el peor método de todos, en términos de &lt;a href=&#34;https://elbauldelprogramador.com/category/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;. La gran mayoría de sitios con reputación no usan este método. Si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De ninguna manera. No importa cual sea la longitud de tu contraseña o cómo de segura sea, si está almacenada en texto plano y el sitio es comprometido, tu contraseña será accesible por todo el mundo, sin ningún trabajo. Aún así, sí que importa en términos de ocultar la contraseña de amigos y conocidos, que pueden intentar adivinarla, pero no hay nada que hacer en el caso de que el sítio se vea comprometido.&lt;/p&gt;
-
-&lt;h3 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Para añadir más protección a la contraseña de la que proporciona el texto plano, la mayoría de los sítios cifran la contraseña antes de almacenarla en sus servidores. El cifrado, para aquellos que no lo sepan, usa una clave especial para convertir la contraseña a una cadena de texto aleatoria. Alguien que disponga estas cadenas aleatorias de texto, no será capaz de loggearse en tu cuenta a no ser que sepa la clave, la cual podría usar para descifrar la contraseña.&lt;/p&gt;
-
-&lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sítio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
-
-&lt;h3 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: Si se dispone del hash, no es posible ejecutar el algoritmo invertidamente para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
-
-&lt;p&gt;Aún así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; &amp;#8212; que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas. &amp;#8212; Se puede mirar fácilmente en el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;a href=&#34;http://es.wikipedia.org/wiki/Secure_Hash_Algorithm&#34; target=&#34;_blank&#34;&gt;SHA-1&lt;/a&gt; para &amp;#8216;password1&amp;#8242;. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Jeff Atwood&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles se crackean rápidamente. Su mayor debilidad, sin embargo, no es la complejidad, si no la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;a href=&#34;http://xkcd.com/936/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt; llamado &amp;#8220;correct horse battery staple&amp;#8221;) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
-
-&lt;h3 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria &amp;#8212; llamada &amp;#8220;salt&amp;#8221; &amp;#8212; al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes &amp;#8220;salteados&amp;#8221; en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;a href=&#34;http://lifehacker.com/5916177/65-million-linkedin-accounts-may-be-compromised-change-your-passwords-now&#34; target=&#34;_blank&#34;&gt;hackearon&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente, sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo &amp;#8212; más que usar rainbow tables &amp;#8212; pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
-
-&lt;h3 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;a href=&#34;http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html&#34; target=&#34;_blank&#34;&gt;están apostando por los hashes lentos&lt;/a&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos &amp;#8212; como el algoritmo &lt;a href=&#34;http://en.wikipedia.org/wiki/Bcrypt&#34; target=&#34;_blank&#34;&gt;bcrypt&lt;/a&gt; &amp;#8212; los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que importa. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
-
-&lt;h3 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h3&gt;
-
-&lt;p&gt;Entonces, ¿Qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;No usar servícios con mala seguridad:&lt;/strong&gt; Aunque no podemos controloar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servícios darnos de alta. Nunca deberíamos darnos de alta con servícios que usan texto plano o cifrado para almacenar las contraseña, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;a href=&#34;http://blog.cloudflare.com/keeping-passwords-safe-by-staying-up-to-date&#34; target=&#34;_blank&#34;&gt;servicio web CloudFlare&lt;/a&gt;, es hacer click en el enlace &amp;#8220;no recuerdo mi contraseña&amp;#8221;. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada &amp;#8212; y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos demostrado más arriba, una contraseña más segura, es menos probable de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable &amp;#8212; solo significa que llevará más tiempo. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta que filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos, entonces esas cuentas estarán a salvo incluso si alguna de nuestras cuentas se compromete. Si usamos la misma contraseña para cada sitio, una vulnerabilidad en algún sitio puede significar un mundo de problemas para ti.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar OAuth si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Ya &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/&#34; target=&#34;_blank&#34;&gt;hablamos sobre OAuth antes&lt;/a&gt;, un protocolo que permite logearnos usando la cuenta de Google, Facebook o twitter. Si no sabemos cómo de seguro es un sitio, y ofrece la opción de usar OAuth, úsalo &amp;#8212; Es probable que Google, Facebook y twitter tengan mejor seguridad, y si el sitio es vulnerado, simplemente le denegamos acceso a nuestra cuenta de Google, Facebook o Twitter.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
-
-&lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;a href=&#34;https://elbauldelprogramador.com/noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; target=&#34;_blank&#34;&gt;desarrollo de aplicaciones web&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/?s=udacity&#34; target=&#34;_blank&#34;&gt;udacity&lt;/a&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
-
-&lt;p&gt;A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan muchos de estos métodos, sobre todo el hash con salt usando SHA-256. También se habla de bcrypt, que básicamente es igual que el anterior, pero recibe como parámetro un número, que será el tiempo que la función de cifrado estará sin hacer nada, para conseguir así el objetivo de que no sea posible descifrar las contraseñas tan rápido. Os dejo unos vídeos sobre el tema y recomiendo que hagáis el curso.&lt;/p&gt;
-
-&lt;h3 id=&#34;bcrypt&#34;&gt;Bcrypt&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;S66XVE68NCc&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;rainbow-tables&#34;&gt;Rainbow Tables&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;SOV0AeHuHaQ&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;crear-salts&#34;&gt;Crear Salts&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;hcWQNwdQVx0&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;hashear-salts&#34;&gt;Hashear Salts&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;yBN3r2Fwze8&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;validar-salts&#34;&gt;Validar Salts&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;gDLUM38mm6c&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;validar-salts-solución&#34;&gt;Validar Salts (Solución)&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;Zy6eNdzmn1w&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;p&gt;Imagen | de &lt;a href=&#34;http://www.shutterstock.com/pic.mhtml?id=47788978&#34; target=&#34;_blank&#34;&gt;palsur&lt;/a&gt;
-Fuente | &lt;a href=&#34;http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter&#34; target=&#34;_blank&#34;&gt;LifeHacker&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Chuleta de Markdown para wordpress</title>
       <link>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</guid>
       <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
@@ -484,7 +174,7 @@ cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
     <item>
       <title>Chuleta de comandos para GPG</title>
       <link>https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/</guid>
       <description>&lt;figure&gt;
@@ -642,7 +332,7 @@ Como por ejemplo:&lt;/p&gt;
     <item>
       <title>Como crear un PPA (Personal Package Archive)</title>
       <link>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</guid>
       <description>&lt;p&gt;Hace poco hablé de qué eran los &lt;a href=&#34;https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/&#34;&gt;sistemas de paquetes PPA&lt;/a&gt;, para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.&lt;/p&gt;
@@ -694,7 +384,7 @@ Como por ejemplo:&lt;/p&gt;
     <item>
       <title>Configurar xmonad con trayer y fondo de pantalla aleatorio</title>
       <link>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</guid>
       <description>&lt;p&gt;A lo largo de los años he probado varios gestores de ventanas, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/&#34;&gt;openbox&lt;/a&gt; y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.&lt;/p&gt;
@@ -895,7 +585,7 @@ feh --bg-fill $picsfolder$randomfile1
     <item>
       <title>Cómo activar opciones de desarrollador en Android 4.2</title>
       <link>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</guid>
       <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/android&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
@@ -924,7 +614,7 @@ feh --bg-fill $picsfolder$randomfile1
     <item>
       <title>Cómo apagar automáticamente el PC cuando las descargas finalicen</title>
       <link>https://elbauldelprogramador.com/como-apagar-automaticamente-el-pc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-apagar-automaticamente-el-pc/</guid>
       <description>&lt;p&gt;A veces queremos descargar algo y no queremos esperar a que finalice, pero sí que queremos apagar el pc. Una buena opción para el problema es instalar Sentinella. Lo instalamos así:&lt;/p&gt;
@@ -947,7 +637,7 @@ feh --bg-fill $picsfolder$randomfile1
     <item>
       <title>Cómo añadir contenido por defecto a los artículos en WordPress</title>
       <link>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</guid>
       <description>
@@ -974,7 +664,7 @@ Si escribes en un blog, seguramente en cada artículo repites algunos textos, co
     <item>
       <title>Cómo cambiar la resolución de pantalla de las ttys y del GRUB en Linux</title>
       <link>https://elbauldelprogramador.com/como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/</guid>
       <description>&lt;p&gt;Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/&#34; title=&#34;Grub Customizer 2.0, personaliza tu GRUB2&#34;&gt;GRUB&lt;/a&gt;. Por defecto el GRUB se muestra a una resolución de &lt;strong&gt;640&amp;#215;480&lt;/strong&gt;, la cual es bastante ‘fea’. Igual ocurre con las terminales &lt;strong&gt;ttys&lt;/strong&gt;, a las cuales se puede acceder con pulsando &lt;strong&gt;Ctrl + Alt + F[1-6]&lt;/strong&gt;. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.&lt;/p&gt;
@@ -1053,7 +743,7 @@ menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3
     <item>
       <title>Cómo compilar todos los archivos CPP de una vez usando MakeFile</title>
       <link>https://elbauldelprogramador.com/como-compilar-todos-los-archivos-cpp-de-una-vez-usando-makefile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-compilar-todos-los-archivos-cpp-de-una-vez-usando-makefile/</guid>
       <description>&lt;p&gt;Los makefile sirven para automatizar el proceso de compilación de un proyecto estableciendo unas reglas que dictan cómo y en qué orden han de crearse los ficheros objetos, librerías y binarios.&lt;/p&gt;
@@ -1133,7 +823,7 @@ menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3
     <item>
       <title>Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar aplicaciones</title>
       <link>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</guid>
       <description>&lt;p&gt;Ya me ha sucedido en varias ocasiones que he intentado conectar mi &lt;strong&gt;Samsung Galaxy S&lt;/strong&gt; al &lt;strong&gt;adb&lt;/strong&gt; del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:&lt;/p&gt;
@@ -1200,7 +890,7 @@ List of devices attached
     <item>
       <title>Cómo conocer el software “no libre” instalado en nuestro equipo</title>
       <link>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</guid>
       <description>&lt;p&gt;Este programa lo ví en &lt;a href=&#34;http://proyectosbeta.blogspot.com&#34;&gt;ProyectosBeta&lt;/a&gt;.&lt;/p&gt;
@@ -1239,7 +929,7 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
     <item>
       <title>Cómo convertir un archivo pdf a imágenes</title>
       <link>https://elbauldelprogramador.com/como-convertir-un-archivo-pdf-a-imagenes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-convertir-un-archivo-pdf-a-imagenes/</guid>
       <description>&lt;figure&gt;
@@ -1273,7 +963,7 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
     <item>
       <title>Cómo crear  simples shortcodes en WordPress</title>
       <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
       <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
@@ -1296,6 +986,546 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 
 &lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Cómo crear shortcodes en WordPress que soporten parámetros</title>
+      <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</guid>
+      <description>&lt;p&gt;Ya se vió cómo añadir &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/&#34; target=&#34;_blank&#34;&gt;shortcodes simples&lt;/a&gt;, esta vez se explicará con un poco más de profundidad.&lt;/p&gt;
+
+&lt;p&gt;Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo&amp;nbsp;&lt;strong&gt;functions.php .&amp;nbsp;&lt;/strong&gt; Como primer ejemplo sencillo, se creará un shortcode llamado *[foo]&amp;nbsp;*que añadirá al artículo el texto&amp;nbsp;&lt;strong&gt;&amp;#8220;Esto es una prueba&amp;#8221;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;functions-php&#34;&gt;functions.php&lt;/h3&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Este archivo está en el directorio del tema. Actua como un plugin, y, si existe en el directorio del tema, se carga automáticamente durante la inicialización de WordPress. Los pasos a seguir para crear el shortcode son los siguientes:&lt;/p&gt;
+
+&lt;h4 id=&#34;crea-la-función-en-wordpress&#34;&gt;Crea la función en wordpress&lt;/h4&gt;
+
+&lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:
+&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;//[foo]&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;function foo_demo( $atts ){&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt; return &amp;quot;Esto es una prueba.&amp;quot;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
+
+&lt;h4 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h4&gt;
+
+&lt;p&gt;Edita o crea un artículo y añade el shortcode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;foo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Guárdalo y haz clic en publicar o vista previa.&lt;/p&gt;
+
+&lt;h3 id=&#34;cómo-pasar-parámetros-o-atributos-a-un-shortcode&#34;&gt;Cómo pasar parámetros o atributos a un shortcode&lt;/h3&gt;
+
+&lt;p&gt;La API del shortcode facilita mucho la tarea para poder añadirle parámetros como estos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;rap&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Nach&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Rock&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Linkin Park&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Añade lo siguiente a tu archivo&amp;nbsp;&lt;strong&gt;functions.php :&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;// shortcode [music]&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;function show_music( $atts ){&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;   $music_details=&amp;quot;&amp;quot;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;   // get attibutes and set defaults&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;        extract(shortcode_atts(array(&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;                &amp;#39;date&amp;#39; =&amp;gt; 0&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;       ), $atts));&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    // Display info&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    $music_details = &amp;#39;&amp;lt;div class=&amp;quot;info&amp;quot;&amp;gt;&amp;lt;ul&amp;gt;&amp;#39;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Genero: &amp;#39; .$genero. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Autor: &amp;#39; .$autor. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Fecha: &amp;#39; .$date. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;;&lt;/span&gt;
+
+&lt;span class=&#34;x&#34;&gt;    return $music_details;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;//add our shortcode music&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;cyberciti&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo crear un adapter personalizado en Android</title>
+      <link>https://elbauldelprogramador.com/customadapter/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/customadapter/</guid>
+      <description>&lt;p&gt;Hace tiempo que hablé de cómo crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;adapter simple&lt;/a&gt;, y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34;&gt;otro&lt;/a&gt; un poco más personalizado en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;Android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En esta entrada se verá cómo crear un adapter desde cero, con algunas funcionalidades más.&lt;/p&gt;
+
+&lt;p&gt;Para este ejemplo, se necesita mostrar en un listview los siguientes datos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Un CheckBox&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dos TextView, uno para mostrar el título de una entrada, y otro para la fecha de publicación&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Un ImageView que mostrará un iconito de un calendario.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Terminada, la aplicación de prueba debe quedar algo así:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;aligncenter  wp-image-964&#34; title=&#34;principal&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/principal1.png&#34; alt=&#34;adapter android&#34; width=&#34;484px&#34; height=&#34;807px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Antes de nada, hay que crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;layout&lt;/a&gt; que define cómo ha de verse cada fila del ListView:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;relativelayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/LinearLayout1&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#999999&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;2dp&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;checkbox&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/leido&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_centervertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:focusable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvTitulo&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_centervertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_torightof=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/leido&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Titulo del post&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:textappearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceMedium&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_alignparentright=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvTitulo&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:paddingtop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;25/05/2012&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:textappearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceSmall&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;imageview&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/ivCalendar&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;22dp&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;22dp&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_aligntop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_margintop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:layout_toleftof=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:contentdescription=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/imagen_content_description&amp;quot;&lt;/span&gt;
+       &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/calendar&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/relativelayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Creando así el aspecto deseado para cada línea del ListView:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;customrow&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/customrow1.png&#34; alt=&#34;adapter android&#34; width=&#34;307px&#34; height=&#34;50px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El primer paso es crear una clase que representará los datos a almacenar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.example.adapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.os.Parcel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.os.Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha_publicacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;titulo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;leido&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;equip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;fecha_publicacion&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;titulo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;equip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;leido&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Parcel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;titulo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;readString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;fecha_publicacion&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;readString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;leido&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;readInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setFecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;fecha_publicacion&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getFecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha_publicacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;leido&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;leido&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getEquipos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;titulo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setEquipos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;equipos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;titulo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;equipos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;describeContents&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;writeToParcel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Parcel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;writeString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getEquipos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;writeString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getFecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;writeInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Creator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CREATOR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Creator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;createFromParcel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Parcel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+           &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+       &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;newArray&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+          &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La razón por la que se implementa &lt;code&gt;Parcelable&lt;/code&gt; se verá más adelante, el resto del código es sencillo, el constructor, y los getters y setters correspondientes a cada miembro de la clase.&lt;/p&gt;
+
+&lt;p&gt;Una vez definido el objeto con el que se va a trabajar, se creará otra clase extendiendo de &lt;code&gt;BaseAdapter&lt;/code&gt;, que permite crear un adapter a medida.&lt;/p&gt;
+
+&lt;p&gt;El objetivo del adapter consiste en rellenar objetos &lt;code&gt;View&lt;/code&gt; con los datos a mostrar. En este ejemplo, los datos son instancias de la clase &lt;code&gt;PostData&lt;/code&gt;. Abajo se muestra la implementación del adapter y una explicación:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.example.adapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.util.ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.content.Context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.util.Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.view.LayoutInflater&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.view.View&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.view.View.OnClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.view.ViewGroup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.widget.BaseAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.widget.CheckBox&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.widget.TextView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.example.customadapter.R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;PostAdapter&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BaseAdapter&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+ &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ViewHolder&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;TextView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tvFecha_pub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;TextView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tvtitulo_post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;CheckBox&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;CustomAdapter&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertViewCounter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LayoutInflater&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inflater&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+ &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PostAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Constructing CustomAdapter&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+       &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;inflater&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LayoutInflater&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getCount&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;in getCount()&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;in getItem() for position &amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getItemId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;in getItemId() for position &amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getViewTypeCount&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;in getViewTypeCount()&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getItemViewType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;in getItemViewType() for position &amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;notifyDataSetChanged&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;notifyDataSetChanged&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewGroup&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+       &lt;span class=&#34;n&#34;&gt;ViewHolder&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+      &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;in getView for position &amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;, convertView is &amp;quot;&lt;/span&gt;
+              &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;null&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;being recycled&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+
+     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inflater&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;inflate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;list_row_posts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+          &lt;span class=&#34;n&#34;&gt;convertViewCounter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++;&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertViewCounter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot; convertViews have been created&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+            &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewHolder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+          &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tvFecha_pub&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TextView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;
+                 &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tvFecha_publicacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tvtitulo_post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TextView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;
+                   &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tvTitulo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CheckBox&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;leido&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;checkListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+            &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ViewHolder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+     &lt;span class=&#34;c1&#34;&gt;// Para porde hacer click en el checkbox&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// Setting all values in listview&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tvFecha_pub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getFecha&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tvtitulo_post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getEquipos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+
+      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setCheck&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+        &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;notifyDataSetChanged&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;checkAll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++)&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;cancelSelectedPost&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+       &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getCount&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+           &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+           &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)));&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+              &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;notifyDataSetChanged&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;haveSomethingSelected&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++)&lt;/span&gt;
+           &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+               &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;  * Este método es para poder seleccionar una fila directamente con el&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;    * checkbox en lugar de tener que pulsar en la liste en sí&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;   */&lt;/span&gt;
+ &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnClickListener&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkListener&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+       &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+       &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onClick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+     &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+           &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Al instanciar el adapter, en este caso &lt;code&gt;PostAdapter&lt;/code&gt;, se guarda el &lt;code&gt;LayoutInflater&lt;/code&gt;, útil para mejorar el rendimiento cuando se cree un objeto &lt;code&gt;View&lt;/code&gt; para devolverlo al &lt;code&gt;ListView&lt;/code&gt;. Cuando los datos vienen de forma externa al adapter, hay que pasarlos al constructor (&lt;code&gt;ArrayList d&lt;/code&gt;). Terminando con el constructor, es costumbre guardar el contexto de la aplicación por si hiciera falta, aunque este no es el caso.&lt;/p&gt;
+
+&lt;p&gt;Algo muy recomendable que hay que crear al implementar un adapter, es un objeto al que por costumbre se suele llamar &lt;code&gt;ViewHolder&lt;/code&gt;, destinado a retener los datos en los objetos &lt;code&gt;View&lt;/code&gt;. Quizá parezca un poco abstracto, pero básicamente es como cachear los datos que ya se han creado y asociado a sus respectivas &lt;code&gt;Views&lt;/code&gt; para mejorar el renderizado cuando se dibuje el &lt;code&gt;ListView&lt;/code&gt;. Esta clase estática, deberá tener tantos miembros (y del mismo tipo) como &lt;code&gt;Views&lt;/code&gt; tenga el layout creado más arriba. Es decir, si se añade otro CheckBox, en el &lt;code&gt;ViewHolder&lt;/code&gt; deberá crearse también.&lt;/p&gt;
+
+&lt;p&gt;El funcionamiento interno del adapter es el siguiente; Cuando se establece un adaptador, ya sea con &lt;code&gt;setListAdapter()&lt;/code&gt;, &lt;code&gt;Listview.setAdapter()&lt;/code&gt; o cualquier otro, es el el propio objeto &lt;code&gt;View&lt;/code&gt; (en este ejemplo un &lt;code&gt;ListView&lt;/code&gt;) el que llama a los métodos del adapter para rellenarse con los datos correspondientes. Llama al método &lt;code&gt;getCount()&lt;/code&gt; para saber el número de objetos a mostrar. También llama a &lt;code&gt;getViewTypeCount()&lt;/code&gt; para determinar el número de Views distintas serán mostradas en la lista. En este caso, sólamente hay un tipo de vista, el layout definido al principio de la entrada, por eso éste método devuelve un 1. Si la lista mostrara un separador entre fila y fila, u otro tipo de dato que requiriera de un layout distinto, &lt;code&gt;getViewTypeCount()&lt;/code&gt; debería devolver el número apropiado.&lt;/p&gt;
+
+&lt;p&gt;El método &lt;code&gt;getItemViewType(int position)&lt;/code&gt; está íntimamente relacionado con el anterior, ya que gestiona qué tipo de View hay en una determinada posición, en este ejemplo solo hay una, luego devuelve un 0, si hubiera dos tipos de Views a representar, este método devolvería 0 ó 1 dependiendo del tipo de View en dicha posición, si hubiera 3, devolvería 0, 1 ó 2 (Es como si fuera un índice para identificar el tipo de View).&lt;/p&gt;
+
+&lt;p&gt;El método más importante es &lt;code&gt;getView()&lt;/code&gt;, una vez que se ha determinado cuantos elementos hay disponibles, el ListView empieza a solicitar datos. Aquí es cuando entra en juego el &lt;code&gt;ViewHolder&lt;/code&gt; y el reciclaje de Views. El ListView solo muestra tantas Views hijas como quepan en la pantalla, por tanto, si se disponen de 100 filas de datos a mostrar y en la pantalla solo se pueden mostrar 10, se llama a &lt;code&gt;getView()&lt;/code&gt; 10 veces.&lt;/p&gt;
+
+&lt;p&gt;Es fácil de comprobar lo dicho en el parrafo anterior mirando el logcat durante la ejecución del programa. Al iniciarlo, se llama a &lt;code&gt;getView()&lt;/code&gt; tantas veces como datos entren en la pantalla, conforme se desplaza el ListView para mostrar más datos también se llama a dicho método y llegará un momento en el que se empezará a reciclar los Views gracias al &lt;code&gt;ViewHolder&lt;/code&gt; lo cual aumenta el rendimiendo de la aplicación.&lt;/p&gt;
+
+&lt;p&gt;El reciclaje de Views consiste en lo siguiente. Si &lt;code&gt;convertView&lt;/code&gt; es un valor no nulo dentro de &lt;code&gt;getView()&lt;/code&gt;, significa que el ListView está reusando el objeto View, evitanto inflar de nuevo el layout XML y hacer las llamadas a &lt;code&gt;findViewById()&lt;/code&gt; para cada View de la fila, en este caso, dos TextView y un CheckBox. Al vincular el objeto &lt;code&gt;ViewHolder&lt;/code&gt; a un View (con el método &lt;code&gt;setTag()&lt;/code&gt;) se reciclará mucho más rápido la próxima vez que sea necesario mostrarla. Así, sólo hace falta recuperar el &lt;code&gt;ViewHolder&lt;/code&gt; y asignarle los datos correspondientes al View.&lt;/p&gt;
+
+&lt;p&gt;Una vez explicado cómo funciona el adaptador voy a explicar en detalle lo que hacen algunas funciones y cómo resolver algunos problemas típicos. Que nombro a continuación:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#estadoCheckBox&#34;&gt;Activar checkBox al pulsar en el propio checkbox o en una fila de la lista&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#desplazarLista&#34;&gt;Mantener el estado de los checkBox al desplazar la lista&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#SavedInstanceState&#34;&gt;Mantener el estado de los checkbox al girar la pantalla&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&#34;estadoCheckBox&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;activar-checkbox-al-pulsar-en-una-fila-de-la-lista&#34;&gt;Activar checkBox al pulsar en una fila de la lista&lt;/h1&gt;
+
+&lt;p&gt;El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;checkbox&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/leido&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_centervertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:focusable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al checkbox:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnClickListener&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkListener&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+   &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onClick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se asocia en el método &lt;code&gt;getView()&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;holder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;checkListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De esta forma se puede hacer click tanto en el checkbox como en una fila de la lista.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&#34;desplazarLista&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;mantener-el-estado-de-los-checkbox-al-desplazar-la-lista&#34;&gt;Mantener el estado de los checkBox al desplazar la lista&lt;/h1&gt;
+
+&lt;p&gt;Ahora se puede activar el checkbox de las dos formas mencionadas anteriormente, pero hay otro problema, si activamos algún checkbox y desplazamos la lista arriba o abajo, ocultando la fila activada, se pierde el estado del checkbox.&lt;/p&gt;
+
+&lt;p&gt;Este problema se debe a que no se está almacenando el estado del checkbox en los datos que maneja el adapter. Para resolverlo, se deben crear un conjunto de métodos que interactuen con los datos de la clase &lt;code&gt;PostData&lt;/code&gt;, y que hagan uso de los getters y setters de dicha clase. En concreto son estos tres métodos, &lt;code&gt;setCheck()&lt;/code&gt;, &lt;code&gt;checkAll()&lt;/code&gt; y &lt;code&gt;cancelSelectecPost()&lt;/code&gt;. Que se usan en los siguientes casos:&lt;/p&gt;
+
+&lt;p&gt;En el evento que se lanza al pulsar un elemento de la lista (&lt;code&gt;onListItemClick()&lt;/code&gt;), se llama desde el adapter al método &lt;code&gt;setCheck()&lt;/code&gt; así: &lt;code&gt;adapter.setCheck(position);&lt;/code&gt; para que se actualize el valor del objeto &lt;code&gt;PostData&lt;/code&gt; en esa posición, como se vio más arriba, PostData consta de tres miembros, dos strings y un booleano. Con lo cual, al pulsar en un elemento se actualiza el valor del booleano que representa el estado del checkbox. El código del método es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setCheck&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+   &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;notifyDataSetChanged&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Simplemente cambia el valor del booleano y notifica al ListView de que los datos han cambiado y debe actualizarse. &lt;code&gt;CheckAll()&lt;/code&gt; es similar, activa o desactiva todos los checkBox dependiendo del parametro booleano que reciba. Y &lt;code&gt;cancelSelectedPost()&lt;/code&gt; elimina del ListView los elementos con el checkbox activo.
+&lt;a name=&#34;SavedInstanceState&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;mantener-el-estado-de-los-checkbox-al-girar-la-pantalla&#34;&gt;Mantener el estado de los checkbox al girar la pantalla&lt;/h1&gt;
+
+&lt;p&gt;Por último, hay otro problema a la hora de mantener los checkbox activados al girar la pantalla. Se debe a que cada vez que cambia la orientación del teléfono, la &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;activity&lt;/a&gt; se crea de nuevo (se llama al método &lt;code&gt;onCreate()&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Para mantener los datos se necesita hacer uso de &lt;code&gt;onSaveInstanceState&lt;/code&gt;, el cual se llama justo antes de destruir la actividad, permietiendo guardar los datos para recuperarlos posteriormente desde &lt;code&gt;onRestoreInstanceState()&lt;/code&gt; o &lt;code&gt;onCreate()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí es donde cobra sentido la implementación de &lt;a href=&#34;http://developer.android.com/reference/android/os/Parcelable.html&#34; target=&#34;_blank&#34;&gt;Parcelable&lt;/a&gt; de la clase PostData. Cuyo requisito es la implementación de dos métodos para escribir y leer los miembros del objeto PostData desde un &lt;code&gt;Parcel&lt;/code&gt; y una clase interna llamada &lt;a href=&#34;http://developer.android.com/reference/android/os/Parcelable.Creator.html&#34; target=&#34;_blank&#34;&gt;CREATOR&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez implementado estos métodos, se podrá guardar el estado de los datos así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onSaveInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;outState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;putParcelableArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;savedData&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onSaveInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;outState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;y recuperarlos en &lt;code&gt;onCreate()&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;c1&#34;&gt;//...&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;checkbox&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
+
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;19/09/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Moborobo, herramienta de Administración Integrada para Android en el PC&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;23/09/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Cómo crear shortcodes en WordPress que soporten parámetros&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;30/09/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;07/10/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Ocultar archivos dentro de una imagen&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;21/10/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Top 10 de las Mejores Herramientas en la Línea de Comandos&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;28/10/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Enlaces de la semana ( II )&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;04/11/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Nueva Guía: Your Guide to Google Analytics&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;11/11/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Personalizar el Error 404 en wordpress&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;18/11/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Humor gráfico – Informáticos, Programadores, geek… – 9GAG.COM Parte (III)&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;25/11/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+
+      &lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MainActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getParcelableArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;savedData&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MainActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;setListAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Eso es todo, espero que haya sido una entrada de utilidad para los lectores, si tienes alguna duda o se te ocurre alguna otra forma de hacerlo, no dudes en dejar tu comentario.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Android: Checkable Linear Layout&lt;/em&gt; »» &lt;a href=&#34;http://tokudu.com/2010/android-checkable-linear-layout/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Android ListView and ListActivity - Tutorial&lt;/em&gt; »» &lt;a href=&#34;http://www.vogella.com/articles/AndroidListView/article.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Saving state of ArrayList of custom objects&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;AndroidBook&lt;/em&gt; »» &lt;a href=&#34;http://www.androidbook.com&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

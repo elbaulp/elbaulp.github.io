@@ -9,148 +9,9 @@
     <atom:link href="https://elbauldelprogramador.com/categories/internet/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)</title>
-      <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
-      <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/original2.jpg&#34; alt=&#34;&#34; title=&#34;original&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
-
-&lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Éste es claramente el peor método de todos, en términos de &lt;a href=&#34;https://elbauldelprogramador.com/category/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;. La gran mayoría de sitios con reputación no usan este método. Si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De ninguna manera. No importa cual sea la longitud de tu contraseña o cómo de segura sea, si está almacenada en texto plano y el sitio es comprometido, tu contraseña será accesible por todo el mundo, sin ningún trabajo. Aún así, sí que importa en términos de ocultar la contraseña de amigos y conocidos, que pueden intentar adivinarla, pero no hay nada que hacer en el caso de que el sítio se vea comprometido.&lt;/p&gt;
-
-&lt;h3 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Para añadir más protección a la contraseña de la que proporciona el texto plano, la mayoría de los sítios cifran la contraseña antes de almacenarla en sus servidores. El cifrado, para aquellos que no lo sepan, usa una clave especial para convertir la contraseña a una cadena de texto aleatoria. Alguien que disponga estas cadenas aleatorias de texto, no será capaz de loggearse en tu cuenta a no ser que sepa la clave, la cual podría usar para descifrar la contraseña.&lt;/p&gt;
-
-&lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sítio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
-
-&lt;h3 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: Si se dispone del hash, no es posible ejecutar el algoritmo invertidamente para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
-
-&lt;p&gt;Aún así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; &amp;#8212; que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas. &amp;#8212; Se puede mirar fácilmente en el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;a href=&#34;http://es.wikipedia.org/wiki/Secure_Hash_Algorithm&#34; target=&#34;_blank&#34;&gt;SHA-1&lt;/a&gt; para &amp;#8216;password1&amp;#8242;. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Jeff Atwood&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles se crackean rápidamente. Su mayor debilidad, sin embargo, no es la complejidad, si no la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;a href=&#34;http://xkcd.com/936/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt; llamado &amp;#8220;correct horse battery staple&amp;#8221;) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
-
-&lt;h3 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria &amp;#8212; llamada &amp;#8220;salt&amp;#8221; &amp;#8212; al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes &amp;#8220;salteados&amp;#8221; en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;a href=&#34;http://lifehacker.com/5916177/65-million-linkedin-accounts-may-be-compromised-change-your-passwords-now&#34; target=&#34;_blank&#34;&gt;hackearon&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente, sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo &amp;#8212; más que usar rainbow tables &amp;#8212; pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
-
-&lt;h3 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;a href=&#34;http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html&#34; target=&#34;_blank&#34;&gt;están apostando por los hashes lentos&lt;/a&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos &amp;#8212; como el algoritmo &lt;a href=&#34;http://en.wikipedia.org/wiki/Bcrypt&#34; target=&#34;_blank&#34;&gt;bcrypt&lt;/a&gt; &amp;#8212; los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que importa. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
-
-&lt;h3 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h3&gt;
-
-&lt;p&gt;Entonces, ¿Qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;No usar servícios con mala seguridad:&lt;/strong&gt; Aunque no podemos controloar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servícios darnos de alta. Nunca deberíamos darnos de alta con servícios que usan texto plano o cifrado para almacenar las contraseña, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;a href=&#34;http://blog.cloudflare.com/keeping-passwords-safe-by-staying-up-to-date&#34; target=&#34;_blank&#34;&gt;servicio web CloudFlare&lt;/a&gt;, es hacer click en el enlace &amp;#8220;no recuerdo mi contraseña&amp;#8221;. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada &amp;#8212; y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos demostrado más arriba, una contraseña más segura, es menos probable de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable &amp;#8212; solo significa que llevará más tiempo. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta que filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos, entonces esas cuentas estarán a salvo incluso si alguna de nuestras cuentas se compromete. Si usamos la misma contraseña para cada sitio, una vulnerabilidad en algún sitio puede significar un mundo de problemas para ti.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar OAuth si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Ya &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/&#34; target=&#34;_blank&#34;&gt;hablamos sobre OAuth antes&lt;/a&gt;, un protocolo que permite logearnos usando la cuenta de Google, Facebook o twitter. Si no sabemos cómo de seguro es un sitio, y ofrece la opción de usar OAuth, úsalo &amp;#8212; Es probable que Google, Facebook y twitter tengan mejor seguridad, y si el sitio es vulnerado, simplemente le denegamos acceso a nuestra cuenta de Google, Facebook o Twitter.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
-
-&lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;a href=&#34;https://elbauldelprogramador.com/noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; target=&#34;_blank&#34;&gt;desarrollo de aplicaciones web&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/?s=udacity&#34; target=&#34;_blank&#34;&gt;udacity&lt;/a&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
-
-&lt;p&gt;A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan muchos de estos métodos, sobre todo el hash con salt usando SHA-256. También se habla de bcrypt, que básicamente es igual que el anterior, pero recibe como parámetro un número, que será el tiempo que la función de cifrado estará sin hacer nada, para conseguir así el objetivo de que no sea posible descifrar las contraseñas tan rápido. Os dejo unos vídeos sobre el tema y recomiendo que hagáis el curso.&lt;/p&gt;
-
-&lt;h3 id=&#34;bcrypt&#34;&gt;Bcrypt&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;S66XVE68NCc&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;rainbow-tables&#34;&gt;Rainbow Tables&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;SOV0AeHuHaQ&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;crear-salts&#34;&gt;Crear Salts&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;hcWQNwdQVx0&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;hashear-salts&#34;&gt;Hashear Salts&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;yBN3r2Fwze8&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;validar-salts&#34;&gt;Validar Salts&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;gDLUM38mm6c&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;validar-salts-solución&#34;&gt;Validar Salts (Solución)&lt;/h3&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;Zy6eNdzmn1w&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;p&gt;Imagen | de &lt;a href=&#34;http://www.shutterstock.com/pic.mhtml?id=47788978&#34; target=&#34;_blank&#34;&gt;palsur&lt;/a&gt;
-Fuente | &lt;a href=&#34;http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter&#34; target=&#34;_blank&#34;&gt;LifeHacker&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Nueva Guía Gratuita: Java Concurrency Essentials</title>
-      <link>https://elbauldelprogramador.com/nueva-gua-gratuita-java-concurrency-essentials/</link>
-      <pubDate>Wed, 20 May 2015 14:07:56 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/nueva-gua-gratuita-java-concurrency-essentials/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java06&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Nueva Guía Gratuita: Java Concurrency Essentials.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;175px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Concurrency is always a challenge for developers and writing concurrent programs can be extremely hard. There is a number of things that could potentially blow up and the complexity of systems rises considerably when concurrency is introduced. However, the ability to write robust concurrent programs is a great tool in a developer’s belt and can help build sophisticated, enterprise level applications.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;In this course, you will dive into the magic of concurrency. You will be introduced to the fundamentals of concurrency and concurrent code and you will learn about concepts like atomicity, synchronization and thread safety. As you advance, the following lessons will deal with the tools you can leverage, such as the Fork/Join framework, the java.util.concurrent JDK package. To sum those up, you will learn about testing concurrent applications.&lt;/p&gt;
-
-&lt;div class=&#34;button-post&#34;&gt;
-&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java06&#34; target=&#34;_blank&#34;&gt;Descárgala&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>15 Demostraciones del potencial de HTML5</title>
       <link>https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/</guid>
       <description>&lt;p&gt;En tech Drive-In he visto esta entrada que enlaza con 15 demos en HTML5 que pretenden hacernos ver la potencia que tiene esta nueva versión que se está preparando de HTML, entre las que se pueden destacar consultas &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;SQL&lt;/a&gt; y almacenamineto en la web, creación y desrucción de objetos etc, de las 15 la que más interesante me parece es la que explica en varios pasos las caractarísticas.&lt;/p&gt;
@@ -163,7 +24,7 @@ Fuente | &lt;a href=&#34;http://lifehacker.com/5919918/how-your-passwords-are-st
     <item>
       <title>20 ejemplos de iptables para SysAdmins novatos</title>
       <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
       <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
@@ -715,7 +576,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
     <item>
       <title>BitTorrent Sync: Tus archivos sincronizados sin intermediarios</title>
       <link>https://elbauldelprogramador.com/bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/bittorrent-sync-tus-archivos-sincronizados-sin-intermediarios/</guid>
       <description>&lt;figure&gt;
@@ -779,7 +640,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
     <item>
       <title>Bloquear una IP atacando el servidor mediante iptables</title>
       <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
       <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
@@ -819,7 +680,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>Chema Alonso hablando de la inseguridad de las vías telemáticas</title>
       <link>https://elbauldelprogramador.com/chema-alonso-hablando-de-la-inseguridad/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/chema-alonso-hablando-de-la-inseguridad/</guid>
       <description>&lt;p&gt;OS dejo dos vídeos muy interesantes que recomiendo que veáis, ya que hablan de la seguridad en la red:&lt;/p&gt;
@@ -840,7 +701,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>Crea scripts para las aplicaciones de Google con Apps Script</title>
       <link>https://elbauldelprogramador.com/crea-scripts-para-las-aplicaciones-de-google-con-apps-script/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/crea-scripts-para-las-aplicaciones-de-google-con-apps-script/</guid>
       <description>&lt;p&gt;Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.&lt;/p&gt;
@@ -1239,7 +1100,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework</title>
       <link>https://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/</guid>
       <description>&lt;div class=&#34;separator&#34; &gt;
@@ -1270,7 +1131,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>Cómo apagar automáticamente el PC cuando las descargas finalicen</title>
       <link>https://elbauldelprogramador.com/como-apagar-automaticamente-el-pc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-apagar-automaticamente-el-pc/</guid>
       <description>&lt;p&gt;A veces queremos descargar algo y no queremos esperar a que finalice, pero sí que queremos apagar el pc. Una buena opción para el problema es instalar Sentinella. Lo instalamos así:&lt;/p&gt;
@@ -1293,7 +1154,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>Cómo configurar un servidor DNS - Parte 1 (Introducción)</title>
       <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</guid>
       <description>&lt;figure&gt;
@@ -1430,7 +1291,7 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
     <item>
       <title>Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)</title>
       <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</guid>
       <description>&lt;figure&gt;
@@ -1542,7 +1403,7 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
     <item>
       <title>Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)</title>
       <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</guid>
       <description>&lt;figure&gt;
@@ -1666,7 +1527,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
     <item>
       <title>Cómo descargar archivos de una web por extensión con wget</title>
       <link>https://elbauldelprogramador.com/como-descargar-archivos-de-una-web-por-extension-con-wget/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-descargar-archivos-de-una-web-por-extension-con-wget/</guid>
       <description>&lt;p&gt;Seguramente alguna vez hayas encontrado alguna web con montones de ficheros que te interesa descargarte, pero resulta un tanto arduo descargar los ficheros uno a uno. Si eres usuario Linux seguramente conozcas el comando &lt;em&gt;wget&lt;/em&gt;. Este comando permite descargar todo el contenido de una web por extensión, de modo que si queremos descargar todos los ficheros con extensión &lt;em&gt;tar.gz&lt;/em&gt; basta con ejecutar el siguiente comando:&lt;/p&gt;
@@ -1690,7 +1551,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
     <item>
       <title>Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad</title>
       <link>https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/</guid>
       <description>&lt;h3 id=&#34;importar-entradas-y-comentários&#34;&gt;Importar entradas y comentários&lt;/h3&gt;
@@ -2172,6 +2033,90 @@ RewriteRule . /index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span c
 
 &lt;span class=&#34;c1&#34;&gt;# END WordPress&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo saber si tus visitantes usan Ad-Block</title>
+      <link>https://elbauldelprogramador.com/como-saber-si-tus-visitantes-usan-ad-block/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/como-saber-si-tus-visitantes-usan-ad-block/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/07/adblock-plus-logo11.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;adblock-plus-logo&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/adblock-plus-logo11.png&#34; alt=&#34;&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/a&gt;
+Hace unos días, visitando la web &lt;a href=&#34;http://www.makeuseof.com/&#34; target=&#34;_blank&#34;&gt;makeuseof&lt;/a&gt; me apareció un mensaje en la parte superior de la página en la que indicaba que se había detectado que estaba usando el plugin Ad-Block (Que bloquea la publicidad de las web, para quien no lo sepa). Y de una manera muy educada sugerían que se desabilitara para apoyar la web y así poder seguir ofreciendo contenido libre de costo.&lt;/p&gt;
+
+&lt;p&gt;Últimamente existe una obsesión muy grande por la privacidad en internet, cosa que apoyo, aunque creo que no hay que ser extremista.&lt;/p&gt;
+
+&lt;p&gt;Yo uso ad-block desde hace mucho tiempo, aunque no para todas las webs, makeuseof desde ahora es una más de la mi lista blanca en Ad-Block.&lt;/p&gt;
+
+&lt;p&gt;Personalmente pienso que en los blogs y páginas que leemos habitualmente es recomendable desabilitar este tipo de plugins, ya que es una forma de apoyar al propietario, que tanto tiempo y esfuerzo dedica a escribir y mantener la web y de paso, puede que nos resulte útil algún anuncio que se nos muestre y de paso le ayudamos a pagar el hosting del sitio. Por supuesto esto queda bajo el criterio de cada persona.&lt;/p&gt;
+
+&lt;p&gt;Es por eso que hoy voy a explicar cómo es posible detectar si nuestros visitantes tienen activado ad-block para nuestro sitio y así sugerirle de manera educada y sin molestarle demasiado si desea desactivarlo.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Buscando cómo hacer esto me encontré con plugins para wordpress que bloquean al visitante que esté usandolo, lo cual no me parece correcto. Así que continué buscando y encontré un script que hace exáctamente lo que andaba buscando, &lt;em&gt;Adblock detector&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;En su web oficial nos ofrecen dos tipos de implementaciones:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_enabled&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;detected&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_disabled&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;not detected&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_abdDetectedFnc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;_enabled&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_abdNotDetectedFnc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;_disabled&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;http://adblockdetector.com/script.php&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;y&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_status&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isDetected&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;detected: &amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isDetected&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_abdStatusFnc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;_status&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;http://adblockdetector.com/script.php&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Basta con modificar el contenido de las funciones &lt;strong&gt;_enabled()&lt;/strong&gt; y &lt;strong&gt;_disabled()&lt;/strong&gt; en el primer caso por el contenido que deseemos, o &lt;strong&gt;_status&lt;/strong&gt; en el segundo método y listo.&lt;/p&gt;
+
+&lt;p&gt;Y a vosotros, ¿qué os parece que se os sugieran este tipo de cosas?, ¿Lo desactivaríais? dejad vuestros comentarios.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Vía | &lt;a href=&#34;http://adblockdetector.com/&#34; target=&#34;_blank&#34;&gt;Adblockdetector&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>El top 500 de los supercomputadores más potentes del mundo</title>
+      <link>https://elbauldelprogramador.com/el-top-500-de-los-supercomputadores-mas/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/el-top-500-de-los-supercomputadores-mas/</guid>
+      <description>&lt;div &gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;&#34; src=&#34;https://2.bp.blogspot.com/-gIWvFVFFQqs/T0eBr9zRL4I/AAAAAAAACHU/vGXacktGdQc/s400/kcom-main.jpg&#34;  /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Esta semana en clase de TOC (Tecnología y Organización de Computadores) nos enseñaron una web que se dedica a buscar por el mundo los supercomputadores y clasificarlos en un ranking de los 500 mejores, la web en cuestión es &lt;a href=&#34;http://top500.org/&#34; target=&#34;_blank&#34;&gt;top500.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si nos vamos a la sección donde se encuentra el ranking podemos ver el que ocupa el primer lugar está en Japón, de la marca Fujitsu y que posee la friolera de &lt;strong&gt;705024 núcleos&lt;/strong&gt;, una potencia de &lt;strong&gt;12659.89 Kw&lt;/strong&gt;, un total de &lt;strong&gt;memória de 1410048 Gb&lt;/strong&gt; y corre bajo GNU/Linux.&lt;/p&gt;
+
+&lt;p&gt;Además su rendimiento &lt;a href=&#34;http://es.wikipedia.org/wiki/LINPACK&#34; target=&#34;_blank&#34;&gt;LINPACK&lt;/a&gt; máximo es de &lt;strong&gt;10510 TFLOPS&lt;/strong&gt;, es decir &lt;strong&gt;10&lt;sup&gt;12&lt;/sup&gt;&lt;/strong&gt; operaciones por segundo en coma flotante.&lt;/p&gt;
+
+&lt;p&gt;Si buscamos en la lista el primer supercomputador que reside en España lo encontramos en Barcelona, ocupando el puesto 114 con &lt;strong&gt;5544&lt;/strong&gt; núcleos, una potencia de &lt;strong&gt;80.50 Kw&lt;/strong&gt;, memória de &lt;strong&gt;3024 Gb&lt;/strong&gt; y corriendo también bajo linux. Éste supercomputador alcanza los &lt;strong&gt;103.20 TFLOTS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, exíste otro ranking que clasifica los 500 supercomputadoras en función del mínimo consumo, esta web es &lt;a href=&#34;http://www.green500.org/&#34; target=&#34;_blank&#34;&gt;green500.org&lt;/a&gt;. Tiene en cuenta los MFLOPS que es capaz de realizar por Watio de potencia.&lt;/p&gt;
+
+&lt;p&gt;En este ranking tenemos en primer lugar a un IBM que es capaz de realizar &lt;strong&gt;2026.48 MFLOPS/W&lt;/strong&gt;. Sin embargo, al buscar el supercomputador Japonés en esta lista lo encontramos en la posición 380, con tan solo &lt;strong&gt;108.43 MFLOPS/W&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Y nuestro Supercomputador situado en Barcelona asciende de la posición 114 a la 7 en el ranking verde con &lt;strong&gt;1266.23 MFLOPS/W&lt;/strong&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

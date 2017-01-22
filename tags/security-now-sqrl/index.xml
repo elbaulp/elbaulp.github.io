@@ -9,6 +9,60 @@
     <atom:link href="https://elbauldelprogramador.com/tags/security-now-sqrl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>SQRL y la idea de eliminar el uso de usuario y contraseña en internet</title>
+      <link>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Puedes echar un ojo al artículo más actualizado &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/&#34;&gt;SQRL -Secure Quick Reliable Login a Fondo&lt;/a&gt;
+{: .notice}&lt;/p&gt;
+
+&lt;p&gt;Los lectores habituales sabrán que suelo escuchar el programa de radio &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Artículos sobre Security now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, la semana pasada, &lt;strong&gt;Steve Gibson&lt;/strong&gt;, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención &lt;strong&gt;SQRL&lt;/strong&gt; (&lt;em&gt;Secure &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; Login&lt;/em&gt;) y ha tenido bastante éxito en la comunidad, tanto que hasta el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3 org&#34;&gt;W3&lt;/a&gt; se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sqrl-login-sample.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;400px&#34; height=&#34;199px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El sistema &lt;strong&gt;SQRL&lt;/strong&gt; es bastante simple, cuando se desea identificarse en un sitio web mediante &lt;strong&gt;SQRL&lt;/strong&gt;, aparecerá un código, entonces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El usuario ejecuta en su teléfono móvil la aplicación &lt;strong&gt;SQRL&lt;/strong&gt;, y escanea el código mostrado. (O un usuario navegando desde su móvil toca el código. O un usuario de PC hace click en el código.)&lt;/li&gt;
+&lt;li&gt;Para verificar, la aplicación &lt;strong&gt;SQRL&lt;/strong&gt; muestra el nombre del dominio contenido en el código &lt;strong&gt;SQRL&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Tras verificar el dominio, el usuario permite a la aplicación &lt;strong&gt;SQRL&lt;/strong&gt; que autentifique su identidad.&lt;/li&gt;
+&lt;li&gt;Dejando la información de login en blanco (No es necesario rellenar los campos usuario y contraseña) se hace click en &lt;em&gt;login&lt;/em&gt;&amp;#8230; y estaremos en nuestra cuenta.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Este método, a pesar de ser bastante simple, es de lejos mucho más seguro que cualquier otra solución de logueo. Intentaré explicar un poco por encima el proceso traduciéndolo de la página de Steve (1), donde hay muchos más detalles.&lt;/p&gt;
+
+&lt;h2 id=&#34;qué-ocurre-detrás-de-la-escena&#34;&gt;¿Qué ocurre detrás de la escena?&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Gracias a &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Artículos de Luzcila&#34;&gt;Luzcila&lt;/a&gt; por traducir esta sección&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;(Lo escrito a continuación pretende dar al lector una noción general del proceso de autentificación mediante &lt;strong&gt;SQRL&lt;/strong&gt;, para detalles más técnicos se puede visitar el enlace de las referencias (1), si hay algún interesado en traducir esta información al castellano, puede contactar conmigo mediante el &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Contacto&#34;&gt;formulario de contacto&lt;/a&gt; y encantado añadiré el contenido mencionando a su autor).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El código QR presentado cerca de los campos de login contiene la URL del servicio de autenticación para el sitio. La URL incluye un número aleatorio largo generado de forma segura por lo que cada presentación de la página de login muestra un código QR diferente. (En el mundo de la criptografía este número aleatorio se conoce como “nonce”)&lt;/li&gt;
+&lt;li&gt;La aplicación de autenticación SQRL de los smartphones encripta el nombre de dominio del sitio indexado por la clave maestra del usuario para producir un par de clave pública específica del sitio (&lt;em&gt;site-specific public key pair&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;La aplicación firma criptográficamente la URL completa contenida en el código QR usando la clave privada específica del sitio. Dado que la URL incluye un número largo aleatorio (el nonce), la firma es única para este sitio y código QR.&lt;/li&gt;
+&lt;li&gt;La aplicación emite una consulta HTTPS POST a la URL del código QR, la cual es del servicio de autenticación del sitio. El POST provee la clave pública específica del sitio y la firma criptográfica que se corresponde de la URL del código QR.&lt;/li&gt;
+&lt;li&gt;El sitio web de autenticación recibe y reconoce la consulta POST devolviéndole una respuesta standard HTTP “200 OK” sin otro contenido. La aplicación SQRL acepta la solicitud exitosa del código QR del usuario identificado.&lt;/li&gt;
+&lt;li&gt;El sitio de autenticación tiene la URL que contiene el nonce que devolvió la página de login del smartphone del usuario. Tiene también una firma criptográfica de esa URL, y la clave pública específica del sitio del usuario. Usa la clave pública para verificar que la firma es válida para la URL. Esto confirma que el usuario que produjo la firma usó la clave privada que corresponde a la clave pública. Tras de verificar la firma, el sitio de autentificación reconoce al usuario (ahora-autenticado) por la clave pública específica de sitio.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sign-algo.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;580px&#34; height=&#34;194px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Resumiendo: &amp;#8220;El login del sitio web presenta un código QR que contiene la URL de su servicio de autenticación, más un nonce. El smartphone del usuario firma la login URL usando una clave privada derivada de su secreto maestro y el nombre de dominio de la URL. El smartphone envía la clave pública que se corresponde para identificar el usuario, y la firma para autenticarlo.&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de detalles de cómo funciona el sistema &lt;strong&gt;SQRL&lt;/strong&gt;, y en las referencias todos los detalles técnicos. Vuelvo a comentar que toda colaboración para traducir dicha página es bienvenida.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;embed-youtube&#34; &gt;&lt;/span&gt;
+&lt;span class=&#34;embed-youtube&#34; &gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;(1) SQRL en la página de su creador, Steve&lt;/em&gt; »» &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>SQRL -Secure Quick Reliable Login a Fondo</title>
       <link>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</link>
       <pubDate>Thu, 10 Sep 2015 09:08:37 +0000</pubDate>
@@ -144,60 +198,6 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
     data-videoid=&#34;hsotcaizGjM&#34;
     layout=&#34;responsive&#34;
     width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>SQRL y la idea de eliminar el uso de usuario y contraseña en internet</title>
-      <link>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Puedes echar un ojo al artículo más actualizado &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/&#34;&gt;SQRL -Secure Quick Reliable Login a Fondo&lt;/a&gt;
-{: .notice}&lt;/p&gt;
-
-&lt;p&gt;Los lectores habituales sabrán que suelo escuchar el programa de radio &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Artículos sobre Security now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, la semana pasada, &lt;strong&gt;Steve Gibson&lt;/strong&gt;, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención &lt;strong&gt;SQRL&lt;/strong&gt; (&lt;em&gt;Secure &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; Login&lt;/em&gt;) y ha tenido bastante éxito en la comunidad, tanto que hasta el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3 org&#34;&gt;W3&lt;/a&gt; se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sqrl-login-sample.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;400px&#34; height=&#34;199px&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;El sistema &lt;strong&gt;SQRL&lt;/strong&gt; es bastante simple, cuando se desea identificarse en un sitio web mediante &lt;strong&gt;SQRL&lt;/strong&gt;, aparecerá un código, entonces:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;El usuario ejecuta en su teléfono móvil la aplicación &lt;strong&gt;SQRL&lt;/strong&gt;, y escanea el código mostrado. (O un usuario navegando desde su móvil toca el código. O un usuario de PC hace click en el código.)&lt;/li&gt;
-&lt;li&gt;Para verificar, la aplicación &lt;strong&gt;SQRL&lt;/strong&gt; muestra el nombre del dominio contenido en el código &lt;strong&gt;SQRL&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Tras verificar el dominio, el usuario permite a la aplicación &lt;strong&gt;SQRL&lt;/strong&gt; que autentifique su identidad.&lt;/li&gt;
-&lt;li&gt;Dejando la información de login en blanco (No es necesario rellenar los campos usuario y contraseña) se hace click en &lt;em&gt;login&lt;/em&gt;&amp;#8230; y estaremos en nuestra cuenta.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Este método, a pesar de ser bastante simple, es de lejos mucho más seguro que cualquier otra solución de logueo. Intentaré explicar un poco por encima el proceso traduciéndolo de la página de Steve (1), donde hay muchos más detalles.&lt;/p&gt;
-
-&lt;h2 id=&#34;qué-ocurre-detrás-de-la-escena&#34;&gt;¿Qué ocurre detrás de la escena?&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Gracias a &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Artículos de Luzcila&#34;&gt;Luzcila&lt;/a&gt; por traducir esta sección&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;(Lo escrito a continuación pretende dar al lector una noción general del proceso de autentificación mediante &lt;strong&gt;SQRL&lt;/strong&gt;, para detalles más técnicos se puede visitar el enlace de las referencias (1), si hay algún interesado en traducir esta información al castellano, puede contactar conmigo mediante el &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Contacto&#34;&gt;formulario de contacto&lt;/a&gt; y encantado añadiré el contenido mencionando a su autor).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;El código QR presentado cerca de los campos de login contiene la URL del servicio de autenticación para el sitio. La URL incluye un número aleatorio largo generado de forma segura por lo que cada presentación de la página de login muestra un código QR diferente. (En el mundo de la criptografía este número aleatorio se conoce como “nonce”)&lt;/li&gt;
-&lt;li&gt;La aplicación de autenticación SQRL de los smartphones encripta el nombre de dominio del sitio indexado por la clave maestra del usuario para producir un par de clave pública específica del sitio (&lt;em&gt;site-specific public key pair&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;La aplicación firma criptográficamente la URL completa contenida en el código QR usando la clave privada específica del sitio. Dado que la URL incluye un número largo aleatorio (el nonce), la firma es única para este sitio y código QR.&lt;/li&gt;
-&lt;li&gt;La aplicación emite una consulta HTTPS POST a la URL del código QR, la cual es del servicio de autenticación del sitio. El POST provee la clave pública específica del sitio y la firma criptográfica que se corresponde de la URL del código QR.&lt;/li&gt;
-&lt;li&gt;El sitio web de autenticación recibe y reconoce la consulta POST devolviéndole una respuesta standard HTTP “200 OK” sin otro contenido. La aplicación SQRL acepta la solicitud exitosa del código QR del usuario identificado.&lt;/li&gt;
-&lt;li&gt;El sitio de autenticación tiene la URL que contiene el nonce que devolvió la página de login del smartphone del usuario. Tiene también una firma criptográfica de esa URL, y la clave pública específica del sitio del usuario. Usa la clave pública para verificar que la firma es válida para la URL. Esto confirma que el usuario que produjo la firma usó la clave privada que corresponde a la clave pública. Tras de verificar la firma, el sitio de autentificación reconoce al usuario (ahora-autenticado) por la clave pública específica de sitio.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sign-algo.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;580px&#34; height=&#34;194px&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Resumiendo: &amp;#8220;El login del sitio web presenta un código QR que contiene la URL de su servicio de autenticación, más un nonce. El smartphone del usuario firma la login URL usando una clave privada derivada de su secreto maestro y el nombre de dominio de la URL. El smartphone envía la clave pública que se corresponde para identificar el usuario, y la firma para autenticarlo.&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de detalles de cómo funciona el sistema &lt;strong&gt;SQRL&lt;/strong&gt;, y en las referencias todos los detalles técnicos. Vuelvo a comentar que toda colaboración para traducir dicha página es bienvenida.&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;embed-youtube&#34; &gt;&lt;/span&gt;
-&lt;span class=&#34;embed-youtube&#34; &gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;(1) SQRL en la página de su creador, Steve&lt;/em&gt; »» &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
