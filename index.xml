@@ -732,856 +732,328 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
     </item>
     
     <item>
-      <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
-      <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      <title>Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016</title>
+      <link>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</link>
+      <pubDate>Fri, 23 Sep 2016 13:01:18 +0000</pubDate>
       
-      <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
+      <guid>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</guid>
       <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;750&#34; height=&#34;750&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
+&lt;p&gt;Hace unos meses publicamos &lt;a href=&#34;https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/&#34; title=&#34;15 Ejemplos De Las Mejores Visualizaciones De Datos&#34;&gt;15 Ejemplos De Las Mejores Visualizaciones De Datos&lt;/a&gt;, hoy os traemos otra visualización muy interesante de &lt;a href=&#34;http://www.visualcinnamon.com&#34; title=&#34;Sitio web de Nadieh Bremer&#34;&gt;&lt;em&gt;Nadieh Bremer&lt;/em&gt;&lt;/a&gt;, en la cual muestra &lt;strong&gt;todas las medallas de oro en los Juegos Olímpicos desde 1896&lt;/strong&gt;, en forma de plumas.&lt;/p&gt;
 
-&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
-&lt;!--ad--&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Olympic Feathers&lt;/strong&gt;, es una &lt;em&gt;visualización de datos&lt;/em&gt; interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.&lt;/p&gt;
 
-&lt;h2 id=&#34;10-top&#34;&gt;10. Top&lt;/h2&gt;
+&lt;h2 id=&#34;cómo-surgió-la-idea&#34;&gt;Cómo surgió la idea&lt;/h2&gt;
 
-&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo *top *en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
-
-&lt;h2 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h2&gt;
-
-&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
-
-&lt;h2 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h2&gt;
-
-&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
-
-&lt;h2 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h2&gt;
-
-&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
-
-&lt;h2 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h2&gt;
-
-&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
-
-&lt;h2 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h2&gt;
-
-&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
-
-&lt;h2 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h2&gt;
-
-&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo:* ifconfig &amp;gt; myip.txt.* Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-find&#34;&gt;2. Find&lt;/h2&gt;
-
-&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h2&gt;
-
-&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
-
-&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>10 errores de novato que todo desarrollador Android debería evitar</title>
-      <link>https://elbauldelprogramador.com/los-10-errores-de-novato-que-todo/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/los-10-errores-de-novato-que-todo/</guid>
-      <description>&lt;p&gt;Últimamente recibo muchos correos haciendome preguntas sobre cuestiones sobre Android, eso me alegra, ya que significa que la gente lee el blog y se interesa por el contenido, pero sinceramente, no dispongo del tiempo (ni tampoco del conocimiento) suficiente para responder a todas ellas. Por eso, aprovechando que encontré un artículo en inglés que nombraba los 10 errores comunes de los nuevos programadores en esta plataforma. Aquí los dejo traducidos, ya que son de lectura recomendable:&lt;/p&gt;
-
-&lt;h3 id=&#34;1-no-leer-la-documentación-de-android&#34;&gt;1. No leer la documentación de Android&lt;/h3&gt;
-
-&lt;p&gt;La web de &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/index.html&#34;&gt;Android para desarrolladores&lt;/a&gt; está ahí para ayudarte. Mucha de la información se puede descargar con las SDK tools y también está disponible online (esta última es la mejor opción ya que está en continua actualización). La documentación es mucho más que una referencia de la API Javadoc. Incluye muchas guías, tutoriales, vídeos y mucho otro material que puede ayudarnos a crear aplicaciones Android.&lt;/p&gt;
-
-&lt;p&gt;Recientemente se ha incluido &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/training/index.html&#34;&gt;Android Training&lt;/a&gt;, que organiza tutoriales dentro de clases y lecciones para guiarnos a resolver problemas o implementar características particulares.&lt;/p&gt;
+&lt;p&gt;Inicialmente Nadieh tenía pensado visualizar cada una de las 56 disciplinas como una “pluma” y usar el interior de la pluma para colocar todas las medallas en función de la edición de los juegos y género del ganador. Al final la idea del diseño usando forma de pluma no cuajó, pero lo mantuvo en el nombre del proyecto (&lt;em&gt;“Olympic feathers”&lt;/em&gt; o Plumas Olímpicas).&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;2-no-familiarizarse-con-la-herramientas-de-android&#34;&gt;2. No familiarizarse con la herramientas de Android&lt;/h3&gt;
+&lt;h2 id=&#34;qué-herramientas-usó&#34;&gt;Qué herramientas usó&lt;/h2&gt;
 
-&lt;p&gt;El SDK de Android es más que una librería que se usa para compilar aplicaciones para que funcionen en teléfonos Android, ofrece docenas de herramientas para ayudar en la construcción de las aplicaciones. Algunas de ellas ayudan a diseñar gráficos y diseños de pantalla. Otras herramientas son vía línea de comandos, las cuales proporcionan aceso fácil al emulador o el hardware del dispositivo.Y otras que ayudan al ajuste de rendimiento y perfiles.&lt;/p&gt;
+&lt;p&gt;Para desarrollar el proyecto usó &lt;strong&gt;Excel&lt;/strong&gt;, &lt;strong&gt;R&lt;/strong&gt; (Puedes consultar &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;artículos sobre R en este enlace&lt;/a&gt;) , &lt;strong&gt;Sketch&lt;/strong&gt; y &lt;strong&gt;D3.js&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Puedes encontrar más información sobre muchas de estas &lt;a target=&#34;_blank&#34; href=&#34;http://www.developer.com/ws/android/development-tools/&#34;&gt;herramientas&lt;/a&gt; en la d&lt;a target=&#34;_blank&#34; href=&#34;https://developer.android.com/guide/developing/tools/index.html&#34;&gt;ocumentación del SDK&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;la-historia-de-las-olimpiadas&#34;&gt;La historia de las Olimpiadas&lt;/h2&gt;
 
-&lt;h3 id=&#34;3-no-pedir-ayuda-a-la-comunidad-android&#34;&gt;3. No pedir ayuda a la comunidad Android&lt;/h3&gt;
+&lt;p&gt;Más de 5000 eventos en las Olimpiadas han tenido ganador, premiados con una medalla de oro desde 1904. Podemos investigar la visualización interactiva para ver cómo cada una de estas medallas se ganaron en las 56 disciplinas que han participado en los juegos, 41 de las cuales participaron también en los últimos Juegos Olímpicos de Rio.&lt;/p&gt;
 
-&lt;p&gt;La comunidad Android es muy amplia y amigable. Cuando tienes preguntas que la documentación del SDK no puede responder, es muy recomendable buscar ayuda en StackOverflow.com, la cual tiene una &lt;a target=&#34;_blank&#34; href=&#34;http://stackoverflow.com/questions/tagged/android&#34;&gt;sección para Android&lt;/a&gt;. Otros recursos que pueden servir de ayuda son la &lt;a target=&#34;_blank&#34; href=&#34;https://developer.android.com/resources/community-groups.html#ApplicationDeveloperLists&#34;&gt;lista de correo de google&lt;/a&gt; y sítios con tutoriales, los cuales puedes encontrar en el &lt;a target=&#34;_blank&#34; href=&#34;http://www.developer.com/ws/android&#34;&gt;centro para desarrolladores Android&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;qué-nos-cuentan-los-datos&#34;&gt;Qué nos cuentan los datos&lt;/h2&gt;
 
-&lt;h3 id=&#34;4-ser-perezoso-porque-las-aplicaciones-android-están-escritas-en-java&#34;&gt;4. Ser perezoso porque las aplicaciones Android están escritas en Java&lt;/h3&gt;
+&lt;p&gt;La mayoría de deportes Olímpicos empezaron siendo solo para hombres. Afortunadamente esta tendiencia comenzó a cambiar en la segunda mitad el último siglo. Incluso el número de medallas que pueden ganarse para una disciplina comienza a ser el mismo para ambos géneros. En los juegos de Rio hubo 3 disciplinas en las que solo podía participar un género; La &lt;strong&gt;&lt;em&gt;lucha Greco-Romana&lt;/em&gt;&lt;/strong&gt;, aún en los juegos desde la primera edición, en la que solo participan hombres. Por otro lado, en  &lt;strong&gt;&lt;em&gt;Gimnasia Rítmica&lt;/em&gt;&lt;/strong&gt;, y &lt;strong&gt;&lt;em&gt;Natación Sincronizada&lt;/em&gt;&lt;/strong&gt;, en los juegos desde 1984, solo participan mujeres.&lt;/p&gt;
 
-&lt;p&gt;Java puede que sea un lenguaje de alto nivel con una máquina virtual que intenta hacer el desarrollo lo más sencillo posible, pero no por ello has de ser un programador perezoso. Las directrices de programación estándares siguen aplicandose. La mayoría de los dispositivos Android tienen una capacidad limitada de procesamiento y capacidad de almacenamiento en comparación con los ordenadores tradicionales, por lo tanto las prácticas incorrectas o ineficientes de programación tienen un impacto mucho mayor en el rendimiento general y en la experiencia del usuario.&lt;/p&gt;
+&lt;h2 id=&#34;como-leer-las-plumas&#34;&gt;Como leer las plumas&lt;/h2&gt;
 
-&lt;h3 id=&#34;5-asumir-que-los-proyectos-de-desarrollo-para-móviles-se-pueden-hacer-con-poco-dinero&#34;&gt;5. Asumir que los proyectos de desarrollo para móviles se pueden hacer con poco dinero.&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Pantalla pequeña != proyecto pequeño&lt;/em&gt;&lt;/strong&gt;. Muchos desarrolladores nuevos en los dispositivos móviles (y, desgraciadamente sus jefes) piensan erróneamente que todos los proyectos para móviles se pueden terminar en un fin de semana por un único estudiante hasta arriba de cafeína. Sin embargo, la verdad es que la mayoría de los proyectos que tienen éxito requieren especificaciones funcionales, horarios, control de errores, ingenieros dedicados, diseñadores dedicados, probadores de control de calidad y un plan de lanzamiento y mantenimiento al igual que los proyectos tracidionales de desarrollo de software.&lt;/p&gt;
-
-&lt;h3 id=&#34;6-usar-un-prototipo-como-base-para-una-aplicación-android&#34;&gt;6. Usar un prototipo como base para una aplicación Android.&lt;/h3&gt;
-
-&lt;p&gt;No es la primera vez que se ve una aplicación que básicamente era un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;hola mundo&lt;/a&gt; con un montón de código de ejemplo pegado en lugares aleatorios.&lt;/p&gt;
-
-&lt;p&gt;Tómate el tiempo para aprender y experimentar con la plataforma Android en primer lugar. Luego, siéntate con tu equipo y piensa en lo que queréis realmente crear y empezar desde cero. En última instancia, se ahorrará en tiempo y quebraderos de cabeza y obtendrás un código de alta calidad fácilmente mantenible para el futuro.&lt;/p&gt;
-
-&lt;h3 id=&#34;7-pobre-integración-con-el-sistema-operativo&#34;&gt;7. Pobre integración con el Sistema Operativo&lt;/h3&gt;
-
-&lt;p&gt;La plataforma Android proporciona muchas características a los desarrolladores para integrar sus aplicaciones estrechamente con el sistema y otras aplicaciones. Aprovecha los &lt;a target=&#34;_blank&#34; href=&#34;http://www.developer.com/ws/article.php/3833306/Creating-a-Home-Screen-App-Widget-on-Android.htm&#34;&gt;widgets&lt;/a&gt; de la pantalla principal, &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;proveedores de contenidos&lt;/a&gt;, manejadores de &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;intents&lt;/a&gt; y otras características. Asegúrate de que cualquier tipo de contenido que la aplicación maneja pueda aparecer en el menú &amp;#8220;Compartir&amp;#8221;. Usar estas características de la plataforma diferencia tu aplicación de la mayoría. Además, los usuarios verán y participarán con tu aplicación con más frecuencia si es fácil acceder a ella.&lt;/p&gt;
-
-&lt;h3 id=&#34;8-definir-inadecuadamente-los-detalles-de-configuración-de-la-aplicación&#34;&gt;8. Definir inadecuadamente los detalles de configuración de la aplicación.&lt;/h3&gt;
-
-&lt;p&gt;El Android Manifest es el archivo principal para la configuración de una aplicación, pero esta información es incorrecta frecuentemente incluso en aplicaciones publicadas. Muchos desarrolladores no especifican correctamente las características de dispositivos que soportan.&lt;/p&gt;
-
-&lt;p&gt;Otro error común que se produce en el Android Manifest es registrar permisos que no son necesarios. Estos errores pueden causar que la aplicación se publique incorrectamente en el ANdroid Market, dando como resultado menor puntuaciones de los usuarios, entre otras cosas.&lt;/p&gt;
-
-&lt;h3 id=&#34;9-desarrollar-una-aplicación-de-iphone-para-android&#34;&gt;9. Desarrollar una aplicación de iPhone para Android&lt;/h3&gt;
-
-&lt;p&gt;Todos lo hemos visto. Bajas una aplicación para tu brillante Android nuevo, pero intenta paracerse y comportarse exáctamente como una aplicación típica de iOS. Eso no está bien. La plataforma Android tiene su propio diseño y comportamiento, que es el que usuario espera &amp;#8212; ya que para eso se compró un dispositivo Android. Estas aplicaciones con frecuencia no tienen widgets, content providers y otras características únicas de Android (Vea #7), lo cual hace parecer que ésta aplicación está aún más fuera de lugar.&lt;/p&gt;
-
-&lt;h3 id=&#34;10-no-seguir-manteniendo-la-aplicación-después-de-publicarla&#34;&gt;10. No seguir manteniendo la aplicación después de publicarla.&lt;/h3&gt;
-
-&lt;p&gt;¿Has notado cuantas aplicaciones no llegan a actualizarse nunca, mientras que otras se actualizan constantemente? Para que una aplicación sea relevante para los usuarios, los desarrolladores deben seguir actualizandolas. La plataforma Android sigue madurando a un ritmo constante. Presta atención a las comunicaciones del Androd Market, que a menudo resaltan los cambios necesarios que los desarrolladores necesita hacer. Sin actualizaciones, muchas aplicaciones se quedarán atrás. Asegúrate de que tu aplicación no es una de ellas.&lt;/p&gt;
-
-&lt;h3 id=&#34;recomendación-para-los-nuevos-en-android&#34;&gt;Recomendación para los nuevos en Android&lt;/h3&gt;
-
-&lt;p&gt;La mejor manera de evitar errores es ser consciente del peligro de cometerlos en primer luguar. Se han listado 10 de los errores más comunes. Simplemente sé consciente de ellos te ayudará a inculcártelos a tí y a tu equipo.&lt;/p&gt;
-
-&lt;p&gt;Fuente: &lt;a target=&#34;_blank&#34; href=&#34;http://www.developer.com/ws/android/programming/5-common-android-newbie-mistakes.html&#34;&gt;developer.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>10 razones para rootear tu teléfono Android</title>
-      <link>https://elbauldelprogramador.com/10-razones-para-rootear-tu-telefono-android/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/10-razones-para-rootear-tu-telefono-android/</guid>
-      <description>&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;10 razones para rootear tu teléfono Android&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-bigpic.jpg&#34; width=&#34;970px&#34; height=&#34;546px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Android&#34;&gt;Android&lt;/a&gt; es uno de los sistemas operativos más abiertos, versátil y personalizable del mercado. Quizá pienses que no es necesario &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/&#34; title=&#34;Rootear Samsung Galaxy S GT-I9003&#34;&gt;rootearlo&lt;/a&gt;, pero te sorprenderías de la cantidad de cosas que se pueden hacer con un teléfono Android rooteado. A continuación se listan 10 razones por las que merece la pena (Traducidas de &lt;em&gt;LifeHacker&lt;/em&gt;):&lt;/p&gt;
-
-&lt;h1 id=&#34;10-desbloquear-características-ocultas-e-instalar-aplicaciones-incompatibles&#34;&gt;10. Desbloquear características ocultas e instalar aplicaciones “incompatibles”&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;p&gt;Cada círculo representa un grupo de deportes similares, como deportes de agua, deportes de pelotas etc. Dentro de cada círculo se muestran porciones, cada una de estas porciones es una &lt;strong&gt;pluma&lt;/strong&gt;, que representa una disciplina.&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;10 razones para rootear tu teléfono Android&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-2016.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;292&#34; height=&#34;214&#34;&gt;&lt;/amp-img&gt;
+    &lt;figcaption&gt;Una pluma&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;En ocasiones, incluso Android no es lo suficientemente abierto para proporcionar las características que necesitas. Puede que una aplicación no esté disponible para instalar en nuestro dispositivo por algún motivo. Sin embargo, un teléfono rooteado puede ayudarnos a solucionar este problema: es posible instalar aplicaciones bloqueadas por las compañías telefónicas, adquirir características de las últimas versiones de Android, hacer que aplicaciones incompatibles sean compatibles o incluso emular características de otros dispositivos. En resumen, rootear el teléfono te proporciona la capacidad de hacer muchas más cosas.&lt;/p&gt;
+&lt;p&gt;Una &lt;strong&gt;pluma&lt;/strong&gt; se divide en 31 secciones, irradiando hacia afuera. Empiezan desde los primeros juegos en 1896, en el centro del círculo hasta los últimos juegos en Rio 2016, en el exterior del círculo. Cada disciplina se hace el doble de ancha según el máximo de medallas que se podrían haber ganado durante una edición para un género (El ancho es el mismo para hombres y mujeres).&lt;/p&gt;
 
-&lt;h1 id=&#34;9-automatizar-todo&#34;&gt;9. Automatizar todo&lt;/h1&gt;
+&lt;p&gt;La siguiente división se hace por género. Por ejemplo, en la imagen de arriba, las barras que van hacia arriba, con un fondo rojo son medallas de oro ganadas por mujeres, las de abajo por hombres.&lt;/p&gt;
+
+&lt;p&gt;Las medallas se colorean en función del continente, como se muestra en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;10 razones para rootear tu teléfono Android&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge1.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-20162.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;196&#34; height=&#34;129&#34;&gt;&lt;/amp-img&gt;
+    &lt;figcaption&gt;Representación de los continentes&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Probablemente hayas oído hablar de &lt;strong&gt;&lt;a title=&#34;Unleash the Power of Android with These Automated Apps&#34; href=&#34;http://lifehacker.com/5930652/unleash-the-power-of-android-with-these-automated-apps&#34; target=&#34;_blank&#34;&gt;Tasker&lt;/a&gt;&lt;/strong&gt;, la aplicación que automatiza &lt;strong&gt;todo&lt;/strong&gt; en tu teléfono. Aunque no es necesario tener el dispositivo rooteado para instalarla, es posible hacer muchas más cosas de estarlo. Tareas como alternar entre redes 2G y 3G, activar/desactivar el GPS, cambiar la &lt;a href=&#34;https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/&#34; title=&#34;Tipos de gobernadores en las CPUs&#34;&gt;velocidad del microprocesador&lt;/a&gt;, encender la pantalla y otras requieren del teléfono que esté rooteado. Por lo que para obtener el máximo beneficio de aplicaciones como esta, es necesario rootear.&lt;/p&gt;
-
-&lt;h1 id=&#34;8-aumentar-la-velocidad-del-teléfono-y-la-duración-de-la-batería&#34;&gt;8. Aumentar la velocidad del teléfono y la duración de la batería&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Aumentar la velocidad del teléfono y de la batería&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge.png&#34; width=&#34;640px&#34; height=&#34;384px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Puedes hacer montones de cosas para &lt;a title=&#34; speed up your phone&#34; href=&#34;http://lifehacker.com/5897770/how-to-speed-up-clean-up-and-revive-your-android-phone&#34; target=&#34;_blank&#34;&gt;acelerar el teléfono&lt;/a&gt; y incrementar la vida de la batería. Pero, como probablemente estés pensando, un teléfono rooteado podrá hacer más cosas. Con &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.mhuang.overclocking&amp;hl=es&#34; target=&#34;_blank&#34;&gt;SetCPU&lt;/a&gt;&lt;/strong&gt; puedes &lt;em&gt;underclockear&lt;/em&gt; el microprocesador para ahorra batería u &lt;em&gt;overclockearlo&lt;/em&gt; para obtener mayor rendimiento. Así como usar la aplicación &lt;em&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.oasisfeng.greenify&amp;hl=es&#34; target=&#34;_blank&#34;&gt;Greenfy&lt;/a&gt;&lt;/em&gt; para poner en hibernación aquellas aplicaciones que no estás usando &amp;#8212; Perfecto para esas aplicaciones que se mantienen ejecutando en segundo plano.&lt;/p&gt;
-
-&lt;h1 id=&#34;7-bloquear-anuncios-en-cualquier-aplicación&#34;&gt;7. Bloquear Anuncios en cualquier aplicación&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Bloquear Anuncios en cualquier aplicación&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge2.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Todos comprendemos la necesidad de introducir anuncios ocasionales &amp;#8212; Así es como se hace dinero. Por contrapartida, algunos anuncios llegan a ser muy molestos y consumen mucho ancho de banda. Si quieres bloquear los anuncios en ciertas aplicaciones, &lt;a title=&#34;How to Block Ads in Android Browsers and Apps&#34; href=&#34;http://lifehacker.com/5851038/how-to-block-ads-in-android-browsers-and-apps&#34; target=&#34;_blank&#34;&gt;rootearlo con diferencia la mejor forma de lograrlo&lt;/a&gt;. &lt;strong&gt;&lt;a title=&#34;Ad Free&#34; href=&#34;http://adfree.bigtincan.com/&#34; target=&#34;_blank&#34;&gt;AdFree&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a title=&#34;AdBlock Plus&#34; href=&#34;https://adblockplus.org/en/android-about&#34; target=&#34;_blank&#34;&gt;AdBlock Plus&lt;/a&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;a title=&#34;Ad Away&#34; href=&#34;https://code.google.com/p/ad-away/&#34; target=&#34;_blank&#34;&gt;Ad Away&lt;/a&gt;&lt;/strong&gt; son tres buenas opciones.&lt;/p&gt;
-
-&lt;h1 id=&#34;6-hacer-copias-de-seguridad-para-transferirlas-a-otro-dispositivo&#34;&gt;6. Hacer copias de seguridad para transferirlas a otro dispositivo&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Hacer copias de seguridad para transferirlas a otro dispositivo&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge3.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Cuando obtenemos un nuevo dispositivo Android &amp;#8212; o lo restauramos a como vino de fábrica- puedes facilitarte mucho el trabajo realizando una copia de seguridad de tus aplicaciones y ajustes. Así, puedes volver a tener todo tal y como estaba &lt;a title=&#34;How to Upgrade to a New Android Phone and Take Everything with You&#34; href=&#34;http://lifehacker.com/5843206/how-to-upgrade-to-a-new-android-phone-and-take-everything-with-you&#34; target=&#34;_blank&#34;&gt;en unos cuantos golpes de dedo&lt;/a&gt;. De no tener el dispositivo rooteado, es posible realizar copias de seguridad de aplicaciones y datos, pero no será posible hacerlo con las aplicaciones y ajustes del sistema, ni automatizar el proceso tal y como hace &lt;strong&gt;&lt;a title=&#34;Titanium Backup&#34; href=&#34;https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup&#34; target=&#34;_blank&#34;&gt;Titanium Backup&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;5-eliminar-aplicaciones-pre-instaladas&#34;&gt;5. Eliminar aplicaciones pre-instaladas&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Eliminar aplicaciones preinstaladas&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge4.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;**Titanum Backup** sirve para más cosas además de realizar copias de seguridad. También puede des-instalar todas esas aplicaciones que vienen instaladas por defecto en el teléfono y que no solemos usar. Antes de des-instalar nada, es recomendable congelar la aplicación y ver si todo sigue funcionando, de ser así, es seguro des-instalarla. *Personalmente llevo usando bastante tiempo una aplicación llamada &lt;a title=&#34;Gemini App Manager&#34; href=&#34;https://play.google.com/store/apps/details?id=com.seasmind.android.gmappmgr&#34; target=&#34;_blank&#34;&gt;Gemini App Manager&lt;/a&gt;, la cual dispone de esta funcionalidad, entre otras muchas.*
-
-# 4. Personalizar Android por completo
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Personalizar Android por completo&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge5.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Si eres de los que disfrutan haciendo modificaciones a cada característica del teléfono, rootear es lo que necesitas. Ya sea para personalizar el diseño del teclado con algo como &lt;a title=&#34;Keyboard Manager&#34; href=&#34;http://lifehacker.com/5703147/keyboard-manager-automatically-sets-your-android-keyboard-based-on-screen-orientation&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Keyboard Manager&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;u obtener un desplazamiento más rápido (&lt;em&gt;scroll&lt;/em&gt;), perfeccionar la administración multitarea, instalar temas con &lt;a title=&#34;Pimp My ROM&#34; href=&#34;http://lifehacker.com/5949000/pimp-my-rom-tweaks-your-rooted-android-phone-in-every-way-imaginable&#34; target=&#34;_blank&#34;&gt;Pimp My ROM,&lt;/a&gt;&lt;/strong&gt;. Al rootear el teléfono tenemos la capacidad de personalizar cada rincón de nuestro dispositivo.&lt;/p&gt;
-
-&lt;h1 id=&#34;3-flashear-un-kernel-personalizado&#34;&gt;3. Flashear un kernel personalizado&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Flashear un Kernel personalizado&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge7.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Para aplicar algunas de las mejores modificaciones a Android se necesita un kernel personalizado, el cual sólo se puede &lt;em&gt;flashear&lt;/em&gt; un teléfono rooteado. El &lt;em&gt;kernel&lt;/em&gt; es el responsable de la comunicación entre las aplicaciones y el hardware, con lo cual un kernel modificado puede proporcionar mejoras en el rendimiento, duración de la batería, incluso características adicionales como el &lt;em&gt;Wifi tethering&lt;/em&gt; en dispositivos que no lo soportan por defecto, una carga de batería más rápida y &lt;a href=&#34;http://lifehacker.com/5881842/how-to-get-better-battery-life-and-performance-on-your-android-phone-with-a-new-kernel&#34; target=&#34;_blank&#34;&gt;mucho más&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;2-flashear-una-rom-personalizada&#34;&gt;2. Flashear una ROM personalizada&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Flashear una ROM personalizada&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge11.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Es probable que hayas oído de ROMs, y es que es de lo mejor de tener un teléfono rooteado. Una ROM personalizada es básicamente una versión personalizada de Android, y cambia la forma en la que usas el teléfono. La principal ventaja es poder instalar versiones de Android que aún no están disponibles para nuestro dispositivo. Algunas incluyen sus propias características y otras cambian por completo todo. No importa qué teléfono tengas &amp;#8212; Es recomendable que busques una ROM que te guste y la pruebes.&lt;/p&gt;
-
-&lt;h1 id=&#34;1-ser-verdaderamente-el-dueño-de-tu-teléfono&#34;&gt;1. Ser verdaderamente el dueño de tu teléfono&lt;/h1&gt;
-
-&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ser verdaderamente el dueño de tu teléfono&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/ku-xlarge8.jpg&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Al final, todo esto se reduce a una cosa: &lt;strong&gt;tú eres el dueño de tu dispositivo&lt;/strong&gt;, y deberías poder hacer lo que quisieras con él. Ciertas compañías y fabricantes intentan que esto no sea posible, pero con acceso de root, posees el teléfono de verdad, ya que puedes modificar cualquier cosa.&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;h2 id=&#34;detalles-técnicos-y-referencias&#34;&gt;Detalles técnicos y referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Top 10 Reasons to Root Your Android Phone&lt;/em&gt; »» &lt;a href=&#34;http://lifehacker.com/top-10-reasons-to-root-your-android-phone-1079161983&#34; target=&#34;_blank&#34;&gt;LifeHacker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Fotos por&lt;/em&gt; »» &lt;a href=&#34;http://www.flickr.com/photos/a_mason/4255426890/&#34; target=&#34;_blank&#34;&gt;Andrew Mason&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio &lt;a href=&#34;https://github.com/nbremer/olympicfeathers/tree/gh-pages/data&#34; title=&#34;Olympic Feathers en GitHub&#34;&gt;Olympic Feathers en GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;La página del &lt;a href=&#34;https://nbremer.github.io/olympicfeathers/&#34; title=&#34;proyecto Olympic Feathers&#34;&gt;proyecto Olympic Feathers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
     <item>
-      <title>15 Demostraciones del potencial de HTML5</title>
-      <link>https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      <title>Cómo Crear Diagramas De Gantt en LaTeX</title>
+      <link>https://elbauldelprogramador.com/crear-diagrama-de-gantt-en-latex/</link>
+      <pubDate>Fri, 16 Sep 2016 13:48:53 +0000</pubDate>
       
-      <guid>https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/</guid>
-      <description>&lt;p&gt;En tech Drive-In he visto esta entrada que enlaza con 15 demos en HTML5 que pretenden hacernos ver la potencia que tiene esta nueva versión que se está preparando de HTML, entre las que se pueden destacar consultas &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;SQL&lt;/a&gt; y almacenamineto en la web, creación y desrucción de objetos etc, de las 15 la que más interesante me parece es la que explica en varios pasos las caractarísticas.&lt;/p&gt;
+      <guid>https://elbauldelprogramador.com/crear-diagrama-de-gantt-en-latex/</guid>
+      <description>&lt;figure&gt;
+  &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/crear-diagrama-de-gantt-en-latex.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;335&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Consulta el resto de &lt;a href=&#34;https://elbauldelprogramador.com/category/latex&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;artículos sobre LaTeX escritos en el blog&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;qué-es-un-diagrama-de-gantt&#34;&gt;Qué es un Diagrama de Gantt&lt;/h2&gt;
+
+&lt;p&gt;La definición de WikiPedia:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;El diagrama de Gantt es una útil herramienta gráfica cuyo objetivo es exponer el tiempo de dedicación previsto para diferentes tareas o actividades a lo largo de un tiempo total determinado.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Para ver las 15 demostraciones os dejo el &lt;a target=&#34;_blank&#34; href=&#34;http://www.techdrivein.com/2010/08/15-html5-demos-showcasing-prowess-of.html&#34;&gt;enlace original en Tech Drive-In&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>20 ejemplos de iptables para SysAdmins novatos</title>
-      <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
-      <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
+&lt;h2 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
+  canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  hgrid style/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  vgrid=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;*1&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;,
+  today=1,
+  today rule/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    draw=black!64,
+    dash pattern=on 3.5pt off 4.5pt,
+    line width=1.5pt
+  &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  today label font=&lt;span class=&#34;k&#34;&gt;\small\bfseries&lt;/span&gt;,
+  title/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=none, fill=none&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  title label font=&lt;span class=&#34;k&#34;&gt;\bfseries\footnotesize&lt;/span&gt;,
+  title label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below=7pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  include title in canvas=false,
+  bar label font=&lt;span class=&#34;k&#34;&gt;\mdseries\small\color&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;black!70&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  bar label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;left=2cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  bar/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=none, fill=black!63&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  bar incomplete/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=barblue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  bar progress label font=&lt;span class=&#34;k&#34;&gt;\mdseries\footnotesize\color&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;black!70&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  group incomplete/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=groupblue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;left=.6cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    group progress label font=&lt;span class=&#34;k&#34;&gt;\bfseries\small&lt;/span&gt;,
+    link/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;-latex, line width=1.5pt, linkred&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    link label font=&lt;span class=&#34;k&#34;&gt;\scriptsize\bfseries&lt;/span&gt;,
+    link label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below left=-2pt and 0pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Título del diagrama&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[grid]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Septiembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Octubre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Noviembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Diciembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Enero&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Febrero&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;[
+    title label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below left=7pt and -3pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Semana:&lt;span class=&#34;k&#34;&gt;\quad&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\gantttitlelist&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;2,...,24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttgroup&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[progress=65]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Título del grupo&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=100,
+    name=bar1
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 1&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=14,
+    name=bar2
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 2&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=25,
+    name=bar3
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 3&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=56,
+    name=bar4
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 4&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=100,
+    name=bar5
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 5&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=80,
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 6&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=49,
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 7&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;9&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Hito 1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Hito 2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=35,
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 8&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;22&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
+    progress=0,
+  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 9&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;23&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
 
-&lt;p&gt;Este firewall lo controla un programa llamado iptables que gestiona el filtrado para IPv4, y ip6tables para IPv6.&lt;/p&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Q6 report&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;M2: Project finished&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-&lt;h2 id=&#34;ejemplos-de-reglas-iptables&#34;&gt;Ejemplos de reglas IPTABLES&lt;/h2&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar5&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;comandos-básicos-del-diagrama-de-gantt&#34;&gt;Comandos básicos del diagrama de Gantt&lt;/h2&gt;
+
+&lt;p&gt;Veamos algunos de los comandos más útiles:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Muchas de las acciones que se listan abajo requieren ejecutarse como usuario root.&lt;/li&gt;
-&lt;li&gt;Los siguientes comandos deberían funcionar en cualquier distro linux moderna.&lt;/li&gt;
-&lt;li&gt;Esto NO es un tutorial de como configurar iptables. Puedes ver un tutorial &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/faq/rhel-fedorta-linux-iptables-firewall-configuration-tutorial/&#34;&gt;aquí&lt;/a&gt;. Es más bien una referencia rápida de los comandos más comunes de iptables.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\begin{ganttchart}[opciones]{1}{24}&lt;/code&gt;: Con este comando iniciamos el diagrama, en las opciones se especifican comandos para el estilo del gráfico, luego se especifica cuantos cuadros de tiempo queremos, en este caso del 1 a 24.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gantttitle{titulo}{n}&lt;/code&gt;: Con este comando se especifica un título para el diagrama, seguido de cuantos cuadros de tiempo queremos que ocupe dicho título. Podemos tener varios títulos, como en este ejemplo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\ganttgroup[opciones]{titulo}{inicio cuadro}{fin cuadro}&lt;/code&gt;: Especifica un grupo en el diagrama, recibe como parámetro el título, en qué cuadro de tiempo empieza y en cual acaba. En las opciones podemos especificar el porcentaje completado con &lt;code&gt;progress=n&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\ganttbar[opciones]{tarea}{inicio cuadro}{fin cuadro}&lt;/code&gt;: Especifica una tarea, similar al anterior, los parámetros son el nombre de la tarea y la franja de tiempo que ocupa.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ganttlink[opciones]{nombre tarea 1}{nombre tarea 2}&lt;/code&gt;: Con este comando podemos establecer un enlace entre dos tareas, a las tareas involucradas se les ha dado un nombre con la opción &lt;code&gt;name=nombre&lt;/code&gt; en sus opciones.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;1-mostrando-el-estado-de-nuestro-firewall&#34;&gt;#1: Mostrando el estado de nuestro firewall&lt;/h1&gt;
-
-&lt;p&gt;Teclea el siguiente comando como root:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L -n -v
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ejemplos de salidas:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;El resultado de arriba indica que el firewall no está activo. La siguiente salida es la del firewall activado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0           state INVALID
-  &lt;span class=&#34;m&#34;&gt;394&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;43586&lt;/span&gt; ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
-   &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;17292&lt;/span&gt; ACCEPT     all  --  br0    *       0.0.0.0/0            0.0.0.0/0
-    &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;142&lt;/span&gt; ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
-Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; packets, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ACCEPT     all  --  br0    br0     0.0.0.0/0            0.0.0.0/0
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0           state INVALID
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; TCPMSS     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0           tcp flags:0x06/0x02 TCPMSS clamp to PMTU
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; wanin      all  --  vlan2  *       0.0.0.0/0            0.0.0.0/0
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; wanout     all  --  *      vlan2   0.0.0.0/0            0.0.0.0/0
-    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ACCEPT     all  --  br0    *       0.0.0.0/0            0.0.0.0/0
-Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT &lt;span class=&#34;m&#34;&gt;425&lt;/span&gt; packets, 113K bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-Chain wanin &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-Chain wanout &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- pkts bytes target     prot opt in     out     &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Donde,&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-L&lt;/strong&gt; : Muestra las reglas.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-v&lt;/strong&gt; : Muestra información detallada.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-n&lt;/strong&gt; : Muestra la dirección ip y puerto en formato numérico. No usa DNS para resolver nombres. Esto acelera la lista.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;1-1-para-inspeccionar-el-firewall-con-número-de-lineas&#34;&gt;#1.1:Para Inspeccionar el firewall con número de lineas:&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -n -L -v --line-numbers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    DROP       all  --  0.0.0.0/0            0.0.0.0/0           state INVALID
-&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
-Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    DROP       all  --  0.0.0.0/0            0.0.0.0/0           state INVALID
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    TCPMSS     tcp  --  0.0.0.0/0            0.0.0.0/0           tcp flags:0x06/0x02 TCPMSS clamp to PMTU
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED
-&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;    wanin      all  --  0.0.0.0/0            0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;    wanout     all  --  0.0.0.0/0            0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
-Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-Chain wanin &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-Chain wanout &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Podemos usar los números de línea para borrar o añadir nuevas reglas al firewall.&lt;/p&gt;
-
-&lt;h4 id=&#34;1-2-mostrar-las-reglas-de-cadena-de-entrada-y-salida&#34;&gt;#1.2: Mostrar las reglas de cadena de entrada y salida:&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n -v
-iptables -L OUTPUT -n -v --line-numbers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;2-parar-iniciar-reiniciar-el-firewall&#34;&gt;#2: Parar / Iniciar / Reiniciar el firewall&lt;/h1&gt;
-
-&lt;p&gt;Si usas CentOS / RHEL / Fedora linux:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service iptables stop
-service iptables start
-service iptables restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;También se puede usar propio comando iptables para detenerlo y borrar todas las reglas.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -F
-iptables -X
-iptables -t nat -F
-iptables -t nat -X
-iptables -t mangle -F
-iptables -t mangle -X
-iptables -P INPUT ACCEPT
-iptables -P OUTPUT ACCEPT
-iptables -P FORWARD ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Donde:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-F&lt;/strong&gt; : Borra todas las reglas.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-X&lt;/strong&gt; : Borra cadenas&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-t table_name&lt;/strong&gt; : Selecciona una tabla y elimina reglas&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-P&lt;/strong&gt; : Establece la política por defecto (como DROP, REJECT o ACCEPT)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;3-borrar-reglas-del-firewall&#34;&gt;#3: Borrar reglas del firewall&lt;/h1&gt;
-
-&lt;p&gt;Para mostrar los números de línea junto a otra información para reglas existentes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n --line-numbers
-iptables -L OUTPUT -n --line-numbers
-iptables -L OUTPUT -n --line-numbers &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
-iptables -L OUTPUT -n --line-numbers &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep 202.54.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Obtendrendremos la lista de IPs. Miramos el número de la izquierda y lo usamos para borrarla. Por ejemplo para borrar la línea 4:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D INPUT 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;O para encontrar una ip de origen y borrarla de la regla&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D INPUT -s 202.54.1.1 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Donde:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-D&lt;/strong&gt; : Elimina una o más reglas de la cadena seleccionada.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;4-insertar-reglas&#34;&gt;#4: Insertar reglas:&lt;/h1&gt;
-
-&lt;p&gt;Para insertar una o más reglas en la cadena seleccionada como el número de cadena dada usamos la siguiente sintaxis. Primero encontramos el número de línea:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n --line-numbers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    DROP       all  --  202.54.1.1           0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state NEW,ESTABLISHED
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para insertar una regla entre 1 y 2;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I INPUT &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; -s 202.54.1.2 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para ver las reglas actualizadas&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n --line-numbers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy DROP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;    DROP       all  --  202.54.1.1           0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;    DROP       all  --  202.54.1.2           0.0.0.0/0
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           state NEW,ESTABLISHED
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;5-guardar-reglas&#34;&gt;#5: Guardar reglas&lt;/h1&gt;
-
-&lt;p&gt;Para guardar reglas en CentOS / RHEL / Fedora Linux:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service iptables save
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;En este ejemplo, eliminamos una ip y guardamos las reglas del firewall:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 202.5.4.1 -j DROP
-service iptables save
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para todas las dem��s distros usamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables-save &amp;gt; /root/my.active.firewall.rules
-cat /root/my.active.firewall.rules
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;6-restaurar-reglas&#34;&gt;#6: Restaurar reglas&lt;/h1&gt;
-
-&lt;p&gt;Para restaurar reglas desde un archivo llamado /root/my.active.firewall.rules:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables-restore &amp;lt; /root/my.active.firewall.rules
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Bajo CentOS / RHEL / Fedora Linux:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service iptables restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;7-estableces-políticas-de-firewall-por-defecto&#34;&gt;#7: Estableces políticas de firewall por defecto&lt;/h1&gt;
-
-&lt;p&gt;Para borrar todo el tráfico:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -P INPUT DROP
-iptables -P OUTPUT DROP
-iptables -P FORWARD DROP
-iptables -L -v -n
-&lt;span class=&#34;c1&#34;&gt;## you will not able to connect anywhere as all traffic is dropped ###&lt;/span&gt;
-ping cyberciti.biz
-wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;7-1-solo-tráfico-entrante-bloqueado&#34;&gt;#7.1: Solo tráfico entrante bloqueado&lt;/h4&gt;
-
-&lt;p&gt;Para borrar todos los paquetes entrantes / enviados pero permitir el tráfico saliente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -P INPUT DROP
-iptables -P FORWARD DROP
-iptables -P OUTPUT ACCEPT
-iptables -A INPUT -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -L -v -n
-&lt;span class=&#34;c1&#34;&gt;# *** now ping and wget should work *** ###&lt;/span&gt;
-ping cyberciti.biz
-wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;8-borrar-direcciones-de-red-privadas-en-la-interfaz-pública&#34;&gt;#8: Borrar direcciones de red privadas en la interfaz pública&lt;/h1&gt;
-
-&lt;p&gt;IP Spoofing es nada más que para detener los siguientes rangos de direcciones IPv4 para redes privadas en sus interfaces públicas. Los paquetes con direcciones de origen no enrutables deben rechazarse mediante la siguiente sintaxis:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -i eth1 -s 192.168.0.0/24 -j DROP
-iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;9-bloqueando-una-direción-ip-block-ip&#34;&gt;#9: Bloqueando una direción IP (BLOCK IP)&lt;/h1&gt;
-
-&lt;p&gt;PAra bloquear una ip atacante llamada 1.2.3.4:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 1.2.3.4 -j DROP
-iptables -A INPUT -s 192.168.0.0/24 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;10-bloquear-peticiones-entrantes-de-un-puerto-block-port&#34;&gt;#10: Bloquear peticiones entrantes de un puerto (BLOCK PORT)&lt;/h1&gt;
-
-&lt;p&gt;Para bloquear todas las solicitudes de servicio en el puerto 80:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p tcp --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
-iptables -A INPUT -i eth1 -p tcp --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para bloquear el puerto 80 para una ip:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p tcp -s 1.2.3.4 --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
-iptables -A INPUT -i eth1 -p tcp -s 192.168.1.0/24 --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;11-bloquear-ips-de-salida&#34;&gt;#11: Bloquear ips de salida&lt;/h1&gt;
-
-&lt;p&gt;Para bloquear el tráfico saliente a un host o dominio en concreto como por ejemplo cyberciti.biz:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;host -t a cyberciti.biz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cyberciti.biz has address 75.126.153.206
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Una vez conocida la dirección ip, bloqueamos todo el tráfico saliente para dicha ip así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d 75.126.153.206 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Se puede usar una subred como la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d 192.168.1.0/24 -j DROP
-iptables -A OUTPUT -o eth1 -d 192.168.1.0/24 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;11-1-ejemplo-bloquear-el-dominio-facebook-com&#34;&gt;#11.1: Ejemplo - Bloquear el dominio facebook.com&lt;/h4&gt;
-
-&lt;p&gt;Primero, encontrar la dirección ip de facebook.com&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;host -t a www.facebook.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;www.facebook.com has address 69.171.228.40
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Buscar el CIDR para 69.171.228.40:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;whois 69.171.228.40 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep CIDR
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;CIDR:           69.171.224.0/19
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para prevenir el acceso externo a facebook.com:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p tcp -d 69.171.224.0/19 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Podemos usar también nombres de dominio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p tcp -d www.facebook.com -j DROP
-iptables -A OUTPUT -p tcp -d facebook.com -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;De la página del man de iptables:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;hellip; specifying any name to be resolved with a remote query such as DNS (e.g., facebook.com is a really bad idea), a network IP address (with /mask), or a plain IP address &amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;12-log-y-borrar-paquetes&#34;&gt;#12: Log y borrar paquetes&lt;/h1&gt;
-
-&lt;p&gt;Escribe lo siguiente para añadir al log y bloquear IP spoofing en una interfaz pública llamada eth1&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP_SPOOF A: &amp;quot;&lt;/span&gt;
-iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Por defecto el log está en el archivo /var/log/messages&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;tail -f /var/log/messages
-grep --color &lt;span class=&#34;s1&#34;&gt;&amp;#39;IP SPOOF&amp;#39;&lt;/span&gt; /var/log/messages
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;13-log-y-borrar-paquetes-con-un-número-limitado-de-entradas-al-log&#34;&gt;#13: Log y borrar paquetes con un número limitado de entradas al log&lt;/h1&gt;
-
-&lt;p&gt;El módulo -m limit puede limitar el número de entradas al log creadas por tiempo. Se usa para prevenir que el archivo de log se inunde. Para añadir al log y elminar spoofing cada 5 minutos, en ráfagas de 7 entradas:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -i eth1 -s 10.0.0.0/8 -m limit --limit 5/m --limit-burst &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP_SPOOF A: &amp;quot;&lt;/span&gt;
-iptables -A INPUT -i eth1 -s 10.0.0.0/8 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;14-aceptar-o-denegar-tráfico-desde-dirección-mac&#34;&gt;#14: Aceptar o denegar tráfico desde dirección MAC&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -m mac --mac-source 00:0F:EA:91:04:08 -j DROP
-&lt;span class=&#34;c1&#34;&gt;## *only accept traffic for TCP port # 8080 from mac 00:0F:EA:91:04:07 * ##&lt;/span&gt;
-iptables -A INPUT -p tcp --destination-port &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -m mac --mac-source 00:0F:EA:91:04:07 -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;15-bloquear-o-permitir-peticiones-ping-icmp&#34;&gt;#15: Bloquear o permitir peticiones ping ICMP&lt;/h1&gt;
-
-&lt;p&gt;Para bloquear peticiones ping ICMP&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
-iptables -A INPUT -i eth1 -p icmp --icmp-type echo-request -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Las respuestas al ping también se puede limitar a ciertas redes o hosts.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 192.168.1.0/24 -p icmp --icmp-type echo-request -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Lo siguiente solo acepta limitados tipos de peticiones ICMP:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;### ** assumed that default INPUT policy set to DROP ** #############&lt;/span&gt;
-iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
-iptables -A INPUT -p icmp --icmp-type destination-unreachable -j ACCEPT
-iptables -A INPUT -p icmp --icmp-type time-exceeded -j ACCEPT
-&lt;span class=&#34;c1&#34;&gt;## ** all our server to respond to pings ** ##&lt;/span&gt;
-iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;16-abrir-un-rango-de-puertos&#34;&gt;#16: Abrir un rango de puertos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 7000:7010 -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;17-abrir-un-rango-de-direcciones-ip&#34;&gt;#17: Abrir un rango de direcciones ip&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## only accept connection to tcp port 80 (Apache) if ip is between 192.168.1.100 and 192.168.1.200 ##&lt;/span&gt;
-iptables -A INPUT -p tcp --destination-port &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -m iprange --src-range 192.168.1.100-192.168.1.200 -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## nat example ##&lt;/span&gt;
-iptables -t nat -A POSTROUTING -j SNAT --to-source 192.168.1.20-192.168.1.25
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;19-bloquear-o-abrir-puertos-comunes&#34;&gt;#19: Bloquear o abrir puertos comunes&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Replace ACCEPT with DROP to block port:
-
-&lt;span class=&#34;c1&#34;&gt;## open port ssh tcp port 22 ##&lt;/span&gt;
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open cups (printing service) udp/tcp port 631 for LAN users ##&lt;/span&gt;
-iptables -A INPUT -s 192.168.1.0/24 -p udp -m udp --dport &lt;span class=&#34;m&#34;&gt;631&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -s 192.168.1.0/24 -p tcp -m tcp --dport &lt;span class=&#34;m&#34;&gt;631&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## allow time sync via NTP for lan users (open udp port 123) ##&lt;/span&gt;
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p udp --dport &lt;span class=&#34;m&#34;&gt;123&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open tcp port 25 (smtp) for all ##&lt;/span&gt;
-iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;# open dns server ports for all ##&lt;/span&gt;
-iptables -A INPUT -m state --state NEW -p udp --dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open http/https (Apache) server port to all ##&lt;/span&gt;
-iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open tcp port 110 (pop3) for all ##&lt;/span&gt;
-iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;110&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open tcp port 143 (imap) for all ##&lt;/span&gt;
-iptables -A INPUT -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;143&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open access to Samba file server for lan users only ##&lt;/span&gt;
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;137&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;138&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;139&lt;/span&gt; -j ACCEPT
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;445&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open access to proxy server for lan users only ##&lt;/span&gt;
-iptables -A INPUT -s 192.168.1.0/24 -m state --state NEW -p tcp --dport &lt;span class=&#34;m&#34;&gt;3128&lt;/span&gt; -j ACCEPT
-
-&lt;span class=&#34;c1&#34;&gt;## open access to mysql server for lan users only ##&lt;/span&gt;
-iptables -I INPUT -p tcp --dport &lt;span class=&#34;m&#34;&gt;3306&lt;/span&gt; -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;20-restringir-el-número-de-conexiones-paralelas-a-un-servidor-por-direccion-ip-del-cliente&#34;&gt;#20: Restringir el número de conexiones paralelas a un servidor por direccion Ip del cliente.&lt;/h1&gt;
-
-&lt;p&gt;Se puede usar connlimit para crear algunas restricciones. Para permitir 3 conexiones ssh por cliente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -p tcp --syn --dport &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; -m connlimit --connlimit-above &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; -j REJECT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Establecer las peticiones HTTP a 20:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -p tcp --syn --dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -m connlimit --connlimit-above &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --connlimit-mask &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;donde:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&amp;ndash;connlimit-above 3&lt;/strong&gt; : Coincide si el número de conexiones existentes está por encima de 3.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&amp;ndash;connlimit-mask 24&lt;/strong&gt; : Grupos de hosts usando el prefijo de longitud. Para IPv4, debe ser un número entre 0 y 32 (incluyéndolos.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;21-howto-use-iptables-like-a-pro&#34;&gt;#21: HowTO: Use iptables Like a Pro&lt;/h1&gt;
-
-&lt;p&gt;Para más información sobre iptables, échale un vistazo al manual:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;man iptables
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para ver la ayuda en general o de un comando específico:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -h
-iptables -j DROP -h
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;21-1-probando-nuestro-firewall&#34;&gt;#21.1: Probando nuestro firewall&lt;/h4&gt;
-
-&lt;p&gt;Conocer si hay puertos abiertos o no:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;Esta entrada solo lista las reglas básicas para los usuarios nuevos en linux. Se pueden crear reglas más complejas. Requiere una buena comprensión de TCP/IP, tunning del kernel linux via sysctl.conf y un buen conocimiento de nuestra configuración.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Fuente original: &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/tips/linux-iptables-examples.html&#34;&gt;cyberciti&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;más-reglas-cortesía-de-jker&#34;&gt;Más reglas cortesía de Jker&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Reestablece las reglas por defecto.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo su
-iptables -F
-iptables -t nat -F
-iptables -t mangle -F
-iptables -X
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
-
-&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
-iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
-iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;como-google-tiene-muchas-ips-puede-que-tengamos-un-problema-para-ello-realizamos-lo-siguiente-antes-de-la-regla-exigente&#34;&gt;Como google tiene muchas IPs puede que tengamos un problema para ello realizamos lo siguiente antes de la regla EXIGENTE:&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -d 212.106.221.0/24 -j ACCEPT
-iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -d 173.194.0.0/16 -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;mostrar-las-reglas-que-llevamos-hasta-el-momento&#34;&gt;Mostrar las reglas que llevamos hasta el momento:&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -nL –line-numbers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;si-queremos-borrar-reglas&#34;&gt;Si queremos borrar reglas:&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D OUTPUT 5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;cierra-todos-los-puertos-bien-conocidos-menos-los-necesarios-para-acceder-a-estas-dos-webs&#34;&gt;Cierra todos los puertos bien conocidos menos los necesarios para acceder a estas dos webs.&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p TCP –dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
-iptables -A OUTPUT -p UDP –dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
-iptables -A OUTPUT -p TCP –dport 1:1024 -j DROP
-iptables -A OUTPUT -p UDP –dport 1:1024 -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;investiga-de-qué-forma-podrías-hacer-que-las-peticiones-entrantes-a-tu-máquina-virtual-al-puerto-81-por-http-vayan-mediante-nat-al-puerto-80-de-la-máquina-local-arranca-wamp-para-comprobar-que-funciona&#34;&gt;Investiga de qué forma podrías hacer que las peticiones entrantes a tu máquina virtual al puerto 81 por http vayan mediante NAT al puerto 80 de la máquina local (arranca WAMP para comprobar que funciona).&lt;/h4&gt;
-
-&lt;p&gt;Arrancamos wamp en la maquina fisica y comprobamos que accedemos a wamp desde localhost.Comprobamos que podemos acceder desde la maquina virtual y se encuentra cortado&lt;/p&gt;
-
-&lt;p&gt;Miramos la IP de la maquina virtual. Ahora desde la maquina fisica intentamos acceder desde el puerto 81 con la IP esa.&lt;/p&gt;
-
-&lt;p&gt;Habilitamos el enrutamiento entre tarjetas de red de nuestro equipo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /proc/sys/net/ipv4/ip_forward
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ejecutamos las siguientes reglas&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -t nat -A PREROUTING -p tcp –dport &lt;span class=&#34;m&#34;&gt;81&lt;/span&gt; -j DNAT –to- destination 192.168.203.200:80
-
-iptables -t nat -A POSTROUTING -s 192.168.203.0/24 -j MASQUERADE
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;para-ver-las-reglas-introducidas&#34;&gt;Para ver las reglas introducidas:&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -t nat -nL –line-numbers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;permite-sólo-los-mensajes-entrantes-desde-la-ip-del-compañero-de-tu-máquina-física-prueba-desde-otro-sitio-para-ver-si-funciona&#34;&gt;Permite sólo los mensajes entrantes desde la IP del compañero de tu máquina física (prueba desde otro sitio para ver si funciona).&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 192.168.203.200 -j ACCEPT
-iptables -A INPUT -j DROP
-
-iptables -A FORWARD -s 192.168.203.200 -j ACCEPT
-iptables -A FORWARD -s -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&#34;activa-el-log-sobre-todas-las-reglas-y-verifica-que-se-anotan-los-mensajes&#34;&gt;Activa el log sobre todas las reglas y verifica que se anotan los mensajes.&lt;/h4&gt;
-
-&lt;p&gt;Insertamos en IPTABLEs las reglas para activar el log:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I FORWARD &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESFORWARD: ‘
-iptables -I INPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESINPUT: ‘
-
-iptables -t nat -I PREROUTING &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESPREROUTING: ‘
-iptables -t nat -I POSTROUTING &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESPREROUTING: ‘
-
-iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESOUTPUT: ‘
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;NOTA: hay que ponerlas las primeras para que haga log antes de rechazarlo.&lt;/p&gt;
-
-&lt;p&gt;Ahora editamos el archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gedit /etc/rsyslog.d/50-default.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;E incluimos al final:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;kern.warning /var/log/iptables.log
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;p&gt;Eso es todo, para crear un simple diagrama de Gantt no es necesario saber mucho más sobre este paquete. Recomiendo echar un vistazo a la documentación del paquete para cosas más específicas.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>22 Citas clásicas de programación</title>
-      <link>https://elbauldelprogramador.com/citas-clasicas-de-programacion/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      <title>El gran Mapa mundial de GNU/Linux</title>
+      <link>https://elbauldelprogramador.com/el-mapa-mundial-de-gnulinux-img/</link>
+      <pubDate>Thu, 08 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://elbauldelprogramador.com/citas-clasicas-de-programacion/</guid>
-      <description>&lt;p&gt;En &lt;a target=&#34;_blank&#34; href=&#34;http://www.storm-consultancy.com/&#34;&gt;storm-consultancy&lt;/a&gt; he visto esta colección de citas clásicas relaciondas con la programación que quiero compartir con vosotros:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil &amp;ndash; C. A. R. Hoare&lt;/p&gt;
-
-&lt;p&gt;Walking on water and developing software from a specification are easy if both are frozen &amp;ndash; Edward V Berard&lt;/p&gt;
+      <guid>https://elbauldelprogramador.com/el-mapa-mundial-de-gnulinux-img/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Hace unos años que publiqué este artículo, pero he decidido actualizarlo, ya que han aparecido versiones del mapa más actuales. Espero que os guste.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&#34;mapa-mundial-de-gnu-linux-1&#34;&gt;Mapa mundial de GNU/Linux 1&lt;/h2&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-full.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-1.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;680&#34; height=&#34;383&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
+&lt;h2 id=&#34;mapa-mundial-de-gnu-linux-2&#34;&gt;Mapa Mundial de GNU/Linux 2&lt;/h2&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-2-full.jpg&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/el-mapa-mundial-de-gnulinux-2.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;477&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dedoimedo.com/computers/linux-world-map-reloaded.html&#34;&gt;The Great Linux World Map 2.0!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/&#34; title=&#34;Just Linux Things in Reddit&#34;&gt;Linux World Map&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Libro Gratuito: Apache Maven Cookbook</title>
+      <link>https://elbauldelprogramador.com/apache-maven-cookbook/</link>
+      <pubDate>Wed, 07 Sep 2016 13:10:02 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/apache-maven-cookbook/</guid>
+      <description>&lt;figure&gt;
+   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/guides/Apache-Maven-Cookbook-centered.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;420&#34;&gt;
+   &lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Delve into the world of Apache Maven with this compact cookbook that introduces common recipes for the Maven tool!&lt;/strong&gt;&lt;/p&gt;
+
+
 &lt;blockquote&gt;
-&lt;p&gt;It always takes longer than you expect, even when you take into account Hofstadter&amp;rsquo;s Law. &amp;ndash; Hofstadter&amp;rsquo;s Law&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Si quieres apoyar el trabajo que realizamos en &lt;em&gt;El Baúl del Programador&lt;/em&gt;, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga &lt;strong&gt; debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión&lt;/strong&gt; ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en &lt;a id=&#34;revresponse&#34; href=&#34;http://www.revresponse.com/join.php?refbrand=bashyc-blogspot&#34; target=&#34;_blank&#34; title=&#34;RevResponse&#34;&gt;RevResponse&lt;/a&gt; y empezar a ofrecer guías de interés a tus lectores. Visita el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; target=&#34;_blank&#34; title=&#34;Catálogo completo de Guías gratuítas&#34;&gt;catálogo completo de guías.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Some people, when confronted with a problem, think &amp;#8220;I know, I’ll use regular expressions.&amp;rsquo; Now they have two problems &amp;ndash; Jamie Zawinski&lt;/p&gt;
 
-&lt;p&gt;Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. &amp;ndash; Brian Kernighan&lt;/p&gt;
 
-&lt;p&gt;Measuring programming progress by lines of code is like measuring aircraft building progress by weight. &amp;ndash; Bill Gates&lt;/p&gt;
 
-&lt;p&gt;PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil, perpetrated by skilled but perverted professionals. &amp;ndash; Jon Ribbens&lt;/p&gt;
+&lt;p&gt;Maven is a build automation tool used primarily for Java projects. Maven addresses two aspects of building software: first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like Apache Ant, it uses conventions for the build procedure, and only exceptions need to be written down.&lt;/p&gt;
 
-&lt;p&gt;On two occasions I have been asked, &amp;#8216;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?&amp;#8217; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question. &amp;ndash; Charles Babbage&lt;/p&gt;
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. &amp;ndash; Rick Osborne&lt;/p&gt;
+&lt;p&gt;In this ebook, we provide a compilation of Maven examples that will help you kick-start your own projects. We cover a wide range of topics, from project structure and configuration, to dependency management and plug-ins. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.&lt;/p&gt;
 
-&lt;p&gt;Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning. &amp;ndash; Rich Cook&lt;/p&gt;
+&lt;p&gt;With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.&lt;/p&gt;
 
-&lt;p&gt;I don&amp;#8217;t care if it works on your machine! We are not shipping your machine! &amp;ndash; Ovidiu Platon&lt;/p&gt;
+&lt;div class=&#34;button-post&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java30&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
 
-&lt;p&gt;I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone. &amp;ndash; Bjarne Stroustrup&lt;/p&gt;
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Libro Gratuito: Linux BASH Programming Cookbook</title>
+      <link>https://elbauldelprogramador.com/linux-bash-programming-cookbook/</link>
+      <pubDate>Wed, 07 Sep 2016 13:01:09 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/linux-bash-programming-cookbook/</guid>
+      <description>&lt;figure&gt;
+   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/guides/Linux-BASH-Programming-Cookbook-centered.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;420&#34;&gt;
+   &lt;/amp-img&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;A computer lets you make more mistakes faster than any other invention in human history, with the possible exceptions of handguns and tequila. &amp;ndash; Mitch Ratcliffe&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Delve into the world of Linux BASH Programming with this compact cookbook that introduces common recipes for the BASH command line!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;If debugging is the process of removing software bugs, then programming must be the process of putting them in. &amp;ndash; E. W. Dijkstra&lt;/p&gt;
 
-&lt;p&gt;It is practically impossible to teach good programming style to students that have had prior exposure to BASIC. As potential programmers, they are mentally mutilated beyond hope of regeneration. &amp;ndash; E. W. Dijkstra&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Si quieres apoyar el trabajo que realizamos en &lt;em&gt;El Baúl del Programador&lt;/em&gt;, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga &lt;strong&gt; debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión&lt;/strong&gt; ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en &lt;a id=&#34;revresponse&#34; href=&#34;http://www.revresponse.com/join.php?refbrand=bashyc-blogspot&#34; target=&#34;_blank&#34; title=&#34;RevResponse&#34;&gt;RevResponse&lt;/a&gt; y empezar a ofrecer guías de interés a tus lectores. Visita el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; target=&#34;_blank&#34; title=&#34;Catálogo completo de Guías gratuítas&#34;&gt;catálogo completo de guías.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;In theory, theory and practice are the same. In practice, they&amp;#8217;re not. &amp;ndash; Yoggi Berra&lt;/p&gt;
 
-&lt;p&gt;Two things are infinite: the universe and human stupidity; and I&amp;#8217;m not sure about the universe. &amp;ndash; Albert Einstein&lt;/p&gt;
 
-&lt;p&gt;Perl - The only language that looks the same before and after RSA encryption. &amp;ndash; Keith Bostic&lt;/p&gt;
 
-&lt;p&gt;I love deadlines. I like the whooshing sound they make as they fly by. &amp;ndash; Douglas Adams&lt;/p&gt;
+&lt;p&gt;Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been distributed widely as it is a default shell on the major Linux distributions and OS X.&lt;/p&gt;
 
-&lt;p&gt;Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders &amp;ndash; Unknown&lt;/p&gt;
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;XML is like violence - if it doesn&amp;#8217;t solve your problems, you are not using enough of it. &amp;ndash; Unknown&lt;/p&gt;
+&lt;p&gt;In this ebook, we provide a compilation of BASH programming examples that will help you kick-start your own projects. We cover a wide range of topics, from user management and permissions setting, to specific commands like sed, tar, etc. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.&lt;/p&gt;
 
-&lt;p&gt;Einstein argued that there must be simplified explanations of nature, because God is not capricious or arbitrary. No such faith comforts the software engineer. &amp;ndash; Fred Brooks&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;p&gt;With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of System Code Geeks.&lt;/p&gt;
+
+&lt;div class=&#34;button-post&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_syst05&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Evolución de las distribuciones GNU/Linux, de 1992 a 2016</title>
+      <link>https://elbauldelprogramador.com/linea-cronologica-de-distribuciones/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/linea-cronologica-de-distribuciones/</guid>
+      <description>&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/linea-cronologica-de-distribuciones.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;400&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hoy os traigo la línea cronológica de las &lt;a href=&#34;https://elbauldelprogramador.com/category/linux/&#34; title=&#34;Artículos sobre linux&#34;&gt;distribuciones GNU/Linux&lt;/a&gt; desde el año 1992 al 2016, es increíble la cantidad de distribuciones que hay.&lt;/p&gt;
+
+&lt;p&gt;De &lt;a target=&#34;_blank&#34; href=&#34;http://futurist.se/gldt/&#34;&gt;futurist.se&lt;/a&gt; he sacado esta imagen que representa la evolución de las distribuciones GNU/Linux, partiendo de las 3 principales, debian, slackware y Red Hat, aunque hay algunas independientes de las anteriores.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;A partir de estas 3, se abre un abanico inmenso de distribuciones, y seguro que de la gran mayoría ni las conozcáis. Ya que la imagen pesa demasiado, proporciono el enlace a Wikipedia para su visualización:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&#34; title=&#34;Evolución de las distros GNU/Linux, de 1992 a 2016&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/konimex/linuxtimeline&#34; title=&#34;Repositorio en Github de LinuxTimeline&#34;&gt;linuxtimeline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
