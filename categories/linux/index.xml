@@ -9,9 +9,99 @@
     <atom:link href="https://elbauldelprogramador.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cómo Resolver El Error “Can&#39;t Open Display: :0.0” Al Conectarse a Una Red Wi-Fi</title>
+      <link>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</link>
+      <pubDate>Mon, 03 Oct 2016 14:15:35 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</guid>
+      <description>&lt;h2 id=&#34;problema-can-t-open-display-0-0&#34;&gt;Problema: Can&amp;rsquo;t Open Display: :0.0&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;NetworkManager&lt;/em&gt; tiene la costumbre de cambiar el nombre del host (&lt;em&gt;hostname&lt;/em&gt;) al conectarse a una red, y esto a veces provoca que las aplicaciones con interfaz gráfica no puedan lanzarse. El típico error que se obtiene cuando esto ocurre es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t Open Display: :0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solución-establecer-de-forma-permanente-un-hostname&#34;&gt;Solución: Establecer de forma permanente un hostname&lt;/h2&gt;
+
+&lt;p&gt;Tras mucho investigar, descubrí que el problema estaba en &lt;em&gt;NetworkManager&lt;/em&gt;, y para solucionarlo basta con hacer permanente el &lt;em&gt;hostname&lt;/em&gt;. Para ello en el fichero &lt;code&gt;/etc/hosts&lt;/code&gt; debemos añadir un alias a &lt;code&gt;localhost&lt;/code&gt; con el nombre que queramos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;127.0.0.1	localhost NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Luego, en el fichero de configuración de &lt;em&gt;NetworkManager&lt;/em&gt; (&lt;code&gt;/etc/NetworkManager/NetworkManager.conf&lt;/code&gt;) escribimos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;main&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;keyfile
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;keyfile&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esto bastará.&lt;/p&gt;
+
+&lt;h3 id=&#34;cuando-la-solución-no-funciona&#34;&gt;Cuando la solución no funciona&lt;/h3&gt;
+
+&lt;p&gt;Recientemente se actualizó &lt;em&gt;NetworkManager&lt;/em&gt; y la solución de arriba dejó de funcionar. Esto se debe a que &lt;em&gt;NetworkManager&lt;/em&gt; ya no mira el nombre del host en el fichero de configuración, como mencionan en el &lt;em&gt;man&lt;/em&gt; de &lt;code&gt;NetworkManager.conf&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;hostname: This key is deprecated and has no effect since the hostname is now stored in /etc/hostname or other system configuration files according to build options.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por tanto la solución ahora es más sencilla, basta con añadir el nombre para el host en &lt;code&gt;/etc/hostname&lt;/code&gt;, por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat /etc/hostname
+NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cómo Obtener La Dimensión De Una Imagen en Internet</title>
+      <link>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</link>
+      <pubDate>Sat, 01 Oct 2016 16:32:13 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
+      <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
+
+&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solución-el-comando-identify-de-imagemagick&#34;&gt;Solución: el comando Identify de ImageMagick&lt;/h2&gt;
+
+&lt;p&gt;El comando &lt;code&gt;identify&lt;/code&gt; es un programa perteneciente a la suite &lt;em&gt;ImageMagick&lt;/em&gt;, citamos su página &lt;code&gt;man&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
+//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
+750x750+0+0 8-bit sRGB 149KB 0.000u 0:00.000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify -format &lt;span class=&#34;s2&#34;&gt;&amp;quot;width=\&amp;quot;%[fx:w]\&amp;quot; height=\&amp;quot;%[fx:h]\&amp;quot;\n&amp;quot;&lt;/span&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;750&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;750&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;identify -format &amp;quot;width=\&amp;quot;%[fx:w]\&amp;quot; height=\&amp;quot;%[fx:h]\&amp;quot;\n&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
       <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
       <description>&lt;figure&gt;
@@ -73,7 +163,7 @@
     <item>
       <title>20 ejemplos de iptables para SysAdmins novatos</title>
       <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
       <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
@@ -625,7 +715,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
     <item>
       <title>Algunos comandos útiles con iproute2</title>
       <link>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
       <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
@@ -853,7 +943,7 @@ ss src 5.39.89.44:25
     <item>
       <title>Bash syntax highlighted script</title>
       <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
       <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
@@ -895,7 +985,7 @@ rm temp
     <item>
       <title>Bash syntax highlighted script [Improved]</title>
       <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
       <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
@@ -934,7 +1024,7 @@ rm temp
     <item>
       <title>Bloquear una IP atacando el servidor mediante iptables</title>
       <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
       <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
@@ -974,7 +1064,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>C&#43;&#43; syntax highlighted script</title>
       <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
       <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;br /&gt; Here the code:&lt;/p&gt;
@@ -1032,7 +1122,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
     <item>
       <title>Cambiar fondo en la pantalla de login en Debian y Ubuntu</title>
       <link>https://elbauldelprogramador.com/cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/</guid>
       <description>&lt;figure&gt;
@@ -1109,7 +1199,7 @@ picture-options&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s
     <item>
       <title>Celebrando los 20 años de Linux [Video]</title>
       <link>https://elbauldelprogramador.com/celebrando-los-20-anos-de-linux-video/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/celebrando-los-20-anos-de-linux-video/</guid>
       <description>&lt;p&gt;Traducción parcial del artículo original en &lt;a href=&#34;http://www.techdrivein.com/2011/04/celebrating-20-years-of-linuxvideo.html&#34;&gt;techdrivein&lt;/a&gt;.&lt;/p&gt;
@@ -1126,7 +1216,7 @@ picture-options&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s
     <item>
       <title>Como crear un PPA (Personal Package Archive)</title>
       <link>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</guid>
       <description>&lt;p&gt;Hace poco hablé de qué eran los &lt;a href=&#34;https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/&#34;&gt;sistemas de paquetes PPA&lt;/a&gt;, para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.&lt;/p&gt;
@@ -1178,7 +1268,7 @@ picture-options&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s
     <item>
       <title>Configurar xmonad con trayer y fondo de pantalla aleatorio</title>
       <link>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</guid>
       <description>&lt;p&gt;A lo largo de los años he probado varios gestores de ventanas, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/&#34;&gt;openbox&lt;/a&gt; y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.&lt;/p&gt;
@@ -1379,7 +1469,7 @@ feh --bg-fill $picsfolder$randomfile1
     <item>
       <title>Copiar archivos recursivamente</title>
       <link>https://elbauldelprogramador.com/copiar-archivos-recursivamente/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/copiar-archivos-recursivamente/</guid>
       <description>&lt;p&gt;Hice un pequeño script que consiste simplemente en dar dos rutas, una origen y otra destino, para copiar todos los archivos mp3 de la ruta origen (con una profundidad máxima de una carpeta), es decir, que si tenemos una carpeta con archivos mp3, y en esa misa carpeta tenemos otra carpeta con archivos mp3, el script tambien copiara los mp3 de la segunda carpeta.&lt;/p&gt;
@@ -1441,7 +1531,7 @@ feh --bg-fill $picsfolder$randomfile1
     <item>
       <title>Crear miniaturas de imágenes [Mejorado]</title>
       <link>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</guid>
       <description>&lt;p&gt;He mejorado el &lt;a href=&#34;https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/&#34;&gt;script que subí hace unos días&lt;/a&gt; para crear miniaturas de &lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Añadir automáticamente el tamaño de una imagen con python&#34;&gt;imágenes&lt;/a&gt;, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.&lt;/p&gt;
@@ -1491,79 +1581,6 @@ feh --bg-fill $picsfolder$randomfile1
  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Imagemagick no esta instalado, puede instalarlo haciendo &amp;#39;sudo aptitude install imagemagick&amp;#39;&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo conocer el software “no libre” instalado en nuestro equipo</title>
-      <link>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</guid>
-      <description>&lt;p&gt;Este programa lo ví en &lt;a href=&#34;http://proyectosbeta.blogspot.com&#34;&gt;ProyectosBeta&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las cuales muchas serán &lt;strong&gt;no libres&lt;/strong&gt;, con el programita &lt;strong&gt;vrms&lt;/strong&gt; podemos conocerlos de forma sencilla.&lt;/p&gt;
-
-&lt;p&gt;Los pasos a seguir son los siguientes:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;Instalamos el programa:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install vrms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Y lo ejecutamos con &lt;code&gt;vrms&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;El resultado es el siguiente:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s1600/vrms.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34;  height=&#34;450&#34; width=&#34;800&#34; src=&#34;https://4.bp.blogspot.com/-wWUOaA33nCk/TdN2JjQ8OxI/AAAAAAAAAgM/nxfKbEuZCnE/s800/vrms.png&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Para que nos salga la el dibujito de &lt;strong&gt;Stallman&lt;/strong&gt; hay que seguir los siguientes pasos.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo aptitude install vrms cowsay
-$ sudo mv rms.cow /usr/share/cowsay/cows/rms.cow
-$ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;vrms&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;256&#34; width=&#34;238&#34; src=&#34;https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Fuente: &lt;a href=&#34;http://proyectosbeta.blogspot.com/2011/05/crear-la-cara-de-richard-stallmann-con.html&#34;&gt;Proyectosbeta&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo convertir un archivo pdf a imágenes</title>
-      <link>https://elbauldelprogramador.com/como-convertir-un-archivo-pdf-a-imagenes/</link>
-      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-convertir-un-archivo-pdf-a-imagenes/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;sh&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh1.png&#34; alt=&#34;&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.&lt;/p&gt;
-
-&lt;p&gt;Es necesario tener instalado el paquete imagemagick, si no lo tenemos instalado ejecutamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install imagemagick
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Tras instalarlo basta con ejecutar el comando siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;convert foo.pdf foo.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;La extensión de la imagen podemos cambiarla a jpg por ejemplo.&lt;/p&gt;
-
-&lt;p&gt;Si las imágenes resultan con poca calidad, podemos ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;convert -density &lt;span class=&#34;m&#34;&gt;400&lt;/span&gt; foo.pdf -resize 25% foo.png
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Espero que os sea útil si alguna vez lo necesitáis.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;Vía | &lt;a href=&#34;http://www.cyberciti.biz/faq/howto-convert-a-pdf-file-to-an-image/&#34; target=&#34;_blank&#34;&gt;cyberciti&lt;/a&gt; | &lt;a href=&#34;http://www.imagemagick.org/discourse-server/viewtopic.php?f=10&amp;t=13371&#34; target=&#34;_blank&#34;&gt;imagemagick.org&lt;/a&gt;&lt;/p&gt;
-</description>
     </item>
     
   </channel>
