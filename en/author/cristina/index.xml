@@ -11,12 +11,10 @@
     <item>
       <title>Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA</title>
       <link>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</link>
-      <pubDate>Tue, 24 Jan 2017 19:50:21 +0100</pubDate>
+      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</guid>
-      <description>
-
-&lt;p&gt;If you are wishing to compile OpenCV 3.2 by your own with Java support, possibly this will help. Also it is for you if, done that, you want to use it in IntelliJ IDEA. Let&amp;rsquo;s start!&lt;/p&gt;
+      <description>&lt;p&gt;If you are wishing to compile OpenCV 3.2 by your own with Java support, possibly this will help. Also it is for you if, done that, you want to use it in IntelliJ IDEA. Let&amp;rsquo;s start!&lt;/p&gt;
 
 &lt;p&gt;For compiling OPENCV 3.2 with Java support you must make sure you have the following installed:&lt;/p&gt;
 
@@ -28,6 +26,8 @@
 &lt;li&gt;Python 2.6+: run &lt;code&gt;python --version&lt;/code&gt; on command line to check if python is installed and its version.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
 &lt;h1 id=&#34;1-download-opencv-3-2&#34;&gt;1. Download OpenCV 3.2&lt;/h1&gt;
 
 &lt;p&gt;Go to &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34;&gt;opencv documentation&lt;/a&gt; and download the last stable version for Linux/Mac.&lt;/p&gt;
@@ -35,8 +35,8 @@
 &lt;h1 id=&#34;2-unzip-where-you-want-to-install-and-create-build-directory&#34;&gt;2. Unzip where you want to install and create build directory&lt;/h1&gt;
 
 &lt;p&gt;Extract the content folder &lt;strong&gt;opencv-3.2.0&lt;/strong&gt; where you want it to be placed. Then, move to that directory and create a &lt;strong&gt;build&lt;/strong&gt; empty folder, where compilation result will be stored:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~ $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; opencv-3.2.0/
-cris@cris ~ $ mkdir build
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; opencv-3.2.0/
+    cris@cris ~ $ mkdir build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1 id=&#34;3-export-java-home-variable-and-generate-a-makefile&#34;&gt;3. Export JAVA_HOME variable and generate a makefile&lt;/h1&gt;
@@ -51,8 +51,8 @@ cris@cris ~ $ mkdir build
 
 &lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
-    &lt;figcaption&gt;built makefiles&lt;/figcaption&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
+&lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;That is, there is a specified ant and JNI path, and Java wrappers is set to YES.&lt;/p&gt;
@@ -64,12 +64,12 @@ cris@cris ~ $ mkdir build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;when finished, make sure the files &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and &lt;strong&gt;libopencv_java320.so&lt;/strong&gt; (.so or .dll) are created:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar
-opencv-320.jar
-opencv-320.jar.dephelper
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar
+    opencv-320.jar
+    opencv-320.jar.dephelper
 
-cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep libopencv_java320.so
-libopencv_java320.so
+    cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep libopencv_java320.so
+    libopencv_java320.so
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now that it is build, the next step would be create an example in Java to check if it works. I am using IntelliJ IDEA Ultimate 2016 IDE, so in next section I am going to explain how to create a Java OpenCV proyect in INTELLIJ.&lt;/p&gt;
@@ -78,7 +78,7 @@ libopencv_java320.so
 
 &lt;p&gt;The easiest way to create a Java and Scala openCV proyect is using SBT.
   So we open IntelliJ and create a new SBT proyect. Once it is created, we select &lt;code&gt;File-&amp;gt;Project Structure&lt;/code&gt;  (Make sure here Module JDK appears set with our SDK)
- and choose &lt;code&gt;Dependencies&lt;/code&gt; tab. Here, we click to add and select the &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and  the library directory, that is in &lt;strong&gt;opencv3.2.0/build/lib&lt;/strong&gt; :&lt;/p&gt;
+ and choose &lt;strong&gt;Dependencies&lt;/strong&gt; tab. Here, we click to add and select the &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and  the library, that is in &lt;strong&gt;opencv3.2.0/build/lib&lt;/strong&gt; :&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
@@ -90,7 +90,7 @@ libopencv_java320.so
 &lt;figcaption&gt;adding .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;finally, we take the face detection example from &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34;&gt;opencv documentation&lt;/a&gt; , correct it (because it is for OpenCV version 2.4.4)  and sotre it in a file called &lt;strong&gt;helloOpenCV.java&lt;/strong&gt;inside &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt; folder.  The example code adapted to OpenCV version 3.2 is :&lt;/p&gt;
+&lt;p&gt;finally, we take the face detection example from &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34;&gt;opencv documentation&lt;/a&gt; , correct it (because it is for OpenCV version 2.4.4)  and store it in a file called &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; inside &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt; folder.  The example code adapted to OpenCV version 3.2 is :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.Mat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.MatOfRect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -142,16 +142,15 @@ libopencv_java320.so
         &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;loadLibrary&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Core&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;NATIVE_LIBRARY_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DetectFaceDemo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally we run &lt;strong&gt;HelloOpenCV&lt;/strong&gt; example and see it works! printing lenna&amp;rsquo;s face detection to &lt;strong&gt;faceDetection.png&lt;/strong&gt; image.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
-    &lt;figcaption&gt;example face detection&lt;/figcaption&gt;
-&lt;/figure&gt;
-</description>
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
+&lt;figcaption&gt;example face detection&lt;/figcaption&gt;
+&lt;/figure&gt;</description>
     </item>
     
   </channel>
