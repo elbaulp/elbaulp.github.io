@@ -9,6 +9,91 @@
     <atom:link href="https://elbauldelprogramador.com/author/alex/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cómo parsear el frontmatter con Python</title>
+      <link>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</link>
+      <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</guid>
+      <description>&lt;p&gt;Hace poco he migrado el blog de &lt;em&gt;Jekyll&lt;/em&gt; a &lt;em&gt;Hugo&lt;/em&gt;. El proceso ha sido fácil, pero he tenido que cambiar varias cosas en el &lt;em&gt;frontmatter&lt;/em&gt; de los artículos.&lt;/p&gt;
+
+&lt;p&gt;Tras buscar en Google encontré un &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34;&gt;parseador&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34;&gt;python&lt;/a&gt; para &lt;em&gt;frontmatter&lt;/em&gt; escritos en &lt;em&gt;YAML&lt;/em&gt;. A continuación se explica cómo instalarlo y usarlo.&lt;/p&gt;
+
+&lt;h1 id=&#34;instalar-python-frontmatter&#34;&gt;Instalar Python-Frontmatter&lt;/h1&gt;
+
+&lt;p&gt;Basta con ejecutar&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo pip install python-frontmatter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;usar-python-frontmatter&#34;&gt;Usar Python-Frontmatter&lt;/h1&gt;
+
+&lt;h2 id=&#34;ejemplo-1-añadir-un-nuevo-valor-al-frontmatter&#34;&gt;Ejemplo 1: Añadir un nuevo valor al FrontMatter&lt;/h2&gt;
+
+&lt;p&gt;Una vez instalado, es bastante sencillo de usar. Supongamos que queremos añadir una variable que almacene el autor del artículo, para ello bastaría el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;frontmatter&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os.path&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;basename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;splitext&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;glob&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Ruta a los ficheros&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;en/*.markdown&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Iterar sobre ellos&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Parsear los ficheros&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;alex&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# Guardar el fichero modificado&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Eso es todo, así de simple. Veamos un ejemplo algo más complejo.&lt;/p&gt;
+
+&lt;h2 id=&#34;ejemplo-2-modificar-variables-existentes-en-el-frontmatter&#34;&gt;Ejemplo 2: Modificar variables existentes en el FrontMatter&lt;/h2&gt;
+
+&lt;p&gt;En este caso, supongamos dos variables, &lt;code&gt;mainclass&lt;/code&gt; y &lt;code&gt;categories&lt;/code&gt;. Queremos incluir el valor de &lt;code&gt;mainclass&lt;/code&gt; a los valores existentes en &lt;code&gt;categories&lt;/code&gt;, y a la vez mantener los valores actuales en &lt;code&gt;categories&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# Si no exite la variable categories, crearla con el valor de mainclass&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mainclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Categories existe&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mainclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# Si categories contiene un solo valor ej: categories: &amp;#39;category1&amp;#39;&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Si categories es una lista ej: categories: [cat1, cat2]&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+            &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%s&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# Guardar los cambios&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/eyeseast/python-frontmatter&#34; target=&#34;_blank&#34; title=&#34;Python fronmatter repo&#34;&gt;Repositorio Python-Frontmatter en github&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Los RSS Del Blog Ahora Muestran El Contenido Completo</title>
       <link>https://elbauldelprogramador.com/los-rss-del-blog-ahora-muestran-el-contenido-completo/</link>
       <pubDate>Sat, 03 Dec 2016 10:40:33 +0000</pubDate>
@@ -607,224 +692,6 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/konimex/linuxtimeline&#34; title=&#34;Repositorio en Github de LinuxTimeline&#34;&gt;linuxtimeline&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chuleta De Comandos/Atajos De Teclado/Paquetes más útiles para Emacs</title>
-      <link>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</link>
-      <pubDate>Tue, 30 Aug 2016 14:10:30 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</guid>
-      <description>&lt;p&gt;No es la primera vez que se publica en el blog una &lt;a href=&#34;https://elbauldelprogramador.com/tags/chuleta&#34; title=&#34;Artículos sobre chuletas&#34;&gt;chuleta&lt;/a&gt; de algo:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Chuleta básica de comandos Dig&#34;&gt;Chuleta de comandos para dig&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos para Git&#34;&gt;Git: Chuleta de comandos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/&#34; title=&#34;Chuleta de comandos para GPG&#34;&gt;Chuleta de comandos GPG&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/&#34; title=&#34;Chuleta de comandos de Markdown&#34;&gt;Chuleta de comandos MarkDown&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;La de hoy va sobre &lt;em&gt;Emacs&lt;/em&gt;. La idea es que esta chuleta la creemos entre todos. Que cada uno aporte su granito de arena para crear la &lt;strong&gt;chuleta de atajos de teclado/comandos/paquetes para emacs definitiva&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;A lo largo del poco tiempo que llevo usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;Artículos sobre emacs&#34;&gt;emacs&lt;/a&gt;, ya he ido descubriendo los atajos que me resultan más útiles para mi día a día, empecemos:&lt;/p&gt;
-
-&lt;h2 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h2&gt;
-
-&lt;h3 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
-
-&lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
-lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Y con el tabulador me podré ir moviendo a los distintos &lt;em&gt;$n&lt;/em&gt; que ahí se ven. Otro ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# key: code&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
-&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
-
-&lt;h2 id=&#34;miscelánica-taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h2&gt;
-
-&lt;h3 id=&#34;buscar-y-reemplazar-en-varios-ficheros&#34;&gt;Buscar y reemplazar en varios ficheros&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Queremos buscar por una &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresión regular&lt;/a&gt; o un texto simple en varios ficheros a la vez, o un directorio completo, y reemplazar el texto encontrado por otro.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Ejecutar &lt;code&gt;M-x find-name-dired&lt;/code&gt;: e introducir el directorio en el que están los ficheros.&lt;/li&gt;
-&lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt; para “marcar” todos los ficheros del directorio.&lt;/li&gt;
-&lt;li&gt;Pulsar &lt;code&gt;Q&lt;/code&gt; para ejecutar el comando &lt;code&gt;query-replace&lt;/code&gt; para todos los ficheros marcados.&lt;/li&gt;
-&lt;li&gt;Una vez escrita la expresión regular, se nos pide confirmación para cada fichero, podemos pulsar &lt;code&gt;espacio&lt;/code&gt; para reemplazar la expresión en el fichero, &lt;code&gt;n&lt;/code&gt; para descartarla, o &lt;code&gt;A&lt;/code&gt; para reemplazar la expresión en todos los ficheros.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;A veces queremos seleccionar una región de texto y realizar una acción sobre ella, por ejemplo eliminar espacios en blanco, añadir algún texto delante de cada frase etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Supongamos que tenemos el siguiente texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;línea 1
-línea 2
-línea 3
-línea 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;- línea 1
-- línea 2
-- línea 3
-- línea 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-x r k&lt;/code&gt;: &lt;em&gt;Kill&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x r d&lt;/code&gt;: &lt;em&gt;Borra&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x r y&lt;/code&gt;: Pega (&lt;em&gt;Yank&lt;/em&gt;) la última región borrada (Con &lt;em&gt;kill&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x r o&lt;/code&gt;: Inserta espacios en blanco para rellenar el espacio de la región seleccionada.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-x clear-rectangle&lt;/code&gt;: Reemplaza la selección con espacios.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-x delete-white-spaces-rectangle&lt;/code&gt;: Elimina los espacios en blanco a la izquierda.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x r t string RET&lt;/code&gt;: Reemplaza el contenido del rectángulo con &lt;em&gt;string&lt;/em&gt; en cada línea. (El ejemplo visto)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-x string-insert-rectangle RET string RET&lt;/code&gt;: Inserta &lt;em&gt;string&lt;/em&gt; en cada línea del rectángulo.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Supongamos que tenemos un texto mal formateado, y queremos reemplazar un caracter en concreto por un salto de línea. Esto suele pasar por ejemplo al leer ficheros con codificaciones distintas. En los que el salto de línea se interpreta de otro modo. A modo de ejemplo, supongamos que vamos a reemplazar el caracter &lt;code&gt;^N&lt;/code&gt; por un salto de línea. Tenemos este texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Pulsar &lt;code&gt;M-x replace-string&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Introducimos el texto que queremos reemplazar, en este caso &lt;code&gt;^N&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Insertamos el salto de línea, para ello, pulsar:
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;C-q&lt;/code&gt;: Para decirle a emacs que vamos a insertar un caracter en crudo (&lt;em&gt;raw&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-j&lt;/code&gt;: Esta combinación se corresponde con el salto de línea&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;Pulsamos &lt;code&gt;Enter&lt;/code&gt; y deberíamos tener el siguiente texto:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Lorem ipsum dolor sit amet
-, consectetur adipiscing elit.
- Fusce vestibulum.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h3&gt;
-
-&lt;p&gt;Basta ejecutar &lt;code&gt;M-x delete-trailing-whitespace&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;guardar-comandos-que-usamos-usualmente&#34;&gt;Guardar comandos que usamos usualmente&lt;/h3&gt;
-
-&lt;p&gt;Este tema se trató en más profundidad en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs&#34; title=&#34;Cómo crear comandos personalizados en Emacs&#34;&gt;&lt;em&gt;Cómo crear comandos personalizados en Emacs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;administar-las-copias-de-seguridad-de-emacs&#34;&gt;Administar las copias de seguridad de emacs&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Emacs&lt;/em&gt; por defecto guarda una copia de seguridad del fichero en un fichero del mismo nombre pero acabado en &lt;code&gt;~&lt;/code&gt;, aunque es bastánte útil, a veces molesta tener ficheros desperdigados a lo largo de las carpetas acabando en &lt;code&gt;~&lt;/code&gt;. Es posible almacenarlos todos en una carpeta. Veamos.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;En el fichero de configuración (&lt;code&gt;~/.emacs/init.el&lt;/code&gt;) añadimos&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;;; Set a directory for backup files&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;backup-directory-alist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;~/.saves&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delete-old-versions&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;kept-new-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;kept-old-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Algunos comandos que hemos visto aquí, como buscar y reemplazar texto en varios ficheros a la vez, realizan la acción pero no guardan los cambios en el fichero. Para guardarlos tenemos que seleccionarlos uno a uno en el &lt;em&gt;buffer&lt;/em&gt; y ejecutar la acción de guardar. Para hacernos la vida más fácil, podemos usar &lt;code&gt;ibuffer&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Para sustituir el modo &lt;em&gt;buffer&lt;/em&gt;, por &lt;em&gt;ibuffer&lt;/em&gt; debemos añadir a nuestra configuración:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;;; make ibuffer the default&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;\C-x\C-b&amp;quot;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt;, para seleccionar todos los ficheros.&lt;/li&gt;
-&lt;li&gt;Pulsar &lt;code&gt;S&lt;/code&gt;, para guardar los ficheros seleccionados&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;alinear-verticalmente-código-en-base-al-signo&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;M-x align-regex =&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;convertir-texto-a-mayúscula-minúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-x C-u&lt;/code&gt;: Convertir la región seleccionada a mayúsculas.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x C-l&lt;/code&gt;: Convertir la región seleccionada a minúsculas.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-l&lt;/code&gt;: Convertir la siguiente palabra a minúscula.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-u&lt;/code&gt;: Convertir la siguiente palabra a mayúscula.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-c&lt;/code&gt;: Convertir a mayúscula la primera letra de la palabra &amp;ndash; Capitalizar &amp;ndash;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;reemplazar-tabulador-por-espacios-y-viceversa&#34;&gt;Reemplazar tabulador por espacios y viceversa&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;M-x tabify&lt;/code&gt;: Sustituye en la región seleccionada espacios por tabuladores.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-x untabify&lt;/code&gt;: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fuente: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;tu-turno&#34;&gt;Tu Turno&lt;/h1&gt;
-
-&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;em&gt;Pull Requests&lt;/em&gt; al siguiente &lt;em&gt;gist&lt;/em&gt;: &lt;a href=&#34;https://gist.github.com/algui91/9be4d82ba09f18562d1cfda2eb325eed&#34; title=&#34;Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md&#34;&gt;Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Esperamos vuestras colaboraciones!&lt;/p&gt;</description>
     </item>
     
   </channel>
