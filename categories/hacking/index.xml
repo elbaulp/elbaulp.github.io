@@ -18,7 +18,7 @@
 &lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;wp-image-901 aligncenter&#34; title=&#34;rainbow&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34; width=&#34;536px&#34; height=&#34;303px&#34; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
-&lt;p&gt;En la esfera social de bookmark (&amp;#8220;socialbookmarkosphere&amp;#8221;) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34;&gt;insistentemente&lt;/a&gt; de las &amp;#8220;&lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Tablas Arcoiris&lt;/a&gt;&amp;#8220;, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de *Windows for Workgroups *hace 15 años. Esto realmente me enloquece. Si el eje soporte &amp;#8220;avanzado&amp;#8221; de tu modelo de amenazas es &amp;#8220;Tablas Arcoiris&amp;#8221;, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
+&lt;p&gt;En la esfera social de bookmark (&amp;#8220;socialbookmarkosphere&amp;#8221;) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34; target=&#34;_blank&#34;&gt;insistentemente&lt;/a&gt; de las &amp;#8220;&lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Tablas Arcoiris&lt;/a&gt;&amp;#8220;, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de *Windows for Workgroups *hace 15 años. Esto realmente me enloquece. Si el eje soporte &amp;#8220;avanzado&amp;#8221; de tu modelo de amenazas es &amp;#8220;Tablas Arcoiris&amp;#8221;, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Para comenzar, almacenamiento de contraseñas 101&lt;/strong&gt;: Los servidores &lt;a title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; target=&#34;_blank&#34;&gt;no suelen almacenar las contraseñas reales&lt;/a&gt;. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.&lt;/p&gt;
 
@@ -182,7 +182,7 @@
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/logicbomb1.png&#34; alt=&#34;&#34; title=&#34;Bomba&#34; width=&#34;532px&#34; height=&#34;449px&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;puedes-encontrar-la-solución-a-esta-práctica-en-desafío-de-ingeniería-inversa-en-c-soluciones-1-alert&#34;&gt;Puedes encontrar la solución a esta práctica en &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34;&gt;Desafío de ingeniería inversa en C - Soluciones&lt;/a&gt; {.alert}&lt;/h4&gt;
+&lt;h4 id=&#34;puedes-encontrar-la-solución-a-esta-práctica-en-desafío-de-ingeniería-inversa-en-c-soluciones-1-alert&#34;&gt;Puedes encontrar la solución a esta práctica en &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; target=&#34;_blank&#34;&gt;Desafío de ingeniería inversa en C - Soluciones&lt;/a&gt; {.alert}&lt;/h4&gt;
 
 &lt;p&gt;En la asignatura Estructura de Computadores de mi facultad, estamos haciendo una práctica que consiste en coger un ejecutable que haya compilado otro alumno, el cual pide una contraseña alfanumérica y otra numérica. Dicho ejecutable está compilado sin opción de depuración, es decir:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gcc -m32 -O&amp;lt;n&amp;gt; Bomba.c -o bomba
@@ -198,7 +198,7 @@
 
 &lt;p&gt;Cuando finalice este plazo, publicaré el código fuente y todos los comentarios, junto con alguna explicación de los programas que haya conseguido descifrar.&lt;/p&gt;
 
-&lt;p&gt;Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta dirección: &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&#34;&gt;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta dirección: &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&#34; target=&#34;_blank&#34;&gt;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -212,7 +212,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Bomba&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/logicbomb.png&#34; width=&#34;532px&#34; height=&#34;449px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hace unas semanas &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/&#34;&gt;hablé de un desafío&lt;/a&gt; propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.&lt;/p&gt;
+&lt;p&gt;Hace unas semanas &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/&#34; target=&#34;_blank&#34;&gt;hablé de un desafío&lt;/a&gt; propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.&lt;/p&gt;
 
 &lt;p&gt;Como comenté, la practica consiste en averiguar dos contraseñas de un programa escrito en C compilado para 32 bits y sin opciones de depuración. El guión está escrito por los profesores Javier Fernandez y Mancia anguita bajo licencia &lt;strong&gt;creative commons BY-NC-SA&lt;/strong&gt; y disponible para descargar más abajo en las referencias.&lt;/p&gt;
 
@@ -646,7 +646,7 @@ Con lo cual tenemos que conseguir un número al que al hacerle todas estas opera
 &lt;p&gt;La explotación de programas es un elemento básico del hacking. Un programa está compuesto de un conjunto de reglas complejas siguiendo un flujo de ejecución que dice al ordenador qué hacer. Explotar un programa es una forma inteligente de conseguir que el ordenador haga lo que tú quieras, incluso si dicho programa no se diseñó para hacerlo. - &lt;strong&gt;The art of Exploitation, Capítulo 3&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;El libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag;=elbaudelpro-21&amp;amp;linkCode;=as2&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=1593271441&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, es un libro que recomiendo a todo aquel interesado en aprender temas sobre seguridad informática.&lt;/p&gt;
+&lt;p&gt;El libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag;=elbaudelpro-21&amp;amp;linkCode;=as2&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=1593271441&#34; target=&#34;_blank&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, es un libro que recomiendo a todo aquel interesado en aprender temas sobre seguridad informática.&lt;/p&gt;
 
 &lt;p&gt;Esta va a ser la primera de las 3 o 4 entradas que voy a dedicar a explicar cómo aprovecharse de los buffers overflows en los programas para modificar su comportamiento, e incluso conseguir el control total de la máquina.&lt;/p&gt;
 
@@ -1129,7 +1129,7 @@ gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
 gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; target=&#34;_blank&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Los posibles argumentos de cada herramienta son los siguientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./unhide-tcp --help

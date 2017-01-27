@@ -18,7 +18,7 @@
 
 &lt;h2 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h2&gt;
 
-&lt;p&gt;Asumiremos que el lector ya tiene Netbeans y Maven instalados y configurados en su máquina. Hay más instrucciones de instalación en la web de &lt;a href=&#34;https://logging.apache.org/log4j/2.x/maven-artifacts.html&#34;&gt;Log4j2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Asumiremos que el lector ya tiene Netbeans y Maven instalados y configurados en su máquina. Hay más instrucciones de instalación en la web de &lt;a href=&#34;https://logging.apache.org/log4j/2.x/maven-artifacts.html&#34; target=&#34;_blank&#34;&gt;Log4j2&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalar-log4j2&#34;&gt;Instalar Log4j2&lt;/h2&gt;
 
@@ -76,7 +76,7 @@
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En él, se especifica un fichero &lt;code&gt;app.log&lt;/code&gt; en el que se almacenará el log con el formato &lt;code&gt;&amp;quot;%d %p %c{1.} [%t] %m%n&amp;quot;&lt;/code&gt;. Y en la consola aparecerá con el siguiente formato: &lt;code&gt;&amp;quot;%highlight{[%-5level] - [%t] - .%c{1}: %msg%n}&amp;quot;&lt;/code&gt; que como veremos, colorea el resultado en función del nivel del log. Más información acerca del fichero de configuración en la &lt;a href=&#34;http://logging.apache.org/log4j/2.0/manual/layouts.html&#34;&gt;web oficial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En él, se especifica un fichero &lt;code&gt;app.log&lt;/code&gt; en el que se almacenará el log con el formato &lt;code&gt;&amp;quot;%d %p %c{1.} [%t] %m%n&amp;quot;&lt;/code&gt;. Y en la consola aparecerá con el siguiente formato: &lt;code&gt;&amp;quot;%highlight{[%-5level] - [%t] - .%c{1}: %msg%n}&amp;quot;&lt;/code&gt; que como veremos, colorea el resultado en función del nivel del log. Más información acerca del fichero de configuración en la &lt;a href=&#34;http://logging.apache.org/log4j/2.0/manual/layouts.html&#34; target=&#34;_blank&#34;&gt;web oficial&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;El fichero &lt;code&gt;log4j2.json&lt;/code&gt; hay que colocarlo en la carpeta &lt;code&gt;resources&lt;/code&gt; del proyecto (&lt;code&gt;src/main/resources&lt;/code&gt;).&lt;/p&gt;
 
@@ -126,7 +126,7 @@
 
 &lt;h2 id=&#34;establecer-un-nivel-de-log-por-defecto-en-toda-la-aplicación&#34;&gt;Establecer un nivel de log por defecto en toda la aplicación&lt;/h2&gt;
 
-&lt;p&gt;Cuando depuremos, será útil que aparezcan todos los niveles de log en la consola, desde &lt;em&gt;fatal&lt;/em&gt; hasta &lt;em&gt;trace&lt;/em&gt;. Pero en producción sería conveniente loggear únicamente eventos a un nivel determinado, por ejemplo, a partir de &lt;code&gt;warn&lt;/code&gt;. Para ello podemos crear ésta función que encontré en &lt;a href=&#34;http://stackoverflow.com/a/18409096/1612432&#34;&gt;SO&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Cuando depuremos, será útil que aparezcan todos los niveles de log en la consola, desde &lt;em&gt;fatal&lt;/em&gt; hasta &lt;em&gt;trace&lt;/em&gt;. Pero en producción sería conveniente loggear únicamente eventos a un nivel determinado, por ejemplo, a partir de &lt;code&gt;warn&lt;/code&gt;. Para ello podemos crear ésta función que encontré en &lt;a href=&#34;http://stackoverflow.com/a/18409096/1612432&#34; target=&#34;_blank&#34;&gt;SO&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
 &lt;span class=&#34;cm&#34;&gt; * Credit: http://stackoverflow.com/a/18409096/1612432&lt;/span&gt;
 &lt;span class=&#34;cm&#34;&gt; *&lt;/span&gt;

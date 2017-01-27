@@ -18,7 +18,7 @@
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/logicbomb1.png&#34; alt=&#34;&#34; title=&#34;Bomba&#34; width=&#34;532px&#34; height=&#34;449px&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;puedes-encontrar-la-solución-a-esta-práctica-en-desafío-de-ingeniería-inversa-en-c-soluciones-1-alert&#34;&gt;Puedes encontrar la solución a esta práctica en &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34;&gt;Desafío de ingeniería inversa en C - Soluciones&lt;/a&gt; {.alert}&lt;/h4&gt;
+&lt;h4 id=&#34;puedes-encontrar-la-solución-a-esta-práctica-en-desafío-de-ingeniería-inversa-en-c-soluciones-1-alert&#34;&gt;Puedes encontrar la solución a esta práctica en &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; target=&#34;_blank&#34;&gt;Desafío de ingeniería inversa en C - Soluciones&lt;/a&gt; {.alert}&lt;/h4&gt;
 
 &lt;p&gt;En la asignatura Estructura de Computadores de mi facultad, estamos haciendo una práctica que consiste en coger un ejecutable que haya compilado otro alumno, el cual pide una contraseña alfanumérica y otra numérica. Dicho ejecutable está compilado sin opción de depuración, es decir:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gcc -m32 -O&amp;lt;n&amp;gt; Bomba.c -o bomba
@@ -34,7 +34,7 @@
 
 &lt;p&gt;Cuando finalice este plazo, publicaré el código fuente y todos los comentarios, junto con alguna explicación de los programas que haya conseguido descifrar.&lt;/p&gt;
 
-&lt;p&gt;Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta dirección: &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&#34;&gt;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta dirección: &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&#34; target=&#34;_blank&#34;&gt;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -48,7 +48,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Bomba&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/logicbomb.png&#34; width=&#34;532px&#34; height=&#34;449px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hace unas semanas &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/&#34;&gt;hablé de un desafío&lt;/a&gt; propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.&lt;/p&gt;
+&lt;p&gt;Hace unas semanas &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/&#34; target=&#34;_blank&#34;&gt;hablé de un desafío&lt;/a&gt; propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.&lt;/p&gt;
 
 &lt;p&gt;Como comenté, la practica consiste en averiguar dos contraseñas de un programa escrito en C compilado para 32 bits y sin opciones de depuración. El guión está escrito por los profesores Javier Fernandez y Mancia anguita bajo licencia &lt;strong&gt;creative commons BY-NC-SA&lt;/strong&gt; y disponible para descargar más abajo en las referencias.&lt;/p&gt;
 
@@ -482,13 +482,13 @@ Con lo cual tenemos que conseguir un número al que al hacerle todas estas opera
 
 &lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
-&lt;p&gt;El switch se basa en una implementación muy eficiente llamada en inglés &lt;strong&gt;jump table&lt;/strong&gt; o tabla de saltos. Esta tabla es un array, donde la entrada &lt;em&gt;i&lt;/em&gt; es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a &lt;em&gt;i&lt;/em&gt;. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción &lt;strong&gt;jmp&lt;/strong&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/asm&#34;&gt;ensamblador&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;El switch se basa en una implementación muy eficiente llamada en inglés &lt;strong&gt;jump table&lt;/strong&gt; o tabla de saltos. Esta tabla es un array, donde la entrada &lt;em&gt;i&lt;/em&gt; es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a &lt;em&gt;i&lt;/em&gt;. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción &lt;strong&gt;jmp&lt;/strong&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/asm&#34; target=&#34;_blank&#34;&gt;ensamblador&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Esa es la clave que explica el mayor rendimiento de un switch frente a una larga secuencia de &lt;strong&gt;if-then-else&lt;/strong&gt;. Ya que el tiempo necesario para realizar el switch es independiente del número de casos (sentencia case:) que éste tiene.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/&#34;&gt;GCC&lt;/a&gt; selecciona qué metodo de traducción aplica al switch dependiendo del número de casos y valores. Las tablas de saltos se usan cuando hay un número determinado de casos (cuatro por ejemplo) y abarcan un número pequeño de valores. Por ejemplo:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/&#34; target=&#34;_blank&#34;&gt;GCC&lt;/a&gt; selecciona qué metodo de traducción aplica al switch dependiendo del número de casos y valores. Las tablas de saltos se usan cuando hay un número determinado de casos (cuatro por ejemplo) y abarcan un número pequeño de valores. Por ejemplo:&lt;/p&gt;
 
 &lt;h2 id=&#34;sentencia-switch&#34;&gt;Sentencia switch&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;switch_eg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;

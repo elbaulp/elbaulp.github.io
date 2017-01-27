@@ -45,8 +45,8 @@
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://motherboard.vice.com/read/hackers-could-break-into-your-monitor-to-spy-on-you-and-manipulate-your-pixels&#34; title=&#34;Hackers Could Break Into Your Monitor To Spy on You and Manipulate Your Pixels&#34;&gt;motherboard.vice.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2016/08/hacking_your_co.html&#34; title=&#34;Hacking Your Computer Monitor&#34;&gt;schneier.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://motherboard.vice.com/read/hackers-could-break-into-your-monitor-to-spy-on-you-and-manipulate-your-pixels&#34; title=&#34;Hackers Could Break Into Your Monitor To Spy on You and Manipulate Your Pixels&#34; target=&#34;_blank&#34;&gt;motherboard.vice.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2016/08/hacking_your_co.html&#34; title=&#34;Hacking Your Computer Monitor&#34; target=&#34;_blank&#34;&gt;schneier.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Imagen via Lorenzo Franceschi-Bicchierai/Motherboard&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -95,13 +95,13 @@
 
 &lt;p&gt;Despues de este pequeño repaso por la historia de las vulnerabilidades, vamos a describir la nueva instrucción que Intel ha creado para acabar con los &lt;em&gt;Buffers Overflows&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
+&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34; target=&#34;_blank&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
 
 &lt;p&gt;Con esta simple mejora, se acaba el problema de sobre-escribir la dirección de retorno de una función para permitir al atacante saltar a una porción de codigo que él controla. Al obligar a que la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt; sea la primera instrucción de todas las subrutinas, define un único punto de entrada válido. Cualquier intento de saltar a la mitad o al final de una función es imposible, ya que el proceso se abortará.&lt;/p&gt;
 
 &lt;h1 id=&#34;la-pila-stack-y-la-nueva-funcionalidad-de-intel-shadow-stack&#34;&gt;La pila (Stack) y la nueva funcionalidad de Intel, Shadow Stack&lt;/h1&gt;
 
-&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
+&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34; target=&#34;_blank&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
 
 &lt;p&gt;Para resolver este problema Intel ha diseñado la llamada &lt;em&gt;Shadow Stack&lt;/em&gt; o pila oculta. Es una pila a la que el desarrollador no tiene acceso, y mantiene una copia de los parámetros de la pila normal, como dirección de retorno etc, pero nada de datos. Cuando el programador modifica la pila, lo hace en la normal, a la que tiene acceso. Y aquí reside la fortaleza del &lt;em&gt;Shadow Stack&lt;/em&gt;, al no tener acceso, cuando el sistema mira la dirección de retorno, si esta dirección no coincide en ambas pilas, alguien ha modificado la dirección de retorno en la pila normal y el proceso se aborta. Y así, Intel ha puesto fin a años de vulnerabilidades debidas al simple hecho de no comprobar que el tamaño de los datos que intentamos guardar en una variable, no cabe en el espacio que tienen reservado. Una obra maestra.&lt;/p&gt;
 
@@ -115,9 +115,9 @@
 
 &lt;ul&gt;
 &lt;li&gt;Security Now 565 Control-Flow Enforcement Technology (CET) | &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/565 &amp;quot;Security Now 565
-Control-Flow Enforcement Technology (CET&#34;&gt;twit.tv&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+Control-Flow Enforcement Technology (CET&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
 &lt;li&gt;Episodio en Youtube | &lt;a href=&#34;https://www.youtube.com/watch?v=W3AdFoJ8lCs &amp;quot;Security Now 565
-Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+Control-Flow Enforcement Technology (CET&#34; target=&#34;_blank&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -428,7 +428,7 @@ No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ub
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/nueva-guia-security-for-a-faster-world/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_hp357/prgm.cgi&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif&#34; alt=&#34;Executive eBook: Security for a Faster World&#34; width=&#34;200px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_hp357/prgm.cgi&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Executive-eBook-Security-for-a-Faster-World.gif&#34; alt=&#34;Executive eBook: Security for a Faster World&#34; width=&#34;200px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;With Security for a Faster World, You&amp;#8217;ll learn best practices for protecting your corporate data, keeping intruders and malware out of your network, and protecting against disgruntled employees who may attempt to use their access privileges to compromise your systems.&lt;/p&gt;
 
@@ -438,7 +438,7 @@ No te preocupes, puedes conservarlo. Necesitas asegurarte que las opciones de ub
 &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;pc=w_hp357&#34; target=&#34;_blank&#34; class=&#34;wi-button style-3&#34;&gt;Descárgala&lt;i class=&#34;icon-download icon-2x&#34;&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -493,10 +493,10 @@ This is an example
 Connection closed by foreign host.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Pero sigo recibiendo un error (&lt;em&gt;450 4.3.2 INT-T14 &lt;a href=&#34;http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int&#34;&gt;http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int&lt;/a&gt; Server busy, try again later
+&lt;p&gt;Pero sigo recibiendo un error (&lt;em&gt;450 4.3.2 INT-T14 &lt;a href=&#34;http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int&#34; target=&#34;_blank&#34;&gt;http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int&lt;/a&gt; Server busy, try again later
 Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 
-&lt;p&gt;También probé con dos programas (sin éxito), uno en&lt;a href=&#34;https://elbauldelprogramador.com/c/&#34;&gt; C++&lt;/a&gt; y otro en &lt;a href=&#34;https://elbauldelprogramador.com/python&#34;&gt;python&lt;/a&gt; que encontré en stackoverflow:&lt;/p&gt;
+&lt;p&gt;También probé con dos programas (sin éxito), uno en&lt;a href=&#34;https://elbauldelprogramador.com/c/&#34; target=&#34;_blank&#34;&gt; C++&lt;/a&gt; y otro en &lt;a href=&#34;https://elbauldelprogramador.com/python&#34; target=&#34;_blank&#34;&gt;python&lt;/a&gt; que encontré en stackoverflow:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
      &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
      &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;/sys&amp;gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;

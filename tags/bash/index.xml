@@ -16,7 +16,7 @@
       <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
       <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
 
-&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -28,7 +28,7 @@
 &lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
+&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; target=&#34;_blank&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
 https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
 //elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;

@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</guid>
-      <description>&lt;p&gt;Un intent sirve para invocar componentes, en android entendemos por componentes las &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;activities,&lt;/a&gt; Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;proveedores de contenido&lt;/a&gt;, código que abstráe los datos.&lt;/p&gt;
+      <description>&lt;p&gt;Un intent sirve para invocar componentes, en android entendemos por componentes las &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34; target=&#34;_blank&#34;&gt;activities,&lt;/a&gt; Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34; target=&#34;_blank&#34;&gt;proveedores de contenido&lt;/a&gt;, código que abstráe los datos.&lt;/p&gt;
 
 &lt;h3 id=&#34;introducción-a-los-intents&#34;&gt;Introducción a los Intents&lt;/h3&gt;
 
@@ -32,7 +32,7 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;El layout &lt;em&gt;R.Layout.MiActivity&lt;/em&gt; debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;AndroidManifest&lt;/a&gt;, que será algo así:&lt;/p&gt;
+&lt;p&gt;El layout &lt;em&gt;R.Layout.MiActivity&lt;/em&gt; debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34; target=&#34;_blank&#34;&gt;AndroidManifest&lt;/a&gt;, que será algo así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.MiActivity&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Mi Activity&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -169,7 +169,7 @@
 
 &lt;p&gt;getExtras devuelve el bundle que contenga el intent. Si el intent ya tiene un bundle, putExtras transfiere los pares clave/valor adicionales del bundle nuevo al que ya existía. Si no existe ningun bundle asociado, putExtras creará uno y copiará todos los valores.&lt;/p&gt;
 
-&lt;p&gt;La clase intent tiene declarados unas claves extras que acompañan a ciertas acciones, pueden verse en &lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&#34;&gt;developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&lt;/a&gt;. Por ejemplo EXTRA_SUBJECT nos permite almacenar el asunto de un email. El valor de esta clave es &lt;em&gt;android.intent.extra.SUBJECT&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;La clase intent tiene declarados unas claves extras que acompañan a ciertas acciones, pueden verse en &lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&#34; target=&#34;_blank&#34;&gt;developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&lt;/a&gt;. Por ejemplo EXTRA_SUBJECT nos permite almacenar el asunto de un email. El valor de esta clave es &lt;em&gt;android.intent.extra.SUBJECT&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;usar-componentes-para-invocar-directamente-una-activity&#34;&gt;Usar componentes para invocar directamente una activity&lt;/h3&gt;
 
@@ -201,7 +201,7 @@
 
 &lt;p&gt;Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.&lt;/p&gt;
 
-&lt;h4 id=&#34;siguiente-tema-intents-categorías-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h4 id=&#34;siguiente-tema-intents-categorías-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34; target=&#34;_blank&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
   </channel>

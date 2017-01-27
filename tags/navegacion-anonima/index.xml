@@ -18,9 +18,9 @@
 &lt;li&gt;Logrando el anonimato con Tor (Parte 1)
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -30,7 +30,7 @@
 
 &lt;h2 id=&#34;1-instalación&#34;&gt;1. Instalación&lt;/h2&gt;
 
-&lt;p&gt;Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;1&lt;/a&gt; cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:&lt;/p&gt;
+&lt;p&gt;Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt; cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;# &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;deb http://deb.torproject.org/torproject.org lucid main&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/apt/sources.list
  &lt;span class=&#34;c1&#34;&gt;# echo &amp;quot;deb-src http://deb.torproject.org/torproject.org lucid main&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -189,7 +189,7 @@ WarnUnsafeSocks 1
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Manual de Tor, &lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34;&gt;https://www.torproject.org/docs/tor-manual.html.en&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Manual de Tor, &lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34; target=&#34;_blank&#34;&gt;https://www.torproject.org/docs/tor-manual.html.en&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Infosec&lt;/em&gt; »» &lt;a href=&#34;http://resources.infosecinstitute.com/tor-part-1/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -203,8 +203,8 @@ WarnUnsafeSocks 1
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;1-usando-burp-con-tor&#34;&gt;1. Usando Burp con Tor&lt;/h2&gt;
@@ -288,7 +288,7 @@ AutomapHostsSuffixes .exit,.onion
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# dig @localhost -p 53 www.google.com&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Para asegurarnos que todas las peticiones DNS son realmente enviadas a través de nuestro servidor DNS local, es necesario además cambiar el archivo /etc/resolv.conf para apuntar al servidor DNS 127.0.0.1:53, por lo tanto todas las aplicaciones de la máquina usarán el sevidor DNS TorDNS para la resolución de hostnames. Si hacemos esto, notaremos un poco de retardo cuando consultemos un hostname que todavía no esté en caché, pero con las conecciones de internet actuales esto no debería ser un problema. Pero si de todos modos molesta, podemos configurar un servidor de nombres local para cacheo que podría almacenar los hostnames y sus correspondientes direcciones IP. En Linux hay un programa llamado dnsmasq, el cual es un servidor liviano de cacheo de DHCP y DNS, entre otros, el cual acepta consultas DNS y las responde directamente de la caché local o las redirecciona a un servidor DNS real. Una buena explicación de ello puede encontrase en &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para asegurarnos que todas las peticiones DNS son realmente enviadas a través de nuestro servidor DNS local, es necesario además cambiar el archivo /etc/resolv.conf para apuntar al servidor DNS 127.0.0.1:53, por lo tanto todas las aplicaciones de la máquina usarán el sevidor DNS TorDNS para la resolución de hostnames. Si hacemos esto, notaremos un poco de retardo cuando consultemos un hostname que todavía no esté en caché, pero con las conecciones de internet actuales esto no debería ser un problema. Pero si de todos modos molesta, podemos configurar un servidor de nombres local para cacheo que podría almacenar los hostnames y sus correspondientes direcciones IP. En Linux hay un programa llamado dnsmasq, el cual es un servidor liviano de cacheo de DHCP y DNS, entre otros, el cual acepta consultas DNS y las responde directamente de la caché local o las redirecciona a un servidor DNS real. Una buena explicación de ello puede encontrase en &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Es necesario además asegurar que etc/resolv.conf no cambió para la próxima vez que los programas dhclient o dhcpcd estén corriendo. Para inhabilitar los cambios de dhclient sobre resolv.conf con sus propios nameservers, es necesario borrar el domain-name, domain-name-servers ydomain-search del archivo de configuración /etc/dhcp3/dhclient.conf . Para inhabilitar los cambios de dhcpcd en resolv.conf, es necesario borrar domain_name, domain_name_servers y domain_server del archivo de configuración /etc/dhcpcd.conf. Si tenemos ambos programas instalados, cambiar ambos archivos adecuadamente probablmente sea lo mejor.&lt;/p&gt;
 

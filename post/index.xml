@@ -6,8 +6,84 @@
     <description>Recent content in Posts on El Baúl del programador</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 26 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://elbauldelprogramador.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TAILS LINUX y la importancia de la privacidad</title>
+      <link>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;em&gt;Paula de la Hoz (&lt;a href=&#34;https://twitter.com/Terceranexus6&#34; target=&#34;_blank&#34;&gt;@Terceranexus6&lt;/a&gt;&lt;/em&gt;. Su blog: &lt;a href=&#34;https://ohmybits.tumblr.com&#34; target=&#34;_blank&#34;&gt;Oh My Bits&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://medium.com/@HamletAgain&#34; target=&#34;_blank&#34;&gt;Hamlet Again&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;contexto-actual&#34;&gt;Contexto actual&lt;/h1&gt;
+
+&lt;p&gt;Con el incipiente avance tecnológico, en nuestra sociedad cada vez se valora más la privacidad del usuario. Todo lo que hacemos, quiénes somos, qué nos gusta, es información que nos puede parecer irrelevante según para qué contextos. Sin embargo para las empresas, gobiernos y asociaciones, esa información es muy valiosa y puede incluso llegar a &lt;em&gt;limitarnos&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;Decir que no te importa el derecho a la privacidad porque no tienes nada que esconder no se diferencia de decir que no te importa la libertad de expresión porque no tienes nada que decir.&lt;/em&gt;&amp;ldquo;
+&amp;mdash; &lt;strong&gt;Edward Snowden&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;El ex-empleado de la NSA &lt;strong&gt;&lt;em&gt;Edward Snowden&lt;/em&gt;&lt;/strong&gt;, conocido por su implicación en wikileaks con filtraciones de información clasificada, ha abogado por la defensa de la privacidad y los derechos en internet a través de las redes, incluso desde su asilo político en Rusia. Esta controvertida figura, para mantener &amp;ldquo;&lt;em&gt;a salvo&lt;/em&gt;&amp;rdquo; su privacidad utiliza, principalmente, un sistema operativo llamado &lt;strong&gt;TAILS LINUX&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-es-tails&#34;&gt;¿Qué es Tails?&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/tchou-improved.png&#34; alt=&#34;{{ .Title }}&#34; title=&#34;{{ .Title}}&#34; width=&#34;500&#34; height=&#34;257&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/index.en.html&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; es un sistema operativo &lt;em&gt;live&lt;/em&gt;, ¿ésto qué quiere decir? que podemos utilizarlo desde cualquier ordenador utilizando simplemente un pen drive. Es completamente gratuito, libre y está basado en Debian &lt;a href=&#34;https://elbauldelprogramador.com/categories/linux&#34; title=&#34;Artículos sobre Linux&#34; target=&#34;_blank&#34;&gt;GNU/Linux&lt;/a&gt;. Una de las características principales de TAILS, es que basa todas sus conexiones en &lt;strong&gt;TOR&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt; es un navegador que protege al usuario frente al análisis del tráfico de paquetes y la vigilancia masiva usando un sistema alternativo de nodos voluntarios y túneles virtuales, en lugar de hacer una conexión directa.&lt;/p&gt;
+
+&lt;p&gt;Además de &lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt;, TAILS permite utilizar I2P, y en la web oficial viene &lt;a href=&#34;https://tails.boum.org/doc/anonymous_internet/i2p/index.en.html&#34; target=&#34;_blank&#34;&gt;documentado&lt;/a&gt; cómo utilizarlo. El sistema operativo, que ocupa en su totalidad &lt;em&gt;4 gigas&lt;/em&gt;, viene con una serie de programas predeterminados relacionados con la privacidad, la ofimática y la mensajería. En un principio, el pen drive no guarda la información de una sesión a otra, pero &lt;a href=&#34;https://tails.boum.org/install/clone/index.en.html&#34; target=&#34;_blank&#34;&gt;podemos configurarlo&lt;/a&gt; para utilizar la memoria sobrante del pen drive.&lt;/p&gt;
+
+&lt;h1 id=&#34;instalación-y-uso&#34;&gt;Instalación y uso&lt;/h1&gt;
+
+&lt;p&gt;Configurar un pen drive para instalar TAILS es bastante sencillo, especialmente porque &lt;a href=&#34;https://tails.boum.org/install/os/index.en.html&#34; target=&#34;_blank&#34;&gt;viene indicado paso a paso&lt;/a&gt; en la página oficial. Además incluye especificaciones de instalación desde cualquier sistema operativo (Linux, Windows, MAC y otro TAILS). El proceso es básicamente bajarse la imagen desde TOR, preparar un pen drive de 4 o más gigas, e instalar la imagen en éste.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/pasted-from-clipboard.png&#34; alt=&#34;{{ .Title }}&#34; title=&#34;{{ .Title }}&#34; width=&#34;946&#34; height=&#34;316&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para usar este sistema operativo, simplemente insertamos el pen drive en uno de los puertos de un ordenador apagado y lo encendemos. El ordenador tardará varios segundos en terminar de cargar la imagen, pero cuando lo haga tendremos acceso a nuestro escritorio desde el cual podremos navegar con tranquilidad. Una vez que apagamos el ordenador y retiramos el pen drive, &lt;strong&gt;no queda rastro&lt;/strong&gt; de lo que hayamos hecho en el ordenador, ya que se sobrescribe la memoria.&lt;/p&gt;
+
+&lt;p&gt;Por muy seguro que pueda ser este sistema operativo y las herramientas que ofrece, en la propia página web indica que la mejor forma de protegerse es el &lt;em&gt;sentido común&lt;/em&gt; del usuario, tales como utilizar contraseñas fuertes y saber utilizar apropiadamente las herramientas que ofrece, comprendiendo las limitaciones.&lt;/p&gt;
+
+&lt;h1 id=&#34;programas-y-recursos&#34;&gt;Programas y recursos&lt;/h1&gt;
+
+&lt;p&gt;Algunas de las herramientas más interesantes con las que viene Tails son las siguientes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/code/luks/&#34; target=&#34;_blank&#34;&gt;LUKS&lt;/a&gt; (Linux Unified Key Setup), que te permite encriptar pen drives y discos externos.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.eff.org/https-everywhere&#34; target=&#34;_blank&#34;&gt;HTTPS Everywhere&lt;/a&gt; es una extensión desarrollada por la &lt;a href=&#34;eff.org&#34; target=&#34;_blank&#34;&gt;EFF&lt;/a&gt; para encriptar todas las conexiones usando https.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openpgp.org/&#34; target=&#34;_blank&#34;&gt;OpenPGP&lt;/a&gt; &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;para encriptar y firmar documentos y correos&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://otr.cypherpunks.ca/&#34; target=&#34;_blank&#34;&gt;OTR&lt;/a&gt;, para proteger mensajería instantánea.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wipetools.tuxfamily.org/nautilus-wipe.html&#34; target=&#34;_blank&#34;&gt;Nautilus Wipe&lt;/a&gt; para borrar archivos con seguridad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;confías-plenamente-en-tails-ellos-esperan-que-no&#34;&gt;¿Confías plenamente en TAILS? ellos esperan que no&lt;/h1&gt;
+
+&lt;p&gt;Una de los problemas fundamentales de la sociedad actual en términos de informática es el desinterés del usuario medio por su privacidad y seguridad. Y esta concienciación empieza precisamente con la duda. Sean cuales sean nuestros motivos para confiar en un sistema operativo, programa o aplicación, deben haber pasado un filtro de duda y escepticismo, y eso mismo &lt;a href=&#34;https://tails.boum.org/doc/about/trust/index.en.html&#34; target=&#34;_blank&#34;&gt;nos sugieren&lt;/a&gt; en la página de TAILS.&lt;/p&gt;
+
+&lt;p&gt;Las herramientas que ofrecen no sólo tienen un objetivo técnico si no que se esfuerzan en ofrecerte una nueva visión y un cambio en la forma en que sus usuarios usan la tecnología y su información. El uso de este sistema debe ir acompasando al interés por nuestra privacidad, y a la curiosidad por saber qué se hace con nuestra información.&lt;/p&gt;
+
+&lt;p&gt;Para ello ofrecen una serie de razones por las cuales puede decirse que abogan por estas cualidades. Basa su justificación en el uso de software libre bien documentado, TOR, y el hecho de utilizar Debian GNU/Linux, que aunque ha tenido bugs importantes como &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2008/msg00152.html&#34; target=&#34;_blank&#34;&gt;SSH PRNG&lt;/a&gt; no se han encontrado vulnerabilidades de seguridad hasta la fecha, lo que lo convierte en un buen candidato para este sistema.&lt;/p&gt;
+
+&lt;h1 id=&#34;rompiendo-barreras&#34;&gt;Rompiendo barreras&lt;/h1&gt;
+
+&lt;p&gt;Es de saber que las distintas distribuciones de linux tienen cierta fama entre los programadores e informáticos de todo el mundo. Debido a la amplia oferta de sistemas operativos disponibles, hay algunas más o menos amigables para un usuario medio. TAILS pretende ser accesible y manejable para cualquiera, tenga o no una base sólida en el uso de programación, linux y Bash. Para ello ofrece una interfaz gráfica intuitiva y una instalación simple.&lt;/p&gt;
+
+&lt;p&gt;El uso de este sistema puede tener muchas aplicaciones en nuestro día a día, y es completamente legal. No necesitamos ser Edward Snowden para &lt;strong&gt;necesitar o querer&lt;/strong&gt; privacidad, por ejemplo, a la hora de consultar nuestro correo en un ordenador público. La idea de este sistema es liberarnos de la obligación de &amp;ldquo;&lt;em&gt;confiar&lt;/em&gt;&amp;rdquo; en un ordenador público, o de algún amigo.&lt;/p&gt;
+
+&lt;p&gt;Esta idea puede que nos resulte difícil de agregar a nuestra rutina, pero sin duda se debería hacerse una pequeña reflexión sobre ello. El ritmo de nuestra sociedad ha cambiado con rapidez en pocos años, y dependemos en nuestra vida privada y trabajo (con frecuencia) de programas y aplicaciones que manejan gran cantidad de información privada. Esta rapidez ha hecho que el usuario medio se acostumbre a la comodidad de estas herramientas, pero se olvide con frecuencia de proteger sus datos a la hora de utilizarla, muchas veces por la gran cantidad de trabas y dificultades para ello.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Cómo parsear el frontmatter con Python</title>
@@ -17,7 +93,7 @@
       <guid>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</guid>
       <description>&lt;p&gt;Hace poco he migrado el blog de &lt;em&gt;Jekyll&lt;/em&gt; a &lt;em&gt;Hugo&lt;/em&gt;. El proceso ha sido fácil, pero he tenido que cambiar varias cosas en el &lt;em&gt;frontmatter&lt;/em&gt; de los artículos.&lt;/p&gt;
 
-&lt;p&gt;Tras buscar en Google encontré un &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34;&gt;parseador&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34;&gt;python&lt;/a&gt; para &lt;em&gt;frontmatter&lt;/em&gt; escritos en &lt;em&gt;YAML&lt;/em&gt;. A continuación se explica cómo instalarlo y usarlo.&lt;/p&gt;
+&lt;p&gt;Tras buscar en Google encontré un &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34; target=&#34;_blank&#34;&gt;parseador&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34; target=&#34;_blank&#34;&gt;python&lt;/a&gt; para &lt;em&gt;frontmatter&lt;/em&gt; escritos en &lt;em&gt;YAML&lt;/em&gt;. A continuación se explica cómo instalarlo y usarlo.&lt;/p&gt;
 
 &lt;h1 id=&#34;instalar-python-frontmatter&#34;&gt;Instalar Python-Frontmatter&lt;/h1&gt;
 
@@ -107,7 +183,7 @@
 &lt;h1 id=&#34;prerequisitos&#34;&gt;Prerequisitos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Java JDK 7+: necesitamos un JDK para construir el Java &lt;em&gt;binding&lt;/em&gt;, así que si no lo tienes instalado puedes hacerlo desde &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34; title=&#34;www.oracle.com&#34;&gt;oracle web page&lt;/a&gt;. Puedes comprobar tu versión de JDK ejecutando: &lt;code&gt;java -version&lt;/code&gt;  en un terminal.&lt;/li&gt;
+&lt;li&gt;Java JDK 7+: necesitamos un JDK para construir el Java &lt;em&gt;binding&lt;/em&gt;, así que si no lo tienes instalado puedes hacerlo desde &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34; title=&#34;www.oracle.com&#34; target=&#34;_blank&#34;&gt;oracle web page&lt;/a&gt;. Puedes comprobar tu versión de JDK ejecutando: &lt;code&gt;java -version&lt;/code&gt;  en un terminal.&lt;/li&gt;
 &lt;li&gt;Apache Ant: teclea &lt;code&gt;ant -version&lt;/code&gt; para comprobar que tienes Apache Ant instalado. Si no lo tienes, instálalo tecleando &lt;code&gt;sudo apt-get install ant&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Python 2.6+: teclea &lt;code&gt;python --version&lt;/code&gt; en la terminal para comprobar si tienes python instalado y en que versión.&lt;/li&gt;
 &lt;/ul&gt;
@@ -116,7 +192,7 @@
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2&#34;&gt;1. Descarga OpenCV 3.2&lt;/h1&gt;
 
-&lt;p&gt;Ve a &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34;&gt;opencv documentation&lt;/a&gt; y descarga la última versión estable para Linux/Mac.&lt;/p&gt;
+&lt;p&gt;Ve a &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34; target=&#34;_blank&#34;&gt;opencv documentation&lt;/a&gt; y descarga la última versión estable para Linux/Mac.&lt;/p&gt;
 
 &lt;h1 id=&#34;2-descomprime-donde-quieras-instalar-y-crea-un-directorio-en-el-que-construir&#34;&gt;2. Descomprime donde quieras instalar y crea un directorio en el que construir&lt;/h1&gt;
 
@@ -176,7 +252,7 @@
 &lt;figcaption&gt;añadiendo .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Finalmente, tomamos el ejemplo de detección de caras de &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34;&gt;opencv documentation&lt;/a&gt; , lo corregimos (dado que es para la versión 2.4.4 de OpenCV) y lo guardamos en un fichero llamado &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; dentro de la carpeta &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt;.  El código de ejemplo adaptado a la versión 3.2 de OpenCV es:&lt;/p&gt;
+&lt;p&gt;Finalmente, tomamos el ejemplo de detección de caras de &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34; target=&#34;_blank&#34;&gt;opencv documentation&lt;/a&gt; , lo corregimos (dado que es para la versión 2.4.4 de OpenCV) y lo guardamos en un fichero llamado &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; dentro de la carpeta &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt;.  El código de ejemplo adaptado a la versión 3.2 de OpenCV es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.Mat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.MatOfRect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -287,7 +363,7 @@
   &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_make313&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;</description>
     </item>
@@ -321,7 +397,7 @@
   &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_eope20&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;</description>
     </item>
@@ -332,7 +408,7 @@
       <pubDate>Sat, 12 Nov 2016 08:12:16 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
-      <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
+      <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
 
 &lt;h2 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h2&gt;
 
@@ -369,8 +445,8 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;h2 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34; target=&#34;_blank&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34; target=&#34;_blank&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -398,7 +474,7 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;p&gt;y todo esto en unas tres semanas aproximadamente.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34; target=&#34;_blank&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;dormida-en-los-laureles&#34;&gt;Dormida en los laureles&lt;/h3&gt;
@@ -407,7 +483,7 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 
 &lt;p&gt;Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo &lt;em&gt;plantilla&lt;/em&gt; con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en &lt;em&gt;Calc&lt;/em&gt; tienes que introducir los decimales con una coma y &lt;em&gt;Python&lt;/em&gt; los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más.&lt;/p&gt;
 
-&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
+&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
 
 &lt;h3 id=&#34;último-día-kernel-panic&#34;&gt;Último día. Kernel panic.&lt;/h3&gt;
 
@@ -433,7 +509,7 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 
 &lt;p&gt;Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que &lt;strong&gt;gasté&lt;/strong&gt; metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script.&lt;/p&gt;
 
-&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
+&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
 
 &lt;p&gt;Tuve la suerte de haber hecho mi práctica en &lt;em&gt;python&lt;/em&gt;, por lo que añadirle el script que voy a describir a continuación fue pan comido.&lt;/p&gt;
 
@@ -487,9 +563,9 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 
 &lt;h2 id=&#34;y-los-gráficos-qué&#34;&gt;Y los gráficos, ¿qué?&lt;/h2&gt;
 
-&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34; target=&#34;_blank&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
@@ -803,19 +879,19 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
-&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34; target=&#34;_blank&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;más-sobre-r-y-python&#34;&gt;Más sobre R y Python&lt;/h2&gt;
 
 &lt;p&gt;Puedes consultar los siguientes atrículos sobre R y python:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34; target=&#34;_blank&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34; target=&#34;_blank&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34; target=&#34;_blank&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34; target=&#34;_blank&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34; target=&#34;_blank&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -826,7 +902,7 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
       <pubDate>Sat, 22 Oct 2016 06:03:57 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/descargar-curso-android-gratuito/</guid>
-      <description>&lt;p&gt;He decidido liberar el &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso de Programación en Android&#34;&gt;curso de programación Android&lt;/a&gt;, ya que está algo antiguo, podéis descargarlo en: &lt;a href=&#34;http://elbauldelprogramador.com/pdfs/PaqueteProgramacionAndroid.zip&#34; id=&#34;androidCourse&#34;&gt;Curso de Programación Android Gratuíto&lt;/a&gt;. De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro &lt;a href=&#34;https://www.paypal.me/elbaul&#34;&gt;enlace de Paypal&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;He decidido liberar el &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso de Programación en Android&#34; target=&#34;_blank&#34;&gt;curso de programación Android&lt;/a&gt;, ya que está algo antiguo, podéis descargarlo en: &lt;a href=&#34;http://elbauldelprogramador.com/pdfs/PaqueteProgramacionAndroid.zip&#34; id=&#34;androidCourse&#34;&gt;Curso de Programación Android Gratuíto&lt;/a&gt;. De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro &lt;a href=&#34;https://www.paypal.me/elbaul&#34; target=&#34;_blank&#34;&gt;enlace de Paypal&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Espero que os resulte útil.&lt;/p&gt;
 
@@ -861,7 +937,7 @@ Copyright&lt;/p&gt;
   &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_make298&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;</description>
     </item>
@@ -912,8 +988,8 @@ NombreDeseado
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34; target=&#34;_blank&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34; target=&#34;_blank&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -925,7 +1001,7 @@ NombreDeseado
       <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
       <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
 
-&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -937,7 +1013,7 @@ NombreDeseado
 &lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
+&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; target=&#34;_blank&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
 https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
 //elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
@@ -966,7 +1042,7 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;750&#34; height=&#34;750&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hace unos meses publicamos &lt;a href=&#34;https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/&#34; title=&#34;15 Ejemplos De Las Mejores Visualizaciones De Datos&#34;&gt;15 Ejemplos De Las Mejores Visualizaciones De Datos&lt;/a&gt;, hoy os traemos otra visualización muy interesante de &lt;a href=&#34;http://www.visualcinnamon.com&#34; title=&#34;Sitio web de Nadieh Bremer&#34;&gt;&lt;em&gt;Nadieh Bremer&lt;/em&gt;&lt;/a&gt;, en la cual muestra &lt;strong&gt;todas las medallas de oro en los Juegos Olímpicos desde 1896&lt;/strong&gt;, en forma de plumas.&lt;/p&gt;
+&lt;p&gt;Hace unos meses publicamos &lt;a href=&#34;https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/&#34; title=&#34;15 Ejemplos De Las Mejores Visualizaciones De Datos&#34; target=&#34;_blank&#34;&gt;15 Ejemplos De Las Mejores Visualizaciones De Datos&lt;/a&gt;, hoy os traemos otra visualización muy interesante de &lt;a href=&#34;http://www.visualcinnamon.com&#34; title=&#34;Sitio web de Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Nadieh Bremer&lt;/em&gt;&lt;/a&gt;, en la cual muestra &lt;strong&gt;todas las medallas de oro en los Juegos Olímpicos desde 1896&lt;/strong&gt;, en forma de plumas.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Olympic Feathers&lt;/strong&gt;, es una &lt;em&gt;visualización de datos&lt;/em&gt; interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.&lt;/p&gt;
 
@@ -978,7 +1054,7 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 
 &lt;h2 id=&#34;qué-herramientas-usó&#34;&gt;Qué herramientas usó&lt;/h2&gt;
 
-&lt;p&gt;Para desarrollar el proyecto usó &lt;strong&gt;Excel&lt;/strong&gt;, &lt;strong&gt;R&lt;/strong&gt; (Puedes consultar &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;artículos sobre R en este enlace&lt;/a&gt;) , &lt;strong&gt;Sketch&lt;/strong&gt; y &lt;strong&gt;D3.js&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Para desarrollar el proyecto usó &lt;strong&gt;Excel&lt;/strong&gt;, &lt;strong&gt;R&lt;/strong&gt; (Puedes consultar &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34; target=&#34;_blank&#34;&gt;artículos sobre R en este enlace&lt;/a&gt;) , &lt;strong&gt;Sketch&lt;/strong&gt; y &lt;strong&gt;D3.js&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;la-historia-de-las-olimpiadas&#34;&gt;La historia de las Olimpiadas&lt;/h2&gt;
 
@@ -1011,10 +1087,10 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;h2 id=&#34;detalles-técnicos-y-referencias&#34;&gt;Detalles técnicos y referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio &lt;a href=&#34;https://github.com/nbremer/olympicfeathers/tree/gh-pages/data&#34; title=&#34;Olympic Feathers en GitHub&#34;&gt;Olympic Feathers en GitHub&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;La página del &lt;a href=&#34;https://nbremer.github.io/olympicfeathers/&#34; title=&#34;proyecto Olympic Feathers&#34;&gt;proyecto Olympic Feathers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio &lt;a href=&#34;https://github.com/nbremer/olympicfeathers/tree/gh-pages/data&#34; title=&#34;Olympic Feathers en GitHub&#34; target=&#34;_blank&#34;&gt;Olympic Feathers en GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;La página del &lt;a href=&#34;https://nbremer.github.io/olympicfeathers/&#34; title=&#34;proyecto Olympic Feathers&#34; target=&#34;_blank&#34;&gt;proyecto Olympic Feathers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1044,7 +1120,7 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 
 &lt;h2 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h2&gt;
 
-&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
+&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34; target=&#34;_blank&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
   canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
   hgrid style/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
@@ -1175,45 +1251,9 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.dedoimedo.com/computers/linux-world-map-reloaded.html&#34;&gt;The Great Linux World Map 2.0!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/&#34; title=&#34;Just Linux Things in Reddit&#34;&gt;Linux World Map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dedoimedo.com/computers/linux-world-map-reloaded.html&#34; target=&#34;_blank&#34;&gt;The Great Linux World Map 2.0!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/&#34; title=&#34;Just Linux Things in Reddit&#34; target=&#34;_blank&#34;&gt;Linux World Map&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Libro Gratuito: Apache Maven Cookbook</title>
-      <link>https://elbauldelprogramador.com/apache-maven-cookbook/</link>
-      <pubDate>Wed, 07 Sep 2016 13:10:02 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/apache-maven-cookbook/</guid>
-      <description>&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/guides/Apache-Maven-Cookbook-centered.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;420&#34;&gt;
-   &lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Delve into the world of Apache Maven with this compact cookbook that introduces common recipes for the Maven tool!&lt;/strong&gt;&lt;/p&gt;
-
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Si quieres apoyar el trabajo que realizamos en &lt;em&gt;El Baúl del Programador&lt;/em&gt;, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga &lt;strong&gt; debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión&lt;/strong&gt; ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en &lt;a id=&#34;revresponse&#34; href=&#34;http://www.revresponse.com/join.php?refbrand=bashyc-blogspot&#34; target=&#34;_blank&#34; title=&#34;RevResponse&#34;&gt;RevResponse&lt;/a&gt; y empezar a ofrecer guías de interés a tus lectores. Visita el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; target=&#34;_blank&#34; title=&#34;Catálogo completo de Guías gratuítas&#34;&gt;catálogo completo de guías.&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-
-&lt;p&gt;Maven is a build automation tool used primarily for Java projects. Maven addresses two aspects of building software: first, it describes how software is built, and second, it describes its dependencies. Contrary to preceding tools like Apache Ant, it uses conventions for the build procedure, and only exceptions need to be written down.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;In this ebook, we provide a compilation of Maven examples that will help you kick-start your own projects. We cover a wide range of topics, from project structure and configuration, to dependency management and plug-ins. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.&lt;/p&gt;
-
-&lt;p&gt;With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.&lt;/p&gt;
-
-&lt;div class=&#34;button-post&#34;&gt;
-  &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java30&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

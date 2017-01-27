@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/15-demostraciones-del-potencial-de/</guid>
-      <description>&lt;p&gt;En tech Drive-In he visto esta entrada que enlaza con 15 demos en HTML5 que pretenden hacernos ver la potencia que tiene esta nueva versión que se está preparando de HTML, entre las que se pueden destacar consultas &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;SQL&lt;/a&gt; y almacenamineto en la web, creación y desrucción de objetos etc, de las 15 la que más interesante me parece es la que explica en varios pasos las caractarísticas.&lt;/p&gt;
+      <description>&lt;p&gt;En tech Drive-In he visto esta entrada que enlaza con 15 demos en HTML5 que pretenden hacernos ver la potencia que tiene esta nueva versión que se está preparando de HTML, entre las que se pueden destacar consultas &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;SQL&lt;/a&gt; y almacenamineto en la web, creación y desrucción de objetos etc, de las 15 la que más interesante me parece es la que explica en varios pasos las caractarísticas.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -472,7 +472,7 @@ iptables -j DROP -h
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
+&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34; target=&#34;_blank&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
@@ -496,7 +496,7 @@ iptables -X
 
 &lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
 
-&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
+&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34; target=&#34;_blank&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34; target=&#34;_blank&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
 iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
 iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
@@ -583,11 +583,11 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/BiTTorrentSYnc-300x260.png&#34; alt=&#34;BiTTorrentSYnc&#34; width=&#34;300px&#34; height=&#34;260px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Escuchando el programa de radio &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now//&#34;&gt;security now!&lt;/a&gt;&lt;/strong&gt; he descubierto una herramienta increíble. Se trata de &lt;strong&gt;BitTorrrent Sync&lt;/strong&gt; y permite tener archivos sincronizados en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube, como es el caso de dropbox por ejemplo. En este artículo voy a explicar cómo usarlo.&lt;/p&gt;
+&lt;p&gt;Escuchando el programa de radio &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now//&#34; target=&#34;_blank&#34;&gt;security now!&lt;/a&gt;&lt;/strong&gt; he descubierto una herramienta increíble. Se trata de &lt;strong&gt;BitTorrrent Sync&lt;/strong&gt; y permite tener archivos sincronizados en todos los dispositivos que desees, sin necesidad de almacenarlos en la nube, como es el caso de dropbox por ejemplo. En este artículo voy a explicar cómo usarlo.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;BitTorrent Sync sincroniza los archivos usando el protocolo P2P. Cuando se configuran dos dispositivos para que estén sincronizados se conectan directamente entre ellos usando UDP, NAT y &lt;a href=&#34;https://elbauldelprogramador.com/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/&#34;&gt;UPnP&lt;/a&gt;, con lo cual no se depende de ningún tercero que tenga que almacenar los ficheros en la nube. Si ambos dispositivos se encuentran bajo la misma red local, BitTorrent Sync usará dicha red para realizar la sincronización más rápido.&lt;/p&gt;
+&lt;p&gt;BitTorrent Sync sincroniza los archivos usando el protocolo P2P. Cuando se configuran dos dispositivos para que estén sincronizados se conectan directamente entre ellos usando UDP, NAT y &lt;a href=&#34;https://elbauldelprogramador.com/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/&#34; target=&#34;_blank&#34;&gt;UPnP&lt;/a&gt;, con lo cual no se depende de ningún tercero que tenga que almacenar los ficheros en la nube. Si ambos dispositivos se encuentran bajo la misma red local, BitTorrent Sync usará dicha red para realizar la sincronización más rápido.&lt;/p&gt;
 
 &lt;h2 id=&#34;instalar-bittorrent-sync-y-guía-de-uso&#34;&gt;Instalar BitTorrent Sync y guía de uso&lt;/h2&gt;
 
@@ -604,7 +604,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;BitTorrent Sync&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/sync1.png&#34; width=&#34;593px&#34; height=&#34;393px&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;En Windows y mac, en linux hay que dirigirse a &lt;a href=&#34;http://localhost:8888/gui&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://localhost:8888/gui&#34;&gt;http://localhost:8888/gui&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En Windows y mac, en linux hay que dirigirse a &lt;a href=&#34;http://localhost:8888/gui&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://localhost:8888/gui&#34; target=&#34;_blank&#34;&gt;http://localhost:8888/gui&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;El siguiente paso es elegir una carpeta que queramos sincronizar y &lt;em&gt;generar un secreto&lt;/em&gt; para dicha carpeta. El secreto es aleatório y único, es la llave que conecta varios dispositivos a una red sincronizada.&lt;/p&gt;
 
@@ -647,7 +647,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
 
-&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:&lt;/p&gt;
 
@@ -670,7 +670,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;p&gt;Donde &lt;strong&gt;xx.xx.xx.xx&lt;/strong&gt; debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.&lt;/p&gt;
 
-&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; target=&#34;_blank&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34; target=&#34;_blank&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
@@ -708,7 +708,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;h3 id=&#34;qué-es-google-apps-script&#34;&gt;Qué es Google Apps Script&lt;/h3&gt;
 
-&lt;p&gt;Es un lenguaje de programación JavaScript en la nube que nos permite extender la funcionalidad de las aplicacoines de Google, así como crear las nuestras propias. Se desarrolla en un &lt;a href=&#34;https://elbauldelprogramador.com/futuro-ides-de-escritorio/&#34; title=&#34;5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos&#34;&gt;editor desde el navegador web&lt;/a&gt; y el código se guarda y ejecuta en los servidores de Google.&lt;/p&gt;
+&lt;p&gt;Es un lenguaje de programación JavaScript en la nube que nos permite extender la funcionalidad de las aplicacoines de Google, así como crear las nuestras propias. Se desarrolla en un &lt;a href=&#34;https://elbauldelprogramador.com/futuro-ides-de-escritorio/&#34; title=&#34;5 Razones por las cuales en 5 años los IDEs de escritorio estarán muertos&#34; target=&#34;_blank&#34;&gt;editor desde el navegador web&lt;/a&gt; y el código se guarda y ejecuta en los servidores de Google.&lt;/p&gt;
 
 &lt;p&gt;Varios ejemplos de uso son:&lt;/p&gt;
 
@@ -721,7 +721,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 &lt;li&gt;Programar tareas como la creación y distribución de informes.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Todo lo necesario para comenzar a escribir código es una cuenta de google, un navegador y dirigirse a &lt;a href=&#34;http://script.google.com&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://script.google.com&#34;&gt;http://script.google.com&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Todo lo necesario para comenzar a escribir código es una cuenta de google, un navegador y dirigirse a &lt;a href=&#34;http://script.google.com&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://script.google.com&#34; target=&#34;_blank&#34;&gt;http://script.google.com&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;un-ejemplo-práctico-informe-estadístico-mensual-de-gmail&#34;&gt;Un ejemplo práctico. Informe estadístico mensual de GMail&lt;/h3&gt;
 
@@ -1107,11 +1107,11 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 &lt;a href=&#34;https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s1600/LungoJS.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://3.bp.blogspot.com/-cuXOejn-kh4/T2EYYhip8kI/AAAAAAAACOs/aG-7nZAaqVg/s400/LungoJS.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;El día 14 del marzo asistí a una charla que daba &lt;a href=&#34;https://twitter.com/#!/hhkaos&#34;&gt;Raul Jiménez&lt;/a&gt; en mi facultad sobre tecnologias móviles. En concreto se habló de &lt;strong&gt;lungojs&lt;/strong&gt; y &lt;strong&gt;phonegap&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;El día 14 del marzo asistí a una charla que daba &lt;a href=&#34;https://twitter.com/#!/hhkaos&#34; target=&#34;_blank&#34;&gt;Raul Jiménez&lt;/a&gt; en mi facultad sobre tecnologias móviles. En concreto se habló de &lt;strong&gt;lungojs&lt;/strong&gt; y &lt;strong&gt;phonegap&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;En esta entrada os dejo una serie de &lt;strong&gt;3 screencast&lt;/strong&gt; realizados por @soyJavi, el creador de lungoJs, en ellos se va explicando como funciona este framework, que por lo poco que ví tiene bastante potencial. Ahora mismo lungoJs está pendiente en mi lista de cosas que aprender (La cual va creciendo y creciendo cada vez más). Lo que vaya aprendiendo lo iré publicando. Lungo está muy bien documentado en su &lt;a target=&#34;_blank&#34; href=&#34;http://www.lungojs.com/&#34;&gt;web&lt;/a&gt;, donde encontraréis una sección que explica &lt;a target=&#34;_blank&#34; href=&#34;http://www.lungojs.com/how-to-use/&#34;&gt;cómo usar lungo&lt;/a&gt; y la &lt;a target=&#34;_blank&#34; href=&#34;http://www.lungojs.com/api/&#34;&gt;documentación de la API&lt;/a&gt;. El único inconveniente es que está en inglés, pero con los vídeos vais a aprender lo suficiente.&lt;/p&gt;
 
-&lt;p&gt;También quiero aprovechar para hablaros de &lt;a target=&#34;_blank&#34; href=&#34;http://www.pidecurso.es/&#34;&gt;pidecurso&lt;/a&gt;, plataforma administrada también por &lt;a href=&#34;https://twitter.com/#!/hhkaos&#34;&gt;Raul Jimenez&lt;/a&gt;. Gracias a esta web me enteré de la charla de lungoJs.&lt;/p&gt;
+&lt;p&gt;También quiero aprovechar para hablaros de &lt;a target=&#34;_blank&#34; href=&#34;http://www.pidecurso.es/&#34;&gt;pidecurso&lt;/a&gt;, plataforma administrada también por &lt;a href=&#34;https://twitter.com/#!/hhkaos&#34; target=&#34;_blank&#34;&gt;Raul Jimenez&lt;/a&gt;. Gracias a esta web me enteré de la charla de lungoJs.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;PideCurso&lt;/strong&gt; se dedica a impartir cursos una vez que se alcanza un número razonable de alumnos. Lo único que debéis hacer es seleccionar vuestra ciudad y veréis que curos hay disponibles. Si no hay ninguno que os interese, podéis buscar por la temática que os interese y solicitarlo, una vez se reunan los suficientes alumnos el curso se impartirá.&lt;/p&gt;
 
@@ -1148,7 +1148,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;p&gt;Configura tu Sentinella con las mismas opciones de la imagen, pero asegurate que eliges tu interfaz de red correcta. Pulsa Start y listo!.&lt;/p&gt;
 
-&lt;p&gt;Fuente: &lt;a href=&#34;http://www.howtoforge.com/how-to-automatically-shut-down-your-computer-after-a-download-finishes&#34;&gt;howtoforge&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Fuente: &lt;a href=&#34;http://www.howtoforge.com/how-to-automatically-shut-down-your-computer-after-a-download-finishes&#34; target=&#34;_blank&#34;&gt;howtoforge&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1163,8 +1163,8 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;ul&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -1193,7 +1193,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 
 &lt;h3 id=&#34;cual-es-tu-responsabilidad-como-parte-del-sistema-dns&#34;&gt;¿Cual es tu responsabilidad como parte del sistema DNS?&lt;/h3&gt;
 
-&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
+&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
 
 &lt;p&gt;La base de datos del sistema DNS tiene tres niveles. Al primer grupo de servidores se les llama “&lt;strong&gt;servidores root&lt;/strong&gt;”. Al segundo, “&lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt;” o dominios de primer nivel. Cuando se necesita conocer la dirección de una web, el segundo componente de &lt;strong&gt;BIND&lt;/strong&gt; (resolver library) realiza una petición, (De aquí en adelante lo llamaremos &lt;em&gt;resolver&lt;/em&gt;).&lt;/p&gt;
 
@@ -1299,9 +1299,9 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:&lt;/p&gt;
@@ -1411,8 +1411,8 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1564,7 +1564,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
 
 &lt;h3 id=&#34;cambiar-las-dns-del-dominio-para-que-apunte-a-nuestro-hosting-con-wordpress&#34;&gt;Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress&lt;/h3&gt;
 
-&lt;p&gt;En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son &lt;em&gt;&lt;strong&gt;ns100.ovh.net&lt;/strong&gt;&lt;/em&gt; y &lt;strong&gt;&lt;em&gt;dns100.ovh.net. &lt;/em&gt;&lt;/strong&gt;Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace &lt;a href=&#34;https://www.google.com/nombredetudominio&#34;&gt;https://www.google.com/nombredetudominio&lt;/a&gt;. Una vez dentro del panel de control nos dirigimos a &lt;em&gt;Domain settings&lt;/em&gt;&lt;em&gt;→Domain Names&lt;/em&gt;&lt;em&gt;→Avanced DNS settings. &lt;/em&gt;Nos logeamos en la consola y editamos la sección &lt;em&gt;DNS Information &lt;/em&gt;para que quede parecido a esto:&lt;/p&gt;
+&lt;p&gt;En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son &lt;em&gt;&lt;strong&gt;ns100.ovh.net&lt;/strong&gt;&lt;/em&gt; y &lt;strong&gt;&lt;em&gt;dns100.ovh.net. &lt;/em&gt;&lt;/strong&gt;Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace &lt;a href=&#34;https://www.google.com/nombredetudominio&#34; target=&#34;_blank&#34;&gt;https://www.google.com/nombredetudominio&lt;/a&gt;. Una vez dentro del panel de control nos dirigimos a &lt;em&gt;Domain settings&lt;/em&gt;&lt;em&gt;→Domain Names&lt;/em&gt;&lt;em&gt;→Avanced DNS settings. &lt;/em&gt;Nos logeamos en la consola y editamos la sección &lt;em&gt;DNS Information &lt;/em&gt;para que quede parecido a esto:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;DNS settings blogger to wordpress&#34; src=&#34;https://elbauldelprogramador.com/img/2012/04/Screenshot-04042012-055625-PM1.png&#34; alt=&#34;&#34; width=&#34;613px&#34; height=&#34;98px&#34;&gt;&lt;/amp-img&gt;
@@ -1587,7 +1587,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
 
 &lt;h3 id=&#34;feedburner&#34;&gt;FeedBurner&lt;/h3&gt;
 
-&lt;p&gt;No podemos olvidarnos de nuestros suscriptores de RSS y correo. El primer paso es dirigirnos a la configuración de feedburner y en la url del feed sustituir la de blogger por &lt;em&gt;elbauldelprogramador.org/&lt;/em&gt; feed en mi caso. Hecho esto, instalamos &lt;a href=&#34;http://flagrantdisregard.com/feedburner/&#34; target=&#34;_blank&#34;&gt;FD FeedBurner&lt;/a&gt; y en la configuración del plugin escribimos la dirección de feedburner &lt;em&gt;&lt;a href=&#34;http://feeds.feedburner.com/elBauldelProgramador&#34;&gt;http://feeds.feedburner.com/elBauldelProgramador&lt;/a&gt;.&lt;/em&gt; A partir de ahora el RSS de nuestro feed wordpress redireccionará a feedburner y mantendremos a todos nuestros suscriptores.&lt;/p&gt;
+&lt;p&gt;No podemos olvidarnos de nuestros suscriptores de RSS y correo. El primer paso es dirigirnos a la configuración de feedburner y en la url del feed sustituir la de blogger por &lt;em&gt;elbauldelprogramador.org/&lt;/em&gt; feed en mi caso. Hecho esto, instalamos &lt;a href=&#34;http://flagrantdisregard.com/feedburner/&#34; target=&#34;_blank&#34;&gt;FD FeedBurner&lt;/a&gt; y en la configuración del plugin escribimos la dirección de feedburner &lt;em&gt;&lt;a href=&#34;http://feeds.feedburner.com/elBauldelProgramador&#34; target=&#34;_blank&#34;&gt;http://feeds.feedburner.com/elBauldelProgramador&lt;/a&gt;.&lt;/em&gt; A partir de ahora el RSS de nuestro feed wordpress redireccionará a feedburner y mantendremos a todos nuestros suscriptores.&lt;/p&gt;
 
 &lt;h2 id=&#34;seguridad&#34;&gt;Seguridad&lt;/h2&gt;
 
@@ -1595,7 +1595,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
 
 &lt;h3 id=&#34;askapache-password-protect&#34;&gt;AskApache Password Protect&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wordpress.org/extend/plugins/askapache-password-protect/&#34;&gt;AskApache Password Protect&lt;/a&gt; realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un &lt;em&gt;.htaccess&lt;/em&gt;. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un &lt;em&gt;.htaccess&lt;/em&gt; en la raiz de la instalación de WordPress y otro dentro de &lt;em&gt;wp-admin&lt;/em&gt;. Simplemente buscamos la regla, y la eliminamos.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wordpress.org/extend/plugins/askapache-password-protect/&#34; target=&#34;_blank&#34;&gt;AskApache Password Protect&lt;/a&gt; realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un &lt;em&gt;.htaccess&lt;/em&gt;. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un &lt;em&gt;.htaccess&lt;/em&gt; en la raiz de la instalación de WordPress y otro dentro de &lt;em&gt;wp-admin&lt;/em&gt;. Simplemente buscamos la regla, y la eliminamos.&lt;/p&gt;
 
 &lt;h3 id=&#34;login-lock-down&#34;&gt;Login Lock-Down&lt;/h3&gt;
 
@@ -2041,7 +2041,7 @@ RewriteRule . /index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span c
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-saber-si-tus-visitantes-usan-ad-block/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/07/adblock-plus-logo11.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;adblock-plus-logo&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/adblock-plus-logo11.png&#34; alt=&#34;&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/a&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/07/adblock-plus-logo11.png&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;adblock-plus-logo&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/adblock-plus-logo11.png&#34; alt=&#34;&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/a&gt;
 Hace unos días, visitando la web &lt;a href=&#34;http://www.makeuseof.com/&#34; target=&#34;_blank&#34;&gt;makeuseof&lt;/a&gt; me apareció un mensaje en la parte superior de la página en la que indicaba que se había detectado que estaba usando el plugin Ad-Block (Que bloquea la publicidad de las web, para quien no lo sepa). Y de una manera muy educada sugerían que se desabilitara para apoyar la web y así poder seguir ofreciendo contenido libre de costo.&lt;/p&gt;
 
 &lt;p&gt;Últimamente existe una obsesión muy grande por la privacidad en internet, cosa que apoyo, aunque creo que no hay que ser extremista.&lt;/p&gt;

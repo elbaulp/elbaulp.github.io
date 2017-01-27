@@ -38,11 +38,11 @@
 &lt;li&gt;Con cada cursor implícito debe existir la palabra clave &lt;strong&gt;&lt;code&gt;INTO&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Las variables que reciben los datos devueltos por el cursor tienen que contener el mismo tipo de dato que las columnas de la tabla.&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Los cursores implícitos solo pueden devolver una única fila. En caso de que se devuelva más de una fila (o ninguna fila) se producirá una &lt;a href=&#34;https://elbauldelprogramador.com/plsql-excepciones/&#34;&gt;excepción&lt;/a&gt;. Las más comunes son:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Los cursores implícitos solo pueden devolver una única fila. En caso de que se devuelva más de una fila (o ninguna fila) se producirá una &lt;a href=&#34;https://elbauldelprogramador.com/plsql-excepciones/&#34; target=&#34;_blank&#34;&gt;excepción&lt;/a&gt;. Las más comunes son:&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;NO_DATA_FOUND&lt;/code&gt;&lt;/strong&gt;: Se produce cuando una sentencia &lt;code&gt;SELECT&lt;/code&gt; intenta recuperar datos pero ninguna fila satisface sus condiciones. Es decir, cuando &lt;em&gt;“no hay datos”&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;TOO_MANY_ROWS&lt;/code&gt;&lt;/strong&gt; Dado que cada cursor implícito sólo es capaz de recuperar una fila, esta &lt;a href=&#34;https://elbauldelprogramador.com/plsql-excepciones/&#34;&gt;excepción&lt;/a&gt; detecta la existencia de más de una fila.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;TOO_MANY_ROWS&lt;/code&gt;&lt;/strong&gt; Dado que cada cursor implícito sólo es capaz de recuperar una fila, esta &lt;a href=&#34;https://elbauldelprogramador.com/plsql-excepciones/&#34; target=&#34;_blank&#34;&gt;excepción&lt;/a&gt; detecta la existencia de más de una fila.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SERVEROUTPUT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;declare&lt;/span&gt;
@@ -98,7 +98,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;74&#34; width=&#34;584&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Al recuperar un registro, la información recuperada se guarda en una o varias variables. Si sólo se hace referencia a una variable, ésta se puede declarar con &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;&lt;code&gt;%ROWTYPE&lt;/code&gt;&lt;/a&gt;. Si se utiliza una lista de variables, cada variable debe coincidir en tipo y orden con cada una de las columnas de la sentencia &lt;code&gt;SELECT&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Al recuperar un registro, la información recuperada se guarda en una o varias variables. Si sólo se hace referencia a una variable, ésta se puede declarar con &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;%ROWTYPE&lt;/code&gt;&lt;/a&gt;. Si se utiliza una lista de variables, cada variable debe coincidir en tipo y orden con cada una de las columnas de la sentencia &lt;code&gt;SELECT&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Así lo acción más típica es recuperar filas mientras queden alguna por recuperar en el servidor. Esto lo podremos hacer a través de los siguientes bloques:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;OPEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_cursor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -139,7 +139,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 
 &lt;h2 id=&#34;atributos-en-cursores-implícitos&#34;&gt;Atributos en cursores implícitos&lt;/h2&gt;
 
-&lt;p&gt;Los cursores implícitos no se pueden manipular por el usuario, pero Oracle sí permite el uso de sus atributos. Las sentencia a través de las que podemos obtener información de estos atributos son: &lt;code&gt;SELECT ... INTO, [INSERT, UPDATE, DELETE&lt;/code&gt;]&lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Los cursores implícitos no se pueden manipular por el usuario, pero Oracle sí permite el uso de sus atributos. Las sentencia a través de las que podemos obtener información de estos atributos son: &lt;code&gt;SELECT ... INTO, [INSERT, UPDATE, DELETE&lt;/code&gt;]&lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34; target=&#34;_blank&#34;&gt;3&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;En este caso, se debe anteponer al nombre del atributo el prefijo SQL, en lugar del nombre del cursor.&lt;/p&gt;
 
@@ -222,7 +222,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;CURRENT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;cursor_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Cuando trabajamos con cursores de actualización debemos tener en cuenta que la sentencia &lt;code&gt;UPDATE&lt;/code&gt; genera bloqueos en la base de datos ( &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34;&gt;transacciones&lt;/a&gt;, disparadores,etc).&lt;/p&gt;
+&lt;p&gt;Cuando trabajamos con cursores de actualización debemos tener en cuenta que la sentencia &lt;code&gt;UPDATE&lt;/code&gt; genera bloqueos en la base de datos ( &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34; target=&#34;_blank&#34;&gt;transacciones&lt;/a&gt;, disparadores,etc).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;CURSOR&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cpaises&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IS&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CO_PAIS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DESCRIPCION&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CONTINENTE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;paises&lt;/span&gt;
@@ -244,7 +244,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-procedimientos-y-funciones-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;PL/SQL - Procedimientos y Funciones&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-pl-sql-procedimientos-y-funciones-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34; target=&#34;_blank&#34;&gt;PL/SQL - Procedimientos y Funciones&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
   </channel>

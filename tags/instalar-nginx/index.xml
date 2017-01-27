@@ -69,7 +69,7 @@ $ sudo chown root:root /etc/init.d/nginx
 
 &lt;p&gt;En el tercer comando otorgamos permiso de ejecución al script, con el cuarto hacemos al usuario root propietario del mismo.&lt;/p&gt;
 
-&lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
+&lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34; target=&#34;_blank&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# update-rc.d nginx defaults&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -169,7 +169,7 @@ $ sudo service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt
 deb-src http://packages.dotdeb.org stable all
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
+&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apt-get update
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -

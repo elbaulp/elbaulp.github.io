@@ -9,6 +9,82 @@
     <atom:link href="https://elbauldelprogramador.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TAILS LINUX y la importancia de la privacidad</title>
+      <link>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;em&gt;Paula de la Hoz (&lt;a href=&#34;https://twitter.com/Terceranexus6&#34; target=&#34;_blank&#34;&gt;@Terceranexus6&lt;/a&gt;&lt;/em&gt;. Su blog: &lt;a href=&#34;https://ohmybits.tumblr.com&#34; target=&#34;_blank&#34;&gt;Oh My Bits&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://medium.com/@HamletAgain&#34; target=&#34;_blank&#34;&gt;Hamlet Again&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;contexto-actual&#34;&gt;Contexto actual&lt;/h1&gt;
+
+&lt;p&gt;Con el incipiente avance tecnológico, en nuestra sociedad cada vez se valora más la privacidad del usuario. Todo lo que hacemos, quiénes somos, qué nos gusta, es información que nos puede parecer irrelevante según para qué contextos. Sin embargo para las empresas, gobiernos y asociaciones, esa información es muy valiosa y puede incluso llegar a &lt;em&gt;limitarnos&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;Decir que no te importa el derecho a la privacidad porque no tienes nada que esconder no se diferencia de decir que no te importa la libertad de expresión porque no tienes nada que decir.&lt;/em&gt;&amp;ldquo;
+&amp;mdash; &lt;strong&gt;Edward Snowden&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;El ex-empleado de la NSA &lt;strong&gt;&lt;em&gt;Edward Snowden&lt;/em&gt;&lt;/strong&gt;, conocido por su implicación en wikileaks con filtraciones de información clasificada, ha abogado por la defensa de la privacidad y los derechos en internet a través de las redes, incluso desde su asilo político en Rusia. Esta controvertida figura, para mantener &amp;ldquo;&lt;em&gt;a salvo&lt;/em&gt;&amp;rdquo; su privacidad utiliza, principalmente, un sistema operativo llamado &lt;strong&gt;TAILS LINUX&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-es-tails&#34;&gt;¿Qué es Tails?&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/tchou-improved.png&#34; alt=&#34;{{ .Title }}&#34; title=&#34;{{ .Title}}&#34; width=&#34;500&#34; height=&#34;257&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/index.en.html&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; es un sistema operativo &lt;em&gt;live&lt;/em&gt;, ¿ésto qué quiere decir? que podemos utilizarlo desde cualquier ordenador utilizando simplemente un pen drive. Es completamente gratuito, libre y está basado en Debian &lt;a href=&#34;https://elbauldelprogramador.com/categories/linux&#34; title=&#34;Artículos sobre Linux&#34; target=&#34;_blank&#34;&gt;GNU/Linux&lt;/a&gt;. Una de las características principales de TAILS, es que basa todas sus conexiones en &lt;strong&gt;TOR&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt; es un navegador que protege al usuario frente al análisis del tráfico de paquetes y la vigilancia masiva usando un sistema alternativo de nodos voluntarios y túneles virtuales, en lugar de hacer una conexión directa.&lt;/p&gt;
+
+&lt;p&gt;Además de &lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt;, TAILS permite utilizar I2P, y en la web oficial viene &lt;a href=&#34;https://tails.boum.org/doc/anonymous_internet/i2p/index.en.html&#34; target=&#34;_blank&#34;&gt;documentado&lt;/a&gt; cómo utilizarlo. El sistema operativo, que ocupa en su totalidad &lt;em&gt;4 gigas&lt;/em&gt;, viene con una serie de programas predeterminados relacionados con la privacidad, la ofimática y la mensajería. En un principio, el pen drive no guarda la información de una sesión a otra, pero &lt;a href=&#34;https://tails.boum.org/install/clone/index.en.html&#34; target=&#34;_blank&#34;&gt;podemos configurarlo&lt;/a&gt; para utilizar la memoria sobrante del pen drive.&lt;/p&gt;
+
+&lt;h1 id=&#34;instalación-y-uso&#34;&gt;Instalación y uso&lt;/h1&gt;
+
+&lt;p&gt;Configurar un pen drive para instalar TAILS es bastante sencillo, especialmente porque &lt;a href=&#34;https://tails.boum.org/install/os/index.en.html&#34; target=&#34;_blank&#34;&gt;viene indicado paso a paso&lt;/a&gt; en la página oficial. Además incluye especificaciones de instalación desde cualquier sistema operativo (Linux, Windows, MAC y otro TAILS). El proceso es básicamente bajarse la imagen desde TOR, preparar un pen drive de 4 o más gigas, e instalar la imagen en éste.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/pasted-from-clipboard.png&#34; alt=&#34;{{ .Title }}&#34; title=&#34;{{ .Title }}&#34; width=&#34;946&#34; height=&#34;316&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para usar este sistema operativo, simplemente insertamos el pen drive en uno de los puertos de un ordenador apagado y lo encendemos. El ordenador tardará varios segundos en terminar de cargar la imagen, pero cuando lo haga tendremos acceso a nuestro escritorio desde el cual podremos navegar con tranquilidad. Una vez que apagamos el ordenador y retiramos el pen drive, &lt;strong&gt;no queda rastro&lt;/strong&gt; de lo que hayamos hecho en el ordenador, ya que se sobrescribe la memoria.&lt;/p&gt;
+
+&lt;p&gt;Por muy seguro que pueda ser este sistema operativo y las herramientas que ofrece, en la propia página web indica que la mejor forma de protegerse es el &lt;em&gt;sentido común&lt;/em&gt; del usuario, tales como utilizar contraseñas fuertes y saber utilizar apropiadamente las herramientas que ofrece, comprendiendo las limitaciones.&lt;/p&gt;
+
+&lt;h1 id=&#34;programas-y-recursos&#34;&gt;Programas y recursos&lt;/h1&gt;
+
+&lt;p&gt;Algunas de las herramientas más interesantes con las que viene Tails son las siguientes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/code/luks/&#34; target=&#34;_blank&#34;&gt;LUKS&lt;/a&gt; (Linux Unified Key Setup), que te permite encriptar pen drives y discos externos.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.eff.org/https-everywhere&#34; target=&#34;_blank&#34;&gt;HTTPS Everywhere&lt;/a&gt; es una extensión desarrollada por la &lt;a href=&#34;eff.org&#34; target=&#34;_blank&#34;&gt;EFF&lt;/a&gt; para encriptar todas las conexiones usando https.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openpgp.org/&#34; target=&#34;_blank&#34;&gt;OpenPGP&lt;/a&gt; &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;para encriptar y firmar documentos y correos&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://otr.cypherpunks.ca/&#34; target=&#34;_blank&#34;&gt;OTR&lt;/a&gt;, para proteger mensajería instantánea.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wipetools.tuxfamily.org/nautilus-wipe.html&#34; target=&#34;_blank&#34;&gt;Nautilus Wipe&lt;/a&gt; para borrar archivos con seguridad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;confías-plenamente-en-tails-ellos-esperan-que-no&#34;&gt;¿Confías plenamente en TAILS? ellos esperan que no&lt;/h1&gt;
+
+&lt;p&gt;Una de los problemas fundamentales de la sociedad actual en términos de informática es el desinterés del usuario medio por su privacidad y seguridad. Y esta concienciación empieza precisamente con la duda. Sean cuales sean nuestros motivos para confiar en un sistema operativo, programa o aplicación, deben haber pasado un filtro de duda y escepticismo, y eso mismo &lt;a href=&#34;https://tails.boum.org/doc/about/trust/index.en.html&#34; target=&#34;_blank&#34;&gt;nos sugieren&lt;/a&gt; en la página de TAILS.&lt;/p&gt;
+
+&lt;p&gt;Las herramientas que ofrecen no sólo tienen un objetivo técnico si no que se esfuerzan en ofrecerte una nueva visión y un cambio en la forma en que sus usuarios usan la tecnología y su información. El uso de este sistema debe ir acompasando al interés por nuestra privacidad, y a la curiosidad por saber qué se hace con nuestra información.&lt;/p&gt;
+
+&lt;p&gt;Para ello ofrecen una serie de razones por las cuales puede decirse que abogan por estas cualidades. Basa su justificación en el uso de software libre bien documentado, TOR, y el hecho de utilizar Debian GNU/Linux, que aunque ha tenido bugs importantes como &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2008/msg00152.html&#34; target=&#34;_blank&#34;&gt;SSH PRNG&lt;/a&gt; no se han encontrado vulnerabilidades de seguridad hasta la fecha, lo que lo convierte en un buen candidato para este sistema.&lt;/p&gt;
+
+&lt;h1 id=&#34;rompiendo-barreras&#34;&gt;Rompiendo barreras&lt;/h1&gt;
+
+&lt;p&gt;Es de saber que las distintas distribuciones de linux tienen cierta fama entre los programadores e informáticos de todo el mundo. Debido a la amplia oferta de sistemas operativos disponibles, hay algunas más o menos amigables para un usuario medio. TAILS pretende ser accesible y manejable para cualquiera, tenga o no una base sólida en el uso de programación, linux y Bash. Para ello ofrece una interfaz gráfica intuitiva y una instalación simple.&lt;/p&gt;
+
+&lt;p&gt;El uso de este sistema puede tener muchas aplicaciones en nuestro día a día, y es completamente legal. No necesitamos ser Edward Snowden para &lt;strong&gt;necesitar o querer&lt;/strong&gt; privacidad, por ejemplo, a la hora de consultar nuestro correo en un ordenador público. La idea de este sistema es liberarnos de la obligación de &amp;ldquo;&lt;em&gt;confiar&lt;/em&gt;&amp;rdquo; en un ordenador público, o de algún amigo.&lt;/p&gt;
+
+&lt;p&gt;Esta idea puede que nos resulte difícil de agregar a nuestra rutina, pero sin duda se debería hacerse una pequeña reflexión sobre ello. El ritmo de nuestra sociedad ha cambiado con rapidez en pocos años, y dependemos en nuestra vida privada y trabajo (con frecuencia) de programas y aplicaciones que manejan gran cantidad de información privada. Esta rapidez ha hecho que el usuario medio se acostumbre a la comodidad de estas herramientas, pero se olvide con frecuencia de proteger sus datos a la hora de utilizarla, muchas veces por la gran cantidad de trabas y dificultades para ello.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Cómo Resolver El Error “Can&#39;t Open Display: :0.0” Al Conectarse a Una Red Wi-Fi</title>
       <link>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</link>
       <pubDate>Mon, 03 Oct 2016 14:15:35 +0000</pubDate>
@@ -54,8 +130,8 @@ NombreDeseado
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34; target=&#34;_blank&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34; target=&#34;_blank&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -67,7 +143,7 @@ NombreDeseado
       <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
       <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
 
-&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -79,7 +155,7 @@ NombreDeseado
 &lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
+&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; target=&#34;_blank&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
 https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
 //elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
@@ -125,8 +201,8 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.dedoimedo.com/computers/linux-world-map-reloaded.html&#34;&gt;The Great Linux World Map 2.0!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/&#34; title=&#34;Just Linux Things in Reddit&#34;&gt;Linux World Map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dedoimedo.com/computers/linux-world-map-reloaded.html&#34; target=&#34;_blank&#34;&gt;The Great Linux World Map 2.0!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/linuxmasterrace/comments/3lxrv0/linux_world_map/&#34; title=&#34;Just Linux Things in Reddit&#34; target=&#34;_blank&#34;&gt;Linux World Map&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -149,13 +225,13 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;p&gt;A partir de estas 3, se abre un abanico inmenso de distribuciones, y seguro que de la gran mayoría ni las conozcáis. Ya que la imagen pesa demasiado, proporciono el enlace a Wikipedia para su visualización:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&#34; title=&#34;Evolución de las distros GNU/Linux, de 1992 a 2016&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&#34; title=&#34;Evolución de las distros GNU/Linux, de 1992 a 2016&#34; target=&#34;_blank&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/konimex/linuxtimeline&#34; title=&#34;Repositorio en Github de LinuxTimeline&#34;&gt;linuxtimeline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/konimex/linuxtimeline&#34; title=&#34;Repositorio en Github de LinuxTimeline&#34; target=&#34;_blank&#34;&gt;linuxtimeline&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -208,8 +284,8 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -225,7 +301,7 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Así que pregunté en los foros de &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo&lt;/a&gt; y parece que se trata de un &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
+&lt;p&gt;Así que pregunté en los foros de &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34; target=&#34;_blank&#34;&gt;Gentoo&lt;/a&gt; y parece que se trata de un &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34; target=&#34;_blank&#34;&gt;bug&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
 
 &lt;p&gt;Para salir del paso, en el foro me comentaron que existe un &lt;em&gt;Workaround&lt;/em&gt;, se trata de obligar a instalar una versión concreta de &lt;em&gt;NSS&lt;/em&gt;, en concreto la 3.24. Para ello basta con ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;=dev-libs/nss-3.24 ~amd64&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
@@ -233,7 +309,7 @@ emerge -u nss
 &lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34; target=&#34;_blank&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Gracias a &lt;em&gt;fedeliallalinea&lt;/em&gt; por la respuesta en el foro.&lt;/p&gt;</description>
     </item>
@@ -434,9 +510,9 @@ Filesystem Size  Used Avail Use%                                                
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet&#34; title=&#34;CheatSheet de Gentoo&#34;&gt;Gentoo Cheat Sheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Equery&#34; title=&#34;Página de Equery&#34;&gt;Equery&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Eclean&#34; title=&#34;Página de Eclean&#34;&gt;Eclean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet&#34; title=&#34;CheatSheet de Gentoo&#34; target=&#34;_blank&#34;&gt;Gentoo Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Equery&#34; title=&#34;Página de Equery&#34; target=&#34;_blank&#34;&gt;Equery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Eclean&#34; title=&#34;Página de Eclean&#34; target=&#34;_blank&#34;&gt;Eclean&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -598,7 +674,7 @@ Filesystem Size  Used Avail Use%                                                
 
 &lt;h4 id=&#34;enlace-al-código&#34;&gt;Enlace al código&lt;/h4&gt;
 
-&lt;p&gt;Puedes bajarte el script en &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;Repositorio My Terminals Background Setter&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Puedes bajarte el script en &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;Repositorio My Terminals Background Setter&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -701,7 +777,7 @@ color: &amp;quot;#F57C00&amp;quot;
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
-&lt;p&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace &amp;quot;How do I replace multiple lines with single word in file(inplace replace&#34;&gt;askubuntu.com&lt;/a&gt;?&amp;ldquo;)&lt;/p&gt;</description>
+&lt;p&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace &amp;quot;How do I replace multiple lines with single word in file(inplace replace&#34; target=&#34;_blank&#34;&gt;askubuntu.com&lt;/a&gt;?&amp;ldquo;)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1217,7 +1293,7 @@ iptables -j DROP -h
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
+&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34; target=&#34;_blank&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
@@ -1241,7 +1317,7 @@ iptables -X
 
 &lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
 
-&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
+&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34; target=&#34;_blank&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34; target=&#34;_blank&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
 iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
 iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
@@ -1324,9 +1400,9 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
-      <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
+      <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
 
-&lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
+&lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
 
 &lt;p&gt;Para situarnos en contexto, &lt;strong&gt;netstat&lt;/strong&gt; forma parte de las comúnmente llamadas &lt;em&gt;net-tools&lt;/em&gt; o herramientas de red. Este conjunto de herramientas lo forman los comandos &lt;em&gt;ifconfig&lt;/em&gt;, &lt;em&gt;netstat&lt;/em&gt; y &lt;em&gt;route&lt;/em&gt;. Dichas herramientas han quedado obsoletas en favor de &lt;strong&gt;iproute2&lt;/strong&gt; desde hace algunos años.&lt;/p&gt;
 
@@ -1391,7 +1467,7 @@ LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::50925                                                          :::*
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;&lt;/span&gt;
@@ -1625,46 +1701,6 @@ rm temp
 &lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Bloquear una IP atacando el servidor mediante iptables</title>
-      <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
-      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
-
-&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP DROP SPOOF A:&amp;quot;&lt;/span&gt;
-iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Estas directivas bloquean el tráfico entrante hacia la interfaz &lt;em&gt;ethX&lt;/em&gt; a la dirección especificada tras el parámetro &lt;em&gt;-s&lt;/em&gt;, además, en las entradas del log aparecerá como &lt;strong&gt;IP DROP SPOOF A:&lt;/strong&gt; cada vez que el firewall bloquee el intento de conexión.&lt;/p&gt;
-
-&lt;p&gt;El primer comando es el que define cómo se registrará en el log, el segundo es el que bloquea la dirección.&lt;/p&gt;
-
-&lt;p&gt;Para comprobar que efectivamente se está bloqueando al atacante, basta con mirar al log:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Feb  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; 02:15:30 NOMBRESERVIDOR kernel: IP DROP SPOOF A:IN&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ethX &lt;span class=&#34;nv&#34;&gt;OUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MAC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX &lt;span class=&#34;nv&#34;&gt;SRC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IPBLOQUEADA &lt;span class=&#34;nv&#34;&gt;DST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IPSERVIDOR &lt;span class=&#34;nv&#34;&gt;LEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LONGITUDPAQUETE &lt;span class=&#34;nv&#34;&gt;TOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 &lt;span class=&#34;nv&#34;&gt;PREC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 &lt;span class=&#34;nv&#34;&gt;TTL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;117&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15234&lt;/span&gt; DF &lt;span class=&#34;nv&#34;&gt;PROTO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TCP &lt;span class=&#34;nv&#34;&gt;SPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17652&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;PUERTODESTINO &lt;span class=&#34;nv&#34;&gt;WINDOW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;65535&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;RES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 SYN &lt;span class=&#34;nv&#34;&gt;URGP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Decidí investigar desde cuando se estaba produciendo el ataque, y, para mi sorpresa, se estaba intentando acceder por fuerza bruta al blog desde hacía 8 días. Concretamente, hubo &lt;strong&gt;18209&lt;/strong&gt; intentos de conexión. Este número puede sacarse fácilmente contando las líneas del log en las que estaba involucrada la ip atacante:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cat /ruta/log/acceso.log &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep xx.xx.xx.xx &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; wc -l
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Donde &lt;strong&gt;xx.xx.xx.xx&lt;/strong&gt; debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.&lt;/p&gt;
-
-&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;Iptables Drop IP Address&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-iptables-drop/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

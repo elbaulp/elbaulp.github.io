@@ -52,13 +52,13 @@
 
 &lt;p&gt;Despues de este pequeño repaso por la historia de las vulnerabilidades, vamos a describir la nueva instrucción que Intel ha creado para acabar con los &lt;em&gt;Buffers Overflows&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
+&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34; target=&#34;_blank&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
 
 &lt;p&gt;Con esta simple mejora, se acaba el problema de sobre-escribir la dirección de retorno de una función para permitir al atacante saltar a una porción de codigo que él controla. Al obligar a que la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt; sea la primera instrucción de todas las subrutinas, define un único punto de entrada válido. Cualquier intento de saltar a la mitad o al final de una función es imposible, ya que el proceso se abortará.&lt;/p&gt;
 
 &lt;h1 id=&#34;la-pila-stack-y-la-nueva-funcionalidad-de-intel-shadow-stack&#34;&gt;La pila (Stack) y la nueva funcionalidad de Intel, Shadow Stack&lt;/h1&gt;
 
-&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
+&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34; target=&#34;_blank&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
 
 &lt;p&gt;Para resolver este problema Intel ha diseñado la llamada &lt;em&gt;Shadow Stack&lt;/em&gt; o pila oculta. Es una pila a la que el desarrollador no tiene acceso, y mantiene una copia de los parámetros de la pila normal, como dirección de retorno etc, pero nada de datos. Cuando el programador modifica la pila, lo hace en la normal, a la que tiene acceso. Y aquí reside la fortaleza del &lt;em&gt;Shadow Stack&lt;/em&gt;, al no tener acceso, cuando el sistema mira la dirección de retorno, si esta dirección no coincide en ambas pilas, alguien ha modificado la dirección de retorno en la pila normal y el proceso se aborta. Y así, Intel ha puesto fin a años de vulnerabilidades debidas al simple hecho de no comprobar que el tamaño de los datos que intentamos guardar en una variable, no cabe en el espacio que tienen reservado. Una obra maestra.&lt;/p&gt;
 
@@ -72,9 +72,9 @@
 
 &lt;ul&gt;
 &lt;li&gt;Security Now 565 Control-Flow Enforcement Technology (CET) | &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/565 &amp;quot;Security Now 565
-Control-Flow Enforcement Technology (CET&#34;&gt;twit.tv&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+Control-Flow Enforcement Technology (CET&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
 &lt;li&gt;Episodio en Youtube | &lt;a href=&#34;https://www.youtube.com/watch?v=W3AdFoJ8lCs &amp;quot;Security Now 565
-Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
+Control-Flow Enforcement Technology (CET&#34; target=&#34;_blank&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -199,12 +199,12 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
 &lt;p&gt;Para quien quiera seguir leyendo sobre el tema:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://twit.tv/shows/security-now/episodes/555&#34; title=&#34;Enlace al podcast&#34;&gt;Enlace al podcast en twit.tv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/whatsapp-complete/&#34; title=&#34;Artículo sobre __WhatsApp__ en whispersystems.org&#34;&gt;Artículo sobre &lt;strong&gt;WhatsApp&lt;/strong&gt; en whispersystems.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/advanced-ratcheting/&#34; title=&#34;Artículo sobre Ratchets en whispersystems.org&#34;&gt;Artículo sobre Ratchets en whispersystems.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.whatsapp.com/security/&#34; title=&#34;Página de __WhatsApp__ hablando sobre su seguridad&#34;&gt;Página de &lt;strong&gt;WhatsApp&lt;/strong&gt; hablando sobre su seguridad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/asynchronous-security/&#34; title=&#34;Artículo sobre Seguridad asíncrona en whispersystems.org&#34;&gt;Artículo sobre Seguridad asíncrona en whispersystems.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/simplifying-otr-deniability/&#34; title=&#34;Artículo sobre OTR en whispersystems.org&#34;&gt;Artículo sobre OTR en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twit.tv/shows/security-now/episodes/555&#34; title=&#34;Enlace al podcast&#34; target=&#34;_blank&#34;&gt;Enlace al podcast en twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/whatsapp-complete/&#34; title=&#34;Artículo sobre __WhatsApp__ en whispersystems.org&#34; target=&#34;_blank&#34;&gt;Artículo sobre &lt;strong&gt;WhatsApp&lt;/strong&gt; en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/advanced-ratcheting/&#34; title=&#34;Artículo sobre Ratchets en whispersystems.org&#34; target=&#34;_blank&#34;&gt;Artículo sobre Ratchets en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.whatsapp.com/security/&#34; title=&#34;Página de __WhatsApp__ hablando sobre su seguridad&#34; target=&#34;_blank&#34;&gt;Página de &lt;strong&gt;WhatsApp&lt;/strong&gt; hablando sobre su seguridad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/asynchronous-security/&#34; title=&#34;Artículo sobre Seguridad asíncrona en whispersystems.org&#34; target=&#34;_blank&#34;&gt;Artículo sobre Seguridad asíncrona en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/simplifying-otr-deniability/&#34; title=&#34;Artículo sobre OTR en whispersystems.org&#34; target=&#34;_blank&#34;&gt;Artículo sobre OTR en whispersystems.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;amp-youtube
@@ -222,7 +222,7 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
       <description>&lt;blockquote&gt;
 &lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
 
-&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; target=&#34;_blank&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;figure&gt;
@@ -276,7 +276,7 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
 
 &lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
 
-&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
+&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34; target=&#34;_blank&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
 
 &lt;p&gt;Estos patrones de 8&amp;#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
 
@@ -288,7 +288,7 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
 
 &lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
 
-&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
+&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34; target=&#34;_blank&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
 
 &lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.symantec.norton.snap&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Norton Snap&lt;/a&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
 
@@ -310,7 +310,7 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/regin-arquitectura-malware-de-primer-nivel-vigilancia-sigilosa/</guid>
-      <description>&lt;p&gt;En éstos días se ha escuchado hablar mucho sobre &lt;strong&gt;Regin&lt;/strong&gt;, un malware de una calidad superior, como pocos vistos hasta ahora. En éste artículo se pretende profundizar en el funcionamiento de éste malware, el cual es una obra de excelente calidad. Me basaré principalmente en lo comentado por Steve en el episodio #483 del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Más artículos de Security Now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;En éstos días se ha escuchado hablar mucho sobre &lt;strong&gt;Regin&lt;/strong&gt;, un malware de una calidad superior, como pocos vistos hasta ahora. En éste artículo se pretende profundizar en el funcionamiento de éste malware, el cual es una obra de excelente calidad. Me basaré principalmente en lo comentado por Steve en el episodio #483 del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Más artículos de Security Now!&#34; target=&#34;_blank&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -322,7 +322,7 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
 
 &lt;p&gt;*El principal propósito de &lt;strong&gt;Regin&lt;/strong&gt; es la recopilación de información y se ha visto implicado en operaciones de colección de datos contra organizaciones gubernamentales, empresas, organizaciones docentes y particulares. La complejidad y nivel de sofisticación de &lt;strong&gt;Regin&lt;/strong&gt; hacen pensar que el desarrollo de ésta amenaza ha llevado meses, e incluso años.*&lt;/p&gt;
 
-&lt;p&gt;*&lt;strong&gt;Regin&lt;/strong&gt; es una amenaza multi etapa y modular, lo que significa que tiene un número de compoenentes, cada uno dependiente de otros, para realizar las operaciones de ataque. Éste enfoque modular proporciona la flexibilidad necesaria a los ataques, ya que es posible cargar características personalizadas hechas a medida para cada objetivo individual cuando sea necesario. Algunos “&lt;a href=&#34;https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/&#34; title=&#34;Análisis del protocolo QUIC de Google&#34;&gt;payloads&lt;/a&gt;” personalizados son muy avanzados y muestran una gran experiencia en sectores especializados. El diseño modular dificulta el análisis de la amenaza, ya que todos los componentes deben estar disponibles para poder entender completamente cómo funciona el malware.*&lt;/p&gt;
+&lt;p&gt;*&lt;strong&gt;Regin&lt;/strong&gt; es una amenaza multi etapa y modular, lo que significa que tiene un número de compoenentes, cada uno dependiente de otros, para realizar las operaciones de ataque. Éste enfoque modular proporciona la flexibilidad necesaria a los ataques, ya que es posible cargar características personalizadas hechas a medida para cada objetivo individual cuando sea necesario. Algunos “&lt;a href=&#34;https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/&#34; title=&#34;Análisis del protocolo QUIC de Google&#34; target=&#34;_blank&#34;&gt;payloads&lt;/a&gt;” personalizados son muy avanzados y muestran una gran experiencia en sectores especializados. El diseño modular dificulta el análisis de la amenaza, ya que todos los componentes deben estar disponibles para poder entender completamente cómo funciona el malware.*&lt;/p&gt;
 
 &lt;h2 id=&#34;período-activo-y-versiones-de-regin&#34;&gt;Período activo y versiones de Regin&lt;/h2&gt;
 
@@ -379,7 +379,7 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Las etapas más interesantes son las que almacenan los ejecutables y ficheros de datos en las etapas 4 y 5. La etapa inicial 1 es la única que contiene código visible. El resto de etapas se almacenan como bloques de datos &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrados&lt;/a&gt;, ya sea en forma de ficheros o dentro de algún área de almacenamiento de ficheros no tradicional, como el registro, atributos extendidos, o sectores al final del disco duro.&lt;/p&gt;
+&lt;p&gt;Las etapas más interesantes son las que almacenan los ejecutables y ficheros de datos en las etapas 4 y 5. La etapa inicial 1 es la única que contiene código visible. El resto de etapas se almacenan como bloques de datos &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34; target=&#34;_blank&#34;&gt;cifrados&lt;/a&gt;, ya sea en forma de ficheros o dentro de algún área de almacenamiento de ficheros no tradicional, como el registro, atributos extendidos, o sectores al final del disco duro.&lt;/p&gt;
 
 &lt;p&gt;A continuación se muetra un gráfico que describe el proceso de infección:&lt;/p&gt;
 
@@ -457,7 +457,7 @@ D0204917CA58}&lt;/em&gt;&lt;/li&gt;
 D0204917CA5A}&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;El fichero es de 6 a 7 veces mayor que el driver de la etapa 2. Además de cargar la etapa 4, ofrece un &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; para etapas de mayor nivel.&lt;/p&gt;
+&lt;p&gt;El fichero es de 6 a 7 veces mayor que el driver de la etapa 2. Además de cargar la etapa 4, ofrece un &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34; target=&#34;_blank&#34;&gt;framework&lt;/a&gt; para etapas de mayor nivel.&lt;/p&gt;
 
 &lt;p&gt;A partir de esta etapa, todas estan basadas en un framework modular de módulos de código. Éstos módulos ofrecen funciones mediante una interfaz privada y personalizada. Cada fichero en la etapa 3 y superior pude exportar funcionalidad a otras partes de Regin.&lt;/p&gt;
 
@@ -528,7 +528,7 @@ La funcionalidad del payload es distinta en función del ordenador objetivo del 
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png&#34; title=&#34;{{ .Title }}&#34; alt=&#34;{{ .Title }}&#34; width=&#34;450px&#34; height=&#34;450px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt; Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
+&lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt; Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34; target=&#34;_blank&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -628,7 +628,7 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
 
 &lt;p&gt;Esta es la carta “Salir de la cárcel” de la que hablábamos al principio. Te sacará de cualquier problema. Y por ser tan poderoso, no se almacena. El único requisito es anotarlo o imprimirlo, y ponerlo en un lugar seguro. El código no puede regenerarse, ya que es completamente aleatorio. Es tu identidad maestra.&lt;/p&gt;
 
-&lt;p&gt;Una vez anotado o imprimido, &lt;strong&gt;SQRL&lt;/strong&gt; comienza el proceso de hash, aplicando múltiples hash, haciendo operaciones XOR. Tras aplicar iterativamente funciones hash al código, se obtiene lo que será la clave para la función hash del usuario, recuerda, una &lt;em&gt;keyed hash&lt;/em&gt; (&lt;em&gt;HMAC&lt;/em&gt;). Ahora, la clave de la función hash se cifra con una contraseña usando la función &lt;a href=&#34;https://en.wikipedia.org/wiki/Scrypt&#34;&gt;Scrypt&lt;/a&gt;, la cual hace totalmente inviable averiguar  la contraseña.&lt;/p&gt;
+&lt;p&gt;Una vez anotado o imprimido, &lt;strong&gt;SQRL&lt;/strong&gt; comienza el proceso de hash, aplicando múltiples hash, haciendo operaciones XOR. Tras aplicar iterativamente funciones hash al código, se obtiene lo que será la clave para la función hash del usuario, recuerda, una &lt;em&gt;keyed hash&lt;/em&gt; (&lt;em&gt;HMAC&lt;/em&gt;). Ahora, la clave de la función hash se cifra con una contraseña usando la función &lt;a href=&#34;https://en.wikipedia.org/wiki/Scrypt&#34; target=&#34;_blank&#34;&gt;Scrypt&lt;/a&gt;, la cual hace totalmente inviable averiguar  la contraseña.&lt;/p&gt;
 
 &lt;h2 id=&#34;y-si-me-roban-mi-identidad&#34;&gt;¿Y si me roban mi identidad?&lt;/h2&gt;
 
@@ -648,7 +648,7 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
 
 &lt;h3 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h3&gt;
 
-&lt;p&gt;Documentación oficial SQRL | &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34;&gt;gcr.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentación oficial SQRL | &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34; target=&#34;_blank&#34;&gt;gcr.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-youtube
     data-videoid=&#34;hsotcaizGjM&#34;

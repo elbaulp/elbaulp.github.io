@@ -48,17 +48,17 @@
 
 &lt;h3 id=&#34;data-path&#34;&gt;Data Path&lt;/h3&gt;
 
-&lt;p&gt;Ningún path (ruta) especificado en el intent-filter resultará ser una coincidencia para cualquier path entrante. Para validar un intent, el esquema de datos, el authority y el path trabajan juntos. Es decir en &lt;em&gt;&lt;a href=&#34;http://elbauldelprogramador.org/path&#34;&gt;http://elbauldelprogramador.org/path&lt;/a&gt;&lt;/em&gt; los tres trabajan juntos para validar el intent.&lt;/p&gt;
+&lt;p&gt;Ningún path (ruta) especificado en el intent-filter resultará ser una coincidencia para cualquier path entrante. Para validar un intent, el esquema de datos, el authority y el path trabajan juntos. Es decir en &lt;em&gt;&lt;a href=&#34;http://elbauldelprogramador.org/path&#34; target=&#34;_blank&#34;&gt;http://elbauldelprogramador.org/path&lt;/a&gt;&lt;/em&gt; los tres trabajan juntos para validar el intent.&lt;/p&gt;
 
 &lt;h3 id=&#34;intent-categories&#34;&gt;Intent Categories&lt;/h3&gt;
 
-&lt;p&gt;Cada &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias&#34;&gt;categoría&lt;/a&gt; debe estar presente en el intent-filter. En el caso de que en el intent-filter no exista ninguna categoría especificada, esa actividad solo será una coincidencia para los intent que no tengan ninguna categoría especificada. Sin embargo, hay que tener en cuenta que los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34;&gt;intent implícitos&lt;/a&gt; que se pasan &lt;strong&gt;startActivity()&lt;/strong&gt; contienen al menos una categoría que es &lt;em&gt;android.intent-category.DEFAULT&lt;/em&gt;. Por lo tanto, hemos de tener en cuenta que si queremos llamar a una actividad mediante un intent implícito debemos registrar dicha categoría en el intent-filter.&lt;/p&gt;
+&lt;p&gt;Cada &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias&#34; target=&#34;_blank&#34;&gt;categoría&lt;/a&gt; debe estar presente en el intent-filter. En el caso de que en el intent-filter no exista ninguna categoría especificada, esa actividad solo será una coincidencia para los intent que no tengan ninguna categoría especificada. Sin embargo, hay que tener en cuenta que los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34; target=&#34;_blank&#34;&gt;intent implícitos&lt;/a&gt; que se pasan &lt;strong&gt;startActivity()&lt;/strong&gt; contienen al menos una categoría que es &lt;em&gt;android.intent-category.DEFAULT&lt;/em&gt;. Por lo tanto, hemos de tener en cuenta que si queremos llamar a una actividad mediante un intent implícito debemos registrar dicha categoría en el intent-filter.&lt;/p&gt;
 
 &lt;p&gt;Si una actividad no tiene declarada la categoría por defecto, pero conocemos su nombre de componente, podémos llamarle mediante un intent explícito.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h4 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34; target=&#34;_blank&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
   </channel>

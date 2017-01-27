@@ -17,7 +17,7 @@
       <description>&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Puedes echar un ojo al artículo más actualizado &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/&#34;&gt;SQRL -Secure Quick Reliable Login a Fondo&lt;/a&gt;
 {: .notice}&lt;/p&gt;
 
-&lt;p&gt;Los lectores habituales sabrán que suelo escuchar el programa de radio &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Artículos sobre Security now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, la semana pasada, &lt;strong&gt;Steve Gibson&lt;/strong&gt;, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención &lt;strong&gt;SQRL&lt;/strong&gt; (&lt;em&gt;Secure &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; Login&lt;/em&gt;) y ha tenido bastante éxito en la comunidad, tanto que hasta el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3 org&#34;&gt;W3&lt;/a&gt; se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.&lt;/p&gt;
+&lt;p&gt;Los lectores habituales sabrán que suelo escuchar el programa de radio &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Artículos sobre Security now!&#34; target=&#34;_blank&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, la semana pasada, &lt;strong&gt;Steve Gibson&lt;/strong&gt;, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención &lt;strong&gt;SQRL&lt;/strong&gt; (&lt;em&gt;Secure &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34; target=&#34;_blank&#34;&gt;QR&lt;/a&gt; Login&lt;/em&gt;) y ha tenido bastante éxito en la comunidad, tanto que hasta el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3 org&#34; target=&#34;_blank&#34;&gt;W3&lt;/a&gt; se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sqrl-login-sample.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;400px&#34; height=&#34;199px&#34; /&gt;&lt;/p&gt;
@@ -35,9 +35,9 @@
 
 &lt;h2 id=&#34;qué-ocurre-detrás-de-la-escena&#34;&gt;¿Qué ocurre detrás de la escena?&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Gracias a &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Artículos de Luzcila&#34;&gt;Luzcila&lt;/a&gt; por traducir esta sección&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Gracias a &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Artículos de Luzcila&#34; target=&#34;_blank&#34;&gt;Luzcila&lt;/a&gt; por traducir esta sección&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;(Lo escrito a continuación pretende dar al lector una noción general del proceso de autentificación mediante &lt;strong&gt;SQRL&lt;/strong&gt;, para detalles más técnicos se puede visitar el enlace de las referencias (1), si hay algún interesado en traducir esta información al castellano, puede contactar conmigo mediante el &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Contacto&#34;&gt;formulario de contacto&lt;/a&gt; y encantado añadiré el contenido mencionando a su autor).&lt;/p&gt;
+&lt;p&gt;(Lo escrito a continuación pretende dar al lector una noción general del proceso de autentificación mediante &lt;strong&gt;SQRL&lt;/strong&gt;, para detalles más técnicos se puede visitar el enlace de las referencias (1), si hay algún interesado en traducir esta información al castellano, puede contactar conmigo mediante el &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Contacto&#34; target=&#34;_blank&#34;&gt;formulario de contacto&lt;/a&gt; y encantado añadiré el contenido mencionando a su autor).&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;El código QR presentado cerca de los campos de login contiene la URL del servicio de autenticación para el sitio. La URL incluye un número aleatorio largo generado de forma segura por lo que cada presentación de la página de login muestra un código QR diferente. (En el mundo de la criptografía este número aleatorio se conoce como “nonce”)&lt;/li&gt;
@@ -72,7 +72,7 @@
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png&#34; title=&#34;{{ .Title }}&#34; alt=&#34;{{ .Title }}&#34; width=&#34;450px&#34; height=&#34;450px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt; Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
+&lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt; Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34; target=&#34;_blank&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -172,7 +172,7 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
 
 &lt;p&gt;Esta es la carta “Salir de la cárcel” de la que hablábamos al principio. Te sacará de cualquier problema. Y por ser tan poderoso, no se almacena. El único requisito es anotarlo o imprimirlo, y ponerlo en un lugar seguro. El código no puede regenerarse, ya que es completamente aleatorio. Es tu identidad maestra.&lt;/p&gt;
 
-&lt;p&gt;Una vez anotado o imprimido, &lt;strong&gt;SQRL&lt;/strong&gt; comienza el proceso de hash, aplicando múltiples hash, haciendo operaciones XOR. Tras aplicar iterativamente funciones hash al código, se obtiene lo que será la clave para la función hash del usuario, recuerda, una &lt;em&gt;keyed hash&lt;/em&gt; (&lt;em&gt;HMAC&lt;/em&gt;). Ahora, la clave de la función hash se cifra con una contraseña usando la función &lt;a href=&#34;https://en.wikipedia.org/wiki/Scrypt&#34;&gt;Scrypt&lt;/a&gt;, la cual hace totalmente inviable averiguar  la contraseña.&lt;/p&gt;
+&lt;p&gt;Una vez anotado o imprimido, &lt;strong&gt;SQRL&lt;/strong&gt; comienza el proceso de hash, aplicando múltiples hash, haciendo operaciones XOR. Tras aplicar iterativamente funciones hash al código, se obtiene lo que será la clave para la función hash del usuario, recuerda, una &lt;em&gt;keyed hash&lt;/em&gt; (&lt;em&gt;HMAC&lt;/em&gt;). Ahora, la clave de la función hash se cifra con una contraseña usando la función &lt;a href=&#34;https://en.wikipedia.org/wiki/Scrypt&#34; target=&#34;_blank&#34;&gt;Scrypt&lt;/a&gt;, la cual hace totalmente inviable averiguar  la contraseña.&lt;/p&gt;
 
 &lt;h2 id=&#34;y-si-me-roban-mi-identidad&#34;&gt;¿Y si me roban mi identidad?&lt;/h2&gt;
 
@@ -192,7 +192,7 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
 
 &lt;h3 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h3&gt;
 
-&lt;p&gt;Documentación oficial SQRL | &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34;&gt;gcr.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentación oficial SQRL | &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34; target=&#34;_blank&#34;&gt;gcr.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-youtube
     data-videoid=&#34;hsotcaizGjM&#34;

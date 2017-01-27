@@ -24,7 +24,7 @@
 
 &lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
-&lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
+&lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
 
 &lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-chrome&#34;&gt;Descargar e instalar Mailvelope en Chrome&lt;/h1&gt;
 
@@ -32,9 +32,9 @@
 
 &lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-firefox&#34;&gt;Descargar e instalar Mailvelope en Firefox&lt;/h1&gt;
 
-&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;a href=&#34;https://github.com/mailvelope/mailvelope&#34; title=&#34;Compilar Mailvelope&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;a href=&#34;https://github.com/mailvelope/mailvelope&#34; title=&#34;Compilar Mailvelope&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34; target=&#34;_blank&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
@@ -68,7 +68,7 @@ make dist-ff
 
 &lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
 
-&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;a href=&#34;http://keyserver.borgnet.us:11371/pks/lookup?op=get&amp;search=0x083EDE12BE101B2B&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
+&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34; target=&#34;_blank&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;a href=&#34;http://keyserver.borgnet.us:11371/pks/lookup?op=get&amp;search=0x083EDE12BE101B2B&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
 
 &lt;p&gt;Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.&lt;/p&gt;
 

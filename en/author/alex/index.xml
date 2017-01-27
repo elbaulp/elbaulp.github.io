@@ -16,7 +16,7 @@
       <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
       <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
 
-&lt;p&gt;A simple Google search was all I needed to find a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;Posts about python&#34;&gt;python&lt;/a&gt; parser for YAML frontmatter. Here is how I did it:&lt;/p&gt;
+&lt;p&gt;A simple Google search was all I needed to find a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;Posts about python&#34; target=&#34;_blank&#34;&gt;python&lt;/a&gt; parser for YAML frontmatter. Here is how I did it:&lt;/p&gt;
 
 &lt;h1 id=&#34;install-python-frontmatter&#34;&gt;Install Python-Frontmatter&lt;/h1&gt;
 
@@ -144,8 +144,8 @@
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -161,7 +161,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;I tried to enable the &lt;code&gt;NSS&lt;/code&gt; &lt;em&gt;USE&lt;/em&gt; flag, but did not work, so I went to the &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo forums&lt;/a&gt; and asked there. After a few minutes they answered me, it is a current &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; that need to be solved. But fortunately there is a workaround until the bug is fixed:&lt;/p&gt;
+&lt;p&gt;I tried to enable the &lt;code&gt;NSS&lt;/code&gt; &lt;em&gt;USE&lt;/em&gt; flag, but did not work, so I went to the &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34; target=&#34;_blank&#34;&gt;Gentoo forums&lt;/a&gt; and asked there. After a few minutes they answered me, it is a current &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34; target=&#34;_blank&#34;&gt;bug&lt;/a&gt; that need to be solved. But fortunately there is a workaround until the bug is fixed:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;=dev-libs/nss-3.24 ~amd64&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
 emerge -u nss
 &lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
@@ -169,7 +169,7 @@ emerge -u nss
 
 &lt;p&gt;Executing the above in a terminal as root will force portage to install the version 3.24 of &lt;em&gt;NSS&lt;/em&gt;, and then firefox will not complain about the old version.&lt;/p&gt;
 
-&lt;p&gt;Once firefox 48 is installed, we can enjoy the &lt;a href=&#34;http://arstechnica.com/information-technology/2016/08/firefox-48-ships-bringing-rust-mainstream-and-multiprocess-for-some/&#34; title=&#34;Firefox 48 ships, bringing Rust mainstream and multiprocess for some&#34;&gt;new multiprocessing feature&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once firefox 48 is installed, we can enjoy the &lt;a href=&#34;http://arstechnica.com/information-technology/2016/08/firefox-48-ships-bringing-rust-mainstream-and-multiprocess-for-some/&#34; title=&#34;Firefox 48 ships, bringing Rust mainstream and multiprocess for some&#34; target=&#34;_blank&#34;&gt;new multiprocessing feature&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Thanks to &lt;em&gt;fedeliallalinea&lt;/em&gt; for solving me the problem in the forums!&lt;/p&gt;</description>
     </item>
@@ -182,7 +182,7 @@ emerge -u nss
       <guid>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</guid>
       <description>&lt;h1 id=&#34;what-is-amp-mustache-and-how-it-works&#34;&gt;What is Amp-mustache and how it works&lt;/h1&gt;
 
-&lt;p&gt;Recently I have been implementing &lt;em&gt;Google AMP pages&lt;/em&gt; in my site. Everything was going well until I decide to implement lists with &lt;code&gt;amp-mustache&lt;/code&gt;. &lt;a href=&#34;https://www.ampproject.org/docs/reference/extended/amp-mustache.html&#34; title=&#34;Docs for amp-mustache&#34;&gt;This component&lt;/a&gt; of &lt;em&gt;AMP&lt;/em&gt; allows to populate elements from a &lt;em&gt;json&lt;/em&gt;, for example one could create a list from this &lt;em&gt;json&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;Recently I have been implementing &lt;em&gt;Google AMP pages&lt;/em&gt; in my site. Everything was going well until I decide to implement lists with &lt;code&gt;amp-mustache&lt;/code&gt;. &lt;a href=&#34;https://www.ampproject.org/docs/reference/extended/amp-mustache.html&#34; title=&#34;Docs for amp-mustache&#34; target=&#34;_blank&#34;&gt;This component&lt;/a&gt; of &lt;em&gt;AMP&lt;/em&gt; allows to populate elements from a &lt;em&gt;json&lt;/em&gt;, for example one could create a list from this &lt;em&gt;json&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;quot;items&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -237,8 +237,8 @@ emerge -u nss
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ampbyexample.com/components/amp-list/&#34; title=&#34;Amp reference for amp-list&#34;&gt;ampbyexample.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/38672182/1612432&#34; title=&#34;Error trying to implement amp-mustache&#34;&gt;My question in StackOverflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ampbyexample.com/components/amp-list/&#34; title=&#34;Amp reference for amp-list&#34; target=&#34;_blank&#34;&gt;ampbyexample.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/38672182/1612432&#34; title=&#34;Error trying to implement amp-mustache&#34; target=&#34;_blank&#34;&gt;My question in StackOverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

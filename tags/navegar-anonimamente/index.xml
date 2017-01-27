@@ -15,10 +15,10 @@
       
       <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;1-introducción&#34;&gt;1. Introducción&lt;/h2&gt;
@@ -48,7 +48,7 @@
 
 &lt;p&gt;El sitio oficial de Tor recomienda que usemos el boton Torbutton como parte del Tor Browser Bundle y no instalar Torbutton nosotros mismos ya que un error humano puede resultar por configurar Firefox de manera incorrecta. Esto podría entonces implicar falta de seguridad y liberación de información privada. Torbutton solía integrarse a Firefox por medio de un plugin y teníamos la posibilidad de instalarlo manualmente, pero luego fue removido de los addons, por lo que nos obliga a usarlo junto con Tor Browser Bundle.&lt;/p&gt;
 
-&lt;p&gt;Veamos los factores que pueden comprometer la seguridad de Torbutton en la red &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Veamos los factores que pueden comprometer la seguridad de Torbutton en la red &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Exit Node o Upstream Router
@@ -75,7 +75,7 @@
 
 &lt;p&gt;Podemos ver que el anonimato del usuario puede ser fácilmente violado si un atacante puede obtener acceso a la red local, routers entre las redes locales, e ISP a un nodo de entrada de Tor (o un nodo de salida de Tor al sitio web destino) incluyendo el sitio web mismo. Por favor pon atención a que no cualquier nodo es parte de la red Tor. Si pensamos un poco en esto, todo tiene sentido. Dado que todas las conexiones están encriptadas, es solo la red Tor misma la que no es vulnerable, por lo que el atacante no puede inyectar código malicioso como respuesta a nuestra petición.&lt;/p&gt;
 
-&lt;p&gt;Ahora veamos cómo un atacante puede comprometer el anonimato de un usuario final: Primero necesitamos asumir que un atacante puede inyectar una respuesta arbitraria dentro de nuestro navegador como describimos antes. Los posibles vectores de ataque se resumen a continuación &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Ahora veamos cómo un atacante puede comprometer el anonimato de un usuario final: Primero necesitamos asumir que un atacante puede inyectar una respuesta arbitraria dentro de nuestro navegador como describimos antes. Los posibles vectores de ataque se resumen a continuación &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
 
 &lt;h3 id=&#34;inserción-de-javascript&#34;&gt;Inserción de JavaScript&lt;/h3&gt;
 
@@ -205,9 +205,9 @@ tsocks
       
       <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; target=&#34;_blank&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -263,7 +263,7 @@ tsocks
 
 &lt;p&gt;Configura los servicios que queremos que los clientes accedan a través de nuestro Tor relay. Podemos elegir de:  websites (port 80), secure websites (port 443), mail systems (ports 110, 143, 25), instant messaging, IRC y otros servicios.&lt;/p&gt;
 
-&lt;p&gt;Pero debemos discutir lo más importante de configurar Tor relay: ¿Debemos configura un Tor relay de tipo exit o non-exit? En la introducción ya hemos discutido la diferencia entre cada uno, y los siguientes puntos están resumidos de &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;1&lt;/a&gt; y deberían presentar una imagen clara respecto a qué tipo de nodo queremos correr.&lt;/p&gt;
+&lt;p&gt;Pero debemos discutir lo más importante de configurar Tor relay: ¿Debemos configura un Tor relay de tipo exit o non-exit? En la introducción ya hemos discutido la diferencia entre cada uno, y los siguientes puntos están resumidos de &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt; y deberían presentar una imagen clara respecto a qué tipo de nodo queremos correr.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;No corras un nodo exit de una conexión a internet de casa, porque llamará la atención de la red doméstica. Usualmente esto no debería ser muy problemático, pero en algunos paises ha habido captura de equipos en cuentas corriendo nodos exit. Una mejor manera de retribuir a la comunidad Tor mientras usas tu conexión a internet doméstica es configurando un nodo no-exit o un nodo bridge.&lt;/li&gt;
@@ -281,7 +281,7 @@ Nickname Unnamed
 RelayBandwidthBurst 10485760
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Describamos las variables de configuración - resumidas de  &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;2&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Describamos las variables de configuración - resumidas de  &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34; target=&#34;_blank&#34;&gt;2&lt;/a&gt;:&lt;/p&gt;
 
 &lt;h3 id=&#34;dirport&#34;&gt;DirPort&lt;/h3&gt;
 
@@ -362,7 +362,7 @@ En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay est�
 
 &lt;p&gt;Hemos buscado la cadena &amp;#8220;abracadabra&amp;#8221;, la cual es el alias de nuestro relay, por lo tanto está funcionando. La IP externa está enmascarada con xxx.xxx.xxx.xxx para la imagen, pero la dirección está realmente, por lo que es otra confirmación de que el relay no es anónimo y su IP externa es visible. La imagen también nos muestra qué puertos el relay dejará atravesar (80 y 443), el ancho de banda disponible y la versión de Tor que está corriendo, más alguna otra extraña cadena &amp;#8220;CwGinCP3xw5S0orVqecCNxQ7fUw”, de la que no tenemos información sobre qué significa.&lt;/p&gt;
 
-&lt;p&gt;La imagen presentada también tiene un hipervínculo “b20yYC0pV6WSYHT0mq+h6i27Ke0″, que apunta a &lt;a href=&#34;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&#34;&gt;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&lt;/a&gt;. Esta dirección revela la información mostrada en la siguiente imagen:&lt;/p&gt;
+&lt;p&gt;La imagen presentada también tiene un hipervínculo “b20yYC0pV6WSYHT0mq+h6i27Ke0″, que apunta a &lt;a href=&#34;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&#34; target=&#34;_blank&#34;&gt;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&lt;/a&gt;. Esta dirección revela la información mostrada en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn7&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn7.png&#34; width=&#34;643px&#34; height=&#34;215px&#34;&gt;&lt;/amp-img&gt;

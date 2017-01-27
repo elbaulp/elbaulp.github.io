@@ -44,7 +44,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Dou Security&lt;/em&gt;&lt;/strong&gt; encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificación de dos factores de Google&lt;/a&gt; y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Dou Security&lt;/em&gt;&lt;/strong&gt; encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34; target=&#34;_blank&#34;&gt;autentificación de dos factores de Google&lt;/a&gt; y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Bypassing-Google-Two-Factor-Authentication.jpg&#34; alt=&#34;Bypassing Google Two Factor Authentication&#34; width=&#34;460px&#34; height=&#34;349px&#34; /&gt;
 &lt;!--ad--&gt;&lt;/p&gt;
@@ -69,7 +69,7 @@
 &lt;p&gt;Las ASPs son Tokens especializados generados para cada aplicación que el usuario usa en lugar de la combinación contraseña/token. Duo Security descubrió que los ASPs en ralidad no eran específicos para aplicaciones, de hecho, un único código podría usarse para loggearse en casi cualquier aplicación Web de Google debido a la característica del auto-login.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;“En definitiva, usando solamente un nombre de usuario, un ASP y una simple petición a &lt;a href=&#34;https://android.clients.google.com/auth&#34;&gt;https://android.clients.google.com/auth&lt;/a&gt;, es posible acceder a cualquier aplicación web de Google sin necesidad de que se nos soliciten datos de login (o verificación en dos pasos)”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“En definitiva, usando solamente un nombre de usuario, un ASP y una simple petición a &lt;a href=&#34;https://android.clients.google.com/auth&#34; target=&#34;_blank&#34;&gt;https://android.clients.google.com/auth&lt;/a&gt;, es posible acceder a cualquier aplicación web de Google sin necesidad de que se nos soliciten datos de login (o verificación en dos pasos)”&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Los investigadores comunicaron la vulnerabilidad a Google y el problema ya ha sido arreglado.&lt;/p&gt;

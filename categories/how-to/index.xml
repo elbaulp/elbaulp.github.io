@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</guid>
-      <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
+      <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34; target=&#34;_blank&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -27,12 +27,12 @@
 &lt;pre&gt;&lt;code&gt;__negrita__, **negrita**, *cursiva*,_cursiva_
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;enlaces-en-línea-2&#34;&gt;Enlaces en &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Texto alternativo&#34;&gt;línea&lt;/a&gt;:&lt;/h4&gt;
+&lt;h4 id=&#34;enlaces-en-línea-2&#34;&gt;Enlaces en &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Texto alternativo&#34; target=&#34;_blank&#34;&gt;línea&lt;/a&gt;:&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;Un [enlace](/ &amp;quot;Texto alternativo&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;enlaces-referenciados-1&#34;&gt;Enlaces &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;referenciados&lt;/a&gt;:&lt;/h4&gt;
+&lt;h4 id=&#34;enlaces-referenciados-1&#34;&gt;Enlaces &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34; target=&#34;_blank&#34;&gt;referenciados&lt;/a&gt;:&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;[referenciados][1], en cualquier parte del texto debe haber [1]: http://enlace. &amp;quot;titulo&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
@@ -47,7 +47,7 @@
 &lt;pre&gt;&lt;code&gt;![Alt][2] Al igual que en los enlaces referenciados, en algún lugar del texto debe aparecer [2]: Ruta/a/la/imagen &amp;quot;Titulo&amp;quot;.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;imágenes-enlazadas-texto-alternativo-4-5&#34;&gt;Imágenes enlazadas: &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Imágenes enlazadas&#34;&gt;&lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Texto Alternativo&#34; /&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;imágenes-enlazadas-texto-alternativo-4-5&#34;&gt;Imágenes enlazadas: &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Imágenes enlazadas&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Texto Alternativo&#34; /&gt;&lt;/a&gt;&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;[![Texto Alternativo](/img/2013/12/favicon.ico)](/ &amp;quot;Imágenes enlazadas&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
@@ -181,7 +181,7 @@ cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/Chuleta-de-comandos-GPG.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
+&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
 
 &lt;p&gt;He usado el “&lt;strong&gt;Nombre de Usuario&lt;/strong&gt;” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es &lt;em&gt;Charles Lockhart&lt;/em&gt;, pero puedo referenciarlo simplemente poniendo Lockhart.&lt;/p&gt;
 
@@ -306,8 +306,8 @@ Como por ejemplo:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;compartir-claves-secretas&#34;&gt;Compartir Claves Secretas&lt;/h1&gt;
@@ -335,14 +335,14 @@ Como por ejemplo:&lt;/p&gt;
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</guid>
-      <description>&lt;p&gt;Hace poco hablé de qué eran los &lt;a href=&#34;https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/&#34;&gt;sistemas de paquetes PPA&lt;/a&gt;, para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.&lt;/p&gt;
+      <description>&lt;p&gt;Hace poco hablé de qué eran los &lt;a href=&#34;https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/&#34; target=&#34;_blank&#34;&gt;sistemas de paquetes PPA&lt;/a&gt;, para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Antes de nada, debemos crear una cuenta en &lt;a href=&#34;https://login.launchpad.net/+new_account&#34; target=&#34;_blank&#34;&gt;Launchpad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Una vez creada, nos dirigimos al panel principal de nuestra cuenta, que será &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Ya en el panel de control, hay que hacer clic en &amp;#8220;Create a new PPA&amp;#8221;, que nos lleva a &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&lt;/a&gt;, en esta página rellenamos los datos de nuestro PPA y lo activamos.&lt;/li&gt;
+&lt;li&gt;Una vez creada, nos dirigimos al panel principal de nuestra cuenta, que será &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO&#34; target=&#34;_blank&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Ya en el panel de control, hay que hacer clic en &amp;#8220;Create a new PPA&amp;#8221;, que nos lleva a &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&#34; target=&#34;_blank&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&lt;/a&gt;, en esta página rellenamos los datos de nuestro PPA y lo activamos.&lt;/li&gt;
 &lt;li&gt;Tras activar el PPA, es necesario subir paquetes al sistema, hay &lt;a target=&#34;_blank&#34; href=&#34;https://help.launchpad.net/Packaging/PPA/Uploading&#34;&gt;varias formas de hacerlo&lt;/a&gt;, pero la más sencilla es la siguiente:&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -387,7 +387,7 @@ Como por ejemplo:&lt;/p&gt;
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</guid>
-      <description>&lt;p&gt;A lo largo de los años he probado varios gestores de ventanas, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/&#34;&gt;openbox&lt;/a&gt; y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.&lt;/p&gt;
+      <description>&lt;p&gt;A lo largo de los años he probado varios gestores de ventanas, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/&#34; target=&#34;_blank&#34;&gt;openbox&lt;/a&gt; y el más reciente xmonad, casi puedo decir que es el definitivo por su capacidad de configuración.&lt;/p&gt;
 
 &lt;p&gt;La &lt;a href=&#34;http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration&#34; target=&#34;_blank&#34;&gt;instalación&lt;/a&gt; es muy sencilla. En este artículo voy a profundizar más en los dos aspectos que más problemas me han causado, configurar apropiadamente trayer y establecer fondos de pantalla aleatoriamente.&lt;/p&gt;
 
@@ -575,7 +575,7 @@ feh --bg-fill $picsfolder$randomfile1
 
 &lt;p&gt;Así luce mi escritorio con xmonad:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34; alt=&#34;xmonad Desktop&#34; width=&#34;1024px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312.png&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34; alt=&#34;xmonad Desktop&#34; width=&#34;1024px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
@@ -588,7 +588,7 @@ feh --bg-fill $picsfolder$randomfile1
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</guid>
-      <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/android&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
+      <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/android&#34; target=&#34;_blank&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -598,7 +598,7 @@ feh --bg-fill $picsfolder$randomfile1
 
 &lt;h4 id=&#34;desactivar-la-opción-simulate-secondary-displays-simular-pantallas-secundarias&#34;&gt;Desactivar la opción Simulate secondary displays (Simular pantallas secundarias)&lt;/h4&gt;
 
-&lt;p&gt;La respuesta concretamente la encontré en el foro de &lt;a href=&#34;https://elbauldelprogramador.com/xda&#34;&gt;XDA&lt;/a&gt;. Como sabía que el problema lo había causado la opción &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de &lt;em&gt;rescate o modo seguro&lt;/em&gt; que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:&lt;/p&gt;
+&lt;p&gt;La respuesta concretamente la encontré en el foro de &lt;a href=&#34;https://elbauldelprogramador.com/xda&#34; target=&#34;_blank&#34;&gt;XDA&lt;/a&gt;. Como sabía que el problema lo había causado la opción &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de &lt;em&gt;rescate o modo seguro&lt;/em&gt; que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Screenshot_2013-03-03-13-48-30.png&#34; alt=&#34;Safe Mode in Android o Modo rescate en Android&#34; width=&#34;480px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
 
@@ -631,7 +631,7 @@ feh --bg-fill $picsfolder$randomfile1
 
 &lt;p&gt;Configura tu Sentinella con las mismas opciones de la imagen, pero asegurate que eliges tu interfaz de red correcta. Pulsa Start y listo!.&lt;/p&gt;
 
-&lt;p&gt;Fuente: &lt;a href=&#34;http://www.howtoforge.com/how-to-automatically-shut-down-your-computer-after-a-download-finishes&#34;&gt;howtoforge&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Fuente: &lt;a href=&#34;http://www.howtoforge.com/how-to-automatically-shut-down-your-computer-after-a-download-finishes&#34; target=&#34;_blank&#34;&gt;howtoforge&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -643,7 +643,7 @@ feh --bg-fill $picsfolder$randomfile1
       <description>
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/05/Screenshot-05302012-111511-AM1.png&#34; alt=&#34;Wordpress&#34; width=&#34;123px&#34; height=&#34;116px&#34; /&gt;
-Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
+Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34; target=&#34;_blank&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );&lt;/span&gt;
@@ -893,7 +893,7 @@ List of devices attached
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-conocer-el-software-no-libre/</guid>
-      <description>&lt;p&gt;Este programa lo ví en &lt;a href=&#34;http://proyectosbeta.blogspot.com&#34;&gt;ProyectosBeta&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Este programa lo ví en &lt;a href=&#34;http://proyectosbeta.blogspot.com&#34; target=&#34;_blank&#34;&gt;ProyectosBeta&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Seguro que en nuestro equipo tenemos montones de aplicaciones instaladas, de las cuales muchas serán &lt;strong&gt;no libres&lt;/strong&gt;, con el programita &lt;strong&gt;vrms&lt;/strong&gt; podemos conocerlos de forma sencilla.&lt;/p&gt;
 
@@ -923,7 +923,7 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;256&#34; width=&#34;238&#34; src=&#34;https://3.bp.blogspot.com/-Hur9i5TORyM/TdN5Q19CliI/AAAAAAAAAgU/rhmM1JOnJao/s400/stallman.png&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Fuente: &lt;a href=&#34;http://proyectosbeta.blogspot.com/2011/05/crear-la-cara-de-richard-stallmann-con.html&#34;&gt;Proyectosbeta&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Fuente: &lt;a href=&#34;http://proyectosbeta.blogspot.com/2011/05/crear-la-cara-de-richard-stallmann-con.html&#34; target=&#34;_blank&#34;&gt;Proyectosbeta&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1069,7 +1069,7 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/adapter-personalizado-en-android/</guid>
-      <description>&lt;p&gt;Hace tiempo que hablé de cómo crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;adapter simple&lt;/a&gt;, y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34;&gt;otro&lt;/a&gt; un poco más personalizado en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;Android&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Hace tiempo que hablé de cómo crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34; target=&#34;_blank&#34;&gt;adapter simple&lt;/a&gt;, y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34; target=&#34;_blank&#34;&gt;otro&lt;/a&gt; un poco más personalizado en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; target=&#34;_blank&#34;&gt;Android&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;En esta entrada se verá cómo crear un adapter desde cero, con algunas funcionalidades más.&lt;/p&gt;
 
@@ -1089,7 +1089,7 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;aligncenter  wp-image-964&#34; title=&#34;principal&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/principal1.png&#34; alt=&#34;adapter android&#34; width=&#34;484px&#34; height=&#34;807px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Antes de nada, hay que crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;layout&lt;/a&gt; que define cómo ha de verse cada fila del ListView:&lt;/p&gt;
+&lt;p&gt;Antes de nada, hay que crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34; target=&#34;_blank&#34;&gt;layout&lt;/a&gt; que define cómo ha de verse cada fila del ListView:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;relativelayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/LinearLayout1&amp;quot;&lt;/span&gt;
@@ -1474,7 +1474,7 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 
 &lt;h1 id=&#34;mantener-el-estado-de-los-checkbox-al-girar-la-pantalla&#34;&gt;Mantener el estado de los checkbox al girar la pantalla&lt;/h1&gt;
 
-&lt;p&gt;Por último, hay otro problema a la hora de mantener los checkbox activados al girar la pantalla. Se debe a que cada vez que cambia la orientación del teléfono, la &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;activity&lt;/a&gt; se crea de nuevo (se llama al método &lt;code&gt;onCreate()&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Por último, hay otro problema a la hora de mantener los checkbox activados al girar la pantalla. Se debe a que cada vez que cambia la orientación del teléfono, la &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34; target=&#34;_blank&#34;&gt;activity&lt;/a&gt; se crea de nuevo (se llama al método &lt;code&gt;onCreate()&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;Para mantener los datos se necesita hacer uso de &lt;code&gt;onSaveInstanceState&lt;/code&gt;, el cual se llama justo antes de destruir la actividad, permietiendo guardar los datos para recuperarlos posteriormente desde &lt;code&gt;onRestoreInstanceState()&lt;/code&gt; o &lt;code&gt;onCreate()&lt;/code&gt;&lt;/p&gt;
 

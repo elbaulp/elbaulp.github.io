@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/tunning-basico-de-sql/</guid>
-      <description>&lt;p&gt;Hemos llegado al fin del temario de base de datos, todo lo que he ido escribiendo a lo largo de estos meses lo encontrarás en la página de &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;Base de Datos&lt;/a&gt;. El último tema de este curso va a tratar de &lt;strong&gt;Tunning básico de SQL&lt;/strong&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Hemos llegado al fin del temario de base de datos, todo lo que he ido escribiendo a lo largo de estos meses lo encontrarás en la página de &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;Base de Datos&lt;/a&gt;. El último tema de este curso va a tratar de &lt;strong&gt;Tunning básico de SQL&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;tunning-básico-de-sql&#34;&gt;Tunning básico de SQL&lt;/h2&gt;
 
@@ -31,8 +31,8 @@
 &lt;ul&gt;
 &lt;li&gt;Las condiciones (tanto de filtro como de join) deben ir siempre en el orden en que esté definido el índice. Si no hubiese índice por las columnas utilizadas, se puede estudiar la posibilidad de añadirlo, ya que tener índices de más sólo penaliza los tiempos de inserción, actualización y borrado, pero no de consulta.&lt;/li&gt;
 &lt;li&gt;Evitar la condiciones &lt;code&gt;IN ( SELECT...)&lt;/code&gt; sustituyéndolas por &lt;code&gt;joins&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Colocar la tabla que devuelve menor número de registros en el último lugar del &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-from/&#34;&gt;FROM&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Una consulta cualificada con la cláusula &lt;code&gt;DISTINTC&lt;/code&gt; debe ser ordenada por el servidor aunque no se incluya la cláusula &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34;&gt;&lt;code&gt;ORDER BY&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Colocar la tabla que devuelve menor número de registros en el último lugar del &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-from/&#34; target=&#34;_blank&#34;&gt;FROM&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Una consulta cualificada con la cláusula &lt;code&gt;DISTINTC&lt;/code&gt; debe ser ordenada por el servidor aunque no se incluya la cláusula &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ORDER BY&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

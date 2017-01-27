@@ -33,7 +33,7 @@
 
 &lt;h3 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34; target=&#34;_blank&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
 
 &lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
@@ -76,7 +76,7 @@ lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34
 &lt;li&gt;Una vez escrita la expresión regular, se nos pide confirmación para cada fichero, podemos pulsar &lt;code&gt;espacio&lt;/code&gt; para reemplazar la expresión en el fichero, &lt;code&gt;n&lt;/code&gt; para descartarla, o &lt;code&gt;A&lt;/code&gt; para reemplazar la expresión en todos los ficheros.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34; target=&#34;_blank&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h3&gt;
 
@@ -113,7 +113,7 @@ línea 4
 &lt;li&gt;&lt;code&gt;M-x string-insert-rectangle RET string RET&lt;/code&gt;: Inserta &lt;em&gt;string&lt;/em&gt; en cada línea del rectángulo.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34; target=&#34;_blank&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h3&gt;
 
@@ -141,7 +141,7 @@ línea 4
  Fusce vestibulum.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34; target=&#34;_blank&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h3&gt;
 
@@ -170,7 +170,7 @@ línea 4
 
 &lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34; target=&#34;_blank&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h3&gt;
 
@@ -192,7 +192,7 @@ línea 4
 &lt;li&gt;Pulsar &lt;code&gt;S&lt;/code&gt;, para guardar los ficheros seleccionados&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34; target=&#34;_blank&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;alinear-verticalmente-código-en-base-al-signo&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h3&gt;
 
@@ -217,11 +217,11 @@ línea 4
 &lt;li&gt;&lt;code&gt;M-x untabify&lt;/code&gt;: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Fuente: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fuente: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34; target=&#34;_blank&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;tu-turno&#34;&gt;Tu Turno&lt;/h1&gt;
 
-&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;em&gt;Pull Requests&lt;/em&gt; al siguiente &lt;em&gt;gist&lt;/em&gt;: &lt;a href=&#34;https://gist.github.com/algui91/9be4d82ba09f18562d1cfda2eb325eed&#34; title=&#34;Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md&#34;&gt;Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;em&gt;Pull Requests&lt;/em&gt; al siguiente &lt;em&gt;gist&lt;/em&gt;: &lt;a href=&#34;https://gist.github.com/algui91/9be4d82ba09f18562d1cfda2eb325eed&#34; title=&#34;Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md&#34; target=&#34;_blank&#34;&gt;Chuleta De Comandos/Atajos De Teclado/Paquetes/ más útiles para Emacs.md&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Esperamos vuestras colaboraciones!&lt;/p&gt;</description>
     </item>
@@ -232,7 +232,7 @@ línea 4
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</guid>
-      <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
+      <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34; target=&#34;_blank&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -245,12 +245,12 @@ línea 4
 &lt;pre&gt;&lt;code&gt;__negrita__, **negrita**, *cursiva*,_cursiva_
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;enlaces-en-línea-2&#34;&gt;Enlaces en &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Texto alternativo&#34;&gt;línea&lt;/a&gt;:&lt;/h4&gt;
+&lt;h4 id=&#34;enlaces-en-línea-2&#34;&gt;Enlaces en &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Texto alternativo&#34; target=&#34;_blank&#34;&gt;línea&lt;/a&gt;:&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;Un [enlace](/ &amp;quot;Texto alternativo&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;enlaces-referenciados-1&#34;&gt;Enlaces &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;referenciados&lt;/a&gt;:&lt;/h4&gt;
+&lt;h4 id=&#34;enlaces-referenciados-1&#34;&gt;Enlaces &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34; target=&#34;_blank&#34;&gt;referenciados&lt;/a&gt;:&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;[referenciados][1], en cualquier parte del texto debe haber [1]: http://enlace. &amp;quot;titulo&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
@@ -265,7 +265,7 @@ línea 4
 &lt;pre&gt;&lt;code&gt;![Alt][2] Al igual que en los enlaces referenciados, en algún lugar del texto debe aparecer [2]: Ruta/a/la/imagen &amp;quot;Titulo&amp;quot;.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;imágenes-enlazadas-texto-alternativo-4-5&#34;&gt;Imágenes enlazadas: &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Imágenes enlazadas&#34;&gt;&lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Texto Alternativo&#34; /&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;imágenes-enlazadas-texto-alternativo-4-5&#34;&gt;Imágenes enlazadas: &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Imágenes enlazadas&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Texto Alternativo&#34; /&gt;&lt;/a&gt;&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;[![Texto Alternativo](/img/2013/12/favicon.ico)](/ &amp;quot;Imágenes enlazadas&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
@@ -399,7 +399,7 @@ cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/Chuleta-de-comandos-GPG.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
+&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
 
 &lt;p&gt;He usado el “&lt;strong&gt;Nombre de Usuario&lt;/strong&gt;” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es &lt;em&gt;Charles Lockhart&lt;/em&gt;, pero puedo referenciarlo simplemente poniendo Lockhart.&lt;/p&gt;
 
@@ -524,8 +524,8 @@ Como por ejemplo:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;compartir-claves-secretas&#34;&gt;Compartir Claves Secretas&lt;/h1&gt;
@@ -553,7 +553,7 @@ Como por ejemplo:&lt;/p&gt;
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &amp;#8212; entre otras cosas &amp;#8212; para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &amp;#8212; entre otras cosas &amp;#8212; para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -656,7 +656,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 233.34.194.173.in-addr.arpa. &lt;span class=&#34;m&#34;&gt;83265&lt;/span&gt; IN  PTR mad01s09-in-f9.1e100.net.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; target=&#34;_blank&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
@@ -764,7 +764,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; : puntero a commit ( branch que no cambia )&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;#45;a &amp;lt;tagname&amp;gt; &amp;#45;m &amp;#8216;mensaje&amp;#8217;&lt;/strong&gt;   #  annotated tag&lt;/p&gt;&lt;/li&gt;

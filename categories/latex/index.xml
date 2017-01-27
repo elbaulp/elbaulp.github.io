@@ -34,7 +34,7 @@
 
 &lt;h2 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h2&gt;
 
-&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
+&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34; target=&#34;_blank&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
   canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
   hgrid style/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
@@ -148,7 +148,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; alt=&#34;latex_logo&#34; width=&#34;300px&#34; height=&#34;114px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Como he mencionado en algún &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Resaltar sintaxis del código fuente en LaTeX con minted&#34;&gt;artículo anterior&lt;/a&gt;, he aprendido bastante a programar en LaTeX reescribiendo el &lt;a href=&#34;https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/&#34; title=&#34;Disponible la primera parte del curso Android en PDF&#34;&gt;curso de Android&lt;/a&gt;. Hoy vamos a ver cómo crear un pie de página en LaTeX.&lt;/p&gt;
+&lt;p&gt;Como he mencionado en algún &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Resaltar sintaxis del código fuente en LaTeX con minted&#34; target=&#34;_blank&#34;&gt;artículo anterior&lt;/a&gt;, he aprendido bastante a programar en LaTeX reescribiendo el &lt;a href=&#34;https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/&#34; title=&#34;Disponible la primera parte del curso Android en PDF&#34; target=&#34;_blank&#34;&gt;curso de Android&lt;/a&gt;. Hoy vamos a ver cómo crear un pie de página en LaTeX.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -226,8 +226,8 @@
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX – Introducción&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX – Introducción&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -310,7 +310,7 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 
 &lt;h2 id=&#34;cabeceras-de-los-documentos&#34;&gt;Cabeceras de los documentos&lt;/h2&gt;
 
-&lt;p&gt;Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/&#34; title=&#34;Pie de página con FancyHdr&#34;&gt;post&lt;/a&gt; sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete &lt;strong&gt;fancyhdr&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/&#34; title=&#34;Pie de página con FancyHdr&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete &lt;strong&gt;fancyhdr&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para personalizar la cabecera y el pie de pagina&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -372,15 +372,15 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;li&gt;Cada vez que quieras compilar, presiona control+b, teniendo elegido el build system de LaTeX que has creado.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar ATOM&#34;&gt;Atom&lt;/a&gt; hay un paquete para compilar LaTeX pulsando control+alt+b.&lt;/p&gt;
+&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar ATOM&#34; target=&#34;_blank&#34;&gt;Atom&lt;/a&gt; hay un paquete para compilar LaTeX pulsando control+alt+b.&lt;/p&gt;
 
-&lt;p&gt;Si trabajáis en Windows, probad a trabajar con un programa llamado &lt;a href=&#34;http://miktex.org/&#34; title=&#34;MikTeX&#34;&gt;MikTeX&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Si trabajáis en Windows, probad a trabajar con un programa llamado &lt;a href=&#34;http://miktex.org/&#34; title=&#34;MikTeX&#34; target=&#34;_blank&#34;&gt;MikTeX&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Y para Mac OS X, si no tengo mal entendido, podéis usar cualquiera de las dos alternativas.&lt;/p&gt;
 
 &lt;p&gt;Y con esto, ya tenemos un portafolios de prácticas bonito, bien presentado y estructurado. Por supuesto, con LaTeX se pueden hacer muchas más cosas, pero no me he querido meter muy a fondo en un curso introductorio.&lt;/p&gt;
 
-&lt;p&gt;Espero que os haya gustado este curso y os haya servido como base para aprender LaTeX, podéis consultar el fichero fuente que he utilizado yo en &lt;a href=&#34;https://github.com/mgmacias95/CursoLaTex/&#34; title=&#34;github&#34;&gt;github&lt;/a&gt; (también os he incluido en el repositorio el fichero .h y la imagen para que lo podáis compilar y trastear con él todo lo que queráis).&lt;/p&gt;
+&lt;p&gt;Espero que os haya gustado este curso y os haya servido como base para aprender LaTeX, podéis consultar el fichero fuente que he utilizado yo en &lt;a href=&#34;https://github.com/mgmacias95/CursoLaTex/&#34; title=&#34;github&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt; (también os he incluido en el repositorio el fichero .h y la imagen para que lo podáis compilar y trastear con él todo lo que queráis).&lt;/p&gt;
 
 &lt;p&gt;Quiero despedirme no sin antes dedicar todo esto a mi profesor, Francisco Miguel García, ya que sin su ayuda seguramente aún seguiría haciendo mis documentos con el Microsoft Word y a mi amigo, Alejandro Alcalde, por dejarme publicarlo en su blog y llegar así a más gente.&lt;/p&gt;
 
@@ -399,9 +399,9 @@ Marta.&lt;/p&gt;</description>
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX - Introducción&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX - Introducción&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
@@ -412,7 +412,7 @@ Marta.&lt;/p&gt;</description>
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Código del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete &lt;strong&gt;minted&lt;/strong&gt;. En El baúl del programador ya hay una &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Intro a Minted&#34;&gt;pequeña guía&lt;/a&gt; sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:&lt;/p&gt;
+&lt;p&gt;Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete &lt;strong&gt;minted&lt;/strong&gt;. En El baúl del programador ya hay una &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Intro a Minted&#34; target=&#34;_blank&#34;&gt;pequeña guía&lt;/a&gt; sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -512,7 +512,7 @@ Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
 Por tanto, tal y como dijimos antes, la eficiencia del bucle es de &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;s.size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una &lt;a href=&#34;http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html&#34; title=&#34;lista&#34;&gt;lista&lt;/a&gt; de algunos símbolos que podéis usar.&lt;/p&gt;
+&lt;p&gt;Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una &lt;a href=&#34;http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html&#34; title=&#34;lista&#34; target=&#34;_blank&#34;&gt;lista&lt;/a&gt; de algunos símbolos que podéis usar.&lt;/p&gt;
 
 &lt;p&gt;Ahora seguiríamos con nuestro análisis de la eficiencia:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
@@ -571,8 +571,8 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 
 &lt;ul&gt;
 &lt;li&gt;Mini Curso de LaTeX - Introducción&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
@@ -744,7 +744,7 @@ Notación infija &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; Notación
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/</guid>
-      <description>&lt;p&gt;Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en que he reescrito el &lt;a href=&#34;https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/&#34;&gt;Curso de programación Android&lt;/a&gt; por completo.&lt;/p&gt;
+      <description>&lt;p&gt;Hace unas semanas que aprendí a usar $$\LaTeX$$, y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en que he reescrito el &lt;a href=&#34;https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/&#34; target=&#34;_blank&#34;&gt;Curso de programación Android&lt;/a&gt; por completo.&lt;/p&gt;
 
 &lt;p&gt;Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama &lt;strong&gt;minted&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1017,7 +1017,7 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
-&lt;p&gt;Custom Colors in LaTeX | &lt;a href=&#34;http://texblog.org/2015/12/08/custom-colors-in-latex/&#34;&gt;texblog.org&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Custom Colors in LaTeX | &lt;a href=&#34;http://texblog.org/2015/12/08/custom-colors-in-latex/&#34; target=&#34;_blank&#34;&gt;texblog.org&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1026,7 +1026,7 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
       <pubDate>Thu, 19 Nov 2015 09:20:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/</guid>
-      <description>&lt;p&gt;Si trabajas habitualmente con &lt;a href=&#34;https://elbauldelprogramador.com/category/latex/&#34; title=&#34;Tutoriales sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt;, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabaja limpio.&lt;/p&gt;
+      <description>&lt;p&gt;Si trabajas habitualmente con &lt;a href=&#34;https://elbauldelprogramador.com/category/latex/&#34; title=&#34;Tutoriales sobre LaTeX&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt;, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabaja limpio.&lt;/p&gt;
 
 &lt;h2 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h2&gt;
 
@@ -1078,7 +1078,7 @@ ln -s metafiles/main.pdf
 
 &lt;h2 id=&#34;usando-latexmk&#34;&gt;Usando latexmk&lt;/h2&gt;
 
-&lt;p&gt;Para aportar algo al artículo de &lt;em&gt;Tom&lt;/em&gt;, miré la documentación de LatexMK, &lt;a href=&#34;https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/&#34; title=&#34;Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos&#34;&gt;comando que ya hemos visto en este blog&lt;/a&gt;, y tiene la opción &lt;code&gt;-output-directory&lt;/code&gt; que permite especificar donde se guardaran todos los metaficheros, su uso es simple:&lt;/p&gt;
+&lt;p&gt;Para aportar algo al artículo de &lt;em&gt;Tom&lt;/em&gt;, miré la documentación de LatexMK, &lt;a href=&#34;https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/&#34; title=&#34;Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos&#34; target=&#34;_blank&#34;&gt;comando que ya hemos visto en este blog&lt;/a&gt;, y tiene la opción &lt;code&gt;-output-directory&lt;/code&gt; que permite especificar donde se guardaran todos los metaficheros, su uso es simple:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;latexmk -shell-escape -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main.tex
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1183,7 +1183,7 @@ $ mlatexmkx &lt;span class=&#34;c1&#34;&gt;# Para compilar con xelatex&lt;/span&
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://tex.stackexchange.com/questions/193555/crop-jpeg-into-circular-tikz-node&#34; title=&#34;Crop jpeg into circular tikz node&#34;&gt;Crop jpeg into circular tikz node&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;http://tex.stackexchange.com/questions/193555/crop-jpeg-into-circular-tikz-node&#34; title=&#34;Crop jpeg into circular tikz node&#34; target=&#34;_blank&#34;&gt;Crop jpeg into circular tikz node&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -37,7 +37,7 @@ gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
 gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; target=&#34;_blank&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Los posibles argumentos de cada herramienta son los siguientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./unhide-tcp --help

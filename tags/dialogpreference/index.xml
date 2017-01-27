@@ -16,7 +16,7 @@
       <guid>https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/</guid>
       <description>&lt;p&gt;Este año estoy participando en el &lt;a href=&#34;http://www.concursosoftwarelibre.org/1314/&#34; title=&#34;CUSL&#34; target=&#34;_blank&#34;&gt;concurso universitario de software libre&lt;/a&gt;, concretamente en el proyecto &lt;a href=&#34;http://swadroid.wordpress.com/&#34; title=&#34;Blog SWADroid&#34; target=&#34;_blank&#34;&gt;SWADroid&lt;/a&gt;. Mi intención es explicar todo lo que vaya aprendiendo mientras participo en el desarrollo del proyecto. Este primer artículo comienza un historial que llevará cuenta de todos los avances logrados.&lt;/p&gt;
 
-&lt;p&gt;La primera tarea que se me asignó fue lograr que el diálogo para introducir la contraseña de usuario en las preferencias se mostrara vacío. Ya que al &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34;&gt;cifrar la contraseña para almacenarla&lt;/a&gt; en el diálogo se mostraba la contraseña cifrada (Con los típicos •••), lo cual podía ser algo desconcertante para el usuario, ya que no veía un número de • que correspondieran con la longitud de su contraseña, si no con la contraseña cifrada.&lt;/p&gt;
+&lt;p&gt;La primera tarea que se me asignó fue lograr que el diálogo para introducir la contraseña de usuario en las preferencias se mostrara vacío. Ya que al &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; target=&#34;_blank&#34;&gt;cifrar la contraseña para almacenarla&lt;/a&gt; en el diálogo se mostraba la contraseña cifrada (Con los típicos •••), lo cual podía ser algo desconcertante para el usuario, ya que no veía un número de • que correspondieran con la longitud de su contraseña, si no con la contraseña cifrada.&lt;/p&gt;
 
 &lt;p&gt;Para explicar cómo conseguir este comportamiento escribiremos una aplicación trivial, enfocada únicamente a explicar todo el proceso.&lt;/p&gt;
 
@@ -24,7 +24,7 @@
 
 &lt;h3 id=&#34;actividad-principal&#34;&gt;Actividad Principal&lt;/h3&gt;
 
-&lt;p&gt;El único propósito de esta &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34; title=&#34;Fundamentos programación Android: Conceptos básicos y componentes&#34;&gt;actividad&lt;/a&gt; es abrir un menú que lanzará nuestras preferencias. Para simplificar el código se muestra sin las sentencias import y package:&lt;/p&gt;
+&lt;p&gt;El único propósito de esta &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34; title=&#34;Fundamentos programación Android: Conceptos básicos y componentes&#34; target=&#34;_blank&#34;&gt;actividad&lt;/a&gt; es abrir un menú que lanzará nuestras preferencias. Para simplificar el código se muestra sin las sentencias import y package:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MainActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 
     &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
@@ -55,7 +55,7 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En el método &lt;code&gt;onOptionsItemSelected&lt;/code&gt; comprobamos qué elemento del &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/&#34; title=&#34;Programación Android: Interfaz gráfica – Menús&#34;&gt;menú&lt;/a&gt; se pulsó y abrimos la correspondiente preferencia, mostraremos a continuación el código para dicha actividad.&lt;/p&gt;
+&lt;p&gt;En el método &lt;code&gt;onOptionsItemSelected&lt;/code&gt; comprobamos qué elemento del &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/&#34; title=&#34;Programación Android: Interfaz gráfica – Menús&#34; target=&#34;_blank&#34;&gt;menú&lt;/a&gt; se pulsó y abrimos la correspondiente preferencia, mostraremos a continuación el código para dicha actividad.&lt;/p&gt;
 
 &lt;h3 id=&#34;crear-una-actividad-para-las-preferencias&#34;&gt;Crear una Actividad para las Preferencias&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyPrefecenceActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PreferenceActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnPreferenceChangeListener&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;

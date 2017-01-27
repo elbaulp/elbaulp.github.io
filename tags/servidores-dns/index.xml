@@ -20,8 +20,8 @@
 
 &lt;ul&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -50,7 +50,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 
 &lt;h3 id=&#34;cual-es-tu-responsabilidad-como-parte-del-sistema-dns&#34;&gt;¿Cual es tu responsabilidad como parte del sistema DNS?&lt;/h3&gt;
 
-&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
+&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
 
 &lt;p&gt;La base de datos del sistema DNS tiene tres niveles. Al primer grupo de servidores se les llama “&lt;strong&gt;servidores root&lt;/strong&gt;”. Al segundo, “&lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt;” o dominios de primer nivel. Cuando se necesita conocer la dirección de una web, el segundo componente de &lt;strong&gt;BIND&lt;/strong&gt; (resolver library) realiza una petición, (De aquí en adelante lo llamaremos &lt;em&gt;resolver&lt;/em&gt;).&lt;/p&gt;
 
@@ -156,9 +156,9 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:&lt;/p&gt;
@@ -268,8 +268,8 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/li&gt;
 &lt;/ul&gt;
 

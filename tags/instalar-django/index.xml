@@ -15,10 +15,10 @@
       
       <guid>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/jneight&#34; title=&#34;Perfil en Github de @jneight&#34;&gt;@Jneight&lt;/a&gt; por actualizar este artículo!&lt;/p&gt;
+&lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/jneight&#34; title=&#34;Perfil en Github de @jneight&#34; target=&#34;_blank&#34;&gt;@Jneight&lt;/a&gt; por actualizar este artículo!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Hacía tiempo que el &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; web &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt; estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Hacía tiempo que el &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34; target=&#34;_blank&#34;&gt;framework&lt;/a&gt; web &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt; estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;instalar-django-bajo-un-entorno-virtual-con-virtualenv&#34;&gt;Instalar django bajo un entorno virtual con virtualenv&lt;/h3&gt;
 
@@ -105,7 +105,7 @@
 
 &lt;h5 id=&#34;configurar-la-base-de-datos&#34;&gt;Configurar la base de datos&lt;/h5&gt;
 
-&lt;p&gt;Para modificar la configuración de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de datos&#34;&gt;base de datos&lt;/a&gt; editamos el fichero &lt;em&gt;mysite/settings.py&lt;/em&gt;, en este tutorial usaremos &lt;em&gt;sqlite&lt;/em&gt; por ser la más sencilla.&lt;/p&gt;
+&lt;p&gt;Para modificar la configuración de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de datos&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; editamos el fichero &lt;em&gt;mysite/settings.py&lt;/em&gt;, en este tutorial usaremos &lt;em&gt;sqlite&lt;/em&gt; por ser la más sencilla.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DATABASES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;s1&#34;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;s1&#34;&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;django.db.backends.sqlite3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Add &amp;#39;postgresql_psycopg2&amp;#39;, &amp;#39;mysql&amp;#39;, &amp;#39;sqlite3&amp;#39; or &amp;#39;oracle&amp;#39;.&lt;/span&gt;
@@ -179,7 +179,7 @@
 &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En &lt;strong&gt;models.py&lt;/strong&gt; se define los modelos que se usarán para crear la base de datos mediante &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-introduccion/&#34; title=&#34;Clases y objetos – Introducción&#34;&gt;clases&lt;/a&gt; en Python. En este caso necesitamos una tabla &lt;em&gt;Poll&lt;/em&gt; (Encuesta) y &lt;em&gt;Choice&lt;/em&gt; (Opción elegida). La encuesta tendrá dos campos, &lt;em&gt;question&lt;/em&gt; y &lt;em&gt;pub_date&lt;/em&gt;. Mientras que la opción elegida tendrá que hacer referencia a qué encuesta pertenece mediante una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34; title=&#34;Lenguaje Definición de Datos(DDL) – CREATE&#34;&gt;foreignKey&lt;/a&gt;, un texto que describa la opción y el número de votos. Dicho esto, el fichero &lt;em&gt;models.py&lt;/em&gt; contendrá:&lt;/p&gt;
+&lt;p&gt;En &lt;strong&gt;models.py&lt;/strong&gt; se define los modelos que se usarán para crear la base de datos mediante &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-introduccion/&#34; title=&#34;Clases y objetos – Introducción&#34; target=&#34;_blank&#34;&gt;clases&lt;/a&gt; en Python. En este caso necesitamos una tabla &lt;em&gt;Poll&lt;/em&gt; (Encuesta) y &lt;em&gt;Choice&lt;/em&gt; (Opción elegida). La encuesta tendrá dos campos, &lt;em&gt;question&lt;/em&gt; y &lt;em&gt;pub_date&lt;/em&gt;. Mientras que la opción elegida tendrá que hacer referencia a qué encuesta pertenece mediante una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34; title=&#34;Lenguaje Definición de Datos(DDL) – CREATE&#34; target=&#34;_blank&#34;&gt;foreignKey&lt;/a&gt;, un texto que describa la opción y el número de votos. Dicho esto, el fichero &lt;em&gt;models.py&lt;/em&gt; contendrá:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;django.db&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
@@ -212,7 +212,7 @@
 &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Ejecutamos el servidor con &lt;em&gt;python manage.py runserver&lt;/em&gt; y entramos a &lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/admin/&#34;&gt;http://127.0.0.1:8000/admin/&lt;/a&gt;&lt;/a&gt;. Deberíamos ver:&lt;/p&gt;
+&lt;p&gt;Ejecutamos el servidor con &lt;em&gt;python manage.py runserver&lt;/em&gt; y entramos a &lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;http://127.0.0.1:8000/admin/&lt;/a&gt;&lt;/a&gt;. Deberíamos ver:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/amp-img&gt;
@@ -260,7 +260,7 @@
 &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Tras modificar estos ficheros, veremos el mensaje &lt;strong&gt;Hello, world. You&amp;#8217;re at the poll index.&lt;/strong&gt; en &lt;a href=&#34;http://127.0.0.1:8000/polls&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/polls&#34;&gt;http://127.0.0.1:8000/polls&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tras modificar estos ficheros, veremos el mensaje &lt;strong&gt;Hello, world. You&amp;#8217;re at the poll index.&lt;/strong&gt; en &lt;a href=&#34;http://127.0.0.1:8000/polls&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/polls&#34; target=&#34;_blank&#34;&gt;http://127.0.0.1:8000/polls&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&#34;ejemplo-completo&#34;&gt;Ejemplo completo&lt;/h4&gt;
 

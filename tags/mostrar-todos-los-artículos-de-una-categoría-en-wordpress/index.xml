@@ -15,7 +15,7 @@
       
       <guid>https://elbauldelprogramador.com/mostrar-todos-los-post-de-una-categoria-wordpress/</guid>
       <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; alt=&#34;mostrar todos los post de una categoría wordpress&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;
-En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34;&gt;crear shortcodes&lt;/a&gt; en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.&lt;/p&gt;
+En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34; target=&#34;_blank&#34;&gt;crear shortcodes&lt;/a&gt; en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -52,11 +52,11 @@ En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.c
 
 &lt;h3 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h3&gt;
 
-&lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34; target=&#34;_blank&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Lo siguiente que hace este trozo de código es iterar sobre todos los artículos y crear una lista.&lt;/p&gt;
 
-&lt;p&gt;Por último añadimos la función como un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/?s=shortcode&#34;&gt;shortcode&lt;/a&gt;&lt;/em&gt; y ya está lista para usar.&lt;/p&gt;
+&lt;p&gt;Por último añadimos la función como un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/?s=shortcode&#34; target=&#34;_blank&#34;&gt;shortcode&lt;/a&gt;&lt;/em&gt; y ya está lista para usar.&lt;/p&gt;
 
 &lt;p&gt;Para usar el shortcode debemos conocer el &lt;strong&gt;id&lt;/strong&gt; de la categoría a mostrar, o reemplazar el parámetro &lt;strong&gt;&lt;em&gt;cat=&lt;/em&gt;&lt;/strong&gt; por cualquiera de los siguientes:&lt;/p&gt;
 

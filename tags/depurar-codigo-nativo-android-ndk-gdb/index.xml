@@ -14,11 +14,11 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/</guid>
-      <description>&lt;p&gt;En el artículo &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-al-ndk-de-android/&#34; title=&#34;Introducción al NDK de Android&#34;&gt;Introducción al NDK de Android&lt;/a&gt; se explicaron las nociones básicas del NDK, hoy vamos a ver un ejemplo un poco más complejo en el que aprenderemos a depurar código nativo en aplicaciones &lt;a href=&#34;https://elbauldelprogramador.com/android/&#34;&gt;Android&lt;/a&gt;. La aplicación de ejemplo actuará como servidor esperando conexiones mediante &lt;em&gt;telnet&lt;/em&gt;. Cuando un cliente se conecte al dispositivo a través &lt;em&gt;telnet&lt;/em&gt;, será posible enviar y recibir mensajes. Así como ejecutar dos comandos, &lt;em&gt;ip_de &lt;dominio&gt;&lt;/em&gt;, que devolverá la &lt;em&gt;IP&lt;/em&gt; de dicho dominio, y &lt;em&gt;adios&lt;/em&gt;, que finalizará la conexión.&lt;/p&gt;
+      <description>&lt;p&gt;En el artículo &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-al-ndk-de-android/&#34; title=&#34;Introducción al NDK de Android&#34; target=&#34;_blank&#34;&gt;Introducción al NDK de Android&lt;/a&gt; se explicaron las nociones básicas del NDK, hoy vamos a ver un ejemplo un poco más complejo en el que aprenderemos a depurar código nativo en aplicaciones &lt;a href=&#34;https://elbauldelprogramador.com/android/&#34; target=&#34;_blank&#34;&gt;Android&lt;/a&gt;. La aplicación de ejemplo actuará como servidor esperando conexiones mediante &lt;em&gt;telnet&lt;/em&gt;. Cuando un cliente se conecte al dispositivo a través &lt;em&gt;telnet&lt;/em&gt;, será posible enviar y recibir mensajes. Así como ejecutar dos comandos, &lt;em&gt;ip_de &lt;dominio&gt;&lt;/em&gt;, que devolverá la &lt;em&gt;IP&lt;/em&gt; de dicho dominio, y &lt;em&gt;adios&lt;/em&gt;, que finalizará la conexión.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;El proyecto está disponible para descargar en &lt;a href=&#34;https://github.com/algui91/androidSimpleServerNDKExample&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. He de decir que el código &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-c/&#34;&gt;C&lt;/a&gt; usado en el ejemplo es una adaptación de un trozo de código del libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;tag=elbaudelpro-21&amp;linkCode=as2&amp;camp=3626&amp;creative=24822&amp;creativeASIN=1593271441&#34; target=&#34;_blank&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, concretamente el ejemplo &lt;em&gt;simple_server.c&lt;/em&gt; de la sección &lt;em&gt;0x425 A simple Server Example&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;El proyecto está disponible para descargar en &lt;a href=&#34;https://github.com/algui91/androidSimpleServerNDKExample&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. He de decir que el código &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-c/&#34; target=&#34;_blank&#34;&gt;C&lt;/a&gt; usado en el ejemplo es una adaptación de un trozo de código del libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;tag=elbaudelpro-21&amp;linkCode=as2&amp;camp=3626&amp;creative=24822&amp;creativeASIN=1593271441&#34; target=&#34;_blank&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, concretamente el ejemplo &lt;em&gt;simple_server.c&lt;/em&gt; de la sección &lt;em&gt;0x425 A simple Server Example&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Dicho esto, empezaremos creando un proyecto en eclipse, y a la actividad principal le añadiremos el siguiente código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;SimpleServer&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -68,7 +68,7 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Por ahora es bastante sencillo, tenemos un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34;&gt;&lt;em&gt;TextView&lt;/em&gt; y un &lt;em&gt;Button&lt;/em&gt;&lt;/a&gt; en la interfaz. Con el primero mostraremos un log de los datos transferidos durante la sesión &lt;em&gt;telnet&lt;/em&gt;, y con el botón conectaremos y desconectaremos la sesión. El método&lt;/p&gt;
+&lt;p&gt;Por ahora es bastante sencillo, tenemos un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;TextView&lt;/em&gt; y un &lt;em&gt;Button&lt;/em&gt;&lt;/a&gt; en la interfaz. Con el primero mostraremos un log de los datos transferidos durante la sesión &lt;em&gt;telnet&lt;/em&gt;, y con el botón conectaremos y desconectaremos la sesión. El método&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startTelnetSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -76,7 +76,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;native&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;startTelnetSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;en la &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;Activity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;en la &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34; target=&#34;_blank&#34;&gt;Activity&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;El hecho de crear un &lt;em&gt;AsyncTask&lt;/em&gt; impide que la interfaz gráfica se quede bloqueada durante la conexión &lt;em&gt;telnet&lt;/em&gt;, ya que el servidor se ejecuta en un hilo distinto.&lt;/p&gt;
 
@@ -377,7 +377,7 @@ adios
 
 &lt;p&gt;y se muestra en la pantalla del dispositivo:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/06/Screenshot_2013-06-17-17-20-53.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png&#34; alt=&#34;tutorial ndk-gdb&#34; width=&#34;180px&#34; height=&#34;300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/06/Screenshot_2013-06-17-17-20-53.png&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/Screenshot_2013-06-17-17-20-53-180x300.png&#34; alt=&#34;tutorial ndk-gdb&#34; width=&#34;180px&#34; height=&#34;300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Con esto concluye el artículo, espero que haya sido de utilidad.&lt;/p&gt;
 

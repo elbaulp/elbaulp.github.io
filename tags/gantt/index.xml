@@ -34,7 +34,7 @@
 
 &lt;h2 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h2&gt;
 
-&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
+&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34; target=&#34;_blank&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
   canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
   hgrid style/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,

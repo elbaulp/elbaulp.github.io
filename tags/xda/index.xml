@@ -18,7 +18,7 @@
 Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Paso 1:&lt;/strong&gt; Instalar busybox (Herramienta que provee de varias utilidades estándares de Unix) desde la play Store, (Requiere &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/&#34; title=&#34;Rootear Samsung Galaxy S GT-I9003&#34;&gt;root&lt;/a&gt;) En caso de que el teléfono no esté rooteado, puedes seguir los pasos indicados en el vídeo de más abajo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paso 1:&lt;/strong&gt; Instalar busybox (Herramienta que provee de varias utilidades estándares de Unix) desde la play Store, (Requiere &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/&#34; title=&#34;Rootear Samsung Galaxy S GT-I9003&#34; target=&#34;_blank&#34;&gt;root&lt;/a&gt;) En caso de que el teléfono no esté rooteado, puedes seguir los pasos indicados en el vídeo de más abajo.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Paso 2:&lt;/strong&gt; Para conseguir que tu dispositivo sea aún más poderoso, instala &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.botbrew.basil&#34;&gt;BostBrew Basil&lt;/a&gt;, esta aplicación inicializa el sistema base y permite manejar la instalación de paquetes mediante Dpkg y Apt en lugar de Opkg. Permitiendo instalar algunos paquetes linux.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Paso 3:&lt;/strong&gt; Instalar los paquetes necesarios&lt;/li&gt;
 &lt;/ul&gt;
@@ -90,7 +90,7 @@ shell@android:/ &lt;span class=&#34;c1&#34;&gt;# apt-get install gcc g++&lt;/spa
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</guid>
-      <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/android&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
+      <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/android&#34; target=&#34;_blank&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -100,7 +100,7 @@ shell@android:/ &lt;span class=&#34;c1&#34;&gt;# apt-get install gcc g++&lt;/spa
 
 &lt;h4 id=&#34;desactivar-la-opción-simulate-secondary-displays-simular-pantallas-secundarias&#34;&gt;Desactivar la opción Simulate secondary displays (Simular pantallas secundarias)&lt;/h4&gt;
 
-&lt;p&gt;La respuesta concretamente la encontré en el foro de &lt;a href=&#34;https://elbauldelprogramador.com/xda&#34;&gt;XDA&lt;/a&gt;. Como sabía que el problema lo había causado la opción &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de &lt;em&gt;rescate o modo seguro&lt;/em&gt; que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:&lt;/p&gt;
+&lt;p&gt;La respuesta concretamente la encontré en el foro de &lt;a href=&#34;https://elbauldelprogramador.com/xda&#34; target=&#34;_blank&#34;&gt;XDA&lt;/a&gt;. Como sabía que el problema lo había causado la opción &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de &lt;em&gt;rescate o modo seguro&lt;/em&gt; que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:&lt;/p&gt;
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Screenshot_2013-03-03-13-48-30.png&#34; alt=&#34;Safe Mode in Android o Modo rescate en Android&#34; width=&#34;480px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
 
@@ -123,7 +123,7 @@ shell@android:/ &lt;span class=&#34;c1&#34;&gt;# apt-get install gcc g++&lt;/spa
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Como primer paso, vamos a descargar la aplicación SuperOneClick de esta &lt;a href=&#34;http://shortfuse.org/?p=80&#34;&gt;dirección&lt;/a&gt;. Como vamos a ejecutarla bajo Gnu/linux, necesitamos seguir los siguientes pasos para lograr ejecutarla:&lt;/p&gt;
+&lt;p&gt;Como primer paso, vamos a descargar la aplicación SuperOneClick de esta &lt;a href=&#34;http://shortfuse.org/?p=80&#34; target=&#34;_blank&#34;&gt;dirección&lt;/a&gt;. Como vamos a ejecutarla bajo Gnu/linux, necesitamos seguir los siguientes pasos para lograr ejecutarla:&lt;/p&gt;
 
 &lt;p&gt;1.- Tenemos que instalar mono, para ello añadimos el siguiente repositorio a nuestro source.list (En mi caso para Debien squeeze):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;deb http://backports.debian.org/debian-backports squeeze main
@@ -196,9 +196,9 @@ sudo aptitude install mono-complete
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Ubuntu-GalaxyTab2&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TOkdxedlYmI/AAAAAAAAAFU/5pKNyy3XBuA/s1600/Ubuntu-GalaxyTab2.jpg&#34; alt=&#34;ubuntu en samsung galaxy&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Ahora un usuario de &lt;a href=&#34;http://www.xda-developers.com/android/ubuntu-running-on-galaxy-tab/&#34;&gt;XDA Developers&lt;/a&gt; llamado dviera88 &amp;nbsp;ha logrado &lt;strong&gt;instalar Ubuntu en su Samsung Galaxy Tab&lt;/strong&gt; siguiendo las instrucciones que se habían publicado para el &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=823370&#34;&gt;Samsung Epic&lt;/a&gt;, un smartphone que ya había sido modificado para lograr el mismo objetivo.&lt;/p&gt;
+&lt;p&gt;Ahora un usuario de &lt;a href=&#34;http://www.xda-developers.com/android/ubuntu-running-on-galaxy-tab/&#34; target=&#34;_blank&#34;&gt;XDA Developers&lt;/a&gt; llamado dviera88 &amp;nbsp;ha logrado &lt;strong&gt;instalar Ubuntu en su Samsung Galaxy Tab&lt;/strong&gt; siguiendo las instrucciones que se habían publicado para el &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=823370&#34; target=&#34;_blank&#34;&gt;Samsung Epic&lt;/a&gt;, un smartphone que ya había sido modificado para lograr el mismo objetivo.&lt;/p&gt;
 
-&lt;p&gt;Parece que &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=836022&#34;&gt;no es demasiado difícil&lt;/a&gt; conseguir este objetivo, así que si sois los afortunados poseedores de uno de estos dispositivos, &lt;strong&gt;podéis probar a instalar Ubuntu&lt;/strong&gt; para ver qué tal funciona esta distribución Linux en dichos tablets.&lt;/p&gt;
+&lt;p&gt;Parece que &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=836022&#34; target=&#34;_blank&#34;&gt;no es demasiado difícil&lt;/a&gt; conseguir este objetivo, así que si sois los afortunados poseedores de uno de estos dispositivos, &lt;strong&gt;podéis probar a instalar Ubuntu&lt;/strong&gt; para ver qué tal funciona esta distribución Linux en dichos tablets.&lt;/p&gt;
 
 &lt;h2 id=&#34;fuente-a-href-http-www-muylinux-com-2010-11-20-ubuntu-funcionando-en-el-samsung-galaxy-tab-target-blank-muylinux-com-a&#34;&gt;Fuente: &lt;a href=&#34;http://www.muylinux.com/2010/11/20/ubuntu-funcionando-en-el-samsung-galaxy-tab&#34; target=&#34;_blank&#34;&gt;MuyLinux.com&lt;/a&gt;&lt;/h2&gt;
 </description>

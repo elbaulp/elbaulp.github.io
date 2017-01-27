@@ -38,11 +38,11 @@
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Tras crear el procedimiento, éste se compila y luego se almacena en la BD de forma compilada. Este procedimiento luego puede ser invocado desde cualquier &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloque PL/SQL&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tras crear el procedimiento, éste se compila y luego se almacena en la BD de forma compilada. Este procedimiento luego puede ser invocado desde cualquier &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34; target=&#34;_blank&#34;&gt;bloque PL/SQL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;El uso de OR &lt;code&gt;REPLACE&lt;/code&gt; permite sobrescribir un procedimiento existente. Si se omite, y el procedimiento existe, se producirá, un error. Debemos especificar el tipo de datos de cada parámetro.&lt;/p&gt;
 
-&lt;p&gt;Al especificar el tipo de dato del parámetro no debemos especificar la longitud del tipo, aunque si puede ser utilizando el operador &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;&lt;code&gt;%TYPE&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Al especificar el tipo de dato del parámetro no debemos especificar la longitud del tipo, aunque si puede ser utilizando el operador &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;%TYPE&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OR&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REPLACE&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;PROCEDURE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Actualiza_Saldo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuenta&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new_saldo&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;IS&lt;/span&gt;
@@ -122,7 +122,7 @@
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-paquetes-packages-3&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-paquetes-packages/&#34;&gt;PL/SQL - Paquetes (Packages)&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-pl-sql-paquetes-packages-3&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-paquetes-packages/&#34; target=&#34;_blank&#34;&gt;PL/SQL - Paquetes (Packages)&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
   </channel>

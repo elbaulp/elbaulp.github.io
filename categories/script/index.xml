@@ -98,16 +98,16 @@ rm temp
       <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
+&lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34; target=&#34;_blank&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
+&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
 
 &lt;h3 id=&#34;expresiones-regulares-en-locate&#34;&gt;Expresiones regulares en Locate&lt;/h3&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; acepta &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresiones regulares&lt;/a&gt; complejas, para ello hay que llamarlo con la opción &lt;code&gt;-regex&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; acepta &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34; target=&#34;_blank&#34;&gt;expresiones regulares&lt;/a&gt; complejas, para ello hay que llamarlo con la opción &lt;code&gt;-regex&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;El problema básicamente es el siguiente. A partir de un texto con los nombres &lt;em&gt;parciales&lt;/em&gt; de un fichero obtener la ruta completa a dicho archivo. Lo de parciales quiere decir que si el nombre es &lt;strong&gt;Autor - Nombre Canción&lt;/strong&gt;, en el texto solo se guarda &lt;strong&gt;Nombre Canción&lt;/strong&gt;.&lt;/p&gt;
 
@@ -117,7 +117,7 @@ rm temp
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$i.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En &lt;code&gt;$i&lt;/code&gt; está el nombre de la canción, &lt;code&gt;.*&lt;/code&gt; permite que haya cero o más caracteres tras el nombre de la canción y finalmente &lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; obliga a que la extensión del fichero sea &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;strong&gt;mp3&lt;/strong&gt; o &lt;strong&gt;mp4&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En &lt;code&gt;$i&lt;/code&gt; está el nombre de la canción, &lt;code&gt;.*&lt;/code&gt; permite que haya cero o más caracteres tras el nombre de la canción y finalmente &lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; obliga a que la extensión del fichero sea &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;mp3&lt;/strong&gt; o &lt;strong&gt;mp4&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Siempre que necesito crear una expresión regular uso una herramienta llamada &lt;strong&gt;regex tester&lt;/strong&gt; que permite visualizar qué cadenas de texto coincidirían con el patrón:&lt;/p&gt;
 
@@ -148,7 +148,7 @@ rm temp
 
 &lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; se establece al salto de línea para que el &lt;code&gt;for&lt;/code&gt; tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de &lt;code&gt;IFS&lt;/code&gt;). De esta forma, si una línea del fichero contiene &lt;strong&gt;Nombre canción&lt;/strong&gt;, en el &lt;code&gt;for&lt;/code&gt; el contenido de &lt;code&gt;$i&lt;/code&gt; valdrá &lt;strong&gt;Nombre canción&lt;/strong&gt; y no &lt;strong&gt;Nombre&lt;/strong&gt; y en la siguiente iteración &lt;strong&gt;canción&lt;/strong&gt;. &lt;code&gt;&amp;gt; /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u&lt;/code&gt; borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la tubería con &lt;code&gt;tee&lt;/code&gt; permite escribir tanto a la salida estándar como a la lista.&lt;/p&gt;
 
-&lt;p&gt;Otra opción, sugerida en Twitter por &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34;&gt;@ingenieríainv&lt;/a&gt;, es usar un &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Otra opción, sugerida en Twitter por &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34; target=&#34;_blank&#34;&gt;@ingenieríainv&lt;/a&gt;, es usar un &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;nv&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat ARCHIVO_CON_LISTA_DE_NOMBRES&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
@@ -420,7 +420,7 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/</guid>
-      <description>&lt;h3 id=&#34;creé-una-versión-mejorada-de-este-script-aquí-1&#34;&gt;Creé una Versión mejorada de este script &lt;a href=&#34;https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/&#34;&gt;aquí&lt;/a&gt;&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;creé-una-versión-mejorada-de-este-script-aquí-1&#34;&gt;Creé una Versión mejorada de este script &lt;a href=&#34;https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/&#34; target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Este script es muy simple, pero resulta muy útil cuando tenemos muchas imágenes y queremos hacer miniaturas, por ejemplo, para subirlas a nuestra web.&lt;/p&gt;
 
@@ -457,7 +457,7 @@ $ ./NombreDelScript *
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</guid>
-      <description>&lt;p&gt;He mejorado el &lt;a href=&#34;https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/&#34;&gt;script que subí hace unos días&lt;/a&gt; para crear miniaturas de &lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Añadir automáticamente el tamaño de una imagen con python&#34;&gt;imágenes&lt;/a&gt;, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.&lt;/p&gt;
+      <description>&lt;p&gt;He mejorado el &lt;a href=&#34;https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/&#34; target=&#34;_blank&#34;&gt;script que subí hace unos días&lt;/a&gt; para crear miniaturas de &lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Añadir automáticamente el tamaño de una imagen con python&#34;&gt;imágenes&lt;/a&gt;, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -516,7 +516,7 @@ $ ./NombreDelScript *
 &lt;a href=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en &lt;em&gt;superuser&lt;/em&gt;. El usuario &lt;em&gt;&lt;a href=&#34;http://superuser.com/users/4421/flammable&#34;&gt;flammable&lt;/a&gt;&lt;/em&gt; preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:&lt;/p&gt;
+&lt;p&gt;Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en &lt;em&gt;superuser&lt;/em&gt;. El usuario &lt;em&gt;&lt;a href=&#34;http://superuser.com/users/4421/flammable&#34; target=&#34;_blank&#34;&gt;flammable&lt;/a&gt;&lt;/em&gt; preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -571,7 +571,7 @@ $ ./NombreDelScript *
 
 &lt;h2 id=&#34;renombrar-las-imágenes-para-que-contengan-su-resolución&#34;&gt;Renombrar las imágenes para que contengan su resolución&lt;/h2&gt;
 
-&lt;p&gt;Como menciona Juanjo en el comentario, otra opción más adecuada es &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; title=&#34;Renombrar archivos masívamente&#34;&gt;renombrar&lt;/a&gt; cada imagen con su resolución, para ello el siguiente script podría servir:&lt;/p&gt;
+&lt;p&gt;Como menciona Juanjo en el comentario, otra opción más adecuada es &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; title=&#34;Renombrar archivos masívamente&#34; target=&#34;_blank&#34;&gt;renombrar&lt;/a&gt; cada imagen con su resolución, para ello el siguiente script podría servir:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /ruta/imagenes/
@@ -596,7 +596,7 @@ $ ./NombreDelScript *
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/</guid>
-      <description>&lt;p&gt;La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;editar y crear archivos cifrados con GPG en Vim&lt;/a&gt;. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.&lt;/p&gt;
+      <description>&lt;p&gt;La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;editar y crear archivos cifrados con GPG en Vim&lt;/a&gt;. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -896,7 +896,7 @@ sleep 1
 main
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Si no visualizáis bien el código, haced clic &lt;a href=&#34;http://pastebin.com/2UbqU3Yk&#34;&gt;aquí.&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Si no visualizáis bien el código, haced clic &lt;a href=&#34;http://pastebin.com/2UbqU3Yk&#34; target=&#34;_blank&#34;&gt;aquí.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1008,7 +1008,7 @@ main
 
 &lt;p&gt;Bien, voy a explicarlo un poco:&lt;/p&gt;
 
-&lt;p&gt;La estructura es bastante similar a la del &lt;a href=&#34;https://elbauldelprogramador.com/script-resaltado-sintaxis/&#34;&gt;script de resaltado de sintáxis de c++&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La estructura es bastante similar a la del &lt;a href=&#34;https://elbauldelprogramador.com/script-resaltado-sintaxis/&#34; target=&#34;_blank&#34;&gt;script de resaltado de sintáxis de c++&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 

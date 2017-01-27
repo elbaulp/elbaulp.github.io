@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-depurar-una-aplicacion-en-django/</guid>
-      <description>&lt;p&gt;Hace poco vimos una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;introducción a django&lt;/a&gt;. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del &lt;a href=&#34;https://elbauldelprogramador.com/?s=gdb&amp;amp;submit;=&#34; title=&#34;Depuradores&#34;&gt;depurador&lt;/a&gt;. Hoy veremos cómo depurar una aplicación en Django.&lt;/p&gt;
+      <description>&lt;p&gt;Hace poco vimos una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34; target=&#34;_blank&#34;&gt;introducción a django&lt;/a&gt;. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del &lt;a href=&#34;https://elbauldelprogramador.com/?s=gdb&amp;amp;submit;=&#34; title=&#34;Depuradores&#34; target=&#34;_blank&#34;&gt;depurador&lt;/a&gt;. Hoy veremos cómo depurar una aplicación en Django.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -54,7 +54,7 @@ Development server is running at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Con la aplicación ejecutándose, nos dirigimos a &lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/a&gt;. Como hemos establecido el punto de ruptura en la vista pincipal (/), el depurador aparecerá en la terminal inmediatamente:&lt;/p&gt;
+&lt;p&gt;Con la aplicación ejecutándose, nos dirigimos a &lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/a&gt;. Como hemos establecido el punto de ruptura en la vista pincipal (/), el depurador aparecerá en la terminal inmediatamente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; ~/Desarrollo/python-env/djangoTutorialv1.5/polls/views.py&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;get_queryset&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
 -&amp;gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; Poll.objects.filter&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Pdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -123,77 +123,77 @@ retval  rv
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://angularjs.org/&#34;&gt;Angular.js&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://angularjs.org/&#34; target=&#34;_blank&#34;&gt;Angular.js&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Un framework basado en &lt;em&gt;JavaScript&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://facebook.github.io/react/&#34;&gt;react&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://facebook.github.io/react/&#34; target=&#34;_blank&#34;&gt;react&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Liberado por Facebook, en &lt;em&gt;JavaScript&lt;/em&gt;, permite desarrollar aplicaciones móviles para IOS y Android&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://ionicframework.com/&#34;&gt;ionic&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://ionicframework.com/&#34; target=&#34;_blank&#34;&gt;ionic&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Para móviles, usando HTML, Js, Sass y Angular&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.meteor.com/&#34; target=&#34;_blank&#34;&gt;Meteor&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;En &lt;em&gt;JavaScript&lt;/em&gt;, para web y móviles&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000539219/RubyonRails.html&#34;&gt;Ruby on Rails&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000539219/RubyonRails.html&#34; target=&#34;_blank&#34;&gt;Ruby on Rails&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework MVC basado en Ruby, orientado al desarrollo de aplicaciones web&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000531497/CodeIgniter.html&#34;&gt;CodeIgniter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000531497/CodeIgniter.html&#34; target=&#34;_blank&#34;&gt;CodeIgniter&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Poderoso framework PHP liviano y rápido&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://kohanaframework.org/&#34;&gt;Kohana&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://kohanaframework.org/&#34; target=&#34;_blank&#34;&gt;Kohana&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Un fork de CodeIgniter, &lt;em&gt;Gracias a Samuel por mencionarlo en los comentarios.&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000545879/Django.html&#34;&gt;Django&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000545879/Django.html&#34; target=&#34;_blank&#34;&gt;Django&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework Python que promueve el desarrollo rápido y el diseño limpio&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000252509/CakePHP.html&#34;&gt;CakePHP&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000252509/CakePHP.html&#34; target=&#34;_blank&#34;&gt;CakePHP&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework MVC para PHP de desarrollo rápido&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000536311/ZendFramework.html&#34;&gt;Zend Framework&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000536311/ZendFramework.html&#34; target=&#34;_blank&#34;&gt;Zend Framework&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework para PHP 5, simple, claro y open-source&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/2012052500054269/Yii.html&#34;&gt;Yii&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/2012052500054269/Yii.html&#34; target=&#34;_blank&#34;&gt;Yii&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework PHP de alto rendimiento basado en componentes&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/2012052500055227/Pylons.html&#34;&gt;Pylons&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/2012052500055227/Pylons.html&#34; target=&#34;_blank&#34;&gt;Pylons&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework web para Python que enfatiza la flexibilidad y el desarrollo rápido&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000602635/Catalyst.html&#34;&gt;Catalyst&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000602635/Catalyst.html&#34; target=&#34;_blank&#34;&gt;Catalyst&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework para aplicaciones web MVC elegante&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000534344/Symfony.html&#34;&gt;Symfony&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000534344/Symfony.html&#34; target=&#34;_blank&#34;&gt;Symfony&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Framework full-stack&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000548217/TurboGears.html&#34;&gt;TurboGears&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.linuxlinks.com/article/20120525000548217/TurboGears.html&#34; target=&#34;_blank&#34;&gt;TurboGears&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Próxima generación construido sobre Pylons&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

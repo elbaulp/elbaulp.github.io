@@ -14,9 +14,9 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
-      <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
+      <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
 
-&lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
+&lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
 
 &lt;p&gt;Para situarnos en contexto, &lt;strong&gt;netstat&lt;/strong&gt; forma parte de las comúnmente llamadas &lt;em&gt;net-tools&lt;/em&gt; o herramientas de red. Este conjunto de herramientas lo forman los comandos &lt;em&gt;ifconfig&lt;/em&gt;, &lt;em&gt;netstat&lt;/em&gt; y &lt;em&gt;route&lt;/em&gt;. Dichas herramientas han quedado obsoletas en favor de &lt;strong&gt;iproute2&lt;/strong&gt; desde hace algunos años.&lt;/p&gt;
 
@@ -81,7 +81,7 @@ LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::50925                                                          :::*
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;&lt;/span&gt;

@@ -15,7 +15,7 @@
       
       <guid>https://elbauldelprogramador.com/como-crear-un-bundle-symfony2/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;Éste artículo es una colaboración de &lt;em&gt;Alejandro Blanco&lt;/em&gt;, Director de desarrollo en &lt;a href=&#34;http://smsup.es&#34;&gt;smsup.es&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;em&gt;Alejandro Blanco&lt;/em&gt;, Director de desarrollo en &lt;a href=&#34;http://smsup.es&#34; target=&#34;_blank&#34;&gt;smsup.es&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;En este articulo vamos a ver los pasos que he seguido para crear un bundle de symfony 2 de forma que sea redistribuible mediante composer. Este bundle servirá para facilitar la interacción con la api de smsup, desde symfony2 y poder enviar sms masivos. Es un bundle simple, pero tiene varias cosas interesantes (requiere otra librería, utiliza parámetros de configuración, etc.), y puede ser una buena introducción.&lt;/p&gt;
@@ -24,7 +24,7 @@
 
 &lt;p&gt;Voy a describir paso a paso como lo he creado, habrá otras formas igualmente válidas y seguramente mejores, esto es solo como yo lo he hecho.&lt;/p&gt;
 
-&lt;p&gt;Asumo que ya tenemos composer instalado, si no es así, se puede instalar &lt;a href=&#34;https://getcomposer.org/download/&#34;&gt;siguiendo estos pasos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Asumo que ya tenemos composer instalado, si no es así, se puede instalar &lt;a href=&#34;https://getcomposer.org/download/&#34; target=&#34;_blank&#34;&gt;siguiendo estos pasos&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;instalar-symfony2&#34;&gt;Instalar symfony2&lt;/h3&gt;
 
@@ -126,7 +126,7 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;autoload:&lt;/strong&gt; indicamos que el namespace smsup\SmsupapiBundle hace referencia a la raíz de nuestro bundle.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Ya solo debemos declarar nuestro paquete en packagist, para lo cual tenemos que acceder a &lt;a href=&#34;https://packagist.org&#34;&gt;https://packagist.org&lt;/a&gt; y hacer login. Luego vamos a &amp;ldquo;Submit&amp;rdquo; e indicamos el enlace al repositorio y solo con esto ya nos cargara el mismo. Para que cada vez que actualicemos nuestro repositorio packagist actualice los datos, se recomienda añadir un webhook al repositorio. En el caso de github, debemos ir a Settings -&amp;gt; Weebhooks &amp;amp; Services -&amp;gt; Add Service. Seleccionar tipo Packagist e indicar el nombre de usuario y la clave de la API de packagist.&lt;/p&gt;
+&lt;p&gt;Ya solo debemos declarar nuestro paquete en packagist, para lo cual tenemos que acceder a &lt;a href=&#34;https://packagist.org&#34; target=&#34;_blank&#34;&gt;https://packagist.org&lt;/a&gt; y hacer login. Luego vamos a &amp;ldquo;Submit&amp;rdquo; e indicamos el enlace al repositorio y solo con esto ya nos cargara el mismo. Para que cada vez que actualicemos nuestro repositorio packagist actualice los datos, se recomienda añadir un webhook al repositorio. En el caso de github, debemos ir a Settings -&amp;gt; Weebhooks &amp;amp; Services -&amp;gt; Add Service. Seleccionar tipo Packagist e indicar el nombre de usuario y la clave de la API de packagist.&lt;/p&gt;
 
 &lt;p&gt;Una vez hecho esto vamos a instalar nuestro bundle desde composer para ver que todo es correcto. Antes vamos a eliminar el directorio que creamos en vendor, para que se instale limpiamente.&lt;/p&gt;
 
@@ -322,7 +322,7 @@ Hecho esto, ya está disponible una versión estable de nuestro bundle que puede
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;composer require smsup/smsup-api-bundle
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34; target=&#34;_blank&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.&lt;/p&gt;</description>
     </item>

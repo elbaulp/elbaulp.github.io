@@ -60,7 +60,7 @@
       <description>
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/05/Screenshot-05302012-111511-AM1.png&#34; alt=&#34;Wordpress&#34; width=&#34;123px&#34; height=&#34;116px&#34; /&gt;
-Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
+Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34; target=&#34;_blank&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );&lt;/span&gt;
@@ -188,16 +188,16 @@ Si escribes en un blog, seguramente en cada artículo repites algunos textos, co
       
       <guid>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://programarivm.com&#34;&gt;Jordi Bassagañas&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://programarivm.com&#34; target=&#34;_blank&#34;&gt;Jordi Bassagañas&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;La semana pasada, &lt;strong&gt;en el &lt;a href=&#34;http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/&#34; title=&#34;Curso de Programación PHP guay&#34;&gt;Curso de Programación PHP guay&lt;/a&gt;, desarrollamos una agenda PHP basada en archivos CSV&lt;/strong&gt;. El ejercicio era tan sencillo que no utilizamos ningún &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.&lt;/p&gt;
+&lt;p&gt;La semana pasada, &lt;strong&gt;en el &lt;a href=&#34;http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/&#34; title=&#34;Curso de Programación PHP guay&#34; target=&#34;_blank&#34;&gt;Curso de Programación PHP guay&lt;/a&gt;, desarrollamos una agenda PHP basada en archivos CSV&lt;/strong&gt;. El ejercicio era tan sencillo que no utilizamos ningún &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34; target=&#34;_blank&#34;&gt;framework&lt;/a&gt; de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=eYoDqz29qSA&#34; title=&#34;Imágenes enlazadas&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/eYoDqz29qSA/0.jpg&#34; alt=&#34;¡Aprende a programar 1 agenda CSV con PHP! 1ª parte&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=eYoDqz29qSA&#34; title=&#34;Imágenes enlazadas&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/eYoDqz29qSA/0.jpg&#34; alt=&#34;¡Aprende a programar 1 agenda CSV con PHP! 1ª parte&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Seguro que a algunos os habrá gustado esta decisión porque pensáis que &lt;strong&gt;a veces es mejor no usar ningún framework&lt;/strong&gt;, sobre todo cuando la aplicación es muy sencilla (en los años recientes este ha venido siendo un argumento muy habitual), aunque con la llegada de los micro frameworks como &lt;a href=&#34;http://www.slimframework.com/&#34; title=&#34;Slim Framework&#34;&gt;Slim&lt;/a&gt; más de uno comenzará a plantearse esta cuestión, ¿verdad?&lt;/p&gt;
+&lt;p&gt;Seguro que a algunos os habrá gustado esta decisión porque pensáis que &lt;strong&gt;a veces es mejor no usar ningún framework&lt;/strong&gt;, sobre todo cuando la aplicación es muy sencilla (en los años recientes este ha venido siendo un argumento muy habitual), aunque con la llegada de los micro frameworks como &lt;a href=&#34;http://www.slimframework.com/&#34; title=&#34;Slim Framework&#34; target=&#34;_blank&#34;&gt;Slim&lt;/a&gt; más de uno comenzará a plantearse esta cuestión, ¿verdad?&lt;/p&gt;
 
 &lt;p&gt;En todo caso, nosotros levantamos nuestra app desde cero con estas ideas:&lt;/p&gt;
 
@@ -207,9 +207,9 @@ Si escribes en un blog, seguramente en cada artículo repites algunos textos, co
 &lt;li&gt;Implementamos el patrón de diseño &lt;strong&gt;Singleton&lt;/strong&gt; en la clase &lt;code&gt;People&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Por cierto, te recuerdo que el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; está disponible &lt;a href=&#34;https://github.com/programarivm/phpguay/tree/master/agenda&#34; title=&#34;AgendaPHPGuay disponible en GitHub&#34;&gt;en este repositorio de GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por cierto, te recuerdo que el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; está disponible &lt;a href=&#34;https://github.com/programarivm/phpguay/tree/master/agenda&#34; title=&#34;AgendaPHPGuay disponible en GitHub&#34; target=&#34;_blank&#34;&gt;en este repositorio de GitHub&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Finalmente &lt;strong&gt;propusimos a los alumnos que mejoraran la seguridad de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; implementando el patrón de diseño de software &lt;a href=&#34;http://en.wikipedia.org/wiki/Front_Controller_pattern&#34; title=&#34;Front Controller&#34;&gt;Front Controller&lt;/a&gt;&lt;/strong&gt;. Y los que teníais un nivel de programación intermedio comentabais que esta propuesta empezaba a complicarse bastante. Pues bien amig@s, que no cunda el pánico, hoy voy a explicar qué pasos hay que seguir exactamente para poner un Front Controller en la app.&lt;/p&gt;
+&lt;p&gt;Finalmente &lt;strong&gt;propusimos a los alumnos que mejoraran la seguridad de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; implementando el patrón de diseño de software &lt;a href=&#34;http://en.wikipedia.org/wiki/Front_Controller_pattern&#34; title=&#34;Front Controller&#34; target=&#34;_blank&#34;&gt;Front Controller&lt;/a&gt;&lt;/strong&gt;. Y los que teníais un nivel de programación intermedio comentabais que esta propuesta empezaba a complicarse bastante. Pues bien amig@s, que no cunda el pánico, hoy voy a explicar qué pasos hay que seguir exactamente para poner un Front Controller en la app.&lt;/p&gt;
 
 &lt;h2 id=&#34;qué-es-front-controller&#34;&gt;¿Qué es Front Controller?&lt;/h2&gt;
 
@@ -223,7 +223,7 @@ Si escribes en un blog, seguramente en cada artículo repites algunos textos, co
 
 &lt;h2 id=&#34;cómo-se-implementa-front-controller&#34;&gt;¿Cómo se implementa Front Controller?&lt;/h2&gt;
 
-&lt;p&gt;Implementar Front Controller es sencillo. Por un lado, primero &lt;strong&gt;tenemos que crear una carpeta llamada &lt;code&gt;public&lt;/code&gt; en la carpeta raíz de nuestra aplicación&lt;/strong&gt;. Aquí ponemos los archivos que pueden ver los usuarios de Internet, por así decirlo. O dicho de otra forma, los archivos que están en &lt;code&gt;public&lt;/code&gt; son los únicos accesibles por los usuarios desde su navegador web. Estos archivos son los assets y el mismo &lt;code&gt;index.php&lt;/code&gt;. A modo de ejemplo &lt;strong&gt;puedes echar un vistazo a &lt;a href=&#34;http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application&#34; title=&#34;Estructura de directorios de una app MVC&#34;&gt;esta estructura de directorios&lt;/a&gt; recomendada por Slim&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Implementar Front Controller es sencillo. Por un lado, primero &lt;strong&gt;tenemos que crear una carpeta llamada &lt;code&gt;public&lt;/code&gt; en la carpeta raíz de nuestra aplicación&lt;/strong&gt;. Aquí ponemos los archivos que pueden ver los usuarios de Internet, por así decirlo. O dicho de otra forma, los archivos que están en &lt;code&gt;public&lt;/code&gt; son los únicos accesibles por los usuarios desde su navegador web. Estos archivos son los assets y el mismo &lt;code&gt;index.php&lt;/code&gt;. A modo de ejemplo &lt;strong&gt;puedes echar un vistazo a &lt;a href=&#34;http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application&#34; title=&#34;Estructura de directorios de una app MVC&#34; target=&#34;_blank&#34;&gt;esta estructura de directorios&lt;/a&gt; recomendada por Slim&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Luego, por otro lado, tienes que asegurarte que &lt;strong&gt;tu servidor web canaliza todas las peticiones hacia tu archivo &lt;code&gt;index.php&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -233,7 +233,7 @@ RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;spa
 RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34; target=&#34;_blank&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
    try_files   $uri $uri/ /index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
@@ -260,7 +260,7 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Antes de pasar al fragmento de código, tenemos que asumir algunas cosas. El &lt;code&gt;ID&lt;/code&gt; de la entrada de imagen sin adjuntar es &lt;code&gt;$att_id&lt;/code&gt;. El &lt;code&gt;ID&lt;/code&gt; de la entrada de nuestra página es &lt;code&gt;$page_id&lt;/code&gt;. He mencionado &lt;code&gt;ID&lt;/code&gt; de la entrada, tanto para la imagen y la página porque WordPress almacena las entradas, páginas y archivos en una misma tabla &lt;code&gt;wp_posts&lt;/code&gt; en la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;base de datos&lt;/a&gt;. Así que todas las entradas tendrán un &lt;code&gt;ID&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de pasar al fragmento de código, tenemos que asumir algunas cosas. El &lt;code&gt;ID&lt;/code&gt; de la entrada de imagen sin adjuntar es &lt;code&gt;$att_id&lt;/code&gt;. El &lt;code&gt;ID&lt;/code&gt; de la entrada de nuestra página es &lt;code&gt;$page_id&lt;/code&gt;. He mencionado &lt;code&gt;ID&lt;/code&gt; de la entrada, tanto para la imagen y la página porque WordPress almacena las entradas, páginas y archivos en una misma tabla &lt;code&gt;wp_posts&lt;/code&gt; en la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt;. Así que todas las entradas tendrán un &lt;code&gt;ID&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;obtener-imágenes-subidas-por-año&#34;&gt;Obtener imágenes subidas por año&lt;/h2&gt;
 
@@ -289,7 +289,7 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
       
       <guid>https://elbauldelprogramador.com/mostrar-todos-los-post-de-una-categoria-wordpress/</guid>
       <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; alt=&#34;mostrar todos los post de una categoría wordpress&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;
-En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34;&gt;crear shortcodes&lt;/a&gt; en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.&lt;/p&gt;
+En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34; target=&#34;_blank&#34;&gt;crear shortcodes&lt;/a&gt; en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -326,11 +326,11 @@ En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.c
 
 &lt;h3 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h3&gt;
 
-&lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34; target=&#34;_blank&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Lo siguiente que hace este trozo de código es iterar sobre todos los artículos y crear una lista.&lt;/p&gt;
 
-&lt;p&gt;Por último añadimos la función como un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/?s=shortcode&#34;&gt;shortcode&lt;/a&gt;&lt;/em&gt; y ya está lista para usar.&lt;/p&gt;
+&lt;p&gt;Por último añadimos la función como un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/?s=shortcode&#34; target=&#34;_blank&#34;&gt;shortcode&lt;/a&gt;&lt;/em&gt; y ya está lista para usar.&lt;/p&gt;
 
 &lt;p&gt;Para usar el shortcode debemos conocer el &lt;strong&gt;id&lt;/strong&gt; de la categoría a mostrar, o reemplazar el parámetro &lt;strong&gt;&lt;em&gt;cat=&lt;/em&gt;&lt;/strong&gt; por cualquiera de los siguientes:&lt;/p&gt;
 

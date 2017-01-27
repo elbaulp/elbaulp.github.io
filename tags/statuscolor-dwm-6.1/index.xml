@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/statuscolor-dwm-6-1/</guid>
-      <description>&lt;p&gt;Días atrás hablamos &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM, el gestor de ventanas más eficiente&#34;&gt;sobre DWM&lt;/a&gt; y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.&lt;/p&gt;
+      <description>&lt;p&gt;Días atrás hablamos &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM, el gestor de ventanas más eficiente&#34; target=&#34;_blank&#34;&gt;sobre DWM&lt;/a&gt; y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -167,9 +167,9 @@ $ dwmstatus
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este básicamente, es el método principal, se encarga de parsear el estado para extrar qué colores corresponden a qué parte del texto. Almacena los colores en un &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-arrays/&#34; title=&#34;Clases y Objetos – Arrays&#34;&gt;array&lt;/a&gt; para recordar en qué orden aplicarlos.&lt;/p&gt;
+&lt;p&gt;Este básicamente, es el método principal, se encarga de parsear el estado para extrar qué colores corresponden a qué parte del texto. Almacena los colores en un &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-arrays/&#34; title=&#34;Clases y Objetos – Arrays&#34; target=&#34;_blank&#34;&gt;array&lt;/a&gt; para recordar en qué orden aplicarlos.&lt;/p&gt;
 
-&lt;p&gt;Por último, solo queda usar los métodos creados, deben ir en el método &lt;code&gt;drawbar&lt;/code&gt;, encargado de dibujar todo el recuadro que muestra información en DWM (etiquetas, ventana actual y barra de estado). Para ello se reemplaza el método &lt;code&gt;drw_text&lt;/code&gt; por &lt;code&gt;drw_colored_st&lt;/code&gt; cuando se vaya a pintar el estado. Habiéndolo parseado previamente. Ésta vez se muestra el &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;diff&lt;/a&gt;, para que sea visto con mayor claridad.&lt;/p&gt;
+&lt;p&gt;Por último, solo queda usar los métodos creados, deben ir en el método &lt;code&gt;drawbar&lt;/code&gt;, encargado de dibujar todo el recuadro que muestra información en DWM (etiquetas, ventana actual y barra de estado). Para ello se reemplaza el método &lt;code&gt;drw_text&lt;/code&gt; por &lt;code&gt;drw_colored_st&lt;/code&gt; cuando se vaya a pintar el estado. Habiéndolo parseado previamente. Ésta vez se muestra el &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;diff&lt;/a&gt;, para que sea visto con mayor claridad.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+void&lt;/span&gt;
  drawbar(Monitor *m) {
    int x, xx, w;
@@ -206,7 +206,7 @@ $ dwmstatus
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/</guid>
-      <description>&lt;p&gt;Hace tiempo que hablé de &lt;a href=&#34;https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/&#34; title=&#34;Configurar xmonad con trayer y fondo de pantalla aleatorio&#34;&gt;Xmonad&lt;/a&gt;, y hasta hace poco ha sido mi gestor de ventanas, durante varios años. Pero semanas atrás descubrí el proyecto original en el que se basaba xmonad, DWM. Xmonad es un clon de DWM escrito en &lt;a href=&#34;http://www.haskell.org/haskellwiki/Haskell&#34; title=&#34;Web de Haskell&#34; target=&#34;_blank&#34;&gt;Haskell&lt;/a&gt;, lo cual lo hace un poco más pesado y lento debido a las dependencias que tiene y la necesidad de instalar su compilador. Tras probar DWM, no puedo estar más contento con el resultado, está escrito en C, y todas las modificaciones en la configuración se hacen sobre el propio código, lo cual lo hace muy eficiente y rápido. En este artículo veremos cómo instalar y configurar DWM.&lt;/p&gt;
+      <description>&lt;p&gt;Hace tiempo que hablé de &lt;a href=&#34;https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/&#34; title=&#34;Configurar xmonad con trayer y fondo de pantalla aleatorio&#34; target=&#34;_blank&#34;&gt;Xmonad&lt;/a&gt;, y hasta hace poco ha sido mi gestor de ventanas, durante varios años. Pero semanas atrás descubrí el proyecto original en el que se basaba xmonad, DWM. Xmonad es un clon de DWM escrito en &lt;a href=&#34;http://www.haskell.org/haskellwiki/Haskell&#34; title=&#34;Web de Haskell&#34; target=&#34;_blank&#34;&gt;Haskell&lt;/a&gt;, lo cual lo hace un poco más pesado y lento debido a las dependencias que tiene y la necesidad de instalar su compilador. Tras probar DWM, no puedo estar más contento con el resultado, está escrito en C, y todas las modificaciones en la configuración se hacen sobre el propio código, lo cual lo hace muy eficiente y rápido. En este artículo veremos cómo instalar y configurar DWM.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -216,7 +216,7 @@ $ dwmstatus
 
 &lt;h2 id=&#34;cómo-instalar-dwm&#34;&gt;Cómo instalar DWM&lt;/h2&gt;
 
-&lt;p&gt;La mejor forma es clonar el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;La mejor forma es clonar el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git clone http://git.suckless.org/dwm
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -309,13 +309,13 @@ $ sudo cp dwm-personalized /usr/bin
 
 &lt;h2 id=&#34;aplicar-parches&#34;&gt;Aplicar parches&lt;/h2&gt;
 
-&lt;p&gt;Existen multitud de modificaciones hechas por los usuarios de DWM para añadirle funcionalidad. Pueden encontrarse en &lt;a href=&#34;https://github.com/jceb/dwm-clean-patches&#34; title=&#34;Clean patches&#34; target=&#34;_blank&#34;&gt;este repositorio&lt;/a&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/&#34; title=&#34;La generación GitHub: Por qué ahora todos estamos en el opensource&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Existen multitud de modificaciones hechas por los usuarios de DWM para añadirle funcionalidad. Pueden encontrarse en &lt;a href=&#34;https://github.com/jceb/dwm-clean-patches&#34; title=&#34;Clean patches&#34; target=&#34;_blank&#34;&gt;este repositorio&lt;/a&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/&#34; title=&#34;La generación GitHub: Por qué ahora todos estamos en el opensource&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;comentarios-finales&#34;&gt;Comentarios finales&lt;/h2&gt;
 
 &lt;p&gt;Espero que esta pequeña introducción haya servido al lector. Desde que entré en el mundo de éste tipo de gestores de ventanas no he querido volver a ver a los gestores clásicos. Una vez te acostumbras a usar el teclado, la velocidad al trabajar en el pc aumenta considerablemente.&lt;/p&gt;
 
-&lt;p&gt;Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explicaré cómo desarrollé la posibilidad de colorear la barra de estado (Ya está disponible &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34; title=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34;&gt;aquí&lt;/a&gt;), ya que por defecto la versión 6.1 de DWM no lo permite.&lt;/p&gt;
+&lt;p&gt;Aquí dejo una captura de pantalla de mi escritorio actual. En unos días explicaré cómo desarrollé la posibilidad de colorear la barra de estado (Ya está disponible &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34; title=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34; target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;), ya que por defecto la versión 6.1 de DWM no lo permite.&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/07/Instalar-y-configurar-DWM-el-gestor-de-ventanas-más-eficiente1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1280px&#34; height=&#34;768px&#34; /&gt;&lt;/a&gt;

@@ -459,7 +459,7 @@ iptables -j DROP -h
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
+&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34; target=&#34;_blank&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
@@ -483,7 +483,7 @@ iptables -X
 
 &lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
 
-&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
+&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34; target=&#34;_blank&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34; target=&#34;_blank&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
 iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
 iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
@@ -568,7 +568,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
       <guid>https://elbauldelprogramador.com/6-formas-usadas-por-los-cibercriminales-para-robar-o-vulnerar-credenciales-de-login/</guid>
       <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/blog_sevenways.png&#34; alt=&#34;7 formas usadas por cibercriminales para robar o vulnerar credenciales de login&#34; width=&#34;700px&#34; height=&#34;350px&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;El mundo digital es un vecindario muy peligroso lleno de atacantes listos para robar los datos más personales e importantes para los negocios. A estas alturas deberíamos saber que la ”*&lt;a href=&#34;https://elbauldelprogramador.com/seguridad/&#34;&gt;seguridad&lt;/a&gt;*” significa algo más que disponer de una contraseña única y larga. Para entender cómo proteger nuestros datos y cuentas, en &lt;em&gt;duosecurity&lt;/em&gt; han hecho una recopilación de las formas más comunes que usan los atacantes para robar datos ajenos en la red.&lt;/p&gt;
+&lt;p&gt;El mundo digital es un vecindario muy peligroso lleno de atacantes listos para robar los datos más personales e importantes para los negocios. A estas alturas deberíamos saber que la ”*&lt;a href=&#34;https://elbauldelprogramador.com/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;*” significa algo más que disponer de una contraseña única y larga. Para entender cómo proteger nuestros datos y cuentas, en &lt;em&gt;duosecurity&lt;/em&gt; han hecho una recopilación de las formas más comunes que usan los atacantes para robar datos ajenos en la red.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -578,7 +578,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;h3 id=&#34;2-brechas-en-sitios-webs&#34;&gt;2: Brechas en sitios Webs&lt;/h3&gt;
 
-&lt;p&gt;Confiamos una gran cantidad de datos sensibles a sitios webs de todo tipo, y los agujeros de seguridad son bastante más frecuentes de lo que pensamos. A través de varios métodos, como &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-sql-sql-introduction/&#34;&gt;inyección SQL&lt;/a&gt;, subida remota de archivos o un simple ataque a fuerza bruta para romper credenciales de los usuarios las webs están contínuamente siendo atacadas. Cualquiera que tenga un servidor propio sabrá lo cierto que es esto. Una vez que se logra robar una &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34;&gt;contraseña&lt;/a&gt;, la información filtrada a menudo acaba en lugares como &lt;em&gt;pastebin&lt;/em&gt; y redes &lt;em&gt;bittorrent&lt;/em&gt;, esperando a ser usadas. Si además se usa la misma contraseña en todas las webs el daño puede ser enorme.&lt;/p&gt;
+&lt;p&gt;Confiamos una gran cantidad de datos sensibles a sitios webs de todo tipo, y los agujeros de seguridad son bastante más frecuentes de lo que pensamos. A través de varios métodos, como &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-sql-sql-introduction/&#34; target=&#34;_blank&#34;&gt;inyección SQL&lt;/a&gt;, subida remota de archivos o un simple ataque a fuerza bruta para romper credenciales de los usuarios las webs están contínuamente siendo atacadas. Cualquiera que tenga un servidor propio sabrá lo cierto que es esto. Una vez que se logra robar una &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; target=&#34;_blank&#34;&gt;contraseña&lt;/a&gt;, la información filtrada a menudo acaba en lugares como &lt;em&gt;pastebin&lt;/em&gt; y redes &lt;em&gt;bittorrent&lt;/em&gt;, esperando a ser usadas. Si además se usa la misma contraseña en todas las webs el daño puede ser enorme.&lt;/p&gt;
 
 &lt;h3 id=&#34;3-configuraciones-de-software-incorrectas&#34;&gt;3: Configuraciones de software incorrectas&lt;/h3&gt;
 
@@ -598,7 +598,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
 
-&lt;p&gt;Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un atacante puede hacerse con nuestros datos, está claro que con una contraseña no estamos protegidos, así que lo recomendable es usar, siempre que se pueda, otra capa de seguridad como la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificación de dos factores&lt;/a&gt;. Además, para generar contraseñas bastante fuertes es posible usar webs como &lt;a href=&#34;http://passwordsgenerator.net/&#34; target=&#34;_blank&#34;&gt;passwordsgenerator.net&lt;/a&gt;. El problema de este tipo de contraseñas es que son imposibles de recordar. Una solución es guardarlas en un fichero de texto y encriptarlas con &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Como hemos ido viendo a lo largo del artículo, hay muchas formas en las que un atacante puede hacerse con nuestros datos, está claro que con una contraseña no estamos protegidos, así que lo recomendable es usar, siempre que se pueda, otra capa de seguridad como la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34; target=&#34;_blank&#34;&gt;autentificación de dos factores&lt;/a&gt;. Además, para generar contraseñas bastante fuertes es posible usar webs como &lt;a href=&#34;http://passwordsgenerator.net/&#34; target=&#34;_blank&#34;&gt;passwordsgenerator.net&lt;/a&gt;. El problema de este tipo de contraseñas es que son imposibles de recordar. Una solución es guardarlas en un fichero de texto y encriptarlas con &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
@@ -617,7 +617,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;p&gt;Toda esta historia viene al comprar una memória de 2Gb de Ram a mi pc, para aumentar la capacidad total a 4Gb, no parece que sea algo muy complicado, ya que supuestamente mi placa base soporta hasta 8Gb y uso un Sistema Operatívo de 64-bits (CrunchBang 64-bit Stable + backports).&lt;/p&gt;
 
-&lt;p&gt;Bueno, inserto la RAM en la placa base todo contento ya que ahora iba a tener 4Gb (2x1Gb y 1x2Gb) y no se mi iba a quedar colgado el pc mientras escucho música con el Eclipse abierto más el emulador Android y el Chrome&amp;#8230; (Que se come la RAM que da gusto), y resulta que solo reconoce 3Gb&amp;#8230; Tras una tarde de buscar por foros y no encontrar nada me decido a publicar mi problema en los foros de &lt;a href=&#34;http://crunchbanglinux.org/forums/post/192843/#p192843&#34;&gt;cruchbang&lt;/a&gt; y &lt;a href=&#34;http://forums.debian.net/viewtopic.php?f=7&amp;amp;t;=76419&#34;&gt;debian&lt;/a&gt;. Al principio pensaba que era un problema de que no estaba colocando las memórias en los canales correctos para que hiciera el dual channel. Pero ese no era el problema.&lt;/p&gt;
+&lt;p&gt;Bueno, inserto la RAM en la placa base todo contento ya que ahora iba a tener 4Gb (2x1Gb y 1x2Gb) y no se mi iba a quedar colgado el pc mientras escucho música con el Eclipse abierto más el emulador Android y el Chrome&amp;#8230; (Que se come la RAM que da gusto), y resulta que solo reconoce 3Gb&amp;#8230; Tras una tarde de buscar por foros y no encontrar nada me decido a publicar mi problema en los foros de &lt;a href=&#34;http://crunchbanglinux.org/forums/post/192843/#p192843&#34; target=&#34;_blank&#34;&gt;cruchbang&lt;/a&gt; y &lt;a href=&#34;http://forums.debian.net/viewtopic.php?f=7&amp;amp;t;=76419&#34; target=&#34;_blank&#34;&gt;debian&lt;/a&gt;. Al principio pensaba que era un problema de que no estaba colocando las memórias en los canales correctos para que hiciera el dual channel. Pero ese no era el problema.&lt;/p&gt;
 
 &lt;p&gt;Tras una respuesta en uno de los foros miro a ver si la BIOS reconoce las 4Gb y el resultado es que solo reconoce 3Gb. Investigo el motivo por el cual solo reconoce 3Gb y llego a una página que dice que es un problema de la versión de la BIOS que se soluciona actualizando a la última versión. Así que voy a explicar el proceso de actualización de la BIOS, en mi caso para la placa base ASUS P5B Deluxe Wifi edition:&lt;/p&gt;
 
@@ -672,7 +672,7 @@ Disk identifier: 0x00025eb4
 &lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;wp-image-901 aligncenter&#34; title=&#34;rainbow&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34; width=&#34;536px&#34; height=&#34;303px&#34; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
-&lt;p&gt;En la esfera social de bookmark (&amp;#8220;socialbookmarkosphere&amp;#8221;) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34;&gt;insistentemente&lt;/a&gt; de las &amp;#8220;&lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Tablas Arcoiris&lt;/a&gt;&amp;#8220;, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de *Windows for Workgroups *hace 15 años. Esto realmente me enloquece. Si el eje soporte &amp;#8220;avanzado&amp;#8221; de tu modelo de amenazas es &amp;#8220;Tablas Arcoiris&amp;#8221;, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
+&lt;p&gt;En la esfera social de bookmark (&amp;#8220;socialbookmarkosphere&amp;#8221;) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34; target=&#34;_blank&#34;&gt;insistentemente&lt;/a&gt; de las &amp;#8220;&lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Tablas Arcoiris&lt;/a&gt;&amp;#8220;, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de *Windows for Workgroups *hace 15 años. Esto realmente me enloquece. Si el eje soporte &amp;#8220;avanzado&amp;#8221; de tu modelo de amenazas es &amp;#8220;Tablas Arcoiris&amp;#8221;, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Para comenzar, almacenamiento de contraseñas 101&lt;/strong&gt;: Los servidores &lt;a title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; target=&#34;_blank&#34;&gt;no suelen almacenar las contraseñas reales&lt;/a&gt;. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.&lt;/p&gt;
 
@@ -836,7 +836,7 @@ Disk identifier: 0x00025eb4
 
 &lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
 
-&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:&lt;/p&gt;
 
@@ -859,7 +859,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;p&gt;Donde &lt;strong&gt;xx.xx.xx.xx&lt;/strong&gt; debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.&lt;/p&gt;
 
-&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; target=&#34;_blank&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34; target=&#34;_blank&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
@@ -903,7 +903,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;h3 id=&#34;generar-las-claves-públicas-y-privadas&#34;&gt;Generar las claves públicas y privadas&lt;/h3&gt;
 
-&lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
+&lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ openssl genrsa -out clave.pem 4096
 $ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -970,7 +970,7 @@ $ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -o
 
 &lt;h3 id=&#34;script-para-descifrar-varios-archivos-de-una-vez&#34;&gt;Script para descifrar varios archivos de una vez&lt;/h3&gt;
 
-&lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
+&lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34; target=&#34;_blank&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
@@ -1019,7 +1019,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
-&lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
+&lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
 
 &lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-chrome&#34;&gt;Descargar e instalar Mailvelope en Chrome&lt;/h1&gt;
 
@@ -1027,9 +1027,9 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-firefox&#34;&gt;Descargar e instalar Mailvelope en Firefox&lt;/h1&gt;
 
-&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;a href=&#34;https://github.com/mailvelope/mailvelope&#34; title=&#34;Compilar Mailvelope&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;a href=&#34;https://github.com/mailvelope/mailvelope&#34; title=&#34;Compilar Mailvelope&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34; target=&#34;_blank&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
@@ -1063,7 +1063,7 @@ make dist-ff
 
 &lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
 
-&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;a href=&#34;http://keyserver.borgnet.us:11371/pks/lookup?op=get&amp;search=0x083EDE12BE101B2B&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
+&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34; target=&#34;_blank&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;a href=&#34;http://keyserver.borgnet.us:11371/pks/lookup?op=get&amp;search=0x083EDE12BE101B2B&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
 
 &lt;p&gt;Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.&lt;/p&gt;
 
@@ -1197,7 +1197,7 @@ make dist-ff
 &lt;p&gt;En dicho informe se explica cómo es el proceso de averiguar una contraseña:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;“El problema no es que el atacante descubre el nombre de usuario, accede a la página de login e intenta adivinar la contraseña. Eso sería inviable, ya que la mayoría de los sitios bloquean al usuario que introduce un determinado número de veces la contraseña equivocada. La mayoría de organizaciones tienen la información del usuario y su contraseña en un archivo. Ese archivo está hasheado, es decir, usando algoritmos de &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;encriptación&lt;/a&gt; se cifran el nombre de usuario y contraseña. Nadie en la organización puede ver las contraseñas en su forma descifrada. Cuando el usuario intenta logearse, el servidor vuelve a cifrar los datos introducidos y los comprueba con los que hay en el fichero. Hasta ahora, parece seguro. Sin embargo, éstos ficheros a menudo son robados. Mediante varios tipos de software y hardware, el atacante puede descifrar ciertos usuarios y contraseñas. Una vez descifrados, esta información se vende, se comparte o es explotada por el atacante.“&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“El problema no es que el atacante descubre el nombre de usuario, accede a la página de login e intenta adivinar la contraseña. Eso sería inviable, ya que la mayoría de los sitios bloquean al usuario que introduce un determinado número de veces la contraseña equivocada. La mayoría de organizaciones tienen la información del usuario y su contraseña en un archivo. Ese archivo está hasheado, es decir, usando algoritmos de &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34; target=&#34;_blank&#34;&gt;encriptación&lt;/a&gt; se cifran el nombre de usuario y contraseña. Nadie en la organización puede ver las contraseñas en su forma descifrada. Cuando el usuario intenta logearse, el servidor vuelve a cifrar los datos introducidos y los comprueba con los que hay en el fichero. Hasta ahora, parece seguro. Sin embargo, éstos ficheros a menudo son robados. Mediante varios tipos de software y hardware, el atacante puede descifrar ciertos usuarios y contraseñas. Una vez descifrados, esta información se vende, se comparte o es explotada por el atacante.“&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Además, otro problema referente a las contraseñas viene dado por la plataforma que se use. Si consideramos que la media de usuarios tarda unos 4-5 segundos en escribir una contraseña ”fuerte” de diez caracteres en un teclado convencional. Unos 7-10 segundos en un dispositivo móvil con teclado hardware y de 7 a 30 segundos en pantallas táctiles, un cuarto de la gente encuestada admitió usar contraseñas menos seguras para ahorrar tiempo.&lt;/p&gt;
@@ -1246,8 +1246,8 @@ make dist-ff
 &lt;p&gt;Si estás interesado en saber más acerca de este tema puede que te interesen los siquientes enlaces:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/&#34; title=&#34;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&#34;&gt;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34;&gt;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/&#34; title=&#34;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&#34; target=&#34;_blank&#34;&gt;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; target=&#34;_blank&#34;&gt;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
@@ -1302,13 +1302,13 @@ make dist-ff
       <guid>https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad/</guid>
       <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
-&lt;p&gt;Recientemente he leido los problemas de &lt;a href=&#34;https://elbauldelprogramador.com/categorias/#seguridad&#34; title=&#34;Artículos sobre seguridad&#34;&gt;seguridad&lt;/a&gt; que tiene &lt;a href=&#34;http://gizmovil.com/2011/05/fallo-de-seguridad-en-whatsapp-que-permite-acceder-a-los-mensajes-y-numeros-de-telefono&#34;&gt;WhatsApp&lt;/a&gt;, con lo que me entró curiosidad por hacer algunas pruebas yo mismo y esnifar el tráfico de red de mi móvil, pero en este caso para la aplicación que estoy desarrollando, &lt;a href=&#34;https://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/&#34;&gt;WifiBar&lt;/a&gt;. Antes de nada voy a explicar las técnicas y programas que he usado.&lt;/p&gt;
+&lt;p&gt;Recientemente he leido los problemas de &lt;a href=&#34;https://elbauldelprogramador.com/categorias/#seguridad&#34; title=&#34;Artículos sobre seguridad&#34;&gt;seguridad&lt;/a&gt; que tiene &lt;a href=&#34;http://gizmovil.com/2011/05/fallo-de-seguridad-en-whatsapp-que-permite-acceder-a-los-mensajes-y-numeros-de-telefono&#34; target=&#34;_blank&#34;&gt;WhatsApp&lt;/a&gt;, con lo que me entró curiosidad por hacer algunas pruebas yo mismo y esnifar el tráfico de red de mi móvil, pero en este caso para la aplicación que estoy desarrollando, &lt;a href=&#34;https://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/&#34; target=&#34;_blank&#34;&gt;WifiBar&lt;/a&gt;. Antes de nada voy a explicar las técnicas y programas que he usado.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;ettercap-y-wireshark&#34;&gt;Ettercap y Wireshark&lt;/h2&gt;
 
-&lt;p&gt;Bien, vamos con los programas, he usado &lt;a href=&#34;http://ettercap.sourceforge.net/&#34;&gt;ettercap&lt;/a&gt; y &lt;a href=&#34;http://www.wireshark.org/&#34;&gt;wireshark&lt;/a&gt;. Estos programitas se usan para lo siguiente, Ettercap principalmente lo he usado para el envenenamiento ARP de la máquina objetivo (en este caso el móvil), para realizar la técnica de &lt;em&gt;Man on the Middle&lt;/em&gt;, que consiste en establecer la puerta de enlace predeterminada del equipo objetivo a la dirección ip del equipo atacante. De esta manera nuestro equipo atacante estará situado entre el router y el objetivo, logrando así escuchar todo el tráfico de red que genera el objetivo. (Más adelante explicaré como hacer esto).&lt;/p&gt;
+&lt;p&gt;Bien, vamos con los programas, he usado &lt;a href=&#34;http://ettercap.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;ettercap&lt;/a&gt; y &lt;a href=&#34;http://www.wireshark.org/&#34; target=&#34;_blank&#34;&gt;wireshark&lt;/a&gt;. Estos programitas se usan para lo siguiente, Ettercap principalmente lo he usado para el envenenamiento ARP de la máquina objetivo (en este caso el móvil), para realizar la técnica de &lt;em&gt;Man on the Middle&lt;/em&gt;, que consiste en establecer la puerta de enlace predeterminada del equipo objetivo a la dirección ip del equipo atacante. De esta manera nuestro equipo atacante estará situado entre el router y el objetivo, logrando así escuchar todo el tráfico de red que genera el objetivo. (Más adelante explicaré como hacer esto).&lt;/p&gt;
 
 &lt;p&gt;Wireshark finalmente lo uso para &lt;em&gt;“Ver”&lt;/em&gt; el tráfico que genera el objetivo.&lt;/p&gt;
 
@@ -1370,12 +1370,12 @@ make dist-ff
 
 &lt;p&gt;&lt;strong&gt;Atención:&lt;/strong&gt; Una vez terminemos de esnifar, no se nos puede olvidar quitar el envenenamiento ARP &lt;code&gt;Mitm -&amp;gt; Stop mitm attack(s)&lt;/code&gt;, ya que si no, al apagar el equipo atacante el objetivo se queda sin conexión, al hacer el atacante de puerta de enlace. Por último, &lt;code&gt;Start -&amp;gt; Stop sniffing&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Lo proximo que quiero intentar es conseguir sacar el Id y contraseña del chat de tuenti (Red social española), para conectarme a dicho chat sin necesidad de entrar en la web, usando emphaty por ejemplo, hay gente que ya lo ha conseguido &lt;a href=&#34;http://blogguino.blogspot.com/2010/05/tuenti-chat-en-empathy-sin-contactos.html&#34;&gt;ojeando las cookies&lt;/a&gt;, pero voy a hacerlo de esta forma, ya que ojeando con wireshark conseguí sacar el ID y demás, pronto escribiré una entrada si lo consigo.&lt;/p&gt;
+&lt;p&gt;Lo proximo que quiero intentar es conseguir sacar el Id y contraseña del chat de tuenti (Red social española), para conectarme a dicho chat sin necesidad de entrar en la web, usando emphaty por ejemplo, hay gente que ya lo ha conseguido &lt;a href=&#34;http://blogguino.blogspot.com/2010/05/tuenti-chat-en-empathy-sin-contactos.html&#34; target=&#34;_blank&#34;&gt;ojeando las cookies&lt;/a&gt;, pero voy a hacerlo de esta forma, ya que ojeando con wireshark conseguí sacar el ID y demás, pronto escribiré una entrada si lo consigo.&lt;/p&gt;
 
 &lt;h2 id=&#34;bibliografia&#34;&gt;Bibliografia&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.bujarra.com/ProcedimientoManInTheMiddle.html&#34;&gt;Bujarra.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.bujarra.com/ProcedimientoManInTheMiddle.html&#34; target=&#34;_blank&#34;&gt;Bujarra.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1388,7 +1388,7 @@ make dist-ff
       <description>&lt;blockquote&gt;
 &lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
 
-&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; target=&#34;_blank&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;figure&gt;
@@ -1442,7 +1442,7 @@ make dist-ff
 
 &lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
 
-&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
+&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34; target=&#34;_blank&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
 
 &lt;p&gt;Estos patrones de 8&amp;#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
 
@@ -1454,7 +1454,7 @@ make dist-ff
 
 &lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
 
-&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
+&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34; target=&#34;_blank&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
 
 &lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.symantec.norton.snap&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Norton Snap&lt;/a&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
 
@@ -1480,7 +1480,7 @@ make dist-ff
 &lt;p&gt;La explotación de programas es un elemento básico del hacking. Un programa está compuesto de un conjunto de reglas complejas siguiendo un flujo de ejecución que dice al ordenador qué hacer. Explotar un programa es una forma inteligente de conseguir que el ordenador haga lo que tú quieras, incluso si dicho programa no se diseñó para hacerlo. - &lt;strong&gt;The art of Exploitation, Capítulo 3&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;El libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag;=elbaudelpro-21&amp;amp;linkCode;=as2&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=1593271441&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, es un libro que recomiendo a todo aquel interesado en aprender temas sobre seguridad informática.&lt;/p&gt;
+&lt;p&gt;El libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag;=elbaudelpro-21&amp;amp;linkCode;=as2&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=1593271441&#34; target=&#34;_blank&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, es un libro que recomiendo a todo aquel interesado en aprender temas sobre seguridad informática.&lt;/p&gt;
 
 &lt;p&gt;Esta va a ser la primera de las 3 o 4 entradas que voy a dedicar a explicar cómo aprovecharse de los buffers overflows en los programas para modificar su comportamiento, e incluso conseguir el control total de la máquina.&lt;/p&gt;
 

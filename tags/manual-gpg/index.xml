@@ -18,7 +18,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/Chuleta-de-comandos-GPG.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
+&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
 
 &lt;p&gt;He usado el “&lt;strong&gt;Nombre de Usuario&lt;/strong&gt;” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es &lt;em&gt;Charles Lockhart&lt;/em&gt;, pero puedo referenciarlo simplemente poniendo Lockhart.&lt;/p&gt;
 
@@ -143,8 +143,8 @@ Como por ejemplo:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;compartir-claves-secretas&#34;&gt;Compartir Claves Secretas&lt;/h1&gt;

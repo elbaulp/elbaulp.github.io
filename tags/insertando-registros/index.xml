@@ -14,11 +14,11 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/programacion-android-insertando/</guid>
-      <description>&lt;p&gt;En la entrada anterior hablamos de cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-la-clausula&#34;&gt;obtener regístros&lt;/a&gt; de los proveedores de contenidos (CV) usando &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;URIs&lt;/a&gt;. Ahora vamos a ver como insertar registros.&lt;/p&gt;
+      <description>&lt;p&gt;En la entrada anterior hablamos de cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-la-clausula&#34; target=&#34;_blank&#34;&gt;obtener regístros&lt;/a&gt; de los proveedores de contenidos (CV) usando &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34; target=&#34;_blank&#34;&gt;URIs&lt;/a&gt;. Ahora vamos a ver como insertar registros.&lt;/p&gt;
 
 &lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
-&lt;p&gt;Anroid utiliza una clase llamada &lt;em&gt;android.content.ContentValues&lt;/em&gt; para retener los valores de un solo registro, que será el que se insertará. Los &lt;em&gt;ContentValues&lt;/em&gt; son un dicionario de pares clave/valor, al igual que los nombres de columnas y valores de las &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos&#34;&gt;bases de datos&lt;/a&gt;. La forma de insertar un registro es rellenando el ContentValues primero y despues decir a &lt;em&gt;android.content.ContentResolver&lt;/em&gt; que lo inserte usando una URI.&lt;/p&gt;
+&lt;p&gt;Anroid utiliza una clase llamada &lt;em&gt;android.content.ContentValues&lt;/em&gt; para retener los valores de un solo registro, que será el que se insertará. Los &lt;em&gt;ContentValues&lt;/em&gt; son un dicionario de pares clave/valor, al igual que los nombres de columnas y valores de las &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos&#34; target=&#34;_blank&#34;&gt;bases de datos&lt;/a&gt;. La forma de insertar un registro es rellenando el ContentValues primero y despues decir a &lt;em&gt;android.content.ContentResolver&lt;/em&gt; que lo inserte usando una URI.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -40,7 +40,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ContentResolver&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;miActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getContentResolver&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Todo lo que necesitamos en este punto es una URI para decirle al ContentResolver que inserte la fila. &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-arquitectura-de&#34;&gt;En entradas anteriores&lt;/a&gt; vimos que nuestra URI era:&lt;/p&gt;
+&lt;p&gt;Todo lo que necesitamos en este punto es una URI para decirle al ContentResolver que inserte la fila. &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-arquitectura-de&#34; target=&#34;_blank&#34;&gt;En entradas anteriores&lt;/a&gt; vimos que nuestra URI era:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;content:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//com.elbauldelprogramador.provider.FavSites/sites&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -82,7 +82,7 @@
 
 &lt;p&gt;El código usa el flujo de salida para escribir.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-actualizar-y-borrar-registros-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y/&#34;&gt;Actualizar y borrar registros&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-actualizar-y-borrar-registros-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y/&#34; target=&#34;_blank&#34;&gt;Actualizar y borrar registros&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
   </channel>

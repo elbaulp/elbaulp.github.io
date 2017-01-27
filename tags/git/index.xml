@@ -14,7 +14,7 @@
       <pubDate>Sat, 12 Nov 2016 08:12:16 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
-      <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
+      <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
 
 &lt;h2 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h2&gt;
 
@@ -51,8 +51,8 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;h2 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34; target=&#34;_blank&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34; target=&#34;_blank&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -85,7 +85,7 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
   &lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java24&amp;ch=ocsoc&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,7 +99,7 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; target=&#34;_blank&#34; title=&#34;Repo Oh my Git&#34;&gt;Repo Oh my Git&lt;/a&gt;&lt;/span&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de &lt;em&gt;Prompts&lt;/em&gt; para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un &lt;a href=&#34;https://elbauldelprogramador.com/git&#34; title=&#34;Tutoriales sobre Git&#34;&gt;repositorio git&lt;/a&gt;. Ésto es lo realmente interesante, ya que el &lt;em&gt;prompt&lt;/em&gt; nos mostrará &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos Git&#34;&gt;información del estado del repositorio&lt;/a&gt;  , lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “_Rainbow bash_”:&lt;/p&gt;
+&lt;p&gt;Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de &lt;em&gt;Prompts&lt;/em&gt; para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un &lt;a href=&#34;https://elbauldelprogramador.com/git&#34; title=&#34;Tutoriales sobre Git&#34;&gt;repositorio git&lt;/a&gt;. Ésto es lo realmente interesante, ya que el &lt;em&gt;prompt&lt;/em&gt; nos mostrará &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos Git&#34; target=&#34;_blank&#34;&gt;información del estado del repositorio&lt;/a&gt;  , lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “_Rainbow bash_”:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -122,7 +122,7 @@ rbw_load_theme simple
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rbw_load_theme simple
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Con el nombre del tema deseado, a alegir entre (&lt;em&gt;Regular, Hacker, Minimal, Simple, Arrow y Video&lt;/em&gt;), puedes verlos en &lt;a href=&#34;https://github.com/slok/rainbow-bash/tree/master/themes&#34;&gt;su página de github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Con el nombre del tema deseado, a alegir entre (&lt;em&gt;Regular, Hacker, Minimal, Simple, Arrow y Video&lt;/em&gt;), puedes verlos en &lt;a href=&#34;https://github.com/slok/rainbow-bash/tree/master/themes&#34; target=&#34;_blank&#34;&gt;su página de github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;oh-my-git&#34;&gt;Oh My Git&lt;/h2&gt;
 
@@ -134,7 +134,7 @@ rbw_load_theme simple
 
 &lt;h4 id=&#34;instalar-las-fuentes-parcheadas&#34;&gt;Instalar las fuentes parcheadas&lt;/h4&gt;
 
-&lt;p&gt;Primero descargamos los ficheros del repositorio &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34;&gt;awesome terminal Fonts&lt;/a&gt;, como vamos a usar la estrategia de fuentes parcheadas, simplemente copiamos las fuentes de la carpeta &lt;code&gt;patched&lt;/code&gt; a la carpeta de fuentes del sistema y cambiamos el tipo de fuente usada por nuestra terminal a una de ellas. Yo por ejemplo uso &lt;em&gt;Source Code Pro&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Primero descargamos los ficheros del repositorio &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; target=&#34;_blank&#34;&gt;awesome terminal Fonts&lt;/a&gt;, como vamos a usar la estrategia de fuentes parcheadas, simplemente copiamos las fuentes de la carpeta &lt;code&gt;patched&lt;/code&gt; a la carpeta de fuentes del sistema y cambiamos el tipo de fuente usada por nuestra terminal a una de ellas. Yo por ejemplo uso &lt;em&gt;Source Code Pro&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;instalar-oh-my-git&#34;&gt;Instalar Oh My Git&lt;/h3&gt;
 
@@ -173,9 +173,9 @@ rbw_load_theme simple
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Repositorio Oh My Git&lt;/em&gt; | &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; title=&#34;Repo Oh my Git&#34;&gt;github.com/arialdomartini/oh-my-git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Repositorio Rainbox Bash&lt;/em&gt; | &lt;a href=&#34;https://github.com/slok/rainbow-bash&#34; title=&#34;Repositorio Rainbox Bash&#34;&gt;github.com/slok/rainbow-bash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Repositorio Awesome Terminal Fonts&lt;/em&gt; | &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; title=&#34;Repositorio Awesome Terminal Fonts&#34;&gt;github.com/gabrielelana/awesome-terminal-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Oh My Git&lt;/em&gt; | &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; title=&#34;Repo Oh my Git&#34; target=&#34;_blank&#34;&gt;github.com/arialdomartini/oh-my-git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Rainbox Bash&lt;/em&gt; | &lt;a href=&#34;https://github.com/slok/rainbow-bash&#34; title=&#34;Repositorio Rainbox Bash&#34; target=&#34;_blank&#34;&gt;github.com/slok/rainbow-bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Awesome Terminal Fonts&lt;/em&gt; | &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; title=&#34;Repositorio Awesome Terminal Fonts&#34; target=&#34;_blank&#34;&gt;github.com/gabrielelana/awesome-terminal-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -280,7 +280,7 @@ rbw_load_theme simple
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; : puntero a commit ( branch que no cambia )&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;git tag &amp;#45;a &amp;lt;tagname&amp;gt; &amp;#45;m &amp;#8216;mensaje&amp;#8217;&lt;/strong&gt;   #  annotated tag&lt;/p&gt;&lt;/li&gt;
@@ -822,8 +822,8 @@ P1/modularArith/ej4.py:    print MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
-&lt;p&gt;Github Flow Aliases | &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; title=&#34;Github Flow Aliases&#34;&gt;haacked.com&lt;/a&gt;
-Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/&#34; title=&#34;Must Have Git Aliases: Advanced Examples&#34;&gt;durdn.com&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Github Flow Aliases | &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; title=&#34;Github Flow Aliases&#34; target=&#34;_blank&#34;&gt;haacked.com&lt;/a&gt;
+Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/&#34; title=&#34;Must Have Git Aliases: Advanced Examples&#34; target=&#34;_blank&#34;&gt;durdn.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -838,13 +838,13 @@ Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-ha
 
 &lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
 
-&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
+&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
 
 &lt;p&gt;Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno &lt;strong&gt;local&lt;/strong&gt;, para realizar modificaciones, otro de &lt;strong&gt;desarrollo&lt;/strong&gt;, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de &lt;strong&gt;producción&lt;/strong&gt;, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;configurar-el-entorno-local&#34;&gt;Configurar el entorno local&lt;/h1&gt;
 
-&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34; target=&#34;_blank&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -854,15 +854,15 @@ Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-ha
 
 &lt;h2 id=&#34;qué-es-capistrano&#34;&gt;¿Qué es Capistrano?&lt;/h2&gt;
 
-&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34; target=&#34;_blank&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;requerimientos&#34;&gt;Requerimientos&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34; target=&#34;_blank&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Bunder&lt;/strong&gt;: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar &lt;a href=&#34;http://bundler.io/&#34; target=&#34;_blank&#34;&gt;Bundler&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34; target=&#34;_blank&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
@@ -1075,8 +1075,8 @@ $ git config filter.siteurl.clean siteurl.clean
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gilesbowkett/git-smudge-and-clean&#34; title=&#34;Git smudge and Clean&#34;&gt;github.com/gilesbowkett&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes&#34; title=&#34;Git SCM&#34;&gt;Git scm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gilesbowkett/git-smudge-and-clean&#34; title=&#34;Git smudge and Clean&#34; target=&#34;_blank&#34;&gt;github.com/gilesbowkett&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes&#34; title=&#34;Git SCM&#34; target=&#34;_blank&#34;&gt;Git scm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1104,7 +1104,7 @@ $ git config filter.siteurl.clean siteurl.clean
 
 &lt;h3 id=&#34;solución&#34;&gt;Solución&lt;/h3&gt;
 
-&lt;p&gt;La respuesta, como es habitual, la encontré tras buscar un poco en &lt;em&gt;stackoverflow&lt;/em&gt;. Gracias a &lt;a href=&#34;http://stackoverflow.com/users/140185/manoj-govindan&#34; title=&#34;Perfil en stackoverflow&#34;&gt;Manoj Govindan&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La respuesta, como es habitual, la encontré tras buscar un poco en &lt;em&gt;stackoverflow&lt;/em&gt;. Gracias a &lt;a href=&#34;http://stackoverflow.com/users/140185/manoj-govindan&#34; title=&#34;Perfil en stackoverflow&#34; target=&#34;_blank&#34;&gt;Manoj Govindan&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;añadir-repo2-como-remote&#34;&gt;Añadir repo2 como remote&lt;/h4&gt;
 
@@ -1152,7 +1152,7 @@ git push repo2 master:master
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository&#34;&gt;Automatically mirror a git repository&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository&#34; target=&#34;_blank&#34;&gt;Automatically mirror a git repository&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

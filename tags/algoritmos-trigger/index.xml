@@ -16,7 +16,7 @@
       <guid>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</guid>
       <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
-&lt;p&gt;Los disparadores (o triggers) son &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloques de código PL/SQL&lt;/a&gt; asociados a una tabla y que se ejecutan automáticamente como reacción a una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;operación DML&lt;/a&gt; específica (&lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt; o &lt;code&gt;DELETE&lt;/code&gt;) sobre dicha tabla.&lt;/p&gt;
+&lt;p&gt;Los disparadores (o triggers) son &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34; target=&#34;_blank&#34;&gt;bloques de código PL/SQL&lt;/a&gt; asociados a una tabla y que se ejecutan automáticamente como reacción a una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34; target=&#34;_blank&#34;&gt;operación DML&lt;/a&gt; específica (&lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt; o &lt;code&gt;DELETE&lt;/code&gt;) sobre dicha tabla.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -42,11 +42,11 @@
 &lt;p&gt;En principio, dentro del cuerpo de programa del trigger podemos hacer uso de cualquier orden de consulta o manipulación de la BD, y llamadas a funciones o procedimientos siempre que:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;No se utilicen &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34;&gt;comandos DDL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;No se acceda a las tablas que están siendo modificadas con &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;, &lt;code&gt;INSERT&lt;/code&gt; o &lt;code&gt;UPDATE&lt;/code&gt;&lt;/a&gt; en la misma sesión&lt;/li&gt;
-&lt;li&gt;No se violen las &lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/&#34;&gt;reglas de integridad&lt;/a&gt;, es decir no se pueden modificar llaves primarias, ni actualizar llaves externas&lt;/li&gt;
-&lt;li&gt;No se utilicen sentencias de control de &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34;&gt;transacciones&lt;/a&gt; (Commit, Rollback o Savepoint)&lt;/li&gt;
-&lt;li&gt;No se llamen a &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;procedimientos&lt;/a&gt; que trasgredan la restricción anterior&lt;/li&gt;
+&lt;li&gt;No se utilicen &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34; target=&#34;_blank&#34;&gt;comandos DDL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No se acceda a las tablas que están siendo modificadas con &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;, &lt;code&gt;INSERT&lt;/code&gt; o &lt;code&gt;UPDATE&lt;/code&gt;&lt;/a&gt; en la misma sesión&lt;/li&gt;
+&lt;li&gt;No se violen las &lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/&#34; target=&#34;_blank&#34;&gt;reglas de integridad&lt;/a&gt;, es decir no se pueden modificar llaves primarias, ni actualizar llaves externas&lt;/li&gt;
+&lt;li&gt;No se utilicen sentencias de control de &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34; target=&#34;_blank&#34;&gt;transacciones&lt;/a&gt; (Commit, Rollback o Savepoint)&lt;/li&gt;
+&lt;li&gt;No se llamen a &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34; target=&#34;_blank&#34;&gt;procedimientos&lt;/a&gt; que trasgredan la restricción anterior&lt;/li&gt;
 &lt;li&gt;No se llame a procedimientos que utilicen sentencias de control de transacciones&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -142,12 +142,12 @@
 
 &lt;h2 id=&#34;restricciones-de-los-triggers&#34;&gt;Restricciones de los Triggers.&lt;/h2&gt;
 
-&lt;p&gt;El cuerpo de un disparador es un &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloque PL/SQL&lt;/a&gt;. Cualquier orden que sea legal en un bloque PL/SQL , es legal en el cuerpo de un disparador, con las siguientes restricciones:&lt;/p&gt;
+&lt;p&gt;El cuerpo de un disparador es un &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34; target=&#34;_blank&#34;&gt;bloque PL/SQL&lt;/a&gt;. Cualquier orden que sea legal en un bloque PL/SQL , es legal en el cuerpo de un disparador, con las siguientes restricciones:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Un disparador no puede emitir ninguna orden de &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34;&gt;control de transacciones&lt;/a&gt; ( &lt;code&gt;COMMIT&lt;/code&gt;, &lt;code&gt;ROLLBACK&lt;/code&gt; o &lt;code&gt;SAVEPOINT&lt;/code&gt;). El disparador se activa como parte de la ejecución de la orden que provocó el disparo, y forma parte de la misma transacción qu dicha orden. Cuando la orden que provoca la orden es confirmada o cancelada, se confirma o se cancela también el trabajo realizado por el disparador.&lt;/li&gt;
-&lt;li&gt;Por las mismas razones, ningún &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;procedure o función&lt;/a&gt; llamado por el disparador puede emitir órdenes de control de transacciones.&lt;/li&gt;
-&lt;li&gt;El disparador no puede declarar &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;variables&lt;/a&gt; de tipo &lt;code&gt;LONG&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Un disparador no puede emitir ninguna orden de &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34; target=&#34;_blank&#34;&gt;control de transacciones&lt;/a&gt; ( &lt;code&gt;COMMIT&lt;/code&gt;, &lt;code&gt;ROLLBACK&lt;/code&gt; o &lt;code&gt;SAVEPOINT&lt;/code&gt;). El disparador se activa como parte de la ejecución de la orden que provocó el disparo, y forma parte de la misma transacción qu dicha orden. Cuando la orden que provoca la orden es confirmada o cancelada, se confirma o se cancela también el trabajo realizado por el disparador.&lt;/li&gt;
+&lt;li&gt;Por las mismas razones, ningún &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34; target=&#34;_blank&#34;&gt;procedure o función&lt;/a&gt; llamado por el disparador puede emitir órdenes de control de transacciones.&lt;/li&gt;
+&lt;li&gt;El disparador no puede declarar &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34; target=&#34;_blank&#34;&gt;variables&lt;/a&gt; de tipo &lt;code&gt;LONG&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;utilización-de-old-y-new-en-los-disparadores-con-nivel-de-fila&#34;&gt;Utilización de :old y :new en los disparadores con nivel de fila.&lt;/h2&gt;
@@ -253,7 +253,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 
 &lt;p&gt;Si queremos conocer los valores del registro de la tabla sobre la que se ha disparado el trigger, este último debe estar declarado de forma &lt;code&gt;FOR EACH ROW&lt;/code&gt; y acceder a sus valores mediante las pseudocolumnas :NEW y :OLD.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34; target=&#34;_blank&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
   </channel>

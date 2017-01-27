@@ -9,13 +9,89 @@
     <atom:link href="https://elbauldelprogramador.com/author/colaboraciones/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TAILS LINUX y la importancia de la privacidad</title>
+      <link>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;em&gt;Paula de la Hoz (&lt;a href=&#34;https://twitter.com/Terceranexus6&#34; target=&#34;_blank&#34;&gt;@Terceranexus6&lt;/a&gt;&lt;/em&gt;. Su blog: &lt;a href=&#34;https://ohmybits.tumblr.com&#34; target=&#34;_blank&#34;&gt;Oh My Bits&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://medium.com/@HamletAgain&#34; target=&#34;_blank&#34;&gt;Hamlet Again&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;contexto-actual&#34;&gt;Contexto actual&lt;/h1&gt;
+
+&lt;p&gt;Con el incipiente avance tecnológico, en nuestra sociedad cada vez se valora más la privacidad del usuario. Todo lo que hacemos, quiénes somos, qué nos gusta, es información que nos puede parecer irrelevante según para qué contextos. Sin embargo para las empresas, gobiernos y asociaciones, esa información es muy valiosa y puede incluso llegar a &lt;em&gt;limitarnos&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;Decir que no te importa el derecho a la privacidad porque no tienes nada que esconder no se diferencia de decir que no te importa la libertad de expresión porque no tienes nada que decir.&lt;/em&gt;&amp;ldquo;
+&amp;mdash; &lt;strong&gt;Edward Snowden&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;El ex-empleado de la NSA &lt;strong&gt;&lt;em&gt;Edward Snowden&lt;/em&gt;&lt;/strong&gt;, conocido por su implicación en wikileaks con filtraciones de información clasificada, ha abogado por la defensa de la privacidad y los derechos en internet a través de las redes, incluso desde su asilo político en Rusia. Esta controvertida figura, para mantener &amp;ldquo;&lt;em&gt;a salvo&lt;/em&gt;&amp;rdquo; su privacidad utiliza, principalmente, un sistema operativo llamado &lt;strong&gt;TAILS LINUX&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-es-tails&#34;&gt;¿Qué es Tails?&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/tchou-improved.png&#34; alt=&#34;{{ .Title }}&#34; title=&#34;{{ .Title}}&#34; width=&#34;500&#34; height=&#34;257&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/index.en.html&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; es un sistema operativo &lt;em&gt;live&lt;/em&gt;, ¿ésto qué quiere decir? que podemos utilizarlo desde cualquier ordenador utilizando simplemente un pen drive. Es completamente gratuito, libre y está basado en Debian &lt;a href=&#34;https://elbauldelprogramador.com/categories/linux&#34; title=&#34;Artículos sobre Linux&#34; target=&#34;_blank&#34;&gt;GNU/Linux&lt;/a&gt;. Una de las características principales de TAILS, es que basa todas sus conexiones en &lt;strong&gt;TOR&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt; es un navegador que protege al usuario frente al análisis del tráfico de paquetes y la vigilancia masiva usando un sistema alternativo de nodos voluntarios y túneles virtuales, en lugar de hacer una conexión directa.&lt;/p&gt;
+
+&lt;p&gt;Además de &lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt;, TAILS permite utilizar I2P, y en la web oficial viene &lt;a href=&#34;https://tails.boum.org/doc/anonymous_internet/i2p/index.en.html&#34; target=&#34;_blank&#34;&gt;documentado&lt;/a&gt; cómo utilizarlo. El sistema operativo, que ocupa en su totalidad &lt;em&gt;4 gigas&lt;/em&gt;, viene con una serie de programas predeterminados relacionados con la privacidad, la ofimática y la mensajería. En un principio, el pen drive no guarda la información de una sesión a otra, pero &lt;a href=&#34;https://tails.boum.org/install/clone/index.en.html&#34; target=&#34;_blank&#34;&gt;podemos configurarlo&lt;/a&gt; para utilizar la memoria sobrante del pen drive.&lt;/p&gt;
+
+&lt;h1 id=&#34;instalación-y-uso&#34;&gt;Instalación y uso&lt;/h1&gt;
+
+&lt;p&gt;Configurar un pen drive para instalar TAILS es bastante sencillo, especialmente porque &lt;a href=&#34;https://tails.boum.org/install/os/index.en.html&#34; target=&#34;_blank&#34;&gt;viene indicado paso a paso&lt;/a&gt; en la página oficial. Además incluye especificaciones de instalación desde cualquier sistema operativo (Linux, Windows, MAC y otro TAILS). El proceso es básicamente bajarse la imagen desde TOR, preparar un pen drive de 4 o más gigas, e instalar la imagen en éste.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/pasted-from-clipboard.png&#34; alt=&#34;{{ .Title }}&#34; title=&#34;{{ .Title }}&#34; width=&#34;946&#34; height=&#34;316&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para usar este sistema operativo, simplemente insertamos el pen drive en uno de los puertos de un ordenador apagado y lo encendemos. El ordenador tardará varios segundos en terminar de cargar la imagen, pero cuando lo haga tendremos acceso a nuestro escritorio desde el cual podremos navegar con tranquilidad. Una vez que apagamos el ordenador y retiramos el pen drive, &lt;strong&gt;no queda rastro&lt;/strong&gt; de lo que hayamos hecho en el ordenador, ya que se sobrescribe la memoria.&lt;/p&gt;
+
+&lt;p&gt;Por muy seguro que pueda ser este sistema operativo y las herramientas que ofrece, en la propia página web indica que la mejor forma de protegerse es el &lt;em&gt;sentido común&lt;/em&gt; del usuario, tales como utilizar contraseñas fuertes y saber utilizar apropiadamente las herramientas que ofrece, comprendiendo las limitaciones.&lt;/p&gt;
+
+&lt;h1 id=&#34;programas-y-recursos&#34;&gt;Programas y recursos&lt;/h1&gt;
+
+&lt;p&gt;Algunas de las herramientas más interesantes con las que viene Tails son las siguientes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/code/luks/&#34; target=&#34;_blank&#34;&gt;LUKS&lt;/a&gt; (Linux Unified Key Setup), que te permite encriptar pen drives y discos externos.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.eff.org/https-everywhere&#34; target=&#34;_blank&#34;&gt;HTTPS Everywhere&lt;/a&gt; es una extensión desarrollada por la &lt;a href=&#34;eff.org&#34; target=&#34;_blank&#34;&gt;EFF&lt;/a&gt; para encriptar todas las conexiones usando https.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openpgp.org/&#34; target=&#34;_blank&#34;&gt;OpenPGP&lt;/a&gt; &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;para encriptar y firmar documentos y correos&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://otr.cypherpunks.ca/&#34; target=&#34;_blank&#34;&gt;OTR&lt;/a&gt;, para proteger mensajería instantánea.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wipetools.tuxfamily.org/nautilus-wipe.html&#34; target=&#34;_blank&#34;&gt;Nautilus Wipe&lt;/a&gt; para borrar archivos con seguridad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;confías-plenamente-en-tails-ellos-esperan-que-no&#34;&gt;¿Confías plenamente en TAILS? ellos esperan que no&lt;/h1&gt;
+
+&lt;p&gt;Una de los problemas fundamentales de la sociedad actual en términos de informática es el desinterés del usuario medio por su privacidad y seguridad. Y esta concienciación empieza precisamente con la duda. Sean cuales sean nuestros motivos para confiar en un sistema operativo, programa o aplicación, deben haber pasado un filtro de duda y escepticismo, y eso mismo &lt;a href=&#34;https://tails.boum.org/doc/about/trust/index.en.html&#34; target=&#34;_blank&#34;&gt;nos sugieren&lt;/a&gt; en la página de TAILS.&lt;/p&gt;
+
+&lt;p&gt;Las herramientas que ofrecen no sólo tienen un objetivo técnico si no que se esfuerzan en ofrecerte una nueva visión y un cambio en la forma en que sus usuarios usan la tecnología y su información. El uso de este sistema debe ir acompasando al interés por nuestra privacidad, y a la curiosidad por saber qué se hace con nuestra información.&lt;/p&gt;
+
+&lt;p&gt;Para ello ofrecen una serie de razones por las cuales puede decirse que abogan por estas cualidades. Basa su justificación en el uso de software libre bien documentado, TOR, y el hecho de utilizar Debian GNU/Linux, que aunque ha tenido bugs importantes como &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2008/msg00152.html&#34; target=&#34;_blank&#34;&gt;SSH PRNG&lt;/a&gt; no se han encontrado vulnerabilidades de seguridad hasta la fecha, lo que lo convierte en un buen candidato para este sistema.&lt;/p&gt;
+
+&lt;h1 id=&#34;rompiendo-barreras&#34;&gt;Rompiendo barreras&lt;/h1&gt;
+
+&lt;p&gt;Es de saber que las distintas distribuciones de linux tienen cierta fama entre los programadores e informáticos de todo el mundo. Debido a la amplia oferta de sistemas operativos disponibles, hay algunas más o menos amigables para un usuario medio. TAILS pretende ser accesible y manejable para cualquiera, tenga o no una base sólida en el uso de programación, linux y Bash. Para ello ofrece una interfaz gráfica intuitiva y una instalación simple.&lt;/p&gt;
+
+&lt;p&gt;El uso de este sistema puede tener muchas aplicaciones en nuestro día a día, y es completamente legal. No necesitamos ser Edward Snowden para &lt;strong&gt;necesitar o querer&lt;/strong&gt; privacidad, por ejemplo, a la hora de consultar nuestro correo en un ordenador público. La idea de este sistema es liberarnos de la obligación de &amp;ldquo;&lt;em&gt;confiar&lt;/em&gt;&amp;rdquo; en un ordenador público, o de algún amigo.&lt;/p&gt;
+
+&lt;p&gt;Esta idea puede que nos resulte difícil de agregar a nuestra rutina, pero sin duda se debería hacerse una pequeña reflexión sobre ello. El ritmo de nuestra sociedad ha cambiado con rapidez en pocos años, y dependemos en nuestra vida privada y trabajo (con frecuencia) de programas y aplicaciones que manejan gran cantidad de información privada. Esta rapidez ha hecho que el usuario medio se acostumbre a la comodidad de estas herramientas, pero se olvide con frecuencia de proteger sus datos a la hora de utilizarla, muchas veces por la gran cantidad de trabas y dificultades para ello.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Cómo Crear Un Bundle Symfony2</title>
       <link>https://elbauldelprogramador.com/como-crear-un-bundle-symfony2/</link>
       <pubDate>Mon, 22 Jun 2015 09:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-crear-un-bundle-symfony2/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;Éste artículo es una colaboración de &lt;em&gt;Alejandro Blanco&lt;/em&gt;, Director de desarrollo en &lt;a href=&#34;http://smsup.es&#34;&gt;smsup.es&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;em&gt;Alejandro Blanco&lt;/em&gt;, Director de desarrollo en &lt;a href=&#34;http://smsup.es&#34; target=&#34;_blank&#34;&gt;smsup.es&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;En este articulo vamos a ver los pasos que he seguido para crear un bundle de symfony 2 de forma que sea redistribuible mediante composer. Este bundle servirá para facilitar la interacción con la api de smsup, desde symfony2 y poder enviar sms masivos. Es un bundle simple, pero tiene varias cosas interesantes (requiere otra librería, utiliza parámetros de configuración, etc.), y puede ser una buena introducción.&lt;/p&gt;
@@ -24,7 +100,7 @@
 
 &lt;p&gt;Voy a describir paso a paso como lo he creado, habrá otras formas igualmente válidas y seguramente mejores, esto es solo como yo lo he hecho.&lt;/p&gt;
 
-&lt;p&gt;Asumo que ya tenemos composer instalado, si no es así, se puede instalar &lt;a href=&#34;https://getcomposer.org/download/&#34;&gt;siguiendo estos pasos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Asumo que ya tenemos composer instalado, si no es así, se puede instalar &lt;a href=&#34;https://getcomposer.org/download/&#34; target=&#34;_blank&#34;&gt;siguiendo estos pasos&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;instalar-symfony2&#34;&gt;Instalar symfony2&lt;/h3&gt;
 
@@ -126,7 +202,7 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;autoload:&lt;/strong&gt; indicamos que el namespace smsup\SmsupapiBundle hace referencia a la raíz de nuestro bundle.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Ya solo debemos declarar nuestro paquete en packagist, para lo cual tenemos que acceder a &lt;a href=&#34;https://packagist.org&#34;&gt;https://packagist.org&lt;/a&gt; y hacer login. Luego vamos a &amp;ldquo;Submit&amp;rdquo; e indicamos el enlace al repositorio y solo con esto ya nos cargara el mismo. Para que cada vez que actualicemos nuestro repositorio packagist actualice los datos, se recomienda añadir un webhook al repositorio. En el caso de github, debemos ir a Settings -&amp;gt; Weebhooks &amp;amp; Services -&amp;gt; Add Service. Seleccionar tipo Packagist e indicar el nombre de usuario y la clave de la API de packagist.&lt;/p&gt;
+&lt;p&gt;Ya solo debemos declarar nuestro paquete en packagist, para lo cual tenemos que acceder a &lt;a href=&#34;https://packagist.org&#34; target=&#34;_blank&#34;&gt;https://packagist.org&lt;/a&gt; y hacer login. Luego vamos a &amp;ldquo;Submit&amp;rdquo; e indicamos el enlace al repositorio y solo con esto ya nos cargara el mismo. Para que cada vez que actualicemos nuestro repositorio packagist actualice los datos, se recomienda añadir un webhook al repositorio. En el caso de github, debemos ir a Settings -&amp;gt; Weebhooks &amp;amp; Services -&amp;gt; Add Service. Seleccionar tipo Packagist e indicar el nombre de usuario y la clave de la API de packagist.&lt;/p&gt;
 
 &lt;p&gt;Una vez hecho esto vamos a instalar nuestro bundle desde composer para ver que todo es correcto. Antes vamos a eliminar el directorio que creamos en vendor, para que se instale limpiamente.&lt;/p&gt;
 
@@ -322,7 +398,7 @@ Hecho esto, ya está disponible una versión estable de nuestro bundle que puede
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;composer require smsup/smsup-api-bundle
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34; target=&#34;_blank&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.&lt;/p&gt;</description>
     </item>

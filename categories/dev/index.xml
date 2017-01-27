@@ -16,7 +16,7 @@
       <guid>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</guid>
       <description>&lt;p&gt;Hace poco he migrado el blog de &lt;em&gt;Jekyll&lt;/em&gt; a &lt;em&gt;Hugo&lt;/em&gt;. El proceso ha sido fácil, pero he tenido que cambiar varias cosas en el &lt;em&gt;frontmatter&lt;/em&gt; de los artículos.&lt;/p&gt;
 
-&lt;p&gt;Tras buscar en Google encontré un &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34;&gt;parseador&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34;&gt;python&lt;/a&gt; para &lt;em&gt;frontmatter&lt;/em&gt; escritos en &lt;em&gt;YAML&lt;/em&gt;. A continuación se explica cómo instalarlo y usarlo.&lt;/p&gt;
+&lt;p&gt;Tras buscar en Google encontré un &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34; target=&#34;_blank&#34;&gt;parseador&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34; target=&#34;_blank&#34;&gt;python&lt;/a&gt; para &lt;em&gt;frontmatter&lt;/em&gt; escritos en &lt;em&gt;YAML&lt;/em&gt;. A continuación se explica cómo instalarlo y usarlo.&lt;/p&gt;
 
 &lt;h1 id=&#34;instalar-python-frontmatter&#34;&gt;Instalar Python-Frontmatter&lt;/h1&gt;
 
@@ -106,7 +106,7 @@
 &lt;h1 id=&#34;prerequisitos&#34;&gt;Prerequisitos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Java JDK 7+: necesitamos un JDK para construir el Java &lt;em&gt;binding&lt;/em&gt;, así que si no lo tienes instalado puedes hacerlo desde &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34; title=&#34;www.oracle.com&#34;&gt;oracle web page&lt;/a&gt;. Puedes comprobar tu versión de JDK ejecutando: &lt;code&gt;java -version&lt;/code&gt;  en un terminal.&lt;/li&gt;
+&lt;li&gt;Java JDK 7+: necesitamos un JDK para construir el Java &lt;em&gt;binding&lt;/em&gt;, así que si no lo tienes instalado puedes hacerlo desde &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34; title=&#34;www.oracle.com&#34; target=&#34;_blank&#34;&gt;oracle web page&lt;/a&gt;. Puedes comprobar tu versión de JDK ejecutando: &lt;code&gt;java -version&lt;/code&gt;  en un terminal.&lt;/li&gt;
 &lt;li&gt;Apache Ant: teclea &lt;code&gt;ant -version&lt;/code&gt; para comprobar que tienes Apache Ant instalado. Si no lo tienes, instálalo tecleando &lt;code&gt;sudo apt-get install ant&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Python 2.6+: teclea &lt;code&gt;python --version&lt;/code&gt; en la terminal para comprobar si tienes python instalado y en que versión.&lt;/li&gt;
 &lt;/ul&gt;
@@ -115,7 +115,7 @@
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2&#34;&gt;1. Descarga OpenCV 3.2&lt;/h1&gt;
 
-&lt;p&gt;Ve a &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34;&gt;opencv documentation&lt;/a&gt; y descarga la última versión estable para Linux/Mac.&lt;/p&gt;
+&lt;p&gt;Ve a &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34; target=&#34;_blank&#34;&gt;opencv documentation&lt;/a&gt; y descarga la última versión estable para Linux/Mac.&lt;/p&gt;
 
 &lt;h1 id=&#34;2-descomprime-donde-quieras-instalar-y-crea-un-directorio-en-el-que-construir&#34;&gt;2. Descomprime donde quieras instalar y crea un directorio en el que construir&lt;/h1&gt;
 
@@ -175,7 +175,7 @@
 &lt;figcaption&gt;añadiendo .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Finalmente, tomamos el ejemplo de detección de caras de &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34;&gt;opencv documentation&lt;/a&gt; , lo corregimos (dado que es para la versión 2.4.4 de OpenCV) y lo guardamos en un fichero llamado &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; dentro de la carpeta &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt;.  El código de ejemplo adaptado a la versión 3.2 de OpenCV es:&lt;/p&gt;
+&lt;p&gt;Finalmente, tomamos el ejemplo de detección de caras de &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34; target=&#34;_blank&#34;&gt;opencv documentation&lt;/a&gt; , lo corregimos (dado que es para la versión 2.4.4 de OpenCV) y lo guardamos en un fichero llamado &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; dentro de la carpeta &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt;.  El código de ejemplo adaptado a la versión 3.2 de OpenCV es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.Mat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.MatOfRect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -262,7 +262,7 @@
 &lt;p&gt;y todo esto en unas tres semanas aproximadamente.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34; target=&#34;_blank&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;dormida-en-los-laureles&#34;&gt;Dormida en los laureles&lt;/h3&gt;
@@ -271,7 +271,7 @@
 
 &lt;p&gt;Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo &lt;em&gt;plantilla&lt;/em&gt; con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en &lt;em&gt;Calc&lt;/em&gt; tienes que introducir los decimales con una coma y &lt;em&gt;Python&lt;/em&gt; los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más.&lt;/p&gt;
 
-&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
+&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
 
 &lt;h3 id=&#34;último-día-kernel-panic&#34;&gt;Último día. Kernel panic.&lt;/h3&gt;
 
@@ -297,7 +297,7 @@
 
 &lt;p&gt;Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que &lt;strong&gt;gasté&lt;/strong&gt; metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script.&lt;/p&gt;
 
-&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
+&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
 
 &lt;p&gt;Tuve la suerte de haber hecho mi práctica en &lt;em&gt;python&lt;/em&gt;, por lo que añadirle el script que voy a describir a continuación fue pan comido.&lt;/p&gt;
 
@@ -351,9 +351,9 @@
 
 &lt;h2 id=&#34;y-los-gráficos-qué&#34;&gt;Y los gráficos, ¿qué?&lt;/h2&gt;
 
-&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34; target=&#34;_blank&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
@@ -667,19 +667,19 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
-&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34; target=&#34;_blank&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;más-sobre-r-y-python&#34;&gt;Más sobre R y Python&lt;/h2&gt;
 
 &lt;p&gt;Puedes consultar los siguientes atrículos sobre R y python:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34; target=&#34;_blank&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34; target=&#34;_blank&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34; target=&#34;_blank&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34; target=&#34;_blank&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34; target=&#34;_blank&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -747,7 +747,7 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;How to define an Emacs command to &lt;code&gt;query-replace-regexp&lt;/code&gt; using a specific regexp | &lt;a href=&#34;http://stackoverflow.com/questions/39040092/how-to-define-an-emacs-command-to-query-replace-regexp-using-a-specific-regexp&#34; title=&#34;How to define an Emacs command to `query-replace-regexp` using a specific regexp&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How to define an Emacs command to &lt;code&gt;query-replace-regexp&lt;/code&gt; using a specific regexp | &lt;a href=&#34;http://stackoverflow.com/questions/39040092/how-to-define-an-emacs-command-to-query-replace-regexp-using-a-specific-regexp&#34; title=&#34;How to define an Emacs command to `query-replace-regexp` using a specific regexp&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -900,13 +900,13 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
         &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Espero que os resulte útil, he subido el script a &lt;a href=&#34;https://gist.github.com/algui91/188a7f9d24e586cb16d9ed9188aa5823&#34; title=&#34;Gist en github&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Espero que os resulte útil, he subido el script a &lt;a href=&#34;https://gist.github.com/algui91/188a7f9d24e586cb16d9ed9188aa5823&#34; title=&#34;Gist en github&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;How to save back changes made to a HTML file using BeautifulSoup in Python? | &lt;a href=&#34;http://stackoverflow.com/a/14369600/1612432&#34; title=&#34;How to save back changes made to a HTML file using BeautifulSoup in Python?&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Replace SRC of all IMG elements using Parser | &lt;a href=&#34;http://stackoverflow.com/a/1579733/1612432&#34; title=&#34;Replace SRC of all IMG elements using Parser&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How to save back changes made to a HTML file using BeautifulSoup in Python? | &lt;a href=&#34;http://stackoverflow.com/a/14369600/1612432&#34; title=&#34;How to save back changes made to a HTML file using BeautifulSoup in Python?&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace SRC of all IMG elements using Parser | &lt;a href=&#34;http://stackoverflow.com/a/1579733/1612432&#34; title=&#34;Replace SRC of all IMG elements using Parser&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -968,7 +968,7 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; target=&#34;_blank&#34; title=&#34;Repo Oh my Git&#34;&gt;Repo Oh my Git&lt;/a&gt;&lt;/span&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de &lt;em&gt;Prompts&lt;/em&gt; para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un &lt;a href=&#34;https://elbauldelprogramador.com/git&#34; title=&#34;Tutoriales sobre Git&#34;&gt;repositorio git&lt;/a&gt;. Ésto es lo realmente interesante, ya que el &lt;em&gt;prompt&lt;/em&gt; nos mostrará &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos Git&#34;&gt;información del estado del repositorio&lt;/a&gt;  , lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “_Rainbow bash_”:&lt;/p&gt;
+&lt;p&gt;Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de &lt;em&gt;Prompts&lt;/em&gt; para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un &lt;a href=&#34;https://elbauldelprogramador.com/git&#34; title=&#34;Tutoriales sobre Git&#34;&gt;repositorio git&lt;/a&gt;. Ésto es lo realmente interesante, ya que el &lt;em&gt;prompt&lt;/em&gt; nos mostrará &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos Git&#34; target=&#34;_blank&#34;&gt;información del estado del repositorio&lt;/a&gt;  , lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “_Rainbow bash_”:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -991,7 +991,7 @@ rbw_load_theme simple
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rbw_load_theme simple
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Con el nombre del tema deseado, a alegir entre (&lt;em&gt;Regular, Hacker, Minimal, Simple, Arrow y Video&lt;/em&gt;), puedes verlos en &lt;a href=&#34;https://github.com/slok/rainbow-bash/tree/master/themes&#34;&gt;su página de github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Con el nombre del tema deseado, a alegir entre (&lt;em&gt;Regular, Hacker, Minimal, Simple, Arrow y Video&lt;/em&gt;), puedes verlos en &lt;a href=&#34;https://github.com/slok/rainbow-bash/tree/master/themes&#34; target=&#34;_blank&#34;&gt;su página de github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;oh-my-git&#34;&gt;Oh My Git&lt;/h2&gt;
 
@@ -1003,7 +1003,7 @@ rbw_load_theme simple
 
 &lt;h4 id=&#34;instalar-las-fuentes-parcheadas&#34;&gt;Instalar las fuentes parcheadas&lt;/h4&gt;
 
-&lt;p&gt;Primero descargamos los ficheros del repositorio &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34;&gt;awesome terminal Fonts&lt;/a&gt;, como vamos a usar la estrategia de fuentes parcheadas, simplemente copiamos las fuentes de la carpeta &lt;code&gt;patched&lt;/code&gt; a la carpeta de fuentes del sistema y cambiamos el tipo de fuente usada por nuestra terminal a una de ellas. Yo por ejemplo uso &lt;em&gt;Source Code Pro&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Primero descargamos los ficheros del repositorio &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; target=&#34;_blank&#34;&gt;awesome terminal Fonts&lt;/a&gt;, como vamos a usar la estrategia de fuentes parcheadas, simplemente copiamos las fuentes de la carpeta &lt;code&gt;patched&lt;/code&gt; a la carpeta de fuentes del sistema y cambiamos el tipo de fuente usada por nuestra terminal a una de ellas. Yo por ejemplo uso &lt;em&gt;Source Code Pro&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;instalar-oh-my-git&#34;&gt;Instalar Oh My Git&lt;/h3&gt;
 
@@ -1042,9 +1042,9 @@ rbw_load_theme simple
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Repositorio Oh My Git&lt;/em&gt; | &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; title=&#34;Repo Oh my Git&#34;&gt;github.com/arialdomartini/oh-my-git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Repositorio Rainbox Bash&lt;/em&gt; | &lt;a href=&#34;https://github.com/slok/rainbow-bash&#34; title=&#34;Repositorio Rainbox Bash&#34;&gt;github.com/slok/rainbow-bash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Repositorio Awesome Terminal Fonts&lt;/em&gt; | &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; title=&#34;Repositorio Awesome Terminal Fonts&#34;&gt;github.com/gabrielelana/awesome-terminal-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Oh My Git&lt;/em&gt; | &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; title=&#34;Repo Oh my Git&#34; target=&#34;_blank&#34;&gt;github.com/arialdomartini/oh-my-git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Rainbox Bash&lt;/em&gt; | &lt;a href=&#34;https://github.com/slok/rainbow-bash&#34; title=&#34;Repositorio Rainbox Bash&#34; target=&#34;_blank&#34;&gt;github.com/slok/rainbow-bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Awesome Terminal Fonts&lt;/em&gt; | &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; title=&#34;Repositorio Awesome Terminal Fonts&#34; target=&#34;_blank&#34;&gt;github.com/gabrielelana/awesome-terminal-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1080,7 +1080,7 @@ rbw_load_theme simple
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
-&lt;p&gt;Repositorio en GitHub | &lt;a href=&#34;https://github.com/algui91/Markdown2LatexConversor&#34; title=&#34;Markdown2LatexConversor&#34;&gt;Markdown2LatexConversor&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Repositorio en GitHub | &lt;a href=&#34;https://github.com/algui91/Markdown2LatexConversor&#34; title=&#34;Markdown2LatexConversor&#34; target=&#34;_blank&#34;&gt;Markdown2LatexConversor&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1345,7 +1345,7 @@ datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f4&lt;span class=&#34;p
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
-&lt;p&gt;Cómo ejecutar diff a la salida de dos comandos | &lt;a href=&#34;http://askubuntu.com/questions/229447/how-do-i-diff-the-output-of-two-commands&#34; title=&#34;How do I diff the output of two commands&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Cómo ejecutar diff a la salida de dos comandos | &lt;a href=&#34;http://askubuntu.com/questions/229447/how-do-i-diff-the-output-of-two-commands&#34; title=&#34;How do I diff the output of two commands&#34; target=&#34;_blank&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1357,7 +1357,7 @@ datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f4&lt;span class=&#34;p
       <description>
 
 &lt;blockquote&gt;
-&lt;p&gt;Visita la &lt;a href=&#34;https://elbauldelprogramador.com/seccion-de-descargas/&#34; title=&#34;Sección de descargas&#34;&gt;sección de descargas&lt;/a&gt; para ver todo el material disponible.&lt;/p&gt;
+&lt;p&gt;Visita la &lt;a href=&#34;https://elbauldelprogramador.com/seccion-de-descargas/&#34; title=&#34;Sección de descargas&#34; target=&#34;_blank&#34;&gt;sección de descargas&lt;/a&gt; para ver todo el material disponible.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;manuales-en-pdf-sobre-c&#34;&gt;Manuales en PDF sobre C++&lt;/h3&gt;

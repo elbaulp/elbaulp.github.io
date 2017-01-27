@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/statuscolor-dwm-6-1/</guid>
-      <description>&lt;p&gt;Días atrás hablamos &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM, el gestor de ventanas más eficiente&#34;&gt;sobre DWM&lt;/a&gt; y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.&lt;/p&gt;
+      <description>&lt;p&gt;Días atrás hablamos &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM, el gestor de ventanas más eficiente&#34; target=&#34;_blank&#34;&gt;sobre DWM&lt;/a&gt; y quedó pendiente explicar cómo colorear la barra de estado. En el artículo de hoy veremos cómo aplicar el parche Simple StatusColor en DWM 6.1, que escribí hace poco.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -167,9 +167,9 @@ $ dwmstatus
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Este básicamente, es el método principal, se encarga de parsear el estado para extrar qué colores corresponden a qué parte del texto. Almacena los colores en un &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-arrays/&#34; title=&#34;Clases y Objetos – Arrays&#34;&gt;array&lt;/a&gt; para recordar en qué orden aplicarlos.&lt;/p&gt;
+&lt;p&gt;Este básicamente, es el método principal, se encarga de parsear el estado para extrar qué colores corresponden a qué parte del texto. Almacena los colores en un &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-arrays/&#34; title=&#34;Clases y Objetos – Arrays&#34; target=&#34;_blank&#34;&gt;array&lt;/a&gt; para recordar en qué orden aplicarlos.&lt;/p&gt;
 
-&lt;p&gt;Por último, solo queda usar los métodos creados, deben ir en el método &lt;code&gt;drawbar&lt;/code&gt;, encargado de dibujar todo el recuadro que muestra información en DWM (etiquetas, ventana actual y barra de estado). Para ello se reemplaza el método &lt;code&gt;drw_text&lt;/code&gt; por &lt;code&gt;drw_colored_st&lt;/code&gt; cuando se vaya a pintar el estado. Habiéndolo parseado previamente. Ésta vez se muestra el &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;diff&lt;/a&gt;, para que sea visto con mayor claridad.&lt;/p&gt;
+&lt;p&gt;Por último, solo queda usar los métodos creados, deben ir en el método &lt;code&gt;drawbar&lt;/code&gt;, encargado de dibujar todo el recuadro que muestra información en DWM (etiquetas, ventana actual y barra de estado). Para ello se reemplaza el método &lt;code&gt;drw_text&lt;/code&gt; por &lt;code&gt;drw_colored_st&lt;/code&gt; cuando se vaya a pintar el estado. Habiéndolo parseado previamente. Ésta vez se muestra el &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;diff&lt;/a&gt;, para que sea visto con mayor claridad.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+void&lt;/span&gt;
  drawbar(Monitor *m) {
    int x, xx, w;
