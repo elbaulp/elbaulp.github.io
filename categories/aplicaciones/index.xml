@@ -87,7 +87,7 @@
 
 &lt;p&gt;Este firewall lo controla un programa llamado iptables que gestiona el filtrado para IPv4, y ip6tables para IPv6.&lt;/p&gt;
 
-&lt;h2 id=&#34;ejemplos-de-reglas-iptables&#34;&gt;Ejemplos de reglas IPTABLES&lt;/h2&gt;
+&lt;h1 id=&#34;ejemplos-de-reglas-iptables&#34;&gt;Ejemplos de reglas IPTABLES&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Muchas de las acciones que se listan abajo requieren ejecutarse como usuario root.&lt;/li&gt;
@@ -144,7 +144,7 @@ Chain wanout &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#
 &lt;li&gt;&lt;strong&gt;-n&lt;/strong&gt; : Muestra la dirección ip y puerto en formato numérico. No usa DNS para resolver nombres. Esto acelera la lista.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;1-1-para-inspeccionar-el-firewall-con-número-de-lineas&#34;&gt;#1.1:Para Inspeccionar el firewall con número de lineas:&lt;/h4&gt;
+&lt;h2 id=&#34;1-1-para-inspeccionar-el-firewall-con-número-de-lineas&#34;&gt;#1.1:Para Inspeccionar el firewall con número de lineas:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -n -L -v --line-numbers
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -174,7 +174,7 @@ num  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;     
 
 &lt;p&gt;Podemos usar los números de línea para borrar o añadir nuevas reglas al firewall.&lt;/p&gt;
 
-&lt;h4 id=&#34;1-2-mostrar-las-reglas-de-cadena-de-entrada-y-salida&#34;&gt;#1.2: Mostrar las reglas de cadena de entrada y salida:&lt;/h4&gt;
+&lt;h2 id=&#34;1-2-mostrar-las-reglas-de-cadena-de-entrada-y-salida&#34;&gt;#1.2: Mostrar las reglas de cadena de entrada y salida:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -L INPUT -n -v
 iptables -L OUTPUT -n -v --line-numbers
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -298,7 +298,7 @@ ping cyberciti.biz
 wget http://www.kernel.org/pub/linux/kernel/v3.0/testing/linux-3.2-rc5.tar.bz2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;7-1-solo-tráfico-entrante-bloqueado&#34;&gt;#7.1: Solo tráfico entrante bloqueado&lt;/h4&gt;
+&lt;h2 id=&#34;7-1-solo-tráfico-entrante-bloqueado&#34;&gt;#7.1: Solo tráfico entrante bloqueado&lt;/h2&gt;
 
 &lt;p&gt;Para borrar todos los paquetes entrantes / enviados pero permitir el tráfico saliente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -P INPUT DROP
@@ -356,7 +356,7 @@ iptables -A INPUT -i eth1 -p tcp -s 192.168.1.0/24 --dport &lt;span class=&#34;m
 iptables -A OUTPUT -o eth1 -d 192.168.1.0/24 -j DROP
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;11-1-ejemplo-bloquear-el-dominio-facebook-com&#34;&gt;#11.1: Ejemplo - Bloquear el dominio facebook.com&lt;/h4&gt;
+&lt;h2 id=&#34;11-1-ejemplo-bloquear-el-dominio-facebook-com&#34;&gt;#11.1: Ejemplo - Bloquear el dominio facebook.com&lt;/h2&gt;
 
 &lt;p&gt;Primero, encontrar la dirección ip de facebook.com&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;host -t a www.facebook.com
@@ -518,7 +518,7 @@ iptables -I INPUT -p tcp --dport &lt;span class=&#34;m&#34;&gt;3306&lt;/span&gt;
 iptables -j DROP -h
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;21-1-probando-nuestro-firewall&#34;&gt;#21.1: Probando nuestro firewall&lt;/h4&gt;
+&lt;h2 id=&#34;21-1-probando-nuestro-firewall&#34;&gt;#21.1: Probando nuestro firewall&lt;/h2&gt;
 
 &lt;p&gt;Conocer si hay puertos abiertos o no:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
@@ -526,7 +526,7 @@ iptables -j DROP -h
 
 &lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34; target=&#34;_blank&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Esta entrada solo lista las reglas básicas para los usuarios nuevos en linux. Se pueden crear reglas más complejas. Requiere una buena comprensión de TCP/IP, tunning del kernel linux via sysctl.conf y un buen conocimiento de nuestra configuración.&lt;/p&gt;
@@ -534,7 +534,7 @@ iptables -j DROP -h
 
 &lt;p&gt;Fuente original: &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/tips/linux-iptables-examples.html&#34;&gt;cyberciti&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;más-reglas-cortesía-de-jker&#34;&gt;Más reglas cortesía de Jker&lt;/h3&gt;
+&lt;h1 id=&#34;más-reglas-cortesía-de-jker&#34;&gt;Más reglas cortesía de Jker&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Reestablece las reglas por defecto.&lt;/li&gt;
@@ -548,33 +548,33 @@ iptables -X
 
 &lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
 
-&lt;h4 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34; target=&#34;_blank&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34; target=&#34;_blank&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h4&gt;
+&lt;h2 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34; target=&#34;_blank&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34; target=&#34;_blank&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
 iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
 iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;como-google-tiene-muchas-ips-puede-que-tengamos-un-problema-para-ello-realizamos-lo-siguiente-antes-de-la-regla-exigente&#34;&gt;Como google tiene muchas IPs puede que tengamos un problema para ello realizamos lo siguiente antes de la regla EXIGENTE:&lt;/h4&gt;
+&lt;h2 id=&#34;como-google-tiene-muchas-ips-puede-que-tengamos-un-problema-para-ello-realizamos-lo-siguiente-antes-de-la-regla-exigente&#34;&gt;Como google tiene muchas IPs puede que tengamos un problema para ello realizamos lo siguiente antes de la regla EXIGENTE:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -d 212.106.221.0/24 -j ACCEPT
 iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -d 173.194.0.0/16 -j ACCEPT
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;mostrar-las-reglas-que-llevamos-hasta-el-momento&#34;&gt;Mostrar las reglas que llevamos hasta el momento:&lt;/h4&gt;
+&lt;h2 id=&#34;mostrar-las-reglas-que-llevamos-hasta-el-momento&#34;&gt;Mostrar las reglas que llevamos hasta el momento:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -nL –line-numbers
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;si-queremos-borrar-reglas&#34;&gt;Si queremos borrar reglas:&lt;/h4&gt;
+&lt;h2 id=&#34;si-queremos-borrar-reglas&#34;&gt;Si queremos borrar reglas:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -D OUTPUT 5
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;cierra-todos-los-puertos-bien-conocidos-menos-los-necesarios-para-acceder-a-estas-dos-webs&#34;&gt;Cierra todos los puertos bien conocidos menos los necesarios para acceder a estas dos webs.&lt;/h4&gt;
+&lt;h2 id=&#34;cierra-todos-los-puertos-bien-conocidos-menos-los-necesarios-para-acceder-a-estas-dos-webs&#34;&gt;Cierra todos los puertos bien conocidos menos los necesarios para acceder a estas dos webs.&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -p TCP –dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
 iptables -A OUTPUT -p UDP –dport &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; -j ACCEPT
 iptables -A OUTPUT -p TCP –dport 1:1024 -j DROP
 iptables -A OUTPUT -p UDP –dport 1:1024 -j DROP
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;investiga-de-qué-forma-podrías-hacer-que-las-peticiones-entrantes-a-tu-máquina-virtual-al-puerto-81-por-http-vayan-mediante-nat-al-puerto-80-de-la-máquina-local-arranca-wamp-para-comprobar-que-funciona&#34;&gt;Investiga de qué forma podrías hacer que las peticiones entrantes a tu máquina virtual al puerto 81 por http vayan mediante NAT al puerto 80 de la máquina local (arranca WAMP para comprobar que funciona).&lt;/h4&gt;
+&lt;h2 id=&#34;investiga-de-qué-forma-podrías-hacer-que-las-peticiones-entrantes-a-tu-máquina-virtual-al-puerto-81-por-http-vayan-mediante-nat-al-puerto-80-de-la-máquina-local-arranca-wamp-para-comprobar-que-funciona&#34;&gt;Investiga de qué forma podrías hacer que las peticiones entrantes a tu máquina virtual al puerto 81 por http vayan mediante NAT al puerto 80 de la máquina local (arranca WAMP para comprobar que funciona).&lt;/h2&gt;
 
 &lt;p&gt;Arrancamos wamp en la maquina fisica y comprobamos que accedemos a wamp desde localhost.Comprobamos que podemos acceder desde la maquina virtual y se encuentra cortado&lt;/p&gt;
 
@@ -590,11 +590,11 @@ iptables -A OUTPUT -p UDP –dport 1:1024 -j DROP
 iptables -t nat -A POSTROUTING -s 192.168.203.0/24 -j MASQUERADE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;para-ver-las-reglas-introducidas&#34;&gt;Para ver las reglas introducidas:&lt;/h4&gt;
+&lt;h2 id=&#34;para-ver-las-reglas-introducidas&#34;&gt;Para ver las reglas introducidas:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -t nat -nL –line-numbers
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;permite-sólo-los-mensajes-entrantes-desde-la-ip-del-compañero-de-tu-máquina-física-prueba-desde-otro-sitio-para-ver-si-funciona&#34;&gt;Permite sólo los mensajes entrantes desde la IP del compañero de tu máquina física (prueba desde otro sitio para ver si funciona).&lt;/h4&gt;
+&lt;h2 id=&#34;permite-sólo-los-mensajes-entrantes-desde-la-ip-del-compañero-de-tu-máquina-física-prueba-desde-otro-sitio-para-ver-si-funciona&#34;&gt;Permite sólo los mensajes entrantes desde la IP del compañero de tu máquina física (prueba desde otro sitio para ver si funciona).&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A INPUT -s 192.168.203.200 -j ACCEPT
 iptables -A INPUT -j DROP
 
@@ -602,7 +602,7 @@ iptables -A FORWARD -s 192.168.203.200 -j ACCEPT
 iptables -A FORWARD -s -j DROP
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;activa-el-log-sobre-todas-las-reglas-y-verifica-que-se-anotan-los-mensajes&#34;&gt;Activa el log sobre todas las reglas y verifica que se anotan los mensajes.&lt;/h4&gt;
+&lt;h2 id=&#34;activa-el-log-sobre-todas-las-reglas-y-verifica-que-se-anotan-los-mensajes&#34;&gt;Activa el log sobre todas las reglas y verifica que se anotan los mensajes.&lt;/h2&gt;
 
 &lt;p&gt;Insertamos en IPTABLEs las reglas para activar el log:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -I FORWARD &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-prefix ‘IPTABLESFORWARD: ‘
