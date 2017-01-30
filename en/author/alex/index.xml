@@ -9,6 +9,198 @@
     <atom:link href="https://elbauldelprogramador.com/en/author/alex/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How to manage multiple patches - A Quilt tutorial</title>
+      <link>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</link>
+      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</guid>
+      <description>&lt;p&gt;I am using &lt;a href=&#34;https://elbauldelprogramador.com//tags/dwm/&#34; title=&#34;DWM&#34; target=&#34;_blank&#34;&gt;DWM&lt;/a&gt; since a couple of years, even wrote a patch to allow the user color its status bar (&lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34; target=&#34;_blank&#34;&gt;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&lt;/a&gt; &amp;ldquo;Colorear la barra de estado con Simple StatusColor en DWM 6.1&amp;rdquo;). Since then, I never check out the new code in DWM that was being released because I did not think I would be able to merge the new code with my personalized DWM. That was until I discovered &lt;a href=&#34;https://github.com/jceb/dwm-patches&#34; target=&#34;_blank&#34; title=&#34;DWM-Patches&#34;&gt;DWM-Patches&lt;/a&gt; and learned to use &lt;em&gt;quilt&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-is-quilt&#34;&gt;What is Quilt?&lt;/h1&gt;
+
+&lt;p&gt;Well, here is its &lt;code&gt;man&lt;/code&gt; description:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quilt is a tool to manage large sets of patches by keeping track of the changes each patch makes. Patches can be applied, un-applied, refreshed, etc. The key philosophical concept is that your primary output is patches.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h1&gt;
+
+&lt;p&gt;Lets see an easy example, suppose the file below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span&gt;&lt;/span&gt;# fichero.txt
+line 1
+line 2
+line 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;fichero.txt&lt;/code&gt; would be our base file.&lt;/p&gt;
+
+&lt;h1 id=&#34;creating-a-patch&#34;&gt;Creating a patch&lt;/h1&gt;
+
+&lt;p&gt;To create a new patch, we need to execute &lt;code&gt;quilt new patch1.diff&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt new patch1.diff
+Patch patches/patch1.diff is now on top
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;making-changes&#34;&gt;Making changes&lt;/h1&gt;
+
+&lt;p&gt;Now, tell &lt;code&gt;quilt&lt;/code&gt; what file we want to edit:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt edit fichero.txt
+File fichero.txt added to patch patches/patch1.diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we are all set to edit the file, lets write one sentence:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span&gt;&lt;/span&gt;linea 1
+edit 1 (by patch1.diff)
+linea 2
+linea 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;see-the-changes&#34;&gt;See the changes&lt;/h1&gt;
+
+&lt;p&gt;Once we have finish editing the file, we can see its diff:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt diff
+&lt;span class=&#34;gh&#34;&gt;Index: _drafts/fichero.txt&lt;/span&gt;
+&lt;span class=&#34;gh&#34;&gt;===================================================================&lt;/span&gt;
+&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt&lt;/span&gt;
+&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;@@ -1,3 +1,4 @@&lt;/span&gt;
+ linea 1
+&lt;span class=&#34;gi&#34;&gt;+edit 1 (by patch1.diff)&lt;/span&gt;
+ linea 2
+ linea 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;creating-the-patch&#34;&gt;Creating the patch&lt;/h1&gt;
+
+&lt;p&gt;The patch it is not created yet, for that we need to execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt refresh
+Refreshed patch patches/patch1.diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;manage-patches&#34;&gt;Manage Patches&lt;/h1&gt;
+
+&lt;p&gt;All right, now in &lt;code&gt;patches/&lt;/code&gt; there is a patch called &lt;code&gt;patch1.diff&lt;/code&gt;, it store our changes to &lt;code&gt;fichero.txt&lt;/code&gt;. Right now we only have one patch, in order to undo all the changes and restore &lt;code&gt;fichero.txt&lt;/code&gt; to its original state we must execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt pop
+Removing patch patches/patch1.diff
+Restoring fichero.txt
+
+No patches applied
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;fichero.txt&lt;/code&gt; do not have our modification:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat fichero.txt
+linea 1
+linea 2
+linea 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If we have more than one patch, &lt;code&gt;quilt pop&lt;/code&gt; accepts as input the patch name, or &lt;code&gt;-a&lt;/code&gt; option to remove all applied patches. Lets create one second patch:&lt;/p&gt;
+
+&lt;h1 id=&#34;second-patch&#34;&gt;Second patch&lt;/h1&gt;
+
+&lt;p&gt;Before creating a new patch, it is necessary to apply the first, or if we had many, all of them:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt push -a
+Applying patch patches/patch1.diff
+patching file fichero.txt
+
+Now at patch patches/patch1.diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we can create a second patch:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt new patch2.diff
+Patch patches/patch2.diff is now on top
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;list-the-patch-stack&#34;&gt;List the patch stack&lt;/h2&gt;
+
+&lt;p&gt;In order to see how many patchs we have, execute &lt;code&gt;quilt series&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt series
+patches/patch1.diff
+patches/patch2.diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The bottom patch is &lt;code&gt;patch2&lt;/code&gt;, right now it is empty, because at the moment we have not edit anything. For this patch we are goint to modify &lt;code&gt;fichero1.txt&lt;/code&gt; and create a second one, &lt;code&gt;fichero2.txt&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt add fichero2.txt
+File fichero2.txt added to patch patches/patch2.diff
+$ quilt add fichero.txt
+File fichero.txt added to patch patches/patch2.diff
+$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Line created by patch2.diff&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; fichero.txt
+$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;New file created by patch2.diff&amp;quot;&lt;/span&gt; &amp;gt; fichero2.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt diff
+&lt;span class=&#34;gh&#34;&gt;Index: _drafts/fichero.txt&lt;/span&gt;
+&lt;span class=&#34;gh&#34;&gt;===================================================================&lt;/span&gt;
+&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt&lt;/span&gt;
+&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;@@ -2,3 +2,4 @@ linea 1&lt;/span&gt;
+ edit 1 (by patch1.diff)
+ linea 2
+ linea 3
+&lt;span class=&#34;gi&#34;&gt;+Line created by patch2.diff&lt;/span&gt;
+&lt;span class=&#34;gh&#34;&gt;Index: _drafts/fichero2.txt&lt;/span&gt;
+&lt;span class=&#34;gh&#34;&gt;===================================================================&lt;/span&gt;
+&lt;span class=&#34;gd&#34;&gt;--- /dev/null&lt;/span&gt;
+&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero2.txt&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;@@ -0,0 +1 @@&lt;/span&gt;
+&lt;span class=&#34;gi&#34;&gt;+New file created by patch2.diff&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, all that is left is apply the changes with &lt;code&gt;quilt refresh&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt refresh
+Refreshed patch patches/patch2.diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When finished editing, it is recommended to restore the initial state, undoing all the patchs:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt pop -a
+Removing patch patches/patch2.diff
+Restoring fichero.txt
+Removing fichero2.txt
+
+Removing patch patches/patch1.diff
+Restoring fichero.txt
+
+No patches applied
+
+$ ll
+
+-rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr   &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:31 fichero.txt
+drwxr-xr-x &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:29 patches/
+drwxr-xr-x &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:31 .pc/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To apply them again:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt push -a
+Applying patch patches/patch1.diff
+patching file fichero.txt
+
+Applying patch patches/patch2.diff
+patching file fichero.txt
+patching file fichero2.txt
+
+Now at patch patches/patch2.diff
+
+$ ll
+
+-rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr   &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt; Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:32 fichero2.txt
+-rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr   &lt;span class=&#34;m&#34;&gt;89&lt;/span&gt; Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:32 fichero.txt
+drwxr-xr-x &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:29 patches/
+drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:32 .pc/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In order to see a real, more complicated example, visit my  &lt;a href=&#34;https://github.com/algui91/myDWM&#34; target=&#34;_blank&#34; title=&#34;DWM&#34;&gt;DWM&lt;/a&gt; repo.&lt;/p&gt;
+
+&lt;h1 id=&#34;bibliography&#34;&gt;Bibliography&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UsingQuilt | &lt;a href=&#34;https://wiki.debian.org/UsingQuilt&#34; target=&#34;_blank&#34; title=&#34;Using Quilt | Debian Wiki&#34;&gt;wiki.debian.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How To Survive With Many Patches | &lt;a href=&#34;https://stuff.mit.edu/afs/athena/system/i386_deb50/os/usr/share/doc/quilt/quilt.html&#34; target=&#34;_blank&#34; title=&#34;How to survive with many patches&#34;&gt;stuff.mit.edu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>How to parse frontmatter with python</title>
       <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
       <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
