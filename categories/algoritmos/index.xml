@@ -22,11 +22,11 @@ Informalmente se define como G = (V, E), siendo los elementos de V los vértices
 &lt;p&gt;Existen diferentes implementaciones del tipo grafo: con una matriz de adyacencias (forma acotada) y con listas y multilistas de adyacencia (no acotadas).
 Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo, siendo los elementos de la matriz la relación entre los mismos, tomando los valores de 1 si existe la arista y 0 en caso contrario.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/10/Matriz_de_adyacencia1.jpg&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Matriz_de_adyacencia1.jpg&#34; alt=&#34;&#34; title=&#34;Matriz_de_adyacencia&#34; width=&#34;546px&#34; height=&#34;232px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Matriz_de_adyacencia1.jpg&#34; alt=&#34;&#34; title=&#34;Matriz_de_adyacencia&#34; width=&#34;546px&#34; height=&#34;232px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
 &lt;p&gt;Una vez dicho esto, existen algoritmos que se dedican a buscar el camino mas corto en un espacio, entre dos puntos dado, el coger un camino u otro conlleva un valor de mas o menos alto, es decir no es lo mismo ir del nodo 1 al nodo 3 con un valor de 5 unidades(metros), que ir del nodo 1 pasando por el 2 y llegando al 3 teniendo 4 unidades(metros), es preferible coger el que tenga menos coste, para que sea el valor mas corto. Es decir que el problema consiste en encontrar un camino entre dos vértices (o nodos) de tal manera que la suma de los pesos de las aristas que lo constituyen es mínima. Un ejemplo es encontrar el camino más rápido para ir de una ciudad a otra en un mapa. En este caso, los vértices representan las ciudades, y las aristas las carreteras que las unen, cuya ponderación viene dada por el tiempo que se emplea en atravesarlas.&lt;/p&gt;
 
@@ -40,9 +40,11 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 
 &lt;p&gt;El &lt;strong&gt;algoritmo de Dijkstra&lt;/strong&gt; consiste en ir explorando todos los caminos más cortos que parten del vértice origen y que llevan a todos los demás vértices; cuando se obtiene el camino más corto desde el vértice origen, al resto de vértices que componen el grafo, el algoritmo se detiene.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/10/Caminosmascortos1.jpg&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Caminosmascortos1.jpg&#34; alt=&#34;&#34; title=&#34;Caminosmascortos&#34; width=&#34;744px&#34; height=&#34;500px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Caminosmascortos1.jpg&#34; alt=&#34;&#34; title=&#34;Caminosmascortos&#34; width=&#34;744px&#34; height=&#34;500px&#34;&gt;&lt;/amp-img&gt;
+&lt;/figure&gt;
 
-&lt;h4 id=&#34;algoritmo-de-dijkstra&#34;&gt;Algoritmo de Dijkstra&lt;/h4&gt;
+&lt;h1 id=&#34;algoritmo-de-dijkstra&#34;&gt;Algoritmo de Dijkstra&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;fstream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;quot;grafo_heap.h&amp;quot;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -146,7 +148,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
   Para probar este algoritmo necesita una entrada de datos un archivo para probarlo.
 &lt;/p&gt;
 
-&lt;p&gt;El ** algoritmo de Prim ** encuentra un subconjunto de aristas que forman un árbol con todos los vértices, donde el peso total de todas las aristas en el árbol es el mínimo posible. Si el grafo no es conexo, entonces el algoritmo encontrará el árbol recubridor mínimo para uno de los componentes conexos que forman dicho grafo no conexo.&lt;/p&gt;
+&lt;p&gt;El &lt;strong&gt;algoritmo de Prim&lt;/strong&gt; encuentra un subconjunto de aristas que forman un árbol con todos los vértices, donde el peso total de todas las aristas en el árbol es el mínimo posible. Si el grafo no es conexo, entonces el algoritmo encontrará el árbol recubridor mínimo para uno de los componentes conexos que forman dicho grafo no conexo.&lt;/p&gt;
 
 &lt;p&gt;Por último el &lt;strong&gt;algoritmo A&lt;/strong&gt;*evalúa los nodos combinando g(n), el coste para alcanzar el nodo, y h(n), el costo de ir al nodo objetivo:&lt;/p&gt;
 
@@ -161,9 +163,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;/p&gt;
 &lt;p &gt;
   Así, si tratamos de encontrar la solución mas barata, es razonable intentar primero el nodo con el valor más bajo de g(n) + h(n). Resulta que esta estrategia es más que razonable: con tal de que la función heurística h(n) satisfaga ciertas condiciones, la búsqueda A* es tanto completa como óptima.
-&lt;/p&gt;
-
-&lt;p&gt;&lt;/distancia&gt;&lt;/vertice&gt;&lt;/fstream&gt;&lt;/string.h&gt;&lt;/p&gt;</description>
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -182,8 +182,9 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;li&gt;Ordenamiento por inserción.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;El ordenamiento por &lt;strong&gt;burbuja&lt;/strong&gt; es el algoritmo más sencillo probablemente. Ideal para empezar. Consiste en ciclar repetidamente a través de la lista, comparando elementos adyacentes de dos en dos. Si un elemento es mayor que el que está en la siguiente posición se intercambian. Es un algoritmo estable. El inconveniente es que es muy lento.
-&lt;!--ad--&gt;&lt;/p&gt;
+&lt;p&gt;El ordenamiento por &lt;strong&gt;burbuja&lt;/strong&gt; es el algoritmo más sencillo probablemente. Ideal para empezar. Consiste en ciclar repetidamente a través de la lista, comparando elementos adyacentes de dos en dos. Si un elemento es mayor que el que está en la siguiente posición se intercambian. Es un algoritmo estable. El inconveniente es que es muy lento.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;burbuja_lims&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
