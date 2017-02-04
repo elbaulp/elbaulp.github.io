@@ -9,6 +9,82 @@
     <atom:link href="https://elbauldelprogramador.com/en/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How to remove slotted packages in gentoo</title>
+      <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
+      <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
+      <description>
+
+&lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
+
+&lt;p&gt;First use &lt;code&gt;equery list &amp;lt;pkg&amp;gt;&lt;/code&gt; to list package matching PKG:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ equery list emacs
+ * Searching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; emacs ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-24.5-r3:24
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are two &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34; target=&#34;_blank&#34;&gt;emacs&lt;/a&gt; packages, slotted in &lt;code&gt;:24&lt;/code&gt; and &lt;code&gt;:25&lt;/code&gt;, respectively. In order to remove the older version, execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo emerge -C emacs-24.5-r3:24
+Password:
+ * This action can remove important packages! In order to be safer, use
+ * &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;emerge -pv --depclean &amp;lt;atom&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; to check &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; reverse dependencies before
+ * removing packages.
+
+ app-editors/emacs
+    selected: 24.5-r3
+   protected: none
+     omitted: 25.1
+
+All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/emacs-24.5-r3
+
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Selected&amp;#39;&lt;/span&gt; packages are slated &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; removal.
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Protected&amp;#39;&lt;/span&gt; and &lt;span class=&#34;s1&#34;&gt;&amp;#39;omitted&amp;#39;&lt;/span&gt; packages will not be removed.
+
+&amp;gt;&amp;gt;&amp;gt; Waiting &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; seconds before starting...
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Control-C to abort&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
+&amp;gt;&amp;gt;&amp;gt; Unmerging in: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 1
+&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of 1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
+ * Regenerating site-gentoo.el &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; GNU Emacs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;postrm&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+ * ... &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; site initialisation files included.
+
+ * Regenerating GNU info directory index...
+ * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After removing the package, check what packages depended on it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; $ equery depends emacs-24.5-r3:24
+ * These packages depend on emacs-24.5-r3:24:
+app-emacs/emacs-common-gentoo-1.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/markdown-mode-2.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/quilt-el-0.48.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/scala-mode-2.10.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-python/cython-0.24.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-scheme/guile-1.8.8-r3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/cmake-3.6.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/desktop-file-utils-0.23 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/ninja-1.6.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-vcs/git-2.10.2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+net-dns/libidn-1.33 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/editor-0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The last step:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to parse frontmatter with python</title>
       <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
       <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>

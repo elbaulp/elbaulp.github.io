@@ -9,6 +9,82 @@
     <atom:link href="https://elbauldelprogramador.com/author/alex/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Cómo eliminar un paquete slotted en Gentoo</title>
+      <link>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</link>
+      <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</guid>
+      <description>
+
+&lt;p&gt;Hace poco tuve un problema intentando eliminar un paquete de los llamados &lt;em&gt;slotted&lt;/em&gt; en Gentoo, a continuación muestro cómo lo resolví.&lt;/p&gt;
+
+&lt;p&gt;Primero debemos usar &lt;code&gt;equery list &amp;lt;pkg&amp;gt;&lt;/code&gt; para listar los paquetes que coinciden con el nombre del paquete a eliminar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ equery list emacs
+ * Searching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; emacs ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-24.5-r3:24
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hay dos paquetes de &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;emacs&#34; target=&#34;_blank&#34;&gt;emacs&lt;/a&gt; instalados, cada uno en un &lt;em&gt;slot&lt;/em&gt; distinto, &lt;code&gt;:24&lt;/code&gt; y &lt;code&gt;:25&lt;/code&gt;. Para borrar el más antiguo, ejecutamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo emerge -C emacs-24.5-r3:24
+Password:
+ * This action can remove important packages! In order to be safer, use
+ * &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;emerge -pv --depclean &amp;lt;atom&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; to check &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; reverse dependencies before
+ * removing packages.
+
+ app-editors/emacs
+    selected: 24.5-r3
+   protected: none
+     omitted: 25.1
+
+All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/emacs-24.5-r3
+
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Selected&amp;#39;&lt;/span&gt; packages are slated &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; removal.
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Protected&amp;#39;&lt;/span&gt; and &lt;span class=&#34;s1&#34;&gt;&amp;#39;omitted&amp;#39;&lt;/span&gt; packages will not be removed.
+
+&amp;gt;&amp;gt;&amp;gt; Waiting &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; seconds before starting...
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Control-C to abort&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
+&amp;gt;&amp;gt;&amp;gt; Unmerging in: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 1
+&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of 1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
+ * Regenerating site-gentoo.el &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; GNU Emacs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;postrm&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+ * ... &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; site initialisation files included.
+
+ * Regenerating GNU info directory index...
+ * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras eliminar el paquete, comprobamos qué otros paquetes dependían de él&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; $ equery depends emacs-24.5-r3:24
+ * These packages depend on emacs-24.5-r3:24:
+app-emacs/emacs-common-gentoo-1.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/markdown-mode-2.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/quilt-el-0.48.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/scala-mode-2.10.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-python/cython-0.24.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-scheme/guile-1.8.8-r3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/cmake-3.6.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/desktop-file-utils-0.23 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/ninja-1.6.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-vcs/git-2.10.2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+net-dns/libidn-1.33 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/editor-0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Por último:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cómo mantener varios parches - Un tutorial sobre Quilt</title>
       <link>https://elbauldelprogramador.com/how-to-mantain-patchs-quilt-tutorial/</link>
       <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
@@ -813,42 +889,6 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 
 &lt;div class=&#34;button-post&#34;&gt;
   &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java30&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Libro Gratuito: Linux BASH Programming Cookbook</title>
-      <link>https://elbauldelprogramador.com/linux-bash-programming-cookbook/</link>
-      <pubDate>Wed, 07 Sep 2016 13:01:09 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/linux-bash-programming-cookbook/</guid>
-      <description>&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/guides/Linux-BASH-Programming-Cookbook-centered.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;420&#34;&gt;
-   &lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Delve into the world of Linux BASH Programming with this compact cookbook that introduces common recipes for the BASH command line!&lt;/strong&gt;&lt;/p&gt;
-
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Si quieres apoyar el trabajo que realizamos en &lt;em&gt;El Baúl del Programador&lt;/em&gt;, descargar alguna de estas guías es una buena forma. Para ello en el formuario de descarga &lt;strong&gt; debes indicar que trabajas en el sector relacionado con la guía que descargas, a que te dedicas etc, de lo contrario no obtendremos comisión&lt;/strong&gt; ($1.5). Si tienes un blog y quieres usar esta forma de monetización, puedes darte de alta en &lt;a id=&#34;revresponse&#34; href=&#34;http://www.revresponse.com/join.php?refbrand=bashyc-blogspot&#34; target=&#34;_blank&#34; title=&#34;RevResponse&#34;&gt;RevResponse&lt;/a&gt; y empezar a ofrecer guías de interés a tus lectores. Visita el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; target=&#34;_blank&#34; title=&#34;Catálogo completo de Guías gratuítas&#34;&gt;catálogo completo de guías.&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-
-&lt;p&gt;Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been distributed widely as it is a default shell on the major Linux distributions and OS X.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;In this ebook, we provide a compilation of BASH programming examples that will help you kick-start your own projects. We cover a wide range of topics, from user management and permissions setting, to specific commands like sed, tar, etc. With our straightforward tutorials, you will be able to get your own projects up and running in minimum time.&lt;/p&gt;
-
-&lt;p&gt;With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of System Code Geeks.&lt;/p&gt;
-
-&lt;div class=&#34;button-post&#34;&gt;
-  &lt;h2&gt;&lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_syst05&#34; target=&#34;_blank&#34;&gt;Descárgala ahora&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
