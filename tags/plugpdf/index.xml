@@ -30,7 +30,7 @@
 
 &lt;p&gt;Dicho todo lo anterior, vamos a utilizar la librería PlugPDF. Este SDK ya viene de fábrica con una clase Java que se encarga de la protección de los documentos.&lt;/p&gt;
 
-&lt;h2 id=&#34;pdf-protector&#34;&gt;PDF Protector&lt;/h2&gt;
+&lt;h1 id=&#34;pdf-protector&#34;&gt;PDF Protector&lt;/h1&gt;
 
 &lt;p&gt;Este es el nombre que le vamos a poner a nuestra app de seguridad, disponible en la documentación oficial de PlugPDF: PDF Protector.&lt;/p&gt;
 
@@ -49,21 +49,21 @@
 
 &lt;p&gt;Lo que hace PDF Protector es preguntarte qué partes de tu PDF quieres asegurar.&lt;/p&gt;
 
-&lt;p&gt;&lt;figure&gt;
+&lt;figure&gt;
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Protege tus documentos PDF nativos.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;figcaption&gt;Figura 1. Protegiendo tus documentos PDF nativos&lt;/figure&gt;
 &lt;/figure&gt;
-Figura 1. Protegiendo tus documentos PDF nativos&lt;/p&gt;
 
 &lt;p&gt;Como decimos, el user password es para proteger por contraseña la apertura del documento, y el master password para proteger las operaciones que desees. Así que cuando proteges tus PDF con un user password entonces te sale este diálogo al abrirlo.&lt;/p&gt;
 
-&lt;p&gt;&lt;figure&gt;
+&lt;figure&gt;
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Documento protegido por user password.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;figcaption&gt;Figura 2. Documento protegido por user password&lt;/figcaption&gt;
 &lt;/figure&gt;
-Figura 2. Documento protegido por user password&lt;/p&gt;
 
 &lt;p&gt;Del mismo modo, las aplicaciones que intenten, por ejemplo, imprimir o modificar el contenido de tus documentos protegidos, también obtendrán el aviso correspondiente, indicando que dicha operación no es posible.&lt;/p&gt;
 
-&lt;h2 id=&#34;el-código-línea-a-línea&#34;&gt;El código, línea a línea&lt;/h2&gt;
+&lt;h1 id=&#34;el-código-línea-a-línea&#34;&gt;El código, línea a línea&lt;/h1&gt;
 
 &lt;p&gt;Entonces amigos y amigas, una vez presentado el problema que queremos resolver, &lt;a href=&#34;https://plugpdf.com/protect-your-android-pdfs-with-a-password/&#34; title=&#34;Proteger con contraseña tus PDF&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;clicad aquí&lt;/strong&gt;&lt;/a&gt; para acceder al artículo original de la documentación oficial de PlugPDF que explica, línea a línea, cómo podéis implementar esta app de seguridad en la práctica. Allí encontraréis todo el contexto necesario para hacer correr esta herramienta.&lt;/p&gt;
 
