@@ -6,8 +6,34 @@
     <description>Recent content on El Baúl del programador</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 30 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://elbauldelprogramador.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Buscar</title>
+      <link>https://elbauldelprogramador.com/buscar/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/buscar/</guid>
+      <description>&lt;p&gt;Introduce tu búsqueda abajo.&lt;/p&gt;
+
+&lt;div&gt;
+    &lt;script&gt;
+      (function() {
+      var cx = &#39;017944990515954375932:j4xhnxcoyio&#39;;
+      var gcse = document.createElement(&#39;script&#39;);
+      gcse.type = &#39;text/javascript&#39;;
+      gcse.async = true;
+      gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) +
+      &#39;//cse.google.com/cse.js?cx=&#39; + cx;
+      var s = document.getElementsByTagName(&#39;script&#39;)[0];
+      s.parentNode.insertBefore(gcse, s);
+      })();
+    &lt;/script&gt;
+    &lt;p&gt;&lt;gcse:search&gt;&lt;/gcse:search&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Cómo mantener varios parches - Un tutorial sobre Quilt</title>
@@ -1286,136 +1312,6 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo Crear Diagramas De Gantt en LaTeX</title>
-      <link>https://elbauldelprogramador.com/crear-diagrama-de-gantt-en-latex/</link>
-      <pubDate>Fri, 16 Sep 2016 13:48:53 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-diagrama-de-gantt-en-latex/</guid>
-      <description>&lt;figure&gt;
-  &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/crear-diagrama-de-gantt-en-latex.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;335&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Consulta el resto de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;artículos sobre LaTeX escritos en el blog&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;qué-es-un-diagrama-de-gantt&#34;&gt;Qué es un Diagrama de Gantt&lt;/h2&gt;
-
-&lt;p&gt;La definición de WikiPedia:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;El diagrama de Gantt es una útil herramienta gráfica cuyo objetivo es exponer el tiempo de dedicación previsto para diferentes tareas o actividades a lo largo de un tiempo total determinado.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h2&gt;
-
-&lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34; target=&#34;_blank&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
-  canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  hgrid style/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  vgrid=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;*1&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;,
-  today=1,
-  today rule/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
-    draw=black!64,
-    dash pattern=on 3.5pt off 4.5pt,
-    line width=1.5pt
-  &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  today label font=&lt;span class=&#34;k&#34;&gt;\small\bfseries&lt;/span&gt;,
-  title/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=none, fill=none&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  title label font=&lt;span class=&#34;k&#34;&gt;\bfseries\footnotesize&lt;/span&gt;,
-  title label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below=7pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  include title in canvas=false,
-  bar label font=&lt;span class=&#34;k&#34;&gt;\mdseries\small\color&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;black!70&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  bar label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;left=2cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  bar/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=none, fill=black!63&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  bar incomplete/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=barblue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  bar progress label font=&lt;span class=&#34;k&#34;&gt;\mdseries\footnotesize\color&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;black!70&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  group incomplete/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=groupblue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-    group left shift=0,
-    group right shift=0,
-    group height=.5,
-    group peaks tip position=0,
-    group label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;left=.6cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-    group progress label font=&lt;span class=&#34;k&#34;&gt;\bfseries\small&lt;/span&gt;,
-    link/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;-latex, line width=1.5pt, linkred&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-    link label font=&lt;span class=&#34;k&#34;&gt;\scriptsize\bfseries&lt;/span&gt;,
-    link label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below left=-2pt and 0pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Título del diagrama&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[grid]&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Septiembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Octubre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Noviembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Diciembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Enero&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Febrero&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;[
-    title label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below left=7pt and -3pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Semana:&lt;span class=&#34;k&#34;&gt;\quad&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\gantttitlelist&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;2,...,24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttgroup&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[progress=65]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Título del grupo&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=100,
-    name=bar1
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 1&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=14,
-    name=bar2
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 2&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=25,
-    name=bar3
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 3&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=56,
-    name=bar4
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 4&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=100,
-    name=bar5
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 5&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=80,
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 6&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=49,
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 7&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;9&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Hito 1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Hito 2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=35,
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 8&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;22&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-    progress=0,
-  ]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 9&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;23&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Q6 report&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;M2: Project finished&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar5&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&#34;comandos-básicos-del-diagrama-de-gantt&#34;&gt;Comandos básicos del diagrama de Gantt&lt;/h2&gt;
-
-&lt;p&gt;Veamos algunos de los comandos más útiles:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\begin{ganttchart}[opciones]{1}{24}&lt;/code&gt;: Con este comando iniciamos el diagrama, en las opciones se especifican comandos para el estilo del gráfico, luego se especifica cuantos cuadros de tiempo queremos, en este caso del 1 a 24.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gantttitle{titulo}{n}&lt;/code&gt;: Con este comando se especifica un título para el diagrama, seguido de cuantos cuadros de tiempo queremos que ocupe dicho título. Podemos tener varios títulos, como en este ejemplo.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\ganttgroup[opciones]{titulo}{inicio cuadro}{fin cuadro}&lt;/code&gt;: Especifica un grupo en el diagrama, recibe como parámetro el título, en qué cuadro de tiempo empieza y en cual acaba. En las opciones podemos especificar el porcentaje completado con &lt;code&gt;progress=n&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\ganttbar[opciones]{tarea}{inicio cuadro}{fin cuadro}&lt;/code&gt;: Especifica una tarea, similar al anterior, los parámetros son el nombre de la tarea y la franja de tiempo que ocupa.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ganttlink[opciones]{nombre tarea 1}{nombre tarea 2}&lt;/code&gt;: Con este comando podemos establecer un enlace entre dos tareas, a las tareas involucradas se les ha dado un nombre con la opción &lt;code&gt;name=nombre&lt;/code&gt; en sus opciones.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
-
-&lt;p&gt;Eso es todo, para crear un simple diagrama de Gantt no es necesario saber mucho más sobre este paquete. Recomiendo echar un vistazo a la documentación del paquete para cosas más específicas.&lt;/p&gt;</description>
     </item>
     
   </channel>
