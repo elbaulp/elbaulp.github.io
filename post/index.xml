@@ -6,8 +6,149 @@
     <description>Recent content in Posts on El Baúl del programador</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sat, 04 Feb 2017 12:53:37 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 06 Feb 2017 17:04:46 +0100</lastBuildDate>
     <atom:link href="https://elbauldelprogramador.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cómo convertir una columna a VectorUDT/DenseVector en Spark</title>
+      <link>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</link>
+      <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
+      <description>&lt;p&gt;Estoy iniciándome en el mundo de &lt;code&gt;spark&lt;/code&gt;, ojeando su librería &lt;code&gt;MLlib&lt;/code&gt; decidí implementar una simple &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;Regresión lineal&#34;&gt;Regresión lineal&lt;/a&gt;. Aunque el ejemplo de su documentación parece sencillo, cuando intentaba leer mi propio csv con datos obtenía el siguiente error:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Column features must be of type org.apache.spark.ml.linalg.VectorUDT&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tras varias horas buscando sin encontrar ninguna solución, al fin conseguí convertir la columna &lt;code&gt;features&lt;/code&gt; a &lt;code&gt;VectorUDT&lt;/code&gt;, así es como lo hice:&lt;/p&gt;
+
+&lt;h1 id=&#34;convertir-una-columna-a-vectorudt-en-spark&#34;&gt;Convertir una columna a VectorUDT en Spark&lt;/h1&gt;
+
+&lt;p&gt;Primero preparamos el entorno:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SparkSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;local&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;appName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;spark session example&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getOrCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;csv&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;header&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/generated_data.csv&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;El código de arriba simplemente configura una sesión &lt;code&gt;Spark&lt;/code&gt; y lee el fichero &lt;code&gt;generated_data.csv&lt;/code&gt;. Por último muestra el &lt;code&gt;schema&lt;/code&gt; de los datos, el cual es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_b&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_c&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_d&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_e&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_h&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como puede verse, &lt;code&gt;dependent_var&lt;/code&gt; es de tipo &lt;code&gt;String&lt;/code&gt;, pero debería ser de tipo &lt;code&gt;VectorUDT&lt;/code&gt;, para convertirla se debe usar &lt;code&gt;VectorAssembler&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;StructType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;features&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;VectorUDT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;udf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withColumn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;dependent_var&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;dependent_var&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;VectorAssembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;setInputCols&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;dependent_var&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)).&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;setOutputCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;features&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El código de arriba declara un &lt;code&gt;schema&lt;/code&gt; para la columna que vamos a convertir, luego creamos una &lt;code&gt;udf&lt;/code&gt; (&lt;em&gt;User Defined Function&lt;/em&gt;) para convertir los valores de la columna de &lt;code&gt;String&lt;/code&gt; a &lt;code&gt;Double&lt;/code&gt;. Por último, se crea un &lt;code&gt;VectorAssembler&lt;/code&gt; y se transforma el &lt;em&gt;dataset&lt;/em&gt; al nuevo esquema. Para comprobar que de hecho hemos convertido el tipo, se imprime el esquema del &lt;em&gt;dataset&lt;/em&gt; &lt;code&gt;out&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_b&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_c&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_d&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_e&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_h&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;vector&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;código-completo&#34;&gt;Código completo&lt;/h1&gt;
+
+&lt;p&gt;El código completo es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;elbauldelprogramador&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.spark.ml.feature.VectorAssembler&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.spark.ml.regression.LinearRegression&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.spark.mllib.linalg.VectorUDT&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.spark.sql.SparkSession&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.spark.sql.functions.udf&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.spark.sql.types.StructType&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SimpleApp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SparkSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;local&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;appName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;spark session example&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getOrCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;csv&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;header&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/generated_data.csv&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;StructType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+     &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;features&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;VectorUDT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;udf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withColumn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;dependent_var&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;dependent_var&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;VectorAssembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;setInputCols&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;dependent_var&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)).&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;setOutputCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;features&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lr&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;LinearRegression&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setMaxIter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setRegParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setElasticNetParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;// Fit the model&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lrModel&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;Estoy seguro de que existen formas mejores de lograr esta conversión, pero soy nuevo en &lt;code&gt;spark&lt;/code&gt; y esta fue la única que conseguí hacer funcionar. Si sabes de alguna mejor, escríbela en los comentarios!&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;VectorAssembler | &lt;a href=&#34;http://spark.apache.org/docs/latest/ml-features.html#vectorassembler&#34; target=&#34;_blank&#34; title=&#34;VectorAssembler Documentation&#34;&gt;spark.apache.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;El dataset es el sacado del libro &lt;a href=&#34;http://amzn.to/2kFpfde&#34; target=&#34;_blank&#34; title=&#34;Test Driven Machine Learning&#34;&gt;Test Driven Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Cómo eliminar un paquete slotted en Gentoo</title>
@@ -1300,68 +1441,6 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016</title>
-      <link>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</link>
-      <pubDate>Fri, 23 Sep 2016 13:01:18 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</guid>
-      <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&#34; alt=&#34;Plumas Ol\xEDmpicas, Visualizaci\xF3n de las medallas Ol\xEDmpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Ol\xEDmpicas, Visualizaci\xF3n de las medallas Ol\xEDmpicas desde 1896 hasta 2016&#34; width=&#34;750&#34; height=&#34;750&#34;&gt;&lt;/amp-img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hace unos meses publicamos &lt;a href=&#34;https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/&#34; title=&#34;15 Ejemplos De Las Mejores Visualizaciones De Datos&#34; target=&#34;_blank&#34;&gt;15 Ejemplos De Las Mejores Visualizaciones De Datos&lt;/a&gt;, hoy os traemos otra visualización muy interesante de &lt;a href=&#34;http://www.visualcinnamon.com&#34; title=&#34;Sitio web de Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Nadieh Bremer&lt;/em&gt;&lt;/a&gt;, en la cual muestra &lt;strong&gt;todas las medallas de oro en los Juegos Olímpicos desde 1896&lt;/strong&gt;, en forma de plumas.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Olympic Feathers&lt;/strong&gt;, es una &lt;em&gt;visualización de datos&lt;/em&gt; interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.&lt;/p&gt;
-
-&lt;h2 id=&#34;cómo-surgió-la-idea&#34;&gt;Cómo surgió la idea&lt;/h2&gt;
-
-&lt;p&gt;Inicialmente Nadieh tenía pensado visualizar cada una de las 56 disciplinas como una “pluma” y usar el interior de la pluma para colocar todas las medallas en función de la edición de los juegos y género del ganador. Al final la idea del diseño usando forma de pluma no cuajó, pero lo mantuvo en el nombre del proyecto (&lt;em&gt;“Olympic feathers”&lt;/em&gt; o Plumas Olímpicas).&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;qué-herramientas-usó&#34;&gt;Qué herramientas usó&lt;/h2&gt;
-
-&lt;p&gt;Para desarrollar el proyecto usó &lt;strong&gt;Excel&lt;/strong&gt;, &lt;strong&gt;R&lt;/strong&gt; (Puedes consultar &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34; target=&#34;_blank&#34;&gt;artículos sobre R en este enlace&lt;/a&gt;) , &lt;strong&gt;Sketch&lt;/strong&gt; y &lt;strong&gt;D3.js&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;la-historia-de-las-olimpiadas&#34;&gt;La historia de las Olimpiadas&lt;/h2&gt;
-
-&lt;p&gt;Más de 5000 eventos en las Olimpiadas han tenido ganador, premiados con una medalla de oro desde 1904. Podemos investigar la visualización interactiva para ver cómo cada una de estas medallas se ganaron en las 56 disciplinas que han participado en los juegos, 41 de las cuales participaron también en los últimos Juegos Olímpicos de Rio.&lt;/p&gt;
-
-&lt;h2 id=&#34;qué-nos-cuentan-los-datos&#34;&gt;Qué nos cuentan los datos&lt;/h2&gt;
-
-&lt;p&gt;La mayoría de deportes Olímpicos empezaron siendo solo para hombres. Afortunadamente esta tendiencia comenzó a cambiar en la segunda mitad el último siglo. Incluso el número de medallas que pueden ganarse para una disciplina comienza a ser el mismo para ambos géneros. En los juegos de Rio hubo 3 disciplinas en las que solo podía participar un género; La &lt;strong&gt;&lt;em&gt;lucha Greco-Romana&lt;/em&gt;&lt;/strong&gt;, aún en los juegos desde la primera edición, en la que solo participan hombres. Por otro lado, en  &lt;strong&gt;&lt;em&gt;Gimnasia Rítmica&lt;/em&gt;&lt;/strong&gt;, y &lt;strong&gt;&lt;em&gt;Natación Sincronizada&lt;/em&gt;&lt;/strong&gt;, en los juegos desde 1984, solo participan mujeres.&lt;/p&gt;
-
-&lt;h2 id=&#34;como-leer-las-plumas&#34;&gt;Como leer las plumas&lt;/h2&gt;
-
-&lt;p&gt;Cada círculo representa un grupo de deportes similares, como deportes de agua, deportes de pelotas etc. Dentro de cada círculo se muestran porciones, cada una de estas porciones es una &lt;strong&gt;pluma&lt;/strong&gt;, que representa una disciplina.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-2016.png&#34; alt=&#34;Plumas Ol\xEDmpicas, Visualizaci\xF3n de las medallas Ol\xEDmpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Ol\xEDmpicas, Visualizaci\xF3n de las medallas Ol\xEDmpicas desde 1896 hasta 2016&#34; width=&#34;292&#34; height=&#34;214&#34;&gt;&lt;/amp-img&gt;
-    &lt;figcaption&gt;Una pluma&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Una &lt;strong&gt;pluma&lt;/strong&gt; se divide en 31 secciones, irradiando hacia afuera. Empiezan desde los primeros juegos en 1896, en el centro del círculo hasta los últimos juegos en Rio 2016, en el exterior del círculo. Cada disciplina se hace el doble de ancha según el máximo de medallas que se podrían haber ganado durante una edición para un género (El ancho es el mismo para hombres y mujeres).&lt;/p&gt;
-
-&lt;p&gt;La siguiente división se hace por género. Por ejemplo, en la imagen de arriba, las barras que van hacia arriba, con un fondo rojo son medallas de oro ganadas por mujeres, las de abajo por hombres.&lt;/p&gt;
-
-&lt;p&gt;Las medallas se colorean en función del continente, como se muestra en la siguiente imagen:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-20162.png&#34; alt=&#34;Plumas Ol\xEDmpicas, Visualizaci\xF3n de las medallas Ol\xEDmpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Ol\xEDmpicas, Visualizaci\xF3n de las medallas Ol\xEDmpicas desde 1896 hasta 2016&#34; width=&#34;196&#34; height=&#34;129&#34;&gt;&lt;/amp-img&gt;
-    &lt;figcaption&gt;Representación de los continentes&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;detalles-técnicos-y-referencias&#34;&gt;Detalles técnicos y referencias&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio &lt;a href=&#34;https://github.com/nbremer/olympicfeathers/tree/gh-pages/data&#34; title=&#34;Olympic Feathers en GitHub&#34; target=&#34;_blank&#34;&gt;Olympic Feathers en GitHub&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;La página del &lt;a href=&#34;https://nbremer.github.io/olympicfeathers/&#34; title=&#34;proyecto Olympic Feathers&#34; target=&#34;_blank&#34;&gt;proyecto Olympic Feathers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34; target=&#34;_blank&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>
