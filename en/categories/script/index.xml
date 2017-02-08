@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Script on The Programmer&#39;s Chest</title>
+    <link>https://elbauldelprogramador.com/en/categories/script/index.xml</link>
+    <description>Recent content in Script on The Programmer&#39;s Chest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <atom:link href="https://elbauldelprogramador.com/en/categories/script/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bash syntax highlighted script</title>
+      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
+      <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;quot;&lt;/span&gt;
+
+ sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# &amp;amp; print the coincidence with the pattern&lt;/span&gt;
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#I search in the text, every key word contained in keyWords, and add the label&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I am going to explain a bit the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This line is the one that takes charge highlighting the comments. We look for one &amp;#8220;*&amp;#8221;, that are the comments in bash, and any character after &amp;#8221; (. *) &amp;#8220;. &amp;#8220;&amp;amp;&amp;#8221;, it is in order that in this place, it prints everything what coincided with the pattern &amp;#8221; (. *) &amp;#8220;, that is to say, the comment.&lt;/p&gt;
+
+&lt;p&gt;There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).&lt;/p&gt;
+
+&lt;p&gt;I hope that it is useful&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bash syntax highlighted script [Improved]</title>
+      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
+      <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;Commands directory&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if jobs let local logout popd pushd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while&amp;quot;&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;#Agrego mas palabras clave de los directorios sbin y bine, que contienen comandos.&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /bin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /sbin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
+sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

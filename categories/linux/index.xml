@@ -1699,45 +1699,43 @@ ss src 5.39.89.44:25
     </item>
     
     <item>
-      <title>Bash syntax highlighted script</title>
-      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
+      <title>Bloquear una IP atacando el servidor mediante iptables</title>
+      <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
-      <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+      <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
+      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
 
-&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
-0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;quot;&lt;/span&gt;
+&lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
 
- sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# &amp;amp; print the coincidence with the pattern&lt;/span&gt;
- cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
 
-  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
-  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#I search in the text, every key word contained in keyWords, and add the label&lt;/span&gt;
-sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
-    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-rm temp
-  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;p&gt;Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -i ethX -A INPUT -s xx.xx.xx.xx -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP DROP SPOOF A:&amp;quot;&lt;/span&gt;
+iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;I am going to explain a bit the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
+&lt;p&gt;Estas directivas bloquean el tráfico entrante hacia la interfaz &lt;em&gt;ethX&lt;/em&gt; a la dirección especificada tras el parámetro &lt;em&gt;-s&lt;/em&gt;, además, en las entradas del log aparecerá como &lt;strong&gt;IP DROP SPOOF A:&lt;/strong&gt; cada vez que el firewall bloquee el intento de conexión.&lt;/p&gt;
+
+&lt;p&gt;El primer comando es el que define cómo se registrará en el log, el segundo es el que bloquea la dirección.&lt;/p&gt;
+
+&lt;p&gt;Para comprobar que efectivamente se está bloqueando al atacante, basta con mirar al log:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Feb  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; 02:15:30 NOMBRESERVIDOR kernel: IP DROP SPOOF A:IN&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ethX &lt;span class=&#34;nv&#34;&gt;OUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MAC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX &lt;span class=&#34;nv&#34;&gt;SRC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IPBLOQUEADA &lt;span class=&#34;nv&#34;&gt;DST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;IPSERVIDOR &lt;span class=&#34;nv&#34;&gt;LEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;LONGITUDPAQUETE &lt;span class=&#34;nv&#34;&gt;TOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 &lt;span class=&#34;nv&#34;&gt;PREC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 &lt;span class=&#34;nv&#34;&gt;TTL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;117&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15234&lt;/span&gt; DF &lt;span class=&#34;nv&#34;&gt;PROTO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TCP &lt;span class=&#34;nv&#34;&gt;SPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17652&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;PUERTODESTINO &lt;span class=&#34;nv&#34;&gt;WINDOW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;65535&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;RES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x00 SYN &lt;span class=&#34;nv&#34;&gt;URGP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;This line is the one that takes charge highlighting the comments. We look for one &amp;#8220;*&amp;#8221;, that are the comments in bash, and any character after &amp;#8221; (. *) &amp;#8220;. &amp;#8220;&amp;amp;&amp;#8221;, it is in order that in this place, it prints everything what coincided with the pattern &amp;#8221; (. *) &amp;#8220;, that is to say, the comment.&lt;/p&gt;
+&lt;p&gt;Decidí investigar desde cuando se estaba produciendo el ataque, y, para mi sorpresa, se estaba intentando acceder por fuerza bruta al blog desde hacía 8 días. Concretamente, hubo &lt;strong&gt;18209&lt;/strong&gt; intentos de conexión. Este número puede sacarse fácilmente contando las líneas del log en las que estaba involucrada la ip atacante:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cat /ruta/log/acceso.log &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep xx.xx.xx.xx &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; wc -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).&lt;/p&gt;
+&lt;p&gt;Donde &lt;strong&gt;xx.xx.xx.xx&lt;/strong&gt; debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.&lt;/p&gt;
 
-&lt;p&gt;I hope that it is useful&lt;/p&gt;
-</description>
+&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; target=&#34;_blank&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34; target=&#34;_blank&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Iptables Drop IP Address&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-iptables-drop/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

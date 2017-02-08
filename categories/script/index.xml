@@ -9,87 +9,6 @@
     <atom:link href="https://elbauldelprogramador.com/categories/script/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Bash syntax highlighted script</title>
-      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
-      <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
-0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;quot;&lt;/span&gt;
-
- sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# &amp;amp; print the coincidence with the pattern&lt;/span&gt;
- cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
-  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#I search in the text, every key word contained in keyWords, and add the label&lt;/span&gt;
-sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
-    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-rm temp
-  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I am going to explain a bit the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This line is the one that takes charge highlighting the comments. We look for one &amp;#8220;*&amp;#8221;, that are the comments in bash, and any character after &amp;#8221; (. *) &amp;#8220;. &amp;#8220;&amp;amp;&amp;#8221;, it is in order that in this place, it prints everything what coincided with the pattern &amp;#8221; (. *) &amp;#8220;, that is to say, the comment.&lt;/p&gt;
-
-&lt;p&gt;There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).&lt;/p&gt;
-
-&lt;p&gt;I hope that it is useful&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bash syntax highlighted script [Improved]</title>
-      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
-      <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;Commands directory&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
-0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if jobs let local logout popd pushd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while&amp;quot;&lt;/span&gt;
-
- &lt;span class=&#34;c1&#34;&gt;#Agrego mas palabras clave de los directorios sbin y bine, que contienen comandos.&lt;/span&gt;
- &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /bin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
- &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /sbin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-
- &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
-sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
- cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
-  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
-sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
-    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-rm temp
-  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Buscar archivos con locate mediante expresiones regulares</title>
       <link>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -975,10 +894,10 @@ main
     
     <item>
       <title>Script resaltado sintaxis bash</title>
-      <link>https://elbauldelprogramador.com/script-resaltado-sintaxis-bash/</link>
+      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://elbauldelprogramador.com/script-resaltado-sintaxis-bash/</guid>
+      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
       <description>&lt;p&gt;Como os dije, he hecho el script para el resaltado de bash, me ha costado un poco mas, porque queria intentar resaltar mas cosas, pero al final desistí, y lo hice un poco más simple. Hay que tener en cuenta, que habrá muchas palabras que no se resalten, ya que en la terminal de gnu/Linux existen muchísimos comandos, y obviamente, no puedo ponerlos todos, cuando querais que un determinado comando se resalte (como ls, telnet, ftp&amp;#8230;) o cualquiera que useis, simplemente añadirlo a la variable keyWords.&lt;/p&gt;
 
 &lt;p&gt;Aquí el código:&lt;/p&gt;
@@ -1023,10 +942,10 @@ Saludos.&lt;/p&gt;
     
     <item>
       <title>Script resaltado sintaxis bash (Mejorado)</title>
-      <link>https://elbauldelprogramador.com/script-resaltado-sintaxis-bash-mejorado/</link>
+      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://elbauldelprogramador.com/script-resaltado-sintaxis-bash-mejorado/</guid>
+      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
       <description>&lt;p&gt;Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;em&amp;gt;Directorio de comandos&amp;lt;/em&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1058,6 +977,73 @@ Saludos.&lt;/p&gt;
   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Script resaltado sintaxis c&#43;&#43;</title>
+      <link>https://elbauldelprogramador.com/script-resaltado-sintaxis/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/script-resaltado-sintaxis/</guid>
+      <description>&lt;p&gt;He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es &lt;a href=&#34;http://alexgorbatchev.com/SyntaxHighlighter/&#34; target=&#34;_blank&#34;&gt;esta&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje. Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.&lt;br /&gt; Aqui esta el codigo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keyWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;continue float new signed try auto default for operator sizeof typedef break delete friend private static union case do goto protected struct unsigned catch double if public switch virtual char else inline register template void enum int return this volatile const extern long short throw while bool cout cin using namespace&amp;quot;&lt;/span&gt;
+
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include/#include/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# coloreo el include&lt;/span&gt;
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#define/#define/&amp;quot;&lt;/span&gt; &amp;lt; temp &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# coloreo el define&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keyWords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+    sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp $rutaCodigo
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^class /class/g&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+  rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;b&gt;Voy a explicar un poco el código:&lt;/b&gt;&lt;br /&gt; La variable &lt;em&gt;keyWords&lt;/em&gt; contiene las palabras claves de c++, menos &amp;#8220;class&amp;#8221;, que despues explicaré porque. En esta variable, las palabras han de estar separadas por un espacio, y todas en una misma linea, Para que el for coja palabra a palabra..&lt;/p&gt;
+
+&lt;p&gt;Las dos siguientes lineas&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include..... y sed &amp;quot;&lt;/span&gt;s/^#define...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+    buscan el patrón #define o #include, al principio de cada linea del texto, esto se indica con &lt;em&gt;^&lt;/em&gt;, y lo reemplaza con su estilo correspondiente, para formatear el texto.&lt;br /&gt; Una vez entramos al for, se aplica básicamente el mismo procedimiento que para define e include, pero con cada palabra de la variable keyWords.
+  &lt;/p&gt;
+&lt;p&gt;
+    Por ultimo, hago lo mismo para la palabra, reservada class, el motivo por el que he dejado esta para el final, es porque la etiqueta &lt;span class...=&#34;class...&#34;&gt; contiene la palabra, class, y entonces el código no saldria bien, ya que al encontrarse esta palabra dentro de la etiqueta span, la sustituiría tambien.&lt;br /&gt; Como Usarlo:
+  &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    Lo primero que hice fue pensar de que color resaltar las palabras clave, las puse igual que en los ejemplos de &lt;a href=&#34;http://conclase.net/&#34; target=&#34;_blank&#34;&gt;conclase&lt;/a&gt;. El siguiente paso es crear una clase en el css del blog, de esta forma:
+  &lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;&lt;i&gt;.prp { color: &#34;#0a0&#34;; font-weight: bold; }&lt;br /&gt; .cpp { color: &#34;#a40&#34;; font-weight: bold; }&lt;/i&gt;&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    Una vez hecho esto, solo nos resta ejecutar el script, e introducir la ruta del codigo a formatear con este estilo.
+  &lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://bashyc.blogspot.com/p/curso-c.html#ejercicio111&#34; target=&#34;_blank&#34;&gt;Aqui&lt;/a&gt; podeis ver el resultado.
+  &lt;/p&gt;
+&lt;p&gt;
+    Si tenéis alguna duda, preguntad sin problema.
+  &lt;/p&gt;
+&lt;p&gt;
+    Saludos, espero que sea útil&lt;br /&gt;
+&lt;/p&gt;
 </description>
     </item>
     
