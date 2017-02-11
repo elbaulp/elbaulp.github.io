@@ -22,19 +22,19 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;instalar-fail2ban&#34;&gt;Instalar Fail2Ban&lt;/h3&gt;
+&lt;h1 id=&#34;instalar-fail2ban&#34;&gt;Instalar Fail2Ban&lt;/h1&gt;
 
 &lt;p&gt;Si no se encuentra instalado en nuestro sistema:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install fail2ban
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;antes-de-empezar&#34;&gt;Antes de empezar&lt;/h3&gt;
+&lt;h1 id=&#34;antes-de-empezar&#34;&gt;Antes de empezar&lt;/h1&gt;
 
 &lt;p&gt;Antes de modificar el archivo &lt;em&gt;/etc/fail2ban/jail.conf&lt;/em&gt;, es recomendable -y de hecho lo menciona el propio archivo en su cabecera &amp;#8212; realizar una copia y trabajar sobre ella:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/fail2ban &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp jail.conf jail.local
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;bloquear-ataques-de-fuerza-bruta-a-wordpress&#34;&gt;Bloquear ataques de fuerza bruta a WordPress&lt;/h3&gt;
+&lt;h1 id=&#34;bloquear-ataques-de-fuerza-bruta-a-wordpress&#34;&gt;Bloquear ataques de fuerza bruta a WordPress&lt;/h1&gt;
 
 &lt;p&gt;La siguiente configuración bloqueará durante 20 minutos cualquier intento de loggearse en WordPress de forma incorrecta más de 3 veces. Hay que escribirla en el &lt;em&gt;jail.local&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-wp-login&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
@@ -55,7 +55,7 @@
 &lt;span class=&#34;s2&#34;&gt;ignoreregex =&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;inconvenientes-a-tener-en-cuenta&#34;&gt;Inconvenientes a tener en cuenta&lt;/h3&gt;
+&lt;h1 id=&#34;inconvenientes-a-tener-en-cuenta&#34;&gt;Inconvenientes a tener en cuenta&lt;/h1&gt;
 
 &lt;p&gt;Con esta configuración, hay que considerar que:&lt;/p&gt;
 
@@ -127,7 +127,7 @@
 &lt;span class=&#34;c1&#34;&gt;# 192.168.1.1 - - &amp;quot;GET http://www.something.com/&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;/host&amp;gt;&amp;lt;host&amp;gt; -.*GET http.*
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*GET http.*
 &lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;# Noscript filter /etc/fail2ban/filter.d/nginx-noscript.conf:&lt;/span&gt;
@@ -138,7 +138,7 @@
 &lt;span class=&#34;c1&#34;&gt;# 192.168.1.1 - - &amp;quot;GET /something.php&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;/host&amp;gt;&amp;lt;host&amp;gt; -.*GET.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;asp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;exe&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;pl&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;cgi&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;cgi&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*GET.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;asp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;exe&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;pl&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;cgi&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;cgi&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
@@ -148,9 +148,9 @@
 &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 
-&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; no user/password was provided &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; basic authentication.*client: &amp;lt;/host&amp;gt;&amp;lt;host&amp;gt;
-            user .* was not found in.*client: &amp;lt;/host&amp;gt;&amp;lt;host&amp;gt;
-            user .* password mismatch.*client: &amp;lt;/host&amp;gt;&amp;lt;host&amp;gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; no user/password was provided &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; basic authentication.*client: &amp;lt;host&amp;gt;
+            user .* was not found in.*client: &amp;lt;host&amp;gt;
+            user .* password mismatch.*client: &amp;lt;host&amp;gt;
 
 &lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
 
@@ -161,11 +161,11 @@
 &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# Scan access log for HTTP 200 + POST /sessions =&amp;gt; failed log in&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;/host&amp;gt;&amp;lt;host&amp;gt; -.*POST /sessions HTTP/1&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;.&lt;span class=&#34;s2&#34;&gt;&amp;quot; 200&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*POST /sessions HTTP/1&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;.&lt;span class=&#34;s2&#34;&gt;&amp;quot; 200&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;ignoreregex =&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;enviar-por-correo-los-bloqueos&#34;&gt;Enviar por correo los bloqueos&lt;/h3&gt;
+&lt;h1 id=&#34;enviar-por-correo-los-bloqueos&#34;&gt;Enviar por correo los bloqueos&lt;/h1&gt;
 
 &lt;p&gt;Para terminar, si queremos recibir un correo por cada bloqueo que se produzca, basta con añadir estas dos líneas al fichero &lt;em&gt;jail.local&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;destemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; direccion@correo
@@ -174,12 +174,12 @@
 
 &lt;p&gt;¿Administras un servidor? ¿Qué técnicas usas?, deja un comentario.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Fail2Ban para wordpress&lt;/em&gt; »» &lt;a href=&#34;http://codepoets.co.uk/2013/fail2ban-filter-for-wordpress/&#34; target=&#34;_blank&#34;&gt;codepoets.co.uk&lt;/a&gt;
-&lt;em&gt;Fail2Ban para Nginx&lt;/em&gt; »» &lt;a href=&#34;http://snippets.aktagon.com/snippets/554-how-to-secure-an-nginx-server-with-fail2ban&#34; target=&#34;_blank&#34;&gt;snippets.aktagon.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/host&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Fail2Ban para wordpress&lt;/em&gt; »» &lt;a href=&#34;http://codepoets.co.uk/2013/fail2ban-filter-for-wordpress/&#34; target=&#34;_blank&#34;&gt;codepoets.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Fail2Ban para Nginx&lt;/em&gt; »» &lt;a href=&#34;http://snippets.aktagon.com/snippets/554-how-to-secure-an-nginx-server-with-fail2ban&#34; target=&#34;_blank&#34;&gt;snippets.aktagon.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
