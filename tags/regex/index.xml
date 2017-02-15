@@ -192,7 +192,7 @@ color: &amp;quot;#F57C00&amp;quot;
 
 &lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
 
-&lt;h3 id=&#34;expresiones-regulares-en-locate&#34;&gt;Expresiones regulares en Locate&lt;/h3&gt;
+&lt;h1 id=&#34;expresiones-regulares-en-locate&#34;&gt;Expresiones regulares en Locate&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -200,7 +200,11 @@ color: &amp;quot;#F57C00&amp;quot;
 
 &lt;p&gt;El problema básicamente es el siguiente. A partir de un texto con los nombres &lt;em&gt;parciales&lt;/em&gt; de un fichero obtener la ruta completa a dicho archivo. Lo de parciales quiere decir que si el nombre es &lt;strong&gt;Autor - Nombre Canción&lt;/strong&gt;, en el texto solo se guarda &lt;strong&gt;Nombre Canción&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;crear-la-expresión-regular&#34;&gt;Crear la expresión regular&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Hace un tiempo creé este script en python para &lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;generar listas de reproducción de una determinada duración&#34; target=&#34;_blank&#34;&gt;generar listas de reproducción de una determinada duración&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;crear-la-expresión-regular&#34;&gt;Crear la expresión regular&lt;/h1&gt;
 
 &lt;p&gt;Empezaré mostrando la expresión regular y luego la explicaré:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$i.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -215,7 +219,7 @@ color: &amp;quot;#F57C00&amp;quot;
     &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;script-completo&#34;&gt;Script completo&lt;/h3&gt;
+&lt;h1 id=&#34;script-completo&#34;&gt;Script completo&lt;/h1&gt;
 
 &lt;p&gt;Con la expresión regular construida, solo resta crear un script que procese el texto con el nombre de las canciones y cree la lista de reproducción:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -251,7 +255,7 @@ cat $nombres &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&
 &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
