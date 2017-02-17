@@ -18,40 +18,69 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;obteniendo-el-layout-por-defecto&#34;&gt;Obteniendo el Layout por defecto&lt;/h3&gt;
+&lt;h1 id=&#34;obteniendo-el-layout-por-defecto&#34;&gt;Obteniendo el Layout por defecto&lt;/h1&gt;
 
 &lt;p&gt;Al principio, obtuve el &lt;em&gt;TextView&lt;/em&gt; que representa el summary, pero cambiarle el color no tenía efecto y se quedaba de color gris. La solución final consistió en crear un propio &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; title=&#34;Programación Android: Interfaz gráfica – Layouts&#34; target=&#34;_blank&#34;&gt;layout&lt;/a&gt;. Buscando en el código fuente de Android lo encontré en &lt;em&gt;&lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/layout/preference_child.xml&#34; target=&#34;_blank&#34;&gt;frameworks/base/core/res/res/layout/preference_child.xml&lt;/a&gt;&lt;/em&gt;. A éste recurso hay que quitarle unas cuantas cosas que no nos sirven, quedando así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- Layout for a visually child-like Preference in a PreferenceActivity. --&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:baselinealigned=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;center_vertical&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:minheight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/listPreferredItemHeight&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:paddingend=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/scrollbarSize&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:paddingstart=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;16dip&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;relativelayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;0dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_marginbottom=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_marginend=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_margintop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+android:id/title&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:ellipsize=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;marquee&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:fadingedge=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:singleline=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:textappearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceMedium&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/textview&amp;gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+android:id/summary&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_alignstart=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:id/title&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:id/title&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:maxlines=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:textappearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceSmall&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:textcolor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textColorSecondary&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/textview&amp;gt;&amp;lt;/relativelayout&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:baselineAligned=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;center_vertical&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:minHeight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/listPreferredItemHeight&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:paddingEnd=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/scrollbarSize&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:paddingStart=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;16dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;0dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginBottom=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginEnd=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginTop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+android:id/title&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:ellipsize=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;marquee&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:fadingEdge=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:singleLine=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceMedium&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+android:id/summary&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_alignStart=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:id/title&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:id/title&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:maxLines=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceSmall&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:textColor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textColorSecondary&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;layout-para-mostrar-el-error&#34;&gt;Layout para mostrar el error&lt;/h3&gt;
+&lt;h1 id=&#34;layout-para-mostrar-el-error&#34;&gt;Layout para mostrar el error&lt;/h1&gt;
 
 &lt;p&gt;El layout anterior es el que se usará por defecto, cuando queramos resaltar un error usaremos otro exáctamente igual pero con el color del Summary cambiado, como es repetir código simplemente se muestra el nombre del fichero y el cambio en el TextView con ID &lt;strong&gt;&lt;em&gt;@android:id/summary&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;preference_child_summary_error.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
 android:textColor=&amp;quot;@color/red&amp;quot;
-
-
 &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;La definición del c&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34; title=&#34;Programación Android: Interfaz gráfica – Estilos y Temas&#34; target=&#34;_blank&#34;&gt;olor se declara&lt;/a&gt; en un archivo dentro de la carpeta &lt;em&gt;values&lt;/em&gt;:
 &lt;strong&gt;&lt;em&gt;./res/values/colors.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;color&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#ff0000&lt;span class=&#34;nt&#34;&gt;&amp;lt;/color&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;color&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#ff0000&lt;span class=&#34;nt&#34;&gt;&amp;lt;/color&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;cambiar-el-color-en-tiempo-de-ejecución&#34;&gt;Cambiar el color en tiempo de ejecución&lt;/h3&gt;
+&lt;h1 id=&#34;cambiar-el-color-en-tiempo-de-ejecución&#34;&gt;Cambiar el color en tiempo de ejecución&lt;/h1&gt;
 
 &lt;p&gt;Ahora que tenemos el diseño listo, veremos cómo cambiarlo cuando ocurra cierta condición. En el caso que nos ocupa necesitaremos resaltar el summary en color rojo cuando el usuario introduzca una contraseña que no cumple con los requisitos establecidos por la aplicación, el código quedará algo así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;newValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
