@@ -15,16 +15,16 @@
       
       <guid>https://elbauldelprogramador.com/cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/</guid>
       <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;3264px&#34; height=&#34;2448px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34; title=&#34;Cambiar fondo en la pantalla de login en Debian y Ubuntu&#34; alt=&#34;Cambiar fondo en la pantalla de login en Debian y Ubuntu&#34; width=&#34;3264px&#34; height=&#34;2448px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Si quieres personalizar la pantalla de bienvenida en Debian o Ubuntu, es posible cambiar el fondo de pantalla en unos cuantos pasos.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;en-debian&#34;&gt;En Debian&lt;/h3&gt;
+&lt;h1 id=&#34;en-debian&#34;&gt;En Debian&lt;/h1&gt;
 
-&lt;h4 id=&#34;editando-el-archivo-etc-gdm3-greeter-gsettings&#34;&gt;Editando el archivo /etc/gdm3/greeter.gsettings&lt;/h4&gt;
+&lt;h2 id=&#34;editando-el-archivo-etc-gdm3-greeter-gsettings&#34;&gt;Editando el archivo /etc/gdm3/greeter.gsettings&lt;/h2&gt;
 
 &lt;p&gt;Añadiendo o modificando las siguientes líneas:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Theming options&lt;/span&gt;
@@ -39,7 +39,7 @@ picture-options&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s
 
 &lt;p&gt;para aplicar los cambios.&lt;/p&gt;
 
-&lt;h3 id=&#34;en-ubuntu&#34;&gt;En Ubuntu&lt;/h3&gt;
+&lt;h1 id=&#34;en-ubuntu&#34;&gt;En Ubuntu&lt;/h1&gt;
 
 &lt;p&gt;Hay que asegurarse que el fondo tenga permisos de lectura tanto para el usuario, el grupo y otros, esto se puede lograr con&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ chmod &lt;span class=&#34;m&#34;&gt;644&lt;/span&gt; &amp;lt;nombre_fondo&amp;gt;
@@ -67,22 +67,22 @@ picture-options&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s
 
 &lt;p&gt;Hay que tener en cuenta que, si nuestro &lt;em&gt;/home/&lt;/em&gt; está &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34; target=&#34;_blank&#34;&gt;cifrado&lt;/a&gt;, no podemos especificar un fondo que esté dentro de ese directorio, puesto que la partición &lt;em&gt;/home&lt;/em&gt; aún no estará descifrada en la pantalla de login.&lt;/p&gt;
 
-&lt;h3 id=&#34;en-xubuntu&#34;&gt;En Xubuntu&lt;/h3&gt;
+&lt;h1 id=&#34;en-xubuntu&#34;&gt;En Xubuntu&lt;/h1&gt;
 
 &lt;p&gt;La imagen se encuentra en &lt;code&gt;/usr/share/xfce4/backdrops/xubuntu-wallpaper.png&lt;/code&gt; como un enlace simbólico, basta con ver a dónde apunta ese enlace y reemplazarlo con la imagen deseada. En mi caso dicha imagen era &lt;code&gt;xubuntu-trusty.png&lt;/code&gt;, situada en el mismo directorio. Lo más fácil sería hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo cp ruta/imagen/deseada /usr/share/xfce4/backdrops/xubuntu-trusty.png
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;3264px&#34; height=&#34;2448px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Cambiar-fondo-en-la-pantalla-de-login-en-Debian-y-Ubuntu.jpg&#34; title=&#34;Cambiar fondo en la pantalla de login en Debian y Ubuntu&#34; alt=&#34;Cambiar fondo en la pantalla de login en Debian y Ubuntu&#34; width=&#34;3264px&#34; height=&#34;2448px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Debian&lt;/em&gt; »» &lt;a href=&#34;http://lists.debian.org/debian-desktop/2012/03/msg00054.html&#34; target=&#34;_blank&#34;&gt;lists.debian.org&lt;/a&gt;
-&lt;em&gt;Ubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/64001/how-do-i-change-the-wallpaper-in-lightdm&#34; target=&#34;_blank&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/nombre_fondo&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Debian&lt;/em&gt; »» &lt;a href=&#34;http://lists.debian.org/debian-desktop/2012/03/msg00054.html&#34; target=&#34;_blank&#34;&gt;lists.debian.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Ubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/64001/how-do-i-change-the-wallpaper-in-lightdm&#34; target=&#34;_blank&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

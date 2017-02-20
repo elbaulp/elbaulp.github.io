@@ -14,7 +14,7 @@
       <pubDate>Mon, 03 Oct 2016 14:15:35 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</guid>
-      <description>&lt;h2 id=&#34;problema-can-t-open-display-0-0&#34;&gt;Problema: Can&amp;rsquo;t Open Display: :0.0&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;problema-can-t-open-display-0-0&#34;&gt;Problema: Can&amp;rsquo;t Open Display: :0.0&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;NetworkManager&lt;/em&gt; tiene la costumbre de cambiar el nombre del host (&lt;em&gt;hostname&lt;/em&gt;) al conectarse a una red, y esto a veces provoca que las aplicaciones con interfaz gráfica no puedan lanzarse. El típico error que se obtiene cuando esto ocurre es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t Open Display: :0.0
@@ -22,7 +22,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;solución-establecer-de-forma-permanente-un-hostname&#34;&gt;Solución: Establecer de forma permanente un hostname&lt;/h2&gt;
+&lt;h1 id=&#34;solución-establecer-de-forma-permanente-un-hostname&#34;&gt;Solución: Establecer de forma permanente un hostname&lt;/h1&gt;
 
 &lt;p&gt;Tras mucho investigar, descubrí que el problema estaba en &lt;em&gt;NetworkManager&lt;/em&gt;, y para solucionarlo basta con hacer permanente el &lt;em&gt;hostname&lt;/em&gt;. Para ello en el fichero &lt;code&gt;/etc/hosts&lt;/code&gt; debemos añadir un alias a &lt;code&gt;localhost&lt;/code&gt; con el nombre que queramos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;127.0.0.1	localhost NombreDeseado
@@ -38,7 +38,7 @@
 
 &lt;p&gt;Con esto bastará.&lt;/p&gt;
 
-&lt;h3 id=&#34;cuando-la-solución-no-funciona&#34;&gt;Cuando la solución no funciona&lt;/h3&gt;
+&lt;h1 id=&#34;cuando-la-solución-no-funciona&#34;&gt;Cuando la solución no funciona&lt;/h1&gt;
 
 &lt;p&gt;Recientemente se actualizó &lt;em&gt;NetworkManager&lt;/em&gt; y la solución de arriba dejó de funcionar. Esto se debe a que &lt;em&gt;NetworkManager&lt;/em&gt; ya no mira el nombre del host en el fichero de configuración, como mencionan en el &lt;em&gt;man&lt;/em&gt; de &lt;code&gt;NetworkManager.conf&lt;/code&gt;:&lt;/p&gt;
 
@@ -51,7 +51,7 @@
 NombreDeseado
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34; target=&#34;_blank&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
