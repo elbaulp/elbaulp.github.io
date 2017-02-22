@@ -200,9 +200,9 @@ Copyright&lt;/p&gt;
 
 &lt;p&gt;A lo largo del poco tiempo que llevo usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;Artículos sobre emacs&#34;&gt;emacs&lt;/a&gt;, ya he ido descubriendo los atajos que me resultan más útiles para mi día a día, empecemos:&lt;/p&gt;
 
-&lt;h2 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h2&gt;
+&lt;h1 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h1&gt;
 
-&lt;h3 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h3&gt;
+&lt;h2 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34; target=&#34;_blank&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
 
@@ -230,9 +230,9 @@ lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34
 
 &lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
 
-&lt;h2 id=&#34;miscelánica-taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h2&gt;
+&lt;h1 id=&#34;miscelánica-taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
 
-&lt;h3 id=&#34;buscar-y-reemplazar-en-varios-ficheros&#34;&gt;Buscar y reemplazar en varios ficheros&lt;/h3&gt;
+&lt;h2 id=&#34;buscar-y-reemplazar-en-varios-ficheros&#34;&gt;Buscar y reemplazar en varios ficheros&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
 
@@ -249,7 +249,7 @@ lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34
 
 &lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34; target=&#34;_blank&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h3&gt;
+&lt;h2 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
 
@@ -286,7 +286,7 @@ línea 4
 
 &lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34; target=&#34;_blank&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h3&gt;
+&lt;h2 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
 
@@ -314,15 +314,15 @@ línea 4
 
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34; target=&#34;_blank&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h3&gt;
+&lt;h2 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h2&gt;
 
 &lt;p&gt;Basta ejecutar &lt;code&gt;M-x delete-trailing-whitespace&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;guardar-comandos-que-usamos-usualmente&#34;&gt;Guardar comandos que usamos usualmente&lt;/h3&gt;
+&lt;h2 id=&#34;guardar-comandos-que-usamos-usualmente&#34;&gt;Guardar comandos que usamos usualmente&lt;/h2&gt;
 
 &lt;p&gt;Este tema se trató en más profundidad en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs&#34; title=&#34;Cómo crear comandos personalizados en Emacs&#34;&gt;&lt;em&gt;Cómo crear comandos personalizados en Emacs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;administar-las-copias-de-seguridad-de-emacs&#34;&gt;Administar las copias de seguridad de emacs&lt;/h3&gt;
+&lt;h2 id=&#34;administar-las-copias-de-seguridad-de-emacs&#34;&gt;Administar las copias de seguridad de emacs&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
 
@@ -343,7 +343,7 @@ línea 4
 
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34; target=&#34;_blank&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h3&gt;
+&lt;h2 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
 
@@ -365,13 +365,13 @@ línea 4
 
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34; target=&#34;_blank&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;alinear-verticalmente-código-en-base-al-signo&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h3&gt;
+&lt;h2 id=&#34;alinear-verticalmente-código-en-base-al-signo&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-x align-regex =&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;convertir-texto-a-mayúscula-minúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h3&gt;
+&lt;h2 id=&#34;convertir-texto-a-mayúscula-minúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C-x C-u&lt;/code&gt;: Convertir la región seleccionada a mayúsculas.&lt;/li&gt;
@@ -381,7 +381,7 @@ línea 4
 &lt;li&gt;&lt;code&gt;M-c&lt;/code&gt;: Convertir a mayúscula la primera letra de la palabra &amp;ndash; Capitalizar &amp;ndash;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;reemplazar-tabulador-por-espacios-y-viceversa&#34;&gt;Reemplazar tabulador por espacios y viceversa&lt;/h3&gt;
+&lt;h2 id=&#34;reemplazar-tabulador-por-espacios-y-viceversa&#34;&gt;Reemplazar tabulador por espacios y viceversa&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-x tabify&lt;/code&gt;: Sustituye en la región seleccionada espacios por tabuladores.&lt;/li&gt;
