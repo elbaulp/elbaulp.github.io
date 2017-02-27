@@ -993,14 +993,12 @@
     <a class="post-link" href="https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/">
       <h2 class="post-title">Jugando con las secciones .dtors y .ctors de la tabla de secciones en C</h2>
     </a>
-    <a class="post-link" href="Jugando%20con%20las%20secciones%20.dtors%20y%20.ctors%20de%20la%20tabla%20de%20secciones%20en%20C">
-      <p class="description"><p><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft" />
+    <p class="description"><p><amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" src="https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png" class="alignleft" />
 Los que me leéis habitualmente probablemente hayais visto los artículos que escribí sobre <a href="https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/" title="Desafío de ingeniería inversa en C – Soluciones" target="_blank">ingeniería inversa en C</a>, o <a href="https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/" title="Explotación – Buffers OverFlows y exploits (Parte I)" target="_blank">explotación de buffers overflows</a>. Son temas que me llaman la atención, hoy quiero hablaros de dos secciones de la tabla de secciones en C llamadas <em>.dtors</em> y <em>.ctors</em>, creada por los binarios compilados con el compilador de GNU.</p>
 
 <p>Estas secciones se crean para los <a href="https://elbauldelprogramador.com/clases-y-objetos-el-destructor/" target="_blank">destructores</a> y <a href="https://elbauldelprogramador.com/clases-y-objetos-el-constructor/" target="_blank">constructores</a>, respectivamente. Los constructores se llaman justo antes de ejecutar la función <code>main()</code> y los destructores se llaman justo antes de que <code>main()</code> finalize con la llamada al sistema <code>exit</code>.</p>
 
 <p>Veamos un ejemplo para aclarar su funcionamiento:</p></p>
-    </a>
     <div class="tags">
       
          
