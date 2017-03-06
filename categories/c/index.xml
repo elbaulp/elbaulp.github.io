@@ -185,7 +185,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 
 &lt;p&gt;Para que una función definida fuera de la clase sea inline es necesario especificarlo con esta palabra reservada. Las funciones inline hacen una sustitución del código, igual que las macros #define en C, pero con la ventaja de la depuración y la comprobación de los tipos de datos. Corno regla general, se definirá una función dentro de la clase, si consta de un pequeño número de sentencias.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-clases-y-objetos-punteros-a-objetos-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Punteros a objetos&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-clases-y-objetos-punteros-a-objetos-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Punteros a objetos&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -194,7 +194,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/clases-y-objetos-pasar-un-objeto-una/</guid>
-      <description>&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+      <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Para usar una función son necesarios tres pasos:&lt;/p&gt;
 
@@ -208,7 +208,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 
 &lt;p&gt;Vamos a estudiar cómo se pasa una variable a una función en uno de sus argumentos.&lt;/p&gt;
 
-&lt;h3 id=&#34;paso-por-valor&#34;&gt;Paso por valor&lt;/h3&gt;
+&lt;h1 id=&#34;paso-por-valor&#34;&gt;Paso por valor&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// declaración&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;// llamada&lt;/span&gt;
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// definición&lt;/span&gt;
@@ -221,7 +221,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 
 &lt;p&gt;Así, cuando la variable arg se pasa por valor a una función, la función recibe una copia de &lt;code&gt;arg&lt;/code&gt;. Cualquier cambio en la copia &lt;code&gt;parm&lt;/code&gt; dentro del cuerpo de la función no afecta para nada al valor de &lt;code&gt;arg&lt;/code&gt;. La función no puede, por tanto, alterar directamente el parámetro pasado por valor. Así pues, durante el curso de la llamada a la función existen la variable &lt;code&gt;arg&lt;/code&gt; y su copia &lt;code&gt;parm&lt;/code&gt;. Cuando se sale de la función, la variable &lt;code&gt;parm&lt;/code&gt; está fuera de ámbito y se libera la memoria que ocupaba. En este caso, se asigna el valor 88 a &lt;code&gt;parm&lt;/code&gt;, no a &lt;code&gt;arg&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;paso-por-dirección&#34;&gt;Paso por dirección&lt;/h3&gt;
+&lt;h1 id=&#34;paso-por-dirección&#34;&gt;Paso por dirección&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;funcion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parml&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// declaración&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arg1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// llamada&lt;/span&gt;
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// definición&lt;/span&gt;
@@ -242,7 +242,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 
 &lt;p&gt;Cualquier cambio que experimente &lt;code&gt;ir&lt;/code&gt;, lo experimenta &lt;code&gt;i&lt;/code&gt;, y viceversa. La potencialidad de las referencias está en el paso de una variable a una función, y en segundo lugar &amp;ndash; aunque no lo veremos &amp;ndash; en la posibilidad de, que las funciones devuelvan referencias.&lt;/p&gt;
 
-&lt;h3 id=&#34;paso-por-referencia&#34;&gt;Paso por referencia&lt;/h3&gt;
+&lt;h1 id=&#34;paso-por-referencia&#34;&gt;Paso por referencia&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// declaración&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;            &lt;span class=&#34;c1&#34;&gt;// llamada&lt;/span&gt;
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;funcion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;// definición&lt;/span&gt;
@@ -261,7 +261,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/clases-y-objetos-arrays/</guid>
-      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Un array sirve para guardar un conjunto de entidades pertenecientes a la misma clase. Para reservar espacio en memoria para un array, y para liberar la memoria, se ha de llamar a las funciones &lt;code&gt;operator new[]()&lt;/code&gt; y &lt;code&gt;operator delete[]()&lt;/code&gt;, respectivamente. En este caso, &lt;strong&gt;new&lt;/strong&gt; no acepta inicializadores. Por ejemplo, en la siguiente porción de código se reserva espacio en memoria para un array de 3 enteros. Se inicializan, se usan, y por último, se libera dicho espacio en memoria reservado cuando ya no se precisa más el array.&lt;/p&gt;
 
@@ -284,7 +284,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;k&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;array-de-objetos&#34;&gt;Array de objetos&lt;/h2&gt;
+&lt;h1 id=&#34;array-de-objetos&#34;&gt;Array de objetos&lt;/h1&gt;
 
 &lt;p&gt;Primero reservamos espacio para un array de tres objetos de la clase Punto.  Luego inicializamos dichos objetos, llamando al constructor. Hacemos uso de los objetos, y por último, liberamos el espacio de memoria reservada.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//reserva espacio para tres elementos&lt;/span&gt;
@@ -300,7 +300,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;c1&#34;&gt;//llama tres veces al destructor&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;array-de-punteros-a-objetos&#34;&gt;Array de punteros a objetos&lt;/h2&gt;
+&lt;h1 id=&#34;array-de-punteros-a-objetos&#34;&gt;Array de punteros a objetos&lt;/h1&gt;
 
 &lt;p&gt;Primero reservamos espacio para un array de tres punteros a objetos de la clase Punto. Luego asignamos las direcciones de los objetos creados a los elementos del array, hacernos uso de los punteros a objetos, y por último, liberamos el espacio de memoria reservada, destruyendo cada elemento del array, y el array mismo.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//reserva espacio para tres elementos&lt;/span&gt;
@@ -317,7 +317,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;k&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pObjs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;moverse-por-el-array&#34;&gt;Moverse por el array&lt;/h2&gt;
+&lt;h1 id=&#34;moverse-por-el-array&#34;&gt;Moverse por el array&lt;/h1&gt;
 
 &lt;p&gt;Punteros y arrays están íntimamente relacionados por las reglas de la aritmética de punteros. El compilador interpreta el nombre de array corno un puntero a su primer elemento. Es decir, si objs es el nombre del array, &lt;code&gt;objs&lt;/code&gt; es equivalente a &lt;code&gt;&amp;amp;objs[0]&lt;/code&gt;. Por las reglas de la aritmética de punteros, si se añade un entero &lt;code&gt;i&lt;/code&gt; al nombre de un array, el resultado es un puntero al elemento &lt;code&gt;i&lt;/code&gt; del array: esto es, &lt;code&gt;objs+i&lt;/code&gt; es equivalente a &lt;code&gt;&amp;amp;objs[i]&lt;/code&gt;. Esta equivalencia la podemos expresar mediante la regla:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//es equivalente a objs[i]&lt;/span&gt;
@@ -330,7 +330,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;n&#34;&gt;objs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;//retrocede a objs[1]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;clases-y-objetos-pasar-un-objeto-a-una-función-1&#34;&gt;&lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-pasar-un-objeto-una/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos. Pasar un objeto a una función&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;clases-y-objetos-pasar-un-objeto-a-una-función-1&#34;&gt;&lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-pasar-un-objeto-una/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos. Pasar un objeto a una función&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -397,7 +397,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;nordenada del punto= &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ptl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gety&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-clases-y-objetos-funciones-inline-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-funciones-inline/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Funciones Inline&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-clases-y-objetos-funciones-inline-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-funciones-inline/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Funciones Inline&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -406,13 +406,13 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/</guid>
-      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Consideremos una clase denominada Punto, con tres miembros dato: dos variables enteras x e y que se usan para guardar las coordenadas de un punto de la pantalla, y una variable del tipo char, ch, que se usa para visualizar el punto en una pantalla de texto. Vamos a declarar y definir dos funciones miembro que permitan mostrar u ocultar el punto. De este modo, la clase Punto no solamente sirve para guardar datos, sino también para usar dichos datos. Los pasos para definir la clase, crear un objeto perteneciente a dicha clase y llamar desde dicho objeto a las funciones miembro o métodos de la clase se exponen a continuación.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;definir-la-clase&#34;&gt;Definir la clase&lt;/h2&gt;
+&lt;h1 id=&#34;definir-la-clase&#34;&gt;Definir la clase&lt;/h1&gt;
 
 &lt;p&gt;Se declaran las variables que van a guardar los datos, y las funciones que van a manipular dichos datos. Se sitúan convenientemente los controladores de acceso a la clase public o private (por defecto), teniendo en cuenta la regla general de que una clase debe ocultar tanta información como sea posible.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Punto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -445,7 +445,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;li&gt;La función ocultar pone un espacio en dicha posición, borrando el carácter.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema&#34;&gt;Siguiente Tema&lt;/h2&gt;
+&lt;h1 id=&#34;siguiente-tema&#34;&gt;Siguiente Tema&lt;/h1&gt;
 
 &lt;p&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-constructor/&#34;&gt;Clases y Objetos - El Constructor&lt;/a&gt;&lt;/p&gt;</description>
     </item>
@@ -456,7 +456,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/clases-y-objetos-el-constructor/</guid>
-      <description>&lt;h2 id=&#34;constructores&#34;&gt;Constructores&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;constructores&#34;&gt;Constructores&lt;/h1&gt;
 
 &lt;p&gt;Una vez que &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-definir-una-clase/&#34; target=&#34;_blank&#34;&gt;se ha definido una clase&lt;/a&gt;, para usarla se ha de definir un objeto. Se define una variable de la clase Punto, exactamente igual que se define una variable de un tipo predefinido (int, float, etc.), o definido por el usuario. Las variables de una clase se denominan objetos. Los objetos usan la misma notación que cualquier tipo de variable, y su alcance se extiende desde la línea donde se ha declarado hasta el final del bloque.&lt;/p&gt;
 
@@ -555,7 +555,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;n&#34;&gt;def&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ocultar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-clases-y-objetos-el-destructor-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-destructor/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - El Destructor&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-clases-y-objetos-el-destructor-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-destructor/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - El Destructor&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -585,7 +585,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-clases-y-objetos-control-del-acceso-a-los-miembros-de-la-clase-3&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-control-del-acceso-los/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Control del acceso a los miembros de la clase&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-clases-y-objetos-control-del-acceso-a-los-miembros-de-la-clase-3&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-control-del-acceso-los/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Control del acceso a los miembros de la clase&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -647,7 +647,7 @@ ejemplo, para llamar a la función mostrar, basta escribir:&lt;/li&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;delete&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ptro_pt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;//llama al destructor&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-clases-y-objetos-arrays-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-arrays/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Arrays&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-clases-y-objetos-arrays-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-arrays/&#34; target=&#34;_blank&#34;&gt;Clases y Objetos - Arrays&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
