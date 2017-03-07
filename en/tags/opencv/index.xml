@@ -9,6 +9,105 @@
     <atom:link href="https://elbauldelprogramador.com/en/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
+      <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
+      <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
+      
+      <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
+      <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34; target=&#34;_blank&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
+
+&lt;h1 id=&#34;1-download-opencv-3-2-unpack-and-create-build-directory&#34;&gt;[1]. Download OpenCV 3.2, unpack and create build directory&lt;/h1&gt;
+
+&lt;p&gt;following the steps of &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34; target=&#34;_blank&#34;&gt;my last post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;2-download-and-unpack-nonfree-part&#34;&gt;[2]. Download and unpack nonfree part&lt;/h1&gt;
+
+&lt;p&gt;nonfree part has been separated in OpenCV3+, so you need to download it separately from &lt;a href=&#34;https://github.com/opencv/opencv_contrib&#34; title=&#34;github opencv repository&#34; target=&#34;_blank&#34;&gt;github opencv repo&lt;/a&gt;  or clone the repository. Then extract &lt;strong&gt;opencv_contrib&lt;/strong&gt; and move it inside your opencv folder :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~ $ cp Downloads/opencv-contrib opencv-3.2.0/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;3-generate-makefiles&#34;&gt;[3]. generate makefiles&lt;/h1&gt;
+
+&lt;p&gt;we move to the build folder inside opencv folder and type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris~$ cmake -DBUILD_SHARED_LIBS&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;OFF -DCMAKE_BUILD_TYPE&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Release&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;
+-DCMAKE_INSTALL_PREFIX&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;../dist -DOPENCV_EXTRA_MODULES_PATH&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;../opencv_contrib/modules ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With &lt;code&gt;DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules&lt;/code&gt; we are specifying where to found the nonfree part.&lt;/p&gt;
+
+&lt;p&gt;If makefiles generation went ok, you can now build. If using openCV in JAVA, you must make sure &lt;code&gt;$JAVA_HOME&lt;/code&gt; variable is set to JDK&amp;rsquo;s path and visible to child processes. For that when doing: &lt;code&gt;echo $JAVA_HOME&lt;/code&gt; the JDK path must be displayed. If not, in terminal, set de variable value to JDK path and export it, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~$ &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/jdk1.8.0_111/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/amp-img&gt;
+    &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;That is, there is a specified ant and JNI path, and Java wrappers is set to YES.&lt;/p&gt;
+
+&lt;h1 id=&#34;4-build&#34;&gt;[4]. Build&lt;/h1&gt;
+
+&lt;p&gt;run &lt;em&gt;make&lt;/em&gt; to build openCV with Java and create a jar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.0/build $ make -j8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;-j8 is because JDK8. You should put here your JAVA version.&lt;/p&gt;
+
+&lt;p&gt;Make sure the files &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and &lt;strong&gt;libopencv_java320.so&lt;/strong&gt; (.so or .dll) are created inside /build.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar
+opencv-320.jar
+opencv-320.jar.dephelper
+
+cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep libopencv_java320.so
+libopencv_java320.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;5-edit-features2d-manual-hpp-file&#34;&gt;[5]. Edit features2d_manual.hpp file&lt;/h1&gt;
+
+&lt;p&gt;Ok, if building was successfull, then move to &lt;code&gt;/modules/features2d/misc/java/src/cpp&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.02 $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; modules/features2d/misc/java/src/cpp/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and edit  features2d_manual.hpp with your favorite text editor, as following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In line 8, under &lt;code&gt;#include &amp;quot;features2d_converters.hpp&amp;quot;&lt;/code&gt;
+add &lt;code&gt;#include &amp;quot;opencv2/xfeatures2d.hpp&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In line 121, in &lt;strong&gt;create&lt;/strong&gt; method,  inside &lt;code&gt;case SITF&lt;/code&gt; and  &lt;code&gt;case SURF&lt;/code&gt; replace :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;//name = name + &amp;quot;SIFT&amp;quot;;&lt;/code&gt; by &lt;code&gt;fd=xfeatures2d::SIFT::create();&lt;/code&gt;
+and &lt;code&gt;//name = name + &amp;quot;SURF&amp;quot;;&lt;/code&gt; by &lt;code&gt;fd=xfeatures2d::SURF::create();&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;do the same in line 242 for SIFT and SURF extractors:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SIFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xfeatures2d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SIFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SURF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xfeatures2d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SURF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;5-rebuild-to-apply-changes&#34;&gt;[5].Rebuild to apply changes&lt;/h1&gt;
+
+&lt;p&gt;move to your opencv/build folder and run &lt;code&gt;make install&lt;/code&gt;
+when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and &lt;strong&gt;.jar&lt;/strong&gt; files on your openCV project and you would be able to use SIFT and SURF decriptors in your code.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA</title>
       <link>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</link>
       <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
