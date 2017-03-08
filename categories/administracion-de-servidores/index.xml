@@ -189,7 +189,21 @@
       
       <guid>https://elbauldelprogramador.com/combatir-los-comentarios-de-spam-en-wordpress/</guid>
       <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;600px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png&#34;&gt;
+          &lt;amp-img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png&#34;
+            alt=&#34;Combatir los comentarios de spam en Wordpress&#34;
+            title=&#34;Combatir los comentarios de spam en Wordpress&#34;
+            sizes=&#34;(min-width: 600px) 600px, 100vw&#34;
+            width=&#34;600&#34;
+            heigh=&#34;600&#34;&gt;
+          &lt;/amp-img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Combatir los comentarios de spam en Wordpress&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34; target=&#34;_blank&#34;&gt;bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.&lt;/p&gt;
@@ -198,7 +212,7 @@
 
 &lt;p&gt;Existe un plugin llamado &lt;a href=&#34;http://akismet.com/&#34; title=&#34;Plugins Askimet&#34; target=&#34;_blank&#34;&gt;Askimet&lt;/a&gt; que facilita muchísimo la tarea de detectar comentarios de spam y enviarlos a su correspondiente sección en WordPress. Quizá por eso me ha resultado tan sencillo contruir esta solución para bloquear el acceso a todos los bots que continuamente publican comentarios de este tipo.&lt;/p&gt;
 
-&lt;h3 id=&#34;recopilar-las-direcciones-ips-de-los-spammers&#34;&gt;Recopilar las direcciones IPs de los spammers&lt;/h3&gt;
+&lt;h1 id=&#34;recopilar-las-direcciones-ips-de-los-spammers&#34;&gt;Recopilar las direcciones IPs de los spammers&lt;/h1&gt;
 
 &lt;p&gt;Esto es algo trivial, WordPress siempre muestra la IP desde la que se realiza el comentario. Sin embargo recopilar la dirección de 200 comentarios puede ser una tarea ardua. Será más sencillo extraer esta información de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con una consulta &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-select/&#34; title=&#34;Consulta de Datos – Cláusula Select&#34; target=&#34;_blank&#34;&gt;SELECT&lt;/a&gt;. La tabla en la que nos interesa realizar la consulta es &lt;strong&gt;wp_comments&lt;/strong&gt;, y el único campo que deseamos extraer es la dirección IP (Columna &lt;strong&gt;comment_author_IP&lt;/strong&gt; de la tabla anterior). Para evitar que se repitan la direcciones IPs usaremos la opción &lt;strong&gt;DISTINC&lt;/strong&gt;. Seleccionaremos únicamente los comentarios que estén marcados como spam, lo cual corresponde a que el campo &lt;strong&gt;comment_approved&lt;/strong&gt; tenga el valor &amp;#8220;&lt;strong&gt;spam&lt;/strong&gt;&amp;#8220;. La consulta quedará así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DISTINCT&lt;/span&gt;  &lt;span class=&#34;ss&#34;&gt;`comment_author_IP`&lt;/span&gt;
@@ -215,7 +229,7 @@ z.z.z.z
 
 &lt;p&gt;Almacenarlas así nos facilitará la automatización para bloquearles el acceso.&lt;/p&gt;
 
-&lt;h3 id=&#34;bloquear-el-spam&#34;&gt;Bloquear el spam&lt;/h3&gt;
+&lt;h1 id=&#34;bloquear-el-spam&#34;&gt;Bloquear el spam&lt;/h1&gt;
 
 &lt;p&gt;Una vez tenemos el archivo con las IPs de los spammers, procedemos bloquearlos mediante &lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;, de tal forma que no lograrán ni acceder al sitio web, ya que Iptables les denegará el acceso. Usaremos el siguiente &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Scripts del blog&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -262,9 +276,7 @@ LOG        all  --  X.X.X.X        anywhere            LOG level warning prefix 
 &lt;span class=&#34;s1&#34;&gt;LOG        all  --  Y.Y.Y.Y        anywhere            LOG level warning prefix `Comentario SPAM&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;A partir de ahora, se notará un descenso drástico en los comentarios de spam. Espero que haya servido de ayuda.&lt;/p&gt;
-
-&lt;p&gt;&lt;/mensaje&gt;&lt;/ip&gt;&lt;/p&gt;</description>
+&lt;p&gt;A partir de ahora, se notará un descenso drástico en los comentarios de spam. Espero que haya servido de ayuda.&lt;/p&gt;</description>
     </item>
     
     <item>

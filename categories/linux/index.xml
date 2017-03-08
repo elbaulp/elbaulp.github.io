@@ -1484,11 +1484,11 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;p&gt;A día de hoy la mayoría de distribuciones traen &lt;strong&gt;iproute&lt;/strong&gt; instalado por defecto.&lt;/p&gt;
 
-&lt;p&gt;Veamos algunos de los comandos más útiles que nos ofrece este relativamente “*nuevo*” conjunto de comandos:&lt;/p&gt;
+&lt;p&gt;Veamos algunos de los comandos más útiles que nos ofrece este relativamente “nuevo” conjunto de comandos:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;obtener-información-sobre-tcp-udp-y-sockets&#34;&gt;Obtener información sobre TCP/UDP y Sockets&lt;/h3&gt;
+&lt;h1 id=&#34;obtener-información-sobre-tcp-udp-y-sockets&#34;&gt;Obtener información sobre TCP/UDP y Sockets&lt;/h1&gt;
 
 &lt;p&gt;Aquí entra en acción el comando &lt;strong&gt;ss&lt;/strong&gt;, sustituto de &lt;strong&gt;netstat&lt;/strong&gt;. Este comando está incluido en el paquete &lt;strong&gt;iproute2&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1531,7 +1531,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;p&gt;Algunos ejemplos prácticos:&lt;/p&gt;
 
-&lt;h3 id=&#34;mostrar-todos-los-sockects-a-la-escucha&#34;&gt;Mostrar todos los sockects a la escucha&lt;/h3&gt;
+&lt;h1 id=&#34;mostrar-todos-los-sockects-a-la-escucha&#34;&gt;Mostrar todos los sockects a la escucha&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ ss -l
 State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::sunrpc                                                         :::*
@@ -1545,7 +1545,7 @@ LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 
 &lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34; target=&#34;_blank&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h3&gt;
+&lt;h1 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;&lt;/span&gt;
 Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
 &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;                                                       192.168.1.36:60240                                                  207.97.227.239:ssh
@@ -1553,11 +1553,11 @@ Recv-Q Send-Q                                                 Local Address:Port
 
 &lt;p&gt;El parámetro &lt;strong&gt;-o&lt;/strong&gt; permite establecer qué opciones mostrar, varios ejemplos son:&lt;/p&gt;
 
-&lt;h3 id=&#34;mostrar-conexiones-smtp-establecidas&#34;&gt;Mostrar conexiones SMTP establecidas&lt;/h3&gt;
+&lt;h1 id=&#34;mostrar-conexiones-smtp-establecidas&#34;&gt;Mostrar conexiones SMTP establecidas&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state established &amp;#39;( dport = :smtp or sport = :smtp )&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;mostrar-conexiones-http-establecidas&#34;&gt;Mostrar conexiones HTTP establecidas&lt;/h3&gt;
+&lt;h1 id=&#34;mostrar-conexiones-http-establecidas&#34;&gt;Mostrar conexiones HTTP establecidas&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state established &amp;#39;( dport = :http or sport = :http )&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1572,8 +1572,8 @@ Recv-Q Send-Q                                                 Local Address:Port
 &lt;li&gt;&lt;strong&gt;syn-sent&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;syn-recv&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;fin-wait-1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;**fin-wait-2 **&lt;/li&gt;
-&lt;li&gt;**time-wait **&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;fin-wait-2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;time-wait&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;closed&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;close-wait&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;last-ack&lt;/strong&gt;&lt;/li&gt;
@@ -1590,11 +1590,11 @@ Recv-Q Send-Q                                                 Local Address:Port
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -4 state time-wait&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;encontrar-procesos-locales-conectados-al-servidor-x-servidor-gráfico&#34;&gt;Encontrar procesos locales conectados al servidor X (Servidor Gráfico)&lt;/h3&gt;
+&lt;h1 id=&#34;encontrar-procesos-locales-conectados-al-servidor-x-servidor-gráfico&#34;&gt;Encontrar procesos locales conectados al servidor X (Servidor Gráfico)&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -x src /tmp/.X11-unix/*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;hacer-coincidir-direcciones-remotas-y-puertos&#34;&gt;Hacer coincidir direcciones remotas y puertos&lt;/h3&gt;
+&lt;h1 id=&#34;hacer-coincidir-direcciones-remotas-y-puertos&#34;&gt;Hacer coincidir direcciones remotas y puertos&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss dst ADDRESS_PATTERN
 
 &lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##&lt;/span&gt;
@@ -1614,9 +1614,9 @@ ss dst 192.168.1.5:443
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss dst *:http&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;hacer-coincidir-direcciones-locales-y-puertos&#34;&gt;Hacer coincidir direcciones locales y puertos&lt;/h3&gt;
+&lt;h1 id=&#34;hacer-coincidir-direcciones-locales-y-puertos&#34;&gt;Hacer coincidir direcciones locales y puertos&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss src ADDRESS_PATTERN
-&lt;span class=&#34;c1&#34;&gt;### Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##&lt;/span&gt;
 ss src 5.39.89.44
 
@@ -1629,19 +1629,19 @@ ss src 5.39.89.44:smtp
 ss src 5.39.89.44:25
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;mostrar-el-número-y-el-tipo-de-conexiones-activas&#34;&gt;Mostrar el número y el tipo de conexiones activas&lt;/h3&gt;
+&lt;h1 id=&#34;mostrar-el-número-y-el-tipo-de-conexiones-activas&#34;&gt;Mostrar el número y el tipo de conexiones activas&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss -ant &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;mostrar-un-resumen-del-estado-de-los-sockets&#34;&gt;Mostrar un resumen del estado de los sockets&lt;/h3&gt;
+&lt;h1 id=&#34;mostrar-un-resumen-del-estado-de-los-sockets&#34;&gt;Mostrar un resumen del estado de los sockets&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ss -s&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;listar-todos-los-puertos-a-la-escucha-junto-con-el-pid-del-programa&#34;&gt;Listar todos los puertos a la escucha junto con el PID del programa&lt;/h3&gt;
+&lt;h1 id=&#34;listar-todos-los-puertos-a-la-escucha-junto-con-el-pid-del-programa&#34;&gt;Listar todos los puertos a la escucha junto con el PID del programa&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ss -tlnp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;configuración-de-la-interfaz-de-red&#34;&gt;Configuración de la interfaz de red&lt;/h3&gt;
+&lt;h1 id=&#34;configuración-de-la-interfaz-de-red&#34;&gt;Configuración de la interfaz de red&lt;/h1&gt;
 
 &lt;p&gt;Antiguamente se usaba el comando ifconfig:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 up&lt;/span&gt;
@@ -1650,13 +1650,13 @@ ss src 5.39.89.44:25
 
 &lt;p&gt;En &lt;strong&gt;iproute2&lt;/strong&gt; la configuración de interfaces de red se lleva a cabo con el subcomando &lt;strong&gt;link&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;h3 id=&#34;activar-interfaz&#34;&gt;Activar interfaz&lt;/h3&gt;
+&lt;h1 id=&#34;activar-interfaz&#34;&gt;Activar interfaz&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip link set eth0 up&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Donde eth0 debe ser la interfaz de red a activar.&lt;/p&gt;
 
-&lt;h3 id=&#34;establecer-dirección-ip-a-la-interfaz&#34;&gt;Establecer dirección ip a la interfaz&lt;/h3&gt;
+&lt;h1 id=&#34;establecer-dirección-ip-a-la-interfaz&#34;&gt;Establecer dirección ip a la interfaz&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr add 192.168.1.33/24 dev eth0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1666,7 +1666,7 @@ ss src 5.39.89.44:25
 &lt;span class=&#34;c1&#34;&gt;# ip addr ls eth0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;enrutamiento&#34;&gt;Enrutamiento&lt;/h3&gt;
+&lt;h1 id=&#34;enrutamiento&#34;&gt;Enrutamiento&lt;/h1&gt;
 
 &lt;p&gt;La versión moderna del comando &lt;code&gt;route -n&lt;/code&gt; o &lt;code&gt;netstat -r&lt;/code&gt; es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro&lt;/span&gt;
@@ -1677,7 +1677,7 @@ ss src 5.39.89.44:25
 &lt;span class=&#34;c1&#34;&gt;# ip ro del 10.0.0.0/16 via 192.168.0.1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;encontrar-la-ruta-hacia-una-dirección-ip&#34;&gt;Encontrar la ruta hacia una dirección IP&lt;/h3&gt;
+&lt;h1 id=&#34;encontrar-la-ruta-hacia-una-dirección-ip&#34;&gt;Encontrar la ruta hacia una dirección IP&lt;/h1&gt;
 
 &lt;p&gt;Para averiguar qué interfaz está usando tu pc, puedes usar el comando &lt;em&gt;ip route get IP&lt;/em&gt;. Así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip route get 5.39.89.44&lt;/span&gt;
@@ -1686,16 +1686,18 @@ ss src 5.39.89.44:25
 
 &lt;p&gt;está usando la interfaz eth1, gateway 10.61.29.89 y la interfaz tiene la ip privada 192.168.1.36&lt;/p&gt;
 
-&lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
 
 &lt;p&gt;Aunque este artículo ha sido una remezcla de comandos, espero que haya quedado claro para qué sirve cada uno, y a partir de ahora podrás sacarle partido.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Socket Statistics on Linux&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/ss-iproute2-linux&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;
-&lt;em&gt;Some useful command with iproute2&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/howto/useful-command-of-iproute2&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;
-&lt;em&gt;ss: Display Linux TCP / UDP Network and Socket Information&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;
-&lt;em&gt;SS Utility: Quick Intro&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/files/ss.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Socket Statistics on Linux&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/ss-iproute2-linux&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Some useful command with iproute2&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/howto/useful-command-of-iproute2&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ss: Display Linux TCP / UDP Network and Socket Information&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;SS Utility: Quick Intro&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/files/ss.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
