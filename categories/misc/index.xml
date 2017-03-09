@@ -187,14 +187,14 @@ Copyright&lt;/p&gt;
       <guid>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</guid>
       <description>&lt;p&gt;No es la primera vez que se publica en el blog una &lt;a href=&#34;https://elbauldelprogramador.com/tags/chuleta&#34; title=&#34;Artículos sobre chuletas&#34;&gt;chuleta&lt;/a&gt; de algo:&lt;/p&gt;
 
+&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Chuleta básica de comandos Dig&#34;&gt;Chuleta de comandos para dig&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos para Git&#34;&gt;Git: Chuleta de comandos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/&#34; title=&#34;Chuleta de comandos para GPG&#34;&gt;Chuleta de comandos GPG&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/&#34; title=&#34;Chuleta de comandos de Markdown&#34;&gt;Chuleta de comandos MarkDown&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;La de hoy va sobre &lt;em&gt;Emacs&lt;/em&gt;. La idea es que esta chuleta la creemos entre todos. Que cada uno aporte su granito de arena para crear la &lt;strong&gt;chuleta de atajos de teclado/comandos/paquetes para emacs definitiva&lt;/strong&gt;.&lt;/p&gt;
 
@@ -206,19 +206,22 @@ Copyright&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34; target=&#34;_blank&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
 
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
 &lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
-lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;`(format-time-string &amp;quot;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;quot;)`&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;lastmod: 2016-&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;-&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;2017-03-08T16:58:45+01:00&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Y con el tabulador me podré ir moviendo a los distintos &lt;em&gt;$n&lt;/em&gt; que ahí se ven. Otro ejemplo:&lt;/p&gt;
+&lt;p&gt;Otro ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# name: CodeBlock&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# key: code&lt;/span&gt;
