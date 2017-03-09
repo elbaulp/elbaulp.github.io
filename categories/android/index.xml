@@ -1544,7 +1544,7 @@ Recuerda que este método recibe como parámetro la posición del item presionad
     </item>
     
     <item>
-      <title>Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar aplicaciones</title>
+      <title>Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar  aplicaciones</title>
       <link>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
@@ -1557,8 +1557,6 @@ List of devices attached
 
 &lt;p&gt;Así que a modo de recordatorio para mi, y para que a otras personas con el mismo problema puedan solucionarlo, escribo esta entrada.&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&#34;more&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;Para empezar ejecutamos el comando &lt;strong&gt;lsusb&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Bus &lt;span class=&#34;m&#34;&gt;007&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus &lt;span class=&#34;m&#34;&gt;006&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
@@ -1566,7 +1564,7 @@ Bus &lt;span class=&#34;m&#34;&gt;005&lt;/span&gt; Device 002: ID 046d:c03e Logi
 Bus &lt;span class=&#34;m&#34;&gt;005&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus &lt;span class=&#34;m&#34;&gt;004&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus &lt;span class=&#34;m&#34;&gt;003&lt;/span&gt; Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
-&amp;lt;strong&amp;gt;Bus &lt;span class=&#34;m&#34;&gt;002&lt;/span&gt; Device 006: ID 04e8:681c Samsung Electronics Co., Ltd Galaxy Portal/Spica/S&amp;lt;/strong&amp;gt;
+Bus &lt;span class=&#34;m&#34;&gt;002&lt;/span&gt; Device 006: ID 04e8:681c Samsung Electronics Co., Ltd Galaxy Portal/Spica/S // Mi movil
 Bus &lt;span class=&#34;m&#34;&gt;002&lt;/span&gt; Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus &lt;span class=&#34;m&#34;&gt;001&lt;/span&gt; Device 002: ID 0bda:8187 Realtek Semiconductor Corp. RTL8187 Wireless Adapter
 Bus &lt;span class=&#34;m&#34;&gt;001&lt;/span&gt; Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
@@ -1575,9 +1573,8 @@ Bus &lt;span class=&#34;m&#34;&gt;001&lt;/span&gt; Device 001: ID 1d6b:0002 Linu
 &lt;p&gt;De estas líneas nos interesa la que está en negrita, donde vamos a usar el verdor ID, que es 04e8 para el caso de mi Samsung. A continuación seguimos los siguientes pasos:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Es necesario que tengamos habilitado las fuentes desconocidas en el teléfono (Ajustes-&amp;gt;Aplicaciones y marcamos la casilla), Así como permitir el USB debugging (Ajustes-&amp;gt;Aplicaiones-&amp;gt;Desarrollo).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El siguiente paso es crear un archivo llamado &lt;em&gt;51-android.rules&lt;/em&gt; bajo el directorio &lt;em&gt;/etc/udev/rules.d/&lt;/em&gt;, y añadimos&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Es necesario que tengamos habilitado las fuentes desconocidas en el teléfono (Ajustes-&amp;gt;Aplicaciones y marcamos la casilla), Así como permitir el USB debugging (Ajustes-&amp;gt;Aplicaiones-&amp;gt;Desarrollo).&lt;/li&gt;
+&lt;li&gt;El siguiente paso es crear un archivo llamado &lt;em&gt;51-android.rules&lt;/em&gt; bajo el directorio &lt;em&gt;/etc/udev/rules.d/&lt;/em&gt;, y añadimos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SUBSYSTEM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;usb&amp;quot;&lt;/span&gt;, ATTRS&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;idVendor&lt;span class=&#34;o&#34;&gt;}==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;04e8&amp;quot;&lt;/span&gt;, SYMLINK+&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;android_adb&amp;quot;&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;MODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;0666&amp;quot;&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;OWNER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;nombre-de-usuario&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
