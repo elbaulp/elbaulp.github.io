@@ -18,11 +18,11 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;cambiar-resolución-de-pantalla-del-grub&#34;&gt;Cambiar resolución de pantalla del GRUB&lt;/h3&gt;
+&lt;h1 id=&#34;cambiar-resolución-de-pantalla-del-grub&#34;&gt;Cambiar resolución de pantalla del GRUB&lt;/h1&gt;
 
 &lt;p&gt;La forma más fácil es editar el fichero &lt;strong&gt;&lt;em&gt;/etc/defaults/grub&lt;/em&gt;&lt;/strong&gt; y cambiar la resolución de la variable &lt;em&gt;GRUB_GFXMODEGRUB_GFXMODE&lt;/em&gt; por la resolución deseada, en mi caso 1280&amp;#215;1024.&lt;/p&gt;
 
-&lt;h3 id=&#34;cambiar-la-resolución-de-pantalla-de-la-tty&#34;&gt;Cambiar la resolución de pantalla de la tty&lt;/h3&gt;
+&lt;h1 id=&#34;cambiar-la-resolución-de-pantalla-de-la-tty&#34;&gt;Cambiar la resolución de pantalla de la tty&lt;/h1&gt;
 
 &lt;p&gt;Voy a explicar dos formas, la primera que apliqué y una segunda que es el método más recomendado y fácil, pero que descubrí posteriormente ojeando los archivos de configuración. La configuración del GRUB se encuentra dividida en ficheros en el directorio &lt;strong&gt;&lt;em&gt;/etc/grub.d/&lt;/em&gt;&lt;/strong&gt;. El fichero &lt;strong&gt;10_linux&lt;/strong&gt; se encarga de generar las entradas del GRUB para sistemas operativos linux, aquí se establecen los parámetros para iniciar el sistema, y nosotros le pasaremos un parámetro adicional, &lt;strong&gt;vga&lt;/strong&gt;, que establecerá el tipo de resolución deseada. Dicho tipo hay que elegirlo de entre los valores de la siguiente tabla:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
@@ -49,7 +49,7 @@
 
 &lt;p&gt;La segunda forma es mucho más cómoda, al igual que en el apartado anterior con la variable &lt;strong&gt;GRUB_GFXMODE&lt;/strong&gt;, hay otra llamada &lt;strong&gt;GRUB_CMDLINE_LINUX&lt;/strong&gt;. Es a esta variable a la que le asignamos el parámetro anterior, quedando &lt;strong&gt;GRUB_CMDLINE_LINUX=&amp;ldquo;vga=0x31B&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;aplicar-los-cambios&#34;&gt;Aplicar los cambios&lt;/h3&gt;
+&lt;h1 id=&#34;aplicar-los-cambios&#34;&gt;Aplicar los cambios&lt;/h1&gt;
 
 &lt;p&gt;Para aplicar los cambios es necesario regenerar el archivo &lt;strong&gt;/boot/grub/grub.cfg&lt;/strong&gt; con el siguiente comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# update-grub2&lt;/span&gt;
