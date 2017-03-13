@@ -416,11 +416,11 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
       <guid>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</guid>
       <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34; target=&#34;_blank&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
 
-&lt;h2 id=&#34;tecnologías-a-usar&#34;&gt;Tecnologías a usar&lt;/h2&gt;
+&lt;h1 id=&#34;tecnologías-a-usar&#34;&gt;Tecnologías a usar&lt;/h1&gt;
 
 &lt;p&gt;Para configurar el load balancer a mano, usaremos nginx.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Balancear cargas a lo largo de múltiples instancias de aplicaciones es una técnica muy usada para optimizar la utilización de recursos, maximizar el rendimiento, reducir latencia, y asegurar tolerancia a fallos.&lt;/p&gt;
 
@@ -428,7 +428,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;métodos-de-balanceo-en-nginx&#34;&gt;Métodos de balanceo en nginx&lt;/h2&gt;
+&lt;h1 id=&#34;métodos-de-balanceo-en-nginx&#34;&gt;Métodos de balanceo en nginx&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Round-Robin&lt;/em&gt;: Las peticiones a los servidores se distribuyen al estilo round robin.&lt;/li&gt;
@@ -436,7 +436,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 &lt;li&gt;&lt;em&gt;ip-hash&lt;/em&gt;: Se usa una función hash para determinar el servidor al que debería enviarse la siguiente petición, basándose en la ip del cliente.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;configuraciones-por-defecto&#34;&gt;Configuraciones por defecto&lt;/h2&gt;
+&lt;h1 id=&#34;configuraciones-por-defecto&#34;&gt;Configuraciones por defecto&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         server srv1.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -456,7 +456,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;p&gt;En este ejemplo, hay 3 instancias de la misma aplicación. ejecutándose en srv1-srv3. Si no se especifíca ningún método de balanceo, se aplica round-robin. Todas las peticiones se redirigen al grupo de servidores &lt;code&gt;myapp1&lt;/code&gt; y nginx se encarga de realizar el balanceo Http mediante round-robin.&lt;/p&gt;
 
-&lt;h3 id=&#34;balanceo-least-connected&#34;&gt;Balanceo Least Connected&lt;/h3&gt;
+&lt;h2 id=&#34;balanceo-least-connected&#34;&gt;Balanceo Least Connected&lt;/h2&gt;
 
 &lt;p&gt;En este método de balanceo, se permite controlar la carga que reciben los servidores. Nginx intentará no sobrecargar un servidor ocupado con demasiadas peticiones, enviándolas a los servidores menos ocupados.&lt;/p&gt;
 
@@ -469,7 +469,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;balanceo-ponderado&#34;&gt;Balanceo ponderado&lt;/h2&gt;
+&lt;h1 id=&#34;balanceo-ponderado&#34;&gt;Balanceo ponderado&lt;/h1&gt;
 
 &lt;p&gt;Si se quiere dar más ponderación, es posible usar el parámetro &lt;code&gt;weight&lt;/code&gt; en los servidores, para asignarles más “peso” a la hora de tomar decisiones de balanceo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -481,7 +481,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;p&gt;Con esta configuración, 5 peticiones nuevas se distribuirán de la siguiente forma: 3 a srv1, 1 a srv2 y 1 a srv3.&lt;/p&gt;
 
-&lt;h2 id=&#34;control-de-estado-health-checks&#34;&gt;Control de estado (Health checks)&lt;/h2&gt;
+&lt;h1 id=&#34;control-de-estado-health-checks&#34;&gt;Control de estado (Health checks)&lt;/h1&gt;
 
 &lt;p&gt;Si un servidor falla, nginx lo marcará como en mal estado y evitará enviarle peticiones.&lt;/p&gt;
 
@@ -503,13 +503,15 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga3.png&#34; alt=&#34;Balanceadoresdecarga3&#34; width=&#34;815px&#34; height=&#34;529px&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;ventajas-y-desventajas&#34;&gt;Ventajas y desventajas&lt;/h2&gt;
+&lt;h1 id=&#34;ventajas-y-desventajas&#34;&gt;Ventajas y desventajas&lt;/h1&gt;
 
 &lt;p&gt;La opción de crear y configurar el balanceador a mano puede ser buena para aprender, pero a la larga, conforme las necesidades de la aplicación vayan aumentando será más y más tedioso. Sin embargo, con un entorno cloud, podremos crear, modificar y borrar servidores y balanceadores a golpe de click.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Nginx Docs&lt;/em&gt; »» &lt;a href=&#34;http://nginx.org/en/docs/http/load_balancing.html&#34; target=&#34;_blank&#34;&gt;nginx.org&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Nginx Docs&lt;/em&gt; »» &lt;a href=&#34;http://nginx.org/en/docs/http/load_balancing.html&#34; target=&#34;_blank&#34;&gt;nginx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -519,7 +521,20 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</guid>
       <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;450px&#34; height=&#34;361px&#34; /&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;
+          &lt;amp-img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;
+            alt=&#34;&#34;C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)&#34;
+            title=&#34;&#34;C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)&#34;
+            sizes=&#34;(min-width: 450px) 450px, 100vw&#34;
+            width=&#34;450&#34;
+            height=&#34;361&#34;&gt;
+          &lt;/amp-img&gt;
+        &lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -552,13 +567,13 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;cual-es-tu-responsabilidad-como-parte-del-sistema-dns&#34;&gt;¿Cual es tu responsabilidad como parte del sistema DNS?&lt;/h3&gt;
+&lt;h1 id=&#34;cual-es-tu-responsabilidad-como-parte-del-sistema-dns&#34;&gt;¿Cual es tu responsabilidad como parte del sistema DNS?&lt;/h1&gt;
 
 &lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
 
 &lt;p&gt;La base de datos del sistema DNS tiene tres niveles. Al primer grupo de servidores se les llama “&lt;strong&gt;servidores root&lt;/strong&gt;”. Al segundo, “&lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt;” o dominios de primer nivel. Cuando se necesita conocer la dirección de una web, el segundo componente de &lt;strong&gt;BIND&lt;/strong&gt; (resolver library) realiza una petición, (De aquí en adelante lo llamaremos &lt;em&gt;resolver&lt;/em&gt;).&lt;/p&gt;
 
-&lt;p&gt;Por ejemplo, supongamos que quieres encontrar a &lt;strong&gt;google.com&lt;/strong&gt;. Tu resolver pide a los servidores root que identifique la IP de google.com. El servidor root responde, “*No lo sé, pero sí sé donde puedes encontrar la respuesta, comienza con los servidores TLD para COM*”.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, supongamos que quieres encontrar a &lt;strong&gt;google.com&lt;/strong&gt;. Tu resolver pide a los servidores root que identifique la IP de google.com. El servidor root responde, “ &lt;em&gt;No lo sé, pero sí sé donde puedes encontrar la respuesta, comienza con los servidores TLD para COM&lt;/em&gt; ”.&lt;/p&gt;
 
 &lt;p&gt;Así, el servidor root envia la petición a un servidor COM. Éste último servidor dice: “&lt;em&gt;No tengo esa información, pero sé de un servidor de nombres que sí, tiene dirección 173.194.34.6 y nombre ns1.google.com. Dirígete a esa dirección y te dirá la dirección del sitio web google.com.”&lt;/em&gt;&lt;/p&gt;
 
@@ -570,7 +585,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 
 &lt;p&gt;Los servidores root son los principales de la base de datos distribuida. Poseen información sobre los &lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt; o dominios de primer nivel. En los TLDs se incluyen &lt;em&gt;com, net, org, mil, gov, edu etc&lt;/em&gt;. Al contratar un nombre de dominio, es necesario elegir qué TLD se desea, este blog se encuentra en el espacio de nombres COM y se llama &lt;em&gt;elbauldelprogramador.com&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;cómo-responde-el-servidor-dns-a-las-peticiones&#34;&gt;¿Cómo responde el servidor DNS a las peticiones?&lt;/h3&gt;
+&lt;h1 id=&#34;cómo-responde-el-servidor-dns-a-las-peticiones&#34;&gt;¿Cómo responde el servidor DNS a las peticiones?&lt;/h1&gt;
 
 &lt;p&gt;En este punto es donde &lt;strong&gt;BIND&lt;/strong&gt; entra en acción. El primer componente que mencionamos, &lt;strong&gt;named&lt;/strong&gt;; está presente en todos los servidores de nombres y es el encargado de responder a las peticiones de los resolvers. Lee sus datos del archivo de configuración &lt;em&gt;named.conf&lt;/em&gt;. Éste fichero obtiene su información de unos ficheros a los que se les suele llamar &lt;em&gt;zone files&lt;/em&gt; ó &lt;em&gt;ficheros de zona&lt;/em&gt;. Existen multidud de ellos, pero un archivo de zona en particular mantiene una base de datos de registros que proporciona named con la mayoría de sus respuestas.&lt;/p&gt;
 
@@ -581,7 +596,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 &lt;figcaption&gt;Figura 2 - Respondiendo a una petición&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;usando-named-conf&#34;&gt;Usando Named.conf&lt;/h3&gt;
+&lt;h1 id=&#34;usando-named-conf&#34;&gt;Usando Named.conf&lt;/h1&gt;
 
 &lt;p&gt;El proceso &lt;em&gt;named&lt;/em&gt; escucha en el puerto 53 en los sitemas Linux. Al recibir una petición para una dirección, busca en el primer archivo de configuración que conoce, &lt;em&gt;named.conf&lt;/em&gt;. Tal y como se aprecia en la figura 2.&lt;/p&gt;
 
@@ -644,9 +659,11 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
 
 &lt;p&gt;En el siguiente artículo ser verá en detalle la estructura del archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;, en el que se definen nuevas zonas que corresponden a dominios que resolverá el servidor DNS. Así como a los archivos &lt;em&gt;pri.nombredominio.com&lt;/em&gt; asociados a cada zona.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -656,7 +673,20 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</guid>
       <description>&lt;figure&gt;
-  &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;450px&#34; height=&#34;361px&#34; /&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;
+          &lt;amp-img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;
+            alt=&#34;&#34;C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)&#34;
+            title=&#34;&#34;C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)&#34;
+            sizes=&#34;(min-width: 450px) 450px, 100vw&#34;
+            width=&#34;450&#34;
+            height=&#34;361&#34;&gt;
+          &lt;/amp-img&gt;
+        &lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -697,43 +727,43 @@ www &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt; A        5.39.89.44
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;nombre&#34;&gt;Nombre&lt;/h4&gt;
+&lt;h1 id=&#34;nombre&#34;&gt;Nombre&lt;/h1&gt;
 
 &lt;p&gt;Define el nombre principal de la zona. El &lt;em&gt;@&lt;/em&gt; es una abreviatura a la zona actual, es decir, para &lt;em&gt;/pri.elbauldelprogramador.com&lt;/em&gt; en este ejemplo. El nombre del servidor maestro para esta zona es ks3277174.kimsufi.com. Esto significa que en el archivo &lt;em&gt;named.conf&lt;/em&gt; existe una entrada que apunta y este archivo vuelve apunta a su vez a la entrada en el archivo de configuración.&lt;/p&gt;
 
-&lt;h4 id=&#34;clase&#34;&gt;Clase&lt;/h4&gt;
+&lt;h1 id=&#34;clase&#34;&gt;Clase&lt;/h1&gt;
 
 &lt;p&gt;Existen varios tipos de clases DNS. En nuestro caso solo se usará la clase &lt;em&gt;IN&lt;/em&gt; o &lt;em&gt;Internet&lt;/em&gt;, usadas para definir el mapeo entre la dirección IP y &lt;em&gt;BIND&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;tipo&#34;&gt;Tipo&lt;/h4&gt;
+&lt;h1 id=&#34;tipo&#34;&gt;Tipo&lt;/h1&gt;
 
 &lt;p&gt;El tipo de registro para el recurso DNS, en el ejemplo de arriba, el tipo es &lt;em&gt;SOA&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;nombre-del-servidor&#34;&gt;Nombre del servidor&lt;/h4&gt;
+&lt;h1 id=&#34;nombre-del-servidor&#34;&gt;Nombre del servidor&lt;/h1&gt;
 
 &lt;p&gt;Nombre completo del servidor de nombres primario. Debe acabar en un punto.&lt;/p&gt;
 
-&lt;h4 id=&#34;dirección-de-correo&#34;&gt;Dirección de correo&lt;/h4&gt;
+&lt;h1 id=&#34;dirección-de-correo&#34;&gt;Dirección de correo&lt;/h1&gt;
 
 &lt;p&gt;Dirección de correo de la persona responsable del dominio. Nota cómo se sustituye el símbolo @ por un punto.&lt;/p&gt;
 
-&lt;h4 id=&#34;número-de-serie&#34;&gt;Número de serie&lt;/h4&gt;
+&lt;h1 id=&#34;número-de-serie&#34;&gt;Número de serie&lt;/h1&gt;
 
 &lt;p&gt;Normalmente tiene el formato &lt;em&gt;YYYYMMDD&lt;/em&gt; con dos dígitios más al final que indican el número de serie del día. El número de serie es útil para indicarle a servidor DNS secundario cuando debe actualizarse. Si el servidor esclavo al comprobar el número de serie ha cambiado, realizará una trasnferencia de zona (&lt;strong&gt;zone transfer&lt;/strong&gt;).&lt;/p&gt;
 
-&lt;h4 id=&#34;refresh-o-actualización&#34;&gt;Refresh o actualización&lt;/h4&gt;
+&lt;h1 id=&#34;refresh-o-actualización&#34;&gt;Refresh o actualización&lt;/h1&gt;
 
 &lt;p&gt;En este campo indica al servidor DNS esclavo o secundario con qué frecuencia debería comprobar el estado del maestro. El valor está representado en segundos. En cada ciclo de refresco, el esclavo realiza la comprobación para saber cuando es necesaria una transferencia de zona (&lt;strong&gt;zone transfer&lt;/strong&gt;). En el ejemplo el valor es 7200&lt;/p&gt;
 
-&lt;h4 id=&#34;retry-o-reintento&#34;&gt;Retry o reintento&lt;/h4&gt;
+&lt;h1 id=&#34;retry-o-reintento&#34;&gt;Retry o reintento&lt;/h1&gt;
 
 &lt;p&gt;Frecuencia con la que el esclavo debería conectarse al maestro en caso de una conexión fallida.&lt;/p&gt;
 
-&lt;h4 id=&#34;expiry-o-expiración&#34;&gt;Expiry o expiración&lt;/h4&gt;
+&lt;h1 id=&#34;expiry-o-expiración&#34;&gt;Expiry o expiración&lt;/h1&gt;
 
 &lt;p&gt;Cantidad total de tiempo en la que el esclavo debería reintentar ponerse en contacto con el maestro antes de que expiren los datos que contiene. Referencias futuras serán dirigidas a los servidores root.&lt;/p&gt;
 
-&lt;h4 id=&#34;ttl-mínimo&#34;&gt;TTL mínimo&lt;/h4&gt;
+&lt;h1 id=&#34;ttl-mínimo&#34;&gt;TTL mínimo&lt;/h1&gt;
 
 &lt;p&gt;Este campo define el tiempo de vida (&lt;em&gt;Time To Live&lt;/em&gt;) para el dominio en segundos. Sirve para responder a peticiones de subdominios que no existen en los registros. Cuando esté configurado, el servidor DNS responderá con una respuesta del tipo &lt;strong&gt;no domain&lt;/strong&gt; o &lt;strong&gt;NXDOMAIN&lt;/strong&gt;. Dicha respuesta será cacheada. El TTL establece la duración del cacheo para la respuesta.&lt;/p&gt;
 
@@ -756,9 +786,11 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
 
 &lt;p&gt;En el siguiente artículo se verá el archivo de zona inversa y la configuración del servidor DNS secundario, así como el uso del comando &lt;em&gt;dig&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -768,7 +800,20 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</guid>
       <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;450px&#34; height=&#34;361px&#34; /&gt;&lt;/a&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;
+          &lt;amp-img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;
+            alt=&#34;&#34;C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)&#34;
+            title=&#34;&#34;C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)&#34;
+            sizes=&#34;(min-width: 450px) 450px, 100vw&#34;
+            width=&#34;450&#34;
+            height=&#34;361&#34;&gt;
+          &lt;/amp-img&gt;
+        &lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -854,7 +899,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
 
 &lt;p&gt;Esta vez, se está realizando la petición inversa, preguntamos por el dominio.&lt;/p&gt;
 
-&lt;h3 id=&#34;el-servidor-dns-secundario&#34;&gt;El servidor DNS secundario&lt;/h3&gt;
+&lt;h1 id=&#34;el-servidor-dns-secundario&#34;&gt;El servidor DNS secundario&lt;/h1&gt;
 
 &lt;p&gt;En caso de disponer de otro servidor DSN propio, para configurarlo de modo que haga las veces de servidor DNS secundario es necesario añadir otra zona al archivo &lt;strong&gt;named.conf.local&lt;/strong&gt; en el servidor &lt;strong&gt;secundario&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;DOMINIO&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -880,9 +925,11 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
 
 &lt;p&gt;Para finalizar, reiterar que todos los artículos están basados en un How to de la web que se menciona en las referencias.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
