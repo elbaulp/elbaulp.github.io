@@ -26,7 +26,7 @@
 &lt;li&gt;Ventanas de diálogo.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;notificaciones-toast&#34;&gt;Notificaciones Toast&lt;/h3&gt;
+&lt;h1 id=&#34;notificaciones-toast&#34;&gt;Notificaciones Toast&lt;/h1&gt;
 
 &lt;p&gt;Una notificación Toast es un mensaje que se muestra superpuesto en la pantalla. Solo ocupa el espacio necesario para mostrar la alerta, mientras tanto, la actividad que estaba visible puede seguir usándose. Este tipo de notificaciones se muestran durante un periodo de tiempo y desaparecen, no permiten interactuar con ellas. Debido a que un Toast se crea mediante un servicio en segundo plano, puede aparecer aunque la aplicación no esté visible.&lt;/p&gt;
 
@@ -39,11 +39,28 @@
 &lt;p&gt;Para fijar la duración del mensaje, usamos una de las dos constantes predefinidas, &lt;strong&gt;&lt;em&gt;Toast.LENGTH_SHORT ó Toast.LENGTH_LONG&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;En este caso, vamos a crear un layout personalizado para mostrar el Toast:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt; ?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/toastLayout&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#DAAA&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;imageview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;48px&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;48px&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/ok&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;5dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/ok&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/textview&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Toast con layout personalizado&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:textcolor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#fff&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;center_vertical|center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/textview&amp;gt;&amp;lt;/imageview&amp;gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/toastLayout&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#DAAA&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;imageview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;48px&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;48px&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/ok&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;5dip&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/ok&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/textview&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Toast con layout personalizado&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:textColor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#fff&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;center_vertical|center_horizontal&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Hay que asignar un id al LinearLayout, que usaremos posteriormente. También hemos creado un ImageView para mostrar un icono, y un TextView para mostrar el mensaje.&lt;/p&gt;
@@ -67,9 +84,9 @@
 &lt;a href=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Toast notification Android &#34; title=&#34;Toast notification Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Para saber más acerca de los mensajes toast puede visitar: &lt;http:&gt;&lt;/p&gt;
+&lt;p&gt;Para saber más acerca de los mensajes toast puede visitar: &lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34; target=&#34;_blank&#34; title=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;notificaciones-en-la-barra-de-estado&#34;&gt;Notificaciones en la barra de estado&lt;/h3&gt;
+&lt;h1 id=&#34;notificaciones-en-la-barra-de-estado&#34;&gt;Notificaciones en la barra de estado&lt;/h1&gt;
 
 &lt;p&gt;Este tipo de notificaciones muestran un icono en la barra de estado, cuando desplegamos esta barra, veremos el icono acompañado de un texto descriptivo indicando que ha pasado algo (Como que hemos recibido un nuevo mensaje, o un correo electrónico).&lt;/p&gt;
 
@@ -106,9 +123,9 @@
 &lt;a href=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;notification bar Android&#34; alt=&#34;notification bar Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Al igual que los Toast, se puede crear un layout personalizado, para más información visite: &lt;/http:&gt;&lt;http:&gt;&lt;/p&gt;
+&lt;p&gt;Al igual que los Toast, se puede crear un layout personalizado, para más información visite: &lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34; target=&#34;_blank&#34; title=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;diálogos&#34;&gt;Diálogos&lt;/h3&gt;
+&lt;h1 id=&#34;diálogos&#34;&gt;Diálogos&lt;/h1&gt;
 
 &lt;p&gt;Por último, vamos a ver los diálogos, que son ventanas que se muestran delante de las actividades, y pueden recibir acciones del usuario, hay varios tipos:&lt;/p&gt;
 
@@ -169,7 +186,7 @@
 &lt;p&gt;Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de &amp;#8220;atrás&amp;#8221; del terminal.&lt;/p&gt;
 
 &lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Se puede descargar el proyecto de esta entrada aquí:&lt;/p&gt;
@@ -178,9 +195,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-estilos-y-temas-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;/http:&gt;&lt;/p&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-estilos-y-temas-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
   </channel>
